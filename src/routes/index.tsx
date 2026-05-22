@@ -15,15 +15,36 @@ import {
   Sparkles,
   TrendingUp,
   Calculator,
-  FileSpreadsheet,
   Target,
-  ClipboardCheck,
+  BarChart3,
+  Wallet,
+  Wrench,
 } from "lucide-react";
 import profileImg from "@/assets/profile.png";
+import dashboardImg from "@/assets/finance-dashboard.jpg";
+import deskImg from "@/assets/accountant-desk.jpg";
+import logoAlostool from "@/assets/logo-alostool.png";
+import logoLamara from "@/assets/logo-lamara.png";
+import logoQimat from "@/assets/logo-qimat.jpg";
 import { t, type Lang } from "@/lib/i18n";
-import { playClick, playHover } from "@/lib/sound";
+import { playClick, playHover, playIntro } from "@/lib/sound";
 
 export const Route = createFileRoute("/")({ component: Index });
+
+const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> = {
+  alostool: {
+    src: logoAlostool,
+    name: { ar: "شركة الأسطول الآلي للمقاولات", en: "Alostool Alaali Contracting" },
+  },
+  lamara: {
+    src: logoLamara,
+    name: { ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة", en: "Lamara Hospitality & Catering" },
+  },
+  qimat: {
+    src: logoQimat,
+    name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" },
+  },
+};
 
 function Index() {
   const [lang, setLang] = useState<Lang>("ar");
@@ -43,6 +64,37 @@ function Index() {
   useEffect(() => {
     const tm = setTimeout(() => setLoaded(true), 900);
     return () => clearTimeout(tm);
+  }, []);
+
+  // First-load cinematic accountant chime (after first user gesture due to autoplay policies)
+  useEffect(() => {
+    let played = false;
+    const trigger = () => {
+      if (played) return;
+      played = true;
+      playIntro();
+      window.removeEventListener("pointerdown", trigger);
+      window.removeEventListener("keydown", trigger);
+      window.removeEventListener("scroll", trigger);
+    };
+    // Try immediate (may be blocked); also bind gesture fallbacks
+    const tm = setTimeout(() => {
+      try {
+        playIntro();
+        played = true;
+      } catch {
+        // ignore, will play on first gesture
+      }
+    }, 1100);
+    window.addEventListener("pointerdown", trigger, { once: false });
+    window.addEventListener("keydown", trigger, { once: false });
+    window.addEventListener("scroll", trigger, { once: false });
+    return () => {
+      clearTimeout(tm);
+      window.removeEventListener("pointerdown", trigger);
+      window.removeEventListener("keydown", trigger);
+      window.removeEventListener("scroll", trigger);
+    };
   }, []);
 
   useEffect(() => {
@@ -67,13 +119,11 @@ function Index() {
       <div className="cinematic-grid" />
       <div ref={cursorRef} className="cursor-glow hidden md:block" />
 
-      {/* Scroll progress */}
       <motion.div
         style={{ scaleX, transformOrigin: isRTL ? "right" : "left" }}
         className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-gradient-to-r from-amber-200 via-[#d7aa52] to-amber-700"
       />
 
-      {/* Loader */}
       {!loaded && (
         <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#04101f] transition-opacity duration-700">
           <div className="loader-circle" />
@@ -173,7 +223,6 @@ function Hero({ lang }: { lang: Lang }) {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20"
     >
-      {/* decorative chevrons */}
       <div className="pointer-events-none absolute inset-0 opacity-40">
         <div className="absolute top-1/2 left-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,170,82,0.15),transparent_60%)]" />
       </div>
@@ -230,7 +279,6 @@ function Hero({ lang }: { lang: Lang }) {
           </div>
         </motion.div>
 
-        {/* Portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -272,10 +320,10 @@ function Hero({ lang }: { lang: Lang }) {
 
 /* ---------- STATS ---------- */
 function Stats({ lang }: { lang: Lang }) {
-  const icons = [TrendingUp, ClipboardCheck, Target, Calculator];
+  const icons = [TrendingUp, Target, Calculator];
   return (
     <section className="relative py-12">
-      <div className="mx-auto grid w-[92%] max-w-7xl grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="mx-auto grid w-[92%] max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
         {t.stats.map((s, i) => {
           const Icon = icons[i];
           return (
@@ -285,11 +333,11 @@ function Stats({ lang }: { lang: Lang }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass rounded-2xl p-5 text-center"
+              className="glass rounded-2xl p-6 text-center"
             >
               <Icon className="mx-auto mb-2 size-6 text-[#d7aa52]" />
-              <div className="text-3xl font-black gold-text">{s.v}</div>
-              <div className="mt-1 text-xs font-medium text-white/70">{s[lang]}</div>
+              <div className="text-4xl font-black gold-text">{s.v}</div>
+              <div className="mt-1 text-sm font-medium text-white/70">{s[lang]}</div>
             </motion.div>
           );
         })}
@@ -302,17 +350,72 @@ function Stats({ lang }: { lang: Lang }) {
 function About({ lang }: { lang: Lang }) {
   return (
     <section id="about" className="py-24">
-      <div className="mx-auto w-[92%] max-w-5xl">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
+        <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose text-white/80 sm:p-10 lg:col-span-3"
+          >
+            <p>{t.about.body[lang]}</p>
+            <p>{t.about.body2[lang]}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9 }}
+            className="relative lg:col-span-2"
+          >
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
+            <div className="relative overflow-hidden rounded-3xl gold-border gold-glow">
+              <img
+                src={deskImg}
+                alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+                loading="lazy"
+                width={1280}
+                height={720}
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Dashboard band */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-          className="glass mt-10 space-y-5 rounded-3xl p-8 text-base leading-loose text-white/80 sm:p-12"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.9 }}
+          className="relative mt-12 overflow-hidden rounded-3xl gold-border"
         >
-          <p>{t.about.body[lang]}</p>
-          <p>{t.about.body2[lang]}</p>
+          <img
+            src={dashboardImg}
+            alt={lang === "ar" ? "لوحة تحليل مالي" : "Financial dashboard"}
+            loading="lazy"
+            width={1280}
+            height={800}
+            className="h-[260px] w-full object-cover sm:h-[360px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f] via-[#04101f]/40 to-transparent" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full px-6 sm:px-12">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
+                <BarChart3 className="size-3.5" />
+                {lang === "ar" ? "تحليل مالي" : "Financial Analytics"}
+              </div>
+              <h3 className="mt-3 max-w-xl text-2xl font-extrabold text-white sm:text-3xl">
+                {lang === "ar"
+                  ? "أحوّل الأرقام إلى قرارات تنفيذية واضحة."
+                  : "Turning numbers into clear executive decisions."}
+              </h3>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
@@ -331,12 +434,10 @@ function Experience({ lang }: { lang: Lang }) {
         />
 
         <div className="relative mt-16">
-          {/* center line */}
           <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2" />
-          {/* mobile line */}
           <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto" />
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {t.experience.items.map((item, i) => (
               <TimelineItem key={i} item={item} index={i} lang={lang} />
             ))}
@@ -359,14 +460,12 @@ function TimelineItem({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const left = index % 2 === 0;
+  const logo = LOGOS[item.logo];
   return (
-    <div
-      ref={ref}
-      className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2"
-    >
-      {/* dot */}
+    <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto" />
 
+      {/* Card */}
       <motion.div
         initial={{ opacity: 0, x: left ? -50 : 50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -390,46 +489,179 @@ function TimelineItem({
           ))}
         </ul>
       </motion.div>
+
+      {/* Logo opposite card */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7, rotate: left ? 10 : -10 }}
+        animate={inView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
+        transition={{ duration: 0.9, delay: 0.2, type: "spring" }}
+        className={`hidden md:flex items-center justify-center ${
+          left ? "md:col-start-2" : "md:col-start-1 md:row-start-1"
+        }`}
+      >
+        <LogoBadge logo={logo} />
+      </motion.div>
+
+      {/* Mobile logo under card */}
+      <div className="md:hidden mr-10 rtl:ml-10 rtl:mr-0">
+        <LogoBadge logo={logo} compact />
+      </div>
     </div>
   );
 }
 
-/* ---------- SKILLS ---------- */
-function Skills({ lang }: { lang: Lang }) {
+function LogoBadge({
+  logo,
+  compact = false,
+}: {
+  logo: { src: string; name: { ar: string; en: string } };
+  compact?: boolean;
+}) {
   return (
-    <section id="skills" className="py-24">
+    <motion.div
+      whileHover={{ scale: 1.05, rotate: 1 }}
+      transition={{ type: "spring", stiffness: 200 }}
+      className="group relative"
+    >
+      <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/20 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
+      <div
+        className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl gold-border bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-2xl ${
+          compact ? "p-4" : "p-6"
+        }`}
+      >
+        <div
+          className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner ${
+            compact ? "size-24" : "size-36"
+          }`}
+        >
+          <motion.img
+            src={logo.src}
+            alt={logo.name.ar}
+            className="max-h-full max-w-full object-contain drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]"
+            initial={{ y: 0 }}
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d7aa52]/30" />
+        </div>
+        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text">
+          {logo.name.ar}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ---------- SKILLS (redesigned: distinct layout) ---------- */
+function Skills({ lang }: { lang: Lang }) {
+  const [active, setActive] = useState(0);
+  const groupIcons = [BarChart3, Wallet, Wrench];
+
+  return (
+    <section id="skills" className="relative py-24">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent"
+      />
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "المهارات" : "Skills"}
           title={t.skills.title[lang]}
           sub={t.skills.sub[lang]}
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {t.skills.groups.map((g, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass group relative overflow-hidden rounded-3xl p-7 transition-all hover:border-[#d7aa52]/60"
-            >
-              <div className="absolute -right-12 -top-12 size-32 rounded-full bg-[#d7aa52]/10 blur-2xl transition-all group-hover:bg-[#d7aa52]/20" />
-              <FileSpreadsheet className="mb-4 size-7 text-[#d7aa52]" />
-              <h3 className="mb-4 text-lg font-extrabold text-white">{g.h[lang]}</h3>
-              <ul className="space-y-2">
-                {g.items.map((it, j) => (
-                  <li
-                    key={j}
-                    className="flex items-center gap-2 text-sm text-white/75 transition-colors hover:text-white"
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-[280px_1fr]">
+          {/* Vertical tab list */}
+          <div className="flex flex-row gap-3 overflow-x-auto lg:flex-col">
+            {t.skills.groups.map((g, i) => {
+              const Icon = groupIcons[i];
+              const isActive = i === active;
+              return (
+                <button
+                  key={i}
+                  onClick={() => {
+                    setActive(i);
+                    playClick();
+                  }}
+                  onMouseEnter={playHover}
+                  className={`group relative flex w-full shrink-0 items-center gap-3 rounded-2xl border px-4 py-4 text-start transition-all ${
+                    isActive
+                      ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_10px_40px_-10px_rgba(215,170,82,0.5)]"
+                      : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"
+                  }`}
+                >
+                  <span
+                    className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
+                      isActive
+                        ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+                        : "bg-white/5 text-[#d7aa52]"
+                    }`}
                   >
-                    <span className="size-1.5 rounded-full bg-[#d7aa52]" />
+                    <Icon className="size-5" />
+                  </span>
+                  <div className="flex-1">
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-white/40">
+                      {String(i + 1).padStart(2, "0")} / {t.skills.groups.length.toString().padStart(2, "0")}
+                    </div>
+                    <div
+                      className={`text-sm font-extrabold ${isActive ? "gold-text" : "text-white"}`}
+                    >
+                      {g.h[lang]}
+                    </div>
+                  </div>
+                  {isActive && (
+                    <motion.span
+                      layoutId="skills-indicator"
+                      className="absolute inset-y-3 w-[3px] rounded-full bg-[#d7aa52] start-0"
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Active panel — chip cloud */}
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c] to-[#04101f] p-8 sm:p-10"
+          >
+            <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
+            <div className="pointer-events-none absolute -left-16 -bottom-16 size-60 rounded-full bg-blue-500/10 blur-3xl" />
+
+            <div className="relative">
+              <div className="mb-6 flex items-end justify-between gap-4">
+                <div>
+                  <div className="text-xs uppercase tracking-[0.4em] text-[#d7aa52]">
+                    {lang === "ar" ? "المجموعة" : "Group"}
+                  </div>
+                  <h3 className="mt-1 text-3xl font-black text-white sm:text-4xl">
+                    {t.skills.groups[active].h[lang]}
+                  </h3>
+                </div>
+                <div className="font-mono text-5xl font-black text-[#d7aa52]/30 sm:text-6xl">
+                  0{active + 1}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                {t.skills.groups[active].items.map((it, j) => (
+                  <motion.span
+                    key={j}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.35, delay: j * 0.05 }}
+                    className="group inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-white/[0.03] px-4 py-2.5 text-sm font-semibold text-white/85 transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:bg-[#d7aa52]/10 hover:text-white"
+                  >
+                    <span className="size-1.5 rounded-full bg-[#d7aa52] group-hover:scale-150 transition-transform" />
                     {it[lang]}
-                  </li>
+                  </motion.span>
                 ))}
-              </ul>
-            </motion.div>
-          ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -468,30 +700,15 @@ function Certs({ lang }: { lang: Lang }) {
 /* ---------- CONTACT ---------- */
 function Contact({ lang }: { lang: Lang }) {
   const items = [
-    {
-      icon: Phone,
-      label: t.contact.phone[lang],
-      value: "+966 560 409 811",
-      href: "tel:+966560409811",
-    },
-    {
-      icon: Mail,
-      label: t.contact.email[lang],
-      value: "elmadnim@gmail.com",
-      href: "mailto:elmadnim@gmail.com",
-    },
+    { icon: Phone, label: t.contact.phone[lang], value: "+966 560 409 811", href: "tel:+966560409811" },
+    { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
     {
       icon: MapPin,
       label: t.contact.location[lang],
       value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia",
       href: "https://maps.google.com/?q=Riyadh",
     },
-    {
-      icon: Car,
-      label: lang === "ar" ? "التنقل" : "Mobility",
-      value: t.contact.driving[lang],
-      href: "#",
-    },
+    { icon: Car, label: lang === "ar" ? "التنقل" : "Mobility", value: t.contact.driving[lang], href: "#" },
   ];
   return (
     <section id="contact" className="py-24">
@@ -553,15 +770,7 @@ function Footer({ lang }: { lang: Lang }) {
 }
 
 /* ---------- SECTION TITLE ---------- */
-function SectionTitle({
-  eyebrow,
-  title,
-  sub,
-}: {
-  eyebrow: string;
-  title: string;
-  sub?: string;
-}) {
+function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -584,26 +793,10 @@ function SocialDock() {
   const socials = useMemo(
     () => [
       { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366" },
-      {
-        href: "https://www.facebook.com/share/1GrcrAN8tP/",
-        icon: "fa-brands fa-facebook-f",
-        color: "#1877F2",
-      },
-      {
-        href: "https://www.instagram.com/ahmed_elmadni",
-        icon: "fa-brands fa-instagram",
-        color: "#E4405F",
-      },
-      {
-        href: "https://www.linkedin.com/in/احمد-المدنى-33022830b",
-        icon: "fa-brands fa-linkedin-in",
-        color: "#0A66C2",
-      },
-      {
-        href: "https://www.snapchat.com/add/ahmedacc851998",
-        icon: "fa-brands fa-snapchat-ghost",
-        color: "#FFFC00",
-      },
+      { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2" },
+      { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F" },
+      { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2" },
+      { href: "https://www.snapchat.com/add/ahmedacc851998", icon: "fa-brands fa-snapchat-ghost", color: "#FFFC00" },
     ],
     [],
   );

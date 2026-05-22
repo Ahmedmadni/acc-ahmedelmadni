@@ -10,7 +10,7 @@ export const t = {
     cv: { ar: "تحميل السيرة الذاتية", en: "Download CV" },
   },
   hero: {
-    badge: { ar: "محاسب أول معتمد", en: "Certified Senior Accountant" },
+    badge: { ar: "محاسب أول", en: "Senior Accountant" },
     name: { ar: "أحمد المدني", en: "Ahmed Elmadani" },
     title: {
       ar: "محاسب أول | محاسب تكاليف | أخصائي تقارير مالية",
@@ -25,20 +25,19 @@ export const t = {
     location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
   },
   stats: [
-    { v: "4+", ar: "سنوات خبرة", en: "Years Experience" },
-    { v: "10+", ar: "مطالبة مالية", en: "Financial Claims" },
-    { v: "3", ar: "قطاعات", en: "Industries" },
+    { v: "5+", ar: "سنوات خبرة", en: "Years Experience" },
+    { v: "13", ar: "قطاعات خدمتها", en: "Industries Served" },
     { v: "100%", ar: "دقة في الأرقام", en: "Number Accuracy" },
   ],
   about: {
     title: { ar: "نبذة عني", en: "About Me" },
     body: {
-      ar: "محاسب أول يمتلك خبرة عملية تتجاوز أربع سنوات في مجالات المحاسبة، التقارير المالية، الرقابة على التكاليف، والتحليل المالي داخل قطاعات المقاولات، الضيافة، والخدمات الطبية بالمملكة العربية السعودية. أمتلك خبرة قوية في إعداد التقارير المالية والإدارية، تحليل أداء المشاريع، إدارة الحسابات المدينة والدائنة، ودعم الإدارة التنفيذية ببيانات مالية دقيقة تساعد في اتخاذ القرارات.",
-      en: "Experienced and detail-oriented Senior Accountant with more than 4 years of professional experience in accounting, financial reporting, cost control, and account management across contracting, hospitality, and medical sectors in Saudi Arabia. Skilled in preparing financial and accounting reports, analyzing project performance, managing receivables and payables, and supporting executive management with accurate financial insights.",
+      ar: "محاسب أول يمتلك خبرة عملية تتجاوز خمس سنوات في مجالات المحاسبة، التقارير المالية، الرقابة على التكاليف، والتحليل المالي داخل قطاعات المقاولات، الضيافة، والخدمات الطبية، ومجال الاستشارات الإدارية والأنشطة التجارية المختلفة بالمملكة العربية السعودية. أمتلك خبرة قوية في إعداد التقارير المالية والإدارية، تحليل أداء المشاريع، إدارة الحسابات المدينة والدائنة، ودعم الإدارة التنفيذية ببيانات مالية دقيقة تساعد في اتخاذ القرارات.",
+      en: "Experienced and detail-oriented Senior Accountant with more than 5 years of professional experience in accounting, financial reporting, cost control, financial analysis, management consulting and diverse commercial activities across contracting, hospitality, and medical sectors in Saudi Arabia. Skilled in preparing financial and managerial reports, analyzing project performance, managing receivables and payables, and supporting executive management with accurate financial insights.",
     },
     body2: {
-      ar: "أعمل حالياً لدى شركة الأسطول العالي للمقاولات، حيث بدأت كمحاسب حسابات مدينة، ثم تم تكليفي بإعداد التقارير المالية والإدارية الأسبوعية والشهرية لجميع مشاريع الشركة، نتيجة لقدراتي التحليلية وخبرتي في إعداد التقارير المالية.",
-      en: "Currently working at Alostool Alaali Contracting Company, where I progressed from Accounts Receivable Accountant to being entrusted with preparing weekly and monthly financial and managerial reports for all company projects.",
+      ar: "أعمل حالياً لدى شركة الأسطول الآلي للمقاولات، حيث بدأت كمحاسب عملاء، ثم تخصصت في إعداد التقارير المالية والإدارية الأسبوعية والشهرية لجميع مشاريع الشركة، نتيجة لقدراتي التحليلية وخبرتي في إعداد التقارير المالية.",
+      en: "Currently working at Alostool Alaali Contracting Company, where I started as Customer Accountant and specialized in preparing weekly and monthly financial and managerial reports for all company projects.",
     },
   },
   experience: {
@@ -46,25 +45,26 @@ export const t = {
     sub: { ar: "خريطة زمنية لمسيرتي المهنية", en: "A timeline of my professional journey" },
     items: [
       {
+        logo: "alostool",
         date: { ar: "يوليو 2024 — حتى الآن", en: "July 2024 — Present" },
         role: {
           ar: "محاسب أول وأخصائي تقارير مالية",
           en: "Senior Accountant & Financial Reporting Specialist",
         },
         company: {
-          ar: "شركة الأسطول العالي للمقاولات — الرياض",
+          ar: "شركة الأسطول الآلي للمقاولات — الرياض",
           en: "Alostool Alaali Contracting Co. — Riyadh",
         },
         points: {
           ar: [
-            "بدأت كمحاسب حسابات مدينة ثم كُلفت بإعداد التقارير المالية والإدارية الأسبوعية والشهرية لجميع مشاريع الشركة.",
+            "بدأت كمحاسب عملاء ثم تخصصت في إعداد التقارير المالية والإدارية الأسبوعية والشهرية لجميع مشاريع الشركة.",
             "إعداد تقارير الأداء المالي وتقارير الإدارة التي تدعم اتخاذ القرارات التنفيذية.",
             "مراقبة تكاليف المشاريع، تحليل الربحية، ودعم أنشطة الرقابة على التكاليف.",
             "التنسيق مع الاستشاريين الهندسيين في إعداد ومراجعة المطالبات المالية (Claims).",
             "المشاركة في إعداد أكثر من 10 مطالبات مالية لحالات تعاقدية ومشاريع مختلفة.",
           ],
           en: [
-            "Started as AR Accountant then assigned to weekly and monthly financial and managerial reports across all company projects.",
+            "Started as Customer Accountant and specialized in weekly and monthly financial and managerial reports across all company projects.",
             "Prepared detailed performance and management reports supporting executive decision-making.",
             "Monitored project costs, analyzed profitability, and supported cost control activities.",
             "Coordinated with engineering consultants for preparing and reviewing financial claims.",
@@ -73,11 +73,12 @@ export const t = {
         },
       },
       {
+        logo: "lamara",
         date: { ar: "2023 — يونيو 2024", en: "2023 — June 2024" },
         role: { ar: "محاسب أول", en: "Senior Accountant" },
         company: {
-          ar: "لمارة لخدمات الضيافة والإعاشة — الرياض",
-          en: "Lamara Hospitality & Catering — Riyadh",
+          ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة — الرياض",
+          en: "Lamara Hospitality & Catering Est. — Riyadh",
         },
         points: {
           ar: [
@@ -97,11 +98,12 @@ export const t = {
         },
       },
       {
+        logo: "qimat",
         date: { ar: "2022 — 2023", en: "2022 — 2023" },
         role: { ar: "محاسب عام", en: "General Accountant" },
         company: {
-          ar: "مجمع قمة الطب الطبي — الرياض",
-          en: "Qimat Altib Medical Complex — Riyadh",
+          ar: "شركة مجمع قمة الطب الطبية — الرياض",
+          en: "Qimat Altib Medical Complex Co. — Riyadh",
         },
         points: {
           ar: [
@@ -143,7 +145,7 @@ export const t = {
           { ar: "التسويات البنكية", en: "Bank Reconciliation" },
           { ar: "مراقبة الميزانيات", en: "Budget Monitoring" },
           { ar: "إدارة التدفق النقدي", en: "Cash Flow Management" },
-          { ar: "ضريبة القيمة المضافة", en: "VAT Reporting" },
+          { ar: "إعداد ضريبة القيمة المضافة", en: "VAT Reporting Preparation" },
         ],
       },
       {
@@ -152,8 +154,10 @@ export const t = {
           { ar: "أنظمة ERP", en: "ERP Systems" },
           { ar: "Excel متقدم (VLOOKUP / Pivot)", en: "Advanced Excel (VLOOKUP / Pivot)" },
           { ar: "Microsoft Office", en: "Microsoft Office Suite" },
+          { ar: "Power BI", en: "Power BI" },
+          { ar: "Adobe Illustrator", en: "Adobe Illustrator" },
+          { ar: "Adobe Photoshop", en: "Adobe Photoshop" },
           { ar: "تحليل البيانات المالية", en: "Financial Data Analysis" },
-          { ar: "Adobe Photoshop (أساسي)", en: "Adobe Photoshop (basic)" },
         ],
       },
     ],
