@@ -28,6 +28,7 @@ import {
   Phone,
   Plus,
   Quote,
+  Share2,
   ShieldCheck,
   Sparkles,
   Sun,
@@ -975,6 +976,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 
 /* ============= FIXED SOCIAL RAIL (always visible, physical left side) ============= */
 function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
+  const [open, setOpen] = useState(false);
   const socials = useMemo(
     () => [
       { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp" },
@@ -987,31 +989,56 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   );
 
   return (
-    <div
-      dir="ltr"
-      className="fixed z-40"
-      style={{ left: 16, bottom: 16 }}
-    >
-      <div className="flex flex-col items-center gap-2 rounded-full border border-white/10 bg-[#04101f]/55 p-2 backdrop-blur-md shadow-2xl shadow-black/40">
-        {socials.map((s, i) => (
-          <motion.a
-            key={s.label}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseEnter={playHover}
-            onClick={playClick}
-            aria-label={s.label}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 + i * 0.08, type: "spring", stiffness: 240, damping: 20 }}
-            whileHover={{ scale: 1.15 }}
-            className="social-rail-btn flex size-11 items-center justify-center rounded-full border border-white/15 bg-[#07182c]/80 shadow-lg"
-            style={{ color: s.color }}
-          >
-            <i className={`${s.icon} text-base`} />
-          </motion.a>
-        ))}
+    <div dir="ltr" className="fixed z-40" style={{ left: 16, bottom: 16 }}>
+      <div className="flex flex-col items-center gap-2">
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              key="socials"
+              initial={{ opacity: 0, y: 10, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 260, damping: 22 }}
+              className="flex flex-col items-center gap-2 rounded-full border border-white/10 bg-[#04101f]/70 p-2 backdrop-blur-md shadow-2xl shadow-black/40"
+            >
+              {socials.map((s, i) => (
+                <motion.a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={playHover}
+                  onClick={playClick}
+                  aria-label={s.label}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05, type: "spring", stiffness: 240, damping: 20 }}
+                  whileHover={{ scale: 1.15 }}
+                  className="social-rail-btn flex size-11 items-center justify-center rounded-full border border-white/15 bg-[#07182c]/80 shadow-lg"
+                  style={{ color: s.color }}
+                >
+                  <i className={`${s.icon} text-base`} />
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <motion.button
+          type="button"
+          onClick={() => { playClick(); setOpen((v) => !v); }}
+          onMouseEnter={playHover}
+          aria-label={open ? "إغلاق قائمة التواصل" : "فتح قائمة التواصل"}
+          aria-expanded={open}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.94 }}
+          animate={{ rotate: open ? 90 : 0 }}
+          transition={{ type: "spring", stiffness: 260, damping: 18 }}
+          className="relative flex size-14 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#d7aa52] to-[#b8862e] text-[#04101f] shadow-2xl shadow-black/50"
+        >
+          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping" aria-hidden />
+          {open ? <X className="size-6 relative" /> : <Share2 className="size-6 relative" />}
+        </motion.button>
       </div>
     </div>
   );
