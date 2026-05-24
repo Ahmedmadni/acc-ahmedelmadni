@@ -196,6 +196,9 @@ html.light .glass {
 
 .gold-text {
   background: linear-gradient(135deg, #f3d28a 0%, #d7aa52 50%, #b8862e 100%);
+  display: inline-block;
+  line-height: 1.35;
+  padding-block: 0.05em;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -312,4 +315,28 @@ html[dir="rtl"] .title-bar::after {
 .tilt-card:hover {
   transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) translateY(-4px);
   box-shadow: 0 30px 60px -25px rgba(215, 170, 82, 0.35);
+}
+
+/* Background video */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.18;
+  pointer-events: none;
+}
+html.light .bg-video { opacity: 0.12; }
+.bg-video-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(4,16,31,0.55) 0%, rgba(4,16,31,0.7) 50%, rgba(4,16,31,0.85) 100%);
+}
+html.light .bg-video-overlay {
+  background: linear-gradient(180deg, rgba(247,245,240,0.7), rgba(247,245,240,0.85));
 }

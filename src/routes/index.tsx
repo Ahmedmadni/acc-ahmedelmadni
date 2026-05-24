@@ -128,6 +128,17 @@ function Index() {
   return (
     <div className="relative min-h-screen antialiased" style={{ color: "var(--fg)" }}>
       <div className="cinematic-bg" />
+      <video
+        className="bg-video"
+        src="/bg-video.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+      <div className="bg-video-overlay" />
       <div className="aurora" />
       <div className="cinematic-grid" />
       <div ref={cursorRef} className="cursor-glow hidden md:block" />
