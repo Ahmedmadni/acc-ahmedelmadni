@@ -989,10 +989,10 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   return (
     <div
       dir="ltr"
-      className="fixed top-1/2 z-40 -translate-y-1/2"
-      style={{ left: 16 }}
+      className="fixed z-40"
+      style={{ left: 16, bottom: 16 }}
     >
-      <div className="flex flex-col items-center gap-3 rounded-full border border-white/10 bg-[#04101f]/55 p-2 backdrop-blur-md shadow-2xl shadow-black/40">
+      <div className="flex flex-col items-center gap-2 rounded-full border border-white/10 bg-[#04101f]/55 p-2 backdrop-blur-md shadow-2xl shadow-black/40">
         {socials.map((s, i) => (
           <motion.a
             key={s.label}
