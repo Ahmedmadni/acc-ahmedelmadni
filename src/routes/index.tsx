@@ -28,6 +28,7 @@ import {
   Phone,
   Plus,
   Quote,
+  Share2,
   ShieldCheck,
   Sparkles,
   Sun,
