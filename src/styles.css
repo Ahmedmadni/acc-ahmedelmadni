@@ -196,6 +196,9 @@ html.light .glass {
 
 .gold-text {
   background: linear-gradient(135deg, #f3d28a 0%, #d7aa52 50%, #b8862e 100%);
+  display: inline-block;
+  line-height: 1.35;
+  padding-block: 0.05em;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
