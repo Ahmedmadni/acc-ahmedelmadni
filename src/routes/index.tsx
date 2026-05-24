@@ -973,9 +973,8 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
   );
 }
 
-/* ============= FLOATING SOCIAL (vertical, expandable, left side) ============= */
-function FloatingSocial({ isRTL }: { isRTL: boolean }) {
-  const [open, setOpen] = useState(false);
+/* ============= FIXED SOCIAL RAIL (always visible, physical left side) ============= */
+function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const socials = useMemo(
     () => [
       { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp" },
@@ -987,46 +986,32 @@ function FloatingSocial({ isRTL }: { isRTL: boolean }) {
     [],
   );
 
-  // Always left edge regardless of dir
-  const sidePos = isRTL ? { right: 16 } : { left: 16 };
-
   return (
-    <div className="fixed bottom-1/2 z-40 translate-y-1/2" style={sidePos}>
-      <div className="flex flex-col items-center gap-3">
-        <AnimatePresence>
-          {open &&
-            socials.map((s, i) => (
-              <motion.a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                aria-label={s.label}
-                initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.5, y: 20 }}
-                transition={{ delay: i * 0.05, type: "spring", stiffness: 300, damping: 20 }}
-                className="social-rail-btn flex size-11 items-center justify-center rounded-full border border-white/15 bg-[#07182c]/80 text-white shadow-lg backdrop-blur"
-                style={{ color: s.color }}
-              >
-                <i className={`${s.icon} text-base`} />
-              </motion.a>
-            ))}
-        </AnimatePresence>
-
-        <button
-          onClick={() => { playClick(); setOpen((o) => !o); }}
-          onMouseEnter={playHover}
-          aria-label={open ? "Close social" : "Open social"}
-          className="social-rail-btn relative flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-2xl shadow-[#d7aa52]/40"
-        >
-          <motion.span animate={{ rotate: open ? 45 : 0 }} transition={{ type: "spring", stiffness: 250 }}>
-            <Plus className="size-5" />
-          </motion.span>
-          <span className="absolute inset-0 -z-10 rounded-full bg-[#d7aa52] opacity-40 blur-md" />
-        </button>
+    <div
+      dir="ltr"
+      className="fixed top-1/2 z-40 -translate-y-1/2"
+      style={{ left: 16 }}
+    >
+      <div className="flex flex-col items-center gap-3 rounded-full border border-white/10 bg-[#04101f]/55 p-2 backdrop-blur-md shadow-2xl shadow-black/40">
+        {socials.map((s, i) => (
+          <motion.a
+            key={s.label}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={playHover}
+            onClick={playClick}
+            aria-label={s.label}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 + i * 0.08, type: "spring", stiffness: 240, damping: 20 }}
+            whileHover={{ scale: 1.15 }}
+            className="social-rail-btn flex size-11 items-center justify-center rounded-full border border-white/15 bg-[#07182c]/80 shadow-lg"
+            style={{ color: s.color }}
+          >
+            <i className={`${s.icon} text-base`} />
+          </motion.a>
+        ))}
       </div>
     </div>
   );
