@@ -967,7 +967,7 @@ function Certs({ lang }: { lang: Lang }) {
 /* ============= CONTACT ============= */
 function Contact({ lang }: { lang: Lang }) {
   const items = [
-    { icon: Phone, label: t.contact.phone[lang], value: "+966 560 409 811", href: "tel:+966560409811" },
+    { icon: Phone, label: t.contact.phone[lang], value: "+966560409811", href: "tel:+966560409811" },
     { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
     { icon: Car, label: lang === "ar" ? "التنقل" : "Mobility", value: t.contact.driving[lang], href: "#" },
