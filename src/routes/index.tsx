@@ -1046,17 +1046,77 @@ function Footer({ lang }: { lang: Lang }) {
         <div>
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
           <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
-            <li><a href="tel:+966560409811" className="hover:text-[#d7aa52]">+966 560 409 811</a></li>
+            <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">+966560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
         </div>
       </div>
+
+      {/* SOCIAL BUBBLE — inspired by the requested chat-bubble layout */}
+      <FooterSocialBubble lang={lang} />
 
       <div className="mx-auto mt-12 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-6 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
         <span>{t.footer.rights[lang]}</span>
         <span className="inline-flex items-center gap-2"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
       </div>
     </footer>
+  );
+}
+
+/* ============= FOOTER SOCIAL BUBBLE ============= */
+function FooterSocialBubble({ lang }: { lang: Lang }) {
+  return (
+    <div className="mx-auto mt-14 w-[92%] max-w-6xl">
+      <div className="mb-5 flex items-end justify-between gap-4">
+        <div>
+          <div className="text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.socialCol[lang]}</div>
+          <h3 className="mt-1 text-xl font-black" style={{ color: "var(--fg)" }}>{t.social.title[lang]}</h3>
+          <p className="mt-1 text-sm" style={{ color: "var(--fg-soft)" }}>{t.social.sub[lang]}</p>
+        </div>
+        <MessagesSquare className="hidden size-10 text-[#d7aa52]/40 sm:block" />
+      </div>
+
+      <div className="relative overflow-hidden rounded-[28px] border border-[#d7aa52]/30 bg-gradient-to-br from-[#07182c]/90 to-[#04101f]/95 p-6 sm:p-8 backdrop-blur-xl shadow-2xl">
+        <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-16 size-60 rounded-full bg-blue-500/15 blur-3xl" />
+
+        <div className="relative grid grid-cols-5 gap-3 sm:gap-5">
+          {SOCIALS.map((s, i) => (
+            <motion.a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              onMouseEnter={playHover}
+              onClick={playClick}
+              initial={{ opacity: 0, y: 14, scale: 0.85 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ delay: i * 0.07, type: "spring", stiffness: 220, damping: 18 }}
+              whileHover={{ y: -6, scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative flex flex-col items-center gap-2"
+            >
+              <span
+                className="relative flex aspect-square w-full items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-xl shadow-black/40 transition-shadow group-hover:shadow-[0_12px_40px_-8px_rgba(215,170,82,0.5)]"
+                style={{ color: s.color }}
+              >
+                <span
+                  aria-hidden
+                  className="absolute inset-0 rounded-full opacity-0 blur-xl transition-opacity group-hover:opacity-60"
+                  style={{ background: s.color }}
+                />
+                <i className={`${s.icon} relative text-2xl sm:text-3xl`} />
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/70 transition-colors group-hover:text-[#d7aa52]">
+                {s.label}
+              </span>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
