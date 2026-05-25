@@ -203,7 +203,7 @@ function Index() {
         <Hero lang={lang} />
         <Stats lang={lang} />
         <About lang={lang} />
-        <Services lang={lang} />
+        <Services lang={lang} onOpen={setServiceModal} />
         <Experience lang={lang} />
         <Skills lang={lang} onOpen={setSkillModal} />
         <BeforeAfter lang={lang} />
@@ -218,6 +218,12 @@ function Index() {
 
       <AnimatePresence>
         {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
+      </AnimatePresence>
+      <AnimatePresence>
+        {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
+      </AnimatePresence>
+      <AnimatePresence>
+        {eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}
       </AnimatePresence>
     </div>
   );
