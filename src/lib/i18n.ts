@@ -339,7 +339,7 @@ export const t = {
       {
         h: { ar: "الأدوات والأنظمة", en: "Tools & Systems" },
         items: [
-          { ar: "أنظمة ERP", en: "ERP Systems", level: 88, desc: { ar: "تشغيل دورة كاملة على أنظمة ERP.", en: "Full operational cycle on ERP systems." }, tools: ["Oracle", "Odoo"], kpis: { ar: ["تكامل 100%"], en: ["100% integration"] } },
+          { ar: "أنظمة ERP والبرامج المحاسبية", en: "ERP & Accounting Software", level: 88, desc: { ar: "تشغيل دورة محاسبية كاملة على أبرز الأنظمة المحاسبية وERP.", en: "Running a full accounting cycle on leading ERP & accounting platforms." }, tools: ["Oracle", "Odoo", "Dentech", "Al-Shamel", "Daftra", "Ascon", "Zoho Books"], kpis: { ar: ["تكامل 100%", "إقفال شهري سريع"], en: ["100% integration", "Fast monthly close"] } },
           { ar: "Excel متقدم", en: "Advanced Excel", level: 97, desc: { ar: "Pivot, VLOOKUP, Power Query, نماذج مالية.", en: "Pivot, VLOOKUP, Power Query, financial models." }, tools: ["Excel"], kpis: { ar: ["نماذج تلقائية"], en: ["Automated models"] } },
           { ar: "Power BI", en: "Power BI", level: 85, desc: { ar: "بناء لوحات KPIs تفاعلية للإدارة.", en: "Building interactive KPI dashboards for management." }, tools: ["Power BI"], kpis: { ar: ["لوحات لحظية"], en: ["Live dashboards"] } },
           { ar: "Microsoft Office", en: "Microsoft Office", level: 95, desc: { ar: "إتقان كامل لحزمة Office.", en: "Full mastery of Office suite." }, tools: ["Word", "PowerPoint", "Outlook"], kpis: { ar: [], en: [] } },
