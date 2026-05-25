@@ -65,12 +65,27 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
 };
 
 type SkillItem = (typeof t.skills.groups)[number]["items"][number];
+type ServiceItem = (typeof t.services.items)[number];
+
+/** Hijri date check: returns true between 5 and 15 of Dhul-Hijjah (month 12). */
+function isEidSeason(): boolean {
+  try {
+    const parts = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", {
+      day: "numeric", month: "numeric", year: "numeric",
+    }).formatToParts(new Date());
+    const day = Number(parts.find((p) => p.type === "day")?.value);
+    const month = Number(parts.find((p) => p.type === "month")?.value);
+    return month === 12 && day >= 5 && day <= 15;
+  } catch { return false; }
+}
 
 function Index() {
   const [lang, setLang] = useState<Lang>("ar");
   const [theme, setTheme] = useState<Theme>("dark");
   const [loaded, setLoaded] = useState(false);
   const [skillModal, setSkillModal] = useState<SkillItem | null>(null);
+  const [serviceModal, setServiceModal] = useState<ServiceItem | null>(null);
+  const [eidOpen, setEidOpen] = useState<boolean>(false);
   const cursorRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
