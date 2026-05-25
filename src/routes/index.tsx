@@ -1132,34 +1132,23 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
   );
 }
 
-/* ============= FIXED SOCIAL RAIL (always visible, physical left side) ============= */
+/* ============= FLOATING CHAT BUTTON — bottom-right, more visible & expressive ============= */
 function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
-  const socials = useMemo(
-    () => [
-      { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp" },
-      { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn" },
-      { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook" },
-      { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram" },
-      { href: "https://www.snapchat.com/add/ahmedacc851998", icon: "fa-brands fa-snapchat-ghost", color: "#FFFC00", label: "Snapchat" },
-    ],
-    [],
-  );
-
   return (
-    <div dir="ltr" className="fixed z-40" style={{ left: 16, bottom: 16 }}>
-      <div className="flex flex-col items-center gap-2">
+    <div dir="ltr" className="fixed z-40" style={{ right: 18, bottom: 18 }}>
+      <div className="flex flex-col items-end gap-3">
         <AnimatePresence>
           {open && (
             <motion.div
               key="socials"
-              initial={{ opacity: 0, y: 10, scale: 0.9 }}
+              initial={{ opacity: 0, y: 14, scale: 0.85 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.9 }}
+              exit={{ opacity: 0, y: 14, scale: 0.85 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className="flex flex-col items-center gap-2 rounded-full border border-white/10 bg-[#04101f]/70 p-2 backdrop-blur-md shadow-2xl shadow-black/40"
+              className="flex flex-col items-center gap-2 rounded-3xl border border-[#d7aa52]/30 bg-[#04101f]/85 p-3 backdrop-blur-xl shadow-2xl shadow-black/60"
             >
-              {socials.map((s, i) => (
+              {SOCIALS.map((s, i) => (
                 <motion.a
                   key={s.label}
                   href={s.href}
@@ -1168,14 +1157,15 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
                   onMouseEnter={playHover}
                   onClick={playClick}
                   aria-label={s.label}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  title={s.label}
+                  initial={{ opacity: 0, x: 12 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05, type: "spring", stiffness: 240, damping: 20 }}
-                  whileHover={{ scale: 1.15 }}
-                  className="social-rail-btn flex size-11 items-center justify-center rounded-full border border-white/15 bg-[#07182c]/80 shadow-lg"
+                  whileHover={{ scale: 1.15, rotate: -4 }}
+                  className="flex size-11 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg"
                   style={{ color: s.color }}
                 >
-                  <i className={`${s.icon} text-base`} />
+                  <i className={`${s.icon} text-lg`} />
                 </motion.a>
               ))}
             </motion.div>
@@ -1186,18 +1176,218 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           type="button"
           onClick={() => { playClick(); setOpen((v) => !v); }}
           onMouseEnter={playHover}
-          aria-label={open ? "إغلاق قائمة التواصل" : "فتح قائمة التواصل"}
+          aria-label={open ? "Close contact menu" : "Open contact menu"}
           aria-expanded={open}
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.94 }}
-          animate={{ rotate: open ? 90 : 0 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="relative flex size-14 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#d7aa52] to-[#b8862e] text-[#04101f] shadow-2xl shadow-black/50"
+          className="group relative flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 ps-3 pe-4 text-[#04101f] shadow-2xl shadow-[#d7aa52]/40"
         >
-          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping" aria-hidden />
-          {open ? <X className="size-6 relative" /> : <Share2 className="size-6 relative" />}
+          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
+          <span className="relative flex size-9 items-center justify-center rounded-full bg-[#04101f]/15">
+            {open ? <X className="size-5" /> : <MessagesSquare className="size-5" />}
+          </span>
+          <span className="relative text-sm font-extrabold">
+            {open ? "Close" : "Chat"}
+          </span>
         </motion.button>
       </div>
     </div>
+  );
+}
+
+/* ============= HERO FLOATING DASHBOARD WIDGETS ============= */
+function HeroDashWidgets({ lang }: { lang: Lang }) {
+  // Tiny pseudo-data for sparkline + bars
+  const spark = [10, 14, 12, 18, 22, 19, 26, 30, 28, 34, 38, 42];
+  const max = Math.max(...spark);
+  const path = spark
+    .map((v, i) => `${i === 0 ? "M" : "L"} ${(i / (spark.length - 1)) * 100} ${40 - (v / max) * 35}`)
+    .join(" ");
+  const bars = [40, 65, 55, 80, 70, 92, 60];
+
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
+      {/* Top-left: Revenue card */}
+      <motion.div
+        initial={{ opacity: 0, y: -20, x: -20 }}
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute left-[3%] top-[18%] w-[230px] rounded-2xl border border-[#d7aa52]/30 bg-[#04101f]/75 p-4 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
+      >
+        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
+          <span className="inline-flex items-center gap-1.5"><TrendingUp className="size-3 text-emerald-400" />{lang === "ar" ? "الإيرادات" : "Revenue"}</span>
+          <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 font-bold text-emerald-300">+18%</span>
+        </div>
+        <div className="mt-1 font-mono text-2xl font-black gold-text">SAR 482K</div>
+        <svg viewBox="0 0 100 40" className="mt-2 h-12 w-full">
+          <defs>
+            <linearGradient id="sg" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stopColor="#d7aa52" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#d7aa52" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path d={`${path} L 100 40 L 0 40 Z`} fill="url(#sg)" />
+          <path d={path} fill="none" stroke="#f3d28a" strokeWidth="1.5" />
+        </svg>
+      </motion.div>
+
+      {/* Top-right: KPI tile */}
+      <motion.div
+        initial={{ opacity: 0, y: -20, x: 20 }}
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 1, delay: 1.4 }}
+        className="absolute right-[3%] top-[14%] w-[200px] rounded-2xl border border-[#d7aa52]/30 bg-[#04101f]/75 p-4 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
+        style={{ animationDelay: "0.6s" }}
+      >
+        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/60">
+          <PieChart className="size-3 text-[#d7aa52]" />
+          {lang === "ar" ? "هامش الربح" : "Margin"}
+        </div>
+        <div className="mt-2 flex items-center gap-3">
+          <svg viewBox="0 0 36 36" className="size-14">
+            <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
+            <motion.circle
+              cx="18" cy="18" r="15" fill="none" stroke="#f3d28a" strokeWidth="3"
+              strokeLinecap="round" transform="rotate(-90 18 18)" strokeDasharray="94.2"
+              initial={{ strokeDashoffset: 94.2 }}
+              animate={{ strokeDashoffset: 94.2 - 94.2 * 0.72 }}
+              transition={{ duration: 1.8, delay: 1.6 }}
+            />
+          </svg>
+          <div>
+            <div className="font-mono text-2xl font-black text-white">72%</div>
+            <div className="text-[10px] text-emerald-300">{lang === "ar" ? "أعلى من المستهدف" : "Above target"}</div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Bottom-left: Bar dashboard */}
+      <motion.div
+        initial={{ opacity: 0, y: 20, x: -20 }}
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 1, delay: 1.6 }}
+        className="absolute left-[5%] bottom-[10%] w-[260px] rounded-2xl border border-[#d7aa52]/30 bg-[#04101f]/75 p-4 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
+        style={{ animationDelay: "1.2s" }}
+      >
+        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
+          <span className="inline-flex items-center gap-1.5"><BarChart3 className="size-3 text-[#d7aa52]" />{lang === "ar" ? "أداء الأسبوع" : "Weekly Performance"}</span>
+          <span className="font-mono text-[10px] text-[#d7aa52]">W23</span>
+        </div>
+        <div className="mt-3 flex h-16 items-end gap-1.5">
+          {bars.map((h, i) => (
+            <motion.div
+              key={i}
+              initial={{ height: 0 }}
+              animate={{ height: `${h}%` }}
+              transition={{ duration: 0.9, delay: 1.7 + i * 0.06, type: "spring" }}
+              className="flex-1 rounded-sm bg-gradient-to-t from-[#b8862e] to-[#f3d28a]"
+            />
+          ))}
+        </div>
+        <div className="mt-2 flex items-center justify-between text-[10px] text-white/60">
+          <span>S M T W T F S</span>
+          <span className="inline-flex items-center gap-1 text-emerald-300"><LineChart className="size-2.5" />+12.4%</span>
+        </div>
+      </motion.div>
+
+      {/* Bottom-right: Live status pill */}
+      <motion.div
+        initial={{ opacity: 0, y: 20, x: 20 }}
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 1, delay: 1.8 }}
+        className="absolute right-[6%] bottom-[18%] flex items-center gap-2 rounded-full border border-emerald-400/30 bg-[#04101f]/80 px-4 py-2 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
+        style={{ animationDelay: "1.8s" }}
+      >
+        <span className="relative flex size-2.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+        </span>
+        <span className="text-[11px] font-bold text-white/90">{lang === "ar" ? "تحديث لحظي للوحة" : "Live dashboard sync"}</span>
+      </motion.div>
+    </div>
+  );
+}
+
+/* ============= EID GREETING BANNER ============= */
+function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[300] flex items-center justify-center bg-[#020912]/85 p-4 backdrop-blur-md"
+      onClick={onClose}
+      role="dialog"
+      aria-label="Eid greeting"
+    >
+      <motion.div
+        initial={{ scale: 0.85, y: 30, opacity: 0 }}
+        animate={{ scale: 1, y: 0, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 220, damping: 20 }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-md overflow-hidden rounded-[28px] border border-[#d7aa52]/50 bg-gradient-to-br from-[#0a223f] via-[#07182c] to-[#04101f] p-8 text-center shadow-2xl"
+      >
+        {/* Decorative lanterns/sparkles */}
+        <div aria-hidden className="pointer-events-none absolute -top-16 -left-16 size-56 rounded-full bg-[#d7aa52]/25 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-20 -right-16 size-60 rounded-full bg-amber-400/15 blur-3xl" />
+        {[...Array(14)].map((_, i) => (
+          <motion.span
+            key={i}
+            aria-hidden
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: [0, 8, 0], opacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 2.6 + (i % 4) * 0.4, repeat: Infinity, delay: i * 0.15 }}
+            className="absolute"
+            style={{
+              left: `${(i * 53) % 95 + 2}%`,
+              top: `${(i * 37) % 80 + 6}%`,
+              color: i % 2 ? "#f3d28a" : "#fffbe6",
+            }}
+          >
+            <Star className="size-2" fill="currentColor" />
+          </motion.span>
+        ))}
+
+        <button
+          onClick={onClose}
+          aria-label="close"
+          className="absolute end-3 top-3 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        >
+          <X className="size-4" />
+        </button>
+
+        {/* Crescent + lantern emoji header */}
+        <motion.div
+          initial={{ scale: 0.6, rotate: -20 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ type: "spring", stiffness: 180, damping: 14, delay: 0.15 }}
+          className="relative mx-auto mb-4 flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] shadow-2xl shadow-[#d7aa52]/40"
+        >
+          <span className="text-4xl" role="img" aria-label="lantern">🏮</span>
+        </motion.div>
+
+        <div className="relative">
+          <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#d7aa52]">
+            🌙 {lang === "ar" ? "تهنئة" : "Greetings"} 🌙
+          </div>
+          <h3 className="mt-2 text-3xl font-black gold-text">{t.eid.title[lang]}</h3>
+          <p className="mt-3 text-sm leading-loose text-white/85">{t.eid.msg[lang]}</p>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-[#f3d28a]">
+            <Sparkles className="size-3" />
+            {t.eid.from[lang]}
+          </div>
+
+          <button
+            onClick={onClose}
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-7 py-3 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105"
+          >
+            <CheckCircle2 className="size-4" />
+            {t.eid.close[lang]}
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 }
