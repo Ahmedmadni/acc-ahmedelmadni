@@ -60,6 +60,8 @@ export const t = {
   services: {
     title: { ar: "ماذا أقدّم", en: "What I Offer" },
     sub: { ar: "خدمات مالية وإدارية على أعلى مستوى احترافي", en: "Financial & advisory services at the highest professional standard" },
+    learn: { ar: "اعرف أكثر", en: "Learn more" },
+    process: { ar: "كيف أنفذها", en: "How I deliver" },
     items: [
       {
         ar: "إعداد التقارير المالية والإدارية",
@@ -67,6 +69,14 @@ export const t = {
         d: {
           ar: "بناء تقارير دورية تعرض الأداء المالي بوضوح وتدعم قرار الإدارة التنفيذية.",
           en: "Periodic reports that present financial performance with clarity to support executive decisions.",
+        },
+        full: {
+          ar: "أقوم بإعداد تقارير مالية وإدارية أسبوعية وشهرية وسنوية تشمل قائمة الدخل، المركز المالي، التدفقات النقدية، ومؤشرات الأداء التشغيلية. تبدأ الدورة بجمع البيانات من نظام ERP ومراجعة دقتها، ثم تصنيفها وفق مراكز التكلفة، ثم إعداد التحليل الأفقي والرأسي، وأخيراً عرض النتائج بصرياً عبر لوحات Power BI وExcel ليتمكن متخذو القرار من رؤية الانحرافات والفرص خلال دقائق.",
+          en: "Weekly, monthly, and annual financial reports — income statement, balance sheet, cash flow, and operational KPIs. The cycle: collect ERP data → validate → classify by cost centers → horizontal & vertical analysis → present visually on Power BI & Excel so leaders see variances and opportunities within minutes.",
+        },
+        steps: {
+          ar: ["جمع ومطابقة البيانات من ERP", "تصنيف حسب مراكز التكلفة", "تحليل أفقي ورأسي ومقارنات", "عرض بصري على Power BI"],
+          en: ["Collect & match data from ERP", "Classify by cost centers", "Horizontal & vertical analysis", "Visual presentation on Power BI"],
         },
       },
       {
@@ -76,6 +86,14 @@ export const t = {
           ar: "تحليل تكاليف المشاريع والربحية وتقديم رؤية دقيقة لكل مرحلة.",
           en: "Project cost analysis and profitability insights for every project stage.",
         },
+        full: {
+          ar: "أتتبع تكاليف كل مشروع من بدايته حتى تسليمه عبر تصنيف التكاليف إلى مباشرة وغير مباشرة وثابتة ومتغيرة، ثم احتساب تكلفة الوحدة والربحية لكل مرحلة. هذا التحليل يدعم قرارات التسعير، ويكشف الانحرافات بين الميزانية والفعلي مبكراً، ويُمكّن الإدارة من اتخاذ إجراءات تصحيحية قبل تفاقم الخسائر.",
+          en: "I track each project from kickoff to handover by classifying direct/indirect and fixed/variable costs, then computing unit cost and per-phase profitability. This supports pricing, surfaces budget vs actual variance early, and enables corrective action before losses escalate.",
+        },
+        steps: {
+          ar: ["تصنيف التكاليف بأنواعها", "احتساب تكلفة الوحدة", "مقارنة الميزانية بالفعلي", "تقرير ربحية لكل مرحلة"],
+          en: ["Classify cost types", "Calculate unit cost", "Budget vs actual", "Phase profitability report"],
+        },
       },
       {
         ar: "إعداد المطالبات المالية",
@@ -83,6 +101,14 @@ export const t = {
         d: {
           ar: "تنسيق مطالبات احترافية مع الاستشاريين الهندسيين لضمان الحقوق التعاقدية.",
           en: "Professional claims aligned with engineering consultants to secure contractual rights.",
+        },
+        full: {
+          ar: "أعد ملفات المطالبات المالية للمشاريع المقاولاتية بالتنسيق المباشر مع الاستشاريين الهندسيين: مراجعة بنود العقد، توثيق الأعمال الإضافية، إرفاق الأدلة الفنية والمالية، واحتساب المطالبة وفق الأسعار المعتمدة. النتيجة ملف متكامل يرفع نسبة قبول المطالبة ويحفظ الحقوق التعاقدية للشركة.",
+          en: "Claim files for contracting projects coordinated with engineering consultants — review contract clauses, document variations, attach technical & financial evidence, and compute the claim against approved rates. The result: a complete file that maximizes approval and protects contractual rights.",
+        },
+        steps: {
+          ar: ["مراجعة بنود العقد", "توثيق الأعمال الإضافية", "إرفاق الأدلة الفنية", "احتساب وتقديم المطالبة"],
+          en: ["Review contract clauses", "Document variations", "Attach technical evidence", "Compute & submit claim"],
         },
       },
       {
@@ -92,6 +118,14 @@ export const t = {
           ar: "تسويات بنكية وإعداد إقرارات ضريبة القيمة المضافة بدقة وفق متطلبات الزكاة والضريبة.",
           en: "Bank reconciliations and VAT filings precisely aligned with ZATCA requirements.",
         },
+        full: {
+          ar: "أنفذ التسويات البنكية الشهرية بمطابقة كل حركة بين كشف البنك ودفاتر الشركة، وتسوية الفروقات بدقة كاملة. كذلك أعد إقرارات ضريبة القيمة المضافة وفق متطلبات هيئة الزكاة والضريبة والجمارك، شاملاً ضريبة المخرجات والمدخلات، وتقديم الإقرار عبر بوابة زاتكا في موعده لتفادي أي غرامات.",
+          en: "Monthly bank reconciliations matching every transaction between bank statements and books, plus VAT returns aligned with ZATCA — covering output and input VAT — filed on time via the ZATCA portal to avoid penalties.",
+        },
+        steps: {
+          ar: ["مطابقة الحركات البنكية", "تسوية الفروقات", "احتساب ضريبة المخرجات والمدخلات", "تقديم الإقرار عبر زاتكا"],
+          en: ["Match bank transactions", "Resolve differences", "Compute output & input VAT", "Submit via ZATCA portal"],
+        },
       },
       {
         ar: "استشارات مالية وإدارية",
@@ -100,6 +134,14 @@ export const t = {
           ar: "تقديم استشارات للأنشطة التجارية المختلفة بهدف رفع الكفاءة المالية.",
           en: "Advisory services across commercial activities to lift financial efficiency.",
         },
+        full: {
+          ar: "أقدم استشارات مالية وإدارية للمنشآت الصغيرة والمتوسطة تشمل تشخيص الوضع المالي الحالي، تصميم الدورة المستندية، بناء الميزانيات التقديرية، وتطوير سياسات الرقابة الداخلية. كل استشارة تنتهي بخطة تنفيذية واضحة ومؤشرات قياس لمتابعة التحسن.",
+          en: "Advisory for SMEs — diagnose current financial position, design the documentary cycle, build forecast budgets, and develop internal control policies. Every engagement ends with a clear action plan and KPIs to track improvement.",
+        },
+        steps: {
+          ar: ["تشخيص الوضع المالي", "تصميم الدورة المستندية", "بناء الميزانيات التقديرية", "خطة تنفيذية ومؤشرات"],
+          en: ["Diagnose financial position", "Design documentary cycle", "Build forecast budgets", "Action plan & KPIs"],
+        },
       },
       {
         ar: "لوحات تحليل (Power BI / Excel)",
@@ -107,6 +149,14 @@ export const t = {
         d: {
           ar: "تصميم لوحات تفاعلية لمؤشرات الأداء (KPIs) وقراءة بصرية للأرقام.",
           en: "Interactive KPI dashboards that turn numbers into visual insight.",
+        },
+        full: {
+          ar: "أصمم لوحات تحليل تفاعلية على Power BI وExcel تربط مباشرة بقواعد بيانات الشركة، تعرض المؤشرات اللحظية للإيرادات، التكاليف، الربحية، والتدفق النقدي. كل لوحة مصممة لتمنح الإدارة العليا رؤية شاملة في صفحة واحدة مع إمكانية التعمق في التفاصيل بنقرة واحدة.",
+          en: "Interactive dashboards on Power BI & Excel connected directly to company databases — live KPIs for revenue, cost, profitability, and cash flow. One-page leadership view with one-click drill-down.",
+        },
+        steps: {
+          ar: ["ربط مصادر البيانات", "نمذجة المؤشرات", "تصميم بصري احترافي", "تحديث لحظي تلقائي"],
+          en: ["Connect data sources", "Model the KPIs", "Professional visual design", "Live auto-refresh"],
         },
       },
     ],
