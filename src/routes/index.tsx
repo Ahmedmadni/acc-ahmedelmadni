@@ -64,6 +64,15 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
   qimat:    { src: logoQimat,    name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" } },
 };
 
+const SOCIALS = [
+  { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp" },
+  { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn" },
+  { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook" },
+  { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram" },
+  { href: "https://www.snapchat.com/add/ahmedacc851998", icon: "fa-brands fa-snapchat-ghost", color: "#FFFC00", label: "Snapchat" },
+] as const;
+
+
 type SkillItem = (typeof t.skills.groups)[number]["items"][number];
 type ServiceItem = (typeof t.services.items)[number];
 
