@@ -416,4 +416,14 @@ export const t = {
     rights: { ar: "© 2025 أحمد المدني. جميع الحقوق محفوظة.", en: "© 2025 Ahmed Elmadani. All rights reserved." },
     built: { ar: "صُمم بعناية للتميّز المهني", en: "Crafted with care for professional excellence" },
   },
+  eid: {
+    title: { ar: "عيد الأضحى المبارك", en: "Blessed Eid Al-Adha" },
+    msg: { ar: "كل عام وأنتم بخير — تقبّل الله منّا ومنكم صالح الأعمال", en: "Wishing you a blessed Eid — may all your deeds be accepted" },
+    from: { ar: "من أحمد المدني", en: "From Ahmed Elmadani" },
+    close: { ar: "إغلاق", en: "Close" },
+  },
+  social: {
+    title: { ar: "تواصل عبر منصات التواصل", en: "Connect on social" },
+    sub: { ar: "اختر القناة الأنسب لك للتواصل المباشر", en: "Pick the channel that fits you best" },
+  },
 };
