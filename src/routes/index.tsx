@@ -110,6 +110,20 @@ function Index() {
   }, []);
 
   useEffect(() => {
+    if (!isEidSeason()) return;
+    try {
+      const k = "eid-banner-dismissed";
+      if (sessionStorage.getItem(k) !== "1") setEidOpen(true);
+    } catch { setEidOpen(true); }
+  }, []);
+
+  const dismissEid = () => {
+    setEidOpen(false);
+    try { sessionStorage.setItem("eid-banner-dismissed", "1"); } catch { /* ignore */ }
+  };
+
+
+  useEffect(() => {
     let played = false;
     const trigger = () => {
       if (played) return;
