@@ -505,7 +505,7 @@ function About({ lang }: { lang: Lang }) {
 }
 
 /* ============= SERVICES ============= */
-function Services({ lang }: { lang: Lang }) {
+function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
   const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
   return (
     <section id="services" className="relative py-24">
@@ -531,10 +531,15 @@ function Services({ lang }: { lang: Lang }) {
                   </div>
                   <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>{s[lang]}</h3>
                   <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>{s.d[lang]}</p>
-                  <div className="mt-5 flex items-center gap-2 text-xs font-bold text-[#d7aa52] opacity-0 transition-opacity group-hover:opacity-100">
-                    {lang === "ar" ? "اعرف أكثر" : "Learn more"}
+                  <button
+                    type="button"
+                    onClick={() => { playClick(); onOpen(s); }}
+                    onMouseEnter={playHover}
+                    className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
+                  >
+                    {t.services.learn[lang]}
                     <ChevronRight className="size-3 rtl:rotate-180" />
-                  </div>
+                  </button>
                 </div>
               </motion.div>
             );
@@ -544,6 +549,48 @@ function Services({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
+/* ============= SERVICE MODAL ============= */
+function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
+      onClick={onClose}>
+      <motion.div initial={{ scale: 0.92, y: 30 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.92, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 220, damping: 22 }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl">
+        <button onClick={onClose} aria-label="close"
+          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white">
+          <X className="size-4" />
+        </button>
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
+          <Sparkles className="size-3.5" />
+          {lang === "ar" ? "خدمة" : "Service"}
+        </div>
+        <h3 className="text-2xl font-black text-white">{item[lang]}</h3>
+        <p className="mt-4 text-sm leading-loose text-white/85">{item.full[lang]}</p>
+        <div className="mt-6">
+          <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+            {t.services.process[lang]}
+          </div>
+          <ol className="space-y-2">
+            {item.steps[lang].map((step, i) => (
+              <li key={i} className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3 text-sm text-white/90">
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[10px] font-black text-[#04101f]">
+                  {i + 1}
+                </span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+
 
 /* ============= EXPERIENCE ============= */
 function Experience({ lang }: { lang: Lang }) {
