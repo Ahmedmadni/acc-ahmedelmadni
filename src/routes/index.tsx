@@ -53,6 +53,7 @@ import logoLamara from "@/assets/logo-lamara.png";
 import logoQimat from "@/assets/logo-qimat.jpg";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
+import { AIAssistant } from "@/components/AIAssistant";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -224,6 +225,7 @@ function Index() {
       <Footer lang={lang} />
 
       <FloatingSocial isRTL={isRTL} />
+      <AIAssistant lang={lang} />
 
       <AnimatePresence>
         {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
