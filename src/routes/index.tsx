@@ -53,6 +53,7 @@ import logoLamara from "@/assets/logo-lamara.png";
 import logoQimat from "@/assets/logo-qimat.jpg";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
+import { AIAssistant } from "@/components/AIAssistant";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -224,6 +225,7 @@ function Index() {
       <Footer lang={lang} />
 
       <FloatingSocial isRTL={isRTL} />
+      <AIAssistant lang={lang} />
 
       <AnimatePresence>
         {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
@@ -361,7 +363,7 @@ function Hero({ lang }: { lang: Lang }) {
           <div className="mb-3 min-h-[28px] text-lg font-medium">
             <Typewriter words={t.hero.typewriter[lang]} />
           </div>
-          <p className="mb-8 max-w-xl text-base leading-relaxed" style={{ color: "var(--fg-soft)" }}>
+          <p className="mb-8 max-w-xl text-base leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>
             {t.hero.intro[lang]}
           </p>
 
@@ -475,7 +477,7 @@ function About({ lang }: { lang: Lang }) {
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}
-            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose sm:p-10 lg:col-span-3"
+            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose text-justify sm:p-10 lg:col-span-3"
             style={{ color: "var(--fg-soft)" }}>
             <p>{t.about.body[lang]}</p>
             <p>{t.about.body2[lang]}</p>
@@ -485,10 +487,18 @@ function About({ lang }: { lang: Lang }) {
             viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.9 }}
             className="relative lg:col-span-2">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl gold-border gold-glow">
-              <img src={deskImg} alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
-                loading="lazy" width={1280} height={720} className="h-full w-full object-cover" />
+            <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
+              <video
+                src="/bg-video-2.mp4"
+                autoPlay loop muted playsInline preload="metadata"
+                poster={deskImg}
+                aria-label={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+                className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
+              <div className="absolute bottom-4 start-4 end-4 flex items-center gap-2 rounded-full glass px-3 py-2 text-[11px] font-bold text-white/85">
+                <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+                {lang === "ar" ? "مساحة العمل المهنية" : "Professional workspace"}
+              </div>
             </div>
           </motion.div>
         </div>
@@ -542,7 +552,7 @@ function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => vo
                     <Icon className="size-5" />
                   </div>
                   <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>{s[lang]}</h3>
-                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>{s.d[lang]}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{s.d[lang]}</p>
                   <button
                     type="button"
                     onClick={() => { playClick(); onOpen(s); }}
@@ -1080,7 +1090,7 @@ function FooterSocialBubble({ lang }: { lang: Lang }) {
         <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-16 size-60 rounded-full bg-blue-500/15 blur-3xl" />
 
-        <div className="relative grid grid-cols-5 gap-3 sm:gap-5">
+        <div className="relative flex flex-wrap items-center justify-center gap-3 sm:gap-6">
           {SOCIALS.map((s, i) => (
             <motion.a
               key={s.label}
@@ -1088,28 +1098,29 @@ function FooterSocialBubble({ lang }: { lang: Lang }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
+              title={s.label}
               onMouseEnter={playHover}
               onClick={playClick}
               initial={{ opacity: 0, y: 14, scale: 0.85 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: i * 0.07, type: "spring", stiffness: 220, damping: 18 }}
-              whileHover={{ y: -6, scale: 1.08 }}
+              whileHover={{ y: -4, scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               className="group relative flex flex-col items-center gap-2"
             >
               <span
-                className="relative flex aspect-square w-full items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-xl shadow-black/40 transition-shadow group-hover:shadow-[0_12px_40px_-8px_rgba(215,170,82,0.5)]"
+                className="relative flex size-12 sm:size-14 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-xl shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_12px_40px_-8px_rgba(215,170,82,0.5)]"
                 style={{ color: s.color }}
               >
                 <span
                   aria-hidden
-                  className="absolute inset-0 rounded-full opacity-0 blur-xl transition-opacity group-hover:opacity-60"
+                  className="absolute inset-0 rounded-2xl opacity-0 blur-xl transition-opacity group-hover:opacity-50"
                   style={{ background: s.color }}
                 />
-                <i className={`${s.icon} relative text-2xl sm:text-3xl`} />
+                <i className={`${s.icon} relative text-lg sm:text-xl`} />
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/70 transition-colors group-hover:text-[#d7aa52]">
+              <span className="hidden sm:block text-[10px] font-bold uppercase tracking-[0.15em] text-white/70 transition-colors group-hover:text-[#d7aa52]">
                 {s.label}
               </span>
             </motion.a>
@@ -1136,8 +1147,8 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
   return (
-    <div dir="ltr" className="fixed z-40" style={{ right: 18, bottom: 18 }}>
-      <div className="flex flex-col items-end gap-3">
+    <div dir="ltr" className="fixed z-40" style={{ left: 18, bottom: 18 }}>
+      <div className="flex flex-col items-start gap-3">
         <AnimatePresence>
           {open && (
             <motion.div
@@ -1158,7 +1169,7 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
                   onClick={playClick}
                   aria-label={s.label}
                   title={s.label}
-                  initial={{ opacity: 0, x: 12 }}
+                  initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05, type: "spring", stiffness: 240, damping: 20 }}
                   whileHover={{ scale: 1.15, rotate: -4 }}
@@ -1176,29 +1187,23 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           type="button"
           onClick={() => { playClick(); setOpen((v) => !v); }}
           onMouseEnter={playHover}
-          aria-label={open ? "Close contact menu" : "Open contact menu"}
+          aria-label={open ? "Close social menu" : "Open social menu"}
           aria-expanded={open}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.94 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="group relative flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 ps-3 pe-4 text-[#04101f] shadow-2xl shadow-[#d7aa52]/40"
+          className="relative flex size-14 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
         >
-          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
-          <span className="relative flex size-9 items-center justify-center rounded-full bg-[#04101f]/15">
-            {open ? <X className="size-5" /> : <MessagesSquare className="size-5" />}
-          </span>
-          <span className="relative text-sm font-extrabold">
-            {open ? "Close" : "Chat"}
-          </span>
+          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
+          {open ? <X className="size-5 relative" /> : <i className="fa-solid fa-share-nodes text-xl relative" />}
         </motion.button>
       </div>
     </div>
   );
 }
 
-/* ============= HERO FLOATING DASHBOARD WIDGETS ============= */
+/* ============= HERO ORGANIZED DASHBOARD WIDGET ============= */
 function HeroDashWidgets({ lang }: { lang: Lang }) {
-  // Tiny pseudo-data for sparkline + bars
   const spark = [10, 14, 12, 18, 22, 19, 26, 30, 28, 34, 38, 42];
   const max = Math.max(...spark);
   const path = spark
@@ -1207,105 +1212,108 @@ function HeroDashWidgets({ lang }: { lang: Lang }) {
   const bars = [40, 65, 55, 80, 70, 92, 60];
 
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
-      {/* Top-left: Revenue card */}
-      <motion.div
-        initial={{ opacity: 0, y: -20, x: -20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute left-[3%] top-[18%] w-[230px] rounded-2xl border border-[#d7aa52]/30 bg-[#04101f]/75 p-4 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
-      >
-        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
-          <span className="inline-flex items-center gap-1.5"><TrendingUp className="size-3 text-emerald-400" />{lang === "ar" ? "الإيرادات" : "Revenue"}</span>
-          <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 font-bold text-emerald-300">+18%</span>
+    <motion.div
+      aria-hidden
+      initial={{ opacity: 0, y: 30, scale: 0.92 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 1, delay: 1.3, type: "spring", stiffness: 120, damping: 20 }}
+      className="pointer-events-none absolute left-[3%] top-[16%] z-0 hidden w-[300px] xl:block"
+    >
+      <div className="floaty rounded-3xl border border-[#d7aa52]/30 bg-[#04101f]/85 p-5 backdrop-blur-2xl shadow-2xl shadow-black/60">
+        {/* Header */}
+        <div className="mb-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="flex size-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e]">
+              <BarChart3 className="size-4 text-[#04101f]" />
+            </span>
+            <div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                {lang === "ar" ? "لوحة مباشرة" : "Live Dashboard"}
+              </div>
+              <div className="text-[11px] font-bold text-[#f3d28a]">Q2 · 2026</div>
+            </div>
+          </div>
+          <span className="flex items-center gap-1 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-1.5 py-0.5 text-[9px] font-bold text-emerald-300">
+            <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
+            LIVE
+          </span>
         </div>
-        <div className="mt-1 font-mono text-2xl font-black gold-text">SAR 482K</div>
-        <svg viewBox="0 0 100 40" className="mt-2 h-12 w-full">
-          <defs>
-            <linearGradient id="sg" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="#d7aa52" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#d7aa52" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path d={`${path} L 100 40 L 0 40 Z`} fill="url(#sg)" />
-          <path d={path} fill="none" stroke="#f3d28a" strokeWidth="1.5" />
-        </svg>
-      </motion.div>
 
-      {/* Top-right: KPI tile */}
-      <motion.div
-        initial={{ opacity: 0, y: -20, x: 20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 1, delay: 1.4 }}
-        className="absolute right-[3%] top-[14%] w-[200px] rounded-2xl border border-[#d7aa52]/30 bg-[#04101f]/75 p-4 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
-        style={{ animationDelay: "0.6s" }}
-      >
-        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-white/60">
-          <PieChart className="size-3 text-[#d7aa52]" />
-          {lang === "ar" ? "هامش الربح" : "Margin"}
-        </div>
-        <div className="mt-2 flex items-center gap-3">
-          <svg viewBox="0 0 36 36" className="size-14">
-            <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
-            <motion.circle
-              cx="18" cy="18" r="15" fill="none" stroke="#f3d28a" strokeWidth="3"
-              strokeLinecap="round" transform="rotate(-90 18 18)" strokeDasharray="94.2"
-              initial={{ strokeDashoffset: 94.2 }}
-              animate={{ strokeDashoffset: 94.2 - 94.2 * 0.72 }}
-              transition={{ duration: 1.8, delay: 1.6 }}
-            />
+        {/* Revenue row */}
+        <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-3">
+          <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
+            <span className="inline-flex items-center gap-1.5"><TrendingUp className="size-3 text-emerald-400" />{lang === "ar" ? "الإيرادات" : "Revenue"}</span>
+            <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 font-bold text-emerald-300">+18%</span>
+          </div>
+          <div className="mt-1 font-mono text-xl font-black gold-text">SAR 482K</div>
+          <svg viewBox="0 0 100 40" className="mt-1 h-10 w-full">
+            <defs>
+              <linearGradient id="sg" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stopColor="#d7aa52" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#d7aa52" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <path d={`${path} L 100 40 L 0 40 Z`} fill="url(#sg)" />
+            <path d={path} fill="none" stroke="#f3d28a" strokeWidth="1.5" />
           </svg>
-          <div>
-            <div className="font-mono text-2xl font-black text-white">72%</div>
-            <div className="text-[10px] text-emerald-300">{lang === "ar" ? "أعلى من المستهدف" : "Above target"}</div>
+        </div>
+
+        {/* Two-column KPIs */}
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <div className="rounded-xl border border-white/8 bg-white/[0.02] p-2.5">
+            <div className="flex items-center gap-1.5 text-[9px] uppercase tracking-[0.2em] text-white/60">
+              <PieChart className="size-2.5 text-[#d7aa52]" />
+              {lang === "ar" ? "الهامش" : "Margin"}
+            </div>
+            <div className="mt-1.5 flex items-center gap-2">
+              <svg viewBox="0 0 36 36" className="size-10">
+                <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
+                <motion.circle
+                  cx="18" cy="18" r="15" fill="none" stroke="#f3d28a" strokeWidth="3"
+                  strokeLinecap="round" transform="rotate(-90 18 18)" strokeDasharray="94.2"
+                  initial={{ strokeDashoffset: 94.2 }}
+                  animate={{ strokeDashoffset: 94.2 - 94.2 * 0.72 }}
+                  transition={{ duration: 1.8, delay: 1.6 }}
+                />
+              </svg>
+              <div>
+                <div className="font-mono text-base font-black text-white">72%</div>
+                <div className="text-[9px] text-emerald-300">▲ target</div>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl border border-white/8 bg-white/[0.02] p-2.5">
+            <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.2em] text-white/60">
+              <span className="inline-flex items-center gap-1"><BarChart3 className="size-2.5 text-[#d7aa52]" />W23</span>
+              <span className="text-emerald-300">+12%</span>
+            </div>
+            <div className="mt-2 flex h-10 items-end gap-1">
+              {bars.map((h, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ height: 0 }}
+                  animate={{ height: `${h}%` }}
+                  transition={{ duration: 0.9, delay: 1.7 + i * 0.06, type: "spring" }}
+                  className="flex-1 rounded-sm bg-gradient-to-t from-[#b8862e] to-[#f3d28a]"
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </motion.div>
 
-      {/* Bottom-left: Bar dashboard */}
-      <motion.div
-        initial={{ opacity: 0, y: 20, x: -20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 1, delay: 1.6 }}
-        className="absolute left-[5%] bottom-[10%] w-[260px] rounded-2xl border border-[#d7aa52]/30 bg-[#04101f]/75 p-4 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
-        style={{ animationDelay: "1.2s" }}
-      >
-        <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
-          <span className="inline-flex items-center gap-1.5"><BarChart3 className="size-3 text-[#d7aa52]" />{lang === "ar" ? "أداء الأسبوع" : "Weekly Performance"}</span>
-          <span className="font-mono text-[10px] text-[#d7aa52]">W23</span>
+        {/* Status footer */}
+        <div className="mt-3 flex items-center justify-between rounded-xl border border-emerald-400/20 bg-emerald-500/5 px-2.5 py-1.5">
+          <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-white/85">
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+            </span>
+            {lang === "ar" ? "متزامن مع ERP" : "ERP synced"}
+          </span>
+          <span className="font-mono text-[9px] text-white/50">now</span>
         </div>
-        <div className="mt-3 flex h-16 items-end gap-1.5">
-          {bars.map((h, i) => (
-            <motion.div
-              key={i}
-              initial={{ height: 0 }}
-              animate={{ height: `${h}%` }}
-              transition={{ duration: 0.9, delay: 1.7 + i * 0.06, type: "spring" }}
-              className="flex-1 rounded-sm bg-gradient-to-t from-[#b8862e] to-[#f3d28a]"
-            />
-          ))}
-        </div>
-        <div className="mt-2 flex items-center justify-between text-[10px] text-white/60">
-          <span>S M T W T F S</span>
-          <span className="inline-flex items-center gap-1 text-emerald-300"><LineChart className="size-2.5" />+12.4%</span>
-        </div>
-      </motion.div>
-
-      {/* Bottom-right: Live status pill */}
-      <motion.div
-        initial={{ opacity: 0, y: 20, x: 20 }}
-        animate={{ opacity: 1, y: 0, x: 0 }}
-        transition={{ duration: 1, delay: 1.8 }}
-        className="absolute right-[6%] bottom-[18%] flex items-center gap-2 rounded-full border border-emerald-400/30 bg-[#04101f]/80 px-4 py-2 backdrop-blur-xl shadow-2xl shadow-black/50 floaty"
-        style={{ animationDelay: "1.8s" }}
-      >
-        <span className="relative flex size-2.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
-        </span>
-        <span className="text-[11px] font-bold text-white/90">{lang === "ar" ? "تحديث لحظي للوحة" : "Live dashboard sync"}</span>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
 
