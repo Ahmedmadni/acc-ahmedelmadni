@@ -363,7 +363,7 @@ function Hero({ lang }: { lang: Lang }) {
           <div className="mb-3 min-h-[28px] text-lg font-medium">
             <Typewriter words={t.hero.typewriter[lang]} />
           </div>
-          <p className="mb-8 max-w-xl text-base leading-relaxed" style={{ color: "var(--fg-soft)" }}>
+          <p className="mb-8 max-w-xl text-base leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>
             {t.hero.intro[lang]}
           </p>
 
@@ -477,7 +477,7 @@ function About({ lang }: { lang: Lang }) {
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}
-            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose sm:p-10 lg:col-span-3"
+            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose text-justify sm:p-10 lg:col-span-3"
             style={{ color: "var(--fg-soft)" }}>
             <p>{t.about.body[lang]}</p>
             <p>{t.about.body2[lang]}</p>
@@ -487,10 +487,18 @@ function About({ lang }: { lang: Lang }) {
             viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.9 }}
             className="relative lg:col-span-2">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl gold-border gold-glow">
-              <img src={deskImg} alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
-                loading="lazy" width={1280} height={720} className="h-full w-full object-cover" />
+            <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
+              <video
+                src="/bg-video-2.mp4"
+                autoPlay loop muted playsInline preload="metadata"
+                poster={deskImg}
+                aria-label={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+                className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
+              <div className="absolute bottom-4 start-4 end-4 flex items-center gap-2 rounded-full glass px-3 py-2 text-[11px] font-bold text-white/85">
+                <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+                {lang === "ar" ? "مساحة العمل المهنية" : "Professional workspace"}
+              </div>
             </div>
           </motion.div>
         </div>
