@@ -1138,8 +1138,8 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
   return (
-    <div dir="ltr" className="fixed z-40" style={{ right: 18, bottom: 18 }}>
-      <div className="flex flex-col items-end gap-3">
+    <div dir="ltr" className="fixed z-40" style={{ left: 18, bottom: 18 }}>
+      <div className="flex flex-col items-start gap-3">
         <AnimatePresence>
           {open && (
             <motion.div
@@ -1160,7 +1160,7 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
                   onClick={playClick}
                   aria-label={s.label}
                   title={s.label}
-                  initial={{ opacity: 0, x: 12 }}
+                  initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05, type: "spring", stiffness: 240, damping: 20 }}
                   whileHover={{ scale: 1.15, rotate: -4 }}
@@ -1178,20 +1178,15 @@ function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           type="button"
           onClick={() => { playClick(); setOpen((v) => !v); }}
           onMouseEnter={playHover}
-          aria-label={open ? "Close contact menu" : "Open contact menu"}
+          aria-label={open ? "Close social menu" : "Open social menu"}
           aria-expanded={open}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.94 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="group relative flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 ps-3 pe-4 text-[#04101f] shadow-2xl shadow-[#d7aa52]/40"
+          className="relative flex size-14 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
         >
-          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
-          <span className="relative flex size-9 items-center justify-center rounded-full bg-[#04101f]/15">
-            {open ? <X className="size-5" /> : <MessagesSquare className="size-5" />}
-          </span>
-          <span className="relative text-sm font-extrabold">
-            {open ? "Close" : "Chat"}
-          </span>
+          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
+          {open ? <X className="size-5 relative" /> : <i className="fa-solid fa-share-nodes text-xl relative" />}
         </motion.button>
       </div>
     </div>
