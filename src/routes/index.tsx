@@ -552,7 +552,7 @@ function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => vo
                     <Icon className="size-5" />
                   </div>
                   <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>{s[lang]}</h3>
-                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>{s.d[lang]}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{s.d[lang]}</p>
                   <button
                     type="button"
                     onClick={() => { playClick(); onOpen(s); }}
@@ -1090,7 +1090,7 @@ function FooterSocialBubble({ lang }: { lang: Lang }) {
         <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
         <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-16 size-60 rounded-full bg-blue-500/15 blur-3xl" />
 
-        <div className="relative grid grid-cols-5 gap-3 sm:gap-5">
+        <div className="relative flex flex-wrap items-center justify-center gap-3 sm:gap-6">
           {SOCIALS.map((s, i) => (
             <motion.a
               key={s.label}
@@ -1098,28 +1098,29 @@ function FooterSocialBubble({ lang }: { lang: Lang }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
+              title={s.label}
               onMouseEnter={playHover}
               onClick={playClick}
               initial={{ opacity: 0, y: 14, scale: 0.85 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: i * 0.07, type: "spring", stiffness: 220, damping: 18 }}
-              whileHover={{ y: -6, scale: 1.08 }}
+              whileHover={{ y: -4, scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               className="group relative flex flex-col items-center gap-2"
             >
               <span
-                className="relative flex aspect-square w-full items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-xl shadow-black/40 transition-shadow group-hover:shadow-[0_12px_40px_-8px_rgba(215,170,82,0.5)]"
+                className="relative flex size-12 sm:size-14 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-xl shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_12px_40px_-8px_rgba(215,170,82,0.5)]"
                 style={{ color: s.color }}
               >
                 <span
                   aria-hidden
-                  className="absolute inset-0 rounded-full opacity-0 blur-xl transition-opacity group-hover:opacity-60"
+                  className="absolute inset-0 rounded-2xl opacity-0 blur-xl transition-opacity group-hover:opacity-50"
                   style={{ background: s.color }}
                 />
-                <i className={`${s.icon} relative text-2xl sm:text-3xl`} />
+                <i className={`${s.icon} relative text-lg sm:text-xl`} />
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-white/70 transition-colors group-hover:text-[#d7aa52]">
+              <span className="hidden sm:block text-[10px] font-bold uppercase tracking-[0.15em] text-white/70 transition-colors group-hover:text-[#d7aa52]">
                 {s.label}
               </span>
             </motion.a>
