@@ -128,9 +128,9 @@ export function Library({ lang }: { lang: Lang }) {
         {/* Title */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }} className="title-bar">
-          <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {t.library.eyebrow[lang]}</div>
-          <h2 className="text-4xl font-black sm:text-5xl" style={{ color: "var(--fg)" }}>{t.library.title[lang]}</h2>
-          <p className="mt-3 text-base text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {t.library.eyebrow[lang]}</div>
+          <h2 className="text-2xl font-black sm:text-3xl md:text-4xl" style={{ color: "var(--fg)" }}>{t.library.title[lang]}</h2>
+          <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
         </motion.div>
 
         {/* Search + filters */}
@@ -210,24 +210,24 @@ export function Library({ lang }: { lang: Lang }) {
                 <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
                 <div className="relative">
                   <div className="flex items-start justify-between gap-3">
-                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
+                    <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
                       <CourseIcon cat={c.cat} />
                     </span>
-                    <span className={`rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
                       c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
                     }`}>
                       {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-lg font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
-                  <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold text-white/65">
-                    <span className="inline-flex items-center gap-1.5"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
-                    <span className="inline-flex items-center gap-1.5"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
-                    <span className="inline-flex items-center gap-1.5"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
+                  <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
+                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
+                    <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
+                    <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
+                    <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
                   </div>
-                  <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all group-hover:bg-[#d7aa52]/20 group-hover:border-[#d7aa52]">
-                    <PlayCircle className="size-3.5" />
+                  <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all group-hover:bg-[#d7aa52]/20 group-hover:border-[#d7aa52]">
+                    <PlayCircle className="size-3" />
                     {t.library.start[lang]}
                   </div>
                 </div>
