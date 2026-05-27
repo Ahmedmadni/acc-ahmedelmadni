@@ -296,8 +296,8 @@ function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: 
           <GraduationCap className="size-3.5" />
           {t.library.cats[course.cat as Exclude<CatKey, "all">][lang]}
         </div>
-        <h3 className="text-2xl font-black text-white">{course[lang]}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-justify text-white/85">{course.desc[lang]}</p>
+        <h3 className="text-lg font-black text-white sm:text-xl">{course[lang]}</h3>
+        <p className="mt-2 text-xs leading-relaxed text-justify text-white/85 sm:text-sm">{course.desc[lang]}</p>
 
         <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-semibold">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80"><Clock className="size-3 text-[#d7aa52]" />{course.hours}h · {course.lessons} {t.library.lessons[lang]}</span>
@@ -323,8 +323,8 @@ function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: 
                   <PlayCircle className="size-5" />
                 </span>
                 <div className="flex-1">
-                  <div className="text-sm font-bold text-white">{r.title}</div>
-                  <div className="mt-0.5 text-xs text-white/60">{r.channel} · {r.platform}</div>
+                  <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
+                  <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
                   <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
                     <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
                     <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
