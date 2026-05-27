@@ -54,6 +54,7 @@ import logoQimat from "@/assets/logo-qimat.jpg";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 import { AIAssistant } from "@/components/AIAssistant";
+import { Library } from "@/components/Library";
 
 export const Route = createFileRoute("/")({ component: Index });
 
