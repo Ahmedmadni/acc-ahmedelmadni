@@ -103,6 +103,89 @@ const PLATFORM_COLORS: Record<string, string> = {
   LinkedIn: "#0a66c2",
 };
 
+/** Curated books / PDF references per course. */
+type Book = { title: string; author: string; year?: string; format: "PDF" | "Book" | "Standard"; url: string };
+const BOOKS: Record<string, Book[]> = {
+  "fund-1": [
+    { title: "Financial Accounting (Libby, Libby & Hodge)", author: "Robert Libby", year: "2022", format: "Book", url: "https://www.google.com/books/edition/_/3jM7EAAAQBAJ" },
+    { title: "أساسيات المحاسبة المالية", author: "د. وليد ناجي الحيالي", format: "PDF", url: "https://www.google.com/search?q=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+  ],
+  "fund-2": [
+    { title: "Principles of Accounting (Weygandt)", author: "Jerry J. Weygandt", year: "2021", format: "Book", url: "https://www.wiley.com/en-us/Accounting+Principles%2C+14th+Edition-p-9781119707110" },
+    { title: "الدورة المحاسبية الكاملة - مرجع تطبيقي", author: "د. محمد المبيضين", format: "PDF", url: "https://www.google.com/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A%D8%A9+pdf" },
+  ],
+  "fund-3": [
+    { title: "Intermediate Accounting (Kieso)", author: "Donald E. Kieso", year: "2023", format: "Book", url: "https://www.wiley.com/en-us/Intermediate+Accounting%2C+18th+Edition-p-9781119790976" },
+    { title: "إعداد القوائم المالية - دليل عملي", author: "د. طارق عبد العال حماد", format: "PDF", url: "https://www.google.com/search?q=%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+  ],
+  "fund-4": [
+    { title: "Financial Statement Analysis (Subramanyam)", author: "K. R. Subramanyam", year: "2022", format: "Book", url: "https://www.mheducation.com/highered/product/financial-statement-analysis-subramanyam/M9781259722653.html" },
+    { title: "تحليل القوائم المالية", author: "د. خالد الراوي", format: "PDF", url: "https://www.google.com/search?q=%D8%AA%D8%AD%D9%84%D9%8A%D9%84+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+  ],
+  "cert-ifrs": [
+    { title: "IFRS Standards — Official Bound Volume", author: "IFRS Foundation", year: "2024", format: "Standard", url: "https://www.ifrs.org/issued-standards/list-of-standards/" },
+    { title: "Wiley IFRS 2024 — Interpretation & Application", author: "PKF International", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+IFRS+2024-p-9781394206094" },
+    { title: "IFRS in Practice — KPMG Guide", author: "KPMG", format: "PDF", url: "https://kpmg.com/xx/en/home/services/audit/international-financial-reporting-standards.html" },
+  ],
+  "cert-cma": [
+    { title: "Wiley CMAexcel Exam Review 2024 — Part 1", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+1-p-9781394208319" },
+    { title: "Wiley CMAexcel Exam Review 2024 — Part 2", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+2-p-9781394208333" },
+    { title: "Gleim CMA Review System", author: "Gleim", format: "Book", url: "https://www.gleim.com/cma-review/" },
+  ],
+  "cert-cpa": [
+    { title: "Wiley CPAexcel Exam Review 2024", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CPAexcel+Exam+Review+2024+Study+Guide-p-9781394195565" },
+    { title: "Becker CPA Review Textbooks", author: "Becker", format: "Book", url: "https://www.becker.com/cpa-review" },
+    { title: "AICPA — CPA Exam Blueprints", author: "AICPA", format: "PDF", url: "https://www.aicpa-cima.com/resources/download/cpa-exam-blueprints-pdf" },
+  ],
+  "cert-socpa": [
+    { title: "المعايير الدولية المعتمدة في السعودية - SOCPA", author: "SOCPA", format: "PDF", url: "https://socpa.org.sa/Socpa/Technical-Resources/Accounting/IFRS-Endorsed-Standards.aspx" },
+    { title: "دليل زمالة SOCPA", author: "الهيئة السعودية للمحاسبين", format: "PDF", url: "https://socpa.org.sa/Socpa/Fellowship/Fellowship-Exam.aspx" },
+  ],
+  "rep-mgmt": [
+    { title: "Managerial Accounting (Garrison)", author: "Ray Garrison", year: "2023", format: "Book", url: "https://www.mheducation.com/highered/product/managerial-accounting-garrison-noreen/M9781260247787.html" },
+    { title: "المحاسبة الإدارية", author: "د. أحمد محمد نور", format: "PDF", url: "https://www.google.com/search?q=%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9+pdf" },
+  ],
+  "rep-cost": [
+    { title: "Cost Accounting: A Managerial Emphasis (Horngren)", author: "Charles T. Horngren", year: "2021", format: "Book", url: "https://www.pearson.com/en-us/subject-catalog/p/cost-accounting-a-managerial-emphasis/P200000005847" },
+    { title: "محاسبة التكاليف - مدخل إداري", author: "د. أحمد حسين", format: "PDF", url: "https://www.google.com/search?q=%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81+pdf" },
+  ],
+  "aud-1": [
+    { title: "Auditing & Assurance Services (Arens)", author: "Alvin A. Arens", year: "2022", format: "Book", url: "https://www.pearson.com/en-us/subject-catalog/p/auditing-and-assurance-services/P200000005826" },
+    { title: "ISA — International Standards on Auditing", author: "IAASB", format: "PDF", url: "https://www.iaasb.org/publications/2022-handbook-international-quality-management-auditing-review-other-assurance-and-related-services" },
+  ],
+  "tax-1": [
+    { title: "Principles of Taxation for Business and Investment Planning", author: "Sally Jones", year: "2023", format: "Book", url: "https://www.mheducation.com/highered/product/principles-taxation-business-investment-planning-2023-edition-jones-rhoades-catanach/M9781265674380.html" },
+  ],
+  "tax-vat": [
+    { title: "اللائحة التنفيذية لضريبة القيمة المضافة", author: "هيئة الزكاة والضريبة والجمارك", format: "PDF", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/VAT.aspx" },
+    { title: "دليل ضريبة القيمة المضافة - ZATCA", author: "ZATCA", format: "PDF", url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx" },
+  ],
+  "tax-zakat": [
+    { title: "لائحة جباية الزكاة - ZATCA", author: "هيئة الزكاة والضريبة والجمارك", format: "PDF", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/Zakat.aspx" },
+    { title: "دليل الزكاة وضريبة الدخل", author: "ZATCA", format: "PDF", url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx" },
+  ],
+  "fm-1": [
+    { title: "Financial Modeling (Simon Benninga)", author: "Simon Benninga", year: "2014", format: "Book", url: "https://mitpress.mit.edu/9780262027281/financial-modeling/" },
+    { title: "Investment Banking (Rosenbaum & Pearl)", author: "Joshua Rosenbaum", year: "2020", format: "Book", url: "https://www.wiley.com/en-us/Investment+Banking%3A+Valuation%2C+LBOs%2C+M%26A%2C+and+IPOs%2C+3rd+Edition-p-9781119706182" },
+    { title: "CFI — Financial Modeling eBooks", author: "Corporate Finance Institute", format: "PDF", url: "https://corporatefinanceinstitute.com/resources/ebooks/" },
+  ],
+  "sw-excel": [
+    { title: "Microsoft Excel — Data Analysis & Business Modeling", author: "Wayne Winston", year: "2021", format: "Book", url: "https://www.microsoftpressstore.com/store/microsoft-excel-data-analysis-and-business-modeling-9780137613663" },
+    { title: "Excel للمحاسبين - دليل تطبيقي", author: "د. حسام الدين", format: "PDF", url: "https://www.google.com/search?q=excel+for+accountants+pdf" },
+  ],
+  "sw-acct": [
+    { title: "Odoo 17 Accounting — Official Documentation", author: "Odoo S.A.", format: "PDF", url: "https://www.odoo.com/documentation/17.0/applications/finance/accounting.html" },
+    { title: "Zoho Books User Guide", author: "Zoho Corporation", format: "PDF", url: "https://www.zoho.com/books/help/" },
+    { title: "QuickBooks Official User Guide", author: "Intuit", format: "PDF", url: "https://quickbooks.intuit.com/learn-support/" },
+  ],
+};
+
+const FORMAT_COLORS: Record<string, string> = {
+  PDF: "#dc2626",
+  Book: "#b8862e",
+  Standard: "#0d7a5f",
+};
+
 export function Library({ lang }: { lang: Lang }) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatKey>("all");
