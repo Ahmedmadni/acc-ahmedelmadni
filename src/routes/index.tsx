@@ -217,6 +217,7 @@ function Index() {
         <Services lang={lang} onOpen={setServiceModal} />
         <Experience lang={lang} />
         <Skills lang={lang} onOpen={setSkillModal} />
+        <Library lang={lang} />
         <BeforeAfter lang={lang} />
         <Testimonials lang={lang} />
         <Certs lang={lang} />
