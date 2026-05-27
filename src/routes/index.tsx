@@ -694,12 +694,13 @@ function LogoBadge({ logo, compact = false }: {
       className="group relative">
       <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/20 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
       <div className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl gold-border bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-2xl ${compact ? "p-4" : "p-6"}`}>
-        <div className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner ${compact ? "size-24" : "size-36"}`}>
-          <motion.img src={logo.src} alt={logo.name.ar}
-            className="floaty max-h-full max-w-full object-contain drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]" />
+        <div className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner overflow-hidden ${compact ? "size-24" : "size-36"}`}>
+          <motion.img src={logo.src} alt=""
+            aria-hidden
+            className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]" />
           <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d7aa52]/30" />
         </div>
-        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text">{logo.name.ar}</div>
+        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text blur-[5px] select-none transition-all duration-500 group-hover:blur-0">{logo.name.ar}</div>
       </div>
     </motion.div>
   );
