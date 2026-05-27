@@ -426,8 +426,10 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: Lang; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({ course, initialTab, lang, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; onClose: () => void; onPick: (c: Course) => void }) {
+  const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
+  const books = BOOKS[course.id] ?? [];
   const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
 
   return (
@@ -462,49 +464,123 @@ function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: 
           </span>
         </div>
 
-        {/* Resources */}
-        <div className="mt-7">
-          <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
-            {t.library.sources[lang]}
-          </div>
-          <ul className="space-y-3">
-            {resources.map((r, i) => (
-              <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
-                <span
-                  className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
-                  style={{ background: PLATFORM_COLORS[r.platform] ?? "#444" }}
-                  aria-hidden
-                >
-                  <PlayCircle className="size-5" />
+        {/* Tabs inside modal */}
+        <div className="mt-6 inline-flex w-full items-center gap-1 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1 sm:w-fit">
+          {(["videos", "books"] as ViewMode[]).map((v) => {
+            const isActive = tab === v;
+            const Icon = v === "videos" ? Video : BookMarked;
+            return (
+              <button
+                key={v}
+                type="button"
+                onClick={() => { playClick(); setTab(v); }}
+                onMouseEnter={playHover}
+                className={`inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-bold transition-all sm:flex-none ${
+                  isActive
+                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow"
+                    : "text-white/70 hover:text-[#f3d28a]"
+                }`}
+              >
+                <Icon className="size-3.5" />
+                {t.library.tabs[v][lang]}
+                <span className="ms-1 rounded-full bg-black/15 px-1.5 text-[10px]">
+                  {v === "videos" ? resources.length : books.length}
                 </span>
-                <div className="flex-1">
-                  <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
-                  <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
-                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
-                    <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
-                    <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
-                  </div>
-                </div>
-                <a
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseEnter={playHover}
-                  onClick={playClick}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
-                >
-                  {t.library.open[lang]}
-                  <ExternalLink className="size-3" />
-                </a>
-              </li>
-            ))}
-            {resources.length === 0 && (
-              <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
-                {t.library.noResults[lang]}
-              </li>
-            )}
-          </ul>
+              </button>
+            );
+          })}
         </div>
+
+        {/* Videos tab */}
+        {tab === "videos" && (
+          <div className="mt-5">
+            <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+              {t.library.videosTitle[lang]}
+            </div>
+            <ul className="space-y-3">
+              {resources.map((r, i) => (
+                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                  <span
+                    className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
+                    style={{ background: PLATFORM_COLORS[r.platform] ?? "#444" }}
+                    aria-hidden
+                  >
+                    <PlayCircle className="size-5" />
+                  </span>
+                  <div className="flex-1">
+                    <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
+                    <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
+                    <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
+                      <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
+                      <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
+                    </div>
+                  </div>
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                  >
+                    {t.library.open[lang]}
+                    <ExternalLink className="size-3" />
+                  </a>
+                </li>
+              ))}
+              {resources.length === 0 && (
+                <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
+                  {t.library.noResults[lang]}
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
+
+        {/* Books tab */}
+        {tab === "books" && (
+          <div className="mt-5">
+            <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+              {t.library.booksTitle[lang]}
+            </div>
+            <ul className="space-y-3">
+              {books.map((b, i) => (
+                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                  <span
+                    className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
+                    style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
+                    aria-hidden
+                  >
+                    {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
+                  </span>
+                  <div className="flex-1">
+                    <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
+                    <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
+                    <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
+                      {b.format}
+                    </div>
+                  </div>
+                  <a
+                    href={b.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                  >
+                    {t.library.openBook[lang]}
+                    <ExternalLink className="size-3" />
+                  </a>
+                </li>
+              ))}
+              {books.length === 0 && (
+                <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
+                  {t.library.noBooks[lang]}
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
 
         {/* Related */}
         {related.length > 0 && (
