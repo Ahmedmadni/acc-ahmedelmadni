@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   BookOpen,
+  BookMarked,
   Clock,
   Filter,
   GraduationCap,
@@ -9,9 +10,11 @@ import {
   PlayCircle,
   Search,
   Sparkles,
+  Video,
   X,
   ExternalLink,
   Globe,
+  FileText,
 } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
