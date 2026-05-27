@@ -186,12 +186,15 @@ const FORMAT_COLORS: Record<string, string> = {
   Standard: "#0d7a5f",
 };
 
+type ViewMode = "videos" | "books";
+
 export function Library({ lang }: { lang: Lang }) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatKey>("all");
   const [level, setLevel] = useState<LevelKey>("all");
   const [price, setPrice] = useState<PriceKey>("all");
-  const [active, setActive] = useState<Course | null>(null);
+  const [view, setView] = useState<ViewMode>("videos");
+  const [active, setActive] = useState<{ course: Course; tab: ViewMode } | null>(null);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
