@@ -26,66 +26,69 @@ type PriceKey = "all" | "free" | "paid";
 /** Curated YouTube / platform resources per course. Each course maps to a small list of trusted external sources. */
 const RESOURCES: Record<string, Array<{ title: string; channel: string; duration: string; level: string; url: string; platform: "YouTube" | "Coursera" | "Udemy" | "edX" | "LinkedIn"; }>> = {
   "fund-1": [
-    { title: "كورس أساسيات المحاسبة المالية الكامل", channel: "د. محمد الفاتح", duration: "12h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/results?search_query=أساسيات+المحاسبة+المالية+كورس+كامل" },
     { title: "Financial Accounting Fundamentals", channel: "University of Virginia", duration: "16h", level: "Beginner", platform: "Coursera", url: "https://www.coursera.org/learn/uva-darden-financial-accounting" },
+    { title: "Accounting Basics — Full Playlist", channel: "Accounting Stuff", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@AccountingStuff/playlists" },
   ],
   "fund-2": [
-    { title: "الدورة المحاسبية كاملة بالأمثلة", channel: "محاسبة باللغة العربية", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/results?search_query=الدورة+المحاسبية+الكاملة" },
+    { title: "Khan Academy — Accounting & Financial Statements", channel: "Khan Academy", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PL9D77E783AED02A11" },
+    { title: "Edspira — Accounting Cycle", channel: "Edspira", duration: "6h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@Edspira/playlists" },
   ],
   "fund-3": [
-    { title: "إعداد القوائم المالية خطوة بخطوة", channel: "Accounting Plus", duration: "9h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=إعداد+القوائم+المالية" },
-    { title: "Preparing Financial Statements", channel: "edX", duration: "20h", level: "Intermediate", platform: "edX", url: "https://www.edx.org/learn/financial-accounting" },
+    { title: "Financial Reporting", channel: "University of Illinois", duration: "20h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/financial-reporting" },
+    { title: "Preparing Financial Statements", channel: "Farhat Lectures", duration: "9h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
   ],
   "fund-4": [
-    { title: "تحليل القوائم المالية للمحترفين", channel: "CMA Academy", duration: "7h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=تحليل+القوائم+المالية" },
-    { title: "Financial Statement Analysis", channel: "LinkedIn Learning", duration: "5h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/search?keywords=financial%20statement%20analysis" },
+    { title: "Financial Statement Analysis", channel: "Wharton", duration: "12h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/learn/wharton-accounting" },
+    { title: "Financial Analysis with Excel", channel: "LinkedIn Learning", duration: "5h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/financial-analysis-analyzing-the-top-line-with-excel" },
   ],
   "cert-ifrs": [
-    { title: "شرح IFRS بالعربية – كامل", channel: "IFRS Arabic", duration: "30h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=شرح+معايير+IFRS+بالعربية" },
     { title: "IFRS Specialization", channel: "PwC / Coursera", duration: "40h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/specializations/ifrs" },
+    { title: "IFRSbox — Free IFRS Lectures", channel: "CPDbox (Silvia M.)", duration: "30h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@CPDbox/playlists" },
   ],
   "cert-cma": [
-    { title: "CMA Part 1 – كورس كامل", channel: "Hatem El-Sayed", duration: "60h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=CMA+Part+1+كورس+كامل" },
-    { title: "CMA Part 2 – كورس كامل", channel: "Hatem El-Sayed", duration: "55h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=CMA+Part+2+كورس+كامل" },
-    { title: "CMA Exam Prep", channel: "Udemy", duration: "80h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/courses/search/?q=CMA+exam" },
+    { title: "CMA Part 1 — Full Course", channel: "Udemy", duration: "60h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/" },
+    { title: "CMA Part 2 — Full Course", channel: "Udemy", duration: "55h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-2-strategic-financial-management/" },
   ],
   "cert-cpa": [
-    { title: "CPA FAR – Full Course", channel: "Becker", duration: "120h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=CPA+FAR+full+course" },
-    { title: "CPA Prep Bundle", channel: "Udemy", duration: "150h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/courses/search/?q=CPA+exam" },
+    { title: "CPA Exam Preparation", channel: "Udemy", duration: "150h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cpa-exam-preparation/" },
+    { title: "Becker CPA Review", channel: "Becker", duration: "120h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@Becker/playlists" },
   ],
   "cert-socpa": [
-    { title: "تحضير SOCPA الفقهي والمحاسبي", channel: "SOCPA Prep", duration: "70h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=SOCPA+تحضير+شهادة" },
+    { title: "SOCPA Official Education Portal", channel: "SOCPA", duration: "70h", level: "Advanced", platform: "YouTube", url: "https://socpa.org.sa/en/Education/Pages/default.aspx" },
   ],
   "rep-mgmt": [
-    { title: "المحاسبة الإدارية بالعربية", channel: "Accounting Academy", duration: "10h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=المحاسبة+الإدارية+كورس" },
+    { title: "Managerial Accounting", channel: "University of Virginia", duration: "10h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/learn/uva-darden-managerial-accounting" },
+    { title: "Managerial Accounting — Playlist", channel: "Edspira", duration: "8h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@Edspira/playlists" },
   ],
   "rep-cost": [
-    { title: "محاسبة التكاليف – كورس متكامل", channel: "Cost Accounting Hub", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=محاسبة+التكاليف+كورس+كامل" },
+    { title: "Cost Accounting — Full Series", channel: "Farhat Lectures", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
+    { title: "Cost Accounting Fundamentals", channel: "Udemy", duration: "10h", level: "Intermediate", platform: "Udemy", url: "https://www.udemy.com/course/cost-accounting-fundamentals/" },
   ],
   "aud-1": [
-    { title: "المراجعة والتدقيق – شرح كامل", channel: "Auditing Arabic", duration: "14h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=المراجعة+والتدقيق+كورس" },
+    { title: "Auditing I — Conceptual Foundations", channel: "Illinois / Coursera", duration: "14h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/learn/auditing-part1-conceptual-foundations" },
+    { title: "Auditing — Full Playlist", channel: "Farhat Lectures", duration: "12h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
   ],
   "tax-1": [
-    { title: "المحاسبة الضريبية – شرح كامل", channel: "Tax Academy", duration: "8h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=المحاسبة+الضريبية+شرح" },
+    { title: "U.S. Federal Taxation Specialization", channel: "University of Illinois", duration: "30h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/united-states-federal-taxation" },
   ],
   "tax-vat": [
-    { title: "ضريبة القيمة المضافة في السعودية", channel: "ZATCA Learn", duration: "5h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/results?search_query=ضريبة+القيمة+المضافة+السعودية" },
+    { title: "ZATCA — VAT Education", channel: "ZATCA", duration: "5h", level: "Beginner", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
   ],
   "tax-zakat": [
-    { title: "الزكاة والضريبة السعودية", channel: "ZATCA Academy", duration: "6h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=الزكاة+والضريبة+السعودية" },
+    { title: "ZATCA — Zakat Education", channel: "ZATCA", duration: "6h", level: "Intermediate", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
   ],
   "fm-1": [
-    { title: "Financial Modeling Masterclass", channel: "Corporate Finance Institute", duration: "25h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/results?search_query=financial+modeling+full+course" },
     { title: "Business and Financial Modeling", channel: "Wharton", duration: "30h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/specializations/wharton-business-financial-modeling" },
+    { title: "CFI — Financial Modeling Channel", channel: "Corporate Finance Institute", duration: "25h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@corporatefinanceinstitute/playlists" },
   ],
   "sw-excel": [
-    { title: "Excel للمحاسبين – من الصفر للاحتراف", channel: "Excel Arabic", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=Excel+للمحاسبين+كورس" },
-    { title: "Excel for Finance & Accounting", channel: "LinkedIn Learning", duration: "8h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/search?keywords=excel%20for%20accounting" },
+    { title: "Excel Skills for Business Specialization", channel: "Macquarie University", duration: "20h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/excel" },
+    { title: "Excel for Accountants", channel: "LinkedIn Learning", duration: "8h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/excel-for-accountants" },
   ],
   "sw-acct": [
-    { title: "Odoo Accounting – كورس عربي", channel: "Odoo Academy", duration: "15h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/results?search_query=Odoo+accounting+عربي" },
-    { title: "Zoho Books Tutorial", channel: "Zoho", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/results?search_query=Zoho+Books+tutorial" },
-    { title: "Daftra شرح كامل", channel: "Daftra", duration: "6h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/results?search_query=Daftra+شرح+كامل" },
+    { title: "Odoo Accounting — Official eLearning", channel: "Odoo", duration: "15h", level: "Intermediate", platform: "YouTube", url: "https://www.odoo.com/slides/accounting-7" },
+    { title: "Zoho Books — Official Tutorials", channel: "Zoho", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@ZohoBooks/playlists" },
+    { title: "QuickBooks — Official Training", channel: "Intuit QuickBooks", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@QuickBooks/playlists" },
   ],
 };
 
@@ -125,9 +128,9 @@ export function Library({ lang }: { lang: Lang }) {
         {/* Title */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }} className="title-bar">
-          <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {t.library.eyebrow[lang]}</div>
-          <h2 className="text-4xl font-black sm:text-5xl" style={{ color: "var(--fg)" }}>{t.library.title[lang]}</h2>
-          <p className="mt-3 text-base text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {t.library.eyebrow[lang]}</div>
+          <h2 className="text-2xl font-black sm:text-3xl md:text-4xl" style={{ color: "var(--fg)" }}>{t.library.title[lang]}</h2>
+          <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
         </motion.div>
 
         {/* Search + filters */}
@@ -207,24 +210,24 @@ export function Library({ lang }: { lang: Lang }) {
                 <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
                 <div className="relative">
                   <div className="flex items-start justify-between gap-3">
-                    <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
+                    <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
                       <CourseIcon cat={c.cat} />
                     </span>
-                    <span className={`rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
                       c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
                     }`}>
                       {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-lg font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
-                  <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
-                  <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-semibold text-white/65">
-                    <span className="inline-flex items-center gap-1.5"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
-                    <span className="inline-flex items-center gap-1.5"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
-                    <span className="inline-flex items-center gap-1.5"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
+                  <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
+                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
+                    <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
+                    <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
+                    <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
                   </div>
-                  <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all group-hover:bg-[#d7aa52]/20 group-hover:border-[#d7aa52]">
-                    <PlayCircle className="size-3.5" />
+                  <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all group-hover:bg-[#d7aa52]/20 group-hover:border-[#d7aa52]">
+                    <PlayCircle className="size-3" />
                     {t.library.start[lang]}
                   </div>
                 </div>
@@ -293,8 +296,8 @@ function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: 
           <GraduationCap className="size-3.5" />
           {t.library.cats[course.cat as Exclude<CatKey, "all">][lang]}
         </div>
-        <h3 className="text-2xl font-black text-white">{course[lang]}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-justify text-white/85">{course.desc[lang]}</p>
+        <h3 className="text-lg font-black text-white sm:text-xl">{course[lang]}</h3>
+        <p className="mt-2 text-xs leading-relaxed text-justify text-white/85 sm:text-sm">{course.desc[lang]}</p>
 
         <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-semibold">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80"><Clock className="size-3 text-[#d7aa52]" />{course.hours}h · {course.lessons} {t.library.lessons[lang]}</span>
@@ -320,8 +323,8 @@ function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: 
                   <PlayCircle className="size-5" />
                 </span>
                 <div className="flex-1">
-                  <div className="text-sm font-bold text-white">{r.title}</div>
-                  <div className="mt-0.5 text-xs text-white/60">{r.channel} · {r.platform}</div>
+                  <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
+                  <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
                   <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
                     <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
                     <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
