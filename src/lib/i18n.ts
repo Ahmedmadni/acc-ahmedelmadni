@@ -7,6 +7,7 @@ export const t = {
     services: { ar: "الخدمات", en: "Services" },
     experience: { ar: "الخبرات", en: "Experience" },
     skills: { ar: "المهارات", en: "Skills" },
+    library: { ar: "المكتبة", en: "Library" },
     work: { ar: "الأعمال", en: "Work" },
     contact: { ar: "تواصل", en: "Contact" },
     cv: { ar: "تحميل السيرة الذاتية", en: "Download CV" },
