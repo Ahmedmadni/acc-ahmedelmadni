@@ -222,6 +222,30 @@ export function Library({ lang }: { lang: Lang }) {
           <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
         </motion.div>
 
+        {/* Tabs: Videos vs Books */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+          {(["videos", "books"] as ViewMode[]).map((v) => {
+            const isActive = view === v;
+            const Icon = v === "videos" ? Video : BookMarked;
+            return (
+              <button
+                key={v}
+                type="button"
+                onClick={() => { playClick(); setView(v); }}
+                onMouseEnter={playHover}
+                className={`inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold transition-all ${
+                  isActive
+                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
+                    : "text-white/70 hover:text-[#f3d28a]"
+                }`}
+              >
+                <Icon className="size-3.5" />
+                {t.library.tabs[v][lang]}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Search + filters */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}
