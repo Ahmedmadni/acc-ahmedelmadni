@@ -250,6 +250,7 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
     { id: "services", label: t.nav.services[lang] },
     { id: "experience", label: t.nav.experience[lang] },
     { id: "skills", label: t.nav.skills[lang] },
+    { id: "library", label: t.nav.library[lang] },
     { id: "contact", label: t.nav.contact[lang] },
   ];
   return (
