@@ -54,6 +54,7 @@ import logoQimat from "@/assets/logo-qimat.jpg";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 import { AIAssistant } from "@/components/AIAssistant";
+import { Library } from "@/components/Library";
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -216,6 +217,7 @@ function Index() {
         <Services lang={lang} onOpen={setServiceModal} />
         <Experience lang={lang} />
         <Skills lang={lang} onOpen={setSkillModal} />
+        <Library lang={lang} />
         <BeforeAfter lang={lang} />
         <Testimonials lang={lang} />
         <Certs lang={lang} />
@@ -248,6 +250,7 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
     { id: "services", label: t.nav.services[lang] },
     { id: "experience", label: t.nav.experience[lang] },
     { id: "skills", label: t.nav.skills[lang] },
+    { id: "library", label: t.nav.library[lang] },
     { id: "contact", label: t.nav.contact[lang] },
   ];
   return (
@@ -653,7 +656,14 @@ function TimelineItem({ item, index, lang }: {
           {item.date[lang]}
         </div>
         <h3 className="text-xl font-extrabold" style={{ color: "var(--fg)" }}>{item.role[lang]}</h3>
-        <p className="mt-1 text-sm font-medium text-[#d7aa52]">{item.company[lang]}</p>
+        <p
+          className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] select-none blur-[6px] saturate-50 transition-all duration-500 hover:blur-0 hover:saturate-100 focus:blur-0"
+          tabIndex={0}
+          title={lang === "ar" ? "اسم الشركة مخفي حفاظًا على الخصوصية" : "Company name hidden for privacy"}
+          aria-label={lang === "ar" ? "اسم الشركة مخفي حفاظًا على الخصوصية" : "Company name hidden for privacy"}
+        >
+          {item.company[lang]}
+        </p>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
           {item.points[lang].map((p, j) => (
             <li key={j} className="flex gap-2">
@@ -684,12 +694,13 @@ function LogoBadge({ logo, compact = false }: {
       className="group relative">
       <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/20 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
       <div className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl gold-border bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-2xl ${compact ? "p-4" : "p-6"}`}>
-        <div className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner ${compact ? "size-24" : "size-36"}`}>
-          <motion.img src={logo.src} alt={logo.name.ar}
-            className="floaty max-h-full max-w-full object-contain drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]" />
+        <div className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner overflow-hidden ${compact ? "size-24" : "size-36"}`}>
+          <motion.img src={logo.src} alt=""
+            aria-hidden
+            className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]" />
           <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d7aa52]/30" />
         </div>
-        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text">{logo.name.ar}</div>
+        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text blur-[5px] select-none transition-all duration-500 group-hover:blur-0">{logo.name.ar}</div>
       </div>
     </motion.div>
   );
