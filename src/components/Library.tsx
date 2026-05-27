@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   BookOpen,
+  BookMarked,
   Clock,
   Filter,
   GraduationCap,
@@ -9,9 +10,11 @@ import {
   PlayCircle,
   Search,
   Sparkles,
+  Video,
   X,
   ExternalLink,
   Globe,
+  FileText,
 } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
@@ -100,12 +103,98 @@ const PLATFORM_COLORS: Record<string, string> = {
   LinkedIn: "#0a66c2",
 };
 
+/** Curated books / PDF references per course. */
+type Book = { title: string; author: string; year?: string; format: "PDF" | "Book" | "Standard"; url: string };
+const BOOKS: Record<string, Book[]> = {
+  "fund-1": [
+    { title: "Financial Accounting (Libby, Libby & Hodge)", author: "Robert Libby", year: "2022", format: "Book", url: "https://www.google.com/books/edition/_/3jM7EAAAQBAJ" },
+    { title: "أساسيات المحاسبة المالية", author: "د. وليد ناجي الحيالي", format: "PDF", url: "https://www.google.com/search?q=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+  ],
+  "fund-2": [
+    { title: "Principles of Accounting (Weygandt)", author: "Jerry J. Weygandt", year: "2021", format: "Book", url: "https://www.wiley.com/en-us/Accounting+Principles%2C+14th+Edition-p-9781119707110" },
+    { title: "الدورة المحاسبية الكاملة - مرجع تطبيقي", author: "د. محمد المبيضين", format: "PDF", url: "https://www.google.com/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A%D8%A9+pdf" },
+  ],
+  "fund-3": [
+    { title: "Intermediate Accounting (Kieso)", author: "Donald E. Kieso", year: "2023", format: "Book", url: "https://www.wiley.com/en-us/Intermediate+Accounting%2C+18th+Edition-p-9781119790976" },
+    { title: "إعداد القوائم المالية - دليل عملي", author: "د. طارق عبد العال حماد", format: "PDF", url: "https://www.google.com/search?q=%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+  ],
+  "fund-4": [
+    { title: "Financial Statement Analysis (Subramanyam)", author: "K. R. Subramanyam", year: "2022", format: "Book", url: "https://www.mheducation.com/highered/product/financial-statement-analysis-subramanyam/M9781259722653.html" },
+    { title: "تحليل القوائم المالية", author: "د. خالد الراوي", format: "PDF", url: "https://www.google.com/search?q=%D8%AA%D8%AD%D9%84%D9%8A%D9%84+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+  ],
+  "cert-ifrs": [
+    { title: "IFRS Standards — Official Bound Volume", author: "IFRS Foundation", year: "2024", format: "Standard", url: "https://www.ifrs.org/issued-standards/list-of-standards/" },
+    { title: "Wiley IFRS 2024 — Interpretation & Application", author: "PKF International", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+IFRS+2024-p-9781394206094" },
+    { title: "IFRS in Practice — KPMG Guide", author: "KPMG", format: "PDF", url: "https://kpmg.com/xx/en/home/services/audit/international-financial-reporting-standards.html" },
+  ],
+  "cert-cma": [
+    { title: "Wiley CMAexcel Exam Review 2024 — Part 1", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+1-p-9781394208319" },
+    { title: "Wiley CMAexcel Exam Review 2024 — Part 2", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+2-p-9781394208333" },
+    { title: "Gleim CMA Review System", author: "Gleim", format: "Book", url: "https://www.gleim.com/cma-review/" },
+  ],
+  "cert-cpa": [
+    { title: "Wiley CPAexcel Exam Review 2024", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CPAexcel+Exam+Review+2024+Study+Guide-p-9781394195565" },
+    { title: "Becker CPA Review Textbooks", author: "Becker", format: "Book", url: "https://www.becker.com/cpa-review" },
+    { title: "AICPA — CPA Exam Blueprints", author: "AICPA", format: "PDF", url: "https://www.aicpa-cima.com/resources/download/cpa-exam-blueprints-pdf" },
+  ],
+  "cert-socpa": [
+    { title: "المعايير الدولية المعتمدة في السعودية - SOCPA", author: "SOCPA", format: "PDF", url: "https://socpa.org.sa/Socpa/Technical-Resources/Accounting/IFRS-Endorsed-Standards.aspx" },
+    { title: "دليل زمالة SOCPA", author: "الهيئة السعودية للمحاسبين", format: "PDF", url: "https://socpa.org.sa/Socpa/Fellowship/Fellowship-Exam.aspx" },
+  ],
+  "rep-mgmt": [
+    { title: "Managerial Accounting (Garrison)", author: "Ray Garrison", year: "2023", format: "Book", url: "https://www.mheducation.com/highered/product/managerial-accounting-garrison-noreen/M9781260247787.html" },
+    { title: "المحاسبة الإدارية", author: "د. أحمد محمد نور", format: "PDF", url: "https://www.google.com/search?q=%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9+pdf" },
+  ],
+  "rep-cost": [
+    { title: "Cost Accounting: A Managerial Emphasis (Horngren)", author: "Charles T. Horngren", year: "2021", format: "Book", url: "https://www.pearson.com/en-us/subject-catalog/p/cost-accounting-a-managerial-emphasis/P200000005847" },
+    { title: "محاسبة التكاليف - مدخل إداري", author: "د. أحمد حسين", format: "PDF", url: "https://www.google.com/search?q=%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81+pdf" },
+  ],
+  "aud-1": [
+    { title: "Auditing & Assurance Services (Arens)", author: "Alvin A. Arens", year: "2022", format: "Book", url: "https://www.pearson.com/en-us/subject-catalog/p/auditing-and-assurance-services/P200000005826" },
+    { title: "ISA — International Standards on Auditing", author: "IAASB", format: "PDF", url: "https://www.iaasb.org/publications/2022-handbook-international-quality-management-auditing-review-other-assurance-and-related-services" },
+  ],
+  "tax-1": [
+    { title: "Principles of Taxation for Business and Investment Planning", author: "Sally Jones", year: "2023", format: "Book", url: "https://www.mheducation.com/highered/product/principles-taxation-business-investment-planning-2023-edition-jones-rhoades-catanach/M9781265674380.html" },
+  ],
+  "tax-vat": [
+    { title: "اللائحة التنفيذية لضريبة القيمة المضافة", author: "هيئة الزكاة والضريبة والجمارك", format: "PDF", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/VAT.aspx" },
+    { title: "دليل ضريبة القيمة المضافة - ZATCA", author: "ZATCA", format: "PDF", url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx" },
+  ],
+  "tax-zakat": [
+    { title: "لائحة جباية الزكاة - ZATCA", author: "هيئة الزكاة والضريبة والجمارك", format: "PDF", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/Zakat.aspx" },
+    { title: "دليل الزكاة وضريبة الدخل", author: "ZATCA", format: "PDF", url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx" },
+  ],
+  "fm-1": [
+    { title: "Financial Modeling (Simon Benninga)", author: "Simon Benninga", year: "2014", format: "Book", url: "https://mitpress.mit.edu/9780262027281/financial-modeling/" },
+    { title: "Investment Banking (Rosenbaum & Pearl)", author: "Joshua Rosenbaum", year: "2020", format: "Book", url: "https://www.wiley.com/en-us/Investment+Banking%3A+Valuation%2C+LBOs%2C+M%26A%2C+and+IPOs%2C+3rd+Edition-p-9781119706182" },
+    { title: "CFI — Financial Modeling eBooks", author: "Corporate Finance Institute", format: "PDF", url: "https://corporatefinanceinstitute.com/resources/ebooks/" },
+  ],
+  "sw-excel": [
+    { title: "Microsoft Excel — Data Analysis & Business Modeling", author: "Wayne Winston", year: "2021", format: "Book", url: "https://www.microsoftpressstore.com/store/microsoft-excel-data-analysis-and-business-modeling-9780137613663" },
+    { title: "Excel للمحاسبين - دليل تطبيقي", author: "د. حسام الدين", format: "PDF", url: "https://www.google.com/search?q=excel+for+accountants+pdf" },
+  ],
+  "sw-acct": [
+    { title: "Odoo 17 Accounting — Official Documentation", author: "Odoo S.A.", format: "PDF", url: "https://www.odoo.com/documentation/17.0/applications/finance/accounting.html" },
+    { title: "Zoho Books User Guide", author: "Zoho Corporation", format: "PDF", url: "https://www.zoho.com/books/help/" },
+    { title: "QuickBooks Official User Guide", author: "Intuit", format: "PDF", url: "https://quickbooks.intuit.com/learn-support/" },
+  ],
+};
+
+const FORMAT_COLORS: Record<string, string> = {
+  PDF: "#dc2626",
+  Book: "#b8862e",
+  Standard: "#0d7a5f",
+};
+
+type ViewMode = "videos" | "books";
+
 export function Library({ lang }: { lang: Lang }) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatKey>("all");
   const [level, setLevel] = useState<LevelKey>("all");
   const [price, setPrice] = useState<PriceKey>("all");
-  const [active, setActive] = useState<Course | null>(null);
+  const [view, setView] = useState<ViewMode>("videos");
+  const [active, setActive] = useState<{ course: Course; tab: ViewMode } | null>(null);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -132,6 +221,30 @@ export function Library({ lang }: { lang: Lang }) {
           <h2 className="text-2xl font-black sm:text-3xl md:text-4xl" style={{ color: "var(--fg)" }}>{t.library.title[lang]}</h2>
           <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
         </motion.div>
+
+        {/* Tabs: Videos vs Books */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+          {(["videos", "books"] as ViewMode[]).map((v) => {
+            const isActive = view === v;
+            const Icon = v === "videos" ? Video : BookMarked;
+            return (
+              <button
+                key={v}
+                type="button"
+                onClick={() => { playClick(); setView(v); }}
+                onMouseEnter={playHover}
+                className={`inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold transition-all ${
+                  isActive
+                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
+                    : "text-white/70 hover:text-[#f3d28a]"
+                }`}
+              >
+                <Icon className="size-3.5" />
+                {t.library.tabs[v][lang]}
+              </button>
+            );
+          })}
+        </div>
 
         {/* Search + filters */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -195,44 +308,78 @@ export function Library({ lang }: { lang: Lang }) {
         {/* Cards grid */}
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {filtered.map((c, i) => (
-              <motion.button
-                key={c.id}
-                layout
-                initial={{ opacity: 0, y: 20, scale: 0.96 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.92 }}
-                transition={{ duration: 0.4, delay: Math.min(i, 6) * 0.04 }}
-                onMouseEnter={playHover}
-                onClick={() => { playClick(); setActive(c); }}
-                className="group relative overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 text-start transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
-              >
-                <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
-                <div className="relative">
-                  <div className="flex items-start justify-between gap-3">
-                    <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
-                      <CourseIcon cat={c.cat} />
-                    </span>
-                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
-                      c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
-                    }`}>
-                      {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
-                    </span>
+            {filtered.map((c, i) => {
+              const hasBooks = (BOOKS[c.id]?.length ?? 0) > 0;
+              return (
+                <motion.div
+                  key={c.id}
+                  layout
+                  initial={{ opacity: 0, y: 20, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.92 }}
+                  transition={{ duration: 0.4, delay: Math.min(i, 6) * 0.04 }}
+                  onMouseEnter={playHover}
+                  className="group relative overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 text-start transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+                >
+                  <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
+                  <div className="relative">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
+                        <CourseIcon cat={c.cat} />
+                      </span>
+                      <div className="flex items-center gap-1.5">
+                        {hasBooks && (
+                          <button
+                            type="button"
+                            title={t.library.showBooks[lang]}
+                            aria-label={t.library.showBooks[lang]}
+                            onMouseEnter={playHover}
+                            onClick={(e) => { e.stopPropagation(); playClick(); setActive({ course: c, tab: "books" }); }}
+                            className="inline-flex size-7 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 text-[#f3d28a] transition-all hover:scale-110 hover:bg-[#d7aa52]/25"
+                          >
+                            <BookMarked className="size-3.5" />
+                          </button>
+                        )}
+                        <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
+                          c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
+                        }`}>
+                          {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
+                        </span>
+                      </div>
+                    </div>
+                    <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
+                    <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
+                    <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
+                      <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
+                      <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
+                      <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={() => { playClick(); setActive({ course: c, tab: view }); }}
+                        onMouseEnter={playHover}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
+                      >
+                        {view === "videos" ? <PlayCircle className="size-3" /> : <BookOpen className="size-3" />}
+                        {view === "videos" ? t.library.start[lang] : t.library.booksTitle[lang]}
+                      </button>
+                      {view === "videos" && hasBooks && (
+                        <button
+                          type="button"
+                          onClick={() => { playClick(); setActive({ course: c, tab: "books" }); }}
+                          onMouseEnter={playHover}
+                          className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-white/80 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                        >
+                          <BookMarked className="size-3" />
+                          {t.library.showBooks[lang]}
+                        </button>
+                      )}
+                    </div>
                   </div>
-                  <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
-                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
-                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
-                    <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
-                    <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
-                    <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
-                  </div>
-                  <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all group-hover:bg-[#d7aa52]/20 group-hover:border-[#d7aa52]">
-                    <PlayCircle className="size-3" />
-                    {t.library.start[lang]}
-                  </div>
-                </div>
-              </motion.button>
-            ))}
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </div>
 
@@ -244,7 +391,15 @@ export function Library({ lang }: { lang: Lang }) {
       </div>
 
       <AnimatePresence>
-        {active && <CourseModal course={active} lang={lang} onClose={() => setActive(null)} onPick={(c) => setActive(c)} />}
+        {active && (
+          <CourseModal
+            course={active.course}
+            initialTab={active.tab}
+            lang={lang}
+            onClose={() => setActive(null)}
+            onPick={(c) => setActive({ course: c, tab: active.tab })}
+          />
+        )}
       </AnimatePresence>
     </section>
   );
@@ -271,8 +426,10 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: Lang; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({ course, initialTab, lang, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; onClose: () => void; onPick: (c: Course) => void }) {
+  const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
+  const books = BOOKS[course.id] ?? [];
   const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
 
   return (
@@ -307,49 +464,123 @@ function CourseModal({ course, lang, onClose, onPick }: { course: Course; lang: 
           </span>
         </div>
 
-        {/* Resources */}
-        <div className="mt-7">
-          <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
-            {t.library.sources[lang]}
-          </div>
-          <ul className="space-y-3">
-            {resources.map((r, i) => (
-              <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
-                <span
-                  className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
-                  style={{ background: PLATFORM_COLORS[r.platform] ?? "#444" }}
-                  aria-hidden
-                >
-                  <PlayCircle className="size-5" />
+        {/* Tabs inside modal */}
+        <div className="mt-6 inline-flex w-full items-center gap-1 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1 sm:w-fit">
+          {(["videos", "books"] as ViewMode[]).map((v) => {
+            const isActive = tab === v;
+            const Icon = v === "videos" ? Video : BookMarked;
+            return (
+              <button
+                key={v}
+                type="button"
+                onClick={() => { playClick(); setTab(v); }}
+                onMouseEnter={playHover}
+                className={`inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-bold transition-all sm:flex-none ${
+                  isActive
+                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow"
+                    : "text-white/70 hover:text-[#f3d28a]"
+                }`}
+              >
+                <Icon className="size-3.5" />
+                {t.library.tabs[v][lang]}
+                <span className="ms-1 rounded-full bg-black/15 px-1.5 text-[10px]">
+                  {v === "videos" ? resources.length : books.length}
                 </span>
-                <div className="flex-1">
-                  <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
-                  <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
-                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
-                    <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
-                    <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
-                  </div>
-                </div>
-                <a
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseEnter={playHover}
-                  onClick={playClick}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
-                >
-                  {t.library.open[lang]}
-                  <ExternalLink className="size-3" />
-                </a>
-              </li>
-            ))}
-            {resources.length === 0 && (
-              <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
-                {t.library.noResults[lang]}
-              </li>
-            )}
-          </ul>
+              </button>
+            );
+          })}
         </div>
+
+        {/* Videos tab */}
+        {tab === "videos" && (
+          <div className="mt-5">
+            <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+              {t.library.videosTitle[lang]}
+            </div>
+            <ul className="space-y-3">
+              {resources.map((r, i) => (
+                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                  <span
+                    className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
+                    style={{ background: PLATFORM_COLORS[r.platform] ?? "#444" }}
+                    aria-hidden
+                  >
+                    <PlayCircle className="size-5" />
+                  </span>
+                  <div className="flex-1">
+                    <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
+                    <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
+                    <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
+                      <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
+                      <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
+                    </div>
+                  </div>
+                  <a
+                    href={r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                  >
+                    {t.library.open[lang]}
+                    <ExternalLink className="size-3" />
+                  </a>
+                </li>
+              ))}
+              {resources.length === 0 && (
+                <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
+                  {t.library.noResults[lang]}
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
+
+        {/* Books tab */}
+        {tab === "books" && (
+          <div className="mt-5">
+            <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+              {t.library.booksTitle[lang]}
+            </div>
+            <ul className="space-y-3">
+              {books.map((b, i) => (
+                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                  <span
+                    className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
+                    style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
+                    aria-hidden
+                  >
+                    {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
+                  </span>
+                  <div className="flex-1">
+                    <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
+                    <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
+                    <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
+                      {b.format}
+                    </div>
+                  </div>
+                  <a
+                    href={b.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                  >
+                    {t.library.openBook[lang]}
+                    <ExternalLink className="size-3" />
+                  </a>
+                </li>
+              ))}
+              {books.length === 0 && (
+                <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
+                  {t.library.noBooks[lang]}
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
 
         {/* Related */}
         {related.length > 0 && (
