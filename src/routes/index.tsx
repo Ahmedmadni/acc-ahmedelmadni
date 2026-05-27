@@ -656,7 +656,14 @@ function TimelineItem({ item, index, lang }: {
           {item.date[lang]}
         </div>
         <h3 className="text-xl font-extrabold" style={{ color: "var(--fg)" }}>{item.role[lang]}</h3>
-        <p className="mt-1 text-sm font-medium text-[#d7aa52]">{item.company[lang]}</p>
+        <p
+          className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] select-none blur-[6px] saturate-50 transition-all duration-500 hover:blur-0 hover:saturate-100 focus:blur-0"
+          tabIndex={0}
+          title={lang === "ar" ? "اسم الشركة مخفي حفاظًا على الخصوصية" : "Company name hidden for privacy"}
+          aria-label={lang === "ar" ? "اسم الشركة مخفي حفاظًا على الخصوصية" : "Company name hidden for privacy"}
+        >
+          {item.company[lang]}
+        </p>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
           {item.points[lang].map((p, j) => (
             <li key={j} className="flex gap-2">
