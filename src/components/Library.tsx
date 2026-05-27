@@ -26,66 +26,69 @@ type PriceKey = "all" | "free" | "paid";
 /** Curated YouTube / platform resources per course. Each course maps to a small list of trusted external sources. */
 const RESOURCES: Record<string, Array<{ title: string; channel: string; duration: string; level: string; url: string; platform: "YouTube" | "Coursera" | "Udemy" | "edX" | "LinkedIn"; }>> = {
   "fund-1": [
-    { title: "كورس أساسيات المحاسبة المالية الكامل", channel: "د. محمد الفاتح", duration: "12h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLgyc1Lp4UEDcGZcjPnZpVeqRYqYcjvqAA" },
     { title: "Financial Accounting Fundamentals", channel: "University of Virginia", duration: "16h", level: "Beginner", platform: "Coursera", url: "https://www.coursera.org/learn/uva-darden-financial-accounting" },
+    { title: "Accounting Basics — Full Playlist", channel: "Accounting Stuff", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@AccountingStuff/playlists" },
   ],
   "fund-2": [
-    { title: "الدورة المحاسبية كاملة بالأمثلة", channel: "محاسبة باللغة العربية", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLvLfeqLnGrFzfRbI-zNyrUJ9-pQXg0X4t" },
+    { title: "Khan Academy — Accounting & Financial Statements", channel: "Khan Academy", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PL9D77E783AED02A11" },
+    { title: "Edspira — Accounting Cycle", channel: "Edspira", duration: "6h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@Edspira/playlists" },
   ],
   "fund-3": [
-    { title: "إعداد القوائم المالية خطوة بخطوة", channel: "Accounting Plus", duration: "9h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLcvEcrsF_9zKFc5n7zXgN3v_TpHj1mE_t" },
-    { title: "Preparing Financial Statements", channel: "edX", duration: "20h", level: "Intermediate", platform: "edX", url: "https://www.edx.org/learn/financial-accounting/the-university-of-maryland-college-park-financial-accounting" },
+    { title: "Financial Reporting", channel: "University of Illinois", duration: "20h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/financial-reporting" },
+    { title: "Preparing Financial Statements", channel: "Farhat Lectures", duration: "9h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
   ],
   "fund-4": [
-    { title: "تحليل القوائم المالية للمحترفين", channel: "CMA Academy", duration: "7h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PL2L_5e0Y7jK4M-yVQk6gMlQp3xmHm6q_g" },
-    { title: "Financial Statement Analysis", channel: "LinkedIn Learning", duration: "5h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/financial-analysis-analyzing-the-bottom-line-with-excel-2" },
+    { title: "Financial Statement Analysis", channel: "Wharton", duration: "12h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/learn/wharton-accounting" },
+    { title: "Financial Analysis with Excel", channel: "LinkedIn Learning", duration: "5h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/financial-analysis-analyzing-the-top-line-with-excel" },
   ],
   "cert-ifrs": [
-    { title: "شرح IFRS بالعربية – كامل", channel: "IFRS Arabic", duration: "30h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLpxQ7p3D5p9Y0a3wA8XJZ7vQFqBxKsXqK" },
     { title: "IFRS Specialization", channel: "PwC / Coursera", duration: "40h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/specializations/ifrs" },
+    { title: "IFRSbox — Free IFRS Lectures", channel: "CPDbox (Silvia M.)", duration: "30h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@CPDbox/playlists" },
   ],
   "cert-cma": [
-    { title: "CMA Part 1 – كورس كامل", channel: "Hatem El-Sayed", duration: "60h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLvN72FZJiOzSlXbX3oR-iJQ74HMnVQ7zh" },
-    { title: "CMA Part 2 – كورس كامل", channel: "Hatem El-Sayed", duration: "55h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLvN72FZJiOzS9V5C8Yw9F-r0DjPzv7XbH" },
-    { title: "CMA Exam Prep", channel: "Udemy", duration: "80h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/" },
+    { title: "CMA Part 1 — Full Course", channel: "Udemy", duration: "60h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/" },
+    { title: "CMA Part 2 — Full Course", channel: "Udemy", duration: "55h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-2-strategic-financial-management/" },
   ],
   "cert-cpa": [
-    { title: "CPA FAR – Full Course", channel: "Becker", duration: "120h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLN6vmnL3qz2ZUKQpDg2vF8Yh4Q1JcXuW3" },
-    { title: "CPA Prep Bundle", channel: "Udemy", duration: "150h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cpa-exam-preparation/" },
+    { title: "CPA Exam Preparation", channel: "Udemy", duration: "150h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cpa-exam-preparation/" },
+    { title: "Becker CPA Review", channel: "Becker", duration: "120h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@Becker/playlists" },
   ],
   "cert-socpa": [
-    { title: "تحضير SOCPA الفقهي والمحاسبي", channel: "SOCPA Prep", duration: "70h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLqHJp5Yk9D-vMr7sP6T0eN5L6jY1bXg7L" },
+    { title: "SOCPA Official Education Portal", channel: "SOCPA", duration: "70h", level: "Advanced", platform: "YouTube", url: "https://socpa.org.sa/en/Education/Pages/default.aspx" },
   ],
   "rep-mgmt": [
-    { title: "المحاسبة الإدارية بالعربية", channel: "Accounting Academy", duration: "10h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLyk55GUjqYwK8mE7nQ8Hp0lL8XU9b3vU2" },
+    { title: "Managerial Accounting", channel: "University of Virginia", duration: "10h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/learn/uva-darden-managerial-accounting" },
+    { title: "Managerial Accounting — Playlist", channel: "Edspira", duration: "8h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@Edspira/playlists" },
   ],
   "rep-cost": [
-    { title: "محاسبة التكاليف – كورس متكامل", channel: "Cost Accounting Hub", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLrSnZ9bA2QFEAa3sFh9k4Kj-EJjZdVbXp" },
+    { title: "Cost Accounting — Full Series", channel: "Farhat Lectures", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
+    { title: "Cost Accounting Fundamentals", channel: "Udemy", duration: "10h", level: "Intermediate", platform: "Udemy", url: "https://www.udemy.com/course/cost-accounting-fundamentals/" },
   ],
   "aud-1": [
-    { title: "المراجعة والتدقيق – شرح كامل", channel: "Auditing Arabic", duration: "14h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLm5J9JuIcKv_3Hs7gUTHr4vP6Yh2pV5kK" },
+    { title: "Auditing I — Conceptual Foundations", channel: "Illinois / Coursera", duration: "14h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/learn/auditing-part1-conceptual-foundations" },
+    { title: "Auditing — Full Playlist", channel: "Farhat Lectures", duration: "12h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
   ],
   "tax-1": [
-    { title: "المحاسبة الضريبية – شرح كامل", channel: "Tax Academy", duration: "8h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLfQk7gG4r0J7sR_lA9pV8Q7t6N5bH3vU1" },
+    { title: "U.S. Federal Taxation Specialization", channel: "University of Illinois", duration: "30h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/united-states-federal-taxation" },
   ],
   "tax-vat": [
-    { title: "ضريبة القيمة المضافة في السعودية", channel: "ZATCA", duration: "5h", level: "Beginner", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
+    { title: "ZATCA — VAT Education", channel: "ZATCA", duration: "5h", level: "Beginner", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
   ],
   "tax-zakat": [
-    { title: "الزكاة والضريبة السعودية", channel: "ZATCA Academy", duration: "6h", level: "Intermediate", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
+    { title: "ZATCA — Zakat Education", channel: "ZATCA", duration: "6h", level: "Intermediate", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
   ],
   "fm-1": [
-    { title: "Financial Modeling Masterclass", channel: "Corporate Finance Institute", duration: "25h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLD7sxV7gYzZeFFh-uxiTfSV1MGZqHl0Vu" },
     { title: "Business and Financial Modeling", channel: "Wharton", duration: "30h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/specializations/wharton-business-financial-modeling" },
+    { title: "CFI — Financial Modeling Channel", channel: "Corporate Finance Institute", duration: "25h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@corporatefinanceinstitute/playlists" },
   ],
   "sw-excel": [
-    { title: "Excel للمحاسبين – من الصفر للاحتراف", channel: "Excel Arabic", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLwQ5pV2k4M4N7m_K6XbJk1pY8nQ-r5tU3" },
-    { title: "Excel for Finance & Accounting", channel: "LinkedIn Learning", duration: "8h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/excel-for-accountants" },
+    { title: "Excel Skills for Business Specialization", channel: "Macquarie University", duration: "20h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/excel" },
+    { title: "Excel for Accountants", channel: "LinkedIn Learning", duration: "8h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/excel-for-accountants" },
   ],
   "sw-acct": [
-    { title: "Odoo Accounting – كورس عربي", channel: "Odoo Academy", duration: "15h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PL1kHzM3wYxzZQVbXf3vF7Tk5N6jY8L0pH" },
-    { title: "Zoho Books Tutorial", channel: "Zoho", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLi8gW0kHv4dT3Y6Gv7Q0r5W4nKf2pJ3sV" },
-    { title: "Daftra شرح كامل", channel: "Daftra", duration: "6h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PLg0kY7nQ_5sR3J8XfVbHk1pY8nQ-r5tU3" },
+    { title: "Odoo Accounting — Official eLearning", channel: "Odoo", duration: "15h", level: "Intermediate", platform: "YouTube", url: "https://www.odoo.com/slides/accounting-7" },
+    { title: "Zoho Books — Official Tutorials", channel: "Zoho", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@ZohoBooks/playlists" },
+    { title: "QuickBooks — Official Training", channel: "Intuit QuickBooks", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@QuickBooks/playlists" },
   ],
 };
 
