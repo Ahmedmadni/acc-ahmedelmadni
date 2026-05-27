@@ -308,44 +308,78 @@ export function Library({ lang }: { lang: Lang }) {
         {/* Cards grid */}
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {filtered.map((c, i) => (
-              <motion.button
-                key={c.id}
-                layout
-                initial={{ opacity: 0, y: 20, scale: 0.96 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.92 }}
-                transition={{ duration: 0.4, delay: Math.min(i, 6) * 0.04 }}
-                onMouseEnter={playHover}
-                onClick={() => { playClick(); setActive(c); }}
-                className="group relative overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 text-start transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
-              >
-                <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
-                <div className="relative">
-                  <div className="flex items-start justify-between gap-3">
-                    <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
-                      <CourseIcon cat={c.cat} />
-                    </span>
-                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
-                      c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
-                    }`}>
-                      {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
-                    </span>
+            {filtered.map((c, i) => {
+              const hasBooks = (BOOKS[c.id]?.length ?? 0) > 0;
+              return (
+                <motion.div
+                  key={c.id}
+                  layout
+                  initial={{ opacity: 0, y: 20, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.92 }}
+                  transition={{ duration: 0.4, delay: Math.min(i, 6) * 0.04 }}
+                  onMouseEnter={playHover}
+                  className="group relative overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 text-start transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+                >
+                  <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
+                  <div className="relative">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
+                        <CourseIcon cat={c.cat} />
+                      </span>
+                      <div className="flex items-center gap-1.5">
+                        {hasBooks && (
+                          <button
+                            type="button"
+                            title={t.library.showBooks[lang]}
+                            aria-label={t.library.showBooks[lang]}
+                            onMouseEnter={playHover}
+                            onClick={(e) => { e.stopPropagation(); playClick(); setActive({ course: c, tab: "books" }); }}
+                            className="inline-flex size-7 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 text-[#f3d28a] transition-all hover:scale-110 hover:bg-[#d7aa52]/25"
+                          >
+                            <BookMarked className="size-3.5" />
+                          </button>
+                        )}
+                        <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
+                          c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
+                        }`}>
+                          {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
+                        </span>
+                      </div>
+                    </div>
+                    <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
+                    <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
+                    <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
+                      <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
+                      <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
+                      <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={() => { playClick(); setActive({ course: c, tab: view }); }}
+                        onMouseEnter={playHover}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
+                      >
+                        {view === "videos" ? <PlayCircle className="size-3" /> : <BookOpen className="size-3" />}
+                        {view === "videos" ? t.library.start[lang] : t.library.booksTitle[lang]}
+                      </button>
+                      {view === "videos" && hasBooks && (
+                        <button
+                          type="button"
+                          onClick={() => { playClick(); setActive({ course: c, tab: "books" }); }}
+                          onMouseEnter={playHover}
+                          className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-white/80 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                        >
+                          <BookMarked className="size-3" />
+                          {t.library.showBooks[lang]}
+                        </button>
+                      )}
+                    </div>
                   </div>
-                  <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
-                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
-                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
-                    <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
-                    <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
-                    <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
-                  </div>
-                  <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all group-hover:bg-[#d7aa52]/20 group-hover:border-[#d7aa52]">
-                    <PlayCircle className="size-3" />
-                    {t.library.start[lang]}
-                  </div>
-                </div>
-              </motion.button>
-            ))}
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </div>
 
@@ -357,7 +391,15 @@ export function Library({ lang }: { lang: Lang }) {
       </div>
 
       <AnimatePresence>
-        {active && <CourseModal course={active} lang={lang} onClose={() => setActive(null)} onPick={(c) => setActive(c)} />}
+        {active && (
+          <CourseModal
+            course={active.course}
+            initialTab={active.tab}
+            lang={lang}
+            onClose={() => setActive(null)}
+            onPick={(c) => setActive({ course: c, tab: active.tab })}
+          />
+        )}
       </AnimatePresence>
     </section>
   );
