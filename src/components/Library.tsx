@@ -280,6 +280,12 @@ export function Library({ lang }: { lang: Lang }) {
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <Filter className="size-4 text-[#d7aa52]" />
+              <Select value={cat} onChange={(v) => setCat(v as CatKey)}
+                options={CAT_KEYS.map((k) => ({
+                  value: k,
+                  label: k === "all" ? t.library.all[lang] : t.library.cats[k as Exclude<CatKey, "all">][lang],
+                }))}
+              />
               <Select value={level} onChange={(v) => setLevel(v as LevelKey)}
                 options={[
                   { value: "all", label: t.library.levels.all[lang] },
