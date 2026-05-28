@@ -559,7 +559,7 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", favOnly = false, favs, onToggleFav, onMarkLastRead, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; favOnly?: boolean; favs: Set<string>; onToggleFav: (k: string) => void; onMarkLastRead: (courseId: string, entry: LastReadEntry) => void; onClose: () => void; onPick: (c: Course) => void }) {
   const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
   const allBooks = BOOKS[course.id] ?? [];
@@ -567,6 +567,7 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
   const books = allBooks.filter((b) => {
     if (bookFormat !== "all" && b.format !== bookFormat) return false;
     if (a && !b.author.toLowerCase().includes(a)) return false;
+    if (favOnly && !favs.has(bookKey(course.id, b.url))) return false;
     return true;
   });
   const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
