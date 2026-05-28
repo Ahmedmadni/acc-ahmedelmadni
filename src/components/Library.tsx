@@ -195,7 +195,16 @@ export function Library({ lang }: { lang: Lang }) {
   const [level, setLevel] = useState<LevelKey>("all");
   const [price, setPrice] = useState<PriceKey>("all");
   const [view, setView] = useState<ViewMode>("videos");
+  const [bookFormat, setBookFormat] = useState<FormatKey>("all");
+  const [bookAuthor, setBookAuthor] = useState("");
   const [active, setActive] = useState<{ course: Course; tab: ViewMode } | null>(null);
+
+  const bookMatches = (b: Book) => {
+    if (bookFormat !== "all" && b.format !== bookFormat) return false;
+    const a = bookAuthor.trim().toLowerCase();
+    if (a && !b.author.toLowerCase().includes(a)) return false;
+    return true;
+  };
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -207,9 +216,16 @@ export function Library({ lang }: { lang: Lang }) {
         const hay = `${c.ar} ${c.en} ${c.desc.ar} ${c.desc.en}`.toLowerCase();
         if (!hay.includes(q)) return false;
       }
+      if (view === "books") {
+        const list = BOOKS[c.id] ?? [];
+        if (list.length === 0) return false;
+        if (bookFormat !== "all" || bookAuthor.trim()) {
+          if (!list.some(bookMatches)) return false;
+        }
+      }
       return true;
     });
-  }, [query, cat, level, price]);
+  }, [query, cat, level, price, view, bookFormat, bookAuthor]);
 
   return (
     <section id="library" className="relative py-24">
