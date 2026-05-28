@@ -72,14 +72,16 @@ function ToolDetailPage() {
   const related = TOOLS.filter((t) => t.category === tool.category && t.id !== tool.id).slice(0, 3);
 
   const onShare = async () => {
-    const url = typeof window !== "undefined" ? window.location.href : "";
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
     const data = { title: tool.title[lang], text: tool.short[lang], url };
+    const nav = window.navigator as Navigator & {
+      share?: (d: ShareData) => Promise<void>;
+      clipboard?: { writeText: (t: string) => Promise<void> };
+    };
     try {
-      if (typeof navigator !== "undefined" && "share" in navigator) {
-        await (navigator as Navigator & { share: (d: ShareData) => Promise<void> }).share(data);
-      } else if (typeof navigator !== "undefined" && navigator.clipboard) {
-        await navigator.clipboard.writeText(url);
-      }
+      if (nav.share) await nav.share(data);
+      else if (nav.clipboard) await nav.clipboard.writeText(url);
     } catch {
       // user dismissed
     }
