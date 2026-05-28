@@ -487,10 +487,16 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, initialTab, lang, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; onClose: () => void; onPick: (c: Course) => void }) {
   const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
-  const books = BOOKS[course.id] ?? [];
+  const allBooks = BOOKS[course.id] ?? [];
+  const a = bookAuthor.trim().toLowerCase();
+  const books = allBooks.filter((b) => {
+    if (bookFormat !== "all" && b.format !== bookFormat) return false;
+    if (a && !b.author.toLowerCase().includes(a)) return false;
+    return true;
+  });
   const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
 
   return (
