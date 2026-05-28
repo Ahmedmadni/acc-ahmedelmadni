@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   BookOpen,
@@ -6,6 +6,7 @@ import {
   Clock,
   Filter,
   GraduationCap,
+  Heart,
   Layers,
   PlayCircle,
   Search,
@@ -18,6 +19,57 @@ import {
 } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
+
+const FAV_KEY = "lib:favorites:v1";
+const LAST_KEY = "lib:lastRead:v1";
+
+type LastReadEntry = { title: string; url: string; at: number };
+
+function bookKey(courseId: string, url: string) {
+  return `${courseId}::${url}`;
+}
+
+function useFavorites() {
+  const [favs, setFavs] = useState<Set<string>>(() => new Set());
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(FAV_KEY);
+      if (raw) setFavs(new Set(JSON.parse(raw)));
+    } catch { /* noop */ }
+  }, []);
+  const persist = useCallback((next: Set<string>) => {
+    setFavs(next);
+    try { localStorage.setItem(FAV_KEY, JSON.stringify([...next])); } catch { /* noop */ }
+  }, []);
+  const toggle = useCallback((key: string) => {
+    setFavs((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key); else next.add(key);
+      try { localStorage.setItem(FAV_KEY, JSON.stringify([...next])); } catch { /* noop */ }
+      return next;
+    });
+  }, []);
+  return { favs, toggle, persist };
+}
+
+function useLastRead() {
+  const [map, setMap] = useState<Record<string, LastReadEntry>>({});
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(LAST_KEY);
+      if (raw) setMap(JSON.parse(raw));
+    } catch { /* noop */ }
+  }, []);
+  const mark = useCallback((courseId: string, entry: LastReadEntry) => {
+    setMap((prev) => {
+      const next = { ...prev, [courseId]: entry };
+      try { localStorage.setItem(LAST_KEY, JSON.stringify(next)); } catch { /* noop */ }
+      return next;
+    });
+  }, []);
+  return { map, mark };
+}
+
 
 type Course = (typeof t.library.courses)[number];
 
