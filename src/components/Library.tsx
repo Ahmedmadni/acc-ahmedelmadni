@@ -25,6 +25,7 @@ const CAT_KEYS = ["all", "fundamentals", "certifications", "reporting", "tax", "
 type CatKey = (typeof CAT_KEYS)[number];
 type LevelKey = "all" | "beginner" | "intermediate" | "advanced";
 type PriceKey = "all" | "free" | "paid";
+type FormatKey = "all" | "PDF" | "Book" | "Standard";
 
 /** Curated YouTube / platform resources per course. Each course maps to a small list of trusted external sources. */
 const RESOURCES: Record<string, Array<{ title: string; channel: string; duration: string; level: string; url: string; platform: "YouTube" | "Coursera" | "Udemy" | "edX" | "LinkedIn"; }>> = {
@@ -194,7 +195,16 @@ export function Library({ lang }: { lang: Lang }) {
   const [level, setLevel] = useState<LevelKey>("all");
   const [price, setPrice] = useState<PriceKey>("all");
   const [view, setView] = useState<ViewMode>("videos");
+  const [bookFormat, setBookFormat] = useState<FormatKey>("all");
+  const [bookAuthor, setBookAuthor] = useState("");
   const [active, setActive] = useState<{ course: Course; tab: ViewMode } | null>(null);
+
+  const bookMatches = (b: Book) => {
+    if (bookFormat !== "all" && b.format !== bookFormat) return false;
+    const a = bookAuthor.trim().toLowerCase();
+    if (a && !b.author.toLowerCase().includes(a)) return false;
+    return true;
+  };
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -206,9 +216,16 @@ export function Library({ lang }: { lang: Lang }) {
         const hay = `${c.ar} ${c.en} ${c.desc.ar} ${c.desc.en}`.toLowerCase();
         if (!hay.includes(q)) return false;
       }
+      if (view === "books") {
+        const list = BOOKS[c.id] ?? [];
+        if (list.length === 0) return false;
+        if (bookFormat !== "all" || bookAuthor.trim()) {
+          if (!list.some(bookMatches)) return false;
+        }
+      }
       return true;
     });
-  }, [query, cat, level, price]);
+  }, [query, cat, level, price, view, bookFormat, bookAuthor]);
 
   return (
     <section id="library" className="relative py-24">
@@ -280,6 +297,48 @@ export function Library({ lang }: { lang: Lang }) {
               />
             </div>
           </div>
+
+          {/* Books-only filters */}
+          {view === "books" && (
+            <div className="mt-4 flex flex-col gap-3 rounded-2xl border border-[#d7aa52]/20 bg-white/[0.02] p-3 sm:flex-row sm:items-center">
+              <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#d7aa52]">
+                <BookMarked className="size-3.5" />
+                {t.library.tabs.books[lang]}
+              </div>
+              <div className="flex flex-1 flex-wrap items-center gap-2">
+                <Select
+                  value={bookFormat}
+                  onChange={(v) => setBookFormat(v as FormatKey)}
+                  options={[
+                    { value: "all", label: t.library.formatLabels.all[lang] },
+                    { value: "PDF", label: t.library.formatLabels.PDF[lang] },
+                    { value: "Book", label: t.library.formatLabels.Book[lang] },
+                    { value: "Standard", label: t.library.formatLabels.Standard[lang] },
+                  ]}
+                />
+                <div className="relative flex-1 min-w-[160px]">
+                  <Search className="pointer-events-none absolute start-3 top-1/2 size-3.5 -translate-y-1/2 text-[#d7aa52]" />
+                  <input
+                    type="text"
+                    value={bookAuthor}
+                    onChange={(e) => setBookAuthor(e.target.value)}
+                    placeholder={t.library.authorPlaceholder[lang]}
+                    className="w-full rounded-full border border-white/15 bg-white/[0.04] py-2 ps-9 pe-3 text-xs text-white placeholder:text-white/40 outline-none transition-all focus:border-[#d7aa52]/60"
+                  />
+                </div>
+                {(bookFormat !== "all" || bookAuthor) && (
+                  <button
+                    type="button"
+                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); }}
+                    className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-bold text-white/70 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                  >
+                    <X className="size-3" />
+                    {lang === "ar" ? "مسح" : "Clear"}
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Categories chips */}
           <div className="mt-4 flex flex-wrap gap-2">
@@ -396,6 +455,8 @@ export function Library({ lang }: { lang: Lang }) {
             course={active.course}
             initialTab={active.tab}
             lang={lang}
+            bookFormat={bookFormat}
+            bookAuthor={bookAuthor}
             onClose={() => setActive(null)}
             onPick={(c) => setActive({ course: c, tab: active.tab })}
           />
@@ -426,10 +487,16 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, initialTab, lang, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; onClose: () => void; onPick: (c: Course) => void }) {
   const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
-  const books = BOOKS[course.id] ?? [];
+  const allBooks = BOOKS[course.id] ?? [];
+  const a = bookAuthor.trim().toLowerCase();
+  const books = allBooks.filter((b) => {
+    if (bookFormat !== "all" && b.format !== bookFormat) return false;
+    if (a && !b.author.toLowerCase().includes(a)) return false;
+    return true;
+  });
   const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
 
   return (
