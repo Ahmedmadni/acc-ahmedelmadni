@@ -467,6 +467,20 @@ export function Library({ lang }: { lang: Lang }) {
                       <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
                       <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
                     </div>
+                    {lastReadMap[c.id] && (
+                      <a
+                        href={lastReadMap[c.id].url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={playClick}
+                        onMouseEnter={playHover}
+                        className="mt-3 flex items-center gap-2 rounded-xl border border-[#d7aa52]/25 bg-[#d7aa52]/[0.06] px-2.5 py-1.5 text-[10px] text-white/75 transition-all hover:border-[#d7aa52]/60 hover:bg-[#d7aa52]/15 hover:text-[#f3d28a]"
+                        title={lastReadMap[c.id].title}
+                      >
+                        <BookOpen className="size-3 shrink-0 text-[#d7aa52]" />
+                        <span className="truncate font-semibold">{t.library.lastRead[lang]}: {lastReadMap[c.id].title}</span>
+                      </a>
+                    )}
                     <div className="mt-4 flex flex-wrap gap-2">
                       <button
                         type="button"
