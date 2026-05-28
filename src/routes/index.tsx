@@ -281,6 +281,16 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
 
         <div className="flex items-center gap-2 sm:gap-3">
           <RouterLink
+            to="/tools"
+            onMouseEnter={playHover}
+            onClick={playClick}
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/60 bg-[#d7aa52]/10 px-3 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:scale-105"
+            aria-label={lang === "ar" ? "الأدوات الذكية" : "Smart Tools"}
+          >
+            <Wrench className="size-4" />
+            <span className="hidden sm:inline">{lang === "ar" ? "الأدوات" : "Tools"}</span>
+          </RouterLink>
+          <RouterLink
             to="/library"
             onMouseEnter={playHover}
             onClick={playClick}
