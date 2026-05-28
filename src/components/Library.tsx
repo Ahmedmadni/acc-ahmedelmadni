@@ -345,29 +345,6 @@ export function Library({ lang }: { lang: Lang }) {
               </div>
             </div>
           )}
-
-          {/* Categories chips */}
-          <div className="mt-4 flex flex-wrap gap-2">
-            {CAT_KEYS.map((k) => {
-              const label = k === "all" ? t.library.all[lang] : t.library.cats[k as Exclude<CatKey, "all">][lang];
-              const isActive = cat === k;
-              return (
-                <button
-                  key={k}
-                  type="button"
-                  onClick={() => { playClick(); setCat(k); }}
-                  onMouseEnter={playHover}
-                  className={`rounded-full border px-4 py-1.5 text-xs font-bold transition-all ${
-                    isActive
-                      ? "border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
-                      : "border-white/15 bg-white/[0.04] text-white/80 hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
-                  }`}
-                >
-                  {label}
-                </button>
-              );
-            })}
-          </div>
         </motion.div>
 
         {/* Cards grid */}
