@@ -249,12 +249,16 @@ export function Library({ lang }: { lang: Lang }) {
   const [view, setView] = useState<ViewMode>("videos");
   const [bookFormat, setBookFormat] = useState<FormatKey>("all");
   const [bookAuthor, setBookAuthor] = useState("");
+  const [favOnly, setFavOnly] = useState(false);
   const [active, setActive] = useState<{ course: Course; tab: ViewMode } | null>(null);
+  const { favs, toggle: toggleFav } = useFavorites();
+  const { map: lastReadMap, mark: markLastRead } = useLastRead();
 
-  const bookMatches = (b: Book) => {
+  const bookMatches = (courseId: string, b: Book) => {
     if (bookFormat !== "all" && b.format !== bookFormat) return false;
     const a = bookAuthor.trim().toLowerCase();
     if (a && !b.author.toLowerCase().includes(a)) return false;
+    if (favOnly && !favs.has(bookKey(courseId, b.url))) return false;
     return true;
   };
 
@@ -271,13 +275,14 @@ export function Library({ lang }: { lang: Lang }) {
       if (view === "books") {
         const list = BOOKS[c.id] ?? [];
         if (list.length === 0) return false;
-        if (bookFormat !== "all" || bookAuthor.trim()) {
-          if (!list.some(bookMatches)) return false;
+        if (bookFormat !== "all" || bookAuthor.trim() || favOnly) {
+          if (!list.some((b) => bookMatches(c.id, b))) return false;
         }
       }
       return true;
     });
-  }, [query, cat, level, price, view, bookFormat, bookAuthor]);
+  }, [query, cat, level, price, view, bookFormat, bookAuthor, favOnly, favs]);
+
 
   return (
     <section id="library" className="relative py-24">
