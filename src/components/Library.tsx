@@ -298,6 +298,48 @@ export function Library({ lang }: { lang: Lang }) {
             </div>
           </div>
 
+          {/* Books-only filters */}
+          {view === "books" && (
+            <div className="mt-4 flex flex-col gap-3 rounded-2xl border border-[#d7aa52]/20 bg-white/[0.02] p-3 sm:flex-row sm:items-center">
+              <div className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#d7aa52]">
+                <BookMarked className="size-3.5" />
+                {t.library.tabs.books[lang]}
+              </div>
+              <div className="flex flex-1 flex-wrap items-center gap-2">
+                <Select
+                  value={bookFormat}
+                  onChange={(v) => setBookFormat(v as FormatKey)}
+                  options={[
+                    { value: "all", label: t.library.formatLabels.all[lang] },
+                    { value: "PDF", label: t.library.formatLabels.PDF[lang] },
+                    { value: "Book", label: t.library.formatLabels.Book[lang] },
+                    { value: "Standard", label: t.library.formatLabels.Standard[lang] },
+                  ]}
+                />
+                <div className="relative flex-1 min-w-[160px]">
+                  <Search className="pointer-events-none absolute start-3 top-1/2 size-3.5 -translate-y-1/2 text-[#d7aa52]" />
+                  <input
+                    type="text"
+                    value={bookAuthor}
+                    onChange={(e) => setBookAuthor(e.target.value)}
+                    placeholder={t.library.authorPlaceholder[lang]}
+                    className="w-full rounded-full border border-white/15 bg-white/[0.04] py-2 ps-9 pe-3 text-xs text-white placeholder:text-white/40 outline-none transition-all focus:border-[#d7aa52]/60"
+                  />
+                </div>
+                {(bookFormat !== "all" || bookAuthor) && (
+                  <button
+                    type="button"
+                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); }}
+                    className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-bold text-white/70 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                  >
+                    <X className="size-3" />
+                    {lang === "ar" ? "مسح" : "Clear"}
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Categories chips */}
           <div className="mt-4 flex flex-wrap gap-2">
             {CAT_KEYS.map((k) => {
