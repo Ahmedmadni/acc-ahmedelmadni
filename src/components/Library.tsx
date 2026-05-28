@@ -525,6 +525,10 @@ export function Library({ lang }: { lang: Lang }) {
             lang={lang}
             bookFormat={bookFormat}
             bookAuthor={bookAuthor}
+            favOnly={favOnly}
+            favs={favs}
+            onToggleFav={toggleFav}
+            onMarkLastRead={markLastRead}
             onClose={() => setActive(null)}
             onPick={(c) => setActive({ course: c, tab: active.tab })}
           />
