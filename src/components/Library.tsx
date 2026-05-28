@@ -684,38 +684,59 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
               {t.library.booksTitle[lang]}
             </div>
             <ul className="space-y-3">
-              {books.map((b, i) => (
-                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
-                  <span
-                    className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
-                    style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
-                    aria-hidden
-                  >
-                    {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
-                  </span>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
-                    <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
-                    <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
-                      {b.format}
+              {books.map((b, i) => {
+                const k = bookKey(course.id, b.url);
+                const isFav = favs.has(k);
+                return (
+                  <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                    <span
+                      className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
+                      style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
+                      aria-hidden
+                    >
+                      {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
+                    </span>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
+                      <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
+                      <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
+                        {b.format}
+                      </div>
                     </div>
-                  </div>
-                  <a
-                    href={b.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={playHover}
-                    onClick={playClick}
-                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
-                  >
-                    {t.library.openBook[lang]}
-                    <ExternalLink className="size-3" />
-                  </a>
-                </li>
-              ))}
+                    <div className="flex shrink-0 flex-col items-end gap-2">
+                      <button
+                        type="button"
+                        onClick={() => { playClick(); onToggleFav(k); }}
+                        onMouseEnter={playHover}
+                        aria-pressed={isFav}
+                        title={isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]}
+                        aria-label={isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]}
+                        className={`inline-flex size-8 items-center justify-center rounded-full border transition-all ${
+                          isFav
+                            ? "border-[#d7aa52] bg-[#d7aa52]/20 text-[#f3d28a]"
+                            : "border-white/15 bg-white/[0.04] text-white/60 hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                        }`}
+                      >
+                        <Heart className={`size-3.5 ${isFav ? "fill-current" : ""}`} />
+                      </button>
+                      <a
+                        href={b.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onMouseEnter={playHover}
+                        onClick={() => { playClick(); onMarkLastRead(course.id, { title: b.title, url: b.url, at: Date.now() }); }}
+                        className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                      >
+                        {t.library.openBook[lang]}
+                        <ExternalLink className="size-3" />
+                      </a>
+                    </div>
+                  </li>
+                );
+              })}
               {books.length === 0 && (
                 <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
-                  {t.library.noBooks[lang]}
+                  {favOnly ? t.library.noFavorites[lang] : t.library.noBooks[lang]}
                 </li>
               )}
             </ul>
