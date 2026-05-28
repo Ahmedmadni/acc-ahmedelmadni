@@ -389,10 +389,24 @@ export function Library({ lang }: { lang: Lang }) {
                     className="w-full rounded-full border border-white/15 bg-white/[0.04] py-2 ps-9 pe-3 text-xs text-white placeholder:text-white/40 outline-none transition-all focus:border-[#d7aa52]/60"
                   />
                 </div>
-                {(bookFormat !== "all" || bookAuthor) && (
+                <button
+                  type="button"
+                  onClick={() => { playClick(); setFavOnly((v) => !v); }}
+                  onMouseEnter={playHover}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[11px] font-bold transition-all ${
+                    favOnly
+                      ? "border-[#d7aa52] bg-[#d7aa52]/20 text-[#f3d28a]"
+                      : "border-white/15 bg-white/[0.04] text-white/70 hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                  }`}
+                  aria-pressed={favOnly}
+                >
+                  <Heart className={`size-3 ${favOnly ? "fill-current" : ""}`} />
+                  {t.library.favoritesOnly[lang]}
+                </button>
+                {(bookFormat !== "all" || bookAuthor || favOnly) && (
                   <button
                     type="button"
-                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); }}
+                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); setFavOnly(false); }}
                     className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-bold text-white/70 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
                   >
                     <X className="size-3" />
