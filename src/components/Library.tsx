@@ -455,6 +455,8 @@ export function Library({ lang }: { lang: Lang }) {
             course={active.course}
             initialTab={active.tab}
             lang={lang}
+            bookFormat={bookFormat}
+            bookAuthor={bookAuthor}
             onClose={() => setActive(null)}
             onPick={(c) => setActive({ course: c, tab: active.tab })}
           />
