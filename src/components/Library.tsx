@@ -25,6 +25,7 @@ const CAT_KEYS = ["all", "fundamentals", "certifications", "reporting", "tax", "
 type CatKey = (typeof CAT_KEYS)[number];
 type LevelKey = "all" | "beginner" | "intermediate" | "advanced";
 type PriceKey = "all" | "free" | "paid";
+type FormatKey = "all" | "PDF" | "Book" | "Standard";
 
 /** Curated YouTube / platform resources per course. Each course maps to a small list of trusted external sources. */
 const RESOURCES: Record<string, Array<{ title: string; channel: string; duration: string; level: string; url: string; platform: "YouTube" | "Coursera" | "Udemy" | "edX" | "LinkedIn"; }>> = {
