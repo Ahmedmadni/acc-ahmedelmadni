@@ -479,6 +479,13 @@ export const t = {
       Standard: { ar: "معيار", en: "Standard" },
     },
     authorPlaceholder: { ar: "بحث بالمؤلف…", en: "Search by author…" },
+    favorites: { ar: "المفضلة", en: "Favorites" },
+    favoritesOnly: { ar: "المفضلة فقط", en: "Favorites only" },
+    addFavorite: { ar: "أضف إلى المفضلة", en: "Add to favorites" },
+    removeFavorite: { ar: "إزالة من المفضلة", en: "Remove from favorites" },
+    lastRead: { ar: "آخر ما قرأت", en: "Last read" },
+    resume: { ar: "استئناف القراءة", en: "Resume reading" },
+    noFavorites: { ar: "لا توجد كتب في المفضلة بعد", en: "No favorite books yet" },
     courses: [
       { id: "fund-1",  ar: "أساسيات المحاسبة المالية", en: "Financial Accounting Basics",          cat: "fundamentals",   level: "beginner",     lang: "ar", price: "free", lessons: 24, hours: 8,  desc: { ar: "مدخل شامل إلى علم المحاسبة، المعادلة المحاسبية، القيود، والدورة المحاسبية الكاملة.", en: "Complete intro to accounting, equation, journal entries, and the full cycle." } },
       { id: "fund-2",  ar: "الدورة المحاسبية الكاملة", en: "Full Accounting Cycle",                 cat: "fundamentals",   level: "beginner",     lang: "ar", price: "free", lessons: 18, hours: 6,  desc: { ar: "من القيد اليومي حتى القوائم المالية الختامية خطوة بخطوة.", en: "From journal entries to closing statements step by step." } },

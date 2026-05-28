@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   BookOpen,
@@ -6,6 +6,7 @@ import {
   Clock,
   Filter,
   GraduationCap,
+  Heart,
   Layers,
   PlayCircle,
   Search,
@@ -18,6 +19,57 @@ import {
 } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
+
+const FAV_KEY = "lib:favorites:v1";
+const LAST_KEY = "lib:lastRead:v1";
+
+type LastReadEntry = { title: string; url: string; at: number };
+
+function bookKey(courseId: string, url: string) {
+  return `${courseId}::${url}`;
+}
+
+function useFavorites() {
+  const [favs, setFavs] = useState<Set<string>>(() => new Set());
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(FAV_KEY);
+      if (raw) setFavs(new Set(JSON.parse(raw)));
+    } catch { /* noop */ }
+  }, []);
+  const persist = useCallback((next: Set<string>) => {
+    setFavs(next);
+    try { localStorage.setItem(FAV_KEY, JSON.stringify([...next])); } catch { /* noop */ }
+  }, []);
+  const toggle = useCallback((key: string) => {
+    setFavs((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key); else next.add(key);
+      try { localStorage.setItem(FAV_KEY, JSON.stringify([...next])); } catch { /* noop */ }
+      return next;
+    });
+  }, []);
+  return { favs, toggle, persist };
+}
+
+function useLastRead() {
+  const [map, setMap] = useState<Record<string, LastReadEntry>>({});
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(LAST_KEY);
+      if (raw) setMap(JSON.parse(raw));
+    } catch { /* noop */ }
+  }, []);
+  const mark = useCallback((courseId: string, entry: LastReadEntry) => {
+    setMap((prev) => {
+      const next = { ...prev, [courseId]: entry };
+      try { localStorage.setItem(LAST_KEY, JSON.stringify(next)); } catch { /* noop */ }
+      return next;
+    });
+  }, []);
+  return { map, mark };
+}
+
 
 type Course = (typeof t.library.courses)[number];
 
@@ -197,12 +249,16 @@ export function Library({ lang }: { lang: Lang }) {
   const [view, setView] = useState<ViewMode>("videos");
   const [bookFormat, setBookFormat] = useState<FormatKey>("all");
   const [bookAuthor, setBookAuthor] = useState("");
+  const [favOnly, setFavOnly] = useState(false);
   const [active, setActive] = useState<{ course: Course; tab: ViewMode } | null>(null);
+  const { favs, toggle: toggleFav } = useFavorites();
+  const { map: lastReadMap, mark: markLastRead } = useLastRead();
 
-  const bookMatches = (b: Book) => {
+  const bookMatches = (courseId: string, b: Book) => {
     if (bookFormat !== "all" && b.format !== bookFormat) return false;
     const a = bookAuthor.trim().toLowerCase();
     if (a && !b.author.toLowerCase().includes(a)) return false;
+    if (favOnly && !favs.has(bookKey(courseId, b.url))) return false;
     return true;
   };
 
@@ -219,13 +275,14 @@ export function Library({ lang }: { lang: Lang }) {
       if (view === "books") {
         const list = BOOKS[c.id] ?? [];
         if (list.length === 0) return false;
-        if (bookFormat !== "all" || bookAuthor.trim()) {
-          if (!list.some(bookMatches)) return false;
+        if (bookFormat !== "all" || bookAuthor.trim() || favOnly) {
+          if (!list.some((b) => bookMatches(c.id, b))) return false;
         }
       }
       return true;
     });
-  }, [query, cat, level, price, view, bookFormat, bookAuthor]);
+  }, [query, cat, level, price, view, bookFormat, bookAuthor, favOnly, favs]);
+
 
   return (
     <section id="library" className="relative py-24">
@@ -332,10 +389,24 @@ export function Library({ lang }: { lang: Lang }) {
                     className="w-full rounded-full border border-white/15 bg-white/[0.04] py-2 ps-9 pe-3 text-xs text-white placeholder:text-white/40 outline-none transition-all focus:border-[#d7aa52]/60"
                   />
                 </div>
-                {(bookFormat !== "all" || bookAuthor) && (
+                <button
+                  type="button"
+                  onClick={() => { playClick(); setFavOnly((v) => !v); }}
+                  onMouseEnter={playHover}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[11px] font-bold transition-all ${
+                    favOnly
+                      ? "border-[#d7aa52] bg-[#d7aa52]/20 text-[#f3d28a]"
+                      : "border-white/15 bg-white/[0.04] text-white/70 hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                  }`}
+                  aria-pressed={favOnly}
+                >
+                  <Heart className={`size-3 ${favOnly ? "fill-current" : ""}`} />
+                  {t.library.favoritesOnly[lang]}
+                </button>
+                {(bookFormat !== "all" || bookAuthor || favOnly) && (
                   <button
                     type="button"
-                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); }}
+                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); setFavOnly(false); }}
                     className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-bold text-white/70 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
                   >
                     <X className="size-3" />
@@ -396,6 +467,20 @@ export function Library({ lang }: { lang: Lang }) {
                       <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
                       <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
                     </div>
+                    {lastReadMap[c.id] && (
+                      <a
+                        href={lastReadMap[c.id].url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={playClick}
+                        onMouseEnter={playHover}
+                        className="mt-3 flex items-center gap-2 rounded-xl border border-[#d7aa52]/25 bg-[#d7aa52]/[0.06] px-2.5 py-1.5 text-[10px] text-white/75 transition-all hover:border-[#d7aa52]/60 hover:bg-[#d7aa52]/15 hover:text-[#f3d28a]"
+                        title={lastReadMap[c.id].title}
+                      >
+                        <BookOpen className="size-3 shrink-0 text-[#d7aa52]" />
+                        <span className="truncate font-semibold">{t.library.lastRead[lang]}: {lastReadMap[c.id].title}</span>
+                      </a>
+                    )}
                     <div className="mt-4 flex flex-wrap gap-2">
                       <button
                         type="button"
@@ -440,6 +525,10 @@ export function Library({ lang }: { lang: Lang }) {
             lang={lang}
             bookFormat={bookFormat}
             bookAuthor={bookAuthor}
+            favOnly={favOnly}
+            favs={favs}
+            onToggleFav={toggleFav}
+            onMarkLastRead={markLastRead}
             onClose={() => setActive(null)}
             onPick={(c) => setActive({ course: c, tab: active.tab })}
           />
@@ -470,7 +559,7 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", favOnly = false, favs, onToggleFav, onMarkLastRead, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; favOnly?: boolean; favs: Set<string>; onToggleFav: (k: string) => void; onMarkLastRead: (courseId: string, entry: LastReadEntry) => void; onClose: () => void; onPick: (c: Course) => void }) {
   const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
   const allBooks = BOOKS[course.id] ?? [];
@@ -478,6 +567,7 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
   const books = allBooks.filter((b) => {
     if (bookFormat !== "all" && b.format !== bookFormat) return false;
     if (a && !b.author.toLowerCase().includes(a)) return false;
+    if (favOnly && !favs.has(bookKey(course.id, b.url))) return false;
     return true;
   });
   const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
@@ -594,38 +684,59 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
               {t.library.booksTitle[lang]}
             </div>
             <ul className="space-y-3">
-              {books.map((b, i) => (
-                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
-                  <span
-                    className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
-                    style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
-                    aria-hidden
-                  >
-                    {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
-                  </span>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
-                    <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
-                    <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
-                      {b.format}
+              {books.map((b, i) => {
+                const k = bookKey(course.id, b.url);
+                const isFav = favs.has(k);
+                return (
+                  <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                    <span
+                      className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
+                      style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
+                      aria-hidden
+                    >
+                      {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
+                    </span>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
+                      <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
+                      <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
+                        {b.format}
+                      </div>
                     </div>
-                  </div>
-                  <a
-                    href={b.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onMouseEnter={playHover}
-                    onClick={playClick}
-                    className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
-                  >
-                    {t.library.openBook[lang]}
-                    <ExternalLink className="size-3" />
-                  </a>
-                </li>
-              ))}
+                    <div className="flex shrink-0 flex-col items-end gap-2">
+                      <button
+                        type="button"
+                        onClick={() => { playClick(); onToggleFav(k); }}
+                        onMouseEnter={playHover}
+                        aria-pressed={isFav}
+                        title={isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]}
+                        aria-label={isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]}
+                        className={`inline-flex size-8 items-center justify-center rounded-full border transition-all ${
+                          isFav
+                            ? "border-[#d7aa52] bg-[#d7aa52]/20 text-[#f3d28a]"
+                            : "border-white/15 bg-white/[0.04] text-white/60 hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
+                        }`}
+                      >
+                        <Heart className={`size-3.5 ${isFav ? "fill-current" : ""}`} />
+                      </button>
+                      <a
+                        href={b.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onMouseEnter={playHover}
+                        onClick={() => { playClick(); onMarkLastRead(course.id, { title: b.title, url: b.url, at: Date.now() }); }}
+                        className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                      >
+                        {t.library.openBook[lang]}
+                        <ExternalLink className="size-3" />
+                      </a>
+                    </div>
+                  </li>
+                );
+              })}
               {books.length === 0 && (
                 <li className="rounded-2xl border border-dashed border-white/15 p-4 text-center text-xs text-white/55">
-                  {t.library.noBooks[lang]}
+                  {favOnly ? t.library.noFavorites[lang] : t.library.noBooks[lang]}
                 </li>
               )}
             </ul>
