@@ -568,7 +568,7 @@ export function LeaseCalculator({ lang }: { lang: Lang }) {
         </div>
       </div>
       <ChartCard title={lang === "ar" ? "تطور الرصيد، الفائدة، الأصل" : "Balance, interest & principal"} height={280}>
-        <AreaChart data={data}>
+        <ComposedChart data={data}>
           <defs>
             <linearGradient id="gradBal" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#f3d28a" stopOpacity={0.4} />
@@ -580,10 +580,10 @@ export function LeaseCalculator({ lang }: { lang: Lang }) {
           <YAxis stroke={chartAxis} fontSize={11} />
           <ReTooltip contentStyle={{ background: "#04101f", border: "1px solid rgba(215,170,82,0.4)", borderRadius: 8 }} />
           <Legend wrapperStyle={{ fontSize: 11, color: "#f3d28a" }} />
-          <Area yAxisId={0} dataKey="balance" stroke="#f3d28a" fill="url(#gradBal)" name={lang === "ar" ? "الرصيد" : "Balance"} />
+          <Area type="monotone" dataKey="balance" stroke="#f3d28a" fill="url(#gradBal)" name={lang === "ar" ? "الرصيد" : "Balance"} />
           <Line type="monotone" dataKey="interest" stroke="#c97a4e" strokeWidth={2} dot={false} name={lang === "ar" ? "الفائدة" : "Interest"} />
           <Line type="monotone" dataKey="principal" stroke="#7aa68b" strokeWidth={2} dot={false} name={lang === "ar" ? "الأصل" : "Principal"} />
-        </AreaChart>
+        </ComposedChart>
       </ChartCard>
       <div>
         <h4 className="mb-2 text-sm font-bold text-[#f3d28a]">{lang === "ar" ? "جدول الإطفاء" : "Amortization schedule"}</h4>
