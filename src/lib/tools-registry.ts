@@ -220,6 +220,373 @@ export const TOOLS: ToolMeta[] = [
       en: ["Verify supplier's VAT registration before reclaiming input tax", "Keep the e-invoice archived"],
     },
   },
+
+  // ============== Phase 2 — Finance ==============
+  {
+    id: "dcf",
+    category: "finance",
+    icon: "LineChart",
+    title: { ar: "تحليل DCF بقيمة استمرارية", en: "DCF with Terminal Value" },
+    short: {
+      ar: "خصم التدفقات الحرة المستقبلية + قيمة استمرارية (Gordon Growth).",
+      en: "Discount free cashflows plus terminal value (Gordon Growth).",
+    },
+    standard: { ar: "IFRS 13 · Valuation", en: "IFRS 13 · Valuation" },
+    formula: "EV = Σ FCFt/(1+r)^t + [FCFn·(1+g)/(r−g)] / (1+r)^n",
+    about: {
+      ar: "النموذج الأكثر استخداماً في تقييم الشركات والصفقات — يجمع بين خصم التدفقات صريحة المدى وقيمة استمرارية تمثل ما بعد فترة التنبؤ.",
+      en: "The workhorse of corporate valuation — explicit-period DCF combined with a perpetuity terminal value.",
+    },
+    whenToUse: {
+      ar: ["تقييم شركة أو وحدة أعمال", "صفقات M&A", "اختبار انخفاض القيمة (CGU)"],
+      en: ["Valuing a company or business unit", "M&A transactions", "Impairment of a CGU"],
+    },
+    commonMistakes: {
+      ar: ["g ≥ r يجعل القيمة لا نهائية", "خلط FCFF بـ FCFE", "إهمال رأس المال العامل"],
+      en: ["g ≥ r explodes the formula", "Mixing FCFF with FCFE", "Ignoring working-capital needs"],
+    },
+    tips: {
+      ar: ["اضبط g ≤ نمو الناتج المحلي طويل الأجل", "اختبر حساسية r و g"],
+      en: ["Keep g ≤ long-run GDP growth", "Run a sensitivity grid on r and g"],
+    },
+  },
+  {
+    id: "payback",
+    category: "finance",
+    icon: "Hourglass",
+    title: { ar: "فترة الاسترداد المخصومة", en: "Discounted Payback" },
+    short: {
+      ar: "كم من السنوات يحتاج المشروع لاسترداد الاستثمار بقيمة الزمن.",
+      en: "Years required to recover the investment, time-value adjusted.",
+    },
+    formula: "Find t: Σ CFi/(1+r)^i ≥ 0",
+    about: {
+      ar: "مقياس سيولة المشروع. لا يحل محل NPV لكنه مفيد لقياس المخاطرة الزمنية.",
+      en: "A liquidity metric. Complements NPV by measuring how fast capital is recovered.",
+    },
+    whenToUse: {
+      ar: ["مشاريع ذات مخاطر سيولة", "قطاعات سريعة التغير تقنياً"],
+      en: ["Liquidity-sensitive projects", "Fast-moving tech sectors"],
+    },
+    commonMistakes: {
+      ar: ["تجاهل التدفقات بعد فترة الاسترداد", "استخدامه كمعيار وحيد"],
+      en: ["Ignoring cashflows after the cutoff", "Using it as the only criterion"],
+    },
+    tips: {
+      ar: ["استخدمه دائماً مع NPV/IRR", "اضبط Hurdle مدى زمني واضح"],
+      en: ["Always pair with NPV/IRR", "Define a clear cutoff period"],
+    },
+  },
+  {
+    id: "pi",
+    category: "finance",
+    icon: "Scale",
+    title: { ar: "مؤشر الربحية (PI)", en: "Profitability Index (PI)" },
+    short: {
+      ar: "نسبة PV للتدفقات الداخلة إلى قيمة الاستثمار الأولي.",
+      en: "Ratio of PV of inflows to the initial investment.",
+    },
+    formula: "PI = PV(inflows) / |Initial Outflow|",
+    about: {
+      ar: "أداة قوية لتصنيف المشاريع عند محدودية رأس المال — PI > 1 يضيف قيمة.",
+      en: "Powerful for ranking projects under capital rationing — PI > 1 adds value.",
+    },
+    whenToUse: {
+      ar: ["محدودية رأس المال", "ترتيب أولوية محفظة مشاريع"],
+      en: ["Capital rationing", "Ranking a project portfolio"],
+    },
+    commonMistakes: {
+      ar: ["إغفال حجم الاستثمار", "تجاهل المشاريع المتنافية"],
+      en: ["Ignoring absolute project size", "Overlooking mutually exclusive projects"],
+    },
+    tips: {
+      ar: ["استخدم PI مع NPV لقرار محفظة متوازن", "قارن مشاريع بنفس المدى"],
+      en: ["Use PI alongside NPV for portfolio balance", "Compare projects with similar horizons"],
+    },
+  },
+  {
+    id: "ear",
+    category: "finance",
+    icon: "Repeat",
+    title: { ar: "المعدل السنوي الفعلي (EAR)", en: "Effective Annual Rate (EAR)" },
+    short: {
+      ar: "تحويل المعدل الاسمي إلى معدل سنوي فعلي حسب تكرار التركيب.",
+      en: "Convert a nominal rate into the effective annual rate.",
+    },
+    formula: "EAR = (1 + r/m)^m − 1",
+    about: {
+      ar: "أساسي لمقارنة عروض التمويل بمعدلات مختلفة التركيب (شهري، ربع سنوي، يومي).",
+      en: "Essential for comparing financing offers with different compounding frequencies.",
+    },
+    whenToUse: {
+      ar: ["مقارنة قروض", "تقييم بطاقات ائتمان", "حسابات ادخار"],
+      en: ["Comparing loans", "Evaluating credit cards", "Savings products"],
+    },
+    commonMistakes: {
+      ar: ["استخدام APR كأنه EAR", "إهمال تكرار التركيب"],
+      en: ["Treating APR as EAR", "Ignoring compounding frequency"],
+    },
+    tips: {
+      ar: ["وحّد كل العروض على EAR قبل المقارنة"],
+      en: ["Normalize all offers to EAR before comparing"],
+    },
+  },
+  {
+    id: "bond",
+    category: "finance",
+    icon: "FileText",
+    title: { ar: "تسعير السندات", en: "Bond Pricing" },
+    short: {
+      ar: "السعر العادل لسند بناءً على الكوبون والعائد المطلوب.",
+      en: "Fair price of a coupon bond given yield and maturity.",
+    },
+    standard: { ar: "IFRS 9 — Amortised Cost", en: "IFRS 9 — Amortised Cost" },
+    formula: "P = Σ C/(1+y)^t + F/(1+y)^n",
+    about: {
+      ar: "احتساب السعر النظيف للسند بأقساط كوبونية ودفعة قيمة اسمية في النهاية.",
+      en: "Computes the clean price from coupons and face value cashflows.",
+    },
+    whenToUse: {
+      ar: ["تقييم سندات الشركات والحكومية", "محاسبة الأدوات المالية"],
+      en: ["Corporate and sovereign bond pricing", "Financial-instrument accounting"],
+    },
+    commonMistakes: {
+      ar: ["نسيان قسمة الكوبون والعائد على التكرار", "خلط السعر النظيف بالقذر"],
+      en: ["Forgetting to divide coupon and yield by frequency", "Confusing clean vs dirty price"],
+    },
+    tips: {
+      ar: ["استخدم نصف-سنوي للسندات الأمريكية افتراضياً"],
+      en: ["Default to semi-annual for US bonds"],
+    },
+  },
+  {
+    id: "lease",
+    category: "finance",
+    icon: "Building2",
+    title: { ar: "التزام الإيجار IFRS 16", en: "IFRS 16 Lease Liability" },
+    short: {
+      ar: "احسب الالتزام الأولي وجدول الإطفاء وفق IFRS 16.",
+      en: "Initial lease liability + amortization schedule under IFRS 16.",
+    },
+    standard: { ar: "IFRS 16 — Leases", en: "IFRS 16 — Leases" },
+    formula: "Liability₀ = Σ Payment / (1+r)^t",
+    about: {
+      ar: "بعد IFRS 16 يجب على المستأجر إثبات حق استخدام أصل والتزام إيجار يُطفأ بطريقة الفائدة الفعلية.",
+      en: "Under IFRS 16 lessees recognize a right-of-use asset and a lease liability amortized at the IBR.",
+    },
+    whenToUse: {
+      ar: ["إيجارات عقارات ومركبات ومعدات", "تطبيق IFRS 16 لأول مرة"],
+      en: ["Property, vehicle, equipment leases", "First-time IFRS 16 adoption"],
+    },
+    commonMistakes: {
+      ar: ["استخدام معدل الفائدة المعلن بدل IBR", "إهمال خيارات التجديد المؤكدة"],
+      en: ["Using stated rate instead of IBR", "Ignoring reasonably certain renewals"],
+    },
+    tips: {
+      ar: ["وثّق IBR وفترات الخيارات بوضوح", "افصل الفائدة عن إطفاء حق الاستخدام في القوائم"],
+      en: ["Document the IBR and option periods clearly", "Split interest from RoU depreciation in disclosures"],
+    },
+  },
+
+  // ============== Phase 2 — Tax ==============
+  {
+    id: "zakat",
+    category: "tax",
+    icon: "Coins",
+    title: { ar: "حاسبة الزكاة", en: "Zakat Calculator" },
+    short: {
+      ar: "احسب الزكاة على الوعاء الزكوي وفق نسبة ZATCA.",
+      en: "Compute Zakat on the Zakat base per ZATCA rate.",
+    },
+    standard: { ar: "ZATCA — لائحة الزكاة", en: "ZATCA — Zakat Regulations" },
+    formula: "Zakat = Base × 2.5775%",
+    about: {
+      ar: "تطبق الهيئة 2.5775% (تعويضاً لفرق السنة الهجرية/الميلادية) على الوعاء بعد التسويات.",
+      en: "ZATCA applies 2.5775% (lunar/solar adjustment) on the adjusted Zakat base.",
+    },
+    whenToUse: {
+      ar: ["إعداد إقرار الزكاة السنوي", "تقدير الالتزام الزكوي"],
+      en: ["Preparing the annual Zakat return", "Estimating Zakat liability"],
+    },
+    commonMistakes: {
+      ar: ["خلط الوعاء الزكوي مع الربح المحاسبي", "نسيان طرح الموجودات المعفاة"],
+      en: ["Confusing Zakat base with accounting profit", "Forgetting to exclude exempt assets"],
+    },
+    tips: {
+      ar: ["وثّق التسويات بمرفقات مرقمة في الإقرار"],
+      en: ["Document base adjustments with numbered schedules"],
+    },
+  },
+  {
+    id: "wht",
+    category: "tax",
+    icon: "Scissors",
+    title: { ar: "ضريبة الاستقطاع (WHT)", en: "Withholding Tax (WHT)" },
+    short: {
+      ar: "احسب قيمة الاستقطاع والصافي المستحق للمورد غير المقيم.",
+      en: "Compute withholding and net payable to a non-resident supplier.",
+    },
+    standard: { ar: "نظام ضريبة الدخل السعودي", en: "Saudi Income Tax Law" },
+    formula: "WHT = Invoice × rate",
+    about: {
+      ar: "تطبق نسب 5% / 15% / 20% حسب نوع الخدمة على المدفوعات لغير المقيمين.",
+      en: "Rates of 5% / 15% / 20% apply to non-resident payments depending on service type.",
+    },
+    whenToUse: {
+      ar: ["خدمات استشارية لمزود أجنبي", "أتعاب إدارية أو فنية", "إيجار أصول"],
+      en: ["Consulting services from foreign vendors", "Management or technical fees", "Equipment rentals"],
+    },
+    commonMistakes: {
+      ar: ["نسيان السداد خلال 10 أيام من نهاية الشهر", "تطبيق نسبة خاطئة"],
+      en: ["Missing the 10-day filing deadline", "Applying the wrong rate"],
+    },
+    tips: {
+      ar: ["راجع اتفاقيات تجنب الازدواج الضريبي قبل التطبيق"],
+      en: ["Check the relevant Double Tax Treaty before applying"],
+    },
+  },
+  {
+    id: "corp-tax",
+    category: "tax",
+    icon: "Landmark",
+    title: { ar: "ضريبة الدخل على الشركات", en: "Corporate Income Tax" },
+    short: {
+      ar: "احسب ضريبة الدخل والصافي بعد الضريبة على الربح الخاضع.",
+      en: "Compute income tax and after-tax profit on taxable income.",
+    },
+    formula: "Tax = Taxable Profit × rate",
+    about: {
+      ar: "تطبق 20% على الشركات غير السعودية، مع نسب خاصة لبعض القطاعات (نفط، غاز).",
+      en: "20% applies to non-Saudi shareholders, with special rates for oil and gas sectors.",
+    },
+    whenToUse: {
+      ar: ["تقدير العبء الضريبي السنوي", "تخطيط ضريبي"],
+      en: ["Estimating annual tax burden", "Tax planning"],
+    },
+    commonMistakes: {
+      ar: ["خلط الربح المحاسبي بالخاضع للضريبة", "إهمال المصروفات غير المسموح بها"],
+      en: ["Mixing book profit with taxable profit", "Ignoring non-deductible expenses"],
+    },
+    tips: {
+      ar: ["جهّز كشف توفيق بين الربح المحاسبي والضريبي"],
+      en: ["Prepare a book-to-tax reconciliation schedule"],
+    },
+  },
+  {
+    id: "deferred-tax",
+    category: "tax",
+    icon: "Layers",
+    title: { ar: "الضريبة المؤجلة IAS 12", en: "Deferred Tax (IAS 12)" },
+    short: {
+      ar: "احسب الفروق المؤقتة والأصول/الالتزامات الضريبية المؤجلة.",
+      en: "Compute temporary differences and DTA / DTL.",
+    },
+    standard: { ar: "IAS 12 — Income Taxes", en: "IAS 12 — Income Taxes" },
+    formula: "DT = (Carrying Amount − Tax Base) × rate",
+    about: {
+      ar: "تنشأ الضريبة المؤجلة عن فروق توقيت بين الأساس المحاسبي والضريبي، وتقاس بمعدل الضريبة المتوقع عند الاسترداد.",
+      en: "Deferred tax arises from timing differences between accounting and tax bases, measured at the rate expected on reversal.",
+    },
+    whenToUse: {
+      ar: ["إعداد قوائم مالية وفق IFRS", "اختلاف إهلاك محاسبي عن ضريبي"],
+      en: ["IFRS financial statements", "Different book vs tax depreciation"],
+    },
+    commonMistakes: {
+      ar: ["تطبيق المعدل الحالي بدل المتوقع", "تجاهل خسائر مرحلية قابلة للاستخدام"],
+      en: ["Applying current rate instead of enacted future rate", "Ignoring usable carry-forward losses"],
+    },
+    tips: {
+      ar: ["راجع احتمالية تحقق DTA قبل الإثبات", "أفصح عن مكونات الضريبة في الإيضاحات"],
+      en: ["Assess DTA recoverability before recognition", "Disclose components in the tax note"],
+    },
+  },
+
+  // ============== Phase 2 — Analysis ==============
+  {
+    id: "ratios",
+    category: "analysis",
+    icon: "PieChart",
+    title: { ar: "لوحة النسب المالية", en: "Financial Ratios Dashboard" },
+    short: {
+      ar: "كل نسب السيولة والربحية والملاءة والكفاءة في لوحة واحدة.",
+      en: "Liquidity, profitability, solvency, and efficiency ratios in one dashboard.",
+    },
+    formula: "15+ ratios from one compact input set",
+    about: {
+      ar: "أداة قراءة سريعة للأداء المالي للشركة عبر 15 نسبة معيارية مع رسومات بيانية مقارنة.",
+      en: "A 15-ratio one-look financial readout with comparative visuals.",
+    },
+    whenToUse: {
+      ar: ["تحليل قوائم مالية لشركة", "إعداد تقرير إدارة دورية", "Due Diligence"],
+      en: ["Company financial analysis", "Periodic management reporting", "Due diligence"],
+    },
+    commonMistakes: {
+      ar: ["استخدام أرقام نهاية الفترة بدلاً من المتوسطات", "تجاهل الموسمية"],
+      en: ["Using period-end values instead of averages", "Ignoring seasonality"],
+    },
+    tips: {
+      ar: ["قارن بالقطاع وبفترات سابقة دائماً"],
+      en: ["Always benchmark against industry and prior periods"],
+    },
+  },
+
+  // ============== Phase 2 — Excel ==============
+  {
+    id: "depreciation",
+    category: "excel",
+    icon: "TrendingDown",
+    title: { ar: "حاسبة الإهلاك", en: "Depreciation Calculator" },
+    short: {
+      ar: "جدول إهلاك بالطرق المختلفة (SL / DDB / SYD).",
+      en: "Depreciation schedules: SL / DDB / SYD.",
+    },
+    standard: { ar: "IAS 16 — Property Plant & Equipment", en: "IAS 16 — PP&E" },
+    formula: "SL · DDB · Sum-of-Years Digits",
+    about: {
+      ar: "احتساب الإهلاك السنوي والقيمة الدفترية باختلاف الطرق المتعارف عليها.",
+      en: "Annual expense and book value across the most common depreciation methods.",
+    },
+    whenToUse: {
+      ar: ["شراء أصل ثابت جديد", "مراجعة سياسات إهلاك", "إعداد ميزانية رأسمالية"],
+      en: ["New fixed asset purchase", "Reviewing depreciation policy", "Capital budgeting"],
+    },
+    commonMistakes: {
+      ar: ["خلط القسط الثابت بالمتناقص", "تجاهل القيمة المتبقية في DDB"],
+      en: ["Confusing SL with declining methods", "Ignoring salvage floor in DDB"],
+    },
+    tips: {
+      ar: ["راجع العمر الإنتاجي سنوياً (IAS 8)"],
+      en: ["Review useful life annually (IAS 8)"],
+    },
+  },
+  {
+    id: "inventory",
+    category: "excel",
+    icon: "Package",
+    title: { ar: "تقييم المخزون FIFO/LIFO/WA", en: "Inventory Valuation FIFO/LIFO/WA" },
+    short: {
+      ar: "احسب COGS وقيمة المخزون النهائي بطرق التدفق المختلفة.",
+      en: "Compute COGS and ending inventory under different cost-flow methods.",
+    },
+    standard: { ar: "IAS 2 — Inventories", en: "IAS 2 — Inventories" },
+    formula: "COGS + Ending Inventory = Cost of Goods Available",
+    about: {
+      ar: "يسمح IAS 2 بـ FIFO أو المتوسط المرجح فقط؛ LIFO ممنوع لكنه شائع للأغراض الإدارية والمقارنة.",
+      en: "IAS 2 allows FIFO or Weighted Average only; LIFO is prohibited but useful for managerial comparison.",
+    },
+    whenToUse: {
+      ar: ["تقييم مخزون نهاية الفترة", "تحليل تأثير التضخم على التكلفة"],
+      en: ["Period-end inventory valuation", "Inflation impact on cost"],
+    },
+    commonMistakes: {
+      ar: ["استخدام LIFO في تقارير IFRS", "إهمال قاعدة LCNRV"],
+      en: ["Using LIFO under IFRS", "Ignoring lower of cost / NRV rule"],
+    },
+    tips: {
+      ar: ["قارن FIFO و WA لقياس أثر تذبذب الأسعار"],
+      en: ["Compare FIFO vs WA to gauge price-swing impact"],
+    },
+  },
 ];
 
 export const toolById = (id: string) => TOOLS.find((t) => t.id === id);
