@@ -1,15 +1,46 @@
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import {
+  Area,
+  AreaChart,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  Legend,
+  Line,
+  LineChart as ReLineChart,
+  Pie,
+  PieChart as RePieChart,
+  ResponsiveContainer,
+  Tooltip as ReTooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import {
   amortize,
+  bondPrice,
+  corporateTax,
+  dcf,
+  deferredTax,
+  depreciation,
+  effectiveRate,
   fmtMoney,
   fmtNum,
   fv as fvCalc,
+  inventory,
+  type InvTxn,
   irr as irrCalc,
+  leaseLiability,
   npv as npvCalc,
+  payback,
+  profitabilityIndex,
   pv as pvCalc,
   pvAnnuity,
+  ratios,
   vat as vatCalc,
+  wht,
+  zakat,
 } from "@/lib/finance";
 import type { Lang } from "@/lib/i18n";
 
