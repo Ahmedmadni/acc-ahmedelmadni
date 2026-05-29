@@ -111,6 +111,19 @@ function ToolDetailPage() {
       </header>
 
       <main className="mx-auto w-[92%] max-w-6xl py-8 md:py-12">
+        <div className="print-only mb-6 border-b-2 border-[#d7aa52] pb-4">
+          <div className="text-xs font-bold uppercase tracking-widest text-[#8a5a13]">
+            Ahmed Elmadani — Smart Accounting Tools
+          </div>
+          <div className="mt-1 text-lg font-extrabold text-[#0b1220]">
+            {tool.title.ar} · {tool.title.en}
+          </div>
+          <div className="mt-1 text-xs text-slate-600">
+            {tool.standard ? `${tool.standard.ar} · ${tool.standard.en} · ` : ""}
+            {new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US")}
+          </div>
+        </div>
+
         <div className="mb-6 flex flex-wrap items-center gap-2">
           <span className="rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f3d28a]">
             {labelByCategory(tool.category, lang)}
