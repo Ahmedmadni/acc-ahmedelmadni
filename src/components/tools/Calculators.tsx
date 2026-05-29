@@ -5,6 +5,7 @@ import {
   AreaChart,
   Bar,
   BarChart,
+  ComposedChart,
   CartesianGrid,
   Cell,
   Legend,
