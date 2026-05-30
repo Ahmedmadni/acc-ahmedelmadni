@@ -11,9 +11,11 @@ import {
   Printer,
   Share2,
   Sigma,
+  Download,
 } from "lucide-react";
 import { CalculatorById } from "@/components/tools/Calculators";
 import { labelByCategory, toolById, TOOLS } from "@/lib/tools-registry";
+import { exportToolReportPdf } from "@/lib/pdf-export";
 import type { Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/tools/$toolId")({
