@@ -142,9 +142,31 @@ function ToolDetailPage() {
         <p className="mt-2 max-w-3xl text-sm text-[var(--fg-soft)] md:text-base">{tool.short[lang]}</p>
 
         <div className="mt-4 flex flex-wrap gap-2 print:hidden">
-          <button onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+          <button
+            onClick={() => window.print()}
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+          >
             <Printer className="size-3.5" />
-            {lang === "ar" ? "تصدير PDF / طباعة" : "Print / PDF"}
+            {lang === "ar" ? "طباعة التقرير" : "Print Report"}
+          </button>
+          <button
+            onClick={async () => {
+              try {
+                await exportToolReportPdf({
+                  elementId: "tool-report-capture",
+                  title: tool.title,
+                  standard: tool.standard,
+                  about: tool.about,
+                  lang,
+                });
+              } catch (err) {
+                console.error("PDF export failed", err);
+              }
+            }}
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95"
+          >
+            <Download className="size-3.5" />
+            {lang === "ar" ? "تحميل PDF" : "Download PDF"}
           </button>
           <button onClick={onShare} className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
             <Share2 className="size-3.5" />
@@ -153,9 +175,13 @@ function ToolDetailPage() {
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
-          <section className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 backdrop-blur-xl md:p-7">
+          <section
+            id="tool-report-capture"
+            className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 backdrop-blur-xl md:p-7"
+          >
             <CalculatorById id={tool.id} lang={lang} />
           </section>
+
 
           <aside className="space-y-4">
             <div className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#d7aa52]/10 to-transparent p-5 backdrop-blur">
