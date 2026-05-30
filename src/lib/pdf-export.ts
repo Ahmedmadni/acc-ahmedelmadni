@@ -162,11 +162,9 @@ export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
     pdf.addImage(imgData, "JPEG", margin, firstAreaTop, imgW, imgH);
   } else {
     // Slice the canvas into A4-fitting strips
-    const sliceHpx = (firstAreaH * canvas.width) / imgW;
+    let sliceHpx = (firstAreaH * canvas.width) / imgW;
     let renderedPx = 0;
-    let pageNum = 1;
     let topMm = firstAreaTop;
-    let availMm = firstAreaH;
     while (renderedPx < canvas.height) {
       const remainingPx = canvas.height - renderedPx;
       const takePx = Math.min(sliceHpx, remainingPx);
@@ -177,39 +175,21 @@ export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
       if (!ctx) break;
       ctx.fillStyle = "#ffffff";
       ctx.fillRect(0, 0, sliceCanvas.width, sliceCanvas.height);
-      ctx.drawImage(
-        canvas,
-        0,
-        renderedPx,
-        canvas.width,
-        takePx,
-        0,
-        0,
-        canvas.width,
-        takePx,
-      );
+      ctx.drawImage(canvas, 0, renderedPx, canvas.width, takePx, 0, 0, canvas.width, takePx);
       const sliceData = sliceCanvas.toDataURL("image/jpeg", 0.95);
       const drawnHmm = (takePx * imgW) / canvas.width;
       pdf.addImage(sliceData, "JPEG", margin, topMm, imgW, drawnHmm);
       renderedPx += takePx;
       if (renderedPx < canvas.height) {
         pdf.addPage();
-        pageNum++;
         drawHeader();
         topMm = 28;
-        availMm = pageH - 20 - topMm;
-        // recompute slice based on new available
-        const newSliceHpx = (availMm * canvas.width) / imgW;
-        // update sliceHpx for next iteration
-        if (newSliceHpx > 0) {
-          // hack: reassign by closure not possible — emulate via while-condition; use Math.min on each pass
-          // We'll just use Math.min(newSliceHpx, remainingPx) by overwriting sliceHpx via let
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (sliceHpx as unknown as number); // no-op
-        }
+        const availMm = pageH - 20 - topMm;
+        sliceHpx = (availMm * canvas.width) / imgW;
       }
     }
   }
+
 
   // ---------- QR + footer on the last page ----------
   const totalPages = pdf.getNumberOfPages();
