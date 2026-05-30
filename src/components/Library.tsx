@@ -324,7 +324,7 @@ export function Library({ lang }: { lang: Lang }) {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}
           className="mt-10 rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/90 p-5 backdrop-blur-xl">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
             <div className="relative flex-1">
               <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
               <input
@@ -335,31 +335,46 @@ export function Library({ lang }: { lang: Lang }) {
                 className="w-full rounded-full border border-white/10 bg-white/[0.04] py-3 ps-11 pe-4 text-sm text-white placeholder:text-white/40 outline-none transition-all focus:border-[#d7aa52]/60 focus:bg-white/[0.06]"
               />
             </div>
-            <div className="flex flex-wrap items-center gap-2">
-              <Filter className="size-4 text-[#d7aa52]" />
-              <Select value={cat} onChange={(v) => setCat(v as CatKey)}
-                options={CAT_KEYS.map((k) => ({
-                  value: k,
-                  label: k === "all" ? t.library.all[lang] : t.library.cats[k as Exclude<CatKey, "all">][lang],
-                }))}
-              />
-              <Select value={level} onChange={(v) => setLevel(v as LevelKey)}
-                options={[
-                  { value: "all", label: t.library.levels.all[lang] },
-                  { value: "beginner", label: t.library.levels.beginner[lang] },
-                  { value: "intermediate", label: t.library.levels.intermediate[lang] },
-                  { value: "advanced", label: t.library.levels.advanced[lang] },
-                ]}
-              />
-              <Select value={price} onChange={(v) => setPrice(v as PriceKey)}
-                options={[
-                  { value: "all", label: t.library.priceLabels.all[lang] },
-                  { value: "free", label: t.library.priceLabels.free[lang] },
-                  { value: "paid", label: t.library.priceLabels.paid[lang] },
-                ]}
-              />
+            <div className="relative lg:w-64">
+              <Filter className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
+              <select
+                value={cat}
+                onChange={(e) => { playClick(); setCat(e.target.value as CatKey); }}
+                className="w-full appearance-none rounded-full border border-[#d7aa52]/40 bg-white/[0.04] py-3 ps-11 pe-9 text-sm font-semibold text-white outline-none transition-all hover:border-[#d7aa52]/70 focus:border-[#d7aa52]"
+                aria-label={lang === "ar" ? "التصنيف" : "Category"}
+              >
+                {CAT_KEYS.map((k) => (
+                  <option key={k} value={k} className="bg-[#04101f] text-white">
+                    {k === "all"
+                      ? (lang === "ar" ? "كل التصنيفات" : "All categories")
+                      : t.library.cats[k as Exclude<CatKey, "all">][lang]}
+                  </option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute end-4 top-1/2 -translate-y-1/2 text-[#d7aa52]">▾</span>
             </div>
           </div>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#d7aa52]">
+              {lang === "ar" ? "فلاتر إضافية" : "More filters"}
+            </span>
+            <Select value={level} onChange={(v) => setLevel(v as LevelKey)}
+              options={[
+                { value: "all", label: t.library.levels.all[lang] },
+                { value: "beginner", label: t.library.levels.beginner[lang] },
+                { value: "intermediate", label: t.library.levels.intermediate[lang] },
+                { value: "advanced", label: t.library.levels.advanced[lang] },
+              ]}
+            />
+            <Select value={price} onChange={(v) => setPrice(v as PriceKey)}
+              options={[
+                { value: "all", label: t.library.priceLabels.all[lang] },
+                { value: "free", label: t.library.priceLabels.free[lang] },
+                { value: "paid", label: t.library.priceLabels.paid[lang] },
+              ]}
+            />
+          </div>
+
 
           {/* Books-only filters */}
           {view === "books" && (
