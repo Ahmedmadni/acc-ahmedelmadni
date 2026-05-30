@@ -375,3 +375,52 @@ html.light .bg-video-overlay {
   section, .rounded-2xl { page-break-inside: avoid; }
 }
 .print-only { display: none; }
+
+/* ============ PDF export mode (mirrors @media print, applied via JS) ============ */
+body.pdf-export-mode,
+body.pdf-export-mode * {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+body.pdf-export-mode #tool-report-capture,
+body.pdf-export-mode #tool-report-capture * {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #0b1220 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  text-shadow: none !important;
+}
+body.pdf-export-mode #tool-report-capture {
+  border: 1px solid #d7aa52 !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+}
+body.pdf-export-mode #tool-report-capture h1,
+body.pdf-export-mode #tool-report-capture h2,
+body.pdf-export-mode #tool-report-capture h3,
+body.pdf-export-mode #tool-report-capture h4 {
+  color: #8a5a13 !important;
+  -webkit-text-fill-color: #8a5a13 !important;
+}
+body.pdf-export-mode #tool-report-capture .text-\[var\(--fg-soft\)\] {
+  color: #334155 !important;
+}
+body.pdf-export-mode #tool-report-capture input,
+body.pdf-export-mode #tool-report-capture select,
+body.pdf-export-mode #tool-report-capture textarea {
+  background: #ffffff !important;
+  color: #0b1220 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+body.pdf-export-mode #tool-report-capture button {
+  background: #ffffff !important;
+  color: #8a5a13 !important;
+  border-color: #d7aa52 !important;
+}
+body.pdf-export-mode #tool-report-capture th,
+body.pdf-export-mode #tool-report-capture td {
+  border: 1px solid #cbd5e1 !important;
+  color: #0b1220 !important;
+}
+
