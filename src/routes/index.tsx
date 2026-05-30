@@ -1006,7 +1006,7 @@ function Certs({ lang }: { lang: Lang }) {
 /* ============= CONTACT ============= */
 function Contact({ lang }: { lang: Lang }) {
   const items = [
-    { icon: Phone, label: t.contact.phone[lang], value: "+966560409811", href: "tel:+966560409811" },
+    { icon: Phone, label: t.contact.phone[lang], value: "0560409811", href: "tel:+966560409811" },
     { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
     { icon: Car, label: lang === "ar" ? "التنقل" : "Mobility", value: t.contact.driving[lang], href: "#" },
@@ -1085,7 +1085,7 @@ function Footer({ lang }: { lang: Lang }) {
         <div>
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
           <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
-            <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">+966560409811</a></li>
+            <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
         </div>
