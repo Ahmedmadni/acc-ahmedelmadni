@@ -184,7 +184,7 @@ function Area({
 function ClassicTemplate({ data, lang }: { data: CvData; lang: Lang }) {
   const isAR = lang === "ar";
   return (
-    <div dir={isAR ? "rtl" : "ltr"} className="cv-page font-serif">
+    <div dir={isAR ? "rtl" : "ltr"} className="cv-page p-10 font-serif">
       <div className="border-b-2 border-[#0b1220] pb-4">
         <h1 className="text-3xl font-extrabold text-[#0b1220]">{data.fullName || (isAR ? "الاسم الكامل" : "Full Name")}</h1>
         <div className="mt-1 text-base text-[#475569]">{data.jobTitle || (isAR ? "المسمى الوظيفي" : "Job Title")}</div>
@@ -210,7 +210,7 @@ function ClassicTemplate({ data, lang }: { data: CvData; lang: Lang }) {
 function ModernTemplate({ data, lang }: { data: CvData; lang: Lang }) {
   const isAR = lang === "ar";
   return (
-    <div dir={isAR ? "rtl" : "ltr"} className="cv-page">
+    <div dir={isAR ? "rtl" : "ltr"} className="cv-page p-10">
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-1 border-e-2 border-[#b8862e] pe-4">
           <h1 className="text-2xl font-extrabold leading-tight text-[#0b1220]">{data.fullName || (isAR ? "الاسم" : "Name")}</h1>
