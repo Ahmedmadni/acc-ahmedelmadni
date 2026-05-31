@@ -13,6 +13,7 @@ import { Route as ToolsRouteImport } from './routes/tools'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
+import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 
 const ToolsRoute = ToolsRouteImport.update({
@@ -35,6 +36,11 @@ const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
   path: '/$toolId',
   getParentRoute: () => ToolsRoute,
 } as any)
+const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
+  id: '/api/cv-enhance',
+  path: '/api/cv-enhance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiChatRoute = ApiChatRouteImport.update({
   id: '/api/chat',
   path: '/api/chat',
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/library': typeof LibraryRoute
   '/tools': typeof ToolsRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/library': typeof LibraryRoute
   '/tools': typeof ToolsRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,34 @@ export interface FileRoutesById {
   '/library': typeof LibraryRoute
   '/tools': typeof ToolsRouteWithChildren
   '/api/chat': typeof ApiChatRoute
+  '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/library' | '/tools' | '/api/chat' | '/tools/$toolId'
+  fullPaths:
+    | '/'
+    | '/library'
+    | '/tools'
+    | '/api/chat'
+    | '/api/cv-enhance'
+    | '/tools/$toolId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/library' | '/tools' | '/api/chat' | '/tools/$toolId'
-  id: '__root__' | '/' | '/library' | '/tools' | '/api/chat' | '/tools/$toolId'
+  to:
+    | '/'
+    | '/library'
+    | '/tools'
+    | '/api/chat'
+    | '/api/cv-enhance'
+    | '/tools/$toolId'
+  id:
+    | '__root__'
+    | '/'
+    | '/library'
+    | '/tools'
+    | '/api/chat'
+    | '/api/cv-enhance'
+    | '/tools/$toolId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +104,7 @@ export interface RootRouteChildren {
   LibraryRoute: typeof LibraryRoute
   ToolsRoute: typeof ToolsRouteWithChildren
   ApiChatRoute: typeof ApiChatRoute
+  ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -108,6 +137,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsToolIdRouteImport
       parentRoute: typeof ToolsRoute
     }
+    '/api/cv-enhance': {
+      id: '/api/cv-enhance'
+      path: '/api/cv-enhance'
+      fullPath: '/api/cv-enhance'
+      preLoaderRoute: typeof ApiCvEnhanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/chat': {
       id: '/api/chat'
       path: '/api/chat'
@@ -133,17 +169,8 @@ const rootRouteChildren: RootRouteChildren = {
   LibraryRoute: LibraryRoute,
   ToolsRoute: ToolsRouteWithChildren,
   ApiChatRoute: ApiChatRoute,
+  ApiCvEnhanceRoute: ApiCvEnhanceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
