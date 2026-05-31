@@ -1,6 +1,6 @@
 import type { Lang } from "@/lib/i18n";
 
-export type ToolCategory = "finance" | "tax" | "analysis" | "excel" | "ifrs";
+export type ToolCategory = "finance" | "tax" | "analysis" | "excel" | "ifrs" | "career";
 
 export interface ToolInfoSection {
   ar: string[];
@@ -27,6 +27,7 @@ export const CATEGORIES: { id: ToolCategory; label: { ar: string; en: string } }
   { id: "analysis", label: { ar: "التحليل المالي", en: "Financial Analysis" } },
   { id: "excel", label: { ar: "أدوات Excel", en: "Excel Tools" } },
   { id: "ifrs", label: { ar: "معايير IFRS", en: "IFRS Standards" } },
+  { id: "career", label: { ar: "المهنة والتطوير", en: "Career & Development" } },
 ];
 
 export const TOOLS: ToolMeta[] = [
@@ -585,6 +586,36 @@ export const TOOLS: ToolMeta[] = [
     tips: {
       ar: ["قارن FIFO و WA لقياس أثر تذبذب الأسعار"],
       en: ["Compare FIFO vs WA to gauge price-swing impact"],
+    },
+  },
+
+  // ============== Career ==============
+  {
+    id: "cv-builder",
+    category: "career",
+    icon: "FileUser",
+    title: { ar: "منشئ السيرة الذاتية بالذكاء الاصطناعي", en: "AI CV Builder" },
+    short: {
+      ar: "أنشئ سيرة ذاتية احترافية بمساعدة الذكاء الاصطناعي مع قوالب فاخرة وتصدير PDF.",
+      en: "Build a professional CV with AI assistance, premium templates, and PDF export.",
+    },
+    standard: { ar: "Career Tools", en: "Career Tools" },
+    formula: "AI + Premium Templates + PDF",
+    about: {
+      ar: "اختر قالباً، أدخل بياناتك في كل قسم، حسّن النصوص بالذكاء الاصطناعي بنقرة واحدة، أرفع صورتك الشخصية (للقوالب المناسبة)، ثم صدّر سيرتك بصيغة PDF بجودة طباعة.",
+      en: "Pick a template, fill in each section, polish text with AI in one click, upload your photo (for photo templates), and export a print-quality PDF.",
+    },
+    whenToUse: {
+      ar: ["التقديم على وظيفة جديدة", "تحديث السيرة الذاتية بشكل دوري", "التحضير لمقابلات تنفيذية"],
+      en: ["Applying for a new role", "Periodic CV refresh", "Preparing for executive interviews"],
+    },
+    commonMistakes: {
+      ar: ["كتابة مهام بدل إنجازات", "غياب الأرقام والنتائج", "استخدام قالب لا يناسب المجال"],
+      en: ["Listing duties instead of achievements", "Missing metrics and outcomes", "Wrong template for your field"],
+    },
+    tips: {
+      ar: ["ابدأ بأفعال قوية (قُدت، خفضت، حسّنت)", "أضف أرقاماً ونسباً", "اجعل السيرة ضمن صفحتين كحد أقصى"],
+      en: ["Lead with strong verbs (Led, Reduced, Improved)", "Add numbers and percentages", "Keep your CV within 2 pages"],
     },
   },
 ];
