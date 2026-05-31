@@ -792,9 +792,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           </div>
           <div className="overflow-auto rounded-xl border border-[#d7aa52]/30 bg-[#f5f5f7] p-3 shadow-inner">
             <div ref={previewRef} className="cv-canvas mx-auto bg-white text-[#0b1220] shadow-xl" style={{ width: 794, minHeight: 1123 }}>
-              <div className="p-8">
-                <Preview template={template} data={data} lang={lang} />
-              </div>
+              <Preview template={template} data={data} lang={lang} />
             </div>
           </div>
         </div>
