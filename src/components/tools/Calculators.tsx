@@ -43,6 +43,7 @@ import {
   wht,
   zakat,
 } from "@/lib/finance";
+import { CvBuilder } from "@/components/tools/CvBuilder";
 import type { Lang } from "@/lib/i18n";
 
 const labels = {
@@ -975,6 +976,7 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
     case "ratios": return <RatiosCalculator lang={lang} />;
     case "depreciation": return <DepreciationCalculator lang={lang} />;
     case "inventory": return <InventoryCalculator lang={lang} />;
+    case "cv-builder": return <CvBuilder lang={lang} />;
     default:
       return (
         <div className="rounded-xl border border-dashed border-[#d7aa52]/40 p-6 text-center text-sm text-[var(--fg-soft)]">
