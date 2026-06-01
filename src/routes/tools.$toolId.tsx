@@ -90,6 +90,25 @@ function ToolDetailPage() {
     }
   };
 
+  const onCopyLink = async () => {
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
+    const nav = window.navigator as Navigator & {
+      clipboard?: { writeText: (t: string) => Promise<void> };
+    };
+    try {
+      if (nav.clipboard) {
+        await nav.clipboard.writeText(url);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1800);
+      } else {
+        window.prompt(lang === "ar" ? "انسخ الرابط:" : "Copy link:", url);
+      }
+    } catch {
+      // ignore
+    }
+  };
+
   return (
     <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
       <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl print:hidden">
