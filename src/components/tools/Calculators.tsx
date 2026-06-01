@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { motion } from "motion/react";
 import {
   Area,
@@ -45,6 +45,7 @@ import {
 } from "@/lib/finance";
 import { CvBuilder } from "@/components/tools/CvBuilder";
 import type { Lang } from "@/lib/i18n";
+import { useShareState } from "@/lib/use-share";
 
 const labels = {
   fv: { ar: "القيمة المستقبلية", en: "Future Value" },
@@ -104,10 +105,10 @@ function StatCard({ title, value, sub }: { title: string; value: string; sub?: s
 // ---------- PV ----------
 export function PVCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [fv, setFv] = useState(100000);
-  const [rate, setRate] = useState(8);
-  const [years, setYears] = useState(5);
-  const [pmt, setPmt] = useState(0);
+  const [fv, setFv] = useShareState("PVCalculator_v0", 100000);
+  const [rate, setRate] = useShareState("PVCalculator_v1", 8);
+  const [years, setYears] = useShareState("PVCalculator_v2", 5);
+  const [pmt, setPmt] = useShareState("PVCalculator_v3", 0);
   const lump = pvCalc(fv, rate, years);
   const ann = pvAnnuity(pmt, rate, years);
   const total = lump + ann;
@@ -131,10 +132,10 @@ export function PVCalculator({ lang }: { lang: Lang }) {
 // ---------- FV ----------
 export function FVCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [pv, setPv] = useState(50000);
-  const [rate, setRate] = useState(8);
-  const [years, setYears] = useState(10);
-  const [pmt, setPmt] = useState(1000);
+  const [pv, setPv] = useShareState("FVCalculator_v0", 50000);
+  const [rate, setRate] = useShareState("FVCalculator_v1", 8);
+  const [years, setYears] = useShareState("FVCalculator_v2", 10);
+  const [pmt, setPmt] = useShareState("FVCalculator_v3", 1000);
   const value = fvCalc(pv, rate, years, pmt);
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -156,8 +157,8 @@ export function FVCalculator({ lang }: { lang: Lang }) {
 // ---------- NPV ----------
 export function NPVCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [rate, setRate] = useState(10);
-  const [cfs, setCfs] = useState<number[]>([-100000, 25000, 30000, 35000, 40000, 45000]);
+  const [rate, setRate] = useShareState("NPVCalculator_v0", 10);
+  const [cfs, setCfs] = useShareState<number[]>("NPVCalculator_v1", [-100000, 25000, 30000, 35000, 40000, 45000]);
   const value = npvCalc(rate, cfs);
   const setCf = (i: number, v: number) =>
     setCfs((arr) => arr.map((x, idx) => (idx === i ? v : x)));
@@ -194,7 +195,7 @@ export function NPVCalculator({ lang }: { lang: Lang }) {
 // ---------- IRR ----------
 export function IRRCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [cfs, setCfs] = useState<number[]>([-100000, 30000, 35000, 40000, 45000]);
+  const [cfs, setCfs] = useShareState<number[]>("IRRCalculator_v0", [-100000, 30000, 35000, 40000, 45000]);
   const value = irrCalc(cfs);
   const setCf = (i: number, v: number) => setCfs((arr) => arr.map((x, idx) => (idx === i ? v : x)));
   return (
@@ -225,9 +226,9 @@ export function IRRCalculator({ lang }: { lang: Lang }) {
 // ---------- Loan ----------
 export function LoanCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [principal, setPrincipal] = useState(500000);
-  const [rate, setRate] = useState(7);
-  const [years, setYears] = useState(5);
+  const [principal, setPrincipal] = useShareState("LoanCalculator_v0", 500000);
+  const [rate, setRate] = useShareState("LoanCalculator_v1", 7);
+  const [years, setYears] = useShareState("LoanCalculator_v2", 5);
   const out = useMemo(() => amortize(principal, rate, years, 12), [principal, rate, years]);
   return (
     <div className="space-y-6">
@@ -277,9 +278,9 @@ export function LoanCalculator({ lang }: { lang: Lang }) {
 // ---------- VAT ----------
 export function VATCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [amount, setAmount] = useState(1000);
-  const [rate, setRate] = useState(15);
-  const [mode, setMode] = useState<"exclusive" | "inclusive">("exclusive");
+  const [amount, setAmount] = useShareState("VATCalculator_v0", 1000);
+  const [rate, setRate] = useShareState("VATCalculator_v1", 15);
+  const [mode, setMode] = useShareState<"exclusive" | "inclusive">("VATCalculator_v2", "exclusive");
   const out = vatCalc(amount, rate, mode);
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -326,9 +327,9 @@ function ChartCard({ title, children, height = 260 }: { title: string; children:
 // ---------- DCF ----------
 export function DCFCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [rate, setRate] = useState(10);
-  const [g, setG] = useState(2.5);
-  const [cfs, setCfs] = useState<number[]>([120000, 140000, 160000, 180000, 200000]);
+  const [rate, setRate] = useShareState("DCFCalculator_v0", 10);
+  const [g, setG] = useShareState("DCFCalculator_v1", 2.5);
+  const [cfs, setCfs] = useShareState<number[]>("DCFCalculator_v2", [120000, 140000, 160000, 180000, 200000]);
   const out = useMemo(() => dcf(rate, cfs, g), [rate, g, cfs]);
   const data = cfs.map((c, i) => ({ year: `Y${i + 1}`, cf: c, pv: c / Math.pow(1 + rate / 100, i + 1) }));
   const setCf = (i: number, v: number) => setCfs((a) => a.map((x, idx) => (idx === i ? v : x)));
@@ -376,8 +377,8 @@ export function DCFCalculator({ lang }: { lang: Lang }) {
 // ---------- Payback ----------
 export function PaybackCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [rate, setRate] = useState(10);
-  const [cfs, setCfs] = useState<number[]>([-200000, 60000, 70000, 80000, 90000, 100000]);
+  const [rate, setRate] = useShareState("PaybackCalculator_v0", 10);
+  const [cfs, setCfs] = useShareState<number[]>("PaybackCalculator_v1", [-200000, 60000, 70000, 80000, 90000, 100000]);
   const out = useMemo(() => payback(cfs, rate), [cfs, rate]);
   const data = out.cumulative.map((c, i) => ({ year: `Y${i}`, cumulative: c }));
   const setCf = (i: number, v: number) => setCfs((a) => a.map((x, idx) => (idx === i ? v : x)));
@@ -427,8 +428,8 @@ export function PaybackCalculator({ lang }: { lang: Lang }) {
 // ---------- PI ----------
 export function PICalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [rate, setRate] = useState(12);
-  const [cfs, setCfs] = useState<number[]>([-150000, 50000, 60000, 70000, 80000]);
+  const [rate, setRate] = useShareState("PICalculator_v0", 12);
+  const [cfs, setCfs] = useShareState<number[]>("PICalculator_v1", [-150000, 50000, 60000, 70000, 80000]);
   const value = profitabilityIndex(rate, cfs);
   const setCf = (i: number, v: number) => setCfs((a) => a.map((x, idx) => (idx === i ? v : x)));
   return (
@@ -460,8 +461,8 @@ export function PICalculator({ lang }: { lang: Lang }) {
 // ---------- EAR ----------
 export function EARCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [nominal, setNominal] = useState(12);
-  const [m, setM] = useState(12);
+  const [nominal, setNominal] = useShareState("EARCalculator_v0", 12);
+  const [m, setM] = useShareState("EARCalculator_v1", 12);
   const ear = effectiveRate(nominal, m);
   const data = [1, 2, 4, 12, 52, 365].map((p) => ({ freq: p, ear: effectiveRate(nominal, p) }));
   return (
@@ -492,11 +493,11 @@ export function EARCalculator({ lang }: { lang: Lang }) {
 // ---------- Bond ----------
 export function BondCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [face, setFace] = useState(1000);
-  const [coupon, setCoupon] = useState(6);
-  const [yld, setYld] = useState(5);
-  const [years, setYears] = useState(10);
-  const [freq, setFreq] = useState(2);
+  const [face, setFace] = useShareState("BondCalculator_v0", 1000);
+  const [coupon, setCoupon] = useShareState("BondCalculator_v1", 6);
+  const [yld, setYld] = useShareState("BondCalculator_v2", 5);
+  const [years, setYears] = useShareState("BondCalculator_v3", 10);
+  const [freq, setFreq] = useShareState("BondCalculator_v4", 2);
   const out = bondPrice(face, coupon, yld, years, freq);
   const sensitivity = [-2, -1, 0, 1, 2].map((d) => ({ y: yld + d, price: bondPrice(face, coupon, yld + d, years, freq).price }));
   const status = out.price > face ? (lang === "ar" ? "علاوة" : "Premium") : out.price < face ? (lang === "ar" ? "خصم" : "Discount") : (lang === "ar" ? "تكافؤ" : "Par");
@@ -534,11 +535,11 @@ export function BondCalculator({ lang }: { lang: Lang }) {
 // ---------- Lease IFRS 16 ----------
 export function LeaseCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [pay, setPay] = useState(10000);
-  const [rate, setRate] = useState(7);
-  const [years, setYears] = useState(5);
-  const [ppy, setPpy] = useState(12);
-  const [timing, setTiming] = useState<"end" | "begin">("end");
+  const [pay, setPay] = useShareState("LeaseCalculator_v0", 10000);
+  const [rate, setRate] = useShareState("LeaseCalculator_v1", 7);
+  const [years, setYears] = useShareState("LeaseCalculator_v2", 5);
+  const [ppy, setPpy] = useShareState("LeaseCalculator_v3", 12);
+  const [timing, setTiming] = useShareState<"end" | "begin">("LeaseCalculator_v4", "end");
   const out = useMemo(() => leaseLiability(pay, rate, years, ppy, timing), [pay, rate, years, ppy, timing]);
   const data = out.rows.filter((_, i) => i % Math.max(1, Math.floor(out.rows.length / 24)) === 0).map((r) => ({ n: r.period, interest: r.interest, principal: r.principal, balance: r.closing }));
   return (
@@ -622,8 +623,8 @@ export function LeaseCalculator({ lang }: { lang: Lang }) {
 // ---------- Zakat ----------
 export function ZakatCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [base, setBase] = useState(1000000);
-  const [rate, setRate] = useState(2.5775);
+  const [base, setBase] = useShareState("ZakatCalculator_v0", 1000000);
+  const [rate, setRate] = useShareState("ZakatCalculator_v1", 2.5775);
   const z = zakat(base, rate);
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -642,8 +643,8 @@ export function ZakatCalculator({ lang }: { lang: Lang }) {
 // ---------- WHT ----------
 export function WHTCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [amount, setAmount] = useState(100000);
-  const [rate, setRate] = useState(15);
+  const [amount, setAmount] = useShareState("WHTCalculator_v0", 100000);
+  const [rate, setRate] = useShareState("WHTCalculator_v1", 15);
   const out = wht(amount, rate);
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -670,8 +671,8 @@ export function WHTCalculator({ lang }: { lang: Lang }) {
 // ---------- Corporate Tax ----------
 export function CorpTaxCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [profit, setProfit] = useState(500000);
-  const [rate, setRate] = useState(20);
+  const [profit, setProfit] = useShareState("CorpTaxCalculator_v0", 500000);
+  const [rate, setRate] = useShareState("CorpTaxCalculator_v1", 20);
   const out = corporateTax(profit, rate);
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -690,9 +691,9 @@ export function CorpTaxCalculator({ lang }: { lang: Lang }) {
 // ---------- Deferred Tax ----------
 export function DeferredTaxCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [book, setBook] = useState(200000);
-  const [taxB, setTaxB] = useState(150000);
-  const [rate, setRate] = useState(20);
+  const [book, setBook] = useShareState("DeferredTaxCalculator_v0", 200000);
+  const [taxB, setTaxB] = useShareState("DeferredTaxCalculator_v1", 150000);
+  const [rate, setRate] = useShareState("DeferredTaxCalculator_v2", 20);
   const out = deferredTax(book, taxB, rate);
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -719,7 +720,7 @@ const defaultRatios = {
 };
 export function RatiosCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [vals, setVals] = useState(defaultRatios);
+  const [vals, setVals] = useShareState("RatiosCalculator_v0", defaultRatios);
   const set = (k: keyof typeof defaultRatios, v: number) => setVals((s) => ({ ...s, [k]: v }));
   const r = ratios(vals);
   const labelMap: Record<keyof typeof defaultRatios, { ar: string; en: string }> = {
@@ -829,10 +830,10 @@ export function RatiosCalculator({ lang }: { lang: Lang }) {
 // ---------- Depreciation ----------
 export function DepreciationCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [cost, setCost] = useState(100000);
-  const [salvage, setSalvage] = useState(10000);
-  const [life, setLife] = useState(5);
-  const [method, setMethod] = useState<"SL" | "DDB" | "SYD">("SL");
+  const [cost, setCost] = useShareState("DepreciationCalculator_v0", 100000);
+  const [salvage, setSalvage] = useShareState("DepreciationCalculator_v1", 10000);
+  const [life, setLife] = useShareState("DepreciationCalculator_v2", 5);
+  const [method, setMethod] = useShareState<"SL" | "DDB" | "SYD">("DepreciationCalculator_v3", "SL");
   const rows = useMemo(() => depreciation(cost, salvage, life, method), [cost, salvage, life, method]);
   const totals = rows[rows.length - 1] ?? { expense: 0, accumulated: 0, bookValue: cost };
   return (
@@ -896,7 +897,7 @@ export function DepreciationCalculator({ lang }: { lang: Lang }) {
 // ---------- Inventory ----------
 export function InventoryCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
-  const [txns, setTxns] = useState<InvTxn[]>([
+  const [txns, setTxns] = useShareState<InvTxn[]>("InventoryCalculator_v0", [
     { type: "buy", qty: 100, price: 10 },
     { type: "buy", qty: 100, price: 12 },
     { type: "sell", qty: 120, price: 18 },

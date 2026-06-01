@@ -9,6 +9,7 @@ import {
   Lightbulb,
   ListChecks,
   Printer,
+  Link2,
   Share2,
   Sigma,
   Download,
@@ -69,6 +70,7 @@ function InfoBlock({
 function ToolDetailPage() {
   const { tool } = Route.useLoaderData();
   const [lang, setLang] = useState<Lang>("ar");
+  const [copied, setCopied] = useState(false);
   const isRTL = lang === "ar";
 
   const related = TOOLS.filter((t) => t.category === tool.category && t.id !== tool.id).slice(0, 3);
@@ -86,6 +88,25 @@ function ToolDetailPage() {
       else if (nav.clipboard) await nav.clipboard.writeText(url);
     } catch {
       // user dismissed
+    }
+  };
+
+  const onCopyLink = async () => {
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
+    const nav = window.navigator as Navigator & {
+      clipboard?: { writeText: (t: string) => Promise<void> };
+    };
+    try {
+      if (nav.clipboard) {
+        await nav.clipboard.writeText(url);
+        setCopied(true);
+        window.setTimeout(() => setCopied(false), 1800);
+      } else {
+        window.prompt(lang === "ar" ? "انسخ الرابط:" : "Copy link:", url);
+      }
+    } catch {
+      // ignore
     }
   };
 
@@ -167,6 +188,16 @@ function ToolDetailPage() {
           >
             <Download className="size-3.5" />
             {lang === "ar" ? "تحميل PDF" : "Download PDF"}
+          </button>
+          <button
+            onClick={onCopyLink}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${copied ? "border-emerald-400/60 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/40 bg-white/[0.04] text-[#f3d28a] hover:bg-[#d7aa52]/10"}`}
+            title={lang === "ar" ? "نسخ رابط بقيم الأداة الحالية" : "Copy link with current tool values"}
+          >
+            <Link2 className="size-3.5" />
+            {copied
+              ? lang === "ar" ? "تم النسخ ✓" : "Copied ✓"
+              : lang === "ar" ? "نسخ رابط القيم" : "Copy share link"}
           </button>
           <button onClick={onShare} className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
             <Share2 className="size-3.5" />
