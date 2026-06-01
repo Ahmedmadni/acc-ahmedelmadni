@@ -9,6 +9,7 @@ import {
   Lightbulb,
   ListChecks,
   Printer,
+  Link2,
   Share2,
   Sigma,
   Download,
