@@ -194,6 +194,30 @@ html.light .glass {
   box-shadow: 0 10px 40px -20px rgba(184, 134, 46, 0.25);
 }
 
+/* ============ Light-mode legibility overrides ============
+   In light mode, glass cards become near-white. Tailwind utilities like
+   text-white, text-white/85, text-white/60 hardcoded in components would
+   become invisible. Flip them to readable dark tones. Fixed-dark surfaces
+   (modals, floating widgets) opt out by setting an explicit dark bg —
+   their inner text-white stays white because those rules only apply
+   inside .glass or directly on the body background. */
+html.light .glass .text-white,
+html.light .glass [class*="text-white/"] {
+  color: var(--fg) !important;
+}
+html.light .glass .text-white\/40,
+html.light .glass .text-white\/50,
+html.light .glass .text-white\/60,
+html.light .glass .text-white\/70 {
+  color: var(--fg-soft) !important;
+}
+html.light .glass [class*="border-white/"] {
+  border-color: rgba(12, 22, 38, 0.12) !important;
+}
+html.light .glass [class*="bg-white/"] {
+  background-color: rgba(12, 22, 38, 0.04) !important;
+}
+
 .gold-text {
   background: linear-gradient(135deg, #f3d28a 0%, #d7aa52 50%, #b8862e 100%);
   display: inline-block;
