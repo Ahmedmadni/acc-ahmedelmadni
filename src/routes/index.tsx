@@ -43,15 +43,15 @@ import {
   Wrench,
   X,
 } from "lucide-react";
-import profileImg from "@/assets/profile.png";
-import heroBg from "@/assets/hero-finance-bg.jpg";
-import dashboardImg from "@/assets/finance-dashboard.jpg";
-import deskImg from "@/assets/accountant-desk.jpg";
-import beforeAfterImg from "@/assets/before-after.jpg";
-import servicesBg from "@/assets/services-bg.jpg";
-import logoAlostool from "@/assets/logo-alostool.png";
-import logoLamara from "@/assets/logo-lamara.png";
-import logoQimat from "@/assets/logo-qimat.jpg";
+import profileImg from "@/assets/profile.webp";
+import heroBg from "@/assets/hero-finance-bg.webp";
+import dashboardImg from "@/assets/finance-dashboard.webp";
+import deskImg from "@/assets/accountant-desk.webp";
+import beforeAfterImg from "@/assets/before-after.webp";
+import servicesBg from "@/assets/services-bg.webp";
+import logoAlostool from "@/assets/logo-alostool.webp";
+import logoLamara from "@/assets/logo-lamara.webp";
+import logoQimat from "@/assets/logo-qimat.webp";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 import { AIAssistant } from "@/components/AIAssistant";
