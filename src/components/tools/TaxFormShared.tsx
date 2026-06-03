@@ -160,10 +160,9 @@ export function useDeclarationActions(opts: {
   const [saving, setSaving] = useState(false);
   const [isAuthed, setIsAuthed] = useState(false);
 
-  // detect auth (lightweight, fires on mount only)
-  useState(() => {
+  useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setIsAuthed(!!data.user));
-  });
+  }, []);
 
   const explainFn = useServerFn(explainCalculationFn);
   const saveFn = useServerFn(saveDeclarationFn);
