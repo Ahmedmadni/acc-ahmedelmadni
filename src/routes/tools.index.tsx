@@ -50,10 +50,29 @@ export const Route = createFileRoute("/tools/")({
         property: "og:description",
         content: "Interactive finance & accounting tools grouped by category, tied to IFRS / IAS references.",
       },
+      { property: "og:url", content: "https://acc-ahmedelmadni.lovable.app/tools" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Smart Accounting Tools — Ahmed Elmadani" },
+    ],
+    links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/tools" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "الأدوات", item: "https://acc-ahmedelmadni.lovable.app/tools" },
+          ],
+        }),
+      },
     ],
   }),
   component: ToolsPage,
 });
+
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   TrendingDown, TrendingUp, BarChart3, Percent, Banknote, ReceiptText, Calculator,
