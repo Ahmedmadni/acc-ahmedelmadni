@@ -99,14 +99,24 @@ function KnowledgeHubPage() {
           />
         </div>
 
-        <Link
-          to="/library"
-          className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
-        >
-          <GraduationCap className="size-4" />
-          الكورسات
-          <ArrowLeft className="size-3.5" />
-        </Link>
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <Link
+            to="/library"
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+          >
+            <GraduationCap className="size-4" />
+            الكورسات
+            <ArrowLeft className="size-3.5" />
+          </Link>
+          <a
+            href="#all-articles"
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+          >
+            <BookOpen className="size-4" />
+            المقالات
+            <ArrowLeft className="size-3.5" />
+          </a>
+        </div>
       </section>
 
       {/* CATEGORIES */}
