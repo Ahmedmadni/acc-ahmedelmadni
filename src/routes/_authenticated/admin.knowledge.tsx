@@ -10,6 +10,7 @@ import {
   calendarOverviewFn,
 } from "@/lib/knowledge/generate.functions";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
+import { computeArticleSeoScore } from "@/lib/seo/score";
 
 export const Route = createFileRoute("/_authenticated/admin/knowledge")({
   head: () => ({ meta: [{ title: "لوحة إدارة المكتبة | المشرف" }] }),
