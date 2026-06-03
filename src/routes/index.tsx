@@ -1179,6 +1179,40 @@ export function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
+        {/* Social icons under contact cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+        >
+          {SOCIALS.map((s, i) => (
+            <motion.a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              onMouseEnter={playHover}
+              onClick={playClick}
+              whileHover={{ scale: 1.12, y: -4 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 18 }}
+              className="group relative flex size-16 items-center justify-center rounded-2xl text-2xl text-white shadow-lg ring-1 ring-white/15"
+              style={{
+                background: `linear-gradient(135deg, ${s.color}, ${s.color}cc)`,
+                boxShadow: `0 10px 30px -10px ${s.color}80`,
+                color: s.color === "#FFFC00" ? "#1a1a1a" : "#fff",
+              }}
+            >
+              <i className={s.icon} />
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ boxShadow: `0 0 30px ${s.color}` }}
+              />
+            </motion.a>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
