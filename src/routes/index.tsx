@@ -1199,7 +1199,10 @@ export function Footer({ lang }: { lang: Lang }) {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
       <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
-      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4">
+      {/* SOCIAL BUBBLE — inspired by the requested chat-bubble layout */}
+      <FooterSocialBubble lang={lang} />
+
+      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4 mt-14">
         <div className="md:col-span-2">
           <div className="text-2xl font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
           <p className="mt-3 max-w-md text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
@@ -1231,7 +1234,6 @@ export function Footer({ lang }: { lang: Lang }) {
           </ul>
         </div>
 
-
         <div>
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
           <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
@@ -1240,9 +1242,6 @@ export function Footer({ lang }: { lang: Lang }) {
           </ul>
         </div>
       </div>
-
-      {/* SOCIAL BUBBLE — inspired by the requested chat-bubble layout */}
-      <FooterSocialBubble lang={lang} />
 
       <div className="mx-auto mt-12 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-6 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
         <span>{t.footer.rights[lang]}</span>
