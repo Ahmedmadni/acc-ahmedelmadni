@@ -261,6 +261,7 @@ function Index() {
 
 /* ============= NAVBAR ============= */
 function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
+  const isAdmin = useIsAdmin();
   const links = [
     { id: "home", label: t.nav.home[lang] },
     { id: "about", label: t.nav.about[lang] },
