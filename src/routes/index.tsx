@@ -527,8 +527,12 @@ function About({ lang }: { lang: Lang }) {
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}
           className="relative mt-12 overflow-hidden rounded-3xl gold-border">
-          <img src={dashboardImg} alt={lang === "ar" ? "لوحة تحليل مالي" : "Financial dashboard"}
-            loading="lazy" width={1280} height={800} className="h-[260px] w-full object-cover sm:h-[360px]" />
+          <video
+            src="/bg-video-3.mp4"
+            autoPlay loop muted playsInline preload="metadata"
+            poster={dashboardImg}
+            aria-label={lang === "ar" ? "لوحة تحليل مالي" : "Financial dashboard"}
+            className="h-[260px] w-full object-cover sm:h-[360px]" />
           <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f] via-[#04101f]/40 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="w-full px-6 sm:px-12">
