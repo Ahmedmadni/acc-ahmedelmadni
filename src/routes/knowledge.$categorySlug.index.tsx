@@ -1,9 +1,23 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { Clock, ArrowLeft, ChevronLeft } from "lucide-react";
+import { Clock, ArrowLeft, ChevronLeft, GraduationCap, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
+import { t } from "@/lib/i18n";
+
+const KB_TO_LIB_CAT: Record<string, string[]> = {
+  "financial-accounting": ["fundamentals", "reporting"],
+  "cost-accounting": ["reporting"],
+  "tax-accounting": ["tax"],
+  "zakat-tax-ksa": ["tax"],
+  "vat": ["tax"],
+  "financial-statements": ["reporting"],
+  "audit": ["audit"],
+  "excel": ["software"],
+  "erp": ["software"],
+  "entrepreneurship": [],
+};
 
 export const Route = createFileRoute("/knowledge/$categorySlug/")({
   head: ({ params }) => ({
