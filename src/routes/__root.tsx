@@ -103,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
       },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp" },
-      { name: "google-site-verification", content: "" },
+      // { name: "google-site-verification", content: "PASTE_GSC_TOKEN_HERE" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
