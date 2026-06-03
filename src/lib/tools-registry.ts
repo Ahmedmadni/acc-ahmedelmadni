@@ -11,6 +11,7 @@ export interface ToolMeta {
   id: string;
   category: ToolCategory;
   icon: string; // lucide icon name
+  official?: boolean;
   title: { ar: string; en: string };
   short: { ar: string; en: string };
   standard?: { ar: string; en: string };
