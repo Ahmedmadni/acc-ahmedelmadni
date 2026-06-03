@@ -578,6 +578,29 @@ function ArticlePage() {
               </section>
             )}
 
+            {/* Internal links (automatic) */}
+            {(internalLinks.data?.length ?? 0) > 0 && (
+              <section className="mb-10">
+                <h2 className="mb-4 text-2xl font-bold text-white">روابط داخلية</h2>
+                <ul className="grid gap-2 sm:grid-cols-2">
+                  {internalLinks.data!.map((l, i) => (
+                    <li key={i}>
+                      <Link
+                        to="/knowledge/$categorySlug/$articleSlug"
+                        params={{
+                          categorySlug,
+                          articleSlug: l.target!.slug,
+                        }}
+                        className="block rounded-xl border border-[#d7aa52]/15 bg-white/[0.03] px-4 py-3 text-sm text-white/85 transition-colors hover:border-[#d7aa52]/40 hover:text-[#f3d28a]"
+                      >
+                        {l.anchor || l.target!.title_ar}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             {/* Related */}
             {(related.data?.length ?? 0) > 0 && (
               <section className="mb-12">
@@ -594,10 +617,14 @@ function ArticlePage() {
                       }}
                       className="group overflow-hidden rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] transition-all hover:border-[#d7aa52]/40"
                     >
-                      <div
-                        className="h-28 w-full bg-cover bg-center"
-                        style={{ backgroundImage: `url(${r.featured_image})` }}
-                      />
+                      {r.featured_image && (
+                        <img
+                          src={r.featured_image}
+                          alt={r.title_ar}
+                          loading="lazy"
+                          className="h-28 w-full object-cover"
+                        />
+                      )}
                       <div className="p-3">
                         <h4 className="line-clamp-2 text-sm font-bold text-white group-hover:text-[#f3d28a]">
                           {r.title_ar}
