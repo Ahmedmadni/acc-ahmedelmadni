@@ -446,6 +446,42 @@ export type Database = {
         }
         Relationships: []
       }
+      tax_declarations: {
+        Row: {
+          created_at: string
+          id: string
+          input_data: Json
+          notes: string | null
+          period_label: string
+          result_data: Json
+          type: Database["public"]["Enums"]["tax_declaration_type"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          input_data?: Json
+          notes?: string | null
+          period_label: string
+          result_data?: Json
+          type: Database["public"]["Enums"]["tax_declaration_type"]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          input_data?: Json
+          notes?: string | null
+          period_label?: string
+          result_data?: Json
+          type?: Database["public"]["Enums"]["tax_declaration_type"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -495,6 +531,7 @@ export type Database = {
         | "failed"
         | "skipped_duplicate"
       library_item_type: "course" | "book" | "video" | "external_link" | "tool"
+      tax_declaration_type: "vat" | "zakat"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -638,6 +675,7 @@ export const Constants = {
         "skipped_duplicate",
       ],
       library_item_type: ["course", "book", "video", "external_link", "tool"],
+      tax_declaration_type: ["vat", "zakat"],
     },
   },
 } as const
