@@ -20,16 +20,37 @@ const KB_TO_LIB_CAT: Record<string, string[]> = {
 };
 
 export const Route = createFileRoute("/knowledge/$categorySlug/")({
-  head: ({ params }) => ({
-    meta: [
-      { title: `${params.categorySlug} | المكتبة المحاسبية` },
-      {
-        name: "description",
-        content: `مقالات تصنيف ${params.categorySlug} في المكتبة المحاسبية لأحمد المدني.`,
-      },
-    ],
-    links: [{ rel: "canonical", href: `/knowledge/${params.categorySlug}` }],
-  }),
+  head: ({ params }) => {
+    const url = `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}`;
+    return {
+      meta: [
+        { title: `${params.categorySlug} | المكتبة المحاسبية` },
+        {
+          name: "description",
+          content: `مقالات تصنيف ${params.categorySlug} في المكتبة المحاسبية لأحمد المدني.`,
+        },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://acc-ahmedelmadni.lovable.app/knowledge" },
+              { "@type": "ListItem", position: 3, name: params.categorySlug, item: url },
+            ],
+          }),
+        },
+      ],
+    };
+  },
+
   component: CategoryPage,
 });
 

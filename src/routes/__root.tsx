@@ -76,22 +76,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "أحمد المدني — محاسب أول، محاسب تكاليف، وأخصائي تقارير مالية. خبرة تتجاوز 4 سنوات في الرياض، المملكة العربية السعودية.",
+          "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
       },
       { name: "author", content: "Ahmed Elmadani" },
+      { name: "keywords", content: "محاسب, محاسب أول, محاسب تكاليف, تقارير مالية, الرياض, السعودية, ZATCA, IFRS, زكاة, ضريبة القيمة المضافة, accountant, senior accountant" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "theme-color", content: "#04101f" },
+      { property: "og:site_name", content: "Ahmed Elmadani | أحمد المدني" },
+      { property: "og:locale", content: "ar_SA" },
+      { property: "og:locale:alternate", content: "en_US" },
+      { property: "og:type", content: "website" },
       { property: "og:title", content: "أحمد المدني | محاسب أول - Senior Accountant" },
       {
         property: "og:description",
-        content: "Portfolio of Ahmed Elmadani — Senior Accountant in Riyadh, KSA.",
+        content:
+          "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "أحمد المدني | محاسب أول - Senior Accountant" },
-      { name: "description", content: "محاسب ذو خبرة عملية متقدمة في المحاسبة واعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية." },
-      { property: "og:description", content: "محاسب ذو خبرة عملية متقدمة في المحاسبة واعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية." },
-      { name: "twitter:description", content: "محاسب ذو خبرة عملية متقدمة في المحاسبة واعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "أحمد المدني | محاسب أول - Senior Accountant" },
+      {
+        name: "twitter:description",
+        content:
+          "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
+      },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp" },
+      { name: "google-site-verification", content: "" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -104,7 +116,80 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
       },
     ],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-5ZZTMPFCS1",
+        async: true,
+      },
+      {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date());
+gtag('config', 'G-5ZZTMPFCS1', { anonymize_ip: true });`,
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://acc-ahmedelmadni.lovable.app/#website",
+              url: "https://acc-ahmedelmadni.lovable.app/",
+              name: "Ahmed Elmadani | أحمد المدني",
+              inLanguage: "ar-SA",
+              publisher: { "@id": "https://acc-ahmedelmadni.lovable.app/#person" },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://acc-ahmedelmadni.lovable.app/knowledge?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            },
+            {
+              "@type": ["Person", "Organization"],
+              "@id": "https://acc-ahmedelmadni.lovable.app/#person",
+              name: "Ahmed Elmadani",
+              alternateName: "أحمد المدني",
+              url: "https://acc-ahmedelmadni.lovable.app/",
+              jobTitle: "Senior Accountant",
+              email: "mailto:elmadnim@gmail.com",
+              image: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Riyadh",
+                addressRegion: "Riyadh",
+                addressCountry: "SA",
+              },
+              knowsAbout: [
+                "Financial Accounting",
+                "Cost Accounting",
+                "Financial Reporting",
+                "IFRS",
+                "ZATCA",
+                "VAT",
+                "Zakat",
+              ],
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://acc-ahmedelmadni.lovable.app/#business",
+              name: "Ahmed Elmadani — Senior Accountant",
+              image: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
+              url: "https://acc-ahmedelmadni.lovable.app/",
+              priceRange: "$$",
+              areaServed: { "@type": "Country", name: "Saudi Arabia" },
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Riyadh",
+                addressCountry: "SA",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

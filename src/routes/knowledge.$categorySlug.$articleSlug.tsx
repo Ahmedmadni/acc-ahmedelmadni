@@ -30,17 +30,99 @@ type FaqItem = { q: string; a: string };
 type Ref = { label: string; url: string };
 
 export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
-  head: ({ params }) => ({
-    meta: [
-      { title: `${params.articleSlug} | المكتبة المحاسبية` },
-      { name: "description", content: "مقال في المكتبة المحاسبية لأحمد المدني." },
-    ],
-    links: [
-      { rel: "canonical", href: `/knowledge/${params.categorySlug}/${params.articleSlug}` },
-    ],
-  }),
+  loader: async ({ params }) => {
+    const { data } = await supabase
+      .from("kb_articles")
+      .select("title_ar, excerpt_ar, featured_image, published_at, updated_at, faq")
+      .eq("slug", params.articleSlug)
+      .maybeSingle();
+    return { meta: data };
+  },
+
+  head: ({ params, loaderData }) => {
+    const url = `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}/${params.articleSlug}`;
+    const a = loaderData?.meta;
+    const title = a?.title_ar ?? params.articleSlug;
+    const description = a?.excerpt_ar ?? "مقال في المكتبة المحاسبية لأحمد المدني.";
+    const image = a?.featured_image as string | undefined;
+    const faqList = (a?.faq as FaqItem[] | undefined) ?? [];
+
+    const scripts: Array<{ type: string; children: string }> = [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: title,
+          description,
+          image: image ? [image] : undefined,
+          datePublished: a?.published_at ?? undefined,
+          dateModified: a?.updated_at ?? a?.published_at ?? undefined,
+          author: {
+            "@type": "Person",
+            name: "Ahmed Elmadani",
+            url: "https://acc-ahmedelmadni.lovable.app/",
+          },
+          publisher: {
+            "@type": "Person",
+            name: "Ahmed Elmadani",
+            url: "https://acc-ahmedelmadni.lovable.app/",
+          },
+          mainEntityOfPage: { "@type": "WebPage", "@id": url },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://acc-ahmedelmadni.lovable.app/knowledge" },
+            { "@type": "ListItem", position: 3, name: params.categorySlug, item: `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}` },
+            { "@type": "ListItem", position: 4, name: title, item: url },
+          ],
+        }),
+      },
+    ];
+
+    if (faqList.length) {
+      scripts.push({
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqList.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      });
+    }
+
+    return {
+      meta: [
+        { title: `${title} | المكتبة المحاسبية` },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
+        ...(image ? [{ property: "og:image", content: image }] : []),
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        ...(image ? [{ name: "twitter:image", content: image }] : []),
+        ...(a?.published_at ? [{ property: "article:published_time", content: a.published_at }] : []),
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts,
+    };
+  },
   component: ArticlePage,
 });
+
 
 function slugifyHeading(s: string, i: number) {
   return `h-${i}-${s.replace(/\s+/g, "-").slice(0, 40)}`;
