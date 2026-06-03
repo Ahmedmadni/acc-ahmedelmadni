@@ -56,6 +56,23 @@ import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 import { AIAssistant } from "@/components/AIAssistant";
 import { Link as RouterLink } from "@tanstack/react-router";
+import { supabase } from "@/integrations/supabase/client";
+
+const ADMIN_EMAIL = "elmadnim@gmail.com";
+
+function useIsAdmin() {
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    const check = async () => {
+      const { data } = await supabase.auth.getUser();
+      setIsAdmin(data.user?.email?.toLowerCase() === ADMIN_EMAIL);
+    };
+    check();
+    const { data: sub } = supabase.auth.onAuthStateChange(() => check());
+    return () => sub.subscription.unsubscribe();
+  }, []);
+  return isAdmin;
+}
 
 export const Route = createFileRoute("/")({ component: Index });
 
