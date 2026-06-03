@@ -88,6 +88,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/" },
+      { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
     ],
     scripts: [
       {
