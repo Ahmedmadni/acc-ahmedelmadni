@@ -153,6 +153,17 @@ function AdminKnowledgePage() {
                       </Link>
                     </td>
                     <td className="p-3">
+                      <span
+                        className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-bold ${color}`}
+                        title={seo.checks
+                          .filter((c) => !c.passed && c.tip)
+                          .map((c) => `• ${c.tip}`)
+                          .join("\n") || "كل الفحوصات ناجحة"}
+                      >
+                        {seo.score}/100 · {seo.grade}
+                      </span>
+                    </td>
+                    <td className="p-3">
                       <span className="rounded-full bg-white/[0.06] px-2 py-1 text-xs">
                         {STATUS_LABEL[a.status] ?? a.status}
                       </span>
@@ -185,7 +196,8 @@ function AdminKnowledgePage() {
                       )}
                     </td>
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
             </table>
           </div>
