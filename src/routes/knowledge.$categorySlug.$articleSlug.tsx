@@ -33,11 +33,12 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
   loader: async ({ params }) => {
     const { data } = await supabase
       .from("kb_articles")
-      .select("title_ar, excerpt_ar, featured_image, published_at, updated_at, faq, author")
+      .select("title_ar, excerpt_ar, featured_image, published_at, updated_at, faq")
       .eq("slug", params.articleSlug)
       .maybeSingle();
     return { meta: data };
   },
+
   head: ({ params, loaderData }) => {
     const url = `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}/${params.articleSlug}`;
     const a = loaderData?.meta;
