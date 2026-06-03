@@ -68,13 +68,21 @@ function AdminKnowledgePage() {
               توليد المقالات، مراجعتها، وموافقة النشر — مع التقويم الشهري.
             </p>
           </div>
-          <button
-            disabled={genLoading}
-            onClick={() => gen.mutate()}
-            className="rounded-xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 hover:scale-[1.01] disabled:opacity-60"
-          >
-            {genLoading ? "...جارٍ التوليد" : "توليد مقال الآن"}
-          </button>
+          <div className="flex gap-2">
+            <Link
+              to="/admin/library"
+              className="rounded-xl border border-[#d7aa52]/40 px-4 py-2.5 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
+            >
+              إدارة المكتبة الكاملة
+            </Link>
+            <button
+              disabled={genLoading}
+              onClick={() => gen.mutate()}
+              className="rounded-xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 hover:scale-[1.01] disabled:opacity-60"
+            >
+              {genLoading ? "...جارٍ التوليد" : "توليد مقال الآن"}
+            </button>
+          </div>
         </div>
 
         {/* Calendar */}

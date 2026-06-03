@@ -371,6 +371,81 @@ export type Database = {
         }
         Relationships: []
       }
+      library_items: {
+        Row: {
+          ai_model: string | null
+          author: string | null
+          category_slug: string
+          cover_image: string | null
+          created_at: string
+          description_ar: string | null
+          description_en: string | null
+          duration_hours: number | null
+          generation_source: string
+          id: string
+          is_free: boolean
+          is_published: boolean
+          level: string | null
+          price: number | null
+          provider: string | null
+          sort_order: number
+          tags: string[]
+          title_ar: string
+          title_en: string | null
+          type: Database["public"]["Enums"]["library_item_type"]
+          updated_at: string
+          url: string | null
+        }
+        Insert: {
+          ai_model?: string | null
+          author?: string | null
+          category_slug?: string
+          cover_image?: string | null
+          created_at?: string
+          description_ar?: string | null
+          description_en?: string | null
+          duration_hours?: number | null
+          generation_source?: string
+          id?: string
+          is_free?: boolean
+          is_published?: boolean
+          level?: string | null
+          price?: number | null
+          provider?: string | null
+          sort_order?: number
+          tags?: string[]
+          title_ar: string
+          title_en?: string | null
+          type: Database["public"]["Enums"]["library_item_type"]
+          updated_at?: string
+          url?: string | null
+        }
+        Update: {
+          ai_model?: string | null
+          author?: string | null
+          category_slug?: string
+          cover_image?: string | null
+          created_at?: string
+          description_ar?: string | null
+          description_en?: string | null
+          duration_hours?: number | null
+          generation_source?: string
+          id?: string
+          is_free?: boolean
+          is_published?: boolean
+          level?: string | null
+          price?: number | null
+          provider?: string | null
+          sort_order?: number
+          tags?: string[]
+          title_ar?: string
+          title_en?: string | null
+          type?: Database["public"]["Enums"]["library_item_type"]
+          updated_at?: string
+          url?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -419,6 +494,7 @@ export type Database = {
         | "succeeded"
         | "failed"
         | "skipped_duplicate"
+      library_item_type: "course" | "book" | "video" | "external_link" | "tool"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -561,6 +637,7 @@ export const Constants = {
         "failed",
         "skipped_duplicate",
       ],
+      library_item_type: ["course", "book", "video", "external_link", "tool"],
     },
   },
 } as const

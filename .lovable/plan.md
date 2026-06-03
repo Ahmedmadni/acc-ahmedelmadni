@@ -1,43 +1,47 @@
-## Plan
+## الهدف
+لوحة تحكم واحدة `/admin/library` تُمكّن المدير من إدارة كل محتوى المكتبة (مقالات + كورسات + كتب + روابط + فيديوهات) — إضافة/تعديل/حذف يدوي + توليد بالذكاء الاصطناعي.
 
-### 1. Footer login link (`src/routes/index.tsx`)
-In the Footer's "Quick Links" column (around line 1080), append a new `<li>` containing a RouterLink to `/auth` labeled "تسجيل الدخول / Login" — placed after the existing in-page anchor links.
+## التغييرات
 
-### 2. "Articles" button next to "Courses" (`src/routes/knowledge.index.tsx`)
-In the hero section (right after the existing Courses button added previously), add a sibling button:
-- "المقالات" → anchors to the existing `#all-articles` section on the same page (we'll add an `id="all-articles"` to the existing "أحدث المقالات" section).
-- Same gold pill style as Courses, paired in a `flex gap` wrapper so they sit side by side.
+### 1. قاعدة البيانات (migration واحدة)
+جدول جديد `library_items`:
+- `id`, `type` (enum: course | book | video | external_link | tool)
+- `title_ar`, `title_en`, `description_ar`, `description_en`
+- `category_slug` (يربط مع تصنيفات المكتبة الحالية: fundamentals, reporting, tax, audit, software)
+- `url` (رابط خارجي للكورس/الكتاب/الفيديو)
+- `cover_image`, `author`, `provider` (Coursera, YouTube, إلخ)
+- `level` (beginner/intermediate/advanced), `duration_hours`, `is_free`, `price`
+- `tags[]`, `sort_order`, `is_published`
+- `created_at`, `updated_at`
+- RLS: قراءة عامة للمنشور فقط، كتابة للأدمن فقط
+- GRANT للـ anon (قراءة) + authenticated + service_role
 
-### 3. Category page → show Courses first, then Articles (`src/routes/knowledge.$categorySlug.index.tsx`)
+### 2. Server Functions جديدة `src/lib/library/manage.functions.ts`
+- `listLibraryItemsFn` (admin: كل العناصر)
+- `createLibraryItemFn` / `updateLibraryItemFn` / `deleteLibraryItemFn`
+- `generateLibraryItemWithAIFn`: يأخذ {type, topic_hint, category} → يستخدم Lovable AI Gateway (gemini-2.5-flash) لتوليد عنوان/وصف/tags ثم يحفظ كـ draft
 
-Add a category-to-library mapping at the top of the file:
+أيضاً نضيف للمقالات:
+- `updateArticleFn` / `deleteArticleFn` في `generate.functions.ts`
 
-```ts
-const KB_TO_LIB_CAT: Record<string, string[]> = {
-  "financial-accounting": ["fundamentals", "reporting"],
-  "cost-accounting": ["reporting"],
-  "tax-accounting": ["tax"],
-  "zakat-tax-ksa": ["tax"],
-  "vat": ["tax"],
-  "financial-statements": ["reporting"],
-  "audit": ["audit"],
-  "excel": ["software"],
-  "erp": ["software"],
-  "entrepreneurship": [],
-};
-```
+### 3. لوحة التحكم `/admin/library` (route جديد تحت `_authenticated`)
+صفحة واحدة بتبويبات (Tabs):
+- **تبويب "المقالات"** — جدول كل المقالات (الموجود + جديد): تعديل inline، حذف، توليد جديد بالـ AI، نشر/إلغاء
+- **تبويب "الكورسات"** — جدول library_items حيث type=course: زر "إضافة يدوي" + زر "توليد بالـ AI"
+- **تبويب "الكتب"** — type=book
+- **تبويب "الفيديوهات والروابط"** — type=video / external_link
 
-Then restructure the page sections in this order:
-1. Breadcrumb + category title (existing).
-2. **New "كورسات مرتبطة" section** — import `t.library.courses` from `@/lib/i18n` and filter by `KB_TO_LIB_CAT[categorySlug]`. Render up to 4 compact course cards (title, level, hours, free/paid badge). Each card links to `/library` (the full library page). If the mapping is empty, hide the section.
-3. **Existing articles grid** with heading changed to "المقالات".
+كل تبويب: جدول + Dialog للإضافة/التعديل (form بكل الحقول) + زر AI يفتح dialog صغير (موضوع + تصنيف) → يولّد ويعبّي الـ form تلقائياً.
 
-### Files touched
-- `src/routes/index.tsx` — footer Quick Links: add login link.
-- `src/routes/knowledge.index.tsx` — hero: add Articles button next to Courses; add `id="all-articles"` to the latest-articles section.
-- `src/routes/knowledge.$categorySlug.index.tsx` — add mapping + Courses-related section above articles.
+### 4. ربط الواجهة الأمامية
+- `src/routes/library.tsx` يقرأ من `library_items` (type=course) بدل القائمة الثابتة في i18n، fallback للقائمة الحالية لو الجدول فارغ
+- لا تغيير على واجهة المقالات (تستخدم `kb_articles` أصلاً)
 
-### Out of scope
-- No DB schema changes; courses stay in `src/lib/i18n.ts`.
-- No new routes; `/auth` and `/library` already exist.
-- No changes to the standalone `/library` page.
+### 5. زر دخول للوحة
+في صفحة `/_authenticated/admin/knowledge` نضيف زر "إدارة المكتبة الكاملة" يفتح `/admin/library`.
+
+## ملاحظات تقنية
+- استخدام shadcn: Tabs, Dialog, Table, Form, Input, Textarea, Select, Switch
+- التحقق من المدخلات بـ Zod في الـ server functions
+- AI generation عبر `createLovableAiGatewayProvider` (مفتاح LOVABLE_API_KEY متوفر)
+- لا حذف فعلي للمقالات الموجودة — فقط إضافة قدرات الإدارة
