@@ -16,67 +16,100 @@ export type Database = {
     Tables: {
       kb_articles: {
         Row: {
+          ai_model: string | null
           author_avatar: string | null
           author_name: string
           author_title: string | null
           category_id: string
           content_ar: Json
+          content_hash: string | null
           created_at: string
           excerpt_ar: string
           excerpt_en: string
+          external_sources: Json
           faq: Json
           featured_image: string | null
+          generation_source: string
           id: string
           is_featured: boolean
           keywords: string[]
+          meta_description: string | null
+          meta_title: string | null
           published_at: string
           reading_minutes: number
           references: Json
+          review_notes: string | null
+          reviewed_at: string | null
+          reviewer_id: string | null
+          scheduled_for: string | null
           slug: string
+          status: Database["public"]["Enums"]["article_status"]
           title_ar: string
           title_en: string
           updated_at: string
         }
         Insert: {
+          ai_model?: string | null
           author_avatar?: string | null
           author_name?: string
           author_title?: string | null
           category_id: string
           content_ar?: Json
+          content_hash?: string | null
           created_at?: string
           excerpt_ar: string
           excerpt_en: string
+          external_sources?: Json
           faq?: Json
           featured_image?: string | null
+          generation_source?: string
           id?: string
           is_featured?: boolean
           keywords?: string[]
+          meta_description?: string | null
+          meta_title?: string | null
           published_at?: string
           reading_minutes?: number
           references?: Json
+          review_notes?: string | null
+          reviewed_at?: string | null
+          reviewer_id?: string | null
+          scheduled_for?: string | null
           slug: string
+          status?: Database["public"]["Enums"]["article_status"]
           title_ar: string
           title_en: string
           updated_at?: string
         }
         Update: {
+          ai_model?: string | null
           author_avatar?: string | null
           author_name?: string
           author_title?: string | null
           category_id?: string
           content_ar?: Json
+          content_hash?: string | null
           created_at?: string
           excerpt_ar?: string
           excerpt_en?: string
+          external_sources?: Json
           faq?: Json
           featured_image?: string | null
+          generation_source?: string
           id?: string
           is_featured?: boolean
           keywords?: string[]
+          meta_description?: string | null
+          meta_title?: string | null
           published_at?: string
           reading_minutes?: number
           references?: Json
+          review_notes?: string | null
+          reviewed_at?: string | null
+          reviewer_id?: string | null
+          scheduled_for?: string | null
           slug?: string
+          status?: Database["public"]["Enums"]["article_status"]
           title_ar?: string
           title_en?: string
           updated_at?: string
@@ -156,6 +189,129 @@ export type Database = {
         }
         Relationships: []
       }
+      kb_generation_jobs: {
+        Row: {
+          article_id: string | null
+          attempts: number
+          category_id: string | null
+          created_at: string
+          id: string
+          last_error: string | null
+          scheduled_for: string
+          status: Database["public"]["Enums"]["job_status"]
+          topic_hint: string | null
+          updated_at: string
+        }
+        Insert: {
+          article_id?: string | null
+          attempts?: number
+          category_id?: string | null
+          created_at?: string
+          id?: string
+          last_error?: string | null
+          scheduled_for?: string
+          status?: Database["public"]["Enums"]["job_status"]
+          topic_hint?: string | null
+          updated_at?: string
+        }
+        Update: {
+          article_id?: string | null
+          attempts?: number
+          category_id?: string | null
+          created_at?: string
+          id?: string
+          last_error?: string | null
+          scheduled_for?: string
+          status?: Database["public"]["Enums"]["job_status"]
+          topic_hint?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "kb_generation_jobs_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "kb_articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "kb_generation_jobs_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "kb_categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      kb_internal_links: {
+        Row: {
+          anchor_text: string
+          article_id: string
+          created_at: string
+          id: string
+          target_article_id: string
+        }
+        Insert: {
+          anchor_text: string
+          article_id: string
+          created_at?: string
+          id?: string
+          target_article_id: string
+        }
+        Update: {
+          anchor_text?: string
+          article_id?: string
+          created_at?: string
+          id?: string
+          target_article_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "kb_internal_links_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "kb_articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "kb_internal_links_target_article_id_fkey"
+            columns: ["target_article_id"]
+            isOneToOne: false
+            referencedRelation: "kb_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      kb_publishing_calendar: {
+        Row: {
+          created_at: string
+          generated_count: number
+          id: string
+          month: number
+          planned_count: number
+          published_count: number
+          year: number
+        }
+        Insert: {
+          created_at?: string
+          generated_count?: number
+          id?: string
+          month: number
+          planned_count?: number
+          published_count?: number
+          year: number
+        }
+        Update: {
+          created_at?: string
+          generated_count?: number
+          id?: string
+          month?: number
+          planned_count?: number
+          published_count?: number
+          year?: number
+        }
+        Relationships: []
+      }
       kb_ratings: {
         Row: {
           article_id: string
@@ -188,15 +344,81 @@ export type Database = {
           },
         ]
       }
+      kb_trusted_sources: {
+        Row: {
+          base_url: string
+          created_at: string
+          id: string
+          is_active: boolean
+          name: string
+          priority: number
+        }
+        Insert: {
+          base_url: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          name: string
+          priority?: number
+        }
+        Update: {
+          base_url?: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          name?: string
+          priority?: number
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "reviewer" | "user"
+      article_status:
+        | "draft"
+        | "pending_review"
+        | "approved"
+        | "published"
+        | "rejected"
+      job_status:
+        | "queued"
+        | "running"
+        | "succeeded"
+        | "failed"
+        | "skipped_duplicate"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -323,6 +545,22 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "reviewer", "user"],
+      article_status: [
+        "draft",
+        "pending_review",
+        "approved",
+        "published",
+        "rejected",
+      ],
+      job_status: [
+        "queued",
+        "running",
+        "succeeded",
+        "failed",
+        "skipped_duplicate",
+      ],
+    },
   },
 } as const
