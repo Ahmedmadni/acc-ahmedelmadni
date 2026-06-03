@@ -453,7 +453,7 @@ function Hero({ lang }: { lang: Lang }) {
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20">
       {/* Animated parallax background */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 -z-10">
-        <img src={heroBg} alt="" aria-hidden className="h-full w-full object-cover opacity-30" />
+        <img src={heroBg} alt="" aria-hidden width={1920} height={1080} className="h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/40 via-[var(--bg-surface)]/70 to-[var(--bg-surface)]" />
       </motion.div>
 
