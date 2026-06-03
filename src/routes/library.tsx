@@ -2,26 +2,78 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowLeft, Home, Languages } from "lucide-react";
 import { Library } from "@/components/Library";
-import type { Lang } from "@/lib/i18n";
+import { t, type Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/library")({
-  head: () => ({
-    meta: [
-      { title: "المكتبة المحاسبية | Accounting Library — Ahmed Elmadani" },
-      {
-        name: "description",
-        content:
-          "مكتبة احترافية لأفضل كورسات وشهادات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، SOCPA، VAT والمزيد.",
+  head: () => {
+    const url = "https://acc-ahmedelmadni.lovable.app/library";
+    const courseSchemas = t.library.courses.slice(0, 12).map((c) => ({
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: c.ar,
+      alternateName: c.en,
+      description: c.desc.ar,
+      inLanguage: c.lang === "ar" ? "ar" : "en",
+      educationalLevel: c.level,
+      isAccessibleForFree: c.price === "free",
+      provider: {
+        "@type": "Person",
+        name: "Ahmed Elmadani",
+        url: "https://acc-ahmedelmadni.lovable.app/",
       },
-      { property: "og:title", content: "المكتبة المحاسبية | Accounting Library" },
-      {
-        property: "og:description",
-        content: "A curated library of the best accounting courses & certifications.",
+      offers: {
+        "@type": "Offer",
+        price: c.price === "free" ? "0" : undefined,
+        priceCurrency: "SAR",
+        category: c.price === "free" ? "Free" : "Paid",
       },
-    ],
-  }),
+      hasCourseInstance: {
+        "@type": "CourseInstance",
+        courseMode: "online",
+        courseWorkload: `PT${c.hours}H`,
+      },
+    }));
+    return {
+      meta: [
+        { title: "المكتبة المحاسبية | Accounting Library — Ahmed Elmadani" },
+        {
+          name: "description",
+          content:
+            "مكتبة احترافية لأفضل كورسات وشهادات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، SOCPA، VAT والمزيد.",
+        },
+        { property: "og:title", content: "المكتبة المحاسبية | Accounting Library" },
+        {
+          property: "og:description",
+          content: "A curated library of the best accounting courses & certifications.",
+        },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Accounting Library — Ahmed Elmadani" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "المكتبة", item: url },
+            ],
+          }),
+        },
+        ...courseSchemas.map((s) => ({
+          type: "application/ld+json",
+          children: JSON.stringify(s),
+        })),
+      ],
+    };
+  },
   component: LibraryPage,
 });
+
 
 function LibraryPage() {
   const [lang, setLang] = useState<Lang>("ar");
