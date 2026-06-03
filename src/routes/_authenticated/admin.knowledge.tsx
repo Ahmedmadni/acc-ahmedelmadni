@@ -10,6 +10,7 @@ import {
   calendarOverviewFn,
 } from "@/lib/knowledge/generate.functions";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
+import { computeArticleSeoScore } from "@/lib/seo/score";
 
 export const Route = createFileRoute("/_authenticated/admin/knowledge")({
   head: () => ({ meta: [{ title: "لوحة إدارة المكتبة | المشرف" }] }),
@@ -124,6 +125,7 @@ function AdminKnowledgePage() {
               <thead className="bg-white/[0.04] text-right text-white/60">
                 <tr>
                   <th className="p-3">العنوان</th>
+                  <th className="p-3">SEO</th>
                   <th className="p-3">الحالة</th>
                   <th className="p-3">المصدر</th>
                   <th className="p-3">إنشاء</th>
@@ -131,7 +133,15 @@ function AdminKnowledgePage() {
                 </tr>
               </thead>
               <tbody>
-                {(articles.data?.articles ?? []).map((a) => (
+                {(articles.data?.articles ?? []).map((a) => {
+                  const seo = computeArticleSeoScore(a);
+                  const color =
+                    seo.score >= 75
+                      ? "bg-emerald-500/20 text-emerald-200"
+                      : seo.score >= 50
+                        ? "bg-amber-500/20 text-amber-200"
+                        : "bg-red-500/20 text-red-200";
+                  return (
                   <tr key={a.id} className="border-t border-white/[0.05] text-white">
                     <td className="p-3">
                       <Link
@@ -141,6 +151,17 @@ function AdminKnowledgePage() {
                       >
                         {a.title_ar}
                       </Link>
+                    </td>
+                    <td className="p-3">
+                      <span
+                        className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-bold ${color}`}
+                        title={seo.checks
+                          .filter((c) => !c.passed && c.tip)
+                          .map((c) => `• ${c.tip}`)
+                          .join("\n") || "كل الفحوصات ناجحة"}
+                      >
+                        {seo.score}/100 · {seo.grade}
+                      </span>
                     </td>
                     <td className="p-3">
                       <span className="rounded-full bg-white/[0.06] px-2 py-1 text-xs">
@@ -175,7 +196,8 @@ function AdminKnowledgePage() {
                       )}
                     </td>
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
             </table>
           </div>

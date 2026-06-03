@@ -181,6 +181,28 @@ function ArticlePage() {
     },
   });
 
+  const internalLinks = useQuery({
+    queryKey: ["kb-internal-links", article.data?.id],
+    enabled: !!article.data?.id,
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("kb_internal_links")
+        .select("anchor_text, target_article_id")
+        .eq("article_id", article.data!.id);
+      if (error) throw error;
+      const ids = (data ?? []).map((l) => l.target_article_id);
+      if (!ids.length) return [];
+      const { data: targets } = await supabase
+        .from("kb_articles")
+        .select("id, slug, title_ar, category_id")
+        .in("id", ids);
+      const byId = new Map((targets ?? []).map((t) => [t.id, t]));
+      return (data ?? [])
+        .map((l) => ({ anchor: l.anchor_text, target: byId.get(l.target_article_id) }))
+        .filter((x) => x.target);
+    },
+  });
+
   const ratings = useQuery({
     queryKey: ["kb-ratings", article.data?.id],
     enabled: !!article.data?.id,
@@ -388,10 +410,15 @@ function ArticlePage() {
 
         {/* Header */}
         <header className="overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-[#07182c]">
-          <div
-            className="h-56 w-full bg-cover bg-center sm:h-72"
-            style={{ backgroundImage: `url(${a.featured_image})` }}
-          />
+          {a.featured_image && (
+            <img
+              src={a.featured_image}
+              alt={a.title_ar}
+              loading="eager"
+              fetchPriority="high"
+              className="h-56 w-full object-cover sm:h-72"
+            />
+          )}
           <div className="p-6 sm:p-8">
             <h1 className="text-2xl font-black leading-snug text-white sm:text-4xl">
               {a.title_ar}
@@ -551,6 +578,29 @@ function ArticlePage() {
               </section>
             )}
 
+            {/* Internal links (automatic) */}
+            {(internalLinks.data?.length ?? 0) > 0 && (
+              <section className="mb-10">
+                <h2 className="mb-4 text-2xl font-bold text-white">روابط داخلية</h2>
+                <ul className="grid gap-2 sm:grid-cols-2">
+                  {internalLinks.data!.map((l, i) => (
+                    <li key={i}>
+                      <Link
+                        to="/knowledge/$categorySlug/$articleSlug"
+                        params={{
+                          categorySlug,
+                          articleSlug: l.target!.slug,
+                        }}
+                        className="block rounded-xl border border-[#d7aa52]/15 bg-white/[0.03] px-4 py-3 text-sm text-white/85 transition-colors hover:border-[#d7aa52]/40 hover:text-[#f3d28a]"
+                      >
+                        {l.anchor || l.target!.title_ar}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             {/* Related */}
             {(related.data?.length ?? 0) > 0 && (
               <section className="mb-12">
@@ -567,10 +617,14 @@ function ArticlePage() {
                       }}
                       className="group overflow-hidden rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] transition-all hover:border-[#d7aa52]/40"
                     >
-                      <div
-                        className="h-28 w-full bg-cover bg-center"
-                        style={{ backgroundImage: `url(${r.featured_image})` }}
-                      />
+                      {r.featured_image && (
+                        <img
+                          src={r.featured_image}
+                          alt={r.title_ar}
+                          loading="lazy"
+                          className="h-28 w-full object-cover"
+                        />
+                      )}
                       <div className="p-3">
                         <h4 className="line-clamp-2 text-sm font-bold text-white group-hover:text-[#f3d28a]">
                           {r.title_ar}
