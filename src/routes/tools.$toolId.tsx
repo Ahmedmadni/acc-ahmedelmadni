@@ -25,20 +25,55 @@ export const Route = createFileRoute("/tools/$toolId")({
     if (!tool) throw notFound();
     return { tool };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     const tool = loaderData?.tool;
     if (!tool) return { meta: [{ title: "Tool — Ahmed Elmadani" }] };
+    const url = `https://acc-ahmedelmadni.lovable.app/tools/${params.toolId}`;
     return {
       meta: [
         { title: `${tool.title.ar} | ${tool.title.en} — Smart Accounting Tools` },
         { name: "description", content: tool.short.ar },
         { property: "og:title", content: `${tool.title.en} — Smart Accounting Tools` },
         { property: "og:description", content: tool.short.en },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: tool.title.en },
+        { name: "twitter:description", content: tool.short.en },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "الأدوات", item: "https://acc-ahmedelmadni.lovable.app/tools" },
+              { "@type": "ListItem", position: 3, name: tool.title.ar, item: url },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: `${tool.title.en} — ${tool.title.ar}`,
+            applicationCategory: "FinanceApplication",
+            operatingSystem: "Web",
+            url,
+            description: tool.short.en,
+            offers: { "@type": "Offer", price: "0", priceCurrency: "SAR" },
+          }),
+        },
       ],
     };
   },
   component: ToolDetailPage,
 });
+
 
 function InfoBlock({
   title,
