@@ -56,6 +56,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
           </Link>
         </div>
       </footer>
+      <Toaster />
     </div>
   );
 }
