@@ -36,7 +36,7 @@ import {
 import { CATEGORIES, TOOLS, type ToolCategory, type ToolMeta } from "@/lib/tools-registry";
 import type { Lang } from "@/lib/i18n";
 
-export const Route = createFileRoute("/tools")({
+export const Route = createFileRoute("/tools/")({
   head: () => ({
     meta: [
       { title: "الأدوات المحاسبية الذكية | Smart Accounting Tools — Ahmed Elmadani" },

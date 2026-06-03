@@ -1,51 +1,28 @@
-# خطة تطوير منصة الأدوات المحاسبية الذكية
+## السبب
 
-الطلب ضخم جداً (أكثر من 30 أداة + مكتبة معايير IFRS كاملة + مساعد AI + Case Studies + Templates). تنفيذه دفعة واحدة سيُنتج كوداً سطحياً وغير مختبر. أقترح تقسيمه إلى مراحل مع الحفاظ الكامل على الهوية البصرية الحالية (نفس الألوان والخطوط في `src/styles.css`).
+في TanStack Router الملف `src/routes/tools.tsx` يُعتبر **الأب** للملف `src/routes/tools.$toolId.tsx` (هذا واضح في `routeTree.gen.ts` حيث `getParentRoute: () => ToolsRoute`).
 
-## المرحلة 1 — البنية الأساسية وأهم 6 أدوات (هذه المرحلة الآن)
+عندما يكون لروت أبناء، يجب على مكوّن الأب أن يُصيِّر `<Outlet />` ليظهر الابن. لكن `tools.tsx` الحالي يعرض صفحة قائمة الأدوات الكاملة **بدون** `<Outlet />`، فعند الضغط على "افتح الأداة" يتغيّر الـURL إلى `/tools/pv` لكن الصفحة الظاهرة تبقى صفحة القائمة — وكأن شيئاً لم يحدث.
 
-### 1. صفحة جديدة `/tools` — "الأدوات المحاسبية الذكية"
-- Route جديد `src/routes/tools.tsx` + رابط في النافبار.
-- Hero مختصر + بحث داخلي + Tabs للفئات (تمويل/ضرائب/تحليل/Excel/IFRS).
-- بطاقات Glassmorphism تستخدم نفس tokens الموجودة (`--card`, `--primary`, `--accent`) بدون ألوان جديدة.
-- دعم RTL/EN عبر `i18n.ts` الحالي.
+## الحل
 
-### 2. صفحة أداة `/tools/$toolId` مع Layout موحّد
-- العمود الأيسر: الحاسبة التفاعلية (Live Calculation).
-- العمود الأيمن (Info Panel): شرح مبسط، متى تُستخدم، المعيار المرتبط، المعادلة، أخطاء شائعة، Tips.
-- زر تصدير PDF (طباعة المتصفح) + زر مشاركة (Web Share API).
+إعادة تسمية `src/routes/tools.tsx` إلى `src/routes/tools.index.tsx`:
 
-### 3. الأدوات المُنفّذة في هذه المرحلة (الأكثر طلباً)
-1. **PV** — Present Value
-2. **FV** — Future Value
-3. **NPV** — مع جدول تدفقات
-4. **IRR** — حل عددي (Newton)
-5. **Loan Amortization** — جدول كامل + Chart
-6. **VAT Calculator** — شامل/غير شامل
+- يصبح `/tools` (صفحة القائمة) و `/tools/$toolId` (صفحة التفاصيل) **أخوة** لا أب وابن.
+- لا حاجة لـ `<Outlet />` ولا تغييرات في المحتوى.
+- TanStack Router يُعيد توليد `routeTree.gen.ts` تلقائياً.
 
-كل أداة مرتبطة بمرجعها (IFRS/IAS) في الـ Info Panel.
+## الخطوات
 
-## المرحلة 2 (لاحقاً — بعد موافقتك)
-- بقية أدوات التمويل: DCF, Payback, Profitability Index, Effective Rate, Bond, **Lease IFRS 16**.
-- أدوات الضرائب: Zakat, WHT, Corporate Tax, **Deferred Tax IAS 12**.
-- Financial Ratios Dashboard مع Recharts ومقارنة Benchmark.
-- أدوات Excel: Journal Entry Generator, Trial Balance, Depreciation, Inventory (FIFO/LIFO/WA).
+1. نقل محتوى `src/routes/tools.tsx` كما هو إلى `src/routes/tools.index.tsx` مع تحديث استدعاء واحد فقط:
+   - `createFileRoute("/tools")` → `createFileRoute("/tools/")`
+2. حذف الملف القديم `src/routes/tools.tsx`.
+3. التأكد أن روابط `<Link to="/tools">` في باقي الموقع لا تزال تعمل (هي تعمل تلقائياً لأن `/tools/` هو index لـ `/tools`).
 
-## المرحلة 3
-- **IFRS Knowledge Hub**: صفحة لكل معيار (15, 16, 9, IAS 36, 2, 12, 16) مع شرح + أمثلة + Decision Trees + Common Mistakes.
-- نظام Tooltips للمصطلحات.
-- Case Studies + Templates (Excel/Checklists).
+## التحقق
 
-## المرحلة 4
-- توسيع `AIAssistant` الحالي ليصبح "AI Accounting Assistant" متخصص (System Prompt محدّث + Quick Actions: شرح معيار، اقتراح قيد، تفسير نسبة).
-- مقارنات تفاعلية (IFRS vs GAAP, FIFO vs WA, Finance vs Operating Lease).
+- فتح `/tools` → تظهر القائمة المجمّعة بالفئات.
+- الضغط على بطاقة أداة → ينتقل إلى `/tools/pv` (مثلاً) وتظهر صفحة الإدخال والنتائج فعلياً.
+- الضغط على "كل الأدوات" من داخل صفحة الأداة → يعود للقائمة.
 
-## ملاحظات تقنية
-- **بدون** تغيير الألوان/الخطوط. كل البطاقات الزجاجية باستخدام `bg-card/60 backdrop-blur` فقط.
-- الحسابات في `src/lib/finance.ts` (دوال نقية + اختبارات بسيطة).
-- Framer Motion موجود مسبقاً — استخدامه باعتدال (fade/slide خفيفة).
-- لا حاجة لـ Supabase في هذه المراحل (الأدوات client-side).
-- الحفاظ على مكوّن `AIAssistant` و`Library` كما هما.
-
-## ما أحتاج تأكيده منك
-هل أبدأ بـ **المرحلة 1** الآن (البنية + 6 أدوات + Info Panel كامل)، أم تفضّل ترتيباً مختلفاً للأدوات؟
+تغيير صغير ودقيق ولا يمسّ منطق الحسابات ولا مكوّنات الأدوات.
