@@ -1084,6 +1084,11 @@ function Footer({ lang }: { lang: Lang }) {
                 <a href={`#${l.id}`} className="transition-colors hover:text-[#d7aa52]">{l.label}</a>
               </li>
             ))}
+            <li>
+              <RouterLink to="/auth" className="transition-colors hover:text-[#d7aa52]">
+                {lang === "ar" ? "تسجيل الدخول" : "Login"}
+              </RouterLink>
+            </li>
           </ul>
         </div>
 
