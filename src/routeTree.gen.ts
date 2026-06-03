@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LibraryRouteImport } from './routes/library'
@@ -29,6 +30,11 @@ import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authent
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -138,6 +144,7 @@ export interface FileRoutesByFullPath {
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/skills': typeof SkillsRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -158,6 +165,7 @@ export interface FileRoutesByTo {
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/skills': typeof SkillsRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -180,6 +188,7 @@ export interface FileRoutesById {
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/skills': typeof SkillsRoute
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -202,6 +211,7 @@ export interface FileRouteTypes {
     | '/library'
     | '/services'
     | '/sitemap.xml'
+    | '/skills'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -222,6 +232,7 @@ export interface FileRouteTypes {
     | '/library'
     | '/services'
     | '/sitemap.xml'
+    | '/skills'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -243,6 +254,7 @@ export interface FileRouteTypes {
     | '/library'
     | '/services'
     | '/sitemap.xml'
+    | '/skills'
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -265,6 +277,7 @@ export interface RootRouteChildren {
   LibraryRoute: typeof LibraryRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SkillsRoute: typeof SkillsRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
   ToolsToolIdRoute: typeof ToolsToolIdRoute
@@ -277,6 +290,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -437,6 +457,7 @@ const rootRouteChildren: RootRouteChildren = {
   LibraryRoute: LibraryRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SkillsRoute: SkillsRoute,
   ApiChatRoute: ApiChatRoute,
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
   ToolsToolIdRoute: ToolsToolIdRoute,
