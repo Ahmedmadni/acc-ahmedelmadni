@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.assign_primary_admin() FROM PUBLIC, anon, authenticated;
