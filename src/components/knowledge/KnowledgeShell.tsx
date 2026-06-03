@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Home } from "lucide-react";
 import type { ReactNode } from "react";
+import { Toaster } from "@/components/ui/sonner";
 
 export function KnowledgeShell({ children }: { children: ReactNode }) {
   return (
