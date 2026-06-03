@@ -410,10 +410,15 @@ function ArticlePage() {
 
         {/* Header */}
         <header className="overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-[#07182c]">
-          <div
-            className="h-56 w-full bg-cover bg-center sm:h-72"
-            style={{ backgroundImage: `url(${a.featured_image})` }}
-          />
+          {a.featured_image && (
+            <img
+              src={a.featured_image}
+              alt={a.title_ar}
+              loading="eager"
+              fetchPriority="high"
+              className="h-56 w-full object-cover sm:h-72"
+            />
+          )}
           <div className="p-6 sm:p-8">
             <h1 className="text-2xl font-black leading-snug text-white sm:text-4xl">
               {a.title_ar}
