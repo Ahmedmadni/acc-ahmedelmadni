@@ -98,6 +98,15 @@ function KnowledgeHubPage() {
             className="w-full bg-transparent text-white placeholder:text-white/40 focus:outline-none"
           />
         </div>
+
+        <Link
+          to="/library"
+          className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+        >
+          <GraduationCap className="size-4" />
+          الكورسات
+          <ArrowLeft className="size-3.5" />
+        </Link>
       </section>
 
       {/* CATEGORIES */}
