@@ -85,7 +85,6 @@ const ExplainSchema = z.object({
 });
 
 export const explainCalculationFn = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
   .inputValidator((input: unknown) => ExplainSchema.parse(input))
   .handler(async ({ data }) => {
     const key = process.env.LOVABLE_API_KEY;
