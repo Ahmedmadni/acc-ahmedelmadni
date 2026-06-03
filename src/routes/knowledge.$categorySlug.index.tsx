@@ -1,9 +1,23 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { Clock, ArrowLeft, ChevronLeft } from "lucide-react";
+import { Clock, ArrowLeft, ChevronLeft, GraduationCap, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
+import { t } from "@/lib/i18n";
+
+const KB_TO_LIB_CAT: Record<string, string[]> = {
+  "financial-accounting": ["fundamentals", "reporting"],
+  "cost-accounting": ["reporting"],
+  "tax-accounting": ["tax"],
+  "zakat-tax-ksa": ["tax"],
+  "vat": ["tax"],
+  "financial-statements": ["reporting"],
+  "audit": ["audit"],
+  "excel": ["software"],
+  "erp": ["software"],
+  "entrepreneurship": [],
+};
 
 export const Route = createFileRoute("/knowledge/$categorySlug/")({
   head: ({ params }) => ({
@@ -76,7 +90,63 @@ function CategoryPage() {
         )}
       </section>
 
+      {(() => {
+        const libCats = KB_TO_LIB_CAT[categorySlug] ?? [];
+        const relatedCourses = libCats.length
+          ? t.library.courses.filter((c) => libCats.includes(c.cat)).slice(0, 4)
+          : [];
+        if (relatedCourses.length === 0) return null;
+        return (
+          <section className="mx-auto max-w-6xl px-4 pb-10 sm:px-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="inline-flex items-center gap-2 text-lg font-bold text-white">
+                <GraduationCap className="size-5 text-[#d7aa52]" />
+                كورسات مرتبطة
+              </h2>
+              <Link
+                to="/library"
+                className="inline-flex items-center gap-1 text-xs font-bold text-[#f3d28a] hover:underline"
+              >
+                كل الكورسات <ArrowLeft className="size-3" />
+              </Link>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {relatedCourses.map((c) => (
+                <Link
+                  key={c.id}
+                  to="/library"
+                  className="group flex flex-col gap-2 rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-4 transition-all hover:-translate-y-0.5 hover:border-[#d7aa52]/50"
+                >
+                  <div className="flex size-9 items-center justify-center rounded-lg bg-[#d7aa52]/15 text-[#f3d28a]">
+                    <GraduationCap className="size-4" />
+                  </div>
+                  <h3 className="line-clamp-2 text-sm font-bold text-white group-hover:text-[#f3d28a]">
+                    {c.ar}
+                  </h3>
+                  <div className="mt-auto flex items-center justify-between text-[10px] text-white/55">
+                    <span>{c.hours} ساعة · {c.lessons} درس</span>
+                    <span
+                      className={`rounded-full px-2 py-0.5 font-bold uppercase ${
+                        c.price === "free"
+                          ? "bg-emerald-500/15 text-emerald-300"
+                          : "bg-[#d7aa52]/15 text-[#f3d28a]"
+                      }`}
+                    >
+                      {c.price === "free" ? "مجاني" : "مدفوع"}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
+
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+        <h2 className="mb-4 inline-flex items-center gap-2 text-lg font-bold text-white">
+          <BookOpen className="size-5 text-[#d7aa52]" />
+          المقالات
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(articles.data ?? []).map((a) => (
             <Link

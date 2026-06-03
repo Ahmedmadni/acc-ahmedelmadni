@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { Search, Sparkles, Clock, ArrowLeft, GraduationCap } from "lucide-react";
+import { Search, Sparkles, Clock, ArrowLeft, GraduationCap, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
@@ -99,14 +99,24 @@ function KnowledgeHubPage() {
           />
         </div>
 
-        <Link
-          to="/library"
-          className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
-        >
-          <GraduationCap className="size-4" />
-          الكورسات
-          <ArrowLeft className="size-3.5" />
-        </Link>
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <Link
+            to="/library"
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+          >
+            <GraduationCap className="size-4" />
+            الكورسات
+            <ArrowLeft className="size-3.5" />
+          </Link>
+          <a
+            href="#all-articles"
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+          >
+            <BookOpen className="size-4" />
+            المقالات
+            <ArrowLeft className="size-3.5" />
+          </a>
+        </div>
       </section>
 
       {/* CATEGORIES */}
@@ -168,7 +178,7 @@ function KnowledgeHubPage() {
       )}
 
       {/* ALL / SEARCH RESULTS */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+      <section id="all-articles" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 scroll-mt-24">
         <h2 className="mb-4 text-lg font-bold text-white">
           {q ? `نتائج البحث (${filtered.length})` : "أحدث المقالات"}
         </h2>
