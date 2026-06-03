@@ -1,47 +1,72 @@
-## الهدف
-لوحة تحكم واحدة `/admin/library` تُمكّن المدير من إدارة كل محتوى المكتبة (مقالات + كورسات + كتب + روابط + فيديوهات) — إضافة/تعديل/حذف يدوي + توليد بالذكاء الاصطناعي.
+# ترقية قسم الزكاة والضرائب — خطة التنفيذ
 
-## التغييرات
+## 1. أدوات الحساب الجديدة (`src/components/tools/Calculators.tsx` + `tools-registry.ts`)
 
-### 1. قاعدة البيانات (migration واحدة)
-جدول جديد `library_items`:
-- `id`, `type` (enum: course | book | video | external_link | tool)
-- `title_ar`, `title_en`, `description_ar`, `description_en`
-- `category_slug` (يربط مع تصنيفات المكتبة الحالية: fundamentals, reporting, tax, audit, software)
-- `url` (رابط خارجي للكورس/الكتاب/الفيديو)
-- `cover_image`, `author`, `provider` (Coursera, YouTube, إلخ)
-- `level` (beginner/intermediate/advanced), `duration_hours`, `is_free`, `price`
-- `tags[]`, `sort_order`, `is_published`
-- `created_at`, `updated_at`
-- RLS: قراءة عامة للمنشور فقط، كتابة للأدمن فقط
-- GRANT للـ anon (قراءة) + authenticated + service_role
+### نموذج الإقرار الضريبي السعودي (VAT Return)
+حقول الإدخال:
+- المبيعات الخاضعة للضريبة (Taxable Sales)
+- المبيعات صفرية النسبة (Zero-Rated)
+- المبيعات المعفاة (Exempt)
+- المشتريات (Purchases)
+- ضريبة المدخلات (Input VAT)
+- ضريبة المخرجات (Output VAT) — تُحسب تلقائياً = Taxable × 15%
+- **صافي الضريبة** (Net VAT) = Output − Input
 
-### 2. Server Functions جديدة `src/lib/library/manage.functions.ts`
-- `listLibraryItemsFn` (admin: كل العناصر)
-- `createLibraryItemFn` / `updateLibraryItemFn` / `deleteLibraryItemFn`
-- `generateLibraryItemWithAIFn`: يأخذ {type, topic_hint, category} → يستخدم Lovable AI Gateway (gemini-2.5-flash) لتوليد عنوان/وصف/tags ثم يحفظ كـ draft
+### نموذج إقرار الزكاة السعودي (Zakat Declaration)
+- رأس المال (Capital)
+- الأرباح المبقاة (Retained Earnings)
+- الاحتياطيات (Reserves)
+- الاستثمارات (Investments)
+- الأصول الثابتة (Fixed Assets)
+- التسويات (Adjustments)
+- **الوعاء الزكوي** = (Capital + Retained + Reserves − Investments − Fixed Assets ± Adjustments)
+- **الزكاة المستحقة** = الوعاء × 2.5%
 
-أيضاً نضيف للمقالات:
-- `updateArticleFn` / `deleteArticleFn` في `generate.functions.ts`
+### ميزات مشتركة لكلا النموذجين
+- دعم العربية/الإنجليزية (يستفيد من `lang` الموجود).
+- **تحقق الإدخالات** (Validation) عبر `zod`: أرقام موجبة، حد أقصى منطقي.
+- **شرح بجانب كل حقل** (tooltip + نص توضيحي) ثنائي اللغة.
+- **روابط مرجعية** للوائح الرسمية (ZATCA): زر يفتح `zatca.gov.sa` للائحة ذات الصلة.
+- **شرح AI**: زر "اشرح الحساب" بجانب النتيجة، يستدعي `createServerFn` يبعث للنموذج `google/gemini-3-flash-preview` ليشرح الناتج بلغة المستخدم.
+- **تصدير PDF**: يستفيد من `src/lib/pdf-export.ts` الموجود (نمط مستخدم في `tools.$toolId.tsx`).
+- **تصدير Excel**: مكتبة `xlsx` (تُضاف عبر `bun add xlsx`).
 
-### 3. لوحة التحكم `/admin/library` (route جديد تحت `_authenticated`)
-صفحة واحدة بتبويبات (Tabs):
-- **تبويب "المقالات"** — جدول كل المقالات (الموجود + جديد): تعديل inline، حذف، توليد جديد بالـ AI، نشر/إلغاء
-- **تبويب "الكورسات"** — جدول library_items حيث type=course: زر "إضافة يدوي" + زر "توليد بالـ AI"
-- **تبويب "الكتب"** — type=book
-- **تبويب "الفيديوهات والروابط"** — type=video / external_link
+## 2. الأرشيف التاريخي للإقرارات
 
-كل تبويب: جدول + Dialog للإضافة/التعديل (form بكل الحقول) + زر AI يفتح dialog صغير (موضوع + تصنيف) → يولّد ويعبّي الـ form تلقائياً.
+جدول جديد `public.tax_declarations`:
+- `user_id` (FK to auth.users)
+- `type` enum: `vat` | `zakat`
+- `period_label` (مثلاً Q1-2026)
+- `input_data` jsonb
+- `result_data` jsonb
+- `created_at`
 
-### 4. ربط الواجهة الأمامية
-- `src/routes/library.tsx` يقرأ من `library_items` (type=course) بدل القائمة الثابتة في i18n، fallback للقائمة الحالية لو الجدول فارغ
-- لا تغيير على واجهة المقالات (تستخدم `kb_articles` أصلاً)
+RLS: كل مستخدم يرى/يحرر إقراراته فقط. المشرف يرى الكل.
 
-### 5. زر دخول للوحة
-في صفحة `/_authenticated/admin/knowledge` نضيف زر "إدارة المكتبة الكاملة" يفتح `/admin/library`.
+Server functions (`src/lib/tax/declarations.functions.ts`):
+- `saveDeclarationFn` — حفظ إقرار.
+- `listMyDeclarationsFn` — قائمة إقراراتي.
+- `deleteDeclarationFn` — حذف.
+- `explainCalculationFn` — استدعاء AI للشرح.
+
+## 3. صفحة الأرشيف
+- مسار جديد محمي: `src/routes/_authenticated/declarations.tsx`
+- جدول بإقرارات المستخدم مع أزرار: عرض / تنزيل PDF / حذف.
+- زر في صفحة الأداة "حفظ في الأرشيف" يظهر للمسجَّلين فقط.
+
+## 4. تسجيل الأدوات
+- إضافة `vat-return` و`zakat-declaration` في `tools-registry.ts` ضمن تصنيف Zakat & Tax.
+- بطاقات الأدوات في `/tools` ستعرضها تلقائياً.
+- زر "أرشيف إقراراتي" بجانب الأدوات للمستخدمين المسجلين.
+
+## 5. الملفات المتأثرة (تقديري)
+- إنشاء: `src/components/tools/VatReturnForm.tsx`, `ZakatDeclarationForm.tsx`, `src/lib/tax/declarations.functions.ts`, `src/lib/tax/excel-export.ts`, `src/routes/_authenticated/declarations.tsx`, migration للجدول الجديد.
+- تعديل: `Calculators.tsx` (إضافة الـ id الجديدين)، `tools-registry.ts`، `pdf-export.ts` (دالة generic للنموذج).
+- تبعية جديدة: `xlsx`.
 
 ## ملاحظات تقنية
-- استخدام shadcn: Tabs, Dialog, Table, Form, Input, Textarea, Select, Switch
-- التحقق من المدخلات بـ Zod في الـ server functions
-- AI generation عبر `createLovableAiGatewayProvider` (مفتاح LOVABLE_API_KEY متوفر)
-- لا حذف فعلي للمقالات الموجودة — فقط إضافة قدرات الإدارة
+- استدعاءات AI تمر عبر `createServerFn` + `requireSupabaseAuth` لحماية الكوتا.
+- صادرات PDF تستخدم الـ DOM capture الحالي (نفس نمط الأدوات الأخرى) لاتساق التصميم.
+- جميع نصوص الواجهة في كائنات `{ ar, en }` على نسق `i18n.ts` الحالي.
+
+هل أبدأ التنفيذ بهذه الخطة؟
