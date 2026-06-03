@@ -696,7 +696,7 @@ export function DecisionsVideo({ lang }: { lang: Lang }) {
 
 
 /* ============= SERVICES ============= */
-function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
+export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
   const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
   return (
     <section id="services" className="relative py-24">
@@ -742,7 +742,7 @@ function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => vo
 }
 
 /* ============= SERVICE MODAL ============= */
-function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
+export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
@@ -784,7 +784,7 @@ function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; 
 
 
 /* ============= EXPERIENCE ============= */
-function Experience({ lang }: { lang: Lang }) {
+export function Experience({ lang }: { lang: Lang }) {
   return (
     <section id="experience" className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
@@ -873,7 +873,7 @@ function LogoBadge({ logo, compact = false }: {
 }
 
 /* ============= SKILLS (interactive) ============= */
-function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }) {
+export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }) {
   const [active, setActive] = useState(0);
   const groupIcons = [BarChart3, Wallet, Wrench];
 
@@ -961,7 +961,7 @@ function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }
 }
 
 /* ============= SKILL MODAL ============= */
-function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onClose: () => void }) {
+export function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onClose: () => void }) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
@@ -1024,7 +1024,7 @@ function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onCl
 }
 
 /* ============= BEFORE / AFTER ============= */
-function BeforeAfter({ lang }: { lang: Lang }) {
+export function BeforeAfter({ lang }: { lang: Lang }) {
   const [pos, setPos] = useState(50);
   const wrapRef = useRef<HTMLDivElement>(null);
   const drag = useRef(false);
@@ -1131,7 +1131,7 @@ function Testimonials({ lang }: { lang: Lang }) {
 }
 
 /* ============= CERTS ============= */
-function Certs({ lang }: { lang: Lang }) {
+export function Certs({ lang }: { lang: Lang }) {
   return (
     <section className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
@@ -1194,7 +1194,7 @@ function Contact({ lang }: { lang: Lang }) {
 }
 
 /* ============= FOOTER ============= */
-function Footer({ lang }: { lang: Lang }) {
+export function Footer({ lang }: { lang: Lang }) {
   const links = [
     { id: "about", label: t.nav.about[lang] },
     { id: "services", label: t.nav.services[lang] },
@@ -1326,7 +1326,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 }
 
 /* ============= FLOATING CHAT BUTTON — bottom-right, more visible & expressive ============= */
-function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
+export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <div dir="ltr" className="fixed z-40" style={{ left: 18, bottom: 18 }}>
