@@ -132,6 +132,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
+        children: `(function(){var l=document.querySelectorAll('link[media="print"]');l.forEach(function(x){x.media="all"});})();`,
+      },
+      {
         src: "https://www.googletagmanager.com/gtag/js?id=G-5ZZTMPFCS1",
         async: true,
       },
