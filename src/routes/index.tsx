@@ -1188,11 +1188,11 @@ export function Contact({ lang }: { lang: Lang }) {
 /* ============= FOOTER ============= */
 export function Footer({ lang }: { lang: Lang }) {
   const links = [
-    { id: "about", label: t.nav.about[lang] },
-    { id: "services", label: t.nav.services[lang] },
-    { id: "experience", label: t.nav.experience[lang] },
-    { id: "skills", label: t.nav.skills[lang] },
-    { id: "contact", label: t.nav.contact[lang] },
+    { to: "/about", label: t.nav.about[lang] },
+    { to: "/services", label: t.nav.services[lang] },
+    { to: "/experience", label: t.nav.experience[lang] },
+    { to: "/skills", label: t.nav.skills[lang] },
+    { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
     <footer className="relative mt-12 border-t border-[var(--line)] pt-16 pb-10">
@@ -1215,8 +1215,12 @@ export function Footer({ lang }: { lang: Lang }) {
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
           <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
             {links.map((l) => (
-              <li key={l.id}>
-                <a href={`#${l.id}`} className="transition-colors hover:text-[#d7aa52]">{l.label}</a>
+              <li key={l.to}>
+                {l.to.startsWith("/#") ? (
+                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d7aa52]">{l.label}</a>
+                ) : (
+                  <RouterLink to={l.to} className="transition-colors hover:text-[#d7aa52]">{l.label}</RouterLink>
+                )}
               </li>
             ))}
             <li>
@@ -1226,6 +1230,7 @@ export function Footer({ lang }: { lang: Lang }) {
             </li>
           </ul>
         </div>
+
 
         <div>
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
