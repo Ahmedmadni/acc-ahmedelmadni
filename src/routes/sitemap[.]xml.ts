@@ -63,13 +63,14 @@ export const Route = createFileRoute("/sitemap.xml")({
               .from("kb_articles")
               .select("slug, updated_at, published_at, kb_categories(slug)")
               .order("published_at", { ascending: false });
-            for (const a of (articles ?? []) as Array<{
+            for (const a of (articles ?? []) as unknown as Array<{
               slug: string;
               updated_at?: string | null;
               published_at?: string | null;
-              kb_categories: { slug: string } | null;
+              kb_categories: { slug: string } | { slug: string }[] | null;
             }>) {
-              const catSlug = a.kb_categories?.slug;
+              const catRel = a.kb_categories;
+              const catSlug = Array.isArray(catRel) ? catRel[0]?.slug : catRel?.slug;
               if (!catSlug || !a.slug) continue;
               entries.push({
                 path: `/knowledge/${catSlug}/${a.slug}`,
@@ -81,6 +82,7 @@ export const Route = createFileRoute("/sitemap.xml")({
                 priority: "0.6",
               });
             }
+
           }
         } catch (err) {
           console.error("sitemap dynamic fetch failed:", err);

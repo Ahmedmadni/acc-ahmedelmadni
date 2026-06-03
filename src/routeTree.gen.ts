@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
@@ -25,6 +26,11 @@ import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authent
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LibraryRoute = LibraryRouteImport.update({
   id: '/library',
   path: '/library',
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/library': typeof LibraryRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -126,6 +133,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/library': typeof LibraryRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -144,6 +152,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
   '/library': typeof LibraryRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -162,6 +171,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/library'
+    | '/sitemap.xml'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -178,6 +188,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/library'
+    | '/sitemap.xml'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -195,6 +206,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/auth'
     | '/library'
+    | '/sitemap.xml'
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -213,6 +225,7 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
   LibraryRoute: typeof LibraryRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
   ToolsToolIdRoute: typeof ToolsToolIdRoute
@@ -225,6 +238,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/library': {
       id: '/library'
       path: '/library'
@@ -353,6 +373,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
   LibraryRoute: LibraryRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiChatRoute: ApiChatRoute,
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
   ToolsToolIdRoute: ToolsToolIdRoute,
@@ -365,13 +386,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
