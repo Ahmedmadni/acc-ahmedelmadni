@@ -20,6 +20,7 @@ import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
+import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
@@ -79,6 +80,12 @@ const KnowledgeCategorySlugArticleSlugRoute =
     path: '/knowledge/$categorySlug/$articleSlug',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AuthenticatedAdminLibraryRoute =
+  AuthenticatedAdminLibraryRouteImport.update({
+    id: '/admin/library',
+    path: '/admin/library',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedAdminKnowledgeRoute =
   AuthenticatedAdminKnowledgeRouteImport.update({
     id: '/admin/knowledge',
@@ -102,6 +109,7 @@ export interface FileRoutesByFullPath {
   '/knowledge/': typeof KnowledgeIndexRoute
   '/tools/': typeof ToolsIndexRoute
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
+  '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -116,6 +124,7 @@ export interface FileRoutesByTo {
   '/knowledge': typeof KnowledgeIndexRoute
   '/tools': typeof ToolsIndexRoute
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
+  '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -132,6 +141,7 @@ export interface FileRoutesById {
   '/knowledge/': typeof KnowledgeIndexRoute
   '/tools/': typeof ToolsIndexRoute
   '/_authenticated/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
+  '/_authenticated/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -148,6 +158,7 @@ export interface FileRouteTypes {
     | '/knowledge/'
     | '/tools/'
     | '/admin/knowledge'
+    | '/admin/library'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
@@ -162,6 +173,7 @@ export interface FileRouteTypes {
     | '/knowledge'
     | '/tools'
     | '/admin/knowledge'
+    | '/admin/library'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug'
     | '/api/public/hooks/generate-articles'
@@ -177,6 +189,7 @@ export interface FileRouteTypes {
     | '/knowledge/'
     | '/tools/'
     | '/_authenticated/admin/knowledge'
+    | '/_authenticated/admin/library'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
@@ -276,6 +289,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeCategorySlugArticleSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/admin/library': {
+      id: '/_authenticated/admin/library'
+      path: '/admin/library'
+      fullPath: '/admin/library'
+      preLoaderRoute: typeof AuthenticatedAdminLibraryRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/admin/knowledge': {
       id: '/_authenticated/admin/knowledge'
       path: '/admin/knowledge'
@@ -295,10 +315,12 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAdminKnowledgeRoute: typeof AuthenticatedAdminKnowledgeRoute
+  AuthenticatedAdminLibraryRoute: typeof AuthenticatedAdminLibraryRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAdminKnowledgeRoute: AuthenticatedAdminKnowledgeRoute,
+  AuthenticatedAdminLibraryRoute: AuthenticatedAdminLibraryRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
@@ -321,3 +343,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
