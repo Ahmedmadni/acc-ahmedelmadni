@@ -1271,36 +1271,6 @@ export function Footer({ lang }: { lang: Lang }) {
             <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
-          {/* Social icons inline under contact info */}
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            {SOCIALS.map((s) => (
-              <motion.a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                title={s.label}
-                onMouseEnter={playHover}
-                onClick={playClick}
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.92 }}
-                className="group relative flex items-center justify-center"
-              >
-                <span
-                  className="flex size-11 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_8px_28px_-6px_rgba(215,170,82,0.45)]"
-                  style={{ color: s.color }}
-                >
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 rounded-2xl opacity-0 blur-lg transition-opacity group-hover:opacity-40"
-                    style={{ background: s.color }}
-                  />
-                  <i className={`${s.icon} relative text-xl`} />
-                </span>
-              </motion.a>
-            ))}
-          </div>
         </div>
       </div>
 
