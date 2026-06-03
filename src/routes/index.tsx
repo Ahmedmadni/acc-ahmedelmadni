@@ -301,16 +301,6 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
             <BookOpen className="size-4" />
             <span className="hidden sm:inline">{lang === "ar" ? "المكتبة المحاسبية" : "Knowledge"}</span>
           </RouterLink>
-          <RouterLink
-            to="/library"
-            onMouseEnter={playHover}
-            onClick={playClick}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/60 bg-[#d7aa52]/10 px-3 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:scale-105"
-            aria-label={t.nav.library[lang]}
-          >
-            <GraduationCap className="size-4" />
-            <span className="hidden sm:inline">{t.nav.library[lang]}</span>
-          </RouterLink>
           <button onClick={onTheme} onMouseEnter={playHover}
             className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
             aria-label="Toggle theme">
@@ -376,8 +366,8 @@ function Hero({ lang }: { lang: Lang }) {
         <div className="absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,170,82,0.18),transparent_60%)]" />
       </div>
 
-      {/* Floating dashboard widgets over the video background */}
-      <HeroDashWidgets lang={lang} />
+
+
 
       <div className="mx-auto grid w-[92%] max-w-7xl items-center gap-12 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.8 }}
