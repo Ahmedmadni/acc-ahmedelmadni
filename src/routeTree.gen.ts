@@ -18,6 +18,7 @@ import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
 import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
@@ -68,6 +69,12 @@ const ApiChatRoute = ApiChatRouteImport.update({
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedDeclarationsRoute =
+  AuthenticatedDeclarationsRouteImport.update({
+    id: '/declarations',
+    path: '/declarations',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const KnowledgeCategorySlugIndexRoute =
   KnowledgeCategorySlugIndexRouteImport.update({
     id: '/knowledge/$categorySlug/',
@@ -103,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/library': typeof LibraryRoute
+  '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
@@ -118,6 +126,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/library': typeof LibraryRoute
+  '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
@@ -135,6 +144,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
   '/library': typeof LibraryRoute
+  '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
@@ -152,6 +162,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/library'
+    | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
     | '/tools/$toolId'
@@ -167,6 +178,7 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/library'
+    | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
     | '/tools/$toolId'
@@ -183,6 +195,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/auth'
     | '/library'
+    | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
     | '/tools/$toolId'
@@ -275,6 +288,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/declarations': {
+      id: '/_authenticated/declarations'
+      path: '/declarations'
+      fullPath: '/declarations'
+      preLoaderRoute: typeof AuthenticatedDeclarationsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/knowledge/$categorySlug/': {
       id: '/knowledge/$categorySlug/'
       path: '/knowledge/$categorySlug'
@@ -314,11 +334,13 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedDeclarationsRoute: typeof AuthenticatedDeclarationsRoute
   AuthenticatedAdminKnowledgeRoute: typeof AuthenticatedAdminKnowledgeRoute
   AuthenticatedAdminLibraryRoute: typeof AuthenticatedAdminLibraryRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedDeclarationsRoute: AuthenticatedDeclarationsRoute,
   AuthenticatedAdminKnowledgeRoute: AuthenticatedAdminKnowledgeRoute,
   AuthenticatedAdminLibraryRoute: AuthenticatedAdminLibraryRoute,
 }
