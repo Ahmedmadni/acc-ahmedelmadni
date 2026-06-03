@@ -111,10 +111,16 @@ function ToolDetailPage() {
   };
 
   return (
-    <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
+    <div
+      dir={isRTL ? "rtl" : "ltr"}
+      className="tool-print-page min-h-screen bg-[#04101f] text-white"
+    >
       <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl print:hidden">
         <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between gap-2">
-          <Link to="/tools" className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15">
+          <Link
+            to="/tools"
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+          >
             <ArrowLeft className="size-3.5" />
             {lang === "ar" ? "كل الأدوات" : "All tools"}
           </Link>
@@ -122,10 +128,16 @@ function ToolDetailPage() {
             {tool.title[lang]}
           </div>
           <div className="flex items-center gap-2">
-            <Link to="/" className="hidden items-center gap-1 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 sm:inline-flex">
+            <Link
+              to="/"
+              className="hidden items-center gap-1 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 sm:inline-flex"
+            >
               <Home className="size-3.5" />
             </Link>
-            <button onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))} className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15">
+            <button
+              onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
+              className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+            >
               <Languages className="size-3.5" />
               {lang === "ar" ? "EN" : "AR"}
             </button>
@@ -160,7 +172,9 @@ function ToolDetailPage() {
         <h1 className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] bg-clip-text text-2xl font-extrabold text-transparent md:text-4xl">
           {tool.title[lang]}
         </h1>
-        <p className="mt-2 max-w-3xl text-sm text-[var(--fg-soft)] md:text-base">{tool.short[lang]}</p>
+        <p className="mt-2 max-w-3xl text-sm text-[var(--fg-soft)] md:text-base">
+          {tool.short[lang]}
+        </p>
 
         <div className="mt-4 flex flex-wrap gap-2 print:hidden">
           <button
@@ -192,14 +206,23 @@ function ToolDetailPage() {
           <button
             onClick={onCopyLink}
             className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${copied ? "border-emerald-400/60 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/40 bg-white/[0.04] text-[#f3d28a] hover:bg-[#d7aa52]/10"}`}
-            title={lang === "ar" ? "نسخ رابط بقيم الأداة الحالية" : "Copy link with current tool values"}
+            title={
+              lang === "ar" ? "نسخ رابط بقيم الأداة الحالية" : "Copy link with current tool values"
+            }
           >
             <Link2 className="size-3.5" />
             {copied
-              ? lang === "ar" ? "تم النسخ ✓" : "Copied ✓"
-              : lang === "ar" ? "نسخ رابط القيم" : "Copy share link"}
+              ? lang === "ar"
+                ? "تم النسخ ✓"
+                : "Copied ✓"
+              : lang === "ar"
+                ? "نسخ رابط القيم"
+                : "Copy share link"}
           </button>
-          <button onClick={onShare} className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+          <button
+            onClick={onShare}
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+          >
             <Share2 className="size-3.5" />
             {lang === "ar" ? "مشاركة" : "Share"}
           </button>
@@ -212,7 +235,6 @@ function ToolDetailPage() {
           >
             <CalculatorById id={tool.id} lang={lang} />
           </section>
-
 
           <aside className="space-y-4">
             <div className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#d7aa52]/10 to-transparent p-5 backdrop-blur">
