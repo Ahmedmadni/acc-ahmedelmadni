@@ -43,15 +43,15 @@ import {
   Wrench,
   X,
 } from "lucide-react";
-import profileImg from "@/assets/profile.png";
-import heroBg from "@/assets/hero-finance-bg.jpg";
-import dashboardImg from "@/assets/finance-dashboard.jpg";
-import deskImg from "@/assets/accountant-desk.jpg";
-import beforeAfterImg from "@/assets/before-after.jpg";
-import servicesBg from "@/assets/services-bg.jpg";
-import logoAlostool from "@/assets/logo-alostool.png";
-import logoLamara from "@/assets/logo-lamara.png";
-import logoQimat from "@/assets/logo-qimat.jpg";
+import profileImg from "@/assets/profile.webp";
+import heroBg from "@/assets/hero-finance-bg.webp";
+import dashboardImg from "@/assets/finance-dashboard.webp";
+import deskImg from "@/assets/accountant-desk.webp";
+import beforeAfterImg from "@/assets/before-after.webp";
+import servicesBg from "@/assets/services-bg.webp";
+import logoAlostool from "@/assets/logo-alostool.webp";
+import logoLamara from "@/assets/logo-lamara.webp";
+import logoQimat from "@/assets/logo-qimat.webp";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 import { AIAssistant } from "@/components/AIAssistant";
@@ -88,6 +88,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/" },
+      { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
     ],
     scripts: [
       {
@@ -453,7 +454,7 @@ function Hero({ lang }: { lang: Lang }) {
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20">
       {/* Animated parallax background */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 -z-10">
-        <img src={heroBg} alt="" aria-hidden className="h-full w-full object-cover opacity-30" />
+        <img src={heroBg} alt="" aria-hidden width={1920} height={1080} className="h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/40 via-[var(--bg-surface)]/70 to-[var(--bg-surface)]" />
       </motion.div>
 
@@ -512,8 +513,9 @@ function Hero({ lang }: { lang: Lang }) {
             <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2.5rem] border border-[#d7aa52]/40" />
             <div className="absolute inset-0 translate-x-4 -translate-y-4 rounded-[2.5rem] border border-white/10" />
             <div className="relative h-[440px] w-[340px] overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/30 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow sm:h-[500px] sm:w-[400px]">
-              <img src={profileImg} alt="Ahmed Elmadani"
+              <img src={profileImg} alt="Ahmed Elmadani" width={400} height={500} fetchPriority="high"
                 className="absolute inset-0 h-full w-full object-cover object-top" />
+
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
                 <div>
