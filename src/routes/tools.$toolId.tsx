@@ -111,7 +111,7 @@ function ToolDetailPage() {
   };
 
   return (
-    <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
+    <div dir={isRTL ? "rtl" : "ltr"} className="tool-print-page min-h-screen bg-[#04101f] text-white">
       <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl print:hidden">
         <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between gap-2">
           <Link to="/tools" className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15">
