@@ -181,6 +181,28 @@ function ArticlePage() {
     },
   });
 
+  const internalLinks = useQuery({
+    queryKey: ["kb-internal-links", article.data?.id],
+    enabled: !!article.data?.id,
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("kb_internal_links")
+        .select("anchor_text, target_article_id")
+        .eq("article_id", article.data!.id);
+      if (error) throw error;
+      const ids = (data ?? []).map((l) => l.target_article_id);
+      if (!ids.length) return [];
+      const { data: targets } = await supabase
+        .from("kb_articles")
+        .select("id, slug, title_ar, category_id")
+        .in("id", ids);
+      const byId = new Map((targets ?? []).map((t) => [t.id, t]));
+      return (data ?? [])
+        .map((l) => ({ anchor: l.anchor_text, target: byId.get(l.target_article_id) }))
+        .filter((x) => x.target);
+    },
+  });
+
   const ratings = useQuery({
     queryKey: ["kb-ratings", article.data?.id],
     enabled: !!article.data?.id,
