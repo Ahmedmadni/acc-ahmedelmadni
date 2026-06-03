@@ -26,23 +26,53 @@ const ItemSchema = z.object({
 
 type LibItemInput = z.infer<typeof ItemSchema>;
 
+export type LibraryItemRow = {
+  id: string;
+  type: (typeof ITEM_TYPES)[number];
+  title_ar: string;
+  title_en: string | null;
+  description_ar: string | null;
+  description_en: string | null;
+  category_slug: string;
+  url: string | null;
+  cover_image: string | null;
+  author: string | null;
+  provider: string | null;
+  level: string | null;
+  duration_hours: number | null;
+  is_free: boolean;
+  price: number | null;
+  tags: string[];
+  sort_order: number;
+  is_published: boolean;
+  generation_source: string;
+  ai_model: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+// Loose-typed Supabase accessor for the not-yet-codegen'd library_items table.
+type LooseSb = {
+  from: (t: string) => {
+    select: (s: string) => {
+      order: (c: string, o: { ascending: boolean }) => Promise<{ data: unknown; error: { message: string } | null }>;
+    };
+    insert: (v: unknown) => {
+      select: (s: string) => { single: () => Promise<{ data: unknown; error: { message: string } | null }> };
+    };
+    update: (v: unknown) => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
+    delete: () => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
+  };
+};
+
 // ============ List ============
 export const listLibraryItemsFn = createServerFn({ method: "GET" })
   .middleware([requireAdmin])
   .handler(async ({ context }) => {
-    const { supabase } = context;
-    const { data, error } = await (supabase as unknown as {
-      from: (t: string) => {
-        select: (s: string) => {
-          order: (c: string, o: { ascending: boolean }) => Promise<{ data: unknown; error: { message: string } | null }>;
-        };
-      };
-    })
-      .from("library_items")
-      .select("*")
-      .order("created_at", { ascending: false });
+    const sb = context.supabase as unknown as LooseSb;
+    const { data, error } = await sb.from("library_items").select("*").order("created_at", { ascending: false });
     if (error) throw new Error(error.message);
-    return { items: (data as Array<Record<string, unknown>>) ?? [] };
+    return { items: (data as LibraryItemRow[]) ?? [] };
   });
 
 // ============ Create ============
@@ -50,21 +80,11 @@ export const createLibraryItemFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) => ItemSchema.parse(input))
   .handler(async ({ data, context }) => {
-    const { supabase } = context;
+    const sb = context.supabase as unknown as LooseSb;
     const payload = normalize(data);
-    const { data: row, error } = await (supabase as unknown as {
-      from: (t: string) => {
-        insert: (v: unknown) => {
-          select: (s: string) => { single: () => Promise<{ data: unknown; error: { message: string } | null }> };
-        };
-      };
-    })
-      .from("library_items")
-      .insert(payload)
-      .select("*")
-      .single();
+    const { data: row, error } = await sb.from("library_items").insert(payload).select("*").single();
     if (error) throw new Error(error.message);
-    return { item: row as Record<string, unknown> };
+    return { item: row as LibraryItemRow };
   });
 
 // ============ Update ============
@@ -74,16 +94,9 @@ export const updateLibraryItemFn = createServerFn({ method: "POST" })
     z.object({ id: z.string().uuid(), patch: ItemSchema.partial() }).parse(input),
   )
   .handler(async ({ data, context }) => {
-    const { supabase } = context;
+    const sb = context.supabase as unknown as LooseSb;
     const payload = normalize(data.patch as LibItemInput);
-    const { error } = await (supabase as unknown as {
-      from: (t: string) => {
-        update: (v: unknown) => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
-      };
-    })
-      .from("library_items")
-      .update(payload)
-      .eq("id", data.id);
+    const { error } = await sb.from("library_items").update(payload).eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -93,15 +106,8 @@ export const deleteLibraryItemFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
-    const { supabase } = context;
-    const { error } = await (supabase as unknown as {
-      from: (t: string) => {
-        delete: () => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
-      };
-    })
-      .from("library_items")
-      .delete()
-      .eq("id", data.id);
+    const sb = context.supabase as unknown as LooseSb;
+    const { error } = await sb.from("library_items").delete().eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -113,15 +119,8 @@ export const togglePublishItemFn = createServerFn({ method: "POST" })
     z.object({ id: z.string().uuid(), is_published: z.boolean() }).parse(input),
   )
   .handler(async ({ data, context }) => {
-    const { supabase } = context;
-    const { error } = await (supabase as unknown as {
-      from: (t: string) => {
-        update: (v: unknown) => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
-      };
-    })
-      .from("library_items")
-      .update({ is_published: data.is_published })
-      .eq("id", data.id);
+    const sb = context.supabase as unknown as LooseSb;
+    const { error } = await sb.from("library_items").update({ is_published: data.is_published }).eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -174,7 +173,7 @@ ${data.url ? `الرابط المرجعي: ${data.url}` : ""}
   "title_en": "Concise English title",
   "description_ar": "وصف 2-3 جمل بالعربية يلخص محتوى ${typeLabel[data.type]} وفائدته للمحاسب",
   "description_en": "2-3 sentence English description",
-  "tags": ["وسم1","tag2", "..."],
+  "tags": ["وسم1","tag2","..."],
   "level": "beginner | intermediate | advanced",
   "provider": "اسم المنصة أو الناشر إن وُجد",
   "author": "اسم المؤلف أو المحاضر إن وُجد"
@@ -213,31 +212,27 @@ ${data.url ? `الرابط المرجعي: ${data.url}` : ""}
   });
 
 // ============ Articles CRUD additions ============
+const ArticlePatchSchema = z.object({
+  title_ar: z.string().min(3).max(200).optional(),
+  title_en: z.string().max(200).optional(),
+  excerpt_ar: z.string().max(800).optional(),
+  excerpt_en: z.string().max(800).optional(),
+  meta_title: z.string().max(120).optional(),
+  meta_description: z.string().max(300).optional(),
+  featured_image: z.string().url().optional().nullable(),
+  is_featured: z.boolean().optional(),
+  status: z.enum(["draft", "pending_review", "approved", "published", "rejected"]).optional(),
+});
+type ArticlePatch = z.infer<typeof ArticlePatchSchema>;
+
 export const updateArticleFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) =>
-    z
-      .object({
-        id: z.string().uuid(),
-        patch: z
-          .object({
-            title_ar: z.string().min(3).max(200).optional(),
-            title_en: z.string().max(200).optional(),
-            excerpt_ar: z.string().max(800).optional(),
-            excerpt_en: z.string().max(800).optional(),
-            meta_title: z.string().max(120).optional(),
-            meta_description: z.string().max(300).optional(),
-            featured_image: z.string().url().optional().nullable(),
-            is_featured: z.boolean().optional(),
-            status: z.enum(["draft", "pending_review", "approved", "published", "rejected"]).optional(),
-          })
-          .partial(),
-      })
-      .parse(input),
+    z.object({ id: z.string().uuid(), patch: ArticlePatchSchema }).parse(input),
   )
   .handler(async ({ data, context }) => {
     const { supabase } = context;
-    const patch: Record<string, unknown> = { ...data.patch };
+    const patch: ArticlePatch & { published_at?: string } = { ...data.patch };
     if (data.patch.status === "published") patch.published_at = new Date().toISOString();
     const { error } = await supabase.from("kb_articles").update(patch).eq("id", data.id);
     if (error) throw new Error(error.message);
