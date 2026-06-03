@@ -32,9 +32,9 @@ const ToolsIndexRoute = ToolsIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
-  id: '/$toolId',
-  path: '/$toolId',
-  getParentRoute: () => ToolsRoute,
+  id: '/tools/$toolId',
+  path: '/tools/$toolId',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
   id: '/api/cv-enhance',
@@ -104,6 +104,7 @@ export interface RootRouteChildren {
   LibraryRoute: typeof LibraryRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
+  ToolsToolIdRoute: typeof ToolsToolIdRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
 }
 
@@ -132,10 +133,10 @@ declare module '@tanstack/react-router' {
     }
     '/tools/$toolId': {
       id: '/tools/$toolId'
-      path: '/$toolId'
+      path: '/tools/$toolId'
       fullPath: '/tools/$toolId'
       preLoaderRoute: typeof ToolsToolIdRouteImport
-      parentRoute: typeof ToolsRoute
+      parentRoute: typeof rootRouteImport
     }
     '/api/cv-enhance': {
       id: '/api/cv-enhance'
@@ -159,18 +160,9 @@ const rootRouteChildren: RootRouteChildren = {
   LibraryRoute: LibraryRoute,
   ApiChatRoute: ApiChatRoute,
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
+  ToolsToolIdRoute: ToolsToolIdRoute,
   ToolsIndexRoute: ToolsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
