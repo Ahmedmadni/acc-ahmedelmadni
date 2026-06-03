@@ -178,7 +178,7 @@ function KnowledgeHubPage() {
       )}
 
       {/* ALL / SEARCH RESULTS */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+      <section id="all-articles" className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 scroll-mt-24">
         <h2 className="mb-4 text-lg font-bold text-white">
           {q ? `نتائج البحث (${filtered.length})` : "أحدث المقالات"}
         </h2>
