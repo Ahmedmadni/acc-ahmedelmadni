@@ -301,16 +301,6 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
             <BookOpen className="size-4" />
             <span className="hidden sm:inline">{lang === "ar" ? "المكتبة المحاسبية" : "Knowledge"}</span>
           </RouterLink>
-          <RouterLink
-            to="/library"
-            onMouseEnter={playHover}
-            onClick={playClick}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/60 bg-[#d7aa52]/10 px-3 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:scale-105"
-            aria-label={t.nav.library[lang]}
-          >
-            <GraduationCap className="size-4" />
-            <span className="hidden sm:inline">{t.nav.library[lang]}</span>
-          </RouterLink>
           <button onClick={onTheme} onMouseEnter={playHover}
             className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
             aria-label="Toggle theme">
