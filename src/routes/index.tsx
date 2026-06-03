@@ -74,7 +74,60 @@ function useIsAdmin() {
   return isAdmin;
 }
 
-export const Route = createFileRoute("/")({ component: Index });
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "أحمد المدني | محاسب أول - Senior Accountant in Riyadh" },
+      {
+        name: "description",
+        content:
+          "موقع أحمد المدني — محاسب أول ومستشار مالي بالرياض. خدمات محاسبة وتقارير مالية وتحليل تكاليف وفق IFRS ومتطلبات ZATCA.",
+      },
+      { property: "og:url", content: "https://acc-ahmedelmadni.lovable.app/" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "ما هي الخدمات التي يقدمها أحمد المدني؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "إعداد التقارير المالية، محاسبة التكاليف، الإقرارات الزكوية والضريبية، تطبيق معايير IFRS، وإعداد القوائم المالية الختامية.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "أين يقع مقر العمل؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "الرياض، المملكة العربية السعودية — مع تقديم الخدمات عن بُعد لجميع مناطق المملكة.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "هل تقدمون أدوات حساب الزكاة وضريبة القيمة المضافة؟",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "نعم — يحتوي الموقع على نماذج رسمية مطابقة لهيئة الزكاة والضريبة والجمارك (ZATCA) لإقرار الزكاة وإقرار ضريبة القيمة المضافة.",
+              },
+            },
+          ],
+        }),
+      },
+    ],
+  }),
+  component: Index,
+});
+
 
 type Theme = "dark" | "light";
 
