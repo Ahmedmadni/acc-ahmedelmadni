@@ -125,6 +125,7 @@ function AdminKnowledgePage() {
               <thead className="bg-white/[0.04] text-right text-white/60">
                 <tr>
                   <th className="p-3">العنوان</th>
+                  <th className="p-3">SEO</th>
                   <th className="p-3">الحالة</th>
                   <th className="p-3">المصدر</th>
                   <th className="p-3">إنشاء</th>
@@ -132,7 +133,15 @@ function AdminKnowledgePage() {
                 </tr>
               </thead>
               <tbody>
-                {(articles.data?.articles ?? []).map((a) => (
+                {(articles.data?.articles ?? []).map((a) => {
+                  const seo = computeArticleSeoScore(a);
+                  const color =
+                    seo.score >= 75
+                      ? "bg-emerald-500/20 text-emerald-200"
+                      : seo.score >= 50
+                        ? "bg-amber-500/20 text-amber-200"
+                        : "bg-red-500/20 text-red-200";
+                  return (
                   <tr key={a.id} className="border-t border-white/[0.05] text-white">
                     <td className="p-3">
                       <Link
