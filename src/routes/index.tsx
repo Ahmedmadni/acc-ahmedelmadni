@@ -1152,18 +1152,17 @@ export function Certs({ lang }: { lang: Lang }) {
 }
 
 /* ============= CONTACT ============= */
-function Contact({ lang }: { lang: Lang }) {
+export function Contact({ lang }: { lang: Lang }) {
   const items = [
     { icon: Phone, label: t.contact.phone[lang], value: "0560409811", href: "tel:+966560409811" },
     { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
-    { icon: Car, label: lang === "ar" ? "التنقل" : "Mobility", value: t.contact.driving[lang], href: "#" },
   ];
   return (
     <section id="contact" className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((c, i) => {
             const Icon = c.icon;
             return (
@@ -1180,18 +1179,11 @@ function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
-
-        <div className="mt-14 text-center">
-          <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
-            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-9 py-4 text-sm font-bold text-[#04101f] shadow-xl shadow-[#d7aa52]/30 transition-transform hover:scale-105">
-            <Download className="size-5" />
-            {t.nav.cv[lang]}
-          </a>
-        </div>
       </div>
     </section>
   );
 }
+
 
 /* ============= FOOTER ============= */
 export function Footer({ lang }: { lang: Lang }) {
