@@ -709,7 +709,7 @@ function ArticlesPanel() {
                 if (!editing) return;
                 upd.mutate({
                   id: editing.id,
-                  patch: { title_ar: titleEdit, status: statusEdit as never },
+                  patch: { title_ar: titleEdit, status: statusEdit as "draft" | "pending_review" | "approved" | "published" | "rejected" },
                 });
               }}
               className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
