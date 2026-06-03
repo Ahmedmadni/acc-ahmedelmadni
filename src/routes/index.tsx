@@ -1199,10 +1199,7 @@ export function Footer({ lang }: { lang: Lang }) {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
       <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
-      {/* SOCIAL BUBBLE — inspired by the requested chat-bubble layout */}
-      <FooterSocialBubble lang={lang} />
-
-      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4 mt-14">
+      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="text-2xl font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
           <p className="mt-3 max-w-md text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
@@ -1240,6 +1237,36 @@ export function Footer({ lang }: { lang: Lang }) {
             <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
+          {/* Social icons inline under contact info */}
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            {SOCIALS.map((s) => (
+              <motion.a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                title={s.label}
+                onMouseEnter={playHover}
+                onClick={playClick}
+                whileHover={{ y: -4, scale: 1.1 }}
+                whileTap={{ scale: 0.92 }}
+                className="group relative flex items-center justify-center"
+              >
+                <span
+                  className="flex size-11 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_8px_28px_-6px_rgba(215,170,82,0.45)]"
+                  style={{ color: s.color }}
+                >
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-2xl opacity-0 blur-lg transition-opacity group-hover:opacity-40"
+                    style={{ background: s.color }}
+                  />
+                  <i className={`${s.icon} relative text-xl`} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
         </div>
       </div>
 
