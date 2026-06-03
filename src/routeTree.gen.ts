@@ -21,6 +21,7 @@ import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
+import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
 const LibraryRoute = LibraryRouteImport.update({
   id: '/library',
@@ -84,6 +85,12 @@ const AuthenticatedAdminKnowledgeRoute =
     path: '/admin/knowledge',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const ApiPublicHooksGenerateArticlesRoute =
+  ApiPublicHooksGenerateArticlesRouteImport.update({
+    id: '/api/public/hooks/generate-articles',
+    path: '/api/public/hooks/generate-articles',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByFullPath {
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
+  '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +118,7 @@ export interface FileRoutesByTo {
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug': typeof KnowledgeCategorySlugIndexRoute
+  '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +134,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
+  '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -140,6 +150,7 @@ export interface FileRouteTypes {
     | '/admin/knowledge'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
+    | '/api/public/hooks/generate-articles'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -153,6 +164,7 @@ export interface FileRouteTypes {
     | '/admin/knowledge'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug'
+    | '/api/public/hooks/generate-articles'
   id:
     | '__root__'
     | '/'
@@ -167,6 +179,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/knowledge'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
+    | '/api/public/hooks/generate-articles'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -181,6 +194,7 @@ export interface RootRouteChildren {
   ToolsIndexRoute: typeof ToolsIndexRoute
   KnowledgeCategorySlugArticleSlugRoute: typeof KnowledgeCategorySlugArticleSlugRoute
   KnowledgeCategorySlugIndexRoute: typeof KnowledgeCategorySlugIndexRoute
+  ApiPublicHooksGenerateArticlesRoute: typeof ApiPublicHooksGenerateArticlesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -269,6 +283,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminKnowledgeRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/api/public/hooks/generate-articles': {
+      id: '/api/public/hooks/generate-articles'
+      path: '/api/public/hooks/generate-articles'
+      fullPath: '/api/public/hooks/generate-articles'
+      preLoaderRoute: typeof ApiPublicHooksGenerateArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -295,6 +316,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsIndexRoute: ToolsIndexRoute,
   KnowledgeCategorySlugArticleSlugRoute: KnowledgeCategorySlugArticleSlugRoute,
   KnowledgeCategorySlugIndexRoute: KnowledgeCategorySlugIndexRoute,
+  ApiPublicHooksGenerateArticlesRoute: ApiPublicHooksGenerateArticlesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
