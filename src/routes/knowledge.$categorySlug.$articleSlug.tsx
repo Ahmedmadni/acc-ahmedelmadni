@@ -60,7 +60,7 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
           dateModified: a?.updated_at ?? a?.published_at ?? undefined,
           author: {
             "@type": "Person",
-            name: a?.author ?? "Ahmed Elmadani",
+            name: "Ahmed Elmadani",
             url: "https://acc-ahmedelmadni.lovable.app/",
           },
           publisher: {
