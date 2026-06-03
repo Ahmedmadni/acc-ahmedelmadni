@@ -366,8 +366,8 @@ function Hero({ lang }: { lang: Lang }) {
         <div className="absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,170,82,0.18),transparent_60%)]" />
       </div>
 
-      {/* Floating dashboard widgets over the video background */}
-      <HeroDashWidgets lang={lang} />
+
+
 
       <div className="mx-auto grid w-[92%] max-w-7xl items-center gap-12 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.8 }}
