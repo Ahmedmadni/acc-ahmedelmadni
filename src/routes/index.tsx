@@ -285,17 +285,13 @@ function Index() {
       <main>
         <Hero lang={lang} />
         <Stats lang={lang} />
-        <About lang={lang} />
-        <Services lang={lang} onOpen={setServiceModal} />
-        <Experience lang={lang} />
-        <Skills lang={lang} onOpen={setSkillModal} />
-        <BeforeAfter lang={lang} />
+        <DecisionsVideo lang={lang} />
         <Testimonials lang={lang} />
-        <Certs lang={lang} />
         <Contact lang={lang} />
       </main>
 
       <Footer lang={lang} />
+
 
       <FloatingSocial isRTL={isRTL} />
       <AIAssistant lang={lang} />
