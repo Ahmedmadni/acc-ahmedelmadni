@@ -321,7 +321,7 @@ export const listAdminArticlesFn = createServerFn({ method: "GET" })
     const { data, error } = await supabase
       .from("kb_articles")
       .select(
-        "id,slug,title_ar,status,created_at,reviewed_at,featured_image,generation_source,category_id",
+        "id,slug,title_ar,status,created_at,reviewed_at,featured_image,generation_source,category_id,meta_title,meta_description,excerpt_ar,content_ar,keywords,faq",
       )
       .order("created_at", { ascending: false })
       .limit(100);
