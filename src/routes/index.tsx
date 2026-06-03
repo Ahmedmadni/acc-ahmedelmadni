@@ -310,15 +310,16 @@ function Index() {
 }
 
 /* ============= NAVBAR ============= */
-function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
+export function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
   const isAdmin = useIsAdmin();
-  const links = [
-    { id: "home", label: t.nav.home[lang] },
-    { id: "about", label: t.nav.about[lang] },
-    { id: "services", label: t.nav.services[lang] },
-    { id: "experience", label: t.nav.experience[lang] },
-    { id: "skills", label: t.nav.skills[lang] },
-    { id: "contact", label: t.nav.contact[lang] },
+  const links: { to: string; label: string }[] = [
+    { to: "/", label: t.nav.home[lang] },
+    { to: "/about", label: t.nav.about[lang] },
+    { to: "/services", label: t.nav.services[lang] },
+    { to: "/experience", label: t.nav.experience[lang] },
+    { to: "/skills", label: t.nav.skills[lang] },
+    { to: "/certifications", label: lang === "ar" ? "الشهادات" : "Certifications" },
+    { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
     <motion.nav
@@ -329,24 +330,33 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
       style={{ background: "color-mix(in oklab, var(--bg-surface) 70%, transparent)" }}
     >
       <div className="mx-auto flex h-20 w-[92%] max-w-7xl items-center justify-between">
-        <a href="#home" className="group flex flex-col leading-tight" onMouseEnter={playHover}>
+        <RouterLink to="/" className="group flex flex-col leading-tight" onMouseEnter={playHover}>
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
           <span className="text-[11px] uppercase tracking-[0.3em] gold-text">Senior Accountant</span>
-        </a>
+        </RouterLink>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (
-            <li key={l.id}>
-              <a href={`#${l.id}`} onMouseEnter={playHover}
-                className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
-                style={{ color: "var(--fg-soft)" }}>
-                {l.label}
-              </a>
+            <li key={l.to}>
+              {l.to.startsWith("/#") ? (
+                <a href={l.to.slice(1)} onMouseEnter={playHover}
+                  className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
+                  style={{ color: "var(--fg-soft)" }}>
+                  {l.label}
+                </a>
+              ) : (
+                <RouterLink to={l.to} onMouseEnter={playHover}
+                  className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
+                  style={{ color: "var(--fg-soft)" }}>
+                  {l.label}
+                </RouterLink>
+              )}
             </li>
           ))}
         </ul>
+
 
         <div className="flex items-center gap-2 sm:gap-3">
           <RouterLink
