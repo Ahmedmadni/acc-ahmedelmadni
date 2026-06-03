@@ -1179,6 +1179,40 @@ export function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
+        {/* Social icons under contact cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+        >
+          {SOCIALS.map((s, i) => (
+            <motion.a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              onMouseEnter={playHover}
+              onClick={playClick}
+              whileHover={{ scale: 1.12, y: -4 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 18 }}
+              className="group relative flex size-16 items-center justify-center rounded-2xl text-2xl text-white shadow-lg ring-1 ring-white/15"
+              style={{
+                background: `linear-gradient(135deg, ${s.color}, ${s.color}cc)`,
+                boxShadow: `0 10px 30px -10px ${s.color}80`,
+                color: s.color === "#FFFC00" ? "#1a1a1a" : "#fff",
+              }}
+            >
+              <i className={s.icon} />
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ boxShadow: `0 0 30px ${s.color}` }}
+              />
+            </motion.a>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
@@ -1237,36 +1271,6 @@ export function Footer({ lang }: { lang: Lang }) {
             <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
-          {/* Social icons inline under contact info */}
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            {SOCIALS.map((s) => (
-              <motion.a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                title={s.label}
-                onMouseEnter={playHover}
-                onClick={playClick}
-                whileHover={{ y: -4, scale: 1.1 }}
-                whileTap={{ scale: 0.92 }}
-                className="group relative flex items-center justify-center"
-              >
-                <span
-                  className="flex size-11 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_8px_28px_-6px_rgba(215,170,82,0.45)]"
-                  style={{ color: s.color }}
-                >
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 rounded-2xl opacity-0 blur-lg transition-opacity group-hover:opacity-40"
-                    style={{ background: s.color }}
-                  />
-                  <i className={`${s.icon} relative text-xl`} />
-                </span>
-              </motion.a>
-            ))}
-          </div>
         </div>
       </div>
 
