@@ -17,6 +17,7 @@ import {
   Car,
   CheckCircle2,
   ChevronRight,
+  BookOpen,
   Download,
   FileText,
   GraduationCap,
