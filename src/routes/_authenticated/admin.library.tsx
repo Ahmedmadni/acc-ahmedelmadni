@@ -575,8 +575,8 @@ function ArticlesPanel() {
   const [statusEdit, setStatusEdit] = useState<string>("draft");
 
   const upd = useMutation({
-    mutationFn: (v: { id: string; patch: Record<string, unknown> }) =>
-      updFn({ data: v as { id: string; patch: Parameters<typeof updFn>[0]["data"]["patch"] } }),
+    mutationFn: (v: { id: string; patch: { title_ar?: string; status?: "draft" | "pending_review" | "approved" | "published" | "rejected" } }) =>
+      updFn({ data: v }),
     onSuccess: () => {
       toast.success("تم التحديث");
       qc.invalidateQueries({ queryKey: ["admin-articles"] });
