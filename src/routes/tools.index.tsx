@@ -129,10 +129,15 @@ function ToolCard({ tool, lang }: { tool: ToolMeta; lang: Lang }) {
     <Link
       to="/tools/$toolId"
       params={{ toolId: tool.id }}
-      className="group relative block overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-2xl hover:shadow-[#d7aa52]/10"
+      className={`group relative block overflow-hidden rounded-2xl border p-5 backdrop-blur-xl transition-all hover:-translate-y-1 hover:shadow-2xl ${tool.official ? "border-emerald-400/40 bg-gradient-to-br from-emerald-400/10 via-white/[0.03] to-transparent hover:border-emerald-400/70 hover:shadow-emerald-400/10" : "border-[#d7aa52]/20 bg-gradient-to-br from-white/[0.04] to-white/[0.01] hover:border-[#d7aa52]/60 hover:shadow-[#d7aa52]/10"}`}
     >
+      {tool.official && (
+        <span className="absolute end-3 top-3 inline-flex items-center gap-1 rounded-full border border-emerald-400/50 bg-emerald-400/15 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-emerald-200">
+          ZATCA · {lang === "ar" ? "رسمي" : "Official"}
+        </span>
+      )}
       <div className="flex items-start gap-3">
-        <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#d7aa52]/30 bg-[#d7aa52]/10 text-[#f3d28a]">
+        <div className={`flex size-11 shrink-0 items-center justify-center rounded-xl border ${tool.official ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/30 bg-[#d7aa52]/10 text-[#f3d28a]"}`}>
           <Icon className="size-5" />
         </div>
         <div className="min-w-0 flex-1">
