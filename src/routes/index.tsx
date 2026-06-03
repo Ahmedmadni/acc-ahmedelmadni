@@ -610,7 +610,7 @@ function Stats({ lang }: { lang: Lang }) {
 }
 
 /* ============= ABOUT ============= */
-function About({ lang }: { lang: Lang }) {
+export function About({ lang }: { lang: Lang }) {
   return (
     <section id="about" className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
@@ -622,6 +622,17 @@ function About({ lang }: { lang: Lang }) {
             style={{ color: "var(--fg-soft)" }}>
             <p>{t.about.body[lang]}</p>
             <p>{t.about.body2[lang]}</p>
+            <div className="flex flex-wrap items-center gap-3 pt-3">
+              <span className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-4 py-2 text-sm font-semibold" style={{ color: "var(--fg)" }}>
+                <Car className="size-4 text-[#d7aa52]" />
+                {t.contact.driving[lang]}
+              </span>
+              <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105">
+                <Download className="size-4" />
+                {t.nav.cv[lang]}
+              </a>
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
@@ -644,9 +655,21 @@ function About({ lang }: { lang: Lang }) {
           </motion.div>
         </div>
 
+        <div className="mt-12">
+          <DecisionsVideo lang={lang} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function DecisionsVideo({ lang }: { lang: Lang }) {
+  return (
+    <section className="py-12">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}
-          className="relative mt-12 overflow-hidden rounded-3xl gold-border">
+          className="relative overflow-hidden rounded-3xl gold-border">
           <video
             src="/bg-video-3.mp4"
             autoPlay loop muted playsInline preload="metadata"
@@ -670,6 +693,7 @@ function About({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 
 /* ============= SERVICES ============= */
 function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
