@@ -285,17 +285,13 @@ function Index() {
       <main>
         <Hero lang={lang} />
         <Stats lang={lang} />
-        <About lang={lang} />
-        <Services lang={lang} onOpen={setServiceModal} />
-        <Experience lang={lang} />
-        <Skills lang={lang} onOpen={setSkillModal} />
-        <BeforeAfter lang={lang} />
+        <DecisionsVideo lang={lang} />
         <Testimonials lang={lang} />
-        <Certs lang={lang} />
         <Contact lang={lang} />
       </main>
 
       <Footer lang={lang} />
+
 
       <FloatingSocial isRTL={isRTL} />
       <AIAssistant lang={lang} />
@@ -314,15 +310,16 @@ function Index() {
 }
 
 /* ============= NAVBAR ============= */
-function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
+export function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
   const isAdmin = useIsAdmin();
-  const links = [
-    { id: "home", label: t.nav.home[lang] },
-    { id: "about", label: t.nav.about[lang] },
-    { id: "services", label: t.nav.services[lang] },
-    { id: "experience", label: t.nav.experience[lang] },
-    { id: "skills", label: t.nav.skills[lang] },
-    { id: "contact", label: t.nav.contact[lang] },
+  const links: { to: string; label: string }[] = [
+    { to: "/", label: t.nav.home[lang] },
+    { to: "/about", label: t.nav.about[lang] },
+    { to: "/services", label: t.nav.services[lang] },
+    { to: "/experience", label: t.nav.experience[lang] },
+    { to: "/skills", label: t.nav.skills[lang] },
+    { to: "/certifications", label: lang === "ar" ? "الشهادات" : "Certifications" },
+    { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
     <motion.nav
@@ -333,24 +330,33 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
       style={{ background: "color-mix(in oklab, var(--bg-surface) 70%, transparent)" }}
     >
       <div className="mx-auto flex h-20 w-[92%] max-w-7xl items-center justify-between">
-        <a href="#home" className="group flex flex-col leading-tight" onMouseEnter={playHover}>
+        <RouterLink to="/" className="group flex flex-col leading-tight" onMouseEnter={playHover}>
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
           <span className="text-[11px] uppercase tracking-[0.3em] gold-text">Senior Accountant</span>
-        </a>
+        </RouterLink>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (
-            <li key={l.id}>
-              <a href={`#${l.id}`} onMouseEnter={playHover}
-                className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
-                style={{ color: "var(--fg-soft)" }}>
-                {l.label}
-              </a>
+            <li key={l.to}>
+              {l.to.startsWith("/#") ? (
+                <a href={l.to.slice(1)} onMouseEnter={playHover}
+                  className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
+                  style={{ color: "var(--fg-soft)" }}>
+                  {l.label}
+                </a>
+              ) : (
+                <RouterLink to={l.to} onMouseEnter={playHover}
+                  className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
+                  style={{ color: "var(--fg-soft)" }}>
+                  {l.label}
+                </RouterLink>
+              )}
             </li>
           ))}
         </ul>
+
 
         <div className="flex items-center gap-2 sm:gap-3">
           <RouterLink
@@ -492,6 +498,21 @@ function Hero({ lang }: { lang: Lang }) {
               <span className="relative">{t.hero.cta1[lang]}</span>
               <Arrow className="relative size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
             </a>
+            <a
+              href={`https://wa.me/966560409811?text=${encodeURIComponent(
+                lang === "ar"
+                  ? "السلام عليكم أستاذ أحمد، أود طلب خدمة محاسبية."
+                  : "Hello Ahmed, I'd like to request an accounting service.",
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-emerald-400/60 bg-emerald-500/15 px-7 py-3.5 text-sm font-bold text-emerald-200 shadow-xl shadow-emerald-500/20 transition-all hover:scale-105 hover:bg-emerald-500/25"
+            >
+              <i className="fa-brands fa-whatsapp text-base" />
+              <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
+            </a>
             <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
               className="inline-flex items-center gap-2 rounded-full gold-border px-7 py-3.5 text-sm font-bold transition-all hover:bg-[#d7aa52]/10"
               style={{ color: "var(--fg)" }}>
@@ -499,6 +520,7 @@ function Hero({ lang }: { lang: Lang }) {
               {t.hero.cta2[lang]}
             </a>
           </div>
+
 
           <div className="flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
             <MapPin className="size-4 text-[#d7aa52]" />
@@ -588,7 +610,7 @@ function Stats({ lang }: { lang: Lang }) {
 }
 
 /* ============= ABOUT ============= */
-function About({ lang }: { lang: Lang }) {
+export function About({ lang }: { lang: Lang }) {
   return (
     <section id="about" className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
@@ -600,6 +622,17 @@ function About({ lang }: { lang: Lang }) {
             style={{ color: "var(--fg-soft)" }}>
             <p>{t.about.body[lang]}</p>
             <p>{t.about.body2[lang]}</p>
+            <div className="flex flex-wrap items-center gap-3 pt-3">
+              <span className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-4 py-2 text-sm font-semibold" style={{ color: "var(--fg)" }}>
+                <Car className="size-4 text-[#d7aa52]" />
+                {t.contact.driving[lang]}
+              </span>
+              <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105">
+                <Download className="size-4" />
+                {t.nav.cv[lang]}
+              </a>
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
@@ -622,9 +655,21 @@ function About({ lang }: { lang: Lang }) {
           </motion.div>
         </div>
 
+        <div className="mt-12">
+          <DecisionsVideo lang={lang} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function DecisionsVideo({ lang }: { lang: Lang }) {
+  return (
+    <section className="py-12">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}
-          className="relative mt-12 overflow-hidden rounded-3xl gold-border">
+          className="relative overflow-hidden rounded-3xl gold-border">
           <video
             src="/bg-video-3.mp4"
             autoPlay loop muted playsInline preload="metadata"
@@ -649,8 +694,9 @@ function About({ lang }: { lang: Lang }) {
   );
 }
 
+
 /* ============= SERVICES ============= */
-function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
+export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
   const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
   return (
     <section id="services" className="relative py-24">
@@ -696,7 +742,7 @@ function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => vo
 }
 
 /* ============= SERVICE MODAL ============= */
-function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
+export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
@@ -738,7 +784,7 @@ function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; 
 
 
 /* ============= EXPERIENCE ============= */
-function Experience({ lang }: { lang: Lang }) {
+export function Experience({ lang }: { lang: Lang }) {
   return (
     <section id="experience" className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
@@ -827,7 +873,7 @@ function LogoBadge({ logo, compact = false }: {
 }
 
 /* ============= SKILLS (interactive) ============= */
-function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }) {
+export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }) {
   const [active, setActive] = useState(0);
   const groupIcons = [BarChart3, Wallet, Wrench];
 
@@ -915,7 +961,7 @@ function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }
 }
 
 /* ============= SKILL MODAL ============= */
-function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onClose: () => void }) {
+export function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onClose: () => void }) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
@@ -978,7 +1024,7 @@ function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onCl
 }
 
 /* ============= BEFORE / AFTER ============= */
-function BeforeAfter({ lang }: { lang: Lang }) {
+export function BeforeAfter({ lang }: { lang: Lang }) {
   const [pos, setPos] = useState(50);
   const wrapRef = useRef<HTMLDivElement>(null);
   const drag = useRef(false);
@@ -1085,7 +1131,7 @@ function Testimonials({ lang }: { lang: Lang }) {
 }
 
 /* ============= CERTS ============= */
-function Certs({ lang }: { lang: Lang }) {
+export function Certs({ lang }: { lang: Lang }) {
   return (
     <section className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
@@ -1106,18 +1152,17 @@ function Certs({ lang }: { lang: Lang }) {
 }
 
 /* ============= CONTACT ============= */
-function Contact({ lang }: { lang: Lang }) {
+export function Contact({ lang }: { lang: Lang }) {
   const items = [
     { icon: Phone, label: t.contact.phone[lang], value: "0560409811", href: "tel:+966560409811" },
     { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
-    { icon: Car, label: lang === "ar" ? "التنقل" : "Mobility", value: t.contact.driving[lang], href: "#" },
   ];
   return (
     <section id="contact" className="py-24">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((c, i) => {
             const Icon = c.icon;
             return (
@@ -1134,27 +1179,20 @@ function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
-
-        <div className="mt-14 text-center">
-          <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
-            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-9 py-4 text-sm font-bold text-[#04101f] shadow-xl shadow-[#d7aa52]/30 transition-transform hover:scale-105">
-            <Download className="size-5" />
-            {t.nav.cv[lang]}
-          </a>
-        </div>
       </div>
     </section>
   );
 }
 
+
 /* ============= FOOTER ============= */
-function Footer({ lang }: { lang: Lang }) {
+export function Footer({ lang }: { lang: Lang }) {
   const links = [
-    { id: "about", label: t.nav.about[lang] },
-    { id: "services", label: t.nav.services[lang] },
-    { id: "experience", label: t.nav.experience[lang] },
-    { id: "skills", label: t.nav.skills[lang] },
-    { id: "contact", label: t.nav.contact[lang] },
+    { to: "/about", label: t.nav.about[lang] },
+    { to: "/services", label: t.nav.services[lang] },
+    { to: "/experience", label: t.nav.experience[lang] },
+    { to: "/skills", label: t.nav.skills[lang] },
+    { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
     <footer className="relative mt-12 border-t border-[var(--line)] pt-16 pb-10">
@@ -1177,8 +1215,12 @@ function Footer({ lang }: { lang: Lang }) {
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
           <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
             {links.map((l) => (
-              <li key={l.id}>
-                <a href={`#${l.id}`} className="transition-colors hover:text-[#d7aa52]">{l.label}</a>
+              <li key={l.to}>
+                {l.to.startsWith("/#") ? (
+                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d7aa52]">{l.label}</a>
+                ) : (
+                  <RouterLink to={l.to} className="transition-colors hover:text-[#d7aa52]">{l.label}</RouterLink>
+                )}
               </li>
             ))}
             <li>
@@ -1188,6 +1230,7 @@ function Footer({ lang }: { lang: Lang }) {
             </li>
           </ul>
         </div>
+
 
         <div>
           <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
@@ -1280,7 +1323,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 }
 
 /* ============= FLOATING CHAT BUTTON — bottom-right, more visible & expressive ============= */
-function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
+export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <div dir="ltr" className="fixed z-40" style={{ left: 18, bottom: 18 }}>

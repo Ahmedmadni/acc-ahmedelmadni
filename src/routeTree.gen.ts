@@ -9,9 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LibraryRouteImport } from './routes/library'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
@@ -26,9 +31,19 @@ import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authent
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LibraryRoute = LibraryRouteImport.update({
@@ -36,9 +51,24 @@ const LibraryRoute = LibraryRouteImport.update({
   path: '/library',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificationsRoute = CertificationsRouteImport.update({
+  id: '/certifications',
+  path: '/certifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
@@ -114,9 +144,14 @@ const ApiPublicHooksGenerateArticlesRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/certifications': typeof CertificationsRoute
+  '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/skills': typeof SkillsRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -131,9 +166,14 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/certifications': typeof CertificationsRoute
+  '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/skills': typeof SkillsRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -150,9 +190,14 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/certifications': typeof CertificationsRoute
+  '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/skills': typeof SkillsRoute
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -169,9 +214,14 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/auth'
+    | '/certifications'
+    | '/experience'
     | '/library'
+    | '/services'
     | '/sitemap.xml'
+    | '/skills'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -186,9 +236,14 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/auth'
+    | '/certifications'
+    | '/experience'
     | '/library'
+    | '/services'
     | '/sitemap.xml'
+    | '/skills'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -204,9 +259,14 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/_authenticated'
+    | '/about'
     | '/auth'
+    | '/certifications'
+    | '/experience'
     | '/library'
+    | '/services'
     | '/sitemap.xml'
+    | '/skills'
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -223,9 +283,14 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
+  CertificationsRoute: typeof CertificationsRoute
+  ExperienceRoute: typeof ExperienceRoute
   LibraryRoute: typeof LibraryRoute
+  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SkillsRoute: typeof SkillsRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
   ToolsToolIdRoute: typeof ToolsToolIdRoute
@@ -238,11 +303,25 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/library': {
@@ -252,11 +331,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LibraryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certifications': {
+      id: '/certifications'
+      path: '/certifications'
+      fullPath: '/certifications'
+      preLoaderRoute: typeof CertificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/auth': {
       id: '/auth'
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated': {
@@ -371,9 +471,14 @@ const AuthenticatedRouteRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
+  CertificationsRoute: CertificationsRoute,
+  ExperienceRoute: ExperienceRoute,
   LibraryRoute: LibraryRoute,
+  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SkillsRoute: SkillsRoute,
   ApiChatRoute: ApiChatRoute,
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
   ToolsToolIdRoute: ToolsToolIdRoute,
