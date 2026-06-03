@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
+import { Services, ServiceModal } from "@/routes/index";
 import { t } from "@/lib/i18n";
 
 type ServiceItem = (typeof t.services.items)[number];
-
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -35,5 +35,3 @@ function ServicesPage() {
     </SubPageShell>
   );
 }
-
-void tType;
