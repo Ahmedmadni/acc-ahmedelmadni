@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LibraryRouteImport } from './routes/library'
+import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
@@ -41,6 +42,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const LibraryRoute = LibraryRouteImport.update({
   id: '/library',
   path: '/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -128,6 +134,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -147,6 +154,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -168,6 +176,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -189,6 +198,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/auth'
+    | '/experience'
     | '/library'
     | '/services'
     | '/sitemap.xml'
@@ -208,6 +218,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/auth'
+    | '/experience'
     | '/library'
     | '/services'
     | '/sitemap.xml'
@@ -228,6 +239,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/about'
     | '/auth'
+    | '/experience'
     | '/library'
     | '/services'
     | '/sitemap.xml'
@@ -249,6 +261,7 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
+  ExperienceRoute: typeof ExperienceRoute
   LibraryRoute: typeof LibraryRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -283,6 +296,13 @@ declare module '@tanstack/react-router' {
       path: '/library'
       fullPath: '/library'
       preLoaderRoute: typeof LibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -413,6 +433,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
+  ExperienceRoute: ExperienceRoute,
   LibraryRoute: LibraryRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -428,3 +449,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
