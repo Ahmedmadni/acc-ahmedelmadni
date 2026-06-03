@@ -391,6 +391,62 @@ export const TOOLS: ToolMeta[] = [
 
   // ============== Phase 2 — Tax ==============
   {
+    id: "vat-return",
+    category: "tax",
+    icon: "ClipboardList",
+    title: { ar: "نموذج الإقرار الضريبي السعودي", en: "Saudi VAT Return Form" },
+    short: {
+      ar: "محاكي إقرار ضريبة القيمة المضافة الشهري/الربعي مع تصدير PDF/Excel.",
+      en: "Saudi VAT return simulator with PDF/Excel export and AI explanation.",
+    },
+    standard: { ar: "ZATCA — لائحة ضريبة القيمة المضافة", en: "ZATCA — VAT Implementing Regulations" },
+    formula: "Net VAT = Output VAT − Deductible Input VAT",
+    about: {
+      ar: "نموذج كامل لإقرار ضريبة القيمة المضافة يشمل المبيعات الخاضعة والصفرية والمعفاة والمشتريات وضريبة المدخلات، مع شرح ذكي لكل حقل وأرشيف للإقرارات السابقة.",
+      en: "Full Saudi VAT return form covering taxable / zero-rated / exempt sales, purchases and input VAT, with AI explanations and saved declaration archive.",
+    },
+    whenToUse: {
+      ar: ["إعداد الإقرار الشهري أو الربعي قبل الرفع لـ ZATCA", "مراجعة دقة الإقرار قبل التقديم"],
+      en: ["Preparing monthly/quarterly returns before ZATCA submission", "Auditing return accuracy before filing"],
+    },
+    commonMistakes: {
+      ar: ["إدراج المبيعات شاملة الضريبة في خانة الخاضعة", "خصم مدخلات غير مؤهلة كمصاريف الضيافة"],
+      en: ["Including VAT-inclusive amounts in taxable sales", "Deducting non-eligible input VAT such as entertainment"],
+    },
+    tips: {
+      ar: ["احفظ كل فترة في الأرشيف لتتبّع الالتزام", "استخدم زر الذكاء الاصطناعي لتفسير صافي الضريبة"],
+      en: ["Save every period to the archive to track compliance", "Use the AI button to interpret the net VAT figure"],
+    },
+  },
+  {
+    id: "zakat-declaration",
+    category: "tax",
+    icon: "FileSpreadsheet",
+    title: { ar: "نموذج الإقرار الزكوي السعودي", en: "Saudi Zakat Declaration Form" },
+    short: {
+      ar: "محاكي شامل لإعداد الإقرار الزكوي السنوي مع التسويات وتقارير قابلة للطباعة.",
+      en: "Complete annual Zakat declaration simulator with adjustments and printable reports.",
+    },
+    standard: { ar: "ZATCA — لائحة جباية الزكاة", en: "ZATCA — Zakat Collection Regulations" },
+    formula: "Zakat Base = Capital + Retained + Reserves − Investments − Fixed Assets ± Adjustments",
+    about: {
+      ar: "أداة احترافية تساعدك على بناء الوعاء الزكوي بالكامل وحساب الزكاة المستحقة بنسبة 2.5%، مع تصدير PDF و Excel وأرشفة الإقرارات.",
+      en: "Professional tool to build the full Zakat base and compute the 2.5% Zakat due, with PDF & Excel export and archive support.",
+    },
+    whenToUse: {
+      ar: ["تحضير الإقرار الزكوي السنوي", "تقدير الزكاة قبل إقفال السنة المالية"],
+      en: ["Preparing the annual Zakat return", "Estimating Zakat before fiscal year-end close"],
+    },
+    commonMistakes: {
+      ar: ["عدم خصم الاستثمارات المزدوجة الزكاة", "نسيان تسويات المخصصات"],
+      en: ["Failing to deduct already-zakated investments", "Forgetting provision adjustments"],
+    },
+    tips: {
+      ar: ["استخدم الفترة بصيغة سنة-Y مثل 2026-Y", "اربط كل تسوية بمرفق داعم في ملفك"],
+      en: ["Use a period label like 2026-Y", "Tie every adjustment to a supporting workpaper"],
+    },
+  },
+  {
     id: "zakat",
     category: "tax",
     icon: "Coins",
