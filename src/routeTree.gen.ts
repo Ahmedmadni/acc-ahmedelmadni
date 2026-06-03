@@ -14,6 +14,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
@@ -53,6 +54,11 @@ const LibraryRoute = LibraryRouteImport.update({
 const ExperienceRoute = ExperienceRouteImport.update({
   id: '/experience',
   path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificationsRoute = CertificationsRouteImport.update({
+  id: '/certifications',
+  path: '/certifications',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -140,6 +146,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/certifications': typeof CertificationsRoute
   '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
@@ -161,6 +168,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/certifications': typeof CertificationsRoute
   '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
@@ -184,6 +192,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
+  '/certifications': typeof CertificationsRoute
   '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
@@ -207,6 +216,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/auth'
+    | '/certifications'
     | '/experience'
     | '/library'
     | '/services'
@@ -228,6 +238,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/auth'
+    | '/certifications'
     | '/experience'
     | '/library'
     | '/services'
@@ -250,6 +261,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/about'
     | '/auth'
+    | '/certifications'
     | '/experience'
     | '/library'
     | '/services'
@@ -273,6 +285,7 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
+  CertificationsRoute: typeof CertificationsRoute
   ExperienceRoute: typeof ExperienceRoute
   LibraryRoute: typeof LibraryRoute
   ServicesRoute: typeof ServicesRoute
@@ -323,6 +336,13 @@ declare module '@tanstack/react-router' {
       path: '/experience'
       fullPath: '/experience'
       preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certifications': {
+      id: '/certifications'
+      path: '/certifications'
+      fullPath: '/certifications'
+      preLoaderRoute: typeof CertificationsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -453,6 +473,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
+  CertificationsRoute: CertificationsRoute,
   ExperienceRoute: ExperienceRoute,
   LibraryRoute: LibraryRoute,
   ServicesRoute: ServicesRoute,
