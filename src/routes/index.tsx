@@ -309,6 +309,30 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
             <Wrench className="size-4" />
             <span className="hidden sm:inline">{lang === "ar" ? "الأدوات" : "Tools"}</span>
           </RouterLink>
+          {isAdmin && (
+            <>
+              <RouterLink
+                to="/admin/knowledge"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20 hover:scale-105"
+                aria-label="Admin Knowledge"
+              >
+                <ShieldCheck className="size-4" />
+                <span className="hidden sm:inline">{lang === "ar" ? "إدارة المحتوى" : "Content Admin"}</span>
+              </RouterLink>
+              <RouterLink
+                to="/admin/library"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20 hover:scale-105"
+                aria-label="Admin Library"
+              >
+                <ShieldCheck className="size-4" />
+                <span className="hidden sm:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
+              </RouterLink>
+            </>
+          )}
           <RouterLink
             to="/knowledge"
             onMouseEnter={playHover}
