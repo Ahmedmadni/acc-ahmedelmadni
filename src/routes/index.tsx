@@ -56,6 +56,23 @@ import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 import { AIAssistant } from "@/components/AIAssistant";
 import { Link as RouterLink } from "@tanstack/react-router";
+import { supabase } from "@/integrations/supabase/client";
+
+const ADMIN_EMAIL = "elmadnim@gmail.com";
+
+function useIsAdmin() {
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    const check = async () => {
+      const { data } = await supabase.auth.getUser();
+      setIsAdmin(data.user?.email?.toLowerCase() === ADMIN_EMAIL);
+    };
+    check();
+    const { data: sub } = supabase.auth.onAuthStateChange(() => check());
+    return () => sub.subscription.unsubscribe();
+  }, []);
+  return isAdmin;
+}
 
 export const Route = createFileRoute("/")({ component: Index });
 
@@ -244,6 +261,7 @@ function Index() {
 
 /* ============= NAVBAR ============= */
 function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
+  const isAdmin = useIsAdmin();
   const links = [
     { id: "home", label: t.nav.home[lang] },
     { id: "about", label: t.nav.about[lang] },
@@ -291,6 +309,30 @@ function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; 
             <Wrench className="size-4" />
             <span className="hidden sm:inline">{lang === "ar" ? "الأدوات" : "Tools"}</span>
           </RouterLink>
+          {isAdmin && (
+            <>
+              <RouterLink
+                to="/admin/knowledge"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20 hover:scale-105"
+                aria-label="Admin Knowledge"
+              >
+                <ShieldCheck className="size-4" />
+                <span className="hidden sm:inline">{lang === "ar" ? "إدارة المحتوى" : "Content Admin"}</span>
+              </RouterLink>
+              <RouterLink
+                to="/admin/library"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20 hover:scale-105"
+                aria-label="Admin Library"
+              >
+                <ShieldCheck className="size-4" />
+                <span className="hidden sm:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
+              </RouterLink>
+            </>
+          )}
           <RouterLink
             to="/knowledge"
             onMouseEnter={playHover}
