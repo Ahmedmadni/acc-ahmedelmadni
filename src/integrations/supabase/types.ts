@@ -14,7 +14,180 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      kb_articles: {
+        Row: {
+          author_avatar: string | null
+          author_name: string
+          author_title: string | null
+          category_id: string
+          content_ar: Json
+          created_at: string
+          excerpt_ar: string
+          excerpt_en: string
+          faq: Json
+          featured_image: string | null
+          id: string
+          is_featured: boolean
+          keywords: string[]
+          published_at: string
+          reading_minutes: number
+          references: Json
+          slug: string
+          title_ar: string
+          title_en: string
+          updated_at: string
+        }
+        Insert: {
+          author_avatar?: string | null
+          author_name?: string
+          author_title?: string | null
+          category_id: string
+          content_ar?: Json
+          created_at?: string
+          excerpt_ar: string
+          excerpt_en: string
+          faq?: Json
+          featured_image?: string | null
+          id?: string
+          is_featured?: boolean
+          keywords?: string[]
+          published_at?: string
+          reading_minutes?: number
+          references?: Json
+          slug: string
+          title_ar: string
+          title_en: string
+          updated_at?: string
+        }
+        Update: {
+          author_avatar?: string | null
+          author_name?: string
+          author_title?: string | null
+          category_id?: string
+          content_ar?: Json
+          created_at?: string
+          excerpt_ar?: string
+          excerpt_en?: string
+          faq?: Json
+          featured_image?: string | null
+          id?: string
+          is_featured?: boolean
+          keywords?: string[]
+          published_at?: string
+          reading_minutes?: number
+          references?: Json
+          slug?: string
+          title_ar?: string
+          title_en?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "kb_articles_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "kb_categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      kb_bookmarks: {
+        Row: {
+          article_id: string
+          created_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          article_id: string
+          created_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          article_id?: string
+          created_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "kb_bookmarks_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "kb_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      kb_categories: {
+        Row: {
+          created_at: string
+          description_ar: string | null
+          description_en: string | null
+          icon: string
+          id: string
+          name_ar: string
+          name_en: string
+          slug: string
+          sort_order: number
+        }
+        Insert: {
+          created_at?: string
+          description_ar?: string | null
+          description_en?: string | null
+          icon?: string
+          id?: string
+          name_ar: string
+          name_en: string
+          slug: string
+          sort_order?: number
+        }
+        Update: {
+          created_at?: string
+          description_ar?: string | null
+          description_en?: string | null
+          icon?: string
+          id?: string
+          name_ar?: string
+          name_en?: string
+          slug?: string
+          sort_order?: number
+        }
+        Relationships: []
+      }
+      kb_ratings: {
+        Row: {
+          article_id: string
+          created_at: string
+          id: string
+          rating: number
+          user_id: string
+        }
+        Insert: {
+          article_id: string
+          created_at?: string
+          id?: string
+          rating: number
+          user_id: string
+        }
+        Update: {
+          article_id?: string
+          created_at?: string
+          id?: string
+          rating?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "kb_ratings_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "kb_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
