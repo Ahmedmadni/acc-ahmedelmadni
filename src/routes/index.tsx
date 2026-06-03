@@ -512,8 +512,9 @@ function Hero({ lang }: { lang: Lang }) {
             <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2.5rem] border border-[#d7aa52]/40" />
             <div className="absolute inset-0 translate-x-4 -translate-y-4 rounded-[2.5rem] border border-white/10" />
             <div className="relative h-[440px] w-[340px] overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/30 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow sm:h-[500px] sm:w-[400px]">
-              <img src={profileImg} alt="Ahmed Elmadani"
+              <img src={profileImg} alt="Ahmed Elmadani" width={400} height={500} fetchPriority="high"
                 className="absolute inset-0 h-full w-full object-cover object-top" />
+
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
                 <div>
