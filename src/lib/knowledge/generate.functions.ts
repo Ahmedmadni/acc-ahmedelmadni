@@ -343,7 +343,13 @@ export const reviewArticleFn = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const { supabase, userId } = context;
     const newStatus = data.action === "approve" ? "published" : "rejected";
-    const update: Record<string, unknown> = {
+    const update: {
+      status: "published" | "rejected";
+      reviewer_id: string;
+      reviewed_at: string;
+      review_notes: string | null;
+      published_at?: string;
+    } = {
       status: newStatus,
       reviewer_id: userId,
       reviewed_at: new Date().toISOString(),
