@@ -304,7 +304,6 @@ ${data.topicHint ? `الموضوع المقترح: ${data.topicHint}` : ""}
 
     // 9) Update calendar generated_count
     const now = new Date();
-    await supabaseAdmin.rpc("noop").catch(() => {});
     await supabaseAdmin
       .from("kb_publishing_calendar")
       .update({ generated_count: 1 })
