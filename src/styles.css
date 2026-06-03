@@ -344,35 +344,53 @@ html.light .bg-video-overlay {
 /* ============ Print / PDF export ============ */
 @media print {
   @page { size: A4; margin: 14mm; }
-  html, body {
+  .tool-print-page {
     background: #ffffff !important;
     color: #0b1220 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  .print\:hidden { display: none !important; }
-  header, aside.no-print, .no-print { break-inside: avoid; }
-  main { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
-  section, aside, .rounded-2xl, .rounded-xl {
+  .tool-print-page .print\:hidden { display: none !important; }
+  .tool-print-page header,
+  .tool-print-page aside.no-print,
+  .tool-print-page .no-print { break-inside: avoid; }
+  .tool-print-page main { width: 100% !important; max-width: 100% !important; padding: 0 !important; }
+  .tool-print-page section,
+  .tool-print-page aside,
+  .tool-print-page .rounded-2xl,
+  .tool-print-page .rounded-xl {
     background: #ffffff !important;
     border-color: #d7aa52 !important;
     color: #0b1220 !important;
     box-shadow: none !important;
     backdrop-filter: none !important;
   }
-  h1, h2, h3, h4 { color: #8a5a13 !important; -webkit-text-fill-color: #8a5a13 !important; }
-  p, span, li, td, th, label, div { color: #0b1220 !important; }
-  .text-\[var\(--fg-soft\)\] { color: #334155 !important; }
-  input, select, textarea {
+  .tool-print-page h1,
+  .tool-print-page h2,
+  .tool-print-page h3,
+  .tool-print-page h4 { color: #8a5a13 !important; -webkit-text-fill-color: #8a5a13 !important; }
+  .tool-print-page p,
+  .tool-print-page span,
+  .tool-print-page li,
+  .tool-print-page td,
+  .tool-print-page th,
+  .tool-print-page label,
+  .tool-print-page div { color: #0b1220 !important; }
+  .tool-print-page .text-\[var\(--fg-soft\)\] { color: #334155 !important; }
+  .tool-print-page input,
+  .tool-print-page select,
+  .tool-print-page textarea {
     background: #ffffff !important;
     color: #0b1220 !important;
     border: 1px solid #cbd5e1 !important;
   }
-  table { border-collapse: collapse !important; }
-  th, td { border: 1px solid #cbd5e1 !important; padding: 4px 8px !important; }
-  a { color: #0b1220 !important; text-decoration: none !important; }
-  .print-only { display: block !important; }
-  section, .rounded-2xl { page-break-inside: avoid; }
+  .tool-print-page table { border-collapse: collapse !important; }
+  .tool-print-page th,
+  .tool-print-page td { border: 1px solid #cbd5e1 !important; padding: 4px 8px !important; }
+  .tool-print-page a { color: #0b1220 !important; text-decoration: none !important; }
+  .tool-print-page .print-only { display: block !important; }
+  .tool-print-page section,
+  .tool-print-page .rounded-2xl { page-break-inside: avoid; }
 }
 .print-only { display: none; }
 
