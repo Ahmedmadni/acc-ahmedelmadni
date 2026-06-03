@@ -44,6 +44,8 @@ import {
   zakat,
 } from "@/lib/finance";
 import { CvBuilder } from "@/components/tools/CvBuilder";
+import { VatReturnFormCalculator } from "@/components/tools/VatReturnForm";
+import { ZakatDeclarationFormCalculator } from "@/components/tools/ZakatDeclarationForm";
 import type { Lang } from "@/lib/i18n";
 import { useShareState } from "@/lib/use-share";
 
