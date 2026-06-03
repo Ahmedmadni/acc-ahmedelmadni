@@ -1199,10 +1199,7 @@ export function Footer({ lang }: { lang: Lang }) {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
       <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
-      {/* SOCIAL BUBBLE — inspired by the requested chat-bubble layout */}
-      <FooterSocialBubble lang={lang} />
-
-      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4 mt-14">
+      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="text-2xl font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
           <p className="mt-3 max-w-md text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
@@ -1240,6 +1237,36 @@ export function Footer({ lang }: { lang: Lang }) {
             <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
+          {/* Social icons inline under contact info */}
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            {SOCIALS.map((s) => (
+              <motion.a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                title={s.label}
+                onMouseEnter={playHover}
+                onClick={playClick}
+                whileHover={{ y: -4, scale: 1.1 }}
+                whileTap={{ scale: 0.92 }}
+                className="group relative flex items-center justify-center"
+              >
+                <span
+                  className="flex size-11 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_8px_28px_-6px_rgba(215,170,82,0.45)]"
+                  style={{ color: s.color }}
+                >
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-2xl opacity-0 blur-lg transition-opacity group-hover:opacity-40"
+                    style={{ background: s.color }}
+                  />
+                  <i className={`${s.icon} relative text-xl`} />
+                </span>
+              </motion.a>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -1248,64 +1275,6 @@ export function Footer({ lang }: { lang: Lang }) {
         <span className="inline-flex items-center gap-2"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
       </div>
     </footer>
-  );
-}
-
-/* ============= FOOTER SOCIAL BUBBLE ============= */
-function FooterSocialBubble({ lang }: { lang: Lang }) {
-  return (
-    <div className="mx-auto mt-14 w-[92%] max-w-6xl">
-      <div className="mb-5 flex items-end justify-between gap-4">
-        <div>
-          <div className="text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.socialCol[lang]}</div>
-          <h3 className="mt-1 text-xl font-black" style={{ color: "var(--fg)" }}>{t.social.title[lang]}</h3>
-          <p className="mt-1 text-sm" style={{ color: "var(--fg-soft)" }}>{t.social.sub[lang]}</p>
-        </div>
-        <MessagesSquare className="hidden size-10 text-[#d7aa52]/40 sm:block" />
-      </div>
-
-      <div className="relative overflow-hidden rounded-[28px] border border-[#d7aa52]/30 bg-gradient-to-br from-[#07182c]/90 to-[#04101f]/95 p-6 sm:p-8 backdrop-blur-xl shadow-2xl">
-        <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-20 -left-16 size-60 rounded-full bg-blue-500/15 blur-3xl" />
-
-        <div className="relative flex flex-wrap items-center justify-center gap-3 sm:gap-6">
-          {SOCIALS.map((s, i) => (
-            <motion.a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.label}
-              title={s.label}
-              onMouseEnter={playHover}
-              onClick={playClick}
-              initial={{ opacity: 0, y: 14, scale: 0.85 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ delay: i * 0.07, type: "spring", stiffness: 220, damping: 18 }}
-              whileHover={{ y: -4, scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative flex flex-col items-center gap-2"
-            >
-              <span
-                className="relative flex size-12 sm:size-14 items-center justify-center rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-xl shadow-black/40 transition-all group-hover:border-[#d7aa52]/60 group-hover:shadow-[0_12px_40px_-8px_rgba(215,170,82,0.5)]"
-                style={{ color: s.color }}
-              >
-                <span
-                  aria-hidden
-                  className="absolute inset-0 rounded-2xl opacity-0 blur-xl transition-opacity group-hover:opacity-50"
-                  style={{ background: s.color }}
-                />
-                <i className={`${s.icon} relative text-lg sm:text-xl`} />
-              </span>
-              <span className="hidden sm:block text-[10px] font-bold uppercase tracking-[0.15em] text-white/70 transition-colors group-hover:text-[#d7aa52]">
-                {s.label}
-              </span>
-            </motion.a>
-          ))}
-        </div>
-      </div>
-    </div>
   );
 }
 
