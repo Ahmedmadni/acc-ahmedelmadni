@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AnimatePresence } from "motion/react";
-import { useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
-import { About, DecisionsVideo } from "@/routes/index";
+import { About } from "@/routes/index";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -14,27 +12,7 @@ export const Route = createFileRoute("/about")({
     ],
     links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/about" }],
   }),
-  component: AboutPage,
+  component: () => (
+    <SubPageShell>{(lang) => <About lang={lang} />}</SubPageShell>
+  ),
 });
-
-function AboutPage() {
-  return (
-    <SubPageShell>
-      {(lang) => (
-        <>
-          <About lang={lang} />
-          <AnimatePresence>{null}</AnimatePresence>
-          <DecisionsVideoOnce />
-        </>
-      )}
-    </SubPageShell>
-  );
-}
-
-// avoid duplicating DecisionsVideo (already inside About now)
-function DecisionsVideoOnce() {
-  const [_] = useState(false);
-  return null;
-}
-// silence unused imports
-void DecisionsVideo;
