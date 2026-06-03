@@ -44,8 +44,8 @@ import {
   zakat,
 } from "@/lib/finance";
 import { CvBuilder } from "@/components/tools/CvBuilder";
-import { VatReturnFormCalculator } from "@/components/tools/VatReturnForm";
-import { ZakatDeclarationFormCalculator } from "@/components/tools/ZakatDeclarationForm";
+import { VatOfficialForm } from "@/components/tools/official/VatOfficialForm";
+import { ZakatOfficialForm } from "@/components/tools/official/ZakatOfficialForm";
 import type { Lang } from "@/lib/i18n";
 import { useShareState } from "@/lib/use-share";
 
@@ -980,8 +980,8 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
     case "depreciation": return <DepreciationCalculator lang={lang} />;
     case "inventory": return <InventoryCalculator lang={lang} />;
     case "cv-builder": return <CvBuilder lang={lang} />;
-    case "vat-return": return <VatReturnFormCalculator lang={lang} />;
-    case "zakat-declaration": return <ZakatDeclarationFormCalculator lang={lang} />;
+    case "vat-return": return <VatOfficialForm lang={lang} />;
+    case "zakat-declaration": return <ZakatOfficialForm lang={lang} />;
     default:
       return (
         <div className="rounded-xl border border-dashed border-[#d7aa52]/40 p-6 text-center text-sm text-[var(--fg-soft)]">

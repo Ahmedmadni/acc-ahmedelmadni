@@ -11,6 +11,7 @@ export interface ToolMeta {
   id: string;
   category: ToolCategory;
   icon: string; // lucide icon name
+  official?: boolean;
   title: { ar: string; en: string };
   short: { ar: string; en: string };
   standard?: { ar: string; en: string };
@@ -394,7 +395,8 @@ export const TOOLS: ToolMeta[] = [
     id: "vat-return",
     category: "tax",
     icon: "ClipboardList",
-    title: { ar: "نموذج الإقرار الضريبي السعودي", en: "Saudi VAT Return Form" },
+    official: true,
+    title: { ar: "إقرار ضريبة القيمة المضافة (نموذج ZATCA الرسمي)", en: "VAT Return (Official ZATCA Form)" },
     short: {
       ar: "محاكي إقرار ضريبة القيمة المضافة الشهري/الربعي مع تصدير PDF/Excel.",
       en: "Saudi VAT return simulator with PDF/Excel export and AI explanation.",
@@ -422,7 +424,8 @@ export const TOOLS: ToolMeta[] = [
     id: "zakat-declaration",
     category: "tax",
     icon: "FileSpreadsheet",
-    title: { ar: "نموذج الإقرار الزكوي السعودي", en: "Saudi Zakat Declaration Form" },
+    official: true,
+    title: { ar: "الإقرار الزكوي والضريبي (نموذج ZATCA الرسمي)", en: "Zakat & Tax Declaration (Official ZATCA Form)" },
     short: {
       ar: "محاكي شامل لإعداد الإقرار الزكوي السنوي مع التسويات وتقارير قابلة للطباعة.",
       en: "Complete annual Zakat declaration simulator with adjustments and printable reports.",
