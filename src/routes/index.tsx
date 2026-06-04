@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import {
   AnimatePresence,
   motion,
@@ -54,7 +54,7 @@ import logoLamara from "@/assets/logo-lamara.webp";
 import logoQimat from "@/assets/logo-qimat.webp";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
-import { AIAssistant } from "@/components/AIAssistant";
+const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
 import { Link as RouterLink } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -248,11 +248,12 @@ function Index() {
       <video
         className="bg-video"
         src="/bg-video.mp4"
+        poster={heroBg}
         autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        preload="none"
         aria-hidden="true"
       />
       <div className="bg-video-overlay" />
@@ -294,7 +295,7 @@ function Index() {
 
 
       <FloatingSocial isRTL={isRTL} />
-      <AIAssistant lang={lang} />
+      <Suspense fallback={null}><AIAssistant lang={lang} /></Suspense>
 
       <AnimatePresence>
         {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
@@ -460,7 +461,7 @@ function Hero({ lang }: { lang: Lang }) {
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20">
       {/* Animated parallax background */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 -z-10">
-        <img src={heroBg} alt="" aria-hidden width={1920} height={1080} className="h-full w-full object-cover opacity-30" />
+        <img src={heroBg} alt="" aria-hidden width={1920} height={1080} loading="lazy" decoding="async" className="h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/40 via-[var(--bg-surface)]/70 to-[var(--bg-surface)]" />
       </motion.div>
 
@@ -642,7 +643,7 @@ export function About({ lang }: { lang: Lang }) {
             <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
               <video
                 src="/bg-video-2.mp4"
-                autoPlay loop muted playsInline preload="metadata"
+                autoPlay loop muted playsInline preload="none"
                 poster={deskImg}
                 aria-label={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
                 className="h-full w-full object-cover" />
@@ -672,7 +673,7 @@ export function DecisionsVideo({ lang }: { lang: Lang }) {
           className="relative overflow-hidden rounded-3xl gold-border">
           <video
             src="/bg-video-3.mp4"
-            autoPlay loop muted playsInline preload="metadata"
+            autoPlay loop muted playsInline preload="none"
             poster={dashboardImg}
             aria-label={lang === "ar" ? "لوحة تحليل مالي" : "Financial dashboard"}
             className="h-[260px] w-full object-cover sm:h-[360px]" />

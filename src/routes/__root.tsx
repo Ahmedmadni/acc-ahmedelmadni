@@ -113,18 +113,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preload",
         as: "style",
-        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Inter:wght@600;700&display=swap",
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Inter:wght@600;700&display=swap",
       },
       // Font Awesome loaded non-blocking via media="print" + script swap
-      {
-        rel: "preload",
-        as: "style",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
-      },
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
