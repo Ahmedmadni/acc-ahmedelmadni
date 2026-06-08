@@ -52,6 +52,7 @@ import servicesBg from "@/assets/services-bg.webp";
 import logoAlostool from "@/assets/logo-alostool.webp";
 import logoLamara from "@/assets/logo-lamara.webp";
 import logoQimat from "@/assets/logo-qimat.webp";
+import mascotSocial from "@/assets/mascot-social.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
@@ -1180,11 +1181,28 @@ export function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
+        {/* Mascot + Social icons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-14 flex flex-col items-center justify-center"
+        >
+          <motion.img
+            src={mascotSocial}
+            alt={lang === "ar" ? "المساعد الذكي للمحاسبة" : "AI Accounting Mascot"}
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="h-64 w-auto drop-shadow-[0_20px_40px_rgba(215,170,82,0.35)] sm:h-80 md:h-96"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
         {/* Social icons under contact cards */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          className="mt-6 flex flex-wrap items-center justify-center gap-4"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
