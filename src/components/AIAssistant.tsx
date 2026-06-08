@@ -2,8 +2,9 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { Bot, Send, Sparkles, X } from "lucide-react";
+import { Send, Sparkles, X } from "lucide-react";
 import { playClick, playHover } from "@/lib/sound";
+import mascotImg from "@/assets/ai-mascot.png";
 import type { Lang } from "@/lib/i18n";
 
 const transport = new DefaultChatTransport({ api: "/api/chat" });
