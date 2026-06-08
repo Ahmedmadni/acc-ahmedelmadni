@@ -52,6 +52,7 @@ import servicesBg from "@/assets/services-bg.webp";
 import logoAlostool from "@/assets/logo-alostool.webp";
 import logoLamara from "@/assets/logo-lamara.webp";
 import logoQimat from "@/assets/logo-qimat.webp";
+import mascotSocial from "@/assets/mascot-social.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
