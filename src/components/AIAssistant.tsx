@@ -50,16 +50,20 @@ export function AIAssistant({ lang }: { lang: Lang }) {
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
         aria-label={title}
-        className="fixed z-40 group flex items-center gap-2.5 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 ps-3 pe-4 text-[#04101f] shadow-2xl shadow-[#d7aa52]/40"
+        className="fixed z-40 group flex items-center justify-center rounded-full"
         style={{ right: 18, bottom: 18 }}
       >
         <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
-        <span className="relative flex size-9 items-center justify-center rounded-full bg-[#04101f]">
-          <Bot className="size-5 text-[#f3d28a]" />
-        </span>
-        <span className="relative text-sm font-extrabold whitespace-nowrap">
-          {lang === "ar" ? "اسأل المساعد" : "Ask AI"}
-        </span>
+        <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f3d28a]/30 to-[#b8862e]/30 blur-xl" aria-hidden />
+        <img
+          src={mascotImg}
+          alt={title}
+          width={1024}
+          height={1024}
+          loading="lazy"
+          className="relative size-20 sm:size-24 object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
+        />
+        <span className="sr-only">{lang === "ar" ? "اسأل المساعد" : "Ask AI"}</span>
       </motion.button>
 
       <AnimatePresence>
@@ -81,8 +85,8 @@ export function AIAssistant({ lang }: { lang: Lang }) {
             >
               {/* Header */}
               <div className="flex items-center gap-3 border-b border-[#d7aa52]/25 bg-gradient-to-r from-[#0a223f] to-[#04101f] p-4">
-                <div className="relative flex size-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e]">
-                  <Bot className="size-6 text-[#04101f]" />
+                <div className="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a]/20 to-[#b8862e]/20 ring-1 ring-[#d7aa52]/40">
+                  <img src={mascotImg} alt="" width={1024} height={1024} className="size-11 object-contain" />
                   <span className="absolute -bottom-0.5 -end-0.5 size-3 rounded-full border-2 border-[#07182c] bg-emerald-400" />
                 </div>
                 <div className="flex-1">
