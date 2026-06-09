@@ -663,36 +663,6 @@ export function About({ lang }: { lang: Lang }) {
   );
 }
 
-export function DecisionsVideo({ lang }: { lang: Lang }) {
-  return (
-    <section className="py-12">
-      <div className="mx-auto w-[92%] max-w-6xl">
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}
-          className="relative overflow-hidden rounded-3xl gold-border">
-          <video
-            src="/bg-video-3.mp4"
-            autoPlay loop muted playsInline preload="none"
-            poster={dashboardImg}
-            aria-label={lang === "ar" ? "لوحة تحليل مالي" : "Financial dashboard"}
-            className="h-[260px] w-full object-cover sm:h-[360px]" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f] via-[#04101f]/40 to-transparent" />
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full px-6 sm:px-12">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
-                <BarChart3 className="size-3.5" />
-                {lang === "ar" ? "تحليل مالي" : "Financial Analytics"}
-              </div>
-              <h3 className="mt-3 max-w-xl text-2xl font-extrabold text-white sm:text-3xl">
-                {lang === "ar" ? "أحوّل الأرقام إلى قرارات تنفيذية واضحة." : "Turning numbers into clear executive decisions."}
-              </h3>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
 
 
 /* ============= SERVICES ============= */
