@@ -291,7 +291,6 @@ function Index() {
       <main>
         <Hero lang={lang} />
         <Stats lang={lang} />
-        <DecisionsVideo lang={lang} />
         <Testimonials lang={lang} />
         <Contact lang={lang} />
       </main>
