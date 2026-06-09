@@ -617,7 +617,7 @@ function Stats({ lang }: { lang: Lang }) {
 /* ============= ABOUT ============= */
 export function About({ lang }: { lang: Lang }) {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
@@ -699,7 +699,7 @@ export function DecisionsVideo({ lang }: { lang: Lang }) {
 export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
   const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
   return (
-    <section id="services" className="relative py-24">
+    <section id="services" className="relative py-14">
       <div aria-hidden className="absolute inset-0 -z-10 opacity-20">
         <img src={servicesBg} alt="" className="h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)] via-transparent to-[var(--bg-surface)]" />
@@ -786,7 +786,7 @@ export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang:
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "المسيرة المهنية" : "Career"}
           title={t.experience.title[lang]} sub={t.experience.sub[lang]} />
@@ -878,7 +878,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
   const groupIcons = [BarChart3, Wallet, Wrench];
 
   return (
-    <section id="skills" className="relative py-24">
+    <section id="skills" className="relative py-14">
       <div aria-hidden className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent" />
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "المهارات" : "Skills"}
@@ -1054,7 +1054,7 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
   }, []);
 
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
           title={t.beforeAfter.title[lang]} sub={t.beforeAfter.sub[lang]} />
@@ -1100,7 +1100,7 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
 /* ============= TESTIMONIALS ============= */
 function Testimonials({ lang }: { lang: Lang }) {
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
           title={t.testimonials.title[lang]} sub={t.testimonials.sub[lang]} />
@@ -1133,7 +1133,7 @@ function Testimonials({ lang }: { lang: Lang }) {
 /* ============= CERTS ============= */
 export function Certs({ lang }: { lang: Lang }) {
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "التطوير المهني" : "Development"} title={t.certs.title[lang]} />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -1159,7 +1159,7 @@ export function Contact({ lang }: { lang: Lang }) {
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
   ];
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
