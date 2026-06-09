@@ -146,7 +146,9 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
 };
 
 const SOCIALS = [
+  { href: "tel:+966560409811", icon: "fa-solid fa-phone", color: "#34d399", label: "Phone", mascot: mascotPhone },
   { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp", mascot: mascotWhatsapp },
+  { href: "mailto:elmadnim@gmail.com", icon: "fa-solid fa-envelope", color: "#ef4444", label: "Email", mascot: mascotEmail },
   { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn", mascot: mascotLinkedin },
   { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook", mascot: mascotFacebook },
   { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram", mascot: mascotInstagram },
