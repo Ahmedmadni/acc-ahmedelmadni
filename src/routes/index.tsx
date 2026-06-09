@@ -57,6 +57,8 @@ import mascotLinkedin from "@/assets/mascot-linkedin.png";
 import mascotFacebook from "@/assets/mascot-facebook.png";
 import mascotInstagram from "@/assets/mascot-instagram.png";
 import mascotSnapchat from "@/assets/mascot-snapchat.png";
+import mascotPhone from "@/assets/mascot-phone.png";
+import mascotEmail from "@/assets/mascot-email.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
