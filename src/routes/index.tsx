@@ -57,6 +57,8 @@ import mascotLinkedin from "@/assets/mascot-linkedin.png";
 import mascotFacebook from "@/assets/mascot-facebook.png";
 import mascotInstagram from "@/assets/mascot-instagram.png";
 import mascotSnapchat from "@/assets/mascot-snapchat.png";
+import mascotPhone from "@/assets/mascot-phone.png";
+import mascotEmail from "@/assets/mascot-email.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
@@ -144,7 +146,9 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
 };
 
 const SOCIALS = [
+  { href: "tel:+966560409811", icon: "fa-solid fa-phone", color: "#34d399", label: "Phone", mascot: mascotPhone },
   { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp", mascot: mascotWhatsapp },
+  { href: "mailto:elmadnim@gmail.com", icon: "fa-solid fa-envelope", color: "#ef4444", label: "Email", mascot: mascotEmail },
   { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn", mascot: mascotLinkedin },
   { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook", mascot: mascotFacebook },
   { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram", mascot: mascotInstagram },
@@ -1153,7 +1157,7 @@ export function Contact({ lang }: { lang: Lang }) {
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}
-          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
+          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
