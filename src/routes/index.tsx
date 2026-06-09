@@ -1185,28 +1185,11 @@ export function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
-        {/* Mascot + Social icons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-14 flex flex-col items-center justify-center"
-        >
-          <motion.img
-            src={mascotSocial}
-            alt={lang === "ar" ? "المساعد الذكي للمحاسبة" : "AI Accounting Mascot"}
-            width={1024}
-            height={1024}
-            loading="lazy"
-            className="h-64 w-auto drop-shadow-[0_20px_40px_rgba(215,170,82,0.35)] sm:h-80 md:h-96"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
-        {/* Social icons under contact cards */}
+        {/* Social mascot cards (Pixar-style mascot per platform) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 flex flex-wrap items-center justify-center gap-4"
+          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}
+          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
@@ -1217,22 +1200,29 @@ export function Contact({ lang }: { lang: Lang }) {
               aria-label={s.label}
               onMouseEnter={playHover}
               onClick={playClick}
-              whileHover={{ scale: 1.12, y: -4 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300, damping: 18 }}
-              className="group relative flex size-16 items-center justify-center rounded-2xl text-2xl text-white shadow-lg ring-1 ring-white/15"
-              style={{
-                background: `linear-gradient(135deg, ${s.color}, ${s.color}cc)`,
-                boxShadow: `0 10px 30px -10px ${s.color}80`,
-                color: s.color === "#FFFC00" ? "#1a1a1a" : "#fff",
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ y: -8, scale: 1.04 }}
+              className="glass group relative flex flex-col items-center justify-end overflow-hidden rounded-3xl p-5 text-center transition-all hover:border-[#d7aa52]/60"
             >
-              <i className={s.icon} />
               <span
                 aria-hidden
-                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{ boxShadow: `0 0 30px ${s.color}` }}
+                className="pointer-events-none absolute inset-x-6 top-6 h-32 rounded-full opacity-40 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+                style={{ background: s.color }}
               />
+              <motion.img
+                src={s.mascot}
+                alt={s.label}
+                width={768}
+                height={768}
+                loading="lazy"
+                className="relative h-32 w-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-36"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <div className="relative mt-3 text-sm font-extrabold" style={{ color: "var(--fg)" }}>{s.label}</div>
             </motion.a>
           ))}
         </motion.div>
