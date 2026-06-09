@@ -645,11 +645,10 @@ export function About({ lang }: { lang: Lang }) {
             className="relative lg:col-span-2">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
-              <video
-                src="/bg-video-2.mp4"
-                autoPlay loop muted playsInline preload="none"
-                poster={deskImg}
-                aria-label={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+              <img
+                src={deskImg}
+                alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+                loading="lazy"
                 className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
               <div className="absolute bottom-4 start-4 end-4 flex items-center gap-2 rounded-full glass px-3 py-2 text-[11px] font-bold text-white/85">
@@ -658,10 +657,6 @@ export function About({ lang }: { lang: Lang }) {
               </div>
             </div>
           </motion.div>
-        </div>
-
-        <div className="mt-12">
-          <DecisionsVideo lang={lang} />
         </div>
       </div>
     </section>
