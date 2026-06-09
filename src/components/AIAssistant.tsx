@@ -55,13 +55,15 @@ export function AIAssistant({ lang }: { lang: Lang }) {
       >
         <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
         <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f3d28a]/30 to-[#b8862e]/30 blur-xl" aria-hidden />
-        <img
+        <motion.img
           src={mascotImg}
           alt={title}
           width={1024}
           height={1024}
           loading="lazy"
           className="relative size-20 sm:size-24 object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
+          animate={{ y: [0, -10, 0, -6, 0], rotate: [0, -6, 6, -3, 0] }}
+          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
         />
         <span className="sr-only">{lang === "ar" ? "اسأل المساعد" : "Ask AI"}</span>
       </motion.button>

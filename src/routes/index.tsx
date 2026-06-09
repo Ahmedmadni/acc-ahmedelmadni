@@ -52,7 +52,11 @@ import servicesBg from "@/assets/services-bg.webp";
 import logoAlostool from "@/assets/logo-alostool.webp";
 import logoLamara from "@/assets/logo-lamara.webp";
 import logoQimat from "@/assets/logo-qimat.webp";
-import mascotSocial from "@/assets/mascot-social.png";
+import mascotWhatsapp from "@/assets/mascot-whatsapp.png";
+import mascotLinkedin from "@/assets/mascot-linkedin.png";
+import mascotFacebook from "@/assets/mascot-facebook.png";
+import mascotInstagram from "@/assets/mascot-instagram.png";
+import mascotSnapchat from "@/assets/mascot-snapchat.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
@@ -140,11 +144,11 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
 };
 
 const SOCIALS = [
-  { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp" },
-  { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn" },
-  { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook" },
-  { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram" },
-  { href: "https://www.snapchat.com/add/ahmedacc851998", icon: "fa-brands fa-snapchat-ghost", color: "#FFFC00", label: "Snapchat" },
+  { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp", mascot: mascotWhatsapp },
+  { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn", mascot: mascotLinkedin },
+  { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook", mascot: mascotFacebook },
+  { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram", mascot: mascotInstagram },
+  { href: "https://www.snapchat.com/add/ahmedacc851998", icon: "fa-brands fa-snapchat-ghost", color: "#FFFC00", label: "Snapchat", mascot: mascotSnapchat },
 ] as const;
 
 
@@ -287,7 +291,6 @@ function Index() {
       <main>
         <Hero lang={lang} />
         <Stats lang={lang} />
-        <DecisionsVideo lang={lang} />
         <Testimonials lang={lang} />
         <Contact lang={lang} />
       </main>
@@ -614,7 +617,7 @@ function Stats({ lang }: { lang: Lang }) {
 /* ============= ABOUT ============= */
 export function About({ lang }: { lang: Lang }) {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
@@ -642,11 +645,10 @@ export function About({ lang }: { lang: Lang }) {
             className="relative lg:col-span-2">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
-              <video
-                src="/bg-video-2.mp4"
-                autoPlay loop muted playsInline preload="none"
-                poster={deskImg}
-                aria-label={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+              <img
+                src={deskImg}
+                alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
+                loading="lazy"
                 className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
               <div className="absolute bottom-4 start-4 end-4 flex items-center gap-2 rounded-full glass px-3 py-2 text-[11px] font-bold text-white/85">
@@ -656,52 +658,18 @@ export function About({ lang }: { lang: Lang }) {
             </div>
           </motion.div>
         </div>
-
-        <div className="mt-12">
-          <DecisionsVideo lang={lang} />
-        </div>
       </div>
     </section>
   );
 }
 
-export function DecisionsVideo({ lang }: { lang: Lang }) {
-  return (
-    <section className="py-12">
-      <div className="mx-auto w-[92%] max-w-6xl">
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}
-          className="relative overflow-hidden rounded-3xl gold-border">
-          <video
-            src="/bg-video-3.mp4"
-            autoPlay loop muted playsInline preload="none"
-            poster={dashboardImg}
-            aria-label={lang === "ar" ? "لوحة تحليل مالي" : "Financial dashboard"}
-            className="h-[260px] w-full object-cover sm:h-[360px]" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f] via-[#04101f]/40 to-transparent" />
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full px-6 sm:px-12">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
-                <BarChart3 className="size-3.5" />
-                {lang === "ar" ? "تحليل مالي" : "Financial Analytics"}
-              </div>
-              <h3 className="mt-3 max-w-xl text-2xl font-extrabold text-white sm:text-3xl">
-                {lang === "ar" ? "أحوّل الأرقام إلى قرارات تنفيذية واضحة." : "Turning numbers into clear executive decisions."}
-              </h3>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
 
 
 /* ============= SERVICES ============= */
 export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
   const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
   return (
-    <section id="services" className="relative py-24">
+    <section id="services" className="relative py-14">
       <div aria-hidden className="absolute inset-0 -z-10 opacity-20">
         <img src={servicesBg} alt="" className="h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)] via-transparent to-[var(--bg-surface)]" />
@@ -788,7 +756,7 @@ export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang:
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "المسيرة المهنية" : "Career"}
           title={t.experience.title[lang]} sub={t.experience.sub[lang]} />
@@ -880,7 +848,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
   const groupIcons = [BarChart3, Wallet, Wrench];
 
   return (
-    <section id="skills" className="relative py-24">
+    <section id="skills" className="relative py-14">
       <div aria-hidden className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent" />
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "المهارات" : "Skills"}
@@ -1056,7 +1024,7 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
   }, []);
 
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
           title={t.beforeAfter.title[lang]} sub={t.beforeAfter.sub[lang]} />
@@ -1102,7 +1070,7 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
 /* ============= TESTIMONIALS ============= */
 function Testimonials({ lang }: { lang: Lang }) {
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
           title={t.testimonials.title[lang]} sub={t.testimonials.sub[lang]} />
@@ -1135,7 +1103,7 @@ function Testimonials({ lang }: { lang: Lang }) {
 /* ============= CERTS ============= */
 export function Certs({ lang }: { lang: Lang }) {
   return (
-    <section className="py-24">
+    <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "التطوير المهني" : "Development"} title={t.certs.title[lang]} />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -1161,7 +1129,7 @@ export function Contact({ lang }: { lang: Lang }) {
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
   ];
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -1181,28 +1149,11 @@ export function Contact({ lang }: { lang: Lang }) {
             );
           })}
         </div>
-        {/* Mascot + Social icons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-14 flex flex-col items-center justify-center"
-        >
-          <motion.img
-            src={mascotSocial}
-            alt={lang === "ar" ? "المساعد الذكي للمحاسبة" : "AI Accounting Mascot"}
-            width={1024}
-            height={1024}
-            loading="lazy"
-            className="h-64 w-auto drop-shadow-[0_20px_40px_rgba(215,170,82,0.35)] sm:h-80 md:h-96"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
-        {/* Social icons under contact cards */}
+        {/* Social mascot cards (Pixar-style mascot per platform) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 flex flex-wrap items-center justify-center gap-4"
+          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}
+          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
@@ -1213,22 +1164,29 @@ export function Contact({ lang }: { lang: Lang }) {
               aria-label={s.label}
               onMouseEnter={playHover}
               onClick={playClick}
-              whileHover={{ scale: 1.12, y: -4 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 300, damping: 18 }}
-              className="group relative flex size-16 items-center justify-center rounded-2xl text-2xl text-white shadow-lg ring-1 ring-white/15"
-              style={{
-                background: `linear-gradient(135deg, ${s.color}, ${s.color}cc)`,
-                boxShadow: `0 10px 30px -10px ${s.color}80`,
-                color: s.color === "#FFFC00" ? "#1a1a1a" : "#fff",
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ y: -8, scale: 1.04 }}
+              className="glass group relative flex flex-col items-center justify-end overflow-hidden rounded-3xl p-5 text-center transition-all hover:border-[#d7aa52]/60"
             >
-              <i className={s.icon} />
               <span
                 aria-hidden
-                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{ boxShadow: `0 0 30px ${s.color}` }}
+                className="pointer-events-none absolute inset-x-6 top-6 h-32 rounded-full opacity-40 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+                style={{ background: s.color }}
               />
+              <motion.img
+                src={s.mascot}
+                alt={s.label}
+                width={768}
+                height={768}
+                loading="lazy"
+                className="relative h-32 w-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-36"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <div className="relative mt-3 text-sm font-extrabold" style={{ color: "var(--fg)" }}>{s.label}</div>
             </motion.a>
           ))}
         </motion.div>
