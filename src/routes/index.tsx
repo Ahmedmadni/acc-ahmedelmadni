@@ -1070,16 +1070,30 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
 
 /* ============= TESTIMONIALS ============= */
 function Testimonials({ lang }: { lang: Lang }) {
+  const items = t.testimonials.items;
+  const loop = [...items, ...items];
   return (
     <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
           title={t.testimonials.title[lang]} sub={t.testimonials.sub[lang]} />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {t.testimonials.items.map((it, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass tilt-card relative overflow-hidden rounded-3xl p-7">
+      </div>
+      <div
+        dir="ltr"
+        className="relative mt-10 overflow-hidden"
+        style={{
+          maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+        }}
+      >
+        <motion.div
+          className="flex w-max gap-6 py-4"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 50, ease: "linear", repeat: Infinity }}
+        >
+          {loop.map((it, i) => (
+            <div key={i}
+              className="glass tilt-card relative w-[320px] shrink-0 overflow-hidden rounded-3xl p-7 sm:w-[380px]">
               <Quote className="absolute top-4 end-4 size-10 text-[#d7aa52]/15" />
               <p className="text-sm leading-relaxed italic" style={{ color: "var(--fg-soft)" }}>
                 “{it.quote[lang]}”
@@ -1093,9 +1107,9 @@ function Testimonials({ lang }: { lang: Lang }) {
                   <div className="text-xs text-[#d7aa52]">{it.role[lang]}</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
