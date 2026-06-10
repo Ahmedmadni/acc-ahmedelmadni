@@ -1148,7 +1148,7 @@ export function Contact({ lang }: { lang: Lang }) {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -8, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end overflow-hidden rounded-3xl p-5 text-center transition-all hover:border-[#d7aa52]/60"
+              className="glass group relative flex flex-col items-center justify-end rounded-3xl p-4 pt-6 text-center transition-all hover:border-[#d7aa52]/60"
             >
               <span
                 aria-hidden
@@ -1161,7 +1161,7 @@ export function Contact({ lang }: { lang: Lang }) {
                 width={768}
                 height={768}
                 loading="lazy"
-                className="relative h-32 w-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-36"
+                className="relative h-40 w-full object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-44"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
