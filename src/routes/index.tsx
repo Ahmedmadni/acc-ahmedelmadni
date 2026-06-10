@@ -1209,7 +1209,7 @@ export function Footer({ lang }: { lang: Lang }) {
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
-    <footer className="relative mt-12 border-t border-[var(--line)] pt-16 pb-10">
+    <footer className="relative mt-12 border-t border-[var(--line)] pt-16 pb-10 my-[30px]">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
       <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
