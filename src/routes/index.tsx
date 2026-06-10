@@ -1126,11 +1126,6 @@ export function Certs({ lang }: { lang: Lang }) {
 
 /* ============= CONTACT ============= */
 export function Contact({ lang }: { lang: Lang }) {
-  const items = [
-    { icon: Phone, label: t.contact.phone[lang], value: "0560409811", href: "tel:+966560409811" },
-    { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
-    { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
-  ];
   return (
     <section id="contact" className="py-8">
       <div className="mx-auto w-[92%] max-w-6xl">
