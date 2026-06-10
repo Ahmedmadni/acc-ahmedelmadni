@@ -457,7 +457,7 @@ function Hero({ lang }: { lang: Lang }) {
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]">
       {/* Hero background video (confined to hero only) */}
-      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <video
           src={heroVideoAsset.url}
           poster={heroBg}
@@ -479,7 +479,7 @@ function Hero({ lang }: { lang: Lang }) {
 
 
 
-      <div className="mx-auto grid w-[92%] max-w-7xl items-center gap-12 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid w-[92%] max-w-7xl items-center gap-12 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.8 }}
           className="order-2 lg:order-1">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full gold-border bg-white/5 px-4 py-2 text-xs font-semibold text-[#f3d28a]">
