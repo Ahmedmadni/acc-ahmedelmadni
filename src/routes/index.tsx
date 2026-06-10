@@ -45,6 +45,7 @@ import {
 } from "lucide-react";
 import profileImg from "@/assets/profile.webp";
 import heroBg from "@/assets/hero-finance-bg.webp";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 import dashboardImg from "@/assets/finance-dashboard.webp";
 import deskImg from "@/assets/accountant-desk.webp";
 import beforeAfterImg from "@/assets/before-after.webp";
@@ -254,18 +255,6 @@ function Index() {
   return (
     <div className="relative min-h-screen antialiased" style={{ color: "var(--fg)" }}>
       <div className="cinematic-bg" />
-      <video
-        className="bg-video"
-        src="/bg-video.mp4"
-        poster={heroBg}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        aria-hidden="true"
-      />
-      <div className="bg-video-overlay" />
       <div className="aurora" />
       <div className="cinematic-grid" />
       <div ref={cursorRef} className="cursor-glow hidden md:block" />
@@ -466,11 +455,21 @@ function Hero({ lang }: { lang: Lang }) {
   const yImg = useTransform(scrollY, [0, 600], [0, -60]);
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20">
-      {/* Animated parallax background */}
-      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 -z-10">
-        <img src={heroBg} alt="" aria-hidden width={1920} height={1080} loading="lazy" decoding="async" className="h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/40 via-[var(--bg-surface)]/70 to-[var(--bg-surface)]" />
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]">
+      {/* Hero background video (confined to hero only) */}
+      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <video
+          src={heroVideoAsset.url}
+          poster={heroBg}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          className="h-full w-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/30 via-[var(--bg-surface)]/60 to-[var(--bg-surface)]" />
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 opacity-50">
