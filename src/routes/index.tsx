@@ -25,11 +25,9 @@ import {
   Layers,
   Lightbulb,
   LineChart,
-  Mail,
   MapPin,
   MessagesSquare,
   Moon,
-  Phone,
   PieChart,
   Plus,
   Quote,
@@ -1126,37 +1124,15 @@ export function Certs({ lang }: { lang: Lang }) {
 
 /* ============= CONTACT ============= */
 export function Contact({ lang }: { lang: Lang }) {
-  const items = [
-    { icon: Phone, label: t.contact.phone[lang], value: "0560409811", href: "tel:+966560409811" },
-    { icon: Mail, label: t.contact.email[lang], value: "elmadnim@gmail.com", href: "mailto:elmadnim@gmail.com" },
-    { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
-  ];
   return (
-    <section id="contact" className="py-14">
+    <section id="contact" className="py-8">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((c, i) => {
-            const Icon = c.icon;
-            return (
-              <motion.a key={i} href={c.href} onMouseEnter={playHover} onClick={playClick}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass tilt-card group rounded-3xl p-6 text-center transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60">
-                <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#d7aa52]/30 to-transparent gold-border">
-                  <Icon className="size-6 text-[#d7aa52]" />
-                </div>
-                <div className="text-xs uppercase tracking-[0.2em]" style={{ color: "var(--fg-soft)" }}>{c.label}</div>
-                <div className="mt-2 break-words text-sm font-bold" style={{ color: "var(--fg)" }}>{c.value}</div>
-              </motion.a>
-            );
-          })}
-        </div>
         {/* Social mascot cards (Pixar-style mascot per platform) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}
-          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
+          className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
@@ -1172,7 +1148,7 @@ export function Contact({ lang }: { lang: Lang }) {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -8, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end overflow-hidden rounded-3xl p-5 text-center transition-all hover:border-[#d7aa52]/60"
+              className="glass group relative flex flex-col items-center justify-end rounded-3xl p-4 pt-6 text-center transition-all hover:border-[#d7aa52]/60"
             >
               <span
                 aria-hidden
@@ -1185,7 +1161,7 @@ export function Contact({ lang }: { lang: Lang }) {
                 width={768}
                 height={768}
                 loading="lazy"
-                className="relative h-32 w-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-36"
+                className="relative h-40 w-full object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-44"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
@@ -1209,7 +1185,7 @@ export function Footer({ lang }: { lang: Lang }) {
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
-    <footer className="relative mt-12 border-t border-[var(--line)] pt-16 pb-10 my-[30px]">
+    <footer className="relative mt-6 border-t border-[var(--line)] pt-10 pb-6">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
       <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
@@ -1254,7 +1230,7 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-6 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
+      <div className="mx-auto mt-6 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-4 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
         <span>{t.footer.rights[lang]}</span>
         <span className="inline-flex items-center gap-2"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
       </div>
