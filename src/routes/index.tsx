@@ -1230,7 +1230,7 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-6 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
+      <div className="mx-auto mt-6 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-4 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
         <span>{t.footer.rights[lang]}</span>
         <span className="inline-flex items-center gap-2"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
       </div>
