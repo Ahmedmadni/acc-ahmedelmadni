@@ -1132,31 +1132,14 @@ export function Contact({ lang }: { lang: Lang }) {
     { icon: MapPin, label: t.contact.location[lang], value: lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia", href: "https://maps.google.com/?q=Riyadh" },
   ];
   return (
-    <section id="contact" className="py-14">
+    <section id="contact" className="py-8">
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((c, i) => {
-            const Icon = c.icon;
-            return (
-              <motion.a key={i} href={c.href} onMouseEnter={playHover} onClick={playClick}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass tilt-card group rounded-3xl p-6 text-center transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60">
-                <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#d7aa52]/30 to-transparent gold-border">
-                  <Icon className="size-6 text-[#d7aa52]" />
-                </div>
-                <div className="text-xs uppercase tracking-[0.2em]" style={{ color: "var(--fg-soft)" }}>{c.label}</div>
-                <div className="mt-2 break-words text-sm font-bold" style={{ color: "var(--fg)" }}>{c.value}</div>
-              </motion.a>
-            );
-          })}
-        </div>
         {/* Social mascot cards (Pixar-style mascot per platform) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}
-          className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
+          className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
