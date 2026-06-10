@@ -385,6 +385,46 @@ export const t = {
           en: "A professional who understands numbers and translates them into decisions. His Power BI dashboards transformed our workflow.",
         },
       },
+      {
+        name: { ar: "أ. ناصر القحطاني", en: "Mr. Nasser Alqahtani" },
+        role: { ar: "الرئيس التنفيذي — شركة تجارية", en: "CEO — Trading Company" },
+        quote: {
+          ar: "تعاملت مع كثير من المحاسبين، لكن أحمد يتميز بالشفافية والاحترافية والقدرة على تبسيط الأرقام المعقدة.",
+          en: "I've worked with many accountants, but Ahmed stands out for transparency, professionalism, and simplifying complex numbers.",
+        },
+      },
+      {
+        name: { ar: "أ. منى الشمري", en: "Ms. Mona Alshamri" },
+        role: { ar: "محاسبة أولى — قطاع التجزئة", en: "Senior Accountant — Retail" },
+        quote: {
+          ar: "خبرة عميقة في معايير IFRS ومتطلبات ZATCA. أنقذ شركتنا من غرامات محتملة بمراجعته الدقيقة.",
+          en: "Deep IFRS and ZATCA expertise. His meticulous review saved our company from potential penalties.",
+        },
+      },
+      {
+        name: { ar: "م. فيصل العنزي", en: "Eng. Faisal Alanazi" },
+        role: { ar: "مالك — مكتب استشارات", en: "Owner — Consulting Firm" },
+        quote: {
+          ar: "أنصح بالتعامل معه لأي منشأة تبحث عن محاسب يجمع بين الخبرة التقنية والذوق المهني الراقي.",
+          en: "I recommend him to any business seeking an accountant who blends technical mastery with true professionalism.",
+        },
+      },
+      {
+        name: { ar: "أ. ريم الدوسري", en: "Ms. Reem Aldosari" },
+        role: { ar: "مديرة عمليات — قطاع غذائي", en: "Operations Manager — F&B" },
+        quote: {
+          ar: "أعاد هيكلة محاسبة التكاليف لدينا ووفر علينا أكثر من 18% من المصاريف التشغيلية خلال ستة أشهر.",
+          en: "He restructured our cost accounting and saved us over 18% in operating expenses within six months.",
+        },
+      },
+      {
+        name: { ar: "د. بدر السبيعي", en: "Dr. Badr Alsubaie" },
+        role: { ar: "شريك مؤسس — عيادات طبية", en: "Co-Founder — Medical Clinics" },
+        quote: {
+          ar: "أصبحت قراراتنا المالية مبنية على بيانات حقيقية لا تخمين، بفضل تقاريره الشهرية وتحليلاته العميقة.",
+          en: "Our financial decisions are now data-driven, not guesswork — thanks to his monthly reports and deep analysis.",
+        },
+      },
     ],
   },
   certs: {
