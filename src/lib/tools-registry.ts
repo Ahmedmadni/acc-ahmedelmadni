@@ -677,6 +677,62 @@ export const TOOLS: ToolMeta[] = [
       en: ["Lead with strong verbs (Led, Reduced, Improved)", "Add numbers and percentages", "Keep your CV within 2 pages"],
     },
   },
+  {
+    id: "typing-test",
+    category: "career",
+    icon: "Keyboard",
+    title: { ar: "اختبار الكتابة السريعة", en: "Typing Speed Test" },
+    short: {
+      ar: "قِس سرعة كتابتك بالكلمات في الدقيقة (WPM) مع دعم العربية والإنجليزية وعدة لغات.",
+      en: "Measure your typing speed in words per minute (WPM) with Arabic, English, and more.",
+    },
+    standard: { ar: "Career Tools", en: "Career Tools" },
+    formula: "WPM = (Correct chars / 5) / minutes",
+    about: {
+      ar: "تمرين تفاعلي لقياس سرعة الكتابة والدقة، مع مؤقت قابل للضبط (30/60/120 ثانية) وحفظ أفضل نتيجة محلياً.",
+      en: "Interactive typing drill measuring speed and accuracy with adjustable timer (30/60/120s) and local best-score persistence.",
+    },
+    whenToUse: {
+      ar: ["تحسين سرعة إدخال البيانات", "التحضير لاختبارات السكرتارية", "زيادة إنتاجية العمل المكتبي"],
+      en: ["Improve data-entry speed", "Prepare for secretarial tests", "Boost office productivity"],
+    },
+    commonMistakes: {
+      ar: ["التركيز على السرعة بدل الدقة", "النظر إلى لوحة المفاتيح أثناء الكتابة"],
+      en: ["Prioritizing speed over accuracy", "Looking at the keyboard while typing"],
+    },
+    tips: {
+      ar: ["تدرّب يومياً 10 دقائق", "ابدأ ببطء وزد السرعة تدريجياً", "حافظ على وضع الأصابع الصحيح"],
+      en: ["Practice 10 minutes daily", "Start slow and build up", "Keep proper finger position"],
+    },
+  },
+  {
+    id: "exam-prep",
+    category: "career",
+    icon: "GraduationCap",
+    title: { ar: "تدريب الامتحانات المهنية", en: "Professional Exam Trainer" },
+    short: {
+      ar: "تدرّب على أسئلة IFRS وCMA وCPA وFMAA وACCA وCFA مع شرح المصدر وإمكانية رفع بنوك أسئلة.",
+      en: "Practice IFRS, CMA, CPA, FMAA, ACCA, and CFA questions with sourced explanations and upload your own question banks.",
+    },
+    standard: { ar: "IFRS · CMA · CPA · FMAA · ACCA · CFA", en: "IFRS · CMA · CPA · FMAA · ACCA · CFA" },
+    formula: "MCQ + Sourced explanation + AI-extracted custom banks",
+    about: {
+      ar: "موسوعة أسئلة اختيار متعدد للامتحانات المحاسبية والمالية المهنية، مع شروحات مأخوذة من مراجع معروفة (Gleim, Wiley, IMA, IFRS). يمكنك رفع ملفك الخاص وسيقوم الذكاء الاصطناعي بتحليله واستخراج الأسئلة بالعربية والإنجليزية تلقائياً.",
+      en: "MCQ bank for professional accounting and finance exams with explanations sourced from Gleim, Wiley, IMA, and IFRS. Upload your own bank and AI will extract MCQs in Arabic and English automatically.",
+    },
+    whenToUse: {
+      ar: ["التحضير لاختبارات الشهادات المهنية", "مراجعة سريعة قبل الامتحان", "بناء بنك أسئلة شخصي"],
+      en: ["Preparing for professional certification exams", "Quick pre-exam review", "Building a personal question bank"],
+    },
+    commonMistakes: {
+      ar: ["الحفظ بدون فهم", "تجاهل الشرح والمصدر", "التركيز على مسار واحد فقط"],
+      en: ["Memorizing without understanding", "Ignoring explanations and sources", "Focusing on only one track"],
+    },
+    tips: {
+      ar: ["اقرأ الشرح حتى لو أجبت صحيحاً", "نوّع المسارات يومياً", "ارفع أسئلة الكتب المعتمدة لإثراء البنك"],
+      en: ["Read the explanation even on correct answers", "Rotate tracks daily", "Upload textbook banks to enrich the pool"],
+    },
+  },
 ];
 
 export const toolById = (id: string) => TOOLS.find((t) => t.id === id);
