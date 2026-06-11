@@ -12,7 +12,9 @@ import {
   ChevronDown,
   FileSpreadsheet,
   FileUser,
+  GraduationCap,
   Coins,
+  Keyboard,
   FileText,
   Home,
   Hourglass,
@@ -77,7 +79,7 @@ export const Route = createFileRoute("/tools/")({
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   TrendingDown, TrendingUp, BarChart3, Percent, Banknote, ReceiptText, Calculator,
   FileUser, Wrench, LineChart, Hourglass, Scale, Repeat, FileText, Building2,
-  Coins, Scissors, Landmark, Layers, PieChart, Package,
+  Coins, Scissors, Landmark, Layers, PieChart, Package, Keyboard, GraduationCap,
 };
 
 const CATEGORY_META: Record<ToolCategory, {
