@@ -44,6 +44,8 @@ import {
   zakat,
 } from "@/lib/finance";
 import { CvBuilder } from "@/components/tools/CvBuilder";
+import { TypingTest } from "@/components/tools/TypingTest";
+import { ExamPrep } from "@/components/tools/ExamPrep";
 import { VatOfficialForm } from "@/components/tools/official/VatOfficialForm";
 import { ZakatOfficialForm } from "@/components/tools/official/ZakatOfficialForm";
 import type { Lang } from "@/lib/i18n";
@@ -980,6 +982,8 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
     case "depreciation": return <DepreciationCalculator lang={lang} />;
     case "inventory": return <InventoryCalculator lang={lang} />;
     case "cv-builder": return <CvBuilder lang={lang} />;
+    case "typing-test": return <TypingTest lang={lang} />;
+    case "exam-prep": return <ExamPrep lang={lang} />;
     case "vat-return": return <VatOfficialForm lang={lang} />;
     case "zakat-declaration": return <ZakatOfficialForm lang={lang} />;
     default:
