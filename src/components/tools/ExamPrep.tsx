@@ -1,0 +1,339 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { useServerFn } from "@tanstack/react-start";
+import {
+  GraduationCap,
+  CheckCircle2,
+  XCircle,
+  ChevronRight,
+  ChevronLeft,
+  Upload,
+  RefreshCw,
+  BookOpen,
+  Trophy,
+  Loader2,
+  Trash2,
+} from "lucide-react";
+import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
+import { extractExamQuestions } from "@/lib/exam.functions";
+import type { Lang } from "@/lib/i18n";
+
+const STORAGE_KEY = "exam-bank-custom";
+
+function loadCustom(): ExamQuestion[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as ExamQuestion[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveCustom(qs: ExamQuestion[]) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(qs)); } catch { /* noop */ }
+}
+
+export function ExamPrep({ lang }: { lang: Lang }) {
+  const [track, setTrack] = useState<ExamTrack>("IFRS");
+  const [custom, setCustom] = useState<ExamQuestion[]>([]);
+  const [mode, setMode] = useState<"quiz" | "upload">("quiz");
+  const [current, setCurrent] = useState(0);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [revealed, setRevealed] = useState(false);
+  const [score, setScore] = useState({ correct: 0, total: 0 });
+
+  // Upload state
+  const [uploadText, setUploadText] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [uploadMsg, setUploadMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const extract = useServerFn(extractExamQuestions);
+
+  useEffect(() => { setCustom(loadCustom()); }, []);
+
+  const allQuestions = useMemo(() => [...SEED_QUESTIONS, ...custom], [custom]);
+  const pool = useMemo(() => allQuestions.filter((q) => q.track === track), [allQuestions, track]);
+  const q = pool[current];
+
+  function next() {
+    setSelected(null); setRevealed(false);
+    setCurrent((c) => (c + 1) % Math.max(pool.length, 1));
+  }
+  function prev() {
+    setSelected(null); setRevealed(false);
+    setCurrent((c) => (c - 1 + pool.length) % Math.max(pool.length, 1));
+  }
+  function pick(i: number) {
+    if (revealed) return;
+    setSelected(i);
+    setRevealed(true);
+    const correct = i === q.answerIndex;
+    setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+  }
+  function resetScore() { setScore({ correct: 0, total: 0 }); setCurrent(0); setSelected(null); setRevealed(false); }
+
+  function changeTrack(t: ExamTrack) {
+    setTrack(t); setCurrent(0); setSelected(null); setRevealed(false);
+  }
+
+  async function handleFile(file: File) {
+    const text = await file.text();
+    setUploadText(text.slice(0, 120_000));
+  }
+
+  async function runExtract() {
+    if (uploadText.trim().length < 20) {
+      setUploadMsg({ kind: "err", text: lang === "ar" ? "النص قصير جداً" : "Text too short" });
+      return;
+    }
+    setLoading(true); setUploadMsg(null);
+    try {
+      const { questions } = await extract({ data: { rawText: uploadText, defaultTrack: track } });
+      const mapped: ExamQuestion[] = questions
+        .filter((x) => x && x.question_en && Array.isArray(x.choices_en) && x.choices_en.length >= 2)
+        .map((x, i) => ({
+          id: `custom-${Date.now()}-${i}`,
+          track: (TRACKS as readonly string[]).includes(x.track ?? "") ? (x.track as ExamTrack) : track,
+          topic: x.topic ?? "—",
+          question: { ar: x.question_ar ?? x.question_en ?? "", en: x.question_en ?? "" },
+          choices: {
+            ar: (x.choices_ar?.length === x.choices_en!.length ? x.choices_ar : x.choices_en) as string[],
+            en: x.choices_en as string[],
+          },
+          answerIndex: typeof x.answerIndex === "number" ? Math.max(0, Math.min(x.choices_en!.length - 1, x.answerIndex)) : 0,
+          explanation: { ar: x.explanation_ar ?? x.explanation_en ?? "", en: x.explanation_en ?? "" },
+          reference: x.reference ?? "User upload",
+        }));
+      if (mapped.length === 0) {
+        setUploadMsg({ kind: "err", text: lang === "ar" ? "لم يتم استخراج أي أسئلة" : "No questions extracted" });
+      } else {
+        const merged = [...custom, ...mapped];
+        setCustom(merged); saveCustom(merged);
+        setUploadMsg({ kind: "ok", text: lang === "ar" ? `تمت إضافة ${mapped.length} سؤال` : `Added ${mapped.length} question(s)` });
+        setUploadText("");
+      }
+    } catch (e) {
+      setUploadMsg({ kind: "err", text: e instanceof Error ? e.message : "Error" });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function clearCustom() {
+    if (!confirm(lang === "ar" ? "حذف جميع الأسئلة المضافة؟" : "Delete all uploaded questions?")) return;
+    setCustom([]); saveCustom([]);
+  }
+
+  return (
+    <div className="space-y-5">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="inline-flex flex-wrap items-center gap-1 rounded-lg border border-[#d7aa52]/30 bg-white/[0.04] p-1">
+          {TRACKS.map((t) => (
+            <button
+              key={t}
+              onClick={() => changeTrack(t)}
+              className={`rounded-md px-3 py-1.5 text-xs font-bold transition ${
+                track === t ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a] hover:bg-white/5"
+              }`}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+        <div className="inline-flex items-center gap-1 rounded-lg border border-[#d7aa52]/30 bg-white/[0.04] p-1">
+          <button
+            onClick={() => setMode("quiz")}
+            className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-bold ${mode === "quiz" ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a]"}`}
+          >
+            <GraduationCap className="size-3.5" />
+            {lang === "ar" ? "التدرب" : "Practice"}
+          </button>
+          <button
+            onClick={() => setMode("upload")}
+            className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-bold ${mode === "upload" ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a]"}`}
+          >
+            <Upload className="size-3.5" />
+            {lang === "ar" ? "رفع بنك أسئلة" : "Upload bank"}
+          </button>
+        </div>
+      </div>
+
+      {mode === "quiz" && (
+        <>
+          <div className="grid gap-3 sm:grid-cols-4">
+            <Stat label={lang === "ar" ? "المسار" : "Track"} value={track} />
+            <Stat label={lang === "ar" ? "السؤال" : "Question"} value={pool.length > 0 ? `${current + 1}/${pool.length}` : "0"} />
+            <Stat label={lang === "ar" ? "النتيجة" : "Score"} value={`${score.correct}/${score.total}`} highlight />
+            <Stat label={lang === "ar" ? "الدقة" : "Accuracy"} value={score.total ? `${Math.round((score.correct / score.total) * 100)}%` : "—"} />
+          </div>
+
+          {!q ? (
+            <div className="rounded-xl border border-dashed border-[#d7aa52]/40 p-8 text-center text-sm text-[var(--fg-soft)]">
+              {lang === "ar" ? "لا توجد أسئلة لهذا المسار. ارفع بنك أسئلة." : "No questions for this track yet. Upload a bank."}
+            </div>
+          ) : (
+            <motion.div key={q.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-[#d7aa52]/30 bg-gradient-to-br from-white/[0.04] to-transparent p-5">
+              <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-[#f3d28a]/80">
+                <BookOpen className="size-3.5" />
+                <span>{q.track}</span>
+                <span>·</span>
+                <span>{q.topic}</span>
+              </div>
+              <h3 className="mb-4 text-base font-extrabold text-[var(--fg)] md:text-lg">
+                {q.question[lang]}
+              </h3>
+              <div className="space-y-2">
+                {q.choices[lang].map((c, i) => {
+                  const isCorrect = i === q.answerIndex;
+                  const isPicked = i === selected;
+                  let cls = "border-[#d7aa52]/20 bg-white/[0.03] hover:border-[#d7aa52]/50";
+                  if (revealed && isCorrect) cls = "border-emerald-400/60 bg-emerald-500/10 text-emerald-100";
+                  else if (revealed && isPicked && !isCorrect) cls = "border-red-400/60 bg-red-500/10 text-red-100";
+                  return (
+                    <button
+                      key={i}
+                      disabled={revealed}
+                      onClick={() => pick(i)}
+                      className={`flex w-full items-start gap-3 rounded-lg border p-3 text-start text-sm transition ${cls}`}
+                    >
+                      <span className="mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full border border-current text-[10px] font-bold">
+                        {String.fromCharCode(65 + i)}
+                      </span>
+                      <span className="flex-1">{c}</span>
+                      {revealed && isCorrect && <CheckCircle2 className="size-4 shrink-0 text-emerald-300" />}
+                      {revealed && isPicked && !isCorrect && <XCircle className="size-4 shrink-0 text-red-300" />}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <AnimatePresence>
+                {revealed && (
+                  <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0 }} className="mt-4 overflow-hidden">
+                    <div className="rounded-lg border border-[#d7aa52]/30 bg-[#04101f]/60 p-4">
+                      <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-[#f3d28a]">
+                        {lang === "ar" ? "الشرح" : "Explanation"}
+                      </div>
+                      <p className="text-sm leading-relaxed text-[var(--fg-soft)]">{q.explanation[lang]}</p>
+                      <div className="mt-2 text-[11px] text-[#f3d28a]/70">
+                        {lang === "ar" ? "المرجع:" : "Reference:"} {q.reference}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div className="mt-5 flex items-center justify-between">
+                <button onClick={prev} className="inline-flex items-center gap-1 rounded-lg border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-white/10">
+                  <ChevronRight className="size-3.5 rtl:hidden" />
+                  <ChevronLeft className="size-3.5 ltr:hidden" />
+                  {lang === "ar" ? "السابق" : "Prev"}
+                </button>
+                <button onClick={resetScore} className="inline-flex items-center gap-1 rounded-lg border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-white/10">
+                  <RefreshCw className="size-3.5" />
+                  {lang === "ar" ? "إعادة" : "Reset"}
+                </button>
+                <button onClick={next} className="inline-flex items-center gap-1 rounded-lg bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-1.5 text-xs font-bold text-[#04101f]">
+                  {lang === "ar" ? "التالي" : "Next"}
+                  <ChevronLeft className="size-3.5 rtl:hidden" />
+                  <ChevronRight className="size-3.5 ltr:hidden" />
+                </button>
+              </div>
+            </motion.div>
+          )}
+
+          {score.total >= 5 && (
+            <div className="flex items-center gap-2 rounded-lg border border-[#d7aa52]/30 bg-[#d7aa52]/5 p-3 text-sm text-[#f3d28a]">
+              <Trophy className="size-4" />
+              {lang === "ar" ? `أداؤك: ${score.correct} من ${score.total} (${Math.round(score.correct/score.total*100)}%)` : `Performance: ${score.correct}/${score.total} (${Math.round(score.correct/score.total*100)}%)`}
+            </div>
+          )}
+        </>
+      )}
+
+      {mode === "upload" && (
+        <div className="space-y-4 rounded-2xl border border-[#d7aa52]/30 bg-gradient-to-br from-white/[0.04] to-transparent p-5">
+          <div>
+            <h3 className="mb-1 text-base font-extrabold text-[#f3d28a]">
+              {lang === "ar" ? "رفع بنك أسئلة" : "Upload a question bank"}
+            </h3>
+            <p className="text-xs text-[var(--fg-soft)]">
+              {lang === "ar"
+                ? "ارفع ملف نصي أو الصق محتوى من Gleim/Wiley/Kaplan وسيقوم الذكاء الاصطناعي بتحليله واستخراج الأسئلة بالعربية والإنجليزية مع الشرح."
+                : "Upload a text file or paste content from Gleim/Wiley/Kaplan. AI will extract MCQs with Arabic+English translations and explanations."}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <input
+              ref={fileRef}
+              type="file"
+              accept=".txt,.md,.csv,.json"
+              className="hidden"
+              onChange={(e) => { const f = e.target.files?.[0]; if (f) void handleFile(f); }}
+            />
+            <button
+              onClick={() => fileRef.current?.click()}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+            >
+              <Upload className="size-3.5" />
+              {lang === "ar" ? "اختر ملفاً" : "Choose file"}
+            </button>
+            <span className="text-[11px] text-[var(--fg-soft)]">
+              {lang === "ar" ? "أو الصق النص أدناه" : "or paste below"}
+            </span>
+            <span className="ms-auto text-[11px] text-[var(--fg-soft)]">
+              {lang === "ar" ? "المسار الافتراضي:" : "Default track:"} <b>{track}</b>
+            </span>
+          </div>
+
+          <textarea
+            value={uploadText}
+            onChange={(e) => setUploadText(e.target.value.slice(0, 120_000))}
+            placeholder={lang === "ar" ? "الصق هنا الأسئلة (نص خام أو JSON أو CSV)..." : "Paste questions here (raw text, JSON or CSV)..."}
+            className="min-h-[200px] w-full rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/60 p-3 font-mono text-xs text-[var(--fg)] outline-none focus:border-[#d7aa52]/70"
+          />
+
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              disabled={loading || uploadText.trim().length < 20}
+              onClick={runExtract}
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-sm font-bold text-[#04101f] disabled:opacity-50"
+            >
+              {loading ? <Loader2 className="size-4 animate-spin" /> : <GraduationCap className="size-4" />}
+              {loading ? (lang === "ar" ? "جارٍ التحليل..." : "Analyzing...") : (lang === "ar" ? "تحليل وإضافة" : "Analyze & add")}
+            </button>
+            {custom.length > 0 && (
+              <button
+                onClick={clearCustom}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-red-400/40 bg-red-500/5 px-3 py-1.5 text-xs font-bold text-red-300 hover:bg-red-500/10"
+              >
+                <Trash2 className="size-3.5" />
+                {lang === "ar" ? `حذف الأسئلة المضافة (${custom.length})` : `Clear added (${custom.length})`}
+              </button>
+            )}
+            <span className="text-[11px] text-[var(--fg-soft)]">
+              {lang === "ar" ? `المجموع: ${SEED_QUESTIONS.length} مدمج + ${custom.length} مضاف` : `Total: ${SEED_QUESTIONS.length} built-in + ${custom.length} added`}
+            </span>
+          </div>
+
+          {uploadMsg && (
+            <div className={`rounded-lg border p-3 text-sm ${uploadMsg.kind === "ok" ? "border-emerald-400/40 bg-emerald-500/10 text-emerald-200" : "border-red-400/40 bg-red-500/10 text-red-200"}`}>
+              {uploadMsg.text}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Stat({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
+  return (
+    <div className={`rounded-xl border p-3 ${highlight ? "border-[#d7aa52]/60 bg-gradient-to-br from-[#d7aa52]/20 to-transparent" : "border-[#d7aa52]/20 bg-white/[0.03]"}`}>
+      <div className="text-[11px] font-bold uppercase tracking-wide text-[#f3d28a]">{label}</div>
+      <div className="mt-1 text-lg font-extrabold tabular-nums text-[var(--fg)]">{value}</div>
+    </div>
+  );
+}
