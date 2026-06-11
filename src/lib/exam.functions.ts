@@ -48,15 +48,26 @@ export const extractExamQuestions = createServerFn({ method: "POST" })
       prompt: `Default track if unclear: ${data.defaultTrack ?? "IFRS"}\n\nRaw text:\n\n${data.rawText}`,
     });
 
-    // Strip code fences if present
+    type ExtractedQ = {
+      track?: string;
+      topic?: string;
+      question_en?: string;
+      question_ar?: string;
+      choices_en?: string[];
+      choices_ar?: string[];
+      answerIndex?: number;
+      explanation_en?: string;
+      explanation_ar?: string;
+      reference?: string;
+    };
     const cleaned = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/i, "");
-    let parsed: { questions?: unknown[] } = {};
+    let parsed: { questions?: ExtractedQ[] } = {};
     try {
-      parsed = JSON.parse(cleaned);
+      parsed = JSON.parse(cleaned) as { questions?: ExtractedQ[] };
     } catch {
       const m = cleaned.match(/\{[\s\S]*\}/);
-      if (m) parsed = JSON.parse(m[0]);
+      if (m) parsed = JSON.parse(m[0]) as { questions?: ExtractedQ[] };
     }
-    const list = Array.isArray(parsed.questions) ? parsed.questions : [];
+    const list: ExtractedQ[] = Array.isArray(parsed.questions) ? parsed.questions : [];
     return { questions: list };
   });
