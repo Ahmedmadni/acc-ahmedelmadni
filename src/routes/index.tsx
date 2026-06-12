@@ -454,8 +454,8 @@ function Hero({ lang }: { lang: Lang }) {
 
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]">
-      {/* Hero background video (confined to hero only) */}
-      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      {/* Hero background video (starts right below the navbar) */}
+      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-20 bottom-0 z-0 overflow-hidden">
         <video
           src={heroVideoAsset.url}
           poster={heroBg}
@@ -465,9 +465,9 @@ function Hero({ lang }: { lang: Lang }) {
           playsInline
           preload="metadata"
           aria-hidden="true"
-          className="h-full w-full object-cover opacity-60"
+          className="h-full w-full object-cover object-top opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/30 via-[var(--bg-surface)]/60 to-[var(--bg-surface)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/20 via-[var(--bg-surface)]/55 to-[var(--bg-surface)]" />
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 opacity-50">
