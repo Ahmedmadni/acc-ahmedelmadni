@@ -454,8 +454,8 @@ function Hero({ lang }: { lang: Lang }) {
 
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]">
-      {/* Hero background video (confined to hero only) */}
-      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+      {/* Hero background video (starts right below the navbar) */}
+      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-20 bottom-0 z-0 overflow-hidden">
         <video
           src={heroVideoAsset.url}
           poster={heroBg}
@@ -465,9 +465,9 @@ function Hero({ lang }: { lang: Lang }) {
           playsInline
           preload="metadata"
           aria-hidden="true"
-          className="h-full w-full object-cover opacity-60"
+          className="h-full w-full object-cover object-top opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/30 via-[var(--bg-surface)]/60 to-[var(--bg-surface)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/20 via-[var(--bg-surface)]/55 to-[var(--bg-surface)]" />
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 opacity-50">
@@ -536,28 +536,69 @@ function Hero({ lang }: { lang: Lang }) {
 
         <motion.div style={{ y: yImg }} initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.9 }} className="order-1 flex justify-center lg:order-2">
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/30 blur-3xl" />
-            <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2.5rem] border border-[#d7aa52]/40" />
-            <div className="absolute inset-0 translate-x-4 -translate-y-4 rounded-[2.5rem] border border-white/10" />
-            <div className="relative h-[440px] w-[340px] overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/30 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow sm:h-[500px] sm:w-[400px]">
-              <img src={profileImg} alt="Ahmed Elmadani" width={400} height={500} fetchPriority="high"
-                className="absolute inset-0 h-full w-full object-cover object-top" />
+          <div className="relative group [perspective:1500px]">
+            <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/30 blur-3xl transition-opacity duration-700 group-hover:opacity-90" />
+            <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2.5rem] border border-[#d7aa52]/40 transition-transform duration-700 group-hover:-translate-x-2 group-hover:translate-y-2" />
+            <div className="absolute inset-0 translate-x-4 -translate-y-4 rounded-[2.5rem] border border-white/10 transition-transform duration-700 group-hover:translate-x-2 group-hover:-translate-y-2" />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.25em] text-[#d7aa52]">
-                    {lang === "ar" ? "متاح للعمل" : "Available"}
-                  </div>
-                  <div className="text-sm font-bold" style={{ color: "var(--fg)" }}>
-                    {lang === "ar" ? "الرياض، السعودية" : "Riyadh, KSA"}
-                  </div>
+            <div className="relative h-[440px] w-[340px] sm:h-[500px] sm:w-[400px] [transform-style:preserve-3d] transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:[transform:rotateY(180deg)]">
+              {/* FRONT — profile image */}
+              <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/30 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow [backface-visibility:hidden] [-webkit-backface-visibility:hidden]">
+                <img src={profileImg} alt="Ahmed Elmadani" width={400} height={500} fetchPriority="high"
+                  className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
+
+                {/* Shine sweep on hover */}
+                <div aria-hidden className="pointer-events-none absolute -inset-x-1/2 -top-1/2 h-[200%] w-[60%] rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-[1400ms] ease-out" />
+
+                {/* Hint badge */}
+                <div className="absolute top-4 left-4 right-4 flex justify-end">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-black/55 backdrop-blur px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3d28a] border border-[#d7aa52]/40 opacity-90 group-hover:opacity-0 transition-opacity">
+                    <Sparkles className="size-3" />
+                    {lang === "ar" ? "مرّر للنبذة" : "Hover for bio"}
+                  </span>
                 </div>
-                <span className="relative flex size-3">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
-                </span>
+
+                <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-[#d7aa52]">
+                      {lang === "ar" ? "متاح للعمل" : "Available"}
+                    </div>
+                    <div className="text-sm font-bold" style={{ color: "var(--fg)" }}>
+                      {lang === "ar" ? "الرياض، السعودية" : "Riyadh, KSA"}
+                    </div>
+                  </div>
+                  <span className="relative flex size-3">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
+                  </span>
+                </div>
+              </div>
+
+              {/* BACK — bio text */}
+              <div className="absolute inset-0 overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] via-[#0a223f] to-[#04101f] gold-glow [transform:rotateY(180deg)] [backface-visibility:hidden] [-webkit-backface-visibility:hidden] flex flex-col p-7 sm:p-8">
+                <div aria-hidden className="pointer-events-none absolute -top-24 -right-16 size-72 rounded-full bg-[#d7aa52]/20 blur-3xl" />
+                <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 size-72 rounded-full bg-blue-500/15 blur-3xl" />
+
+                <div className="relative inline-flex w-fit items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#f3d28a]">
+                  <Sparkles className="size-3" />
+                  {t.about.title[lang]}
+                </div>
+
+                <h3 className="relative mt-4 text-2xl font-black leading-tight gold-text sm:text-3xl">
+                  {t.hero.name[lang]}
+                </h3>
+
+                <div className="relative mt-3 flex-1 overflow-y-auto pr-1 text-[13px] leading-relaxed text-justify space-y-3" style={{ color: "var(--fg-soft)" }}>
+                  <p>{t.about.body[lang]}</p>
+                  <p>{t.about.body2[lang]}</p>
+                </div>
+
+                <a href="#contact" onMouseEnter={playHover} onClick={playClick}
+                  className="relative mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]">
+                  {lang === "ar" ? "تواصل معي" : "Get in touch"}
+                  <Arrow className="size-3.5" />
+                </a>
               </div>
             </div>
           </div>
@@ -1162,7 +1203,7 @@ export function Contact({ lang }: { lang: Lang }) {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -8, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end rounded-3xl p-4 pt-6 text-center transition-all hover:border-[#d7aa52]/60"
+              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-3xl p-4 pt-8 text-center transition-all hover:border-[#d7aa52]/60"
             >
               <span
                 aria-hidden
@@ -1172,10 +1213,10 @@ export function Contact({ lang }: { lang: Lang }) {
               <motion.img
                 src={s.mascot}
                 alt={s.label}
-                width={768}
-                height={768}
+                width={1024}
+                height={1024}
                 loading="lazy"
-                className="relative h-40 w-full object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-44"
+                className="relative h-44 w-auto max-w-full object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-48"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
@@ -1199,25 +1240,24 @@ export function Footer({ lang }: { lang: Lang }) {
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
-    <footer className="relative mt-6 border-t border-[var(--line)] pt-10 pb-6">
+    <footer className="relative mt-4 border-t border-[var(--line)] pt-6 pb-3">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
-      <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
-      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="text-2xl font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
-          <p className="mt-3 max-w-md text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
+      <div className="mx-auto grid w-[92%] max-w-6xl gap-6 md:grid-cols-3">
+        <div>
+          <div className="text-lg font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
+          <p className="mt-1.5 max-w-md text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
             {t.footer.tagline[lang]}
           </p>
-          <div className="mt-5 inline-flex items-center gap-2 rounded-full gold-border px-3 py-1.5 text-xs font-semibold text-[#d7aa52]">
-            <MapPin className="size-3.5" />
+          <div className="mt-2 inline-flex items-center gap-1.5 rounded-full gold-border px-2.5 py-1 text-[10px] font-semibold text-[#d7aa52]">
+            <MapPin className="size-3" />
             {lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia"}
           </div>
         </div>
 
         <div>
-          <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
-          <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
             {links.map((l) => (
               <li key={l.to}>
                 {l.to.startsWith("/#") ? (
@@ -1236,17 +1276,17 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div>
-          <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
-          <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
+          <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
             <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
         </div>
       </div>
 
-      <div className="mx-auto mt-6 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-4 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
+      <div className="mx-auto mt-4 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row" style={{ color: "var(--fg-soft)" }}>
         <span>{t.footer.rights[lang]}</span>
-        <span className="inline-flex items-center gap-2"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
+        <span className="inline-flex items-center gap-1.5"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
       </div>
     </footer>
   );
