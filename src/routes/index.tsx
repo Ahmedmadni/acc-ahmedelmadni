@@ -1240,25 +1240,24 @@ export function Footer({ lang }: { lang: Lang }) {
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
-    <footer className="relative mt-6 border-t border-[var(--line)] pt-10 pb-6">
+    <footer className="relative mt-4 border-t border-[var(--line)] pt-6 pb-3">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
-      <div aria-hidden className="pointer-events-none absolute -top-32 left-1/2 size-[400px] -translate-x-1/2 rounded-full bg-[#d7aa52]/10 blur-3xl" />
 
-      <div className="mx-auto grid w-[92%] max-w-6xl gap-10 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="text-2xl font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
-          <p className="mt-3 max-w-md text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
+      <div className="mx-auto grid w-[92%] max-w-6xl gap-6 md:grid-cols-3">
+        <div>
+          <div className="text-lg font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
+          <p className="mt-1.5 max-w-md text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
             {t.footer.tagline[lang]}
           </p>
-          <div className="mt-5 inline-flex items-center gap-2 rounded-full gold-border px-3 py-1.5 text-xs font-semibold text-[#d7aa52]">
-            <MapPin className="size-3.5" />
+          <div className="mt-2 inline-flex items-center gap-1.5 rounded-full gold-border px-2.5 py-1 text-[10px] font-semibold text-[#d7aa52]">
+            <MapPin className="size-3" />
             {lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia"}
           </div>
         </div>
 
         <div>
-          <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
-          <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
+          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
             {links.map((l) => (
               <li key={l.to}>
                 {l.to.startsWith("/#") ? (
@@ -1277,17 +1276,17 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div>
-          <div className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
-          <ul className="space-y-2 text-sm" style={{ color: "var(--fg-soft)" }}>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
+          <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
             <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
             <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
           </ul>
         </div>
       </div>
 
-      <div className="mx-auto mt-6 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-3 border-t border-[var(--line)] pt-4 text-xs sm:flex-row" style={{ color: "var(--fg-soft)" }}>
+      <div className="mx-auto mt-4 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row" style={{ color: "var(--fg-soft)" }}>
         <span>{t.footer.rights[lang]}</span>
-        <span className="inline-flex items-center gap-2"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
+        <span className="inline-flex items-center gap-1.5"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
       </div>
     </footer>
   );
