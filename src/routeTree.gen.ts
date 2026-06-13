@@ -24,6 +24,7 @@ import { Route as LibraryIndexRouteImport } from './routes/library.index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
 import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
+import { Route as LibraryBooksRouteImport } from './routes/library.books'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
@@ -107,6 +108,11 @@ const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
   path: '/courses',
   getParentRoute: () => LibraryRoute,
 } as any)
+const LibraryBooksRoute = LibraryBooksRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => LibraryRoute,
+} as any)
 const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
   id: '/api/cv-enhance',
   path: '/api/cv-enhance',
@@ -167,6 +173,7 @@ export interface FileRoutesByFullPath {
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge/': typeof KnowledgeIndexRoute
@@ -190,6 +197,7 @@ export interface FileRoutesByTo {
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge': typeof KnowledgeIndexRoute
@@ -216,6 +224,7 @@ export interface FileRoutesById {
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge/': typeof KnowledgeIndexRoute
@@ -242,6 +251,7 @@ export interface FileRouteTypes {
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/library/books'
     | '/library/courses'
     | '/tools/$toolId'
     | '/knowledge/'
@@ -265,6 +275,7 @@ export interface FileRouteTypes {
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/library/books'
     | '/library/courses'
     | '/tools/$toolId'
     | '/knowledge'
@@ -290,6 +301,7 @@ export interface FileRouteTypes {
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/library/books'
     | '/library/courses'
     | '/tools/$toolId'
     | '/knowledge/'
@@ -430,6 +442,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LibraryCoursesRouteImport
       parentRoute: typeof LibraryRoute
     }
+    '/library/books': {
+      id: '/library/books'
+      path: '/books'
+      fullPath: '/library/books'
+      preLoaderRoute: typeof LibraryBooksRouteImport
+      parentRoute: typeof LibraryRoute
+    }
     '/api/cv-enhance': {
       id: '/api/cv-enhance'
       path: '/api/cv-enhance'
@@ -505,11 +524,13 @@ const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
 interface LibraryRouteChildren {
+  LibraryBooksRoute: typeof LibraryBooksRoute
   LibraryCoursesRoute: typeof LibraryCoursesRoute
   LibraryIndexRoute: typeof LibraryIndexRoute
 }
 
 const LibraryRouteChildren: LibraryRouteChildren = {
+  LibraryBooksRoute: LibraryBooksRoute,
   LibraryCoursesRoute: LibraryCoursesRoute,
   LibraryIndexRoute: LibraryIndexRoute,
 }
