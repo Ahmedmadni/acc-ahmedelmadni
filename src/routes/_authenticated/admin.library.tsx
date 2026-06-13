@@ -413,6 +413,11 @@ function ItemForm({
             className="bg-[#04101f] border-[#d7aa52]/20"
           />
         </Field>
+        {value.type === "book" && (
+          <Field label="ملف PDF (للكتب)">
+            <PdfUploadField value={value} onChange={onChange} />
+          </Field>
+        )}
 
         <Field label="الجهة/المنصة">
           <Input
