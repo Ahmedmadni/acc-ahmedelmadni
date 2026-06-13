@@ -258,3 +258,50 @@ function normalize(d: Partial<LibItemInput>): Record<string, unknown> {
   if (out.cover_image === "") out.cover_image = null;
   return out;
 }
+
+// ============ PDF: upload (admin) + public signed URL ============
+export const uploadLibraryPdfFn = createServerFn({ method: "POST" })
+  .middleware([requireAdmin])
+  .inputValidator((input: unknown) =>
+    z.object({
+      id: z.string().uuid(),
+      filename: z.string().min(1).max(200),
+      base64: z.string().min(10),
+    }).parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const bytes = Buffer.from(data.base64, "base64");
+    if (bytes.length > 50 * 1024 * 1024) throw new Error("PDF too large (max 50MB)");
+    const safe = data.filename.replace(/[^a-zA-Z0-9._-]/g, "_");
+    const path = `${data.id}/${Date.now()}_${safe}`;
+    const { error: upErr } = await supabaseAdmin.storage
+      .from("library-pdfs")
+      .upload(path, bytes, { contentType: "application/pdf", upsert: true });
+    if (upErr) throw new Error(upErr.message);
+    const sb = context.supabase as unknown as LooseSb;
+    const { error } = await sb.from("library_items").update({ pdf_path: path }).eq("id", data.id);
+    if (error) throw new Error(error.message);
+    return { ok: true, path };
+  });
+
+export const getLibraryPdfUrlFn = createServerFn({ method: "POST" })
+  .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
+  .handler(async ({ data }) => {
+    const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const { data: row, error } = await supabaseAdmin
+      .from("library_items")
+      .select("pdf_path,is_published")
+      .eq("id", data.id)
+      .single();
+    if (error || !row) throw new Error("Not found");
+    const r = row as { pdf_path: string | null; is_published: boolean };
+    if (!r.is_published) throw new Error("Not available");
+    if (!r.pdf_path) throw new Error("No PDF attached");
+    const { data: signed, error: sErr } = await supabaseAdmin.storage
+      .from("library-pdfs")
+      .createSignedUrl(r.pdf_path, 60 * 60);
+    if (sErr || !signed) throw new Error(sErr?.message || "Could not sign URL");
+    return { url: signed.signedUrl };
+  });
+
