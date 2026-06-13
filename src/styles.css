@@ -99,11 +99,20 @@ html.light {
     color: var(--fg);
     font-family: "Cairo", "Inter", system-ui, sans-serif;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.005em;
     transition: background-color 0.6s ease, color 0.6s ease;
   }
 
   html[dir="ltr"] body {
     font-family: "Inter", "Cairo", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+    line-height: 1.15;
   }
 
   ::selection {
