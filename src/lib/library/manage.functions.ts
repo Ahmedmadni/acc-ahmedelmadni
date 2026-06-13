@@ -22,6 +22,7 @@ const ItemSchema = z.object({
   tags: z.array(z.string().min(1).max(40)).max(20).default([]),
   sort_order: z.number().int().min(0).max(9999).default(0),
   is_published: z.boolean().default(false),
+  pdf_path: z.string().max(500).optional().nullable(),
 });
 
 type LibItemInput = z.infer<typeof ItemSchema>;
