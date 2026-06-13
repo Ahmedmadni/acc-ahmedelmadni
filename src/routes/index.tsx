@@ -1358,21 +1358,6 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
             </motion.div>
           )}
         </AnimatePresence>
-
-        <motion.button
-          type="button"
-          onClick={() => { playClick(); setOpen((v) => !v); }}
-          onMouseEnter={playHover}
-          aria-label={open ? "Close social menu" : "Open social menu"}
-          aria-expanded={open}
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.94 }}
-          transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="relative flex size-14 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
-        >
-          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
-          {open ? <X className="size-5 relative" /> : <i className="fa-solid fa-share-nodes text-xl relative" />}
-        </motion.button>
       </div>
     </div>
   );
