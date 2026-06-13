@@ -1,50 +1,23 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowLeft, Home, Languages } from "lucide-react";
-import { Library } from "@/components/Library";
-import { t, type Lang } from "@/lib/i18n";
+import { ArrowLeft, Home, Languages, BookMarked, Video, FileText } from "lucide-react";
+import { type Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/library")({
   head: () => {
     const url = "https://acc-ahmedelmadni.lovable.app/library";
-    const courseSchemas = t.library.courses.slice(0, 12).map((c) => ({
-      "@context": "https://schema.org",
-      "@type": "Course",
-      name: c.ar,
-      alternateName: c.en,
-      description: c.desc.ar,
-      inLanguage: c.lang === "ar" ? "ar" : "en",
-      educationalLevel: c.level,
-      isAccessibleForFree: c.price === "free",
-      provider: {
-        "@type": "Person",
-        name: "Ahmed Elmadani",
-        url: "https://acc-ahmedelmadni.lovable.app/",
-      },
-      offers: {
-        "@type": "Offer",
-        price: c.price === "free" ? "0" : undefined,
-        priceCurrency: "SAR",
-        category: c.price === "free" ? "Free" : "Paid",
-      },
-      hasCourseInstance: {
-        "@type": "CourseInstance",
-        courseMode: "online",
-        courseWorkload: `PT${c.hours}H`,
-      },
-    }));
     return {
       meta: [
         { title: "المكتبة المحاسبية | Accounting Library — Ahmed Elmadani" },
         {
           name: "description",
           content:
-            "مكتبة احترافية لأفضل كورسات وشهادات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، SOCPA، VAT والمزيد.",
+            "مكتبة احترافية لأفضل كورسات وكتب ومقالات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، SOCPA، VAT والمزيد.",
         },
         { property: "og:title", content: "المكتبة المحاسبية | Accounting Library" },
         {
           property: "og:description",
-          content: "A curated library of the best accounting courses & certifications.",
+          content: "A curated library of the best accounting courses, books & articles.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -52,32 +25,28 @@ export const Route = createFileRoute("/library")({
         { name: "twitter:title", content: "Accounting Library — Ahmed Elmadani" },
       ],
       links: [{ rel: "canonical", href: url }],
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
-              { "@type": "ListItem", position: 2, name: "المكتبة", item: url },
-            ],
-          }),
-        },
-        ...courseSchemas.map((s) => ({
-          type: "application/ld+json",
-          children: JSON.stringify(s),
-        })),
-      ],
     };
   },
-  component: LibraryPage,
+  component: LibraryLayout,
 });
 
-
-function LibraryPage() {
+function LibraryLayout() {
   const [lang, setLang] = useState<Lang>("ar");
   const isRTL = lang === "ar";
+  const matches = useChildMatches();
+  const path = matches[matches.length - 1]?.pathname ?? "/library";
+  const current: "courses" | "books" | "articles" =
+    path.includes("/library/books")
+      ? "books"
+      : path.includes("/library/articles")
+        ? "articles"
+        : "courses";
+
+  const tabs: { id: "courses" | "books" | "articles"; ar: string; en: string; Icon: typeof Video; to: "/library/courses" | "/library/books" | "/library/articles" }[] = [
+    { id: "courses", ar: "الكورسات", en: "Courses", Icon: Video, to: "/library/courses" },
+    { id: "books", ar: "الكتب", en: "Books", Icon: BookMarked, to: "/library/books" },
+    { id: "articles", ar: "المقالات", en: "Articles", Icon: FileText, to: "/library/articles" },
+  ];
 
   return (
     <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
@@ -105,7 +74,36 @@ function LibraryPage() {
         </div>
       </header>
 
-      <Library lang={lang} />
+      {/* Top tabs: Courses / Books / Articles */}
+      <div className="mx-auto mt-6 w-[92%] max-w-6xl">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+          {tabs.map(({ id, ar, en, Icon, to }) => {
+            const active = current === id;
+            return (
+              <Link
+                key={id}
+                to={to}
+                className={`inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 text-xs font-bold transition-all ${
+                  active
+                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
+                    : "text-white/70 hover:text-[#f3d28a]"
+                }`}
+              >
+                <Icon className="size-3.5" />
+                {lang === "ar" ? ar : en}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      <Outlet />
     </div>
   );
+}
+
+// Lang context for child routes (read via window) — fall back to AR
+export function useLibraryLang(): Lang {
+  if (typeof document === "undefined") return "ar";
+  return (document.documentElement.dir === "ltr" ? "en" : "ar") as Lang;
 }
