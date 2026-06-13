@@ -1,5 +1,5 @@
 import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { ArrowLeft, Home, Languages, BookMarked, Video, FileText } from "lucide-react";
 import { type Lang } from "@/lib/i18n";
 
@@ -30,6 +30,11 @@ export const Route = createFileRoute("/library")({
   component: LibraryLayout,
 });
 
+const LibLangCtx = createContext<Lang>("ar");
+export function useLibLang(): Lang {
+  return useContext(LibLangCtx);
+}
+
 function LibraryLayout() {
   const [lang, setLang] = useState<Lang>("ar");
   const isRTL = lang === "ar";
@@ -49,61 +54,57 @@ function LibraryLayout() {
   ];
 
   return (
-    <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
-      <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
-          >
-            <ArrowLeft className="size-3.5" />
-            {lang === "ar" ? "الرئيسية" : "Home"}
-            <Home className="size-3.5" />
-          </Link>
-          <div className="text-sm font-extrabold tracking-wide text-[#f3d28a]">
-            {lang === "ar" ? "المكتبة المحاسبية" : "Accounting Library"}
+    <LibLangCtx.Provider value={lang}>
+      <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
+        <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
+          <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+            >
+              <ArrowLeft className="size-3.5" />
+              {lang === "ar" ? "الرئيسية" : "Home"}
+              <Home className="size-3.5" />
+            </Link>
+            <div className="text-sm font-extrabold tracking-wide text-[#f3d28a]">
+              {lang === "ar" ? "المكتبة المحاسبية" : "Accounting Library"}
+            </div>
+            <button
+              onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
+              className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+              aria-label="Toggle language"
+            >
+              <Languages className="size-3.5" />
+              {lang === "ar" ? "EN" : "AR"}
+            </button>
           </div>
-          <button
-            onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
-            aria-label="Toggle language"
-          >
-            <Languages className="size-3.5" />
-            {lang === "ar" ? "EN" : "AR"}
-          </button>
-        </div>
-      </header>
+        </header>
 
-      {/* Top tabs: Courses / Books / Articles */}
-      <div className="mx-auto mt-6 w-[92%] max-w-6xl">
-        <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
-          {tabs.map(({ id, ar, en, Icon, to }) => {
-            const active = current === id;
-            return (
-              <Link
-                key={id}
-                to={to}
-                className={`inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 text-xs font-bold transition-all ${
-                  active
-                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
-                    : "text-white/70 hover:text-[#f3d28a]"
-                }`}
-              >
-                <Icon className="size-3.5" />
-                {lang === "ar" ? ar : en}
-              </Link>
-            );
-          })}
+        {/* Top tabs: Courses / Books / Articles */}
+        <div className="mx-auto mt-6 w-[92%] max-w-6xl">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+            {tabs.map(({ id, ar, en, Icon, to }) => {
+              const active = current === id;
+              return (
+                <Link
+                  key={id}
+                  to={to}
+                  className={`inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 text-xs font-bold transition-all ${
+                    active
+                      ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
+                      : "text-white/70 hover:text-[#f3d28a]"
+                  }`}
+                >
+                  <Icon className="size-3.5" />
+                  {lang === "ar" ? ar : en}
+                </Link>
+              );
+            })}
+          </div>
         </div>
+
+        <Outlet />
       </div>
-
-      <Outlet />
-    </div>
+    </LibLangCtx.Provider>
   );
-}
-
-// Lang context for child routes (read via window) — fall back to AR
-export function useLibraryLang(): Lang {
-  if (typeof document === "undefined") return "ar";
-  return (document.documentElement.dir === "ltr" ? "en" : "ar") as Lang;
 }
