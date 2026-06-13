@@ -386,6 +386,7 @@ export type Database = {
           is_free: boolean
           is_published: boolean
           level: string | null
+          pdf_path: string | null
           price: number | null
           provider: string | null
           sort_order: number
@@ -410,6 +411,7 @@ export type Database = {
           is_free?: boolean
           is_published?: boolean
           level?: string | null
+          pdf_path?: string | null
           price?: number | null
           provider?: string | null
           sort_order?: number
@@ -434,6 +436,7 @@ export type Database = {
           is_free?: boolean
           is_published?: boolean
           level?: string | null
+          pdf_path?: string | null
           price?: number | null
           provider?: string | null
           sort_order?: number
