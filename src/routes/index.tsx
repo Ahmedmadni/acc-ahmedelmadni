@@ -1309,16 +1309,31 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <div dir="ltr" className="fixed z-40" style={{ left: 18, bottom: 18 }}>
-      <div className="flex flex-col items-start gap-3">
+      <div className="flex flex-row items-center gap-3">
+        <motion.button
+          type="button"
+          onClick={() => { playClick(); setOpen((v) => !v); }}
+          onMouseEnter={playHover}
+          aria-label={open ? "Close social menu" : "Open social menu"}
+          aria-expanded={open}
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.94 }}
+          transition={{ type: "spring", stiffness: 260, damping: 18 }}
+          className="relative flex size-14 shrink-0 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
+        >
+          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
+          {open ? <X className="size-5 relative" /> : <i className="fa-solid fa-share-nodes text-xl relative" />}
+        </motion.button>
+
         <AnimatePresence>
           {open && (
             <motion.div
               key="socials"
-              initial={{ opacity: 0, y: 14, scale: 0.85 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 14, scale: 0.85 }}
+              initial={{ opacity: 0, x: -14, scale: 0.85 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: -14, scale: 0.85 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className="flex flex-col items-center gap-2 rounded-3xl border border-[#d7aa52]/30 bg-[#04101f]/85 p-3 backdrop-blur-xl shadow-2xl shadow-black/60"
+              className="flex flex-row items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-[#04101f]/85 p-2 backdrop-blur-xl shadow-2xl shadow-black/60"
             >
               {SOCIALS.map((s, i) => (
                 <motion.a
@@ -1334,10 +1349,10 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05, type: "spring", stiffness: 240, damping: 20 }}
                   whileHover={{ scale: 1.15, rotate: -4 }}
-                  className="flex size-11 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg"
+                  className="flex size-10 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg"
                   style={{ color: s.color }}
                 >
-                  <i className={`${s.icon} text-lg`} />
+                  <i className={`${s.icon} text-base`} />
                 </motion.a>
               ))}
             </motion.div>
