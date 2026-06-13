@@ -1,6 +1,6 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import { AnimatePresence, motion, useAnimationControls } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Send, Sparkles, X } from "lucide-react";
 import { playClick, playHover } from "@/lib/sound";
@@ -12,12 +12,9 @@ const transport = new DefaultChatTransport({ api: "/api/chat" });
 export function AIAssistant({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
-  const [isRunning, setIsRunning] = useState(false);
   const { messages, sendMessage, status } = useChat({ transport });
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const runControls = useAnimationControls();
-  const bodyControls = useAnimationControls();
 
   const loading = status === "submitted" || status === "streaming";
 
@@ -28,72 +25,6 @@ export function AIAssistant({ lang }: { lang: Lang }) {
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 200);
   }, [open]);
-
-  // Periodically: run to the floating social button on the left, click it, return.
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    let cancelled = false;
-    let waitTimeout: ReturnType<typeof setTimeout> | undefined;
-
-    const runOnce = async () => {
-      if (cancelled || open) return;
-      const socialBtn = document.querySelector<HTMLButtonElement>(
-        'button[aria-label="Open social menu"], button[aria-label="Close social menu"]'
-      );
-      const myEl = document.getElementById("ai-mascot-runner");
-      if (!socialBtn || !myEl) return;
-      const myRect = myEl.getBoundingClientRect();
-      const targetRect = socialBtn.getBoundingClientRect();
-      const dx = targetRect.left + targetRect.width / 2 - (myRect.left + myRect.width / 2);
-
-      setIsRunning(true);
-      // Running bob
-      bodyControls.start({
-        rotate: [0, -8, 8, -8, 8, -6, 6, 0],
-        y: [0, -6, 0, -6, 0, -4, 0, 0],
-        transition: { duration: 1.8, ease: "linear", repeat: 1 },
-      });
-      await runControls.start({
-        x: dx,
-        transition: { duration: 2.0, ease: [0.45, 0, 0.55, 1] },
-      });
-      if (cancelled) return;
-      // Jump & press
-      await runControls.start({
-        scale: [1, 1.15, 0.92, 1],
-        rotate: [0, -10, 6, 0],
-        y: [0, -14, 0, 0],
-        transition: { duration: 0.6, ease: "easeOut" },
-      });
-      try { socialBtn.click(); } catch { /* ignore */ }
-      await new Promise<void>((r) => { waitTimeout = setTimeout(() => r(), 1800); });
-      if (cancelled) return;
-      const closeBtn = document.querySelector<HTMLButtonElement>(
-        'button[aria-label="Close social menu"]'
-      );
-      try { closeBtn?.click(); } catch { /* ignore */ }
-      bodyControls.start({
-        rotate: [0, 8, -8, 8, -8, 6, -6, 0],
-        y: [0, -6, 0, -6, 0, -4, 0, 0],
-        transition: { duration: 1.8, ease: "linear", repeat: 1 },
-      });
-      await runControls.start({
-        x: 0,
-        transition: { duration: 2.0, ease: [0.45, 0, 0.55, 1] },
-      });
-      if (cancelled) return;
-      setIsRunning(false);
-    };
-
-    const first = setTimeout(runOnce, 12_000);
-    const interval = setInterval(runOnce, 32_000);
-    return () => {
-      cancelled = true;
-      clearTimeout(first);
-      clearInterval(interval);
-      if (waitTimeout) clearTimeout(waitTimeout);
-    };
-  }, [open, runControls, bodyControls]);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -109,24 +40,23 @@ export function AIAssistant({ lang }: { lang: Lang }) {
 
   return (
     <>
-      <motion.div
+      {/* Mascot pinned above the floating social button on the left */}
+      <div
         id="ai-mascot-runner"
-        animate={runControls}
         className="fixed z-40"
-        style={{ right: 18, bottom: 18 }}
+        style={{ left: 10, bottom: 86 }}
       >
         <motion.button
           type="button"
-          onClick={() => { if (isRunning) return; playClick(); setOpen(true); }}
+          onClick={() => { playClick(); setOpen(true); }}
           onMouseEnter={playHover}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.5, type: "spring", stiffness: 220, damping: 16 }}
-          whileHover={{ scale: isRunning ? 1 : 1.06 }}
-          whileTap={{ scale: isRunning ? 1 : 0.94 }}
+          transition={{ delay: 1.2, type: "spring", stiffness: 220, damping: 16 }}
+          whileHover={{ scale: 1.06 }}
+          whileTap={{ scale: 0.94 }}
           aria-label={title}
           className="relative group flex items-center justify-center rounded-full"
-          style={{ pointerEvents: isRunning ? "none" : "auto" }}
         >
           <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
           <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f3d28a]/30 to-[#b8862e]/30 blur-xl" aria-hidden />
@@ -136,14 +66,13 @@ export function AIAssistant({ lang }: { lang: Lang }) {
             width={1024}
             height={1024}
             loading="lazy"
-            className="relative size-20 sm:size-24 object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
-            animate={isRunning ? bodyControls : { y: [0, -10, 0, -6, 0], rotate: [0, -6, 6, -3, 0] }}
-            transition={isRunning ? undefined : { duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+            className="relative size-16 sm:size-20 object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
+            animate={{ y: [0, -8, 0, -4, 0], rotate: [0, -5, 5, -2, 0] }}
+            transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
           />
           <span className="sr-only">{lang === "ar" ? "اسأل المساعد" : "Ask AI"}</span>
         </motion.button>
-      </motion.div>
-
+      </div>
 
       <AnimatePresence>
         {open && (
@@ -160,7 +89,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
               exit={{ opacity: 0, y: 30, scale: 0.92 }}
               transition={{ type: "spring", stiffness: 240, damping: 24 }}
               onClick={(e) => e.stopPropagation()}
-              className="fixed bottom-0 right-0 left-0 sm:left-auto sm:bottom-6 sm:right-6 flex h-[88vh] sm:h-[600px] w-full sm:w-[400px] flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] shadow-2xl"
+              className="fixed bottom-0 right-0 left-0 sm:left-6 sm:right-auto sm:bottom-6 flex h-[88vh] sm:h-[600px] w-full sm:w-[400px] flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] shadow-2xl"
             >
               {/* Header */}
               <div className="flex items-center gap-3 border-b border-[#d7aa52]/25 bg-gradient-to-r from-[#0a223f] to-[#04101f] p-4">

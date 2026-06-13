@@ -20,8 +20,12 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
+import { Route as LibraryIndexRouteImport } from './routes/library.index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
+import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
+import { Route as LibraryBooksRouteImport } from './routes/library.books'
+import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
@@ -85,6 +89,11 @@ const ToolsIndexRoute = ToolsIndexRouteImport.update({
   path: '/tools/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LibraryIndexRoute = LibraryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LibraryRoute,
+} as any)
 const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
   id: '/knowledge/',
   path: '/knowledge/',
@@ -94,6 +103,21 @@ const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
   id: '/tools/$toolId',
   path: '/tools/$toolId',
   getParentRoute: () => rootRouteImport,
+} as any)
+const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const LibraryBooksRoute = LibraryBooksRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const LibraryArticlesRoute = LibraryArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => LibraryRoute,
 } as any)
 const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
   id: '/api/cv-enhance',
@@ -148,15 +172,19 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/certifications': typeof CertificationsRoute
   '/experience': typeof ExperienceRoute
-  '/library': typeof LibraryRoute
+  '/library': typeof LibraryRouteWithChildren
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/library/articles': typeof LibraryArticlesRoute
+  '/library/books': typeof LibraryBooksRoute
+  '/library/courses': typeof LibraryCoursesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge/': typeof KnowledgeIndexRoute
+  '/library/': typeof LibraryIndexRoute
   '/tools/': typeof ToolsIndexRoute
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
@@ -170,15 +198,18 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/certifications': typeof CertificationsRoute
   '/experience': typeof ExperienceRoute
-  '/library': typeof LibraryRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/library/articles': typeof LibraryArticlesRoute
+  '/library/books': typeof LibraryBooksRoute
+  '/library/courses': typeof LibraryCoursesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge': typeof KnowledgeIndexRoute
+  '/library': typeof LibraryIndexRoute
   '/tools': typeof ToolsIndexRoute
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
@@ -194,15 +225,19 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/certifications': typeof CertificationsRoute
   '/experience': typeof ExperienceRoute
-  '/library': typeof LibraryRoute
+  '/library': typeof LibraryRouteWithChildren
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/library/articles': typeof LibraryArticlesRoute
+  '/library/books': typeof LibraryBooksRoute
+  '/library/courses': typeof LibraryCoursesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge/': typeof KnowledgeIndexRoute
+  '/library/': typeof LibraryIndexRoute
   '/tools/': typeof ToolsIndexRoute
   '/_authenticated/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/_authenticated/admin/library': typeof AuthenticatedAdminLibraryRoute
@@ -225,8 +260,12 @@ export interface FileRouteTypes {
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/library/articles'
+    | '/library/books'
+    | '/library/courses'
     | '/tools/$toolId'
     | '/knowledge/'
+    | '/library/'
     | '/tools/'
     | '/admin/knowledge'
     | '/admin/library'
@@ -240,15 +279,18 @@ export interface FileRouteTypes {
     | '/auth'
     | '/certifications'
     | '/experience'
-    | '/library'
     | '/services'
     | '/sitemap.xml'
     | '/skills'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/library/articles'
+    | '/library/books'
+    | '/library/courses'
     | '/tools/$toolId'
     | '/knowledge'
+    | '/library'
     | '/tools'
     | '/admin/knowledge'
     | '/admin/library'
@@ -270,8 +312,12 @@ export interface FileRouteTypes {
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/library/articles'
+    | '/library/books'
+    | '/library/courses'
     | '/tools/$toolId'
     | '/knowledge/'
+    | '/library/'
     | '/tools/'
     | '/_authenticated/admin/knowledge'
     | '/_authenticated/admin/library'
@@ -287,7 +333,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   CertificationsRoute: typeof CertificationsRoute
   ExperienceRoute: typeof ExperienceRoute
-  LibraryRoute: typeof LibraryRoute
+  LibraryRoute: typeof LibraryRouteWithChildren
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SkillsRoute: typeof SkillsRoute
@@ -380,6 +426,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/library/': {
+      id: '/library/'
+      path: '/'
+      fullPath: '/library/'
+      preLoaderRoute: typeof LibraryIndexRouteImport
+      parentRoute: typeof LibraryRoute
+    }
     '/knowledge/': {
       id: '/knowledge/'
       path: '/knowledge'
@@ -393,6 +446,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/tools/$toolId'
       preLoaderRoute: typeof ToolsToolIdRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/library/courses': {
+      id: '/library/courses'
+      path: '/courses'
+      fullPath: '/library/courses'
+      preLoaderRoute: typeof LibraryCoursesRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/library/books': {
+      id: '/library/books'
+      path: '/books'
+      fullPath: '/library/books'
+      preLoaderRoute: typeof LibraryBooksRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/library/articles': {
+      id: '/library/articles'
+      path: '/articles'
+      fullPath: '/library/articles'
+      preLoaderRoute: typeof LibraryArticlesRouteImport
+      parentRoute: typeof LibraryRoute
     }
     '/api/cv-enhance': {
       id: '/api/cv-enhance'
@@ -468,6 +542,23 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
+interface LibraryRouteChildren {
+  LibraryArticlesRoute: typeof LibraryArticlesRoute
+  LibraryBooksRoute: typeof LibraryBooksRoute
+  LibraryCoursesRoute: typeof LibraryCoursesRoute
+  LibraryIndexRoute: typeof LibraryIndexRoute
+}
+
+const LibraryRouteChildren: LibraryRouteChildren = {
+  LibraryArticlesRoute: LibraryArticlesRoute,
+  LibraryBooksRoute: LibraryBooksRoute,
+  LibraryCoursesRoute: LibraryCoursesRoute,
+  LibraryIndexRoute: LibraryIndexRoute,
+}
+
+const LibraryRouteWithChildren =
+  LibraryRoute._addFileChildren(LibraryRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
@@ -475,7 +566,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   CertificationsRoute: CertificationsRoute,
   ExperienceRoute: ExperienceRoute,
-  LibraryRoute: LibraryRoute,
+  LibraryRoute: LibraryRouteWithChildren,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SkillsRoute: SkillsRoute,
@@ -491,13 +582,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
