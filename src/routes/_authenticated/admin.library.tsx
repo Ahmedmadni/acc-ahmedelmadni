@@ -12,6 +12,7 @@ import {
   generateLibraryItemAIFn,
   updateArticleFn,
   deleteArticleFn,
+  uploadLibraryPdfFn,
   type LibraryItemRow,
 } from "@/lib/library/manage.functions";
 import { listAdminArticlesFn, reviewArticleFn } from "@/lib/knowledge/generate.functions";
