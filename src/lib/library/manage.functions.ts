@@ -46,6 +46,7 @@ export type LibraryItemRow = {
   tags: string[];
   sort_order: number;
   is_published: boolean;
+  pdf_path: string | null;
   generation_source: string;
   ai_model: string | null;
   created_at: string;
