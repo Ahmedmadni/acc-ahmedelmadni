@@ -241,12 +241,13 @@ const FORMAT_COLORS: Record<string, string> = {
 
 type ViewMode = "videos" | "books";
 
-export function Library({ lang }: { lang: Lang }) {
+export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView?: ViewMode; hideTabs?: boolean }) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatKey>("all");
   const [level, setLevel] = useState<LevelKey>("all");
   const [price, setPrice] = useState<PriceKey>("all");
-  const [view, setView] = useState<ViewMode>("videos");
+  const [viewState, setView] = useState<ViewMode>(forcedView ?? "videos");
+  const view = forcedView ?? viewState;
   const [bookFormat, setBookFormat] = useState<FormatKey>("all");
   const [bookAuthor, setBookAuthor] = useState("");
   const [favOnly, setFavOnly] = useState(false);
@@ -285,7 +286,7 @@ export function Library({ lang }: { lang: Lang }) {
 
 
   return (
-    <section id="library" className="relative py-24">
+    <section id="library" className="relative py-14">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent" />
       <div className="mx-auto w-[92%] max-w-6xl">
         {/* Title */}
@@ -296,7 +297,8 @@ export function Library({ lang }: { lang: Lang }) {
           <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
         </motion.div>
 
-        {/* Tabs: Videos vs Books */}
+        {/* Tabs: Videos vs Books (hidden when forced from parent route) */}
+        {!hideTabs && (
         <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
           {(["videos", "books"] as ViewMode[]).map((v) => {
             const isActive = view === v;
@@ -319,6 +321,7 @@ export function Library({ lang }: { lang: Lang }) {
             );
           })}
         </div>
+        )}
 
         {/* Search + filters */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
