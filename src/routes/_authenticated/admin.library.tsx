@@ -728,3 +728,64 @@ function ArticlesPanel() {
     </div>
   );
 }
+
+function PdfUploadField({
+  value,
+  onChange,
+}: {
+  value: Partial<LibraryItemRow>;
+  onChange: (next: Partial<LibraryItemRow>) => void;
+}) {
+  const uploadFn = useServerFn(uploadLibraryPdfFn);
+  const [busy, setBusy] = useState(false);
+
+  if (!value.id) {
+    return <p className="text-xs text-white/60">احفظ العنصر أولاً ثم ارفع ملف PDF.</p>;
+  }
+
+  const onFile = async (file: File) => {
+    if (file.type !== "application/pdf") {
+      toast.error("يجب أن يكون الملف PDF");
+      return;
+    }
+    if (file.size > 50 * 1024 * 1024) {
+      toast.error("الحد الأقصى 50 ميجابايت");
+      return;
+    }
+    setBusy(true);
+    try {
+      const buf = await file.arrayBuffer();
+      let bin = "";
+      const bytes = new Uint8Array(buf);
+      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+      const base64 = btoa(bin);
+      const res = await uploadFn({ data: { id: value.id!, filename: file.name, base64 } });
+      onChange({ ...value, pdf_path: res.path });
+      toast.success("تم رفع الملف");
+    } catch (e) {
+      toast.error((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="space-y-2">
+      {value.pdf_path && (
+        <div className="text-[11px] text-emerald-300">PDF محفوظ: {value.pdf_path}</div>
+      )}
+      <input
+        type="file"
+        accept="application/pdf"
+        disabled={busy}
+        onChange={(e) => {
+          const f = e.target.files?.[0];
+          if (f) onFile(f);
+        }}
+        className="block w-full text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#f3d28a] file:to-[#b8862e] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#04101f]"
+      />
+      {busy && <p className="text-xs text-white/60">جارٍ الرفع...</p>}
+    </div>
+  );
+}
+
