@@ -42,7 +42,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
               to="/library"
               className="hidden rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 sm:inline-flex"
             >
-              الكورسات
+              المكتبة
             </Link>
           </nav>
         </div>
