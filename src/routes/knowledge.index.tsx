@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { Search, Sparkles, Clock, ArrowLeft, GraduationCap, BookOpen } from "lucide-react";
+import { Search, Sparkles, Clock, ArrowLeft, GraduationCap, BookOpen, Library as LibraryIcon, FileText } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
@@ -116,23 +116,37 @@ function KnowledgeHubPage() {
           />
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
           <Link
-            to="/library"
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+            to="/library/books"
+            className="group flex items-center justify-between gap-3 rounded-2xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-4 text-sm font-bold text-[#f3d28a] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
           >
-            <GraduationCap className="size-4" />
-            الكورسات
-            <ArrowLeft className="size-3.5" />
+            <span className="inline-flex items-center gap-2">
+              <LibraryIcon className="size-5" />
+              الكتب
+            </span>
+            <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
           </Link>
-          <a
-            href="#all-articles"
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-2.5 text-sm font-bold text-[#f3d28a] transition-all hover:scale-105 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+          <Link
+            to="/library/courses"
+            className="group flex items-center justify-between gap-3 rounded-2xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-4 text-sm font-bold text-[#f3d28a] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
           >
-            <BookOpen className="size-4" />
-            المقالات
-            <ArrowLeft className="size-3.5" />
-          </a>
+            <span className="inline-flex items-center gap-2">
+              <GraduationCap className="size-5" />
+              الكورسات
+            </span>
+            <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
+          </Link>
+          <Link
+            to="/library/articles"
+            className="group flex items-center justify-between gap-3 rounded-2xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#d7aa52]/15 to-[#d7aa52]/5 px-5 py-4 text-sm font-bold text-[#f3d28a] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:shadow-lg hover:shadow-[#d7aa52]/20"
+          >
+            <span className="inline-flex items-center gap-2">
+              <FileText className="size-5" />
+              المقالات
+            </span>
+            <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
+          </Link>
         </div>
       </section>
 
