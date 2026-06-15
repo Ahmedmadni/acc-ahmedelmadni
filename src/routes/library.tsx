@@ -5,7 +5,7 @@ import { type Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/library")({
   head: () => {
-    const url = "https://acc-ahmedelmadni.lovable.app/library";
+    const url = "https://ahmedelmadni.com/library";
     return {
       meta: [
         { title: "المكتبة المحاسبية | Accounting Library — Ahmed Elmadani" },

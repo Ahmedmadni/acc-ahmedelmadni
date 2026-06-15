@@ -15,7 +15,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "الخدمات | أحمد المدني" },
       { property: "og:description", content: "تعرف على الخدمات المحاسبية المقدمة." },
     ],
-    links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/services" }],
   }),
   component: ServicesPage,
 });

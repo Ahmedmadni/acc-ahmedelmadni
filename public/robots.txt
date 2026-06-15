@@ -1,5 +1,5 @@
 # robots.txt for Ahmed Elmadani — Senior Accountant Portfolio
-# https://acc-ahmedelmadni.lovable.app
+# https://ahmedelmadni.com
 
 User-agent: *
 Allow: /
@@ -26,5 +26,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://acc-ahmedelmadni.lovable.app/sitemap.xml
-Host: https://acc-ahmedelmadni.lovable.app
+Sitemap: https://ahmedelmadni.com/sitemap.xml
+Host: https://ahmedelmadni.com

@@ -89,11 +89,11 @@ export const Route = createFileRoute("/")({
         content:
           "موقع أحمد المدني — محاسب أول ومستشار مالي بالرياض. خدمات محاسبة وتقارير مالية وتحليل تكاليف وفق IFRS ومتطلبات ZATCA.",
       },
-      { property: "og:url", content: "https://acc-ahmedelmadni.lovable.app/" },
+      { property: "og:url", content: "https://ahmedelmadni.com/" },
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/" },
+      { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
     ],
     scripts: [

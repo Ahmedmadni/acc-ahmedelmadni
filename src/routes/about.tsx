@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "نبذة عني | أحمد المدني" },
       { property: "og:description", content: "تعرف على خلفية ومسيرة المحاسب أحمد المدني." },
     ],
-    links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/about" }],
   }),
   component: () => (
     <SubPageShell>{(lang) => <About lang={lang} />}</SubPageShell>

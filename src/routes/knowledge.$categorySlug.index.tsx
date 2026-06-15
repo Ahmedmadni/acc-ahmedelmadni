@@ -21,7 +21,7 @@ const KB_TO_LIB_CAT: Record<string, string[]> = {
 
 export const Route = createFileRoute("/knowledge/$categorySlug/")({
   head: ({ params }) => {
-    const url = `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}`;
+    const url = `https://ahmedelmadni.com/knowledge/${params.categorySlug}`;
     return {
       meta: [
         { title: `${params.categorySlug} | المكتبة المحاسبية` },
@@ -41,8 +41,8 @@ export const Route = createFileRoute("/knowledge/$categorySlug/")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
-              { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://acc-ahmedelmadni.lovable.app/knowledge" },
+              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
+              { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://ahmedelmadni.com/knowledge" },
               { "@type": "ListItem", position: 3, name: params.categorySlug, item: url },
             ],
           }),

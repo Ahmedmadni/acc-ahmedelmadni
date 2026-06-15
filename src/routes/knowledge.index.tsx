@@ -20,12 +20,12 @@ export const Route = createFileRoute("/knowledge/")({
         property: "og:description",
         content: "مكتبة معرفية شاملة في المحاسبة، الضرائب، والتقارير المالية.",
       },
-      { property: "og:url", content: "https://acc-ahmedelmadni.lovable.app/knowledge" },
+      { property: "og:url", content: "https://ahmedelmadni.com/knowledge" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "المكتبة المحاسبية | أحمد المدني" },
     ],
-    links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/knowledge" }],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/knowledge" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -33,8 +33,8 @@ export const Route = createFileRoute("/knowledge/")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://acc-ahmedelmadni.lovable.app/knowledge" },
+            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
+            { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://ahmedelmadni.com/knowledge" },
           ],
         }),
       },
