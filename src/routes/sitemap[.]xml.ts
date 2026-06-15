@@ -3,7 +3,7 @@ import type {} from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import { TOOLS } from "@/lib/tools-registry";
 
-const BASE_URL = "https://acc-ahmedelmadni.lovable.app";
+const BASE_URL = "https://ahmedelmadni.com";
 
 interface SitemapEntry {
   path: string;

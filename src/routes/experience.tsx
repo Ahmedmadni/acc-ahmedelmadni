@@ -8,7 +8,7 @@ export const Route = createFileRoute("/experience")({
       { title: "الخبرات والمسيرة المهنية | أحمد المدني" },
       { name: "description", content: "المسيرة المهنية وخبرات المحاسب أحمد المدني في قطاعات المقاولات والضيافة والخدمات الطبية." },
     ],
-    links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/experience" }],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/experience" }],
   }),
   component: () => (
     <SubPageShell>

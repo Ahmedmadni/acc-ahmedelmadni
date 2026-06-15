@@ -13,7 +13,7 @@ export const Route = createFileRoute("/skills")({
       { title: "المهارات | أحمد المدني - محاسب أول" },
       { name: "description", content: "مهارات محاسبية وتحليلية وأدوات احترافية: IFRS، ZATCA، Excel، ERP، تقارير مالية." },
     ],
-    links: [{ rel: "canonical", href: "https://acc-ahmedelmadni.lovable.app/skills" }],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/skills" }],
   }),
   component: SkillsPage,
 });

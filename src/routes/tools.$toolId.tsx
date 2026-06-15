@@ -28,7 +28,7 @@ export const Route = createFileRoute("/tools/$toolId")({
   head: ({ loaderData, params }) => {
     const tool = loaderData?.tool;
     if (!tool) return { meta: [{ title: "Tool — Ahmed Elmadani" }] };
-    const url = `https://acc-ahmedelmadni.lovable.app/tools/${params.toolId}`;
+    const url = `https://ahmedelmadni.com/tools/${params.toolId}`;
     return {
       meta: [
         { title: `${tool.title.ar} | ${tool.title.en} — Smart Accounting Tools` },
@@ -49,8 +49,8 @@ export const Route = createFileRoute("/tools/$toolId")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
-              { "@type": "ListItem", position: 2, name: "الأدوات", item: "https://acc-ahmedelmadni.lovable.app/tools" },
+              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
+              { "@type": "ListItem", position: 2, name: "الأدوات", item: "https://ahmedelmadni.com/tools" },
               { "@type": "ListItem", position: 3, name: tool.title.ar, item: url },
             ],
           }),

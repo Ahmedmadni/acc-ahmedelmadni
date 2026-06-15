@@ -40,7 +40,7 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
   },
 
   head: ({ params, loaderData }) => {
-    const url = `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}/${params.articleSlug}`;
+    const url = `https://ahmedelmadni.com/knowledge/${params.categorySlug}/${params.articleSlug}`;
     const a = loaderData?.meta;
     const title = a?.title_ar ?? params.articleSlug;
     const description = a?.excerpt_ar ?? "مقال في المكتبة المحاسبية لأحمد المدني.";
@@ -61,12 +61,12 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
           author: {
             "@type": "Person",
             name: "Ahmed Elmadani",
-            url: "https://acc-ahmedelmadni.lovable.app/",
+            url: "https://ahmedelmadni.com/",
           },
           publisher: {
             "@type": "Person",
             name: "Ahmed Elmadani",
-            url: "https://acc-ahmedelmadni.lovable.app/",
+            url: "https://ahmedelmadni.com/",
           },
           mainEntityOfPage: { "@type": "WebPage", "@id": url },
         }),
@@ -77,9 +77,9 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://acc-ahmedelmadni.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://acc-ahmedelmadni.lovable.app/knowledge" },
-            { "@type": "ListItem", position: 3, name: params.categorySlug, item: `https://acc-ahmedelmadni.lovable.app/knowledge/${params.categorySlug}` },
+            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
+            { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://ahmedelmadni.com/knowledge" },
+            { "@type": "ListItem", position: 3, name: params.categorySlug, item: `https://ahmedelmadni.com/knowledge/${params.categorySlug}` },
             { "@type": "ListItem", position: 4, name: title, item: url },
           ],
         }),

@@ -82,7 +82,7 @@ export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(8);
     pdf.setTextColor(215, 170, 82);
-    pdf.text("acc-ahmedelmadni.lovable.app", margin, 16);
+    pdf.text("ahmedelmadni.com", margin, 16);
     // Right side: timestamp
     const ts = new Date().toLocaleString(isAR ? "ar-EG" : "en-US");
     pdf.setTextColor(255, 255, 255);
