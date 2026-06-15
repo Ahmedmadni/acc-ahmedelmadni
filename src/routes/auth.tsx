@@ -32,7 +32,9 @@ function AuthPage() {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
         toast.success("تم تسجيل الدخول");
-        router.navigate({ to: "/knowledge" });
+        // Hard navigation ensures the session is hydrated before the next route loads
+        window.location.assign("/knowledge");
+        return;
       }
     } catch (err) {
       toast.error((err as Error).message);
