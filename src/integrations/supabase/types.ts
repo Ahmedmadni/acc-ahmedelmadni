@@ -382,6 +382,7 @@ export type Database = {
           description_en: string | null
           duration_hours: number | null
           generation_source: string
+          has_pdf: boolean | null
           id: string
           is_free: boolean
           is_published: boolean
@@ -407,6 +408,7 @@ export type Database = {
           description_en?: string | null
           duration_hours?: number | null
           generation_source?: string
+          has_pdf?: boolean | null
           id?: string
           is_free?: boolean
           is_published?: boolean
@@ -432,6 +434,7 @@ export type Database = {
           description_en?: string | null
           duration_hours?: number | null
           generation_source?: string
+          has_pdf?: boolean | null
           id?: string
           is_free?: boolean
           is_published?: boolean
