@@ -1,9 +1,55 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Home } from "lucide-react";
+import { ArrowRight, BookOpen, Home, LogOut, ShieldCheck, UserCircle } from "lucide-react";
 import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
+import { supabase } from "@/integrations/supabase/client";
+
+type KnowledgeUser = { id: string; email: string | null };
 
 export function KnowledgeShell({ children }: { children: ReactNode }) {
+  const [user, setUser] = useState<KnowledgeUser | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+
+    const loadAccount = async () => {
+      const { data } = await supabase.auth.getUser();
+      const currentUser = data.user ? { id: data.user.id, email: data.user.email ?? null } : null;
+      if (!active) return;
+      setUser(currentUser);
+
+      if (!currentUser) {
+        setIsAdmin(false);
+        return;
+      }
+
+      const { data: role } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", currentUser.id)
+        .eq("role", "admin")
+        .maybeSingle();
+      if (active) setIsAdmin(Boolean(role));
+    };
+
+    void loadAccount();
+    const { data: subscription } = supabase.auth.onAuthStateChange(() => {
+      void loadAccount();
+    });
+
+    return () => {
+      active = false;
+      subscription.subscription.unsubscribe();
+    };
+  }, []);
+
+  const signOut = async () => {
+    await supabase.auth.signOut();
+    window.location.assign("/auth");
+  };
+
   return (
     <div
       dir="rtl"
@@ -24,7 +70,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
             <BookOpen className="size-5" />
             المكتبة المحاسبية
           </Link>
-          <nav className="flex items-center gap-2">
+          <nav className="flex flex-wrap items-center justify-end gap-2">
             <Link
               to="/"
               className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
@@ -44,6 +90,39 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
             >
               المكتبة
             </Link>
+            {user ? (
+              <>
+                {isAdmin && (
+                  <Link
+                    to="/admin/library"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-3 py-1.5 text-xs font-bold text-emerald-100 transition-all hover:bg-emerald-400/20"
+                  >
+                    <ShieldCheck className="size-3.5" />
+                    لوحة التحكم
+                  </Link>
+                )}
+                <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#d7aa52]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-white/75 md:inline-flex">
+                  <UserCircle className="size-3.5 shrink-0 text-[#f3d28a]" />
+                  <span className="truncate" dir="ltr">{user.email}</span>
+                </span>
+                <button
+                  type="button"
+                  onClick={signOut}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-red-300/30 bg-red-400/10 px-3 py-1.5 text-xs font-bold text-red-100 transition-all hover:bg-red-400/20"
+                >
+                  <LogOut className="size-3.5" />
+                  خروج
+                </button>
+              </>
+            ) : (
+              <Link
+                to="/auth"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20"
+              >
+                <UserCircle className="size-3.5" />
+                دخول
+              </Link>
+            )}
           </nav>
         </div>
       </header>
