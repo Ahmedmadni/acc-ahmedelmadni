@@ -28,7 +28,7 @@ type LibBook = {
   provider: string | null;
   cover_image: string | null;
   url: string | null;
-  pdf_path: string | null;
+  has_pdf: boolean | null;
 };
 
 function BooksPage() {
@@ -41,7 +41,7 @@ function BooksPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("library_items")
-        .select("id,title_ar,title_en,description_ar,author,provider,cover_image,url,pdf_path")
+        .select("id,title_ar,title_en,description_ar,author,provider,cover_image,url,has_pdf")
         .eq("type", "book")
         .eq("is_published", true)
         .order("sort_order", { ascending: true });
@@ -97,7 +97,7 @@ function BooksPage() {
                     </p>
                   )}
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {b.pdf_path && (
+                    {b.has_pdf && (
                       <button
                         type="button"
                         onClick={() => openPdf(b)}
