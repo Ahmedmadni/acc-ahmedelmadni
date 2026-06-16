@@ -531,12 +531,30 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   const exportPdf = async () => {
     if (!previewRef.current) return;
     setExportLoading(true);
+    // Clone the preview into an offscreen container with safe (hex/rgb) backgrounds
+    // to avoid html2canvas crashing on Tailwind v4 oklch() colors used by the host page.
+    const source = previewRef.current;
+    const offscreen = document.createElement("div");
+    offscreen.style.position = "fixed";
+    offscreen.style.left = "-10000px";
+    offscreen.style.top = "0";
+    offscreen.style.background = "#ffffff";
+    offscreen.style.zIndex = "-1";
+    const clone = source.cloneNode(true) as HTMLElement;
+    clone.style.width = "794px";
+    clone.style.minHeight = "1123px";
+    clone.style.backgroundColor = "#ffffff";
+    clone.style.color = "#0b1220";
+    offscreen.appendChild(clone);
+    document.body.appendChild(offscreen);
+
     try {
-      const canvas = await html2canvas(previewRef.current, {
+      const canvas = await html2canvas(clone, {
         backgroundColor: "#ffffff",
         scale: 2,
         useCORS: true,
         logging: false,
+        windowWidth: 794,
       });
       const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -547,7 +565,6 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       if (imgH <= pageH) {
         pdf.addImage(imgData, "JPEG", 0, 0, imgW, imgH);
       } else {
-        // multi-page slicing
         let renderedPx = 0;
         const pageHpx = (pageH * canvas.width) / imgW;
         let first = true;
@@ -571,7 +588,15 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       }
       const name = (data.fullName || "CV").replace(/[^a-zA-Z0-9\u0600-\u06FF-_]+/g, "_");
       pdf.save(`${name}-CV.pdf`);
+    } catch (err) {
+      console.error("CV PDF export failed:", err);
+      alert(
+        isAR
+          ? `تعذّر إنشاء ملف PDF: ${(err as Error).message || "خطأ غير معروف"}`
+          : `Failed to generate PDF: ${(err as Error).message || "Unknown error"}`,
+      );
     } finally {
+      if (offscreen.parentNode) offscreen.parentNode.removeChild(offscreen);
       setExportLoading(false);
     }
   };
