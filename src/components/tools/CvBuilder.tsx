@@ -531,30 +531,21 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   const exportPdf = async () => {
     if (!previewRef.current) return;
     setExportLoading(true);
-    // Clone the preview into an offscreen container with safe (hex/rgb) backgrounds
-    // to avoid html2canvas crashing on Tailwind v4 oklch() colors used by the host page.
-    const source = previewRef.current;
-    const offscreen = document.createElement("div");
-    offscreen.style.position = "fixed";
-    offscreen.style.left = "-10000px";
-    offscreen.style.top = "0";
-    offscreen.style.background = "#ffffff";
-    offscreen.style.zIndex = "-1";
-    const clone = source.cloneNode(true) as HTMLElement;
-    clone.style.width = "794px";
-    clone.style.minHeight = "1123px";
-    clone.style.backgroundColor = "#ffffff";
-    clone.style.color = "#0b1220";
-    offscreen.appendChild(clone);
-    document.body.appendChild(offscreen);
+    const node = previewRef.current;
+    // Temporarily set dir on the node so html2canvas captures RTL layout correctly
+    const prevDir = node.getAttribute("dir");
+    node.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
 
     try {
-      const canvas = await html2canvas(clone, {
+      const canvas = await html2canvas(node, {
         backgroundColor: "#ffffff",
         scale: 2,
         useCORS: true,
         logging: false,
-        windowWidth: 794,
+        width: node.offsetWidth,
+        height: node.offsetHeight,
+        windowWidth: node.offsetWidth,
+        windowHeight: node.offsetHeight,
       });
       const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -591,15 +582,17 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     } catch (err) {
       console.error("CV PDF export failed:", err);
       alert(
-        isAR
+        lang === "ar"
           ? `تعذّر إنشاء ملف PDF: ${(err as Error).message || "خطأ غير معروف"}`
           : `Failed to generate PDF: ${(err as Error).message || "Unknown error"}`,
       );
     } finally {
-      if (offscreen.parentNode) offscreen.parentNode.removeChild(offscreen);
+      if (prevDir === null) node.removeAttribute("dir");
+      else node.setAttribute("dir", prevDir);
       setExportLoading(false);
     }
   };
+
 
   // ----- List item helpers -----
   const addExperience = () => set("experience", [...data.experience, { id: uid(), role: "", company: "", period: "", description: "" }]);
