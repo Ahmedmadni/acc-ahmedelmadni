@@ -1033,28 +1033,41 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           </FormCard>
         </div>
 
-        {/* ===== PREVIEW ===== */}
-        <div className="lg:sticky lg:top-20 lg:self-start">
-          <div className="mb-2 flex items-center justify-between">
-            <div className="text-xs font-bold uppercase tracking-wider text-[#f3d28a]">
-              {isAR ? "المعاينة المباشرة" : "Live Preview"}
-            </div>
-            <div className="text-[10px] text-[var(--fg-soft)]">A4</div>
-          </div>
-          <div className="overflow-auto rounded-xl border border-[#d7aa52]/30 bg-[#f5f5f7] p-3 shadow-inner">
-            <div
-              ref={previewRef}
-              className="cv-canvas mx-auto bg-white text-[#0b1220] shadow-xl"
-              style={{ width: 794, minHeight: 1123 }}
-            >
-              <Preview template={template} data={data} lang={lang} />
-            </div>
-          </div>
-        </div>
+{/* ===== PREVIEW ===== */}
+<div className="lg:sticky lg:top-20 lg:self-start">
+  <div className="mb-2 flex items-center justify-between">
+    <div className="text-xs font-bold uppercase tracking-wider text-[#f3d28a]">
+      {isAR ? "المعاينة المباشرة" : "Live Preview"}
+    </div>
+    <div className="text-[10px] text-[var(--fg-soft)]">A4</div>
+  </div>
+  <div className="overflow-hidden rounded-xl border border-[#d7aa52]/30 bg-[#f5f5f7] p-3 shadow-inner">
+    {/* Scaling wrapper */}
+    <div
+      style={{
+        width: "100%",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
+      <div
+        style={{
+          transform: "scale(var(--cv-scale, 0.6))",
+          transformOrigin: "top center",
+          width: 794,
+          minHeight: 1123,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: "calc((var(--cv-scale, 0.6) - 1) * 1123px)",
+        }}
+        ref={previewRef}
+        className="cv-canvas bg-white text-[#0b1220] shadow-xl"
+      >
+        <Preview template={template} data={data} lang={lang} />
       </div>
     </div>
-  );
-}
+  </div>
+</div>
 
 function FormCard({
   title,
