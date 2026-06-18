@@ -6,6 +6,12 @@
 .cv-canvas,
 .cv-canvas * {
   font-family: "Cairo", sans-serif !important;
+
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
+
+  font-kerning: normal !important;
+  text-rendering: optimizeLegibility !important;
 }
 @custom-variant dark (&:is(.dark *));
 
