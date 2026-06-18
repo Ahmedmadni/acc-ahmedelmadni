@@ -186,7 +186,9 @@ function ClassicTemplate({ data, lang }: { data: CvData; lang: Lang }) {
   return (
     <div dir={isAR ? "rtl" : "ltr"} className="cv-page p-10 font-serif">
       <div className="border-b-2 border-[#0b1220] pb-4">
-        <h1 className="text-3xl font-extrabold text-[#0b1220]">{data.fullName || (isAR ? "الاسم الكامل" : "Full Name")}</h1>
+        <h1 className="text-3xl font-extrabold text-[#0b1220]">
+          {data.fullName || (isAR ? "الاسم الكامل" : "Full Name")}
+        </h1>
         <div className="mt-1 text-base text-[#475569]">{data.jobTitle || (isAR ? "المسمى الوظيفي" : "Job Title")}</div>
         <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-[#475569]">
           {data.email && <span>✉ {data.email}</span>}
@@ -213,7 +215,9 @@ function ModernTemplate({ data, lang }: { data: CvData; lang: Lang }) {
     <div dir={isAR ? "rtl" : "ltr"} className="cv-page p-10">
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-1 border-e-2 border-[#b8862e] pe-4">
-          <h1 className="text-2xl font-extrabold leading-tight text-[#0b1220]">{data.fullName || (isAR ? "الاسم" : "Name")}</h1>
+          <h1 className="text-2xl font-extrabold leading-tight text-[#0b1220]">
+            {data.fullName || (isAR ? "الاسم" : "Name")}
+          </h1>
           <div className="mt-1 text-sm font-bold uppercase tracking-wide text-[#b8862e]">{data.jobTitle}</div>
           <div className="mt-4 space-y-1 text-xs text-[#475569]">
             {data.email && <div>{data.email}</div>}
@@ -244,30 +248,63 @@ function ElegantPhotoTemplate({ data, lang }: { data: CvData; lang: Lang }) {
       <div className="grid grid-cols-3 min-h-full">
         <aside className="col-span-1 bg-gradient-to-b from-[#b8862e] to-[#8a5a13] p-6 text-white">
           {data.photo ? (
-            <img src={data.photo} alt="" className="mx-auto size-32 rounded-full border-4 border-white/80 object-cover" />
+            <img
+              src={data.photo}
+              alt=""
+              className="mx-auto size-32 rounded-full border-4 border-white/80 object-cover"
+            />
           ) : (
             <div className="mx-auto flex size-32 items-center justify-center rounded-full border-4 border-white/40 bg-white/10 text-white/70">
               <User className="size-12" />
             </div>
           )}
-          <h1 className="mt-4 text-center text-xl font-extrabold leading-tight">{data.fullName || (isAR ? "الاسم" : "Name")}</h1>
+          <h1 className="mt-4 text-center text-xl font-extrabold leading-tight">
+            {data.fullName || (isAR ? "الاسم" : "Name")}
+          </h1>
           <div className="mt-1 text-center text-xs uppercase tracking-widest text-white/85">{data.jobTitle}</div>
           <div className="mt-5 space-y-2 text-[11px] text-white/90">
-            {data.email && <div className="flex items-center gap-2"><Mail className="size-3" />{data.email}</div>}
-            {data.phone && <div className="flex items-center gap-2"><Phone className="size-3" />{data.phone}</div>}
-            {data.location && <div className="flex items-center gap-2"><MapPin className="size-3" />{data.location}</div>}
+            {data.email && (
+              <div className="flex items-center gap-2">
+                <Mail className="size-3" />
+                {data.email}
+              </div>
+            )}
+            {data.phone && (
+              <div className="flex items-center gap-2">
+                <Phone className="size-3" />
+                {data.phone}
+              </div>
+            )}
+            {data.location && (
+              <div className="flex items-center gap-2">
+                <MapPin className="size-3" />
+                {data.location}
+              </div>
+            )}
           </div>
           <div className="mt-5 space-y-3 text-white">
             {data.skills.length > 0 && (
               <div>
-                <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/80">{isAR ? "المهارات" : "Skills"}</div>
-                <ul className="space-y-0.5 text-xs">{data.skills.map((s, i) => <li key={i}>• {s}</li>)}</ul>
+                <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/80">
+                  {isAR ? "المهارات" : "Skills"}
+                </div>
+                <ul className="space-y-0.5 text-xs">
+                  {data.skills.map((s, i) => (
+                    <li key={i}>• {s}</li>
+                  ))}
+                </ul>
               </div>
             )}
             {data.languages.length > 0 && (
               <div>
-                <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/80">{isAR ? "اللغات" : "Languages"}</div>
-                <ul className="space-y-0.5 text-xs">{data.languages.map((s, i) => <li key={i}>• {s}</li>)}</ul>
+                <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-white/80">
+                  {isAR ? "اللغات" : "Languages"}
+                </div>
+                <ul className="space-y-0.5 text-xs">
+                  {data.languages.map((s, i) => (
+                    <li key={i}>• {s}</li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
@@ -301,7 +338,9 @@ function ExecutivePhotoTemplate({ data, lang }: { data: CvData; lang: Lang }) {
             </div>
           )}
           <div className="flex-1">
-            <h1 className="text-2xl font-extrabold tracking-tight text-white">{data.fullName || (isAR ? "الاسم" : "Name")}</h1>
+            <h1 className="text-2xl font-extrabold tracking-tight text-white">
+              {data.fullName || (isAR ? "الاسم" : "Name")}
+            </h1>
             <div className="mt-1 text-sm font-bold uppercase tracking-[0.2em] text-[#f3d28a]">{data.jobTitle}</div>
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-white/80">
               {data.email && <span>{data.email}</span>}
@@ -330,10 +369,14 @@ function ExecutivePhotoTemplate({ data, lang }: { data: CvData; lang: Lang }) {
 function Section({ title, accent, children }: { title: string; accent?: boolean; children: React.ReactNode }) {
   return (
     <section className="mt-4">
-      <h2 className={`mb-2 text-xs font-extrabold uppercase tracking-[0.2em] ${accent ? "text-[#b8862e]" : "text-[#0b1220]"}`}>
+      <h2
+        className={`mb-2 text-xs font-extrabold uppercase tracking-[0.2em] ${accent ? "text-[#b8862e]" : "text-[#0b1220]"}`}
+      >
         {title}
       </h2>
-      <div className={accent ? "border-t border-[#b8862e]/40 pt-2" : "border-t border-[#0b1220]/30 pt-2"}>{children}</div>
+      <div className={accent ? "border-t border-[#b8862e]/40 pt-2" : "border-t border-[#0b1220]/30 pt-2"}>
+        {children}
+      </div>
     </section>
   );
 }
@@ -344,16 +387,20 @@ function ExperienceBlock({ data, lang, accent }: { data: CvData; lang: Lang; acc
   return (
     <Section title={isAR ? "الخبرة العملية" : "Experience"} accent={accent}>
       <div className="space-y-3">
-        {data.experience.filter((e) => e.role || e.company).map((e) => (
-          <div key={e.id}>
-            <div className="flex items-baseline justify-between gap-2">
-              <div className="text-sm font-bold text-[#0b1220]">{e.role}</div>
-              <div className="text-[11px] text-[#475569]">{e.period}</div>
+        {data.experience
+          .filter((e) => e.role || e.company)
+          .map((e) => (
+            <div key={e.id}>
+              <div className="flex items-baseline justify-between gap-2">
+                <div className="text-sm font-bold text-[#0b1220]">{e.role}</div>
+                <div className="text-[11px] text-[#475569]">{e.period}</div>
+              </div>
+              <div className="text-xs italic text-[#b8862e]">{e.company}</div>
+              {e.description && (
+                <p className="mt-1 text-xs leading-relaxed text-[#0b1220] whitespace-pre-line">{e.description}</p>
+              )}
             </div>
-            <div className="text-xs italic text-[#b8862e]">{e.company}</div>
-            {e.description && <p className="mt-1 text-xs leading-relaxed text-[#0b1220] whitespace-pre-line">{e.description}</p>}
-          </div>
-        ))}
+          ))}
       </div>
     </Section>
   );
@@ -365,15 +412,17 @@ function EducationBlock({ data, lang, accent }: { data: CvData; lang: Lang; acce
   return (
     <Section title={isAR ? "التعليم" : "Education"} accent={accent}>
       <div className="space-y-2">
-        {data.education.filter((e) => e.degree || e.school).map((e) => (
-          <div key={e.id}>
-            <div className="flex items-baseline justify-between gap-2">
-              <div className="text-sm font-bold text-[#0b1220]">{e.degree}</div>
-              <div className="text-[11px] text-[#475569]">{e.period}</div>
+        {data.education
+          .filter((e) => e.degree || e.school)
+          .map((e) => (
+            <div key={e.id}>
+              <div className="flex items-baseline justify-between gap-2">
+                <div className="text-sm font-bold text-[#0b1220]">{e.degree}</div>
+                <div className="text-[11px] text-[#475569]">{e.period}</div>
+              </div>
+              <div className="text-xs italic text-[#b8862e]">{e.school}</div>
             </div>
-            <div className="text-xs italic text-[#b8862e]">{e.school}</div>
-          </div>
-        ))}
+          ))}
       </div>
     </Section>
   );
@@ -387,14 +436,26 @@ function SkillsLanguages({ data, lang, compact }: { data: CvData; lang: Lang; co
       <>
         {data.skills.length > 0 && (
           <div className="mt-5">
-            <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[#b8862e]">{isAR ? "المهارات" : "Skills"}</div>
-            <ul className="space-y-0.5 text-xs text-[#0b1220]">{data.skills.map((s, i) => <li key={i}>• {s}</li>)}</ul>
+            <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[#b8862e]">
+              {isAR ? "المهارات" : "Skills"}
+            </div>
+            <ul className="space-y-0.5 text-xs text-[#0b1220]">
+              {data.skills.map((s, i) => (
+                <li key={i}>• {s}</li>
+              ))}
+            </ul>
           </div>
         )}
         {data.languages.length > 0 && (
           <div className="mt-4">
-            <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[#b8862e]">{isAR ? "اللغات" : "Languages"}</div>
-            <ul className="space-y-0.5 text-xs text-[#0b1220]">{data.languages.map((s, i) => <li key={i}>• {s}</li>)}</ul>
+            <div className="mb-1 text-[10px] font-bold uppercase tracking-widest text-[#b8862e]">
+              {isAR ? "اللغات" : "Languages"}
+            </div>
+            <ul className="space-y-0.5 text-xs text-[#0b1220]">
+              {data.languages.map((s, i) => (
+                <li key={i}>• {s}</li>
+              ))}
+            </ul>
           </div>
         )}
       </>
@@ -406,7 +467,12 @@ function SkillsLanguages({ data, lang, compact }: { data: CvData; lang: Lang; co
         <Section title={isAR ? "المهارات" : "Skills"}>
           <div className="flex flex-wrap gap-1.5">
             {data.skills.map((s, i) => (
-              <span key={i} className="rounded border border-[#b8862e]/40 bg-[#f3d28a]/15 px-2 py-0.5 text-[11px] text-[#0b1220]">{s}</span>
+              <span
+                key={i}
+                className="rounded border border-[#b8862e]/40 bg-[#f3d28a]/15 px-2 py-0.5 text-[11px] text-[#0b1220]"
+              >
+                {s}
+              </span>
             ))}
           </div>
         </Section>
@@ -415,7 +481,12 @@ function SkillsLanguages({ data, lang, compact }: { data: CvData; lang: Lang; co
         <Section title={isAR ? "اللغات" : "Languages"}>
           <div className="flex flex-wrap gap-1.5">
             {data.languages.map((s, i) => (
-              <span key={i} className="rounded border border-[#b8862e]/40 bg-[#f3d28a]/15 px-2 py-0.5 text-[11px] text-[#0b1220]">{s}</span>
+              <span
+                key={i}
+                className="rounded border border-[#b8862e]/40 bg-[#f3d28a]/15 px-2 py-0.5 text-[11px] text-[#0b1220]"
+              >
+                {s}
+              </span>
             ))}
           </div>
         </Section>
@@ -432,7 +503,10 @@ function CertificationsBlock({ data, lang, accent }: { data: CvData; lang: Lang;
       <ul className="space-y-1">
         {data.certifications.map((c) => (
           <li key={c.id} className="flex items-baseline justify-between text-xs">
-            <span className="font-bold text-[#0b1220]">{c.name}{c.issuer && <span className="font-normal italic text-[#b8862e]"> — {c.issuer}</span>}</span>
+            <span className="font-bold text-[#0b1220]">
+              {c.name}
+              {c.issuer && <span className="font-normal italic text-[#b8862e]"> — {c.issuer}</span>}
+            </span>
             <span className="text-[#475569]">{c.year}</span>
           </li>
         ))}
@@ -468,8 +542,12 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     return (
       <div>
         <div className="mb-4 text-center">
-          <h3 className="text-lg font-extrabold text-[var(--fg)]">{isAR ? "اختر القالب لتبدأ" : "Choose a template to start"}</h3>
-          <p className="mt-1 text-xs text-[var(--fg-soft)]">{isAR ? "يمكنك تغيير القالب لاحقاً." : "You can switch templates later."}</p>
+          <h3 className="text-lg font-extrabold text-[var(--fg)]">
+            {isAR ? "اختر القالب لتبدأ" : "Choose a template to start"}
+          </h3>
+          <p className="mt-1 text-xs text-[var(--fg-soft)]">
+            {isAR ? "يمكنك تغيير القالب لاحقاً." : "You can switch templates later."}
+          </p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {TEMPLATES.map((t) => (
@@ -531,84 +609,128 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   const exportPdf = async () => {
     if (!previewRef.current) return;
     setExportLoading(true);
-    const node = previewRef.current;
-    // Temporarily set dir on the node so html2canvas captures RTL layout correctly
-    const prevDir = node.getAttribute("dir");
-    node.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
 
     try {
+      const node = previewRef.current;
+
+      // Save original styles
+      const originalWidth = node.style.width;
+      const originalTransform = node.style.transform;
+
+      // Force exact A4 width and reset any scaling
+      node.style.width = "794px";
+      node.style.transform = "none";
+
+      // Wait for layout to settle
+      await new Promise((r) => setTimeout(r, 300));
+
       const canvas = await html2canvas(node, {
         backgroundColor: "#ffffff",
-        scale: 2,
+        scale: 3,
         useCORS: true,
+        allowTaint: true,
         logging: false,
-        width: node.offsetWidth,
-        height: node.offsetHeight,
-        windowWidth: node.offsetWidth,
-        windowHeight: node.offsetHeight,
+        width: 794,
+        height: node.scrollHeight,
+        windowWidth: 794,
+        scrollX: 0,
+        scrollY: 0,
+        onclone: (clonedDoc) => {
+          const clonedNode = clonedDoc.querySelector(".cv-canvas") as HTMLElement;
+          if (clonedNode) {
+            clonedNode.style.width = "794px";
+            clonedNode.style.transform = "none";
+            clonedNode.style.boxShadow = "none";
+          }
+        },
       });
-      const imgData = canvas.toDataURL("image/jpeg", 0.95);
-      const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
-      const pageW = pdf.internal.pageSize.getWidth();
-      const pageH = pdf.internal.pageSize.getHeight();
-      const imgW = pageW;
-      const imgH = (canvas.height * imgW) / canvas.width;
-      if (imgH <= pageH) {
-        pdf.addImage(imgData, "JPEG", 0, 0, imgW, imgH);
-      } else {
-        let renderedPx = 0;
-        const pageHpx = (pageH * canvas.width) / imgW;
-        let first = true;
-        while (renderedPx < canvas.height) {
-          const takePx = Math.min(pageHpx, canvas.height - renderedPx);
-          const slice = document.createElement("canvas");
-          slice.width = canvas.width;
-          slice.height = takePx;
-          const ctx = slice.getContext("2d");
-          if (!ctx) break;
-          ctx.fillStyle = "#ffffff";
-          ctx.fillRect(0, 0, slice.width, slice.height);
-          ctx.drawImage(canvas, 0, renderedPx, canvas.width, takePx, 0, 0, canvas.width, takePx);
-          const sliceData = slice.toDataURL("image/jpeg", 0.95);
-          const drawnH = (takePx * imgW) / canvas.width;
-          if (!first) pdf.addPage();
-          pdf.addImage(sliceData, "JPEG", 0, 0, imgW, drawnH);
-          renderedPx += takePx;
-          first = false;
-        }
+
+      // Restore original styles
+      node.style.width = originalWidth;
+      node.style.transform = originalTransform;
+
+      const pdf = new jsPDF({
+        unit: "mm",
+        format: "a4",
+        orientation: "portrait",
+        compress: true,
+      });
+
+      const pageW = 210; // A4 width in mm
+      const pageH = 297; // A4 height in mm
+      const pxPerMm = canvas.width / pageW;
+      const pageHpx = pageH * pxPerMm;
+
+      let renderedPx = 0;
+      let first = true;
+
+      while (renderedPx < canvas.height) {
+        const takePx = Math.min(pageHpx, canvas.height - renderedPx);
+        const slice = document.createElement("canvas");
+        slice.width = canvas.width;
+        slice.height = takePx;
+        const ctx = slice.getContext("2d")!;
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, slice.width, slice.height);
+        ctx.drawImage(canvas, 0, renderedPx, canvas.width, takePx, 0, 0, canvas.width, takePx);
+
+        if (!first) pdf.addPage();
+        pdf.addImage(slice.toDataURL("image/jpeg", 1.0), "JPEG", 0, 0, pageW, takePx / pxPerMm);
+        renderedPx += takePx;
+        first = false;
       }
+
       const name = (data.fullName || "CV").replace(/[^a-zA-Z0-9\u0600-\u06FF-_]+/g, "_");
       pdf.save(`${name}-CV.pdf`);
     } catch (err) {
       console.error("CV PDF export failed:", err);
       alert(
         lang === "ar"
-          ? `تعذّر إنشاء ملف PDF: ${(err as Error).message || "خطأ غير معروف"}`
-          : `Failed to generate PDF: ${(err as Error).message || "Unknown error"}`,
+          ? `تعذّر إنشاء ملف PDF: ${(err as Error).message}`
+          : `Failed to generate PDF: ${(err as Error).message}`,
       );
     } finally {
-      if (prevDir === null) node.removeAttribute("dir");
-      else node.setAttribute("dir", prevDir);
       setExportLoading(false);
     }
   };
 
-
   // ----- List item helpers -----
-  const addExperience = () => set("experience", [...data.experience, { id: uid(), role: "", company: "", period: "", description: "" }]);
+  const addExperience = () =>
+    set("experience", [...data.experience, { id: uid(), role: "", company: "", period: "", description: "" }]);
   const updExperience = (id: string, patch: Partial<Experience>) =>
-    set("experience", data.experience.map((e) => (e.id === id ? { ...e, ...patch } : e)));
-  const delExperience = (id: string) => set("experience", data.experience.filter((e) => e.id !== id));
+    set(
+      "experience",
+      data.experience.map((e) => (e.id === id ? { ...e, ...patch } : e)),
+    );
+  const delExperience = (id: string) =>
+    set(
+      "experience",
+      data.experience.filter((e) => e.id !== id),
+    );
 
   const addEducation = () => set("education", [...data.education, { id: uid(), degree: "", school: "", period: "" }]);
   const updEducation = (id: string, patch: Partial<Education>) =>
-    set("education", data.education.map((e) => (e.id === id ? { ...e, ...patch } : e)));
-  const delEducation = (id: string) => set("education", data.education.filter((e) => e.id !== id));
+    set(
+      "education",
+      data.education.map((e) => (e.id === id ? { ...e, ...patch } : e)),
+    );
+  const delEducation = (id: string) =>
+    set(
+      "education",
+      data.education.filter((e) => e.id !== id),
+    );
 
   const addCert = () => set("certifications", [...data.certifications, { id: uid(), name: "", issuer: "", year: "" }]);
   const updCert = (id: string, patch: Partial<Certification>) =>
-    set("certifications", data.certifications.map((e) => (e.id === id ? { ...e, ...patch } : e)));
-  const delCert = (id: string) => set("certifications", data.certifications.filter((e) => e.id !== id));
+    set(
+      "certifications",
+      data.certifications.map((e) => (e.id === id ? { ...e, ...patch } : e)),
+    );
+  const delCert = (id: string) =>
+    set(
+      "certifications",
+      data.certifications.filter((e) => e.id !== id),
+    );
 
   return (
     <div className="space-y-6">
@@ -647,11 +769,28 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         <div className="space-y-5">
           <FormCard title={isAR ? "البيانات الشخصية" : "Personal Info"} icon={User}>
             <div className="grid grid-cols-2 gap-3">
-              <Field label={isAR ? "الاسم الكامل" : "Full Name"} value={data.fullName} onChange={(v) => set("fullName", v)} />
-              <Field label={isAR ? "المسمى الوظيفي" : "Job Title"} value={data.jobTitle} onChange={(v) => set("jobTitle", v)} />
-              <Field label={isAR ? "البريد الإلكتروني" : "Email"} value={data.email} onChange={(v) => set("email", v)} type="email" />
+              <Field
+                label={isAR ? "الاسم الكامل" : "Full Name"}
+                value={data.fullName}
+                onChange={(v) => set("fullName", v)}
+              />
+              <Field
+                label={isAR ? "المسمى الوظيفي" : "Job Title"}
+                value={data.jobTitle}
+                onChange={(v) => set("jobTitle", v)}
+              />
+              <Field
+                label={isAR ? "البريد الإلكتروني" : "Email"}
+                value={data.email}
+                onChange={(v) => set("email", v)}
+                type="email"
+              />
               <Field label={isAR ? "الجوال" : "Phone"} value={data.phone} onChange={(v) => set("phone", v)} />
-              <Field label={isAR ? "المدينة / الدولة" : "Location"} value={data.location} onChange={(v) => set("location", v)} />
+              <Field
+                label={isAR ? "المدينة / الدولة" : "Location"}
+                value={data.location}
+                onChange={(v) => set("location", v)}
+              />
             </div>
             {tplMeta?.needsPhoto && (
               <div className="mt-3 rounded-lg border border-dashed border-[#d7aa52]/40 bg-[#d7aa52]/5 p-3">
@@ -664,10 +803,20 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                     </div>
                   )}
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-[var(--fg)]">{isAR ? "الصورة الشخصية" : "Profile Photo"}</div>
-                    <div className="text-[10px] text-[var(--fg-soft)]">{isAR ? "JPG / PNG، الحد 4MB" : "JPG / PNG, max 4MB"}</div>
+                    <div className="text-xs font-bold text-[var(--fg)]">
+                      {isAR ? "الصورة الشخصية" : "Profile Photo"}
+                    </div>
+                    <div className="text-[10px] text-[var(--fg-soft)]">
+                      {isAR ? "JPG / PNG، الحد 4MB" : "JPG / PNG, max 4MB"}
+                    </div>
                   </div>
-                  <input ref={fileRef} type="file" accept="image/*" hidden onChange={(e) => onPhotoPick(e.target.files?.[0] ?? null)} />
+                  <input
+                    ref={fileRef}
+                    type="file"
+                    accept="image/*"
+                    hidden
+                    onChange={(e) => onPhotoPick(e.target.files?.[0] ?? null)}
+                  />
                   <button
                     onClick={() => fileRef.current?.click()}
                     className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/50 bg-[#d7aa52]/10 px-2.5 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/20"
@@ -676,7 +825,10 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                     {isAR ? "إدراج صورة" : "Upload"}
                   </button>
                   {data.photo && (
-                    <button onClick={() => set("photo", "")} className="text-[10px] font-bold text-red-400 hover:underline">
+                    <button
+                      onClick={() => set("photo", "")}
+                      className="text-[10px] font-bold text-red-400 hover:underline"
+                    >
                       {isAR ? "إزالة" : "Remove"}
                     </button>
                   )}
@@ -702,10 +854,23 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               {data.experience.map((e) => (
                 <div key={e.id} className="rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] p-3">
                   <div className="grid grid-cols-2 gap-2">
-                    <Field label={isAR ? "المسمى" : "Role"} value={e.role} onChange={(v) => updExperience(e.id, { role: v })} />
-                    <Field label={isAR ? "الشركة" : "Company"} value={e.company} onChange={(v) => updExperience(e.id, { company: v })} />
+                    <Field
+                      label={isAR ? "المسمى" : "Role"}
+                      value={e.role}
+                      onChange={(v) => updExperience(e.id, { role: v })}
+                    />
+                    <Field
+                      label={isAR ? "الشركة" : "Company"}
+                      value={e.company}
+                      onChange={(v) => updExperience(e.id, { company: v })}
+                    />
                     <div className="col-span-2">
-                      <Field label={isAR ? "الفترة" : "Period"} value={e.period} onChange={(v) => updExperience(e.id, { period: v })} placeholder={isAR ? "يناير 2022 - الآن" : "Jan 2022 – Present"} />
+                      <Field
+                        label={isAR ? "الفترة" : "Period"}
+                        value={e.period}
+                        onChange={(v) => updExperience(e.id, { period: v })}
+                        placeholder={isAR ? "يناير 2022 - الآن" : "Jan 2022 – Present"}
+                      />
                     </div>
                   </div>
                   <div className="mt-2">
@@ -713,20 +878,30 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                       label={isAR ? "الإنجازات والمهام" : "Achievements & responsibilities"}
                       value={e.description}
                       onChange={(v) => updExperience(e.id, { description: v })}
-                      onEnhance={() => aiCall(`exp-${e.id}`, `experience: ${e.role} @ ${e.company}`, e.description, (v) => updExperience(e.id, { description: v }))}
+                      onEnhance={() =>
+                        aiCall(`exp-${e.id}`, `experience: ${e.role} @ ${e.company}`, e.description, (v) =>
+                          updExperience(e.id, { description: v }),
+                        )
+                      }
                       loading={loadingKey === `exp-${e.id}`}
                       rows={3}
                     />
                   </div>
                   <div className="mt-2 text-end">
-                    <button onClick={() => delExperience(e.id)} className="inline-flex items-center gap-1 text-[10px] font-bold text-red-400 hover:underline">
+                    <button
+                      onClick={() => delExperience(e.id)}
+                      className="inline-flex items-center gap-1 text-[10px] font-bold text-red-400 hover:underline"
+                    >
                       <Trash2 className="size-3" />
                       {isAR ? "حذف" : "Delete"}
                     </button>
                   </div>
                 </div>
               ))}
-              <button onClick={addExperience} className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+              <button
+                onClick={addExperience}
+                className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+              >
                 <Plus className="size-3" />
                 {isAR ? "إضافة خبرة" : "Add experience"}
               </button>
@@ -738,21 +913,39 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               {data.education.map((e) => (
                 <div key={e.id} className="rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] p-3">
                   <div className="grid grid-cols-2 gap-2">
-                    <Field label={isAR ? "الدرجة" : "Degree"} value={e.degree} onChange={(v) => updEducation(e.id, { degree: v })} />
-                    <Field label={isAR ? "الجامعة" : "School"} value={e.school} onChange={(v) => updEducation(e.id, { school: v })} />
+                    <Field
+                      label={isAR ? "الدرجة" : "Degree"}
+                      value={e.degree}
+                      onChange={(v) => updEducation(e.id, { degree: v })}
+                    />
+                    <Field
+                      label={isAR ? "الجامعة" : "School"}
+                      value={e.school}
+                      onChange={(v) => updEducation(e.id, { school: v })}
+                    />
                     <div className="col-span-2">
-                      <Field label={isAR ? "الفترة" : "Period"} value={e.period} onChange={(v) => updEducation(e.id, { period: v })} />
+                      <Field
+                        label={isAR ? "الفترة" : "Period"}
+                        value={e.period}
+                        onChange={(v) => updEducation(e.id, { period: v })}
+                      />
                     </div>
                   </div>
                   <div className="mt-2 text-end">
-                    <button onClick={() => delEducation(e.id)} className="inline-flex items-center gap-1 text-[10px] font-bold text-red-400 hover:underline">
+                    <button
+                      onClick={() => delEducation(e.id)}
+                      className="inline-flex items-center gap-1 text-[10px] font-bold text-red-400 hover:underline"
+                    >
                       <Trash2 className="size-3" />
                       {isAR ? "حذف" : "Delete"}
                     </button>
                   </div>
                 </div>
               ))}
-              <button onClick={addEducation} className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+              <button
+                onClick={addEducation}
+                className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+              >
                 <Plus className="size-3" />
                 {isAR ? "إضافة تعليم" : "Add education"}
               </button>
@@ -766,7 +959,12 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               onChange={setSkillInput}
               items={data.skills}
               onAdd={(v) => set("skills", [...data.skills, v])}
-              onRemove={(i) => set("skills", data.skills.filter((_, idx) => idx !== i))}
+              onRemove={(i) =>
+                set(
+                  "skills",
+                  data.skills.filter((_, idx) => idx !== i),
+                )
+              }
               lang={lang}
             />
             <TagInput
@@ -775,7 +973,12 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               onChange={setLangInput}
               items={data.languages}
               onAdd={(v) => set("languages", [...data.languages, v])}
-              onRemove={(i) => set("languages", data.languages.filter((_, idx) => idx !== i))}
+              onRemove={(i) =>
+                set(
+                  "languages",
+                  data.languages.filter((_, idx) => idx !== i),
+                )
+              }
               lang={lang}
             />
           </FormCard>
@@ -783,18 +986,46 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           <FormCard title={isAR ? "الشهادات" : "Certifications"} icon={Check}>
             <div className="space-y-2">
               {data.certifications.map((c) => (
-                <div key={c.id} className="grid grid-cols-7 items-end gap-2 rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] p-3">
-                  <div className="col-span-3"><Field label={isAR ? "الاسم" : "Name"} value={c.name} onChange={(v) => updCert(c.id, { name: v })} /></div>
-                  <div className="col-span-3"><Field label={isAR ? "المُصدر" : "Issuer"} value={c.issuer} onChange={(v) => updCert(c.id, { issuer: v })} /></div>
-                  <div className="col-span-1"><Field label={isAR ? "السنة" : "Year"} value={c.year} onChange={(v) => updCert(c.id, { year: v })} /></div>
+                <div
+                  key={c.id}
+                  className="grid grid-cols-7 items-end gap-2 rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] p-3"
+                >
+                  <div className="col-span-3">
+                    <Field
+                      label={isAR ? "الاسم" : "Name"}
+                      value={c.name}
+                      onChange={(v) => updCert(c.id, { name: v })}
+                    />
+                  </div>
+                  <div className="col-span-3">
+                    <Field
+                      label={isAR ? "المُصدر" : "Issuer"}
+                      value={c.issuer}
+                      onChange={(v) => updCert(c.id, { issuer: v })}
+                    />
+                  </div>
+                  <div className="col-span-1">
+                    <Field
+                      label={isAR ? "السنة" : "Year"}
+                      value={c.year}
+                      onChange={(v) => updCert(c.id, { year: v })}
+                    />
+                  </div>
                   <div className="col-span-7 text-end">
-                    <button onClick={() => delCert(c.id)} className="inline-flex items-center gap-1 text-[10px] font-bold text-red-400 hover:underline">
-                      <Trash2 className="size-3" />{isAR ? "حذف" : "Delete"}
+                    <button
+                      onClick={() => delCert(c.id)}
+                      className="inline-flex items-center gap-1 text-[10px] font-bold text-red-400 hover:underline"
+                    >
+                      <Trash2 className="size-3" />
+                      {isAR ? "حذف" : "Delete"}
                     </button>
                   </div>
                 </div>
               ))}
-              <button onClick={addCert} className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+              <button
+                onClick={addCert}
+                className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+              >
                 <Plus className="size-3" />
                 {isAR ? "إضافة شهادة" : "Add certification"}
               </button>
@@ -805,11 +1036,17 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         {/* ===== PREVIEW ===== */}
         <div className="lg:sticky lg:top-20 lg:self-start">
           <div className="mb-2 flex items-center justify-between">
-            <div className="text-xs font-bold uppercase tracking-wider text-[#f3d28a]">{isAR ? "المعاينة المباشرة" : "Live Preview"}</div>
+            <div className="text-xs font-bold uppercase tracking-wider text-[#f3d28a]">
+              {isAR ? "المعاينة المباشرة" : "Live Preview"}
+            </div>
             <div className="text-[10px] text-[var(--fg-soft)]">A4</div>
           </div>
           <div className="overflow-auto rounded-xl border border-[#d7aa52]/30 bg-[#f5f5f7] p-3 shadow-inner">
-            <div ref={previewRef} className="cv-canvas mx-auto bg-white text-[#0b1220] shadow-xl" style={{ width: 794, minHeight: 1123 }}>
+            <div
+              ref={previewRef}
+              className="cv-canvas mx-auto bg-white text-[#0b1220] shadow-xl"
+              style={{ width: 794, minHeight: 1123 }}
+            >
               <Preview template={template} data={data} lang={lang} />
             </div>
           </div>
@@ -819,7 +1056,15 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   );
 }
 
-function FormCard({ title, icon: Icon, children }: { title: string; icon: React.ComponentType<{ className?: string }>; children: React.ReactNode }) {
+function FormCard({
+  title,
+  icon: Icon,
+  children,
+}: {
+  title: string;
+  icon: React.ComponentType<{ className?: string }>;
+  children: React.ReactNode;
+}) {
   return (
     <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
       <div className="mb-3 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
@@ -832,10 +1077,21 @@ function FormCard({ title, icon: Icon, children }: { title: string; icon: React.
 }
 
 function TagInput({
-  label, value, onChange, items, onAdd, onRemove, lang,
+  label,
+  value,
+  onChange,
+  items,
+  onAdd,
+  onRemove,
+  lang,
 }: {
-  label: string; value: string; onChange: (v: string) => void;
-  items: string[]; onAdd: (v: string) => void; onRemove: (i: number) => void; lang: Lang;
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  items: string[];
+  onAdd: (v: string) => void;
+  onRemove: (i: number) => void;
+  lang: Lang;
 }) {
   const isAR = lang === "ar";
   const commit = () => {
@@ -852,21 +1108,33 @@ function TagInput({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") { e.preventDefault(); commit(); }
+            if (e.key === "Enter") {
+              e.preventDefault();
+              commit();
+            }
           }}
           placeholder={isAR ? "اكتب ثم اضغط Enter" : "Type then press Enter"}
           className="flex-1 rounded-lg border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-2 text-sm text-[var(--fg)] outline-none focus:border-[#d7aa52]/70"
         />
-        <button type="button" onClick={commit} className="rounded-lg border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/20">
+        <button
+          type="button"
+          onClick={commit}
+          className="rounded-lg border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/20"
+        >
           <Plus className="size-4" />
         </button>
       </div>
       {items.length > 0 && (
         <div className="mt-2 flex flex-wrap gap-1.5">
           {items.map((s, i) => (
-            <span key={i} className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/30 bg-[#d7aa52]/10 px-2 py-0.5 text-[11px] text-[#f3d28a]">
+            <span
+              key={i}
+              className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/30 bg-[#d7aa52]/10 px-2 py-0.5 text-[11px] text-[#f3d28a]"
+            >
               {s}
-              <button onClick={() => onRemove(i)} className="text-red-400 hover:underline">×</button>
+              <button onClick={() => onRemove(i)} className="text-red-400 hover:underline">
+                ×
+              </button>
             </span>
           ))}
         </div>
@@ -880,7 +1148,9 @@ function MiniPreview({ id }: { id: TemplateId }) {
   if (id === "elegant-photo") {
     return (
       <div className="flex h-full gap-1">
-        <div className="w-1/3 rounded bg-gradient-to-b from-[#b8862e] to-[#8a5a13]"><div className="m-1 size-4 rounded-full bg-white/80" /></div>
+        <div className="w-1/3 rounded bg-gradient-to-b from-[#b8862e] to-[#8a5a13]">
+          <div className="m-1 size-4 rounded-full bg-white/80" />
+        </div>
         <div className="flex-1 space-y-1 p-1">
           <div className="h-1.5 w-2/3 rounded bg-[#0b1220]/40" />
           <div className="h-1 w-full rounded bg-[#0b1220]/15" />
@@ -906,8 +1176,15 @@ function MiniPreview({ id }: { id: TemplateId }) {
   if (id === "modern") {
     return (
       <div className="flex h-full gap-1">
-        <div className="w-1/3 space-y-1 border-e border-[#b8862e]"><div className="h-2 w-full rounded bg-[#0b1220]/60" /><div className="h-1 rounded bg-[#b8862e]/60" /></div>
-        <div className="flex-1 space-y-1"><div className="h-1 w-full rounded bg-[#0b1220]/30" /><div className="h-1 w-5/6 rounded bg-[#0b1220]/20" /><div className="h-1 w-4/6 rounded bg-[#0b1220]/20" /></div>
+        <div className="w-1/3 space-y-1 border-e border-[#b8862e]">
+          <div className="h-2 w-full rounded bg-[#0b1220]/60" />
+          <div className="h-1 rounded bg-[#b8862e]/60" />
+        </div>
+        <div className="flex-1 space-y-1">
+          <div className="h-1 w-full rounded bg-[#0b1220]/30" />
+          <div className="h-1 w-5/6 rounded bg-[#0b1220]/20" />
+          <div className="h-1 w-4/6 rounded bg-[#0b1220]/20" />
+        </div>
       </div>
     );
   }
