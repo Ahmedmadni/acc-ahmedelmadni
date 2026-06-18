@@ -1069,15 +1069,23 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   </div>
 </div>
 
-function FormCard({
-  title,
-  icon: Icon,
-  children,
-}: {
+type FormCardProps = {
   title: string;
   icon: React.ComponentType<{ className?: string }>;
   children: React.ReactNode;
-}) {
+};
+
+icon: React.ElementType;
+  return (
+    <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
+      <div className="mb-3 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
+        <Icon className="size-4" />
+        {title}
+      </div>
+      {children}
+    </div>
+  );
+}
   return (
     <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
       <div className="mb-3 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
