@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { GlobalControls } from "@/components/GlobalControls";
 
 function NotFoundComponent() {
   return (
