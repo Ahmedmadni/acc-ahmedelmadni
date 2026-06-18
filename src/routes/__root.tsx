@@ -228,6 +228,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <GlobalControls />
       <Outlet />
     </QueryClientProvider>
   );
