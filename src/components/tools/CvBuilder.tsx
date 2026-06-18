@@ -764,7 +764,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         </button>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+<div className="flex flex-col gap-8">
         {/* ===== FORM ===== */}
         <div className="space-y-5">
           <FormCard title={isAR ? "البيانات الشخصية" : "Personal Info"} icon={User}>
@@ -1034,14 +1034,14 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         </div>
 
 {/* ===== PREVIEW ===== */}
-<div className="lg:sticky lg:top-20 lg:self-start">
+<div className="w-full">
   <div className="mb-2 flex items-center justify-between">
     <div className="text-xs font-bold uppercase tracking-wider text-[#f3d28a]">
       {isAR ? "المعاينة المباشرة" : "Live Preview"}
     </div>
     <div className="text-[10px] text-[var(--fg-soft)]">A4</div>
   </div>
-  <div className="overflow-hidden rounded-xl border border-[#d7aa52]/30 bg-[#f5f5f7] p-3 shadow-inner">
+<div className="w-full overflow-hidden rounded-xl border border-[#d7aa52]/30 bg-[#f5f5f7] p-3 shadow-inner">
     {/* Scaling wrapper */}
     <div
       style={{
@@ -1052,7 +1052,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     >
       <div
         style={{
-          transform: "scale(var(--cv-scale, 0.6))",
+  transform: "scale(var(--cv-scale, 0.95))",
           transformOrigin: "top center",
           width: 794,
           minHeight: 1123,
@@ -1211,3 +1211,10 @@ function MiniPreview({ id }: { id: TemplateId }) {
     </div>
   );
 }
+
+  {/* FORM SECTION MOVED DOWN */}
+<div className="mt-10 space-y-5">
+  {/* انسخ نفس محتوى الفورم الحالي هنا بدون تغيير */}
+</div>
+
+  <div className="min-h-screen bg-[#0b1220]/5 p-6">
