@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../styles.css";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { AnimatePresence, motion, useInView, useScroll, useSpring, useTransform } from "motion/react";
