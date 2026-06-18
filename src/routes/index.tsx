@@ -1,13 +1,7 @@
+import "./styles.css";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useInView,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { AnimatePresence, motion, useInView, useScroll, useSpring, useTransform } from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -60,7 +54,7 @@ import mascotPhone from "@/assets/mascot-phone.png";
 import mascotEmail from "@/assets/mascot-email.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
-const AIAssistant = lazy(() => import("@/components/AIAssistant").then(m => ({ default: m.AIAssistant })));
+const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
 import { Link as RouterLink } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -135,25 +129,59 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-
 type Theme = "dark" | "light";
 
 const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> = {
   alostool: { src: logoAlostool, name: { ar: "شركة الأسطول الآلي للمقاولات", en: "Alostool Alaali Contracting" } },
-  lamara:   { src: logoLamara,   name: { ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة", en: "Lamara Hospitality & Catering" } },
-  qimat:    { src: logoQimat,    name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" } },
+  lamara: { src: logoLamara, name: { ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة", en: "Lamara Hospitality & Catering" } },
+  qimat: { src: logoQimat, name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" } },
 };
 
 const SOCIALS = [
   { href: "tel:+966560409811", icon: "fa-solid fa-phone", color: "#34d399", label: "Phone", mascot: mascotPhone },
-  { href: "https://wa.me/966560409811", icon: "fa-brands fa-whatsapp", color: "#25D366", label: "WhatsApp", mascot: mascotWhatsapp },
-  { href: "mailto:elmadnim@gmail.com", icon: "fa-solid fa-envelope", color: "#ef4444", label: "Email", mascot: mascotEmail },
-  { href: "https://www.linkedin.com/in/احمد-المدنى-33022830b", icon: "fa-brands fa-linkedin-in", color: "#0A66C2", label: "LinkedIn", mascot: mascotLinkedin },
-  { href: "https://www.facebook.com/share/1GrcrAN8tP/", icon: "fa-brands fa-facebook-f", color: "#1877F2", label: "Facebook", mascot: mascotFacebook },
-  { href: "https://www.instagram.com/ahmed_elmadni", icon: "fa-brands fa-instagram", color: "#E4405F", label: "Instagram", mascot: mascotInstagram },
-  { href: "https://www.snapchat.com/add/ahmedacc851998", icon: "fa-brands fa-snapchat-ghost", color: "#FFFC00", label: "Snapchat", mascot: mascotSnapchat },
+  {
+    href: "https://wa.me/966560409811",
+    icon: "fa-brands fa-whatsapp",
+    color: "#25D366",
+    label: "WhatsApp",
+    mascot: mascotWhatsapp,
+  },
+  {
+    href: "mailto:elmadnim@gmail.com",
+    icon: "fa-solid fa-envelope",
+    color: "#ef4444",
+    label: "Email",
+    mascot: mascotEmail,
+  },
+  {
+    href: "https://www.linkedin.com/in/احمد-المدنى-33022830b",
+    icon: "fa-brands fa-linkedin-in",
+    color: "#0A66C2",
+    label: "LinkedIn",
+    mascot: mascotLinkedin,
+  },
+  {
+    href: "https://www.facebook.com/share/1GrcrAN8tP/",
+    icon: "fa-brands fa-facebook-f",
+    color: "#1877F2",
+    label: "Facebook",
+    mascot: mascotFacebook,
+  },
+  {
+    href: "https://www.instagram.com/ahmed_elmadni",
+    icon: "fa-brands fa-instagram",
+    color: "#E4405F",
+    label: "Instagram",
+    mascot: mascotInstagram,
+  },
+  {
+    href: "https://www.snapchat.com/add/ahmedacc851998",
+    icon: "fa-brands fa-snapchat-ghost",
+    color: "#FFFC00",
+    label: "Snapchat",
+    mascot: mascotSnapchat,
+  },
 ] as const;
-
 
 type SkillItem = (typeof t.skills.groups)[number]["items"][number];
 type ServiceItem = (typeof t.services.items)[number];
@@ -162,12 +190,16 @@ type ServiceItem = (typeof t.services.items)[number];
 function isEidSeason(): boolean {
   try {
     const parts = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", {
-      day: "numeric", month: "numeric", year: "numeric",
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
     }).formatToParts(new Date());
     const day = Number(parts.find((p) => p.type === "day")?.value);
     const month = Number(parts.find((p) => p.type === "month")?.value);
     return month === 12 && day >= 5 && day <= 15;
-  } catch { return false; }
+  } catch {
+    return false;
+  }
 }
 
 function Index() {
@@ -205,14 +237,19 @@ function Index() {
     try {
       const k = "eid-banner-dismissed";
       if (sessionStorage.getItem(k) !== "1") setEidOpen(true);
-    } catch { setEidOpen(true); }
+    } catch {
+      setEidOpen(true);
+    }
   }, []);
 
   const dismissEid = () => {
     setEidOpen(false);
-    try { sessionStorage.setItem("eid-banner-dismissed", "1"); } catch { /* ignore */ }
+    try {
+      sessionStorage.setItem("eid-banner-dismissed", "1");
+    } catch {
+      /* ignore */
+    }
   };
-
 
   useEffect(() => {
     let played = false;
@@ -224,7 +261,14 @@ function Index() {
       window.removeEventListener("keydown", trigger);
       window.removeEventListener("scroll", trigger);
     };
-    const tm = setTimeout(() => { try { playIntro(); played = true; } catch { /* ignore */ } }, 1400);
+    const tm = setTimeout(() => {
+      try {
+        playIntro();
+        played = true;
+      } catch {
+        /* ignore */
+      }
+    }, 1400);
     window.addEventListener("pointerdown", trigger);
     window.addEventListener("keydown", trigger);
     window.addEventListener("scroll", trigger);
@@ -247,8 +291,14 @@ function Index() {
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
-  const toggleLang = () => { playClick(); setLang((l) => (l === "ar" ? "en" : "ar")); };
-  const toggleTheme = () => { playClick(); setTheme((th) => (th === "dark" ? "light" : "dark")); };
+  const toggleLang = () => {
+    playClick();
+    setLang((l) => (l === "ar" ? "en" : "ar"));
+  };
+  const toggleTheme = () => {
+    playClick();
+    setTheme((th) => (th === "dark" ? "light" : "dark"));
+  };
 
   return (
     <div className="relative min-h-screen antialiased" style={{ color: "var(--fg)" }}>
@@ -289,9 +339,10 @@ function Index() {
 
       <Footer lang={lang} />
 
-
       <FloatingSocial isRTL={isRTL} />
-      <Suspense fallback={null}><AIAssistant lang={lang} /></Suspense>
+      <Suspense fallback={null}>
+        <AIAssistant lang={lang} />
+      </Suspense>
 
       <AnimatePresence>
         {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
@@ -299,15 +350,23 @@ function Index() {
       <AnimatePresence>
         {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
       </AnimatePresence>
-      <AnimatePresence>
-        {eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}
-      </AnimatePresence>
+      <AnimatePresence>{eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}</AnimatePresence>
     </div>
   );
 }
 
 /* ============= NAVBAR ============= */
-export function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: Theme; onToggle: () => void; onTheme: () => void }) {
+export function Navbar({
+  lang,
+  theme,
+  onToggle,
+  onTheme,
+}: {
+  lang: Lang;
+  theme: Theme;
+  onToggle: () => void;
+  onTheme: () => void;
+}) {
   const isAdmin = useIsAdmin();
   const links: { to: string; label: string }[] = [
     { to: "/", label: t.nav.home[lang] },
@@ -338,22 +397,27 @@ export function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: 
           {links.map((l) => (
             <li key={l.to}>
               {l.to.startsWith("/#") ? (
-                <a href={l.to.slice(1)} onMouseEnter={playHover}
+                <a
+                  href={l.to.slice(1)}
+                  onMouseEnter={playHover}
                   className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
-                  style={{ color: "var(--fg-soft)" }}>
+                  style={{ color: "var(--fg-soft)" }}
+                >
                   {l.label}
                 </a>
               ) : (
-                <RouterLink to={l.to} onMouseEnter={playHover}
+                <RouterLink
+                  to={l.to}
+                  onMouseEnter={playHover}
                   className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
-                  style={{ color: "var(--fg-soft)" }}>
+                  style={{ color: "var(--fg-soft)" }}
+                >
                   {l.label}
                 </RouterLink>
               )}
             </li>
           ))}
         </ul>
-
 
         <div className="flex items-center gap-2 sm:gap-3">
           <RouterLink
@@ -400,14 +464,21 @@ export function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: 
             <BookOpen className="size-4" />
             <span className="hidden sm:inline">{lang === "ar" ? "المكتبة المحاسبية" : "Knowledge"}</span>
           </RouterLink>
-          <button onClick={onTheme} onMouseEnter={playHover}
+          <button
+            onClick={onTheme}
+            onMouseEnter={playHover}
             className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
-            aria-label="Toggle theme">
+            aria-label="Toggle theme"
+          >
             {theme === "dark" ? <Sun className="size-4 text-[#d7aa52]" /> : <Moon className="size-4 text-[#d7aa52]" />}
           </button>
-          <button onClick={onToggle} onMouseEnter={playHover}
+          <button
+            onClick={onToggle}
+            onMouseEnter={playHover}
             className="flex items-center gap-2 rounded-full gold-border px-3 py-2 text-xs font-semibold transition-all hover:bg-[#d7aa52]/10"
-            style={{ color: "var(--fg)" }} aria-label="Toggle language">
+            style={{ color: "var(--fg)" }}
+            aria-label="Toggle language"
+          >
             <Languages className="size-4 text-[#d7aa52]" />
             <span>{lang === "ar" ? "EN" : "AR"}</span>
           </button>
@@ -433,7 +504,10 @@ function Typewriter({ words }: { words: string[] }) {
       } else {
         const next = word.slice(0, sub.length - 1);
         setSub(next);
-        if (next === "") { setDel(false); setIdx((i) => (i + 1) % words.length); }
+        if (next === "") {
+          setDel(false);
+          setIdx((i) => (i + 1) % words.length);
+        }
       }
     }, speed);
     return () => clearTimeout(tm);
@@ -449,9 +523,15 @@ function Hero({ lang }: { lang: Lang }) {
   const yImg = useTransform(scrollY, [0, 600], [0, -60]);
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]">
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+    >
       {/* Hero background video (starts right below the navbar) */}
-      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-20 bottom-0 z-0 overflow-hidden">
+      <motion.div
+        style={{ y: yBg }}
+        className="pointer-events-none absolute inset-x-0 top-20 bottom-0 z-0 overflow-hidden"
+      >
         <video
           src={heroVideoAsset.url}
           poster={heroBg}
@@ -471,14 +551,20 @@ function Hero({ lang }: { lang: Lang }) {
       </div>
 
       <div className="relative z-10 mx-auto w-[92%] max-w-7xl">
-        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.8 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
           <div className="mb-6 inline-flex items-center gap-2 rounded-full gold-border bg-white/5 px-4 py-2 text-xs font-semibold text-[#f3d28a]">
             <Sparkles className="size-3.5" />
             {t.hero.badge[lang]}
           </div>
 
           <h1 className="mb-4 text-5xl font-black leading-[1.05] sm:text-6xl lg:text-7xl">
-            <span className="block" style={{ color: "var(--fg)" }}>{t.hero.name[lang]}</span>
+            <span className="block" style={{ color: "var(--fg)" }}>
+              {t.hero.name[lang]}
+            </span>
             <span className="mt-2 block gold-text">{lang === "ar" ? "محاسب أول" : "Senior Accountant"}</span>
           </h1>
 
@@ -490,8 +576,12 @@ function Hero({ lang }: { lang: Lang }) {
           </p>
 
           <div className="mb-10 flex flex-wrap items-center gap-4">
-            <a href="#contact" onMouseEnter={playHover} onClick={playClick}
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-7 py-3.5 text-sm font-bold text-[#04101f] shadow-xl shadow-[#d7aa52]/40 transition-transform hover:scale-105">
+            <a
+              href="#contact"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-7 py-3.5 text-sm font-bold text-[#04101f] shadow-xl shadow-[#d7aa52]/40 transition-transform hover:scale-105"
+            >
               <span className="absolute inset-0 shine opacity-60" />
               <span className="relative">{t.hero.cta1[lang]}</span>
               <Arrow className="relative size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
@@ -539,7 +629,12 @@ function Counter({ value }: { value: string }) {
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [inView, target]);
-  return <span ref={ref}>{target ? n : ""}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {target ? n : ""}
+      {suffix}
+    </span>
+  );
 }
 
 /* ============= STATS ============= */
@@ -551,12 +646,21 @@ function Stats({ lang }: { lang: Lang }) {
         {t.stats.map((s, i) => {
           const Icon = icons[i];
           return (
-            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass tilt-card rounded-2xl p-6 text-center">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="glass tilt-card rounded-2xl p-6 text-center"
+            >
               <Icon className="mx-auto mb-2 size-6 text-[#d7aa52]" />
-              <div className="text-4xl font-black gold-text"><Counter value={s.v} /></div>
-              <div className="mt-1 text-sm font-medium" style={{ color: "var(--fg-soft)" }}>{s[lang]}</div>
+              <div className="text-4xl font-black gold-text">
+                <Counter value={s.v} />
+              </div>
+              <div className="mt-1 text-sm font-medium" style={{ color: "var(--fg-soft)" }}>
+                {s[lang]}
+              </div>
             </motion.div>
           );
         })}
@@ -597,7 +701,10 @@ function ProfileBio({ lang }: { lang: Lang }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
 
                 {/* Shine sweep on hover */}
-                <div aria-hidden className="pointer-events-none absolute -inset-x-1/2 -top-1/2 h-[200%] w-[60%] rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-[1400ms] ease-out" />
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute -inset-x-1/2 -top-1/2 h-[200%] w-[60%] rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-[1400ms] ease-out"
+                />
 
                 <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
                   <div>
@@ -630,9 +737,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
               {t.about.title[lang]}
             </div>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight gold-text sm:text-4xl">
-              {t.hero.name[lang]}
-            </h2>
+            <h2 className="mt-4 text-3xl font-black leading-tight gold-text sm:text-4xl">{t.hero.name[lang]}</h2>
 
             <div className="mt-5 space-y-4 text-base leading-loose text-justify" style={{ color: "var(--fg-soft)" }}>
               <p>{t.about.body[lang]}</p>
@@ -640,14 +745,23 @@ function ProfileBio({ lang }: { lang: Lang }) {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href="#contact" onMouseEnter={playHover} onClick={playClick}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]">
+              <a
+                href="#contact"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]"
+              >
                 {lang === "ar" ? "تواصل معي" : "Get in touch"}
                 <Arrow className="size-3.5" />
               </a>
-              <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
+              <a
+                href="/mycv.pdf"
+                download
+                onMouseEnter={playHover}
+                onClick={playClick}
                 className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-5 py-2.5 text-xs font-bold transition-all hover:bg-[#d7aa52]/10"
-                style={{ color: "var(--fg)" }}>
+                style={{ color: "var(--fg)" }}
+              >
                 <Download className="size-4 text-[#d7aa52]" />
                 {t.nav.cv[lang]}
               </a>
@@ -666,35 +780,52 @@ export function About({ lang }: { lang: Lang }) {
       <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
             className="glass space-y-5 rounded-3xl p-8 text-base leading-loose text-justify sm:p-10 lg:col-span-3"
-            style={{ color: "var(--fg-soft)" }}>
+            style={{ color: "var(--fg-soft)" }}
+          >
             <p>{t.about.body[lang]}</p>
             <p>{t.about.body2[lang]}</p>
             <div className="flex flex-wrap items-center gap-3 pt-3">
-              <span className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-4 py-2 text-sm font-semibold" style={{ color: "var(--fg)" }}>
+              <span
+                className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-4 py-2 text-sm font-semibold"
+                style={{ color: "var(--fg)" }}
+              >
                 <Car className="size-4 text-[#d7aa52]" />
                 {t.contact.driving[lang]}
               </span>
-              <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105">
+              <a
+                href="/mycv.pdf"
+                download
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105"
+              >
                 <Download className="size-4" />
                 {t.nav.cv[lang]}
               </a>
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.9 }}
-            className="relative lg:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9 }}
+            className="relative lg:col-span-2"
+          >
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
               <img
                 src={deskImg}
                 alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
                 loading="lazy"
-                className="h-full w-full object-cover" />
+                className="h-full w-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
               <div className="absolute bottom-4 start-4 end-4 flex items-center gap-2 rounded-full glass px-3 py-2 text-[11px] font-bold text-white/85">
                 <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -708,8 +839,6 @@ export function About({ lang }: { lang: Lang }) {
   );
 }
 
-
-
 /* ============= SERVICES ============= */
 export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
   const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
@@ -720,26 +849,41 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)] via-transparent to-[var(--bg-surface)]" />
       </div>
       <div className="mx-auto w-[92%] max-w-6xl">
-        <SectionTitle eyebrow={lang === "ar" ? "الخدمات" : "Services"}
-          title={t.services.title[lang]} sub={t.services.sub[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "الخدمات" : "Services"}
+          title={t.services.title[lang]}
+          sub={t.services.sub[lang]}
+        />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((s, i) => {
             const Icon = icons[i % icons.length];
             return (
-              <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6, delay: i * 0.08 }}
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
                 onMouseEnter={playHover}
-                className="glass tilt-card group relative overflow-hidden rounded-3xl p-7">
+                className="glass tilt-card group relative overflow-hidden rounded-3xl p-7"
+              >
                 <div className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/15 blur-2xl transition-all group-hover:scale-150" />
                 <div className="relative">
                   <div className="mb-4 inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
                     <Icon className="size-5" />
                   </div>
-                  <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>{s[lang]}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{s.d[lang]}</p>
+                  <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>
+                    {s[lang]}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>
+                    {s.d[lang]}
+                  </p>
                   <button
                     type="button"
-                    onClick={() => { playClick(); onOpen(s); }}
+                    onClick={() => {
+                      playClick();
+                      onOpen(s);
+                    }}
                     onMouseEnter={playHover}
                     className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
                   >
@@ -759,15 +903,26 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
 /* ============= SERVICE MODAL ============= */
 export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
-      onClick={onClose}>
-      <motion.div initial={{ scale: 0.92, y: 30 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.92, opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0.92, y: 30 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.92, opacity: 0 }}
         transition={{ type: "spring", stiffness: 220, damping: 22 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl">
-        <button onClick={onClose} aria-label="close"
-          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white">
+        className="relative max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl"
+      >
+        <button
+          onClick={onClose}
+          aria-label="close"
+          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        >
           <X className="size-4" />
         </button>
         <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
@@ -782,7 +937,10 @@ export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang:
           </div>
           <ol className="space-y-2">
             {item.steps[lang].map((step, i) => (
-              <li key={i} className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3 text-sm text-white/90">
+              <li
+                key={i}
+                className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3 text-sm text-white/90"
+              >
                 <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[10px] font-black text-[#04101f]">
                   {i + 1}
                 </span>
@@ -796,15 +954,16 @@ export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang:
   );
 }
 
-
-
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
   return (
     <section id="experience" className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
-        <SectionTitle eyebrow={lang === "ar" ? "المسيرة المهنية" : "Career"}
-          title={t.experience.title[lang]} sub={t.experience.sub[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "المسيرة المهنية" : "Career"}
+          title={t.experience.title[lang]}
+          sub={t.experience.sub[lang]}
+        />
         <div className="relative mt-16">
           <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2" />
           <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto" />
@@ -819,9 +978,7 @@ export function Experience({ lang }: { lang: Lang }) {
   );
 }
 
-function TimelineItem({ item, index, lang }: {
-  item: (typeof t.experience.items)[number]; index: number; lang: Lang;
-}) {
+function TimelineItem({ item, index, lang }: { item: (typeof t.experience.items)[number]; index: number; lang: Lang }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const left = index % 2 === 0;
@@ -829,14 +986,19 @@ function TimelineItem({ item, index, lang }: {
   return (
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto" />
-      <motion.div initial={{ opacity: 0, x: left ? -50 : 50 }} animate={inView ? { opacity: 1, x: 0 } : {}}
+      <motion.div
+        initial={{ opacity: 0, x: left ? -50 : 50 }}
+        animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.7 }}
-        className={`glass group rounded-3xl p-6 sm:p-8 transition-all hover:border-[#d7aa52]/50 mr-10 md:mr-0 rtl:ml-10 rtl:mr-0 md:rtl:ml-0 ${left ? "md:col-start-1" : "md:col-start-2"}`}>
+        className={`glass group rounded-3xl p-6 sm:p-8 transition-all hover:border-[#d7aa52]/50 mr-10 md:mr-0 rtl:ml-10 rtl:mr-0 md:rtl:ml-0 ${left ? "md:col-start-1" : "md:col-start-2"}`}
+      >
         <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
           <Briefcase className="size-3.5" />
           {item.date[lang]}
         </div>
-        <h3 className="text-xl font-extrabold" style={{ color: "var(--fg)" }}>{item.role[lang]}</h3>
+        <h3 className="text-xl font-extrabold" style={{ color: "var(--fg)" }}>
+          {item.role[lang]}
+        </h3>
         <p
           className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] select-none blur-[6px] saturate-50 transition-all duration-500 hover:blur-0 hover:saturate-100 focus:blur-0"
           tabIndex={0}
@@ -854,10 +1016,12 @@ function TimelineItem({ item, index, lang }: {
           ))}
         </ul>
       </motion.div>
-      <motion.div initial={{ opacity: 0, scale: 0.7, rotate: left ? 10 : -10 }}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7, rotate: left ? 10 : -10 }}
         animate={inView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
         transition={{ duration: 0.9, delay: 0.2, type: "spring" }}
-        className={`hidden md:flex items-center justify-center ${left ? "md:col-start-2" : "md:col-start-1 md:row-start-1"}`}>
+        className={`hidden md:flex items-center justify-center ${left ? "md:col-start-2" : "md:col-start-1 md:row-start-1"}`}
+      >
         <LogoBadge logo={logo} />
       </motion.div>
       <div className="md:hidden mr-10 rtl:ml-10 rtl:mr-0">
@@ -867,21 +1031,37 @@ function TimelineItem({ item, index, lang }: {
   );
 }
 
-function LogoBadge({ logo, compact = false }: {
-  logo: { src: string; name: { ar: string; en: string } }; compact?: boolean;
+function LogoBadge({
+  logo,
+  compact = false,
+}: {
+  logo: { src: string; name: { ar: string; en: string } };
+  compact?: boolean;
 }) {
   return (
-    <motion.div whileHover={{ scale: 1.05, rotate: 1 }} transition={{ type: "spring", stiffness: 200 }}
-      className="group relative">
+    <motion.div
+      whileHover={{ scale: 1.05, rotate: 1 }}
+      transition={{ type: "spring", stiffness: 200 }}
+      className="group relative"
+    >
       <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/20 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
-      <div className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl gold-border bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-2xl ${compact ? "p-4" : "p-6"}`}>
-        <div className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner overflow-hidden ${compact ? "size-24" : "size-36"}`}>
-          <motion.img src={logo.src} alt=""
+      <div
+        className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl gold-border bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-2xl ${compact ? "p-4" : "p-6"}`}
+      >
+        <div
+          className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner overflow-hidden ${compact ? "size-24" : "size-36"}`}
+        >
+          <motion.img
+            src={logo.src}
+            alt=""
             aria-hidden
-            className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]" />
+            className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]"
+          />
           <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d7aa52]/30" />
         </div>
-        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text blur-[5px] select-none transition-all duration-500 group-hover:blur-0">{logo.name.ar}</div>
+        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text blur-[5px] select-none transition-all duration-500 group-hover:blur-0">
+          {logo.name.ar}
+        </div>
       </div>
     </motion.div>
   );
@@ -894,10 +1074,16 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
 
   return (
     <section id="skills" className="relative py-14">
-      <div aria-hidden className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent" />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent"
+      />
       <div className="mx-auto w-[92%] max-w-6xl">
-        <SectionTitle eyebrow={lang === "ar" ? "المهارات" : "Skills"}
-          title={t.skills.title[lang]} sub={t.skills.sub[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "المهارات" : "Skills"}
+          title={t.skills.title[lang]}
+          sub={t.skills.sub[lang]}
+        />
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[280px_1fr]">
           {/* Tabs */}
@@ -906,19 +1092,36 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
               const Icon = groupIcons[i];
               const isActive = i === active;
               return (
-                <button key={i} onClick={() => { setActive(i); playClick(); }} onMouseEnter={playHover}
+                <button
+                  key={i}
+                  onClick={() => {
+                    setActive(i);
+                    playClick();
+                  }}
+                  onMouseEnter={playHover}
                   className={`group relative flex w-full shrink-0 items-center gap-3 rounded-2xl border px-4 py-4 text-start transition-all ${
-                    isActive ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_10px_40px_-10px_rgba(215,170,82,0.5)]"
-                             : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"}`}>
-                  <span className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
-                    isActive ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "bg-white/5 text-[#d7aa52]"}`}>
+                    isActive
+                      ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_10px_40px_-10px_rgba(215,170,82,0.5)]"
+                      : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"
+                  }`}
+                >
+                  <span
+                    className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
+                      isActive
+                        ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+                        : "bg-white/5 text-[#d7aa52]"
+                    }`}
+                  >
                     <Icon className="size-5" />
                   </span>
                   <div className="flex-1">
                     <div className="text-[10px] uppercase tracking-[0.25em]" style={{ color: "var(--fg-soft)" }}>
                       {String(i + 1).padStart(2, "0")} / {t.skills.groups.length.toString().padStart(2, "0")}
                     </div>
-                    <div className={`text-sm font-extrabold ${isActive ? "gold-text" : ""}`} style={!isActive ? { color: "var(--fg)" } : undefined}>
+                    <div
+                      className={`text-sm font-extrabold ${isActive ? "gold-text" : ""}`}
+                      style={!isActive ? { color: "var(--fg)" } : undefined}
+                    >
                       {g.h[lang]}
                     </div>
                   </div>
@@ -928,8 +1131,13 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
           </div>
 
           {/* Panel */}
-          <motion.div key={active} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-            className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c] to-[#04101f] p-6 sm:p-8">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c] to-[#04101f] p-6 sm:p-8"
+          >
             <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
             <div className="pointer-events-none absolute -left-16 -bottom-16 size-60 rounded-full bg-blue-500/10 blur-3xl" />
 
@@ -946,19 +1154,30 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 {t.skills.groups[active].items.map((it, j) => (
-                  <motion.button key={j} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
+                  <motion.button
+                    key={j}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.35, delay: j * 0.05 }}
                     onMouseEnter={playHover}
-                    onClick={() => { playClick(); onOpen(it); }}
-                    className="group relative overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-white/[0.03] p-4 text-start transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:bg-[#d7aa52]/10">
+                    onClick={() => {
+                      playClick();
+                      onOpen(it);
+                    }}
+                    className="group relative overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-white/[0.03] p-4 text-start transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
+                  >
                     <div className="flex items-center justify-between gap-3">
                       <span className="text-sm font-bold text-white/90">{it[lang]}</span>
                       <span className="font-mono text-xs text-[#d7aa52]">{it.level}%</span>
                     </div>
                     <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                      <motion.div initial={{ width: 0 }} whileInView={{ width: `${it.level}%` }}
-                        viewport={{ once: true }} transition={{ duration: 1.1, delay: 0.1 + j * 0.05 }}
-                        className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]" />
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${it.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.1, delay: 0.1 + j * 0.05 }}
+                        className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+                      />
                     </div>
                     <div className="mt-2 flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-[#d7aa52]/70 opacity-0 transition-opacity group-hover:opacity-100">
                       <Plus className="size-3" />
@@ -978,15 +1197,25 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
 /* ============= SKILL MODAL ============= */
 export function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onClose: () => void }) {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
-      onClick={onClose}>
-      <motion.div initial={{ scale: 0.9, y: 30 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.9, opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0.9, y: 30 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.9, opacity: 0 }}
         transition={{ type: "spring", stiffness: 220, damping: 22 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl">
-        <button onClick={onClose}
-          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white">
+        className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl"
+      >
+        <button
+          onClick={onClose}
+          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        >
           <X className="size-4" />
         </button>
 
@@ -998,7 +1227,10 @@ export function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lan
 
         <div className="mt-3 flex items-center gap-3">
           <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
-            <div className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]" style={{ width: `${item.level}%` }} />
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+              style={{ width: `${item.level}%` }}
+            />
           </div>
           <span className="font-mono text-sm font-bold text-[#d7aa52]">{item.level}%</span>
         </div>
@@ -1011,7 +1243,10 @@ export function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lan
           </div>
           <div className="flex flex-wrap gap-2">
             {item.tools.map((tool, i) => (
-              <span key={i} className="rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-white/85">
+              <span
+                key={i}
+                className="rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-white/85"
+              >
                 {tool}
               </span>
             ))}
@@ -1054,8 +1289,12 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
 
   useEffect(() => {
     const up = () => (drag.current = false);
-    const mv = (e: MouseEvent) => { if (drag.current) move(e.clientX); };
-    const tmv = (e: TouchEvent) => { if (drag.current && e.touches[0]) move(e.touches[0].clientX); };
+    const mv = (e: MouseEvent) => {
+      if (drag.current) move(e.clientX);
+    };
+    const tmv = (e: TouchEvent) => {
+      if (drag.current && e.touches[0]) move(e.touches[0].clientX);
+    };
     window.addEventListener("mouseup", up);
     window.addEventListener("touchend", up);
     window.addEventListener("mousemove", mv);
@@ -1071,11 +1310,16 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
   return (
     <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
-        <SectionTitle eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
-          title={t.beforeAfter.title[lang]} sub={t.beforeAfter.sub[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
+          title={t.beforeAfter.title[lang]}
+          sub={t.beforeAfter.sub[lang]}
+        />
 
-        <div ref={wrapRef}
-          className="relative mt-12 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[#d7aa52]/30 select-none gold-glow">
+        <div
+          ref={wrapRef}
+          className="relative mt-12 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[#d7aa52]/30 select-none gold-glow"
+        >
           <img src={beforeAfterImg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
             <img src={beforeAfterImg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
@@ -1091,13 +1335,16 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
           </div>
 
           {/* Divider */}
-          <div className="absolute top-0 bottom-0 w-[2px] bg-[#d7aa52] shadow-[0_0_20px_rgba(215,170,82,0.7)]"
-            style={{ left: `${pos}%` }}>
+          <div
+            className="absolute top-0 bottom-0 w-[2px] bg-[#d7aa52] shadow-[0_0_20px_rgba(215,170,82,0.7)]"
+            style={{ left: `${pos}%` }}
+          >
             <button
               onMouseDown={() => (drag.current = true)}
               onTouchStart={() => (drag.current = true)}
               aria-label="Drag"
-              className="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-2xl">
+              className="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-2xl"
+            >
               <ArrowLeft className="size-3" />
               <ArrowRight className="size-3" />
             </button>
@@ -1119,8 +1366,11 @@ function Testimonials({ lang }: { lang: Lang }) {
   return (
     <section className="py-14">
       <div className="mx-auto w-[92%] max-w-6xl">
-        <SectionTitle eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
-          title={t.testimonials.title[lang]} sub={t.testimonials.sub[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
+          title={t.testimonials.title[lang]}
+          sub={t.testimonials.sub[lang]}
+        />
       </div>
       <div
         dir="ltr"
@@ -1136,8 +1386,10 @@ function Testimonials({ lang }: { lang: Lang }) {
           transition={{ duration: 50, ease: "linear", repeat: Infinity }}
         >
           {loop.map((it, i) => (
-            <div key={i}
-              className="glass tilt-card relative w-[320px] shrink-0 overflow-hidden rounded-3xl p-7 sm:w-[380px]">
+            <div
+              key={i}
+              className="glass tilt-card relative w-[320px] shrink-0 overflow-hidden rounded-3xl p-7 sm:w-[380px]"
+            >
               <Quote className="absolute top-4 end-4 size-10 text-[#d7aa52]/15" />
               <p className="text-sm leading-relaxed italic" style={{ color: "var(--fg-soft)" }}>
                 “{it.quote[lang]}”
@@ -1147,7 +1399,9 @@ function Testimonials({ lang }: { lang: Lang }) {
                   {it.name[lang].split(" ")[0].charAt(it.name[lang].startsWith(".") ? 1 : 0) || it.name[lang].charAt(0)}
                 </div>
                 <div>
-                  <div className="text-sm font-extrabold" style={{ color: "var(--fg)" }}>{it.name[lang]}</div>
+                  <div className="text-sm font-extrabold" style={{ color: "var(--fg)" }}>
+                    {it.name[lang]}
+                  </div>
                   <div className="text-xs text-[#d7aa52]">{it.role[lang]}</div>
                 </div>
               </div>
@@ -1167,11 +1421,18 @@ export function Certs({ lang }: { lang: Lang }) {
         <SectionTitle eyebrow={lang === "ar" ? "التطوير المهني" : "Development"} title={t.certs.title[lang]} />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.certs.items.map((c, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="glass tilt-card flex items-start gap-3 rounded-2xl p-5 transition-all hover:border-[#d7aa52]/50">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.07 }}
+              className="glass tilt-card flex items-start gap-3 rounded-2xl p-5 transition-all hover:border-[#d7aa52]/50"
+            >
               <GraduationCap className="size-5 shrink-0 text-[#d7aa52]" />
-              <span className="text-sm font-medium" style={{ color: "var(--fg)" }}>{c[lang]}</span>
+              <span className="text-sm font-medium" style={{ color: "var(--fg)" }}>
+                {c[lang]}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -1185,11 +1446,17 @@ export function Contact({ lang }: { lang: Lang }) {
   return (
     <section id="contact" className="py-8">
       <div className="mx-auto w-[92%] max-w-6xl">
-        <SectionTitle eyebrow={lang === "ar" ? "تواصل" : "Contact"} title={t.contact.title[lang]} sub={t.contact.sub[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "تواصل" : "Contact"}
+          title={t.contact.title[lang]}
+          sub={t.contact.sub[lang]}
+        />
         {/* Social mascot cards (Pixar-style mascot per platform) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
           className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
         >
           {SOCIALS.map((s, i) => (
@@ -1223,7 +1490,9 @@ export function Contact({ lang }: { lang: Lang }) {
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
-              <div className="relative mt-3 text-sm font-extrabold" style={{ color: "var(--fg)" }}>{s.label}</div>
+              <div className="relative mt-3 text-sm font-extrabold" style={{ color: "var(--fg)" }}>
+                {s.label}
+              </div>
             </motion.a>
           ))}
         </motion.div>
@@ -1231,7 +1500,6 @@ export function Contact({ lang }: { lang: Lang }) {
     </section>
   );
 }
-
 
 /* ============= FOOTER ============= */
 export function Footer({ lang }: { lang: Lang }) {
@@ -1244,7 +1512,10 @@ export function Footer({ lang }: { lang: Lang }) {
   ];
   return (
     <footer className="relative mt-4 border-t border-[var(--line)] pt-6 pb-3">
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent"
+      />
 
       <div className="mx-auto grid w-[92%] max-w-6xl gap-6 md:grid-cols-3">
         <div>
@@ -1259,14 +1530,20 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div>
-          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.quick[lang]}</div>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+            {t.footer.quick[lang]}
+          </div>
           <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
             {links.map((l) => (
               <li key={l.to}>
                 {l.to.startsWith("/#") ? (
-                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d7aa52]">{l.label}</a>
+                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d7aa52]">
+                    {l.label}
+                  </a>
                 ) : (
-                  <RouterLink to={l.to} className="transition-colors hover:text-[#d7aa52]">{l.label}</RouterLink>
+                  <RouterLink to={l.to} className="transition-colors hover:text-[#d7aa52]">
+                    {l.label}
+                  </RouterLink>
                 )}
               </li>
             ))}
@@ -1279,17 +1556,33 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div>
-          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">{t.footer.contactCol[lang]}</div>
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+            {t.footer.contactCol[lang]}
+          </div>
           <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
-            <li dir="ltr"><a href="tel:+966560409811" className="hover:text-[#d7aa52]">0560409811</a></li>
-            <li><a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">elmadnim@gmail.com</a></li>
+            <li dir="ltr">
+              <a href="tel:+966560409811" className="hover:text-[#d7aa52]">
+                0560409811
+              </a>
+            </li>
+            <li>
+              <a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">
+                elmadnim@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div className="mx-auto mt-4 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row" style={{ color: "var(--fg-soft)" }}>
+      <div
+        className="mx-auto mt-4 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row"
+        style={{ color: "var(--fg-soft)" }}
+      >
         <span>{t.footer.rights[lang]}</span>
-        <span className="inline-flex items-center gap-1.5"><Sparkles className="size-3 text-[#d7aa52]" />{t.footer.built[lang]}</span>
+        <span className="inline-flex items-center gap-1.5">
+          <Sparkles className="size-3 text-[#d7aa52]" />
+          {t.footer.built[lang]}
+        </span>
       </div>
     </footer>
   );
@@ -1298,11 +1591,22 @@ export function Footer({ lang }: { lang: Lang }) {
 /* ============= SECTION TITLE ============= */
 function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }} className="title-bar">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.7 }}
+      className="title-bar"
+    >
       <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {eyebrow}</div>
-      <h2 className="text-4xl font-black sm:text-5xl" style={{ color: "var(--fg)" }}>{title}</h2>
-      {sub && <p className="mt-3 text-base" style={{ color: "var(--fg-soft)" }}>{sub}</p>}
+      <h2 className="text-4xl font-black sm:text-5xl" style={{ color: "var(--fg)" }}>
+        {title}
+      </h2>
+      {sub && (
+        <p className="mt-3 text-base" style={{ color: "var(--fg-soft)" }}>
+          {sub}
+        </p>
+      )}
     </motion.div>
   );
 }
@@ -1315,7 +1619,10 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
       <div className="flex flex-row items-center gap-3">
         <motion.button
           type="button"
-          onClick={() => { playClick(); setOpen((v) => !v); }}
+          onClick={() => {
+            playClick();
+            setOpen((v) => !v);
+          }}
           onMouseEnter={playHover}
           aria-label={open ? "Close social menu" : "Open social menu"}
           aria-expanded={open}
@@ -1406,7 +1713,10 @@ function HeroDashWidgets({ lang }: { lang: Lang }) {
         {/* Revenue row */}
         <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-3">
           <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
-            <span className="inline-flex items-center gap-1.5"><TrendingUp className="size-3 text-emerald-400" />{lang === "ar" ? "الإيرادات" : "Revenue"}</span>
+            <span className="inline-flex items-center gap-1.5">
+              <TrendingUp className="size-3 text-emerald-400" />
+              {lang === "ar" ? "الإيرادات" : "Revenue"}
+            </span>
             <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 font-bold text-emerald-300">+18%</span>
           </div>
           <div className="mt-1 font-mono text-xl font-black gold-text">SAR 482K</div>
@@ -1433,8 +1743,15 @@ function HeroDashWidgets({ lang }: { lang: Lang }) {
               <svg viewBox="0 0 36 36" className="size-10">
                 <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
                 <motion.circle
-                  cx="18" cy="18" r="15" fill="none" stroke="#f3d28a" strokeWidth="3"
-                  strokeLinecap="round" transform="rotate(-90 18 18)" strokeDasharray="94.2"
+                  cx="18"
+                  cy="18"
+                  r="15"
+                  fill="none"
+                  stroke="#f3d28a"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  transform="rotate(-90 18 18)"
+                  strokeDasharray="94.2"
                   initial={{ strokeDashoffset: 94.2 }}
                   animate={{ strokeDashoffset: 94.2 - 94.2 * 0.72 }}
                   transition={{ duration: 1.8, delay: 1.6 }}
@@ -1448,7 +1765,10 @@ function HeroDashWidgets({ lang }: { lang: Lang }) {
           </div>
           <div className="rounded-xl border border-white/8 bg-white/[0.02] p-2.5">
             <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.2em] text-white/60">
-              <span className="inline-flex items-center gap-1"><BarChart3 className="size-2.5 text-[#d7aa52]" />W23</span>
+              <span className="inline-flex items-center gap-1">
+                <BarChart3 className="size-2.5 text-[#d7aa52]" />
+                W23
+              </span>
               <span className="text-emerald-300">+12%</span>
             </div>
             <div className="mt-2 flex h-10 items-end gap-1">
@@ -1502,8 +1822,14 @@ function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
         className="relative w-full max-w-md overflow-hidden rounded-[28px] border border-[#d7aa52]/50 bg-gradient-to-br from-[#0a223f] via-[#07182c] to-[#04101f] p-8 text-center shadow-2xl"
       >
         {/* Decorative lanterns/sparkles */}
-        <div aria-hidden className="pointer-events-none absolute -top-16 -left-16 size-56 rounded-full bg-[#d7aa52]/25 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-20 -right-16 size-60 rounded-full bg-amber-400/15 blur-3xl" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-16 -left-16 size-56 rounded-full bg-[#d7aa52]/25 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-20 -right-16 size-60 rounded-full bg-amber-400/15 blur-3xl"
+        />
         {[...Array(14)].map((_, i) => (
           <motion.span
             key={i}
@@ -1513,8 +1839,8 @@ function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
             transition={{ duration: 2.6 + (i % 4) * 0.4, repeat: Infinity, delay: i * 0.15 }}
             className="absolute"
             style={{
-              left: `${(i * 53) % 95 + 2}%`,
-              top: `${(i * 37) % 80 + 6}%`,
+              left: `${((i * 53) % 95) + 2}%`,
+              top: `${((i * 37) % 80) + 6}%`,
               color: i % 2 ? "#f3d28a" : "#fffbe6",
             }}
           >
@@ -1537,7 +1863,9 @@ function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
           transition={{ type: "spring", stiffness: 180, damping: 14, delay: 0.15 }}
           className="relative mx-auto mb-4 flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] shadow-2xl shadow-[#d7aa52]/40"
         >
-          <span className="text-4xl" role="img" aria-label="lantern">🏮</span>
+          <span className="text-4xl" role="img" aria-label="lantern">
+            🏮
+          </span>
         </motion.div>
 
         <div className="relative">

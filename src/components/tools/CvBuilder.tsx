@@ -139,13 +139,33 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   /* ================= PDF EXPORT ================= */
 
   const exportPDF = async () => {
+    await document.fonts.ready;
     if (!previewRef.current) return;
     setLoading(true);
 
     try {
-      const canvas = await html2canvas(previewRef.current, {
-        scale: 2,
+      await document.fonts.ready;
+      const canvas = await html2canvas(node, {
+        backgroundColor: "#ffffff",
+
+        // جودة عالية
+        scale: window.devicePixelRatio > 2 ? 2 : window.devicePixelRatio,
+
         useCORS: true,
+        allowTaint: true,
+
+        // مهم جداً للعربية
+        foreignObjectRendering: false,
+
+        logging: false,
+
+        removeContainer: true,
+
+        scrollX: 0,
+        scrollY: 0,
+
+        windowWidth: node.scrollWidth,
+        windowHeight: node.scrollHeight,
       });
 
       const imgData = canvas.toDataURL("image/png");

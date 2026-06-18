@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
 {
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "new-york",
@@ -19,4 +20,14 @@
     "hooks": "@/hooks"
   },
   "registries": {}
+}
+.cv-canvas {
+  font-family: "Cairo", sans-serif !important;
+}
+
+.cv-canvas * {
+  font-family: "Cairo", sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-rendering: geometricPrecision;
 }

@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap");
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -102,7 +102,7 @@ html.light {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    letter-spacing: -0.005em;
+    letter-spacing: normal;
     transition:
       background-color 0.6s ease,
       color 0.6s ease;
@@ -116,7 +116,7 @@ html.light {
   h2,
   h3,
   h4 {
-    letter-spacing: -0.02em;
+    letter-spacing: normal;
     line-height: 1.15;
   }
 
@@ -766,6 +766,14 @@ img {
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
+    .cv-canvas,
+    .cv-canvas * {
+      font-family: "Cairo", sans-serif !important;
+      letter-spacing: normal !important;
+      word-spacing: normal !important;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+    }
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
