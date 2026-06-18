@@ -581,6 +581,100 @@ function Stats({ lang }: { lang: Lang }) {
   );
 }
 
+/* ============= PROFILE + BIO (side-by-side) ============= */
+function ProfileBio({ lang }: { lang: Lang }) {
+  const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
+  return (
+    <section id="about" className="relative py-14">
+      <div className="mx-auto w-[92%] max-w-6xl">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: lang === "ar" ? 40 : -40 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9 }}
+            className={lang === "ar" ? "order-1 lg:order-2" : "order-1 lg:order-1"}
+          >
+            <div className="relative group mx-auto max-w-sm">
+              <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/30 blur-3xl transition-opacity duration-700 group-hover:opacity-90" />
+              <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2.5rem] border border-[#d7aa52]/40 transition-transform duration-700 group-hover:-translate-x-2 group-hover:translate-y-2" />
+              <div className="absolute inset-0 translate-x-4 -translate-y-4 rounded-[2.5rem] border border-white/10 transition-transform duration-700 group-hover:translate-x-2 group-hover:-translate-y-2" />
+
+              <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/30 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow aspect-[4/5]">
+                <img
+                  src={profileImg}
+                  alt="Ahmed Elmadani"
+                  width={400}
+                  height={500}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
+
+                {/* Shine sweep on hover */}
+                <div aria-hidden className="pointer-events-none absolute -inset-x-1/2 -top-1/2 h-[200%] w-[60%] rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-[1400ms] ease-out" />
+
+                <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-[0.25em] text-[#d7aa52]">
+                      {lang === "ar" ? "متاح للعمل" : "Available"}
+                    </div>
+                    <div className="text-sm font-bold" style={{ color: "var(--fg)" }}>
+                      {lang === "ar" ? "الرياض، السعودية" : "Riyadh, KSA"}
+                    </div>
+                  </div>
+                  <span className="relative flex size-3">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bio text */}
+          <motion.div
+            initial={{ opacity: 0, y: 30, x: lang === "ar" ? -40 : 40 }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className={lang === "ar" ? "order-2 lg:order-1" : "order-2 lg:order-2"}
+          >
+            <div className="inline-flex items-center gap-2 rounded-full gold-border bg-white/5 px-4 py-2 text-xs font-semibold text-[#f3d28a]">
+              <Sparkles className="size-3.5" />
+              {t.about.title[lang]}
+            </div>
+
+            <h2 className="mt-4 text-3xl font-black leading-tight gold-text sm:text-4xl">
+              {t.hero.name[lang]}
+            </h2>
+
+            <div className="mt-5 space-y-4 text-base leading-loose text-justify" style={{ color: "var(--fg-soft)" }}>
+              <p>{t.about.body[lang]}</p>
+              <p>{t.about.body2[lang]}</p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a href="#contact" onMouseEnter={playHover} onClick={playClick}
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]">
+                {lang === "ar" ? "تواصل معي" : "Get in touch"}
+                <Arrow className="size-3.5" />
+              </a>
+              <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
+                className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-5 py-2.5 text-xs font-bold transition-all hover:bg-[#d7aa52]/10"
+                style={{ color: "var(--fg)" }}>
+                <Download className="size-4 text-[#d7aa52]" />
+                {t.nav.cv[lang]}
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ============= ABOUT ============= */
 export function About({ lang }: { lang: Lang }) {
   return (
