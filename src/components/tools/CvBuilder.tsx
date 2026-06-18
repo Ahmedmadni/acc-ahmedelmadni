@@ -145,27 +145,17 @@ export function CvBuilder({ lang }: { lang: Lang }) {
 
     try {
       await document.fonts.ready;
+      await new Promise((resolve) => setTimeout(resolve, 500));
       const canvas = await html2canvas(node, {
         backgroundColor: "#ffffff",
-
-        // جودة عالية
-        scale: window.devicePixelRatio > 2 ? 2 : window.devicePixelRatio,
-
+        scale: 3,
         useCORS: true,
         allowTaint: true,
-
-        // مهم جداً للعربية
         foreignObjectRendering: false,
-
         logging: false,
-
         removeContainer: true,
-
         scrollX: 0,
         scrollY: 0,
-
-        windowWidth: node.scrollWidth,
-        windowHeight: node.scrollHeight,
       });
 
       const imgData = canvas.toDataURL("image/png");
