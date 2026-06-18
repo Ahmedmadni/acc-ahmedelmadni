@@ -496,27 +496,15 @@ function Hero({ lang }: { lang: Lang }) {
               <span className="relative">{t.hero.cta1[lang]}</span>
               <Arrow className="relative size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
             </a>
-            <a
-              href={`https://wa.me/966560409811?text=${encodeURIComponent(
-                lang === "ar"
-                  ? "السلام عليكم أستاذ أحمد، أود طلب خدمة محاسبية."
-                  : "Hello Ahmed, I'd like to request an accounting service.",
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <RouterLink
+              to="/request-service"
               onMouseEnter={playHover}
               onClick={playClick}
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-emerald-400/60 bg-emerald-500/15 px-7 py-3.5 text-sm font-bold text-emerald-200 shadow-xl shadow-emerald-500/20 transition-all hover:scale-105 hover:bg-emerald-500/25"
             >
-              <i className="fa-brands fa-whatsapp text-base" />
+              <Briefcase className="size-4" />
               <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
-            </a>
-            <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
-              className="inline-flex items-center gap-2 rounded-full gold-border px-7 py-3.5 text-sm font-bold transition-all hover:bg-[#d7aa52]/10"
-              style={{ color: "var(--fg)" }}>
-              <Download className="size-4 text-[#d7aa52]" />
-              {t.hero.cta2[lang]}
-            </a>
+            </RouterLink>
           </div>
 
           <div className="flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
