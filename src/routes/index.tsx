@@ -411,11 +411,6 @@ export function Navbar({ lang, theme, onToggle, onTheme }: { lang: Lang; theme: 
             <Languages className="size-4 text-[#d7aa52]" />
             <span>{lang === "ar" ? "EN" : "AR"}</span>
           </button>
-          <a href="/mycv.pdf" download onMouseEnter={playHover} onClick={playClick}
-            className="hidden items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105 sm:flex">
-            <Download className="size-4" />
-            {t.nav.cv[lang]}
-          </a>
         </div>
       </div>
     </motion.nav>
