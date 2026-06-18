@@ -2,7 +2,16 @@
 @source "../src";
 @import "tw-animate-css";
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap");
-
+.cv-canvas,
+.cv-canvas * {
+  direction: rtl !important;
+  unicode-bidi: embed !important;
+}
+[dir="ar"] .cv-canvas,
+[dir="ar"] .cv-canvas * {
+  direction: rtl !important;
+  unicode-bidi: embed !important;
+}
 .cv-canvas,
 .cv-canvas * {
   font-family: "Cairo", sans-serif !important;
