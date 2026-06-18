@@ -1080,16 +1080,7 @@ function FormCard(
     children: React.ReactNode;
   }
 ) {
-  return (
-    <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
-      <div className="mb-3 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
-        <Icon className="size-4" />
-        {title}
-      </div>
-      {children}
-    </div>
-  );
-}
+
   return (
     <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
       <div className="mb-3 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
