@@ -148,7 +148,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       await new Promise((resolve) => setTimeout(resolve, 500));
       const canvas = await html2canvas(node, {
         backgroundColor: "#ffffff",
-        scale: 3,
+        scale: 2,
         useCORS: true,
         allowTaint: true,
         foreignObjectRendering: false,
