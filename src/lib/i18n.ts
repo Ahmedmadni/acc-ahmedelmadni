@@ -160,6 +160,22 @@ export const t = {
           en: ["Connect data sources", "Model the KPIs", "Professional visual design", "Live auto-refresh"],
         },
       },
+      {
+        ar: "تصميم وتطوير المواقع الإلكترونية",
+        en: "Website Design & Development",
+        d: {
+          ar: "تصميم وتطوير مواقع احترافية للأعمال والمكاتب المحاسبية والمتاجر الإلكترونية.",
+          en: "Professional websites for businesses, accounting offices, and e-commerce stores.",
+        },
+        full: {
+          ar: "أصمم وأطور مواقع إلكترونية حديثة سريعة الأداء وآمنة باستخدام أحدث التقنيات (React وTanStack وTailwind). أبدأ بفهم هوية العميل وأهدافه التسويقية، ثم أصمم تجربة استخدام واضحة وواجهة جذابة متجاوبة مع جميع الأجهزة، مع تحسين كامل لمحركات البحث (SEO) وربط أدوات التحليل وقواعد البيانات والمدفوعات حسب الحاجة.",
+          en: "I build modern, fast, and secure websites using React, TanStack, and Tailwind. Starting from the brand identity and marketing goals, I deliver a clear UX and a responsive, attractive UI — fully SEO-optimized — with analytics, database, and payment integrations as needed.",
+        },
+        steps: {
+          ar: ["تحليل المتطلبات والهوية", "تصميم واجهة UX/UI", "تطوير وربط الخدمات", "إطلاق وتحسين SEO"],
+          en: ["Requirements & brand analysis", "UX/UI design", "Development & integrations", "Launch & SEO optimization"],
+        },
+      },
     ],
   },
   experience: {
