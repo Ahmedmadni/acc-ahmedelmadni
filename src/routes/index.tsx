@@ -281,6 +281,7 @@ function Index() {
 
       <main>
         <Hero lang={lang} />
+        <ProfileBio lang={lang} />
         <Stats lang={lang} />
         <Testimonials lang={lang} />
         <Contact lang={lang} />
