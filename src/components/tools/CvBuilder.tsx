@@ -1069,19 +1069,17 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   </div>
 </div>
 
-function FormCard(
-  {
-    title,
-    icon: Icon,
-    children,
-  }: {
-    title: string;
-    icon: React.ElementType;
-    children: React.ReactNode;
-  }
-) {
+function FormCard({
+  title,
+  icon: Icon,
+  children,
+}: {
+  title: string;
+  icon: React.ElementType;
+  children: React.ReactNode;
+}) {
 
-  return (
+ return (
     <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
       <div className="mb-3 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
         <Icon className="size-4" />
@@ -1214,10 +1212,5 @@ function MiniPreview({ id }: { id: TemplateId }) {
     </div>
   );
 }
-
-  {/* FORM SECTION MOVED DOWN */}
-<div className="mt-10 space-y-5">
-  {/* انسخ نفس محتوى الفورم الحالي هنا بدون تغيير */}
-</div>
 
   <div className="min-h-screen bg-[#0b1220]/5 p-6">
