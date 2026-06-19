@@ -515,6 +515,40 @@ function Typewriter({ words }: { words: string[] }) {
   return <span className="caret gold-text font-extrabold">{sub}</span>;
 }
 
+/* ============= HERO FRAME SLIDESHOW ============= */
+const HERO_FRAME_URLS = Array.from({ length: 99 - 38 + 1 }, (_, i) => {
+  const n = String(i + 38).padStart(3, "0");
+  return `/hero-frames/ezgif-frame-${n}.png`;
+});
+
+function HeroFrameSlideshow() {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    // Preload frames
+    HERO_FRAME_URLS.forEach((src) => {
+      const im = new Image();
+      im.src = src;
+    });
+    const t = setInterval(() => setIdx((i) => (i + 1) % HERO_FRAME_URLS.length), 100);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <div className="relative h-full w-full">
+      {HERO_FRAME_URLS.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt=""
+          aria-hidden="true"
+          loading={i === 0 ? "eager" : "lazy"}
+          className="absolute inset-0 h-full w-full object-cover object-top opacity-60 transition-opacity duration-75"
+          style={{ opacity: i === idx ? 0.6 : 0 }}
+        />
+      ))}
+    </div>
+  );
+}
+
 /* ============= HERO ============= */
 function Hero({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
