@@ -555,21 +555,21 @@ function HeroFrameSlideshow() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-hidden="true"
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        display: "block",
-        border: "3px solid red", // مؤقت لرؤية الـ canvas
-        zIndex: 999,
-      }}
-    />
-  );
-}
+  <canvas
+    ref={canvasRef}
+    aria-hidden="true"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      display: "block",
+      border: "3px solid red",
+      zIndex: 999,
+    }}
+  />
+);
 
 /* ============= HERO ============= */
 function Hero({ lang }: { lang: Lang }) {
@@ -584,13 +584,13 @@ function Hero({ lang }: { lang: Lang }) {
       className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Hero background frame slideshow (starts right below the navbar) */}
-      <motion.div
-        style={{ y: yBg }}
-        className="pointer-events-none absolute inset-x-0 top-20 bottom-0 z-0 overflow-hidden"
-      >
-        <HeroFrameSlideshow />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-surface)]" />
-      </motion.div>
+          <motion.div
+  style={{ y: yBg }}
+  className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0"
+>
+  <HeroFrameSlideshow />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-surface)]" />
+          </motion.div>
 
       <div className="pointer-events-none absolute inset-0 opacity-50">
         <div className="absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,170,82,0.18),transparent_60%)]" />
