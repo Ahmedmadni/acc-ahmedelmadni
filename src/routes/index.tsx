@@ -521,51 +521,51 @@ const HERO_FRAME_URLS = Array.from({ length: 132 - 34 + 1 }, (_, i) => {
 });
 
 function HeroFrameSlideshow() {
-  const [idx, setIdx] = useState(0);
-  const [ready, setReady] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const idxRef = useRef(0);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const readyRef = useRef(false);
 
   useEffect(() => {
-    let loaded = 0;
-    const total = HERO_FRAME_URLS.length;
-    const preloadCount = 10;
+    const images: HTMLImageElement[] = [];
+    let loadedCount = 0;
 
-    HERO_FRAME_URLS.slice(0, preloadCount).forEach((src) => {
+    const drawFrame = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      const img = imagesRef.current[idxRef.current];
+      if (!img) return;
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+      ctx.globalAlpha = 0.6;
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+
+    HERO_FRAME_URLS.forEach((src, i) => {
       const img = new Image();
       img.onload = () => {
-        loaded++;
-        if (loaded >= preloadCount) setReady(true);
+        images[i] = img;
+        loadedCount++;
+        if (loadedCount === HERO_FRAME_URLS.length) {
+          imagesRef.current = images;
+          readyRef.current = true;
+        }
       };
       img.src = src;
     });
 
-    // Preload rest in background
-    HERO_FRAME_URLS.slice(preloadCount).forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
+    const timer = setInterval(() => {
+      if (!readyRef.current) return;
+      idxRef.current = (idxRef.current + 1) % HERO_FRAME_URLS.length;
+      drawFrame();
+    }, 80);
+
+    return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    if (!ready) return;
-    const timer = setInterval(() => {
-      setIdx((i) => (i + 1) % HERO_FRAME_URLS.length);
-    }, 80);
-    return () => clearInterval(timer);
-  }, [ready]);
-
-  return (
-    <div className="relative h-full w-full">
-      {ready && (
-        <img
-          src={HERO_FRAME_URLS[idx]}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-top"
-          style={{ opacity: 0.6 }}
-        />
-      )}
-    </div>
-  );
+  return <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 h-full w-full" />;
 }
 
 /* ============= HERO ============= */
