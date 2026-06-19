@@ -1520,7 +1520,8 @@ export function Contact({ lang }: { lang: Lang }) {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -8, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl p-2 pt-4 text-center transition-all hover:border-[#d7aa52]/60"
+              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl p-2 pb-3 text-center transition-all hover:border-[#d7aa52]/60"
+              style={{ height: "120px" }}
             >
               <span
                 aria-hidden
