@@ -515,11 +515,6 @@ function Typewriter({ words }: { words: string[] }) {
 }
 
 /* ============= HERO FRAME SLIDESHOW ============= */
-const HERO_FRAME_URLS = Array.from({ length: 122 - 45 + 1 }, (_, i) => {
-  const n = String(i + 45).padStart(3, "0");
-  return `/ezgif-frame-${n}.png`;
-});
-
 function HeroFrameSlideshow() {
   return (
     <video
@@ -529,9 +524,8 @@ function HeroFrameSlideshow() {
       playsInline
       aria-hidden="true"
       className="absolute inset-0 h-full w-full object-cover"
-      style={{ opacity: 0.85 }}
+      style={{ opacity: 0.4 }}
     >
-      <source src="/hero-video.webm" type="video/webm" />
       <source src="/hero-video.mp4" type="video/mp4" />
     </video>
   );
