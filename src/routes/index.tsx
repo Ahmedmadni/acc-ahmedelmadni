@@ -37,7 +37,6 @@ import {
 } from "lucide-react";
 import profileImg from "@/assets/profile.webp";
 import heroBg from "@/assets/hero-finance-bg.webp";
-import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 import dashboardImg from "@/assets/finance-dashboard.webp";
 import deskImg from "@/assets/accountant-desk.webp";
 import beforeAfterImg from "@/assets/before-after.webp";
