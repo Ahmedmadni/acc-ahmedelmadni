@@ -515,8 +515,8 @@ function Typewriter({ words }: { words: string[] }) {
 }
 
 /* ============= HERO FRAME SLIDESHOW ============= */
-const HERO_FRAME_URLS = Array.from({ length: 124 - 42 + 1 }, (_, i) => {
-  const n = String(i + 42).padStart(3, "0");
+const HERO_FRAME_URLS = Array.from({ length: 122 - 45 + 1 }, (_, i) => {
+  const n = String(i + 45).padStart(3, "0");
   return `/ezgif-frame-${n}.png`;
 });
 
