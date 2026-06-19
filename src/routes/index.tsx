@@ -1504,7 +1504,7 @@ export function Contact({ lang }: { lang: Lang }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7"
+          className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 max-w-3xl mx-auto"
         >
           {SOCIALS.map((s, i) => (
             <motion.a
@@ -1520,7 +1520,7 @@ export function Contact({ lang }: { lang: Lang }) {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -8, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl p-3 pt-6 text-center transition-all hover:border-[#d7aa52]/60"
+              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl p-2 pt-4 text-center transition-all hover:border-[#d7aa52]/60"
             >
               <span
                 aria-hidden
