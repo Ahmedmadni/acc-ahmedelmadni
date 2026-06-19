@@ -516,10 +516,18 @@ function Typewriter({ words }: { words: string[] }) {
 }
 
 /* ============= HERO FRAME SLIDESHOW ============= */
-const HERO_FRAME_URLS = Array.from({ length: 99 - 38 + 1 }, (_, i) => {
-  const n = String(i + 38).padStart(3, "0");
-  return `/hero-frames/ezgif-frame-${n}.png`;
-});
+const HERO_FRAME_URLS = [
+  // الصور من مجلد hero-frames (34 إلى 99)
+  ...Array.from({ length: 99 - 34 + 1 }, (_, i) => {
+    const n = String(i + 34).padStart(3, "0");
+    return `/hero-frames/ezgif-frame-${n}.png`;
+  }),
+  // الصور من مجلد public (100 إلى 132)
+  ...Array.from({ length: 132 - 100 + 1 }, (_, i) => {
+    const n = String(i + 100).padStart(3, "0");
+    return `/ezgif-frame-${n}.png`;
+  }),
+];
 
 function HeroFrameSlideshow() {
   const [idx, setIdx] = useState(0);
