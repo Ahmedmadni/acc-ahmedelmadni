@@ -544,7 +544,7 @@ function HeroFrameSlideshow() {
       canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
       canvas.height = canvas.parentElement?.offsetHeight || window.innerHeight;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.globalAlpha = 1;
+      ctx.globalAlpha = 0.3;
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     };
 
