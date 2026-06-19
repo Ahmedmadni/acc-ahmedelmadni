@@ -529,9 +529,9 @@ function HeroFrameSlideshow() {
   const rafRef = useRef(0);
 
   useEffect(() => {
-    const images: HTMLImageElement[] = [];
+    const images: HTMLImageElement[] = new Array(HERO_FRAME_URLS.length);
     let loadedCount = 0;
-    const FPS = 12; // فريم كل 83ms — سلس وثابت
+    const FPS = 12;
     const INTERVAL = 1000 / FPS;
 
     const drawFrame = () => {
@@ -541,10 +541,11 @@ function HeroFrameSlideshow() {
       if (!ctx) return;
       const img = imagesRef.current[idxRef.current];
       if (!img) return;
-      if (canvas.width !== canvas.offsetWidth || canvas.height !== canvas.offsetHeight) {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-      }
+
+      // تحديث الأبعاد دائماً
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || window.innerHeight;
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.globalAlpha = 1;
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -563,25 +564,40 @@ function HeroFrameSlideshow() {
       rafRef.current = requestAnimationFrame(animate);
     };
 
+    // تحميل أول صورة فوراً لتجنب التأخير
     HERO_FRAME_URLS.forEach((src, i) => {
       const img = new Image();
       img.onload = () => {
         images[i] = img;
         loadedCount++;
-        if (loadedCount === HERO_FRAME_URLS.length) {
+        // ابدأ العرض بمجرد تحميل أول 5 صور
+        if (loadedCount === 5 && !readyRef.current) {
           imagesRef.current = images;
           readyRef.current = true;
         }
+        if (loadedCount === HERO_FRAME_URLS.length) {
+          imagesRef.current = images;
+        }
+      };
+      img.onerror = () => {
+        loadedCount++;
+        console.warn("Failed to load:", src);
       };
       img.src = src;
     });
 
     rafRef.current = requestAnimationFrame(animate);
-
     return () => cancelAnimationFrame(rafRef.current);
   }, []);
 
-  return <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 h-full w-full" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      className="absolute inset-0 h-full w-full"
+      style={{ width: "100%", height: "100%", display: "block" }}
+    />
+  );
 }
 
 /* ============= HERO ============= */
