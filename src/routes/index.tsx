@@ -1515,13 +1515,13 @@ export function Contact({ lang }: { lang: Lang }) {
               aria-label={s.label}
               onMouseEnter={playHover}
               onClick={playClick}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -6, scale: 1.04 }}
               className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl text-center transition-all hover:border-[#d7aa52]/60"
-              style={{ height: "190px", padding: "0 8px 10px 8px" }}
+              style={{ height: "170px", padding: "0 8px 10px 8px" }}
             >
               <span
                 aria-hidden
@@ -1535,7 +1535,7 @@ export function Contact({ lang }: { lang: Lang }) {
                 height={1024}
                 loading="lazy"
                 className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
-                style={{ height: "160px", marginBottom: "6px" }}
+                style={{ height: "160px", marginBottom: "2px" }}
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
