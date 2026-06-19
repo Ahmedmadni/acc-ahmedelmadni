@@ -88,6 +88,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
+      { rel: "preload", as: "fetch", href: "/hero-video.webm" },
     ],
     scripts: [
       {
@@ -516,18 +517,34 @@ function Typewriter({ words }: { words: string[] }) {
 
 /* ============= HERO FRAME SLIDESHOW ============= */
 function HeroFrameSlideshow() {
+  const [videoReady, setVideoReady] = useState(false);
+
   return (
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      aria-hidden="true"
-      className="absolute inset-0 h-full w-full object-cover"
-      style={{ opacity: 0.4 }}
-    >
-      <source src="/hero-video.mp4" type="video/mp4" />
-    </video>
+    <>
+      {!videoReady && (
+        <img
+          src="/ezgif-frame-042.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ opacity: 0.5 }}
+        />
+      )}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+        onCanPlay={() => setVideoReady(true)}
+        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
+        style={{ opacity: videoReady ? 0.5 : 0 }}
+      >
+        <source src="/hero-video.webm" type="video/webm" />
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
+    </>
   );
 }
 
