@@ -525,10 +525,14 @@ function HeroFrameSlideshow() {
   const idxRef = useRef(0);
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const readyRef = useRef(false);
+  const lastTimeRef = useRef(0);
+  const rafRef = useRef(0);
 
   useEffect(() => {
     const images: HTMLImageElement[] = [];
     let loadedCount = 0;
+    const FPS = 12; // فريم كل 83ms — سلس وثابت
+    const INTERVAL = 1000 / FPS;
 
     const drawFrame = () => {
       const canvas = canvasRef.current;
@@ -537,10 +541,26 @@ function HeroFrameSlideshow() {
       if (!ctx) return;
       const img = imagesRef.current[idxRef.current];
       if (!img) return;
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
+      if (canvas.width !== canvas.offsetWidth || canvas.height !== canvas.offsetHeight) {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+      }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.globalAlpha = 0.6;
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+
+    const animate = (timestamp: number) => {
+      if (!readyRef.current) {
+        rafRef.current = requestAnimationFrame(animate);
+        return;
+      }
+      if (timestamp - lastTimeRef.current >= INTERVAL) {
+        lastTimeRef.current = timestamp;
+        idxRef.current = (idxRef.current + 1) % imagesRef.current.length;
+        drawFrame();
+      }
+      rafRef.current = requestAnimationFrame(animate);
     };
 
     HERO_FRAME_URLS.forEach((src, i) => {
@@ -556,13 +576,9 @@ function HeroFrameSlideshow() {
       img.src = src;
     });
 
-    const timer = setInterval(() => {
-      if (!readyRef.current) return;
-      idxRef.current = (idxRef.current + 1) % HERO_FRAME_URLS.length;
-      drawFrame();
-    }, 80);
+    rafRef.current = requestAnimationFrame(animate);
 
-    return () => clearInterval(timer);
+    return () => cancelAnimationFrame(rafRef.current);
   }, []);
 
   return <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 h-full w-full" />;
