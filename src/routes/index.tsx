@@ -521,58 +521,20 @@ const HERO_FRAME_URLS = Array.from({ length: 122 - 45 + 1 }, (_, i) => {
 });
 
 function HeroFrameSlideshow() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const idxRef = useRef(0);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
-  const readyRef = useRef(false);
-  const rafRef = useRef(0);
-  const lastTimeRef = useRef(0);
-
-  useEffect(() => {
-    const FPS = 12;
-    const INTERVAL = 1000 / FPS;
-    let loadedCount = 0;
-    const images: HTMLImageElement[] = new Array(HERO_FRAME_URLS.length);
-
-    const drawFrame = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-      const img = images[idxRef.current];
-      if (!img) return;
-      canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
-      canvas.height = canvas.parentElement?.offsetHeight || window.innerHeight;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.globalAlpha = 0.3;
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    };
-
-    const animate = (ts: number) => {
-      if (readyRef.current && ts - lastTimeRef.current >= INTERVAL) {
-        lastTimeRef.current = ts;
-        idxRef.current = (idxRef.current + 1) % images.filter(Boolean).length;
-        drawFrame();
-      }
-      rafRef.current = requestAnimationFrame(animate);
-    };
-
-    HERO_FRAME_URLS.forEach((src, i) => {
-      const img = new Image();
-      img.onload = () => {
-        images[i] = img;
-        loadedCount++;
-        imagesRef.current = images;
-        if (loadedCount >= 5) readyRef.current = true;
-      };
-      img.src = src;
-    });
-
-    rafRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, []);
-
-  return <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 h-full w-full" />;
+  return (
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      aria-hidden="true"
+      className="absolute inset-0 h-full w-full object-cover"
+      style={{ opacity: 0.85 }}
+    >
+      <source src="/hero-video.webm" type="video/webm" />
+      <source src="/hero-video.mp4" type="video/mp4" />
+    </video>
+  );
 }
 
 /* ============= HERO ============= */
