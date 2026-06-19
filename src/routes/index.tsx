@@ -522,54 +522,58 @@ const HERO_FRAME_URLS = Array.from({ length: 124 - 42 + 1 }, (_, i) => {
 
 function HeroFrameSlideshow() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const idxRef = useRef(0);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const readyRef = useRef(false);
+  const rafRef = useRef(0);
+  const lastTimeRef = useRef(0);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) {
-      console.error("❌ Canvas not found");
-      return;
-    }
+    const FPS = 12;
+    const INTERVAL = 1000 / FPS;
+    let loadedCount = 0;
+    const images: HTMLImageElement[] = new Array(HERO_FRAME_URLS.length);
 
-    // تحقق من أبعاد الـ canvas
-    console.log("Canvas offsetWidth:", canvas.offsetWidth);
-    console.log("Canvas offsetHeight:", canvas.offsetHeight);
-
-    // اختبر تحميل أول صورة فقط
-    const testImg = new Image();
-    testImg.onload = () => {
-      console.log("✅ Image loaded successfully:", testImg.src);
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    const drawFrame = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
       const ctx = canvas.getContext("2d");
-      if (ctx) {
-        ctx.globalAlpha = 1;
-        ctx.drawImage(testImg, 0, 0, canvas.width, canvas.height);
-        console.log("✅ Image drawn on canvas");
+      if (!ctx) return;
+      const img = images[idxRef.current];
+      if (!img) return;
+      canvas.width = canvas.parentElement?.offsetWidth || window.innerWidth;
+      canvas.height = canvas.parentElement?.offsetHeight || window.innerHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.globalAlpha = 1;
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+
+    const animate = (ts: number) => {
+      if (readyRef.current && ts - lastTimeRef.current >= INTERVAL) {
+        lastTimeRef.current = ts;
+        idxRef.current = (idxRef.current + 1) % images.filter(Boolean).length;
+        drawFrame();
       }
+      rafRef.current = requestAnimationFrame(animate);
     };
-    testImg.onerror = (e) => {
-      console.error("❌ Image failed to load:", testImg.src, e);
-    };
-    testImg.src = "/ezgif-frame-042.png";
-    console.log("Trying to load:", testImg.src);
+
+    HERO_FRAME_URLS.forEach((src, i) => {
+      const img = new Image();
+      img.onload = () => {
+        images[i] = img;
+        loadedCount++;
+        imagesRef.current = images;
+        if (loadedCount >= 5) readyRef.current = true;
+      };
+      img.src = src;
+    });
+
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
   }, []);
 
-  return (
-  <canvas
-    ref={canvasRef}
-    aria-hidden="true"
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100vw",
-      height: "100vh",
-      display: "block",
-      border: "3px solid red",
-      zIndex: 999,
-    }}
-  />
-);
+  return <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 h-full w-full" />;
+}
 
 /* ============= HERO ============= */
 function Hero({ lang }: { lang: Lang }) {
@@ -584,13 +588,10 @@ function Hero({ lang }: { lang: Lang }) {
       className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Hero background frame slideshow (starts right below the navbar) */}
-          <motion.div
-  style={{ y: yBg }}
-  className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0"
->
-  <HeroFrameSlideshow />
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-surface)]" />
-          </motion.div>
+      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
+        <HeroFrameSlideshow />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-surface)]" />
+      </motion.div>
 
       <div className="pointer-events-none absolute inset-0 opacity-50">
         <div className="absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,170,82,0.18),transparent_60%)]" />
