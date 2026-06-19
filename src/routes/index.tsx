@@ -517,34 +517,32 @@ function Typewriter({ words }: { words: string[] }) {
 
 /* ============= HERO FRAME SLIDESHOW ============= */
 function HeroFrameSlideshow() {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    // تشغيل يدوي في حال لم يشتغل تلقائياً
+    video.play().catch(() => {});
+  }, []);
+
   return (
-    <>
-      {!videoReady && (
-        <img
-          src="/ezgif-frame-042.png"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{ opacity: 0.5 }}
-        />
-      )}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-        onCanPlay={() => setVideoReady(true)}
-        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
-        style={{ opacity: videoReady ? 0.5 : 0 }}
-      >
-        <source src="/hero-video.webm" type="video/webm" />
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
-    </>
+    <video
+      ref={videoRef}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      aria-hidden="true"
+      onLoadedData={() => setVideoReady(true)}
+      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
+      style={{ opacity: videoReady ? 0.5 : 0 }}
+    >
+      <source src="/hero-video.webm" type="video/webm" />
+      <source src="/hero-video.mp4" type="video/mp4" />
+    </video>
   );
 }
 
