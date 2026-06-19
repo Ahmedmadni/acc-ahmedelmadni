@@ -1521,11 +1521,11 @@ export function Contact({ lang }: { lang: Lang }) {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -6, scale: 1.04 }}
               className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl text-center transition-all hover:border-[#d7aa52]/60"
-              style={{ height: "160px", padding: "0 8px 10px 8px" }}
+              style={{ height: "190px", padding: "0 8px 10px 8px" }}
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute inset-x-6 top-6 h-20 rounded-full opacity-40 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+                className="pointer-events-none absolute inset-x-6 top-6 h-20 rounded-full opacity-60 blur-3xl transition-opacity duration-500 group-hover:opacity-90"
                 style={{ background: s.color }}
               />
               <motion.img
@@ -1535,7 +1535,7 @@ export function Contact({ lang }: { lang: Lang }) {
                 height={1024}
                 loading="lazy"
                 className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
-                style={{ height: "120px", marginBottom: "6px" }}
+                style={{ height: "160px", marginBottom: "6px" }}
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
