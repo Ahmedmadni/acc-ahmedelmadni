@@ -602,7 +602,7 @@ function Hero({ lang }: { lang: Lang }) {
         className="pointer-events-none absolute inset-x-0 top-20 bottom-0 z-0 overflow-hidden"
       >
         <HeroFrameSlideshow />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)]/20 via-[var(--bg-surface)]/55 to-[var(--bg-surface)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-surface)]" />
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 opacity-50">
