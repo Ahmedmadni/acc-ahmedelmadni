@@ -522,80 +522,51 @@ const HERO_FRAME_URLS = Array.from({ length: 124 - 042 + 1 }, (_, i) => {
 
 function HeroFrameSlideshow() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const idxRef = useRef(0);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
-  const readyRef = useRef(false);
-  const lastTimeRef = useRef(0);
-  const rafRef = useRef(0);
 
   useEffect(() => {
-    const images: HTMLImageElement[] = new Array(HERO_FRAME_URLS.length);
-    let loadedCount = 0;
-    const FPS = 12;
-    const INTERVAL = 1000 / FPS;
+    const canvas = canvasRef.current;
+    if (!canvas) {
+      console.error("❌ Canvas not found");
+      return;
+    }
 
-    const drawFrame = () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
+    // تحقق من أبعاد الـ canvas
+    console.log("Canvas offsetWidth:", canvas.offsetWidth);
+    console.log("Canvas offsetHeight:", canvas.offsetHeight);
+
+    // اختبر تحميل أول صورة فقط
+    const testImg = new Image();
+    testImg.onload = () => {
+      console.log("✅ Image loaded successfully:", testImg.src);
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-      const img = imagesRef.current[idxRef.current];
-      if (!img) return;
-
-      // تحديث الأبعاد دائماً
-      canvas.width = canvas.offsetWidth || window.innerWidth;
-      canvas.height = canvas.offsetHeight || window.innerHeight;
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.globalAlpha = 1;
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    };
-
-    const animate = (timestamp: number) => {
-      if (!readyRef.current) {
-        rafRef.current = requestAnimationFrame(animate);
-        return;
+      if (ctx) {
+        ctx.globalAlpha = 1;
+        ctx.drawImage(testImg, 0, 0, canvas.width, canvas.height);
+        console.log("✅ Image drawn on canvas");
       }
-      if (timestamp - lastTimeRef.current >= INTERVAL) {
-        lastTimeRef.current = timestamp;
-        idxRef.current = (idxRef.current + 1) % imagesRef.current.length;
-        drawFrame();
-      }
-      rafRef.current = requestAnimationFrame(animate);
     };
-
-    // تحميل أول صورة فوراً لتجنب التأخير
-    HERO_FRAME_URLS.forEach((src, i) => {
-      const img = new Image();
-      img.onload = () => {
-        images[i] = img;
-        loadedCount++;
-        // ابدأ العرض بمجرد تحميل أول 5 صور
-        if (loadedCount === 5 && !readyRef.current) {
-          imagesRef.current = images;
-          readyRef.current = true;
-        }
-        if (loadedCount === HERO_FRAME_URLS.length) {
-          imagesRef.current = images;
-        }
-      };
-      img.onerror = () => {
-        loadedCount++;
-        console.warn("Failed to load:", src);
-      };
-      img.src = src;
-    });
-
-    rafRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafRef.current);
+    testImg.onerror = (e) => {
+      console.error("❌ Image failed to load:", testImg.src, e);
+    };
+    testImg.src = "/ezgif-frame-042.png";
+    console.log("Trying to load:", testImg.src);
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="absolute inset-0 h-full w-full"
-      style={{ width: "100%", height: "100%", display: "block" }}
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        display: "block",
+        border: "3px solid red", // مؤقت لرؤية الـ canvas
+        zIndex: 999,
+      }}
     />
   );
 }
