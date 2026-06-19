@@ -522,28 +522,48 @@ const HERO_FRAME_URLS = Array.from({ length: 132 - 34 + 1 }, (_, i) => {
 
 function HeroFrameSlideshow() {
   const [idx, setIdx] = useState(0);
+  const [ready, setReady] = useState(false);
+
   useEffect(() => {
-    // Preload frames
-    HERO_FRAME_URLS.forEach((src) => {
-      const im = new Image();
-      im.src = src;
+    let loaded = 0;
+    const total = HERO_FRAME_URLS.length;
+    const preloadCount = 10;
+
+    HERO_FRAME_URLS.slice(0, preloadCount).forEach((src) => {
+      const img = new Image();
+      img.onload = () => {
+        loaded++;
+        if (loaded >= preloadCount) setReady(true);
+      };
+      img.src = src;
     });
-    const t = setInterval(() => setIdx((i) => (i + 1) % HERO_FRAME_URLS.length), 100);
-    return () => clearInterval(t);
+
+    // Preload rest in background
+    HERO_FRAME_URLS.slice(preloadCount).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
   }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    const timer = setInterval(() => {
+      setIdx((i) => (i + 1) % HERO_FRAME_URLS.length);
+    }, 80);
+    return () => clearInterval(timer);
+  }, [ready]);
+
   return (
     <div className="relative h-full w-full">
-      {HERO_FRAME_URLS.map((src, i) => (
+      {ready && (
         <img
-          key={src}
-          src={src}
+          src={HERO_FRAME_URLS[idx]}
           alt=""
           aria-hidden="true"
-          loading={i === 0 ? "eager" : "lazy"}
-          className="absolute inset-0 h-full w-full object-cover object-top opacity-60 transition-opacity duration-75"
-          style={{ opacity: i === idx ? 0.6 : 0 }}
+          className="absolute inset-0 h-full w-full object-cover object-top"
+          style={{ opacity: 0.6 }}
         />
-      ))}
+      )}
     </div>
   );
 }
