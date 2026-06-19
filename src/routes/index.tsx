@@ -1519,13 +1519,13 @@ export function Contact({ lang }: { lang: Lang }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ y: -8, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl p-2 pb-3 text-center transition-all hover:border-[#d7aa52]/60"
-              style={{ height: "120px" }}
+              whileHover={{ y: -6, scale: 1.04 }}
+              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl text-center transition-all hover:border-[#d7aa52]/60"
+              style={{ height: "160px", padding: "0 8px 10px 8px" }}
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute inset-x-6 top-6 h-32 rounded-full opacity-40 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+                className="pointer-events-none absolute inset-x-6 top-6 h-20 rounded-full opacity-40 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
                 style={{ background: s.color }}
               />
               <motion.img
@@ -1534,11 +1534,12 @@ export function Contact({ lang }: { lang: Lang }) {
                 width={1024}
                 height={1024}
                 loading="lazy"
-                className="relative h-44 w-auto max-w-full object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)] sm:h-48"
-                animate={{ y: [0, -6, 0] }}
+                className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
+                style={{ height: "120px", marginBottom: "6px" }}
+                animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
-              <div className="relative mt-3 text-sm font-extrabold" style={{ color: "var(--fg)" }}>
+              <div className="relative text-xs font-extrabold leading-tight" style={{ color: "var(--fg)" }}>
                 {s.label}
               </div>
             </motion.a>
