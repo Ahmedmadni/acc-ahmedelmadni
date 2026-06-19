@@ -516,13 +516,10 @@ function Typewriter({ words }: { words: string[] }) {
 }
 
 /* ============= HERO FRAME SLIDESHOW ============= */
-const HERO_FRAME_URLS = [
-  // الصور من مجلد public (34 إلى 132)
-  ...Array.from({ length: 132 - 100 + 1 }, (_, i) => {
-    const n = String(i + 34).padStart(3, "0");
-    return `/ezgif-frame-${n}.png`;
-  }),
-];
+const HERO_FRAME_URLS = Array.from({ length: 132 - 34 + 1 }, (_, i) => {
+  const n = String(i + 34).padStart(3, "0");
+  return `/ezgif-frame-${n}.png`;
+});
 
 function HeroFrameSlideshow() {
   const [idx, setIdx] = useState(0);
