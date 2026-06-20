@@ -1,26 +1,20 @@
-## الخطة: استبدال زر المساعد الذكي بشخصية روبوت محاسب احترافية
 
-### 1. توليد الصورة (Premium)
-- استخدام `imagegen--generate_image` بجودة **premium** مع `transparent_background: true`
-- الـ prompt المُفصّل الذي أرسلته (روبوت Pixar 3D، ألوان بيضاء/فضية مع لمسات ذهبية وكحلية تتناسق مع هوية الموقع `#d7aa52` و `#04101f`)
-- حفظها في `src/assets/ai-mascot.png`
-- الأبعاد: 1024×1024
+# استبدال إطارات الهيرو بفيديو
 
-### 2. تعديل مكون `AIAssistant.tsx`
-- استبدال الزر الحالي (الذي يحتوي على أيقونة `Bot` من lucide داخل دائرة ذهبية + نص "اسأل المساعد") بصورة الروبوت الجديدة
-- الحفاظ على:
-  - الموضع العائم (fixed bottom-right)
-  - تأثيرات framer-motion (الظهور، hover scale، tap)
-  - تأثير الـ ping النابض حوله
-  - الصوت عند الضغط (`playClick`, `playHover`)
-  - فتح نافذة المحادثة عند الضغط
-- استبدال أيقونة `Bot` داخل **header النافذة** بنفس الصورة (نسخة مصغّرة) لتوحيد الهوية
-- إضافة `alt` مناسب للصورة
+## الخطوات
 
-### 3. التحقق
-- مراجعة الـ preview للتأكد من ظهور الشخصية بوضوح وأن خلفيتها شفافة
-- التأكد من عدم وجود حواف بيضاء
+1. **رفع الفيديو كـ Lovable Asset**
+   - `lovable-assets create --file /mnt/user-uploads/hero-video.webm --filename hero.webm > src/assets/hero.webm.asset.json`
 
-### الملفات المتأثرة
-- جديد: `src/assets/ai-mascot.png`
-- تعديل: `src/components/AIAssistant.tsx`
+2. **تحديث `src/routes/index.tsx`**
+   - حذف مكون `HeroFrameSlideshow` ومنطق preload الإطارات.
+   - استبدالها بـ `<video>` مع: `autoPlay muted loop playsInline preload="metadata"` + `poster` (إطار افتراضي).
+   - إضافة `<link rel="preload" as="video">` في `head()` للـ LCP.
+
+3. **حذف الإطارات من `public/hero-frames/`**
+   - حذف جميع ملفات `ezgif-frame-*.png` (62 ملف) بعد التأكد من عدم وجود مراجع أخرى.
+
+## النتيجة
+- هيرو بفيديو واحد خفيف بدل 62 صورة.
+- خفض كبير في حجم الـ public وعدد طلبات الشبكة.
+- لا تغيير في التصميم العام.
