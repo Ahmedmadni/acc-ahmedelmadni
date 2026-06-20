@@ -75,7 +75,7 @@ export const listExamQuestions = createServerFn({ method: "GET" })
       .order("created_at", { ascending: false })
       .limit(2000);
 
-    if (data.track) q = q.eq("track", data.track);
+    if (data.track) q = q.eq("track", data.track as ExamTrack);
 
     const { data: rows, error } = await q;
     if (error) throw new Error(error.message);
@@ -111,6 +111,7 @@ export const addExamQuestions = createServerFn({ method: "POST" })
   .handler(async ({ data, context }) => {
     const payload = data.questions.map((q) => ({
       ...q,
+      track: q.track as ExamTrack,
       created_by: context.userId,
     }));
     const { data: rows, error } = await context.supabase
