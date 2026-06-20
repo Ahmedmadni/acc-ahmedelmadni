@@ -67,8 +67,8 @@ function ToolFallback() {
     </div>
   );
 }
-import type { Lang } from "@/lib/i18n";
-import { useShareState } from "@/lib/use-share";
+
+
 
 const labels = {
   fv: { ar: "القيمة المستقبلية", en: "Future Value" },
@@ -1000,10 +1000,13 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
     case "ratios": return <RatiosCalculator lang={lang} />;
     case "depreciation": return <DepreciationCalculator lang={lang} />;
     case "inventory": return <InventoryCalculator lang={lang} />;
-    case "cv-builder": return <CvBuilder lang={lang} />;
+    case "cv-builder":
+      return <Suspense fallback={<ToolFallback />}><CvBuilder lang={lang} /></Suspense>;
     case "typing-test": return <TypingTest lang={lang} />;
-    case "exam-prep": return <ExamPrep lang={lang} />;
-    case "office-ai": return <OfficeAiAssistant lang={lang} />;
+    case "exam-prep":
+      return <Suspense fallback={<ToolFallback />}><ExamPrep lang={lang} /></Suspense>;
+    case "office-ai":
+      return <Suspense fallback={<ToolFallback />}><OfficeAiAssistant lang={lang} /></Suspense>;
     case "vat-return": return <VatOfficialForm lang={lang} />;
     case "zakat-declaration": return <ZakatOfficialForm lang={lang} />;
     default:
