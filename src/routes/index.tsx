@@ -48,6 +48,7 @@ import mascotWhatsapp from "@/assets/mascot-whatsapp.png";
 import mascotLinkedin from "@/assets/mascot-linkedin.png";
 import mascotFacebook from "@/assets/mascot-facebook.png";
 import mascotInstagram from "@/assets/mascot-instagram.png";
+import heroVideoAsset from "@/assets/hero.webm.asset.json";
 import mascotSnapchat from "@/assets/mascot-snapchat.png";
 import mascotPhone from "@/assets/mascot-phone.png";
 import mascotEmail from "@/assets/mascot-email.png";
@@ -540,8 +541,7 @@ function HeroFrameSlideshow() {
       className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
       style={{ opacity: videoReady ? 0.5 : 0 }}
     >
-      <source src="/hero-video.webm" type="video/webm" />
-      <source src="/hero-video.mp4" type="video/mp4" />
+      <source src={heroVideoAsset.url} type="video/webm" />
     </video>
   );
 }
