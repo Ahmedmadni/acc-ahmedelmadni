@@ -1,5 +1,6 @@
-import { useMemo } from "react";
+import { lazy, Suspense, useMemo } from "react";
 import { motion } from "motion/react";
+import { Loader2 } from "lucide-react";
 import {
   Area,
   AreaChart,
@@ -43,12 +44,29 @@ import {
   wht,
   zakat,
 } from "@/lib/finance";
-import { CvBuilder } from "@/components/tools/CvBuilder";
 import { TypingTest } from "@/components/tools/TypingTest";
-import { ExamPrep } from "@/components/tools/ExamPrep";
-import { OfficeAiAssistant } from "@/components/tools/OfficeAiAssistant";
 import { VatOfficialForm } from "@/components/tools/official/VatOfficialForm";
 import { ZakatOfficialForm } from "@/components/tools/official/ZakatOfficialForm";
+import type { Lang } from "@/lib/i18n";
+import { useShareState } from "@/lib/use-share";
+
+// Heavy tools: lazy-loaded to keep the initial tools bundle small.
+const CvBuilder = lazy(() => import("@/components/tools/CvBuilder").then((m) => ({ default: m.CvBuilder })));
+const ExamPrep = lazy(() => import("@/components/tools/ExamPrep").then((m) => ({ default: m.ExamPrep })));
+const OfficeAiAssistant = lazy(() =>
+  import("@/components/tools/OfficeAiAssistant").then((m) => ({ default: m.OfficeAiAssistant })),
+);
+
+function ToolFallback() {
+  return (
+    <div className="grid min-h-[260px] place-items-center rounded-xl border border-dashed border-[#d7aa52]/30 bg-white/[0.02] p-8 text-sm text-[#f3d28a]">
+      <div className="flex items-center gap-2">
+        <Loader2 className="size-4 animate-spin" />
+        <span>Loading tool…</span>
+      </div>
+    </div>
+  );
+}
 import type { Lang } from "@/lib/i18n";
 import { useShareState } from "@/lib/use-share";
 
