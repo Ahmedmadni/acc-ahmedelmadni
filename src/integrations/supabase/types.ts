@@ -14,6 +14,60 @@ export type Database = {
   }
   public: {
     Tables: {
+      exam_questions: {
+        Row: {
+          answer_index: number
+          choices_ar: Json
+          choices_en: Json
+          created_at: string
+          created_by: string | null
+          explanation_ar: string
+          explanation_en: string
+          id: string
+          is_public: boolean
+          question_ar: string
+          question_en: string
+          reference: string
+          topic: string
+          track: Database["public"]["Enums"]["exam_track"]
+          updated_at: string
+        }
+        Insert: {
+          answer_index: number
+          choices_ar: Json
+          choices_en: Json
+          created_at?: string
+          created_by?: string | null
+          explanation_ar?: string
+          explanation_en?: string
+          id?: string
+          is_public?: boolean
+          question_ar: string
+          question_en: string
+          reference?: string
+          topic?: string
+          track: Database["public"]["Enums"]["exam_track"]
+          updated_at?: string
+        }
+        Update: {
+          answer_index?: number
+          choices_ar?: Json
+          choices_en?: Json
+          created_at?: string
+          created_by?: string | null
+          explanation_ar?: string
+          explanation_en?: string
+          id?: string
+          is_public?: boolean
+          question_ar?: string
+          question_en?: string
+          reference?: string
+          topic?: string
+          track?: Database["public"]["Enums"]["exam_track"]
+          updated_at?: string
+        }
+        Relationships: []
+      }
       kb_articles: {
         Row: {
           ai_model: string | null
@@ -530,6 +584,7 @@ export type Database = {
         | "approved"
         | "published"
         | "rejected"
+      exam_track: "IFRS" | "CMA" | "CPA" | "FMAA" | "ACCA" | "CFA"
       job_status:
         | "queued"
         | "running"
@@ -673,6 +728,7 @@ export const Constants = {
         "published",
         "rejected",
       ],
+      exam_track: ["IFRS", "CMA", "CPA", "FMAA", "ACCA", "CFA"],
       job_status: [
         "queued",
         "running",
