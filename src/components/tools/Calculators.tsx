@@ -46,6 +46,7 @@ import {
 import { CvBuilder } from "@/components/tools/CvBuilder";
 import { TypingTest } from "@/components/tools/TypingTest";
 import { ExamPrep } from "@/components/tools/ExamPrep";
+import { OfficeAiAssistant } from "@/components/tools/OfficeAiAssistant";
 import { VatOfficialForm } from "@/components/tools/official/VatOfficialForm";
 import { ZakatOfficialForm } from "@/components/tools/official/ZakatOfficialForm";
 import type { Lang } from "@/lib/i18n";
