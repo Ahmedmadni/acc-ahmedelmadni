@@ -647,6 +647,61 @@ export const TOOLS: ToolMeta[] = [
       en: ["Compare FIFO vs WA to gauge price-swing impact"],
     },
   },
+  {
+    id: "office-ai",
+    category: "excel",
+    icon: "Sparkles",
+    title: { ar: "مساعد Excel & Office الذكي", en: "Excel & Office AI Assistant" },
+    short: {
+      ar: "اسأل عن أي دالة Excel أو اشرح مشكلتك بلغتك، واحصل على صيغة جاهزة + شرح + كود VBA.",
+      en: "Ask about any Excel function or describe a problem — get ready formulas, explanations, and VBA code.",
+    },
+    standard: { ar: "Microsoft Office · Excel · VBA · Power Query", en: "Microsoft Office · Excel · VBA · Power Query" },
+    formula: "AI Chat · Functions · VBA · Power Query · DAX",
+    about: {
+      ar: "مساعد ذكي يفهم العربية والإنجليزية، يجاوبك عن دوال Excel وWord وPowerPoint وOutlook بمثال عملي وصيغة جاهزة للنسخ. يدعم VBA و Power Query و DAX و Pivot Tables.",
+      en: "AI assistant fluent in Arabic and English, answering questions about Excel, Word, PowerPoint, and Outlook with examples and copy-ready formulas. Supports VBA, Power Query, DAX, and Pivot Tables.",
+    },
+    whenToUse: {
+      ar: [
+        "نسيت اسم دالة وتريد التذكير بصيغتها",
+        "تواجه مشكلة بيانات ولا تعرف الدالة المناسبة",
+        "تحتاج كود VBA أو Power Query أو DAX جاهز",
+        "تريد مقارنة بين دالتين أو طريقتين",
+      ],
+      en: [
+        "Forgot a function name and need its syntax",
+        "Stuck on a data problem and don't know the right function",
+        "Need ready-to-use VBA / Power Query / DAX",
+        "Comparing two functions or two approaches",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "نسخ الصيغة بدون تعديل المراجع",
+        "استخدام , أو ; حسب إعدادات الجهاز",
+        "إهمال قفل المراجع بـ $",
+      ],
+      en: [
+        "Pasting a formula without adapting cell refs",
+        "Using , vs ; depending on locale",
+        "Forgetting to lock refs with $",
+      ],
+    },
+    tips: {
+      ar: [
+        "كن دقيقاً في وصف المشكلة (شكل البيانات + النتيجة المطلوبة)",
+        "اطلب نسخة بـ XLOOKUP بدل VLOOKUP حيث أمكن",
+        "اسأل عن أداء الصيغة على ملفات كبيرة",
+      ],
+      en: [
+        "Be specific (data shape + expected output)",
+        "Ask for an XLOOKUP version instead of VLOOKUP when possible",
+        "Ask about formula performance on large files",
+      ],
+    },
+  },
+
 
   // ============== Career ==============
   {

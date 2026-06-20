@@ -984,6 +984,7 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
     case "cv-builder": return <CvBuilder lang={lang} />;
     case "typing-test": return <TypingTest lang={lang} />;
     case "exam-prep": return <ExamPrep lang={lang} />;
+    case "office-ai": return <OfficeAiAssistant lang={lang} />;
     case "vat-return": return <VatOfficialForm lang={lang} />;
     case "zakat-declaration": return <ZakatOfficialForm lang={lang} />;
     default:
