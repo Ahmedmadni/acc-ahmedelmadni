@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useServerFn } from "@tanstack/react-start";
+import { useQuery } from "@tanstack/react-query";
 import {
   GraduationCap,
   CheckCircle2,
@@ -13,14 +14,19 @@ import {
   Trophy,
   Loader2,
   Trash2,
+  Cloud,
+  CloudOff,
+  AlertCircle,
 } from "lucide-react";
 import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 import { extractExamQuestions } from "@/lib/exam.functions";
+import { listExamQuestions, addExamQuestions } from "@/lib/exam-questions.functions";
+import { supabase } from "@/integrations/supabase/client";
 import type { Lang } from "@/lib/i18n";
 
 const STORAGE_KEY = "exam-bank-custom";
 
-function loadCustom(): ExamQuestion[] {
+function loadLocal(): ExamQuestion[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -30,31 +36,73 @@ function loadCustom(): ExamQuestion[] {
   }
 }
 
-function saveCustom(qs: ExamQuestion[]) {
+function saveLocal(qs: ExamQuestion[]) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(qs)); } catch { /* noop */ }
 }
 
 export function ExamPrep({ lang }: { lang: Lang }) {
   const [track, setTrack] = useState<ExamTrack>("IFRS");
-  const [custom, setCustom] = useState<ExamQuestion[]>([]);
+  const [local, setLocal] = useState<ExamQuestion[]>([]);
   const [mode, setMode] = useState<"quiz" | "upload">("quiz");
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [signedIn, setSignedIn] = useState(false);
 
   // Upload state
   const [uploadText, setUploadText] = useState("");
   const [loading, setLoading] = useState(false);
   const [uploadMsg, setUploadMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
+  const [savePublic, setSavePublic] = useState(true);
   const fileRef = useRef<HTMLInputElement>(null);
   const extract = useServerFn(extractExamQuestions);
+  const list = useServerFn(listExamQuestions);
+  const addQs = useServerFn(addExamQuestions);
 
-  useEffect(() => { setCustom(loadCustom()); }, []);
+  useEffect(() => { setLocal(loadLocal()); }, []);
 
-  const allQuestions = useMemo(() => [...SEED_QUESTIONS, ...custom], [custom]);
+  useEffect(() => {
+    let mounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (mounted) setSignedIn(!!data.session);
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_evt, session) => {
+      setSignedIn(!!session);
+    });
+    return () => { mounted = false; sub.subscription.unsubscribe(); };
+  }, []);
+
+  const dbQuery = useQuery({
+    queryKey: ["exam-questions-public"],
+    queryFn: () => list({ data: {} }),
+    staleTime: 60_000,
+  });
+
+  const remote = dbQuery.data?.questions ?? [];
+
+  // Combine: SEED (built-in) + remote (DB public) + local (legacy localStorage). Dedupe by id.
+  const allQuestions = useMemo(() => {
+    const map = new Map<string, ExamQuestion>();
+    for (const q of SEED_QUESTIONS) map.set(q.id, q);
+    for (const q of remote) map.set(q.id, q);
+    for (const q of local) map.set(q.id, q);
+    return Array.from(map.values());
+  }, [remote, local]);
+
+  const trackCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    for (const q of allQuestions) c[q.track] = (c[q.track] ?? 0) + 1;
+    return c;
+  }, [allQuestions]);
+
   const pool = useMemo(() => allQuestions.filter((q) => q.track === track), [allQuestions, track]);
   const q = pool[current];
+
+  // Clamp current when pool changes
+  useEffect(() => {
+    if (current >= pool.length) setCurrent(0);
+  }, [pool.length, current]);
 
   function next() {
     setSelected(null); setRevealed(false);
@@ -65,7 +113,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     setCurrent((c) => (c - 1 + pool.length) % Math.max(pool.length, 1));
   }
   function pick(i: number) {
-    if (revealed) return;
+    if (revealed || !q) return;
     setSelected(i);
     setRevealed(true);
     const correct = i === q.answerIndex;
@@ -90,27 +138,70 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     setLoading(true); setUploadMsg(null);
     try {
       const { questions } = await extract({ data: { rawText: uploadText, defaultTrack: track } });
-      const mapped: ExamQuestion[] = questions
-        .filter((x) => x && x.question_en && Array.isArray(x.choices_en) && x.choices_en.length >= 2)
-        .map((x, i) => ({
+      const valid = questions.filter(
+        (x) => x && x.question_en && Array.isArray(x.choices_en) && x.choices_en.length >= 2,
+      );
+
+      if (valid.length === 0) {
+        setUploadMsg({ kind: "err", text: lang === "ar" ? "لم يتم استخراج أي أسئلة" : "No questions extracted" });
+        return;
+      }
+
+      if (signedIn) {
+        // Save to DB
+        const payload = valid.map((x) => ({
+          track: ((TRACKS as readonly string[]).includes(x.track ?? "") ? x.track : track) as ExamTrack,
+          topic: x.topic ?? "—",
+          question_ar: x.question_ar ?? x.question_en ?? "",
+          question_en: x.question_en ?? "",
+          choices_ar: (x.choices_ar?.length === x.choices_en!.length ? x.choices_ar : x.choices_en) as string[],
+          choices_en: x.choices_en as string[],
+          answer_index:
+            typeof x.answerIndex === "number"
+              ? Math.max(0, Math.min(x.choices_en!.length - 1, x.answerIndex))
+              : 0,
+          explanation_ar: x.explanation_ar ?? x.explanation_en ?? "",
+          explanation_en: x.explanation_en ?? "",
+          reference: x.reference ?? "User upload",
+          is_public: savePublic,
+        }));
+        const { inserted } = await addQs({ data: { questions: payload } });
+        await dbQuery.refetch();
+        setUploadMsg({
+          kind: "ok",
+          text:
+            lang === "ar"
+              ? `تمت إضافة ${inserted} سؤال إلى قاعدة البيانات${savePublic ? " (عام)" : " (خاص)"}`
+              : `Added ${inserted} question(s) to the database${savePublic ? " (public)" : " (private)"}`,
+        });
+        setUploadText("");
+      } else {
+        // Guest fallback → localStorage
+        const mapped: ExamQuestion[] = valid.map((x, i) => ({
           id: `custom-${Date.now()}-${i}`,
-          track: (TRACKS as readonly string[]).includes(x.track ?? "") ? (x.track as ExamTrack) : track,
+          track: ((TRACKS as readonly string[]).includes(x.track ?? "") ? x.track : track) as ExamTrack,
           topic: x.topic ?? "—",
           question: { ar: x.question_ar ?? x.question_en ?? "", en: x.question_en ?? "" },
           choices: {
             ar: (x.choices_ar?.length === x.choices_en!.length ? x.choices_ar : x.choices_en) as string[],
             en: x.choices_en as string[],
           },
-          answerIndex: typeof x.answerIndex === "number" ? Math.max(0, Math.min(x.choices_en!.length - 1, x.answerIndex)) : 0,
+          answerIndex:
+            typeof x.answerIndex === "number"
+              ? Math.max(0, Math.min(x.choices_en!.length - 1, x.answerIndex))
+              : 0,
           explanation: { ar: x.explanation_ar ?? x.explanation_en ?? "", en: x.explanation_en ?? "" },
           reference: x.reference ?? "User upload",
         }));
-      if (mapped.length === 0) {
-        setUploadMsg({ kind: "err", text: lang === "ar" ? "لم يتم استخراج أي أسئلة" : "No questions extracted" });
-      } else {
-        const merged = [...custom, ...mapped];
-        setCustom(merged); saveCustom(merged);
-        setUploadMsg({ kind: "ok", text: lang === "ar" ? `تمت إضافة ${mapped.length} سؤال` : `Added ${mapped.length} question(s)` });
+        const merged = [...local, ...mapped];
+        setLocal(merged); saveLocal(merged);
+        setUploadMsg({
+          kind: "ok",
+          text:
+            lang === "ar"
+              ? `تمت إضافة ${mapped.length} سؤال محلياً. سجّل دخولك لحفظها في حسابك ومشاركتها بين الأجهزة.`
+              : `Added ${mapped.length} question(s) locally. Sign in to save them to your account and sync across devices.`,
+        });
         setUploadText("");
       }
     } catch (e) {
@@ -120,9 +211,45 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     }
   }
 
-  function clearCustom() {
-    if (!confirm(lang === "ar" ? "حذف جميع الأسئلة المضافة؟" : "Delete all uploaded questions?")) return;
-    setCustom([]); saveCustom([]);
+  async function migrateLocalToDb() {
+    if (!signedIn || local.length === 0) return;
+    setLoading(true); setUploadMsg(null);
+    try {
+      const payload = local.map((x) => ({
+        track: x.track,
+        topic: x.topic,
+        question_ar: x.question.ar,
+        question_en: x.question.en,
+        choices_ar: x.choices.ar,
+        choices_en: x.choices.en,
+        answer_index: x.answerIndex,
+        explanation_ar: x.explanation.ar,
+        explanation_en: x.explanation.en,
+        reference: x.reference,
+        is_public: false,
+      }));
+      // Chunk into batches of 50 (API limit)
+      let total = 0;
+      for (let i = 0; i < payload.length; i += 50) {
+        const batch = payload.slice(i, i + 50);
+        const { inserted } = await addQs({ data: { questions: batch } });
+        total += inserted;
+      }
+      await dbQuery.refetch();
+      setUploadMsg({
+        kind: "ok",
+        text: lang === "ar" ? `تم ترحيل ${total} سؤال إلى حسابك.` : `Migrated ${total} questions to your account.`,
+      });
+    } catch (e) {
+      setUploadMsg({ kind: "err", text: e instanceof Error ? e.message : "Migration failed" });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function clearLocal() {
+    if (!confirm(lang === "ar" ? "حذف جميع الأسئلة المحلية؟" : "Delete all local questions?")) return;
+    setLocal([]); saveLocal([]);
   }
 
   return (
@@ -137,7 +264,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 track === t ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a] hover:bg-white/5"
               }`}
             >
-              {t}
+              {t} <span className="opacity-70">({trackCounts[t] ?? 0})</span>
             </button>
           ))}
         </div>
@@ -157,6 +284,39 @@ export function ExamPrep({ lang }: { lang: Lang }) {
             {lang === "ar" ? "رفع بنك أسئلة" : "Upload bank"}
           </button>
         </div>
+      </div>
+
+      {/* Source bar */}
+      <div className="flex flex-wrap items-center gap-2 rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] px-3 py-2 text-[11px] text-[var(--fg-soft)]">
+        <span className="inline-flex items-center gap-1">
+          {dbQuery.isLoading ? (
+            <Loader2 className="size-3 animate-spin text-[#f3d28a]" />
+          ) : dbQuery.isError ? (
+            <CloudOff className="size-3 text-red-300" />
+          ) : (
+            <Cloud className="size-3 text-emerald-300" />
+          )}
+          {lang === "ar" ? "من قاعدة البيانات:" : "From DB:"} <b>{remote.length}</b>
+        </span>
+        <span>·</span>
+        <span>{lang === "ar" ? "مدمج:" : "Built-in:"} <b>{SEED_QUESTIONS.length}</b></span>
+        {local.length > 0 && (
+          <>
+            <span>·</span>
+            <span>{lang === "ar" ? "محلي:" : "Local:"} <b>{local.length}</b></span>
+          </>
+        )}
+        <span>·</span>
+        <span>{lang === "ar" ? "الإجمالي:" : "Total:"} <b>{allQuestions.length}</b></span>
+        {signedIn && local.length > 0 && (
+          <button
+            onClick={migrateLocalToDb}
+            disabled={loading}
+            className="ms-auto inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2 py-0.5 text-[10px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/20"
+          >
+            {lang === "ar" ? "نقل المحلي إلى حسابي" : "Migrate local → my account"}
+          </button>
+        )}
       </div>
 
       {mode === "quiz" && (
@@ -265,6 +425,17 @@ export function ExamPrep({ lang }: { lang: Lang }) {
             </p>
           </div>
 
+          {!signedIn && (
+            <div className="flex items-start gap-2 rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-amber-100">
+              <AlertCircle className="mt-0.5 size-4 shrink-0" />
+              <div>
+                {lang === "ar"
+                  ? "أنت غير مسجّل دخول. ستُحفظ الأسئلة في متصفحك فقط ولن تظهر على الأجهزة الأخرى. سجّل دخولك لحفظها في حسابك."
+                  : "You're not signed in. Questions will be saved in this browser only. Sign in to save them to your account."}
+              </div>
+            </div>
+          )}
+
           <div className="flex flex-wrap items-center gap-2">
             <input
               ref={fileRef}
@@ -295,6 +466,20 @@ export function ExamPrep({ lang }: { lang: Lang }) {
             className="min-h-[200px] w-full rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/60 p-3 font-mono text-xs text-[var(--fg)] outline-none focus:border-[#d7aa52]/70"
           />
 
+          {signedIn && (
+            <label className="inline-flex items-center gap-2 text-xs text-[var(--fg-soft)]">
+              <input
+                type="checkbox"
+                checked={savePublic}
+                onChange={(e) => setSavePublic(e.target.checked)}
+                className="size-3.5 accent-[#d7aa52]"
+              />
+              {lang === "ar"
+                ? "حفظ كأسئلة عامة (يراها جميع المستخدمين)"
+                : "Save as public (visible to all users)"}
+            </label>
+          )}
+
           <div className="flex flex-wrap items-center gap-3">
             <button
               disabled={loading || uploadText.trim().length < 20}
@@ -304,18 +489,15 @@ export function ExamPrep({ lang }: { lang: Lang }) {
               {loading ? <Loader2 className="size-4 animate-spin" /> : <GraduationCap className="size-4" />}
               {loading ? (lang === "ar" ? "جارٍ التحليل..." : "Analyzing...") : (lang === "ar" ? "تحليل وإضافة" : "Analyze & add")}
             </button>
-            {custom.length > 0 && (
+            {local.length > 0 && (
               <button
-                onClick={clearCustom}
+                onClick={clearLocal}
                 className="inline-flex items-center gap-1.5 rounded-lg border border-red-400/40 bg-red-500/5 px-3 py-1.5 text-xs font-bold text-red-300 hover:bg-red-500/10"
               >
                 <Trash2 className="size-3.5" />
-                {lang === "ar" ? `حذف الأسئلة المضافة (${custom.length})` : `Clear added (${custom.length})`}
+                {lang === "ar" ? `حذف المحلية (${local.length})` : `Clear local (${local.length})`}
               </button>
             )}
-            <span className="text-[11px] text-[var(--fg-soft)]">
-              {lang === "ar" ? `المجموع: ${SEED_QUESTIONS.length} مدمج + ${custom.length} مضاف` : `Total: ${SEED_QUESTIONS.length} built-in + ${custom.length} added`}
-            </span>
           </div>
 
           {uploadMsg && (
