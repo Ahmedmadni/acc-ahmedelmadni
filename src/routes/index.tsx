@@ -605,11 +605,11 @@ function Hero({ lang }: { lang: Lang }) {
             {t.hero.badge[lang]}
           </div>
 
-          <h1 className="mb-4 text-5xl font-black leading-[1.05] sm:text-6xl lg:text-7xl">
-            <span className="block" style={{ color: "var(--fg)" }}>
+          <h1 className="mb-4 text-5xl font-black leading-[1.15] sm:text-6xl lg:text-7xl">
+            <span className="block pb-1" style={{ color: "var(--fg)" }}>
               {t.hero.name[lang]}
             </span>
-            <span className="mt-2 block gold-text">{lang === "ar" ? "محاسب أول" : "Senior Accountant"}</span>
+            <span className="mt-3 block pb-2 gold-text leading-[1.2]">{lang === "ar" ? "محاسب أول" : "Senior Accountant"}</span>
           </h1>
 
           <div className="mb-3 min-h-[28px] text-lg font-medium">
