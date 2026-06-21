@@ -32,7 +32,7 @@ export function SubPageShell({ children }: { children: (lang: Lang) => React.Rea
         onToggle={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
         onTheme={() => setTheme((th) => (th === "dark" ? "light" : "dark"))}
       />
-      <main className="pt-24">{children(lang)}</main>
+      <main className="pt-28 sm:pt-32 lg:pt-36">{children(lang)}</main>
       <Footer lang={lang} />
       <FloatingSocial isRTL={isRTL} />
     </div>

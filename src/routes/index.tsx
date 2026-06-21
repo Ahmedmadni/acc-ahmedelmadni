@@ -547,10 +547,18 @@ function HeroFrameSlideshow() {
     setShouldRenderVideo(allow);
   }, []);
 
+  // Trim the first 0.5s of the clip — skip it on initial play AND on every loop iteration
+  const TRIM_START = 0.5;
+
   useEffect(() => {
     if (!shouldRenderVideo) return;
     const video = videoRef.current;
     if (!video) return;
+    const seekStart = () => {
+      try { video.currentTime = TRIM_START; } catch { /* ignore */ }
+    };
+    if (video.readyState >= 1) seekStart();
+    else video.addEventListener("loadedmetadata", seekStart, { once: true });
     video.play().catch(() => {});
   }, [shouldRenderVideo]);
 
@@ -572,16 +580,20 @@ function HeroFrameSlideshow() {
     <video
       ref={videoRef}
       autoPlay
-      loop
       muted
       playsInline
       preload="metadata"
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
+      onEnded={(e) => {
+        const v = e.currentTarget;
+        try { v.currentTime = TRIM_START; } catch { /* ignore */ }
+        v.play().catch(() => {});
+      }}
       className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
       style={{ opacity: videoReady ? 0.5 : 0 }}
     >
-      <source src={heroVideoAsset.url} type="video/webm" />
+      <source src={`${heroVideoAsset.url}#t=0.5`} type="video/webm" />
     </video>
   );
 }
@@ -596,7 +608,7 @@ function Hero({ lang }: { lang: Lang }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Hero background frame slideshow (starts right below the navbar) */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
