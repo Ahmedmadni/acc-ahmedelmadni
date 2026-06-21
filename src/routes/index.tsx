@@ -89,7 +89,8 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
-      { rel: "preload", as: "fetch", href: "/hero-video.webm" },
+      // Smart preload: fetch the actual CDN video early (desktop benefits most; mobile skips render anyway)
+      { rel: "preload", as: "video", href: heroVideoAsset.url, type: "video/webm", fetchPriority: "low" },
     ],
     scripts: [
       {
