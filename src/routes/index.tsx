@@ -370,6 +370,8 @@ export function Navbar({
   onTheme: () => void;
 }) {
   const isAdmin = useIsAdmin();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
   const links: { to: string; label: string }[] = [
     { to: "/", label: t.nav.home[lang] },
     { to: "/about", label: t.nav.about[lang] },
