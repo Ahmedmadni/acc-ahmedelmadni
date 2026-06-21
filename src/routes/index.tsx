@@ -424,6 +424,18 @@ export function Navbar({
         </ul>
 
         <div className="flex items-center gap-2 sm:gap-3">
+          {!isHome && (
+            <RouterLink
+              to="/"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
+              aria-label={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
+              title={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
+            >
+              {lang === "ar" ? <ArrowRight className="size-4 text-[#d7aa52]" /> : <ArrowLeft className="size-4 text-[#d7aa52]" />}
+            </RouterLink>
+          )}
           <RouterLink
             to="/tools"
             onMouseEnter={playHover}
