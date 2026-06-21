@@ -55,7 +55,7 @@ import mascotEmail from "@/assets/mascot-email.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
-import { Link as RouterLink } from "@tanstack/react-router";
+import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 
 const ADMIN_EMAIL = "elmadnim@gmail.com";
