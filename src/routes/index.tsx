@@ -55,7 +55,7 @@ import mascotEmail from "@/assets/mascot-email.png";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
-import { Link as RouterLink } from "@tanstack/react-router";
+import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 
 const ADMIN_EMAIL = "elmadnim@gmail.com";
@@ -89,7 +89,8 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
-      { rel: "preload", as: "fetch", href: "/hero-video.webm" },
+      // Smart preload: fetch the actual CDN video early (desktop benefits most; mobile skips render anyway)
+      { rel: "preload", as: "video", href: heroVideoAsset.url, type: "video/webm", fetchPriority: "low" },
     ],
     scripts: [
       {
@@ -369,6 +370,8 @@ export function Navbar({
   onTheme: () => void;
 }) {
   const isAdmin = useIsAdmin();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
   const links: { to: string; label: string }[] = [
     { to: "/", label: t.nav.home[lang] },
     { to: "/about", label: t.nav.about[lang] },
@@ -421,6 +424,18 @@ export function Navbar({
         </ul>
 
         <div className="flex items-center gap-2 sm:gap-3">
+          {!isHome && (
+            <RouterLink
+              to="/"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
+              aria-label={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
+              title={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
+            >
+              {lang === "ar" ? <ArrowRight className="size-4 text-[#d7aa52]" /> : <ArrowLeft className="size-4 text-[#d7aa52]" />}
+            </RouterLink>
+          )}
           <RouterLink
             to="/tools"
             onMouseEnter={playHover}
@@ -516,17 +531,42 @@ function Typewriter({ words }: { words: string[] }) {
   return <span className="caret gold-text font-extrabold">{sub}</span>;
 }
 
-/* ============= HERO FRAME SLIDESHOW ============= */
+/* ============= HERO BACKGROUND (smart: video on desktop, gradient on mobile) ============= */
 function HeroFrameSlideshow() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
+  const [shouldRenderVideo, setShouldRenderVideo] = useState(false);
 
   useEffect(() => {
+    // Only render the video on desktop / wide screens & when the user hasn't asked for reduced data/motion.
+    const mqlMobile = window.matchMedia("(max-width: 767px)");
+    const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    const lowBandwidth = !!conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType ?? "");
+    const allow = !mqlMobile.matches && !mqlReduce.matches && !lowBandwidth;
+    setShouldRenderVideo(allow);
+  }, []);
+
+  useEffect(() => {
+    if (!shouldRenderVideo) return;
     const video = videoRef.current;
     if (!video) return;
-    // تشغيل يدوي في حال لم يشتغل تلقائياً
     video.play().catch(() => {});
-  }, []);
+  }, [shouldRenderVideo]);
+
+  // Mobile / reduced-motion / data-saver: pure CSS gradient — instant, zero bytes
+  if (!shouldRenderVideo) {
+    return (
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full"
+        style={{
+          background:
+            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, #04101f 0%, #06182d 60%, #04101f 100%)",
+        }}
+      />
+    );
+  }
 
   return (
     <video
@@ -538,7 +578,7 @@ function HeroFrameSlideshow() {
       preload="metadata"
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
-      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
+      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
       style={{ opacity: videoReady ? 0.5 : 0 }}
     >
       <source src={heroVideoAsset.url} type="video/webm" />
@@ -579,11 +619,11 @@ function Hero({ lang }: { lang: Lang }) {
             {t.hero.badge[lang]}
           </div>
 
-          <h1 className="mb-4 text-5xl font-black leading-[1.05] sm:text-6xl lg:text-7xl">
-            <span className="block" style={{ color: "var(--fg)" }}>
+          <h1 className="mb-4 text-5xl font-black leading-[1.15] sm:text-6xl lg:text-7xl">
+            <span className="block pb-1" style={{ color: "var(--fg)" }}>
               {t.hero.name[lang]}
             </span>
-            <span className="mt-2 block gold-text">{lang === "ar" ? "محاسب أول" : "Senior Accountant"}</span>
+            <span className="mt-3 block pb-2 gold-text leading-[1.2]">{lang === "ar" ? "محاسب أول" : "Senior Accountant"}</span>
           </h1>
 
           <div className="mb-3 min-h-[28px] text-lg font-medium">
@@ -608,7 +648,7 @@ function Hero({ lang }: { lang: Lang }) {
               to="/request-service"
               onMouseEnter={playHover}
               onClick={playClick}
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-emerald-400/60 bg-emerald-500/15 px-7 py-3.5 text-sm font-bold text-emerald-200 shadow-xl shadow-emerald-500/20 transition-all hover:scale-105 hover:bg-emerald-500/25"
+              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border-2 border-[#d7aa52] bg-[color-mix(in_oklab,var(--bg-surface)_85%,transparent)] px-7 py-3.5 text-sm font-bold text-[#d7aa52] shadow-lg shadow-[#d7aa52]/20 backdrop-blur-md transition-all hover:scale-105 hover:bg-[#d7aa52] hover:text-[var(--bg)] dark:hover:text-[#04101f]"
             >
               <Briefcase className="size-4" />
               <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
