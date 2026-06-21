@@ -517,17 +517,42 @@ function Typewriter({ words }: { words: string[] }) {
   return <span className="caret gold-text font-extrabold">{sub}</span>;
 }
 
-/* ============= HERO FRAME SLIDESHOW ============= */
+/* ============= HERO BACKGROUND (smart: video on desktop, gradient on mobile) ============= */
 function HeroFrameSlideshow() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
+  const [shouldRenderVideo, setShouldRenderVideo] = useState(false);
 
   useEffect(() => {
+    // Only render the video on desktop / wide screens & when the user hasn't asked for reduced data/motion.
+    const mqlMobile = window.matchMedia("(max-width: 767px)");
+    const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    const lowBandwidth = !!conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType ?? "");
+    const allow = !mqlMobile.matches && !mqlReduce.matches && !lowBandwidth;
+    setShouldRenderVideo(allow);
+  }, []);
+
+  useEffect(() => {
+    if (!shouldRenderVideo) return;
     const video = videoRef.current;
     if (!video) return;
-    // تشغيل يدوي في حال لم يشتغل تلقائياً
     video.play().catch(() => {});
-  }, []);
+  }, [shouldRenderVideo]);
+
+  // Mobile / reduced-motion / data-saver: pure CSS gradient — instant, zero bytes
+  if (!shouldRenderVideo) {
+    return (
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full"
+        style={{
+          background:
+            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, #04101f 0%, #06182d 60%, #04101f 100%)",
+        }}
+      />
+    );
+  }
 
   return (
     <video
@@ -539,7 +564,7 @@ function HeroFrameSlideshow() {
       preload="metadata"
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
-      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
+      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
       style={{ opacity: videoReady ? 0.5 : 0 }}
     >
       <source src={heroVideoAsset.url} type="video/webm" />
