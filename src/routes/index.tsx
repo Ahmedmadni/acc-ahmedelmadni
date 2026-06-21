@@ -634,7 +634,7 @@ function Hero({ lang }: { lang: Lang }) {
               to="/request-service"
               onMouseEnter={playHover}
               onClick={playClick}
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-emerald-400/60 bg-emerald-500/15 px-7 py-3.5 text-sm font-bold text-emerald-200 shadow-xl shadow-emerald-500/20 transition-all hover:scale-105 hover:bg-emerald-500/25"
+              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border-2 border-[#d7aa52] bg-[color-mix(in_oklab,var(--bg-surface)_85%,transparent)] px-7 py-3.5 text-sm font-bold text-[#d7aa52] shadow-lg shadow-[#d7aa52]/20 backdrop-blur-md transition-all hover:scale-105 hover:bg-[#d7aa52] hover:text-[var(--bg)] dark:hover:text-[#04101f]"
             >
               <Briefcase className="size-4" />
               <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
