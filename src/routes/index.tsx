@@ -604,73 +604,182 @@ function Hero({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const { scrollY } = useScroll();
   const yBg = useTransform(scrollY, [0, 600], [0, 120]);
-  const yImg = useTransform(scrollY, [0, 600], [0, -60]);
+  const yImg = useTransform(scrollY, [0, 600], [0, -40]);
+
+  const features = [
+    { icon: Star, title: lang === "ar" ? "خبرة احترافية" : "Pro Experience", desc: lang === "ar" ? "سنوات من الخبرة في المجال المالي والمحاسبي" : "Years of expertise in finance & accounting" },
+    { icon: BarChart3, title: lang === "ar" ? "تحليل مالي" : "Financial Analysis", desc: lang === "ar" ? "تحليلات دقيقة تدعم اتخاذ القرارات" : "Accurate analytics for sharper decisions" },
+    { icon: Wrench, title: lang === "ar" ? "حلول مخصصة" : "Tailored Solutions", desc: lang === "ar" ? "حلول مالية مصممة خصيصاً لأعمالك" : "Financial solutions built around your business" },
+    { icon: ShieldCheck, title: lang === "ar" ? "التزام وموثوقية" : "Trust & Compliance", desc: lang === "ar" ? "التزام بأعلى معايير الجودة والدقة" : "Held to the highest standards of accuracy" },
+  ];
 
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-44 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-28 sm:pt-32 lg:pt-36 lg:pb-32 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
-      {/* Hero background frame slideshow (starts right below the navbar) */}
+      {/* Background video / gradient */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
         <HeroFrameSlideshow />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-surface)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/40 via-[#0D1726]/60 to-[var(--bg-surface)]" />
       </motion.div>
 
-      <div className="pointer-events-none absolute inset-0 opacity-50">
-        <div className="absolute top-1/2 left-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(215,170,82,0.18),transparent_60%)]" />
+      {/* Ambient gold glow */}
+      <div className="pointer-events-none absolute inset-0 opacity-60">
+        <div className="absolute top-1/3 right-[15%] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(212,166,74,0.22),transparent_65%)]" />
+        <div className="absolute bottom-1/4 left-[10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14),transparent_70%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto w-[92%] max-w-7xl">
+      <div className="relative z-10 mx-auto w-[92%] max-w-[1400px] px-0 sm:px-2 lg:px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          {/* RIGHT (text) — first in RTL DOM */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="order-2 lg:order-1"
+          >
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
+              <Sparkles className="size-3.5" />
+              {t.hero.badge[lang]}
+            </div>
+
+            <h1 className="mb-6 font-black tracking-tight leading-[1.1]">
+              <span className="block text-[42px] sm:text-[56px] lg:text-[72px] pb-1" style={{ color: "var(--fg)" }}>
+                {t.hero.name[lang]}
+              </span>
+              <span className="mt-2 block text-[38px] sm:text-[50px] lg:text-[64px] gold-text">
+                {lang === "ar" ? "محاسب أول" : "Senior Accountant"}
+              </span>
+            </h1>
+
+            <div className="mb-4 min-h-[28px] text-lg font-medium">
+              <Typewriter words={t.hero.typewriter[lang]} />
+            </div>
+
+            <p
+              className="mb-10 max-w-[600px] text-[17px] sm:text-[19px] lg:text-[22px] leading-[1.8] text-justify"
+              style={{ color: "var(--fg-soft)" }}
+            >
+              {t.hero.intro[lang]}
+            </p>
+
+            <div className="mb-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#contact"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="group relative inline-flex h-[58px] items-center gap-3 overflow-hidden rounded-full bg-gradient-to-br from-[#f3d28a] via-[#D4A64A] to-[#b8862e] px-8 text-[15px] font-bold text-[#04101f] shadow-xl shadow-[#D4A64A]/40 transition-transform hover:scale-[1.04]"
+              >
+                <span className="absolute inset-0 shine opacity-60" />
+                <span className="relative">{t.hero.cta1[lang]}</span>
+                <Arrow className="relative size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
+              </a>
+              <RouterLink
+                to="/request-service"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="group inline-flex h-[58px] items-center gap-3 rounded-full border-2 border-[#D4A64A] bg-white/5 px-8 text-[15px] font-bold text-[#D4A64A] backdrop-blur-md transition-all hover:scale-[1.04] hover:bg-[#D4A64A] hover:text-[#04101f]"
+              >
+                <Briefcase className="size-4" />
+                <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
+              </RouterLink>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
+              <MapPin className="size-4 text-[#D4A64A]" />
+              {t.hero.location[lang]}
+            </div>
+          </motion.div>
+
+          {/* LEFT (portrait + holographic widgets) */}
+          <motion.div
+            style={{ y: yImg }}
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1, delay: 0.2 }}
+            className="relative order-1 lg:order-2"
+          >
+            <div className="relative mx-auto aspect-square w-full max-w-[560px]">
+              {/* glow ring */}
+              <div className="absolute inset-0 rounded-[36px] bg-[radial-gradient(circle_at_50%_50%,rgba(212,166,74,0.35),transparent_70%)] blur-2xl" />
+              {/* portrait card */}
+              <div className="relative h-full w-full overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] backdrop-blur-sm">
+                <img
+                  src={heroPortrait}
+                  alt={lang === "ar" ? "أحمد المدني - محاسب أول" : "Ahmed Elmadni - Senior Accountant"}
+                  width={1024}
+                  height={1024}
+                  className="h-full w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08111F]/70 via-transparent to-transparent" />
+              </div>
+
+              {/* floating KPI widgets */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-4 -right-6 hidden rounded-2xl border border-[#D4A64A]/30 bg-[#0D1726]/80 px-4 py-3 text-right shadow-2xl backdrop-blur-xl sm:block"
+              >
+                <div className="text-[11px] text-white/60">{lang === "ar" ? "الإيرادات" : "Revenue"}</div>
+                <div className="mt-0.5 flex items-center gap-2">
+                  <TrendingUp className="size-4 text-emerald-400" />
+                  <span className="text-lg font-black text-[#f3d28a]">+35%</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+                className="absolute bottom-6 -left-6 hidden rounded-2xl border border-cyan-400/30 bg-[#0D1726]/80 px-4 py-3 shadow-2xl backdrop-blur-xl sm:block"
+              >
+                <div className="text-[11px] text-white/60">{lang === "ar" ? "كفاءة الأداء" : "Efficiency"}</div>
+                <div className="mt-0.5 flex items-center gap-2">
+                  <BarChart3 className="size-4 text-cyan-300" />
+                  <span className="text-lg font-black text-cyan-200">65%</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute top-1/3 -left-8 hidden rounded-2xl border border-white/15 bg-[#0D1726]/80 px-4 py-3 shadow-2xl backdrop-blur-xl md:block"
+              >
+                <div className="text-[11px] text-white/60">{lang === "ar" ? "صافي الربح" : "Net Profit"}</div>
+                <div className="mt-0.5 flex items-center gap-2">
+                  <PieChart className="size-4 text-[#D4A64A]" />
+                  <span className="text-lg font-black text-white">+42%</span>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* BOTTOM FEATURE BAR */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 0.9, delay: 1 }}
+          className="mt-16 rounded-[24px] border border-white/10 bg-[#0D1726]/70 p-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:p-5"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full gold-border bg-white/5 px-4 py-2 text-xs font-semibold text-[#f3d28a]">
-            <Sparkles className="size-3.5" />
-            {t.hero.badge[lang]}
-          </div>
-
-          <h1 className="mb-4 text-5xl font-black leading-[1.15] sm:text-6xl lg:text-7xl">
-            <span className="block pb-1" style={{ color: "var(--fg)" }}>
-              {t.hero.name[lang]}
-            </span>
-            <span className="mt-3 block pb-2 gold-text leading-[1.2]">{lang === "ar" ? "محاسب أول" : "Senior Accountant"}</span>
-          </h1>
-
-          <div className="mb-3 min-h-[28px] text-lg font-medium">
-            <Typewriter words={t.hero.typewriter[lang]} />
-          </div>
-          <p className="mb-8 max-w-xl text-base leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>
-            {t.hero.intro[lang]}
-          </p>
-
-          <div className="mb-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
-              onMouseEnter={playHover}
-              onClick={playClick}
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-7 py-3.5 text-sm font-bold text-[#04101f] shadow-xl shadow-[#d7aa52]/40 transition-transform hover:scale-105"
-            >
-              <span className="absolute inset-0 shine opacity-60" />
-              <span className="relative">{t.hero.cta1[lang]}</span>
-              <Arrow className="relative size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
-            </a>
-            <RouterLink
-              to="/request-service"
-              onMouseEnter={playHover}
-              onClick={playClick}
-              className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border-2 border-[#d7aa52] bg-[color-mix(in_oklab,var(--bg-surface)_85%,transparent)] px-7 py-3.5 text-sm font-bold text-[#d7aa52] shadow-lg shadow-[#d7aa52]/20 backdrop-blur-md transition-all hover:scale-105 hover:bg-[#d7aa52] hover:text-[var(--bg)] dark:hover:text-[#04101f]"
-            >
-              <Briefcase className="size-4" />
-              <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
-            </RouterLink>
-          </div>
-
-          <div className="flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
-            <MapPin className="size-4 text-[#d7aa52]" />
-            {t.hero.location[lang]}
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {features.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div
+                  key={i}
+                  className="group flex min-h-[120px] items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-all hover:border-[#D4A64A]/40 hover:bg-white/[0.04]"
+                >
+                  <div className="grid size-12 shrink-0 place-items-center rounded-xl border border-[#D4A64A]/30 bg-[#D4A64A]/10 text-[#D4A64A] transition-transform group-hover:scale-110">
+                    <Icon className="size-5" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-[15px] font-bold text-white">{f.title}</div>
+                    <div className="mt-1 text-[12px] leading-[1.6] text-white/60">{f.desc}</div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
