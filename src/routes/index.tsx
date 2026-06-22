@@ -90,7 +90,6 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
-      // Smart preload: fetch the actual CDN video early (desktop benefits most; mobile skips render anyway)
       { rel: "preload", as: "video", href: heroVideoAsset.url, type: "video/webm", fetchPriority: "low" },
     ],
     scripts: [
@@ -434,7 +433,11 @@ export function Navbar({
               aria-label={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
               title={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
             >
-              {lang === "ar" ? <ArrowRight className="size-4 text-[#d7aa52]" /> : <ArrowLeft className="size-4 text-[#d7aa52]" />}
+              {lang === "ar" ? (
+                <ArrowRight className="size-4 text-[#d7aa52]" />
+              ) : (
+                <ArrowLeft className="size-4 text-[#d7aa52]" />
+              )}
             </RouterLink>
           )}
           <RouterLink
@@ -532,14 +535,13 @@ function Typewriter({ words }: { words: string[] }) {
   return <span className="caret gold-text font-extrabold">{sub}</span>;
 }
 
-/* ============= HERO BACKGROUND (smart: video on desktop, gradient on mobile) ============= */
+/* ============= HERO BACKGROUND ============= */
 function HeroFrameSlideshow() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
   const [shouldRenderVideo, setShouldRenderVideo] = useState(false);
 
   useEffect(() => {
-    // Only render the video on desktop / wide screens & when the user hasn't asked for reduced data/motion.
     const mqlMobile = window.matchMedia("(max-width: 767px)");
     const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
     const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
@@ -548,7 +550,6 @@ function HeroFrameSlideshow() {
     setShouldRenderVideo(allow);
   }, []);
 
-  // Trim the first 0.5s of the clip — skip it on initial play AND on every loop iteration
   const TRIM_START = 0.5;
 
   useEffect(() => {
@@ -556,14 +557,17 @@ function HeroFrameSlideshow() {
     const video = videoRef.current;
     if (!video) return;
     const seekStart = () => {
-      try { video.currentTime = TRIM_START; } catch { /* ignore */ }
+      try {
+        video.currentTime = TRIM_START;
+      } catch {
+        /* ignore */
+      }
     };
     if (video.readyState >= 1) seekStart();
     else video.addEventListener("loadedmetadata", seekStart, { once: true });
     video.play().catch(() => {});
   }, [shouldRenderVideo]);
 
-  // Mobile / reduced-motion / data-saver: pure CSS gradient — instant, zero bytes
   if (!shouldRenderVideo) {
     return (
       <div
@@ -588,7 +592,11 @@ function HeroFrameSlideshow() {
       onLoadedData={() => setVideoReady(true)}
       onEnded={(e) => {
         const v = e.currentTarget;
-        try { v.currentTime = TRIM_START; } catch { /* ignore */ }
+        try {
+          v.currentTime = TRIM_START;
+        } catch {
+          /* ignore */
+        }
         v.play().catch(() => {});
       }}
       className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
@@ -606,10 +614,26 @@ function Hero({ lang }: { lang: Lang }) {
   const yBg = useTransform(scrollY, [0, 600], [0, 120]);
 
   const features = [
-    { icon: Star, title: lang === "ar" ? "خبرة احترافية" : "Pro Experience", desc: lang === "ar" ? "سنوات من الخبرة في المجال المالي والمحاسبي" : "Years of expertise in finance & accounting" },
-    { icon: BarChart3, title: lang === "ar" ? "تحليل مالي" : "Financial Analysis", desc: lang === "ar" ? "تحليلات دقيقة تدعم اتخاذ القرارات" : "Accurate analytics for sharper decisions" },
-    { icon: Wrench, title: lang === "ar" ? "حلول مخصصة" : "Tailored Solutions", desc: lang === "ar" ? "حلول مالية مصممة خصيصاً لأعمالك" : "Financial solutions built around your business" },
-    { icon: ShieldCheck, title: lang === "ar" ? "التزام وموثوقية" : "Trust & Compliance", desc: lang === "ar" ? "التزام بأعلى معايير الجودة والدقة" : "Held to the highest standards of accuracy" },
+    {
+      icon: Star,
+      title: lang === "ar" ? "خبرة احترافية" : "Pro Experience",
+      desc: lang === "ar" ? "سنوات من الخبرة في المجال المالي والمحاسبي" : "Years of expertise in finance & accounting",
+    },
+    {
+      icon: BarChart3,
+      title: lang === "ar" ? "تحليل مالي" : "Financial Analysis",
+      desc: lang === "ar" ? "تحليلات دقيقة تدعم اتخاذ القرارات" : "Accurate analytics for sharper decisions",
+    },
+    {
+      icon: Wrench,
+      title: lang === "ar" ? "حلول مخصصة" : "Tailored Solutions",
+      desc: lang === "ar" ? "حلول مالية مصممة خصيصاً لأعمالك" : "Financial solutions built around your business",
+    },
+    {
+      icon: ShieldCheck,
+      title: lang === "ar" ? "التزام وموثوقية" : "Trust & Compliance",
+      desc: lang === "ar" ? "التزام بأعلى معايير الجودة والدقة" : "Held to the highest standards of accuracy",
+    },
   ];
 
   return (
@@ -620,14 +644,15 @@ function Hero({ lang }: { lang: Lang }) {
       {/* Background video / gradient */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
         <HeroFrameSlideshow />
+        {/* CHANGE 1: increased darkness from /40 and /60 to /80 and /90 */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/80 via-[#0D1726]/90 to-[var(--bg-surface)]" />
       </motion.div>
 
-      {/* Grid lines hidden inside hero only */}
+      {/* CHANGE 2: overlay to hide cinematic-grid inside hero only */}
       <div
-        aria-hidden
+        aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-[1]"
-        style={{ background: "rgba(4,16,31,0.55)", mixBlendMode: "multiply" }}
+        style={{ background: "rgba(4,16,31,0.60)", mixBlendMode: "multiply" }}
       />
 
       {/* Ambient gold glow */}
@@ -637,13 +662,14 @@ function Hero({ lang }: { lang: Lang }) {
       </div>
 
       <div className="relative z-10 mx-auto w-[96%] max-w-[1400px] px-2 sm:px-4 lg:px-8">
-        <div className="flex items-center justify-center">
-          {/* TEXT — full width since portrait is hidden */}
+        {/* CHANGE 3: single-column layout since portrait is hidden */}
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          {/* TEXT column */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="w-full max-w-3xl"
+            className="order-2 lg:order-1"
           >
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
               <Sparkles className="size-3.5" />
@@ -671,7 +697,7 @@ function Hero({ lang }: { lang: Lang }) {
             </p>
 
             <div className="mb-8 flex flex-wrap items-center gap-4">
-              
+              <a
                 href="#contact"
                 onMouseEnter={playHover}
                 onClick={playClick}
@@ -697,6 +723,9 @@ function Hero({ lang }: { lang: Lang }) {
               {t.hero.location[lang]}
             </div>
           </motion.div>
+
+          {/* CHANGE 4: portrait column — completely hidden on all screen sizes */}
+          <div className="hidden" aria-hidden="true" />
         </div>
 
         {/* BOTTOM FEATURE BAR */}
@@ -766,7 +795,7 @@ function Stats({ lang }: { lang: Lang }) {
   const icons = [TrendingUp, Target, Calculator, FileText];
   return (
     <section className="relative py-12">
-      <div className="mx-auto grid w-[98%] max-w-[1600px] grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="mx-auto grid w-[92%] max-w-6xl grid-cols-2 gap-4 sm:grid-cols-4">
         {t.stats.map((s, i) => {
           const Icon = icons[i];
           return (
@@ -798,7 +827,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   return (
     <section id="about" className="relative py-14">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           {/* Image */}
           <motion.div
@@ -823,13 +852,10 @@ function ProfileBio({ lang }: { lang: Lang }) {
                   className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
-
-                {/* Shine sweep on hover */}
                 <div
                   aria-hidden
                   className="pointer-events-none absolute -inset-x-1/2 -top-1/2 h-[200%] w-[60%] rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-[1400ms] ease-out"
                 />
-
                 <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
                   <div>
                     <div className="text-[10px] uppercase tracking-[0.25em] text-[#d7aa52]">
@@ -901,7 +927,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
 export function About({ lang }: { lang: Lang }) {
   return (
     <section id="about" className="py-14">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
           <motion.div
@@ -972,7 +998,7 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
         <img src={servicesBg} alt="" className="h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)] via-transparent to-[var(--bg-surface)]" />
       </div>
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "الخدمات" : "Services"}
           title={t.services.title[lang]}
@@ -1082,7 +1108,7 @@ export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang:
 export function Experience({ lang }: { lang: Lang }) {
   return (
     <section id="experience" className="py-14">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "المسيرة المهنية" : "Career"}
           title={t.experience.title[lang]}
@@ -1202,7 +1228,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
         aria-hidden
         className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent"
       />
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "المهارات" : "Skills"}
           title={t.skills.title[lang]}
@@ -1210,7 +1236,6 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
         />
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[280px_1fr]">
-          {/* Tabs */}
           <div className="flex flex-row gap-3 overflow-x-auto lg:flex-col">
             {t.skills.groups.map((g, i) => {
               const Icon = groupIcons[i];
@@ -1254,7 +1279,6 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
             })}
           </div>
 
-          {/* Panel */}
           <motion.div
             key={active}
             initial={{ opacity: 0, y: 20 }}
@@ -1433,7 +1457,7 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
 
   return (
     <section className="py-14">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
           title={t.beforeAfter.title[lang]}
@@ -1450,7 +1474,6 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
             <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f]/40 to-transparent" />
           </div>
 
-          {/* Labels */}
           <div className="absolute top-4 left-4 rounded-full bg-black/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-white/80 backdrop-blur">
             {t.beforeAfter.before[lang]}
           </div>
@@ -1458,7 +1481,6 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
             {t.beforeAfter.after[lang]}
           </div>
 
-          {/* Divider */}
           <div
             className="absolute top-0 bottom-0 w-[2px] bg-[#d7aa52] shadow-[0_0_20px_rgba(215,170,82,0.7)]"
             style={{ left: `${pos}%` }}
@@ -1489,7 +1511,7 @@ function Testimonials({ lang }: { lang: Lang }) {
   const loop = [...items, ...items];
   return (
     <section className="py-14">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
           title={t.testimonials.title[lang]}
@@ -1516,7 +1538,7 @@ function Testimonials({ lang }: { lang: Lang }) {
             >
               <Quote className="absolute top-4 end-4 size-10 text-[#d7aa52]/15" />
               <p className="text-sm leading-relaxed italic" style={{ color: "var(--fg-soft)" }}>
-                “{it.quote[lang]}”
+                "{it.quote[lang]}"
               </p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-base font-black text-[#04101f]">
@@ -1541,7 +1563,7 @@ function Testimonials({ lang }: { lang: Lang }) {
 export function Certs({ lang }: { lang: Lang }) {
   return (
     <section className="py-14">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle eyebrow={lang === "ar" ? "التطوير المهني" : "Development"} title={t.certs.title[lang]} />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.certs.items.map((c, i) => (
@@ -1569,13 +1591,12 @@ export function Certs({ lang }: { lang: Lang }) {
 export function Contact({ lang }: { lang: Lang }) {
   return (
     <section id="contact" className="py-8">
-      <div className="mx-auto w-[98%] max-w-[1600px] ...">
+      <div className="mx-auto w-[92%] max-w-6xl">
         <SectionTitle
           eyebrow={lang === "ar" ? "تواصل" : "Contact"}
           title={t.contact.title[lang]}
           sub={t.contact.sub[lang]}
         />
-        {/* Social mascot cards (Pixar-style mascot per platform) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1643,7 +1664,7 @@ export function Footer({ lang }: { lang: Lang }) {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent"
       />
 
-      <div className="mx-auto grid w-[98%] max-w-[1600px] gap-6 md:grid-cols-3">
+      <div className="mx-auto grid w-[92%] max-w-6xl gap-6 md:grid-cols-3">
         <div>
           <div className="text-lg font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
           <p className="mt-1.5 max-w-md text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
@@ -1701,7 +1722,7 @@ export function Footer({ lang }: { lang: Lang }) {
       </div>
 
       <div
-        className="mx-auto mt-4 flex w-[98%] max-w-[1600px] flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row"
+        className="mx-auto mt-4 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row"
         style={{ color: "var(--fg-soft)" }}
       >
         <span>{t.footer.rights[lang]}</span>
@@ -1737,7 +1758,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
   );
 }
 
-/* ============= FLOATING CHAT BUTTON — bottom-right, more visible & expressive ============= */
+/* ============= FLOATING SOCIAL ============= */
 export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   const [open, setOpen] = useState(false);
   return (
@@ -1799,134 +1820,6 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   );
 }
 
-/* ============= HERO ORGANIZED DASHBOARD WIDGET ============= */
-function HeroDashWidgets({ lang }: { lang: Lang }) {
-  const spark = [10, 14, 12, 18, 22, 19, 26, 30, 28, 34, 38, 42];
-  const max = Math.max(...spark);
-  const path = spark
-    .map((v, i) => `${i === 0 ? "M" : "L"} ${(i / (spark.length - 1)) * 100} ${40 - (v / max) * 35}`)
-    .join(" ");
-  const bars = [40, 65, 55, 80, 70, 92, 60];
-
-  return (
-    <motion.div
-      aria-hidden
-      initial={{ opacity: 0, y: 30, scale: 0.92 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 1, delay: 1.3, type: "spring", stiffness: 120, damping: 20 }}
-      className="pointer-events-none absolute left-[3%] top-[16%] z-0 hidden w-[300px] xl:block"
-    >
-      <div className="floaty rounded-3xl border border-[#d7aa52]/30 bg-[#04101f]/85 p-5 backdrop-blur-2xl shadow-2xl shadow-black/60">
-        {/* Header */}
-        <div className="mb-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="flex size-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e]">
-              <BarChart3 className="size-4 text-[#04101f]" />
-            </span>
-            <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-                {lang === "ar" ? "لوحة مباشرة" : "Live Dashboard"}
-              </div>
-              <div className="text-[11px] font-bold text-[#f3d28a]">Q2 · 2026</div>
-            </div>
-          </div>
-          <span className="flex items-center gap-1 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-1.5 py-0.5 text-[9px] font-bold text-emerald-300">
-            <span className="size-1.5 animate-pulse rounded-full bg-emerald-400" />
-            LIVE
-          </span>
-        </div>
-
-        {/* Revenue row */}
-        <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-3">
-          <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-white/60">
-            <span className="inline-flex items-center gap-1.5">
-              <TrendingUp className="size-3 text-emerald-400" />
-              {lang === "ar" ? "الإيرادات" : "Revenue"}
-            </span>
-            <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 font-bold text-emerald-300">+18%</span>
-          </div>
-          <div className="mt-1 font-mono text-xl font-black gold-text">SAR 482K</div>
-          <svg viewBox="0 0 100 40" className="mt-1 h-10 w-full">
-            <defs>
-              <linearGradient id="sg" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0%" stopColor="#d7aa52" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#d7aa52" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <path d={`${path} L 100 40 L 0 40 Z`} fill="url(#sg)" />
-            <path d={path} fill="none" stroke="#f3d28a" strokeWidth="1.5" />
-          </svg>
-        </div>
-
-        {/* Two-column KPIs */}
-        <div className="mt-3 grid grid-cols-2 gap-2">
-          <div className="rounded-xl border border-white/8 bg-white/[0.02] p-2.5">
-            <div className="flex items-center gap-1.5 text-[9px] uppercase tracking-[0.2em] text-white/60">
-              <PieChart className="size-2.5 text-[#d7aa52]" />
-              {lang === "ar" ? "الهامش" : "Margin"}
-            </div>
-            <div className="mt-1.5 flex items-center gap-2">
-              <svg viewBox="0 0 36 36" className="size-10">
-                <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="3" />
-                <motion.circle
-                  cx="18"
-                  cy="18"
-                  r="15"
-                  fill="none"
-                  stroke="#f3d28a"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  transform="rotate(-90 18 18)"
-                  strokeDasharray="94.2"
-                  initial={{ strokeDashoffset: 94.2 }}
-                  animate={{ strokeDashoffset: 94.2 - 94.2 * 0.72 }}
-                  transition={{ duration: 1.8, delay: 1.6 }}
-                />
-              </svg>
-              <div>
-                <div className="font-mono text-base font-black text-white">72%</div>
-                <div className="text-[9px] text-emerald-300">▲ target</div>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-xl border border-white/8 bg-white/[0.02] p-2.5">
-            <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.2em] text-white/60">
-              <span className="inline-flex items-center gap-1">
-                <BarChart3 className="size-2.5 text-[#d7aa52]" />
-                W23
-              </span>
-              <span className="text-emerald-300">+12%</span>
-            </div>
-            <div className="mt-2 flex h-10 items-end gap-1">
-              {bars.map((h, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ height: 0 }}
-                  animate={{ height: `${h}%` }}
-                  transition={{ duration: 0.9, delay: 1.7 + i * 0.06, type: "spring" }}
-                  className="flex-1 rounded-sm bg-gradient-to-t from-[#b8862e] to-[#f3d28a]"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Status footer */}
-        <div className="mt-3 flex items-center justify-between rounded-xl border border-emerald-400/20 bg-emerald-500/5 px-2.5 py-1.5">
-          <span className="inline-flex items-center gap-1.5 text-[10px] font-bold text-white/85">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-            </span>
-            {lang === "ar" ? "متزامن مع ERP" : "ERP synced"}
-          </span>
-          <span className="font-mono text-[9px] text-white/50">now</span>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
 /* ============= EID GREETING BANNER ============= */
 function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
   return (
@@ -1947,7 +1840,6 @@ function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
         className="relative w-full max-w-md overflow-hidden rounded-[28px] border border-[#d7aa52]/50 bg-gradient-to-br from-[#0a223f] via-[#07182c] to-[#04101f] p-8 text-center shadow-2xl"
       >
-        {/* Decorative lanterns/sparkles */}
         <div
           aria-hidden
           className="pointer-events-none absolute -top-16 -left-16 size-56 rounded-full bg-[#d7aa52]/25 blur-3xl"
@@ -1982,7 +1874,6 @@ function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
           <X className="size-4" />
         </button>
 
-        {/* Crescent + lantern emoji header */}
         <motion.div
           initial={{ scale: 0.6, rotate: -20 }}
           animate={{ scale: 1, rotate: 0 }}
