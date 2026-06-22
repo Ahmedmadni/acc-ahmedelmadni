@@ -645,14 +645,14 @@ function Hero({ lang }: { lang: Lang }) {
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
         <HeroFrameSlideshow />
         {/* CHANGE 1: increased darkness from /40 and /60 to /80 and /90 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/80 via-[#0D1726]/90 to-[var(--bg-surface)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/50 via-[#0D1726]/65 to-[var(--bg-surface)]" />
       </motion.div>
 
-      {/* CHANGE 2: overlay to hide cinematic-grid inside hero only */}
+      {/* overlay to hide cinematic-grid inside hero only */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-[1]"
-        style={{ background: "rgba(4,16,31,0.60)", mixBlendMode: "multiply" }}
+        style={{ background: "rgba(4,16,31,0.45)", mixBlendMode: "multiply" }}
       />
 
       {/* Ambient gold glow */}
@@ -662,14 +662,14 @@ function Hero({ lang }: { lang: Lang }) {
       </div>
 
       <div className="relative z-10 mx-auto w-[96%] max-w-[1400px] px-2 sm:px-4 lg:px-8">
-        {/* CHANGE 3: single-column layout since portrait is hidden */}
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* TEXT column */}
+        {/* single-column layout — portrait hidden */}
+        <div className="flex flex-col">
+          {/* TEXT column — full width */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="order-2 lg:order-1"
+            className="w-full"
           >
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
               <Sparkles className="size-3.5" />
@@ -723,9 +723,6 @@ function Hero({ lang }: { lang: Lang }) {
               {t.hero.location[lang]}
             </div>
           </motion.div>
-
-          {/* CHANGE 4: portrait column — completely hidden on all screen sizes */}
-          <div className="hidden" aria-hidden="true" />
         </div>
 
         {/* BOTTOM FEATURE BAR */}
