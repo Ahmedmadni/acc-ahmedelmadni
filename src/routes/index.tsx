@@ -604,7 +604,6 @@ function Hero({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const { scrollY } = useScroll();
   const yBg = useTransform(scrollY, [0, 600], [0, 120]);
-  const yImg = useTransform(scrollY, [0, 600], [0, -40]);
 
   const features = [
     { icon: Star, title: lang === "ar" ? "خبرة احترافية" : "Pro Experience", desc: lang === "ar" ? "سنوات من الخبرة في المجال المالي والمحاسبي" : "Years of expertise in finance & accounting" },
@@ -621,23 +620,30 @@ function Hero({ lang }: { lang: Lang }) {
       {/* Background video / gradient */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
         <HeroFrameSlideshow />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/40 via-[#0D1726]/60 to-[var(--bg-surface)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/80 via-[#0D1726]/90 to-[var(--bg-surface)]" />
       </motion.div>
 
+      {/* Grid lines hidden inside hero only */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{ background: "rgba(4,16,31,0.55)", mixBlendMode: "multiply" }}
+      />
+
       {/* Ambient gold glow */}
-      <div className="pointer-events-none absolute inset-0 opacity-60">
+      <div className="pointer-events-none absolute inset-0 z-[2] opacity-60">
         <div className="absolute top-1/3 right-[15%] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(212,166,74,0.22),transparent_65%)]" />
         <div className="absolute bottom-1/4 left-[10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14),transparent_70%)]" />
       </div>
 
       <div className="relative z-10 mx-auto w-[96%] max-w-[1400px] px-2 sm:px-4 lg:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* RIGHT (text) — first in RTL DOM */}
+        <div className="flex items-center justify-center">
+          {/* TEXT — full width since portrait is hidden */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="order-2 lg:order-1"
+            className="w-full max-w-3xl"
           >
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
               <Sparkles className="size-3.5" />
@@ -665,7 +671,7 @@ function Hero({ lang }: { lang: Lang }) {
             </p>
 
             <div className="mb-8 flex flex-wrap items-center gap-4">
-              <a
+              
                 href="#contact"
                 onMouseEnter={playHover}
                 onClick={playClick}
@@ -689,62 +695,6 @@ function Hero({ lang }: { lang: Lang }) {
             <div className="flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
               <MapPin className="size-4 text-[#D4A64A]" />
               {t.hero.location[lang]}
-            </div>
-          </motion.div>
-
-          {/* LEFT (portrait + holographic widgets) */}
-          className="relative order-1 lg:order-2 hidden lg:hidden"
-            <div className="relative mx-auto aspect-square w-full max-w-[560px]">
-              {/* glow ring */}
-              <div className="absolute inset-0 rounded-[36px] bg-[radial-gradient(circle_at_50%_50%,rgba(212,166,74,0.35),transparent_70%)] blur-2xl" />
-              {/* portrait card */}
-              <div className="relative h-full w-full overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] backdrop-blur-sm">
-                <img
-                  src={heroPortrait}
-                  alt={lang === "ar" ? "أحمد المدني - محاسب أول" : "Ahmed Elmadni - Senior Accountant"}
-                  width={1024}
-                  height={1024}
-                  className="h-full w-full object-cover"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#08111F]/70 via-transparent to-transparent" />
-              </div>
-
-              {/* floating KPI widgets */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-6 hidden rounded-2xl border border-[#D4A64A]/30 bg-[#0D1726]/80 px-4 py-3 text-right shadow-2xl backdrop-blur-xl sm:block"
-              >
-                <div className="text-[11px] text-white/60">{lang === "ar" ? "الإيرادات" : "Revenue"}</div>
-                <div className="mt-0.5 flex items-center gap-2">
-                  <TrendingUp className="size-4 text-emerald-400" />
-                  <span className="text-lg font-black text-[#f3d28a]">+35%</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-                className="absolute bottom-6 -left-6 hidden rounded-2xl border border-cyan-400/30 bg-[#0D1726]/80 px-4 py-3 shadow-2xl backdrop-blur-xl sm:block"
-              >
-                <div className="text-[11px] text-white/60">{lang === "ar" ? "كفاءة الأداء" : "Efficiency"}</div>
-                <div className="mt-0.5 flex items-center gap-2">
-                  <BarChart3 className="size-4 text-cyan-300" />
-                  <span className="text-lg font-black text-cyan-200">65%</span>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-1/3 -left-8 hidden rounded-2xl border border-white/15 bg-[#0D1726]/80 px-4 py-3 shadow-2xl backdrop-blur-xl md:block"
-              >
-                <div className="text-[11px] text-white/60">{lang === "ar" ? "صافي الربح" : "Net Profit"}</div>
-                <div className="mt-0.5 flex items-center gap-2">
-                  <PieChart className="size-4 text-[#D4A64A]" />
-                  <span className="text-lg font-black text-white">+42%</span>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>
