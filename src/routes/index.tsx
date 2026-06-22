@@ -616,7 +616,7 @@ function Hero({ lang }: { lang: Lang }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-28 sm:pt-32 lg:pt-36 lg:pb-32 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Background video / gradient */}
       <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
@@ -630,7 +630,7 @@ function Hero({ lang }: { lang: Lang }) {
         <div className="absolute bottom-1/4 left-[10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14),transparent_70%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto w-[92%] max-w-[1400px] px-0 sm:px-2 lg:px-6">
+      <div className="relative z-10 mx-auto w-[96%] max-w-[1400px] px-2 sm:px-4 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* RIGHT (text) — first in RTL DOM */}
           <motion.div
