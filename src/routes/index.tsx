@@ -394,7 +394,7 @@ export function Navbar({
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
-          <span className="text-[11px] uppercase tracking-[0.3em] gold-text">Senior Accountant</span>
+          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] gold-text">Senior Accountant</span>
         </RouterLink>
 
         <ul className="hidden items-center gap-6 lg:flex">
