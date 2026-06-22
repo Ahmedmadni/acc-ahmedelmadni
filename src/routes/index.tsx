@@ -49,6 +49,7 @@ import mascotLinkedin from "@/assets/mascot-linkedin.png";
 import mascotFacebook from "@/assets/mascot-facebook.png";
 import mascotInstagram from "@/assets/mascot-instagram.png";
 import heroVideoAsset from "@/assets/hero.webm.asset.json";
+import heroPortrait from "@/assets/hero-portrait.jpg";
 import mascotSnapchat from "@/assets/mascot-snapchat.png";
 import mascotPhone from "@/assets/mascot-phone.png";
 import mascotEmail from "@/assets/mascot-email.png";
