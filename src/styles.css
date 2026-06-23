@@ -631,7 +631,6 @@ body.pdf-export-mode #tool-report-capture *,
   }
 }
 
-
 /* ============ Premium Polish (visual-only) ============ */
 
 /* Page enter transition — applied to <main> by route shells */
@@ -874,5 +873,370 @@ img {
     .cv-canvas {
       --cv-scale: 0.75;
     }
+  }
+}
+
+/* ============================================================
+   PRINT STYLES — Financial Calculators
+   Handles: AR/EN mixed content, charts, tables, stat cards
+   ============================================================ */
+
+@media print {
+  /* ── Reset & Base ── */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Page Setup ── */
+  @page {
+    size: A4 portrait;
+    margin: 18mm 15mm 18mm 15mm;
+  }
+
+  @page :first {
+    margin-top: 22mm;
+  }
+
+  /* ── Hide non-print elements ── */
+  nav,
+  header,
+  footer,
+  aside,
+  .no-print,
+  [data-no-print],
+  button:not(.print-keep),
+  .GlobalControls,
+  [class*="toggle"],
+  [class*="sidebar"],
+  [class*="navbar"],
+  [class*="topbar"],
+  [class*="Loader"],
+  .animate-spin {
+    display: none !important;
+  }
+
+  /* ── Body & Root ── */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+
+  /* ── Fix dark theme variables for print ── */
+  :root,
+  [data-theme],
+  [class*="dark"] {
+    --fg: #0a0a0a !important;
+    --fg-soft: #444444 !important;
+    --bg: #ffffff !important;
+    color-scheme: light !important;
+  }
+
+  /* ── Typography: Arabic + English mix ── */
+  * {
+    font-family: "Segoe UI", "Noto Sans Arabic", "Arial", sans-serif !important;
+  }
+
+  /* Arabic text direction fix */
+  [lang="ar"] *,
+  [dir="rtl"] *,
+  .font-arabic,
+  [class*="ar-"] {
+    font-family: "Noto Sans Arabic", "Arial Unicode MS", "Tahoma", sans-serif !important;
+    direction: rtl;
+    unicode-bidi: embed;
+    letter-spacing: 0 !important; /* Arabic: no letter-spacing */
+    word-spacing: 0.05em;
+  }
+
+  /* English inside Arabic context */
+  [lang="ar"] .en,
+  [dir="rtl"] .en,
+  [lang="ar"] [dir="ltr"] {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+  }
+
+  /* Prevent character overlap from line-height issues */
+  p,
+  div,
+  span,
+  td,
+  th,
+  label {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Tabular numbers — never overlap */
+  .tabular-nums,
+  td,
+  .StatCard-value {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Layout: grid → single column ── */
+  .grid,
+  [class*="grid-cols"] {
+    display: block !important;
+  }
+
+  .md\:grid-cols-2,
+  .md\:grid-cols-3,
+  .xl\:grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Two-column for stat cards only (they're short) */
+  .space-y-3 > *,
+  .space-y-4 > * {
+    margin-bottom: 6pt !important;
+  }
+
+  /* ── Stat Cards ── */
+  [class*="rounded-xl"][class*="border"][class*="gradient"],
+  div[class*="from-"][class*="d7aa52"] {
+    background: #f9f6ef !important;
+    border: 0.75pt solid #b8902a !important;
+    border-radius: 4pt !important;
+    padding: 8pt 10pt !important;
+    margin-bottom: 6pt !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Stat card title */
+  [class*="text-\[11px\]"][class*="uppercase"],
+  [class*="text-xs"][class*="font-semibold"][class*="uppercase"] {
+    color: #7a5c0a !important;
+    font-size: 7.5pt !important;
+  }
+
+  /* Stat card value */
+  [class*="text-2xl"][class*="font-extrabold"],
+  [class*="text-2xl"] {
+    color: #0a0a0a !important;
+    font-size: 14pt !important;
+  }
+
+  /* ── Tables ── */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 8.5pt !important;
+    page-break-inside: auto;
+  }
+
+  thead {
+    display: table-header-group; /* repeat header on each printed page */
+  }
+
+  thead tr,
+  thead th {
+    background: #f0e8d4 !important;
+    color: #5a3e08 !important;
+    font-weight: 600 !important;
+    border-bottom: 1pt solid #b8902a !important;
+    padding: 5pt 6pt !important;
+    text-align: start !important;
+  }
+
+  tbody tr {
+    border-bottom: 0.5pt solid #e0d4b8 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  tbody td {
+    padding: 4pt 6pt !important;
+    color: #0a0a0a !important;
+    background: transparent !important;
+  }
+
+  /* Alternating row tint */
+  tbody tr:nth-child(even) td {
+    background: #faf7f0 !important;
+  }
+
+  /* Colored cells */
+  .text-amber-200\/80,
+  [class*="amber"] {
+    color: #7a4e00 !important;
+  }
+
+  .text-emerald-200\/80,
+  [class*="emerald"] {
+    color: #1a5c2a !important;
+  }
+
+  /* Scrollable table containers — unwrap for print */
+  .max-h-\[360px\],
+  .max-h-\[300px\],
+  .overflow-auto {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* ── Form inputs — show as plain text ── */
+  input[type="number"],
+  input[type="text"],
+  select,
+  textarea {
+    border: none !important;
+    border-bottom: 0.5pt solid #b8902a !important;
+    background: transparent !important;
+    color: #0a0a0a !important;
+    padding: 2pt 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /* Label */
+  label,
+  .mb-1 {
+    color: #5a3e08 !important;
+    font-size: 7.5pt !important;
+    font-weight: 600 !important;
+  }
+
+  /* ── Charts (recharts) ── */
+  .recharts-wrapper,
+  [class*="ChartCard"] div > div,
+  [style*="width: 100%"][style*="height"] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Chart container fix */
+  .recharts-responsive-container {
+    width: 100% !important;
+    height: 200pt !important;
+  }
+
+  /* Chart background */
+  .recharts-surface {
+    background: transparent !important;
+  }
+
+  /* Chart text */
+  .recharts-text,
+  .recharts-cartesian-axis-tick-value,
+  .recharts-legend-item-text {
+    fill: #444444 !important;
+    color: #444444 !important;
+    font-size: 7pt !important;
+    font-family: "Segoe UI", "Arial", sans-serif !important;
+  }
+
+  /* Grid lines */
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    stroke: #d0c8b0 !important;
+  }
+
+  /* Chart card wrapper */
+  [class*="rounded-xl"][class*="border-\[#d7aa52\]"] {
+    border: 0.75pt solid #b8902a !important;
+    border-radius: 4pt !important;
+    padding: 8pt !important;
+    margin-bottom: 8pt !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Chart title */
+  [class*="text-xs"][class*="font-extrabold"][class*="uppercase"][class*="tracking-wider"],
+  [class*="mb-2"][class*="text-xs"] {
+    color: #5a3e08 !important;
+    font-size: 8pt !important;
+  }
+
+  /* ── Tooltip — hide ── */
+  .recharts-tooltip-wrapper {
+    display: none !important;
+  }
+
+  /* ── Page Breaks ── */
+  .space-y-6 > * + * {
+    page-break-before: auto;
+  }
+
+  h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #5a3e08 !important;
+    font-size: 10pt !important;
+    margin-bottom: 4pt !important;
+  }
+
+  /* ── Print Header (auto-injected via JS) ── */
+  .print-header {
+    display: block !important;
+    border-bottom: 1.5pt solid #b8902a;
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+  }
+
+  .print-header__title {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #0a0a0a;
+  }
+
+  .print-header__meta {
+    font-size: 8pt;
+    color: #666666;
+    margin-top: 3pt;
+  }
+
+  .print-header__logo {
+    display: inline-block;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #7a5c0a;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Framer Motion: remove transforms ── */
+  [style*="transform"],
+  [style*="opacity"] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* ── Misc fixes ── */
+  .backdrop-blur {
+    backdrop-filter: none !important;
+  }
+
+  .bg-gradient-to-br,
+  [class*="from-"],
+  [class*="to-"] {
+    background-image: none !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* Dashed placeholder borders */
+  [class*="border-dashed"] {
+    border-style: solid !important;
+    border-color: #cccccc !important;
   }
 }
