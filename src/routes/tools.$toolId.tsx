@@ -288,8 +288,17 @@ function ToolDetailPage() {
         <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
           <section
             id="tool-report-capture"
+            dir={lang === "ar" ? "rtl" : "ltr"}
+            style={{
+              fontFamily:
+                lang === "ar"
+                  ? "'Cairo', 'Tahoma', Arial, sans-serif"
+                  : "'Inter', Arial, sans-serif",
+              textAlign: lang === "ar" ? "right" : "left",
+            }}
             className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 backdrop-blur-xl md:p-7"
           >
+
             <CalculatorById id={tool.id} lang={lang} />
           </section>
 
