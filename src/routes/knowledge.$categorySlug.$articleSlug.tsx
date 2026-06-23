@@ -321,9 +321,17 @@ function ArticlePage() {
     qc.invalidateQueries({ queryKey: ["kb-bookmark", article.data.id, user?.id] });
   }
 
-  function printPdf() {
-    window.print();
+  async function printPdf() {
+    setPrinting(true);
+    try {
+      if (document.fonts && document.fonts.ready) await document.fonts.ready;
+      await new Promise((r) => setTimeout(r, 200));
+      window.print();
+    } finally {
+      setPrinting(false);
+    }
   }
+
 
   if (!article.data) {
     return (
