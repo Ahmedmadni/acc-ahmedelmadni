@@ -13,6 +13,8 @@ import {
   Share2,
   Sigma,
   Download,
+  Loader2,
+
 } from "lucide-react";
 import { CalculatorById } from "@/components/tools/Calculators";
 import { labelByCategory, toolById, TOOLS } from "@/lib/tools-registry";
