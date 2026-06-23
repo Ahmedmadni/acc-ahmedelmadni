@@ -480,7 +480,7 @@ function ArticlePage() {
             }
             label={bookmarked.data ? "محفوظ" : "حفظ"}
           />
-          <ToolBtn onClick={printPdf} icon={<Printer className="size-3.5" />} label="طباعة / PDF" />
+          <ToolBtn onClick={printPdf} disabled={printing} icon={printing ? <Loader2 className="size-3.5 animate-spin" /> : <Printer className="size-3.5" />} label="طباعة / PDF" />
           <div className="mx-1 h-5 w-px bg-white/10" />
           <div className="flex items-center gap-0.5" aria-label="قيّم المقال">
             {[1, 2, 3, 4, 5].map((n) => (
