@@ -218,15 +218,29 @@ function ToolDetailPage() {
 
         <div className="mt-4 flex flex-wrap gap-2 print:hidden">
           <button
-            onClick={() => window.print()}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+            disabled={printing}
+            onClick={async () => {
+              setPrinting(true);
+              try {
+                if (document.fonts && document.fonts.ready) await document.fonts.ready;
+                await new Promise((r) => setTimeout(r, 200));
+                window.print();
+              } finally {
+                setPrinting(false);
+              }
+            }}
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
           >
-            <Printer className="size-3.5" />
+            {printing ? <Loader2 className="size-3.5 animate-spin" /> : <Printer className="size-3.5" />}
             {lang === "ar" ? "طباعة التقرير" : "Print Report"}
           </button>
           <button
+            disabled={exporting}
             onClick={async () => {
+              setExporting(true);
               try {
+                if (document.fonts && document.fonts.ready) await document.fonts.ready;
+                await new Promise((r) => setTimeout(r, 200));
                 await exportToolReportPdf({
                   elementId: "tool-report-capture",
                   title: tool.title,
@@ -236,13 +250,16 @@ function ToolDetailPage() {
                 });
               } catch (err) {
                 console.error("PDF export failed", err);
+              } finally {
+                setExporting(false);
               }
             }}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95"
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95 disabled:opacity-60"
           >
-            <Download className="size-3.5" />
+            {exporting ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
             {lang === "ar" ? "تحميل PDF" : "Download PDF"}
           </button>
+
           <button
             onClick={onCopyLink}
             className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${copied ? "border-emerald-400/60 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/40 bg-white/[0.04] text-[#f3d28a] hover:bg-[#d7aa52]/10"}`}
