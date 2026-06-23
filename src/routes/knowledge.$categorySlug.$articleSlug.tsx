@@ -649,18 +649,22 @@ function ToolBtn({
   onClick,
   icon,
   label,
+  disabled,
 }: {
   onClick: () => void;
   icon: React.ReactNode;
   label: string;
+  disabled?: boolean;
 }) {
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+      disabled={disabled}
+      className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 disabled:opacity-60"
     >
       {icon}
       {label}
     </button>
   );
 }
+
