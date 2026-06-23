@@ -244,8 +244,11 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       console.error("CV PDF export failed", e);
       alert(isAR ? "تعذّر تصدير الملف. حاول مجددًا." : "Export failed. Please try again.");
     } finally {
+      document.body.classList.remove("pdf-export-mode");
+      node.classList.remove("pdf-arabic-safe");
       setLoading(false);
     }
+
   };
 
   /* ================= RENDER ================= */
