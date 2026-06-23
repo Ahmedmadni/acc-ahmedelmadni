@@ -661,10 +661,10 @@ function Hero({ lang }: { lang: Lang }) {
         <div className="absolute bottom-1/4 left-[10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14),transparent_70%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto w-[96%] max-w-[1400px] px-2 sm:px-4 lg:px-8">
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16">
         {/* single-column layout — portrait hidden */}
         <div className="flex flex-col">
-          {/* TEXT column — full width */}
+          {/* TEXT column — full width, RTL aligned */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -730,7 +730,7 @@ function Hero({ lang }: { lang: Lang }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1 }}
-          className="mt-16 rounded-[24px] border border-white/10 bg-[#0D1726]/70 p-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:p-5"
+          className="mt-16 rounded-[24px] border border-white/10 bg-[#0D1726]/70 p-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:p-5 mx-auto max-w-[1400px]"
         >
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f, i) => {
