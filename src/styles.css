@@ -596,6 +596,42 @@ body.pdf-export-mode #tool-report-capture td {
   color: #0b1220 !important;
 }
 
+/* Arabic shaping fixes for print + html2canvas capture.
+   Fragmented words / overlapping glyphs happen when letter-spacing,
+   word-spacing, transforms, or non-Arabic fonts break the shaping pipeline. */
+body.pdf-export-mode #tool-report-capture,
+body.pdf-export-mode #tool-report-capture *,
+.pdf-arabic-safe,
+.pdf-arabic-safe * {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  font-feature-settings: normal !important;
+  font-variant-ligatures: normal !important;
+  font-kerning: normal !important;
+  text-rendering: optimizeLegibility !important;
+  transform: none !important;
+  filter: none !important;
+  white-space: normal !important;
+  font-family: "Cairo", "Tahoma", Arial, sans-serif !important;
+  unicode-bidi: isolate;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    font-feature-settings: normal !important;
+    font-variant-ligatures: normal !important;
+    font-kerning: normal !important;
+    text-rendering: optimizeLegibility !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+
 /* ============ Premium Polish (visual-only) ============ */
 
 /* Page enter transition — applied to <main> by route shells */

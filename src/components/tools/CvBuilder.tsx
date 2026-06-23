@@ -186,6 +186,8 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     const node = previewRef.current;
     if (!node) return;
     setLoading(true);
+    document.body.classList.add("pdf-export-mode");
+    node.classList.add("pdf-arabic-safe");
     try {
       // Ensure web fonts (Cairo for Arabic) are fully loaded
       if (document.fonts && document.fonts.ready) await document.fonts.ready;
@@ -200,6 +202,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         windowWidth: node.scrollWidth,
         windowHeight: node.scrollHeight,
       });
+
 
       const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -241,8 +244,11 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       console.error("CV PDF export failed", e);
       alert(isAR ? "تعذّر تصدير الملف. حاول مجددًا." : "Export failed. Please try again.");
     } finally {
+      document.body.classList.remove("pdf-export-mode");
+      node.classList.remove("pdf-arabic-safe");
       setLoading(false);
     }
+
   };
 
   /* ================= RENDER ================= */
