@@ -219,6 +219,8 @@ function ArticlePage() {
   });
 
   const [user, setUser] = useState<{ id: string } | null>(null);
+  const [printing, setPrinting] = useState(false);
+
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user ? { id: data.user.id } : null));
     const { data: sub } = supabase.auth.onAuthStateChange((_e, s) =>
