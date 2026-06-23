@@ -53,7 +53,7 @@ function RequestService({ lang }: { lang: Lang }) {
 
   return (
     <section className="relative py-14">
-      <div className="mx-auto w-[92%] max-w-5xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <div className="mb-6 flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
           <Link to="/" className="inline-flex items-center gap-1 hover:text-[#d7aa52]">
             <Home className="size-3.5" />

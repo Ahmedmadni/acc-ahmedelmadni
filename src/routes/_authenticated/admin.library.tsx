@@ -82,7 +82,7 @@ function AdminLibraryPage() {
   return (
     <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
       <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 w-[92%] max-w-7xl items-center justify-between">
+        <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
           <div className="flex items-center gap-3">
             <BookOpen className="size-5 text-[#f3d28a]" />
             <h1 className="text-base font-extrabold text-[#f3d28a]">
@@ -106,7 +106,7 @@ function AdminLibraryPage() {
         </div>
       </header>
 
-      <div className="mx-auto w-[94%] max-w-7xl py-8">
+      <div className="w-full px-4 sm:px-8 lg:px-16 py-8">
         <Tabs defaultValue="articles" className="w-full">
           <TabsList className="bg-[#07182c] border border-[#d7aa52]/20">
             <TabsTrigger value="articles">المقالات</TabsTrigger>
