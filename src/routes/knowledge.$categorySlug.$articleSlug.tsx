@@ -11,6 +11,8 @@ import {
   Link as LinkIcon,
   MessageCircle,
   Printer,
+  Loader2,
+
   Bookmark,
   Star,
   ExternalLink,
