@@ -108,6 +108,9 @@ function ToolDetailPage() {
   const { tool } = Route.useLoaderData();
   const [lang, setLang] = useState<Lang>("ar");
   const [copied, setCopied] = useState(false);
+  const [exporting, setExporting] = useState(false);
+  const [printing, setPrinting] = useState(false);
+
   const isRTL = lang === "ar";
 
   const related = TOOLS.filter((t) => t.category === tool.category && t.id !== tool.id).slice(0, 3);
