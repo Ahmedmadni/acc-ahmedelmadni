@@ -29,21 +29,25 @@ const BRAND = {
 /** Capture a DOM element to a high-resolution canvas using a temporary light theme. */
 async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
   document.body.classList.add("pdf-export-mode");
-  // give the browser a tick to apply styles
-  await new Promise((r) => setTimeout(r, 50));
+  // Ensure web fonts (Cairo for Arabic / Inter for English) are fully loaded
+  if (document.fonts && document.fonts.ready) await document.fonts.ready;
+  await new Promise((r) => setTimeout(r, 200));
   try {
     const canvas = await html2canvas(el, {
       backgroundColor: "#ffffff",
-      scale: Math.min(2, (window.devicePixelRatio || 1) * 1.5),
+      scale: 2,
       useCORS: true,
+      allowTaint: true,
       logging: false,
       windowWidth: el.scrollWidth,
+      windowHeight: el.scrollHeight,
     });
     return canvas;
   } finally {
     document.body.classList.remove("pdf-export-mode");
   }
 }
+
 
 export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
   const el = document.getElementById(opts.elementId);
