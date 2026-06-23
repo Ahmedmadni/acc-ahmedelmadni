@@ -448,10 +448,27 @@ html.light .bg-video-overlay {
 
 /* ============ Print / PDF export ============ */
 @media print {
-  @page {
-    size: A4;
-    margin: 14mm;
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
+  @page {
+    size: A4 portrait;
+    margin: 18mm;
+  }
+  body {
+    font-family: "Cairo", "Tahoma", Arial, sans-serif;
+  }
+  html[dir="rtl"] body,
+  body[dir="rtl"] {
+    direction: rtl;
+  }
+  html[lang="en"] body,
+  html:not([dir="rtl"]) body {
+    direction: ltr;
+    font-family: "Inter", Arial, sans-serif;
+  }
+
   .tool-print-page {
     background: #ffffff !important;
     color: #0b1220 !important;

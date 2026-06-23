@@ -11,6 +11,8 @@ import {
   Link as LinkIcon,
   MessageCircle,
   Printer,
+  Loader2,
+
   Bookmark,
   Star,
   ExternalLink,
@@ -217,6 +219,8 @@ function ArticlePage() {
   });
 
   const [user, setUser] = useState<{ id: string } | null>(null);
+  const [printing, setPrinting] = useState(false);
+
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user ? { id: data.user.id } : null));
     const { data: sub } = supabase.auth.onAuthStateChange((_e, s) =>
@@ -317,9 +321,17 @@ function ArticlePage() {
     qc.invalidateQueries({ queryKey: ["kb-bookmark", article.data.id, user?.id] });
   }
 
-  function printPdf() {
-    window.print();
+  async function printPdf() {
+    setPrinting(true);
+    try {
+      if (document.fonts && document.fonts.ready) await document.fonts.ready;
+      await new Promise((r) => setTimeout(r, 200));
+      window.print();
+    } finally {
+      setPrinting(false);
+    }
   }
+
 
   if (!article.data) {
     return (
@@ -468,7 +480,7 @@ function ArticlePage() {
             }
             label={bookmarked.data ? "محفوظ" : "حفظ"}
           />
-          <ToolBtn onClick={printPdf} icon={<Printer className="size-3.5" />} label="طباعة / PDF" />
+          <ToolBtn onClick={printPdf} disabled={printing} icon={printing ? <Loader2 className="size-3.5 animate-spin" /> : <Printer className="size-3.5" />} label="طباعة / PDF" />
           <div className="mx-1 h-5 w-px bg-white/10" />
           <div className="flex items-center gap-0.5" aria-label="قيّم المقال">
             {[1, 2, 3, 4, 5].map((n) => (
@@ -649,18 +661,22 @@ function ToolBtn({
   onClick,
   icon,
   label,
+  disabled,
 }: {
   onClick: () => void;
   icon: React.ReactNode;
   label: string;
+  disabled?: boolean;
 }) {
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+      disabled={disabled}
+      className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 disabled:opacity-60"
     >
       {icon}
       {label}
     </button>
   );
 }
+
