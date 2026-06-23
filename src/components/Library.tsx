@@ -288,7 +288,7 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
   return (
     <section id="library" className="relative py-14">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent" />
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         {/* Title */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }} className="title-bar">

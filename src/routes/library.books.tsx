@@ -68,7 +68,7 @@ function BooksPage() {
     <>
       {(uploaded.data?.length ?? 0) > 0 && (
         <section className="relative pt-10">
-          <div className="mx-auto w-[92%] max-w-6xl">
+          <div className="w-full px-4 sm:px-8 lg:px-16">
             <div className="mb-4 flex items-center gap-2">
               <FileText className="size-5 text-[#f3d28a]" />
               <h2 className="text-lg font-extrabold text-[#f3d28a]">

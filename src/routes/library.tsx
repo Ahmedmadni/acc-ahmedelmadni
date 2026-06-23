@@ -74,7 +74,7 @@ function LibraryLayout() {
                 transition={{ type: "spring", stiffness: 260, damping: 30 }}
                 className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl"
               >
-                <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between">
+                <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
                   <Link
                     to="/"
                     className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
@@ -107,7 +107,7 @@ function LibraryLayout() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="mx-auto mt-6 w-[92%] max-w-6xl"
+                className="w-full px-4 sm:px-8 lg:px-16 mt-6 "
               >
                 <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
                   {tabs.map(({ id, ar, en, Icon, to }) => {

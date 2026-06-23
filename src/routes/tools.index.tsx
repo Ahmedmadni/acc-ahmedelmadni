@@ -250,7 +250,7 @@ function ToolsPage() {
   return (
     <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
       <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between">
+        <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
           <Link to="/" className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15">
             <ArrowLeft className="size-3.5" />
             {lang === "ar" ? "الرئيسية" : "Home"}
@@ -268,7 +268,7 @@ function ToolsPage() {
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(215,170,82,0.18),transparent_50%),radial-gradient(circle_at_80%_30%,rgba(215,170,82,0.12),transparent_60%)]" />
-        <div className="mx-auto w-[92%] max-w-6xl py-12 md:py-16">
+        <div className="w-full px-4 sm:px-8 lg:px-16 py-12 md:py-16">
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold text-[#f3d28a]">
               <Wrench className="size-3.5" />

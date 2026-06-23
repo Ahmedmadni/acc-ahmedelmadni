@@ -389,7 +389,7 @@ export function Navbar({
       className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--line)] backdrop-blur-xl"
       style={{ background: "color-mix(in oklab, var(--bg-surface) 70%, transparent)" }}
     >
-      <div className="mx-auto flex h-20 w-[92%] max-w-7xl items-center justify-between">
+      <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20  items-center justify-between">
         <RouterLink to="/" className="group flex flex-col leading-tight" onMouseEnter={playHover}>
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
@@ -792,7 +792,7 @@ function Stats({ lang }: { lang: Lang }) {
   const icons = [TrendingUp, Target, Calculator, FileText];
   return (
     <section className="relative py-12">
-      <div className="mx-auto grid w-[92%] max-w-6xl grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="w-full px-4 sm:px-8 lg:px-16 grid  grid-cols-2 gap-4 sm:grid-cols-4">
         {t.stats.map((s, i) => {
           const Icon = icons[i];
           return (
@@ -824,7 +824,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   return (
     <section id="about" className="relative py-14">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           {/* Image */}
           <motion.div
@@ -924,7 +924,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
 export function About({ lang }: { lang: Lang }) {
   return (
     <section id="about" className="py-14">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
         <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
           <motion.div
@@ -995,7 +995,7 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
         <img src={servicesBg} alt="" className="h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)] via-transparent to-[var(--bg-surface)]" />
       </div>
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "الخدمات" : "Services"}
           title={t.services.title[lang]}
@@ -1105,7 +1105,7 @@ export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang:
 export function Experience({ lang }: { lang: Lang }) {
   return (
     <section id="experience" className="py-14">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "المسيرة المهنية" : "Career"}
           title={t.experience.title[lang]}
@@ -1225,7 +1225,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
         aria-hidden
         className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent"
       />
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "المهارات" : "Skills"}
           title={t.skills.title[lang]}
@@ -1454,7 +1454,7 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
 
   return (
     <section className="py-14">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
           title={t.beforeAfter.title[lang]}
@@ -1508,7 +1508,7 @@ function Testimonials({ lang }: { lang: Lang }) {
   const loop = [...items, ...items];
   return (
     <section className="py-14">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
           title={t.testimonials.title[lang]}
@@ -1560,7 +1560,7 @@ function Testimonials({ lang }: { lang: Lang }) {
 export function Certs({ lang }: { lang: Lang }) {
   return (
     <section className="py-14">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle eyebrow={lang === "ar" ? "التطوير المهني" : "Development"} title={t.certs.title[lang]} />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.certs.items.map((c, i) => (
@@ -1588,7 +1588,7 @@ export function Certs({ lang }: { lang: Lang }) {
 export function Contact({ lang }: { lang: Lang }) {
   return (
     <section id="contact" className="py-8">
-      <div className="mx-auto w-[92%] max-w-6xl">
+      <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "تواصل" : "Contact"}
           title={t.contact.title[lang]}
@@ -1661,7 +1661,7 @@ export function Footer({ lang }: { lang: Lang }) {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent"
       />
 
-      <div className="mx-auto grid w-[92%] max-w-6xl gap-6 md:grid-cols-3">
+      <div className="w-full px-4 sm:px-8 lg:px-16 grid  gap-6 md:grid-cols-3">
         <div>
           <div className="text-lg font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
           <p className="mt-1.5 max-w-md text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
@@ -1719,7 +1719,7 @@ export function Footer({ lang }: { lang: Lang }) {
       </div>
 
       <div
-        className="mx-auto mt-4 flex w-[92%] max-w-6xl flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row"
+        className="w-full px-4 sm:px-8 lg:px-16 mt-4 flex  flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row"
         style={{ color: "var(--fg-soft)" }}
       >
         <span>{t.footer.rights[lang]}</span>
