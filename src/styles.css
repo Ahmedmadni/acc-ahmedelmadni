@@ -600,7 +600,9 @@ body.pdf-export-mode #tool-report-capture td {
    Fragmented words / overlapping glyphs happen when letter-spacing,
    word-spacing, transforms, or non-Arabic fonts break the shaping pipeline. */
 body.pdf-export-mode #tool-report-capture,
-body.pdf-export-mode #tool-report-capture * {
+body.pdf-export-mode #tool-report-capture *,
+.pdf-arabic-safe,
+.pdf-arabic-safe * {
   letter-spacing: normal !important;
   word-spacing: normal !important;
   font-feature-settings: normal !important;
@@ -611,7 +613,9 @@ body.pdf-export-mode #tool-report-capture * {
   filter: none !important;
   white-space: normal !important;
   font-family: "Cairo", "Tahoma", Arial, sans-serif !important;
+  unicode-bidi: isolate;
 }
+
 @media print {
   *,
   *::before,
