@@ -1327,13 +1327,27 @@ img {
   input,
   select,
   textarea,
+  .tool-print-page input,
+  .tool-print-page select,
+  .tool-print-page textarea,
+  #tool-report-capture input,
+  #tool-report-capture select,
+  #tool-report-capture textarea,
   input[type="number"],
   input[type="text"],
-  input[type="date"] {
+  input[type="date"],
+  .tool-print-page input[type="number"],
+  .tool-print-page input[type="text"],
+  .tool-print-page input[type="date"],
+  #tool-report-capture input[type="number"],
+  #tool-report-capture input[type="text"],
+  #tool-report-capture input[type="date"] {
     min-height: auto !important;
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
     line-height: 1.6 !important;
     padding: 2pt 4pt !important;
     border: none !important;
