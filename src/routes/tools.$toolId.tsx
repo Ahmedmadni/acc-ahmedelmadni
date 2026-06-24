@@ -186,7 +186,11 @@ function ToolDetailPage() {
       </header>
 
       <main className="mx-auto w-[92%] max-w-6xl py-8 md:py-12">
-        <div className="print-only mb-6 border-b-2 border-[#d7aa52] pb-4">
+        <div
+          dir={lang === "ar" ? "rtl" : "ltr"}
+          className="print-only mb-6 border-b-2 border-[#d7aa52] pb-4"
+          style={{ fontFamily: lang === "ar" ? "'Cairo', 'Tahoma', Arial, sans-serif" : "'Inter', Arial, sans-serif" }}
+        >
           <div className="text-xs font-bold uppercase tracking-widest text-[#8a5a13]">
             Ahmed Elmadani — Smart Accounting Tools
           </div>
@@ -289,6 +293,7 @@ function ToolDetailPage() {
           <section
             id="tool-report-capture"
             dir={lang === "ar" ? "rtl" : "ltr"}
+            lang={lang}
             style={{
               fontFamily:
                 lang === "ar"

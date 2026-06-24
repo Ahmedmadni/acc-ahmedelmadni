@@ -188,6 +188,26 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     setLoading(true);
     document.body.classList.add("pdf-export-mode");
     node.classList.add("pdf-arabic-safe");
+    const touched = [node, ...Array.from(node.querySelectorAll<HTMLElement>("*"))];
+    const previousStyles = touched.map((el) => ({
+      el,
+      transform: el.style.transform,
+      filter: el.style.filter,
+      letterSpacing: el.style.letterSpacing,
+      wordSpacing: el.style.wordSpacing,
+      fontFamily: el.style.fontFamily,
+      unicodeBidi: el.style.unicodeBidi,
+      direction: el.style.direction,
+    }));
+    touched.forEach((el) => {
+      el.style.transform = "none";
+      el.style.filter = "none";
+      el.style.letterSpacing = "0";
+      el.style.wordSpacing = "0";
+      el.style.fontFamily = "\"Cairo\", \"Tahoma\", Arial, sans-serif";
+      el.style.unicodeBidi = "isolate";
+      if (node.getAttribute("dir") === "rtl") el.style.direction = "rtl";
+    });
     try {
       // Ensure web fonts (Cairo for Arabic) are fully loaded
       if (document.fonts && document.fonts.ready) await document.fonts.ready;
@@ -244,6 +264,15 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       console.error("CV PDF export failed", e);
       alert(isAR ? "تعذّر تصدير الملف. حاول مجددًا." : "Export failed. Please try again.");
     } finally {
+      previousStyles.forEach(({ el, transform, filter, letterSpacing, wordSpacing, fontFamily, unicodeBidi, direction }) => {
+        el.style.transform = transform;
+        el.style.filter = filter;
+        el.style.letterSpacing = letterSpacing;
+        el.style.wordSpacing = wordSpacing;
+        el.style.fontFamily = fontFamily;
+        el.style.unicodeBidi = unicodeBidi;
+        el.style.direction = direction;
+      });
       document.body.classList.remove("pdf-export-mode");
       node.classList.remove("pdf-arabic-safe");
       setLoading(false);
