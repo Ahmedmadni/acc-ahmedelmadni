@@ -520,9 +520,17 @@ html.light .bg-video-overlay {
   .tool-print-page input,
   .tool-print-page select,
   .tool-print-page textarea {
-    background: #ffffff !important;
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    line-height: 1.6 !important;
+    padding: 2pt 4pt !important;
+    background: transparent !important;
     color: #0b1220 !important;
-    border: 1px solid #cbd5e1 !important;
+    border: none !important;
+    border-bottom: 1pt solid #b8902a !important;
+    border-radius: 0 !important;
   }
   .tool-print-page table {
     border-collapse: collapse !important;
