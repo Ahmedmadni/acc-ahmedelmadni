@@ -520,9 +520,17 @@ html.light .bg-video-overlay {
   .tool-print-page input,
   .tool-print-page select,
   .tool-print-page textarea {
-    background: #ffffff !important;
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    line-height: 1.6 !important;
+    padding: 2pt 4pt !important;
+    background: transparent !important;
     color: #0b1220 !important;
-    border: 1px solid #cbd5e1 !important;
+    border: none !important;
+    border-bottom: 1pt solid #b8902a !important;
+    border-radius: 0 !important;
   }
   .tool-print-page table {
     border-collapse: collapse !important;
@@ -581,9 +589,17 @@ body.pdf-export-mode #tool-report-capture .text-\[var\(--fg-soft\)\] {
 body.pdf-export-mode #tool-report-capture input,
 body.pdf-export-mode #tool-report-capture select,
 body.pdf-export-mode #tool-report-capture textarea {
-  background: #ffffff !important;
+  min-height: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  line-height: 1.6 !important;
+  padding: 2pt 4pt !important;
+  border: none !important;
+  border-bottom: 1pt solid #b8902a !important;
+  background: transparent !important;
   color: #0b1220 !important;
-  border: 1px solid #cbd5e1 !important;
+  border-radius: 0 !important;
 }
 body.pdf-export-mode #tool-report-capture button {
   background: #ffffff !important;
@@ -603,8 +619,8 @@ body.pdf-export-mode #tool-report-capture,
 body.pdf-export-mode #tool-report-capture *,
 .pdf-arabic-safe,
 .pdf-arabic-safe * {
-  letter-spacing: normal !important;
-  word-spacing: normal !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
   font-feature-settings: normal !important;
   font-variant-ligatures: normal !important;
   font-kerning: normal !important;
@@ -614,6 +630,38 @@ body.pdf-export-mode #tool-report-capture *,
   white-space: normal !important;
   font-family: "Cairo", "Tahoma", Arial, sans-serif !important;
   unicode-bidi: isolate;
+}
+
+body.pdf-export-mode #tool-report-capture[dir="rtl"],
+body.pdf-export-mode #tool-report-capture[lang="ar"],
+.pdf-arabic-safe[dir="rtl"],
+.pdf-arabic-safe[lang="ar"] {
+  direction: rtl !important;
+  unicode-bidi: isolate !important;
+}
+
+body.pdf-export-mode #tool-report-capture[dir="rtl"] *,
+body.pdf-export-mode #tool-report-capture[lang="ar"] *,
+.pdf-arabic-safe[dir="rtl"] *,
+.pdf-arabic-safe[lang="ar"] * {
+  direction: rtl;
+  unicode-bidi: isolate !important;
+}
+
+body.pdf-export-mode #tool-report-capture .grid,
+body.pdf-export-mode #tool-report-capture [data-official-entity-grid] {
+  display: grid !important;
+}
+
+body.pdf-export-mode #tool-report-capture [data-official-entity-grid],
+body.pdf-export-mode #tool-report-capture .md\:grid-cols-3,
+body.pdf-export-mode #tool-report-capture .grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+body.pdf-export-mode #tool-report-capture .md\:grid-cols-2,
+body.pdf-export-mode #tool-report-capture .grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 
 @media print {
@@ -1238,5 +1286,133 @@ img {
   [class*="border-dashed"] {
     border-style: solid !important;
     border-color: #cccccc !important;
+  }
+
+  /* ── Final Arabic-safe print/export overrides ── */
+  *,
+  *::before,
+  *::after,
+  #tool-report-capture,
+  #tool-report-capture *,
+  .tool-print-page,
+  .tool-print-page *,
+  .print-header,
+  .print-header * {
+    font-family: "Cairo", "Tahoma", Arial, sans-serif !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    letter-spacing: 0 !important;
+    word-spacing: 0 !important;
+    transform: none !important;
+    filter: none !important;
+    font-feature-settings: normal !important;
+    font-variant-ligatures: normal !important;
+    font-kerning: normal !important;
+    text-rendering: optimizeLegibility !important;
+  }
+
+  html[dir="rtl"],
+  body[dir="rtl"],
+  [lang="ar"],
+  [dir="rtl"],
+  #tool-report-capture[lang="ar"],
+  #tool-report-capture[dir="rtl"],
+  .tool-print-page[dir="rtl"] {
+    direction: rtl !important;
+    unicode-bidi: isolate !important;
+  }
+
+  html[lang="en"],
+  html[lang="en"] body,
+  [lang="en"],
+  [dir="ltr"],
+  #tool-report-capture[lang="en"],
+  #tool-report-capture[dir="ltr"] {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+  }
+
+  input,
+  select,
+  textarea,
+  .tool-print-page input,
+  .tool-print-page select,
+  .tool-print-page textarea,
+  #tool-report-capture input,
+  #tool-report-capture select,
+  #tool-report-capture textarea,
+  input[type="number"],
+  input[type="text"],
+  input[type="date"],
+  .tool-print-page input[type="number"],
+  .tool-print-page input[type="text"],
+  .tool-print-page input[type="date"],
+  #tool-report-capture input[type="number"],
+  #tool-report-capture input[type="text"],
+  #tool-report-capture input[type="date"] {
+    min-height: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    line-height: 1.6 !important;
+    padding: 2pt 4pt !important;
+    border: none !important;
+    border-bottom: 1pt solid #b8902a !important;
+    background: transparent !important;
+    color: #0b1220 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  #tool-report-capture .grid,
+  .tool-print-page .grid,
+  #tool-report-capture [data-official-entity-grid],
+  .tool-print-page [data-official-entity-grid] {
+    display: grid !important;
+  }
+
+  #tool-report-capture header,
+  .tool-print-page #tool-report-capture header,
+  .tool-print-page section header {
+    display: block !important;
+  }
+
+  #tool-report-capture .overflow-hidden,
+  .tool-print-page #tool-report-capture .overflow-hidden {
+    overflow: visible !important;
+  }
+
+  #tool-report-capture [data-official-entity-grid],
+  .tool-print-page [data-official-entity-grid],
+  #tool-report-capture .md\:grid-cols-3,
+  .tool-print-page .md\:grid-cols-3,
+  #tool-report-capture .grid-cols-3,
+  .tool-print-page .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  #tool-report-capture .md\:grid-cols-2,
+  .tool-print-page .md\:grid-cols-2,
+  #tool-report-capture .grid-cols-2,
+  .tool-print-page .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #tool-report-capture .xl\:grid-cols-4,
+  .tool-print-page .xl\:grid-cols-4,
+  #tool-report-capture .grid-cols-4,
+  .tool-print-page .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .print-header {
+    direction: inherit !important;
+    unicode-bidi: isolate !important;
+    font-family: "Cairo", "Tahoma", Arial, sans-serif !important;
   }
 }

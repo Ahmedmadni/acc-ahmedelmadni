@@ -87,7 +87,7 @@ export function EntityHeaderForm({
 
   return (
     <SectionCard title={t("بيانات المنشأة", "Entity Information")}>
-      <div className="grid gap-3 md:grid-cols-3">
+      <div data-official-entity-grid className="grid gap-3 md:grid-cols-3">
         <Field label={t("الرقم المالي", "Financial Number")}>
           <input className={inputCls} value={value.financialNo} onChange={(e) => set("financialNo", e.target.value)} />
         </Field>
