@@ -1354,6 +1354,17 @@ img {
     display: grid !important;
   }
 
+  #tool-report-capture header,
+  .tool-print-page #tool-report-capture header,
+  .tool-print-page section header {
+    display: block !important;
+  }
+
+  #tool-report-capture .overflow-hidden,
+  .tool-print-page #tool-report-capture .overflow-hidden {
+    overflow: visible !important;
+  }
+
   #tool-report-capture [data-official-entity-grid],
   .tool-print-page [data-official-entity-grid],
   #tool-report-capture .md\:grid-cols-3,
