@@ -106,6 +106,46 @@ function Area({
   );
 }
 
+function AiActions({
+  lang,
+  loading,
+  section,
+  onRun,
+}: {
+  lang: Lang;
+  loading: string | null;
+  section: string;
+  onRun: (action: CvAssistantAction) => void;
+}) {
+  const actions: { id: CvAssistantAction; ar: string; en: string }[] = [
+    { id: "generate", ar: "توليد", en: "Generate" },
+    { id: "improve", ar: "تحسين", en: "Improve" },
+    { id: "shorten", ar: "اختصار", en: "Shorten" },
+    { id: "expand", ar: "توسيع", en: "Expand" },
+    { id: "professionalize", ar: "احترافي", en: "Professionalize" },
+    { id: "ats", ar: "ATS", en: "ATS" },
+  ];
+  return (
+    <div className="mt-2 flex flex-wrap gap-1.5">
+      {actions.map((action) => {
+        const active = loading === `${section}-${action.id}`;
+        return (
+          <button
+            key={action.id}
+            type="button"
+            disabled={!!loading}
+            onClick={() => onRun(action.id)}
+            className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/35 bg-[#d7aa52]/5 px-2 py-1 text-[10px] font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
+          >
+            {active ? <Loader2 className="size-3 animate-spin" /> : <Wand2 className="size-3" />}
+            {lang === "ar" ? action.ar : action.en}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 /* ================= MAIN ================= */
 
 export function CvBuilder({ lang }: { lang: Lang }) {
