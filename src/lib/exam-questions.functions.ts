@@ -163,6 +163,25 @@ export const updateExamQuestionStatus = createServerFn({ method: "POST" })
     return { ok: true };
   });
 
+export const updateExamQuestion = createServerFn({ method: "POST" })
+  .middleware([requireAdmin])
+  .inputValidator((d: unknown) =>
+    z.object({
+      id: z.string().uuid(),
+      question_ar: z.string().min(1).max(2000).optional(),
+      question_en: z.string().min(1).max(2000).optional(),
+      explanation_ar: z.string().max(4000).optional(),
+      explanation_en: z.string().max(4000).optional(),
+      topic: z.string().max(200).optional(),
+    }).parse(d),
+  )
+  .handler(async ({ data, context }) => {
+    const { id, ...patch } = data;
+    const { error } = await context.supabase.from("exam_questions").update(patch).eq("id", id);
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
+
 /** Aggregate counts per track — useful for debug & user feedback. */
 export const examQuestionsStats = createServerFn({ method: "GET" })
   .handler(async () => {
