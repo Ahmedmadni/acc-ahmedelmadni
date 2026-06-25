@@ -158,6 +158,7 @@ export function useDeclarationActions(opts: {
   const [explanation, setExplanation] = useState<string | null>(null);
   const [explaining, setExplaining] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [exportingPdf, setExportingPdf] = useState(false);
   const [isAuthed, setIsAuthed] = useState(false);
 
   useEffect(() => {
@@ -168,6 +169,7 @@ export function useDeclarationActions(opts: {
   const saveFn = useServerFn(saveDeclarationFn);
 
   const onPdf = async () => {
+    setExportingPdf(true);
     try {
       await exportToolReportPdf({
         elementId: "tool-report-capture",
@@ -176,6 +178,8 @@ export function useDeclarationActions(opts: {
       });
     } catch (e) {
       toast.error((e as Error).message);
+    } finally {
+      setExportingPdf(false);
     }
   };
 
@@ -228,7 +232,7 @@ export function useDeclarationActions(opts: {
     }
   };
 
-  return { period, setPeriod, isAuthed, explanation, explaining, saving, onPdf, onExcel, onExplain, onSave };
+  return { period, setPeriod, isAuthed, explanation, explaining, saving, exportingPdf, onPdf, onExcel, onExplain, onSave };
 }
 
 export function PeriodField({ value, onChange, lang }: { value: string; onChange: (v: string) => void; lang: Lang }) {
