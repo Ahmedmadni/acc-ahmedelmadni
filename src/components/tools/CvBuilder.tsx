@@ -221,15 +221,20 @@ export function CvBuilder({ lang }: { lang: Lang }) {
 
   const dir = isAR ? "rtl" : "ltr";
   const heading = isAR
-    ? { info: "البيانات الشخصية", summary: "نبذة", exp: "الخبرة العملية", edu: "التعليم", skills: "المهارات", langs: "اللغات", certs: "الشهادات", export: "تصدير PDF", add: "إضافة", preview: "معاينة السيرة الذاتية", form: "بيانات السيرة الذاتية" }
-    : { info: "Personal Info", summary: "Summary", exp: "Experience", edu: "Education", skills: "Skills", langs: "Languages", certs: "Certifications", export: "Export PDF", add: "Add", preview: "CV Preview", form: "CV Data" };
+    ? { info: "البيانات الشخصية", summary: "نبذة", exp: "الخبرة العملية", edu: "التعليم", skills: "المهارات", langs: "اللغات", certs: "الشهادات", export: "تصدير PDF", add: "إضافة", preview: "معاينة السيرة الذاتية", form: "بيانات السيرة الذاتية", templates: "قوالب السيرة", score: "جودة السيرة", ai: "مساعد الكتابة" }
+    : { info: "Personal Info", summary: "Summary", exp: "Experience", edu: "Education", skills: "Skills", langs: "Languages", certs: "Certifications", export: "Export PDF", add: "Add", preview: "CV Preview", form: "CV Data", templates: "CV Templates", score: "CV Quality", ai: "Writing Assistant" };
 
   return (
     <div dir={dir} className="w-full px-4 py-6 space-y-8">
       {/* ============= PREVIEW (TOP, FULL WIDTH) ============= */}
       <div className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 className="text-lg font-extrabold text-[#f3d28a]">{heading.preview}</h2>
+          <div>
+            <h2 className="text-lg font-extrabold text-[#f3d28a]">{heading.preview}</h2>
+            <div className="mt-1 text-xs font-bold text-[var(--fg-soft)]">
+              {heading.score}: <span className="text-[#f3d28a]">{quality.score}%</span>
+            </div>
+          </div>
           <button
             onClick={exportPDF}
             disabled={loading}
@@ -238,6 +243,23 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
             {heading.export}
           </button>
+        </div>
+
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {CV_TEMPLATES.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => setTemplateId(item.id)}
+              className={`rounded-xl border p-3 text-start transition ${templateId === item.id ? "border-[#f3d28a] bg-[#d7aa52]/15" : "border-[#d7aa52]/25 bg-white/[0.03] hover:bg-white/[0.06]"}`}
+            >
+              <div className="mb-2 flex h-12 overflow-hidden rounded-md border border-white/10 bg-white">
+                <span className="w-1/3" style={{ background: item.secondary }} />
+                <span className="flex-1 p-2"><i className="block h-1.5 w-16 rounded" style={{ background: item.accent }} /><i className="mt-2 block h-1 w-24 rounded bg-slate-200" /><i className="mt-1 block h-1 w-14 rounded bg-slate-200" /></span>
+              </div>
+              <div className="text-xs font-extrabold text-[#f3d28a]">{item.name[lang]}</div>
+              <div className="mt-1 text-[11px] text-[var(--fg-soft)]">{item.description[lang]}</div>
+            </button>
+          ))}
         </div>
 
         <div className="rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/40 p-3 max-h-[80vh] overflow-auto">
@@ -258,11 +280,11 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             }}
           >
             {/* HEADER */}
-            <div style={{ borderBottom: "3px solid #b8862e", paddingBottom: "10px", marginBottom: "14px" }}>
+            <div style={{ borderBottom: `3px solid ${template.accent}`, paddingBottom: "10px", marginBottom: "14px", background: template.layout === "sidebar" ? `linear-gradient(${isAR ? "270deg" : "90deg"}, ${template.secondary} 0 28%, transparent 28%)` : "transparent", paddingInlineStart: template.layout === "sidebar" ? "10mm" : undefined, color: template.layout === "sidebar" ? "#ffffff" : undefined }}>
               <h1 style={{ fontSize: "28px", fontWeight: 800, margin: 0, color: "#0b1220" }}>
                 {data.fullName || (isAR ? "الاسم الكامل" : "Full Name")}
               </h1>
-              <p style={{ fontSize: "15px", color: "#b8862e", margin: "4px 0 8px", fontWeight: 700 }}>
+              <p style={{ fontSize: "15px", color: template.accent, margin: "4px 0 8px", fontWeight: 700 }}>
                 {data.jobTitle || (isAR ? "المسمى الوظيفي" : "Job Title")}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", fontSize: "12px", color: "#475569" }}>
