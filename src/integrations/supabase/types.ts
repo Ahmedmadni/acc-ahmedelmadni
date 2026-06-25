@@ -21,13 +21,18 @@ export type Database = {
           choices_en: Json
           created_at: string
           created_by: string | null
+          difficulty: string
+          duplicate_hash: string | null
+          exam_domain: string
           explanation_ar: string
           explanation_en: string
           id: string
           is_public: boolean
           question_ar: string
           question_en: string
+          question_type: string
           reference: string
+          status: string
           topic: string
           track: Database["public"]["Enums"]["exam_track"]
           updated_at: string
@@ -38,13 +43,18 @@ export type Database = {
           choices_en: Json
           created_at?: string
           created_by?: string | null
+          difficulty?: string
+          duplicate_hash?: string | null
+          exam_domain?: string
           explanation_ar?: string
           explanation_en?: string
           id?: string
           is_public?: boolean
           question_ar: string
           question_en: string
+          question_type?: string
           reference?: string
+          status?: string
           topic?: string
           track: Database["public"]["Enums"]["exam_track"]
           updated_at?: string
@@ -55,13 +65,18 @@ export type Database = {
           choices_en?: Json
           created_at?: string
           created_by?: string | null
+          difficulty?: string
+          duplicate_hash?: string | null
+          exam_domain?: string
           explanation_ar?: string
           explanation_en?: string
           id?: string
           is_public?: boolean
           question_ar?: string
           question_en?: string
+          question_type?: string
           reference?: string
+          status?: string
           topic?: string
           track?: Database["public"]["Enums"]["exam_track"]
           updated_at?: string
