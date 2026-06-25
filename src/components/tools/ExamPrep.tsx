@@ -97,7 +97,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const remote = dbQuery.data?.questions ?? [];
   const adminQuery = useQuery({
     queryKey: ["exam-questions-admin", isAdmin],
-    queryFn: () => listAdminQs({ data: {} }),
+    queryFn: () => listAdminQs(),
     enabled: isAdmin,
     staleTime: 30_000,
   });
