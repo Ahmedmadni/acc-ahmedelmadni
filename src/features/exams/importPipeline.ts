@@ -29,5 +29,8 @@ export async function readQuestionImportFile(file: File): Promise<string> {
 }
 
 export function questionFingerprint(value: string) {
-  return value.toLowerCase().replace(/[\s\W_]+/g, " ").trim().slice(0, 240);
+  const normalized = value.toLowerCase().replace(/[\s\W_]+/g, " ").trim();
+  let hash = 0;
+  for (let i = 0; i < normalized.length; i += 1) hash = (hash * 31 + normalized.charCodeAt(i)) >>> 0;
+  return hash.toString(16).padStart(8, "0");
 }
