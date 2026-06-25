@@ -3,6 +3,7 @@ import { generateText } from "ai";
 import { z } from "zod";
 import { createLovableAiGatewayProvider } from "@/lib/ai-gateway.server";
 import { TRACKS } from "@/lib/exam-bank";
+import { requireAdmin } from "@/integrations/supabase/admin-middleware";
 
 const InputSchema = z.object({
   rawText: z.string().min(20).max(120_000),
@@ -22,6 +23,9 @@ Schema:
       "choices_en": ["A","B","C","D"],
       "choices_ar": ["..","..","..",".."],
       "answerIndex": 0,
+      "question_type": "MCQ|TRUE_FALSE|MULTIPLE_RESPONSE|CASE_STUDY",
+      "difficulty": "easy|intermediate|hard",
+      "exam_domain": "short exam domain string",
       "explanation_en": "concise explanation citing standard/source",
       "explanation_ar": "شرح مختصر يذكر المعيار/المصدر",
       "reference": "e.g. Gleim CMA Part 1, IAS 16, ISA 200"
@@ -29,13 +33,16 @@ Schema:
   ]
 }
 Rules:
+- Detect question type: MCQ, TRUE_FALSE, MULTIPLE_RESPONSE, or CASE_STUDY.
 - Detect answers from context if marked (e.g. "Answer: B", highlighted, asterisked). If ambiguous, set answerIndex to your best inference based on standard guidance.
+- Categorize each question by certification track, topic, difficulty, and exam domain.
 - Provide BOTH Arabic and English for question/choices/explanation. Translate accurately.
 - Keep choices exactly 2-5 options.
 - Skip non-MCQ content.
 - Max 40 questions per call.`;
 
 export const extractExamQuestions = createServerFn({ method: "POST" })
+  .middleware([requireAdmin])
   .inputValidator((d: unknown) => InputSchema.parse(d))
   .handler(async ({ data }) => {
     const key = process.env.LOVABLE_API_KEY;
@@ -56,6 +63,9 @@ export const extractExamQuestions = createServerFn({ method: "POST" })
       choices_en?: string[];
       choices_ar?: string[];
       answerIndex?: number;
+      question_type?: string;
+      difficulty?: string;
+      exam_domain?: string;
       explanation_en?: string;
       explanation_ar?: string;
       reference?: string;
