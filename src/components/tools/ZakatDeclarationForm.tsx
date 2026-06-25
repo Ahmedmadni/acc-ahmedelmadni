@@ -136,6 +136,7 @@ export function ZakatDeclarationFormCalculator({ lang }: { lang: Lang }) {
           onExplain={a.onExplain}
           onSave={a.onSave}
           saving={a.saving}
+          exportingPdf={a.exportingPdf}
           explaining={a.explaining}
           isAuthed={a.isAuthed}
           refLinks={REF_LINKS}

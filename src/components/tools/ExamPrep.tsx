@@ -20,9 +20,10 @@ import {
 } from "lucide-react";
 import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 import { extractExamQuestions } from "@/lib/exam.functions";
-import { listExamQuestions, addExamQuestions } from "@/lib/exam-questions.functions";
+import { listExamQuestions, addExamQuestions, listAdminExamQuestions, updateExamQuestionStatus, updateExamQuestion, deleteMyExamQuestion } from "@/lib/exam-questions.functions";
 import { supabase } from "@/integrations/supabase/client";
 import type { Lang } from "@/lib/i18n";
+import { questionFingerprint, readQuestionImportFile } from "@/features/exams/importPipeline";
 
 const STORAGE_KEY = "exam-bank-custom";
 
@@ -49,26 +50,41 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const [revealed, setRevealed] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [signedIn, setSignedIn] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   // Upload state
   const [uploadText, setUploadText] = useState("");
   const [loading, setLoading] = useState(false);
   const [uploadMsg, setUploadMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
-  const [savePublic, setSavePublic] = useState(true);
+  const [savePublic, setSavePublic] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
   const extract = useServerFn(extractExamQuestions);
   const list = useServerFn(listExamQuestions);
   const addQs = useServerFn(addExamQuestions);
+  const listAdminQs = useServerFn(listAdminExamQuestions);
+  const updateStatus = useServerFn(updateExamQuestionStatus);
+  const updateQuestion = useServerFn(updateExamQuestion);
+  const deleteQuestion = useServerFn(deleteMyExamQuestion);
 
   useEffect(() => { setLocal(loadLocal()); }, []);
 
   useEffect(() => {
     let mounted = true;
-    supabase.auth.getSession().then(({ data }) => {
-      if (mounted) setSignedIn(!!data.session);
-    });
-    const { data: sub } = supabase.auth.onAuthStateChange((_evt, session) => {
-      setSignedIn(!!session);
+    async function refreshRole() {
+      const { data } = await supabase.auth.getSession();
+      if (!mounted) return;
+      const hasSession = !!data.session;
+      setSignedIn(hasSession);
+      if (!hasSession) {
+        setIsAdmin(false);
+        return;
+      }
+      const { data: role } = await supabase.from("user_roles").select("role").eq("role", "admin").maybeSingle();
+      if (mounted) setIsAdmin(!!role);
+    }
+    void refreshRole();
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      void refreshRole();
     });
     return () => { mounted = false; sub.subscription.unsubscribe(); };
   }, []);
@@ -80,6 +96,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   });
 
   const remote = dbQuery.data?.questions ?? [];
+  const adminQuery = useQuery({
+    queryKey: ["exam-questions-admin", isAdmin],
+    queryFn: () => listAdminQs(),
+    enabled: isAdmin,
+    staleTime: 30_000,
+  });
+  const adminQuestions = adminQuery.data?.questions ?? [];
 
   // Combine: SEED (built-in) + remote (DB public) + local (legacy localStorage). Dedupe by id.
   const allQuestions = useMemo(() => {
@@ -126,11 +149,15 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   }
 
   async function handleFile(file: File) {
-    const text = await file.text();
+    const text = await readQuestionImportFile(file);
     setUploadText(text.slice(0, 120_000));
   }
 
   async function runExtract() {
+    if (!isAdmin) {
+      setUploadMsg({ kind: "err", text: lang === "ar" ? "إدارة بنك الأسئلة متاحة للمديرين فقط." : "Question bank management is restricted to admins." });
+      return;
+    }
     if (uploadText.trim().length < 20) {
       setUploadMsg({ kind: "err", text: lang === "ar" ? "النص قصير جداً" : "Text too short" });
       return;
@@ -147,9 +174,12 @@ export function ExamPrep({ lang }: { lang: Lang }) {
         return;
       }
 
-      if (signedIn) {
-        // Save to DB
-        const payload = valid.map((x) => ({
+      const existingFingerprints = new Set([
+        ...allQuestions.map((item) => questionFingerprint(item.question.en || item.question.ar)),
+        ...adminQuestions.map((item) => questionFingerprint(item.question.en || item.question.ar)),
+      ]);
+      const payload = valid
+        .map((x) => ({
           track: ((TRACKS as readonly string[]).includes(x.track ?? "") ? x.track : track) as ExamTrack,
           topic: x.topic ?? "—",
           question_ar: x.question_ar ?? x.question_en ?? "",
@@ -164,46 +194,30 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           explanation_en: x.explanation_en ?? "",
           reference: x.reference ?? "User upload",
           is_public: savePublic,
-        }));
-        const { inserted } = await addQs({ data: { questions: payload } });
-        await dbQuery.refetch();
-        setUploadMsg({
-          kind: "ok",
-          text:
-            lang === "ar"
-              ? `تمت إضافة ${inserted} سؤال إلى قاعدة البيانات${savePublic ? " (عام)" : " (خاص)"}`
-              : `Added ${inserted} question(s) to the database${savePublic ? " (public)" : " (private)"}`,
-        });
-        setUploadText("");
-      } else {
-        // Guest fallback → localStorage
-        const mapped: ExamQuestion[] = valid.map((x, i) => ({
-          id: `custom-${Date.now()}-${i}`,
-          track: ((TRACKS as readonly string[]).includes(x.track ?? "") ? x.track : track) as ExamTrack,
-          topic: x.topic ?? "—",
-          question: { ar: x.question_ar ?? x.question_en ?? "", en: x.question_en ?? "" },
-          choices: {
-            ar: (x.choices_ar?.length === x.choices_en!.length ? x.choices_ar : x.choices_en) as string[],
-            en: x.choices_en as string[],
-          },
-          answerIndex:
-            typeof x.answerIndex === "number"
-              ? Math.max(0, Math.min(x.choices_en!.length - 1, x.answerIndex))
-              : 0,
-          explanation: { ar: x.explanation_ar ?? x.explanation_en ?? "", en: x.explanation_en ?? "" },
-          reference: x.reference ?? "User upload",
-        }));
-        const merged = [...local, ...mapped];
-        setLocal(merged); saveLocal(merged);
-        setUploadMsg({
-          kind: "ok",
-          text:
-            lang === "ar"
-              ? `تمت إضافة ${mapped.length} سؤال محلياً. سجّل دخولك لحفظها في حسابك ومشاركتها بين الأجهزة.`
-              : `Added ${mapped.length} question(s) locally. Sign in to save them to your account and sync across devices.`,
-        });
-        setUploadText("");
+          status: savePublic ? "approved" : "pending_review",
+          question_type: ["MCQ", "TRUE_FALSE", "MULTIPLE_RESPONSE", "CASE_STUDY"].includes(x.question_type ?? "") ? x.question_type : "MCQ",
+          difficulty: ["easy", "intermediate", "hard"].includes(x.difficulty ?? "") ? x.difficulty : "intermediate",
+          exam_domain: x.exam_domain ?? x.topic ?? "",
+          duplicate_hash: questionFingerprint(x.question_en ?? x.question_ar ?? ""),
+        }))
+        .filter((item) => !existingFingerprints.has(item.duplicate_hash));
+
+      if (payload.length === 0) {
+        setUploadMsg({ kind: "err", text: lang === "ar" ? "كل الأسئلة المستخرجة مكررة." : "All extracted questions are duplicates." });
+        return;
       }
+
+      const { inserted, skipped } = await addQs({ data: { questions: payload } });
+      await dbQuery.refetch();
+      await adminQuery.refetch();
+      setUploadMsg({
+        kind: "ok",
+        text:
+          lang === "ar"
+            ? `تمت إضافة ${inserted} سؤال إلى بنك الأسئلة${skipped ? ` وتخطي ${skipped} مكرر` : ""}`
+            : `Added ${inserted} question(s) to the question bank${skipped ? ` and skipped ${skipped} duplicate(s)` : ""}`,
+      });
+      setUploadText("");
     } catch (e) {
       setUploadMsg({ kind: "err", text: e instanceof Error ? e.message : "Error" });
     } finally {
@@ -281,7 +295,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
             className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-bold ${mode === "upload" ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a]"}`}
           >
             <Upload className="size-3.5" />
-            {lang === "ar" ? "رفع بنك أسئلة" : "Upload bank"}
+            {lang === "ar" ? "إدارة بنك الأسئلة" : "Question bank admin"}
           </button>
         </div>
       </div>
@@ -308,7 +322,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
         )}
         <span>·</span>
         <span>{lang === "ar" ? "الإجمالي:" : "Total:"} <b>{allQuestions.length}</b></span>
-        {signedIn && local.length > 0 && (
+        {isAdmin && local.length > 0 && (
           <button
             onClick={migrateLocalToDb}
             disabled={loading}
@@ -416,22 +430,22 @@ export function ExamPrep({ lang }: { lang: Lang }) {
         <div className="space-y-4 rounded-2xl border border-[#d7aa52]/30 bg-gradient-to-br from-white/[0.04] to-transparent p-5">
           <div>
             <h3 className="mb-1 text-base font-extrabold text-[#f3d28a]">
-              {lang === "ar" ? "رفع بنك أسئلة" : "Upload a question bank"}
+              {lang === "ar" ? "إدارة واستيراد بنك الأسئلة" : "Manage & import question bank"}
             </h3>
             <p className="text-xs text-[var(--fg-soft)]">
               {lang === "ar"
-                ? "ارفع ملف نصي أو الصق محتوى من Gleim/Wiley/Kaplan وسيقوم الذكاء الاصطناعي بتحليله واستخراج الأسئلة بالعربية والإنجليزية مع الشرح."
-                : "Upload a text file or paste content from Gleim/Wiley/Kaplan. AI will extract MCQs with Arabic+English translations and explanations."}
+                ? "للمديرين فقط: ارفع Word أو Excel أو CSV أو PDF أو الصق نصاً ليحلله الذكاء الاصطناعي قبل النشر."
+                : "Admins only: upload Word, Excel, CSV, PDF, or pasted text for AI analysis before publishing."}
             </p>
           </div>
 
-          {!signedIn && (
+          {(!signedIn || !isAdmin) && (
             <div className="flex items-start gap-2 rounded-lg border border-amber-400/40 bg-amber-500/10 p-3 text-xs text-amber-100">
               <AlertCircle className="mt-0.5 size-4 shrink-0" />
               <div>
                 {lang === "ar"
-                  ? "أنت غير مسجّل دخول. ستُحفظ الأسئلة في متصفحك فقط ولن تظهر على الأجهزة الأخرى. سجّل دخولك لحفظها في حسابك."
-                  : "You're not signed in. Questions will be saved in this browser only. Sign in to save them to your account."}
+                  ? "إضافة أو تعديل الأسئلة متاحة للمديرين فقط. يمكن للمستخدمين العاديين التدرب ومراجعة النتائج فقط."
+                  : "Adding or editing questions is restricted to admins. Standard users can only practice and review results."}
               </div>
             </div>
           )}
@@ -440,12 +454,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
             <input
               ref={fileRef}
               type="file"
-              accept=".txt,.md,.csv,.json"
+              accept=".txt,.md,.csv,.json,.docx,.xlsx,.xls,.pdf"
               className="hidden"
               onChange={(e) => { const f = e.target.files?.[0]; if (f) void handleFile(f); }}
             />
             <button
               onClick={() => fileRef.current?.click()}
+              disabled={!isAdmin}
               className="inline-flex items-center gap-1.5 rounded-lg border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
             >
               <Upload className="size-3.5" />
@@ -462,11 +477,12 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           <textarea
             value={uploadText}
             onChange={(e) => setUploadText(e.target.value.slice(0, 120_000))}
+            disabled={!isAdmin}
             placeholder={lang === "ar" ? "الصق هنا الأسئلة (نص خام أو JSON أو CSV)..." : "Paste questions here (raw text, JSON or CSV)..."}
             className="min-h-[200px] w-full rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/60 p-3 font-mono text-xs text-[var(--fg)] outline-none focus:border-[#d7aa52]/70"
           />
 
-          {signedIn && (
+          {isAdmin && (
             <label className="inline-flex items-center gap-2 text-xs text-[var(--fg-soft)]">
               <input
                 type="checkbox"
@@ -475,14 +491,14 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 className="size-3.5 accent-[#d7aa52]"
               />
               {lang === "ar"
-                ? "حفظ كأسئلة عامة (يراها جميع المستخدمين)"
-                : "Save as public (visible to all users)"}
+                  ? "نشر مباشرة بعد الاستيراد (بدلاً من انتظار المراجعة)"
+                  : "Publish immediately after import (instead of pending review)"}
             </label>
           )}
 
           <div className="flex flex-wrap items-center gap-3">
             <button
-              disabled={loading || uploadText.trim().length < 20}
+              disabled={!isAdmin || loading || uploadText.trim().length < 20}
               onClick={runExtract}
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-sm font-bold text-[#04101f] disabled:opacity-50"
             >
@@ -503,6 +519,34 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           {uploadMsg && (
             <div className={`rounded-lg border p-3 text-sm ${uploadMsg.kind === "ok" ? "border-emerald-400/40 bg-emerald-500/10 text-emerald-200" : "border-red-400/40 bg-red-500/10 text-red-200"}`}>
               {uploadMsg.text}
+            </div>
+          )}
+
+          {isAdmin && (
+            <div className="space-y-3 border-t border-[#d7aa52]/20 pt-4">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h4 className="text-sm font-extrabold text-[#f3d28a]">{lang === "ar" ? "مراجعة الأسئلة" : "Review questions"}</h4>
+                <div className="flex gap-2">
+                  <button onClick={async () => { await Promise.all(adminQuestions.slice(0, 12).map((item) => updateStatus({ data: { id: item.id, status: "approved", is_public: true } }))); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2 py-1 text-[10px] font-bold text-emerald-200">{lang === "ar" ? "اعتماد الكل" : "Approve visible"}</button>
+                  <button onClick={async () => { await Promise.all(adminQuestions.slice(0, 12).map((item) => updateStatus({ data: { id: item.id, status: "rejected", is_public: false } }))); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-amber-400/40 bg-amber-400/10 px-2 py-1 text-[10px] font-bold text-amber-100">{lang === "ar" ? "رفض الكل" : "Reject visible"}</button>
+                </div>
+              </div>
+              <div className="grid gap-3">
+                {adminQuestions.slice(0, 12).map((item) => (
+                  <div key={item.id} className="rounded-xl border border-[#d7aa52]/20 bg-[#04101f]/45 p-3">
+                    <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold text-[#f3d28a]/80">
+                      <span>{item.track}</span><span>·</span><span>{item.topic}</span>
+                    </div>
+                    <p className="text-sm font-bold text-[var(--fg)]">{item.question[lang]}</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <button onClick={async () => { const next = prompt(lang === "ar" ? "تعديل نص السؤال" : "Edit question", item.question[lang]); if (next?.trim()) { await updateQuestion({ data: { id: item.id, [lang === "ar" ? "question_ar" : "question_en"]: next.trim() } }); await adminQuery.refetch(); await dbQuery.refetch(); } }} className="rounded-md border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2 py-1 text-[10px] font-bold text-[#f3d28a]">{lang === "ar" ? "تعديل" : "Edit"}</button>
+                      <button onClick={async () => { await updateStatus({ data: { id: item.id, status: "approved", is_public: true } }); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2 py-1 text-[10px] font-bold text-emerald-200">{lang === "ar" ? "اعتماد" : "Approve"}</button>
+                      <button onClick={async () => { await updateStatus({ data: { id: item.id, status: "rejected", is_public: false } }); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-amber-400/40 bg-amber-400/10 px-2 py-1 text-[10px] font-bold text-amber-100">{lang === "ar" ? "رفض" : "Reject"}</button>
+                      <button onClick={async () => { if (confirm(lang === "ar" ? "حذف السؤال؟" : "Delete question?")) { await deleteQuestion({ data: { id: item.id } }); await adminQuery.refetch(); await dbQuery.refetch(); } }} className="rounded-md border border-red-400/40 bg-red-500/10 px-2 py-1 text-[10px] font-bold text-red-200">{lang === "ar" ? "حذف" : "Delete"}</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>

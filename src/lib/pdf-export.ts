@@ -26,12 +26,44 @@ const BRAND = {
   line: "#d7aa52",
 };
 
-/** Capture a DOM element to a high-resolution canvas using a temporary light theme. */
-async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
+type TouchedStyle = {
+  node: HTMLElement;
+  transform: string;
+  filter: string;
+  letterSpacing: string;
+  wordSpacing: string;
+  fontFamily: string;
+  unicodeBidi: string;
+  direction: string;
+  overflow: string;
+  lineHeight: string;
+  padding: string;
+  minHeight: string;
+  height: string;
+  whiteSpace: string;
+  textAlign: string;
+};
+
+function forcePrintableFieldValues(root: HTMLElement) {
+  const fields = Array.from(root.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>("input, textarea, select"));
+  fields.forEach((field) => {
+    if (field instanceof HTMLSelectElement) {
+      const selected = field.options[field.selectedIndex]?.text ?? field.value;
+      field.setAttribute("data-print-value", selected);
+    } else {
+      field.setAttribute("value", field.value);
+      field.setAttribute("data-print-value", field.value);
+    }
+  });
+}
+
+function applyPdfSafeStyles(el: HTMLElement) {
   document.body.classList.add("pdf-export-mode");
   el.classList.add("pdf-arabic-safe");
+  forcePrintableFieldValues(el);
+  const isRtl = el.getAttribute("dir") === "rtl" || el.getAttribute("lang") === "ar";
   const touched = [el, ...Array.from(el.querySelectorAll<HTMLElement>("*"))];
-  const previousStyles = touched.map((node) => ({
+  const previousStyles: TouchedStyle[] = touched.map((node) => ({
     node,
     transform: node.style.transform,
     filter: node.style.filter,
@@ -40,6 +72,13 @@ async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
     fontFamily: node.style.fontFamily,
     unicodeBidi: node.style.unicodeBidi,
     direction: node.style.direction,
+    overflow: node.style.overflow,
+    lineHeight: node.style.lineHeight,
+    padding: node.style.padding,
+    minHeight: node.style.minHeight,
+    height: node.style.height,
+    whiteSpace: node.style.whiteSpace,
+    textAlign: node.style.textAlign,
   }));
   touched.forEach((node) => {
     node.style.transform = "none";
@@ -48,24 +87,21 @@ async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
     node.style.wordSpacing = "0";
     node.style.fontFamily = "\"Cairo\", \"Tahoma\", Arial, sans-serif";
     node.style.unicodeBidi = "isolate";
-    if (el.getAttribute("dir") === "rtl") node.style.direction = "rtl";
+    node.style.overflow = "visible";
+    if (isRtl) {
+      node.style.direction = "rtl";
+      node.style.textAlign = node.style.textAlign || "right";
+    }
+    if (node.matches("input, textarea, select")) {
+      node.style.minHeight = "30px";
+      node.style.height = "auto";
+      node.style.lineHeight = "1.7";
+      node.style.padding = "4px 8px";
+      node.style.whiteSpace = "pre-wrap";
+    }
   });
-  // Ensure web fonts (Cairo for Arabic / Inter for English) are fully loaded
-  if (document.fonts && document.fonts.ready) await document.fonts.ready;
-  await new Promise((r) => setTimeout(r, 200));
-  try {
-    const canvas = await html2canvas(el, {
-      backgroundColor: "#ffffff",
-      scale: 2,
-      useCORS: true,
-      allowTaint: true,
-      logging: false,
-      windowWidth: el.scrollWidth,
-      windowHeight: el.scrollHeight,
-    });
-    return canvas;
-  } finally {
-    previousStyles.forEach(({ node, transform, filter, letterSpacing, wordSpacing, fontFamily, unicodeBidi, direction }) => {
+  return () => {
+    previousStyles.forEach(({ node, transform, filter, letterSpacing, wordSpacing, fontFamily, unicodeBidi, direction, overflow, lineHeight, padding, minHeight, height, whiteSpace, textAlign }) => {
       node.style.transform = transform;
       node.style.filter = filter;
       node.style.letterSpacing = letterSpacing;
@@ -73,10 +109,43 @@ async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
       node.style.fontFamily = fontFamily;
       node.style.unicodeBidi = unicodeBidi;
       node.style.direction = direction;
+      node.style.overflow = overflow;
+      node.style.lineHeight = lineHeight;
+      node.style.padding = padding;
+      node.style.minHeight = minHeight;
+      node.style.height = height;
+      node.style.whiteSpace = whiteSpace;
+      node.style.textAlign = textAlign;
     });
     el.classList.remove("pdf-arabic-safe");
     document.body.classList.remove("pdf-export-mode");
+  };
+}
+
+/** Capture a DOM element to a high-resolution canvas using a temporary light theme. */
+export async function capturePdfElement(el: HTMLElement): Promise<HTMLCanvasElement> {
+  const restore = applyPdfSafeStyles(el);
+  // Ensure web fonts (Cairo for Arabic / Inter for English) are fully loaded
+  if (document.fonts && document.fonts.ready) await document.fonts.ready;
+  await new Promise((r) => setTimeout(r, 200));
+  try {
+    return await html2canvas(el, {
+      backgroundColor: "#ffffff",
+      scale: 2,
+      useCORS: true,
+      allowTaint: true,
+      logging: false,
+      windowWidth: Math.max(el.scrollWidth, el.getBoundingClientRect().width),
+      windowHeight: Math.max(el.scrollHeight, el.getBoundingClientRect().height),
+    });
+  } finally {
+    restore();
   }
+}
+
+/** Capture a DOM element to a high-resolution canvas using a temporary light theme. */
+async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
+  return capturePdfElement(el);
 }
 
 

@@ -6,10 +6,27 @@ type Body = {
   section?: string;
   text?: string;
   lang?: "ar" | "en";
+  action?: "generate" | "improve" | "shorten" | "expand" | "professionalize" | "ats";
   context?: Record<string, unknown>;
 };
 
-const PROMPT = (section: string, lang: "ar" | "en", text: string, context: string) => {
+const PROMPT = (section: string, lang: "ar" | "en", text: string, context: string, action: NonNullable<Body["action"]>) => {
+  const actionAr: Record<NonNullable<Body["action"]>, string> = {
+    generate: "أنشئ محتوى جديداً مناسباً لهذا القسم بناءً على السياق",
+    improve: "حسّن الصياغة مع الحفاظ على المعنى",
+    shorten: "اختصر النص مع الحفاظ على الأثر المهني",
+    expand: "وسّع النص بإضافة قيمة مهنية دون اختلاق أرقام",
+    professionalize: "اجعل النص أكثر احترافية ومناسباً للمديرين التنفيذيين",
+    ats: "حسّن النص ليتوافق مع أنظمة تتبع المتقدمين ATS بإضافة كلمات مفتاحية طبيعية",
+  };
+  const actionEn: Record<NonNullable<Body["action"]>, string> = {
+    generate: "Generate new content for this section from the context",
+    improve: "Improve the wording while preserving meaning",
+    shorten: "Shorten the text while keeping professional impact",
+    expand: "Expand the text with professional value without inventing metrics",
+    professionalize: "Make the text more executive and professional",
+    ats: "Optimize for ATS with natural role-relevant keywords",
+  };
   const ar = `أنت كاتب سير ذاتية محترف بمستوى Deloitte / PwC. أعد صياغة الجزء التالي من السيرة الذاتية ليصبح:
 - احترافياً وموجزاً وقوياً
 - يبدأ بأفعال حركة قوية
@@ -19,9 +36,10 @@ const PROMPT = (section: string, lang: "ar" | "en", text: string, context: strin
 - لا تضف عناوين أو رموز Markdown، فقط النص الناتج
 
 القسم: ${section}
+المطلوب: ${actionAr[action]}
 السياق: ${context}
 النص الأصلي:
-"""${text}"""
+"""${text || "أنشئ محتوى مناسباً من السياق المتاح."}"""
 
 اكتب النسخة المحسّنة فقط بدون أي مقدمات.`;
 
@@ -34,9 +52,10 @@ const PROMPT = (section: string, lang: "ar" | "en", text: string, context: strin
 - No headings or markdown, plain text only
 
 Section: ${section}
+Action: ${actionEn[action]}
 Context: ${context}
 Original text:
-"""${text}"""
+"""${text || "Generate suitable content from the available context."}"""
 
 Return only the improved version, no preamble.`;
 
@@ -49,7 +68,8 @@ export const Route = createFileRoute("/api/cv-enhance")({
       POST: async ({ request }) => {
         const body = (await request.json()) as Body;
         const text = (body.text || "").trim();
-        if (!text) return new Response("Text required", { status: 400 });
+        const action = body.action ?? "improve";
+        if (!text && action !== "generate") return new Response("Text required", { status: 400 });
         if (text.length > 4000) return new Response("Text too long", { status: 400 });
 
         const key = process.env.LOVABLE_API_KEY;
@@ -63,7 +83,7 @@ export const Route = createFileRoute("/api/cv-enhance")({
         try {
           const { text: improved } = await generateText({
             model: gateway("google/gemini-3-flash-preview"),
-            prompt: PROMPT(section, lang, text, context),
+            prompt: PROMPT(section, lang, text, context, action),
           });
           return Response.json({ text: improved.trim() });
         } catch (err) {

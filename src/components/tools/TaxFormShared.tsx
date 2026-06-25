@@ -67,6 +67,7 @@ export function ActionsBar({
   onSave,
   onExplain,
   saving,
+  exportingPdf,
   explaining,
   isAuthed,
   refLinks,
@@ -77,6 +78,7 @@ export function ActionsBar({
   onSave: () => void;
   onExplain: () => void;
   saving: boolean;
+  exportingPdf?: boolean;
   explaining: boolean;
   isAuthed: boolean;
   refLinks: { ar: string; en: string; url: string }[];
@@ -86,9 +88,10 @@ export function ActionsBar({
       <div className="flex flex-wrap gap-2">
         <button
           onClick={onPdf}
+          disabled={!!exportingPdf}
           className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95"
         >
-          <Download className="size-3.5" />
+          {exportingPdf ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
           {lang === "ar" ? "تحميل PDF" : "Download PDF"}
         </button>
         <button
@@ -158,6 +161,7 @@ export function useDeclarationActions(opts: {
   const [explanation, setExplanation] = useState<string | null>(null);
   const [explaining, setExplaining] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [exportingPdf, setExportingPdf] = useState(false);
   const [isAuthed, setIsAuthed] = useState(false);
 
   useEffect(() => {
@@ -168,6 +172,7 @@ export function useDeclarationActions(opts: {
   const saveFn = useServerFn(saveDeclarationFn);
 
   const onPdf = async () => {
+    setExportingPdf(true);
     try {
       await exportToolReportPdf({
         elementId: "tool-report-capture",
@@ -176,6 +181,8 @@ export function useDeclarationActions(opts: {
       });
     } catch (e) {
       toast.error((e as Error).message);
+    } finally {
+      setExportingPdf(false);
     }
   };
 
@@ -228,7 +235,7 @@ export function useDeclarationActions(opts: {
     }
   };
 
-  return { period, setPeriod, isAuthed, explanation, explaining, saving, onPdf, onExcel, onExplain, onSave };
+  return { period, setPeriod, isAuthed, explanation, explaining, saving, exportingPdf, onPdf, onExcel, onExplain, onSave };
 }
 
 export function PeriodField({ value, onChange, lang }: { value: string; onChange: (v: string) => void; lang: Lang }) {

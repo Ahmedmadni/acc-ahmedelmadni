@@ -600,6 +600,14 @@ body.pdf-export-mode #tool-report-capture textarea {
   background: transparent !important;
   color: #0b1220 !important;
   border-radius: 0 !important;
+  white-space: pre-wrap !important;
+  text-overflow: clip !important;
+  font-size: 12px !important;
+}
+
+body.pdf-export-mode #tool-report-capture input::placeholder,
+body.pdf-export-mode #tool-report-capture textarea::placeholder {
+  color: transparent !important;
 }
 body.pdf-export-mode #tool-report-capture button {
   background: #ffffff !important;
@@ -1367,6 +1375,14 @@ img {
     outline: none !important;
     -webkit-appearance: none !important;
     appearance: none !important;
+    white-space: pre-wrap !important;
+    text-overflow: clip !important;
+    font-size: 12px !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: transparent !important;
   }
 
   #tool-report-capture .grid,

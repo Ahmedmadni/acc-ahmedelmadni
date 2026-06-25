@@ -2,7 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
-import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { requireAdmin } from "@/integrations/supabase/admin-middleware";
 import { TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 
 const TrackEnum = z.enum(TRACKS as [string, ...string[]]);
@@ -15,10 +15,15 @@ const QuestionInput = z.object({
   choices_ar: z.array(z.string().max(1000)).min(2).max(6),
   choices_en: z.array(z.string().max(1000)).min(2).max(6),
   answer_index: z.number().int().min(0).max(5),
+  question_type: z.enum(["MCQ", "TRUE_FALSE", "MULTIPLE_RESPONSE", "CASE_STUDY"]).default("MCQ"),
+  difficulty: z.enum(["easy", "intermediate", "hard"]).default("intermediate"),
+  exam_domain: z.string().max(200).default(""),
   explanation_ar: z.string().max(4000).default(""),
   explanation_en: z.string().max(4000).default(""),
   reference: z.string().max(300).default(""),
   is_public: z.boolean().default(false),
+  status: z.enum(["draft", "pending_review", "approved", "rejected"]).default("approved"),
+  duplicate_hash: z.string().max(64).optional(),
 });
 
 type Row = {
@@ -30,6 +35,9 @@ type Row = {
   choices_ar: unknown;
   choices_en: unknown;
   answer_index: number;
+  question_type?: string;
+  difficulty?: string;
+  exam_domain?: string;
   explanation_ar: string;
   explanation_en: string;
   reference: string;
@@ -69,9 +77,10 @@ export const listExamQuestions = createServerFn({ method: "GET" })
     let q = supabase
       .from("exam_questions")
       .select(
-        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,explanation_ar,explanation_en,reference,is_public,created_by",
+        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,question_type,difficulty,exam_domain,explanation_ar,explanation_en,reference,is_public,created_by",
       )
       .eq("is_public", true)
+      .eq("status", "approved")
       .order("created_at", { ascending: false })
       .limit(2000);
 
@@ -82,16 +91,15 @@ export const listExamQuestions = createServerFn({ method: "GET" })
     return { questions: (rows ?? []).map((r) => rowToExamQuestion(r as Row)) };
   });
 
-/** Authenticated user: list their own (public + private). */
-export const listMyExamQuestions = createServerFn({ method: "GET" })
-  .middleware([requireSupabaseAuth])
+/** Admin: list all questions for review and maintenance. */
+export const listAdminExamQuestions = createServerFn({ method: "GET" })
+  .middleware([requireAdmin])
   .handler(async ({ context }) => {
     const { data: rows, error } = await context.supabase
       .from("exam_questions")
       .select(
-        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,explanation_ar,explanation_en,reference,is_public,created_by",
+        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,question_type,difficulty,exam_domain,explanation_ar,explanation_en,reference,is_public,created_by,status,duplicate_hash",
       )
-      .eq("created_by", context.userId)
       .order("created_at", { ascending: false })
       .limit(2000);
     if (error) throw new Error(error.message);
@@ -100,7 +108,7 @@ export const listMyExamQuestions = createServerFn({ method: "GET" })
 
 /** Add a batch of questions for the signed-in user. */
 export const addExamQuestions = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
+  .middleware([requireAdmin])
   .inputValidator((d: unknown) =>
     z
       .object({
@@ -113,25 +121,63 @@ export const addExamQuestions = createServerFn({ method: "POST" })
       ...q,
       track: q.track as ExamTrack,
       created_by: context.userId,
+      duplicate_hash: q.duplicate_hash ?? hashQuestion(q.question_en || q.question_ar),
     }));
+    const hashes = payload.map((q) => q.duplicate_hash).filter(Boolean) as string[];
+    const { data: existing, error: existingError } = hashes.length
+      ? await context.supabase.from("exam_questions").select("duplicate_hash").in("duplicate_hash", hashes)
+      : { data: [], error: null };
+    if (existingError) throw new Error(existingError.message);
+    const existingSet = new Set((existing ?? []).map((row) => (row as { duplicate_hash: string | null }).duplicate_hash).filter(Boolean));
+    const uniquePayload = payload.filter((q) => !existingSet.has(q.duplicate_hash ?? ""));
+    if (uniquePayload.length === 0) return { inserted: 0, skipped: payload.length };
     const { data: rows, error } = await context.supabase
       .from("exam_questions")
-      .insert(payload)
+      .insert(uniquePayload)
       .select("id");
     if (error) throw new Error(error.message);
-    return { inserted: rows?.length ?? 0 };
+    return { inserted: rows?.length ?? 0, skipped: payload.length - (rows?.length ?? 0) };
   });
 
-/** Delete one of my questions. */
+/** Delete a question. Admin only. */
 export const deleteMyExamQuestion = createServerFn({ method: "POST" })
-  .middleware([requireSupabaseAuth])
+  .middleware([requireAdmin])
   .inputValidator((d: unknown) => z.object({ id: z.string().uuid() }).parse(d))
   .handler(async ({ data, context }) => {
     const { error } = await context.supabase
       .from("exam_questions")
       .delete()
-      .eq("id", data.id)
-      .eq("created_by", context.userId);
+      .eq("id", data.id);
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
+
+export const updateExamQuestionStatus = createServerFn({ method: "POST" })
+  .middleware([requireAdmin])
+  .inputValidator((d: unknown) => z.object({ id: z.string().uuid(), status: z.enum(["draft", "pending_review", "approved", "rejected"]), is_public: z.boolean().optional() }).parse(d))
+  .handler(async ({ data, context }) => {
+    const patch: { status: string; is_public?: boolean } = { status: data.status };
+    if (typeof data.is_public === "boolean") patch.is_public = data.is_public;
+    const { error } = await context.supabase.from("exam_questions").update(patch).eq("id", data.id);
+    if (error) throw new Error(error.message);
+    return { ok: true };
+  });
+
+export const updateExamQuestion = createServerFn({ method: "POST" })
+  .middleware([requireAdmin])
+  .inputValidator((d: unknown) =>
+    z.object({
+      id: z.string().uuid(),
+      question_ar: z.string().min(1).max(2000).optional(),
+      question_en: z.string().min(1).max(2000).optional(),
+      explanation_ar: z.string().max(4000).optional(),
+      explanation_en: z.string().max(4000).optional(),
+      topic: z.string().max(200).optional(),
+    }).parse(d),
+  )
+  .handler(async ({ data, context }) => {
+    const { id, ...patch } = data;
+    const { error } = await context.supabase.from("exam_questions").update(patch).eq("id", id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -157,3 +203,10 @@ export const examQuestionsStats = createServerFn({ method: "GET" })
     }
     return { counts, total: data?.length ?? 0 };
   });
+
+function hashQuestion(value: string) {
+  let hash = 0;
+  const normalized = value.toLowerCase().replace(/[\s\W_]+/g, " ").trim();
+  for (let i = 0; i < normalized.length; i += 1) hash = (hash * 31 + normalized.charCodeAt(i)) >>> 0;
+  return hash.toString(16).padStart(8, "0");
+}
