@@ -56,7 +56,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const [uploadText, setUploadText] = useState("");
   const [loading, setLoading] = useState(false);
   const [uploadMsg, setUploadMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
-  const [savePublic, setSavePublic] = useState(true);
+  const [savePublic, setSavePublic] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
   const extract = useServerFn(extractExamQuestions);
   const list = useServerFn(listExamQuestions);
@@ -154,6 +154,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   }
 
   async function runExtract() {
+    if (!isAdmin) {
+      setUploadMsg({ kind: "err", text: lang === "ar" ? "إدارة بنك الأسئلة متاحة للمديرين فقط." : "Question bank management is restricted to admins." });
+      return;
+    }
     if (uploadText.trim().length < 20) {
       setUploadMsg({ kind: "err", text: lang === "ar" ? "النص قصير جداً" : "Text too short" });
       return;
@@ -167,11 +171,6 @@ export function ExamPrep({ lang }: { lang: Lang }) {
 
       if (valid.length === 0) {
         setUploadMsg({ kind: "err", text: lang === "ar" ? "لم يتم استخراج أي أسئلة" : "No questions extracted" });
-        return;
-      }
-
-      if (!isAdmin) {
-        setUploadMsg({ kind: "err", text: lang === "ar" ? "إدارة بنك الأسئلة متاحة للمديرين فقط." : "Question bank management is restricted to admins." });
         return;
       }
 
@@ -323,7 +322,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
         )}
         <span>·</span>
         <span>{lang === "ar" ? "الإجمالي:" : "Total:"} <b>{allQuestions.length}</b></span>
-        {signedIn && local.length > 0 && (
+        {isAdmin && local.length > 0 && (
           <button
             onClick={migrateLocalToDb}
             disabled={loading}
@@ -461,6 +460,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
             />
             <button
               onClick={() => fileRef.current?.click()}
+              disabled={!isAdmin}
               className="inline-flex items-center gap-1.5 rounded-lg border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
             >
               <Upload className="size-3.5" />
@@ -477,6 +477,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           <textarea
             value={uploadText}
             onChange={(e) => setUploadText(e.target.value.slice(0, 120_000))}
+            disabled={!isAdmin}
             placeholder={lang === "ar" ? "الصق هنا الأسئلة (نص خام أو JSON أو CSV)..." : "Paste questions here (raw text, JSON or CSV)..."}
             className="min-h-[200px] w-full rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/60 p-3 font-mono text-xs text-[var(--fg)] outline-none focus:border-[#d7aa52]/70"
           />
@@ -490,14 +491,14 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 className="size-3.5 accent-[#d7aa52]"
               />
               {lang === "ar"
-                ? "حفظ كأسئلة عامة (يراها جميع المستخدمين)"
-                : "Save as public (visible to all users)"}
+                  ? "نشر مباشرة بعد الاستيراد (بدلاً من انتظار المراجعة)"
+                  : "Publish immediately after import (instead of pending review)"}
             </label>
           )}
 
           <div className="flex flex-wrap items-center gap-3">
             <button
-              disabled={loading || uploadText.trim().length < 20}
+              disabled={!isAdmin || loading || uploadText.trim().length < 20}
               onClick={runExtract}
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-sm font-bold text-[#04101f] disabled:opacity-50"
             >
