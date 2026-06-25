@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 import { extractExamQuestions } from "@/lib/exam.functions";
-import { listExamQuestions, addExamQuestions, listAdminExamQuestions, updateExamQuestionStatus, deleteMyExamQuestion } from "@/lib/exam-questions.functions";
+import { listExamQuestions, addExamQuestions, listAdminExamQuestions, updateExamQuestionStatus, updateExamQuestion, deleteMyExamQuestion } from "@/lib/exam-questions.functions";
 import { supabase } from "@/integrations/supabase/client";
 import type { Lang } from "@/lib/i18n";
 import { questionFingerprint, readQuestionImportFile } from "@/features/exams/importPipeline";
@@ -63,6 +63,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const addQs = useServerFn(addExamQuestions);
   const listAdminQs = useServerFn(listAdminExamQuestions);
   const updateStatus = useServerFn(updateExamQuestionStatus);
+  const updateQuestion = useServerFn(updateExamQuestion);
   const deleteQuestion = useServerFn(deleteMyExamQuestion);
 
   useEffect(() => { setLocal(loadLocal()); }, []);
@@ -522,7 +523,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
 
           {isAdmin && (
             <div className="space-y-3 border-t border-[#d7aa52]/20 pt-4">
-              <h4 className="text-sm font-extrabold text-[#f3d28a]">{lang === "ar" ? "مراجعة الأسئلة" : "Review questions"}</h4>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h4 className="text-sm font-extrabold text-[#f3d28a]">{lang === "ar" ? "مراجعة الأسئلة" : "Review questions"}</h4>
+                <div className="flex gap-2">
+                  <button onClick={async () => { await Promise.all(adminQuestions.slice(0, 12).map((item) => updateStatus({ data: { id: item.id, status: "approved", is_public: true } }))); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2 py-1 text-[10px] font-bold text-emerald-200">{lang === "ar" ? "اعتماد الكل" : "Approve visible"}</button>
+                  <button onClick={async () => { await Promise.all(adminQuestions.slice(0, 12).map((item) => updateStatus({ data: { id: item.id, status: "rejected", is_public: false } }))); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-amber-400/40 bg-amber-400/10 px-2 py-1 text-[10px] font-bold text-amber-100">{lang === "ar" ? "رفض الكل" : "Reject visible"}</button>
+                </div>
+              </div>
               <div className="grid gap-3">
                 {adminQuestions.slice(0, 12).map((item) => (
                   <div key={item.id} className="rounded-xl border border-[#d7aa52]/20 bg-[#04101f]/45 p-3">
@@ -531,6 +538,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                     </div>
                     <p className="text-sm font-bold text-[var(--fg)]">{item.question[lang]}</p>
                     <div className="mt-3 flex flex-wrap gap-2">
+                      <button onClick={async () => { const next = prompt(lang === "ar" ? "تعديل نص السؤال" : "Edit question", item.question[lang]); if (next?.trim()) { await updateQuestion({ data: { id: item.id, [lang === "ar" ? "question_ar" : "question_en"]: next.trim() } }); await adminQuery.refetch(); await dbQuery.refetch(); } }} className="rounded-md border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2 py-1 text-[10px] font-bold text-[#f3d28a]">{lang === "ar" ? "تعديل" : "Edit"}</button>
                       <button onClick={async () => { await updateStatus({ data: { id: item.id, status: "approved", is_public: true } }); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2 py-1 text-[10px] font-bold text-emerald-200">{lang === "ar" ? "اعتماد" : "Approve"}</button>
                       <button onClick={async () => { await updateStatus({ data: { id: item.id, status: "rejected", is_public: false } }); await adminQuery.refetch(); await dbQuery.refetch(); }} className="rounded-md border border-amber-400/40 bg-amber-400/10 px-2 py-1 text-[10px] font-bold text-amber-100">{lang === "ar" ? "رفض" : "Reject"}</button>
                       <button onClick={async () => { if (confirm(lang === "ar" ? "حذف السؤال؟" : "Delete question?")) { await deleteQuestion({ data: { id: item.id } }); await adminQuery.refetch(); await dbQuery.refetch(); } }} className="rounded-md border border-red-400/40 bg-red-500/10 px-2 py-1 text-[10px] font-bold text-red-200">{lang === "ar" ? "حذف" : "Delete"}</button>
