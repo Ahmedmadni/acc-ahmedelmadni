@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import jsPDF from "jspdf";
-import html2canvas from "html2canvas-pro";
 import {
   Award,
   Briefcase,
@@ -17,44 +16,13 @@ import {
   Wand2,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { capturePdfElement } from "@/lib/pdf-export";
+import { enhanceCvSection, parseGeneratedList } from "@/features/cv/assistant";
+import { scoreCv } from "@/features/cv/quality";
+import { CV_TEMPLATES, getCvTemplate } from "@/features/cv/templates";
+import type { Certification, CvAssistantAction, CvData, CvTemplateId, Education, Experience } from "@/features/cv/types";
 
 /* ================= TYPES ================= */
-
-type Experience = {
-  id: string;
-  role: string;
-  company: string;
-  period: string;
-  description: string;
-};
-
-type Education = {
-  id: string;
-  degree: string;
-  school: string;
-  period: string;
-};
-
-type Certification = {
-  id: string;
-  name: string;
-  issuer: string;
-  year: string;
-};
-
-type CvData = {
-  fullName: string;
-  jobTitle: string;
-  email: string;
-  phone: string;
-  location: string;
-  summary: string;
-  experience: Experience[];
-  education: Education[];
-  skills: string[];
-  languages: string[];
-  certifications: Certification[];
-};
 
 const uid = () => Math.random().toString(36).slice(2, 9);
 
