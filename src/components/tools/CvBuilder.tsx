@@ -403,7 +403,23 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               placeholder={isAR ? "نبذة مختصرة عن خبرتك وتخصصك..." : "A brief summary of your expertise..."}
               rows={6}
             />
+            <AiActions
+              lang={lang}
+              loading={aiLoading}
+              section="summary"
+              onRun={(action) => runAi("summary", data.summary, action, (value) => set("summary", value))}
+            />
           </FormCard>
+        </div>
+
+        <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <h3 className="text-sm font-extrabold text-[#f3d28a]">{heading.score}</h3>
+            <span className="rounded-full border border-[#d7aa52]/35 px-3 py-1 text-xs font-black text-[#f3d28a]">{quality.score}%</span>
+          </div>
+          <div className="grid gap-1 text-xs text-[var(--fg-soft)] md:grid-cols-2">
+            {quality.recommendations.map((item, index) => <span key={index}>• {item[lang]}</span>)}
+          </div>
         </div>
 
         <FormCard title={heading.exp} icon={Briefcase}>
@@ -415,6 +431,12 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               </div>
               <Field value={e.period} onChange={(v) => updExp(e.id, { period: v })} placeholder={isAR ? "الفترة (مثال: 2022 - الآن)" : "Period (e.g. 2022 - Present)"} />
               <Area value={e.description} onChange={(v) => updExp(e.id, { description: v })} placeholder={isAR ? "وصف موجز للمسؤوليات والإنجازات" : "Brief responsibilities & achievements"} />
+              <AiActions
+                lang={lang}
+                loading={aiLoading}
+                section={`experience-${e.id}`}
+                onRun={(action) => runAi("experience", e.description, action, (value) => updExp(e.id, { description: value }))}
+              />
               <button onClick={() => delExp(e.id)} className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1">
                 <Trash2 className="w-3 h-3" /> {isAR ? "حذف" : "Remove"}
               </button>
@@ -465,6 +487,14 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                 </span>
               ))}
             </div>
+            <button
+              onClick={() => runAi("skills", data.skills.join(", "), "generate", (value) => set("skills", parseGeneratedList(value)))}
+              disabled={!!aiLoading}
+              className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
+            >
+              {aiLoading === "skills-generate" ? <Loader2 className="size-3 animate-spin" /> : <Wand2 className="size-3" />}
+              {isAR ? "توليد مهارات" : "Generate skills"}
+            </button>
           </FormCard>
 
           <FormCard title={heading.langs} icon={LangIcon}>
