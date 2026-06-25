@@ -111,10 +111,14 @@ function Area({
 export function CvBuilder({ lang }: { lang: Lang }) {
   const isAR = lang === "ar";
   const [data, setData] = useState<CvData>(EMPTY);
+  const [templateId, setTemplateId] = useState<CvTemplateId>("modern-executive");
   const [loading, setLoading] = useState(false);
+  const [aiLoading, setAiLoading] = useState<string | null>(null);
   const [skillInput, setSkillInput] = useState("");
   const [langInput, setLangInput] = useState("");
   const previewRef = useRef<HTMLDivElement>(null);
+  const template = getCvTemplate(templateId);
+  const quality = useMemo(() => scoreCv(data), [data]);
 
   const set = <K extends keyof CvData>(k: K, v: CvData[K]) => setData((d) => ({ ...d, [k]: v }));
 
@@ -148,50 +152,26 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     setLangInput("");
   };
 
+  const runAi = async (section: string, text: string, action: CvAssistantAction, apply: (value: string) => void) => {
+    setAiLoading(`${section}-${action}`);
+    try {
+      const next = await enhanceCvSection({ section, text, lang, action, context: data });
+      apply(next);
+    } catch (error) {
+      alert(error instanceof Error ? error.message : isAR ? "تعذّر تشغيل المساعد" : "AI assistant failed");
+    } finally {
+      setAiLoading(null);
+    }
+  };
+
   /* ================= PDF EXPORT ================= */
 
   const exportPDF = async () => {
     const node = previewRef.current;
     if (!node) return;
     setLoading(true);
-    document.body.classList.add("pdf-export-mode");
-    node.classList.add("pdf-arabic-safe");
-    const touched = [node, ...Array.from(node.querySelectorAll<HTMLElement>("*"))];
-    const previousStyles = touched.map((el) => ({
-      el,
-      transform: el.style.transform,
-      filter: el.style.filter,
-      letterSpacing: el.style.letterSpacing,
-      wordSpacing: el.style.wordSpacing,
-      fontFamily: el.style.fontFamily,
-      unicodeBidi: el.style.unicodeBidi,
-      direction: el.style.direction,
-    }));
-    touched.forEach((el) => {
-      el.style.transform = "none";
-      el.style.filter = "none";
-      el.style.letterSpacing = "0";
-      el.style.wordSpacing = "0";
-      el.style.fontFamily = "\"Cairo\", \"Tahoma\", Arial, sans-serif";
-      el.style.unicodeBidi = "isolate";
-      if (node.getAttribute("dir") === "rtl") el.style.direction = "rtl";
-    });
     try {
-      // Ensure web fonts (Cairo for Arabic) are fully loaded
-      if (document.fonts && document.fonts.ready) await document.fonts.ready;
-      await new Promise((r) => setTimeout(r, 200));
-
-      const canvas = await html2canvas(node, {
-        backgroundColor: "#ffffff",
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        logging: false,
-        windowWidth: node.scrollWidth,
-        windowHeight: node.scrollHeight,
-      });
-
-
+      const canvas = await capturePdfElement(node);
       const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
       const pageW = pdf.internal.pageSize.getWidth();
@@ -232,17 +212,6 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       console.error("CV PDF export failed", e);
       alert(isAR ? "تعذّر تصدير الملف. حاول مجددًا." : "Export failed. Please try again.");
     } finally {
-      previousStyles.forEach(({ el, transform, filter, letterSpacing, wordSpacing, fontFamily, unicodeBidi, direction }) => {
-        el.style.transform = transform;
-        el.style.filter = filter;
-        el.style.letterSpacing = letterSpacing;
-        el.style.wordSpacing = wordSpacing;
-        el.style.fontFamily = fontFamily;
-        el.style.unicodeBidi = unicodeBidi;
-        el.style.direction = direction;
-      });
-      document.body.classList.remove("pdf-export-mode");
-      node.classList.remove("pdf-arabic-safe");
       setLoading(false);
     }
 
