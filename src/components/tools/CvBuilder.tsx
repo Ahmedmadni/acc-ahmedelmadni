@@ -21,6 +21,7 @@ import { enhanceCvSection, parseGeneratedList } from "@/features/cv/assistant";
 import { scoreCv } from "@/features/cv/quality";
 import { CV_TEMPLATES, getCvTemplate } from "@/features/cv/templates";
 import type { Certification, CvAssistantAction, CvData, CvTemplateId, Education, Experience } from "@/features/cv/types";
+import { CvPreview } from "@/features/cv/CvPreview";
 
 /* ================= TYPES ================= */
 
@@ -156,6 +157,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   const [aiLoading, setAiLoading] = useState<string | null>(null);
   const [skillInput, setSkillInput] = useState("");
   const [langInput, setLangInput] = useState("");
+  const [photoPreview, setPhotoPreview] = useState<string | undefined>(undefined);
   const previewRef = useRef<HTMLDivElement>(null);
   const template = getCvTemplate(templateId);
   const quality = useMemo(() => scoreCv(data), [data]);
@@ -190,6 +192,18 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     if (!v) return;
     set("languages", [...data.languages, v]);
     setLangInput("");
+  };
+
+  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      setPhotoPreview(result);
+      set("photo", result);
+    };
+    reader.readAsDataURL(file);
   };
 
   const runAi = async (section: string, text: string, action: CvAssistantAction, apply: (value: string) => void) => {
@@ -303,121 +317,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         </div>
 
         <div className="rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/40 p-3 max-h-[80vh] overflow-auto">
-          <div
-            ref={previewRef}
-            dir={dir}
-            style={{
-              width: "210mm",
-              minHeight: "297mm",
-              margin: "0 auto",
-              background: "#ffffff",
-              color: "#0b1220",
-              padding: "18mm",
-              fontFamily: isAR
-                ? "'Cairo', 'Tahoma', Arial, sans-serif"
-                : "'Inter', Arial, sans-serif",
-              boxShadow: "0 10px 40px rgba(0,0,0,0.35)",
-            }}
-          >
-            {/* HEADER */}
-            <div style={{ borderBottom: `3px solid ${template.accent}`, paddingBottom: "10px", marginBottom: "14px", background: template.layout === "sidebar" ? `linear-gradient(${isAR ? "270deg" : "90deg"}, ${template.secondary} 0 28%, transparent 28%)` : "transparent", paddingInlineStart: template.layout === "sidebar" ? "10mm" : undefined, color: template.layout === "sidebar" ? "#ffffff" : undefined }}>
-              <h1 style={{ fontSize: "28px", fontWeight: 800, margin: 0, color: "#0b1220" }}>
-                {data.fullName || (isAR ? "الاسم الكامل" : "Full Name")}
-              </h1>
-              <p style={{ fontSize: "15px", color: template.accent, margin: "4px 0 8px", fontWeight: 700 }}>
-                {data.jobTitle || (isAR ? "المسمى الوظيفي" : "Job Title")}
-              </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", fontSize: "12px", color: "#475569" }}>
-                {data.email && <span>📧 {data.email}</span>}
-                {data.phone && <span>📱 {data.phone}</span>}
-                {data.location && <span>📍 {data.location}</span>}
-              </div>
-            </div>
-
-            {/* SUMMARY */}
-            {data.summary && (
-              <section style={{ marginBottom: "14px" }}>
-                <h2 style={sectionTitle}>{heading.summary}</h2>
-                <p style={{ fontSize: "13px", lineHeight: 1.6, margin: 0, textAlign: "justify" }}>{data.summary}</p>
-              </section>
-            )}
-
-            {/* EXPERIENCE */}
-            {data.experience.some((e) => e.role || e.company) && (
-              <section style={{ marginBottom: "14px" }}>
-                <h2 style={sectionTitle}>{heading.exp}</h2>
-                {data.experience.map((e) => (
-                  (e.role || e.company || e.description) && (
-                    <div key={e.id} style={{ marginBottom: "10px" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", gap: "10px", flexWrap: "wrap" }}>
-                        <strong style={{ fontSize: "14px" }}>{e.role}{e.company ? ` — ${e.company}` : ""}</strong>
-                        <span style={{ fontSize: "12px", color: "#64748b" }}>{e.period}</span>
-                      </div>
-                      {e.description && (
-                        <p style={{ fontSize: "12.5px", margin: "4px 0 0", lineHeight: 1.55, color: "#334155" }}>{e.description}</p>
-                      )}
-                    </div>
-                  )
-                ))}
-              </section>
-            )}
-
-            {/* EDUCATION */}
-            {data.education.some((e) => e.degree || e.school) && (
-              <section style={{ marginBottom: "14px" }}>
-                <h2 style={sectionTitle}>{heading.edu}</h2>
-                {data.education.map((e) => (
-                  (e.degree || e.school) && (
-                    <div key={e.id} style={{ marginBottom: "6px", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "10px" }}>
-                      <strong style={{ fontSize: "13.5px" }}>{e.degree}{e.school ? ` — ${e.school}` : ""}</strong>
-                      <span style={{ fontSize: "12px", color: "#64748b" }}>{e.period}</span>
-                    </div>
-                  )
-                ))}
-              </section>
-            )}
-
-            {/* SKILLS + LANGS */}
-            {(data.skills.length > 0 || data.languages.length > 0) && (
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
-                {data.skills.length > 0 && (
-                  <section>
-                    <h2 style={sectionTitle}>{heading.skills}</h2>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-                      {data.skills.map((s, i) => (
-                        <span key={i} style={chipStyle}>{s}</span>
-                      ))}
-                    </div>
-                  </section>
-                )}
-                {data.languages.length > 0 && (
-                  <section>
-                    <h2 style={sectionTitle}>{heading.langs}</h2>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-                      {data.languages.map((s, i) => (
-                        <span key={i} style={chipStyle}>{s}</span>
-                      ))}
-                    </div>
-                  </section>
-                )}
-              </div>
-            )}
-
-            {/* CERTIFICATIONS */}
-            {data.certifications.some((c) => c.name) && (
-              <section>
-                <h2 style={sectionTitle}>{heading.certs}</h2>
-                {data.certifications.map((c) => (
-                  c.name && (
-                    <div key={c.id} style={{ fontSize: "13px", marginBottom: "4px", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "10px" }}>
-                      <span><strong>{c.name}</strong>{c.issuer ? ` — ${c.issuer}` : ""}</span>
-                      <span style={{ color: "#64748b" }}>{c.year}</span>
-                    </div>
-                  )
-                ))}
-              </section>
-            )}
-          </div>
+          <CvPreview data={data} template={template} lang={lang} previewRef={previewRef} />
         </div>
       </div>
 
@@ -434,6 +334,28 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             <Field value={data.email} onChange={(v) => set("email", v)} placeholder="email@example.com" type="email" />
             <Field value={data.phone} onChange={(v) => set("phone", v)} placeholder={isAR ? "رقم الجوال" : "Phone"} />
             <Field value={data.location} onChange={(v) => set("location", v)} placeholder={isAR ? "المدينة، الدولة" : "City, Country"} />
+            <Field value={data.website ?? ""} onChange={(v) => set("website", v)} placeholder={isAR ? "الموقع / LinkedIn" : "Website / LinkedIn"} />
+            <label className="block text-xs text-[var(--fg-soft)] mb-1 mt-2">
+              {isAR ? "الصورة الشخصية" : "Profile Photo"}
+            </label>
+            {photoPreview && (
+              <div className="flex items-center gap-2 mb-2">
+                <img src={photoPreview} alt="" className="w-12 h-12 rounded-full object-cover border border-[#d7aa52]/40" />
+                <button
+                  type="button"
+                  onClick={() => { setPhotoPreview(undefined); set("photo", undefined); }}
+                  className="text-xs text-red-300 hover:text-red-200"
+                >
+                  {isAR ? "حذف الصورة" : "Remove"}
+                </button>
+              </div>
+            )}
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handlePhotoUpload}
+              className="w-full text-xs text-white file:mr-2 file:rounded-md file:border-0 file:bg-[#d7aa52]/20 file:px-3 file:py-1.5 file:text-[#f3d28a]"
+            />
           </FormCard>
 
           <FormCard title={heading.summary} icon={Mail}>

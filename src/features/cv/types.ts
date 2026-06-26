@@ -26,6 +26,8 @@ export type CvData = {
   email: string;
   phone: string;
   location: string;
+  website?: string;
+  photo?: string;
   summary: string;
   experience: Experience[];
   education: Education[];
