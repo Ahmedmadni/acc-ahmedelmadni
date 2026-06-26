@@ -194,6 +194,18 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     setLangInput("");
   };
 
+  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      setPhotoPreview(result);
+      set("photo", result);
+    };
+    reader.readAsDataURL(file);
+  };
+
   const runAi = async (section: string, text: string, action: CvAssistantAction, apply: (value: string) => void) => {
     setAiLoading(`${section}-${action}`);
     try {
