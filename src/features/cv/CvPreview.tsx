@@ -586,7 +586,7 @@ export function CvPreview({
   data: CvData;
   template: CvTemplate;
   lang: "ar" | "en";
-  previewRef: RefObject<HTMLDivElement>;
+  previewRef: RefObject<HTMLDivElement | null>;
 }) {
   const isAR = lang === "ar";
   const t: Labels = {
