@@ -44,15 +44,15 @@ import servicesBg from "@/assets/services-bg.webp";
 import logoAlostool from "@/assets/logo-alostool.webp";
 import logoLamara from "@/assets/logo-lamara.webp";
 import logoQimat from "@/assets/logo-qimat.webp";
-import mascotWhatsapp from "@/assets/mascot-whatsapp.png";
-import mascotLinkedin from "@/assets/mascot-linkedin.png";
-import mascotFacebook from "@/assets/mascot-facebook.png";
-import mascotInstagram from "@/assets/mascot-instagram.png";
+import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
+import mascotLinkedin from "@/assets/mascot-linkedin.webp";
+import mascotFacebook from "@/assets/mascot-facebook.webp";
+import mascotInstagram from "@/assets/mascot-instagram.webp";
 import heroVideoAsset from "@/assets/hero.webm.asset.json";
-import heroPortrait from "@/assets/hero-portrait.jpg";
-import mascotSnapchat from "@/assets/mascot-snapchat.png";
-import mascotPhone from "@/assets/mascot-phone.png";
-import mascotEmail from "@/assets/mascot-email.png";
+import heroPortrait from "@/assets/hero-portrait.webp";
+import mascotSnapchat from "@/assets/mascot-snapchat.webp";
+import mascotPhone from "@/assets/mascot-phone.webp";
+import mascotEmail from "@/assets/mascot-email.webp";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
@@ -90,7 +90,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
-      { rel: "preload", as: "video", href: heroVideoAsset.url, type: "video/webm", fetchPriority: "low" },
+      
     ],
     scripts: [
       {
@@ -587,7 +587,8 @@ function HeroFrameSlideshow() {
       autoPlay
       muted
       playsInline
-      preload="metadata"
+      preload="none"
+      poster={heroBg}
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
       onEnded={(e) => {
@@ -665,12 +666,7 @@ function Hero({ lang }: { lang: Lang }) {
         {/* single-column layout — portrait hidden */}
         <div className="flex flex-col">
           {/* TEXT column — full width, RTL aligned */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="w-full"
-          >
+          <div className="w-full">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
               <Sparkles className="size-3.5" />
               {t.hero.badge[lang]}
@@ -722,7 +718,7 @@ function Hero({ lang }: { lang: Lang }) {
               <MapPin className="size-4 text-[#D4A64A]" />
               {t.hero.location[lang]}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* BOTTOM FEATURE BAR */}
@@ -845,7 +841,9 @@ function ProfileBio({ lang }: { lang: Lang }) {
                   alt="Ahmed Elmadani"
                   width={400}
                   height={500}
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
                   className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
@@ -1626,9 +1624,10 @@ export function Contact({ lang }: { lang: Lang }) {
               <motion.img
                 src={s.mascot}
                 alt={s.label}
-                width={1024}
-                height={1024}
+                width={256}
+                height={256}
                 loading="lazy"
+                decoding="async"
                 className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
                 style={{ height: "160px", marginBottom: "2px" }}
                 animate={{ y: [0, -5, 0] }}
