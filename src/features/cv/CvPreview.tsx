@@ -1,4 +1,4 @@
-import type { CSSProperties, RefObject } from "react";
+import type { CSSProperties, ReactElement, RefObject } from "react";
 import type { CvData, CvTemplate, Education, Experience } from "./types";
 
 type Labels = {
@@ -14,7 +14,7 @@ type TemplateProps = { data: CvData; template: CvTemplate; t: Labels };
 
 /* ============ shared helpers ============ */
 
-const sectionTitle = (label: string, accent: string, light = false): JSX.Element => (
+const sectionTitle = (label: string, accent: string, light = false) => (
   <h2
     style={{
       fontSize: "13px",
@@ -600,7 +600,7 @@ export function CvPreview({
   };
 
   const props: TemplateProps = { data, template, t };
-  let inner: JSX.Element;
+  let inner: ReactElement;
   switch (template.id) {
     case "ats-optimized": inner = <TemplateAts {...props} />; break;
     case "corporate-professional": inner = <TemplateCorporate {...props} />; break;
