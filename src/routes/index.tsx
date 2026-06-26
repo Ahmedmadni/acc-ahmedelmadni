@@ -587,7 +587,8 @@ function HeroFrameSlideshow() {
       autoPlay
       muted
       playsInline
-      preload="metadata"
+      preload="none"
+      poster={heroBg}
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
       onEnded={(e) => {
