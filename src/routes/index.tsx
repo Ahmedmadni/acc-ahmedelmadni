@@ -1624,9 +1624,10 @@ export function Contact({ lang }: { lang: Lang }) {
               <motion.img
                 src={s.mascot}
                 alt={s.label}
-                width={1024}
-                height={1024}
+                width={256}
+                height={256}
                 loading="lazy"
+                decoding="async"
                 className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
                 style={{ height: "160px", marginBottom: "2px" }}
                 animate={{ y: [0, -5, 0] }}
