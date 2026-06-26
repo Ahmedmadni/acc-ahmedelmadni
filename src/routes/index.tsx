@@ -718,7 +718,7 @@ function Hero({ lang }: { lang: Lang }) {
               <MapPin className="size-4 text-[#D4A64A]" />
               {t.hero.location[lang]}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* BOTTOM FEATURE BAR */}
