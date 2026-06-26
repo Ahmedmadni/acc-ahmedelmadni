@@ -90,7 +90,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
-      { rel: "preload", as: "video", href: heroVideoAsset.url, type: "video/webm", fetchPriority: "low" },
+      
     ],
     scripts: [
       {
