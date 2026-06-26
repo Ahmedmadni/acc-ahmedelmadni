@@ -21,6 +21,7 @@ import { enhanceCvSection, parseGeneratedList } from "@/features/cv/assistant";
 import { scoreCv } from "@/features/cv/quality";
 import { CV_TEMPLATES, getCvTemplate } from "@/features/cv/templates";
 import type { Certification, CvAssistantAction, CvData, CvTemplateId, Education, Experience } from "@/features/cv/types";
+import { CvPreview } from "@/features/cv/CvPreview";
 
 /* ================= TYPES ================= */
 
