@@ -334,6 +334,28 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             <Field value={data.email} onChange={(v) => set("email", v)} placeholder="email@example.com" type="email" />
             <Field value={data.phone} onChange={(v) => set("phone", v)} placeholder={isAR ? "رقم الجوال" : "Phone"} />
             <Field value={data.location} onChange={(v) => set("location", v)} placeholder={isAR ? "المدينة، الدولة" : "City, Country"} />
+            <Field value={data.website ?? ""} onChange={(v) => set("website", v)} placeholder={isAR ? "الموقع / LinkedIn" : "Website / LinkedIn"} />
+            <label className="block text-xs text-[var(--fg-soft)] mb-1 mt-2">
+              {isAR ? "الصورة الشخصية" : "Profile Photo"}
+            </label>
+            {photoPreview && (
+              <div className="flex items-center gap-2 mb-2">
+                <img src={photoPreview} alt="" className="w-12 h-12 rounded-full object-cover border border-[#d7aa52]/40" />
+                <button
+                  type="button"
+                  onClick={() => { setPhotoPreview(undefined); set("photo", undefined); }}
+                  className="text-xs text-red-300 hover:text-red-200"
+                >
+                  {isAR ? "حذف الصورة" : "Remove"}
+                </button>
+              </div>
+            )}
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handlePhotoUpload}
+              className="w-full text-xs text-white file:mr-2 file:rounded-md file:border-0 file:bg-[#d7aa52]/20 file:px-3 file:py-1.5 file:text-[#f3d28a]"
+            />
           </FormCard>
 
           <FormCard title={heading.summary} icon={Mail}>
