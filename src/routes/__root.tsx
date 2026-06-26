@@ -109,18 +109,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
-        rel: "preload",
-        as: "style",
-        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Inter:wght@600;700&display=swap",
-      },
-      {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Inter:wght@600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Inter:wght@600;700&display=swap",
+        media: "print",
       },
-      // Font Awesome loaded non-blocking via media="print" + script swap
       {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
@@ -129,7 +125,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
-        children: `(function(){var l=document.querySelectorAll('link[media="print"]');l.forEach(function(x){x.media="all"});})();`,
+        children: `(function(){var l=document.querySelectorAll('link[media="print"]');l.forEach(function(x){x.onload=function(){x.media="all"};if(x.sheet)x.media="all";});})();`,
       },
       {
         src: "https://www.googletagmanager.com/gtag/js?id=G-5ZZTMPFCS1",
