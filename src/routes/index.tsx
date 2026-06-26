@@ -666,12 +666,7 @@ function Hero({ lang }: { lang: Lang }) {
         {/* single-column layout — portrait hidden */}
         <div className="flex flex-col">
           {/* TEXT column — full width, RTL aligned */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="w-full"
-          >
+          <div className="w-full">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
               <Sparkles className="size-3.5" />
               {t.hero.badge[lang]}
