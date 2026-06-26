@@ -157,6 +157,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   const [aiLoading, setAiLoading] = useState<string | null>(null);
   const [skillInput, setSkillInput] = useState("");
   const [langInput, setLangInput] = useState("");
+  const [photoPreview, setPhotoPreview] = useState<string | undefined>(undefined);
   const previewRef = useRef<HTMLDivElement>(null);
   const template = getCvTemplate(templateId);
   const quality = useMemo(() => scoreCv(data), [data]);
