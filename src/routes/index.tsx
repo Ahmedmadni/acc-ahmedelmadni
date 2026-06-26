@@ -841,7 +841,9 @@ function ProfileBio({ lang }: { lang: Lang }) {
                   alt="Ahmed Elmadani"
                   width={400}
                   height={500}
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
                   className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
