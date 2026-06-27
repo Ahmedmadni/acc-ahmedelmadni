@@ -1790,7 +1790,7 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           className="relative flex size-14 shrink-0 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
         >
           <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
-          {open ? <X className="size-5 relative" /> : <i className="fa-solid fa-share-nodes text-xl relative" />}
+          {open ? <X className="size-5 relative" /> : <Share2 className="size-5 relative" />}
         </motion.button>
 
         <AnimatePresence>
