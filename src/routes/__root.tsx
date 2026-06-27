@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "msvalidate.01", content: "D911CDA6F8A617A485931393AAD13064" },
     ],
     links: [
-      { rel: "preload", as: "style", href: appCss },
+      { rel: "preload", as: "style", href: appCss, fetchPriority: "high" },
       { rel: "stylesheet", href: appCss },
       { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -128,7 +128,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: `(function(){var l=document.querySelectorAll('link[media="print"]');l.forEach(function(x){x.onload=function(){x.media="all"};if(x.sheet)x.media="all";});})();`,
       },
       {
-        children: `(function(){function loadGTM(){if(window._gtmLoaded)return;window._gtmLoaded=true;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-5ZZTMPFCS1';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-5ZZTMPFCS1',{anonymize_ip:true});}if(document.readyState==='complete'){setTimeout(loadGTM,3000);}else{window.addEventListener('load',function(){setTimeout(loadGTM,3000);});}})();`,
+        children: `(function(){function loadGTM(){if(window._gtmLoaded)return;window._gtmLoaded=true;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-5ZZTMPFCS1';s.async=true;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-5ZZTMPFCS1',{anonymize_ip:true});}if(document.readyState==='complete'){setTimeout(loadGTM,4000);}else{window.addEventListener('load',function(){setTimeout(loadGTM,4000);});}})();`,
       },
       {
         type: "application/ld+json",
