@@ -357,19 +357,15 @@ html[dir="rtl"] .title-bar::after {
   animation: float-y 5s ease-in-out infinite;
 }
 
-/* Shine */
+/* Shine — composited via transform */
 @keyframes shine {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
 }
 .shine {
   background: linear-gradient(110deg, transparent 30%, rgba(243, 210, 138, 0.45) 50%, transparent 70%);
-  background-size: 200% 100%;
   animation: shine 3.5s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* Social vertical */

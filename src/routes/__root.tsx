@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "msvalidate.01", content: "D911CDA6F8A617A485931393AAD13064" },
     ],
     links: [
-      { rel: "preload", as: "style", href: appCss },
+      { rel: "preload", as: "style", href: appCss, fetchPriority: "high" },
       { rel: "stylesheet", href: appCss },
       { rel: "dns-prefetch", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

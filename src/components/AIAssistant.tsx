@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Send, Sparkles, X } from "lucide-react";
 import { playClick, playHover } from "@/lib/sound";
-import mascotImg from "@/assets/ai-mascot.png";
+import mascotImg from "@/assets/ai-mascot.webp";
 import type { Lang } from "@/lib/i18n";
 
 const transport = new DefaultChatTransport({ api: "/api/chat" });
@@ -63,10 +63,12 @@ export function AIAssistant({ lang }: { lang: Lang }) {
           <motion.img
             src={mascotImg}
             alt={title}
-            width={1024}
-            height={1024}
+            width={112}
+            height={112}
             loading="lazy"
-            className="relative size-16 sm:size-20 object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
+            decoding="async"
+            style={{ width: "112px", height: "112px", objectFit: "contain" }}
+            className="relative object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
             animate={{ y: [0, -8, 0, -4, 0], rotate: [0, -5, 5, -2, 0] }}
             transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -94,7 +96,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
               {/* Header */}
               <div className="flex items-center gap-3 border-b border-[#d7aa52]/25 bg-gradient-to-r from-[#0a223f] to-[#04101f] p-4">
                 <div className="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a]/20 to-[#b8862e]/20 ring-1 ring-[#d7aa52]/40">
-                  <img src={mascotImg} alt="" width={1024} height={1024} className="size-11 object-contain" />
+                  <img src={mascotImg} alt="" width={44} height={44} loading="lazy" decoding="async" className="size-11 object-contain" />
                   <span className="absolute -bottom-0.5 -end-0.5 size-3 rounded-full border-2 border-[#07182c] bg-emerald-400" />
                 </div>
                 <div className="flex-1">

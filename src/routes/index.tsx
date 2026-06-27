@@ -1639,12 +1639,12 @@ export function Contact({ lang }: { lang: Lang }) {
               <motion.img
                 src={s.mascot}
                 alt={s.label}
-                width={256}
-                height={256}
+                width={160}
+                height={160}
                 loading="lazy"
                 decoding="async"
                 className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
-                style={{ height: "160px", marginBottom: "2px" }}
+                style={{ height: "160px", width: "160px", marginBottom: "2px" }}
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
