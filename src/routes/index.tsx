@@ -13,18 +13,26 @@ import {
   ChevronRight,
   BookOpen,
   Download,
+  Facebook,
   FileText,
+  Ghost,
   GraduationCap,
+  Instagram,
   Languages,
   Layers,
   Lightbulb,
   LineChart,
+  Linkedin,
+  Mail,
   MapPin,
+  MessageCircle,
   MessagesSquare,
   Moon,
+  Phone,
   PieChart,
   Plus,
   Quote,
+  Share2,
   ShieldCheck,
   Sparkles,
   Star,
@@ -34,6 +42,7 @@ import {
   Wallet,
   Wrench,
   X,
+  type LucideIcon,
 } from "lucide-react";
 import profileImg from "@/assets/profile.webp";
 import heroBg from "@/assets/hero-finance-bg.webp";
@@ -139,46 +148,52 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
   qimat: { src: logoQimat, name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" } },
 };
 
-const SOCIALS = [
-  { href: "tel:+966560409811", icon: "fa-solid fa-phone", color: "#34d399", label: "Phone", mascot: mascotPhone },
+const SOCIALS: ReadonlyArray<{
+  href: string;
+  Icon: LucideIcon;
+  color: string;
+  label: string;
+  mascot: string;
+}> = [
+  { href: "tel:+966560409811", Icon: Phone, color: "#34d399", label: "Phone", mascot: mascotPhone },
   {
     href: "https://wa.me/966560409811",
-    icon: "fa-brands fa-whatsapp",
+    Icon: MessageCircle,
     color: "#25D366",
     label: "WhatsApp",
     mascot: mascotWhatsapp,
   },
   {
     href: "mailto:elmadnim@gmail.com",
-    icon: "fa-solid fa-envelope",
+    Icon: Mail,
     color: "#ef4444",
     label: "Email",
     mascot: mascotEmail,
   },
   {
     href: "https://www.linkedin.com/in/احمد-المدنى-33022830b",
-    icon: "fa-brands fa-linkedin-in",
+    Icon: Linkedin,
     color: "#0A66C2",
     label: "LinkedIn",
     mascot: mascotLinkedin,
   },
   {
     href: "https://www.facebook.com/share/1GrcrAN8tP/",
-    icon: "fa-brands fa-facebook-f",
+    Icon: Facebook,
     color: "#1877F2",
     label: "Facebook",
     mascot: mascotFacebook,
   },
   {
     href: "https://www.instagram.com/ahmed_elmadni",
-    icon: "fa-brands fa-instagram",
+    Icon: Instagram,
     color: "#E4405F",
     label: "Instagram",
     mascot: mascotInstagram,
   },
   {
     href: "https://www.snapchat.com/add/ahmedacc851998",
-    icon: "fa-brands fa-snapchat-ghost",
+    Icon: Ghost,
     color: "#FFFC00",
     label: "Snapchat",
     mascot: mascotSnapchat,
@@ -1775,7 +1790,7 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           className="relative flex size-14 shrink-0 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
         >
           <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
-          {open ? <X className="size-5 relative" /> : <i className="fa-solid fa-share-nodes text-xl relative" />}
+          {open ? <X className="size-5 relative" /> : <Share2 className="size-5 relative" />}
         </motion.button>
 
         <AnimatePresence>
@@ -1805,7 +1820,7 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
                   className="flex size-10 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg"
                   style={{ color: s.color }}
                 >
-                  <i className={`${s.icon} text-base`} />
+                  <s.Icon className="size-4" />
                 </motion.a>
               ))}
             </motion.div>
