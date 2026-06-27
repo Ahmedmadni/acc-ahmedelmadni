@@ -1820,7 +1820,7 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
                   className="flex size-10 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.02] shadow-lg"
                   style={{ color: s.color }}
                 >
-                  <i className={`${s.icon} text-base`} />
+                  <s.Icon className="size-4" />
                 </motion.a>
               ))}
             </motion.div>
