@@ -148,46 +148,52 @@ const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> =
   qimat: { src: logoQimat, name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" } },
 };
 
-const SOCIALS = [
-  { href: "tel:+966560409811", icon: "fa-solid fa-phone", color: "#34d399", label: "Phone", mascot: mascotPhone },
+const SOCIALS: ReadonlyArray<{
+  href: string;
+  Icon: LucideIcon;
+  color: string;
+  label: string;
+  mascot: string;
+}> = [
+  { href: "tel:+966560409811", Icon: Phone, color: "#34d399", label: "Phone", mascot: mascotPhone },
   {
     href: "https://wa.me/966560409811",
-    icon: "fa-brands fa-whatsapp",
+    Icon: MessageCircle,
     color: "#25D366",
     label: "WhatsApp",
     mascot: mascotWhatsapp,
   },
   {
     href: "mailto:elmadnim@gmail.com",
-    icon: "fa-solid fa-envelope",
+    Icon: Mail,
     color: "#ef4444",
     label: "Email",
     mascot: mascotEmail,
   },
   {
     href: "https://www.linkedin.com/in/احمد-المدنى-33022830b",
-    icon: "fa-brands fa-linkedin-in",
+    Icon: Linkedin,
     color: "#0A66C2",
     label: "LinkedIn",
     mascot: mascotLinkedin,
   },
   {
     href: "https://www.facebook.com/share/1GrcrAN8tP/",
-    icon: "fa-brands fa-facebook-f",
+    Icon: Facebook,
     color: "#1877F2",
     label: "Facebook",
     mascot: mascotFacebook,
   },
   {
     href: "https://www.instagram.com/ahmed_elmadni",
-    icon: "fa-brands fa-instagram",
+    Icon: Instagram,
     color: "#E4405F",
     label: "Instagram",
     mascot: mascotInstagram,
   },
   {
     href: "https://www.snapchat.com/add/ahmedacc851998",
-    icon: "fa-brands fa-snapchat-ghost",
+    Icon: Ghost,
     color: "#FFFC00",
     label: "Snapchat",
     mascot: mascotSnapchat,
