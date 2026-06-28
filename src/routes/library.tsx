@@ -55,9 +55,9 @@ function LibraryLayout() {
         : "courses";
 
   const tabs: { id: "courses" | "books" | "articles"; ar: string; en: string; Icon: typeof Video; to: "/library/courses" | "/library/books" | "/library/articles" }[] = [
-    { id: "courses", ar: "الكورسات", en: "Courses", Icon: Video, to: "/library/courses" },
-    { id: "books", ar: "الكتب", en: "Books", Icon: BookMarked, to: "/library/books" },
     { id: "articles", ar: "المقالات", en: "Articles", Icon: FileText, to: "/library/articles" },
+    { id: "courses", ar: "الكورسات", en: "Courses", Icon: Video, to: "/library/courses" },
+    { id: "books", ar: "كتب ومراجع", en: "Books & References", Icon: BookMarked, to: "/library/books" },
   ];
 
   return (
