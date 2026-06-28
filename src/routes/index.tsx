@@ -394,7 +394,7 @@ export function Navbar({
     { to: "/", label: t.nav.home[lang] },
     { to: "/services", label: t.nav.services[lang] },
     { to: "/tools", label: lang === "ar" ? "الأدوات" : "Tools" },
-    { to: "/knowledge", label: lang === "ar" ? "المكتبة" : "Library" },
+    { to: "/library/articles", label: lang === "ar" ? "المكتبة" : "Library" },
     { to: "/#contact", label: t.nav.contact[lang], hash: true },
   ];
 
