@@ -388,55 +388,62 @@ export function Navbar({
   const isAdmin = useIsAdmin();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
-  const links: { to: string; label: string }[] = [
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const links: { to: string; label: string; hash?: boolean }[] = [
     { to: "/", label: t.nav.home[lang] },
-    { to: "/about", label: t.nav.about[lang] },
     { to: "/services", label: t.nav.services[lang] },
-    { to: "/experience", label: t.nav.experience[lang] },
-    { to: "/skills", label: t.nav.skills[lang] },
-    { to: "/certifications", label: lang === "ar" ? "الشهادات" : "Certifications" },
-    { to: "/#contact", label: t.nav.contact[lang] },
+    { to: "/tools", label: lang === "ar" ? "الأدوات" : "Tools" },
+    { to: "/knowledge", label: lang === "ar" ? "المكتبة" : "Library" },
+    { to: "/#contact", label: t.nav.contact[lang], hash: true },
   ];
+
+  const renderLink = (l: { to: string; label: string; hash?: boolean }, extraClass = "") => {
+    const cls = `relative text-sm font-medium transition-colors hover:text-[#d7aa52] ${extraClass}`;
+    if (l.hash) {
+      return (
+        <a
+          href={l.to.slice(1)}
+          onMouseEnter={playHover}
+          onClick={() => setMobileOpen(false)}
+          className={cls}
+          style={{ color: "var(--fg-soft)" }}
+        >
+          {l.label}
+        </a>
+      );
+    }
+    return (
+      <RouterLink
+        to={l.to}
+        onMouseEnter={playHover}
+        onClick={() => setMobileOpen(false)}
+        className={cls}
+        style={{ color: "var(--fg-soft)" }}
+      >
+        {l.label}
+      </RouterLink>
+    );
+  };
+
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--line)] backdrop-blur-xl"
-      style={{ background: "color-mix(in oklab, var(--bg-surface) 70%, transparent)" }}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-[#d7aa52]/25 backdrop-blur-xl"
+      style={{ background: "color-mix(in oklab, #04101f 80%, transparent)" }}
     >
-      <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20  items-center justify-between">
-        <RouterLink to="/" className="group flex flex-col leading-tight" onMouseEnter={playHover}>
+      <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20 items-center justify-between gap-4">
+        <RouterLink to="/" className="group flex flex-col leading-tight shrink-0" onMouseEnter={playHover}>
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
           <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] gold-text">Senior Accountant</span>
         </RouterLink>
 
-        <ul className="hidden items-center gap-6 lg:flex">
-          {links.map((l) => (
-            <li key={l.to}>
-              {l.to.startsWith("/#") ? (
-                <a
-                  href={l.to.slice(1)}
-                  onMouseEnter={playHover}
-                  className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
-                  style={{ color: "var(--fg-soft)" }}
-                >
-                  {l.label}
-                </a>
-              ) : (
-                <RouterLink
-                  to={l.to}
-                  onMouseEnter={playHover}
-                  className="relative text-sm font-medium transition-colors hover:text-[#d7aa52]"
-                  style={{ color: "var(--fg-soft)" }}
-                >
-                  {l.label}
-                </RouterLink>
-              )}
-            </li>
-          ))}
+        <ul className="hidden items-center gap-7 lg:flex">
+          {links.map((l) => <li key={l.to}>{renderLink(l)}</li>)}
         </ul>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -445,7 +452,7 @@ export function Navbar({
               to="/"
               onMouseEnter={playHover}
               onClick={playClick}
-              className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
+              className="hidden sm:flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
               aria-label={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
               title={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
             >
@@ -456,50 +463,18 @@ export function Navbar({
               )}
             </RouterLink>
           )}
-          <RouterLink
-            to="/tools"
-            onMouseEnter={playHover}
-            onClick={playClick}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/60 bg-[#d7aa52]/10 px-3 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:scale-105"
-            aria-label={lang === "ar" ? "الأدوات الذكية" : "Smart Tools"}
-          >
-            <Wrench className="size-4" />
-            <span className="hidden sm:inline">{lang === "ar" ? "الأدوات" : "Tools"}</span>
-          </RouterLink>
           {isAdmin && (
-            <>
-              <RouterLink
-                to="/admin/knowledge"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20 hover:scale-105"
-                aria-label="Admin Knowledge"
-              >
-                <ShieldCheck className="size-4" />
-                <span className="hidden sm:inline">{lang === "ar" ? "إدارة المحتوى" : "Content Admin"}</span>
-              </RouterLink>
-              <RouterLink
-                to="/admin/library"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20 hover:scale-105"
-                aria-label="Admin Library"
-              >
-                <ShieldCheck className="size-4" />
-                <span className="hidden sm:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
-              </RouterLink>
-            </>
+            <RouterLink
+              to="/admin/library"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200 transition-all hover:bg-emerald-400/20"
+              aria-label="Admin"
+            >
+              <ShieldCheck className="size-4" />
+              <span className="hidden lg:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
+            </RouterLink>
           )}
-          <RouterLink
-            to="/knowledge"
-            onMouseEnter={playHover}
-            onClick={playClick}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/60 bg-[#d7aa52]/10 px-3 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:scale-105"
-            aria-label={lang === "ar" ? "المكتبة المحاسبية" : "Knowledge Hub"}
-          >
-            <BookOpen className="size-4" />
-            <span className="hidden sm:inline">{lang === "ar" ? "المكتبة المحاسبية" : "Knowledge"}</span>
-          </RouterLink>
           <button
             onClick={onTheme}
             onMouseEnter={playHover}
@@ -518,11 +493,60 @@ export function Navbar({
             <Languages className="size-4 text-[#d7aa52]" />
             <span>{lang === "ar" ? "EN" : "AR"}</span>
           </button>
+          <RouterLink
+            to="/request-service"
+            onMouseEnter={playHover}
+            onClick={playClick}
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-all hover:scale-105 hover:shadow-[#d7aa52]/50"
+          >
+            <Sparkles className="size-4" />
+            {lang === "ar" ? "اطلب خدمة" : "Request Service"}
+            {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
+          </RouterLink>
+          <button
+            onClick={() => setMobileOpen((v) => !v)}
+            className="flex size-9 items-center justify-center rounded-full gold-border lg:hidden"
+            aria-label="Menu"
+          >
+            {mobileOpen ? <X className="size-4 text-[#d7aa52]" /> : <Menu className="size-4 text-[#d7aa52]" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="lg:hidden overflow-hidden border-t border-[#d7aa52]/20"
+            style={{ background: "color-mix(in oklab, #04101f 95%, transparent)" }}
+          >
+            <ul className="flex flex-col gap-1 px-4 py-4">
+              {links.map((l) => (
+                <li key={l.to} className="border-b border-[#d7aa52]/10 py-3">
+                  {renderLink(l, "block")}
+                </li>
+              ))}
+              <li className="pt-3">
+                <RouterLink
+                  to="/request-service"
+                  onClick={() => setMobileOpen(false)}
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-sm font-bold text-[#04101f]"
+                >
+                  <Sparkles className="size-4" />
+                  {lang === "ar" ? "اطلب خدمة" : "Request Service"}
+                </RouterLink>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }
+
 
 /* ============= TYPEWRITER ============= */
 function Typewriter({ words }: { words: string[] }) {
