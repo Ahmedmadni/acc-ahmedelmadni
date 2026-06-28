@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 import { FileText, ExternalLink } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useLibLang } from "./library";
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/library/articles")({
 
 function ArticlesPage() {
   const lang = useLibLang();
+  const [timedOut, setTimedOut] = useState(false);
 
   const articles = useQuery({
     queryKey: ["library-articles"],
@@ -38,7 +40,14 @@ function ArticlesPage() {
     },
   });
 
+  useEffect(() => {
+    const timer = setTimeout(() => setTimedOut(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const catSlug = (id: string | null) => cats.data?.find((c) => c.id === id)?.slug ?? "general";
+  const loading = articles.isLoading && !timedOut;
+  const list = articles.data ?? [];
 
   return (
     <section className="relative py-10">
@@ -50,48 +59,66 @@ function ArticlesPage() {
           </h2>
         </div>
 
-        {articles.isLoading && (
-          <p className="text-sm text-white/60">{lang === "ar" ? "جارٍ التحميل..." : "Loading..."}</p>
-        )}
-        {!articles.isLoading && (articles.data?.length ?? 0) === 0 && (
-          <p className="text-sm text-white/60">
-            {lang === "ar" ? "لا توجد مقالات منشورة بعد." : "No articles published yet."}
-          </p>
+        {loading && (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
+                key={i}
+                className="h-64 animate-pulse rounded-3xl border border-[#d7aa52]/15 bg-gradient-to-br from-[#07182c]/60 to-[#04101f]/70"
+              />
+            ))}
+          </div>
         )}
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {articles.data?.map((a) => (
-            <a
-              key={a.id}
-              href={`/knowledge/${catSlug(a.category_id)}/${a.slug}`}
-              className="group block overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60"
-            >
-              {a.featured_image && (
-                <img
-                  src={a.featured_image}
-                  alt=""
-                  loading="lazy"
-                  className="h-40 w-full object-cover transition-transform group-hover:scale-105"
-                />
-              )}
-              <div className="p-5">
-                <h3 className="text-sm font-extrabold leading-snug text-white">{a.title_ar}</h3>
-                {a.excerpt_ar && (
-                  <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-white/70">
-                    {a.excerpt_ar}
-                  </p>
+        {!loading && list.length === 0 && (
+          <div className="rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-10 text-center">
+            <FileText className="mx-auto size-10 text-[#f3d28a]/70" />
+            <h3 className="mt-4 text-base font-extrabold text-[#f3d28a]">
+              {lang === "ar" ? "المقالات قيد الإعداد" : "Articles coming soon"}
+            </h3>
+            <p className="mt-2 text-sm text-white/60">
+              {lang === "ar" ? "سيتم نشر أول مقال قريباً" : "First article will be published soon"}
+            </p>
+          </div>
+        )}
+
+        {!loading && list.length > 0 && (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {list.map((a) => (
+              <a
+                key={a.id}
+                href={`/knowledge/${catSlug(a.category_id)}/${a.slug}`}
+                className="group block overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60"
+              >
+                {a.featured_image && (
+                  <img
+                    src={a.featured_image}
+                    alt=""
+                    loading="lazy"
+                    className="h-40 w-full object-cover transition-transform group-hover:scale-105"
+                  />
                 )}
-                <div className="mt-3 flex items-center justify-between text-[11px] text-[#f3d28a]">
-                  <span>{a.reading_minutes ?? 5} {lang === "ar" ? "د قراءة" : "min read"}</span>
-                  <span className="inline-flex items-center gap-1">
-                    {lang === "ar" ? "اقرأ" : "Read"}
-                    <ExternalLink className="size-3" />
-                  </span>
+                <div className="p-5">
+                  <h3 className="text-sm font-extrabold leading-snug text-white">{a.title_ar}</h3>
+                  {a.excerpt_ar && (
+                    <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-white/70">
+                      {a.excerpt_ar}
+                    </p>
+                  )}
+                  <div className="mt-3 flex items-center justify-between text-[11px] text-[#f3d28a]">
+                    <span>
+                      {a.reading_minutes ?? 5} {lang === "ar" ? "د قراءة" : "min read"}
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      {lang === "ar" ? "اقرأ" : "Read"}
+                      <ExternalLink className="size-3" />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
-        </div>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
