@@ -25,6 +25,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  Menu,
   MessageCircle,
   MessagesSquare,
   Moon,
