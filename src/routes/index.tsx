@@ -63,6 +63,8 @@ import heroPortrait from "@/assets/hero-portrait.webp";
 import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
+import vatLogo from "@/assets/vat-logo.png.asset.json";
+
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
@@ -1706,11 +1708,24 @@ export function Footer({ lang }: { lang: Lang }) {
           <p className="mt-1.5 max-w-md text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
             {t.footer.tagline[lang]}
           </p>
-          <div className="mt-2 inline-flex items-center gap-1.5 rounded-full gold-border px-2.5 py-1 text-[10px] font-semibold text-[#d7aa52]">
-            <MapPin className="size-3" />
-            {lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia"}
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <div className="inline-flex items-center gap-1.5 rounded-full gold-border px-2.5 py-1 text-[10px] font-semibold text-[#d7aa52]">
+              <MapPin className="size-3" />
+              {lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia"}
+            </div>
+            <RouterLink
+              to="/request-service"
+              className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2 py-1 text-[10px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
+              title={lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT services"}
+            >
+              <img src={vatLogo.url} alt="VAT" width={18} height={18} className="rounded-sm" loading="lazy" decoding="async" />
+              {lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}
+            </RouterLink>
           </div>
         </div>
+
+
+
 
         <div>
           <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
