@@ -24,6 +24,8 @@ import {
   Zap,
 } from "lucide-react";
 import { SubPageShell } from "@/components/SubPageShell";
+import vatLogo from "@/assets/vat-logo.png.asset.json";
+
 import type { Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/request-service")({
