@@ -1720,6 +1720,9 @@ export function Footer({ lang }: { lang: Lang }) {
               {lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}
             </RouterLink>
           </div>
+        </div>
+
+
 
 
         <div>
