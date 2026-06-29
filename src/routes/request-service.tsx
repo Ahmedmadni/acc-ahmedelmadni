@@ -131,17 +131,20 @@ function RequestService({ lang }: { lang: Lang }) {
             <div className="pointer-events-none absolute inset-0 animate-pulse bg-gradient-to-r from-emerald-500/10 via-transparent to-[#d7aa52]/10" />
             <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
-                {/* VAT Logo (inline) */}
-                <div className="flex-shrink-0 flex flex-col items-center rounded-xl bg-white p-1 shadow-lg w-[72px]">
-                  <div className="w-full rounded-md bg-[#1e6049] px-2 py-2 text-center leading-tight">
-                    <div className="text-white text-[10px] font-black" dir="rtl">ضريبة</div>
-                    <div className="text-white text-[10px] font-black" dir="rtl">القيمة</div>
-                    <div className="text-white text-[10px] font-black" dir="rtl">المضافة</div>
-                  </div>
-                  <div className="mt-0.5 w-full rounded-md bg-[#c9a24a] py-0.5 text-center">
-                    <span className="text-white text-sm font-black tracking-wider">VAT ✓</span>
-                  </div>
+                {/* VAT Official Logo */}
+                <div className="flex-shrink-0 rounded-xl bg-white p-2 shadow-lg">
+                  <img
+                    src={vatLogo.url}
+                    alt={lang === "ar" ? "شعار ضريبة القيمة المضافة" : "VAT logo"}
+                    width={72}
+                    height={72}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    className="block h-[72px] w-[72px] object-contain"
+                  />
                 </div>
+
 
                 <div className="text-start">
                   <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/20 px-2.5 py-1 text-[10px] font-bold text-emerald-300">
