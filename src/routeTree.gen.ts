@@ -24,6 +24,7 @@ import { Route as ToolsIndexRouteImport } from './routes/tools.index'
 import { Route as LibraryIndexRouteImport } from './routes/library.index'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
+import { Route as LibraryTemplatesRouteImport } from './routes/library.templates'
 import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
 import { Route as LibraryBooksRouteImport } from './routes/library.books'
 import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
@@ -111,6 +112,11 @@ const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
   path: '/tools/$toolId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LibraryTemplatesRoute = LibraryTemplatesRouteImport.update({
+  id: '/templates',
+  path: '/templates',
+  getParentRoute: () => LibraryRoute,
+} as any)
 const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
   id: '/courses',
   path: '/courses',
@@ -196,6 +202,7 @@ export interface FileRoutesByFullPath {
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
+  '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/library/': typeof LibraryIndexRoute
@@ -223,6 +230,7 @@ export interface FileRoutesByTo {
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
+  '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge': typeof KnowledgeIndexRoute
   '/library': typeof LibraryIndexRoute
@@ -253,6 +261,7 @@ export interface FileRoutesById {
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
+  '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/library/': typeof LibraryIndexRoute
@@ -283,6 +292,7 @@ export interface FileRouteTypes {
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
+    | '/library/templates'
     | '/tools/$toolId'
     | '/knowledge/'
     | '/library/'
@@ -310,6 +320,7 @@ export interface FileRouteTypes {
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
+    | '/library/templates'
     | '/tools/$toolId'
     | '/knowledge'
     | '/library'
@@ -339,6 +350,7 @@ export interface FileRouteTypes {
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
+    | '/library/templates'
     | '/tools/$toolId'
     | '/knowledge/'
     | '/library/'
@@ -480,6 +492,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsToolIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/library/templates': {
+      id: '/library/templates'
+      path: '/templates'
+      fullPath: '/library/templates'
+      preLoaderRoute: typeof LibraryTemplatesRouteImport
+      parentRoute: typeof LibraryRoute
+    }
     '/library/courses': {
       id: '/library/courses'
       path: '/courses'
@@ -586,6 +605,7 @@ interface LibraryRouteChildren {
   LibraryArticlesRoute: typeof LibraryArticlesRoute
   LibraryBooksRoute: typeof LibraryBooksRoute
   LibraryCoursesRoute: typeof LibraryCoursesRoute
+  LibraryTemplatesRoute: typeof LibraryTemplatesRoute
   LibraryIndexRoute: typeof LibraryIndexRoute
 }
 
@@ -593,6 +613,7 @@ const LibraryRouteChildren: LibraryRouteChildren = {
   LibraryArticlesRoute: LibraryArticlesRoute,
   LibraryBooksRoute: LibraryBooksRoute,
   LibraryCoursesRoute: LibraryCoursesRoute,
+  LibraryTemplatesRoute: LibraryTemplatesRoute,
   LibraryIndexRoute: LibraryIndexRoute,
 }
 
