@@ -1,7 +1,7 @@
 import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
 import { createContext, useContext, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, Home, Languages, BookMarked, Video, FileText, Maximize2, Minimize2 } from "lucide-react";
+import { ArrowLeft, Home, Languages, BookMarked, Video, FileText, FolderOpen, Maximize2, Minimize2 } from "lucide-react";
 import { type Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/library")({
@@ -47,17 +47,20 @@ function LibraryLayout() {
   const isRTL = lang === "ar";
   const matches = useChildMatches();
   const path = matches[matches.length - 1]?.pathname ?? "/library";
-  const current: "courses" | "books" | "articles" =
+  const current: "courses" | "books" | "articles" | "templates" =
     path.includes("/library/books")
       ? "books"
-      : path.includes("/library/articles")
-        ? "articles"
-        : "courses";
+      : path.includes("/library/templates")
+        ? "templates"
+        : path.includes("/library/articles")
+          ? "articles"
+          : "courses";
 
-  const tabs: { id: "courses" | "books" | "articles"; ar: string; en: string; Icon: typeof Video; to: "/library/courses" | "/library/books" | "/library/articles" }[] = [
+  const tabs: { id: "courses" | "books" | "articles" | "templates"; ar: string; en: string; Icon: typeof Video; to: "/library/courses" | "/library/books" | "/library/articles" | "/library/templates" }[] = [
     { id: "articles", ar: "المقالات", en: "Articles", Icon: FileText, to: "/library/articles" },
     { id: "courses", ar: "الكورسات", en: "Courses", Icon: Video, to: "/library/courses" },
     { id: "books", ar: "كتب ومراجع", en: "Books & References", Icon: BookMarked, to: "/library/books" },
+    { id: "templates", ar: "نماذج جاهزة", en: "Templates", Icon: FolderOpen, to: "/library/templates" },
   ];
 
   return (
