@@ -271,6 +271,25 @@ function Index() {
     }
   };
 
+  const VAT_MONTHS = [0, 3, 6, 9];
+  const currentMonth = new Date().getMonth();
+  const isVatSeason = VAT_MONTHS.includes(currentMonth);
+  const VAT_QUARTER: Record<number, string> = {
+    0: "الربع الرابع",
+    3: "الربع الأول",
+    6: "الربع الثاني",
+    9: "الربع الثالث",
+  };
+  const [showVatBanner, setShowVatBanner] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const dismissed = sessionStorage.getItem("vat_banner_dismissed");
+    return isVatSeason && !dismissed;
+  });
+  const dismissBanner = () => {
+    sessionStorage.setItem("vat_banner_dismissed", "1");
+    setShowVatBanner(false);
+  };
+
   useEffect(() => {
     let played = false;
     const trigger = () => {
