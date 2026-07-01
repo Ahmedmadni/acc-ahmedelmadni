@@ -32,6 +32,7 @@ import { Route as ApiOfficeAiRouteImport } from './routes/api/office-ai'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
+import { Route as AuthenticatedCrmRouteImport } from './routes/_authenticated/crm'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
 import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
@@ -153,6 +154,11 @@ const AuthenticatedDeclarationsRoute =
     path: '/declarations',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const AuthenticatedCrmRoute = AuthenticatedCrmRouteImport.update({
+  id: '/crm',
+  path: '/crm',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const KnowledgeCategorySlugIndexRoute =
   KnowledgeCategorySlugIndexRouteImport.update({
     id: '/knowledge/$categorySlug/',
@@ -195,6 +201,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
+  '/crm': typeof AuthenticatedCrmRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -223,6 +230,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
+  '/crm': typeof AuthenticatedCrmRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -254,6 +262,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/skills': typeof SkillsRoute
+  '/_authenticated/crm': typeof AuthenticatedCrmRoute
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
@@ -285,6 +294,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/skills'
+    | '/crm'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -313,6 +323,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/skills'
+    | '/crm'
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -343,6 +354,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/skills'
+    | '/_authenticated/crm'
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
@@ -548,6 +560,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDeclarationsRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/crm': {
+      id: '/_authenticated/crm'
+      path: '/crm'
+      fullPath: '/crm'
+      preLoaderRoute: typeof AuthenticatedCrmRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/knowledge/$categorySlug/': {
       id: '/knowledge/$categorySlug/'
       path: '/knowledge/$categorySlug'
@@ -587,12 +606,14 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedCrmRoute: typeof AuthenticatedCrmRoute
   AuthenticatedDeclarationsRoute: typeof AuthenticatedDeclarationsRoute
   AuthenticatedAdminKnowledgeRoute: typeof AuthenticatedAdminKnowledgeRoute
   AuthenticatedAdminLibraryRoute: typeof AuthenticatedAdminLibraryRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedCrmRoute: AuthenticatedCrmRoute,
   AuthenticatedDeclarationsRoute: AuthenticatedDeclarationsRoute,
   AuthenticatedAdminKnowledgeRoute: AuthenticatedAdminKnowledgeRoute,
   AuthenticatedAdminLibraryRoute: AuthenticatedAdminLibraryRoute,
