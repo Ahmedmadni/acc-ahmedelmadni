@@ -14,6 +14,142 @@ export type Database = {
   }
   public: {
     Tables: {
+      client_services: {
+        Row: {
+          client_id: string | null
+          created_at: string | null
+          id: string
+          renewal_date: string | null
+          service_id: string
+          service_name: string
+          start_date: string | null
+          status: string | null
+        }
+        Insert: {
+          client_id?: string | null
+          created_at?: string | null
+          id?: string
+          renewal_date?: string | null
+          service_id: string
+          service_name: string
+          start_date?: string | null
+          status?: string | null
+        }
+        Update: {
+          client_id?: string | null
+          created_at?: string | null
+          id?: string
+          renewal_date?: string | null
+          service_id?: string
+          service_name?: string
+          start_date?: string | null
+          status?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "client_services_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      client_tags: {
+        Row: {
+          client_id: string | null
+          created_at: string | null
+          id: string
+          tag: string
+        }
+        Insert: {
+          client_id?: string | null
+          created_at?: string | null
+          id?: string
+          tag: string
+        }
+        Update: {
+          client_id?: string | null
+          created_at?: string | null
+          id?: string
+          tag?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "client_tags_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      clients: {
+        Row: {
+          business_type: string | null
+          city: string | null
+          client_since: string | null
+          commercial_register: string | null
+          company_name: string | null
+          created_at: string | null
+          email: string | null
+          full_name: string
+          id: string
+          last_contact: string | null
+          national_id: string | null
+          notes: string | null
+          phone: string
+          status: string | null
+          tax_number: string | null
+          updated_at: string | null
+          vat_quarter: string | null
+          vat_registered: boolean | null
+          zakat_registered: boolean | null
+        }
+        Insert: {
+          business_type?: string | null
+          city?: string | null
+          client_since?: string | null
+          commercial_register?: string | null
+          company_name?: string | null
+          created_at?: string | null
+          email?: string | null
+          full_name: string
+          id?: string
+          last_contact?: string | null
+          national_id?: string | null
+          notes?: string | null
+          phone: string
+          status?: string | null
+          tax_number?: string | null
+          updated_at?: string | null
+          vat_quarter?: string | null
+          vat_registered?: boolean | null
+          zakat_registered?: boolean | null
+        }
+        Update: {
+          business_type?: string | null
+          city?: string | null
+          client_since?: string | null
+          commercial_register?: string | null
+          company_name?: string | null
+          created_at?: string | null
+          email?: string | null
+          full_name?: string
+          id?: string
+          last_contact?: string | null
+          national_id?: string | null
+          notes?: string | null
+          phone?: string
+          status?: string | null
+          tax_number?: string | null
+          updated_at?: string | null
+          vat_quarter?: string | null
+          vat_registered?: boolean | null
+          zakat_registered?: boolean | null
+        }
+        Relationships: []
+      }
       exam_questions: {
         Row: {
           answer_index: number
@@ -577,6 +713,38 @@ export type Database = {
           user_id?: string
         }
         Relationships: []
+      }
+      whatsapp_log: {
+        Row: {
+          client_id: string | null
+          id: string
+          message: string
+          message_type: string | null
+          sent_at: string | null
+        }
+        Insert: {
+          client_id?: string | null
+          id?: string
+          message: string
+          message_type?: string | null
+          sent_at?: string | null
+        }
+        Update: {
+          client_id?: string | null
+          id?: string
+          message?: string
+          message_type?: string | null
+          sent_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "whatsapp_log_client_id_fkey"
+            columns: ["client_id"]
+            isOneToOne: false
+            referencedRelation: "clients"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
