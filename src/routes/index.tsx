@@ -341,6 +341,76 @@ function Index() {
 
   return (
     <div className="relative min-h-screen antialiased" style={{ color: "var(--fg)" }}>
+      {showVatBanner && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+          <div className="relative w-full max-w-md rounded-2xl border border-[#d7aa52]/50 bg-[#04101f] overflow-hidden shadow-2xl shadow-[#d7aa52]/20">
+            {/* Gold top bar */}
+            <div className="h-1.5 w-full bg-gradient-to-r from-[#b8862e] via-[#f3d28a] to-[#b8862e]" />
+            {/* Close button */}
+            <button
+              onClick={dismissBanner}
+              className="absolute top-3 left-3 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <div className="p-6 text-center">
+              {/* VAT Logo */}
+              <div className="mx-auto mb-4 w-16 h-16 rounded-xl overflow-hidden border border-[#d7aa52]/30 shadow-lg shadow-[#d7aa52]/10">
+                <div className="w-full h-[60%] bg-[#0a4d2e] flex items-center justify-center">
+                  <span className="text-white font-black text-[8px] leading-tight text-center">
+                    ضريبة<br/>القيمة<br/>المضافة
+                  </span>
+                </div>
+                <div className="w-full h-[40%] bg-[#c9a227] flex items-center justify-center">
+                  <span className="text-white font-black text-xs tracking-widest">VAT</span>
+                </div>
+              </div>
+              {/* Pulse badge */}
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/50 bg-amber-400/10 px-3 py-1 text-[10px] font-bold text-amber-300 mb-3">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400" />
+                </span>
+                تنبيه موسمي — الآن
+              </div>
+              {/* Heading */}
+              <h2 className="text-xl font-black text-white mb-2 leading-tight">
+                موعد إقرار ضريبة
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#f3d28a] to-[#b8862e]">
+                  القيمة المضافة
+                </span>
+              </h2>
+              {/* Quarter label */}
+              <p className="text-sm text-[var(--fg-soft)] mb-1">
+                إقرار {VAT_QUARTER[currentMonth]} — يجب التقديم قبل نهاية الشهر
+              </p>
+              <p className="text-xs text-[var(--fg-soft)]/70 mb-6">
+                احمِ منشأتك من الغرامات — تقديم احترافي عبر منصة زاتكا
+              </p>
+              {/* CTA Buttons */}
+              <div className="flex flex-col gap-2">
+                <a
+                  href="/request-service?service=vat-declaration"
+                  onClick={dismissBanner}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 text-sm font-black text-[#04101f] hover:scale-105 transition-transform shadow-lg shadow-[#d7aa52]/30"
+                >
+                  ⚡ اطلب الخدمة الآن
+                </a>
+                <button
+                  onClick={dismissBanner}
+                  className="w-full rounded-full border border-white/15 py-2.5 text-xs font-bold text-[var(--fg-soft)] hover:bg-white/5 transition"
+                >
+                  ليس الآن — إغلاق
+                </button>
+              </div>
+              {/* Trust line */}
+              <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">
+                أحمد المدني · محاسب أول معتمد · الرياض
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="cinematic-bg" />
       <div className="aurora" />
       <div className="cinematic-grid" />
