@@ -40,6 +40,7 @@ import {
   Sun,
   Target,
   TrendingUp,
+  Users,
   Wallet,
   Wrench,
   X,
@@ -566,6 +567,18 @@ export function Navbar({
               <span className="hidden lg:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
             </RouterLink>
           )}
+          {isAdmin && (
+            <RouterLink
+              to="/crm"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-sky-400/60 bg-sky-400/10 px-3 py-2 text-xs font-bold text-sky-200 transition-all hover:bg-sky-400/20"
+              aria-label="CRM"
+            >
+              <Users className="size-4" />
+              <span className="hidden lg:inline">{lang === "ar" ? "العملاء" : "CRM"}</span>
+            </RouterLink>
+          )}
           <button
             onClick={onTheme}
             onMouseEnter={playHover}
@@ -620,6 +633,26 @@ export function Navbar({
                   {renderLink(l, "block")}
                 </li>
               ))}
+              {isAdmin && (
+                <li className="flex gap-2 border-b border-[#d7aa52]/10 py-3">
+                  <RouterLink
+                    to="/admin/library"
+                    onClick={() => setMobileOpen(false)}
+                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-2 text-xs font-bold text-emerald-200"
+                  >
+                    <ShieldCheck className="size-4" />
+                    {lang === "ar" ? "لوحة التحكم" : "Dashboard"}
+                  </RouterLink>
+                  <RouterLink
+                    to="/crm"
+                    onClick={() => setMobileOpen(false)}
+                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-sky-400/60 bg-sky-400/10 px-3 py-2 text-xs font-bold text-sky-200"
+                  >
+                    <Users className="size-4" />
+                    {lang === "ar" ? "العملاء" : "CRM"}
+                  </RouterLink>
+                </li>
+              )}
               <li className="pt-3">
                 <RouterLink
                   to="/request-service"
