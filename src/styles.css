@@ -694,12 +694,18 @@ body.pdf-export-mode #tool-report-capture .grid-cols-2 {
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
+    transform: none;
+    filter: none;
   }
 }
 main {
-  animation: page-enter 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  /* No fill-mode: an animation left "filling forward" forever keeps a non-none
+     computed transform/filter on <main>, which turns it into a containing block
+     for any position:fixed descendant (e.g. modals), breaking their positioning
+     for the rest of the page's life. Once this finishes, <main>'s plain (identical)
+     resting styles take back over and position:fixed children go back to being
+     relative to the real viewport. */
+  animation: page-enter 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 /* Section reveals via scroll-driven animations.
