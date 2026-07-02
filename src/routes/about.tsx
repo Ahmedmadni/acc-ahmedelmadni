@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
 import { About, Experience, BeforeAfter, Skills, SkillModal, Certs } from "@/routes/index";
 import { t } from "@/lib/i18n";
@@ -44,11 +44,13 @@ function AboutPage() {
           <div id="certifications">
             <Certs lang={lang} />
           </div>
-          <AnimatePresence>
-            {openSkill && (
-              <SkillModal item={openSkill} lang={lang} onClose={() => setOpenSkill(null)} />
-            )}
-          </AnimatePresence>
+          <Suspense fallback={null}>
+            <AnimatePresence>
+              {openSkill && (
+                <SkillModal item={openSkill} lang={lang} onClose={() => setOpenSkill(null)} />
+              )}
+            </AnimatePresence>
+          </Suspense>
         </>
       )}
     </SubPageShell>

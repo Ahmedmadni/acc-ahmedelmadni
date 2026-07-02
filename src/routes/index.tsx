@@ -9,7 +9,6 @@ import {
   Briefcase,
   Calculator,
   Car,
-  CheckCircle2,
   ChevronRight,
   BookOpen,
   Download,
@@ -19,7 +18,6 @@ import {
   GraduationCap,
   Instagram,
   Languages,
-  Layers,
   Lightbulb,
   LineChart,
   Linkedin,
@@ -69,6 +67,11 @@ import vatLogo from "@/assets/vat-logo.png.asset.json";
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
 const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
+export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"));
+export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
+const EidBanner = lazy(() => import("@/components/home/EidBanner"));
+import type { ServiceItem } from "@/components/home/ServiceModal";
+import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -203,9 +206,6 @@ const SOCIALS: ReadonlyArray<{
     mascot: mascotSnapchat,
   },
 ] as const;
-
-type SkillItem = (typeof t.skills.groups)[number]["items"][number];
-type ServiceItem = (typeof t.services.items)[number];
 
 /** Hijri date check: returns true between 5 and 15 of Dhul-Hijjah (month 12). */
 function isEidSeason(): boolean {
@@ -460,13 +460,15 @@ function Index() {
         <AIAssistant lang={lang} />
       </Suspense>
 
-      <AnimatePresence>
-        {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
-      </AnimatePresence>
-      <AnimatePresence>
-        {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
-      </AnimatePresence>
-      <AnimatePresence>{eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}</AnimatePresence>
+      <Suspense fallback={null}>
+        <AnimatePresence>
+          {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
+        </AnimatePresence>
+        <AnimatePresence>
+          {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
+        </AnimatePresence>
+        <AnimatePresence>{eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}</AnimatePresence>
+      </Suspense>
     </div>
   );
 }
@@ -1215,60 +1217,6 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
   );
 }
 
-/* ============= SERVICE MODAL ============= */
-export function ServiceModal({ item, lang, onClose }: { item: ServiceItem; lang: Lang; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
-      onClick={onClose}
-    >
-      <motion.div
-        initial={{ scale: 0.92, y: 30 }}
-        animate={{ scale: 1, y: 0 }}
-        exit={{ scale: 0.92, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 220, damping: 22 }}
-        onClick={(e) => e.stopPropagation()}
-        className="relative max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl"
-      >
-        <button
-          onClick={onClose}
-          aria-label="close"
-          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-        >
-          <X className="size-4" />
-        </button>
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
-          <Sparkles className="size-3.5" />
-          {lang === "ar" ? "خدمة" : "Service"}
-        </div>
-        <h3 className="text-2xl font-black text-white">{item[lang]}</h3>
-        <p className="mt-4 text-sm leading-loose text-white/85">{item.full[lang]}</p>
-        <div className="mt-6">
-          <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
-            {t.services.process[lang]}
-          </div>
-          <ol className="space-y-2">
-            {item.steps[lang].map((step, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3 text-sm text-white/90"
-              >
-                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[10px] font-black text-[#04101f]">
-                  {i + 1}
-                </span>
-                <span>{step}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
-
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
   return (
@@ -1504,85 +1452,6 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
         </div>
       </div>
     </section>
-  );
-}
-
-/* ============= SKILL MODAL ============= */
-export function SkillModal({ item, lang, onClose }: { item: SkillItem; lang: Lang; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/80 p-4 backdrop-blur-md"
-      onClick={onClose}
-    >
-      <motion.div
-        initial={{ scale: 0.9, y: 30 }}
-        animate={{ scale: 1, y: 0 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 220, damping: 22 }}
-        onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl"
-      >
-        <button
-          onClick={onClose}
-          className="absolute end-4 top-4 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-        >
-          <X className="size-4" />
-        </button>
-
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
-          <Layers className="size-3.5" />
-          {lang === "ar" ? "مهارة" : "Skill"}
-        </div>
-        <h3 className="text-2xl font-black text-white">{item[lang]}</h3>
-
-        <div className="mt-3 flex items-center gap-3">
-          <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
-              style={{ width: `${item.level}%` }}
-            />
-          </div>
-          <span className="font-mono text-sm font-bold text-[#d7aa52]">{item.level}%</span>
-        </div>
-
-        <p className="mt-5 text-sm leading-relaxed text-white/80">{item.desc[lang]}</p>
-
-        <div className="mt-5">
-          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
-            {lang === "ar" ? "الأدوات" : "Tools"}
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {item.tools.map((tool, i) => (
-              <span
-                key={i}
-                className="rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-white/85"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {item.kpis[lang].length > 0 && (
-          <div className="mt-5">
-            <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
-              {lang === "ar" ? "مؤشرات الأداء" : "KPIs"}
-            </div>
-            <ul className="space-y-1.5">
-              {item.kpis[lang].map((k, i) => (
-                <li key={i} className="flex items-center gap-2 text-sm text-white/85">
-                  <span className="size-1.5 rounded-full bg-[#d7aa52]" />
-                  {k}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </motion.div>
-    </motion.div>
   );
 }
 
@@ -1999,91 +1868,3 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
   );
 }
 
-/* ============= EID GREETING BANNER ============= */
-function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[300] flex items-center justify-center bg-[#020912]/85 p-4 backdrop-blur-md"
-      onClick={onClose}
-      role="dialog"
-      aria-label="Eid greeting"
-    >
-      <motion.div
-        initial={{ scale: 0.85, y: 30, opacity: 0 }}
-        animate={{ scale: 1, y: 0, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 220, damping: 20 }}
-        onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-md overflow-hidden rounded-[28px] border border-[#d7aa52]/50 bg-gradient-to-br from-[#0a223f] via-[#07182c] to-[#04101f] p-8 text-center shadow-2xl"
-      >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-16 -left-16 size-56 rounded-full bg-[#d7aa52]/25 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -bottom-20 -right-16 size-60 rounded-full bg-amber-400/15 blur-3xl"
-        />
-        {[...Array(14)].map((_, i) => (
-          <motion.span
-            key={i}
-            aria-hidden
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: [0, 8, 0], opacity: [0.4, 1, 0.4] }}
-            transition={{ duration: 2.6 + (i % 4) * 0.4, repeat: Infinity, delay: i * 0.15 }}
-            className="absolute"
-            style={{
-              left: `${((i * 53) % 95) + 2}%`,
-              top: `${((i * 37) % 80) + 6}%`,
-              color: i % 2 ? "#f3d28a" : "#fffbe6",
-            }}
-          >
-            <Star className="size-2" fill="currentColor" />
-          </motion.span>
-        ))}
-
-        <button
-          onClick={onClose}
-          aria-label="close"
-          className="absolute end-3 top-3 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
-        >
-          <X className="size-4" />
-        </button>
-
-        <motion.div
-          initial={{ scale: 0.6, rotate: -20 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 180, damping: 14, delay: 0.15 }}
-          className="relative mx-auto mb-4 flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] shadow-2xl shadow-[#d7aa52]/40"
-        >
-          <span className="text-4xl" role="img" aria-label="lantern">
-            🏮
-          </span>
-        </motion.div>
-
-        <div className="relative">
-          <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#d7aa52]">
-            🌙 {lang === "ar" ? "تهنئة" : "Greetings"} 🌙
-          </div>
-          <h3 className="mt-2 text-3xl font-black gold-text">{t.eid.title[lang]}</h3>
-          <p className="mt-3 text-sm leading-loose text-white/85">{t.eid.msg[lang]}</p>
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-[#f3d28a]">
-            <Sparkles className="size-3" />
-            {t.eid.from[lang]}
-          </div>
-
-          <button
-            onClick={onClose}
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-7 py-3 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105"
-          >
-            <CheckCircle2 className="size-4" />
-            {t.eid.close[lang]}
-          </button>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}

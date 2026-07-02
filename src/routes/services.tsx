@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
 import { Services, ServiceModal } from "@/routes/index";
 import { t } from "@/lib/i18n";
@@ -27,9 +27,11 @@ function ServicesPage() {
       {(lang) => (
         <>
           <Services lang={lang} onOpen={setOpen} />
-          <AnimatePresence>
-            {open && <ServiceModal item={open} lang={lang} onClose={() => setOpen(null)} />}
-          </AnimatePresence>
+          <Suspense fallback={null}>
+            <AnimatePresence>
+              {open && <ServiceModal item={open} lang={lang} onClose={() => setOpen(null)} />}
+            </AnimatePresence>
+          </Suspense>
         </>
       )}
     </SubPageShell>
