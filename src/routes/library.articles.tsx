@@ -83,37 +83,29 @@ function ArticlesPage() {
         )}
 
         {!loading && list.length > 0 && (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((a) => (
               <a
                 key={a.id}
                 href={`/knowledge/${catSlug(a.category_id)}/${a.slug}`}
-                className="group block overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60"
+                className="group flex h-full flex-col rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60"
               >
-                {a.featured_image && (
-                  <img
-                    src={a.featured_image}
-                    alt=""
-                    loading="lazy"
-                    className="h-40 w-full object-cover transition-transform group-hover:scale-105"
-                  />
+                <h3 className="text-xl font-extrabold leading-snug text-white group-hover:text-[#f3d28a] sm:text-2xl">
+                  {a.title_ar}
+                </h3>
+                {a.excerpt_ar && (
+                  <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-white/65">
+                    {a.excerpt_ar}
+                  </p>
                 )}
-                <div className="p-5">
-                  <h3 className="text-sm font-extrabold leading-snug text-white">{a.title_ar}</h3>
-                  {a.excerpt_ar && (
-                    <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-white/70">
-                      {a.excerpt_ar}
-                    </p>
-                  )}
-                  <div className="mt-3 flex items-center justify-between text-[11px] text-[#f3d28a]">
-                    <span>
-                      {a.reading_minutes ?? 5} {lang === "ar" ? "د قراءة" : "min read"}
-                    </span>
-                    <span className="inline-flex items-center gap-1">
-                      {lang === "ar" ? "اقرأ" : "Read"}
-                      <ExternalLink className="size-3" />
-                    </span>
-                  </div>
+                <div className="mt-4 flex items-center justify-between border-t border-[#d7aa52]/15 pt-3 text-xs text-[#f3d28a]">
+                  <span>
+                    {a.reading_minutes ?? 5} {lang === "ar" ? "د قراءة" : "min read"}
+                  </span>
+                  <span className="inline-flex items-center gap-1 font-bold">
+                    {lang === "ar" ? "اقرأ المقال" : "Read"}
+                    <ExternalLink className="size-3" />
+                  </span>
                 </div>
               </a>
             ))}
