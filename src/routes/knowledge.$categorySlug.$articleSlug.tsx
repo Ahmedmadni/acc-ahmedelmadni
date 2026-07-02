@@ -553,7 +553,7 @@ function ArticlePage() {
             {sections.map((s, i) => (
               <section key={i} className="mb-8 scroll-mt-32" id={slugifyHeading(s.heading, i)}>
                 <h2 className="mb-3 text-2xl font-bold text-white">{s.heading}</h2>
-                {s.paragraphs.map((p, j) => (
+                {sectionParagraphs(s).map((p, j) => (
                   <p key={j} className="mb-3 text-[15px] leading-loose text-white/80">
                     {p}
                   </p>
