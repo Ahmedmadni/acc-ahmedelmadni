@@ -27,7 +27,14 @@ import {
 } from "@/components/ui/accordion";
 import { toast } from "sonner";
 
-type Section = { heading: string; paragraphs: string[] };
+type Section = { heading: string; paragraphs?: string[]; body?: string };
+
+function sectionParagraphs(s: Section): string[] {
+  if (Array.isArray(s.paragraphs) && s.paragraphs.length) return s.paragraphs;
+  if (typeof s.body === "string" && s.body.trim())
+    return s.body.split(/\n{2,}|\r\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  return [];
+}
 type FaqItem = { q: string; a: string };
 type Ref = { label: string; url: string };
 
