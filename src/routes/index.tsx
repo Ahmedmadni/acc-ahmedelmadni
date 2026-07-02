@@ -281,15 +281,20 @@ function Index() {
     6: "الربع الثاني",
     9: "الربع الثالث",
   };
-  const [showVatBanner, setShowVatBanner] = useState(() => {
-    if (typeof window === "undefined") return false;
-    const dismissed = sessionStorage.getItem("vat_banner_dismissed");
-    return isVatSeason && !dismissed;
-  });
+  const [showVatBanner, setShowVatBanner] = useState(false);
   const dismissBanner = () => {
     sessionStorage.setItem("vat_banner_dismissed", "1");
     setShowVatBanner(false);
   };
+
+  useEffect(() => {
+    if (!isVatSeason) return;
+    try {
+      if (sessionStorage.getItem("vat_banner_dismissed") !== "1") setShowVatBanner(true);
+    } catch {
+      setShowVatBanner(true);
+    }
+  }, [isVatSeason]);
 
   useEffect(() => {
     let played = false;
@@ -350,6 +355,7 @@ function Index() {
             {/* Close button */}
             <button
               onClick={dismissBanner}
+              aria-label={lang === "ar" ? "إغلاق" : "Close"}
               className="absolute top-3 left-3 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
             >
               <X className="w-4 h-4" />
@@ -1787,7 +1793,7 @@ export function Contact({ lang }: { lang: Lang }) {
               />
               <motion.img
                 src={s.mascot}
-                alt={s.label}
+                alt=""
                 width={160}
                 height={160}
                 loading="lazy"

@@ -64,6 +64,17 @@ When adding content to the Knowledge Library, follow the existing `content_ar` J
 - **RTL**: Arabic is the default locale (`<html lang="ar" dir="rtl">` in `src/routes/__root.tsx`); English is a client-side toggle, not separate routes. Any new UI must work in both directions — prefer logical Tailwind classes and test with the language toggle.
 - Match the existing rounded-3xl / glassy / gold-border card style used throughout `src/routes/index.tsx` and `src/components/knowledge/*` rather than introducing a new visual language.
 
+## Performance rules (read before touching `src/routes/index.tsx` or images)
+
+A PageSpeed audit (July 2026) found mobile LCP at 5.7s, driven mostly by a hydration bug, plus ~400 KiB of oversized images. Both were fixed — don't reintroduce these patterns:
+
+- **Never branch a `useState` lazy initializer on `typeof window`, `localStorage`, or `sessionStorage`.** This makes the very first client render differ from the SSR HTML, which triggers a React hydration-mismatch error (minified error #418), forces React to throw away the server-rendered DOM and do a full client re-render, and can single-handedly blow up LCP by seconds (this is exactly what the old `showVatBanner` init did). Always initialize state to the SSR-safe default (e.g. `false`) and set the real value inside a `useEffect` — see `showVatBanner`/`eidOpen` in `src/routes/index.tsx` for the correct pattern.
+- **Size images for their actual rendered dimensions, not their source dimensions.** Decorative/mascot images must be exported at roughly the max CSS display size (check the `<img>`'s `width`/`height`/CSS, not the original upload) — don't import a 1024×1024 source webp to display at 160×160. When adding a new image asset, resize it (e.g. via `sharp`) before committing rather than relying on the browser to downscale a huge file.
+- **Don't commit duplicate/unused image formats.** Only the `.webp` variant of an asset should exist in `src/assets/` unless another format is actually imported somewhere — check with `grep -r "assetname" src` before adding a `.png`/`.jpg` alongside an existing `.webp`.
+- **Keep `loading="lazy"` + `decoding="async"` on any `<img>` that isn't above-the-fold**, and `fetchPriority="high"` only on the actual LCP candidate (currently the hero profile image).
+- **Never import heavy libraries (`jspdf`, `xlsx`, `pdfjs-dist`, `mammoth`, `html2canvas-pro`, `recharts`) into `src/routes/index.tsx`.** That file's exports (`Navbar`, `Footer`, `FloatingSocial`) are pulled into every page on the site via `SubPageShell`, so anything imported there ships to every visitor. Heavy, page-specific libraries belong inside the route/feature file that actually uses them (they already get their own chunk at build time — verify with `npm run build` and check `.output/public/assets/*.js` sizes if unsure).
+- Before shipping a change that touches `src/routes/index.tsx`, `src/styles.css`, or `src/assets/`, run `npm run build` and spot-check that no new chunk grew unexpectedly and that the build has no new console errors.
+
 ## Git workflow
 
 - **Never commit directly to `main`.** Create a new branch for every task/feature and open a PR.
