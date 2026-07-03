@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AlertTriangle,
   ArrowLeft,
@@ -110,6 +110,13 @@ function ToolDetailPage() {
   const [copied, setCopied] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [printing, setPrinting] = useState(false);
+  // Rendered only in the print-only header. Kept out of the initial render (and thus
+  // out of the SSR/hydration diff) since "now" necessarily differs between server
+  // render and client hydration — see the Performance rules in CLAUDE.md.
+  const [generatedAt, setGeneratedAt] = useState("");
+  useEffect(() => {
+    setGeneratedAt(new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US"));
+  }, [lang]);
 
   const isRTL = lang === "ar";
 
@@ -199,7 +206,7 @@ function ToolDetailPage() {
           </div>
           <div className="mt-1 text-xs text-slate-600">
             {tool.standard ? `${tool.standard.ar} · ${tool.standard.en} · ` : ""}
-            {new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US")}
+            {generatedAt}
           </div>
         </div>
 

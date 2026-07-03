@@ -543,9 +543,22 @@ html.light .bg-video-overlay {
   .tool-print-page .print-only {
     display: block !important;
   }
-  .tool-print-page section,
-  .tool-print-page .rounded-2xl {
+  /* Excludes #tool-report-capture: it's the single outer wrapper for an entire
+     tool's printable content (e.g. the Zakat declaration form), which is almost
+     always taller than one page. Forcing "avoid" on something that can never fit
+     causes some print/PDF engines to render only the first page's worth and drop
+     the rest instead of paginating — this is what caused printed declarations to
+     cut off after the top fields. Only the smaller inner sections should avoid
+     breaking mid-block. */
+  .tool-print-page section:not(#tool-report-capture),
+  .tool-print-page .rounded-2xl:not(#tool-report-capture) {
     page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  /* Each statement in the financial-statements builder starts on its own page. */
+  .tool-print-page .fs-statement + .fs-statement {
+    page-break-before: always;
+    break-before: page;
   }
 }
 .print-only {

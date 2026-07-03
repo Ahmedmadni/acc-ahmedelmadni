@@ -52,6 +52,9 @@ import { useShareState } from "@/lib/use-share";
 
 // Heavy tools: lazy-loaded to keep the initial tools bundle small.
 const CvBuilder = lazy(() => import("@/components/tools/CvBuilder").then((m) => ({ default: m.CvBuilder })));
+const FinancialStatementsBuilder = lazy(() =>
+  import("@/components/tools/official/FinancialStatementsBuilder").then((m) => ({ default: m.FinancialStatementsBuilder })),
+);
 const ExamPrep = lazy(() => import("@/components/tools/ExamPrep").then((m) => ({ default: m.ExamPrep })));
 const OfficeAiAssistant = lazy(() =>
   import("@/components/tools/OfficeAiAssistant").then((m) => ({ default: m.OfficeAiAssistant })),
@@ -1009,6 +1012,8 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
       return <Suspense fallback={<ToolFallback />}><OfficeAiAssistant lang={lang} /></Suspense>;
     case "vat-return": return <VatOfficialForm lang={lang} />;
     case "zakat-declaration": return <ZakatOfficialForm lang={lang} />;
+    case "financial-statements":
+      return <Suspense fallback={<ToolFallback />}><FinancialStatementsBuilder lang={lang} /></Suspense>;
     default:
       return (
         <div className="rounded-xl border border-dashed border-[#d7aa52]/40 p-6 text-center text-sm text-[var(--fg-soft)]">
