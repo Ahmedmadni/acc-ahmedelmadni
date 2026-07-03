@@ -20,6 +20,10 @@ export interface ToolMeta {
   whenToUse: ToolInfoSection;
   commonMistakes: ToolInfoSection;
   tips: ToolInfoSection;
+  /** When set, the tool page shows a CTA to have Ahmed do this for you —
+   *  links to /request-service?service=<requestServiceId>. Matches an id in
+   *  the SERVICES list in src/routes/request-service.tsx. */
+  requestServiceId?: string;
 }
 
 export const CATEGORIES: { id: ToolCategory; label: { ar: string; en: string } }[] = [
@@ -396,6 +400,7 @@ export const TOOLS: ToolMeta[] = [
     category: "tax",
     icon: "ClipboardList",
     official: true,
+    requestServiceId: "vat-declaration",
     title: { ar: "إقرار ضريبة القيمة المضافة (نموذج ZATCA الرسمي)", en: "VAT Return (Official ZATCA Form)" },
     short: {
       ar: "محاكي إقرار ضريبة القيمة المضافة الشهري/الربعي مع تصدير PDF/Excel.",
@@ -425,6 +430,7 @@ export const TOOLS: ToolMeta[] = [
     category: "tax",
     icon: "FileSpreadsheet",
     official: true,
+    requestServiceId: "zakat-declaration",
     title: { ar: "الإقرار الزكوي والضريبي (نموذج ZATCA الرسمي)", en: "Zakat & Tax Declaration (Official ZATCA Form)" },
     short: {
       ar: "محاكي شامل لإعداد الإقرار الزكوي السنوي مع التسويات وتقارير قابلة للطباعة.",
@@ -786,6 +792,36 @@ export const TOOLS: ToolMeta[] = [
     tips: {
       ar: ["اقرأ الشرح حتى لو أجبت صحيحاً", "نوّع المسارات يومياً", "ارفع أسئلة الكتب المعتمدة لإثراء البنك"],
       en: ["Read the explanation even on correct answers", "Rotate tracks daily", "Upload textbook banks to enrich the pool"],
+    },
+  },
+  {
+    id: "financial-statements",
+    category: "ifrs",
+    icon: "FileBarChart",
+    official: true,
+    requestServiceId: "financial-reports",
+    title: { ar: "معدّ القوائم المالية الكاملة", en: "Full Financial Statements Builder" },
+    short: {
+      ar: "استورد ميزان المراجعة وأنشئ القوائم المالية الخمس كاملة وفق IFRS مع احتساب الزكاة تلقائياً.",
+      en: "Import a trial balance and generate all five IFRS financial statements, with Zakat computed automatically.",
+    },
+    standard: { ar: "IAS 1 · IAS 7 · ZATCA", en: "IAS 1 · IAS 7 · ZATCA" },
+    formula: "Assets = Liabilities + Equity",
+    about: {
+      ar: "أداة احترافية تستورد ميزان المراجعة (Excel/CSV)، تصنّف الحسابات تلقائياً مع إمكانية المراجعة والتعديل، وتنشئ الميزانية وقائمة الدخل والدخل الشامل والتغيرات في حقوق الملكية والتدفقات النقدية، مع احتساب الوعاء الزكوي وفق لائحة هيئة الزكاة والضريبة والجمارك. تتضمن خطوة معاينة إلزامية قبل الطباعة أو التصدير لتفادي الأخطاء.",
+      en: "Professional tool that imports a trial balance (Excel/CSV), auto-classifies accounts with a review/override step, and produces the Balance Sheet, Income Statement, Statement of Comprehensive Income, Statement of Changes in Equity, and Statement of Cash Flows — plus the ZATCA Zakat base. Includes a mandatory preview step before printing or exporting.",
+    },
+    whenToUse: {
+      ar: ["إعداد القوائم المالية السنوية أو الدورية من ميزان المراجعة", "تحضير مسودة للمراجع قبل التدقيق", "تقدير الوعاء الزكوي بسرعة من بيانات فعلية"],
+      en: ["Preparing periodic/annual financial statements from a trial balance", "Drafting a working version before audit", "Quickly estimating the Zakat base from real account balances"],
+    },
+    commonMistakes: {
+      ar: ["ترك حسابات بدون تصنيف قبل الطباعة", "نسيان تسويات التدفقات النقدية اليدوية (لا تُشتق من ميزان مراجعة واحد فقط)", "عدم مراجعة صفحة المعاينة قبل الطباعة"],
+      en: ["Leaving accounts unclassified before printing", "Skipping the manual cash-flow adjustments (not derivable from a single trial balance alone)", "Not reviewing the preview page before printing"],
+    },
+    tips: {
+      ar: ["تحقق من توازن ميزان المراجعة أولاً قبل التصنيف", "زوّد الأداة بميزان مراجعة الفترة السابقة يدوياً عبر التسويات لتحصل على تدفقات نقدية أدق", "راجع مؤشرات التوازن (✓) في صفحة المعاينة قبل أي طباعة"],
+      en: ["Confirm the trial balance is balanced before classifying", "Feed prior-period movements into the manual adjustments for a more accurate cash flow", "Check the balance indicators (✓) on the preview page before printing"],
     },
   },
 ];

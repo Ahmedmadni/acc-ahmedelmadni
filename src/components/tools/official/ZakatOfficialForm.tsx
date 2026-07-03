@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import {
   DEFAULT_ENTITY,
@@ -367,8 +367,15 @@ export function ZakatOfficialForm({ lang }: { lang: Lang }) {
     };
   }, [v, applies, entity.saudiOwnership, entity.nonSaudiOwnership]);
 
-  const sadadZakat = useMemo(() => makeSadadInvoice("Z-"), []);
-  const sadadTax = useMemo(() => makeSadadInvoice("T-"), []);
+  // Generated client-side only (Math.random) — computing this in useMemo would run
+  // during SSR too and produce a different number than the client's first render,
+  // causing a hydration mismatch. Start blank, fill in after mount.
+  const [sadadZakat, setSadadZakat] = useState("");
+  const [sadadTax, setSadadTax] = useState("");
+  useEffect(() => {
+    setSadadZakat(makeSadadInvoice("Z-"));
+    setSadadTax(makeSadadInvoice("T-"));
+  }, []);
 
   const inputsForArchive: Record<string, number> = { ...v, _saudi: entity.saudiOwnership, _nonSaudi: entity.nonSaudiOwnership };
   const resultsForArchive: Record<string, number> = {

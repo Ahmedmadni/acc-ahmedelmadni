@@ -10,6 +10,7 @@ import {
   Building2,
   Calculator,
   ChevronDown,
+  FileBarChart,
   FileSpreadsheet,
   FileUser,
   GraduationCap,
@@ -80,6 +81,7 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   TrendingDown, TrendingUp, BarChart3, Percent, Banknote, ReceiptText, Calculator,
   FileUser, Wrench, LineChart, Hourglass, Scale, Repeat, FileText, Building2,
   Coins, Scissors, Landmark, Layers, PieChart, Package, Keyboard, GraduationCap,
+  FileSpreadsheet, FileBarChart,
 };
 
 const CATEGORY_META: Record<ToolCategory, {

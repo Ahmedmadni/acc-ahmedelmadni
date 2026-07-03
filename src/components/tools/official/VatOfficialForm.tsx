@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import {
   DEFAULT_ENTITY,
@@ -75,7 +75,13 @@ export function VatOfficialForm({ lang }: { lang: Lang }) {
     return { outputVat, totalSales, deductibleInput, reverseChargeOutput, adjustments, netVat };
   }, [v]);
 
-  const sadad = useMemo(() => makeSadadInvoice(), []);
+  // Generated client-side only (Math.random) — computing this in useMemo would run
+  // during SSR too and produce a different number than the client's first render,
+  // causing a hydration mismatch. Start blank, fill in after mount.
+  const [sadad, setSadad] = useState("");
+  useEffect(() => {
+    setSadad(makeSadadInvoice());
+  }, []);
 
   const resultsForArchive: Record<string, number> = {
     output_vat: totals.outputVat,

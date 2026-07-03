@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AlertTriangle,
   ArrowLeft,
@@ -14,7 +14,7 @@ import {
   Sigma,
   Download,
   Loader2,
-
+  Sparkles,
 } from "lucide-react";
 import { CalculatorById } from "@/components/tools/Calculators";
 import { labelByCategory, toolById, TOOLS } from "@/lib/tools-registry";
@@ -110,6 +110,13 @@ function ToolDetailPage() {
   const [copied, setCopied] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [printing, setPrinting] = useState(false);
+  // Rendered only in the print-only header. Kept out of the initial render (and thus
+  // out of the SSR/hydration diff) since "now" necessarily differs between server
+  // render and client hydration — see the Performance rules in CLAUDE.md.
+  const [generatedAt, setGeneratedAt] = useState("");
+  useEffect(() => {
+    setGeneratedAt(new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US"));
+  }, [lang]);
 
   const isRTL = lang === "ar";
 
@@ -199,7 +206,7 @@ function ToolDetailPage() {
           </div>
           <div className="mt-1 text-xs text-slate-600">
             {tool.standard ? `${tool.standard.ar} · ${tool.standard.en} · ` : ""}
-            {new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US")}
+            {generatedAt}
           </div>
         </div>
 
@@ -308,6 +315,26 @@ function ToolDetailPage() {
           </section>
 
           <aside className="space-y-4">
+            {tool.requestServiceId && (
+              <div className="rounded-2xl border border-emerald-400/40 bg-gradient-to-br from-emerald-400/15 to-transparent p-5 backdrop-blur print:hidden">
+                <h3 className="mb-1.5 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-200">
+                  <Sparkles className="size-4" />
+                  {lang === "ar" ? "تفضّل نتولى الأمر عنك؟" : "Prefer to have this done for you?"}
+                </h3>
+                <p className="mb-3 text-sm leading-relaxed text-[var(--fg-soft)]">
+                  {lang === "ar"
+                    ? "أعدّها لك بدقة واحترافية كمحاسب معتمد — أرسل بياناتك وسنتواصل خلال 24 ساعة."
+                    : "I'll prepare it accurately as a certified accountant — send your details and I'll be in touch within 24 hours."}
+                </p>
+                <Link
+                  to="/request-service"
+                  search={{ service: tool.requestServiceId }}
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-xs font-black text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105"
+                >
+                  {lang === "ar" ? "اطلب الخدمة الآن" : "Request the Service"}
+                </Link>
+              </div>
+            )}
             <div className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#d7aa52]/10 to-transparent p-5 backdrop-blur">
               <h3 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
                 <BookOpen className="size-4" />
