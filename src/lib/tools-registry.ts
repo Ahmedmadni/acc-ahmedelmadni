@@ -20,6 +20,10 @@ export interface ToolMeta {
   whenToUse: ToolInfoSection;
   commonMistakes: ToolInfoSection;
   tips: ToolInfoSection;
+  /** When set, the tool page shows a CTA to have Ahmed do this for you —
+   *  links to /request-service?service=<requestServiceId>. Matches an id in
+   *  the SERVICES list in src/routes/request-service.tsx. */
+  requestServiceId?: string;
 }
 
 export const CATEGORIES: { id: ToolCategory; label: { ar: string; en: string } }[] = [
@@ -396,6 +400,7 @@ export const TOOLS: ToolMeta[] = [
     category: "tax",
     icon: "ClipboardList",
     official: true,
+    requestServiceId: "vat-declaration",
     title: { ar: "إقرار ضريبة القيمة المضافة (نموذج ZATCA الرسمي)", en: "VAT Return (Official ZATCA Form)" },
     short: {
       ar: "محاكي إقرار ضريبة القيمة المضافة الشهري/الربعي مع تصدير PDF/Excel.",
@@ -425,6 +430,7 @@ export const TOOLS: ToolMeta[] = [
     category: "tax",
     icon: "FileSpreadsheet",
     official: true,
+    requestServiceId: "zakat-declaration",
     title: { ar: "الإقرار الزكوي والضريبي (نموذج ZATCA الرسمي)", en: "Zakat & Tax Declaration (Official ZATCA Form)" },
     short: {
       ar: "محاكي شامل لإعداد الإقرار الزكوي السنوي مع التسويات وتقارير قابلة للطباعة.",
@@ -793,6 +799,7 @@ export const TOOLS: ToolMeta[] = [
     category: "ifrs",
     icon: "FileBarChart",
     official: true,
+    requestServiceId: "financial-reports",
     title: { ar: "معدّ القوائم المالية الكاملة", en: "Full Financial Statements Builder" },
     short: {
       ar: "استورد ميزان المراجعة وأنشئ القوائم المالية الخمس كاملة وفق IFRS مع احتساب الزكاة تلقائياً.",

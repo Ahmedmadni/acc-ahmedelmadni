@@ -29,6 +29,9 @@ import vatLogo from "@/assets/vat-logo.png.asset.json";
 import type { Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/request-service")({
+  validateSearch: (search: Record<string, unknown>): { service?: string } => ({
+    service: typeof search.service === "string" ? search.service : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "طلب خدمة | أحمد المدني - Senior Accountant" },
@@ -73,13 +76,19 @@ const VAT_QUARTER_LABELS: Record<number, { ar: string; en: string }> = {
 };
 
 function RequestService({ lang }: { lang: Lang }) {
+  const { service: serviceFromUrl } = Route.useSearch();
   const currentMonth = new Date().getMonth();
   const isVatSeason = VAT_MONTHS.includes(currentMonth);
   const vatLabel = VAT_QUARTER_LABELS[currentMonth];
   const ArrowDir = lang === "ar" ? ArrowLeft : ArrowRight;
   const ChevDir = lang === "ar" ? ChevronLeft : ChevronRight;
 
-  const [selectedService, setSelectedService] = useState("");
+  // Deep-linked from an ad, a tool page, or the seasonal VAT banner (?service=vat-declaration
+  // etc.) — pre-selects the matching option so campaign traffic lands on a form that already
+  // reflects what the ad promised, instead of an empty "pick a service" state.
+  const [selectedService, setSelectedService] = useState(
+    serviceFromUrl && SERVICES.some((s) => s.id === serviceFromUrl) ? serviceFromUrl : "",
+  );
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -107,6 +116,16 @@ function RequestService({ lang }: { lang: Lang }) {
       details,
     ].filter(Boolean).join("\n");
     const url = `https://wa.me/966560409811?text=${encodeURIComponent(lines)}`;
+
+    // GA4 lead event — mark as a "key event" (conversion) in GA4, then import it into
+    // Google Ads (Ads account → Conversions → import from Google Analytics) to measure
+    // ad campaigns against real leads, not just clicks.
+    (window as typeof window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "generate_lead", {
+      service_id: selectedService,
+      service_name: svc ? svc.en : undefined,
+      urgency,
+    });
+
     window.open(url, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
