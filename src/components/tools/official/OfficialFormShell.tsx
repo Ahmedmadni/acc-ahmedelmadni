@@ -89,31 +89,31 @@ export function EntityHeaderForm({
     <SectionCard title={t("بيانات المنشأة", "Entity Information")}>
       <div data-official-entity-grid className="grid gap-3 md:grid-cols-3">
         <Field label={t("الرقم المالي", "Financial Number")}>
-          <input className={inputCls} value={value.financialNo} onChange={(e) => set("financialNo", e.target.value)} />
+          <input dir="ltr" className={inputCls} value={value.financialNo} onChange={(e) => set("financialNo", e.target.value)} />
         </Field>
         <Field label={t("الفرع", "Branch")}>
-          <input className={inputCls} value={value.branch} onChange={(e) => set("branch", e.target.value)} />
+          <input dir="ltr" className={inputCls} value={value.branch} onChange={(e) => set("branch", e.target.value)} />
         </Field>
         <Field label={t("الاسم التجاري", "Trade Name")}>
-          <input className={inputCls} value={value.tradeName} onChange={(e) => set("tradeName", e.target.value)} />
+          <input style={{ unicodeBidi: "plaintext" }} className={inputCls} value={value.tradeName} onChange={(e) => set("tradeName", e.target.value)} />
         </Field>
         <Field label={t("نسبة الشركاء السعوديين %", "Saudi Owners %")}>
-          <input type="number" className={inputCls} value={value.saudiOwnership} onChange={(e) => set("saudiOwnership", +e.target.value)} />
+          <input type="number" dir="ltr" className={inputCls} value={value.saudiOwnership} onChange={(e) => set("saudiOwnership", +e.target.value)} />
         </Field>
         <Field label={t("نسبة الشركاء غير السعوديين %", "Non-Saudi Owners %")}>
-          <input type="number" className={inputCls} value={value.nonSaudiOwnership} onChange={(e) => set("nonSaudiOwnership", +e.target.value)} />
+          <input type="number" dir="ltr" className={inputCls} value={value.nonSaudiOwnership} onChange={(e) => set("nonSaudiOwnership", +e.target.value)} />
         </Field>
         <Field label={t("النشاط الرئيسي", "Main Activity")}>
-          <input className={inputCls} value={value.activity} onChange={(e) => set("activity", e.target.value)} />
+          <input style={{ unicodeBidi: "plaintext" }} className={inputCls} value={value.activity} onChange={(e) => set("activity", e.target.value)} />
         </Field>
         <Field label={t("البريد الإلكتروني", "Email")}>
-          <input className={inputCls} value={value.email} onChange={(e) => set("email", e.target.value)} />
+          <input dir="ltr" className={inputCls} value={value.email} onChange={(e) => set("email", e.target.value)} />
         </Field>
         <Field label={t("الهاتف", "Phone")}>
-          <input className={inputCls} value={value.phone} onChange={(e) => set("phone", e.target.value)} />
+          <input dir="ltr" className={inputCls} value={value.phone} onChange={(e) => set("phone", e.target.value)} />
         </Field>
         <Field label={t("العنوان", "Address")}>
-          <input className={inputCls} value={value.address} onChange={(e) => set("address", e.target.value)} />
+          <input style={{ unicodeBidi: "plaintext" }} className={inputCls} value={value.address} onChange={(e) => set("address", e.target.value)} />
         </Field>
         <Field label={t("السنة المالية من", "FY From")}>
           <input type="date" className={inputCls} value={value.fyFrom} onChange={(e) => set("fyFrom", e.target.value)} />
@@ -196,6 +196,7 @@ export function MoneyRow({
       )}
       <input
         type="number"
+        dir="ltr"
         disabled={disabled}
         value={disabled ? 0 : Number.isFinite(value) ? value : 0}
         onChange={(e) => onChange(+e.target.value)}
@@ -215,7 +216,7 @@ export function TotalRow({ label, value, highlight }: { label: string; value: nu
       }`}
     >
       <span className="text-xs font-extrabold">{label}</span>
-      <span className="tabular-nums text-base font-extrabold">
+      <span dir="ltr" className="tabular-nums text-base font-extrabold">
         {value.toLocaleString("ar-SA", { maximumFractionDigits: 2 })}
       </span>
     </div>
