@@ -147,7 +147,7 @@ export function VatOfficialForm({ lang }: { lang: Lang }) {
 
         <div className="mt-4 rounded-md border border-emerald-400/40 bg-emerald-400/10 p-3">
           <div className="text-[11px] font-bold text-emerald-200">{t("سداد - رقم فاتورة ضريبة القيمة المضافة", "SADAD VAT invoice number")}</div>
-          <div className="mt-1 font-mono text-base font-extrabold text-emerald-100">{sadad}</div>
+          <div dir="ltr" className="mt-1 font-mono text-base font-extrabold text-emerald-100">{sadad}</div>
         </div>
       </SectionCard>
 

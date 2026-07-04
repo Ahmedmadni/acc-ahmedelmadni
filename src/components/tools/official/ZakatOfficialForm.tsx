@@ -552,11 +552,11 @@ export function ZakatOfficialForm({ lang }: { lang: Lang }) {
         <div className="mt-4 grid gap-3 md:grid-cols-2">
           <div className="rounded-md border border-emerald-400/40 bg-emerald-400/10 p-3">
             <div className="text-[11px] font-bold text-emerald-200">{t("سداد - رقم الفاتورة للزكاة", "SADAD invoice (Zakat)")}</div>
-            <div className="mt-1 font-mono text-base font-extrabold text-emerald-100">{sadadZakat}</div>
+            <div dir="ltr" className="mt-1 font-mono text-base font-extrabold text-emerald-100">{sadadZakat}</div>
           </div>
           <div className="rounded-md border border-sky-400/40 bg-sky-400/10 p-3">
             <div className="text-[11px] font-bold text-sky-200">{t("سداد - رقم الفاتورة للضريبة", "SADAD invoice (Tax)")}</div>
-            <div className="mt-1 font-mono text-base font-extrabold text-sky-100">{sadadTax}</div>
+            <div dir="ltr" className="mt-1 font-mono text-base font-extrabold text-sky-100">{sadadTax}</div>
           </div>
         </div>
       </SectionCard>
