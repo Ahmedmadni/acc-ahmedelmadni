@@ -11,6 +11,7 @@ export const Route = createFileRoute("/library/courses")({
       { title: "كورسات المحاسبة | Accounting Courses — Ahmed Elmadani" },
       { name: "description", content: "أفضل كورسات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، VAT والمزيد." },
     ],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/courses" }],
   }),
   component: CoursesPage,
 });

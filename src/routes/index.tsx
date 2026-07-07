@@ -492,6 +492,7 @@ export function Navbar({
 
   const links: { to: string; label: string; hash?: boolean }[] = [
     { to: "/", label: t.nav.home[lang] },
+    { to: "/about", label: t.nav.about[lang] },
     { to: "/services", label: t.nav.services[lang] },
     { to: "/tools", label: lang === "ar" ? "الأدوات" : "Tools" },
     { to: "/library/articles", label: lang === "ar" ? "المكتبة" : "Library" },
@@ -1690,6 +1691,7 @@ export function Footer({ lang }: { lang: Lang }) {
     { to: "/services", label: t.nav.services[lang] },
     { to: "/experience", label: t.nav.experience[lang] },
     { to: "/skills", label: t.nav.skills[lang] },
+    { to: "/certifications", label: lang === "ar" ? "الشهادات" : "Certifications" },
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (

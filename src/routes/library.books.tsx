@@ -10,6 +10,7 @@ export const Route = createFileRoute("/library/books")({
       { title: "كتب ومراجع المحاسبة | Accounting Books & References — Ahmed Elmadani" },
       { name: "description", content: "مراجع محاسبية رسمية وموثوقة: IFRS، ZATCA، Kieso، Horngren وغيرها." },
     ],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/books" }],
   }),
   component: BooksPage,
 });

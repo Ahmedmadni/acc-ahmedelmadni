@@ -250,12 +250,13 @@ function LibraryPanel({ type }: { type: ItemType }) {
                 </td>
                 <td className="p-3">
                   <div className="flex gap-2">
-                    <Button variant="ghost" size="icon" onClick={() => openEdit(it)}>
+                    <Button variant="ghost" size="icon" aria-label={`تعديل ${it.title_ar}`} onClick={() => openEdit(it)}>
                       <Pencil className="size-4 text-[#f3d28a]" />
                     </Button>
                     <Button
                       variant="ghost"
                       size="icon"
+                      aria-label={`حذف ${it.title_ar}`}
                       onClick={() => {
                         if (confirm(`حذف "${it.title_ar}"؟`)) delMut.mutate(it.id);
                       }}
@@ -676,12 +677,13 @@ function ArticlesPanel() {
                         </Button>
                       </>
                     )}
-                    <Button size="icon" variant="ghost" onClick={() => openEdit(a)}>
+                    <Button size="icon" variant="ghost" aria-label={`تعديل ${a.title_ar}`} onClick={() => openEdit(a)}>
                       <Pencil className="size-4 text-[#f3d28a]" />
                     </Button>
                     <Button
                       size="icon"
                       variant="ghost"
+                      aria-label={`حذف ${a.title_ar}`}
                       onClick={() => {
                         if (confirm(`حذف "${a.title_ar}"؟`)) del.mutate(a.id);
                       }}

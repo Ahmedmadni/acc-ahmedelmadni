@@ -17,6 +17,7 @@ export const Route = createFileRoute("/library/templates")({
           "نماذج Word وExcel احترافية متوافقة مع زاتكا ومعايير IFRS — إقرارات ضريبية، قوائم مالية، فواتير، تسويات بنكية.",
       },
     ],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/templates" }],
   }),
   component: TemplatesPage,
 });
