@@ -282,7 +282,7 @@ export function TotalRow({
     >
       <span className="text-xs font-extrabold">{label}</span>
       <span dir="ltr" className="tabular-nums text-base font-extrabold">
-        {value.toLocaleString("ar-SA", { maximumFractionDigits: 2 })}
+        {value.toLocaleString("ar-SA", { maximumFractionDigits: 2, numberingSystem: "latn" })}
       </span>
     </div>
   );

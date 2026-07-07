@@ -80,7 +80,7 @@ function DeclarationsArchivePage() {
                       </span>
                     </div>
                     <div className="mt-1 text-[11px] text-white/40">
-                      {new Date(d.created_at).toLocaleString("ar-SA")}
+                      {new Date(d.created_at).toLocaleString("ar-SA", { numberingSystem: "latn" })}
                     </div>
                   </div>
                   <button

@@ -3,6 +3,10 @@
 export const round = (n: number, d = 2) =>
   Number.isFinite(n) ? Math.round(n * 10 ** d) / 10 ** d : 0;
 
+// Always render digits in Western/Latin numerals (0-9), even under the
+// ar-SA locale — which otherwise defaults to Eastern Arabic-Indic digits
+// (٠١٢٣٤٥٦٧٨٩) per its CLDR numbering system. Financial figures on this
+// site (forms, reports, PDF exports) must read as English digits site-wide.
 export const fmtMoney = (n: number, currency = "SAR", locale = "ar-SA") => {
   if (!Number.isFinite(n)) return "—";
   try {
@@ -10,15 +14,18 @@ export const fmtMoney = (n: number, currency = "SAR", locale = "ar-SA") => {
       style: "currency",
       currency,
       maximumFractionDigits: 2,
+      numberingSystem: "latn",
     }).format(n);
   } catch {
-    return `${round(n).toLocaleString()} ${currency}`;
+    return `${round(n).toLocaleString("en-US")} ${currency}`;
   }
 };
 
 export const fmtNum = (n: number, locale = "ar-SA", d = 2) =>
   Number.isFinite(n)
-    ? new Intl.NumberFormat(locale, { maximumFractionDigits: d }).format(round(n, d))
+    ? new Intl.NumberFormat(locale, { maximumFractionDigits: d, numberingSystem: "latn" }).format(
+        round(n, d),
+      )
     : "—";
 
 /** Present Value of a single future amount: PV = FV / (1+r)^n */

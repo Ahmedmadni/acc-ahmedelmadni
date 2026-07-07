@@ -124,7 +124,9 @@ function ToolDetailPage() {
   // render and client hydration — see the Performance rules in CLAUDE.md.
   const [generatedAt, setGeneratedAt] = useState("");
   useEffect(() => {
-    setGeneratedAt(new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US"));
+    setGeneratedAt(
+      new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US", { numberingSystem: "latn" }),
+    );
   }, [lang]);
 
   const isRTL = lang === "ar";
