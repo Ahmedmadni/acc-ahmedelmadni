@@ -532,25 +532,3 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     </div>
   );
 }
-
-/* ================= INLINE STYLES ================= */
-const sectionTitle: React.CSSProperties = {
-  fontSize: "14px",
-  fontWeight: 800,
-  color: "#b8862e",
-  borderBottom: "1.5px solid #d7aa52",
-  paddingBottom: "3px",
-  marginBottom: "8px",
-  textTransform: "uppercase",
-  letterSpacing: "0.5px",
-};
-
-const chipStyle: React.CSSProperties = {
-  display: "inline-block",
-  background: "#fbf3e0",
-  color: "#7a5410",
-  padding: "3px 9px",
-  borderRadius: "999px",
-  fontSize: "12px",
-  fontWeight: 600,
-};

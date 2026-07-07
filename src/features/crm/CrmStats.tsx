@@ -1,5 +1,6 @@
 import { BUSINESS_TYPES } from "./types";
 import { useClients, useWhatsAppMessageCount } from "./queries";
+import { EmojiStatTile } from "@/components/StatTile";
 
 export function CrmStats() {
   const { data: clientsData, isLoading, isError } = useClients();
@@ -28,10 +29,10 @@ export function CrmStats() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <StatCard label="إجمالي العملاء" value={clients.length} icon="👥" />
-        <StatCard label="نشطون" value={byStatus.active} icon="✅" color="text-emerald-400" />
-        <StatCard label="مسجلون VAT" value={clients.filter((c) => c.vat_registered).length} icon="🧾" color="text-amber-400" />
-        <StatCard label="رسائل مرسلة" value={msgCount} icon="💬" color="text-emerald-400" />
+        <EmojiStatTile label="إجمالي العملاء" value={clients.length} icon="👥" />
+        <EmojiStatTile label="نشطون" value={byStatus.active} icon="✅" valueColor="text-emerald-400" />
+        <EmojiStatTile label="مسجلون VAT" value={clients.filter((c) => c.vat_registered).length} icon="🧾" valueColor="text-amber-400" />
+        <EmojiStatTile label="رسائل مرسلة" value={msgCount} icon="💬" valueColor="text-emerald-400" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -59,26 +60,6 @@ export function CrmStats() {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-function StatCard({
-  label,
-  value,
-  icon,
-  color = "text-white",
-}: {
-  label: string;
-  value: number;
-  icon: string;
-  color?: string;
-}) {
-  return (
-    <div className="rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] p-4">
-      <div className="text-2xl">{icon}</div>
-      <div className={`text-2xl font-black mt-1 ${color}`}>{value}</div>
-      <div className="text-[11px] text-[var(--fg-soft)] mt-0.5">{label}</div>
     </div>
   );
 }

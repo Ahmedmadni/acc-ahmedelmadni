@@ -6,6 +6,7 @@ import type { Client } from "./types";
 import { ClientForm } from "./ClientForm";
 import { ClientDetail } from "./ClientDetail";
 import { useClients, useDeleteClient } from "./queries";
+import { EmojiStatTile } from "@/components/StatTile";
 
 export function ClientsList() {
   const queryClient = useQueryClient();
@@ -49,16 +50,12 @@ export function ClientsList() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
-          { label: "إجمالي العملاء", value: stats.total, icon: "👥", color: "text-white" },
-          { label: "نشطون", value: stats.active, icon: "✅", color: "text-emerald-400" },
-          { label: "مسجلون VAT", value: stats.vat, icon: "🧾", color: "text-amber-400" },
-          { label: "مسجلون زكاة", value: stats.zakat, icon: "🕌", color: "text-violet-400" },
-        ].map((s, i) => (
-          <div key={i} className="rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] p-4">
-            <div className="text-2xl">{s.icon}</div>
-            <div className={`text-2xl font-black mt-1 ${s.color}`}>{s.value}</div>
-            <div className="text-[11px] text-[var(--fg-soft)] mt-0.5">{s.label}</div>
-          </div>
+          { label: "إجمالي العملاء", value: stats.total, icon: "👥", valueColor: "text-white" },
+          { label: "نشطون", value: stats.active, icon: "✅", valueColor: "text-emerald-400" },
+          { label: "مسجلون VAT", value: stats.vat, icon: "🧾", valueColor: "text-amber-400" },
+          { label: "مسجلون زكاة", value: stats.zakat, icon: "🕌", valueColor: "text-violet-400" },
+        ].map((s) => (
+          <EmojiStatTile key={s.label} label={s.label} value={s.value} icon={s.icon} valueColor={s.valueColor} />
         ))}
       </div>
 

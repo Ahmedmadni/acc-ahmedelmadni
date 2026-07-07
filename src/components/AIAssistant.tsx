@@ -1,4 +1,3 @@
-import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
@@ -6,21 +5,15 @@ import { Send, Sparkles, X } from "lucide-react";
 import { playClick, playHover } from "@/lib/sound";
 import mascotImg from "@/assets/ai-mascot.webp";
 import type { Lang } from "@/lib/i18n";
+import { useChatWidget, extractMessageText } from "@/lib/chat-widget";
 
 const transport = new DefaultChatTransport({ api: "/api/chat" });
 
 export function AIAssistant({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
-  const { messages, sendMessage, status } = useChat({ transport });
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const { messages, sendMessage, loading, scrollRef } = useChatWidget(transport);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const loading = status === "submitted" || status === "streaming";
-
-  useEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  }, [messages, status]);
 
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 200);
@@ -143,9 +136,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                 )}
 
                 {messages.map((m) => {
-                  const text = m.parts
-                    .map((p) => (p.type === "text" ? p.text : ""))
-                    .join("");
+                  const text = extractMessageText(m);
                   const isUser = m.role === "user";
                   return (
                     <div key={m.id} className={`flex ${isUser ? "justify-end" : "justify-start"}`}>

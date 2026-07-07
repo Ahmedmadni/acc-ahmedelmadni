@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
+import { StatTile } from "@/components/StatTile";
 import {
   GraduationCap,
   CheckCircle2,
@@ -336,10 +337,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
       {mode === "quiz" && (
         <>
           <div className="grid gap-3 sm:grid-cols-4">
-            <Stat label={lang === "ar" ? "المسار" : "Track"} value={track} />
-            <Stat label={lang === "ar" ? "السؤال" : "Question"} value={pool.length > 0 ? `${current + 1}/${pool.length}` : "0"} />
-            <Stat label={lang === "ar" ? "النتيجة" : "Score"} value={`${score.correct}/${score.total}`} highlight />
-            <Stat label={lang === "ar" ? "الدقة" : "Accuracy"} value={score.total ? `${Math.round((score.correct / score.total) * 100)}%` : "—"} />
+            <StatTile label={lang === "ar" ? "المسار" : "Track"} value={track} />
+            <StatTile label={lang === "ar" ? "السؤال" : "Question"} value={pool.length > 0 ? `${current + 1}/${pool.length}` : "0"} />
+            <StatTile label={lang === "ar" ? "النتيجة" : "Score"} value={`${score.correct}/${score.total}`} highlight />
+            <StatTile label={lang === "ar" ? "الدقة" : "Accuracy"} value={score.total ? `${Math.round((score.correct / score.total) * 100)}%` : "—"} />
           </div>
 
           {!q ? (
@@ -555,11 +556,3 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   );
 }
 
-function Stat({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
-  return (
-    <div className={`rounded-xl border p-3 ${highlight ? "border-[#d7aa52]/60 bg-gradient-to-br from-[#d7aa52]/20 to-transparent" : "border-[#d7aa52]/20 bg-white/[0.03]"}`}>
-      <div className="text-[11px] font-bold uppercase tracking-wide text-[#f3d28a]">{label}</div>
-      <div className="mt-1 text-lg font-extrabold tabular-nums text-[var(--fg)]">{value}</div>
-    </div>
-  );
-}
