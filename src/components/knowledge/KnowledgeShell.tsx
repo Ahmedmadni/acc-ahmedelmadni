@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, Home, LogOut, ShieldCheck, UserCircle } from "lucide-react";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
-import { Toaster } from "@/components/ui/sonner";
 import { supabase } from "@/integrations/supabase/client";
 
 type KnowledgeUser = { id: string; email: string | null };
@@ -135,7 +134,6 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
           </Link>
         </div>
       </footer>
-      <Toaster />
     </div>
   );
 }

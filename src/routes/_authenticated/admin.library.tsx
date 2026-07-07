@@ -41,7 +41,12 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Pencil, Trash2, Plus, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/admin/library")({
-  head: () => ({ meta: [{ title: "إدارة المكتبة | المشرف" }] }),
+  head: () => ({
+    meta: [
+      { title: "إدارة المكتبة | المشرف" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: AdminLibraryPage,
 });
 
@@ -81,30 +86,22 @@ const EMPTY_FORM: Partial<LibraryItemRow> = {
 function AdminLibraryPage() {
   return (
     <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
-      <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
-        <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
+      <div className="w-full border-b border-[#d7aa52]/20 px-4 py-4 sm:px-8 lg:px-16">
+        <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <BookOpen className="size-5 text-[#f3d28a]" />
             <h1 className="text-base font-extrabold text-[#f3d28a]">
               لوحة إدارة المكتبة
             </h1>
           </div>
-          <div className="flex gap-2">
-            <Link
-              to="/admin/knowledge"
-              className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
-            >
-              لوحة المعرفة
-            </Link>
-            <Link
-              to="/library"
-              className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
-            >
-              عرض المكتبة
-            </Link>
-          </div>
+          <Link
+            to="/library"
+            className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
+          >
+            عرض المكتبة
+          </Link>
         </div>
-      </header>
+      </div>
 
       <div className="w-full px-4 sm:px-8 lg:px-16 py-8">
         <Tabs defaultValue="articles" className="w-full">

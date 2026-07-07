@@ -150,7 +150,7 @@ export const Route = createFileRoute("/api/public/hooks/generate-articles")({
     handlers: {
       POST: async ({ request }) => {
         const expected = process.env.CRON_SECRET;
-        if (expected && request.headers.get("x-cron-secret") !== expected) {
+        if (!expected || request.headers.get("x-cron-secret") !== expected) {
           return new Response("Forbidden", { status: 403 });
         }
         const max = 1; // one per cron tick — schedule cron 10×/month

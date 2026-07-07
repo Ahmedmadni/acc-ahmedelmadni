@@ -35,9 +35,15 @@ function contentWordCount(content: unknown): number {
   if (!Array.isArray(content)) return 0;
   let total = 0;
   for (const s of content) {
-    if (s && typeof s === "object" && "paragraphs" in s) {
+    if (!s || typeof s !== "object") continue;
+    // AI-generated articles store sections as {heading, body}; legacy
+    // SQL-seeded articles store {heading, paragraphs}. Count either shape.
+    if ("paragraphs" in s) {
       const ps = (s as { paragraphs?: string[] }).paragraphs ?? [];
       for (const p of ps) total += wordsCount(String(p));
+    } else if ("body" in s) {
+      const body = (s as { body?: string }).body;
+      if (typeof body === "string") total += wordsCount(body);
     }
   }
   return total;

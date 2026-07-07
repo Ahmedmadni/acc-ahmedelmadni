@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 
 // Encode an arbitrary JSON-safe value to a URL-safe base64 string (UTF-8 friendly).
 function encode(obj: unknown): string {
@@ -46,11 +46,18 @@ function writeUrlState(obj: Record<string, unknown>) {
  * Each call must use a unique `key` within the same page/tool.
  */
 export function useShareState<T>(key: string, initial: T): [T, Dispatch<SetStateAction<T>>] {
-  const [state, setState] = useState<T>(() => {
+  // Always start from the SSR-safe default — reading the URL hash during the
+  // lazy initializer would make the client's first render differ from the
+  // server-rendered HTML (hydration mismatch). The real value (if a shared
+  // link carries one) is applied after mount instead.
+  const [state, setState] = useState<T>(initial);
+  useEffect(() => {
     const all = readUrlState();
-    if (key in all) return all[key] as T;
-    return initial;
-  });
+    if (key in all) setState(all[key] as T);
+    // Intentionally run once on mount only — re-running on `key` changes
+    // would re-apply a stale URL snapshot over live in-memory edits.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const wrapped: Dispatch<SetStateAction<T>> = (val) => {
     setState((prev) => {
       const next = typeof val === "function" ? (val as (p: T) => T)(prev) : val;

@@ -9,11 +9,15 @@ import {
   reviewArticleFn,
   calendarOverviewFn,
 } from "@/lib/knowledge/generate.functions";
-import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { computeArticleSeoScore } from "@/lib/seo/score";
 
 export const Route = createFileRoute("/_authenticated/admin/knowledge")({
-  head: () => ({ meta: [{ title: "لوحة إدارة المكتبة | المشرف" }] }),
+  head: () => ({
+    meta: [
+      { title: "لوحة إدارة المكتبة | المشرف" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: AdminKnowledgePage,
 });
 
@@ -60,7 +64,7 @@ function AdminKnowledgePage() {
   });
 
   return (
-    <KnowledgeShell>
+    <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
@@ -70,12 +74,6 @@ function AdminKnowledgePage() {
             </p>
           </div>
           <div className="flex gap-2">
-            <Link
-              to="/admin/library"
-              className="rounded-xl border border-[#d7aa52]/40 px-4 py-2.5 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
-            >
-              إدارة المكتبة الكاملة
-            </Link>
             <button
               disabled={genLoading}
               onClick={() => gen.mutate()}
@@ -203,6 +201,6 @@ function AdminKnowledgePage() {
           </div>
         </section>
       </div>
-    </KnowledgeShell>
+    </div>
   );
 }
