@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Timer, RotateCcw, Play, Trophy, Languages, Type } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { StatTile } from "@/components/StatTile";
 
 type TestLang = "ar" | "en" | "fr" | "es";
 type Duration = 30 | 60 | 120;
@@ -162,10 +163,10 @@ export function TypingTest({ lang }: { lang: Lang }) {
       </div>
 
       <div className="grid gap-3 sm:grid-cols-4">
-        <Stat icon={<Timer className="size-4" />} label={lang === "ar" ? "الوقت المتبقي" : "Time left"} value={`${remaining}s`} />
-        <Stat icon={<Type className="size-4" />} label="WPM" value={String(wpm)} highlight />
-        <Stat icon={<Trophy className="size-4" />} label={lang === "ar" ? "الدقة" : "Accuracy"} value={`${accuracy}%`} />
-        <Stat
+        <StatTile icon={<Timer className="size-4" />} label={lang === "ar" ? "الوقت المتبقي" : "Time left"} value={`${remaining}s`} />
+        <StatTile icon={<Type className="size-4" />} label="WPM" value={String(wpm)} highlight />
+        <StatTile icon={<Trophy className="size-4" />} label={lang === "ar" ? "الدقة" : "Accuracy"} value={`${accuracy}%`} />
+        <StatTile
           icon={<Trophy className="size-4" />}
           label={lang === "ar" ? "أفضل نتيجة" : "Personal best"}
           value={best ? `${best.wpm} WPM` : "—"}
@@ -226,14 +227,3 @@ export function TypingTest({ lang }: { lang: Lang }) {
   );
 }
 
-function Stat({ icon, label, value, sub, highlight }: { icon: React.ReactNode; label: string; value: string; sub?: string; highlight?: boolean }) {
-  return (
-    <div className={`rounded-xl border p-3 ${highlight ? "border-[#d7aa52]/60 bg-gradient-to-br from-[#d7aa52]/20 to-transparent" : "border-[#d7aa52]/20 bg-white/[0.03]"}`}>
-      <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-[#f3d28a]">
-        {icon}{label}
-      </div>
-      <div className="mt-1 text-xl font-extrabold tabular-nums text-[var(--fg)]">{value}</div>
-      {sub && <div className="text-[11px] text-[var(--fg-soft)]">{sub}</div>}
-    </div>
-  );
-}

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MessageCircle, ChevronDown } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import type { Client } from "./types";
+import { useClients, useLogWhatsAppMessages, useRecentWhatsAppLog } from "./queries";
 
 const VAT_TEMPLATES = [
   {
@@ -102,20 +102,15 @@ ${company ? `📌 المنشأة: ${company}` : ""}
 ];
 
 export function WhatsAppMessenger() {
-  const [clients, setClients] = useState<Client[]>([]);
+  const { data: allClients, isLoading, isError } = useClients();
+  const clients = (allClients ?? [])
+    .filter((c) => c.status === "active")
+    .sort((a, b) => a.full_name.localeCompare(b.full_name, "ar"));
+  const logMessages = useLogWhatsAppMessages();
   const [selectedClients, setSelectedClients] = useState<string[]>([]);
   const [templateId, setTemplateId] = useState("vat_q4");
   const [customMessage, setCustomMessage] = useState("");
   const [filterVat, setFilterVat] = useState(false);
-
-  useEffect(() => {
-    supabase
-      .from("clients")
-      .select("*")
-      .eq("status", "active")
-      .order("full_name")
-      .then(({ data }) => setClients((data as Client[]) || []));
-  }, []);
 
   const displayedClients = filterVat ? clients.filter((c) => c.vat_registered) : clients;
   const toggleClient = (id: string) =>
@@ -135,7 +130,7 @@ export function WhatsAppMessenger() {
     window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
   };
 
-  const sendToAll = async () => {
+  const sendToAll = () => {
     for (let i = 0; i < selectedClients.length; i++) {
       const client = clients.find((c) => c.id === selectedClients[i]);
       if (!client) continue;
@@ -149,7 +144,7 @@ export function WhatsAppMessenger() {
         message_type: templateId,
       };
     });
-    if (logs.length) await supabase.from("whatsapp_log").insert(logs);
+    if (logs.length) logMessages.mutate(logs);
   };
 
   return (
@@ -219,7 +214,13 @@ export function WhatsAppMessenger() {
               </button>
             </label>
           ))}
-          {displayedClients.length === 0 && (
+          {isLoading && (
+            <div className="text-center text-xs text-[var(--fg-soft)] py-6">جاري التحميل...</div>
+          )}
+          {isError && (
+            <div className="text-center text-xs text-red-300 py-6">تعذّر تحميل قائمة العملاء.</div>
+          )}
+          {!isLoading && !isError && displayedClients.length === 0 && (
             <div className="text-center text-xs text-[var(--fg-soft)] py-6">
               لا يوجد عملاء نشطون
             </div>
@@ -293,22 +294,14 @@ export function WhatsAppMessenger() {
 }
 
 function RecentWhatsAppLog() {
-  const [logs, setLogs] = useState<any[]>([]);
-  useEffect(() => {
-    supabase
-      .from("whatsapp_log")
-      .select("*, clients(full_name)")
-      .order("sent_at", { ascending: false })
-      .limit(5)
-      .then(({ data }) => setLogs(data || []));
-  }, []);
+  const { data: logs } = useRecentWhatsAppLog();
 
-  if (!logs.length) return null;
+  if (!logs?.length) return null;
   return (
     <div>
       <div className="text-xs font-bold text-[var(--fg-soft)] mb-2">آخر الرسائل المرسلة</div>
       <div className="space-y-2">
-        {logs.map((log: any) => (
+        {logs.map((log) => (
           <div
             key={log.id}
             className="flex items-center justify-between rounded-lg bg-white/[0.03] px-3 py-2"

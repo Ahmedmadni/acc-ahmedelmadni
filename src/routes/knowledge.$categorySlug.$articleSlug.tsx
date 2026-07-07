@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Clock,
   Calendar,
@@ -36,7 +36,9 @@ function sectionParagraphs(s: Section): string[] {
   return [];
 }
 type FaqItem = { q: string; a: string };
-type Ref = { label: string; url: string };
+// AI-generated articles store this field as `title`; legacy SQL-seeded
+// articles store it as `label` — accept either.
+type Ref = { label?: string; title?: string; url: string };
 
 export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
   loader: async ({ params }) => {
@@ -212,16 +214,18 @@ function ArticlePage() {
     },
   });
 
-  const ratings = useQuery({
-    queryKey: ["kb-ratings", article.data?.id],
+  // kb_ratings RLS only allows reading your own row (by design, for privacy),
+  // so the public average/count comes from a SECURITY DEFINER RPC instead of
+  // selecting raw rows.
+  const ratingSummary = useQuery({
+    queryKey: ["kb-rating-summary", article.data?.id],
     enabled: !!article.data?.id,
     queryFn: async () => {
       const { data, error } = await supabase
-        .from("kb_ratings")
-        .select("rating,user_id")
-        .eq("article_id", article.data!.id);
+        .rpc("get_article_rating_summary", { p_article_id: article.data!.id })
+        .single();
       if (error) throw error;
-      return data;
+      return data as { avg_rating: number; rating_count: number };
     },
   });
 
@@ -251,17 +255,28 @@ function ArticlePage() {
     },
   });
 
+  const myRatingQuery = useQuery({
+    queryKey: ["kb-my-rating", article.data?.id, user?.id],
+    enabled: !!article.data?.id && !!user,
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("kb_ratings")
+        .select("rating")
+        .eq("article_id", article.data!.id)
+        .eq("user_id", user!.id)
+        .maybeSingle();
+      if (error) throw error;
+      return data;
+    },
+  });
+
   const sections = (article.data?.content_ar as Section[] | undefined) ?? [];
   const faq = (article.data?.faq as FaqItem[] | undefined) ?? [];
   const refs = (article.data?.references as Ref[] | undefined) ?? [];
 
-  const avg = useMemo(() => {
-    const list = ratings.data ?? [];
-    if (!list.length) return 0;
-    return list.reduce((s, r) => s + r.rating, 0) / list.length;
-  }, [ratings.data]);
-
-  const myRating = ratings.data?.find((r) => r.user_id === user?.id)?.rating ?? 0;
+  const avg = ratingSummary.data?.avg_rating ?? 0;
+  const ratingCount = ratingSummary.data?.rating_count ?? 0;
+  const myRating = myRatingQuery.data?.rating ?? 0;
 
   const router = useRouter();
   const url =
@@ -303,7 +318,8 @@ function ArticlePage() {
     if (error) toast.error("تعذر حفظ التقييم");
     else {
       toast.success("شكراً لتقييمك");
-      qc.invalidateQueries({ queryKey: ["kb-ratings", article.data.id] });
+      qc.invalidateQueries({ queryKey: ["kb-rating-summary", article.data.id] });
+      qc.invalidateQueries({ queryKey: ["kb-my-rating", article.data.id, user?.id] });
     }
   }
 
@@ -461,7 +477,7 @@ function ArticlePage() {
               </span>
               <span className="inline-flex items-center gap-1">
                 <Star className="size-3.5 fill-[#f3d28a] text-[#f3d28a]" />
-                {avg ? avg.toFixed(1) : "—"} ({ratings.data?.length ?? 0})
+                {avg ? avg.toFixed(1) : "—"} ({ratingCount})
               </span>
             </div>
           </div>
@@ -589,7 +605,7 @@ function ArticlePage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm text-[#f3d28a] hover:underline"
                       >
-                        <ExternalLink className="size-3.5" /> {r.label}
+                        <ExternalLink className="size-3.5" /> {r.label ?? r.title}
                       </a>
                     </li>
                   ))}

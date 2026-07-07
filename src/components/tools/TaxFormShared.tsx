@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
+import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { Download, FileSpreadsheet, Sparkles, Save, Info, ExternalLink, Loader2 } from "lucide-react";
+import { Download, FileSpreadsheet, Sparkles, Save, Archive, Info, ExternalLink, Loader2 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { fmtMoney } from "@/lib/finance";
 import { exportToolReportPdf } from "@/lib/pdf-export";
@@ -118,6 +119,15 @@ export function ActionsBar({
             {saving ? <Loader2 className="size-3.5 animate-spin" /> : <Save className="size-3.5" />}
             {lang === "ar" ? "حفظ في الأرشيف" : "Save to archive"}
           </button>
+        )}
+        {isAuthed && (
+          <Link
+            to="/declarations"
+            className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/25 bg-transparent px-3 py-1.5 text-xs font-bold text-sky-200/80 hover:bg-sky-400/10"
+          >
+            <Archive className="size-3.5" />
+            {lang === "ar" ? "عرض الأرشيف" : "View archive"}
+          </Link>
         )}
       </div>
       {refLinks.length > 0 && (

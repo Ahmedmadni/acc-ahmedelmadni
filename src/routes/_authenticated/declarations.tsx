@@ -1,13 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { ArrowLeft, FileText, Trash2, Calendar } from "lucide-react";
+import { FileText, Trash2, Calendar } from "lucide-react";
 import { deleteDeclarationFn, listMyDeclarationsFn } from "@/lib/tax/declarations.functions";
 import { fmtMoney } from "@/lib/finance";
 
 export const Route = createFileRoute("/_authenticated/declarations")({
-  head: () => ({ meta: [{ title: "أرشيف الإقرارات | My Declarations" }] }),
+  head: () => ({
+    meta: [
+      { title: "أرشيف الإقرارات | My Declarations" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: DeclarationsArchivePage,
 });
 
@@ -33,19 +38,14 @@ function DeclarationsArchivePage() {
 
   return (
     <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
-      <header className="border-b border-[#d7aa52]/20 bg-[#04101f]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-          <Link to="/tools" className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15">
-            <ArrowLeft className="size-3.5" />
-            الأدوات
-          </Link>
-          <h1 className="text-lg font-extrabold text-[#f3d28a]">أرشيف الإقرارات الضريبية والزكوية</h1>
-          <span />
-        </div>
-      </header>
-
       <main className="mx-auto max-w-5xl px-4 py-8">
+        <h1 className="mb-6 text-lg font-extrabold text-[#f3d28a]">أرشيف الإقرارات الضريبية والزكوية</h1>
         {q.isLoading && <p className="text-white/60">...جارٍ التحميل</p>}
+        {q.isError && (
+          <div className="rounded-2xl border border-red-400/40 bg-red-400/10 p-6 text-center text-red-100">
+            تعذّر تحميل الأرشيف. حاول تحديث الصفحة.
+          </div>
+        )}
         {q.data && q.data.declarations.length === 0 && (
           <div className="rounded-2xl border border-dashed border-[#d7aa52]/40 p-10 text-center text-white/60">
             لا توجد إقرارات محفوظة بعد. ابدأ من صفحة الأدوات وأدخل إقراراً ثم اضغط "حفظ في الأرشيف".

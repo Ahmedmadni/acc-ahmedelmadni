@@ -1,6 +1,6 @@
-import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useChatWidget, extractMessageText } from "@/lib/chat-widget";
 import {
   Send,
   Sparkles,
@@ -207,18 +207,12 @@ export function OfficeAiAssistant({ lang }: { lang: Lang }) {
   const [input, setInput] = useState("");
   const [initialMessages] = useState<UIMessage[]>(() => loadMessages());
 
-  const { messages, sendMessage, status, setMessages, error } = useChat({
+  const { messages, sendMessage, status, setMessages, error, loading, scrollRef } = useChatWidget(
     transport,
-    messages: initialMessages,
-  });
+    initialMessages,
+  );
 
-  const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const loading = status === "submitted" || status === "streaming";
-
-  useEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  }, [messages, status]);
 
   useEffect(() => {
     saveMessages(messages);
@@ -344,9 +338,7 @@ export function OfficeAiAssistant({ lang }: { lang: Lang }) {
         ) : (
           <div className="space-y-4">
             {messages.map((m) => {
-              const text = m.parts
-                .map((p) => (p.type === "text" ? p.text : ""))
-                .join("");
+              const text = extractMessageText(m);
               const isUser = m.role === "user";
               return (
                 <div

@@ -1,7 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
-import { createClient } from "@supabase/supabase-js";
-import type { Database } from "@/integrations/supabase/types";
+import { getServerAnonClient } from "@/integrations/supabase/client.server-anon";
 import { requireAdmin } from "@/integrations/supabase/admin-middleware";
 import { TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 
@@ -67,12 +66,7 @@ export const listExamQuestions = createServerFn({ method: "GET" })
     z.object({ track: TrackEnum.optional() }).parse(d ?? {}),
   )
   .handler(async ({ data }) => {
-    const url = process.env.SUPABASE_URL;
-    const key = process.env.SUPABASE_PUBLISHABLE_KEY;
-    if (!url || !key) throw new Error("Missing Supabase env");
-    const supabase = createClient<Database>(url, key, {
-      auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
-    });
+    const supabase = getServerAnonClient();
 
     let q = supabase
       .from("exam_questions")
@@ -185,12 +179,7 @@ export const updateExamQuestion = createServerFn({ method: "POST" })
 /** Aggregate counts per track — useful for debug & user feedback. */
 export const examQuestionsStats = createServerFn({ method: "GET" })
   .handler(async () => {
-    const url = process.env.SUPABASE_URL;
-    const key = process.env.SUPABASE_PUBLISHABLE_KEY;
-    if (!url || !key) throw new Error("Missing Supabase env");
-    const supabase = createClient<Database>(url, key, {
-      auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
-    });
+    const supabase = getServerAnonClient();
     const { data, error } = await supabase
       .from("exam_questions")
       .select("track")

@@ -1,4 +1,12 @@
 // Import/export helpers for the trial-balance-driven financial statements tool.
+//
+// Known risk: xlsx@0.18.5 (the latest version published to the npm registry)
+// has open prototype-pollution/ReDoS advisories with no npm-registry fix —
+// SheetJS only ships patched 0.20.x+ builds from cdn.sheetjs.com, not npm.
+// Accepted for now because parsing happens entirely client-side on a file
+// the visitor uploads into their own browser tab (no server-side exposure,
+// no other user's data at risk). Revisit by either installing xlsx directly
+// from https://cdn.sheetjs.com (bypassing npm) or migrating to `exceljs`.
 import * as XLSX from "xlsx";
 import type { FinancialStatements, TrialBalanceRow } from "./financial-statements";
 import { categoryById } from "./financial-statements";

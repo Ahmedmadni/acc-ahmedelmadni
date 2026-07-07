@@ -10,6 +10,7 @@ import {
 
 import appCss from "../styles.css?url";
 import { GlobalControls } from "@/components/GlobalControls";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -220,6 +221,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <GlobalControls />
       <Outlet />
+      <Toaster />
     </QueryClientProvider>
   );
 }

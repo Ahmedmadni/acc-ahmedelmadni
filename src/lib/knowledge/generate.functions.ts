@@ -314,19 +314,25 @@ ${data.topicHint ? `الموضوع المقترح: ${data.topicHint}` : ""}
   });
 
 // ===== Admin actions =====
+const PAGE_SIZE = 25;
+
 export const listAdminArticlesFn = createServerFn({ method: "GET" })
   .middleware([requireAdmin])
-  .handler(async ({ context }) => {
+  .inputValidator((input: unknown) => z.object({ page: z.number().int().min(0) }).parse(input ?? { page: 0 }))
+  .handler(async ({ context, data: { page } }) => {
     const { supabase } = context;
-    const { data, error } = await supabase
+    const from = page * PAGE_SIZE;
+    const to = from + PAGE_SIZE - 1;
+    const { data, error, count } = await supabase
       .from("kb_articles")
       .select(
         "id,slug,title_ar,status,created_at,reviewed_at,featured_image,generation_source,category_id,meta_title,meta_description,excerpt_ar,content_ar,keywords,faq",
+        { count: "exact" },
       )
       .order("created_at", { ascending: false })
-      .limit(100);
+      .range(from, to);
     if (error) throw new Error(error.message);
-    return { articles: data ?? [] };
+    return { articles: data ?? [], total: count ?? 0, page, pageSize: PAGE_SIZE };
   });
 
 export const reviewArticleFn = createServerFn({ method: "POST" })

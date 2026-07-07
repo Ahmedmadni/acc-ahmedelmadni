@@ -128,6 +128,50 @@ function StatCard({ title, value, sub }: { title: string; value: string; sub?: s
   );
 }
 
+// Shared by NPV/IRR/DCF/Payback/PI, which previously each reimplemented the
+// same "list of year/cashflow rows with add/remove buttons" block.
+function CashflowListEditor({
+  values,
+  onChange,
+  yearLabel,
+  minKeep = 2,
+  addLabel,
+  newRowValue,
+}: {
+  values: number[];
+  onChange: (updater: (arr: number[]) => number[]) => void;
+  yearLabel: (i: number) => string;
+  minKeep?: number;
+  addLabel: string;
+  newRowValue?: (arr: number[]) => number;
+}) {
+  const setCf = (i: number, v: number) => onChange((arr) => arr.map((x, idx) => (idx === i ? v : x)));
+  return (
+    <div className="space-y-2">
+      {values.map((c, i) => (
+        <div key={i} className="flex items-center gap-2">
+          <span className="w-14 text-xs font-bold text-[#f3d28a]">{yearLabel(i)}</span>
+          <input type="number" className={fieldCls} value={c} onChange={(e) => setCf(i, +e.target.value)} />
+          {values.length > minKeep && (
+            <button
+              onClick={() => onChange((a) => a.filter((_, idx) => idx !== i))}
+              className="rounded-md border border-red-500/30 px-2 py-1 text-xs text-red-300 hover:bg-red-500/10"
+            >
+              ×
+            </button>
+          )}
+        </div>
+      ))}
+      <button
+        onClick={() => onChange((a) => [...a, newRowValue ? newRowValue(a) : 0])}
+        className="rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+      >
+        {addLabel}
+      </button>
+    </div>
+  );
+}
+
 // ---------- PV ----------
 export function PVCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
@@ -186,28 +230,18 @@ export function NPVCalculator({ lang }: { lang: Lang }) {
   const [rate, setRate] = useShareState("NPVCalculator_v0", 10);
   const [cfs, setCfs] = useShareState<number[]>("NPVCalculator_v1", [-100000, 25000, 30000, 35000, 40000, 45000]);
   const value = npvCalc(rate, cfs);
-  const setCf = (i: number, v: number) =>
-    setCfs((arr) => arr.map((x, idx) => (idx === i ? v : x)));
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <div className="space-y-4">
         <div><label className={lbl}>{L(lang, "rate")}</label><input type="number" step="0.1" className={fieldCls} value={rate} onChange={(e) => setRate(+e.target.value)} /></div>
         <div>
           <label className={lbl}>{L(lang, "cashflows")}</label>
-          <div className="space-y-2">
-            {cfs.map((c, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <span className="w-14 text-xs font-bold text-[#f3d28a]">{L(lang, "year")} {i}</span>
-                <input type="number" className={fieldCls} value={c} onChange={(e) => setCf(i, +e.target.value)} />
-                {cfs.length > 2 && (
-                  <button onClick={() => setCfs((a) => a.filter((_, idx) => idx !== i))} className="rounded-md border border-red-500/30 px-2 py-1 text-xs text-red-300 hover:bg-red-500/10">×</button>
-                )}
-              </div>
-            ))}
-            <button onClick={() => setCfs((a) => [...a, 0])} className="rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
-              {L(lang, "addRow")}
-            </button>
-          </div>
+          <CashflowListEditor
+            values={cfs}
+            onChange={setCfs}
+            yearLabel={(i) => `${L(lang, "year")} ${i}`}
+            addLabel={L(lang, "addRow")}
+          />
         </div>
       </div>
       <div className="space-y-3">
@@ -223,23 +257,16 @@ export function IRRCalculator({ lang }: { lang: Lang }) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
   const [cfs, setCfs] = useShareState<number[]>("IRRCalculator_v0", [-100000, 30000, 35000, 40000, 45000]);
   const value = irrCalc(cfs);
-  const setCf = (i: number, v: number) => setCfs((arr) => arr.map((x, idx) => (idx === i ? v : x)));
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <div className="space-y-2">
         <label className={lbl}>{L(lang, "cashflows")}</label>
-        {cfs.map((c, i) => (
-          <div key={i} className="flex items-center gap-2">
-            <span className="w-14 text-xs font-bold text-[#f3d28a]">{L(lang, "year")} {i}</span>
-            <input type="number" className={fieldCls} value={c} onChange={(e) => setCf(i, +e.target.value)} />
-            {cfs.length > 2 && (
-              <button onClick={() => setCfs((a) => a.filter((_, idx) => idx !== i))} className="rounded-md border border-red-500/30 px-2 py-1 text-xs text-red-300 hover:bg-red-500/10">×</button>
-            )}
-          </div>
-        ))}
-        <button onClick={() => setCfs((a) => [...a, 0])} className="rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
-          {L(lang, "addRow")}
-        </button>
+        <CashflowListEditor
+          values={cfs}
+          onChange={setCfs}
+          yearLabel={(i) => `${L(lang, "year")} ${i}`}
+          addLabel={L(lang, "addRow")}
+        />
       </div>
       <div className="space-y-3">
         <StatCard title={L(lang, "irr")} value={value === null ? L(lang, "noConv") : `${fmtNum(value, locale)} %`} sub={lang === "ar" ? "معدل العائد الداخلي" : "Internal rate of return"} />
@@ -358,7 +385,6 @@ export function DCFCalculator({ lang }: { lang: Lang }) {
   const [cfs, setCfs] = useShareState<number[]>("DCFCalculator_v2", [120000, 140000, 160000, 180000, 200000]);
   const out = useMemo(() => dcf(rate, cfs, g), [rate, g, cfs]);
   const data = cfs.map((c, i) => ({ year: `Y${i + 1}`, cf: c, pv: c / Math.pow(1 + rate / 100, i + 1) }));
-  const setCf = (i: number, v: number) => setCfs((a) => a.map((x, idx) => (idx === i ? v : x)));
   return (
     <div className="space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
@@ -367,16 +393,14 @@ export function DCFCalculator({ lang }: { lang: Lang }) {
           <div><label className={lbl}>{lang === "ar" ? "معدل النمو الاستمراري %" : "Terminal growth %"}</label><input type="number" step="0.1" className={fieldCls} value={g} onChange={(e) => setG(+e.target.value)} /></div>
           <div>
             <label className={lbl}>{lang === "ar" ? "التدفقات الحرة (FCF) لكل سنة" : "Free cashflows per year"}</label>
-            <div className="space-y-2">
-              {cfs.map((c, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="w-14 text-xs font-bold text-[#f3d28a]">Y{i + 1}</span>
-                  <input type="number" className={fieldCls} value={c} onChange={(e) => setCf(i, +e.target.value)} />
-                  {cfs.length > 1 && <button onClick={() => setCfs((a) => a.filter((_, idx) => idx !== i))} className="rounded-md border border-red-500/30 px-2 py-1 text-xs text-red-300 hover:bg-red-500/10">×</button>}
-                </div>
-              ))}
-              <button onClick={() => setCfs((a) => [...a, a[a.length - 1] ?? 0])} className="rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">+ {lang === "ar" ? "سنة" : "Year"}</button>
-            </div>
+            <CashflowListEditor
+              values={cfs}
+              onChange={setCfs}
+              yearLabel={(i) => `Y${i + 1}`}
+              minKeep={1}
+              addLabel={`+ ${lang === "ar" ? "سنة" : "Year"}`}
+              newRowValue={(a) => a[a.length - 1] ?? 0}
+            />
           </div>
         </div>
         <div className="space-y-3">
@@ -407,7 +431,6 @@ export function PaybackCalculator({ lang }: { lang: Lang }) {
   const [cfs, setCfs] = useShareState<number[]>("PaybackCalculator_v1", [-200000, 60000, 70000, 80000, 90000, 100000]);
   const out = useMemo(() => payback(cfs, rate), [cfs, rate]);
   const data = out.cumulative.map((c, i) => ({ year: `Y${i}`, cumulative: c }));
-  const setCf = (i: number, v: number) => setCfs((a) => a.map((x, idx) => (idx === i ? v : x)));
   return (
     <div className="space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
@@ -415,16 +438,7 @@ export function PaybackCalculator({ lang }: { lang: Lang }) {
           <div><label className={lbl}>{lang === "ar" ? "معدل الخصم %" : "Discount rate %"}</label><input type="number" step="0.1" className={fieldCls} value={rate} onChange={(e) => setRate(+e.target.value)} /></div>
           <div>
             <label className={lbl}>{L(lang, "cashflows")}</label>
-            <div className="space-y-2">
-              {cfs.map((c, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="w-14 text-xs font-bold text-[#f3d28a]">Y{i}</span>
-                  <input type="number" className={fieldCls} value={c} onChange={(e) => setCf(i, +e.target.value)} />
-                  {cfs.length > 2 && <button onClick={() => setCfs((a) => a.filter((_, idx) => idx !== i))} className="rounded-md border border-red-500/30 px-2 py-1 text-xs text-red-300 hover:bg-red-500/10">×</button>}
-                </div>
-              ))}
-              <button onClick={() => setCfs((a) => [...a, 0])} className="rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">{L(lang, "addRow")}</button>
-            </div>
+            <CashflowListEditor values={cfs} onChange={setCfs} yearLabel={(i) => `Y${i}`} addLabel={L(lang, "addRow")} />
           </div>
         </div>
         <div className="space-y-3">
@@ -457,23 +471,13 @@ export function PICalculator({ lang }: { lang: Lang }) {
   const [rate, setRate] = useShareState("PICalculator_v0", 12);
   const [cfs, setCfs] = useShareState<number[]>("PICalculator_v1", [-150000, 50000, 60000, 70000, 80000]);
   const value = profitabilityIndex(rate, cfs);
-  const setCf = (i: number, v: number) => setCfs((a) => a.map((x, idx) => (idx === i ? v : x)));
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <div className="space-y-4">
         <div><label className={lbl}>{lang === "ar" ? "معدل الخصم %" : "Discount rate %"}</label><input type="number" step="0.1" className={fieldCls} value={rate} onChange={(e) => setRate(+e.target.value)} /></div>
         <div>
           <label className={lbl}>{L(lang, "cashflows")}</label>
-          <div className="space-y-2">
-            {cfs.map((c, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <span className="w-14 text-xs font-bold text-[#f3d28a]">Y{i}</span>
-                <input type="number" className={fieldCls} value={c} onChange={(e) => setCf(i, +e.target.value)} />
-                {cfs.length > 2 && <button onClick={() => setCfs((a) => a.filter((_, idx) => idx !== i))} className="rounded-md border border-red-500/30 px-2 py-1 text-xs text-red-300 hover:bg-red-500/10">×</button>}
-              </div>
-            ))}
-            <button onClick={() => setCfs((a) => [...a, 0])} className="rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">{L(lang, "addRow")}</button>
-          </div>
+          <CashflowListEditor values={cfs} onChange={setCfs} yearLabel={(i) => `Y${i}`} addLabel={L(lang, "addRow")} />
         </div>
       </div>
       <div className="space-y-3">

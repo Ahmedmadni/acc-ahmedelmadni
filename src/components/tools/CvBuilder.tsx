@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import jsPDF from "jspdf";
 import {
   Award,
@@ -161,6 +161,34 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   const previewRef = useRef<HTMLDivElement>(null);
   const template = getCvTemplate(templateId);
   const quality = useMemo(() => scoreCv(data), [data]);
+
+  // Load any previously-saved draft after mount (SSR-safe: reading
+  // localStorage inside a useState initializer would make the client's
+  // first render differ from the server-rendered HTML).
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("cv-builder-draft");
+      if (!raw) return;
+      const saved = JSON.parse(raw) as {
+        data?: CvData;
+        templateId?: CvTemplateId;
+        photoPreview?: string;
+      };
+      if (saved.data) setData(saved.data);
+      if (saved.templateId) setTemplateId(saved.templateId);
+      if (saved.photoPreview) setPhotoPreview(saved.photoPreview);
+    } catch {
+      /* noop */
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("cv-builder-draft", JSON.stringify({ data, templateId, photoPreview }));
+    } catch {
+      /* storage full or unavailable — draft simply won't persist */
+    }
+  }, [data, templateId, photoPreview]);
 
   const set = <K extends keyof CvData>(k: K, v: CvData[K]) => setData((d) => ({ ...d, [k]: v }));
 
@@ -504,25 +532,3 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     </div>
   );
 }
-
-/* ================= INLINE STYLES ================= */
-const sectionTitle: React.CSSProperties = {
-  fontSize: "14px",
-  fontWeight: 800,
-  color: "#b8862e",
-  borderBottom: "1.5px solid #d7aa52",
-  paddingBottom: "3px",
-  marginBottom: "8px",
-  textTransform: "uppercase",
-  letterSpacing: "0.5px",
-};
-
-const chipStyle: React.CSSProperties = {
-  display: "inline-block",
-  background: "#fbf3e0",
-  color: "#7a5410",
-  padding: "3px 9px",
-  borderRadius: "999px",
-  fontSize: "12px",
-  fontWeight: 600,
-};

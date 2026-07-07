@@ -11,6 +11,7 @@ export const Route = createFileRoute("/library/articles")({
       { title: "مقالات محاسبية | Accounting Articles — Ahmed Elmadani" },
       { name: "description", content: "مقالات محاسبية ومالية محدثة من المكتبة المعرفية." },
     ],
+    links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/articles" }],
   }),
   component: ArticlesPage,
 });

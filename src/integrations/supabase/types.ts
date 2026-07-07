@@ -758,6 +758,15 @@ export type Database = {
         }
         Returns: boolean
       }
+      get_article_rating_summary: {
+        Args: {
+          p_article_id: string
+        }
+        Returns: {
+          avg_rating: number
+          rating_count: number
+        }[]
+      }
     }
     Enums: {
       app_role: "admin" | "reviewer" | "user"

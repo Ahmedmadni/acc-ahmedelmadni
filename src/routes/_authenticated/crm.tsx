@@ -1,12 +1,17 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Users, MessageCircle, BarChart3, ArrowLeft } from "lucide-react";
+import { Users, MessageCircle, BarChart3 } from "lucide-react";
 import { ClientsList } from "@/features/crm/ClientsList";
 import { WhatsAppMessenger } from "@/features/crm/WhatsAppMessenger";
 import { CrmStats } from "@/features/crm/CrmStats";
 
 export const Route = createFileRoute("/_authenticated/crm")({
-  head: () => ({ meta: [{ title: "إدارة علاقات العملاء | CRM" }] }),
+  head: () => ({
+    meta: [
+      { title: "إدارة علاقات العملاء | CRM" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: CrmPage,
 });
 
@@ -25,20 +30,11 @@ function CrmPage() {
     <div dir="rtl" className="min-h-screen bg-[#04101f] text-white pt-24 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex items-center justify-between flex-wrap gap-3 mb-8">
-          <div>
-            <h1 className="text-2xl md:text-3xl font-black text-[#f3d28a]">إدارة علاقات العملاء</h1>
-            <p className="text-sm text-[var(--fg-soft)] mt-1">
-              CRM · عملاء المكتب المحاسبي والتذكيرات الضريبية
-            </p>
-          </div>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[var(--fg-soft)] hover:bg-white/10 transition"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            العودة للرئيسية
-          </Link>
+        <div className="mb-8">
+          <h1 className="text-2xl md:text-3xl font-black text-[#f3d28a]">إدارة علاقات العملاء</h1>
+          <p className="text-sm text-[var(--fg-soft)] mt-1">
+            CRM · عملاء المكتب المحاسبي والتذكيرات الضريبية
+          </p>
         </div>
 
         {/* Tabs */}

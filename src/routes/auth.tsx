@@ -5,7 +5,12 @@ import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/auth")({
-  head: () => ({ meta: [{ title: "تسجيل الدخول | المكتبة المحاسبية" }] }),
+  head: () => ({
+    meta: [
+      { title: "تسجيل الدخول | المكتبة المحاسبية" },
+      { name: "robots", content: "noindex, nofollow" },
+    ],
+  }),
   component: AuthPage,
 });
 

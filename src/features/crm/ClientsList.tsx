@@ -1,35 +1,29 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { Search, Plus, Pencil, Trash2, MessageCircle } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import type { Client } from "./types";
 import { ClientForm } from "./ClientForm";
 import { ClientDetail } from "./ClientDetail";
+import { useClients, useDeleteClient } from "./queries";
+import { EmojiStatTile } from "@/components/StatTile";
 
 export function ClientsList() {
-  const [clients, setClients] = useState<Client[]>([]);
-  const [loading, setLoading] = useState(true);
+  const queryClient = useQueryClient();
+  const { data: clientsData, isLoading: loading, isError } = useClients();
+  const clients = clientsData ?? [];
+  const deleteClientMutation = useDeleteClient();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<"all" | "active" | "inactive" | "pending">("all");
   const [selected, setSelected] = useState<Client | null>(null);
   const [showForm, setShowForm] = useState(false);
   const [editClient, setEditClient] = useState<Client | null>(null);
 
-  useEffect(() => {
-    supabase
-      .from("clients")
-      .select("*")
-      .order("created_at", { ascending: false })
-      .then(({ data }) => {
-        setClients((data as Client[]) || []);
-        setLoading(false);
-      });
-  }, []);
-
-  const deleteClient = async (id: string) => {
+  const deleteClient = (id: string) => {
     if (!confirm("هل أنت متأكد من حذف هذا العميل؟")) return;
-    const { error } = await supabase.from("clients").delete().eq("id", id);
-    if (error) return alert("خطأ في الحذف: " + error.message);
-    setClients((prev) => prev.filter((c) => c.id !== id));
+    deleteClientMutation.mutate(id, {
+      onError: (e) => toast.error("خطأ في الحذف: " + (e as Error).message),
+    });
   };
 
   const filtered = clients.filter((c) => {
@@ -56,16 +50,12 @@ export function ClientsList() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
-          { label: "إجمالي العملاء", value: stats.total, icon: "👥", color: "text-white" },
-          { label: "نشطون", value: stats.active, icon: "✅", color: "text-emerald-400" },
-          { label: "مسجلون VAT", value: stats.vat, icon: "🧾", color: "text-amber-400" },
-          { label: "مسجلون زكاة", value: stats.zakat, icon: "🕌", color: "text-violet-400" },
-        ].map((s, i) => (
-          <div key={i} className="rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] p-4">
-            <div className="text-2xl">{s.icon}</div>
-            <div className={`text-2xl font-black mt-1 ${s.color}`}>{s.value}</div>
-            <div className="text-[11px] text-[var(--fg-soft)] mt-0.5">{s.label}</div>
-          </div>
+          { label: "إجمالي العملاء", value: stats.total, icon: "👥", valueColor: "text-white" },
+          { label: "نشطون", value: stats.active, icon: "✅", valueColor: "text-emerald-400" },
+          { label: "مسجلون VAT", value: stats.vat, icon: "🧾", valueColor: "text-amber-400" },
+          { label: "مسجلون زكاة", value: stats.zakat, icon: "🕌", valueColor: "text-violet-400" },
+        ].map((s) => (
+          <EmojiStatTile key={s.label} label={s.label} value={s.value} icon={s.icon} valueColor={s.valueColor} />
         ))}
       </div>
 
@@ -128,7 +118,16 @@ export function ClientsList() {
               <tr
                 key={client.id}
                 onClick={() => setSelected(client)}
-                className="border-t border-white/5 hover:bg-white/[0.03] cursor-pointer"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setSelected(client);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`عرض تفاصيل ${client.full_name}`}
+                className="border-t border-white/5 hover:bg-white/[0.03] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d7aa52]/50"
               >
                 <td className="p-3">
                   <div className="font-bold text-white">{client.full_name}</div>
@@ -201,7 +200,12 @@ export function ClientsList() {
         {loading && (
           <div className="p-12 text-center text-[var(--fg-soft)] text-sm">جاري التحميل...</div>
         )}
-        {!loading && filtered.length === 0 && (
+        {isError && (
+          <div className="p-12 text-center text-sm text-red-300">
+            تعذّر تحميل قائمة العملاء. حاول تحديث الصفحة.
+          </div>
+        )}
+        {!loading && !isError && filtered.length === 0 && (
           <div className="p-12 text-center text-[var(--fg-soft)] text-sm">
             لا يوجد عملاء مطابقون
           </div>
@@ -224,12 +228,8 @@ export function ClientsList() {
         <ClientForm
           client={editClient}
           onClose={() => setShowForm(false)}
-          onSave={(saved) => {
-            if (editClient) {
-              setClients((prev) => prev.map((c) => (c.id === saved.id ? saved : c)));
-            } else {
-              setClients((prev) => [saved, ...prev]);
-            }
+          onSave={() => {
+            queryClient.invalidateQueries({ queryKey: ["crm-clients"] });
             setShowForm(false);
           }}
         />
