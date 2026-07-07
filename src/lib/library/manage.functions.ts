@@ -47,32 +47,21 @@ export type LibraryItemRow = {
   sort_order: number;
   is_published: boolean;
   pdf_path: string | null;
+  has_pdf: boolean | null;
   generation_source: string;
   ai_model: string | null;
   created_at: string;
   updated_at: string;
 };
 
-// Loose-typed Supabase accessor for the not-yet-codegen'd library_items table.
-type LooseSb = {
-  from: (t: string) => {
-    select: (s: string) => {
-      order: (c: string, o: { ascending: boolean }) => Promise<{ data: unknown; error: { message: string } | null }>;
-    };
-    insert: (v: unknown) => {
-      select: (s: string) => { single: () => Promise<{ data: unknown; error: { message: string } | null }> };
-    };
-    update: (v: unknown) => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
-    delete: () => { eq: (c: string, val: string) => Promise<{ error: { message: string } | null }> };
-  };
-};
-
 // ============ List ============
 export const listLibraryItemsFn = createServerFn({ method: "GET" })
   .middleware([requireAdmin])
   .handler(async ({ context }) => {
-    const sb = context.supabase as unknown as LooseSb;
-    const { data, error } = await sb.from("library_items").select("*").order("created_at", { ascending: false });
+    const { data, error } = await context.supabase
+      .from("library_items")
+      .select("*")
+      .order("created_at", { ascending: false });
     if (error) throw new Error(error.message);
     return { items: (data as LibraryItemRow[]) ?? [] };
   });
@@ -82,9 +71,12 @@ export const createLibraryItemFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) => ItemSchema.parse(input))
   .handler(async ({ data, context }) => {
-    const sb = context.supabase as unknown as LooseSb;
     const payload = normalize(data);
-    const { data: row, error } = await sb.from("library_items").insert(payload).select("*").single();
+    const { data: row, error } = await context.supabase
+      .from("library_items")
+      .insert(payload as never)
+      .select("*")
+      .single();
     if (error) throw new Error(error.message);
     return { item: row as LibraryItemRow };
   });
@@ -96,9 +88,11 @@ export const updateLibraryItemFn = createServerFn({ method: "POST" })
     z.object({ id: z.string().uuid(), patch: ItemSchema.partial() }).parse(input),
   )
   .handler(async ({ data, context }) => {
-    const sb = context.supabase as unknown as LooseSb;
     const payload = normalize(data.patch as LibItemInput);
-    const { error } = await sb.from("library_items").update(payload).eq("id", data.id);
+    const { error } = await context.supabase
+      .from("library_items")
+      .update(payload as never)
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -108,8 +102,7 @@ export const deleteLibraryItemFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) => z.object({ id: z.string().uuid() }).parse(input))
   .handler(async ({ data, context }) => {
-    const sb = context.supabase as unknown as LooseSb;
-    const { error } = await sb.from("library_items").delete().eq("id", data.id);
+    const { error } = await context.supabase.from("library_items").delete().eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -121,8 +114,10 @@ export const togglePublishItemFn = createServerFn({ method: "POST" })
     z.object({ id: z.string().uuid(), is_published: z.boolean() }).parse(input),
   )
   .handler(async ({ data, context }) => {
-    const sb = context.supabase as unknown as LooseSb;
-    const { error } = await sb.from("library_items").update({ is_published: data.is_published }).eq("id", data.id);
+    const { error } = await context.supabase
+      .from("library_items")
+      .update({ is_published: data.is_published })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
@@ -279,8 +274,10 @@ export const uploadLibraryPdfFn = createServerFn({ method: "POST" })
       .from("library-pdfs")
       .upload(path, bytes, { contentType: "application/pdf", upsert: true });
     if (upErr) throw new Error(upErr.message);
-    const sb = context.supabase as unknown as LooseSb;
-    const { error } = await sb.from("library_items").update({ pdf_path: path }).eq("id", data.id);
+    const { error } = await context.supabase
+      .from("library_items")
+      .update({ pdf_path: path })
+      .eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true, path };
   });

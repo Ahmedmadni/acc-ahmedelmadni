@@ -137,7 +137,7 @@ function LibraryPanel({ type }: { type: ItemType }) {
   const deleteFn = useServerFn(deleteLibraryItemFn);
   const pubFn = useServerFn(togglePublishItemFn);
 
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ["admin-library"],
     queryFn: () => listFn(),
   });
@@ -219,7 +219,14 @@ function LibraryPanel({ type }: { type: ItemType }) {
                 </td>
               </tr>
             )}
-            {!isLoading && items.length === 0 && (
+            {isError && (
+              <tr>
+                <td colSpan={6} className="p-6 text-center text-red-300">
+                  تعذّر تحميل العناصر. حاول تحديث الصفحة.
+                </td>
+              </tr>
+            )}
+            {!isLoading && !isError && items.length === 0 && (
               <tr>
                 <td colSpan={6} className="p-6 text-center text-white/40">
                   لا توجد عناصر بعد. اضغط "إضافة" لبدء الإضافة.
@@ -569,7 +576,11 @@ function ArticlesPanel() {
   const delFn = useServerFn(deleteArticleFn);
   const revFn = useServerFn(reviewArticleFn);
 
-  const { data, isLoading } = useQuery({ queryKey: ["admin-articles"], queryFn: () => listFn() });
+  const [page, setPage] = useState(0);
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["admin-articles", page],
+    queryFn: () => listFn({ data: { page } }),
+  });
   const articles = data?.articles ?? [];
 
   const [editOpen, setEditOpen] = useState(false);
@@ -641,6 +652,9 @@ function ArticlesPanel() {
             {isLoading && (
               <tr><td colSpan={4} className="p-6 text-center text-white/40">جارٍ التحميل...</td></tr>
             )}
+            {isError && (
+              <tr><td colSpan={4} className="p-6 text-center text-red-300">تعذّر تحميل المقالات. حاول تحديث الصفحة.</td></tr>
+            )}
             {articles.map((a) => (
               <tr key={a.id} className="border-t border-white/5">
                 <td className="p-3 font-bold text-white">{a.title_ar}</td>
@@ -680,6 +694,29 @@ function ArticlesPanel() {
             ))}
           </tbody>
         </table>
+        {data && data.total > data.pageSize && (
+          <div className="flex items-center justify-between border-t border-[#d7aa52]/15 p-3 text-sm text-white/60">
+            <span>
+              {page * data.pageSize + 1}–{Math.min((page + 1) * data.pageSize, data.total)} من {data.total}
+            </span>
+            <div className="flex gap-2">
+              <button
+                disabled={page === 0}
+                onClick={() => setPage((p) => Math.max(0, p - 1))}
+                className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+              >
+                السابق
+              </button>
+              <button
+                disabled={(page + 1) * data.pageSize >= data.total}
+                onClick={() => setPage((p) => p + 1)}
+                className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+              >
+                التالي
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       <Dialog open={editOpen} onOpenChange={setEditOpen}>

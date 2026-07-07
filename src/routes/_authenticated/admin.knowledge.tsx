@@ -36,7 +36,11 @@ function AdminKnowledgePage() {
   const genFn = useServerFn(generateArticleFn);
   const revFn = useServerFn(reviewArticleFn);
 
-  const articles = useQuery({ queryKey: ["admin-kb"], queryFn: () => listFn() });
+  const [articlesPage, setArticlesPage] = useState(0);
+  const articles = useQuery({
+    queryKey: ["admin-kb", articlesPage],
+    queryFn: () => listFn({ data: { page: articlesPage } }),
+  });
   const calendar = useQuery({ queryKey: ["admin-cal"], queryFn: () => calFn() });
 
   const [genLoading, setGenLoading] = useState(false);
@@ -87,6 +91,11 @@ function AdminKnowledgePage() {
         {/* Calendar */}
         <section className="mt-8">
           <h2 className="mb-3 text-lg font-bold text-[#f3d28a]">التقويم الشهري</h2>
+          {calendar.isError && (
+            <div className="mb-3 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm text-red-100">
+              تعذّر تحميل التقويم الشهري.
+            </div>
+          )}
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {(calendar.data?.calendar ?? []).map((m) => (
               <div
@@ -118,6 +127,11 @@ function AdminKnowledgePage() {
         {/* Articles list */}
         <section className="mt-10">
           <h2 className="mb-3 text-lg font-bold text-[#f3d28a]">المقالات</h2>
+          {articles.isError && (
+            <div className="mb-3 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm text-red-100">
+              تعذّر تحميل قائمة المقالات. حاول تحديث الصفحة.
+            </div>
+          )}
           <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
             <table className="w-full text-sm">
               <thead className="bg-white/[0.04] text-right text-white/60">
@@ -199,6 +213,31 @@ function AdminKnowledgePage() {
               </tbody>
             </table>
           </div>
+          {articles.data && articles.data.total > articles.data.pageSize && (
+            <div className="mt-3 flex items-center justify-between text-sm text-white/60">
+              <span>
+                {articlesPage * articles.data.pageSize + 1}–
+                {Math.min((articlesPage + 1) * articles.data.pageSize, articles.data.total)} من{" "}
+                {articles.data.total}
+              </span>
+              <div className="flex gap-2">
+                <button
+                  disabled={articlesPage === 0}
+                  onClick={() => setArticlesPage((p) => Math.max(0, p - 1))}
+                  className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+                >
+                  السابق
+                </button>
+                <button
+                  disabled={(articlesPage + 1) * articles.data.pageSize >= articles.data.total}
+                  onClick={() => setArticlesPage((p) => p + 1)}
+                  className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+                >
+                  التالي
+                </button>
+              </div>
+            </div>
+          )}
         </section>
       </div>
     </div>

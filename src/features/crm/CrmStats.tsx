@@ -1,22 +1,17 @@
-import { useEffect, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import type { Client } from "./types";
 import { BUSINESS_TYPES } from "./types";
+import { useClients, useWhatsAppMessageCount } from "./queries";
 
 export function CrmStats() {
-  const [clients, setClients] = useState<Client[]>([]);
-  const [msgCount, setMsgCount] = useState(0);
+  const { data: clientsData, isLoading, isError } = useClients();
+  const clients = clientsData ?? [];
+  const { data: msgCount = 0 } = useWhatsAppMessageCount();
 
-  useEffect(() => {
-    supabase
-      .from("clients")
-      .select("*")
-      .then(({ data }) => setClients((data as Client[]) || []));
-    supabase
-      .from("whatsapp_log")
-      .select("id", { count: "exact", head: true })
-      .then(({ count }) => setMsgCount(count || 0));
-  }, []);
+  if (isLoading) {
+    return <div className="text-center text-sm text-[var(--fg-soft)] py-12">جاري التحميل...</div>;
+  }
+  if (isError) {
+    return <div className="text-center text-sm text-red-300 py-12">تعذّر تحميل الإحصائيات.</div>;
+  }
 
   const byStatus = {
     active: clients.filter((c) => c.status === "active").length,
@@ -68,7 +63,17 @@ export function CrmStats() {
   );
 }
 
-function StatCard({ label, value, icon, color = "text-white" }: any) {
+function StatCard({
+  label,
+  value,
+  icon,
+  color = "text-white",
+}: {
+  label: string;
+  value: number;
+  icon: string;
+  color?: string;
+}) {
   return (
     <div className="rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] p-4">
       <div className="text-2xl">{icon}</div>
@@ -78,7 +83,17 @@ function StatCard({ label, value, icon, color = "text-white" }: any) {
   );
 }
 
-function Bar({ label, value, total, color }: any) {
+function Bar({
+  label,
+  value,
+  total,
+  color,
+}: {
+  label: string;
+  value: number;
+  total: number;
+  color: string;
+}) {
   const pct = total > 0 ? (value / total) * 100 : 0;
   return (
     <div>
