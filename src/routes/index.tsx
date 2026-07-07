@@ -79,6 +79,7 @@ const AIAssistant = lazy(() =>
 export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"));
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
+const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -472,6 +473,9 @@ function Index() {
         <Hero lang={lang} />
         <ProfileBio lang={lang} />
         <Stats lang={lang} />
+        <Suspense fallback={null}>
+          <TopicsAndVideos lang={lang} />
+        </Suspense>
         <Testimonials lang={lang} />
         <Contact lang={lang} />
       </main>
