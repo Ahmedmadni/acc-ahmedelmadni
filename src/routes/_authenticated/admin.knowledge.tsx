@@ -154,60 +154,62 @@ function AdminKnowledgePage() {
                         ? "bg-amber-500/20 text-amber-200"
                         : "bg-red-500/20 text-red-200";
                   return (
-                  <tr key={a.id} className="border-t border-white/[0.05] text-white">
-                    <td className="p-3">
-                      <Link
-                        to="/knowledge/$categorySlug/$articleSlug"
-                        params={{ categorySlug: "preview", articleSlug: a.slug }}
-                        className="hover:text-[#f3d28a]"
-                      >
-                        {a.title_ar}
-                      </Link>
-                    </td>
-                    <td className="p-3">
-                      <span
-                        className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-bold ${color}`}
-                        title={seo.checks
-                          .filter((c) => !c.passed && c.tip)
-                          .map((c) => `• ${c.tip}`)
-                          .join("\n") || "كل الفحوصات ناجحة"}
-                      >
-                        {seo.score}/100 · {seo.grade}
-                      </span>
-                    </td>
-                    <td className="p-3">
-                      <span className="rounded-full bg-white/[0.06] px-2 py-1 text-xs">
-                        {STATUS_LABEL[a.status] ?? a.status}
-                      </span>
-                    </td>
-                    <td className="p-3 text-xs text-white/60">{a.generation_source}</td>
-                    <td className="p-3 text-xs text-white/60">
-                      {new Date(a.created_at).toLocaleDateString("ar")}
-                    </td>
-                    <td className="p-3">
-                      {a.status === "pending_review" ? (
-                        <div className="flex gap-2">
-                          <button
-                            onClick={() => review.mutate({ id: a.id, action: "approve" })}
-                            className="rounded bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200 hover:bg-emerald-500/30"
-                          >
-                            موافقة
-                          </button>
-                          <button
-                            onClick={() => {
-                              const notes = prompt("سبب الرفض؟") ?? undefined;
-                              review.mutate({ id: a.id, action: "reject", notes });
-                            }}
-                            className="rounded bg-red-500/20 px-3 py-1 text-xs text-red-200 hover:bg-red-500/30"
-                          >
-                            رفض
-                          </button>
-                        </div>
-                      ) : (
-                        <span className="text-xs text-white/40">—</span>
-                      )}
-                    </td>
-                  </tr>
+                    <tr key={a.id} className="border-t border-white/[0.05] text-white">
+                      <td className="p-3">
+                        <Link
+                          to="/knowledge/$categorySlug/$articleSlug"
+                          params={{ categorySlug: "preview", articleSlug: a.slug }}
+                          className="hover:text-[#f3d28a]"
+                        >
+                          {a.title_ar}
+                        </Link>
+                      </td>
+                      <td className="p-3">
+                        <span
+                          className={`inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-bold ${color}`}
+                          title={
+                            seo.checks
+                              .filter((c) => !c.passed && c.tip)
+                              .map((c) => `• ${c.tip}`)
+                              .join("\n") || "كل الفحوصات ناجحة"
+                          }
+                        >
+                          {seo.score}/100 · {seo.grade}
+                        </span>
+                      </td>
+                      <td className="p-3">
+                        <span className="rounded-full bg-white/[0.06] px-2 py-1 text-xs">
+                          {STATUS_LABEL[a.status] ?? a.status}
+                        </span>
+                      </td>
+                      <td className="p-3 text-xs text-white/60">{a.generation_source}</td>
+                      <td className="p-3 text-xs text-white/60">
+                        {new Date(a.created_at).toLocaleDateString("ar")}
+                      </td>
+                      <td className="p-3">
+                        {a.status === "pending_review" ? (
+                          <div className="flex gap-2">
+                            <button
+                              onClick={() => review.mutate({ id: a.id, action: "approve" })}
+                              className="rounded bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200 hover:bg-emerald-500/30"
+                            >
+                              موافقة
+                            </button>
+                            <button
+                              onClick={() => {
+                                const notes = prompt("سبب الرفض؟") ?? undefined;
+                                review.mutate({ id: a.id, action: "reject", notes });
+                              }}
+                              className="rounded bg-red-500/20 px-3 py-1 text-xs text-red-200 hover:bg-red-500/30"
+                            >
+                              رفض
+                            </button>
+                          </div>
+                        ) : (
+                          <span className="text-xs text-white/40">—</span>
+                        )}
+                      </td>
+                    </tr>
                   );
                 })}
               </tbody>

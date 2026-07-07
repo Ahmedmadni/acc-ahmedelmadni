@@ -27,21 +27,24 @@ export function AIAssistant({ lang }: { lang: Lang }) {
     setInput("");
   };
 
-  const placeholder = lang === "ar" ? "اسأل عن المحاسبة أو اطلب خدمة..." : "Ask about accounting or request a service...";
+  const placeholder =
+    lang === "ar"
+      ? "اسأل عن المحاسبة أو اطلب خدمة..."
+      : "Ask about accounting or request a service...";
   const title = lang === "ar" ? "المساعد الذكي" : "AI Assistant";
-  const subtitle = lang === "ar" ? "خبير محاسبة ومعايير مالية" : "Accounting & financial standards expert";
+  const subtitle =
+    lang === "ar" ? "خبير محاسبة ومعايير مالية" : "Accounting & financial standards expert";
 
   return (
     <>
       {/* Mascot pinned above the floating social button on the left */}
-      <div
-        id="ai-mascot-runner"
-        className="fixed z-40"
-        style={{ left: 10, bottom: 86 }}
-      >
+      <div id="ai-mascot-runner" className="fixed z-40" style={{ left: 10, bottom: 86 }}>
         <motion.button
           type="button"
-          onClick={() => { playClick(); setOpen(true); }}
+          onClick={() => {
+            playClick();
+            setOpen(true);
+          }}
           onMouseEnter={playHover}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -51,8 +54,14 @@ export function AIAssistant({ lang }: { lang: Lang }) {
           aria-label={title}
           className="relative group flex items-center justify-center rounded-full"
         >
-          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60" aria-hidden />
-          <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f3d28a]/30 to-[#b8862e]/30 blur-xl" aria-hidden />
+          <span
+            className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60"
+            aria-hidden
+          />
+          <span
+            className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f3d28a]/30 to-[#b8862e]/30 blur-xl"
+            aria-hidden
+          />
           <motion.img
             src={mascotImg}
             alt={title}
@@ -89,7 +98,15 @@ export function AIAssistant({ lang }: { lang: Lang }) {
               {/* Header */}
               <div className="flex items-center gap-3 border-b border-[#d7aa52]/25 bg-gradient-to-r from-[#0a223f] to-[#04101f] p-4">
                 <div className="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a]/20 to-[#b8862e]/20 ring-1 ring-[#d7aa52]/40">
-                  <img src={mascotImg} alt="" width={44} height={44} loading="lazy" decoding="async" className="size-11 object-contain" />
+                  <img
+                    src={mascotImg}
+                    alt=""
+                    width={44}
+                    height={44}
+                    loading="lazy"
+                    decoding="async"
+                    className="size-11 object-contain"
+                  />
                   <span className="absolute -bottom-0.5 -end-0.5 size-3 rounded-full border-2 border-[#07182c] bg-emerald-400" />
                 </div>
                 <div className="flex-1">
@@ -97,7 +114,10 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                   <div className="text-[11px] text-[#d7aa52]">{subtitle}</div>
                 </div>
                 <button
-                  onClick={() => { playClick(); setOpen(false); }}
+                  onClick={() => {
+                    playClick();
+                    setOpen(false);
+                  }}
                   className="flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
                   aria-label="close"
                 >
@@ -125,7 +145,9 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                       ).map((q) => (
                         <button
                           key={q}
-                          onClick={() => { sendMessage({ text: q }); }}
+                          onClick={() => {
+                            sendMessage({ text: q });
+                          }}
                           className="rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-semibold text-[#f3d28a] transition-colors hover:bg-[#d7aa52]/20"
                         >
                           {q}
@@ -156,9 +178,18 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                 {loading && (
                   <div className="flex justify-start">
                     <div className="flex items-center gap-1.5 rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] px-3 py-2.5">
-                      <span className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]" style={{ animationDelay: "0ms" }} />
-                      <span className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]" style={{ animationDelay: "150ms" }} />
-                      <span className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]" style={{ animationDelay: "300ms" }} />
+                      <span
+                        className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]"
+                        style={{ animationDelay: "0ms" }}
+                      />
+                      <span
+                        className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]"
+                        style={{ animationDelay: "150ms" }}
+                      />
+                      <span
+                        className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]"
+                        style={{ animationDelay: "300ms" }}
+                      />
                     </div>
                   </div>
                 )}

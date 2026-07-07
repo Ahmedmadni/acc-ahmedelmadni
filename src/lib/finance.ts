@@ -51,10 +51,8 @@ export function npv(ratePct: number, cashflows: number[]): number {
 /** IRR via Newton-Raphson with bisection fallback. Returns percent. */
 export function irr(cashflows: number[], guessPct = 10): number | null {
   if (cashflows.length < 2) return null;
-  const f = (r: number) =>
-    cashflows.reduce((a, c, t) => a + c / Math.pow(1 + r, t), 0);
-  const df = (r: number) =>
-    cashflows.reduce((a, c, t) => a - (t * c) / Math.pow(1 + r, t + 1), 0);
+  const f = (r: number) => cashflows.reduce((a, c, t) => a + c / Math.pow(1 + r, t), 0);
+  const df = (r: number) => cashflows.reduce((a, c, t) => a - (t * c) / Math.pow(1 + r, t + 1), 0);
 
   let r = guessPct / 100;
   for (let i = 0; i < 100; i++) {
@@ -104,8 +102,7 @@ export function amortize(
 ): { payment: number; rows: AmortRow[]; totalInterest: number } {
   const n = Math.round(years * paymentsPerYear);
   const r = annualRatePct / 100 / paymentsPerYear;
-  const payment =
-    r === 0 ? principal / n : (principal * r) / (1 - Math.pow(1 + r, -n));
+  const payment = r === 0 ? principal / n : (principal * r) / (1 - Math.pow(1 + r, -n));
   const rows: AmortRow[] = [];
   let balance = principal;
   let totalInterest = 0;
@@ -178,7 +175,13 @@ export function effectiveRate(nominalPct: number, periodsPerYear: number): numbe
 }
 
 /** Bond price (clean) */
-export function bondPrice(face: number, couponPct: number, yieldPct: number, years: number, freq = 2) {
+export function bondPrice(
+  face: number,
+  couponPct: number,
+  yieldPct: number,
+  years: number,
+  freq = 2,
+) {
   const n = Math.round(years * freq);
   const c = (face * couponPct) / 100 / freq;
   const y = yieldPct / 100 / freq;
@@ -261,7 +264,12 @@ export interface DepRow {
   accumulated: number;
   bookValue: number;
 }
-export function depreciation(cost: number, salvage: number, life: number, method: "SL" | "DDB" | "SYD"): DepRow[] {
+export function depreciation(
+  cost: number,
+  salvage: number,
+  life: number,
+  method: "SL" | "DDB" | "SYD",
+): DepRow[] {
   const rows: DepRow[] = [];
   let book = cost;
   let acc = 0;
@@ -296,14 +304,21 @@ export function depreciation(cost: number, salvage: number, life: number, method
 }
 
 /** Inventory valuation FIFO/LIFO/WA */
-export interface InvTxn { type: "buy" | "sell"; qty: number; price: number }
+export interface InvTxn {
+  type: "buy" | "sell";
+  qty: number;
+  price: number;
+}
 export function inventory(txns: InvTxn[], method: "FIFO" | "LIFO" | "WA") {
   let cogs = 0;
   if (method === "WA") {
-    let qty = 0, value = 0;
+    let qty = 0,
+      value = 0;
     for (const t of txns) {
-      if (t.type === "buy") { qty += t.qty; value += t.qty * t.price; }
-      else {
+      if (t.type === "buy") {
+        qty += t.qty;
+        value += t.qty * t.price;
+      } else {
         const avg = qty > 0 ? value / qty : 0;
         const sellQty = Math.min(t.qty, qty);
         cogs += sellQty * avg;
@@ -336,10 +351,20 @@ export function inventory(txns: InvTxn[], method: "FIFO" | "LIFO" | "WA") {
 
 /** Financial ratios */
 export interface RatiosInput {
-  currentAssets: number; inventory: number; currentLiabilities: number; cash: number;
-  totalAssets: number; totalLiabilities: number; totalEquity: number;
-  revenue: number; cogs: number; netIncome: number; ebit: number; interestExpense: number;
-  receivables: number; payables: number;
+  currentAssets: number;
+  inventory: number;
+  currentLiabilities: number;
+  cash: number;
+  totalAssets: number;
+  totalLiabilities: number;
+  totalEquity: number;
+  revenue: number;
+  cogs: number;
+  netIncome: number;
+  ebit: number;
+  interestExpense: number;
+  receivables: number;
+  payables: number;
 }
 export function ratios(i: RatiosInput) {
   const safe = (a: number, b: number) => (b === 0 ? 0 : a / b);

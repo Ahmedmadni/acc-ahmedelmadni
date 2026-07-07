@@ -53,4 +53,10 @@ export type CvTemplate = {
   layout: "classic" | "sidebar" | "minimal";
 };
 
-export type CvAssistantAction = "generate" | "improve" | "shorten" | "expand" | "professionalize" | "ats";
+export type CvAssistantAction =
+  | "generate"
+  | "improve"
+  | "shorten"
+  | "expand"
+  | "professionalize"
+  | "ats";

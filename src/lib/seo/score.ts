@@ -74,13 +74,7 @@ export function computeArticleSeoScore(a: SeoArticleInput): SeoScoreResult {
     earned: dl >= 120 && dl <= 160 ? 15 : dl >= 80 && dl <= 200 ? 8 : 0,
     passed: dl >= 120 && dl <= 160,
     tip:
-      dl === 0
-        ? "أضف وصف ميتا."
-        : dl < 120
-          ? "الوصف قصير."
-          : dl > 160
-            ? "الوصف طويل."
-            : undefined,
+      dl === 0 ? "أضف وصف ميتا." : dl < 120 ? "الوصف قصير." : dl > 160 ? "الوصف طويل." : undefined,
   });
 
   // 3) Content length

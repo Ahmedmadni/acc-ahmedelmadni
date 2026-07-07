@@ -8,7 +8,7 @@ const VAT_TEMPLATES = [
     id: "vat_q1",
     label: "تذكير VAT — الربع الأول (أبريل)",
     message: (name: string, company: string) =>
-`السلام عليكم ${name} 👋
+      `السلام عليكم ${name} 👋
 
 تذكير ودي من أحمد المدني 📋
 
@@ -27,7 +27,7 @@ ${company ? `📌 المنشأة: ${company}` : ""}
     id: "vat_q2",
     label: "تذكير VAT — الربع الثاني (يوليو)",
     message: (name: string, company: string) =>
-`السلام عليكم ${name} 👋
+      `السلام عليكم ${name} 👋
 
 تذكير ودي من أحمد المدني 📋
 
@@ -46,7 +46,7 @@ ${company ? `📌 المنشأة: ${company}` : ""}
     id: "vat_q3",
     label: "تذكير VAT — الربع الثالث (أكتوبر)",
     message: (name: string, company: string) =>
-`السلام عليكم ${name} 👋
+      `السلام عليكم ${name} 👋
 
 تذكير ودي من أحمد المدني 📋
 
@@ -65,7 +65,7 @@ ${company ? `📌 المنشأة: ${company}` : ""}
     id: "vat_q4",
     label: "تذكير VAT — الربع الرابع (يناير)",
     message: (name: string, company: string) =>
-`السلام عليكم ${name} 👋
+      `السلام عليكم ${name} 👋
 
 تذكير ودي من أحمد المدني 📋
 
@@ -84,7 +84,7 @@ ${company ? `📌 المنشأة: ${company}` : ""}
     id: "zakat",
     label: "تذكير الزكاة — السنوي",
     message: (name: string, company: string) =>
-`السلام عليكم ${name} 👋
+      `السلام عليكم ${name} 👋
 
 تذكير ودي من أحمد المدني 📋
 
@@ -114,7 +114,9 @@ export function WhatsAppMessenger() {
 
   const displayedClients = filterVat ? clients.filter((c) => c.vat_registered) : clients;
   const toggleClient = (id: string) =>
-    setSelectedClients((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
+    setSelectedClients((prev) =>
+      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id],
+    );
   const selectAll = () => setSelectedClients(displayedClients.map((c) => c.id));
   const clearAll = () => setSelectedClients([]);
 

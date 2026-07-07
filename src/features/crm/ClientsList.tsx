@@ -14,7 +14,9 @@ export function ClientsList() {
   const clients = clientsData ?? [];
   const deleteClientMutation = useDeleteClient();
   const [search, setSearch] = useState("");
-  const [statusFilter, setStatusFilter] = useState<"all" | "active" | "inactive" | "pending">("all");
+  const [statusFilter, setStatusFilter] = useState<"all" | "active" | "inactive" | "pending">(
+    "all",
+  );
   const [selected, setSelected] = useState<Client | null>(null);
   const [showForm, setShowForm] = useState(false);
   const [editClient, setEditClient] = useState<Client | null>(null);
@@ -55,7 +57,13 @@ export function ClientsList() {
           { label: "مسجلون VAT", value: stats.vat, icon: "🧾", valueColor: "text-amber-400" },
           { label: "مسجلون زكاة", value: stats.zakat, icon: "🕌", valueColor: "text-violet-400" },
         ].map((s) => (
-          <EmojiStatTile key={s.label} label={s.label} value={s.value} icon={s.icon} valueColor={s.valueColor} />
+          <EmojiStatTile
+            key={s.label}
+            label={s.label}
+            value={s.value}
+            icon={s.icon}
+            valueColor={s.valueColor}
+          />
         ))}
       </div>
 
@@ -148,15 +156,17 @@ export function ClientsList() {
                   </a>
                 </td>
                 <td className="p-3 text-[var(--fg-soft)]">{client.company_name || "—"}</td>
-                <td className="p-3 text-[var(--fg-soft)] font-mono text-xs">{client.tax_number || "—"}</td>
+                <td className="p-3 text-[var(--fg-soft)] font-mono text-xs">
+                  {client.tax_number || "—"}
+                </td>
                 <td className="p-3">
                   <span
                     className={`text-[10px] font-bold rounded-full px-2 py-0.5 ${
                       client.status === "active"
                         ? "bg-emerald-500/15 text-emerald-300"
                         : client.status === "pending"
-                        ? "bg-amber-500/15 text-amber-300"
-                        : "bg-white/10 text-[var(--fg-soft)]"
+                          ? "bg-amber-500/15 text-amber-300"
+                          : "bg-white/10 text-[var(--fg-soft)]"
                     }`}
                   >
                     {{ active: "نشط", inactive: "غير نشط", pending: "معلق" }[client.status]}

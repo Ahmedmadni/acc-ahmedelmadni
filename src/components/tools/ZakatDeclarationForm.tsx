@@ -41,7 +41,8 @@ const INPUT_FIELDS: FieldDef[] = [
     ar: "الاستثمارات المخصومة",
     en: "Deductible Investments",
     helpAr: "الاستثمارات طويلة الأجل في شركات تخضع للزكاة بالفعل (تُخصم لتفادي الازدواج).",
-    helpEn: "Long-term investments in entities already subject to zakat (deducted to avoid double counting).",
+    helpEn:
+      "Long-term investments in entities already subject to zakat (deducted to avoid double counting).",
     min: 0,
   },
   {
@@ -63,12 +64,26 @@ const INPUT_FIELDS: FieldDef[] = [
 
 const RESULT_FIELDS: FieldDef[] = [
   { key: "zakat_base", ar: "الوعاء الزكوي", en: "Zakat Base", helpAr: "", helpEn: "" },
-  { key: "zakat_due", ar: "الزكاة المستحقة (2.5%)", en: "Zakat Due (2.5%)", helpAr: "", helpEn: "" },
+  {
+    key: "zakat_due",
+    ar: "الزكاة المستحقة (2.5%)",
+    en: "Zakat Due (2.5%)",
+    helpAr: "",
+    helpEn: "",
+  },
 ];
 
 const REF_LINKS = [
-  { ar: "لائحة جباية الزكاة — ZATCA", en: "Zakat Collection Regulations — ZATCA", url: "https://zatca.gov.sa/ar/RulesRegulations/Zakat/Pages/default.aspx" },
-  { ar: "دليل الإقرار الزكوي", en: "Zakat Filing Guide", url: "https://zatca.gov.sa/en/HelpCenter/guidelines/Pages/default.aspx" },
+  {
+    ar: "لائحة جباية الزكاة — ZATCA",
+    en: "Zakat Collection Regulations — ZATCA",
+    url: "https://zatca.gov.sa/ar/RulesRegulations/Zakat/Pages/default.aspx",
+  },
+  {
+    ar: "دليل الإقرار الزكوي",
+    en: "Zakat Filing Guide",
+    url: "https://zatca.gov.sa/en/HelpCenter/guidelines/Pages/default.aspx",
+  },
 ];
 
 export function ZakatDeclarationFormCalculator({ lang }: { lang: Lang }) {
@@ -89,7 +104,10 @@ export function ZakatDeclarationFormCalculator({ lang }: { lang: Lang }) {
     return e;
   }, [capital, reserves, investments, fixedAssets, lang]);
 
-  const zakatBase = Math.max(0, capital + retained + reserves - investments - fixedAssets + adjustments);
+  const zakatBase = Math.max(
+    0,
+    capital + retained + reserves - investments - fixedAssets + adjustments,
+  );
   const zakatDue = zakatBase * ZAKAT_RATE;
 
   const inputs = {
@@ -118,17 +136,52 @@ export function ZakatDeclarationFormCalculator({ lang }: { lang: Lang }) {
     <div className="grid gap-6 md:grid-cols-2">
       <div className="space-y-4">
         <PeriodField value={a.period} onChange={a.setPeriod} lang={lang} />
-        <NumberField field={INPUT_FIELDS[0]} value={capital} onChange={setCapital} lang={lang} error={errors.capital} />
+        <NumberField
+          field={INPUT_FIELDS[0]}
+          value={capital}
+          onChange={setCapital}
+          lang={lang}
+          error={errors.capital}
+        />
         <NumberField field={INPUT_FIELDS[1]} value={retained} onChange={setRetained} lang={lang} />
-        <NumberField field={INPUT_FIELDS[2]} value={reserves} onChange={setReserves} lang={lang} error={errors.reserves} />
-        <NumberField field={INPUT_FIELDS[3]} value={investments} onChange={setInvestments} lang={lang} error={errors.investments} />
-        <NumberField field={INPUT_FIELDS[4]} value={fixedAssets} onChange={setFixedAssets} lang={lang} error={errors.fixed_assets} />
-        <NumberField field={INPUT_FIELDS[5]} value={adjustments} onChange={setAdjustments} lang={lang} />
+        <NumberField
+          field={INPUT_FIELDS[2]}
+          value={reserves}
+          onChange={setReserves}
+          lang={lang}
+          error={errors.reserves}
+        />
+        <NumberField
+          field={INPUT_FIELDS[3]}
+          value={investments}
+          onChange={setInvestments}
+          lang={lang}
+          error={errors.investments}
+        />
+        <NumberField
+          field={INPUT_FIELDS[4]}
+          value={fixedAssets}
+          onChange={setFixedAssets}
+          lang={lang}
+          error={errors.fixed_assets}
+        />
+        <NumberField
+          field={INPUT_FIELDS[5]}
+          value={adjustments}
+          onChange={setAdjustments}
+          lang={lang}
+        />
       </div>
 
       <div className="space-y-3">
         <ResultCard titleAr="الوعاء الزكوي" titleEn="Zakat Base" value={zakatBase} lang={lang} />
-        <ResultCard titleAr="الزكاة المستحقة (2.5%)" titleEn="Zakat Due (2.5%)" value={zakatDue} lang={lang} highlight />
+        <ResultCard
+          titleAr="الزكاة المستحقة (2.5%)"
+          titleEn="Zakat Due (2.5%)"
+          value={zakatDue}
+          lang={lang}
+          highlight
+        />
         <ActionsBar
           lang={lang}
           onPdf={a.onPdf}

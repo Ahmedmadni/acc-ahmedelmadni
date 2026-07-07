@@ -58,7 +58,9 @@ export function TypingTest({ lang }: { lang: Lang }) {
     try {
       const raw = localStorage.getItem("typing-best");
       if (raw) setBest(JSON.parse(raw));
-    } catch { /* noop */ }
+    } catch {
+      /* noop */
+    }
   }, []);
 
   useEffect(() => {
@@ -80,7 +82,7 @@ export function TypingTest({ lang }: { lang: Lang }) {
     }
     const minutes = Math.max(elapsed, 1) / 60;
     // Standard: 5 chars = 1 word
-    const wpmVal = Math.round((correct / 5) / minutes);
+    const wpmVal = Math.round(correct / 5 / minutes);
     const acc = input.length === 0 ? 100 : Math.round((correct / input.length) * 100);
     return { correctChars: correct, wpm: wpmVal, accuracy: acc };
   }, [input, text, elapsed]);
@@ -96,12 +98,16 @@ export function TypingTest({ lang }: { lang: Lang }) {
     setFinished(true);
     setStarted(false);
     const minutes = Math.max(elapsedSec, 1) / 60;
-    const finalWpm = Math.round((correctChars / 5) / minutes);
+    const finalWpm = Math.round(correctChars / 5 / minutes);
     const finalAcc = input.length === 0 ? 0 : Math.round((correctChars / input.length) * 100);
     const score = { wpm: finalWpm, acc: finalAcc };
     if (!best || finalWpm > best.wpm) {
       setBest(score);
-      try { localStorage.setItem("typing-best", JSON.stringify(score)); } catch { /* noop */ }
+      try {
+        localStorage.setItem("typing-best", JSON.stringify(score));
+      } catch {
+        /* noop */
+      }
     }
   }
 
@@ -130,7 +136,9 @@ export function TypingTest({ lang }: { lang: Lang }) {
               key={k}
               onClick={() => reset(k)}
               className={`rounded-md px-3 py-1.5 text-xs font-bold transition ${
-                testLang === k ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a] hover:bg-white/5"
+                testLang === k
+                  ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+                  : "text-[#f3d28a] hover:bg-white/5"
               }`}
             >
               {LANG_LABELS[k][lang]}
@@ -143,9 +151,14 @@ export function TypingTest({ lang }: { lang: Lang }) {
           {([30, 60, 120] as Duration[]).map((d) => (
             <button
               key={d}
-              onClick={() => { setDuration(d); reset(); }}
+              onClick={() => {
+                setDuration(d);
+                reset();
+              }}
               className={`rounded-md px-3 py-1.5 text-xs font-bold transition ${
-                duration === d ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]" : "text-[#f3d28a] hover:bg-white/5"
+                duration === d
+                  ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+                  : "text-[#f3d28a] hover:bg-white/5"
               }`}
             >
               {d}s
@@ -163,9 +176,17 @@ export function TypingTest({ lang }: { lang: Lang }) {
       </div>
 
       <div className="grid gap-3 sm:grid-cols-4">
-        <StatTile icon={<Timer className="size-4" />} label={lang === "ar" ? "الوقت المتبقي" : "Time left"} value={`${remaining}s`} />
+        <StatTile
+          icon={<Timer className="size-4" />}
+          label={lang === "ar" ? "الوقت المتبقي" : "Time left"}
+          value={`${remaining}s`}
+        />
         <StatTile icon={<Type className="size-4" />} label="WPM" value={String(wpm)} highlight />
-        <StatTile icon={<Trophy className="size-4" />} label={lang === "ar" ? "الدقة" : "Accuracy"} value={`${accuracy}%`} />
+        <StatTile
+          icon={<Trophy className="size-4" />}
+          label={lang === "ar" ? "الدقة" : "Accuracy"}
+          value={`${accuracy}%`}
+        />
         <StatTile
           icon={<Trophy className="size-4" />}
           label={lang === "ar" ? "أفضل نتيجة" : "Personal best"}
@@ -180,9 +201,14 @@ export function TypingTest({ lang }: { lang: Lang }) {
       >
         {text.split("").map((ch, i) => {
           let cls = "text-[var(--fg-soft)]/60";
-          if (i < input.length) cls = input[i] === ch ? "text-emerald-300" : "text-red-400 bg-red-500/10 rounded";
+          if (i < input.length)
+            cls = input[i] === ch ? "text-emerald-300" : "text-red-400 bg-red-500/10 rounded";
           if (i === input.length) cls += " border-b-2 border-[#f3d28a] animate-pulse";
-          return <span key={i} className={cls}>{ch}</span>;
+          return (
+            <span key={i} className={cls}>
+              {ch}
+            </span>
+          );
         })}
       </div>
 
@@ -226,4 +252,3 @@ export function TypingTest({ lang }: { lang: Lang }) {
     </div>
   );
 }
-

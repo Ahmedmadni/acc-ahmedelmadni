@@ -78,10 +78,7 @@ export const TOOLS: ToolMeta[] = [
       ],
     },
     tips: {
-      ar: [
-        "ابدأ بمعدل خصم متحفظ ثم اختبر الحساسية",
-        "وحّد وحدة الفترة (شهري/سنوي) مع المعدل",
-      ],
+      ar: ["ابدأ بمعدل خصم متحفظ ثم اختبر الحساسية", "وحّد وحدة الفترة (شهري/سنوي) مع المعدل"],
       en: [
         "Start with a conservative rate, then run sensitivity",
         "Keep the period unit consistent with the rate",
@@ -112,7 +109,10 @@ export const TOOLS: ToolMeta[] = [
     },
     tips: {
       ar: ["استخدم معدلاً واقعياً بعد التضخم", "أضف دفعات شهرية لرؤية أثر المراكمة"],
-      en: ["Use a realistic real rate after inflation", "Add monthly contributions to see compounding"],
+      en: [
+        "Use a realistic real rate after inflation",
+        "Add monthly contributions to see compounding",
+      ],
     },
   },
   {
@@ -132,7 +132,11 @@ export const TOOLS: ToolMeta[] = [
     },
     whenToUse: {
       ar: ["تقييم مشاريع رأسمالية", "المقارنة بين بدائل استثمارية", "قرارات شراء معدات"],
-      en: ["Capital project appraisal", "Comparing investment alternatives", "Equipment purchase decisions"],
+      en: [
+        "Capital project appraisal",
+        "Comparing investment alternatives",
+        "Equipment purchase decisions",
+      ],
     },
     commonMistakes: {
       ar: ["استبعاد التكاليف الغارقة بشكل غير صحيح", "تجاهل رأس المال العامل"],
@@ -179,7 +183,10 @@ export const TOOLS: ToolMeta[] = [
       ar: "جدول كامل يوضح الفائدة والأصل والرصيد المتبقي.",
       en: "Full schedule showing interest, principal, and remaining balance.",
     },
-    standard: { ar: "IFRS 9 — Effective Interest Method", en: "IFRS 9 — Effective Interest Method" },
+    standard: {
+      ar: "IFRS 9 — Effective Interest Method",
+      en: "IFRS 9 — Effective Interest Method",
+    },
     formula: "PMT = P·r / (1 − (1+r)^−n)",
     about: {
       ar: "يستخدم لاحتساب التزامات القروض وعرض هيكل السداد للإدارة والبنك.",
@@ -219,11 +226,17 @@ export const TOOLS: ToolMeta[] = [
     },
     commonMistakes: {
       ar: ["استخدام النسبة على مبلغ شامل بدل غير شامل", "إهمال البنود المعفاة أو خاضعة لنسبة صفر"],
-      en: ["Applying the rate to an inclusive amount as if exclusive", "Forgetting exempt or zero-rated items"],
+      en: [
+        "Applying the rate to an inclusive amount as if exclusive",
+        "Forgetting exempt or zero-rated items",
+      ],
     },
     tips: {
       ar: ["تحقق من سجل المورد الضريبي قبل الخصم", "احفظ نسخة من الفاتورة الإلكترونية"],
-      en: ["Verify supplier's VAT registration before reclaiming input tax", "Keep the e-invoice archived"],
+      en: [
+        "Verify supplier's VAT registration before reclaiming input tax",
+        "Keep the e-invoice archived",
+      ],
     },
   },
 
@@ -390,7 +403,10 @@ export const TOOLS: ToolMeta[] = [
     },
     tips: {
       ar: ["وثّق IBR وفترات الخيارات بوضوح", "افصل الفائدة عن إطفاء حق الاستخدام في القوائم"],
-      en: ["Document the IBR and option periods clearly", "Split interest from RoU depreciation in disclosures"],
+      en: [
+        "Document the IBR and option periods clearly",
+        "Split interest from RoU depreciation in disclosures",
+      ],
     },
   },
 
@@ -401,12 +417,18 @@ export const TOOLS: ToolMeta[] = [
     icon: "ClipboardList",
     official: true,
     requestServiceId: "vat-declaration",
-    title: { ar: "إقرار ضريبة القيمة المضافة (نموذج ZATCA الرسمي)", en: "VAT Return (Official ZATCA Form)" },
+    title: {
+      ar: "إقرار ضريبة القيمة المضافة (نموذج ZATCA الرسمي)",
+      en: "VAT Return (Official ZATCA Form)",
+    },
     short: {
       ar: "محاكي إقرار ضريبة القيمة المضافة الشهري/الربعي مع تصدير PDF/Excel.",
       en: "Saudi VAT return simulator with PDF/Excel export and AI explanation.",
     },
-    standard: { ar: "ZATCA — لائحة ضريبة القيمة المضافة", en: "ZATCA — VAT Implementing Regulations" },
+    standard: {
+      ar: "ZATCA — لائحة ضريبة القيمة المضافة",
+      en: "ZATCA — VAT Implementing Regulations",
+    },
     formula: "Net VAT = Output VAT − Deductible Input VAT",
     about: {
       ar: "نموذج كامل لإقرار ضريبة القيمة المضافة يشمل المبيعات الخاضعة والصفرية والمعفاة والمشتريات وضريبة المدخلات، مع شرح ذكي لكل حقل وأرشيف للإقرارات السابقة.",
@@ -414,15 +436,27 @@ export const TOOLS: ToolMeta[] = [
     },
     whenToUse: {
       ar: ["إعداد الإقرار الشهري أو الربعي قبل الرفع لـ ZATCA", "مراجعة دقة الإقرار قبل التقديم"],
-      en: ["Preparing monthly/quarterly returns before ZATCA submission", "Auditing return accuracy before filing"],
+      en: [
+        "Preparing monthly/quarterly returns before ZATCA submission",
+        "Auditing return accuracy before filing",
+      ],
     },
     commonMistakes: {
       ar: ["إدراج المبيعات شاملة الضريبة في خانة الخاضعة", "خصم مدخلات غير مؤهلة كمصاريف الضيافة"],
-      en: ["Including VAT-inclusive amounts in taxable sales", "Deducting non-eligible input VAT such as entertainment"],
+      en: [
+        "Including VAT-inclusive amounts in taxable sales",
+        "Deducting non-eligible input VAT such as entertainment",
+      ],
     },
     tips: {
-      ar: ["احفظ كل فترة في الأرشيف لتتبّع الالتزام", "استخدم زر الذكاء الاصطناعي لتفسير صافي الضريبة"],
-      en: ["Save every period to the archive to track compliance", "Use the AI button to interpret the net VAT figure"],
+      ar: [
+        "احفظ كل فترة في الأرشيف لتتبّع الالتزام",
+        "استخدم زر الذكاء الاصطناعي لتفسير صافي الضريبة",
+      ],
+      en: [
+        "Save every period to the archive to track compliance",
+        "Use the AI button to interpret the net VAT figure",
+      ],
     },
   },
   {
@@ -431,13 +465,17 @@ export const TOOLS: ToolMeta[] = [
     icon: "FileSpreadsheet",
     official: true,
     requestServiceId: "zakat-declaration",
-    title: { ar: "الإقرار الزكوي والضريبي (نموذج ZATCA الرسمي)", en: "Zakat & Tax Declaration (Official ZATCA Form)" },
+    title: {
+      ar: "الإقرار الزكوي والضريبي (نموذج ZATCA الرسمي)",
+      en: "Zakat & Tax Declaration (Official ZATCA Form)",
+    },
     short: {
       ar: "محاكي شامل لإعداد الإقرار الزكوي السنوي مع التسويات وتقارير قابلة للطباعة.",
       en: "Complete annual Zakat declaration simulator with adjustments and printable reports.",
     },
     standard: { ar: "ZATCA — لائحة جباية الزكاة", en: "ZATCA — Zakat Collection Regulations" },
-    formula: "Zakat Base = Capital + Retained + Reserves − Investments − Fixed Assets ± Adjustments",
+    formula:
+      "Zakat Base = Capital + Retained + Reserves − Investments − Fixed Assets ± Adjustments",
     about: {
       ar: "أداة احترافية تساعدك على بناء الوعاء الزكوي بالكامل وحساب الزكاة المستحقة بنسبة 2.5%، مع تصدير PDF و Excel وأرشفة الإقرارات.",
       en: "Professional tool to build the full Zakat base and compute the 2.5% Zakat due, with PDF & Excel export and archive support.",
@@ -500,7 +538,11 @@ export const TOOLS: ToolMeta[] = [
     },
     whenToUse: {
       ar: ["خدمات استشارية لمزود أجنبي", "أتعاب إدارية أو فنية", "إيجار أصول"],
-      en: ["Consulting services from foreign vendors", "Management or technical fees", "Equipment rentals"],
+      en: [
+        "Consulting services from foreign vendors",
+        "Management or technical fees",
+        "Equipment rentals",
+      ],
     },
     commonMistakes: {
       ar: ["نسيان السداد خلال 10 أيام من نهاية الشهر", "تطبيق نسبة خاطئة"],
@@ -559,7 +601,10 @@ export const TOOLS: ToolMeta[] = [
     },
     commonMistakes: {
       ar: ["تطبيق المعدل الحالي بدل المتوقع", "تجاهل خسائر مرحلية قابلة للاستخدام"],
-      en: ["Applying current rate instead of enacted future rate", "Ignoring usable carry-forward losses"],
+      en: [
+        "Applying current rate instead of enacted future rate",
+        "Ignoring usable carry-forward losses",
+      ],
     },
     tips: {
       ar: ["راجع احتمالية تحقق DTA قبل الإثبات", "أفصح عن مكونات الضريبة في الإيضاحات"],
@@ -662,7 +707,10 @@ export const TOOLS: ToolMeta[] = [
       ar: "اسأل عن أي دالة Excel أو اشرح مشكلتك بلغتك، واحصل على صيغة جاهزة + شرح + كود VBA.",
       en: "Ask about any Excel function or describe a problem — get ready formulas, explanations, and VBA code.",
     },
-    standard: { ar: "Microsoft Office · Excel · VBA · Power Query", en: "Microsoft Office · Excel · VBA · Power Query" },
+    standard: {
+      ar: "Microsoft Office · Excel · VBA · Power Query",
+      en: "Microsoft Office · Excel · VBA · Power Query",
+    },
     formula: "AI Chat · Functions · VBA · Power Query · DAX",
     about: {
       ar: "مساعد ذكي يفهم العربية والإنجليزية، يجاوبك عن دوال Excel وWord وPowerPoint وOutlook بمثال عملي وصيغة جاهزة للنسخ. يدعم VBA و Power Query و DAX و Pivot Tables.",
@@ -708,7 +756,6 @@ export const TOOLS: ToolMeta[] = [
     },
   },
 
-
   // ============== Career ==============
   {
     id: "cv-builder",
@@ -731,11 +778,23 @@ export const TOOLS: ToolMeta[] = [
     },
     commonMistakes: {
       ar: ["كتابة مهام بدل إنجازات", "غياب الأرقام والنتائج", "استخدام قالب لا يناسب المجال"],
-      en: ["Listing duties instead of achievements", "Missing metrics and outcomes", "Wrong template for your field"],
+      en: [
+        "Listing duties instead of achievements",
+        "Missing metrics and outcomes",
+        "Wrong template for your field",
+      ],
     },
     tips: {
-      ar: ["ابدأ بأفعال قوية (قُدت، خفضت، حسّنت)", "أضف أرقاماً ونسباً", "اجعل السيرة ضمن صفحتين كحد أقصى"],
-      en: ["Lead with strong verbs (Led, Reduced, Improved)", "Add numbers and percentages", "Keep your CV within 2 pages"],
+      ar: [
+        "ابدأ بأفعال قوية (قُدت، خفضت، حسّنت)",
+        "أضف أرقاماً ونسباً",
+        "اجعل السيرة ضمن صفحتين كحد أقصى",
+      ],
+      en: [
+        "Lead with strong verbs (Led, Reduced, Improved)",
+        "Add numbers and percentages",
+        "Keep your CV within 2 pages",
+      ],
     },
   },
   {
@@ -754,8 +813,16 @@ export const TOOLS: ToolMeta[] = [
       en: "Interactive typing drill measuring speed and accuracy with adjustable timer (30/60/120s) and local best-score persistence.",
     },
     whenToUse: {
-      ar: ["تحسين سرعة إدخال البيانات", "التحضير لاختبارات السكرتارية", "زيادة إنتاجية العمل المكتبي"],
-      en: ["Improve data-entry speed", "Prepare for secretarial tests", "Boost office productivity"],
+      ar: [
+        "تحسين سرعة إدخال البيانات",
+        "التحضير لاختبارات السكرتارية",
+        "زيادة إنتاجية العمل المكتبي",
+      ],
+      en: [
+        "Improve data-entry speed",
+        "Prepare for secretarial tests",
+        "Boost office productivity",
+      ],
     },
     commonMistakes: {
       ar: ["التركيز على السرعة بدل الدقة", "النظر إلى لوحة المفاتيح أثناء الكتابة"],
@@ -775,23 +842,46 @@ export const TOOLS: ToolMeta[] = [
       ar: "تدرّب على أسئلة IFRS وCMA وCPA وFMAA وACCA وCFA مع شرح المصدر وإمكانية رفع بنوك أسئلة.",
       en: "Practice IFRS, CMA, CPA, FMAA, ACCA, and CFA questions with sourced explanations and upload your own question banks.",
     },
-    standard: { ar: "IFRS · CMA · CPA · FMAA · ACCA · CFA", en: "IFRS · CMA · CPA · FMAA · ACCA · CFA" },
+    standard: {
+      ar: "IFRS · CMA · CPA · FMAA · ACCA · CFA",
+      en: "IFRS · CMA · CPA · FMAA · ACCA · CFA",
+    },
     formula: "MCQ + Sourced explanation + AI-extracted custom banks",
     about: {
       ar: "موسوعة أسئلة اختيار متعدد للامتحانات المحاسبية والمالية المهنية، مع شروحات مأخوذة من مراجع معروفة (Gleim, Wiley, IMA, IFRS). يمكنك رفع ملفك الخاص وسيقوم الذكاء الاصطناعي بتحليله واستخراج الأسئلة بالعربية والإنجليزية تلقائياً.",
       en: "MCQ bank for professional accounting and finance exams with explanations sourced from Gleim, Wiley, IMA, and IFRS. Upload your own bank and AI will extract MCQs in Arabic and English automatically.",
     },
     whenToUse: {
-      ar: ["التحضير لاختبارات الشهادات المهنية", "مراجعة سريعة قبل الامتحان", "بناء بنك أسئلة شخصي"],
-      en: ["Preparing for professional certification exams", "Quick pre-exam review", "Building a personal question bank"],
+      ar: [
+        "التحضير لاختبارات الشهادات المهنية",
+        "مراجعة سريعة قبل الامتحان",
+        "بناء بنك أسئلة شخصي",
+      ],
+      en: [
+        "Preparing for professional certification exams",
+        "Quick pre-exam review",
+        "Building a personal question bank",
+      ],
     },
     commonMistakes: {
       ar: ["الحفظ بدون فهم", "تجاهل الشرح والمصدر", "التركيز على مسار واحد فقط"],
-      en: ["Memorizing without understanding", "Ignoring explanations and sources", "Focusing on only one track"],
+      en: [
+        "Memorizing without understanding",
+        "Ignoring explanations and sources",
+        "Focusing on only one track",
+      ],
     },
     tips: {
-      ar: ["اقرأ الشرح حتى لو أجبت صحيحاً", "نوّع المسارات يومياً", "ارفع أسئلة الكتب المعتمدة لإثراء البنك"],
-      en: ["Read the explanation even on correct answers", "Rotate tracks daily", "Upload textbook banks to enrich the pool"],
+      ar: [
+        "اقرأ الشرح حتى لو أجبت صحيحاً",
+        "نوّع المسارات يومياً",
+        "ارفع أسئلة الكتب المعتمدة لإثراء البنك",
+      ],
+      en: [
+        "Read the explanation even on correct answers",
+        "Rotate tracks daily",
+        "Upload textbook banks to enrich the pool",
+      ],
     },
   },
   {
@@ -812,16 +902,40 @@ export const TOOLS: ToolMeta[] = [
       en: "Professional tool that imports a trial balance (Excel/CSV), auto-classifies accounts with a review/override step, and produces the Balance Sheet, Income Statement, Statement of Comprehensive Income, Statement of Changes in Equity, and Statement of Cash Flows — plus the ZATCA Zakat base. Includes a mandatory preview step before printing or exporting.",
     },
     whenToUse: {
-      ar: ["إعداد القوائم المالية السنوية أو الدورية من ميزان المراجعة", "تحضير مسودة للمراجع قبل التدقيق", "تقدير الوعاء الزكوي بسرعة من بيانات فعلية"],
-      en: ["Preparing periodic/annual financial statements from a trial balance", "Drafting a working version before audit", "Quickly estimating the Zakat base from real account balances"],
+      ar: [
+        "إعداد القوائم المالية السنوية أو الدورية من ميزان المراجعة",
+        "تحضير مسودة للمراجع قبل التدقيق",
+        "تقدير الوعاء الزكوي بسرعة من بيانات فعلية",
+      ],
+      en: [
+        "Preparing periodic/annual financial statements from a trial balance",
+        "Drafting a working version before audit",
+        "Quickly estimating the Zakat base from real account balances",
+      ],
     },
     commonMistakes: {
-      ar: ["ترك حسابات بدون تصنيف قبل الطباعة", "نسيان تسويات التدفقات النقدية اليدوية (لا تُشتق من ميزان مراجعة واحد فقط)", "عدم مراجعة صفحة المعاينة قبل الطباعة"],
-      en: ["Leaving accounts unclassified before printing", "Skipping the manual cash-flow adjustments (not derivable from a single trial balance alone)", "Not reviewing the preview page before printing"],
+      ar: [
+        "ترك حسابات بدون تصنيف قبل الطباعة",
+        "نسيان تسويات التدفقات النقدية اليدوية (لا تُشتق من ميزان مراجعة واحد فقط)",
+        "عدم مراجعة صفحة المعاينة قبل الطباعة",
+      ],
+      en: [
+        "Leaving accounts unclassified before printing",
+        "Skipping the manual cash-flow adjustments (not derivable from a single trial balance alone)",
+        "Not reviewing the preview page before printing",
+      ],
     },
     tips: {
-      ar: ["تحقق من توازن ميزان المراجعة أولاً قبل التصنيف", "زوّد الأداة بميزان مراجعة الفترة السابقة يدوياً عبر التسويات لتحصل على تدفقات نقدية أدق", "راجع مؤشرات التوازن (✓) في صفحة المعاينة قبل أي طباعة"],
-      en: ["Confirm the trial balance is balanced before classifying", "Feed prior-period movements into the manual adjustments for a more accurate cash flow", "Check the balance indicators (✓) on the preview page before printing"],
+      ar: [
+        "تحقق من توازن ميزان المراجعة أولاً قبل التصنيف",
+        "زوّد الأداة بميزان مراجعة الفترة السابقة يدوياً عبر التسويات لتحصل على تدفقات نقدية أدق",
+        "راجع مؤشرات التوازن (✓) في صفحة المعاينة قبل أي طباعة",
+      ],
+      en: [
+        "Confirm the trial balance is balanced before classifying",
+        "Feed prior-period movements into the manual adjustments for a more accurate cash flow",
+        "Check the balance indicators (✓) on the preview page before printing",
+      ],
     },
   },
 ];

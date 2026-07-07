@@ -39,7 +39,9 @@ function DeclarationsArchivePage() {
   return (
     <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
       <main className="mx-auto max-w-5xl px-4 py-8">
-        <h1 className="mb-6 text-lg font-extrabold text-[#f3d28a]">أرشيف الإقرارات الضريبية والزكوية</h1>
+        <h1 className="mb-6 text-lg font-extrabold text-[#f3d28a]">
+          أرشيف الإقرارات الضريبية والزكوية
+        </h1>
         {q.isLoading && <p className="text-white/60">...جارٍ التحميل</p>}
         {q.isError && (
           <div className="rounded-2xl border border-red-400/40 bg-red-400/10 p-6 text-center text-red-100">
@@ -54,10 +56,14 @@ function DeclarationsArchivePage() {
         <div className="grid gap-3">
           {(q.data?.declarations ?? []).map((d) => {
             const result = d.result_data as Record<string, number>;
-            const headlineValue = d.type === "vat" ? result.net_vat ?? 0 : result.zakat_due ?? 0;
+            const headlineValue =
+              d.type === "vat" ? (result.net_vat ?? 0) : (result.zakat_due ?? 0);
             const headlineLabel = d.type === "vat" ? "صافي الضريبة" : "الزكاة المستحقة";
             return (
-              <div key={d.id} className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-white/[0.04] to-transparent p-4">
+              <div
+                key={d.id}
+                className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-white/[0.04] to-transparent p-4"
+              >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
                     <div className="flex items-center gap-2 text-xs text-[#f3d28a]">

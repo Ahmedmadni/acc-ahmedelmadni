@@ -25,7 +25,9 @@ function ArticlesPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("kb_articles")
-        .select("id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at,category_id")
+        .select(
+          "id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at,category_id",
+        )
         .order("published_at", { ascending: false });
       if (error) throw error;
       return data ?? [];

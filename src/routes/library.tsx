@@ -1,7 +1,17 @@
 import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
 import { createContext, useContext, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, Home, Languages, BookMarked, Video, FileText, FolderOpen, Maximize2, Minimize2 } from "lucide-react";
+import {
+  ArrowLeft,
+  Home,
+  Languages,
+  BookMarked,
+  Video,
+  FileText,
+  FolderOpen,
+  Maximize2,
+  Minimize2,
+} from "lucide-react";
 import { type Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/library")({
@@ -47,20 +57,37 @@ function LibraryLayout() {
   const isRTL = lang === "ar";
   const matches = useChildMatches();
   const path = matches[matches.length - 1]?.pathname ?? "/library";
-  const current: "courses" | "books" | "articles" | "templates" =
-    path.includes("/library/books")
-      ? "books"
-      : path.includes("/library/templates")
-        ? "templates"
-        : path.includes("/library/articles")
-          ? "articles"
-          : "courses";
+  const current: "courses" | "books" | "articles" | "templates" = path.includes("/library/books")
+    ? "books"
+    : path.includes("/library/templates")
+      ? "templates"
+      : path.includes("/library/articles")
+        ? "articles"
+        : "courses";
 
-  const tabs: { id: "courses" | "books" | "articles" | "templates"; ar: string; en: string; Icon: typeof Video; to: "/library/courses" | "/library/books" | "/library/articles" | "/library/templates" }[] = [
+  const tabs: {
+    id: "courses" | "books" | "articles" | "templates";
+    ar: string;
+    en: string;
+    Icon: typeof Video;
+    to: "/library/courses" | "/library/books" | "/library/articles" | "/library/templates";
+  }[] = [
     { id: "articles", ar: "المقالات", en: "Articles", Icon: FileText, to: "/library/articles" },
     { id: "courses", ar: "الكورسات", en: "Courses", Icon: Video, to: "/library/courses" },
-    { id: "books", ar: "كتب ومراجع", en: "Books & References", Icon: BookMarked, to: "/library/books" },
-    { id: "templates", ar: "نماذج جاهزة", en: "Templates", Icon: FolderOpen, to: "/library/templates" },
+    {
+      id: "books",
+      ar: "كتب ومراجع",
+      en: "Books & References",
+      Icon: BookMarked,
+      to: "/library/books",
+    },
+    {
+      id: "templates",
+      ar: "نماذج جاهزة",
+      en: "Templates",
+      Icon: FolderOpen,
+      to: "/library/templates",
+    },
   ];
 
   return (
@@ -141,12 +168,26 @@ function LibraryLayout() {
             type="button"
             onClick={() => setFocus((f) => !f)}
             aria-pressed={focus}
-            title={lang === "ar" ? (focus ? "إنهاء وضع التركيز" : "وضع التركيز") : focus ? "Exit Focus" : "Focus Mode"}
+            title={
+              lang === "ar"
+                ? focus
+                  ? "إنهاء وضع التركيز"
+                  : "وضع التركيز"
+                : focus
+                  ? "Exit Focus"
+                  : "Focus Mode"
+            }
             className="fixed bottom-6 left-6 z-[60] inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/45 bg-[#04101f]/90 px-4 py-2.5 text-xs font-bold text-[#f3d28a] shadow-xl shadow-black/40 backdrop-blur-xl transition-all hover:scale-105 hover:bg-[#d7aa52]/15"
           >
             {focus ? <Minimize2 className="size-3.5" /> : <Maximize2 className="size-3.5" />}
             <span className="hidden sm:inline">
-              {lang === "ar" ? (focus ? "إنهاء التركيز" : "وضع التركيز") : focus ? "Exit Focus" : "Focus Mode"}
+              {lang === "ar"
+                ? focus
+                  ? "إنهاء التركيز"
+                  : "وضع التركيز"
+                : focus
+                  ? "Exit Focus"
+                  : "Focus Mode"}
             </span>
           </button>
         </div>

@@ -80,7 +80,10 @@ const TEMPLATES: Template[] = [
   },
   {
     id: "tax-readiness-checklist",
-    title: { ar: "قائمة استعداد الإقرار الضريبي — VAT + زكاة", en: "Tax Return Readiness Checklist" },
+    title: {
+      ar: "قائمة استعداد الإقرار الضريبي — VAT + زكاة",
+      en: "Tax Return Readiness Checklist",
+    },
     description: {
       ar: "قائمة مرجعية Excel تشمل جميع متطلبات إقرار VAT الربع سنوي وإقرار الزكاة السنوي والضريبة المستقطعة، مع جدول المواعيد والغرامات.",
       en: "Comprehensive checklist covering VAT, Zakat, and WHT requirements with deadlines and penalties.",
@@ -236,7 +239,12 @@ const TEMPLATES: Template[] = [
     isOfficial: false,
     relatedStandard: "IAS 7",
     fileUrl: null,
-    previewFields: ["التدفقات التشغيلية", "التدفقات الاستثمارية", "التدفقات التمويلية", "صافي التغير النقدي"],
+    previewFields: [
+      "التدفقات التشغيلية",
+      "التدفقات الاستثمارية",
+      "التدفقات التمويلية",
+      "صافي التغير النقدي",
+    ],
   },
   {
     id: "zatca-invoice",
@@ -320,7 +328,9 @@ function TemplateCard({ t, lang }: { t: Template; lang: Lang }) {
   return (
     <div className="group relative flex flex-col rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 transition-all hover:border-[#d7aa52]/50 hover:shadow-lg hover:shadow-[#d7aa52]/10">
       <div className="mb-3 flex flex-wrap items-center gap-1.5">
-        <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold ${formatColor}`}>
+        <span
+          className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold ${formatColor}`}
+        >
           {formatIcon} {t.format}
         </span>
         {t.isOfficial && (
@@ -345,14 +355,18 @@ function TemplateCard({ t, lang }: { t: Template; lang: Lang }) {
 
       <div className="mb-3 flex flex-wrap gap-1">
         {t.previewFields.map((f) => (
-          <span key={f} className="rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[10px] text-white/55">
+          <span
+            key={f}
+            className="rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[10px] text-white/55"
+          >
             {f}
           </span>
         ))}
       </div>
 
       <div className="mb-3 text-[11px] text-white/45">
-        📋 {t.pages} {isAR ? (t.pages === 1 ? "ورقة" : "أوراق") : t.pages === 1 ? "sheet" : "sheets"}
+        📋 {t.pages}{" "}
+        {isAR ? (t.pages === 1 ? "ورقة" : "أوراق") : t.pages === 1 ? "sheet" : "sheets"}
       </div>
 
       <button
@@ -383,7 +397,9 @@ function TemplateCard({ t, lang }: { t: Template; lang: Lang }) {
         ) : (
           <a
             href={`https://wa.me/966560409811?text=${encodeURIComponent(
-              isAR ? `أريد الحصول على نموذج: ${t.title.ar}` : `I'd like to get the template: ${t.title.en}`,
+              isAR
+                ? `أريد الحصول على نموذج: ${t.title.ar}`
+                : `I'd like to get the template: ${t.title.en}`,
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -430,11 +446,23 @@ function TemplatesPage() {
         <div className="mx-auto mt-6 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
           {[
             { n: TEMPLATES.length, label: { ar: "نموذج", en: "Templates" } },
-            { n: TEMPLATES.filter((t) => t.format === "Excel").length, label: { ar: "Excel", en: "Excel" } },
-            { n: TEMPLATES.filter((t) => t.format === "Word").length, label: { ar: "Word", en: "Word" } },
-            { n: TEMPLATES.filter((t) => t.isOfficial).length, label: { ar: "ZATCA", en: "ZATCA" } },
+            {
+              n: TEMPLATES.filter((t) => t.format === "Excel").length,
+              label: { ar: "Excel", en: "Excel" },
+            },
+            {
+              n: TEMPLATES.filter((t) => t.format === "Word").length,
+              label: { ar: "Word", en: "Word" },
+            },
+            {
+              n: TEMPLATES.filter((t) => t.isOfficial).length,
+              label: { ar: "ZATCA", en: "ZATCA" },
+            },
           ].map((s, i) => (
-            <div key={i} className="rounded-xl border border-[#d7aa52]/20 bg-white/[0.03] px-3 py-3">
+            <div
+              key={i}
+              className="rounded-xl border border-[#d7aa52]/20 bg-white/[0.03] px-3 py-3"
+            >
               <div className="text-xl font-black text-[#f3d28a]">{s.n}</div>
               <div className="text-[11px] text-white/55">{s.label[lang]}</div>
             </div>

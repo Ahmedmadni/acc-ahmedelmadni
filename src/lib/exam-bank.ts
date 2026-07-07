@@ -80,7 +80,10 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       ar: "إذا كانت التكلفة المتغيرة لكل وحدة 20 ريال والتكلفة الثابتة الإجمالية 100,000 ريال وسعر البيع 50 ريال، فما نقطة التعادل بالوحدات؟",
       en: "Variable cost per unit is SAR 20, fixed costs SAR 100,000, selling price SAR 50. What is the breakeven point in units?",
     },
-    choices: { ar: ["2,000", "3,333", "5,000", "10,000"], en: ["2,000", "3,333", "5,000", "10,000"] },
+    choices: {
+      ar: ["2,000", "3,333", "5,000", "10,000"],
+      en: ["2,000", "3,333", "5,000", "10,000"],
+    },
     answerIndex: 1,
     explanation: {
       ar: "BEP = التكاليف الثابتة / هامش المساهمة للوحدة = 100,000 / (50-20) = 100,000/30 = 3,333 وحدة.",
@@ -126,8 +129,18 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       en: "Which financial statement shows the financial position of an entity at a specific date?",
     },
     choices: {
-      ar: ["قائمة الدخل", "قائمة المركز المالي", "قائمة التدفقات النقدية", "قائمة التغيرات في حقوق الملكية"],
-      en: ["Income Statement", "Statement of Financial Position", "Cash Flow Statement", "Statement of Changes in Equity"],
+      ar: [
+        "قائمة الدخل",
+        "قائمة المركز المالي",
+        "قائمة التدفقات النقدية",
+        "قائمة التغيرات في حقوق الملكية",
+      ],
+      en: [
+        "Income Statement",
+        "Statement of Financial Position",
+        "Cash Flow Statement",
+        "Statement of Changes in Equity",
+      ],
     },
     answerIndex: 1,
     explanation: {
@@ -221,7 +234,10 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       ar: "ما القيمة الحالية لمبلغ 10,000 يستحق بعد 3 سنوات بمعدل خصم 8% سنوياً؟",
       en: "What is the present value of 10,000 received in 3 years at 8% discount rate?",
     },
-    choices: { ar: ["7,938", "8,573", "9,259", "10,800"], en: ["7,938", "8,573", "9,259", "10,800"] },
+    choices: {
+      ar: ["7,938", "8,573", "9,259", "10,800"],
+      en: ["7,938", "8,573", "9,259", "10,800"],
+    },
     answerIndex: 0,
     explanation: {
       ar: "PV = 10,000 / (1.08)^3 = 10,000 / 1.2597 ≈ 7,938.",

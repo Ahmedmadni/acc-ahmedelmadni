@@ -11,12 +11,12 @@ const KB_TO_LIB_CAT: Record<string, string[]> = {
   "cost-accounting": ["reporting"],
   "tax-accounting": ["tax"],
   "zakat-tax-ksa": ["tax"],
-  "vat": ["tax"],
+  vat: ["tax"],
   "financial-statements": ["reporting"],
-  "audit": ["audit"],
-  "excel": ["software"],
-  "erp": ["software"],
-  "entrepreneurship": [],
+  audit: ["audit"],
+  excel: ["software"],
+  erp: ["software"],
+  entrepreneurship: [],
 };
 
 export const Route = createFileRoute("/knowledge/$categorySlug/")({
@@ -41,8 +41,18 @@ export const Route = createFileRoute("/knowledge/$categorySlug/")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
-              { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://ahmedelmadni.com/knowledge" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "الرئيسية",
+                item: "https://ahmedelmadni.com/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "المكتبة",
+                item: "https://ahmedelmadni.com/knowledge",
+              },
               { "@type": "ListItem", position: 3, name: params.categorySlug, item: url },
             ],
           }),
@@ -145,7 +155,9 @@ function CategoryPage() {
                     {c.ar}
                   </h3>
                   <div className="mt-auto flex items-center justify-between text-[10px] text-white/55">
-                    <span>{c.hours} ساعة · {c.lessons} درس</span>
+                    <span>
+                      {c.hours} ساعة · {c.lessons} درس
+                    </span>
                     <span
                       className={`rounded-full px-2 py-0.5 font-bold uppercase ${
                         c.price === "free"

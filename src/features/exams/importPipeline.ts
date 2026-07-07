@@ -15,7 +15,10 @@ export async function readQuestionImportFile(file: File): Promise<string> {
   }
   if (name.endsWith(".pdf")) {
     const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
-    pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/legacy/build/pdf.worker.mjs", import.meta.url).toString();
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+      "pdfjs-dist/legacy/build/pdf.worker.mjs",
+      import.meta.url,
+    ).toString();
     const pdf = await pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()) }).promise;
     const pages: string[] = [];
     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
@@ -29,8 +32,12 @@ export async function readQuestionImportFile(file: File): Promise<string> {
 }
 
 export function questionFingerprint(value: string) {
-  const normalized = value.toLowerCase().replace(/[\s\W_]+/g, " ").trim();
+  const normalized = value
+    .toLowerCase()
+    .replace(/[\s\W_]+/g, " ")
+    .trim();
   let hash = 0;
-  for (let i = 0; i < normalized.length; i += 1) hash = (hash * 31 + normalized.charCodeAt(i)) >>> 0;
+  for (let i = 0; i < normalized.length; i += 1)
+    hash = (hash * 31 + normalized.charCodeAt(i)) >>> 0;
   return hash.toString(16).padStart(8, "0");
 }

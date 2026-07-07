@@ -62,9 +62,7 @@ function rowToExamQuestion(r: Row): ExamQuestion {
 
 /** Public read — uses publishable key + RLS public/anon policy. */
 export const listExamQuestions = createServerFn({ method: "GET" })
-  .inputValidator((d: unknown) =>
-    z.object({ track: TrackEnum.optional() }).parse(d ?? {}),
-  )
+  .inputValidator((d: unknown) => z.object({ track: TrackEnum.optional() }).parse(d ?? {}))
   .handler(async ({ data }) => {
     const supabase = getServerAnonClient();
 
@@ -119,10 +117,17 @@ export const addExamQuestions = createServerFn({ method: "POST" })
     }));
     const hashes = payload.map((q) => q.duplicate_hash).filter(Boolean) as string[];
     const { data: existing, error: existingError } = hashes.length
-      ? await context.supabase.from("exam_questions").select("duplicate_hash").in("duplicate_hash", hashes)
+      ? await context.supabase
+          .from("exam_questions")
+          .select("duplicate_hash")
+          .in("duplicate_hash", hashes)
       : { data: [], error: null };
     if (existingError) throw new Error(existingError.message);
-    const existingSet = new Set((existing ?? []).map((row) => (row as { duplicate_hash: string | null }).duplicate_hash).filter(Boolean));
+    const existingSet = new Set(
+      (existing ?? [])
+        .map((row) => (row as { duplicate_hash: string | null }).duplicate_hash)
+        .filter(Boolean),
+    );
     const uniquePayload = payload.filter((q) => !existingSet.has(q.duplicate_hash ?? ""));
     if (uniquePayload.length === 0) return { inserted: 0, skipped: payload.length };
     const { data: rows, error } = await context.supabase
@@ -138,17 +143,22 @@ export const deleteMyExamQuestion = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((d: unknown) => z.object({ id: z.string().uuid() }).parse(d))
   .handler(async ({ data, context }) => {
-    const { error } = await context.supabase
-      .from("exam_questions")
-      .delete()
-      .eq("id", data.id);
+    const { error } = await context.supabase.from("exam_questions").delete().eq("id", data.id);
     if (error) throw new Error(error.message);
     return { ok: true };
   });
 
 export const updateExamQuestionStatus = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
-  .inputValidator((d: unknown) => z.object({ id: z.string().uuid(), status: z.enum(["draft", "pending_review", "approved", "rejected"]), is_public: z.boolean().optional() }).parse(d))
+  .inputValidator((d: unknown) =>
+    z
+      .object({
+        id: z.string().uuid(),
+        status: z.enum(["draft", "pending_review", "approved", "rejected"]),
+        is_public: z.boolean().optional(),
+      })
+      .parse(d),
+  )
   .handler(async ({ data, context }) => {
     const patch: { status: string; is_public?: boolean } = { status: data.status };
     if (typeof data.is_public === "boolean") patch.is_public = data.is_public;
@@ -160,14 +170,16 @@ export const updateExamQuestionStatus = createServerFn({ method: "POST" })
 export const updateExamQuestion = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((d: unknown) =>
-    z.object({
-      id: z.string().uuid(),
-      question_ar: z.string().min(1).max(2000).optional(),
-      question_en: z.string().min(1).max(2000).optional(),
-      explanation_ar: z.string().max(4000).optional(),
-      explanation_en: z.string().max(4000).optional(),
-      topic: z.string().max(200).optional(),
-    }).parse(d),
+    z
+      .object({
+        id: z.string().uuid(),
+        question_ar: z.string().min(1).max(2000).optional(),
+        question_en: z.string().min(1).max(2000).optional(),
+        explanation_ar: z.string().max(4000).optional(),
+        explanation_en: z.string().max(4000).optional(),
+        topic: z.string().max(200).optional(),
+      })
+      .parse(d),
   )
   .handler(async ({ data, context }) => {
     const { id, ...patch } = data;
@@ -177,25 +189,28 @@ export const updateExamQuestion = createServerFn({ method: "POST" })
   });
 
 /** Aggregate counts per track — useful for debug & user feedback. */
-export const examQuestionsStats = createServerFn({ method: "GET" })
-  .handler(async () => {
-    const supabase = getServerAnonClient();
-    const { data, error } = await supabase
-      .from("exam_questions")
-      .select("track")
-      .eq("is_public", true);
-    if (error) throw new Error(error.message);
-    const counts: Record<string, number> = {};
-    for (const r of data ?? []) {
-      const t = (r as { track: string }).track;
-      counts[t] = (counts[t] ?? 0) + 1;
-    }
-    return { counts, total: data?.length ?? 0 };
-  });
+export const examQuestionsStats = createServerFn({ method: "GET" }).handler(async () => {
+  const supabase = getServerAnonClient();
+  const { data, error } = await supabase
+    .from("exam_questions")
+    .select("track")
+    .eq("is_public", true);
+  if (error) throw new Error(error.message);
+  const counts: Record<string, number> = {};
+  for (const r of data ?? []) {
+    const t = (r as { track: string }).track;
+    counts[t] = (counts[t] ?? 0) + 1;
+  }
+  return { counts, total: data?.length ?? 0 };
+});
 
 function hashQuestion(value: string) {
   let hash = 0;
-  const normalized = value.toLowerCase().replace(/[\s\W_]+/g, " ").trim();
-  for (let i = 0; i < normalized.length; i += 1) hash = (hash * 31 + normalized.charCodeAt(i)) >>> 0;
+  const normalized = value
+    .toLowerCase()
+    .replace(/[\s\W_]+/g, " ")
+    .trim();
+  for (let i = 0; i < normalized.length; i += 1)
+    hash = (hash * 31 + normalized.charCodeAt(i)) >>> 0;
   return hash.toString(16).padStart(8, "0");
 }

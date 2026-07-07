@@ -81,8 +81,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
       },
       { name: "author", content: "Ahmed Elmadani" },
-      { name: "keywords", content: "محاسب, محاسب أول, محاسب تكاليف, تقارير مالية, الرياض, السعودية, ZATCA, IFRS, زكاة, ضريبة القيمة المضافة, accountant, senior accountant" },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      {
+        name: "keywords",
+        content:
+          "محاسب, محاسب أول, محاسب تكاليف, تقارير مالية, الرياض, السعودية, ZATCA, IFRS, زكاة, ضريبة القيمة المضافة, accountant, senior accountant",
+      },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
       { name: "theme-color", content: "#04101f" },
       { property: "og:site_name", content: "Ahmed Elmadani | أحمد المدني" },
       { property: "og:locale", content: "ar_SA" },
@@ -94,7 +101,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
       },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp" },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
+      },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -104,7 +115,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "محاسب ذو خبرة عملية متقدمة في المحاسبة وإعداد التقارير المالية وتحليل التكاليف وإدارة الحسابات داخل المملكة العربية السعودية.",
       },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp" },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
+      },
       { name: "msvalidate.01", content: "D911CDA6F8A617A485931393AAD13064" },
     ],
     links: [
@@ -156,7 +171,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               url: "https://ahmedelmadni.com/",
               jobTitle: "Senior Accountant",
               email: "mailto:elmadnim@gmail.com",
-              image: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
+              image:
+                "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Riyadh",
@@ -177,7 +193,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "LocalBusiness",
               "@id": "https://ahmedelmadni.com/#business",
               name: "Ahmed Elmadani — Senior Accountant",
-              image: "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
+              image:
+                "https://storage.googleapis.com/gpt-engineer-file-uploads/sHg6QnS04TcmbXVlhYYOOD3JhZB2/social-images/social-1779447091919-1000508481.webp",
               url: "https://ahmedelmadni.com/",
               priceRange: "$$",
               areaServed: { "@type": "Country", name: "Saudi Arabia" },

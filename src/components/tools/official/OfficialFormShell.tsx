@@ -89,37 +89,94 @@ export function EntityHeaderForm({
     <SectionCard title={t("بيانات المنشأة", "Entity Information")}>
       <div data-official-entity-grid className="grid gap-3 md:grid-cols-3">
         <Field label={t("الرقم المالي", "Financial Number")}>
-          <input dir="ltr" className={inputCls} value={value.financialNo} onChange={(e) => set("financialNo", e.target.value)} />
+          <input
+            dir="ltr"
+            className={inputCls}
+            value={value.financialNo}
+            onChange={(e) => set("financialNo", e.target.value)}
+          />
         </Field>
         <Field label={t("الفرع", "Branch")}>
-          <input dir="ltr" className={inputCls} value={value.branch} onChange={(e) => set("branch", e.target.value)} />
+          <input
+            dir="ltr"
+            className={inputCls}
+            value={value.branch}
+            onChange={(e) => set("branch", e.target.value)}
+          />
         </Field>
         <Field label={t("الاسم التجاري", "Trade Name")}>
-          <input style={{ unicodeBidi: "plaintext" }} className={inputCls} value={value.tradeName} onChange={(e) => set("tradeName", e.target.value)} />
+          <input
+            style={{ unicodeBidi: "plaintext" }}
+            className={inputCls}
+            value={value.tradeName}
+            onChange={(e) => set("tradeName", e.target.value)}
+          />
         </Field>
         <Field label={t("نسبة الشركاء السعوديين %", "Saudi Owners %")}>
-          <input type="number" dir="ltr" className={inputCls} value={value.saudiOwnership} onChange={(e) => set("saudiOwnership", +e.target.value)} />
+          <input
+            type="number"
+            dir="ltr"
+            className={inputCls}
+            value={value.saudiOwnership}
+            onChange={(e) => set("saudiOwnership", +e.target.value)}
+          />
         </Field>
         <Field label={t("نسبة الشركاء غير السعوديين %", "Non-Saudi Owners %")}>
-          <input type="number" dir="ltr" className={inputCls} value={value.nonSaudiOwnership} onChange={(e) => set("nonSaudiOwnership", +e.target.value)} />
+          <input
+            type="number"
+            dir="ltr"
+            className={inputCls}
+            value={value.nonSaudiOwnership}
+            onChange={(e) => set("nonSaudiOwnership", +e.target.value)}
+          />
         </Field>
         <Field label={t("النشاط الرئيسي", "Main Activity")}>
-          <input style={{ unicodeBidi: "plaintext" }} className={inputCls} value={value.activity} onChange={(e) => set("activity", e.target.value)} />
+          <input
+            style={{ unicodeBidi: "plaintext" }}
+            className={inputCls}
+            value={value.activity}
+            onChange={(e) => set("activity", e.target.value)}
+          />
         </Field>
         <Field label={t("البريد الإلكتروني", "Email")}>
-          <input dir="ltr" className={inputCls} value={value.email} onChange={(e) => set("email", e.target.value)} />
+          <input
+            dir="ltr"
+            className={inputCls}
+            value={value.email}
+            onChange={(e) => set("email", e.target.value)}
+          />
         </Field>
         <Field label={t("الهاتف", "Phone")}>
-          <input dir="ltr" className={inputCls} value={value.phone} onChange={(e) => set("phone", e.target.value)} />
+          <input
+            dir="ltr"
+            className={inputCls}
+            value={value.phone}
+            onChange={(e) => set("phone", e.target.value)}
+          />
         </Field>
         <Field label={t("العنوان", "Address")}>
-          <input style={{ unicodeBidi: "plaintext" }} className={inputCls} value={value.address} onChange={(e) => set("address", e.target.value)} />
+          <input
+            style={{ unicodeBidi: "plaintext" }}
+            className={inputCls}
+            value={value.address}
+            onChange={(e) => set("address", e.target.value)}
+          />
         </Field>
         <Field label={t("السنة المالية من", "FY From")}>
-          <input type="date" className={inputCls} value={value.fyFrom} onChange={(e) => set("fyFrom", e.target.value)} />
+          <input
+            type="date"
+            className={inputCls}
+            value={value.fyFrom}
+            onChange={(e) => set("fyFrom", e.target.value)}
+          />
         </Field>
         <Field label={t("السنة المالية إلى", "FY To")}>
-          <input type="date" className={inputCls} value={value.fyTo} onChange={(e) => set("fyTo", e.target.value)} />
+          <input
+            type="date"
+            className={inputCls}
+            value={value.fyTo}
+            onChange={(e) => set("fyTo", e.target.value)}
+          />
         </Field>
       </div>
     </SectionCard>
@@ -206,7 +263,15 @@ export function MoneyRow({
   );
 }
 
-export function TotalRow({ label, value, highlight }: { label: string; value: number; highlight?: boolean }) {
+export function TotalRow({
+  label,
+  value,
+  highlight,
+}: {
+  label: string;
+  value: number;
+  highlight?: boolean;
+}) {
   return (
     <div
       className={`mt-2 flex items-center justify-between rounded-md border px-3 py-2 ${

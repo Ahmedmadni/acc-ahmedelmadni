@@ -1,7 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Clock, Layers, Globe, Search, Filter, ExternalLink, PlayCircle, BookOpen, GraduationCap, Sparkles } from "lucide-react";
+import {
+  Clock,
+  Layers,
+  Globe,
+  Search,
+  Filter,
+  ExternalLink,
+  PlayCircle,
+  BookOpen,
+  GraduationCap,
+  Sparkles,
+} from "lucide-react";
 import { t } from "@/lib/i18n";
 import { useLibLang } from "./library";
 
@@ -9,7 +20,10 @@ export const Route = createFileRoute("/library/courses")({
   head: () => ({
     meta: [
       { title: "كورسات المحاسبة | Accounting Courses — Ahmed Elmadani" },
-      { name: "description", content: "أفضل كورسات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، VAT والمزيد." },
+      {
+        name: "description",
+        content: "أفضل كورسات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، VAT والمزيد.",
+      },
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/courses" }],
   }),
@@ -19,28 +33,121 @@ export const Route = createFileRoute("/library/courses")({
 type Platform = { name: string; icon: string; color: string; url?: string };
 
 const COURSE_PLATFORMS: Record<string, Platform> = {
-  "fund-1":   { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/learn/uva-darden-financial-accounting" },
-  "fund-2":   { name: "YouTube",   icon: "🎬", color: "#ff0033", url: "https://www.youtube.com/playlist?list=PL9D77E783AED02A11" },
-  "fund-3":   { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/specializations/financial-reporting" },
-  "fund-4":   { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/learn/wharton-accounting" },
-  "cert-ifrs":{ name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/specializations/ifrs" },
-  "cert-cma": { name: "Udemy",     icon: "📘", color: "#a435f0", url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/" },
-  "cert-cpa": { name: "Udemy",     icon: "📘", color: "#a435f0", url: "https://www.udemy.com/course/cpa-exam-preparation/" },
-  "cert-socpa":{name: "SOCPA",     icon: "🏛️", color: "#0d7a5f", url: "https://socpa.org.sa/en/Education/Pages/default.aspx" },
-  "rep-mgmt": { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/learn/uva-darden-managerial-accounting" },
-  "rep-cost": { name: "YouTube",   icon: "🎬", color: "#ff0033", url: "https://www.youtube.com/@AccountingLectures/playlists" },
-  "aud-1":    { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/learn/auditing-part1-conceptual-foundations" },
-  "tax-1":    { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/specializations/united-states-federal-taxation" },
-  "tax-vat":  { name: "ZATCA",     icon: "🏛️", color: "#0d7a5f", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
-  "tax-zakat":{ name: "ZATCA",     icon: "🏛️", color: "#0d7a5f", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
-  "fm-1":     { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/specializations/wharton-business-financial-modeling" },
-  "sw-excel": { name: "Coursera",  icon: "🎓", color: "#0056d2", url: "https://www.coursera.org/specializations/excel" },
-  "sw-acct":  { name: "Odoo",      icon: "⚙️", color: "#714b67", url: "https://www.odoo.com/slides/accounting-7" },
+  "fund-1": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/learn/uva-darden-financial-accounting",
+  },
+  "fund-2": {
+    name: "YouTube",
+    icon: "🎬",
+    color: "#ff0033",
+    url: "https://www.youtube.com/playlist?list=PL9D77E783AED02A11",
+  },
+  "fund-3": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/specializations/financial-reporting",
+  },
+  "fund-4": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/learn/wharton-accounting",
+  },
+  "cert-ifrs": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/specializations/ifrs",
+  },
+  "cert-cma": {
+    name: "Udemy",
+    icon: "📘",
+    color: "#a435f0",
+    url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/",
+  },
+  "cert-cpa": {
+    name: "Udemy",
+    icon: "📘",
+    color: "#a435f0",
+    url: "https://www.udemy.com/course/cpa-exam-preparation/",
+  },
+  "cert-socpa": {
+    name: "SOCPA",
+    icon: "🏛️",
+    color: "#0d7a5f",
+    url: "https://socpa.org.sa/en/Education/Pages/default.aspx",
+  },
+  "rep-mgmt": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/learn/uva-darden-managerial-accounting",
+  },
+  "rep-cost": {
+    name: "YouTube",
+    icon: "🎬",
+    color: "#ff0033",
+    url: "https://www.youtube.com/@AccountingLectures/playlists",
+  },
+  "aud-1": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/learn/auditing-part1-conceptual-foundations",
+  },
+  "tax-1": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/specializations/united-states-federal-taxation",
+  },
+  "tax-vat": {
+    name: "ZATCA",
+    icon: "🏛️",
+    color: "#0d7a5f",
+    url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx",
+  },
+  "tax-zakat": {
+    name: "ZATCA",
+    icon: "🏛️",
+    color: "#0d7a5f",
+    url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx",
+  },
+  "fm-1": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/specializations/wharton-business-financial-modeling",
+  },
+  "sw-excel": {
+    name: "Coursera",
+    icon: "🎓",
+    color: "#0056d2",
+    url: "https://www.coursera.org/specializations/excel",
+  },
+  "sw-acct": {
+    name: "Odoo",
+    icon: "⚙️",
+    color: "#714b67",
+    url: "https://www.odoo.com/slides/accounting-7",
+  },
 };
 
 const SOON: Platform = { name: "قريباً", icon: "⏳", color: "#6b7280" };
 
-const CAT_KEYS = ["all", "fundamentals", "certifications", "reporting", "tax", "software", "audit"] as const;
+const CAT_KEYS = [
+  "all",
+  "fundamentals",
+  "certifications",
+  "reporting",
+  "tax",
+  "software",
+  "audit",
+] as const;
 type CatKey = (typeof CAT_KEYS)[number];
 type LevelKey = "all" | "beginner" | "intermediate" | "advanced";
 type PriceKey = "all" | "free" | "paid";
@@ -98,7 +205,9 @@ function CoursesPage() {
                 {CAT_KEYS.map((k) => (
                   <option key={k} value={k} className="bg-[#04101f]">
                     {k === "all"
-                      ? lang === "ar" ? "كل التصنيفات" : "All categories"
+                      ? lang === "ar"
+                        ? "كل التصنيفات"
+                        : "All categories"
                       : t.library.cats[k as Exclude<CatKey, "all">][lang]}
                   </option>
                 ))}
@@ -106,14 +215,26 @@ function CoursesPage() {
             </div>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
-            <select value={level} onChange={(e) => setLevel(e.target.value as LevelKey)} className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white">
+            <select
+              value={level}
+              onChange={(e) => setLevel(e.target.value as LevelKey)}
+              className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white"
+            >
               {(["all", "beginner", "intermediate", "advanced"] as const).map((v) => (
-                <option key={v} value={v} className="bg-[#04101f]">{t.library.levels[v][lang]}</option>
+                <option key={v} value={v} className="bg-[#04101f]">
+                  {t.library.levels[v][lang]}
+                </option>
               ))}
             </select>
-            <select value={price} onChange={(e) => setPrice(e.target.value as PriceKey)} className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white">
+            <select
+              value={price}
+              onChange={(e) => setPrice(e.target.value as PriceKey)}
+              className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white"
+            >
               {(["all", "free", "paid"] as const).map((v) => (
-                <option key={v} value={v} className="bg-[#04101f]">{t.library.priceLabels[v][lang]}</option>
+                <option key={v} value={v} className="bg-[#04101f]">
+                  {t.library.priceLabels[v][lang]}
+                </option>
               ))}
             </select>
           </div>
@@ -139,24 +260,43 @@ function CoursesPage() {
                     <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
                       <CourseIcon cat={c.cat} />
                     </span>
-                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
-                      c.price === "free"
-                        ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30"
-                        : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
-                    }`}>
-                      {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
+                        c.price === "free"
+                          ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30"
+                          : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
+                      }`}
+                    >
+                      {c.price === "free"
+                        ? t.library.priceLabels.free[lang]
+                        : t.library.priceLabels.paid[lang]}
                     </span>
                   </div>
                   <h3 className="mt-3 text-sm font-extrabold leading-snug text-white">{c[lang]}</h3>
-                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-white/70">{c.desc[lang]}</p>
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-white/70">
+                    {c.desc[lang]}
+                  </p>
 
                   <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
-                    <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
-                    <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
-                    <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
+                    <span className="inline-flex items-center gap-1">
+                      <Layers className="size-3 text-[#d7aa52]" />
+                      {t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="size-3 text-[#d7aa52]" />
+                      {c.hours}h · {c.lessons} {t.library.lessons[lang]}
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Globe className="size-3 text-[#d7aa52]" />
+                      {c.lang.toUpperCase()}
+                    </span>
                     <span
                       className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white"
-                      style={{ background: `${platform.color}33`, border: `1px solid ${platform.color}66`, color: platform.color === "#6b7280" ? "#cbd5e1" : "#fff" }}
+                      style={{
+                        background: `${platform.color}33`,
+                        border: `1px solid ${platform.color}66`,
+                        color: platform.color === "#6b7280" ? "#cbd5e1" : "#fff",
+                      }}
                     >
                       <span>{platform.icon}</span> {platform.name}
                     </span>
