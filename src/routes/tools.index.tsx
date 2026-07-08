@@ -34,6 +34,7 @@ import {
   Search,
   TrendingDown,
   TrendingUp,
+  Users,
   Wrench,
 } from "lucide-react";
 import { CATEGORIES, TOOLS, type ToolCategory, type ToolMeta } from "@/lib/tools-registry";
@@ -113,6 +114,7 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   GraduationCap,
   FileSpreadsheet,
   FileBarChart,
+  Users,
 };
 
 const CATEGORY_META: Record<
@@ -176,6 +178,15 @@ const CATEGORY_META: Record<
     desc: {
       ar: "أدوات تطوير المهنة والسيرة الذاتية.",
       en: "Career and CV development tools.",
+    },
+  },
+  legal: {
+    Icon: Scale,
+    gradient: "from-indigo-400/20 via-indigo-500/10 to-transparent",
+    ring: "ring-indigo-400/30",
+    desc: {
+      ar: "المواريث الشرعية والأحوال الشخصية.",
+      en: "Islamic inheritance and personal status.",
     },
   },
 };
