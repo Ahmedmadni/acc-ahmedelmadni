@@ -359,11 +359,20 @@ html[dir="rtl"] .title-bar::after {
 
 /* Shine — composited via transform */
 @keyframes shine {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(100%); }
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 .shine {
-  background: linear-gradient(110deg, transparent 30%, rgba(243, 210, 138, 0.45) 50%, transparent 70%);
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(243, 210, 138, 0.45) 50%,
+    transparent 70%
+  );
   animation: shine 3.5s ease-in-out infinite;
   will-change: transform;
 }
@@ -436,7 +445,12 @@ html.light .bg-video {
   inset: 0;
   z-index: -2;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(4, 16, 31, 0.55) 0%, rgba(4, 16, 31, 0.7) 50%, rgba(4, 16, 31, 0.85) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(4, 16, 31, 0.55) 0%,
+    rgba(4, 16, 31, 0.7) 50%,
+    rgba(4, 16, 31, 0.85) 100%
+  );
 }
 html.light .bg-video-overlay {
   background: linear-gradient(180deg, rgba(247, 245, 240, 0.7), rgba(247, 245, 240, 0.85));
@@ -665,6 +679,30 @@ body.pdf-export-mode #tool-report-capture[lang="ar"] *,
   unicode-bidi: isolate !important;
 }
 
+/* Numeric fields (amounts, counts, dates) are always authored with an
+   explicit dir="ltr" so their digits read left-to-right even inside an RTL
+   page — see NumberField/MoneyRow/TotalRow. The blanket `direction: rtl`
+   rule above overrides that attribute during html2canvas capture, which
+   forces Chromium's native input[type=number] spinner to the opposite side
+   and makes html2canvas mis-measure/shrink the digit it draws (visible as a
+   tiny, misplaced mark instead of the number). Restore LTR for these with
+   higher specificity than the blanket rule, and drop the native spinner so
+   there's no widget to relayout in the first place. */
+body.pdf-export-mode #tool-report-capture[dir="rtl"] [dir="ltr"],
+body.pdf-export-mode #tool-report-capture[lang="ar"] [dir="ltr"],
+.pdf-arabic-safe[dir="rtl"] [dir="ltr"],
+.pdf-arabic-safe[lang="ar"] [dir="ltr"],
+body.pdf-export-mode #tool-report-capture[dir="rtl"] input[type="number"],
+body.pdf-export-mode #tool-report-capture[lang="ar"] input[type="number"],
+.pdf-arabic-safe[dir="rtl"] input[type="number"],
+.pdf-arabic-safe[lang="ar"] input[type="number"] {
+  direction: ltr !important;
+  text-align: right !important;
+  unicode-bidi: plaintext !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
 body.pdf-export-mode #tool-report-capture .grid,
 body.pdf-export-mode #tool-report-capture [data-official-entity-grid] {
   display: grid !important;
@@ -833,7 +871,12 @@ button.gold-border {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(243, 210, 138, 0.28) 50%, transparent 70%);
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(243, 210, 138, 0.28) 50%,
+    transparent 70%
+  );
   transform: translateX(-120%);
   transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
   pointer-events: none;

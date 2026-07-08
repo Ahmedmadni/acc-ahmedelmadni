@@ -44,27 +44,63 @@ type TouchedStyle = {
   textAlign: string;
 };
 
-function forcePrintableFieldValues(root: HTMLElement) {
+const NON_TEXT_INPUT_TYPES = new Set(["checkbox", "radio", "button", "submit", "file", "hidden"]);
+
+/**
+ * html2canvas-pro draws form-control values through its own synthetic
+ * "input value" code path rather than as normal text nodes — it also sets
+ * the Canvas 2D `ctx.direction` from the computed CSS direction before
+ * drawing. That combination makes Chromium apply Arabic OpenType "locl"
+ * digit substitution to plain Western-digit values (e.g. "2" is drawn as
+ * "٢"), even when the field's own `dir`/`lang` say otherwise. Swapping each
+ * field for a plain <span> with the same text sidesteps that code path
+ * entirely — spans go through html2canvas's normal, more reliable text
+ * rendering — while copying the field's own (already-corrected) computed
+ * direction so genuinely-Arabic text fields keep rendering RTL.
+ */
+function swapFieldsForCapture(root: HTMLElement): () => void {
   const fields = Array.from(
     root.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(
       "input, textarea, select",
     ),
-  );
+  ).filter((f) => !(f instanceof HTMLInputElement && NON_TEXT_INPUT_TYPES.has(f.type)));
+
+  const restores: Array<() => void> = [];
   fields.forEach((field) => {
-    if (field instanceof HTMLSelectElement) {
-      const selected = field.options[field.selectedIndex]?.text ?? field.value;
-      field.setAttribute("data-print-value", selected);
-    } else {
-      field.setAttribute("value", field.value);
-      field.setAttribute("data-print-value", field.value);
-    }
+    const text =
+      field instanceof HTMLSelectElement
+        ? (field.options[field.selectedIndex]?.text ?? field.value)
+        : field.value;
+    const cs = getComputedStyle(field);
+    const span = document.createElement("span");
+    span.textContent = text || "";
+    span.style.display = "inline-block";
+    span.style.boxSizing = "border-box";
+    span.style.width = cs.width;
+    span.style.minHeight = cs.minHeight;
+    span.style.padding = cs.padding;
+    span.style.font = cs.font;
+    span.style.fontSize = cs.fontSize;
+    span.style.fontFamily = cs.fontFamily;
+    span.style.color = cs.color;
+    span.style.textAlign = cs.textAlign;
+    span.style.borderBottom = cs.borderBottom;
+    span.style.direction = cs.direction;
+    span.style.unicodeBidi = cs.unicodeBidi || "plaintext";
+    span.style.whiteSpace = "pre-wrap";
+    field.style.display = "none";
+    field.insertAdjacentElement("afterend", span);
+    restores.push(() => {
+      span.remove();
+      field.style.display = "";
+    });
   });
+  return () => restores.forEach((r) => r());
 }
 
 function applyPdfSafeStyles(el: HTMLElement) {
   document.body.classList.add("pdf-export-mode");
   el.classList.add("pdf-arabic-safe");
-  forcePrintableFieldValues(el);
   const isRtl = el.getAttribute("dir") === "rtl" || el.getAttribute("lang") === "ar";
   const touched = [el, ...Array.from(el.querySelectorAll<HTMLElement>("*"))];
   const previousStyles: TouchedStyle[] = touched.map((node) => ({
@@ -92,7 +128,7 @@ function applyPdfSafeStyles(el: HTMLElement) {
     node.style.fontFamily = '"Cairo", "Tahoma", Arial, sans-serif';
     node.style.unicodeBidi = "isolate";
     node.style.overflow = "visible";
-    if (isRtl) {
+    if (isRtl && node.getAttribute("dir") !== "ltr") {
       node.style.direction = "rtl";
       node.style.textAlign = node.style.textAlign || "right";
     }
@@ -104,7 +140,9 @@ function applyPdfSafeStyles(el: HTMLElement) {
       node.style.whiteSpace = "pre-wrap";
     }
   });
+  const restoreFields = swapFieldsForCapture(el);
   return () => {
+    restoreFields();
     previousStyles.forEach(
       ({
         node,
