@@ -89,7 +89,10 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
   const fileRef = useRef<HTMLInputElement>(null);
 
   const tbTotals = useMemo(() => trialBalanceTotals(rows), [rows]);
-  const fs = useMemo(() => computeFinancialStatements(rows, adj, zakatOverrides), [rows, adj, zakatOverrides]);
+  const fs = useMemo(
+    () => computeFinancialStatements(rows, adj, zakatOverrides),
+    [rows, adj, zakatOverrides],
+  );
 
   const updateRow = (id: string, patch: Partial<TrialBalanceRow>) =>
     setRows((rs) => rs.map((r) => (r.id === id ? { ...r, ...patch } : r)));
@@ -101,7 +104,9 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
     try {
       const parsed = await parseTrialBalanceFile(file);
       if (parsed.length === 0) {
-        toast.error(T("لم يتم العثور على بيانات صالحة في الملف", "No valid data found in the file"));
+        toast.error(
+          T("لم يتم العثور على بيانات صالحة في الملف", "No valid data found in the file"),
+        );
         return;
       }
       const classified = parsed.map((r) => ({ ...r, category: suggestCategory(r) }));
@@ -114,8 +119,10 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
     }
   };
 
-  const setAdjField = (k: keyof ManualAdjustments) => (v: number) => setAdj((a) => ({ ...a, [k]: v }));
-  const setZakatField = (k: keyof ZakatBaseInputs) => (v: number) => setZakatOverrides((z) => ({ ...z, [k]: v }));
+  const setAdjField = (k: keyof ManualAdjustments) => (v: number) =>
+    setAdj((a) => ({ ...a, [k]: v }));
+  const setZakatField = (k: keyof ZakatBaseInputs) => (v: number) =>
+    setZakatOverrides((z) => ({ ...z, [k]: v }));
 
   const onPrint = async () => {
     setPrinting(true);
@@ -145,7 +152,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
   };
 
   const onExportExcel = () => {
-    exportStatementsXlsx(fs, entity.tradeName || "Entity", `financial-statements-${entity.fyTo || new Date().toISOString().slice(0, 10)}`);
+    exportStatementsXlsx(
+      fs,
+      entity.tradeName || "Entity",
+      `financial-statements-${entity.fyTo || new Date().toISOString().slice(0, 10)}`,
+    );
   };
 
   return (
@@ -161,7 +172,10 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
         {([1, 2, 3] as Step[]).map((s, i) => (
           <div key={s} className="flex items-center gap-2">
             <button
-              onClick={() => (s < step || (s === 2 && rows.length > 0) || (s === 3 && rows.length > 0)) && setStep(s)}
+              onClick={() =>
+                (s < step || (s === 2 && rows.length > 0) || (s === 3 && rows.length > 0)) &&
+                setStep(s)
+              }
               className={`flex size-7 items-center justify-center rounded-full text-xs font-extrabold transition ${
                 step === s
                   ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
@@ -172,8 +186,14 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
             >
               {step > s ? <CheckCircle2 className="size-4" /> : s}
             </button>
-            <span className={`text-xs font-bold ${step === s ? "text-[#f3d28a]" : "text-[var(--fg-soft)]"}`}>
-              {s === 1 ? T("الاستيراد", "Import") : s === 2 ? T("التصنيف والمراجعة", "Classify & Review") : T("المعاينة والطباعة", "Preview & Print")}
+            <span
+              className={`text-xs font-bold ${step === s ? "text-[#f3d28a]" : "text-[var(--fg-soft)]"}`}
+            >
+              {s === 1
+                ? T("الاستيراد", "Import")
+                : s === 2
+                  ? T("التصنيف والمراجعة", "Classify & Review")
+                  : T("المعاينة والطباعة", "Preview & Print")}
             </span>
             {i < 2 && <div className="mx-1 h-px w-8 bg-[#d7aa52]/25" />}
           </div>
@@ -209,7 +229,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                 disabled={importing}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95 disabled:opacity-60"
               >
-                {importing ? <Loader2 className="size-3.5 animate-spin" /> : <Upload className="size-3.5" />}
+                {importing ? (
+                  <Loader2 className="size-3.5 animate-spin" />
+                ) : (
+                  <Upload className="size-3.5" />
+                )}
                 {T("استيراد ملف", "Import File")}
               </button>
               <button
@@ -228,7 +252,12 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
               </button>
               {rows.length > 0 && (
                 <button
-                  onClick={() => exportTrialBalanceXlsx(rows, `trial-balance-${new Date().toISOString().slice(0, 10)}`)}
+                  onClick={() =>
+                    exportTrialBalanceXlsx(
+                      rows,
+                      `trial-balance-${new Date().toISOString().slice(0, 10)}`,
+                    )
+                  }
                   className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
                 >
                   <FileSpreadsheet className="size-3.5" />
@@ -247,11 +276,13 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                   ) : (
                     <span className="inline-flex items-center gap-1.5 text-red-300">
                       <AlertTriangle className="size-3.5" />
-                      {T("غير متوازن", "Not balanced")} · {T("الفرق", "Diff")}: {fmtMoney(tbTotals.diff, "SAR", "ar-SA")}
+                      {T("غير متوازن", "Not balanced")} · {T("الفرق", "Diff")}:{" "}
+                      {fmtMoney(tbTotals.diff, "SAR", "ar-SA")}
                     </span>
                   )}
                   <span className="text-[var(--fg-soft)]">
-                    {rows.length} {T("حساب", "accounts")} · {T("مدين", "Dr")} {fmtMoney(tbTotals.totalDebit, "SAR", "ar-SA")} · {T("دائن", "Cr")}{" "}
+                    {rows.length} {T("حساب", "accounts")} · {T("مدين", "Dr")}{" "}
+                    {fmtMoney(tbTotals.totalDebit, "SAR", "ar-SA")} · {T("دائن", "Cr")}{" "}
                     {fmtMoney(tbTotals.totalCredit, "SAR", "ar-SA")}
                   </span>
                 </div>
@@ -270,7 +301,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                       {rows.map((r) => (
                         <tr key={r.id} className="border-b border-white/5">
                           <td className="p-1.5">
-                            <input className={inputCls} value={r.code} onChange={(e) => updateRow(r.id, { code: e.target.value })} />
+                            <input
+                              className={inputCls}
+                              value={r.code}
+                              onChange={(e) => updateRow(r.id, { code: e.target.value })}
+                            />
                           </td>
                           <td className="p-1.5">
                             <input
@@ -297,7 +332,10 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                             />
                           </td>
                           <td className="p-1.5">
-                            <button onClick={() => removeRow(r.id)} className="text-red-300 hover:text-red-200">
+                            <button
+                              onClick={() => removeRow(r.id)}
+                              className="text-red-300 hover:text-red-200"
+                            >
                               <Trash2 className="size-3.5" />
                             </button>
                           </td>
@@ -317,7 +355,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
               className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-40"
             >
               {T("التالي: التصنيف والمراجعة", "Next: Classify & Review")}
-              {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
+              {lang === "ar" ? (
+                <ArrowLeft className="size-3.5" />
+              ) : (
+                <ArrowRight className="size-3.5" />
+              )}
             </button>
           </div>
         </>
@@ -336,13 +378,17 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
             <div className="mb-2 flex items-center gap-2 text-xs font-bold">
               {tbTotals.balanced ? (
                 <span className="inline-flex items-center gap-1.5 text-emerald-300">
-                  <CheckCircle2 className="size-3.5" /> {T("ميزان المراجعة متوازن ✓", "Trial balance is balanced ✓")}
+                  <CheckCircle2 className="size-3.5" />{" "}
+                  {T("ميزان المراجعة متوازن ✓", "Trial balance is balanced ✓")}
                 </span>
               ) : (
                 <span className="inline-flex items-center gap-1.5 text-red-300">
                   <AlertTriangle className="size-3.5" />
-                  {T("ميزان المراجعة غير متوازن — صحّح البيانات قبل المتابعة", "Trial balance is not balanced — fix before continuing")} (
-                  {fmtMoney(tbTotals.diff, "SAR", "ar-SA")})
+                  {T(
+                    "ميزان المراجعة غير متوازن — صحّح البيانات قبل المتابعة",
+                    "Trial balance is not balanced — fix before continuing",
+                  )}{" "}
+                  ({fmtMoney(tbTotals.diff, "SAR", "ar-SA")})
                 </span>
               )}
             </div>
@@ -358,20 +404,33 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                 </thead>
                 <tbody>
                   {rows.map((r) => (
-                    <tr key={r.id} className={`border-b border-white/5 ${r.category === "unclassified" ? "bg-amber-400/5" : ""}`}>
+                    <tr
+                      key={r.id}
+                      className={`border-b border-white/5 ${r.category === "unclassified" ? "bg-amber-400/5" : ""}`}
+                    >
                       <td className="p-1.5">
-                        <div className="font-bold text-[var(--fg)]">{r.nameAr || r.nameEn || "—"}</div>
+                        <div className="font-bold text-[var(--fg)]">
+                          {r.nameAr || r.nameEn || "—"}
+                        </div>
                         <div className="text-[10px] text-[var(--fg-soft)]">{r.code}</div>
                       </td>
-                      <td className="p-1.5 text-end tabular-nums">{fmtMoney(r.debit, "SAR", "ar-SA")}</td>
-                      <td className="p-1.5 text-end tabular-nums">{fmtMoney(r.credit, "SAR", "ar-SA")}</td>
+                      <td className="p-1.5 text-end tabular-nums">
+                        {fmtMoney(r.debit, "SAR", "ar-SA")}
+                      </td>
+                      <td className="p-1.5 text-end tabular-nums">
+                        {fmtMoney(r.credit, "SAR", "ar-SA")}
+                      </td>
                       <td className="p-1.5">
                         <select
                           className={inputCls}
                           value={r.category}
-                          onChange={(e) => updateRow(r.id, { category: e.target.value as FSCategoryId })}
+                          onChange={(e) =>
+                            updateRow(r.id, { category: e.target.value as FSCategoryId })
+                          }
                         >
-                          <option value="unclassified">{T("— غير مصنّف —", "— Unclassified —")}</option>
+                          <option value="unclassified">
+                            {T("— غير مصنّف —", "— Unclassified —")}
+                          </option>
                           {GROUP_ORDER.map((g) => (
                             <optgroup key={g} label={GROUP_LABEL[g][lang]}>
                               {FS_CATEGORIES.filter((c) => c.group === g).map((c) => (
@@ -391,26 +450,97 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
           </SectionCard>
 
           <SectionCard
-            title={T("تسويات يدوية (لقائمة التدفقات النقدية والتغيرات في حقوق الملكية)", "Manual Adjustments (for Cash Flow & Changes in Equity)")}
+            title={T(
+              "تسويات يدوية (لقائمة التدفقات النقدية والتغيرات في حقوق الملكية)",
+              "Manual Adjustments (for Cash Flow & Changes in Equity)",
+            )}
             subtitle={T(
               "ميزان المراجعة وحده لا يوضح حركة الفترة — أدخل ما ينطبق من البنود التالية إن وجد.",
               "A trial balance alone doesn't show period movements — enter what applies below.",
             )}
           >
-            <MoneyRow label={T("رصيد النقدية أول الفترة", "Cash balance at start of the period")} value={adj.openingCashBalance} onChange={setAdjField("openingCashBalance")} />
-            <MoneyRow label={T("توزيعات أرباح مسددة خلال الفترة", "Dividends paid during the period")} value={adj.dividendsPaid} onChange={setAdjField("dividendsPaid")} />
-            <MoneyRow label={T("زيادة رأس المال خلال الفترة", "Capital injected during the period")} value={adj.capitalInjected} onChange={setAdjField("capitalInjected")} />
-            <MoneyRow label={T("تحويلات إلى الاحتياطي النظامي", "Transfers to statutory reserve")} value={adj.transfersToReserves} onChange={setAdjField("transfersToReserves")} />
-            <MoneyRow label={T("الزكاة المسددة نقداً خلال الفترة", "Zakat paid in cash during the period")} value={adj.zakatPaidDuringPeriod} onChange={setAdjField("zakatPaidDuringPeriod")} />
-            <MoneyRow label={T("التغير في أرصدة العملاء (زيادة = استخدام نقدي)", "Change in receivables (increase = cash use)")} value={adj.changeInReceivables} onChange={setAdjField("changeInReceivables")} />
-            <MoneyRow label={T("التغير في المخزون (زيادة = استخدام نقدي)", "Change in inventory (increase = cash use)")} value={adj.changeInInventory} onChange={setAdjField("changeInInventory")} />
-            <MoneyRow label={T("التغير في المصروفات المدفوعة مقدماً", "Change in prepaid expenses")} value={adj.changeInPrepaid} onChange={setAdjField("changeInPrepaid")} />
-            <MoneyRow label={T("التغير في أرصدة الموردين (زيادة = مصدر نقدي)", "Change in payables (increase = cash source)")} value={adj.changeInPayables} onChange={setAdjField("changeInPayables")} />
-            <MoneyRow label={T("التغير في المصروفات المستحقة", "Change in accrued expenses")} value={adj.changeInAccrued} onChange={setAdjField("changeInAccrued")} />
-            <MoneyRow label={T("إضافات على الأصول الثابتة خلال الفترة", "Additions to PP&E during the period")} value={adj.ppeAdditions} onChange={setAdjField("ppeAdditions")} />
-            <MoneyRow label={T("متحصلات من استبعاد أصول ثابتة", "Proceeds from disposal of PP&E")} value={adj.ppeDisposalsNetBookValue} onChange={setAdjField("ppeDisposalsNetBookValue")} />
-            <MoneyRow label={T("متحصلات من قروض جديدة", "Proceeds from new loans")} value={adj.proceedsFromLoans} onChange={setAdjField("proceedsFromLoans")} />
-            <MoneyRow label={T("سداد أقساط قروض", "Repayment of loan installments")} value={adj.repaymentOfLoans} onChange={setAdjField("repaymentOfLoans")} />
+            <MoneyRow
+              label={T("رصيد النقدية أول الفترة", "Cash balance at start of the period")}
+              value={adj.openingCashBalance}
+              onChange={setAdjField("openingCashBalance")}
+            />
+            <MoneyRow
+              label={T("توزيعات أرباح مسددة خلال الفترة", "Dividends paid during the period")}
+              value={adj.dividendsPaid}
+              onChange={setAdjField("dividendsPaid")}
+            />
+            <MoneyRow
+              label={T("زيادة رأس المال خلال الفترة", "Capital injected during the period")}
+              value={adj.capitalInjected}
+              onChange={setAdjField("capitalInjected")}
+            />
+            <MoneyRow
+              label={T("تحويلات إلى الاحتياطي النظامي", "Transfers to statutory reserve")}
+              value={adj.transfersToReserves}
+              onChange={setAdjField("transfersToReserves")}
+            />
+            <MoneyRow
+              label={T("الزكاة المسددة نقداً خلال الفترة", "Zakat paid in cash during the period")}
+              value={adj.zakatPaidDuringPeriod}
+              onChange={setAdjField("zakatPaidDuringPeriod")}
+            />
+            <MoneyRow
+              label={T(
+                "التغير في أرصدة العملاء (زيادة = استخدام نقدي)",
+                "Change in receivables (increase = cash use)",
+              )}
+              value={adj.changeInReceivables}
+              onChange={setAdjField("changeInReceivables")}
+            />
+            <MoneyRow
+              label={T(
+                "التغير في المخزون (زيادة = استخدام نقدي)",
+                "Change in inventory (increase = cash use)",
+              )}
+              value={adj.changeInInventory}
+              onChange={setAdjField("changeInInventory")}
+            />
+            <MoneyRow
+              label={T("التغير في المصروفات المدفوعة مقدماً", "Change in prepaid expenses")}
+              value={adj.changeInPrepaid}
+              onChange={setAdjField("changeInPrepaid")}
+            />
+            <MoneyRow
+              label={T(
+                "التغير في أرصدة الموردين (زيادة = مصدر نقدي)",
+                "Change in payables (increase = cash source)",
+              )}
+              value={adj.changeInPayables}
+              onChange={setAdjField("changeInPayables")}
+            />
+            <MoneyRow
+              label={T("التغير في المصروفات المستحقة", "Change in accrued expenses")}
+              value={adj.changeInAccrued}
+              onChange={setAdjField("changeInAccrued")}
+            />
+            <MoneyRow
+              label={T(
+                "إضافات على الأصول الثابتة خلال الفترة",
+                "Additions to PP&E during the period",
+              )}
+              value={adj.ppeAdditions}
+              onChange={setAdjField("ppeAdditions")}
+            />
+            <MoneyRow
+              label={T("متحصلات من استبعاد أصول ثابتة", "Proceeds from disposal of PP&E")}
+              value={adj.ppeDisposalsNetBookValue}
+              onChange={setAdjField("ppeDisposalsNetBookValue")}
+            />
+            <MoneyRow
+              label={T("متحصلات من قروض جديدة", "Proceeds from new loans")}
+              value={adj.proceedsFromLoans}
+              onChange={setAdjField("proceedsFromLoans")}
+            />
+            <MoneyRow
+              label={T("سداد أقساط قروض", "Repayment of loan installments")}
+              value={adj.repaymentOfLoans}
+              onChange={setAdjField("repaymentOfLoans")}
+            />
           </SectionCard>
 
           <SectionCard
@@ -420,16 +550,59 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
               "Default values auto-computed from the classified accounts above — adjust to your specifics before finalizing.",
             )}
           >
-            <MoneyRow label={T("رأس المال", "Capital")} value={fs.zakat.inputs.addCapital} onChange={setZakatField("addCapital")} />
-            <MoneyRow label={T("الأرباح المدورة (افتتاحي)", "Retained earnings (opening)")} value={fs.zakat.inputs.addRetained} onChange={setZakatField("addRetained")} />
-            <MoneyRow label={T("صافي الربح المعدّل قبل الزكاة", "Adjusted profit before zakat")} value={fs.zakat.inputs.addAdjustedProfit} onChange={setZakatField("addAdjustedProfit")} />
-            <MoneyRow label={T("المخصصات", "Provisions")} value={fs.zakat.inputs.addProvisions} onChange={setZakatField("addProvisions")} />
-            <MoneyRow label={T("الاحتياطيات", "Reserves")} value={fs.zakat.inputs.addReserves} onChange={setZakatField("addReserves")} />
-            <MoneyRow label={T("إضافات أخرى", "Other additions")} value={fs.zakat.inputs.addOtherEquityOrFundingLiabilities} onChange={setZakatField("addOtherEquityOrFundingLiabilities")} />
-            <MoneyRow label={T("صافي الأصول الثابتة (حسم)", "Net fixed assets (deduction)")} value={fs.zakat.inputs.dedNetFixedAssets} onChange={setZakatField("dedNetFixedAssets")} />
-            <MoneyRow label={T("استثمارات خارج المملكة (حسم)", "Investments outside KSA (deduction)")} value={fs.zakat.inputs.dedInvestmentsOutsideKsa} onChange={setZakatField("dedInvestmentsOutsideKsa")} />
-            <MoneyRow label={T("استثمارات زكوية داخل المملكة (حسم)", "Investments in zakat-paying KSA entities (deduction)")} value={fs.zakat.inputs.dedInvestmentsInZakatingEntities} onChange={setZakatField("dedInvestmentsInZakatingEntities")} />
-            <MoneyRow label={T("خسائر مرحّلة (حسم)", "Carried-forward losses (deduction)")} value={fs.zakat.inputs.dedCarriedLosses} onChange={setZakatField("dedCarriedLosses")} />
+            <MoneyRow
+              label={T("رأس المال", "Capital")}
+              value={fs.zakat.inputs.addCapital}
+              onChange={setZakatField("addCapital")}
+            />
+            <MoneyRow
+              label={T("الأرباح المدورة (افتتاحي)", "Retained earnings (opening)")}
+              value={fs.zakat.inputs.addRetained}
+              onChange={setZakatField("addRetained")}
+            />
+            <MoneyRow
+              label={T("صافي الربح المعدّل قبل الزكاة", "Adjusted profit before zakat")}
+              value={fs.zakat.inputs.addAdjustedProfit}
+              onChange={setZakatField("addAdjustedProfit")}
+            />
+            <MoneyRow
+              label={T("المخصصات", "Provisions")}
+              value={fs.zakat.inputs.addProvisions}
+              onChange={setZakatField("addProvisions")}
+            />
+            <MoneyRow
+              label={T("الاحتياطيات", "Reserves")}
+              value={fs.zakat.inputs.addReserves}
+              onChange={setZakatField("addReserves")}
+            />
+            <MoneyRow
+              label={T("إضافات أخرى", "Other additions")}
+              value={fs.zakat.inputs.addOtherEquityOrFundingLiabilities}
+              onChange={setZakatField("addOtherEquityOrFundingLiabilities")}
+            />
+            <MoneyRow
+              label={T("صافي الأصول الثابتة (حسم)", "Net fixed assets (deduction)")}
+              value={fs.zakat.inputs.dedNetFixedAssets}
+              onChange={setZakatField("dedNetFixedAssets")}
+            />
+            <MoneyRow
+              label={T("استثمارات خارج المملكة (حسم)", "Investments outside KSA (deduction)")}
+              value={fs.zakat.inputs.dedInvestmentsOutsideKsa}
+              onChange={setZakatField("dedInvestmentsOutsideKsa")}
+            />
+            <MoneyRow
+              label={T(
+                "استثمارات زكوية داخل المملكة (حسم)",
+                "Investments in zakat-paying KSA entities (deduction)",
+              )}
+              value={fs.zakat.inputs.dedInvestmentsInZakatingEntities}
+              onChange={setZakatField("dedInvestmentsInZakatingEntities")}
+            />
+            <MoneyRow
+              label={T("خسائر مرحّلة (حسم)", "Carried-forward losses (deduction)")}
+              value={fs.zakat.inputs.dedCarriedLosses}
+              onChange={setZakatField("dedCarriedLosses")}
+            />
           </SectionCard>
 
           <div className="mt-4 flex justify-between">
@@ -437,7 +610,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
               onClick={() => setStep(1)}
               className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-4 py-2 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
             >
-              {lang === "ar" ? <ArrowRight className="size-3.5" /> : <ArrowLeft className="size-3.5" />}
+              {lang === "ar" ? (
+                <ArrowRight className="size-3.5" />
+              ) : (
+                <ArrowLeft className="size-3.5" />
+              )}
               {T("السابق", "Back")}
             </button>
             <button
@@ -445,7 +622,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
               className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] hover:opacity-95"
             >
               {T("التالي: المعاينة قبل الطباعة", "Next: Preview Before Printing")}
-              {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
+              {lang === "ar" ? (
+                <ArrowLeft className="size-3.5" />
+              ) : (
+                <ArrowRight className="size-3.5" />
+              )}
             </button>
           </div>
         </>
@@ -459,7 +640,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
               onClick={() => setStep(2)}
               className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
             >
-              {lang === "ar" ? <ArrowRight className="size-3.5" /> : <ArrowLeft className="size-3.5" />}
+              {lang === "ar" ? (
+                <ArrowRight className="size-3.5" />
+              ) : (
+                <ArrowLeft className="size-3.5" />
+              )}
               {T("تعديل البيانات", "Edit Data")}
             </button>
             <div className="flex flex-wrap gap-2">
@@ -468,7 +653,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                 onClick={onPrint}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
               >
-                {printing ? <Loader2 className="size-3.5 animate-spin" /> : <Printer className="size-3.5" />}
+                {printing ? (
+                  <Loader2 className="size-3.5 animate-spin" />
+                ) : (
+                  <Printer className="size-3.5" />
+                )}
                 {T("طباعة", "Print")}
               </button>
               <button
@@ -476,7 +665,11 @@ export function FinancialStatementsBuilder({ lang }: { lang: Lang }) {
                 onClick={onDownloadPdf}
                 className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95 disabled:opacity-60"
               >
-                {exportingPdf ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
+                {exportingPdf ? (
+                  <Loader2 className="size-3.5 animate-spin" />
+                ) : (
+                  <Download className="size-3.5" />
+                )}
                 {T("تحميل PDF", "Download PDF")}
               </button>
               <button

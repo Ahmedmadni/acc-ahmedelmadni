@@ -1,7 +1,14 @@
 import "../styles.css";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import { AnimatePresence, motion, useInView, useScroll, useSpring, useTransform } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useInView,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -66,10 +73,13 @@ import vatLogo from "@/assets/vat-logo.png.asset.json";
 
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
-const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
+const AIAssistant = lazy(() =>
+  import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })),
+);
 export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"));
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
+const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -106,7 +116,6 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
       { rel: "preload", as: "image", href: profileImg, fetchPriority: "high" },
-      
     ],
     scripts: [
       {
@@ -150,9 +159,18 @@ export const Route = createFileRoute("/")({
 type Theme = "dark" | "light";
 
 const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> = {
-  alostool: { src: logoAlostool, name: { ar: "شركة الأسطول الآلي للمقاولات", en: "Alostool Alaali Contracting" } },
-  lamara: { src: logoLamara, name: { ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة", en: "Lamara Hospitality & Catering" } },
-  qimat: { src: logoQimat, name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" } },
+  alostool: {
+    src: logoAlostool,
+    name: { ar: "شركة الأسطول الآلي للمقاولات", en: "Alostool Alaali Contracting" },
+  },
+  lamara: {
+    src: logoLamara,
+    name: { ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة", en: "Lamara Hospitality & Catering" },
+  },
+  qimat: {
+    src: logoQimat,
+    name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" },
+  },
 };
 
 const SOCIALS: ReadonlyArray<{
@@ -365,7 +383,11 @@ function Index() {
               <div className="mx-auto mb-4 w-16 h-16 rounded-xl overflow-hidden border border-[#d7aa52]/30 shadow-lg shadow-[#d7aa52]/10">
                 <div className="w-full h-[60%] bg-[#0a4d2e] flex items-center justify-center">
                   <span className="text-white font-black text-[8px] leading-tight text-center">
-                    ضريبة<br/>القيمة<br/>المضافة
+                    ضريبة
+                    <br />
+                    القيمة
+                    <br />
+                    المضافة
                   </span>
                 </div>
                 <div className="w-full h-[40%] bg-[#c9a227] flex items-center justify-center">
@@ -438,7 +460,9 @@ function Index() {
           >
             <div className="loader-circle" />
             <h2 className="mt-6 text-2xl font-bold gold-text tracking-wide">Ahmed Elmadani</h2>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.4em] text-white/40">Senior Accountant</p>
+            <p className="mt-1 text-[11px] uppercase tracking-[0.4em] text-white/40">
+              Senior Accountant
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -449,6 +473,9 @@ function Index() {
         <Hero lang={lang} />
         <ProfileBio lang={lang} />
         <Stats lang={lang} />
+        <Suspense fallback={null}>
+          <TopicsAndVideos lang={lang} />
+        </Suspense>
         <Testimonials lang={lang} />
         <Contact lang={lang} />
       </main>
@@ -462,12 +489,18 @@ function Index() {
 
       <Suspense fallback={null}>
         <AnimatePresence>
-          {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
+          {skillModal && (
+            <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />
+          )}
         </AnimatePresence>
         <AnimatePresence>
-          {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
+          {serviceModal && (
+            <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />
+          )}
         </AnimatePresence>
-        <AnimatePresence>{eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}</AnimatePresence>
+        <AnimatePresence>
+          {eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}
+        </AnimatePresence>
       </Suspense>
     </div>
   );
@@ -536,15 +569,23 @@ export function Navbar({
       style={{ background: "color-mix(in oklab, #04101f 80%, transparent)" }}
     >
       <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20 items-center justify-between gap-4">
-        <RouterLink to="/" className="group flex flex-col leading-tight shrink-0" onMouseEnter={playHover}>
+        <RouterLink
+          to="/"
+          className="group flex flex-col leading-tight shrink-0"
+          onMouseEnter={playHover}
+        >
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
-          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] gold-text">Senior Accountant</span>
+          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] gold-text">
+            Senior Accountant
+          </span>
         </RouterLink>
 
         <ul className="hidden items-center gap-7 lg:flex">
-          {links.map((l) => <li key={l.to}>{renderLink(l)}</li>)}
+          {links.map((l) => (
+            <li key={l.to}>{renderLink(l)}</li>
+          ))}
         </ul>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -573,7 +614,9 @@ export function Navbar({
               aria-label="Admin"
             >
               <ShieldCheck className="size-4" />
-              <span className="hidden lg:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
+              <span className="hidden lg:inline">
+                {lang === "ar" ? "لوحة التحكم" : "Dashboard"}
+              </span>
             </RouterLink>
           )}
           {isAdmin && (
@@ -594,7 +637,11 @@ export function Navbar({
             className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? <Sun className="size-4 text-[#d7aa52]" /> : <Moon className="size-4 text-[#d7aa52]" />}
+            {theme === "dark" ? (
+              <Sun className="size-4 text-[#d7aa52]" />
+            ) : (
+              <Moon className="size-4 text-[#d7aa52]" />
+            )}
           </button>
           <button
             onClick={onToggle}
@@ -614,14 +661,22 @@ export function Navbar({
           >
             <Sparkles className="size-4" />
             {lang === "ar" ? "اطلب خدمة" : "Request Service"}
-            {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
+            {lang === "ar" ? (
+              <ArrowLeft className="size-3.5" />
+            ) : (
+              <ArrowRight className="size-3.5" />
+            )}
           </RouterLink>
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="flex size-9 items-center justify-center rounded-full gold-border lg:hidden"
             aria-label="Menu"
           >
-            {mobileOpen ? <X className="size-4 text-[#d7aa52]" /> : <Menu className="size-4 text-[#d7aa52]" />}
+            {mobileOpen ? (
+              <X className="size-4 text-[#d7aa52]" />
+            ) : (
+              <Menu className="size-4 text-[#d7aa52]" />
+            )}
           </button>
         </div>
       </div>
@@ -680,7 +735,6 @@ export function Navbar({
   );
 }
 
-
 /* ============= TYPEWRITER ============= */
 function Typewriter({ words }: { words: string[] }) {
   const [idx, setIdx] = useState(0);
@@ -717,7 +771,9 @@ function HeroFrameSlideshow() {
   useEffect(() => {
     const mqlMobile = window.matchMedia("(max-width: 767px)");
     const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const conn = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    const conn = (
+      navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }
+    ).connection;
     const lowBandwidth = !!conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType ?? "");
     const allow = !mqlMobile.matches && !mqlReduce.matches && !lowBandwidth;
     setShouldRenderVideo(allow);
@@ -791,22 +847,34 @@ function Hero({ lang }: { lang: Lang }) {
     {
       icon: Star,
       title: lang === "ar" ? "خبرة احترافية" : "Pro Experience",
-      desc: lang === "ar" ? "سنوات من الخبرة في المجال المالي والمحاسبي" : "Years of expertise in finance & accounting",
+      desc:
+        lang === "ar"
+          ? "سنوات من الخبرة في المجال المالي والمحاسبي"
+          : "Years of expertise in finance & accounting",
     },
     {
       icon: BarChart3,
       title: lang === "ar" ? "تحليل مالي" : "Financial Analysis",
-      desc: lang === "ar" ? "تحليلات دقيقة تدعم اتخاذ القرارات" : "Accurate analytics for sharper decisions",
+      desc:
+        lang === "ar"
+          ? "تحليلات دقيقة تدعم اتخاذ القرارات"
+          : "Accurate analytics for sharper decisions",
     },
     {
       icon: Wrench,
       title: lang === "ar" ? "حلول مخصصة" : "Tailored Solutions",
-      desc: lang === "ar" ? "حلول مالية مصممة خصيصاً لأعمالك" : "Financial solutions built around your business",
+      desc:
+        lang === "ar"
+          ? "حلول مالية مصممة خصيصاً لأعمالك"
+          : "Financial solutions built around your business",
     },
     {
       icon: ShieldCheck,
       title: lang === "ar" ? "التزام وموثوقية" : "Trust & Compliance",
-      desc: lang === "ar" ? "التزام بأعلى معايير الجودة والدقة" : "Held to the highest standards of accuracy",
+      desc:
+        lang === "ar"
+          ? "التزام بأعلى معايير الجودة والدقة"
+          : "Held to the highest standards of accuracy",
     },
   ];
 
@@ -816,7 +884,10 @@ function Hero({ lang }: { lang: Lang }) {
       className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Background video / gradient */}
-      <motion.div style={{ y: yBg }} className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0">
+      <motion.div
+        style={{ y: yBg }}
+        className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0"
+      >
         <HeroFrameSlideshow />
         {/* CHANGE 1: increased darkness from /40 and /60 to /80 and /90 */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/50 via-[#0D1726]/65 to-[var(--bg-surface)]" />
@@ -846,7 +917,10 @@ function Hero({ lang }: { lang: Lang }) {
             </div>
 
             <h1 className="mb-6 font-black tracking-tight leading-[1.1]">
-              <span className="block text-[42px] sm:text-[56px] lg:text-[72px] pb-1" style={{ color: "var(--fg)" }}>
+              <span
+                className="block text-[42px] sm:text-[56px] lg:text-[72px] pb-1"
+                style={{ color: "var(--fg)" }}
+              >
                 {t.hero.name[lang]}
               </span>
               <span className="mt-2 block text-[38px] sm:text-[50px] lg:text-[64px] gold-text">
@@ -1055,9 +1129,14 @@ function ProfileBio({ lang }: { lang: Lang }) {
               {t.about.title[lang]}
             </div>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight gold-text sm:text-4xl">{t.hero.name[lang]}</h2>
+            <h2 className="mt-4 text-3xl font-black leading-tight gold-text sm:text-4xl">
+              {t.hero.name[lang]}
+            </h2>
 
-            <div className="mt-5 space-y-4 text-base leading-loose text-justify" style={{ color: "var(--fg-soft)" }}>
+            <div
+              className="mt-5 space-y-4 text-base leading-loose text-justify"
+              style={{ color: "var(--fg-soft)" }}
+            >
               <p>{t.about.body[lang]}</p>
               <p>{t.about.body2[lang]}</p>
             </div>
@@ -1193,7 +1272,10 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
                   <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>
                     {s[lang]}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>
+                  <p
+                    className="mt-2 text-sm leading-relaxed text-justify"
+                    style={{ color: "var(--fg-soft)" }}
+                  >
                     {s.d[lang]}
                   </p>
                   <button
@@ -1242,7 +1324,15 @@ export function Experience({ lang }: { lang: Lang }) {
   );
 }
 
-function TimelineItem({ item, index, lang }: { item: (typeof t.experience.items)[number]; index: number; lang: Lang }) {
+function TimelineItem({
+  item,
+  index,
+  lang,
+}: {
+  item: (typeof t.experience.items)[number];
+  index: number;
+  lang: Lang;
+}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const left = index % 2 === 0;
@@ -1266,8 +1356,16 @@ function TimelineItem({ item, index, lang }: { item: (typeof t.experience.items)
         <p
           className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] select-none blur-[6px] saturate-50 transition-all duration-500 hover:blur-0 hover:saturate-100 focus:blur-0"
           tabIndex={0}
-          title={lang === "ar" ? "اسم الشركة مخفي حفاظًا على الخصوصية" : "Company name hidden for privacy"}
-          aria-label={lang === "ar" ? "اسم الشركة مخفي حفاظًا على الخصوصية" : "Company name hidden for privacy"}
+          title={
+            lang === "ar"
+              ? "اسم الشركة مخفي حفاظًا على الخصوصية"
+              : "Company name hidden for privacy"
+          }
+          aria-label={
+            lang === "ar"
+              ? "اسم الشركة مخفي حفاظًا على الخصوصية"
+              : "Company name hidden for privacy"
+          }
         >
           {item.company[lang]}
         </p>
@@ -1378,8 +1476,12 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     <Icon className="size-5" />
                   </span>
                   <div className="flex-1">
-                    <div className="text-[10px] uppercase tracking-[0.25em]" style={{ color: "var(--fg-soft)" }}>
-                      {String(i + 1).padStart(2, "0")} / {t.skills.groups.length.toString().padStart(2, "0")}
+                    <div
+                      className="text-[10px] uppercase tracking-[0.25em]"
+                      style={{ color: "var(--fg-soft)" }}
+                    >
+                      {String(i + 1).padStart(2, "0")} /{" "}
+                      {t.skills.groups.length.toString().padStart(2, "0")}
                     </div>
                     <div
                       className={`text-sm font-extrabold ${isActive ? "gold-text" : ""}`}
@@ -1409,9 +1511,13 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                   <div className="text-xs uppercase tracking-[0.4em] text-[#d7aa52]">
                     {lang === "ar" ? "المجموعة" : "Group"}
                   </div>
-                  <h3 className="mt-1 text-3xl font-black text-white sm:text-4xl">{t.skills.groups[active].h[lang]}</h3>
+                  <h3 className="mt-1 text-3xl font-black text-white sm:text-4xl">
+                    {t.skills.groups[active].h[lang]}
+                  </h3>
                 </div>
-                <div className="font-mono text-5xl font-black text-[#d7aa52]/30 sm:text-6xl">0{active + 1}</div>
+                <div className="font-mono text-5xl font-black text-[#d7aa52]/30 sm:text-6xl">
+                  0{active + 1}
+                </div>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
@@ -1503,9 +1609,19 @@ export function BeforeAfter({ lang }: { lang: Lang }) {
           ref={wrapRef}
           className="relative mt-12 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[#d7aa52]/30 select-none gold-glow"
         >
-          <img src={beforeAfterImg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+          <img
+            src={beforeAfterImg}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
           <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-            <img src={beforeAfterImg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <img
+              src={beforeAfterImg}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f]/40 to-transparent" />
           </div>
 
@@ -1558,7 +1674,8 @@ function Testimonials({ lang }: { lang: Lang }) {
         className="relative mt-10 overflow-hidden"
         style={{
           maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
         }}
       >
         <motion.div
@@ -1577,7 +1694,8 @@ function Testimonials({ lang }: { lang: Lang }) {
               </p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-base font-black text-[#04101f]">
-                  {it.name[lang].split(" ")[0].charAt(it.name[lang].startsWith(".") ? 1 : 0) || it.name[lang].charAt(0)}
+                  {it.name[lang].split(" ")[0].charAt(it.name[lang].startsWith(".") ? 1 : 0) ||
+                    it.name[lang].charAt(0)}
                 </div>
                 <div>
                   <div className="text-sm font-extrabold" style={{ color: "var(--fg)" }}>
@@ -1599,7 +1717,10 @@ export function Certs({ lang }: { lang: Lang }) {
   return (
     <section className="py-14">
       <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle eyebrow={lang === "ar" ? "التطوير المهني" : "Development"} title={t.certs.title[lang]} />
+        <SectionTitle
+          eyebrow={lang === "ar" ? "التطوير المهني" : "Development"}
+          title={t.certs.title[lang]}
+        />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.certs.items.map((c, i) => (
             <motion.div
@@ -1673,7 +1794,10 @@ export function Contact({ lang }: { lang: Lang }) {
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
               />
-              <div className="relative text-xs font-extrabold leading-tight" style={{ color: "var(--fg)" }}>
+              <div
+                className="relative text-xs font-extrabold leading-tight"
+                style={{ color: "var(--fg)" }}
+              >
                 {s.label}
               </div>
             </motion.a>
@@ -1703,8 +1827,13 @@ export function Footer({ lang }: { lang: Lang }) {
 
       <div className="w-full px-4 sm:px-8 lg:px-16 grid  gap-6 md:grid-cols-3">
         <div>
-          <div className="text-lg font-black gold-text">{lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}</div>
-          <p className="mt-1.5 max-w-md text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
+          <div className="text-lg font-black gold-text">
+            {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
+          </div>
+          <p
+            className="mt-1.5 max-w-md text-xs leading-relaxed"
+            style={{ color: "var(--fg-soft)" }}
+          >
             {t.footer.tagline[lang]}
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -1717,20 +1846,28 @@ export function Footer({ lang }: { lang: Lang }) {
               className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2 py-1 text-[10px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
               title={lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT services"}
             >
-              <img src={vatLogo.url} alt="VAT" width={18} height={18} className="rounded-sm" loading="lazy" decoding="async" />
+              <img
+                src={vatLogo.url}
+                alt="VAT"
+                width={18}
+                height={18}
+                className="rounded-sm"
+                loading="lazy"
+                decoding="async"
+              />
               {lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}
             </RouterLink>
           </div>
         </div>
 
-
-
-
         <div>
           <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
             {t.footer.quick[lang]}
           </div>
-          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
+          <ul
+            className="flex flex-wrap gap-x-4 gap-y-1 text-xs"
+            style={{ color: "var(--fg-soft)" }}
+          >
             {links.map((l) => (
               <li key={l.to}>
                 {l.to.startsWith("/#") ? (
@@ -1795,7 +1932,9 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
       transition={{ duration: 0.7 }}
       className="title-bar"
     >
-      <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {eyebrow}</div>
+      <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#d7aa52]">
+        — {eyebrow}
+      </div>
       <h2 className="text-4xl font-black sm:text-5xl" style={{ color: "var(--fg)" }}>
         {title}
       </h2>
@@ -1828,7 +1967,10 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
           className="relative flex size-14 shrink-0 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
         >
-          <span className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60" aria-hidden />
+          <span
+            className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60"
+            aria-hidden
+          />
           {open ? <X className="size-5 relative" /> : <Share2 className="size-5 relative" />}
         </motion.button>
 
@@ -1869,4 +2011,3 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
     </div>
   );
 }
-

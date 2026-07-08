@@ -12,7 +12,6 @@ import {
   MessageCircle,
   Printer,
   Loader2,
-
   Bookmark,
   Star,
   ExternalLink,
@@ -32,7 +31,10 @@ type Section = { heading: string; paragraphs?: string[]; body?: string };
 function sectionParagraphs(s: Section): string[] {
   if (Array.isArray(s.paragraphs) && s.paragraphs.length) return s.paragraphs;
   if (typeof s.body === "string" && s.body.trim())
-    return s.body.split(/\n{2,}|\r\n{2,}/).map((p) => p.trim()).filter(Boolean);
+    return s.body
+      .split(/\n{2,}|\r\n{2,}/)
+      .map((p) => p.trim())
+      .filter(Boolean);
   return [];
 }
 type FaqItem = { q: string; a: string };
@@ -88,9 +90,24 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
-            { "@type": "ListItem", position: 2, name: "المكتبة", item: "https://ahmedelmadni.com/knowledge" },
-            { "@type": "ListItem", position: 3, name: params.categorySlug, item: `https://ahmedelmadni.com/knowledge/${params.categorySlug}` },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "الرئيسية",
+              item: "https://ahmedelmadni.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "المكتبة",
+              item: "https://ahmedelmadni.com/knowledge",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: params.categorySlug,
+              item: `https://ahmedelmadni.com/knowledge/${params.categorySlug}`,
+            },
             { "@type": "ListItem", position: 4, name: title, item: url },
           ],
         }),
@@ -125,7 +142,9 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
         ...(image ? [{ name: "twitter:image", content: image }] : []),
-        ...(a?.published_at ? [{ property: "article:published_time", content: a.published_at }] : []),
+        ...(a?.published_at
+          ? [{ property: "article:published_time", content: a.published_at }]
+          : []),
       ],
       links: [{ rel: "canonical", href: url }],
       scripts,
@@ -133,7 +152,6 @@ export const Route = createFileRoute("/knowledge/$categorySlug/$articleSlug")({
   },
   component: ArticlePage,
 });
-
 
 function slugifyHeading(s: string, i: number) {
   return `h-${i}-${s.replace(/\s+/g, "-").slice(0, 40)}`;
@@ -280,7 +298,9 @@ function ArticlePage() {
 
   const router = useRouter();
   const url =
-    typeof window !== "undefined" ? window.location.href : `https://example.com${router.state.location.pathname}`;
+    typeof window !== "undefined"
+      ? window.location.href
+      : `https://example.com${router.state.location.pathname}`;
 
   async function copyLink() {
     await navigator.clipboard.writeText(url);
@@ -354,7 +374,6 @@ function ArticlePage() {
       setPrinting(false);
     }
   }
-
 
   if (!article.data) {
     return (
@@ -458,7 +477,9 @@ function ArticlePage() {
             <h1 className="text-2xl font-black leading-snug text-white sm:text-4xl">
               {a.title_ar}
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">{a.excerpt_ar}</p>
+            <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
+              {a.excerpt_ar}
+            </p>
             <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-white/60">
               <span className="inline-flex items-center gap-1.5">
                 <User className="size-3.5 text-[#d7aa52]" /> {a.author_name}
@@ -486,7 +507,11 @@ function ArticlePage() {
         {/* Toolbar */}
         <div className="sticky top-14 z-20 my-4 flex flex-wrap items-center gap-2 rounded-2xl border border-[#d7aa52]/20 bg-[#04101f]/80 px-4 py-2 backdrop-blur print:hidden">
           <ToolBtn onClick={() => share("tw")} icon={<Twitter className="size-3.5" />} label="X" />
-          <ToolBtn onClick={() => share("li")} icon={<Linkedin className="size-3.5" />} label="LinkedIn" />
+          <ToolBtn
+            onClick={() => share("li")}
+            icon={<Linkedin className="size-3.5" />}
+            label="LinkedIn"
+          />
           <ToolBtn
             onClick={() => share("wa")}
             icon={<MessageCircle className="size-3.5" />}
@@ -503,7 +528,18 @@ function ArticlePage() {
             }
             label={bookmarked.data ? "محفوظ" : "حفظ"}
           />
-          <ToolBtn onClick={printPdf} disabled={printing} icon={printing ? <Loader2 className="size-3.5 animate-spin" /> : <Printer className="size-3.5" />} label="طباعة / PDF" />
+          <ToolBtn
+            onClick={printPdf}
+            disabled={printing}
+            icon={
+              printing ? (
+                <Loader2 className="size-3.5 animate-spin" />
+              ) : (
+                <Printer className="size-3.5" />
+              )
+            }
+            label="طباعة / PDF"
+          />
           <div className="mx-1 h-5 w-px bg-white/10" />
           <div className="flex items-center gap-0.5" aria-label="قيّم المقال">
             {[1, 2, 3, 4, 5].map((n) => (
@@ -581,7 +617,10 @@ function ArticlePage() {
             {faq.length > 0 && (
               <section id="faq" className="mb-10 scroll-mt-32">
                 <h2 className="mb-4 text-2xl font-bold text-white">الأسئلة الشائعة</h2>
-                <Accordion type="multiple" className="rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] px-4">
+                <Accordion
+                  type="multiple"
+                  className="rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] px-4"
+                >
                   {faq.map((f, i) => (
                     <AccordionItem key={i} value={`f-${i}`} className="border-[#d7aa52]/10">
                       <AccordionTrigger className="text-right text-white">{f.q}</AccordionTrigger>
@@ -646,8 +685,7 @@ function ArticlePage() {
                       key={r.id}
                       to="/knowledge/$categorySlug/$articleSlug"
                       params={{
-                        categorySlug:
-                          cat.data?.id === r.category_id ? categorySlug : categorySlug,
+                        categorySlug: cat.data?.id === r.category_id ? categorySlug : categorySlug,
                         articleSlug: r.slug,
                       }}
                       className="group overflow-hidden rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] transition-all hover:border-[#d7aa52]/40"
@@ -702,4 +740,3 @@ function ToolBtn({
     </button>
   );
 }
-

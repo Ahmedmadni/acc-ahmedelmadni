@@ -42,10 +42,7 @@ import { Sparkles, Pencil, Trash2, Plus, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/admin/library")({
   head: () => ({
-    meta: [
-      { title: "إدارة المكتبة | المشرف" },
-      { name: "robots", content: "noindex, nofollow" },
-    ],
+    meta: [{ title: "إدارة المكتبة | المشرف" }, { name: "robots", content: "noindex, nofollow" }],
   }),
   component: AdminLibraryPage,
 });
@@ -90,9 +87,7 @@ function AdminLibraryPage() {
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <BookOpen className="size-5 text-[#f3d28a]" />
-            <h1 className="text-base font-extrabold text-[#f3d28a]">
-              لوحة إدارة المكتبة
-            </h1>
+            <h1 className="text-base font-extrabold text-[#f3d28a]">لوحة إدارة المكتبة</h1>
           </div>
           <Link
             to="/library"
@@ -193,7 +188,10 @@ function LibraryPanel({ type }: { type: ItemType }) {
         <div className="text-sm text-white/60">
           عدد العناصر: <span className="font-bold text-white">{items.length}</span>
         </div>
-        <Button onClick={openCreate} className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90">
+        <Button
+          onClick={openCreate}
+          className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90"
+        >
           <Plus className="size-4" />
           إضافة {TYPE_LABEL[type]}
         </Button>
@@ -250,7 +248,12 @@ function LibraryPanel({ type }: { type: ItemType }) {
                 </td>
                 <td className="p-3">
                   <div className="flex gap-2">
-                    <Button variant="ghost" size="icon" aria-label={`تعديل ${it.title_ar}`} onClick={() => openEdit(it)}>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      aria-label={`تعديل ${it.title_ar}`}
+                      onClick={() => openEdit(it)}
+                    >
                       <Pencil className="size-4 text-[#f3d28a]" />
                     </Button>
                     <Button
@@ -272,7 +275,10 @@ function LibraryPanel({ type }: { type: ItemType }) {
       </div>
 
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl" dir="rtl">
+        <DialogContent
+          className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl"
+          dir="rtl"
+        >
           <DialogHeader>
             <DialogTitle className="text-[#f3d28a]">
               {editing?.id ? "تعديل" : "إضافة"} {TYPE_LABEL[type]}
@@ -380,10 +386,14 @@ function ItemForm({
             value={value.category_slug ?? "fundamentals"}
             onValueChange={(v) => onChange({ ...value, category_slug: v })}
           >
-            <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20"><SelectValue /></SelectTrigger>
+            <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+              <SelectValue />
+            </SelectTrigger>
             <SelectContent>
               {CATEGORIES.map((c) => (
-                <SelectItem key={c} value={c}>{c}</SelectItem>
+                <SelectItem key={c} value={c}>
+                  {c}
+                </SelectItem>
               ))}
             </SelectContent>
           </Select>
@@ -393,7 +403,9 @@ function ItemForm({
             value={value.level ?? "beginner"}
             onValueChange={(v) => onChange({ ...value, level: v })}
           >
-            <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20"><SelectValue /></SelectTrigger>
+            <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+              <SelectValue />
+            </SelectTrigger>
             <SelectContent>
               <SelectItem value="beginner">مبتدئ</SelectItem>
               <SelectItem value="intermediate">متوسط</SelectItem>
@@ -585,13 +597,20 @@ function ArticlesPanel() {
   const articles = data?.articles ?? [];
 
   const [editOpen, setEditOpen] = useState(false);
-  const [editing, setEditing] = useState<{ id: string; title_ar: string; status: string } | null>(null);
+  const [editing, setEditing] = useState<{ id: string; title_ar: string; status: string } | null>(
+    null,
+  );
   const [titleEdit, setTitleEdit] = useState("");
   const [statusEdit, setStatusEdit] = useState<string>("draft");
 
   const upd = useMutation({
-    mutationFn: (v: { id: string; patch: { title_ar?: string; status?: "draft" | "pending_review" | "approved" | "published" | "rejected" } }) =>
-      updFn({ data: v }),
+    mutationFn: (v: {
+      id: string;
+      patch: {
+        title_ar?: string;
+        status?: "draft" | "pending_review" | "approved" | "published" | "rejected";
+      };
+    }) => updFn({ data: v }),
     onSuccess: () => {
       toast.success("تم التحديث");
       qc.invalidateQueries({ queryKey: ["admin-articles"] });
@@ -651,10 +670,18 @@ function ArticlesPanel() {
           </thead>
           <tbody>
             {isLoading && (
-              <tr><td colSpan={4} className="p-6 text-center text-white/40">جارٍ التحميل...</td></tr>
+              <tr>
+                <td colSpan={4} className="p-6 text-center text-white/40">
+                  جارٍ التحميل...
+                </td>
+              </tr>
             )}
             {isError && (
-              <tr><td colSpan={4} className="p-6 text-center text-red-300">تعذّر تحميل المقالات. حاول تحديث الصفحة.</td></tr>
+              <tr>
+                <td colSpan={4} className="p-6 text-center text-red-300">
+                  تعذّر تحميل المقالات. حاول تحديث الصفحة.
+                </td>
+              </tr>
             )}
             {articles.map((a) => (
               <tr key={a.id} className="border-t border-white/5">
@@ -669,15 +696,30 @@ function ArticlesPanel() {
                   <div className="flex gap-1">
                     {a.status === "pending_review" && (
                       <>
-                        <Button size="sm" variant="ghost" onClick={() => review.mutate({ id: a.id, action: "approve" })} className="text-emerald-400">
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          onClick={() => review.mutate({ id: a.id, action: "approve" })}
+                          className="text-emerald-400"
+                        >
                           موافقة
                         </Button>
-                        <Button size="sm" variant="ghost" onClick={() => review.mutate({ id: a.id, action: "reject" })} className="text-red-400">
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          onClick={() => review.mutate({ id: a.id, action: "reject" })}
+                          className="text-red-400"
+                        >
                           رفض
                         </Button>
                       </>
                     )}
-                    <Button size="icon" variant="ghost" aria-label={`تعديل ${a.title_ar}`} onClick={() => openEdit(a)}>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`تعديل ${a.title_ar}`}
+                      onClick={() => openEdit(a)}
+                    >
                       <Pencil className="size-4 text-[#f3d28a]" />
                     </Button>
                     <Button
@@ -699,7 +741,8 @@ function ArticlesPanel() {
         {data && data.total > data.pageSize && (
           <div className="flex items-center justify-between border-t border-[#d7aa52]/15 p-3 text-sm text-white/60">
             <span>
-              {page * data.pageSize + 1}–{Math.min((page + 1) * data.pageSize, data.total)} من {data.total}
+              {page * data.pageSize + 1}–{Math.min((page + 1) * data.pageSize, data.total)} من{" "}
+              {data.total}
             </span>
             <div className="flex gap-2">
               <button
@@ -736,10 +779,14 @@ function ArticlesPanel() {
             </Field>
             <Field label="الحالة">
               <Select value={statusEdit} onValueChange={setStatusEdit}>
-                <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20"><SelectValue /></SelectTrigger>
+                <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+                  <SelectValue />
+                </SelectTrigger>
                 <SelectContent>
                   {Object.entries(STATUS_LABEL).map(([k, l]) => (
-                    <SelectItem key={k} value={k}>{l}</SelectItem>
+                    <SelectItem key={k} value={k}>
+                      {l}
+                    </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -751,7 +798,15 @@ function ArticlesPanel() {
                 if (!editing) return;
                 upd.mutate({
                   id: editing.id,
-                  patch: { title_ar: titleEdit, status: statusEdit as "draft" | "pending_review" | "approved" | "published" | "rejected" },
+                  patch: {
+                    title_ar: titleEdit,
+                    status: statusEdit as
+                      | "draft"
+                      | "pending_review"
+                      | "approved"
+                      | "published"
+                      | "rejected",
+                  },
                 });
               }}
               className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
@@ -824,4 +879,3 @@ function PdfUploadField({
     </div>
   );
 }
-

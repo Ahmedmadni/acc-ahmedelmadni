@@ -16,7 +16,11 @@ const TRUSTED_DOMAINS = [
 const ArticleSchema = z.object({
   title_ar: z.string().min(20).max(140),
   title_en: z.string().min(10).max(140),
-  slug: z.string().regex(/^[a-z0-9-]+$/).min(6).max(80),
+  slug: z
+    .string()
+    .regex(/^[a-z0-9-]+$/)
+    .min(6)
+    .max(80),
   excerpt_ar: z.string().min(80).max(400), // executive summary
   excerpt_en: z.string().min(60).max(400),
   meta_title: z.string().min(20).max(70),
@@ -40,25 +44,19 @@ const ArticleSchema = z.object({
     .array(z.object({ q: z.string().min(8), a: z.string().min(40) }))
     .min(3)
     .max(8),
-  references: z
-    .array(z.object({ title: z.string().min(3), url: z.string().url() }))
-    .min(3),
-  external_sources: z
-    .array(z.object({ name: z.string(), url: z.string().url() }))
-    .min(1),
+  references: z.array(z.object({ title: z.string().min(3), url: z.string().url() })).min(3),
+  external_sources: z.array(z.object({ name: z.string(), url: z.string().url() })).min(1),
 });
 
 type GeneratedArticle = z.infer<typeof ArticleSchema>;
 
 // ===== Helpers =====
 function sha256(text: string): Promise<string> {
-  return crypto.subtle
-    .digest("SHA-256", new TextEncoder().encode(text))
-    .then((buf) =>
-      Array.from(new Uint8Array(buf))
-        .map((b) => b.toString(16).padStart(2, "0"))
-        .join(""),
-    );
+  return crypto.subtle.digest("SHA-256", new TextEncoder().encode(text)).then((buf) =>
+    Array.from(new Uint8Array(buf))
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join(""),
+  );
 }
 
 async function callLovableAI(prompt: string, system: string): Promise<string> {
@@ -144,9 +142,7 @@ export const generateArticleFn = createServerFn({ method: "POST" })
         .maybeSingle();
       category = c;
     } else {
-      const { data: cats } = await supabase
-        .from("kb_categories")
-        .select("id,slug,name_ar,name_en");
+      const { data: cats } = await supabase.from("kb_categories").select("id,slug,name_ar,name_en");
       if (!cats?.length) throw new Error("No categories");
       category = cats[Math.floor(Math.random() * cats.length)];
     }
@@ -318,7 +314,9 @@ const PAGE_SIZE = 25;
 
 export const listAdminArticlesFn = createServerFn({ method: "GET" })
   .middleware([requireAdmin])
-  .inputValidator((input: unknown) => z.object({ page: z.number().int().min(0) }).parse(input ?? { page: 0 }))
+  .inputValidator((input: unknown) =>
+    z.object({ page: z.number().int().min(0) }).parse(input ?? { page: 0 }),
+  )
   .handler(async ({ context, data: { page } }) => {
     const { supabase } = context;
     const from = page * PAGE_SIZE;

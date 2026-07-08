@@ -30,18 +30,48 @@ export function CrmStats() {
     <div className="space-y-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <EmojiStatTile label="إجمالي العملاء" value={clients.length} icon="👥" />
-        <EmojiStatTile label="نشطون" value={byStatus.active} icon="✅" valueColor="text-emerald-400" />
-        <EmojiStatTile label="مسجلون VAT" value={clients.filter((c) => c.vat_registered).length} icon="🧾" valueColor="text-amber-400" />
-        <EmojiStatTile label="رسائل مرسلة" value={msgCount} icon="💬" valueColor="text-emerald-400" />
+        <EmojiStatTile
+          label="نشطون"
+          value={byStatus.active}
+          icon="✅"
+          valueColor="text-emerald-400"
+        />
+        <EmojiStatTile
+          label="مسجلون VAT"
+          value={clients.filter((c) => c.vat_registered).length}
+          icon="🧾"
+          valueColor="text-amber-400"
+        />
+        <EmojiStatTile
+          label="رسائل مرسلة"
+          value={msgCount}
+          icon="💬"
+          valueColor="text-emerald-400"
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
           <h3 className="text-sm font-extrabold text-[#f3d28a] mb-4">توزيع الحالة</h3>
           <div className="space-y-2">
-            <Bar label="نشط" value={byStatus.active} total={clients.length} color="bg-emerald-500" />
-            <Bar label="معلق" value={byStatus.pending} total={clients.length} color="bg-amber-500" />
-            <Bar label="غير نشط" value={byStatus.inactive} total={clients.length} color="bg-white/30" />
+            <Bar
+              label="نشط"
+              value={byStatus.active}
+              total={clients.length}
+              color="bg-emerald-500"
+            />
+            <Bar
+              label="معلق"
+              value={byStatus.pending}
+              total={clients.length}
+              color="bg-amber-500"
+            />
+            <Bar
+              label="غير نشط"
+              value={byStatus.inactive}
+              total={clients.length}
+              color="bg-white/30"
+            />
           </div>
         </div>
 

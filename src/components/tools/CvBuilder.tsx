@@ -20,7 +20,14 @@ import { capturePdfElement } from "@/lib/pdf-export";
 import { enhanceCvSection, parseGeneratedList } from "@/features/cv/assistant";
 import { scoreCv } from "@/features/cv/quality";
 import { CV_TEMPLATES, getCvTemplate } from "@/features/cv/templates";
-import type { Certification, CvAssistantAction, CvData, CvTemplateId, Education, Experience } from "@/features/cv/types";
+import type {
+  Certification,
+  CvAssistantAction,
+  CvData,
+  CvTemplateId,
+  Education,
+  Experience,
+} from "@/features/cv/types";
 import { CvPreview } from "@/features/cv/CvPreview";
 
 /* ================= TYPES ================= */
@@ -194,20 +201,46 @@ export function CvBuilder({ lang }: { lang: Lang }) {
 
   /* ============= List helpers ============= */
   const addExp = () =>
-    set("experience", [...data.experience, { id: uid(), role: "", company: "", period: "", description: "" }]);
+    set("experience", [
+      ...data.experience,
+      { id: uid(), role: "", company: "", period: "", description: "" },
+    ]);
   const updExp = (id: string, patch: Partial<Experience>) =>
-    set("experience", data.experience.map((x) => (x.id === id ? { ...x, ...patch } : x)));
-  const delExp = (id: string) => set("experience", data.experience.filter((x) => x.id !== id));
+    set(
+      "experience",
+      data.experience.map((x) => (x.id === id ? { ...x, ...patch } : x)),
+    );
+  const delExp = (id: string) =>
+    set(
+      "experience",
+      data.experience.filter((x) => x.id !== id),
+    );
 
-  const addEdu = () => set("education", [...data.education, { id: uid(), degree: "", school: "", period: "" }]);
+  const addEdu = () =>
+    set("education", [...data.education, { id: uid(), degree: "", school: "", period: "" }]);
   const updEdu = (id: string, patch: Partial<Education>) =>
-    set("education", data.education.map((x) => (x.id === id ? { ...x, ...patch } : x)));
-  const delEdu = (id: string) => set("education", data.education.filter((x) => x.id !== id));
+    set(
+      "education",
+      data.education.map((x) => (x.id === id ? { ...x, ...patch } : x)),
+    );
+  const delEdu = (id: string) =>
+    set(
+      "education",
+      data.education.filter((x) => x.id !== id),
+    );
 
-  const addCert = () => set("certifications", [...data.certifications, { id: uid(), name: "", issuer: "", year: "" }]);
+  const addCert = () =>
+    set("certifications", [...data.certifications, { id: uid(), name: "", issuer: "", year: "" }]);
   const updCert = (id: string, patch: Partial<Certification>) =>
-    set("certifications", data.certifications.map((x) => (x.id === id ? { ...x, ...patch } : x)));
-  const delCert = (id: string) => set("certifications", data.certifications.filter((x) => x.id !== id));
+    set(
+      "certifications",
+      data.certifications.map((x) => (x.id === id ? { ...x, ...patch } : x)),
+    );
+  const delCert = (id: string) =>
+    set(
+      "certifications",
+      data.certifications.filter((x) => x.id !== id),
+    );
 
   const addSkill = () => {
     const v = skillInput.trim();
@@ -234,13 +267,24 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     reader.readAsDataURL(file);
   };
 
-  const runAi = async (section: string, text: string, action: CvAssistantAction, apply: (value: string) => void) => {
+  const runAi = async (
+    section: string,
+    text: string,
+    action: CvAssistantAction,
+    apply: (value: string) => void,
+  ) => {
     setAiLoading(`${section}-${action}`);
     try {
       const next = await enhanceCvSection({ section, text, lang, action, context: data });
       apply(next);
     } catch (error) {
-      alert(error instanceof Error ? error.message : isAR ? "تعذّر تشغيل المساعد" : "AI assistant failed");
+      alert(
+        error instanceof Error
+          ? error.message
+          : isAR
+            ? "تعذّر تشغيل المساعد"
+            : "AI assistant failed",
+      );
     } finally {
       setAiLoading(null);
     }
@@ -296,15 +340,44 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     } finally {
       setLoading(false);
     }
-
   };
 
   /* ================= RENDER ================= */
 
   const dir = isAR ? "rtl" : "ltr";
   const heading = isAR
-    ? { info: "البيانات الشخصية", summary: "نبذة", exp: "الخبرة العملية", edu: "التعليم", skills: "المهارات", langs: "اللغات", certs: "الشهادات", export: "تصدير PDF", add: "إضافة", preview: "معاينة السيرة الذاتية", form: "بيانات السيرة الذاتية", templates: "قوالب السيرة", score: "جودة السيرة", ai: "مساعد الكتابة" }
-    : { info: "Personal Info", summary: "Summary", exp: "Experience", edu: "Education", skills: "Skills", langs: "Languages", certs: "Certifications", export: "Export PDF", add: "Add", preview: "CV Preview", form: "CV Data", templates: "CV Templates", score: "CV Quality", ai: "Writing Assistant" };
+    ? {
+        info: "البيانات الشخصية",
+        summary: "نبذة",
+        exp: "الخبرة العملية",
+        edu: "التعليم",
+        skills: "المهارات",
+        langs: "اللغات",
+        certs: "الشهادات",
+        export: "تصدير PDF",
+        add: "إضافة",
+        preview: "معاينة السيرة الذاتية",
+        form: "بيانات السيرة الذاتية",
+        templates: "قوالب السيرة",
+        score: "جودة السيرة",
+        ai: "مساعد الكتابة",
+      }
+    : {
+        info: "Personal Info",
+        summary: "Summary",
+        exp: "Experience",
+        edu: "Education",
+        skills: "Skills",
+        langs: "Languages",
+        certs: "Certifications",
+        export: "Export PDF",
+        add: "Add",
+        preview: "CV Preview",
+        form: "CV Data",
+        templates: "CV Templates",
+        score: "CV Quality",
+        ai: "Writing Assistant",
+      };
 
   return (
     <div dir={dir} className="w-full px-4 py-6 space-y-8">
@@ -322,7 +395,11 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             disabled={loading}
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105 disabled:opacity-60"
           >
-            {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+            {loading ? (
+              <Loader2 className="w-4 h-4 animate-spin" />
+            ) : (
+              <Download className="w-4 h-4" />
+            )}
             {heading.export}
           </button>
         </div>
@@ -336,7 +413,11 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             >
               <div className="mb-2 flex h-12 overflow-hidden rounded-md border border-white/10 bg-white">
                 <span className="w-1/3" style={{ background: item.secondary }} />
-                <span className="flex-1 p-2"><i className="block h-1.5 w-16 rounded" style={{ background: item.accent }} /><i className="mt-2 block h-1 w-24 rounded bg-slate-200" /><i className="mt-1 block h-1 w-14 rounded bg-slate-200" /></span>
+                <span className="flex-1 p-2">
+                  <i className="block h-1.5 w-16 rounded" style={{ background: item.accent }} />
+                  <i className="mt-2 block h-1 w-24 rounded bg-slate-200" />
+                  <i className="mt-1 block h-1 w-14 rounded bg-slate-200" />
+                </span>
               </div>
               <div className="text-xs font-extrabold text-[#f3d28a]">{item.name[lang]}</div>
               <div className="mt-1 text-[11px] text-[var(--fg-soft)]">{item.description[lang]}</div>
@@ -357,21 +438,53 @@ export function CvBuilder({ lang }: { lang: Lang }) {
 
         <div className="grid md:grid-cols-2 gap-4">
           <FormCard title={heading.info} icon={User}>
-            <Field value={data.fullName} onChange={(v) => set("fullName", v)} placeholder={isAR ? "الاسم الكامل" : "Full name"} />
-            <Field value={data.jobTitle} onChange={(v) => set("jobTitle", v)} placeholder={isAR ? "المسمى الوظيفي" : "Job title"} />
-            <Field value={data.email} onChange={(v) => set("email", v)} placeholder="email@example.com" type="email" />
-            <Field value={data.phone} onChange={(v) => set("phone", v)} placeholder={isAR ? "رقم الجوال" : "Phone"} />
-            <Field value={data.location} onChange={(v) => set("location", v)} placeholder={isAR ? "المدينة، الدولة" : "City, Country"} />
-            <Field value={data.website ?? ""} onChange={(v) => set("website", v)} placeholder={isAR ? "الموقع / LinkedIn" : "Website / LinkedIn"} />
+            <Field
+              value={data.fullName}
+              onChange={(v) => set("fullName", v)}
+              placeholder={isAR ? "الاسم الكامل" : "Full name"}
+            />
+            <Field
+              value={data.jobTitle}
+              onChange={(v) => set("jobTitle", v)}
+              placeholder={isAR ? "المسمى الوظيفي" : "Job title"}
+            />
+            <Field
+              value={data.email}
+              onChange={(v) => set("email", v)}
+              placeholder="email@example.com"
+              type="email"
+            />
+            <Field
+              value={data.phone}
+              onChange={(v) => set("phone", v)}
+              placeholder={isAR ? "رقم الجوال" : "Phone"}
+            />
+            <Field
+              value={data.location}
+              onChange={(v) => set("location", v)}
+              placeholder={isAR ? "المدينة، الدولة" : "City, Country"}
+            />
+            <Field
+              value={data.website ?? ""}
+              onChange={(v) => set("website", v)}
+              placeholder={isAR ? "الموقع / LinkedIn" : "Website / LinkedIn"}
+            />
             <label className="block text-xs text-[var(--fg-soft)] mb-1 mt-2">
               {isAR ? "الصورة الشخصية" : "Profile Photo"}
             </label>
             {photoPreview && (
               <div className="flex items-center gap-2 mb-2">
-                <img src={photoPreview} alt="" className="w-12 h-12 rounded-full object-cover border border-[#d7aa52]/40" />
+                <img
+                  src={photoPreview}
+                  alt=""
+                  className="w-12 h-12 rounded-full object-cover border border-[#d7aa52]/40"
+                />
                 <button
                   type="button"
-                  onClick={() => { setPhotoPreview(undefined); set("photo", undefined); }}
+                  onClick={() => {
+                    setPhotoPreview(undefined);
+                    set("photo", undefined);
+                  }}
                   className="text-xs text-red-300 hover:text-red-200"
                 >
                   {isAR ? "حذف الصورة" : "Remove"}
@@ -390,14 +503,18 @@ export function CvBuilder({ lang }: { lang: Lang }) {
             <Area
               value={data.summary}
               onChange={(v) => set("summary", v)}
-              placeholder={isAR ? "نبذة مختصرة عن خبرتك وتخصصك..." : "A brief summary of your expertise..."}
+              placeholder={
+                isAR ? "نبذة مختصرة عن خبرتك وتخصصك..." : "A brief summary of your expertise..."
+              }
               rows={6}
             />
             <AiActions
               lang={lang}
               loading={aiLoading}
               section="summary"
-              onRun={(action) => runAi("summary", data.summary, action, (value) => set("summary", value))}
+              onRun={(action) =>
+                runAi("summary", data.summary, action, (value) => set("summary", value))
+              }
             />
           </FormCard>
         </div>
@@ -405,10 +522,14 @@ export function CvBuilder({ lang }: { lang: Lang }) {
         <div className="rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] p-4">
           <div className="mb-2 flex items-center justify-between gap-3">
             <h3 className="text-sm font-extrabold text-[#f3d28a]">{heading.score}</h3>
-            <span className="rounded-full border border-[#d7aa52]/35 px-3 py-1 text-xs font-black text-[#f3d28a]">{quality.score}%</span>
+            <span className="rounded-full border border-[#d7aa52]/35 px-3 py-1 text-xs font-black text-[#f3d28a]">
+              {quality.score}%
+            </span>
           </div>
           <div className="grid gap-1 text-xs text-[var(--fg-soft)] md:grid-cols-2">
-            {quality.recommendations.map((item, index) => <span key={index}>• {item[lang]}</span>)}
+            {quality.recommendations.map((item, index) => (
+              <span key={index}>• {item[lang]}</span>
+            ))}
           </div>
         </div>
 
@@ -416,23 +537,51 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           {data.experience.map((e) => (
             <div key={e.id} className="rounded-md border border-white/10 p-3 mb-3 space-y-2">
               <div className="grid sm:grid-cols-2 gap-2">
-                <Field value={e.role} onChange={(v) => updExp(e.id, { role: v })} placeholder={isAR ? "المسمى" : "Role"} />
-                <Field value={e.company} onChange={(v) => updExp(e.id, { company: v })} placeholder={isAR ? "الجهة" : "Company"} />
+                <Field
+                  value={e.role}
+                  onChange={(v) => updExp(e.id, { role: v })}
+                  placeholder={isAR ? "المسمى" : "Role"}
+                />
+                <Field
+                  value={e.company}
+                  onChange={(v) => updExp(e.id, { company: v })}
+                  placeholder={isAR ? "الجهة" : "Company"}
+                />
               </div>
-              <Field value={e.period} onChange={(v) => updExp(e.id, { period: v })} placeholder={isAR ? "الفترة (مثال: 2022 - الآن)" : "Period (e.g. 2022 - Present)"} />
-              <Area value={e.description} onChange={(v) => updExp(e.id, { description: v })} placeholder={isAR ? "وصف موجز للمسؤوليات والإنجازات" : "Brief responsibilities & achievements"} />
+              <Field
+                value={e.period}
+                onChange={(v) => updExp(e.id, { period: v })}
+                placeholder={isAR ? "الفترة (مثال: 2022 - الآن)" : "Period (e.g. 2022 - Present)"}
+              />
+              <Area
+                value={e.description}
+                onChange={(v) => updExp(e.id, { description: v })}
+                placeholder={
+                  isAR ? "وصف موجز للمسؤوليات والإنجازات" : "Brief responsibilities & achievements"
+                }
+              />
               <AiActions
                 lang={lang}
                 loading={aiLoading}
                 section={`experience-${e.id}`}
-                onRun={(action) => runAi("experience", e.description, action, (value) => updExp(e.id, { description: value }))}
+                onRun={(action) =>
+                  runAi("experience", e.description, action, (value) =>
+                    updExp(e.id, { description: value }),
+                  )
+                }
               />
-              <button onClick={() => delExp(e.id)} className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1">
+              <button
+                onClick={() => delExp(e.id)}
+                className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1"
+              >
                 <Trash2 className="w-3 h-3" /> {isAR ? "حذف" : "Remove"}
               </button>
             </div>
           ))}
-          <button onClick={addExp} className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+          <button
+            onClick={addExp}
+            className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+          >
             <Plus className="w-3 h-3" /> {heading.add}
           </button>
         </FormCard>
@@ -441,16 +590,34 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           {data.education.map((e) => (
             <div key={e.id} className="rounded-md border border-white/10 p-3 mb-3 space-y-2">
               <div className="grid sm:grid-cols-2 gap-2">
-                <Field value={e.degree} onChange={(v) => updEdu(e.id, { degree: v })} placeholder={isAR ? "الدرجة" : "Degree"} />
-                <Field value={e.school} onChange={(v) => updEdu(e.id, { school: v })} placeholder={isAR ? "الجامعة/المعهد" : "School"} />
+                <Field
+                  value={e.degree}
+                  onChange={(v) => updEdu(e.id, { degree: v })}
+                  placeholder={isAR ? "الدرجة" : "Degree"}
+                />
+                <Field
+                  value={e.school}
+                  onChange={(v) => updEdu(e.id, { school: v })}
+                  placeholder={isAR ? "الجامعة/المعهد" : "School"}
+                />
               </div>
-              <Field value={e.period} onChange={(v) => updEdu(e.id, { period: v })} placeholder={isAR ? "الفترة" : "Period"} />
-              <button onClick={() => delEdu(e.id)} className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1">
+              <Field
+                value={e.period}
+                onChange={(v) => updEdu(e.id, { period: v })}
+                placeholder={isAR ? "الفترة" : "Period"}
+              />
+              <button
+                onClick={() => delEdu(e.id)}
+                className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1"
+              >
                 <Trash2 className="w-3 h-3" /> {isAR ? "حذف" : "Remove"}
               </button>
             </div>
           ))}
-          <button onClick={addEdu} className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+          <button
+            onClick={addEdu}
+            className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+          >
             <Plus className="w-3 h-3" /> {heading.add}
           </button>
         </FormCard>
@@ -465,24 +632,48 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                 placeholder={isAR ? "أضف مهارة" : "Add a skill"}
                 className="flex-1 rounded-md border border-[#d7aa52]/30 bg-[#04101f]/60 px-3 py-2 text-sm text-white outline-none focus:border-[#d7aa52]"
               />
-              <button onClick={addSkill} className="rounded-md border border-[#d7aa52]/40 px-3 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+              <button
+                onClick={addSkill}
+                className="rounded-md border border-[#d7aa52]/40 px-3 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+              >
                 <Plus className="w-4 h-4" />
               </button>
             </div>
             <div className="flex flex-wrap gap-1.5">
               {data.skills.map((s, i) => (
-                <span key={i} className="inline-flex items-center gap-1 rounded-full bg-[#d7aa52]/15 px-2 py-1 text-xs text-[#f3d28a]">
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-1 rounded-full bg-[#d7aa52]/15 px-2 py-1 text-xs text-[#f3d28a]"
+                >
                   {s}
-                  <button onClick={() => set("skills", data.skills.filter((_, j) => j !== i))} className="hover:text-red-300">×</button>
+                  <button
+                    onClick={() =>
+                      set(
+                        "skills",
+                        data.skills.filter((_, j) => j !== i),
+                      )
+                    }
+                    className="hover:text-red-300"
+                  >
+                    ×
+                  </button>
                 </span>
               ))}
             </div>
             <button
-              onClick={() => runAi("skills", data.skills.join(", "), "generate", (value) => set("skills", parseGeneratedList(value)))}
+              onClick={() =>
+                runAi("skills", data.skills.join(", "), "generate", (value) =>
+                  set("skills", parseGeneratedList(value)),
+                )
+              }
               disabled={!!aiLoading}
               className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
             >
-              {aiLoading === "skills-generate" ? <Loader2 className="size-3 animate-spin" /> : <Wand2 className="size-3" />}
+              {aiLoading === "skills-generate" ? (
+                <Loader2 className="size-3 animate-spin" />
+              ) : (
+                <Wand2 className="size-3" />
+              )}
               {isAR ? "توليد مهارات" : "Generate skills"}
             </button>
           </FormCard>
@@ -496,15 +687,31 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                 placeholder={isAR ? "أضف لغة" : "Add a language"}
                 className="flex-1 rounded-md border border-[#d7aa52]/30 bg-[#04101f]/60 px-3 py-2 text-sm text-white outline-none focus:border-[#d7aa52]"
               />
-              <button onClick={addLang} className="rounded-md border border-[#d7aa52]/40 px-3 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+              <button
+                onClick={addLang}
+                className="rounded-md border border-[#d7aa52]/40 px-3 text-sm font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+              >
                 <Plus className="w-4 h-4" />
               </button>
             </div>
             <div className="flex flex-wrap gap-1.5">
               {data.languages.map((s, i) => (
-                <span key={i} className="inline-flex items-center gap-1 rounded-full bg-[#d7aa52]/15 px-2 py-1 text-xs text-[#f3d28a]">
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-1 rounded-full bg-[#d7aa52]/15 px-2 py-1 text-xs text-[#f3d28a]"
+                >
                   {s}
-                  <button onClick={() => set("languages", data.languages.filter((_, j) => j !== i))} className="hover:text-red-300">×</button>
+                  <button
+                    onClick={() =>
+                      set(
+                        "languages",
+                        data.languages.filter((_, j) => j !== i),
+                      )
+                    }
+                    className="hover:text-red-300"
+                  >
+                    ×
+                  </button>
                 </span>
               ))}
             </div>
@@ -515,16 +722,34 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           {data.certifications.map((c) => (
             <div key={c.id} className="rounded-md border border-white/10 p-3 mb-3 space-y-2">
               <div className="grid sm:grid-cols-3 gap-2">
-                <Field value={c.name} onChange={(v) => updCert(c.id, { name: v })} placeholder={isAR ? "اسم الشهادة" : "Name"} />
-                <Field value={c.issuer} onChange={(v) => updCert(c.id, { issuer: v })} placeholder={isAR ? "الجهة المانحة" : "Issuer"} />
-                <Field value={c.year} onChange={(v) => updCert(c.id, { year: v })} placeholder={isAR ? "السنة" : "Year"} />
+                <Field
+                  value={c.name}
+                  onChange={(v) => updCert(c.id, { name: v })}
+                  placeholder={isAR ? "اسم الشهادة" : "Name"}
+                />
+                <Field
+                  value={c.issuer}
+                  onChange={(v) => updCert(c.id, { issuer: v })}
+                  placeholder={isAR ? "الجهة المانحة" : "Issuer"}
+                />
+                <Field
+                  value={c.year}
+                  onChange={(v) => updCert(c.id, { year: v })}
+                  placeholder={isAR ? "السنة" : "Year"}
+                />
               </div>
-              <button onClick={() => delCert(c.id)} className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1">
+              <button
+                onClick={() => delCert(c.id)}
+                className="text-xs text-red-300 hover:text-red-200 inline-flex items-center gap-1"
+              >
                 <Trash2 className="w-3 h-3" /> {isAR ? "حذف" : "Remove"}
               </button>
             </div>
           ))}
-          <button onClick={addCert} className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10">
+          <button
+            onClick={addCert}
+            className="inline-flex items-center gap-1 rounded-md border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+          >
             <Plus className="w-3 h-3" /> {heading.add}
           </button>
         </FormCard>

@@ -62,8 +62,16 @@ const RESULT_FIELDS: FieldDef[] = [
 ];
 
 const REF_LINKS = [
-  { ar: "لائحة ضريبة القيمة المضافة — ZATCA", en: "VAT Implementing Regulations — ZATCA", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/VAT.aspx" },
-  { ar: "دليل تقديم الإقرار الضريبي", en: "VAT Return Filing Guide", url: "https://zatca.gov.sa/en/E-Services/Pages/Tax-Returns.aspx" },
+  {
+    ar: "لائحة ضريبة القيمة المضافة — ZATCA",
+    en: "VAT Implementing Regulations — ZATCA",
+    url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/VAT.aspx",
+  },
+  {
+    ar: "دليل تقديم الإقرار الضريبي",
+    en: "VAT Return Filing Guide",
+    url: "https://zatca.gov.sa/en/E-Services/Pages/Tax-Returns.aspx",
+  },
 ];
 
 export function VatReturnFormCalculator({ lang }: { lang: Lang }) {
@@ -82,14 +90,23 @@ export function VatReturnFormCalculator({ lang }: { lang: Lang }) {
     if (purchases < 0) e.purchases = negMsg;
     if (inputVat < 0) e.input_vat = negMsg;
     if (inputVat > purchases * VAT_RATE * 1.001 && purchases > 0)
-      e.input_vat = lang === "ar" ? "ضريبة المدخلات تتجاوز 15% من المشتريات" : "Input VAT exceeds 15% of purchases";
+      e.input_vat =
+        lang === "ar"
+          ? "ضريبة المدخلات تتجاوز 15% من المشتريات"
+          : "Input VAT exceeds 15% of purchases";
     return e;
   }, [taxableSales, zeroRated, exemptSales, purchases, inputVat, lang]);
 
   const outputVat = taxableSales * VAT_RATE;
   const netVat = outputVat - inputVat;
 
-  const inputs = { taxable_sales: taxableSales, zero_rated_sales: zeroRated, exempt_sales: exemptSales, purchases, input_vat: inputVat };
+  const inputs = {
+    taxable_sales: taxableSales,
+    zero_rated_sales: zeroRated,
+    exempt_sales: exemptSales,
+    purchases,
+    input_vat: inputVat,
+  };
   const results = { output_vat: outputVat, input_vat: inputVat, net_vat: netVat };
 
   const a = useDeclarationActions({
@@ -108,17 +125,63 @@ export function VatReturnFormCalculator({ lang }: { lang: Lang }) {
     <div className="grid gap-6 md:grid-cols-2">
       <div className="space-y-4">
         <PeriodField value={a.period} onChange={a.setPeriod} lang={lang} />
-        <NumberField field={INPUT_FIELDS[0]} value={taxableSales} onChange={setTaxableSales} lang={lang} error={errors.taxable_sales} />
-        <NumberField field={INPUT_FIELDS[1]} value={zeroRated} onChange={setZeroRated} lang={lang} error={errors.zero_rated_sales} />
-        <NumberField field={INPUT_FIELDS[2]} value={exemptSales} onChange={setExemptSales} lang={lang} error={errors.exempt_sales} />
-        <NumberField field={INPUT_FIELDS[3]} value={purchases} onChange={setPurchases} lang={lang} error={errors.purchases} />
-        <NumberField field={INPUT_FIELDS[4]} value={inputVat} onChange={setInputVat} lang={lang} error={errors.input_vat} />
+        <NumberField
+          field={INPUT_FIELDS[0]}
+          value={taxableSales}
+          onChange={setTaxableSales}
+          lang={lang}
+          error={errors.taxable_sales}
+        />
+        <NumberField
+          field={INPUT_FIELDS[1]}
+          value={zeroRated}
+          onChange={setZeroRated}
+          lang={lang}
+          error={errors.zero_rated_sales}
+        />
+        <NumberField
+          field={INPUT_FIELDS[2]}
+          value={exemptSales}
+          onChange={setExemptSales}
+          lang={lang}
+          error={errors.exempt_sales}
+        />
+        <NumberField
+          field={INPUT_FIELDS[3]}
+          value={purchases}
+          onChange={setPurchases}
+          lang={lang}
+          error={errors.purchases}
+        />
+        <NumberField
+          field={INPUT_FIELDS[4]}
+          value={inputVat}
+          onChange={setInputVat}
+          lang={lang}
+          error={errors.input_vat}
+        />
       </div>
 
       <div className="space-y-3">
-        <ResultCard titleAr="ضريبة المخرجات (15%)" titleEn="Output VAT (15%)" value={outputVat} lang={lang} />
-        <ResultCard titleAr="ضريبة المدخلات القابلة للخصم" titleEn="Deductible Input VAT" value={inputVat} lang={lang} />
-        <ResultCard titleAr="صافي الضريبة المستحقة" titleEn="Net VAT Payable" value={netVat} lang={lang} highlight />
+        <ResultCard
+          titleAr="ضريبة المخرجات (15%)"
+          titleEn="Output VAT (15%)"
+          value={outputVat}
+          lang={lang}
+        />
+        <ResultCard
+          titleAr="ضريبة المدخلات القابلة للخصم"
+          titleEn="Deductible Input VAT"
+          value={inputVat}
+          lang={lang}
+        />
+        <ResultCard
+          titleAr="صافي الضريبة المستحقة"
+          titleEn="Net VAT Payable"
+          value={netVat}
+          lang={lang}
+          highlight
+        />
         <ActionsBar
           lang={lang}
           onPdf={a.onPdf}

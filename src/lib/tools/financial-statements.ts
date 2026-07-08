@@ -69,55 +69,366 @@ export interface FSCategoryDef {
 
 export const FS_CATEGORIES: FSCategoryDef[] = [
   // ---------- Balance sheet: current assets ----------
-  { id: "cash", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "نقدية وما في حكمها", en: "Cash & cash equivalents" }, keywords: ["نقد", "صندوق", "بنك", "cash", "bank"], codeHints: ["11"] },
-  { id: "short_investments", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "استثمارات قصيرة الأجل", en: "Short-term investments" }, keywords: ["استثمار قصير", "short-term invest", "short term invest"] },
-  { id: "trade_receivables", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "عملاء وذمم مدينة تجارية", en: "Trade receivables" }, keywords: ["عملاء", "مدين", "ذمم مدينة", "receivable", "debtor"], codeHints: ["12"] },
-  { id: "inventory", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "مخزون", en: "Inventory" }, keywords: ["مخزون", "بضاعة", "inventory", "stock"], codeHints: ["13"] },
-  { id: "prepaid_expenses", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "مصروفات مدفوعة مقدماً", en: "Prepaid expenses" }, keywords: ["مقدم", "مدفوعات مقدمة", "prepaid"] },
-  { id: "due_from_related", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "مستحق من أطراف ذات علاقة", en: "Due from related parties" }, keywords: ["طرف ذو علاقة", "طرف ذي علاقة", "related part"] },
-  { id: "other_current_assets", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "أصول متداولة أخرى", en: "Other current assets" }, keywords: [] },
+  {
+    id: "cash",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "نقدية وما في حكمها", en: "Cash & cash equivalents" },
+    keywords: ["نقد", "صندوق", "بنك", "cash", "bank"],
+    codeHints: ["11"],
+  },
+  {
+    id: "short_investments",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "استثمارات قصيرة الأجل", en: "Short-term investments" },
+    keywords: ["استثمار قصير", "short-term invest", "short term invest"],
+  },
+  {
+    id: "trade_receivables",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "عملاء وذمم مدينة تجارية", en: "Trade receivables" },
+    keywords: ["عملاء", "مدين", "ذمم مدينة", "receivable", "debtor"],
+    codeHints: ["12"],
+  },
+  {
+    id: "inventory",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "مخزون", en: "Inventory" },
+    keywords: ["مخزون", "بضاعة", "inventory", "stock"],
+    codeHints: ["13"],
+  },
+  {
+    id: "prepaid_expenses",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "مصروفات مدفوعة مقدماً", en: "Prepaid expenses" },
+    keywords: ["مقدم", "مدفوعات مقدمة", "prepaid"],
+  },
+  {
+    id: "due_from_related",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "مستحق من أطراف ذات علاقة", en: "Due from related parties" },
+    keywords: ["طرف ذو علاقة", "طرف ذي علاقة", "related part"],
+  },
+  {
+    id: "other_current_assets",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "أصول متداولة أخرى", en: "Other current assets" },
+    keywords: [],
+  },
 
   // ---------- Balance sheet: non-current assets ----------
-  { id: "long_investments", statement: "BS", group: "asset_noncurrent", normalSide: "debit", label: { ar: "استثمارات طويلة الأجل", en: "Long-term investments" }, keywords: ["استثمار طويل", "long-term invest", "long term invest"] },
-  { id: "ppe_cost", statement: "BS", group: "asset_noncurrent", normalSide: "debit", label: { ar: "الأصول الثابتة (بالتكلفة)", en: "Property, plant & equipment (cost)" }, keywords: ["أصول ثابتة", "ممتلكات", "معدات", "أثاث", "سيارات", "مباني", "equipment", "property, plant", "fixed asset", "vehicle", "building"], codeHints: ["15"] },
-  { id: "accumulated_depreciation", statement: "BS", group: "asset_noncurrent", normalSide: "credit", label: { ar: "مجمع الاستهلاك", en: "Accumulated depreciation" }, keywords: ["مجمع استهلاك", "مجمع الاستهلاك", "إهلاك متراكم", "accumulated depreciation"] },
-  { id: "intangible_assets", statement: "BS", group: "asset_noncurrent", normalSide: "debit", label: { ar: "أصول غير ملموسة", en: "Intangible assets" }, keywords: ["أصول غير ملموسة", "شهرة", "براءة اختراع", "goodwill", "intangible", "patent"] },
-  { id: "other_non_current_assets", statement: "BS", group: "asset_noncurrent", normalSide: "debit", label: { ar: "أصول غير متداولة أخرى", en: "Other non-current assets" }, keywords: [] },
+  {
+    id: "long_investments",
+    statement: "BS",
+    group: "asset_noncurrent",
+    normalSide: "debit",
+    label: { ar: "استثمارات طويلة الأجل", en: "Long-term investments" },
+    keywords: ["استثمار طويل", "long-term invest", "long term invest"],
+  },
+  {
+    id: "ppe_cost",
+    statement: "BS",
+    group: "asset_noncurrent",
+    normalSide: "debit",
+    label: { ar: "الأصول الثابتة (بالتكلفة)", en: "Property, plant & equipment (cost)" },
+    keywords: [
+      "أصول ثابتة",
+      "ممتلكات",
+      "معدات",
+      "أثاث",
+      "سيارات",
+      "مباني",
+      "equipment",
+      "property, plant",
+      "fixed asset",
+      "vehicle",
+      "building",
+    ],
+    codeHints: ["15"],
+  },
+  {
+    id: "accumulated_depreciation",
+    statement: "BS",
+    group: "asset_noncurrent",
+    normalSide: "credit",
+    label: { ar: "مجمع الاستهلاك", en: "Accumulated depreciation" },
+    keywords: ["مجمع استهلاك", "مجمع الاستهلاك", "إهلاك متراكم", "accumulated depreciation"],
+  },
+  {
+    id: "intangible_assets",
+    statement: "BS",
+    group: "asset_noncurrent",
+    normalSide: "debit",
+    label: { ar: "أصول غير ملموسة", en: "Intangible assets" },
+    keywords: ["أصول غير ملموسة", "شهرة", "براءة اختراع", "goodwill", "intangible", "patent"],
+  },
+  {
+    id: "other_non_current_assets",
+    statement: "BS",
+    group: "asset_noncurrent",
+    normalSide: "debit",
+    label: { ar: "أصول غير متداولة أخرى", en: "Other non-current assets" },
+    keywords: [],
+  },
 
   // ---------- Balance sheet: current liabilities ----------
-  { id: "trade_payables", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "موردون ودائنون تجاريون", en: "Trade payables" }, keywords: ["مورد", "دائن", "ذمم دائنة", "payable", "creditor", "supplier"], codeHints: ["21"] },
-  { id: "accrued_expenses", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "مصروفات مستحقة", en: "Accrued expenses" }, keywords: ["مستحق", "accrued"] },
-  { id: "short_term_loans", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "قروض وتسهيلات قصيرة الأجل", en: "Short-term loans & facilities" }, keywords: ["قرض قصير", "تسهيلات بنكية", "short-term loan", "short term loan", "bank facility"] },
-  { id: "current_portion_lt_loans", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "الجزء المتداول من القروض طويلة الأجل", en: "Current portion of long-term loans" }, keywords: ["جزء متداول", "current portion"] },
-  { id: "due_to_related", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "مستحق لأطراف ذات علاقة", en: "Due to related parties" }, keywords: ["مستحق لطرف ذي علاقة", "due to related"] },
-  { id: "dividends_payable", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "توزيعات أرباح مستحقة", en: "Dividends payable" }, keywords: ["توزيعات أرباح مستحقة", "dividend payable"] },
-  { id: "zakat_provision", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "مخصص الزكاة", en: "Zakat provision" }, keywords: ["مخصص الزكاة", "zakat provision"] },
-  { id: "other_current_liabilities", statement: "BS", group: "liability_current", normalSide: "credit", label: { ar: "خصوم متداولة أخرى", en: "Other current liabilities" }, keywords: [] },
+  {
+    id: "trade_payables",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "موردون ودائنون تجاريون", en: "Trade payables" },
+    keywords: ["مورد", "دائن", "ذمم دائنة", "payable", "creditor", "supplier"],
+    codeHints: ["21"],
+  },
+  {
+    id: "accrued_expenses",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "مصروفات مستحقة", en: "Accrued expenses" },
+    keywords: ["مستحق", "accrued"],
+  },
+  {
+    id: "short_term_loans",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "قروض وتسهيلات قصيرة الأجل", en: "Short-term loans & facilities" },
+    keywords: ["قرض قصير", "تسهيلات بنكية", "short-term loan", "short term loan", "bank facility"],
+  },
+  {
+    id: "current_portion_lt_loans",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "الجزء المتداول من القروض طويلة الأجل", en: "Current portion of long-term loans" },
+    keywords: ["جزء متداول", "current portion"],
+  },
+  {
+    id: "due_to_related",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "مستحق لأطراف ذات علاقة", en: "Due to related parties" },
+    keywords: ["مستحق لطرف ذي علاقة", "due to related"],
+  },
+  {
+    id: "dividends_payable",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "توزيعات أرباح مستحقة", en: "Dividends payable" },
+    keywords: ["توزيعات أرباح مستحقة", "dividend payable"],
+  },
+  {
+    id: "zakat_provision",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "مخصص الزكاة", en: "Zakat provision" },
+    keywords: ["مخصص الزكاة", "zakat provision"],
+  },
+  {
+    id: "other_current_liabilities",
+    statement: "BS",
+    group: "liability_current",
+    normalSide: "credit",
+    label: { ar: "خصوم متداولة أخرى", en: "Other current liabilities" },
+    keywords: [],
+  },
 
   // ---------- Balance sheet: non-current liabilities ----------
-  { id: "long_term_loans", statement: "BS", group: "liability_noncurrent", normalSide: "credit", label: { ar: "قروض طويلة الأجل", en: "Long-term loans" }, keywords: ["قرض طويل", "long-term loan", "long term loan"] },
-  { id: "employee_benefits_provision", statement: "BS", group: "liability_noncurrent", normalSide: "credit", label: { ar: "مخصص مكافأة نهاية الخدمة", en: "End-of-service benefits provision" }, keywords: ["مكافأة نهاية الخدمة", "end of service", "eosb"] },
-  { id: "other_provisions_noncurrent", statement: "BS", group: "liability_noncurrent", normalSide: "credit", label: { ar: "مخصصات أخرى", en: "Other provisions" }, keywords: ["مخصص", "provision"] },
-  { id: "other_non_current_liabilities", statement: "BS", group: "liability_noncurrent", normalSide: "credit", label: { ar: "خصوم غير متداولة أخرى", en: "Other non-current liabilities" }, keywords: [] },
+  {
+    id: "long_term_loans",
+    statement: "BS",
+    group: "liability_noncurrent",
+    normalSide: "credit",
+    label: { ar: "قروض طويلة الأجل", en: "Long-term loans" },
+    keywords: ["قرض طويل", "long-term loan", "long term loan"],
+  },
+  {
+    id: "employee_benefits_provision",
+    statement: "BS",
+    group: "liability_noncurrent",
+    normalSide: "credit",
+    label: { ar: "مخصص مكافأة نهاية الخدمة", en: "End-of-service benefits provision" },
+    keywords: ["مكافأة نهاية الخدمة", "end of service", "eosb"],
+  },
+  {
+    id: "other_provisions_noncurrent",
+    statement: "BS",
+    group: "liability_noncurrent",
+    normalSide: "credit",
+    label: { ar: "مخصصات أخرى", en: "Other provisions" },
+    keywords: ["مخصص", "provision"],
+  },
+  {
+    id: "other_non_current_liabilities",
+    statement: "BS",
+    group: "liability_noncurrent",
+    normalSide: "credit",
+    label: { ar: "خصوم غير متداولة أخرى", en: "Other non-current liabilities" },
+    keywords: [],
+  },
 
   // ---------- Equity ----------
-  { id: "share_capital", statement: "BS", group: "equity", normalSide: "credit", label: { ar: "رأس المال", en: "Share capital" }, keywords: ["رأس المال", "رأس مال", "capital"], codeHints: ["31"] },
-  { id: "statutory_reserve", statement: "BS", group: "equity", normalSide: "credit", label: { ar: "الاحتياطي النظامي", en: "Statutory reserve" }, keywords: ["احتياطي نظامي", "statutory reserve"] },
-  { id: "other_reserves", statement: "BS", group: "equity", normalSide: "credit", label: { ar: "احتياطيات أخرى", en: "Other reserves" }, keywords: ["احتياطي", "reserve"] },
-  { id: "retained_earnings", statement: "BS", group: "equity", normalSide: "credit", label: { ar: "أرباح (خسائر) مدورة", en: "Retained earnings (losses)" }, keywords: ["أرباح مدورة", "أرباح مرحلة", "خسائر متراكمة", "retained earning", "accumulated loss"] },
+  {
+    id: "share_capital",
+    statement: "BS",
+    group: "equity",
+    normalSide: "credit",
+    label: { ar: "رأس المال", en: "Share capital" },
+    keywords: ["رأس المال", "رأس مال", "capital"],
+    codeHints: ["31"],
+  },
+  {
+    id: "statutory_reserve",
+    statement: "BS",
+    group: "equity",
+    normalSide: "credit",
+    label: { ar: "الاحتياطي النظامي", en: "Statutory reserve" },
+    keywords: ["احتياطي نظامي", "statutory reserve"],
+  },
+  {
+    id: "other_reserves",
+    statement: "BS",
+    group: "equity",
+    normalSide: "credit",
+    label: { ar: "احتياطيات أخرى", en: "Other reserves" },
+    keywords: ["احتياطي", "reserve"],
+  },
+  {
+    id: "retained_earnings",
+    statement: "BS",
+    group: "equity",
+    normalSide: "credit",
+    label: { ar: "أرباح (خسائر) مدورة", en: "Retained earnings (losses)" },
+    keywords: [
+      "أرباح مدورة",
+      "أرباح مرحلة",
+      "خسائر متراكمة",
+      "retained earning",
+      "accumulated loss",
+    ],
+  },
 
   // ---------- Income statement ----------
-  { id: "revenue", statement: "IS", group: "revenue", normalSide: "credit", label: { ar: "الإيرادات", en: "Revenue" }, keywords: ["إيراد", "مبيعات", "revenue", "sales"], codeHints: ["4"] },
-  { id: "cogs", statement: "IS", group: "cogs", normalSide: "debit", label: { ar: "تكلفة الإيرادات", en: "Cost of revenue" }, keywords: ["تكلفة البضاعة", "تكلفة المبيعات", "تكلفة الإيرادات", "cost of goods", "cost of sales", "cogs"] },
-  { id: "selling_expenses", statement: "IS", group: "opex", normalSide: "debit", label: { ar: "مصاريف بيعية وتسويقية", en: "Selling & marketing expenses" }, keywords: ["بيعية", "تسويق", "selling", "marketing"] },
-  { id: "admin_expenses", statement: "IS", group: "opex", normalSide: "debit", label: { ar: "مصاريف إدارية وعمومية", en: "General & administrative expenses" }, keywords: ["إدارية", "عمومية", "رواتب", "أجور", "إيجار", "صيانة", "salary", "wages", "rent", "admin", "general and admin"], codeHints: ["5"] },
-  { id: "depreciation_expense", statement: "IS", group: "opex", normalSide: "debit", label: { ar: "استهلاك وإطفاء", en: "Depreciation & amortization" }, keywords: ["استهلاك", "إطفاء", "depreciation", "amortization"] },
-  { id: "other_income", statement: "IS", group: "other_is", normalSide: "credit", label: { ar: "إيرادات أخرى", en: "Other income" }, keywords: ["إيرادات أخرى", "other income"] },
-  { id: "finance_costs", statement: "IS", group: "other_is", normalSide: "debit", label: { ar: "تكاليف تمويلية", en: "Finance costs" }, keywords: ["تكاليف تمويلية", "فوائد", "finance cost", "interest expense"] },
-  { id: "other_expenses", statement: "IS", group: "other_is", normalSide: "debit", label: { ar: "مصاريف أخرى", en: "Other expenses" }, keywords: ["مصاريف أخرى", "other expense"] },
-  { id: "zakat_expense_tb", statement: "IS", group: "other_is", normalSide: "debit", label: { ar: "مصروف الزكاة (بميزان المراجعة)", en: "Zakat expense (per trial balance)" }, keywords: ["مصروف الزكاة", "zakat expense"] },
+  {
+    id: "revenue",
+    statement: "IS",
+    group: "revenue",
+    normalSide: "credit",
+    label: { ar: "الإيرادات", en: "Revenue" },
+    keywords: ["إيراد", "مبيعات", "revenue", "sales"],
+    codeHints: ["4"],
+  },
+  {
+    id: "cogs",
+    statement: "IS",
+    group: "cogs",
+    normalSide: "debit",
+    label: { ar: "تكلفة الإيرادات", en: "Cost of revenue" },
+    keywords: [
+      "تكلفة البضاعة",
+      "تكلفة المبيعات",
+      "تكلفة الإيرادات",
+      "cost of goods",
+      "cost of sales",
+      "cogs",
+    ],
+  },
+  {
+    id: "selling_expenses",
+    statement: "IS",
+    group: "opex",
+    normalSide: "debit",
+    label: { ar: "مصاريف بيعية وتسويقية", en: "Selling & marketing expenses" },
+    keywords: ["بيعية", "تسويق", "selling", "marketing"],
+  },
+  {
+    id: "admin_expenses",
+    statement: "IS",
+    group: "opex",
+    normalSide: "debit",
+    label: { ar: "مصاريف إدارية وعمومية", en: "General & administrative expenses" },
+    keywords: [
+      "إدارية",
+      "عمومية",
+      "رواتب",
+      "أجور",
+      "إيجار",
+      "صيانة",
+      "salary",
+      "wages",
+      "rent",
+      "admin",
+      "general and admin",
+    ],
+    codeHints: ["5"],
+  },
+  {
+    id: "depreciation_expense",
+    statement: "IS",
+    group: "opex",
+    normalSide: "debit",
+    label: { ar: "استهلاك وإطفاء", en: "Depreciation & amortization" },
+    keywords: ["استهلاك", "إطفاء", "depreciation", "amortization"],
+  },
+  {
+    id: "other_income",
+    statement: "IS",
+    group: "other_is",
+    normalSide: "credit",
+    label: { ar: "إيرادات أخرى", en: "Other income" },
+    keywords: ["إيرادات أخرى", "other income"],
+  },
+  {
+    id: "finance_costs",
+    statement: "IS",
+    group: "other_is",
+    normalSide: "debit",
+    label: { ar: "تكاليف تمويلية", en: "Finance costs" },
+    keywords: ["تكاليف تمويلية", "فوائد", "finance cost", "interest expense"],
+  },
+  {
+    id: "other_expenses",
+    statement: "IS",
+    group: "other_is",
+    normalSide: "debit",
+    label: { ar: "مصاريف أخرى", en: "Other expenses" },
+    keywords: ["مصاريف أخرى", "other expense"],
+  },
+  {
+    id: "zakat_expense_tb",
+    statement: "IS",
+    group: "other_is",
+    normalSide: "debit",
+    label: { ar: "مصروف الزكاة (بميزان المراجعة)", en: "Zakat expense (per trial balance)" },
+    keywords: ["مصروف الزكاة", "zakat expense"],
+  },
 
-  { id: "unclassified", statement: "BS", group: "asset_current", normalSide: "debit", label: { ar: "غير مصنّف", en: "Unclassified" }, keywords: [] },
+  {
+    id: "unclassified",
+    statement: "BS",
+    group: "asset_current",
+    normalSide: "debit",
+    label: { ar: "غير مصنّف", en: "Unclassified" },
+    keywords: [],
+  },
 ];
 
 export const ZAKAT_RATE = 0.025;
@@ -144,7 +455,9 @@ export function emptyRow(id: string): TrialBalanceRow {
  *  Picks the LONGEST matching keyword across all categories (not the first category declared) so that a
  *  specific phrase like "تكلفة البضاعة" (cost of goods, → COGS) wins over a short generic word it contains,
  *  like "بضاعة" (goods, → inventory) — otherwise income-statement accounts get misfiled as balance-sheet ones. */
-export function suggestCategory(row: Pick<TrialBalanceRow, "code" | "nameAr" | "nameEn">): FSCategoryId {
+export function suggestCategory(
+  row: Pick<TrialBalanceRow, "code" | "nameAr" | "nameEn">,
+): FSCategoryId {
   const hay = `${row.nameAr} ${row.nameEn}`.toLowerCase();
   let best: { id: FSCategoryId; len: number } | null = null;
   for (const cat of FS_CATEGORIES) {
@@ -260,7 +573,11 @@ export interface FinancialStatements {
     totalNonCurrentAssets: number;
     totalAssets: number;
     liabilitiesCurrent: { id: FSCategoryId; label: { ar: string; en: string }; amount: number }[];
-    liabilitiesNonCurrent: { id: FSCategoryId; label: { ar: string; en: string }; amount: number }[];
+    liabilitiesNonCurrent: {
+      id: FSCategoryId;
+      label: { ar: string; en: string };
+      amount: number;
+    }[];
     totalCurrentLiabilities: number;
     totalNonCurrentLiabilities: number;
     totalLiabilities: number;
@@ -416,35 +733,90 @@ export function computeFinancialStatements(
   const totalComprehensiveIncome = netProfit + ociItems;
 
   // ---------------- Balance sheet ----------------
-  const assetsCurrentIds: FSCategoryId[] = ["cash", "short_investments", "trade_receivables", "inventory", "prepaid_expenses", "due_from_related", "other_current_assets"];
-  const assetsNonCurrentEntries: { id: FSCategoryId; label: { ar: string; en: string }; amount: number }[] = [
+  const assetsCurrentIds: FSCategoryId[] = [
+    "cash",
+    "short_investments",
+    "trade_receivables",
+    "inventory",
+    "prepaid_expenses",
+    "due_from_related",
+    "other_current_assets",
+  ];
+  const assetsNonCurrentEntries: {
+    id: FSCategoryId;
+    label: { ar: string; en: string };
+    amount: number;
+  }[] = [
     { id: "long_investments", label: label("long_investments"), amount: g("long_investments") },
-    { id: "ppe_cost", label: { ar: "صافي الأصول الثابتة", en: "Net property, plant & equipment" }, amount: ppeNet },
+    {
+      id: "ppe_cost",
+      label: { ar: "صافي الأصول الثابتة", en: "Net property, plant & equipment" },
+      amount: ppeNet,
+    },
     { id: "intangible_assets", label: label("intangible_assets"), amount: g("intangible_assets") },
-    { id: "other_non_current_assets", label: label("other_non_current_assets"), amount: g("other_non_current_assets") },
+    {
+      id: "other_non_current_assets",
+      label: label("other_non_current_assets"),
+      amount: g("other_non_current_assets"),
+    },
   ];
   const assetsCurrent = assetsCurrentIds.map((id) => ({ id, label: label(id), amount: g(id) }));
   const totalCurrentAssets = assetsCurrent.reduce((a, r) => a + r.amount, 0);
   const totalNonCurrentAssets = assetsNonCurrentEntries.reduce((a, r) => a + r.amount, 0);
   const totalAssets = totalCurrentAssets + totalNonCurrentAssets;
 
-  const liabCurrentIds: FSCategoryId[] = ["trade_payables", "accrued_expenses", "short_term_loans", "current_portion_lt_loans", "due_to_related", "dividends_payable", "zakat_provision", "other_current_liabilities"];
-  const liabNonCurrentIds: FSCategoryId[] = ["long_term_loans", "employee_benefits_provision", "other_provisions_noncurrent", "other_non_current_liabilities"];
+  const liabCurrentIds: FSCategoryId[] = [
+    "trade_payables",
+    "accrued_expenses",
+    "short_term_loans",
+    "current_portion_lt_loans",
+    "due_to_related",
+    "dividends_payable",
+    "zakat_provision",
+    "other_current_liabilities",
+  ];
+  const liabNonCurrentIds: FSCategoryId[] = [
+    "long_term_loans",
+    "employee_benefits_provision",
+    "other_provisions_noncurrent",
+    "other_non_current_liabilities",
+  ];
   const liabilitiesCurrent = liabCurrentIds.map((id) => ({ id, label: label(id), amount: g(id) }));
-  const liabilitiesNonCurrent = liabNonCurrentIds.map((id) => ({ id, label: label(id), amount: g(id) }));
+  const liabilitiesNonCurrent = liabNonCurrentIds.map((id) => ({
+    id,
+    label: label(id),
+    amount: g(id),
+  }));
   // Zakat payable for the period is a current liability even if not yet posted to the trial balance.
   const zakatPayableAlreadyInTb = g("zakat_provision");
-  const zakatPayableAdjustment = Math.max(0, zakatExpense - zakatPayableAlreadyInTb - adj.zakatPaidDuringPeriod);
-  const totalCurrentLiabilities = liabilitiesCurrent.reduce((a, r) => a + r.amount, 0) + zakatPayableAdjustment;
+  const zakatPayableAdjustment = Math.max(
+    0,
+    zakatExpense - zakatPayableAlreadyInTb - adj.zakatPaidDuringPeriod,
+  );
+  const totalCurrentLiabilities =
+    liabilitiesCurrent.reduce((a, r) => a + r.amount, 0) + zakatPayableAdjustment;
   const totalNonCurrentLiabilities = liabilitiesNonCurrent.reduce((a, r) => a + r.amount, 0);
   const totalLiabilities = totalCurrentLiabilities + totalNonCurrentLiabilities;
 
-  const retainedEarningsClosing = retainedOpening + netProfit - adj.dividendsPaid - adj.transfersToReserves;
+  const retainedEarningsClosing =
+    retainedOpening + netProfit - adj.dividendsPaid - adj.transfersToReserves;
   const equity = [
-    { id: "share_capital" as const, label: label("share_capital"), amount: capital + adj.capitalInjected },
-    { id: "statutory_reserve" as const, label: label("statutory_reserve"), amount: statutoryReserve + adj.transfersToReserves },
+    {
+      id: "share_capital" as const,
+      label: label("share_capital"),
+      amount: capital + adj.capitalInjected,
+    },
+    {
+      id: "statutory_reserve" as const,
+      label: label("statutory_reserve"),
+      amount: statutoryReserve + adj.transfersToReserves,
+    },
     { id: "other_reserves" as const, label: label("other_reserves"), amount: otherReserves },
-    { id: "retained_earnings" as const, label: label("retained_earnings"), amount: retainedEarningsClosing },
+    {
+      id: "retained_earnings" as const,
+      label: label("retained_earnings"),
+      amount: retainedEarningsClosing,
+    },
   ];
   const totalEquity = equity.reduce((a, r) => a + r.amount, 0);
   const totalLiabilitiesAndEquity = totalLiabilities + totalEquity;
@@ -452,9 +824,33 @@ export function computeFinancialStatements(
 
   // ---------------- Statement of changes in equity ----------------
   const equityRows = [
-    { label: label("share_capital"), opening: capital, netProfit: 0, dividends: 0, transfers: 0, capitalInjected: adj.capitalInjected, closing: capital + adj.capitalInjected },
-    { label: label("statutory_reserve"), opening: statutoryReserve, netProfit: 0, dividends: 0, transfers: adj.transfersToReserves, capitalInjected: 0, closing: statutoryReserve + adj.transfersToReserves },
-    { label: label("other_reserves"), opening: otherReserves, netProfit: 0, dividends: 0, transfers: 0, capitalInjected: 0, closing: otherReserves },
+    {
+      label: label("share_capital"),
+      opening: capital,
+      netProfit: 0,
+      dividends: 0,
+      transfers: 0,
+      capitalInjected: adj.capitalInjected,
+      closing: capital + adj.capitalInjected,
+    },
+    {
+      label: label("statutory_reserve"),
+      opening: statutoryReserve,
+      netProfit: 0,
+      dividends: 0,
+      transfers: adj.transfersToReserves,
+      capitalInjected: 0,
+      closing: statutoryReserve + adj.transfersToReserves,
+    },
+    {
+      label: label("other_reserves"),
+      opening: otherReserves,
+      netProfit: 0,
+      dividends: 0,
+      transfers: 0,
+      capitalInjected: 0,
+      closing: otherReserves,
+    },
     {
       label: label("retained_earnings"),
       opening: retainedOpening,
@@ -497,9 +893,20 @@ export function computeFinancialStatements(
       totalCurrentAssets,
       totalNonCurrentAssets,
       totalAssets,
-      liabilitiesCurrent: zakatPayableAdjustment > 0.01
-        ? [...liabilitiesCurrent, { id: "zakat_provision", label: { ar: "مخصص الزكاة المستحق عن الفترة", en: "Zakat provision for the period" }, amount: zakatPayableAdjustment }]
-        : liabilitiesCurrent,
+      liabilitiesCurrent:
+        zakatPayableAdjustment > 0.01
+          ? [
+              ...liabilitiesCurrent,
+              {
+                id: "zakat_provision",
+                label: {
+                  ar: "مخصص الزكاة المستحق عن الفترة",
+                  en: "Zakat provision for the period",
+                },
+                amount: zakatPayableAdjustment,
+              },
+            ]
+          : liabilitiesCurrent,
       liabilitiesNonCurrent,
       totalCurrentLiabilities,
       totalNonCurrentLiabilities,

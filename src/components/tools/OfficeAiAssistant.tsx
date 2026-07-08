@@ -226,11 +226,7 @@ export function OfficeAiAssistant({ lang }: { lang: Lang }) {
     const t = text.trim();
     if (!t || loading) return;
     const prefix =
-      mode === "function"
-        ? lang === "ar"
-          ? "[وضع الدالة] "
-          : "[Function lookup] "
-        : "";
+      mode === "function" ? (lang === "ar" ? "[وضع الدالة] " : "[Function lookup] ") : "";
     sendMessage({ text: prefix + t });
     setInput("");
     setTimeout(() => inputRef.current?.focus(), 50);
@@ -315,7 +311,9 @@ export function OfficeAiAssistant({ lang }: { lang: Lang }) {
                 <Sparkles className="size-8" />
               </div>
               <h3 className="mb-1 text-base font-extrabold text-[#f3d28a]">
-                {lang === "ar" ? "كيف أساعدك في Excel أو Office؟" : "How can I help with Excel or Office?"}
+                {lang === "ar"
+                  ? "كيف أساعدك في Excel أو Office؟"
+                  : "How can I help with Excel or Office?"}
               </h3>
               <p className="mb-5 text-xs text-[var(--fg-soft)]">
                 {lang === "ar"
@@ -389,10 +387,7 @@ export function OfficeAiAssistant({ lang }: { lang: Lang }) {
       </div>
 
       {/* Composer */}
-      <form
-        onSubmit={onSubmit}
-        className="border-t border-[#d7aa52]/20 bg-white/[0.02] p-3"
-      >
+      <form onSubmit={onSubmit} className="border-t border-[#d7aa52]/20 bg-white/[0.02] p-3">
         <div className="flex items-end gap-2 rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/60 p-2 focus-within:border-[#d7aa52]/70">
           <textarea
             ref={inputRef}

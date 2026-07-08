@@ -51,7 +51,8 @@ export const Route = createFileRoute("/tools/")({
       { property: "og:title", content: "Smart Accounting Tools — Ahmed Elmadani" },
       {
         property: "og:description",
-        content: "Interactive finance & accounting tools grouped by category, tied to IFRS / IAS references.",
+        content:
+          "Interactive finance & accounting tools grouped by category, tied to IFRS / IAS references.",
       },
       { property: "og:url", content: "https://ahmedelmadni.com/tools" },
       { property: "og:type", content: "website" },
@@ -66,8 +67,18 @@ export const Route = createFileRoute("/tools/")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
-            { "@type": "ListItem", position: 2, name: "الأدوات", item: "https://ahmedelmadni.com/tools" },
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "الرئيسية",
+              item: "https://ahmedelmadni.com/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "الأدوات",
+              item: "https://ahmedelmadni.com/tools",
+            },
           ],
         }),
       },
@@ -76,20 +87,43 @@ export const Route = createFileRoute("/tools/")({
   component: ToolsPage,
 });
 
-
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  TrendingDown, TrendingUp, BarChart3, Percent, Banknote, ReceiptText, Calculator,
-  FileUser, Wrench, LineChart, Hourglass, Scale, Repeat, FileText, Building2,
-  Coins, Scissors, Landmark, Layers, PieChart, Package, Keyboard, GraduationCap,
-  FileSpreadsheet, FileBarChart,
+  TrendingDown,
+  TrendingUp,
+  BarChart3,
+  Percent,
+  Banknote,
+  ReceiptText,
+  Calculator,
+  FileUser,
+  Wrench,
+  LineChart,
+  Hourglass,
+  Scale,
+  Repeat,
+  FileText,
+  Building2,
+  Coins,
+  Scissors,
+  Landmark,
+  Layers,
+  PieChart,
+  Package,
+  Keyboard,
+  GraduationCap,
+  FileSpreadsheet,
+  FileBarChart,
 };
 
-const CATEGORY_META: Record<ToolCategory, {
-  Icon: React.ComponentType<{ className?: string }>;
-  gradient: string;
-  ring: string;
-  desc: { ar: string; en: string };
-}> = {
+const CATEGORY_META: Record<
+  ToolCategory,
+  {
+    Icon: React.ComponentType<{ className?: string }>;
+    gradient: string;
+    ring: string;
+    desc: { ar: string; en: string };
+  }
+> = {
   finance: {
     Icon: LineChart,
     gradient: "from-amber-400/20 via-amber-500/10 to-transparent",
@@ -160,7 +194,9 @@ function ToolCard({ tool, lang }: { tool: ToolMeta; lang: Lang }) {
         </span>
       )}
       <div className="flex items-start gap-3">
-        <div className={`flex size-11 shrink-0 items-center justify-center rounded-xl border ${tool.official ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/30 bg-[#d7aa52]/10 text-[#f3d28a]"}`}>
+        <div
+          className={`flex size-11 shrink-0 items-center justify-center rounded-xl border ${tool.official ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/30 bg-[#d7aa52]/10 text-[#f3d28a]"}`}
+        >
           <Icon className="size-5" />
         </div>
         <div className="min-w-0 flex-1">
@@ -197,9 +233,13 @@ function CategorySection({
 
   return (
     <section id={`cat-${cat}`} className="scroll-mt-24">
-      <div className={`relative overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br ${meta.gradient} p-5 md:p-6`}>
+      <div
+        className={`relative overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br ${meta.gradient} p-5 md:p-6`}
+      >
         <div className="flex items-center gap-4">
-          <div className={`flex size-14 items-center justify-center rounded-2xl bg-[#04101f]/60 ring-1 ${meta.ring} text-[#f3d28a]`}>
+          <div
+            className={`flex size-14 items-center justify-center rounded-2xl bg-[#04101f]/60 ring-1 ${meta.ring} text-[#f3d28a]`}
+          >
             <Icon className="size-7" />
           </div>
           <div className="min-w-0 flex-1">
@@ -213,7 +253,9 @@ function CategorySection({
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {tools.map((t) => <ToolCard key={t.id} tool={t} lang={lang} />)}
+        {tools.map((t) => (
+          <ToolCard key={t.id} tool={t} lang={lang} />
+        ))}
       </div>
     </section>
   );
@@ -253,7 +295,10 @@ function ToolsPage() {
     <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
       <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
         <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
-          <Link to="/" className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+          >
             <ArrowLeft className="size-3.5" />
             {lang === "ar" ? "الرئيسية" : "Home"}
             <Home className="size-3.5" />
@@ -261,7 +306,11 @@ function ToolsPage() {
           <div className="text-sm font-extrabold tracking-wide text-[#f3d28a]">
             {lang === "ar" ? "الأدوات المحاسبية الذكية" : "Smart Accounting Tools"}
           </div>
-          <button onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))} className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15" aria-label="Toggle language">
+          <button
+            onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
+            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+            aria-label="Toggle language"
+          >
             <Languages className="size-3.5" />
             {lang === "ar" ? "EN" : "AR"}
           </button>
@@ -271,13 +320,19 @@ function ToolsPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(215,170,82,0.18),transparent_50%),radial-gradient(circle_at_80%_30%,rgba(215,170,82,0.12),transparent_60%)]" />
         <div className="w-full px-4 sm:px-8 lg:px-16 py-12 md:py-16">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
             <div className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold text-[#f3d28a]">
               <Wrench className="size-3.5" />
               Smart Accounting Tools
             </div>
             <h1 className="mt-4 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] bg-clip-text text-3xl font-extrabold leading-tight text-transparent md:text-5xl">
-              {lang === "ar" ? "أدوات محاسبية ذكية مصنّفة باحترافية" : "Smart accounting tools, grouped by category"}
+              {lang === "ar"
+                ? "أدوات محاسبية ذكية مصنّفة باحترافية"
+                : "Smart accounting tools, grouped by category"}
             </h1>
             <p className="mt-3 max-w-2xl text-sm text-[var(--fg-soft)] md:text-base">
               {lang === "ar"
@@ -302,9 +357,13 @@ function ToolsPage() {
                 onChange={(e) => setCat(e.target.value as ToolCategory | "all")}
                 className="w-full appearance-none rounded-full border border-[#d7aa52]/30 bg-white/[0.04] py-2.5 text-sm font-bold text-[#f3d28a] outline-none transition focus:border-[#d7aa52]/70 focus:ring-2 focus:ring-[#d7aa52]/20 ltr:pl-4 ltr:pr-10 rtl:pr-4 rtl:pl-10"
               >
-                <option value="all" className="bg-[#04101f]">{lang === "ar" ? "كل الفئات" : "All categories"}</option>
+                <option value="all" className="bg-[#04101f]">
+                  {lang === "ar" ? "كل الفئات" : "All categories"}
+                </option>
                 {CATEGORIES.map((c) => (
-                  <option key={c.id} value={c.id} className="bg-[#04101f]">{c.label[lang]}</option>
+                  <option key={c.id} value={c.id} className="bg-[#04101f]">
+                    {c.label[lang]}
+                  </option>
                 ))}
               </select>
               <ChevronDown className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#f3d28a]/70 ltr:right-3 rtl:left-3" />
@@ -312,7 +371,10 @@ function ToolsPage() {
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            <button onClick={() => setCat("all")} className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${cat === "all" ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)] hover:bg-white/5"}`}>
+            <button
+              onClick={() => setCat("all")}
+              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${cat === "all" ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)] hover:bg-white/5"}`}
+            >
               {lang === "ar" ? "كل الأدوات" : "All tools"}
             </button>
             {CATEGORIES.map((c) => {

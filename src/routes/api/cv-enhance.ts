@@ -10,7 +10,13 @@ type Body = {
   context?: Record<string, unknown>;
 };
 
-const PROMPT = (section: string, lang: "ar" | "en", text: string, context: string, action: NonNullable<Body["action"]>) => {
+const PROMPT = (
+  section: string,
+  lang: "ar" | "en",
+  text: string,
+  context: string,
+  action: NonNullable<Body["action"]>,
+) => {
   const actionAr: Record<NonNullable<Body["action"]>, string> = {
     generate: "أنشئ محتوى جديداً مناسباً لهذا القسم بناءً على السياق",
     improve: "حسّن الصياغة مع الحفاظ على المعنى",

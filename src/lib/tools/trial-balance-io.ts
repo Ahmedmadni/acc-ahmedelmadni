@@ -13,15 +13,31 @@ import { categoryById } from "./financial-statements";
 
 const HEADER_ALIASES: Record<string, string[]> = {
   code: ["code", "account code", "رقم الحساب", "الرقم", "كود", "رمز الحساب"],
-  nameAr: ["name ar", "arabic name", "اسم الحساب", "اسم الحساب (عربي)", "البيان", "اسم الحساب بالعربية"],
-  nameEn: ["name en", "english name", "account name", "name", "اسم الحساب (إنجليزي)", "account name (en)"],
+  nameAr: [
+    "name ar",
+    "arabic name",
+    "اسم الحساب",
+    "اسم الحساب (عربي)",
+    "البيان",
+    "اسم الحساب بالعربية",
+  ],
+  nameEn: [
+    "name en",
+    "english name",
+    "account name",
+    "name",
+    "اسم الحساب (إنجليزي)",
+    "account name (en)",
+  ],
   debit: ["debit", "dr", "مدين"],
   credit: ["credit", "cr", "دائن"],
   balance: ["balance", "amount", "الرصيد", "المبلغ"],
 };
 
 function normalizeHeader(h: string): string {
-  return String(h ?? "").trim().toLowerCase();
+  return String(h ?? "")
+    .trim()
+    .toLowerCase();
 }
 
 function matchColumn(headers: string[], key: keyof typeof HEADER_ALIASES): number {
@@ -60,7 +76,8 @@ export async function parseTrialBalanceFile(file: File): Promise<TrialBalanceRow
     const line = aoa[i] as unknown[];
     if (!line || line.every((c) => c === undefined || c === "")) continue;
     const nameAr = nameArIdx >= 0 ? String(line[nameArIdx] ?? "") : "";
-    const nameEn = nameEnIdx >= 0 ? String(line[nameEnIdx] ?? "") : nameArIdx < 0 ? String(line[1] ?? "") : "";
+    const nameEn =
+      nameEnIdx >= 0 ? String(line[nameEnIdx] ?? "") : nameArIdx < 0 ? String(line[1] ?? "") : "";
     let debit = debitIdx >= 0 ? toNum(line[debitIdx]) : 0;
     let credit = creditIdx >= 0 ? toNum(line[creditIdx]) : 0;
     if (debitIdx < 0 && creditIdx < 0 && balanceIdx >= 0) {
@@ -88,9 +105,7 @@ export function downloadTrialBalanceTemplate(lang: "ar" | "en") {
       ? ["رقم الحساب", "اسم الحساب", "مدين", "دائن"]
       : ["Account Code", "Account Name", "Debit", "Credit"];
   const example =
-    lang === "ar"
-      ? ["1101", "الصندوق", 15000, 0]
-      : ["1101", "Cash on hand", 15000, 0];
+    lang === "ar" ? ["1101", "الصندوق", 15000, 0] : ["1101", "Cash on hand", 15000, 0];
   const aoa = [headers, example];
   const ws = XLSX.utils.aoa_to_sheet(aoa);
   ws["!cols"] = [{ wch: 16 }, { wch: 34 }, { wch: 16 }, { wch: 16 }];
@@ -119,7 +134,11 @@ function statementSheet(wb: XLSX.WorkBook, name: string, aoa: (string | number)[
   XLSX.utils.book_append_sheet(wb, ws, name);
 }
 
-export function exportStatementsXlsx(fs: FinancialStatements, entityName: string, fileName: string) {
+export function exportStatementsXlsx(
+  fs: FinancialStatements,
+  entityName: string,
+  fileName: string,
+) {
   const wb = XLSX.utils.book_new();
   const bs = fs.balanceSheet;
 
@@ -187,7 +206,15 @@ export function exportStatementsXlsx(fs: FinancialStatements, entityName: string
     ["Statement of Changes in Equity"],
     [],
     ["Component", "Opening", "Net profit", "Dividends", "Transfers", "Capital", "Closing"],
-    ...ce.rows.map((r) => [r.label.en, r.opening, r.netProfit, r.dividends, r.transfers, r.capitalInjected, r.closing]),
+    ...ce.rows.map((r) => [
+      r.label.en,
+      r.opening,
+      r.netProfit,
+      r.dividends,
+      r.transfers,
+      r.capitalInjected,
+      r.closing,
+    ]),
     ["Total", ce.totalOpening, "", "", "", "", ce.totalClosing],
   ]);
 

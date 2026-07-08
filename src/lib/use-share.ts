@@ -4,9 +4,10 @@ import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 function encode(obj: unknown): string {
   const json = JSON.stringify(obj);
   // Convert UTF-8 → binary string → base64, then make URL-safe.
-  const b64 = typeof btoa === "function"
-    ? btoa(unescape(encodeURIComponent(json)))
-    : Buffer.from(json, "utf-8").toString("base64");
+  const b64 =
+    typeof btoa === "function"
+      ? btoa(unescape(encodeURIComponent(json)))
+      : Buffer.from(json, "utf-8").toString("base64");
   return b64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
@@ -14,9 +15,10 @@ function decode(s: string): Record<string, unknown> {
   try {
     const b64 = s.replace(/-/g, "+").replace(/_/g, "/");
     const pad = b64.length % 4 === 0 ? "" : "=".repeat(4 - (b64.length % 4));
-    const json = typeof atob === "function"
-      ? decodeURIComponent(escape(atob(b64 + pad)))
-      : Buffer.from(b64 + pad, "base64").toString("utf-8");
+    const json =
+      typeof atob === "function"
+        ? decodeURIComponent(escape(atob(b64 + pad)))
+        : Buffer.from(b64 + pad, "base64").toString("utf-8");
     const parsed = JSON.parse(json);
     return parsed && typeof parsed === "object" ? (parsed as Record<string, unknown>) : {};
   } catch {

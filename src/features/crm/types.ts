@@ -1,9 +1,4 @@
-export type BusinessType =
-  | "company"
-  | "establishment"
-  | "freelance"
-  | "ngo"
-  | "other";
+export type BusinessType = "company" | "establishment" | "freelance" | "ngo" | "other";
 
 export type ClientStatus = "active" | "inactive" | "pending";
 
@@ -45,8 +40,16 @@ export const BUSINESS_TYPES: Record<BusinessType, { ar: string; en: string }> = 
 };
 
 export const VAT_MONTHS = [
-  { month: 0, quarter: "Q4", label: { ar: "يناير — إقرار الربع الرابع", en: "January — Q4 Return" } },
+  {
+    month: 0,
+    quarter: "Q4",
+    label: { ar: "يناير — إقرار الربع الرابع", en: "January — Q4 Return" },
+  },
   { month: 3, quarter: "Q1", label: { ar: "أبريل — إقرار الربع الأول", en: "April — Q1 Return" } },
   { month: 6, quarter: "Q2", label: { ar: "يوليو — إقرار الربع الثاني", en: "July — Q2 Return" } },
-  { month: 9, quarter: "Q3", label: { ar: "أكتوبر — إقرار الربع الثالث", en: "October — Q3 Return" } },
+  {
+    month: 9,
+    quarter: "Q3",
+    label: { ar: "أكتوبر — إقرار الربع الثالث", en: "October — Q3 Return" },
+  },
 ];

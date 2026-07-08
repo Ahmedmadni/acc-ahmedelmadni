@@ -35,17 +35,28 @@ function useFavorites() {
     try {
       const raw = localStorage.getItem(FAV_KEY);
       if (raw) setFavs(new Set(JSON.parse(raw)));
-    } catch { /* noop */ }
+    } catch {
+      /* noop */
+    }
   }, []);
   const persist = useCallback((next: Set<string>) => {
     setFavs(next);
-    try { localStorage.setItem(FAV_KEY, JSON.stringify([...next])); } catch { /* noop */ }
+    try {
+      localStorage.setItem(FAV_KEY, JSON.stringify([...next]));
+    } catch {
+      /* noop */
+    }
   }, []);
   const toggle = useCallback((key: string) => {
     setFavs((prev) => {
       const next = new Set(prev);
-      if (next.has(key)) next.delete(key); else next.add(key);
-      try { localStorage.setItem(FAV_KEY, JSON.stringify([...next])); } catch { /* noop */ }
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      try {
+        localStorage.setItem(FAV_KEY, JSON.stringify([...next]));
+      } catch {
+        /* noop */
+      }
       return next;
     });
   }, []);
@@ -58,93 +69,333 @@ function useLastRead() {
     try {
       const raw = localStorage.getItem(LAST_KEY);
       if (raw) setMap(JSON.parse(raw));
-    } catch { /* noop */ }
+    } catch {
+      /* noop */
+    }
   }, []);
   const mark = useCallback((courseId: string, entry: LastReadEntry) => {
     setMap((prev) => {
       const next = { ...prev, [courseId]: entry };
-      try { localStorage.setItem(LAST_KEY, JSON.stringify(next)); } catch { /* noop */ }
+      try {
+        localStorage.setItem(LAST_KEY, JSON.stringify(next));
+      } catch {
+        /* noop */
+      }
       return next;
     });
   }, []);
   return { map, mark };
 }
 
-
 type Course = (typeof t.library.courses)[number];
 
-const CAT_KEYS = ["all", "fundamentals", "certifications", "reporting", "tax", "software", "audit"] as const;
+const CAT_KEYS = [
+  "all",
+  "fundamentals",
+  "certifications",
+  "reporting",
+  "tax",
+  "software",
+  "audit",
+] as const;
 type CatKey = (typeof CAT_KEYS)[number];
 type LevelKey = "all" | "beginner" | "intermediate" | "advanced";
 type PriceKey = "all" | "free" | "paid";
 type FormatKey = "all" | "PDF" | "Book" | "Standard";
 
 /** Curated YouTube / platform resources per course. Each course maps to a small list of trusted external sources. */
-const RESOURCES: Record<string, Array<{ title: string; channel: string; duration: string; level: string; url: string; platform: "YouTube" | "Coursera" | "Udemy" | "edX" | "LinkedIn"; }>> = {
+const RESOURCES: Record<
+  string,
+  Array<{
+    title: string;
+    channel: string;
+    duration: string;
+    level: string;
+    url: string;
+    platform: "YouTube" | "Coursera" | "Udemy" | "edX" | "LinkedIn";
+  }>
+> = {
   "fund-1": [
-    { title: "Financial Accounting Fundamentals", channel: "University of Virginia", duration: "16h", level: "Beginner", platform: "Coursera", url: "https://www.coursera.org/learn/uva-darden-financial-accounting" },
-    { title: "Accounting Basics — Full Playlist", channel: "Accounting Stuff", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@AccountingStuff/playlists" },
+    {
+      title: "Financial Accounting Fundamentals",
+      channel: "University of Virginia",
+      duration: "16h",
+      level: "Beginner",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/uva-darden-financial-accounting",
+    },
+    {
+      title: "Accounting Basics — Full Playlist",
+      channel: "Accounting Stuff",
+      duration: "10h",
+      level: "Beginner",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@AccountingStuff/playlists",
+    },
   ],
   "fund-2": [
-    { title: "Khan Academy — Accounting & Financial Statements", channel: "Khan Academy", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/playlist?list=PL9D77E783AED02A11" },
-    { title: "Edspira — Accounting Cycle", channel: "Edspira", duration: "6h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@Edspira/playlists" },
+    {
+      title: "Khan Academy — Accounting & Financial Statements",
+      channel: "Khan Academy",
+      duration: "8h",
+      level: "Beginner",
+      platform: "YouTube",
+      url: "https://www.youtube.com/playlist?list=PL9D77E783AED02A11",
+    },
+    {
+      title: "Edspira — Accounting Cycle",
+      channel: "Edspira",
+      duration: "6h",
+      level: "Beginner",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@Edspira/playlists",
+    },
   ],
   "fund-3": [
-    { title: "Financial Reporting", channel: "University of Illinois", duration: "20h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/financial-reporting" },
-    { title: "Preparing Financial Statements", channel: "Farhat Lectures", duration: "9h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
+    {
+      title: "Financial Reporting",
+      channel: "University of Illinois",
+      duration: "20h",
+      level: "Intermediate",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/financial-reporting",
+    },
+    {
+      title: "Preparing Financial Statements",
+      channel: "Farhat Lectures",
+      duration: "9h",
+      level: "Intermediate",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@AccountingLectures/playlists",
+    },
   ],
   "fund-4": [
-    { title: "Financial Statement Analysis", channel: "Wharton", duration: "12h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/learn/wharton-accounting" },
-    { title: "Financial Analysis with Excel", channel: "LinkedIn Learning", duration: "5h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/financial-analysis-analyzing-the-top-line-with-excel" },
+    {
+      title: "Financial Statement Analysis",
+      channel: "Wharton",
+      duration: "12h",
+      level: "Intermediate",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/wharton-accounting",
+    },
+    {
+      title: "Financial Analysis with Excel",
+      channel: "LinkedIn Learning",
+      duration: "5h",
+      level: "Intermediate",
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/learning/financial-analysis-analyzing-the-top-line-with-excel",
+    },
   ],
   "cert-ifrs": [
-    { title: "IFRS Specialization", channel: "PwC / Coursera", duration: "40h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/specializations/ifrs" },
-    { title: "IFRSbox — Free IFRS Lectures", channel: "CPDbox (Silvia M.)", duration: "30h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@CPDbox/playlists" },
+    {
+      title: "IFRS Specialization",
+      channel: "PwC / Coursera",
+      duration: "40h",
+      level: "Advanced",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/ifrs",
+    },
+    {
+      title: "IFRSbox — Free IFRS Lectures",
+      channel: "CPDbox (Silvia M.)",
+      duration: "30h",
+      level: "Advanced",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@CPDbox/playlists",
+    },
   ],
   "cert-cma": [
-    { title: "CMA Part 1 — Full Course", channel: "Udemy", duration: "60h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/" },
-    { title: "CMA Part 2 — Full Course", channel: "Udemy", duration: "55h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cma-part-2-strategic-financial-management/" },
+    {
+      title: "CMA Part 1 — Full Course",
+      channel: "Udemy",
+      duration: "60h",
+      level: "Advanced",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/cma-part-1-financial-planning-performance-and-analytics/",
+    },
+    {
+      title: "CMA Part 2 — Full Course",
+      channel: "Udemy",
+      duration: "55h",
+      level: "Advanced",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/cma-part-2-strategic-financial-management/",
+    },
   ],
   "cert-cpa": [
-    { title: "CPA Exam Preparation", channel: "Udemy", duration: "150h", level: "Advanced", platform: "Udemy", url: "https://www.udemy.com/course/cpa-exam-preparation/" },
-    { title: "Becker CPA Review", channel: "Becker", duration: "120h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@Becker/playlists" },
+    {
+      title: "CPA Exam Preparation",
+      channel: "Udemy",
+      duration: "150h",
+      level: "Advanced",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/cpa-exam-preparation/",
+    },
+    {
+      title: "Becker CPA Review",
+      channel: "Becker",
+      duration: "120h",
+      level: "Advanced",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@Becker/playlists",
+    },
   ],
   "cert-socpa": [
-    { title: "SOCPA Official Education Portal", channel: "SOCPA", duration: "70h", level: "Advanced", platform: "YouTube", url: "https://socpa.org.sa/en/Education/Pages/default.aspx" },
+    {
+      title: "SOCPA Official Education Portal",
+      channel: "SOCPA",
+      duration: "70h",
+      level: "Advanced",
+      platform: "YouTube",
+      url: "https://socpa.org.sa/en/Education/Pages/default.aspx",
+    },
   ],
   "rep-mgmt": [
-    { title: "Managerial Accounting", channel: "University of Virginia", duration: "10h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/learn/uva-darden-managerial-accounting" },
-    { title: "Managerial Accounting — Playlist", channel: "Edspira", duration: "8h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@Edspira/playlists" },
+    {
+      title: "Managerial Accounting",
+      channel: "University of Virginia",
+      duration: "10h",
+      level: "Intermediate",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/uva-darden-managerial-accounting",
+    },
+    {
+      title: "Managerial Accounting — Playlist",
+      channel: "Edspira",
+      duration: "8h",
+      level: "Intermediate",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@Edspira/playlists",
+    },
   ],
   "rep-cost": [
-    { title: "Cost Accounting — Full Series", channel: "Farhat Lectures", duration: "12h", level: "Intermediate", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
-    { title: "Cost Accounting Fundamentals", channel: "Udemy", duration: "10h", level: "Intermediate", platform: "Udemy", url: "https://www.udemy.com/course/cost-accounting-fundamentals/" },
+    {
+      title: "Cost Accounting — Full Series",
+      channel: "Farhat Lectures",
+      duration: "12h",
+      level: "Intermediate",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@AccountingLectures/playlists",
+    },
+    {
+      title: "Cost Accounting Fundamentals",
+      channel: "Udemy",
+      duration: "10h",
+      level: "Intermediate",
+      platform: "Udemy",
+      url: "https://www.udemy.com/course/cost-accounting-fundamentals/",
+    },
   ],
   "aud-1": [
-    { title: "Auditing I — Conceptual Foundations", channel: "Illinois / Coursera", duration: "14h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/learn/auditing-part1-conceptual-foundations" },
-    { title: "Auditing — Full Playlist", channel: "Farhat Lectures", duration: "12h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@AccountingLectures/playlists" },
+    {
+      title: "Auditing I — Conceptual Foundations",
+      channel: "Illinois / Coursera",
+      duration: "14h",
+      level: "Advanced",
+      platform: "Coursera",
+      url: "https://www.coursera.org/learn/auditing-part1-conceptual-foundations",
+    },
+    {
+      title: "Auditing — Full Playlist",
+      channel: "Farhat Lectures",
+      duration: "12h",
+      level: "Advanced",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@AccountingLectures/playlists",
+    },
   ],
   "tax-1": [
-    { title: "U.S. Federal Taxation Specialization", channel: "University of Illinois", duration: "30h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/united-states-federal-taxation" },
+    {
+      title: "U.S. Federal Taxation Specialization",
+      channel: "University of Illinois",
+      duration: "30h",
+      level: "Intermediate",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/united-states-federal-taxation",
+    },
   ],
   "tax-vat": [
-    { title: "ZATCA — VAT Education", channel: "ZATCA", duration: "5h", level: "Beginner", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
+    {
+      title: "ZATCA — VAT Education",
+      channel: "ZATCA",
+      duration: "5h",
+      level: "Beginner",
+      platform: "YouTube",
+      url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx",
+    },
   ],
   "tax-zakat": [
-    { title: "ZATCA — Zakat Education", channel: "ZATCA", duration: "6h", level: "Intermediate", platform: "YouTube", url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx" },
+    {
+      title: "ZATCA — Zakat Education",
+      channel: "ZATCA",
+      duration: "6h",
+      level: "Intermediate",
+      platform: "YouTube",
+      url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx",
+    },
   ],
   "fm-1": [
-    { title: "Business and Financial Modeling", channel: "Wharton", duration: "30h", level: "Advanced", platform: "Coursera", url: "https://www.coursera.org/specializations/wharton-business-financial-modeling" },
-    { title: "CFI — Financial Modeling Channel", channel: "Corporate Finance Institute", duration: "25h", level: "Advanced", platform: "YouTube", url: "https://www.youtube.com/@corporatefinanceinstitute/playlists" },
+    {
+      title: "Business and Financial Modeling",
+      channel: "Wharton",
+      duration: "30h",
+      level: "Advanced",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/wharton-business-financial-modeling",
+    },
+    {
+      title: "CFI — Financial Modeling Channel",
+      channel: "Corporate Finance Institute",
+      duration: "25h",
+      level: "Advanced",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@corporatefinanceinstitute/playlists",
+    },
   ],
   "sw-excel": [
-    { title: "Excel Skills for Business Specialization", channel: "Macquarie University", duration: "20h", level: "Intermediate", platform: "Coursera", url: "https://www.coursera.org/specializations/excel" },
-    { title: "Excel for Accountants", channel: "LinkedIn Learning", duration: "8h", level: "Intermediate", platform: "LinkedIn", url: "https://www.linkedin.com/learning/excel-for-accountants" },
+    {
+      title: "Excel Skills for Business Specialization",
+      channel: "Macquarie University",
+      duration: "20h",
+      level: "Intermediate",
+      platform: "Coursera",
+      url: "https://www.coursera.org/specializations/excel",
+    },
+    {
+      title: "Excel for Accountants",
+      channel: "LinkedIn Learning",
+      duration: "8h",
+      level: "Intermediate",
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/learning/excel-for-accountants",
+    },
   ],
   "sw-acct": [
-    { title: "Odoo Accounting — Official eLearning", channel: "Odoo", duration: "15h", level: "Intermediate", platform: "YouTube", url: "https://www.odoo.com/slides/accounting-7" },
-    { title: "Zoho Books — Official Tutorials", channel: "Zoho", duration: "10h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@ZohoBooks/playlists" },
-    { title: "QuickBooks — Official Training", channel: "Intuit QuickBooks", duration: "8h", level: "Beginner", platform: "YouTube", url: "https://www.youtube.com/@QuickBooks/playlists" },
+    {
+      title: "Odoo Accounting — Official eLearning",
+      channel: "Odoo",
+      duration: "15h",
+      level: "Intermediate",
+      platform: "YouTube",
+      url: "https://www.odoo.com/slides/accounting-7",
+    },
+    {
+      title: "Zoho Books — Official Tutorials",
+      channel: "Zoho",
+      duration: "10h",
+      level: "Beginner",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@ZohoBooks/playlists",
+    },
+    {
+      title: "QuickBooks — Official Training",
+      channel: "Intuit QuickBooks",
+      duration: "8h",
+      level: "Beginner",
+      platform: "YouTube",
+      url: "https://www.youtube.com/@QuickBooks/playlists",
+    },
   ],
 };
 
@@ -157,79 +408,291 @@ const PLATFORM_COLORS: Record<string, string> = {
 };
 
 /** Curated books / PDF references per course. */
-type Book = { title: string; author: string; year?: string; format: "PDF" | "Book" | "Standard"; url: string };
+type Book = {
+  title: string;
+  author: string;
+  year?: string;
+  format: "PDF" | "Book" | "Standard";
+  url: string;
+};
 const BOOKS: Record<string, Book[]> = {
   "fund-1": [
-    { title: "Financial Accounting (Libby, Libby & Hodge)", author: "Robert Libby", year: "2022", format: "Book", url: "https://www.google.com/books/edition/_/3jM7EAAAQBAJ" },
-    { title: "أساسيات المحاسبة المالية", author: "د. وليد ناجي الحيالي", format: "PDF", url: "https://www.google.com/search?q=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+    {
+      title: "Financial Accounting (Libby, Libby & Hodge)",
+      author: "Robert Libby",
+      year: "2022",
+      format: "Book",
+      url: "https://www.google.com/books/edition/_/3jM7EAAAQBAJ",
+    },
+    {
+      title: "أساسيات المحاسبة المالية",
+      author: "د. وليد ناجي الحيالي",
+      format: "PDF",
+      url: "https://www.google.com/search?q=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf",
+    },
   ],
   "fund-2": [
-    { title: "Principles of Accounting (Weygandt)", author: "Jerry J. Weygandt", year: "2021", format: "Book", url: "https://www.wiley.com/en-us/Accounting+Principles%2C+14th+Edition-p-9781119707110" },
-    { title: "الدورة المحاسبية الكاملة - مرجع تطبيقي", author: "د. محمد المبيضين", format: "PDF", url: "https://www.google.com/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A%D8%A9+pdf" },
+    {
+      title: "Principles of Accounting (Weygandt)",
+      author: "Jerry J. Weygandt",
+      year: "2021",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Accounting+Principles%2C+14th+Edition-p-9781119707110",
+    },
+    {
+      title: "الدورة المحاسبية الكاملة - مرجع تطبيقي",
+      author: "د. محمد المبيضين",
+      format: "PDF",
+      url: "https://www.google.com/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D8%A9+%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%8A%D8%A9+pdf",
+    },
   ],
   "fund-3": [
-    { title: "Intermediate Accounting (Kieso)", author: "Donald E. Kieso", year: "2023", format: "Book", url: "https://www.wiley.com/en-us/Intermediate+Accounting%2C+18th+Edition-p-9781119790976" },
-    { title: "إعداد القوائم المالية - دليل عملي", author: "د. طارق عبد العال حماد", format: "PDF", url: "https://www.google.com/search?q=%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+    {
+      title: "Intermediate Accounting (Kieso)",
+      author: "Donald E. Kieso",
+      year: "2023",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Intermediate+Accounting%2C+18th+Edition-p-9781119790976",
+    },
+    {
+      title: "إعداد القوائم المالية - دليل عملي",
+      author: "د. طارق عبد العال حماد",
+      format: "PDF",
+      url: "https://www.google.com/search?q=%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf",
+    },
   ],
   "fund-4": [
-    { title: "Financial Statement Analysis (Subramanyam)", author: "K. R. Subramanyam", year: "2022", format: "Book", url: "https://www.mheducation.com/highered/product/financial-statement-analysis-subramanyam/M9781259722653.html" },
-    { title: "تحليل القوائم المالية", author: "د. خالد الراوي", format: "PDF", url: "https://www.google.com/search?q=%D8%AA%D8%AD%D9%84%D9%8A%D9%84+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf" },
+    {
+      title: "Financial Statement Analysis (Subramanyam)",
+      author: "K. R. Subramanyam",
+      year: "2022",
+      format: "Book",
+      url: "https://www.mheducation.com/highered/product/financial-statement-analysis-subramanyam/M9781259722653.html",
+    },
+    {
+      title: "تحليل القوائم المالية",
+      author: "د. خالد الراوي",
+      format: "PDF",
+      url: "https://www.google.com/search?q=%D8%AA%D8%AD%D9%84%D9%8A%D9%84+%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%A6%D9%85+%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9+pdf",
+    },
   ],
   "cert-ifrs": [
-    { title: "IFRS Standards — Official Bound Volume", author: "IFRS Foundation", year: "2024", format: "Standard", url: "https://www.ifrs.org/issued-standards/list-of-standards/" },
-    { title: "Wiley IFRS 2024 — Interpretation & Application", author: "PKF International", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+IFRS+2024-p-9781394206094" },
-    { title: "IFRS in Practice — KPMG Guide", author: "KPMG", format: "PDF", url: "https://kpmg.com/xx/en/home/services/audit/international-financial-reporting-standards.html" },
+    {
+      title: "IFRS Standards — Official Bound Volume",
+      author: "IFRS Foundation",
+      year: "2024",
+      format: "Standard",
+      url: "https://www.ifrs.org/issued-standards/list-of-standards/",
+    },
+    {
+      title: "Wiley IFRS 2024 — Interpretation & Application",
+      author: "PKF International",
+      year: "2024",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Wiley+IFRS+2024-p-9781394206094",
+    },
+    {
+      title: "IFRS in Practice — KPMG Guide",
+      author: "KPMG",
+      format: "PDF",
+      url: "https://kpmg.com/xx/en/home/services/audit/international-financial-reporting-standards.html",
+    },
   ],
   "cert-cma": [
-    { title: "Wiley CMAexcel Exam Review 2024 — Part 1", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+1-p-9781394208319" },
-    { title: "Wiley CMAexcel Exam Review 2024 — Part 2", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+2-p-9781394208333" },
-    { title: "Gleim CMA Review System", author: "Gleim", format: "Book", url: "https://www.gleim.com/cma-review/" },
+    {
+      title: "Wiley CMAexcel Exam Review 2024 — Part 1",
+      author: "Wiley",
+      year: "2024",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+1-p-9781394208319",
+    },
+    {
+      title: "Wiley CMAexcel Exam Review 2024 — Part 2",
+      author: "Wiley",
+      year: "2024",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Wiley+CMAexcel+Learning+System+Exam+Review+2024%2C+Part+2-p-9781394208333",
+    },
+    {
+      title: "Gleim CMA Review System",
+      author: "Gleim",
+      format: "Book",
+      url: "https://www.gleim.com/cma-review/",
+    },
   ],
   "cert-cpa": [
-    { title: "Wiley CPAexcel Exam Review 2024", author: "Wiley", year: "2024", format: "Book", url: "https://www.wiley.com/en-us/Wiley+CPAexcel+Exam+Review+2024+Study+Guide-p-9781394195565" },
-    { title: "Becker CPA Review Textbooks", author: "Becker", format: "Book", url: "https://www.becker.com/cpa-review" },
-    { title: "AICPA — CPA Exam Blueprints", author: "AICPA", format: "PDF", url: "https://www.aicpa-cima.com/resources/download/cpa-exam-blueprints-pdf" },
+    {
+      title: "Wiley CPAexcel Exam Review 2024",
+      author: "Wiley",
+      year: "2024",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Wiley+CPAexcel+Exam+Review+2024+Study+Guide-p-9781394195565",
+    },
+    {
+      title: "Becker CPA Review Textbooks",
+      author: "Becker",
+      format: "Book",
+      url: "https://www.becker.com/cpa-review",
+    },
+    {
+      title: "AICPA — CPA Exam Blueprints",
+      author: "AICPA",
+      format: "PDF",
+      url: "https://www.aicpa-cima.com/resources/download/cpa-exam-blueprints-pdf",
+    },
   ],
   "cert-socpa": [
-    { title: "المعايير الدولية المعتمدة في السعودية - SOCPA", author: "SOCPA", format: "PDF", url: "https://socpa.org.sa/Socpa/Technical-Resources/Accounting/IFRS-Endorsed-Standards.aspx" },
-    { title: "دليل زمالة SOCPA", author: "الهيئة السعودية للمحاسبين", format: "PDF", url: "https://socpa.org.sa/Socpa/Fellowship/Fellowship-Exam.aspx" },
+    {
+      title: "المعايير الدولية المعتمدة في السعودية - SOCPA",
+      author: "SOCPA",
+      format: "PDF",
+      url: "https://socpa.org.sa/Socpa/Technical-Resources/Accounting/IFRS-Endorsed-Standards.aspx",
+    },
+    {
+      title: "دليل زمالة SOCPA",
+      author: "الهيئة السعودية للمحاسبين",
+      format: "PDF",
+      url: "https://socpa.org.sa/Socpa/Fellowship/Fellowship-Exam.aspx",
+    },
   ],
   "rep-mgmt": [
-    { title: "Managerial Accounting (Garrison)", author: "Ray Garrison", year: "2023", format: "Book", url: "https://www.mheducation.com/highered/product/managerial-accounting-garrison-noreen/M9781260247787.html" },
-    { title: "المحاسبة الإدارية", author: "د. أحمد محمد نور", format: "PDF", url: "https://www.google.com/search?q=%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9+pdf" },
+    {
+      title: "Managerial Accounting (Garrison)",
+      author: "Ray Garrison",
+      year: "2023",
+      format: "Book",
+      url: "https://www.mheducation.com/highered/product/managerial-accounting-garrison-noreen/M9781260247787.html",
+    },
+    {
+      title: "المحاسبة الإدارية",
+      author: "د. أحمد محمد نور",
+      format: "PDF",
+      url: "https://www.google.com/search?q=%D8%A7%D9%84%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9+pdf",
+    },
   ],
   "rep-cost": [
-    { title: "Cost Accounting: A Managerial Emphasis (Horngren)", author: "Charles T. Horngren", year: "2021", format: "Book", url: "https://www.pearson.com/en-us/subject-catalog/p/cost-accounting-a-managerial-emphasis/P200000005847" },
-    { title: "محاسبة التكاليف - مدخل إداري", author: "د. أحمد حسين", format: "PDF", url: "https://www.google.com/search?q=%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81+pdf" },
+    {
+      title: "Cost Accounting: A Managerial Emphasis (Horngren)",
+      author: "Charles T. Horngren",
+      year: "2021",
+      format: "Book",
+      url: "https://www.pearson.com/en-us/subject-catalog/p/cost-accounting-a-managerial-emphasis/P200000005847",
+    },
+    {
+      title: "محاسبة التكاليف - مدخل إداري",
+      author: "د. أحمد حسين",
+      format: "PDF",
+      url: "https://www.google.com/search?q=%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9+%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81+pdf",
+    },
   ],
   "aud-1": [
-    { title: "Auditing & Assurance Services (Arens)", author: "Alvin A. Arens", year: "2022", format: "Book", url: "https://www.pearson.com/en-us/subject-catalog/p/auditing-and-assurance-services/P200000005826" },
-    { title: "ISA — International Standards on Auditing", author: "IAASB", format: "PDF", url: "https://www.iaasb.org/publications/2022-handbook-international-quality-management-auditing-review-other-assurance-and-related-services" },
+    {
+      title: "Auditing & Assurance Services (Arens)",
+      author: "Alvin A. Arens",
+      year: "2022",
+      format: "Book",
+      url: "https://www.pearson.com/en-us/subject-catalog/p/auditing-and-assurance-services/P200000005826",
+    },
+    {
+      title: "ISA — International Standards on Auditing",
+      author: "IAASB",
+      format: "PDF",
+      url: "https://www.iaasb.org/publications/2022-handbook-international-quality-management-auditing-review-other-assurance-and-related-services",
+    },
   ],
   "tax-1": [
-    { title: "Principles of Taxation for Business and Investment Planning", author: "Sally Jones", year: "2023", format: "Book", url: "https://www.mheducation.com/highered/product/principles-taxation-business-investment-planning-2023-edition-jones-rhoades-catanach/M9781265674380.html" },
+    {
+      title: "Principles of Taxation for Business and Investment Planning",
+      author: "Sally Jones",
+      year: "2023",
+      format: "Book",
+      url: "https://www.mheducation.com/highered/product/principles-taxation-business-investment-planning-2023-edition-jones-rhoades-catanach/M9781265674380.html",
+    },
   ],
   "tax-vat": [
-    { title: "اللائحة التنفيذية لضريبة القيمة المضافة", author: "هيئة الزكاة والضريبة والجمارك", format: "PDF", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/VAT.aspx" },
-    { title: "دليل ضريبة القيمة المضافة - ZATCA", author: "ZATCA", format: "PDF", url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx" },
+    {
+      title: "اللائحة التنفيذية لضريبة القيمة المضافة",
+      author: "هيئة الزكاة والضريبة والجمارك",
+      format: "PDF",
+      url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/VAT.aspx",
+    },
+    {
+      title: "دليل ضريبة القيمة المضافة - ZATCA",
+      author: "ZATCA",
+      format: "PDF",
+      url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx",
+    },
   ],
   "tax-zakat": [
-    { title: "لائحة جباية الزكاة - ZATCA", author: "هيئة الزكاة والضريبة والجمارك", format: "PDF", url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/Zakat.aspx" },
-    { title: "دليل الزكاة وضريبة الدخل", author: "ZATCA", format: "PDF", url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx" },
+    {
+      title: "لائحة جباية الزكاة - ZATCA",
+      author: "هيئة الزكاة والضريبة والجمارك",
+      format: "PDF",
+      url: "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Pages/Zakat.aspx",
+    },
+    {
+      title: "دليل الزكاة وضريبة الدخل",
+      author: "ZATCA",
+      format: "PDF",
+      url: "https://zatca.gov.sa/ar/HelpCenter/guidelines/Pages/default.aspx",
+    },
   ],
   "fm-1": [
-    { title: "Financial Modeling (Simon Benninga)", author: "Simon Benninga", year: "2014", format: "Book", url: "https://mitpress.mit.edu/9780262027281/financial-modeling/" },
-    { title: "Investment Banking (Rosenbaum & Pearl)", author: "Joshua Rosenbaum", year: "2020", format: "Book", url: "https://www.wiley.com/en-us/Investment+Banking%3A+Valuation%2C+LBOs%2C+M%26A%2C+and+IPOs%2C+3rd+Edition-p-9781119706182" },
-    { title: "CFI — Financial Modeling eBooks", author: "Corporate Finance Institute", format: "PDF", url: "https://corporatefinanceinstitute.com/resources/ebooks/" },
+    {
+      title: "Financial Modeling (Simon Benninga)",
+      author: "Simon Benninga",
+      year: "2014",
+      format: "Book",
+      url: "https://mitpress.mit.edu/9780262027281/financial-modeling/",
+    },
+    {
+      title: "Investment Banking (Rosenbaum & Pearl)",
+      author: "Joshua Rosenbaum",
+      year: "2020",
+      format: "Book",
+      url: "https://www.wiley.com/en-us/Investment+Banking%3A+Valuation%2C+LBOs%2C+M%26A%2C+and+IPOs%2C+3rd+Edition-p-9781119706182",
+    },
+    {
+      title: "CFI — Financial Modeling eBooks",
+      author: "Corporate Finance Institute",
+      format: "PDF",
+      url: "https://corporatefinanceinstitute.com/resources/ebooks/",
+    },
   ],
   "sw-excel": [
-    { title: "Microsoft Excel — Data Analysis & Business Modeling", author: "Wayne Winston", year: "2021", format: "Book", url: "https://www.microsoftpressstore.com/store/microsoft-excel-data-analysis-and-business-modeling-9780137613663" },
-    { title: "Excel للمحاسبين - دليل تطبيقي", author: "د. حسام الدين", format: "PDF", url: "https://www.google.com/search?q=excel+for+accountants+pdf" },
+    {
+      title: "Microsoft Excel — Data Analysis & Business Modeling",
+      author: "Wayne Winston",
+      year: "2021",
+      format: "Book",
+      url: "https://www.microsoftpressstore.com/store/microsoft-excel-data-analysis-and-business-modeling-9780137613663",
+    },
+    {
+      title: "Excel للمحاسبين - دليل تطبيقي",
+      author: "د. حسام الدين",
+      format: "PDF",
+      url: "https://www.google.com/search?q=excel+for+accountants+pdf",
+    },
   ],
   "sw-acct": [
-    { title: "Odoo 17 Accounting — Official Documentation", author: "Odoo S.A.", format: "PDF", url: "https://www.odoo.com/documentation/17.0/applications/finance/accounting.html" },
-    { title: "Zoho Books User Guide", author: "Zoho Corporation", format: "PDF", url: "https://www.zoho.com/books/help/" },
-    { title: "QuickBooks Official User Guide", author: "Intuit", format: "PDF", url: "https://quickbooks.intuit.com/learn-support/" },
+    {
+      title: "Odoo 17 Accounting — Official Documentation",
+      author: "Odoo S.A.",
+      format: "PDF",
+      url: "https://www.odoo.com/documentation/17.0/applications/finance/accounting.html",
+    },
+    {
+      title: "Zoho Books User Guide",
+      author: "Zoho Corporation",
+      format: "PDF",
+      url: "https://www.zoho.com/books/help/",
+    },
+    {
+      title: "QuickBooks Official User Guide",
+      author: "Intuit",
+      format: "PDF",
+      url: "https://quickbooks.intuit.com/learn-support/",
+    },
   ],
 };
 
@@ -241,7 +704,15 @@ const FORMAT_COLORS: Record<string, string> = {
 
 type ViewMode = "videos" | "books";
 
-export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView?: ViewMode; hideTabs?: boolean }) {
+export function Library({
+  lang,
+  forcedView,
+  hideTabs,
+}: {
+  lang: Lang;
+  forcedView?: ViewMode;
+  hideTabs?: boolean;
+}) {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatKey>("all");
   const [level, setLevel] = useState<LevelKey>("all");
@@ -284,49 +755,75 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
     });
   }, [query, cat, level, price, view, bookFormat, bookAuthor, favOnly, favs]);
 
-
   return (
     <section id="library" className="relative py-14">
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent"
+      />
       <div className="w-full px-4 sm:px-8 lg:px-16">
         {/* Title */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }} className="title-bar">
-          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-[#d7aa52]">— {t.library.eyebrow[lang]}</div>
-          <h2 className="text-2xl font-black sm:text-3xl md:text-4xl" style={{ color: "var(--fg)" }}>{t.library.title[lang]}</h2>
-          <p className="mt-2 text-sm leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{t.library.sub[lang]}</p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.7 }}
+          className="title-bar"
+        >
+          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-[#d7aa52]">
+            — {t.library.eyebrow[lang]}
+          </div>
+          <h2
+            className="text-2xl font-black sm:text-3xl md:text-4xl"
+            style={{ color: "var(--fg)" }}
+          >
+            {t.library.title[lang]}
+          </h2>
+          <p
+            className="mt-2 text-sm leading-relaxed text-justify"
+            style={{ color: "var(--fg-soft)" }}
+          >
+            {t.library.sub[lang]}
+          </p>
         </motion.div>
 
         {/* Tabs: Videos vs Books (hidden when forced from parent route) */}
         {!hideTabs && (
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
-          {(["videos", "books"] as ViewMode[]).map((v) => {
-            const isActive = view === v;
-            const Icon = v === "videos" ? Video : BookMarked;
-            return (
-              <button
-                key={v}
-                type="button"
-                onClick={() => { playClick(); setView(v); }}
-                onMouseEnter={playHover}
-                className={`inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold transition-all ${
-                  isActive
-                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
-                    : "text-white/70 hover:text-[#f3d28a]"
-                }`}
-              >
-                <Icon className="size-3.5" />
-                {t.library.tabs[v][lang]}
-              </button>
-            );
-          })}
-        </div>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+            {(["videos", "books"] as ViewMode[]).map((v) => {
+              const isActive = view === v;
+              const Icon = v === "videos" ? Video : BookMarked;
+              return (
+                <button
+                  key={v}
+                  type="button"
+                  onClick={() => {
+                    playClick();
+                    setView(v);
+                  }}
+                  onMouseEnter={playHover}
+                  className={`inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold transition-all ${
+                    isActive
+                      ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
+                      : "text-white/70 hover:text-[#f3d28a]"
+                  }`}
+                >
+                  <Icon className="size-3.5" />
+                  {t.library.tabs[v][lang]}
+                </button>
+              );
+            })}
+          </div>
         )}
 
         {/* Search + filters */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }}
-          className="mt-10 rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/90 p-5 backdrop-blur-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="mt-10 rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/90 p-5 backdrop-blur-xl"
+        >
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
             <div className="relative flex-1">
               <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
@@ -342,26 +839,35 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
               <Filter className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
               <select
                 value={cat}
-                onChange={(e) => { playClick(); setCat(e.target.value as CatKey); }}
+                onChange={(e) => {
+                  playClick();
+                  setCat(e.target.value as CatKey);
+                }}
                 className="w-full appearance-none rounded-full border border-[#d7aa52]/40 bg-white/[0.04] py-3 ps-11 pe-9 text-sm font-semibold text-white outline-none transition-all hover:border-[#d7aa52]/70 focus:border-[#d7aa52]"
                 aria-label={lang === "ar" ? "التصنيف" : "Category"}
               >
                 {CAT_KEYS.map((k) => (
                   <option key={k} value={k} className="bg-[#04101f] text-white">
                     {k === "all"
-                      ? (lang === "ar" ? "كل التصنيفات" : "All categories")
+                      ? lang === "ar"
+                        ? "كل التصنيفات"
+                        : "All categories"
                       : t.library.cats[k as Exclude<CatKey, "all">][lang]}
                   </option>
                 ))}
               </select>
-              <span className="pointer-events-none absolute end-4 top-1/2 -translate-y-1/2 text-[#d7aa52]">▾</span>
+              <span className="pointer-events-none absolute end-4 top-1/2 -translate-y-1/2 text-[#d7aa52]">
+                ▾
+              </span>
             </div>
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-2">
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#d7aa52]">
               {lang === "ar" ? "فلاتر إضافية" : "More filters"}
             </span>
-            <Select value={level} onChange={(v) => setLevel(v as LevelKey)}
+            <Select
+              value={level}
+              onChange={(v) => setLevel(v as LevelKey)}
               options={[
                 { value: "all", label: t.library.levels.all[lang] },
                 { value: "beginner", label: t.library.levels.beginner[lang] },
@@ -369,7 +875,9 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
                 { value: "advanced", label: t.library.levels.advanced[lang] },
               ]}
             />
-            <Select value={price} onChange={(v) => setPrice(v as PriceKey)}
+            <Select
+              value={price}
+              onChange={(v) => setPrice(v as PriceKey)}
               options={[
                 { value: "all", label: t.library.priceLabels.all[lang] },
                 { value: "free", label: t.library.priceLabels.free[lang] },
@@ -377,7 +885,6 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
               ]}
             />
           </div>
-
 
           {/* Books-only filters */}
           {view === "books" && (
@@ -409,7 +916,10 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
                 </div>
                 <button
                   type="button"
-                  onClick={() => { playClick(); setFavOnly((v) => !v); }}
+                  onClick={() => {
+                    playClick();
+                    setFavOnly((v) => !v);
+                  }}
                   onMouseEnter={playHover}
                   className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[11px] font-bold transition-all ${
                     favOnly
@@ -424,7 +934,12 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
                 {(bookFormat !== "all" || bookAuthor || favOnly) && (
                   <button
                     type="button"
-                    onClick={() => { playClick(); setBookFormat("all"); setBookAuthor(""); setFavOnly(false); }}
+                    onClick={() => {
+                      playClick();
+                      setBookFormat("all");
+                      setBookAuthor("");
+                      setFavOnly(false);
+                    }}
                     className="inline-flex items-center gap-1 rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-bold text-white/70 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
                   >
                     <X className="size-3" />
@@ -452,7 +967,10 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
                   onMouseEnter={playHover}
                   className="group relative overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 text-start transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
                 >
-                  <div aria-hidden className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150" />
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/12 blur-2xl transition-all group-hover:scale-150"
+                  />
                   <div className="relative">
                     <div className="flex items-start justify-between gap-3">
                       <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
@@ -465,25 +983,54 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
                             title={t.library.showBooks[lang]}
                             aria-label={t.library.showBooks[lang]}
                             onMouseEnter={playHover}
-                            onClick={(e) => { e.stopPropagation(); playClick(); setActive({ course: c, tab: "books" }); }}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              playClick();
+                              setActive({ course: c, tab: "books" });
+                            }}
                             className="inline-flex size-7 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 text-[#f3d28a] transition-all hover:scale-110 hover:bg-[#d7aa52]/25"
                           >
                             <BookMarked className="size-3.5" />
                           </button>
                         )}
-                        <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
-                          c.price === "free" ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
-                        }`}>
-                          {c.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
+                        <span
+                          className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
+                            c.price === "free"
+                              ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30"
+                              : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
+                          }`}
+                        >
+                          {c.price === "free"
+                            ? t.library.priceLabels.free[lang]
+                            : t.library.priceLabels.paid[lang]}
                         </span>
                       </div>
                     </div>
-                    <h3 className="mt-3 text-sm font-extrabold leading-snug" style={{ color: "var(--fg)" }}>{c[lang]}</h3>
-                    <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify" style={{ color: "var(--fg-soft)" }}>{c.desc[lang]}</p>
+                    <h3
+                      className="mt-3 text-sm font-extrabold leading-snug"
+                      style={{ color: "var(--fg)" }}
+                    >
+                      {c[lang]}
+                    </h3>
+                    <p
+                      className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify"
+                      style={{ color: "var(--fg-soft)" }}
+                    >
+                      {c.desc[lang]}
+                    </p>
                     <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
-                      <span className="inline-flex items-center gap-1"><Layers className="size-3 text-[#d7aa52]" />{t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}</span>
-                      <span className="inline-flex items-center gap-1"><Clock className="size-3 text-[#d7aa52]" />{c.hours}h · {c.lessons} {t.library.lessons[lang]}</span>
-                      <span className="inline-flex items-center gap-1"><Globe className="size-3 text-[#d7aa52]" />{c.lang.toUpperCase()}</span>
+                      <span className="inline-flex items-center gap-1">
+                        <Layers className="size-3 text-[#d7aa52]" />
+                        {t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Clock className="size-3 text-[#d7aa52]" />
+                        {c.hours}h · {c.lessons} {t.library.lessons[lang]}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Globe className="size-3 text-[#d7aa52]" />
+                        {c.lang.toUpperCase()}
+                      </span>
                     </div>
                     {lastReadMap[c.id] && (
                       <a
@@ -496,23 +1043,35 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
                         title={lastReadMap[c.id].title}
                       >
                         <BookOpen className="size-3 shrink-0 text-[#d7aa52]" />
-                        <span className="truncate font-semibold">{t.library.lastRead[lang]}: {lastReadMap[c.id].title}</span>
+                        <span className="truncate font-semibold">
+                          {t.library.lastRead[lang]}: {lastReadMap[c.id].title}
+                        </span>
                       </a>
                     )}
                     <div className="mt-4 flex flex-wrap gap-2">
                       <button
                         type="button"
-                        onClick={() => { playClick(); setActive({ course: c, tab: view }); }}
+                        onClick={() => {
+                          playClick();
+                          setActive({ course: c, tab: view });
+                        }}
                         onMouseEnter={playHover}
                         className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
                       >
-                        {view === "videos" ? <PlayCircle className="size-3" /> : <BookOpen className="size-3" />}
+                        {view === "videos" ? (
+                          <PlayCircle className="size-3" />
+                        ) : (
+                          <BookOpen className="size-3" />
+                        )}
                         {view === "videos" ? t.library.start[lang] : t.library.booksTitle[lang]}
                       </button>
                       {view === "videos" && hasBooks && (
                         <button
                           type="button"
-                          onClick={() => { playClick(); setActive({ course: c, tab: "books" }); }}
+                          onClick={() => {
+                            playClick();
+                            setActive({ course: c, tab: "books" });
+                          }}
                           onMouseEnter={playHover}
                           className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-white/80 transition-all hover:border-[#d7aa52]/50 hover:text-[#f3d28a]"
                         >
@@ -556,7 +1115,15 @@ export function Library({ lang, forcedView, hideTabs }: { lang: Lang; forcedView
   );
 }
 
-function Select({ value, onChange, options }: { value: string; onChange: (v: string) => void; options: { value: string; label: string }[] }) {
+function Select({
+  value,
+  onChange,
+  options,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  options: { value: string; label: string }[];
+}) {
   return (
     <select
       value={value}
@@ -564,7 +1131,9 @@ function Select({ value, onChange, options }: { value: string; onChange: (v: str
       className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white outline-none transition-all hover:border-[#d7aa52]/50 focus:border-[#d7aa52]"
     >
       {options.map((o) => (
-        <option key={o.value} value={o.value} className="bg-[#04101f] text-white">{o.label}</option>
+        <option key={o.value} value={o.value} className="bg-[#04101f] text-white">
+          {o.label}
+        </option>
       ))}
     </select>
   );
@@ -577,7 +1146,31 @@ function CourseIcon({ cat }: { cat: string }) {
   return <BookOpen className="size-5" />;
 }
 
-function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor = "", favOnly = false, favs, onToggleFav, onMarkLastRead, onClose, onPick }: { course: Course; initialTab: ViewMode; lang: Lang; bookFormat?: FormatKey; bookAuthor?: string; favOnly?: boolean; favs: Set<string>; onToggleFav: (k: string) => void; onMarkLastRead: (courseId: string, entry: LastReadEntry) => void; onClose: () => void; onPick: (c: Course) => void }) {
+function CourseModal({
+  course,
+  initialTab,
+  lang,
+  bookFormat = "all",
+  bookAuthor = "",
+  favOnly = false,
+  favs,
+  onToggleFav,
+  onMarkLastRead,
+  onClose,
+  onPick,
+}: {
+  course: Course;
+  initialTab: ViewMode;
+  lang: Lang;
+  bookFormat?: FormatKey;
+  bookAuthor?: string;
+  favOnly?: boolean;
+  favs: Set<string>;
+  onToggleFav: (k: string) => void;
+  onMarkLastRead: (courseId: string, entry: LastReadEntry) => void;
+  onClose: () => void;
+  onPick: (c: Course) => void;
+}) {
   const [tab, setTab] = useState<ViewMode>(initialTab);
   const resources = RESOURCES[course.id] ?? [];
   const allBooks = BOOKS[course.id] ?? [];
@@ -588,12 +1181,18 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
     if (favOnly && !favs.has(bookKey(course.id, b.url))) return false;
     return true;
   });
-  const related = t.library.courses.filter((c) => c.cat === course.cat && c.id !== course.id).slice(0, 3);
+  const related = t.library.courses
+    .filter((c) => c.cat === course.cat && c.id !== course.id)
+    .slice(0, 3);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center bg-[#020912]/85 p-4 backdrop-blur-md"
-      onClick={onClose}>
+      onClick={onClose}
+    >
       <motion.div
         initial={{ scale: 0.92, y: 30 }}
         animate={{ scale: 1, y: 0 }}
@@ -602,8 +1201,11 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
         onClick={(e) => e.stopPropagation()}
         className="relative max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] p-7 shadow-2xl"
       >
-        <button onClick={onClose} aria-label="close"
-          className="absolute end-4 top-4 z-10 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white">
+        <button
+          onClick={onClose}
+          aria-label="close"
+          className="absolute end-4 top-4 z-10 flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        >
           <X className="size-4" />
         </button>
 
@@ -612,13 +1214,25 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
           {t.library.cats[course.cat as Exclude<CatKey, "all">][lang]}
         </div>
         <h3 className="text-lg font-black text-white sm:text-xl">{course[lang]}</h3>
-        <p className="mt-2 text-xs leading-relaxed text-justify text-white/85 sm:text-sm">{course.desc[lang]}</p>
+        <p className="mt-2 text-xs leading-relaxed text-justify text-white/85 sm:text-sm">
+          {course.desc[lang]}
+        </p>
 
         <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-semibold">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80"><Clock className="size-3 text-[#d7aa52]" />{course.hours}h · {course.lessons} {t.library.lessons[lang]}</span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80"><Layers className="size-3 text-[#d7aa52]" />{t.library.levels[course.level as Exclude<LevelKey, "all">][lang]}</span>
-          <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 ${course.price === "free" ? "border border-emerald-400/30 bg-emerald-500/10 text-emerald-300" : "border border-[#d7aa52]/40 bg-[#d7aa52]/10 text-[#f3d28a]"}`}>
-            {course.price === "free" ? t.library.priceLabels.free[lang] : t.library.priceLabels.paid[lang]}
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80">
+            <Clock className="size-3 text-[#d7aa52]" />
+            {course.hours}h · {course.lessons} {t.library.lessons[lang]}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80">
+            <Layers className="size-3 text-[#d7aa52]" />
+            {t.library.levels[course.level as Exclude<LevelKey, "all">][lang]}
+          </span>
+          <span
+            className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 ${course.price === "free" ? "border border-emerald-400/30 bg-emerald-500/10 text-emerald-300" : "border border-[#d7aa52]/40 bg-[#d7aa52]/10 text-[#f3d28a]"}`}
+          >
+            {course.price === "free"
+              ? t.library.priceLabels.free[lang]
+              : t.library.priceLabels.paid[lang]}
           </span>
         </div>
 
@@ -631,7 +1245,10 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
               <button
                 key={v}
                 type="button"
-                onClick={() => { playClick(); setTab(v); }}
+                onClick={() => {
+                  playClick();
+                  setTab(v);
+                }}
                 onMouseEnter={playHover}
                 className={`inline-flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-bold transition-all sm:flex-none ${
                   isActive
@@ -657,7 +1274,10 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
             </div>
             <ul className="space-y-3">
               {resources.map((r, i) => (
-                <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                <li
+                  key={i}
+                  className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]"
+                >
                   <span
                     className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
                     style={{ background: PLATFORM_COLORS[r.platform] ?? "#444" }}
@@ -667,10 +1287,18 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
                   </span>
                   <div className="flex-1">
                     <div className="text-xs font-bold text-white sm:text-sm">{r.title}</div>
-                    <div className="mt-0.5 text-[11px] text-white/60">{r.channel} · {r.platform}</div>
+                    <div className="mt-0.5 text-[11px] text-white/60">
+                      {r.channel} · {r.platform}
+                    </div>
                     <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-white/55">
-                      <span className="inline-flex items-center gap-1"><Clock className="size-3" />{r.duration}</span>
-                      <span className="inline-flex items-center gap-1"><Layers className="size-3" />{r.level}</span>
+                      <span className="inline-flex items-center gap-1">
+                        <Clock className="size-3" />
+                        {r.duration}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Layers className="size-3" />
+                        {r.level}
+                      </span>
                     </div>
                   </div>
                   <a
@@ -706,17 +1334,27 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
                 const k = bookKey(course.id, b.url);
                 const isFav = favs.has(k);
                 return (
-                  <li key={i} className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]">
+                  <li
+                    key={i}
+                    className="group flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-all hover:border-[#d7aa52]/40 hover:bg-white/[0.06]"
+                  >
                     <span
                       className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white shadow-md"
                       style={{ background: FORMAT_COLORS[b.format] ?? "#444" }}
                       aria-hidden
                     >
-                      {b.format === "PDF" ? <FileText className="size-5" /> : <BookOpen className="size-5" />}
+                      {b.format === "PDF" ? (
+                        <FileText className="size-5" />
+                      ) : (
+                        <BookOpen className="size-5" />
+                      )}
                     </span>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-white sm:text-sm">{b.title}</div>
-                      <div className="mt-0.5 text-[11px] text-white/60">{b.author}{b.year ? ` · ${b.year}` : ""}</div>
+                      <div className="mt-0.5 text-[11px] text-white/60">
+                        {b.author}
+                        {b.year ? ` · ${b.year}` : ""}
+                      </div>
                       <div className="mt-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-bold text-white/70">
                         {b.format}
                       </div>
@@ -724,11 +1362,16 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
                     <div className="flex shrink-0 flex-col items-end gap-2">
                       <button
                         type="button"
-                        onClick={() => { playClick(); onToggleFav(k); }}
+                        onClick={() => {
+                          playClick();
+                          onToggleFav(k);
+                        }}
                         onMouseEnter={playHover}
                         aria-pressed={isFav}
                         title={isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]}
-                        aria-label={isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]}
+                        aria-label={
+                          isFav ? t.library.removeFavorite[lang] : t.library.addFavorite[lang]
+                        }
                         className={`inline-flex size-8 items-center justify-center rounded-full border transition-all ${
                           isFav
                             ? "border-[#d7aa52] bg-[#d7aa52]/20 text-[#f3d28a]"
@@ -742,7 +1385,10 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
                         target="_blank"
                         rel="noopener noreferrer"
                         onMouseEnter={playHover}
-                        onClick={() => { playClick(); onMarkLastRead(course.id, { title: b.title, url: b.url, at: Date.now() }); }}
+                        onClick={() => {
+                          playClick();
+                          onMarkLastRead(course.id, { title: b.title, url: b.url, at: Date.now() });
+                        }}
                         className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
                       >
                         {t.library.openBook[lang]}
@@ -773,11 +1419,16 @@ function CourseModal({ course, initialTab, lang, bookFormat = "all", bookAuthor 
                   key={r.id}
                   type="button"
                   onMouseEnter={playHover}
-                  onClick={() => { playClick(); onPick(r); }}
+                  onClick={() => {
+                    playClick();
+                    onPick(r);
+                  }}
                   className="rounded-2xl border border-white/10 bg-white/[0.03] p-3 text-start text-xs transition-all hover:border-[#d7aa52]/50 hover:bg-[#d7aa52]/10"
                 >
                   <div className="font-bold text-white">{r[lang]}</div>
-                  <div className="mt-1 text-[10px] text-white/55">{r.hours}h · {r.lessons} {t.library.lessons[lang]}</div>
+                  <div className="mt-1 text-[10px] text-white/55">
+                    {r.hours}h · {r.lessons} {t.library.lessons[lang]}
+                  </div>
                 </button>
               ))}
             </div>

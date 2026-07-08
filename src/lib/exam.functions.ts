@@ -70,7 +70,10 @@ export const extractExamQuestions = createServerFn({ method: "POST" })
       explanation_ar?: string;
       reference?: string;
     };
-    const cleaned = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/i, "");
+    const cleaned = text
+      .trim()
+      .replace(/^```(?:json)?\s*/i, "")
+      .replace(/```\s*$/i, "");
     let parsed: { questions?: ExtractedQ[] } = {};
     try {
       parsed = JSON.parse(cleaned) as { questions?: ExtractedQ[] };

@@ -2,7 +2,16 @@ import { useEffect, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { Link } from "@tanstack/react-router";
 import { toast } from "sonner";
-import { Download, FileSpreadsheet, Sparkles, Save, Archive, Info, ExternalLink, Loader2 } from "lucide-react";
+import {
+  Download,
+  FileSpreadsheet,
+  Sparkles,
+  Save,
+  Archive,
+  Info,
+  ExternalLink,
+  Loader2,
+} from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { fmtMoney } from "@/lib/finance";
 import { exportToolReportPdf } from "@/lib/pdf-export";
@@ -92,7 +101,11 @@ export function ActionsBar({
           disabled={!!exportingPdf}
           className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95"
         >
-          {exportingPdf ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
+          {exportingPdf ? (
+            <Loader2 className="size-3.5 animate-spin" />
+          ) : (
+            <Download className="size-3.5" />
+          )}
           {lang === "ar" ? "تحميل PDF" : "Download PDF"}
         </button>
         <button
@@ -107,7 +120,11 @@ export function ActionsBar({
           disabled={explaining}
           className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1.5 text-xs font-bold text-emerald-200 hover:bg-emerald-400/20 disabled:opacity-60"
         >
-          {explaining ? <Loader2 className="size-3.5 animate-spin" /> : <Sparkles className="size-3.5" />}
+          {explaining ? (
+            <Loader2 className="size-3.5 animate-spin" />
+          ) : (
+            <Sparkles className="size-3.5" />
+          )}
           {lang === "ar" ? "اشرح بالذكاء الاصطناعي" : "AI Explanation"}
         </button>
         {isAuthed && (
@@ -202,8 +219,16 @@ export function useDeclarationActions(opts: {
       titleAr: opts.titleAr,
       titleEn: opts.titleEn,
       periodLabel: period || "—",
-      inputs: opts.fields.map((f) => ({ labelAr: f.ar, labelEn: f.en, value: opts.inputs[f.key] ?? 0 })),
-      results: opts.resultFields.map((f) => ({ labelAr: f.ar, labelEn: f.en, value: opts.results[f.key] ?? 0 })),
+      inputs: opts.fields.map((f) => ({
+        labelAr: f.ar,
+        labelEn: f.en,
+        value: opts.inputs[f.key] ?? 0,
+      })),
+      results: opts.resultFields.map((f) => ({
+        labelAr: f.ar,
+        labelEn: f.en,
+        value: opts.results[f.key] ?? 0,
+      })),
     });
   };
 
@@ -212,7 +237,12 @@ export function useDeclarationActions(opts: {
     setExplanation(null);
     try {
       const r = await explainFn({
-        data: { type: opts.type, lang: opts.lang, input_data: opts.inputs, result_data: opts.results },
+        data: {
+          type: opts.type,
+          lang: opts.lang,
+          input_data: opts.inputs,
+          result_data: opts.results,
+        },
       });
       setExplanation(r.explanation);
     } catch (e) {
@@ -245,19 +275,58 @@ export function useDeclarationActions(opts: {
     }
   };
 
-  return { period, setPeriod, isAuthed, explanation, explaining, saving, exportingPdf, onPdf, onExcel, onExplain, onSave };
+  return {
+    period,
+    setPeriod,
+    isAuthed,
+    explanation,
+    explaining,
+    saving,
+    exportingPdf,
+    onPdf,
+    onExcel,
+    onExplain,
+    onSave,
+  };
 }
 
-export function PeriodField({ value, onChange, lang }: { value: string; onChange: (v: string) => void; lang: Lang }) {
+export function PeriodField({
+  value,
+  onChange,
+  lang,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  lang: Lang;
+}) {
   return (
     <div>
-      <label className={lbl}>{lang === "ar" ? "الفترة (مثل: Q1-2026)" : "Period (e.g. Q1-2026)"}</label>
-      <input className={inputCls} value={value} onChange={(e) => onChange(e.target.value)} placeholder={lang === "ar" ? "Q1-2026" : "Q1-2026"} />
+      <label className={lbl}>
+        {lang === "ar" ? "الفترة (مثل: Q1-2026)" : "Period (e.g. Q1-2026)"}
+      </label>
+      <input
+        className={inputCls}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={lang === "ar" ? "Q1-2026" : "Q1-2026"}
+      />
     </div>
   );
 }
 
-export function ResultCard({ titleAr, titleEn, value, lang, highlight }: { titleAr: string; titleEn: string; value: number; lang: Lang; highlight?: boolean }) {
+export function ResultCard({
+  titleAr,
+  titleEn,
+  value,
+  lang,
+  highlight,
+}: {
+  titleAr: string;
+  titleEn: string;
+  value: number;
+  lang: Lang;
+  highlight?: boolean;
+}) {
   const locale = lang === "ar" ? "ar-SA" : "en-US";
   return (
     <div
@@ -270,7 +339,9 @@ export function ResultCard({ titleAr, titleEn, value, lang, highlight }: { title
       <div className="text-[11px] font-semibold uppercase tracking-wide text-[#f3d28a]/80">
         {lang === "ar" ? titleAr : titleEn}
       </div>
-      <div className={`mt-1 tabular-nums text-[var(--fg)] ${highlight ? "text-3xl font-black" : "text-xl font-extrabold"}`}>
+      <div
+        className={`mt-1 tabular-nums text-[var(--fg)] ${highlight ? "text-3xl font-black" : "text-xl font-extrabold"}`}
+      >
         {fmtMoney(value, "SAR", locale)}
       </div>
     </div>
@@ -285,7 +356,9 @@ export function ExplanationPanel({ text, lang }: { text: string | null; lang: La
         <Sparkles className="size-4" />
         {lang === "ar" ? "شرح الذكاء الاصطناعي" : "AI Explanation"}
       </h4>
-      <div className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]">{text}</div>
+      <div className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]">
+        {text}
+      </div>
     </div>
   );
 }

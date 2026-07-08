@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Users, MessageCircle, BarChart3 } from "lucide-react";
+import { Users, MessageCircle, BarChart3, type LucideIcon } from "lucide-react";
 import { ClientsList } from "@/features/crm/ClientsList";
 import { WhatsAppMessenger } from "@/features/crm/WhatsAppMessenger";
 import { CrmStats } from "@/features/crm/CrmStats";
@@ -20,7 +20,7 @@ type Tab = "clients" | "messages" | "stats";
 function CrmPage() {
   const [tab, setTab] = useState<Tab>("clients");
 
-  const TABS: { id: Tab; label: string; icon: any }[] = [
+  const TABS: { id: Tab; label: string; icon: LucideIcon }[] = [
     { id: "clients", label: "العملاء", icon: Users },
     { id: "messages", label: "إرسال رسائل", icon: MessageCircle },
     { id: "stats", label: "الإحصائيات", icon: BarChart3 },

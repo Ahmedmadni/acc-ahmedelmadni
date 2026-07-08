@@ -258,11 +258,13 @@ function normalize(d: Partial<LibItemInput>): Record<string, unknown> {
 export const uploadLibraryPdfFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) =>
-    z.object({
-      id: z.string().uuid(),
-      filename: z.string().min(1).max(200),
-      base64: z.string().min(10),
-    }).parse(input),
+    z
+      .object({
+        id: z.string().uuid(),
+        filename: z.string().min(1).max(200),
+        base64: z.string().min(10),
+      })
+      .parse(input),
   )
   .handler(async ({ data, context }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
@@ -301,4 +303,3 @@ export const getLibraryPdfUrlFn = createServerFn({ method: "POST" })
     if (sErr || !signed) throw new Error(sErr?.message || "Could not sign URL");
     return { url: signed.signedUrl };
   });
-

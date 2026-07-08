@@ -10,7 +10,15 @@ type Props = {
 
 export function ClientDetail({ client, onClose, onEdit }: Props) {
   const waPhone = "966" + client.phone.replace(/^0/, "");
-  const Row = ({ icon, label, value }: any) =>
+  const Row = ({
+    icon,
+    label,
+    value,
+  }: {
+    icon: React.ReactNode;
+    label: string;
+    value: React.ReactNode;
+  }) =>
     value ? (
       <div className="flex items-start gap-3 py-2 border-b border-white/5">
         <div className="text-[#f3d28a] mt-0.5">{icon}</div>
@@ -39,16 +47,36 @@ export function ClientDetail({ client, onClose, onEdit }: Props) {
         <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
           <Row icon={<Phone className="w-4 h-4" />} label="الجوال" value={client.phone} />
           <Row icon={<Mail className="w-4 h-4" />} label="البريد" value={client.email} />
-          <Row icon={<Building2 className="w-4 h-4" />} label="نوع النشاط" value={client.business_type ? BUSINESS_TYPES[client.business_type as keyof typeof BUSINESS_TYPES]?.ar : null} />
-          <Row icon={<ReceiptText className="w-4 h-4" />} label="الرقم الضريبي" value={client.tax_number} />
-          <Row icon={<ReceiptText className="w-4 h-4" />} label="السجل التجاري" value={client.commercial_register} />
+          <Row
+            icon={<Building2 className="w-4 h-4" />}
+            label="نوع النشاط"
+            value={
+              client.business_type
+                ? BUSINESS_TYPES[client.business_type as keyof typeof BUSINESS_TYPES]?.ar
+                : null
+            }
+          />
+          <Row
+            icon={<ReceiptText className="w-4 h-4" />}
+            label="الرقم الضريبي"
+            value={client.tax_number}
+          />
+          <Row
+            icon={<ReceiptText className="w-4 h-4" />}
+            label="السجل التجاري"
+            value={client.commercial_register}
+          />
         </div>
 
         <div className="grid grid-cols-2 gap-2 text-xs">
-          <div className={`rounded-lg p-2 text-center border ${client.vat_registered ? "border-amber-400/40 bg-amber-400/10 text-amber-300" : "border-white/10 text-[var(--fg-soft)]"}`}>
+          <div
+            className={`rounded-lg p-2 text-center border ${client.vat_registered ? "border-amber-400/40 bg-amber-400/10 text-amber-300" : "border-white/10 text-[var(--fg-soft)]"}`}
+          >
             {client.vat_registered ? "✓ مسجل VAT" : "غير مسجل VAT"}
           </div>
-          <div className={`rounded-lg p-2 text-center border ${client.zakat_registered ? "border-violet-400/40 bg-violet-400/10 text-violet-300" : "border-white/10 text-[var(--fg-soft)]"}`}>
+          <div
+            className={`rounded-lg p-2 text-center border ${client.zakat_registered ? "border-violet-400/40 bg-violet-400/10 text-violet-300" : "border-white/10 text-[var(--fg-soft)]"}`}
+          >
             {client.zakat_registered ? "✓ مسجل زكاة" : "غير مسجل زكاة"}
           </div>
         </div>

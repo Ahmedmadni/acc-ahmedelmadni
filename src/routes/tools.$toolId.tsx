@@ -51,8 +51,18 @@ export const Route = createFileRoute("/tools/$toolId")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://ahmedelmadni.com/" },
-              { "@type": "ListItem", position: 2, name: "الأدوات", item: "https://ahmedelmadni.com/tools" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "الرئيسية",
+                item: "https://ahmedelmadni.com/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "الأدوات",
+                item: "https://ahmedelmadni.com/tools",
+              },
               { "@type": "ListItem", position: 3, name: tool.title.ar, item: url },
             ],
           }),
@@ -75,7 +85,6 @@ export const Route = createFileRoute("/tools/$toolId")({
   },
   component: ToolDetailPage,
 });
-
 
 function InfoBlock({
   title,
@@ -115,7 +124,9 @@ function ToolDetailPage() {
   // render and client hydration — see the Performance rules in CLAUDE.md.
   const [generatedAt, setGeneratedAt] = useState("");
   useEffect(() => {
-    setGeneratedAt(new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US"));
+    setGeneratedAt(
+      new Date().toLocaleString(lang === "ar" ? "ar-EG" : "en-US", { numberingSystem: "latn" }),
+    );
   }, [lang]);
 
   const isRTL = lang === "ar";
@@ -196,7 +207,10 @@ function ToolDetailPage() {
         <div
           dir={lang === "ar" ? "rtl" : "ltr"}
           className="print-only mb-6 border-b-2 border-[#d7aa52] pb-4"
-          style={{ fontFamily: lang === "ar" ? "'Cairo', 'Tahoma', Arial, sans-serif" : "'Inter', Arial, sans-serif" }}
+          style={{
+            fontFamily:
+              lang === "ar" ? "'Cairo', 'Tahoma', Arial, sans-serif" : "'Inter', Arial, sans-serif",
+          }}
         >
           <div className="text-xs font-bold uppercase tracking-widest text-[#8a5a13]">
             Ahmed Elmadani — Smart Accounting Tools
@@ -242,7 +256,11 @@ function ToolDetailPage() {
             }}
             className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
           >
-            {printing ? <Loader2 className="size-3.5 animate-spin" /> : <Printer className="size-3.5" />}
+            {printing ? (
+              <Loader2 className="size-3.5 animate-spin" />
+            ) : (
+              <Printer className="size-3.5" />
+            )}
             {lang === "ar" ? "طباعة التقرير" : "Print Report"}
           </button>
           <button
@@ -267,7 +285,11 @@ function ToolDetailPage() {
             }}
             className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95 disabled:opacity-60"
           >
-            {exporting ? <Loader2 className="size-3.5 animate-spin" /> : <Download className="size-3.5" />}
+            {exporting ? (
+              <Loader2 className="size-3.5 animate-spin" />
+            ) : (
+              <Download className="size-3.5" />
+            )}
             {lang === "ar" ? "تحميل PDF" : "Download PDF"}
           </button>
 
@@ -310,7 +332,6 @@ function ToolDetailPage() {
             }}
             className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 backdrop-blur-xl md:p-7"
           >
-
             <CalculatorById id={tool.id} lang={lang} />
           </section>
 

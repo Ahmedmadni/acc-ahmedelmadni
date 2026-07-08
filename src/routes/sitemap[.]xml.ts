@@ -8,14 +8,7 @@ const BASE_URL = "https://ahmedelmadni.com";
 interface SitemapEntry {
   path: string;
   lastmod?: string;
-  changefreq?:
-    | "always"
-    | "hourly"
-    | "daily"
-    | "weekly"
-    | "monthly"
-    | "yearly"
-    | "never";
+  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
 }
 
@@ -46,17 +39,13 @@ export const Route = createFileRoute("/sitemap.xml")({
 
         // Dynamic knowledge content
         try {
-          const supabaseUrl =
-            process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL;
+          const supabaseUrl = process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL;
           const supabaseKey =
-            process.env.SUPABASE_PUBLISHABLE_KEY ??
-            process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+            process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
           if (supabaseUrl && supabaseKey) {
             const client = createClient(supabaseUrl, supabaseKey);
 
-            const { data: cats } = await client
-              .from("kb_categories")
-              .select("slug");
+            const { data: cats } = await client.from("kb_categories").select("slug");
             for (const c of cats ?? []) {
               entries.push({
                 path: `/knowledge/${c.slug}`,
@@ -80,15 +69,11 @@ export const Route = createFileRoute("/sitemap.xml")({
               if (!catSlug || !a.slug) continue;
               entries.push({
                 path: `/knowledge/${catSlug}/${a.slug}`,
-                lastmod: (a.updated_at ?? a.published_at ?? undefined)?.slice(
-                  0,
-                  10,
-                ),
+                lastmod: (a.updated_at ?? a.published_at ?? undefined)?.slice(0, 10),
                 changefreq: "monthly",
                 priority: "0.6",
               });
             }
-
           }
         } catch (err) {
           console.error("sitemap dynamic fetch failed:", err);
@@ -99,9 +84,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
             e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : null,
-            e.changefreq
-              ? `    <changefreq>${e.changefreq}</changefreq>`
-              : null,
+            e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
           ]

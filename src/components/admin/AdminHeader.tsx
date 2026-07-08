@@ -85,7 +85,9 @@ export function AdminHeader() {
           {user?.email && (
             <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#d7aa52]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-white/75 md:inline-flex">
               <UserCircle className="size-3.5 shrink-0 text-[#f3d28a]" />
-              <span className="truncate" dir="ltr">{user.email}</span>
+              <span className="truncate" dir="ltr">
+                {user.email}
+              </span>
             </span>
           )}
           <button

@@ -45,7 +45,11 @@ type TouchedStyle = {
 };
 
 function forcePrintableFieldValues(root: HTMLElement) {
-  const fields = Array.from(root.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>("input, textarea, select"));
+  const fields = Array.from(
+    root.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>(
+      "input, textarea, select",
+    ),
+  );
   fields.forEach((field) => {
     if (field instanceof HTMLSelectElement) {
       const selected = field.options[field.selectedIndex]?.text ?? field.value;
@@ -85,7 +89,7 @@ function applyPdfSafeStyles(el: HTMLElement) {
     node.style.filter = "none";
     node.style.letterSpacing = "0";
     node.style.wordSpacing = "0";
-    node.style.fontFamily = "\"Cairo\", \"Tahoma\", Arial, sans-serif";
+    node.style.fontFamily = '"Cairo", "Tahoma", Arial, sans-serif';
     node.style.unicodeBidi = "isolate";
     node.style.overflow = "visible";
     if (isRtl) {
@@ -101,22 +105,40 @@ function applyPdfSafeStyles(el: HTMLElement) {
     }
   });
   return () => {
-    previousStyles.forEach(({ node, transform, filter, letterSpacing, wordSpacing, fontFamily, unicodeBidi, direction, overflow, lineHeight, padding, minHeight, height, whiteSpace, textAlign }) => {
-      node.style.transform = transform;
-      node.style.filter = filter;
-      node.style.letterSpacing = letterSpacing;
-      node.style.wordSpacing = wordSpacing;
-      node.style.fontFamily = fontFamily;
-      node.style.unicodeBidi = unicodeBidi;
-      node.style.direction = direction;
-      node.style.overflow = overflow;
-      node.style.lineHeight = lineHeight;
-      node.style.padding = padding;
-      node.style.minHeight = minHeight;
-      node.style.height = height;
-      node.style.whiteSpace = whiteSpace;
-      node.style.textAlign = textAlign;
-    });
+    previousStyles.forEach(
+      ({
+        node,
+        transform,
+        filter,
+        letterSpacing,
+        wordSpacing,
+        fontFamily,
+        unicodeBidi,
+        direction,
+        overflow,
+        lineHeight,
+        padding,
+        minHeight,
+        height,
+        whiteSpace,
+        textAlign,
+      }) => {
+        node.style.transform = transform;
+        node.style.filter = filter;
+        node.style.letterSpacing = letterSpacing;
+        node.style.wordSpacing = wordSpacing;
+        node.style.fontFamily = fontFamily;
+        node.style.unicodeBidi = unicodeBidi;
+        node.style.direction = direction;
+        node.style.overflow = overflow;
+        node.style.lineHeight = lineHeight;
+        node.style.padding = padding;
+        node.style.minHeight = minHeight;
+        node.style.height = height;
+        node.style.whiteSpace = whiteSpace;
+        node.style.textAlign = textAlign;
+      },
+    );
     el.classList.remove("pdf-arabic-safe");
     document.body.classList.remove("pdf-export-mode");
   };
@@ -147,7 +169,6 @@ export async function capturePdfElement(el: HTMLElement): Promise<HTMLCanvasElem
 async function captureLight(el: HTMLElement): Promise<HTMLCanvasElement> {
   return capturePdfElement(el);
 }
-
 
 export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
   const el = document.getElementById(opts.elementId);
@@ -228,7 +249,11 @@ export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
     pdf.setFont("helvetica", "normal");
     pdf.setFontSize(9);
     pdf.setTextColor(71, 85, 105);
-    pdf.text(`${t.standard}: ${opts.standard.en}${isAR ? "" : ` · ${opts.standard.ar}`}`, margin, y);
+    pdf.text(
+      `${t.standard}: ${opts.standard.en}${isAR ? "" : ` · ${opts.standard.ar}`}`,
+      margin,
+      y,
+    );
   }
 
   if (opts.about) {
@@ -296,14 +321,17 @@ export async function exportToolReportPdf(opts: ExportOptions): Promise<void> {
     }
   }
 
-
   // ---------- QR + footer on the last page ----------
   const totalPages = pdf.getNumberOfPages();
   // Add QR + finalize footers on every page
   const url = typeof window !== "undefined" ? window.location.href : "";
   let qrData = "";
   try {
-    qrData = await QRCode.toDataURL(url, { margin: 0, width: 256, color: { dark: "#0b1220", light: "#ffffff" } });
+    qrData = await QRCode.toDataURL(url, {
+      margin: 0,
+      width: 256,
+      color: { dark: "#0b1220", light: "#ffffff" },
+    });
   } catch {
     qrData = "";
   }
