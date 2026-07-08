@@ -65,6 +65,11 @@ const ExamPrep = lazy(() =>
 const OfficeAiAssistant = lazy(() =>
   import("@/components/tools/OfficeAiAssistant").then((m) => ({ default: m.OfficeAiAssistant })),
 );
+const InheritanceCalculator = lazy(() =>
+  import("@/components/tools/InheritanceCalculator").then((m) => ({
+    default: m.InheritanceCalculator,
+  })),
+);
 
 function ToolFallback() {
   return (
@@ -1888,6 +1893,12 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
       return (
         <Suspense fallback={<ToolFallback />}>
           <FinancialStatementsBuilder lang={lang} />
+        </Suspense>
+      );
+    case "inheritance":
+      return (
+        <Suspense fallback={<ToolFallback />}>
+          <InheritanceCalculator lang={lang} />
         </Suspense>
       );
     default:

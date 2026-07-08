@@ -1,6 +1,6 @@
 import type { Lang } from "@/lib/i18n";
 
-export type ToolCategory = "finance" | "tax" | "analysis" | "excel" | "ifrs" | "career";
+export type ToolCategory = "finance" | "tax" | "analysis" | "excel" | "ifrs" | "career" | "legal";
 
 export interface ToolInfoSection {
   ar: string[];
@@ -33,6 +33,7 @@ export const CATEGORIES: { id: ToolCategory; label: { ar: string; en: string } }
   { id: "excel", label: { ar: "أدوات Excel", en: "Excel Tools" } },
   { id: "ifrs", label: { ar: "معايير IFRS", en: "IFRS Standards" } },
   { id: "career", label: { ar: "المهنة والتطوير", en: "Career & Development" } },
+  { id: "legal", label: { ar: "الأحوال الشخصية والمواريث", en: "Personal Status & Inheritance" } },
 ];
 
 export const TOOLS: ToolMeta[] = [
@@ -935,6 +936,55 @@ export const TOOLS: ToolMeta[] = [
         "Confirm the trial balance is balanced before classifying",
         "Feed prior-period movements into the manual adjustments for a more accurate cash flow",
         "Check the balance indicators (✓) on the preview page before printing",
+      ],
+    },
+  },
+  {
+    id: "inheritance",
+    category: "legal",
+    icon: "Users",
+    title: { ar: "حاسبة المواريث الشرعية", en: "Islamic Inheritance Calculator" },
+    short: {
+      ar: "توزيع التركة على الورثة وفق الفرائض الشرعية (الفروض، العصبة، العول، الرد).",
+      en: "Distribute an estate among heirs per Islamic inheritance rules (fixed shares, residuary, awl, radd).",
+    },
+    standard: { ar: "علم الفرائض — الفقه السني", en: "Fara'id — Sunni jurisprudence" },
+    about: {
+      ar: "تحسب الأداة أنصبة الورثة (الزوجين، الأبوين، الأجداد، الأبناء وأبناء الابن، الإخوة) من صافي التركة بعد الديون والتجهيز والوصية، وفق القواعد المتفق عليها بين المذاهب السنية والمعتمدة غالباً في المحاكم السعودية. حالة واحدة معقدة ومختلف فيها (اجتماع الجد لأب مع الإخوة) تُعرض كـ'تحتاج مراجعة قاضٍ' بدل حسابها تلقائياً.",
+      en: "Computes each heir's share (spouses, parents, grandparents, children and son's children, siblings) from the net estate after debts, funeral costs and any bequest, following the rules agreed upon across Sunni schools and generally applied in Saudi courts. One genuinely disputed case (a paternal grandfather alongside siblings) is flagged as 'needs a judge's review' rather than auto-calculated.",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير أولي لتوزيع تركة قبل زيارة المحكمة",
+        "شرح حصص الورثة للعائلة بشكل شفاف قبل القسمة",
+        "التحقق من حساب صك حصر ورثة رسمي",
+      ],
+      en: [
+        "A preliminary estimate before visiting the Sharia court",
+        "Explaining heirs' shares transparently to the family before division",
+        "Cross-checking an official heirs-restriction deed",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "توزيع التركة الإجمالية دون خصم الديون وتكاليف التجهيز أولاً",
+        "تجاوز حد الثلث في الوصية دون موافقة الورثة",
+        "إغفال أثر عدد الإخوة على خفض نصيب الأم إلى السدس حتى لو كانوا محجوبين",
+      ],
+      en: [
+        "Distributing the gross estate without deducting debts and funeral costs first",
+        "Exceeding the one-third bequest cap without heir consent",
+        "Overlooking that 2+ siblings reduce the mother's share to a sixth even if the siblings themselves are excluded",
+      ],
+    },
+    tips: {
+      ar: [
+        "أدخل الديون والوصية بدقة — التوزيع يُبنى على صافي التركة فقط",
+        "عند اجتماع الجد مع الإخوة راجع قاضياً شرعياً؛ هذه الحالة لا تُحسب هنا تلقائياً",
+      ],
+      en: [
+        "Enter debts and the bequest accurately — distribution is based on the net estate only",
+        "When a grandfather and siblings co-exist, consult a Sharia judge; that case isn't auto-calculated here",
       ],
     },
   },
