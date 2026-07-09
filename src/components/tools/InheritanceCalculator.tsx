@@ -1,10 +1,24 @@
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
-import { AlertTriangle, Info, ScrollText, Users } from "lucide-react";
+import { AlertTriangle, Info, Plus, ScrollText, Trash2, Users } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { fmtMoney } from "@/lib/finance";
 import { useShareState } from "@/lib/use-share";
 import { calculateInheritance, EMPTY_HEIRS, type HeirsInput } from "@/lib/inheritance";
+import {
+  ASSET_CATEGORIES,
+  CURRENCIES,
+  assetValueSar,
+  categoryLabel,
+  currencyLabel,
+  emptyAsset,
+  sumAssetsToSar,
+  type AssetCategory,
+  type AssetItem,
+  type CurrencyCode,
+} from "@/lib/estate-assets";
+
+const uid = () => Math.random().toString(36).slice(2, 9);
 
 const fieldCls =
   "w-full rounded-lg border border-[#d7aa52]/25 bg-white/[0.03] px-3 py-2 text-sm text-[var(--fg)] outline-none transition focus:border-[#d7aa52]/70 focus:ring-2 focus:ring-[#d7aa52]/20";
@@ -16,7 +30,24 @@ const t = {
     en: "This is an estimation/educational tool based on the predominant Sunni fiqh view (as generally applied in Saudi courts). It does not replace an official heirs-restriction deed from a Sharia court or a review by a notary, especially for complex or disputed cases.",
   },
   estateTitle: { ar: "بيانات التركة", en: "Estate details" },
-  grossEstate: { ar: "إجمالي التركة (قبل الاستقطاعات)", en: "Gross estate (before deductions)" },
+  assetsTitle: { ar: "مكونات التركة", en: "Estate composition" },
+  assetsHint: {
+    ar: "أضف كل أصل من أصول التركة على حدة (عقار، رصيد بنكي، ذهب، حصة شركة...)؛ الإجمالي أدناه يُحسب تلقائياً بالريال السعودي.",
+    en: "Add each estate asset separately (real estate, bank balance, gold, business share...); the total below is computed automatically in SAR.",
+  },
+  assetCategory: { ar: "النوع", en: "Type" },
+  assetLabel: { ar: "وصف (اختياري)", en: "Description (optional)" },
+  assetCurrency: { ar: "العملة", en: "Currency" },
+  assetAmount: { ar: "المبلغ بالعملة الأصلية", en: "Amount in original currency" },
+  assetRate: { ar: "سعر الصرف مقابل الريال", en: "Exchange rate to SAR" },
+  assetRateHint: {
+    ar: "أدخل آخر سعر صرف معروف؛ راجع سعر اليوم قبل الاعتماد النهائي على الحساب.",
+    en: "Enter the latest known rate; check today's rate before finalizing.",
+  },
+  assetSarValue: { ar: "المعادل بالريال", en: "SAR equivalent" },
+  addAsset: { ar: "+ إضافة أصل", en: "+ Add asset" },
+  removeAsset: { ar: "حذف", en: "Remove" },
+  assetsTotal: { ar: "إجمالي التركة (بالريال)", en: "Gross estate (SAR)" },
   debts: { ar: "الديون", en: "Debts" },
   funeral: { ar: "تجهيز ودفن", en: "Funeral & burial costs" },
   wasiyyah: { ar: "الوصية (إن وجدت)", en: "Bequest / wasiyyah (if any)" },
@@ -171,16 +202,34 @@ function statusLabel(status: string, lang: Lang) {
   }
 }
 
+const DEFAULT_ASSETS: AssetItem[] = [
+  { id: "a1", category: "cash", label: "", currency: "SAR", amount: 1000000, exchangeRate: 1 },
+];
+
 export function InheritanceCalculator({ lang }: { lang: Lang }) {
   const [deceasedGender, setDeceasedGender] = useState<"male" | "female">("male");
   const [heirs, setHeirs] = useShareState<HeirsInput>("inheritance-heirs", EMPTY_HEIRS);
-  const [grossEstate, setGrossEstate] = useShareState("inheritance-gross", 1000000);
+  const [assets, setAssets] = useShareState<AssetItem[]>("inheritance-assets", DEFAULT_ASSETS);
   const [debts, setDebts] = useShareState("inheritance-debts", 0);
   const [funeralCosts, setFuneralCosts] = useShareState("inheritance-funeral", 0);
   const [wasiyyahRequested, setWasiyyahRequested] = useShareState("inheritance-wasiyyah", 0);
 
   const set = <K extends keyof HeirsInput>(k: K, v: HeirsInput[K]) =>
     setHeirs((h) => ({ ...h, [k]: v }));
+
+  const updateAsset = <K extends keyof AssetItem>(id: string, k: K, v: AssetItem[K]) =>
+    setAssets((list) =>
+      list.map((a) =>
+        a.id === id
+          ? { ...a, [k]: v, ...(k === "currency" ? { exchangeRate: v === "SAR" ? 1 : 0 } : {}) }
+          : a,
+      ),
+    );
+  const addAsset = () => setAssets((list) => [...list, emptyAsset(uid())]);
+  const removeAsset = (id: string) =>
+    setAssets((list) => (list.length > 1 ? list.filter((a) => a.id !== id) : list));
+
+  const grossEstate = useMemo(() => sumAssetsToSar(assets), [assets]);
 
   const result = useMemo(
     () => calculateInheritance(heirs, grossEstate, debts, funeralCosts, wasiyyahRequested),
@@ -219,13 +268,138 @@ export function InheritanceCalculator({ lang }: { lang: Lang }) {
           <ScrollText className="size-3.5" />
           {tr("estateTitle", lang)}
         </h4>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <NumberField
-            label={tr("grossEstate", lang)}
-            value={grossEstate}
-            onChange={setGrossEstate}
-            max={999999999}
-          />
+
+        <div className="mb-4">
+          <div className="mb-2 flex items-center justify-between gap-2">
+            <span className="text-xs font-bold text-[#f3d28a]">{tr("assetsTitle", lang)}</span>
+            <button
+              type="button"
+              onClick={addAsset}
+              className="inline-flex items-center gap-1 rounded-lg border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2.5 py-1 text-xs font-bold text-[#f3d28a] transition hover:bg-[#d7aa52]/20"
+            >
+              <Plus className="size-3.5" />
+              {tr("addAsset", lang)}
+            </button>
+          </div>
+          <p className="mb-3 text-[11px] leading-relaxed text-[var(--fg-soft)]">
+            {tr("assetsHint", lang)}
+          </p>
+
+          <div className="space-y-2">
+            {assets.map((asset) => {
+              const isForeign = asset.currency !== "SAR";
+              return (
+                <div
+                  key={asset.id}
+                  className="rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] p-3"
+                >
+                  <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-6">
+                    <label className="block">
+                      <span className={lbl}>{tr("assetCategory", lang)}</span>
+                      <select
+                        className={fieldCls}
+                        value={asset.category}
+                        onChange={(e) =>
+                          updateAsset(asset.id, "category", e.target.value as AssetCategory)
+                        }
+                      >
+                        {ASSET_CATEGORIES.map((c) => (
+                          <option key={c.id} value={c.id}>
+                            {categoryLabel(c.id, lang)}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                    <label className="block sm:col-span-2 lg:col-span-2">
+                      <span className={lbl}>{tr("assetLabel", lang)}</span>
+                      <input
+                        type="text"
+                        className={fieldCls}
+                        value={asset.label}
+                        onChange={(e) => updateAsset(asset.id, "label", e.target.value)}
+                      />
+                    </label>
+                    <label className="block">
+                      <span className={lbl}>{tr("assetCurrency", lang)}</span>
+                      <select
+                        className={fieldCls}
+                        value={asset.currency}
+                        onChange={(e) =>
+                          updateAsset(asset.id, "currency", e.target.value as CurrencyCode)
+                        }
+                      >
+                        {CURRENCIES.map((c) => (
+                          <option key={c.code} value={c.code}>
+                            {currencyLabel(c.code, lang)} ({c.code})
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                    <label className="block">
+                      <span className={lbl}>{tr("assetAmount", lang)}</span>
+                      <input
+                        type="number"
+                        dir="ltr"
+                        className={fieldCls}
+                        value={asset.amount}
+                        onChange={(e) =>
+                          updateAsset(asset.id, "amount", Math.max(0, +e.target.value || 0))
+                        }
+                      />
+                    </label>
+                    {isForeign && (
+                      <label className="block">
+                        <span className={lbl}>{tr("assetRate", lang)}</span>
+                        <input
+                          type="number"
+                          dir="ltr"
+                          step="0.0001"
+                          className={fieldCls}
+                          value={asset.exchangeRate}
+                          onChange={(e) =>
+                            updateAsset(asset.id, "exchangeRate", Math.max(0, +e.target.value || 0))
+                          }
+                        />
+                      </label>
+                    )}
+                  </div>
+                  <div className="mt-2 flex flex-wrap items-center justify-between gap-2 border-t border-white/5 pt-2">
+                    {isForeign && (
+                      <p className="text-[10px] text-amber-200/80">{tr("assetRateHint", lang)}</p>
+                    )}
+                    <div className="ms-auto flex items-center gap-3">
+                      <span className="text-[11px] text-[var(--fg-soft)]">
+                        {tr("assetSarValue", lang)}:
+                      </span>
+                      <span dir="ltr" className="text-sm font-bold tabular-nums text-[#f3d28a]">
+                        {fmtMoney(assetValueSar(asset))}
+                      </span>
+                      {assets.length > 1 && (
+                        <button
+                          type="button"
+                          onClick={() => removeAsset(asset.id)}
+                          className="rounded-md border border-red-500/30 bg-red-500/10 p-1 text-red-200 transition hover:bg-red-500/20"
+                          aria-label={tr("removeAsset", lang)}
+                        >
+                          <Trash2 className="size-3.5" />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#d7aa52]/30 bg-[#d7aa52]/10 px-3 py-2">
+            <span className="text-xs font-bold text-[#f3d28a]">{tr("assetsTotal", lang)}</span>
+            <span dir="ltr" className="text-base font-extrabold tabular-nums text-[#f3d28a]">
+              {fmtMoney(grossEstate)}
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-3">
           <NumberField
             label={tr("debts", lang)}
             value={debts}
