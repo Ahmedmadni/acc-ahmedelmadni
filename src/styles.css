@@ -641,6 +641,7 @@ body.pdf-export-mode #tool-report-capture th,
 body.pdf-export-mode #tool-report-capture td {
   border: 1px solid #cbd5e1 !important;
   color: #0b1220 !important;
+  text-align: center !important;
 }
 
 /* Arabic shaping fixes for print + html2canvas capture.
