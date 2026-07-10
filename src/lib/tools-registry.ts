@@ -945,8 +945,8 @@ export const TOOLS: ToolMeta[] = [
     icon: "Users",
     title: { ar: "حاسبة المواريث الشرعية", en: "Islamic Inheritance Calculator" },
     short: {
-      ar: "توزيع التركة على الورثة وفق الفرائض الشرعية (الفروض، العصبة، العول، الرد).",
-      en: "Distribute an estate among heirs per Islamic inheritance rules (fixed shares, residuary, awl, radd).",
+      ar: "توزيع التركة على الورثة وفق الفرائض الشرعية، مع تفصيل أصول التركة (عقارات، أرصدة، ذهب، شركات) بعملات متعددة.",
+      en: "Distribute an estate among heirs per Islamic inheritance rules, with an itemized multi-currency breakdown of assets (real estate, cash, gold, business shares).",
     },
     standard: { ar: "علم الفرائض — الفقه السني", en: "Fara'id — Sunni jurisprudence" },
     about: {
