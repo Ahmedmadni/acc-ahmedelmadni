@@ -393,3 +393,75 @@ export function ratios(i: RatiosInput) {
     payableDays: safe(i.payables, i.cogs) * 365,
   };
 }
+
+export interface BreakEvenInput {
+  fixedCosts: number;
+  pricePerUnit: number;
+  variableCostPerUnit: number;
+  targetProfit: number;
+  actualUnits: number;
+}
+export function breakEven(i: BreakEvenInput) {
+  const contributionMargin = i.pricePerUnit - i.variableCostPerUnit;
+  const contributionMarginRatio = i.pricePerUnit === 0 ? 0 : contributionMargin / i.pricePerUnit;
+  const breakEvenUnits = contributionMargin === 0 ? 0 : i.fixedCosts / contributionMargin;
+  const breakEvenRevenue = breakEvenUnits * i.pricePerUnit;
+  const targetProfitUnits =
+    contributionMargin === 0 ? 0 : (i.fixedCosts + i.targetProfit) / contributionMargin;
+  const targetProfitRevenue = targetProfitUnits * i.pricePerUnit;
+  const marginOfSafetyUnits = i.actualUnits - breakEvenUnits;
+  const marginOfSafetyRevenue = marginOfSafetyUnits * i.pricePerUnit;
+  const marginOfSafetyPct = i.actualUnits === 0 ? 0 : marginOfSafetyUnits / i.actualUnits;
+  return {
+    contributionMargin,
+    contributionMarginRatio,
+    breakEvenUnits,
+    breakEvenRevenue,
+    targetProfitUnits,
+    targetProfitRevenue,
+    marginOfSafetyUnits,
+    marginOfSafetyRevenue,
+    marginOfSafetyPct,
+  };
+}
+
+export interface WaccInput {
+  equityValue: number;
+  debtValue: number;
+  costOfEquityPct: number;
+  costOfDebtPct: number;
+  taxRatePct: number;
+}
+export function wacc(i: WaccInput) {
+  const totalValue = i.equityValue + i.debtValue;
+  const equityWeight = totalValue === 0 ? 0 : i.equityValue / totalValue;
+  const debtWeight = totalValue === 0 ? 0 : i.debtValue / totalValue;
+  const afterTaxCostOfDebt = i.costOfDebtPct * (1 - i.taxRatePct / 100);
+  const waccPct = equityWeight * i.costOfEquityPct + debtWeight * afterTaxCostOfDebt;
+  return { totalValue, equityWeight, debtWeight, afterTaxCostOfDebt, waccPct };
+}
+
+export interface AltmanZInput {
+  workingCapital: number;
+  totalAssets: number;
+  retainedEarnings: number;
+  ebit: number;
+  marketValueEquity: number;
+  totalLiabilities: number;
+  sales: number;
+}
+export type AltmanZone = "safe" | "grey" | "distress";
+
+/** Original 1968 Altman Z-Score model, for publicly-traded manufacturing
+ * companies. Zones: Z > 2.99 safe, 1.81-2.99 grey, Z < 1.81 distress. */
+export function altmanZScore(i: AltmanZInput) {
+  const safe = (a: number, b: number) => (b === 0 ? 0 : a / b);
+  const x1 = safe(i.workingCapital, i.totalAssets);
+  const x2 = safe(i.retainedEarnings, i.totalAssets);
+  const x3 = safe(i.ebit, i.totalAssets);
+  const x4 = safe(i.marketValueEquity, i.totalLiabilities);
+  const x5 = safe(i.sales, i.totalAssets);
+  const z = 1.2 * x1 + 1.4 * x2 + 3.3 * x3 + 0.6 * x4 + 1.0 * x5;
+  const zone: AltmanZone = z > 2.99 ? "safe" : z >= 1.81 ? "grey" : "distress";
+  return { x1, x2, x3, x4, x5, z, zone };
+}

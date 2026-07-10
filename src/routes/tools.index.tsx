@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import {
+  AlertTriangle,
   ArrowLeft,
   ArrowRight,
   BarChart3,
@@ -32,9 +33,11 @@ import {
   ScrollText,
   Scissors,
   Search,
+  ShieldCheck,
   TrendingDown,
   TrendingUp,
   Users,
+  Wallet,
   Wrench,
 } from "lucide-react";
 import { CATEGORIES, TOOLS, type ToolCategory, type ToolMeta } from "@/lib/tools-registry";
@@ -115,6 +118,10 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   FileSpreadsheet,
   FileBarChart,
   Users,
+  Briefcase,
+  ShieldCheck,
+  Wallet,
+  AlertTriangle,
 };
 
 const CATEGORY_META: Record<
@@ -187,6 +194,15 @@ const CATEGORY_META: Record<
     desc: {
       ar: "المواريث الشرعية والأحوال الشخصية.",
       en: "Islamic inheritance and personal status.",
+    },
+  },
+  hr: {
+    Icon: Wallet,
+    gradient: "from-teal-400/20 via-teal-500/10 to-transparent",
+    ring: "ring-teal-400/30",
+    desc: {
+      ar: "مكافأة نهاية الخدمة والتأمينات الاجتماعية والرواتب.",
+      en: "End-of-service gratuity, GOSI, and payroll.",
     },
   },
 };

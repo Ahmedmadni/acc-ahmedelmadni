@@ -1,6 +1,14 @@
 import type { Lang } from "@/lib/i18n";
 
-export type ToolCategory = "finance" | "tax" | "analysis" | "excel" | "ifrs" | "career" | "legal";
+export type ToolCategory =
+  | "finance"
+  | "tax"
+  | "analysis"
+  | "excel"
+  | "ifrs"
+  | "career"
+  | "legal"
+  | "hr";
 
 export interface ToolInfoSection {
   ar: string[];
@@ -34,6 +42,7 @@ export const CATEGORIES: { id: ToolCategory; label: { ar: string; en: string } }
   { id: "ifrs", label: { ar: "معايير IFRS", en: "IFRS Standards" } },
   { id: "career", label: { ar: "المهنة والتطوير", en: "Career & Development" } },
   { id: "legal", label: { ar: "الأحوال الشخصية والمواريث", en: "Personal Status & Inheritance" } },
+  { id: "hr", label: { ar: "الرواتب والموارد البشرية", en: "Payroll & HR" } },
 ];
 
 export const TOOLS: ToolMeta[] = [
@@ -987,6 +996,404 @@ export const TOOLS: ToolMeta[] = [
         "When a grandfather and siblings co-exist, consult a Sharia judge; that case isn't auto-calculated here",
       ],
     },
+  },
+  {
+    id: "gratuity",
+    category: "hr",
+    icon: "Briefcase",
+    title: { ar: "حاسبة مكافأة نهاية الخدمة", en: "End-of-Service Gratuity Calculator" },
+    short: {
+      ar: "احسب مكافأة نهاية الخدمة وفق نظام العمل السعودي، مع تخفيض الاستقالة التدريجي.",
+      en: "Compute end-of-service gratuity per Saudi Labor Law, including the resignation sliding scale.",
+    },
+    standard: { ar: "نظام العمل السعودي — المادة 84", en: "Saudi Labor Law — Article 84" },
+    formula: "نصف شهر × أول 5 سنوات + شهر كامل × ما بعدها",
+    about: {
+      ar: "تحسب الأداة مكافأة نهاية الخدمة على أساس آخر أجر شهري: نصف شهر عن كل سنة من أول خمس سنوات، وشهر كامل عن كل سنة بعدها. عند الاستقالة تُخفَّض المكافأة حسب سنوات الخدمة (لا شيء قبل سنتين، الثلث من 2-5 سنوات، الثلثان من 5-10 سنوات، وكاملة بعد 10 سنوات).",
+      en: "Computes gratuity based on the last monthly wage: half a month per year for the first five years, a full month per year after. On resignation, the amount is reduced by service length (none under 2 years, one-third from 2-5, two-thirds from 5-10, full after 10).",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير مستحقات موظف عند إنهاء الخدمة أو الاستقالة",
+        "تخطيط مخصص مكافأة نهاية الخدمة في القوائم المالية",
+        "مراجعة قسيمة تسوية نهاية الخدمة",
+      ],
+      en: [
+        "Estimating an employee's dues on termination or resignation",
+        "Planning the end-of-service benefit provision in financial statements",
+        "Reviewing a final settlement statement",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام الراتب الأساسي فقط بدل آخر أجر شامل حسب العقد",
+        "نسيان تخفيض الاستقالة أو تطبيقه خطأً على إنهاء الخدمة من صاحب العمل",
+        "إغفال الأجزاء غير الكاملة من السنة",
+      ],
+      en: [
+        "Using only the basic salary instead of the full contractual last wage",
+        "Forgetting the resignation reduction, or wrongly applying it to employer-initiated termination",
+        "Ignoring partial (fractional) years of service",
+      ],
+    },
+    tips: {
+      ar: ["أدخل سنوات الخدمة بالكسر العشري (مثال: 7.5) لدقة أعلى"],
+      en: ["Enter years of service as a decimal (e.g. 7.5) for more precise results"],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "gosi",
+    category: "hr",
+    icon: "ShieldCheck",
+    title: { ar: "حاسبة التأمينات الاجتماعية (GOSI)", en: "GOSI Contributions Calculator" },
+    short: {
+      ar: "احسب اشتراكات التأمينات الاجتماعية لصاحب العمل والموظف (سعودي وغير سعودي).",
+      en: "Compute GOSI social insurance contributions for employer and employee (Saudi and non-Saudi).",
+    },
+    standard: {
+      ar: "المؤسسة العامة للتأمينات الاجتماعية (GOSI)",
+      en: "General Organization for Social Insurance (GOSI)",
+    },
+    about: {
+      ar: "تحسب الأداة اشتراكات التأمينات الاجتماعية على الأجر الخاضع (الأساسي + السكن) ضمن الحدين الأعلى والأدنى. الموظف السعودي مشمول بفرعي المعاشات والساند (تأمين التعطل) بالإضافة إلى الأخطار المهنية، بينما غير السعودي مشمول بالأخطار المهنية فقط على حساب صاحب العمل. النسب والحدود قابلة للتعديل لأنها تتغير بموجب اللوائح — تحقق من النسب الحالية قبل الاعتماد النهائي.",
+      en: "Computes GOSI contributions on the subject wage (basic + housing) within the floor/ceiling. Saudi employees are covered by annuities and SANED (unemployment insurance) in addition to occupational hazards; non-Saudis are covered by occupational hazards only, paid by the employer. Rates and ceilings are editable since they change by regulation — verify current rates before relying on the output.",
+    },
+    whenToUse: {
+      ar: [
+        "احتساب تكلفة التوظيف الإجمالية لصاحب العمل",
+        "التحقق من استقطاع التأمينات في قسيمة الراتب",
+        "إعداد موازنة تكاليف الموظفين",
+      ],
+      en: [
+        "Estimating total employer cost of hiring",
+        "Verifying the GOSI deduction on a payslip",
+        "Budgeting employee costs",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "تطبيق فرعي المعاشات والساند على موظف غير سعودي",
+        "احتساب الاشتراك على الراتب الإجمالي بدل الأجر الخاضع فقط",
+        "إغفال الحد الأعلى للأجر الخاضع للاشتراك",
+      ],
+      en: [
+        "Applying annuities/SANED to a non-Saudi employee",
+        "Calculating on gross salary instead of the subject wage only",
+        "Ignoring the contributory wage ceiling",
+      ],
+    },
+    tips: {
+      ar: ["راجع نسب وحدود GOSI الحالية دورياً؛ القيم هنا افتراضية وقابلة للتعديل"],
+      en: [
+        "Check current GOSI rates/ceilings periodically; the values here are defaults and editable",
+      ],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "payroll",
+    category: "hr",
+    icon: "Wallet",
+    title: { ar: "حاسبة صافي الراتب", en: "Net Salary Calculator" },
+    short: {
+      ar: "احسب الراتب الصافي بعد استقطاع حصة الموظف من التأمينات الاجتماعية.",
+      en: "Compute net salary after the employee's GOSI deduction.",
+    },
+    about: {
+      ar: "تجمع الأداة الراتب الأساسي وبدل السكن والبدلات الأخرى للحصول على الراتب الإجمالي، ثم تطرح حصة الموظف من التأمينات الاجتماعية (على الأساسي + السكن) وأي استقطاعات أخرى للوصول إلى الصافي.",
+      en: "Sums basic salary, housing allowance, and other allowances into a gross salary, then deducts the employee's GOSI share (on basic + housing) and any other deductions to reach the net salary.",
+    },
+    whenToUse: {
+      ar: [
+        "إعداد قسيمة راتب سريعة",
+        "التفاوض على عرض عمل بمعرفة الصافي الفعلي",
+        "التحقق من استقطاعات الراتب",
+      ],
+      en: [
+        "Preparing a quick payslip",
+        "Negotiating a job offer by knowing the actual net",
+        "Verifying salary deductions",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "إغفال بدل السكن عند احتساب الأجر الخاضع للتأمينات",
+        "خلط الاستقطاعات الأخرى (قروض، غياب) مع استقطاع التأمينات",
+      ],
+      en: [
+        "Forgetting the housing allowance when computing the GOSI subject wage",
+        "Mixing other deductions (loans, absences) with the GOSI deduction",
+      ],
+    },
+    tips: {
+      ar: ["استخدم حقل 'استقطاعات أخرى' لأي بند لا يتعلق بالتأمينات الاجتماعية"],
+      en: ["Use the 'other deductions' field for anything unrelated to GOSI"],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "zakat-shares",
+    category: "tax",
+    icon: "PieChart",
+    title: {
+      ar: "زكاة الأسهم والمحافظ الاستثمارية",
+      en: "Zakat on Shares & Investment Portfolios",
+    },
+    short: {
+      ar: "فرّق بين زكاة أسهم المتاجرة وأسهم الاستثمار بنسبتيهما المختلفتين.",
+      en: "Distinguish zakat on trading shares from investment shares, each with a different base.",
+    },
+    standard: {
+      ar: "لوائح الزكاة — هيئة الزكاة والضريبة والجمارك",
+      en: "Zakat regulations — ZATCA",
+    },
+    about: {
+      ar: "أسهم المتاجرة تُزكّى على كامل قيمتها السوقية كعروض تجارة. أسهم الاستثمار تُزكّى نظرياً على حصة المساهم من الوعاء الزكوي لأصول الشركة، وإن تعذّر الوصول لهذه البيانات تُستخدم نسبة مبسطة تقديرية من القيمة السوقية (قابلة للتعديل).",
+      en: "Trading shares are zakatable on their full market value as trade goods. Investment shares are, in principle, zakatable only on the shareholder's portion of the investee company's zakat base; a simplified estimated percentage of market value is used when that data isn't available (editable).",
+    },
+    whenToUse: {
+      ar: [
+        "محفظة تضم أسهماً للمضاربة وأخرى للاحتفاظ طويل الأجل",
+        "إعداد الإقرار الزكوي السنوي لفرد أو منشأة تملك استثمارات في الأسهم",
+      ],
+      en: [
+        "A portfolio mixing trading and long-term holding positions",
+        "Preparing the annual zakat declaration for an individual or business holding shares",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "معاملة كل الأسهم كأسهم استثمار لتخفيض الزكاة المستحقة دون سند شرعي لنية المتاجرة",
+        "استخدام نسبة الوعاء المبسطة دون مراجعتها دورياً",
+      ],
+      en: [
+        "Treating all shares as investment shares to reduce the zakat due, without a genuine holding intent",
+        "Using the simplified base percentage without periodic review",
+      ],
+    },
+    tips: {
+      ar: [
+        "إن توفرت القوائم المالية للشركة المستثمر فيها، استخدم الوعاء الزكوي الفعلي بدل النسبة المبسطة",
+      ],
+      en: [
+        "If the investee company's financials are available, use its actual zakat base instead of the simplified percentage",
+      ],
+    },
+    requestServiceId: "zakat-declaration",
+  },
+  {
+    id: "break-even",
+    category: "analysis",
+    icon: "Scissors",
+    title: { ar: "نقطة التعادل وتحليل الربحية (CVP)", en: "Break-even & CVP Analysis" },
+    short: {
+      ar: "احسب نقطة التعادل، وحدات الربح المستهدف، وهامش الأمان.",
+      en: "Compute the break-even point, target-profit units, and margin of safety.",
+    },
+    formula: "نقطة التعادل = التكاليف الثابتة ÷ هامش المساهمة للوحدة",
+    about: {
+      ar: "تحليل التكلفة-الحجم-الربح (CVP) الكلاسيكي: هامش المساهمة، نقطة التعادل بالوحدات والإيراد، عدد الوحدات اللازمة لتحقيق ربح مستهدف، وهامش الأمان مقارنة بالمبيعات الفعلية أو المتوقعة.",
+      en: "The classic cost-volume-profit (CVP) analysis: contribution margin, break-even in units and revenue, units needed for a target profit, and margin of safety versus actual/expected sales.",
+    },
+    whenToUse: {
+      ar: [
+        "تسعير منتج أو خدمة جديدة",
+        "تقييم جدوى إطلاق خط إنتاج",
+        "تحديد الحد الأدنى من المبيعات لتغطية التكاليف",
+      ],
+      en: [
+        "Pricing a new product or service",
+        "Assessing the viability of a new product line",
+        "Determining the minimum sales needed to cover costs",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "خلط التكاليف شبه المتغيرة مع الثابتة أو المتغيرة بالكامل",
+        "استخدام متوسط سعر بيع غير دقيق عند تعدد المنتجات",
+      ],
+      en: [
+        "Mixing semi-variable costs entirely into fixed or variable",
+        "Using an inaccurate average price when selling multiple products",
+      ],
+    },
+    tips: {
+      ar: ["راجع هامش الأمان دورياً — كلما ارتفع، قلّت مخاطر الوقوع في خسارة عند تراجع المبيعات"],
+      en: [
+        "Review the margin of safety periodically — the higher it is, the lower the risk of a loss if sales drop",
+      ],
+    },
+  },
+  {
+    id: "wacc",
+    category: "finance",
+    icon: "Percent",
+    title: { ar: "تكلفة رأس المال المرجحة (WACC)", en: "Weighted Average Cost of Capital (WACC)" },
+    short: {
+      ar: "احسب معدل الخصم المناسب لتقييم المشاريع بناءً على هيكل التمويل.",
+      en: "Compute the appropriate discount rate for project appraisal based on the financing mix.",
+    },
+    formula: "WACC = (E/V)×Re + (D/V)×Rd×(1−Tax)",
+    about: {
+      ar: "يكمّل أدوات NPV وDCF الموجودة — معدل الخصم المستخدم فيهما غالباً هو WACC. يجمع بين تكلفة حقوق الملكية وتكلفة الدين بعد الضريبة، مرجّحة بالقيمة السوقية لكل مصدر تمويل.",
+      en: "Complements the existing NPV/DCF tools — the discount rate used there is typically the WACC. Blends the cost of equity and the after-tax cost of debt, weighted by each financing source's market value.",
+    },
+    whenToUse: {
+      ar: [
+        "اختيار معدل الخصم لتقييم مشروع أو تدفقات نقدية",
+        "تقييم شركة بطريقة الدخل",
+        "مقارنة هيكل تمويل حالي ببديل مقترح",
+      ],
+      en: [
+        "Choosing the discount rate for a project or cash-flow valuation",
+        "Income-approach company valuation",
+        "Comparing the current financing mix with a proposed alternative",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام القيمة الدفترية بدل السوقية لحقوق الملكية",
+        "نسيان تعديل تكلفة الدين بأثر الضريبة",
+      ],
+      en: [
+        "Using book value instead of market value for equity",
+        "Forgetting to tax-adjust the cost of debt",
+      ],
+    },
+    tips: {
+      ar: ["يمكن تقدير تكلفة حقوق الملكية عبر نموذج CAPM: Rf + Beta × (Rm − Rf)"],
+      en: ["Cost of equity can be estimated via CAPM: Rf + Beta × (Rm − Rf)"],
+    },
+  },
+  {
+    id: "bank-reconciliation",
+    category: "excel",
+    icon: "Landmark",
+    title: { ar: "مطابقة كشف الحساب البنكي", en: "Bank Reconciliation" },
+    short: {
+      ar: "طابق الرصيد البنكي بالرصيد الدفتري ببنود تسوية قابلة للتعديل.",
+      en: "Reconcile the bank balance with the book balance using editable adjustment items.",
+    },
+    about: {
+      ar: "ورقة عمل تسوية بنكية كلاسيكية بجانبين: جانب البنك (الرصيد حسب الكشف + ودائع في الطريق − شيكات معلقة) وجانب الدفاتر (الرصيد الدفتري + تحصيلات − رسوم بنكية − شيكات مرتجعة)، مع مؤشر مباشر لمطابقة الرصيدين المعدّلين.",
+      en: "A classic two-sided bank reconciliation worksheet — the bank side (statement balance + deposits in transit − outstanding checks) and the book side (book balance + collections − bank fees − NSF checks) — with a live indicator for whether the two adjusted balances match.",
+    },
+    whenToUse: {
+      ar: [
+        "الإقفال الشهري لحساب بنكي",
+        "تتبع الفروقات بين كشف البنك ودفتر الأستاذ",
+        "إعداد قبل تدقيق حسابات",
+      ],
+      en: [
+        "Monthly bank account close",
+        "Tracking differences between the bank statement and the general ledger",
+        "Preparation ahead of an audit",
+      ],
+    },
+    commonMistakes: {
+      ar: ["نسيان تسجيل الشيكات المعلقة كسالبة في جانب البنك", "خلط بنود الجانبين ببعضها"],
+      en: [
+        "Forgetting to enter outstanding checks as negative on the bank side",
+        "Mixing items between the two sides",
+      ],
+    },
+    tips: {
+      ar: ["أدخل القيمة بإشارتها مباشرة (سالبة للخصم) بدل استخدام حقل منفصل لنوع البند"],
+      en: [
+        "Enter the signed value directly (negative to subtract) instead of a separate item-type field",
+      ],
+    },
+    requestServiceId: "bank-reconciliation",
+  },
+  {
+    id: "budget-variance",
+    category: "analysis",
+    icon: "BarChart3",
+    title: { ar: "تحليل انحراف الموازنة التقديرية", en: "Budget vs. Actual Variance Analysis" },
+    short: {
+      ar: "قارن بنود الإيرادات والمصروفات الفعلية بالموازنة المعتمدة وحدد الانحراف الملائم وغير الملائم.",
+      en: "Compare actual revenue/expense lines against the approved budget and flag favorable vs. unfavorable variances.",
+    },
+    formula: "الانحراف = الفعلي − الموازنة",
+    about: {
+      ar: "أداة تحليل انحراف إدارية: أضف بنود إيرادات ومصروفات بقيمتها المعتمدة والفعلية، وتُحسب النسبة والاتجاه (ملائم/غير ملائم) تلقائياً — الزيادة ملائمة للإيراد وغير ملائمة للمصروف، والعكس صحيح.",
+      en: "A managerial variance-analysis tool: add revenue and expense line items with their budgeted and actual values; the percentage and direction (favorable/unfavorable) are computed automatically — an increase is favorable for revenue and unfavorable for expenses, and vice versa.",
+    },
+    whenToUse: {
+      ar: [
+        "المراجعة الشهرية أو الربعية للموازنة التقديرية",
+        "تقارير الإدارة التنفيذية",
+        "تحديد بنود تحتاج تدخلاً تصحيحياً",
+      ],
+      en: [
+        "Monthly or quarterly budget review",
+        "Executive management reports",
+        "Identifying line items that need corrective action",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "اعتبار كل انحراف سلبي بالقيمة المطلقة غير ملائم دون مراعاة نوع البند",
+        "إغفال الانحرافات الصغيرة المتكررة التي تتراكم",
+      ],
+      en: [
+        "Treating every negative-value variance as unfavorable regardless of line type",
+        "Ignoring small recurring variances that accumulate over time",
+      ],
+    },
+    tips: {
+      ar: ["ركّز المراجعة على البنود ذات الانحراف الأكبر نسبةً ومبلغاً معاً"],
+      en: ["Focus the review on items with the largest variance by both percentage and amount"],
+    },
+    requestServiceId: "financial-reports",
+  },
+  {
+    id: "altman-zscore",
+    category: "analysis",
+    icon: "AlertTriangle",
+    title: { ar: "مؤشر التنبؤ بالتعثر المالي (Altman Z-Score)", en: "Altman Z-Score" },
+    short: {
+      ar: "قيّم مخاطر التعثر المالي لشركة مساهمة صناعية بخمس نسب مالية مرجّحة.",
+      en: "Assess a publicly-traded manufacturer's financial distress risk via five weighted financial ratios.",
+    },
+    standard: { ar: "نموذج Altman الأصلي (1968)", en: "Original Altman model (1968)" },
+    formula: "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+    about: {
+      ar: "يجمع النموذج خمس نسب مالية (السيولة، الربحية المتراكمة، الربحية التشغيلية، الرافعة المالية بالقيمة السوقية، ودوران الأصول) في مؤشر واحد يصنّف الشركة ضمن ثلاث مناطق: آمنة (Z > 2.99)، رمادية غير محددة (1.81-2.99)، أو تعثر محتمل (Z < 1.81).",
+      en: "Combines five financial ratios (liquidity, cumulative profitability, operating profitability, market-value leverage, and asset turnover) into a single score that classifies a company into one of three zones: safe (Z > 2.99), grey/undetermined (1.81-2.99), or distress (Z < 1.81).",
+    },
+    whenToUse: {
+      ar: [
+        "تقييم أولي لمخاطر الائتمان قبل تمويل أو استثمار",
+        "متابعة الاتجاه المالي لشركة عبر عدة فترات",
+        "فحص أولي في العناية الواجبة المالية",
+      ],
+      en: [
+        "Preliminary credit-risk screening before financing or investment",
+        "Tracking a company's financial trend across periods",
+        "An initial check during financial due diligence",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "تطبيق النموذج على شركات خدمية أو غير مُدرجة دون تعديل معاملاته",
+        "الاعتماد على قراءة فترة واحدة دون النظر إلى الاتجاه عبر الزمن",
+      ],
+      en: [
+        "Applying the model to non-manufacturing or private companies without adjusting the coefficients",
+        "Relying on a single-period reading instead of the trend over time",
+      ],
+    },
+    tips: {
+      ar: [
+        "توجد نسخ معدّلة من النموذج (Z' وZ'') للشركات الخاصة وغير الصناعية — استخدمها إن لم تكن الشركة مساهمة صناعية مُدرجة",
+      ],
+      en: [
+        "Adjusted variants of the model (Z' and Z'') exist for private and non-manufacturing companies — use them if the company isn't a publicly-traded manufacturer",
+      ],
+    },
+    requestServiceId: "consulting",
   },
 ];
 
