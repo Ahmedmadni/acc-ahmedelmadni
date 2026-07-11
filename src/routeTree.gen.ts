@@ -35,6 +35,7 @@ import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authent
 import { Route as AuthenticatedCrmRouteImport } from './routes/_authenticated/crm'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
+import { Route as AuthenticatedAdminTemplatesRouteImport } from './routes/_authenticated/admin.templates'
 import { Route as AuthenticatedAdminProfileRouteImport } from './routes/_authenticated/admin.profile'
 import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
@@ -172,6 +173,12 @@ const KnowledgeCategorySlugArticleSlugRoute =
     path: '/knowledge/$categorySlug/$articleSlug',
     getParentRoute: () => rootRouteImport,
   } as any)
+const AuthenticatedAdminTemplatesRoute =
+  AuthenticatedAdminTemplatesRouteImport.update({
+    id: '/admin/templates',
+    path: '/admin/templates',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedAdminProfileRoute =
   AuthenticatedAdminProfileRouteImport.update({
     id: '/admin/profile',
@@ -224,6 +231,7 @@ export interface FileRoutesByFullPath {
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
+  '/admin/templates': typeof AuthenticatedAdminTemplatesRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -254,6 +262,7 @@ export interface FileRoutesByTo {
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
+  '/admin/templates': typeof AuthenticatedAdminTemplatesRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -287,6 +296,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/_authenticated/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/_authenticated/admin/profile': typeof AuthenticatedAdminProfileRoute
+  '/_authenticated/admin/templates': typeof AuthenticatedAdminTemplatesRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -320,6 +330,7 @@ export interface FileRouteTypes {
     | '/admin/knowledge'
     | '/admin/library'
     | '/admin/profile'
+    | '/admin/templates'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
@@ -350,6 +361,7 @@ export interface FileRouteTypes {
     | '/admin/knowledge'
     | '/admin/library'
     | '/admin/profile'
+    | '/admin/templates'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug'
     | '/api/public/hooks/generate-articles'
@@ -382,6 +394,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/knowledge'
     | '/_authenticated/admin/library'
     | '/_authenticated/admin/profile'
+    | '/_authenticated/admin/templates'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
@@ -594,6 +607,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeCategorySlugArticleSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/admin/templates': {
+      id: '/_authenticated/admin/templates'
+      path: '/admin/templates'
+      fullPath: '/admin/templates'
+      preLoaderRoute: typeof AuthenticatedAdminTemplatesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/admin/profile': {
       id: '/_authenticated/admin/profile'
       path: '/admin/profile'
@@ -631,6 +651,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedAdminKnowledgeRoute: typeof AuthenticatedAdminKnowledgeRoute
   AuthenticatedAdminLibraryRoute: typeof AuthenticatedAdminLibraryRoute
   AuthenticatedAdminProfileRoute: typeof AuthenticatedAdminProfileRoute
+  AuthenticatedAdminTemplatesRoute: typeof AuthenticatedAdminTemplatesRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
@@ -639,6 +660,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAdminKnowledgeRoute: AuthenticatedAdminKnowledgeRoute,
   AuthenticatedAdminLibraryRoute: AuthenticatedAdminLibraryRoute,
   AuthenticatedAdminProfileRoute: AuthenticatedAdminProfileRoute,
+  AuthenticatedAdminTemplatesRoute: AuthenticatedAdminTemplatesRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =

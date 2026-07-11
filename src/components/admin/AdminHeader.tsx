@@ -9,6 +9,7 @@ import {
   Users,
   FileText,
   BookOpen,
+  FileSpreadsheet,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -90,6 +91,10 @@ export function AdminHeader() {
               <Link to="/admin/profile" className={linkCls("/admin/profile")}>
                 <UserCircle2 className="size-3.5" />
                 الشهادات والخبرات
+              </Link>
+              <Link to="/admin/templates" className={linkCls("/admin/templates")}>
+                <FileSpreadsheet className="size-3.5" />
+                النماذج الجاهزة
               </Link>
             </>
           )}
