@@ -933,7 +933,7 @@ function Hero({ lang }: { lang: Lang }) {
             </div>
 
             <p
-              className="mb-10 max-w-[600px] text-[17px] sm:text-[19px] lg:text-[22px] leading-[1.8] text-justify"
+              className="mb-10 max-w-[600px] text-[17px] sm:text-[19px] lg:text-[22px] leading-[1.8]"
               style={{ color: "var(--fg-soft)" }}
             >
               {t.hero.intro[lang]}
@@ -1134,7 +1134,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
             </h2>
 
             <div
-              className="mt-5 space-y-4 text-base leading-loose text-justify"
+              className="mt-5 space-y-4 text-base leading-loose"
               style={{ color: "var(--fg-soft)" }}
             >
               <p>{t.about.body[lang]}</p>
@@ -1182,7 +1182,7 @@ export function About({ lang }: { lang: Lang }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose text-justify sm:p-10 lg:col-span-3"
+            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose sm:p-10 lg:col-span-3"
             style={{ color: "var(--fg-soft)" }}
           >
             <p>{t.about.body[lang]}</p>
@@ -1272,24 +1272,32 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
                   <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>
                     {s[lang]}
                   </h3>
-                  <p
-                    className="mt-2 text-sm leading-relaxed text-justify"
-                    style={{ color: "var(--fg-soft)" }}
-                  >
+                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
                     {s.d[lang]}
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      playClick();
-                      onOpen(s);
-                    }}
-                    onMouseEnter={playHover}
-                    className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
-                  >
-                    {t.services.learn[lang]}
-                    <ChevronRight className="size-3 rtl:rotate-180" />
-                  </button>
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        playClick();
+                        onOpen(s);
+                      }}
+                      onMouseEnter={playHover}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
+                    >
+                      {t.services.learn[lang]}
+                      <ChevronRight className="size-3 rtl:rotate-180" />
+                    </button>
+                    <RouterLink
+                      to="/request-service"
+                      search={{ service: s.requestServiceId }}
+                      onClick={playClick}
+                      onMouseEnter={playHover}
+                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] transition-all hover:scale-[1.03]"
+                    >
+                      {t.services.requestNow[lang]}
+                    </RouterLink>
+                  </div>
                 </div>
               </motion.div>
             );

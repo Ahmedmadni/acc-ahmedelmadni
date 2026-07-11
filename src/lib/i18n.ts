@@ -66,8 +66,10 @@ export const t = {
     },
     learn: { ar: "اعرف أكثر", en: "Learn more" },
     process: { ar: "كيف أنفذها", en: "How I deliver" },
+    requestNow: { ar: "اطلب الخدمة الآن", en: "Request This Service Now" },
     items: [
       {
+        requestServiceId: "financial-reports",
         ar: "إعداد التقارير المالية والإدارية",
         en: "Financial & Management Reporting",
         d: {
@@ -94,6 +96,7 @@ export const t = {
         },
       },
       {
+        requestServiceId: "cost-analysis",
         ar: "محاسبة التكاليف وتحليل المشاريع",
         en: "Cost Accounting & Project Analysis",
         d: {
@@ -120,6 +123,7 @@ export const t = {
         },
       },
       {
+        requestServiceId: "financial-claims",
         ar: "إعداد المطالبات المالية",
         en: "Financial Claims Preparation",
         d: {
@@ -146,6 +150,7 @@ export const t = {
         },
       },
       {
+        requestServiceId: "bank-reconciliation",
         ar: "التسويات البنكية والضريبية",
         en: "Bank & VAT Reconciliations",
         d: {
@@ -172,6 +177,7 @@ export const t = {
         },
       },
       {
+        requestServiceId: "consulting",
         ar: "استشارات مالية وإدارية",
         en: "Financial & Management Consulting",
         d: {
@@ -198,6 +204,7 @@ export const t = {
         },
       },
       {
+        requestServiceId: "power-bi",
         ar: "لوحات تحليل (Power BI / Excel)",
         en: "Analytics Dashboards (Power BI / Excel)",
         d: {
@@ -219,6 +226,7 @@ export const t = {
         },
       },
       {
+        requestServiceId: "website-design",
         ar: "تصميم وتطوير المواقع الإلكترونية",
         en: "Website Design & Development",
         d: {

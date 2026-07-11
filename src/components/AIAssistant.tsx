@@ -133,7 +133,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                       <Sparkles className="size-3" />
                       {lang === "ar" ? "مرحباً" : "Welcome"}
                     </div>
-                    <p className="leading-relaxed text-justify">
+                    <p className="leading-relaxed">
                       {lang === "ar"
                         ? "مرحباً! أنا مساعد أحمد المدني الذكي، خبير في المحاسبة والمعايير المحاسبية. كيف يمكنني مساعدتك اليوم؟ يمكنك سؤالي عن خدمة محددة أو معيار محاسبي أو طلب التواصل المباشر."
                         : "Hi! I'm Ahmed Elmadani's AI assistant — an expert in accounting and standards. How can I help today? Ask about a specific service, an accounting standard, or request a direct contact."}

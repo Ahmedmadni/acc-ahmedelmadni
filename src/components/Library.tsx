@@ -779,10 +779,7 @@ export function Library({
           >
             {t.library.title[lang]}
           </h2>
-          <p
-            className="mt-2 text-sm leading-relaxed text-justify"
-            style={{ color: "var(--fg-soft)" }}
-          >
+          <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
             {t.library.sub[lang]}
           </p>
         </motion.div>
@@ -1013,7 +1010,7 @@ export function Library({
                       {c[lang]}
                     </h3>
                     <p
-                      className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-justify"
+                      className="mt-1.5 line-clamp-2 text-xs leading-relaxed"
                       style={{ color: "var(--fg-soft)" }}
                     >
                       {c.desc[lang]}
@@ -1214,9 +1211,7 @@ function CourseModal({
           {t.library.cats[course.cat as Exclude<CatKey, "all">][lang]}
         </div>
         <h3 className="text-lg font-black text-white sm:text-xl">{course[lang]}</h3>
-        <p className="mt-2 text-xs leading-relaxed text-justify text-white/85 sm:text-sm">
-          {course.desc[lang]}
-        </p>
+        <p className="mt-2 text-xs leading-relaxed text-white/85 sm:text-sm">{course.desc[lang]}</p>
 
         <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-semibold">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-white/80">
