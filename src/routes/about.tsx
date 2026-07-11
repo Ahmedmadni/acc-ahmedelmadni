@@ -3,9 +3,7 @@ import { AnimatePresence } from "motion/react";
 import { Suspense, useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
 import { About, Experience, BeforeAfter, Skills, SkillModal, Certs } from "@/routes/index";
-import { t } from "@/lib/i18n";
-
-type SkillItem = (typeof t.skills.groups)[number]["items"][number];
+import type { SkillItem } from "@/components/home/SkillModal";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
