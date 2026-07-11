@@ -1,6 +1,14 @@
 import type { Lang } from "@/lib/i18n";
 
-export type ToolCategory = "finance" | "tax" | "analysis" | "excel" | "ifrs" | "career" | "legal";
+export type ToolCategory =
+  | "finance"
+  | "tax"
+  | "analysis"
+  | "excel"
+  | "ifrs"
+  | "career"
+  | "legal"
+  | "hr";
 
 export interface ToolInfoSection {
   ar: string[];
@@ -34,6 +42,7 @@ export const CATEGORIES: { id: ToolCategory; label: { ar: string; en: string } }
   { id: "ifrs", label: { ar: "معايير IFRS", en: "IFRS Standards" } },
   { id: "career", label: { ar: "المهنة والتطوير", en: "Career & Development" } },
   { id: "legal", label: { ar: "الأحوال الشخصية والمواريث", en: "Personal Status & Inheritance" } },
+  { id: "hr", label: { ar: "الرواتب والموارد البشرية", en: "Payroll & HR" } },
 ];
 
 export const TOOLS: ToolMeta[] = [
@@ -985,6 +994,859 @@ export const TOOLS: ToolMeta[] = [
       en: [
         "Enter debts and the bequest accurately — distribution is based on the net estate only",
         "When a grandfather and siblings co-exist, consult a Sharia judge; that case isn't auto-calculated here",
+      ],
+    },
+  },
+  {
+    id: "gratuity",
+    category: "hr",
+    icon: "Briefcase",
+    title: { ar: "حاسبة مكافأة نهاية الخدمة", en: "End-of-Service Gratuity Calculator" },
+    short: {
+      ar: "احسب مكافأة نهاية الخدمة وفق نظام العمل السعودي، مع تخفيض الاستقالة التدريجي.",
+      en: "Compute end-of-service gratuity per Saudi Labor Law, including the resignation sliding scale.",
+    },
+    standard: { ar: "نظام العمل السعودي — المادة 84", en: "Saudi Labor Law — Article 84" },
+    formula: "نصف شهر × أول 5 سنوات + شهر كامل × ما بعدها",
+    about: {
+      ar: "تحسب الأداة مكافأة نهاية الخدمة على أساس آخر أجر شهري: نصف شهر عن كل سنة من أول خمس سنوات، وشهر كامل عن كل سنة بعدها. عند الاستقالة تُخفَّض المكافأة حسب سنوات الخدمة (لا شيء قبل سنتين، الثلث من 2-5 سنوات، الثلثان من 5-10 سنوات، وكاملة بعد 10 سنوات).",
+      en: "Computes gratuity based on the last monthly wage: half a month per year for the first five years, a full month per year after. On resignation, the amount is reduced by service length (none under 2 years, one-third from 2-5, two-thirds from 5-10, full after 10).",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير مستحقات موظف عند إنهاء الخدمة أو الاستقالة",
+        "تخطيط مخصص مكافأة نهاية الخدمة في القوائم المالية",
+        "مراجعة قسيمة تسوية نهاية الخدمة",
+      ],
+      en: [
+        "Estimating an employee's dues on termination or resignation",
+        "Planning the end-of-service benefit provision in financial statements",
+        "Reviewing a final settlement statement",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام الراتب الأساسي فقط بدل آخر أجر شامل حسب العقد",
+        "نسيان تخفيض الاستقالة أو تطبيقه خطأً على إنهاء الخدمة من صاحب العمل",
+        "إغفال الأجزاء غير الكاملة من السنة",
+      ],
+      en: [
+        "Using only the basic salary instead of the full contractual last wage",
+        "Forgetting the resignation reduction, or wrongly applying it to employer-initiated termination",
+        "Ignoring partial (fractional) years of service",
+      ],
+    },
+    tips: {
+      ar: ["أدخل سنوات الخدمة بالكسر العشري (مثال: 7.5) لدقة أعلى"],
+      en: ["Enter years of service as a decimal (e.g. 7.5) for more precise results"],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "gosi",
+    category: "hr",
+    icon: "ShieldCheck",
+    title: { ar: "حاسبة التأمينات الاجتماعية (GOSI)", en: "GOSI Contributions Calculator" },
+    short: {
+      ar: "احسب اشتراكات التأمينات الاجتماعية لصاحب العمل والموظف (سعودي وغير سعودي).",
+      en: "Compute GOSI social insurance contributions for employer and employee (Saudi and non-Saudi).",
+    },
+    standard: {
+      ar: "المؤسسة العامة للتأمينات الاجتماعية (GOSI)",
+      en: "General Organization for Social Insurance (GOSI)",
+    },
+    about: {
+      ar: "تحسب الأداة اشتراكات التأمينات الاجتماعية على الأجر الخاضع (الأساسي + السكن) ضمن الحدين الأعلى والأدنى. الموظف السعودي مشمول بفرعي المعاشات والساند (تأمين التعطل) بالإضافة إلى الأخطار المهنية، بينما غير السعودي مشمول بالأخطار المهنية فقط على حساب صاحب العمل. النسب والحدود قابلة للتعديل لأنها تتغير بموجب اللوائح — تحقق من النسب الحالية قبل الاعتماد النهائي.",
+      en: "Computes GOSI contributions on the subject wage (basic + housing) within the floor/ceiling. Saudi employees are covered by annuities and SANED (unemployment insurance) in addition to occupational hazards; non-Saudis are covered by occupational hazards only, paid by the employer. Rates and ceilings are editable since they change by regulation — verify current rates before relying on the output.",
+    },
+    whenToUse: {
+      ar: [
+        "احتساب تكلفة التوظيف الإجمالية لصاحب العمل",
+        "التحقق من استقطاع التأمينات في قسيمة الراتب",
+        "إعداد موازنة تكاليف الموظفين",
+      ],
+      en: [
+        "Estimating total employer cost of hiring",
+        "Verifying the GOSI deduction on a payslip",
+        "Budgeting employee costs",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "تطبيق فرعي المعاشات والساند على موظف غير سعودي",
+        "احتساب الاشتراك على الراتب الإجمالي بدل الأجر الخاضع فقط",
+        "إغفال الحد الأعلى للأجر الخاضع للاشتراك",
+      ],
+      en: [
+        "Applying annuities/SANED to a non-Saudi employee",
+        "Calculating on gross salary instead of the subject wage only",
+        "Ignoring the contributory wage ceiling",
+      ],
+    },
+    tips: {
+      ar: ["راجع نسب وحدود GOSI الحالية دورياً؛ القيم هنا افتراضية وقابلة للتعديل"],
+      en: [
+        "Check current GOSI rates/ceilings periodically; the values here are defaults and editable",
+      ],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "payroll",
+    category: "hr",
+    icon: "Wallet",
+    title: { ar: "حاسبة صافي الراتب", en: "Net Salary Calculator" },
+    short: {
+      ar: "احسب الراتب الصافي بعد استقطاع حصة الموظف من التأمينات الاجتماعية.",
+      en: "Compute net salary after the employee's GOSI deduction.",
+    },
+    about: {
+      ar: "تجمع الأداة الراتب الأساسي وبدل السكن والبدلات الأخرى للحصول على الراتب الإجمالي، ثم تطرح حصة الموظف من التأمينات الاجتماعية (على الأساسي + السكن) وأي استقطاعات أخرى للوصول إلى الصافي.",
+      en: "Sums basic salary, housing allowance, and other allowances into a gross salary, then deducts the employee's GOSI share (on basic + housing) and any other deductions to reach the net salary.",
+    },
+    whenToUse: {
+      ar: [
+        "إعداد قسيمة راتب سريعة",
+        "التفاوض على عرض عمل بمعرفة الصافي الفعلي",
+        "التحقق من استقطاعات الراتب",
+      ],
+      en: [
+        "Preparing a quick payslip",
+        "Negotiating a job offer by knowing the actual net",
+        "Verifying salary deductions",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "إغفال بدل السكن عند احتساب الأجر الخاضع للتأمينات",
+        "خلط الاستقطاعات الأخرى (قروض، غياب) مع استقطاع التأمينات",
+      ],
+      en: [
+        "Forgetting the housing allowance when computing the GOSI subject wage",
+        "Mixing other deductions (loans, absences) with the GOSI deduction",
+      ],
+    },
+    tips: {
+      ar: ["استخدم حقل 'استقطاعات أخرى' لأي بند لا يتعلق بالتأمينات الاجتماعية"],
+      en: ["Use the 'other deductions' field for anything unrelated to GOSI"],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "zakat-shares",
+    category: "tax",
+    icon: "PieChart",
+    title: {
+      ar: "زكاة الأسهم والمحافظ الاستثمارية",
+      en: "Zakat on Shares & Investment Portfolios",
+    },
+    short: {
+      ar: "فرّق بين زكاة أسهم المتاجرة وأسهم الاستثمار بنسبتيهما المختلفتين.",
+      en: "Distinguish zakat on trading shares from investment shares, each with a different base.",
+    },
+    standard: {
+      ar: "لوائح الزكاة — هيئة الزكاة والضريبة والجمارك",
+      en: "Zakat regulations — ZATCA",
+    },
+    about: {
+      ar: "أسهم المتاجرة تُزكّى على كامل قيمتها السوقية كعروض تجارة. أسهم الاستثمار تُزكّى نظرياً على حصة المساهم من الوعاء الزكوي لأصول الشركة، وإن تعذّر الوصول لهذه البيانات تُستخدم نسبة مبسطة تقديرية من القيمة السوقية (قابلة للتعديل).",
+      en: "Trading shares are zakatable on their full market value as trade goods. Investment shares are, in principle, zakatable only on the shareholder's portion of the investee company's zakat base; a simplified estimated percentage of market value is used when that data isn't available (editable).",
+    },
+    whenToUse: {
+      ar: [
+        "محفظة تضم أسهماً للمضاربة وأخرى للاحتفاظ طويل الأجل",
+        "إعداد الإقرار الزكوي السنوي لفرد أو منشأة تملك استثمارات في الأسهم",
+      ],
+      en: [
+        "A portfolio mixing trading and long-term holding positions",
+        "Preparing the annual zakat declaration for an individual or business holding shares",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "معاملة كل الأسهم كأسهم استثمار لتخفيض الزكاة المستحقة دون سند شرعي لنية المتاجرة",
+        "استخدام نسبة الوعاء المبسطة دون مراجعتها دورياً",
+      ],
+      en: [
+        "Treating all shares as investment shares to reduce the zakat due, without a genuine holding intent",
+        "Using the simplified base percentage without periodic review",
+      ],
+    },
+    tips: {
+      ar: [
+        "إن توفرت القوائم المالية للشركة المستثمر فيها، استخدم الوعاء الزكوي الفعلي بدل النسبة المبسطة",
+      ],
+      en: [
+        "If the investee company's financials are available, use its actual zakat base instead of the simplified percentage",
+      ],
+    },
+    requestServiceId: "zakat-declaration",
+  },
+  {
+    id: "break-even",
+    category: "analysis",
+    icon: "Scissors",
+    title: { ar: "نقطة التعادل وتحليل الربحية (CVP)", en: "Break-even & CVP Analysis" },
+    short: {
+      ar: "احسب نقطة التعادل، وحدات الربح المستهدف، وهامش الأمان.",
+      en: "Compute the break-even point, target-profit units, and margin of safety.",
+    },
+    formula: "نقطة التعادل = التكاليف الثابتة ÷ هامش المساهمة للوحدة",
+    about: {
+      ar: "تحليل التكلفة-الحجم-الربح (CVP) الكلاسيكي: هامش المساهمة، نقطة التعادل بالوحدات والإيراد، عدد الوحدات اللازمة لتحقيق ربح مستهدف، وهامش الأمان مقارنة بالمبيعات الفعلية أو المتوقعة.",
+      en: "The classic cost-volume-profit (CVP) analysis: contribution margin, break-even in units and revenue, units needed for a target profit, and margin of safety versus actual/expected sales.",
+    },
+    whenToUse: {
+      ar: [
+        "تسعير منتج أو خدمة جديدة",
+        "تقييم جدوى إطلاق خط إنتاج",
+        "تحديد الحد الأدنى من المبيعات لتغطية التكاليف",
+      ],
+      en: [
+        "Pricing a new product or service",
+        "Assessing the viability of a new product line",
+        "Determining the minimum sales needed to cover costs",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "خلط التكاليف شبه المتغيرة مع الثابتة أو المتغيرة بالكامل",
+        "استخدام متوسط سعر بيع غير دقيق عند تعدد المنتجات",
+      ],
+      en: [
+        "Mixing semi-variable costs entirely into fixed or variable",
+        "Using an inaccurate average price when selling multiple products",
+      ],
+    },
+    tips: {
+      ar: ["راجع هامش الأمان دورياً — كلما ارتفع، قلّت مخاطر الوقوع في خسارة عند تراجع المبيعات"],
+      en: [
+        "Review the margin of safety periodically — the higher it is, the lower the risk of a loss if sales drop",
+      ],
+    },
+  },
+  {
+    id: "wacc",
+    category: "finance",
+    icon: "Percent",
+    title: { ar: "تكلفة رأس المال المرجحة (WACC)", en: "Weighted Average Cost of Capital (WACC)" },
+    short: {
+      ar: "احسب معدل الخصم المناسب لتقييم المشاريع بناءً على هيكل التمويل.",
+      en: "Compute the appropriate discount rate for project appraisal based on the financing mix.",
+    },
+    formula: "WACC = (E/V)×Re + (D/V)×Rd×(1−Tax)",
+    about: {
+      ar: "يكمّل أدوات NPV وDCF الموجودة — معدل الخصم المستخدم فيهما غالباً هو WACC. يجمع بين تكلفة حقوق الملكية وتكلفة الدين بعد الضريبة، مرجّحة بالقيمة السوقية لكل مصدر تمويل.",
+      en: "Complements the existing NPV/DCF tools — the discount rate used there is typically the WACC. Blends the cost of equity and the after-tax cost of debt, weighted by each financing source's market value.",
+    },
+    whenToUse: {
+      ar: [
+        "اختيار معدل الخصم لتقييم مشروع أو تدفقات نقدية",
+        "تقييم شركة بطريقة الدخل",
+        "مقارنة هيكل تمويل حالي ببديل مقترح",
+      ],
+      en: [
+        "Choosing the discount rate for a project or cash-flow valuation",
+        "Income-approach company valuation",
+        "Comparing the current financing mix with a proposed alternative",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام القيمة الدفترية بدل السوقية لحقوق الملكية",
+        "نسيان تعديل تكلفة الدين بأثر الضريبة",
+      ],
+      en: [
+        "Using book value instead of market value for equity",
+        "Forgetting to tax-adjust the cost of debt",
+      ],
+    },
+    tips: {
+      ar: ["يمكن تقدير تكلفة حقوق الملكية عبر نموذج CAPM: Rf + Beta × (Rm − Rf)"],
+      en: ["Cost of equity can be estimated via CAPM: Rf + Beta × (Rm − Rf)"],
+    },
+  },
+  {
+    id: "bank-reconciliation",
+    category: "excel",
+    icon: "Landmark",
+    title: { ar: "مطابقة كشف الحساب البنكي", en: "Bank Reconciliation" },
+    short: {
+      ar: "طابق الرصيد البنكي بالرصيد الدفتري ببنود تسوية قابلة للتعديل.",
+      en: "Reconcile the bank balance with the book balance using editable adjustment items.",
+    },
+    about: {
+      ar: "ورقة عمل تسوية بنكية كلاسيكية بجانبين: جانب البنك (الرصيد حسب الكشف + ودائع في الطريق − شيكات معلقة) وجانب الدفاتر (الرصيد الدفتري + تحصيلات − رسوم بنكية − شيكات مرتجعة)، مع مؤشر مباشر لمطابقة الرصيدين المعدّلين.",
+      en: "A classic two-sided bank reconciliation worksheet — the bank side (statement balance + deposits in transit − outstanding checks) and the book side (book balance + collections − bank fees − NSF checks) — with a live indicator for whether the two adjusted balances match.",
+    },
+    whenToUse: {
+      ar: [
+        "الإقفال الشهري لحساب بنكي",
+        "تتبع الفروقات بين كشف البنك ودفتر الأستاذ",
+        "إعداد قبل تدقيق حسابات",
+      ],
+      en: [
+        "Monthly bank account close",
+        "Tracking differences between the bank statement and the general ledger",
+        "Preparation ahead of an audit",
+      ],
+    },
+    commonMistakes: {
+      ar: ["نسيان تسجيل الشيكات المعلقة كسالبة في جانب البنك", "خلط بنود الجانبين ببعضها"],
+      en: [
+        "Forgetting to enter outstanding checks as negative on the bank side",
+        "Mixing items between the two sides",
+      ],
+    },
+    tips: {
+      ar: ["أدخل القيمة بإشارتها مباشرة (سالبة للخصم) بدل استخدام حقل منفصل لنوع البند"],
+      en: [
+        "Enter the signed value directly (negative to subtract) instead of a separate item-type field",
+      ],
+    },
+    requestServiceId: "bank-reconciliation",
+  },
+  {
+    id: "budget-variance",
+    category: "analysis",
+    icon: "BarChart3",
+    title: { ar: "تحليل انحراف الموازنة التقديرية", en: "Budget vs. Actual Variance Analysis" },
+    short: {
+      ar: "قارن بنود الإيرادات والمصروفات الفعلية بالموازنة المعتمدة وحدد الانحراف الملائم وغير الملائم.",
+      en: "Compare actual revenue/expense lines against the approved budget and flag favorable vs. unfavorable variances.",
+    },
+    formula: "الانحراف = الفعلي − الموازنة",
+    about: {
+      ar: "أداة تحليل انحراف إدارية: أضف بنود إيرادات ومصروفات بقيمتها المعتمدة والفعلية، وتُحسب النسبة والاتجاه (ملائم/غير ملائم) تلقائياً — الزيادة ملائمة للإيراد وغير ملائمة للمصروف، والعكس صحيح.",
+      en: "A managerial variance-analysis tool: add revenue and expense line items with their budgeted and actual values; the percentage and direction (favorable/unfavorable) are computed automatically — an increase is favorable for revenue and unfavorable for expenses, and vice versa.",
+    },
+    whenToUse: {
+      ar: [
+        "المراجعة الشهرية أو الربعية للموازنة التقديرية",
+        "تقارير الإدارة التنفيذية",
+        "تحديد بنود تحتاج تدخلاً تصحيحياً",
+      ],
+      en: [
+        "Monthly or quarterly budget review",
+        "Executive management reports",
+        "Identifying line items that need corrective action",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "اعتبار كل انحراف سلبي بالقيمة المطلقة غير ملائم دون مراعاة نوع البند",
+        "إغفال الانحرافات الصغيرة المتكررة التي تتراكم",
+      ],
+      en: [
+        "Treating every negative-value variance as unfavorable regardless of line type",
+        "Ignoring small recurring variances that accumulate over time",
+      ],
+    },
+    tips: {
+      ar: ["ركّز المراجعة على البنود ذات الانحراف الأكبر نسبةً ومبلغاً معاً"],
+      en: ["Focus the review on items with the largest variance by both percentage and amount"],
+    },
+    requestServiceId: "financial-reports",
+  },
+  {
+    id: "altman-zscore",
+    category: "analysis",
+    icon: "AlertTriangle",
+    title: { ar: "مؤشر التنبؤ بالتعثر المالي (Altman Z-Score)", en: "Altman Z-Score" },
+    short: {
+      ar: "قيّم مخاطر التعثر المالي لشركة مساهمة صناعية بخمس نسب مالية مرجّحة.",
+      en: "Assess a publicly-traded manufacturer's financial distress risk via five weighted financial ratios.",
+    },
+    standard: { ar: "نموذج Altman الأصلي (1968)", en: "Original Altman model (1968)" },
+    formula: "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+    about: {
+      ar: "يجمع النموذج خمس نسب مالية (السيولة، الربحية المتراكمة، الربحية التشغيلية، الرافعة المالية بالقيمة السوقية، ودوران الأصول) في مؤشر واحد يصنّف الشركة ضمن ثلاث مناطق: آمنة (Z > 2.99)، رمادية غير محددة (1.81-2.99)، أو تعثر محتمل (Z < 1.81).",
+      en: "Combines five financial ratios (liquidity, cumulative profitability, operating profitability, market-value leverage, and asset turnover) into a single score that classifies a company into one of three zones: safe (Z > 2.99), grey/undetermined (1.81-2.99), or distress (Z < 1.81).",
+    },
+    whenToUse: {
+      ar: [
+        "تقييم أولي لمخاطر الائتمان قبل تمويل أو استثمار",
+        "متابعة الاتجاه المالي لشركة عبر عدة فترات",
+        "فحص أولي في العناية الواجبة المالية",
+      ],
+      en: [
+        "Preliminary credit-risk screening before financing or investment",
+        "Tracking a company's financial trend across periods",
+        "An initial check during financial due diligence",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "تطبيق النموذج على شركات خدمية أو غير مُدرجة دون تعديل معاملاته",
+        "الاعتماد على قراءة فترة واحدة دون النظر إلى الاتجاه عبر الزمن",
+      ],
+      en: [
+        "Applying the model to non-manufacturing or private companies without adjusting the coefficients",
+        "Relying on a single-period reading instead of the trend over time",
+      ],
+    },
+    tips: {
+      ar: [
+        "توجد نسخ معدّلة من النموذج (Z' وZ'') للشركات الخاصة وغير الصناعية — استخدمها إن لم تكن الشركة مساهمة صناعية مُدرجة",
+      ],
+      en: [
+        "Adjusted variants of the model (Z' and Z'') exist for private and non-manufacturing companies — use them if the company isn't a publicly-traded manufacturer",
+      ],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "nitaqat",
+    category: "hr",
+    icon: "Users",
+    title: { ar: "حاسبة نسبة السعودة (نطاقات)", en: "Saudization Ratio (Nitaqat)" },
+    short: {
+      ar: "احسب نسبة التوطين في منشأتك وقارنها بنطاقات نشاطك.",
+      en: "Compute your company's Saudization ratio and compare it against your activity's bands.",
+    },
+    standard: {
+      ar: "برنامج نطاقات — وزارة الموارد البشرية",
+      en: "Nitaqat program — Ministry of HRSD",
+    },
+    about: {
+      ar: "تحسب الأداة نسبة السعودة (عدد السعوديين ÷ إجمالي الموظفين) بدقة، ثم تقارنها بنطاقين تدخلهما بنفسك (الأخضر والبلاتيني) لأن هذه النطاقات تختلف حسب نشاط المنشأة وحجمها وتُنشر على منصة قوى — لا تعتمد الأداة على نطاقات افتراضية قد لا تُطابق نشاطك.",
+      en: "Computes the Saudization ratio (Saudi employees ÷ total employees) precisely, then compares it against two bands you enter yourself (green and platinum) since these differ by activity and company size and are published on Qiwa — the tool doesn't assume default bands that might not match your activity.",
+    },
+    whenToUse: {
+      ar: [
+        "متابعة التصنيف قبل التقديم على خدمات وزارة الموارد البشرية",
+        "تخطيط التوظيف لتحسين النطاق",
+        "إعداد تقارير الامتثال الداخلية",
+      ],
+      en: [
+        "Tracking classification before applying for HRSD services",
+        "Hiring planning to improve the band",
+        "Internal compliance reporting",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام نطاقات عامة لا تخص نشاط المنشأة الفعلي",
+        "إغفال تحديثات النطاقات الدورية على منصة قوى",
+      ],
+      en: [
+        "Using generic bands that don't match the company's actual activity",
+        "Missing periodic band updates on the Qiwa platform",
+      ],
+    },
+    tips: {
+      ar: ["راجع نطاقك على منصة قوى مباشرة قبل أي قرار توظيف مبني على النتيجة"],
+      en: ["Check your band directly on Qiwa before any hiring decision based on the result"],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "vat-penalty",
+    category: "tax",
+    icon: "AlertTriangle",
+    title: { ar: "حاسبة غرامات ضريبة القيمة المضافة", en: "VAT Penalty Calculator" },
+    short: {
+      ar: "قدّر غرامات التأخر في التسجيل والإقرار والسداد وفق هيئة الزكاة والضريبة والجمارك.",
+      en: "Estimate late registration, filing, and payment penalties per ZATCA.",
+    },
+    standard: {
+      ar: "لوائح الغرامات — هيئة الزكاة والضريبة والجمارك",
+      en: "Penalty regulations — ZATCA",
+    },
+    about: {
+      ar: "تقدّر الأداة ثلاثة أنواع من الغرامات: التأخر في التسجيل (مبلغ ثابت)، التأخر في تقديم الإقرار (نسبة من الضريبة)، والتأخر في السداد (نسبة شهرية من الضريبة غير المسددة). جميع النسب والمبالغ قابلة للتعديل لأن جدول الغرامات قابل للتحديث من الهيئة.",
+      en: "Estimates three penalty types: late registration (fixed amount), late filing (percentage of tax), and late payment (a monthly percentage of unpaid tax). All rates and amounts are editable since ZATCA's penalty schedule can be updated.",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير التعرض المالي قبل تسوية وضع ضريبي متأخر",
+        "التخطيط لتقديم طلب اعتراض أو تقسيط",
+        "تقييم أثر التأخير قبل اتخاذ قرار السداد",
+      ],
+      en: [
+        "Estimating financial exposure before settling an overdue tax position",
+        "Planning an objection or installment request",
+        "Assessing the cost of delay before deciding when to pay",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "الاعتماد على نسب قديمة دون التحقق من آخر تحديث من الهيئة",
+        "خلط غرامة الإقرار بغرامة السداد",
+      ],
+      en: [
+        "Relying on outdated rates without checking ZATCA's latest update",
+        "Confusing the filing penalty with the payment penalty",
+      ],
+    },
+    tips: {
+      ar: ["تحقق دائماً من آخر جدول غرامات منشور قبل اتخاذ أي قرار مالي بناءً على النتيجة"],
+      en: [
+        "Always check the latest published penalty schedule before making a financial decision based on the result",
+      ],
+    },
+    requestServiceId: "vat-declaration",
+  },
+  {
+    id: "sales-commission",
+    category: "finance",
+    icon: "Percent",
+    title: { ar: "حاسبة العمولات والحوافز البيعية", en: "Sales Commission Calculator" },
+    short: {
+      ar: "احسب العمولة على شرائح مبيعات متدرجة بمعدلات مختلفة لكل شريحة.",
+      en: "Compute commission across tiered sales bands, each with its own rate.",
+    },
+    formula: "العمولة = Σ (مبلغ الشريحة × نسبتها)",
+    about: {
+      ar: "تحسب العمولة تصاعدياً عبر شرائح المبيعات (نفس منطق الشرائح الضريبية) بدل تطبيق نسبة واحدة على كامل المبلغ — كل شريحة تُحسب بنسبتها الخاصة على الجزء الواقع ضمنها فقط.",
+      en: "Computes commission progressively across sales bands (the same bracket logic as tax brackets) instead of applying one flat rate to the whole amount — each band is charged its own rate only on the portion within it.",
+    },
+    whenToUse: {
+      ar: [
+        "إعداد كشف عمولات فريق المبيعات",
+        "تصميم هيكل حوافز جديد",
+        "التحقق من احتساب عمولة موظف",
+      ],
+      en: [
+        "Preparing a sales team's commission statement",
+        "Designing a new incentive structure",
+        "Verifying an employee's commission calculation",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "تطبيق نسبة الشريحة الأعلى على كامل المبيعات بدل الجزء الزائد فقط",
+        "ترك شريحة مفتوحة النهاية بنسبة صفر بالخطأ",
+      ],
+      en: [
+        "Applying the top tier's rate to all sales instead of only the excess portion",
+        "Accidentally leaving the open-ended tier at a zero rate",
+      ],
+    },
+    tips: {
+      ar: [
+        "الشريحة الأخيرة دائماً مفتوحة النهاية (لا نهاية) لتغطية أي مبيعات تتجاوز آخر حد أدخلته",
+      ],
+      en: [
+        "The last tier is always open-ended to cover any sales beyond the highest threshold you entered",
+      ],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "goodwill-impairment",
+    category: "ifrs",
+    icon: "TrendingDown",
+    title: { ar: "اختبار انخفاض قيمة الشهرة", en: "Goodwill Impairment Test" },
+    short: {
+      ar: "اختبر انخفاض قيمة وحدة توليد النقد ووزّع الخسارة على الشهرة ثم بقية الأصول.",
+      en: "Test a cash-generating unit for impairment and allocate the loss to goodwill, then other assets.",
+    },
+    standard: { ar: "IAS 36 · IFRS 3", en: "IAS 36 · IFRS 3" },
+    formula: "خسارة الانخفاض = القيمة الدفترية − القيمة القابلة للاسترداد",
+    about: {
+      ar: "وفق معيار المحاسبة الدولي رقم 36، إذا تجاوزت القيمة الدفترية لوحدة توليد النقد قيمتها القابلة للاسترداد، تُخصَّص خسارة الانخفاض أولاً لتخفيض الشهرة (حتى قيمتها الدفترية)، ثم يُوزَّع أي فائض متبقٍ على بقية الأصول.",
+      en: "Per IAS 36, when a cash-generating unit's carrying amount exceeds its recoverable amount, the impairment loss is first allocated to reduce goodwill (up to its carrying amount), with any remainder allocated to the unit's other assets.",
+    },
+    whenToUse: {
+      ar: [
+        "الاختبار السنوي الإلزامي لانخفاض قيمة الشهرة",
+        "وجود مؤشرات انخفاض قيمة (تراجع أداء، تغيرات السوق)",
+        "إعداد ملاحظات القوائم المالية الخاصة بالشهرة",
+      ],
+      en: [
+        "The mandatory annual goodwill impairment test",
+        "When impairment indicators exist (declining performance, market changes)",
+        "Preparing goodwill-related financial statement notes",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "توزيع الخسارة بالتناسب على كل الأصول بدل تخصيصها للشهرة أولاً",
+        "تخصيص خسارة للشهرة تتجاوز قيمتها الدفترية",
+      ],
+      en: [
+        "Spreading the loss proportionally across all assets instead of hitting goodwill first",
+        "Allocating more impairment to goodwill than its carrying amount",
+      ],
+    },
+    tips: {
+      ar: ["القيمة القابلة للاسترداد = الأعلى من القيمة العادلة ناقص تكاليف البيع وقيمة الاستخدام"],
+      en: ["Recoverable amount = the higher of fair value less costs to sell and value in use"],
+    },
+  },
+  {
+    id: "inventory-nrv",
+    category: "ifrs",
+    icon: "Package",
+    title: {
+      ar: "تقييم المخزون بالأقل من التكلفة والقيمة القابلة للتحقق",
+      en: "Inventory Lower-of-Cost-or-NRV",
+    },
+    short: {
+      ar: "قارن تكلفة كل صنف مخزون بصافي قيمته القابلة للتحقق واحسب خسارة الاستبعاد.",
+      en: "Compare each inventory item's cost to its net realizable value and compute the write-down.",
+    },
+    standard: { ar: "IAS 2", en: "IAS 2" },
+    formula: "صافي القيمة القابلة للتحقق = سعر البيع − تكلفة الإتمام − تكاليف البيع",
+    about: {
+      ar: "وفق معيار المحاسبة الدولي رقم 2، يُقيَّم المخزون في القوائم المالية بالأقل من التكلفة وصافي القيمة القابلة للتحقق، صنفاً بصنف. عندما تنخفض القيمة القابلة للتحقق عن التكلفة، يُسجَّل الفرق كخسارة استبعاد.",
+      en: "Per IAS 2, inventory is measured at the lower of cost and net realizable value on an item-by-item basis. When NRV falls below cost, the shortfall is recognized as a write-down loss.",
+    },
+    whenToUse: {
+      ar: [
+        "إقفال نهاية الفترة لمخزون بطيء الحركة أو متضرر",
+        "مراجعة تسويات المخزون قبل التدقيق",
+        "تقييم أثر انخفاض أسعار السوق على المخزون",
+      ],
+      en: [
+        "Period-end closing for slow-moving or damaged inventory",
+        "Reviewing inventory adjustments before an audit",
+        "Assessing the impact of falling market prices on inventory",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "مقارنة إجمالي التكلفة بإجمالي القيمة القابلة للتحقق بدل المقارنة صنفاً بصنف",
+        "نسيان خصم تكاليف الإتمام والبيع المتبقية عند حساب القيمة القابلة للتحقق",
+      ],
+      en: [
+        "Comparing total cost to total NRV instead of item-by-item",
+        "Forgetting to deduct remaining costs to complete and sell when computing NRV",
+      ],
+    },
+    tips: {
+      ar: ["لا يجوز عكس خسارة استبعاد سابقة إلا بحدود مبلغ الاستبعاد الأصلي"],
+      en: ["A prior write-down may only be reversed up to the original write-down amount"],
+    },
+  },
+  {
+    id: "market-multiples",
+    category: "finance",
+    icon: "PieChart",
+    title: { ar: "التقييم بمضاعفات السوق (شركات مقارنة)", en: "Market Multiples Valuation" },
+    short: {
+      ar: "قدّر القيمة العادلة للشركة باستخدام مضاعفات P/E وEV/EBITDA وP/B لشركات مقارنة.",
+      en: "Estimate fair equity value using P/E, EV/EBITDA, and P/B multiples from comparable companies.",
+    },
+    formula: "قيمة حقوق الملكية = صافي الربح × مضاعف P/E",
+    about: {
+      ar: "أسلوب تقييم نسبي شائع: يُطبَّق مضاعف كل من P/E وEV/EBITDA وP/B (المستمدة من شركات مقارنة مُدرجة أو صفقات مماثلة) على أرقام الشركة المُقيَّمة، ثم يُؤخذ متوسط النتائج الثلاث كتقدير لقيمة حقوق الملكية.",
+      en: "A common relative-valuation approach: P/E, EV/EBITDA, and P/B multiples (drawn from comparable listed companies or transactions) are applied to the subject company's own figures, and the three resulting equity values are averaged into a single estimate.",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير سريع لقيمة شركة قبل مفاوضات استحواذ أو استثمار",
+        "مقارنة تقييم الدخل (DCF) بتقييم السوق",
+        "إعداد عرض تمهيدي لمستثمر",
+      ],
+      en: [
+        "A quick pre-negotiation valuation estimate before an acquisition or investment",
+        "Cross-checking a DCF valuation against market pricing",
+        "Preparing a preliminary investor presentation",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام مضاعفات شركات غير مقارنة فعلياً من حيث الحجم أو القطاع أو النمو",
+        "نسيان خصم صافي الدين عند استخدام مضاعف EV/EBITDA للوصول لقيمة حقوق الملكية",
+      ],
+      en: [
+        "Using multiples from companies that aren't truly comparable in size, sector, or growth",
+        "Forgetting to subtract net debt when converting an EV/EBITDA multiple to equity value",
+      ],
+    },
+    tips: {
+      ar: [
+        "يُفضَّل استخدام هذا الأسلوب كتقاطع تحقق مع تقييم التدفقات النقدية المخصومة (DCF) لا بديلاً عنه",
+      ],
+      en: ["Best used as a cross-check alongside a DCF valuation, not as a standalone substitute"],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "job-order-costing",
+    category: "analysis",
+    icon: "Layers",
+    title: { ar: "تكاليف أوامر التشغيل", en: "Job Order Costing" },
+    short: {
+      ar: "احسب تكلفة أمر تشغيل محدد من المواد والعمل المباشر والتكاليف غير المباشرة المحمّلة، وتكلفة الوحدة.",
+      en: "Cost a specific job from direct materials, direct labor, and applied overhead, down to a per-unit cost.",
+    },
+    formula: "تكلفة أمر التشغيل = مواد مباشرة + عمل مباشر + تكاليف غير مباشرة محمّلة",
+    about: {
+      ar: "يُستخدم نظام تكاليف أوامر التشغيل في الشركات التي تنتج دفعات أو مشاريع منفصلة (مقاولات، تصنيع حسب الطلب). تُجمَّع التكاليف الثلاث لكل أمر تشغيل على حدة، وتُحمَّل التكاليف غير المباشرة بمعدل محدد مسبقاً لكل ساعة عمل مباشر، ثم تُقسَّم التكلفة الإجمالية على عدد الوحدات المنتجة.",
+      en: "Job order costing is used by businesses that produce distinct batches or projects (contracting, made-to-order manufacturing). The three cost elements are accumulated per job, overhead is applied using a predetermined rate per direct labor hour, and the total is divided by units produced.",
+    },
+    whenToUse: {
+      ar: [
+        "تسعير مشروع أو دفعة إنتاج محددة",
+        "مقارنة التكلفة الفعلية بالتقديرية لأمر تشغيل",
+        "تحديد سعر بيع الوحدة بناءً على التكلفة",
+      ],
+      en: [
+        "Pricing a specific project or production batch",
+        "Comparing a job's actual cost to its estimate",
+        "Setting a per-unit selling price based on cost",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "الخلط بين معدل التحميل الفعلي والمعدل المحدد مسبقاً",
+        "نسيان تحميل التكاليف غير المباشرة على أوامر التشغيل المكتملة جزئياً",
+      ],
+      en: [
+        "Confusing the actual overhead rate with the predetermined rate",
+        "Forgetting to apply overhead to partially completed jobs",
+      ],
+    },
+    tips: {
+      ar: ["راجع معدل التحميل دورياً مقابل التكاليف غير المباشرة الفعلية لتفادي فروقات كبيرة"],
+      en: [
+        "Review the overhead rate periodically against actual overhead to avoid large variances",
+      ],
+    },
+  },
+  {
+    id: "landed-cost",
+    category: "tax",
+    icon: "Landmark",
+    title: {
+      ar: "حاسبة تكلفة الاستيراد الواصلة (جمارك + ضريبة القيمة المضافة)",
+      en: "Import Landed Cost (Customs + VAT)",
+    },
+    short: {
+      ar: "احسب الرسوم الجمركية وضريبة القيمة المضافة على الاستيراد والتكلفة الإجمالية الواصلة للبضاعة.",
+      en: "Compute customs duty, import VAT, and the total landed cost of imported goods.",
+    },
+    standard: { ar: "ZATCA · الجمارك السعودية", en: "ZATCA · Saudi Customs" },
+    formula: "التكلفة الواصلة = CIF + الرسوم الجمركية + ضريبة القيمة المضافة + تكاليف أخرى",
+    about: {
+      ar: "تُحسب الرسوم الجمركية كنسبة من قيمة CIF (التكلفة + التأمين + الشحن)، ثم تُحسب ضريبة القيمة المضافة على أساس CIF مضافاً إليه الرسوم الجمركية وفق قواعد الجمارك السعودية وهيئة الزكاة والضريبة والجمارك، وأخيراً تُضاف أي تكاليف تخليص أو نقل محلي للوصول للتكلفة الإجمالية الواصلة للمخزون.",
+      en: "Customs duty is calculated as a percentage of the CIF value (cost + insurance + freight), then import VAT is charged on CIF plus duty per Saudi Customs / ZATCA rules, and any clearance or local transport costs are added to arrive at the total landed cost of the inventory.",
+    },
+    whenToUse: {
+      ar: [
+        "تسعير بضاعة مستوردة قبل البيع",
+        "إعداد ميزانية تقديرية لعملية استيراد",
+        "التحقق من فاتورة التخليص الجمركي",
+      ],
+      en: [
+        "Pricing imported goods before resale",
+        "Budgeting for an import shipment",
+        "Verifying a customs clearance invoice",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "حساب ضريبة القيمة المضافة على قيمة CIF فقط دون إضافة الرسوم الجمركية لها أولاً",
+        "استخدام نسبة جمركية عامة بدل النسبة الفعلية للبند الجمركي (HS Code)",
+      ],
+      en: [
+        "Calculating VAT on the CIF value alone without adding customs duty first",
+        "Using a generic duty rate instead of the actual HS-code-specific rate",
+      ],
+    },
+    tips: {
+      ar: [
+        "نسبة الجمارك تختلف حسب البند الجمركي (HS Code) — تحقق منها في التعريفة الجمركية الموحدة الخليجية قبل الاعتماد على الافتراضي",
+      ],
+      en: [
+        "The duty rate varies by HS code — check the GCC Common External Tariff before relying on the default",
+      ],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "einvoicing-readiness",
+    category: "tax",
+    icon: "ReceiptText",
+    title: {
+      ar: "قائمة جاهزية الفوترة الإلكترونية (فاتورة) — المرحلة الثانية",
+      en: "E-Invoicing (Fatoora) Phase 2 Readiness Checklist",
+    },
+    short: {
+      ar: "قائمة تحقق مرجّحة لتقييم مدى جاهزية منشأتك لمرحلة الربط والتكامل مع فاتورة.",
+      en: "A weighted checklist to assess your business's readiness for the e-invoicing integration phase.",
+    },
+    standard: { ar: "ZATCA · فاتورة", en: "ZATCA · Fatoora" },
+    about: {
+      ar: "قائمة تحقق استرشادية مقسّمة على أربعة محاور (التنسيق، الأمان، الربط والتكامل، الإبلاغ والامتثال)، كل بند فيها له وزن نسبي، وتُحسب درجة الجاهزية الإجمالية تلقائياً من البنود المحققة. مخصصة للتقييم الذاتي السريع، وليست بديلاً عن التحقق من متطلبات الهيئة الرسمية والمعتمدة لحلك التقني.",
+      en: "An illustrative checklist across four areas (format, security, integration, reporting/compliance), each item weighted, with an overall readiness score computed automatically from the items checked. Meant for a quick self-assessment, not a substitute for verifying your solution against ZATCA's official, currently approved requirements.",
+    },
+    whenToUse: {
+      ar: [
+        "تقييم جاهزية النظام المحاسبي أو نقاط البيع قبل موعد الربط الإلزامي",
+        "تحضير قائمة عمل للفريق التقني قبل التكامل مع فاتورة",
+        "متابعة التقدم في مشروع تنفيذ الفوترة الإلكترونية",
+      ],
+      en: [
+        "Assessing accounting/POS system readiness ahead of a mandatory integration date",
+        "Preparing a technical team's action list before integrating with Fatoora",
+        "Tracking progress on an e-invoicing implementation project",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "الاعتماد على هذه القائمة كمرجع نظامي بديل عن دليل الهيئة الرسمي",
+        "تجاهل بنود عالية الوزن مثل الختم التشفيري والتخليص الفوري لأنها تبدو تقنية بحتة",
+      ],
+      en: [
+        "Treating this checklist as an official substitute for ZATCA's published guidance",
+        "Skipping high-weight items like the cryptographic stamp and real-time clearance because they seem purely technical",
+      ],
+    },
+    tips: {
+      ar: [
+        "راجع موقع هيئة الزكاة والضريبة والجمارك دورياً — متطلبات الربط والتكامل تُحدَّث على دفعات حسب فئة المكلفين",
+      ],
+      en: [
+        "Check ZATCA's website periodically — integration requirements roll out in waves by taxpayer group",
+      ],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "chart-of-accounts",
+    category: "excel",
+    icon: "FileSpreadsheet",
+    title: { ar: "مُولّد دليل الحسابات حسب النشاط", en: "Chart of Accounts Generator" },
+    short: {
+      ar: "قالب دليل حسابات جاهز يُبنى حسب نوع نشاطك (تجارة، خدمات، تصنيع، مقاولات، عقارات) وقابل للتصدير.",
+      en: "A ready-made chart of accounts tailored to your business type (trading, services, manufacturing, contracting, real estate), exportable to CSV.",
+    },
+    about: {
+      ar: "يجمع القالب بين حسابات مشتركة لأي منشأة (نقدية، بنوك، عملاء، موردون، رأس المال، رواتب...) وحسابات خاصة بطبيعة النشاط (مخزون تجاري، تكاليف تصنيع، أعمال تحت التنفيذ للمقاولات، إيرادات إيجارات للعقارات، وغيرها)، مرقّمة برموز حسابات منطقية ومصنّفة حسب الأصول والالتزامات وحقوق الملكية والإيرادات والمصروفات.",
+      en: "The template combines accounts common to any business (cash, banks, customers, suppliers, capital, payroll...) with accounts specific to the business type (retail inventory, manufacturing costs, work-in-progress for contracting, rental income for real estate, and more), numbered with logical account codes and classified under assets, liabilities, equity, revenue, and expenses.",
+    },
+    whenToUse: {
+      ar: [
+        "تأسيس دليل حسابات لمنشأة جديدة",
+        "مراجعة اكتمال دليل الحسابات الحالي مقابل قالب قطاعي",
+        "تجهيز بيانات أولية قبل إعداد النظام المحاسبي",
+      ],
+      en: [
+        "Setting up a chart of accounts for a new business",
+        "Checking an existing chart of accounts against a sector template for gaps",
+        "Preparing initial data before configuring an accounting system",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام القالب كما هو دون حذف الحسابات غير المنطبقة على نشاطك",
+        "تكرار حسابات بنفس الغرض تحت أرقام مختلفة عند الدمج مع دليل حسابات موجود",
+      ],
+      en: [
+        "Using the template as-is without removing accounts that don't apply to your business",
+        "Duplicating accounts with the same purpose under different codes when merging with an existing chart",
+      ],
+    },
+    tips: {
+      ar: [
+        "اترك فراغات في ترقيم الحسابات (كما في القالب) لإضافة حسابات فرعية لاحقاً دون إعادة ترقيم الدليل بالكامل",
+      ],
+      en: [
+        "Leave gaps in the numbering (as in the template) so you can add sub-accounts later without renumbering the whole chart",
       ],
     },
   },

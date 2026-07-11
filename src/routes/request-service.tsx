@@ -94,6 +94,16 @@ const SERVICES = [
     isVat: false,
   },
   {
+    id: "payroll",
+    icon: "💼",
+    ar: "إدارة الرواتب والتأمينات الاجتماعية",
+    en: "Payroll & GOSI Management",
+    descAr: "إعداد مسيّرات الرواتب واحتساب اشتراكات التأمينات ومكافآت نهاية الخدمة.",
+    descEn: "Payroll runs, GOSI contributions, and end-of-service gratuity calculations.",
+    badge: null,
+    isVat: false,
+  },
+  {
     id: "cost-analysis",
     icon: "📉",
     ar: "محاسبة التكاليف وتحليل المشاريع",

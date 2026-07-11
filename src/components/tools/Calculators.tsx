@@ -1,6 +1,6 @@
 import { lazy, Suspense, useMemo } from "react";
 import { motion } from "motion/react";
-import { Loader2 } from "lucide-react";
+import { Loader2, Plus, Trash2 } from "lucide-react";
 import {
   Area,
   AreaChart,
@@ -20,8 +20,11 @@ import {
   YAxis,
 } from "recharts";
 import {
+  altmanZScore,
   amortize,
   bondPrice,
+  breakEven,
+  type CommissionTier,
   corporateTax,
   dcf,
   deferredTax,
@@ -30,17 +33,24 @@ import {
   fmtMoney,
   fmtNum,
   fv as fvCalc,
+  goodwillImpairment,
   inventory,
   type InvTxn,
   irr as irrCalc,
+  jobOrderCosting,
+  landedCost,
   leaseLiability,
+  marketMultiplesValuation,
   npv as npvCalc,
   payback,
   profitabilityIndex,
   pv as pvCalc,
   pvAnnuity,
   ratios,
+  tieredCommission,
   vat as vatCalc,
+  vatPenalty,
+  wacc as waccCalc,
   wht,
   zakat,
 } from "@/lib/finance";
@@ -49,6 +59,14 @@ import { VatOfficialForm } from "@/components/tools/official/VatOfficialForm";
 import { ZakatOfficialForm } from "@/components/tools/official/ZakatOfficialForm";
 import type { Lang } from "@/lib/i18n";
 import { useShareState } from "@/lib/use-share";
+import {
+  calculateGosi,
+  calculateGratuity,
+  DEFAULT_GOSI_CEILING,
+  DEFAULT_GOSI_FLOOR,
+  DEFAULT_GOSI_RATES,
+  type TerminationReason,
+} from "@/lib/payroll-ksa";
 
 // Heavy tools: lazy-loaded to keep the initial tools bundle small.
 const CvBuilder = lazy(() =>
@@ -68,6 +86,31 @@ const OfficeAiAssistant = lazy(() =>
 const InheritanceCalculator = lazy(() =>
   import("@/components/tools/InheritanceCalculator").then((m) => ({
     default: m.InheritanceCalculator,
+  })),
+);
+const BankReconciliation = lazy(() =>
+  import("@/components/tools/BankReconciliation").then((m) => ({
+    default: m.BankReconciliation,
+  })),
+);
+const BudgetVarianceAnalysis = lazy(() =>
+  import("@/components/tools/BudgetVarianceAnalysis").then((m) => ({
+    default: m.BudgetVarianceAnalysis,
+  })),
+);
+const InventoryNrvWorksheet = lazy(() =>
+  import("@/components/tools/InventoryNrvTest").then((m) => ({
+    default: m.InventoryNrvTest,
+  })),
+);
+const EInvoicingReadiness = lazy(() =>
+  import("@/components/tools/EInvoicingReadiness").then((m) => ({
+    default: m.EInvoicingReadiness,
+  })),
+);
+const ChartOfAccountsGenerator = lazy(() =>
+  import("@/components/tools/ChartOfAccountsGenerator").then((m) => ({
+    default: m.ChartOfAccountsGenerator,
   })),
 );
 
@@ -1825,6 +1868,1475 @@ export function InventoryCalculator({ lang }: { lang: Lang }) {
   );
 }
 
+// ---------- End-of-Service Gratuity (KSA) ----------
+export function GratuityCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [monthlyWage, setMonthlyWage] = useShareState("GratuityCalculator_v0", 10000);
+  const [yearsOfService, setYearsOfService] = useShareState("GratuityCalculator_v1", 7);
+  const [reason, setReason] = useShareState<TerminationReason>("GratuityCalculator_v2", "employer");
+
+  const result = calculateGratuity({ monthlyWage, yearsOfService, reason });
+
+  const REASONS: { id: TerminationReason; ar: string; en: string }[] = [
+    { id: "employer", ar: "إنهاء من صاحب العمل", en: "Employer termination" },
+    { id: "contractEnd", ar: "انتهاء العقد", en: "Contract end" },
+    { id: "resignation", ar: "استقالة الموظف", en: "Employee resignation" },
+  ];
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div>
+          <label className={lbl}>{lang === "ar" ? "آخر أجر شهري" : "Last monthly wage"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={monthlyWage}
+            onChange={(e) => setMonthlyWage(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "عدد سنوات الخدمة" : "Years of service"}</label>
+          <input
+            type="number"
+            step="0.1"
+            className={fieldCls}
+            value={yearsOfService}
+            onChange={(e) => setYearsOfService(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "سبب انتهاء الخدمة" : "Reason for leaving"}
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {REASONS.map((r) => (
+              <button
+                key={r.id}
+                onClick={() => setReason(r.id)}
+                className={`rounded-full border px-3 py-1.5 text-xs font-bold ${reason === r.id ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)]"}`}
+              >
+                {lang === "ar" ? r.ar : r.en}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "مكافأة نهاية الخدمة المستحقة" : "Gratuity payable"}
+          value={fmtMoney(result.finalGratuity, "SAR", locale)}
+          sub={
+            reason === "resignation"
+              ? `${lang === "ar" ? "بعد تخفيض الاستقالة" : "after resignation reduction"} (${fmtNum(result.appliedFraction * 100, locale, 0)}%)`
+              : undefined
+          }
+        />
+        <StatCard
+          title={lang === "ar" ? "المكافأة الكاملة قبل أي تخفيض" : "Full gratuity before reduction"}
+          value={fmtMoney(result.fullGratuity, "SAR", locale)}
+        />
+        <StatCard
+          title={
+            lang === "ar" ? "نصيب أول 5 سنوات (نصف شهر/سنة)" : "First 5 years (half month/year)"
+          }
+          value={fmtMoney(result.firstFiveYearsPortion, "SAR", locale)}
+        />
+        <StatCard
+          title={
+            lang === "ar" ? "نصيب ما بعد 5 سنوات (شهر كامل/سنة)" : "After 5 years (full month/year)"
+          }
+          value={fmtMoney(result.remainingYearsPortion, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- GOSI Contributions (KSA) ----------
+export function GosiCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [isSaudi, setIsSaudi] = useShareState("GosiCalculator_v0", true);
+  const [subjectWage, setSubjectWage] = useShareState("GosiCalculator_v1", 8000);
+  const [ceiling, setCeiling] = useShareState("GosiCalculator_v2", DEFAULT_GOSI_CEILING);
+  const [floor, setFloor] = useShareState("GosiCalculator_v3", DEFAULT_GOSI_FLOOR);
+  const [rates, setRates] = useShareState("GosiCalculator_v4", DEFAULT_GOSI_RATES);
+
+  const result = calculateGosi({ isSaudi, subjectWage, ceiling, floor, rates });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="flex gap-2">
+          {[
+            { v: true, ar: "سعودي", en: "Saudi" },
+            { v: false, ar: "غير سعودي", en: "Non-Saudi" },
+          ].map((o) => (
+            <button
+              key={String(o.v)}
+              onClick={() => setIsSaudi(o.v)}
+              className={`rounded-full border px-3 py-1.5 text-xs font-bold ${isSaudi === o.v ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)]"}`}
+            >
+              {lang === "ar" ? o.ar : o.en}
+            </button>
+          ))}
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "الأجر الخاضع (أساسي + سكن)" : "Subject wage (basic + housing)"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={subjectWage}
+            onChange={(e) => setSubjectWage(+e.target.value)}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className={lbl}>{lang === "ar" ? "الحد الأعلى" : "Ceiling"}</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={ceiling}
+              onChange={(e) => setCeiling(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>{lang === "ar" ? "الحد الأدنى" : "Floor"}</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={floor}
+              onChange={(e) => setFloor(+e.target.value)}
+            />
+          </div>
+        </div>
+        {isSaudi && (
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "النسب (تحقق منها دورياً)" : "Rates (verify periodically)"}
+            </label>
+            <div className="grid grid-cols-2 gap-2 text-[11px]">
+              <label>
+                {lang === "ar" ? "معاشات - صاحب العمل %" : "Annuities - employer %"}
+                <input
+                  type="number"
+                  step="0.01"
+                  className={fieldCls + " mt-1"}
+                  value={rates.annuitiesEmployerPct}
+                  onChange={(e) =>
+                    setRates((r) => ({ ...r, annuitiesEmployerPct: +e.target.value }))
+                  }
+                />
+              </label>
+              <label>
+                {lang === "ar" ? "معاشات - الموظف %" : "Annuities - employee %"}
+                <input
+                  type="number"
+                  step="0.01"
+                  className={fieldCls + " mt-1"}
+                  value={rates.annuitiesEmployeePct}
+                  onChange={(e) =>
+                    setRates((r) => ({ ...r, annuitiesEmployeePct: +e.target.value }))
+                  }
+                />
+              </label>
+              <label>
+                {lang === "ar" ? "أخطار مهنية - صاحب العمل %" : "Hazards - employer %"}
+                <input
+                  type="number"
+                  step="0.01"
+                  className={fieldCls + " mt-1"}
+                  value={rates.hazardsEmployerPct}
+                  onChange={(e) => setRates((r) => ({ ...r, hazardsEmployerPct: +e.target.value }))}
+                />
+              </label>
+              <label>
+                {lang === "ar" ? "ساند - صاحب العمل %" : "SANED - employer %"}
+                <input
+                  type="number"
+                  step="0.01"
+                  className={fieldCls + " mt-1"}
+                  value={rates.sanedEmployerPct}
+                  onChange={(e) => setRates((r) => ({ ...r, sanedEmployerPct: +e.target.value }))}
+                />
+              </label>
+              <label>
+                {lang === "ar" ? "ساند - الموظف %" : "SANED - employee %"}
+                <input
+                  type="number"
+                  step="0.01"
+                  className={fieldCls + " mt-1"}
+                  value={rates.sanedEmployeePct}
+                  onChange={(e) => setRates((r) => ({ ...r, sanedEmployeePct: +e.target.value }))}
+                />
+              </label>
+            </div>
+          </div>
+        )}
+        {!isSaudi && (
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "الأخطار المهنية - صاحب العمل %" : "Hazards - employer %"}
+            </label>
+            <input
+              type="number"
+              step="0.01"
+              className={fieldCls}
+              value={rates.hazardsEmployerPct}
+              onChange={(e) => setRates((r) => ({ ...r, hazardsEmployerPct: +e.target.value }))}
+            />
+          </div>
+        )}
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "الأجر الخاضع للاشتراك" : "Contributory wage"}
+          value={fmtMoney(result.contributoryWage, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "حصة صاحب العمل" : "Employer share"}
+          value={fmtMoney(result.employerAmount, "SAR", locale)}
+          sub={`${fmtNum(result.employerPct, locale, 2)}%`}
+        />
+        <StatCard
+          title={lang === "ar" ? "حصة الموظف" : "Employee share"}
+          value={fmtMoney(result.employeeAmount, "SAR", locale)}
+          sub={`${fmtNum(result.employeePct, locale, 2)}%`}
+        />
+        <StatCard
+          title={lang === "ar" ? "إجمالي الاشتراك" : "Total contribution"}
+          value={fmtMoney(result.totalAmount, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Net Payroll (KSA) ----------
+export function PayrollCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [basic, setBasic] = useShareState("PayrollCalculator_v0", 6000);
+  const [housing, setHousing] = useShareState("PayrollCalculator_v1", 1500);
+  const [otherAllowances, setOtherAllowances] = useShareState("PayrollCalculator_v2", 500);
+  const [otherDeductions, setOtherDeductions] = useShareState("PayrollCalculator_v3", 0);
+  const [isSaudi, setIsSaudi] = useShareState("PayrollCalculator_v4", true);
+
+  const gross = basic + housing + otherAllowances;
+  const gosiResult = calculateGosi({
+    isSaudi,
+    subjectWage: basic + housing,
+    ceiling: DEFAULT_GOSI_CEILING,
+    floor: DEFAULT_GOSI_FLOOR,
+    rates: DEFAULT_GOSI_RATES,
+  });
+  const net = gross - gosiResult.employeeAmount - otherDeductions;
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="flex gap-2">
+          {[
+            { v: true, ar: "سعودي", en: "Saudi" },
+            { v: false, ar: "غير سعودي", en: "Non-Saudi" },
+          ].map((o) => (
+            <button
+              key={String(o.v)}
+              onClick={() => setIsSaudi(o.v)}
+              className={`rounded-full border px-3 py-1.5 text-xs font-bold ${isSaudi === o.v ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)]"}`}
+            >
+              {lang === "ar" ? o.ar : o.en}
+            </button>
+          ))}
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "الراتب الأساسي" : "Basic salary"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={basic}
+            onChange={(e) => setBasic(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "بدل السكن" : "Housing allowance"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={housing}
+            onChange={(e) => setHousing(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "بدلات أخرى" : "Other allowances"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={otherAllowances}
+            onChange={(e) => setOtherAllowances(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "استقطاعات أخرى" : "Other deductions"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={otherDeductions}
+            onChange={(e) => setOtherDeductions(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "الراتب الإجمالي" : "Gross salary"}
+          value={fmtMoney(gross, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "استقطاع التأمينات (حصة الموظف)" : "GOSI deduction (employee)"}
+          value={fmtMoney(gosiResult.employeeAmount, "SAR", locale)}
+          sub={`${fmtNum(gosiResult.employeePct, locale, 2)}% × ${fmtMoney(gosiResult.contributoryWage, "SAR", locale)}`}
+        />
+        <StatCard
+          title={lang === "ar" ? "صافي الراتب" : "Net salary"}
+          value={fmtMoney(net, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Zakat on Shares ----------
+export function ZakatSharesCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [tradingValue, setTradingValue] = useShareState("ZakatSharesCalculator_v0", 200000);
+  const [investmentValue, setInvestmentValue] = useShareState("ZakatSharesCalculator_v1", 500000);
+  const [investmentBasePct, setInvestmentBasePct] = useShareState("ZakatSharesCalculator_v2", 25);
+  const [rate, setRate] = useShareState("ZakatSharesCalculator_v3", 2.5775);
+
+  const tradingZakat = zakat(tradingValue, rate);
+  const investmentBase = investmentValue * (investmentBasePct / 100);
+  const investmentZakat = zakat(investmentBase, rate);
+  const totalZakat = tradingZakat + investmentZakat;
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="rounded-lg border border-amber-400/30 bg-amber-400/[0.06] p-3 text-[11px] leading-relaxed text-amber-100">
+          {lang === "ar"
+            ? "أسهم المتاجرة (بغرض الربح من فروق الأسعار) تُزكّى على كامل قيمتها السوقية كعروض تجارة. أما أسهم الاستثمار (بغرض الاحتفاظ والحصول على أرباح موزعة)، فتُزكّى نظرياً على حصة المساهم من الوعاء الزكوي لأصول الشركة فقط — إن تعذّر الوصول إليه، تُستخدم نسبة مبسطة تقديرية من القيمة السوقية (قابلة للتعديل أدناه). راجع الهيئة أو مستشاراً شرعياً لتحديد النسبة الدقيقة."
+            : "Trading shares (held for price-gain profit) are zakatable on their full market value as trade goods. Investment shares (held for dividend income) are, in principle, zakatable only on the shareholder's portion of the investee company's own zakat base — if that isn't available, a simplified estimated percentage of market value is used instead (editable below). Confirm the exact percentage with ZATCA or a Sharia advisor."}
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "قيمة أسهم المتاجرة" : "Trading shares value"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={tradingValue}
+            onChange={(e) => setTradingValue(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "قيمة أسهم الاستثمار" : "Investment shares value"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={investmentValue}
+            onChange={(e) => setInvestmentValue(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar"
+              ? "النسبة المبسطة للوعاء الزكوي من أسهم الاستثمار %"
+              : "Simplified zakatable base % of investment shares"}
+          </label>
+          <input
+            type="number"
+            step="1"
+            className={fieldCls}
+            value={investmentBasePct}
+            onChange={(e) => setInvestmentBasePct(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "نسبة الزكاة %" : "Zakat rate %"}</label>
+          <input
+            type="number"
+            step="0.0001"
+            className={fieldCls}
+            value={rate}
+            onChange={(e) => setRate(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "زكاة أسهم المتاجرة" : "Zakat on trading shares"}
+          value={fmtMoney(tradingZakat, "SAR", locale)}
+          sub={lang === "ar" ? "على كامل القيمة السوقية" : "on full market value"}
+        />
+        <StatCard
+          title={lang === "ar" ? "زكاة أسهم الاستثمار" : "Zakat on investment shares"}
+          value={fmtMoney(investmentZakat, "SAR", locale)}
+          sub={`${lang === "ar" ? "وعاء تقديري" : "estimated base"}: ${fmtMoney(investmentBase, "SAR", locale)}`}
+        />
+        <StatCard
+          title={lang === "ar" ? "إجمالي الزكاة المستحقة" : "Total zakat payable"}
+          value={fmtMoney(totalZakat, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Break-even / CVP ----------
+export function BreakEvenCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [fixedCosts, setFixedCosts] = useShareState("BreakEvenCalculator_v0", 200000);
+  const [pricePerUnit, setPricePerUnit] = useShareState("BreakEvenCalculator_v1", 120);
+  const [variableCostPerUnit, setVariableCostPerUnit] = useShareState("BreakEvenCalculator_v2", 70);
+  const [targetProfit, setTargetProfit] = useShareState("BreakEvenCalculator_v3", 100000);
+  const [actualUnits, setActualUnits] = useShareState("BreakEvenCalculator_v4", 6000);
+
+  const r = breakEven({ fixedCosts, pricePerUnit, variableCostPerUnit, targetProfit, actualUnits });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div>
+          <label className={lbl}>{lang === "ar" ? "التكاليف الثابتة" : "Fixed costs"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={fixedCosts}
+            onChange={(e) => setFixedCosts(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "سعر بيع الوحدة" : "Price per unit"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={pricePerUnit}
+            onChange={(e) => setPricePerUnit(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "التكلفة المتغيرة للوحدة" : "Variable cost per unit"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={variableCostPerUnit}
+            onChange={(e) => setVariableCostPerUnit(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "الربح المستهدف" : "Target profit"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={targetProfit}
+            onChange={(e) => setTargetProfit(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "المبيعات الفعلية/المتوقعة (وحدات)" : "Actual/expected sales (units)"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={actualUnits}
+            onChange={(e) => setActualUnits(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "هامش المساهمة للوحدة" : "Contribution margin / unit"}
+          value={fmtMoney(r.contributionMargin, "SAR", locale)}
+          sub={`${fmtNum(r.contributionMarginRatio * 100, locale, 1)}%`}
+        />
+        <StatCard
+          title={lang === "ar" ? "نقطة التعادل (وحدات)" : "Break-even (units)"}
+          value={fmtNum(r.breakEvenUnits, locale, 0)}
+          sub={fmtMoney(r.breakEvenRevenue, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "وحدات تحقيق الربح المستهدف" : "Units for target profit"}
+          value={fmtNum(r.targetProfitUnits, locale, 0)}
+          sub={fmtMoney(r.targetProfitRevenue, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "هامش الأمان" : "Margin of safety"}
+          value={`${fmtNum(r.marginOfSafetyPct * 100, locale, 1)}%`}
+          sub={`${fmtNum(r.marginOfSafetyUnits, locale, 0)} ${lang === "ar" ? "وحدة" : "units"} · ${fmtMoney(r.marginOfSafetyRevenue, "SAR", locale)}`}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- WACC ----------
+export function WaccCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [equityValue, setEquityValue] = useShareState("WaccCalculator_v0", 4000000);
+  const [debtValue, setDebtValue] = useShareState("WaccCalculator_v1", 1500000);
+  const [costOfEquityPct, setCostOfEquityPct] = useShareState("WaccCalculator_v2", 14);
+  const [costOfDebtPct, setCostOfDebtPct] = useShareState("WaccCalculator_v3", 6);
+  const [taxRatePct, setTaxRatePct] = useShareState("WaccCalculator_v4", 20);
+
+  const r = waccCalc({ equityValue, debtValue, costOfEquityPct, costOfDebtPct, taxRatePct });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "القيمة السوقية لحقوق الملكية" : "Market value of equity"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={equityValue}
+            onChange={(e) => setEquityValue(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "القيمة السوقية للدين" : "Market value of debt"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={debtValue}
+            onChange={(e) => setDebtValue(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "تكلفة حقوق الملكية %" : "Cost of equity %"}
+          </label>
+          <input
+            type="number"
+            step="0.1"
+            className={fieldCls}
+            value={costOfEquityPct}
+            onChange={(e) => setCostOfEquityPct(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "تكلفة الدين قبل الضريبة %" : "Cost of debt (pre-tax) %"}
+          </label>
+          <input
+            type="number"
+            step="0.1"
+            className={fieldCls}
+            value={costOfDebtPct}
+            onChange={(e) => setCostOfDebtPct(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "معدل الضريبة %" : "Tax rate %"}</label>
+          <input
+            type="number"
+            step="0.1"
+            className={fieldCls}
+            value={taxRatePct}
+            onChange={(e) => setTaxRatePct(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "تكلفة رأس المال المرجحة (WACC)" : "WACC"}
+          value={`${fmtNum(r.waccPct, locale, 2)}%`}
+        />
+        <StatCard
+          title={lang === "ar" ? "وزن حقوق الملكية" : "Equity weight"}
+          value={`${fmtNum(r.equityWeight * 100, locale, 1)}%`}
+        />
+        <StatCard
+          title={lang === "ar" ? "وزن الدين" : "Debt weight"}
+          value={`${fmtNum(r.debtWeight * 100, locale, 1)}%`}
+        />
+        <StatCard
+          title={lang === "ar" ? "تكلفة الدين بعد الضريبة" : "After-tax cost of debt"}
+          value={`${fmtNum(r.afterTaxCostOfDebt, locale, 2)}%`}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Altman Z-Score ----------
+const ZONE_STYLES: Record<string, string> = {
+  safe: "border-emerald-400/40 bg-emerald-400/10 text-emerald-200",
+  grey: "border-amber-400/40 bg-amber-400/10 text-amber-200",
+  distress: "border-red-400/40 bg-red-400/10 text-red-200",
+};
+
+export function AltmanZScoreCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [workingCapital, setWorkingCapital] = useShareState("AltmanZ_v0", 500000);
+  const [totalAssets, setTotalAssets] = useShareState("AltmanZ_v1", 5000000);
+  const [retainedEarnings, setRetainedEarnings] = useShareState("AltmanZ_v2", 1200000);
+  const [ebit, setEbit] = useShareState("AltmanZ_v3", 700000);
+  const [marketValueEquity, setMarketValueEquity] = useShareState("AltmanZ_v4", 3000000);
+  const [totalLiabilities, setTotalLiabilities] = useShareState("AltmanZ_v5", 2000000);
+  const [sales, setSales] = useShareState("AltmanZ_v6", 6000000);
+
+  const r = altmanZScore({
+    workingCapital,
+    totalAssets,
+    retainedEarnings,
+    ebit,
+    marketValueEquity,
+    totalLiabilities,
+    sales,
+  });
+
+  const ZONE_LABEL: Record<string, { ar: string; en: string }> = {
+    safe: { ar: "منطقة آمنة", en: "Safe zone" },
+    grey: { ar: "منطقة رمادية (غير محددة)", en: "Grey zone (undetermined)" },
+    distress: { ar: "منطقة تعثر محتمل", en: "Distress zone" },
+  };
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="rounded-lg border border-amber-400/30 bg-amber-400/[0.06] p-3 text-[11px] leading-relaxed text-amber-100">
+          {lang === "ar"
+            ? "النموذج الأصلي (1968) مصمم للشركات المساهمة الصناعية المُدرجة. يُستخدم كمؤشر أولي لمخاطر التعثر المالي، ولا يغني عن تحليل ائتماني كامل."
+            : "The original (1968) model was designed for publicly-traded manufacturing companies. Use it as a preliminary financial-distress indicator, not a substitute for full credit analysis."}
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "رأس المال العامل" : "Working capital"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={workingCapital}
+            onChange={(e) => setWorkingCapital(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "إجمالي الأصول" : "Total assets"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={totalAssets}
+            onChange={(e) => setTotalAssets(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "الأرباح المحتجزة" : "Retained earnings"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={retainedEarnings}
+            onChange={(e) => setRetainedEarnings(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "الأرباح قبل الفوائد والضريبة (EBIT)" : "EBIT"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={ebit}
+            onChange={(e) => setEbit(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "القيمة السوقية لحقوق الملكية" : "Market value of equity"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={marketValueEquity}
+            onChange={(e) => setMarketValueEquity(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "إجمالي الالتزامات" : "Total liabilities"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={totalLiabilities}
+            onChange={(e) => setTotalLiabilities(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "المبيعات" : "Sales"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={sales}
+            onChange={(e) => setSales(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard title={lang === "ar" ? "قيمة Z" : "Z-Score"} value={fmtNum(r.z, locale, 2)} />
+        <div
+          className={`rounded-xl border p-4 text-center text-sm font-extrabold ${ZONE_STYLES[r.zone]}`}
+        >
+          {lang === "ar" ? ZONE_LABEL[r.zone].ar : ZONE_LABEL[r.zone].en}
+        </div>
+        <StatCard
+          title={lang === "ar" ? "X1 (رأس المال العامل / الأصول)" : "X1 (working capital / assets)"}
+          value={fmtNum(r.x1, locale, 3)}
+        />
+        <StatCard
+          title={
+            lang === "ar" ? "X2 (الأرباح المحتجزة / الأصول)" : "X2 (retained earnings / assets)"
+          }
+          value={fmtNum(r.x2, locale, 3)}
+        />
+        <StatCard
+          title={lang === "ar" ? "X3 (EBIT / الأصول)" : "X3 (EBIT / assets)"}
+          value={fmtNum(r.x3, locale, 3)}
+        />
+        <StatCard
+          title={
+            lang === "ar" ? "X4 (القيمة السوقية / الالتزامات)" : "X4 (market value / liabilities)"
+          }
+          value={fmtNum(r.x4, locale, 3)}
+        />
+        <StatCard
+          title={lang === "ar" ? "X5 (المبيعات / الأصول)" : "X5 (sales / assets)"}
+          value={fmtNum(r.x5, locale, 3)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Nitaqat (Saudization ratio) ----------
+export function NitaqatCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [totalEmployees, setTotalEmployees] = useShareState("Nitaqat_v0", 40);
+  const [saudiEmployees, setSaudiEmployees] = useShareState("Nitaqat_v1", 10);
+  const [greenMin, setGreenMin] = useShareState("Nitaqat_v2", 0);
+  const [platinumMin, setPlatinumMin] = useShareState("Nitaqat_v3", 0);
+
+  const saudiPct = totalEmployees === 0 ? 0 : (saudiEmployees / totalEmployees) * 100;
+  let band: "red" | "yellow" | "green" | "platinum" | "unknown" = "unknown";
+  if (greenMin > 0 && platinumMin > 0) {
+    if (saudiPct >= platinumMin) band = "platinum";
+    else if (saudiPct >= greenMin) band = "green";
+    else band = "red";
+  }
+
+  const BAND_LABEL: Record<string, { ar: string; en: string }> = {
+    red: { ar: "أحمر", en: "Red" },
+    yellow: { ar: "أصفر", en: "Yellow" },
+    green: { ar: "أخضر", en: "Green" },
+    platinum: { ar: "بلاتيني", en: "Platinum" },
+    unknown: { ar: "أدخل نطاقات نشاطك أدناه", en: "Enter your activity's bands below" },
+  };
+  const BAND_STYLE: Record<string, string> = {
+    red: "border-red-400/40 bg-red-400/10 text-red-200",
+    yellow: "border-amber-400/40 bg-amber-400/10 text-amber-200",
+    green: "border-emerald-400/40 bg-emerald-400/10 text-emerald-200",
+    platinum: "border-sky-400/40 bg-sky-400/10 text-sky-200",
+    unknown: "border-white/15 bg-white/[0.03] text-white/50",
+  };
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="rounded-lg border border-amber-400/30 bg-amber-400/[0.06] p-3 text-[11px] leading-relaxed text-amber-100">
+          {lang === "ar"
+            ? "نطاقات نطاقات (النسب المطلوبة للأخضر والبلاتيني) تختلف حسب نشاط المنشأة وحجمها، وتُنشر على منصة قوى. أدخل نطاقيك الفعليين أدناه لعرض التصنيف؛ دون إدخالهما تُعرض النسبة فقط."
+            : "Nitaqat bands (the required ratios for green/platinum) differ by activity and company size, published on the Qiwa platform. Enter your actual bands below to see the classification; without them, only the raw ratio is shown."}
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "إجمالي عدد الموظفين" : "Total employees"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={totalEmployees}
+            onChange={(e) => setTotalEmployees(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "عدد الموظفين السعوديين" : "Saudi employees"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={saudiEmployees}
+            onChange={(e) => setSaudiEmployees(+e.target.value)}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "الحد الأدنى للأخضر %" : "Green band minimum %"}
+            </label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={greenMin}
+              onChange={(e) => setGreenMin(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "الحد الأدنى للبلاتيني %" : "Platinum band minimum %"}
+            </label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={platinumMin}
+              onChange={(e) => setPlatinumMin(+e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "نسبة السعودة" : "Saudization ratio"}
+          value={`${fmtNum(saudiPct, locale, 1)}%`}
+        />
+        <div
+          className={`rounded-xl border p-4 text-center text-sm font-extrabold ${BAND_STYLE[band]}`}
+        >
+          {lang === "ar" ? BAND_LABEL[band].ar : BAND_LABEL[band].en}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---------- VAT Penalties (ZATCA) ----------
+export function VatPenaltyCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [taxDue, setTaxDue] = useShareState("VatPenalty_v0", 20000);
+  const [lateRegistration, setLateRegistration] = useShareState("VatPenalty_v1", false);
+  const [registrationPenalty, setRegistrationPenalty] = useShareState("VatPenalty_v2", 10000);
+  const [lateFilingRatePct, setLateFilingRatePct] = useShareState("VatPenalty_v3", 5);
+  const [latePaymentMonths, setLatePaymentMonths] = useShareState("VatPenalty_v4", 2);
+  const [latePaymentRatePctPerMonth, setLatePaymentRatePctPerMonth] = useShareState(
+    "VatPenalty_v5",
+    5,
+  );
+
+  const r = vatPenalty({
+    taxDue,
+    lateRegistration,
+    registrationPenalty,
+    lateFilingRatePct,
+    latePaymentMonths,
+    latePaymentRatePctPerMonth,
+  });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="rounded-lg border border-amber-400/30 bg-amber-400/[0.06] p-3 text-[11px] leading-relaxed text-amber-100">
+          {lang === "ar"
+            ? "النسب والمبالغ أدناه قابلة للتعديل لأن جدول غرامات هيئة الزكاة والضريبة والجمارك قابل للتحديث. تحقق من القيم الحالية قبل الاعتماد النهائي."
+            : "The rates and amounts below are editable since ZATCA's penalty schedule can be updated. Verify current figures before relying on the output."}
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "قيمة الضريبة المستحقة" : "Tax due"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={taxDue}
+            onChange={(e) => setTaxDue(+e.target.value)}
+          />
+        </div>
+        <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] px-3 py-2 text-sm text-[var(--fg)]">
+          <input
+            type="checkbox"
+            className="size-4 accent-[#d7aa52]"
+            checked={lateRegistration}
+            onChange={(e) => setLateRegistration(e.target.checked)}
+          />
+          {lang === "ar" ? "تأخر في التسجيل الضريبي" : "Late tax registration"}
+        </label>
+        {lateRegistration && (
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "غرامة التأخر في التسجيل" : "Late registration penalty"}
+            </label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={registrationPenalty}
+              onChange={(e) => setRegistrationPenalty(+e.target.value)}
+            />
+          </div>
+        )}
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "نسبة غرامة التأخر في تقديم الإقرار %" : "Late filing penalty rate %"}
+          </label>
+          <input
+            type="number"
+            step="0.1"
+            className={fieldCls}
+            value={lateFilingRatePct}
+            onChange={(e) => setLateFilingRatePct(+e.target.value)}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "أشهر تأخر السداد" : "Months payment overdue"}
+            </label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={latePaymentMonths}
+              onChange={(e) => setLatePaymentMonths(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "نسبة غرامة السداد شهرياً %" : "Late payment rate / month %"}
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              className={fieldCls}
+              value={latePaymentRatePctPerMonth}
+              onChange={(e) => setLatePaymentRatePctPerMonth(+e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "غرامة التسجيل" : "Registration penalty"}
+          value={fmtMoney(r.registrationAmount, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "غرامة الإقرار" : "Filing penalty"}
+          value={fmtMoney(r.filingAmount, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "غرامة السداد" : "Payment penalty"}
+          value={fmtMoney(r.paymentAmount, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "إجمالي الغرامات" : "Total penalties"}
+          value={fmtMoney(r.total, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Sales Commission ----------
+export function SalesCommissionCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [salesAmount, setSalesAmount] = useShareState("SalesCommission_v0", 150000);
+  const [tiers, setTiers] = useShareState<CommissionTier[]>("SalesCommission_v1", [
+    { upTo: 50000, ratePct: 2 },
+    { upTo: 100000, ratePct: 4 },
+    { upTo: Number.POSITIVE_INFINITY, ratePct: 6 },
+  ]);
+
+  const update = (i: number, patch: Partial<CommissionTier>) =>
+    setTiers((ts) => ts.map((t, idx) => (idx === i ? { ...t, ...patch } : t)));
+  const remove = (i: number) =>
+    setTiers((ts) => (ts.length > 1 ? ts.filter((_, idx) => idx !== i) : ts));
+  const add = () =>
+    setTiers((ts) => {
+      const last = ts[ts.length - 1];
+      const withoutOpenEnd = ts.slice(0, -1);
+      return [
+        ...withoutOpenEnd,
+        {
+          upTo: (last?.upTo === Number.POSITIVE_INFINITY ? 0 : last?.upTo || 0) + 50000,
+          ratePct: 0,
+        },
+        { upTo: Number.POSITIVE_INFINITY, ratePct: last?.ratePct ?? 0 },
+      ];
+    });
+
+  const r = tieredCommission(salesAmount, tiers);
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div>
+          <label className={lbl}>{lang === "ar" ? "قيمة المبيعات" : "Sales amount"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={salesAmount}
+            onChange={(e) => setSalesAmount(+e.target.value)}
+          />
+        </div>
+        <div>
+          <span className={lbl}>{lang === "ar" ? "شرائح العمولة" : "Commission tiers"}</span>
+          <div className="space-y-2">
+            {tiers.map((tier, i) => (
+              <div key={i} className="grid grid-cols-[1fr_100px_32px] gap-2">
+                <div className="flex items-center rounded-lg border border-[#d7aa52]/25 bg-white/[0.03] px-3 py-2 text-xs text-[var(--fg-soft)]">
+                  {lang === "ar" ? "حتى" : "Up to"}{" "}
+                  {tier.upTo === Number.POSITIVE_INFINITY ? (
+                    <span className="ms-1 font-bold">{lang === "ar" ? "لا نهاية" : "∞"}</span>
+                  ) : (
+                    <input
+                      type="number"
+                      className="ms-1 w-full bg-transparent font-bold text-[var(--fg)] outline-none"
+                      value={tier.upTo}
+                      onChange={(e) => update(i, { upTo: +e.target.value })}
+                    />
+                  )}
+                </div>
+                <input
+                  type="number"
+                  step="0.1"
+                  className={fieldCls}
+                  value={tier.ratePct}
+                  onChange={(e) => update(i, { ratePct: +e.target.value })}
+                />
+                {tiers.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => remove(i)}
+                    className="grid place-items-center rounded-lg border border-red-500/30 bg-red-500/10 text-red-200 transition hover:bg-red-500/20"
+                    aria-label="remove"
+                  >
+                    <Trash2 className="size-3.5" />
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={add}
+            className="mt-2 inline-flex items-center gap-1 rounded-lg border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2.5 py-1 text-xs font-bold text-[#f3d28a] transition hover:bg-[#d7aa52]/20"
+          >
+            <Plus className="size-3.5" />
+            {lang === "ar" ? "+ إضافة شريحة" : "+ Add tier"}
+          </button>
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "إجمالي العمولة" : "Total commission"}
+          value={fmtMoney(r.commission, "SAR", locale)}
+          sub={`${lang === "ar" ? "نسبة فعلية" : "Effective rate"}: ${fmtNum(r.effectiveRatePct, locale, 2)}%`}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Goodwill Impairment ----------
+export function GoodwillImpairmentCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [cguCarryingAmount, setCguCarryingAmount] = useShareState("Goodwill_v0", 5000000);
+  const [goodwillCarryingAmount, setGoodwillCarryingAmount] = useShareState("Goodwill_v1", 800000);
+  const [recoverableAmount, setRecoverableAmount] = useShareState("Goodwill_v2", 4300000);
+
+  const r = goodwillImpairment({ cguCarryingAmount, goodwillCarryingAmount, recoverableAmount });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div>
+          <label className={lbl}>
+            {lang === "ar"
+              ? "القيمة الدفترية لوحدة توليد النقد (شاملة الشهرة)"
+              : "CGU carrying amount (incl. goodwill)"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={cguCarryingAmount}
+            onChange={(e) => setCguCarryingAmount(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "القيمة الدفترية للشهرة" : "Goodwill carrying amount"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={goodwillCarryingAmount}
+            onChange={(e) => setGoodwillCarryingAmount(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar" ? "القيمة القابلة للاسترداد" : "Recoverable amount"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={recoverableAmount}
+            onChange={(e) => setRecoverableAmount(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "إجمالي خسارة الانخفاض" : "Total impairment loss"}
+          value={fmtMoney(r.totalImpairment, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "المخصص للشهرة" : "Allocated to goodwill"}
+          value={fmtMoney(r.goodwillImpairmentAmount, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "المخصص لبقية الأصول" : "Allocated to other assets"}
+          value={fmtMoney(r.otherAssetsImpairment, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "الشهرة المتبقية بعد الانخفاض" : "Remaining goodwill"}
+          value={fmtMoney(r.remainingGoodwill, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Market Multiples Valuation ----------
+export function MarketMultiplesCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [netIncome, setNetIncome] = useShareState("MarketMult_v0", 2000000);
+  const [peMultiple, setPeMultiple] = useShareState("MarketMult_v1", 12);
+  const [ebitda, setEbitda] = useShareState("MarketMult_v2", 3500000);
+  const [evEbitdaMultiple, setEvEbitdaMultiple] = useShareState("MarketMult_v3", 8);
+  const [netDebt, setNetDebt] = useShareState("MarketMult_v4", 1000000);
+  const [bookValue, setBookValue] = useShareState("MarketMult_v5", 15000000);
+  const [pbMultiple, setPbMultiple] = useShareState("MarketMult_v6", 1.5);
+  const [sharesOutstanding, setSharesOutstanding] = useShareState("MarketMult_v7", 1000000);
+
+  const r = marketMultiplesValuation({
+    netIncome,
+    peMultiple,
+    ebitda,
+    evEbitdaMultiple,
+    netDebt,
+    bookValue,
+    pbMultiple,
+    sharesOutstanding,
+  });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className={lbl}>{lang === "ar" ? "صافي الربح" : "Net income"}</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={netIncome}
+              onChange={(e) => setNetIncome(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>{lang === "ar" ? "مضاعف P/E القطاعي" : "Industry P/E"}</label>
+            <input
+              type="number"
+              step="0.1"
+              className={fieldCls}
+              value={peMultiple}
+              onChange={(e) => setPeMultiple(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>EBITDA</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={ebitda}
+              onChange={(e) => setEbitda(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "مضاعف EV/EBITDA القطاعي" : "Industry EV/EBITDA"}
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              className={fieldCls}
+              value={evEbitdaMultiple}
+              onChange={(e) => setEvEbitdaMultiple(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>{lang === "ar" ? "صافي الدين" : "Net debt"}</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={netDebt}
+              onChange={(e) => setNetDebt(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "القيمة الدفترية لحقوق الملكية" : "Book value of equity"}
+            </label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={bookValue}
+              onChange={(e) => setBookValue(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>{lang === "ar" ? "مضاعف P/B القطاعي" : "Industry P/B"}</label>
+            <input
+              type="number"
+              step="0.1"
+              className={fieldCls}
+              value={pbMultiple}
+              onChange={(e) => setPbMultiple(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>{lang === "ar" ? "عدد الأسهم" : "Shares outstanding"}</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={sharesOutstanding}
+              onChange={(e) => setSharesOutstanding(+e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "القيمة عبر P/E" : "Value via P/E"}
+          value={fmtMoney(r.equityViaPE, "SAR", locale)}
+          sub={fmtMoney(r.priceViaPE, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "القيمة عبر EV/EBITDA" : "Value via EV/EBITDA"}
+          value={fmtMoney(r.equityViaEvEbitda, "SAR", locale)}
+          sub={fmtMoney(r.priceViaEvEbitda, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "القيمة عبر P/B" : "Value via P/B"}
+          value={fmtMoney(r.equityViaPB, "SAR", locale)}
+          sub={fmtMoney(r.priceViaPB, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "متوسط القيمة (الطرق الثلاث)" : "Average value (3 methods)"}
+          value={fmtMoney(r.averageEquityValue, "SAR", locale)}
+          sub={fmtMoney(r.averagePrice, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Job Order Costing ----------
+export function JobOrderCostingCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [directMaterials, setDirectMaterials] = useShareState("JobOrder_v0", 45000);
+  const [directLaborHours, setDirectLaborHours] = useShareState("JobOrder_v1", 320);
+  const [directLaborRatePerHour, setDirectLaborRatePerHour] = useShareState("JobOrder_v2", 35);
+  const [overheadRatePerLaborHour, setOverheadRatePerLaborHour] = useShareState("JobOrder_v3", 20);
+  const [unitsProduced, setUnitsProduced] = useShareState("JobOrder_v4", 500);
+
+  const r = jobOrderCosting({
+    directMaterials,
+    directLaborHours,
+    directLaborRatePerHour,
+    overheadRatePerLaborHour,
+    unitsProduced,
+  });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <div>
+          <label className={lbl}>{lang === "ar" ? "المواد المباشرة" : "Direct materials"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={directMaterials}
+            onChange={(e) => setDirectMaterials(+e.target.value)}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "ساعات العمل المباشر" : "Direct labor hours"}
+            </label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={directLaborHours}
+              onChange={(e) => setDirectLaborHours(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>{lang === "ar" ? "أجر الساعة" : "Rate per hour"}</label>
+            <input
+              type="number"
+              className={fieldCls}
+              value={directLaborRatePerHour}
+              onChange={(e) => setDirectLaborRatePerHour(+e.target.value)}
+            />
+          </div>
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar"
+              ? "معدل تحميل التكاليف غير المباشرة لكل ساعة عمل"
+              : "Overhead rate per direct labor hour"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={overheadRatePerLaborHour}
+            onChange={(e) => setOverheadRatePerLaborHour(+e.target.value)}
+          />
+        </div>
+        <div>
+          <label className={lbl}>{lang === "ar" ? "عدد الوحدات المنتجة" : "Units produced"}</label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={unitsProduced}
+            onChange={(e) => setUnitsProduced(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "تكلفة العمل المباشر" : "Direct labor cost"}
+          value={fmtMoney(r.directLaborCost, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "التكاليف غير المباشرة المحمّلة" : "Applied overhead"}
+          value={fmtMoney(r.appliedOverhead, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "إجمالي تكلفة أمر التشغيل" : "Total job cost"}
+          value={fmtMoney(r.totalJobCost, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "تكلفة الوحدة" : "Cost per unit"}
+          value={fmtMoney(r.costPerUnit, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
+// ---------- Customs Duty & Import Landed Cost ----------
+export function LandedCostCalculator({ lang }: { lang: Lang }) {
+  const locale = lang === "ar" ? "ar-SA" : "en-US";
+  const [cifValue, setCifValue] = useShareState("LandedCost_v0", 200000);
+  const [customsDutyRatePct, setCustomsDutyRatePct] = useShareState("LandedCost_v1", 5);
+  const [vatRatePct, setVatRatePct] = useShareState("LandedCost_v2", 15);
+  const [otherCosts, setOtherCosts] = useShareState("LandedCost_v3", 3000);
+
+  const r = landedCost({ cifValue, customsDutyRatePct, vatRatePct, otherCosts });
+
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      <div className="space-y-4">
+        <p className="text-xs leading-relaxed text-[var(--fg-soft)]">
+          {lang === "ar"
+            ? "المعدلات الافتراضية (5% جمارك وفق التعريفة الجمركية الموحدة الخليجية، 15% ضريبة القيمة المضافة) هي معدلات شائعة وقابلة للتعديل — تحقق دائماً من البند الجمركي الفعلي والمعدل الرسمي المطبق."
+            : "The default rates (5% customs per the GCC Common External Tariff, 15% VAT) are commonly-cited baselines and fully editable — always verify the actual HS code duty rate and official VAT rate that apply."}
+        </p>
+        <div>
+          <label className={lbl}>
+            {lang === "ar"
+              ? "قيمة CIF (التكلفة + التأمين + الشحن)"
+              : "CIF value (cost + insurance + freight)"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={cifValue}
+            onChange={(e) => setCifValue(+e.target.value)}
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "نسبة الرسوم الجمركية %" : "Customs duty rate %"}
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              className={fieldCls}
+              value={customsDutyRatePct}
+              onChange={(e) => setCustomsDutyRatePct(+e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={lbl}>
+              {lang === "ar" ? "نسبة ضريبة القيمة المضافة %" : "VAT rate %"}
+            </label>
+            <input
+              type="number"
+              step="0.1"
+              className={fieldCls}
+              value={vatRatePct}
+              onChange={(e) => setVatRatePct(+e.target.value)}
+            />
+          </div>
+        </div>
+        <div>
+          <label className={lbl}>
+            {lang === "ar"
+              ? "تكاليف أخرى (تخليص، نقل محلي...)"
+              : "Other costs (clearance, local transport...)"}
+          </label>
+          <input
+            type="number"
+            className={fieldCls}
+            value={otherCosts}
+            onChange={(e) => setOtherCosts(+e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <StatCard
+          title={lang === "ar" ? "الرسوم الجمركية" : "Customs duty"}
+          value={fmtMoney(r.customsDuty, "SAR", locale)}
+        />
+        <StatCard
+          title={lang === "ar" ? "ضريبة القيمة المضافة على الاستيراد" : "Import VAT"}
+          value={fmtMoney(r.importVat, "SAR", locale)}
+          sub={
+            lang === "ar"
+              ? `على أساس ${fmtMoney(r.vatBase, "SAR", locale)}`
+              : `on a base of ${fmtMoney(r.vatBase, "SAR", locale)}`
+          }
+        />
+        <StatCard
+          title={lang === "ar" ? "إجمالي التكلفة الواصلة" : "Total landed cost"}
+          value={fmtMoney(r.totalLandedCost, "SAR", locale)}
+        />
+      </div>
+    </div>
+  );
+}
+
 export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
   switch (id) {
     case "pv":
@@ -1899,6 +3411,64 @@ export function CalculatorById({ id, lang }: { id: string; lang: Lang }) {
       return (
         <Suspense fallback={<ToolFallback />}>
           <InheritanceCalculator lang={lang} />
+        </Suspense>
+      );
+    case "gratuity":
+      return <GratuityCalculator lang={lang} />;
+    case "gosi":
+      return <GosiCalculator lang={lang} />;
+    case "payroll":
+      return <PayrollCalculator lang={lang} />;
+    case "zakat-shares":
+      return <ZakatSharesCalculator lang={lang} />;
+    case "break-even":
+      return <BreakEvenCalculator lang={lang} />;
+    case "wacc":
+      return <WaccCalculator lang={lang} />;
+    case "altman-zscore":
+      return <AltmanZScoreCalculator lang={lang} />;
+    case "nitaqat":
+      return <NitaqatCalculator lang={lang} />;
+    case "vat-penalty":
+      return <VatPenaltyCalculator lang={lang} />;
+    case "sales-commission":
+      return <SalesCommissionCalculator lang={lang} />;
+    case "goodwill-impairment":
+      return <GoodwillImpairmentCalculator lang={lang} />;
+    case "market-multiples":
+      return <MarketMultiplesCalculator lang={lang} />;
+    case "inventory-nrv":
+      return (
+        <Suspense fallback={<ToolFallback />}>
+          <InventoryNrvWorksheet lang={lang} />
+        </Suspense>
+      );
+    case "job-order-costing":
+      return <JobOrderCostingCalculator lang={lang} />;
+    case "landed-cost":
+      return <LandedCostCalculator lang={lang} />;
+    case "einvoicing-readiness":
+      return (
+        <Suspense fallback={<ToolFallback />}>
+          <EInvoicingReadiness lang={lang} />
+        </Suspense>
+      );
+    case "chart-of-accounts":
+      return (
+        <Suspense fallback={<ToolFallback />}>
+          <ChartOfAccountsGenerator lang={lang} />
+        </Suspense>
+      );
+    case "bank-reconciliation":
+      return (
+        <Suspense fallback={<ToolFallback />}>
+          <BankReconciliation lang={lang} />
+        </Suspense>
+      );
+    case "budget-variance":
+      return (
+        <Suspense fallback={<ToolFallback />}>
+          <BudgetVarianceAnalysis lang={lang} />
         </Suspense>
       );
     default:

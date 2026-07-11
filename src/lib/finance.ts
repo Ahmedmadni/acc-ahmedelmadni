@@ -393,3 +393,231 @@ export function ratios(i: RatiosInput) {
     payableDays: safe(i.payables, i.cogs) * 365,
   };
 }
+
+export interface BreakEvenInput {
+  fixedCosts: number;
+  pricePerUnit: number;
+  variableCostPerUnit: number;
+  targetProfit: number;
+  actualUnits: number;
+}
+export function breakEven(i: BreakEvenInput) {
+  const contributionMargin = i.pricePerUnit - i.variableCostPerUnit;
+  const contributionMarginRatio = i.pricePerUnit === 0 ? 0 : contributionMargin / i.pricePerUnit;
+  const breakEvenUnits = contributionMargin === 0 ? 0 : i.fixedCosts / contributionMargin;
+  const breakEvenRevenue = breakEvenUnits * i.pricePerUnit;
+  const targetProfitUnits =
+    contributionMargin === 0 ? 0 : (i.fixedCosts + i.targetProfit) / contributionMargin;
+  const targetProfitRevenue = targetProfitUnits * i.pricePerUnit;
+  const marginOfSafetyUnits = i.actualUnits - breakEvenUnits;
+  const marginOfSafetyRevenue = marginOfSafetyUnits * i.pricePerUnit;
+  const marginOfSafetyPct = i.actualUnits === 0 ? 0 : marginOfSafetyUnits / i.actualUnits;
+  return {
+    contributionMargin,
+    contributionMarginRatio,
+    breakEvenUnits,
+    breakEvenRevenue,
+    targetProfitUnits,
+    targetProfitRevenue,
+    marginOfSafetyUnits,
+    marginOfSafetyRevenue,
+    marginOfSafetyPct,
+  };
+}
+
+export interface WaccInput {
+  equityValue: number;
+  debtValue: number;
+  costOfEquityPct: number;
+  costOfDebtPct: number;
+  taxRatePct: number;
+}
+export function wacc(i: WaccInput) {
+  const totalValue = i.equityValue + i.debtValue;
+  const equityWeight = totalValue === 0 ? 0 : i.equityValue / totalValue;
+  const debtWeight = totalValue === 0 ? 0 : i.debtValue / totalValue;
+  const afterTaxCostOfDebt = i.costOfDebtPct * (1 - i.taxRatePct / 100);
+  const waccPct = equityWeight * i.costOfEquityPct + debtWeight * afterTaxCostOfDebt;
+  return { totalValue, equityWeight, debtWeight, afterTaxCostOfDebt, waccPct };
+}
+
+export interface AltmanZInput {
+  workingCapital: number;
+  totalAssets: number;
+  retainedEarnings: number;
+  ebit: number;
+  marketValueEquity: number;
+  totalLiabilities: number;
+  sales: number;
+}
+export type AltmanZone = "safe" | "grey" | "distress";
+
+/** Original 1968 Altman Z-Score model, for publicly-traded manufacturing
+ * companies. Zones: Z > 2.99 safe, 1.81-2.99 grey, Z < 1.81 distress. */
+export function altmanZScore(i: AltmanZInput) {
+  const safe = (a: number, b: number) => (b === 0 ? 0 : a / b);
+  const x1 = safe(i.workingCapital, i.totalAssets);
+  const x2 = safe(i.retainedEarnings, i.totalAssets);
+  const x3 = safe(i.ebit, i.totalAssets);
+  const x4 = safe(i.marketValueEquity, i.totalLiabilities);
+  const x5 = safe(i.sales, i.totalAssets);
+  const z = 1.2 * x1 + 1.4 * x2 + 3.3 * x3 + 0.6 * x4 + 1.0 * x5;
+  const zone: AltmanZone = z > 2.99 ? "safe" : z >= 1.81 ? "grey" : "distress";
+  return { x1, x2, x3, x4, x5, z, zone };
+}
+
+export interface VatPenaltyInput {
+  taxDue: number;
+  lateRegistration: boolean;
+  registrationPenalty: number;
+  lateFilingRatePct: number;
+  latePaymentMonths: number;
+  latePaymentRatePctPerMonth: number;
+}
+/** Penalty amounts/rates are editable inputs, not hardcoded — ZATCA's
+ * published penalty schedule can be revised, so a stale hardcoded figure
+ * would be misleading in a financial tool. Defaults reflect the
+ * commonly-cited structure (late payment: a percentage of unpaid tax per
+ * month or part-month of delay); always verify current amounts with
+ * ZATCA. */
+export function vatPenalty(i: VatPenaltyInput) {
+  const registrationAmount = i.lateRegistration ? i.registrationPenalty : 0;
+  const filingAmount = i.taxDue * (i.lateFilingRatePct / 100);
+  const paymentAmount =
+    i.taxDue * (i.latePaymentRatePctPerMonth / 100) * Math.max(0, i.latePaymentMonths);
+  const total = registrationAmount + filingAmount + paymentAmount;
+  return { registrationAmount, filingAmount, paymentAmount, total };
+}
+
+export interface CommissionTier {
+  upTo: number; // Infinity for the last (open-ended) tier
+  ratePct: number;
+}
+/** Progressive/tiered commission, the same bracket logic as tax brackets:
+ * each tier's rate applies only to the slice of sales within that tier. */
+export function tieredCommission(salesAmount: number, tiers: CommissionTier[]) {
+  const sorted = [...tiers].sort((a, b) => a.upTo - b.upTo);
+  let remaining = Math.max(0, salesAmount);
+  let prevThreshold = 0;
+  let commission = 0;
+  const breakdown: { from: number; to: number; amount: number; commission: number }[] = [];
+  for (const tier of sorted) {
+    if (remaining <= 0) break;
+    const bandWidth = Math.max(0, tier.upTo - prevThreshold);
+    const bandAmount = Math.min(remaining, bandWidth);
+    const bandCommission = bandAmount * (tier.ratePct / 100);
+    if (bandAmount > 0) {
+      breakdown.push({
+        from: prevThreshold,
+        to: tier.upTo,
+        amount: bandAmount,
+        commission: bandCommission,
+      });
+    }
+    commission += bandCommission;
+    remaining -= bandAmount;
+    prevThreshold = tier.upTo;
+  }
+  return {
+    commission,
+    breakdown,
+    effectiveRatePct: salesAmount === 0 ? 0 : (commission / salesAmount) * 100,
+  };
+}
+
+export interface GoodwillImpairmentInput {
+  cguCarryingAmount: number;
+  goodwillCarryingAmount: number;
+  recoverableAmount: number;
+}
+/** IAS 36 / IFRS 3: any impairment loss on a cash-generating unit is
+ * allocated first to reduce goodwill, then pro-rata to the CGU's other
+ * assets (shown here as a single remainder, since the split across
+ * individual assets depends on their carrying amounts). */
+export function goodwillImpairment(i: GoodwillImpairmentInput) {
+  const totalImpairment = Math.max(0, i.cguCarryingAmount - i.recoverableAmount);
+  const goodwillImpairmentAmount = Math.min(i.goodwillCarryingAmount, totalImpairment);
+  const otherAssetsImpairment = totalImpairment - goodwillImpairmentAmount;
+  const remainingGoodwill = i.goodwillCarryingAmount - goodwillImpairmentAmount;
+  return { totalImpairment, goodwillImpairmentAmount, otherAssetsImpairment, remainingGoodwill };
+}
+
+export interface InventoryNrvItem {
+  cost: number;
+  sellingPrice: number;
+  costToComplete: number;
+  sellingCosts: number;
+}
+/** IAS 2: inventory is carried at the lower of cost and net realizable
+ * value (estimated selling price less costs to complete and sell). */
+export function inventoryNrv(item: InventoryNrvItem) {
+  const nrv = Math.max(0, item.sellingPrice - item.costToComplete - item.sellingCosts);
+  const carryingValue = Math.min(item.cost, nrv);
+  const writeDown = Math.max(0, item.cost - nrv);
+  return { nrv, carryingValue, writeDown };
+}
+
+export interface MarketMultiplesInput {
+  netIncome: number;
+  peMultiple: number;
+  ebitda: number;
+  evEbitdaMultiple: number;
+  netDebt: number;
+  bookValue: number;
+  pbMultiple: number;
+  sharesOutstanding: number;
+}
+/** Comparable-companies valuation: apply industry-average multiples to the
+ * target's own fundamentals to imply an equity value/share price via three
+ * independent methods. */
+export function marketMultiplesValuation(i: MarketMultiplesInput) {
+  const equityViaPE = i.netIncome * i.peMultiple;
+  const equityViaEvEbitda = i.ebitda * i.evEbitdaMultiple - i.netDebt;
+  const equityViaPB = i.bookValue * i.pbMultiple;
+  const averageEquityValue = (equityViaPE + equityViaEvEbitda + equityViaPB) / 3;
+  const perShare = (v: number) => (i.sharesOutstanding === 0 ? 0 : v / i.sharesOutstanding);
+  return {
+    equityViaPE,
+    equityViaEvEbitda,
+    equityViaPB,
+    averageEquityValue,
+    priceViaPE: perShare(equityViaPE),
+    priceViaEvEbitda: perShare(equityViaEvEbitda),
+    priceViaPB: perShare(equityViaPB),
+    averagePrice: perShare(averageEquityValue),
+  };
+}
+
+export interface JobOrderCostingInput {
+  directMaterials: number;
+  directLaborHours: number;
+  directLaborRatePerHour: number;
+  overheadRatePerLaborHour: number;
+  unitsProduced: number;
+}
+/** Job order costing: direct materials + direct labor + overhead applied via
+ * a predetermined rate per direct labor hour, spread across units produced. */
+export function jobOrderCosting(i: JobOrderCostingInput) {
+  const directLaborCost = i.directLaborHours * i.directLaborRatePerHour;
+  const appliedOverhead = i.directLaborHours * i.overheadRatePerLaborHour;
+  const totalJobCost = i.directMaterials + directLaborCost + appliedOverhead;
+  const costPerUnit = i.unitsProduced === 0 ? 0 : totalJobCost / i.unitsProduced;
+  return { directLaborCost, appliedOverhead, totalJobCost, costPerUnit };
+}
+
+export interface LandedCostInput {
+  cifValue: number;
+  customsDutyRatePct: number;
+  vatRatePct: number;
+  otherCosts: number;
+}
+/** Import landed cost: customs duty on the CIF value, then import VAT on
+ * CIF + duty (ZATCA's standard VAT base for imports), plus other clearance
+ * costs. */
+export function landedCost(i: LandedCostInput) {
+  const customsDuty = i.cifValue * (i.customsDutyRatePct / 100);
+  const vatBase = i.cifValue + customsDuty;
+  const importVat = vatBase * (i.vatRatePct / 100);
+  const totalLandedCost = i.cifValue + customsDuty + importVat + i.otherCosts;
+  return { customsDuty, vatBase, importVat, totalLandedCost };
+}
