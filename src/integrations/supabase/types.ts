@@ -8,6 +8,117 @@ export type Database = {
   };
   public: {
     Tables: {
+      accounting_templates: {
+        Row: {
+          category: string;
+          created_at: string;
+          description_ar: string;
+          description_en: string;
+          file_url: string | null;
+          format: string;
+          how_to_use_ar: string | null;
+          how_to_use_en: string | null;
+          id: string;
+          is_new: boolean;
+          is_official: boolean;
+          is_published: boolean;
+          pages: number;
+          preview_fields: string[];
+          related_standard: string | null;
+          sort_order: number;
+          title_ar: string;
+          title_en: string;
+          updated_at: string;
+        };
+        Insert: {
+          category?: string;
+          created_at?: string;
+          description_ar: string;
+          description_en: string;
+          file_url?: string | null;
+          format?: string;
+          how_to_use_ar?: string | null;
+          how_to_use_en?: string | null;
+          id?: string;
+          is_new?: boolean;
+          is_official?: boolean;
+          is_published?: boolean;
+          pages?: number;
+          preview_fields?: string[];
+          related_standard?: string | null;
+          sort_order?: number;
+          title_ar: string;
+          title_en: string;
+          updated_at?: string;
+        };
+        Update: {
+          category?: string;
+          created_at?: string;
+          description_ar?: string;
+          description_en?: string;
+          file_url?: string | null;
+          format?: string;
+          how_to_use_ar?: string | null;
+          how_to_use_en?: string | null;
+          id?: string;
+          is_new?: boolean;
+          is_official?: boolean;
+          is_published?: boolean;
+          pages?: number;
+          preview_fields?: string[];
+          related_standard?: string | null;
+          sort_order?: number;
+          title_ar?: string;
+          title_en?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      certifications: {
+        Row: {
+          created_at: string;
+          credential_url: string | null;
+          id: string;
+          image_url: string | null;
+          is_published: boolean;
+          issue_date: string | null;
+          issuer_ar: string | null;
+          issuer_en: string | null;
+          sort_order: number;
+          title_ar: string;
+          title_en: string;
+          updated_at: string;
+        };
+        Insert: {
+          created_at?: string;
+          credential_url?: string | null;
+          id?: string;
+          image_url?: string | null;
+          is_published?: boolean;
+          issue_date?: string | null;
+          issuer_ar?: string | null;
+          issuer_en?: string | null;
+          sort_order?: number;
+          title_ar: string;
+          title_en: string;
+          updated_at?: string;
+        };
+        Update: {
+          created_at?: string;
+          credential_url?: string | null;
+          id?: string;
+          image_url?: string | null;
+          is_published?: boolean;
+          issue_date?: string | null;
+          issuer_ar?: string | null;
+          issuer_en?: string | null;
+          sort_order?: number;
+          title_ar?: string;
+          title_en?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       client_services: {
         Row: {
           client_id: string | null;
@@ -209,6 +320,57 @@ export type Database = {
           status?: string;
           topic?: string;
           track?: Database["public"]["Enums"]["exam_track"];
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      experience_items: {
+        Row: {
+          company_ar: string;
+          company_en: string;
+          company_logo_url: string | null;
+          created_at: string;
+          date_ar: string;
+          date_en: string;
+          id: string;
+          is_published: boolean;
+          points_ar: string[];
+          points_en: string[];
+          role_ar: string;
+          role_en: string;
+          sort_order: number;
+          updated_at: string;
+        };
+        Insert: {
+          company_ar: string;
+          company_en: string;
+          company_logo_url?: string | null;
+          created_at?: string;
+          date_ar: string;
+          date_en: string;
+          id?: string;
+          is_published?: boolean;
+          points_ar?: string[];
+          points_en?: string[];
+          role_ar: string;
+          role_en: string;
+          sort_order?: number;
+          updated_at?: string;
+        };
+        Update: {
+          company_ar?: string;
+          company_en?: string;
+          company_logo_url?: string | null;
+          created_at?: string;
+          date_ar?: string;
+          date_en?: string;
+          id?: string;
+          is_published?: boolean;
+          points_ar?: string[];
+          points_en?: string[];
+          role_ar?: string;
+          role_en?: string;
+          sort_order?: number;
           updated_at?: string;
         };
         Relationships: [];
@@ -650,6 +812,92 @@ export type Database = {
           url?: string | null;
         };
         Relationships: [];
+      };
+      skill_groups: {
+        Row: {
+          created_at: string;
+          heading_ar: string;
+          heading_en: string;
+          id: string;
+          is_published: boolean;
+          sort_order: number;
+          updated_at: string;
+        };
+        Insert: {
+          created_at?: string;
+          heading_ar: string;
+          heading_en: string;
+          id?: string;
+          is_published?: boolean;
+          sort_order?: number;
+          updated_at?: string;
+        };
+        Update: {
+          created_at?: string;
+          heading_ar?: string;
+          heading_en?: string;
+          id?: string;
+          is_published?: boolean;
+          sort_order?: number;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      skill_items: {
+        Row: {
+          created_at: string;
+          desc_ar: string | null;
+          desc_en: string | null;
+          group_id: string;
+          id: string;
+          kpis_ar: string[];
+          kpis_en: string[];
+          level: number;
+          name_ar: string;
+          name_en: string;
+          sort_order: number;
+          tools: string[];
+          updated_at: string;
+        };
+        Insert: {
+          created_at?: string;
+          desc_ar?: string | null;
+          desc_en?: string | null;
+          group_id: string;
+          id?: string;
+          kpis_ar?: string[];
+          kpis_en?: string[];
+          level?: number;
+          name_ar: string;
+          name_en: string;
+          sort_order?: number;
+          tools?: string[];
+          updated_at?: string;
+        };
+        Update: {
+          created_at?: string;
+          desc_ar?: string | null;
+          desc_en?: string | null;
+          group_id?: string;
+          id?: string;
+          kpis_ar?: string[];
+          kpis_en?: string[];
+          level?: number;
+          name_ar?: string;
+          name_en?: string;
+          sort_order?: number;
+          tools?: string[];
+          updated_at?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "skill_items_group_id_fkey";
+            columns: ["group_id"];
+            isOneToOne: false;
+            referencedRelation: "skill_groups";
+            referencedColumns: ["id"];
+          },
+        ];
       };
       tax_declarations: {
         Row: {

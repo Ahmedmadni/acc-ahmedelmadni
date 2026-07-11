@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link as RouterLink } from "@tanstack/react-router";
 import { Sparkles, X } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 
@@ -60,6 +61,13 @@ export default function ServiceModal({
             ))}
           </ol>
         </div>
+        <RouterLink
+          to="/request-service"
+          search={{ service: item.requestServiceId }}
+          className="mt-6 flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-6 py-3 text-sm font-bold text-[#04101f] transition-all hover:scale-[1.02]"
+        >
+          {t.services.requestNow[lang]}
+        </RouterLink>
       </motion.div>
     </motion.div>
   );

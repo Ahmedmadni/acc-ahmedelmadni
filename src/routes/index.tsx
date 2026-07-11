@@ -1,5 +1,6 @@
 import "../styles.css";
 import { createFileRoute } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import {
   AnimatePresence,
@@ -57,9 +58,6 @@ import dashboardImg from "@/assets/finance-dashboard.webp";
 import deskImg from "@/assets/accountant-desk.webp";
 import beforeAfterImg from "@/assets/before-after.webp";
 import servicesBg from "@/assets/services-bg.webp";
-import logoAlostool from "@/assets/logo-alostool.webp";
-import logoLamara from "@/assets/logo-lamara.webp";
-import logoQimat from "@/assets/logo-qimat.webp";
 import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
 import mascotLinkedin from "@/assets/mascot-linkedin.webp";
 import mascotFacebook from "@/assets/mascot-facebook.webp";
@@ -157,21 +155,6 @@ export const Route = createFileRoute("/")({
 });
 
 type Theme = "dark" | "light";
-
-const LOGOS: Record<string, { src: string; name: { ar: string; en: string } }> = {
-  alostool: {
-    src: logoAlostool,
-    name: { ar: "شركة الأسطول الآلي للمقاولات", en: "Alostool Alaali Contracting" },
-  },
-  lamara: {
-    src: logoLamara,
-    name: { ar: "مؤسسة لمارا لخدمات الضيافة والإعاشة", en: "Lamara Hospitality & Catering" },
-  },
-  qimat: {
-    src: logoQimat,
-    name: { ar: "شركة مجمع قمة الطب الطبية", en: "Qimat Altib Medical Complex" },
-  },
-};
 
 const SOCIALS: ReadonlyArray<{
   href: string;
@@ -933,7 +916,7 @@ function Hero({ lang }: { lang: Lang }) {
             </div>
 
             <p
-              className="mb-10 max-w-[600px] text-[17px] sm:text-[19px] lg:text-[22px] leading-[1.8] text-justify"
+              className="mb-10 max-w-[600px] text-[17px] sm:text-[19px] lg:text-[22px] leading-[1.8]"
               style={{ color: "var(--fg-soft)" }}
             >
               {t.hero.intro[lang]}
@@ -1134,7 +1117,7 @@ function ProfileBio({ lang }: { lang: Lang }) {
             </h2>
 
             <div
-              className="mt-5 space-y-4 text-base leading-loose text-justify"
+              className="mt-5 space-y-4 text-base leading-loose"
               style={{ color: "var(--fg-soft)" }}
             >
               <p>{t.about.body[lang]}</p>
@@ -1182,7 +1165,7 @@ export function About({ lang }: { lang: Lang }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose text-justify sm:p-10 lg:col-span-3"
+            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose sm:p-10 lg:col-span-3"
             style={{ color: "var(--fg-soft)" }}
           >
             <p>{t.about.body[lang]}</p>
@@ -1272,24 +1255,32 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
                   <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>
                     {s[lang]}
                   </h3>
-                  <p
-                    className="mt-2 text-sm leading-relaxed text-justify"
-                    style={{ color: "var(--fg-soft)" }}
-                  >
+                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
                     {s.d[lang]}
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      playClick();
-                      onOpen(s);
-                    }}
-                    onMouseEnter={playHover}
-                    className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
-                  >
-                    {t.services.learn[lang]}
-                    <ChevronRight className="size-3 rtl:rotate-180" />
-                  </button>
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        playClick();
+                        onOpen(s);
+                      }}
+                      onMouseEnter={playHover}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
+                    >
+                      {t.services.learn[lang]}
+                      <ChevronRight className="size-3 rtl:rotate-180" />
+                    </button>
+                    <RouterLink
+                      to="/request-service"
+                      search={{ service: s.requestServiceId }}
+                      onClick={playClick}
+                      onMouseEnter={playHover}
+                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] transition-all hover:scale-[1.03]"
+                    >
+                      {t.services.requestNow[lang]}
+                    </RouterLink>
+                  </div>
                 </div>
               </motion.div>
             );
@@ -1302,6 +1293,22 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
 
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
+  const { data, isLoading } = useQuery({
+    queryKey: ["public-experience"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("experience_items")
+        .select("*")
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return data;
+    },
+  });
+  const items = data ?? [];
+
+  if (!isLoading && items.length === 0) return null;
+
   return (
     <section id="experience" className="py-14">
       <div className="w-full px-4 sm:px-8 lg:px-16">
@@ -1314,8 +1321,8 @@ export function Experience({ lang }: { lang: Lang }) {
           <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2" />
           <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto" />
           <div className="space-y-16">
-            {t.experience.items.map((item, i) => (
-              <TimelineItem key={i} item={item} index={i} lang={lang} />
+            {items.map((item, i) => (
+              <TimelineItem key={item.id} item={item} index={i} lang={lang} />
             ))}
           </div>
         </div>
@@ -1329,14 +1336,28 @@ function TimelineItem({
   index,
   lang,
 }: {
-  item: (typeof t.experience.items)[number];
+  item: {
+    role_ar: string;
+    role_en: string;
+    company_ar: string;
+    company_en: string;
+    company_logo_url: string | null;
+    date_ar: string;
+    date_en: string;
+    points_ar: string[];
+    points_en: string[];
+  };
   index: number;
   lang: Lang;
 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const left = index % 2 === 0;
-  const logo = LOGOS[item.logo];
+  const [revealed, setRevealed] = useState(false);
+  const role = lang === "ar" ? item.role_ar : item.role_en;
+  const company = lang === "ar" ? item.company_ar : item.company_en;
+  const date = lang === "ar" ? item.date_ar : item.date_en;
+  const points = lang === "ar" ? item.points_ar : item.points_en;
   return (
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto" />
@@ -1348,29 +1369,25 @@ function TimelineItem({
       >
         <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
           <Briefcase className="size-3.5" />
-          {item.date[lang]}
+          {date}
         </div>
         <h3 className="text-xl font-extrabold" style={{ color: "var(--fg)" }}>
-          {item.role[lang]}
+          {role}
         </h3>
-        <p
-          className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] select-none blur-[6px] saturate-50 transition-all duration-500 hover:blur-0 hover:saturate-100 focus:blur-0"
-          tabIndex={0}
+        <button
+          type="button"
+          onClick={() => setRevealed((v) => !v)}
+          className={`mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] transition-all duration-500 ${revealed ? "" : "blur-[6px] saturate-50 hover:blur-0 hover:saturate-100 focus:blur-0"}`}
           title={
             lang === "ar"
-              ? "اسم الشركة مخفي حفاظًا على الخصوصية"
-              : "Company name hidden for privacy"
-          }
-          aria-label={
-            lang === "ar"
-              ? "اسم الشركة مخفي حفاظًا على الخصوصية"
-              : "Company name hidden for privacy"
+              ? "اسم الشركة مخفي حفاظًا على الخصوصية — اضغط للإظهار"
+              : "Company name hidden for privacy — tap to reveal"
           }
         >
-          {item.company[lang]}
-        </p>
+          {company}
+        </button>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
-          {item.points[lang].map((p, j) => (
+          {points.map((p, j) => (
             <li key={j} className="flex gap-2">
               <span className="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-[#d7aa52]" />
               <span>{p}</span>
@@ -1384,20 +1401,22 @@ function TimelineItem({
         transition={{ duration: 0.9, delay: 0.2, type: "spring" }}
         className={`hidden md:flex items-center justify-center ${left ? "md:col-start-2" : "md:col-start-1 md:row-start-1"}`}
       >
-        <LogoBadge logo={logo} />
+        <LogoBadge logoUrl={item.company_logo_url} name={company} />
       </motion.div>
       <div className="md:hidden mr-10 rtl:ml-10 rtl:mr-0">
-        <LogoBadge logo={logo} compact />
+        <LogoBadge logoUrl={item.company_logo_url} name={company} compact />
       </div>
     </div>
   );
 }
 
 function LogoBadge({
-  logo,
+  logoUrl,
+  name,
   compact = false,
 }: {
-  logo: { src: string; name: { ar: string; en: string } };
+  logoUrl: string | null;
+  name: string;
   compact?: boolean;
 }) {
   return (
@@ -1413,16 +1432,20 @@ function LogoBadge({
         <div
           className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner overflow-hidden ${compact ? "size-24" : "size-36"}`}
         >
-          <motion.img
-            src={logo.src}
-            alt=""
-            aria-hidden
-            className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]"
-          />
+          {logoUrl ? (
+            <motion.img
+              src={logoUrl}
+              alt=""
+              aria-hidden
+              className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]"
+            />
+          ) : (
+            <Briefcase className="size-8 text-[#04101f]/30" />
+          )}
           <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d7aa52]/30" />
         </div>
         <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text blur-[5px] select-none transition-all duration-500 group-hover:blur-0">
-          {logo.name.ar}
+          {name}
         </div>
       </div>
     </motion.div>
@@ -1433,6 +1456,37 @@ function LogoBadge({
 export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }) {
   const [active, setActive] = useState(0);
   const groupIcons = [BarChart3, Wallet, Wrench];
+
+  const groupsQ = useQuery({
+    queryKey: ["public-skill-groups"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("skill_groups")
+        .select("*")
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return data;
+    },
+  });
+  const itemsQ = useQuery({
+    queryKey: ["public-skill-items"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("skill_items")
+        .select("*")
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return data;
+    },
+  });
+  const groups = groupsQ.data ?? [];
+  const items = itemsQ.data ?? [];
+  const isLoading = groupsQ.isLoading || itemsQ.isLoading;
+  const activeGroup = groups[active];
+  const activeItems = activeGroup ? items.filter((i) => i.group_id === activeGroup.id) : [];
+
+  if (!isLoading && groups.length === 0) return null;
 
   return (
     <section id="skills" className="relative py-14">
@@ -1447,116 +1501,120 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
           sub={t.skills.sub[lang]}
         />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[280px_1fr]">
-          <div className="flex flex-row gap-3 overflow-x-auto lg:flex-col">
-            {t.skills.groups.map((g, i) => {
-              const Icon = groupIcons[i];
-              const isActive = i === active;
-              return (
-                <button
-                  key={i}
-                  onClick={() => {
-                    setActive(i);
-                    playClick();
-                  }}
-                  onMouseEnter={playHover}
-                  className={`group relative flex w-full shrink-0 items-center gap-3 rounded-2xl border px-4 py-4 text-start transition-all ${
-                    isActive
-                      ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_10px_40px_-10px_rgba(215,170,82,0.5)]"
-                      : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"
-                  }`}
-                >
-                  <span
-                    className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
+        {activeGroup && (
+          <div className="mt-12 grid gap-8 lg:grid-cols-[280px_1fr]">
+            <div className="flex flex-row gap-3 overflow-x-auto lg:flex-col">
+              {groups.map((g, i) => {
+                const Icon = groupIcons[i % groupIcons.length];
+                const isActive = i === active;
+                return (
+                  <button
+                    key={g.id}
+                    onClick={() => {
+                      setActive(i);
+                      playClick();
+                    }}
+                    onMouseEnter={playHover}
+                    className={`group relative flex w-full shrink-0 items-center gap-3 rounded-2xl border px-4 py-4 text-start transition-all ${
                       isActive
-                        ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
-                        : "bg-white/5 text-[#d7aa52]"
+                        ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_10px_40px_-10px_rgba(215,170,82,0.5)]"
+                        : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"
                     }`}
                   >
-                    <Icon className="size-5" />
-                  </span>
-                  <div className="flex-1">
-                    <div
-                      className="text-[10px] uppercase tracking-[0.25em]"
-                      style={{ color: "var(--fg-soft)" }}
+                    <span
+                      className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
+                        isActive
+                          ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+                          : "bg-white/5 text-[#d7aa52]"
+                      }`}
                     >
-                      {String(i + 1).padStart(2, "0")} /{" "}
-                      {t.skills.groups.length.toString().padStart(2, "0")}
+                      <Icon className="size-5" />
+                    </span>
+                    <div className="flex-1">
+                      <div
+                        className="text-[10px] uppercase tracking-[0.25em]"
+                        style={{ color: "var(--fg-soft)" }}
+                      >
+                        {String(i + 1).padStart(2, "0")} /{" "}
+                        {groups.length.toString().padStart(2, "0")}
+                      </div>
+                      <div
+                        className={`text-sm font-extrabold ${isActive ? "gold-text" : ""}`}
+                        style={!isActive ? { color: "var(--fg)" } : undefined}
+                      >
+                        {lang === "ar" ? g.heading_ar : g.heading_en}
+                      </div>
                     </div>
-                    <div
-                      className={`text-sm font-extrabold ${isActive ? "gold-text" : ""}`}
-                      style={!isActive ? { color: "var(--fg)" } : undefined}
-                    >
-                      {g.h[lang]}
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c] to-[#04101f] p-6 sm:p-8"
-          >
-            <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
-            <div className="pointer-events-none absolute -left-16 -bottom-16 size-60 rounded-full bg-blue-500/10 blur-3xl" />
-
-            <div className="relative">
-              <div className="mb-6 flex items-end justify-between gap-4">
-                <div>
-                  <div className="text-xs uppercase tracking-[0.4em] text-[#d7aa52]">
-                    {lang === "ar" ? "المجموعة" : "Group"}
-                  </div>
-                  <h3 className="mt-1 text-3xl font-black text-white sm:text-4xl">
-                    {t.skills.groups[active].h[lang]}
-                  </h3>
-                </div>
-                <div className="font-mono text-5xl font-black text-[#d7aa52]/30 sm:text-6xl">
-                  0{active + 1}
-                </div>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2">
-                {t.skills.groups[active].items.map((it, j) => (
-                  <motion.button
-                    key={j}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.35, delay: j * 0.05 }}
-                    onMouseEnter={playHover}
-                    onClick={() => {
-                      playClick();
-                      onOpen(it);
-                    }}
-                    className="group relative overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-white/[0.03] p-4 text-start transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="text-sm font-bold text-white/90">{it[lang]}</span>
-                      <span className="font-mono text-xs text-[#d7aa52]">{it.level}%</span>
-                    </div>
-                    <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${it.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.1, delay: 0.1 + j * 0.05 }}
-                        className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
-                      />
-                    </div>
-                    <div className="mt-2 flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-[#d7aa52]/70 opacity-0 transition-opacity group-hover:opacity-100">
-                      <Plus className="size-3" />
-                      {lang === "ar" ? "اضغط للتفاصيل" : "Tap for details"}
-                    </div>
-                  </motion.button>
-                ))}
-              </div>
+                  </button>
+                );
+              })}
             </div>
-          </motion.div>
-        </div>
+
+            <motion.div
+              key={activeGroup.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c] to-[#04101f] p-6 sm:p-8"
+            >
+              <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
+              <div className="pointer-events-none absolute -left-16 -bottom-16 size-60 rounded-full bg-blue-500/10 blur-3xl" />
+
+              <div className="relative">
+                <div className="mb-6 flex items-end justify-between gap-4">
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.4em] text-[#d7aa52]">
+                      {lang === "ar" ? "المجموعة" : "Group"}
+                    </div>
+                    <h3 className="mt-1 text-3xl font-black text-white sm:text-4xl">
+                      {lang === "ar" ? activeGroup.heading_ar : activeGroup.heading_en}
+                    </h3>
+                  </div>
+                  <div className="font-mono text-5xl font-black text-[#d7aa52]/30 sm:text-6xl">
+                    0{active + 1}
+                  </div>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {activeItems.map((it, j) => (
+                    <motion.button
+                      key={it.id}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.35, delay: j * 0.05 }}
+                      onMouseEnter={playHover}
+                      onClick={() => {
+                        playClick();
+                        onOpen(it);
+                      }}
+                      className="group relative overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-white/[0.03] p-4 text-start transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-sm font-bold text-white/90">
+                          {lang === "ar" ? it.name_ar : it.name_en}
+                        </span>
+                        <span className="font-mono text-xs text-[#d7aa52]">{it.level}%</span>
+                      </div>
+                      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${it.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.1, delay: 0.1 + j * 0.05 }}
+                          className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+                        />
+                      </div>
+                      <div className="mt-2 flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-[#d7aa52]/70 opacity-0 transition-opacity group-hover:opacity-100">
+                        <Plus className="size-3" />
+                        {lang === "ar" ? "اضغط للتفاصيل" : "Tap for details"}
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -1714,6 +1772,22 @@ function Testimonials({ lang }: { lang: Lang }) {
 
 /* ============= CERTS ============= */
 export function Certs({ lang }: { lang: Lang }) {
+  const { data, isLoading } = useQuery({
+    queryKey: ["public-certifications"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("certifications")
+        .select("*")
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return data;
+    },
+  });
+  const items = data ?? [];
+
+  if (!isLoading && items.length === 0) return null;
+
   return (
     <section className="py-14">
       <div className="w-full px-4 sm:px-8 lg:px-16">
@@ -1722,21 +1796,56 @@ export function Certs({ lang }: { lang: Lang }) {
           title={t.certs.title[lang]}
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {t.certs.items.map((c, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="glass tilt-card flex items-start gap-3 rounded-2xl p-5 transition-all hover:border-[#d7aa52]/50"
-            >
-              <GraduationCap className="size-5 shrink-0 text-[#d7aa52]" />
-              <span className="text-sm font-medium" style={{ color: "var(--fg)" }}>
-                {c[lang]}
-              </span>
-            </motion.div>
-          ))}
+          {items.map((c, i) => {
+            const title = lang === "ar" ? c.title_ar : c.title_en;
+            const issuer = lang === "ar" ? c.issuer_ar : c.issuer_en;
+            const card = (
+              <motion.div
+                key={c.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: i * 0.07 }}
+                className="glass tilt-card flex items-start gap-3 rounded-2xl p-5 transition-all hover:border-[#d7aa52]/50"
+              >
+                {c.image_url ? (
+                  <img
+                    src={c.image_url}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className="size-9 shrink-0 rounded-lg object-cover"
+                  />
+                ) : (
+                  <GraduationCap className="size-5 shrink-0 text-[#d7aa52]" />
+                )}
+                <span className="min-w-0 flex-1">
+                  <span className="block text-sm font-medium" style={{ color: "var(--fg)" }}>
+                    {title}
+                  </span>
+                  {issuer && (
+                    <span className="mt-0.5 block text-xs" style={{ color: "var(--fg-soft)" }}>
+                      {issuer}
+                      {c.issue_date ? ` · ${c.issue_date}` : ""}
+                    </span>
+                  )}
+                </span>
+              </motion.div>
+            );
+            return c.credential_url ? (
+              <a
+                key={c.id}
+                href={c.credential_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contents"
+              >
+                {card}
+              </a>
+            ) : (
+              card
+            );
+          })}
         </div>
       </div>
     </section>

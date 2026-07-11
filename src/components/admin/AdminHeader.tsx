@@ -1,6 +1,16 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Home, LogOut, ShieldCheck, UserCircle, Users, FileText, BookOpen } from "lucide-react";
+import {
+  Home,
+  LogOut,
+  ShieldCheck,
+  UserCircle,
+  UserCircle2,
+  Users,
+  FileText,
+  BookOpen,
+  FileSpreadsheet,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type AdminUser = { id: string; email: string | null };
@@ -77,6 +87,14 @@ export function AdminHeader() {
               <Link to="/admin/knowledge" className={linkCls("/admin/knowledge")}>
                 <BookOpen className="size-3.5" />
                 لوحة المعرفة
+              </Link>
+              <Link to="/admin/profile" className={linkCls("/admin/profile")}>
+                <UserCircle2 className="size-3.5" />
+                الشهادات والخبرات
+              </Link>
+              <Link to="/admin/templates" className={linkCls("/admin/templates")}>
+                <FileSpreadsheet className="size-3.5" />
+                النماذج الجاهزة
               </Link>
             </>
           )}
