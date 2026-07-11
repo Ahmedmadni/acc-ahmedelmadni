@@ -1395,6 +1395,461 @@ export const TOOLS: ToolMeta[] = [
     },
     requestServiceId: "consulting",
   },
+  {
+    id: "nitaqat",
+    category: "hr",
+    icon: "Users",
+    title: { ar: "حاسبة نسبة السعودة (نطاقات)", en: "Saudization Ratio (Nitaqat)" },
+    short: {
+      ar: "احسب نسبة التوطين في منشأتك وقارنها بنطاقات نشاطك.",
+      en: "Compute your company's Saudization ratio and compare it against your activity's bands.",
+    },
+    standard: {
+      ar: "برنامج نطاقات — وزارة الموارد البشرية",
+      en: "Nitaqat program — Ministry of HRSD",
+    },
+    about: {
+      ar: "تحسب الأداة نسبة السعودة (عدد السعوديين ÷ إجمالي الموظفين) بدقة، ثم تقارنها بنطاقين تدخلهما بنفسك (الأخضر والبلاتيني) لأن هذه النطاقات تختلف حسب نشاط المنشأة وحجمها وتُنشر على منصة قوى — لا تعتمد الأداة على نطاقات افتراضية قد لا تُطابق نشاطك.",
+      en: "Computes the Saudization ratio (Saudi employees ÷ total employees) precisely, then compares it against two bands you enter yourself (green and platinum) since these differ by activity and company size and are published on Qiwa — the tool doesn't assume default bands that might not match your activity.",
+    },
+    whenToUse: {
+      ar: [
+        "متابعة التصنيف قبل التقديم على خدمات وزارة الموارد البشرية",
+        "تخطيط التوظيف لتحسين النطاق",
+        "إعداد تقارير الامتثال الداخلية",
+      ],
+      en: [
+        "Tracking classification before applying for HRSD services",
+        "Hiring planning to improve the band",
+        "Internal compliance reporting",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام نطاقات عامة لا تخص نشاط المنشأة الفعلي",
+        "إغفال تحديثات النطاقات الدورية على منصة قوى",
+      ],
+      en: [
+        "Using generic bands that don't match the company's actual activity",
+        "Missing periodic band updates on the Qiwa platform",
+      ],
+    },
+    tips: {
+      ar: ["راجع نطاقك على منصة قوى مباشرة قبل أي قرار توظيف مبني على النتيجة"],
+      en: ["Check your band directly on Qiwa before any hiring decision based on the result"],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "vat-penalty",
+    category: "tax",
+    icon: "AlertTriangle",
+    title: { ar: "حاسبة غرامات ضريبة القيمة المضافة", en: "VAT Penalty Calculator" },
+    short: {
+      ar: "قدّر غرامات التأخر في التسجيل والإقرار والسداد وفق هيئة الزكاة والضريبة والجمارك.",
+      en: "Estimate late registration, filing, and payment penalties per ZATCA.",
+    },
+    standard: {
+      ar: "لوائح الغرامات — هيئة الزكاة والضريبة والجمارك",
+      en: "Penalty regulations — ZATCA",
+    },
+    about: {
+      ar: "تقدّر الأداة ثلاثة أنواع من الغرامات: التأخر في التسجيل (مبلغ ثابت)، التأخر في تقديم الإقرار (نسبة من الضريبة)، والتأخر في السداد (نسبة شهرية من الضريبة غير المسددة). جميع النسب والمبالغ قابلة للتعديل لأن جدول الغرامات قابل للتحديث من الهيئة.",
+      en: "Estimates three penalty types: late registration (fixed amount), late filing (percentage of tax), and late payment (a monthly percentage of unpaid tax). All rates and amounts are editable since ZATCA's penalty schedule can be updated.",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير التعرض المالي قبل تسوية وضع ضريبي متأخر",
+        "التخطيط لتقديم طلب اعتراض أو تقسيط",
+        "تقييم أثر التأخير قبل اتخاذ قرار السداد",
+      ],
+      en: [
+        "Estimating financial exposure before settling an overdue tax position",
+        "Planning an objection or installment request",
+        "Assessing the cost of delay before deciding when to pay",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "الاعتماد على نسب قديمة دون التحقق من آخر تحديث من الهيئة",
+        "خلط غرامة الإقرار بغرامة السداد",
+      ],
+      en: [
+        "Relying on outdated rates without checking ZATCA's latest update",
+        "Confusing the filing penalty with the payment penalty",
+      ],
+    },
+    tips: {
+      ar: ["تحقق دائماً من آخر جدول غرامات منشور قبل اتخاذ أي قرار مالي بناءً على النتيجة"],
+      en: [
+        "Always check the latest published penalty schedule before making a financial decision based on the result",
+      ],
+    },
+    requestServiceId: "vat-declaration",
+  },
+  {
+    id: "sales-commission",
+    category: "finance",
+    icon: "Percent",
+    title: { ar: "حاسبة العمولات والحوافز البيعية", en: "Sales Commission Calculator" },
+    short: {
+      ar: "احسب العمولة على شرائح مبيعات متدرجة بمعدلات مختلفة لكل شريحة.",
+      en: "Compute commission across tiered sales bands, each with its own rate.",
+    },
+    formula: "العمولة = Σ (مبلغ الشريحة × نسبتها)",
+    about: {
+      ar: "تحسب العمولة تصاعدياً عبر شرائح المبيعات (نفس منطق الشرائح الضريبية) بدل تطبيق نسبة واحدة على كامل المبلغ — كل شريحة تُحسب بنسبتها الخاصة على الجزء الواقع ضمنها فقط.",
+      en: "Computes commission progressively across sales bands (the same bracket logic as tax brackets) instead of applying one flat rate to the whole amount — each band is charged its own rate only on the portion within it.",
+    },
+    whenToUse: {
+      ar: [
+        "إعداد كشف عمولات فريق المبيعات",
+        "تصميم هيكل حوافز جديد",
+        "التحقق من احتساب عمولة موظف",
+      ],
+      en: [
+        "Preparing a sales team's commission statement",
+        "Designing a new incentive structure",
+        "Verifying an employee's commission calculation",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "تطبيق نسبة الشريحة الأعلى على كامل المبيعات بدل الجزء الزائد فقط",
+        "ترك شريحة مفتوحة النهاية بنسبة صفر بالخطأ",
+      ],
+      en: [
+        "Applying the top tier's rate to all sales instead of only the excess portion",
+        "Accidentally leaving the open-ended tier at a zero rate",
+      ],
+    },
+    tips: {
+      ar: [
+        "الشريحة الأخيرة دائماً مفتوحة النهاية (لا نهاية) لتغطية أي مبيعات تتجاوز آخر حد أدخلته",
+      ],
+      en: [
+        "The last tier is always open-ended to cover any sales beyond the highest threshold you entered",
+      ],
+    },
+    requestServiceId: "payroll",
+  },
+  {
+    id: "goodwill-impairment",
+    category: "ifrs",
+    icon: "TrendingDown",
+    title: { ar: "اختبار انخفاض قيمة الشهرة", en: "Goodwill Impairment Test" },
+    short: {
+      ar: "اختبر انخفاض قيمة وحدة توليد النقد ووزّع الخسارة على الشهرة ثم بقية الأصول.",
+      en: "Test a cash-generating unit for impairment and allocate the loss to goodwill, then other assets.",
+    },
+    standard: { ar: "IAS 36 · IFRS 3", en: "IAS 36 · IFRS 3" },
+    formula: "خسارة الانخفاض = القيمة الدفترية − القيمة القابلة للاسترداد",
+    about: {
+      ar: "وفق معيار المحاسبة الدولي رقم 36، إذا تجاوزت القيمة الدفترية لوحدة توليد النقد قيمتها القابلة للاسترداد، تُخصَّص خسارة الانخفاض أولاً لتخفيض الشهرة (حتى قيمتها الدفترية)، ثم يُوزَّع أي فائض متبقٍ على بقية الأصول.",
+      en: "Per IAS 36, when a cash-generating unit's carrying amount exceeds its recoverable amount, the impairment loss is first allocated to reduce goodwill (up to its carrying amount), with any remainder allocated to the unit's other assets.",
+    },
+    whenToUse: {
+      ar: [
+        "الاختبار السنوي الإلزامي لانخفاض قيمة الشهرة",
+        "وجود مؤشرات انخفاض قيمة (تراجع أداء، تغيرات السوق)",
+        "إعداد ملاحظات القوائم المالية الخاصة بالشهرة",
+      ],
+      en: [
+        "The mandatory annual goodwill impairment test",
+        "When impairment indicators exist (declining performance, market changes)",
+        "Preparing goodwill-related financial statement notes",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "توزيع الخسارة بالتناسب على كل الأصول بدل تخصيصها للشهرة أولاً",
+        "تخصيص خسارة للشهرة تتجاوز قيمتها الدفترية",
+      ],
+      en: [
+        "Spreading the loss proportionally across all assets instead of hitting goodwill first",
+        "Allocating more impairment to goodwill than its carrying amount",
+      ],
+    },
+    tips: {
+      ar: ["القيمة القابلة للاسترداد = الأعلى من القيمة العادلة ناقص تكاليف البيع وقيمة الاستخدام"],
+      en: ["Recoverable amount = the higher of fair value less costs to sell and value in use"],
+    },
+  },
+  {
+    id: "inventory-nrv",
+    category: "ifrs",
+    icon: "Package",
+    title: {
+      ar: "تقييم المخزون بالأقل من التكلفة والقيمة القابلة للتحقق",
+      en: "Inventory Lower-of-Cost-or-NRV",
+    },
+    short: {
+      ar: "قارن تكلفة كل صنف مخزون بصافي قيمته القابلة للتحقق واحسب خسارة الاستبعاد.",
+      en: "Compare each inventory item's cost to its net realizable value and compute the write-down.",
+    },
+    standard: { ar: "IAS 2", en: "IAS 2" },
+    formula: "صافي القيمة القابلة للتحقق = سعر البيع − تكلفة الإتمام − تكاليف البيع",
+    about: {
+      ar: "وفق معيار المحاسبة الدولي رقم 2، يُقيَّم المخزون في القوائم المالية بالأقل من التكلفة وصافي القيمة القابلة للتحقق، صنفاً بصنف. عندما تنخفض القيمة القابلة للتحقق عن التكلفة، يُسجَّل الفرق كخسارة استبعاد.",
+      en: "Per IAS 2, inventory is measured at the lower of cost and net realizable value on an item-by-item basis. When NRV falls below cost, the shortfall is recognized as a write-down loss.",
+    },
+    whenToUse: {
+      ar: [
+        "إقفال نهاية الفترة لمخزون بطيء الحركة أو متضرر",
+        "مراجعة تسويات المخزون قبل التدقيق",
+        "تقييم أثر انخفاض أسعار السوق على المخزون",
+      ],
+      en: [
+        "Period-end closing for slow-moving or damaged inventory",
+        "Reviewing inventory adjustments before an audit",
+        "Assessing the impact of falling market prices on inventory",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "مقارنة إجمالي التكلفة بإجمالي القيمة القابلة للتحقق بدل المقارنة صنفاً بصنف",
+        "نسيان خصم تكاليف الإتمام والبيع المتبقية عند حساب القيمة القابلة للتحقق",
+      ],
+      en: [
+        "Comparing total cost to total NRV instead of item-by-item",
+        "Forgetting to deduct remaining costs to complete and sell when computing NRV",
+      ],
+    },
+    tips: {
+      ar: ["لا يجوز عكس خسارة استبعاد سابقة إلا بحدود مبلغ الاستبعاد الأصلي"],
+      en: ["A prior write-down may only be reversed up to the original write-down amount"],
+    },
+  },
+  {
+    id: "market-multiples",
+    category: "finance",
+    icon: "PieChart",
+    title: { ar: "التقييم بمضاعفات السوق (شركات مقارنة)", en: "Market Multiples Valuation" },
+    short: {
+      ar: "قدّر القيمة العادلة للشركة باستخدام مضاعفات P/E وEV/EBITDA وP/B لشركات مقارنة.",
+      en: "Estimate fair equity value using P/E, EV/EBITDA, and P/B multiples from comparable companies.",
+    },
+    formula: "قيمة حقوق الملكية = صافي الربح × مضاعف P/E",
+    about: {
+      ar: "أسلوب تقييم نسبي شائع: يُطبَّق مضاعف كل من P/E وEV/EBITDA وP/B (المستمدة من شركات مقارنة مُدرجة أو صفقات مماثلة) على أرقام الشركة المُقيَّمة، ثم يُؤخذ متوسط النتائج الثلاث كتقدير لقيمة حقوق الملكية.",
+      en: "A common relative-valuation approach: P/E, EV/EBITDA, and P/B multiples (drawn from comparable listed companies or transactions) are applied to the subject company's own figures, and the three resulting equity values are averaged into a single estimate.",
+    },
+    whenToUse: {
+      ar: [
+        "تقدير سريع لقيمة شركة قبل مفاوضات استحواذ أو استثمار",
+        "مقارنة تقييم الدخل (DCF) بتقييم السوق",
+        "إعداد عرض تمهيدي لمستثمر",
+      ],
+      en: [
+        "A quick pre-negotiation valuation estimate before an acquisition or investment",
+        "Cross-checking a DCF valuation against market pricing",
+        "Preparing a preliminary investor presentation",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام مضاعفات شركات غير مقارنة فعلياً من حيث الحجم أو القطاع أو النمو",
+        "نسيان خصم صافي الدين عند استخدام مضاعف EV/EBITDA للوصول لقيمة حقوق الملكية",
+      ],
+      en: [
+        "Using multiples from companies that aren't truly comparable in size, sector, or growth",
+        "Forgetting to subtract net debt when converting an EV/EBITDA multiple to equity value",
+      ],
+    },
+    tips: {
+      ar: [
+        "يُفضَّل استخدام هذا الأسلوب كتقاطع تحقق مع تقييم التدفقات النقدية المخصومة (DCF) لا بديلاً عنه",
+      ],
+      en: ["Best used as a cross-check alongside a DCF valuation, not as a standalone substitute"],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "job-order-costing",
+    category: "analysis",
+    icon: "Layers",
+    title: { ar: "تكاليف أوامر التشغيل", en: "Job Order Costing" },
+    short: {
+      ar: "احسب تكلفة أمر تشغيل محدد من المواد والعمل المباشر والتكاليف غير المباشرة المحمّلة، وتكلفة الوحدة.",
+      en: "Cost a specific job from direct materials, direct labor, and applied overhead, down to a per-unit cost.",
+    },
+    formula: "تكلفة أمر التشغيل = مواد مباشرة + عمل مباشر + تكاليف غير مباشرة محمّلة",
+    about: {
+      ar: "يُستخدم نظام تكاليف أوامر التشغيل في الشركات التي تنتج دفعات أو مشاريع منفصلة (مقاولات، تصنيع حسب الطلب). تُجمَّع التكاليف الثلاث لكل أمر تشغيل على حدة، وتُحمَّل التكاليف غير المباشرة بمعدل محدد مسبقاً لكل ساعة عمل مباشر، ثم تُقسَّم التكلفة الإجمالية على عدد الوحدات المنتجة.",
+      en: "Job order costing is used by businesses that produce distinct batches or projects (contracting, made-to-order manufacturing). The three cost elements are accumulated per job, overhead is applied using a predetermined rate per direct labor hour, and the total is divided by units produced.",
+    },
+    whenToUse: {
+      ar: [
+        "تسعير مشروع أو دفعة إنتاج محددة",
+        "مقارنة التكلفة الفعلية بالتقديرية لأمر تشغيل",
+        "تحديد سعر بيع الوحدة بناءً على التكلفة",
+      ],
+      en: [
+        "Pricing a specific project or production batch",
+        "Comparing a job's actual cost to its estimate",
+        "Setting a per-unit selling price based on cost",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "الخلط بين معدل التحميل الفعلي والمعدل المحدد مسبقاً",
+        "نسيان تحميل التكاليف غير المباشرة على أوامر التشغيل المكتملة جزئياً",
+      ],
+      en: [
+        "Confusing the actual overhead rate with the predetermined rate",
+        "Forgetting to apply overhead to partially completed jobs",
+      ],
+    },
+    tips: {
+      ar: ["راجع معدل التحميل دورياً مقابل التكاليف غير المباشرة الفعلية لتفادي فروقات كبيرة"],
+      en: [
+        "Review the overhead rate periodically against actual overhead to avoid large variances",
+      ],
+    },
+  },
+  {
+    id: "landed-cost",
+    category: "tax",
+    icon: "Landmark",
+    title: {
+      ar: "حاسبة تكلفة الاستيراد الواصلة (جمارك + ضريبة القيمة المضافة)",
+      en: "Import Landed Cost (Customs + VAT)",
+    },
+    short: {
+      ar: "احسب الرسوم الجمركية وضريبة القيمة المضافة على الاستيراد والتكلفة الإجمالية الواصلة للبضاعة.",
+      en: "Compute customs duty, import VAT, and the total landed cost of imported goods.",
+    },
+    standard: { ar: "ZATCA · الجمارك السعودية", en: "ZATCA · Saudi Customs" },
+    formula: "التكلفة الواصلة = CIF + الرسوم الجمركية + ضريبة القيمة المضافة + تكاليف أخرى",
+    about: {
+      ar: "تُحسب الرسوم الجمركية كنسبة من قيمة CIF (التكلفة + التأمين + الشحن)، ثم تُحسب ضريبة القيمة المضافة على أساس CIF مضافاً إليه الرسوم الجمركية وفق قواعد الجمارك السعودية وهيئة الزكاة والضريبة والجمارك، وأخيراً تُضاف أي تكاليف تخليص أو نقل محلي للوصول للتكلفة الإجمالية الواصلة للمخزون.",
+      en: "Customs duty is calculated as a percentage of the CIF value (cost + insurance + freight), then import VAT is charged on CIF plus duty per Saudi Customs / ZATCA rules, and any clearance or local transport costs are added to arrive at the total landed cost of the inventory.",
+    },
+    whenToUse: {
+      ar: [
+        "تسعير بضاعة مستوردة قبل البيع",
+        "إعداد ميزانية تقديرية لعملية استيراد",
+        "التحقق من فاتورة التخليص الجمركي",
+      ],
+      en: [
+        "Pricing imported goods before resale",
+        "Budgeting for an import shipment",
+        "Verifying a customs clearance invoice",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "حساب ضريبة القيمة المضافة على قيمة CIF فقط دون إضافة الرسوم الجمركية لها أولاً",
+        "استخدام نسبة جمركية عامة بدل النسبة الفعلية للبند الجمركي (HS Code)",
+      ],
+      en: [
+        "Calculating VAT on the CIF value alone without adding customs duty first",
+        "Using a generic duty rate instead of the actual HS-code-specific rate",
+      ],
+    },
+    tips: {
+      ar: [
+        "نسبة الجمارك تختلف حسب البند الجمركي (HS Code) — تحقق منها في التعريفة الجمركية الموحدة الخليجية قبل الاعتماد على الافتراضي",
+      ],
+      en: [
+        "The duty rate varies by HS code — check the GCC Common External Tariff before relying on the default",
+      ],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "einvoicing-readiness",
+    category: "tax",
+    icon: "ReceiptText",
+    title: {
+      ar: "قائمة جاهزية الفوترة الإلكترونية (فاتورة) — المرحلة الثانية",
+      en: "E-Invoicing (Fatoora) Phase 2 Readiness Checklist",
+    },
+    short: {
+      ar: "قائمة تحقق مرجّحة لتقييم مدى جاهزية منشأتك لمرحلة الربط والتكامل مع فاتورة.",
+      en: "A weighted checklist to assess your business's readiness for the e-invoicing integration phase.",
+    },
+    standard: { ar: "ZATCA · فاتورة", en: "ZATCA · Fatoora" },
+    about: {
+      ar: "قائمة تحقق استرشادية مقسّمة على أربعة محاور (التنسيق، الأمان، الربط والتكامل، الإبلاغ والامتثال)، كل بند فيها له وزن نسبي، وتُحسب درجة الجاهزية الإجمالية تلقائياً من البنود المحققة. مخصصة للتقييم الذاتي السريع، وليست بديلاً عن التحقق من متطلبات الهيئة الرسمية والمعتمدة لحلك التقني.",
+      en: "An illustrative checklist across four areas (format, security, integration, reporting/compliance), each item weighted, with an overall readiness score computed automatically from the items checked. Meant for a quick self-assessment, not a substitute for verifying your solution against ZATCA's official, currently approved requirements.",
+    },
+    whenToUse: {
+      ar: [
+        "تقييم جاهزية النظام المحاسبي أو نقاط البيع قبل موعد الربط الإلزامي",
+        "تحضير قائمة عمل للفريق التقني قبل التكامل مع فاتورة",
+        "متابعة التقدم في مشروع تنفيذ الفوترة الإلكترونية",
+      ],
+      en: [
+        "Assessing accounting/POS system readiness ahead of a mandatory integration date",
+        "Preparing a technical team's action list before integrating with Fatoora",
+        "Tracking progress on an e-invoicing implementation project",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "الاعتماد على هذه القائمة كمرجع نظامي بديل عن دليل الهيئة الرسمي",
+        "تجاهل بنود عالية الوزن مثل الختم التشفيري والتخليص الفوري لأنها تبدو تقنية بحتة",
+      ],
+      en: [
+        "Treating this checklist as an official substitute for ZATCA's published guidance",
+        "Skipping high-weight items like the cryptographic stamp and real-time clearance because they seem purely technical",
+      ],
+    },
+    tips: {
+      ar: [
+        "راجع موقع هيئة الزكاة والضريبة والجمارك دورياً — متطلبات الربط والتكامل تُحدَّث على دفعات حسب فئة المكلفين",
+      ],
+      en: [
+        "Check ZATCA's website periodically — integration requirements roll out in waves by taxpayer group",
+      ],
+    },
+    requestServiceId: "consulting",
+  },
+  {
+    id: "chart-of-accounts",
+    category: "excel",
+    icon: "FileSpreadsheet",
+    title: { ar: "مُولّد دليل الحسابات حسب النشاط", en: "Chart of Accounts Generator" },
+    short: {
+      ar: "قالب دليل حسابات جاهز يُبنى حسب نوع نشاطك (تجارة، خدمات، تصنيع، مقاولات، عقارات) وقابل للتصدير.",
+      en: "A ready-made chart of accounts tailored to your business type (trading, services, manufacturing, contracting, real estate), exportable to CSV.",
+    },
+    about: {
+      ar: "يجمع القالب بين حسابات مشتركة لأي منشأة (نقدية، بنوك، عملاء، موردون، رأس المال، رواتب...) وحسابات خاصة بطبيعة النشاط (مخزون تجاري، تكاليف تصنيع، أعمال تحت التنفيذ للمقاولات، إيرادات إيجارات للعقارات، وغيرها)، مرقّمة برموز حسابات منطقية ومصنّفة حسب الأصول والالتزامات وحقوق الملكية والإيرادات والمصروفات.",
+      en: "The template combines accounts common to any business (cash, banks, customers, suppliers, capital, payroll...) with accounts specific to the business type (retail inventory, manufacturing costs, work-in-progress for contracting, rental income for real estate, and more), numbered with logical account codes and classified under assets, liabilities, equity, revenue, and expenses.",
+    },
+    whenToUse: {
+      ar: [
+        "تأسيس دليل حسابات لمنشأة جديدة",
+        "مراجعة اكتمال دليل الحسابات الحالي مقابل قالب قطاعي",
+        "تجهيز بيانات أولية قبل إعداد النظام المحاسبي",
+      ],
+      en: [
+        "Setting up a chart of accounts for a new business",
+        "Checking an existing chart of accounts against a sector template for gaps",
+        "Preparing initial data before configuring an accounting system",
+      ],
+    },
+    commonMistakes: {
+      ar: [
+        "استخدام القالب كما هو دون حذف الحسابات غير المنطبقة على نشاطك",
+        "تكرار حسابات بنفس الغرض تحت أرقام مختلفة عند الدمج مع دليل حسابات موجود",
+      ],
+      en: [
+        "Using the template as-is without removing accounts that don't apply to your business",
+        "Duplicating accounts with the same purpose under different codes when merging with an existing chart",
+      ],
+    },
+    tips: {
+      ar: [
+        "اترك فراغات في ترقيم الحسابات (كما في القالب) لإضافة حسابات فرعية لاحقاً دون إعادة ترقيم الدليل بالكامل",
+      ],
+      en: [
+        "Leave gaps in the numbering (as in the template) so you can add sub-accounts later without renumbering the whole chart",
+      ],
+    },
+  },
 ];
 
 export const toolById = (id: string) => TOOLS.find((t) => t.id === id);
