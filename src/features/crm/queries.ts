@@ -78,3 +78,55 @@ export function useLogWhatsAppMessages() {
     },
   });
 }
+
+export type MessageTemplateRow = {
+  id: string;
+  label: string;
+  message: string;
+  sort_order: number;
+  created_at: string;
+};
+
+// Custom messages the user opts to save from the WhatsApp messenger, so they
+// keep showing up in the template list for future use instead of being
+// typed once and lost.
+export function useMessageTemplates() {
+  return useQuery({
+    queryKey: ["crm-message-templates"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("crm_message_templates")
+        .select("*")
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return (data ?? []) as MessageTemplateRow[];
+    },
+  });
+}
+
+export function useSaveMessageTemplate() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (input: { label: string; message: string; sort_order: number }) => {
+      const { data, error } = await supabase
+        .from("crm_message_templates")
+        .insert(input)
+        .select("*")
+        .single();
+      if (error) throw error;
+      return data as MessageTemplateRow;
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["crm-message-templates"] }),
+  });
+}
+
+export function useDeleteMessageTemplate() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (id: string) => {
+      const { error } = await supabase.from("crm_message_templates").delete().eq("id", id);
+      if (error) throw error;
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["crm-message-templates"] }),
+  });
+}

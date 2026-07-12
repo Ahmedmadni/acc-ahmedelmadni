@@ -1,7 +1,18 @@
 import { useState } from "react";
-import { MessageCircle, ChevronDown } from "lucide-react";
+import { MessageCircle, ChevronDown, Trash2 } from "lucide-react";
 import type { Client } from "./types";
-import { useClients, useLogWhatsAppMessages, useRecentWhatsAppLog } from "./queries";
+import {
+  useClients,
+  useLogWhatsAppMessages,
+  useRecentWhatsAppLog,
+  useMessageTemplates,
+  useSaveMessageTemplate,
+  useDeleteMessageTemplate,
+} from "./queries";
+
+function applyPlaceholders(message: string, name: string, company: string) {
+  return message.replaceAll("{{name}}", name).replaceAll("{{company}}", company || "");
+}
 
 const VAT_TEMPLATES = [
   {
@@ -107,9 +118,14 @@ export function WhatsAppMessenger() {
     .filter((c) => c.status === "active")
     .sort((a, b) => a.full_name.localeCompare(b.full_name, "ar"));
   const logMessages = useLogWhatsAppMessages();
+  const { data: savedTemplates } = useMessageTemplates();
+  const saveTemplate = useSaveMessageTemplate();
+  const deleteTemplate = useDeleteMessageTemplate();
   const [selectedClients, setSelectedClients] = useState<string[]>([]);
   const [templateId, setTemplateId] = useState("vat_q4");
   const [customMessage, setCustomMessage] = useState("");
+  const [saveAsTemplate, setSaveAsTemplate] = useState(false);
+  const [newTemplateLabel, setNewTemplateLabel] = useState("");
   const [filterVat, setFilterVat] = useState(false);
 
   const displayedClients = filterVat ? clients.filter((c) => c.vat_registered) : clients;
@@ -121,8 +137,12 @@ export function WhatsAppMessenger() {
   const clearAll = () => setSelectedClients([]);
 
   const template = VAT_TEMPLATES.find((t) => t.id === templateId);
+  const savedTemplate = savedTemplates?.find((t) => t.id === templateId);
   const getMessageForClient = (client: Client) => {
     if (templateId === "custom") return customMessage;
+    if (savedTemplate) {
+      return applyPlaceholders(savedTemplate.message, client.full_name, client.company_name || "");
+    }
     return template?.message(client.full_name, client.company_name || "") || "";
   };
 
@@ -133,6 +153,20 @@ export function WhatsAppMessenger() {
   };
 
   const sendToAll = () => {
+    if (
+      templateId === "custom" &&
+      saveAsTemplate &&
+      newTemplateLabel.trim() &&
+      customMessage.trim()
+    ) {
+      saveTemplate.mutate({
+        label: newTemplateLabel.trim(),
+        message: customMessage,
+        sort_order: savedTemplates?.length ?? 0,
+      });
+      setSaveAsTemplate(false);
+      setNewTemplateLabel("");
+    }
     for (let i = 0; i < selectedClients.length; i++) {
       const client = clients.find((c) => c.id === selectedClients[i]);
       if (!client) continue;
@@ -240,37 +274,90 @@ export function WhatsAppMessenger() {
             onChange={(e) => setTemplateId(e.target.value)}
             className="w-full appearance-none rounded-xl border border-[#d7aa52]/25 bg-[#04101f] px-4 py-3 text-sm text-[#f3d28a] outline-none focus:border-[#d7aa52]/60 pl-10"
           >
-            {VAT_TEMPLATES.map((t) => (
-              <option key={t.id} value={t.id} className="bg-[#04101f] text-white">
-                {t.label}
-              </option>
-            ))}
+            <optgroup label="قوالب جاهزة" className="bg-[#04101f]">
+              {VAT_TEMPLATES.filter((t) => t.id !== "custom").map((t) => (
+                <option key={t.id} value={t.id} className="bg-[#04101f] text-white">
+                  {t.label}
+                </option>
+              ))}
+            </optgroup>
+            {savedTemplates && savedTemplates.length > 0 && (
+              <optgroup label="رسائلي المحفوظة" className="bg-[#04101f]">
+                {savedTemplates.map((t) => (
+                  <option key={t.id} value={t.id} className="bg-[#04101f] text-white">
+                    {t.label}
+                  </option>
+                ))}
+              </optgroup>
+            )}
+            <option value="custom" className="bg-[#04101f] text-white">
+              ✏️ رسالة مخصصة جديدة
+            </option>
           </select>
           <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#f3d28a]/50" />
         </div>
 
         <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
-          <div className="text-[10px] font-bold text-emerald-300 mb-2">
-            معاينة الرسالة
-            {selectedClients.length > 0 && (
-              <span className="mr-2 text-[var(--fg-soft)]">
-                (للعميل: {clients.find((c) => c.id === selectedClients[0])?.full_name || "..."})
-              </span>
+          <div className="mb-2 flex items-center justify-between gap-2">
+            <div className="text-[10px] font-bold text-emerald-300">
+              معاينة الرسالة
+              {selectedClients.length > 0 && (
+                <span className="mr-2 text-[var(--fg-soft)]">
+                  (للعميل: {clients.find((c) => c.id === selectedClients[0])?.full_name || "..."})
+                </span>
+              )}
+            </div>
+            {savedTemplate && (
+              <button
+                type="button"
+                onClick={() => {
+                  if (confirm(`حذف "${savedTemplate.label}" من قائمة الرسائل؟`)) {
+                    deleteTemplate.mutate(savedTemplate.id);
+                    setTemplateId("vat_q4");
+                  }
+                }}
+                className="inline-flex items-center gap-1 text-[10px] font-bold text-red-300 hover:text-red-200"
+              >
+                <Trash2 className="w-3 h-3" /> حذف من القائمة
+              </button>
             )}
           </div>
           {templateId === "custom" ? (
-            <textarea
-              value={customMessage}
-              onChange={(e) => setCustomMessage(e.target.value)}
-              rows={10}
-              placeholder="اكتب رسالتك المخصصة هنا..."
-              className="w-full bg-transparent text-sm text-white outline-none resize-none placeholder:text-white/30"
-            />
+            <>
+              <textarea
+                value={customMessage}
+                onChange={(e) => setCustomMessage(e.target.value)}
+                rows={10}
+                placeholder="اكتب رسالتك المخصصة هنا... يمكنك استخدام {{name}} و{{company}} ليتم استبدالها تلقائياً باسم كل عميل ومنشأته"
+                className="w-full bg-transparent text-sm text-white outline-none resize-none placeholder:text-white/30"
+              />
+              <div className="mt-3 space-y-2 border-t border-emerald-500/15 pt-3">
+                <label className="flex items-center gap-2 text-xs font-bold text-[var(--fg-soft)]">
+                  <input
+                    type="checkbox"
+                    checked={saveAsTemplate}
+                    onChange={(e) => setSaveAsTemplate(e.target.checked)}
+                    className="w-4 h-4 accent-[#d7aa52]"
+                  />
+                  حفظ هذه الرسالة في قائمة الرسائل للاستخدام لاحقاً
+                </label>
+                {saveAsTemplate && (
+                  <input
+                    value={newTemplateLabel}
+                    onChange={(e) => setNewTemplateLabel(e.target.value)}
+                    placeholder="اسم الرسالة (يظهر في القائمة)"
+                    className="w-full rounded-lg border border-[#d7aa52]/25 bg-[#04101f] px-3 py-2 text-xs text-white outline-none focus:border-[#d7aa52]/60"
+                  />
+                )}
+              </div>
+            </>
           ) : (
             <pre className="text-xs text-white/80 leading-relaxed whitespace-pre-wrap font-sans">
               {selectedClients.length > 0
                 ? getMessageForClient(clients.find((c) => c.id === selectedClients[0])!)
-                : template?.message("اسم العميل", "اسم المنشأة") || ""}
+                : savedTemplate
+                  ? applyPlaceholders(savedTemplate.message, "اسم العميل", "اسم المنشأة")
+                  : template?.message("اسم العميل", "اسم المنشأة") || ""}
             </pre>
           )}
         </div>
