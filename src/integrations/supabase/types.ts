@@ -14,6 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
+      accounting_templates: {
+        Row: {
+          category: string
+          created_at: string
+          description_ar: string
+          description_en: string
+          file_url: string | null
+          format: string
+          how_to_use_ar: string | null
+          how_to_use_en: string | null
+          id: string
+          is_new: boolean
+          is_official: boolean
+          is_published: boolean
+          pages: number
+          preview_fields: string[]
+          related_standard: string | null
+          sort_order: number
+          title_ar: string
+          title_en: string
+          updated_at: string
+        }
+        Insert: {
+          category?: string
+          created_at?: string
+          description_ar: string
+          description_en: string
+          file_url?: string | null
+          format?: string
+          how_to_use_ar?: string | null
+          how_to_use_en?: string | null
+          id?: string
+          is_new?: boolean
+          is_official?: boolean
+          is_published?: boolean
+          pages?: number
+          preview_fields?: string[]
+          related_standard?: string | null
+          sort_order?: number
+          title_ar: string
+          title_en: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description_ar?: string
+          description_en?: string
+          file_url?: string | null
+          format?: string
+          how_to_use_ar?: string | null
+          how_to_use_en?: string | null
+          id?: string
+          is_new?: boolean
+          is_official?: boolean
+          is_published?: boolean
+          pages?: number
+          preview_fields?: string[]
+          related_standard?: string | null
+          sort_order?: number
+          title_ar?: string
+          title_en?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       certifications: {
         Row: {
           created_at: string
@@ -933,6 +999,13 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_article_rating_summary: {
+        Args: { p_article_id: string }
+        Returns: {
+          avg_rating: number
+          rating_count: number
+        }[]
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
