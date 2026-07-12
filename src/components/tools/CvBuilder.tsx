@@ -4,6 +4,7 @@ import {
   Award,
   Briefcase,
   Download,
+  Globe2,
   GraduationCap,
   Languages as LangIcon,
   Loader2,
@@ -17,7 +18,7 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { capturePdfElement } from "@/lib/pdf-export";
-import { enhanceCvSection, parseGeneratedList } from "@/features/cv/assistant";
+import { enhanceCvSection, parseGeneratedList, translateCv } from "@/features/cv/assistant";
 import { scoreCv } from "@/features/cv/quality";
 import { CV_TEMPLATES, getCvTemplate } from "@/features/cv/templates";
 import type {
@@ -157,11 +158,20 @@ function AiActions({
 /* ================= MAIN ================= */
 
 export function CvBuilder({ lang }: { lang: Lang }) {
-  const isAR = lang === "ar";
-  const [data, setData] = useState<CvData>(EMPTY);
+  // The CV's own content language is independent of the site's UI language —
+  // a visitor browsing in Arabic may still want to build (or translate to)
+  // an English CV, and vice versa. Two full data sets are kept so both
+  // versions can exist side by side instead of overwriting one another.
+  const [cvLang, setCvLang] = useState<Lang>(lang);
+  const isAR = cvLang === "ar";
+  const [dataAr, setDataAr] = useState<CvData>(EMPTY);
+  const [dataEn, setDataEn] = useState<CvData>(EMPTY);
+  const data = cvLang === "ar" ? dataAr : dataEn;
+  const setData = cvLang === "ar" ? setDataAr : setDataEn;
   const [templateId, setTemplateId] = useState<CvTemplateId>("modern-executive");
   const [loading, setLoading] = useState(false);
   const [aiLoading, setAiLoading] = useState<string | null>(null);
+  const [translating, setTranslating] = useState(false);
   const [skillInput, setSkillInput] = useState("");
   const [langInput, setLangInput] = useState("");
   const [photoPreview, setPhotoPreview] = useState<string | undefined>(undefined);
@@ -177,13 +187,25 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       const raw = localStorage.getItem("cv-builder-draft");
       if (!raw) return;
       const saved = JSON.parse(raw) as {
-        data?: CvData;
+        dataAr?: CvData;
+        dataEn?: CvData;
+        data?: CvData; // legacy single-language shape
         templateId?: CvTemplateId;
         photoPreview?: string;
+        cvLang?: Lang;
       };
-      if (saved.data) setData(saved.data);
+      if (saved.dataAr || saved.dataEn) {
+        if (saved.dataAr) setDataAr(saved.dataAr);
+        if (saved.dataEn) setDataEn(saved.dataEn);
+      } else if (saved.data) {
+        // Migrate an older single-language draft into whichever language
+        // slot the site was likely in when it was saved.
+        if (lang === "ar") setDataAr(saved.data);
+        else setDataEn(saved.data);
+      }
       if (saved.templateId) setTemplateId(saved.templateId);
       if (saved.photoPreview) setPhotoPreview(saved.photoPreview);
+      if (saved.cvLang) setCvLang(saved.cvLang);
     } catch {
       /* noop */
     }
@@ -191,13 +213,33 @@ export function CvBuilder({ lang }: { lang: Lang }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem("cv-builder-draft", JSON.stringify({ data, templateId, photoPreview }));
+      localStorage.setItem(
+        "cv-builder-draft",
+        JSON.stringify({ dataAr, dataEn, templateId, photoPreview, cvLang }),
+      );
     } catch {
       /* storage full or unavailable — draft simply won't persist */
     }
-  }, [data, templateId, photoPreview]);
+  }, [dataAr, dataEn, templateId, photoPreview, cvLang]);
 
   const set = <K extends keyof CvData>(k: K, v: CvData[K]) => setData((d) => ({ ...d, [k]: v }));
+
+  const otherLang: Lang = cvLang === "ar" ? "en" : "ar";
+  const runTranslate = async () => {
+    setTranslating(true);
+    try {
+      const translated = await translateCv({ data, sourceLang: cvLang, targetLang: otherLang });
+      if (otherLang === "ar") setDataAr(translated);
+      else setDataEn(translated);
+      setCvLang(otherLang);
+    } catch (error) {
+      alert(
+        error instanceof Error ? error.message : isAR ? "تعذّرت الترجمة" : "Translation failed",
+      );
+    } finally {
+      setTranslating(false);
+    }
+  };
 
   /* ============= List helpers ============= */
   const addExp = () =>
@@ -262,7 +304,9 @@ export function CvBuilder({ lang }: { lang: Lang }) {
     reader.onload = () => {
       const result = reader.result as string;
       setPhotoPreview(result);
-      set("photo", result);
+      // The same photo applies to both language versions of the CV.
+      setDataAr((d) => ({ ...d, photo: result }));
+      setDataEn((d) => ({ ...d, photo: result }));
     };
     reader.readAsDataURL(file);
   };
@@ -275,7 +319,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
   ) => {
     setAiLoading(`${section}-${action}`);
     try {
-      const next = await enhanceCvSection({ section, text, lang, action, context: data });
+      const next = await enhanceCvSection({ section, text, lang: cvLang, action, context: data });
       apply(next);
     } catch (error) {
       alert(
@@ -333,7 +377,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       }
 
       const safeName = (data.fullName || "cv").replace(/[^\p{L}\p{N}_-]+/gu, "_");
-      pdf.save(`${safeName}.pdf`);
+      pdf.save(`${safeName}_${cvLang}.pdf`);
     } catch (e) {
       console.error("CV PDF export failed", e);
       alert(isAR ? "تعذّر تصدير الملف. حاول مجددًا." : "Export failed. Please try again.");
@@ -381,6 +425,53 @@ export function CvBuilder({ lang }: { lang: Lang }) {
 
   return (
     <div dir={dir} className="w-full px-4 py-6 space-y-8">
+      {/* ============= LANGUAGE SWITCHER ============= */}
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#d7aa52]/30 bg-white/[0.03] p-3">
+        <div className="flex items-center gap-2">
+          <Globe2 className="w-4 h-4 text-[#f3d28a]" />
+          <div className="flex overflow-hidden rounded-full border border-[#d7aa52]/40">
+            {(["ar", "en"] as const).map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => setCvLang(l)}
+                className={`px-4 py-1.5 text-xs font-bold transition ${
+                  cvLang === l
+                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+                    : "text-[#f3d28a] hover:bg-[#d7aa52]/10"
+                }`}
+              >
+                {l === "ar" ? "العربية" : "English"}
+              </button>
+            ))}
+          </div>
+          <span className="text-[11px] text-[var(--fg-soft)]">
+            {isAR
+              ? "نسختان مستقلتان — عدّل كل لغة بشكل منفصل"
+              : "Two independent versions — edit each language separately"}
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={runTranslate}
+          disabled={translating}
+          className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition hover:bg-[#d7aa52]/20 disabled:opacity-60"
+        >
+          {translating ? (
+            <Loader2 className="size-3.5 animate-spin" />
+          ) : (
+            <LangIcon className="size-3.5" />
+          )}
+          {otherLang === "en"
+            ? isAR
+              ? "ترجمة إلى الإنجليزية"
+              : "Translate to English"
+            : isAR
+              ? "ترجمة إلى العربية"
+              : "Translate to Arabic"}
+        </button>
+      </div>
+
       {/* ============= PREVIEW (TOP, FULL WIDTH) ============= */}
       <div className="space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -419,14 +510,16 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                   <i className="mt-1 block h-1 w-14 rounded bg-slate-200" />
                 </span>
               </div>
-              <div className="text-xs font-extrabold text-[#f3d28a]">{item.name[lang]}</div>
-              <div className="mt-1 text-[11px] text-[var(--fg-soft)]">{item.description[lang]}</div>
+              <div className="text-xs font-extrabold text-[#f3d28a]">{item.name[cvLang]}</div>
+              <div className="mt-1 text-[11px] text-[var(--fg-soft)]">
+                {item.description[cvLang]}
+              </div>
             </button>
           ))}
         </div>
 
         <div className="rounded-xl border border-[#d7aa52]/30 bg-[#04101f]/40 p-3 max-h-[80vh] overflow-auto">
-          <CvPreview data={data} template={template} lang={lang} previewRef={previewRef} />
+          <CvPreview data={data} template={template} lang={cvLang} previewRef={previewRef} />
         </div>
       </div>
 
@@ -483,7 +576,8 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                   type="button"
                   onClick={() => {
                     setPhotoPreview(undefined);
-                    set("photo", undefined);
+                    setDataAr((d) => ({ ...d, photo: undefined }));
+                    setDataEn((d) => ({ ...d, photo: undefined }));
                   }}
                   className="text-xs text-red-300 hover:text-red-200"
                 >
@@ -509,7 +603,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
               rows={6}
             />
             <AiActions
-              lang={lang}
+              lang={cvLang}
               loading={aiLoading}
               section="summary"
               onRun={(action) =>
@@ -528,7 +622,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           </div>
           <div className="grid gap-1 text-xs text-[var(--fg-soft)] md:grid-cols-2">
             {quality.recommendations.map((item, index) => (
-              <span key={index}>• {item[lang]}</span>
+              <span key={index}>• {item[cvLang]}</span>
             ))}
           </div>
         </div>
@@ -561,7 +655,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
                 }
               />
               <AiActions
-                lang={lang}
+                lang={cvLang}
                 loading={aiLoading}
                 section={`experience-${e.id}`}
                 onRun={(action) =>

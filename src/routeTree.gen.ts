@@ -29,6 +29,7 @@ import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
 import { Route as LibraryBooksRouteImport } from './routes/library.books'
 import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
 import { Route as ApiOfficeAiRouteImport } from './routes/api/office-ai'
+import { Route as ApiCvTranslateRouteImport } from './routes/api/cv-translate'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
@@ -140,6 +141,11 @@ const ApiOfficeAiRoute = ApiOfficeAiRouteImport.update({
   path: '/api/office-ai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCvTranslateRoute = ApiCvTranslateRouteImport.update({
+  id: '/api/cv-translate',
+  path: '/api/cv-translate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
   id: '/api/cv-enhance',
   path: '/api/cv-enhance',
@@ -219,6 +225,7 @@ export interface FileRoutesByFullPath {
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
@@ -250,6 +257,7 @@ export interface FileRoutesByTo {
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
@@ -284,6 +292,7 @@ export interface FileRoutesById {
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
+  '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
@@ -318,6 +327,7 @@ export interface FileRouteTypes {
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/api/cv-translate'
     | '/api/office-ai'
     | '/library/articles'
     | '/library/books'
@@ -349,6 +359,7 @@ export interface FileRouteTypes {
     | '/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/api/cv-translate'
     | '/api/office-ai'
     | '/library/articles'
     | '/library/books'
@@ -382,6 +393,7 @@ export interface FileRouteTypes {
     | '/_authenticated/declarations'
     | '/api/chat'
     | '/api/cv-enhance'
+    | '/api/cv-translate'
     | '/api/office-ai'
     | '/library/articles'
     | '/library/books'
@@ -414,6 +426,7 @@ export interface RootRouteChildren {
   SkillsRoute: typeof SkillsRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
+  ApiCvTranslateRoute: typeof ApiCvTranslateRoute
   ApiOfficeAiRoute: typeof ApiOfficeAiRoute
   ToolsToolIdRoute: typeof ToolsToolIdRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
@@ -565,6 +578,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiOfficeAiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/cv-translate': {
+      id: '/api/cv-translate'
+      path: '/api/cv-translate'
+      fullPath: '/api/cv-translate'
+      preLoaderRoute: typeof ApiCvTranslateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/cv-enhance': {
       id: '/api/cv-enhance'
       path: '/api/cv-enhance'
@@ -699,6 +719,7 @@ const rootRouteChildren: RootRouteChildren = {
   SkillsRoute: SkillsRoute,
   ApiChatRoute: ApiChatRoute,
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
+  ApiCvTranslateRoute: ApiCvTranslateRoute,
   ApiOfficeAiRoute: ApiOfficeAiRoute,
   ToolsToolIdRoute: ToolsToolIdRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
@@ -710,3 +731,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
