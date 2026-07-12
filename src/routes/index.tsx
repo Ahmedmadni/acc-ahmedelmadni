@@ -78,6 +78,9 @@ export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"))
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
+const FloatingIconsLayer = lazy(() =>
+  import("@/components/home/FloatingIconsLayer").then((m) => ({ default: m.FloatingIconsLayer })),
+);
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -452,7 +455,11 @@ function Index() {
 
       <Navbar lang={lang} theme={theme} onToggle={toggleLang} onTheme={toggleTheme} />
 
-      <main>
+      <Suspense fallback={null}>
+        <FloatingIconsLayer />
+      </Suspense>
+
+      <main className="relative z-10">
         <Hero lang={lang} />
         <ProfileBio lang={lang} />
         <Stats lang={lang} />
