@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring, MotionValue } from "motion/react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
   Sparkles,
