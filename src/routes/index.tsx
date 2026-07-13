@@ -461,11 +461,11 @@ function Index() {
 
       <main className="relative z-10">
         <Hero lang={lang} />
-        <ProfileBio lang={lang} />
         <Stats lang={lang} />
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
         </Suspense>
+        <FeaturedTools lang={lang} />
         <Testimonials lang={lang} />
         <Contact lang={lang} />
       </main>
