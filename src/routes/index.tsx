@@ -466,7 +466,9 @@ function Index() {
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
         </Suspense>
-        <FeaturedTools lang={lang} />
+        <Suspense fallback={null}>
+          <FeaturedTools lang={lang} />
+        </Suspense>
         <Testimonials lang={lang} />
         <Contact lang={lang} />
       </main>
