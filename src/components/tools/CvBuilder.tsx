@@ -346,15 +346,17 @@ export function CvBuilder({ lang }: { lang: Lang }) {
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
       const pageW = pdf.internal.pageSize.getWidth();
       const pageH = pdf.internal.pageSize.getHeight();
-      const imgW = pageW;
+      const margin = 10;
+      const imgW = pageW - margin * 2;
       const imgH = (canvas.height * imgW) / canvas.width;
+      const availH = pageH - margin * 2;
 
-      if (imgH <= pageH) {
-        pdf.addImage(imgData, "JPEG", 0, 0, imgW, imgH);
+      if (imgH <= availH) {
+        pdf.addImage(imgData, "JPEG", margin, margin, imgW, imgH);
       } else {
         // Paginate: slice canvas into A4-height strips
         let renderedPx = 0;
-        const sliceHpx = (pageH * canvas.width) / imgW;
+        const sliceHpx = (availH * canvas.width) / imgW;
         let first = true;
         while (renderedPx < canvas.height) {
           const remainingPx = canvas.height - renderedPx;
@@ -370,7 +372,7 @@ export function CvBuilder({ lang }: { lang: Lang }) {
           const sliceData = slice.toDataURL("image/jpeg", 0.95);
           const drawnH = (takePx * imgW) / canvas.width;
           if (!first) pdf.addPage();
-          pdf.addImage(sliceData, "JPEG", 0, 0, imgW, drawnH);
+          pdf.addImage(sliceData, "JPEG", margin, margin, imgW, drawnH);
           first = false;
           renderedPx += takePx;
         }
