@@ -771,16 +771,19 @@ export const TOOLS: ToolMeta[] = [
     id: "cv-builder",
     category: "career",
     icon: "FileUser",
-    title: { ar: "منشئ السيرة الذاتية بالذكاء الاصطناعي", en: "AI CV Builder" },
+    title: {
+      ar: "منشئ السيرة الذاتية بالذكاء الاصطناعي (عربي وإنجليزي)",
+      en: "AI CV Builder (Arabic & English)",
+    },
     short: {
-      ar: "أنشئ سيرة ذاتية احترافية بمساعدة الذكاء الاصطناعي مع قوالب فاخرة وتصدير PDF.",
-      en: "Build a professional CV with AI assistance, premium templates, and PDF export.",
+      ar: "أنشئ سيرة ذاتية احترافية بالعربية والإنجليزية معاً بمساعدة الذكاء الاصطناعي مع قوالب فاخرة وتصدير PDF.",
+      en: "Build a professional CV in both Arabic and English with AI assistance, premium templates, and PDF export.",
     },
     standard: { ar: "Career Tools", en: "Career Tools" },
-    formula: "AI + Premium Templates + PDF",
+    formula: "AI + Bilingual + Premium Templates + PDF",
     about: {
-      ar: "اختر قالباً، أدخل بياناتك في كل قسم، حسّن النصوص بالذكاء الاصطناعي بنقرة واحدة، أرفع صورتك الشخصية (للقوالب المناسبة)، ثم صدّر سيرتك بصيغة PDF بجودة طباعة.",
-      en: "Pick a template, fill in each section, polish text with AI in one click, upload your photo (for photo templates), and export a print-quality PDF.",
+      ar: 'اختر قالباً، أدخل بياناتك بأي لغة تفضلها، ثم اضغط "ترجمة" ليعدّ الذكاء الاصطناعي النسخة الأخرى تلقائياً (مع نقل الأسماء والجهات بالحروف المناسبة بدل ترجمتها حرفياً) — النسختان مستقلتان تماماً ويمكن تعديل كل واحدة على حدة. حسّن النصوص بالذكاء الاصطناعي بنقرة واحدة، أرفع صورتك الشخصية (للقوالب المناسبة)، ثم صدّر كل نسخة بصيغة PDF بجودة طباعة.',
+      en: 'Pick a template, fill in your data in whichever language you prefer, then hit "Translate" to have AI prepare the other version automatically (transliterating names and organizations rather than translating them literally) — the two versions are fully independent and each can be edited separately. Polish text with AI in one click, upload your photo (for photo templates), and export each version as a print-quality PDF.',
     },
     whenToUse: {
       ar: ["التقديم على وظيفة جديدة", "تحديث السيرة الذاتية بشكل دوري", "التحضير لمقابلات تنفيذية"],
