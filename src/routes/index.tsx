@@ -78,6 +78,7 @@ export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"))
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
+const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
 const FloatingIconsLayer = lazy(() =>
   import("@/components/home/FloatingIconsLayer").then((m) => ({ default: m.FloatingIconsLayer })),
 );
@@ -461,10 +462,12 @@ function Index() {
 
       <main className="relative z-10">
         <Hero lang={lang} />
-        <ProfileBio lang={lang} />
         <Stats lang={lang} />
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <FeaturedTools lang={lang} />
         </Suspense>
         <Testimonials lang={lang} />
         <Contact lang={lang} />
@@ -1869,6 +1872,30 @@ export function Contact({ lang }: { lang: Lang }) {
           title={t.contact.title[lang]}
           sub={t.contact.sub[lang]}
         />
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#f3d28a]">
+            {lang === "ar" ? "تواصل معنا مباشرة" : "Contact us directly"}
+          </span>
+          <a
+            href="tel:+966560409811"
+            onMouseEnter={playHover}
+            onClick={playClick}
+            className="group inline-flex items-center gap-3 rounded-full border border-[#d7aa52]/50 bg-gradient-to-r from-[#07182c] via-[#0a223f] to-[#07182c] px-6 py-3 shadow-[0_10px_40px_-15px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:shadow-[0_18px_50px_-15px_rgba(215,170,82,0.75)]"
+            dir="ltr"
+          >
+            <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-inner">
+              <Phone className="size-5" />
+            </span>
+            <span className="flex flex-col items-start leading-tight">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#d7aa52]">
+                {lang === "ar" ? "اتصل الآن" : "Call now"}
+              </span>
+              <span className="font-mono text-xl font-black tracking-wider gold-text">
+                +966 56 040 9811
+              </span>
+            </span>
+          </a>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
