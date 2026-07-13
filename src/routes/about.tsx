@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence } from "motion/react";
-import { Suspense, useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
-import { About, Experience, BeforeAfter, Skills, SkillModal, Certs } from "@/routes/index";
+import { Experience, BeforeAfter, Skills, SkillModal, Certs } from "@/routes/index";
 import type { SkillItem } from "@/components/home/SkillModal";
+
+const CinematicAbout = lazy(() => import("@/components/about/CinematicAbout"));
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -30,7 +32,9 @@ function AboutPage() {
       {(lang) => (
         <>
           <div id="about">
-            <About lang={lang} />
+            <Suspense fallback={<div className="min-h-screen" />}>
+              <CinematicAbout lang={lang} />
+            </Suspense>
           </div>
           <div id="experience">
             <Experience lang={lang} />
