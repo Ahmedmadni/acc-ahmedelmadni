@@ -104,7 +104,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   id="about-hero-heading"
                   className="mt-6 text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl gold-text"
                 >
-                  <SplitReveal text={headline} />
+                  <SplitReveal text={headline} lang={lang} />
                 </h1>
 
                 <p
