@@ -292,23 +292,25 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
 
 /* ============ HELPERS ============ */
 
-function SplitReveal({ text }: { text: string }) {
-  const chars = Array.from(text);
+function SplitReveal({ text, lang }: { text: string; lang: Lang }) {
+  // For Arabic, split by word to preserve letter joining (ligatures).
+  // For English, split per character for the classic staggered reveal.
+  const tokens = lang === "ar" ? text.split(/(\s+)/) : Array.from(text);
   return (
     <span className="inline-flex flex-wrap justify-start">
-      {chars.map((c, i) => (
+      {tokens.map((tok, i) => (
         <motion.span
           key={i}
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
             duration: 0.7,
-            delay: 0.05 + i * 0.035,
+            delay: 0.05 + i * (lang === "ar" ? 0.09 : 0.035),
             ease: [0.22, 1, 0.36, 1],
           }}
           className="inline-block whitespace-pre"
         >
-          {c}
+          {tok}
         </motion.span>
       ))}
     </span>
