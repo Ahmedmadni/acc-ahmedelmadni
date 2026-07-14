@@ -261,30 +261,6 @@ export type Database = {
         }
         Relationships: []
       }
-      crm_message_templates: {
-        Row: {
-          created_at: string
-          id: string
-          label: string
-          message: string
-          sort_order: number
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          label: string
-          message: string
-          sort_order?: number
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          label?: string
-          message?: string
-          sort_order?: number
-        }
-        Relationships: []
-      }
       exam_questions: {
         Row: {
           answer_index: number
