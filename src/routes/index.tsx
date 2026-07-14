@@ -1315,9 +1315,31 @@ export function Experience({ lang }: { lang: Lang }) {
       return data;
     },
   });
-  const items = data ?? [];
 
-  if (!isLoading && items.length === 0) return null;
+  // Fallback to hardcoded i18n content when DB is empty so the timeline
+  // is always visible on the About page.
+  const fallback = t.experience.items.map((it, i) => ({
+    id: `fallback-exp-${i}`,
+    role_ar: it.role.ar,
+    role_en: it.role.en,
+    company_ar: it.company.ar,
+    company_en: it.company.en,
+    company_logo_url: null,
+    date_ar: it.date.ar,
+    date_en: it.date.en,
+    points_ar: it.points.ar,
+    points_en: it.points.en,
+  }));
+  const items = data && data.length > 0 ? data : (isLoading ? [] : fallback);
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 80%", "end 20%"],
+  });
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  if (items.length === 0) return null;
 
   return (
     <section id="experience" className="py-14">
@@ -1327,9 +1349,21 @@ export function Experience({ lang }: { lang: Lang }) {
           title={t.experience.title[lang]}
           sub={t.experience.sub[lang]}
         />
-        <div className="relative mt-16">
-          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2" />
-          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto" />
+        <div ref={sectionRef} className="relative mt-16">
+          {/* Static rail */}
+          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 opacity-30" />
+          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto opacity-30" />
+          {/* Scroll-driven gold progress line */}
+          <motion.div
+            aria-hidden
+            style={{ height: lineHeight }}
+            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+          />
+          <motion.div
+            aria-hidden
+            style={{ height: lineHeight }}
+            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+          />
           <div className="space-y-16">
             {items.map((item, i) => (
               <TimelineItem key={item.id} item={item} index={i} lang={lang} />
