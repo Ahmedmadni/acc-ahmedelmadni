@@ -36,8 +36,9 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
     offset: ["start start", "end start"],
   });
 
-  const yImg = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
-  const scaleImg = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const yImg = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  // Image starts big on load, shrinks back to its natural size as user scrolls
+  const scaleImg = useTransform(scrollYProgress, [0, 0.6], [1.35, 1]);
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const rotateBadge = useTransform(scrollYProgress, [0, 1], [0, 90]);
