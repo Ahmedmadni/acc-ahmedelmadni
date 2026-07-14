@@ -545,6 +545,81 @@ export const t = {
           },
         ],
       },
+      {
+        h: { ar: "تصميم وتطوير المواقع", en: "Web Design & Development" },
+        items: [
+          {
+            ar: "تصميم واجهات المواقع (UI/UX)",
+            en: "Web UI/UX Design",
+            level: 88,
+            desc: {
+              ar: "تصميم واجهات حديثة متجاوبة تركز على تجربة المستخدم وسهولة الوصول.",
+              en: "Modern responsive interface design focused on UX and accessibility.",
+            },
+            tools: ["Figma", "Adobe XD", "Illustrator"],
+            kpis: {
+              ar: ["واجهات متجاوبة", "تصميم متمركز حول المستخدم"],
+              en: ["Responsive UIs", "User-centric design"],
+            },
+          },
+          {
+            ar: "تطوير الواجهات الأمامية",
+            en: "Front-end Development",
+            level: 85,
+            desc: {
+              ar: "بناء واجهات تفاعلية باستخدام React وTailwind CSS مع أداء عالٍ.",
+              en: "Building interactive front-ends with React and Tailwind CSS with high performance.",
+            },
+            tools: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+            kpis: {
+              ar: ["أداء ممتاز", "مكونات قابلة لإعادة الاستخدام"],
+              en: ["Great performance", "Reusable components"],
+            },
+          },
+          {
+            ar: "إنشاء المواقع المهنية",
+            en: "Professional Website Creation",
+            level: 90,
+            desc: {
+              ar: "بناء مواقع مهنية وشخصية كاملة — من التصميم إلى النشر — مع تحسين محركات البحث.",
+              en: "Building complete professional/personal sites — design to deployment — with SEO.",
+            },
+            tools: ["React", "TanStack Start", "Supabase", "Cloudflare"],
+            kpis: {
+              ar: ["نشر سريع", "SEO محسّن"],
+              en: ["Fast deployment", "SEO optimized"],
+            },
+          },
+          {
+            ar: "تحسين محركات البحث (SEO)",
+            en: "Search Engine Optimization",
+            level: 82,
+            desc: {
+              ar: "تحسين ترتيب المواقع في نتائج البحث عبر تحسين المحتوى والبنية التقنية.",
+              en: "Improving site rankings through content and technical structure optimization.",
+            },
+            tools: ["Google Search Console", "SEMrush", "Analytics"],
+            kpis: {
+              ar: ["تحسين ترتيب البحث", "زيادة الزيارات"],
+              en: ["Higher rankings", "Increased traffic"],
+            },
+          },
+          {
+            ar: "المحتوى الرقمي والنشر",
+            en: "Digital Content & Publishing",
+            level: 84,
+            desc: {
+              ar: "إعداد ونشر المحتوى المهني الرقمي على المنصات المختلفة.",
+              en: "Preparing and publishing professional digital content across platforms.",
+            },
+            tools: ["WordPress", "Markdown", "CMS"],
+            kpis: {
+              ar: ["محتوى منظم", "نشر منتظم"],
+              en: ["Structured content", "Regular publishing"],
+            },
+          },
+        ],
+      },
     ],
   },
   beforeAfter: {

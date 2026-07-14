@@ -36,8 +36,9 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
     offset: ["start start", "end start"],
   });
 
-  const yImg = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
-  const scaleImg = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const yImg = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  // Image starts big on load, shrinks back to its natural size as user scrolls
+  const scaleImg = useTransform(scrollYProgress, [0, 0.6], [1.35, 1]);
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const rotateBadge = useTransform(scrollYProgress, [0, 1], [0, 90]);
@@ -103,7 +104,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   id="about-hero-heading"
                   className="mt-6 text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl gold-text"
                 >
-                  <SplitReveal text={headline} />
+                  <SplitReveal text={headline} lang={lang} />
                 </h1>
 
                 <p
@@ -241,32 +242,8 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
         <MarqueeStrip lang={lang} />
       </div>
 
-      {/* ============ SECOND-BIO REVEAL ============ */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-5xl px-4 sm:px-8 lg:px-16">
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.9 }}
-            className="text-2xl font-black leading-[1.5] sm:text-3xl lg:text-4xl"
-            style={{ color: "var(--fg)" }}
-          >
-            <span className="text-[#d7aa52]">“</span>
-            {t.about.body2[lang]}
-            <span className="text-[#d7aa52]">”</span>
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            className="mt-6 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]"
-          >
-            — {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
-          </motion.div>
-        </div>
-      </section>
+      {/* (Second-bio quote intentionally removed — timeline experience below tells the story) */}
+
 
       {/* ============ BIG-NUMBER STATS ============ */}
       <section className="relative py-16">
@@ -315,23 +292,25 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
 
 /* ============ HELPERS ============ */
 
-function SplitReveal({ text }: { text: string }) {
-  const chars = Array.from(text);
+function SplitReveal({ text, lang }: { text: string; lang: Lang }) {
+  // For Arabic, split by word to preserve letter joining (ligatures).
+  // For English, split per character for the classic staggered reveal.
+  const tokens = lang === "ar" ? text.split(/(\s+)/) : Array.from(text);
   return (
     <span className="inline-flex flex-wrap justify-start">
-      {chars.map((c, i) => (
+      {tokens.map((tok, i) => (
         <motion.span
           key={i}
           initial={{ y: "100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
             duration: 0.7,
-            delay: 0.05 + i * 0.035,
+            delay: 0.05 + i * (lang === "ar" ? 0.09 : 0.035),
             ease: [0.22, 1, 0.36, 1],
           }}
           className="inline-block whitespace-pre"
         >
-          {c}
+          {tok}
         </motion.span>
       ))}
     </span>

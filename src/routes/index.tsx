@@ -1315,9 +1315,31 @@ export function Experience({ lang }: { lang: Lang }) {
       return data;
     },
   });
-  const items = data ?? [];
 
-  if (!isLoading && items.length === 0) return null;
+  // Fallback to hardcoded i18n content when DB is empty so the timeline
+  // is always visible on the About page.
+  const fallback = t.experience.items.map((it, i) => ({
+    id: `fallback-exp-${i}`,
+    role_ar: it.role.ar,
+    role_en: it.role.en,
+    company_ar: it.company.ar,
+    company_en: it.company.en,
+    company_logo_url: null,
+    date_ar: it.date.ar,
+    date_en: it.date.en,
+    points_ar: it.points.ar,
+    points_en: it.points.en,
+  }));
+  const items = data && data.length > 0 ? data : (isLoading ? [] : fallback);
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 80%", "end 20%"],
+  });
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  if (items.length === 0) return null;
 
   return (
     <section id="experience" className="py-14">
@@ -1327,9 +1349,21 @@ export function Experience({ lang }: { lang: Lang }) {
           title={t.experience.title[lang]}
           sub={t.experience.sub[lang]}
         />
-        <div className="relative mt-16">
-          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2" />
-          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto" />
+        <div ref={sectionRef} className="relative mt-16">
+          {/* Static rail */}
+          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 opacity-30" />
+          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto opacity-30" />
+          {/* Scroll-driven gold progress line */}
+          <motion.div
+            aria-hidden
+            style={{ height: lineHeight }}
+            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+          />
+          <motion.div
+            aria-hidden
+            style={{ height: lineHeight }}
+            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+          />
           <div className="space-y-16">
             {items.map((item, i) => (
               <TimelineItem key={item.id} item={item} index={i} lang={lang} />
@@ -1360,7 +1394,7 @@ function TimelineItem({
   index: number;
   lang: Lang;
 }) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const left = index % 2 === 0;
   const [revealed, setRevealed] = useState(false);
@@ -1368,10 +1402,36 @@ function TimelineItem({
   const company = lang === "ar" ? item.company_ar : item.company_en;
   const date = lang === "ar" ? item.date_ar : item.date_en;
   const points = lang === "ar" ? item.points_ar : item.points_en;
+
+  // Scroll-driven card motion: subtle parallax + spring settle as user scrolls
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const yCard = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [60, 0, -30]), {
+    stiffness: 60,
+    damping: 20,
+  });
+  const scaleDot = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0.4, 1.4, 1.4, 0.9]);
+  const glowDot = useTransform(
+    scrollYProgress,
+    [0, 0.35, 0.65, 1],
+    [
+      "0 0 0px rgba(215,170,82,0)",
+      "0 0 24px rgba(215,170,82,0.9)",
+      "0 0 24px rgba(215,170,82,0.9)",
+      "0 0 0px rgba(215,170,82,0)",
+    ],
+  );
+
   return (
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-      <div className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto" />
       <motion.div
+        style={{ scale: scaleDot, boxShadow: glowDot }}
+        className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
+      />
+      <motion.div
+        style={{ y: yCard }}
         initial={{ opacity: 0, x: left ? -50 : 50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.7 }}
@@ -1398,14 +1458,21 @@ function TimelineItem({
         </button>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
           {points.map((p, j) => (
-            <li key={j} className="flex gap-2">
+            <motion.li
+              key={j}
+              initial={{ opacity: 0, x: left ? -12 : 12 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.15 + j * 0.08 }}
+              className="flex gap-2"
+            >
               <span className="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-[#d7aa52]" />
               <span>{p}</span>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </motion.div>
       <motion.div
+        style={{ y: yCard }}
         initial={{ opacity: 0, scale: 0.7, rotate: left ? 10 : -10 }}
         animate={inView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
         transition={{ duration: 0.9, delay: 0.2, type: "spring" }}
