@@ -1490,13 +1490,39 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
       return data;
     },
   });
-  const groups = groupsQ.data ?? [];
-  const items = itemsQ.data ?? [];
+  const dbGroups = groupsQ.data ?? [];
+  const dbItems = itemsQ.data ?? [];
   const isLoading = groupsQ.isLoading || itemsQ.isLoading;
+
+  // Fallback to hardcoded content from i18n when DB has no published groups
+  const fallbackGroups = t.skills.groups.map((g, gi) => ({
+    id: `fallback-g-${gi}`,
+    heading_ar: g.h.ar,
+    heading_en: g.h.en,
+  }));
+  const fallbackItems = t.skills.groups.flatMap((g, gi) =>
+    g.items.map((it, ii) => ({
+      id: `fallback-i-${gi}-${ii}`,
+      group_id: `fallback-g-${gi}`,
+      name_ar: it.ar,
+      name_en: it.en,
+      level: it.level,
+      desc_ar: it.desc.ar,
+      desc_en: it.desc.en,
+      tools: it.tools,
+      kpis_ar: it.kpis.ar,
+      kpis_en: it.kpis.en,
+    })),
+  );
+
+  const useFallback = dbGroups.length === 0;
+  const groups = useFallback ? fallbackGroups : dbGroups;
+  const items = useFallback ? fallbackItems : dbItems;
   const activeGroup = groups[active];
   const activeItems = activeGroup ? items.filter((i) => i.group_id === activeGroup.id) : [];
 
-  if (!isLoading && groups.length === 0) return null;
+  if (isLoading && dbGroups.length === 0 && !useFallback) return null;
+
 
   return (
     <section id="skills" className="relative py-14">
@@ -1872,30 +1898,12 @@ export function Contact({ lang }: { lang: Lang }) {
           title={t.contact.title[lang]}
           sub={t.contact.sub[lang]}
         />
-        <div className="mt-6 flex flex-col items-center gap-3">
-          <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#f3d28a]">
-            {lang === "ar" ? "تواصل معنا مباشرة" : "Contact us directly"}
-          </span>
-          <a
-            href="tel:+966560409811"
-            onMouseEnter={playHover}
-            onClick={playClick}
-            className="group inline-flex items-center gap-3 rounded-full border border-[#d7aa52]/50 bg-gradient-to-r from-[#07182c] via-[#0a223f] to-[#07182c] px-6 py-3 shadow-[0_10px_40px_-15px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:shadow-[0_18px_50px_-15px_rgba(215,170,82,0.75)]"
-            dir="ltr"
-          >
-            <span className="flex size-10 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-inner">
-              <Phone className="size-5" />
-            </span>
-            <span className="flex flex-col items-start leading-tight">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#d7aa52]">
-                {lang === "ar" ? "اتصل الآن" : "Call now"}
-              </span>
-              <span className="font-mono text-xl font-black tracking-wider gold-text">
-                +966 56 040 9811
-              </span>
-            </span>
+        <div className="mt-4 text-center text-xs" style={{ color: "var(--fg-soft)" }}>
+          <a href="tel:+966560409811" dir="ltr" className="font-mono hover:text-[#d7aa52]">
+            +966 56 040 9811
           </a>
         </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -2038,10 +2046,17 @@ export function Footer({ lang }: { lang: Lang }) {
           </div>
           <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
             <li dir="ltr">
-              <a href="tel:+966560409811" className="hover:text-[#d7aa52]">
-                0560409811
+              <a
+                href="tel:+966560409811"
+                className="group inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-r from-[#07182c] to-[#0a223f] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] shadow-[0_6px_20px_-10px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:text-[#f3d28a]"
+              >
+                <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]">
+                  <Phone className="size-3" />
+                </span>
+                <span className="font-mono tracking-wider">+966 56 040 9811</span>
               </a>
             </li>
+
             <li>
               <a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">
                 elmadnim@gmail.com
