@@ -242,32 +242,8 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
         <MarqueeStrip lang={lang} />
       </div>
 
-      {/* ============ SECOND-BIO REVEAL ============ */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-5xl px-4 sm:px-8 lg:px-16">
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.9 }}
-            className="text-2xl font-black leading-[1.5] sm:text-3xl lg:text-4xl"
-            style={{ color: "var(--fg)" }}
-          >
-            <span className="text-[#d7aa52]">“</span>
-            {t.about.body2[lang]}
-            <span className="text-[#d7aa52]">”</span>
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            className="mt-6 text-xs font-bold uppercase tracking-[0.3em] text-[#d7aa52]"
-          >
-            — {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
-          </motion.div>
-        </div>
-      </section>
+      {/* (Second-bio quote intentionally removed — timeline experience below tells the story) */}
+
 
       {/* ============ BIG-NUMBER STATS ============ */}
       <section className="relative py-16">
