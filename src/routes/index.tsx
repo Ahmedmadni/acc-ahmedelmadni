@@ -456,9 +456,6 @@ function Index() {
 
       <Navbar lang={lang} theme={theme} onToggle={toggleLang} onTheme={toggleTheme} />
 
-      <Suspense fallback={null}>
-        <FloatingIconsLayer />
-      </Suspense>
 
       <main className="relative z-10">
         <Hero lang={lang} />
