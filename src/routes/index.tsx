@@ -2109,7 +2109,7 @@ export function Footer({ lang }: { lang: Lang }) {
             {t.footer.contactCol[lang]}
           </div>
           <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
-            <li dir="ltr">
+            <li>
               <a
                 href="tel:+966560409811"
                 className="group inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-r from-[#07182c] to-[#0a223f] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] shadow-[0_6px_20px_-10px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:text-[#f3d28a]"
@@ -2117,7 +2117,7 @@ export function Footer({ lang }: { lang: Lang }) {
                 <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]">
                   <Phone className="size-3" />
                 </span>
-                <span className="font-mono tracking-wider">+966 56 040 9811</span>
+                <span dir="ltr" className="font-mono tracking-wider">+966 56 040 9811</span>
               </a>
             </li>
 
