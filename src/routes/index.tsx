@@ -1885,8 +1885,20 @@ export function Certs({ lang }: { lang: Lang }) {
     },
   });
   const items = data ?? [];
+  const useFallback = !isLoading && items.length === 0;
+  const fallbackItems = t.certs.items.map((it, i) => ({
+    id: `fallback-${i}`,
+    title_ar: it.ar,
+    title_en: it.en,
+    issuer_ar: "",
+    issuer_en: "",
+    issue_date: "",
+    image_url: "",
+    credential_url: "",
+  }));
+  const displayItems = useFallback ? fallbackItems : items;
 
-  if (!isLoading && items.length === 0) return null;
+  if (isLoading) return null;
 
   return (
     <section className="py-14">
