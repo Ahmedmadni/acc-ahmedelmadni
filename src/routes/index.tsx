@@ -784,7 +784,30 @@ function HeroFrameSlideshow() {
     };
     if (video.readyState >= 1) seekStart();
     else video.addEventListener("loadedmetadata", seekStart, { once: true });
-    video.play().catch(() => {});
+
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const duration = video.duration;
+        if (!duration || !isFinite(duration)) return;
+        const vh = window.innerHeight || 1;
+        // map scroll [0..1.5vh] → currentTime [TRIM_START..duration]
+        const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.5)));
+        const target = TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
+        try {
+          video.currentTime = target;
+        } catch {
+          /* ignore */
+        }
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, [shouldRenderVideo]);
 
   if (!shouldRenderVideo) {
@@ -803,22 +826,12 @@ function HeroFrameSlideshow() {
   return (
     <video
       ref={videoRef}
-      autoPlay
       muted
       playsInline
-      preload="none"
+      preload="auto"
       poster={heroBg}
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
-      onEnded={(e) => {
-        const v = e.currentTarget;
-        try {
-          v.currentTime = TRIM_START;
-        } catch {
-          /* ignore */
-        }
-        v.play().catch(() => {});
-      }}
       className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
       style={{ opacity: videoReady ? 0.5 : 0 }}
     >
