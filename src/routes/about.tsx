@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence } from "motion/react";
 import { Suspense, lazy, useState } from "react";
 import { SubPageShell } from "@/components/SubPageShell";
-import { Experience, BeforeAfter, Skills, SkillModal, Certs } from "@/routes/index";
+import { Experience, Skills, SkillModal, Certs } from "@/routes/index";
 import type { SkillItem } from "@/components/home/SkillModal";
 
 const CinematicAbout = lazy(() => import("@/components/about/CinematicAbout"));
@@ -38,7 +38,6 @@ function AboutPage() {
           </div>
           <div id="experience">
             <Experience lang={lang} />
-            <BeforeAfter lang={lang} />
           </div>
           <div id="skills">
             <Skills lang={lang} onOpen={setOpenSkill} />

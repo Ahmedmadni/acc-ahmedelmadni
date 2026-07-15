@@ -271,17 +271,22 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {EXPERTISE.map((e, i) => (
-              <motion.span
+              <motion.div
                 key={e.ar}
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.5, delay: i * 0.04 }}
                 whileHover={{ y: -4, scale: 1.05 }}
-                className="cursor-default rounded-full border border-[#d7aa52]/30 bg-white/[0.03] px-5 py-2.5 text-sm font-semibold text-[#f3d28a] transition-colors hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
               >
-                {lang === "ar" ? e.ar : e.en}
-              </motion.span>
+                <Link
+                  to="/request-service"
+                  search={{ service: e.service }}
+                  className="inline-block rounded-full border border-[#d7aa52]/30 bg-white/[0.03] px-5 py-2.5 text-sm font-semibold text-[#f3d28a] transition-colors hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
+                >
+                  {lang === "ar" ? e.ar : e.en}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -403,18 +408,20 @@ function MarqueeStrip({ lang }: { lang: Lang }) {
 }
 
 const EXPERTISE = [
-  { ar: "التقارير المالية", en: "Financial Reporting" },
-  { ar: "محاسبة التكاليف", en: "Cost Accounting" },
-  { ar: "التحليل المالي", en: "Financial Analysis" },
-  { ar: "الرقابة الداخلية", en: "Internal Controls" },
-  { ar: "الميزانيات التقديرية", en: "Budgeting" },
-  { ar: "ضريبة القيمة المضافة", en: "VAT" },
-  { ar: "الزكاة", en: "Zakat" },
-  { ar: "الفوترة الإلكترونية", en: "E-Invoicing" },
-  { ar: "IFRS", en: "IFRS" },
-  { ar: "قوائم مالية", en: "Financial Statements" },
-  { ar: "Power BI", en: "Power BI" },
-  { ar: "SAP · Oracle", en: "SAP · Oracle" },
-  { ar: "Excel المتقدم", en: "Advanced Excel" },
-  { ar: "الرواتب", en: "Payroll" },
+  { ar: "التقارير المالية", en: "Financial Reporting", service: "financial-reports" },
+  { ar: "محاسبة التكاليف", en: "Cost Accounting", service: "cost-analysis" },
+  { ar: "التحليل المالي", en: "Financial Analysis", service: "cost-analysis" },
+  { ar: "الرقابة الداخلية", en: "Internal Controls", service: "consulting" },
+  { ar: "الميزانيات التقديرية", en: "Budgeting", service: "consulting" },
+  { ar: "ضريبة القيمة المضافة", en: "VAT", service: "bank-reconciliation" },
+  { ar: "الزكاة", en: "Zakat", service: "bank-reconciliation" },
+  { ar: "الفوترة الإلكترونية", en: "E-Invoicing", service: "bank-reconciliation" },
+  { ar: "IFRS", en: "IFRS", service: "financial-reports" },
+  { ar: "قوائم مالية", en: "Financial Statements", service: "financial-reports" },
+  { ar: "Power BI", en: "Power BI", service: "power-bi" },
+  { ar: "SAP · Oracle", en: "SAP · Oracle", service: "power-bi" },
+  { ar: "Excel المتقدم", en: "Advanced Excel", service: "power-bi" },
+  { ar: "الرواتب", en: "Payroll", service: "consulting" },
+  { ar: "المطالبات المالية", en: "Financial Claims", service: "financial-claims" },
+  { ar: "تصميم المواقع", en: "Website Design", service: "website-design" },
 ];
