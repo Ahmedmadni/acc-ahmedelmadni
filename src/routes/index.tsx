@@ -1908,7 +1908,7 @@ export function Certs({ lang }: { lang: Lang }) {
           title={t.certs.title[lang]}
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((c, i) => {
+          {displayItems.map((c, i) => {
             const title = lang === "ar" ? c.title_ar : c.title_en;
             const issuer = lang === "ar" ? c.issuer_ar : c.issuer_en;
             const card = (
