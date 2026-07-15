@@ -79,9 +79,6 @@ export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
-const FloatingIconsLayer = lazy(() =>
-  import("@/components/home/FloatingIconsLayer").then((m) => ({ default: m.FloatingIconsLayer })),
-);
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -456,9 +453,6 @@ function Index() {
 
       <Navbar lang={lang} theme={theme} onToggle={toggleLang} onTheme={toggleTheme} />
 
-      <Suspense fallback={null}>
-        <FloatingIconsLayer />
-      </Suspense>
 
       <main className="relative z-10">
         <Hero lang={lang} />
@@ -787,7 +781,30 @@ function HeroFrameSlideshow() {
     };
     if (video.readyState >= 1) seekStart();
     else video.addEventListener("loadedmetadata", seekStart, { once: true });
-    video.play().catch(() => {});
+
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const duration = video.duration;
+        if (!duration || !isFinite(duration)) return;
+        const vh = window.innerHeight || 1;
+        // map scroll [0..1.5vh] → currentTime [TRIM_START..duration]
+        const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.5)));
+        const target = TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
+        try {
+          video.currentTime = target;
+        } catch {
+          /* ignore */
+        }
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, [shouldRenderVideo]);
 
   if (!shouldRenderVideo) {
@@ -806,22 +823,12 @@ function HeroFrameSlideshow() {
   return (
     <video
       ref={videoRef}
-      autoPlay
       muted
       playsInline
-      preload="none"
+      preload="auto"
       poster={heroBg}
       aria-hidden="true"
       onLoadedData={() => setVideoReady(true)}
-      onEnded={(e) => {
-        const v = e.currentTarget;
-        try {
-          v.currentTime = TRIM_START;
-        } catch {
-          /* ignore */
-        }
-        v.play().catch(() => {});
-      }}
       className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
       style={{ opacity: videoReady ? 0.5 : 0 }}
     >
@@ -1888,8 +1895,20 @@ export function Certs({ lang }: { lang: Lang }) {
     },
   });
   const items = data ?? [];
+  const useFallback = !isLoading && items.length === 0;
+  const fallbackItems = t.certs.items.map((it, i) => ({
+    id: `fallback-${i}`,
+    title_ar: it.ar,
+    title_en: it.en,
+    issuer_ar: "",
+    issuer_en: "",
+    issue_date: "",
+    image_url: "",
+    credential_url: "",
+  }));
+  const displayItems = useFallback ? fallbackItems : items;
 
-  if (!isLoading && items.length === 0) return null;
+  if (isLoading) return null;
 
   return (
     <section className="py-14">
@@ -1899,7 +1918,7 @@ export function Certs({ lang }: { lang: Lang }) {
           title={t.certs.title[lang]}
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((c, i) => {
+          {displayItems.map((c, i) => {
             const title = lang === "ar" ? c.title_ar : c.title_en;
             const issuer = lang === "ar" ? c.issuer_ar : c.issuer_en;
             const card = (
@@ -2112,7 +2131,7 @@ export function Footer({ lang }: { lang: Lang }) {
             {t.footer.contactCol[lang]}
           </div>
           <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
-            <li dir="ltr">
+            <li>
               <a
                 href="tel:+966560409811"
                 className="group inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-r from-[#07182c] to-[#0a223f] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] shadow-[0_6px_20px_-10px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:text-[#f3d28a]"
@@ -2120,7 +2139,7 @@ export function Footer({ lang }: { lang: Lang }) {
                 <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]">
                   <Phone className="size-3" />
                 </span>
-                <span className="font-mono tracking-wider">+966 56 040 9811</span>
+                <span dir="ltr" className="font-mono tracking-wider">+966 56 040 9811</span>
               </a>
             </li>
 
