@@ -1353,7 +1353,7 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
 
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["public-experience"],
     queryFn: async () => {
       const { data, error } = await supabase
