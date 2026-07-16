@@ -783,7 +783,7 @@ function HeroFrameSlideshow() {
       const duration = video.duration;
       if (!duration || !isFinite(duration)) return TRIM_START;
       const vh = window.innerHeight || 1;
-      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.5)));
+      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.2)));
       return TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
     };
 
