@@ -360,45 +360,23 @@ function StatBlock({
 }
 
 function MarqueeStrip({ lang }: { lang: Lang }) {
-  const items = lang === "ar"
-    ? [
-        "IFRS",
-        "ZATCA",
-        "ضريبة القيمة المضافة",
-        "الإقرار الزكوي",
-        "التقارير المالية",
-        "Power BI",
-        "SAP",
-        "التحليل المالي",
-        "المقاولات",
-        "الضيافة",
-      ]
-    : [
-        "IFRS",
-        "ZATCA",
-        "VAT",
-        "Zakat Filings",
-        "Financial Reporting",
-        "Power BI",
-        "SAP",
-        "Financial Analysis",
-        "Contracting",
-        "Hospitality",
-      ];
-  const line = [...items, ...items];
+  const line = [...EXPERTISE, ...EXPERTISE];
   return (
     <div className="relative flex whitespace-nowrap">
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
         className="flex shrink-0 items-center gap-8"
       >
-        {line.map((x, i) => (
-          <span
-            key={i}
-            className="inline-flex items-center gap-8 text-2xl font-black uppercase tracking-tight text-[#f3d28a]/70 sm:text-4xl"
-          >
-            {x}
+        {line.map((e, i) => (
+          <span key={i} className="inline-flex items-center gap-8">
+            <Link
+              to="/request-service"
+              search={{ service: e.service }}
+              className="text-2xl font-black uppercase tracking-tight text-[#f3d28a]/70 transition-colors hover:text-[#f3d28a] sm:text-4xl"
+            >
+              {lang === "ar" ? e.ar : e.en}
+            </Link>
             <span className="inline-block size-2 rounded-full bg-[#d7aa52]" />
           </span>
         ))}
@@ -406,6 +384,7 @@ function MarqueeStrip({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
 
 const EXPERTISE = [
   { ar: "التقارير المالية", en: "Financial Reporting", service: "financial-reports" },
