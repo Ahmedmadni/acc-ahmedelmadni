@@ -1380,7 +1380,7 @@ export function Experience({ lang }: { lang: Lang }) {
     points_ar: it.points.ar,
     points_en: it.points.en,
   }));
-  const items = data && data.length > 0 ? data : (isLoading ? [] : fallback);
+  const items = data && data.length > 0 ? data : fallback;
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
