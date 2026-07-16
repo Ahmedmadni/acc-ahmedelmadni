@@ -783,7 +783,7 @@ function HeroFrameSlideshow() {
       const duration = video.duration;
       if (!duration || !isFinite(duration)) return TRIM_START;
       const vh = window.innerHeight || 1;
-      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.5)));
+      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.2)));
       return TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
     };
 
@@ -918,9 +918,11 @@ function Hero({ lang }: { lang: Lang }) {
   ];
 
   return (
+    <div className="relative h-[160vh] sm:h-[200vh] lg:h-[220vh]">
+    <div className="sticky top-0 h-screen overflow-hidden">
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative flex h-full items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Background video / gradient */}
       <motion.div
@@ -1036,6 +1038,8 @@ function Hero({ lang }: { lang: Lang }) {
         </motion.div>
       </div>
     </section>
+    </div>
+    </div>
   );
 }
 
@@ -1349,7 +1353,7 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
 
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["public-experience"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -1376,7 +1380,7 @@ export function Experience({ lang }: { lang: Lang }) {
     points_ar: it.points.ar,
     points_en: it.points.en,
   }));
-  const items = data && data.length > 0 ? data : (isLoading ? [] : fallback);
+  const items = data && data.length > 0 ? data : fallback;
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
