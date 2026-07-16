@@ -918,9 +918,11 @@ function Hero({ lang }: { lang: Lang }) {
   ];
 
   return (
+    <div className="relative h-[160vh] sm:h-[200vh] lg:h-[220vh]">
+    <div className="sticky top-0 h-screen overflow-hidden">
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative flex h-full items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Background video / gradient */}
       <motion.div
