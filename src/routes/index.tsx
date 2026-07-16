@@ -1038,6 +1038,8 @@ function Hero({ lang }: { lang: Lang }) {
         </motion.div>
       </div>
     </section>
+    </div>
+    </div>
   );
 }
 
