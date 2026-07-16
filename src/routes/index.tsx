@@ -772,37 +772,76 @@ function HeroFrameSlideshow() {
     if (!shouldRenderVideo) return;
     const video = videoRef.current;
     if (!video) return;
-    const seekStart = () => {
+
+    let raf = 0;
+    let current = TRIM_START;
+    let target = TRIM_START;
+    let ready = false;
+    let running = false;
+
+    const computeTarget = () => {
+      const duration = video.duration;
+      if (!duration || !isFinite(duration)) return TRIM_START;
+      const vh = window.innerHeight || 1;
+      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.5)));
+      return TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
+    };
+
+    const tick = () => {
+      if (!ready) {
+        running = false;
+        return;
+      }
+      // Smoothly ease currentTime toward target to prevent visible jumps
+      const diff = target - current;
+      if (Math.abs(diff) < 0.005) {
+        current = target;
+      } else {
+        current += diff * 0.18;
+      }
       try {
-        video.currentTime = TRIM_START;
+        video.currentTime = current;
+      } catch {
+        /* ignore */
+      }
+      if (Math.abs(target - current) > 0.005) {
+        raf = requestAnimationFrame(tick);
+      } else {
+        running = false;
+      }
+    };
+
+    const schedule = () => {
+      target = computeTarget();
+      if (!running) {
+        running = true;
+        raf = requestAnimationFrame(tick);
+      }
+    };
+
+    const onMeta = () => {
+      ready = true;
+      // Initialize from current scroll position (survives reload / restored scroll)
+      current = target = computeTarget();
+      try {
+        video.currentTime = current;
       } catch {
         /* ignore */
       }
     };
-    if (video.readyState >= 1) seekStart();
-    else video.addEventListener("loadedmetadata", seekStart, { once: true });
 
-    let raf = 0;
-    const onScroll = () => {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        const duration = video.duration;
-        if (!duration || !isFinite(duration)) return;
-        const vh = window.innerHeight || 1;
-        // map scroll [0..1.5vh] → currentTime [TRIM_START..duration]
-        const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.5)));
-        const target = TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
-        try {
-          video.currentTime = target;
-        } catch {
-          /* ignore */
-        }
-      });
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    if (video.readyState >= 1) onMeta();
+    else video.addEventListener("loadedmetadata", onMeta, { once: true });
+
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    window.addEventListener("orientationchange", schedule);
+
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      window.removeEventListener("orientationchange", schedule);
+      video.removeEventListener("loadedmetadata", onMeta);
       cancelAnimationFrame(raf);
     };
   }, [shouldRenderVideo]);
