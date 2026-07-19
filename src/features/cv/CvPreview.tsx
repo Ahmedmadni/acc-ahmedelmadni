@@ -73,7 +73,15 @@ function ExpBlock({ e, accent }: { e: Experience; accent: string }) {
         <span style={{ fontSize: 12, color: "#64748b" }}>{e.period}</span>
       </div>
       {e.description && (
-        <p style={{ fontSize: 12.5, margin: "4px 0 0", lineHeight: 1.55, color: "#334155" }}>
+        <p
+          style={{
+            fontSize: 12.5,
+            margin: "4px 0 0",
+            lineHeight: 1.55,
+            color: "#334155",
+            textAlign: "justify",
+          }}
+        >
           {e.description}
         </p>
       )}

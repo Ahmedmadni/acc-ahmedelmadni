@@ -62,12 +62,13 @@ import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
 import mascotLinkedin from "@/assets/mascot-linkedin.webp";
 import mascotFacebook from "@/assets/mascot-facebook.webp";
 import mascotInstagram from "@/assets/mascot-instagram.webp";
-import heroVideoAsset from "@/assets/hero.webm.asset.json";
+import heroCinematic from "@/assets/hero-bg-cinematic.jpg";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
+import { MarqueeStrip } from "@/components/about/CinematicAbout";
 
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
@@ -78,9 +79,9 @@ export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"))
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
-const FloatingIconsLayer = lazy(() =>
-  import("@/components/home/FloatingIconsLayer").then((m) => ({ default: m.FloatingIconsLayer })),
-);
+const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
+const ServicesMarquee = lazy(() => import("@/components/home/ServicesMarquee"));
+const CertsShowcase = lazy(() => import("@/components/home/CertsShowcase"));
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -455,16 +456,23 @@ function Index() {
 
       <Navbar lang={lang} theme={theme} onToggle={toggleLang} onTheme={toggleTheme} />
 
-      <Suspense fallback={null}>
-        <FloatingIconsLayer />
-      </Suspense>
-
       <main className="relative z-10">
         <Hero lang={lang} />
-        <ProfileBio lang={lang} />
+        <Suspense fallback={null}>
+          <ServicesMarquee lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <CertsShowcase lang={lang} />
+        </Suspense>
+        <div className="relative border-y border-[#d7aa52]/20 bg-[#07182c]/60 backdrop-blur overflow-hidden py-6">
+          <MarqueeStrip lang={lang} />
+        </div>
         <Stats lang={lang} />
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <FeaturedTools lang={lang} />
         </Suspense>
         <Testimonials lang={lang} />
         <Contact lang={lang} />
@@ -754,76 +762,27 @@ function Typewriter({ words }: { words: string[] }) {
 
 /* ============= HERO BACKGROUND ============= */
 function HeroFrameSlideshow() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-  const [shouldRenderVideo, setShouldRenderVideo] = useState(false);
-
-  useEffect(() => {
-    const mqlMobile = window.matchMedia("(max-width: 767px)");
-    const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const conn = (
-      navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }
-    ).connection;
-    const lowBandwidth = !!conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType ?? "");
-    const allow = !mqlMobile.matches && !mqlReduce.matches && !lowBandwidth;
-    setShouldRenderVideo(allow);
-  }, []);
-
-  const TRIM_START = 0.5;
-
-  useEffect(() => {
-    if (!shouldRenderVideo) return;
-    const video = videoRef.current;
-    if (!video) return;
-    const seekStart = () => {
-      try {
-        video.currentTime = TRIM_START;
-      } catch {
-        /* ignore */
-      }
-    };
-    if (video.readyState >= 1) seekStart();
-    else video.addEventListener("loadedmetadata", seekStart, { once: true });
-    video.play().catch(() => {});
-  }, [shouldRenderVideo]);
-
-  if (!shouldRenderVideo) {
-    return (
+  return (
+    <>
+      <img
+        src={heroCinematic}
+        alt=""
+        aria-hidden="true"
+        width={1920}
+        height={1280}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, #04101f 0%, #06182d 60%, #04101f 100%)",
+            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, rgba(4,16,31,0.55) 0%, rgba(6,24,45,0.65) 60%, rgba(4,16,31,0.85) 100%)",
         }}
       />
-    );
-  }
-
-  return (
-    <video
-      ref={videoRef}
-      autoPlay
-      muted
-      playsInline
-      preload="none"
-      poster={heroBg}
-      aria-hidden="true"
-      onLoadedData={() => setVideoReady(true)}
-      onEnded={(e) => {
-        const v = e.currentTarget;
-        try {
-          v.currentTime = TRIM_START;
-        } catch {
-          /* ignore */
-        }
-        v.play().catch(() => {});
-      }}
-      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
-      style={{ opacity: videoReady ? 0.5 : 0 }}
-    >
-      <source src={`${heroVideoAsset.url}#t=0.5`} type="video/webm" />
-    </video>
+    </>
   );
 }
 
@@ -832,41 +791,6 @@ function Hero({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const { scrollY } = useScroll();
   const yBg = useTransform(scrollY, [0, 600], [0, 120]);
-
-  const features = [
-    {
-      icon: Star,
-      title: lang === "ar" ? "خبرة احترافية" : "Pro Experience",
-      desc:
-        lang === "ar"
-          ? "سنوات من الخبرة في المجال المالي والمحاسبي"
-          : "Years of expertise in finance & accounting",
-    },
-    {
-      icon: BarChart3,
-      title: lang === "ar" ? "تحليل مالي" : "Financial Analysis",
-      desc:
-        lang === "ar"
-          ? "تحليلات دقيقة تدعم اتخاذ القرارات"
-          : "Accurate analytics for sharper decisions",
-    },
-    {
-      icon: Wrench,
-      title: lang === "ar" ? "حلول مخصصة" : "Tailored Solutions",
-      desc:
-        lang === "ar"
-          ? "حلول مالية مصممة خصيصاً لأعمالك"
-          : "Financial solutions built around your business",
-    },
-    {
-      icon: ShieldCheck,
-      title: lang === "ar" ? "التزام وموثوقية" : "Trust & Compliance",
-      desc:
-        lang === "ar"
-          ? "التزام بأعلى معايير الجودة والدقة"
-          : "Held to the highest standards of accuracy",
-    },
-  ];
 
   return (
     <section
@@ -957,34 +881,6 @@ function Hero({ lang }: { lang: Lang }) {
             </div>
           </div>
         </div>
-
-        {/* BOTTOM FEATURE BAR */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1 }}
-          className="mt-16 rounded-[24px] border border-white/10 bg-[#0D1726]/70 p-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:p-5 mx-auto max-w-[1400px]"
-        >
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f, i) => {
-              const Icon = f.icon;
-              return (
-                <div
-                  key={i}
-                  className="group flex min-h-[120px] items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-all hover:border-[#D4A64A]/40 hover:bg-white/[0.04]"
-                >
-                  <div className="grid size-12 shrink-0 place-items-center rounded-xl border border-[#D4A64A]/30 bg-[#D4A64A]/10 text-[#D4A64A] transition-transform group-hover:scale-110">
-                    <Icon className="size-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[15px] font-bold text-white">{f.title}</div>
-                    <div className="mt-1 text-[12px] leading-[1.6] text-white/60">{f.desc}</div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
@@ -1300,7 +1196,7 @@ export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem
 
 /* ============= EXPERIENCE ============= */
 export function Experience({ lang }: { lang: Lang }) {
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["public-experience"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -1312,9 +1208,31 @@ export function Experience({ lang }: { lang: Lang }) {
       return data;
     },
   });
-  const items = data ?? [];
 
-  if (!isLoading && items.length === 0) return null;
+  // Fallback to hardcoded i18n content when DB is empty so the timeline
+  // is always visible on the About page.
+  const fallback = t.experience.items.map((it, i) => ({
+    id: `fallback-exp-${i}`,
+    role_ar: it.role.ar,
+    role_en: it.role.en,
+    company_ar: it.company.ar,
+    company_en: it.company.en,
+    company_logo_url: null,
+    date_ar: it.date.ar,
+    date_en: it.date.en,
+    points_ar: it.points.ar,
+    points_en: it.points.en,
+  }));
+  const items = data && data.length > 0 ? data : fallback;
+
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 80%", "end 20%"],
+  });
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  if (items.length === 0) return null;
 
   return (
     <section id="experience" className="py-14">
@@ -1324,9 +1242,21 @@ export function Experience({ lang }: { lang: Lang }) {
           title={t.experience.title[lang]}
           sub={t.experience.sub[lang]}
         />
-        <div className="relative mt-16">
-          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2" />
-          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto" />
+        <div ref={sectionRef} className="relative mt-16">
+          {/* Static rail */}
+          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 opacity-30" />
+          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto opacity-30" />
+          {/* Scroll-driven gold progress line */}
+          <motion.div
+            aria-hidden
+            style={{ height: lineHeight }}
+            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+          />
+          <motion.div
+            aria-hidden
+            style={{ height: lineHeight }}
+            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+          />
           <div className="space-y-16">
             {items.map((item, i) => (
               <TimelineItem key={item.id} item={item} index={i} lang={lang} />
@@ -1357,7 +1287,7 @@ function TimelineItem({
   index: number;
   lang: Lang;
 }) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const left = index % 2 === 0;
   const [revealed, setRevealed] = useState(false);
@@ -1365,10 +1295,36 @@ function TimelineItem({
   const company = lang === "ar" ? item.company_ar : item.company_en;
   const date = lang === "ar" ? item.date_ar : item.date_en;
   const points = lang === "ar" ? item.points_ar : item.points_en;
+
+  // Scroll-driven card motion: subtle parallax + spring settle as user scrolls
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const yCard = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [60, 0, -30]), {
+    stiffness: 60,
+    damping: 20,
+  });
+  const scaleDot = useTransform(scrollYProgress, [0, 0.35, 0.65, 1], [0.4, 1.4, 1.4, 0.9]);
+  const glowDot = useTransform(
+    scrollYProgress,
+    [0, 0.35, 0.65, 1],
+    [
+      "0 0 0px rgba(215,170,82,0)",
+      "0 0 24px rgba(215,170,82,0.9)",
+      "0 0 24px rgba(215,170,82,0.9)",
+      "0 0 0px rgba(215,170,82,0)",
+    ],
+  );
+
   return (
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-      <div className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto" />
       <motion.div
+        style={{ scale: scaleDot, boxShadow: glowDot }}
+        className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
+      />
+      <motion.div
+        style={{ y: yCard }}
         initial={{ opacity: 0, x: left ? -50 : 50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.7 }}
@@ -1395,14 +1351,21 @@ function TimelineItem({
         </button>
         <ul className="mt-4 space-y-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
           {points.map((p, j) => (
-            <li key={j} className="flex gap-2">
+            <motion.li
+              key={j}
+              initial={{ opacity: 0, x: left ? -12 : 12 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.15 + j * 0.08 }}
+              className="flex gap-2"
+            >
               <span className="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-[#d7aa52]" />
               <span>{p}</span>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </motion.div>
       <motion.div
+        style={{ y: yCard }}
         initial={{ opacity: 0, scale: 0.7, rotate: left ? 10 : -10 }}
         animate={inView ? { opacity: 1, scale: 1, rotate: 0 } : {}}
         transition={{ duration: 0.9, delay: 0.2, type: "spring" }}
@@ -1487,13 +1450,38 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
       return data;
     },
   });
-  const groups = groupsQ.data ?? [];
-  const items = itemsQ.data ?? [];
+  const dbGroups = groupsQ.data ?? [];
+  const dbItems = itemsQ.data ?? [];
   const isLoading = groupsQ.isLoading || itemsQ.isLoading;
+
+  // Fallback to hardcoded content from i18n when DB has no published groups
+  const fallbackGroups = t.skills.groups.map((g, gi) => ({
+    id: `fallback-g-${gi}`,
+    heading_ar: g.h.ar,
+    heading_en: g.h.en,
+  }));
+  const fallbackItems = t.skills.groups.flatMap((g, gi) =>
+    g.items.map((it, ii) => ({
+      id: `fallback-i-${gi}-${ii}`,
+      group_id: `fallback-g-${gi}`,
+      name_ar: it.ar,
+      name_en: it.en,
+      level: it.level,
+      desc_ar: it.desc.ar,
+      desc_en: it.desc.en,
+      tools: it.tools,
+      kpis_ar: it.kpis.ar,
+      kpis_en: it.kpis.en,
+    })),
+  );
+
+  const useFallback = dbGroups.length === 0;
+  const groups = useFallback ? fallbackGroups : dbGroups;
+  const items = useFallback ? fallbackItems : dbItems;
   const activeGroup = groups[active];
   const activeItems = activeGroup ? items.filter((i) => i.group_id === activeGroup.id) : [];
 
-  if (!isLoading && groups.length === 0) return null;
+  if (isLoading && dbGroups.length === 0 && !useFallback) return null;
 
   return (
     <section id="skills" className="relative py-14">
@@ -1777,88 +1765,6 @@ function Testimonials({ lang }: { lang: Lang }) {
   );
 }
 
-/* ============= CERTS ============= */
-export function Certs({ lang }: { lang: Lang }) {
-  const { data, isLoading } = useQuery({
-    queryKey: ["public-certifications"],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from("certifications")
-        .select("*")
-        .eq("is_published", true)
-        .order("sort_order", { ascending: true });
-      if (error) throw error;
-      return data;
-    },
-  });
-  const items = data ?? [];
-
-  if (!isLoading && items.length === 0) return null;
-
-  return (
-    <section className="py-14">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle
-          eyebrow={lang === "ar" ? "التطوير المهني" : "Development"}
-          title={t.certs.title[lang]}
-        />
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((c, i) => {
-            const title = lang === "ar" ? c.title_ar : c.title_en;
-            const issuer = lang === "ar" ? c.issuer_ar : c.issuer_en;
-            const card = (
-              <motion.div
-                key={c.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="glass tilt-card flex items-start gap-3 rounded-2xl p-5 transition-all hover:border-[#d7aa52]/50"
-              >
-                {c.image_url ? (
-                  <img
-                    src={c.image_url}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                    className="size-9 shrink-0 rounded-lg object-cover"
-                  />
-                ) : (
-                  <GraduationCap className="size-5 shrink-0 text-[#d7aa52]" />
-                )}
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-medium" style={{ color: "var(--fg)" }}>
-                    {title}
-                  </span>
-                  {issuer && (
-                    <span className="mt-0.5 block text-xs" style={{ color: "var(--fg-soft)" }}>
-                      {issuer}
-                      {c.issue_date ? ` · ${c.issue_date}` : ""}
-                    </span>
-                  )}
-                </span>
-              </motion.div>
-            );
-            return c.credential_url ? (
-              <a
-                key={c.id}
-                href={c.credential_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contents"
-              >
-                {card}
-              </a>
-            ) : (
-              card
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ============= CONTACT ============= */
 export function Contact({ lang }: { lang: Lang }) {
   return (
@@ -1869,6 +1775,12 @@ export function Contact({ lang }: { lang: Lang }) {
           title={t.contact.title[lang]}
           sub={t.contact.sub[lang]}
         />
+        <div className="mt-4 text-center text-xs" style={{ color: "var(--fg-soft)" }}>
+          <a href="tel:+966560409811" dir="ltr" className="font-mono hover:text-[#d7aa52]">
+            +966 56 040 9811
+          </a>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -2010,11 +1922,20 @@ export function Footer({ lang }: { lang: Lang }) {
             {t.footer.contactCol[lang]}
           </div>
           <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
-            <li dir="ltr">
-              <a href="tel:+966560409811" className="hover:text-[#d7aa52]">
-                0560409811
+            <li>
+              <a
+                href="tel:+966560409811"
+                className="group inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-r from-[#07182c] to-[#0a223f] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] shadow-[0_6px_20px_-10px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:text-[#f3d28a]"
+              >
+                <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]">
+                  <Phone className="size-3" />
+                </span>
+                <span dir="ltr" className="font-mono tracking-wider">
+                  +966 56 040 9811
+                </span>
               </a>
             </li>
+
             <li>
               <a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">
                 elmadnim@gmail.com

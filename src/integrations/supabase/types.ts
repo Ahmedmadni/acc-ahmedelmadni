@@ -268,6 +268,7 @@ export type Database = {
           label: string
           message: string
           sort_order: number
+          updated_at: string
         }
         Insert: {
           created_at?: string
@@ -275,6 +276,7 @@ export type Database = {
           label: string
           message: string
           sort_order?: number
+          updated_at?: string
         }
         Update: {
           created_at?: string
@@ -282,6 +284,7 @@ export type Database = {
           label?: string
           message?: string
           sort_order?: number
+          updated_at?: string
         }
         Relationships: []
       }
