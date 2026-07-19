@@ -245,7 +245,7 @@ function Lightbox({
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -259,7 +259,6 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
   });
 
   const rows = (data ?? []) as Cert[];
-  const useFallback = !isLoading && rows.length === 0;
   const fallback: Cert[] = t.certs.items.map((it, i) => ({
     id: `fallback-${i}`,
     title_ar: it.ar,
@@ -270,7 +269,10 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
     image_url: null,
     credential_url: null,
   }));
-  const items = useFallback ? fallback : rows;
+  // Show the known certifications immediately (even before the query resolves or
+  // if it fails); swap in the live rows as soon as they arrive. This keeps the
+  // section from silently disappearing when the DB is empty/unreachable.
+  const items = rows.length > 0 ? rows : fallback;
 
   const nav = useCallback(
     (dir: 1 | -1) => {
@@ -283,7 +285,7 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
     [items.length],
   );
 
-  if (isLoading || items.length === 0) return null;
+  if (items.length === 0) return null;
 
   // Split into two strips; each strip needs at least a few cards to loop nicely.
   const rowA = items.filter((_, i) => i % 2 === 0);

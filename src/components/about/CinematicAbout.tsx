@@ -49,11 +49,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
   return (
     <>
       {/* ============ STICKY PARALLAX HERO ============ */}
-      <section
-        ref={heroRef}
-        className="relative h-[180vh]"
-        aria-labelledby="about-hero-heading"
-      >
+      <section ref={heroRef} className="relative h-[180vh]" aria-labelledby="about-hero-heading">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           {/* Backdrop layers */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#04101f]/40 to-[#04101f]" />
@@ -131,7 +127,8 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   className="mt-8 flex flex-wrap items-center gap-3"
                 >
                   <Link
-                    to="/#contact"
+                    to="/"
+                    hash="contact"
                     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-6 py-3 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]"
                   >
                     {lang === "ar" ? "تواصل معي" : "Get in touch"}
@@ -148,7 +145,10 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   </a>
                 </motion.div>
 
-                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs" style={{ color: "var(--fg-soft)" }}>
+                <div
+                  className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs"
+                  style={{ color: "var(--fg-soft)" }}
+                >
                   <span className="inline-flex items-center gap-1.5">
                     <MapPin className="size-3.5 text-[#d7aa52]" />
                     {lang === "ar" ? "الرياض، السعودية" : "Riyadh, KSA"}
@@ -244,7 +244,6 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
 
       {/* (Second-bio quote intentionally removed — timeline experience below tells the story) */}
 
-
       {/* ============ BIG-NUMBER STATS ============ */}
       <section className="relative py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-16">
@@ -263,10 +262,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
             <FileSpreadsheet className="size-3" />
             {lang === "ar" ? "التخصصات" : "Expertise"}
           </div>
-          <h2
-            className="mt-4 text-3xl font-black md:text-5xl"
-            style={{ color: "var(--fg)" }}
-          >
+          <h2 className="mt-4 text-3xl font-black md:text-5xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "مجالات أعمل فيها" : "What I work with"}
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -322,15 +318,7 @@ function SplitReveal({ text, lang }: { text: string; lang: Lang }) {
   );
 }
 
-function StatBlock({
-  value,
-  label,
-  progress,
-}: {
-  value: string;
-  label: string;
-  progress: number;
-}) {
+function StatBlock({ value, label, progress }: { value: string; label: string; progress: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -384,7 +372,6 @@ export function MarqueeStrip({ lang }: { lang: Lang }) {
     </div>
   );
 }
-
 
 const EXPERTISE = [
   { ar: "التقارير المالية", en: "Financial Reporting", service: "financial-reports" },
