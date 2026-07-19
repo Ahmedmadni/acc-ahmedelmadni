@@ -956,38 +956,66 @@ function SkillsPanel() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                {groupItems.length === 0 && (
-                  <p className="text-xs text-white/40">لا توجد مهارات في هذه المجموعة بعد.</p>
-                )}
-                {groupItems.map((it) => (
-                  <div
-                    key={it.id}
-                    className="flex items-center justify-between gap-3 rounded-xl border border-white/8 bg-white/[0.02] p-3"
-                  >
-                    <div className="min-w-0 flex-1">
-                      <div className="text-sm font-bold text-white">{it.name_ar}</div>
-                      <div className="text-xs text-white/40">
-                        {it.name_en} · {it.level}%
-                      </div>
-                    </div>
-                    <div className="flex shrink-0 gap-1">
-                      <Button variant="ghost" size="icon" onClick={() => openEditItem(it)}>
-                        <Pencil className="size-4 text-[#f3d28a]" />
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => {
-                          if (confirm(`حذف مهارة "${it.name_ar}"؟`)) deleteItemMut.mutate(it.id);
-                        }}
-                      >
-                        <Trash2 className="size-4 text-red-400" />
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {groupItems.length === 0 ? (
+                <p className="text-xs text-white/40">لا توجد مهارات في هذه المجموعة بعد.</p>
+              ) : (
+                <div className="overflow-x-auto rounded-xl border border-white/8">
+                  <table className="w-full text-sm">
+                    <thead className="bg-white/[0.03] text-right text-white/50">
+                      <tr>
+                        <th className="p-2.5 font-medium">المهارة</th>
+                        <th className="p-2.5 font-medium">بالإنجليزية</th>
+                        <th className="p-2.5 font-medium">المستوى</th>
+                        <th className="p-2.5 font-medium">إجراءات</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {groupItems.map((it) => (
+                        <tr key={it.id} className="border-t border-white/5">
+                          <td className="p-2.5 font-bold text-white">{it.name_ar}</td>
+                          <td className="p-2.5 text-xs text-white/50">{it.name_en}</td>
+                          <td className="p-2.5">
+                            <div className="flex items-center gap-2">
+                              <div className="h-1.5 w-16 overflow-hidden rounded-full bg-white/10">
+                                <div
+                                  className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+                                  style={{ width: `${it.level}%` }}
+                                />
+                              </div>
+                              <span className="text-xs tabular-nums text-white/60">
+                                {it.level}%
+                              </span>
+                            </div>
+                          </td>
+                          <td className="p-2.5">
+                            <div className="flex gap-1">
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                aria-label={`تعديل ${it.name_ar}`}
+                                onClick={() => openEditItem(it)}
+                              >
+                                <Pencil className="size-4 text-[#f3d28a]" />
+                              </Button>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                aria-label={`حذف ${it.name_ar}`}
+                                onClick={() => {
+                                  if (confirm(`حذف مهارة "${it.name_ar}"؟`))
+                                    deleteItemMut.mutate(it.id);
+                                }}
+                              >
+                                <Trash2 className="size-4 text-red-400" />
+                              </Button>
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           );
         })}
