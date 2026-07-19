@@ -68,6 +68,7 @@ import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
+import { MarqueeStrip } from "@/components/about/CinematicAbout";
 
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
@@ -456,6 +457,9 @@ function Index() {
 
       <main className="relative z-10">
         <Hero lang={lang} />
+        <div className="relative border-y border-[#d7aa52]/20 bg-[#07182c]/60 backdrop-blur overflow-hidden py-6">
+          <MarqueeStrip lang={lang} />
+        </div>
         <Stats lang={lang} />
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />

@@ -359,17 +359,17 @@ function StatBlock({
   );
 }
 
-function MarqueeStrip({ lang }: { lang: Lang }) {
-  const line = [...EXPERTISE, ...EXPERTISE];
+export function MarqueeStrip({ lang }: { lang: Lang }) {
+  const line = [...EXPERTISE, ...EXPERTISE, ...EXPERTISE];
   return (
     <div className="relative flex whitespace-nowrap">
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="flex shrink-0 items-center gap-8"
+        className="flex shrink-0 items-center gap-3"
       >
         {line.map((e, i) => (
-          <span key={i} className="inline-flex items-center gap-8">
+          <span key={i} className="inline-flex items-center gap-3">
             <Link
               to="/request-service"
               search={{ service: e.service }}
@@ -377,7 +377,7 @@ function MarqueeStrip({ lang }: { lang: Lang }) {
             >
               {lang === "ar" ? e.ar : e.en}
             </Link>
-            <span className="inline-block size-2 rounded-full bg-[#d7aa52]" />
+            <span className="inline-block size-1.5 rounded-full bg-[#d7aa52]" />
           </span>
         ))}
       </motion.div>
