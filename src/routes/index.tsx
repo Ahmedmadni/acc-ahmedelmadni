@@ -62,7 +62,7 @@ import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
 import mascotLinkedin from "@/assets/mascot-linkedin.webp";
 import mascotFacebook from "@/assets/mascot-facebook.webp";
 import mascotInstagram from "@/assets/mascot-instagram.webp";
-import heroVideoAsset from "@/assets/hero.webm.asset.json";
+import heroCinematic from "@/assets/hero-bg-cinematic.jpg";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
@@ -755,128 +755,27 @@ function Typewriter({ words }: { words: string[] }) {
 
 /* ============= HERO BACKGROUND ============= */
 function HeroFrameSlideshow() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-  const [shouldRenderVideo, setShouldRenderVideo] = useState(false);
-
-  useEffect(() => {
-    const mqlMobile = window.matchMedia("(max-width: 767px)");
-    const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const conn = (
-      navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }
-    ).connection;
-    const lowBandwidth = !!conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType ?? "");
-    const allow = !mqlMobile.matches && !mqlReduce.matches && !lowBandwidth;
-    setShouldRenderVideo(allow);
-  }, []);
-
-  const TRIM_START = 0.5;
-
-  useEffect(() => {
-    if (!shouldRenderVideo) return;
-    const video = videoRef.current;
-    if (!video) return;
-
-    let raf = 0;
-    let current = TRIM_START;
-    let target = TRIM_START;
-    let ready = false;
-    let running = false;
-
-    const computeTarget = () => {
-      const duration = video.duration;
-      if (!duration || !isFinite(duration)) return TRIM_START;
-      const vh = window.innerHeight || 1;
-      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.2)));
-      return TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
-    };
-
-    const tick = () => {
-      if (!ready) {
-        running = false;
-        return;
-      }
-      // Smoothly ease currentTime toward target to prevent visible jumps
-      const diff = target - current;
-      if (Math.abs(diff) < 0.005) {
-        current = target;
-      } else {
-        current += diff * 0.18;
-      }
-      try {
-        video.currentTime = current;
-      } catch {
-        /* ignore */
-      }
-      if (Math.abs(target - current) > 0.005) {
-        raf = requestAnimationFrame(tick);
-      } else {
-        running = false;
-      }
-    };
-
-    const schedule = () => {
-      target = computeTarget();
-      if (!running) {
-        running = true;
-        raf = requestAnimationFrame(tick);
-      }
-    };
-
-    const onMeta = () => {
-      ready = true;
-      // Initialize from current scroll position (survives reload / restored scroll)
-      current = target = computeTarget();
-      try {
-        video.currentTime = current;
-      } catch {
-        /* ignore */
-      }
-    };
-
-    if (video.readyState >= 1) onMeta();
-    else video.addEventListener("loadedmetadata", onMeta, { once: true });
-
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    window.addEventListener("orientationchange", schedule);
-
-    return () => {
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-      window.removeEventListener("orientationchange", schedule);
-      video.removeEventListener("loadedmetadata", onMeta);
-      cancelAnimationFrame(raf);
-    };
-  }, [shouldRenderVideo]);
-
-  if (!shouldRenderVideo) {
-    return (
+  return (
+    <>
+      <img
+        src={heroCinematic}
+        alt=""
+        aria-hidden="true"
+        width={1920}
+        height={1280}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, #04101f 0%, #06182d 60%, #04101f 100%)",
+            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, rgba(4,16,31,0.55) 0%, rgba(6,24,45,0.65) 60%, rgba(4,16,31,0.85) 100%)",
         }}
       />
-    );
-  }
-
-  return (
-    <video
-      ref={videoRef}
-      muted
-      playsInline
-      preload="auto"
-      poster={heroBg}
-      aria-hidden="true"
-      onLoadedData={() => setVideoReady(true)}
-      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
-      style={{ opacity: videoReady ? 0.5 : 0 }}
-    >
-      <source src={`${heroVideoAsset.url}#t=0.5`} type="video/webm" />
-    </video>
+    </>
   );
 }
 
@@ -922,11 +821,9 @@ function Hero({ lang }: { lang: Lang }) {
   ];
 
   return (
-    <div className="relative h-[160vh] sm:h-[200vh] lg:h-[220vh]">
-    <div className="sticky top-0 h-screen overflow-hidden">
     <section
       id="home"
-      className="relative flex h-full items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
     >
       {/* Background video / gradient */}
       <motion.div
@@ -1042,8 +939,6 @@ function Hero({ lang }: { lang: Lang }) {
         </motion.div>
       </div>
     </section>
-    </div>
-    </div>
   );
 }
 
