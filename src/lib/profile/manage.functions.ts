@@ -45,6 +45,21 @@ export const listCertificationsFn = createServerFn({ method: "GET" })
     return { items: (data as CertificationRow[]) ?? [] };
   });
 
+// Public (unauthenticated) read of published certifications for the About-page
+// showcase. Runs server-side with the service-role client so it never depends
+// on the browser's anon Supabase env being present/correct on a given
+// deployment — it only exposes already-public, published rows.
+export const listPublicCertificationsFn = createServerFn({ method: "GET" }).handler(async () => {
+  const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+  const { data, error } = await supabaseAdmin
+    .from("certifications")
+    .select("id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url")
+    .eq("is_published", true)
+    .order("sort_order", { ascending: true });
+  if (error) throw new Error(error.message);
+  return { items: data ?? [] };
+});
+
 export const createCertificationFn = createServerFn({ method: "POST" })
   .middleware([requireAdmin])
   .inputValidator((input: unknown) => CertificationSchema.parse(input))

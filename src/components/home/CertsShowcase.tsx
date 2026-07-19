@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronLeft,
@@ -11,8 +12,8 @@ import {
   ZoomOut,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
-import { supabase } from "@/integrations/supabase/client";
 import { t } from "@/lib/i18n";
+import { listPublicCertificationsFn } from "@/lib/profile/manage.functions";
 import { Marquee } from "./Marquee";
 
 type Cert = {
@@ -245,16 +246,12 @@ function Lightbox({
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const listCerts = useServerFn(listPublicCertificationsFn);
   const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from("certifications")
-        .select("*")
-        .eq("is_published", true)
-        .order("sort_order", { ascending: true });
-      if (error) throw error;
-      return data;
+      const res = await listCerts();
+      return res.items;
     },
   });
 
