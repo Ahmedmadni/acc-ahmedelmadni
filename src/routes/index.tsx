@@ -755,128 +755,27 @@ function Typewriter({ words }: { words: string[] }) {
 
 /* ============= HERO BACKGROUND ============= */
 function HeroFrameSlideshow() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-  const [shouldRenderVideo, setShouldRenderVideo] = useState(false);
-
-  useEffect(() => {
-    const mqlMobile = window.matchMedia("(max-width: 767px)");
-    const mqlReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const conn = (
-      navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }
-    ).connection;
-    const lowBandwidth = !!conn?.saveData || /(^|-)2g$/.test(conn?.effectiveType ?? "");
-    const allow = !mqlMobile.matches && !mqlReduce.matches && !lowBandwidth;
-    setShouldRenderVideo(allow);
-  }, []);
-
-  const TRIM_START = 0.5;
-
-  useEffect(() => {
-    if (!shouldRenderVideo) return;
-    const video = videoRef.current;
-    if (!video) return;
-
-    let raf = 0;
-    let current = TRIM_START;
-    let target = TRIM_START;
-    let ready = false;
-    let running = false;
-
-    const computeTarget = () => {
-      const duration = video.duration;
-      if (!duration || !isFinite(duration)) return TRIM_START;
-      const vh = window.innerHeight || 1;
-      const progress = Math.max(0, Math.min(1, window.scrollY / (vh * 1.2)));
-      return TRIM_START + progress * Math.max(0, duration - TRIM_START - 0.05);
-    };
-
-    const tick = () => {
-      if (!ready) {
-        running = false;
-        return;
-      }
-      // Smoothly ease currentTime toward target to prevent visible jumps
-      const diff = target - current;
-      if (Math.abs(diff) < 0.005) {
-        current = target;
-      } else {
-        current += diff * 0.18;
-      }
-      try {
-        video.currentTime = current;
-      } catch {
-        /* ignore */
-      }
-      if (Math.abs(target - current) > 0.005) {
-        raf = requestAnimationFrame(tick);
-      } else {
-        running = false;
-      }
-    };
-
-    const schedule = () => {
-      target = computeTarget();
-      if (!running) {
-        running = true;
-        raf = requestAnimationFrame(tick);
-      }
-    };
-
-    const onMeta = () => {
-      ready = true;
-      // Initialize from current scroll position (survives reload / restored scroll)
-      current = target = computeTarget();
-      try {
-        video.currentTime = current;
-      } catch {
-        /* ignore */
-      }
-    };
-
-    if (video.readyState >= 1) onMeta();
-    else video.addEventListener("loadedmetadata", onMeta, { once: true });
-
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    window.addEventListener("orientationchange", schedule);
-
-    return () => {
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-      window.removeEventListener("orientationchange", schedule);
-      video.removeEventListener("loadedmetadata", onMeta);
-      cancelAnimationFrame(raf);
-    };
-  }, [shouldRenderVideo]);
-
-  if (!shouldRenderVideo) {
-    return (
+  return (
+    <>
+      <img
+        src={heroCinematic}
+        alt=""
+        aria-hidden="true"
+        width={1920}
+        height={1280}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
       <div
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, #04101f 0%, #06182d 60%, #04101f 100%)",
+            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, rgba(4,16,31,0.55) 0%, rgba(6,24,45,0.65) 60%, rgba(4,16,31,0.85) 100%)",
         }}
       />
-    );
-  }
-
-  return (
-    <video
-      ref={videoRef}
-      muted
-      playsInline
-      preload="auto"
-      poster={heroBg}
-      aria-hidden="true"
-      onLoadedData={() => setVideoReady(true)}
-      className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
-      style={{ opacity: videoReady ? 0.5 : 0 }}
-    >
-      <source src={`${heroVideoAsset.url}#t=0.5`} type="video/webm" />
-    </video>
+    </>
   );
 }
 
