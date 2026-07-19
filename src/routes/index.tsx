@@ -62,7 +62,7 @@ import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
 import mascotLinkedin from "@/assets/mascot-linkedin.webp";
 import mascotFacebook from "@/assets/mascot-facebook.webp";
 import mascotInstagram from "@/assets/mascot-instagram.webp";
-import heroVideoAsset from "@/assets/hero.webm.asset.json";
+import heroCinematic from "@/assets/hero-bg-cinematic.jpg";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
