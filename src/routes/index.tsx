@@ -910,33 +910,105 @@ function Hero({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        {/* BOTTOM FEATURE BAR */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1 }}
-          className="mt-16 rounded-[24px] border border-white/10 bg-[#0D1726]/70 p-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:p-5 mx-auto max-w-[1400px]"
-        >
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f, i) => {
-              const Icon = f.icon;
+        {/* SERVICE DASHBOARD — 24 interactive cards with sequential reveal */}
+        <div className="mt-20 mx-auto max-w-[1400px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 text-center"
+          >
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
+              <Sparkles className="size-3" />
+              {lang === "ar" ? "خدماتي الاحترافية" : "Professional Services"}
+            </span>
+            <h2 className="mt-3 text-2xl font-black md:text-3xl" style={{ color: "var(--fg)" }}>
+              {lang === "ar" ? "لوحة خدمات متكاملة" : "An Integrated Service Suite"}
+            </h2>
+            <p className="mx-auto mt-2 max-w-2xl text-sm" style={{ color: "var(--fg-soft)" }}>
+              {lang === "ar"
+                ? "أكثر من ٢٠ خدمة محاسبية ومالية — اضغط أي بطاقة لتبدأ طلبك مباشرة."
+                : "Over 20 accounting & finance services — tap any card to request it."}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.055, delayChildren: 0.1 } },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.05 }}
+            className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+          >
+            {services.map((s, i) => {
+              const Icon = s.icon;
               return (
-                <div
+                <motion.div
                   key={i}
-                  className="group flex min-h-[120px] items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-all hover:border-[#D4A64A]/40 hover:bg-white/[0.04]"
+                  variants={{
+                    hidden: { opacity: 0, y: 32, scale: 0.9, rotateX: -12, filter: "blur(6px)" },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      rotateX: 0,
+                      filter: "blur(0px)",
+                      transition: { type: "spring", stiffness: 210, damping: 22, mass: 0.7 },
+                    },
+                  }}
+                  whileHover={{ y: -6, scale: 1.03, transition: { type: "spring", stiffness: 320, damping: 20 } }}
+                  style={{ transformPerspective: 900 }}
                 >
-                  <div className="grid size-12 shrink-0 place-items-center rounded-xl border border-[#D4A64A]/30 bg-[#D4A64A]/10 text-[#D4A64A] transition-transform group-hover:scale-110">
-                    <Icon className="size-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[15px] font-bold text-white">{f.title}</div>
-                    <div className="mt-1 text-[12px] leading-[1.6] text-white/60">{f.desc}</div>
-                  </div>
-                </div>
+                  <RouterLink
+                    to="/request-service"
+                    search={{ service: s.service }}
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/95 p-4 transition-colors hover:border-[#d7aa52]/60"
+                  >
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute -top-12 -end-12 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-50"
+                      style={{ background: s.accent }}
+                    />
+                    <div className="mb-3 flex items-center justify-between">
+                      <span
+                        className="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[8deg]"
+                        style={{ color: s.accent }}
+                      >
+                        <Icon className="size-5" />
+                      </span>
+                      <span
+                        className="text-[10px] font-black tabular-nums text-white/30 transition-colors group-hover:text-[#f3d28a]"
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <h3 className="text-[13px] font-extrabold leading-tight" style={{ color: "var(--fg)" }}>
+                      {lang === "ar" ? s.titleAr : s.titleEn}
+                    </h3>
+                    <p className="mt-1.5 flex-1 text-[11px] leading-relaxed text-white/55">
+                      {lang === "ar" ? s.descAr : s.descEn}
+                    </p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-[10px] font-bold text-[#f3d28a] opacity-70 transition-opacity group-hover:opacity-100">
+                      {lang === "ar" ? "اطلب الآن" : "Request now"}
+                      <span aria-hidden className="transition-transform group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5">
+                        {lang === "ar" ? "←" : "→"}
+                      </span>
+                    </span>
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] scale-x-0 origin-start bg-gradient-to-r from-[#b8862e] via-[#f3d28a] to-[#b8862e] transition-transform duration-500 group-hover:scale-x-100"
+                    />
+                  </RouterLink>
+                </motion.div>
               );
             })}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
