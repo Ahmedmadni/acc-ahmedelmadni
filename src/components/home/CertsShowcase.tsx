@@ -312,7 +312,14 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
 
       <div className="flex flex-col gap-5">
         {strips.map((strip, si) => (
-          <Marquee key={si} speed={30} direction={directions[si]} gap={20} className="px-2">
+          <Marquee
+            key={si}
+            speed={70}
+            direction={directions[si]}
+            gap={20}
+            showArrows
+            className="px-2"
+          >
             {strip.map((c) => {
               const globalIndex = items.findIndex((it) => it.id === c.id);
               return (

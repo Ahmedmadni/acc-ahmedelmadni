@@ -81,7 +81,6 @@ const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
 const ServicesMarquee = lazy(() => import("@/components/home/ServicesMarquee"));
-const CertsShowcase = lazy(() => import("@/components/home/CertsShowcase"));
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -460,9 +459,6 @@ function Index() {
         <Hero lang={lang} />
         <Suspense fallback={null}>
           <ServicesMarquee lang={lang} />
-        </Suspense>
-        <Suspense fallback={null}>
-          <CertsShowcase lang={lang} />
         </Suspense>
         <div className="relative border-y border-[#d7aa52]/20 bg-[#07182c]/60 backdrop-blur overflow-hidden py-6">
           <MarqueeStrip lang={lang} />

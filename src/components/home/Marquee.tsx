@@ -6,6 +6,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type MarqueeProps = {
   children: ReactNode;
@@ -15,6 +16,8 @@ type MarqueeProps = {
   direction?: 1 | -1;
   /** Gap in pixels between cards (also used at the seam so the loop is even). */
   gap?: number;
+  /** Show prev/next arrow buttons that nudge the strip one card at a time. */
+  showArrows?: boolean;
   className?: string;
 };
 
@@ -26,19 +29,22 @@ type MarqueeProps = {
  * `scrollLeft` — that keeps it smooth and sidesteps the browser-specific RTL
  * `scrollLeft` sign quirks (the track itself is forced `dir="ltr"`; card
  * content keeps its own direction). The animation pauses on hover and while the
- * user is dragging, and honors `prefers-reduced-motion`.
+ * user is dragging, and honors `prefers-reduced-motion`. Optional arrow buttons
+ * nudge the strip one card at a time (eased into the same rAF loop).
  */
 export function Marquee({
   children,
   speed = 42,
   direction = -1,
   gap = 16,
+  showArrows = false,
   className = "",
 }: MarqueeProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const copyRef = useRef<HTMLDivElement>(null);
   const offsetRef = useRef(0);
   const spanRef = useRef(0); // width of one copy + gap; wrapping by this is seamless
+  const pendingRef = useRef(0); // remaining px to glide from an arrow nudge
   const pausedRef = useRef(false);
   const draggingRef = useRef(false);
   const lastXRef = useRef(0);
@@ -82,8 +88,20 @@ export function Marquee({
     const tick = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.05);
       last = now;
+      let moved = false;
       if (!reduced && !pausedRef.current && !draggingRef.current) {
         offsetRef.current += direction * speed * dt;
+        moved = true;
+      }
+      // Consume any pending arrow nudge with an ease-out glide.
+      if (pendingRef.current !== 0) {
+        const stepMove = pendingRef.current * Math.min(1, dt * 12);
+        offsetRef.current += stepMove;
+        pendingRef.current -= stepMove;
+        if (Math.abs(pendingRef.current) < 0.5) pendingRef.current = 0;
+        moved = true;
+      }
+      if (moved) {
         normalize();
         paint();
       }
@@ -95,6 +113,12 @@ export function Marquee({
       ro.disconnect();
     };
   }, [direction, speed, gap, reduced]);
+
+  const nudge = (dir: 1 | -1) => {
+    const firstCard = copyRef.current?.firstElementChild as HTMLElement | null;
+    const step = firstCard ? firstCard.getBoundingClientRect().width + gap : 300;
+    pendingRef.current += dir * step;
+  };
 
   const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
     draggingRef.current = true;
@@ -123,9 +147,12 @@ export function Marquee({
     }
   };
 
+  const arrowBtn =
+    "absolute top-1/2 z-20 -translate-y-1/2 inline-flex size-10 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-[#04101f]/80 text-[#f3d28a] shadow-lg backdrop-blur transition-colors hover:bg-[#d7aa52]/20";
+
   return (
     <div
-      className={`overflow-hidden ${className}`}
+      className={`relative overflow-hidden ${className}`}
       dir="ltr"
       onMouseEnter={() => (pausedRef.current = true)}
       onMouseLeave={() => {
@@ -139,6 +166,29 @@ export function Marquee({
       onClickCapture={onClickCapture}
       style={{ cursor: "grab", touchAction: "pan-y" }}
     >
+      {showArrows && (
+        <>
+          <button
+            type="button"
+            aria-label="السابق"
+            className={`${arrowBtn} start-2`}
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={() => nudge(1)}
+          >
+            <ChevronLeft className="size-5" />
+          </button>
+          <button
+            type="button"
+            aria-label="التالي"
+            className={`${arrowBtn} end-2`}
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={() => nudge(-1)}
+          >
+            <ChevronRight className="size-5" />
+          </button>
+        </>
+      )}
+
       <div ref={trackRef} className="flex w-max will-change-transform" style={{ gap }}>
         <div ref={copyRef} className="flex shrink-0" style={{ gap }}>
           {children}
