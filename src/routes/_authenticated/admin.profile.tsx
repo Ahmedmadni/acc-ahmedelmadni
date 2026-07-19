@@ -143,6 +143,62 @@ function TextListField({
   );
 }
 
+/**
+ * Downscale + re-encode an image in the browser before upload. Certificate
+ * scans / phone photos are routinely 5–10 MB, which used to be rejected
+ * outright by the upload size cap (so the certificate got saved with no
+ * image). Rendering to a canvas capped at ~1600px and exporting JPEG keeps
+ * every upload comfortably small and also lightens the public page. SVGs are
+ * passed through untouched (they don't rasterize meaningfully).
+ */
+async function prepareImageForUpload(
+  file: File,
+  maxDim = 1600,
+  quality = 0.85,
+): Promise<{ base64: string; filename: string }> {
+  const toBase64 = (buf: ArrayBuffer) => {
+    const bytes = new Uint8Array(buf);
+    let bin = "";
+    for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  };
+
+  if (file.type === "image/svg+xml") {
+    return { base64: toBase64(await file.arrayBuffer()), filename: file.name };
+  }
+
+  const dataUrl: string = await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = () => reject(new Error("تعذّر قراءة الصورة"));
+    reader.readAsDataURL(file);
+  });
+
+  const img: HTMLImageElement = await new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("تعذّر تحميل الصورة"));
+    image.src = dataUrl;
+  });
+
+  const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+  const w = Math.max(1, Math.round(img.width * scale));
+  const h = Math.max(1, Math.round(img.height * scale));
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) {
+    // Canvas unavailable — fall back to the original bytes.
+    return { base64: toBase64(await file.arrayBuffer()), filename: file.name };
+  }
+  ctx.drawImage(img, 0, 0, w, h);
+  const outUrl = canvas.toDataURL("image/jpeg", quality);
+  const base64 = outUrl.split(",")[1] ?? "";
+  const filename = file.name.replace(/\.[^.]+$/, "") + ".jpg";
+  return { base64, filename };
+}
+
 function ImageUploadField({
   label,
   kind,
@@ -162,18 +218,16 @@ function ImageUploadField({
       toast.error("يجب أن يكون الملف صورة");
       return;
     }
-    if (file.size > 5 * 1024 * 1024) {
-      toast.error("الحد الأقصى 5 ميجابايت");
+    // Guard against absurd originals, but the browser-side downscale below
+    // means normal high-res scans/photos always fit after compression.
+    if (file.size > 25 * 1024 * 1024) {
+      toast.error("الحد الأقصى 25 ميجابايت");
       return;
     }
     setBusy(true);
     try {
-      const buf = await file.arrayBuffer();
-      let bin = "";
-      const bytes = new Uint8Array(buf);
-      for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
-      const base64 = btoa(bin);
-      const res = await uploadFn({ data: { kind, filename: file.name, base64 } });
+      const { base64, filename } = await prepareImageForUpload(file);
+      const res = await uploadFn({ data: { kind, filename, base64 } });
       onChange(res.url);
       toast.success("تم رفع الصورة");
     } catch (e) {
@@ -449,7 +503,7 @@ function CertificationsPanel() {
                 label="صورة الشهادة"
                 kind="certification"
                 value={editing.image_url}
-                onChange={(url) => setEditing({ ...editing, image_url: url })}
+                onChange={(url) => setEditing((prev) => ({ ...prev, image_url: url }))}
               />
 
               <div className="flex items-center gap-2">
@@ -709,7 +763,7 @@ function ExperiencePanel() {
                 label="شعار الشركة (اختياري)"
                 kind="experience"
                 value={editing.company_logo_url}
-                onChange={(url) => setEditing({ ...editing, company_logo_url: url })}
+                onChange={(url) => setEditing((prev) => ({ ...prev, company_logo_url: url }))}
               />
 
               <div className="grid grid-cols-2 gap-3">
