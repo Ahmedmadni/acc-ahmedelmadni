@@ -785,39 +785,39 @@ function Hero({ lang }: { lang: Lang }) {
   const { scrollY } = useScroll();
   const yBg = useTransform(scrollY, [0, 600], [0, 120]);
 
-  const features = [
-    {
-      icon: Star,
-      title: lang === "ar" ? "خبرة احترافية" : "Pro Experience",
-      desc:
-        lang === "ar"
-          ? "سنوات من الخبرة في المجال المالي والمحاسبي"
-          : "Years of expertise in finance & accounting",
-    },
-    {
-      icon: BarChart3,
-      title: lang === "ar" ? "تحليل مالي" : "Financial Analysis",
-      desc:
-        lang === "ar"
-          ? "تحليلات دقيقة تدعم اتخاذ القرارات"
-          : "Accurate analytics for sharper decisions",
-    },
-    {
-      icon: Wrench,
-      title: lang === "ar" ? "حلول مخصصة" : "Tailored Solutions",
-      desc:
-        lang === "ar"
-          ? "حلول مالية مصممة خصيصاً لأعمالك"
-          : "Financial solutions built around your business",
-    },
-    {
-      icon: ShieldCheck,
-      title: lang === "ar" ? "التزام وموثوقية" : "Trust & Compliance",
-      desc:
-        lang === "ar"
-          ? "التزام بأعلى معايير الجودة والدقة"
-          : "Held to the highest standards of accuracy",
-    },
+  const services: {
+    icon: LucideIcon;
+    titleAr: string;
+    titleEn: string;
+    descAr: string;
+    descEn: string;
+    service: string;
+    accent: string;
+  }[] = [
+    { icon: FileText, titleAr: "التقارير المالية", titleEn: "Financial Reports", descAr: "تقارير شهرية وسنوية تعرض الأداء بوضوح.", descEn: "Monthly & yearly performance reports.", service: "financial-reports", accent: "#f3d28a" },
+    { icon: Calculator, titleAr: "محاسبة التكاليف", titleEn: "Cost Accounting", descAr: "تحليل تكاليف المشاريع والربحية بدقة.", descEn: "Precise project cost & profitability.", service: "cost-analysis", accent: "#60a5fa" },
+    { icon: Briefcase, titleAr: "المطالبات المالية", titleEn: "Financial Claims", descAr: "إعداد مطالبات المشاريع مع الاستشاريين.", descEn: "Contractor claims with consultants.", service: "financial-claims", accent: "#a78bfa" },
+    { icon: Wallet, titleAr: "التسويات البنكية", titleEn: "Bank Reconciliation", descAr: "مطابقة الحركات وتسوية الفروقات.", descEn: "Match transactions & resolve variances.", service: "bank-reconciliation", accent: "#34d399" },
+    { icon: PieChart, titleAr: "الإقرار الضريبي", titleEn: "VAT Filing", descAr: "إعداد وتقديم إقرارات VAT عبر زاتكا.", descEn: "Prepare & file VAT via ZATCA.", service: "bank-reconciliation", accent: "#22c55e" },
+    { icon: Target, titleAr: "الإقرار الزكوي", titleEn: "Zakat Declaration", descAr: "احتساب الوعاء الزكوي والإقرار السنوي.", descEn: "Compute zakat base & annual return.", service: "consulting", accent: "#eab308" },
+    { icon: Lightbulb, titleAr: "استشارات مالية", titleEn: "Financial Consulting", descAr: "استشارات لرفع الكفاءة المالية.", descEn: "Advisory to lift financial efficiency.", service: "consulting", accent: "#f97316" },
+    { icon: BarChart3, titleAr: "لوحات Power BI", titleEn: "Power BI Dashboards", descAr: "لوحات KPIs تفاعلية بتحديث لحظي.", descEn: "Live interactive KPI dashboards.", service: "power-bi", accent: "#0ea5e9" },
+    { icon: LineChart, titleAr: "التحليل المالي", titleEn: "Financial Analysis", descAr: "نسب السيولة والربحية والملاءة.", descEn: "Liquidity, profitability, solvency ratios.", service: "cost-analysis", accent: "#8b5cf6" },
+    { icon: TrendingUp, titleAr: "الميزانيات التقديرية", titleEn: "Budgeting & Forecast", descAr: "بناء الميزانيات ومتابعة الانحرافات.", descEn: "Build budgets & track variance.", service: "consulting", accent: "#10b981" },
+    { icon: ShieldCheck, titleAr: "الرقابة الداخلية", titleEn: "Internal Controls", descAr: "سياسات وضوابط لحماية أصول الشركة.", descEn: "Policies to protect company assets.", service: "consulting", accent: "#ef4444" },
+    { icon: FileText, titleAr: "القوائم المالية IFRS", titleEn: "IFRS Statements", descAr: "قوائم مالية كاملة وفق المعايير الدولية.", descEn: "Full IFRS-compliant statements.", service: "financial-reports", accent: "#f59e0b" },
+    { icon: Users, titleAr: "تسويات العملاء", titleEn: "Customer Reconciliation", descAr: "تسوية أرصدة العملاء والموردين.", descEn: "AR/AP balance reconciliation.", service: "bank-reconciliation", accent: "#06b6d4" },
+    { icon: Wrench, titleAr: "الدورة المستندية", titleEn: "Documentary Cycle", descAr: "تصميم دورة مستندية محكمة.", descEn: "Design a solid documentary cycle.", service: "consulting", accent: "#84cc16" },
+    { icon: Star, titleAr: "تطبيق IFRS", titleEn: "IFRS Adoption", descAr: "دعم متكامل لتطبيق معايير IFRS.", descEn: "Full IFRS implementation support.", service: "financial-reports", accent: "#d7aa52" },
+    { icon: BookOpen, titleAr: "دليل الحسابات", titleEn: "Chart of Accounts", descAr: "تصميم دليل حسابات مرن لنشاطك.", descEn: "Custom chart of accounts.", service: "consulting", accent: "#a3e635" },
+    { icon: Calculator, titleAr: "الرواتب والأجور", titleEn: "Payroll", descAr: "إعداد الرواتب والاستحقاقات النظامية.", descEn: "Salaries & statutory entitlements.", service: "consulting", accent: "#fb7185" },
+    { icon: Car, titleAr: "المخزون والأصول", titleEn: "Inventory & Assets", descAr: "جرد ومتابعة المخزون والأصول الثابتة.", descEn: "Inventory & fixed assets tracking.", service: "cost-analysis", accent: "#c084fc" },
+    { icon: LineChart, titleAr: "التدفقات النقدية", titleEn: "Cash Flow", descAr: "إدارة السيولة وتخطيط النقدية.", descEn: "Liquidity & cash planning.", service: "financial-reports", accent: "#38bdf8" },
+    { icon: Sparkles, titleAr: "الفاتورة الإلكترونية", titleEn: "E-Invoicing", descAr: "تأهيل زاتكا للفوترة الإلكترونية.", descEn: "ZATCA e-invoicing readiness.", service: "bank-reconciliation", accent: "#fbbf24" },
+    { icon: MessagesSquare, titleAr: "أتمتة Excel", titleEn: "Excel Automation", descAr: "نماذج Excel احترافية بالماكرو.", descEn: "Advanced Excel & VBA models.", service: "power-bi", accent: "#4ade80" },
+    { icon: GraduationCap, titleAr: "التدريب المحاسبي", titleEn: "Accounting Training", descAr: "تدريب فرق الحسابات على أفضل الممارسات.", descEn: "Team training on best practices.", service: "consulting", accent: "#f472b6" },
+    { icon: Wrench, titleAr: "تصميم المواقع", titleEn: "Website Design", descAr: "مواقع احترافية للمكاتب والمتاجر.", descEn: "Sites for offices & e-commerce.", service: "website-design", accent: "#22d3ee" },
+    { icon: ShieldCheck, titleAr: "المراجعة الداخلية", titleEn: "Internal Audit", descAr: "مراجعة العمليات وضبط المخاطر.", descEn: "Process audit & risk control.", service: "consulting", accent: "#e11d48" },
   ];
 
   return (
@@ -910,33 +910,105 @@ function Hero({ lang }: { lang: Lang }) {
           </div>
         </div>
 
-        {/* BOTTOM FEATURE BAR */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1 }}
-          className="mt-16 rounded-[24px] border border-white/10 bg-[#0D1726]/70 p-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl sm:p-5 mx-auto max-w-[1400px]"
-        >
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f, i) => {
-              const Icon = f.icon;
+        {/* SERVICE DASHBOARD — 24 interactive cards with sequential reveal */}
+        <div className="mt-20 mx-auto max-w-[1400px]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 text-center"
+          >
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
+              <Sparkles className="size-3" />
+              {lang === "ar" ? "خدماتي الاحترافية" : "Professional Services"}
+            </span>
+            <h2 className="mt-3 text-2xl font-black md:text-3xl" style={{ color: "var(--fg)" }}>
+              {lang === "ar" ? "لوحة خدمات متكاملة" : "An Integrated Service Suite"}
+            </h2>
+            <p className="mx-auto mt-2 max-w-2xl text-sm" style={{ color: "var(--fg-soft)" }}>
+              {lang === "ar"
+                ? "أكثر من ٢٠ خدمة محاسبية ومالية — اضغط أي بطاقة لتبدأ طلبك مباشرة."
+                : "Over 20 accounting & finance services — tap any card to request it."}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.055, delayChildren: 0.1 } },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.05 }}
+            className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+          >
+            {services.map((s, i) => {
+              const Icon = s.icon;
               return (
-                <div
+                <motion.div
                   key={i}
-                  className="group flex min-h-[120px] items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.02] p-5 transition-all hover:border-[#D4A64A]/40 hover:bg-white/[0.04]"
+                  variants={{
+                    hidden: { opacity: 0, y: 32, scale: 0.9, rotateX: -12, filter: "blur(6px)" },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      rotateX: 0,
+                      filter: "blur(0px)",
+                      transition: { type: "spring", stiffness: 210, damping: 22, mass: 0.7 },
+                    },
+                  }}
+                  whileHover={{ y: -6, scale: 1.03, transition: { type: "spring", stiffness: 320, damping: 20 } }}
+                  style={{ transformPerspective: 900 }}
                 >
-                  <div className="grid size-12 shrink-0 place-items-center rounded-xl border border-[#D4A64A]/30 bg-[#D4A64A]/10 text-[#D4A64A] transition-transform group-hover:scale-110">
-                    <Icon className="size-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[15px] font-bold text-white">{f.title}</div>
-                    <div className="mt-1 text-[12px] leading-[1.6] text-white/60">{f.desc}</div>
-                  </div>
-                </div>
+                  <RouterLink
+                    to="/request-service"
+                    search={{ service: s.service }}
+                    onMouseEnter={playHover}
+                    onClick={playClick}
+                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/95 p-4 transition-colors hover:border-[#d7aa52]/60"
+                  >
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute -top-12 -end-12 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-50"
+                      style={{ background: s.accent }}
+                    />
+                    <div className="mb-3 flex items-center justify-between">
+                      <span
+                        className="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[8deg]"
+                        style={{ color: s.accent }}
+                      >
+                        <Icon className="size-5" />
+                      </span>
+                      <span
+                        className="text-[10px] font-black tabular-nums text-white/30 transition-colors group-hover:text-[#f3d28a]"
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <h3 className="text-[13px] font-extrabold leading-tight" style={{ color: "var(--fg)" }}>
+                      {lang === "ar" ? s.titleAr : s.titleEn}
+                    </h3>
+                    <p className="mt-1.5 flex-1 text-[11px] leading-relaxed text-white/55">
+                      {lang === "ar" ? s.descAr : s.descEn}
+                    </p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-[10px] font-bold text-[#f3d28a] opacity-70 transition-opacity group-hover:opacity-100">
+                      {lang === "ar" ? "اطلب الآن" : "Request now"}
+                      <span aria-hidden className="transition-transform group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5">
+                        {lang === "ar" ? "←" : "→"}
+                      </span>
+                    </span>
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] scale-x-0 origin-start bg-gradient-to-r from-[#b8862e] via-[#f3d28a] to-[#b8862e] transition-transform duration-500 group-hover:scale-x-100"
+                    />
+                  </RouterLink>
+                </motion.div>
               );
             })}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
