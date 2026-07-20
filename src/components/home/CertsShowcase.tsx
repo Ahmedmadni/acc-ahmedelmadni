@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronLeft,
@@ -13,8 +12,25 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
-import { listPublicCertificationsFn } from "@/lib/profile/manage.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { Marquee } from "./Marquee";
+
+/**
+ * Rewrites a Supabase public-object URL into the on-the-fly image transform
+ * endpoint (`/storage/v1/render/image/public/...`) so cards ship a smaller
+ * resized+recompressed image instead of the original multi-MB upload.
+ * Non-Supabase URLs are returned unchanged.
+ */
+function transformCertUrl(url: string | null, width: number, quality = 70): string | null {
+  if (!url) return null;
+  const marker = "/storage/v1/object/public/";
+  const idx = url.indexOf(marker);
+  if (idx === -1) return url;
+  const base = url.slice(0, idx);
+  const path = url.slice(idx + marker.length);
+  return `${base}/storage/v1/render/image/public/${path}?width=${width}&quality=${quality}&resize=contain`;
+}
+
 
 type Cert = {
   id: string;
@@ -34,17 +50,18 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
     <button
       type="button"
       onClick={onOpen}
-      className="group relative flex w-[260px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-[#07182c] text-start transition-all hover:border-[#d7aa52]/70 hover:shadow-[0_25px_60px_-25px_rgba(215,170,82,0.55)] sm:w-[300px]"
+      className="group relative flex w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-[#07182c] text-start transition-all hover:border-[#d7aa52]/70 hover:shadow-[0_25px_60px_-25px_rgba(215,170,82,0.55)] sm:w-[400px]"
     >
-      <div className="relative h-[200px] w-full overflow-hidden bg-gradient-to-br from-[#0b2137] to-[#04101f]">
+      <div className="relative h-[280px] w-full overflow-hidden bg-gradient-to-br from-[#0b2137] to-[#04101f] sm:h-[320px]">
         {c.image_url ? (
           <img
-            src={c.image_url}
+            src={transformCertUrl(c.image_url, 800, 72) ?? c.image_url}
             alt={title}
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
+
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
             <GraduationCap className="size-10 text-[#d7aa52]" />
@@ -189,7 +206,7 @@ function Lightbox({
 
         {cert.image_url ? (
           <img
-            src={cert.image_url}
+            src={transformCertUrl(cert.image_url, 1400, 82) ?? cert.image_url}
             alt={title}
             onClick={(e) => e.stopPropagation()}
             style={{ transform: `scale(${zoom})` }}
@@ -246,14 +263,22 @@ function Lightbox({
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const listCerts = useServerFn(listPublicCertificationsFn);
   const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const res = await listCerts();
-      return res.items;
+      const { data, error } = await supabase
+        .from("certifications")
+        .select(
+          "id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url",
+        )
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return (data ?? []) as Cert[];
     },
+    staleTime: 5 * 60 * 1000,
   });
+
 
   const rows = (data ?? []) as Cert[];
   const fallback: Cert[] = t.certs.items.map((it, i) => ({
