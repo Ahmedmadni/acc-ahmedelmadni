@@ -252,10 +252,6 @@ function Index() {
     el.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  useEffect(() => {
-    const tm = setTimeout(() => setLoaded(true), 1200);
-    return () => clearTimeout(tm);
-  }, []);
 
   useEffect(() => {
     if (!isEidSeason()) return;
