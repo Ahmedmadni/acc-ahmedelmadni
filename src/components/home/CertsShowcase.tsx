@@ -263,14 +263,22 @@ function Lightbox({
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const listCerts = useServerFn(listPublicCertificationsFn);
   const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const res = await listCerts();
-      return res.items;
+      const { data, error } = await supabase
+        .from("certifications")
+        .select(
+          "id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url",
+        )
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return (data ?? []) as Cert[];
     },
+    staleTime: 5 * 60 * 1000,
   });
+
 
   const rows = (data ?? []) as Cert[];
   const fallback: Cert[] = t.certs.items.map((it, i) => ({
