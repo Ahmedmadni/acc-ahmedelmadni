@@ -50,17 +50,18 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
     <button
       type="button"
       onClick={onOpen}
-      className="group relative flex w-[260px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-[#07182c] text-start transition-all hover:border-[#d7aa52]/70 hover:shadow-[0_25px_60px_-25px_rgba(215,170,82,0.55)] sm:w-[300px]"
+      className="group relative flex w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-[#07182c] text-start transition-all hover:border-[#d7aa52]/70 hover:shadow-[0_25px_60px_-25px_rgba(215,170,82,0.55)] sm:w-[400px]"
     >
-      <div className="relative h-[200px] w-full overflow-hidden bg-gradient-to-br from-[#0b2137] to-[#04101f]">
+      <div className="relative h-[280px] w-full overflow-hidden bg-gradient-to-br from-[#0b2137] to-[#04101f] sm:h-[320px]">
         {c.image_url ? (
           <img
-            src={c.image_url}
+            src={transformCertUrl(c.image_url, 800, 72) ?? c.image_url}
             alt={title}
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
+
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
             <GraduationCap className="size-10 text-[#d7aa52]" />
