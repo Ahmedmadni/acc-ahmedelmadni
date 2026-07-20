@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import {
   ArrowLeft,
@@ -27,6 +27,7 @@ import { SubPageShell } from "@/components/SubPageShell";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
 
 import type { Lang } from "@/lib/i18n";
+import { SERVICES_CATALOG, getServiceById } from "@/lib/services-catalog";
 
 export const Route = createFileRoute("/request-service")({
   validateSearch: (search: Record<string, unknown>): { service?: string } => ({
@@ -49,111 +50,15 @@ export const Route = createFileRoute("/request-service")({
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/request-service" }],
   }),
-  component: () => <SubPageShell>{(lang) => <RequestService lang={lang} />}</SubPageShell>,
+  component: RequestServiceRoute,
 });
 
-const SERVICES = [
-  {
-    id: "vat-declaration",
-    icon: "🧾",
-    ar: "إعداد وتقديم إقرار ضريبة القيمة المضافة (VAT)",
-    en: "VAT Return Preparation & Submission",
-    descAr: "إعداد الإقرار الضريبي الربعي وتقديمه عبر منصة زاتكا وفق اللوائح المعتمدة.",
-    descEn: "Prepare and submit quarterly VAT returns via ZATCA platform.",
-    badge: { ar: "الأكثر طلباً", en: "Most Requested" },
-    isVat: true,
-  },
-  {
-    id: "financial-reports",
-    icon: "📊",
-    ar: "إعداد التقارير المالية والإدارية",
-    en: "Financial & Managerial Reports",
-    descAr: "بناء تقارير دورية تعرض الأداء المالي وتدعم قرار الإدارة التنفيذية.",
-    descEn: "Periodic financial performance reports for executive decision-making.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "zakat-declaration",
-    icon: "🕌",
-    ar: "إعداد وتقديم الإقرار الزكوي",
-    en: "Zakat Return Preparation",
-    descAr: "حساب وعاء الزكاة وإعداد الإقرار السنوي وفق متطلبات هيئة الزكاة.",
-    descEn: "Calculate zakat base and prepare the annual declaration.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "bank-reconciliation",
-    icon: "🏦",
-    ar: "التسويات البنكية والضريبية",
-    en: "Bank & Tax Reconciliations",
-    descAr: "تسويات بنكية وإعداد إقرارات ضريبة القيمة المضافة والزكاة بدقة.",
-    descEn: "Bank reconciliations and precise tax declarations.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "payroll",
-    icon: "💼",
-    ar: "إدارة الرواتب والتأمينات الاجتماعية",
-    en: "Payroll & GOSI Management",
-    descAr: "إعداد مسيّرات الرواتب واحتساب اشتراكات التأمينات ومكافآت نهاية الخدمة.",
-    descEn: "Payroll runs, GOSI contributions, and end-of-service gratuity calculations.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "cost-analysis",
-    icon: "📉",
-    ar: "محاسبة التكاليف وتحليل المشاريع",
-    en: "Cost Accounting & Project Analysis",
-    descAr: "تحليل تكاليف المشاريع والمراحل وتقديم رؤية ربحية دقيقة.",
-    descEn: "Project cost analysis and profitability insights.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "financial-claims",
-    icon: "📋",
-    ar: "إعداد المطالبات المالية",
-    en: "Financial Claims Preparation",
-    descAr: "تنسيق مطالبات احترافية مع الاستشاريين والمقاولين ضمن الحقوق التعاقدية.",
-    descEn: "Professional claims with consultants and contractors.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "consulting",
-    icon: "💡",
-    ar: "استشارات مالية وإدارية",
-    en: "Financial & Administrative Consulting",
-    descAr: "استشارات للأنشطة التجارية المختلفة بهدف رفع الكفاءة المالية.",
-    descEn: "Business consulting to improve financial efficiency.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "power-bi",
-    icon: "📈",
-    ar: "لوحات تحليل Excel / Power BI",
-    en: "Excel / Power BI Dashboards",
-    descAr: "تصميم لوحات تفاعلية لمؤشرات الأداء وقراءة بصرية للأرقام.",
-    descEn: "Interactive dashboards for KPIs and visual data reading.",
-    badge: null,
-    isVat: false,
-  },
-  {
-    id: "website-design",
-    icon: "🌐",
-    ar: "تصميم وتطوير المواقع الإلكترونية",
-    en: "Website Design & Development",
-    descAr: "تصميم مواقع احترافية للأعمال والمكاتب المحاسبية والمتاجر الإلكترونية.",
-    descEn: "Professional websites for businesses and accounting offices.",
-    badge: null,
-    isVat: false,
-  },
-];
+function RequestServiceRoute() {
+  const { service } = Route.useSearch();
+  return (
+    <SubPageShell>{(lang) => <RequestService lang={lang} serviceFromUrl={service} />}</SubPageShell>
+  );
+}
 
 const VAT_MONTHS = [0, 3, 6, 9];
 const VAT_QUARTER_LABELS: Record<number, { ar: string; en: string }> = {
@@ -163,20 +68,36 @@ const VAT_QUARTER_LABELS: Record<number, { ar: string; en: string }> = {
   9: { ar: "الربع الثالث من هذا العام", en: "Q3 of This Year" },
 };
 
-function RequestService({ lang }: { lang: Lang }) {
-  const { service: serviceFromUrl } = Route.useSearch();
+export function RequestService({
+  lang,
+  serviceFromUrl,
+  embedded = false,
+}: {
+  lang: Lang;
+  serviceFromUrl?: string;
+  /** When true, render only the compact form card (no breadcrumb / big hero /
+   *  seasonal banner) so it can sit inside the /services page. */
+  embedded?: boolean;
+}) {
   const currentMonth = new Date().getMonth();
   const isVatSeason = VAT_MONTHS.includes(currentMonth);
   const vatLabel = VAT_QUARTER_LABELS[currentMonth];
   const ArrowDir = lang === "ar" ? ArrowLeft : ArrowRight;
   const ChevDir = lang === "ar" ? ChevronLeft : ChevronRight;
 
-  // Deep-linked from an ad, a tool page, or the seasonal VAT banner (?service=vat-declaration
-  // etc.) — pre-selects the matching option so campaign traffic lands on a form that already
-  // reflects what the ad promised, instead of an empty "pick a service" state.
+  // Deep-linked from an ad, a service card, or the seasonal VAT banner
+  // (?service=<id>) — pre-selects the matching option so the visitor lands on a
+  // form that already reflects the service they picked, instead of an empty
+  // "pick a service" state.
   const [selectedService, setSelectedService] = useState(
-    serviceFromUrl && SERVICES.some((s) => s.id === serviceFromUrl) ? serviceFromUrl : "",
+    serviceFromUrl && getServiceById(serviceFromUrl) ? serviceFromUrl : "",
   );
+
+  // When embedded on the /services page, clicking a service card updates the
+  // `serviceFromUrl` prop — sync the selection so the form reflects the choice.
+  useEffect(() => {
+    if (serviceFromUrl && getServiceById(serviceFromUrl)) setSelectedService(serviceFromUrl);
+  }, [serviceFromUrl]);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -188,11 +109,11 @@ function RequestService({ lang }: { lang: Lang }) {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const svc = SERVICES.find((s) => s.id === selectedService);
+    const svc = getServiceById(selectedService);
     const lines = [
       lang === "ar" ? "طلب خدمة جديدة" : "New service request",
       "",
-      `${lang === "ar" ? "الخدمة" : "Service"}: ${svc ? svc[lang] : "-"}`,
+      `${lang === "ar" ? "الخدمة" : "Service"}: ${svc ? (lang === "ar" ? svc.titleAr : svc.titleEn) : "-"}`,
       `${lang === "ar" ? "الاسم" : "Name"}: ${name}`,
       `${lang === "ar" ? "الجوال" : "Phone"}: ${phone}`,
       email ? `${lang === "ar" ? "البريد" : "Email"}: ${email}` : "",
@@ -215,7 +136,7 @@ function RequestService({ lang }: { lang: Lang }) {
       "generate_lead",
       {
         service_id: selectedService,
-        service_name: svc ? svc.en : undefined,
+        service_name: svc ? svc.titleEn : undefined,
         urgency,
       },
     );
@@ -232,9 +153,9 @@ function RequestService({ lang }: { lang: Lang }) {
   ];
 
   return (
-    <section className="relative py-10">
+    <section className={embedded ? "relative" : "relative py-10"}>
       {/* VAT Seasonal Banner */}
-      {isVatSeason && (
+      {!embedded && isVatSeason && (
         <div className="w-full px-4 sm:px-8 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -278,7 +199,7 @@ function RequestService({ lang }: { lang: Lang }) {
               <button
                 type="button"
                 onClick={() => {
-                  setSelectedService("vat-declaration");
+                  setSelectedService("vat-filing");
                   document.getElementById("service-form")?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 hover:scale-105 transition-transform whitespace-nowrap"
@@ -292,15 +213,17 @@ function RequestService({ lang }: { lang: Lang }) {
       )}
 
       {/* Hero */}
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <div className="mb-6 flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
-          <Link to="/" className="inline-flex items-center gap-1 hover:text-[#d7aa52]">
-            <Home className="size-3.5" />
-            {lang === "ar" ? "الرئيسية" : "Home"}
-          </Link>
-          <ChevDir className="size-3.5" />
-          <span>{lang === "ar" ? "طلب خدمة" : "Request Service"}</span>
-        </div>
+      <div className={embedded ? "w-full" : "w-full px-4 sm:px-8 lg:px-16"}>
+        {!embedded && (
+          <div className="mb-6 flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
+            <Link to="/" className="inline-flex items-center gap-1 hover:text-[#d7aa52]">
+              <Home className="size-3.5" />
+              {lang === "ar" ? "الرئيسية" : "Home"}
+            </Link>
+            <ChevDir className="size-3.5" />
+            <span>{lang === "ar" ? "طلب خدمة" : "Request Service"}</span>
+          </div>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -312,7 +235,7 @@ function RequestService({ lang }: { lang: Lang }) {
             {lang === "ar" ? "خدمات محاسبية احترافية" : "Professional Accounting Services"}
           </div>
           <h1
-            className="text-4xl sm:text-5xl font-black leading-tight"
+            className={`${embedded ? "text-2xl sm:text-3xl" : "text-4xl sm:text-5xl"} font-black leading-tight`}
             style={{ color: "var(--fg)" }}
           >
             {lang === "ar" ? "اطلب خدمتك" : "Request a Service"}{" "}
@@ -320,14 +243,16 @@ function RequestService({ lang }: { lang: Lang }) {
               {lang === "ar" ? "بكل سهولة واحترافية" : "With Ease and Professionalism"}
             </span>
           </h1>
-          <p
-            className="mt-3 max-w-2xl text-base leading-relaxed"
-            style={{ color: "var(--fg-soft)" }}
-          >
-            {lang === "ar"
-              ? "اختر الخدمة المناسبة واملأ النموذج، وسيتم التواصل معك عبر واتساب لتأكيد الطلب وتحديد التفاصيل."
-              : "Choose a service, fill in the form, and we'll contact you via WhatsApp to confirm."}
-          </p>
+          {!embedded && (
+            <p
+              className="mt-3 max-w-2xl text-base leading-relaxed"
+              style={{ color: "var(--fg-soft)" }}
+            >
+              {lang === "ar"
+                ? "اختر الخدمة المناسبة واملأ النموذج، وسيتم التواصل معك عبر واتساب لتأكيد الطلب وتحديد التفاصيل."
+                : "Choose a service, fill in the form, and we'll contact you via WhatsApp to confirm."}
+            </p>
+          )}
 
           <div className="mt-6 flex flex-wrap gap-2">
             {trustBadges.map((b, i) => (
@@ -398,10 +323,10 @@ function RequestService({ lang }: { lang: Lang }) {
                   <option value="">
                     {lang === "ar" ? "— اختر الخدمة —" : "— Select a service —"}
                   </option>
-                  {SERVICES.map((s) => (
+                  {SERVICES_CATALOG.map((s) => (
                     <option key={s.id} value={s.id}>
-                      {s.icon} {lang === "ar" ? s.ar : s.en}
-                      {s.badge ? " ★" : ""}
+                      {lang === "ar" ? s.titleAr : s.titleEn}
+                      {s.badgeAr ? " ★" : ""}
                     </option>
                   ))}
                 </select>
@@ -410,8 +335,9 @@ function RequestService({ lang }: { lang: Lang }) {
 
               {selectedService &&
                 (() => {
-                  const svc = SERVICES.find((s) => s.id === selectedService);
+                  const svc = getServiceById(selectedService);
                   if (!svc) return null;
+                  const SvcIcon = svc.icon;
                   return (
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
@@ -419,15 +345,20 @@ function RequestService({ lang }: { lang: Lang }) {
                       className="mt-4 rounded-2xl border border-[#d7aa52]/25 bg-[#d7aa52]/[0.06] p-4 sm:p-5"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="text-3xl">{svc.icon}</div>
+                        <div
+                          className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]"
+                          style={{ color: svc.accent }}
+                        >
+                          <SvcIcon className="size-6" />
+                        </div>
                         <div className="flex-1">
                           <div className="flex flex-wrap items-center gap-2">
                             <div className="text-sm font-bold" style={{ color: "var(--fg)" }}>
-                              {lang === "ar" ? svc.ar : svc.en}
+                              {lang === "ar" ? svc.titleAr : svc.titleEn}
                             </div>
-                            {svc.badge && (
+                            {svc.badgeAr && (
                               <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-2 py-0.5 text-[10px] font-bold text-emerald-300">
-                                ★ {lang === "ar" ? svc.badge.ar : svc.badge.en}
+                                ★ {lang === "ar" ? svc.badgeAr : svc.badgeEn}
                               </span>
                             )}
                           </div>
