@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronLeft,
@@ -12,7 +13,7 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
-import { supabase } from "@/integrations/supabase/client";
+import { listPublicCertificationsFn } from "@/lib/profile/manage.functions";
 import { Marquee } from "./Marquee";
 
 /**
@@ -30,7 +31,6 @@ function transformCertUrl(url: string | null, width: number, quality = 70): stri
   const path = url.slice(idx + marker.length);
   return `${base}/storage/v1/render/image/public/${path}?width=${width}&quality=${quality}&resize=contain`;
 }
-
 
 type Cert = {
   id: string;
@@ -59,9 +59,14 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
             alt={title}
             loading="lazy"
             decoding="async"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={(e) => {
+              // The Supabase image-transform endpoint isn't available on every
+              // plan; fall back to the original (now public) object URL.
+              const img = e.currentTarget;
+              if (c.image_url && img.src !== c.image_url) img.src = c.image_url;
+            }}
+            className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03]"
           />
-
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
             <GraduationCap className="size-10 text-[#d7aa52]" />
@@ -209,6 +214,10 @@ function Lightbox({
             src={transformCertUrl(cert.image_url, 1400, 82) ?? cert.image_url}
             alt={title}
             onClick={(e) => e.stopPropagation()}
+            onError={(e) => {
+              const img = e.currentTarget;
+              if (cert.image_url && img.src !== cert.image_url) img.src = cert.image_url;
+            }}
             style={{ transform: `scale(${zoom})` }}
             className="max-h-full max-w-full origin-center rounded-lg object-contain transition-transform"
           />
@@ -263,22 +272,20 @@ function Lightbox({
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  // Read published certifications through a server function (service-role,
+  // published rows only) rather than the browser anon client. This makes the
+  // certifications visible to every visitor — including logged-out ones —
+  // regardless of whether the deployment's public anon Supabase key is set,
+  // which was causing the section to only appear for the signed-in admin.
+  const listCerts = useServerFn(listPublicCertificationsFn);
   const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from("certifications")
-        .select(
-          "id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url",
-        )
-        .eq("is_published", true)
-        .order("sort_order", { ascending: true });
-      if (error) throw error;
-      return (data ?? []) as Cert[];
+      const res = await listCerts();
+      return (res.items ?? []) as Cert[];
     },
     staleTime: 5 * 60 * 1000,
   });
-
 
   const rows = (data ?? []) as Cert[];
   const fallback: Cert[] = t.certs.items.map((it, i) => ({
