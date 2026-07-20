@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronLeft,
@@ -13,8 +12,25 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
-import { listPublicCertificationsFn } from "@/lib/profile/manage.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { Marquee } from "./Marquee";
+
+/**
+ * Rewrites a Supabase public-object URL into the on-the-fly image transform
+ * endpoint (`/storage/v1/render/image/public/...`) so cards ship a smaller
+ * resized+recompressed image instead of the original multi-MB upload.
+ * Non-Supabase URLs are returned unchanged.
+ */
+function transformCertUrl(url: string | null, width: number, quality = 70): string | null {
+  if (!url) return null;
+  const marker = "/storage/v1/object/public/";
+  const idx = url.indexOf(marker);
+  if (idx === -1) return url;
+  const base = url.slice(0, idx);
+  const path = url.slice(idx + marker.length);
+  return `${base}/storage/v1/render/image/public/${path}?width=${width}&quality=${quality}&resize=contain`;
+}
+
 
 type Cert = {
   id: string;
