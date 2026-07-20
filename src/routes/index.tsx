@@ -230,7 +230,7 @@ function isEidSeason(): boolean {
 function Index() {
   const [lang, setLang] = useState<Lang>("ar");
   const [theme, setTheme] = useState<Theme>("dark");
-  const [loaded, setLoaded] = useState(false);
+  
   const [skillModal, setSkillModal] = useState<SkillItem | null>(null);
   const [serviceModal, setServiceModal] = useState<ServiceItem | null>(null);
   const [eidOpen, setEidOpen] = useState<boolean>(false);
