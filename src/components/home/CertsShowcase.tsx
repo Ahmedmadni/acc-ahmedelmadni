@@ -206,7 +206,7 @@ function Lightbox({
 
         {cert.image_url ? (
           <img
-            src={cert.image_url}
+            src={transformCertUrl(cert.image_url, 1400, 82) ?? cert.image_url}
             alt={title}
             onClick={(e) => e.stopPropagation()}
             style={{ transform: `scale(${zoom})` }}
