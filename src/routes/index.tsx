@@ -230,7 +230,7 @@ function isEidSeason(): boolean {
 function Index() {
   const [lang, setLang] = useState<Lang>("ar");
   const [theme, setTheme] = useState<Theme>("dark");
-  const [loaded, setLoaded] = useState(false);
+  
   const [skillModal, setSkillModal] = useState<SkillItem | null>(null);
   const [serviceModal, setServiceModal] = useState<ServiceItem | null>(null);
   const [eidOpen, setEidOpen] = useState<boolean>(false);
@@ -252,10 +252,6 @@ function Index() {
     el.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  useEffect(() => {
-    const tm = setTimeout(() => setLoaded(true), 1200);
-    return () => clearTimeout(tm);
-  }, []);
 
   useEffect(() => {
     if (!isEidSeason()) return;
@@ -436,22 +432,8 @@ function Index() {
         className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-gradient-to-r from-amber-200 via-[#d7aa52] to-amber-700"
       />
 
-      <AnimatePresence>
-        {!loaded && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
-            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#04101f]"
-          >
-            <div className="loader-circle" />
-            <h2 className="mt-6 text-2xl font-bold gold-text tracking-wide">Ahmed Elmadani</h2>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.4em] text-white/40">
-              Senior Accountant
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+
 
       <Navbar lang={lang} theme={theme} onToggle={toggleLang} onTheme={toggleTheme} />
 
