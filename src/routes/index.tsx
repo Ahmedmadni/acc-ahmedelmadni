@@ -34,7 +34,6 @@ import {
   Menu,
   MessageCircle,
   MessagesSquare,
-  Moon,
   Phone,
   PieChart,
   Plus,
@@ -43,7 +42,6 @@ import {
   ShieldCheck,
   Sparkles,
   Star,
-  Sun,
   Target,
   TrendingUp,
   Users,
@@ -62,13 +60,15 @@ import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
 import mascotLinkedin from "@/assets/mascot-linkedin.webp";
 import mascotFacebook from "@/assets/mascot-facebook.webp";
 import mascotInstagram from "@/assets/mascot-instagram.webp";
-import heroCinematic from "@/assets/hero-bg-cinematic.jpg";
+import heroImg from "@/assets/ahmed-elmadni-hero.png";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
 import { MarqueeStrip } from "@/components/about/CinematicAbout";
+import { RevealHeadline } from "@/components/home/RevealHeadline";
+import { EASE, useMotionSafe } from "@/lib/motion";
 
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
@@ -158,8 +158,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Theme = "dark" | "light";
-
 const SOCIALS: ReadonlyArray<{
   href: string;
   Icon: LucideIcon;
@@ -230,8 +228,7 @@ function isEidSeason(): boolean {
 
 function Index() {
   const [lang, setLang] = useState<Lang>("ar");
-  const [theme, setTheme] = useState<Theme>("dark");
-  
+
   const [skillModal, setSkillModal] = useState<SkillItem | null>(null);
   const [serviceModal, setServiceModal] = useState<ServiceItem | null>(null);
   const [eidOpen, setEidOpen] = useState<boolean>(false);
@@ -246,13 +243,6 @@ function Index() {
     document.documentElement.lang = lang;
     document.documentElement.dir = dir;
   }, [lang, dir]);
-
-  useEffect(() => {
-    const el = document.documentElement;
-    el.classList.toggle("light", theme === "light");
-    el.classList.toggle("dark", theme === "dark");
-  }, [theme]);
-
 
   useEffect(() => {
     if (!isEidSeason()) return;
@@ -340,10 +330,6 @@ function Index() {
   const toggleLang = () => {
     playClick();
     setLang((l) => (l === "ar" ? "en" : "ar"));
-  };
-  const toggleTheme = () => {
-    playClick();
-    setTheme((th) => (th === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -433,10 +419,7 @@ function Index() {
         className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-gradient-to-r from-amber-200 via-[#d7aa52] to-amber-700"
       />
 
-
-
-
-      <Navbar lang={lang} theme={theme} onToggle={toggleLang} onTheme={toggleTheme} />
+      <Navbar lang={lang} onToggle={toggleLang} />
 
       <main className="relative z-10">
         <Hero lang={lang} />
@@ -487,17 +470,7 @@ function Index() {
 }
 
 /* ============= NAVBAR ============= */
-export function Navbar({
-  lang,
-  theme,
-  onToggle,
-  onTheme,
-}: {
-  lang: Lang;
-  theme: Theme;
-  onToggle: () => void;
-  onTheme: () => void;
-}) {
+export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void }) {
   const isAdmin = useIsAdmin();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
@@ -513,7 +486,7 @@ export function Navbar({
   ];
 
   const renderLink = (l: { to: string; label: string; hash?: boolean }, extraClass = "") => {
-    const cls = `relative text-sm font-medium transition-colors hover:text-[#d7aa52] ${extraClass}`;
+    const cls = `relative text-sm font-medium transition-colors hover:text-[#c2a079] ${extraClass}`;
     if (l.hash) {
       return (
         <a
@@ -545,8 +518,8 @@ export function Navbar({
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-[#d7aa52]/25 backdrop-blur-xl"
-      style={{ background: "color-mix(in oklab, #04101f 80%, transparent)" }}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-[#A88765]/20 backdrop-blur-xl"
+      style={{ background: "color-mix(in oklab, #1C1B19 82%, transparent)" }}
     >
       <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20 items-center justify-between gap-4">
         <RouterLink
@@ -557,7 +530,7 @@ export function Navbar({
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
-          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] gold-text">
+          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] text-[#A88765]">
             Senior Accountant
           </span>
         </RouterLink>
@@ -574,14 +547,14 @@ export function Navbar({
               to="/"
               onMouseEnter={playHover}
               onClick={playClick}
-              className="hidden sm:flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
+              className="hidden sm:flex size-9 items-center justify-center rounded-full border border-[#A88765]/30 transition-all hover:bg-[#A88765]/10"
               aria-label={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
               title={lang === "ar" ? "العودة للرئيسية" : "Back to home"}
             >
               {lang === "ar" ? (
-                <ArrowRight className="size-4 text-[#d7aa52]" />
+                <ArrowRight className="size-4 text-[#A88765]" />
               ) : (
-                <ArrowLeft className="size-4 text-[#d7aa52]" />
+                <ArrowLeft className="size-4 text-[#A88765]" />
               )}
             </RouterLink>
           )}
@@ -612,32 +585,20 @@ export function Navbar({
             </RouterLink>
           )}
           <button
-            onClick={onTheme}
-            onMouseEnter={playHover}
-            className="flex size-9 items-center justify-center rounded-full gold-border transition-all hover:bg-[#d7aa52]/10"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? (
-              <Sun className="size-4 text-[#d7aa52]" />
-            ) : (
-              <Moon className="size-4 text-[#d7aa52]" />
-            )}
-          </button>
-          <button
             onClick={onToggle}
             onMouseEnter={playHover}
-            className="flex items-center gap-2 rounded-full gold-border px-3 py-2 text-xs font-semibold transition-all hover:bg-[#d7aa52]/10"
+            className="flex items-center gap-2 rounded-full border border-[#A88765]/30 px-3 py-2 text-xs font-semibold transition-all hover:bg-[#A88765]/10"
             style={{ color: "var(--fg)" }}
             aria-label="Toggle language"
           >
-            <Languages className="size-4 text-[#d7aa52]" />
+            <Languages className="size-4 text-[#A88765]" />
             <span>{lang === "ar" ? "EN" : "AR"}</span>
           </button>
           <RouterLink
             to="/request-service"
             onMouseEnter={playHover}
             onClick={playClick}
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-all hover:scale-105 hover:shadow-[#d7aa52]/50"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-xs font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/40 transition-all hover:scale-105"
           >
             <Sparkles className="size-4" />
             {lang === "ar" ? "اطلب خدمة" : "Request Service"}
@@ -649,13 +610,13 @@ export function Navbar({
           </RouterLink>
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="flex size-9 items-center justify-center rounded-full gold-border lg:hidden"
+            className="flex size-9 items-center justify-center rounded-full border border-[#A88765]/30 lg:hidden"
             aria-label="Menu"
           >
             {mobileOpen ? (
-              <X className="size-4 text-[#d7aa52]" />
+              <X className="size-4 text-[#A88765]" />
             ) : (
-              <Menu className="size-4 text-[#d7aa52]" />
+              <Menu className="size-4 text-[#A88765]" />
             )}
           </button>
         </div>
@@ -669,7 +630,7 @@ export function Navbar({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             className="lg:hidden overflow-hidden border-t border-[#d7aa52]/20"
-            style={{ background: "color-mix(in oklab, #04101f 95%, transparent)" }}
+            style={{ background: "color-mix(in oklab, #1C1B19 95%, transparent)" }}
           >
             <ul className="flex flex-col gap-1 px-4 py-4">
               {links.map((l) => (
@@ -701,7 +662,7 @@ export function Navbar({
                 <RouterLink
                   to="/request-service"
                   onClick={() => setMobileOpen(false)}
-                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-sm font-bold text-[#04101f]"
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2.5 text-sm font-bold text-[#1C1B19]"
                 >
                   <Sparkles className="size-4" />
                   {lang === "ar" ? "اطلب خدمة" : "Request Service"}
@@ -716,152 +677,115 @@ export function Navbar({
 }
 
 /* ============= TYPEWRITER ============= */
-function Typewriter({ words }: { words: string[] }) {
-  const [idx, setIdx] = useState(0);
-  const [sub, setSub] = useState("");
-  const [del, setDel] = useState(false);
-  useEffect(() => {
-    const word = words[idx];
-    const speed = del ? 40 : 80;
-    const tm = setTimeout(() => {
-      if (!del) {
-        const next = word.slice(0, sub.length + 1);
-        setSub(next);
-        if (next === word) setTimeout(() => setDel(true), 1300);
-      } else {
-        const next = word.slice(0, sub.length - 1);
-        setSub(next);
-        if (next === "") {
-          setDel(false);
-          setIdx((i) => (i + 1) % words.length);
-        }
-      }
-    }, speed);
-    return () => clearTimeout(tm);
-  }, [sub, del, idx, words]);
-  return <span className="caret gold-text font-extrabold">{sub}</span>;
-}
-
-/* ============= HERO BACKGROUND ============= */
-function HeroFrameSlideshow() {
-  return (
-    <>
-      <img
-        src={heroCinematic}
-        alt=""
-        aria-hidden="true"
-        width={1920}
-        height={1280}
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(120% 80% at 50% 0%, rgba(215,170,82,0.18), transparent 60%), linear-gradient(180deg, rgba(4,16,31,0.55) 0%, rgba(6,24,45,0.65) 60%, rgba(4,16,31,0.85) 100%)",
-        }}
-      />
-    </>
-  );
-}
-
 /* ============= HERO ============= */
 function Hero({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
-  const { scrollY } = useScroll();
-  const yBg = useTransform(scrollY, [0, 600], [0, 120]);
+  const { reduce } = useMotionSafe();
+
+  // Simple staggered fade for the supporting elements (headline handles its
+  // own reveal). Collapses to an instant opacity change under reduced motion.
+  const fade = (delay: number) => ({
+    initial: reduce ? { opacity: 0 } : { opacity: 0, y: 16 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: reduce ? { duration: 0.2 } : { duration: 0.6, ease: EASE.out, delay },
+  });
 
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 border-b-2 border-[var(--gold)]/40 shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+      className="relative isolate min-h-[92vh] w-full overflow-hidden md:min-h-screen"
     >
-      {/* Background video / gradient */}
-      <motion.div
-        style={{ y: yBg }}
-        className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-0"
-      >
-        <HeroFrameSlideshow />
-        {/* CHANGE 1: increased darkness from /40 and /60 to /80 and /90 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08111F]/50 via-[#0D1726]/65 to-[var(--bg-surface)]" />
-      </motion.div>
-
-      {/* overlay to hide cinematic-grid inside hero only */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[1]"
-        style={{ background: "rgba(4,16,31,0.45)", mixBlendMode: "multiply" }}
+      {/* Full-bleed executive portrait — real image asset, no baked text/CTA */}
+      <img
+        src={heroImg}
+        alt={
+          lang === "ar"
+            ? "أحمد المدني — محاسب أول واستشاري مالي، في مكتبه التنفيذي"
+            : "Ahmed Elmadani — Senior Accountant & Financial Consultant, in his executive office"
+        }
+        width={1536}
+        height={1024}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-[72%_28%] lg:object-[70%_26%]"
       />
 
-      {/* Ambient gold glow */}
-      <div className="pointer-events-none absolute inset-0 z-[2] opacity-60">
-        <div className="absolute top-1/3 right-[15%] h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(212,166,74,0.22),transparent_65%)]" />
-        <div className="absolute bottom-1/4 left-[10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.14),transparent_70%)]" />
-      </div>
+      {/* Readability scrims — warm, restrained, only where the text sits */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 hidden lg:block"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(20,15,11,0.90) 0%, rgba(20,15,11,0.55) 30%, rgba(20,15,11,0.14) 52%, transparent 66%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 lg:hidden"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,15,11,0.28) 0%, rgba(20,15,11,0.18) 34%, rgba(20,15,11,0.86) 80%, rgba(20,15,11,0.96) 100%)",
+        }}
+      />
+      {/* Blend into the section below */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32"
+        style={{ background: "linear-gradient(180deg, transparent, var(--bg-surface))" }}
+      />
 
-      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-16">
-        {/* single-column layout — portrait hidden */}
-        <div className="flex flex-col">
-          {/* TEXT column — full width, RTL aligned */}
-          <div className="w-full">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4A64A]/40 bg-white/5 px-4 py-2 text-[13px] font-semibold text-[#f3d28a] backdrop-blur-md">
-              <Sparkles className="size-3.5" />
-              {t.hero.badge[lang]}
-            </div>
+      {/* Content — left text zone on desktop, bottom stack on mobile */}
+      <div className="relative flex min-h-[92vh] w-full items-end px-4 pb-16 pt-24 sm:px-8 md:pb-20 md:pt-28 lg:min-h-screen lg:items-center lg:py-0 lg:px-12 xl:px-16">
+        <div className="w-full md:max-w-[40rem] lg:w-auto lg:mr-auto lg:max-w-[34rem] xl:max-w-[40rem]">
+          <motion.div
+            {...fade(0.05)}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#A88765]/45 bg-[#1C1B19]/40 px-4 py-2 text-[13px] font-semibold text-[#e9d9c3] backdrop-blur-md"
+          >
+            <Sparkles className="size-3.5 text-[#A88765]" />
+            {t.hero.badge[lang]}
+          </motion.div>
 
-            <h1 className="mb-6 font-black tracking-tight leading-[1.1]">
-              <span
-                className="block text-[42px] sm:text-[56px] lg:text-[72px] pb-1"
-                style={{ color: "var(--fg)" }}
-              >
-                {t.hero.name[lang]}
-              </span>
-              <span className="mt-2 block text-[38px] sm:text-[50px] lg:text-[64px] gold-text">
-                {lang === "ar" ? "محاسب أول" : "Senior Accountant"}
-              </span>
-            </h1>
+          <RevealHeadline
+            lines={t.hero.headline[lang]}
+            className="font-display text-[2.4rem] font-bold leading-[1.32] text-[#FCFBF9] [text-wrap:balance] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[4rem]"
+          />
 
-            <div className="mb-4 min-h-[28px] text-lg font-medium">
-              <Typewriter words={t.hero.typewriter[lang]} />
-            </div>
+          <motion.p
+            {...fade(0.75)}
+            className="mt-6 max-w-[34rem] text-[15px] leading-[1.9] text-[#FCFBF9]/80 sm:text-[17px]"
+          >
+            {t.hero.tagline[lang]}
+          </motion.p>
 
-            <p
-              className="mb-10 max-w-[600px] text-[17px] sm:text-[19px] lg:text-[22px] leading-[1.8]"
-              style={{ color: "var(--fg-soft)" }}
+          <motion.div {...fade(0.9)} className="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href="/#contact"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="group inline-flex h-[54px] items-center gap-3 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-8 text-[15px] font-bold text-[#1C1B19] shadow-[0_18px_40px_-16px_rgba(74,48,35,0.7)] transition-transform hover:scale-[1.03]"
             >
-              {t.hero.intro[lang]}
-            </p>
+              <span>{t.hero.cta1[lang]}</span>
+              <Arrow className="size-4 transition-transform group-hover:-translate-x-1 rtl:group-hover:-translate-x-1 ltr:group-hover:translate-x-1" />
+            </a>
+            <RouterLink
+              to="/request-service"
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="inline-flex h-[54px] items-center gap-2 rounded-full border border-[#FCFBF9]/25 bg-white/[0.04] px-6 text-[14px] font-semibold text-[#FCFBF9]/90 backdrop-blur-sm transition-colors hover:border-[#A88765] hover:text-[#e9d9c3]"
+            >
+              <Briefcase className="size-4" />
+              <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
+            </RouterLink>
+          </motion.div>
 
-            <div className="mb-8 flex flex-wrap items-center gap-4">
-              <a
-                href="#contact"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="group relative inline-flex h-[58px] items-center gap-3 overflow-hidden rounded-full bg-gradient-to-br from-[#f3d28a] via-[#D4A64A] to-[#b8862e] px-8 text-[15px] font-bold text-[#04101f] shadow-xl shadow-[#D4A64A]/40 transition-transform hover:scale-[1.04]"
-              >
-                <span className="absolute inset-0 shine opacity-60" />
-                <span className="relative">{t.hero.cta1[lang]}</span>
-                <Arrow className="relative size-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
-              </a>
-              <RouterLink
-                to="/request-service"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="group inline-flex h-[58px] items-center gap-3 rounded-full border-2 border-[#D4A64A] bg-white/5 px-8 text-[15px] font-bold text-[#D4A64A] backdrop-blur-md transition-all hover:scale-[1.04] hover:bg-[#D4A64A] hover:text-[#04101f]"
-              >
-                <Briefcase className="size-4" />
-                <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
-              </RouterLink>
-            </div>
-
-            <div className="flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
-              <MapPin className="size-4 text-[#D4A64A]" />
-              {t.hero.location[lang]}
-            </div>
-          </div>
+          <motion.div
+            {...fade(1.05)}
+            className="mt-7 flex items-center gap-2 text-[13px] text-[#FCFBF9]/70"
+          >
+            <MapPin className="size-4 text-[#A88765]" />
+            {t.hero.location[lang]}
+          </motion.div>
         </div>
       </div>
     </section>
