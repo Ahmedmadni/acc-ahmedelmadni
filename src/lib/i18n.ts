@@ -37,6 +37,14 @@ export const t = {
       ar: "أبني تقارير مالية دقيقة وتحليلات تكاليف موثوقة تدعم قرارات الإدارة التنفيذية في كبرى المؤسسات بالمملكة العربية السعودية.",
       en: "I craft accurate financial reports and trusted cost analysis that empower executive decisions across leading Saudi enterprises.",
     },
+    headline: {
+      ar: ["أحوّل الأرقام المعقّدة", "إلى رؤية أوضح", "وقرارات أفضل."],
+      en: ["I turn complex numbers", "into a clearer vision", "and better decisions."],
+    },
+    tagline: {
+      ar: "أساعد الشركات وأصحاب الأعمال على فهم أرقامهم، وتحسين قراراتهم المالية، وبناء رؤية أوضح لمستقبل أعمالهم.",
+      en: "I help companies and business owners understand their numbers, improve their financial decisions, and build a clearer vision for the future of their business.",
+    },
     cta1: { ar: "تواصل معي", en: "Get in touch" },
     cta2: { ar: "السيرة الذاتية", en: "View CV" },
     location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
