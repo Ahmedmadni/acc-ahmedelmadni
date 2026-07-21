@@ -1,31 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-type Theme = "dark" | "light";
 type Lang = "ar" | "en";
 
-const THEME_KEY = "global-theme";
 const LANG_KEY = "global-lang";
 
 export function GlobalControls() {
-  const [mounted, setMounted] = useState(false);
-  const [theme] = useState<Theme>("dark");
-  const [lang] = useState<Lang>("ar");
-
-  // Initialize from localStorage on mount
+  // Language-only initializer. The site uses one permanent visual system
+  // (Executive Financial Luxury) with no user-facing light/dark toggle, so
+  // the `dark` class is applied statically in the root shell; here we only
+  // sync the saved language and clear any stale `light` class from before
+  // the toggle was removed.
   useEffect(() => {
     try {
-      const savedTheme = (localStorage.getItem(THEME_KEY) as Theme | null) ?? "dark";
       const savedLang = (localStorage.getItem(LANG_KEY) as Lang | null) ?? "ar";
-      document.documentElement.classList.toggle("dark", savedTheme === "dark");
-      document.documentElement.classList.toggle("light", savedTheme === "light");
-      document.documentElement.lang = savedLang;
-      document.documentElement.dir = savedLang === "ar" ? "rtl" : "ltr";
+      const el = document.documentElement;
+      el.lang = savedLang;
+      el.dir = savedLang === "ar" ? "rtl" : "ltr";
+      el.classList.add("dark");
+      el.classList.remove("light");
     } catch {
       /* noop */
     }
-    setMounted(true);
   }, []);
 
-  // No visual output anymore — the header's own controls handle the UI now
   return null;
 }

@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "robots",
         content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
-      { name: "theme-color", content: "#04101f" },
+      { name: "theme-color", content: "#4A3023" },
       { property: "og:site_name", content: "Ahmed Elmadani | أحمد المدني" },
       { property: "og:locale", content: "ar_SA" },
       { property: "og:locale:alternate", content: "en_US" },
@@ -130,13 +130,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800&family=Inter:wght@300;400;600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap",
         media: "print",
       },
     ],
     scripts: [
       {
-        children: `*,::before,::after{box-sizing:border-box}body{margin:0;background:#04101f;color:#fff;font-family:'Cairo','Inter',sans-serif}.min-h-screen{min-height:100vh}`,
+        children: `*,::before,::after{box-sizing:border-box}body{margin:0;background:#04101f;color:#fff;font-family:'IBM Plex Sans Arabic','IBM Plex Sans',system-ui,sans-serif}.min-h-screen{min-height:100vh}`,
         type: "text/css",
       },
       {
@@ -218,7 +218,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl" className="dark">
       <head>
         <HeadContent />
       </head>
