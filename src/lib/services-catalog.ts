@@ -297,6 +297,18 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
     category: "consulting",
   },
   {
+    id: "accounting-software-advisory",
+    icon: Lightbulb,
+    titleAr: "ترشيح البرامج المحاسبية",
+    titleEn: "Accounting Software Advisory",
+    descAr: "ترشيح أفضل برنامج محاسبي (أودو، دفتره، قيود…) حسب نشاطك وحجم أعمالك.",
+    descEn: "Pick the best software (Odoo, Daftra, Qoyod…) for your activity & scale.",
+    accent: "#f3d28a",
+    category: "consulting",
+    badgeAr: "جديد",
+    badgeEn: "New",
+  },
+  {
     id: "internal-audit",
     icon: ShieldCheck,
     titleAr: "المراجعة الداخلية",
@@ -307,6 +319,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
     category: "operations",
   },
 ];
+
 
 export function getServiceById(id: string | undefined | null): ServiceEntry | undefined {
   if (!id) return undefined;
