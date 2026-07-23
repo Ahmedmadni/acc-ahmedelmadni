@@ -271,17 +271,20 @@ function Lightbox({
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // Read published certifications through a server function (service-role,
-  // published rows only) rather than the browser anon client. This makes the
-  // certifications visible to every visitor — including logged-out ones —
-  // regardless of whether the deployment's public anon Supabase key is set,
-  // which was causing the section to only appear for the signed-in admin.
-  const listCerts = useServerFn(listPublicCertificationsFn);
+  // Read published certifications directly via the browser Supabase client.
+  // RLS allows public read of published rows, and this avoids server-fn
+  // failures caused by service-role/JWT key format mismatches on some
+  // deployments (which previously made the section render empty).
   const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const res = await listCerts();
-      return (res.items ?? []) as Cert[];
+      const { data, error } = await supabase
+        .from("certifications")
+        .select("id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url")
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return (data ?? []) as Cert[];
     },
     staleTime: 5 * 60 * 1000,
   });
