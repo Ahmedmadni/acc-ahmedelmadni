@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronLeft,
@@ -13,7 +12,7 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
-import { listPublicCertificationsFn } from "@/lib/profile/manage.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { Marquee } from "./Marquee";
 
 /**
