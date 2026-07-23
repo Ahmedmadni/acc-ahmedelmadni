@@ -1,0 +1,1 @@
+DROP POLICY IF EXISTS "kb_images_public_read" ON storage.objects;
