@@ -426,9 +426,6 @@ function Index() {
         <Suspense fallback={null}>
           <ServicesMarquee lang={lang} />
         </Suspense>
-        <div className="relative border-y border-[#d7aa52]/20 bg-[#07182c]/60 backdrop-blur overflow-hidden py-6">
-          <MarqueeStrip lang={lang} />
-        </div>
         <Stats lang={lang} />
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
