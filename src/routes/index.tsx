@@ -66,7 +66,7 @@ import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
-import { MarqueeStrip } from "@/components/about/CinematicAbout";
+
 import { RevealHeadline } from "@/components/home/RevealHeadline";
 import { EASE, useMotionSafe } from "@/lib/motion";
 
