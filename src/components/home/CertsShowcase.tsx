@@ -56,7 +56,7 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
           <img
             src={transformCertUrl(c.image_url, 800, 72) ?? c.image_url}
             alt={title}
-            loading="lazy"
+            loading="eager"
             decoding="async"
             onError={(e) => {
               // The Supabase image-transform endpoint isn't available on every
