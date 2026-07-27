@@ -26,9 +26,14 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   return (
     <section
       id="software"
-      className="relative overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28"
+      className="relative z-10 overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28"
     >
-      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+      {/* Soft blend from the dark Services band above, echoing the Hero's own transition. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 -z-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
+      />
+      <div className="relative mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial="hidden"

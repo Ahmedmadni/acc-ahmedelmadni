@@ -6,6 +6,7 @@ import {
   AnimatePresence,
   motion,
   useInView,
+  useMotionValue,
   useScroll,
   useSpring,
   useTransform,
@@ -232,6 +233,53 @@ function isEidSeason(): boolean {
   }
 }
 
+/**
+ * Wraps an outgoing section so it reads as a stable background layer while
+ * the next section slides over it (Services → Software, Phase M2/P0). Native
+ * `position: sticky` does the actual "cover" — it pins the section at the
+ * viewport top only for the scroll range spanning its own box height, then
+ * releases naturally once the next section's opaque background reaches it.
+ * A small scroll-linked scale + dim on top sells the depth. Desktop/tablet
+ * only (`lg:` and up) and skipped entirely under reduced motion — mobile
+ * keeps plain document flow, per the "no cinematic effect on small screens"
+ * requirement.
+ */
+function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { reduce } = useMotionSafe();
+  const [cinematic, setCinematic] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    setCinematic(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setCinematic(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.97]);
+  const dim = useTransform(scrollYProgress, [0, 1], [0, 0.35]);
+
+  if (reduce || !cinematic) {
+    return <div ref={ref}>{children}</div>;
+  }
+
+  return (
+    <div ref={ref} className="sticky top-0 z-0">
+      <motion.div style={{ scale }}>{children}</motion.div>
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-black"
+        style={{ opacity: dim }}
+      />
+    </div>
+  );
+}
+
 function Index() {
   const [lang, setLang] = useState<Lang>("ar");
 
@@ -240,6 +288,7 @@ function Index() {
   const [eidOpen, setEidOpen] = useState<boolean>(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+  const { reduce } = useMotionSafe();
 
   const dir = lang === "ar" ? "rtl" : "ltr";
   const isRTL = lang === "ar";
@@ -328,81 +377,95 @@ function Index() {
 
   return (
     <div className="relative min-h-screen antialiased" style={{ color: "var(--fg)" }}>
-      {showVatBanner && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-          <div className="relative w-full max-w-md rounded-2xl border border-[#A88765]/40 bg-[#1C1B19] overflow-hidden shadow-2xl shadow-[#4A3023]/20">
-            {/* Bronze top bar */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-[#7c6045] via-[#c9a986] to-[#7c6045]" />
-            {/* Close button */}
-            <button
-              onClick={dismissBanner}
-              aria-label={lang === "ar" ? "إغلاق" : "Close"}
-              className="absolute top-3 end-3 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
+      <AnimatePresence>
+        {showVatBanner && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: reduce ? 0.15 : 0.35, ease: EASE.out }}
+            className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.94, y: 12 }}
+              animate={reduce ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
+              exit={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.96, y: 8 }}
+              transition={{ duration: reduce ? 0.15 : 0.4, ease: EASE.out }}
+              className="relative w-full max-w-md rounded-2xl border border-[#A88765]/40 bg-[#1C1B19] overflow-hidden shadow-2xl shadow-[#4A3023]/20"
             >
-              <X className="w-4 h-4" />
-            </button>
-            <div className="p-6 text-center">
-              {/* VAT Logo */}
-              <div className="mx-auto mb-4 w-16 h-16 rounded-xl overflow-hidden border border-[#A88765]/30 shadow-lg shadow-[#4A3023]/10">
-                <div className="w-full h-[60%] bg-[#0a4d2e] flex items-center justify-center">
-                  <span className="text-white font-black text-[8px] leading-tight text-center">
-                    ضريبة
-                    <br />
-                    القيمة
-                    <br />
-                    المضافة
+              {/* Bronze top bar */}
+              <div className="h-1.5 w-full bg-gradient-to-r from-[#7c6045] via-[#c9a986] to-[#7c6045]" />
+              {/* Close button */}
+              <button
+                onClick={dismissBanner}
+                aria-label={lang === "ar" ? "إغلاق" : "Close"}
+                className="absolute top-3 end-3 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              <div className="p-6 text-center">
+                {/* VAT Logo */}
+                <div className="mx-auto mb-4 w-16 h-16 rounded-xl overflow-hidden border border-[#A88765]/30 shadow-lg shadow-[#4A3023]/10">
+                  <div className="w-full h-[60%] bg-[#0a4d2e] flex items-center justify-center">
+                    <span className="text-white font-black text-[8px] leading-tight text-center">
+                      ضريبة
+                      <br />
+                      القيمة
+                      <br />
+                      المضافة
+                    </span>
+                  </div>
+                  <div className="w-full h-[40%] bg-[#c9a227] flex items-center justify-center">
+                    <span className="text-white font-black text-xs tracking-widest">VAT</span>
+                  </div>
+                </div>
+                {/* Pulse badge */}
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/50 bg-amber-400/10 px-3 py-1 text-[10px] font-bold text-amber-300 mb-3">
+                  <span className="relative flex h-2 w-2">
+                    <span className="motion-reduce:animate-none animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400" />
                   </span>
+                  تنبيه موسمي — الآن
                 </div>
-                <div className="w-full h-[40%] bg-[#c9a227] flex items-center justify-center">
-                  <span className="text-white font-black text-xs tracking-widest">VAT</span>
+                {/* Heading */}
+                <h2 className="font-display text-xl font-black text-white mb-2 leading-tight">
+                  موعد إقرار ضريبة
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#c9a986] to-[#7c6045]">
+                    القيمة المضافة
+                  </span>
+                </h2>
+                {/* Quarter label */}
+                <p className="text-sm text-[var(--fg-soft)] mb-1">
+                  إقرار {VAT_QUARTER[currentMonth]} — يجب التقديم قبل نهاية الشهر
+                </p>
+                <p className="text-xs text-[var(--fg-soft)]/70 mb-6">
+                  احمِ منشأتك من الغرامات — تقديم احترافي عبر منصة زاتكا
+                </p>
+                {/* CTA Buttons */}
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="/request-service?service=vat-declaration"
+                    onClick={dismissBanner}
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-black text-[#1C1B19] hover:scale-105 transition-transform shadow-lg shadow-[#4A3023]/30"
+                  >
+                    ⚡ اطلب الخدمة الآن
+                  </a>
+                  <button
+                    onClick={dismissBanner}
+                    className="w-full rounded-full border border-white/15 py-2.5 text-xs font-bold text-[var(--fg-soft)] hover:bg-white/5 transition"
+                  >
+                    ليس الآن — إغلاق
+                  </button>
                 </div>
+                {/* Trust line */}
+                <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">
+                  أحمد المدني · محاسب أول معتمد · الرياض
+                </p>
               </div>
-              {/* Pulse badge */}
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/50 bg-amber-400/10 px-3 py-1 text-[10px] font-bold text-amber-300 mb-3">
-                <span className="relative flex h-2 w-2">
-                  <span className="motion-reduce:animate-none animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400" />
-                </span>
-                تنبيه موسمي — الآن
-              </div>
-              {/* Heading */}
-              <h2 className="font-display text-xl font-black text-white mb-2 leading-tight">
-                موعد إقرار ضريبة
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#c9a986] to-[#7c6045]">
-                  القيمة المضافة
-                </span>
-              </h2>
-              {/* Quarter label */}
-              <p className="text-sm text-[var(--fg-soft)] mb-1">
-                إقرار {VAT_QUARTER[currentMonth]} — يجب التقديم قبل نهاية الشهر
-              </p>
-              <p className="text-xs text-[var(--fg-soft)]/70 mb-6">
-                احمِ منشأتك من الغرامات — تقديم احترافي عبر منصة زاتكا
-              </p>
-              {/* CTA Buttons */}
-              <div className="flex flex-col gap-2">
-                <a
-                  href="/request-service?service=vat-declaration"
-                  onClick={dismissBanner}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-black text-[#1C1B19] hover:scale-105 transition-transform shadow-lg shadow-[#4A3023]/30"
-                >
-                  ⚡ اطلب الخدمة الآن
-                </a>
-                <button
-                  onClick={dismissBanner}
-                  className="w-full rounded-full border border-white/15 py-2.5 text-xs font-bold text-[var(--fg-soft)] hover:bg-white/5 transition"
-                >
-                  ليس الآن — إغلاق
-                </button>
-              </div>
-              {/* Trust line */}
-              <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">
-                أحمد المدني · محاسب أول معتمد · الرياض
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
         style={{ scaleX, transformOrigin: isRTL ? "right" : "left" }}
         className="fixed top-0 left-0 right-0 z-[100] h-[2px] bg-gradient-to-r from-[#c2a079] via-[#A88765] to-[#76543F]"
@@ -412,9 +475,11 @@ function Index() {
 
       <main className="relative z-10">
         <Hero lang={lang} />
-        <Suspense fallback={null}>
-          <ServicesEditorial lang={lang} onOpen={setServiceModal} />
-        </Suspense>
+        <StickyOutgoingLayer>
+          <Suspense fallback={null}>
+            <ServicesEditorial lang={lang} onOpen={setServiceModal} />
+          </Suspense>
+        </StickyOutgoingLayer>
         <Suspense fallback={null}>
           <SoftwareEcosystem lang={lang} />
         </Suspense>
@@ -463,6 +528,19 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { reduce } = useMotionSafe();
+  // `useMotionSafe()`'s reduced-motion value resolves via an effect (one tick
+  // after mount), but `initial` on the nav below is only ever read at mount —
+  // by the time the effect flips `reduce` to true, the entrance animation has
+  // already locked in. A lazily-initialized state reads matchMedia directly
+  // during the same render that decides `initial`, so it's correct from the
+  // very first paint (client-only; SSR has no window and safely defaults to
+  // the animated entrance, same as any other visitor without the effect yet).
+  const [navReduceMotion] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
 
   const links: { to: string; label: string; hash?: boolean }[] = [
     { to: "/", label: t.nav.home[lang] },
@@ -473,8 +551,31 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
     { to: "/#contact", label: t.nav.contact[lang], hash: true },
   ];
 
-  const renderLink = (l: { to: string; label: string; hash?: boolean }, extraClass = "") => {
+  // Hash links (in-page anchors) have no route of their own to be "active".
+  const isLinkActive = (l: { to: string; hash?: boolean }) => {
+    if (l.hash) return false;
+    if (l.to === "/") return isHome;
+    return pathname === l.to || pathname.startsWith(`${l.to}/`);
+  };
+
+  // `showIndicator` mounts the shared layoutId underline — desktop nav only,
+  // per Phase M7 scope (mobile keeps the plain color-based active state).
+  const renderLink = (
+    l: { to: string; label: string; hash?: boolean },
+    extraClass = "",
+    showIndicator = false,
+  ) => {
+    const active = isLinkActive(l);
     const cls = `relative text-sm font-medium transition-colors hover:text-[#c2a079] ${extraClass}`;
+    const color = active ? "#c2a079" : "var(--fg-soft)";
+    const indicator = showIndicator && active && (
+      <motion.span
+        layoutId="nav-active-underline"
+        aria-hidden
+        className="absolute inset-x-0 -bottom-1.5 h-[2px] rounded-full bg-[#A88765]"
+        transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 380, damping: 32 }}
+      />
+    );
     if (l.hash) {
       return (
         <a
@@ -482,9 +583,10 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
           onMouseEnter={playHover}
           onClick={() => setMobileOpen(false)}
           className={cls}
-          style={{ color: "var(--fg-soft)" }}
+          style={{ color }}
         >
           {l.label}
+          {indicator}
         </a>
       );
     }
@@ -494,18 +596,20 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
         onMouseEnter={playHover}
         onClick={() => setMobileOpen(false)}
         className={cls}
-        style={{ color: "var(--fg-soft)" }}
+        style={{ color }}
+        aria-current={active ? "page" : undefined}
       >
         {l.label}
+        {indicator}
       </RouterLink>
     );
   };
 
   return (
     <motion.nav
-      initial={{ y: -80, opacity: 0 }}
+      initial={navReduceMotion ? false : { y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.6 }}
+      transition={navReduceMotion ? { duration: 0 } : { duration: 0.8, delay: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-[#A88765]/20 backdrop-blur-xl"
       style={{ background: "color-mix(in oklab, #1C1B19 82%, transparent)" }}
     >
@@ -525,7 +629,7 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
 
         <ul className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
-            <li key={l.to}>{renderLink(l)}</li>
+            <li key={l.to}>{renderLink(l, "", true)}</li>
           ))}
         </ul>
 
@@ -679,25 +783,65 @@ function Hero({ lang }: { lang: Lang }) {
     transition: reduce ? { duration: 0.2 } : { duration: 0.6, ease: EASE.out, delay },
   });
 
+  // Subtle pointer parallax (Phase M3/P1) — fine-pointer devices only, and
+  // never under reduced motion. Background drifts a few px one way,
+  // foreground content drifts a couple px the other way, both smoothed
+  // through a spring so nothing feels cursor-locked.
+  const [pointerCapable, setPointerCapable] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: fine)");
+    setPointerCapable(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setPointerCapable(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+  const parallaxActive = pointerCapable && !reduce;
+
+  const rawX = useMotionValue(0);
+  const rawY = useMotionValue(0);
+  const springOpts = { stiffness: 60, damping: 20, mass: 0.5 };
+  const bgX = useSpring(useTransform(rawX, [-1, 1], [-8, 8]), springOpts);
+  const bgY = useSpring(useTransform(rawY, [-1, 1], [-8, 8]), springOpts);
+  const fgX = useSpring(useTransform(rawX, [-1, 1], [5, -5]), springOpts);
+  const fgY = useSpring(useTransform(rawY, [-1, 1], [5, -5]), springOpts);
+
+  const onHeroPointerMove = (e: React.PointerEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    rawX.set(((e.clientX - rect.left) / rect.width) * 2 - 1);
+    rawY.set(((e.clientY - rect.top) / rect.height) * 2 - 1);
+  };
+  const onHeroPointerLeave = () => {
+    rawX.set(0);
+    rawY.set(0);
+  };
+
   return (
     <section
       id="home"
       className="relative isolate min-h-[92vh] w-full overflow-hidden md:min-h-screen"
+      onPointerMove={parallaxActive ? onHeroPointerMove : undefined}
+      onPointerLeave={parallaxActive ? onHeroPointerLeave : undefined}
     >
-      {/* Full-bleed executive portrait — real image asset, no baked text/CTA */}
-      <img
-        src={heroImg}
-        alt={
-          lang === "ar"
-            ? "أحمد المدني — محاسب أول واستشاري مالي، في مكتبه التنفيذي"
-            : "Ahmed Elmadani — Senior Accountant & Financial Consultant, in his executive office"
-        }
-        width={1536}
-        height={1024}
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-[72%_28%] lg:object-[70%_26%]"
-      />
+      {/* Full-bleed executive portrait — real image asset, no baked text/CTA.
+          Wrapped slightly oversized so the parallax translate never exposes an edge. */}
+      <motion.div
+        className="absolute -inset-4 -z-10"
+        style={parallaxActive ? { x: bgX, y: bgY } : undefined}
+      >
+        <img
+          src={heroImg}
+          alt={
+            lang === "ar"
+              ? "أحمد المدني — محاسب أول واستشاري مالي، في مكتبه التنفيذي"
+              : "Ahmed Elmadani — Senior Accountant & Financial Consultant, in his executive office"
+          }
+          width={1536}
+          height={1024}
+          fetchPriority="high"
+          decoding="async"
+          className="h-full w-full object-cover object-[72%_28%] lg:object-[70%_26%]"
+        />
+      </motion.div>
 
       {/* Readability scrims — warm, restrained, only where the text sits */}
       <div
@@ -725,7 +869,10 @@ function Hero({ lang }: { lang: Lang }) {
 
       {/* Content — left text zone on desktop, bottom stack on mobile */}
       <div className="relative flex min-h-[92vh] w-full items-end px-4 pb-16 pt-24 sm:px-8 md:pb-20 md:pt-28 lg:min-h-screen lg:items-center lg:py-0 lg:px-12 xl:px-16">
-        <div className="w-full md:max-w-[40rem] lg:w-auto lg:mr-auto lg:max-w-[34rem] xl:max-w-[40rem]">
+        <motion.div
+          className="w-full md:max-w-[40rem] lg:w-auto lg:mr-auto lg:max-w-[34rem] xl:max-w-[40rem]"
+          style={parallaxActive ? { x: fgX, y: fgY } : undefined}
+        >
           <motion.div
             {...fade(0.05)}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#A88765]/45 bg-[#1C1B19]/40 px-4 py-2 text-[13px] font-semibold text-[#e9d9c3] backdrop-blur-md"
@@ -774,7 +921,7 @@ function Hero({ lang }: { lang: Lang }) {
             <MapPin className="size-4 text-[#A88765]" />
             {t.hero.location[lang]}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -1012,6 +1159,7 @@ function LogoBadge({
 export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) => void }) {
   const [active, setActive] = useState(0);
   const groupIcons = [BarChart3, Wallet, Wrench];
+  const { reduce } = useMotionSafe();
 
   const groupsQ = useQuery({
     queryKey: ["public-skill-groups"],
@@ -1097,14 +1245,25 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                       playClick();
                     }}
                     onMouseEnter={playHover}
-                    className={`group relative flex w-full shrink-0 items-center gap-3 rounded-2xl border px-4 py-4 text-start transition-all ${
+                    aria-pressed={isActive}
+                    className={`group relative flex w-full shrink-0 items-center gap-3 overflow-hidden rounded-2xl border px-4 py-4 text-start transition-colors ${
                       isActive
-                        ? "border-[#A88765] bg-gradient-to-br from-[#A88765]/15 to-transparent shadow-[0_10px_30px_-12px_rgba(168,135,101,0.35)]"
+                        ? "border-[#A88765]"
                         : "border-[#E3DDD5] bg-[#F5F1EB] hover:border-[#A88765]/40"
                     }`}
                   >
+                    {isActive && (
+                      <motion.span
+                        layoutId="skills-active-tab"
+                        aria-hidden
+                        className="absolute inset-0 bg-gradient-to-br from-[#A88765]/15 to-transparent shadow-[0_10px_30px_-12px_rgba(168,135,101,0.35)]"
+                        transition={
+                          reduce ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 28 }
+                        }
+                      />
+                    )}
                     <span
-                      className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
+                      className={`relative z-10 flex size-10 shrink-0 items-center justify-center rounded-xl ${
                         isActive
                           ? "bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
                           : "bg-[#A88765]/10 text-[#A88765]"
@@ -1112,7 +1271,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     >
                       <Icon className="size-5" />
                     </span>
-                    <div className="flex-1">
+                    <div className="relative z-10 flex-1">
                       <div className="text-[10px] uppercase tracking-[0.25em] text-[#8a8078]">
                         {String(i + 1).padStart(2, "0")} /{" "}
                         {groups.length.toString().padStart(2, "0")}
@@ -1130,9 +1289,9 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
 
             <motion.div
               key={activeGroup.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={reduce ? { opacity: 0 } : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={reduce ? { duration: 0 } : { duration: 0.5 }}
               className="relative overflow-hidden rounded-3xl border border-[#E3DDD5] bg-[#F5F1EB] p-6 sm:p-8"
             >
               <div className="relative">
@@ -1154,9 +1313,9 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                   {activeItems.map((it, j) => (
                     <motion.button
                       key={it.id}
-                      initial={{ opacity: 0, scale: 0.95 }}
+                      initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.35, delay: j * 0.05 }}
+                      transition={reduce ? { duration: 0 } : { duration: 0.35, delay: j * 0.05 }}
                       onMouseEnter={playHover}
                       onClick={() => {
                         playClick();
@@ -1172,10 +1331,12 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                       </div>
                       <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-[#E3DDD5]">
                         <motion.div
-                          initial={{ width: 0 }}
+                          initial={reduce ? { width: `${it.level}%` } : { width: 0 }}
                           whileInView={{ width: `${it.level}%` }}
                           viewport={{ once: true }}
-                          transition={{ duration: 1.1, delay: 0.1 + j * 0.05 }}
+                          transition={
+                            reduce ? { duration: 0 } : { duration: 1.1, delay: 0.1 + j * 0.05 }
+                          }
                           className="h-full rounded-full bg-gradient-to-r from-[#c2a079] to-[#7c6045]"
                         />
                       </div>
@@ -1243,7 +1404,7 @@ function Testimonials({ lang }: { lang: Lang }) {
               <motion.figure
                 key={i}
                 variants={m.staggerChild}
-                className="flex h-full flex-col rounded-2xl border border-[#E3DDD5] bg-[#FCFBF9] p-6"
+                className="flex h-full flex-col rounded-2xl border border-[#E3DDD5] bg-[#FCFBF9] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_18px_40px_-24px_rgba(74,48,35,0.5)]"
               >
                 <Quote aria-hidden className="size-7 text-[#A88765]/40" />
                 <blockquote className="mt-3 flex-1 text-[15px] leading-[1.9] text-[#3a352f]">
@@ -1272,9 +1433,98 @@ function Testimonials({ lang }: { lang: Lang }) {
 }
 
 /* ============= CONTACT ============= */
+/**
+ * A single Contact mascot card (Phase M5/P2). Kept as its own component so
+ * each card gets its own pointer-follow motion values — the card itself
+ * keeps its existing whileHover lift, the mascot image keeps its existing
+ * bob loop, and a small spring-smoothed x/y offset (fine-pointer only, off
+ * under reduced motion) is layered on a dedicated wrapper around the image
+ * so it never fights the bob animation's own `y` transform.
+ */
+function ContactMascotCard({
+  s,
+  i,
+  reduce,
+  parallaxActive,
+}: {
+  s: (typeof SOCIALS)[number];
+  i: number;
+  reduce: boolean;
+  parallaxActive: boolean;
+}) {
+  const rawX = useMotionValue(0);
+  const rawY = useMotionValue(0);
+  const springOpts = { stiffness: 300, damping: 22, mass: 0.4 };
+  const mascotX = useSpring(useTransform(rawX, [-1, 1], [-5, 5]), springOpts);
+  const mascotY = useSpring(useTransform(rawY, [-1, 1], [-5, 5]), springOpts);
+
+  const onPointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    rawX.set(((e.clientX - rect.left) / rect.width) * 2 - 1);
+    rawY.set(((e.clientY - rect.top) / rect.height) * 2 - 1);
+  };
+  const onPointerLeave = () => {
+    rawX.set(0);
+    rawY.set(0);
+  };
+
+  return (
+    <motion.a
+      href={s.href}
+      target={s.href.startsWith("http") ? "_blank" : undefined}
+      rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
+      aria-label={s.label}
+      title={s.label}
+      onMouseEnter={playHover}
+      onClick={playClick}
+      onPointerMove={parallaxActive ? onPointerMove : undefined}
+      onPointerLeave={parallaxActive ? onPointerLeave : undefined}
+      whileHover={{ y: -6, scale: 1.04 }}
+      className="group relative flex flex-col items-center justify-end overflow-visible rounded-2xl border border-[#A88765]/25 bg-white/[0.04] text-center backdrop-blur-sm transition-colors hover:border-[#A88765]/60"
+      style={{ height: 130, padding: "0 6px 8px" }}
+    >
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-4 top-4 h-14 rounded-full opacity-50 blur-2xl transition-opacity duration-500 group-hover:opacity-80"
+        style={{ background: s.color }}
+      />
+      <motion.div style={parallaxActive ? { x: mascotX, y: mascotY } : undefined}>
+        <motion.img
+          src={s.mascot}
+          alt=""
+          width={100}
+          height={100}
+          loading="lazy"
+          decoding="async"
+          className="relative w-auto object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.35)]"
+          style={{ height: 100, width: 100 }}
+          animate={reduce ? undefined : { y: [0, -5, 0] }}
+          transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
+      <span className="relative text-[11px] font-bold leading-tight text-[#FCFBF9]/90">
+        {s.label}
+      </span>
+    </motion.a>
+  );
+}
+
 export function Contact({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
   const m = useMotionSafe();
+
+  // Fine-pointer devices only (Phase M5/P2) — same capability gate used for
+  // the Hero parallax, checked once here rather than per mascot card.
+  const [pointerCapable, setPointerCapable] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: fine)");
+    setPointerCapable(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setPointerCapable(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+  const mascotParallaxActive = pointerCapable && !m.reduce;
+
   return (
     <section id="contact" className="relative overflow-hidden bg-[#4A3023] py-20 sm:py-24 lg:py-28">
       <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
@@ -1328,25 +1578,19 @@ export function Contact({ lang }: { lang: Lang }) {
           </motion.div>
 
           {/* Social channels */}
-          <motion.div variants={m.staggerChild} className="mt-8 flex flex-wrap gap-2.5">
-            {SOCIALS.map((s) => {
-              const Icon = s.Icon;
-              return (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target={s.href.startsWith("http") ? "_blank" : undefined}
-                  rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  aria-label={s.label}
-                  title={s.label}
-                  onMouseEnter={playHover}
-                  onClick={playClick}
-                  className="flex size-11 items-center justify-center rounded-full border border-[#A88765]/30 bg-white/[0.04] text-[#e9d9c3] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/15 hover:text-[#FCFBF9]"
-                >
-                  <Icon className="size-5" />
-                </a>
-              );
-            })}
+          <motion.div
+            variants={m.staggerChild}
+            className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7"
+          >
+            {SOCIALS.map((s, i) => (
+              <ContactMascotCard
+                key={s.label}
+                s={s}
+                i={i}
+                reduce={m.reduce}
+                parallaxActive={mascotParallaxActive}
+              />
+            ))}
           </motion.div>
         </motion.div>
       </div>
@@ -1475,27 +1719,36 @@ function SectionTitle({
   theme?: "dark" | "light";
 }) {
   const light = theme === "light";
+  const m = useMotionSafe();
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.7 }}
+      variants={m.staggerParent}
       className="title-bar"
     >
-      <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#A88765]">
+      <motion.div
+        variants={m.staggerChild}
+        className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#A88765]"
+      >
         — {eyebrow}
-      </div>
-      <h2
+      </motion.div>
+      <motion.h2
+        variants={m.staggerChild}
         className="font-display text-4xl font-extrabold sm:text-5xl"
         style={{ color: light ? "#1C1B19" : "var(--fg)" }}
       >
         {title}
-      </h2>
+      </motion.h2>
       {sub && (
-        <p className="mt-3 text-base" style={{ color: light ? "#6B6259" : "var(--fg-soft)" }}>
+        <motion.p
+          variants={m.staggerChild}
+          className="mt-3 text-base"
+          style={{ color: light ? "#6B6259" : "var(--fg-soft)" }}
+        >
           {sub}
-        </p>
+        </motion.p>
       )}
     </motion.div>
   );
