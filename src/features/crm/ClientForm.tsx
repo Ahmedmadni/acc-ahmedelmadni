@@ -67,24 +67,24 @@ export function ClientForm({ client, onClose, onSave }: Props) {
   };
 
   const inputCls =
-    "w-full rounded-xl border border-[#d7aa52]/25 bg-[#04101f] px-4 py-3 text-sm text-white outline-none focus:border-[#d7aa52]/60";
-  const labelCls = "block text-xs font-bold text-[var(--fg-soft)] mb-1.5";
+    "w-full rounded-xl border border-[#A88765]/25 bg-white px-4 py-3 text-sm text-[#1C1B19] outline-none focus:border-[#A88765]/60";
+  const labelCls = "block text-xs font-bold text-[#6B6259] mb-1.5";
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto">
-      <div className="w-full max-w-3xl my-8 rounded-2xl border border-[#d7aa52]/25 bg-[#08111f] p-6 space-y-6 max-h-[90vh] overflow-y-auto">
+      <div className="w-full max-w-3xl my-8 rounded-2xl border border-[#A88765]/25 bg-[#FCFBF9] p-6 space-y-6 max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-black text-[#f3d28a]">
+          <h2 className="font-display text-lg font-black text-[#1C1B19]">
             {isEdit ? "تعديل بيانات العميل" : "إضافة عميل جديد"}
           </h2>
-          <button onClick={onClose} className="text-[var(--fg-soft)] hover:text-white">
+          <button onClick={onClose} className="text-[#6B6259] hover:text-[#1C1B19]">
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Personal */}
         <section className="space-y-3">
-          <h3 className="flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
+          <h3 className="flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
             <User className="w-4 h-4" /> البيانات الشخصية
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -128,7 +128,7 @@ export function ClientForm({ client, onClose, onSave }: Props) {
 
         {/* Establishment */}
         <section className="space-y-3">
-          <h3 className="flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
+          <h3 className="flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
             <Building2 className="w-4 h-4" /> بيانات المنشأة
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -166,12 +166,12 @@ export function ClientForm({ client, onClose, onSave }: Props) {
                 >
                   <option value="">— اختر —</option>
                   {Object.entries(BUSINESS_TYPES).map(([val, lbl]) => (
-                    <option key={val} value={val} className="bg-[#04101f]">
+                    <option key={val} value={val} className="bg-white">
                       {lbl.ar}
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#f3d28a]/50" />
+                <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#A88765]/60" />
               </div>
             </div>
             <div>
@@ -190,17 +190,17 @@ export function ClientForm({ client, onClose, onSave }: Props) {
                   onChange={(e) => setField("status", e.target.value as ClientStatus)}
                   className={inputCls + " appearance-none pl-10"}
                 >
-                  <option value="active" className="bg-[#04101f]">
+                  <option value="active" className="bg-white">
                     نشط
                   </option>
-                  <option value="inactive" className="bg-[#04101f]">
+                  <option value="inactive" className="bg-white">
                     غير نشط
                   </option>
-                  <option value="pending" className="bg-[#04101f]">
+                  <option value="pending" className="bg-white">
                     معلق
                   </option>
                 </select>
-                <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#f3d28a]/50" />
+                <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#A88765]/60" />
               </div>
             </div>
           </div>
@@ -208,32 +208,32 @@ export function ClientForm({ client, onClose, onSave }: Props) {
 
         {/* Tax */}
         <section className="space-y-3">
-          <h3 className="flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
+          <h3 className="flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
             <ReceiptText className="w-4 h-4" /> الضرائب والزكاة
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <label className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 cursor-pointer">
+            <label className="flex items-center gap-3 rounded-xl border border-[#A88765]/20 bg-[#F5F1EB] p-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={form.vat_registered}
                 onChange={(e) => setField("vat_registered", e.target.checked)}
-                className="w-4 h-4 accent-[#d7aa52]"
+                className="w-4 h-4 accent-[#A88765]"
               />
               <div>
-                <div className="text-sm font-bold text-white">مسجل في VAT</div>
-                <div className="text-[10px] text-[var(--fg-soft)]">ضريبة القيمة المضافة</div>
+                <div className="text-sm font-bold text-[#1C1B19]">مسجل في VAT</div>
+                <div className="text-[10px] text-[#6B6259]">ضريبة القيمة المضافة</div>
               </div>
             </label>
-            <label className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-3 cursor-pointer">
+            <label className="flex items-center gap-3 rounded-xl border border-[#A88765]/20 bg-[#F5F1EB] p-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={form.zakat_registered}
                 onChange={(e) => setField("zakat_registered", e.target.checked)}
-                className="w-4 h-4 accent-[#d7aa52]"
+                className="w-4 h-4 accent-[#A88765]"
               />
               <div>
-                <div className="text-sm font-bold text-white">مسجل في الزكاة</div>
-                <div className="text-[10px] text-[var(--fg-soft)]">الإقرار الزكوي السنوي</div>
+                <div className="text-sm font-bold text-[#1C1B19]">مسجل في الزكاة</div>
+                <div className="text-[10px] text-[#6B6259]">الإقرار الزكوي السنوي</div>
               </div>
             </label>
             {form.vat_registered && (
@@ -242,17 +242,19 @@ export function ClientForm({ client, onClose, onSave }: Props) {
                 <div className="relative">
                   <select
                     value={form.vat_quarter}
-                    onChange={(e) => setField("vat_quarter", e.target.value as "monthly" | "quarterly")}
+                    onChange={(e) =>
+                      setField("vat_quarter", e.target.value as "monthly" | "quarterly")
+                    }
                     className={inputCls + " appearance-none pl-10"}
                   >
-                    <option value="quarterly" className="bg-[#04101f]">
+                    <option value="quarterly" className="bg-white">
                       ربع سنوي
                     </option>
-                    <option value="monthly" className="bg-[#04101f]">
+                    <option value="monthly" className="bg-white">
                       شهري
                     </option>
                   </select>
-                  <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#f3d28a]/50" />
+                  <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#A88765]/60" />
                 </div>
               </div>
             )}
@@ -276,14 +278,14 @@ export function ClientForm({ client, onClose, onSave }: Props) {
           <button
             onClick={save}
             disabled={saving || !form.full_name || !form.phone}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 text-sm font-black text-[#04101f] hover:scale-105 transition-transform disabled:opacity-60 disabled:hover:scale-100"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-black text-[#1C1B19] hover:scale-105 transition-transform disabled:opacity-60 disabled:hover:scale-100"
           >
             {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
             {isEdit ? "حفظ التعديلات" : "إضافة العميل"}
           </button>
           <button
             onClick={onClose}
-            className="rounded-full border border-white/20 px-6 py-3 text-sm font-bold text-[var(--fg-soft)] hover:bg-white/5 transition"
+            className="rounded-full border border-[#A88765]/30 px-6 py-3 text-sm font-bold text-[#6B6259] hover:bg-[#A88765]/10 transition"
           >
             إلغاء
           </button>

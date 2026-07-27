@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
+import { useMotionSafe } from "@/lib/motion";
 import { supabase } from "@/integrations/supabase/client";
 import { Marquee } from "./Marquee";
 
@@ -49,9 +50,9 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
     <button
       type="button"
       onClick={onOpen}
-      className="group relative flex w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-[#07182c] text-start transition-all hover:border-[#d7aa52]/70 hover:shadow-[0_25px_60px_-25px_rgba(215,170,82,0.55)] sm:w-[400px]"
+      className="group relative flex w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#A88765]/25 bg-[#1C1B19] text-start transition-all hover:border-[#A88765]/60 hover:shadow-[0_25px_60px_-25px_rgba(168,135,101,0.45)] sm:w-[400px]"
     >
-      <div className="relative h-[280px] w-full overflow-hidden bg-gradient-to-br from-[#0b2137] to-[#04101f] sm:h-[320px]">
+      <div className="relative h-[280px] w-full overflow-hidden bg-gradient-to-br from-[#232019] to-[#1C1B19] sm:h-[320px]">
         {c.image_url ? (
           <img
             src={transformCertUrl(c.image_url, 800, 72) ?? c.image_url}
@@ -68,12 +69,12 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
-            <GraduationCap className="size-10 text-[#d7aa52]" />
+            <GraduationCap className="size-10 text-[#A88765]" />
             <span className="text-xs font-bold text-white/70">{title}</span>
           </div>
         )}
-        <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04101f]/80 via-transparent to-transparent" />
-        <span className="absolute bottom-2 end-2 inline-flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-[#f3d28a] opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+        <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1C1B19]/80 via-transparent to-transparent" />
+        <span className="absolute bottom-2 end-2 inline-flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-[#c9a986] opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
           <ZoomIn className="size-3" />
           {lang === "ar" ? "تكبير" : "Zoom"}
         </span>
@@ -223,9 +224,9 @@ function Lightbox({
         ) : (
           <div
             onClick={(e) => e.stopPropagation()}
-            className="flex flex-col items-center gap-4 rounded-2xl border border-[#d7aa52]/30 bg-[#07182c] p-12 text-center"
+            className="flex flex-col items-center gap-4 rounded-2xl border border-[#A88765]/30 bg-[#1C1B19] p-12 text-center"
           >
-            <GraduationCap className="size-16 text-[#d7aa52]" />
+            <GraduationCap className="size-16 text-[#A88765]" />
             <div className="text-lg font-bold text-white">{title}</div>
             {issuer && <div className="text-sm text-white/60">{issuer}</div>}
             <div className="text-xs text-white/40">
@@ -270,6 +271,7 @@ function Lightbox({
  */
 export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const m = useMotionSafe();
 
   // Read published certifications directly via the browser Supabase client.
   // RLS allows public read of published rows, and this avoids server-fn
@@ -280,7 +282,9 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("certifications")
-        .select("id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url")
+        .select(
+          "id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url",
+        )
         .eq("is_published", true)
         .order("sort_order", { ascending: true });
       if (error) throw error;
@@ -326,22 +330,45 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
 
   return (
     <section id="certifications" className="relative overflow-hidden py-14">
-      <div className="mb-10 px-4 text-center sm:px-8 lg:px-16">
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        variants={m.staggerParent}
+        className="mb-10 px-4 text-center sm:px-8 lg:px-16"
+      >
+        <motion.span
+          variants={m.staggerChild}
+          className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c9a986]"
+        >
           <GraduationCap className="size-3" />
           {lang === "ar" ? "التطوير المهني" : "Development"}
-        </span>
-        <h2 className="mt-3 text-2xl font-black md:text-3xl" style={{ color: "var(--fg)" }}>
+        </motion.span>
+        <motion.h2
+          variants={m.staggerChild}
+          className="mt-3 text-2xl font-black md:text-3xl"
+          style={{ color: "var(--fg)" }}
+        >
           {t.certs.title[lang]}
-        </h2>
-        <p className="mx-auto mt-2 max-w-2xl text-sm" style={{ color: "var(--fg-soft)" }}>
+        </motion.h2>
+        <motion.p
+          variants={m.staggerChild}
+          className="mx-auto mt-2 max-w-2xl text-sm"
+          style={{ color: "var(--fg-soft)" }}
+        >
           {lang === "ar"
             ? "اضغط أي شهادة لعرضها بالحجم الكامل مع إمكانية التكبير والتحميل."
             : "Tap any certificate to view it full-size with zoom and download."}
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <div className="flex flex-col gap-5">
+      <motion.div
+        initial={{ opacity: 0, y: m.reduce ? 0 : 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col gap-5"
+      >
         {strips.map((strip, si) => (
           <Marquee
             key={si}
@@ -359,7 +386,7 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
             })}
           </Marquee>
         ))}
-      </div>
+      </motion.div>
 
       <AnimatePresence>
         {openIndex !== null && (

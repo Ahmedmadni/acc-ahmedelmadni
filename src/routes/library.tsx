@@ -93,7 +93,7 @@ function LibraryLayout() {
   return (
     <LibLangCtx.Provider value={lang}>
       <FocusCtx.Provider value={focus}>
-        <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
+        <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#151412] text-[#FCFBF9]">
           <AnimatePresence initial={false}>
             {!focus && (
               <motion.header
@@ -102,23 +102,23 @@ function LibraryLayout() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -80, opacity: 0 }}
                 transition={{ type: "spring", stiffness: 260, damping: 30 }}
-                className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl"
+                className="sticky top-0 z-40 border-b border-[#A88765]/20 bg-[#151412]/85 backdrop-blur-xl"
               >
                 <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
                   <Link
                     to="/"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
                   >
                     <ArrowLeft className="size-3.5" />
                     {lang === "ar" ? "الرئيسية" : "Home"}
                     <Home className="size-3.5" />
                   </Link>
-                  <div className="text-sm font-extrabold tracking-wide text-[#f3d28a]">
+                  <div className="text-sm font-extrabold tracking-wide text-[#c9a986]">
                     {lang === "ar" ? "المكتبة المحاسبية" : "Accounting Library"}
                   </div>
                   <button
                     onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
-                    className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
                     aria-label="Toggle language"
                   >
                     <Languages className="size-3.5" />
@@ -139,7 +139,7 @@ function LibraryLayout() {
                 transition={{ duration: 0.25 }}
                 className="w-full px-4 sm:px-8 lg:px-16 mt-6 "
               >
-                <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
+                <div className="flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-[#A88765]/20 bg-[#1C1B19] p-1.5 backdrop-blur-xl sm:w-fit sm:mx-auto">
                   {tabs.map(({ id, ar, en, Icon, to }) => {
                     const active = current === id;
                     return (
@@ -148,8 +148,8 @@ function LibraryLayout() {
                         to={to}
                         className={`inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 text-xs font-bold transition-all ${
                           active
-                            ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg shadow-[#d7aa52]/30"
-                            : "text-white/70 hover:text-[#f3d28a]"
+                            ? "bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] shadow-lg shadow-[#4A3023]/30"
+                            : "text-[#D8D1C8] hover:text-[#c9a986]"
                         }`}
                       >
                         <Icon className="size-3.5" />
@@ -177,7 +177,7 @@ function LibraryLayout() {
                   ? "Exit Focus"
                   : "Focus Mode"
             }
-            className="fixed bottom-6 left-6 z-[60] inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/45 bg-[#04101f]/90 px-4 py-2.5 text-xs font-bold text-[#f3d28a] shadow-xl shadow-black/40 backdrop-blur-xl transition-all hover:scale-105 hover:bg-[#d7aa52]/15"
+            className="fixed bottom-6 left-6 z-[60] inline-flex items-center gap-2 rounded-full border border-[#A88765]/45 bg-[#1C1B19]/90 px-4 py-2.5 text-xs font-bold text-[#c9a986] shadow-xl shadow-black/40 backdrop-blur-xl transition-all hover:scale-105 hover:bg-[#A88765]/15"
           >
             {focus ? <Minimize2 className="size-3.5" /> : <Maximize2 className="size-3.5" />}
             <span className="hidden sm:inline">

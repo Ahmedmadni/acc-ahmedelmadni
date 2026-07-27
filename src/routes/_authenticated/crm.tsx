@@ -27,18 +27,20 @@ function CrmPage() {
   ];
 
   return (
-    <div dir="rtl" className="min-h-screen bg-[#04101f] text-white pt-24 pb-16">
+    <div dir="rtl" className="min-h-screen bg-[#151412] text-[#FCFBF9] pt-24 pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-2xl md:text-3xl font-black text-[#f3d28a]">إدارة علاقات العملاء</h1>
+          <h1 className="font-display text-2xl md:text-3xl font-extrabold text-[#c9a986]">
+            إدارة علاقات العملاء
+          </h1>
           <p className="text-sm text-[var(--fg-soft)] mt-1">
             CRM · عملاء المكتب المحاسبي والتذكيرات الضريبية
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-2 mb-6 border-b border-white/10 pb-2 overflow-x-auto">
+        <div className="flex gap-2 mb-6 border-b border-[#A88765]/15 pb-2 overflow-x-auto">
           {TABS.map((t) => {
             const Icon = t.icon;
             const active = tab === t.id;
@@ -48,8 +50,8 @@ function CrmPage() {
                 onClick={() => setTab(t.id)}
                 className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold whitespace-nowrap transition ${
                   active
-                    ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
-                    : "text-[var(--fg-soft)] hover:bg-white/5"
+                    ? "bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
+                    : "text-[#D8D1C8] hover:bg-white/5"
                 }`}
               >
                 <Icon className="w-4 h-4" />

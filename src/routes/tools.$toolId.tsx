@@ -96,15 +96,15 @@ function InfoBlock({
   items: string[];
 }) {
   return (
-    <div className="rounded-xl border border-[#d7aa52]/20 bg-white/[0.03] p-4">
-      <h4 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
+    <div className="rounded-xl border border-[#A88765]/25 bg-[#FCFBF9] p-4">
+      <h4 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
         <Icon className="size-4" />
         {title}
       </h4>
-      <ul className="space-y-1.5 text-sm text-[var(--fg-soft)]">
+      <ul className="space-y-1.5 text-sm text-[#6B6259]">
         {items.map((it, i) => (
           <li key={i} className="flex gap-2">
-            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-[#d7aa52]/70" />
+            <span className="mt-2 size-1.5 shrink-0 rounded-full bg-[#A88765]" />
             <span>{it}</span>
           </li>
         ))}
@@ -171,30 +171,30 @@ function ToolDetailPage() {
   return (
     <div
       dir={isRTL ? "rtl" : "ltr"}
-      className="tool-print-page min-h-screen bg-[#04101f] text-white"
+      className="tool-print-page min-h-screen bg-[#151412] text-[#FCFBF9]"
     >
-      <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl print:hidden">
+      <header className="sticky top-0 z-40 border-b border-[#A88765]/20 bg-[#151412]/85 backdrop-blur-xl print:hidden">
         <div className="mx-auto flex h-16 w-[92%] max-w-6xl items-center justify-between gap-2">
           <Link
             to="/tools"
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+            className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
           >
             <ArrowLeft className="size-3.5" />
             {lang === "ar" ? "كل الأدوات" : "All tools"}
           </Link>
-          <div className="hidden truncate text-sm font-extrabold tracking-wide text-[#f3d28a] sm:block">
+          <div className="hidden truncate text-sm font-extrabold tracking-wide text-[#c9a986] sm:block">
             {tool.title[lang]}
           </div>
           <div className="flex items-center gap-2">
             <Link
               to="/"
-              className="hidden items-center gap-1 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 sm:inline-flex"
+              className="hidden items-center gap-1 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 sm:inline-flex"
             >
               <Home className="size-3.5" />
             </Link>
             <button
               onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
-              className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+              className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
             >
               <Languages className="size-3.5" />
               {lang === "ar" ? "EN" : "AR"}
@@ -225,16 +225,16 @@ function ToolDetailPage() {
         </div>
 
         <div className="mb-6 flex flex-wrap items-center gap-2">
-          <span className="rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#f3d28a]">
+          <span className="rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#c9a986]">
             {labelByCategory(tool.category, lang)}
           </span>
           {tool.standard && (
-            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--fg-soft)]">
+            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#D8D1C8]">
               {tool.standard[lang]}
             </span>
           )}
         </div>
-        <h1 className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] bg-clip-text text-2xl font-extrabold text-transparent md:text-4xl">
+        <h1 className="font-display bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-2xl font-extrabold text-transparent md:text-4xl">
           {tool.title[lang]}
         </h1>
         <p className="mt-2 max-w-3xl text-sm text-[var(--fg-soft)] md:text-base">
@@ -254,7 +254,7 @@ function ToolDetailPage() {
                 setPrinting(false);
               }
             }}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 disabled:opacity-60"
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/10 disabled:opacity-60"
           >
             {printing ? (
               <Loader2 className="size-3.5 animate-spin" />
@@ -283,7 +283,7 @@ function ToolDetailPage() {
                 setExporting(false);
               }
             }}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-3 py-1.5 text-xs font-bold text-[#04101f] hover:opacity-95 disabled:opacity-60"
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765] bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-3 py-1.5 text-xs font-bold text-[#1C1B19] hover:opacity-95 disabled:opacity-60"
           >
             {exporting ? (
               <Loader2 className="size-3.5 animate-spin" />
@@ -295,7 +295,7 @@ function ToolDetailPage() {
 
           <button
             onClick={onCopyLink}
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${copied ? "border-emerald-400/60 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/40 bg-white/[0.04] text-[#f3d28a] hover:bg-[#d7aa52]/10"}`}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${copied ? "border-emerald-400/60 bg-emerald-400/10 text-emerald-200" : "border-[#A88765]/40 bg-white/[0.04] text-[#c9a986] hover:bg-[#A88765]/10"}`}
             title={
               lang === "ar" ? "نسخ رابط بقيم الأداة الحالية" : "Copy link with current tool values"
             }
@@ -311,7 +311,7 @@ function ToolDetailPage() {
           </button>
           <button
             onClick={onShare}
-            className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10"
+            className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/10"
           >
             <Share2 className="size-3.5" />
             {lang === "ar" ? "مشاركة" : "Share"}
@@ -350,20 +350,20 @@ function ToolDetailPage() {
                 <Link
                   to="/request-service"
                   search={{ service: tool.requestServiceId }}
-                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-xs font-black text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105"
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2.5 text-xs font-black text-[#1C1B19] shadow-lg shadow-[#4A3023]/40 transition-transform hover:scale-105"
                 >
                   {lang === "ar" ? "اطلب الخدمة الآن" : "Request the Service"}
                 </Link>
               </div>
             )}
-            <div className="rounded-2xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#d7aa52]/10 to-transparent p-5 backdrop-blur">
-              <h3 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#f3d28a]">
+            <div className="rounded-2xl border border-[#A88765]/25 bg-[#FCFBF9] p-5">
+              <h3 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
                 <BookOpen className="size-4" />
                 {lang === "ar" ? "نبذة عن الأداة" : "About this tool"}
               </h3>
-              <p className="text-sm leading-relaxed text-[var(--fg-soft)]">{tool.about[lang]}</p>
+              <p className="text-sm leading-relaxed text-[#6B6259]">{tool.about[lang]}</p>
               {tool.formula && (
-                <div className="mt-3 rounded-lg border border-[#d7aa52]/30 bg-[#04101f]/60 px-3 py-2 font-mono text-xs text-[#f3d28a]">
+                <div className="mt-3 rounded-lg border border-[#A88765]/30 bg-[#F5F1EB] px-3 py-2 font-mono text-xs text-[#7c6045]">
                   <Sigma className="me-1 inline size-3.5" />
                   {tool.formula}
                 </div>
@@ -390,7 +390,7 @@ function ToolDetailPage() {
 
         {related.length > 0 && (
           <section className="mt-12">
-            <h3 className="mb-4 text-base font-extrabold text-[#f3d28a]">
+            <h3 className="mb-4 text-base font-extrabold text-[#c9a986]">
               {lang === "ar" ? "أدوات ذات صلة" : "Related tools"}
             </h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -399,10 +399,12 @@ function ToolDetailPage() {
                   key={r.id}
                   to="/tools/$toolId"
                   params={{ toolId: r.id }}
-                  className="block rounded-xl border border-[#d7aa52]/20 bg-white/[0.03] p-4 transition hover:border-[#d7aa52]/60 hover:bg-white/[0.06]"
+                  className="block rounded-xl border border-[#A88765]/25 bg-[#FCFBF9] p-4 transition hover:border-[#A88765]/60 hover:shadow-lg"
                 >
-                  <div className="text-sm font-bold text-[var(--fg)]">{r.title[lang]}</div>
-                  <div className="mt-1 text-xs text-[var(--fg-soft)]">{r.short[lang]}</div>
+                  <div className="font-display text-sm font-bold text-[#1C1B19]">
+                    {r.title[lang]}
+                  </div>
+                  <div className="mt-1 text-xs text-[#6B6259]">{r.short[lang]}</div>
                 </Link>
               ))}
             </div>

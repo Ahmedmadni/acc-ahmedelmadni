@@ -66,7 +66,6 @@ import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
-
 import { RevealHeadline } from "@/components/home/RevealHeadline";
 import { EASE, useMotionSafe } from "@/lib/motion";
 
@@ -80,8 +79,15 @@ export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
-const ServicesMarquee = lazy(() => import("@/components/home/ServicesMarquee"));
-const PartnersSection = lazy(() => import("@/components/home/PartnersSection"));
+const SoftwareEcosystem = lazy(() =>
+  import("@/components/home/SoftwareEcosystem").then((m) => ({ default: m.SoftwareEcosystem })),
+);
+const ServicesEditorial = lazy(() =>
+  import("@/components/home/ServicesEditorial").then((m) => ({ default: m.ServicesEditorial })),
+);
+const AboutTeaser = lazy(() =>
+  import("@/components/home/AboutTeaser").then((m) => ({ default: m.AboutTeaser })),
+);
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -232,7 +238,6 @@ function Index() {
   const [skillModal, setSkillModal] = useState<SkillItem | null>(null);
   const [serviceModal, setServiceModal] = useState<ServiceItem | null>(null);
   const [eidOpen, setEidOpen] = useState<boolean>(false);
-  const cursorRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
@@ -316,17 +321,6 @@ function Index() {
     };
   }, []);
 
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.left = `${e.clientX}px`;
-        cursorRef.current.style.top = `${e.clientY}px`;
-      }
-    };
-    window.addEventListener("mousemove", onMove);
-    return () => window.removeEventListener("mousemove", onMove);
-  }, []);
-
   const toggleLang = () => {
     playClick();
     setLang((l) => (l === "ar" ? "en" : "ar"));
@@ -336,20 +330,20 @@ function Index() {
     <div className="relative min-h-screen antialiased" style={{ color: "var(--fg)" }}>
       {showVatBanner && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-          <div className="relative w-full max-w-md rounded-2xl border border-[#d7aa52]/50 bg-[#04101f] overflow-hidden shadow-2xl shadow-[#d7aa52]/20">
-            {/* Gold top bar */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-[#b8862e] via-[#f3d28a] to-[#b8862e]" />
+          <div className="relative w-full max-w-md rounded-2xl border border-[#A88765]/40 bg-[#1C1B19] overflow-hidden shadow-2xl shadow-[#4A3023]/20">
+            {/* Bronze top bar */}
+            <div className="h-1.5 w-full bg-gradient-to-r from-[#7c6045] via-[#c9a986] to-[#7c6045]" />
             {/* Close button */}
             <button
               onClick={dismissBanner}
               aria-label={lang === "ar" ? "إغلاق" : "Close"}
-              className="absolute top-3 left-3 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
+              className="absolute top-3 end-3 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 transition text-white"
             >
               <X className="w-4 h-4" />
             </button>
             <div className="p-6 text-center">
               {/* VAT Logo */}
-              <div className="mx-auto mb-4 w-16 h-16 rounded-xl overflow-hidden border border-[#d7aa52]/30 shadow-lg shadow-[#d7aa52]/10">
+              <div className="mx-auto mb-4 w-16 h-16 rounded-xl overflow-hidden border border-[#A88765]/30 shadow-lg shadow-[#4A3023]/10">
                 <div className="w-full h-[60%] bg-[#0a4d2e] flex items-center justify-center">
                   <span className="text-white font-black text-[8px] leading-tight text-center">
                     ضريبة
@@ -366,15 +360,15 @@ function Index() {
               {/* Pulse badge */}
               <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/50 bg-amber-400/10 px-3 py-1 text-[10px] font-bold text-amber-300 mb-3">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                  <span className="motion-reduce:animate-none animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400" />
                 </span>
                 تنبيه موسمي — الآن
               </div>
               {/* Heading */}
-              <h2 className="text-xl font-black text-white mb-2 leading-tight">
+              <h2 className="font-display text-xl font-black text-white mb-2 leading-tight">
                 موعد إقرار ضريبة
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#f3d28a] to-[#b8862e]">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#c9a986] to-[#7c6045]">
                   القيمة المضافة
                 </span>
               </h2>
@@ -390,7 +384,7 @@ function Index() {
                 <a
                   href="/request-service?service=vat-declaration"
                   onClick={dismissBanner}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 text-sm font-black text-[#04101f] hover:scale-105 transition-transform shadow-lg shadow-[#d7aa52]/30"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-black text-[#1C1B19] hover:scale-105 transition-transform shadow-lg shadow-[#4A3023]/30"
                 >
                   ⚡ اطلب الخدمة الآن
                 </a>
@@ -409,14 +403,9 @@ function Index() {
           </div>
         </div>
       )}
-      <div className="cinematic-bg" />
-      <div className="aurora" />
-      <div className="cinematic-grid" />
-      <div ref={cursorRef} className="cursor-glow hidden md:block" />
-
       <motion.div
         style={{ scaleX, transformOrigin: isRTL ? "right" : "left" }}
-        className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-gradient-to-r from-amber-200 via-[#d7aa52] to-amber-700"
+        className="fixed top-0 left-0 right-0 z-[100] h-[2px] bg-gradient-to-r from-[#c2a079] via-[#A88765] to-[#76543F]"
       />
 
       <Navbar lang={lang} onToggle={toggleLang} />
@@ -424,17 +413,19 @@ function Index() {
       <main className="relative z-10">
         <Hero lang={lang} />
         <Suspense fallback={null}>
-          <ServicesMarquee lang={lang} />
+          <ServicesEditorial lang={lang} onOpen={setServiceModal} />
         </Suspense>
-        <Stats lang={lang} />
+        <Suspense fallback={null}>
+          <SoftwareEcosystem lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <AboutTeaser lang={lang} />
+        </Suspense>
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
         </Suspense>
         <Suspense fallback={null}>
           <FeaturedTools lang={lang} />
-        </Suspense>
-        <Suspense fallback={null}>
-          <PartnersSection lang={lang} />
         </Suspense>
         <Testimonials lang={lang} />
         <Contact lang={lang} />
@@ -626,17 +617,17 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="lg:hidden overflow-hidden border-t border-[#d7aa52]/20"
+            className="lg:hidden overflow-hidden border-t border-[#A88765]/20"
             style={{ background: "color-mix(in oklab, #1C1B19 95%, transparent)" }}
           >
             <ul className="flex flex-col gap-1 px-4 py-4">
               {links.map((l) => (
-                <li key={l.to} className="border-b border-[#d7aa52]/10 py-3">
+                <li key={l.to} className="border-b border-[#A88765]/10 py-3">
                   {renderLink(l, "block")}
                 </li>
               ))}
               {isAdmin && (
-                <li className="flex gap-2 border-b border-[#d7aa52]/10 py-3">
+                <li className="flex gap-2 border-b border-[#A88765]/10 py-3">
                   <RouterLink
                     to="/admin/library"
                     onClick={() => setMobileOpen(false)}
@@ -745,7 +736,7 @@ function Hero({ lang }: { lang: Lang }) {
 
           <RevealHeadline
             lines={t.hero.headline[lang]}
-            className="font-display text-[2.4rem] font-bold leading-[1.32] text-[#FCFBF9] [text-wrap:balance] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[4rem]"
+            className="font-display text-[2.4rem] font-bold leading-[1.25] text-[#FCFBF9] [text-wrap:balance] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[4rem]"
           />
 
           <motion.p
@@ -783,314 +774,6 @@ function Hero({ lang }: { lang: Lang }) {
             <MapPin className="size-4 text-[#A88765]" />
             {t.hero.location[lang]}
           </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ============= COUNTER ============= */
-function Counter({ value }: { value: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.5 });
-  const numericMatch = value.match(/(\d+)/);
-  const target = numericMatch ? parseInt(numericMatch[1], 10) : 0;
-  const suffix = numericMatch ? value.replace(numericMatch[1], "") : value;
-  const [n, setN] = useState(0);
-  useEffect(() => {
-    if (!inView || target === 0) return;
-    const dur = 1400;
-    const start = performance.now();
-    let raf = 0;
-    const step = (now: number) => {
-      const p = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setN(Math.round(target * eased));
-      if (p < 1) raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, target]);
-  return (
-    <span ref={ref}>
-      {target ? n : ""}
-      {suffix}
-    </span>
-  );
-}
-
-/* ============= STATS ============= */
-function Stats({ lang }: { lang: Lang }) {
-  const icons = [TrendingUp, Target, Calculator, FileText];
-  return (
-    <section className="relative py-12">
-      <div className="w-full px-4 sm:px-8 lg:px-16 grid  grid-cols-2 gap-4 sm:grid-cols-4">
-        {t.stats.map((s, i) => {
-          const Icon = icons[i];
-          return (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="glass tilt-card rounded-2xl p-6 text-center"
-            >
-              <Icon className="mx-auto mb-2 size-6 text-[#d7aa52]" />
-              <div className="text-4xl font-black gold-text">
-                <Counter value={s.v} />
-              </div>
-              <div className="mt-1 text-sm font-medium" style={{ color: "var(--fg-soft)" }}>
-                {s[lang]}
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-/* ============= PROFILE + BIO (side-by-side) ============= */
-function ProfileBio({ lang }: { lang: Lang }) {
-  const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
-  return (
-    <section id="about" className="relative py-14">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, x: lang === "ar" ? 40 : -40 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.9 }}
-            className={lang === "ar" ? "order-1 lg:order-2" : "order-1 lg:order-1"}
-          >
-            <div className="relative group mx-auto max-w-sm">
-              <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/30 blur-3xl transition-opacity duration-700 group-hover:opacity-90" />
-              <div className="absolute inset-0 -translate-x-4 translate-y-4 rounded-[2.5rem] border border-[#d7aa52]/40 transition-transform duration-700 group-hover:-translate-x-2 group-hover:translate-y-2" />
-              <div className="absolute inset-0 translate-x-4 -translate-y-4 rounded-[2.5rem] border border-white/10 transition-transform duration-700 group-hover:translate-x-2 group-hover:-translate-y-2" />
-
-              <div className="relative overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/30 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow aspect-[4/5]">
-                <img
-                  src={profileImg}
-                  alt="Ahmed Elmadani"
-                  width={400}
-                  height={500}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="sync"
-                  className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1200ms] group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute -inset-x-1/2 -top-1/2 h-[200%] w-[60%] rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-[1400ms] ease-out"
-                />
-                <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl glass px-4 py-3">
-                  <div>
-                    <div className="text-[10px] uppercase tracking-[0.25em] text-[#d7aa52]">
-                      {lang === "ar" ? "متاح للعمل" : "Available"}
-                    </div>
-                    <div className="text-sm font-bold" style={{ color: "var(--fg)" }}>
-                      {lang === "ar" ? "الرياض، السعودية" : "Riyadh, KSA"}
-                    </div>
-                  </div>
-                  <span className="relative flex size-3">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Bio text */}
-          <motion.div
-            initial={{ opacity: 0, y: 30, x: lang === "ar" ? -40 : 40 }}
-            whileInView={{ opacity: 1, y: 0, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            className={lang === "ar" ? "order-2 lg:order-1" : "order-2 lg:order-2"}
-          >
-            <div className="inline-flex items-center gap-2 rounded-full gold-border bg-white/5 px-4 py-2 text-xs font-semibold text-[#f3d28a]">
-              <Sparkles className="size-3.5" />
-              {t.about.title[lang]}
-            </div>
-
-            <h2 className="mt-4 text-3xl font-black leading-tight gold-text sm:text-4xl">
-              {t.hero.name[lang]}
-            </h2>
-
-            <div
-              className="mt-5 space-y-4 text-base leading-loose"
-              style={{ color: "var(--fg-soft)" }}
-            >
-              <p>{t.about.body[lang]}</p>
-              <p>{t.about.body2[lang]}</p>
-            </div>
-
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href="#contact"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]"
-              >
-                {lang === "ar" ? "تواصل معي" : "Get in touch"}
-                <Arrow className="size-3.5" />
-              </a>
-              <a
-                href="/mycv.pdf"
-                download
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-5 py-2.5 text-xs font-bold transition-all hover:bg-[#d7aa52]/10"
-                style={{ color: "var(--fg)" }}
-              >
-                <Download className="size-4 text-[#d7aa52]" />
-                {t.nav.cv[lang]}
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ============= ABOUT ============= */
-export function About({ lang }: { lang: Lang }) {
-  return (
-    <section id="about" className="py-14">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle eyebrow={lang === "ar" ? "نبذة" : "About"} title={t.about.title[lang]} />
-        <div className="mt-10 grid items-center gap-8 lg:grid-cols-5">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            className="glass space-y-5 rounded-3xl p-8 text-base leading-loose sm:p-10 lg:col-span-3"
-            style={{ color: "var(--fg-soft)" }}
-          >
-            <p>{t.about.body[lang]}</p>
-            <p>{t.about.body2[lang]}</p>
-            <div className="flex flex-wrap items-center gap-3 pt-3">
-              <span
-                className="inline-flex items-center gap-2 rounded-full gold-border bg-white/[0.03] px-4 py-2 text-sm font-semibold"
-                style={{ color: "var(--fg)" }}
-              >
-                <Car className="size-4 text-[#d7aa52]" />
-                {t.contact.driving[lang]}
-              </span>
-              <a
-                href="/mycv.pdf"
-                download
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-105"
-              >
-                <Download className="size-4" />
-                {t.nav.cv[lang]}
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.9 }}
-            className="relative lg:col-span-2"
-          >
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#d7aa52]/30 to-transparent blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl gold-border gold-glow aspect-[4/5]">
-              <img
-                src={deskImg}
-                alt={lang === "ar" ? "مكتب محاسب" : "Accountant desk"}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
-              <div className="absolute bottom-4 start-4 end-4 flex items-center gap-2 rounded-full glass px-3 py-2 text-[11px] font-bold text-white/85">
-                <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
-                {lang === "ar" ? "مساحة العمل المهنية" : "Professional workspace"}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ============= SERVICES ============= */
-export function Services({ lang, onOpen }: { lang: Lang; onOpen: (s: ServiceItem) => void }) {
-  const icons = [FileText, Calculator, ShieldCheck, Wallet, Lightbulb, BarChart3];
-  return (
-    <section id="services" className="relative py-14">
-      <div aria-hidden className="absolute inset-0 -z-10 opacity-20">
-        <img src={servicesBg} alt="" className="h-full w-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[var(--bg-surface)] via-transparent to-[var(--bg-surface)]" />
-      </div>
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle
-          eyebrow={lang === "ar" ? "الخدمات" : "Services"}
-          title={t.services.title[lang]}
-          sub={t.services.sub[lang]}
-        />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {t.services.items.map((s, i) => {
-            const Icon = icons[i % icons.length];
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
-                onMouseEnter={playHover}
-                className="glass tilt-card group relative overflow-hidden rounded-3xl p-7"
-              >
-                <div className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-[#d7aa52]/15 blur-2xl transition-all group-hover:scale-150" />
-                <div className="relative">
-                  <div className="mb-4 inline-flex size-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
-                    <Icon className="size-5" />
-                  </div>
-                  <h3 className="text-lg font-extrabold" style={{ color: "var(--fg)" }}>
-                    {s[lang]}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--fg-soft)" }}>
-                    {s.d[lang]}
-                  </p>
-                  <div className="mt-5 flex flex-wrap items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        playClick();
-                        onOpen(s);
-                      }}
-                      onMouseEnter={playHover}
-                      className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-4 py-2 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20 hover:border-[#d7aa52]"
-                    >
-                      {t.services.learn[lang]}
-                      <ChevronRight className="size-3 rtl:rotate-180" />
-                    </button>
-                    <RouterLink
-                      to="/request-service"
-                      search={{ service: s.requestServiceId }}
-                      onClick={playClick}
-                      onMouseEnter={playHover}
-                      className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] transition-all hover:scale-[1.03]"
-                    >
-                      {t.services.requestNow[lang]}
-                    </RouterLink>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
         </div>
       </div>
     </section>
@@ -1153,12 +836,12 @@ export function Experience({ lang }: { lang: Lang }) {
           <motion.div
             aria-hidden
             style={{ height: lineHeight }}
-            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#c9a986] via-[#A88765] to-transparent shadow-[0_0_18px_rgba(168,135,101,0.6)]"
           />
           <motion.div
             aria-hidden
             style={{ height: lineHeight }}
-            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#f3d28a] via-[#d7aa52] to-transparent shadow-[0_0_18px_rgba(215,170,82,0.6)]"
+            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#c9a986] via-[#A88765] to-transparent shadow-[0_0_18px_rgba(168,135,101,0.6)]"
           />
           <div className="space-y-16">
             {items.map((item, i) => (
@@ -1213,10 +896,10 @@ function TimelineItem({
     scrollYProgress,
     [0, 0.35, 0.65, 1],
     [
-      "0 0 0px rgba(215,170,82,0)",
-      "0 0 24px rgba(215,170,82,0.9)",
-      "0 0 24px rgba(215,170,82,0.9)",
-      "0 0 0px rgba(215,170,82,0)",
+      "0 0 0px rgba(168,135,101,0)",
+      "0 0 24px rgba(168,135,101,0.9)",
+      "0 0 24px rgba(168,135,101,0.9)",
+      "0 0 0px rgba(168,135,101,0)",
     ],
   );
 
@@ -1224,16 +907,16 @@ function TimelineItem({
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <motion.div
         style={{ scale: scaleDot, boxShadow: glowDot }}
-        className="tl-dot absolute size-4 rounded-full bg-[#d7aa52] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
+        className="tl-dot absolute size-4 rounded-full bg-[#A88765] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
       />
       <motion.div
         style={{ y: yCard }}
         initial={{ opacity: 0, x: left ? -50 : 50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.7 }}
-        className={`glass group rounded-3xl p-6 sm:p-8 transition-all hover:border-[#d7aa52]/50 mr-10 md:mr-0 rtl:ml-10 rtl:mr-0 md:rtl:ml-0 ${left ? "md:col-start-1" : "md:col-start-2"}`}
+        className={`group rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-6 sm:p-8 transition-all hover:border-[#A88765]/50 mr-10 md:mr-0 rtl:ml-10 rtl:mr-0 md:rtl:ml-0 ${left ? "md:col-start-1" : "md:col-start-2"}`}
       >
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#d7aa52]/15 px-3 py-1 text-xs font-bold text-[#f3d28a]">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#A88765]/15 px-3 py-1 text-xs font-bold text-[#c9a986]">
           <Briefcase className="size-3.5" />
           {date}
         </div>
@@ -1243,7 +926,7 @@ function TimelineItem({
         <button
           type="button"
           onClick={() => setRevealed((v) => !v)}
-          className={`mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#d7aa52] transition-all duration-500 ${revealed ? "" : "blur-[6px] saturate-50 hover:blur-0 hover:saturate-100 focus:blur-0"}`}
+          className={`mt-1 inline-flex items-center gap-2 text-sm font-medium text-[#A88765] transition-all duration-500 ${revealed ? "" : "blur-[6px] saturate-50 hover:blur-0 hover:saturate-100 focus:blur-0"}`}
           title={
             lang === "ar"
               ? "اسم الشركة مخفي حفاظًا على الخصوصية — اضغط للإظهار"
@@ -1261,7 +944,7 @@ function TimelineItem({
               transition={{ duration: 0.5, delay: 0.15 + j * 0.08 }}
               className="flex gap-2"
             >
-              <span className="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-[#d7aa52]" />
+              <span className="mt-2 inline-block size-1.5 shrink-0 rounded-full bg-[#A88765]" />
               <span>{p}</span>
             </motion.li>
           ))}
@@ -1298,9 +981,9 @@ function LogoBadge({
       transition={{ type: "spring", stiffness: 200 }}
       className="group relative"
     >
-      <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#d7aa52]/40 via-transparent to-blue-500/20 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-[#A88765]/25 via-transparent to-[#4A3023]/20 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity" />
       <div
-        className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl gold-border bg-gradient-to-br from-white/[0.07] to-white/[0.02] backdrop-blur-xl shadow-2xl ${compact ? "p-4" : "p-6"}`}
+        className={`relative flex flex-col items-center justify-center gap-3 rounded-3xl border border-[#A88765]/30 bg-[#1C1B19] shadow-2xl ${compact ? "p-4" : "p-6"}`}
       >
         <div
           className={`relative flex items-center justify-center rounded-2xl bg-white p-4 shadow-inner overflow-hidden ${compact ? "size-24" : "size-36"}`}
@@ -1310,14 +993,14 @@ function LogoBadge({
               src={logoUrl}
               alt=""
               aria-hidden
-              className="floaty max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(215,170,82,0.35)]"
+              className="max-h-full max-w-full object-contain blur-md saturate-50 transition-all duration-500 group-hover:blur-0 group-hover:saturate-100 drop-shadow-[0_4px_12px_rgba(28,27,25,0.35)]"
             />
           ) : (
-            <Briefcase className="size-8 text-[#04101f]/30" />
+            <Briefcase className="size-8 text-[#1C1B19]/30" />
           )}
-          <div className="absolute inset-0 rounded-2xl ring-1 ring-[#d7aa52]/30" />
+          <div className="absolute inset-0 rounded-2xl ring-1 ring-[#A88765]/30" />
         </div>
-        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] gold-text blur-[5px] select-none transition-all duration-500 group-hover:blur-0">
+        <div className="text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#A88765] blur-[5px] select-none transition-all duration-500 group-hover:blur-0">
           {name}
         </div>
       </div>
@@ -1387,16 +1070,17 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
   if (isLoading && dbGroups.length === 0 && !useFallback) return null;
 
   return (
-    <section id="skills" className="relative py-14">
+    <section id="skills" className="relative bg-[#FCFBF9] py-14">
       <div
         aria-hidden
-        className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#d7aa52]/60 to-transparent"
+        className="absolute inset-x-0 top-10 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-[#A88765]/50 to-transparent"
       />
       <div className="w-full px-4 sm:px-8 lg:px-16">
         <SectionTitle
           eyebrow={lang === "ar" ? "المهارات" : "Skills"}
           title={t.skills.title[lang]}
           sub={t.skills.sub[lang]}
+          theme="light"
         />
 
         {activeGroup && (
@@ -1415,30 +1099,26 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     onMouseEnter={playHover}
                     className={`group relative flex w-full shrink-0 items-center gap-3 rounded-2xl border px-4 py-4 text-start transition-all ${
                       isActive
-                        ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_10px_40px_-10px_rgba(215,170,82,0.5)]"
-                        : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"
+                        ? "border-[#A88765] bg-gradient-to-br from-[#A88765]/15 to-transparent shadow-[0_10px_30px_-12px_rgba(168,135,101,0.35)]"
+                        : "border-[#E3DDD5] bg-[#F5F1EB] hover:border-[#A88765]/40"
                     }`}
                   >
                     <span
                       className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${
                         isActive
-                          ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
-                          : "bg-white/5 text-[#d7aa52]"
+                          ? "bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
+                          : "bg-[#A88765]/10 text-[#A88765]"
                       }`}
                     >
                       <Icon className="size-5" />
                     </span>
                     <div className="flex-1">
-                      <div
-                        className="text-[10px] uppercase tracking-[0.25em]"
-                        style={{ color: "var(--fg-soft)" }}
-                      >
+                      <div className="text-[10px] uppercase tracking-[0.25em] text-[#8a8078]">
                         {String(i + 1).padStart(2, "0")} /{" "}
                         {groups.length.toString().padStart(2, "0")}
                       </div>
                       <div
-                        className={`text-sm font-extrabold ${isActive ? "gold-text" : ""}`}
-                        style={!isActive ? { color: "var(--fg)" } : undefined}
+                        className={`text-sm font-extrabold ${isActive ? "bg-gradient-to-br from-[#A88765] to-[#4A3023] bg-clip-text text-transparent" : "text-[#1C1B19]"}`}
                       >
                         {lang === "ar" ? g.heading_ar : g.heading_en}
                       </div>
@@ -1453,22 +1133,19 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c] to-[#04101f] p-6 sm:p-8"
+              className="relative overflow-hidden rounded-3xl border border-[#E3DDD5] bg-[#F5F1EB] p-6 sm:p-8"
             >
-              <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-[#d7aa52]/15 blur-3xl" />
-              <div className="pointer-events-none absolute -left-16 -bottom-16 size-60 rounded-full bg-blue-500/10 blur-3xl" />
-
               <div className="relative">
                 <div className="mb-6 flex items-end justify-between gap-4">
                   <div>
-                    <div className="text-xs uppercase tracking-[0.4em] text-[#d7aa52]">
+                    <div className="text-xs uppercase tracking-[0.4em] text-[#A88765]">
                       {lang === "ar" ? "المجموعة" : "Group"}
                     </div>
-                    <h3 className="mt-1 text-3xl font-black text-white sm:text-4xl">
+                    <h3 className="mt-1 font-display text-3xl font-extrabold text-[#1C1B19] sm:text-4xl">
                       {lang === "ar" ? activeGroup.heading_ar : activeGroup.heading_en}
                     </h3>
                   </div>
-                  <div className="font-mono text-5xl font-black text-[#d7aa52]/30 sm:text-6xl">
+                  <div className="font-mono text-5xl font-black text-[#A88765]/25 sm:text-6xl">
                     0{active + 1}
                   </div>
                 </div>
@@ -1485,24 +1162,24 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                         playClick();
                         onOpen(it);
                       }}
-                      className="group relative overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-white/[0.03] p-4 text-start transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
+                      className="group relative overflow-hidden rounded-2xl border border-[#E3DDD5] bg-[#FCFBF9] p-4 text-start transition-all hover:-translate-y-0.5 hover:border-[#A88765] hover:bg-[#A88765]/[0.06]"
                     >
                       <div className="flex items-center justify-between gap-3">
-                        <span className="text-sm font-bold text-white/90">
+                        <span className="text-sm font-bold text-[#1C1B19]">
                           {lang === "ar" ? it.name_ar : it.name_en}
                         </span>
-                        <span className="font-mono text-xs text-[#d7aa52]">{it.level}%</span>
+                        <span className="font-mono text-xs text-[#A88765]">{it.level}%</span>
                       </div>
-                      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+                      <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-[#E3DDD5]">
                         <motion.div
                           initial={{ width: 0 }}
                           whileInView={{ width: `${it.level}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1.1, delay: 0.1 + j * 0.05 }}
-                          className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+                          className="h-full rounded-full bg-gradient-to-r from-[#c2a079] to-[#7c6045]"
                         />
                       </div>
-                      <div className="mt-2 flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-[#d7aa52]/70 opacity-0 transition-opacity group-hover:opacity-100">
+                      <div className="mt-2 flex items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-[#A88765]/80 opacity-0 transition-opacity group-hover:opacity-100">
                         <Plus className="size-3" />
                         {lang === "ar" ? "اضغط للتفاصيل" : "Tap for details"}
                       </div>
@@ -1518,150 +1195,76 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
   );
 }
 
-/* ============= BEFORE / AFTER ============= */
-export function BeforeAfter({ lang }: { lang: Lang }) {
-  const [pos, setPos] = useState(50);
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const drag = useRef(false);
-
-  const move = (clientX: number) => {
-    const el = wrapRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const p = ((clientX - rect.left) / rect.width) * 100;
-    setPos(Math.max(4, Math.min(96, p)));
-  };
-
-  useEffect(() => {
-    const up = () => (drag.current = false);
-    const mv = (e: MouseEvent) => {
-      if (drag.current) move(e.clientX);
-    };
-    const tmv = (e: TouchEvent) => {
-      if (drag.current && e.touches[0]) move(e.touches[0].clientX);
-    };
-    window.addEventListener("mouseup", up);
-    window.addEventListener("touchend", up);
-    window.addEventListener("mousemove", mv);
-    window.addEventListener("touchmove", tmv);
-    return () => {
-      window.removeEventListener("mouseup", up);
-      window.removeEventListener("touchend", up);
-      window.removeEventListener("mousemove", mv);
-      window.removeEventListener("touchmove", tmv);
-    };
-  }, []);
-
-  return (
-    <section className="py-14">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle
-          eyebrow={lang === "ar" ? "نتائج" : "Outcomes"}
-          title={t.beforeAfter.title[lang]}
-          sub={t.beforeAfter.sub[lang]}
-        />
-
-        <div
-          ref={wrapRef}
-          className="relative mt-12 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[#d7aa52]/30 select-none gold-glow"
-        >
-          <img
-            src={beforeAfterImg}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-            <img
-              src={beforeAfterImg}
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#04101f]/40 to-transparent" />
-          </div>
-
-          <div className="absolute top-4 left-4 rounded-full bg-black/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-white/80 backdrop-blur">
-            {t.beforeAfter.before[lang]}
-          </div>
-          <div className="absolute top-4 right-4 rounded-full bg-[#d7aa52]/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.3em] text-[#04101f] backdrop-blur">
-            {t.beforeAfter.after[lang]}
-          </div>
-
-          <div
-            className="absolute top-0 bottom-0 w-[2px] bg-[#d7aa52] shadow-[0_0_20px_rgba(215,170,82,0.7)]"
-            style={{ left: `${pos}%` }}
-          >
-            <button
-              onMouseDown={() => (drag.current = true)}
-              onTouchStart={() => (drag.current = true)}
-              aria-label="Drag"
-              className="absolute top-1/2 left-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-2xl"
-            >
-              <ArrowLeft className="size-3" />
-              <ArrowRight className="size-3" />
-            </button>
-          </div>
-
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-4 py-1.5 text-[11px] font-semibold text-white/80 backdrop-blur">
-            {t.beforeAfter.drag[lang]}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ============= TESTIMONIALS ============= */
 function Testimonials({ lang }: { lang: Lang }) {
+  const ar = lang === "ar";
+  const m = useMotionSafe();
   const items = t.testimonials.items;
-  const loop = [...items, ...items];
   return (
-    <section className="py-14">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle
-          eyebrow={lang === "ar" ? "آراء" : "Testimonials"}
-          title={t.testimonials.title[lang]}
-          sub={t.testimonials.sub[lang]}
-        />
-      </div>
-      <div
-        dir="ltr"
-        className="relative mt-10 overflow-hidden"
-        style={{
-          maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
-        }}
-      >
+    <section className="relative overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         <motion.div
-          className="flex w-max gap-6 py-4"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 50, ease: "linear", repeat: Infinity }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={m.staggerParent}
+          className="max-w-2xl"
         >
-          {loop.map((it, i) => (
-            <div
-              key={i}
-              className="glass tilt-card relative w-[320px] shrink-0 overflow-hidden rounded-3xl p-7 sm:w-[380px]"
-            >
-              <Quote className="absolute top-4 end-4 size-10 text-[#d7aa52]/15" />
-              <p className="text-sm leading-relaxed italic" style={{ color: "var(--fg-soft)" }}>
-                "{it.quote[lang]}"
-              </p>
-              <div className="mt-6 flex items-center gap-3">
-                <div className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-base font-black text-[#04101f]">
-                  {it.name[lang].split(" ")[0].charAt(it.name[lang].startsWith(".") ? 1 : 0) ||
-                    it.name[lang].charAt(0)}
-                </div>
-                <div>
-                  <div className="text-sm font-extrabold" style={{ color: "var(--fg)" }}>
-                    {it.name[lang]}
-                  </div>
-                  <div className="text-xs text-[#d7aa52]">{it.role[lang]}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+          <motion.p
+            variants={m.staggerChild}
+            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
+          >
+            {ar ? "آراء" : "Testimonials"}
+          </motion.p>
+          <motion.h2
+            variants={m.staggerChild}
+            className="font-display mt-3 text-[1.9rem] font-bold leading-[1.3] text-[#1C1B19] sm:text-[2.4rem] lg:text-[2.9rem]"
+          >
+            {t.testimonials.title[lang]}
+          </motion.h2>
+          <motion.p
+            variants={m.staggerChild}
+            className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]"
+          >
+            {t.testimonials.sub[lang]}
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={m.staggerParent}
+          className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {items.map((it, i) => {
+            const initial = it.name[lang].replace(/^[.\s]+/, "").charAt(0);
+            return (
+              <motion.figure
+                key={i}
+                variants={m.staggerChild}
+                className="flex h-full flex-col rounded-2xl border border-[#E3DDD5] bg-[#FCFBF9] p-6"
+              >
+                <Quote aria-hidden className="size-7 text-[#A88765]/40" />
+                <blockquote className="mt-3 flex-1 text-[15px] leading-[1.9] text-[#3a352f]">
+                  {it.quote[lang]}
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-3 border-t border-[#E3DDD5] pt-4">
+                  <span className="font-display flex size-10 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-sm font-bold text-[#e9d9c3]">
+                    {initial}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block truncate text-[14px] font-semibold text-[#1C1B19]">
+                      {it.name[lang]}
+                    </span>
+                    <span className="block truncate text-[12px] text-[#A88765]">
+                      {it.role[lang]}
+                    </span>
+                  </span>
+                </figcaption>
+              </motion.figure>
+            );
+          })}
         </motion.div>
       </div>
     </section>
@@ -1670,69 +1273,81 @@ function Testimonials({ lang }: { lang: Lang }) {
 
 /* ============= CONTACT ============= */
 export function Contact({ lang }: { lang: Lang }) {
+  const ar = lang === "ar";
+  const m = useMotionSafe();
   return (
-    <section id="contact" className="py-8">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <SectionTitle
-          eyebrow={lang === "ar" ? "تواصل" : "Contact"}
-          title={t.contact.title[lang]}
-          sub={t.contact.sub[lang]}
-        />
-        <div className="mt-4 text-center text-xs" style={{ color: "var(--fg-soft)" }}>
-          <a href="tel:+966560409811" dir="ltr" className="font-mono hover:text-[#d7aa52]">
-            +966 56 040 9811
-          </a>
-        </div>
-
+    <section id="contact" className="relative overflow-hidden bg-[#4A3023] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 max-w-3xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={m.staggerParent}
+          className="max-w-3xl"
         >
-          {SOCIALS.map((s, i) => (
-            <motion.a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.label}
+          <motion.p
+            variants={m.staggerChild}
+            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#d8bd9c]"
+          >
+            {ar ? "تواصل" : "Contact"}
+          </motion.p>
+          <motion.h2
+            variants={m.staggerChild}
+            className="font-display mt-3 text-[2rem] font-bold leading-[1.3] text-[#FCFBF9] sm:text-[2.6rem] lg:text-[3.1rem]"
+          >
+            {t.contact.title[lang]}
+          </motion.h2>
+          <motion.p
+            variants={m.staggerChild}
+            className="mt-4 max-w-xl text-[15px] leading-[1.95] text-white/70 sm:text-[16px]"
+          >
+            {t.contact.sub[lang]}
+          </motion.p>
+
+          {/* Primary + secondary contact actions */}
+          <motion.div variants={m.staggerChild} className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="tel:+966560409811"
               onMouseEnter={playHover}
               onClick={playClick}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ y: -6, scale: 1.04 }}
-              className="glass group relative flex flex-col items-center justify-end overflow-visible rounded-2xl text-center transition-all hover:border-[#d7aa52]/60"
-              style={{ height: "170px", padding: "0 8px 10px 8px" }}
+              className="inline-flex h-[54px] items-center gap-3 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-8 text-[15px] font-bold text-[#1C1B19] shadow-[0_18px_40px_-16px_rgba(74,48,35,0.7)] transition-transform hover:scale-[1.03]"
             >
-              <span
-                aria-hidden
-                className="pointer-events-none absolute inset-x-6 top-6 h-20 rounded-full opacity-60 blur-3xl transition-opacity duration-500 group-hover:opacity-90"
-                style={{ background: s.color }}
-              />
-              <motion.img
-                src={s.mascot}
-                alt=""
-                width={160}
-                height={160}
-                loading="lazy"
-                decoding="async"
-                className="relative w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.35)]"
-                style={{ height: "160px", width: "160px", marginBottom: "2px" }}
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <div
-                className="relative text-xs font-extrabold leading-tight"
-                style={{ color: "var(--fg)" }}
-              >
-                {s.label}
-              </div>
-            </motion.a>
-          ))}
+              <Phone className="size-4" />
+              <span dir="ltr" className="tracking-wide">
+                +966 56 040 9811
+              </span>
+            </a>
+            <a
+              href="mailto:elmadnim@gmail.com"
+              onMouseEnter={playHover}
+              className="inline-flex h-[54px] items-center gap-2 rounded-full border border-[#FCFBF9]/25 bg-white/[0.04] px-6 text-[14px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:text-[#e9d9c3]"
+            >
+              <Mail className="size-4" />
+              elmadnim@gmail.com
+            </a>
+          </motion.div>
+
+          {/* Social channels */}
+          <motion.div variants={m.staggerChild} className="mt-8 flex flex-wrap gap-2.5">
+            {SOCIALS.map((s) => {
+              const Icon = s.Icon;
+              return (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target={s.href.startsWith("http") ? "_blank" : undefined}
+                  rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  aria-label={s.label}
+                  title={s.label}
+                  onMouseEnter={playHover}
+                  onClick={playClick}
+                  className="flex size-11 items-center justify-center rounded-full border border-[#A88765]/30 bg-white/[0.04] text-[#e9d9c3] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/15 hover:text-[#FCFBF9]"
+                >
+                  <Icon className="size-5" />
+                </a>
+              );
+            })}
+          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -1750,38 +1365,30 @@ export function Footer({ lang }: { lang: Lang }) {
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
   return (
-    <footer className="relative mt-4 border-t border-[var(--line)] pt-6 pb-3">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d7aa52] to-transparent"
-      />
-
-      <div className="w-full px-4 sm:px-8 lg:px-16 grid  gap-6 md:grid-cols-3">
+    <footer className="relative border-t border-[#A88765]/15 bg-[#151412]">
+      <div className="mx-auto grid w-full max-w-[80rem] gap-10 px-4 py-14 sm:px-8 md:grid-cols-3 lg:px-12">
         <div>
-          <div className="text-lg font-black gold-text">
+          <div className="font-display text-lg font-bold text-[#FCFBF9]">
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </div>
-          <p
-            className="mt-1.5 max-w-md text-xs leading-relaxed"
-            style={{ color: "var(--fg-soft)" }}
-          >
+          <p className="mt-3 max-w-md text-[13px] leading-[1.8] text-white/55">
             {t.footer.tagline[lang]}
           </p>
-          <div className="mt-2 flex flex-wrap items-center gap-2">
-            <div className="inline-flex items-center gap-1.5 rounded-full gold-border px-2.5 py-1 text-[10px] font-semibold text-[#d7aa52]">
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/30 px-3 py-1 text-[11px] font-semibold text-[#d8bd9c]">
               <MapPin className="size-3" />
               {lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia"}
-            </div>
+            </span>
             <RouterLink
               to="/request-service"
-              className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2 py-1 text-[10px] font-semibold text-emerald-300 transition hover:bg-emerald-500/20"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/30 bg-white/[0.03] px-3 py-1 text-[11px] font-semibold text-[#d8bd9c] transition-colors hover:border-[#A88765]"
               title={lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT services"}
             >
               <img
                 src={vatLogo.url}
                 alt="VAT"
-                width={18}
-                height={18}
+                width={16}
+                height={16}
                 className="rounded-sm"
                 loading="lazy"
                 decoding="async"
@@ -1792,28 +1399,25 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div>
-          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+          <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-[#A88765]">
             {t.footer.quick[lang]}
           </div>
-          <ul
-            className="flex flex-wrap gap-x-4 gap-y-1 text-xs"
-            style={{ color: "var(--fg-soft)" }}
-          >
+          <ul className="flex flex-col gap-2 text-[13px] text-white/60">
             {links.map((l) => (
               <li key={l.to}>
                 {l.to.startsWith("/#") ? (
-                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d7aa52]">
+                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d8bd9c]">
                     {l.label}
                   </a>
                 ) : (
-                  <RouterLink to={l.to} className="transition-colors hover:text-[#d7aa52]">
+                  <RouterLink to={l.to} className="transition-colors hover:text-[#d8bd9c]">
                     {l.label}
                   </RouterLink>
                 )}
               </li>
             ))}
             <li>
-              <RouterLink to="/auth" className="transition-colors hover:text-[#d7aa52]">
+              <RouterLink to="/auth" className="transition-colors hover:text-[#d8bd9c]">
                 {lang === "ar" ? "تسجيل الدخول" : "Login"}
               </RouterLink>
             </li>
@@ -1821,26 +1425,26 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
 
         <div>
-          <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.3em] text-[#d7aa52]">
+          <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-[#A88765]">
             {t.footer.contactCol[lang]}
           </div>
-          <ul className="space-y-1 text-xs" style={{ color: "var(--fg-soft)" }}>
+          <ul className="flex flex-col gap-3 text-[13px] text-white/60">
             <li>
               <a
                 href="tel:+966560409811"
-                className="group inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-gradient-to-r from-[#07182c] to-[#0a223f] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] shadow-[0_6px_20px_-10px_rgba(215,170,82,0.55)] transition-all hover:-translate-y-0.5 hover:border-[#d7aa52] hover:text-[#f3d28a]"
+                className="inline-flex items-center gap-2 text-[#d8bd9c] transition-colors hover:text-[#FCFBF9]"
               >
-                <span className="flex size-6 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]">
-                  <Phone className="size-3" />
-                </span>
-                <span dir="ltr" className="font-mono tracking-wider">
+                <Phone className="size-4" />
+                <span dir="ltr" className="tracking-wide">
                   +966 56 040 9811
                 </span>
               </a>
             </li>
-
             <li>
-              <a href="mailto:elmadnim@gmail.com" className="hover:text-[#d7aa52]">
+              <a
+                href="mailto:elmadnim@gmail.com"
+                className="transition-colors hover:text-[#d8bd9c]"
+              >
                 elmadnim@gmail.com
               </a>
             </li>
@@ -1848,22 +1452,29 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <div
-        className="w-full px-4 sm:px-8 lg:px-16 mt-4 flex  flex-col items-center justify-between gap-1.5 border-t border-[var(--line)] pt-3 text-[10px] sm:flex-row"
-        style={{ color: "var(--fg-soft)" }}
-      >
-        <span>{t.footer.rights[lang]}</span>
-        <span className="inline-flex items-center gap-1.5">
-          <Sparkles className="size-3 text-[#d7aa52]" />
-          {t.footer.built[lang]}
-        </span>
+      <div className="border-t border-white/[0.08]">
+        <div className="mx-auto flex w-full max-w-[80rem] flex-col items-center justify-between gap-2 px-4 py-4 text-[11px] text-white/45 sm:flex-row sm:px-8 lg:px-12">
+          <span>{t.footer.rights[lang]}</span>
+          <span>{t.footer.built[lang]}</span>
+        </div>
       </div>
     </footer>
   );
 }
 
 /* ============= SECTION TITLE ============= */
-function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
+function SectionTitle({
+  eyebrow,
+  title,
+  sub,
+  theme = "dark",
+}: {
+  eyebrow: string;
+  title: string;
+  sub?: string;
+  theme?: "dark" | "light";
+}) {
+  const light = theme === "light";
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -1872,14 +1483,17 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
       transition={{ duration: 0.7 }}
       className="title-bar"
     >
-      <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#d7aa52]">
+      <div className="mb-2 text-xs font-bold uppercase tracking-[0.4em] text-[#A88765]">
         — {eyebrow}
       </div>
-      <h2 className="text-4xl font-black sm:text-5xl" style={{ color: "var(--fg)" }}>
+      <h2
+        className="font-display text-4xl font-extrabold sm:text-5xl"
+        style={{ color: light ? "#1C1B19" : "var(--fg)" }}
+      >
         {title}
       </h2>
       {sub && (
-        <p className="mt-3 text-base" style={{ color: "var(--fg-soft)" }}>
+        <p className="mt-3 text-base" style={{ color: light ? "#6B6259" : "var(--fg-soft)" }}>
           {sub}
         </p>
       )}
@@ -1905,10 +1519,10 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
           transition={{ type: "spring", stiffness: 260, damping: 18 }}
-          className="relative flex size-14 shrink-0 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] text-[#f3d28a] shadow-2xl shadow-black/60"
+          className="relative flex size-14 shrink-0 items-center justify-center rounded-full border border-[#A88765]/40 bg-gradient-to-br from-[#4A3023] to-[#1C1B19] text-[#e9d9c3] shadow-2xl shadow-black/50"
         >
           <span
-            className="absolute inset-0 rounded-full bg-[#d7aa52]/25 animate-ping opacity-60"
+            className="absolute inset-0 rounded-full bg-[#A88765]/25 animate-ping opacity-60 motion-reduce:animate-none"
             aria-hidden
           />
           {open ? <X className="size-5 relative" /> : <Share2 className="size-5 relative" />}
@@ -1922,7 +1536,7 @@ export function FloatingSocial({ isRTL: _isRTL }: { isRTL: boolean }) {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -14, scale: 0.85 }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
-              className="flex flex-row items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-[#04101f]/85 p-2 backdrop-blur-xl shadow-2xl shadow-black/60"
+              className="flex flex-row items-center gap-2 rounded-full border border-[#A88765]/30 bg-[#1C1B19]/90 p-2 backdrop-blur-xl shadow-2xl shadow-black/50"
             >
               {SOCIALS.map((s, i) => (
                 <motion.a

@@ -56,8 +56,8 @@ function ArticlesPage() {
     <section className="relative py-10">
       <div className="w-full px-4 sm:px-8 lg:px-16">
         <div className="mb-6 flex items-center gap-2">
-          <FileText className="size-5 text-[#f3d28a]" />
-          <h2 className="text-lg font-extrabold text-[#f3d28a]">
+          <FileText className="size-5 text-[#c9a986]" />
+          <h2 className="font-display text-lg font-extrabold text-[#c9a986]">
             {lang === "ar" ? "أحدث المقالات" : "Latest Articles"}
           </h2>
         </div>
@@ -67,19 +67,19 @@ function ArticlesPage() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-64 animate-pulse rounded-3xl border border-[#d7aa52]/15 bg-gradient-to-br from-[#07182c]/60 to-[#04101f]/70"
+                className="h-64 animate-pulse motion-reduce:animate-none rounded-3xl border border-[#A88765]/15 bg-[#1C1B19]"
               />
             ))}
           </div>
         )}
 
         {!loading && list.length === 0 && (
-          <div className="rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-10 text-center">
-            <FileText className="mx-auto size-10 text-[#f3d28a]/70" />
-            <h3 className="mt-4 text-base font-extrabold text-[#f3d28a]">
+          <div className="rounded-3xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center">
+            <FileText className="mx-auto size-10 text-[#7c6045]/70" />
+            <h3 className="mt-4 font-display text-base font-extrabold text-[#7c6045]">
               {lang === "ar" ? "المقالات قيد الإعداد" : "Articles coming soon"}
             </h3>
-            <p className="mt-2 text-sm text-white/60">
+            <p className="mt-2 text-sm text-[#6B6259]">
               {lang === "ar" ? "سيتم نشر أول مقال قريباً" : "First article will be published soon"}
             </p>
           </div>
@@ -91,17 +91,17 @@ function ArticlesPage() {
               <a
                 key={a.id}
                 href={`/knowledge/${catSlug(a.category_id)}/${a.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60"
+                className="group flex h-full flex-col rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-6 transition-all hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-lg"
               >
-                <h3 className="text-xl font-extrabold leading-snug text-white group-hover:text-[#f3d28a] sm:text-2xl">
+                <h3 className="font-display text-xl font-extrabold leading-snug text-[#1C1B19] group-hover:text-[#7c6045] sm:text-2xl">
                   {a.title_ar}
                 </h3>
                 {a.excerpt_ar && (
-                  <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-white/65">
+                  <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-[#6B6259]">
                     {a.excerpt_ar}
                   </p>
                 )}
-                <div className="mt-4 flex items-center justify-between border-t border-[#d7aa52]/15 pt-3 text-xs text-[#f3d28a]">
+                <div className="mt-4 flex items-center justify-between border-t border-[#A88765]/20 pt-3 text-xs text-[#7c6045]">
                   <span>
                     {a.reading_minutes ?? 5} {lang === "ar" ? "د قراءة" : "min read"}
                   </span>

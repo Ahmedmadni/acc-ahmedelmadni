@@ -1,5 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Home, LogOut, ShieldCheck, UserCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Bookmark,
+  BookOpen,
+  Home,
+  LogOut,
+  ShieldCheck,
+  UserCircle,
+} from "lucide-react";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -55,16 +63,15 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
       lang="ar"
       className="min-h-screen text-[var(--fg)]"
       style={{
-        background:
-          "radial-gradient(1200px 600px at 80% -10%, rgba(215,170,82,0.10), transparent 60%), radial-gradient(900px 500px at -10% 110%, rgba(215,170,82,0.07), transparent 60%), #04101f",
+        background: "#151412",
         fontFamily: "Cairo, system-ui, sans-serif",
       }}
     >
-      <header className="sticky top-0 z-40 border-b border-[#d7aa52]/15 bg-[#04101f]/85 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-[#A88765]/15 bg-[#151412]/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
           <Link
             to="/knowledge"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#f3d28a]"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#c9a986]"
           >
             <BookOpen className="size-5" />
             المكتبة المحاسبية
@@ -72,25 +79,32 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
           <nav className="flex flex-wrap items-center justify-end gap-2">
             <Link
               to="/"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
             >
               <Home className="size-3.5" />
               الرئيسية
             </Link>
             <Link
               to="/tools"
-              className="hidden rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 sm:inline-flex"
+              className="hidden rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 sm:inline-flex"
             >
               الأدوات
             </Link>
             <Link
               to="/library"
-              className="hidden rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 sm:inline-flex"
+              className="hidden rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 sm:inline-flex"
             >
               المكتبة
             </Link>
             {user ? (
               <>
+                <Link
+                  to="/knowledge/bookmarks"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
+                >
+                  <Bookmark className="size-3.5" />
+                  محفوظاتي
+                </Link>
                 {isAdmin && (
                   <Link
                     to="/admin/library"
@@ -100,8 +114,8 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
                     لوحة التحكم
                   </Link>
                 )}
-                <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#d7aa52]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-white/75 md:inline-flex">
-                  <UserCircle className="size-3.5 shrink-0 text-[#f3d28a]" />
+                <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#A88765]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#D8D1C8] md:inline-flex">
+                  <UserCircle className="size-3.5 shrink-0 text-[#c9a986]" />
                   <span className="truncate" dir="ltr">
                     {user.email}
                   </span>
@@ -118,7 +132,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
             ) : (
               <Link
                 to="/auth"
-                className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/20"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/20"
               >
                 <UserCircle className="size-3.5" />
                 دخول
@@ -128,10 +142,10 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="mt-16 border-t border-[#d7aa52]/15 bg-[#03101e]">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-white/60 sm:flex-row sm:px-6">
+      <footer className="mt-16 border-t border-[#A88765]/15 bg-[#151412]">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-[#D8D1C8] sm:flex-row sm:px-6">
           <p>© {new Date().getFullYear()} المكتبة المحاسبية — أحمد المدني</p>
-          <Link to="/" className="inline-flex items-center gap-1 text-[#f3d28a] hover:underline">
+          <Link to="/" className="inline-flex items-center gap-1 text-[#c9a986] hover:underline">
             عودة للموقع <ArrowRight className="size-3.5" />
           </Link>
         </div>

@@ -51,11 +51,11 @@ function AuthPage() {
   return (
     <KnowledgeShell>
       <div className="mx-auto max-w-md px-4 py-16 sm:px-6">
-        <div className="rounded-3xl border border-[#d7aa52]/25 bg-[#07182c] p-8 shadow-2xl">
-          <h1 className="text-2xl font-black text-white">
+        <div className="rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-8 shadow-2xl">
+          <h1 className="font-display text-2xl font-extrabold text-[#1C1B19]">
             {mode === "signin" ? "تسجيل الدخول" : "إنشاء حساب"}
           </h1>
-          <p className="mt-2 text-sm text-white/60">
+          <p className="mt-2 text-sm text-[#6B6259]">
             للوصول إلى التقييم والحفظ في المكتبة المحاسبية.
           </p>
           <form onSubmit={submit} className="mt-6 space-y-3">
@@ -66,7 +66,7 @@ function AuthPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="email@example.com"
-              className="w-full rounded-xl border border-[#d7aa52]/30 bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 focus:border-[#d7aa52] focus:outline-none"
+              className="w-full rounded-xl border border-[#A88765]/30 bg-white px-4 py-3 text-[#1C1B19] placeholder:text-[#9a9089] focus:border-[#A88765] focus:outline-none"
             />
             <input
               required
@@ -76,12 +76,12 @@ function AuthPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full rounded-xl border border-[#d7aa52]/30 bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 focus:border-[#d7aa52] focus:outline-none"
+              className="w-full rounded-xl border border-[#A88765]/30 bg-white px-4 py-3 text-[#1C1B19] placeholder:text-[#9a9089] focus:border-[#A88765] focus:outline-none"
             />
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-3 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.01] disabled:opacity-60"
+              className="w-full rounded-xl bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/30 transition-transform hover:scale-[1.01] disabled:opacity-60"
             >
               {loading ? "..." : mode === "signin" ? "دخول" : "إنشاء حساب"}
             </button>
@@ -89,7 +89,7 @@ function AuthPage() {
           <button
             type="button"
             onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
-            className="mt-4 w-full text-center text-xs text-[#f3d28a] hover:underline"
+            className="mt-4 w-full text-center text-xs text-[#7c6045] hover:underline"
           >
             {mode === "signin" ? "ليس لديك حساب؟ أنشئ واحداً" : "لديك حساب؟ سجّل دخول"}
           </button>

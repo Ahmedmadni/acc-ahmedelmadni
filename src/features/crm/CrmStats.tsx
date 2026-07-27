@@ -51,8 +51,8 @@ export function CrmStats() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-          <h3 className="text-sm font-extrabold text-[#f3d28a] mb-4">توزيع الحالة</h3>
+        <div className="rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5">
+          <h3 className="font-display text-sm font-extrabold text-[#c9a986] mb-4">توزيع الحالة</h3>
           <div className="space-y-2">
             <Bar
               label="نشط"
@@ -75,8 +75,10 @@ export function CrmStats() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-          <h3 className="text-sm font-extrabold text-[#f3d28a] mb-4">حسب نوع النشاط</h3>
+        <div className="rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5">
+          <h3 className="font-display text-sm font-extrabold text-[#c9a986] mb-4">
+            حسب نوع النشاط
+          </h3>
           <div className="space-y-2">
             {byBusiness.map((b) => (
               <Bar
@@ -84,7 +86,7 @@ export function CrmStats() {
                 label={b.label}
                 value={b.count}
                 total={clients.length}
-                color="bg-[#d7aa52]"
+                color="bg-[#A88765]"
               />
             ))}
           </div>

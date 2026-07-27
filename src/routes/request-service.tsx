@@ -28,6 +28,12 @@ import vatLogo from "@/assets/vat-logo.png.asset.json";
 
 import type { Lang } from "@/lib/i18n";
 import { SERVICES_CATALOG, getServiceById } from "@/lib/services-catalog";
+import {
+  BUSINESS_ACTIVITIES,
+  ENTITY_TYPES,
+  FORM_GROUPS,
+  type FieldDef,
+} from "@/lib/request-form-schema";
 
 export const Route = createFileRoute("/request-service")({
   validateSearch: (search: Record<string, unknown>): { service?: string } => ({
@@ -102,31 +108,65 @@ export function RequestService({
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
-  const [businessType, setBusinessType] = useState("");
+  const [entityType, setEntityType] = useState("");
+  const [businessActivity, setBusinessActivity] = useState("");
   const [urgency, setUrgency] = useState("");
   const [details, setDetails] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  // Dynamic, service-specific answers (see request-form-schema.ts). Keyed by
+  // field id so switching between two services that share a field id (e.g.
+  // "accountingSystem") preserves the value instead of losing it.
+  const [dynamicAnswers, setDynamicAnswers] = useState<Record<string, string>>({});
+  const activeGroupFields: FieldDef[] = getServiceById(selectedService)
+    ? FORM_GROUPS[getServiceById(selectedService)!.formGroup]
+    : [];
+  // Conditional fields (e.g. VAT period, only once VAT-registered) are
+  // dropped from both the rendered form and the final message whenever
+  // their condition isn't currently met.
+  const visibleGroupFields = activeGroupFields.filter(
+    (f) => !f.showIf || dynamicAnswers[f.showIf.fieldId] === f.showIf.equals,
+  );
+
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const svc = getServiceById(selectedService);
-    const lines = [
-      lang === "ar" ? "طلب خدمة جديدة" : "New service request",
-      "",
-      `${lang === "ar" ? "الخدمة" : "Service"}: ${svc ? (lang === "ar" ? svc.titleAr : svc.titleEn) : "-"}`,
+    const entity = ENTITY_TYPES.find((o) => o.v === entityType);
+    const activity = BUSINESS_ACTIVITIES.find((o) => o.v === businessActivity);
+    const dynamicLines = visibleGroupFields
+      .map((f) => {
+        const raw = dynamicAnswers[f.id];
+        if (!raw) return "";
+        const value = f.options ? (f.options.find((o) => o.v === raw)?.[lang] ?? raw) : raw;
+        return `- ${lang === "ar" ? f.labelAr : f.labelEn}: ${value}`;
+      })
+      .filter(Boolean);
+
+    // Build the message as sections (each a group of lines) so blank lines
+    // only ever appear *between* sections — never eaten by a Boolean filter,
+    // and never left dangling when a whole section is empty.
+    const contactLines = [
+      `${lang === "ar" ? "الخدمة المطلوبة" : "Requested Service"}: ${svc ? (lang === "ar" ? svc.titleAr : svc.titleEn) : "-"}`,
       `${lang === "ar" ? "الاسم" : "Name"}: ${name}`,
       `${lang === "ar" ? "الجوال" : "Phone"}: ${phone}`,
-      email ? `${lang === "ar" ? "البريد" : "Email"}: ${email}` : "",
-      company ? `${lang === "ar" ? "الجهة / الشركة" : "Company"}: ${company}` : "",
-      businessType ? `${lang === "ar" ? "نوع النشاط" : "Business Type"}: ${businessType}` : "",
-      urgency ? `${lang === "ar" ? "الاستعجال" : "Urgency"}: ${urgency}` : "",
-      "",
-      `${lang === "ar" ? "تفاصيل الطلب" : "Details"}:`,
-      details,
-    ]
-      .filter(Boolean)
-      .join("\n");
-    const url = `https://wa.me/966560409811?text=${encodeURIComponent(lines)}`;
+      email && `${lang === "ar" ? "البريد" : "Email"}: ${email}`,
+      company && `${lang === "ar" ? "الجهة / الشركة" : "Company"}: ${company}`,
+      entity && `${lang === "ar" ? "نوع الكيان" : "Entity Type"}: ${entity[lang]}`,
+      activity && `${lang === "ar" ? "نشاط المنشأة" : "Business Activity"}: ${activity[lang]}`,
+      urgency && `${lang === "ar" ? "درجة الاستعجال" : "Urgency"}: ${urgency}`,
+    ].filter((l): l is string => Boolean(l));
+
+    const sections = [
+      [lang === "ar" ? "طلب خدمة جديدة" : "New service request"],
+      contactLines,
+      dynamicLines.length
+        ? [`${lang === "ar" ? "تفاصيل الطلب" : "Request Details"}:`, ...dynamicLines]
+        : [],
+      details ? [`${lang === "ar" ? "ملاحظات إضافية" : "Additional Notes"}:`, details] : [],
+    ].filter((section) => section.length > 0);
+
+    const text = sections.map((section) => section.join("\n")).join("\n\n");
+    const url = `https://wa.me/966560409811?text=${encodeURIComponent(text)}`;
 
     // GA4 lead event — mark as a "key event" (conversion) in GA4, then import it into
     // Google Ads (Ads account → Conversions → import from Google Analytics) to measure
@@ -160,9 +200,8 @@ export function RequestService({
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="relative mb-8 overflow-hidden rounded-3xl border border-emerald-400/30 bg-gradient-to-br from-emerald-900/40 via-[#0a1a14] to-[#08111F] p-5 sm:p-6 shadow-xl"
+            className="relative mb-8 overflow-hidden rounded-3xl border border-emerald-400/30 bg-gradient-to-br from-emerald-900/40 via-[#0f1512] to-[#151412] p-5 sm:p-6 shadow-xl"
           >
-            <div className="pointer-events-none absolute inset-0 animate-pulse bg-gradient-to-r from-emerald-500/10 via-transparent to-[#d7aa52]/10" />
             <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
                 {/* VAT Official Logo */}
@@ -202,7 +241,7 @@ export function RequestService({
                   setSelectedService("vat-filing");
                   document.getElementById("service-form")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 hover:scale-105 transition-transform whitespace-nowrap"
+                className="flex-shrink-0 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-5 py-2.5 text-sm font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/40 hover:scale-105 transition-transform whitespace-nowrap"
               >
                 <Zap className="w-4 h-4" />
                 {lang === "ar" ? "اطلب الخدمة الآن" : "Request Now"}
@@ -216,7 +255,7 @@ export function RequestService({
       <div className={embedded ? "w-full" : "w-full px-4 sm:px-8 lg:px-16"}>
         {!embedded && (
           <div className="mb-6 flex items-center gap-2 text-sm" style={{ color: "var(--fg-soft)" }}>
-            <Link to="/" className="inline-flex items-center gap-1 hover:text-[#d7aa52]">
+            <Link to="/" className="inline-flex items-center gap-1 hover:text-[#A88765]">
               <Home className="size-3.5" />
               {lang === "ar" ? "الرئيسية" : "Home"}
             </Link>
@@ -230,16 +269,16 @@ export function RequestService({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full gold-border bg-white/5 px-4 py-2 text-xs font-semibold text-[#f3d28a]">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/5 px-4 py-2 text-xs font-semibold text-[#c9a986]">
             <Briefcase className="size-3.5" />
             {lang === "ar" ? "خدمات محاسبية احترافية" : "Professional Accounting Services"}
           </div>
           <h1
-            className={`${embedded ? "text-2xl sm:text-3xl" : "text-4xl sm:text-5xl"} font-black leading-tight`}
+            className={`font-display ${embedded ? "text-2xl sm:text-3xl" : "text-4xl sm:text-5xl"} font-extrabold leading-tight`}
             style={{ color: "var(--fg)" }}
           >
             {lang === "ar" ? "اطلب خدمتك" : "Request a Service"}{" "}
-            <span className="block bg-gradient-to-br from-[#f3d28a] to-[#b8862e] bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent">
               {lang === "ar" ? "بكل سهولة واحترافية" : "With Ease and Professionalism"}
             </span>
           </h1>
@@ -258,7 +297,7 @@ export function RequestService({
             {trustBadges.map((b, i) => (
               <div
                 key={i}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/25 bg-white/[0.03] px-3 py-1.5 text-[11px] font-semibold text-[#f3d28a]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/25 bg-white/[0.03] px-3 py-1.5 text-[11px] font-semibold text-[#c9a986]"
               >
                 {b.icon}
                 {lang === "ar" ? b.ar : b.en}
@@ -271,12 +310,12 @@ export function RequestService({
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="glass mt-10 rounded-3xl p-10 text-center"
+            className="mt-10 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-10 text-center"
           >
             <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-300">
               <CheckCircle2 className="size-8" />
             </div>
-            <h2 className="text-2xl font-black" style={{ color: "var(--fg)" }}>
+            <h2 className="font-display text-2xl font-extrabold" style={{ color: "var(--fg)" }}>
               {lang === "ar" ? "تم إرسال طلبك" : "Request sent"}
             </h2>
             <p className="mt-2 text-sm" style={{ color: "var(--fg-soft)" }}>
@@ -288,14 +327,14 @@ export function RequestService({
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="inline-flex items-center gap-2 rounded-full gold-border px-5 py-2.5 text-xs font-bold"
+                className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 px-5 py-2.5 text-xs font-bold"
                 style={{ color: "var(--fg)" }}
               >
                 {lang === "ar" ? "طلب جديد" : "New request"}
               </button>
               <Link
                 to="/"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-xs font-bold text-[#04101f]"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-5 py-2.5 text-xs font-bold text-[#1C1B19]"
               >
                 {lang === "ar" ? "الرئيسية" : "Home"}
               </Link>
@@ -305,7 +344,7 @@ export function RequestService({
           <form
             id="service-form"
             onSubmit={onSubmit}
-            className="glass mt-10 space-y-6 rounded-3xl p-6 sm:p-10"
+            className="mt-10 space-y-6 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-6 sm:p-10"
           >
             {/* Service selector */}
             <div>
@@ -318,7 +357,7 @@ export function RequestService({
                   required
                   value={selectedService}
                   onChange={(e) => setSelectedService(e.target.value)}
-                  className="w-full appearance-none rounded-xl border border-[#d7aa52]/30 bg-[#08111F] px-5 py-4 text-sm font-bold text-[#f3d28a] outline-none transition focus:border-[#d7aa52]/70 focus:ring-2 focus:ring-[#d7aa52]/20"
+                  className="w-full appearance-none rounded-xl border border-[#A88765]/30 bg-[#1C1B19] px-5 py-4 text-sm font-bold text-[#e9d9c3] outline-none transition focus:border-[#A88765]/70 focus:ring-2 focus:ring-[#A88765]/25"
                 >
                   <option value="">
                     {lang === "ar" ? "— اختر الخدمة —" : "— Select a service —"}
@@ -330,7 +369,7 @@ export function RequestService({
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 size-4 text-[#f3d28a]/70 rtl:left-4 ltr:right-4" />
+                <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 size-4 text-[#A88765]/70 rtl:left-4 ltr:right-4" />
               </div>
 
               {selectedService &&
@@ -342,7 +381,7 @@ export function RequestService({
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="mt-4 rounded-2xl border border-[#d7aa52]/25 bg-[#d7aa52]/[0.06] p-4 sm:p-5"
+                      className="mt-4 rounded-2xl border border-[#A88765]/25 bg-[#A88765]/[0.06] p-4 sm:p-5"
                     >
                       <div className="flex items-start gap-4">
                         <div
@@ -386,7 +425,7 @@ export function RequestService({
             {/* Fields grid */}
             <div className="grid gap-4 sm:grid-cols-2">
               <Field
-                icon={<User className="w-3.5 h-3.5 text-[#f3d28a]" />}
+                icon={<User className="w-3.5 h-3.5 text-[#A88765]" />}
                 label={lang === "ar" ? "الاسم الكامل" : "Full Name"}
                 required
                 value={name}
@@ -394,7 +433,7 @@ export function RequestService({
                 placeholder={lang === "ar" ? "أدخل اسمك" : "Enter your name"}
               />
               <Field
-                icon={<Phone className="w-3.5 h-3.5 text-[#f3d28a]" />}
+                icon={<Phone className="w-3.5 h-3.5 text-[#A88765]" />}
                 label={lang === "ar" ? "رقم الجوال" : "Phone Number"}
                 required
                 value={phone}
@@ -403,7 +442,7 @@ export function RequestService({
                 placeholder="+966 5X XXX XXXX"
               />
               <Field
-                icon={<Mail className="w-3.5 h-3.5 text-[#f3d28a]" />}
+                icon={<Mail className="w-3.5 h-3.5 text-[#A88765]" />}
                 label={lang === "ar" ? "البريد الإلكتروني" : "Email Address"}
                 value={email}
                 onChange={setEmail}
@@ -411,7 +450,7 @@ export function RequestService({
                 placeholder="example@company.com"
               />
               <Field
-                icon={<Building2 className="w-3.5 h-3.5 text-[#f3d28a]" />}
+                icon={<Building2 className="w-3.5 h-3.5 text-[#A88765]" />}
                 label={lang === "ar" ? "الجهة / الشركة" : "Organization / Company"}
                 value={company}
                 onChange={setCompany}
@@ -419,25 +458,29 @@ export function RequestService({
               />
 
               <SelectField
-                icon={<Layers className="w-3.5 h-3.5 text-[#f3d28a]" />}
-                label={lang === "ar" ? "نوع النشاط التجاري" : "Business Type"}
-                value={businessType}
-                onChange={setBusinessType}
+                icon={<Layers className="w-3.5 h-3.5 text-[#A88765]" />}
+                label={lang === "ar" ? "الكيان القانوني" : "Entity Type"}
+                value={entityType}
+                onChange={setEntityType}
                 options={[
-                  { v: "", l: lang === "ar" ? "اختر نوع النشاط" : "Select business type" },
-                  {
-                    v: "company",
-                    l: lang === "ar" ? "شركة (ذ.م.م / مساهمة)" : "Company (LLC / Corp)",
-                  },
-                  { v: "sole", l: lang === "ar" ? "مؤسسة فردية" : "Sole Establishment" },
-                  { v: "freelancer", l: lang === "ar" ? "عمل حر / مستقل" : "Freelancer" },
-                  { v: "ngo", l: lang === "ar" ? "جمعية / منظمة" : "NGO / Association" },
-                  { v: "other", l: lang === "ar" ? "أخرى" : "Other" },
+                  { v: "", l: lang === "ar" ? "اختر الكيان القانوني" : "Select entity type" },
+                  ...ENTITY_TYPES.map((o) => ({ v: o.v, l: o[lang] })),
                 ]}
               />
 
               <SelectField
-                icon={<Clock className="w-3.5 h-3.5 text-[#f3d28a]" />}
+                icon={<Briefcase className="w-3.5 h-3.5 text-[#A88765]" />}
+                label={lang === "ar" ? "النشاط التجاري" : "Business Activity"}
+                value={businessActivity}
+                onChange={setBusinessActivity}
+                options={[
+                  { v: "", l: lang === "ar" ? "اختر النشاط التجاري" : "Select business activity" },
+                  ...BUSINESS_ACTIVITIES.map((o) => ({ v: o.v, l: o[lang] })),
+                ]}
+              />
+
+              <SelectField
+                icon={<Clock className="w-3.5 h-3.5 text-[#A88765]" />}
                 label={lang === "ar" ? "مدى الاستعجال" : "Urgency Level"}
                 value={urgency}
                 onChange={setUrgency}
@@ -454,13 +497,49 @@ export function RequestService({
               />
             </div>
 
+            {/* Service-specific questions — driven by the selected service's
+                formGroup (see request-form-schema.ts). Shown only once a
+                service is picked, and only the fields relevant to it. */}
+            {visibleGroupFields.length > 0 && (
+              <motion.div
+                key={getServiceById(selectedService)!.formGroup}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="grid gap-4 border-t border-[#A88765]/15 pt-6 sm:grid-cols-2"
+              >
+                {visibleGroupFields.map((f) =>
+                  f.type === "select" ? (
+                    <SelectField
+                      key={f.id}
+                      label={(lang === "ar" ? f.labelAr : f.labelEn) + (f.required ? " *" : "")}
+                      value={dynamicAnswers[f.id] ?? ""}
+                      onChange={(v) => setDynamicAnswers((prev) => ({ ...prev, [f.id]: v }))}
+                      options={[
+                        { v: "", l: lang === "ar" ? "اختر" : "Select" },
+                        ...(f.options ?? []).map((o) => ({ v: o.v, l: o[lang] })),
+                      ]}
+                    />
+                  ) : (
+                    <Field
+                      key={f.id}
+                      label={lang === "ar" ? f.labelAr : f.labelEn}
+                      required={f.required}
+                      value={dynamicAnswers[f.id] ?? ""}
+                      onChange={(v) => setDynamicAnswers((prev) => ({ ...prev, [f.id]: v }))}
+                      placeholder={(lang === "ar" ? f.placeholderAr : f.placeholderEn) ?? undefined}
+                    />
+                  ),
+                )}
+              </motion.div>
+            )}
+
             {/* Details */}
             <div>
               <label
                 className="mb-2 flex items-center gap-1.5 text-sm font-bold"
                 style={{ color: "var(--fg)" }}
               >
-                <FileText className="w-3.5 h-3.5 text-[#f3d28a]" />
+                <FileText className="w-3.5 h-3.5 text-[#A88765]" />
                 {lang === "ar" ? "تفاصيل الطلب" : "Request Details"}{" "}
                 <span className="text-red-400">*</span>
               </label>
@@ -474,7 +553,7 @@ export function RequestService({
                     ? "اشرح طلبك بالتفصيل: حجم العمل، المهلة، أي ملاحظات…"
                     : "Describe your request: scope, timeline, any notes…"
                 }
-                className="w-full rounded-2xl border border-[#d7aa52]/25 bg-white/[0.03] p-4 text-sm outline-none transition focus:border-[#d7aa52]/60 focus:ring-2 focus:ring-[#d7aa52]/15"
+                className="w-full rounded-2xl border border-[#A88765]/25 bg-white/[0.03] p-4 text-sm outline-none transition focus:border-[#A88765]/60 focus:ring-2 focus:ring-[#A88765]/20"
                 style={{ color: "var(--fg)" }}
               />
             </div>
@@ -485,14 +564,14 @@ export function RequestService({
                 className="text-[10px] flex items-center gap-1.5"
                 style={{ color: "var(--fg-soft)" }}
               >
-                <Shield className="w-3 h-3 text-[#f3d28a]/60" />
+                <Shield className="w-3 h-3 text-[#A88765]/60" />
                 {lang === "ar"
                   ? "بياناتك محمية ولن تُشارك مع أي طرف ثالث"
                   : "Your data is protected and will not be shared"}
               </p>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-8 py-3.5 text-sm font-black text-[#04101f] shadow-lg shadow-[#d7aa52]/30 hover:scale-105 hover:shadow-[#d7aa52]/50 transition-all active:scale-100"
+                className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-8 py-3.5 text-sm font-black text-[#1C1B19] shadow-lg shadow-[#4A3023]/40 hover:scale-105 hover:shadow-[#4A3023]/50 transition-all active:scale-100"
               >
                 <MessageCircle className="w-4 h-4" />
                 {lang === "ar" ? "إرسال الطلب عبر واتساب" : "Send via WhatsApp"}
@@ -503,7 +582,7 @@ export function RequestService({
             <div className="pt-2 text-center">
               <Link
                 to="/"
-                className="text-xs hover:text-[#d7aa52]"
+                className="text-xs hover:text-[#A88765]"
                 style={{ color: "var(--fg-soft)" }}
               >
                 ← {lang === "ar" ? "العودة إلى الرئيسية" : "Back to home"}
@@ -548,7 +627,7 @@ function Field({
         value={value}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-xl border border-[#d7aa52]/25 bg-white/[0.03] px-4 py-3.5 text-sm outline-none transition placeholder:text-white/30 focus:border-[#d7aa52]/60 focus:ring-2 focus:ring-[#d7aa52]/15"
+        className="w-full rounded-xl border border-[#A88765]/25 bg-white/[0.03] px-4 py-3.5 text-sm outline-none transition placeholder:text-white/30 focus:border-[#A88765]/60 focus:ring-2 focus:ring-[#A88765]/20"
         style={{ color: "var(--fg)" }}
       />
     </div>
@@ -581,7 +660,7 @@ function SelectField({
         <select
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full appearance-none rounded-xl border border-[#d7aa52]/25 bg-[#08111F] px-4 py-3.5 text-sm outline-none transition focus:border-[#d7aa52]/60 focus:ring-2 focus:ring-[#d7aa52]/15"
+          className="w-full appearance-none rounded-xl border border-[#A88765]/25 bg-[#1C1B19] px-4 py-3.5 text-sm outline-none transition focus:border-[#A88765]/60 focus:ring-2 focus:ring-[#A88765]/20"
           style={{ color: "var(--fg)" }}
         >
           {options.map((o) => (
@@ -590,7 +669,7 @@ function SelectField({
             </option>
           ))}
         </select>
-        <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 size-4 text-[#f3d28a]/70 rtl:left-4 ltr:right-4" />
+        <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 size-4 text-[#A88765]/70 rtl:left-4 ltr:right-4" />
       </div>
     </div>
   );

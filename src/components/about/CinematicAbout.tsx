@@ -52,14 +52,14 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
       <section ref={heroRef} className="relative h-[180vh]" aria-labelledby="about-hero-heading">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           {/* Backdrop layers */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#04101f]/40 to-[#04101f]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#151412]/40 to-[#151412]" />
           <motion.div
             aria-hidden
             className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[80%] pointer-events-none"
             style={{ y: yImg }}
           >
             <div className="mx-auto h-full max-w-6xl relative">
-              <div className="absolute -inset-32 rounded-full bg-[radial-gradient(closest-side,rgba(215,170,82,0.22),transparent_70%)] blur-3xl" />
+              <div className="absolute -inset-32 rounded-full bg-[radial-gradient(closest-side,rgba(168,135,101,0.22),transparent_70%)] blur-3xl" />
             </div>
           </motion.div>
 
@@ -70,10 +70,10 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
             className="absolute inset-x-0 top-6 select-none text-center pointer-events-none"
           >
             <div
-              className="font-black tracking-tighter leading-[0.85] text-[22vw]"
+              className="font-display font-extrabold tracking-tighter leading-[0.85] text-[22vw]"
               style={{
                 color: "transparent",
-                WebkitTextStroke: "1px rgba(215,170,82,0.18)",
+                WebkitTextStroke: "1px rgba(168,135,101,0.18)",
               }}
             >
               {lang === "ar" ? "نبذة" : "ABOUT"}
@@ -89,7 +89,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                 className={lang === "ar" ? "order-2 lg:order-1" : "order-2 lg:order-1"}
               >
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/50 bg-white/[0.04] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.28em] text-[#f3d28a]">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/50 bg-white/[0.04] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.28em] text-[#c9a986]">
                   <motion.span style={{ rotate: rotateBadge }} className="inline-flex">
                     <Sparkles className="size-3.5" />
                   </motion.span>
@@ -98,7 +98,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
 
                 <h1
                   id="about-hero-heading"
-                  className="mt-6 text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl gold-text"
+                  className="font-display mt-6 text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent"
                 >
                   <SplitReveal text={headline} lang={lang} />
                 </h1>
@@ -129,7 +129,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   <Link
                     to="/"
                     hash="contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-6 py-3 text-xs font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 transition-transform hover:scale-[1.03]"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-6 py-3 text-xs font-bold text-[#151412] shadow-lg shadow-[#A88765]/30 transition-transform hover:scale-[1.03]"
                   >
                     {lang === "ar" ? "تواصل معي" : "Get in touch"}
                     <Arrow className="size-3.5" />
@@ -137,10 +137,10 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   <a
                     href="/mycv.pdf"
                     download
-                    className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.03] px-6 py-3 text-xs font-bold transition-all hover:bg-[#d7aa52]/10"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-6 py-3 text-xs font-bold transition-all hover:bg-[#A88765]/10"
                     style={{ color: "var(--fg)" }}
                   >
-                    <Download className="size-4 text-[#d7aa52]" />
+                    <Download className="size-4 text-[#A88765]" />
                     {t.nav.cv[lang]}
                   </a>
                 </motion.div>
@@ -150,15 +150,15 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   style={{ color: "var(--fg-soft)" }}
                 >
                   <span className="inline-flex items-center gap-1.5">
-                    <MapPin className="size-3.5 text-[#d7aa52]" />
+                    <MapPin className="size-3.5 text-[#A88765]" />
                     {lang === "ar" ? "الرياض، السعودية" : "Riyadh, KSA"}
                   </span>
                   <span className="inline-flex items-center gap-1.5">
-                    <Briefcase className="size-3.5 text-[#d7aa52]" />
+                    <Briefcase className="size-3.5 text-[#A88765]" />
                     {lang === "ar" ? "متاح للعمل" : "Available for work"}
                   </span>
                   <span className="inline-flex items-center gap-1.5">
-                    <Award className="size-3.5 text-[#d7aa52]" />
+                    <Award className="size-3.5 text-[#A88765]" />
                     {lang === "ar" ? "شهادات معتمدة" : "Certified"}
                   </span>
                 </div>
@@ -174,7 +174,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                 <div className="relative mx-auto max-w-md">
                   <motion.div
                     style={{ scale: scaleImg }}
-                    className="relative overflow-hidden rounded-[2.5rem] border border-[#d7aa52]/40 bg-gradient-to-br from-[#0a223f] to-[#04101f] gold-glow aspect-[4/5]"
+                    className="relative overflow-hidden rounded-[2.5rem] border border-[#A88765]/30 bg-[#1C1B19] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] aspect-[4/5]"
                   >
                     <img
                       src={profileImg}
@@ -186,11 +186,11 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                       decoding="sync"
                       className="absolute inset-0 h-full w-full object-cover object-top"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#151412] via-transparent to-transparent" />
 
                     <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/10 bg-black/40 backdrop-blur-md px-4 py-3">
                       <div>
-                        <div className="text-[10px] uppercase tracking-[0.25em] text-[#d7aa52]">
+                        <div className="text-[10px] uppercase tracking-[0.25em] text-[#A88765]">
                           {lang === "ar" ? "متاح للعمل" : "Available"}
                         </div>
                         <div className="text-sm font-bold" style={{ color: "var(--fg)" }}>
@@ -198,7 +198,6 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                         </div>
                       </div>
                       <span className="relative flex size-3">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                         <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
                       </span>
                     </div>
@@ -209,9 +208,9 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                     initial={{ opacity: 0, y: 20, rotate: -8 }}
                     animate={{ opacity: 1, y: 0, rotate: -8 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="absolute -top-6 -start-6 rounded-2xl border border-[#d7aa52]/40 bg-[#04101f]/90 backdrop-blur px-4 py-3 shadow-xl"
+                    className="absolute -top-6 -start-6 rounded-2xl border border-[#A88765]/40 bg-[#1C1B19]/90 backdrop-blur px-4 py-3 shadow-xl"
                   >
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#d7aa52]">
+                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#A88765]">
                       IFRS · ZATCA
                     </div>
                     <div className="mt-1 text-sm font-black" style={{ color: "var(--fg)" }}>
@@ -223,7 +222,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                     initial={{ opacity: 0, y: 20, rotate: 8 }}
                     animate={{ opacity: 1, y: 0, rotate: 8 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                    className="absolute -bottom-6 -end-6 rounded-2xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-3 shadow-xl text-[#04101f]"
+                    className="absolute -bottom-6 -end-6 rounded-2xl border border-[#A88765]/40 bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-3 shadow-xl text-[#151412]"
                   >
                     <div className="text-[10px] uppercase tracking-[0.2em] opacity-80">
                       {lang === "ar" ? "خبرة" : "Experience"}
@@ -238,7 +237,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
       </section>
 
       {/* ============ MARQUEE STRIP ============ */}
-      <div className="relative border-y border-[#d7aa52]/20 bg-[#07182c]/60 backdrop-blur overflow-hidden py-6">
+      <div className="relative border-y border-[#A88765]/20 bg-[#1C1B19]/60 backdrop-blur overflow-hidden py-6">
         <MarqueeStrip lang={lang} />
       </div>
 
@@ -258,11 +257,14 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
       {/* ============ EXPERTISE PILL CLOUD ============ */}
       <section className="relative py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c9a986]">
             <FileSpreadsheet className="size-3" />
             {lang === "ar" ? "التخصصات" : "Expertise"}
           </div>
-          <h2 className="mt-4 text-3xl font-black md:text-5xl" style={{ color: "var(--fg)" }}>
+          <h2
+            className="font-display mt-4 text-3xl font-extrabold md:text-5xl"
+            style={{ color: "var(--fg)" }}
+          >
             {lang === "ar" ? "مجالات أعمل فيها" : "What I work with"}
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -278,7 +280,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                 <Link
                   to="/request-service"
                   search={{ service: e.service }}
-                  className="inline-block rounded-full border border-[#d7aa52]/30 bg-white/[0.03] px-5 py-2.5 text-sm font-semibold text-[#f3d28a] transition-colors hover:border-[#d7aa52] hover:bg-[#d7aa52]/10"
+                  className="inline-block rounded-full border border-[#A88765]/30 bg-white/[0.03] px-5 py-2.5 text-sm font-semibold text-[#c9a986] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
                 >
                   {lang === "ar" ? e.ar : e.en}
                 </Link>
@@ -336,10 +338,12 @@ function StatBlock({ value, label, progress }: { value: string; label: string; p
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, delay: progress * 0.1 }}
-      className="relative overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/95 p-8"
+      className="relative overflow-hidden rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-8"
     >
-      <TrendingUp className="absolute -top-4 -end-4 size-24 text-[#d7aa52]/5" />
-      <div className="text-5xl font-black leading-none gold-text sm:text-6xl">{value}</div>
+      <TrendingUp className="absolute -top-4 -end-4 size-24 text-[#A88765]/5" />
+      <div className="font-display text-5xl font-extrabold leading-none bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-6xl">
+        {value}
+      </div>
       <div className="mt-3 text-sm font-semibold" style={{ color: "var(--fg-soft)" }}>
         {label}
       </div>
@@ -348,37 +352,33 @@ function StatBlock({ value, label, progress }: { value: string; label: string; p
 }
 
 export function MarqueeStrip({ lang }: { lang: Lang }) {
-  const line = [...EXPERTISE, ...EXPERTISE, ...EXPERTISE];
+  // Static editorial keyword strip (was an infinite scrolling marquee — retired
+  // per the EFL "no infinite motion" rule). Horizontal overflow is
+  // interaction-driven (the reader scrolls it). Same content/links preserved.
   return (
-    <div className="relative flex whitespace-nowrap">
-      <motion.div
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="flex shrink-0 items-center gap-3"
-      >
-        {line.map((e, i) => (
-          <span key={i} className="inline-flex items-center gap-3">
-            <Link
-              to="/request-service"
-              search={{ service: e.service }}
-              className="text-2xl font-black uppercase tracking-tight text-[#f3d28a]/70 transition-colors hover:text-[#f3d28a] sm:text-4xl"
-            >
-              {lang === "ar" ? e.ar : e.en}
-            </Link>
-            <span className="inline-block size-1.5 rounded-full bg-[#d7aa52]" />
-          </span>
-        ))}
-      </motion.div>
+    <div className="flex items-center gap-3 overflow-x-auto whitespace-nowrap px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {EXPERTISE.map((e, i) => (
+        <span key={i} className="inline-flex items-center gap-3">
+          <Link
+            to="/request-service"
+            search={{ service: e.service }}
+            className="text-2xl font-black uppercase tracking-tight text-[#c9a986]/70 transition-colors hover:text-[#c9a986] sm:text-4xl"
+          >
+            {lang === "ar" ? e.ar : e.en}
+          </Link>
+          <span className="inline-block size-1.5 rounded-full bg-[#A88765]" />
+        </span>
+      ))}
     </div>
   );
 }
 
 const EXPERTISE = [
   { ar: "التقارير المالية", en: "Financial Reporting", service: "financial-reports" },
-  { ar: "محاسبة التكاليف", en: "Cost Accounting", service: "cost-analysis" },
-  { ar: "التحليل المالي", en: "Financial Analysis", service: "cost-analysis" },
-  { ar: "الرقابة الداخلية", en: "Internal Controls", service: "consulting" },
-  { ar: "الميزانيات التقديرية", en: "Budgeting", service: "consulting" },
+  { ar: "محاسبة التكاليف", en: "Cost Accounting", service: "cost-accounting" },
+  { ar: "التحليل المالي", en: "Financial Analysis", service: "financial-analysis" },
+  { ar: "الرقابة الداخلية", en: "Internal Controls", service: "internal-controls" },
+  { ar: "الميزانيات التقديرية", en: "Budgeting", service: "budgeting" },
   { ar: "ضريبة القيمة المضافة", en: "VAT", service: "bank-reconciliation" },
   { ar: "الزكاة", en: "Zakat", service: "bank-reconciliation" },
   { ar: "الفوترة الإلكترونية", en: "E-Invoicing", service: "bank-reconciliation" },
@@ -387,7 +387,7 @@ const EXPERTISE = [
   { ar: "Power BI", en: "Power BI", service: "power-bi" },
   { ar: "SAP · Oracle", en: "SAP · Oracle", service: "power-bi" },
   { ar: "Excel المتقدم", en: "Advanced Excel", service: "power-bi" },
-  { ar: "الرواتب", en: "Payroll", service: "consulting" },
+  { ar: "الرواتب", en: "Payroll", service: "payroll" },
   { ar: "المطالبات المالية", en: "Financial Claims", service: "financial-claims" },
   { ar: "تصميم المواقع", en: "Website Design", service: "website-design" },
 ];

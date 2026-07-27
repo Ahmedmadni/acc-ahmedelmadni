@@ -53,19 +53,13 @@
 
 :root {
   --radius: 0.75rem;
-  --gold: #d7aa52;
-  --gold-soft: #f3d28a;
-  --gold-deep: #b8862e;
-  --navy: #04101f;
-  --navy-2: #07182c;
 
-  /* Themed surfaces (dark default) */
-  --bg-surface: #04101f;
-  --bg-elev: #07182c;
+  /* Themed surfaces — EFL foundation. The global page base is a deep
+     EFL near-black so the editorial homepage never rubber-bands to the
+     retired navy beneath its bands. */
+  --bg-surface: #151412;
   --fg: #f5f5f7;
   --fg-soft: rgba(245, 245, 247, 0.72);
-  --line: rgba(215, 170, 82, 0.18);
-  --glass-tint: rgba(255, 255, 255, 0.05);
 
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
@@ -92,9 +86,7 @@
      Raw palette → semantic aliases. New sections consume the semantic
      names below. The :root baseline is the warm LIGHT canvas; dark
      bands are opt-in via .section-dark / .section-statement — there is
-     no global light/dark MODE and no user toggle. The legacy navy/gold
-     tokens above are retained during the progressive migration and are
-     removed as each section adopts these tokens in later phases.
+     no global light/dark MODE and no user toggle.
      ============================================================ */
 
   /* Raw palette */
@@ -118,7 +110,7 @@
   --focus: var(--efl-bronze);
 
   /* Typography — families & fluid scale */
-  --font-display: "Noto Naskh Arabic", "IBM Plex Serif", Georgia, serif;
+  --font-display: "Alexandria", "IBM Plex Sans Arabic", system-ui, sans-serif;
   --font-sans: "IBM Plex Sans Arabic", "IBM Plex Sans", system-ui, -apple-system, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --fs-display: clamp(2.5rem, 6vw, 4.5rem);
@@ -200,15 +192,11 @@
   font-family: var(--font-sans);
 }
 
-/* Reduced motion — neutralize the always-on decorative loops and any
-   scroll smoothing (supplements the freeze block later in this file). */
+/* Reduced motion — neutralize scroll smoothing (supplements the freeze
+   block later in this file). */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto !important;
-  }
-  .aurora,
-  .cursor-glow {
-    animation: none !important;
   }
 }
 
@@ -248,119 +236,9 @@
   }
 
   ::selection {
-    background: var(--gold);
-    color: var(--navy);
+    background: var(--efl-bronze);
+    color: var(--efl-white);
   }
-}
-
-/* ============ Cinematic Backgrounds ============ */
-.cinematic-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(215, 170, 82, 0.22), transparent 55%),
-    radial-gradient(ellipse at 80% 100%, rgba(30, 80, 160, 0.28), transparent 55%),
-    linear-gradient(180deg, #04101f 0%, #061a30 50%, #04101f 100%);
-}
-html.light .cinematic-bg {
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(215, 170, 82, 0.18), transparent 55%),
-    radial-gradient(ellipse at 80% 100%, rgba(184, 134, 46, 0.12), transparent 55%),
-    linear-gradient(180deg, #faf7f0 0%, #f0eadd 50%, #faf7f0 100%);
-}
-
-.cinematic-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-}
-html.light .cinematic-grid {
-  background-image:
-    linear-gradient(rgba(12, 22, 38, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(12, 22, 38, 0.05) 1px, transparent 1px);
-}
-
-/* Animated aurora overlay */
-.aurora {
-  position: fixed;
-  inset: -20%;
-  z-index: -2;
-  background:
-    radial-gradient(40% 30% at 20% 30%, rgba(215, 170, 82, 0.18), transparent 60%),
-    radial-gradient(35% 25% at 80% 70%, rgba(64, 120, 220, 0.18), transparent 60%),
-    radial-gradient(30% 25% at 60% 20%, rgba(243, 210, 138, 0.12), transparent 60%);
-  filter: blur(40px);
-  animation: aurora 18s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-@keyframes aurora {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(-4%, 3%) scale(1.1);
-  }
-}
-
-/* Cursor glow */
-.cursor-glow {
-  position: fixed;
-  width: 520px;
-  height: 520px;
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(215, 170, 82, 0.18), transparent 70%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  transition: transform 0.15s ease-out;
-  mix-blend-mode: screen;
-}
-html.light .cursor-glow {
-  mix-blend-mode: multiply;
-  background: radial-gradient(circle, rgba(184, 134, 46, 0.18), transparent 70%);
-}
-
-/* ============ Glass ============ */
-.glass {
-  background: linear-gradient(135deg, var(--glass-tint), rgba(255, 255, 255, 0.02));
-  border: 1px solid var(--line);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  box-shadow: 0 10px 40px -20px rgba(0, 0, 0, 0.5);
-}
-html.light .glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.6));
-  box-shadow: 0 10px 40px -20px rgba(184, 134, 46, 0.25);
-}
-
-/* ============ Light-mode legibility overrides ============
-   In light mode, glass cards become near-white. Tailwind utilities like
-   text-white, text-white/85, text-white/60 hardcoded in components would
-   become invisible. Flip them to readable dark tones. Fixed-dark surfaces
-   (modals, floating widgets) opt out by setting an explicit dark bg —
-   their inner text-white stays white because those rules only apply
-   inside .glass or directly on the body background. */
-html.light .glass .text-white,
-html.light .glass [class*="text-white/"] {
-  color: var(--fg) !important;
-}
-html.light .glass .text-white\/40,
-html.light .glass .text-white\/50,
-html.light .glass .text-white\/60,
-html.light .glass .text-white\/70 {
-  color: var(--fg-soft) !important;
-}
-html.light .glass [class*="border-white/"] {
-  border-color: rgba(12, 22, 38, 0.12) !important;
-}
-html.light .glass [class*="bg-white/"] {
-  background-color: rgba(12, 22, 38, 0.04) !important;
 }
 
 .gold-text {
@@ -372,56 +250,14 @@ html.light .glass [class*="bg-white/"] {
   background-clip: text;
   color: transparent;
 }
-.gold-border {
-  border: 1px solid rgba(215, 170, 82, 0.4);
-}
-.gold-glow {
-  box-shadow: 0 0 60px -10px rgba(215, 170, 82, 0.45);
-}
-
-/* Animated gradient text border */
-.animated-border {
-  position: relative;
-  background:
-    linear-gradient(var(--bg-elev), var(--bg-elev)) padding-box,
-    conic-gradient(from var(--angle, 0deg), #f3d28a, #b8862e, #f3d28a, #d7aa52, #f3d28a) border-box;
-  border: 2px solid transparent;
-  animation: spin-angle 6s linear infinite;
-}
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-@keyframes spin-angle {
-  to {
-    --angle: 360deg;
-  }
-}
-
-/* Loader */
-.loader-circle {
-  width: 88px;
-  height: 88px;
-  border: 4px solid rgba(255, 255, 255, 0.08);
-  border-top-color: var(--gold);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* Timeline */
 .tl-line {
-  background: linear-gradient(180deg, transparent, #d7aa52 20%, #d7aa52 80%, transparent);
+  background: linear-gradient(180deg, transparent, #a88765 20%, #a88765 80%, transparent);
 }
 .tl-dot {
   box-shadow:
-    0 0 0 6px rgba(215, 170, 82, 0.15),
-    0 0 30px rgba(215, 170, 82, 0.55);
+    0 0 0 6px rgba(168, 135, 101, 0.15),
+    0 0 24px rgba(168, 135, 101, 0.45);
 }
 
 /* Section title underline */
@@ -431,85 +267,14 @@ html.light .glass [class*="bg-white/"] {
   width: 80px;
   height: 3px;
   margin-top: 14px;
-  background: linear-gradient(90deg, #d7aa52, transparent);
+  background: linear-gradient(90deg, #a88765, transparent);
   border-radius: 4px;
 }
 html[dir="rtl"] .title-bar::after {
-  background: linear-gradient(270deg, #d7aa52, transparent);
+  background: linear-gradient(270deg, #a88765, transparent);
 }
 
 /* Marquee */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-.marquee-track {
-  animation: marquee 40s linear infinite;
-}
-
-/* Floating */
-@keyframes float-y {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-.floaty {
-  animation: float-y 5s ease-in-out infinite;
-}
-
-/* Shine — composited via transform */
-@keyframes shine {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-.shine {
-  background: linear-gradient(
-    110deg,
-    transparent 30%,
-    rgba(243, 210, 138, 0.45) 50%,
-    transparent 70%
-  );
-  animation: shine 3.5s ease-in-out infinite;
-  will-change: transform;
-}
-
-/* Social vertical */
-.social-rail-btn {
-  transition:
-    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.3s,
-    background 0.3s;
-}
-.social-rail-btn:hover {
-  transform: scale(1.12);
-  box-shadow: 0 8px 28px -6px rgba(215, 170, 82, 0.6);
-}
-
-/* Typewriter caret */
-.caret::after {
-  content: "|";
-  margin-inline-start: 4px;
-  color: var(--gold);
-  animation: blink 1s steps(2) infinite;
-}
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -518,50 +283,8 @@ html[dir="rtl"] .title-bar::after {
   background: var(--bg-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d7aa52, #8a6520);
+  background: linear-gradient(180deg, #a88765, #76543f);
   border-radius: 10px;
-}
-
-/* Tilt card */
-.tilt-card {
-  transition:
-    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 0.4s;
-  transform-style: preserve-3d;
-}
-.tilt-card:hover {
-  transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) translateY(-4px);
-  box-shadow: 0 30px 60px -25px rgba(215, 170, 82, 0.35);
-}
-
-/* Background video */
-.bg-video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-  opacity: 0.18;
-  pointer-events: none;
-}
-html.light .bg-video {
-  opacity: 0.12;
-}
-.bg-video-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(4, 16, 31, 0.55) 0%,
-    rgba(4, 16, 31, 0.7) 50%,
-    rgba(4, 16, 31, 0.85) 100%
-  );
-}
-html.light .bg-video-overlay {
-  background: linear-gradient(180deg, rgba(247, 245, 240, 0.7), rgba(247, 245, 240, 0.85));
 }
 
 /* ============ Print / PDF export ============ */
@@ -941,66 +664,9 @@ p {
   line-height: 1.75;
 }
 
-/* Card polish — adds depth + hover lift on any .glass card */
-.glass {
-  border-radius: 18px;
-  transition:
-    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
-    border-color 0.3s ease,
-    background 0.3s ease;
-}
-.glass:hover {
-  transform: translateY(-3px);
-  border-color: rgba(215, 170, 82, 0.42);
-  box-shadow:
-    0 24px 60px -28px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(215, 170, 82, 0.15) inset,
-    0 0 40px -10px rgba(215, 170, 82, 0.18);
-}
-html.light .glass:hover {
-  box-shadow:
-    0 24px 60px -28px rgba(184, 134, 46, 0.35),
-    0 0 0 1px rgba(184, 134, 46, 0.18) inset;
-}
-
-/* Button polish — subtle shine on hover for any anchor/button with gold-border or gold bg */
-.gold-border,
-a.gold-border,
-button.gold-border {
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease;
-}
-.gold-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(243, 210, 138, 0.28) 50%,
-    transparent 70%
-  );
-  transform: translateX(-120%);
-  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
-  pointer-events: none;
-}
-.gold-border:hover::before {
-  transform: translateX(120%);
-}
-.gold-border:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 32px -16px rgba(215, 170, 82, 0.55);
-}
-
 /* Focus rings — accessible + on-brand */
 :where(a, button, [role="button"], input, select, textarea):focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid #a88765;
   outline-offset: 3px;
   border-radius: 8px;
 }
@@ -1011,47 +677,17 @@ button.gold-border {
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d7aa52, #8a6520);
+  background: linear-gradient(180deg, #a88765, #76543f);
   border-radius: 10px;
   border: 2px solid var(--bg-surface);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #f3d28a, #b8862e);
+  background: linear-gradient(180deg, #c2a079, #76543f);
 }
 
 /* Image polish */
 img {
   -webkit-user-drag: none;
-}
-
-/* Section divider — soft gold line */
-.section-divider {
-  height: 1px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, rgba(215, 170, 82, 0.4), transparent);
-  margin-block: 2.5rem;
-}
-
-/* Anchor underline animation (story-link replacement, scoped) */
-.link-elegant {
-  position: relative;
-  display: inline-block;
-}
-.link-elegant::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold), transparent);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-.link-elegant:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
 }
 
 /* Reduced motion — respect user preferences */

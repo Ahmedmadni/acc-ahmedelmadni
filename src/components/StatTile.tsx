@@ -49,10 +49,10 @@ export function EmojiStatTile({
   valueColor?: string;
 }) {
   return (
-    <div className="rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] p-4">
+    <div className="rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-4">
       <div className="text-2xl">{icon}</div>
       <div className={`mt-1 text-2xl font-black ${valueColor}`}>{value}</div>
-      <div className="mt-0.5 text-[11px] text-[var(--fg-soft)]">{label}</div>
+      <div className="mt-0.5 text-[11px] text-[#D8D1C8]">{label}</div>
     </div>
   );
 }

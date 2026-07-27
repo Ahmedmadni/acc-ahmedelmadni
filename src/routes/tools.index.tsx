@@ -213,30 +213,32 @@ function ToolCard({ tool, lang }: { tool: ToolMeta; lang: Lang }) {
     <Link
       to="/tools/$toolId"
       params={{ toolId: tool.id }}
-      className={`group relative block overflow-hidden rounded-2xl border p-5 backdrop-blur-xl transition-all hover:-translate-y-1 hover:shadow-2xl ${tool.official ? "border-emerald-400/40 bg-gradient-to-br from-emerald-400/10 via-white/[0.03] to-transparent hover:border-emerald-400/70 hover:shadow-emerald-400/10" : "border-[#d7aa52]/20 bg-gradient-to-br from-white/[0.04] to-white/[0.01] hover:border-[#d7aa52]/60 hover:shadow-[#d7aa52]/10"}`}
+      className={`group relative block overflow-hidden rounded-2xl border p-5 transition-all hover:-translate-y-1 hover:shadow-xl ${tool.official ? "border-emerald-500/40 bg-[#FCFBF9] hover:border-emerald-500/70 hover:shadow-emerald-500/15" : "border-[#A88765]/25 bg-[#FCFBF9] hover:border-[#A88765]/60 hover:shadow-[#A88765]/15"}`}
     >
       {tool.official && (
-        <span className="absolute end-3 top-3 inline-flex items-center gap-1 rounded-full border border-emerald-400/50 bg-emerald-400/15 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-emerald-200">
+        <span className="absolute end-3 top-3 inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-500/15 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-emerald-700">
           ZATCA · {lang === "ar" ? "رسمي" : "Official"}
         </span>
       )}
       <div className="flex items-start gap-3">
         <div
-          className={`flex size-11 shrink-0 items-center justify-center rounded-xl border ${tool.official ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-200" : "border-[#d7aa52]/30 bg-[#d7aa52]/10 text-[#f3d28a]"}`}
+          className={`flex size-11 shrink-0 items-center justify-center rounded-xl border ${tool.official ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-700" : "border-[#A88765]/30 bg-[#A88765]/12 text-[#7c6045]"}`}
         >
           <Icon className="size-5" />
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className="text-base font-extrabold text-[var(--fg)]">{tool.title[lang]}</h3>
+          <h3 className="font-display text-base font-extrabold text-[#1C1B19]">
+            {tool.title[lang]}
+          </h3>
           {tool.standard && (
-            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-[#f3d28a]/80">
+            <div className="mt-1 text-[10px] font-bold uppercase tracking-wider text-[#8a6a4a]">
               {tool.standard[lang]}
             </div>
           )}
         </div>
       </div>
-      <p className="mt-3 text-sm leading-relaxed text-[var(--fg-soft)]">{tool.short[lang]}</p>
-      <div className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#f3d28a]">
+      <p className="mt-3 text-sm leading-relaxed text-[#6B6259]">{tool.short[lang]}</p>
+      <div className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#7c6045]">
         {lang === "ar" ? "افتح الأداة" : "Open tool"}
         {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
       </div>
@@ -261,19 +263,21 @@ function CategorySection({
   return (
     <section id={`cat-${cat}`} className="scroll-mt-24">
       <div
-        className={`relative overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br ${meta.gradient} p-5 md:p-6`}
+        className={`relative overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] bg-gradient-to-br ${meta.gradient} p-5 md:p-6`}
       >
         <div className="flex items-center gap-4">
           <div
-            className={`flex size-14 items-center justify-center rounded-2xl bg-[#04101f]/60 ring-1 ${meta.ring} text-[#f3d28a]`}
+            className={`flex size-14 items-center justify-center rounded-2xl bg-[#24211E] ring-1 ${meta.ring} text-[#c9a986]`}
           >
             <Icon className="size-7" />
           </div>
           <div className="min-w-0 flex-1">
-            <h2 className="text-xl font-extrabold text-[var(--fg)] md:text-2xl">{label}</h2>
+            <h2 className="font-display text-xl font-extrabold text-[var(--fg)] md:text-2xl">
+              {label}
+            </h2>
             <p className="mt-1 text-xs text-[var(--fg-soft)] md:text-sm">{meta.desc[lang]}</p>
           </div>
-          <div className="hidden rounded-full border border-[#d7aa52]/30 bg-[#04101f]/40 px-3 py-1 text-[11px] font-bold text-[#f3d28a] sm:block">
+          <div className="hidden rounded-full border border-[#A88765]/30 bg-[#24211E] px-3 py-1 text-[11px] font-bold text-[#c9a986] sm:block">
             {tools.length} {lang === "ar" ? "أداة" : "tools"}
           </div>
         </div>
@@ -319,23 +323,23 @@ function ToolsPage() {
   }, [filtered]);
 
   return (
-    <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#04101f] text-white">
-      <header className="sticky top-0 z-40 border-b border-[#d7aa52]/20 bg-[#04101f]/85 backdrop-blur-xl">
+    <div dir={isRTL ? "rtl" : "ltr"} className="min-h-screen bg-[#151412] text-[#FCFBF9]">
+      <header className="sticky top-0 z-40 border-b border-[#A88765]/20 bg-[#151412]/85 backdrop-blur-xl">
         <div className="w-full px-4 sm:px-8 lg:px-16 flex h-16  items-center justify-between">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+            className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
           >
             <ArrowLeft className="size-3.5" />
             {lang === "ar" ? "الرئيسية" : "Home"}
             <Home className="size-3.5" />
           </Link>
-          <div className="text-sm font-extrabold tracking-wide text-[#f3d28a]">
+          <div className="text-sm font-extrabold tracking-wide text-[#c9a986]">
             {lang === "ar" ? "الأدوات المحاسبية الذكية" : "Smart Accounting Tools"}
           </div>
           <button
             onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15"
+            className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
             aria-label="Toggle language"
           >
             <Languages className="size-3.5" />
@@ -345,18 +349,18 @@ function ToolsPage() {
       </header>
 
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(215,170,82,0.18),transparent_50%),radial-gradient(circle_at_80%_30%,rgba(215,170,82,0.12),transparent_60%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(168,135,101,0.14),transparent_50%),radial-gradient(circle_at_80%_30%,rgba(168,135,101,0.10),transparent_60%)]" />
         <div className="w-full px-4 sm:px-8 lg:px-16 py-12 md:py-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold text-[#f3d28a]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold text-[#c9a986]">
               <Wrench className="size-3.5" />
               Smart Accounting Tools
             </div>
-            <h1 className="mt-4 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] bg-clip-text text-3xl font-extrabold leading-tight text-transparent md:text-5xl">
+            <h1 className="font-display mt-4 bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-3xl font-extrabold leading-tight text-transparent md:text-5xl">
               {lang === "ar"
                 ? "أدوات محاسبية ذكية مصنّفة باحترافية"
                 : "Smart accounting tools, grouped by category"}
@@ -370,37 +374,37 @@ function ToolsPage() {
 
           <div className="mt-8 flex flex-col gap-3 md:flex-row md:items-center">
             <div className="relative flex-1">
-              <Search className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#f3d28a]/70 ltr:left-3 rtl:right-3" />
+              <Search className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#A88765]/70 ltr:left-3 rtl:right-3" />
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder={lang === "ar" ? "ابحث في الأدوات..." : "Search tools..."}
-                className="w-full rounded-full border border-[#d7aa52]/30 bg-white/[0.04] py-2.5 text-sm text-[var(--fg)] outline-none transition focus:border-[#d7aa52]/70 focus:ring-2 focus:ring-[#d7aa52]/20 ltr:pl-10 ltr:pr-4 rtl:pr-10 rtl:pl-4"
+                className="w-full rounded-full border border-[#A88765]/25 bg-[#24211E] py-2.5 text-sm text-[var(--fg)] outline-none transition focus:border-[#A88765]/70 focus:ring-2 focus:ring-[#A88765]/25 ltr:pl-10 ltr:pr-4 rtl:pr-10 rtl:pl-4"
               />
             </div>
             <div className="relative md:w-64">
               <select
                 value={cat}
                 onChange={(e) => setCat(e.target.value as ToolCategory | "all")}
-                className="w-full appearance-none rounded-full border border-[#d7aa52]/30 bg-white/[0.04] py-2.5 text-sm font-bold text-[#f3d28a] outline-none transition focus:border-[#d7aa52]/70 focus:ring-2 focus:ring-[#d7aa52]/20 ltr:pl-4 ltr:pr-10 rtl:pr-4 rtl:pl-10"
+                className="w-full appearance-none rounded-full border border-[#A88765]/25 bg-[#24211E] py-2.5 text-sm font-bold text-[#c9a986] outline-none transition focus:border-[#A88765]/70 focus:ring-2 focus:ring-[#A88765]/25 ltr:pl-4 ltr:pr-10 rtl:pr-4 rtl:pl-10"
               >
-                <option value="all" className="bg-[#04101f]">
+                <option value="all" className="bg-[#1C1B19]">
                   {lang === "ar" ? "كل الفئات" : "All categories"}
                 </option>
                 {CATEGORIES.map((c) => (
-                  <option key={c.id} value={c.id} className="bg-[#04101f]">
+                  <option key={c.id} value={c.id} className="bg-[#1C1B19]">
                     {c.label[lang]}
                   </option>
                 ))}
               </select>
-              <ChevronDown className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#f3d28a]/70 ltr:right-3 rtl:left-3" />
+              <ChevronDown className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#A88765]/70 ltr:right-3 rtl:left-3" />
             </div>
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
             <button
               onClick={() => setCat("all")}
-              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${cat === "all" ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)] hover:bg-white/5"}`}
+              className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${cat === "all" ? "border-[#A88765] bg-[#A88765]/15 text-[#c9a986]" : "border-[#A88765]/20 text-[#D8D1C8] hover:bg-white/5"}`}
             >
               {lang === "ar" ? "كل الأدوات" : "All tools"}
             </button>
@@ -410,7 +414,7 @@ function ToolsPage() {
                 <button
                   key={c.id}
                   onClick={() => setCat(c.id)}
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${cat === c.id ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-white/10 text-[var(--fg-soft)] hover:bg-white/5"}`}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition ${cat === c.id ? "border-[#A88765] bg-[#A88765]/15 text-[#c9a986]" : "border-[#A88765]/20 text-[#D8D1C8] hover:bg-white/5"}`}
                 >
                   <CIcon className="size-3.5" />
                   {c.label[lang]}
@@ -426,7 +430,7 @@ function ToolsPage() {
           </div>
 
           {filtered.length === 0 && (
-            <div className="mt-8 rounded-xl border border-dashed border-[#d7aa52]/30 p-8 text-center text-sm text-[var(--fg-soft)]">
+            <div className="mt-8 rounded-xl border border-dashed border-[#A88765]/30 p-8 text-center text-sm text-[#D8D1C8]">
               {lang === "ar" ? "لا توجد نتائج مطابقة." : "No matching tools."}
             </div>
           )}

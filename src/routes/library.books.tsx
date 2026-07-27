@@ -221,28 +221,28 @@ function BooksPage() {
     <section className="relative py-10">
       <div className="w-full px-4 sm:px-8 lg:px-16">
         {/* Filters */}
-        <div className="rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/90 p-5 backdrop-blur-xl">
+        <div className="rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-5">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
             <div className="relative flex-1">
-              <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
+              <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#c9a986]" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={
                   lang === "ar" ? "ابحث في الكتب والمراجع..." : "Search books & references..."
                 }
-                className="w-full rounded-full border border-white/10 bg-white/[0.04] py-3 ps-11 pe-4 text-sm text-white placeholder:text-white/40 outline-none focus:border-[#d7aa52]/60"
+                className="w-full rounded-full border border-[#A88765]/20 bg-[#24211E] py-3 ps-11 pe-4 text-sm text-[#FCFBF9] placeholder:text-[#8a8078] outline-none focus:border-[#A88765]/60"
               />
             </div>
             <div className="relative lg:w-64">
-              <Filter className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
+              <Filter className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#c9a986]" />
               <select
                 value={cat}
                 onChange={(e) => setCat(e.target.value)}
-                className="w-full appearance-none rounded-full border border-[#d7aa52]/40 bg-white/[0.04] py-3 ps-11 pe-9 text-sm font-semibold text-white outline-none"
+                className="w-full appearance-none rounded-full border border-[#A88765]/30 bg-[#24211E] py-3 ps-11 pe-9 text-sm font-semibold text-[#FCFBF9] outline-none"
               >
                 {categories.map((c) => (
-                  <option key={c} value={c} className="bg-[#04101f]">
+                  <option key={c} value={c} className="bg-[#1C1B19]">
                     {c === "all" ? (lang === "ar" ? "كل التصنيفات" : "All categories") : c}
                   </option>
                 ))}
@@ -251,15 +251,15 @@ function BooksPage() {
             <select
               value={price}
               onChange={(e) => setPrice(e.target.value as "all" | "free" | "paid")}
-              className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white"
+              className="rounded-full border border-[#A88765]/20 bg-[#24211E] px-3 py-2 text-xs font-semibold text-[#FCFBF9]"
             >
-              <option value="all" className="bg-[#04101f]">
+              <option value="all" className="bg-[#1C1B19]">
                 {lang === "ar" ? "الكل" : "All"}
               </option>
-              <option value="free" className="bg-[#04101f]">
+              <option value="free" className="bg-[#1C1B19]">
                 {lang === "ar" ? "مجاني" : "Free"}
               </option>
-              <option value="paid" className="bg-[#04101f]">
+              <option value="paid" className="bg-[#1C1B19]">
                 {lang === "ar" ? "مدفوع" : "Paid"}
               </option>
             </select>
@@ -274,15 +274,15 @@ function BooksPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, delay: Math.min(i, 8) * 0.04 }}
-              className="group flex flex-col rounded-3xl border-2 border-[#d7aa52]/20 bg-gradient-to-br from-[#0a1e35] to-[#04101f] p-5 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_50px_-20px_rgba(215,170,82,0.4)]"
+              className="group flex flex-col rounded-3xl border-2 border-[#A88765]/25 bg-[#FCFBF9] p-5 transition-all hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_20px_50px_-24px_rgba(168,135,101,0.35)]"
             >
               {/* Top badges row */}
               <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-bold">
-                <span className="inline-flex items-center gap-1 rounded-full bg-[#d7aa52]/15 px-2 py-0.5 text-[#f3d28a] border border-[#d7aa52]/40">
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#A88765]/12 px-2 py-0.5 text-[#7c6045] border border-[#A88765]/40">
                   {typeIcon(book.type)} {book.type}
                 </span>
                 <span
-                  className={`rounded-full px-2 py-0.5 ${book.free ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30" : "bg-orange-500/15 text-orange-300 border border-orange-400/30"}`}
+                  className={`rounded-full px-2 py-0.5 ${book.free ? "bg-emerald-500/12 text-emerald-700 border border-emerald-500/30" : "bg-[#A88765]/15 text-[#7c6045] border border-[#A88765]/40"}`}
                 >
                   {book.free
                     ? lang === "ar"
@@ -292,22 +292,22 @@ function BooksPage() {
                       ? "مدفوع"
                       : "Paid"}
                 </span>
-                <span className="rounded-full bg-white/[0.04] border border-white/15 px-2 py-0.5 text-white/70">
+                <span className="rounded-full bg-[#F5F1EB] border border-[#A88765]/20 px-2 py-0.5 text-[#6B6259]">
                   {book.lang}
                 </span>
-                <span className="rounded-full bg-white/[0.04] border border-white/15 px-2 py-0.5 text-white/60">
+                <span className="rounded-full bg-[#F5F1EB] border border-[#A88765]/20 px-2 py-0.5 text-[#6B6259]">
                   {book.publisher}
                 </span>
               </div>
 
-              <h3 className="mt-3 text-sm font-extrabold leading-snug text-white">
+              <h3 className="mt-3 font-display text-sm font-extrabold leading-snug text-[#1C1B19]">
                 {book.title[lang]}
               </h3>
-              <p className="mt-2 line-clamp-3 flex-1 text-xs leading-relaxed text-white/70">
+              <p className="mt-2 line-clamp-3 flex-1 text-xs leading-relaxed text-[#6B6259]">
                 {book.description[lang]}
               </p>
 
-              <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#d7aa52]/10 px-2.5 py-1 text-[10px] font-bold text-[#f3d28a]">
+              <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#A88765]/12 px-2.5 py-1 text-[10px] font-bold text-[#7c6045]">
                 {book.category}
               </div>
 
@@ -315,7 +315,7 @@ function BooksPage() {
                 href={book.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full border border-[#d7aa52]/40 px-3 py-2 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/10 transition-all"
+                className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full border border-[#A88765]/40 px-3 py-2 text-xs font-bold text-[#7c6045] hover:bg-[#A88765]/10 transition-all"
               >
                 {lang === "ar" ? "اذهب للمصدر" : "Go to source"}
                 <ExternalLink className="size-3" />
@@ -325,7 +325,7 @@ function BooksPage() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-10 text-center text-sm text-white/60">
+          <div className="mt-10 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center text-sm text-[#6B6259]">
             {lang === "ar" ? "لا توجد نتائج مطابقة." : "No results match your filters."}
           </div>
         )}

@@ -5,6 +5,7 @@ import { Sparkles } from "lucide-react";
 import { SubPageShell } from "@/components/SubPageShell";
 import { RequestService } from "@/routes/request-service";
 import type { Lang } from "@/lib/i18n";
+import { useMotionSafe } from "@/lib/motion";
 import {
   SERVICE_CATEGORIES,
   SERVICES_CATALOG,
@@ -45,31 +46,26 @@ function ServiceCard({
   lang,
   active,
   onRequest,
+  variants,
 }: {
   s: ServiceEntry;
   lang: Lang;
   active: boolean;
   onRequest: () => void;
+  variants?: import("motion/react").Variants;
 }) {
   const Icon = s.icon;
   return (
-    <div
+    <motion.div
+      variants={variants}
       className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border p-5 transition-all ${
         active
-          ? "border-[#d7aa52] bg-gradient-to-br from-[#d7aa52]/15 to-transparent shadow-[0_18px_50px_-20px_rgba(215,170,82,0.6)]"
-          : "border-white/10 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/95 hover:border-[#d7aa52]/60"
+          ? "border-[#A88765] bg-[#A88765]/[0.08] shadow-[0_18px_50px_-24px_rgba(168,135,101,0.4)]"
+          : "border-[#A88765]/15 bg-[#1C1B19] hover:border-[#A88765]/50"
       }`}
     >
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -top-12 -end-12 h-32 w-32 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-50"
-        style={{ background: s.accent }}
-      />
       <div className="mb-3 flex items-center justify-between">
-        <span
-          className="inline-flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] transition-transform duration-500 group-hover:scale-110"
-          style={{ color: s.accent }}
-        >
+        <span className="inline-flex size-11 items-center justify-center rounded-xl border border-[#A88765]/20 bg-white/[0.04] text-[#A88765] transition-transform duration-500 group-hover:scale-110">
           <Icon className="size-5" />
         </span>
         {s.badgeAr && (
@@ -78,7 +74,10 @@ function ServiceCard({
           </span>
         )}
       </div>
-      <h3 className="text-sm font-extrabold leading-tight" style={{ color: "var(--fg)" }}>
+      <h3
+        className="font-display text-sm font-extrabold leading-tight"
+        style={{ color: "var(--fg)" }}
+      >
         {lang === "ar" ? s.titleAr : s.titleEn}
       </h3>
       <p className="mt-1.5 flex-1 text-xs leading-relaxed text-white/55">
@@ -91,18 +90,19 @@ function ServiceCard({
           onRequest();
         }}
         onMouseEnter={playHover}
-        className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-xs font-bold text-[#04101f] transition-transform hover:scale-[1.03]"
+        className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-xs font-bold text-[#1C1B19] transition-transform hover:scale-[1.03]"
       >
         {lang === "ar" ? "اطلب الخدمة" : "Request service"}
         <span aria-hidden>{lang === "ar" ? "←" : "→"}</span>
       </button>
-    </div>
+    </motion.div>
   );
 }
 
 function ServicesPage({ lang, initialService }: { lang: Lang; initialService?: string }) {
   const [category, setCategory] = useState<ServiceCategoryId | "all">("all");
   const [selected, setSelected] = useState<string | undefined>(initialService);
+  const m = useMotionSafe();
 
   const filtered =
     category === "all" ? SERVICES_CATALOG : SERVICES_CATALOG.filter((s) => s.category === category);
@@ -127,11 +127,14 @@ function ServicesPage({ lang, initialService }: { lang: Lang; initialService?: s
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c9a986]">
             <Sparkles className="size-3" />
             {lang === "ar" ? "خدماتي الاحترافية" : "Professional Services"}
           </span>
-          <h1 className="mt-3 text-3xl font-black md:text-4xl" style={{ color: "var(--fg)" }}>
+          <h1
+            className="font-display mt-3 text-3xl font-extrabold md:text-4xl"
+            style={{ color: "var(--fg)" }}
+          >
             {lang === "ar" ? "الخدمات المحاسبية والمالية" : "Accounting & Finance Services"}
           </h1>
           <p className="mx-auto mt-2 max-w-2xl text-sm" style={{ color: "var(--fg-soft)" }}>
@@ -156,8 +159,8 @@ function ServicesPage({ lang, initialService }: { lang: Lang; initialService?: s
                 onMouseEnter={playHover}
                 className={`rounded-full border px-4 py-2 text-xs font-bold transition-all ${
                   isActive
-                    ? "border-[#d7aa52] bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
-                    : "border-white/10 bg-white/[0.03] text-[#f3d28a] hover:border-[#d7aa52]/40"
+                    ? "border-[#A88765] bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
+                    : "border-[#A88765]/20 bg-white/[0.03] text-[#c9a986] hover:border-[#A88765]/50"
                 }`}
               >
                 {lang === "ar" ? c.ar : c.en}
@@ -168,7 +171,13 @@ function ServicesPage({ lang, initialService }: { lang: Lang; initialService?: s
 
         {/* Cards + request form */}
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_minmax(360px,440px)]">
-          <div className="grid content-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <motion.div
+            key={category}
+            initial="hidden"
+            animate="visible"
+            variants={m.staggerParent}
+            className="grid content-start gap-4 sm:grid-cols-2 xl:grid-cols-3"
+          >
             {filtered.map((s) => (
               <ServiceCard
                 key={s.id}
@@ -176,9 +185,10 @@ function ServicesPage({ lang, initialService }: { lang: Lang; initialService?: s
                 lang={lang}
                 active={selected === s.id}
                 onRequest={() => requestService(s.id)}
+                variants={m.staggerChild}
               />
             ))}
-          </div>
+          </motion.div>
 
           <div id="service-form" className="lg:sticky lg:top-24 lg:self-start">
             <RequestService lang={lang} serviceFromUrl={selected} embedded />

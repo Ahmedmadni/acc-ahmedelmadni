@@ -20,6 +20,7 @@ import {
   Wallet,
   Wrench,
 } from "lucide-react";
+import type { FormGroupId } from "./request-form-schema";
 
 /**
  * Single source of truth for the professional accounting services.
@@ -51,6 +52,8 @@ export type ServiceEntry = {
   isVat?: boolean;
   badgeAr?: string;
   badgeEn?: string;
+  /** Which dynamic question set the request form shows for this service. */
+  formGroup: FormGroupId;
 };
 
 export const SERVICE_CATEGORIES: { id: ServiceCategoryId | "all"; ar: string; en: string }[] = [
@@ -65,6 +68,7 @@ export const SERVICE_CATEGORIES: { id: ServiceCategoryId | "all"; ar: string; en
 export const SERVICES_CATALOG: ServiceEntry[] = [
   {
     id: "financial-reports",
+    formGroup: "statements",
     icon: FileText,
     titleAr: "التقارير المالية",
     titleEn: "Financial Reports",
@@ -75,6 +79,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "cost-accounting",
+    formGroup: "analysis",
     icon: Calculator,
     titleAr: "محاسبة التكاليف",
     titleEn: "Cost Accounting",
@@ -85,6 +90,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "financial-claims",
+    formGroup: "claims",
     icon: Briefcase,
     titleAr: "المطالبات المالية",
     titleEn: "Financial Claims",
@@ -95,6 +101,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "bank-reconciliation",
+    formGroup: "bookkeeping",
     icon: Wallet,
     titleAr: "التسويات البنكية",
     titleEn: "Bank Reconciliation",
@@ -105,6 +112,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "vat-filing",
+    formGroup: "vat",
     icon: PieChart,
     titleAr: "الإقرار الضريبي (VAT)",
     titleEn: "VAT Filing",
@@ -118,6 +126,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "zakat-declaration",
+    formGroup: "zakat",
     icon: Target,
     titleAr: "الإقرار الزكوي",
     titleEn: "Zakat Declaration",
@@ -128,6 +137,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "financial-consulting",
+    formGroup: "consulting",
     icon: Lightbulb,
     titleAr: "استشارات مالية",
     titleEn: "Financial Consulting",
@@ -138,6 +148,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "power-bi",
+    formGroup: "analysis",
     icon: BarChart3,
     titleAr: "لوحات Power BI",
     titleEn: "Power BI Dashboards",
@@ -148,6 +159,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "financial-analysis",
+    formGroup: "analysis",
     icon: LineChart,
     titleAr: "التحليل المالي",
     titleEn: "Financial Analysis",
@@ -158,6 +170,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "budgeting",
+    formGroup: "analysis",
     icon: TrendingUp,
     titleAr: "الميزانيات التقديرية",
     titleEn: "Budgeting & Forecast",
@@ -168,6 +181,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "internal-controls",
+    formGroup: "bookkeeping",
     icon: ShieldCheck,
     titleAr: "الرقابة الداخلية",
     titleEn: "Internal Controls",
@@ -178,6 +192,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "ifrs-statements",
+    formGroup: "statements",
     icon: FileText,
     titleAr: "القوائم المالية IFRS",
     titleEn: "IFRS Statements",
@@ -188,6 +203,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "customer-reconciliation",
+    formGroup: "bookkeeping",
     icon: Users,
     titleAr: "تسويات العملاء",
     titleEn: "Customer Reconciliation",
@@ -198,6 +214,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "documentary-cycle",
+    formGroup: "bookkeeping",
     icon: Wrench,
     titleAr: "الدورة المستندية",
     titleEn: "Documentary Cycle",
@@ -208,6 +225,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "ifrs-adoption",
+    formGroup: "statements",
     icon: Star,
     titleAr: "تطبيق IFRS",
     titleEn: "IFRS Adoption",
@@ -218,6 +236,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "chart-of-accounts",
+    formGroup: "bookkeeping",
     icon: BookOpen,
     titleAr: "دليل الحسابات",
     titleEn: "Chart of Accounts",
@@ -228,6 +247,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "payroll",
+    formGroup: "payroll",
     icon: Calculator,
     titleAr: "الرواتب والأجور",
     titleEn: "Payroll",
@@ -238,6 +258,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "inventory-assets",
+    formGroup: "bookkeeping",
     icon: Car,
     titleAr: "المخزون والأصول",
     titleEn: "Inventory & Assets",
@@ -248,6 +269,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "cash-flow",
+    formGroup: "statements",
     icon: LineChart,
     titleAr: "التدفقات النقدية",
     titleEn: "Cash Flow",
@@ -258,6 +280,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "e-invoicing",
+    formGroup: "vat",
     icon: Sparkles,
     titleAr: "الفاتورة الإلكترونية",
     titleEn: "E-Invoicing",
@@ -268,6 +291,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "excel-automation",
+    formGroup: "consulting",
     icon: MessagesSquare,
     titleAr: "أتمتة Excel",
     titleEn: "Excel Automation",
@@ -278,6 +302,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "accounting-training",
+    formGroup: "consulting",
     icon: GraduationCap,
     titleAr: "التدريب المحاسبي",
     titleEn: "Accounting Training",
@@ -288,6 +313,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "website-design",
+    formGroup: "website",
     icon: Wrench,
     titleAr: "تصميم المواقع",
     titleEn: "Website Design",
@@ -298,6 +324,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "accounting-software-advisory",
+    formGroup: "consulting",
     icon: Lightbulb,
     titleAr: "ترشيح البرامج المحاسبية",
     titleEn: "Accounting Software Advisory",
@@ -310,6 +337,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   },
   {
     id: "internal-audit",
+    formGroup: "consulting",
     icon: ShieldCheck,
     titleAr: "المراجعة الداخلية",
     titleEn: "Internal Audit",
@@ -319,7 +347,6 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
     category: "operations",
   },
 ];
-
 
 export function getServiceById(id: string | undefined | null): ServiceEntry | undefined {
   if (!id) return undefined;

@@ -148,7 +148,7 @@ export function Marquee({
   };
 
   const arrowBtn =
-    "absolute top-1/2 z-20 -translate-y-1/2 inline-flex size-10 items-center justify-center rounded-full border border-[#d7aa52]/40 bg-[#04101f]/80 text-[#f3d28a] shadow-lg backdrop-blur transition-colors hover:bg-[#d7aa52]/20";
+    "absolute top-1/2 z-20 -translate-y-1/2 inline-flex size-10 items-center justify-center rounded-full border border-[#A88765]/40 bg-[#1C1B19]/80 text-[#c9a986] shadow-lg backdrop-blur transition-colors hover:bg-[#A88765]/20";
 
   return (
     <div

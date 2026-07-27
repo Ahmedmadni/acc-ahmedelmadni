@@ -103,7 +103,7 @@ function TextListField({
           )
         }
         placeholder="سطر لكل عنصر"
-        className="bg-[#04101f] border-[#d7aa52]/20"
+        className="bg-[#24211E] border-[#A88765]/25"
       />
     </Field>
   );
@@ -163,7 +163,7 @@ function FileUploadField({
             const f = e.target.files?.[0];
             if (f) onFile(f);
           }}
-          className="block w-full text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#f3d28a] file:to-[#b8862e] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#04101f]"
+          className="block w-full text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#c2a079] file:to-[#7c6045] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#1C1B19]"
         />
         {busy && <p className="text-xs text-white/60">جارٍ الرفع...</p>}
         <p className="text-[11px] text-white/40">
@@ -247,18 +247,18 @@ function AdminTemplatesPage() {
   });
 
   return (
-    <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
-      <div className="w-full border-b border-[#d7aa52]/20 px-4 py-4 sm:px-8 lg:px-16">
+    <div dir="rtl" className="min-h-screen bg-[#151412] text-[#FCFBF9]">
+      <div className="w-full border-b border-[#A88765]/20 px-4 py-4 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <FileSpreadsheet className="size-5 text-[#f3d28a]" />
-            <h1 className="text-base font-extrabold text-[#f3d28a]">
+            <FileSpreadsheet className="size-5 text-[#c9a986]" />
+            <h1 className="font-display text-base font-extrabold text-[#c9a986]">
               إدارة النماذج المحاسبية الجاهزة
             </h1>
           </div>
           <Link
             to="/library/templates"
-            className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
+            className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15"
           >
             عرض الصفحة
           </Link>
@@ -272,16 +272,16 @@ function AdminTemplatesPage() {
           </div>
           <Button
             onClick={openCreate}
-            className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90"
+            className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] hover:opacity-90"
           >
             <Plus className="size-4" />
             إضافة نموذج
           </Button>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
+        <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
           <table className="w-full text-sm">
-            <thead className="bg-white/[0.04] text-right text-white/60">
+            <thead className="bg-[#F5F1EB] text-right text-[#6B6259]">
               <tr>
                 <th className="p-3">العنوان</th>
                 <th className="p-3">التصنيف</th>
@@ -294,38 +294,38 @@ function AdminTemplatesPage() {
             <tbody>
               {isLoading && (
                 <tr>
-                  <td colSpan={6} className="p-6 text-center text-white/40">
+                  <td colSpan={6} className="p-6 text-center text-[#8a8078]">
                     جارٍ التحميل...
                   </td>
                 </tr>
               )}
               {isError && (
                 <tr>
-                  <td colSpan={6} className="p-6 text-center text-red-300">
+                  <td colSpan={6} className="p-6 text-center text-red-600">
                     تعذّر تحميل النماذج. حاول تحديث الصفحة.
                   </td>
                 </tr>
               )}
               {!isLoading && !isError && items.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="p-6 text-center text-white/40">
+                  <td colSpan={6} className="p-6 text-center text-[#8a8078]">
                     لا توجد نماذج بعد. اضغط "إضافة" لبدء الإضافة.
                   </td>
                 </tr>
               )}
               {items.map((it) => (
-                <tr key={it.id} className="border-t border-white/5">
+                <tr key={it.id} className="border-t border-[#A88765]/10">
                   <td className="p-3">
-                    <div className="font-bold text-white">{it.title_ar}</div>
-                    {it.title_en && <div className="text-xs text-white/40">{it.title_en}</div>}
+                    <div className="font-bold text-[#1C1B19]">{it.title_ar}</div>
+                    {it.title_en && <div className="text-xs text-[#8a8078]">{it.title_en}</div>}
                   </td>
-                  <td className="p-3 text-xs">{CATEGORY_LABEL[it.category]}</td>
-                  <td className="p-3 text-xs text-white/60">{it.format}</td>
+                  <td className="p-3 text-xs text-[#2e2a25]">{CATEGORY_LABEL[it.category]}</td>
+                  <td className="p-3 text-xs text-[#6B6259]">{it.format}</td>
                   <td className="p-3 text-xs">
                     {it.file_url ? (
-                      <span className="text-emerald-300">مرفوع</span>
+                      <span className="text-emerald-700">مرفوع</span>
                     ) : (
-                      <span className="text-white/40">واتساب</span>
+                      <span className="text-[#8a8078]">واتساب</span>
                     )}
                   </td>
                   <td className="p-3">
@@ -342,7 +342,7 @@ function AdminTemplatesPage() {
                         aria-label={`تعديل ${it.title_ar}`}
                         onClick={() => openEdit(it)}
                       >
-                        <Pencil className="size-4 text-[#f3d28a]" />
+                        <Pencil className="size-4 text-[#7c6045]" />
                       </Button>
                       <Button
                         variant="ghost"
@@ -352,7 +352,7 @@ function AdminTemplatesPage() {
                           if (confirm(`حذف "${it.title_ar}"؟`)) delMut.mutate(it.id);
                         }}
                       >
-                        <Trash2 className="size-4 text-red-400" />
+                        <Trash2 className="size-4 text-red-600" />
                       </Button>
                     </div>
                   </td>
@@ -365,11 +365,11 @@ function AdminTemplatesPage() {
 
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent
-          className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl"
+          className="max-h-[90vh] overflow-y-auto bg-[#1C1B19] text-[#FCFBF9] sm:max-w-2xl"
           dir="rtl"
         >
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">
+            <DialogTitle className="text-[#c9a986]">
               {editing?.id ? "تعديل نموذج" : "إضافة نموذج"}
             </DialogTitle>
           </DialogHeader>
@@ -380,14 +380,14 @@ function AdminTemplatesPage() {
                   <Input
                     value={editing.title_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, title_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="العنوان (إنجليزي) *">
                   <Input
                     value={editing.title_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, title_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -398,7 +398,7 @@ function AdminTemplatesPage() {
                     rows={2}
                     value={editing.description_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, description_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الوصف (إنجليزي) *">
@@ -406,7 +406,7 @@ function AdminTemplatesPage() {
                     rows={2}
                     value={editing.description_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, description_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -417,7 +417,7 @@ function AdminTemplatesPage() {
                     rows={4}
                     value={editing.how_to_use_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, how_to_use_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="طريقة الاستخدام (إنجليزي)">
@@ -425,7 +425,7 @@ function AdminTemplatesPage() {
                     rows={4}
                     value={editing.how_to_use_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, how_to_use_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -438,7 +438,7 @@ function AdminTemplatesPage() {
                       setEditing({ ...editing, category: v as AccountingTemplateRow["category"] })
                     }
                   >
-                    <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+                    <SelectTrigger className="bg-[#24211E] border-[#A88765]/25">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -457,7 +457,7 @@ function AdminTemplatesPage() {
                       setEditing({ ...editing, format: v as AccountingTemplateRow["format"] })
                     }
                   >
-                    <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+                    <SelectTrigger className="bg-[#24211E] border-[#A88765]/25">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -478,14 +478,14 @@ function AdminTemplatesPage() {
                     min={1}
                     value={editing.pages ?? 1}
                     onChange={(e) => setEditing({ ...editing, pages: Number(e.target.value) })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="المعيار المرتبط (اختياري، مثال: ZATCA VAT)">
                   <Input
                     value={editing.related_standard ?? ""}
                     onChange={(e) => setEditing({ ...editing, related_standard: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -536,7 +536,7 @@ function AdminTemplatesPage() {
                 !editing?.description_ar ||
                 !editing?.description_en
               }
-              className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
             >
               {saveMut.isPending ? "جارٍ الحفظ..." : "حفظ"}
             </Button>
