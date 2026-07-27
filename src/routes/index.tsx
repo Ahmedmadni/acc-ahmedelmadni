@@ -1285,34 +1285,46 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
 }
 
 /* ============= TESTIMONIALS ============= */
+
 function Testimonials({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
   const m = useMotionSafe();
   const items = t.testimonials.items;
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
 
-  const active = items[activeIndex];
+  const activeItem = items[activeIndex];
 
-  const next = () => {
-    setActiveIndex((current) => (current + 1) % items.length);
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setDirection(1);
+
+      setActiveIndex((current) => (current + 1) % items.length);
+    }, 5000);
+
+    return () => window.clearInterval(interval);
+  }, [items.length]);
+
+  const changeTestimonial = (index: number) => {
+    setDirection(index > activeIndex ? 1 : -1);
+    setActiveIndex(index);
   };
 
-  const previous = () => {
-    setActiveIndex((current) => (current - 1 + items.length) % items.length);
-  };
-
-  const initial = active.name[lang].replace(/^[.\s]+/, "").charAt(0);
+  const initial = activeItem.name[lang].replace(/^[.\s]+/, "").charAt(0);
 
   return (
-    <section className="relative overflow-hidden bg-[#F5F2ED] py-24 sm:py-28 lg:py-36" dir={ar ? "rtl" : "ltr"}>
-      {/* Decorative background quote */}
+    <section className="relative overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28">
+      {/* Decorative background */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-20 end-[-2rem] select-none font-serif text-[22rem] leading-none text-[#4A3023]/[0.035] sm:text-[30rem]"
-      >
-        “
-      </div>
+        className="pointer-events-none absolute -start-40 top-1/2 size-[30rem] -translate-y-1/2 rounded-full bg-[#A88765]/[0.06] blur-3xl"
+      />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -end-40 bottom-0 size-[25rem] rounded-full bg-[#4A3023]/[0.04] blur-3xl"
+      />
 
       <div className="relative mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         {/* Header */}
@@ -1342,136 +1354,107 @@ function Testimonials({ lang }: { lang: Lang }) {
           </motion.p>
         </motion.div>
 
-        {/* Main testimonial experience */}
-        <div className="mt-16 grid gap-12 lg:grid-cols-[0.75fr_1.5fr] lg:items-center lg:gap-20">
-          {/* Clients navigation */}
-          <motion.div
-            initial={{ opacity: 0, x: ar ? 30 : -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.7, ease: EASE.out }}
-            className="relative"
-          >
-            <div className="mb-5 flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#A88765]">
-                {ar ? "من عملت معهم" : "People I've worked with"}
-              </span>
+        {/* Main testimonial */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{
+            duration: m.reduce ? 0.3 : 0.8,
+            ease: EASE.out,
+          }}
+          className="mt-12"
+        >
+          <div className="relative mx-auto max-w-4xl">
+            {/* Decorative quote mark */}
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -start-3 -top-10 font-serif text-[7rem] leading-none text-[#A88765]/[0.12] sm:-start-8 sm:-top-14 sm:text-[10rem]"
+            >
+              “
+            </span>
 
-              <span className="font-mono text-[12px] text-[#8A8078]">
-                {String(activeIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
-              </span>
-            </div>
+            {/* Testimonial content */}
+            <div className="relative min-h-[22rem] overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] px-6 py-8 shadow-[0_25px_70px_-40px_rgba(74,48,35,0.45)] sm:min-h-[24rem] sm:px-10 sm:py-10 lg:px-14 lg:py-12">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={`${activeIndex}-${lang}`}
+                  initial={
+                    m.reduce
+                      ? { opacity: 0 }
+                      : {
+                          opacity: 0,
+                          x: direction > 0 ? 30 : -30,
+                        }
+                  }
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                  }}
+                  exit={
+                    m.reduce
+                      ? { opacity: 0 }
+                      : {
+                          opacity: 0,
+                          x: direction > 0 ? -30 : 30,
+                        }
+                  }
+                  transition={{
+                    duration: m.reduce ? 0.2 : 0.5,
+                    ease: EASE.out,
+                  }}
+                  className="flex h-full flex-col justify-between"
+                >
+                  {/* Quote */}
+                  <blockquote className="max-w-3xl">
+                    <p className="font-display text-[1.25rem] font-medium leading-[1.8] tracking-tight text-[#3A352F] sm:text-[1.55rem] sm:leading-[1.8] lg:text-[1.7rem]">
+                      “{activeItem.quote[lang]}”
+                    </p>
+                  </blockquote>
 
-            <div className="border-s border-[#D8CEC2]">
-              {items.map((it, index) => {
-                const isActive = index === activeIndex;
+                  {/* Author */}
+                  <div className="mt-10 flex items-center justify-between gap-5 border-t border-[#E3DDD5] pt-6">
+                    <div className="flex min-w-0 items-center gap-4">
+                      <span className="font-display flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-base font-bold text-[#E9D9C3]">
+                        {initial}
+                      </span>
 
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => setActiveIndex(index)}
-                    className={`group relative block w-full py-4 text-start transition-all duration-300 ${
-                      isActive ? "ps-6" : "ps-5 opacity-45 hover:opacity-80"
-                    }`}
-                  >
-                    {/* Active indicator */}
-                    <span
-                      className={`absolute -start-[1px] top-0 h-full w-[2px] origin-center bg-[#A88765] transition-transform duration-500 ${
-                        isActive ? "scale-y-100" : "scale-y-0"
-                      }`}
-                    />
+                      <div className="min-w-0">
+                        <p className="truncate text-[14px] font-bold text-[#1C1B19] sm:text-[15px]">
+                          {activeItem.name[lang]}
+                        </p>
 
-                    <span
-                      className={`block text-[14px] font-semibold transition-colors duration-300 ${
-                        isActive ? "text-[#1C1B19]" : "text-[#746E67] group-hover:text-[#1C1B19]"
-                      }`}
-                    >
-                      {it.name[lang]}
+                        <p className="mt-1 truncate text-[12px] text-[#A88765] sm:text-[13px]">
+                          {activeItem.role[lang]}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Counter */}
+                    <span className="hidden shrink-0 font-mono text-[12px] text-[#8A8078] sm:block">
+                      {String(activeIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
                     </span>
-
-                    <span className="mt-1 block text-[11px] text-[#A88765]">{it.role[lang]}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </motion.div>
-
-          {/* Featured testimonial */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.8, ease: EASE.out }}
-            className="relative min-h-[26rem] overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-7 shadow-[0_30px_80px_-45px_rgba(74,48,35,0.45)] sm:min-h-[30rem] sm:p-12"
-          >
-            {/* Top line */}
-            <div className="flex items-start justify-between gap-6">
-              <Quote className="size-10 text-[#A88765]/40" />
-
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={previous}
-                  aria-label={ar ? "الرأي السابق" : "Previous testimonial"}
-                  className="flex size-10 items-center justify-center rounded-full border border-[#E3DDD5] text-[#746E67] transition-all duration-300 hover:border-[#A88765] hover:bg-[#A88765] hover:text-white"
-                >
-                  {ar ? "→" : "←"}
-                </button>
-
-                <button
-                  type="button"
-                  onClick={next}
-                  aria-label={ar ? "الرأي التالي" : "Next testimonial"}
-                  className="flex size-10 items-center justify-center rounded-full border border-[#E3DDD5] text-[#746E67] transition-all duration-300 hover:border-[#A88765] hover:bg-[#A88765] hover:text-white"
-                >
-                  {ar ? "←" : "→"}
-                </button>
-              </div>
-            </div>
-
-            {/* Quote */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeIndex}
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -18 }}
-                transition={{ duration: 0.45, ease: EASE.out }}
-                className="mt-12"
-              >
-                <blockquote className="font-display max-w-3xl text-[1.8rem] font-semibold leading-[1.55] tracking-tight text-[#1C1B19] sm:text-[2.5rem] lg:text-[3rem]">
-                  “{active.quote[lang]}”
-                </blockquote>
-
-                <div className="mt-12 flex items-center gap-4 border-t border-[#E3DDD5] pt-6">
-                  <span className="font-display flex size-14 shrink-0 items-center justify-center rounded-full bg-[#4A3023] text-lg font-bold text-[#E9D9C3]">
-                    {initial}
-                  </span>
-
-                  <div>
-                    <p className="text-[15px] font-semibold text-[#1C1B19]">{active.name[lang]}</p>
-
-                    <p className="mt-1 text-[12px] text-[#A88765]">{active.role[lang]}</p>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Bottom progress */}
-            <div className="absolute bottom-0 inset-x-0 h-[3px] bg-[#E3DDD5]">
-              <motion.div
-                key={activeIndex}
-                initial={{ width: "0%" }}
-                animate={{
-                  width: `${((activeIndex + 1) / items.length) * 100}%`,
-                }}
-                transition={{ duration: 0.5, ease: EASE.out }}
-                className="h-full bg-[#A88765]"
-              />
+                </motion.div>
+              </AnimatePresence>
             </div>
-          </motion.div>
-        </div>
+
+            {/* Navigation */}
+            <div className="mt-6 flex items-center justify-center gap-2">
+              {items.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => changeTestimonial(index)}
+                  aria-label={ar ? `عرض رأي العميل ${index + 1}` : `Show testimonial ${index + 1}`}
+                  className={`h-1.5 rounded-full transition-all duration-500 ${
+                    index === activeIndex ? "w-8 bg-[#4A3023]" : "w-1.5 bg-[#A88765]/30 hover:bg-[#A88765]/70"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
