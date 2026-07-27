@@ -16,21 +16,27 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
 
   const cardCount = SOFTWARE_ECOSYSTEM.length;
 
-  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, Math.max(cardCount - 1, 0)]);
+  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, cardCount - 1]);
+
+  const [activeCard, setActiveCard] = useState(0);
+
+  useMotionValueEvent(activeIndex, "change", (value) => {
+    const nextIndex = Math.max(0, Math.min(cardCount - 1, Math.round(value)));
+
+    setActiveCard(nextIndex);
+  });
 
   return (
     <section ref={sectionRef} id="software" className="relative z-10 bg-[#F5F2ED]">
-      {/* Transition from the dark section above */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
       />
 
-      {/* Scroll storytelling space */}
-      <div className="relative mx-auto min-h-[500vh] w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+      <div className="relative mx-auto min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12">
         <div className="sticky top-0 flex min-h-screen items-center py-16 sm:py-20 lg:py-24">
-          <div className="grid w-full items-center gap-8 lg:grid-cols-12 lg:gap-12">
-            {/* LEFT: STACKED SOFTWARE CARDS */}
+          <div className="grid w-full items-center gap-10 lg:grid-cols-12 lg:gap-16">
+            {/* LEFT — STACKED SOFTWARE CARDS */}
             <div className="relative order-2 h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
               {SOFTWARE_ECOSYSTEM.map((software, index) => (
                 <StackedSoftwareCard
@@ -45,19 +51,20 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
               ))}
             </div>
 
-            {/* RIGHT: FIXED FEATURE CARD */}
-            <motion.div
-              initial={m.reduce ? { opacity: 0 } : { opacity: 0, x: 40 }}
-              whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{
-                duration: m.reduce ? 0.3 : 0.8,
-                ease: EASE.out,
-              }}
-              className="relative order-1 lg:order-2 lg:col-span-5"
-            >
-              <FeatureCard ar={ar} activeIndex={activeIndex} reduce={m.reduce} />
-            </motion.div>
+            {/* RIGHT — FIXED BROWN CARD */}
+            <div className="relative order-1 lg:order-2 lg:col-span-5">
+              <motion.div
+                initial={m.reduce ? { opacity: 0 } : { opacity: 0, x: 40 }}
+                whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: m.reduce ? 0.3 : 0.8,
+                  ease: EASE.out,
+                }}
+              >
+                <FeatureCard ar={ar} activeIndex={activeIndex} activeCard={activeCard} reduce={m.reduce} />
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -80,39 +87,40 @@ function StackedSoftwareCard({
   reduce: boolean;
   ar: boolean;
 }) {
-  /*
-   * All cards occupy the same physical space.
-   * Scroll controls their position, scale, opacity, and depth.
-   */
-
   const position = useTransform(scrollProgress, (progress) => progress - index);
 
   const y = useTransform(position, (value) => {
     if (value > 0) {
-      return Math.max(-value * 70, -150);
+      return -Math.min(value * 95, 190);
     }
 
-    return Math.min(Math.abs(value) * 18, 72);
+    return Math.min(Math.abs(value) * 26, 105);
   });
 
   const scale = useTransform(position, (value) => {
     if (value > 0) {
-      return Math.max(1 - value * 0.025, 0.94);
+      return Math.max(1 - value * 0.035, 0.93);
     }
 
-    return Math.max(1 - Math.abs(value) * 0.045, 0.82);
+    return Math.max(1 - Math.abs(value) * 0.055, 0.78);
   });
 
   const opacity = useTransform(position, (value) => {
-    if (value > 1.2 || value < -3) {
-      return 0;
-    }
+    if (value > 1.5 || value < -4) return 0;
 
     if (value >= 0) {
-      return Math.max(1 - value * 0.35, 0.7);
+      return Math.max(1 - value * 0.3, 0.7);
     }
 
-    return Math.max(1 - Math.abs(value) * 0.22, 0.5);
+    return Math.max(1 - Math.abs(value) * 0.18, 0.45);
+  });
+
+  const rotate = useTransform(position, (value) => {
+    if (value > 0) {
+      return Math.min(value * -1.5, -4);
+    }
+
+    return Math.min(Math.abs(value) * 0.6, 2);
   });
 
   const zIndex = useTransform(position, (value) => {
@@ -121,10 +129,10 @@ function StackedSoftwareCard({
     }
 
     if (value < 0) {
-      return Math.max(10, 80 + Math.round(value * 10));
+      return Math.max(10, 85 + Math.round(value * 10));
     }
 
-    return Math.max(1, 80 - Math.round(value * 10));
+    return Math.max(1, 85 - Math.round(value * 10));
   });
 
   const category = ar ? SOFTWARE_CATEGORY_LABELS[software.category].ar : SOFTWARE_CATEGORY_LABELS[software.category].en;
@@ -137,15 +145,16 @@ function StackedSoftwareCard({
         y: reduce ? undefined : y,
         scale: reduce ? undefined : scale,
         opacity: reduce ? undefined : opacity,
+        rotate: reduce ? undefined : rotate,
         zIndex: reduce ? total - index : zIndex,
       }}
       className="absolute inset-0 flex items-center justify-center"
     >
-      <div className="group relative flex h-full w-full max-w-[42rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-7 shadow-[0_30px_80px_-40px_rgba(74,48,35,0.5)] sm:p-10">
-        {/* Decorative index */}
+      <div className="group relative flex h-[25rem] w-[90%] max-w-[40rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-6 shadow-[0_30px_80px_-40px_rgba(74,48,35,0.55)] transition-shadow duration-500 hover:shadow-[0_40px_100px_-40px_rgba(74,48,35,0.7)] sm:h-[30rem] sm:w-[86%] sm:p-9 lg:h-[34rem]">
+        {/* Background index */}
         <span
           aria-hidden
-          className="pointer-events-none absolute -bottom-8 -end-2 font-display text-[10rem] font-bold leading-none text-[#4A3023]/[0.045] sm:text-[14rem]"
+          className="pointer-events-none absolute -bottom-8 -end-2 font-display text-[9rem] font-bold leading-none text-[#4A3023]/[0.045] sm:text-[13rem]"
         >
           {String(index + 1).padStart(2, "0")}
         </span>
@@ -161,28 +170,29 @@ function StackedSoftwareCard({
             </span>
           </div>
 
-          <div className="mt-12 flex items-center gap-5">
-            <div className="flex size-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-3 shadow-sm sm:size-24">
+          <div className="mt-10 flex items-center gap-5">
+            {/* BIGGER LOGO */}
+            <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-4 shadow-sm sm:size-28">
               {software.logo ? (
                 <img src={software.logo} alt="" className="size-full object-contain" loading="lazy" />
               ) : (
-                <span className="font-display text-2xl font-bold text-[#4A3023]">{software.mark}</span>
+                <span className="font-display text-3xl font-bold text-[#4A3023]">{software.mark}</span>
               )}
             </div>
 
-            <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#A88765]">
+            <div className="min-w-0">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A88765]">
                 {ar ? "نظام / برنامج" : "System / Software"}
               </p>
 
-              <h3 className="font-display mt-2 text-3xl font-bold tracking-tight text-[#1C1B19] sm:text-5xl">
+              <h3 className="font-display mt-2 truncate text-3xl font-bold tracking-tight text-[#1C1B19] sm:text-4xl">
                 {label}
               </h3>
             </div>
           </div>
         </div>
 
-        <div className="relative z-10 mt-10 flex items-end justify-between gap-5">
+        <div className="relative z-10 mt-8 flex items-end justify-between gap-5">
           <p className="max-w-sm text-[14px] leading-8 text-[#746E67]">
             {ar
               ? "أستخدم هذا النظام ضمن بيئة العمل المحاسبية والتشغيلية حسب طبيعة النشاط واحتياجات المنشأة."
@@ -191,7 +201,7 @@ function StackedSoftwareCard({
 
           <span
             aria-hidden
-            className="hidden size-12 shrink-0 items-center justify-center rounded-full border border-[#A88765]/40 text-[#7C6045] transition-transform duration-300 group-hover:rotate-45 sm:flex"
+            className="hidden size-12 shrink-0 items-center justify-center rounded-full border border-[#A88765]/40 text-[#7C6045] transition-transform duration-500 group-hover:rotate-45 sm:flex"
           >
             ↗
           </span>
@@ -204,21 +214,15 @@ function StackedSoftwareCard({
 function FeatureCard({
   ar,
   activeIndex,
+  activeCard,
   reduce,
 }: {
   ar: boolean;
   activeIndex: ReturnType<typeof useTransform>;
+  activeCard: number;
   reduce: boolean;
 }) {
-  const [activeSoftware, setActiveSoftware] = useState<SoftwareEntry>(SOFTWARE_ECOSYSTEM[0]);
-
-  useMotionValueEvent(activeIndex, "change", (value) => {
-    const index = Math.max(0, Math.min(SOFTWARE_ECOSYSTEM.length - 1, Math.round(value)));
-
-    const nextSoftware = SOFTWARE_ECOSYSTEM[index];
-
-    setActiveSoftware((current) => (current.id === nextSoftware.id ? current : nextSoftware));
-  });
+  const activeSoftware = SOFTWARE_ECOSYSTEM[activeCard];
 
   const activeName = ar && activeSoftware.nameAr ? activeSoftware.nameAr : activeSoftware.name;
 
@@ -226,17 +230,14 @@ function FeatureCard({
     ? SOFTWARE_CATEGORY_LABELS[activeSoftware.category].ar
     : SOFTWARE_CATEGORY_LABELS[activeSoftware.category].en;
 
-  const activeNumber = `${String(SOFTWARE_ECOSYSTEM.findIndex((item) => item.id === activeSoftware.id) + 1).padStart(
-    2,
-    "0",
-  )} / ${String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}`;
-
   return (
-    <div className="relative min-h-[30rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[38rem] sm:p-10">
-      {/* Background watermark */}
+    <motion.div
+      layout
+      className="relative mx-auto min-h-[25rem] w-full max-w-[31rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[30rem] sm:p-9 lg:min-h-[34rem]"
+    >
       <span
         aria-hidden
-        className="pointer-events-none absolute -bottom-12 -end-8 font-display text-[12rem] font-bold leading-none text-white/[0.05] sm:text-[16rem]"
+        className="pointer-events-none absolute -bottom-12 -end-8 font-display text-[10rem] font-bold leading-none text-white/[0.05] sm:text-[14rem]"
       >
         ERP
       </span>
@@ -247,24 +248,26 @@ function FeatureCard({
             {ar ? "الأنظمة والبرامج" : "Systems & Software"}
           </p>
 
-          <p className="mt-3 font-mono text-[12px] text-[#D8BD9C]/70">{activeNumber}</p>
+          <p className="mt-3 font-mono text-[12px] text-[#D8BD9C]/70">
+            {String(activeCard + 1).padStart(2, "0")} / {String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}
+          </p>
 
           <motion.div
             key={activeSoftware.id}
-            initial={reduce ? false : { opacity: 0, y: 15 }}
+            initial={reduce ? false : { opacity: 0, y: 18 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{
-              duration: reduce ? 0.2 : 0.45,
+              duration: reduce ? 0.2 : 0.5,
               ease: EASE.out,
             }}
-            className="mt-12"
+            className="mt-10"
           >
             <div className="flex items-center gap-4">
-              <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-3">
+              <div className="flex size-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-4">
                 {activeSoftware.logo ? (
                   <img src={activeSoftware.logo} alt="" className="size-full object-contain" />
                 ) : (
-                  <span className="font-display text-2xl font-bold text-[#E9D9C3]">{activeSoftware.mark}</span>
+                  <span className="font-display text-3xl font-bold text-[#E9D9C3]">{activeSoftware.mark}</span>
                 )}
               </div>
 
@@ -280,15 +283,15 @@ function FeatureCard({
         </div>
 
         <div>
-          <div className="mb-8 h-px bg-white/15" />
+          <div className="mb-7 h-px bg-white/15" />
 
-          <p className="max-w-md text-[15px] leading-8 text-[#E9D9C3]">
+          <p className="max-w-md text-[14px] leading-8 text-[#E9D9C3]">
             {ar
               ? "أعمل على مجموعة متنوعة من الأنظمة والبرامج المحاسبية وأنظمة ERP، مع القدرة على إدارة الدورة المحاسبية وإعداد التقارير والتحليلات المالية."
               : "I work across a range of accounting platforms and ERP systems, managing full accounting cycles alongside financial reporting and analysis."}
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-2.5">
+          <div className="mt-7 flex flex-wrap gap-2.5">
             <span className="rounded-full border border-[#A88765]/40 bg-white/[0.06] px-3.5 py-1.5 text-[12px] font-semibold text-[#E9D9C3]">
               {ar ? "دورة محاسبية كاملة" : "Full accounting cycle"}
             </span>
@@ -299,6 +302,6 @@ function FeatureCard({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
