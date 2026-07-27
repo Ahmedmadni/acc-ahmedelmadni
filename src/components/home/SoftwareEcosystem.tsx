@@ -1,5 +1,5 @@
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
+import { useRef, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
 import { SOFTWARE_CATEGORY_LABELS, SOFTWARE_ECOSYSTEM, type SoftwareEntry } from "@/lib/software-catalog";
@@ -16,24 +16,21 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
 
   const cardCount = SOFTWARE_ECOSYSTEM.length;
 
-  /*
-   * Each card owns an equal section of the scroll progress.
-   * The card stack is physically absolute/overlapping.
-   */
-  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, cardCount - 1]);
+  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, Math.max(cardCount - 1, 0)]);
 
   return (
     <section ref={sectionRef} id="software" className="relative z-10 bg-[#F5F2ED]">
+      {/* Transition from the dark section above */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
       />
 
-      {/* Extra height creates the scroll-driven storytelling space */}
+      {/* Scroll storytelling space */}
       <div className="relative mx-auto min-h-[500vh] w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         <div className="sticky top-0 flex min-h-screen items-center py-16 sm:py-20 lg:py-24">
           <div className="grid w-full items-center gap-8 lg:grid-cols-12 lg:gap-12">
-            {/* LEFT: OVERLAPPING SOFTWARE STACK */}
+            {/* LEFT: STACKED SOFTWARE CARDS */}
             <div className="relative order-2 h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
               {SOFTWARE_ECOSYSTEM.map((software, index) => (
                 <StackedSoftwareCard
@@ -84,13 +81,10 @@ function StackedSoftwareCard({
   ar: boolean;
 }) {
   /*
-   * The card has a fixed physical position.
-   * All cards are absolutely positioned in the same stack.
-   *
-   * The active card moves to the front.
-   * Previous cards move slightly upward/left.
-   * Future cards remain visibly behind the active card.
+   * All cards occupy the same physical space.
+   * Scroll controls their position, scale, opacity, and depth.
    */
+
   const position = useTransform(scrollProgress, (progress) => progress - index);
 
   const y = useTransform(position, (value) => {
@@ -110,7 +104,9 @@ function StackedSoftwareCard({
   });
 
   const opacity = useTransform(position, (value) => {
-    if (value > 1.2 || value < -3) return 0;
+    if (value > 1.2 || value < -3) {
+      return 0;
+    }
 
     if (value >= 0) {
       return Math.max(1 - value * 0.35, 0.7);
@@ -120,8 +116,13 @@ function StackedSoftwareCard({
   });
 
   const zIndex = useTransform(position, (value) => {
-    if (value >= -0.5 && value <= 0.5) return 100;
-    if (value < 0) return Math.max(10, 80 + Math.round(value * 10));
+    if (value >= -0.5 && value <= 0.5) {
+      return 100;
+    }
+
+    if (value < 0) {
+      return Math.max(10, 80 + Math.round(value * 10));
+    }
 
     return Math.max(1, 80 - Math.round(value * 10));
   });
@@ -141,7 +142,7 @@ function StackedSoftwareCard({
       className="absolute inset-0 flex items-center justify-center"
     >
       <div className="group relative flex h-full w-full max-w-[42rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-7 shadow-[0_30px_80px_-40px_rgba(74,48,35,0.5)] sm:p-10">
-        {/* Decorative large index */}
+        {/* Decorative index */}
         <span
           aria-hidden
           className="pointer-events-none absolute -bottom-8 -end-2 font-display text-[10rem] font-bold leading-none text-[#4A3023]/[0.045] sm:text-[14rem]"
@@ -209,31 +210,30 @@ function FeatureCard({
   activeIndex: ReturnType<typeof useTransform>;
   reduce: boolean;
 }) {
-  const activeSoftware = useTransform(
-    activeIndex,
-    (value) => SOFTWARE_ECOSYSTEM[Math.max(0, Math.min(SOFTWARE_ECOSYSTEM.length - 1, Math.round(value)))],
-  );
+  const [activeSoftware, setActiveSoftware] = useState<SoftwareEntry>(SOFTWARE_ECOSYSTEM[0]);
 
-  const activeName = useTransform(activeSoftware, (software) =>
-    ar && software.nameAr ? software.nameAr : software.name,
-  );
+  useMotionValueEvent(activeIndex, "change", (value) => {
+    const index = Math.max(0, Math.min(SOFTWARE_ECOSYSTEM.length - 1, Math.round(value)));
 
-  const activeCategory = useTransform(activeSoftware, (software) =>
-    ar ? SOFTWARE_CATEGORY_LABELS[software.category].ar : SOFTWARE_CATEGORY_LABELS[software.category].en,
-  );
+    const nextSoftware = SOFTWARE_ECOSYSTEM[index];
 
-  const activeLogo = useTransform(activeSoftware, (software) => software.logo ?? "");
-
-  const activeMark = useTransform(activeSoftware, (software) => software.mark);
-
-  const activeNumber = useTransform(activeSoftware, (software) => {
-    const index = SOFTWARE_ECOSYSTEM.findIndex((item) => item.id === software.id);
-
-    return `${String(index + 1).padStart(2, "0")} / ${String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}`;
+    setActiveSoftware((current) => (current.id === nextSoftware.id ? current : nextSoftware));
   });
+
+  const activeName = ar && activeSoftware.nameAr ? activeSoftware.nameAr : activeSoftware.name;
+
+  const activeCategory = ar
+    ? SOFTWARE_CATEGORY_LABELS[activeSoftware.category].ar
+    : SOFTWARE_CATEGORY_LABELS[activeSoftware.category].en;
+
+  const activeNumber = `${String(SOFTWARE_ECOSYSTEM.findIndex((item) => item.id === activeSoftware.id) + 1).padStart(
+    2,
+    "0",
+  )} / ${String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}`;
 
   return (
     <div className="relative min-h-[30rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[38rem] sm:p-10">
+      {/* Background watermark */}
       <span
         aria-hidden
         className="pointer-events-none absolute -bottom-12 -end-8 font-display text-[12rem] font-bold leading-none text-white/[0.05] sm:text-[16rem]"
@@ -249,31 +249,33 @@ function FeatureCard({
 
           <p className="mt-3 font-mono text-[12px] text-[#D8BD9C]/70">{activeNumber}</p>
 
-          <motion.div key={reduce ? "reduced" : "motion"} className="mt-12">
-            <motion.div
-              initial={reduce ? false : { opacity: 0, y: 15 }}
-              animate={reduce ? undefined : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, ease: EASE.out }}
-              className="flex items-center gap-4"
-            >
-              <motion.div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-3">
-                {activeLogo ? (
-                  <motion.img src={activeLogo} alt="" className="size-full object-contain" />
+          <motion.div
+            key={activeSoftware.id}
+            initial={reduce ? false : { opacity: 0, y: 15 }}
+            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            transition={{
+              duration: reduce ? 0.2 : 0.45,
+              ease: EASE.out,
+            }}
+            className="mt-12"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-3">
+                {activeSoftware.logo ? (
+                  <img src={activeSoftware.logo} alt="" className="size-full object-contain" />
                 ) : (
-                  <motion.span className="font-display text-2xl font-bold text-[#E9D9C3]">{activeMark}</motion.span>
+                  <span className="font-display text-2xl font-bold text-[#E9D9C3]">{activeSoftware.mark}</span>
                 )}
-              </motion.div>
+              </div>
 
               <div className="min-w-0">
-                <motion.p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D8BD9C]">
-                  {activeCategory}
-                </motion.p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D8BD9C]">{activeCategory}</p>
 
-                <motion.h2 className="font-display mt-2 truncate text-3xl font-bold text-[#FCFBF9] sm:text-4xl">
+                <h2 className="font-display mt-2 truncate text-3xl font-bold text-[#FCFBF9] sm:text-4xl">
                   {activeName}
-                </motion.h2>
+                </h2>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
