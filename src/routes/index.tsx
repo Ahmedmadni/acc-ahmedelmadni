@@ -2,15 +2,7 @@ import "../styles.css";
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useInView,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { AnimatePresence, motion, useInView, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -72,9 +64,7 @@ import { EASE, useMotionSafe } from "@/lib/motion";
 
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
-const AIAssistant = lazy(() =>
-  import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })),
-);
+const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
 export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"));
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
@@ -86,9 +76,7 @@ const SoftwareEcosystem = lazy(() =>
 const ServicesEditorial = lazy(() =>
   import("@/components/home/ServicesEditorial").then((m) => ({ default: m.ServicesEditorial })),
 );
-const AboutMe = lazy(() =>
-  import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })),
-);
+const AboutMe = lazy(() => import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })));
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -271,11 +259,7 @@ function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
   return (
     <div ref={ref} className="sticky top-0 z-0">
       <motion.div style={{ scale }}>{children}</motion.div>
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-black"
-        style={{ opacity: dim }}
-      />
+      <motion.div aria-hidden className="pointer-events-none absolute inset-0 bg-black" style={{ opacity: dim }} />
     </div>
   );
 }
@@ -458,9 +442,7 @@ function Index() {
                   </button>
                 </div>
                 {/* Trust line */}
-                <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">
-                  أحمد المدني · محاسب أول معتمد · الرياض
-                </p>
+                <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">أحمد المدني · محاسب أول معتمد · الرياض</p>
               </div>
             </motion.div>
           </motion.div>
@@ -505,18 +487,12 @@ function Index() {
 
       <Suspense fallback={null}>
         <AnimatePresence>
-          {skillModal && (
-            <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />
-          )}
+          {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
         </AnimatePresence>
         <AnimatePresence>
-          {serviceModal && (
-            <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />
-          )}
+          {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
         </AnimatePresence>
-        <AnimatePresence>
-          {eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}
-        </AnimatePresence>
+        <AnimatePresence>{eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}</AnimatePresence>
       </Suspense>
     </div>
   );
@@ -537,9 +513,7 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
   // very first paint (client-only; SSR has no window and safely defaults to
   // the animated entrance, same as any other visitor without the effect yet).
   const [navReduceMotion] = useState(
-    () =>
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
 
   const links: { to: string; label: string; hash?: boolean }[] = [
@@ -560,11 +534,7 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
 
   // `showIndicator` mounts the shared layoutId underline — desktop nav only,
   // per Phase M7 scope (mobile keeps the plain color-based active state).
-  const renderLink = (
-    l: { to: string; label: string; hash?: boolean },
-    extraClass = "",
-    showIndicator = false,
-  ) => {
+  const renderLink = (l: { to: string; label: string; hash?: boolean }, extraClass = "", showIndicator = false) => {
     const active = isLinkActive(l);
     const cls = `relative text-sm font-medium transition-colors hover:text-[#c2a079] ${extraClass}`;
     const color = active ? "#c2a079" : "var(--fg-soft)";
@@ -614,17 +584,11 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
       style={{ background: "color-mix(in oklab, #1C1B19 82%, transparent)" }}
     >
       <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20 items-center justify-between gap-4">
-        <RouterLink
-          to="/"
-          className="group flex flex-col leading-tight shrink-0"
-          onMouseEnter={playHover}
-        >
+        <RouterLink to="/" className="group flex flex-col leading-tight shrink-0" onMouseEnter={playHover}>
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
-          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] text-[#A88765]">
-            Senior Accountant
-          </span>
+          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] text-[#A88765]">Senior Accountant</span>
         </RouterLink>
 
         <ul className="hidden items-center gap-7 lg:flex">
@@ -659,9 +623,7 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
               aria-label="Admin"
             >
               <ShieldCheck className="size-4" />
-              <span className="hidden lg:inline">
-                {lang === "ar" ? "لوحة التحكم" : "Dashboard"}
-              </span>
+              <span className="hidden lg:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
             </RouterLink>
           )}
           {isAdmin && (
@@ -694,22 +656,14 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
           >
             <Sparkles className="size-4" />
             {lang === "ar" ? "اطلب خدمة" : "Request Service"}
-            {lang === "ar" ? (
-              <ArrowLeft className="size-3.5" />
-            ) : (
-              <ArrowRight className="size-3.5" />
-            )}
+            {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
           </RouterLink>
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="flex size-9 items-center justify-center rounded-full border border-[#A88765]/30 lg:hidden"
             aria-label="Menu"
           >
-            {mobileOpen ? (
-              <X className="size-4 text-[#A88765]" />
-            ) : (
-              <Menu className="size-4 text-[#A88765]" />
-            )}
+            {mobileOpen ? <X className="size-4 text-[#A88765]" /> : <Menu className="size-4 text-[#A88765]" />}
           </button>
         </div>
       </div>
@@ -824,10 +778,7 @@ function Hero({ lang }: { lang: Lang }) {
     >
       {/* Full-bleed executive portrait — real image asset, no baked text/CTA.
           Wrapped slightly oversized so the parallax translate never exposes an edge. */}
-      <motion.div
-        className="absolute -inset-4 -z-10"
-        style={parallaxActive ? { x: bgX, y: bgY } : undefined}
-      >
+      <motion.div className="absolute -inset-4 -z-10" style={parallaxActive ? { x: bgX, y: bgY } : undefined}>
         <img
           src={heroImg}
           alt={
@@ -914,10 +865,7 @@ function Hero({ lang }: { lang: Lang }) {
             </RouterLink>
           </motion.div>
 
-          <motion.div
-            {...fade(1.05)}
-            className="mt-7 flex items-center gap-2 text-[13px] text-[#FCFBF9]/70"
-          >
+          <motion.div {...fade(1.05)} className="mt-7 flex items-center gap-2 text-[13px] text-[#FCFBF9]/70">
             <MapPin className="size-4 text-[#A88765]" />
             {t.hero.location[lang]}
           </motion.div>
@@ -1113,15 +1061,7 @@ function TimelineItem({
   );
 }
 
-function LogoBadge({
-  logoUrl,
-  name,
-  compact = false,
-}: {
-  logoUrl: string | null;
-  name: string;
-  compact?: boolean;
-}) {
+function LogoBadge({ logoUrl, name, compact = false }: { logoUrl: string | null; name: string; compact?: boolean }) {
   return (
     <motion.div
       whileHover={{ scale: 1.05, rotate: 1 }}
@@ -1176,10 +1116,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
   const itemsQ = useQuery({
     queryKey: ["public-skill-items"],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from("skill_items")
-        .select("*")
-        .order("sort_order", { ascending: true });
+      const { data, error } = await supabase.from("skill_items").select("*").order("sort_order", { ascending: true });
       if (error) throw error;
       return data;
     },
@@ -1247,9 +1184,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     onMouseEnter={playHover}
                     aria-pressed={isActive}
                     className={`group relative flex w-full shrink-0 items-center gap-3 overflow-hidden rounded-2xl border px-4 py-4 text-start transition-colors ${
-                      isActive
-                        ? "border-[#A88765]"
-                        : "border-[#E3DDD5] bg-[#F5F1EB] hover:border-[#A88765]/40"
+                      isActive ? "border-[#A88765]" : "border-[#E3DDD5] bg-[#F5F1EB] hover:border-[#A88765]/40"
                     }`}
                   >
                     {isActive && (
@@ -1257,9 +1192,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                         layoutId="skills-active-tab"
                         aria-hidden
                         className="absolute inset-0 bg-gradient-to-br from-[#A88765]/15 to-transparent shadow-[0_10px_30px_-12px_rgba(168,135,101,0.35)]"
-                        transition={
-                          reduce ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 28 }
-                        }
+                        transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 28 }}
                       />
                     )}
                     <span
@@ -1273,8 +1206,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     </span>
                     <div className="relative z-10 flex-1">
                       <div className="text-[10px] uppercase tracking-[0.25em] text-[#8a8078]">
-                        {String(i + 1).padStart(2, "0")} /{" "}
-                        {groups.length.toString().padStart(2, "0")}
+                        {String(i + 1).padStart(2, "0")} / {groups.length.toString().padStart(2, "0")}
                       </div>
                       <div
                         className={`text-sm font-extrabold ${isActive ? "bg-gradient-to-br from-[#A88765] to-[#4A3023] bg-clip-text text-transparent" : "text-[#1C1B19]"}`}
@@ -1304,9 +1236,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                       {lang === "ar" ? activeGroup.heading_ar : activeGroup.heading_en}
                     </h3>
                   </div>
-                  <div className="font-mono text-5xl font-black text-[#A88765]/25 sm:text-6xl">
-                    0{active + 1}
-                  </div>
+                  <div className="font-mono text-5xl font-black text-[#A88765]/25 sm:text-6xl">0{active + 1}</div>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2">
@@ -1334,9 +1264,7 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                           initial={reduce ? { width: `${it.level}%` } : { width: 0 }}
                           whileInView={{ width: `${it.level}%` }}
                           viewport={{ once: true }}
-                          transition={
-                            reduce ? { duration: 0 } : { duration: 1.1, delay: 0.1 + j * 0.05 }
-                          }
+                          transition={reduce ? { duration: 0 } : { duration: 1.1, delay: 0.1 + j * 0.05 }}
                           className="h-full rounded-full bg-gradient-to-r from-[#c2a079] to-[#7c6045]"
                         />
                       </div>
@@ -1361,9 +1289,33 @@ function Testimonials({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
   const m = useMotionSafe();
   const items = t.testimonials.items;
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const active = items[activeIndex];
+
+  const next = () => {
+    setActiveIndex((current) => (current + 1) % items.length);
+  };
+
+  const previous = () => {
+    setActiveIndex((current) => (current - 1 + items.length) % items.length);
+  };
+
+  const initial = active.name[lang].replace(/^[.\s]+/, "").charAt(0);
+
   return (
-    <section className="relative overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28">
-      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+    <section className="relative overflow-hidden bg-[#F5F2ED] py-24 sm:py-28 lg:py-36" dir={ar ? "rtl" : "ltr"}>
+      {/* Decorative background quote */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-20 end-[-2rem] select-none font-serif text-[22rem] leading-none text-[#4A3023]/[0.035] sm:text-[30rem]"
+      >
+        “
+      </div>
+
+      <div className="relative mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -1377,56 +1329,149 @@ function Testimonials({ lang }: { lang: Lang }) {
           >
             {ar ? "آراء" : "Testimonials"}
           </motion.p>
+
           <motion.h2
             variants={m.staggerChild}
             className="font-display mt-3 text-[1.9rem] font-bold leading-[1.3] text-[#1C1B19] sm:text-[2.4rem] lg:text-[2.9rem]"
           >
             {t.testimonials.title[lang]}
           </motion.h2>
-          <motion.p
-            variants={m.staggerChild}
-            className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]"
-          >
+
+          <motion.p variants={m.staggerChild} className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]">
             {t.testimonials.sub[lang]}
           </motion.p>
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={m.staggerParent}
-          className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {items.map((it, i) => {
-            const initial = it.name[lang].replace(/^[.\s]+/, "").charAt(0);
-            return (
-              <motion.figure
-                key={i}
-                variants={m.staggerChild}
-                className="flex h-full flex-col rounded-2xl border border-[#E3DDD5] bg-[#FCFBF9] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_18px_40px_-24px_rgba(74,48,35,0.5)]"
-              >
-                <Quote aria-hidden className="size-7 text-[#A88765]/40" />
-                <blockquote className="mt-3 flex-1 text-[15px] leading-[1.9] text-[#3a352f]">
-                  {it.quote[lang]}
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3 border-t border-[#E3DDD5] pt-4">
-                  <span className="font-display flex size-10 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-sm font-bold text-[#e9d9c3]">
-                    {initial}
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block truncate text-[14px] font-semibold text-[#1C1B19]">
+        {/* Main testimonial experience */}
+        <div className="mt-16 grid gap-12 lg:grid-cols-[0.75fr_1.5fr] lg:items-center lg:gap-20">
+          {/* Clients navigation */}
+          <motion.div
+            initial={{ opacity: 0, x: ar ? 30 : -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.7, ease: EASE.out }}
+            className="relative"
+          >
+            <div className="mb-5 flex items-center justify-between">
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#A88765]">
+                {ar ? "من عملت معهم" : "People I've worked with"}
+              </span>
+
+              <span className="font-mono text-[12px] text-[#8A8078]">
+                {String(activeIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+              </span>
+            </div>
+
+            <div className="border-s border-[#D8CEC2]">
+              {items.map((it, index) => {
+                const isActive = index === activeIndex;
+
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    className={`group relative block w-full py-4 text-start transition-all duration-300 ${
+                      isActive ? "ps-6" : "ps-5 opacity-45 hover:opacity-80"
+                    }`}
+                  >
+                    {/* Active indicator */}
+                    <span
+                      className={`absolute -start-[1px] top-0 h-full w-[2px] origin-center bg-[#A88765] transition-transform duration-500 ${
+                        isActive ? "scale-y-100" : "scale-y-0"
+                      }`}
+                    />
+
+                    <span
+                      className={`block text-[14px] font-semibold transition-colors duration-300 ${
+                        isActive ? "text-[#1C1B19]" : "text-[#746E67] group-hover:text-[#1C1B19]"
+                      }`}
+                    >
                       {it.name[lang]}
                     </span>
-                    <span className="block truncate text-[12px] text-[#A88765]">
-                      {it.role[lang]}
-                    </span>
+
+                    <span className="mt-1 block text-[11px] text-[#A88765]">{it.role[lang]}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Featured testimonial */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.8, ease: EASE.out }}
+            className="relative min-h-[26rem] overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-7 shadow-[0_30px_80px_-45px_rgba(74,48,35,0.45)] sm:min-h-[30rem] sm:p-12"
+          >
+            {/* Top line */}
+            <div className="flex items-start justify-between gap-6">
+              <Quote className="size-10 text-[#A88765]/40" />
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={previous}
+                  aria-label={ar ? "الرأي السابق" : "Previous testimonial"}
+                  className="flex size-10 items-center justify-center rounded-full border border-[#E3DDD5] text-[#746E67] transition-all duration-300 hover:border-[#A88765] hover:bg-[#A88765] hover:text-white"
+                >
+                  {ar ? "→" : "←"}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={next}
+                  aria-label={ar ? "الرأي التالي" : "Next testimonial"}
+                  className="flex size-10 items-center justify-center rounded-full border border-[#E3DDD5] text-[#746E67] transition-all duration-300 hover:border-[#A88765] hover:bg-[#A88765] hover:text-white"
+                >
+                  {ar ? "←" : "→"}
+                </button>
+              </div>
+            </div>
+
+            {/* Quote */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -18 }}
+                transition={{ duration: 0.45, ease: EASE.out }}
+                className="mt-12"
+              >
+                <blockquote className="font-display max-w-3xl text-[1.8rem] font-semibold leading-[1.55] tracking-tight text-[#1C1B19] sm:text-[2.5rem] lg:text-[3rem]">
+                  “{active.quote[lang]}”
+                </blockquote>
+
+                <div className="mt-12 flex items-center gap-4 border-t border-[#E3DDD5] pt-6">
+                  <span className="font-display flex size-14 shrink-0 items-center justify-center rounded-full bg-[#4A3023] text-lg font-bold text-[#E9D9C3]">
+                    {initial}
                   </span>
-                </figcaption>
-              </motion.figure>
-            );
-          })}
-        </motion.div>
+
+                  <div>
+                    <p className="text-[15px] font-semibold text-[#1C1B19]">{active.name[lang]}</p>
+
+                    <p className="mt-1 text-[12px] text-[#A88765]">{active.role[lang]}</p>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Bottom progress */}
+            <div className="absolute bottom-0 inset-x-0 h-[3px] bg-[#E3DDD5]">
+              <motion.div
+                key={activeIndex}
+                initial={{ width: "0%" }}
+                animate={{
+                  width: `${((activeIndex + 1) / items.length) * 100}%`,
+                }}
+                transition={{ duration: 0.5, ease: EASE.out }}
+                className="h-full bg-[#A88765]"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -1502,9 +1547,7 @@ function ContactMascotCard({
           transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <span className="relative text-[11px] font-bold leading-tight text-[#FCFBF9]/90">
-        {s.label}
-      </span>
+      <span className="relative text-[11px] font-bold leading-tight text-[#FCFBF9]/90">{s.label}</span>
     </motion.a>
   );
 }
@@ -1578,18 +1621,9 @@ export function Contact({ lang }: { lang: Lang }) {
           </motion.div>
 
           {/* Social channels */}
-          <motion.div
-            variants={m.staggerChild}
-            className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7"
-          >
+          <motion.div variants={m.staggerChild} className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7">
             {SOCIALS.map((s, i) => (
-              <ContactMascotCard
-                key={s.label}
-                s={s}
-                i={i}
-                reduce={m.reduce}
-                parallaxActive={mascotParallaxActive}
-              />
+              <ContactMascotCard key={s.label} s={s} i={i} reduce={m.reduce} parallaxActive={mascotParallaxActive} />
             ))}
           </motion.div>
         </motion.div>
@@ -1615,9 +1649,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <div className="font-display text-lg font-bold text-[#FCFBF9]">
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </div>
-          <p className="mt-3 max-w-md text-[13px] leading-[1.8] text-white/55">
-            {t.footer.tagline[lang]}
-          </p>
+          <p className="mt-3 max-w-md text-[13px] leading-[1.8] text-white/55">{t.footer.tagline[lang]}</p>
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/30 px-3 py-1 text-[11px] font-semibold text-[#d8bd9c]">
               <MapPin className="size-3" />
@@ -1685,10 +1717,7 @@ export function Footer({ lang }: { lang: Lang }) {
               </a>
             </li>
             <li>
-              <a
-                href="mailto:elmadnim@gmail.com"
-                className="transition-colors hover:text-[#d8bd9c]"
-              >
+              <a href="mailto:elmadnim@gmail.com" className="transition-colors hover:text-[#d8bd9c]">
                 elmadnim@gmail.com
               </a>
             </li>
