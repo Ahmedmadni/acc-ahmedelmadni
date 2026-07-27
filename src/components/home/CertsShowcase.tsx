@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChevronLeft,
@@ -14,7 +13,7 @@ import {
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
 import { useMotionSafe } from "@/lib/motion";
-import { listPublicCertificationsFn } from "@/lib/profile/manage.functions";
+import { supabase } from "@/integrations/supabase/client";
 import { Marquee } from "./Marquee";
 
 /**
@@ -58,7 +57,7 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
           <img
             src={transformCertUrl(c.image_url, 800, 72) ?? c.image_url}
             alt={title}
-            loading="lazy"
+            loading="eager"
             decoding="async"
             onError={(e) => {
               // The Supabase image-transform endpoint isn't available on every
@@ -274,17 +273,22 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const m = useMotionSafe();
 
-  // Read published certifications through a server function (service-role,
-  // published rows only) rather than the browser anon client. This makes the
-  // certifications visible to every visitor — including logged-out ones —
-  // regardless of whether the deployment's public anon Supabase key is set,
-  // which was causing the section to only appear for the signed-in admin.
-  const listCerts = useServerFn(listPublicCertificationsFn);
+  // Read published certifications directly via the browser Supabase client.
+  // RLS allows public read of published rows, and this avoids server-fn
+  // failures caused by service-role/JWT key format mismatches on some
+  // deployments (which previously made the section render empty).
   const { data } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const res = await listCerts();
-      return (res.items ?? []) as Cert[];
+      const { data, error } = await supabase
+        .from("certifications")
+        .select(
+          "id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url",
+        )
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true });
+      if (error) throw error;
+      return (data ?? []) as Cert[];
     },
     staleTime: 5 * 60 * 1000,
   });
