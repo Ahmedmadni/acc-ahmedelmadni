@@ -28,6 +28,7 @@ import { Route as LibraryTemplatesRouteImport } from './routes/library.templates
 import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
 import { Route as LibraryBooksRouteImport } from './routes/library.books'
 import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
+import { Route as KnowledgeBookmarksRouteImport } from './routes/knowledge.bookmarks'
 import { Route as ApiOfficeAiRouteImport } from './routes/api/office-ai'
 import { Route as ApiCvTranslateRouteImport } from './routes/api/cv-translate'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
@@ -136,6 +137,11 @@ const LibraryArticlesRoute = LibraryArticlesRouteImport.update({
   path: '/articles',
   getParentRoute: () => LibraryRoute,
 } as any)
+const KnowledgeBookmarksRoute = KnowledgeBookmarksRouteImport.update({
+  id: '/knowledge/bookmarks',
+  path: '/knowledge/bookmarks',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiOfficeAiRoute = ApiOfficeAiRouteImport.update({
   id: '/api/office-ai',
   path: '/api/office-ai',
@@ -227,6 +233,7 @@ export interface FileRoutesByFullPath {
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
+  '/knowledge/bookmarks': typeof KnowledgeBookmarksRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
@@ -259,6 +266,7 @@ export interface FileRoutesByTo {
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
+  '/knowledge/bookmarks': typeof KnowledgeBookmarksRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
@@ -294,6 +302,7 @@ export interface FileRoutesById {
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
+  '/knowledge/bookmarks': typeof KnowledgeBookmarksRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
@@ -329,6 +338,7 @@ export interface FileRouteTypes {
     | '/api/cv-enhance'
     | '/api/cv-translate'
     | '/api/office-ai'
+    | '/knowledge/bookmarks'
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
@@ -361,6 +371,7 @@ export interface FileRouteTypes {
     | '/api/cv-enhance'
     | '/api/cv-translate'
     | '/api/office-ai'
+    | '/knowledge/bookmarks'
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
@@ -395,6 +406,7 @@ export interface FileRouteTypes {
     | '/api/cv-enhance'
     | '/api/cv-translate'
     | '/api/office-ai'
+    | '/knowledge/bookmarks'
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
@@ -428,6 +440,7 @@ export interface RootRouteChildren {
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
   ApiCvTranslateRoute: typeof ApiCvTranslateRoute
   ApiOfficeAiRoute: typeof ApiOfficeAiRoute
+  KnowledgeBookmarksRoute: typeof KnowledgeBookmarksRoute
   ToolsToolIdRoute: typeof ToolsToolIdRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
@@ -570,6 +583,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/library/articles'
       preLoaderRoute: typeof LibraryArticlesRouteImport
       parentRoute: typeof LibraryRoute
+    }
+    '/knowledge/bookmarks': {
+      id: '/knowledge/bookmarks'
+      path: '/knowledge/bookmarks'
+      fullPath: '/knowledge/bookmarks'
+      preLoaderRoute: typeof KnowledgeBookmarksRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/api/office-ai': {
       id: '/api/office-ai'
@@ -721,6 +741,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
   ApiCvTranslateRoute: ApiCvTranslateRoute,
   ApiOfficeAiRoute: ApiOfficeAiRoute,
+  KnowledgeBookmarksRoute: KnowledgeBookmarksRoute,
   ToolsToolIdRoute: ToolsToolIdRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
   ToolsIndexRoute: ToolsIndexRoute,

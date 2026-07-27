@@ -82,16 +82,18 @@ const EMPTY_FORM: Partial<LibraryItemRow> = {
 
 function AdminLibraryPage() {
   return (
-    <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
-      <div className="w-full border-b border-[#d7aa52]/20 px-4 py-4 sm:px-8 lg:px-16">
+    <div dir="rtl" className="min-h-screen bg-[#151412] text-[#FCFBF9]">
+      <div className="w-full border-b border-[#A88765]/20 px-4 py-4 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <BookOpen className="size-5 text-[#f3d28a]" />
-            <h1 className="text-base font-extrabold text-[#f3d28a]">لوحة إدارة المكتبة</h1>
+            <BookOpen className="size-5 text-[#c9a986]" />
+            <h1 className="font-display text-base font-extrabold text-[#c9a986]">
+              لوحة إدارة المكتبة
+            </h1>
           </div>
           <Link
             to="/library"
-            className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
+            className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15"
           >
             عرض المكتبة
           </Link>
@@ -100,7 +102,7 @@ function AdminLibraryPage() {
 
       <div className="w-full px-4 sm:px-8 lg:px-16 py-8">
         <Tabs defaultValue="articles" className="w-full">
-          <TabsList className="bg-[#07182c] border border-[#d7aa52]/20">
+          <TabsList className="bg-[#1C1B19] border border-[#A88765]/20">
             <TabsTrigger value="articles">المقالات</TabsTrigger>
             <TabsTrigger value="course">كورسات</TabsTrigger>
             <TabsTrigger value="book">كتب</TabsTrigger>
@@ -190,16 +192,16 @@ function LibraryPanel({ type }: { type: ItemType }) {
         </div>
         <Button
           onClick={openCreate}
-          className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90"
+          className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] hover:opacity-90"
         >
           <Plus className="size-4" />
           إضافة {TYPE_LABEL[type]}
         </Button>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
+      <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
         <table className="w-full text-sm">
-          <thead className="bg-white/[0.04] text-right text-white/60">
+          <thead className="bg-[#F5F1EB] text-right text-[#6B6259]">
             <tr>
               <th className="p-3">العنوان</th>
               <th className="p-3">التصنيف</th>
@@ -212,34 +214,34 @@ function LibraryPanel({ type }: { type: ItemType }) {
           <tbody>
             {isLoading && (
               <tr>
-                <td colSpan={6} className="p-6 text-center text-white/40">
+                <td colSpan={6} className="p-6 text-center text-[#8a8078]">
                   جارٍ التحميل...
                 </td>
               </tr>
             )}
             {isError && (
               <tr>
-                <td colSpan={6} className="p-6 text-center text-red-300">
+                <td colSpan={6} className="p-6 text-center text-red-600">
                   تعذّر تحميل العناصر. حاول تحديث الصفحة.
                 </td>
               </tr>
             )}
             {!isLoading && !isError && items.length === 0 && (
               <tr>
-                <td colSpan={6} className="p-6 text-center text-white/40">
+                <td colSpan={6} className="p-6 text-center text-[#8a8078]">
                   لا توجد عناصر بعد. اضغط "إضافة" لبدء الإضافة.
                 </td>
               </tr>
             )}
             {items.map((it) => (
-              <tr key={it.id} className="border-t border-white/5">
+              <tr key={it.id} className="border-t border-[#A88765]/10">
                 <td className="p-3">
-                  <div className="font-bold text-white">{it.title_ar}</div>
-                  {it.title_en && <div className="text-xs text-white/40">{it.title_en}</div>}
+                  <div className="font-bold text-[#1C1B19]">{it.title_ar}</div>
+                  {it.title_en && <div className="text-xs text-[#8a8078]">{it.title_en}</div>}
                 </td>
-                <td className="p-3 text-xs">{it.category_slug}</td>
-                <td className="p-3 text-xs text-white/60">{it.provider ?? "—"}</td>
-                <td className="p-3 text-xs text-white/60">{it.level ?? "—"}</td>
+                <td className="p-3 text-xs text-[#2e2a25]">{it.category_slug}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{it.provider ?? "—"}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{it.level ?? "—"}</td>
                 <td className="p-3">
                   <Switch
                     checked={it.is_published}
@@ -254,7 +256,7 @@ function LibraryPanel({ type }: { type: ItemType }) {
                       aria-label={`تعديل ${it.title_ar}`}
                       onClick={() => openEdit(it)}
                     >
-                      <Pencil className="size-4 text-[#f3d28a]" />
+                      <Pencil className="size-4 text-[#7c6045]" />
                     </Button>
                     <Button
                       variant="ghost"
@@ -264,7 +266,7 @@ function LibraryPanel({ type }: { type: ItemType }) {
                         if (confirm(`حذف "${it.title_ar}"؟`)) delMut.mutate(it.id);
                       }}
                     >
-                      <Trash2 className="size-4 text-red-400" />
+                      <Trash2 className="size-4 text-red-600" />
                     </Button>
                   </div>
                 </td>
@@ -276,11 +278,11 @@ function LibraryPanel({ type }: { type: ItemType }) {
 
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent
-          className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl"
+          className="max-h-[90vh] overflow-y-auto bg-[#1C1B19] text-[#FCFBF9] sm:max-w-2xl"
           dir="rtl"
         >
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">
+            <DialogTitle className="text-[#c9a986]">
               {editing?.id ? "تعديل" : "إضافة"} {TYPE_LABEL[type]}
             </DialogTitle>
           </DialogHeader>
@@ -343,8 +345,8 @@ function ItemForm({
   return (
     <div className="space-y-4">
       {/* AI assist */}
-      <div className="rounded-xl border border-[#d7aa52]/30 bg-[#f3d28a]/5 p-3">
-        <div className="mb-2 flex items-center gap-2 text-xs font-bold text-[#f3d28a]">
+      <div className="rounded-xl border border-[#A88765]/30 bg-[#A88765]/5 p-3">
+        <div className="mb-2 flex items-center gap-2 text-xs font-bold text-[#c9a986]">
           <Sparkles className="size-4" /> توليد بالذكاء الاصطناعي
         </div>
         <div className="flex gap-2">
@@ -352,13 +354,13 @@ function ItemForm({
             placeholder="موضوع أو وصف مختصر..."
             value={aiTopic}
             onChange={(e) => setAiTopic(e.target.value)}
-            className="bg-[#04101f] border-[#d7aa52]/20 text-white"
+            className="bg-[#24211E] border-[#A88765]/25 text-[#FCFBF9]"
           />
           <Button
             type="button"
             onClick={() => aiMut.mutate()}
             disabled={aiTopic.length < 3 || aiMut.isPending}
-            className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+            className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
           >
             {aiMut.isPending ? "..." : "توليد"}
           </Button>
@@ -370,14 +372,14 @@ function ItemForm({
           <Input
             value={value.title_ar ?? ""}
             onChange={(e) => onChange({ ...value, title_ar: e.target.value })}
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
         <Field label="العنوان (إنجليزي)">
           <Input
             value={value.title_en ?? ""}
             onChange={(e) => onChange({ ...value, title_en: e.target.value })}
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
 
@@ -386,7 +388,7 @@ function ItemForm({
             value={value.category_slug ?? "fundamentals"}
             onValueChange={(v) => onChange({ ...value, category_slug: v })}
           >
-            <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+            <SelectTrigger className="bg-[#24211E] border-[#A88765]/25">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -403,7 +405,7 @@ function ItemForm({
             value={value.level ?? "beginner"}
             onValueChange={(v) => onChange({ ...value, level: v })}
           >
-            <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+            <SelectTrigger className="bg-[#24211E] border-[#A88765]/25">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -419,7 +421,7 @@ function ItemForm({
             value={value.url ?? ""}
             onChange={(e) => onChange({ ...value, url: e.target.value })}
             placeholder="https://..."
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
         <Field label="رابط الصورة (cover)">
@@ -427,7 +429,7 @@ function ItemForm({
             value={value.cover_image ?? ""}
             onChange={(e) => onChange({ ...value, cover_image: e.target.value })}
             placeholder="https://..."
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
         {value.type === "book" && (
@@ -441,14 +443,14 @@ function ItemForm({
             value={value.provider ?? ""}
             onChange={(e) => onChange({ ...value, provider: e.target.value })}
             placeholder="Coursera, YouTube, ..."
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
         <Field label="المؤلف/المحاضر">
           <Input
             value={value.author ?? ""}
             onChange={(e) => onChange({ ...value, author: e.target.value })}
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
 
@@ -457,7 +459,7 @@ function ItemForm({
             type="number"
             value={value.duration_hours ?? 0}
             onChange={(e) => onChange({ ...value, duration_hours: Number(e.target.value) })}
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
         <Field label="الترتيب">
@@ -465,7 +467,7 @@ function ItemForm({
             type="number"
             value={value.sort_order ?? 0}
             onChange={(e) => onChange({ ...value, sort_order: Number(e.target.value) })}
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
 
@@ -483,7 +485,7 @@ function ItemForm({
             value={value.price ?? 0}
             onChange={(e) => onChange({ ...value, price: Number(e.target.value) })}
             disabled={value.is_free}
-            className="bg-[#04101f] border-[#d7aa52]/20"
+            className="bg-[#24211E] border-[#A88765]/25"
           />
         </Field>
       </div>
@@ -493,7 +495,7 @@ function ItemForm({
           value={value.description_ar ?? ""}
           onChange={(e) => onChange({ ...value, description_ar: e.target.value })}
           rows={3}
-          className="bg-[#04101f] border-[#d7aa52]/20"
+          className="bg-[#24211E] border-[#A88765]/25"
         />
       </Field>
       <Field label="وصف (إنجليزي)">
@@ -501,7 +503,7 @@ function ItemForm({
           value={value.description_en ?? ""}
           onChange={(e) => onChange({ ...value, description_en: e.target.value })}
           rows={3}
-          className="bg-[#04101f] border-[#d7aa52]/20"
+          className="bg-[#24211E] border-[#A88765]/25"
         />
       </Field>
 
@@ -517,11 +519,11 @@ function ItemForm({
                 .filter(Boolean),
             })
           }
-          className="bg-[#04101f] border-[#d7aa52]/20"
+          className="bg-[#24211E] border-[#A88765]/25"
         />
       </Field>
 
-      <div className="flex items-center justify-between rounded-xl border border-[#d7aa52]/20 bg-[#04101f] p-3">
+      <div className="flex items-center justify-between rounded-xl border border-[#A88765]/20 bg-[#24211E] p-3">
         <Label className="text-sm">نشر فوري</Label>
         <Switch
           checked={value.is_published ?? false}
@@ -533,7 +535,7 @@ function ItemForm({
         <Button
           onClick={onSubmit}
           disabled={submitting || !value.title_ar}
-          className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+          className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
         >
           {submitting ? "...يحفظ" : "حفظ"}
         </Button>
@@ -652,15 +654,15 @@ function ArticlesPanel() {
         </div>
         <Link
           to="/admin/knowledge"
-          className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-sm font-bold text-[#04101f]"
+          className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-sm font-bold text-[#1C1B19]"
         >
           <Sparkles className="size-4" /> توليد مقال جديد بالـ AI
         </Link>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
+      <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
         <table className="w-full text-sm">
-          <thead className="bg-white/[0.04] text-right text-white/60">
+          <thead className="bg-[#F5F1EB] text-right text-[#6B6259]">
             <tr>
               <th className="p-3">العنوان</th>
               <th className="p-3">الحالة</th>
@@ -671,27 +673,27 @@ function ArticlesPanel() {
           <tbody>
             {isLoading && (
               <tr>
-                <td colSpan={4} className="p-6 text-center text-white/40">
+                <td colSpan={4} className="p-6 text-center text-[#8a8078]">
                   جارٍ التحميل...
                 </td>
               </tr>
             )}
             {isError && (
               <tr>
-                <td colSpan={4} className="p-6 text-center text-red-300">
+                <td colSpan={4} className="p-6 text-center text-red-600">
                   تعذّر تحميل المقالات. حاول تحديث الصفحة.
                 </td>
               </tr>
             )}
             {articles.map((a) => (
-              <tr key={a.id} className="border-t border-white/5">
-                <td className="p-3 font-bold text-white">{a.title_ar}</td>
+              <tr key={a.id} className="border-t border-[#A88765]/10">
+                <td className="p-3 font-bold text-[#1C1B19]">{a.title_ar}</td>
                 <td className="p-3">
-                  <Badge variant="outline" className="border-[#d7aa52]/30 text-[#f3d28a]">
+                  <Badge variant="outline" className="border-[#A88765]/40 text-[#7c6045]">
                     {STATUS_LABEL[a.status] ?? a.status}
                   </Badge>
                 </td>
-                <td className="p-3 text-xs text-white/60">{a.generation_source}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{a.generation_source}</td>
                 <td className="p-3">
                   <div className="flex gap-1">
                     {a.status === "pending_review" && (
@@ -700,7 +702,7 @@ function ArticlesPanel() {
                           size="sm"
                           variant="ghost"
                           onClick={() => review.mutate({ id: a.id, action: "approve" })}
-                          className="text-emerald-400"
+                          className="text-emerald-700 hover:text-emerald-800"
                         >
                           موافقة
                         </Button>
@@ -708,7 +710,7 @@ function ArticlesPanel() {
                           size="sm"
                           variant="ghost"
                           onClick={() => review.mutate({ id: a.id, action: "reject" })}
-                          className="text-red-400"
+                          className="text-red-700 hover:text-red-800"
                         >
                           رفض
                         </Button>
@@ -720,7 +722,7 @@ function ArticlesPanel() {
                       aria-label={`تعديل ${a.title_ar}`}
                       onClick={() => openEdit(a)}
                     >
-                      <Pencil className="size-4 text-[#f3d28a]" />
+                      <Pencil className="size-4 text-[#7c6045]" />
                     </Button>
                     <Button
                       size="icon"
@@ -730,7 +732,7 @@ function ArticlesPanel() {
                         if (confirm(`حذف "${a.title_ar}"؟`)) del.mutate(a.id);
                       }}
                     >
-                      <Trash2 className="size-4 text-red-400" />
+                      <Trash2 className="size-4 text-red-600" />
                     </Button>
                   </div>
                 </td>
@@ -739,7 +741,7 @@ function ArticlesPanel() {
           </tbody>
         </table>
         {data && data.total > data.pageSize && (
-          <div className="flex items-center justify-between border-t border-[#d7aa52]/15 p-3 text-sm text-white/60">
+          <div className="flex items-center justify-between border-t border-[#A88765]/15 p-3 text-sm text-[#6B6259]">
             <span>
               {page * data.pageSize + 1}–{Math.min((page + 1) * data.pageSize, data.total)} من{" "}
               {data.total}
@@ -748,14 +750,14 @@ function ArticlesPanel() {
               <button
                 disabled={page === 0}
                 onClick={() => setPage((p) => Math.max(0, p - 1))}
-                className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+                className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15 disabled:opacity-30"
               >
                 السابق
               </button>
               <button
                 disabled={(page + 1) * data.pageSize >= data.total}
                 onClick={() => setPage((p) => p + 1)}
-                className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+                className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15 disabled:opacity-30"
               >
                 التالي
               </button>
@@ -765,21 +767,21 @@ function ArticlesPanel() {
       </div>
 
       <Dialog open={editOpen} onOpenChange={setEditOpen}>
-        <DialogContent className="bg-[#07182c] text-white" dir="rtl">
+        <DialogContent className="bg-[#1C1B19] text-[#FCFBF9]" dir="rtl">
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">تعديل المقال</DialogTitle>
+            <DialogTitle className="text-[#c9a986]">تعديل المقال</DialogTitle>
           </DialogHeader>
           <div className="space-y-3">
             <Field label="العنوان (عربي)">
               <Input
                 value={titleEdit}
                 onChange={(e) => setTitleEdit(e.target.value)}
-                className="bg-[#04101f] border-[#d7aa52]/20"
+                className="bg-[#24211E] border-[#A88765]/25"
               />
             </Field>
             <Field label="الحالة">
               <Select value={statusEdit} onValueChange={setStatusEdit}>
-                <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+                <SelectTrigger className="bg-[#24211E] border-[#A88765]/25">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -809,7 +811,7 @@ function ArticlesPanel() {
                   },
                 });
               }}
-              className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
             >
               حفظ
             </Button>
@@ -873,7 +875,7 @@ function PdfUploadField({
           const f = e.target.files?.[0];
           if (f) onFile(f);
         }}
-        className="block w-full text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#f3d28a] file:to-[#b8862e] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#04101f]"
+        className="block w-full text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#c2a079] file:to-[#7c6045] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#1C1B19]"
       />
       {busy && <p className="text-xs text-white/60">جارٍ الرفع...</p>}
     </div>

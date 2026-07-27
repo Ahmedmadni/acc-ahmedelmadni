@@ -426,7 +426,7 @@ export const TOOLS: ToolMeta[] = [
     category: "tax",
     icon: "ClipboardList",
     official: true,
-    requestServiceId: "vat-declaration",
+    requestServiceId: "vat-filing",
     title: {
       ar: "إقرار ضريبة القيمة المضافة (نموذج ZATCA الرسمي)",
       en: "VAT Return (Official ZATCA Form)",
@@ -1396,7 +1396,7 @@ export const TOOLS: ToolMeta[] = [
         "Adjusted variants of the model (Z' and Z'') exist for private and non-manufacturing companies — use them if the company isn't a publicly-traded manufacturer",
       ],
     },
-    requestServiceId: "consulting",
+    requestServiceId: "financial-consulting",
   },
   {
     id: "nitaqat",
@@ -1441,7 +1441,7 @@ export const TOOLS: ToolMeta[] = [
       ar: ["راجع نطاقك على منصة قوى مباشرة قبل أي قرار توظيف مبني على النتيجة"],
       en: ["Check your band directly on Qiwa before any hiring decision based on the result"],
     },
-    requestServiceId: "consulting",
+    requestServiceId: "financial-consulting",
   },
   {
     id: "vat-penalty",
@@ -1488,7 +1488,7 @@ export const TOOLS: ToolMeta[] = [
         "Always check the latest published penalty schedule before making a financial decision based on the result",
       ],
     },
-    requestServiceId: "vat-declaration",
+    requestServiceId: "vat-filing",
   },
   {
     id: "sales-commission",
@@ -1665,7 +1665,7 @@ export const TOOLS: ToolMeta[] = [
       ],
       en: ["Best used as a cross-check alongside a DCF valuation, not as a standalone substitute"],
     },
-    requestServiceId: "consulting",
+    requestServiceId: "financial-consulting",
   },
   {
     id: "job-order-costing",
@@ -1758,7 +1758,7 @@ export const TOOLS: ToolMeta[] = [
         "The duty rate varies by HS code — check the GCC Common External Tariff before relying on the default",
       ],
     },
-    requestServiceId: "consulting",
+    requestServiceId: "financial-consulting",
   },
   {
     id: "einvoicing-readiness",
@@ -1807,7 +1807,7 @@ export const TOOLS: ToolMeta[] = [
         "Check ZATCA's website periodically — integration requirements roll out in waves by taxpayer group",
       ],
     },
-    requestServiceId: "consulting",
+    requestServiceId: "financial-consulting",
   },
   {
     id: "chart-of-accounts",

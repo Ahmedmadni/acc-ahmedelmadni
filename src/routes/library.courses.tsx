@@ -184,26 +184,26 @@ function CoursesPage() {
     <section className="relative py-10">
       <div className="w-full px-4 sm:px-8 lg:px-16">
         {/* Filters */}
-        <div className="rounded-3xl border border-[#d7aa52]/25 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/90 p-5 backdrop-blur-xl">
+        <div className="rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-5">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
             <div className="relative flex-1">
-              <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
+              <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#c9a986]" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={t.library.searchPlaceholder[lang]}
-                className="w-full rounded-full border border-white/10 bg-white/[0.04] py-3 ps-11 pe-4 text-sm text-white placeholder:text-white/40 outline-none focus:border-[#d7aa52]/60"
+                className="w-full rounded-full border border-[#A88765]/20 bg-[#24211E] py-3 ps-11 pe-4 text-sm text-[#FCFBF9] placeholder:text-[#8a8078] outline-none focus:border-[#A88765]/60"
               />
             </div>
             <div className="relative lg:w-64">
-              <Filter className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#d7aa52]" />
+              <Filter className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-[#c9a986]" />
               <select
                 value={cat}
                 onChange={(e) => setCat(e.target.value as CatKey)}
-                className="w-full appearance-none rounded-full border border-[#d7aa52]/40 bg-white/[0.04] py-3 ps-11 pe-9 text-sm font-semibold text-white outline-none"
+                className="w-full appearance-none rounded-full border border-[#A88765]/30 bg-[#24211E] py-3 ps-11 pe-9 text-sm font-semibold text-[#FCFBF9] outline-none"
               >
                 {CAT_KEYS.map((k) => (
-                  <option key={k} value={k} className="bg-[#04101f]">
+                  <option key={k} value={k} className="bg-[#1C1B19]">
                     {k === "all"
                       ? lang === "ar"
                         ? "كل التصنيفات"
@@ -218,10 +218,10 @@ function CoursesPage() {
             <select
               value={level}
               onChange={(e) => setLevel(e.target.value as LevelKey)}
-              className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white"
+              className="rounded-full border border-[#A88765]/20 bg-[#24211E] px-3 py-2 text-xs font-semibold text-[#FCFBF9]"
             >
               {(["all", "beginner", "intermediate", "advanced"] as const).map((v) => (
-                <option key={v} value={v} className="bg-[#04101f]">
+                <option key={v} value={v} className="bg-[#1C1B19]">
                   {t.library.levels[v][lang]}
                 </option>
               ))}
@@ -229,10 +229,10 @@ function CoursesPage() {
             <select
               value={price}
               onChange={(e) => setPrice(e.target.value as PriceKey)}
-              className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-white"
+              className="rounded-full border border-[#A88765]/20 bg-[#24211E] px-3 py-2 text-xs font-semibold text-[#FCFBF9]"
             >
               {(["all", "free", "paid"] as const).map((v) => (
-                <option key={v} value={v} className="bg-[#04101f]">
+                <option key={v} value={v} className="bg-[#1C1B19]">
                   {t.library.priceLabels[v][lang]}
                 </option>
               ))}
@@ -254,17 +254,17 @@ function CoursesPage() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.92 }}
                   transition={{ duration: 0.35, delay: Math.min(i, 6) * 0.04 }}
-                  className="group relative overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/90 p-6 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_60px_-20px_rgba(215,170,82,0.45)]"
+                  className="group relative overflow-hidden rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-6 transition-all hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_20px_60px_-24px_rgba(168,135,101,0.35)]"
                 >
                   <div className="flex items-start justify-between gap-3">
-                    <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-lg">
+                    <span className="inline-flex size-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] shadow-sm">
                       <CourseIcon cat={c.cat} />
                     </span>
                     <span
                       className={`rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
                         c.price === "free"
-                          ? "bg-emerald-500/15 text-emerald-300 border border-emerald-400/30"
-                          : "bg-[#d7aa52]/15 text-[#f3d28a] border border-[#d7aa52]/40"
+                          ? "bg-emerald-500/12 text-emerald-700 border border-emerald-500/30"
+                          : "bg-[#A88765]/15 text-[#7c6045] border border-[#A88765]/40"
                       }`}
                     >
                       {c.price === "free"
@@ -272,30 +272,32 @@ function CoursesPage() {
                         : t.library.priceLabels.paid[lang]}
                     </span>
                   </div>
-                  <h3 className="mt-3 text-sm font-extrabold leading-snug text-white">{c[lang]}</h3>
-                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-white/70">
+                  <h3 className="mt-3 font-display text-sm font-extrabold leading-snug text-[#1C1B19]">
+                    {c[lang]}
+                  </h3>
+                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-[#6B6259]">
                     {c.desc[lang]}
                   </p>
 
-                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-white/65">
+                  <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[10px] font-semibold text-[#6B6259]">
                     <span className="inline-flex items-center gap-1">
-                      <Layers className="size-3 text-[#d7aa52]" />
+                      <Layers className="size-3 text-[#A88765]" />
                       {t.library.cats[c.cat as Exclude<CatKey, "all">][lang]}
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <Clock className="size-3 text-[#d7aa52]" />
+                      <Clock className="size-3 text-[#A88765]" />
                       {c.hours}h · {c.lessons} {t.library.lessons[lang]}
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <Globe className="size-3 text-[#d7aa52]" />
+                      <Globe className="size-3 text-[#A88765]" />
                       {c.lang.toUpperCase()}
                     </span>
                     <span
-                      className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white"
+                      className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-[#1C1B19]"
                       style={{
-                        background: `${platform.color}33`,
-                        border: `1px solid ${platform.color}66`,
-                        color: platform.color === "#6b7280" ? "#cbd5e1" : "#fff",
+                        background: `${platform.color}1a`,
+                        border: `1px solid ${platform.color}55`,
+                        color: platform.color === "#6b7280" ? "#4b5563" : platform.color,
                       }}
                     >
                       <span>{platform.icon}</span> {platform.name}
@@ -307,7 +309,7 @@ function CoursesPage() {
                       <button
                         type="button"
                         disabled
-                        className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-white/50"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/25 bg-[#A88765]/[0.06] px-3 py-1.5 text-[11px] font-bold text-[#8a8078]"
                       >
                         <Clock className="size-3" />
                         {lang === "ar" ? "قريباً" : "Coming soon"}
@@ -317,7 +319,7 @@ function CoursesPage() {
                         href={platform.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2 text-[11px] font-bold text-[#04101f] transition-transform hover:scale-105"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-[11px] font-bold text-[#1C1B19] transition-transform hover:scale-105"
                       >
                         <PlayCircle className="size-3.5" />
                         {t.library.start[lang]}
@@ -332,7 +334,7 @@ function CoursesPage() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-10 text-center text-sm text-white/60">
+          <div className="mt-10 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center text-sm text-[#6B6259]">
             {t.library.noResults[lang]}
           </div>
         )}

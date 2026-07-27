@@ -59,11 +59,11 @@ export function AdminHeader() {
     `inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-bold transition-all ${
       pathname === path
         ? "border-emerald-400/50 bg-emerald-400/15 text-emerald-100"
-        : "border-[#d7aa52]/30 bg-white/[0.03] text-[#f3d28a]/90 hover:bg-[#d7aa52]/10"
+        : "border-[#A88765]/30 bg-white/[0.03] text-[#c9a986]/90 hover:bg-[#A88765]/10"
     }`;
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#d7aa52]/15 bg-[#04101f]/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-[#A88765]/15 bg-[#151412]/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-2.5 sm:px-6">
         <nav className="flex flex-wrap items-center gap-2">
           <Link to="/" className={linkCls("__home__")}>
@@ -101,8 +101,8 @@ export function AdminHeader() {
         </nav>
         <div className="flex items-center gap-2">
           {user?.email && (
-            <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#d7aa52]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-white/75 md:inline-flex">
-              <UserCircle className="size-3.5 shrink-0 text-[#f3d28a]" />
+            <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#A88765]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#D8D1C8] md:inline-flex">
+              <UserCircle className="size-3.5 shrink-0 text-[#c9a986]" />
               <span className="truncate" dir="ltr">
                 {user.email}
               </span>

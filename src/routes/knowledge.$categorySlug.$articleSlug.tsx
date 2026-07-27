@@ -378,7 +378,7 @@ function ArticlePage() {
   if (!article.data) {
     return (
       <KnowledgeShell>
-        <div className="mx-auto max-w-3xl px-4 py-20 text-center text-white/60">
+        <div className="mx-auto max-w-3xl px-4 py-20 text-center text-[#D8D1C8]">
           {article.isLoading ? "جاري التحميل..." : "المقال غير موجود."}
         </div>
       </KnowledgeShell>
@@ -446,24 +446,24 @@ function ArticlePage() {
 
       <article className="mx-auto max-w-6xl px-4 pt-10 sm:px-6 print:max-w-full print:px-0">
         {/* breadcrumb */}
-        <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-white/55">
-          <Link to="/knowledge" className="hover:text-[#f3d28a]">
+        <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-[#D8D1C8]">
+          <Link to="/knowledge" className="hover:text-[#c9a986]">
             المكتبة
           </Link>
           <ChevronLeft className="size-3" />
           <Link
             to="/knowledge/$categorySlug"
             params={{ categorySlug }}
-            className="hover:text-[#f3d28a]"
+            className="hover:text-[#c9a986]"
           >
             {cat.data?.name_ar ?? categorySlug}
           </Link>
           <ChevronLeft className="size-3" />
-          <span className="text-white/80">{a.title_ar}</span>
+          <span className="text-[#FCFBF9]">{a.title_ar}</span>
         </nav>
 
         {/* Header */}
-        <header className="overflow-hidden rounded-3xl border border-[#d7aa52]/25 bg-[#07182c]">
+        <header className="overflow-hidden rounded-3xl border border-[#A88765]/25 bg-[#1C1B19]">
           {a.featured_image && (
             <img
               src={a.featured_image}
@@ -474,30 +474,30 @@ function ArticlePage() {
             />
           )}
           <div className="p-6 sm:p-8">
-            <h1 className="text-2xl font-black leading-snug text-white sm:text-4xl">
+            <h1 className="font-display text-2xl font-extrabold leading-snug text-[#FCFBF9] sm:text-4xl">
               {a.title_ar}
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-white/70 sm:text-base">
+            <p className="mt-3 text-sm leading-relaxed text-[#D8D1C8] sm:text-base">
               {a.excerpt_ar}
             </p>
-            <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-white/60">
+            <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-[#D8D1C8]">
               <span className="inline-flex items-center gap-1.5">
-                <User className="size-3.5 text-[#d7aa52]" /> {a.author_name}
+                <User className="size-3.5 text-[#c9a986]" /> {a.author_name}
                 {a.author_title ? ` · ${a.author_title}` : ""}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Calendar className="size-3.5 text-[#d7aa52]" />
+                <Calendar className="size-3.5 text-[#c9a986]" />
                 نُشر {publishedDate.toLocaleDateString("ar-SA")}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Calendar className="size-3.5 text-[#d7aa52]" />
+                <Calendar className="size-3.5 text-[#c9a986]" />
                 آخر تحديث {updatedDate.toLocaleDateString("ar-SA")}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Clock className="size-3.5 text-[#d7aa52]" /> {a.reading_minutes} دقائق قراءة
+                <Clock className="size-3.5 text-[#c9a986]" /> {a.reading_minutes} دقائق قراءة
               </span>
               <span className="inline-flex items-center gap-1">
-                <Star className="size-3.5 fill-[#f3d28a] text-[#f3d28a]" />
+                <Star className="size-3.5 fill-[#c9a986] text-[#c9a986]" />
                 {avg ? avg.toFixed(1) : "—"} ({ratingCount})
               </span>
             </div>
@@ -505,7 +505,7 @@ function ArticlePage() {
         </header>
 
         {/* Toolbar */}
-        <div className="sticky top-14 z-20 my-4 flex flex-wrap items-center gap-2 rounded-2xl border border-[#d7aa52]/20 bg-[#04101f]/80 px-4 py-2 backdrop-blur print:hidden">
+        <div className="sticky top-14 z-20 my-4 flex flex-wrap items-center gap-2 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19]/85 px-4 py-2 backdrop-blur print:hidden">
           <ToolBtn onClick={() => share("tw")} icon={<Twitter className="size-3.5" />} label="X" />
           <ToolBtn
             onClick={() => share("li")}
@@ -523,7 +523,7 @@ function ArticlePage() {
             onClick={toggleBookmark}
             icon={
               <Bookmark
-                className={`size-3.5 ${bookmarked.data ? "fill-[#f3d28a] text-[#f3d28a]" : ""}`}
+                className={`size-3.5 ${bookmarked.data ? "fill-[#c9a986] text-[#c9a986]" : ""}`}
               />
             }
             label={bookmarked.data ? "محفوظ" : "حفظ"}
@@ -550,7 +550,7 @@ function ArticlePage() {
                 aria-label={`${n} نجوم`}
               >
                 <Star
-                  className={`size-4 ${n <= myRating ? "fill-[#f3d28a] text-[#f3d28a]" : "text-white/40"}`}
+                  className={`size-4 ${n <= myRating ? "fill-[#c9a986] text-[#c9a986]" : "text-white/40"}`}
                 />
               </button>
             ))}
@@ -561,8 +561,8 @@ function ArticlePage() {
         <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
           {/* TOC sidebar */}
           <aside className="hidden lg:block">
-            <div className="sticky top-32 rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] p-4">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#d7aa52]">
+            <div className="sticky top-32 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-4">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#7c6045]">
                 المحتويات
               </h3>
               <ul className="mt-3 space-y-2 text-sm">
@@ -570,7 +570,7 @@ function ArticlePage() {
                   <li key={i}>
                     <a
                       href={`#${slugifyHeading(s.heading, i)}`}
-                      className="block rounded px-2 py-1 text-white/70 transition-colors hover:bg-white/5 hover:text-[#f3d28a]"
+                      className="block rounded px-2 py-1 text-[#4a453e] transition-colors hover:bg-[#A88765]/10 hover:text-[#7c6045]"
                     >
                       {s.heading}
                     </a>
@@ -580,7 +580,7 @@ function ArticlePage() {
                   <li>
                     <a
                       href="#faq"
-                      className="block rounded px-2 py-1 text-white/70 transition-colors hover:bg-white/5 hover:text-[#f3d28a]"
+                      className="block rounded px-2 py-1 text-[#4a453e] transition-colors hover:bg-[#A88765]/10 hover:text-[#7c6045]"
                     >
                       الأسئلة الشائعة
                     </a>
@@ -590,7 +590,7 @@ function ArticlePage() {
                   <li>
                     <a
                       href="#refs"
-                      className="block rounded px-2 py-1 text-white/70 transition-colors hover:bg-white/5 hover:text-[#f3d28a]"
+                      className="block rounded px-2 py-1 text-[#4a453e] transition-colors hover:bg-[#A88765]/10 hover:text-[#7c6045]"
                     >
                       المراجع
                     </a>
@@ -601,12 +601,12 @@ function ArticlePage() {
           </aside>
 
           {/* Article content */}
-          <div className="article-body min-w-0 leading-loose text-white/85">
+          <div className="article-body min-w-0 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-6 leading-loose text-[#1C1B19] sm:p-8">
             {sections.map((s, i) => (
               <section key={i} className="mb-8 scroll-mt-32" id={slugifyHeading(s.heading, i)}>
-                <h2 className="mb-3 text-2xl font-bold text-white">{s.heading}</h2>
+                <h2 className="mb-3 font-display text-2xl font-bold text-[#1C1B19]">{s.heading}</h2>
                 {sectionParagraphs(s).map((p, j) => (
-                  <p key={j} className="mb-3 text-[15px] leading-loose text-white/80">
+                  <p key={j} className="mb-3 text-[15px] leading-loose text-[#2e2a25]">
                     {p}
                   </p>
                 ))}
@@ -616,25 +616,48 @@ function ArticlePage() {
             {/* FAQ */}
             {faq.length > 0 && (
               <section id="faq" className="mb-10 scroll-mt-32">
-                <h2 className="mb-4 text-2xl font-bold text-white">الأسئلة الشائعة</h2>
+                <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">
+                  الأسئلة الشائعة
+                </h2>
                 <Accordion
                   type="multiple"
-                  className="rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] px-4"
+                  className="rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] px-4"
                 >
                   {faq.map((f, i) => (
-                    <AccordionItem key={i} value={`f-${i}`} className="border-[#d7aa52]/10">
-                      <AccordionTrigger className="text-right text-white">{f.q}</AccordionTrigger>
-                      <AccordionContent className="text-white/75">{f.a}</AccordionContent>
+                    <AccordionItem key={i} value={`f-${i}`} className="border-[#A88765]/15">
+                      <AccordionTrigger className="text-right text-[#1C1B19]">
+                        {f.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#6B6259]">{f.a}</AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
               </section>
             )}
 
+            {/* Service CTA */}
+            <section className="mb-10 flex flex-col items-start gap-4 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-6 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="font-display text-lg font-bold text-[#1C1B19]">
+                  تحتاج مساعدة في تطبيق هذا على منشأتك؟
+                </h2>
+                <p className="mt-1 text-sm text-[#6B6259]">
+                  اطلب استشارة أو خدمة محاسبية مباشرة — سأتواصل معك شخصيًا.
+                </p>
+              </div>
+              <Link
+                to="/request-service"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-5 py-2.5 text-sm font-bold text-[#1C1B19] transition-transform hover:scale-[1.03]"
+              >
+                <MessageCircle className="size-4" />
+                اطلب خدمة
+              </Link>
+            </section>
+
             {/* References */}
             {refs.length > 0 && (
               <section id="refs" className="mb-10 scroll-mt-32">
-                <h2 className="mb-4 text-2xl font-bold text-white">المراجع</h2>
+                <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">المراجع</h2>
                 <ul className="space-y-2">
                   {refs.map((r, i) => (
                     <li key={i}>
@@ -642,7 +665,7 @@ function ArticlePage() {
                         href={r.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm text-[#f3d28a] hover:underline"
+                        className="inline-flex items-center gap-1.5 text-sm text-[#7c6045] hover:underline"
                       >
                         <ExternalLink className="size-3.5" /> {r.label ?? r.title}
                       </a>
@@ -655,7 +678,9 @@ function ArticlePage() {
             {/* Internal links (automatic) */}
             {(internalLinks.data?.length ?? 0) > 0 && (
               <section className="mb-10">
-                <h2 className="mb-4 text-2xl font-bold text-white">روابط داخلية</h2>
+                <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">
+                  روابط داخلية
+                </h2>
                 <ul className="grid gap-2 sm:grid-cols-2">
                   {internalLinks.data!.map((l, i) => (
                     <li key={i}>
@@ -665,7 +690,7 @@ function ArticlePage() {
                           categorySlug,
                           articleSlug: l.target!.slug,
                         }}
-                        className="block rounded-xl border border-[#d7aa52]/15 bg-white/[0.03] px-4 py-3 text-sm text-white/85 transition-colors hover:border-[#d7aa52]/40 hover:text-[#f3d28a]"
+                        className="block rounded-xl border border-[#A88765]/20 bg-[#F5F1EB] px-4 py-3 text-sm text-[#1C1B19] transition-colors hover:border-[#A88765]/50 hover:text-[#7c6045]"
                       >
                         {l.anchor || l.target!.title_ar}
                       </Link>
@@ -678,7 +703,9 @@ function ArticlePage() {
             {/* Related */}
             {(related.data?.length ?? 0) > 0 && (
               <section className="mb-12">
-                <h2 className="mb-4 text-2xl font-bold text-white">مقالات ذات صلة</h2>
+                <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">
+                  مقالات ذات صلة
+                </h2>
                 <div className="grid gap-4 sm:grid-cols-3">
                   {related.data!.map((r) => (
                     <Link
@@ -688,7 +715,7 @@ function ArticlePage() {
                         categorySlug: cat.data?.id === r.category_id ? categorySlug : categorySlug,
                         articleSlug: r.slug,
                       }}
-                      className="group overflow-hidden rounded-2xl border border-[#d7aa52]/15 bg-white/[0.03] transition-all hover:border-[#d7aa52]/40"
+                      className="group overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] transition-all hover:border-[#A88765]/50 hover:shadow-lg"
                     >
                       {r.featured_image && (
                         <img
@@ -699,10 +726,10 @@ function ArticlePage() {
                         />
                       )}
                       <div className="p-3">
-                        <h4 className="line-clamp-2 text-sm font-bold text-white group-hover:text-[#f3d28a]">
+                        <h4 className="line-clamp-2 font-display text-sm font-bold text-[#1C1B19] group-hover:text-[#7c6045]">
                           {r.title_ar}
                         </h4>
-                        <div className="mt-1 inline-flex items-center gap-1 text-[11px] text-white/45">
+                        <div className="mt-1 inline-flex items-center gap-1 text-[11px] text-[#8a8078]">
                           <Clock className="size-3" /> {r.reading_minutes} د
                         </div>
                       </div>
@@ -733,7 +760,7 @@ function ToolBtn({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/15 disabled:opacity-60"
+      className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/30 bg-white/[0.04] px-3 py-1.5 text-[11px] font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 disabled:opacity-60"
     >
       {icon}
       {label}

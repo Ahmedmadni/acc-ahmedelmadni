@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "@tanstack/react-router";
-import { FileSpreadsheet, Landmark, FileBarChart, BookOpen, ArrowLeft, ArrowRight, Play } from "lucide-react";
+import { FileSpreadsheet, Landmark, FileBarChart, BookOpen, ArrowUpLeft, Play } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { useMotionSafe } from "@/lib/motion";
 
 type Topic = {
   icon: typeof FileSpreadsheet;
@@ -77,8 +78,8 @@ function VideoBrowser({ lang }: { lang: Lang }) {
   const current = VIDEOS[active];
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
-      <div className="relative aspect-video overflow-hidden rounded-2xl border border-[#d7aa52]/25 bg-black">
+    <div className="grid gap-4 sm:grid-cols-[1fr_150px] lg:grid-cols-1 xl:grid-cols-[1fr_160px]">
+      <div className="relative aspect-video overflow-hidden rounded-2xl border border-[#E3DDD5] bg-[#1C1B19]">
         {playing ? (
           <iframe
             key={current.id}
@@ -103,20 +104,20 @@ function VideoBrowser({ lang }: { lang: Lang }) {
               decoding="async"
               className="size-full object-cover"
             />
-            <span className="absolute inset-0 bg-black/35 transition-colors group-hover:bg-black/25" />
+            <span className="absolute inset-0 bg-[#1C1B19]/40 transition-colors group-hover:bg-[#1C1B19]/25" />
             <span className="absolute inset-0 flex items-center justify-center">
-              <span className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-[0_8px_30px_-8px_rgba(215,170,82,0.7)] transition-transform group-hover:scale-110">
+              <span className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] shadow-[0_18px_40px_-16px_rgba(74,48,35,0.7)] transition-transform group-hover:scale-110">
                 <Play className="size-7 translate-x-0.5 fill-current" />
               </span>
             </span>
-            <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-start text-sm font-bold text-white">
+            <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#1C1B19]/85 to-transparent p-4 text-start text-sm font-semibold text-[#FCFBF9]">
               {lang === "ar" ? current.ar : current.en}
             </span>
           </button>
         )}
       </div>
 
-      <div className="flex gap-3 overflow-x-auto lg:flex-col lg:overflow-visible">
+      <div className="flex gap-3 overflow-x-auto sm:flex-col sm:overflow-visible lg:flex-row lg:overflow-x-auto xl:flex-col xl:overflow-visible">
         {VIDEOS.map((v, i) => (
           <button
             key={v.id}
@@ -125,10 +126,10 @@ function VideoBrowser({ lang }: { lang: Lang }) {
               setActive(i);
               setPlaying(false);
             }}
-            className={`flex shrink-0 items-center gap-3 rounded-xl border p-2 text-start transition-all lg:shrink ${
+            className={`flex shrink-0 items-center gap-3 rounded-xl border p-2 text-start transition-all sm:shrink ${
               i === active
-                ? "border-[#d7aa52]/70 bg-[#d7aa52]/10"
-                : "border-white/10 bg-white/[0.02] hover:border-[#d7aa52]/40"
+                ? "border-[#A88765]/70 bg-[#A88765]/10"
+                : "border-[#E3DDD5] bg-white hover:border-[#A88765]/50"
             }`}
           >
             <img
@@ -138,7 +139,7 @@ function VideoBrowser({ lang }: { lang: Lang }) {
               decoding="async"
               className="h-12 w-20 shrink-0 rounded-lg object-cover"
             />
-            <span className="line-clamp-2 text-xs font-semibold text-white/90">
+            <span className="line-clamp-2 text-xs font-semibold text-[#1C1B19]">
               {lang === "ar" ? v.ar : v.en}
             </span>
           </button>
@@ -149,60 +150,92 @@ function VideoBrowser({ lang }: { lang: Lang }) {
 }
 
 export default function TopicsAndVideos({ lang }: { lang: Lang }) {
-  const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
+  const ar = lang === "ar";
+  const m = useMotionSafe();
 
   return (
-    <section className="relative py-12">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <div className="mb-8 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
-            {lang === "ar" ? "أبرز المواضيع" : "Featured topics"}
-          </span>
-          <h2 className="mt-3 text-2xl font-black md:text-3xl" style={{ color: "var(--fg)" }}>
-            {lang === "ar" ? "أكثر ما يبحث عنه عملائي" : "What clients ask about most"}
-          </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-sm" style={{ color: "var(--fg-soft)" }}>
-            {lang === "ar"
+    <section className="relative overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={m.staggerParent}
+          className="max-w-2xl"
+        >
+          <motion.p
+            variants={m.staggerChild}
+            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
+          >
+            {ar ? "أبرز المواضيع" : "Featured topics"}
+          </motion.p>
+          <motion.h2
+            variants={m.staggerChild}
+            className="font-display mt-3 text-[1.9rem] font-bold leading-[1.3] text-[#1C1B19] sm:text-[2.4rem] lg:text-[2.9rem]"
+          >
+            {ar ? "أكثر ما يبحث عنه عملائي" : "What clients ask about most"}
+          </motion.h2>
+          <motion.p
+            variants={m.staggerChild}
+            className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]"
+          >
+            {ar
               ? "روابط مباشرة لأهم الخدمات والأدوات، مع فيديوهات مختصرة تشرح كل موضوع."
               : "Direct links to the most-used services and tools, with short videos explaining each topic."}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {TOPICS.map((topic, i) => {
-            const Icon = topic.icon;
-            return (
-              <motion.div
-                key={topic.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-              >
-                <Link
-                  to={topic.href}
-                  className="group flex h-full flex-col rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/80 to-[#04101f]/90 p-5 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/60 hover:shadow-[0_20px_50px_-20px_rgba(215,170,82,0.45)]"
-                >
-                  <span className="mb-3 inline-flex size-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]">
-                    <Icon className="size-5" />
-                  </span>
-                  <h3 className="text-sm font-extrabold" style={{ color: "var(--fg)" }}>
-                    {lang === "ar" ? topic.ar : topic.en}
-                  </h3>
-                  <p className="mt-1.5 flex-1 text-xs leading-relaxed" style={{ color: "var(--fg-soft)" }}>
-                    {lang === "ar" ? topic.descAr : topic.descEn}
-                  </p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[#f3d28a]">
-                    {lang === "ar" ? "ابدأ الآن" : "Get started"}
-                    <Arrow className="size-3.5 transition-transform group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </div>
+        {/* Featured video + editorial topic index */}
+        <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-12">
+          <motion.div
+            initial={m.reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7"
+          >
+            <VideoBrowser lang={lang} />
+          </motion.div>
 
-        <VideoBrowser lang={lang} />
+          <motion.ol
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={m.staggerParent}
+            className="border-b border-[#E3DDD5] lg:col-span-5"
+          >
+            {TOPICS.map((topic) => {
+              const Icon = topic.icon;
+              return (
+                <motion.li key={topic.href} variants={m.staggerChild}>
+                  <Link
+                    to={topic.href}
+                    className="group flex items-start gap-4 border-t border-[#E3DDD5] py-5 transition-colors hover:bg-white/60"
+                  >
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-[#E3DDD5] bg-white text-[#A88765] transition-colors duration-300 group-hover:border-[#A88765]/60 group-hover:text-[#7c6045]">
+                      <Icon className="size-5" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="flex items-start justify-between gap-3">
+                        <span className="font-display text-[15px] font-bold leading-snug text-[#1C1B19] sm:text-base">
+                          {ar ? topic.ar : topic.en}
+                        </span>
+                        <ArrowUpLeft
+                          aria-hidden
+                          className="mt-0.5 size-4 shrink-0 -translate-x-1 text-[#A88765] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 ltr:rotate-90"
+                        />
+                      </span>
+                      <span className="mt-1 block text-[13px] leading-[1.7] text-[#746E67]">
+                        {ar ? topic.descAr : topic.descEn}
+                      </span>
+                    </span>
+                  </Link>
+                </motion.li>
+              );
+            })}
+          </motion.ol>
+        </div>
       </div>
     </section>
   );

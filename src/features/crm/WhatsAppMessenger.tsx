@@ -188,7 +188,7 @@ export function WhatsAppMessenger() {
       {/* LEFT */}
       <div className="space-y-4">
         <div className="flex items-center justify-between flex-wrap gap-2">
-          <h3 className="text-sm font-extrabold text-[#f3d28a]">اختر المستلمين</h3>
+          <h3 className="font-display text-sm font-extrabold text-[#c9a986]">اختر المستلمين</h3>
           <div className="flex gap-2 items-center">
             <button
               onClick={() => setFilterVat((p) => !p)}
@@ -200,7 +200,7 @@ export function WhatsAppMessenger() {
             >
               🧾 VAT فقط
             </button>
-            <button onClick={selectAll} className="text-xs text-[#f3d28a] hover:underline">
+            <button onClick={selectAll} className="text-xs text-[#c9a986] hover:underline">
               تحديد الكل
             </button>
             <button onClick={clearAll} className="text-xs text-[var(--fg-soft)] hover:underline">
@@ -219,25 +219,25 @@ export function WhatsAppMessenger() {
               key={client.id}
               className={`flex items-center gap-3 rounded-xl border p-3 cursor-pointer transition ${
                 selectedClients.includes(client.id)
-                  ? "border-emerald-400/50 bg-emerald-400/10"
-                  : "border-white/10 bg-white/[0.03] hover:border-white/20"
+                  ? "border-emerald-500/50 bg-emerald-500/10"
+                  : "border-[#A88765]/20 bg-[#FCFBF9] hover:border-[#A88765]/40"
               }`}
             >
               <input
                 type="checkbox"
                 checked={selectedClients.includes(client.id)}
                 onChange={() => toggleClient(client.id)}
-                className="w-4 h-4 accent-[#d7aa52]"
+                className="w-4 h-4 accent-[#A88765]"
               />
               <div className="flex-1 min-w-0">
-                <div className="text-sm font-bold text-white truncate">{client.full_name}</div>
-                <div className="text-xs text-[var(--fg-soft)] truncate">
+                <div className="text-sm font-bold text-[#1C1B19] truncate">{client.full_name}</div>
+                <div className="text-xs text-[#6B6259] truncate">
                   {client.phone}
                   {client.company_name && ` · ${client.company_name}`}
                 </div>
               </div>
               {client.vat_registered && (
-                <span className="text-[10px] text-amber-300 font-bold">VAT</span>
+                <span className="text-[10px] text-amber-700 font-bold">VAT</span>
               )}
               <button
                 onClick={(e) => {
@@ -266,35 +266,35 @@ export function WhatsAppMessenger() {
 
       {/* RIGHT */}
       <div className="space-y-4">
-        <h3 className="text-sm font-extrabold text-[#f3d28a]">الرسالة</h3>
+        <h3 className="font-display text-sm font-extrabold text-[#c9a986]">الرسالة</h3>
 
         <div className="relative">
           <select
             value={templateId}
             onChange={(e) => setTemplateId(e.target.value)}
-            className="w-full appearance-none rounded-xl border border-[#d7aa52]/25 bg-[#04101f] px-4 py-3 text-sm text-[#f3d28a] outline-none focus:border-[#d7aa52]/60 pl-10"
+            className="w-full appearance-none rounded-xl border border-[#A88765]/25 bg-[#1C1B19] px-4 py-3 text-sm text-[#c9a986] outline-none focus:border-[#A88765]/60 pl-10"
           >
-            <optgroup label="قوالب جاهزة" className="bg-[#04101f]">
+            <optgroup label="قوالب جاهزة" className="bg-[#1C1B19]">
               {VAT_TEMPLATES.filter((t) => t.id !== "custom").map((t) => (
-                <option key={t.id} value={t.id} className="bg-[#04101f] text-white">
+                <option key={t.id} value={t.id} className="bg-[#1C1B19] text-white">
                   {t.label}
                 </option>
               ))}
             </optgroup>
             {savedTemplates && savedTemplates.length > 0 && (
-              <optgroup label="رسائلي المحفوظة" className="bg-[#04101f]">
+              <optgroup label="رسائلي المحفوظة" className="bg-[#1C1B19]">
                 {savedTemplates.map((t) => (
-                  <option key={t.id} value={t.id} className="bg-[#04101f] text-white">
+                  <option key={t.id} value={t.id} className="bg-[#1C1B19] text-white">
                     {t.label}
                   </option>
                 ))}
               </optgroup>
             )}
-            <option value="custom" className="bg-[#04101f] text-white">
+            <option value="custom" className="bg-[#1C1B19] text-white">
               ✏️ رسالة مخصصة جديدة
             </option>
           </select>
-          <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#f3d28a]/50" />
+          <ChevronDown className="pointer-events-none absolute top-1/2 -translate-y-1/2 left-3 w-4 h-4 text-[#A88765]/60" />
         </div>
 
         <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
@@ -337,7 +337,7 @@ export function WhatsAppMessenger() {
                     type="checkbox"
                     checked={saveAsTemplate}
                     onChange={(e) => setSaveAsTemplate(e.target.checked)}
-                    className="w-4 h-4 accent-[#d7aa52]"
+                    className="w-4 h-4 accent-[#A88765]"
                   />
                   حفظ هذه الرسالة في قائمة الرسائل للاستخدام لاحقاً
                 </label>
@@ -346,7 +346,7 @@ export function WhatsAppMessenger() {
                     value={newTemplateLabel}
                     onChange={(e) => setNewTemplateLabel(e.target.value)}
                     placeholder="اسم الرسالة (يظهر في القائمة)"
-                    className="w-full rounded-lg border border-[#d7aa52]/25 bg-[#04101f] px-3 py-2 text-xs text-white outline-none focus:border-[#d7aa52]/60"
+                    className="w-full rounded-lg border border-[#A88765]/25 bg-[#1C1B19] px-3 py-2 text-xs text-white outline-none focus:border-[#A88765]/60"
                   />
                 )}
               </div>

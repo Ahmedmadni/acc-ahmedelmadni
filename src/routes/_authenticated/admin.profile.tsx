@@ -60,18 +60,18 @@ export const Route = createFileRoute("/_authenticated/admin/profile")({
 
 function AdminProfilePage() {
   return (
-    <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
-      <div className="w-full border-b border-[#d7aa52]/20 px-4 py-4 sm:px-8 lg:px-16">
+    <div dir="rtl" className="min-h-screen bg-[#151412] text-[#FCFBF9]">
+      <div className="w-full border-b border-[#A88765]/20 px-4 py-4 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <UserCircle2 className="size-5 text-[#f3d28a]" />
-            <h1 className="text-base font-extrabold text-[#f3d28a]">
+            <UserCircle2 className="size-5 text-[#c9a986]" />
+            <h1 className="font-display text-base font-extrabold text-[#c9a986]">
               إدارة الشهادات والخبرات والمهارات
             </h1>
           </div>
           <Link
             to="/about"
-            className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15"
+            className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15"
           >
             عرض الصفحة
           </Link>
@@ -80,7 +80,7 @@ function AdminProfilePage() {
 
       <div className="w-full px-4 sm:px-8 lg:px-16 py-8">
         <Tabs defaultValue="certifications" className="w-full">
-          <TabsList className="bg-[#07182c] border border-[#d7aa52]/20">
+          <TabsList className="bg-[#1C1B19] border border-[#A88765]/20">
             <TabsTrigger value="certifications">الشهادات والدورات</TabsTrigger>
             <TabsTrigger value="experience">الخبرات العملية</TabsTrigger>
             <TabsTrigger value="skills">المهارات</TabsTrigger>
@@ -137,7 +137,7 @@ function TextListField({
           )
         }
         placeholder={placeholder ?? "سطر لكل عنصر"}
-        className="bg-[#04101f] border-[#d7aa52]/20"
+        className="bg-[#24211E] border-[#A88765]/25"
       />
     </Field>
   );
@@ -240,7 +240,7 @@ function ImageUploadField({
   return (
     <Field label={label}>
       <div className="flex items-center gap-3">
-        <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[#d7aa52]/25 bg-white/5">
+        <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[#A88765]/25 bg-white/5">
           {value ? (
             <img src={value} alt="" className="size-full object-cover" />
           ) : (
@@ -255,7 +255,7 @@ function ImageUploadField({
             const f = e.target.files?.[0];
             if (f) onFile(f);
           }}
-          className="block flex-1 text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#f3d28a] file:to-[#b8862e] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#04101f]"
+          className="block flex-1 text-xs text-white/80 file:mr-2 file:rounded-full file:border-0 file:bg-gradient-to-br file:from-[#c2a079] file:to-[#7c6045] file:px-3 file:py-1.5 file:text-xs file:font-bold file:text-[#1C1B19]"
         />
       </div>
       {busy && <p className="text-xs text-white/60">جارٍ الرفع...</p>}
@@ -349,16 +349,16 @@ function CertificationsPanel() {
         </div>
         <Button
           onClick={openCreate}
-          className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90"
+          className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] hover:opacity-90"
         >
           <Plus className="size-4" />
           إضافة شهادة
         </Button>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
+      <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
         <table className="w-full text-sm">
-          <thead className="bg-white/[0.04] text-right text-white/60">
+          <thead className="bg-[#F5F1EB] text-right text-[#6B6259]">
             <tr>
               <th className="p-3">الصورة</th>
               <th className="p-3">العنوان</th>
@@ -371,42 +371,42 @@ function CertificationsPanel() {
           <tbody>
             {isLoading && (
               <tr>
-                <td colSpan={6} className="p-6 text-center text-white/40">
+                <td colSpan={6} className="p-6 text-center text-[#8a8078]">
                   جارٍ التحميل...
                 </td>
               </tr>
             )}
             {isError && (
               <tr>
-                <td colSpan={6} className="p-6 text-center text-red-300">
+                <td colSpan={6} className="p-6 text-center text-red-600">
                   تعذّر تحميل الشهادات. حاول تحديث الصفحة.
                 </td>
               </tr>
             )}
             {!isLoading && !isError && items.length === 0 && (
               <tr>
-                <td colSpan={6} className="p-6 text-center text-white/40">
+                <td colSpan={6} className="p-6 text-center text-[#8a8078]">
                   لا توجد شهادات بعد. اضغط "إضافة" لبدء الإضافة.
                 </td>
               </tr>
             )}
             {items.map((it) => (
-              <tr key={it.id} className="border-t border-white/5">
+              <tr key={it.id} className="border-t border-[#A88765]/10">
                 <td className="p-3">
-                  <div className="flex size-10 items-center justify-center overflow-hidden rounded-lg border border-[#d7aa52]/20 bg-white/5">
+                  <div className="flex size-10 items-center justify-center overflow-hidden rounded-lg border border-[#A88765]/20 bg-[#F5F1EB]">
                     {it.image_url ? (
                       <img src={it.image_url} alt="" className="size-full object-cover" />
                     ) : (
-                      <ImageIcon className="size-4 text-white/25" />
+                      <ImageIcon className="size-4 text-[#8a8078]" />
                     )}
                   </div>
                 </td>
                 <td className="p-3">
-                  <div className="font-bold text-white">{it.title_ar}</div>
-                  {it.title_en && <div className="text-xs text-white/40">{it.title_en}</div>}
+                  <div className="font-bold text-[#1C1B19]">{it.title_ar}</div>
+                  {it.title_en && <div className="text-xs text-[#8a8078]">{it.title_en}</div>}
                 </td>
-                <td className="p-3 text-xs text-white/60">{it.issuer_ar ?? "—"}</td>
-                <td className="p-3 text-xs text-white/60">{it.issue_date ?? "—"}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{it.issuer_ar ?? "—"}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{it.issue_date ?? "—"}</td>
                 <td className="p-3">
                   <Switch
                     checked={it.is_published}
@@ -421,7 +421,7 @@ function CertificationsPanel() {
                       aria-label={`تعديل ${it.title_ar}`}
                       onClick={() => openEdit(it)}
                     >
-                      <Pencil className="size-4 text-[#f3d28a]" />
+                      <Pencil className="size-4 text-[#7c6045]" />
                     </Button>
                     <Button
                       variant="ghost"
@@ -431,7 +431,7 @@ function CertificationsPanel() {
                         if (confirm(`حذف "${it.title_ar}"؟`)) delMut.mutate(it.id);
                       }}
                     >
-                      <Trash2 className="size-4 text-red-400" />
+                      <Trash2 className="size-4 text-red-600" />
                     </Button>
                   </div>
                 </td>
@@ -443,11 +443,11 @@ function CertificationsPanel() {
 
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent
-          className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl"
+          className="max-h-[90vh] overflow-y-auto bg-[#1C1B19] text-[#FCFBF9] sm:max-w-2xl"
           dir="rtl"
         >
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">
+            <DialogTitle className="text-[#c9a986]">
               {editing?.id ? "تعديل شهادة" : "إضافة شهادة"}
             </DialogTitle>
           </DialogHeader>
@@ -458,42 +458,42 @@ function CertificationsPanel() {
                   <Input
                     value={editing.title_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, title_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="العنوان (إنجليزي) *">
                   <Input
                     value={editing.title_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, title_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الجهة المانحة (عربي)">
                   <Input
                     value={editing.issuer_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, issuer_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الجهة المانحة (إنجليزي)">
                   <Input
                     value={editing.issuer_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, issuer_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="التاريخ (نص حر، مثال: 2024)">
                   <Input
                     value={editing.issue_date ?? ""}
                     onChange={(e) => setEditing({ ...editing, issue_date: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="رابط التحقق من الشهادة (اختياري)">
                   <Input
                     value={editing.credential_url ?? ""}
                     onChange={(e) => setEditing({ ...editing, credential_url: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                     placeholder="https://"
                   />
                 </Field>
@@ -519,7 +519,7 @@ function CertificationsPanel() {
             <Button
               onClick={() => editing && saveMut.mutate(editing)}
               disabled={saveMut.isPending || !editing?.title_ar || !editing?.title_en}
-              className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
             >
               {saveMut.isPending ? "جارٍ الحفظ..." : "حفظ"}
             </Button>
@@ -620,16 +620,16 @@ function ExperiencePanel() {
         </div>
         <Button
           onClick={openCreate}
-          className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90"
+          className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] hover:opacity-90"
         >
           <Plus className="size-4" />
           إضافة خبرة
         </Button>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
+      <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
         <table className="w-full text-sm">
-          <thead className="bg-white/[0.04] text-right text-white/60">
+          <thead className="bg-[#F5F1EB] text-right text-[#6B6259]">
             <tr>
               <th className="p-3">الوظيفة</th>
               <th className="p-3">الجهة</th>
@@ -641,33 +641,33 @@ function ExperiencePanel() {
           <tbody>
             {isLoading && (
               <tr>
-                <td colSpan={5} className="p-6 text-center text-white/40">
+                <td colSpan={5} className="p-6 text-center text-[#8a8078]">
                   جارٍ التحميل...
                 </td>
               </tr>
             )}
             {isError && (
               <tr>
-                <td colSpan={5} className="p-6 text-center text-red-300">
+                <td colSpan={5} className="p-6 text-center text-red-600">
                   تعذّر تحميل الخبرات. حاول تحديث الصفحة.
                 </td>
               </tr>
             )}
             {!isLoading && !isError && items.length === 0 && (
               <tr>
-                <td colSpan={5} className="p-6 text-center text-white/40">
+                <td colSpan={5} className="p-6 text-center text-[#8a8078]">
                   لا توجد خبرات بعد. اضغط "إضافة" لبدء الإضافة.
                 </td>
               </tr>
             )}
             {items.map((it) => (
-              <tr key={it.id} className="border-t border-white/5">
+              <tr key={it.id} className="border-t border-[#A88765]/10">
                 <td className="p-3">
-                  <div className="font-bold text-white">{it.role_ar}</div>
-                  {it.role_en && <div className="text-xs text-white/40">{it.role_en}</div>}
+                  <div className="font-bold text-[#1C1B19]">{it.role_ar}</div>
+                  {it.role_en && <div className="text-xs text-[#8a8078]">{it.role_en}</div>}
                 </td>
-                <td className="p-3 text-xs text-white/60">{it.company_ar}</td>
-                <td className="p-3 text-xs text-white/60">{it.date_ar}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{it.company_ar}</td>
+                <td className="p-3 text-xs text-[#6B6259]">{it.date_ar}</td>
                 <td className="p-3">
                   <Switch
                     checked={it.is_published}
@@ -682,7 +682,7 @@ function ExperiencePanel() {
                       aria-label={`تعديل ${it.role_ar}`}
                       onClick={() => openEdit(it)}
                     >
-                      <Pencil className="size-4 text-[#f3d28a]" />
+                      <Pencil className="size-4 text-[#7c6045]" />
                     </Button>
                     <Button
                       variant="ghost"
@@ -692,7 +692,7 @@ function ExperiencePanel() {
                         if (confirm(`حذف "${it.role_ar}"؟`)) delMut.mutate(it.id);
                       }}
                     >
-                      <Trash2 className="size-4 text-red-400" />
+                      <Trash2 className="size-4 text-red-600" />
                     </Button>
                   </div>
                 </td>
@@ -704,11 +704,11 @@ function ExperiencePanel() {
 
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent
-          className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl"
+          className="max-h-[90vh] overflow-y-auto bg-[#1C1B19] text-[#FCFBF9] sm:max-w-2xl"
           dir="rtl"
         >
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">
+            <DialogTitle className="text-[#c9a986]">
               {editing?.id ? "تعديل خبرة" : "إضافة خبرة"}
             </DialogTitle>
           </DialogHeader>
@@ -719,42 +719,42 @@ function ExperiencePanel() {
                   <Input
                     value={editing.role_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, role_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="المسمى الوظيفي (إنجليزي) *">
                   <Input
                     value={editing.role_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, role_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الشركة (عربي) *">
                   <Input
                     value={editing.company_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, company_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الشركة (إنجليزي) *">
                   <Input
                     value={editing.company_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, company_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الفترة (عربي، مثال: 2023 — 2024) *">
                   <Input
                     value={editing.date_ar ?? ""}
                     onChange={(e) => setEditing({ ...editing, date_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="الفترة (إنجليزي) *">
                   <Input
                     value={editing.date_en ?? ""}
                     onChange={(e) => setEditing({ ...editing, date_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -798,7 +798,7 @@ function ExperiencePanel() {
                 !editing?.date_ar ||
                 !editing?.date_en
               }
-              className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
             >
               {saveMut.isPending ? "جارٍ الحفظ..." : "حفظ"}
             </Button>
@@ -953,7 +953,7 @@ function SkillsPanel() {
         </div>
         <Button
           onClick={openCreateGroup}
-          className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] hover:opacity-90"
+          className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] hover:opacity-90"
         >
           <Plus className="size-4" />
           إضافة مجموعة مهارات
@@ -974,10 +974,10 @@ function SkillsPanel() {
         {groups.map((g) => {
           const groupItems = items.filter((i) => i.group_id === g.id);
           return (
-            <div key={g.id} className="rounded-2xl border border-[#d7aa52]/20 bg-[#07182c] p-4">
+            <div key={g.id} className="rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-4">
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                 <div>
-                  <div className="font-bold text-[#f3d28a]">{g.heading_ar}</div>
+                  <div className="font-display font-bold text-[#c9a986]">{g.heading_ar}</div>
                   <div className="text-xs text-white/40">{g.heading_en}</div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -986,7 +986,7 @@ function SkillsPanel() {
                     onCheckedChange={(v) => togGroupMut.mutate({ id: g.id, is_published: v })}
                   />
                   <Button variant="ghost" size="icon" onClick={() => openEditGroup(g)}>
-                    <Pencil className="size-4 text-[#f3d28a]" />
+                    <Pencil className="size-4 text-[#c9a986]" />
                   </Button>
                   <Button
                     variant="ghost"
@@ -1001,7 +1001,7 @@ function SkillsPanel() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-[#d7aa52]/30 text-[#f3d28a]"
+                    className="border-[#A88765]/30 text-[#c9a986]"
                     onClick={() => openCreateItem(g.id)}
                   >
                     <Plus className="size-3.5" />
@@ -1032,7 +1032,7 @@ function SkillsPanel() {
                             <div className="flex items-center gap-2">
                               <div className="h-1.5 w-16 overflow-hidden rounded-full bg-white/10">
                                 <div
-                                  className="h-full rounded-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+                                  className="h-full rounded-full bg-gradient-to-r from-[#c2a079] to-[#7c6045]"
                                   style={{ width: `${it.level}%` }}
                                 />
                               </div>
@@ -1049,7 +1049,7 @@ function SkillsPanel() {
                                 aria-label={`تعديل ${it.name_ar}`}
                                 onClick={() => openEditItem(it)}
                               >
-                                <Pencil className="size-4 text-[#f3d28a]" />
+                                <Pencil className="size-4 text-[#c9a986]" />
                               </Button>
                               <Button
                                 variant="ghost"
@@ -1077,9 +1077,9 @@ function SkillsPanel() {
 
       {/* Group dialog */}
       <Dialog open={groupDialogOpen} onOpenChange={setGroupDialogOpen}>
-        <DialogContent className="bg-[#07182c] text-white sm:max-w-lg" dir="rtl">
+        <DialogContent className="bg-[#1C1B19] text-[#FCFBF9] sm:max-w-lg" dir="rtl">
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">
+            <DialogTitle className="text-[#c9a986]">
               {editingGroup?.id ? "تعديل مجموعة" : "إضافة مجموعة مهارات"}
             </DialogTitle>
           </DialogHeader>
@@ -1089,14 +1089,14 @@ function SkillsPanel() {
                 <Input
                   value={editingGroup.heading_ar ?? ""}
                   onChange={(e) => setEditingGroup({ ...editingGroup, heading_ar: e.target.value })}
-                  className="bg-[#04101f] border-[#d7aa52]/20"
+                  className="bg-[#24211E] border-[#A88765]/25"
                 />
               </Field>
               <Field label="اسم المجموعة (إنجليزي) *">
                 <Input
                   value={editingGroup.heading_en ?? ""}
                   onChange={(e) => setEditingGroup({ ...editingGroup, heading_en: e.target.value })}
-                  className="bg-[#04101f] border-[#d7aa52]/20"
+                  className="bg-[#24211E] border-[#A88765]/25"
                 />
               </Field>
               <div className="flex items-center gap-2">
@@ -1114,7 +1114,7 @@ function SkillsPanel() {
               disabled={
                 saveGroupMut.isPending || !editingGroup?.heading_ar || !editingGroup?.heading_en
               }
-              className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
             >
               {saveGroupMut.isPending ? "جارٍ الحفظ..." : "حفظ"}
             </Button>
@@ -1125,11 +1125,11 @@ function SkillsPanel() {
       {/* Item dialog */}
       <Dialog open={itemDialogOpen} onOpenChange={setItemDialogOpen}>
         <DialogContent
-          className="max-h-[90vh] overflow-y-auto bg-[#07182c] text-white sm:max-w-2xl"
+          className="max-h-[90vh] overflow-y-auto bg-[#1C1B19] text-[#FCFBF9] sm:max-w-2xl"
           dir="rtl"
         >
           <DialogHeader>
-            <DialogTitle className="text-[#f3d28a]">
+            <DialogTitle className="text-[#c9a986]">
               {editingItem?.id ? "تعديل مهارة" : "إضافة مهارة"}
             </DialogTitle>
           </DialogHeader>
@@ -1140,7 +1140,7 @@ function SkillsPanel() {
                   value={editingItem.group_id ?? ""}
                   onValueChange={(v) => setEditingItem({ ...editingItem, group_id: v })}
                 >
-                  <SelectTrigger className="bg-[#04101f] border-[#d7aa52]/20">
+                  <SelectTrigger className="bg-[#24211E] border-[#A88765]/25">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -1158,14 +1158,14 @@ function SkillsPanel() {
                   <Input
                     value={editingItem.name_ar ?? ""}
                     onChange={(e) => setEditingItem({ ...editingItem, name_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="اسم المهارة (إنجليزي) *">
                   <Input
                     value={editingItem.name_en ?? ""}
                     onChange={(e) => setEditingItem({ ...editingItem, name_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -1179,7 +1179,7 @@ function SkillsPanel() {
                   onChange={(e) =>
                     setEditingItem({ ...editingItem, level: Number(e.target.value) })
                   }
-                  className="accent-[#d7aa52]"
+                  className="accent-[#A88765]"
                 />
               </Field>
 
@@ -1189,7 +1189,7 @@ function SkillsPanel() {
                     rows={2}
                     value={editingItem.desc_ar ?? ""}
                     onChange={(e) => setEditingItem({ ...editingItem, desc_ar: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
                 <Field label="وصف مختصر (إنجليزي)">
@@ -1197,7 +1197,7 @@ function SkillsPanel() {
                     rows={2}
                     value={editingItem.desc_en ?? ""}
                     onChange={(e) => setEditingItem({ ...editingItem, desc_en: e.target.value })}
-                    className="bg-[#04101f] border-[#d7aa52]/20"
+                    className="bg-[#24211E] border-[#A88765]/25"
                   />
                 </Field>
               </div>
@@ -1231,7 +1231,7 @@ function SkillsPanel() {
                 !editingItem?.name_ar ||
                 !editingItem?.name_en
               }
-              className="bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f]"
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
             >
               {saveItemMut.isPending ? "جارٍ الحفظ..." : "حفظ"}
             </Button>

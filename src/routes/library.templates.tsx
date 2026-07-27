@@ -42,11 +42,11 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
   const formatIcon = t.format === "Excel" ? "📊" : "📄";
   const formatColor =
     t.format === "Excel"
-      ? "text-emerald-300 border-emerald-400/30 bg-emerald-400/10"
-      : "text-blue-300 border-blue-400/30 bg-blue-400/10";
+      ? "text-emerald-700 border-emerald-500/30 bg-emerald-500/10"
+      : "text-blue-700 border-blue-500/30 bg-blue-500/10";
 
   return (
-    <div className="group relative flex flex-col rounded-2xl border border-[#d7aa52]/20 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-5 transition-all hover:border-[#d7aa52]/50 hover:shadow-lg hover:shadow-[#d7aa52]/10">
+    <div className="group relative flex flex-col rounded-2xl border border-[#A88765]/25 bg-[#FCFBF9] p-5 transition-all hover:-translate-y-0.5 hover:border-[#A88765]/60 hover:shadow-lg">
       <div className="mb-3 flex flex-wrap items-center gap-1.5">
         <span
           className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold ${formatColor}`}
@@ -54,31 +54,33 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
           {formatIcon} {t.format}
         </span>
         {t.is_official && (
-          <span className="inline-flex items-center gap-1 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/15 px-2 py-0.5 text-[10px] font-bold text-[#f3d28a]">
+          <span className="inline-flex items-center gap-1 rounded-full border border-[#A88765]/40 bg-[#A88765]/12 px-2 py-0.5 text-[10px] font-bold text-[#7c6045]">
             ✓ {isAR ? "متوافق ZATCA" : "ZATCA Compliant"}
           </span>
         )}
         {t.is_new && (
-          <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-400/40 bg-fuchsia-400/15 px-2 py-0.5 text-[10px] font-bold text-fuchsia-200">
+          <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-500/40 bg-fuchsia-500/12 px-2 py-0.5 text-[10px] font-bold text-fuchsia-700">
             ✦ {isAR ? "جديد" : "New"}
           </span>
         )}
         {t.related_standard && (
-          <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold text-white/60">
+          <span className="inline-flex items-center rounded-full border border-[#A88765]/20 bg-[#F5F1EB] px-2 py-0.5 text-[10px] font-bold text-[#6B6259]">
             {t.related_standard}
           </span>
         )}
       </div>
 
-      <h3 className="mb-2 text-base font-extrabold leading-snug text-white">{title}</h3>
-      <p className="mb-3 text-xs leading-relaxed text-white/65">{description}</p>
+      <h3 className="mb-2 font-display text-base font-extrabold leading-snug text-[#1C1B19]">
+        {title}
+      </h3>
+      <p className="mb-3 text-xs leading-relaxed text-[#6B6259]">{description}</p>
 
       {t.preview_fields.length > 0 && (
         <div className="mb-3 flex flex-wrap gap-1">
           {t.preview_fields.map((f) => (
             <span
               key={f}
-              className="rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[10px] text-white/55"
+              className="rounded-md border border-[#A88765]/20 bg-[#F5F1EB] px-2 py-0.5 text-[10px] text-[#6B6259]"
             >
               {f}
             </span>
@@ -86,7 +88,7 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
         </div>
       )}
 
-      <div className="mb-3 text-[11px] text-white/45">
+      <div className="mb-3 text-[11px] text-[#8a8078]">
         📋 {t.pages}{" "}
         {isAR ? (t.pages === 1 ? "ورقة" : "أوراق") : t.pages === 1 ? "sheet" : "sheets"}
       </div>
@@ -96,14 +98,14 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
           <button
             type="button"
             onClick={() => setOpen((o) => !o)}
-            className="mb-3 inline-flex items-center gap-1.5 text-[11px] font-bold text-[#f3d28a] hover:text-[#d7aa52]"
+            className="mb-3 inline-flex items-center gap-1.5 text-[11px] font-bold text-[#7c6045] hover:text-[#A88765]"
           >
             <BookOpen className="size-3" />
             {isAR ? "كيفية الاستخدام" : "How to use"}
             <ChevronDown className={`size-3 transition-transform ${open ? "rotate-180" : ""}`} />
           </button>
           {open && (
-            <pre className="mb-4 whitespace-pre-wrap rounded-lg border border-white/10 bg-black/30 p-3 text-[11px] leading-relaxed text-white/70 font-sans">
+            <pre className="mb-4 whitespace-pre-wrap rounded-lg border border-[#A88765]/20 bg-[#F5F1EB] p-3 text-[11px] leading-relaxed text-[#2e2a25] font-sans">
               {howToUse}
             </pre>
           )}
@@ -115,7 +117,7 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
           <a
             href={t.file_url}
             download
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-xs font-black text-[#04101f] shadow-lg shadow-[#d7aa52]/20 transition-transform hover:scale-105"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2.5 text-xs font-black text-[#1C1B19] shadow-lg shadow-[#4A3023]/20 transition-transform hover:scale-105"
           >
             <Download className="size-3.5" />
             {isAR ? "تحميل النموذج مجاناً" : "Download Free Template"}
@@ -129,7 +131,7 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#d7aa52]/40 px-4 py-2.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/10"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#A88765]/40 px-4 py-2.5 text-xs font-bold text-[#7c6045] transition-all hover:bg-[#A88765]/10"
           >
             <MessageCircle className="size-3.5" />
             {isAR ? "اطلب النموذج عبر واتساب" : "Request via WhatsApp"}
@@ -170,14 +172,14 @@ function TemplatesPage() {
   return (
     <div className="w-full px-4 sm:px-8 lg:px-16 py-8 sm:py-12">
       <header className="mb-8 text-center">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold text-[#f3d28a]">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold text-[#c9a986]">
           <FolderOpen className="size-3" />
           {isAR ? "نماذج جاهزة للتحميل" : "Ready-to-Download Templates"}
         </div>
-        <h1 className="mb-3 bg-gradient-to-br from-[#f3d28a] to-[#b8862e] bg-clip-text text-3xl font-black text-transparent sm:text-4xl">
+        <h1 className="mb-3 font-display bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl">
           {isAR ? "النماذج المحاسبية الجاهزة" : "Ready Accounting Templates"}
         </h1>
-        <p className="mx-auto max-w-2xl text-sm leading-relaxed text-white/65">
+        <p className="mx-auto max-w-2xl text-sm leading-relaxed text-[#D8D1C8]">
           {isAR
             ? "نماذج Word وExcel احترافية جاهزة للتحميل والاستخدام الفوري — متوافقة مع متطلبات زاتكا ومعايير IFRS."
             : "Professional Word & Excel templates ready for immediate use — ZATCA and IFRS compliant."}
@@ -199,12 +201,9 @@ function TemplatesPage() {
               label: { ar: "ZATCA", en: "ZATCA" },
             },
           ].map((s, i) => (
-            <div
-              key={i}
-              className="rounded-xl border border-[#d7aa52]/20 bg-white/[0.03] px-3 py-3"
-            >
-              <div className="text-xl font-black text-[#f3d28a]">{s.n}</div>
-              <div className="text-[11px] text-white/55">{s.label[lang]}</div>
+            <div key={i} className="rounded-xl border border-[#A88765]/20 bg-[#1C1B19] px-3 py-3">
+              <div className="text-xl font-black text-[#c9a986]">{s.n}</div>
+              <div className="text-[11px] text-[#D8D1C8]">{s.label[lang]}</div>
             </div>
           ))}
         </div>
@@ -212,12 +211,12 @@ function TemplatesPage() {
 
       <div className="mx-auto mb-6 max-w-3xl space-y-3">
         <div className="relative">
-          <Search className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-white/40 rtl:right-3 ltr:left-3" />
+          <Search className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#8a8078] rtl:right-3 ltr:left-3" />
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder={isAR ? "ابحث في النماذج..." : "Search templates..."}
-            className="w-full rounded-full border border-[#d7aa52]/30 bg-white/[0.04] py-2.5 text-sm text-white outline-none focus:border-[#d7aa52]/60 rtl:pr-10 rtl:pl-4 ltr:pl-10 ltr:pr-4"
+            className="w-full rounded-full border border-[#A88765]/25 bg-[#24211E] py-2.5 text-sm text-[#FCFBF9] outline-none focus:border-[#A88765]/60 rtl:pr-10 rtl:pl-4 ltr:pl-10 ltr:pr-4"
           />
         </div>
         <div className="flex flex-wrap items-center justify-center gap-1.5">
@@ -228,8 +227,8 @@ function TemplatesPage() {
               onClick={() => setCat(c.id)}
               className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${
                 cat === c.id
-                  ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]"
-                  : "border-white/10 text-white/55 hover:bg-white/5"
+                  ? "border-[#A88765] bg-[#A88765]/15 text-[#c9a986]"
+                  : "border-[#A88765]/20 text-[#D8D1C8] hover:bg-white/5"
               }`}
             >
               {c.label[lang]}
@@ -239,7 +238,7 @@ function TemplatesPage() {
       </div>
 
       {isLoading && (
-        <p className="mt-12 text-center text-sm text-white/55">
+        <p className="mt-12 text-center text-sm text-[#D8D1C8]">
           {isAR ? "جارٍ التحميل..." : "Loading..."}
         </p>
       )}
@@ -251,7 +250,7 @@ function TemplatesPage() {
       </div>
 
       {!isLoading && filtered.length === 0 && (
-        <p className="mt-12 text-center text-sm text-white/55">
+        <p className="mt-12 text-center text-sm text-[#D8D1C8]">
           {isAR ? "لا توجد نماذج مطابقة." : "No matching templates."}
         </p>
       )}

@@ -68,12 +68,14 @@ function AdminKnowledgePage() {
   });
 
   return (
-    <div dir="rtl" className="min-h-screen bg-[#04101f] text-white">
+    <div dir="rtl" className="min-h-screen bg-[#151412] text-[#FCFBF9]">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-black text-white">لوحة إدارة المكتبة</h1>
-            <p className="mt-1 text-sm text-white/60">
+            <h1 className="font-display text-3xl font-extrabold text-[#FCFBF9]">
+              لوحة إدارة المكتبة
+            </h1>
+            <p className="mt-1 text-sm text-[#D8D1C8]">
               توليد المقالات، مراجعتها، وموافقة النشر — مع التقويم الشهري.
             </p>
           </div>
@@ -81,7 +83,7 @@ function AdminKnowledgePage() {
             <button
               disabled={genLoading}
               onClick={() => gen.mutate()}
-              className="rounded-xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-5 py-2.5 text-sm font-bold text-[#04101f] shadow-lg shadow-[#d7aa52]/30 hover:scale-[1.01] disabled:opacity-60"
+              className="rounded-xl bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-5 py-2.5 text-sm font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/30 hover:scale-[1.01] disabled:opacity-60"
             >
               {genLoading ? "...جارٍ التوليد" : "توليد مقال الآن"}
             </button>
@@ -90,7 +92,7 @@ function AdminKnowledgePage() {
 
         {/* Calendar */}
         <section className="mt-8">
-          <h2 className="mb-3 text-lg font-bold text-[#f3d28a]">التقويم الشهري</h2>
+          <h2 className="font-display mb-3 text-lg font-bold text-[#c9a986]">التقويم الشهري</h2>
           {calendar.isError && (
             <div className="mb-3 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm text-red-100">
               تعذّر تحميل التقويم الشهري.
@@ -100,20 +102,20 @@ function AdminKnowledgePage() {
             {(calendar.data?.calendar ?? []).map((m) => (
               <div
                 key={`${m.year}-${m.month}`}
-                className="rounded-2xl border border-[#d7aa52]/20 bg-[#07182c] p-4"
+                className="rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-4"
               >
-                <div className="text-xs text-white/50">
+                <div className="text-xs text-[#8a8078]">
                   {m.year} / {String(m.month).padStart(2, "0")}
                 </div>
-                <div className="mt-2 flex items-baseline gap-3 text-white">
+                <div className="mt-2 flex items-baseline gap-3 text-[#FCFBF9]">
                   <span className="text-2xl font-black">{m.published_count}</span>
-                  <span className="text-sm text-white/60">
+                  <span className="text-sm text-[#D8D1C8]">
                     من {m.planned_count} · ولّد {m.generated_count}
                   </span>
                 </div>
                 <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/[0.06]">
                   <div
-                    className="h-full bg-gradient-to-r from-[#f3d28a] to-[#b8862e]"
+                    className="h-full bg-gradient-to-r from-[#c2a079] to-[#7c6045]"
                     style={{
                       width: `${Math.min(100, (m.published_count / m.planned_count) * 100)}%`,
                     }}
@@ -126,15 +128,15 @@ function AdminKnowledgePage() {
 
         {/* Articles list */}
         <section className="mt-10">
-          <h2 className="mb-3 text-lg font-bold text-[#f3d28a]">المقالات</h2>
+          <h2 className="font-display mb-3 text-lg font-bold text-[#c9a986]">المقالات</h2>
           {articles.isError && (
             <div className="mb-3 rounded-xl border border-red-400/40 bg-red-400/10 p-4 text-sm text-red-100">
               تعذّر تحميل قائمة المقالات. حاول تحديث الصفحة.
             </div>
           )}
-          <div className="overflow-hidden rounded-2xl border border-[#d7aa52]/20 bg-[#07182c]">
+          <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
             <table className="w-full text-sm">
-              <thead className="bg-white/[0.04] text-right text-white/60">
+              <thead className="bg-[#F5F1EB] text-right text-[#6B6259]">
                 <tr>
                   <th className="p-3">العنوان</th>
                   <th className="p-3">SEO</th>
@@ -149,17 +151,17 @@ function AdminKnowledgePage() {
                   const seo = computeArticleSeoScore(a);
                   const color =
                     seo.score >= 75
-                      ? "bg-emerald-500/20 text-emerald-200"
+                      ? "bg-emerald-500/15 text-emerald-700"
                       : seo.score >= 50
-                        ? "bg-amber-500/20 text-amber-200"
-                        : "bg-red-500/20 text-red-200";
+                        ? "bg-amber-500/15 text-amber-700"
+                        : "bg-red-500/15 text-red-700";
                   return (
-                    <tr key={a.id} className="border-t border-white/[0.05] text-white">
+                    <tr key={a.id} className="border-t border-[#A88765]/10 text-[#1C1B19]">
                       <td className="p-3">
                         <Link
                           to="/knowledge/$categorySlug/$articleSlug"
                           params={{ categorySlug: "preview", articleSlug: a.slug }}
-                          className="hover:text-[#f3d28a]"
+                          className="hover:text-[#7c6045]"
                         >
                           {a.title_ar}
                         </Link>
@@ -178,12 +180,12 @@ function AdminKnowledgePage() {
                         </span>
                       </td>
                       <td className="p-3">
-                        <span className="rounded-full bg-white/[0.06] px-2 py-1 text-xs">
+                        <span className="rounded-full bg-[#A88765]/10 px-2 py-1 text-xs text-[#6B6259]">
                           {STATUS_LABEL[a.status] ?? a.status}
                         </span>
                       </td>
-                      <td className="p-3 text-xs text-white/60">{a.generation_source}</td>
-                      <td className="p-3 text-xs text-white/60">
+                      <td className="p-3 text-xs text-[#6B6259]">{a.generation_source}</td>
+                      <td className="p-3 text-xs text-[#6B6259]">
                         {new Date(a.created_at).toLocaleDateString("ar")}
                       </td>
                       <td className="p-3">
@@ -191,7 +193,7 @@ function AdminKnowledgePage() {
                           <div className="flex gap-2">
                             <button
                               onClick={() => review.mutate({ id: a.id, action: "approve" })}
-                              className="rounded bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200 hover:bg-emerald-500/30"
+                              className="rounded bg-emerald-500/15 px-3 py-1 text-xs text-emerald-700 hover:bg-emerald-500/25"
                             >
                               موافقة
                             </button>
@@ -200,13 +202,13 @@ function AdminKnowledgePage() {
                                 const notes = prompt("سبب الرفض؟") ?? undefined;
                                 review.mutate({ id: a.id, action: "reject", notes });
                               }}
-                              className="rounded bg-red-500/20 px-3 py-1 text-xs text-red-200 hover:bg-red-500/30"
+                              className="rounded bg-red-500/15 px-3 py-1 text-xs text-red-700 hover:bg-red-500/25"
                             >
                               رفض
                             </button>
                           </div>
                         ) : (
-                          <span className="text-xs text-white/40">—</span>
+                          <span className="text-xs text-[#8a8078]">—</span>
                         )}
                       </td>
                     </tr>
@@ -216,7 +218,7 @@ function AdminKnowledgePage() {
             </table>
           </div>
           {articles.data && articles.data.total > articles.data.pageSize && (
-            <div className="mt-3 flex items-center justify-between text-sm text-white/60">
+            <div className="mt-3 flex items-center justify-between text-sm text-[#D8D1C8]">
               <span>
                 {articlesPage * articles.data.pageSize + 1}–
                 {Math.min((articlesPage + 1) * articles.data.pageSize, articles.data.total)} من{" "}
@@ -226,14 +228,14 @@ function AdminKnowledgePage() {
                 <button
                   disabled={articlesPage === 0}
                   onClick={() => setArticlesPage((p) => Math.max(0, p - 1))}
-                  className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+                  className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15 disabled:opacity-30"
                 >
                   السابق
                 </button>
                 <button
                   disabled={(articlesPage + 1) * articles.data.pageSize >= articles.data.total}
                   onClick={() => setArticlesPage((p) => p + 1)}
-                  className="rounded-full border border-[#d7aa52]/40 px-3 py-1.5 text-xs font-bold text-[#f3d28a] hover:bg-[#d7aa52]/15 disabled:opacity-30"
+                  className="rounded-full border border-[#A88765]/40 px-3 py-1.5 text-xs font-bold text-[#c9a986] hover:bg-[#A88765]/15 disabled:opacity-30"
                 >
                   التالي
                 </button>

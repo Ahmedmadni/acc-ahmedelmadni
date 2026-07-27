@@ -8,11 +8,10 @@ import {
   FileText,
   Wallet,
   Percent,
-  ArrowLeft,
-  ArrowRight,
-  Sparkles,
+  ArrowUpLeft,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { EASE, useMotionSafe } from "@/lib/motion";
 
 type Item = {
   id: string;
@@ -21,7 +20,6 @@ type Item = {
   en: string;
   descAr: string;
   descEn: string;
-  accent: string;
   badgeAr?: string;
   badgeEn?: string;
 };
@@ -34,7 +32,6 @@ const ITEMS: Item[] = [
     en: "VAT Return Filing",
     descAr: "اعداد وتقديم إقرار VAT خطوة بخطوة وفق زاتكا.",
     descEn: "Prepare and file your VAT return step by step per ZATCA.",
-    accent: "#22c55e",
     badgeAr: "رسمي",
     badgeEn: "Official",
   },
@@ -45,7 +42,6 @@ const ITEMS: Item[] = [
     en: "Zakat Declaration",
     descAr: "احتساب الوعاء الزكوي وإعداد الإقرار السنوي بثقة.",
     descEn: "Compute your zakat base and file the annual declaration.",
-    accent: "#f3d28a",
     badgeAr: "رسمي",
     badgeEn: "Official",
   },
@@ -56,7 +52,6 @@ const ITEMS: Item[] = [
     en: "Financial Statements",
     descAr: "من ميزان المراجعة إلى قوائم مالية كاملة IFRS.",
     descEn: "From trial balance to full IFRS-ready statements.",
-    accent: "#60a5fa",
   },
   {
     id: "ratios",
@@ -65,7 +60,6 @@ const ITEMS: Item[] = [
     en: "Financial Ratios",
     descAr: "احسب نسب السيولة والربحية والملاءة فوراً.",
     descEn: "Instant liquidity, profitability and solvency ratios.",
-    accent: "#a78bfa",
   },
   {
     id: "loan",
@@ -74,7 +68,6 @@ const ITEMS: Item[] = [
     en: "Loan Calculator",
     descAr: "احسب القسط الشهري وجدول السداد الكامل.",
     descEn: "Monthly installment and full amortization schedule.",
-    accent: "#f97316",
   },
   {
     id: "vat",
@@ -83,7 +76,6 @@ const ITEMS: Item[] = [
     en: "VAT Calculator",
     descAr: "احتساب VAT شامل ومستقطع بضغطة زر.",
     descEn: "Inclusive and exclusive VAT in one click.",
-    accent: "#34d399",
   },
   {
     id: "cv-builder",
@@ -92,7 +84,6 @@ const ITEMS: Item[] = [
     en: "CV Builder",
     descAr: "قالب احترافي ثنائي اللغة مع تصدير PDF.",
     descEn: "Professional bilingual template with PDF export.",
-    accent: "#eab308",
   },
   {
     id: "inheritance",
@@ -101,90 +92,146 @@ const ITEMS: Item[] = [
     en: "Inheritance Calculator",
     descAr: "حل قسمة الميراث وفق الأحكام الشرعية.",
     descEn: "Islamic inheritance shares calculated instantly.",
-    accent: "#f43f5e",
   },
 ];
 
 export default function FeaturedTools({ lang }: { lang: Lang }) {
-  const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
+  const ar = lang === "ar";
+  const m = useMotionSafe();
+  const [featured, ...supporting] = ITEMS;
+  const FeaturedIcon = featured.icon;
+
   return (
-    <section id="featured-tools" className="relative py-14">
-      <div className="w-full px-4 sm:px-8 lg:px-16">
-        <div className="mb-8 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
-            <Sparkles className="size-3" />
-            {lang === "ar" ? "الأدوات المميزة" : "Featured tools"}
-          </span>
-          <h2 className="mt-3 text-2xl font-black md:text-3xl" style={{ color: "var(--fg)" }}>
-            {lang === "ar" ? "أدوات محاسبية جاهزة للاستخدام" : "Accounting tools ready to use"}
-          </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-sm" style={{ color: "var(--fg-soft)" }}>
-            {lang === "ar"
+    <section
+      id="featured-tools"
+      className="relative overflow-hidden bg-[#1C1B19] py-20 sm:py-24 lg:py-28"
+    >
+      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={m.staggerParent}
+          className="max-w-2xl"
+        >
+          <motion.p
+            variants={m.staggerChild}
+            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
+          >
+            {ar ? "الأدوات" : "Tools"}
+          </motion.p>
+          <motion.h2
+            variants={m.staggerChild}
+            className="font-display mt-3 text-[1.9rem] font-bold leading-[1.3] text-[#FCFBF9] sm:text-[2.4rem] lg:text-[2.9rem]"
+          >
+            {ar ? "أدوات محاسبية جاهزة للاستخدام" : "Accounting tools ready to use"}
+          </motion.h2>
+          <motion.p
+            variants={m.staggerChild}
+            className="mt-4 text-[15px] leading-[1.9] text-white/60 sm:text-[16px]"
+          >
+            {ar
               ? "حاسبات ونماذج تعمل مباشرة في المتصفح — بدون تسجيل، بدون تنزيل."
               : "Calculators and forms that work in your browser — no signup, no downloads."}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {ITEMS.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-              >
-                <Link
-                  to="/tools/$toolId"
-                  params={{ toolId: item.id }}
-                  className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#d7aa52]/20 bg-gradient-to-br from-[#07182c]/85 to-[#04101f]/95 p-5 transition-all hover:-translate-y-1 hover:border-[#d7aa52]/70 hover:shadow-[0_25px_60px_-25px_rgba(215,170,82,0.55)]"
-                >
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute -top-16 -end-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40"
-                    style={{ background: item.accent }}
-                  />
-                  <div className="mb-4 flex items-start justify-between">
-                    <span
-                      className="inline-flex size-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] transition-transform group-hover:scale-110"
-                      style={{ color: item.accent }}
-                    >
-                      <Icon className="size-6" />
-                    </span>
-                    {item.badgeAr && (
-                      <span className="rounded-full border border-[#d7aa52]/50 bg-[#d7aa52]/10 px-2 py-0.5 text-[10px] font-bold text-[#f3d28a]">
-                        {lang === "ar" ? item.badgeAr : item.badgeEn}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-sm font-extrabold" style={{ color: "var(--fg)" }}>
-                    {lang === "ar" ? item.ar : item.en}
-                  </h3>
-                  <p
-                    className="mt-1.5 flex-1 text-xs leading-relaxed"
-                    style={{ color: "var(--fg-soft)" }}
-                  >
-                    {lang === "ar" ? item.descAr : item.descEn}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#f3d28a]">
-                    {lang === "ar" ? "افتح الأداة" : "Open tool"}
-                    <Arrow className="size-3.5 transition-transform group-hover:-translate-x-0.5 rtl:group-hover:translate-x-0.5" />
+        <div className="mt-12 grid gap-5 lg:grid-cols-12">
+          {/* Featured tool */}
+          <motion.div
+            initial={m.reduce ? { opacity: 0 } : { opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, clipPath: "inset(0 0 0% 0)" }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={m.reduce ? { duration: 0.3 } : { duration: 0.85, ease: EASE.out }}
+            className="lg:col-span-5"
+          >
+            <Link
+              to="/tools/$toolId"
+              params={{ toolId: featured.id }}
+              className="group relative flex h-full min-h-[16rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#4A3023] p-7 shadow-[0_30px_70px_-30px_rgba(28,27,25,0.55)] transition-transform hover:-translate-y-1 sm:p-9"
+            >
+              <div className="relative">
+                <div className="flex items-center justify-between">
+                  <span className="flex size-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] text-[#e9d9c3]">
+                    <FeaturedIcon className="size-6" />
                   </span>
-                </Link>
-              </motion.div>
-            );
-          })}
+                  {featured.badgeAr && (
+                    <span className="rounded-full border border-[#A88765]/40 bg-white/[0.05] px-3 py-1 text-[11px] font-bold text-[#e9d9c3]">
+                      {ar ? featured.badgeAr : featured.badgeEn}
+                    </span>
+                  )}
+                </div>
+                <h3 className="font-display mt-6 text-[1.5rem] font-bold leading-[1.35] text-[#FCFBF9] sm:text-[1.75rem]">
+                  {ar ? featured.ar : featured.en}
+                </h3>
+                <p className="mt-3 max-w-md text-[14px] leading-[1.85] text-white/65 sm:text-[15px]">
+                  {ar ? featured.descAr : featured.descEn}
+                </p>
+              </div>
+              <span className="relative mt-8 inline-flex items-center gap-2 text-[14px] font-semibold text-[#d8bd9c]">
+                {ar ? "افتح الأداة" : "Open tool"}
+                <ArrowUpLeft
+                  aria-hidden
+                  className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
+                />
+              </span>
+            </Link>
+          </motion.div>
+
+          {/* Supporting tools */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={m.staggerParent}
+            className="grid content-start gap-4 sm:grid-cols-2 lg:col-span-7"
+          >
+            {supporting.map((item) => {
+              const Icon = item.icon;
+              return (
+                <motion.div key={item.id} variants={m.staggerChild}>
+                  <Link
+                    to="/tools/$toolId"
+                    params={{ toolId: item.id }}
+                    className="group flex h-full items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/50 hover:bg-white/[0.05]"
+                  >
+                    <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-[#A88765] transition-colors duration-300 group-hover:text-[#d8bd9c]">
+                      <Icon className="size-5" />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="flex items-center justify-between gap-2">
+                        <span className="font-display text-[14px] font-bold leading-snug text-[#FCFBF9]">
+                          {ar ? item.ar : item.en}
+                        </span>
+                        {item.badgeAr && (
+                          <span className="shrink-0 rounded-full border border-[#A88765]/35 px-2 py-0.5 text-[10px] font-bold text-[#e9d9c3]">
+                            {ar ? item.badgeAr : item.badgeEn}
+                          </span>
+                        )}
+                      </span>
+                      <span className="mt-1 block text-[12px] leading-[1.6] text-white/55">
+                        {ar ? item.descAr : item.descEn}
+                      </span>
+                    </span>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
 
-        <div className="mt-8 text-center">
+        {/* View all */}
+        <div className="mt-10">
           <Link
             to="/tools"
-            className="inline-flex items-center gap-2 rounded-full border border-[#d7aa52]/40 bg-white/[0.03] px-5 py-2.5 text-xs font-bold text-[#f3d28a] transition-all hover:bg-[#d7aa52]/10"
+            className="group inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-6 py-3 text-[14px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
           >
-            {lang === "ar" ? "عرض جميع الأدوات" : "View all tools"}
-            <Arrow className="size-3.5" />
+            {ar ? "عرض جميع الأدوات" : "View all tools"}
+            <ArrowUpLeft
+              aria-hidden
+              className="size-4 text-[#d8bd9c] transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
+            />
           </Link>
         </div>
       </div>

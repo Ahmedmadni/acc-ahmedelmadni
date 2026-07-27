@@ -1,5 +1,5 @@
 import { DefaultChatTransport } from "ai";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Send, Sparkles, X } from "lucide-react";
 import { playClick, playHover } from "@/lib/sound";
@@ -14,6 +14,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
   const [input, setInput] = useState("");
   const { messages, sendMessage, loading, scrollRef } = useChatWidget(transport);
   const inputRef = useRef<HTMLInputElement>(null);
+  const reduce = useReducedMotion();
 
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 200);
@@ -55,11 +56,11 @@ export function AIAssistant({ lang }: { lang: Lang }) {
           className="relative group flex items-center justify-center rounded-full"
         >
           <span
-            className="absolute inset-0 rounded-full bg-[#d7aa52]/40 animate-ping opacity-60"
+            className="absolute inset-0 rounded-full bg-[#A88765]/40 animate-ping opacity-60 motion-reduce:animate-none"
             aria-hidden
           />
           <span
-            className="absolute inset-0 rounded-full bg-gradient-to-br from-[#f3d28a]/30 to-[#b8862e]/30 blur-xl"
+            className="absolute inset-0 rounded-full bg-gradient-to-br from-[#c9a986]/25 to-[#7c6045]/25 blur-xl"
             aria-hidden
           />
           <motion.img
@@ -70,9 +71,9 @@ export function AIAssistant({ lang }: { lang: Lang }) {
             loading="lazy"
             decoding="async"
             style={{ width: "112px", height: "112px", objectFit: "contain" }}
-            className="relative object-contain drop-shadow-[0_8px_24px_rgba(215,170,82,0.5)]"
-            animate={{ y: [0, -8, 0, -4, 0], rotate: [0, -5, 5, -2, 0] }}
-            transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative object-contain drop-shadow-[0_8px_24px_rgba(168,135,101,0.4)]"
+            animate={reduce ? undefined : { y: [0, -8, 0, -4, 0], rotate: [0, -5, 5, -2, 0] }}
+            transition={reduce ? undefined : { duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
           />
           <span className="sr-only">{lang === "ar" ? "اسأل المساعد" : "Ask AI"}</span>
         </motion.button>
@@ -93,11 +94,11 @@ export function AIAssistant({ lang }: { lang: Lang }) {
               exit={{ opacity: 0, y: 30, scale: 0.92 }}
               transition={{ type: "spring", stiffness: 240, damping: 24 }}
               onClick={(e) => e.stopPropagation()}
-              className="fixed bottom-0 right-0 left-0 sm:left-6 sm:right-auto sm:bottom-6 flex h-[88vh] sm:h-[600px] w-full sm:w-[400px] flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl border border-[#d7aa52]/40 bg-gradient-to-br from-[#07182c] to-[#04101f] shadow-2xl"
+              className="fixed bottom-0 right-0 left-0 sm:left-6 sm:right-auto sm:bottom-6 flex h-[88vh] sm:h-[600px] w-full sm:w-[400px] flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl border border-[#A88765]/30 bg-[#1C1B19] shadow-2xl"
             >
               {/* Header */}
-              <div className="flex items-center gap-3 border-b border-[#d7aa52]/25 bg-gradient-to-r from-[#0a223f] to-[#04101f] p-4">
-                <div className="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#f3d28a]/20 to-[#b8862e]/20 ring-1 ring-[#d7aa52]/40">
+              <div className="flex items-center gap-3 border-b border-[#A88765]/20 bg-[#1C1B19] p-4">
+                <div className="relative flex size-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#c9a986]/20 to-[#7c6045]/20 ring-1 ring-[#A88765]/30">
                   <img
                     src={mascotImg}
                     alt=""
@@ -107,11 +108,11 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                     decoding="async"
                     className="size-11 object-contain"
                   />
-                  <span className="absolute -bottom-0.5 -end-0.5 size-3 rounded-full border-2 border-[#07182c] bg-emerald-400" />
+                  <span className="absolute -bottom-0.5 -end-0.5 size-3 rounded-full border-2 border-[#1C1B19] bg-emerald-400" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm font-extrabold text-white">{title}</div>
-                  <div className="text-[11px] text-[#d7aa52]">{subtitle}</div>
+                  <div className="text-[11px] text-[#c9a986]">{subtitle}</div>
                 </div>
                 <button
                   onClick={() => {
@@ -128,8 +129,8 @@ export function AIAssistant({ lang }: { lang: Lang }) {
               {/* Messages */}
               <div ref={scrollRef} className="flex-1 space-y-3 overflow-y-auto p-4">
                 {messages.length === 0 && (
-                  <div className="mt-2 rounded-2xl border border-[#d7aa52]/25 bg-white/[0.04] p-4 text-sm text-white/85">
-                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#d7aa52]/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]">
+                  <div className="mt-2 rounded-2xl border border-[#A88765]/20 bg-white/[0.04] p-4 text-sm text-white/85">
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#A88765]/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#c9a986]">
                       <Sparkles className="size-3" />
                       {lang === "ar" ? "مرحباً" : "Welcome"}
                     </div>
@@ -148,7 +149,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                           onClick={() => {
                             sendMessage({ text: q });
                           }}
-                          className="rounded-full border border-[#d7aa52]/40 bg-[#d7aa52]/10 px-3 py-1 text-[11px] font-semibold text-[#f3d28a] transition-colors hover:bg-[#d7aa52]/20"
+                          className="rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-semibold text-[#c9a986] transition-colors hover:bg-[#A88765]/20"
                         >
                           {q}
                         </button>
@@ -165,8 +166,8 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                       <div
                         className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
                           isUser
-                            ? "bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] font-medium"
-                            : "border border-[#d7aa52]/20 bg-white/[0.04] text-white/90"
+                            ? "bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] font-medium"
+                            : "border border-[#A88765]/20 bg-white/[0.04] text-white/90"
                         }`}
                       >
                         {text}
@@ -177,17 +178,17 @@ export function AIAssistant({ lang }: { lang: Lang }) {
 
                 {loading && (
                   <div className="flex justify-start">
-                    <div className="flex items-center gap-1.5 rounded-2xl border border-[#d7aa52]/20 bg-white/[0.04] px-3 py-2.5">
+                    <div className="flex items-center gap-1.5 rounded-2xl border border-[#A88765]/20 bg-white/[0.04] px-3 py-2.5">
                       <span
-                        className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]"
+                        className="size-1.5 animate-bounce rounded-full bg-[#A88765]"
                         style={{ animationDelay: "0ms" }}
                       />
                       <span
-                        className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]"
+                        className="size-1.5 animate-bounce rounded-full bg-[#A88765]"
                         style={{ animationDelay: "150ms" }}
                       />
                       <span
-                        className="size-1.5 animate-bounce rounded-full bg-[#d7aa52]"
+                        className="size-1.5 animate-bounce rounded-full bg-[#A88765]"
                         style={{ animationDelay: "300ms" }}
                       />
                     </div>
@@ -196,8 +197,8 @@ export function AIAssistant({ lang }: { lang: Lang }) {
               </div>
 
               {/* Input */}
-              <form onSubmit={submit} className="border-t border-[#d7aa52]/25 bg-[#04101f]/80 p-3">
-                <div className="flex items-center gap-2 rounded-full border border-[#d7aa52]/30 bg-white/[0.04] ps-4 pe-1.5 py-1.5">
+              <form onSubmit={submit} className="border-t border-[#A88765]/20 bg-[#1C1B19]/80 p-3">
+                <div className="flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-white/[0.04] ps-4 pe-1.5 py-1.5">
                   <input
                     ref={inputRef}
                     type="text"
@@ -211,7 +212,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                     type="submit"
                     disabled={loading || !input.trim()}
                     aria-label="send"
-                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] transition-transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+                    className="flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19] transition-transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
                   >
                     <Send className="size-4 rtl:rotate-180" />
                   </button>

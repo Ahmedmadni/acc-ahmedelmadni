@@ -75,7 +75,7 @@ export function ClientsList() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="ابحث باسم العميل أو الهاتف أو الرقم الضريبي..."
-            className="w-full rounded-full border border-[#d7aa52]/25 bg-white/[0.04] py-2.5 text-sm text-white outline-none focus:border-[#d7aa52]/60 pr-10 pl-4"
+            className="w-full rounded-full border border-[#A88765]/25 bg-white/[0.04] py-2.5 text-sm text-[#FCFBF9] outline-none focus:border-[#A88765]/60 pr-10 pl-4"
           />
         </div>
 
@@ -86,7 +86,7 @@ export function ClientsList() {
               onClick={() => setStatusFilter(s)}
               className={`rounded-full border px-3 py-1.5 text-xs font-bold transition ${
                 statusFilter === s
-                  ? "border-[#d7aa52] bg-[#d7aa52]/15 text-[#f3d28a]"
+                  ? "border-[#A88765] bg-[#A88765]/15 text-[#c9a986]"
                   : "border-white/10 text-[var(--fg-soft)] hover:bg-white/5"
               }`}
             >
@@ -100,7 +100,7 @@ export function ClientsList() {
             setEditClient(null);
             setShowForm(true);
           }}
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] px-4 py-2.5 text-xs font-black text-[#04101f] hover:scale-105 transition-transform whitespace-nowrap"
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2.5 text-xs font-black text-[#1C1B19] hover:scale-105 transition-transform whitespace-nowrap"
         >
           <Plus className="w-4 h-4" />
           إضافة عميل
@@ -108,9 +108,9 @@ export function ClientsList() {
       </div>
 
       {/* Table */}
-      <div className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-x-auto">
+      <div className="rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9] overflow-x-auto">
         <table className="w-full text-sm min-w-[720px]">
-          <thead className="bg-white/[0.03] text-[var(--fg-soft)] text-[11px]">
+          <thead className="bg-[#F5F1EB] text-[#6B6259] text-[11px]">
             <tr>
               <th className="text-right p-3 font-bold">العميل</th>
               <th className="text-right p-3 font-bold">الهاتف</th>
@@ -135,13 +135,11 @@ export function ClientsList() {
                 role="button"
                 tabIndex={0}
                 aria-label={`عرض تفاصيل ${client.full_name}`}
-                className="border-t border-white/5 hover:bg-white/[0.03] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d7aa52]/50"
+                className="border-t border-[#A88765]/10 hover:bg-[#A88765]/[0.06] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#A88765]/50"
               >
                 <td className="p-3">
-                  <div className="font-bold text-white">{client.full_name}</div>
-                  {client.email && (
-                    <div className="text-[11px] text-[var(--fg-soft)]">{client.email}</div>
-                  )}
+                  <div className="font-bold text-[#1C1B19]">{client.full_name}</div>
+                  {client.email && <div className="text-[11px] text-[#6B6259]">{client.email}</div>}
                 </td>
                 <td className="p-3">
                   <a
@@ -149,24 +147,22 @@ export function ClientsList() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-300 hover:bg-emerald-500/20 transition"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/20 transition"
                   >
                     <MessageCircle className="w-3 h-3" />
                     {client.phone}
                   </a>
                 </td>
-                <td className="p-3 text-[var(--fg-soft)]">{client.company_name || "—"}</td>
-                <td className="p-3 text-[var(--fg-soft)] font-mono text-xs">
-                  {client.tax_number || "—"}
-                </td>
+                <td className="p-3 text-[#6B6259]">{client.company_name || "—"}</td>
+                <td className="p-3 text-[#6B6259] font-mono text-xs">{client.tax_number || "—"}</td>
                 <td className="p-3">
                   <span
                     className={`text-[10px] font-bold rounded-full px-2 py-0.5 ${
                       client.status === "active"
-                        ? "bg-emerald-500/15 text-emerald-300"
+                        ? "bg-emerald-500/15 text-emerald-700"
                         : client.status === "pending"
-                          ? "bg-amber-500/15 text-amber-300"
-                          : "bg-white/10 text-[var(--fg-soft)]"
+                          ? "bg-amber-500/15 text-amber-700"
+                          : "bg-[#A88765]/10 text-[#6B6259]"
                     }`}
                   >
                     {{ active: "نشط", inactive: "غير نشط", pending: "معلق" }[client.status]}
@@ -174,9 +170,9 @@ export function ClientsList() {
                 </td>
                 <td className="p-3">
                   {client.vat_registered ? (
-                    <span className="text-amber-300 text-xs font-bold">✓ مسجل</span>
+                    <span className="text-amber-700 text-xs font-bold">✓ مسجل</span>
                   ) : (
-                    <span className="text-[var(--fg-soft)] text-xs">—</span>
+                    <span className="text-[#8a8078] text-xs">—</span>
                   )}
                 </td>
                 <td className="p-3">
@@ -187,7 +183,7 @@ export function ClientsList() {
                         setEditClient(client);
                         setShowForm(true);
                       }}
-                      className="text-[var(--fg-soft)] hover:text-[#f3d28a] transition"
+                      className="text-[#6B6259] hover:text-[#7c6045] transition"
                     >
                       <Pencil className="w-4 h-4" />
                     </button>
@@ -196,7 +192,7 @@ export function ClientsList() {
                         e.stopPropagation();
                         deleteClient(client.id);
                       }}
-                      className="text-[var(--fg-soft)] hover:text-red-400 transition"
+                      className="text-[#6B6259] hover:text-red-600 transition"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
@@ -207,18 +203,14 @@ export function ClientsList() {
           </tbody>
         </table>
 
-        {loading && (
-          <div className="p-12 text-center text-[var(--fg-soft)] text-sm">جاري التحميل...</div>
-        )}
+        {loading && <div className="p-12 text-center text-[#6B6259] text-sm">جاري التحميل...</div>}
         {isError && (
-          <div className="p-12 text-center text-sm text-red-300">
+          <div className="p-12 text-center text-sm text-red-600">
             تعذّر تحميل قائمة العملاء. حاول تحديث الصفحة.
           </div>
         )}
         {!loading && !isError && filtered.length === 0 && (
-          <div className="p-12 text-center text-[var(--fg-soft)] text-sm">
-            لا يوجد عملاء مطابقون
-          </div>
+          <div className="p-12 text-center text-[#6B6259] text-sm">لا يوجد عملاء مطابقون</div>
         )}
       </div>
 

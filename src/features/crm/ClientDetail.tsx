@@ -20,31 +20,31 @@ export function ClientDetail({ client, onClose, onEdit }: Props) {
     value: React.ReactNode;
   }) =>
     value ? (
-      <div className="flex items-start gap-3 py-2 border-b border-white/5">
-        <div className="text-[#f3d28a] mt-0.5">{icon}</div>
+      <div className="flex items-start gap-3 py-2 border-b border-[#A88765]/10">
+        <div className="text-[#A88765] mt-0.5">{icon}</div>
         <div className="flex-1">
-          <div className="text-[10px] text-[var(--fg-soft)]">{label}</div>
-          <div className="text-sm text-white font-medium">{value}</div>
+          <div className="text-[10px] text-[#8a8078]">{label}</div>
+          <div className="text-sm text-[#1C1B19] font-medium">{value}</div>
         </div>
       </div>
     ) : null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-      <div className="w-full max-w-lg rounded-2xl border border-[#d7aa52]/25 bg-[#08111f] p-6 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div className="w-full max-w-lg rounded-2xl border border-[#A88765]/25 bg-[#FCFBF9] p-6 space-y-4 max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-black text-white">{client.full_name}</h2>
+            <h2 className="font-display text-lg font-black text-[#1C1B19]">{client.full_name}</h2>
             {client.company_name && (
-              <p className="text-xs text-[var(--fg-soft)] mt-1">{client.company_name}</p>
+              <p className="text-xs text-[#6B6259] mt-1">{client.company_name}</p>
             )}
           </div>
-          <button onClick={onClose} className="text-[var(--fg-soft)] hover:text-white">
+          <button onClick={onClose} className="text-[#6B6259] hover:text-[#1C1B19]">
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+        <div className="rounded-xl border border-[#A88765]/15 bg-[#F5F1EB] p-4">
           <Row icon={<Phone className="w-4 h-4" />} label="الجوال" value={client.phone} />
           <Row icon={<Mail className="w-4 h-4" />} label="البريد" value={client.email} />
           <Row
@@ -70,21 +70,21 @@ export function ClientDetail({ client, onClose, onEdit }: Props) {
 
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div
-            className={`rounded-lg p-2 text-center border ${client.vat_registered ? "border-amber-400/40 bg-amber-400/10 text-amber-300" : "border-white/10 text-[var(--fg-soft)]"}`}
+            className={`rounded-lg p-2 text-center border ${client.vat_registered ? "border-amber-500/40 bg-amber-500/10 text-amber-700" : "border-[#A88765]/15 text-[#8a8078]"}`}
           >
             {client.vat_registered ? "✓ مسجل VAT" : "غير مسجل VAT"}
           </div>
           <div
-            className={`rounded-lg p-2 text-center border ${client.zakat_registered ? "border-violet-400/40 bg-violet-400/10 text-violet-300" : "border-white/10 text-[var(--fg-soft)]"}`}
+            className={`rounded-lg p-2 text-center border ${client.zakat_registered ? "border-violet-500/40 bg-violet-500/10 text-violet-700" : "border-[#A88765]/15 text-[#8a8078]"}`}
           >
             {client.zakat_registered ? "✓ مسجل زكاة" : "غير مسجل زكاة"}
           </div>
         </div>
 
         {client.notes && (
-          <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
-            <div className="text-[10px] text-[var(--fg-soft)] mb-1">ملاحظات</div>
-            <p className="text-sm text-white/90 whitespace-pre-wrap">{client.notes}</p>
+          <div className="rounded-xl border border-[#A88765]/15 bg-[#F5F1EB] p-3">
+            <div className="text-[10px] text-[#8a8078] mb-1">ملاحظات</div>
+            <p className="text-sm text-[#2e2a25] whitespace-pre-wrap">{client.notes}</p>
           </div>
         )}
 
@@ -99,7 +99,7 @@ export function ClientDetail({ client, onClose, onEdit }: Props) {
           </a>
           <button
             onClick={onEdit}
-            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#f3d28a] to-[#b8862e] py-2.5 text-sm font-black text-[#04101f] hover:scale-105 transition-transform"
+            className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-2.5 text-sm font-black text-[#1C1B19] hover:scale-105 transition-transform"
           >
             <Pencil className="w-4 h-4" /> تعديل
           </button>

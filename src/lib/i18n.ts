@@ -104,7 +104,7 @@ export const t = {
         },
       },
       {
-        requestServiceId: "cost-analysis",
+        requestServiceId: "cost-accounting",
         ar: "محاسبة التكاليف وتحليل المشاريع",
         en: "Cost Accounting & Project Analysis",
         d: {
@@ -185,7 +185,7 @@ export const t = {
         },
       },
       {
-        requestServiceId: "consulting",
+        requestServiceId: "financial-consulting",
         ar: "استشارات مالية وإدارية",
         en: "Financial & Management Consulting",
         d: {
