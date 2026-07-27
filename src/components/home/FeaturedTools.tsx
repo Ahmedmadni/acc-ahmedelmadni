@@ -143,7 +143,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
             initial={m.reduce ? { opacity: 0 } : { opacity: 0, clipPath: "inset(0 0 100% 0)" }}
             whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, clipPath: "inset(0 0 0% 0)" }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={m.reduce ? { duration: 0.3 } : { duration: 0.85, ease: EASE.out }}
+            transition={m.reduce ? { duration: 0.3 } : { duration: 0.6, ease: EASE.emphasis }}
             className="lg:col-span-5"
           >
             <Link
