@@ -86,8 +86,8 @@ const SoftwareEcosystem = lazy(() =>
 const ServicesEditorial = lazy(() =>
   import("@/components/home/ServicesEditorial").then((m) => ({ default: m.ServicesEditorial })),
 );
-const AboutTeaser = lazy(() =>
-  import("@/components/home/AboutTeaser").then((m) => ({ default: m.AboutTeaser })),
+const AboutMe = lazy(() =>
+  import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })),
 );
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
@@ -475,6 +475,9 @@ function Index() {
 
       <main className="relative z-10">
         <Hero lang={lang} />
+        <Suspense fallback={null}>
+          <AboutMe lang={lang} />
+        </Suspense>
         <StickyOutgoingLayer>
           <Suspense fallback={null}>
             <ServicesEditorial lang={lang} onOpen={setServiceModal} />
@@ -482,9 +485,6 @@ function Index() {
         </StickyOutgoingLayer>
         <Suspense fallback={null}>
           <SoftwareEcosystem lang={lang} />
-        </Suspense>
-        <Suspense fallback={null}>
-          <AboutTeaser lang={lang} />
         </Suspense>
         <Suspense fallback={null}>
           <TopicsAndVideos lang={lang} />
