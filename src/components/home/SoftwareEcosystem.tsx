@@ -218,7 +218,7 @@ function FeatureCard({
   reduce,
 }: {
   ar: boolean;
-  activeIndex: ReturnType<typeof useTransform>;
+  activeIndex: MotionValue<number>;
   activeCard: number;
   reduce: boolean;
 }) {
