@@ -1655,13 +1655,12 @@ export function Footer({ lang }: { lang: Lang }) {
   ];
 
   /*
-   * روابط التواصل مأخوذة من ثابت SOCIALS الموجود في الملف.
-   * نستخدم الأيقونة الأصلية المرتبطة بالـ Mascot ولا نضيف
-   * أي أيقونات أو روابط جديدة.
-   */
-  const socialLinks = SOCIALS.filter((social) =>
-    ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
-  );
+ * روابط التواصل مأخوذة من ثابت SOCIALS الموجود مسبقًا في الملف.
+ * لا نستخدم صور Mascot هنا حتى تبقى أيقونات الفوتر بسيطة وأنيقة.
+ */
+const socialLinks = SOCIALS.filter((social) =>
+  ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
+);
 
   const renderLink = (link: { to: string; label: string }) => {
     const className =
