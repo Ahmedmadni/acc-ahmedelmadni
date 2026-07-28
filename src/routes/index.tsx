@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useInView, useMotionValue, useScroll, useSprin
 import {
   ArrowLeft,
   ArrowRight,
+  ArrowUpRight,
   BarChart3,
   Briefcase,
   Calculator,
