@@ -1227,3 +1227,82 @@ img {
     font-family: "Cairo", "Tahoma", Arial, sans-serif !important;
   }
 }
+
+/* ===================================================================
+   FOOTER / BROWN-SURFACE MATERIALS
+   Pure-CSS surface textures — no external images, no new libraries.
+   Both layers are decorative only: they sit behind content at very low
+   alpha so contrast and readability are untouched, and they are applied
+   through ::before so they never interfere with a surface's own
+   background or its children.
+   =================================================================== */
+
+/**
+ * Fine leather grain for warm brown / bronze surfaces.
+ *
+ * The grain is built from repeating gradients whose periods are prime-ish
+ * and whose angles are deliberately odd (23deg / 67deg / 113deg). Because
+ * the periods never share a common multiple, the layers refuse to line up
+ * into a readable grid — what you get is an irregular, tight cross-hatch
+ * that reads as hide rather than as graph paper. Two soft radial blooms on
+ * top break the remaining regularity so the surface looks mottled the way
+ * real leather does.
+ */
+.leather-grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.leather-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0.5;
+  background-image:
+    repeating-linear-gradient(23deg, rgba(255, 255, 255, 0.016) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(113deg, rgba(0, 0, 0, 0.028) 0 1px, transparent 1px 11px),
+    repeating-linear-gradient(67deg, rgba(255, 255, 255, 0.01) 0 1px, transparent 1px 13px),
+    radial-gradient(ellipse 70% 55% at 22% 28%, rgba(255, 255, 255, 0.022), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 78% 74%, rgba(0, 0, 0, 0.05), transparent 72%);
+}
+
+/* Keep real content above the grain layer. */
+.leather-grain > * {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+ * Near-invisible motif for deep charcoal surfaces.
+ *
+ * An interlaced diamond lattice — a very reduced nod to Arabic geometric
+ * work — at an alpha low enough that it only resolves when you look for
+ * it. A wide radial vignette keeps the centre of the surface clean so
+ * body copy never sits on top of the busiest part of the pattern.
+ */
+.dark-motif {
+  position: relative;
+  isolation: isolate;
+}
+
+.dark-motif::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0.55;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(232, 216, 195, 0.012) 0 1px, transparent 1px 19px),
+    repeating-linear-gradient(-45deg, rgba(232, 216, 195, 0.012) 0 1px, transparent 1px 19px),
+    radial-gradient(ellipse 80% 60% at 50% 45%, rgba(0, 0, 0, 0.35), transparent 78%);
+}
+
+.dark-motif > * {
+  position: relative;
+  z-index: 1;
+}

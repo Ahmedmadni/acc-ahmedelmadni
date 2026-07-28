@@ -2,7 +2,15 @@ import "../styles.css";
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import { AnimatePresence, motion, useInView, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useInView,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -65,7 +73,9 @@ import { EASE, useMotionSafe } from "@/lib/motion";
 
 import { t, type Lang } from "@/lib/i18n";
 import { playClick, playHover, playIntro } from "@/lib/sound";
-const AIAssistant = lazy(() => import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })));
+const AIAssistant = lazy(() =>
+  import("@/components/AIAssistant").then((m) => ({ default: m.AIAssistant })),
+);
 export const ServiceModal = lazy(() => import("@/components/home/ServiceModal"));
 export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
@@ -77,7 +87,9 @@ const SoftwareEcosystem = lazy(() =>
 const ServicesEditorial = lazy(() =>
   import("@/components/home/ServicesEditorial").then((m) => ({ default: m.ServicesEditorial })),
 );
-const AboutMe = lazy(() => import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })));
+const AboutMe = lazy(() =>
+  import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })),
+);
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -260,7 +272,11 @@ function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
   return (
     <div ref={ref} className="sticky top-0 z-0">
       <motion.div style={{ scale }}>{children}</motion.div>
-      <motion.div aria-hidden className="pointer-events-none absolute inset-0 bg-black" style={{ opacity: dim }} />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-black"
+        style={{ opacity: dim }}
+      />
     </div>
   );
 }
@@ -443,7 +459,9 @@ function Index() {
                   </button>
                 </div>
                 {/* Trust line */}
-                <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">أحمد المدني · محاسب أول معتمد · الرياض</p>
+                <p className="mt-4 text-[10px] text-[var(--fg-soft)]/50">
+                  أحمد المدني · محاسب أول معتمد · الرياض
+                </p>
               </div>
             </motion.div>
           </motion.div>
@@ -488,12 +506,18 @@ function Index() {
 
       <Suspense fallback={null}>
         <AnimatePresence>
-          {skillModal && <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />}
+          {skillModal && (
+            <SkillModal item={skillModal} lang={lang} onClose={() => setSkillModal(null)} />
+          )}
         </AnimatePresence>
         <AnimatePresence>
-          {serviceModal && <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />}
+          {serviceModal && (
+            <ServiceModal item={serviceModal} lang={lang} onClose={() => setServiceModal(null)} />
+          )}
         </AnimatePresence>
-        <AnimatePresence>{eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}</AnimatePresence>
+        <AnimatePresence>
+          {eidOpen && <EidBanner lang={lang} onClose={dismissEid} />}
+        </AnimatePresence>
       </Suspense>
     </div>
   );
@@ -514,7 +538,9 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
   // very first paint (client-only; SSR has no window and safely defaults to
   // the animated entrance, same as any other visitor without the effect yet).
   const [navReduceMotion] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   );
 
   const links: { to: string; label: string; hash?: boolean }[] = [
@@ -523,7 +549,11 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
     { to: "/services", label: t.nav.services[lang] },
     { to: "/tools", label: lang === "ar" ? "الأدوات" : "Tools" },
     { to: "/library/articles", label: lang === "ar" ? "المكتبة" : "Library" },
-    { to: "/#contact", label: t.nav.contact[lang], hash: true },
+    // Points at the real /contact page (form + mascot channels) rather than the
+    // homepage anchor, so it behaves like every other nav item and can carry an
+    // active state. Existing `/#contact` links elsewhere still resolve, because
+    // the homepage keeps its `id="contact"` section.
+    { to: "/contact", label: t.nav.contact[lang] },
   ];
 
   // Hash links (in-page anchors) have no route of their own to be "active".
@@ -535,7 +565,11 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
 
   // `showIndicator` mounts the shared layoutId underline — desktop nav only,
   // per Phase M7 scope (mobile keeps the plain color-based active state).
-  const renderLink = (l: { to: string; label: string; hash?: boolean }, extraClass = "", showIndicator = false) => {
+  const renderLink = (
+    l: { to: string; label: string; hash?: boolean },
+    extraClass = "",
+    showIndicator = false,
+  ) => {
     const active = isLinkActive(l);
     const cls = `relative text-sm font-medium transition-colors hover:text-[#c2a079] ${extraClass}`;
     const color = active ? "#c2a079" : "var(--fg-soft)";
@@ -585,11 +619,17 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
       style={{ background: "color-mix(in oklab, #1C1B19 82%, transparent)" }}
     >
       <div className="w-full px-4 sm:px-8 lg:px-16 flex h-20 items-center justify-between gap-4">
-        <RouterLink to="/" className="group flex flex-col leading-tight shrink-0" onMouseEnter={playHover}>
+        <RouterLink
+          to="/"
+          className="group flex flex-col leading-tight shrink-0"
+          onMouseEnter={playHover}
+        >
           <span className="text-xl font-extrabold sm:text-2xl" style={{ color: "var(--fg)" }}>
             {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
           </span>
-          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] text-[#A88765]">Senior Accountant</span>
+          <span className="mt-1.5 text-[11px] uppercase tracking-[0.3em] text-[#A88765]">
+            Senior Accountant
+          </span>
         </RouterLink>
 
         <ul className="hidden items-center gap-7 lg:flex">
@@ -624,7 +664,9 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
               aria-label="Admin"
             >
               <ShieldCheck className="size-4" />
-              <span className="hidden lg:inline">{lang === "ar" ? "لوحة التحكم" : "Dashboard"}</span>
+              <span className="hidden lg:inline">
+                {lang === "ar" ? "لوحة التحكم" : "Dashboard"}
+              </span>
             </RouterLink>
           )}
           {isAdmin && (
@@ -657,14 +699,22 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
           >
             <Sparkles className="size-4" />
             {lang === "ar" ? "اطلب خدمة" : "Request Service"}
-            {lang === "ar" ? <ArrowLeft className="size-3.5" /> : <ArrowRight className="size-3.5" />}
+            {lang === "ar" ? (
+              <ArrowLeft className="size-3.5" />
+            ) : (
+              <ArrowRight className="size-3.5" />
+            )}
           </RouterLink>
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="flex size-9 items-center justify-center rounded-full border border-[#A88765]/30 lg:hidden"
             aria-label="Menu"
           >
-            {mobileOpen ? <X className="size-4 text-[#A88765]" /> : <Menu className="size-4 text-[#A88765]" />}
+            {mobileOpen ? (
+              <X className="size-4 text-[#A88765]" />
+            ) : (
+              <Menu className="size-4 text-[#A88765]" />
+            )}
           </button>
         </div>
       </div>
@@ -1129,7 +1179,15 @@ function TimelineItem({
   );
 }
 
-function LogoBadge({ logoUrl, name, compact = false }: { logoUrl: string | null; name: string; compact?: boolean }) {
+function LogoBadge({
+  logoUrl,
+  name,
+  compact = false,
+}: {
+  logoUrl: string | null;
+  name: string;
+  compact?: boolean;
+}) {
   return (
     <motion.div
       whileHover={{ scale: 1.05, rotate: 1 }}
@@ -1184,7 +1242,10 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
   const itemsQ = useQuery({
     queryKey: ["public-skill-items"],
     queryFn: async () => {
-      const { data, error } = await supabase.from("skill_items").select("*").order("sort_order", { ascending: true });
+      const { data, error } = await supabase
+        .from("skill_items")
+        .select("*")
+        .order("sort_order", { ascending: true });
       if (error) throw error;
       return data;
     },
@@ -1252,7 +1313,9 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     onMouseEnter={playHover}
                     aria-pressed={isActive}
                     className={`group relative flex w-full shrink-0 items-center gap-3 overflow-hidden rounded-2xl border px-4 py-4 text-start transition-colors ${
-                      isActive ? "border-[#A88765]" : "border-[#E3DDD5] bg-[#F5F1EB] hover:border-[#A88765]/40"
+                      isActive
+                        ? "border-[#A88765]"
+                        : "border-[#E3DDD5] bg-[#F5F1EB] hover:border-[#A88765]/40"
                     }`}
                   >
                     {isActive && (
@@ -1260,7 +1323,9 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                         layoutId="skills-active-tab"
                         aria-hidden
                         className="absolute inset-0 bg-gradient-to-br from-[#A88765]/15 to-transparent shadow-[0_10px_30px_-12px_rgba(168,135,101,0.35)]"
-                        transition={reduce ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 28 }}
+                        transition={
+                          reduce ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 28 }
+                        }
                       />
                     )}
                     <span
@@ -1274,7 +1339,8 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                     </span>
                     <div className="relative z-10 flex-1">
                       <div className="text-[10px] uppercase tracking-[0.25em] text-[#8a8078]">
-                        {String(i + 1).padStart(2, "0")} / {groups.length.toString().padStart(2, "0")}
+                        {String(i + 1).padStart(2, "0")} /{" "}
+                        {groups.length.toString().padStart(2, "0")}
                       </div>
                       <div
                         className={`text-sm font-extrabold ${isActive ? "bg-gradient-to-br from-[#A88765] to-[#4A3023] bg-clip-text text-transparent" : "text-[#1C1B19]"}`}
@@ -1304,7 +1370,9 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                       {lang === "ar" ? activeGroup.heading_ar : activeGroup.heading_en}
                     </h3>
                   </div>
-                  <div className="font-mono text-5xl font-black text-[#A88765]/25 sm:text-6xl">0{active + 1}</div>
+                  <div className="font-mono text-5xl font-black text-[#A88765]/25 sm:text-6xl">
+                    0{active + 1}
+                  </div>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2">
@@ -1332,7 +1400,9 @@ export function Skills({ lang, onOpen }: { lang: Lang; onOpen: (s: SkillItem) =>
                           initial={reduce ? { width: `${it.level}%` } : { width: 0 }}
                           whileInView={{ width: `${it.level}%` }}
                           viewport={{ once: true }}
-                          transition={reduce ? { duration: 0 } : { duration: 1.1, delay: 0.1 + j * 0.05 }}
+                          transition={
+                            reduce ? { duration: 0 } : { duration: 1.1, delay: 0.1 + j * 0.05 }
+                          }
                           className="h-full rounded-full bg-gradient-to-r from-[#c2a079] to-[#7c6045]"
                         />
                       </div>
@@ -1417,7 +1487,10 @@ function Testimonials({ lang }: { lang: Lang }) {
             {t.testimonials.title[lang]}
           </motion.h2>
 
-          <motion.p variants={m.staggerChild} className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]">
+          <motion.p
+            variants={m.staggerChild}
+            className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]"
+          >
             {t.testimonials.sub[lang]}
           </motion.p>
         </motion.div>
@@ -1500,7 +1573,8 @@ function Testimonials({ lang }: { lang: Lang }) {
 
                     {/* Counter */}
                     <span className="hidden shrink-0 font-mono text-[12px] text-[#8A8078] sm:block">
-                      {String(activeIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+                      {String(activeIndex + 1).padStart(2, "0")} /{" "}
+                      {String(items.length).padStart(2, "0")}
                     </span>
                   </div>
                 </motion.div>
@@ -1516,7 +1590,9 @@ function Testimonials({ lang }: { lang: Lang }) {
                   onClick={() => changeTestimonial(index)}
                   aria-label={ar ? `عرض رأي العميل ${index + 1}` : `Show testimonial ${index + 1}`}
                   className={`h-1.5 rounded-full transition-all duration-500 ${
-                    index === activeIndex ? "w-8 bg-[#4A3023]" : "w-1.5 bg-[#A88765]/30 hover:bg-[#A88765]/70"
+                    index === activeIndex
+                      ? "w-8 bg-[#4A3023]"
+                      : "w-1.5 bg-[#A88765]/30 hover:bg-[#A88765]/70"
                   }`}
                 />
               ))}
@@ -1598,7 +1674,9 @@ function ContactMascotCard({
           transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <span className="relative text-[11px] font-bold leading-tight text-[#FCFBF9]/90">{s.label}</span>
+      <span className="relative text-[11px] font-bold leading-tight text-[#FCFBF9]/90">
+        {s.label}
+      </span>
     </motion.a>
   );
 }
@@ -1672,9 +1750,18 @@ export function Contact({ lang }: { lang: Lang }) {
           </motion.div>
 
           {/* Social channels */}
-          <motion.div variants={m.staggerChild} className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+          <motion.div
+            variants={m.staggerChild}
+            className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7"
+          >
             {SOCIALS.map((s, i) => (
-              <ContactMascotCard key={s.label} s={s} i={i} reduce={m.reduce} parallaxActive={mascotParallaxActive} />
+              <ContactMascotCard
+                key={s.label}
+                s={s}
+                i={i}
+                reduce={m.reduce}
+                parallaxActive={mascotParallaxActive}
+              />
             ))}
           </motion.div>
         </motion.div>
@@ -1724,11 +1811,14 @@ export function Footer({ lang }: { lang: Lang }) {
 
   /*
    * روابط التواصل مأخوذة من ثابت SOCIALS الموجود مسبقًا في الملف.
-   * لا نستخدم صور Mascot هنا حتى تبقى أيقونات الفوتر بسيطة وأنيقة.
+   * لا نستخدم صور Mascot هنا حتى تبقى أيقونات الفوتر بسيطة وأنيقة —
+   * الماسكوت يبقى كما هو في قسم «تواصل معي» وحده.
+   *
+   * نعرض كل القنوات (هاتف / واتساب / بريد + الحسابات الخارجية) لأن
+   * روابط الاتصال المباشر يجب أن تعمل من الفوتر أيضًا. الترتيب هو نفسه
+   * ترتيب SOCIALS، ولم تُضَف أي روابط جديدة.
    */
-  const socialLinks = SOCIALS.filter((social) =>
-    ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
-  );
+  const socialLinks = SOCIALS;
 
   const renderLink = (link: { to: string; label: string }) => {
     const className =
@@ -1752,8 +1842,10 @@ export function Footer({ lang }: { lang: Lang }) {
   };
 
   return (
-    <footer className="relative isolate overflow-hidden border-t border-[#A88765]/20 bg-[#151412] text-white">
-      {/* Luxury background layers */}
+    <footer className="dark-motif relative isolate overflow-hidden border-t border-[#A88765]/20 bg-[#151412] text-white">
+      {/* Warm bronze blooms. The repeating 30px diagonal grid that used to sit
+          on this layer read as visible graph paper; the near-invisible
+          interlaced lattice now comes from `.dark-motif` instead. */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -1768,19 +1860,8 @@ export function Footer({ lang }: { lang: Lang }) {
               circle at 88% 78%,
               rgba(168, 135, 101, 0.08),
               transparent 30%
-            ),
-            linear-gradient(
-              135deg,
-              rgba(255, 255, 255, 0.018) 25%,
-              transparent 25%
-            ),
-            linear-gradient(
-              225deg,
-              rgba(255, 255, 255, 0.012) 25%,
-              transparent 25%
             )
           `,
-          backgroundSize: "auto, auto, 30px 30px, 30px 30px",
         }}
       />
 
@@ -1796,8 +1877,10 @@ export function Footer({ lang }: { lang: Lang }) {
           {/* Brand and introduction */}
           <div className="max-w-md">
             <div className="flex items-center gap-3">
-              <div className="flex size-11 items-center justify-center rounded-xl border border-[#A88765]/30 bg-[#A88765]/10">
-                <span className="font-display text-lg font-bold text-[#D8BD9C]">{isAr ? "أ" : "A"}</span>
+              <div className="leather-grain flex size-11 items-center justify-center rounded-xl border border-[#A88765]/30 bg-[#A88765]/10">
+                <span className="font-display text-lg font-bold text-[#D8BD9C]">
+                  {isAr ? "أ" : "A"}
+                </span>
               </div>
 
               <div>
@@ -1811,18 +1894,20 @@ export function Footer({ lang }: { lang: Lang }) {
               </div>
             </div>
 
-            <p className="mt-6 max-w-[31rem] text-[13px] leading-[1.95] text-white/55">{t.footer.tagline[lang]}</p>
+            <p className="mt-6 max-w-[31rem] text-[13px] leading-[1.95] text-white/55">
+              {t.footer.tagline[lang]}
+            </p>
 
             {/* Location and VAT */}
             <div className="mt-6 flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-white/[0.025] px-3.5 py-2 text-[11px] font-semibold text-[#D8BD9C]">
+              <span className="leather-grain inline-flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-[#A88765]/[0.07] px-3.5 py-2 text-[11px] font-semibold text-[#D8BD9C]">
                 <MapPin className="size-3.5" />
                 {isAr ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}
               </span>
 
               <RouterLink
                 to="/request-service"
-                className="group inline-flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-white/[0.025] px-3.5 py-2 text-[11px] font-semibold text-[#D8BD9C] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#A88765]/60 hover:bg-[#A88765]/10"
+                className="leather-grain group inline-flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-[#A88765]/[0.07] px-3.5 py-2 text-[11px] font-semibold text-[#D8BD9C] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#A88765]/60 hover:bg-[#A88765]/[0.14]"
                 title={isAr ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}
               >
                 <img
@@ -1846,7 +1931,8 @@ export function Footer({ lang }: { lang: Lang }) {
               {socialLinks.map((social) => {
                 const Icon = social.Icon;
 
-                const isExternal = social.href.startsWith("http://") || social.href.startsWith("https://");
+                const isExternal =
+                  social.href.startsWith("http://") || social.href.startsWith("https://");
 
                 return (
                   <a
@@ -1856,8 +1942,16 @@ export function Footer({ lang }: { lang: Lang }) {
                     rel={isExternal ? "noreferrer" : undefined}
                     aria-label={social.label}
                     title={social.label}
-                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12 hover:text-[#E1C5A4]"
+                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:text-[#E1C5A4]"
                   >
+                    {/* The channel's own colour, but only as a whisper on hover —
+                        the resting state stays bronze/white so the row reads as
+                        one calm set rather than a strip of brand badges. */}
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.16]"
+                      style={{ backgroundColor: social.color }}
+                    />
                     <Icon className="relative z-10 size-[17px] transition-transform duration-300 group-hover:scale-110" />
                   </a>
                 );
