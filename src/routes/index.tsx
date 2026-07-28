@@ -1655,12 +1655,12 @@ export function Footer({ lang }: { lang: Lang }) {
   ];
 
   /*
- * روابط التواصل مأخوذة من ثابت SOCIALS الموجود مسبقًا في الملف.
- * لا نستخدم صور Mascot هنا حتى تبقى أيقونات الفوتر بسيطة وأنيقة.
- */
-const socialLinks = SOCIALS.filter((social) =>
-  ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
-);
+   * روابط التواصل مأخوذة من ثابت SOCIALS الموجود مسبقًا في الملف.
+   * لا نستخدم صور Mascot هنا حتى تبقى أيقونات الفوتر بسيطة وأنيقة.
+   */
+  const socialLinks = SOCIALS.filter((social) =>
+    ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
+  );
 
   const renderLink = (link: { to: string; label: string }) => {
     const className =
@@ -1773,46 +1773,24 @@ const socialLinks = SOCIALS.filter((social) =>
               </RouterLink>
             </div>
 
-            {/* Social links - using the existing SOCIALS data and Mascot assets */}
-<div className="mt-7 flex flex-wrap items-center gap-2.5">
-  {socialLinks.map((social) => {
-    const Icon = social.Icon;
+            {/* Social links */}
+            <div className="mt-7 flex flex-wrap items-center gap-2.5">
+              {socialLinks.map((social) => {
+                const Icon = social.Icon;
 
-    const isExternal =
-      social.href.startsWith("http://") ||
-      social.href.startsWith("https://");
+                const isExternal = social.href.startsWith("http://") || social.href.startsWith("https://");
 
-    return (
-      <a
-        key={social.label}
-        href={social.href}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noreferrer" : undefined}
-        aria-label={social.label}
-        title={social.label}
-        className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12 hover:text-[#E1C5A4]"
-      >
-        <Icon className="relative z-10 size-[17px] transition-transform duration-300 group-hover:scale-110" />
-      </a>
-    );
-  })}
-</div>
-            
-                    {/* Mascot image connected to the existing social item */}
-                    <img
-                      src={social.mascot}
-                      alt=""
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-0 size-full object-cover opacity-0 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
-                      loading="lazy"
-                      decoding="async"
-                    />
-
-                    {/* Original social icon */}
-                    <Icon
-                      className="relative z-10 size-[17px] transition-all duration-300 group-hover:scale-90 group-hover:opacity-0"
-                      style={{ color: social.color }}
-                    />
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noreferrer" : undefined}
+                    aria-label={social.label}
+                    title={social.label}
+                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12 hover:text-[#E1C5A4]"
+                  >
+                    <Icon className="relative z-10 size-[17px] transition-transform duration-300 group-hover:scale-110" />
                   </a>
                 );
               })}
