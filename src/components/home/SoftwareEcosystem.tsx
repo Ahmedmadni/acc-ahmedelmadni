@@ -1,172 +1,307 @@
-import { motion } from "motion/react";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
+import { useRef, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
-import {
-  SOFTWARE_CATEGORY_LABELS,
-  SOFTWARE_ECOSYSTEM,
-  SOFTWARE_FEATURED,
-  type SoftwareEntry,
-} from "@/lib/software-catalog";
+import { SOFTWARE_CATEGORY_LABELS, SOFTWARE_ECOSYSTEM, type SoftwareEntry } from "@/lib/software-catalog";
 
-/**
- * Accounting software / ERP ecosystem showcase (Phase 3A).
- *
- * A warm-canvas editorial band (deliberate light contrast against the dark
- * sections around it): a dominant walnut "featured" statement card beside a
- * structured wall of software identities rendered as refined typographic
- * monograms. Motion is scroll-triggered and calm — reveal + stagger + a
- * clip-path wipe on the featured card, subtle CSS hover elevation on the
- * cards. No marquee, no perpetual loops. Respects prefers-reduced-motion via
- * the shared motion helper.
- */
 export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
+  const sectionRef = useRef<HTMLElement>(null);
   const m = useMotionSafe();
 
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  const cardCount = SOFTWARE_ECOSYSTEM.length;
+
+  const activeIndex = useTransform(scrollYProgress, [0, 1], [0, cardCount - 1]);
+
+  const [activeCard, setActiveCard] = useState(0);
+
+  useMotionValueEvent(activeIndex, "change", (value) => {
+    const nextIndex = Math.max(0, Math.min(cardCount - 1, Math.round(value)));
+
+    setActiveCard(nextIndex);
+  });
+
   return (
-    <section
-      id="software"
-      className="relative z-10 overflow-hidden bg-[#F5F2ED] py-20 sm:py-24 lg:py-28"
-    >
-      {/* Soft blend from the dark Services band above, echoing the Hero's own transition. */}
+    <section ref={sectionRef} id="software" className="relative z-10 bg-[#F5F2ED]">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
       />
-      <div className="relative mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
-        {/* Header */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={m.staggerParent}
-          className="max-w-2xl"
-        >
-          <motion.p
-            variants={m.staggerChild}
-            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
-          >
-            {ar ? "الأنظمة والبرامج" : "Systems & Software"}
-          </motion.p>
-          <motion.h2
-            variants={m.staggerChild}
-            className="font-display mt-3 text-[1.9rem] font-bold leading-[1.3] text-[#1C1B19] sm:text-[2.4rem] lg:text-[2.9rem]"
-          >
-            {ar
-              ? "أنظمة ERP وبرامج محاسبية أعمل عليها باحتراف"
-              : "ERP systems & accounting software I work with"}
-          </motion.h2>
-          <motion.p
-            variants={m.staggerChild}
-            className="mt-4 text-[15px] leading-[1.9] text-[#746E67] sm:text-[16px]"
-          >
-            {ar
-              ? "أُدير دورة محاسبية كاملة — من إدخال البيانات حتى التقارير والتحليل — على أبرز الأنظمة المحاسبية وأنظمة تخطيط الموارد."
-              : "I run a full accounting cycle — from data entry to reporting and analysis — across leading accounting platforms and ERP systems."}
-          </motion.p>
-        </motion.div>
 
-        {/* Grid: dominant featured card + software wall */}
-        <div className="mt-12 grid gap-5 lg:grid-cols-12">
-          <FeaturedCard ar={ar} reduce={m.reduce} />
+      <div className="relative mx-auto min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12">
+        <div className="sticky top-0 flex min-h-screen items-center py-16 sm:py-20 lg:py-24">
+          <div className="grid w-full items-center gap-10 lg:grid-cols-12 lg:gap-16">
+            {/* LEFT — STACKED SOFTWARE CARDS */}
+            <div className="relative order-2 h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
+              {SOFTWARE_ECOSYSTEM.map((software, index) => (
+                <StackedSoftwareCard
+                  key={software.id}
+                  software={software}
+                  index={index}
+                  total={cardCount}
+                  scrollProgress={activeIndex}
+                  reduce={m.reduce}
+                  ar={ar}
+                />
+              ))}
+            </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={m.staggerParent}
-            className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:col-span-7"
-          >
-            {SOFTWARE_ECOSYSTEM.map((s) => (
-              <SoftwareCard key={s.id} s={s} ar={ar} variants={m.staggerChild} />
-            ))}
-          </motion.div>
+            {/* RIGHT — FIXED BROWN CARD */}
+            <div className="relative order-1 lg:order-2 lg:col-span-5">
+              <motion.div
+                initial={m.reduce ? { opacity: 0 } : { opacity: 0, x: 40 }}
+                whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: m.reduce ? 0.3 : 0.8,
+                  ease: EASE.out,
+                }}
+              >
+                <FeatureCard ar={ar} activeIndex={activeIndex} activeCard={activeCard} reduce={m.reduce} />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function FeaturedCard({ ar, reduce }: { ar: boolean; reduce: boolean }) {
+function StackedSoftwareCard({
+  software,
+  index,
+  total,
+  scrollProgress,
+  reduce,
+  ar,
+}: {
+  software: SoftwareEntry;
+  index: number;
+  total: number;
+  scrollProgress: ReturnType<typeof useTransform>;
+  reduce: boolean;
+  ar: boolean;
+}) {
+  const position = useTransform(scrollProgress, (progress) => progress - index);
+
+  const y = useTransform(position, (value) => {
+    if (value > 0) {
+      return -Math.min(value * 95, 190);
+    }
+
+    return Math.min(Math.abs(value) * 26, 105);
+  });
+
+  const scale = useTransform(position, (value) => {
+    if (value > 0) {
+      return Math.max(1 - value * 0.035, 0.93);
+    }
+
+    return Math.max(1 - Math.abs(value) * 0.055, 0.78);
+  });
+
+  const opacity = useTransform(position, (value) => {
+    if (value > 1.5 || value < -4) return 0;
+
+    if (value >= 0) {
+      return Math.max(1 - value * 0.3, 0.7);
+    }
+
+    return Math.max(1 - Math.abs(value) * 0.18, 0.45);
+  });
+
+  const rotate = useTransform(position, (value) => {
+    if (value > 0) {
+      return Math.min(value * -1.5, -4);
+    }
+
+    return Math.min(Math.abs(value) * 0.6, 2);
+  });
+
+  const zIndex = useTransform(position, (value) => {
+    if (value >= -0.5 && value <= 0.5) {
+      return 100;
+    }
+
+    if (value < 0) {
+      return Math.max(10, 85 + Math.round(value * 10));
+    }
+
+    return Math.max(1, 85 - Math.round(value * 10));
+  });
+
+  const category = ar ? SOFTWARE_CATEGORY_LABELS[software.category].ar : SOFTWARE_CATEGORY_LABELS[software.category].en;
+
+  const label = ar && software.nameAr ? software.nameAr : software.name;
+
   return (
     <motion.div
-      initial={reduce ? { opacity: 0 } : { opacity: 0, clipPath: "inset(0 0 100% 0)" }}
-      whileInView={reduce ? { opacity: 1 } : { opacity: 1, clipPath: "inset(0 0 0% 0)" }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={reduce ? { duration: 0.3 } : { duration: 0.85, ease: EASE.out }}
-      className="relative flex min-h-[16rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#4A3023] p-7 shadow-[0_30px_70px_-30px_rgba(28,27,25,0.55)] sm:p-9 lg:col-span-5 lg:min-h-full"
+      style={{
+        y: reduce ? undefined : y,
+        scale: reduce ? undefined : scale,
+        opacity: reduce ? undefined : opacity,
+        rotate: reduce ? undefined : rotate,
+        zIndex: reduce ? total - index : zIndex,
+      }}
+      className="absolute inset-0 flex items-center justify-center"
     >
-      {/* faint monogram watermark */}
-      <span
-        aria-hidden
-        className="font-display pointer-events-none absolute -bottom-8 -end-3 select-none text-[8rem] font-bold leading-none text-white/[0.05]"
-      >
-        ERP
-      </span>
+      <div className="group relative flex h-[25rem] w-[90%] max-w-[40rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-6 shadow-[0_30px_80px_-40px_rgba(74,48,35,0.55)] transition-shadow duration-500 hover:shadow-[0_40px_100px_-40px_rgba(74,48,35,0.7)] sm:h-[30rem] sm:w-[86%] sm:p-9 lg:h-[34rem]">
+        {/* Background index */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -bottom-8 -end-2 font-display text-[9rem] font-bold leading-none text-[#4A3023]/[0.045] sm:text-[13rem]"
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
 
-      <div className="relative">
-        <p className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#d8bd9c]">
-          {ar ? SOFTWARE_FEATURED.eyebrow.ar : SOFTWARE_FEATURED.eyebrow.en}
-        </p>
-        <h3 className="font-display mt-4 text-[1.4rem] font-bold leading-[1.4] text-[#FCFBF9] sm:text-[1.6rem]">
-          {ar ? SOFTWARE_FEATURED.title.ar : SOFTWARE_FEATURED.title.en}
-        </h3>
-      </div>
+        <div className="relative z-10">
+          <div className="flex items-start justify-between gap-4">
+            <span className="rounded-full border border-[#A88765]/30 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#7C6045]">
+              {category}
+            </span>
 
-      <div className="relative mt-8 flex flex-wrap gap-2.5">
-        {(ar ? SOFTWARE_FEATURED.kpis.ar : SOFTWARE_FEATURED.kpis.en).map((k) => (
+            <span className="font-mono text-[12px] text-[#8A8078]">
+              {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+            </span>
+          </div>
+
+          <div className="mt-10 flex items-center gap-5">
+            {/* BIGGER LOGO */}
+            <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-4 shadow-sm sm:size-28">
+              {software.logo ? (
+                <img src={software.logo} alt="" className="size-full object-contain" loading="lazy" />
+              ) : (
+                <span className="font-display text-3xl font-bold text-[#4A3023]">{software.mark}</span>
+              )}
+            </div>
+
+            <div className="min-w-0">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A88765]">
+                {ar ? "نظام / برنامج" : "System / Software"}
+              </p>
+
+              <h3 className="font-display mt-2 truncate text-3xl font-bold tracking-tight text-[#1C1B19] sm:text-4xl">
+                {label}
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 mt-8 flex items-end justify-between gap-5">
+          <p className="max-w-sm text-[14px] leading-8 text-[#746E67]">
+            {ar
+              ? "أستخدم هذا النظام ضمن بيئة العمل المحاسبية والتشغيلية حسب طبيعة النشاط واحتياجات المنشأة."
+              : "Used across accounting and operational workflows according to the business environment and reporting needs."}
+          </p>
+
           <span
-            key={k}
-            className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 bg-white/[0.05] px-3.5 py-1.5 text-[13px] font-semibold text-[#e9d9c3]"
+            aria-hidden
+            className="hidden size-12 shrink-0 items-center justify-center rounded-full border border-[#A88765]/40 text-[#7C6045] transition-transform duration-500 group-hover:rotate-45 sm:flex"
           >
-            <span aria-hidden className="size-1.5 rounded-full bg-[#A88765]" />
-            {k}
+            ↗
           </span>
-        ))}
+        </div>
       </div>
     </motion.div>
   );
 }
 
-function SoftwareCard({
-  s,
+function FeatureCard({
   ar,
-  variants,
+  activeIndex,
+  activeCard,
+  reduce,
 }: {
-  s: SoftwareEntry;
   ar: boolean;
-  variants: import("motion/react").Variants;
+  activeIndex: ReturnType<typeof useTransform>;
+  activeCard: number;
+  reduce: boolean;
 }) {
-  const label = ar && s.nameAr ? s.nameAr : s.name;
-  const category = ar
-    ? SOFTWARE_CATEGORY_LABELS[s.category].ar
-    : SOFTWARE_CATEGORY_LABELS[s.category].en;
+  const activeSoftware = SOFTWARE_ECOSYSTEM[activeCard];
+
+  const activeName = ar && activeSoftware.nameAr ? activeSoftware.nameAr : activeSoftware.name;
+
+  const activeCategory = ar
+    ? SOFTWARE_CATEGORY_LABELS[activeSoftware.category].ar
+    : SOFTWARE_CATEGORY_LABELS[activeSoftware.category].en;
 
   return (
     <motion.div
-      variants={variants}
-      className="group flex items-center gap-3 rounded-2xl border border-[#E3DDD5] bg-[#FCFBF9] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_18px_40px_-24px_rgba(74,48,35,0.5)]"
+      layout
+      className="relative mx-auto min-h-[25rem] w-full max-w-[31rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[30rem] sm:p-9 lg:min-h-[34rem]"
     >
       <span
         aria-hidden
-        className={
-          s.logo
-            ? "flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[#E3DDD5] bg-white p-1.5"
-            : "flex size-11 shrink-0 items-center justify-center rounded-xl bg-[#1C1B19] text-[15px] font-bold text-[#e9d9c3] transition-colors duration-300 group-hover:bg-[#4A3023]"
-        }
+        className="pointer-events-none absolute -bottom-12 -end-8 font-display text-[10rem] font-bold leading-none text-white/[0.05] sm:text-[14rem]"
       >
-        {s.logo ? (
-          <img src={s.logo} alt="" className="size-full object-contain" loading="lazy" />
-        ) : (
-          s.mark
-        )}
+        ERP
       </span>
-      <span className="min-w-0">
-        <span className="block truncate text-[15px] font-semibold leading-tight text-[#1C1B19]">
-          {label}
-        </span>
-        <span className="mt-0.5 block truncate text-[12px] text-[#746E67]">{category}</span>
-      </span>
+
+      <div className="relative z-10 flex h-full flex-col justify-between">
+        <div>
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#D8BD9C]">
+            {ar ? "الأنظمة والبرامج" : "Systems & Software"}
+          </p>
+
+          <p className="mt-3 font-mono text-[12px] text-[#D8BD9C]/70">
+            {String(activeCard + 1).padStart(2, "0")} / {String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}
+          </p>
+
+          <motion.div
+            key={activeSoftware.id}
+            initial={reduce ? false : { opacity: 0, y: 18 }}
+            animate={reduce ? undefined : { opacity: 1, y: 0 }}
+            transition={{
+              duration: reduce ? 0.2 : 0.5,
+              ease: EASE.out,
+            }}
+            className="mt-10"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex size-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-4">
+                {activeSoftware.logo ? (
+                  <img src={activeSoftware.logo} alt="" className="size-full object-contain" />
+                ) : (
+                  <span className="font-display text-3xl font-bold text-[#E9D9C3]">{activeSoftware.mark}</span>
+                )}
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D8BD9C]">{activeCategory}</p>
+
+                <h2 className="font-display mt-2 truncate text-3xl font-bold text-[#FCFBF9] sm:text-4xl">
+                  {activeName}
+                </h2>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <div>
+          <div className="mb-7 h-px bg-white/15" />
+
+          <p className="max-w-md text-[14px] leading-8 text-[#E9D9C3]">
+            {ar
+              ? "أعمل على مجموعة متنوعة من الأنظمة والبرامج المحاسبية وأنظمة ERP، مع القدرة على إدارة الدورة المحاسبية وإعداد التقارير والتحليلات المالية."
+              : "I work across a range of accounting platforms and ERP systems, managing full accounting cycles alongside financial reporting and analysis."}
+          </p>
+
+          <div className="mt-7 flex flex-wrap gap-2.5">
+            <span className="rounded-full border border-[#A88765]/40 bg-white/[0.06] px-3.5 py-1.5 text-[12px] font-semibold text-[#E9D9C3]">
+              {ar ? "دورة محاسبية كاملة" : "Full accounting cycle"}
+            </span>
+
+            <span className="rounded-full border border-[#A88765]/40 bg-white/[0.06] px-3.5 py-1.5 text-[12px] font-semibold text-[#E9D9C3]">
+              {ar ? "تقارير وتحليل" : "Reporting & analysis"}
+            </span>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 }
