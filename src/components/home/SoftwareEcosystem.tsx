@@ -1,4 +1,4 @@
-import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
+import { motion, useMotionValueEvent, useScroll, useTransform, type MotionValue } from "motion/react";
 import { useRef, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
