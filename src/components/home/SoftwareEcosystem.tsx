@@ -1,8 +1,18 @@
-import { motion, useMotionValueEvent, useScroll, useTransform, type MotionValue } from "motion/react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "motion/react";
 import { useRef, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
-import { SOFTWARE_CATEGORY_LABELS, SOFTWARE_ECOSYSTEM, type SoftwareEntry } from "@/lib/software-catalog";
+import {
+  SOFTWARE_CATEGORY_LABELS,
+  SOFTWARE_ECOSYSTEM,
+  type SoftwareEntry,
+} from "@/lib/software-catalog";
 
 export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
@@ -27,7 +37,13 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   });
 
   return (
-    <section ref={sectionRef} id="software" className="relative z-10 bg-[#F5F2ED]">
+    /* `overflow-x-clip` rather than `overflow-hidden`: the stacked cards are
+       rotated a few degrees, which widens their bounding box past the viewport
+       on narrow screens and left the mobile homepage scrolling sideways. Clip
+       only the horizontal axis — plain `overflow-hidden` would make this an
+       scroll container and break the `sticky` track the whole section relies
+       on, and it would also crop the cards' vertical peek. */
+    <section ref={sectionRef} id="software" className="relative z-10 overflow-x-clip bg-[#F5F2ED]">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
@@ -62,7 +78,12 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
                   ease: EASE.out,
                 }}
               >
-                <FeatureCard ar={ar} activeIndex={activeIndex} activeCard={activeCard} reduce={m.reduce} />
+                <FeatureCard
+                  ar={ar}
+                  activeIndex={activeIndex}
+                  activeCard={activeCard}
+                  reduce={m.reduce}
+                />
               </motion.div>
             </div>
           </div>
@@ -135,7 +156,9 @@ function StackedSoftwareCard({
     return Math.max(1, 85 - Math.round(value * 10));
   });
 
-  const category = ar ? SOFTWARE_CATEGORY_LABELS[software.category].ar : SOFTWARE_CATEGORY_LABELS[software.category].en;
+  const category = ar
+    ? SOFTWARE_CATEGORY_LABELS[software.category].ar
+    : SOFTWARE_CATEGORY_LABELS[software.category].en;
 
   const label = ar && software.nameAr ? software.nameAr : software.name;
 
@@ -170,13 +193,24 @@ function StackedSoftwareCard({
             </span>
           </div>
 
-          <div className="mt-10 flex items-center gap-5">
-            {/* BIGGER LOGO */}
-            <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-4 shadow-sm sm:size-28">
+          <div className="mt-10 flex items-center gap-5 sm:gap-6">
+            {/* Logo tile. `object-contain` plus a fixed square tile keeps wildly
+                different source aspect ratios optically consistent — nothing is
+                cropped or stretched, and the padding stops wide wordmarks from
+                touching the edges. Sized to stay a step below the name so the
+                name remains the loudest thing in the card. */}
+            <div className="flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-3.5 shadow-sm sm:size-32">
               {software.logo ? (
-                <img src={software.logo} alt="" className="size-full object-contain" loading="lazy" />
+                <img
+                  src={software.logo}
+                  alt=""
+                  className="size-full object-contain"
+                  loading="lazy"
+                />
               ) : (
-                <span className="font-display text-3xl font-bold text-[#4A3023]">{software.mark}</span>
+                <span className="font-display text-4xl font-bold text-[#4A3023]">
+                  {software.mark}
+                </span>
               )}
             </div>
 
@@ -185,7 +219,7 @@ function StackedSoftwareCard({
                 {ar ? "نظام / برنامج" : "System / Software"}
               </p>
 
-              <h3 className="font-display mt-2 truncate text-3xl font-bold tracking-tight text-[#1C1B19] sm:text-4xl">
+              <h3 className="font-display mt-2 truncate text-[2.35rem] font-bold leading-[1.1] tracking-tight text-[#1C1B19] sm:text-[3rem]">
                 {label}
               </h3>
             </div>
@@ -249,7 +283,8 @@ function FeatureCard({
           </p>
 
           <p className="mt-3 font-mono text-[12px] text-[#D8BD9C]/70">
-            {String(activeCard + 1).padStart(2, "0")} / {String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}
+            {String(activeCard + 1).padStart(2, "0")} /{" "}
+            {String(SOFTWARE_ECOSYSTEM.length).padStart(2, "0")}
           </p>
 
           <motion.div
@@ -262,19 +297,25 @@ function FeatureCard({
             }}
             className="mt-10"
           >
-            <div className="flex items-center gap-4">
-              <div className="flex size-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-4">
+            <div className="flex items-center gap-4 sm:gap-5">
+              {/* Same tile treatment as the stacked cards, one size down so the
+                  two panels stay in proportion side by side. */}
+              <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-3.5 sm:size-28">
                 {activeSoftware.logo ? (
                   <img src={activeSoftware.logo} alt="" className="size-full object-contain" />
                 ) : (
-                  <span className="font-display text-3xl font-bold text-[#E9D9C3]">{activeSoftware.mark}</span>
+                  <span className="font-display text-4xl font-bold text-[#E9D9C3]">
+                    {activeSoftware.mark}
+                  </span>
                 )}
               </div>
 
               <div className="min-w-0">
-                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D8BD9C]">{activeCategory}</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D8BD9C]">
+                  {activeCategory}
+                </p>
 
-                <h2 className="font-display mt-2 truncate text-3xl font-bold text-[#FCFBF9] sm:text-4xl">
+                <h2 className="font-display mt-2 truncate text-[2.1rem] font-bold leading-[1.1] text-[#FCFBF9] sm:text-[2.6rem]">
                   {activeName}
                 </h2>
               </div>

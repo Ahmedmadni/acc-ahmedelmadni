@@ -163,7 +163,13 @@ function HeroDecor() {
       >
         <defs>
           <pattern id="tools-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M40 0H0V40" fill="none" stroke="#A88765" strokeOpacity="0.08" strokeWidth="1" />
+            <path
+              d="M40 0H0V40"
+              fill="none"
+              stroke="#A88765"
+              strokeOpacity="0.08"
+              strokeWidth="1"
+            />
           </pattern>
           <radialGradient id="bronze-glow" cx="70%" cy="30%" r="55%">
             <stop offset="0%" stopColor="#C7A77F" stopOpacity="0.28" />
@@ -201,7 +207,11 @@ function HeroDecor() {
           />
         ))}
         {/* Floating tickers */}
-        <g fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#A88765" opacity="0.55">
+        <g
+          fontFamily="ui-monospace, SFMono-Regular, Menlo, monospace"
+          fill="#A88765"
+          opacity="0.55"
+        >
           <text x="70" y="90" fontSize="11">
             IRR 14.2%
           </text>
@@ -298,16 +308,28 @@ function ToolCard({
 
   return (
     <motion.div
-      initial={reduce ? { opacity: 0 } : { opacity: 0, y: 18 }}
-      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
+      initial={reduce ? { opacity: 0 } : { opacity: 0, y: 18, scale: 0.985 }}
+      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: DURATION.slow, ease: EASE.out, delay: Math.min(index * 0.04, 0.35) }}
+      transition={
+        reduce
+          ? { duration: 0.2 }
+          : {
+              duration: DURATION.slow,
+              ease: EASE.out,
+              // A square-root ramp instead of a flat `index * step`: the first
+              // cards in a row arrive almost together and each later one is
+              // held back a little less than the one before, so a long grid
+              // settles as a wave rather than a metronome.
+              delay: Math.min(Math.sqrt(index) * 0.055, 0.32),
+            }
+      }
       className="h-full"
     >
       <Link
         to="/tools/$toolId"
         params={{ toolId: tool.id }}
-        className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#A88765]/15 bg-[#211F1C] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#A88765]/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7A77F]/60 ${isWide ? "sm:flex-row" : ""} ${isLg ? "p-7" : "p-6"}`}
+        className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#A88765]/15 bg-[#211F1C] transition-[transform,border-color,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#A88765]/45 hover:shadow-[0_26px_60px_-32px_rgba(0,0,0,0.85),0_0_0_1px_rgba(199,167,127,0.06)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7A77F]/60 ${isWide ? "sm:flex-row" : ""} ${isLg ? "p-7" : "p-6"}`}
         style={{ boxShadow: "0 1px 0 rgba(255,255,255,0.02) inset" }}
       >
         {/* Hover glow */}
@@ -402,6 +424,17 @@ function ToolsPage() {
   const [q, setQ] = useState("");
   const isRTL = lang === "ar";
   const catRailRef = useRef<HTMLDivElement>(null);
+  // The hero entrance below was previously ungated: it played its full
+  // translate/scale even for visitors asking for reduced motion. Everything
+  // that moves on load now collapses to a plain opacity fade through `intro`.
+  const reduce = useReducedMotion();
+
+  /** Load-time entrance for a hero element: rise + fade, or fade only. */
+  const intro = (y: number, delay: number, duration: number = DURATION.slow) => ({
+    initial: reduce ? { opacity: 0 } : { opacity: 0, y },
+    animate: { opacity: 1, y: 0 },
+    transition: reduce ? { duration: 0.2 } : { duration, ease: EASE.out, delay },
+  });
 
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase();
@@ -420,9 +453,7 @@ function ToolsPage() {
   const showFeatured = cat === "all" && q.trim() === "";
   const featured = useMemo(() => {
     if (!showFeatured) return [] as ToolMeta[];
-    return FEATURED_IDS.map((id) => TOOLS.find((t) => t.id === id)).filter(
-      Boolean,
-    ) as ToolMeta[];
+    return FEATURED_IDS.map((id) => TOOLS.find((t) => t.id === id)).filter(Boolean) as ToolMeta[];
   }, [showFeatured]);
 
   const featuredIds = new Set(featured.map((t) => t.id));
@@ -467,18 +498,14 @@ function ToolsPage() {
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-4 py-16 sm:px-8 md:grid-cols-12 md:py-24 lg:px-12">
           <div className="md:col-span-7">
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: DURATION.base, ease: EASE.out }}
+              {...intro(10, 0, DURATION.base)}
               className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/30 bg-[#A88765]/8 px-3 py-1 text-[11px] font-bold tracking-wider text-[#C7A77F]"
             >
               <Library className="size-3.5" />
               {lang === "ar" ? "مكتبة الأدوات المالية" : "Financial Tools Library"}
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: DURATION.slow, ease: EASE.out, delay: 0.1 }}
+              {...intro(14, 0.1)}
               className="font-display mt-5 text-4xl font-extrabold leading-[1.1] tracking-tight text-[#F5F1E8] md:text-6xl"
             >
               {lang === "ar" ? (
@@ -498,9 +525,7 @@ function ToolsPage() {
               )}
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: DURATION.slow, ease: EASE.out, delay: 0.22 }}
+              {...intro(12, 0.22)}
               className="mt-5 max-w-xl text-base leading-relaxed text-[#A9A29A] md:text-lg"
             >
               {lang === "ar"
@@ -509,9 +534,7 @@ function ToolsPage() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: DURATION.slow, ease: EASE.out, delay: 0.34 }}
+              {...intro(12, 0.34)}
               className="mt-8 flex flex-wrap items-center gap-6 text-xs text-[#A9A29A]"
             >
               <div>
@@ -544,9 +567,11 @@ function ToolsPage() {
           {/* Editorial decorative composition */}
           <div className="relative md:col-span-5">
             <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
+              initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, ease: EASE.out, delay: 0.15 }}
+              transition={
+                reduce ? { duration: 0.2 } : { duration: 0.9, ease: EASE.out, delay: 0.15 }
+              }
               className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl border border-[#A88765]/20 bg-gradient-to-br from-[#211F1C] to-[#171614]"
             >
               <HeroDecor />
