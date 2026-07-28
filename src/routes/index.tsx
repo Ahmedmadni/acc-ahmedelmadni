@@ -770,6 +770,22 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
 
 /* ============= TYPEWRITER ============= */
 /* ============= HERO ============= */
+
+/**
+ * Height of the fixed `Navbar` above: its bar is `h-20` (5rem) plus a 1px
+ * `border-b`, and that height is constant at every breakpoint (verified live:
+ * 81px at 1440/1024/390). Single source of truth for the Hero's top offset so
+ * the image begins exactly at the header's bottom edge instead of running
+ * underneath it. If the Navbar's `h-20` ever changes, update this with it.
+ */
+const HEADER_H = "calc(5rem + 1px)";
+
+/** Bronze light bloom anchored behind the text column — the Hero's one
+ *  decorative layer. Echoes the warm key light already in the photograph and
+ *  lifts the headline off the image; static (no loop), desktop only. */
+const HERO_BLOOM =
+  "radial-gradient(closest-side, rgba(168,135,101,0.20), rgba(168,135,101,0.07) 52%, transparent 78%)";
+
 function Hero({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const { reduce } = useMotionSafe();
@@ -804,6 +820,10 @@ function Hero({ lang }: { lang: Lang }) {
   const bgY = useSpring(useTransform(rawY, [-1, 1], [-8, 8]), springOpts);
   const fgX = useSpring(useTransform(rawX, [-1, 1], [5, -5]), springOpts);
   const fgY = useSpring(useTransform(rawY, [-1, 1], [5, -5]), springOpts);
+  // The bloom sits between the photo and the text, so it drifts with the
+  // foreground but a little further — three depths instead of two.
+  const bloomX = useSpring(useTransform(rawX, [-1, 1], [6, -6]), springOpts);
+  const bloomY = useSpring(useTransform(rawY, [-1, 1], [6, -6]), springOpts);
 
   const onHeroPointerMove = (e: React.PointerEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -818,82 +838,123 @@ function Hero({ lang }: { lang: Lang }) {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[92vh] w-full overflow-hidden md:min-h-screen"
+      /* `paddingTop` reserves the fixed header's band (box-sizing is
+         border-box, so the section still measures 92vh/100vh in total). The
+         reserved strip carries the same ink as the Navbar's own translucent
+         fill, so the header reads as a solid band with no gap above the
+         image. */
+      className="relative isolate flex min-h-[92vh] w-full flex-col overflow-hidden bg-[#1C1B19] md:min-h-screen"
+      style={{ paddingTop: HEADER_H }}
       onPointerMove={parallaxActive ? onHeroPointerMove : undefined}
       onPointerLeave={parallaxActive ? onHeroPointerLeave : undefined}
     >
-      {/* Full-bleed executive portrait — real image asset, no baked text/CTA.
-          Wrapped slightly oversized so the parallax translate never exposes an edge. */}
-      <motion.div
-        className="absolute -inset-4 -z-10"
-        style={parallaxActive ? { x: bgX, y: bgY } : undefined}
-      >
-        <img
-          src={heroImg}
-          alt={
-            lang === "ar"
-              ? "أحمد المدني — محاسب أول واستشاري مالي، في مكتبه التنفيذي"
-              : "Ahmed Elmadani — Senior Accountant & Financial Consultant, in his executive office"
-          }
-          width={1536}
-          height={1024}
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover object-[72%_28%] lg:object-[70%_26%]"
-        />
-      </motion.div>
+      {/* Visual layer — clipped so the photograph and every scrim above it
+          begin exactly at the header's bottom edge, never behind it. The
+          parallax overscan happens inside this clip, so drifting the image
+          can't expose an edge at the top seam either. */}
+      <div className="absolute inset-x-0 bottom-0 -z-10 overflow-hidden" style={{ top: HEADER_H }}>
+        {/* Full-bleed executive portrait — real image asset, no baked text/CTA.
+            Wrapped slightly oversized so the parallax translate never exposes an edge. */}
+        <motion.div
+          className="absolute -inset-4"
+          style={parallaxActive ? { x: bgX, y: bgY } : undefined}
+        >
+          <img
+            src={heroImg}
+            alt={
+              lang === "ar"
+                ? "أحمد المدني — محاسب أول واستشاري مالي، في مكتبه التنفيذي"
+                : "Ahmed Elmadani — Senior Accountant & Financial Consultant, in his executive office"
+            }
+            width={1536}
+            height={1024}
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover object-[72%_30%] lg:object-[70%_28%]"
+          />
+        </motion.div>
 
-      {/* Readability scrims — warm, restrained, only where the text sits */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 hidden lg:block"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(20,15,11,0.90) 0%, rgba(20,15,11,0.55) 30%, rgba(20,15,11,0.14) 52%, transparent 66%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 lg:hidden"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(20,15,11,0.28) 0%, rgba(20,15,11,0.18) 34%, rgba(20,15,11,0.86) 80%, rgba(20,15,11,0.96) 100%)",
-        }}
-      />
-      {/* Blend into the section below */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32"
-        style={{ background: "linear-gradient(180deg, transparent, var(--bg-surface))" }}
-      />
+        {/* Bronze bloom behind the text column — the single decorative layer.
+            Sits above the photo but under the scrims so it warms rather than
+            washes out. Desktop only; static, no loop. */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute top-[6%] hidden h-[86%] w-[56%] lg:block"
+          style={
+            parallaxActive
+              ? { left: "-9%", background: HERO_BLOOM, x: bloomX, y: bloomY }
+              : { left: "-9%", background: HERO_BLOOM }
+          }
+        />
+
+        {/* Readability scrims — warm, restrained, only where the text sits */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 hidden lg:block"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(20,15,11,0.90) 0%, rgba(20,15,11,0.55) 30%, rgba(20,15,11,0.14) 52%, transparent 66%)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 lg:hidden"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(20,15,11,0.34) 0%, rgba(20,15,11,0.22) 24%, rgba(20,15,11,0.58) 50%, rgba(20,15,11,0.88) 78%, rgba(20,15,11,0.96) 100%)",
+          }}
+        />
+        {/* Soft vignette — pulls the frame edges down a touch so the subject
+            holds the eye. Deliberately open in the middle: no flat black wash. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(125% 95% at 62% 40%, transparent 42%, rgba(12,9,7,0.28) 76%, rgba(12,9,7,0.52) 100%)",
+          }}
+        />
+        {/* Blend into the section below */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
+          style={{ background: "linear-gradient(180deg, transparent, var(--bg-surface))" }}
+        />
+      </div>
 
       {/* Content — left text zone on desktop, bottom stack on mobile */}
-      <div className="relative flex min-h-[92vh] w-full items-end px-4 pb-16 pt-24 sm:px-8 md:pb-20 md:pt-28 lg:min-h-screen lg:items-center lg:py-0 lg:px-12 xl:px-16">
+      <div className="relative flex w-full flex-1 items-end px-4 pb-16 pt-10 sm:px-8 md:pb-20 md:pt-14 lg:items-center lg:px-12 lg:py-0 xl:px-16">
+        {/* Vertical rhythm is deliberately uneven: the badge sits close under
+            the headline, the tagline gets room to breathe, and the widest gap
+            falls before the CTAs so the call to action reads as its own beat.
+            The location line then tucks back in as a footnote to the buttons. */}
         <motion.div
-          className="w-full md:max-w-[40rem] lg:w-auto lg:mr-auto lg:max-w-[34rem] xl:max-w-[40rem]"
+          className="w-full md:max-w-[42rem] lg:w-auto lg:mr-auto lg:max-w-[38rem] xl:max-w-[44rem]"
           style={parallaxActive ? { x: fgX, y: fgY } : undefined}
         >
           <motion.div
             {...fade(0.05)}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#A88765]/45 bg-[#1C1B19]/40 px-4 py-2 text-[13px] font-semibold text-[#e9d9c3] backdrop-blur-md"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-[#1C1B19]/45 px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.01em] text-[#e9d9c3]/90 backdrop-blur-md"
           >
             <Sparkles className="size-3.5 text-[#A88765]" />
             {t.hero.badge[lang]}
           </motion.div>
 
+          {/* Fluid display size — one clamp instead of five breakpoint jumps,
+              tuned so the longest Arabic line never breaks into a lone word. */}
           <RevealHeadline
             lines={t.hero.headline[lang]}
-            className="font-display text-[2.4rem] font-bold leading-[1.25] text-[#FCFBF9] [text-wrap:balance] sm:text-[2.7rem] md:text-[3rem] lg:text-[3.4rem] xl:text-[4rem]"
+            className="font-display text-[clamp(1.85rem,1.3rem_+_2.45vw,3.5rem)] font-bold leading-[1.22] text-[#FCFBF9] [text-wrap:balance]"
           />
 
           <motion.p
             {...fade(0.75)}
-            className="mt-6 max-w-[34rem] text-[15px] leading-[1.9] text-[#FCFBF9]/80 sm:text-[17px]"
+            className="mt-7 max-w-[33rem] text-[15px] leading-[1.85] text-[#FCFBF9]/80 [text-wrap:pretty] sm:text-[16.5px]"
           >
             {t.hero.tagline[lang]}
           </motion.p>
 
-          <motion.div {...fade(0.9)} className="mt-9 flex flex-wrap items-center gap-3">
+          <motion.div {...fade(0.9)} className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="/#contact"
               onMouseEnter={playHover}
@@ -916,7 +977,7 @@ function Hero({ lang }: { lang: Lang }) {
 
           <motion.div
             {...fade(1.05)}
-            className="mt-7 flex items-center gap-2 text-[13px] text-[#FCFBF9]/70"
+            className="mt-6 flex items-center gap-2 text-[12.5px] text-[#FCFBF9]/65"
           >
             <MapPin className="size-4 text-[#A88765]" />
             {t.hero.location[lang]}
