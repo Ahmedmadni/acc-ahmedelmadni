@@ -1684,101 +1684,280 @@ export function Contact({ lang }: { lang: Lang }) {
 
 /* ============= FOOTER ============= */
 export function Footer({ lang }: { lang: Lang }) {
-  const links = [
+  const isAr = lang === "ar";
+
+  const mainLinks = [
+    { to: "/", label: isAr ? "الرئيسية" : "Home" },
     { to: "/about", label: t.nav.about[lang] },
     { to: "/services", label: t.nav.services[lang] },
-    { to: "/experience", label: t.nav.experience[lang] },
-    { to: "/skills", label: t.nav.skills[lang] },
-    { to: "/certifications", label: lang === "ar" ? "الشهادات" : "Certifications" },
     { to: "/#contact", label: t.nav.contact[lang] },
   ];
+
+  const professionalLinks = [
+    { to: "/experience", label: t.nav.experience[lang] },
+    { to: "/skills", label: t.nav.skills[lang] },
+    {
+      to: "/certifications",
+      label: isAr ? "الشهادات المهنية" : "Certifications",
+    },
+    {
+      to: "/request-service",
+      label: isAr ? "طلب خدمة" : "Request a Service",
+    },
+  ];
+
+  const resourceLinks = [
+    {
+      to: "/tools",
+      label: isAr ? "الأدوات المحاسبية" : "Accounting Tools",
+    },
+    {
+      to: "/articles",
+      label: isAr ? "المقالات والموارد" : "Articles & Resources",
+    },
+    {
+      to: "/auth",
+      label: isAr ? "تسجيل الدخول" : "Login",
+    },
+  ];
+
+  /*
+   * روابط التواصل مأخوذة من ثابت SOCIALS الموجود مسبقًا في الملف.
+   * لا نستخدم صور Mascot هنا حتى تبقى أيقونات الفوتر بسيطة وأنيقة.
+   */
+  const socialLinks = SOCIALS.filter((social) =>
+    ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
+  );
+
+  const renderLink = (link: { to: string; label: string }) => {
+    const className =
+      "group inline-flex items-center gap-2 text-[13px] leading-6 text-white/55 transition-colors duration-300 hover:text-[#E1C5A4]";
+
+    if (link.to.startsWith("/#")) {
+      return (
+        <a href={link.to.slice(1)} className={className}>
+          <span className="h-1 w-1 rounded-full bg-[#A88765]/50 transition-all duration-300 group-hover:w-3 group-hover:bg-[#D8BD9C]" />
+          <span>{link.label}</span>
+        </a>
+      );
+    }
+
+    return (
+      <RouterLink to={link.to} className={className}>
+        <span className="h-1 w-1 rounded-full bg-[#A88765]/50 transition-all duration-300 group-hover:w-3 group-hover:bg-[#D8BD9C]" />
+        <span>{link.label}</span>
+      </RouterLink>
+    );
+  };
+
   return (
-    <footer className="relative border-t border-[#A88765]/15 bg-[#151412]">
-      <div className="mx-auto grid w-full max-w-[80rem] gap-10 px-4 py-14 sm:px-8 md:grid-cols-3 lg:px-12">
-        <div>
-          <div className="font-display text-lg font-bold text-[#FCFBF9]">
-            {lang === "ar" ? "أحمد المدني" : "Ahmed Elmadani"}
-          </div>
-          <p className="mt-3 max-w-md text-[13px] leading-[1.8] text-white/55">{t.footer.tagline[lang]}</p>
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/30 px-3 py-1 text-[11px] font-semibold text-[#d8bd9c]">
-              <MapPin className="size-3" />
-              {lang === "ar" ? "الرياض، السعودية" : "Riyadh, Saudi Arabia"}
-            </span>
-            <RouterLink
-              to="/request-service"
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/30 bg-white/[0.03] px-3 py-1 text-[11px] font-semibold text-[#d8bd9c] transition-colors hover:border-[#A88765]"
-              title={lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT services"}
-            >
-              <img
-                src={vatLogo.url}
-                alt="VAT"
-                width={16}
-                height={16}
-                className="rounded-sm"
-                loading="lazy"
-                decoding="async"
-              />
-              {lang === "ar" ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}
-            </RouterLink>
-          </div>
-        </div>
+    <footer className="relative isolate overflow-hidden border-t border-[#A88765]/20 bg-[#151412] text-white">
+      {/* Luxury background layers */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage: `
+            radial-gradient(
+              circle at 12% 18%,
+              rgba(168, 135, 101, 0.13),
+              transparent 28%
+            ),
+            radial-gradient(
+              circle at 88% 78%,
+              rgba(168, 135, 101, 0.08),
+              transparent 30%
+            ),
+            linear-gradient(
+              135deg,
+              rgba(255, 255, 255, 0.018) 25%,
+              transparent 25%
+            ),
+            linear-gradient(
+              225deg,
+              rgba(255, 255, 255, 0.012) 25%,
+              transparent 25%
+            )
+          `,
+          backgroundSize: "auto, auto, 30px 30px, 30px 30px",
+        }}
+      />
 
-        <div>
-          <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-[#A88765]">
-            {t.footer.quick[lang]}
-          </div>
-          <ul className="flex flex-col gap-2 text-[13px] text-white/60">
-            {links.map((l) => (
-              <li key={l.to}>
-                {l.to.startsWith("/#") ? (
-                  <a href={l.to.slice(1)} className="transition-colors hover:text-[#d8bd9c]">
-                    {l.label}
-                  </a>
-                ) : (
-                  <RouterLink to={l.to} className="transition-colors hover:text-[#d8bd9c]">
-                    {l.label}
-                  </RouterLink>
-                )}
-              </li>
-            ))}
-            <li>
-              <RouterLink to="/auth" className="transition-colors hover:text-[#d8bd9c]">
-                {lang === "ar" ? "تسجيل الدخول" : "Login"}
+      {/* Decorative bronze line */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#A88765]/70 to-transparent"
+      />
+
+      <div className="relative mx-auto w-full max-w-[84rem] px-4 sm:px-8 lg:px-12">
+        {/* Main footer */}
+        <div className="grid gap-12 py-16 lg:grid-cols-[1.45fr_0.75fr_0.95fr_0.95fr] lg:gap-10 xl:gap-14">
+          {/* Brand and introduction */}
+          <div className="max-w-md">
+            <div className="flex items-center gap-3">
+              <div className="flex size-11 items-center justify-center rounded-xl border border-[#A88765]/30 bg-[#A88765]/10">
+                <span className="font-display text-lg font-bold text-[#D8BD9C]">{isAr ? "أ" : "A"}</span>
+              </div>
+
+              <div>
+                <div className="font-display text-xl font-bold tracking-tight text-[#FCFBF9]">
+                  {isAr ? "أحمد المدني" : "Ahmed Elmadani"}
+                </div>
+
+                <div className="mt-0.5 text-[10px] font-bold uppercase tracking-[0.22em] text-[#A88765]">
+                  {isAr ? "خدمات مالية ومحاسبية" : "Financial & Accounting Services"}
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-6 max-w-[31rem] text-[13px] leading-[1.95] text-white/55">{t.footer.tagline[lang]}</p>
+
+            {/* Location and VAT */}
+            <div className="mt-6 flex flex-wrap items-center gap-2.5">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-white/[0.025] px-3.5 py-2 text-[11px] font-semibold text-[#D8BD9C]">
+                <MapPin className="size-3.5" />
+                {isAr ? "الرياض، المملكة العربية السعودية" : "Riyadh, Saudi Arabia"}
+              </span>
+
+              <RouterLink
+                to="/request-service"
+                className="group inline-flex items-center gap-2 rounded-full border border-[#A88765]/25 bg-white/[0.025] px-3.5 py-2 text-[11px] font-semibold text-[#D8BD9C] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#A88765]/60 hover:bg-[#A88765]/10"
+                title={isAr ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}
+              >
+                <img
+                  src={vatLogo.url}
+                  alt="VAT"
+                  width={17}
+                  height={17}
+                  className="rounded-sm"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span>{isAr ? "خدمات ضريبة القيمة المضافة" : "VAT Services"}</span>
+
+                <ArrowUpRight className="size-3 opacity-50 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
               </RouterLink>
-            </li>
-          </ul>
-        </div>
+            </div>
 
-        <div>
-          <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-[#A88765]">
-            {t.footer.contactCol[lang]}
+            {/* Social links */}
+            <div className="mt-7 flex flex-wrap items-center gap-2.5">
+              {socialLinks.map((social) => {
+                const Icon = social.Icon;
+
+                const isExternal = social.href.startsWith("http://") || social.href.startsWith("https://");
+
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noreferrer" : undefined}
+                    aria-label={social.label}
+                    title={social.label}
+                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12 hover:text-[#E1C5A4]"
+                  >
+                    <Icon className="relative z-10 size-[17px] transition-transform duration-300 group-hover:scale-110" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
-          <ul className="flex flex-col gap-3 text-[13px] text-white/60">
-            <li>
+
+          {/* Main navigation */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-7 bg-[#A88765]/60" />
+
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
+                {isAr ? "الصفحات الرئيسية" : "Main Pages"}
+              </div>
+            </div>
+
+            <ul className="flex flex-col gap-2.5">
+              {mainLinks.map((link) => (
+                <li key={link.to}>{renderLink(link)}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Professional links */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-7 bg-[#A88765]/60" />
+
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
+                {isAr ? "المسار المهني" : "Professional"}
+              </div>
+            </div>
+
+            <ul className="flex flex-col gap-2.5">
+              {professionalLinks.map((link) => (
+                <li key={link.to}>{renderLink(link)}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources and contact */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-7 bg-[#A88765]/60" />
+
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
+                {isAr ? "الموارد والتواصل" : "Resources & Contact"}
+              </div>
+            </div>
+
+            <ul className="flex flex-col gap-2.5">
+              {resourceLinks.map((link) => (
+                <li key={link.to}>{renderLink(link)}</li>
+              ))}
+            </ul>
+
+            <div className="mt-6 border-t border-white/[0.07] pt-5">
               <a
                 href="tel:+966560409811"
-                className="inline-flex items-center gap-2 text-[#d8bd9c] transition-colors hover:text-[#FCFBF9]"
+                className="group flex items-center gap-3 text-[13px] text-[#D8BD9C] transition-colors duration-300 hover:text-[#FCFBF9]"
               >
-                <Phone className="size-4" />
+                <span className="flex size-8 items-center justify-center rounded-full border border-[#A88765]/20 bg-[#A88765]/8">
+                  <Phone className="size-3.5" />
+                </span>
+
                 <span dir="ltr" className="tracking-wide">
                   +966 56 040 9811
                 </span>
               </a>
-            </li>
-            <li>
-              <a href="mailto:elmadnim@gmail.com" className="transition-colors hover:text-[#d8bd9c]">
+
+              <a
+                href="mailto:elmadnim@gmail.com"
+                className="mt-4 block break-all text-[12px] text-white/45 transition-colors duration-300 hover:text-[#D8BD9C]"
+              >
                 elmadnim@gmail.com
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="border-t border-white/[0.08]">
-        <div className="mx-auto flex w-full max-w-[80rem] flex-col items-center justify-between gap-2 px-4 py-4 text-[11px] text-white/45 sm:flex-row sm:px-8 lg:px-12">
-          <span>{t.footer.rights[lang]}</span>
-          <span>{t.footer.built[lang]}</span>
+        {/* Bottom bar */}
+        <div className="border-t border-white/[0.08]">
+          <div className="flex flex-col items-center justify-between gap-4 py-5 text-center sm:flex-row sm:text-start">
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-white/40 sm:justify-start">
+              <span>{t.footer.rights[lang]}</span>
+
+              <span className="hidden size-1 rounded-full bg-[#A88765]/45 sm:block" />
+
+              <span>{t.footer.built[lang]}</span>
+            </div>
+
+            <a
+              href="#home"
+              className="group inline-flex items-center gap-2 text-[11px] font-semibold text-white/40 transition-colors duration-300 hover:text-[#D8BD9C]"
+            >
+              <span>{isAr ? "العودة إلى الأعلى" : "Back to top"}</span>
+
+              <ArrowUpRight className="size-3.5 -rotate-45 transition-transform duration-300 group-hover:-translate-y-0.5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
