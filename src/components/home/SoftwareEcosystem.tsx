@@ -83,7 +83,7 @@ function StackedSoftwareCard({
   software: SoftwareEntry;
   index: number;
   total: number;
-  scrollProgress: ReturnType<typeof useTransform>;
+  scrollProgress: MotionValue<number>;
   reduce: boolean;
   ar: boolean;
 }) {
