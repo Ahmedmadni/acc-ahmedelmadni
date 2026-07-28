@@ -1675,24 +1675,6 @@ export function Footer({ lang }: { lang: Lang }) {
     );
   };
 
-  const socialLinks = [
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/",
-      icon: Linkedin,
-    },
-    {
-      label: "Instagram",
-      href: "https://www.instagram.com/",
-      icon: Instagram,
-    },
-    {
-      label: "Facebook",
-      href: "https://www.facebook.com/",
-      icon: Facebook,
-    },
-  ];
-
   return (
     <footer className="relative isolate overflow-hidden border-t border-[#A88765]/20 bg-[#151412] text-white">
       {/* Luxury background layers */}
