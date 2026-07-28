@@ -1775,20 +1775,30 @@ export function Footer({ lang }: { lang: Lang }) {
             </div>
 
             {/* Social links - using the existing SOCIALS data and Mascot assets */}
-            <div className="mt-7 flex flex-wrap items-center gap-2.5">
-              {socialLinks.map((social) => {
-                const Icon = social.Icon;
+<div className="mt-7 flex flex-wrap items-center gap-2.5">
+  {socialLinks.map((social) => {
+    const Icon = social.Icon;
 
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={social.label}
-                    title={social.label}
-                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12"
-                  >
+    const isExternal =
+      social.href.startsWith("http://") ||
+      social.href.startsWith("https://");
+
+    return (
+      <a
+        key={social.label}
+        href={social.href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noreferrer" : undefined}
+        aria-label={social.label}
+        title={social.label}
+        className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12 hover:text-[#E1C5A4]"
+      >
+        <Icon className="relative z-10 size-[17px] transition-transform duration-300 group-hover:scale-110" />
+      </a>
+    );
+  })}
+</div>
+            
                     {/* Mascot image connected to the existing social item */}
                     <img
                       src={social.mascot}
