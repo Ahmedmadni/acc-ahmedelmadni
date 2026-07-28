@@ -1654,6 +1654,15 @@ export function Footer({ lang }: { lang: Lang }) {
     },
   ];
 
+  /*
+   * روابط التواصل مأخوذة من ثابت SOCIALS الموجود في الملف.
+   * نستخدم الأيقونة الأصلية المرتبطة بالـ Mascot ولا نضيف
+   * أي أيقونات أو روابط جديدة.
+   */
+  const socialLinks = SOCIALS.filter((social) =>
+    ["LinkedIn", "Facebook", "Instagram", "Snapchat"].includes(social.label),
+  );
+
   const renderLink = (link: { to: string; label: string }) => {
     const className =
       "group inline-flex items-center gap-2 text-[13px] leading-6 text-white/55 transition-colors duration-300 hover:text-[#E1C5A4]";
@@ -1765,10 +1774,10 @@ export function Footer({ lang }: { lang: Lang }) {
               </RouterLink>
             </div>
 
-            {/* Social links */}
-            <div className="mt-7 flex items-center gap-2.5">
+            {/* Social links - using the existing SOCIALS data and Mascot assets */}
+            <div className="mt-7 flex flex-wrap items-center gap-2.5">
               {socialLinks.map((social) => {
-                const Icon = social.icon;
+                const Icon = social.Icon;
 
                 return (
                   <a
@@ -1778,9 +1787,23 @@ export function Footer({ lang }: { lang: Lang }) {
                     rel="noreferrer"
                     aria-label={social.label}
                     title={social.label}
-                    className="group flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12 hover:text-[#E1C5A4]"
+                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:bg-[#A88765]/12"
                   >
-                    <Icon className="size-[17px] transition-transform duration-300 group-hover:scale-110" />
+                    {/* Mascot image connected to the existing social item */}
+                    <img
+                      src={social.mascot}
+                      alt=""
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 size-full object-cover opacity-0 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    {/* Original social icon */}
+                    <Icon
+                      className="relative z-10 size-[17px] transition-all duration-300 group-hover:scale-90 group-hover:opacity-0"
+                      style={{ color: social.color }}
+                    />
                   </a>
                 );
               })}
@@ -1791,6 +1814,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <div>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-7 bg-[#A88765]/60" />
+
               <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
                 {isAr ? "الصفحات الرئيسية" : "Main Pages"}
               </div>
@@ -1807,6 +1831,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <div>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-7 bg-[#A88765]/60" />
+
               <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
                 {isAr ? "المسار المهني" : "Professional"}
               </div>
@@ -1823,6 +1848,7 @@ export function Footer({ lang }: { lang: Lang }) {
           <div>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-7 bg-[#A88765]/60" />
+
               <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
                 {isAr ? "الموارد والتواصل" : "Resources & Contact"}
               </div>
@@ -1863,7 +1889,9 @@ export function Footer({ lang }: { lang: Lang }) {
           <div className="flex flex-col items-center justify-between gap-4 py-5 text-center sm:flex-row sm:text-start">
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] text-white/40 sm:justify-start">
               <span>{t.footer.rights[lang]}</span>
+
               <span className="hidden size-1 rounded-full bg-[#A88765]/45 sm:block" />
+
               <span>{t.footer.built[lang]}</span>
             </div>
 
