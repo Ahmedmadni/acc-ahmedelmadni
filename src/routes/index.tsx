@@ -1084,19 +1084,25 @@ export function Experience({ lang }: { lang: Lang }) {
           sub={t.experience.sub[lang]}
         />
         <div ref={sectionRef} className="relative mt-16">
-          {/* Static rail */}
-          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 opacity-30" />
-          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto opacity-30" />
-          {/* Scroll-driven gold progress line */}
+          {/* Static rail — thicker, dashed, tree-trunk look */}
+          <div
+            aria-hidden
+            className="absolute top-0 bottom-0 hidden w-[3px] md:block md:left-1/2 md:-translate-x-1/2 rounded-full bg-[repeating-linear-gradient(to_bottom,rgba(168,135,101,0.35)_0_10px,transparent_10px_18px)]"
+          />
+          <div
+            aria-hidden
+            className="absolute top-0 bottom-0 w-[3px] md:hidden right-3 rtl:left-3 rtl:right-auto rounded-full bg-[repeating-linear-gradient(to_bottom,rgba(168,135,101,0.35)_0_10px,transparent_10px_18px)]"
+          />
+          {/* Scroll-driven gold progress trunk */}
           <motion.div
             aria-hidden
             style={{ height: lineHeight }}
-            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#c9a986] via-[#A88765] to-transparent shadow-[0_0_18px_rgba(168,135,101,0.6)]"
+            className="absolute top-0 hidden w-[3px] md:block md:left-1/2 md:-translate-x-1/2 rounded-full bg-gradient-to-b from-[#e8cfa8] via-[#A88765] to-[#4A3023] shadow-[0_0_22px_rgba(168,135,101,0.75)]"
           />
           <motion.div
             aria-hidden
             style={{ height: lineHeight }}
-            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#c9a986] via-[#A88765] to-transparent shadow-[0_0_18px_rgba(168,135,101,0.6)]"
+            className="absolute top-0 w-[3px] md:hidden right-3 rtl:left-3 rtl:right-auto rounded-full bg-gradient-to-b from-[#e8cfa8] via-[#A88765] to-[#4A3023] shadow-[0_0_22px_rgba(168,135,101,0.75)]"
           />
           <div className="space-y-16">
             {items.map((item, i) => (
@@ -1160,9 +1166,29 @@ function TimelineItem({
 
   return (
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+      {/* Horizontal branch connector — a small "twig" from the trunk to the card (desktop only). */}
+      <motion.span
+        aria-hidden
+        initial={{ scaleX: 0 }}
+        animate={inView ? { scaleX: 1 } : {}}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+        className={`pointer-events-none absolute top-1/2 hidden h-[3px] rounded-full bg-gradient-to-r from-[#A88765] to-[#A88765]/0 shadow-[0_0_10px_rgba(168,135,101,0.6)] md:block ${
+          left
+            ? "left-[calc(50%-56px)] w-14 origin-right rotate-180"
+            : "left-1/2 w-14 origin-left"
+        }`}
+      />
+      {/* Horizontal branch connector — mobile: from right spine into card. */}
+      <motion.span
+        aria-hidden
+        initial={{ scaleX: 0 }}
+        animate={inView ? { scaleX: 1 } : {}}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+        className="pointer-events-none absolute top-6 right-4 h-[3px] w-8 origin-right rounded-full bg-gradient-to-l from-[#A88765] to-[#A88765]/0 md:hidden rtl:left-4 rtl:right-auto rtl:origin-left rtl:bg-gradient-to-r"
+      />
       <motion.div
         style={{ scale: scaleDot, boxShadow: glowDot }}
-        className="tl-dot absolute size-4 rounded-full bg-[#A88765] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
+        className="tl-dot absolute size-4 rounded-full bg-[#A88765] ring-4 ring-[#A88765]/20 md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
       />
       <motion.div
         style={{ y: yCard }}
@@ -1481,7 +1507,7 @@ function Testimonials({ lang }: { lang: Lang }) {
       setDirection(1);
 
       setActiveIndex((current) => (current + 1) % items.length);
-    }, 5000);
+    }, 3200);
 
     return () => window.clearInterval(interval);
   }, [items.length]);
@@ -1567,24 +1593,30 @@ function Testimonials({ lang }: { lang: Lang }) {
                       ? { opacity: 0 }
                       : {
                           opacity: 0,
-                          x: direction > 0 ? 30 : -30,
+                          x: direction > 0 ? 60 : -60,
+                          scale: 0.96,
+                          filter: "blur(6px)",
                         }
                   }
                   animate={{
                     opacity: 1,
                     x: 0,
+                    scale: 1,
+                    filter: "blur(0px)",
                   }}
                   exit={
                     m.reduce
                       ? { opacity: 0 }
                       : {
                           opacity: 0,
-                          x: direction > 0 ? -30 : 30,
+                          x: direction > 0 ? -60 : 60,
+                          scale: 0.96,
+                          filter: "blur(6px)",
                         }
                   }
                   transition={{
-                    duration: m.reduce ? 0.2 : 0.5,
-                    ease: EASE.out,
+                    duration: m.reduce ? 0.2 : 0.55,
+                    ease: EASE.emphasis,
                   }}
                   className="flex h-full flex-col justify-between"
                 >
@@ -1598,9 +1630,19 @@ function Testimonials({ lang }: { lang: Lang }) {
                   {/* Author */}
                   <div className="mt-10 flex items-center justify-between gap-5 border-t border-[#E3DDD5] pt-6">
                     <div className="flex min-w-0 items-center gap-4">
-                      <span className="font-display flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-base font-bold text-[#E9D9C3]">
+                      <motion.span
+                        initial={m.reduce ? { scale: 1 } : { scale: 0.5, rotate: -20 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 260,
+                          damping: 16,
+                          delay: 0.1,
+                        }}
+                        className="font-display flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-base font-bold text-[#E9D9C3]"
+                      >
                         {initial}
-                      </span>
+                      </motion.span>
 
                       <div className="min-w-0">
                         <p className="truncate text-[14px] font-bold text-[#1C1B19] sm:text-[15px]">
@@ -1621,6 +1663,16 @@ function Testimonials({ lang }: { lang: Lang }) {
                   </div>
                 </motion.div>
               </AnimatePresence>
+              {/* Progress bar */}
+              {!m.reduce && (
+                <motion.div
+                  key={`bar-${activeIndex}`}
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 3.2, ease: "linear" }}
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] origin-left bg-gradient-to-r from-[#c9a986] via-[#A88765] to-[#4A3023]"
+                />
+              )}
             </div>
 
             {/* Navigation */}

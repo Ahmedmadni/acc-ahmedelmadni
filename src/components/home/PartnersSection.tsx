@@ -1,6 +1,6 @@
 import { Link as RouterLink } from "@tanstack/react-router";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Handshake, Sparkles, ArrowUpRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
@@ -155,6 +155,15 @@ function PartnerLogo({ p }: { p: Partner }) {
 function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index: number; total: number }) {
   const reduce = useReducedMotion();
   const cardRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -162,9 +171,7 @@ function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index:
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.94, 1]);
-
   const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
-
   const opacity = useTransform(scrollYProgress, [0, 0.35, 1], [0, 0.7, 1]);
 
   const stackOffset = Math.min(index * 14, 120);
@@ -176,9 +183,9 @@ function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index:
         scale: reduce ? 1 : scale,
         y: reduce ? 0 : y,
         opacity: reduce ? 1 : opacity,
-        top: `${stackOffset}px`,
+        top: isDesktop ? `${stackOffset}px` : undefined,
       }}
-      className="sticky"
+      className="lg:sticky"
     >
       <RouterLink
         to="/request-service"
@@ -186,7 +193,7 @@ function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index:
         onMouseEnter={playHover}
         onClick={playClick}
         aria-label={lang === "ar" ? `ترشيح برنامج ${p.nameAr}` : `Recommend ${p.name}`}
-        className="group relative block overflow-hidden rounded-[28px] border border-[#d7aa52]/30 bg-[#071525] p-6 shadow-[0_25px_80px_-35px_rgba(0,0,0,0.8)] transition-all duration-500 hover:-translate-y-1 hover:border-[#d7aa52]/75 hover:shadow-[0_35px_100px_-35px_rgba(215,170,82,0.4)] sm:p-8 lg:p-10"
+        className="group relative block overflow-hidden rounded-3xl border border-[#d7aa52]/30 bg-[#071525] p-5 shadow-[0_25px_80px_-35px_rgba(0,0,0,0.8)] transition-all duration-500 hover:-translate-y-1 hover:border-[#d7aa52]/75 hover:shadow-[0_35px_100px_-35px_rgba(215,170,82,0.4)] sm:p-8 lg:p-10"
       >
         <span
           aria-hidden
@@ -196,34 +203,34 @@ function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index:
           }}
         />
 
-        <div className="relative flex items-start justify-between">
-          <div className="flex h-20 w-36 items-center justify-center rounded-2xl bg-white px-5 shadow-inner sm:h-24 sm:w-44">
+        <div className="relative flex items-start justify-between gap-3">
+          <div className="flex h-16 w-28 items-center justify-center rounded-2xl bg-white px-3 shadow-inner sm:h-24 sm:w-44 sm:px-5">
             <PartnerLogo p={p} />
           </div>
 
-          <span className="text-sm font-medium text-white/65">({String(index + 1).padStart(2, "0")})</span>
+          <span className="text-xs font-medium text-white/65 sm:text-sm">({String(index + 1).padStart(2, "0")})</span>
         </div>
 
-        <div className="relative mt-12 max-w-xl">
-          <span className="mb-4 block text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]/75">
+        <div className="relative mt-6 max-w-xl sm:mt-12">
+          <span className="mb-3 block text-[10px] font-bold uppercase tracking-[0.2em] text-[#f3d28a]/75 sm:mb-4">
             {lang === "ar" ? "خدمات محاسبية متخصصة" : "Specialized accounting services"}
           </span>
 
-          <h3 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
+          <h3 className="text-2xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
             {lang === "ar" ? p.nameAr : p.name}
           </h3>
 
-          <p className="mt-5 max-w-lg text-base leading-8 text-white/65 sm:text-lg">
+          <p className="mt-3 max-w-lg text-sm leading-7 text-white/65 sm:mt-5 sm:text-base sm:leading-8 lg:text-lg">
             {lang === "ar" ? p.descAr : p.descEn}
           </p>
         </div>
 
-        <div className="relative mt-10 flex items-end justify-between">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-xl text-white transition-all duration-300 group-hover:border-[#f3d28a] group-hover:bg-[#f3d28a]/10">
-            <ArrowUpRight className="size-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+        <div className="relative mt-6 flex items-end justify-between sm:mt-10">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-xl text-white transition-all duration-300 group-hover:border-[#f3d28a] group-hover:bg-[#f3d28a]/10 sm:h-12 sm:w-12">
+            <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 sm:size-5" />
           </div>
 
-          <span className="text-xs text-white/35">
+          <span className="text-[11px] text-white/35 sm:text-xs">
             {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </span>
         </div>

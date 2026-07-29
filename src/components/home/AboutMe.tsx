@@ -244,7 +244,7 @@ function StatCounter({
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.6 });
+  const inView = useInView(ref, { once: true, amount: 0.2, margin: "0px 0px -10% 0px" });
   const match = value.match(/\d+/);
   const target = match ? parseInt(match[0], 10) : 0;
   const prefix = match ? value.slice(0, match.index) : "";

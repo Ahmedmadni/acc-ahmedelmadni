@@ -15,6 +15,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as RequestServiceRouteImport } from './routes/request-service'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AboutRouteImport } from './routes/about'
@@ -71,6 +72,11 @@ const LibraryRoute = LibraryRouteImport.update({
 const ExperienceRoute = ExperienceRouteImport.update({
   id: '/experience',
   path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CertificationsRoute = CertificationsRouteImport.update({
@@ -221,6 +227,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/certifications': typeof CertificationsRoute
+  '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRouteWithChildren
   '/request-service': typeof RequestServiceRoute
@@ -255,6 +262,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/certifications': typeof CertificationsRoute
+  '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
   '/request-service': typeof RequestServiceRoute
   '/services': typeof ServicesRoute
@@ -290,6 +298,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/certifications': typeof CertificationsRoute
+  '/contact': typeof ContactRoute
   '/experience': typeof ExperienceRoute
   '/library': typeof LibraryRouteWithChildren
   '/request-service': typeof RequestServiceRoute
@@ -326,6 +335,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/certifications'
+    | '/contact'
     | '/experience'
     | '/library'
     | '/request-service'
@@ -360,6 +370,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/certifications'
+    | '/contact'
     | '/experience'
     | '/request-service'
     | '/services'
@@ -394,6 +405,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/certifications'
+    | '/contact'
     | '/experience'
     | '/library'
     | '/request-service'
@@ -430,6 +442,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
   CertificationsRoute: typeof CertificationsRoute
+  ContactRoute: typeof ContactRoute
   ExperienceRoute: typeof ExperienceRoute
   LibraryRoute: typeof LibraryRouteWithChildren
   RequestServiceRoute: typeof RequestServiceRoute
@@ -491,6 +504,13 @@ declare module '@tanstack/react-router' {
       path: '/experience'
       fullPath: '/experience'
       preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/certifications': {
@@ -731,6 +751,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
   CertificationsRoute: CertificationsRoute,
+  ContactRoute: ContactRoute,
   ExperienceRoute: ExperienceRoute,
   LibraryRoute: LibraryRouteWithChildren,
   RequestServiceRoute: RequestServiceRoute,
