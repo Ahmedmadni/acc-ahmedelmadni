@@ -1567,24 +1567,30 @@ function Testimonials({ lang }: { lang: Lang }) {
                       ? { opacity: 0 }
                       : {
                           opacity: 0,
-                          x: direction > 0 ? 30 : -30,
+                          x: direction > 0 ? 60 : -60,
+                          scale: 0.96,
+                          filter: "blur(6px)",
                         }
                   }
                   animate={{
                     opacity: 1,
                     x: 0,
+                    scale: 1,
+                    filter: "blur(0px)",
                   }}
                   exit={
                     m.reduce
                       ? { opacity: 0 }
                       : {
                           opacity: 0,
-                          x: direction > 0 ? -30 : 30,
+                          x: direction > 0 ? -60 : 60,
+                          scale: 0.96,
+                          filter: "blur(6px)",
                         }
                   }
                   transition={{
-                    duration: m.reduce ? 0.2 : 0.5,
-                    ease: EASE.out,
+                    duration: m.reduce ? 0.2 : 0.55,
+                    ease: EASE.emphasis,
                   }}
                   className="flex h-full flex-col justify-between"
                 >
@@ -1598,9 +1604,19 @@ function Testimonials({ lang }: { lang: Lang }) {
                   {/* Author */}
                   <div className="mt-10 flex items-center justify-between gap-5 border-t border-[#E3DDD5] pt-6">
                     <div className="flex min-w-0 items-center gap-4">
-                      <span className="font-display flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-base font-bold text-[#E9D9C3]">
+                      <motion.span
+                        initial={m.reduce ? { scale: 1 } : { scale: 0.5, rotate: -20 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 260,
+                          damping: 16,
+                          delay: 0.1,
+                        }}
+                        className="font-display flex size-12 shrink-0 items-center justify-center rounded-full bg-[#1C1B19] text-base font-bold text-[#E9D9C3]"
+                      >
                         {initial}
-                      </span>
+                      </motion.span>
 
                       <div className="min-w-0">
                         <p className="truncate text-[14px] font-bold text-[#1C1B19] sm:text-[15px]">
@@ -1621,6 +1637,16 @@ function Testimonials({ lang }: { lang: Lang }) {
                   </div>
                 </motion.div>
               </AnimatePresence>
+              {/* Progress bar */}
+              {!m.reduce && (
+                <motion.div
+                  key={`bar-${activeIndex}`}
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 3.2, ease: "linear" }}
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] origin-left bg-gradient-to-r from-[#c9a986] via-[#A88765] to-[#4A3023]"
+                />
+              )}
             </div>
 
             {/* Navigation */}
