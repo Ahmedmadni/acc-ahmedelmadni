@@ -1,6 +1,6 @@
 import { Link as RouterLink } from "@tanstack/react-router";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Handshake, Sparkles, ArrowUpRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
