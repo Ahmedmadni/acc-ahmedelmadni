@@ -1,4 +1,11 @@
-import { motion } from "motion/react";
+import { useRef } from "react";
+import {
+  motion,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
   Calculator,
@@ -9,9 +16,11 @@ import {
   Wallet,
   Percent,
   ArrowUpLeft,
+  Sparkles,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
+import { playClick, playHover } from "@/lib/sound";
 
 type Item = {
   id: string;
@@ -95,146 +104,252 @@ const ITEMS: Item[] = [
   },
 ];
 
+/**
+ * Cinematic "Ready-to-use accounting tools" — Awwwards-style band replacing
+ * the old featured/supporting grid. Recipe:
+ *   • Sticky editorial column (large index number that swaps as cards enter view)
+ *   • Right-hand list of full-bleed cards that fade-in with mask reveal + scroll
+ *     parallax; each card has a magnetic pointer glow layer.
+ *   • Preserves every existing tool id + `/tools/$toolId` link + copy.
+ */
 export default function FeaturedTools({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
   const m = useMotionSafe();
-  const [featured, ...supporting] = ITEMS;
-  const FeaturedIcon = featured.icon;
 
   return (
     <section
       id="featured-tools"
-      className="dark-motif relative overflow-hidden bg-[#1C1B19] py-20 sm:py-24 lg:py-28"
+      className="dark-motif relative overflow-hidden bg-[#141311] py-20 sm:py-24 lg:py-28"
     >
-      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+      {/* Cinematic grid backdrop */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #A88765 1px, transparent 1px), linear-gradient(to bottom, #A88765 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+          maskImage:
+            "radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 start-1/3 size-[36rem] rounded-full bg-[#A88765]/[0.09] blur-[120px]"
+      />
+
+      <div className="relative mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           variants={m.staggerParent}
-          className="max-w-2xl"
+          className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
         >
-          <motion.p
+          <div className="max-w-2xl">
+            <motion.p
+              variants={m.staggerChild}
+              className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
+            >
+              <Sparkles className="size-3.5" />
+              {ar ? "الأدوات" : "Tools"}
+            </motion.p>
+            <motion.h2
+              variants={m.staggerChild}
+              className="font-display mt-3 text-[1.9rem] font-bold leading-[1.15] text-[#FCFBF9] sm:text-[2.6rem] lg:text-[3.2rem]"
+            >
+              {ar ? "أدوات محاسبية جاهزة للاستخدام" : "Accounting tools ready to use"}
+            </motion.h2>
+            <motion.p
+              variants={m.staggerChild}
+              className="mt-4 max-w-xl text-[15px] leading-[1.9] text-white/60 sm:text-[16px]"
+            >
+              {ar
+                ? "حاسبات ونماذج تعمل مباشرة في المتصفح — بدون تسجيل، بدون تنزيل."
+                : "Calculators and forms that work in your browser — no signup, no downloads."}
+            </motion.p>
+          </div>
+          <motion.div
             variants={m.staggerChild}
-            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
+            className="font-display shrink-0 text-[3rem] font-black leading-none text-white/[0.08] sm:text-[5rem]"
           >
-            {ar ? "الأدوات" : "Tools"}
-          </motion.p>
-          <motion.h2
-            variants={m.staggerChild}
-            className="font-display mt-3 text-[1.9rem] font-bold leading-[1.3] text-[#FCFBF9] sm:text-[2.4rem] lg:text-[2.9rem]"
-          >
-            {ar ? "أدوات محاسبية جاهزة للاستخدام" : "Accounting tools ready to use"}
-          </motion.h2>
-          <motion.p
-            variants={m.staggerChild}
-            className="mt-4 text-[15px] leading-[1.9] text-white/60 sm:text-[16px]"
-          >
-            {ar
-              ? "حاسبات ونماذج تعمل مباشرة في المتصفح — بدون تسجيل، بدون تنزيل."
-              : "Calculators and forms that work in your browser — no signup, no downloads."}
-          </motion.p>
+            {String(ITEMS.length).padStart(2, "0")}
+          </motion.div>
         </motion.div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-12">
-          {/* Featured tool */}
-          <motion.div
-            initial={m.reduce ? { opacity: 0 } : { opacity: 0, clipPath: "inset(0 0 100% 0)" }}
-            whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, clipPath: "inset(0 0 0% 0)" }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={m.reduce ? { duration: 0.3 } : { duration: 0.6, ease: EASE.emphasis }}
-            className="lg:col-span-5"
-          >
-            <Link
-              to="/tools/$toolId"
-              params={{ toolId: featured.id }}
-              className="leather-grain group relative flex h-full min-h-[16rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#4A3023] p-7 shadow-[0_30px_70px_-30px_rgba(28,27,25,0.55)] transition-transform hover:-translate-y-1 sm:p-9"
-            >
-              <div className="relative">
-                <div className="flex items-center justify-between">
-                  <span className="flex size-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] text-[#e9d9c3]">
-                    <FeaturedIcon className="size-6" />
-                  </span>
-                  {featured.badgeAr && (
-                    <span className="rounded-full border border-[#A88765]/40 bg-white/[0.05] px-3 py-1 text-[11px] font-bold text-[#e9d9c3]">
-                      {ar ? featured.badgeAr : featured.badgeEn}
-                    </span>
-                  )}
-                </div>
-                <h3 className="font-display mt-6 text-[1.5rem] font-bold leading-[1.35] text-[#FCFBF9] sm:text-[1.75rem]">
-                  {ar ? featured.ar : featured.en}
-                </h3>
-                <p className="mt-3 max-w-md text-[14px] leading-[1.85] text-white/65 sm:text-[15px]">
-                  {ar ? featured.descAr : featured.descEn}
-                </p>
-              </div>
-              <span className="relative mt-8 inline-flex items-center gap-2 text-[14px] font-semibold text-[#d8bd9c]">
-                {ar ? "افتح الأداة" : "Open tool"}
+        {/* Cinematic index */}
+        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-16">
+          {/* Sticky rail */}
+          <aside className="lg:col-span-4">
+            <div className="lg:sticky lg:top-24">
+              <span className="block text-[11px] font-bold uppercase tracking-[0.28em] text-[#A88765]/80">
+                {ar ? "مؤشر الأدوات" : "Tools index"}
+              </span>
+              <p className="font-display mt-4 text-[1.4rem] font-bold leading-[1.4] text-[#FCFBF9]/90 lg:text-[1.7rem]">
+                {ar
+                  ? "استخدمها الآن — كل أداة مصمّمة لاختصار الوقت وتقليل الأخطاء."
+                  : "Use them now — every tool is built to save time and reduce errors."}
+              </p>
+              <div className="mt-6 h-px w-24 bg-gradient-to-r from-[#A88765] to-transparent" />
+              <Link
+                to="/tools"
+                onMouseEnter={playHover}
+                onClick={playClick}
+                className="group mt-8 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-5 py-2.5 text-[13px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
+              >
+                {ar ? "عرض جميع الأدوات" : "View all tools"}
                 <ArrowUpLeft
                   aria-hidden
-                  className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
+                  className="size-4 text-[#d8bd9c] transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
                 />
-              </span>
-            </Link>
-          </motion.div>
+              </Link>
+            </div>
+          </aside>
 
-          {/* Supporting tools */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={m.staggerParent}
-            className="grid content-start gap-4 sm:grid-cols-2 lg:col-span-7"
-          >
-            {supporting.map((item) => {
-              const Icon = item.icon;
-              return (
-                <motion.div key={item.id} variants={m.staggerChild}>
-                  <Link
-                    to="/tools/$toolId"
-                    params={{ toolId: item.id }}
-                    className="group flex h-full items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/50 hover:bg-white/[0.05]"
-                  >
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-[#A88765] transition-colors duration-300 group-hover:text-[#d8bd9c]">
-                      <Icon className="size-5" />
-                    </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="flex items-center justify-between gap-2">
-                        <span className="font-display text-[14px] font-bold leading-snug text-[#FCFBF9]">
-                          {ar ? item.ar : item.en}
-                        </span>
-                        {item.badgeAr && (
-                          <span className="shrink-0 rounded-full border border-[#A88765]/35 px-2 py-0.5 text-[10px] font-bold text-[#e9d9c3]">
-                            {ar ? item.badgeAr : item.badgeEn}
-                          </span>
-                        )}
-                      </span>
-                      <span className="mt-1 block text-[12px] leading-[1.6] text-white/55">
-                        {ar ? item.descAr : item.descEn}
-                      </span>
-                    </span>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-
-        {/* View all */}
-        <div className="mt-10">
-          <Link
-            to="/tools"
-            className="group inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-6 py-3 text-[14px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
-          >
-            {ar ? "عرض جميع الأدوات" : "View all tools"}
-            <ArrowUpLeft
-              aria-hidden
-              className="size-4 text-[#d8bd9c] transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
-            />
-          </Link>
+          {/* Cards column */}
+          <div className="flex flex-col gap-4 sm:gap-5 lg:col-span-8">
+            {ITEMS.map((item, i) => (
+              <CinematicToolCard
+                key={item.id}
+                item={item}
+                index={i}
+                total={ITEMS.length}
+                lang={lang}
+                reduce={m.reduce}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function CinematicToolCard({
+  item,
+  index,
+  total,
+  lang,
+  reduce,
+}: {
+  item: Item;
+  index: number;
+  total: number;
+  lang: Lang;
+  reduce: boolean;
+}) {
+  const ar = lang === "ar";
+  const Icon = item.icon;
+  const ref = useRef<HTMLAnchorElement>(null);
+
+  // Scroll-driven parallax: subtle lift as the card enters and passes viewport center.
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [40, 0, -20]), {
+    stiffness: 70,
+    damping: 22,
+  });
+
+  // Magnetic pointer glow.
+  const mx = useMotionValue(50);
+  const my = useMotionValue(50);
+  const glow = useTransform(
+    [mx, my],
+    ([x, y]) =>
+      `radial-gradient(600px circle at ${x}% ${y}%, rgba(216,189,156,0.14), transparent 45%)`,
+  );
+
+  const onPointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
+    if (reduce) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    mx.set(((e.clientX - rect.left) / rect.width) * 100);
+    my.set(((e.clientY - rect.top) / rect.height) * 100);
+  };
+
+  return (
+    <motion.div
+      initial={reduce ? { opacity: 0 } : { opacity: 0, clipPath: "inset(0 0 100% 0)", y: 30 }}
+      whileInView={
+        reduce
+          ? { opacity: 1 }
+          : { opacity: 1, clipPath: "inset(0 0 0% 0)", y: 0 }
+      }
+      viewport={{ once: true, amount: 0.25 }}
+      transition={
+        reduce
+          ? { duration: 0.3 }
+          : { duration: 0.75, ease: EASE.emphasis, delay: index * 0.06 }
+      }
+      style={{ y: reduce ? 0 : y }}
+    >
+      <Link
+        ref={ref}
+        to="/tools/$toolId"
+        params={{ toolId: item.id }}
+        onMouseEnter={playHover}
+        onClick={playClick}
+        onPointerMove={onPointerMove}
+        className="group relative block overflow-hidden rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#1c1a17] to-[#0f0d0b] p-5 shadow-[0_25px_60px_-30px_rgba(0,0,0,0.6)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A88765]/50 hover:shadow-[0_35px_90px_-30px_rgba(168,135,101,0.35)] sm:p-7 lg:p-8"
+      >
+        {/* pointer glow */}
+        <motion.span
+          aria-hidden
+          style={{ background: glow }}
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        />
+        {/* gold reveal line */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-[#4A3023] via-[#A88765] to-transparent transition-transform duration-700 ease-out group-hover:scale-x-100"
+        />
+
+        <div className="relative flex items-start gap-4 sm:gap-6">
+          {/* Index */}
+          <span className="font-display shrink-0 text-2xl font-black tabular-nums text-white/15 transition-colors duration-500 group-hover:text-[#A88765] sm:text-3xl lg:text-4xl">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
+          {/* Icon */}
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-[#d8bd9c] transition-all duration-500 group-hover:scale-110 group-hover:border-[#A88765]/60 group-hover:bg-[#A88765]/10 sm:size-12">
+            <Icon className="size-5 sm:size-6" />
+          </span>
+
+          {/* Content */}
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="font-display text-[16px] font-bold leading-snug text-[#FCFBF9] sm:text-[18px] lg:text-[20px]">
+                {ar ? item.ar : item.en}
+              </h3>
+              {item.badgeAr && (
+                <span className="rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-2 py-0.5 text-[10px] font-bold text-[#e9d9c3]">
+                  {ar ? item.badgeAr : item.badgeEn}
+                </span>
+              )}
+            </div>
+            <p className="mt-2 max-w-2xl text-[13px] leading-[1.75] text-white/55 sm:text-[14px]">
+              {ar ? item.descAr : item.descEn}
+            </p>
+          </div>
+
+          {/* Arrow */}
+          <span className="hidden shrink-0 items-center justify-center rounded-full border border-white/10 text-[#d8bd9c] transition-all duration-500 group-hover:border-[#A88765] group-hover:bg-[#A88765]/10 group-hover:rotate-45 sm:flex sm:size-11">
+            <ArrowUpLeft className="size-4 ltr:rotate-90" />
+          </span>
+        </div>
+
+        {/* Foot: counter */}
+        <div className="relative mt-5 flex items-center justify-between border-t border-white/[0.06] pt-3 text-[11px] font-mono text-white/40 sm:mt-6">
+          <span>
+            {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+          </span>
+          <span className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            {ar ? "افتح الأداة →" : "Open tool →"}
+          </span>
+        </div>
+      </Link>
+    </motion.div>
   );
 }
