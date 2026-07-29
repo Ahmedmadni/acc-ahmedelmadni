@@ -50,7 +50,7 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
     <button
       type="button"
       onClick={onOpen}
-      className="group relative flex w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#A88765]/25 bg-[#1C1B19] text-start transition-all hover:border-[#A88765]/60 hover:shadow-[0_25px_60px_-25px_rgba(168,135,101,0.45)] sm:w-[400px]"
+      className="dark-motif group relative flex w-[340px] shrink-0 flex-col overflow-hidden rounded-2xl border border-[#A88765]/25 bg-[#1C1B19] text-start transition-all hover:border-[#A88765]/60 hover:shadow-[0_25px_60px_-25px_rgba(168,135,101,0.45)] sm:w-[400px]"
     >
       <div className="relative h-[280px] w-full overflow-hidden bg-gradient-to-br from-[#232019] to-[#1C1B19] sm:h-[320px]">
         {c.image_url ? (

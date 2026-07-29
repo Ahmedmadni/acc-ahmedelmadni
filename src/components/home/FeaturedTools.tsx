@@ -104,7 +104,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
   return (
     <section
       id="featured-tools"
-      className="relative overflow-hidden bg-[#1C1B19] py-20 sm:py-24 lg:py-28"
+      className="dark-motif relative overflow-hidden bg-[#1C1B19] py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         {/* Header */}
@@ -149,7 +149,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
             <Link
               to="/tools/$toolId"
               params={{ toolId: featured.id }}
-              className="group relative flex h-full min-h-[16rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#4A3023] p-7 shadow-[0_30px_70px_-30px_rgba(28,27,25,0.55)] transition-transform hover:-translate-y-1 sm:p-9"
+              className="leather-grain group relative flex h-full min-h-[16rem] flex-col justify-between overflow-hidden rounded-3xl bg-[#4A3023] p-7 shadow-[0_30px_70px_-30px_rgba(28,27,25,0.55)] transition-transform hover:-translate-y-1 sm:p-9"
             >
               <div className="relative">
                 <div className="flex items-center justify-between">
