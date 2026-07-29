@@ -1084,19 +1084,25 @@ export function Experience({ lang }: { lang: Lang }) {
           sub={t.experience.sub[lang]}
         />
         <div ref={sectionRef} className="relative mt-16">
-          {/* Static rail */}
-          <div className="tl-line absolute top-0 bottom-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 opacity-30" />
-          <div className="tl-line absolute top-0 bottom-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto opacity-30" />
-          {/* Scroll-driven gold progress line */}
+          {/* Static rail — thicker, dashed, tree-trunk look */}
+          <div
+            aria-hidden
+            className="absolute top-0 bottom-0 hidden w-[3px] md:block md:left-1/2 md:-translate-x-1/2 rounded-full bg-[repeating-linear-gradient(to_bottom,rgba(168,135,101,0.35)_0_10px,transparent_10px_18px)]"
+          />
+          <div
+            aria-hidden
+            className="absolute top-0 bottom-0 w-[3px] md:hidden right-3 rtl:left-3 rtl:right-auto rounded-full bg-[repeating-linear-gradient(to_bottom,rgba(168,135,101,0.35)_0_10px,transparent_10px_18px)]"
+          />
+          {/* Scroll-driven gold progress trunk */}
           <motion.div
             aria-hidden
             style={{ height: lineHeight }}
-            className="absolute top-0 hidden w-[2px] md:block md:left-1/2 md:-translate-x-1/2 bg-gradient-to-b from-[#c9a986] via-[#A88765] to-transparent shadow-[0_0_18px_rgba(168,135,101,0.6)]"
+            className="absolute top-0 hidden w-[3px] md:block md:left-1/2 md:-translate-x-1/2 rounded-full bg-gradient-to-b from-[#e8cfa8] via-[#A88765] to-[#4A3023] shadow-[0_0_22px_rgba(168,135,101,0.75)]"
           />
           <motion.div
             aria-hidden
             style={{ height: lineHeight }}
-            className="absolute top-0 w-[2px] md:hidden right-3 rtl:left-3 rtl:right-auto bg-gradient-to-b from-[#c9a986] via-[#A88765] to-transparent shadow-[0_0_18px_rgba(168,135,101,0.6)]"
+            className="absolute top-0 w-[3px] md:hidden right-3 rtl:left-3 rtl:right-auto rounded-full bg-gradient-to-b from-[#e8cfa8] via-[#A88765] to-[#4A3023] shadow-[0_0_22px_rgba(168,135,101,0.75)]"
           />
           <div className="space-y-16">
             {items.map((item, i) => (
