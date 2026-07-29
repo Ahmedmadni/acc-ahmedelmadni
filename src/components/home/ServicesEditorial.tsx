@@ -79,28 +79,28 @@ export function ServicesEditorial({
                 }}
                 onMouseEnter={playHover}
                 aria-label={`${s[lang]} — ${t.services.learn[lang]}`}
-                className="group relative block w-full border-t border-white/10 py-6 text-start transition-colors hover:bg-white/[0.02] focus:outline-none focus-visible:bg-white/[0.04] sm:py-8"
+                className="group relative block w-full border-t border-white/10 py-5 text-start transition-colors hover:bg-white/[0.02] focus:outline-none focus-visible:bg-white/[0.04] active:bg-white/[0.03] sm:py-8"
               >
                 {/* bronze reveal bar */}
                 <span
                   aria-hidden
-                  className="absolute inset-y-0 start-0 w-[2px] origin-top scale-y-0 bg-[#A88765] transition-transform duration-500 ease-out group-hover:scale-y-100 group-focus-visible:scale-y-100"
+                  className="absolute inset-y-0 start-0 w-[2px] origin-top scale-y-0 bg-[#A88765] transition-transform duration-500 ease-out group-hover:scale-y-100 group-focus-visible:scale-y-100 group-active:scale-y-100"
                 />
-                <div className="flex items-start gap-5 ps-4 sm:gap-8 sm:ps-8">
-                  <span className="font-display mt-0.5 shrink-0 text-lg font-bold tabular-nums text-white/25 transition-colors duration-300 group-hover:text-[#A88765] group-focus-visible:text-[#A88765] sm:text-xl lg:text-2xl">
+                <div className="flex items-start gap-3 ps-3 sm:gap-8 sm:ps-8">
+                  <span className="font-display mt-0.5 shrink-0 text-base font-bold tabular-nums text-white/25 transition-colors duration-300 group-hover:text-[#A88765] group-focus-visible:text-[#A88765] group-active:text-[#A88765] sm:text-xl lg:text-2xl">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <div className="flex items-start justify-between gap-4">
-                      <h3 className="font-display text-lg font-bold leading-snug text-[#FCFBF9] transition-transform duration-300 group-hover:translate-x-1 ltr:group-hover:translate-x-1 rtl:group-hover:-translate-x-1 sm:text-xl lg:text-[1.55rem]">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="font-display text-[15px] font-bold leading-snug text-[#FCFBF9] transition-transform duration-300 sm:text-xl sm:group-hover:translate-x-1 sm:ltr:group-hover:translate-x-1 sm:rtl:group-hover:-translate-x-1 lg:text-[1.55rem]">
                         {s[lang]}
                       </h3>
                       <ArrowUpLeft
                         aria-hidden
-                        className="mt-1 size-5 shrink-0 -translate-x-1 text-[#A88765] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100 ltr:rotate-90"
+                        className="mt-0.5 size-4 shrink-0 text-[#A88765] opacity-60 transition-all duration-300 sm:size-5 sm:opacity-0 sm:-translate-x-1 sm:group-hover:translate-x-0 sm:group-hover:opacity-100 sm:group-focus-visible:translate-x-0 sm:group-focus-visible:opacity-100 ltr:rotate-90"
                       />
                     </div>
-                    <p className="mt-2 max-w-2xl text-[14px] leading-[1.85] text-white/55 sm:text-[15px]">
+                    <p className="mt-1.5 max-w-2xl text-[13px] leading-[1.8] text-white/55 sm:mt-2 sm:text-[15px] sm:leading-[1.85]">
                       {s.d[lang]}
                     </p>
                   </div>
