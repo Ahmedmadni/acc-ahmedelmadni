@@ -157,12 +157,13 @@ function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index:
   const cardRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
-  // Sticky-stack effect is desktop-only; on mobile it caused overlapping cards.
-  useState(() => {
-    if (typeof window === "undefined") return;
-  });
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useRef(true);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -172,12 +173,6 @@ function PartnerCard({ p, lang, index, total }: { p: Partner; lang: Lang; index:
   const scale = useTransform(scrollYProgress, [0, 1], [0.94, 1]);
   const y = useTransform(scrollYProgress, [0, 1], [50, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.35, 1], [0, 0.7, 1]);
-
-  // Detect desktop viewport for sticky-stack behaviour.
-  if (typeof window !== "undefined" && !isDesktop && window.matchMedia("(min-width: 1024px)").matches) {
-    // set once on first render
-    setTimeout(() => setIsDesktop(true), 0);
-  }
 
   const stackOffset = Math.min(index * 14, 120);
 
