@@ -1166,9 +1166,29 @@ function TimelineItem({
 
   return (
     <div ref={ref} className="relative grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+      {/* Horizontal branch connector — a small "twig" from the trunk to the card (desktop only). */}
+      <motion.span
+        aria-hidden
+        initial={{ scaleX: 0 }}
+        animate={inView ? { scaleX: 1 } : {}}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+        className={`pointer-events-none absolute top-1/2 hidden h-[3px] rounded-full bg-gradient-to-r from-[#A88765] to-[#A88765]/0 shadow-[0_0_10px_rgba(168,135,101,0.6)] md:block ${
+          left
+            ? "left-[calc(50%-56px)] w-14 origin-right rotate-180"
+            : "left-1/2 w-14 origin-left"
+        }`}
+      />
+      {/* Horizontal branch connector — mobile: from right spine into card. */}
+      <motion.span
+        aria-hidden
+        initial={{ scaleX: 0 }}
+        animate={inView ? { scaleX: 1 } : {}}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+        className="pointer-events-none absolute top-6 right-4 h-[3px] w-8 origin-right rounded-full bg-gradient-to-l from-[#A88765] to-[#A88765]/0 md:hidden rtl:left-4 rtl:right-auto rtl:origin-left rtl:bg-gradient-to-r"
+      />
       <motion.div
         style={{ scale: scaleDot, boxShadow: glowDot }}
-        className="tl-dot absolute size-4 rounded-full bg-[#A88765] md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
+        className="tl-dot absolute size-4 rounded-full bg-[#A88765] ring-4 ring-[#A88765]/20 md:left-1/2 md:-translate-x-1/2 top-6 md:top-1/2 md:-translate-y-1/2 right-1 rtl:left-1 rtl:right-auto md:right-auto md:rtl:left-auto"
       />
       <motion.div
         style={{ y: yCard }}
