@@ -1481,7 +1481,7 @@ function Testimonials({ lang }: { lang: Lang }) {
       setDirection(1);
 
       setActiveIndex((current) => (current + 1) % items.length);
-    }, 5000);
+    }, 3200);
 
     return () => window.clearInterval(interval);
   }, [items.length]);
