@@ -96,9 +96,18 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   {lang === "ar" ? "نبذة عني" : "About Me"}
                 </div>
 
+                {/* Alexandria's heavy weights (600+) render this name's letter
+                    combinations with the strokes fused together at this size —
+                    confirmed by testing weight and letter-spacing in isolation.
+                    IBM Plex Sans Arabic (already the declared fallback in
+                    `--font-display`) stays crisp at the same weight, so it's
+                    used directly here instead of introducing a new font. */}
                 <h1
                   id="about-hero-heading"
-                  className="font-display mt-6 text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent"
+                  className="mt-6 text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent"
+                  style={{
+                    fontFamily: '"IBM Plex Sans Arabic", Alexandria, system-ui, sans-serif',
+                  }}
                 >
                   <SplitReveal text={headline} lang={lang} />
                 </h1>
