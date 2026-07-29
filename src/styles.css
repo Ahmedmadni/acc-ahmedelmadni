@@ -1238,15 +1238,19 @@ img {
    =================================================================== */
 
 /**
- * Fine leather grain for warm brown / bronze surfaces.
+ * Fine branching leather grain for warm brown / bronze surfaces.
  *
- * The grain is built from repeating gradients whose periods are prime-ish
- * and whose angles are deliberately odd (23deg / 67deg / 113deg). Because
- * the periods never share a common multiple, the layers refuse to line up
- * into a readable grid — what you get is an irregular, tight cross-hatch
- * that reads as hide rather than as graph paper. Two soft radial blooms on
- * top break the remaining regularity so the surface looks mottled the way
- * real leather does.
+ * Real leather grain isn't a repeating grid — it's a network of hairline
+ * cracks: one master crease that forks into two or three thinner veins at
+ * a handful of points along its length. The two SVG layers below draw
+ * exactly that: a handful of bezier "trunk" cracks, each with 2-4 branch
+ * offshoots at different points, in both a darker ("recessed") and a
+ * lighter ("ridge") tone so the surface reads as embossed rather than
+ * printed-on. A large tile (226px) carries the main veins and a smaller,
+ * differently-shaped tile (137px) carries finer secondary branching —
+ * two periods with no common multiple, so the two never line up into a
+ * visible repeat. Two soft radial blooms on top add the last bit of
+ * mottling real hide has.
  */
 .leather-grain {
   position: relative;
@@ -1257,31 +1261,27 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  /* -1, not 0: `isolation: isolate` above scopes this z-index to just this
+     element's own stacking context, so -1 reliably paints behind every
+     child — static or already-positioned (e.g. an absolutely-placed
+     watermark) — with no need to touch the children themselves. */
+  z-index: -1;
   pointer-events: none;
   border-radius: inherit;
-  opacity: 0.5;
+  opacity: 0.62;
   background-image:
-    repeating-linear-gradient(23deg, rgba(255, 255, 255, 0.016) 0 1px, transparent 1px 7px),
-    repeating-linear-gradient(113deg, rgba(0, 0, 0, 0.028) 0 1px, transparent 1px 11px),
-    repeating-linear-gradient(67deg, rgba(255, 255, 255, 0.01) 0 1px, transparent 1px 13px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='226' height='226'%3E%3Cpath d='M18 208 C46 176 40 150 63 127 C82 108 73 86 94 63 C107 49 102 33 121 13' stroke='rgba(0,0,0,0.11)' stroke-width='1.1' fill='none' stroke-linecap='round'/%3E%3Cpath d='M63 127 C80 139 95 144 116 157' stroke='rgba(0,0,0,0.075)' stroke-width='0.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M94 63 C111 56 126 64 145 53' stroke='rgba(0,0,0,0.065)' stroke-width='0.7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M41 150 C25 158 11 168 3 183' stroke='rgba(255,255,255,0.06)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M121 13 C136 6 152 13 167 2' stroke='rgba(255,255,255,0.045)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='137' height='137'%3E%3Cpath d='M9 13 C27 24 32 40 23 57 C16 70 27 81 21 99' stroke='rgba(0,0,0,0.06)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M23 57 C36 60 44 52 58 56' stroke='rgba(0,0,0,0.042)' stroke-width='0.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M21 99 C32 104 42 100 55 109' stroke='rgba(255,255,255,0.038)' stroke-width='0.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
     radial-gradient(ellipse 70% 55% at 22% 28%, rgba(255, 255, 255, 0.022), transparent 70%),
     radial-gradient(ellipse 60% 50% at 78% 74%, rgba(0, 0, 0, 0.05), transparent 72%);
 }
 
-/* Keep real content above the grain layer. */
-.leather-grain > * {
-  position: relative;
-  z-index: 1;
-}
-
 /**
- * Near-invisible motif for deep charcoal surfaces.
- *
- * An interlaced diamond lattice — a very reduced nod to Arabic geometric
- * work — at an alpha low enough that it only resolves when you look for
- * it. A wide radial vignette keeps the centre of the surface clean so
- * body copy never sits on top of the busiest part of the pattern.
+ * The same branching-vein construction as `.leather-grain`, retuned for
+ * near-black surfaces: the stroke colour flips to a soft cream/bronze so
+ * the veins actually read against a dark ground, with a wide radial
+ * vignette keeping the centre of the surface clean so body copy never
+ * sits over the busiest part of the pattern.
  */
 .dark-motif {
   position: relative;
@@ -1292,17 +1292,12 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   border-radius: inherit;
-  opacity: 0.55;
+  opacity: 0.6;
   background-image:
-    repeating-linear-gradient(45deg, rgba(232, 216, 195, 0.012) 0 1px, transparent 1px 19px),
-    repeating-linear-gradient(-45deg, rgba(232, 216, 195, 0.012) 0 1px, transparent 1px 19px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='226' height='226'%3E%3Cpath d='M18 208 C46 176 40 150 63 127 C82 108 73 86 94 63 C107 49 102 33 121 13' stroke='rgba(232,216,195,0.05)' stroke-width='1.1' fill='none' stroke-linecap='round'/%3E%3Cpath d='M63 127 C80 139 95 144 116 157' stroke='rgba(232,216,195,0.034)' stroke-width='0.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M94 63 C111 56 126 64 145 53' stroke='rgba(232,216,195,0.03)' stroke-width='0.7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M41 150 C25 158 11 168 3 183' stroke='rgba(0,0,0,0.32)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M121 13 C136 6 152 13 167 2' stroke='rgba(0,0,0,0.24)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='137' height='137'%3E%3Cpath d='M9 13 C27 24 32 40 23 57 C16 70 27 81 21 99' stroke='rgba(232,216,195,0.028)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M23 57 C36 60 44 52 58 56' stroke='rgba(232,216,195,0.02)' stroke-width='0.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M21 99 C32 104 42 100 55 109' stroke='rgba(0,0,0,0.22)' stroke-width='0.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
     radial-gradient(ellipse 80% 60% at 50% 45%, rgba(0, 0, 0, 0.35), transparent 78%);
-}
-
-.dark-motif > * {
-  position: relative;
-  z-index: 1;
 }

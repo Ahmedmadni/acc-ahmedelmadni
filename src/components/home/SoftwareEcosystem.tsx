@@ -267,7 +267,7 @@ function FeatureCard({
   return (
     <motion.div
       layout
-      className="relative mx-auto min-h-[25rem] w-full max-w-[31rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[30rem] sm:p-9 lg:min-h-[34rem]"
+      className="leather-grain relative mx-auto min-h-[25rem] w-full max-w-[31rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[30rem] sm:p-9 lg:min-h-[34rem]"
     >
       <span
         aria-hidden

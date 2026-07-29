@@ -58,7 +58,7 @@ function ServiceCard({
   return (
     <motion.div
       variants={variants}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border p-5 transition-all ${
+      className={`dark-motif group relative flex h-full flex-col overflow-hidden rounded-2xl border p-5 transition-all ${
         active
           ? "border-[#A88765] bg-[#A88765]/[0.08] shadow-[0_18px_50px_-24px_rgba(168,135,101,0.4)]"
           : "border-[#A88765]/15 bg-[#1C1B19] hover:border-[#A88765]/50"

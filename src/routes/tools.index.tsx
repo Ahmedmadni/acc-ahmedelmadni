@@ -329,7 +329,7 @@ function ToolCard({
       <Link
         to="/tools/$toolId"
         params={{ toolId: tool.id }}
-        className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#A88765]/15 bg-[#211F1C] transition-[transform,border-color,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#A88765]/45 hover:shadow-[0_26px_60px_-32px_rgba(0,0,0,0.85),0_0_0_1px_rgba(199,167,127,0.06)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7A77F]/60 ${isWide ? "sm:flex-row" : ""} ${isLg ? "p-7" : "p-6"}`}
+        className={`dark-motif group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[#A88765]/15 bg-[#211F1C] transition-[transform,border-color,box-shadow] duration-500 ease-out hover:-translate-y-1.5 hover:border-[#A88765]/45 hover:shadow-[0_26px_60px_-32px_rgba(0,0,0,0.85),0_0_0_1px_rgba(199,167,127,0.06)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7A77F]/60 ${isWide ? "sm:flex-row" : ""} ${isLg ? "p-7" : "p-6"}`}
         style={{ boxShadow: "0 1px 0 rgba(255,255,255,0.02) inset" }}
       >
         {/* Hover glow */}
@@ -700,7 +700,7 @@ function ToolsPage() {
           />
 
           {collection.length === 0 ? (
-            <div className="mt-10 rounded-2xl border border-dashed border-[#A88765]/25 bg-[#211F1C] p-12 text-center">
+            <div className="dark-motif mt-10 rounded-2xl border border-dashed border-[#A88765]/25 bg-[#211F1C] p-12 text-center">
               <Search className="mx-auto size-6 text-[#A88765]/60" />
               <p className="mt-3 text-sm text-[#A9A29A]">
                 {lang === "ar" ? "لا توجد نتائج مطابقة لبحثك." : "No matching tools."}

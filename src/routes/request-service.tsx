@@ -310,7 +310,7 @@ export function RequestService({
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="mt-10 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-10 text-center"
+            className="dark-motif mt-10 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-10 text-center"
           >
             <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-300">
               <CheckCircle2 className="size-8" />
@@ -344,7 +344,7 @@ export function RequestService({
           <form
             id="service-form"
             onSubmit={onSubmit}
-            className="mt-10 space-y-6 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-6 sm:p-10"
+            className="dark-motif mt-10 space-y-6 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-6 sm:p-10"
           >
             {/* Service selector */}
             <div>

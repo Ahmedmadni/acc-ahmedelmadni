@@ -9,11 +9,89 @@ import { useChatWidget, extractMessageText } from "@/lib/chat-widget";
 
 const transport = new DefaultChatTransport({ api: "/api/chat" });
 
+/**
+ * The launcher is `position: fixed` in a bottom corner, so it sits on top of
+ * whatever the page happens to scroll underneath it. Sizing/positioning it
+ * carefully removes most collisions, but pages keep growing and some
+ * sections (a `position: sticky` bio block, a long RTL paragraph whose line
+ * boxes reach the edge) can genuinely pin real text at that exact spot for
+ * a long scroll range — no fixed size/offset can rule that out for content
+ * that doesn't exist yet. So instead of guessing at every case, this samples
+ * a few points across the launcher's own footprint on scroll/resize and
+ * checks what's actually stacked underneath (via `elementsFromPoint`, which
+ * — unlike `elementFromPoint` — returns the whole z-order stack, so it works
+ * without needing to hide the button first). If any sample point resolves to
+ * a real text-bearing element, the button fades near-invisible and stops
+ * intercepting clicks until it's clear again.
+ */
+function useClearOfText(ref: React.RefObject<HTMLElement | null>) {
+  const [clear, setClear] = useState(true);
+
+  useEffect(() => {
+    let raf = 0;
+    let ticking = false;
+
+    const hasOwnText = (el: Element) => {
+      for (const child of el.childNodes) {
+        if (child.nodeType === 3 && (child.textContent ?? "").trim().length > 1) return true;
+      }
+      return false;
+    };
+
+    const check = () => {
+      ticking = false;
+      const el = ref.current;
+      if (!el || typeof document.elementsFromPoint !== "function") return;
+      const r = el.getBoundingClientRect();
+      if (r.width === 0 || r.height === 0) return;
+      const points: [number, number][] = [
+        [r.left + r.width * 0.5, r.top + r.height * 0.5],
+        [r.left + r.width * 0.2, r.top + r.height * 0.5],
+        [r.left + r.width * 0.5, r.top + r.height * 0.2],
+        [r.left + r.width * 0.5, r.top + r.height * 0.8],
+      ];
+      let hit = false;
+      for (const [x, y] of points) {
+        if (x < 0 || y < 0 || x > window.innerWidth || y > window.innerHeight) continue;
+        const stack = document.elementsFromPoint(x, y);
+        for (const stacked of stack) {
+          if (el.contains(stacked)) continue;
+          if (hasOwnText(stacked)) {
+            hit = true;
+            break;
+          }
+        }
+        if (hit) break;
+      }
+      setClear(!hit);
+    };
+
+    const onScrollOrResize = () => {
+      if (ticking) return;
+      ticking = true;
+      raf = requestAnimationFrame(check);
+    };
+
+    check();
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("resize", onScrollOrResize);
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScrollOrResize);
+      window.removeEventListener("resize", onScrollOrResize);
+    };
+  }, [ref]);
+
+  return clear;
+}
+
 export function AIAssistant({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const { messages, sendMessage, loading, scrollRef } = useChatWidget(transport);
   const inputRef = useRef<HTMLInputElement>(null);
+  const runnerRef = useRef<HTMLDivElement>(null);
+  const clearOfText = useClearOfText(runnerRef);
   const reduce = useReducedMotion();
 
   useEffect(() => {
@@ -38,8 +116,22 @@ export function AIAssistant({ lang }: { lang: Lang }) {
 
   return (
     <>
-      {/* Mascot pinned above the floating social button on the left */}
-      <div id="ai-mascot-runner" className="fixed z-40" style={{ left: 10, bottom: 86 }}>
+      {/* Mascot pinned above the floating social button on the left. Fades
+          near-invisible and stops accepting clicks whenever it would
+          otherwise sit on top of real text (see `useClearOfText` above) —
+          `open` is excluded from the check on purpose, since once the chat
+          panel is open there's nothing left behind the launcher to protect. */}
+      <div
+        id="ai-mascot-runner"
+        ref={runnerRef}
+        className="fixed z-40 transition-opacity duration-300 motion-reduce:transition-none"
+        style={{
+          left: 10,
+          bottom: 86,
+          opacity: clearOfText || open ? 1 : 0.16,
+          pointerEvents: clearOfText || open ? "auto" : "none",
+        }}
+      >
         <motion.button
           type="button"
           onClick={() => {
@@ -70,8 +162,14 @@ export function AIAssistant({ lang }: { lang: Lang }) {
             height={112}
             loading="lazy"
             decoding="async"
-            style={{ width: "112px", height: "112px", objectFit: "contain" }}
-            className="relative object-contain drop-shadow-[0_8px_24px_rgba(168,135,101,0.4)]"
+            /* Was a fixed 112px at every breakpoint — on a 390px-wide phone
+               that's nearly a third of the screen width, permanently fixed
+               in a corner, which put it on top of body text at almost every
+               scroll position (confirmed by scanning every page). Scaling
+               down on narrow viewports keeps the desktop size (112px, lg+)
+               unchanged and shrinks the mobile/tablet footprint enough that
+               it clears ordinary paragraph and heading text. */
+            className="relative size-16 object-contain drop-shadow-[0_8px_24px_rgba(168,135,101,0.4)] sm:size-20 lg:size-28"
             animate={reduce ? undefined : { y: [0, -8, 0, -4, 0], rotate: [0, -5, 5, -2, 0] }}
             transition={reduce ? undefined : { duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
           />

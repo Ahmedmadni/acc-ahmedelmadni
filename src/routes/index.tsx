@@ -843,21 +843,61 @@ function Hero({ lang }: { lang: Lang }) {
   return (
     <section
       id="home"
-      /* `paddingTop` reserves the fixed header's band (box-sizing is
-         border-box, so the section still measures 92vh/100vh in total). The
-         reserved strip carries the same ink as the Navbar's own translucent
-         fill, so the header reads as a solid band with no gap above the
-         image. */
-      className="relative isolate flex min-h-[92vh] w-full flex-col overflow-hidden bg-[#1C1B19] md:min-h-screen"
+      /* `paddingTop` reserves the fixed header's band. Below `lg` the section
+         no longer forces a min-height — the portrait sits in a bounded box
+         at a natural document-flow height (see below) and the text column
+         follows it in flow, so there's no scenario where the two can
+         overlap. At `lg`+ the original cinematic full-bleed treatment
+         returns, sized to the viewport as before. */
+      className="relative isolate flex w-full flex-col overflow-hidden bg-[#1C1B19] lg:min-h-screen"
       style={{ paddingTop: HEADER_H }}
       onPointerMove={parallaxActive ? onHeroPointerMove : undefined}
       onPointerLeave={parallaxActive ? onHeroPointerLeave : undefined}
     >
-      {/* Visual layer — clipped so the photograph and every scrim above it
-          begin exactly at the header's bottom edge, never behind it. The
-          parallax overscan happens inside this clip, so drifting the image
-          can't expose an edge at the top seam either. */}
-      <div className="absolute inset-x-0 bottom-0 -z-10 overflow-hidden" style={{ top: HEADER_H }}>
+      {/* Mobile/tablet portrait — a bounded box in normal document flow,
+          directly above the text column instead of behind it. The face's
+          position within the source photo is irrelevant here: since text
+          never sits on top of this box, there is no way for it to cover any
+          part of the portrait, at any crop. */}
+      <div className="relative h-[46vh] max-h-[480px] min-h-[300px] w-full overflow-hidden lg:hidden">
+        <img
+          src={heroImg}
+          alt={
+            lang === "ar"
+              ? "أحمد المدني — محاسب أول واستشاري مالي، في مكتبه التنفيذي"
+              : "Ahmed Elmadani — Senior Accountant & Financial Consultant, in his executive office"
+          }
+          width={1536}
+          height={1024}
+          fetchPriority="high"
+          decoding="async"
+          className="h-full w-full object-cover object-[62%_22%]"
+        />
+        {/* Light depth only — no readability wash needed since no text overlays this box. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(120% 90% at 60% 30%, transparent 55%, rgba(12,9,7,0.32) 100%)",
+          }}
+        />
+        {/* Fade the bottom edge into the section's own ground so the seam into the text column is soft. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-20"
+          style={{ background: "linear-gradient(180deg, transparent, #1C1B19)" }}
+        />
+      </div>
+
+      {/* Desktop (lg+) visual layer — clipped so the photograph and every
+          scrim above it begin exactly at the header's bottom edge, never
+          behind it. The parallax overscan happens inside this clip, so
+          drifting the image can't expose an edge at the top seam either. */}
+      <div
+        className="absolute inset-x-0 bottom-0 -z-10 hidden overflow-hidden lg:block"
+        style={{ top: HEADER_H }}
+      >
         {/* Full-bleed executive portrait — real image asset, no baked text/CTA.
             Wrapped slightly oversized so the parallax translate never exposes an edge. */}
         <motion.div
@@ -927,8 +967,10 @@ function Hero({ lang }: { lang: Lang }) {
         />
       </div>
 
-      {/* Content — left text zone on desktop, bottom stack on mobile */}
-      <div className="relative flex w-full flex-1 items-end px-4 pb-16 pt-10 sm:px-8 md:pb-20 md:pt-14 lg:items-center lg:px-12 lg:py-0 xl:px-16">
+      {/* Content — left text zone on desktop; on mobile/tablet it simply
+          follows the portrait box above in normal flow (no `items-end`
+          pinning it over the image anymore). */}
+      <div className="relative flex w-full flex-1 px-4 pb-14 pt-8 sm:px-8 sm:pb-16 lg:items-center lg:px-12 lg:py-0 xl:px-16">
         {/* Vertical rhythm is deliberately uneven: the badge sits close under
             the headline, the tagline gets room to breathe, and the widest gap
             falls before the CTAs so the call to action reads as its own beat.
@@ -1698,7 +1740,10 @@ export function Contact({ lang }: { lang: Lang }) {
   const mascotParallaxActive = pointerCapable && !m.reduce;
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#4A3023] py-20 sm:py-24 lg:py-28">
+    <section
+      id="contact"
+      className="leather-grain relative overflow-hidden bg-[#4A3023] py-20 sm:py-24 lg:py-28"
+    >
       <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         <motion.div
           initial="hidden"

@@ -30,7 +30,7 @@ export function ServicesEditorial({
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-[#1C1B19] py-20 sm:py-24 lg:py-28"
+      className="dark-motif relative overflow-hidden bg-[#1C1B19] py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         {/* Header */}
