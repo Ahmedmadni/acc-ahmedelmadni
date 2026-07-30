@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
+import { motion, useMotionValue, useTransform, type Variants } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
   Calculator,
@@ -27,33 +26,36 @@ type Item = {
   badgeEn?: string;
 };
 
+const typewriterParent: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.015, delayChildren: 0.15 } },
+};
+
+const typewriterChar: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.02 } },
+};
+
 /**
- * Typewriter text reveal: characters appear in sequence.
+ * Typewriter text reveal: characters appear in sequence. Inherits the
+ * hidden/visible state propagated from the card's own `variants` (see
+ * `cardVariants`) rather than tracking its own viewport intersection —
+ * per-character `whileInView` (one IntersectionObserver per glyph) never
+ * fired reliably once nested this deep in the tree.
  */
-function TypewriterText({ text, delay, reduce }: { text: string; delay: number; reduce: boolean }) {
+function TypewriterText({ text, reduce }: { text: string; reduce: boolean }) {
   return (
     <p className="mt-2 max-w-2xl text-[13px] leading-[1.75] text-white/55 sm:text-[14px]">
-      <span className="inline-flex flex-wrap">
+      <motion.span
+        variants={reduce ? undefined : typewriterParent}
+        className="inline-flex flex-wrap"
+      >
         {Array.from(text).map((char, i) => (
-          <motion.span
-            key={i}
-            initial={reduce ? { opacity: 1 } : { opacity: 0 }}
-            whileInView={reduce ? { opacity: 1 } : { opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={
-              reduce
-                ? { duration: 0 }
-                : {
-                    duration: 0.02,
-                    delay: delay + i * 0.015,
-                  }
-            }
-            className="inline"
-          >
+          <motion.span key={i} variants={reduce ? undefined : typewriterChar} className="inline">
             {char}
           </motion.span>
         ))}
-      </span>
+      </motion.span>
     </p>
   );
 }
@@ -130,6 +132,44 @@ const ITEMS: Item[] = [
 ];
 
 /**
+ * Parent-driven stagger for the cards column — proven pattern already used
+ * by the section header above it (parent triggers `whileInView` once, each
+ * child only declares `variants` and inherits the propagated hidden/visible
+ * state). Per-card `whileInView` + a nested `useScroll` target ref on each
+ * card was silently never firing in production (verified live: opacity
+ * stuck at 0 indefinitely, `onViewportEnter` never called), so entrance is
+ * now driven from one parent observer instead of eight independent ones.
+ */
+const cardsParent: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+
+const cardsParentStatic: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0 } },
+};
+
+function cardVariants(index: number): Variants {
+  const twistAngle = index % 2 === 0 ? -2 : 2;
+  return {
+    hidden: { opacity: 0, clipPath: "inset(0 0 100% 0)", rotate: twistAngle, y: 24 },
+    visible: {
+      opacity: 1,
+      clipPath: "inset(0 0 0% 0)",
+      rotate: 0,
+      y: 0,
+      transition: { duration: 0.8, ease: EASE.emphasis },
+    },
+  };
+}
+
+const cardVariantsStatic: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.3 } },
+};
+
+/**
  * Cinematic "Ready-to-use accounting tools" — Awwwards-style band replacing
  * the old featured/supporting grid. Recipe:
  *   • Full-width centered card column with compact spacing
@@ -197,7 +237,13 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
         </motion.div>
 
         {/* Cards column — compact, centered */}
-        <div className="mt-8 sm:mt-12 flex flex-col gap-2.5 sm:gap-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={m.reduce ? cardsParentStatic : cardsParent}
+          className="mt-8 sm:mt-12 flex flex-col gap-2.5 sm:gap-3"
+        >
           {ITEMS.map((item, i) => (
             <CinematicToolCard
               key={item.id}
@@ -208,7 +254,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
               reduce={m.reduce}
             />
           ))}
-        </div>
+        </motion.div>
 
         {/* View all button */}
         <motion.div
@@ -251,17 +297,6 @@ function CinematicToolCard({
 }) {
   const ar = lang === "ar";
   const Icon = item.icon;
-  const ref = useRef<HTMLAnchorElement>(null);
-
-  // Scroll-driven parallax: subtle lift as the card enters and passes viewport center.
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const y = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [40, 0, -20]), {
-    stiffness: 70,
-    damping: 22,
-  });
 
   // Magnetic pointer glow.
   const mx = useMotionValue(50);
@@ -279,48 +314,9 @@ function CinematicToolCard({
     my.set(((e.clientY - rect.top) / rect.height) * 100);
   };
 
-  // Twisted entrance: cards enter with slight rotation and rise.
-  const twistAngle = index % 2 === 0 ? -2 : 2;
-
   return (
-    <motion.div
-      initial={
-        reduce
-          ? { opacity: 0 }
-          : {
-              opacity: 0,
-              clipPath: "inset(0 0 100% 0)",
-              y: 50,
-              rotate: twistAngle,
-            }
-      }
-      whileInView={
-        reduce
-          ? { opacity: 1 }
-          : {
-              opacity: 1,
-              clipPath: "inset(0 0 0% 0)",
-              y: 0,
-              rotate: 0,
-            }
-      }
-      viewport={{ once: true, amount: 0.25 }}
-      transition={
-        reduce
-          ? { duration: 0.3 }
-          : {
-              duration: 0.8,
-              ease: EASE.emphasis,
-              delay: index * 0.08,
-              type: "spring",
-              stiffness: 60,
-              damping: 20,
-            }
-      }
-      style={{ y: reduce ? 0 : y }}
-    >
+    <motion.div variants={reduce ? cardVariantsStatic : cardVariants(index)}>
       <Link
-        ref={ref}
         to="/tools/$toolId"
         params={{ toolId: item.id }}
         onMouseEnter={playHover}
@@ -363,11 +359,7 @@ function CinematicToolCard({
                 </span>
               )}
             </div>
-            <TypewriterText
-              text={ar ? item.descAr : item.descEn}
-              delay={0.2 + index * 0.08}
-              reduce={reduce}
-            />
+            <TypewriterText text={ar ? item.descAr : item.descEn} reduce={reduce} />
           </div>
 
           {/* Arrow */}
