@@ -197,7 +197,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
         </motion.div>
 
         {/* Cards column — compact, centered */}
-        <div className="mt-14 flex flex-col gap-3 sm:gap-4">
+        <div className="mt-8 sm:mt-12 flex flex-col gap-2.5 sm:gap-3">
           {ITEMS.map((item, i) => (
             <CinematicToolCard
               key={item.id}
@@ -216,7 +216,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 flex justify-center"
+          className="mt-6 sm:mt-8 flex justify-center"
         >
           <Link
             to="/tools"
