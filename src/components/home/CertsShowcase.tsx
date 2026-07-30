@@ -13,24 +13,22 @@ import {
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
 import { useMotionSafe } from "@/lib/motion";
-import { supabase } from "@/integrations/supabase/client";
+import { supabasePublic } from "@/integrations/supabase/public-client";
 import { Marquee } from "./Marquee";
 
 /**
- * Rewrites a Supabase public-object URL into the on-the-fly image transform
- * endpoint (`/storage/v1/render/image/public/...`) so cards ship a smaller
- * resized+recompressed image instead of the original multi-MB upload.
- * Non-Supabase URLs are returned unchanged.
+ * Certificate images used to be routed through Supabase's on-the-fly image
+ * transform endpoint (`/storage/v1/render/image/public/...`) to shrink them.
+ * That endpoint is a paid add-on: where it isn't enabled it answers 400, so
+ * every card fired a failing request and then swapped back to the original
+ * URL — a race that shows up as certificates rendering on one browser but not
+ * another, depending on how each caches the failure.
+ *
+ * It also bought nothing: `prepareImageForUpload` in the admin panel already
+ * downscales every upload to ~1600px JPEG before it ever reaches storage, so
+ * the stored object *is* the web-sized image. Serving the public object URL
+ * directly removes the whole failure mode.
  */
-function transformCertUrl(url: string | null, width: number, quality = 70): string | null {
-  if (!url) return null;
-  const marker = "/storage/v1/object/public/";
-  const idx = url.indexOf(marker);
-  if (idx === -1) return url;
-  const base = url.slice(0, idx);
-  const path = url.slice(idx + marker.length);
-  return `${base}/storage/v1/render/image/public/${path}?width=${width}&quality=${quality}&resize=contain`;
-}
 
 type Cert = {
   id: string;
@@ -55,16 +53,11 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
       <div className="relative h-[280px] w-full overflow-hidden bg-gradient-to-br from-[#232019] to-[#1C1B19] sm:h-[320px]">
         {c.image_url ? (
           <img
-            src={transformCertUrl(c.image_url, 800, 72) ?? c.image_url}
+            src={c.image_url}
             alt={title}
             loading="eager"
             decoding="async"
-            onError={(e) => {
-              // The Supabase image-transform endpoint isn't available on every
-              // plan; fall back to the original (now public) object URL.
-              const img = e.currentTarget;
-              if (c.image_url && img.src !== c.image_url) img.src = c.image_url;
-            }}
+            referrerPolicy="no-referrer"
             className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : (
@@ -211,13 +204,10 @@ function Lightbox({
 
         {cert.image_url ? (
           <img
-            src={transformCertUrl(cert.image_url, 1400, 82) ?? cert.image_url}
+            src={cert.image_url}
             alt={title}
             onClick={(e) => e.stopPropagation()}
-            onError={(e) => {
-              const img = e.currentTarget;
-              if (cert.image_url && img.src !== cert.image_url) img.src = cert.image_url;
-            }}
+            referrerPolicy="no-referrer"
             style={{ transform: `scale(${zoom})` }}
             className="max-h-full max-w-full origin-center rounded-lg object-contain transition-transform"
           />
@@ -273,14 +263,16 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const m = useMotionSafe();
 
-  // Read published certifications directly via the browser Supabase client.
-  // RLS allows public read of published rows, and this avoids server-fn
-  // failures caused by service-role/JWT key format mismatches on some
-  // deployments (which previously made the section render empty).
-  const { data } = useQuery({
+  // Read published certifications anonymously (see `supabasePublic`): using
+  // the session-carrying client here meant that a browser holding an expired
+  // admin token got a 401 and silently dropped back to the hardcoded list,
+  // while a browser that had never signed in rendered the real rows — the
+  // classic "works in one browser, not the other" report. RLS already allows
+  // public read of published rows, so no session is needed to see them.
+  const { data, error } = useQuery({
     queryKey: ["public-certifications"],
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data, error } = await supabasePublic
         .from("certifications")
         .select(
           "id, title_ar, title_en, issuer_ar, issuer_en, issue_date, image_url, credential_url",
@@ -291,7 +283,14 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
       return (data ?? []) as Cert[];
     },
     staleTime: 5 * 60 * 1000,
+    retry: 2,
   });
+
+  useEffect(() => {
+    // Surface the failure instead of letting the placeholder list quietly
+    // stand in for it — that silence is what made this hard to diagnose.
+    if (error) console.error("[certifications] public read failed:", error);
+  }, [error]);
 
   const rows = (data ?? []) as Cert[];
   const fallback: Cert[] = t.certs.items.map((it, i) => ({

@@ -219,7 +219,10 @@ function StackedSoftwareCard({
                 {ar ? "نظام / برنامج" : "System / Software"}
               </p>
 
-              <h3 className="font-display mt-2 truncate text-[2.35rem] font-bold leading-[1.1] tracking-tight text-[#1C1B19] sm:text-[3rem]">
+              {/* `truncate` brings `overflow: hidden`, so the line box has to
+                  be tall enough to hold the glyphs or it shaves their tops —
+                  at 48px the ink measures 56px, so leading must clear ~1.17. */}
+              <h3 className="font-display mt-2 truncate text-[2.35rem] font-bold leading-[1.25] tracking-tight text-[#1C1B19] sm:text-[3rem]">
                 {label}
               </h3>
             </div>
@@ -315,7 +318,7 @@ function FeatureCard({
                   {activeCategory}
                 </p>
 
-                <h2 className="font-display mt-2 truncate text-[2.1rem] font-bold leading-[1.1] text-[#FCFBF9] sm:text-[2.6rem]">
+                <h2 className="font-display mt-2 truncate text-[2.1rem] font-bold leading-[1.25] text-[#FCFBF9] sm:text-[2.6rem]">
                   {activeName}
                 </h2>
               </div>
