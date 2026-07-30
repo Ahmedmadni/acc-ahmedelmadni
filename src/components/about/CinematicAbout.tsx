@@ -96,15 +96,25 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                   {lang === "ar" ? "نبذة عني" : "About Me"}
                 </div>
 
-                {/* Alexandria's heavy weights (600+) render this name's letter
-                    combinations with the strokes fused together at this size —
-                    confirmed by testing weight and letter-spacing in isolation.
-                    IBM Plex Sans Arabic (already the declared fallback in
-                    `--font-display`) stays crisp at the same weight, so it's
-                    used directly here instead of introducing a new font. */}
+                {/* Two separate causes were fixed here, both measured rather
+                    than guessed:
+
+                    1. Alexandria's heavy weights (600+) fuse this name's letter
+                       strokes together at display size, so the face is pinned to
+                       IBM Plex Sans Arabic (already the declared fallback in
+                       `--font-display`) at weight 700.
+                    2. `leading-[0.95]` made the line box *shorter than the
+                       glyphs*: at 96px the box measured 91px while the Arabic
+                       ink spans 112px. Because the gradient is painted with
+                       `background-clip: text`, every pixel outside that box is
+                       simply not painted — which sheared the tops and tails off
+                       the letters. Arabic needs the line box to be taller than
+                       the font size (tall أ/ل ascenders, deep ي/ن bowls), so the
+                       leading is now 1.3 — comfortably above the ~1.17 measured
+                       ink ratio. */}
                 <h1
                   id="about-hero-heading"
-                  className="mt-6 text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent"
+                  className="mt-6 text-5xl font-bold leading-[1.3] sm:text-6xl lg:text-7xl xl:text-8xl bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent"
                   style={{
                     fontFamily: '"IBM Plex Sans Arabic", Alexandria, system-ui, sans-serif',
                   }}
@@ -350,7 +360,10 @@ function StatBlock({ value, label, progress }: { value: string; label: string; p
       className="relative overflow-hidden rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-8"
     >
       <TrendingUp className="absolute -top-4 -end-4 size-24 text-[#A88765]/5" />
-      <div className="font-display text-5xl font-extrabold leading-none bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-6xl">
+      {/* `leading-none` put the box at exactly the font size (60px) while the
+          digits' ink measured 70px, and `bg-clip-text` paints nothing outside
+          the box — so the stat numbers lost 5px off the top and bottom. */}
+      <div className="font-display text-5xl font-extrabold leading-[1.2] bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-6xl">
         {value}
       </div>
       <div className="mt-3 text-sm font-semibold" style={{ color: "var(--fg-soft)" }}>
