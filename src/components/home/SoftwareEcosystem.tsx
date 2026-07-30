@@ -199,7 +199,7 @@ function StackedSoftwareCard({
                 cropped or stretched, and the padding stops wide wordmarks from
                 touching the edges. Sized to stay a step below the name so the
                 name remains the loudest thing in the card. */}
-            <div className="flex size-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-3.5 shadow-sm sm:size-32">
+            <div className="flex size-20 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-2.5 shadow-sm sm:size-28 sm:p-3.5 lg:size-32">
               {software.logo ? (
                 <img
                   src={software.logo}
@@ -208,7 +208,7 @@ function StackedSoftwareCard({
                   loading="lazy"
                 />
               ) : (
-                <span className="font-display text-4xl font-bold text-[#4A3023]">
+                <span className="font-display text-2xl font-bold text-[#4A3023] sm:text-4xl">
                   {software.mark}
                 </span>
               )}
@@ -221,8 +221,13 @@ function StackedSoftwareCard({
 
               {/* `truncate` brings `overflow: hidden`, so the line box has to
                   be tall enough to hold the glyphs or it shaves their tops —
-                  at 48px the ink measures 56px, so leading must clear ~1.17. */}
-              <h3 className="font-display mt-2 truncate text-[2.35rem] font-bold leading-[1.25] tracking-tight text-[#1C1B19] sm:text-[3rem]">
+                  at 48px the ink measures 56px, so leading must clear ~1.17.
+                  Font size steps down on mobile (and the logo tile shrinks
+                  above) so longer names like "Zoho Books" or "Power BI" fit
+                  within the available width instead of being clipped by
+                  `truncate` — verified live: those names were being cut off
+                  mid-word on a 390px viewport before this fix. */}
+              <h3 className="font-display mt-2 truncate text-[1.7rem] font-bold leading-[1.25] tracking-tight text-[#1C1B19] sm:text-[2.35rem] lg:text-[3rem]">
                 {label}
               </h3>
             </div>
@@ -303,11 +308,11 @@ function FeatureCard({
             <div className="flex items-center gap-4 sm:gap-5">
               {/* Same tile treatment as the stacked cards, one size down so the
                   two panels stay in proportion side by side. */}
-              <div className="flex size-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-3.5 sm:size-28">
+              <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-2.5 sm:size-24 sm:p-3.5 lg:size-28">
                 {activeSoftware.logo ? (
                   <img src={activeSoftware.logo} alt="" className="size-full object-contain" />
                 ) : (
-                  <span className="font-display text-4xl font-bold text-[#E9D9C3]">
+                  <span className="font-display text-2xl font-bold text-[#E9D9C3] sm:text-4xl">
                     {activeSoftware.mark}
                   </span>
                 )}
@@ -318,7 +323,7 @@ function FeatureCard({
                   {activeCategory}
                 </p>
 
-                <h2 className="font-display mt-2 truncate text-[2.1rem] font-bold leading-[1.25] text-[#FCFBF9] sm:text-[2.6rem]">
+                <h2 className="font-display mt-2 truncate text-[1.5rem] font-bold leading-[1.25] text-[#FCFBF9] sm:text-[2.1rem] lg:text-[2.6rem]">
                   {activeName}
                 </h2>
               </div>
