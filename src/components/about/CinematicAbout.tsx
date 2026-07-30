@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView, useScroll, useTransform, useSpring } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
   Sparkles,
@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
+import { useMotionSafe } from "@/lib/motion";
 import profileImg from "@/assets/profile.webp";
 
 /**
@@ -31,14 +32,32 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
   const heroRef = useRef<HTMLDivElement>(null);
 
+  /* The pinned-parallax choreography only exists at `lg` and up (see the
+     hero section below). Tracking that here too keeps the scroll-driven
+     transforms from running against a layout they were never designed for
+     on phones. */
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const apply = () => setIsDesktop(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
 
   const yImg = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
-  // Image starts big on load, shrinks back to its natural size as user scrolls
-  const scaleImg = useTransform(scrollYProgress, [0, 0.6], [1.35, 1]);
+  /* Image starts big on load and shrinks back as the user scrolls. That 1.35×
+     opening zoom is a desktop-only flourish: on a phone the portrait is
+     already near-full-width, so zooming it 35% pushed the subject's head up
+     out of the frame and it read as a beheaded photo on first paint. Mobile
+     therefore starts at 1× — the crop is then governed purely by the
+     container's aspect ratio and `object-position`. */
+  const scaleImg = useTransform(scrollYProgress, [0, 0.6], isDesktop ? [1.35, 1] : [1, 1]);
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const rotateBadge = useTransform(scrollYProgress, [0, 1], [0, 90]);
@@ -49,8 +68,15 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
   return (
     <>
       {/* ============ STICKY PARALLAX HERO ============ */}
-      <section ref={heroRef} className="relative h-[180vh]" aria-labelledby="about-hero-heading">
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      {/* The sticky/pinned treatment is desktop-only. On a phone the whole
+          hero — portrait, name, bio, CTAs and the meta row — cannot fit
+          inside one `h-screen` box, and because that box also clips
+          (`overflow-hidden`) the CV / "طلب خدمة" buttons were being cut off
+          below the fold entirely. Below `lg` the section is now plain
+          document flow at its natural height, so every element is reachable;
+          `lg:` restores the original 180vh pinned parallax unchanged. */}
+      <section ref={heroRef} className="relative lg:h-[180vh]" aria-labelledby="about-hero-heading">
+        <div className="relative flex items-center overflow-hidden pb-14 pt-24 sm:pt-28 lg:sticky lg:top-0 lg:h-screen lg:py-0">
           {/* Backdrop layers */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#151412]/40 to-[#151412]" />
           <motion.div
@@ -195,6 +221,11 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                     style={{ scale: scaleImg }}
                     className="relative overflow-hidden rounded-[2.5rem] border border-[#A88765]/30 bg-[#1C1B19] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] aspect-[3/4] sm:aspect-[4/5]"
                   >
+                    {/* `object-top` anchors the crop to the top of the frame,
+                        which is what keeps the head in shot when the container
+                        is narrower than the source. Paired with the mobile
+                        aspect ratio below and no opening zoom, the full face is
+                        visible on first paint at every width. */}
                     <img
                       src={profileImg}
                       alt="Ahmed Elmadani"
@@ -203,7 +234,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                       loading="eager"
                       fetchPriority="high"
                       decoding="sync"
-                      className="absolute inset-0 h-full w-full object-cover object-center sm:object-top"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#151412] via-transparent to-transparent" />
 
@@ -263,9 +294,12 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
       {/* (Second-bio quote intentionally removed — timeline experience below tells the story) */}
 
       {/* ============ BIG-NUMBER STATS ============ */}
-      <section className="relative py-16">
+      <section className="relative py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-16">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Two-up from the smallest width: these were full-width stacked
+              blocks on mobile, so four of them ran nearly a full screen tall
+              on their own. */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
             {t.stats.map((s, i) => (
               <StatBlock key={i} value={s.v} label={s[lang]} progress={i / t.stats.length} />
             ))}
@@ -321,19 +355,70 @@ function StatBlock({ value, label, progress }: { value: string; label: string; p
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, delay: progress * 0.1 }}
-      className="relative overflow-hidden rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-8"
+      className="relative overflow-hidden rounded-2xl border border-[#A88765]/25 bg-[#1C1B19] p-4 sm:rounded-3xl sm:p-6 lg:p-7"
     >
-      <TrendingUp className="absolute -top-4 -end-4 size-24 text-[#A88765]/5" />
+      <TrendingUp className="absolute -top-3 -end-3 size-16 text-[#A88765]/5 sm:size-20" />
       {/* `leading-none` put the box at exactly the font size (60px) while the
           digits' ink measured 70px, and `bg-clip-text` paints nothing outside
           the box — so the stat numbers lost 5px off the top and bottom. */}
-      <div className="font-display text-3xl font-extrabold leading-[1.2] bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-4xl lg:text-5xl xl:text-6xl">
-        {value}
-      </div>
-      <div className="mt-3 text-sm font-semibold" style={{ color: "var(--fg-soft)" }}>
+      <CountUp
+        value={value}
+        className="font-display block text-2xl font-extrabold leading-[1.2] bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-4xl lg:text-5xl"
+      />
+      <div
+        className="mt-1.5 text-xs font-semibold leading-snug sm:mt-3 sm:text-sm"
+        style={{ color: "var(--fg-soft)" }}
+      >
         {label}
       </div>
     </motion.div>
+  );
+}
+
+/**
+ * Counts a real figure ("5+", "13", "100%") up from zero once it scrolls into
+ * view. Mirrors the homepage's `StatCounter` so the same number behaves the
+ * same way on both pages; it only ever animates toward the value it was
+ * given, never a rounded or invented one, and resolves instantly under
+ * `prefers-reduced-motion`.
+ */
+function CountUp({ value, className }: { value: string; className?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, amount: 0.2, margin: "0px 0px -10% 0px" });
+  const reduce = useMotionSafe().reduce;
+  const match = value.match(/\d+/);
+  const target = match ? parseInt(match[0], 10) : 0;
+  const prefix = match ? value.slice(0, match.index) : "";
+  const suffix = match ? value.slice((match.index ?? 0) + match[0].length) : "";
+  const [n, setN] = useState(0);
+
+  useEffect(() => {
+    if (!target) return;
+    if (reduce) {
+      setN(target);
+      return;
+    }
+    if (!inView) return;
+    let raf = 0;
+    const start = performance.now();
+    const dur = 1200;
+    const step = (now: number) => {
+      const p = Math.min(1, (now - start) / dur);
+      setN(Math.round(target * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [inView, target, reduce]);
+
+  return (
+    <span ref={ref} className={className}>
+      {/* Isolate the figure as LTR so "5+" / "100%" keep their sign on the
+          correct side inside the RTL layout (otherwise it renders "+5"). */}
+      <span dir="ltr" style={{ unicodeBidi: "isolate" }}>
+        {target ? `${prefix}${n}${suffix}` : value}
+      </span>
+    </span>
   );
 }
 

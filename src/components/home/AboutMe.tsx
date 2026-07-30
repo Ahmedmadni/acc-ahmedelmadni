@@ -207,16 +207,20 @@ export function AboutMe({ lang }: { lang: Lang }) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
-              className="mt-10 grid grid-cols-2 gap-6 border-t border-[#E3DED7] pt-8 sm:grid-cols-4"
+              className="mt-8 grid grid-cols-2 gap-4 border-t border-[#E3DED7] pt-6 sm:mt-10 sm:gap-6 sm:pt-8 lg:grid-cols-4"
             >
               {[dominant, ...supporting].map((s, i) => (
                 <motion.div key={s.en} variants={statVariants(m.reduce, i * 0.08)}>
+                  {/* `leading-none` sets the line box to exactly the font size,
+                      which shaves the digits' ink (measured ~1.17× the size on
+                      this face) — the same clipping already fixed on the About
+                      page's figures. */}
                   <StatCounter
                     value={s.v}
                     reduce={m.reduce}
-                    className="font-display block text-[2rem] font-bold leading-none tabular-nums text-[#76543F] sm:text-[2.4rem]"
+                    className="font-display block text-[1.6rem] font-bold leading-[1.2] tabular-nums text-[#76543F] sm:text-[2rem] lg:text-[2.2rem]"
                   />
-                  <span className="mt-2 block text-[12px] leading-snug text-[#5c564e] sm:text-[13px]">
+                  <span className="mt-1.5 block text-[11.5px] leading-snug text-[#5c564e] sm:mt-2 sm:text-[12.5px]">
                     {s[lang]}
                   </span>
                 </motion.div>
