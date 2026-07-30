@@ -49,11 +49,11 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
       />
 
-      <div className="relative mx-auto min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12">
-        <div className="sticky top-0 flex min-h-screen items-center py-16 sm:py-20 lg:py-24">
-          <div className="grid w-full items-center gap-10 lg:grid-cols-12 lg:gap-16">
+      <div className="relative mx-auto min-h-[280vh] sm:min-h-[380vh] lg:min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12">
+        <div className="sticky top-0 flex min-h-screen items-center py-12 sm:py-16 lg:py-24">
+          <div className="grid w-full items-center gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-16">
             {/* LEFT — STACKED SOFTWARE CARDS */}
-            <div className="relative order-2 h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
+            <div className="relative order-2 h-[22rem] sm:h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
               {SOFTWARE_ECOSYSTEM.map((software, index) => (
                 <StackedSoftwareCard
                   key={software.id}
@@ -173,7 +173,7 @@ function StackedSoftwareCard({
       }}
       className="absolute inset-0 flex items-center justify-center"
     >
-      <div className="group relative flex h-[25rem] w-[90%] max-w-[40rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-[#E3DDD5] bg-[#FCFBF9] p-6 shadow-[0_30px_80px_-40px_rgba(74,48,35,0.55)] transition-shadow duration-500 hover:shadow-[0_40px_100px_-40px_rgba(74,48,35,0.7)] sm:h-[30rem] sm:w-[86%] sm:p-9 lg:h-[34rem]">
+      <div className="group relative flex h-[22rem] w-[90%] max-w-[40rem] flex-col justify-between overflow-hidden rounded-[1.5rem] border border-[#E3DDD5] bg-[#FCFBF9] p-5 shadow-[0_30px_80px_-40px_rgba(74,48,35,0.55)] transition-shadow duration-500 hover:shadow-[0_40px_100px_-40px_rgba(74,48,35,0.7)] sm:h-[28rem] sm:w-[86%] sm:rounded-[2rem] sm:p-8 lg:h-[34rem] lg:p-9">
         {/* Background index */}
         <span
           aria-hidden
@@ -270,7 +270,7 @@ function FeatureCard({
   return (
     <motion.div
       layout
-      className="leather-grain relative mx-auto min-h-[25rem] w-full max-w-[31rem] overflow-hidden rounded-[2rem] bg-[#4A3023] p-7 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[30rem] sm:p-9 lg:min-h-[34rem]"
+      className="leather-grain relative mx-auto min-h-[22rem] w-full max-w-[31rem] overflow-hidden rounded-[1.5rem] bg-[#4A3023] p-5 shadow-[0_35px_90px_-35px_rgba(28,27,25,0.65)] sm:min-h-[28rem] sm:rounded-[2rem] sm:p-8 lg:min-h-[34rem] lg:p-9"
     >
       <span
         aria-hidden
