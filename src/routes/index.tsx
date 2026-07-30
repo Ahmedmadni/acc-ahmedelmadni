@@ -11,6 +11,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
+import type { Transition, Variants } from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -172,14 +173,25 @@ const SOCIALS: ReadonlyArray<{
   color: string;
   label: string;
   mascot: string;
+  /** Shown on the featured (`"lg"`) card only — the actual number/address,
+   *  always LTR since it's a phone number or an email address. */
+  value?: string;
 }> = [
-  { href: "tel:+966560409811", Icon: Phone, color: "#34d399", label: "Phone", mascot: mascotPhone },
+  {
+    href: "tel:+966560409811",
+    Icon: Phone,
+    color: "#34d399",
+    label: "Phone",
+    mascot: mascotPhone,
+    value: "+966 56 040 9811",
+  },
   {
     href: "https://wa.me/966560409811",
     Icon: MessageCircle,
     color: "#25D366",
     label: "WhatsApp",
     mascot: mascotWhatsapp,
+    value: "+966 56 040 9811",
   },
   {
     href: "mailto:elmadnim@gmail.com",
@@ -187,6 +199,7 @@ const SOCIALS: ReadonlyArray<{
     color: "#ef4444",
     label: "Email",
     mascot: mascotEmail,
+    value: "elmadnim@gmail.com",
   },
   {
     href: "https://www.linkedin.com/in/احمد-المدنى-33022830b",
@@ -1173,9 +1186,7 @@ function TimelineItem({
         animate={inView ? { scaleX: 1 } : {}}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
         className={`pointer-events-none absolute top-1/2 hidden h-[3px] rounded-full bg-gradient-to-r from-[#A88765] to-[#A88765]/0 shadow-[0_0_10px_rgba(168,135,101,0.6)] md:block ${
-          left
-            ? "left-[calc(50%-56px)] w-14 origin-right rotate-180"
-            : "left-1/2 w-14 origin-left"
+          left ? "left-[calc(50%-56px)] w-14 origin-right rotate-180" : "left-1/2 w-14 origin-left"
         }`}
       />
       {/* Horizontal branch connector — mobile: from right spine into card. */}
@@ -1699,30 +1710,56 @@ function Testimonials({ lang }: { lang: Lang }) {
 }
 
 /* ============= CONTACT ============= */
+
+/** Spring used for every entrance/hover/tap in the mascot grid — one physics
+ *  recipe shared by both card sizes so the row reads as a single system
+ *  rather than two differently-tuned animations sitting next to each other. */
+const mascotSpring: Transition = { type: "spring", stiffness: 260, damping: 20, mass: 0.7 };
+
+const mascotCardVariants: Variants = {
+  hidden: { opacity: 0, y: 18, scale: 0.9 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: mascotSpring },
+};
+// `reduce` can flip true a tick after first paint (once the media-query
+// check resolves), which briefly renders with `mascotCardVariants` first.
+// If this static variant left `y`/`scale` unmentioned, Framer Motion would
+// leave them wherever that first render put them (its "hidden" pose) rather
+// than resetting them — so they're pinned to identity here explicitly.
+const mascotCardVariantsStatic: Variants = {
+  hidden: { opacity: 0, y: 0, scale: 1 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2 } },
+};
+
 /**
- * A single Contact mascot card (Phase M5/P2). Kept as its own component so
- * each card gets its own pointer-follow motion values — the card itself
- * keeps its existing whileHover lift, the mascot image keeps its existing
- * bob loop, and a small spring-smoothed x/y offset (fine-pointer only, off
- * under reduced motion) is layered on a dedicated wrapper around the image
- * so it never fights the bob animation's own `y` transform.
+ * A single Contact mascot card, in one of two sizes:
+ *  - `"lg"` — the three direct channels (phone / WhatsApp / email): a
+ *    featured tile with the mascot, the channel name, and the actual
+ *    number/address, so it reads as its own small CTA rather than an icon.
+ *  - `"sm"` — the social platforms: a compact bubble, icon-first, with the
+ *    label appearing on hover/focus instead of taking up permanent space.
+ * One component covers both so the pointer-follow, bob loop, and entrance
+ * spring stay a single implementation instead of being duplicated per size.
  */
 function ContactMascotCard({
   s,
   i,
+  size,
   reduce,
   parallaxActive,
 }: {
   s: (typeof SOCIALS)[number];
   i: number;
+  size: "lg" | "sm";
   reduce: boolean;
   parallaxActive: boolean;
 }) {
+  const isLg = size === "lg";
   const rawX = useMotionValue(0);
   const rawY = useMotionValue(0);
   const springOpts = { stiffness: 300, damping: 22, mass: 0.4 };
-  const mascotX = useSpring(useTransform(rawX, [-1, 1], [-5, 5]), springOpts);
-  const mascotY = useSpring(useTransform(rawY, [-1, 1], [-5, 5]), springOpts);
+  const followRange = isLg ? 6 : 4;
+  const mascotX = useSpring(useTransform(rawX, [-1, 1], [-followRange, followRange]), springOpts);
+  const mascotY = useSpring(useTransform(rawY, [-1, 1], [-followRange, followRange]), springOpts);
 
   const onPointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -1733,6 +1770,8 @@ function ContactMascotCard({
     rawX.set(0);
     rawY.set(0);
   };
+
+  const mascotSize = isLg ? 84 : 52;
 
   return (
     <motion.a
@@ -1745,37 +1784,72 @@ function ContactMascotCard({
       onClick={playClick}
       onPointerMove={parallaxActive ? onPointerMove : undefined}
       onPointerLeave={parallaxActive ? onPointerLeave : undefined}
-      whileHover={{ y: -6, scale: 1.04 }}
-      className="group relative flex flex-col items-center justify-end overflow-visible rounded-2xl border border-[#A88765]/25 bg-white/[0.04] text-center backdrop-blur-sm transition-colors hover:border-[#A88765]/60"
-      style={{ height: 130, padding: "0 6px 8px" }}
+      variants={reduce ? mascotCardVariantsStatic : mascotCardVariants}
+      whileHover={reduce ? undefined : isLg ? { y: -6, scale: 1.02 } : { y: -4, scale: 1.08 }}
+      whileTap={reduce ? undefined : { scale: 0.96 }}
+      transition={mascotSpring}
+      className={
+        isLg
+          ? "group relative flex items-center gap-4 overflow-hidden rounded-[1.75rem] border border-[#A88765]/25 bg-white/[0.045] p-4 text-start backdrop-blur-sm transition-colors hover:border-[#A88765]/60 sm:p-5"
+          : "group relative flex flex-col items-center justify-center gap-1.5 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] py-3 backdrop-blur-sm transition-colors hover:border-[#A88765]/50"
+      }
     >
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-x-4 top-4 h-14 rounded-full opacity-50 blur-2xl transition-opacity duration-500 group-hover:opacity-80"
+        className={
+          isLg
+            ? "pointer-events-none absolute -end-6 -top-6 size-24 rounded-full opacity-40 blur-2xl transition-opacity duration-500 group-hover:opacity-70"
+            : "pointer-events-none absolute inset-x-3 top-2 h-8 rounded-full opacity-40 blur-xl transition-opacity duration-500 group-hover:opacity-70"
+        }
         style={{ background: s.color }}
       />
-      <motion.div style={parallaxActive ? { x: mascotX, y: mascotY } : undefined}>
+      <motion.div
+        className="relative shrink-0"
+        style={parallaxActive ? { x: mascotX, y: mascotY } : undefined}
+      >
         <motion.img
           src={s.mascot}
           alt=""
-          width={100}
-          height={100}
+          width={mascotSize}
+          height={mascotSize}
           loading="lazy"
           decoding="async"
           className="relative w-auto object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.35)]"
-          style={{ height: 100, width: 100 }}
+          style={{ height: mascotSize, width: mascotSize }}
           animate={reduce ? undefined : { y: [0, -5, 0] }}
           transition={{ duration: 3 + i * 0.3, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <span className="relative text-[11px] font-bold leading-tight text-[#FCFBF9]/90">
-        {s.label}
-      </span>
+      {isLg ? (
+        <span className="relative min-w-0 flex-1">
+          <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-[#d8bd9c]">
+            {s.label}
+          </span>
+          <span className="mt-1 block truncate text-[13px] font-semibold text-[#FCFBF9]" dir="ltr">
+            {s.value}
+          </span>
+        </span>
+      ) : (
+        <span className="relative text-[10px] font-bold leading-tight text-[#FCFBF9]/80 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
+          {s.label}
+        </span>
+      )}
     </motion.a>
   );
 }
 
-export function Contact({ lang }: { lang: Lang }) {
+export function Contact({
+  lang,
+  embedded = false,
+}: {
+  lang: Lang;
+  /** When true, skip the outer `<section>`/background — used by `/contact`,
+   *  which wraps this together with the request form in one shared section
+   *  so the two read as a single block instead of two stacked ones. The
+   *  homepage keeps rendering this standalone (`embedded` defaults to
+   *  false), so its own `id="contact"` anchor and background are untouched. */
+  embedded?: boolean;
+}) {
   const ar = lang === "ar";
   const m = useMotionSafe();
 
@@ -1790,79 +1864,89 @@ export function Contact({ lang }: { lang: Lang }) {
     return () => mq.removeEventListener("change", onChange);
   }, []);
   const mascotParallaxActive = pointerCapable && !m.reduce;
+  const primarySocials = SOCIALS.slice(0, 3);
+  const secondarySocials = SOCIALS.slice(3);
+
+  const body = (
+    <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        variants={m.staggerParent}
+        className="max-w-3xl"
+      >
+        <motion.p
+          variants={m.staggerChild}
+          className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#d8bd9c]"
+        >
+          {ar ? "تواصل" : "Contact"}
+        </motion.p>
+        <motion.h2
+          variants={m.staggerChild}
+          className="font-display mt-3 text-[2rem] font-bold leading-[1.3] text-[#FCFBF9] sm:text-[2.6rem] lg:text-[3.1rem]"
+        >
+          {t.contact.title[lang]}
+        </motion.h2>
+        <motion.p
+          variants={m.staggerChild}
+          className="mt-4 max-w-xl text-[15px] leading-[1.95] text-white/70 sm:text-[16px]"
+        >
+          {t.contact.sub[lang]}
+        </motion.p>
+      </motion.div>
+
+      {/* Channels — direct lines first (their own featured row, name + actual
+          number/address), the social platforms after as a lighter secondary
+          row. Nested stagger: this block and each row both carry
+          `staggerParent`, so the cards fan in card-by-card rather than as
+          one block, without the two rows needing separate scroll triggers. */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={m.staggerParent}
+        className="mt-10"
+      >
+        <motion.div variants={m.staggerParent} className="grid gap-3 sm:grid-cols-3">
+          {primarySocials.map((s, i) => (
+            <ContactMascotCard
+              key={s.label}
+              s={s}
+              i={i}
+              size="lg"
+              reduce={m.reduce}
+              parallaxActive={mascotParallaxActive}
+            />
+          ))}
+        </motion.div>
+        <motion.div
+          variants={m.staggerParent}
+          className="mt-3 grid grid-cols-4 gap-2.5 sm:w-fit sm:grid-cols-4"
+        >
+          {secondarySocials.map((s, i) => (
+            <ContactMascotCard
+              key={s.label}
+              s={s}
+              i={i + primarySocials.length}
+              size="sm"
+              reduce={m.reduce}
+              parallaxActive={mascotParallaxActive}
+            />
+          ))}
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+
+  if (embedded) return body;
 
   return (
     <section
       id="contact"
       className="leather-grain relative overflow-hidden bg-[#4A3023] py-20 sm:py-24 lg:py-28"
     >
-      <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={m.staggerParent}
-          className="max-w-3xl"
-        >
-          <motion.p
-            variants={m.staggerChild}
-            className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#d8bd9c]"
-          >
-            {ar ? "تواصل" : "Contact"}
-          </motion.p>
-          <motion.h2
-            variants={m.staggerChild}
-            className="font-display mt-3 text-[2rem] font-bold leading-[1.3] text-[#FCFBF9] sm:text-[2.6rem] lg:text-[3.1rem]"
-          >
-            {t.contact.title[lang]}
-          </motion.h2>
-          <motion.p
-            variants={m.staggerChild}
-            className="mt-4 max-w-xl text-[15px] leading-[1.95] text-white/70 sm:text-[16px]"
-          >
-            {t.contact.sub[lang]}
-          </motion.p>
-
-          {/* Primary + secondary contact actions */}
-          <motion.div variants={m.staggerChild} className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="tel:+966560409811"
-              onMouseEnter={playHover}
-              onClick={playClick}
-              className="inline-flex h-[54px] items-center gap-3 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-8 text-[15px] font-bold text-[#1C1B19] shadow-[0_18px_40px_-16px_rgba(74,48,35,0.7)] transition-transform hover:scale-[1.03]"
-            >
-              <Phone className="size-4" />
-              <span dir="ltr" className="tracking-wide">
-                +966 56 040 9811
-              </span>
-            </a>
-            <a
-              href="mailto:elmadnim@gmail.com"
-              onMouseEnter={playHover}
-              className="inline-flex h-[54px] items-center gap-2 rounded-full border border-[#FCFBF9]/25 bg-white/[0.04] px-6 text-[14px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:text-[#e9d9c3]"
-            >
-              <Mail className="size-4" />
-              elmadnim@gmail.com
-            </a>
-          </motion.div>
-
-          {/* Social channels */}
-          <motion.div
-            variants={m.staggerChild}
-            className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-7"
-          >
-            {SOCIALS.map((s, i) => (
-              <ContactMascotCard
-                key={s.label}
-                s={s}
-                i={i}
-                reduce={m.reduce}
-                parallaxActive={mascotParallaxActive}
-              />
-            ))}
-          </motion.div>
-        </motion.div>
-      </div>
+      {body}
     </section>
   );
 }
