@@ -2054,7 +2054,7 @@ export function Footer({ lang }: { lang: Lang }) {
 
       <div className="relative mx-auto w-full max-w-[84rem] px-4 sm:px-8 lg:px-12">
         {/* Main footer */}
-        <div className="grid gap-10 py-12 sm:gap-12 sm:py-16 lg:grid-cols-[1.45fr_0.75fr_0.95fr_0.95fr] lg:gap-10 xl:gap-14">
+        <div className="grid gap-10 py-12 sm:gap-12 sm:py-16 lg:grid-cols-[1.6fr_1fr_1fr] lg:gap-12 xl:gap-16">
           {/* Brand and introduction */}
           <div className="max-w-md">
             <div className="flex items-center gap-3">
@@ -2106,81 +2106,34 @@ export function Footer({ lang }: { lang: Lang }) {
                 <ArrowUpRight className="size-3 opacity-50 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
               </RouterLink>
             </div>
-
-            {/* Social links */}
-            <div className="mt-7 flex flex-wrap items-center gap-2.5">
-              {socialLinks.map((social) => {
-                const Icon = social.Icon;
-
-                const isExternal =
-                  social.href.startsWith("http://") || social.href.startsWith("https://");
-
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target={isExternal ? "_blank" : undefined}
-                    rel={isExternal ? "noreferrer" : undefined}
-                    aria-label={social.label}
-                    title={social.label}
-                    className="group relative flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:text-[#E1C5A4]"
-                  >
-                    {/* The channel's own colour, but only as a whisper on hover —
-                        the resting state stays bronze/white so the row reads as
-                        one calm set rather than a strip of brand badges. */}
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.16]"
-                      style={{ backgroundColor: social.color }}
-                    />
-                    <Icon className="relative z-10 size-[17px] transition-transform duration-300 group-hover:scale-110" />
-                  </a>
-                );
-              })}
-            </div>
           </div>
 
-          {/* Link columns — 2-up on mobile so the footer doesn't run long
-              vertically; `lg:contents` drops this wrapper from the box tree
-              at desktop so its three children fall back into the parent's
-              4-column grid exactly as before. */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:contents">
-            {/* Main navigation */}
+          {/* Two link columns. The nav groups that used to occupy three
+              separate columns are merged into one ("التنقل"), leaving the
+              second column free to carry resources plus the whole contact
+              block — phone, email and the social icons, which moved down
+              from the brand block above so every way to reach out lives in
+              one place instead of being split across the footer. */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:contents">
+            {/* Navigation — main pages and professional pages in one list */}
             <div>
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-7 bg-[#A88765]/60" />
 
                 <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
-                  {isAr ? "الصفحات الرئيسية" : "Main Pages"}
+                  {isAr ? "التنقل" : "Navigate"}
                 </div>
               </div>
 
               <ul className="flex flex-col gap-2.5">
-                {mainLinks.map((link) => (
-                  <li key={link.to}>{renderLink(link)}</li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Professional links */}
-            <div>
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-7 bg-[#A88765]/60" />
-
-                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
-                  {isAr ? "المسار المهني" : "Professional"}
-                </div>
-              </div>
-
-              <ul className="flex flex-col gap-2.5">
-                {professionalLinks.map((link) => (
+                {[...mainLinks, ...professionalLinks].map((link) => (
                   <li key={link.to}>{renderLink(link)}</li>
                 ))}
               </ul>
             </div>
 
             {/* Resources and contact */}
-            <div className="col-span-2 sm:col-span-1">
+            <div>
               <div className="mb-5 flex items-center gap-3">
                 <span className="h-px w-7 bg-[#A88765]/60" />
 
@@ -2200,11 +2153,17 @@ export function Footer({ lang }: { lang: Lang }) {
                   href="tel:+966560409811"
                   className="group flex items-center gap-3 text-[13px] text-[#D8BD9C] transition-colors duration-300 hover:text-[#FCFBF9]"
                 >
-                  <span className="flex size-8 items-center justify-center rounded-full border border-[#A88765]/20 bg-[#A88765]/8">
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-[#A88765]/20 bg-[#A88765]/8">
                     <Phone className="size-3.5" />
                   </span>
 
-                  <span dir="ltr" className="tracking-wide">
+                  {/* `whitespace-nowrap` keeps the number on one line: the
+                      contact column is roughly half the viewport on mobile,
+                      which was enough to break "+966 56 040 9811" mid-number. */}
+                  <span
+                    dir="ltr"
+                    className="whitespace-nowrap text-[12px] tracking-wide sm:text-[13px]"
+                  >
                     +966 56 040 9811
                   </span>
                 </a>
@@ -2215,6 +2174,39 @@ export function Footer({ lang }: { lang: Lang }) {
                 >
                   elmadnim@gmail.com
                 </a>
+
+                {/* Social channels */}
+                <div className="mt-5 flex flex-wrap items-center gap-2">
+                  {socialLinks.map((social) => {
+                    const Icon = social.Icon;
+
+                    const isExternal =
+                      social.href.startsWith("http://") || social.href.startsWith("https://");
+
+                    return (
+                      <a
+                        key={social.label}
+                        href={social.href}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noreferrer" : undefined}
+                        aria-label={social.label}
+                        title={social.label}
+                        className="group relative flex size-9 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/[0.025] text-white/50 transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/55 hover:text-[#E1C5A4]"
+                      >
+                        {/* The channel's own colour, but only as a whisper on
+                            hover — the resting state stays bronze/white so the
+                            row reads as one calm set rather than a strip of
+                            brand badges. */}
+                        <span
+                          aria-hidden
+                          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.16]"
+                          style={{ backgroundColor: social.color }}
+                        />
+                        <Icon className="relative z-10 size-[15px] transition-transform duration-300 group-hover:scale-110" />
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

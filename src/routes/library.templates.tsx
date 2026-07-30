@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Download, BookOpen, ChevronDown, MessageCircle, FolderOpen, Search } from "lucide-react";
 import { useLibLang } from "./library";
 import type { Lang } from "@/lib/i18n";
-import { supabase } from "@/integrations/supabase/client";
+import { supabasePublic } from "@/integrations/supabase/public-client";
 import type { Database } from "@/integrations/supabase/types";
 
 type AccountingTemplateRow = Database["public"]["Tables"]["accounting_templates"]["Row"];
@@ -148,10 +148,10 @@ function TemplatesPage() {
   const [q, setQ] = useState("");
   const isAR = lang === "ar";
 
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ["public-accounting-templates"],
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data, error } = await supabasePublic
         .from("accounting_templates")
         .select("*")
         .eq("is_published", true)
@@ -238,18 +238,47 @@ function TemplatesPage() {
       </div>
 
       {isLoading && (
-        <p className="mt-12 text-center text-sm text-[#D8D1C8]">
-          {isAR ? "جارٍ التحميل..." : "Loading..."}
-        </p>
+        <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div
+              key={i}
+              className="h-64 animate-pulse motion-reduce:animate-none rounded-2xl border border-[#A88765]/15 bg-[#24211E]"
+            />
+          ))}
+        </div>
       )}
 
-      <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((t) => (
-          <TemplateCard key={t.id} t={t} lang={lang} />
-        ))}
-      </div>
+      {/* A failed fetch used to fall through to "no matching templates",
+          which reads as "there are none" rather than "this didn't load" and
+          leaves no way to recover without a full page reload. */}
+      {!isLoading && isError && (
+        <div className="mx-auto mt-10 max-w-md rounded-2xl border border-[#A88765]/25 bg-[#24211E] p-8 text-center">
+          <FolderOpen className="mx-auto size-9 text-[#c9a986]/70" />
+          <h3 className="mt-4 font-display text-base font-extrabold text-[#c9a986]">
+            {isAR ? "تعذّر تحميل النماذج" : "Couldn't load templates"}
+          </h3>
+          <p className="mt-2 text-sm text-[#D8D1C8]">
+            {isAR ? "تحقّق من الاتصال ثم أعد المحاولة." : "Check your connection and try again."}
+          </p>
+          <button
+            type="button"
+            onClick={() => refetch()}
+            className="mt-4 rounded-full border border-[#A88765]/40 px-4 py-2 text-xs font-bold text-[#c9a986] transition-colors hover:bg-[#A88765]/10"
+          >
+            {isAR ? "إعادة المحاولة" : "Retry"}
+          </button>
+        </div>
+      )}
 
-      {!isLoading && filtered.length === 0 && (
+      {!isLoading && !isError && (
+        <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((t) => (
+            <TemplateCard key={t.id} t={t} lang={lang} />
+          ))}
+        </div>
+      )}
+
+      {!isLoading && !isError && filtered.length === 0 && (
         <p className="mt-12 text-center text-sm text-[#D8D1C8]">
           {isAR ? "لا توجد نماذج مطابقة." : "No matching templates."}
         </p>

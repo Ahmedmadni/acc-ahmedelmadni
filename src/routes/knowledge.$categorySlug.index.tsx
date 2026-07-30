@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { Clock, ArrowLeft, ChevronLeft, GraduationCap, BookOpen } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { supabasePublic } from "@/integrations/supabase/public-client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
 import { t } from "@/lib/i18n";
@@ -70,7 +70,7 @@ function CategoryPage() {
   const cat = useQuery({
     queryKey: ["kb-cat", categorySlug],
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data, error } = await supabasePublic
         .from("kb_categories")
         .select("*")
         .eq("slug", categorySlug)
@@ -84,7 +84,7 @@ function CategoryPage() {
     queryKey: ["kb-cat-articles", cat.data?.id],
     enabled: !!cat.data?.id,
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data, error } = await supabasePublic
         .from("kb_articles")
         .select("id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at")
         .eq("category_id", cat.data!.id)

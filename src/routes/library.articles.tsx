@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import { FileText, ExternalLink } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { supabasePublic } from "@/integrations/supabase/public-client";
 import { useLibLang } from "./library";
 
 export const Route = createFileRoute("/library/articles")({
@@ -18,12 +17,11 @@ export const Route = createFileRoute("/library/articles")({
 
 function ArticlesPage() {
   const lang = useLibLang();
-  const [timedOut, setTimedOut] = useState(false);
 
   const articles = useQuery({
     queryKey: ["library-articles"],
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data, error } = await supabasePublic
         .from("kb_articles")
         .select(
           "id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at,category_id",
@@ -37,19 +35,20 @@ function ArticlesPage() {
   const cats = useQuery({
     queryKey: ["kb-cats-slim"],
     queryFn: async () => {
-      const { data, error } = await supabase.from("kb_categories").select("id,slug,name_ar");
+      const { data, error } = await supabasePublic.from("kb_categories").select("id,slug,name_ar");
       if (error) throw error;
       return data ?? [];
     },
   });
 
-  useEffect(() => {
-    const timer = setTimeout(() => setTimedOut(true), 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const catSlug = (id: string | null) => cats.data?.find((c) => c.id === id)?.slug ?? "general";
-  const loading = articles.isLoading && !timedOut;
+  /* Previously a 5s timer flipped this to `false` while the request was still
+     in flight, so a slow load rendered the "no articles yet" empty state over
+     live data that then popped in behind it. Loading is now driven purely by
+     the query's own state, and a failed fetch gets its own message instead of
+     being reported to the reader as "no articles". */
+  const loading = articles.isLoading;
+  const failed = articles.isError;
   const list = articles.data ?? [];
 
   return (
@@ -73,7 +72,28 @@ function ArticlesPage() {
           </div>
         )}
 
-        {!loading && list.length === 0 && (
+        {!loading && failed && (
+          <div className="rounded-3xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center">
+            <FileText className="mx-auto size-10 text-[#7c6045]/70" />
+            <h3 className="mt-4 font-display text-base font-extrabold text-[#7c6045]">
+              {lang === "ar" ? "تعذّر تحميل المقالات" : "Couldn't load articles"}
+            </h3>
+            <p className="mt-2 text-sm text-[#6B6259]">
+              {lang === "ar"
+                ? "تحقّق من الاتصال ثم أعد المحاولة."
+                : "Check your connection and try again."}
+            </p>
+            <button
+              type="button"
+              onClick={() => articles.refetch()}
+              className="mt-4 rounded-full border border-[#A88765]/40 px-4 py-2 text-xs font-bold text-[#7c6045] transition-colors hover:bg-[#A88765]/10"
+            >
+              {lang === "ar" ? "إعادة المحاولة" : "Retry"}
+            </button>
+          </div>
+        )}
+
+        {!loading && !failed && list.length === 0 && (
           <div className="rounded-3xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center">
             <FileText className="mx-auto size-10 text-[#7c6045]/70" />
             <h3 className="mt-4 font-display text-base font-extrabold text-[#7c6045]">
@@ -85,7 +105,7 @@ function ArticlesPage() {
           </div>
         )}
 
-        {!loading && list.length > 0 && (
+        {!loading && !failed && list.length > 0 && (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((a) => (
               <a

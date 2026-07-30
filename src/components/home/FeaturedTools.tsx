@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform, type Variants } from "motion/react";
+import { motion } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
   Calculator,
@@ -14,6 +14,7 @@ import {
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
 import { playClick, playHover } from "@/lib/sound";
+import { Marquee } from "./Marquee";
 
 type Item = {
   id: string;
@@ -25,40 +26,6 @@ type Item = {
   badgeAr?: string;
   badgeEn?: string;
 };
-
-const typewriterParent: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.015, delayChildren: 0.15 } },
-};
-
-const typewriterChar: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.02 } },
-};
-
-/**
- * Typewriter text reveal: characters appear in sequence. Inherits the
- * hidden/visible state propagated from the card's own `variants` (see
- * `cardVariants`) rather than tracking its own viewport intersection —
- * per-character `whileInView` (one IntersectionObserver per glyph) never
- * fired reliably once nested this deep in the tree.
- */
-function TypewriterText({ text, reduce }: { text: string; reduce: boolean }) {
-  return (
-    <p className="mt-2 max-w-2xl text-[13px] leading-[1.75] text-white/55 sm:text-[14px]">
-      <motion.span
-        variants={reduce ? undefined : typewriterParent}
-        className="inline-flex flex-wrap"
-      >
-        {Array.from(text).map((char, i) => (
-          <motion.span key={i} variants={reduce ? undefined : typewriterChar} className="inline">
-            {char}
-          </motion.span>
-        ))}
-      </motion.span>
-    </p>
-  );
-}
 
 const ITEMS: Item[] = [
   {
@@ -131,51 +98,26 @@ const ITEMS: Item[] = [
   },
 ];
 
-/**
- * Parent-driven stagger for the cards column — proven pattern already used
- * by the section header above it (parent triggers `whileInView` once, each
- * child only declares `variants` and inherits the propagated hidden/visible
- * state). Per-card `whileInView` + a nested `useScroll` target ref on each
- * card was silently never firing in production (verified live: opacity
- * stuck at 0 indefinitely, `onViewportEnter` never called), so entrance is
- * now driven from one parent observer instead of eight independent ones.
- */
-const cardsParent: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
-};
-
-const cardsParentStatic: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0 } },
-};
-
-function cardVariants(index: number): Variants {
-  const twistAngle = index % 2 === 0 ? -2 : 2;
-  return {
-    hidden: { opacity: 0, clipPath: "inset(0 0 100% 0)", rotate: twistAngle, y: 24 },
-    visible: {
-      opacity: 1,
-      clipPath: "inset(0 0 0% 0)",
-      rotate: 0,
-      y: 0,
-      transition: { duration: 0.8, ease: EASE.emphasis },
-    },
-  };
-}
-
-const cardVariantsStatic: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.3 } },
-};
+/** Split into two lanes so the strip reads as layered depth, not one long line. */
+const LANE_A = ITEMS.filter((_, i) => i % 2 === 0);
+const LANE_B = ITEMS.filter((_, i) => i % 2 === 1);
 
 /**
- * Cinematic "Ready-to-use accounting tools" — Awwwards-style band replacing
- * the old featured/supporting grid. Recipe:
- *   • Full-width centered card column with compact spacing
- *   • Each card enters with twisted rotation, lifted parallax, and typewriter text
- *   • Magnetic pointer glow on each card
- *   • Preserves every existing tool id + `/tools/$toolId` link + copy.
+ * Cinematic "Ready-to-use accounting tools" band.
+ *
+ * The eight tools used to stack as full-width rows one under another, which
+ * read as a long, monotonous list and cost a lot of vertical space. They now
+ * ride two right-to-left marquee lanes at slightly different speeds — the
+ * speed difference is what gives the band its layered, cinematic depth
+ * instead of one flat line of cards.
+ *
+ * Motion comes from the shared `Marquee`, so this inherits its
+ * already-proven behaviour rather than reimplementing it: pause on hover,
+ * drag to scrub, clicks swallowed after a real drag (so scrubbing never
+ * opens a tool by accident), and a full stop under `prefers-reduced-motion`
+ * — where the lane stays a normal, manually scrollable strip.
+ *
+ * Every existing tool id, `/tools/$toolId` link and copy string is preserved.
  */
 export default function FeaturedTools({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
@@ -184,7 +126,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
   return (
     <section
       id="featured-tools"
-      className="dark-motif relative overflow-hidden bg-[#141311] py-20 sm:py-24 lg:py-28"
+      className="dark-motif relative overflow-hidden bg-[#141311] py-16 sm:py-20 lg:py-24"
     >
       {/* Cinematic grid backdrop */}
       <div
@@ -202,58 +144,72 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
         className="pointer-events-none absolute -top-40 start-1/3 size-[36rem] rounded-full bg-[#A88765]/[0.09] blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-[65rem] px-4 sm:px-8 lg:px-12">
+      <div className="relative">
         {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           variants={m.staggerParent}
-          className="flex flex-col items-center gap-6 text-center"
+          className="mx-auto w-full max-w-[65rem] px-4 text-center sm:px-8 lg:px-12"
         >
-          <div className="max-w-2xl">
-            <motion.p
-              variants={m.staggerChild}
-              className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
-            >
-              <Sparkles className="size-3.5" />
-              {ar ? "الأدوات" : "Tools"}
-            </motion.p>
-            <motion.h2
-              variants={m.staggerChild}
-              className="font-display mt-3 text-[1.9rem] font-bold leading-[1.15] text-[#FCFBF9] sm:text-[2.6rem] lg:text-[3.2rem]"
-            >
-              {ar ? "أدوات محاسبية جاهزة للاستخدام" : "Accounting tools ready to use"}
-            </motion.h2>
-            <motion.p
-              variants={m.staggerChild}
-              className="mt-4 text-[15px] leading-[1.9] text-white/60 sm:text-[16px]"
-            >
-              {ar
-                ? "حاسبات ونماذج تعمل مباشرة في المتصفح — بدون تسجيل، بدون تنزيل."
-                : "Calculators and forms that work in your browser — no signup, no downloads."}
-            </motion.p>
-          </div>
+          <motion.p
+            variants={m.staggerChild}
+            className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
+          >
+            <Sparkles className="size-3.5" />
+            {ar ? "الأدوات" : "Tools"}
+          </motion.p>
+          <motion.h2
+            variants={m.staggerChild}
+            className="font-display mx-auto mt-3 max-w-2xl text-[1.7rem] font-bold leading-[1.2] text-[#FCFBF9] sm:text-[2.3rem] lg:text-[2.8rem]"
+          >
+            {ar ? "أدوات محاسبية جاهزة للاستخدام" : "Accounting tools ready to use"}
+          </motion.h2>
+          <motion.p
+            variants={m.staggerChild}
+            className="mx-auto mt-3 max-w-xl text-[14px] leading-[1.8] text-white/60 sm:text-[15px]"
+          >
+            {ar
+              ? "حاسبات ونماذج تعمل مباشرة في المتصفح — بدون تسجيل، بدون تنزيل."
+              : "Calculators and forms that work in your browser — no signup, no downloads."}
+          </motion.p>
         </motion.div>
 
-        {/* Cards column — compact, centered */}
+        {/* Two right-to-left lanes. They run full-bleed (outside the content
+            container) so cards slide in and out past the viewport edge rather
+            than appearing to start and stop inside a box. */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={m.reduce ? cardsParentStatic : cardsParent}
-          className="mt-8 sm:mt-12 flex flex-col gap-2.5 sm:gap-3"
+          initial={m.reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
+          whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: m.reduce ? 0.3 : 0.7, ease: EASE.emphasis }}
+          className="relative mt-10 sm:mt-12"
         >
-          {ITEMS.map((item, i) => (
-            <CinematicToolCard
-              key={item.id}
-              item={item}
-              index={i}
-              total={ITEMS.length}
-              lang={lang}
-              reduce={m.reduce}
-            />
-          ))}
+          <Marquee speed={38} direction={-1} gap={14} className="py-1">
+            {LANE_A.map((item) => (
+              <ToolChip key={item.id} item={item} lang={lang} />
+            ))}
+          </Marquee>
+
+          <div className="h-3 sm:h-4" />
+
+          <Marquee speed={26} direction={-1} gap={14} className="py-1">
+            {LANE_B.map((item) => (
+              <ToolChip key={item.id} item={item} lang={lang} />
+            ))}
+          </Marquee>
+
+          {/* Edge fades so the lanes dissolve into the section instead of
+              being visibly clipped at the viewport edge. */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 start-0 w-16 bg-gradient-to-r from-[#141311] to-transparent sm:w-28 rtl:bg-gradient-to-l"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 end-0 w-16 bg-gradient-to-l from-[#141311] to-transparent sm:w-28 rtl:bg-gradient-to-r"
+          />
         </motion.div>
 
         {/* View all button */}
@@ -261,8 +217,8 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-6 sm:mt-8 flex justify-center"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-10 flex justify-center sm:mt-12"
         >
           <Link
             to="/tools"
@@ -282,102 +238,48 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
   );
 }
 
-function CinematicToolCard({
-  item,
-  index,
-  total,
-  lang,
-  reduce,
-}: {
-  item: Item;
-  index: number;
-  total: number;
-  lang: Lang;
-  reduce: boolean;
-}) {
+/**
+ * One tool as a compact marquee card. Fixed width so the lane's loop measures
+ * predictably, and `dir` is restored here because the `Marquee` track is
+ * forced to `ltr` to sidestep RTL `scrollLeft` quirks.
+ */
+function ToolChip({ item, lang }: { item: Item; lang: Lang }) {
   const ar = lang === "ar";
   const Icon = item.icon;
 
-  // Magnetic pointer glow.
-  const mx = useMotionValue(50);
-  const my = useMotionValue(50);
-  const glow = useTransform(
-    [mx, my],
-    ([x, y]) =>
-      `radial-gradient(600px circle at ${x}% ${y}%, rgba(216,189,156,0.14), transparent 45%)`,
-  );
-
-  const onPointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
-    if (reduce) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    mx.set(((e.clientX - rect.left) / rect.width) * 100);
-    my.set(((e.clientY - rect.top) / rect.height) * 100);
-  };
-
   return (
-    <motion.div variants={reduce ? cardVariantsStatic : cardVariants(index)}>
-      <Link
-        to="/tools/$toolId"
-        params={{ toolId: item.id }}
-        onMouseEnter={playHover}
-        onClick={playClick}
-        onPointerMove={onPointerMove}
-        className="group relative block overflow-hidden rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#1c1a17] to-[#0f0d0b] p-5 shadow-[0_25px_60px_-30px_rgba(0,0,0,0.6)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A88765]/50 hover:shadow-[0_35px_90px_-30px_rgba(168,135,101,0.35)] sm:p-7 lg:p-8"
-      >
-        {/* pointer glow */}
-        <motion.span
-          aria-hidden
-          style={{ background: glow }}
-          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-        />
-        {/* gold reveal line */}
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-[#4A3023] via-[#A88765] to-transparent transition-transform duration-700 ease-out group-hover:scale-x-100"
-        />
+    <Link
+      to="/tools/$toolId"
+      params={{ toolId: item.id }}
+      dir={ar ? "rtl" : "ltr"}
+      onMouseEnter={playHover}
+      onClick={playClick}
+      className="group flex w-[15rem] shrink-0 items-center gap-3 rounded-2xl border border-white/[0.08] bg-gradient-to-br from-[#1c1a17] to-[#0f0d0b] p-3.5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#A88765]/50 hover:shadow-[0_24px_60px_-24px_rgba(168,135,101,0.4)] sm:w-[17.5rem] sm:p-4"
+    >
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-[#d8bd9c] transition-all duration-300 group-hover:border-[#A88765]/60 group-hover:bg-[#A88765]/10 sm:size-11">
+        <Icon className="size-[18px] sm:size-5" />
+      </span>
 
-        <div className="relative flex items-start gap-4 sm:gap-6">
-          {/* Index */}
-          <span className="font-display shrink-0 text-2xl font-black tabular-nums text-white/15 transition-colors duration-500 group-hover:text-[#A88765] sm:text-3xl lg:text-4xl">
-            {String(index + 1).padStart(2, "0")}
+      <span className="min-w-0 flex-1">
+        <span className="flex items-center gap-1.5">
+          <span className="font-display truncate text-[13.5px] font-bold leading-[1.35] text-[#FCFBF9] sm:text-[14.5px]">
+            {ar ? item.ar : item.en}
           </span>
+          {item.badgeAr && (
+            <span className="shrink-0 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-1.5 py-px text-[9px] font-bold text-[#e9d9c3]">
+              {ar ? item.badgeAr : item.badgeEn}
+            </span>
+          )}
+        </span>
+        <span className="mt-1 line-clamp-1 block text-[11.5px] leading-[1.5] text-white/45 sm:text-[12px]">
+          {ar ? item.descAr : item.descEn}
+        </span>
+      </span>
 
-          {/* Icon */}
-          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-[#d8bd9c] transition-all duration-500 group-hover:scale-110 group-hover:border-[#A88765]/60 group-hover:bg-[#A88765]/10 sm:size-12">
-            <Icon className="size-5 sm:size-6" />
-          </span>
-
-          {/* Content */}
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2">
-              <h3 className="font-display text-[16px] font-bold leading-snug text-[#FCFBF9] sm:text-[18px] lg:text-[20px]">
-                {ar ? item.ar : item.en}
-              </h3>
-              {item.badgeAr && (
-                <span className="rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-2 py-0.5 text-[10px] font-bold text-[#e9d9c3]">
-                  {ar ? item.badgeAr : item.badgeEn}
-                </span>
-              )}
-            </div>
-            <TypewriterText text={ar ? item.descAr : item.descEn} reduce={reduce} />
-          </div>
-
-          {/* Arrow */}
-          <span className="hidden shrink-0 items-center justify-center rounded-full border border-white/10 text-[#d8bd9c] transition-all duration-500 group-hover:border-[#A88765] group-hover:bg-[#A88765]/10 group-hover:rotate-45 sm:flex sm:size-11">
-            <ArrowUpLeft className="size-4 ltr:rotate-90" />
-          </span>
-        </div>
-
-        {/* Foot: counter */}
-        <div className="relative mt-5 flex items-center justify-between border-t border-white/[0.06] pt-3 text-[11px] font-mono text-white/40 sm:mt-6">
-          <span>
-            {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
-          </span>
-          <span className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            {ar ? "افتح الأداة →" : "Open tool →"}
-          </span>
-        </div>
-      </Link>
-    </motion.div>
+      <ArrowUpLeft
+        aria-hidden
+        className="size-3.5 shrink-0 text-[#A88765]/50 transition-all duration-300 group-hover:text-[#d8bd9c] ltr:rotate-90"
+      />
+    </Link>
   );
 }
