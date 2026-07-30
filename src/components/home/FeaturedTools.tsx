@@ -1,11 +1,5 @@
 import { useRef } from "react";
-import {
-  motion,
-  useMotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
+import { motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
   Calculator,
@@ -32,6 +26,37 @@ type Item = {
   badgeAr?: string;
   badgeEn?: string;
 };
+
+/**
+ * Typewriter text reveal: characters appear in sequence.
+ */
+function TypewriterText({ text, delay, reduce }: { text: string; delay: number; reduce: boolean }) {
+  return (
+    <p className="mt-2 max-w-2xl text-[13px] leading-[1.75] text-white/55 sm:text-[14px]">
+      <span className="inline-flex flex-wrap">
+        {Array.from(text).map((char, i) => (
+          <motion.span
+            key={i}
+            initial={reduce ? { opacity: 1 } : { opacity: 0 }}
+            whileInView={reduce ? { opacity: 1 } : { opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={
+              reduce
+                ? { duration: 0 }
+                : {
+                    duration: 0.02,
+                    delay: delay + i * 0.015,
+                  }
+            }
+            className="inline"
+          >
+            {char}
+          </motion.span>
+        ))}
+      </span>
+    </p>
+  );
+}
 
 const ITEMS: Item[] = [
   {
@@ -107,9 +132,9 @@ const ITEMS: Item[] = [
 /**
  * Cinematic "Ready-to-use accounting tools" — Awwwards-style band replacing
  * the old featured/supporting grid. Recipe:
- *   • Sticky editorial column (large index number that swaps as cards enter view)
- *   • Right-hand list of full-bleed cards that fade-in with mask reveal + scroll
- *     parallax; each card has a magnetic pointer glow layer.
+ *   • Full-width centered card column with compact spacing
+ *   • Each card enters with twisted rotation, lifted parallax, and typewriter text
+ *   • Magnetic pointer glow on each card
  *   • Preserves every existing tool id + `/tools/$toolId` link + copy.
  */
 export default function FeaturedTools({ lang }: { lang: Lang }) {
@@ -129,8 +154,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
           backgroundImage:
             "linear-gradient(to right, #A88765 1px, transparent 1px), linear-gradient(to bottom, #A88765 1px, transparent 1px)",
           backgroundSize: "80px 80px",
-          maskImage:
-            "radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%)",
+          maskImage: "radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%)",
         }}
       />
       <div
@@ -138,14 +162,14 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
         className="pointer-events-none absolute -top-40 start-1/3 size-[36rem] rounded-full bg-[#A88765]/[0.09] blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
+      <div className="relative mx-auto w-full max-w-[65rem] px-4 sm:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.4 }}
           variants={m.staggerParent}
-          className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+          className="flex flex-col items-center gap-6 text-center"
         >
           <div className="max-w-2xl">
             <motion.p
@@ -163,64 +187,50 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
             </motion.h2>
             <motion.p
               variants={m.staggerChild}
-              className="mt-4 max-w-xl text-[15px] leading-[1.9] text-white/60 sm:text-[16px]"
+              className="mt-4 text-[15px] leading-[1.9] text-white/60 sm:text-[16px]"
             >
               {ar
                 ? "حاسبات ونماذج تعمل مباشرة في المتصفح — بدون تسجيل، بدون تنزيل."
                 : "Calculators and forms that work in your browser — no signup, no downloads."}
             </motion.p>
           </div>
-          <motion.div
-            variants={m.staggerChild}
-            className="font-display shrink-0 text-[3rem] font-black leading-none text-white/[0.08] sm:text-[5rem]"
-          >
-            {String(ITEMS.length).padStart(2, "0")}
-          </motion.div>
         </motion.div>
 
-        {/* Cinematic index */}
-        <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-16">
-          {/* Sticky rail */}
-          <aside className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
-              <span className="block text-[11px] font-bold uppercase tracking-[0.28em] text-[#A88765]/80">
-                {ar ? "مؤشر الأدوات" : "Tools index"}
-              </span>
-              <p className="font-display mt-4 text-[1.4rem] font-bold leading-[1.4] text-[#FCFBF9]/90 lg:text-[1.7rem]">
-                {ar
-                  ? "استخدمها الآن — كل أداة مصمّمة لاختصار الوقت وتقليل الأخطاء."
-                  : "Use them now — every tool is built to save time and reduce errors."}
-              </p>
-              <div className="mt-6 h-px w-24 bg-gradient-to-r from-[#A88765] to-transparent" />
-              <Link
-                to="/tools"
-                onMouseEnter={playHover}
-                onClick={playClick}
-                className="group mt-8 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-5 py-2.5 text-[13px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
-              >
-                {ar ? "عرض جميع الأدوات" : "View all tools"}
-                <ArrowUpLeft
-                  aria-hidden
-                  className="size-4 text-[#d8bd9c] transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
-                />
-              </Link>
-            </div>
-          </aside>
-
-          {/* Cards column */}
-          <div className="flex flex-col gap-4 sm:gap-5 lg:col-span-8">
-            {ITEMS.map((item, i) => (
-              <CinematicToolCard
-                key={item.id}
-                item={item}
-                index={i}
-                total={ITEMS.length}
-                lang={lang}
-                reduce={m.reduce}
-              />
-            ))}
-          </div>
+        {/* Cards column — compact, centered */}
+        <div className="mt-14 flex flex-col gap-3 sm:gap-4">
+          {ITEMS.map((item, i) => (
+            <CinematicToolCard
+              key={item.id}
+              item={item}
+              index={i}
+              total={ITEMS.length}
+              lang={lang}
+              reduce={m.reduce}
+            />
+          ))}
         </div>
+
+        {/* View all button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-10 flex justify-center"
+        >
+          <Link
+            to="/tools"
+            onMouseEnter={playHover}
+            onClick={playClick}
+            className="group inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-6 py-3 text-[14px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
+          >
+            {ar ? "عرض جميع الأدوات" : "View all tools"}
+            <ArrowUpLeft
+              aria-hidden
+              className="size-4 text-[#d8bd9c] transition-transform duration-300 group-hover:-translate-y-0.5 ltr:rotate-90"
+            />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
@@ -269,19 +279,43 @@ function CinematicToolCard({
     my.set(((e.clientY - rect.top) / rect.height) * 100);
   };
 
+  // Twisted entrance: cards enter with slight rotation and rise.
+  const twistAngle = index % 2 === 0 ? -2 : 2;
+
   return (
     <motion.div
-      initial={reduce ? { opacity: 0 } : { opacity: 0, clipPath: "inset(0 0 100% 0)", y: 30 }}
+      initial={
+        reduce
+          ? { opacity: 0 }
+          : {
+              opacity: 0,
+              clipPath: "inset(0 0 100% 0)",
+              y: 50,
+              rotate: twistAngle,
+            }
+      }
       whileInView={
         reduce
           ? { opacity: 1 }
-          : { opacity: 1, clipPath: "inset(0 0 0% 0)", y: 0 }
+          : {
+              opacity: 1,
+              clipPath: "inset(0 0 0% 0)",
+              y: 0,
+              rotate: 0,
+            }
       }
       viewport={{ once: true, amount: 0.25 }}
       transition={
         reduce
           ? { duration: 0.3 }
-          : { duration: 0.75, ease: EASE.emphasis, delay: index * 0.06 }
+          : {
+              duration: 0.8,
+              ease: EASE.emphasis,
+              delay: index * 0.08,
+              type: "spring",
+              stiffness: 60,
+              damping: 20,
+            }
       }
       style={{ y: reduce ? 0 : y }}
     >
@@ -329,9 +363,11 @@ function CinematicToolCard({
                 </span>
               )}
             </div>
-            <p className="mt-2 max-w-2xl text-[13px] leading-[1.75] text-white/55 sm:text-[14px]">
-              {ar ? item.descAr : item.descEn}
-            </p>
+            <TypewriterText
+              text={ar ? item.descAr : item.descEn}
+              delay={0.2 + index * 0.08}
+              reduce={reduce}
+            />
           </div>
 
           {/* Arrow */}

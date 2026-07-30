@@ -193,7 +193,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                 <div className="relative mx-auto max-w-md">
                   <motion.div
                     style={{ scale: scaleImg }}
-                    className="relative overflow-hidden rounded-[2.5rem] border border-[#A88765]/30 bg-[#1C1B19] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] aspect-[4/5]"
+                    className="relative overflow-hidden rounded-[2.5rem] border border-[#A88765]/30 bg-[#1C1B19] shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] aspect-[3/4] sm:aspect-[4/5]"
                   >
                     <img
                       src={profileImg}
@@ -203,7 +203,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                       loading="eager"
                       fetchPriority="high"
                       decoding="sync"
-                      className="absolute inset-0 h-full w-full object-cover object-top"
+                      className="absolute inset-0 h-full w-full object-cover object-center sm:object-top"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#151412] via-transparent to-transparent" />
 
@@ -272,42 +272,6 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
-
-      {/* ============ EXPERTISE PILL CLOUD ============ */}
-      <section className="relative py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c9a986]">
-            <FileSpreadsheet className="size-3" />
-            {lang === "ar" ? "التخصصات" : "Expertise"}
-          </div>
-          <h2
-            className="font-display mt-4 text-3xl font-extrabold md:text-5xl"
-            style={{ color: "var(--fg)" }}
-          >
-            {lang === "ar" ? "مجالات أعمل فيها" : "What I work with"}
-          </h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {EXPERTISE.map((e, i) => (
-              <motion.div
-                key={e.ar}
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5, delay: i * 0.04 }}
-                whileHover={{ y: -4, scale: 1.05 }}
-              >
-                <Link
-                  to="/request-service"
-                  search={{ service: e.service }}
-                  className="inline-block rounded-full border border-[#A88765]/30 bg-white/[0.03] px-5 py-2.5 text-sm font-semibold text-[#c9a986] transition-colors hover:border-[#A88765] hover:bg-[#A88765]/10"
-                >
-                  {lang === "ar" ? e.ar : e.en}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
@@ -363,7 +327,7 @@ function StatBlock({ value, label, progress }: { value: string; label: string; p
       {/* `leading-none` put the box at exactly the font size (60px) while the
           digits' ink measured 70px, and `bg-clip-text` paints nothing outside
           the box — so the stat numbers lost 5px off the top and bottom. */}
-      <div className="font-display text-5xl font-extrabold leading-[1.2] bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-6xl">
+      <div className="font-display text-3xl font-extrabold leading-[1.2] bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent sm:text-4xl lg:text-5xl xl:text-6xl">
         {value}
       </div>
       <div className="mt-3 text-sm font-semibold" style={{ color: "var(--fg-soft)" }}>
