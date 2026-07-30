@@ -5,7 +5,7 @@ import {
   useTransform,
   type MotionValue,
 } from "motion/react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
 import {
@@ -16,7 +16,7 @@ import {
 
 export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const m = useMotionSafe();
 
   const { scrollYProgress } = useScroll({
@@ -37,59 +37,248 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   });
 
   return (
-    /* `overflow-x-clip` rather than `overflow-hidden`: the stacked cards are
-       rotated a few degrees, which widens their bounding box past the viewport
-       on narrow screens and left the mobile homepage scrolling sideways. Clip
-       only the horizontal axis — plain `overflow-hidden` would make this an
-       scroll container and break the `sticky` track the whole section relies
-       on, and it would also crop the cards' vertical peek. */
-    <section ref={sectionRef} id="software" className="relative z-10 overflow-x-clip bg-[#F5F2ED]">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
-      />
+    <section id="software" className="relative z-10 bg-[#F5F2ED]">
+      {/* Mobile & tablet (<lg): a compact, native swipeable carousel.
+          The desktop version below drives its transitions from page-scroll
+          position (scroll-jacking a `min-h-[500vh]` sticky track) — on touch
+          devices that pattern reads as unresponsive/janky and needed a very
+          tall scroll runway just to cycle through 14 cards. Swiping a normal
+          `overflow-x-auto` + `scroll-snap` row is the standard, reliable
+          mobile interaction instead: no scroll-linked transforms, no giant
+          track, just native touch scrolling the browser already handles
+          well. */}
+      <MobileSoftwareCarousel lang={lang} />
 
-      <div className="relative mx-auto min-h-[280vh] sm:min-h-[380vh] lg:min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12">
-        <div className="sticky top-0 flex min-h-screen items-center py-12 sm:py-16 lg:py-24">
-          <div className="grid w-full items-center gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-16">
-            {/* LEFT — STACKED SOFTWARE CARDS */}
-            <div className="relative order-2 h-[22rem] sm:h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
-              {SOFTWARE_ECOSYSTEM.map((software, index) => (
-                <StackedSoftwareCard
-                  key={software.id}
-                  software={software}
-                  index={index}
-                  total={cardCount}
-                  scrollProgress={activeIndex}
-                  reduce={m.reduce}
-                  ar={ar}
-                />
-              ))}
-            </div>
+      {/* Desktop (lg+): sticky-scroll stacked-card showcase, unchanged. */}
+      <div className="relative hidden overflow-x-clip lg:block">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
+        />
 
-            {/* RIGHT — FIXED BROWN CARD */}
-            <div className="relative order-1 lg:order-2 lg:col-span-5">
-              <motion.div
-                initial={m.reduce ? { opacity: 0 } : { opacity: 0, x: 40 }}
-                whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{
-                  duration: m.reduce ? 0.3 : 0.8,
-                  ease: EASE.out,
-                }}
-              >
-                <FeatureCard
-                  ar={ar}
-                  activeIndex={activeIndex}
-                  activeCard={activeCard}
-                  reduce={m.reduce}
-                />
-              </motion.div>
+        <div
+          ref={sectionRef}
+          className="relative mx-auto min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12"
+        >
+          <div className="sticky top-0 flex min-h-screen items-center py-12 sm:py-16 lg:py-24">
+            <div className="grid w-full items-center gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-16">
+              {/* LEFT — STACKED SOFTWARE CARDS */}
+              <div className="relative order-2 h-[22rem] sm:h-[30rem] lg:order-1 lg:col-span-7 lg:h-[38rem]">
+                {SOFTWARE_ECOSYSTEM.map((software, index) => (
+                  <StackedSoftwareCard
+                    key={software.id}
+                    software={software}
+                    index={index}
+                    total={cardCount}
+                    scrollProgress={activeIndex}
+                    reduce={m.reduce}
+                    ar={ar}
+                  />
+                ))}
+              </div>
+
+              {/* RIGHT — FIXED BROWN CARD */}
+              <div className="relative order-1 lg:order-2 lg:col-span-5">
+                <motion.div
+                  initial={m.reduce ? { opacity: 0 } : { opacity: 0, x: 40 }}
+                  whileInView={m.reduce ? { opacity: 1 } : { opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{
+                    duration: m.reduce ? 0.3 : 0.8,
+                    ease: EASE.out,
+                  }}
+                >
+                  <FeatureCard
+                    ar={ar}
+                    activeIndex={activeIndex}
+                    activeCard={activeCard}
+                    reduce={m.reduce}
+                  />
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function MobileSoftwareCarousel({ lang }: { lang: Lang }) {
+  const ar = lang === "ar";
+  const m = useMotionSafe();
+  const trackRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let best: { index: number; ratio: number } | null = null;
+        for (const entry of entries) {
+          const index = Number((entry.target as HTMLElement).dataset.index);
+          if (!best || entry.intersectionRatio > best.ratio) {
+            best = { index, ratio: entry.intersectionRatio };
+          }
+        }
+        if (best && best.ratio > 0.5) setActive(best.index);
+      },
+      { root: track, threshold: [0.5, 0.75, 0.95] },
+    );
+
+    cardRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="lg:hidden">
+      <div className="mx-auto w-full max-w-[90rem] px-4 pt-14 sm:px-8 sm:pt-16">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={m.staggerParent}
+          className="mb-6"
+        >
+          <motion.p
+            variants={m.staggerChild}
+            className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7C6045]"
+          >
+            {ar ? "الأنظمة والبرامج" : "Systems & Software"}
+          </motion.p>
+          <motion.h2
+            variants={m.staggerChild}
+            className="font-display mt-2 text-[1.6rem] font-bold leading-[1.3] text-[#1C1B19]"
+          >
+            {ar ? "أعمل على مجموعة متنوعة من الأنظمة" : "I work across a range of platforms"}
+          </motion.h2>
+        </motion.div>
+      </div>
+
+      <div
+        ref={trackRef}
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden"
+      >
+        {SOFTWARE_ECOSYSTEM.map((software, index) => (
+          <MobileSoftwareCard
+            key={software.id}
+            ref={(el) => {
+              cardRefs.current[index] = el;
+            }}
+            software={software}
+            index={index}
+            total={SOFTWARE_ECOSYSTEM.length}
+            ar={ar}
+            reduce={m.reduce}
+          />
+        ))}
+      </div>
+
+      {/* Progress dots — a light, tappable-target-sized indicator rather than
+          a numeric counter, since the active card is already tracked via a
+          plain `IntersectionObserver` (no scroll-linked math to keep in sync
+          with RTL's flipped `scrollLeft` sign). */}
+      <div className="mt-4 flex items-center justify-center gap-1.5">
+        {SOFTWARE_ECOSYSTEM.map((software, index) => (
+          <span
+            key={software.id}
+            aria-hidden
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === active ? "w-5 bg-[#A88765]" : "w-1.5 bg-[#A88765]/25"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MobileSoftwareCard({
+  software,
+  index,
+  total,
+  ar,
+  reduce,
+  ref,
+}: {
+  software: SoftwareEntry;
+  index: number;
+  total: number;
+  ar: boolean;
+  reduce: boolean;
+  ref: (el: HTMLDivElement | null) => void;
+}) {
+  const category = ar
+    ? SOFTWARE_CATEGORY_LABELS[software.category].ar
+    : SOFTWARE_CATEGORY_LABELS[software.category].en;
+
+  const label = ar && software.nameAr ? software.nameAr : software.name;
+
+  return (
+    <motion.div
+      ref={ref}
+      data-index={index}
+      initial={reduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
+      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: reduce ? 0.2 : 0.5, ease: EASE.out }}
+      className="w-[82%] shrink-0 snap-center"
+    >
+      <div className="relative flex h-[19rem] flex-col justify-between overflow-hidden rounded-[1.5rem] border border-[#E3DDD5] bg-[#FCFBF9] p-5 shadow-[0_20px_50px_-30px_rgba(74,48,35,0.5)]">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -bottom-6 -end-2 font-display text-[7rem] font-bold leading-none text-[#4A3023]/[0.045]"
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
+
+        <div className="relative z-10">
+          <div className="flex items-start justify-between gap-3">
+            <span className="rounded-full border border-[#A88765]/30 bg-[#A88765]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#7C6045]">
+              {category}
+            </span>
+            <span className="font-mono text-[11px] text-[#8A8078]">
+              {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+            </span>
+          </div>
+
+          <div className="mt-6 flex items-center gap-4">
+            <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-[#E3DDD5] bg-white p-2 shadow-sm">
+              {software.logo ? (
+                <img
+                  src={software.logo}
+                  alt=""
+                  className="size-full object-contain"
+                  loading="lazy"
+                />
+              ) : (
+                <span className="font-display text-xl font-bold text-[#4A3023]">
+                  {software.mark}
+                </span>
+              )}
+            </div>
+
+            <div className="min-w-0">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#A88765]">
+                {ar ? "نظام / برنامج" : "System / Software"}
+              </p>
+              <h3 className="font-display mt-1.5 truncate text-[1.4rem] font-bold leading-[1.25] tracking-tight text-[#1C1B19]">
+                {label}
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <p className="relative z-10 text-[13px] leading-[1.75] text-[#746E67]">
+          {ar
+            ? "أستخدم هذا النظام ضمن بيئة العمل المحاسبية والتشغيلية حسب طبيعة النشاط."
+            : "Used across accounting and operational workflows to fit the business."}
+        </p>
+      </div>
+    </motion.div>
   );
 }
 

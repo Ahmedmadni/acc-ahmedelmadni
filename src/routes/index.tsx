@@ -2054,7 +2054,7 @@ export function Footer({ lang }: { lang: Lang }) {
 
       <div className="relative mx-auto w-full max-w-[84rem] px-4 sm:px-8 lg:px-12">
         {/* Main footer */}
-        <div className="grid gap-12 py-16 lg:grid-cols-[1.45fr_0.75fr_0.95fr_0.95fr] lg:gap-10 xl:gap-14">
+        <div className="grid gap-10 py-12 sm:gap-12 sm:py-16 lg:grid-cols-[1.45fr_0.75fr_0.95fr_0.95fr] lg:gap-10 xl:gap-14">
           {/* Brand and introduction */}
           <div className="max-w-md">
             <div className="flex items-center gap-3">
@@ -2140,76 +2140,82 @@ export function Footer({ lang }: { lang: Lang }) {
             </div>
           </div>
 
-          {/* Main navigation */}
-          <div>
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-7 bg-[#A88765]/60" />
+          {/* Link columns — 2-up on mobile so the footer doesn't run long
+              vertically; `lg:contents` drops this wrapper from the box tree
+              at desktop so its three children fall back into the parent's
+              4-column grid exactly as before. */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:contents">
+            {/* Main navigation */}
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-7 bg-[#A88765]/60" />
 
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
-                {isAr ? "الصفحات الرئيسية" : "Main Pages"}
+                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
+                  {isAr ? "الصفحات الرئيسية" : "Main Pages"}
+                </div>
               </div>
+
+              <ul className="flex flex-col gap-2.5">
+                {mainLinks.map((link) => (
+                  <li key={link.to}>{renderLink(link)}</li>
+                ))}
+              </ul>
             </div>
 
-            <ul className="flex flex-col gap-2.5">
-              {mainLinks.map((link) => (
-                <li key={link.to}>{renderLink(link)}</li>
-              ))}
-            </ul>
-          </div>
+            {/* Professional links */}
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-7 bg-[#A88765]/60" />
 
-          {/* Professional links */}
-          <div>
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-7 bg-[#A88765]/60" />
-
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
-                {isAr ? "المسار المهني" : "Professional"}
+                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
+                  {isAr ? "المسار المهني" : "Professional"}
+                </div>
               </div>
+
+              <ul className="flex flex-col gap-2.5">
+                {professionalLinks.map((link) => (
+                  <li key={link.to}>{renderLink(link)}</li>
+                ))}
+              </ul>
             </div>
 
-            <ul className="flex flex-col gap-2.5">
-              {professionalLinks.map((link) => (
-                <li key={link.to}>{renderLink(link)}</li>
-              ))}
-            </ul>
-          </div>
+            {/* Resources and contact */}
+            <div className="col-span-2 sm:col-span-1">
+              <div className="mb-5 flex items-center gap-3">
+                <span className="h-px w-7 bg-[#A88765]/60" />
 
-          {/* Resources and contact */}
-          <div>
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-7 bg-[#A88765]/60" />
-
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
-                {isAr ? "الموارد والتواصل" : "Resources & Contact"}
+                <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8A984]">
+                  {isAr ? "الموارد والتواصل" : "Resources & Contact"}
+                </div>
               </div>
-            </div>
 
-            <ul className="flex flex-col gap-2.5">
-              {resourceLinks.map((link) => (
-                <li key={link.to}>{renderLink(link)}</li>
-              ))}
-            </ul>
+              <ul className="flex flex-col gap-2.5">
+                {resourceLinks.map((link) => (
+                  <li key={link.to}>{renderLink(link)}</li>
+                ))}
+              </ul>
 
-            <div className="mt-6 border-t border-white/[0.07] pt-5">
-              <a
-                href="tel:+966560409811"
-                className="group flex items-center gap-3 text-[13px] text-[#D8BD9C] transition-colors duration-300 hover:text-[#FCFBF9]"
-              >
-                <span className="flex size-8 items-center justify-center rounded-full border border-[#A88765]/20 bg-[#A88765]/8">
-                  <Phone className="size-3.5" />
-                </span>
+              <div className="mt-6 border-t border-white/[0.07] pt-5">
+                <a
+                  href="tel:+966560409811"
+                  className="group flex items-center gap-3 text-[13px] text-[#D8BD9C] transition-colors duration-300 hover:text-[#FCFBF9]"
+                >
+                  <span className="flex size-8 items-center justify-center rounded-full border border-[#A88765]/20 bg-[#A88765]/8">
+                    <Phone className="size-3.5" />
+                  </span>
 
-                <span dir="ltr" className="tracking-wide">
-                  +966 56 040 9811
-                </span>
-              </a>
+                  <span dir="ltr" className="tracking-wide">
+                    +966 56 040 9811
+                  </span>
+                </a>
 
-              <a
-                href="mailto:elmadnim@gmail.com"
-                className="mt-4 block break-all text-[12px] text-white/45 transition-colors duration-300 hover:text-[#D8BD9C]"
-              >
-                elmadnim@gmail.com
-              </a>
+                <a
+                  href="mailto:elmadnim@gmail.com"
+                  className="mt-4 block break-all text-[12px] text-white/45 transition-colors duration-300 hover:text-[#D8BD9C]"
+                >
+                  elmadnim@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
