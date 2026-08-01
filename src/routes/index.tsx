@@ -491,6 +491,9 @@ function Index() {
       <main className="relative z-10">
         <Hero lang={lang} />
         <Suspense fallback={null}>
+          <NewsTicker lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
           <AboutMe lang={lang} />
         </Suspense>
         <StickyOutgoingLayer>
