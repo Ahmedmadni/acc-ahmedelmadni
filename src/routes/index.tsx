@@ -82,6 +82,7 @@ export const SkillModal = lazy(() => import("@/components/home/SkillModal"));
 const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
+const NewsTicker = lazy(() => import("@/components/home/NewsTicker"));
 const SoftwareEcosystem = lazy(() =>
   import("@/components/home/SoftwareEcosystem").then((m) => ({ default: m.SoftwareEcosystem })),
 );
