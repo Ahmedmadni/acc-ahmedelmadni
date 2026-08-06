@@ -37,7 +37,31 @@ function AuthPage() {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
         toast.success("تم تسجيل الدخول");
-        // Hard navigation ensures the session is hydrated before the next route loads
+
+        // After sign-in, check whether the user has the admin role and
+        // redirect accordingly. Regular users go to /knowledge, admins to /crm.
+        try {
+          const { data: meData } = await supabase.auth.getUser();
+          const userId = meData?.user?.id;
+          if (userId) {
+            const { data: role } = await supabase
+              .from("user_roles")
+              .select("role")
+              .eq("user_id", userId)
+              .eq("role", "admin")
+              .maybeSingle();
+            if (role) {
+              // Admin found — go to admin dashboard
+              window.location.assign("/crm");
+              return;
+            }
+          }
+        } catch (e) {
+          // swallow role-check errors and fall back to knowledge page
+          console.error("role check failed", e);
+        }
+
+        // Default redirect for non-admins
         window.location.assign("/knowledge");
         return;
       }
@@ -81,7 +105,7 @@ function AuthPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/30 transition-transform hover:scale-[1.01] disabled:opacity-60"
+              className="w-full rounded-xl bg-gradient-to-br from-[#c2a079] to-[#7c6045] py-3 text-sm font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/30 transition-transform hover:scale-[1.01]"
             >
               {loading ? "..." : mode === "signin" ? "دخول" : "إنشاء حساب"}
             </button>
