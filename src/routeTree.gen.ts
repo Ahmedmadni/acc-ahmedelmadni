@@ -42,6 +42,7 @@ import { Route as AuthenticatedAdminTemplatesRouteImport } from './routes/_authe
 import { Route as AuthenticatedAdminProfileRouteImport } from './routes/_authenticated/admin.profile'
 import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
+import { Route as AuthenticatedAdminDebugRouteImport } from './routes/_authenticated/admin.debug'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
 const SkillsRoute = SkillsRouteImport.update({
@@ -215,6 +216,11 @@ const AuthenticatedAdminKnowledgeRoute =
     path: '/admin/knowledge',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const AuthenticatedAdminDebugRoute = AuthenticatedAdminDebugRouteImport.update({
+  id: '/admin/debug',
+  path: '/admin/debug',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const ApiPublicHooksGenerateArticlesRoute =
   ApiPublicHooksGenerateArticlesRouteImport.update({
     id: '/api/public/hooks/generate-articles',
@@ -249,6 +255,7 @@ export interface FileRoutesByFullPath {
   '/knowledge/': typeof KnowledgeIndexRoute
   '/library/': typeof LibraryIndexRoute
   '/tools/': typeof ToolsIndexRoute
+  '/admin/debug': typeof AuthenticatedAdminDebugRoute
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
@@ -283,6 +290,7 @@ export interface FileRoutesByTo {
   '/knowledge': typeof KnowledgeIndexRoute
   '/library': typeof LibraryIndexRoute
   '/tools': typeof ToolsIndexRoute
+  '/admin/debug': typeof AuthenticatedAdminDebugRoute
   '/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
@@ -320,6 +328,7 @@ export interface FileRoutesById {
   '/knowledge/': typeof KnowledgeIndexRoute
   '/library/': typeof LibraryIndexRoute
   '/tools/': typeof ToolsIndexRoute
+  '/_authenticated/admin/debug': typeof AuthenticatedAdminDebugRoute
   '/_authenticated/admin/knowledge': typeof AuthenticatedAdminKnowledgeRoute
   '/_authenticated/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/_authenticated/admin/profile': typeof AuthenticatedAdminProfileRoute
@@ -357,6 +366,7 @@ export interface FileRouteTypes {
     | '/knowledge/'
     | '/library/'
     | '/tools/'
+    | '/admin/debug'
     | '/admin/knowledge'
     | '/admin/library'
     | '/admin/profile'
@@ -391,6 +401,7 @@ export interface FileRouteTypes {
     | '/knowledge'
     | '/library'
     | '/tools'
+    | '/admin/debug'
     | '/admin/knowledge'
     | '/admin/library'
     | '/admin/profile'
@@ -427,6 +438,7 @@ export interface FileRouteTypes {
     | '/knowledge/'
     | '/library/'
     | '/tools/'
+    | '/_authenticated/admin/debug'
     | '/_authenticated/admin/knowledge'
     | '/_authenticated/admin/library'
     | '/_authenticated/admin/profile'
@@ -695,6 +707,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminKnowledgeRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/admin/debug': {
+      id: '/_authenticated/admin/debug'
+      path: '/admin/debug'
+      fullPath: '/admin/debug'
+      preLoaderRoute: typeof AuthenticatedAdminDebugRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/api/public/hooks/generate-articles': {
       id: '/api/public/hooks/generate-articles'
       path: '/api/public/hooks/generate-articles'
@@ -708,6 +727,7 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedCrmRoute: typeof AuthenticatedCrmRoute
   AuthenticatedDeclarationsRoute: typeof AuthenticatedDeclarationsRoute
+  AuthenticatedAdminDebugRoute: typeof AuthenticatedAdminDebugRoute
   AuthenticatedAdminKnowledgeRoute: typeof AuthenticatedAdminKnowledgeRoute
   AuthenticatedAdminLibraryRoute: typeof AuthenticatedAdminLibraryRoute
   AuthenticatedAdminProfileRoute: typeof AuthenticatedAdminProfileRoute
@@ -717,6 +737,7 @@ interface AuthenticatedRouteRouteChildren {
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedCrmRoute: AuthenticatedCrmRoute,
   AuthenticatedDeclarationsRoute: AuthenticatedDeclarationsRoute,
+  AuthenticatedAdminDebugRoute: AuthenticatedAdminDebugRoute,
   AuthenticatedAdminKnowledgeRoute: AuthenticatedAdminKnowledgeRoute,
   AuthenticatedAdminLibraryRoute: AuthenticatedAdminLibraryRoute,
   AuthenticatedAdminProfileRoute: AuthenticatedAdminProfileRoute,
@@ -773,3 +794,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
