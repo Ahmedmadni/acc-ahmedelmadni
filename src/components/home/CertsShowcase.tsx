@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
+  EyeOff,
   GraduationCap,
   X,
   ZoomIn,
@@ -29,6 +30,26 @@ import { Marquee } from "./Marquee";
  * the stored object *is* the web-sized image. Serving the public object URL
  * directly removes the whole failure mode.
  */
+
+/**
+ * Temporary privacy blur over the certificate scans.
+ *
+ * The certificates themselves stay published — titles, issuers and dates all
+ * still render, and the section keeps its place on the page. Only the scanned
+ * image is obscured, and the affordances that would defeat that (lightbox
+ * zoom, download, open-original) are withdrawn while it is on.
+ *
+ * Flip this single constant to `false` to restore the images everywhere;
+ * nothing else needs editing.
+ *
+ * Worth being clear about what this is: a CSS filter is a *visual* screen,
+ * not access control. The image URL is still in the page source and the file
+ * is still publicly readable in storage, so anyone determined can retrieve
+ * the original. If these scans must genuinely not be obtainable, the fix is
+ * to unpublish them or move the bucket behind signed URLs — say the word and
+ * I'll do that instead.
+ */
+const BLUR_CERT_IMAGES = true;
 
 type Cert = {
   id: string;
@@ -58,7 +79,9 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
             loading="eager"
             decoding="async"
             referrerPolicy="no-referrer"
-            className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03]"
+            className={`h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03] ${
+              BLUR_CERT_IMAGES ? "scale-105 blur-md" : ""
+            }`}
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
@@ -67,10 +90,20 @@ function CertCard({ c, lang, onOpen }: { c: Cert; lang: Lang; onOpen: () => void
           </div>
         )}
         <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1C1B19]/80 via-transparent to-transparent" />
-        <span className="absolute bottom-2 end-2 inline-flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-[#c9a986] opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
-          <ZoomIn className="size-3" />
-          {lang === "ar" ? "تكبير" : "Zoom"}
-        </span>
+        {/* While blurred, the card says why rather than looking broken, and
+            the "zoom" affordance is replaced — the lightbox stays blurred too,
+            so inviting a zoom would be a dead end. */}
+        {BLUR_CERT_IMAGES && c.image_url ? (
+          <span className="absolute bottom-2 end-2 inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-bold text-[#c9a986] backdrop-blur">
+            <EyeOff className="size-3" />
+            {lang === "ar" ? "الصورة مخفية مؤقتاً" : "Image temporarily hidden"}
+          </span>
+        ) : (
+          <span className="absolute bottom-2 end-2 inline-flex items-center gap-1 rounded-full bg-black/50 px-2 py-1 text-[10px] font-bold text-[#c9a986] opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+            <ZoomIn className="size-3" />
+            {lang === "ar" ? "تكبير" : "Zoom"}
+          </span>
+        )}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-4">
         <span className="line-clamp-2 text-sm font-bold" style={{ color: "var(--fg)" }}>
@@ -140,39 +173,46 @@ function Lightbox({
           {issuer && <div className="truncate text-xs text-white/60">{issuer}</div>}
         </div>
         <div className="flex shrink-0 items-center gap-1">
-          <button
-            type="button"
-            onClick={() => setZoom((z) => Math.max(1, +(z - 0.25).toFixed(2)))}
-            disabled={!cert.image_url}
-            className="rounded-lg p-2 hover:bg-white/10 disabled:opacity-30"
-            aria-label={lang === "ar" ? "تصغير" : "Zoom out"}
-          >
-            <ZoomOut className="size-5" />
-          </button>
-          <span className="w-12 text-center text-xs tabular-nums text-white/70">
-            {Math.round(zoom * 100)}%
-          </span>
-          <button
-            type="button"
-            onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))}
-            disabled={!cert.image_url}
-            className="rounded-lg p-2 hover:bg-white/10 disabled:opacity-30"
-            aria-label={lang === "ar" ? "تكبير" : "Zoom in"}
-          >
-            <ZoomIn className="size-5" />
-          </button>
-          {cert.image_url && (
-            <a
-              href={cert.image_url}
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="rounded-lg p-2 hover:bg-white/10"
-              aria-label={lang === "ar" ? "تحميل" : "Download"}
-            >
-              <Download className="size-5" />
-            </a>
+          {/* Zoom and download are withdrawn while the blur is on — leaving
+              them would just hand back the unobscured scan and make the blur
+              pointless. */}
+          {!BLUR_CERT_IMAGES && (
+            <>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.max(1, +(z - 0.25).toFixed(2)))}
+                disabled={!cert.image_url}
+                className="rounded-lg p-2 hover:bg-white/10 disabled:opacity-30"
+                aria-label={lang === "ar" ? "تصغير" : "Zoom out"}
+              >
+                <ZoomOut className="size-5" />
+              </button>
+              <span className="w-12 text-center text-xs tabular-nums text-white/70">
+                {Math.round(zoom * 100)}%
+              </span>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))}
+                disabled={!cert.image_url}
+                className="rounded-lg p-2 hover:bg-white/10 disabled:opacity-30"
+                aria-label={lang === "ar" ? "تكبير" : "Zoom in"}
+              >
+                <ZoomIn className="size-5" />
+              </button>
+              {cert.image_url && (
+                <a
+                  href={cert.image_url}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="rounded-lg p-2 hover:bg-white/10"
+                  aria-label={lang === "ar" ? "تحميل" : "Download"}
+                >
+                  <Download className="size-5" />
+                </a>
+              )}
+            </>
           )}
           <button
             type="button"
@@ -203,14 +243,33 @@ function Lightbox({
         )}
 
         {cert.image_url ? (
-          <img
-            src={cert.image_url}
-            alt={title}
-            onClick={(e) => e.stopPropagation()}
-            referrerPolicy="no-referrer"
-            style={{ transform: `scale(${zoom})` }}
-            className="max-h-full max-w-full origin-center rounded-lg object-contain transition-transform"
-          />
+          <div className="relative flex max-h-full max-w-full items-center justify-center">
+            <img
+              src={cert.image_url}
+              alt={title}
+              onClick={(e) => e.stopPropagation()}
+              referrerPolicy="no-referrer"
+              style={{ transform: `scale(${BLUR_CERT_IMAGES ? 1 : zoom})` }}
+              className={`max-h-full max-w-full origin-center rounded-lg object-contain transition-transform ${
+                BLUR_CERT_IMAGES ? "blur-xl" : ""
+              }`}
+            />
+            {BLUR_CERT_IMAGES && (
+              <div
+                onClick={(e) => e.stopPropagation()}
+                className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-lg bg-[#1C1B19]/45 p-6 text-center backdrop-blur-sm"
+              >
+                <EyeOff className="size-9 text-[#c9a986]" />
+                <div className="text-base font-bold text-white">{title}</div>
+                {issuer && <div className="text-sm text-white/70">{issuer}</div>}
+                <div className="max-w-xs text-xs leading-relaxed text-white/55">
+                  {lang === "ar"
+                    ? "صورة الشهادة مخفية مؤقتاً. للتحقق من الشهادة، تواصل مباشرة."
+                    : "This certificate image is temporarily hidden. Contact directly to verify."}
+                </div>
+              </div>
+            )}
+          </div>
         ) : (
           <div
             onClick={(e) => e.stopPropagation()}
@@ -355,9 +414,15 @@ export default function CertsShowcase({ lang }: { lang: Lang }) {
           className="mx-auto mt-2 max-w-2xl text-sm"
           style={{ color: "var(--fg-soft)" }}
         >
-          {lang === "ar"
-            ? "اضغط أي شهادة لعرضها بالحجم الكامل مع إمكانية التكبير والتحميل."
-            : "Tap any certificate to view it full-size with zoom and download."}
+          {/* The copy has to track the blur flag — promising zoom and download
+              while both are withdrawn would just be wrong. */}
+          {BLUR_CERT_IMAGES
+            ? lang === "ar"
+              ? "صور الشهادات مخفية مؤقتاً. للاطلاع عليها أو التحقق منها، تواصل مباشرة."
+              : "Certificate images are temporarily hidden. Contact directly to view or verify them."
+            : lang === "ar"
+              ? "اضغط أي شهادة لعرضها بالحجم الكامل مع إمكانية التكبير والتحميل."
+              : "Tap any certificate to view it full-size with zoom and download."}
         </motion.p>
       </motion.div>
 
