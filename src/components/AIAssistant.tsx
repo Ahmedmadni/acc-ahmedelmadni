@@ -232,10 +232,14 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                       <Sparkles className="size-3" />
                       {lang === "ar" ? "مرحباً" : "Welcome"}
                     </div>
+                    {/* Sets the expectation up front — Saudi dialect, and
+                        explicitly scoped to accounting and Ahmed's services —
+                        so the assistant's refusals later don't come as a
+                        surprise to the visitor. */}
                     <p className="leading-relaxed">
                       {lang === "ar"
-                        ? "مرحباً! أنا مساعد أحمد المدني الذكي، خبير في المحاسبة والمعايير المحاسبية. كيف يمكنني مساعدتك اليوم؟ يمكنك سؤالي عن خدمة محددة أو معيار محاسبي أو طلب التواصل المباشر."
-                        : "Hi! I'm Ahmed Elmadani's AI assistant — an expert in accounting and standards. How can I help today? Ask about a specific service, an accounting standard, or request a direct contact."}
+                        ? "يا هلا فيك! أنا مساعد أحمد المدني، متخصص بس في المحاسبة والزكاة والضريبة والتقارير المالية وخدمات أحمد. وش أقدر أساعدك فيه؟"
+                        : "Welcome! I'm Ahmed Elmadani's assistant — I only cover accounting, zakat & tax, financial reporting, and Ahmed's services. How can I help?"}
                     </p>
                     <div className="mt-3 flex flex-wrap gap-1.5">
                       {(lang === "ar"
