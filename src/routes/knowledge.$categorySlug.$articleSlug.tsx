@@ -157,6 +157,42 @@ function slugifyHeading(s: string, i: number) {
   return `h-${i}-${s.replace(/\s+/g, "-").slice(0, 40)}`;
 }
 
+/**
+ * Renders `**bold**` spans inline. Article content stores plain text with
+ * light markdown-style emphasis (source articles use `**term**` to flag key
+ * terms within a callout) — there was no parser for it before, so it was
+ * rendering as literal asterisks.
+ */
+function renderInline(text: string) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
+type ParsedListItem = { marker: "number" | "bullet"; number?: string; text: string };
+
+/** Strips a leading `1. ` or `* ` marker so numbered/bulleted paragraphs can
+ * get their own layout instead of rendering as a flat block of text with a
+ * literal digit or asterisk at the front. */
+function parseListItem(p: string): ParsedListItem | null {
+  const numbered = p.match(/^(\d+)\.\s+(.*)$/s);
+  if (numbered) return { marker: "number", number: numbered[1], text: numbered[2] };
+  const bulleted = p.match(/^[*•-]\s+(.*)$/s);
+  if (bulleted) return { marker: "bullet", text: bulleted[1] };
+  return null;
+}
+
+/** Recommendation-style sections ("التوصيات العملية" and variants) get a
+ * highlighted card instead of blending into the flow of plain paragraphs —
+ * they're the section a reader is meant to act on. */
+function isRecommendationsHeading(heading: string) {
+  return heading.includes("توصي");
+}
+
 function ArticlePage() {
   const { categorySlug, articleSlug } = Route.useParams();
   const qc = useQueryClient();
@@ -602,16 +638,50 @@ function ArticlePage() {
 
           {/* Article content */}
           <div className="article-body min-w-0 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-6 leading-loose text-[#1C1B19] sm:p-8">
-            {sections.map((s, i) => (
-              <section key={i} className="mb-8 scroll-mt-32" id={slugifyHeading(s.heading, i)}>
-                <h2 className="mb-3 font-display text-2xl font-bold text-[#1C1B19]">{s.heading}</h2>
-                {sectionParagraphs(s).map((p, j) => (
-                  <p key={j} className="mb-3 text-[15px] leading-loose text-[#2e2a25]">
-                    {p}
-                  </p>
-                ))}
-              </section>
-            ))}
+            {sections.map((s, i) => {
+              const recommendations = isRecommendationsHeading(s.heading);
+              const paragraphs = sectionParagraphs(s);
+              const items = paragraphs.map(parseListItem);
+              // Only treat the section as a list if every paragraph parsed as
+              // one — a mix would mean the numbering is incidental text, not
+              // a real list.
+              const isList = items.length > 0 && items.every((it): it is ParsedListItem => !!it);
+
+              return (
+                <section
+                  key={i}
+                  className={`mb-8 scroll-mt-32 ${recommendations ? "rounded-xl border border-[#A88765]/30 bg-[#F5F1EB] p-6" : ""}`}
+                  id={slugifyHeading(s.heading, i)}
+                >
+                  <h2 className="mb-3 font-display text-2xl font-bold text-[#1C1B19]">
+                    {s.heading}
+                  </h2>
+                  {isList ? (
+                    <ul className="space-y-3">
+                      {items.map((it, j) => (
+                        <li key={j} className="flex items-start gap-3">
+                          <span
+                            aria-hidden
+                            className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-[#A88765]/15 text-[12px] font-bold text-[#7c6045]"
+                          >
+                            {it!.marker === "number" ? it!.number : "•"}
+                          </span>
+                          <span className="text-[15px] leading-loose text-[#2e2a25]">
+                            {renderInline(it!.text)}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    paragraphs.map((p, j) => (
+                      <p key={j} className="mb-3 text-[15px] leading-loose text-[#2e2a25]">
+                        {renderInline(p)}
+                      </p>
+                    ))
+                  )}
+                </section>
+              );
+            })}
 
             {/* FAQ */}
             {faq.length > 0 && (
