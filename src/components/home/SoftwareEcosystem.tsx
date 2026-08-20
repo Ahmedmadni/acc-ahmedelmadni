@@ -37,7 +37,10 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
   });
 
   return (
-    <section id="software" className="relative z-10 bg-[#F5F2ED]">
+    <section
+      id="software"
+      className="relative z-10 bg-[#F5F2ED] lg:rounded-t-[2.5rem] lg:shadow-[0_-24px_60px_-30px_rgba(15,14,13,0.35)]"
+    >
       {/* Mobile & tablet (<lg): a compact, native swipeable carousel.
           The desktop version below drives its transitions from page-scroll
           position (scroll-jacking a `min-h-[500vh]` sticky track) — on touch
@@ -49,13 +52,12 @@ export function SoftwareEcosystem({ lang }: { lang: Lang }) {
           well. */}
       <MobileSoftwareCarousel lang={lang} />
 
-      {/* Desktop (lg+): sticky-scroll stacked-card showcase, unchanged. */}
+      {/* Desktop (lg+): sticky-scroll stacked-card showcase. A crisp rounded
+          top edge + defined shadow (set on the section itself, above) reads
+          as a sheet lifting over the outgoing Services layer as it slides
+          into place — replacing a gradient fade that used to blend into the
+          Services layer's own dim overlay into a muddy, foggy handoff. */}
       <div className="relative hidden overflow-x-clip lg:block">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#1C1B19] to-transparent"
-        />
-
         <div
           ref={sectionRef}
           className="relative mx-auto min-h-[500vh] w-full max-w-[90rem] px-4 sm:px-8 lg:px-12"

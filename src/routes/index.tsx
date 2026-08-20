@@ -254,10 +254,16 @@ function isEidSeason(): boolean {
  * `position: sticky` does the actual "cover" — it pins the section at the
  * viewport top only for the scroll range spanning its own box height, then
  * releases naturally once the next section's opaque background reaches it.
- * A small scroll-linked scale + dim on top sells the depth. Desktop/tablet
- * only (`lg:` and up) and skipped entirely under reduced motion — mobile
- * keeps plain document flow, per the "no cinematic effect on small screens"
- * requirement.
+ *
+ * The handoff reads as a "sheet lifting into place" rather than a haze: a
+ * small scroll-linked scale-down sells the outgoing section receding, and a
+ * crisp, well-defined shadow band (not a translucent wash) grows in along
+ * its bottom edge to sell the incoming section casting a shadow as it slides
+ * over — a black overlay across the whole section previously blended with
+ * the next section's own top fade into a muddy, foggy handoff; a bounded
+ * shadow strip stays legible instead. Desktop/tablet only (`lg:` and up) and
+ * skipped entirely under reduced motion — mobile keeps plain document flow,
+ * per the "no cinematic effect on small screens" requirement.
  */
 function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -277,7 +283,7 @@ function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
     offset: ["start start", "end start"],
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.97]);
-  const dim = useTransform(scrollYProgress, [0, 1], [0, 0.35]);
+  const shadowOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   if (reduce || !cinematic) {
     return <div ref={ref}>{children}</div>;
@@ -288,8 +294,8 @@ function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
       <motion.div style={{ scale }}>{children}</motion.div>
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-black"
-        style={{ opacity: dim }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0F0E0D]/45 to-transparent"
+        style={{ opacity: shadowOpacity }}
       />
     </div>
   );
