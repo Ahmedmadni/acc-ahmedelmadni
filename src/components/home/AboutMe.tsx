@@ -121,18 +121,20 @@ export function AboutMe({ lang }: { lang: Lang }) {
     >
       <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         <div
-          className="grid items-center gap-14 lg:grid-cols-12 lg:gap-16"
+          className="grid items-center gap-14 lg:grid-cols-12 lg:items-stretch lg:gap-16"
           onPointerMove={parallaxActive ? onPointerMove : undefined}
           onPointerLeave={parallaxActive ? onPointerLeave : undefined}
         >
-          {/* Personal statement — first in the DOM, so it lands on the
-              visual right in this RTL layout. */}
+          {/* Personal statement + expertise + stats — first in the DOM, so
+              it lands on the visual right in this RTL layout, and now holds
+              *all* the section's content so it reads to the right of the
+              portrait, not just the intro paragraph. */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.35 }}
             style={parallaxActive ? { x: colAX, y: colAY } : undefined}
-            className="order-2 lg:order-1 lg:col-span-6"
+            className="order-2 lg:order-1 lg:col-span-7"
           >
             <motion.p
               variants={fadeUp(m.reduce, 0, 8, 0.4)}
@@ -182,63 +184,66 @@ export function AboutMe({ lang }: { lang: Lang }) {
                 </RouterLink>
               </motion.span>
             </motion.div>
+
+            {/* Expertise grid + real experience stats — now nested inside the
+                content column so they stay to the right of the portrait
+                (in RTL) instead of spanning full width beneath it. */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25 }}
+              className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:mt-14"
+            >
+              {EXPERTISE.map((e, i) => (
+                <motion.div
+                  key={e.en}
+                  custom={i}
+                  variants={expertiseItemVariants(m.reduce)}
+                  className="rounded-2xl border border-[#E3DED7] bg-white px-4 py-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_18px_40px_-24px_rgba(74,48,35,0.5)]"
+                >
+                  <span className="text-[13px] font-bold leading-snug text-[#1C1B19]">
+                    {ar ? e.ar : e.en}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              className="mt-8 grid grid-cols-2 gap-4 border-t border-[#E3DED7] pt-6 sm:mt-10 sm:gap-6 sm:pt-8"
+            >
+              {[dominant, ...supporting].map((s, i) => (
+                <motion.div key={s.en} variants={statVariants(m.reduce, i * 0.08)}>
+                  {/* `leading-none` sets the line box to exactly the font size,
+                      which shaves the digits' ink (measured ~1.17× the size on
+                      this face) — the same clipping already fixed on the About
+                      page's figures. */}
+                  <StatCounter
+                    value={s.v}
+                    reduce={m.reduce}
+                    className="font-display block text-[1.6rem] font-bold leading-[1.2] tabular-nums text-[#76543F] sm:text-[2rem] lg:text-[2.2rem]"
+                  />
+                  <span className="mt-1.5 block text-[11.5px] leading-snug text-[#5c564e] sm:mt-2 sm:text-[12.5px]">
+                    {s[lang]}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
 
           {/* Portrait — second in the DOM, lands on the visual left; leads
-              on mobile (`order-1`) for immediate visual impact, then settles
-              into the left column once there's room for two. */}
-          <div className="order-1 lg:order-2 lg:col-span-6">
+              on mobile (`order-1`) for immediate visual impact. On desktop
+              the column stretches to the full height of the content beside
+              it (`lg:items-stretch` above) and the figure is grounded to its
+              bottom edge — the source photo is cropped at the legs, so
+              anchoring it to the bottom instead of centering it hides that
+              cut line against the section's own bottom edge instead of
+              floating it in empty space. */}
+          <div className="order-1 flex justify-center lg:order-2 lg:col-span-5">
             <PortraitTilt reduce={m.reduce} pointerCapable={pointerCapable} lang={lang} />
           </div>
-        </div>
-
-        {/* Expertise grid + real experience stats — full width beneath the
-            statement/portrait row now that the portrait occupies what used
-            to be this content's column. */}
-        <div className="mt-14 lg:mt-20">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.25 }}
-            className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
-          >
-            {EXPERTISE.map((e, i) => (
-              <motion.div
-                key={e.en}
-                custom={i}
-                variants={expertiseItemVariants(m.reduce)}
-                className="rounded-2xl border border-[#E3DED7] bg-white px-4 py-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#A88765]/60 hover:shadow-[0_18px_40px_-24px_rgba(74,48,35,0.5)]"
-              >
-                <span className="text-[13px] font-bold leading-snug text-[#1C1B19]">
-                  {ar ? e.ar : e.en}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            className="mt-8 grid grid-cols-2 gap-4 border-t border-[#E3DED7] pt-6 sm:mt-10 sm:gap-6 sm:pt-8 lg:grid-cols-4"
-          >
-            {[dominant, ...supporting].map((s, i) => (
-              <motion.div key={s.en} variants={statVariants(m.reduce, i * 0.08)}>
-                {/* `leading-none` sets the line box to exactly the font size,
-                    which shaves the digits' ink (measured ~1.17× the size on
-                    this face) — the same clipping already fixed on the About
-                    page's figures. */}
-                <StatCounter
-                  value={s.v}
-                  reduce={m.reduce}
-                  className="font-display block text-[1.6rem] font-bold leading-[1.2] tabular-nums text-[#76543F] sm:text-[2rem] lg:text-[2.2rem]"
-                />
-                <span className="mt-1.5 block text-[11.5px] leading-snug text-[#5c564e] sm:mt-2 sm:text-[12.5px]">
-                  {s[lang]}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>
@@ -295,7 +300,7 @@ function PortraitTilt({
       whileInView={reduce ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: reduce ? 0.3 : 0.8, ease: EASE.emphasis, delay: 0.12 }}
-      className="relative mx-auto flex max-w-md justify-center"
+      className="relative flex w-full justify-center lg:h-full"
       style={{ perspective: 1200 }}
     >
       {/* Ambient bronze glow behind the figure */}
@@ -314,8 +319,16 @@ function PortraitTilt({
           rotateY: tiltActive ? rotateY : 0,
           transformStyle: "preserve-3d",
         }}
-        className="relative"
+        className="relative lg:h-full lg:w-full"
       >
+        {/* Enlarged and grounded to the column's bottom edge: below `lg` the
+            figure is width-capped like before, but at `lg` this box fills
+            the full height *and* width of the (now taller, since expertise
+            + stats moved into the text column) content column beside it —
+            `object-contain` scales the photo to fit that box without
+            distortion, and `object-bottom` keeps it flush with the box's
+            bottom edge, so the more content the column holds, the larger
+            the portrait reads, always grounded at its base. */}
         <img
           src={portraitImg}
           alt={ar ? "أحمد المدني" : "Ahmed Elmadani"}
@@ -323,7 +336,7 @@ function PortraitTilt({
           height={1042}
           loading="eager"
           decoding="async"
-          className="relative h-auto w-full max-w-[22rem] drop-shadow-[0_35px_45px_rgba(28,27,25,0.28)] sm:max-w-[24rem] lg:max-w-[26rem]"
+          className="relative h-auto w-full max-w-[26rem] object-contain drop-shadow-[0_35px_45px_rgba(28,27,25,0.28)] sm:max-w-[30rem] lg:h-full lg:w-full lg:max-w-none lg:object-bottom"
         />
 
         {/* Cursor-tracking glare — purely decorative, so it's excluded from
