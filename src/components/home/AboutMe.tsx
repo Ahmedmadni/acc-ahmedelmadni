@@ -5,7 +5,12 @@ import { Link as RouterLink } from "@tanstack/react-router";
 import { t, type Lang } from "@/lib/i18n";
 import { EASE, springSoft, useMotionSafe } from "@/lib/motion";
 import { playClick, playHover } from "@/lib/sound";
-import portraitImg from "@/assets/right.png";
+import portraitImg from "@/assets/ahmed-portrait.webp";
+
+/** Native aspect ratio of the cropped portrait asset (w/h) — the frame and
+ * front pedestal below are positioned as percentages of this exact box, so
+ * they line up with the figure's shoulders/hips at every breakpoint. */
+const PORTRAIT_RATIO = 415 / 978;
 
 /**
  * Homepage "About Me" — a full personal introduction placed directly after
@@ -121,7 +126,7 @@ export function AboutMe({ lang }: { lang: Lang }) {
     >
       <div className="mx-auto w-full max-w-[80rem] px-4 sm:px-8 lg:px-12">
         <div
-          className="grid items-center gap-14 lg:grid-cols-12 lg:items-stretch lg:gap-16"
+          className="grid items-center gap-14 lg:grid-cols-12 lg:items-end lg:gap-16"
           onPointerMove={parallaxActive ? onPointerMove : undefined}
           onPointerLeave={parallaxActive ? onPointerLeave : undefined}
         >
@@ -234,13 +239,10 @@ export function AboutMe({ lang }: { lang: Lang }) {
           </motion.div>
 
           {/* Portrait — second in the DOM, lands on the visual left; leads
-              on mobile (`order-1`) for immediate visual impact. On desktop
-              the column stretches to the full height of the content beside
-              it (`lg:items-stretch` above) and the figure is grounded to its
-              bottom edge — the source photo is cropped at the legs, so
-              anchoring it to the bottom instead of centering it hides that
-              cut line against the section's own bottom edge instead of
-              floating it in empty space. */}
+              on mobile (`order-1`) for immediate visual impact. The column
+              aligns to the bottom of the row (`lg:items-end` above) so the
+              framed card grounds against the same baseline as the text
+              column beside it. */}
           <div className="order-1 flex justify-center lg:order-2 lg:col-span-5">
             <PortraitTilt reduce={m.reduce} pointerCapable={pointerCapable} lang={lang} />
           </div>
@@ -251,13 +253,16 @@ export function AboutMe({ lang }: { lang: Lang }) {
 }
 
 /**
- * The portrait: a soft ambient glow + a grounding shadow behind a
- * transparent-background cutout, with a pointer-driven 3D tilt (fine-pointer
- * + motion-safe only) — rotateY follows horizontal cursor position, rotateX
- * follows vertical, both sprung for a smooth settle rather than snapping.
- * A small glare highlight tracks the cursor across the figure for the
- * "premium card" read, and a light entrance (scale + rise) matches the
- * weight this element carries as the section's visual anchor.
+ * The portrait: a defined bronze→charcoal panel *behind* the figure and a
+ * matching pedestal band *in front* of it give the cutout real depth instead
+ * of floating loose on the page — the figure visibly breaks out above the
+ * panel's top edge (head + shoulders in front of empty space) while the
+ * pedestal band overlaps *in front of* the lower crop, standing in for a
+ * clean edge where the source photo itself is cut off mid-thigh. A
+ * pointer-driven 3D tilt (fine-pointer + motion-safe only) moves the whole
+ * card as one plane — rotateY follows horizontal cursor position, rotateX
+ * follows vertical, both sprung for a smooth settle rather than snapping. A
+ * small glare highlight tracks the cursor for the "premium card" read.
  */
 function PortraitTilt({
   reduce,
@@ -300,10 +305,10 @@ function PortraitTilt({
       whileInView={reduce ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: reduce ? 0.3 : 0.8, ease: EASE.emphasis, delay: 0.12 }}
-      className="relative flex w-full justify-center lg:h-full"
+      className="relative w-full max-w-[17rem] sm:max-w-[20rem] lg:max-w-[23rem]"
       style={{ perspective: 1200 }}
     >
-      {/* Ambient bronze glow behind the figure */}
+      {/* Ambient bronze glow behind the whole card */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(168,135,101,0.22),transparent_72%)] blur-2xl"
@@ -315,28 +320,43 @@ function PortraitTilt({
         whileHover={reduce ? undefined : { scale: 1.015 }}
         transition={springSoft}
         style={{
+          aspectRatio: PORTRAIT_RATIO,
           rotateX: tiltActive ? rotateX : 0,
           rotateY: tiltActive ? rotateY : 0,
           transformStyle: "preserve-3d",
         }}
-        className="relative lg:h-full lg:w-full"
+        className="relative w-full"
       >
-        {/* Enlarged and grounded to the column's bottom edge: below `lg` the
-            figure is width-capped like before, but at `lg` this box fills
-            the full height *and* width of the (now taller, since expertise
-            + stats moved into the text column) content column beside it —
-            `object-contain` scales the photo to fit that box without
-            distortion, and `object-bottom` keeps it flush with the box's
-            bottom edge, so the more content the column holds, the larger
-            the portrait reads, always grounded at its base. */}
+        {/* Backing panel — sits BEHIND the figure, starting right at
+            shoulder height so the head clears its top edge and reads in
+            front of open space, while the torso below sits in front of the
+            panel's face. Inset a touch narrower than the card so it frames
+            rather than exactly traces the figure's own width. */}
+        <div
+          aria-hidden
+          className="absolute inset-x-[4%] z-0 rounded-t-[2.5rem] rounded-b-2xl bg-gradient-to-b from-[#B99A78] via-[#8A6B4D] to-[#20180F] shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]"
+          style={{ top: "23%", bottom: "3%" }}
+        />
+
         <img
           src={portraitImg}
           alt={ar ? "أحمد المدني" : "Ahmed Elmadani"}
-          width={831}
-          height={1042}
+          width={415}
+          height={978}
           loading="eager"
           decoding="async"
-          className="relative h-auto w-full max-w-[26rem] object-contain drop-shadow-[0_35px_45px_rgba(28,27,25,0.28)] sm:max-w-[30rem] lg:h-full lg:w-full lg:max-w-none lg:object-bottom"
+          className="absolute inset-0 z-10 h-full w-full object-contain drop-shadow-[0_30px_40px_rgba(28,27,25,0.3)]"
+        />
+
+        {/* Pedestal band — sits IN FRONT of the figure, standing in for a
+            deliberate crop where the source photo is cut off mid-thigh. Same
+            gradient family as the backing panel so the two feel like one
+            continuous shape the figure passes through, not two unrelated
+            elements. */}
+        <div
+          aria-hidden
+          className="absolute inset-x-[4%] z-20 rounded-b-2xl bg-gradient-to-b from-[#2A2018] to-[#151110]"
+          style={{ top: "84%", bottom: "-1%" }}
         />
 
         {/* Cursor-tracking glare — purely decorative, so it's excluded from
@@ -344,35 +364,36 @@ function PortraitTilt({
         {tiltActive && (
           <motion.div
             aria-hidden
-            className="pointer-events-none absolute inset-0"
+            className="pointer-events-none absolute inset-0 z-30"
             style={{ background: glareBg, mixBlendMode: "overlay" }}
           />
         )}
+
+        {/* Availability chip — pinned to the pedestal band, the one accent
+            on the composition; the stats band in the text column already
+            carries the numbers, so this stays to a single, real status
+            line rather than adding a second badge. */}
+        <motion.div
+          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
+          whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: reduce ? 0.2 : 0.5, ease: EASE.out, delay: 0.5 }}
+          className="absolute inset-x-0 bottom-[4%] z-30 mx-auto flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/95 px-3.5 py-2 text-[12px] font-semibold text-[#1C1B19] shadow-[0_10px_30px_-12px_rgba(0,0,0,0.5)] backdrop-blur"
+        >
+          <span className="relative flex size-2">
+            <span className="absolute inline-flex size-full animate-ping motion-reduce:animate-none rounded-full bg-emerald-500/60" />
+            <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+          </span>
+          {ar ? "متاح للعمل" : "Available for work"}
+        </motion.div>
       </motion.div>
 
-      {/* Grounding shadow beneath the figure — reads as contact with the
-          surface instead of a cutout floating with nothing beneath it. */}
+      {/* Grounding shadow beneath the whole card — reads as contact with the
+          surface instead of a card floating with nothing beneath it. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-2 left-1/2 h-8 w-2/3 -translate-x-1/2 rounded-full bg-[#1C1B19]/15 blur-xl"
+        className="pointer-events-none absolute -bottom-3 left-1/2 h-8 w-2/3 -translate-x-1/2 rounded-full bg-[#1C1B19]/20 blur-xl"
       />
-
-      {/* Availability chip — the one accent on the composition; the stats
-          band right below already carries the numbers, so this stays to a
-          single, real status line rather than adding a second badge. */}
-      <motion.div
-        initial={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
-        whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: reduce ? 0.2 : 0.5, ease: EASE.out, delay: 0.5 }}
-        className="absolute bottom-4 start-2 flex items-center gap-2 rounded-full border border-[#E3DED7] bg-white/90 px-3.5 py-2 text-[12px] font-semibold text-[#1C1B19] shadow-[0_10px_30px_-12px_rgba(28,27,25,0.35)] backdrop-blur"
-      >
-        <span className="relative flex size-2">
-          <span className="absolute inline-flex size-full animate-ping motion-reduce:animate-none rounded-full bg-emerald-500/60" />
-          <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-        </span>
-        {ar ? "متاح للعمل" : "Available for work"}
-      </motion.div>
     </motion.div>
   );
 }
