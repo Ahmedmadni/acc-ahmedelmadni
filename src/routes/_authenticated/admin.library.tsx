@@ -10,6 +10,8 @@ import {
   deleteLibraryItemFn,
   togglePublishItemFn,
   generateLibraryItemAIFn,
+  createManualArticleFn,
+  listArticleCategoriesFn,
   updateArticleFn,
   deleteArticleFn,
   uploadLibraryPdfFn,
@@ -590,6 +592,8 @@ function ArticlesPanel() {
   const updFn = useServerFn(updateArticleFn);
   const delFn = useServerFn(deleteArticleFn);
   const revFn = useServerFn(reviewArticleFn);
+  const createFn = useServerFn(createManualArticleFn);
+  const categoriesFn = useServerFn(listArticleCategoriesFn);
 
   const [page, setPage] = useState(0);
   const { data, isLoading, isError } = useQuery({
@@ -597,6 +601,26 @@ function ArticlesPanel() {
     queryFn: () => listFn({ data: { page } }),
   });
   const articles = data?.articles ?? [];
+  const categories = useQuery({
+    queryKey: ["admin-article-categories"],
+    queryFn: () => categoriesFn(),
+  });
+
+  const [createOpen, setCreateOpen] = useState(false);
+  const [manualForm, setManualForm] = useState({
+    slug: "",
+    category_id: "",
+    title_ar: "",
+    title_en: "",
+    excerpt_ar: "",
+    excerpt_en: "",
+    content_ar: "",
+    meta_title: "",
+    meta_description: "",
+    author_name: "أحمد المدني",
+    reading_minutes: 5,
+    status: "draft" as "draft" | "published",
+  });
 
   const [editOpen, setEditOpen] = useState(false);
   const [editing, setEditing] = useState<{ id: string; title_ar: string; status: string } | null>(
@@ -639,6 +663,30 @@ function ArticlesPanel() {
     onError: (e) => toast.error((e as Error).message),
   });
 
+  const createManual = useMutation({
+    mutationFn: () => createFn({ data: manualForm }),
+    onSuccess: () => {
+      toast.success("تمت إضافة المقال يدويًا");
+      qc.invalidateQueries({ queryKey: ["admin-articles"] });
+      setCreateOpen(false);
+      setManualForm({
+        slug: "",
+        category_id: "",
+        title_ar: "",
+        title_en: "",
+        excerpt_ar: "",
+        excerpt_en: "",
+        content_ar: "",
+        meta_title: "",
+        meta_description: "",
+        author_name: "أحمد المدني",
+        reading_minutes: 5,
+        status: "draft",
+      });
+    },
+    onError: (e) => toast.error((e as Error).message),
+  });
+
   const openEdit = (a: { id: string; title_ar: string; status: string }) => {
     setEditing(a);
     setTitleEdit(a.title_ar);
@@ -652,12 +700,21 @@ function ArticlesPanel() {
         <div className="text-sm text-white/60">
           عدد المقالات: <span className="font-bold text-white">{articles.length}</span>
         </div>
-        <Link
-          to="/admin/knowledge"
-          className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-sm font-bold text-[#1C1B19]"
-        >
-          <Sparkles className="size-4" /> توليد مقال جديد بالـ AI
-        </Link>
+        <div className="flex flex-wrap gap-2">
+          <Button
+            type="button"
+            onClick={() => setCreateOpen(true)}
+            className="bg-[#FCFBF9] text-[#1C1B19] hover:bg-[#F5F1EB]"
+          >
+            <Plus className="size-4" /> إضافة مقال يدويًا
+          </Button>
+          <Link
+            to="/admin/knowledge"
+            className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-sm font-bold text-[#1C1B19]"
+          >
+            <Sparkles className="size-4" /> توليد مقال جديد بالـ AI
+          </Link>
+        </div>
       </div>
 
       <div className="overflow-hidden rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9]">
@@ -765,6 +822,157 @@ function ArticlesPanel() {
           </div>
         )}
       </div>
+
+      <Dialog open={createOpen} onOpenChange={setCreateOpen}>
+        <DialogContent
+          className="max-h-[90vh] max-w-3xl overflow-y-auto bg-[#1C1B19] text-[#FCFBF9]"
+          dir="rtl"
+        >
+          <DialogHeader>
+            <DialogTitle className="text-[#c9a986]">إضافة مقال يدويًا</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field label="العنوان بالعربية *">
+              <Input
+                value={manualForm.title_ar}
+                onChange={(e) =>
+                  setManualForm((f) => ({ ...f, title_ar: e.target.value }))
+                }
+                className="border-[#A88765]/25 bg-[#24211E]"
+              />
+            </Field>
+            <Field label="العنوان بالإنجليزية">
+              <Input
+                value={manualForm.title_en}
+                onChange={(e) =>
+                  setManualForm((f) => ({ ...f, title_en: e.target.value }))
+                }
+                className="border-[#A88765]/25 bg-[#24211E]"
+                dir="ltr"
+              />
+            </Field>
+            <Field label="الرابط المختصر بالإنجليزية *">
+              <Input
+                value={manualForm.slug}
+                onChange={(e) =>
+                  setManualForm((f) => ({
+                    ...f,
+                    slug: e.target.value.toLowerCase().replace(/\s+/g, "-"),
+                  }))
+                }
+                placeholder="article-title"
+                className="border-[#A88765]/25 bg-[#24211E]"
+                dir="ltr"
+              />
+            </Field>
+            <Field label="التصنيف *">
+              <Select
+                value={manualForm.category_id}
+                onValueChange={(category_id) =>
+                  setManualForm((f) => ({ ...f, category_id }))
+                }
+              >
+                <SelectTrigger className="border-[#A88765]/25 bg-[#24211E]">
+                  <SelectValue
+                    placeholder={categories.isLoading ? "جارٍ التحميل..." : "اختر التصنيف"}
+                  />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.data?.categories.map((category) => (
+                    <SelectItem key={category.id} value={category.id}>
+                      {category.name_ar}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </Field>
+            <div className="sm:col-span-2">
+              <Field label="الملخص بالعربية *">
+                <Textarea
+                  value={manualForm.excerpt_ar}
+                  onChange={(e) =>
+                    setManualForm((f) => ({ ...f, excerpt_ar: e.target.value }))
+                  }
+                  className="border-[#A88765]/25 bg-[#24211E]"
+                  rows={3}
+                />
+              </Field>
+            </div>
+            <div className="sm:col-span-2">
+              <Field label="محتوى المقال بالعربية * (افصل الفقرات بسطر فارغ)">
+                <Textarea
+                  value={manualForm.content_ar}
+                  onChange={(e) =>
+                    setManualForm((f) => ({ ...f, content_ar: e.target.value }))
+                  }
+                  className="min-h-64 border-[#A88765]/25 bg-[#24211E]"
+                />
+              </Field>
+            </div>
+            <Field label="اسم الكاتب">
+              <Input
+                value={manualForm.author_name}
+                onChange={(e) =>
+                  setManualForm((f) => ({ ...f, author_name: e.target.value }))
+                }
+                className="border-[#A88765]/25 bg-[#24211E]"
+              />
+            </Field>
+            <Field label="مدة القراءة بالدقائق">
+              <Input
+                type="number"
+                min={1}
+                max={120}
+                value={manualForm.reading_minutes}
+                onChange={(e) =>
+                  setManualForm((f) => ({ ...f, reading_minutes: Number(e.target.value) }))
+                }
+                className="border-[#A88765]/25 bg-[#24211E]"
+              />
+            </Field>
+            <Field label="الحالة">
+              <Select
+                value={manualForm.status}
+                onValueChange={(status: "draft" | "published") =>
+                  setManualForm((f) => ({ ...f, status }))
+                }
+              >
+                <SelectTrigger className="border-[#A88765]/25 bg-[#24211E]">
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="draft">مسودة</SelectItem>
+                  <SelectItem value="published">نشر مباشرة</SelectItem>
+                </SelectContent>
+              </Select>
+            </Field>
+          </div>
+          <DialogFooter>
+            <Button type="button" variant="outline" onClick={() => setCreateOpen(false)}>
+              إلغاء
+            </Button>
+            <Button
+              type="button"
+              disabled={
+                createManual.isPending ||
+                !manualForm.category_id ||
+                !manualForm.title_ar ||
+                !manualForm.slug ||
+                manualForm.excerpt_ar.length < 10 ||
+                manualForm.content_ar.length < 20
+              }
+              onClick={() => createManual.mutate()}
+              className="bg-gradient-to-br from-[#c2a079] to-[#7c6045] text-[#1C1B19]"
+            >
+              {createManual.isPending
+                ? "جارٍ الحفظ..."
+                : manualForm.status === "published"
+                  ? "حفظ ونشر"
+                  : "حفظ كمسودة"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       <Dialog open={editOpen} onOpenChange={setEditOpen}>
         <DialogContent className="bg-[#1C1B19] text-[#FCFBF9]" dir="rtl">

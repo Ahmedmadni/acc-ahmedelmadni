@@ -209,6 +209,76 @@ ${data.url ? `الرابط المرجعي: ${data.url}` : ""}
   });
 
 // ============ Articles CRUD additions ============
+const ManualArticleSchema = z.object({
+  slug: z
+    .string()
+    .min(3)
+    .max(160)
+    .regex(
+      /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+      "الرابط المختصر يقبل الأحرف الإنجليزية والأرقام والشرطات فقط",
+    ),
+  category_id: z.string().uuid(),
+  title_ar: z.string().min(3).max(200),
+  title_en: z.string().max(200).optional(),
+  excerpt_ar: z.string().min(10).max(800),
+  excerpt_en: z.string().max(800).optional(),
+  content_ar: z.string().min(20).max(50000),
+  meta_title: z.string().max(120).optional(),
+  meta_description: z.string().max(300).optional(),
+  author_name: z.string().min(2).max(120).default("أحمد المدني"),
+  reading_minutes: z.number().int().min(1).max(120).default(5),
+  status: z.enum(["draft", "published"]).default("draft"),
+});
+
+export const listArticleCategoriesFn = createServerFn({ method: "GET" })
+  .middleware([requireAdmin])
+  .handler(async ({ context }) => {
+    const { data, error } = await context.supabase
+      .from("kb_categories")
+      .select("id,slug,name_ar")
+      .order("sort_order");
+    if (error) throw new Error(error.message);
+    return { categories: data ?? [] };
+  });
+
+export const createManualArticleFn = createServerFn({ method: "POST" })
+  .middleware([requireAdmin])
+  .inputValidator((input: unknown) => ManualArticleSchema.parse(input))
+  .handler(async ({ data, context }) => {
+    const paragraphs = data.content_ar
+      .split(/\n\s*\n/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+    const now = new Date().toISOString();
+    const payload = {
+      slug: data.slug,
+      category_id: data.category_id,
+      title_ar: data.title_ar,
+      title_en: data.title_en?.trim() || data.title_ar,
+      excerpt_ar: data.excerpt_ar,
+      excerpt_en: data.excerpt_en?.trim() || data.excerpt_ar,
+      content_ar: [{ heading: data.title_ar, paragraphs }],
+      meta_title: data.meta_title?.trim() || data.title_ar.slice(0, 120),
+      meta_description: data.meta_description?.trim() || data.excerpt_ar.slice(0, 300),
+      author_name: data.author_name,
+      reading_minutes: data.reading_minutes,
+      status: data.status,
+      published_at: now,
+      generation_source: "manual",
+    };
+    const { data: article, error } = await context.supabase
+      .from("kb_articles")
+      .insert(payload as never)
+      .select("id,slug")
+      .single();
+    if (error) {
+      if (error.code === "23505") throw new Error("الرابط المختصر مستخدم في مقال آخر");
+      throw new Error(error.message);
+    }
+    return { article };
+  });
+
 const ArticlePatchSchema = z.object({
   title_ar: z.string().min(3).max(200).optional(),
   title_en: z.string().max(200).optional(),
