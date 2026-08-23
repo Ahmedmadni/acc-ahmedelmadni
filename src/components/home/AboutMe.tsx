@@ -7,10 +7,15 @@ import { EASE, springSoft, useMotionSafe } from "@/lib/motion";
 import { playClick, playHover } from "@/lib/sound";
 import portraitImg from "@/assets/ahmed-portrait.webp";
 
-/** Native aspect ratio of the cropped portrait asset (w/h) — the frame and
- * front pedestal below are positioned as percentages of this exact box, so
- * they line up with the figure's shoulders/hips at every breakpoint. */
+/** Native aspect ratio of the cropped portrait asset (w/h) — the frame below
+ * is positioned as a percentage of this exact box, so it lines up with the
+ * figure's shoulders at every breakpoint. */
 const PORTRAIT_RATIO = 415 / 978;
+
+/** An elongated, chamfered-corner octagon — the "specific geometric shape"
+ * standing in for a plain rectangle. Drawn once and reused for both the
+ * behind-figure and in-front-of-figure passes (see `PortraitTilt`). */
+const OCTAGON_PATH = "M16,0 L84,0 L100,10 L100,90 L84,100 L16,100 L0,90 L0,10 Z";
 
 /**
  * Homepage "About Me" — a full personal introduction placed directly after
@@ -253,16 +258,19 @@ export function AboutMe({ lang }: { lang: Lang }) {
 }
 
 /**
- * The portrait: a defined bronze→charcoal panel *behind* the figure and a
- * matching pedestal band *in front* of it give the cutout real depth instead
- * of floating loose on the page — the figure visibly breaks out above the
- * panel's top edge (head + shoulders in front of empty space) while the
- * pedestal band overlaps *in front of* the lower crop, standing in for a
- * clean edge where the source photo itself is cut off mid-thigh. A
- * pointer-driven 3D tilt (fine-pointer + motion-safe only) moves the whole
- * card as one plane — rotateY follows horizontal cursor position, rotateX
- * follows vertical, both sprung for a smooth settle rather than snapping. A
- * small glare highlight tracks the cursor for the "premium card" read.
+ * The portrait: a hairline geometric frame (a chamfered octagon, not a plain
+ * rectangle) traces around the figure instead of sitting inside a filled
+ * card. The same outline is drawn twice — once *behind* the figure, so it
+ * reads as a frame the head rises clear of at the top (visible only where
+ * the cutout doesn't cover it), and once more, clipped to just its bottom
+ * edge, *in front* of the figure, so that segment crosses over the lower
+ * crop like a belt line. The photo itself fades out (mask-image) right at
+ * that same crossing point, turning the source photo's abrupt mid-thigh cut
+ * into a deliberate dissolve instead of a hard edge. A pointer-driven 3D
+ * tilt (fine-pointer + motion-safe only) moves the whole card as one plane —
+ * rotateY follows horizontal cursor position, rotateX follows vertical, both
+ * sprung for a smooth settle rather than snapping. A small glare highlight
+ * tracks the cursor for the "premium card" read.
  */
 function PortraitTilt({
   reduce,
@@ -311,7 +319,7 @@ function PortraitTilt({
       {/* Ambient bronze glow behind the whole card */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(168,135,101,0.22),transparent_72%)] blur-2xl"
+        className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(168,135,101,0.16),transparent_72%)] blur-2xl"
       />
 
       <motion.div
@@ -327,16 +335,26 @@ function PortraitTilt({
         }}
         className="relative w-full"
       >
-        {/* Backing panel — sits BEHIND the figure, starting right at
-            shoulder height so the head clears its top edge and reads in
-            front of open space, while the torso below sits in front of the
-            panel's face. Inset a touch narrower than the card so it frames
-            rather than exactly traces the figure's own width. */}
-        <div
-          aria-hidden
-          className="absolute inset-x-[4%] z-0 rounded-t-[2.5rem] rounded-b-2xl bg-gradient-to-b from-[#B99A78] via-[#8A6B4D] to-[#20180F] shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]"
-          style={{ top: "23%", bottom: "3%" }}
-        />
+        {/* Frame, pass 1 — sits BEHIND the figure, starting right at
+            shoulder height so the head clears its top edge entirely and
+            reads against open space, not against the frame. Fully
+            transparent: only the hairline stroke exists, no fill. */}
+        <div aria-hidden className="absolute inset-x-[9%] z-0" style={{ top: "21%", bottom: "5%" }}>
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            fill="none"
+            className="h-full w-full"
+          >
+            <path
+              d={OCTAGON_PATH}
+              stroke="#A88765"
+              strokeWidth={1.5}
+              strokeLinejoin="round"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
+        </div>
 
         <img
           src={portraitImg}
@@ -345,19 +363,38 @@ function PortraitTilt({
           height={978}
           loading="eager"
           decoding="async"
-          className="absolute inset-0 z-10 h-full w-full object-contain drop-shadow-[0_30px_40px_rgba(28,27,25,0.3)]"
+          className="absolute inset-0 z-10 h-full w-full object-contain drop-shadow-[0_26px_34px_rgba(28,27,25,0.25)]"
+          style={{
+            maskImage: "linear-gradient(to bottom, #000 82%, transparent 98%)",
+            WebkitMaskImage: "linear-gradient(to bottom, #000 82%, transparent 98%)",
+          }}
         />
 
-        {/* Pedestal band — sits IN FRONT of the figure, standing in for a
-            deliberate crop where the source photo is cut off mid-thigh. Same
-            gradient family as the backing panel so the two feel like one
-            continuous shape the figure passes through, not two unrelated
-            elements. */}
+        {/* Frame, pass 2 — the identical outline again, clipped to just its
+            bottom edge and corners, layered IN FRONT of the figure so that
+            segment crosses the lower crop like a belt line — the same
+            outline reading as behind the figure at the shoulders and in
+            front of it at the hem is what gives the shape real depth. */}
         <div
           aria-hidden
-          className="absolute inset-x-[4%] z-20 rounded-b-2xl bg-gradient-to-b from-[#2A2018] to-[#151110]"
-          style={{ top: "84%", bottom: "-1%" }}
-        />
+          className="absolute inset-x-[9%] z-20"
+          style={{ top: "21%", bottom: "5%", clipPath: "inset(76% 0% 0% 0%)" }}
+        >
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            fill="none"
+            className="h-full w-full"
+          >
+            <path
+              d={OCTAGON_PATH}
+              stroke="#A88765"
+              strokeWidth={1.5}
+              strokeLinejoin="round"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
+        </div>
 
         {/* Cursor-tracking glare — purely decorative, so it's excluded from
             the accessibility tree and never intercepts pointer events. */}
@@ -369,16 +406,16 @@ function PortraitTilt({
           />
         )}
 
-        {/* Availability chip — pinned to the pedestal band, the one accent
-            on the composition; the stats band in the text column already
-            carries the numbers, so this stays to a single, real status
-            line rather than adding a second badge. */}
+        {/* Availability chip — the one accent on the composition; the
+            stats band in the text column already carries the numbers, so
+            this stays to a single, real status line rather than adding a
+            second badge. */}
         <motion.div
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
           whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: reduce ? 0.2 : 0.5, ease: EASE.out, delay: 0.5 }}
-          className="absolute inset-x-0 bottom-[4%] z-30 mx-auto flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/95 px-3.5 py-2 text-[12px] font-semibold text-[#1C1B19] shadow-[0_10px_30px_-12px_rgba(0,0,0,0.5)] backdrop-blur"
+          className="absolute inset-x-0 bottom-0 z-30 mx-auto flex w-fit items-center gap-2 rounded-full border border-[#E3DED7] bg-white/95 px-3.5 py-2 text-[12px] font-semibold text-[#1C1B19] shadow-[0_10px_30px_-12px_rgba(28,27,25,0.35)] backdrop-blur"
         >
           <span className="relative flex size-2">
             <span className="absolute inline-flex size-full animate-ping motion-reduce:animate-none rounded-full bg-emerald-500/60" />
@@ -392,7 +429,7 @@ function PortraitTilt({
           surface instead of a card floating with nothing beneath it. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-3 left-1/2 h-8 w-2/3 -translate-x-1/2 rounded-full bg-[#1C1B19]/20 blur-xl"
+        className="pointer-events-none absolute -bottom-3 left-1/2 h-8 w-2/3 -translate-x-1/2 rounded-full bg-[#1C1B19]/15 blur-xl"
       />
     </motion.div>
   );
