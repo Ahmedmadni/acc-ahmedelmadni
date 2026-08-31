@@ -1086,6 +1086,56 @@ export const t = {
           en: "Running cycles on Odoo, Daftra, Zoho Books, Dentech & more.",
         },
       },
+      {
+        id: "free-bookkeeping", ar: "مقدمة في مسك الدفاتر والمحاسبة", en: "Introducing Bookkeeping and Accounting",
+        cat: "fundamentals", level: "beginner", lang: "en", price: "free", lessons: 8, hours: 8,
+        desc: { ar: "مساق مجاني يشرح القيد المزدوج ودفاتر الأستاذ وميزان المراجعة من OpenLearn.", en: "A free OpenLearn course on double entry, ledgers, and the trial balance." },
+      },
+      {
+        id: "free-financial-accounting", ar: "مبادئ المحاسبة المالية", en: "Financial Accounting",
+        cat: "fundamentals", level: "beginner", lang: "en", price: "free", lessons: 10, hours: 12,
+        desc: { ar: "مساق مجاني ذاتي التعلم يغطي الدورة المحاسبية والقوائم المالية عبر Saylor Academy.", en: "A free self-paced Saylor Academy course covering the accounting cycle and statements." },
+      },
+      {
+        id: "free-managerial-accounting", ar: "مبادئ المحاسبة الإدارية", en: "Managerial Accounting",
+        cat: "reporting", level: "intermediate", lang: "en", price: "free", lessons: 10, hours: 12,
+        desc: { ar: "التكاليف والموازنات وتحليل التعادل ودعم القرار في مساق مجاني ذاتي التعلم.", en: "A free self-paced course in costing, budgeting, break-even analysis, and decisions." },
+      },
+      {
+        id: "free-financial-literacy", ar: "الثقافة المالية العملية", en: "Financial Literacy",
+        cat: "fundamentals", level: "beginner", lang: "en", price: "free", lessons: 12, hours: 6,
+        desc: { ar: "دروس مجانية من Khan Academy في الميزانية والائتمان والديون والتخطيط المالي الشخصي.", en: "Free Khan Academy lessons on budgeting, credit, debt, and personal financial planning." },
+      },
+      {
+        id: "free-finance-markets", ar: "التمويل وأسواق رأس المال", en: "Finance and Capital Markets",
+        cat: "reporting", level: "intermediate", lang: "en", price: "free", lessons: 14, hours: 10,
+        desc: { ar: "شرح مجاني للفائدة والسندات والأسهم والمخاطر والعائد من Khan Academy.", en: "Free lessons on interest, bonds, stocks, risk, and return from Khan Academy." },
+      },
+      {
+        id: "free-excel", ar: "أساسيات Excel للتقارير المحاسبية", en: "Excel Essentials for Accounting Reports",
+        cat: "software", level: "beginner", lang: "en", price: "free", lessons: 10, hours: 5,
+        desc: { ar: "مسار تعلم مجاني من موارد Microsoft الرسمية للصيغ والجداول والمخططات وتحليل البيانات.", en: "A free path through official Microsoft resources for formulas, tables, charts, and analysis." },
+      },
+      {
+        id: "free-power-bi", ar: "تحليل البيانات المالية باستخدام Power BI", en: "Financial Data Analysis with Power BI",
+        cat: "software", level: "intermediate", lang: "en", price: "free", lessons: 12, hours: 10,
+        desc: { ar: "وحدات Microsoft Learn المجانية لاستيراد البيانات ونمذجتها وبناء لوحات المؤشرات.", en: "Free Microsoft Learn modules for importing, modeling, and visualizing financial data." },
+      },
+      {
+        id: "free-odoo-accounting", ar: "المحاسبة العملية على Odoo", en: "Odoo Accounting",
+        cat: "software", level: "intermediate", lang: "en", price: "free", lessons: 15, hours: 6,
+        desc: { ar: "دروس Odoo الرسمية المجانية في الفواتير والبنوك والضرائب والإقفال والتقارير.", en: "Free official Odoo lessons on invoicing, banking, taxes, closing, and reports." },
+      },
+      {
+        id: "free-vat-zatca", ar: "التوعية بضريبة القيمة المضافة والفوترة الإلكترونية", en: "VAT and E-Invoicing Awareness",
+        cat: "tax", level: "beginner", lang: "ar", price: "free", lessons: 10, hours: 4,
+        desc: { ar: "مواد توعوية مجانية من زاتكا حول ضريبة القيمة المضافة والفوترة الإلكترونية والامتثال.", en: "Free ZATCA awareness materials on VAT, e-invoicing, and compliance." },
+      },
+      {
+        id: "free-audit-basics", ar: "مدخل إلى التدقيق والرقابة المالية", en: "Introduction to Audit and Financial Control",
+        cat: "audit", level: "beginner", lang: "en", price: "free", lessons: 8, hours: 5,
+        desc: { ar: "مسار تمهيدي مجاني منتقى من موارد OpenLearn في الأعمال والمحاسبة والرقابة.", en: "A free introductory pathway selected from OpenLearn business, accounting, and control resources." },
+      },
     ],
   },
 };

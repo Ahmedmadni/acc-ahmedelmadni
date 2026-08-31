@@ -135,6 +135,66 @@ const COURSE_PLATFORMS: Record<string, Platform> = {
     color: "#714b67",
     url: "https://www.odoo.com/slides/accounting-7",
   },
+  "free-bookkeeping": {
+    name: "OpenLearn",
+    icon: "📚",
+    color: "#7b1fa2",
+    url: "https://www.open.edu/openlearn/money-business/introducing-bookkeeping-and-accounting/content-section-overview",
+  },
+  "free-financial-accounting": {
+    name: "Saylor Academy",
+    icon: "🎓",
+    color: "#1f6f8b",
+    url: "https://learn.saylor.org/course/view.php?id=52",
+  },
+  "free-managerial-accounting": {
+    name: "Saylor Academy",
+    icon: "🎓",
+    color: "#1f6f8b",
+    url: "https://learn.saylor.org/course/view.php?id=54",
+  },
+  "free-financial-literacy": {
+    name: "Khan Academy",
+    icon: "📈",
+    color: "#1865f2",
+    url: "https://www.khanacademy.org/college-careers-more/financial-literacy",
+  },
+  "free-finance-markets": {
+    name: "Khan Academy",
+    icon: "📈",
+    color: "#1865f2",
+    url: "https://www.khanacademy.org/economics-finance-domain/core-finance",
+  },
+  "free-excel": {
+    name: "Microsoft",
+    icon: "▦",
+    color: "#217346",
+    url: "https://support.microsoft.com/en-us/excel",
+  },
+  "free-power-bi": {
+    name: "Microsoft Learn",
+    icon: "📊",
+    color: "#8661c5",
+    url: "https://learn.microsoft.com/en-us/training/powerplatform/power-bi/",
+  },
+  "free-odoo-accounting": {
+    name: "Odoo",
+    icon: "⚙️",
+    color: "#714b67",
+    url: "https://www.odoo.com/slides/accounting-7",
+  },
+  "free-vat-zatca": {
+    name: "ZATCA",
+    icon: "🏛️",
+    color: "#0d7a5f",
+    url: "https://zatca.gov.sa/ar/Education/Pages/default.aspx",
+  },
+  "free-audit-basics": {
+    name: "OpenLearn",
+    icon: "📚",
+    color: "#7b1fa2",
+    url: "https://www.open.edu/openlearn/money-business",
+  },
 };
 
 const SOON: Platform = { name: "قريباً", icon: "⏳", color: "#6b7280" };
