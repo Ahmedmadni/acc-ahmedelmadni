@@ -6,15 +6,34 @@ BEGIN;
 INSERT INTO public.kb_categories (
   slug, name_ar, name_en, icon, description_ar, description_en, sort_order
 )
-VALUES (
-  'international-accounting-standards',
-  'معايير المحاسبة الدولية (IFRS)',
-  'International Accounting Standards (IFRS)',
-  'Scale',
-  'مستجدات معايير المحاسبة الدولية وتطبيقاتها العملية في التقارير المالية.',
-  'Updates to international accounting standards and their practical financial-reporting applications.',
-  (SELECT COALESCE(MAX(sort_order), 0) + 1 FROM public.kb_categories)
-)
+VALUES
+  (
+    'international-accounting-standards',
+    'معايير المحاسبة الدولية (IFRS)',
+    'International Accounting Standards (IFRS)',
+    'Scale',
+    'مستجدات معايير المحاسبة الدولية وتطبيقاتها العملية في التقارير المالية.',
+    'Updates to international accounting standards and their practical financial-reporting applications.',
+    (SELECT COALESCE(MAX(sort_order), 0) + 1 FROM public.kb_categories)
+  ),
+  (
+    'professional-certifications',
+    'الشهادات المهنية',
+    'Professional Certifications',
+    'ShieldCheck',
+    'محتوى حول الشهادات المهنية المحاسبية والمالية مثل CMA وCPA وCFA وسوكبا.',
+    'Content about professional accounting and finance certifications such as CMA, CPA, CFA, and SOCPA.',
+    (SELECT COALESCE(MAX(sort_order), 0) + 2 FROM public.kb_categories)
+  ),
+  (
+    'zakat-tax-ksa',
+    'الزكاة والضرائب في السعودية',
+    'Zakat & Tax in Saudi Arabia',
+    'Landmark',
+    'الامتثال الزكوي والضريبي وتحديثات هيئة الزكاة والضريبة والجمارك.',
+    'Zakat and tax compliance and ZATCA regulatory updates.',
+    (SELECT COALESCE(MAX(sort_order), 0) + 3 FROM public.kb_categories)
+  )
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO public.kb_articles (
