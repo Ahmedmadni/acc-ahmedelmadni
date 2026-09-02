@@ -342,7 +342,7 @@ function ToolDetailPage() {
                 <h2 className="mb-1.5 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-200">
                   <Sparkles className="size-4" />
                   {lang === "ar" ? "تفضّل نتولى الأمر عنك؟" : "Prefer to have this done for you?"}
-                </h3>
+                </h2>
                 <p className="mb-3 text-sm leading-relaxed text-[var(--fg-soft)]">
                   {lang === "ar"
                     ? "أعدّها لك بدقة واحترافية كمحاسب معتمد — أرسل بياناتك وسنتواصل خلال 24 ساعة."
@@ -361,7 +361,7 @@ function ToolDetailPage() {
               <h2 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
                 <BookOpen className="size-4" />
                 {lang === "ar" ? "نبذة عن الأداة" : "About this tool"}
-              </h3>
+              </h2>
               <p className="text-sm leading-relaxed text-[#6B6259]">{tool.about[lang]}</p>
               {tool.formula && (
                 <div className="mt-3 rounded-lg border border-[#A88765]/30 bg-[#F5F1EB] px-3 py-2 font-mono text-xs text-[#7c6045]">
@@ -393,7 +393,7 @@ function ToolDetailPage() {
           <section className="mt-12">
             <h2 className="mb-4 text-base font-extrabold text-[#c9a986]">
               {lang === "ar" ? "أدوات ذات صلة" : "Related tools"}
-            </h3>
+            </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((r) => (
                 <Link
