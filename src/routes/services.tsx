@@ -28,6 +28,7 @@ export const Route = createFileRoute("/services")({
       },
       { property: "og:title", content: "الخدمات | أحمد المدني" },
       { property: "og:description", content: "تصفّح الخدمات المحاسبية واطلب خدمتك في نفس الصفحة." },
+      { property: "og:url", content: "https://ahmedelmadni.com/services" },
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/services" }],
   }),

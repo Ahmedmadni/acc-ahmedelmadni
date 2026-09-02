@@ -38,6 +38,7 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "أرسل طلبك عبر النموذج أو تواصل مباشرة عبر قنوات التواصل المتاحة.",
       },
+      { property: "og:url", content: "https://ahmedelmadni.com/contact" },
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/contact" }],
   }),
