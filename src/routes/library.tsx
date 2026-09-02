@@ -36,8 +36,24 @@ export const Route = createFileRoute("/library")({
         { name: "twitter:title", content: "Accounting Library — Ahmed Elmadani" },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "المكتبة المحاسبية | Accounting Library",
+            url,
+            inLanguage: "ar-SA",
+            description:
+              "مكتبة احترافية لأفضل كورسات وكتب ومقالات وقوالب المحاسبة من مصادر موثوقة.",
+            isPartOf: { "@id": "https://ahmedelmadni.com/#website" },
+          }),
+        },
+      ],
     };
   },
+
   component: LibraryLayout,
 });
 
