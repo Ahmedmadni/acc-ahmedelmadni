@@ -33,7 +33,7 @@ export const Route = createFileRoute("/tools/$toolId")({
     const url = `https://ahmedelmadni.com/tools/${params.toolId}`;
     return {
       meta: [
-        { title: `${tool.title.ar} | ${tool.title.en} — Smart Accounting Tools` },
+        { title: `${tool.title.ar} | أدوات محاسبية` },
         { name: "description", content: tool.short.ar },
         { property: "og:title", content: `${tool.title.en} — Smart Accounting Tools` },
         { property: "og:description", content: tool.short.en },
@@ -188,6 +188,7 @@ function ToolDetailPage() {
           <div className="flex items-center gap-2">
             <Link
               to="/"
+              aria-label={lang === "ar" ? "الرئيسية" : "Home"}
               className="hidden items-center gap-1 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 sm:inline-flex"
             >
               <Home className="size-3.5" />
@@ -338,10 +339,10 @@ function ToolDetailPage() {
           <aside className="space-y-4">
             {tool.requestServiceId && (
               <div className="rounded-2xl border border-emerald-400/40 bg-gradient-to-br from-emerald-400/15 to-transparent p-5 backdrop-blur print:hidden">
-                <h3 className="mb-1.5 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-200">
+                <h2 className="mb-1.5 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-200">
                   <Sparkles className="size-4" />
                   {lang === "ar" ? "تفضّل نتولى الأمر عنك؟" : "Prefer to have this done for you?"}
-                </h3>
+                </h2>
                 <p className="mb-3 text-sm leading-relaxed text-[var(--fg-soft)]">
                   {lang === "ar"
                     ? "أعدّها لك بدقة واحترافية كمحاسب معتمد — أرسل بياناتك وسنتواصل خلال 24 ساعة."
@@ -357,10 +358,10 @@ function ToolDetailPage() {
               </div>
             )}
             <div className="rounded-2xl border border-[#A88765]/25 bg-[#FCFBF9] p-5">
-              <h3 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
+              <h2 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-[#7c6045]">
                 <BookOpen className="size-4" />
                 {lang === "ar" ? "نبذة عن الأداة" : "About this tool"}
-              </h3>
+              </h2>
               <p className="text-sm leading-relaxed text-[#6B6259]">{tool.about[lang]}</p>
               {tool.formula && (
                 <div className="mt-3 rounded-lg border border-[#A88765]/30 bg-[#F5F1EB] px-3 py-2 font-mono text-xs text-[#7c6045]">
@@ -390,9 +391,9 @@ function ToolDetailPage() {
 
         {related.length > 0 && (
           <section className="mt-12">
-            <h3 className="mb-4 text-base font-extrabold text-[#c9a986]">
+            <h2 className="mb-4 text-base font-extrabold text-[#c9a986]">
               {lang === "ar" ? "أدوات ذات صلة" : "Related tools"}
-            </h3>
+            </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((r) => (
                 <Link

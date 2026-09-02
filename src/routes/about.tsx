@@ -19,6 +19,7 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:title", content: "نبذة عني | أحمد المدني" },
       { property: "og:description", content: "السيرة المهنية، الخبرات، المهارات والشهادات." },
+      { property: "og:url", content: "https://ahmedelmadni.com/about" },
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/about" }],
   }),

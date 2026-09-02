@@ -12,6 +12,7 @@ export const Route = createFileRoute("/library/books")({
         name: "description",
         content: "مراجع محاسبية رسمية وموثوقة: IFRS، ZATCA، Kieso، Horngren وغيرها.",
       },
+      { property: "og:url", content: "https://ahmedelmadni.com/library/books" },
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/books" }],
   }),

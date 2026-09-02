@@ -24,6 +24,7 @@ export const Route = createFileRoute("/library/courses")({
         name: "description",
         content: "أفضل كورسات المحاسبة من مصادر موثوقة - IFRS، CMA، CPA، VAT والمزيد.",
       },
+      { property: "og:url", content: "https://ahmedelmadni.com/library/courses" },
     ],
     links: [{ rel: "canonical", href: "https://ahmedelmadni.com/library/courses" }],
   }),
