@@ -49,7 +49,7 @@ import { DURATION, EASE } from "@/lib/motion";
 export const Route = createFileRoute("/tools/")({
   head: () => ({
     meta: [
-      { title: "مكتبة الأدوات المالية | Financial Tools Library — Ahmed Elmadani" },
+      { title: "مكتبة الأدوات المالية | Ahmed Elmadani" },
       {
         name: "description",
         content:
@@ -378,11 +378,11 @@ function ToolCard({
             )}
           </div>
 
-          <h3
+          <h2
             className={`font-display mt-4 font-extrabold text-[#F5F1E8] ${isLg ? "text-2xl md:text-3xl" : "text-lg md:text-xl"} leading-tight`}
           >
             {tool.title[lang]}
-          </h3>
+          </h2>
           {tool.standard && (
             <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#A9A29A]">
               {tool.standard[lang]}
