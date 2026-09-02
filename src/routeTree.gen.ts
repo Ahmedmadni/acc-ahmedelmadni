@@ -9,85 +9,49 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SkillsRouteImport } from './routes/skills'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as RequestServiceRouteImport } from './routes/request-service'
-import { Route as LibraryRouteImport } from './routes/library'
-import { Route as ExperienceRouteImport } from './routes/experience'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CertificationsRouteImport } from './routes/certifications'
-import { Route as AuthRouteImport } from './routes/auth'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ToolsIndexRouteImport } from './routes/tools.index'
-import { Route as LibraryIndexRouteImport } from './routes/library.index'
-import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
-import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
-import { Route as LibraryTemplatesRouteImport } from './routes/library.templates'
-import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
-import { Route as LibraryBooksRouteImport } from './routes/library.books'
-import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
-import { Route as KnowledgeBookmarksRouteImport } from './routes/knowledge.bookmarks'
-import { Route as ApiOfficeAiRouteImport } from './routes/api/office-ai'
-import { Route as ApiCvTranslateRouteImport } from './routes/api/cv-translate'
-import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
-import { Route as ApiChatRouteImport } from './routes/api/chat'
-import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as CertificationsRouteImport } from './routes/certifications'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as LibraryRouteImport } from './routes/library'
+import { Route as RequestServiceRouteImport } from './routes/request-service'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as AuthenticatedCrmRouteImport } from './routes/_authenticated/crm'
+import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
+import { Route as ApiCvTranslateRouteImport } from './routes/api/cv-translate'
+import { Route as ApiOfficeAiRouteImport } from './routes/api/office-ai'
+import { Route as KnowledgeIndexRouteImport } from './routes/knowledge.index'
+import { Route as KnowledgeBookmarksRouteImport } from './routes/knowledge.bookmarks'
+import { Route as LibraryIndexRouteImport } from './routes/library.index'
+import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
+import { Route as LibraryBooksRouteImport } from './routes/library.books'
+import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
+import { Route as LibraryTemplatesRouteImport } from './routes/library.templates'
+import { Route as ToolsIndexRouteImport } from './routes/tools.index'
+import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
+import { Route as AuthenticatedAdminDebugRouteImport } from './routes/_authenticated/admin.debug'
+import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
+import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
+import { Route as AuthenticatedAdminProfileRouteImport } from './routes/_authenticated/admin.profile'
+import { Route as AuthenticatedAdminTemplatesRouteImport } from './routes/_authenticated/admin.templates'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
-import { Route as AuthenticatedAdminTemplatesRouteImport } from './routes/_authenticated/admin.templates'
-import { Route as AuthenticatedAdminProfileRouteImport } from './routes/_authenticated/admin.profile'
-import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
-import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
-import { Route as AuthenticatedAdminDebugRouteImport } from './routes/_authenticated/admin.debug'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
-const SkillsRoute = SkillsRouteImport.update({
-  id: '/skills',
-  path: '/skills',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RequestServiceRoute = RequestServiceRouteImport.update({
-  id: '/request-service',
-  path: '/request-service',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LibraryRoute = LibraryRouteImport.update({
-  id: '/library',
-  path: '/library',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExperienceRoute = ExperienceRouteImport.update({
-  id: '/experience',
-  path: '/experience',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CertificationsRoute = CertificationsRouteImport.update({
-  id: '/certifications',
-  path: '/certifications',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthRoute = AuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -95,79 +59,55 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
-  id: '/_authenticated',
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CertificationsRoute = CertificationsRouteImport.update({
+  id: '/certifications',
+  path: '/certifications',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ToolsIndexRoute = ToolsIndexRouteImport.update({
-  id: '/tools/',
-  path: '/tools/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LibraryIndexRoute = LibraryIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => LibraryRoute,
-} as any)
-const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
-  id: '/knowledge/',
-  path: '/knowledge/',
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
-  id: '/tools/$toolId',
-  path: '/tools/$toolId',
+const LibraryRoute = LibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LibraryTemplatesRoute = LibraryTemplatesRouteImport.update({
-  id: '/templates',
-  path: '/templates',
-  getParentRoute: () => LibraryRoute,
-} as any)
-const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
-  id: '/courses',
-  path: '/courses',
-  getParentRoute: () => LibraryRoute,
-} as any)
-const LibraryBooksRoute = LibraryBooksRouteImport.update({
-  id: '/books',
-  path: '/books',
-  getParentRoute: () => LibraryRoute,
-} as any)
-const LibraryArticlesRoute = LibraryArticlesRouteImport.update({
-  id: '/articles',
-  path: '/articles',
-  getParentRoute: () => LibraryRoute,
-} as any)
-const KnowledgeBookmarksRoute = KnowledgeBookmarksRouteImport.update({
-  id: '/knowledge/bookmarks',
-  path: '/knowledge/bookmarks',
+const RequestServiceRoute = RequestServiceRouteImport.update({
+  id: '/request-service',
+  path: '/request-service',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiOfficeAiRoute = ApiOfficeAiRouteImport.update({
-  id: '/api/office-ai',
-  path: '/api/office-ai',
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiCvTranslateRoute = ApiCvTranslateRouteImport.update({
-  id: '/api/cv-translate',
-  path: '/api/cv-translate',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
-  id: '/api/cv-enhance',
-  path: '/api/cv-enhance',
+const SkillsRoute = SkillsRouteImport.update({
+  id: '/skills',
+  path: '/skills',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiChatRoute = ApiChatRouteImport.update({
-  id: '/api/chat',
-  path: '/api/chat',
-  getParentRoute: () => rootRouteImport,
+const AuthenticatedCrmRoute = AuthenticatedCrmRouteImport.update({
+  id: '/crm',
+  path: '/crm',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedDeclarationsRoute =
   AuthenticatedDeclarationsRouteImport.update({
@@ -175,11 +115,100 @@ const AuthenticatedDeclarationsRoute =
     path: '/declarations',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
-const AuthenticatedCrmRoute = AuthenticatedCrmRouteImport.update({
-  id: '/crm',
-  path: '/crm',
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
+  id: '/api/cv-enhance',
+  path: '/api/cv-enhance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCvTranslateRoute = ApiCvTranslateRouteImport.update({
+  id: '/api/cv-translate',
+  path: '/api/cv-translate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiOfficeAiRoute = ApiOfficeAiRouteImport.update({
+  id: '/api/office-ai',
+  path: '/api/office-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeIndexRoute = KnowledgeIndexRouteImport.update({
+  id: '/knowledge/',
+  path: '/knowledge/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KnowledgeBookmarksRoute = KnowledgeBookmarksRouteImport.update({
+  id: '/knowledge/bookmarks',
+  path: '/knowledge/bookmarks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibraryIndexRoute = LibraryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const LibraryArticlesRoute = LibraryArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const LibraryBooksRoute = LibraryBooksRouteImport.update({
+  id: '/books',
+  path: '/books',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const LibraryTemplatesRoute = LibraryTemplatesRouteImport.update({
+  id: '/templates',
+  path: '/templates',
+  getParentRoute: () => LibraryRoute,
+} as any)
+const ToolsIndexRoute = ToolsIndexRouteImport.update({
+  id: '/tools/',
+  path: '/tools/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
+  id: '/tools/$toolId',
+  path: '/tools/$toolId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedAdminDebugRoute = AuthenticatedAdminDebugRouteImport.update({
+  id: '/admin/debug',
+  path: '/admin/debug',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedAdminKnowledgeRoute =
+  AuthenticatedAdminKnowledgeRouteImport.update({
+    id: '/admin/knowledge',
+    path: '/admin/knowledge',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAdminLibraryRoute =
+  AuthenticatedAdminLibraryRouteImport.update({
+    id: '/admin/library',
+    path: '/admin/library',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAdminProfileRoute =
+  AuthenticatedAdminProfileRouteImport.update({
+    id: '/admin/profile',
+    path: '/admin/profile',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAdminTemplatesRoute =
+  AuthenticatedAdminTemplatesRouteImport.update({
+    id: '/admin/templates',
+    path: '/admin/templates',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const KnowledgeCategorySlugIndexRoute =
   KnowledgeCategorySlugIndexRouteImport.update({
     id: '/knowledge/$categorySlug/',
@@ -192,35 +221,6 @@ const KnowledgeCategorySlugArticleSlugRoute =
     path: '/knowledge/$categorySlug/$articleSlug',
     getParentRoute: () => rootRouteImport,
   } as any)
-const AuthenticatedAdminTemplatesRoute =
-  AuthenticatedAdminTemplatesRouteImport.update({
-    id: '/admin/templates',
-    path: '/admin/templates',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedAdminProfileRoute =
-  AuthenticatedAdminProfileRouteImport.update({
-    id: '/admin/profile',
-    path: '/admin/profile',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedAdminLibraryRoute =
-  AuthenticatedAdminLibraryRouteImport.update({
-    id: '/admin/library',
-    path: '/admin/library',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedAdminKnowledgeRoute =
-  AuthenticatedAdminKnowledgeRouteImport.update({
-    id: '/admin/knowledge',
-    path: '/admin/knowledge',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedAdminDebugRoute = AuthenticatedAdminDebugRouteImport.update({
-  id: '/admin/debug',
-  path: '/admin/debug',
-  getParentRoute: () => AuthenticatedRouteRoute,
-} as any)
 const ApiPublicHooksGenerateArticlesRoute =
   ApiPublicHooksGenerateArticlesRouteImport.update({
     id: '/api/public/hooks/generate-articles',
@@ -476,74 +476,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/skills': {
-      id: '/skills'
-      path: '/skills'
-      fullPath: '/skills'
-      preLoaderRoute: typeof SkillsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/request-service': {
-      id: '/request-service'
-      path: '/request-service'
-      fullPath: '/request-service'
-      preLoaderRoute: typeof RequestServiceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/library': {
-      id: '/library'
-      path: '/library'
-      fullPath: '/library'
-      preLoaderRoute: typeof LibraryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/experience': {
-      id: '/experience'
-      path: '/experience'
-      fullPath: '/experience'
-      preLoaderRoute: typeof ExperienceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/certifications': {
-      id: '/certifications'
-      path: '/certifications'
-      fullPath: '/certifications'
-      preLoaderRoute: typeof CertificationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
-      preLoaderRoute: typeof AuthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated': {
@@ -553,88 +490,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tools/': {
-      id: '/tools/'
-      path: '/tools'
-      fullPath: '/tools/'
-      preLoaderRoute: typeof ToolsIndexRouteImport
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/library/': {
-      id: '/library/'
-      path: '/'
-      fullPath: '/library/'
-      preLoaderRoute: typeof LibraryIndexRouteImport
-      parentRoute: typeof LibraryRoute
-    }
-    '/knowledge/': {
-      id: '/knowledge/'
-      path: '/knowledge'
-      fullPath: '/knowledge/'
-      preLoaderRoute: typeof KnowledgeIndexRouteImport
+    '/certifications': {
+      id: '/certifications'
+      path: '/certifications'
+      fullPath: '/certifications'
+      preLoaderRoute: typeof CertificationsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tools/$toolId': {
-      id: '/tools/$toolId'
-      path: '/tools/$toolId'
-      fullPath: '/tools/$toolId'
-      preLoaderRoute: typeof ToolsToolIdRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/library/templates': {
-      id: '/library/templates'
-      path: '/templates'
-      fullPath: '/library/templates'
-      preLoaderRoute: typeof LibraryTemplatesRouteImport
-      parentRoute: typeof LibraryRoute
-    }
-    '/library/courses': {
-      id: '/library/courses'
-      path: '/courses'
-      fullPath: '/library/courses'
-      preLoaderRoute: typeof LibraryCoursesRouteImport
-      parentRoute: typeof LibraryRoute
-    }
-    '/library/books': {
-      id: '/library/books'
-      path: '/books'
-      fullPath: '/library/books'
-      preLoaderRoute: typeof LibraryBooksRouteImport
-      parentRoute: typeof LibraryRoute
-    }
-    '/library/articles': {
-      id: '/library/articles'
-      path: '/articles'
-      fullPath: '/library/articles'
-      preLoaderRoute: typeof LibraryArticlesRouteImport
-      parentRoute: typeof LibraryRoute
-    }
-    '/knowledge/bookmarks': {
-      id: '/knowledge/bookmarks'
-      path: '/knowledge/bookmarks'
-      fullPath: '/knowledge/bookmarks'
-      preLoaderRoute: typeof KnowledgeBookmarksRouteImport
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/office-ai': {
-      id: '/api/office-ai'
-      path: '/api/office-ai'
-      fullPath: '/api/office-ai'
-      preLoaderRoute: typeof ApiOfficeAiRouteImport
+    '/library': {
+      id: '/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof LibraryRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/cv-translate': {
-      id: '/api/cv-translate'
-      path: '/api/cv-translate'
-      fullPath: '/api/cv-translate'
-      preLoaderRoute: typeof ApiCvTranslateRouteImport
+    '/request-service': {
+      id: '/request-service'
+      path: '/request-service'
+      fullPath: '/request-service'
+      preLoaderRoute: typeof RequestServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/skills': {
+      id: '/skills'
+      path: '/skills'
+      fullPath: '/skills'
+      preLoaderRoute: typeof SkillsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/crm': {
+      id: '/_authenticated/crm'
+      path: '/crm'
+      fullPath: '/crm'
+      preLoaderRoute: typeof AuthenticatedCrmRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/declarations': {
+      id: '/_authenticated/declarations'
+      path: '/declarations'
+      fullPath: '/declarations'
+      preLoaderRoute: typeof AuthenticatedDeclarationsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/cv-enhance': {
@@ -644,25 +588,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiCvEnhanceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/chat': {
-      id: '/api/chat'
-      path: '/api/chat'
-      fullPath: '/api/chat'
-      preLoaderRoute: typeof ApiChatRouteImport
+    '/api/cv-translate': {
+      id: '/api/cv-translate'
+      path: '/api/cv-translate'
+      fullPath: '/api/cv-translate'
+      preLoaderRoute: typeof ApiCvTranslateRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/declarations': {
-      id: '/_authenticated/declarations'
-      path: '/declarations'
-      fullPath: '/declarations'
-      preLoaderRoute: typeof AuthenticatedDeclarationsRouteImport
+    '/api/office-ai': {
+      id: '/api/office-ai'
+      path: '/api/office-ai'
+      fullPath: '/api/office-ai'
+      preLoaderRoute: typeof ApiOfficeAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge/': {
+      id: '/knowledge/'
+      path: '/knowledge'
+      fullPath: '/knowledge/'
+      preLoaderRoute: typeof KnowledgeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/knowledge/bookmarks': {
+      id: '/knowledge/bookmarks'
+      path: '/knowledge/bookmarks'
+      fullPath: '/knowledge/bookmarks'
+      preLoaderRoute: typeof KnowledgeBookmarksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/library/': {
+      id: '/library/'
+      path: '/'
+      fullPath: '/library/'
+      preLoaderRoute: typeof LibraryIndexRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/library/articles': {
+      id: '/library/articles'
+      path: '/articles'
+      fullPath: '/library/articles'
+      preLoaderRoute: typeof LibraryArticlesRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/library/books': {
+      id: '/library/books'
+      path: '/books'
+      fullPath: '/library/books'
+      preLoaderRoute: typeof LibraryBooksRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/library/courses': {
+      id: '/library/courses'
+      path: '/courses'
+      fullPath: '/library/courses'
+      preLoaderRoute: typeof LibraryCoursesRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/library/templates': {
+      id: '/library/templates'
+      path: '/templates'
+      fullPath: '/library/templates'
+      preLoaderRoute: typeof LibraryTemplatesRouteImport
+      parentRoute: typeof LibraryRoute
+    }
+    '/tools/': {
+      id: '/tools/'
+      path: '/tools'
+      fullPath: '/tools/'
+      preLoaderRoute: typeof ToolsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/$toolId': {
+      id: '/tools/$toolId'
+      path: '/tools/$toolId'
+      fullPath: '/tools/$toolId'
+      preLoaderRoute: typeof ToolsToolIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/admin/debug': {
+      id: '/_authenticated/admin/debug'
+      path: '/admin/debug'
+      fullPath: '/admin/debug'
+      preLoaderRoute: typeof AuthenticatedAdminDebugRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/_authenticated/crm': {
-      id: '/_authenticated/crm'
-      path: '/crm'
-      fullPath: '/crm'
-      preLoaderRoute: typeof AuthenticatedCrmRouteImport
+    '/_authenticated/admin/knowledge': {
+      id: '/_authenticated/admin/knowledge'
+      path: '/admin/knowledge'
+      fullPath: '/admin/knowledge'
+      preLoaderRoute: typeof AuthenticatedAdminKnowledgeRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/library': {
+      id: '/_authenticated/admin/library'
+      path: '/admin/library'
+      fullPath: '/admin/library'
+      preLoaderRoute: typeof AuthenticatedAdminLibraryRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/profile': {
+      id: '/_authenticated/admin/profile'
+      path: '/admin/profile'
+      fullPath: '/admin/profile'
+      preLoaderRoute: typeof AuthenticatedAdminProfileRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/admin/templates': {
+      id: '/_authenticated/admin/templates'
+      path: '/admin/templates'
+      fullPath: '/admin/templates'
+      preLoaderRoute: typeof AuthenticatedAdminTemplatesRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/knowledge/$categorySlug/': {
@@ -678,41 +713,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/knowledge/$categorySlug/$articleSlug'
       preLoaderRoute: typeof KnowledgeCategorySlugArticleSlugRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/_authenticated/admin/templates': {
-      id: '/_authenticated/admin/templates'
-      path: '/admin/templates'
-      fullPath: '/admin/templates'
-      preLoaderRoute: typeof AuthenticatedAdminTemplatesRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/admin/profile': {
-      id: '/_authenticated/admin/profile'
-      path: '/admin/profile'
-      fullPath: '/admin/profile'
-      preLoaderRoute: typeof AuthenticatedAdminProfileRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/admin/library': {
-      id: '/_authenticated/admin/library'
-      path: '/admin/library'
-      fullPath: '/admin/library'
-      preLoaderRoute: typeof AuthenticatedAdminLibraryRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/admin/knowledge': {
-      id: '/_authenticated/admin/knowledge'
-      path: '/admin/knowledge'
-      fullPath: '/admin/knowledge'
-      preLoaderRoute: typeof AuthenticatedAdminKnowledgeRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/admin/debug': {
-      id: '/_authenticated/admin/debug'
-      path: '/admin/debug'
-      fullPath: '/admin/debug'
-      preLoaderRoute: typeof AuthenticatedAdminDebugRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
     }
     '/api/public/hooks/generate-articles': {
       id: '/api/public/hooks/generate-articles'
