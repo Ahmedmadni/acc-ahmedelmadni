@@ -134,7 +134,7 @@ function VideoBrowser({ lang }: { lang: Lang }) {
           >
             <img
               src={`https://i.ytimg.com/vi/${v.id}/default.jpg`}
-              alt=""
+              alt={lang === "ar" ? `صورة مصغّرة لفيديو: ${v.ar}` : `Video thumbnail: ${v.en}`}
               loading="lazy"
               decoding="async"
               className="h-12 w-20 shrink-0 rounded-lg object-cover"

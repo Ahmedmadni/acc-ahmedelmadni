@@ -63,7 +63,7 @@ import mascotWhatsapp from "@/assets/mascot-whatsapp.webp";
 import mascotLinkedin from "@/assets/mascot-linkedin.webp";
 import mascotFacebook from "@/assets/mascot-facebook.webp";
 import mascotInstagram from "@/assets/mascot-instagram.webp";
-import heroImg from "@/assets/ahmed-elmadni-hero.png";
+import heroImg from "@/assets/ahmed-elmadni-hero.webp";
 import heroPortrait from "@/assets/hero-portrait.webp";
 import mascotSnapchat from "@/assets/mascot-snapchat.webp";
 import mascotPhone from "@/assets/mascot-phone.webp";
@@ -1820,6 +1820,7 @@ function ContactMascotCard({
         <motion.img
           src={s.mascot}
           alt=""
+          aria-hidden
           width={mascotSize}
           height={mascotSize}
           loading="lazy"

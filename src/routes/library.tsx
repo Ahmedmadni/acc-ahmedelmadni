@@ -129,9 +129,9 @@ function LibraryLayout() {
                     {lang === "ar" ? "الرئيسية" : "Home"}
                     <Home className="size-3.5" />
                   </Link>
-                  <div className="text-sm font-extrabold tracking-wide text-[#c9a986]">
+                  <h1 className="text-sm font-extrabold tracking-wide text-[#c9a986]">
                     {lang === "ar" ? "المكتبة المحاسبية" : "Accounting Library"}
-                  </div>
+                  </h1>
                   <button
                     onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
                     className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
