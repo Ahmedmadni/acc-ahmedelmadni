@@ -252,7 +252,7 @@ function MobileSoftwareCard({
               {software.logo ? (
                 <img
                   src={software.logo}
-                  alt=""
+                  alt={`${ar ? software.nameAr ?? software.name : software.name} logo`}
                   className="size-full object-contain"
                   loading="lazy"
                 />
@@ -394,7 +394,7 @@ function StackedSoftwareCard({
               {software.logo ? (
                 <img
                   src={software.logo}
-                  alt=""
+                  alt={`${ar ? software.nameAr ?? software.name : software.name} logo`}
                   className="size-full object-contain"
                   loading="lazy"
                 />
@@ -501,7 +501,11 @@ function FeatureCard({
                   two panels stay in proportion side by side. */}
               <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/[0.08] p-2.5 sm:size-24 sm:p-3.5 lg:size-28">
                 {activeSoftware.logo ? (
-                  <img src={activeSoftware.logo} alt="" className="size-full object-contain" />
+                  <img
+                    src={activeSoftware.logo}
+                    alt={`${activeSoftware.nameAr ?? activeSoftware.name} logo`}
+                    className="size-full object-contain"
+                  />
                 ) : (
                   <span className="font-display text-2xl font-bold text-[#E9D9C3] sm:text-4xl">
                     {activeSoftware.mark}

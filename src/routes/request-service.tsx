@@ -273,15 +273,20 @@ export function RequestService({
             <Briefcase className="size-3.5" />
             {lang === "ar" ? "خدمات محاسبية احترافية" : "Professional Accounting Services"}
           </div>
-          <h1
-            className={`font-display ${embedded ? "text-2xl sm:text-3xl" : "text-4xl sm:text-5xl"} font-extrabold leading-tight`}
-            style={{ color: "var(--fg)" }}
-          >
-            {lang === "ar" ? "اطلب خدمتك" : "Request a Service"}{" "}
-            <span className="block bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent">
-              {lang === "ar" ? "بكل سهولة واحترافية" : "With Ease and Professionalism"}
-            </span>
-          </h1>
+          {(() => {
+            const Heading = embedded ? "h2" : "h1";
+            return (
+              <Heading
+                className={`font-display ${embedded ? "text-2xl sm:text-3xl" : "text-4xl sm:text-5xl"} font-extrabold leading-tight`}
+                style={{ color: "var(--fg)" }}
+              >
+                {lang === "ar" ? "اطلب خدمتك" : "Request a Service"}{" "}
+                <span className="block bg-gradient-to-br from-[#e9d9c3] to-[#A88765] bg-clip-text text-transparent">
+                  {lang === "ar" ? "بكل سهولة واحترافية" : "With Ease and Professionalism"}
+                </span>
+              </Heading>
+            );
+          })()}
           {!embedded && (
             <p
               className="mt-3 max-w-2xl text-base leading-relaxed"
