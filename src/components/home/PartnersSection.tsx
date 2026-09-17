@@ -4,6 +4,24 @@ import { useEffect, useRef, useState } from "react";
 import { Handshake, Sparkles, ArrowUpRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
+import odooLogo from "@/assets/software/Odoo.png";
+import daftraLogo from "@/assets/software/Daftra.png";
+import qoyodLogo from "@/assets/software/Qoyod.jpg";
+import zohoLogo from "@/assets/software/Zoho Books.png";
+import wafeqLogo from "@/assets/software/Wafeq.jpg";
+import rewaaLogo from "@/assets/software/Rewaa.png";
+import alShamelLogo from "@/assets/software/Al Shamel.png";
+
+/** Locally hosted brand logos, keyed by partner id (avoids third-party CDN). */
+const LOCAL_LOGOS: Record<string, string> = {
+  odoo: odooLogo,
+  daftra: daftraLogo,
+  qoyod: qoyodLogo,
+  zoho: zohoLogo,
+  wafeq: wafeqLogo,
+  rewaa: rewaaLogo,
+  shamelsoft: alShamelLogo,
+};
 
 type Partner = {
   id: string;
@@ -123,6 +141,19 @@ function PartnerLogo({ p }: { p: Partner }) {
   const chain = [p.domain, ...(p.fallbackDomains ?? [])];
   const [idx, setIdx] = useState(0);
   const [failed, setFailed] = useState(false);
+  const local = LOCAL_LOGOS[p.id];
+
+  if (local) {
+    return (
+      <img
+        src={local}
+        alt={`${p.name} logo`}
+        loading="lazy"
+        decoding="async"
+        className="max-h-16 w-auto max-w-[78%] object-contain"
+      />
+    );
+  }
 
   if (failed) {
     return (
