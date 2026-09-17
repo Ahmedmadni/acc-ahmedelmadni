@@ -138,16 +138,13 @@ const PARTNERS: Partner[] = [
 ];
 
 function PartnerLogo({ p }: { p: Partner }) {
-  const chain = [p.domain, ...(p.fallbackDomains ?? [])];
-  const [idx, setIdx] = useState(0);
-  const [failed, setFailed] = useState(false);
   const local = LOCAL_LOGOS[p.id];
 
   if (local) {
     return (
       <img
         src={local}
-        alt={`${p.name} logo`}
+        alt={`شعار ${p.nameAr} — ${p.name}`}
         loading="lazy"
         decoding="async"
         className="max-h-16 w-auto max-w-[78%] object-contain"
@@ -155,31 +152,12 @@ function PartnerLogo({ p }: { p: Partner }) {
     );
   }
 
-  if (failed) {
-    return (
-      <div className="flex h-full w-full items-center justify-center text-center text-2xl font-black text-[#04101f]">
-        {p.name}
-      </div>
-    );
-  }
-
+  // No locally hosted mark for this brand: render its wordmark instead of
+  // pulling a logo from a third-party CDN.
   return (
-    <img
-      src={`https://logo.clearbit.com/${chain[idx]}?size=300`}
-      alt={`${p.name} logo`}
-      loading="lazy"
-      decoding="async"
-      width={180}
-      height={80}
-      onError={() => {
-        if (idx < chain.length - 1) {
-          setIdx((current) => current + 1);
-        } else {
-          setFailed(true);
-        }
-      }}
-      className="max-h-16 w-auto max-w-[78%] object-contain"
-    />
+    <div className="flex h-full w-full items-center justify-center px-1 text-center text-lg font-black leading-tight tracking-tight text-[#04101f] sm:text-2xl">
+      {p.name}
+    </div>
   );
 }
 
