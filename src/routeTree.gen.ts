@@ -36,6 +36,7 @@ import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
 import { Route as LibraryTemplatesRouteImport } from './routes/library.templates'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
+import { Route as ToolsStudyCompanionRouteImport } from './routes/tools.study-companion'
 import { Route as AuthenticatedAdminDebugRouteImport } from './routes/_authenticated/admin.debug'
 import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authenticated/admin.knowledge'
 import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
@@ -180,6 +181,11 @@ const ToolsToolIdRoute = ToolsToolIdRouteImport.update({
   path: '/tools/$toolId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsStudyCompanionRoute = ToolsStudyCompanionRouteImport.update({
+  id: '/tools/study-companion',
+  path: '/tools/study-companion',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthenticatedAdminDebugRoute = AuthenticatedAdminDebugRouteImport.update({
   id: '/admin/debug',
   path: '/admin/debug',
@@ -252,6 +258,7 @@ export interface FileRoutesByFullPath {
   '/library/courses': typeof LibraryCoursesRoute
   '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
+  '/tools/study-companion': typeof ToolsStudyCompanionRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/library/': typeof LibraryIndexRoute
   '/tools/': typeof ToolsIndexRoute
@@ -287,6 +294,7 @@ export interface FileRoutesByTo {
   '/library/courses': typeof LibraryCoursesRoute
   '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
+  '/tools/study-companion': typeof ToolsStudyCompanionRoute
   '/knowledge': typeof KnowledgeIndexRoute
   '/library': typeof LibraryIndexRoute
   '/tools': typeof ToolsIndexRoute
@@ -325,6 +333,7 @@ export interface FileRoutesById {
   '/library/courses': typeof LibraryCoursesRoute
   '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
+  '/tools/study-companion': typeof ToolsStudyCompanionRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/library/': typeof LibraryIndexRoute
   '/tools/': typeof ToolsIndexRoute
@@ -363,6 +372,7 @@ export interface FileRouteTypes {
     | '/library/courses'
     | '/library/templates'
     | '/tools/$toolId'
+    | '/tools/study-companion'
     | '/knowledge/'
     | '/library/'
     | '/tools/'
@@ -398,6 +408,7 @@ export interface FileRouteTypes {
     | '/library/courses'
     | '/library/templates'
     | '/tools/$toolId'
+    | '/tools/study-companion'
     | '/knowledge'
     | '/library'
     | '/tools'
@@ -435,6 +446,7 @@ export interface FileRouteTypes {
     | '/library/courses'
     | '/library/templates'
     | '/tools/$toolId'
+    | '/tools/study-companion'
     | '/knowledge/'
     | '/library/'
     | '/tools/'
@@ -467,6 +479,7 @@ export interface RootRouteChildren {
   ApiOfficeAiRoute: typeof ApiOfficeAiRoute
   KnowledgeBookmarksRoute: typeof KnowledgeBookmarksRoute
   ToolsToolIdRoute: typeof ToolsToolIdRoute
+  ToolsStudyCompanionRoute: typeof ToolsStudyCompanionRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
   KnowledgeCategorySlugArticleSlugRoute: typeof KnowledgeCategorySlugArticleSlugRoute
@@ -665,6 +678,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ToolsToolIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/study-companion': {
+      id: '/tools/study-companion'
+      path: '/tools/study-companion'
+      fullPath: '/tools/study-companion'
+      preLoaderRoute: typeof ToolsStudyCompanionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_authenticated/admin/debug': {
       id: '/_authenticated/admin/debug'
       path: '/admin/debug'
@@ -785,6 +805,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiOfficeAiRoute: ApiOfficeAiRoute,
   KnowledgeBookmarksRoute: KnowledgeBookmarksRoute,
   ToolsToolIdRoute: ToolsToolIdRoute,
+  ToolsStudyCompanionRoute: ToolsStudyCompanionRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
   ToolsIndexRoute: ToolsIndexRoute,
   KnowledgeCategorySlugArticleSlugRoute: KnowledgeCategorySlugArticleSlugRoute,
