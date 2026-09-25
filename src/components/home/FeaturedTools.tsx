@@ -98,6 +98,17 @@ const ITEMS: Item[] = [
     descAr: "حل قسمة الميراث وفق الأحكام الشرعية.",
     descEn: "Islamic inheritance shares calculated instantly.",
   },
+  {
+    id: "study-companion",
+    icon: Sparkles,
+    ar: "رفيق المذاكرة المهني",
+    en: "Study Companion",
+    descAr: "تتبع منهج CMA وDipIFR، بطاقات مراجعة، ومؤقت تركيز.",
+    descEn: "Track CMA & DipIFR curricula, flashcards, and a focus timer.",
+    badgeAr: "شهادات مهنية",
+    badgeEn: "Certifications",
+    href: "/tools/study-companion",
+  },
 ];
 
 /** Split into two lanes so the strip reads as layered depth, not one long line. */
