@@ -256,28 +256,20 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
  * predictably, and `dir` is restored here because the `Marquee` track is
  * forced to `ltr` to sidestep RTL `scrollLeft` quirks.
  */
-function ToolChip({ item, lang }: { item: Item; lang: Lang }) {
-  const ar = lang === "ar";
-  const Icon = item.icon;
+const chipClass =
+  "group flex w-[15rem] shrink-0 items-center gap-3 rounded-2xl border border-white/[0.08] bg-gradient-to-br from-[#1c1a17] to-[#0f0d0b] p-3.5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#A88765]/50 hover:shadow-[0_24px_60px_-24px_rgba(168,135,101,0.4)] sm:w-[17.5rem] sm:p-4";
 
-  // Tools on a fixed route (e.g. /tools/study-companion) bypass /tools/$toolId.
-  if (item.href) {
-    return (
-      <Link to={item.href as "/tools"} dir={ar ? "rtl" : "ltr"} onMouseEnter={playHover} onClick={playClick} className={chipClass}>
-        <ChipBody item={item} ar={ar} Icon={Icon} />
-      </Link>
-    );
-  }
-
+function ChipBody({
+  item,
+  ar,
+  Icon,
+}: {
+  item: Item;
+  ar: boolean;
+  Icon: typeof Calculator;
+}) {
   return (
-    <Link
-      to="/tools/$toolId"
-      params={{ toolId: item.id }}
-      dir={ar ? "rtl" : "ltr"}
-      onMouseEnter={playHover}
-      onClick={playClick}
-      className="group flex w-[15rem] shrink-0 items-center gap-3 rounded-2xl border border-white/[0.08] bg-gradient-to-br from-[#1c1a17] to-[#0f0d0b] p-3.5 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.7)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#A88765]/50 hover:shadow-[0_24px_60px_-24px_rgba(168,135,101,0.4)] sm:w-[17.5rem] sm:p-4"
-    >
+    <>
       <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-[#d8bd9c] transition-all duration-300 group-hover:border-[#A88765]/60 group-hover:bg-[#A88765]/10 sm:size-11">
         <Icon className="size-[18px] sm:size-5" />
       </span>
@@ -302,6 +294,39 @@ function ToolChip({ item, lang }: { item: Item; lang: Lang }) {
         aria-hidden
         className="size-3.5 shrink-0 text-[#A88765]/50 transition-all duration-300 group-hover:text-[#d8bd9c] ltr:rotate-90"
       />
+    </>
+  );
+}
+
+function ToolChip({ item, lang }: { item: Item; lang: Lang }) {
+  const ar = lang === "ar";
+  const Icon = item.icon;
+
+  // Tools on a fixed route (e.g. /tools/study-companion) bypass /tools/$toolId.
+  if (item.href) {
+    return (
+      <Link
+        to={item.href as "/tools"}
+        dir={ar ? "rtl" : "ltr"}
+        onMouseEnter={playHover}
+        onClick={playClick}
+        className={chipClass}
+      >
+        <ChipBody item={item} ar={ar} Icon={Icon} />
+      </Link>
+    );
+  }
+
+  return (
+    <Link
+      to="/tools/$toolId"
+      params={{ toolId: item.id }}
+      dir={ar ? "rtl" : "ltr"}
+      onMouseEnter={playHover}
+      onClick={playClick}
+      className={chipClass}
+    >
+      <ChipBody item={item} ar={ar} Icon={Icon} />
     </Link>
   );
 }
