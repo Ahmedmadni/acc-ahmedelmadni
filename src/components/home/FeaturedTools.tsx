@@ -25,6 +25,8 @@ type Item = {
   descEn: string;
   badgeAr?: string;
   badgeEn?: string;
+  /** Absolute route for tools that live on a fixed path instead of /tools/$toolId. */
+  href?: string;
 };
 
 const ITEMS: Item[] = [
