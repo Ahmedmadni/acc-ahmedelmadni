@@ -260,6 +260,15 @@ function ToolChip({ item, lang }: { item: Item; lang: Lang }) {
   const ar = lang === "ar";
   const Icon = item.icon;
 
+  // Tools on a fixed route (e.g. /tools/study-companion) bypass /tools/$toolId.
+  if (item.href) {
+    return (
+      <Link to={item.href as "/tools"} dir={ar ? "rtl" : "ltr"} onMouseEnter={playHover} onClick={playClick} className={chipClass}>
+        <ChipBody item={item} ar={ar} Icon={Icon} />
+      </Link>
+    );
+  }
+
   return (
     <Link
       to="/tools/$toolId"
