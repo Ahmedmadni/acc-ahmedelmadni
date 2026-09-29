@@ -57,6 +57,9 @@ function rowToExamQuestion(r: Row): ExamQuestion {
     answerIndex: r.answer_index,
     explanation: { ar: r.explanation_ar, en: r.explanation_en },
     reference: r.reference || "—",
+    difficulty:
+      r.difficulty === "easy" || r.difficulty === "hard" ? r.difficulty : "intermediate",
+    examDomain: r.exam_domain || r.topic || "general",
   };
 }
 
