@@ -9,6 +9,8 @@ export interface ExamQuestion {
   answerIndex: number;
   explanation: { ar: string; en: string };
   reference: string;
+  difficulty?: "easy" | "intermediate" | "hard";
+  examDomain?: string;
 }
 
 export const TRACKS: ExamTrack[] = ["IFRS", "CMA", "CPA", "FMAA", "ACCA", "CFA"];
