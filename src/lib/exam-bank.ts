@@ -273,5 +273,72 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       en: "IFRS 16 eliminated the operating/finance distinction for lessees; ROU asset and lease liability are recognized (except short-term and low-value leases).",
     },
     reference: "Gleim / IFRS 16",
+  },,
+  {
+    id: "ifrs-ias2-1",
+    track: "IFRS",
+    topic: "IAS 2 — Inventories",
+    question: {
+      ar: "لدى منشأة مخزون تكلفته 120 ريالاً للوحدة، وسعر بيعه المتوقع 128 ريالاً، وتكاليف إكماله وبيعه 15 ريالاً. بأي مبلغ تُقاس الوحدة في نهاية الفترة وفق IAS 2؟",
+      en: "An item of inventory costs 120 per unit, is expected to sell for 128, and requires 15 of completion and selling costs. At what amount is the unit measured at period end under IAS 2?",
+    },
+    choices: {
+      ar: ["113 ريالاً", "120 ريالاً", "128 ريالاً", "135 ريالاً"],
+      en: ["113", "120", "128", "135"],
+    },
+    answerIndex: 0,
+    explanation: {
+      ar: "صافي القيمة القابلة للتحقق = 128 - 15 = 113 ريالاً. يطلب IAS 2 قياس المخزون بالأقل من التكلفة (120) وصافي القيمة القابلة للتحقق (113)، لذلك تكون القيمة 113.",
+      en: "NRV is 128 - 15 = 113. IAS 2 requires inventory to be measured at the lower of cost (120) and NRV (113), so the carrying amount is 113.",
+    },
+    reference: "IAS 2 — lower of cost and net realisable value",
   },
+  {
+    id: "ifrs-ias2-2",
+    track: "IFRS",
+    topic: "IAS 2 — Inventories",
+    question: {
+      ar: "أي صيغة تكلفة لا يسمح IAS 2 باستخدامها للمخزون القابل للتبادل عادةً؟",
+      en: "Which cost formula is not permitted by IAS 2 for ordinarily interchangeable inventory?",
+    },
+    choices: {
+      ar: ["FIFO", "المتوسط المرجح", "LIFO", "المتوسط المتحرك"],
+      en: ["FIFO", "Weighted average", "LIFO", "Moving average"],
+    },
+    answerIndex: 2,
+    explanation: {
+      ar: "يسمح IAS 2 باستخدام FIFO أو المتوسط المرجح للمخزون القابل للتبادل، بينما لا يسمح باستخدام LIFO. ويمكن تطبيق المتوسط المرجح دورياً أو بطريقة المتوسط المتحرك.",
+      en: "IAS 2 permits FIFO or weighted-average approaches for interchangeable inventory. LIFO is not permitted. Weighted average can be applied periodically or as a moving average.",
+    },
+    reference: "IAS 2.25 — cost formulas",
+  },
+  {
+    id: "ifrs-ias2-3",
+    track: "IFRS",
+    topic: "IAS 2 — Inventories",
+    question: {
+      ar: "عند توزيع التكاليف الصناعية الثابتة على وحدات الإنتاج، ما الأساس الذي يؤكد عليه IAS 2 في الظروف العادية؟",
+      en: "When allocating fixed production overheads to units of production, which basis does IAS 2 emphasise under normal circumstances?",
+    },
+    choices: {
+      ar: [
+        "أقصى طاقة تصميمية للمصنع دائماً",
+        "الطاقة العادية المتوقعة عبر عدد من الفترات أو المواسم",
+        "عدد الوحدات المباعة فقط",
+        "الإنتاج الفعلي دائماً حتى في فترات الانخفاض غير الطبيعي",
+      ],
+      en: [
+        "Maximum design capacity at all times",
+        "Normal capacity expected over a number of periods or seasons",
+        "Units sold only",
+        "Actual production at all times, even in abnormally low periods",
+      ],
+    },
+    answerIndex: 1,
+    explanation: {
+      ar: "توزع التكاليف الصناعية الثابتة على أساس الطاقة العادية. استخدام إنتاج منخفض بصورة غير طبيعية قد يحمّل كل وحدة بتكلفة ثابتة زائدة ويؤدي إلى تضخيم قيمة المخزون.",
+      en: "Fixed production overhead is allocated based on normal capacity. Using abnormally low actual production can over-allocate fixed overhead per unit and overstate inventory.",
+    },
+    reference: "IAS 2.13 — allocation of fixed production overhead",
+  }
 ];

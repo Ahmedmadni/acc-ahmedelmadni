@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "standard": {
+    "code": "IAS 2",
+    "family": "IAS",
+    "number": 2,
+    "title": {
+      "ar": "المخزون",
+      "en": "Inventories"
+    },
+    "official_url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/",
+    "status": "active"
+  },
+  "article": {
+    "slug": "ias-2-inventories-practical-guide",
+    "title": {
+      "ar": "دليل IAS 2 للمخزون: القياس والتكلفة وصافي القيمة القابلة للتحقق",
+      "en": "IAS 2 Inventories: Measurement, Cost and Net Realisable Value"
+    },
+    "summary": {
+      "ar": "شرح عملي لمبادئ قياس المخزون وتحديد مكونات التكلفة واختبار صافي القيمة القابلة للتحقق مع أمثلة وقائمة فحص.",
+      "en": "A practical guide to inventory measurement, cost components and net realisable value testing with examples and a checklist."
+    },
+    "sections": [
+      {
+        "id": "measurement",
+        "heading": {
+          "ar": "قاعدة القياس",
+          "en": "Measurement rule"
+        },
+        "paragraphs": {
+          "ar": [
+            "يقاس المخزون بالأقل من التكلفة وصافي القيمة القابلة للتحقق.",
+            "تتضمن التكلفة تكاليف الشراء والتحويل والتكاليف الأخرى اللازمة لإيصال المخزون إلى موقعه وحالته الحاليين."
+          ],
+          "en": [
+            "Inventories are measured at the lower of cost and net realisable value.",
+            "Cost includes purchase, conversion and other costs incurred to bring inventories to their present location and condition."
+          ]
+        }
+      }
+    ],
+    "disclosure_checklist": [
+      {
+        "key": "accounting_policy",
+        "label": {
+          "ar": "الإفصاح عن السياسات المحاسبية المتبعة في قياس المخزون وصيغة التكلفة.",
+          "en": "Disclose the accounting policies used in measuring inventories, including the cost formula."
+        },
+        "reference": "IAS 2"
+      }
+    ],
+    "journal_entries": [
+      {
+        "scenario": {
+          "ar": "تخفيض المخزون إلى صافي القيمة القابلة للتحقق",
+          "en": "Write inventory down to net realisable value"
+        },
+        "debit": {
+          "account_ar": "خسارة انخفاض المخزون",
+          "account_en": "Inventory write-down expense"
+        },
+        "credit": {
+          "account_ar": "مخصص/تخفيض المخزون",
+          "account_en": "Inventory allowance / inventory"
+        },
+        "note": {
+          "ar": "يُحدد الحساب المقابل وفق سياسة المنشأة ونظام الأستاذ العام.",
+          "en": "The exact credit account depends on the entity's ledger design and accounting policy."
+        }
+      }
+    ]
+  },
+  "quiz": {
+    "question_count": 2,
+    "questions": [
+      {
+        "id": "ias2-measurement-001",
+        "type": "MCQ",
+        "difficulty": "easy",
+        "domain": "measurement",
+        "question": {
+          "ar": "كانت تكلفة صنف من المخزون 120 ريالاً وصافي قيمته القابلة للتحقق 105 ريالات. ما القيمة التي يظهر بها المخزون؟",
+          "en": "An inventory item costs SAR 120 and has a net realisable value of SAR 105. At what amount should it be reported?"
+        },
+        "options": {
+          "ar": [
+            "120 ريالاً",
+            "105 ريالات",
+            "225 ريالاً",
+            "لا يتم الاعتراف بالمخزون"
+          ],
+          "en": [
+            "SAR 120",
+            "SAR 105",
+            "SAR 225",
+            "The inventory is not recognised"
+          ]
+        },
+        "correct_answer": {
+          "index": 1,
+          "key": "B"
+        },
+        "explanation": {
+          "ar": "IAS 2 يقيس المخزون بالأقل من التكلفة وصافي القيمة القابلة للتحقق، لذلك القيمة الصحيحة هي 105 ريالات.",
+          "en": "IAS 2 measures inventory at the lower of cost and net realisable value, so SAR 105 is the correct amount."
+        },
+        "reference": "IAS 2",
+        "source": {
+          "key": "editorial-original",
+          "source_item_id": "ias2-measurement-001",
+          "license": "site-original",
+          "translation_status": "reviewed"
+        }
+      },
+      {
+        "id": "ias2-cost-002",
+        "type": "MCQ",
+        "difficulty": "intermediate",
+        "domain": "cost",
+        "question": {
+          "ar": "أي عنصر لا يُضم عادةً إلى تكلفة المخزون؟",
+          "en": "Which item is generally excluded from inventory cost?"
+        },
+        "options": {
+          "ar": [
+            "تكاليف الشراء",
+            "تكاليف التحويل",
+            "الهدر غير الطبيعي",
+            "تكاليف لازمة لإيصال المخزون إلى حالته الحالية"
+          ],
+          "en": [
+            "Purchase costs",
+            "Conversion costs",
+            "Abnormal waste",
+            "Costs needed to bring inventory to its present condition"
+          ]
+        },
+        "correct_answer": {
+          "index": 2,
+          "key": "C"
+        },
+        "explanation": {
+          "ar": "الهدر غير الطبيعي لا يمثل تكلفة ضرورية لإيصال المخزون إلى موقعه وحالته الحاليين، لذلك لا يُرسمل ضمن المخزون.",
+          "en": "Abnormal waste is not necessary to bring inventory to its present location and condition, so it is not capitalised in inventory."
+        },
+        "reference": "IAS 2",
+        "source": {
+          "key": "editorial-original",
+          "source_item_id": "ias2-cost-002",
+          "license": "site-original",
+          "translation_status": "reviewed"
+        }
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "inventory-nrv",
+      "href": "/tools/inventory-nrv"
+    }
+  ],
+  "provenance": {
+    "generated_at": "2026-09-29",
+    "language_priority": "ar",
+    "official_text_republished": false,
+    "sources": [
+      "IFRS Foundation",
+      "ramyatrouny/ifrs-skill"
+    ]
+  }
+}
