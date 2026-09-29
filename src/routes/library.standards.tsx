@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   BookOpenText,
   Calculator,
+  CircleHelp,
   ExternalLink,
   Info,
   Scale,
@@ -17,6 +18,7 @@ import {
   type StandardFamily,
   type StandardTopic,
 } from "@/data/ifrs-standards";
+import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { useLibLang } from "./library";
 
 export const Route = createFileRoute("/library/standards")({
@@ -28,7 +30,7 @@ export const Route = createFileRoute("/library/standards")({
         {
           name: "description",
           content:
-            "دليل عربي مختصر وقابل للبحث لمعايير IFRS وIAS مع روابط للمقالات والحاسبات المحاسبية والمصادر الرسمية.",
+            "دليل عربي لمعايير IFRS وIAS يجمع مقالات الشرح وبنك أسئلة تفاعلياً مع الحاسبات والمصادر الرسمية.",
         },
         { property: "og:title", content: "معايير IFRS وIAS | الدليل المحاسبي" },
         {
@@ -134,6 +136,7 @@ type FamilyFilter = "all" | StandardFamily;
 
 function StandardsPage() {
   const lang = useLibLang();
+  const [section, setSection] = useState<"articles" | "questions">("articles");
   const [family, setFamily] = useState<FamilyFilter>("all");
   const [topic, setTopic] = useState<"all" | StandardTopic>("all");
   const [query, setQuery] = useState("");
@@ -231,6 +234,40 @@ function StandardsPage() {
           </div>
         </section>
 
+        <nav
+          className="mx-auto mt-6 flex max-w-6xl flex-wrap items-center justify-center gap-2 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-2"
+          aria-label={lang === "ar" ? "أقسام معايير IFRS" : "IFRS standards sections"}
+        >
+          <button
+            type="button"
+            onClick={() => setSection("articles")}
+            aria-pressed={section === "articles"}
+            className={`inline-flex min-w-[190px] items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-extrabold transition ${
+              section === "articles"
+                ? "bg-[#F5F1EB] text-[#1C1B19] shadow-lg"
+                : "text-[#AFA69D] hover:bg-white/[0.04] hover:text-[#FCFBF9]"
+            }`}
+          >
+            <BookOpenText className="size-4" />
+            {lang === "ar" ? "مقالات الشرح" : "Explanatory Articles"}
+          </button>
+          <button
+            type="button"
+            onClick={() => setSection("questions")}
+            aria-pressed={section === "questions"}
+            className={`inline-flex min-w-[190px] items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-extrabold transition ${
+              section === "questions"
+                ? "bg-[#F5F1EB] text-[#1C1B19] shadow-lg"
+                : "text-[#AFA69D] hover:bg-white/[0.04] hover:text-[#FCFBF9]"
+            }`}
+          >
+            <CircleHelp className="size-4" />
+            {lang === "ar" ? "بنك الأسئلة والاختبارات" : "Question Bank & Quizzes"}
+          </button>
+        </nav>
+
+        {section === "articles" ? (
+          <>
         <section className="mx-auto mt-8 max-w-6xl">
           <div className="mb-4 flex items-center gap-2">
             <Sparkles className="size-5 text-[#c9a986]" />
@@ -429,6 +466,12 @@ function StandardsPage() {
             </div>
           )}
         </section>
+          </>
+        ) : (
+          <div className="mt-8">
+            <IfrsQuestionBank lang={lang} />
+          </div>
+        )}
 
         <section className="mx-auto mt-12 max-w-6xl">
           <div className="rounded-[2rem] border border-[#A88765]/20 bg-[#1C1B19] p-6 sm:p-8">
