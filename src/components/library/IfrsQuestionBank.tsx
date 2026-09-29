@@ -2,41 +2,117 @@ import { useEffect, useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useServerFn } from "@tanstack/react-start";
 import {
+  AlertTriangle,
   ArrowLeft,
   ArrowRight,
+  BarChart3,
   BookOpenText,
+  Brain,
   CheckCircle2,
   ChevronDown,
   CircleHelp,
+  ClipboardCheck,
   RefreshCw,
+  Target,
   Trophy,
   XCircle,
 } from "lucide-react";
 import { IFRS_STANDARDS } from "@/data/ifrs-standards";
 import { IFRS_QUESTION_SEED } from "@/data/ifrs-quiz-seed";
-import { SEED_QUESTIONS, type ExamQuestion } from "@/lib/exam-bank";
+import {
+  SEED_QUESTIONS,
+  type ExamDifficulty,
+  type ExamQuestion,
+} from "@/lib/exam-bank";
 import { listExamQuestions } from "@/lib/exam-questions.functions";
 import type { Lang } from "@/lib/i18n";
 
+type QuizMode = "learn" | "exam";
+type DifficultyFilter = "all" | ExamDifficulty;
+
+type NormalizedQuestion = ExamQuestion & {
+  standardCode: string;
+  difficulty: ExamDifficulty;
+  domain: string;
+};
+
+type QuestionProgress = {
+  standardCode: string;
+  domain: string;
+  difficulty: ExamDifficulty;
+  attempts: number;
+  correct: number;
+  updatedAt: string;
+};
+
+type ProgressStore = Record<string, QuestionProgress>;
+
+const PROGRESS_KEY = "ifrs-quiz-progress-v1";
+const COVERAGE_TARGET = 20;
+
+const DIFFICULTY_LABELS: Record<
+  DifficultyFilter,
+  { ar: string; en: string }
+> = {
+  all: { ar: "كل المستويات", en: "All levels" },
+  easy: { ar: "سهل", en: "Easy" },
+  intermediate: { ar: "متوسط", en: "Intermediate" },
+  hard: { ar: "متقدم", en: "Advanced" },
+};
+
 function detectStandardCode(question: ExamQuestion): string | null {
+  if (question.standardCode) return question.standardCode;
   const haystack = `${question.topic} ${question.reference}`;
   const match = haystack.match(/\b(IFRS|IAS)\s*([0-9]{1,2})\b/i);
   return match ? `${match[1].toUpperCase()} ${match[2]}` : null;
 }
 
-function normalizeQuestion(question: ExamQuestion) {
+function normalizeQuestion(question: ExamQuestion): NormalizedQuestion | null {
+  const standardCode = detectStandardCode(question);
+  if (!standardCode) return null;
+
+  const difficulty: ExamDifficulty =
+    question.difficulty === "easy" || question.difficulty === "hard"
+      ? question.difficulty
+      : "intermediate";
+
+  const domain =
+    question.domain?.trim() ||
+    question.topic
+      .replace(/^(?:IFRS|IAS)\s*\d+\s*[—-]?\s*/i, "")
+      .trim()
+      .toLowerCase() ||
+    "general";
+
   return {
     ...question,
-    standardCode: detectStandardCode(question),
+    standardCode,
+    difficulty,
+    domain,
   };
+}
+
+function accuracy(correct: number, attempts: number) {
+  return attempts > 0 ? Math.round((correct / attempts) * 100) : 0;
 }
 
 export function IfrsQuestionBank({ lang }: { lang: Lang }) {
   const listQuestions = useServerFn(listExamQuestions);
+
+  const [mode, setMode] = useState<QuizMode>("learn");
   const [standardCode, setStandardCode] = useState("IAS 2");
-  const [current, setCurrent] = useState(0);
-  const [selected, setSelected] = useState<number | null>(null);
-  const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
+
+  const [learnCurrent, setLearnCurrent] = useState(0);
+  const [learnSelected, setLearnSelected] = useState<number | null>(null);
+
+  const [examSize, setExamSize] = useState(10);
+  const [examQuestionIds, setExamQuestionIds] = useState<string[]>([]);
+  const [examCurrent, setExamCurrent] = useState(0);
+  const [examAnswers, setExamAnswers] = useState<Record<string, number>>({});
+  const [examSubmitted, setExamSubmitted] = useState(false);
+
+  const [progress, setProgress] = useState<ProgressStore>({});
 
   const query = useQuery({
     queryKey: ["ifrs-standard-question-bank"],
@@ -44,6 +120,16 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
     staleTime: 5 * 60_000,
     retry: 1,
   });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const stored = window.localStorage.getItem(PROGRESS_KEY);
+      if (stored) setProgress(JSON.parse(stored) as ProgressStore);
+    } catch {
+      // Ignore malformed local progress and start a fresh local profile.
+    }
+  }, []);
 
   const merged = useMemo(() => {
     const byId = new Map<string, ExamQuestion>();
@@ -58,83 +144,276 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
 
     return Array.from(byId.values())
       .map(normalizeQuestion)
-      .filter((question) => question.standardCode !== null);
+      .filter((question): question is NormalizedQuestion => question !== null);
   }, [query.data?.questions]);
 
   const counts = useMemo(() => {
     const map = new Map<string, number>();
     for (const question of merged) {
-      if (!question.standardCode) continue;
-      map.set(question.standardCode, (map.get(question.standardCode) ?? 0) + 1);
+      map.set(
+        question.standardCode,
+        (map.get(question.standardCode) ?? 0) + 1,
+      );
     }
     return map;
   }, [merged]);
 
-  const standardsWithQuestions = useMemo(
-    () =>
-      IFRS_STANDARDS.filter((standard) => (counts.get(standard.code) ?? 0) > 0).sort((a, b) => {
-        if (a.family !== b.family) return a.family === "IFRS" ? -1 : 1;
-        return Number(a.code.match(/\d+/)?.[0] ?? 0) - Number(b.code.match(/\d+/)?.[0] ?? 0);
-      }),
-    [counts],
+  const selectedStandard = IFRS_STANDARDS.find(
+    (standard) => standard.code === standardCode,
   );
 
-  const pool = useMemo(
+  const standardPool = useMemo(
     () => merged.filter((question) => question.standardCode === standardCode),
     [merged, standardCode],
   );
 
-  const currentQuestion = pool[current];
-  const selectedStandard = IFRS_STANDARDS.find((standard) => standard.code === standardCode);
+  const pool = useMemo(
+    () =>
+      standardPool.filter(
+        (question) =>
+          difficulty === "all" || question.difficulty === difficulty,
+      ),
+    [difficulty, standardPool],
+  );
+
+  const currentLearnQuestion = pool[learnCurrent];
+
+  const examQuestions = useMemo(() => {
+    if (examQuestionIds.length === 0) return [];
+    const byId = new Map(pool.map((question) => [question.id, question]));
+    return examQuestionIds
+      .map((id) => byId.get(id))
+      .filter((question): question is NormalizedQuestion => Boolean(question));
+  }, [examQuestionIds, pool]);
+
+  const currentExamQuestion = examQuestions[examCurrent];
 
   useEffect(() => {
-    if ((counts.get(standardCode) ?? 0) === 0 && standardsWithQuestions.length > 0) {
-      setStandardCode(standardsWithQuestions[0]!.code);
+    if (learnCurrent >= pool.length) setLearnCurrent(0);
+  }, [learnCurrent, pool.length]);
+
+  const selectedStats = useMemo(() => {
+    const values = Object.values(progress).filter(
+      (item) => item.standardCode === standardCode,
+    );
+    const attempts = values.reduce((sum, item) => sum + item.attempts, 0);
+    const correct = values.reduce((sum, item) => sum + item.correct, 0);
+
+    const byDomain = new Map<
+      string,
+      { domain: string; attempts: number; correct: number }
+    >();
+
+    for (const item of values) {
+      const previous = byDomain.get(item.domain) ?? {
+        domain: item.domain,
+        attempts: 0,
+        correct: 0,
+      };
+      previous.attempts += item.attempts;
+      previous.correct += item.correct;
+      byDomain.set(item.domain, previous);
     }
-  }, [counts, standardCode, standardsWithQuestions]);
 
-  useEffect(() => {
-    if (current >= pool.length) setCurrent(0);
-  }, [current, pool.length]);
+    const domains = Array.from(byDomain.values())
+      .map((item) => ({
+        ...item,
+        accuracy: accuracy(item.correct, item.attempts),
+      }))
+      .sort((a, b) => a.accuracy - b.accuracy || b.attempts - a.attempts);
 
-  function resetQuestionState() {
-    setCurrent(0);
-    setSelected(null);
-    setScore({ correct: 0, total: 0 });
+    return {
+      attempts,
+      correct,
+      accuracy: accuracy(correct, attempts),
+      domains,
+    };
+  }, [progress, standardCode]);
+
+  const coveragePercent = Math.min(
+    100,
+    Math.round((standardPool.length / COVERAGE_TARGET) * 100),
+  );
+
+  function persistAttempts(
+    results: Array<{ question: NormalizedQuestion; correct: boolean }>,
+  ) {
+    setProgress((previous) => {
+      const next: ProgressStore = { ...previous };
+      const updatedAt = new Date().toISOString();
+
+      for (const result of results) {
+        const existing = next[result.question.id];
+        next[result.question.id] = {
+          standardCode: result.question.standardCode,
+          domain: result.question.domain,
+          difficulty: result.question.difficulty,
+          attempts: (existing?.attempts ?? 0) + 1,
+          correct: (existing?.correct ?? 0) + (result.correct ? 1 : 0),
+          updatedAt,
+        };
+      }
+
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(PROGRESS_KEY, JSON.stringify(next));
+      }
+      return next;
+    });
+  }
+
+  function resetLearn() {
+    setLearnCurrent(0);
+    setLearnSelected(null);
+  }
+
+  function resetExam() {
+    setExamQuestionIds([]);
+    setExamCurrent(0);
+    setExamAnswers({});
+    setExamSubmitted(false);
+  }
+
+  function resetAllSessionState() {
+    resetLearn();
+    resetExam();
   }
 
   function changeStandard(code: string) {
     setStandardCode(code);
-    resetQuestionState();
+    setDifficulty("all");
+    resetAllSessionState();
   }
 
-  function chooseAnswer(index: number) {
-    if (!currentQuestion || selected !== null) return;
-    setSelected(index);
-    setScore((previous) => ({
-      correct: previous.correct + (index === currentQuestion.answerIndex ? 1 : 0),
-      total: previous.total + 1,
+  function changeMode(nextMode: QuizMode) {
+    setMode(nextMode);
+    resetAllSessionState();
+  }
+
+  function changeDifficulty(next: DifficultyFilter) {
+    setDifficulty(next);
+    resetAllSessionState();
+  }
+
+  function chooseLearnAnswer(index: number) {
+    if (!currentLearnQuestion || learnSelected !== null) return;
+    setLearnSelected(index);
+    persistAttempts([
+      {
+        question: currentLearnQuestion,
+        correct: index === currentLearnQuestion.answerIndex,
+      },
+    ]);
+  }
+
+  function moveLearn(direction: 1 | -1) {
+    if (pool.length === 0) return;
+    setLearnCurrent(
+      (value) => (value + direction + pool.length) % pool.length,
+    );
+    setLearnSelected(null);
+  }
+
+  function startExam() {
+    const size = Math.min(examSize, pool.length);
+    setExamQuestionIds(pool.slice(0, size).map((question) => question.id));
+    setExamCurrent(0);
+    setExamAnswers({});
+    setExamSubmitted(false);
+  }
+
+  function chooseExamAnswer(index: number) {
+    if (!currentExamQuestion || examSubmitted) return;
+    setExamAnswers((previous) => ({
+      ...previous,
+      [currentExamQuestion.id]: index,
     }));
   }
 
-  function next() {
-    if (pool.length === 0) return;
-    setCurrent((value) => (value + 1) % pool.length);
-    setSelected(null);
+  function moveExam(direction: 1 | -1) {
+    if (examQuestions.length === 0) return;
+    setExamCurrent(
+      (value) =>
+        (value + direction + examQuestions.length) % examQuestions.length,
+    );
   }
 
-  function previous() {
-    if (pool.length === 0) return;
-    setCurrent((value) => (value - 1 + pool.length) % pool.length);
-    setSelected(null);
+  function submitExam() {
+    if (examQuestions.length === 0 || examSubmitted) return;
+    persistAttempts(
+      examQuestions.map((question) => ({
+        question,
+        correct: examAnswers[question.id] === question.answerIndex,
+      })),
+    );
+    setExamSubmitted(true);
+    setExamCurrent(0);
   }
 
-  const isCorrect =
-    currentQuestion && selected !== null ? selected === currentQuestion.answerIndex : null;
+  const examAnswered = Object.keys(examAnswers).filter((id) =>
+    examQuestionIds.includes(id),
+  ).length;
+
+  const examCorrect = examSubmitted
+    ? examQuestions.filter(
+        (question) => examAnswers[question.id] === question.answerIndex,
+      ).length
+    : 0;
+
+  const weakestDomains = selectedStats.domains.slice(0, 3);
 
   return (
     <section className="mx-auto max-w-6xl">
-      <div className="grid gap-5 lg:grid-cols-[300px_1fr]">
+      <div className="mb-5 grid gap-3 md:grid-cols-2">
+        <button
+          type="button"
+          onClick={() => changeMode("learn")}
+          className={`rounded-3xl border p-5 text-start transition ${
+            mode === "learn"
+              ? "border-[#A88765]/65 bg-[#F5F1EB] text-[#1C1B19]"
+              : "border-[#A88765]/20 bg-[#1C1B19] text-[#AFA69D] hover:border-[#A88765]/40"
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            <Brain className="size-5" />
+            <div>
+              <div className="font-display text-base font-black">
+                {lang === "ar" ? "وضع التعلم" : "Learn Mode"}
+              </div>
+              <div className="mt-1 text-xs leading-5 opacity-75">
+                {lang === "ar"
+                  ? "تصحيح وشرح مبسط مباشرة بعد كل إجابة."
+                  : "Instant correction and explanation after each answer."}
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => changeMode("exam")}
+          className={`rounded-3xl border p-5 text-start transition ${
+            mode === "exam"
+              ? "border-[#A88765]/65 bg-[#F5F1EB] text-[#1C1B19]"
+              : "border-[#A88765]/20 bg-[#1C1B19] text-[#AFA69D] hover:border-[#A88765]/40"
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            <ClipboardCheck className="size-5" />
+            <div>
+              <div className="font-display text-base font-black">
+                {lang === "ar" ? "وضع الاختبار" : "Exam Mode"}
+              </div>
+              <div className="mt-1 text-xs leading-5 opacity-75">
+                {lang === "ar"
+                  ? "بدون كشف الإجابات حتى تسليم الاختبار."
+                  : "Answers stay hidden until the exam is submitted."}
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <div className="grid gap-5 lg:grid-cols-[300px_minmax(0,1fr)]">
         <aside className="rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-4 sm:p-5">
           <div className="flex items-center gap-2">
             <CircleHelp className="size-5 text-[#c9a986]" />
@@ -142,11 +421,6 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
               {lang === "ar" ? "اختر المعيار" : "Choose a standard"}
             </h3>
           </div>
-          <p className="mt-2 text-xs leading-6 text-[#8F877F]">
-            {lang === "ar"
-              ? "يُعرض فقط ما لديه أسئلة متاحة حالياً. سيزداد العدد تلقائياً عند استيراد أسئلة جديدة إلى قاعدة البيانات."
-              : "Only standards with available questions are shown. Counts update automatically as new database questions are imported."}
-          </p>
 
           <div className="relative mt-4">
             <select
@@ -155,7 +429,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
               className="w-full appearance-none rounded-2xl border border-[#A88765]/25 bg-[#151412] px-4 py-3 text-sm font-bold text-[#D8D1C8] outline-none focus:border-[#A88765]/65"
               aria-label={lang === "ar" ? "اختيار المعيار" : "Choose standard"}
             >
-              {standardsWithQuestions.map((standard) => (
+              {IFRS_STANDARDS.map((standard) => (
                 <option key={standard.code} value={standard.code}>
                   {standard.code} — {lang === "ar" ? standard.titleAr : standard.titleEn} (
                   {counts.get(standard.code) ?? 0})
@@ -165,32 +439,99 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
             <ChevronDown className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#8F877F] rtl:left-4 ltr:right-4" />
           </div>
 
-          <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
-            {standardsWithQuestions.map((standard) => {
-              const active = standard.code === standardCode;
-              return (
-                <button
-                  key={standard.code}
-                  type="button"
-                  onClick={() => changeStandard(standard.code)}
-                  className={`flex items-center justify-between gap-3 rounded-2xl border px-3 py-3 text-start transition ${
-                    active
-                      ? "border-[#A88765]/70 bg-[#A88765]/15 text-[#E3C39F]"
-                      : "border-[#A88765]/15 bg-[#151412] text-[#AFA69D] hover:border-[#A88765]/35 hover:text-[#D8D1C8]"
-                  }`}
-                >
-                  <span className="min-w-0">
-                    <span className="block text-xs font-black">{standard.code}</span>
-                    <span className="mt-1 block truncate text-[10px] opacity-75">
-                      {lang === "ar" ? standard.titleAr : standard.titleEn}
-                    </span>
-                  </span>
-                  <span className="rounded-full border border-current/20 px-2 py-0.5 text-[10px] font-black">
-                    {counts.get(standard.code) ?? 0}
-                  </span>
-                </button>
-              );
-            })}
+          <div className="mt-5">
+            <div className="flex items-center justify-between gap-3 text-[11px] font-bold text-[#AFA69D]">
+              <span>{lang === "ar" ? "تغطية بنك الأسئلة" : "Question coverage"}</span>
+              <span>
+                {standardPool.length}/{COVERAGE_TARGET}+
+              </span>
+            </div>
+            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
+              <div
+                className="h-full rounded-full bg-[#c9a986] transition-[width] duration-300"
+                style={{ width: `${coveragePercent}%` }}
+              />
+            </div>
+            <p className="mt-2 text-[10px] leading-5 text-[#766F68]">
+              {lang === "ar"
+                ? "الهدف التحريري الأولي: 20 سؤالاً مراجعاً على الأقل لكل معيار."
+                : "Initial editorial target: at least 20 reviewed questions per standard."}
+            </p>
+          </div>
+
+          <div className="mt-5 border-t border-[#A88765]/15 pt-5">
+            <p className="text-[11px] font-black text-[#D8D1C8]">
+              {lang === "ar" ? "مستوى الصعوبة" : "Difficulty"}
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {(Object.keys(DIFFICULTY_LABELS) as DifficultyFilter[]).map(
+                (item) => (
+                  <button
+                    key={item}
+                    type="button"
+                    onClick={() => changeDifficulty(item)}
+                    className={`rounded-full border px-3 py-1.5 text-[10px] font-bold transition ${
+                      difficulty === item
+                        ? "border-[#A88765] bg-[#A88765]/15 text-[#E4C9A8]"
+                        : "border-[#A88765]/20 text-[#8F877F] hover:text-[#c9a986]"
+                    }`}
+                  >
+                    {DIFFICULTY_LABELS[item][lang]}
+                  </button>
+                ),
+              )}
+            </div>
+          </div>
+
+          <div className="mt-5 rounded-2xl border border-[#A88765]/15 bg-[#151412] p-4">
+            <div className="flex items-center gap-2">
+              <BarChart3 className="size-4 text-[#c9a986]" />
+              <p className="text-xs font-black text-[#D8D1C8]">
+                {lang === "ar" ? "أداؤك على هذا الجهاز" : "Your device progress"}
+              </p>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              <div className="rounded-xl bg-white/[0.035] p-3 text-center">
+                <div className="font-display text-xl font-black text-[#E4C9A8]">
+                  {selectedStats.attempts}
+                </div>
+                <div className="mt-1 text-[9px] font-bold text-[#766F68]">
+                  {lang === "ar" ? "محاولة" : "Attempts"}
+                </div>
+              </div>
+              <div className="rounded-xl bg-white/[0.035] p-3 text-center">
+                <div className="font-display text-xl font-black text-[#E4C9A8]">
+                  {selectedStats.attempts > 0 ? `${selectedStats.accuracy}%` : "—"}
+                </div>
+                <div className="mt-1 text-[9px] font-bold text-[#766F68]">
+                  {lang === "ar" ? "دقة" : "Accuracy"}
+                </div>
+              </div>
+            </div>
+
+            {weakestDomains.length > 0 && (
+              <div className="mt-4">
+                <p className="text-[10px] font-black text-[#AFA69D]">
+                  {lang === "ar" ? "محاور تحتاج تركيزاً" : "Focus areas"}
+                </p>
+                <div className="mt-2 space-y-2">
+                  {weakestDomains.map((item) => (
+                    <div key={item.domain}>
+                      <div className="flex items-center justify-between gap-3 text-[9px] font-bold text-[#8F877F]">
+                        <span className="truncate">{item.domain}</span>
+                        <span>{item.accuracy}%</span>
+                      </div>
+                      <div className="mt-1 h-1 overflow-hidden rounded-full bg-white/10">
+                        <div
+                          className="h-full rounded-full bg-[#A88765]"
+                          style={{ width: `${item.accuracy}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {query.isError && (
@@ -211,7 +552,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                     {standardCode}
                   </span>
                   <span className="rounded-full border border-[#A88765]/30 px-3 py-1 text-[11px] font-bold text-[#7C6045]">
-                    {pool.length} {lang === "ar" ? "سؤال" : "questions"}
+                    {pool.length} {lang === "ar" ? "سؤال متاح" : "available questions"}
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-black sm:text-3xl">
@@ -235,7 +576,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                 )}
                 <button
                   type="button"
-                  onClick={resetQuestionState}
+                  onClick={resetAllSessionState}
                   className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/35 bg-white/60 px-3 py-2 text-[11px] font-extrabold text-[#7C6045] transition hover:bg-white"
                 >
                   <RefreshCw className="size-3.5" />
@@ -244,72 +585,313 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
               </div>
             </div>
 
-            {pool.length === 0 || !currentQuestion ? (
-              <div className="mt-8 rounded-2xl border border-[#A88765]/20 bg-white/60 p-8 text-center">
-                <CircleHelp className="mx-auto size-9 text-[#7C6045]/60" />
+            {pool.length === 0 ? (
+              <div className="mt-8 rounded-3xl border border-[#A88765]/20 bg-white/60 p-8 text-center">
+                <AlertTriangle className="mx-auto size-9 text-[#7C6045]/60" />
                 <p className="mt-3 text-sm font-bold text-[#6B6259]">
                   {lang === "ar"
-                    ? "لا توجد أسئلة متاحة لهذا المعيار بعد."
-                    : "No questions are available for this standard yet."}
+                    ? "لا توجد أسئلة بهذا المستوى لهذا المعيار بعد."
+                    : "No questions are available for this standard and difficulty yet."}
+                </p>
+                <p className="mx-auto mt-2 max-w-md text-xs leading-6 text-[#8A8078]">
+                  {lang === "ar"
+                    ? "يبقى المعيار ظاهراً حتى نتمكن من قياس فجوة التغطية وإضافة الأسئلة تدريجياً."
+                    : "The standard remains visible so coverage gaps can be measured and filled systematically."}
                 </p>
               </div>
-            ) : (
-              <>
-                <div className="mt-7">
-                  <div className="mb-2 flex items-center justify-between gap-3 text-[11px] font-bold text-[#8A8078]">
+            ) : mode === "learn" ? (
+              currentLearnQuestion && (
+                <>
+                  <div className="mt-7 flex items-center justify-between gap-3 text-[11px] font-bold text-[#8A8078]">
                     <span>
-                      {lang === "ar" ? "السؤال" : "Question"} {current + 1} / {pool.length}
+                      {lang === "ar" ? "السؤال" : "Question"} {learnCurrent + 1} / {pool.length}
                     </span>
-                    <span>
-                      {lang === "ar" ? "النتيجة" : "Score"}: {score.correct}/{score.total}
+                    <span className="rounded-full border border-[#A88765]/20 px-2.5 py-1">
+                      {DIFFICULTY_LABELS[currentLearnQuestion.difficulty][lang]} ·{" "}
+                      {currentLearnQuestion.domain}
                     </span>
                   </div>
-                  <div className="h-1.5 overflow-hidden rounded-full bg-[#A88765]/15">
+
+                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#A88765]/15">
                     <div
                       className="h-full rounded-full bg-[#7C6045] transition-[width] duration-300"
-                      style={{ width: `${((current + 1) / pool.length) * 100}%` }}
+                      style={{
+                        width: `${((learnCurrent + 1) / pool.length) * 100}%`,
+                      }}
                     />
+                  </div>
+
+                  <div className="mt-7 rounded-3xl border border-[#A88765]/20 bg-white p-5 sm:p-6">
+                    <h4 className="text-lg font-black leading-8 sm:text-xl">
+                      {currentLearnQuestion.question[lang]}
+                    </h4>
+
+                    <div className="mt-5 grid gap-3">
+                      {currentLearnQuestion.choices[lang].map((choice, index) => {
+                        const revealed = learnSelected !== null;
+                        const correct = index === currentLearnQuestion.answerIndex;
+                        const picked = index === learnSelected;
+
+                        let classes =
+                          "border-[#A88765]/25 bg-[#F8F5F0] text-[#3B342E] hover:border-[#A88765]/55";
+                        if (revealed && correct)
+                          classes =
+                            "border-emerald-600/40 bg-emerald-50 text-emerald-950";
+                        else if (revealed && picked && !correct)
+                          classes = "border-red-500/40 bg-red-50 text-red-950";
+                        else if (revealed)
+                          classes =
+                            "border-[#A88765]/15 bg-[#F8F5F0] text-[#8A8078]";
+
+                        return (
+                          <button
+                            key={`${currentLearnQuestion.id}-${index}`}
+                            type="button"
+                            onClick={() => chooseLearnAnswer(index)}
+                            disabled={revealed}
+                            className={`flex items-start gap-3 rounded-2xl border p-4 text-start text-sm font-bold leading-6 transition ${classes}`}
+                          >
+                            <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-current/20 text-[10px] font-black">
+                              {String.fromCharCode(65 + index)}
+                            </span>
+                            <span className="flex-1">{choice}</span>
+                            {revealed && correct && (
+                              <CheckCircle2 className="mt-0.5 size-5 shrink-0" />
+                            )}
+                            {revealed && picked && !correct && (
+                              <XCircle className="mt-0.5 size-5 shrink-0" />
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {learnSelected !== null && (
+                    <div
+                      className={`mt-5 rounded-3xl border p-5 sm:p-6 ${
+                        learnSelected === currentLearnQuestion.answerIndex
+                          ? "border-emerald-600/25 bg-emerald-50 text-emerald-950"
+                          : "border-red-500/25 bg-red-50 text-red-950"
+                      }`}
+                      aria-live="polite"
+                    >
+                      <div className="flex items-center gap-2">
+                        {learnSelected === currentLearnQuestion.answerIndex ? (
+                          <CheckCircle2 className="size-5" />
+                        ) : (
+                          <XCircle className="size-5" />
+                        )}
+                        <h5 className="font-display text-lg font-black">
+                          {learnSelected === currentLearnQuestion.answerIndex
+                            ? lang === "ar"
+                              ? "إجابة صحيحة"
+                              : "Correct answer"
+                            : lang === "ar"
+                              ? "الإجابة غير صحيحة"
+                              : "Incorrect answer"}
+                        </h5>
+                      </div>
+
+                      {learnSelected !== currentLearnQuestion.answerIndex && (
+                        <p className="mt-3 text-sm font-bold">
+                          {lang === "ar" ? "الإجابة الصحيحة:" : "Correct answer:"}{" "}
+                          {
+                            currentLearnQuestion.choices[lang][
+                              currentLearnQuestion.answerIndex
+                            ]
+                          }
+                        </p>
+                      )}
+
+                      <div className="mt-4 border-t border-current/15 pt-4">
+                        <p className="text-xs font-black uppercase tracking-wider opacity-70">
+                          {lang === "ar" ? "الشرح المبسط" : "Simplified explanation"}
+                        </p>
+                        <p className="mt-2 text-sm leading-7">
+                          {currentLearnQuestion.explanation[lang]}
+                        </p>
+                        <p className="mt-3 text-[11px] font-bold opacity-65">
+                          {lang === "ar" ? "المرجع:" : "Reference:"}{" "}
+                          {currentLearnQuestion.reference}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="mt-5 flex items-center justify-between gap-3">
+                    <button
+                      type="button"
+                      onClick={() => moveLearn(-1)}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 px-4 py-2 text-xs font-extrabold text-[#7C6045] transition hover:bg-[#A88765]/10"
+                    >
+                      {lang === "ar" ? (
+                        <ArrowRight className="size-4" />
+                      ) : (
+                        <ArrowLeft className="size-4" />
+                      )}
+                      {lang === "ar" ? "السابق" : "Previous"}
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => moveLearn(1)}
+                      className="inline-flex items-center gap-2 rounded-full bg-[#1C1B19] px-4 py-2 text-xs font-extrabold text-[#F5F1EB] transition hover:bg-[#3A332D]"
+                    >
+                      {lang === "ar" ? "التالي" : "Next"}
+                      {lang === "ar" ? (
+                        <ArrowLeft className="size-4" />
+                      ) : (
+                        <ArrowRight className="size-4" />
+                      )}
+                    </button>
+                  </div>
+                </>
+              )
+            ) : examQuestionIds.length === 0 ? (
+              <div className="mt-8 rounded-3xl border border-[#A88765]/20 bg-white p-6 sm:p-8">
+                <div className="flex items-start gap-3">
+                  <Target className="mt-1 size-6 text-[#7C6045]" />
+                  <div>
+                    <h4 className="font-display text-xl font-black">
+                      {lang === "ar" ? "إعداد الاختبار" : "Exam setup"}
+                    </h4>
+                    <p className="mt-2 text-sm leading-7 text-[#6B6259]">
+                      {lang === "ar"
+                        ? "اختر عدد الأسئلة. لن تظهر صحة الإجابة أو الشرح حتى تضغط «تسليم الاختبار»."
+                        : "Choose the number of questions. Correct answers and explanations remain hidden until submission."}
+                    </p>
                   </div>
                 </div>
 
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[10, 20, 30].map((size) => (
+                    <button
+                      key={size}
+                      type="button"
+                      onClick={() => setExamSize(size)}
+                      disabled={pool.length < size && size !== 10}
+                      className={`rounded-full border px-4 py-2 text-xs font-black transition disabled:cursor-not-allowed disabled:opacity-35 ${
+                        examSize === size
+                          ? "border-[#1C1B19] bg-[#1C1B19] text-[#F5F1EB]"
+                          : "border-[#A88765]/35 text-[#7C6045] hover:bg-[#A88765]/10"
+                      }`}
+                    >
+                      {size} {lang === "ar" ? "سؤال" : "questions"}
+                    </button>
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={startExam}
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#7C6045] px-5 py-3 text-sm font-black text-white transition hover:bg-[#674E39]"
+                >
+                  <ClipboardCheck className="size-4" />
+                  {lang === "ar"
+                    ? `ابدأ اختبار ${Math.min(examSize, pool.length)} سؤال`
+                    : `Start ${Math.min(examSize, pool.length)}-question exam`}
+                </button>
+              </div>
+            ) : currentExamQuestion ? (
+              <>
+                {examSubmitted && (
+                  <div className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-5 text-[#F5F1EB] sm:p-6">
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <Trophy className="size-6 text-[#D2B390]" />
+                        <div>
+                          <p className="text-xs font-bold text-[#AFA69D]">
+                            {lang === "ar" ? "نتيجة الاختبار" : "Exam result"}
+                          </p>
+                          <p className="mt-1 font-display text-3xl font-black">
+                            {examCorrect}/{examQuestions.length}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="text-end">
+                        <div className="font-display text-3xl font-black text-[#D2B390]">
+                          {Math.round((examCorrect / examQuestions.length) * 100)}%
+                        </div>
+                        <div className="mt-1 text-[10px] font-bold text-[#8F877F]">
+                          {lang === "ar"
+                            ? "تم حفظ النتيجة في تحليل نقاط الضعف"
+                            : "Saved to weakness analytics"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div className="mt-7 flex flex-wrap items-center justify-between gap-3 text-[11px] font-bold text-[#8A8078]">
+                  <span>
+                    {lang === "ar" ? "السؤال" : "Question"} {examCurrent + 1} /{" "}
+                    {examQuestions.length}
+                  </span>
+                  <span>
+                    {lang === "ar" ? "تمت الإجابة" : "Answered"} {examAnswered}/
+                    {examQuestions.length}
+                  </span>
+                </div>
+
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#A88765]/15">
+                  <div
+                    className="h-full rounded-full bg-[#7C6045] transition-[width] duration-300"
+                    style={{
+                      width: `${((examCurrent + 1) / examQuestions.length) * 100}%`,
+                    }}
+                  />
+                </div>
+
                 <div className="mt-7 rounded-3xl border border-[#A88765]/20 bg-white p-5 sm:p-6">
-                  <p className="text-xs font-bold text-[#8A8078]">
-                    {currentQuestion.topic}
-                  </p>
-                  <h4 className="mt-3 text-lg font-black leading-8 sm:text-xl">
-                    {currentQuestion.question[lang]}
+                  <div className="mb-3 flex flex-wrap gap-2">
+                    <span className="rounded-full border border-[#A88765]/25 px-2.5 py-1 text-[10px] font-bold text-[#7C6045]">
+                      {DIFFICULTY_LABELS[currentExamQuestion.difficulty][lang]}
+                    </span>
+                    <span className="rounded-full border border-[#A88765]/25 px-2.5 py-1 text-[10px] font-bold text-[#7C6045]">
+                      {currentExamQuestion.domain}
+                    </span>
+                  </div>
+
+                  <h4 className="text-lg font-black leading-8 sm:text-xl">
+                    {currentExamQuestion.question[lang]}
                   </h4>
 
                   <div className="mt-5 grid gap-3">
-                    {currentQuestion.choices[lang].map((choice, index) => {
-                      const revealed = selected !== null;
-                      const correct = index === currentQuestion.answerIndex;
-                      const picked = index === selected;
+                    {currentExamQuestion.choices[lang].map((choice, index) => {
+                      const picked = examAnswers[currentExamQuestion.id] === index;
+                      const correct = index === currentExamQuestion.answerIndex;
 
                       let classes =
                         "border-[#A88765]/25 bg-[#F8F5F0] text-[#3B342E] hover:border-[#A88765]/55";
-                      if (revealed && correct)
+                      if (!examSubmitted && picked)
+                        classes =
+                          "border-[#7C6045] bg-[#A88765]/10 text-[#3B342E]";
+                      if (examSubmitted && correct)
                         classes =
                           "border-emerald-600/40 bg-emerald-50 text-emerald-950";
-                      else if (revealed && picked && !correct)
+                      else if (examSubmitted && picked && !correct)
                         classes = "border-red-500/40 bg-red-50 text-red-950";
-                      else if (revealed)
-                        classes = "border-[#A88765]/15 bg-[#F8F5F0] text-[#8A8078]";
+                      else if (examSubmitted)
+                        classes =
+                          "border-[#A88765]/15 bg-[#F8F5F0] text-[#8A8078]";
 
                       return (
                         <button
-                          key={`${currentQuestion.id}-${index}`}
+                          key={`${currentExamQuestion.id}-${index}`}
                           type="button"
-                          onClick={() => chooseAnswer(index)}
-                          disabled={revealed}
+                          onClick={() => chooseExamAnswer(index)}
+                          disabled={examSubmitted}
                           className={`flex items-start gap-3 rounded-2xl border p-4 text-start text-sm font-bold leading-6 transition ${classes}`}
                         >
                           <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center rounded-full border border-current/20 text-[10px] font-black">
                             {String.fromCharCode(65 + index)}
                           </span>
                           <span className="flex-1">{choice}</span>
-                          {revealed && correct && <CheckCircle2 className="mt-0.5 size-5 shrink-0" />}
-                          {revealed && picked && !correct && (
+                          {examSubmitted && correct && (
+                            <CheckCircle2 className="mt-0.5 size-5 shrink-0" />
+                          )}
+                          {examSubmitted && picked && !correct && (
                             <XCircle className="mt-0.5 size-5 shrink-0" />
                           )}
                         </button>
@@ -318,57 +900,25 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                   </div>
                 </div>
 
-                {selected !== null && (
-                  <div
-                    className={`mt-5 rounded-3xl border p-5 sm:p-6 ${
-                      isCorrect
-                        ? "border-emerald-600/25 bg-emerald-50 text-emerald-950"
-                        : "border-red-500/25 bg-red-50 text-red-950"
-                    }`}
-                    aria-live="polite"
-                  >
-                    <div className="flex items-center gap-2">
-                      {isCorrect ? (
-                        <CheckCircle2 className="size-5" />
-                      ) : (
-                        <XCircle className="size-5" />
-                      )}
-                      <h5 className="font-display text-lg font-black">
-                        {isCorrect
-                          ? lang === "ar"
-                            ? "إجابة صحيحة"
-                            : "Correct answer"
-                          : lang === "ar"
-                            ? "الإجابة غير صحيحة"
-                            : "Incorrect answer"}
-                      </h5>
-                    </div>
-
-                    {!isCorrect && (
-                      <p className="mt-3 text-sm font-bold">
-                        {lang === "ar" ? "الإجابة الصحيحة:" : "Correct answer:"}{" "}
-                        {currentQuestion.choices[lang][currentQuestion.answerIndex]}
-                      </p>
-                    )}
-
-                    <div className="mt-4 border-t border-current/15 pt-4">
-                      <p className="text-xs font-black uppercase tracking-wider opacity-70">
-                        {lang === "ar" ? "الشرح المبسط" : "Simplified explanation"}
-                      </p>
-                      <p className="mt-2 text-sm leading-7">
-                        {currentQuestion.explanation[lang]}
-                      </p>
-                      <p className="mt-3 text-[11px] font-bold opacity-65">
-                        {lang === "ar" ? "المرجع:" : "Reference:"} {currentQuestion.reference}
-                      </p>
-                    </div>
+                {examSubmitted && (
+                  <div className="mt-5 rounded-3xl border border-[#A88765]/20 bg-white/70 p-5">
+                    <p className="text-xs font-black uppercase tracking-wider text-[#7C6045]">
+                      {lang === "ar" ? "الشرح المبسط" : "Simplified explanation"}
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-[#514A44]">
+                      {currentExamQuestion.explanation[lang]}
+                    </p>
+                    <p className="mt-3 text-[11px] font-bold text-[#8A8078]">
+                      {lang === "ar" ? "المرجع:" : "Reference:"}{" "}
+                      {currentExamQuestion.reference}
+                    </p>
                   </div>
                 )}
 
-                <div className="mt-5 flex items-center justify-between gap-3">
+                <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
                   <button
                     type="button"
-                    onClick={previous}
+                    onClick={() => moveExam(-1)}
                     className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 px-4 py-2 text-xs font-extrabold text-[#7C6045] transition hover:bg-[#A88765]/10"
                   >
                     {lang === "ar" ? (
@@ -379,16 +929,29 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                     {lang === "ar" ? "السابق" : "Previous"}
                   </button>
 
-                  {score.total > 0 && (
-                    <div className="hidden items-center gap-2 text-xs font-black text-[#7C6045] sm:flex">
-                      <Trophy className="size-4" />
-                      {Math.round((score.correct / score.total) * 100)}%
-                    </div>
+                  {!examSubmitted ? (
+                    <button
+                      type="button"
+                      onClick={submitExam}
+                      className="inline-flex items-center gap-2 rounded-full bg-[#7C6045] px-5 py-2.5 text-xs font-black text-white transition hover:bg-[#674E39]"
+                    >
+                      <ClipboardCheck className="size-4" />
+                      {lang === "ar" ? "تسليم الاختبار" : "Submit exam"}
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={startExam}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 px-4 py-2 text-xs font-extrabold text-[#7C6045] transition hover:bg-[#A88765]/10"
+                    >
+                      <RefreshCw className="size-4" />
+                      {lang === "ar" ? "اختبار جديد" : "New exam"}
+                    </button>
                   )}
 
                   <button
                     type="button"
-                    onClick={next}
+                    onClick={() => moveExam(1)}
                     className="inline-flex items-center gap-2 rounded-full bg-[#1C1B19] px-4 py-2 text-xs font-extrabold text-[#F5F1EB] transition hover:bg-[#3A332D]"
                   >
                     {lang === "ar" ? "التالي" : "Next"}
@@ -400,13 +963,13 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                   </button>
                 </div>
               </>
-            )}
+            ) : null}
           </div>
 
           <div className="mt-4 rounded-2xl border border-[#A88765]/15 bg-[#1C1B19] px-4 py-3 text-[11px] leading-5 text-[#8F877F]">
             {lang === "ar"
-              ? "الأسئلة للتعلم والتدريب وليست أسئلة امتحانات رسمية. عند استيراد مصدر خارجي يجب حفظ المصدر والترخيص ومراجعة الترجمة قبل النشر."
-              : "Questions are for learning and practice and are not official exam questions. Imported external content must retain source/licence provenance and pass translation review before publication."}
+              ? "تحليل الأداء الحالي يُحفظ محلياً على هذا الجهاز. الأسئلة تعليمية وليست أسئلة امتحانات رسمية، وأي محتوى مستورد يمر بمراجعة المصدر والترخيص والترجمة قبل النشر."
+              : "Current performance analytics are stored locally on this device. Questions are educational, not official exam questions, and imported content must pass source, licence, and translation review before publication."}
           </div>
         </div>
       </div>
