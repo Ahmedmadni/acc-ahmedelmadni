@@ -13,61 +13,36 @@ Date: 2026-09-30
 
 ## Phase 3 current state
 
-- Total IFRS/IAS questions: **162**
+- Total IFRS/IAS questions: **284**
 - Standards with at least one question: **43 / 43**
 - Standards with zero questions: **0**
 - Difficulty distribution:
-  - Easy: **51**
-  - Intermediate: **79**
-  - Advanced/Hard: **32**
+  - Easy: **83**
+  - Intermediate: **121**
+  - Advanced/Hard: **80**
 
 ## Current question depth by standard
 
+The first deep-coverage milestone is complete:
+
+- **20 questions each** for IFRS 9, IFRS 15, IFRS 16, IFRS 18, IAS 2, IAS 12, IAS 16, IAS 21, IAS 24, IAS 36 and IAS 37.
+- **At least 2 questions** for every other indexed IFRS/IAS standard.
+- No indexed standard is left without a question.
+
 | Standard | Questions |
 | --- | ---: |
-| IAS 2 | 13 |
-| IFRS 15 | 10 |
-| IFRS 16 | 10 |
-| IFRS 9 | 9 |
-| IFRS 18 | 9 |
-| IAS 16 | 9 |
-| IAS 24 | 9 |
-| IAS 36 | 9 |
-| IAS 12 | 8 |
-| IAS 21 | 8 |
-| IAS 37 | 8 |
-| IFRS 1 | 2 |
-| IFRS 2 | 2 |
-| IFRS 5 | 2 |
-| IFRS 6 | 2 |
-| IFRS 7 | 2 |
-| IFRS 8 | 2 |
-| IFRS 11 | 2 |
-| IFRS 12 | 2 |
-| IFRS 14 | 2 |
-| IFRS 17 | 2 |
-| IFRS 19 | 2 |
-| IFRS 20 | 2 |
-| IAS 1 | 2 |
-| IAS 8 | 2 |
-| IAS 10 | 2 |
-| IAS 19 | 2 |
-| IAS 20 | 2 |
-| IAS 23 | 2 |
-| IAS 26 | 2 |
-| IAS 27 | 2 |
-| IAS 28 | 2 |
-| IAS 29 | 2 |
-| IAS 32 | 2 |
-| IAS 33 | 2 |
-| IAS 34 | 2 |
-| IAS 38 | 2 |
-| IAS 40 | 2 |
-| IAS 41 | 2 |
-| IFRS 3 | 1 |
-| IFRS 10 | 1 |
-| IFRS 13 | 1 |
-| IAS 7 | 1 |
+| IFRS 9 | 20 |
+| IFRS 15 | 20 |
+| IFRS 16 | 20 |
+| IFRS 18 | 20 |
+| IAS 2 | 20 |
+| IAS 12 | 20 |
+| IAS 16 | 20 |
+| IAS 21 | 20 |
+| IAS 24 | 20 |
+| IAS 36 | 20 |
+| IAS 37 | 20 |
+| All remaining 32 standards | 2 each |
 
 ## Phase 3 features implemented
 
@@ -112,7 +87,7 @@ Database questions override a matching local seed ID.
 
 All new Phase 3 questions are independently authored educational questions. They are not copied from commercial ACCA, CPA, CMA, or proprietary IFRS exam banks.
 
-The target for mature standards remains **20–50 reviewed questions per standard**. The current architecture now supports that target without further frontend redesign. The immediate priority for depth is:
+The target for mature standards remains **20–50 reviewed questions per standard**. The first 11 priority standards have now reached the minimum target of **20 each**. The next depth wave can move the remaining 32 standards from the two-question baseline toward 20–50 questions each. Completed priority set:
 
 1. IFRS 9
 2. IFRS 15
