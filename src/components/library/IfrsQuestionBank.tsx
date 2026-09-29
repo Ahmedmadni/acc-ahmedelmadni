@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import { IFRS_STANDARDS } from "@/data/ifrs-standards";
 import { IFRS_QUESTION_SEED } from "@/data/ifrs-quiz-seed";
+import { IFRS_STAGE3_QUESTION_PACK_IFRS } from "@/data/ifrs-stage3-question-pack-ifrs";
+import { IFRS_STAGE3_QUESTION_PACK_IAS } from "@/data/ifrs-stage3-question-pack-ias";
 import {
   SEED_QUESTIONS,
   type ExamDifficulty,
@@ -138,6 +140,8 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
       if (question.track === "IFRS") byId.set(question.id, question);
     }
     for (const question of IFRS_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_STAGE3_QUESTION_PACK_IFRS) byId.set(question.id, question);
+    for (const question of IFRS_STAGE3_QUESTION_PACK_IAS) byId.set(question.id, question);
     for (const question of query.data?.questions ?? []) {
       if (question.track === "IFRS") byId.set(question.id, question);
     }
