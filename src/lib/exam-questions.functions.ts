@@ -61,7 +61,7 @@ function rowToExamQuestion(r: Row): ExamQuestion {
     difficulty:
       r.difficulty === "easy" || r.difficulty === "hard" ? r.difficulty : "intermediate",
     domain: r.exam_domain || r.topic || "general",
-    standardCode: r.standard_code ?? undefined,
+    ...(r.standard_code ? { standardCode: r.standard_code } : {}),
   };
 }
 
