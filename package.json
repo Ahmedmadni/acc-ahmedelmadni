@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "ifrs:normalize": "node scripts/normalize-ifrs-questions.mjs",
     "ifrs:translate": "node scripts/translate-ifrs-questions.mjs",
-    "ifrs:fetch": "node scripts/fetch-ifrs-sources.mjs"
+    "ifrs:fetch": "node scripts/fetch-ifrs-sources.mjs",
+    "ifrs:check-coverage": "node scripts/check-ifrs-question-coverage.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^2.0.48",
