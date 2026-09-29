@@ -21,6 +21,9 @@ import { IFRS_STANDARDS } from "@/data/ifrs-standards";
 import { IFRS_QUESTION_SEED } from "@/data/ifrs-quiz-seed";
 import { IFRS_PHASE3_QUESTION_SEED } from "@/data/ifrs-quiz-phase3";
 import { IFRS_COVERAGE_QUESTION_SEED } from "@/data/ifrs-quiz-coverage";
+import { IFRS_DEPTH_A_QUESTION_SEED } from "@/data/ifrs-quiz-depth-a";
+import { IFRS_DEPTH_B_QUESTION_SEED } from "@/data/ifrs-quiz-depth-b";
+import { IFRS_DEPTH_C_QUESTION_SEED } from "@/data/ifrs-quiz-depth-c";
 import { SEED_QUESTIONS, type ExamQuestion } from "@/lib/exam-bank";
 import { listExamQuestions } from "@/lib/exam-questions.functions";
 import {
@@ -106,6 +109,9 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
     for (const question of IFRS_QUESTION_SEED) byId.set(question.id, question);
     for (const question of IFRS_PHASE3_QUESTION_SEED) byId.set(question.id, question);
     for (const question of IFRS_COVERAGE_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_DEPTH_A_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_DEPTH_B_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_DEPTH_C_QUESTION_SEED) byId.set(question.id, question);
     for (const question of query.data?.questions ?? []) {
       if (question.track === "IFRS") byId.set(question.id, question);
     }
