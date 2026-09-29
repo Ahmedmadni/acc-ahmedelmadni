@@ -12,6 +12,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ias2-01",
     track: "IFRS",
     topic: "IAS 2 — Inventories",
+    difficulty: "intermediate",
+    domain: "measurement",
     question: {
       ar: "في نهاية الفترة، كانت تكلفة صنف من المخزون 120 ريالاً وصافي قيمته القابلة للتحقق 105 ريالات. بأي مبلغ يُعرض المخزون وفق IAS 2؟",
       en: "At period end, an inventory item costs SAR 120 and has a net realisable value of SAR 105. At what amount is it reported under IAS 2?",
@@ -31,6 +33,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ias2-02",
     track: "IFRS",
     topic: "IAS 2 — Inventories",
+    difficulty: "easy",
+    domain: "cost",
     question: {
       ar: "أي تكلفة مما يلي لا تُضم عادةً إلى تكلفة المخزون وفق IAS 2؟",
       en: "Which cost is generally excluded from inventory cost under IAS 2?",
@@ -60,6 +64,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs9-01",
     track: "IFRS",
     topic: "IFRS 9 — Financial Instruments",
+    difficulty: "easy",
+    domain: "impairment",
     question: {
       ar: "ما الفكرة الأساسية لنموذج الخسائر الائتمانية المتوقعة في IFRS 9؟",
       en: "What is the core idea of the IFRS 9 expected credit loss model?",
@@ -89,6 +95,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs10-01",
     track: "IFRS",
     topic: "IFRS 10 — Consolidated Financial Statements",
+    difficulty: "intermediate",
+    domain: "control",
     question: {
       ar: "أي مجموعة من العناصر تعبّر عن مفهوم السيطرة في IFRS 10؟",
       en: "Which combination reflects the IFRS 10 concept of control?",
@@ -118,6 +126,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs15-01",
     track: "IFRS",
     topic: "IFRS 15 — Revenue",
+    difficulty: "easy",
+    domain: "recognition",
     question: {
       ar: "في نموذج IFRS 15، متى يُعترف بالإيراد المرتبط بالتزام أداء؟",
       en: "Under IFRS 15, when is revenue related to a performance obligation recognised?",
@@ -147,6 +157,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs16-01",
     track: "IFRS",
     topic: "IFRS 16 — Leases",
+    difficulty: "easy",
+    domain: "lessee-accounting",
     question: {
       ar: "بالنسبة للمستأجر، ما المعالجة العامة لعقد إيجار يقع ضمن نطاق IFRS 16؟",
       en: "For a lessee, what is the general accounting treatment for a lease within IFRS 16?",
@@ -176,6 +188,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ias24-01",
     track: "IFRS",
     topic: "IAS 24 — Related Party Disclosures",
+    difficulty: "easy",
+    domain: "disclosures",
     question: {
       ar: "لماذا يطلب IAS 24 الإفصاح عن معاملات الأطراف ذات العلاقة؟",
       en: "Why does IAS 24 require disclosure of related party transactions?",
@@ -205,6 +219,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ias36-01",
     track: "IFRS",
     topic: "IAS 36 — Impairment of Assets",
+    difficulty: "intermediate",
+    domain: "recoverable-amount",
     question: {
       ar: "كيف تُحدد القيمة القابلة للاسترداد لأصل أو وحدة مولدة للنقد وفق IAS 36؟",
       en: "How is recoverable amount determined under IAS 36?",
@@ -234,6 +250,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs13-01",
     track: "IFRS",
     topic: "IFRS 13 — Fair Value Measurement",
+    difficulty: "easy",
+    domain: "measurement",
     question: {
       ar: "ما طبيعة قياس القيمة العادلة في IFRS 13؟",
       en: "What is the nature of fair value measurement under IFRS 13?",
@@ -263,6 +281,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ias7-01",
     track: "IFRS",
     topic: "IAS 7 — Statement of Cash Flows",
+    difficulty: "easy",
+    domain: "classification",
     question: {
       ar: "شراء آلة نقداً يُصنّف عادةً في قائمة التدفقات النقدية وفق IAS 7 ضمن أي نشاط؟",
       en: "A cash purchase of machinery is generally classified under IAS 7 as which type of cash flow?",
@@ -282,6 +302,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs18-01",
     track: "IFRS",
     topic: "IFRS 18 — Presentation and Disclosure",
+    difficulty: "intermediate",
+    domain: "presentation",
     question: {
       ar: "أي موضوع يُعد من أبرز التغييرات التي قدمها IFRS 18؟",
       en: "Which topic is a major change introduced by IFRS 18?",
@@ -311,6 +333,8 @@ export const IFRS_QUESTION_SEED: ExamQuestion[] = [
     id: "ifrs-hub-ifrs3-01",
     track: "IFRS",
     topic: "IFRS 3 — Business Combinations",
+    difficulty: "intermediate",
+    domain: "goodwill",
     question: {
       ar: "في تجميع أعمال يقع ضمن نطاق IFRS 3، ماذا تمثل الشهرة بصورة مبسطة؟",
       en: "In a business combination within IFRS 3, what does goodwill broadly represent?",
