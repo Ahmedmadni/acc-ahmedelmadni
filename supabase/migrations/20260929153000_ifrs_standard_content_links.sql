@@ -127,7 +127,8 @@ VALUES
   ('ramyatrouny-ifrs-skill','ramyatrouny/ifrs-skill','https://github.com/ramyatrouny/ifrs-skill','MIT','reuse_with_attribution','MIT-licensed research/reference material; retain attribution for reused substantial portions.','2026-09-29T00:00:00Z'),
   ('ramyatrouny-ifrs-quiz','ramyatrouny/ifrs-quiz','https://github.com/ramyatrouny/ifrs-quiz',NULL,'unavailable','Repository path returned 404 and no public repository was found under this name on 2026-09-29. Do not ingest until its identity and licence are verified.','2026-09-29T00:00:00Z'),
   ('api-evangelist-accounting-standards','api-evangelist/accounting-standards','https://github.com/api-evangelist/accounting-standards',NULL,'reference_only','No explicit repository licence found during review; use as an index/reference unless permission is established.','2026-09-29T00:00:00Z'),
-  ('charleshoffman-fac-ifrs','CharlesHoffmanCPA/fac-ifrs','https://github.com/CharlesHoffmanCPA/fac-ifrs','GPL-3.0','reference_only','GPL-3.0 concept/taxonomy reference. Avoid embedding code/files unless the distribution obligations are intentionally accepted.','2026-09-29T00:00:00Z')
+  ('charleshoffman-fac-ifrs','CharlesHoffmanCPA/fac-ifrs','https://github.com/CharlesHoffmanCPA/fac-ifrs','GPL-3.0','reference_only','GPL-3.0 concept/taxonomy reference. Avoid embedding code/files unless the distribution obligations are intentionally accepted.','2026-09-29T00:00:00Z'),
+  ('acca-learning-layouts','ACCA learning and exam layouts','https://www.accaglobal.com/',NULL,'reference_only','Use only high-level learning/exam UX patterns and public syllabus structure. Do not copy proprietary question-bank or study content.','2026-09-29T00:00:00Z')
 ON CONFLICT (source_key) DO UPDATE SET
   name = EXCLUDED.name,
   source_url = EXCLUDED.source_url,
