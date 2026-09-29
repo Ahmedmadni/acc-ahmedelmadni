@@ -40,6 +40,7 @@ type Row = {
   explanation_ar: string;
   explanation_en: string;
   reference: string;
+  standard_code?: string | null;
   is_public: boolean;
   created_by: string | null;
 };
@@ -57,6 +58,10 @@ function rowToExamQuestion(r: Row): ExamQuestion {
     answerIndex: r.answer_index,
     explanation: { ar: r.explanation_ar, en: r.explanation_en },
     reference: r.reference || "—",
+    difficulty:
+      r.difficulty === "easy" || r.difficulty === "hard" ? r.difficulty : "intermediate",
+    domain: r.exam_domain || r.topic || "general",
+    standardCode: r.standard_code ?? undefined,
   };
 }
 
@@ -69,7 +74,7 @@ export const listExamQuestions = createServerFn({ method: "GET" })
     let q = supabase
       .from("exam_questions")
       .select(
-        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,question_type,difficulty,exam_domain,explanation_ar,explanation_en,reference,is_public,created_by",
+        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,question_type,difficulty,exam_domain,explanation_ar,explanation_en,reference,standard_code,is_public,created_by",
       )
       .eq("is_public", true)
       .eq("status", "approved")
@@ -90,7 +95,7 @@ export const listAdminExamQuestions = createServerFn({ method: "GET" })
     const { data: rows, error } = await context.supabase
       .from("exam_questions")
       .select(
-        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,question_type,difficulty,exam_domain,explanation_ar,explanation_en,reference,is_public,created_by,status,duplicate_hash",
+        "id,track,topic,question_ar,question_en,choices_ar,choices_en,answer_index,question_type,difficulty,exam_domain,explanation_ar,explanation_en,reference,standard_code,is_public,created_by,status,duplicate_hash",
       )
       .order("created_at", { ascending: false })
       .limit(2000);
