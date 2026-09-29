@@ -453,10 +453,16 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     titleAr: "الاستثمارات في الشركات الزميلة والمشروعات المشتركة",
     titleEn: "Investments in Associates and Joint Ventures",
     summaryAr:
-      "ينظم استخدام طريقة حقوق الملكية للمحاسبة عن الاستثمارات في الشركات الزميلة والمشروعات المشتركة.",
+      "ينظم استخدام طريقة حقوق الملكية للمحاسبة عن الاستثمارات في الشركات الزميلة والمشروعات المشتركة، ويتضمن خيار القيمة العادلة لفئات مؤهلة.",
     summaryEn:
-      "Sets requirements for applying the equity method to investments in associates and joint ventures.",
+      "Sets requirements for the equity method for associates and joint ventures and includes a fair value option for eligible investments.",
     topic: "group-reporting",
+    statusAr:
+      "أصدر IASB تعديلات مستهدفة في يونيو 2026 لتوضيح أهلية استخدام خيار القيمة العادلة؛ تسري عند تطبيق المنشأة IFRS 18 لأول مرة.",
+    statusEn:
+      "The IASB issued targeted amendments in June 2026 clarifying eligibility for the fair value option; they take effect when the entity first applies IFRS 18.",
+    officialUrl:
+      "https://www.ifrs.org/projects/completed-projects/2026/amendments-to-the-fair-value-option-ias-28/",
   },
   {
     code: "IAS 29",
