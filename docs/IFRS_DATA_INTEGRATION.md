@@ -25,6 +25,16 @@ The public UI exposes two interconnected tabs:
 | `CharlesHoffmanCPA/fac-ifrs` | GPL-3.0 | structural/taxonomy reference only in this website implementation unless GPL distribution obligations are intentionally accepted |
 | ACCA / other education providers | layouts and learning patterns may inform UX | do not copy proprietary exam questions, explanations, or paid study-bank content |
 
+## Fetch verified sources
+
+Run the licence-aware source collector before normalization:
+
+```bash
+npm run ifrs:fetch -- --output ./vendor/ifrs-sources
+```
+
+The collector records repository revision and detected SPDX licence in `manifest.json`. It downloads only sources allowed by the configured policy. A missing `ramyatrouny/ifrs-quiz` repository remains marked `unavailable`; it is not replaced with a guessed repository.
+
 ## Canonical data flow
 
 ```text
