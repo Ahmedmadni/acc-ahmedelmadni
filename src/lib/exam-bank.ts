@@ -1,5 +1,7 @@
 export type ExamTrack = "IFRS" | "CMA" | "CPA" | "FMAA" | "ACCA" | "CFA";
 
+export type ExamDifficulty = "easy" | "intermediate" | "hard";
+
 export interface ExamQuestion {
   id: string;
   track: ExamTrack;
@@ -9,6 +11,9 @@ export interface ExamQuestion {
   answerIndex: number;
   explanation: { ar: string; en: string };
   reference: string;
+  difficulty?: ExamDifficulty;
+  domain?: string;
+  standardCode?: string;
 }
 
 export const TRACKS: ExamTrack[] = ["IFRS", "CMA", "CPA", "FMAA", "ACCA", "CFA"];
@@ -273,7 +278,7 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       en: "IFRS 16 eliminated the operating/finance distinction for lessees; ROU asset and lease liability are recognized (except short-term and low-value leases).",
     },
     reference: "Gleim / IFRS 16",
-  },,
+  },
   {
     id: "ifrs-ias2-1",
     track: "IFRS",
