@@ -59,7 +59,11 @@ export const Route = createFileRoute("/library/standards")({
             url,
             inLanguage: ["ar-SA", "en"],
             description:
-              "دليل تعليمي مختصر للمعايير الدولية للتقرير المالي ومعايير المحاسبة الدولية.",
+              "دليل عملي تفصيلي أصلي بقلم المحاسب أحمد المدني للمعايير الدولية للتقرير المالي ومعايير المحاسبة الدولية، مع بنك أسئلة تفاعلي.",
+            author: {
+              "@type": "Person",
+              name: "Ahmed Elmadani",
+            },
             isPartOf: { "@id": "https://ahmedelmadni.com/#website" },
           }),
         },
