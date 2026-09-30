@@ -61,10 +61,28 @@ function readQuestions(content) {
     .filter((question) => question.track === "IFRS");
 }
 
+function readCompactBaselineQuestions(content) {
+  return [...content.matchAll(
+    /q\("((?:IFRS|IAS) \d+)",\s*(\d+),\s*"([^"]+)",\s*"(easy|intermediate|hard)"/g,
+  )].map((match) => {
+    const standard = match[1];
+    const sequence = Number(match[2]);
+    return {
+      id: `ifrs-p4base-${standard.toLowerCase().replace(" ", "")}-${String(sequence).padStart(2, "0")}`,
+      track: "IFRS",
+      standard,
+      difficulty: match[4],
+    };
+  });
+}
+
 const all = [];
 for (const file of files) {
   const content = await fs.readFile(file, "utf8");
   all.push(...readQuestions(content));
+  if (file.endsWith("ifrs-quiz-phase4-baseline.ts")) {
+    all.push(...readCompactBaselineQuestions(content));
+  }
 }
 
 const byId = new Map();
