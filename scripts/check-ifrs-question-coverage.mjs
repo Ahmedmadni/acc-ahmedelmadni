@@ -2,7 +2,7 @@
 /**
  * Guardrail for the IFRS question bank.
  * Verifies unique IDs, full 43-standard coverage, difficulty metadata totals,
- * the five-question all-standard baseline, Phase 3 priority depth and Phase 4 depth targets.
+ * the ten-question all-standard baseline, Phase 3 priority depth and Phase 4 depth targets.
  */
 
 import { promises as fs } from "node:fs";
@@ -18,6 +18,7 @@ const files = [
   "src/data/ifrs-quiz-baseline-extra.ts",
   "src/data/ifrs-quiz-phase4-depth.ts",
   "src/data/ifrs-quiz-phase4-baseline.ts",
+  "src/data/ifrs-quiz-phase5.ts",
 ];
 
 const priority = [
@@ -113,7 +114,7 @@ const indexed = [
 ];
 
 const missing = indexed.filter((code) => (counts.get(code) ?? 0) === 0);
-const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 5);
+const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 10);
 const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 20);
 const belowPhase4Depth = phase4Depth.filter((code) => (counts.get(code) ?? 0) < 10);
 const unmapped = counts.get("Unmapped") ?? 0;
@@ -144,7 +145,7 @@ if (duplicateIds.length) failures.push(`Duplicate IDs: ${duplicateIds.join(", ")
 if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a standard`);
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
-  failures.push(`Standards below five-question baseline: ${belowBaseline.join(", ")}`);
+  failures.push(`Standards below ten-question baseline: ${belowBaseline.join(", ")}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 20 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)
