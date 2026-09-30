@@ -525,6 +525,17 @@ function StandardsPage() {
                   )}
 
                   <div className="mt-5 flex flex-wrap gap-2 border-t border-[#A88765]/20 pt-4">
+                    <button
+                      type="button"
+                      onClick={() => openQuestions(standard.code)}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-[#7c6045] px-3 py-2 text-[11px] font-extrabold text-white transition hover:bg-[#644b37]"
+                    >
+                      <CircleHelp className="size-3.5" />
+                      {lang === "ar"
+                        ? `حل ${questionCount} سؤال عن ${standard.code}`
+                        : `Practice ${questionCount} ${standard.code} questions`}
+                    </button>
+
                     <a
                       href={standard.officialUrl ?? IFRS_NAVIGATOR_URL}
                       target="_blank"
