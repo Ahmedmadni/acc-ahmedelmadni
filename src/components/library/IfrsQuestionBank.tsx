@@ -26,6 +26,7 @@ import { IFRS_DEPTH_B_QUESTION_SEED } from "@/data/ifrs-quiz-depth-b";
 import { IFRS_DEPTH_C_QUESTION_SEED } from "@/data/ifrs-quiz-depth-c";
 import { IFRS_BASELINE_EXTRA_QUESTION_SEED } from "@/data/ifrs-quiz-baseline-extra";
 import { IFRS_PHASE4_DEPTH_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-depth";
+import { IFRS_PHASE4_BASELINE_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-baseline";
 import { SEED_QUESTIONS, type ExamQuestion } from "@/lib/exam-bank";
 import { listExamQuestions } from "@/lib/exam-questions.functions";
 import {
@@ -153,6 +154,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
     for (const question of IFRS_DEPTH_C_QUESTION_SEED) byId.set(question.id, question);
     for (const question of IFRS_BASELINE_EXTRA_QUESTION_SEED) byId.set(question.id, question);
     for (const question of IFRS_PHASE4_DEPTH_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_PHASE4_BASELINE_QUESTION_SEED) byId.set(question.id, question);
     for (const question of query.data?.questions ?? []) {
       if (question.track === "IFRS") byId.set(question.id, question);
     }
