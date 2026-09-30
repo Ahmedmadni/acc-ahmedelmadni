@@ -83,6 +83,7 @@ const EidBanner = lazy(() => import("@/components/home/EidBanner"));
 const TopicsAndVideos = lazy(() => import("@/components/home/TopicsAndVideos"));
 const FeaturedTools = lazy(() => import("@/components/home/FeaturedTools"));
 const NewsTicker = lazy(() => import("@/components/home/NewsTicker"));
+const SiteSearch = lazy(() => import("@/components/home/SiteSearch"));
 const SoftwareEcosystem = lazy(() =>
   import("@/components/home/SoftwareEcosystem").then((m) => ({ default: m.SoftwareEcosystem })),
 );
