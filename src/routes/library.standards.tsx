@@ -36,7 +36,7 @@ export const Route = createFileRoute("/library/standards")({
         {
           name: "description",
           content:
-            "دليل عربي لمعايير IFRS وIAS يجمع مقالات الشرح وبنك أسئلة تفاعلياً مع الحاسبات والمصادر الرسمية.",
+            "دليل عربي تفصيلي لكل معايير IFRS وIAS مع شرح عملي منظم وبنك أسئلة تفاعلي يضم مئات الأسئلة والحاسبات والمصادر الرسمية.",
         },
         { property: "og:title", content: "معايير IFRS وIAS | الدليل المحاسبي" },
         {
@@ -269,7 +269,7 @@ function StandardsPage() {
             }`}
           >
             <BookOpenText className="size-4" />
-            {lang === "ar" ? "مقالات الشرح" : "Explanatory Articles"}
+            {lang === "ar" ? "شرح المعايير بالتفصيل" : "Detailed Standard Guides"}
           </button>
           <button
             type="button"
