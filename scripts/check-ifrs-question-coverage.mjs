@@ -33,6 +33,8 @@ const priority = [
   "IAS 37",
 ];
 
+const phase4Depth = ["IFRS 3", "IFRS 10", "IFRS 13", "IAS 7"];
+
 function readQuestions(content) {
   const blocks = content
     .split(/\n\s*(?:\{|\{\s*)"?id"?\s*:\s*"/)
@@ -94,6 +96,7 @@ const indexed = [
 const missing = indexed.filter((code) => (counts.get(code) ?? 0) === 0);
 const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 2);
 const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 20);
+const belowPhase4Depth = phase4Depth.filter((code) => (counts.get(code) ?? 0) < 10);
 const unmapped = counts.get("Unmapped") ?? 0;
 
 console.log(
@@ -109,6 +112,7 @@ console.log(
       missing,
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
+      below_phase4_depth_target: belowPhase4Depth,
     },
     null,
     2,
@@ -124,6 +128,8 @@ if (belowBaseline.length)
   failures.push(`Standards below two-question baseline: ${belowBaseline.join(", ")}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 20 questions: ${belowPriority.join(", ")}`);
+if (belowPhase4Depth.length)
+  failures.push(`Phase 4 depth standards below 10 questions: ${belowPhase4Depth.join(", ")}`);
 
 if (failures.length) {
   console.error("\nCoverage check failed:");
