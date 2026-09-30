@@ -14,9 +14,9 @@ A review of the current `main` branch found three user-facing gaps:
    - A user reading a specific standard could not directly open that standard's practice questions.
    - The question bank defaulted to IAS 2 instead of inheriting the standard the user was reading.
 
-3. **A malformed local IFRS seed array was present in `src/lib/exam-bank.ts`.**
-   - One question boundary contained a double comma (`},,`).
-   - This was corrected because it can break a TypeScript/Vite build and therefore prevent recent question-bank changes from reaching the deployed site.
+3. **A sparse element was present in the local IFRS seed array in `src/lib/exam-bank.ts`.**
+   - One question boundary contained a double comma (`},,`), creating an empty array slot.
+   - The previous question-bank loop accessed `question.track` directly, so an empty slot could surface as `undefined` and break rendering; it could also fail strict type/build validation. The sparse element was removed.
 
 ## Phase 5 content result
 
@@ -35,7 +35,9 @@ Every standard now has six structured explanation areas:
 5. Common pitfalls
 6. Simplified practical example
 
-The guides are bilingual (Arabic / English) and independently rewritten educational content.
+The guides are bilingual (Arabic / English) and are **original editorial explanations authored specifically for the site under the name of accountant Ahmed Elmadani**.
+
+External repositories and IFRS Foundation links are used only to verify scope, terminology, effective dates and amendments. The published explanation is not copied from those sources and is not intended to mirror their wording.
 
 New source file:
 
@@ -126,7 +128,7 @@ Therefore an empty or unavailable Supabase `exam_questions` table does **not** r
 
 These add five additional original questions to each of the 28 standards that previously had only five questions.
 
-All new questions are independently authored educational questions and are not copied from commercial or proprietary question banks.
+All new questions are original educational questions authored specifically for the site and are not copied from commercial, proprietary, or official examination question banks.
 
 ## Coverage guardrails
 

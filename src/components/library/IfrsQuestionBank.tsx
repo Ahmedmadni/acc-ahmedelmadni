@@ -230,15 +230,14 @@ export function IfrsQuestionBank({
   }, [examAnswers, examSubmitted, pool]);
 
   useEffect(() => {
-    if (initialStandardCode && initialStandardCode !== standardCode) {
-      setStandardCode(initialStandardCode);
-      setDifficulty("all");
-      setCurrent(0);
-      setSelected(null);
-      setLearnScore({ correct: 0, total: 0 });
-      setExamAnswers({});
-      setExamSubmitted(false);
-    }
+    if (!initialStandardCode) return;
+    setStandardCode(initialStandardCode);
+    setDifficulty("all");
+    setCurrent(0);
+    setSelected(null);
+    setLearnScore({ correct: 0, total: 0 });
+    setExamAnswers({});
+    setExamSubmitted(false);
   }, [initialStandardCode]);
 
   useEffect(() => {
