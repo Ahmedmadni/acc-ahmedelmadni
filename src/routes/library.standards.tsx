@@ -5,6 +5,7 @@ import {
   BookOpenText,
   Calculator,
   CircleHelp,
+  ChevronDown,
   ExternalLink,
   Info,
   Scale,
@@ -19,6 +20,11 @@ import {
   type StandardTopic,
 } from "@/data/ifrs-standards";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
+import { getStandardGuide } from "@/data/ifrs-standard-guides";
+import {
+  IFRS_LOCAL_QUESTION_COUNTS,
+  IFRS_LOCAL_QUESTION_TOTAL,
+} from "@/data/ifrs-question-bank";
 import { useLibLang } from "./library";
 
 export const Route = createFileRoute("/library/standards")({
@@ -30,7 +36,7 @@ export const Route = createFileRoute("/library/standards")({
         {
           name: "description",
           content:
-            "دليل عربي لمعايير IFRS وIAS يجمع مقالات الشرح وبنك أسئلة تفاعلياً مع الحاسبات والمصادر الرسمية.",
+            "دليل عربي تفصيلي لكل معايير IFRS وIAS مع شرح عملي منظم وبنك أسئلة تفاعلي يضم مئات الأسئلة والحاسبات والمصادر الرسمية.",
         },
         { property: "og:title", content: "معايير IFRS وIAS | الدليل المحاسبي" },
         {
@@ -137,6 +143,7 @@ type FamilyFilter = "all" | StandardFamily;
 function StandardsPage() {
   const lang = useLibLang();
   const [section, setSection] = useState<"articles" | "questions">("articles");
+  const [questionStandardCode, setQuestionStandardCode] = useState("IAS 2");
   const [family, setFamily] = useState<FamilyFilter>("all");
   const [topic, setTopic] = useState<"all" | StandardTopic>("all");
   const [query, setQuery] = useState("");
@@ -173,9 +180,21 @@ function StandardsPage() {
       all: IFRS_STANDARDS.length,
       ifrs: IFRS_STANDARDS.filter((standard) => standard.family === "IFRS").length,
       ias: IFRS_STANDARDS.filter((standard) => standard.family === "IAS").length,
+      questions: IFRS_LOCAL_QUESTION_TOTAL,
     }),
     [],
   );
+
+  function openQuestions(code: string) {
+    setQuestionStandardCode(code);
+    setSection("questions");
+    window.setTimeout(() => {
+      document.getElementById("ifrs-question-bank")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 50);
+  }
 
   return (
     <main className="relative overflow-hidden py-10 sm:py-14">
@@ -197,16 +216,17 @@ function StandardsPage() {
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
                   {lang === "ar"
-                    ? "دليل مختصر قابل للبحث يجمع معايير IFRS وIAS ويربط المعيار مباشرة بالمقالات والحاسبات المتاحة داخل الموقع. المحتوى تعليمي ومُعاد الصياغة، وليس بديلاً عن النص الرسمي أو الحكم المهني."
-                    : "A searchable guide to IFRS and IAS that connects each standard with practical articles and calculators already available on the site. Content is educational and independently rewritten, not a substitute for official wording or professional judgement."}
+                    ? "دليل عملي موسع لكل معيار IFRS وIAS: شرح الهدف والنطاق، الاعتراف والقياس، العرض والإفصاح، خطوات التطبيق، الأخطاء الشائعة، مثال مبسط، ثم بنك أسئلة مباشر لكل معيار. المحتوى تعليمي ومُعاد الصياغة وليس بديلاً عن النص الرسمي أو الحكم المهني."
+                    : "An expanded practical guide for every IFRS and IAS Standard: scope, recognition and measurement, presentation and disclosure, implementation workflow, common pitfalls, a simplified example, and a direct question bank for each Standard."}
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 sm:min-w-[300px]">
+              <div className="grid grid-cols-2 gap-2 sm:min-w-[360px] sm:grid-cols-4">
                 {[
                   { value: totals.all, ar: "إجمالي", en: "Total" },
                   { value: totals.ifrs, ar: "IFRS", en: "IFRS" },
                   { value: totals.ias, ar: "IAS", en: "IAS" },
+                  { value: totals.questions, ar: "سؤال", en: "Questions" },
                 ].map((item) => (
                   <div
                     key={item.en}
@@ -249,7 +269,7 @@ function StandardsPage() {
             }`}
           >
             <BookOpenText className="size-4" />
-            {lang === "ar" ? "مقالات الشرح" : "Explanatory Articles"}
+            {lang === "ar" ? "شرح المعايير بالتفصيل" : "Detailed Standard Guides"}
           </button>
           <button
             type="button"
@@ -393,7 +413,11 @@ function StandardsPage() {
             </div>
           ) : (
             <div className="mt-5 grid gap-4 lg:grid-cols-2">
-              {filtered.map((standard) => (
+              {filtered.map((standard) => {
+                const guide = getStandardGuide(standard.code);
+                const questionCount = IFRS_LOCAL_QUESTION_COUNTS[standard.code] ?? 0;
+
+                return (
                 <article
                   key={standard.code}
                   className="group flex flex-col rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 text-[#1C1B19] transition-all hover:-translate-y-0.5 hover:border-[#A88765]/55 hover:shadow-lg sm:p-6"
@@ -405,6 +429,9 @@ function StandardsPage() {
                       </span>
                       <span className="rounded-full border border-[#A88765]/25 bg-[#A88765]/10 px-2.5 py-1 text-[10px] font-bold text-[#7c6045]">
                         {TOPIC_LABELS[standard.topic][lang]}
+                      </span>
+                      <span className="rounded-full border border-emerald-700/20 bg-emerald-50 px-2.5 py-1 text-[10px] font-black text-emerald-800">
+                        {questionCount} {lang === "ar" ? "سؤال" : "questions"}
                       </span>
                     </div>
                     {standard.highlight && (
@@ -426,6 +453,71 @@ function StandardsPage() {
                       <Info className="mt-0.5 size-4 shrink-0 text-[#7c6045]" />
                       <span>{lang === "ar" ? standard.statusAr : standard.statusEn}</span>
                     </div>
+                  )}
+
+                  {guide && (
+                    <details className="mt-4 rounded-2xl border border-[#A88765]/20 bg-[#F8F5F0]">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-black text-[#4A3D33]">
+                        <span className="inline-flex items-center gap-2">
+                          <BookOpenText className="size-4 text-[#7c6045]" />
+                          {lang === "ar" ? "فتح الشرح الكامل للمعيار" : "Open full standard guide"}
+                        </span>
+                        <ChevronDown className="size-4 text-[#8A7766]" />
+                      </summary>
+
+                      <div className="grid gap-3 border-t border-[#A88765]/15 p-4 md:grid-cols-2">
+                        {[
+                          {
+                            title: lang === "ar" ? "الهدف والنطاق" : "Scope & objective",
+                            body: guide.scope[lang],
+                          },
+                          {
+                            title: lang === "ar" ? "الاعتراف والقياس" : "Recognition & measurement",
+                            body: guide.accounting[lang],
+                          },
+                          {
+                            title: lang === "ar" ? "العرض والإفصاح" : "Presentation & disclosure",
+                            body: guide.presentation[lang],
+                          },
+                          {
+                            title: lang === "ar" ? "خطوات التطبيق" : "Implementation workflow",
+                            body: guide.workflow[lang],
+                          },
+                          {
+                            title: lang === "ar" ? "أخطاء شائعة" : "Common pitfalls",
+                            body: guide.pitfalls[lang],
+                          },
+                          {
+                            title: lang === "ar" ? "مثال مبسط" : "Simple example",
+                            body: guide.example[lang],
+                          },
+                        ].map((item) => (
+                          <div
+                            key={item.title}
+                            className="rounded-2xl border border-[#A88765]/15 bg-white p-4"
+                          >
+                            <h4 className="text-xs font-black text-[#7c6045]">{item.title}</h4>
+                            <p className="mt-2 text-xs leading-6 text-[#625950]">{item.body}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#A88765]/15 px-4 py-4">
+                        <p className="text-xs font-bold text-[#6B6259]">
+                          {lang === "ar"
+                            ? `يوجد ${questionCount} سؤالاً لهذا المعيار في بنك التدريب المحلي.`
+                            : `${questionCount} local practice questions are available for this Standard.`}
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => openQuestions(standard.code)}
+                          className="inline-flex items-center gap-2 rounded-full bg-[#1C1B19] px-4 py-2 text-xs font-black text-[#F5F1EB] transition hover:bg-[#3A332D]"
+                        >
+                          <CircleHelp className="size-4" />
+                          {lang === "ar" ? "ابدأ أسئلة هذا المعيار" : "Practice this Standard"}
+                        </button>
+                      </div>
+                    </details>
                   )}
 
                   <div className="mt-5 flex flex-wrap gap-2 border-t border-[#A88765]/20 pt-4">
@@ -462,14 +554,15 @@ function StandardsPage() {
                     ))}
                   </div>
                 </article>
-              ))}
+                );
+              })}
             </div>
           )}
         </section>
           </>
         ) : (
-          <div className="mt-8">
-            <IfrsQuestionBank lang={lang} />
+          <div id="ifrs-question-bank" className="mt-8 scroll-mt-24">
+            <IfrsQuestionBank lang={lang} initialStandardCode={questionStandardCode} />
           </div>
         )}
 
