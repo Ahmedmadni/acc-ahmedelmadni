@@ -18,16 +18,11 @@ import {
   XCircle,
 } from "lucide-react";
 import { IFRS_STANDARDS } from "@/data/ifrs-standards";
-import { IFRS_QUESTION_SEED } from "@/data/ifrs-quiz-seed";
-import { IFRS_PHASE3_QUESTION_SEED } from "@/data/ifrs-quiz-phase3";
-import { IFRS_COVERAGE_QUESTION_SEED } from "@/data/ifrs-quiz-coverage";
-import { IFRS_DEPTH_A_QUESTION_SEED } from "@/data/ifrs-quiz-depth-a";
-import { IFRS_DEPTH_B_QUESTION_SEED } from "@/data/ifrs-quiz-depth-b";
-import { IFRS_DEPTH_C_QUESTION_SEED } from "@/data/ifrs-quiz-depth-c";
-import { IFRS_BASELINE_EXTRA_QUESTION_SEED } from "@/data/ifrs-quiz-baseline-extra";
-import { IFRS_PHASE4_DEPTH_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-depth";
-import { IFRS_PHASE4_BASELINE_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-baseline";
-import { SEED_QUESTIONS, type ExamQuestion } from "@/lib/exam-bank";
+import {
+  detectIfrsStandardCode,
+  IFRS_LOCAL_QUESTION_BANK,
+} from "@/data/ifrs-question-bank";
+import type { ExamQuestion } from "@/lib/exam-bank";
 import { listExamQuestions } from "@/lib/exam-questions.functions";
 import {
   buildWeaknessStats,
@@ -60,12 +55,6 @@ function orderScore(id: string, seed: number) {
   return hash;
 }
 
-function detectStandardCode(question: ExamQuestion): string | null {
-  const haystack = `${question.topic} ${question.reference}`;
-  const match = haystack.match(/\b(IFRS|IAS)\s*([0-9]{1,2})\b/i);
-  return match ? `${match[1].toUpperCase()} ${match[2]}` : null;
-}
-
 function questionDomain(question: ExamQuestion) {
   if (question.examDomain?.trim()) return question.examDomain.trim();
   const topicParts = question.topic.split(/[—–-]/);
@@ -79,7 +68,7 @@ function questionDifficulty(question: ExamQuestion): IfrsDifficulty {
 function normalizeQuestion(question: ExamQuestion) {
   return {
     ...question,
-    standardCode: detectStandardCode(question),
+    standardCode: detectIfrsStandardCode(question),
     domain: questionDomain(question),
     normalizedDifficulty: questionDifficulty(question),
   };
@@ -95,9 +84,15 @@ function difficultyLabel(value: DifficultyFilter, lang: Lang) {
   return labels[value][lang];
 }
 
-export function IfrsQuestionBank({ lang }: { lang: Lang }) {
+export function IfrsQuestionBank({
+  lang,
+  initialStandardCode = "IAS 2",
+}: {
+  lang: Lang;
+  initialStandardCode?: string;
+}) {
   const listQuestions = useServerFn(listExamQuestions);
-  const [standardCode, setStandardCode] = useState("IAS 2");
+  const [standardCode, setStandardCode] = useState(initialStandardCode);
   const [mode, setMode] = useState<QuizMode>("learn");
   const [difficulty, setDifficulty] = useState<DifficultyFilter>("all");
   const [current, setCurrent] = useState(0);
@@ -143,18 +138,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
   const merged = useMemo(() => {
     const byId = new Map<string, ExamQuestion>();
 
-    for (const question of SEED_QUESTIONS) {
-      if (question.track === "IFRS") byId.set(question.id, question);
-    }
-    for (const question of IFRS_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_PHASE3_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_COVERAGE_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_DEPTH_A_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_DEPTH_B_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_DEPTH_C_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_BASELINE_EXTRA_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_PHASE4_DEPTH_QUESTION_SEED) byId.set(question.id, question);
-    for (const question of IFRS_PHASE4_BASELINE_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_LOCAL_QUESTION_BANK) byId.set(question.id, question);
     for (const question of query.data?.questions ?? []) {
       if (question.track === "IFRS") byId.set(question.id, question);
     }
@@ -163,6 +147,19 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
       .map(normalizeQuestion)
       .filter((question) => question.standardCode !== null);
   }, [query.data?.questions]);
+
+  useEffect(() => {
+    if (initialStandardCode !== standardCode) {
+      setStandardCode(initialStandardCode);
+      setDifficulty("all");
+      setCurrent(0);
+      setSelected(null);
+      setLearnScore({ correct: 0, total: 0 });
+      setExamAnswers({});
+      setExamSubmitted(false);
+      setSessionSeed((value) => value + 1);
+    }
+  }, [initialStandardCode]);
 
   const counts = useMemo(() => {
     const map = new Map<string, number>();
