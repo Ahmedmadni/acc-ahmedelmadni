@@ -17,6 +17,7 @@ const files = [
   "src/data/ifrs-quiz-depth-c.ts",
   "src/data/ifrs-quiz-baseline-extra.ts",
   "src/data/ifrs-quiz-phase4-depth.ts",
+  "src/data/ifrs-quiz-phase4-baseline.ts",
 ];
 
 const priority = [
@@ -94,7 +95,7 @@ const indexed = [
 ];
 
 const missing = indexed.filter((code) => (counts.get(code) ?? 0) === 0);
-const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 2);
+const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 5);
 const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 20);
 const belowPhase4Depth = phase4Depth.filter((code) => (counts.get(code) ?? 0) < 10);
 const unmapped = counts.get("Unmapped") ?? 0;
@@ -125,7 +126,7 @@ if (duplicateIds.length) failures.push(`Duplicate IDs: ${duplicateIds.join(", ")
 if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a standard`);
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
-  failures.push(`Standards below two-question baseline: ${belowBaseline.join(", ")}`);
+  failures.push(`Standards below five-question baseline: ${belowBaseline.join(", ")}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 20 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)
