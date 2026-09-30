@@ -109,8 +109,8 @@ const RESEARCH_SOURCES = [
   {
     name: "ramyatrouny / ifrs-skill",
     url: "https://github.com/ramyatrouny/ifrs-skill",
-    ar: "مرجع بحثي مفتوح بترخيص MIT للشروحات وسير العمل والقوائم؛ أُعيدت صياغة المادة هنا مع الرجوع للمصادر الرسمية.",
-    en: "MIT-licensed research reference for summaries, workflows, and checklists; material here is independently rewritten and cross-checked.",
+    ar: "مرجع تقني مفتوح يُستخدم للتحقق من بنية الموضوعات والمصطلحات فقط؛ الشرح المنشور هنا مستقل ومكتوب خصيصاً للموقع.",
+    en: "Open technical reference used only to verify topic structure and terminology; published explanations are independently authored for this site.",
   },
   {
     name: "CharlesHoffmanCPA / fac-ifrs",
@@ -216,8 +216,8 @@ function StandardsPage() {
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
                   {lang === "ar"
-                    ? "دليل عملي موسع لكل معيار IFRS وIAS: شرح الهدف والنطاق، الاعتراف والقياس، العرض والإفصاح، خطوات التطبيق، الأخطاء الشائعة، مثال مبسط، ثم بنك أسئلة مباشر لكل معيار. المحتوى تعليمي ومُعاد الصياغة وليس بديلاً عن النص الرسمي أو الحكم المهني."
-                    : "An expanded practical guide for every IFRS and IAS Standard: scope, recognition and measurement, presentation and disclosure, implementation workflow, common pitfalls, a simplified example, and a direct question bank for each Standard."}
+                    ? "شرح عملي أصلي بقلم المحاسب أحمد المدني لكل معيار IFRS وIAS: الهدف والنطاق، الاعتراف والقياس، العرض والإفصاح، خطوات التطبيق، الأخطاء الشائعة، مثال مبسط، ثم بنك أسئلة مباشر لكل معيار. المصادر الخارجية تستخدم للتحقق والتحديث فقط، وليست نصاً منقولاً."
+                    : "Original practical guidance authored for the site by accountant Ahmed Elmadani for every IFRS and IAS Standard: scope, recognition and measurement, presentation and disclosure, implementation workflow, common pitfalls, a simplified example, and a direct question bank. External sources are used for verification and updates only."}
                 </p>
               </div>
 
@@ -460,7 +460,7 @@ function StandardsPage() {
                       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-black text-[#4A3D33]">
                         <span className="inline-flex items-center gap-2">
                           <BookOpenText className="size-4 text-[#7c6045]" />
-                          {lang === "ar" ? "فتح الشرح الكامل للمعيار" : "Open full standard guide"}
+                          {lang === "ar" ? "شرح عملي بقلم المحاسب أحمد المدني" : "Practical guide by Ahmed Elmadani"}
                         </span>
                         <ChevronDown className="size-4 text-[#8A7766]" />
                       </summary>
@@ -576,8 +576,8 @@ function StandardsPage() {
                 </h3>
                 <p className="mt-2 max-w-3xl text-sm leading-7 text-[#AFA69D]">
                   {lang === "ar"
-                    ? "تم استخدام المستودعات التالية لفهم الهياكل، سير العمل، والعلاقات بين المفاهيم. المحتوى المنشور في الصفحة هو تلخيص مستقل، مع عدم نسخ أي مادة لا يسمح ترخيصها بذلك."
-                    : "The following repositories were used to understand structures, workflows, and concept relationships. Published page content is independently summarised, without copying material whose licence does not permit that use."}
+                    ? "الشرح المنشور هنا محتوى تحريري أصلي مخصص للموقع بقلم المحاسب أحمد المدني. تُستخدم المراجع التالية للتحقق من نطاق المعيار والمصطلحات والتحديثات فقط، ولا يتم نسخ نصوصها أو إعادة إنتاج المحتوى الرسمي."
+                    : "The explanations published here are original editorial content authored for this site by accountant Ahmed Elmadani. The references below are used only to verify scope, terminology and updates; their text is not copied or republished."}
                 </p>
               </div>
             </div>
@@ -604,8 +604,8 @@ function StandardsPage() {
 
             <p className="mt-5 border-t border-[#A88765]/15 pt-5 text-[11px] leading-6 text-[#766F68]">
               {lang === "ar"
-                ? "هذه الموسوعة أداة تعليمية ومهنية مساعدة وليست إصدارًا رسميًا من IFRS Foundation، ولا تمثل رأيًا تدقيقيًا أو استشارة محاسبية لحالة بعينها. تم إعداد فهرسة الصفحة في سبتمبر 2026."
-                : "This reference is an educational and professional aid, not an official IFRS Foundation publication, audit opinion, or case-specific accounting advice. This page index was prepared in September 2026."}
+                ? "إعداد وصياغة الشرح: المحاسب أحمد المدني. هذه الموسوعة أداة تعليمية ومهنية مساعدة وليست إصدارًا رسميًا من IFRS Foundation، ولا تمثل رأيًا تدقيقيًا أو استشارة محاسبية لحالة بعينها. المراجع الخارجية للتحقق والتحديث فقط."
+                : "Guide explanations authored by accountant Ahmed Elmadani. This reference is an educational and professional aid, not an official IFRS Foundation publication, audit opinion, or case-specific accounting advice. External references are used only for verification and updates."}
             </p>
           </div>
         </section>
