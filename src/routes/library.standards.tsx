@@ -34,13 +34,13 @@ export const Route = createFileRoute("/library/standards")({
         {
           name: "description",
           content:
-            "دليل عربي لمعايير IFRS وIAS يجمع مقالات الشرح وبنك أسئلة تفاعلياً مع الحاسبات والمصادر الرسمية.",
+            "موسوعة عربية عملية لـ43 معيار IFRS وIAS مع شرح شامل لكل معيار وأكثر من 500 سؤال تفاعلي وتدريب واختبارات.",
         },
         { property: "og:title", content: "معايير IFRS وIAS | الدليل المحاسبي" },
         {
           property: "og:description",
           content:
-            "مرجع عملي مختصر لمعايير التقارير المالية الدولية مع أدوات ومقالات تطبيقية.",
+            "شرح شامل لكل معيار IFRS وIAS مع أمثلة وأخطاء شائعة وبنك أسئلة تفاعلي مرتبط بكل معيار.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/library/standards")({
             url,
             inLanguage: ["ar-SA", "en"],
             description:
-              "دليل تعليمي مختصر للمعايير الدولية للتقرير المالي ومعايير المحاسبة الدولية.",
+              "موسوعة تعليمية عملية لمعايير IFRS وIAS مع شرح منظم وبنك أسئلة تفاعلي لكل معيار.",
             isPartOf: { "@id": "https://ahmedelmadni.com/#website" },
           }),
         },
@@ -150,6 +150,7 @@ function StandardsPage() {
       if (topic !== "all" && standard.topic !== topic) return false;
       if (!term) return true;
 
+      const guide = IFRS_STANDARD_GUIDES[standard.code];
       const searchable = [
         standard.code,
         standard.titleAr,
@@ -159,6 +160,24 @@ function StandardsPage() {
         TOPIC_LABELS[standard.topic].ar,
         TOPIC_LABELS[standard.topic].en,
         ...(standard.searchTerms ?? []),
+        ...(guide
+          ? [
+              guide.scopeAr,
+              guide.scopeEn,
+              guide.coreAr,
+              guide.coreEn,
+              ...guide.accountingAr,
+              ...guide.accountingEn,
+              ...guide.disclosureAr,
+              ...guide.disclosureEn,
+              ...guide.practicalAr,
+              ...guide.practicalEn,
+              ...guide.pitfallsAr,
+              ...guide.pitfallsEn,
+              guide.exampleAr,
+              guide.exampleEn,
+            ]
+          : []),
       ]
         .join(" ")
         .toLocaleLowerCase(lang === "ar" ? "ar" : "en");
