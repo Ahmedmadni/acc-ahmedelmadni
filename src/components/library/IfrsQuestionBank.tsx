@@ -149,16 +149,14 @@ export function IfrsQuestionBank({
   }, [query.data?.questions]);
 
   useEffect(() => {
-    if (initialStandardCode !== standardCode) {
-      setStandardCode(initialStandardCode);
-      setDifficulty("all");
-      setCurrent(0);
-      setSelected(null);
-      setLearnScore({ correct: 0, total: 0 });
-      setExamAnswers({});
-      setExamSubmitted(false);
-      setSessionSeed((value) => value + 1);
-    }
+    setStandardCode(initialStandardCode);
+    setDifficulty("all");
+    setCurrent(0);
+    setSelected(null);
+    setLearnScore({ correct: 0, total: 0 });
+    setExamAnswers({});
+    setExamSubmitted(false);
+    setSessionSeed((value) => value + 1);
   }, [initialStandardCode]);
 
   const counts = useMemo(() => {
