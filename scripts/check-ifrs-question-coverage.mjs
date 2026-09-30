@@ -2,7 +2,7 @@
 /**
  * Guardrail for the IFRS question bank.
  * Verifies unique IDs, full 43-standard coverage, difficulty metadata totals,
- * and the Phase 3 minimum of 20 questions for priority standards.
+ * the five-question all-standard baseline, Phase 3 priority depth and Phase 4 depth targets.
  */
 
 import { promises as fs } from "node:fs";
@@ -16,6 +16,8 @@ const files = [
   "src/data/ifrs-quiz-depth-b.ts",
   "src/data/ifrs-quiz-depth-c.ts",
   "src/data/ifrs-quiz-baseline-extra.ts",
+  "src/data/ifrs-quiz-phase4-depth.ts",
+  "src/data/ifrs-quiz-phase4-baseline.ts",
 ];
 
 const priority = [
@@ -31,6 +33,8 @@ const priority = [
   "IAS 36",
   "IAS 37",
 ];
+
+const phase4Depth = ["IFRS 3", "IFRS 10", "IFRS 13", "IAS 7"];
 
 function readQuestions(content) {
   const blocks = content
@@ -57,10 +61,28 @@ function readQuestions(content) {
     .filter((question) => question.track === "IFRS");
 }
 
+function readCompactBaselineQuestions(content) {
+  return [...content.matchAll(
+    /q\("((?:IFRS|IAS) \d+)",\s*(\d+),\s*"([^"]+)",\s*"(easy|intermediate|hard)"/g,
+  )].map((match) => {
+    const standard = match[1];
+    const sequence = Number(match[2]);
+    return {
+      id: `ifrs-p4base-${standard.toLowerCase().replace(" ", "")}-${String(sequence).padStart(2, "0")}`,
+      track: "IFRS",
+      standard,
+      difficulty: match[4],
+    };
+  });
+}
+
 const all = [];
 for (const file of files) {
   const content = await fs.readFile(file, "utf8");
   all.push(...readQuestions(content));
+  if (file.endsWith("ifrs-quiz-phase4-baseline.ts")) {
+    all.push(...readCompactBaselineQuestions(content));
+  }
 }
 
 const byId = new Map();
@@ -91,8 +113,9 @@ const indexed = [
 ];
 
 const missing = indexed.filter((code) => (counts.get(code) ?? 0) === 0);
-const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 2);
+const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 5);
 const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 20);
+const belowPhase4Depth = phase4Depth.filter((code) => (counts.get(code) ?? 0) < 10);
 const unmapped = counts.get("Unmapped") ?? 0;
 
 console.log(
@@ -108,6 +131,7 @@ console.log(
       missing,
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
+      below_phase4_depth_target: belowPhase4Depth,
     },
     null,
     2,
@@ -120,9 +144,11 @@ if (duplicateIds.length) failures.push(`Duplicate IDs: ${duplicateIds.join(", ")
 if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a standard`);
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
-  failures.push(`Standards below two-question baseline: ${belowBaseline.join(", ")}`);
+  failures.push(`Standards below five-question baseline: ${belowBaseline.join(", ")}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 20 questions: ${belowPriority.join(", ")}`);
+if (belowPhase4Depth.length)
+  failures.push(`Phase 4 depth standards below 10 questions: ${belowPhase4Depth.join(", ")}`);
 
 if (failures.length) {
   console.error("\nCoverage check failed:");

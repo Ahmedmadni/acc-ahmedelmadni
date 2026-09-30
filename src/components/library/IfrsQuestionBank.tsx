@@ -25,23 +25,40 @@ import { IFRS_DEPTH_A_QUESTION_SEED } from "@/data/ifrs-quiz-depth-a";
 import { IFRS_DEPTH_B_QUESTION_SEED } from "@/data/ifrs-quiz-depth-b";
 import { IFRS_DEPTH_C_QUESTION_SEED } from "@/data/ifrs-quiz-depth-c";
 import { IFRS_BASELINE_EXTRA_QUESTION_SEED } from "@/data/ifrs-quiz-baseline-extra";
+import { IFRS_PHASE4_DEPTH_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-depth";
+import { IFRS_PHASE4_BASELINE_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-baseline";
 import { SEED_QUESTIONS, type ExamQuestion } from "@/lib/exam-bank";
 import { listExamQuestions } from "@/lib/exam-questions.functions";
 import {
   buildWeaknessStats,
   clearIfrsAttempts,
+  createIfrsAttemptId,
   overallAccuracy,
   readIfrsAttempts,
   recordIfrsAttempt,
   type IfrsAttemptRecord,
   type IfrsDifficulty,
 } from "@/lib/ifrs-learning-stats";
+import {
+  clearIfrsAccountProgress,
+  saveIfrsAttemptToAccount,
+  syncIfrsProgress,
+} from "@/lib/ifrs-progress.client";
 import type { Lang } from "@/lib/i18n";
 
-type QuizMode = "learn" | "exam";
+type QuizMode = "learn" | "exam" | "adaptive";
 type DifficultyFilter = "all" | IfrsDifficulty;
 
 const EXAM_LIMIT = 10;
+const ADAPTIVE_LIMIT = 10;
+
+function orderScore(id: string, seed: number) {
+  let hash = seed || 1;
+  for (let index = 0; index < id.length; index += 1) {
+    hash = (hash * 31 + id.charCodeAt(index)) >>> 0;
+  }
+  return hash;
+}
 
 function detectStandardCode(question: ExamQuestion): string | null {
   const haystack = `${question.topic} ${question.reference}`;
@@ -89,6 +106,9 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
   const [examAnswers, setExamAnswers] = useState<Record<string, number>>({});
   const [examSubmitted, setExamSubmitted] = useState(false);
   const [attempts, setAttempts] = useState<IfrsAttemptRecord[]>([]);
+  const [accountUserId, setAccountUserId] = useState<string | null>(null);
+  const [syncState, setSyncState] = useState<"local" | "syncing" | "synced" | "error">("local");
+  const [sessionSeed, setSessionSeed] = useState(1);
 
   const query = useQuery({
     queryKey: ["ifrs-standard-question-bank"],
@@ -98,7 +118,26 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
   });
 
   useEffect(() => {
-    setAttempts(readIfrsAttempts());
+    let active = true;
+    const local = readIfrsAttempts();
+    setAttempts(local);
+    setSyncState("syncing");
+
+    syncIfrsProgress(local)
+      .then((result) => {
+        if (!active) return;
+        setAccountUserId(result.userId);
+        setAttempts(result.attempts);
+        setSyncState(result.synced ? "synced" : "local");
+      })
+      .catch(() => {
+        if (!active) return;
+        setSyncState("error");
+      });
+
+    return () => {
+      active = false;
+    };
   }, []);
 
   const merged = useMemo(() => {
@@ -114,6 +153,8 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
     for (const question of IFRS_DEPTH_B_QUESTION_SEED) byId.set(question.id, question);
     for (const question of IFRS_DEPTH_C_QUESTION_SEED) byId.set(question.id, question);
     for (const question of IFRS_BASELINE_EXTRA_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_PHASE4_DEPTH_QUESTION_SEED) byId.set(question.id, question);
+    for (const question of IFRS_PHASE4_BASELINE_QUESTION_SEED) byId.set(question.id, question);
     for (const question of query.data?.questions ?? []) {
       if (question.track === "IFRS") byId.set(question.id, question);
     }
@@ -154,17 +195,40 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
     [difficulty, standardPool],
   );
 
-  const pool = useMemo(
-    () => (mode === "exam" ? filteredPool.slice(0, EXAM_LIMIT) : filteredPool),
-    [filteredPool, mode],
+  const weaknessStats = useMemo(
+    () => buildWeaknessStats(attempts, standardCode),
+    [attempts, standardCode],
   );
+
+  const pool = useMemo(() => {
+    if (mode === "exam") {
+      return [...filteredPool]
+        .sort((a, b) => orderScore(a.id, sessionSeed) - orderScore(b.id, sessionSeed))
+        .slice(0, EXAM_LIMIT);
+    }
+
+    if (mode === "adaptive") {
+      const accuracy = new Map(weaknessStats.map((stat) => [stat.domain, stat.accuracy]));
+      return [...filteredPool]
+        .sort((a, b) => {
+          const aAccuracy = accuracy.get(a.domain) ?? 55;
+          const bAccuracy = accuracy.get(b.domain) ?? 55;
+          if (aAccuracy !== bAccuracy) return aAccuracy - bAccuracy;
+          if (a.normalizedDifficulty !== b.normalizedDifficulty) {
+            const rank = { hard: 0, intermediate: 1, easy: 2 };
+            return rank[a.normalizedDifficulty] - rank[b.normalizedDifficulty];
+          }
+          return orderScore(a.id, sessionSeed) - orderScore(b.id, sessionSeed);
+        })
+        .slice(0, ADAPTIVE_LIMIT);
+    }
+
+    return filteredPool;
+  }, [filteredPool, mode, sessionSeed, weaknessStats]);
 
   const currentQuestion = pool[current];
   const selectedStandard = IFRS_STANDARDS.find((standard) => standard.code === standardCode);
-  const currentWeaknesses = useMemo(
-    () => buildWeaknessStats(attempts, standardCode).slice(0, 4),
-    [attempts, standardCode],
-  );
+  const currentWeaknesses = weaknessStats.slice(0, 4);
   const globalAccuracy = overallAccuracy(attempts);
   const standardAttempts = attempts.filter((attempt) => attempt.standardCode === standardCode);
   const standardAccuracy = overallAccuracy(standardAttempts);
@@ -198,6 +262,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
     setLearnScore({ correct: 0, total: 0 });
     setExamAnswers({});
     setExamSubmitted(false);
+    setSessionSeed((value) => value + 1);
   }
 
   function changeStandard(code: string) {
@@ -219,15 +284,21 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
   function persistAttempt(question: (typeof merged)[number], correct: boolean) {
     if (!question.standardCode) return;
     const record: IfrsAttemptRecord = {
+      attemptId: createIfrsAttemptId(),
       questionId: question.id,
       standardCode: question.standardCode,
       domain: question.domain,
       difficulty: question.normalizedDifficulty,
+      mode,
       correct,
       answeredAt: new Date().toISOString(),
     };
     recordIfrsAttempt(record);
     setAttempts((previous) => [...previous, record].slice(-1200));
+
+    saveIfrsAttemptToAccount(accountUserId, record).catch(() => {
+      setSyncState("error");
+    });
   }
 
   function chooseAnswer(index: number) {
@@ -274,11 +345,14 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
   function resetAnalytics() {
     clearIfrsAttempts();
     setAttempts([]);
+    clearIfrsAccountProgress(accountUserId).catch(() => {
+      setSyncState("error");
+    });
   }
 
   const activeAnswer =
     mode === "exam" ? (currentQuestion ? examAnswers[currentQuestion.id] ?? null : null) : selected;
-  const revealAnswer = mode === "learn" ? selected !== null : examSubmitted;
+  const revealAnswer = mode === "exam" ? examSubmitted : selected !== null;
   const isCorrect =
     currentQuestion && activeAnswer !== null
       ? activeAnswer === currentQuestion.answerIndex
@@ -289,7 +363,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
 
   return (
     <section className="mx-auto max-w-6xl">
-      <div className="mb-5 grid gap-3 md:grid-cols-2">
+      <div className="mb-5 grid gap-3 md:grid-cols-3">
         <button
           type="button"
           onClick={() => changeMode("learn")}
@@ -333,6 +407,30 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                 {lang === "ar"
                   ? `حتى ${EXAM_LIMIT} أسئلة بدون كشف الإجابات حتى التسليم.`
                   : `Up to ${EXAM_LIMIT} questions with answers hidden until submission.`}
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => changeMode("adaptive")}
+          className={`rounded-3xl border p-5 text-start transition ${
+            mode === "adaptive"
+              ? "border-[#A88765]/65 bg-[#F5F1EB] text-[#1C1B19]"
+              : "border-[#A88765]/20 bg-[#1C1B19] text-[#AFA69D] hover:border-[#A88765]/40"
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            <Target className="size-5" />
+            <div>
+              <div className="font-display text-base font-black">
+                {lang === "ar" ? "تدريب ذكي" : "Adaptive Practice"}
+              </div>
+              <p className="mt-1 text-xs leading-5 opacity-75">
+                {lang === "ar"
+                  ? `حتى ${ADAPTIVE_LIMIT} أسئلة تركز على المجالات الأضعف لديك.`
+                  : `Up to ${ADAPTIVE_LIMIT} questions focused on your weakest domains.`}
               </p>
             </div>
           </div>
@@ -449,6 +547,29 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
               </div>
             </div>
 
+            <div className="mt-3 rounded-xl border border-[#A88765]/10 bg-white/[0.025] p-3 text-[10px] leading-5 text-[#8F877F]">
+              {syncState === "syncing"
+                ? lang === "ar"
+                  ? "جارٍ مزامنة تقدمك..."
+                  : "Syncing your progress..."
+                : accountUserId && syncState === "synced"
+                  ? lang === "ar"
+                    ? "التقدم محفوظ في حسابك ويمكن استعادته على جهاز آخر."
+                    : "Progress is saved to your account and can be restored on another device."
+                  : syncState === "error"
+                    ? lang === "ar"
+                      ? "تعذرت المزامنة الآن؛ يستمر الحفظ محلياً ولن تضيع الجلسة."
+                      : "Account sync is unavailable right now; local saving remains active."
+                    : lang === "ar"
+                      ? "التقدم محفوظ على هذا الجهاز. سجّل الدخول لمزامنته بين أجهزتك."
+                      : "Progress is saved on this device. Sign in to sync it across devices."}
+              {!accountUserId && syncState !== "syncing" && (
+                <a href="/auth" className="mt-1 block font-black text-[#D2B390] hover:underline">
+                  {lang === "ar" ? "تسجيل الدخول للمزامنة" : "Sign in to sync"}
+                </a>
+              )}
+            </div>
+
             {currentWeaknesses.length > 0 ? (
               <div className="mt-3 space-y-2">
                 {currentWeaknesses.map((stat) => (
@@ -471,8 +592,8 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
             ) : (
               <p className="mt-3 text-[10px] leading-5 text-[#766F68]">
                 {lang === "ar"
-                  ? "أجب عن بعض الأسئلة ليظهر تحليل المجالات الأضعف لديك. الإحصاءات محفوظة على هذا الجهاز."
-                  : "Answer a few questions to reveal weaker domains. Statistics are saved on this device."}
+                  ? "أجب عن بعض الأسئلة ليظهر تحليل المجالات الأضعف لديك."
+                  : "Answer a few questions to reveal weaker domains."}
               </p>
             )}
           </div>
@@ -502,9 +623,13 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                       ? lang === "ar"
                         ? "تعلّم"
                         : "Learn"
-                      : lang === "ar"
-                        ? "اختبار"
-                        : "Exam"}
+                      : mode === "exam"
+                        ? lang === "ar"
+                          ? "اختبار"
+                          : "Exam"
+                        : lang === "ar"
+                          ? "تدريب ذكي"
+                          : "Adaptive"}
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-black sm:text-3xl">
@@ -724,7 +849,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                     {lang === "ar" ? "السابق" : "Previous"}
                   </button>
 
-                  {mode === "learn" && learnScore.total > 0 && (
+                  {mode !== "exam" && learnScore.total > 0 && (
                     <div className="hidden items-center gap-2 text-xs font-black text-[#7C6045] sm:flex">
                       <Target className="size-4" />
                       {Math.round((learnScore.correct / learnScore.total) * 100)}%
@@ -746,8 +871,8 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
 
           <div className="mt-4 rounded-2xl border border-[#A88765]/15 bg-[#1C1B19] px-4 py-3 text-[11px] leading-5 text-[#8F877F]">
             {lang === "ar"
-              ? "الأسئلة للتعلم والتدريب وليست أسئلة امتحانات رسمية. تحليل الأداء محفوظ محلياً على هذا الجهاز حالياً. عند استيراد مصدر خارجي يجب حفظ المصدر والترخيص ومراجعة الترجمة قبل النشر."
-              : "Questions are for learning and practice and are not official exam questions. Performance analytics are currently saved locally on this device. Imported external content must retain source/licence provenance and pass translation review before publication."}
+              ? "الأسئلة للتعلم والتدريب وليست أسئلة امتحانات رسمية. يُحفظ التقدم محلياً للزائر، ويُزامن مع حساب المستخدم عند تسجيل الدخول وتوفر جدول التقدم. عند استيراد مصدر خارجي يجب حفظ المصدر والترخيص ومراجعة الترجمة قبل النشر."
+              : "Questions are for learning and practice and are not official exam questions. Guest progress is saved locally and signed-in progress syncs to the user account when the progress table is available. Imported external content must retain source/licence provenance and pass translation review before publication."}
           </div>
         </div>
       </div>
