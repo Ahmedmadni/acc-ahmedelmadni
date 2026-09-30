@@ -275,7 +275,7 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       en: "IFRS 16 eliminated the operating/finance distinction for lessees; ROU asset and lease liability are recognized (except short-term and low-value leases).",
     },
     reference: "Gleim / IFRS 16",
-  },,
+  },
   {
     id: "ifrs-ias2-1",
     track: "IFRS",
