@@ -7,6 +7,7 @@ import { IFRS_DEPTH_C_QUESTION_SEED } from "@/data/ifrs-quiz-depth-c";
 import { IFRS_BASELINE_EXTRA_QUESTION_SEED } from "@/data/ifrs-quiz-baseline-extra";
 import { IFRS_PHASE4_DEPTH_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-depth";
 import { IFRS_PHASE4_BASELINE_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-baseline";
+import { IFRS_PHASE5_QUESTION_SEED } from "@/data/ifrs-quiz-phase5";
 import { SEED_QUESTIONS, type ExamQuestion } from "@/lib/exam-bank";
 
 export function detectIfrsStandardCode(question: ExamQuestion): string | null {
@@ -32,6 +33,7 @@ export const IFRS_LOCAL_QUESTION_BANK: ExamQuestion[] = (() => {
     IFRS_BASELINE_EXTRA_QUESTION_SEED,
     IFRS_PHASE4_DEPTH_QUESTION_SEED,
     IFRS_PHASE4_BASELINE_QUESTION_SEED,
+    IFRS_PHASE5_QUESTION_SEED,
   ]) {
     for (const question of group) byId.set(question.id, question);
   }
