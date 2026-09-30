@@ -37,11 +37,11 @@ jobs:
       - name: Verify IFRS content coverage
         run: npm run ifrs:check-coverage
 
+      - name: Build and generate route tree
+        run: npm run build
+
       - name: Typecheck
         run: npx tsc --noEmit
 
       - name: Lint
         run: npm run lint
-
-      - name: Build
-        run: npm run build
