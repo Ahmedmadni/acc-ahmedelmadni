@@ -2,7 +2,7 @@
 /**
  * Guardrail for the IFRS question bank.
  * Verifies unique IDs, full 43-standard coverage, difficulty metadata totals,
- * and the Phase 3 minimum of 20 questions for priority standards.
+ * the five-question all-standard baseline, Phase 3 priority depth and Phase 4 depth targets.
  */
 
 import { promises as fs } from "node:fs";
