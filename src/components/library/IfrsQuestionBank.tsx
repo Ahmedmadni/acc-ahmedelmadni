@@ -592,8 +592,8 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
             ) : (
               <p className="mt-3 text-[10px] leading-5 text-[#766F68]">
                 {lang === "ar"
-                  ? "أجب عن بعض الأسئلة ليظهر تحليل المجالات الأضعف لديك. الإحصاءات محفوظة على هذا الجهاز."
-                  : "Answer a few questions to reveal weaker domains. Statistics are saved on this device."}
+                  ? "أجب عن بعض الأسئلة ليظهر تحليل المجالات الأضعف لديك."
+                  : "Answer a few questions to reveal weaker domains."}
               </p>
             )}
           </div>
@@ -849,7 +849,7 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
                     {lang === "ar" ? "السابق" : "Previous"}
                   </button>
 
-                  {mode === "learn" && learnScore.total > 0 && (
+                  {mode !== "exam" && learnScore.total > 0 && (
                     <div className="hidden items-center gap-2 text-xs font-black text-[#7C6045] sm:flex">
                       <Target className="size-4" />
                       {Math.round((learnScore.correct / learnScore.total) * 100)}%
@@ -871,8 +871,8 @@ export function IfrsQuestionBank({ lang }: { lang: Lang }) {
 
           <div className="mt-4 rounded-2xl border border-[#A88765]/15 bg-[#1C1B19] px-4 py-3 text-[11px] leading-5 text-[#8F877F]">
             {lang === "ar"
-              ? "الأسئلة للتعلم والتدريب وليست أسئلة امتحانات رسمية. تحليل الأداء محفوظ محلياً على هذا الجهاز حالياً. عند استيراد مصدر خارجي يجب حفظ المصدر والترخيص ومراجعة الترجمة قبل النشر."
-              : "Questions are for learning and practice and are not official exam questions. Performance analytics are currently saved locally on this device. Imported external content must retain source/licence provenance and pass translation review before publication."}
+              ? "الأسئلة للتعلم والتدريب وليست أسئلة امتحانات رسمية. يُحفظ التقدم محلياً للزائر، ويُزامن مع حساب المستخدم عند تسجيل الدخول وتوفر جدول التقدم. عند استيراد مصدر خارجي يجب حفظ المصدر والترخيص ومراجعة الترجمة قبل النشر."
+              : "Questions are for learning and practice and are not official exam questions. Guest progress is saved locally and signed-in progress syncs to the user account when the progress table is available. Imported external content must retain source/licence provenance and pass translation review before publication."}
           </div>
         </div>
       </div>
