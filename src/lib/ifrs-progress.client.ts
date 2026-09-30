@@ -1,9 +1,15 @@
 import { supabase } from "@/integrations/supabase/client";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import {
   normalizeIfrsAttempt,
   writeIfrsAttempts,
   type IfrsAttemptRecord,
 } from "@/lib/ifrs-learning-stats";
+
+// The generated Database types lag behind newly created tables, so queries
+// against ifrs_learning_attempts go through an untyped handle on the same
+// client (RLS still applies — this only relaxes compile-time row typing).
+const db = supabase as unknown as SupabaseClient;
 
 type RemoteAttemptRow = {
   client_attempt_id: string;
