@@ -23,25 +23,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: npm
+          bun-version: latest
 
       - name: Install dependencies
-        # The repository lockfile currently lags package.json. Avoid mutating the
-        # checked-in lockfile in CI while still validating the declared dependency set.
-        run: npm install --package-lock=false --no-audit --no-fund
+        run: bun install --frozen-lockfile
 
       - name: Verify IFRS content coverage
-        run: npm run ifrs:check-coverage
+        run: bun run ifrs:check-coverage
 
       - name: Build and generate route tree
-        run: npm run build
+        run: bun run build
 
       - name: Typecheck
-        run: npx tsc --noEmit
+        run: bunx tsc --noEmit
 
       - name: Lint
-        run: npm run lint
+        run: bun run lint
