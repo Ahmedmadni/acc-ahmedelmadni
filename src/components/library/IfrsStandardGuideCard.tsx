@@ -127,7 +127,7 @@ export function IfrsStandardGuideCard({
         </div>
       )}
 
-      <details className="mt-4 rounded-2xl border border-[#A88765]/20 bg-white">
+      <details className="group mt-4 rounded-2xl border border-[#A88765]/20 bg-white">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-black text-[#4E4339]">
           <span className="inline-flex items-center gap-2">
             <BookOpenCheck className="size-4 text-[#7C6045]" />
