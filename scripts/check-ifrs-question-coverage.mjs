@@ -16,6 +16,7 @@ const files = [
   "src/data/ifrs-quiz-depth-b.ts",
   "src/data/ifrs-quiz-depth-c.ts",
   "src/data/ifrs-quiz-baseline-extra.ts",
+  "src/data/ifrs-quiz-phase4-depth.ts",
 ];
 
 const priority = [
