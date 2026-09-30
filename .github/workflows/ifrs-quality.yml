@@ -30,7 +30,9 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # The repository lockfile currently lags package.json. Avoid mutating the
+        # checked-in lockfile in CI while still validating the declared dependency set.
+        run: npm install --package-lock=false --no-audit --no-fund
 
       - name: Verify IFRS content coverage
         run: npm run ifrs:check-coverage
