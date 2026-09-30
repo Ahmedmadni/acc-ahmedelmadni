@@ -10,6 +10,7 @@ import { IFRS_PHASE4_DEPTH_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-depth";
 import { IFRS_PHASE4_BASELINE_QUESTION_SEED } from "@/data/ifrs-quiz-phase4-baseline";
 import { IFRS_PHASE5_A_QUESTION_SEED } from "@/data/ifrs-quiz-phase5-a";
 import { IFRS_PHASE5_B_QUESTION_SEED } from "@/data/ifrs-quiz-phase5-b";
+import { IFRS_PHASE6_GUIDE_QUESTIONS } from "@/data/ifrs-quiz-phase6-guide-mastery";
 
 export function detectIfrsStandardCode(question: ExamQuestion): string | null {
   const haystack = `${question.topic} ${question.reference}`;
@@ -30,6 +31,7 @@ const layers: ExamQuestion[][] = [
   IFRS_PHASE4_BASELINE_QUESTION_SEED,
   IFRS_PHASE5_A_QUESTION_SEED,
   IFRS_PHASE5_B_QUESTION_SEED,
+  IFRS_PHASE6_GUIDE_QUESTIONS,
 ];
 
 const byId = new Map<string, ExamQuestion>();
