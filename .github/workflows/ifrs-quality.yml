@@ -35,6 +35,8 @@ jobs:
         run: bun run ifrs:check-coverage
 
       - name: Build and generate route tree
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
         run: bun run build
 
       - name: Typecheck
