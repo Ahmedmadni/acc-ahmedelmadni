@@ -38,7 +38,7 @@ import {
   clearIfrsAccountProgress,
   saveIfrsAttemptToAccount,
   syncIfrsProgress,
-} from "@/lib/ifrs-progress.client";
+} from "@/lib/ifrs-progress";
 import type { Lang } from "@/lib/i18n";
 
 type QuizMode = "learn" | "exam" | "adaptive";
