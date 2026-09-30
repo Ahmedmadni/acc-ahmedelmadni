@@ -1,10 +1,13 @@
 export type IfrsDifficulty = "easy" | "intermediate" | "hard";
+export type IfrsLearningMode = "learn" | "exam" | "adaptive";
 
 export interface IfrsAttemptRecord {
+  attemptId: string;
   questionId: string;
   standardCode: string;
   domain: string;
   difficulty: IfrsDifficulty;
+  mode: IfrsLearningMode;
   correct: boolean;
   answeredAt: string;
 }
@@ -25,28 +28,76 @@ function canUseStorage() {
   return typeof window !== "undefined" && typeof window.localStorage !== "undefined";
 }
 
+function legacyAttemptId(item: Partial<IfrsAttemptRecord>) {
+  return `legacy:${item.questionId ?? "unknown"}:${item.answeredAt ?? "unknown"}`;
+}
+
+export function createIfrsAttemptId() {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) return crypto.randomUUID();
+  return `attempt:${Date.now()}:${Math.random().toString(36).slice(2)}`;
+}
+
+export function normalizeIfrsAttempt(value: unknown): IfrsAttemptRecord | null {
+  if (!value || typeof value !== "object") return null;
+  const item = value as Partial<IfrsAttemptRecord>;
+  if (
+    typeof item.questionId !== "string" ||
+    typeof item.standardCode !== "string" ||
+    typeof item.domain !== "string" ||
+    typeof item.correct !== "boolean" ||
+    typeof item.answeredAt !== "string"
+  ) {
+    return null;
+  }
+
+  const difficulty: IfrsDifficulty =
+    item.difficulty === "easy" || item.difficulty === "hard"
+      ? item.difficulty
+      : "intermediate";
+
+  const mode: IfrsLearningMode =
+    item.mode === "exam" || item.mode === "adaptive" ? item.mode : "learn";
+
+  return {
+    attemptId:
+      typeof item.attemptId === "string" && item.attemptId
+        ? item.attemptId
+        : legacyAttemptId(item),
+    questionId: item.questionId,
+    standardCode: item.standardCode,
+    domain: item.domain,
+    difficulty,
+    mode,
+    correct: item.correct,
+    answeredAt: item.answeredAt,
+  };
+}
+
 export function readIfrsAttempts(): IfrsAttemptRecord[] {
   if (!canUseStorage()) return [];
   try {
     const parsed = JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? "[]");
     if (!Array.isArray(parsed)) return [];
-    return parsed.filter(
-      (item): item is IfrsAttemptRecord =>
-        item &&
-        typeof item.questionId === "string" &&
-        typeof item.standardCode === "string" &&
-        typeof item.domain === "string" &&
-        typeof item.correct === "boolean",
-    );
+    return parsed
+      .map(normalizeIfrsAttempt)
+      .filter((item): item is IfrsAttemptRecord => item !== null);
   } catch {
     return [];
   }
 }
 
-export function recordIfrsAttempt(record: IfrsAttemptRecord) {
+export function writeIfrsAttempts(records: IfrsAttemptRecord[]) {
   if (!canUseStorage()) return;
-  const next = [...readIfrsAttempts(), record].slice(-MAX_ATTEMPTS);
+  const unique = new Map<string, IfrsAttemptRecord>();
+  for (const record of records) unique.set(record.attemptId, record);
+  const next = [...unique.values()]
+    .sort((a, b) => a.answeredAt.localeCompare(b.answeredAt))
+    .slice(-MAX_ATTEMPTS);
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+}
+
+export function recordIfrsAttempt(record: IfrsAttemptRecord) {
+  writeIfrsAttempts([...readIfrsAttempts(), record]);
 }
 
 export function clearIfrsAttempts() {
