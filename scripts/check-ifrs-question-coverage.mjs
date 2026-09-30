@@ -115,11 +115,11 @@ const indexed = [
 
 const guidesSource = await fs.readFile("src/data/ifrs-standard-guides.ts", "utf8");
 const guidesArrayStart = guidesSource.indexOf("[\n  [");
-const guidesArrayEnd = guidesSource.indexOf("\n  ].map((entry)", guidesArrayStart);
+const guidesArrayEnd = guidesSource.indexOf("\n].map((entry)", guidesArrayStart);
 if (guidesArrayStart < 0 || guidesArrayEnd < 0) {
   throw new Error("Could not locate IFRS guide data array");
 }
-const guidesRaw = JSON.parse(guidesSource.slice(guidesArrayStart, guidesArrayEnd + 4));
+const guidesRaw = JSON.parse(guidesSource.slice(guidesArrayStart, guidesArrayEnd + 2));
 const guideCodes = guidesRaw.map((entry) => entry[0]);
 const guideCounts = new Map();
 for (const code of guideCodes) guideCounts.set(code, (guideCounts.get(code) ?? 0) + 1);
