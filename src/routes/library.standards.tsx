@@ -3,10 +3,8 @@ import { useMemo, useState } from "react";
 import {
   ArrowUpRight,
   BookOpenText,
-  Calculator,
   CircleHelp,
   ExternalLink,
-  Info,
   Scale,
   Search,
   ShieldCheck,
@@ -19,6 +17,12 @@ import {
   type StandardTopic,
 } from "@/data/ifrs-standards";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
+import { IfrsStandardGuideCard } from "@/components/library/IfrsStandardGuideCard";
+import { IFRS_STANDARD_GUIDES } from "@/data/ifrs-standard-guides";
+import {
+  IFRS_LOCAL_QUESTION_COUNTS,
+  IFRS_LOCAL_QUESTION_TOTAL,
+} from "@/data/ifrs-question-bank";
 import { useLibLang } from "./library";
 
 export const Route = createFileRoute("/library/standards")({
@@ -74,25 +78,6 @@ const TOPIC_LABELS: Record<StandardTopic, { ar: string; en: string }> = {
   other: { ar: "موضوعات أخرى", en: "Other topics" },
 };
 
-const TOOL_LABELS: Record<string, { ar: string; en: string }> = {
-  loan: { ar: "جدول إطفاء قرض", en: "Loan amortization" },
-  bond: { ar: "تسعير السندات", en: "Bond pricing" },
-  dcf: { ar: "تحليل DCF", en: "DCF analysis" },
-  lease: { ar: "حاسبة التزام الإيجار IFRS 16", en: "IFRS 16 lease calculator" },
-  "financial-statements": {
-    ar: "معدّ القوائم المالية",
-    en: "Financial statements builder",
-  },
-  "goodwill-impairment": {
-    ar: "اختبار انخفاض قيمة الشهرة",
-    en: "Goodwill impairment test",
-  },
-  "inventory-nrv": {
-    ar: "تقييم المخزون والتكلفة / NRV",
-    en: "Inventory cost / NRV",
-  },
-};
-
 const RESEARCH_SOURCES = [
   {
     name: "IFRS Foundation",
@@ -140,6 +125,20 @@ function StandardsPage() {
   const [family, setFamily] = useState<FamilyFilter>("all");
   const [topic, setTopic] = useState<"all" | StandardTopic>("all");
   const [query, setQuery] = useState("");
+  const [quizStandardCode, setQuizStandardCode] = useState("IAS 2");
+
+  function openPractice(code: string) {
+    setQuizStandardCode(code);
+    setSection("questions");
+    if (typeof window !== "undefined") {
+      window.requestAnimationFrame(() => {
+        document.getElementById("ifrs-question-bank")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  }
 
   const highlighted = IFRS_STANDARDS.filter((standard) => standard.highlight);
 
@@ -197,16 +196,17 @@ function StandardsPage() {
                 </h2>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
                   {lang === "ar"
-                    ? "دليل مختصر قابل للبحث يجمع معايير IFRS وIAS ويربط المعيار مباشرة بالمقالات والحاسبات المتاحة داخل الموقع. المحتوى تعليمي ومُعاد الصياغة، وليس بديلاً عن النص الرسمي أو الحكم المهني."
-                    : "A searchable guide to IFRS and IAS that connects each standard with practical articles and calculators already available on the site. Content is educational and independently rewritten, not a substitute for official wording or professional judgement."}
+                    ? "موسوعة عملية لكل معيار IFRS وIAS: نطاق التطبيق، المبدأ الأساسي، الاعتراف والقياس، العرض والإفصاح، خطوات التطبيق، الأخطاء الشائعة، أمثلة مبسطة، وبنك أسئلة تفاعلي مرتبط بكل معيار."
+                    : "A practical IFRS/IAS reference for every standard: scope, core principle, recognition and measurement, presentation and disclosure, application steps, common pitfalls, simplified examples and a linked interactive question bank."}
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-2 sm:min-w-[300px]">
+              <div className="grid grid-cols-2 gap-2 sm:min-w-[360px] sm:grid-cols-4">
                 {[
                   { value: totals.all, ar: "إجمالي", en: "Total" },
                   { value: totals.ifrs, ar: "IFRS", en: "IFRS" },
                   { value: totals.ias, ar: "IAS", en: "IAS" },
+                  { value: IFRS_LOCAL_QUESTION_TOTAL, ar: "سؤال", en: "Questions" },
                 ].map((item) => (
                   <div
                     key={item.en}
@@ -262,7 +262,9 @@ function StandardsPage() {
             }`}
           >
             <CircleHelp className="size-4" />
-            {lang === "ar" ? "بنك الأسئلة والاختبارات" : "Question Bank & Quizzes"}
+            {lang === "ar"
+              ? `بنك الأسئلة والاختبارات · ${IFRS_LOCAL_QUESTION_TOTAL} سؤال`
+              : `Question Bank & Quizzes · ${IFRS_LOCAL_QUESTION_TOTAL}`}
           </button>
         </nav>
 
@@ -393,83 +395,29 @@ function StandardsPage() {
             </div>
           ) : (
             <div className="mt-5 grid gap-4 lg:grid-cols-2">
-              {filtered.map((standard) => (
-                <article
-                  key={standard.code}
-                  className="group flex flex-col rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 text-[#1C1B19] transition-all hover:-translate-y-0.5 hover:border-[#A88765]/55 hover:shadow-lg sm:p-6"
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-3">
-                    <div className="flex items-center gap-2">
-                      <span className="rounded-xl bg-[#1C1B19] px-3 py-1.5 text-sm font-black text-[#d2b390]">
-                        {standard.code}
-                      </span>
-                      <span className="rounded-full border border-[#A88765]/25 bg-[#A88765]/10 px-2.5 py-1 text-[10px] font-bold text-[#7c6045]">
-                        {TOPIC_LABELS[standard.topic][lang]}
-                      </span>
-                    </div>
-                    {standard.highlight && (
-                      <span className="rounded-full bg-[#9C6B4F]/10 px-2.5 py-1 text-[10px] font-bold text-[#8A5236]">
-                        {lang === "ar" ? "تغيير زمني مهم" : "Transition update"}
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="mt-4 font-display text-xl font-black leading-snug sm:text-2xl">
-                    {lang === "ar" ? standard.titleAr : standard.titleEn}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-7 text-[#6B6259]">
-                    {lang === "ar" ? standard.summaryAr : standard.summaryEn}
-                  </p>
-
-                  {(standard.statusAr || standard.statusEn) && (
-                    <div className="mt-4 flex items-start gap-2 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-3 text-xs leading-5 text-[#6B6259]">
-                      <Info className="mt-0.5 size-4 shrink-0 text-[#7c6045]" />
-                      <span>{lang === "ar" ? standard.statusAr : standard.statusEn}</span>
-                    </div>
-                  )}
-
-                  <div className="mt-5 flex flex-wrap gap-2 border-t border-[#A88765]/20 pt-4">
-                    <a
-                      href={standard.officialUrl ?? IFRS_NAVIGATOR_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/35 px-3 py-2 text-[11px] font-extrabold text-[#7c6045] transition hover:bg-[#A88765]/10"
-                    >
-                      <ExternalLink className="size-3.5" />
-                      {lang === "ar" ? "المصدر الرسمي" : "Official source"}
-                    </a>
-
-                    {standard.articleHref && (
-                      <a
-                        href={standard.articleHref}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-[#1C1B19] px-3 py-2 text-[11px] font-extrabold text-[#F5F1EB] transition hover:bg-[#3A332D]"
-                      >
-                        <BookOpenText className="size-3.5" />
-                        {lang === "ar" ? "شرح عملي" : "Practical guide"}
-                      </a>
-                    )}
-
-                    {standard.toolIds?.map((toolId) => (
-                      <a
-                        key={toolId}
-                        href={`/tools/${toolId}`}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-[#7A7A4A]/35 bg-[#7A7A4A]/10 px-3 py-2 text-[11px] font-extrabold text-[#5F5F38] transition hover:bg-[#7A7A4A]/20"
-                      >
-                        <Calculator className="size-3.5" />
-                        {TOOL_LABELS[toolId]?.[lang] ??
-                          (lang === "ar" ? "أداة تطبيقية" : "Practical tool")}
-                      </a>
-                    ))}
-                  </div>
-                </article>
-              ))}
+              {filtered.map((standard) => {
+                const guide = IFRS_STANDARD_GUIDES[standard.code];
+                if (!guide) return null;
+                return (
+                  <IfrsStandardGuideCard
+                    key={standard.code}
+                    standard={standard}
+                    guide={guide}
+                    questionCount={IFRS_LOCAL_QUESTION_COUNTS.get(standard.code) ?? 0}
+                    lang={lang}
+                    topicLabel={TOPIC_LABELS[standard.topic][lang]}
+                    navigatorUrl={IFRS_NAVIGATOR_URL}
+                    onPractice={openPractice}
+                  />
+                );
+              })}
             </div>
           )}
         </section>
           </>
         ) : (
-          <div className="mt-8">
-            <IfrsQuestionBank lang={lang} />
+          <div id="ifrs-question-bank" className="mt-8 scroll-mt-24">
+            <IfrsQuestionBank key={quizStandardCode} lang={lang} initialStandardCode={quizStandardCode} />
           </div>
         )}
 
