@@ -60,7 +60,7 @@ export async function syncIfrsProgress(localAttempts: IfrsAttemptRecord[]) {
     };
   }
 
-  const { data: remoteRows, error: loadError } = await supabase
+  const { data: remoteRows, error: loadError } = await db
     .from("ifrs_learning_attempts")
     .select(
       "client_attempt_id, question_id, standard_code, domain, difficulty, mode, is_correct, answered_at",
@@ -79,7 +79,7 @@ export async function syncIfrsProgress(localAttempts: IfrsAttemptRecord[]) {
     const remoteIds = new Set(remoteAttempts.map((attempt) => attempt.attemptId));
     const missing = localAttempts.filter((attempt) => !remoteIds.has(attempt.attemptId));
     if (missing.length > 0) {
-      const { error: syncError } = await supabase
+      const { error: syncError } = await db
         .from("ifrs_learning_attempts")
         .upsert(missing.map((attempt) => toInsert(user.id, attempt)), {
           onConflict: "user_id,client_attempt_id",
@@ -111,7 +111,7 @@ export async function saveIfrsAttemptToAccount(
   attempt: IfrsAttemptRecord,
 ) {
   if (!userId) return;
-  const { error } = await supabase
+  const { error } = await db
     .from("ifrs_learning_attempts")
     .upsert(toInsert(userId, attempt), {
       onConflict: "user_id,client_attempt_id",
@@ -122,7 +122,7 @@ export async function saveIfrsAttemptToAccount(
 
 export async function clearIfrsAccountProgress(userId: string | null) {
   if (!userId) return;
-  const { error } = await supabase
+  const { error } = await db
     .from("ifrs_learning_attempts")
     .delete()
     .eq("user_id", userId);
