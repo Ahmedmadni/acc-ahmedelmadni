@@ -498,6 +498,9 @@ function Index() {
       <main className="relative z-10">
         <Hero lang={lang} />
         <Suspense fallback={null}>
+          <SiteSearch lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
           <NewsTicker lang={lang} />
         </Suspense>
         <Suspense fallback={null}>

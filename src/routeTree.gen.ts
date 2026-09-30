@@ -33,6 +33,7 @@ import { Route as LibraryIndexRouteImport } from './routes/library.index'
 import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
 import { Route as LibraryBooksRouteImport } from './routes/library.books'
 import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
+import { Route as LibraryStandardsRouteImport } from './routes/library.standards'
 import { Route as LibraryTemplatesRouteImport } from './routes/library.templates'
 import { Route as ToolsIndexRouteImport } from './routes/tools.index'
 import { Route as ToolsToolIdRouteImport } from './routes/tools.$toolId'
@@ -166,6 +167,11 @@ const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
   path: '/courses',
   getParentRoute: () => LibraryRoute,
 } as any)
+const LibraryStandardsRoute = LibraryStandardsRouteImport.update({
+  id: '/standards',
+  path: '/standards',
+  getParentRoute: () => LibraryRoute,
+} as any)
 const LibraryTemplatesRoute = LibraryTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -256,6 +262,7 @@ export interface FileRoutesByFullPath {
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
+  '/library/standards': typeof LibraryStandardsRoute
   '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/tools/study-companion': typeof ToolsStudyCompanionRoute
@@ -292,6 +299,7 @@ export interface FileRoutesByTo {
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
+  '/library/standards': typeof LibraryStandardsRoute
   '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/tools/study-companion': typeof ToolsStudyCompanionRoute
@@ -331,6 +339,7 @@ export interface FileRoutesById {
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
   '/library/courses': typeof LibraryCoursesRoute
+  '/library/standards': typeof LibraryStandardsRoute
   '/library/templates': typeof LibraryTemplatesRoute
   '/tools/$toolId': typeof ToolsToolIdRoute
   '/tools/study-companion': typeof ToolsStudyCompanionRoute
@@ -370,6 +379,7 @@ export interface FileRouteTypes {
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
+    | '/library/standards'
     | '/library/templates'
     | '/tools/$toolId'
     | '/tools/study-companion'
@@ -406,6 +416,7 @@ export interface FileRouteTypes {
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
+    | '/library/standards'
     | '/library/templates'
     | '/tools/$toolId'
     | '/tools/study-companion'
@@ -444,6 +455,7 @@ export interface FileRouteTypes {
     | '/library/articles'
     | '/library/books'
     | '/library/courses'
+    | '/library/standards'
     | '/library/templates'
     | '/tools/$toolId'
     | '/tools/study-companion'
@@ -657,6 +669,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LibraryCoursesRouteImport
       parentRoute: typeof LibraryRoute
     }
+    '/library/standards': {
+      id: '/library/standards'
+      path: '/standards'
+      fullPath: '/library/standards'
+      preLoaderRoute: typeof LibraryStandardsRouteImport
+      parentRoute: typeof LibraryRoute
+    }
     '/library/templates': {
       id: '/library/templates'
       path: '/templates'
@@ -771,6 +790,7 @@ interface LibraryRouteChildren {
   LibraryArticlesRoute: typeof LibraryArticlesRoute
   LibraryBooksRoute: typeof LibraryBooksRoute
   LibraryCoursesRoute: typeof LibraryCoursesRoute
+  LibraryStandardsRoute: typeof LibraryStandardsRoute
   LibraryTemplatesRoute: typeof LibraryTemplatesRoute
   LibraryIndexRoute: typeof LibraryIndexRoute
 }
@@ -779,6 +799,7 @@ const LibraryRouteChildren: LibraryRouteChildren = {
   LibraryArticlesRoute: LibraryArticlesRoute,
   LibraryBooksRoute: LibraryBooksRoute,
   LibraryCoursesRoute: LibraryCoursesRoute,
+  LibraryStandardsRoute: LibraryStandardsRoute,
   LibraryTemplatesRoute: LibraryTemplatesRoute,
   LibraryIndexRoute: LibraryIndexRoute,
 }
