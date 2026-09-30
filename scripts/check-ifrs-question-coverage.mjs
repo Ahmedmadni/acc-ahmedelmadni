@@ -113,6 +113,41 @@ const indexed = [
   ),
 ];
 
+const guidesSource = await fs.readFile("src/data/ifrs-standard-guides.ts", "utf8");
+const guidesArrayStart = guidesSource.indexOf("[\n  [");
+const guidesArrayEnd = guidesSource.indexOf("\n  ].map((entry)", guidesArrayStart);
+if (guidesArrayStart < 0 || guidesArrayEnd < 0) {
+  throw new Error("Could not locate IFRS guide data array");
+}
+const guidesRaw = JSON.parse(guidesSource.slice(guidesArrayStart, guidesArrayEnd + 4));
+const guideCodes = guidesRaw.map((entry) => entry[0]);
+const guideCounts = new Map();
+for (const code of guideCodes) guideCounts.set(code, (guideCounts.get(code) ?? 0) + 1);
+const missingGuides = indexed.filter((code) => !guideCounts.has(code));
+const duplicateGuides = [...guideCounts.entries()]
+  .filter(([, count]) => count > 1)
+  .map(([code]) => code);
+const incompleteGuides = guidesRaw
+  .filter((entry) => {
+    const [
+      , scopeAr, scopeEn, coreAr, coreEn, accountingAr, accountingEn,
+      disclosureAr, disclosureEn, practicalAr, practicalEn, pitfallsAr, pitfallsEn,
+      exampleAr, exampleEn,
+    ] = entry;
+    return (
+      !scopeAr || !scopeEn || !coreAr || !coreEn || !exampleAr || !exampleEn ||
+      !Array.isArray(accountingAr) || accountingAr.length < 3 ||
+      !Array.isArray(accountingEn) || accountingEn.length < 3 ||
+      !Array.isArray(disclosureAr) || disclosureAr.length < 2 ||
+      !Array.isArray(disclosureEn) || disclosureEn.length < 2 ||
+      !Array.isArray(practicalAr) || practicalAr.length < 3 ||
+      !Array.isArray(practicalEn) || practicalEn.length < 3 ||
+      !Array.isArray(pitfallsAr) || pitfallsAr.length < 3 ||
+      !Array.isArray(pitfallsEn) || pitfallsEn.length < 3
+    );
+  })
+  .map((entry) => entry[0]);
+
 const missing = indexed.filter((code) => (counts.get(code) ?? 0) === 0);
 const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 10);
 const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 20);
@@ -133,6 +168,10 @@ console.log(
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
       below_phase4_depth_target: belowPhase4Depth,
+      guide_count: guideCodes.length,
+      missing_guides: missingGuides,
+      duplicate_guides: duplicateGuides,
+      incomplete_guides: incompleteGuides,
     },
     null,
     2,
@@ -150,6 +189,12 @@ if (belowPriority.length)
   failures.push(`Priority standards below 20 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)
   failures.push(`Phase 4 depth standards below 10 questions: ${belowPhase4Depth.join(", ")}`);
+if (missingGuides.length)
+  failures.push(`Standards without comprehensive guides: ${missingGuides.join(", ")}`);
+if (duplicateGuides.length)
+  failures.push(`Duplicate standard guides: ${duplicateGuides.join(", ")}`);
+if (incompleteGuides.length)
+  failures.push(`Incomplete standard guides: ${incompleteGuides.join(", ")}`);
 
 if (failures.length) {
   console.error("\nCoverage check failed:");
