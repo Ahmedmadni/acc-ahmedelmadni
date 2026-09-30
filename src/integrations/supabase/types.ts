@@ -408,6 +408,48 @@ export type Database = {
         }
         Relationships: []
       }
+      ifrs_learning_attempts: {
+        Row: {
+          answered_at: string
+          client_attempt_id: string
+          created_at: string
+          difficulty: string
+          domain: string
+          id: string
+          is_correct: boolean
+          mode: string
+          question_id: string
+          standard_code: string
+          user_id: string
+        }
+        Insert: {
+          answered_at?: string
+          client_attempt_id: string
+          created_at?: string
+          difficulty: string
+          domain: string
+          id?: string
+          is_correct: boolean
+          mode: string
+          question_id: string
+          standard_code: string
+          user_id: string
+        }
+        Update: {
+          answered_at?: string
+          client_attempt_id?: string
+          created_at?: string
+          difficulty?: string
+          domain?: string
+          id?: string
+          is_correct?: boolean
+          mode?: string
+          question_id?: string
+          standard_code?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       kb_articles: {
         Row: {
           ai_model: string | null
