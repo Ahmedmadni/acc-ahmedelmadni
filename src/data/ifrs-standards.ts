@@ -27,11 +27,13 @@ export interface AccountingStandard {
   searchTerms?: string[];
 }
 
-export const IFRS_NAVIGATOR_URL =
-  "https://www.ifrs.org/issued-standards/list-of-standards/";
+export const IFRS_NAVIGATOR_URL = "https://www.ifrs.org/issued-standards/list-of-standards/";
 
-const article = (slug: string) =>
-  `/knowledge/international-accounting-standards/${slug}`;
+export const standardSlug = (code: string) => code.toLowerCase().replace(/\s+/g, "-");
+
+export const standardPath = (code: string) => `/library/standards/${standardSlug(code)}`;
+
+const article = (slug: string) => `/knowledge/international-accounting-standards/${slug}`;
 
 export const IFRS_STANDARDS: AccountingStandard[] = [
   {
@@ -242,7 +244,8 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     topic: "presentation",
     articleHref: article("ifrs-18-financial-statements-practical-guide"),
     toolIds: ["financial-statements"],
-    statusAr: "يسري للفترات السنوية التي تبدأ في أو بعد 1 يناير 2027، مع السماح بالتطبيق المبكر، ويحل محل IAS 1.",
+    statusAr:
+      "يسري للفترات السنوية التي تبدأ في أو بعد 1 يناير 2027، مع السماح بالتطبيق المبكر، ويحل محل IAS 1.",
     statusEn:
       "Effective for annual periods beginning on or after 1 January 2027; earlier application is permitted; replaces IAS 1.",
     highlight: true,
@@ -259,7 +262,8 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     summaryEn:
       "Allows eligible subsidiaries to apply recognition and measurement requirements in other IFRS Standards with reduced disclosures.",
     topic: "presentation",
-    statusAr: "اختياري للشركات التابعة المؤهلة للفترات التي تبدأ في أو بعد 1 يناير 2027، مع السماح بالتطبيق المبكر.",
+    statusAr:
+      "اختياري للشركات التابعة المؤهلة للفترات التي تبدأ في أو بعد 1 يناير 2027، مع السماح بالتطبيق المبكر.",
     statusEn:
       "Optional for eligible subsidiaries for periods beginning on or after 1 January 2027; earlier application is permitted.",
     highlight: true,
@@ -276,12 +280,12 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     summaryEn:
       "Addresses regulatory timing differences in rate-regulated activities through recognition and presentation of regulatory assets and liabilities.",
     topic: "industry",
-    statusAr: "صدر في مايو 2026 ويسري للفترات التي تبدأ في أو بعد 1 يناير 2029، مع السماح بالتطبيق المبكر، ويحل محل IFRS 14.",
+    statusAr:
+      "صدر في مايو 2026 ويسري للفترات التي تبدأ في أو بعد 1 يناير 2029، مع السماح بالتطبيق المبكر، ويحل محل IFRS 14.",
     statusEn:
       "Issued in May 2026 and effective for periods beginning on or after 1 January 2029; earlier application is permitted; replaces IFRS 14.",
     highlight: true,
-    officialUrl:
-      "https://www.ifrs.org/projects/completed-projects/2026/rate-regulated-activities/",
+    officialUrl: "https://www.ifrs.org/projects/completed-projects/2026/rate-regulated-activities/",
   },
 
   {
@@ -430,8 +434,7 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     family: "IAS",
     titleAr: "المحاسبة والتقرير بواسطة خطط منافع التقاعد",
     titleEn: "Accounting and Reporting by Retirement Benefit Plans",
-    summaryAr:
-      "يحدد متطلبات التقارير المالية التي تعدها خطط منافع التقاعد نفسها لمصلحة المشاركين.",
+    summaryAr: "يحدد متطلبات التقارير المالية التي تعدها خطط منافع التقاعد نفسها لمصلحة المشاركين.",
     summaryEn:
       "Sets financial reporting requirements for retirement benefit plans themselves for the benefit of participants.",
     topic: "tax-benefits",
@@ -491,8 +494,7 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     family: "IAS",
     titleAr: "ربحية السهم",
     titleEn: "Earnings per Share",
-    summaryAr:
-      "يحدد حساب وعرض ربحية السهم الأساسية والمخفضة للمنشآت التي تقع ضمن نطاقه.",
+    summaryAr: "يحدد حساب وعرض ربحية السهم الأساسية والمخفضة للمنشآت التي تقع ضمن نطاقه.",
     summaryEn:
       "Sets calculation and presentation requirements for basic and diluted earnings per share.",
     topic: "presentation",
@@ -566,3 +568,7 @@ export const IFRS_STANDARDS: AccountingStandard[] = [
     topic: "industry",
   },
 ];
+
+export function getStandardBySlug(slug: string) {
+  return IFRS_STANDARDS.find((standard) => standardSlug(standard.code) === slug.toLowerCase());
+}

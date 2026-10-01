@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import { TOOLS } from "@/lib/tools-registry";
+import { IFRS_STANDARDS, standardPath } from "@/data/ifrs-standards";
 
 const BASE_URL = "https://ahmedelmadni.com";
 
@@ -35,6 +36,14 @@ export const Route = createFileRoute("/sitemap.xml")({
             path: `/tools/${tool.id}`,
             changefreq: "monthly",
             priority: tool.official ? "0.9" : "0.7",
+          });
+        }
+
+        for (const standard of IFRS_STANDARDS) {
+          entries.push({
+            path: standardPath(standard.code),
+            changefreq: "monthly",
+            priority: "0.8",
           });
         }
 

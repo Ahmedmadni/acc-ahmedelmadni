@@ -45,6 +45,7 @@ import { Route as AuthenticatedAdminProfileRouteImport } from './routes/_authent
 import { Route as AuthenticatedAdminTemplatesRouteImport } from './routes/_authenticated/admin.templates'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
+import { Route as LibraryStandardsStandardSlugRouteImport } from './routes/library.standards_.$standardSlug'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
 
 const IndexRoute = IndexRouteImport.update({
@@ -233,6 +234,12 @@ const KnowledgeCategorySlugArticleSlugRoute =
     path: '/knowledge/$categorySlug/$articleSlug',
     getParentRoute: () => rootRouteImport,
   } as any)
+const LibraryStandardsStandardSlugRoute =
+  LibraryStandardsStandardSlugRouteImport.update({
+    id: '/standards_/$standardSlug',
+    path: '/standards/$standardSlug',
+    getParentRoute: () => LibraryRoute,
+  } as any)
 const ApiPublicHooksGenerateArticlesRoute =
   ApiPublicHooksGenerateArticlesRouteImport.update({
     id: '/api/public/hooks/generate-articles',
@@ -275,6 +282,7 @@ export interface FileRoutesByFullPath {
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
   '/admin/templates': typeof AuthenticatedAdminTemplatesRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
+  '/library/standards/$standardSlug': typeof LibraryStandardsStandardSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
 }
@@ -312,6 +320,7 @@ export interface FileRoutesByTo {
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
   '/admin/templates': typeof AuthenticatedAdminTemplatesRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
+  '/library/standards/$standardSlug': typeof LibraryStandardsStandardSlugRoute
   '/knowledge/$categorySlug': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
 }
@@ -352,6 +361,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/profile': typeof AuthenticatedAdminProfileRoute
   '/_authenticated/admin/templates': typeof AuthenticatedAdminTemplatesRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
+  '/library/standards_/$standardSlug': typeof LibraryStandardsStandardSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
 }
@@ -392,6 +402,7 @@ export interface FileRouteTypes {
     | '/admin/profile'
     | '/admin/templates'
     | '/knowledge/$categorySlug/$articleSlug'
+    | '/library/standards/$standardSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
   fileRoutesByTo: FileRoutesByTo
@@ -429,6 +440,7 @@ export interface FileRouteTypes {
     | '/admin/profile'
     | '/admin/templates'
     | '/knowledge/$categorySlug/$articleSlug'
+    | '/library/standards/$standardSlug'
     | '/knowledge/$categorySlug'
     | '/api/public/hooks/generate-articles'
   id:
@@ -468,6 +480,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/profile'
     | '/_authenticated/admin/templates'
     | '/knowledge/$categorySlug/$articleSlug'
+    | '/library/standards_/$standardSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
   fileRoutesById: FileRoutesById
@@ -753,6 +766,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KnowledgeCategorySlugArticleSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/library/standards_/$standardSlug': {
+      id: '/library/standards_/$standardSlug'
+      path: '/standards/$standardSlug'
+      fullPath: '/library/standards/$standardSlug'
+      preLoaderRoute: typeof LibraryStandardsStandardSlugRouteImport
+      parentRoute: typeof LibraryRoute
+    }
     '/api/public/hooks/generate-articles': {
       id: '/api/public/hooks/generate-articles'
       path: '/api/public/hooks/generate-articles'
@@ -793,6 +813,7 @@ interface LibraryRouteChildren {
   LibraryStandardsRoute: typeof LibraryStandardsRoute
   LibraryTemplatesRoute: typeof LibraryTemplatesRoute
   LibraryIndexRoute: typeof LibraryIndexRoute
+  LibraryStandardsStandardSlugRoute: typeof LibraryStandardsStandardSlugRoute
 }
 
 const LibraryRouteChildren: LibraryRouteChildren = {
@@ -802,6 +823,7 @@ const LibraryRouteChildren: LibraryRouteChildren = {
   LibraryStandardsRoute: LibraryStandardsRoute,
   LibraryTemplatesRoute: LibraryTemplatesRoute,
   LibraryIndexRoute: LibraryIndexRoute,
+  LibraryStandardsStandardSlugRoute: LibraryStandardsStandardSlugRoute,
 }
 
 const LibraryRouteWithChildren =
