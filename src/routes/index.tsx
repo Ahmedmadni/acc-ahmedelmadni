@@ -1000,12 +1000,13 @@ function Hero({ lang }: { lang: Lang }) {
             falls before the CTAs so the call to action reads as its own beat.
             The location line then tucks back in as a footnote to the buttons. */}
         <motion.div
-          className="w-full md:max-w-[42rem] lg:w-auto lg:mr-auto lg:max-w-[38rem] xl:max-w-[44rem]"
+          className="flex w-full flex-col md:max-w-[42rem] lg:w-auto lg:mr-auto lg:max-w-[38rem] xl:max-w-[44rem]"
           style={parallaxActive ? { x: fgX, y: fgY } : undefined}
         >
           <motion.div
             {...fade(0.05)}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-[#1C1B19]/45 px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.01em] text-[#e9d9c3]/90 backdrop-blur-md"
+            className="order-1 mb-5 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-[#1C1B19]/45 px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.01em] text-[#e9d9c3]/90 backdrop-blur-md"
+
           >
             <Sparkles className="size-3.5 text-[#A88765]" />
             {t.hero.badge[lang]}
@@ -1015,19 +1016,21 @@ function Hero({ lang }: { lang: Lang }) {
               tuned so the longest Arabic line never breaks into a lone word. */}
           <RevealHeadline
             lines={t.hero.headline[lang]}
-            className="font-display text-[clamp(1.85rem,1.3rem_+_2.45vw,3.5rem)] font-bold leading-[1.22] text-[#FCFBF9] [text-wrap:balance]"
+            className="order-2 font-display text-[clamp(1.85rem,1.3rem_+_2.45vw,3.5rem)] font-bold leading-[1.22] text-[#FCFBF9] [text-wrap:balance]"
+
           />
 
           <motion.p
             {...fade(0.75)}
-            className="mt-7 max-w-[33rem] text-[15px] leading-[1.85] text-[#FCFBF9]/80 [text-wrap:pretty] sm:text-[16.5px]"
+            className="order-4 mt-5 max-w-[33rem] text-[15px] leading-[1.85] text-[#FCFBF9]/80 [text-wrap:pretty] sm:order-3 sm:mt-7 sm:text-[16.5px]"
+
           >
             {t.hero.tagline[lang]}
           </motion.p>
 
           {/* Search axis — the site's own entry point, placed inside the hero
               so it is on screen with the headline instead of below the fold. */}
-          <motion.div {...fade(0.85)} className="mt-8 max-w-[34rem]">
+          <motion.div {...fade(0.85)} className="order-3 mt-6 max-w-[34rem] sm:order-4 sm:mt-8">
             <Suspense
               fallback={
                 <div className="h-14 w-full rounded-full border border-[#c9a986]/20 bg-[#171512]/70" />
@@ -1037,9 +1040,9 @@ function Hero({ lang }: { lang: Lang }) {
             </Suspense>
           </motion.div>
 
-          <motion.div {...fade(0.95)} className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-
+          <motion.div {...fade(0.95)} className="order-5 mt-7 flex flex-wrap items-center gap-3 sm:mt-8 sm:gap-4">
             <a
+
               href="/#contact"
               onMouseEnter={playHover}
               onClick={playClick}
@@ -1061,7 +1064,8 @@ function Hero({ lang }: { lang: Lang }) {
 
           <motion.div
             {...fade(1.05)}
-            className="mt-6 flex items-center gap-2 text-[12.5px] text-[#FCFBF9]/65"
+            className="order-6 mt-5 flex items-center gap-2 text-[12.5px] text-[#FCFBF9]/65 sm:mt-6"
+
           >
             <MapPin className="size-4 text-[#A88765]" />
             {t.hero.location[lang]}
