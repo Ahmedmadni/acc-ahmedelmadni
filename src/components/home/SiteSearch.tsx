@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
@@ -9,15 +10,17 @@ import {
   FileText,
   LayoutGrid,
   CornerDownLeft,
+  Sparkles,
   X,
 } from "lucide-react";
 import { TOOLS } from "@/lib/tools-registry";
 import { SERVICES_CATALOG } from "@/lib/services-catalog";
 import { supabasePublic } from "@/integrations/supabase/public-client";
+import { cn } from "@/lib/utils";
 import type { Lang } from "@/lib/i18n";
 
 /**
- * Site-wide search box for the homepage.
+ * The site's search axis, rendered inside the Hero.
  *
  * Searches four sources and groups the results:
  *  1. Tools        — TOOLS registry (static, instant)
@@ -27,6 +30,10 @@ import type { Lang } from "@/lib/i18n";
  *
  * Arabic matching is normalized (diacritics stripped, alef forms unified) so
  * "احمد" matches "أحمد" and "ضريبه" matches "ضريبة".
+ *
+ * The results panel is portalled to <body> and positioned with `fixed`
+ * coordinates: the Hero clips its own overflow, so an absolutely positioned
+ * panel inside it would be cut off at the section's edge.
  */
 
 type ResultGroup = "tools" | "services" | "pages" | "articles";
@@ -62,6 +69,14 @@ const PAGES: { ar: string; en: string; descAr: string; descEn: string; href: str
   { ar: "اطلب خدمة", en: "Request a Service", descAr: "نموذج طلب خدمة محاسبية", descEn: "Request an accounting service", href: "/request-service", keywords: "request طلب خدمة" },
 ];
 
+/** Popular starting points shown as chips under the bar. */
+const QUICK: { ar: string; en: string }[] = [
+  { ar: "زكاة", en: "Zakat" },
+  { ar: "ضريبة القيمة المضافة", en: "VAT" },
+  { ar: "مواريث", en: "Inheritance" },
+  { ar: "IFRS", en: "IFRS" },
+];
+
 /** Normalize Arabic + Latin text for forgiving matching. */
 function normalize(s: string): string {
   return s
@@ -75,13 +90,30 @@ function normalize(s: string): string {
     .trim();
 }
 
-export default function SiteSearch({ lang }: { lang: Lang }) {
+interface PanelRect {
+  top: number;
+  left: number;
+  width: number;
+  maxHeight: number;
+  flip: boolean;
+}
+
+export default function SiteSearch({
+  lang,
+  className,
+}: {
+  lang: Lang;
+  className?: string;
+}) {
   const isRTL = lang === "ar";
   const navigate = useNavigate();
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
+  const [isMac, setIsMac] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
+  const barRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Articles are fetched lazily — only once the user actually focuses the box.
@@ -168,14 +200,61 @@ export default function SiteSearch({ lang }: { lang: Lang }) {
 
   useEffect(() => setActive(0), [results.length]);
 
-  // Close on outside click.
+  // ⌘K / Ctrl+K focuses the bar from anywhere on the page.
+  useEffect(() => {
+    setIsMac(/Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent));
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setWantArticles(true);
+        inputRef.current?.focus();
+        setOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  // Close on outside click — the portalled panel lives outside boxRef, so both
+  // containers are checked.
   useEffect(() => {
     const onDown = (e: MouseEvent) => {
-      if (boxRef.current && !boxRef.current.contains(e.target as Node)) setOpen(false);
+      const t = e.target as Node;
+      if (boxRef.current?.contains(t) || panelRef.current?.contains(t)) return;
+      setOpen(false);
     };
     document.addEventListener("mousedown", onDown);
     return () => document.removeEventListener("mousedown", onDown);
   }, []);
+
+  // Fixed coordinates for the portalled panel, re-measured on scroll/resize.
+  const [rect, setRect] = useState<PanelRect | null>(null);
+  const measure = () => {
+    const el = barRef.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const below = window.innerHeight - r.bottom;
+    const above = r.top;
+    const flip = below < 300 && above > below;
+    setRect({
+      top: flip ? r.top - 10 : r.bottom + 10,
+      left: r.left,
+      width: r.width,
+      maxHeight: Math.max(180, Math.min(440, (flip ? above - 20 : below) - 20)),
+      flip,
+    });
+  };
+  useLayoutEffect(() => {
+    if (!open) return;
+    measure();
+    const onMove = () => measure();
+    window.addEventListener("scroll", onMove, true);
+    window.addEventListener("resize", onMove);
+    return () => {
+      window.removeEventListener("scroll", onMove, true);
+      window.removeEventListener("resize", onMove);
+    };
+  }, [open, results.length]);
 
   const go = (r: SearchResult) => {
     setOpen(false);
@@ -189,6 +268,7 @@ export default function SiteSearch({ lang }: { lang: Lang }) {
       inputRef.current?.blur();
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
+      setOpen(true);
       setActive((i) => Math.min(i + 1, results.length - 1));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
@@ -209,60 +289,26 @@ export default function SiteSearch({ lang }: { lang: Lang }) {
 
   let flatIndex = -1;
 
-  return (
-    <section className="relative z-20 -mt-6 px-4 sm:px-8 lg:px-16" dir={isRTL ? "rtl" : "ltr"}>
-      <div ref={boxRef} className="relative mx-auto max-w-2xl">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="relative flex items-center gap-3 rounded-2xl border border-[#A88765]/30 bg-[#1C1B19]/90 px-4 py-3.5 shadow-xl shadow-black/30 backdrop-blur-md transition-colors focus-within:border-[#A88765]/70"
-        >
-          <Search className="size-5 shrink-0 text-[#c9a986]" />
-          <input
-            ref={inputRef}
-            value={q}
-            onChange={(e) => {
-              setQ(e.target.value);
-              setOpen(true);
-            }}
-            onFocus={() => {
-              setWantArticles(true);
-              if (q) setOpen(true);
-            }}
-            onKeyDown={onKeyDown}
-            placeholder={
-              isRTL
-                ? "ابحث عن أداة، خدمة، مقال أو صفحة..."
-                : "Search tools, services, articles, pages..."
-            }
-            aria-label={isRTL ? "بحث في الموقع" : "Search the site"}
-            className="w-full bg-transparent text-sm text-[#FCFBF9] outline-none placeholder:text-[#8a8078]"
-          />
-          {q && (
-            <button
-              type="button"
-              onClick={() => {
-                setQ("");
-                inputRef.current?.focus();
-              }}
-              aria-label={isRTL ? "مسح البحث" : "Clear search"}
-              className="shrink-0 rounded-full p-1 text-[#8a8078] transition hover:bg-white/10 hover:text-[#FCFBF9]"
-            >
-              <X className="size-4" />
-            </button>
-          )}
-        </motion.div>
-
-        <AnimatePresence>
-          {open && q.trim().length >= 2 && (
+  const panel =
+    open && rect && q.trim().length >= 2
+      ? createPortal(
+          <AnimatePresence>
             <motion.div
-              initial={{ opacity: 0, y: -6, scale: 0.98 }}
+              ref={panelRef}
+              initial={{ opacity: 0, y: rect.flip ? 8 : -8, scale: 0.985 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -6, scale: 0.98 }}
+              exit={{ opacity: 0, y: rect.flip ? 8 : -8, scale: 0.985 }}
               transition={{ duration: 0.18, ease: "easeOut" }}
-              className="absolute inset-x-0 top-full z-30 mt-2 max-h-[60vh] overflow-y-auto rounded-2xl border border-[#A88765]/25 bg-[#1C1B19] p-2 shadow-2xl shadow-black/50"
+              style={{
+                position: "fixed",
+                top: rect.top,
+                left: rect.left,
+                width: rect.width,
+                maxHeight: rect.maxHeight,
+                transformOrigin: rect.flip ? "bottom center" : "top center",
+              }}
+              className="z-[200] overflow-y-auto rounded-2xl border border-[#c9a986]/30 bg-[#171512]/97 p-2 shadow-[0_30px_80px_-24px_rgba(0,0,0,0.85)] backdrop-blur-xl"
+              dir={isRTL ? "rtl" : "ltr"}
               role="listbox"
             >
               {results.length === 0 ? (
@@ -277,9 +323,12 @@ export default function SiteSearch({ lang }: { lang: Lang }) {
                   const Icon = meta.icon;
                   return (
                     <div key={group} className="mb-1 last:mb-0">
-                      <div className="flex items-center gap-1.5 px-3 pb-1 pt-2 text-[11px] font-bold text-[#c9a986]">
+                      <div className="flex items-center gap-1.5 px-3 pb-1 pt-2 text-[11px] font-bold tracking-wide text-[#c9a986]">
                         <Icon className="size-3.5" />
                         {isRTL ? meta.ar : meta.en}
+                        <span className="text-[#8a8078]/70">
+                          {isRTL ? `(${items.length})` : `(${items.length})`}
+                        </span>
                       </div>
                       {items.map((r) => {
                         flatIndex += 1;
@@ -293,7 +342,9 @@ export default function SiteSearch({ lang }: { lang: Lang }) {
                             onMouseEnter={() => setActive(idx)}
                             onClick={() => go(r)}
                             className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-start transition-colors ${
-                              idx === active ? "bg-[#A88765]/15" : "hover:bg-white/5"
+                              idx === active
+                                ? "bg-[#c9a986]/15 ring-1 ring-inset ring-[#c9a986]/25"
+                                : "hover:bg-white/5"
                             }`}
                           >
                             <span className="min-w-0">
@@ -317,9 +368,104 @@ export default function SiteSearch({ lang }: { lang: Lang }) {
                 })
               )}
             </motion.div>
-          )}
-        </AnimatePresence>
+          </AnimatePresence>,
+          document.body,
+        )
+      : null;
+
+  return (
+    <div ref={boxRef} className={cn("relative", className)} dir={isRTL ? "rtl" : "ltr"}>
+      {/* Eyebrow — names the axis so the bar reads as a feature, not a field. */}
+      <div className="mb-2.5 flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#c9a986]/90">
+        <Sparkles className="size-3.5" />
+        <span>{isRTL ? "محور البحث" : "SEARCH AXIS"}</span>
+        <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#c9a986]/35 to-transparent" />
       </div>
-    </section>
+
+      <div ref={barRef} className="group/bar relative">
+        {/* Bronze gradient ring — the bar's one distinctive treatment. */}
+        <div
+          aria-hidden
+          className="search-ring-sweep pointer-events-none absolute -inset-[1.5px] rounded-full bg-[linear-gradient(110deg,rgba(232,207,168,0.9),rgba(168,135,101,0.35)_35%,rgba(201,169,134,0.7)_65%,rgba(118,84,63,0.5))] opacity-60 transition-opacity duration-500 group-focus-within/bar:opacity-100 group-hover/bar:opacity-90"
+        />
+        {/* Warm glow that breathes out on focus. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-4 rounded-full bg-[radial-gradient(closest-side,rgba(201,169,134,0.28),transparent)] opacity-0 blur-xl transition-opacity duration-500 group-focus-within/bar:opacity-100"
+        />
+
+        <div className="relative flex h-14 items-center gap-3 rounded-full bg-[#171512]/95 px-4 backdrop-blur-xl sm:px-5">
+          <span className="grid size-8 shrink-0 place-items-center rounded-full border border-[#c9a986]/30 bg-[#c9a986]/12">
+            <Search className="size-4 text-[#e2c9a5]" />
+          </span>
+          <input
+            ref={inputRef}
+            value={q}
+            onChange={(e) => {
+              setQ(e.target.value);
+              setOpen(true);
+            }}
+            onFocus={() => {
+              setWantArticles(true);
+              if (q) setOpen(true);
+            }}
+            onKeyDown={onKeyDown}
+            placeholder={
+              isRTL
+                ? "ابحث عن أداة، خدمة، مقال أو صفحة…"
+                : "Search tools, services, articles, pages…"
+            }
+            aria-label={isRTL ? "بحث في الموقع" : "Search the site"}
+            className="w-full min-w-0 bg-transparent text-[15px] text-[#FCFBF9] outline-none placeholder:text-[#8a8078]"
+          />
+          {q ? (
+            <button
+              type="button"
+              onClick={() => {
+                setQ("");
+                inputRef.current?.focus();
+              }}
+              aria-label={isRTL ? "مسح البحث" : "Clear search"}
+              className="shrink-0 rounded-full p-1.5 text-[#8a8078] transition hover:bg-white/10 hover:text-[#FCFBF9]"
+            >
+              <X className="size-4" />
+            </button>
+          ) : (
+            <kbd
+              aria-hidden
+              className="hidden shrink-0 items-center gap-1 rounded-md border border-white/12 bg-white/[0.06] px-2 py-1 font-sans text-[10px] font-bold text-[#c9a986] sm:flex"
+            >
+              {isMac ? "⌘" : "Ctrl"} K
+            </kbd>
+          )}
+        </div>
+      </div>
+
+      {/* Quick starting points — one tap fills the bar and opens results. */}
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        {QUICK.map((item) => (
+          <button
+            key={item.ar}
+            type="button"
+            onClick={() => {
+              setQ(isRTL ? item.ar : item.en);
+              setWantArticles(true);
+              setOpen(true);
+              inputRef.current?.focus();
+            }}
+            className={cn(
+              "rounded-full border px-3 py-1 text-[11.5px] font-semibold transition-colors",
+              q === (isRTL ? item.ar : item.en)
+                ? "border-[#c9a986]/60 bg-[#c9a986]/18 text-[#f0dcc0]"
+                : "border-[#c9a986]/22 bg-white/[0.03] text-[#d6c8b6]/80 hover:border-[#c9a986]/50 hover:text-[#f0dcc0]",
+            )}
+          >
+            {isRTL ? item.ar : item.en}
+          </button>
+        ))}
+      </div>
+
+      {panel}
+    </div>
   );
 }
