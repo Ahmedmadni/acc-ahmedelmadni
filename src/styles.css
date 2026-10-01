@@ -1301,3 +1301,23 @@ img {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='137' height='137'%3E%3Cpath d='M9 13 C27 24 32 40 23 57 C16 70 27 81 21 99' stroke='rgba(232,216,195,0.028)' stroke-width='0.6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M23 57 C36 60 44 52 58 56' stroke='rgba(232,216,195,0.02)' stroke-width='0.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M21 99 C32 104 42 100 55 109' stroke='rgba(0,0,0,0.22)' stroke-width='0.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"),
     radial-gradient(ellipse 80% 60% at 50% 45%, rgba(0, 0, 0, 0.35), transparent 78%);
 }
+
+/* ============ Search axis (Hero) ============ */
+/* The bronze ring around the search bar drifts its highlight slowly so the
+   bar reads as the hero's live element; the global reduced-motion block below
+   neutralizes it for users who ask for less movement. */
+@keyframes search-ring-sweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.search-ring-sweep {
+  background-size: 220% 100%;
+  animation: search-ring-sweep 9s ease-in-out infinite;
+}

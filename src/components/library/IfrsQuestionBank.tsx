@@ -34,11 +34,27 @@ import {
   type IfrsAttemptRecord,
   type IfrsDifficulty,
 } from "@/lib/ifrs-learning-stats";
-import {
-  clearIfrsAccountProgress,
-  saveIfrsAttemptToAccount,
-  syncIfrsProgress,
-} from "@/lib/ifrs-progress";
+import { createClientOnlyFn } from "@tanstack/react-start";
+
+/**
+ * `ifrs-progress.client` runs in the browser only, so every entry into it goes
+ * through a client-only boundary. A plain static import would pull the module
+ * into the server bundle, which the SSR import guard rejects.
+ */
+const syncProgress = createClientOnlyFn((localAttempts: IfrsAttemptRecord[]) =>
+  import("@/lib/ifrs-progress.client").then((m) => m.syncIfrsProgress(localAttempts)),
+);
+
+const saveAttemptToAccount = createClientOnlyFn(
+  (userId: string | null, attempt: IfrsAttemptRecord) =>
+    import("@/lib/ifrs-progress.client").then((m) =>
+      m.saveIfrsAttemptToAccount(userId, attempt),
+    ),
+);
+
+const clearAccountProgress = createClientOnlyFn((userId: string | null) =>
+  import("@/lib/ifrs-progress.client").then((m) => m.clearIfrsAccountProgress(userId)),
+);
 import type { Lang } from "@/lib/i18n";
 
 type QuizMode = "learn" | "exam" | "adaptive";
@@ -118,17 +134,18 @@ export function IfrsQuestionBank({
     setAttempts(local);
     setSyncState("syncing");
 
-    syncIfrsProgress(local)
-      .then((result) => {
+    syncProgress(local)
+      ?.then((result) => {
         if (!active) return;
         setAccountUserId(result.userId);
         setAttempts(result.attempts);
         setSyncState(result.synced ? "synced" : "local");
       })
-      .catch(() => {
+      ?.catch(() => {
         if (!active) return;
         setSyncState("error");
       });
+
 
     return () => {
       active = false;
@@ -290,9 +307,10 @@ export function IfrsQuestionBank({
     recordIfrsAttempt(record);
     setAttempts((previous) => [...previous, record].slice(-1200));
 
-    saveIfrsAttemptToAccount(accountUserId, record).catch(() => {
+    saveAttemptToAccount(accountUserId, record)?.catch(() => {
       setSyncState("error");
     });
+
   }
 
   function chooseAnswer(index: number) {
@@ -339,9 +357,10 @@ export function IfrsQuestionBank({
   function resetAnalytics() {
     clearIfrsAttempts();
     setAttempts([]);
-    clearIfrsAccountProgress(accountUserId).catch(() => {
+    clearAccountProgress(accountUserId)?.catch(() => {
       setSyncState("error");
     });
+
   }
 
   const activeAnswer =
