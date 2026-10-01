@@ -1,4 +1,6 @@
+import { lazy } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import {
   Outlet,
   Link,
@@ -212,8 +214,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
   shellComponent: RootShell,
   component: RootComponent,
+  errorComponent: lazy(() => Promise.resolve({ default: ErrorComponent })),
   notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
+
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
