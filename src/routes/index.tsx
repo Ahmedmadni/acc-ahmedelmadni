@@ -498,9 +498,6 @@ function Index() {
       <main className="relative z-10">
         <Hero lang={lang} />
         <Suspense fallback={null}>
-          <SiteSearch lang={lang} />
-        </Suspense>
-        <Suspense fallback={null}>
           <NewsTicker lang={lang} />
         </Suspense>
         <Suspense fallback={null}>
@@ -1028,7 +1025,20 @@ function Hero({ lang }: { lang: Lang }) {
             {t.hero.tagline[lang]}
           </motion.p>
 
-          <motion.div {...fade(0.9)} className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
+          {/* Search axis — the site's own entry point, placed inside the hero
+              so it is on screen with the headline instead of below the fold. */}
+          <motion.div {...fade(0.85)} className="mt-8 max-w-[34rem]">
+            <Suspense
+              fallback={
+                <div className="h-14 w-full rounded-full border border-[#c9a986]/20 bg-[#171512]/70" />
+              }
+            >
+              <SiteSearch lang={lang} />
+            </Suspense>
+          </motion.div>
+
+          <motion.div {...fade(0.95)} className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+
             <a
               href="/#contact"
               onMouseEnter={playHover}
