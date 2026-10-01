@@ -1,4 +1,4 @@
-import { IFRS_STANDARD_ENRICHMENTS, type LocalizedText } from "@/data/ifrs-standard-enrichment";
+import { IFRS_STANDARD_DEEP_DIVES, type LocalizedText } from "@/data/ifrs-standard-deep-dives";
 import { IFRS_STANDARDS } from "@/data/ifrs-standards";
 import type { ExamQuestion } from "@/lib/exam-bank";
 
@@ -49,20 +49,20 @@ export const IFRS_PHASE8_TARGETS = [
 ] as const;
 
 type Phase8Target = (typeof IFRS_PHASE8_TARGETS)[number];
-type EnrichmentKey = "professionalNotes" | "applicationMethods" | "evidence" | "dataFields";
+type EnrichmentKey = "technicalPoints" | "decisionPath" | "disclosureChecks" | "dataFields";
 
 const categoryLabels: Record<EnrichmentKey, LocalizedText> = {
-  professionalNotes: { ar: "الحكم المهني", en: "professional judgement" },
-  applicationMethods: { ar: "طريقة التطبيق", en: "application method" },
-  evidence: { ar: "دليل الإثبات", en: "supporting evidence" },
+  technicalPoints: { ar: "الحكم المهني", en: "professional judgement" },
+  decisionPath: { ar: "مسار القرار", en: "decision path" },
+  disclosureChecks: { ar: "فحص الإفصاح", en: "disclosure check" },
   dataFields: { ar: "هيكل البيانات", en: "data structure" },
 };
 
 const standardIndex = new Map(IFRS_STANDARDS.map((standard, index) => [standard.code, index]));
 
-function enrichment(code: string) {
-  const value = IFRS_STANDARD_ENRICHMENTS[code];
-  if (!value) throw new Error(`Missing IFRS enrichment for ${code}`);
+function deepDive(code: string) {
+  const value = IFRS_STANDARD_DEEP_DIVES[code];
+  if (!value) throw new Error(`Missing IFRS worked case for ${code}`);
   return value;
 }
 
@@ -87,9 +87,9 @@ function makeEnrichmentQuestion(
   key: EnrichmentKey,
   difficulty: NonNullable<ExamQuestion["difficulty"]>,
 ): ExamQuestion {
-  const current = enrichment(code);
+  const current = deepDive(code);
   const answerIndex = (sequence + 1) % 4;
-  const distractors = distractorCodes(code).map((otherCode) => enrichment(otherCode)[key][0]!);
+  const distractors = distractorCodes(code).map((otherCode) => deepDive(otherCode)[key][0]!);
   const correct = current[key][0]!;
 
   return {
@@ -97,8 +97,8 @@ function makeEnrichmentQuestion(
     track: "IFRS",
     topic: `${code} — enriched practical application`,
     question: {
-      ar: `عند بناء ملف عمل تطبيقي لمعيار ${code}، أي خيار يمثل بصورة أدق ${categoryLabels[key].ar} المناسب؟`,
-      en: `When building a practical working file for ${code}, which option best represents the appropriate ${categoryLabels[key].en}?`,
+      ar: `في الحالة التطبيقية لمعيار ${code}، أي عبارة تعبّر عن ${categoryLabels[key].ar} الملائم؟`,
+      en: `In the worked case for ${code}, which statement captures the relevant ${categoryLabels[key].en}?`,
     },
     choices: {
       ar: arrange(
@@ -114,8 +114,8 @@ function makeEnrichmentQuestion(
     },
     answerIndex,
     explanation: {
-      ar: `الإجابة تربط ${categoryLabels[key].ar} بطبيعة ${code}، بينما البدائل تصلح لسياقات محاسبية مختلفة. استخدمها مع وقائع المعاملة والنص الرسمي، لا كقاعدة آلية منفصلة.`,
-      en: `The answer connects the ${categoryLabels[key].en} to the nature of ${code}; the alternatives belong to different accounting contexts. Apply it with the transaction facts and authoritative text, not as a standalone automatic rule.`,
+      ar: `هذه العبارة مأخوذة من تحليل الحالة التطبيقية لمعيار ${code}. اربطها بوقائع الحالة وحساباتها قبل اختيار المعالجة النهائية.`,
+      en: `This statement follows the worked case for ${code}. Connect it to the case facts and calculations before reaching a final accounting conclusion.`,
     },
     reference: `${code} — Ahmed Elmadani enriched guide; technical reference: ramyatrouny/ifrs-skill @ fda78bb`,
     difficulty,
@@ -123,15 +123,9 @@ function makeEnrichmentQuestion(
   };
 }
 
-function makeRelationshipQuestion(code: Phase8Target): ExamQuestion {
-  const current = enrichment(code);
-  const correct = current.relatedStandards[0];
-  const fallback = distractorCodes(code).map((otherCode) => ({
-    code: otherCode,
-    note: enrichment(otherCode).professionalNotes[0]!,
-  }));
-  const relationship = correct ?? fallback[0]!;
-  const distractors = fallback.filter((item) => item.code !== relationship.code).slice(0, 3);
+function makeConclusionQuestion(code: Phase8Target): ExamQuestion {
+  const current = deepDive(code);
+  const distractors = distractorCodes(code).map((otherCode) => deepDive(otherCode).conclusion);
   const answerIndex = 2;
 
   return {
@@ -139,39 +133,39 @@ function makeRelationshipQuestion(code: Phase8Target): ExamQuestion {
     track: "IFRS",
     topic: `${code} — enriched practical application`,
     question: {
-      ar: `أي معيار يرتبط عمليًا بـ ${code} وفق خريطة العلاقات في الدليل، وما سبب هذا الارتباط؟`,
-      en: `Which Standard is practically related to ${code} in the guide's relationship map, and why?`,
+      ar: `بعد تطبيق خطوات الحالة «${current.caseTitle.ar}» وفق ${code}، ما النتيجة المحاسبية؟`,
+      en: `After applying the worked case “${current.caseTitle.en}” under ${code}, what is the accounting conclusion?`,
     },
     choices: {
       ar: arrange(
-        `${relationship.code}: ${relationship.note.ar}`,
-        distractors.map((item) => `${item.code}: ${item.note.ar}`),
+        current.conclusion.ar,
+        distractors.map((item) => item.ar),
         answerIndex,
       ),
       en: arrange(
-        `${relationship.code}: ${relationship.note.en}`,
-        distractors.map((item) => `${item.code}: ${item.note.en}`),
+        current.conclusion.en,
+        distractors.map((item) => item.en),
         answerIndex,
       ),
     },
     answerIndex,
     explanation: {
-      ar: `التطبيق المهني لا يعزل ${code} عن المعايير المتقاطعة معه؛ خريطة العلاقات تساعد في اكتشاف آثار القياس والعرض والإفصاح التي قد تضيع عند فحص معيار واحد فقط.`,
-      en: `Professional application does not isolate ${code} from intersecting Standards; the relationship map helps identify measurement, presentation and disclosure effects that a single-Standard review may miss.`,
+      ar: `النتيجة تستند إلى وقائع وحسابات الحالة في شرح ${code}؛ راجع خطوات الحساب والقيد أو أثر العرض المبينين في الصفحة.`,
+      en: `The conclusion follows the facts and calculations in the ${code} guide; review the steps and entry or presentation effect shown on the page.`,
     },
     reference: `${code} — Ahmed Elmadani enriched guide; technical reference: ramyatrouny/ifrs-skill @ fda78bb`,
     difficulty: "hard",
-    examDomain: "Enriched guide: relationships",
+    examDomain: "Enriched guide: worked-case conclusion",
   };
 }
 
 function buildForStandard(code: Phase8Target): ExamQuestion[] {
   return [
-    makeEnrichmentQuestion(code, 1, "professionalNotes", "easy"),
-    makeEnrichmentQuestion(code, 2, "applicationMethods", "intermediate"),
-    makeEnrichmentQuestion(code, 3, "evidence", "intermediate"),
+    makeEnrichmentQuestion(code, 1, "technicalPoints", "easy"),
+    makeEnrichmentQuestion(code, 2, "decisionPath", "intermediate"),
+    makeEnrichmentQuestion(code, 3, "disclosureChecks", "intermediate"),
     makeEnrichmentQuestion(code, 4, "dataFields", "hard"),
-    makeRelationshipQuestion(code),
+    makeConclusionQuestion(code),
   ];
 }
 

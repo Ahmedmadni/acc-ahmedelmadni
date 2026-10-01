@@ -22,6 +22,7 @@ const files = [
   "src/data/ifrs-quiz-phase5-b.ts",
   "src/data/ifrs-quiz-phase6-guide-mastery.ts",
   "src/data/ifrs-quiz-phase8-enrichment.ts",
+  "src/data/ifrs-quiz-phase9-applied.ts",
 ];
 
 const priority = [
@@ -119,6 +120,40 @@ function readPhase8GeneratedQuestions(file, content) {
   );
 }
 
+function readPhase9GeneratedQuestions(file, content) {
+  if (!file.endsWith("ifrs-quiz-phase9-applied.ts")) return [];
+
+  const start = content.indexOf("export const IFRS_PHASE9_TARGETS = [");
+  const end = content.indexOf("] as const;", start);
+  const perStandard = Number(content.match(/IFRS_PHASE9_QUESTIONS_PER_STANDARD = (\d+)/)?.[1] ?? 0);
+  if (start < 0 || end < 0 || perStandard === 0) return [];
+
+  const targets = [...content.slice(start, end).matchAll(/"((?:IFRS|IAS) \d+)"/g)].map(
+    (match) => match[1],
+  );
+  const cases = content.slice(content.indexOf("const cases:"), content.indexOf("const counts ="));
+  const counts = new Map();
+  const questions = [
+    ...cases.matchAll(
+      /code:\s*"((?:IFRS|IAS) \d+)"[\s\S]*?difficulty:\s*"(easy|intermediate|hard)"/g,
+    ),
+  ].map((match) => {
+    const standard = match[1];
+    const sequence = (counts.get(standard) ?? 0) + 1;
+    counts.set(standard, sequence);
+    return {
+      id: `ifrs-p9-${standard.toLowerCase().replace(" ", "")}-${String(sequence).padStart(2, "0")}`,
+      track: "IFRS",
+      standard,
+      difficulty: match[2],
+    };
+  });
+  if (targets.some((standard) => counts.get(standard) !== perStandard)) {
+    throw new Error("Phase 9 applied-question coverage is incomplete");
+  }
+  return questions;
+}
+
 function readCompactQuestions(file, content) {
   const prefix = file.endsWith("ifrs-quiz-phase4-baseline.ts")
     ? "ifrs-p4base"
@@ -153,6 +188,7 @@ for (const file of files) {
   all.push(...readCompactQuestions(file, content));
   all.push(...readPhase6GeneratedQuestions(file, content));
   all.push(...readPhase8GeneratedQuestions(file, content));
+  all.push(...readPhase9GeneratedQuestions(file, content));
 }
 
 const byId = new Map();
@@ -200,7 +236,7 @@ console.log(
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
       below_phase4_depth_target: belowPhase4Depth,
-      expected_total: 1075,
+      expected_total: 1117,
     },
     null,
     2,
@@ -214,8 +250,8 @@ if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
   failures.push(`Standards below twenty-five-question baseline: ${belowBaseline.join(", ")}`);
-if (questions.length !== 1075)
-  failures.push(`Expected 1075 IFRS questions; found ${questions.length}`);
+if (questions.length !== 1117)
+  failures.push(`Expected 1117 IFRS questions; found ${questions.length}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 25 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)
