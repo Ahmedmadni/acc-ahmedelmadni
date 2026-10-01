@@ -5,16 +5,21 @@ import {
   CheckCircle2,
   CircleHelp,
   ClipboardCheck,
+  Database,
   ExternalLink,
   FileText,
+  GitBranch,
+  LibraryBig,
   ListChecks,
-  NotebookPen,
+  Lightbulb,
   ReceiptText,
   Scale,
   Target,
   TriangleAlert,
+  Wrench,
 } from "lucide-react";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
+import { IfrsStandardCase } from "@/components/library/IfrsStandardCase";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
 import { IFRS_NAVIGATOR_URL } from "@/data/ifrs-standards";
 import { useLibLang } from "./library";
@@ -59,6 +64,21 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
                 inLanguage: ["ar-SA", "en"],
                 learningResourceType: "دليل محاسبي تطبيقي",
                 educationalLevel: "Professional",
+                citation: [
+                  standard.officialUrl ?? IFRS_NAVIGATOR_URL,
+                  ...page.sources
+                    .filter((source) => source.usage === "paraphrased_with_attribution")
+                    .map((source) => source.url),
+                ],
+                keywords: [
+                  standard.code,
+                  standard.titleAr,
+                  standard.titleEn,
+                  "IFRS",
+                  "IAS",
+                  "قيود محاسبية",
+                  "أمثلة عملية",
+                ],
                 author: {
                   "@type": "Person",
                   name: "Ahmed Elmadani",
@@ -109,8 +129,11 @@ const SECTION_LINKS = [
   { id: "accounting", ar: "الاعتراف والقياس", en: "Recognition" },
   { id: "presentation", ar: "العرض والإفصاح", en: "Presentation" },
   { id: "workflow", ar: "خطوات التطبيق", en: "Workflow" },
+  { id: "techniques", ar: "الفنيات", en: "Techniques" },
+  { id: "data", ar: "البيانات والعلاقات", en: "Data & relations" },
   { id: "example", ar: "المثال والقيود", en: "Example & entries" },
   { id: "checklist", ar: "قائمة المراجعة", en: "Checklist" },
+  { id: "sources", ar: "المصادر", en: "Sources" },
   { id: "questions", ar: "الأسئلة", en: "Questions" },
 ] as const;
 
@@ -118,11 +141,13 @@ function ContentSection({
   id,
   title,
   body,
+  items,
   icon: Icon,
 }: {
   id: string;
   title: string;
   body: string;
+  items?: string[];
   icon: typeof Target;
 }) {
   return (
@@ -137,6 +162,19 @@ function ContentSection({
         <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">{title}</h2>
       </div>
       <p className="mt-4 text-sm leading-8 text-[#625950] sm:text-base">{body}</p>
+      {items && items.length > 0 && (
+        <ul className="mt-4 grid gap-3">
+          {items.map((item) => (
+            <li
+              key={item}
+              className="flex items-start gap-3 rounded-2xl border border-[#A88765]/15 bg-white p-4 text-sm leading-7 text-[#625950]"
+            >
+              <CheckCircle2 className="mt-1 size-4 shrink-0 text-[#7c6045]" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   );
 }
@@ -144,7 +182,7 @@ function ContentSection({
 function StandardLearningPage() {
   const { page } = Route.useLoaderData();
   const lang = useLibLang();
-  const { standard, guide } = page;
+  const { standard, guide, deepDive, referenceNotes } = page;
   const isArabic = lang === "ar";
 
   return (
@@ -181,6 +219,11 @@ function StandardLearningPage() {
           <p className="mt-5 max-w-3xl text-sm leading-8 text-[#BFB6AC] sm:text-base">
             {page.executiveSummary[lang]}
           </p>
+          {(isArabic ? standard.statusAr : standard.statusEn) && (
+            <p className="mt-4 max-w-3xl rounded-2xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-xs leading-6 text-amber-100">
+              {isArabic ? standard.statusAr : standard.statusEn}
+            </p>
+          )}
 
           <div className="mt-7 flex flex-wrap gap-3">
             <a
@@ -193,13 +236,11 @@ function StandardLearningPage() {
                 : `Start ${page.questionCount} questions`}
             </a>
             <a
-              href={standard.officialUrl ?? IFRS_NAVIGATOR_URL}
-              target="_blank"
-              rel="noreferrer"
+              href="#example"
               className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 px-5 py-3 text-sm font-bold text-[#E3D9CE] transition hover:bg-white/5"
             >
-              <ExternalLink className="size-4" />
-              {isArabic ? "المصدر الرسمي" : "Official source"}
+              <ReceiptText className="size-4" />
+              {isArabic ? "اقرأ الحالة العملية" : "Read the worked case"}
             </a>
           </div>
 
@@ -245,6 +286,7 @@ function StandardLearningPage() {
               id="accounting"
               title={isArabic ? "الاعتراف والقياس" : "Recognition & measurement"}
               body={guide.accounting[lang]}
+              items={referenceNotes.keyRules.map((item) => item[lang])}
               icon={Scale}
             />
             <ContentSection
@@ -263,61 +305,107 @@ function StandardLearningPage() {
               id="pitfalls"
               title={isArabic ? "أخطاء شائعة" : "Common pitfalls"}
               body={guide.pitfalls[lang]}
+              items={referenceNotes.pitfalls.map((item) => item[lang])}
               icon={TriangleAlert}
             />
 
             <section
-              id="example"
-              className="scroll-mt-28 rounded-3xl border border-[#A88765]/25 bg-[#F3ECE3] p-5 sm:p-7"
+              id="techniques"
+              className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 sm:p-7"
             >
               <div className="flex items-center gap-3">
-                <span className="grid size-10 place-items-center rounded-2xl bg-[#7c6045] text-white">
-                  <ReceiptText className="size-5" />
+                <span className="grid size-10 place-items-center rounded-2xl bg-amber-50 text-amber-800">
+                  <Lightbulb className="size-5" />
                 </span>
                 <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">
-                  {isArabic ? "مثال عملي رقمي" : "Practical numeric example"}
+                  {isArabic ? "فنيات وملاحظات مهنية" : "Professional techniques & notes"}
                 </h2>
               </div>
-              <p className="mt-4 text-sm leading-8 text-[#564C43] sm:text-base">
-                {page.numericExample[lang]}
-              </p>
-            </section>
-
-            <section className="rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-5 text-white sm:p-7">
-              <div className="flex items-center gap-3">
-                <span className="grid size-10 place-items-center rounded-2xl bg-[#A88765]/15 text-[#d2b390]">
-                  <NotebookPen className="size-5" />
-                </span>
-                <h2 className="font-display text-xl font-black sm:text-2xl">
-                  {isArabic ? "قيود محاسبية نموذجية" : "Illustrative journal entries"}
-                </h2>
-              </div>
-              <div className="mt-5 space-y-4">
-                {page.journalEntries.map((entry) => (
-                  <div
-                    key={entry.title.en}
-                    className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+              <div className="mt-5 grid gap-3">
+                {deepDive.technicalPoints.map((note, index) => (
+                  <article
+                    key={note.en}
+                    className="rounded-2xl border border-[#A88765]/15 bg-white p-4"
                   >
-                    <h3 className="text-sm font-black text-[#DCC3A5]">{entry.title[lang]}</h3>
-                    <dl className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
-                      <div className="rounded-xl bg-black/15 p-3">
-                        <dt className="text-[11px] font-bold text-[#9E958C]">
-                          {isArabic ? "مدين" : "Debit"}
-                        </dt>
-                        <dd className="mt-1 font-bold text-[#F4EEE7]">{entry.debit[lang]}</dd>
-                      </div>
-                      <div className="rounded-xl bg-black/15 p-3">
-                        <dt className="text-[11px] font-bold text-[#9E958C]">
-                          {isArabic ? "دائن" : "Credit"}
-                        </dt>
-                        <dd className="mt-1 font-bold text-[#F4EEE7]">{entry.credit[lang]}</dd>
-                      </div>
-                    </dl>
-                    <p className="mt-3 text-xs leading-6 text-[#9E958C]">{entry.note[lang]}</p>
-                  </div>
+                    <p className="text-xs font-black text-[#7c6045]">
+                      {isArabic ? `ملاحظة ${index + 1}` : `Note ${index + 1}`}
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-[#625950]">{note[lang]}</p>
+                  </article>
                 ))}
               </div>
+
+              <div className="mt-6 flex items-center gap-2">
+                <Wrench className="size-5 text-[#7c6045]" />
+                <h3 className="font-black text-[#1C1B19]">
+                  {isArabic ? "طرق الاستخدام العملي" : "Practical application methods"}
+                </h3>
+              </div>
+              <ol className="mt-4 grid gap-3">
+                {deepDive.decisionPath.map((method, index) => (
+                  <li
+                    key={method.en}
+                    className="flex items-start gap-3 rounded-2xl bg-[#F3ECE3] p-4 text-sm leading-7 text-[#564C43]"
+                  >
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#7c6045] text-xs font-black text-white">
+                      {index + 1}
+                    </span>
+                    <span>{method[lang]}</span>
+                  </li>
+                ))}
+              </ol>
             </section>
+
+            <section
+              id="data"
+              className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 sm:p-7"
+            >
+              <div className="flex items-center gap-3">
+                <span className="grid size-10 place-items-center rounded-2xl bg-sky-50 text-sky-800">
+                  <Database className="size-5" />
+                </span>
+                <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">
+                  {isArabic ? "البيانات والعلاقات" : "Data structure & relationships"}
+                </h2>
+              </div>
+
+              <h3 className="mt-5 text-sm font-black text-[#1C1B19]">
+                {isArabic ? "حقول سجل العمل المقترحة" : "Suggested working-record fields"}
+              </h3>
+              <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                {deepDive.dataFields.map((field) => (
+                  <li
+                    key={field.en}
+                    className="rounded-xl border border-sky-900/10 bg-sky-50/70 px-3 py-2 font-mono text-xs leading-6 text-sky-950"
+                  >
+                    {field[lang]}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 border-t border-[#A88765]/15 pt-5">
+                <div className="flex items-center gap-2">
+                  <GitBranch className="size-5 text-[#7c6045]" />
+                  <h3 className="font-black text-[#1C1B19]">
+                    {isArabic ? "معايير مترابطة" : "Related Standards"}
+                  </h3>
+                </div>
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                  {deepDive.relatedStandards.map((related) => (
+                    <Link
+                      key={related}
+                      to="/library/standards/$standardSlug"
+                      params={{ standardSlug: related.toLowerCase().replace(/\s+/g, "-") }}
+                      className="rounded-2xl border border-[#A88765]/15 bg-white p-4 transition hover:-translate-y-0.5 hover:border-[#A88765]/40"
+                    >
+                      <strong className="text-sm text-[#7c6045]">{related}</strong>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <IfrsStandardCase deepDive={deepDive} lang={lang} />
 
             <section
               id="checklist"
@@ -331,8 +419,19 @@ function StandardLearningPage() {
                   {isArabic ? "Checklist قبل الإقفال" : "Pre-close checklist"}
                 </h2>
               </div>
+              {referenceNotes.checklistStatus === "overview_only" && (
+                <p className="mt-4 rounded-2xl bg-amber-50 p-3 text-xs leading-6 text-amber-900">
+                  {isArabic
+                    ? "هذه نقاط تحضيرية لفهم المعيار الجديد، وليست قائمة متطلبات إفصاح نهائية."
+                    : "These are preparation points for understanding the new Standard, not a final disclosure requirements checklist."}
+                </p>
+              )}
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                {page.checklist[lang].map((item) => (
+                {[
+                  ...page.checklist[lang],
+                  ...deepDive.disclosureChecks.map((item) => item[lang]),
+                  ...referenceNotes.disclosureChecklist.map((item) => item[lang]),
+                ].map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-3 rounded-2xl border border-[#A88765]/15 bg-white p-4 text-sm leading-7 text-[#625950]"
@@ -342,6 +441,65 @@ function StandardLearningPage() {
                   </li>
                 ))}
               </ul>
+            </section>
+
+            <section
+              id="sources"
+              className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#F3ECE3] p-5 sm:p-7"
+            >
+              <div className="flex items-center gap-3">
+                <span className="grid size-10 place-items-center rounded-2xl bg-[#7c6045] text-white">
+                  <LibraryBig className="size-5" />
+                </span>
+                <div>
+                  <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">
+                    {isArabic ? "المصادر والمنهجية" : "Sources & methodology"}
+                  </h2>
+                  <p className="mt-1 text-xs leading-6 text-[#6B6259]">
+                    {isArabic
+                      ? "كل الشرح والحسابات والقيود والأسئلة موجودة في هذه الصفحة. الروابط التالية للتوثيق والمراجعة الاختيارية فقط؛ النص التعليمي بقلم المحاسب أحمد المدني."
+                      : "The full explanation, calculations, entries and questions are on this page. The links below are optional editorial references; the learning text is by Ahmed Elmadani."}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 grid gap-3">
+                <a
+                  href={standard.officialUrl ?? IFRS_NAVIGATOR_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-[#A88765]/15 bg-white p-4 text-sm font-bold text-[#7c6045] transition hover:border-[#A88765]/45"
+                >
+                  <ExternalLink className="size-4" />
+                  {standard.officialUrl
+                    ? isArabic
+                      ? "صفحة المعيار لدى مؤسسة IFRS"
+                      : "Standard at the IFRS Foundation"
+                    : isArabic
+                      ? "فهرس المعايير لدى مؤسسة IFRS"
+                      : "IFRS Foundation Standards index"}
+                </a>
+                {page.sources.map((source) => (
+                  <a
+                    key={source.key}
+                    href={source.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-2xl border border-[#A88765]/15 bg-white p-4 transition hover:border-[#A88765]/45"
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <strong className="text-sm text-[#1C1B19]">{source.name}</strong>
+                      <span className="rounded-full bg-[#A88765]/12 px-2.5 py-1 text-[10px] font-black text-[#7c6045]">
+                        {source.license}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-xs leading-6 text-[#625950]">{source.purpose[lang]}</p>
+                    <p className="mt-2 font-mono text-[10px] text-[#8A8179]">
+                      {isArabic ? "نسخة المراجعة" : "Reviewed revision"}:{" "}
+                      {source.revision.slice(0, 12)}
+                    </p>
+                  </a>
+                ))}
+              </div>
             </section>
           </div>
 
