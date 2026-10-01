@@ -55,7 +55,6 @@ const saveAttemptToAccount = createClientOnlyFn(
 const clearAccountProgress = createClientOnlyFn((userId: string | null) =>
   import("@/lib/ifrs-progress.client").then((m) => m.clearIfrsAccountProgress(userId)),
 );
-
 import type { Lang } from "@/lib/i18n";
 
 type QuizMode = "learn" | "exam" | "adaptive";

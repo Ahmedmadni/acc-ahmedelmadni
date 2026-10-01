@@ -1,11 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
   ArrowUpRight,
   BookOpenText,
   Calculator,
   CircleHelp,
-  ChevronDown,
   ExternalLink,
   Info,
   Scale,
@@ -16,15 +15,12 @@ import {
 import {
   IFRS_NAVIGATOR_URL,
   IFRS_STANDARDS,
+  standardSlug,
   type StandardFamily,
   type StandardTopic,
 } from "@/data/ifrs-standards";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
-import { getStandardGuide } from "@/data/ifrs-standard-guides";
-import {
-  IFRS_LOCAL_QUESTION_COUNTS,
-  IFRS_LOCAL_QUESTION_TOTAL,
-} from "@/data/ifrs-question-bank";
+import { IFRS_LOCAL_QUESTION_COUNTS, IFRS_LOCAL_QUESTION_TOTAL } from "@/data/ifrs-question-bank";
 import { useLibLang } from "./library";
 
 export const Route = createFileRoute("/library/standards")({
@@ -41,8 +37,7 @@ export const Route = createFileRoute("/library/standards")({
         { property: "og:title", content: "معايير IFRS وIAS | الدليل المحاسبي" },
         {
           property: "og:description",
-          content:
-            "مرجع عملي مختصر لمعايير التقارير المالية الدولية مع أدوات ومقالات تطبيقية.",
+          content: "مرجع عملي مختصر لمعايير التقارير المالية الدولية مع أدوات ومقالات تطبيقية.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -292,288 +287,232 @@ function StandardsPage() {
 
         {section === "articles" ? (
           <>
-        <section className="mx-auto mt-8 max-w-6xl">
-          <div className="mb-4 flex items-center gap-2">
-            <Sparkles className="size-5 text-[#c9a986]" />
-            <h3 className="font-display text-lg font-extrabold text-[#FCFBF9]">
-              {lang === "ar" ? "تغييرات مهمة أمامك" : "Key changes ahead"}
-            </h3>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {highlighted.map((standard) => (
-              <article
-                key={standard.code}
-                className="rounded-3xl border border-[#A88765]/25 bg-[#F5F1EB] p-5 text-[#1C1B19]"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="rounded-full bg-[#7c6045] px-3 py-1 text-xs font-black text-white">
-                    {standard.code}
-                  </span>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8A7766]">
-                    {standard.family}
-                  </span>
-                </div>
-                <h4 className="mt-4 font-display text-base font-extrabold leading-snug">
-                  {lang === "ar" ? standard.titleAr : standard.titleEn}
-                </h4>
-                <p className="mt-3 text-xs leading-6 text-[#6B6259]">
-                  {lang === "ar" ? standard.statusAr : standard.statusEn}
-                </p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="mx-auto mt-10 max-w-6xl">
-          <div className="rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-4 sm:p-5">
-            <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div className="relative">
-                <Search className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#8F877F] rtl:right-4 ltr:left-4" />
-                <input
-                  value={query}
-                  onChange={(event) => setQuery(event.target.value)}
-                  placeholder={
-                    lang === "ar"
-                      ? "ابحث: IFRS 9، الإيجار، الإيراد، المخزون..."
-                      : "Search: IFRS 9, leases, revenue, inventory..."
-                  }
-                  className="w-full rounded-2xl border border-[#A88765]/25 bg-[#151412] py-3 text-sm text-[#FCFBF9] outline-none transition focus:border-[#A88765]/70 rtl:pr-11 rtl:pl-4 ltr:pl-11 ltr:pr-4"
-                  aria-label={lang === "ar" ? "البحث في المعايير" : "Search standards"}
-                />
+            <section className="mx-auto mt-8 max-w-6xl">
+              <div className="mb-4 flex items-center gap-2">
+                <Sparkles className="size-5 text-[#c9a986]" />
+                <h3 className="font-display text-lg font-extrabold text-[#FCFBF9]">
+                  {lang === "ar" ? "تغييرات مهمة أمامك" : "Key changes ahead"}
+                </h3>
               </div>
-
-              <div className="flex flex-wrap gap-2">
-                {(["all", "IFRS", "IAS"] as const).map((item) => (
-                  <button
-                    key={item}
-                    type="button"
-                    onClick={() => setFamily(item)}
-                    className={`rounded-full border px-4 py-2 text-xs font-extrabold transition ${
-                      family === item
-                        ? "border-[#A88765] bg-[#A88765]/15 text-[#d2b390]"
-                        : "border-[#A88765]/20 text-[#9E958D] hover:border-[#A88765]/45 hover:text-[#c9a986]"
-                    }`}
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                {highlighted.map((standard) => (
+                  <article
+                    key={standard.code}
+                    className="rounded-3xl border border-[#A88765]/25 bg-[#F5F1EB] p-5 text-[#1C1B19]"
                   >
-                    {item === "all" ? (lang === "ar" ? "الكل" : "All") : item}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-4 flex flex-wrap gap-2 border-t border-[#A88765]/15 pt-4">
-              <button
-                type="button"
-                onClick={() => setTopic("all")}
-                className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
-                  topic === "all"
-                    ? "border-[#A88765] bg-[#A88765]/15 text-[#d2b390]"
-                    : "border-[#A88765]/15 text-[#8F877F] hover:text-[#c9a986]"
-                }`}
-              >
-                {lang === "ar" ? "كل الموضوعات" : "All topics"}
-              </button>
-              {(Object.keys(TOPIC_LABELS) as StandardTopic[]).map((key) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setTopic(key)}
-                  className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
-                    topic === key
-                      ? "border-[#A88765] bg-[#A88765]/15 text-[#d2b390]"
-                      : "border-[#A88765]/15 text-[#8F877F] hover:text-[#c9a986]"
-                  }`}
-                >
-                  {TOPIC_LABELS[key][lang]}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-5 flex items-center justify-between gap-4">
-            <p className="text-xs font-bold text-[#8F877F]">
-              {lang === "ar"
-                ? `${filtered.length} معيار مطابق`
-                : `${filtered.length} matching standards`}
-            </p>
-            <a
-              href={IFRS_NAVIGATOR_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c9a986] hover:text-[#E4C9A8]"
-            >
-              {lang === "ar" ? "متصفح IFRS الرسمي" : "Official IFRS Navigator"}
-              <ExternalLink className="size-3.5" />
-            </a>
-          </div>
-
-          {filtered.length === 0 ? (
-            <div className="mt-5 rounded-3xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center">
-              <Search className="mx-auto size-9 text-[#7c6045]/60" />
-              <p className="mt-3 text-sm font-bold text-[#6B6259]">
-                {lang === "ar"
-                  ? "لا توجد معايير مطابقة. جرّب رقم المعيار أو موضوعًا آخر."
-                  : "No matching standards. Try a standard number or another topic."}
-              </p>
-            </div>
-          ) : (
-            <div className="mt-5 grid gap-4 lg:grid-cols-2">
-              {filtered.map((standard) => {
-                const guide = getStandardGuide(standard.code);
-                const questionCount = IFRS_LOCAL_QUESTION_COUNTS[standard.code] ?? 0;
-
-                return (
-                <article
-                  key={standard.code}
-                  className="group flex flex-col rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 text-[#1C1B19] transition-all hover:-translate-y-0.5 hover:border-[#A88765]/55 hover:shadow-lg sm:p-6"
-                >
-                  <div className="flex flex-wrap items-start justify-between gap-3">
-                    <div className="flex items-center gap-2">
-                      <span className="rounded-xl bg-[#1C1B19] px-3 py-1.5 text-sm font-black text-[#d2b390]">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="rounded-full bg-[#7c6045] px-3 py-1 text-xs font-black text-white">
                         {standard.code}
                       </span>
-                      <span className="rounded-full border border-[#A88765]/25 bg-[#A88765]/10 px-2.5 py-1 text-[10px] font-bold text-[#7c6045]">
-                        {TOPIC_LABELS[standard.topic][lang]}
-                      </span>
-                      <span className="rounded-full border border-emerald-700/20 bg-emerald-50 px-2.5 py-1 text-[10px] font-black text-emerald-800">
-                        {questionCount} {lang === "ar" ? "سؤال" : "questions"}
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#8A7766]">
+                        {standard.family}
                       </span>
                     </div>
-                    {standard.highlight && (
-                      <span className="rounded-full bg-[#9C6B4F]/10 px-2.5 py-1 text-[10px] font-bold text-[#8A5236]">
-                        {lang === "ar" ? "تغيير زمني مهم" : "Transition update"}
-                      </span>
-                    )}
+                    <h4 className="mt-4 font-display text-base font-extrabold leading-snug">
+                      {lang === "ar" ? standard.titleAr : standard.titleEn}
+                    </h4>
+                    <p className="mt-3 text-xs leading-6 text-[#6B6259]">
+                      {lang === "ar" ? standard.statusAr : standard.statusEn}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="mx-auto mt-10 max-w-6xl">
+              <div className="rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-4 sm:p-5">
+                <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
+                  <div className="relative">
+                    <Search className="pointer-events-none absolute top-1/2 size-4 -translate-y-1/2 text-[#8F877F] rtl:right-4 ltr:left-4" />
+                    <input
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      placeholder={
+                        lang === "ar"
+                          ? "ابحث: IFRS 9، الإيجار، الإيراد، المخزون..."
+                          : "Search: IFRS 9, leases, revenue, inventory..."
+                      }
+                      className="w-full rounded-2xl border border-[#A88765]/25 bg-[#151412] py-3 text-sm text-[#FCFBF9] outline-none transition focus:border-[#A88765]/70 rtl:pr-11 rtl:pl-4 ltr:pl-11 ltr:pr-4"
+                      aria-label={lang === "ar" ? "البحث في المعايير" : "Search standards"}
+                    />
                   </div>
 
-                  <h3 className="mt-4 font-display text-xl font-black leading-snug sm:text-2xl">
-                    {lang === "ar" ? standard.titleAr : standard.titleEn}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-7 text-[#6B6259]">
-                    {lang === "ar" ? standard.summaryAr : standard.summaryEn}
-                  </p>
-
-                  {(standard.statusAr || standard.statusEn) && (
-                    <div className="mt-4 flex items-start gap-2 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-3 text-xs leading-5 text-[#6B6259]">
-                      <Info className="mt-0.5 size-4 shrink-0 text-[#7c6045]" />
-                      <span>{lang === "ar" ? standard.statusAr : standard.statusEn}</span>
-                    </div>
-                  )}
-
-                  {guide && (
-                    <details className="mt-4 rounded-2xl border border-[#A88765]/20 bg-[#F8F5F0]">
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-black text-[#4A3D33]">
-                        <span className="inline-flex items-center gap-2">
-                          <BookOpenText className="size-4 text-[#7c6045]" />
-                          {lang === "ar" ? "شرح عملي بقلم المحاسب أحمد المدني" : "Practical guide by Ahmed Elmadani"}
-                        </span>
-                        <ChevronDown className="size-4 text-[#8A7766]" />
-                      </summary>
-
-                      <div className="grid gap-3 border-t border-[#A88765]/15 p-4 md:grid-cols-2">
-                        {[
-                          {
-                            title: lang === "ar" ? "الهدف والنطاق" : "Scope & objective",
-                            body: guide.scope[lang],
-                          },
-                          {
-                            title: lang === "ar" ? "الاعتراف والقياس" : "Recognition & measurement",
-                            body: guide.accounting[lang],
-                          },
-                          {
-                            title: lang === "ar" ? "العرض والإفصاح" : "Presentation & disclosure",
-                            body: guide.presentation[lang],
-                          },
-                          {
-                            title: lang === "ar" ? "خطوات التطبيق" : "Implementation workflow",
-                            body: guide.workflow[lang],
-                          },
-                          {
-                            title: lang === "ar" ? "أخطاء شائعة" : "Common pitfalls",
-                            body: guide.pitfalls[lang],
-                          },
-                          {
-                            title: lang === "ar" ? "مثال مبسط" : "Simple example",
-                            body: guide.example[lang],
-                          },
-                        ].map((item) => (
-                          <div
-                            key={item.title}
-                            className="rounded-2xl border border-[#A88765]/15 bg-white p-4"
-                          >
-                            <h4 className="text-xs font-black text-[#7c6045]">{item.title}</h4>
-                            <p className="mt-2 text-xs leading-6 text-[#625950]">{item.body}</p>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#A88765]/15 px-4 py-4">
-                        <p className="text-xs font-bold text-[#6B6259]">
-                          {lang === "ar"
-                            ? `يوجد ${questionCount} سؤالاً لهذا المعيار في بنك التدريب المحلي.`
-                            : `${questionCount} local practice questions are available for this Standard.`}
-                        </p>
-                        <button
-                          type="button"
-                          onClick={() => openQuestions(standard.code)}
-                          className="inline-flex items-center gap-2 rounded-full bg-[#1C1B19] px-4 py-2 text-xs font-black text-[#F5F1EB] transition hover:bg-[#3A332D]"
-                        >
-                          <CircleHelp className="size-4" />
-                          {lang === "ar" ? "ابدأ أسئلة هذا المعيار" : "Practice this Standard"}
-                        </button>
-                      </div>
-                    </details>
-                  )}
-
-                  <div className="mt-5 flex flex-wrap gap-2 border-t border-[#A88765]/20 pt-4">
-                    <button
-                      type="button"
-                      onClick={() => openQuestions(standard.code)}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-[#7c6045] px-3 py-2 text-[11px] font-extrabold text-white transition hover:bg-[#644b37]"
-                    >
-                      <CircleHelp className="size-3.5" />
-                      {lang === "ar"
-                        ? `حل ${questionCount} سؤال عن ${standard.code}`
-                        : `Practice ${questionCount} ${standard.code} questions`}
-                    </button>
-
-                    <a
-                      href={standard.officialUrl ?? IFRS_NAVIGATOR_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/35 px-3 py-2 text-[11px] font-extrabold text-[#7c6045] transition hover:bg-[#A88765]/10"
-                    >
-                      <ExternalLink className="size-3.5" />
-                      {lang === "ar" ? "المصدر الرسمي" : "Official source"}
-                    </a>
-
-                    {standard.articleHref && (
-                      <a
-                        href={standard.articleHref}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-[#1C1B19] px-3 py-2 text-[11px] font-extrabold text-[#F5F1EB] transition hover:bg-[#3A332D]"
+                  <div className="flex flex-wrap gap-2">
+                    {(["all", "IFRS", "IAS"] as const).map((item) => (
+                      <button
+                        key={item}
+                        type="button"
+                        onClick={() => setFamily(item)}
+                        className={`rounded-full border px-4 py-2 text-xs font-extrabold transition ${
+                          family === item
+                            ? "border-[#A88765] bg-[#A88765]/15 text-[#d2b390]"
+                            : "border-[#A88765]/20 text-[#9E958D] hover:border-[#A88765]/45 hover:text-[#c9a986]"
+                        }`}
                       >
-                        <BookOpenText className="size-3.5" />
-                        {lang === "ar" ? "شرح عملي" : "Practical guide"}
-                      </a>
-                    )}
-
-                    {standard.toolIds?.map((toolId) => (
-                      <a
-                        key={toolId}
-                        href={`/tools/${toolId}`}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-[#7A7A4A]/35 bg-[#7A7A4A]/10 px-3 py-2 text-[11px] font-extrabold text-[#5F5F38] transition hover:bg-[#7A7A4A]/20"
-                      >
-                        <Calculator className="size-3.5" />
-                        {TOOL_LABELS[toolId]?.[lang] ??
-                          (lang === "ar" ? "أداة تطبيقية" : "Practical tool")}
-                      </a>
+                        {item === "all" ? (lang === "ar" ? "الكل" : "All") : item}
+                      </button>
                     ))}
                   </div>
-                </article>
-                );
-              })}
-            </div>
-          )}
-        </section>
+                </div>
+
+                <div className="mt-4 flex flex-wrap gap-2 border-t border-[#A88765]/15 pt-4">
+                  <button
+                    type="button"
+                    onClick={() => setTopic("all")}
+                    className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
+                      topic === "all"
+                        ? "border-[#A88765] bg-[#A88765]/15 text-[#d2b390]"
+                        : "border-[#A88765]/15 text-[#8F877F] hover:text-[#c9a986]"
+                    }`}
+                  >
+                    {lang === "ar" ? "كل الموضوعات" : "All topics"}
+                  </button>
+                  {(Object.keys(TOPIC_LABELS) as StandardTopic[]).map((key) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setTopic(key)}
+                      className={`rounded-full border px-3 py-1.5 text-[11px] font-bold transition ${
+                        topic === key
+                          ? "border-[#A88765] bg-[#A88765]/15 text-[#d2b390]"
+                          : "border-[#A88765]/15 text-[#8F877F] hover:text-[#c9a986]"
+                      }`}
+                    >
+                      {TOPIC_LABELS[key][lang]}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-5 flex items-center justify-between gap-4">
+                <p className="text-xs font-bold text-[#8F877F]">
+                  {lang === "ar"
+                    ? `${filtered.length} معيار مطابق`
+                    : `${filtered.length} matching standards`}
+                </p>
+                <a
+                  href={IFRS_NAVIGATOR_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c9a986] hover:text-[#E4C9A8]"
+                >
+                  {lang === "ar" ? "متصفح IFRS الرسمي" : "Official IFRS Navigator"}
+                  <ExternalLink className="size-3.5" />
+                </a>
+              </div>
+
+              {filtered.length === 0 ? (
+                <div className="mt-5 rounded-3xl border border-[#A88765]/20 bg-[#F5F1EB] p-10 text-center">
+                  <Search className="mx-auto size-9 text-[#7c6045]/60" />
+                  <p className="mt-3 text-sm font-bold text-[#6B6259]">
+                    {lang === "ar"
+                      ? "لا توجد معايير مطابقة. جرّب رقم المعيار أو موضوعًا آخر."
+                      : "No matching standards. Try a standard number or another topic."}
+                  </p>
+                </div>
+              ) : (
+                <div className="mt-5 grid gap-4 lg:grid-cols-2">
+                  {filtered.map((standard) => {
+                    const questionCount = IFRS_LOCAL_QUESTION_COUNTS[standard.code] ?? 0;
+
+                    return (
+                      <article
+                        key={standard.code}
+                        className="group relative flex flex-col rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 text-[#1C1B19] transition-all hover:-translate-y-0.5 hover:border-[#A88765]/55 hover:shadow-lg sm:p-6"
+                      >
+                        <Link
+                          to="/library/standards/$standardSlug"
+                          params={{ standardSlug: standardSlug(standard.code) }}
+                          aria-label={
+                            lang === "ar"
+                              ? `فتح شرح ${standard.code}: ${standard.titleAr}`
+                              : `Open ${standard.code}: ${standard.titleEn}`
+                          }
+                          className="absolute inset-0 z-0 rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7c6045] focus-visible:ring-offset-2"
+                        />
+
+                        <div className="pointer-events-none relative z-10 flex flex-wrap items-start justify-between gap-3">
+                          <div className="flex items-center gap-2">
+                            <span className="rounded-xl bg-[#1C1B19] px-3 py-1.5 text-sm font-black text-[#d2b390]">
+                              {standard.code}
+                            </span>
+                            <span className="rounded-full border border-[#A88765]/25 bg-[#A88765]/10 px-2.5 py-1 text-[10px] font-bold text-[#7c6045]">
+                              {TOPIC_LABELS[standard.topic][lang]}
+                            </span>
+                            <span className="rounded-full border border-emerald-700/20 bg-emerald-50 px-2.5 py-1 text-[10px] font-black text-emerald-800">
+                              {questionCount} {lang === "ar" ? "سؤال" : "questions"}
+                            </span>
+                          </div>
+                          {standard.highlight && (
+                            <span className="rounded-full bg-[#9C6B4F]/10 px-2.5 py-1 text-[10px] font-bold text-[#8A5236]">
+                              {lang === "ar" ? "تغيير زمني مهم" : "Transition update"}
+                            </span>
+                          )}
+                        </div>
+
+                        <h3 className="pointer-events-none relative z-10 mt-4 font-display text-xl font-black leading-snug sm:text-2xl">
+                          {lang === "ar" ? standard.titleAr : standard.titleEn}
+                        </h3>
+                        <p className="pointer-events-none relative z-10 mt-3 flex-1 text-sm leading-7 text-[#6B6259]">
+                          {lang === "ar" ? standard.summaryAr : standard.summaryEn}
+                        </p>
+
+                        {(standard.statusAr || standard.statusEn) && (
+                          <div className="pointer-events-none relative z-10 mt-4 flex items-start gap-2 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-3 text-xs leading-5 text-[#6B6259]">
+                            <Info className="mt-0.5 size-4 shrink-0 text-[#7c6045]" />
+                            <span>{lang === "ar" ? standard.statusAr : standard.statusEn}</span>
+                          </div>
+                        )}
+
+                        <div className="pointer-events-none relative z-10 mt-5 flex flex-wrap gap-2 border-t border-[#A88765]/20 pt-4">
+                          <Link
+                            to="/library/standards/$standardSlug"
+                            params={{ standardSlug: standardSlug(standard.code) }}
+                            className="pointer-events-auto inline-flex items-center gap-1.5 rounded-full bg-[#1C1B19] px-3 py-2 text-[11px] font-extrabold text-[#F5F1EB] transition hover:bg-[#3A332D]"
+                          >
+                            <BookOpenText className="size-3.5" />
+                            {lang === "ar" ? "اقرأ الصفحة التعليمية" : "Read the learning guide"}
+                          </Link>
+
+                          <button
+                            type="button"
+                            onClick={() => openQuestions(standard.code)}
+                            className="pointer-events-auto inline-flex items-center gap-1.5 rounded-full bg-[#7c6045] px-3 py-2 text-[11px] font-extrabold text-white transition hover:bg-[#644b37]"
+                          >
+                            <CircleHelp className="size-3.5" />
+                            {lang === "ar"
+                              ? `حل ${questionCount} سؤال عن ${standard.code}`
+                              : `Practice ${questionCount} ${standard.code} questions`}
+                          </button>
+
+                          <a
+                            href={standard.officialUrl ?? IFRS_NAVIGATOR_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="pointer-events-auto inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/35 px-3 py-2 text-[11px] font-extrabold text-[#7c6045] transition hover:bg-[#A88765]/10"
+                          >
+                            <ExternalLink className="size-3.5" />
+                            {lang === "ar" ? "المصدر الرسمي" : "Official source"}
+                          </a>
+
+                          {standard.toolIds?.map((toolId) => (
+                            <a
+                              key={toolId}
+                              href={`/tools/${toolId}`}
+                              className="pointer-events-auto inline-flex items-center gap-1.5 rounded-full border border-[#7A7A4A]/35 bg-[#7A7A4A]/10 px-3 py-2 text-[11px] font-extrabold text-[#5F5F38] transition hover:bg-[#7A7A4A]/20"
+                            >
+                              <Calculator className="size-3.5" />
+                              {TOOL_LABELS[toolId]?.[lang] ??
+                                (lang === "ar" ? "أداة تطبيقية" : "Practical tool")}
+                            </a>
+                          ))}
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              )}
+            </section>
           </>
         ) : (
           <div id="ifrs-question-bank" className="mt-8 scroll-mt-24">
