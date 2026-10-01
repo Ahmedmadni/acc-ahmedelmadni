@@ -5,14 +5,19 @@ import {
   CheckCircle2,
   CircleHelp,
   ClipboardCheck,
+  Database,
   ExternalLink,
   FileText,
+  GitBranch,
+  LibraryBig,
   ListChecks,
+  Lightbulb,
   NotebookPen,
   ReceiptText,
   Scale,
   Target,
   TriangleAlert,
+  Wrench,
 } from "lucide-react";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
@@ -59,6 +64,16 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
                 inLanguage: ["ar-SA", "en"],
                 learningResourceType: "دليل محاسبي تطبيقي",
                 educationalLevel: "Professional",
+                citation: page.sources.map((source) => source.url),
+                keywords: [
+                  standard.code,
+                  standard.titleAr,
+                  standard.titleEn,
+                  "IFRS",
+                  "IAS",
+                  "قيود محاسبية",
+                  "أمثلة عملية",
+                ],
                 author: {
                   "@type": "Person",
                   name: "Ahmed Elmadani",
@@ -109,8 +124,11 @@ const SECTION_LINKS = [
   { id: "accounting", ar: "الاعتراف والقياس", en: "Recognition" },
   { id: "presentation", ar: "العرض والإفصاح", en: "Presentation" },
   { id: "workflow", ar: "خطوات التطبيق", en: "Workflow" },
+  { id: "techniques", ar: "الفنيات", en: "Techniques" },
+  { id: "data", ar: "البيانات والعلاقات", en: "Data & relations" },
   { id: "example", ar: "المثال والقيود", en: "Example & entries" },
   { id: "checklist", ar: "قائمة المراجعة", en: "Checklist" },
+  { id: "sources", ar: "المصادر", en: "Sources" },
   { id: "questions", ar: "الأسئلة", en: "Questions" },
 ] as const;
 
@@ -144,7 +162,7 @@ function ContentSection({
 function StandardLearningPage() {
   const { page } = Route.useLoaderData();
   const lang = useLibLang();
-  const { standard, guide } = page;
+  const { standard, guide, enrichment } = page;
   const isArabic = lang === "ar";
 
   return (
@@ -267,6 +285,123 @@ function StandardLearningPage() {
             />
 
             <section
+              id="techniques"
+              className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 sm:p-7"
+            >
+              <div className="flex items-center gap-3">
+                <span className="grid size-10 place-items-center rounded-2xl bg-amber-50 text-amber-800">
+                  <Lightbulb className="size-5" />
+                </span>
+                <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">
+                  {isArabic ? "فنيات وملاحظات مهنية" : "Professional techniques & notes"}
+                </h2>
+              </div>
+              <div className="mt-5 grid gap-3">
+                {enrichment.professionalNotes.map((note, index) => (
+                  <article
+                    key={note.en}
+                    className="rounded-2xl border border-[#A88765]/15 bg-white p-4"
+                  >
+                    <p className="text-xs font-black text-[#7c6045]">
+                      {isArabic ? `ملاحظة ${index + 1}` : `Note ${index + 1}`}
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-[#625950]">{note[lang]}</p>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-6 flex items-center gap-2">
+                <Wrench className="size-5 text-[#7c6045]" />
+                <h3 className="font-black text-[#1C1B19]">
+                  {isArabic ? "طرق الاستخدام العملي" : "Practical application methods"}
+                </h3>
+              </div>
+              <ol className="mt-4 grid gap-3">
+                {enrichment.applicationMethods.map((method, index) => (
+                  <li
+                    key={method.en}
+                    className="flex items-start gap-3 rounded-2xl bg-[#F3ECE3] p-4 text-sm leading-7 text-[#564C43]"
+                  >
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#7c6045] text-xs font-black text-white">
+                      {index + 1}
+                    </span>
+                    <span>{method[lang]}</span>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            <section
+              id="data"
+              className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 sm:p-7"
+            >
+              <div className="flex items-center gap-3">
+                <span className="grid size-10 place-items-center rounded-2xl bg-sky-50 text-sky-800">
+                  <Database className="size-5" />
+                </span>
+                <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">
+                  {isArabic ? "البيانات والعلاقات" : "Data structure & relationships"}
+                </h2>
+              </div>
+
+              <div className="mt-5 grid gap-5 xl:grid-cols-2">
+                <div>
+                  <h3 className="text-sm font-black text-[#1C1B19]">
+                    {isArabic ? "السجلات وأدلة الإثبات" : "Records & evidence"}
+                  </h3>
+                  <ul className="mt-3 space-y-2">
+                    {enrichment.evidence.map((item) => (
+                      <li
+                        key={item.en}
+                        className="flex items-start gap-2 text-sm leading-7 text-[#625950]"
+                      >
+                        <CheckCircle2 className="mt-1.5 size-4 shrink-0 text-emerald-700" />
+                        <span>{item[lang]}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-black text-[#1C1B19]">
+                    {isArabic ? "حقول البيانات المقترحة" : "Suggested data fields"}
+                  </h3>
+                  <ul className="mt-3 space-y-2">
+                    {enrichment.dataFields.map((field) => (
+                      <li
+                        key={field.en}
+                        className="rounded-xl border border-sky-900/10 bg-sky-50/70 px-3 py-2 font-mono text-xs leading-6 text-sky-950"
+                      >
+                        {field[lang]}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6 border-t border-[#A88765]/15 pt-5">
+                <div className="flex items-center gap-2">
+                  <GitBranch className="size-5 text-[#7c6045]" />
+                  <h3 className="font-black text-[#1C1B19]">
+                    {isArabic ? "معايير مترابطة" : "Related Standards"}
+                  </h3>
+                </div>
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                  {enrichment.relatedStandards.map((related) => (
+                    <Link
+                      key={related.code}
+                      to="/library/standards/$standardSlug"
+                      params={{ standardSlug: related.code.toLowerCase().replace(/\s+/g, "-") }}
+                      className="rounded-2xl border border-[#A88765]/15 bg-white p-4 transition hover:-translate-y-0.5 hover:border-[#A88765]/40"
+                    >
+                      <strong className="text-sm text-[#7c6045]">{related.code}</strong>
+                      <p className="mt-1 text-xs leading-6 text-[#625950]">{related.note[lang]}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section
               id="example"
               className="scroll-mt-28 rounded-3xl border border-[#A88765]/25 bg-[#F3ECE3] p-5 sm:p-7"
             >
@@ -342,6 +477,50 @@ function StandardLearningPage() {
                   </li>
                 ))}
               </ul>
+            </section>
+
+            <section
+              id="sources"
+              className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#F3ECE3] p-5 sm:p-7"
+            >
+              <div className="flex items-center gap-3">
+                <span className="grid size-10 place-items-center rounded-2xl bg-[#7c6045] text-white">
+                  <LibraryBig className="size-5" />
+                </span>
+                <div>
+                  <h2 className="font-display text-xl font-black text-[#1C1B19] sm:text-2xl">
+                    {isArabic ? "المصادر والمنهجية" : "Sources & methodology"}
+                  </h2>
+                  <p className="mt-1 text-xs leading-6 text-[#6B6259]">
+                    {isArabic
+                      ? "صياغة تعليمية أصلية للمحاسب أحمد المدني؛ تُستخدم المراجع المرخصة للتحقق والإثراء، والمراجع الأخرى لفهم البنية فقط."
+                      : "Original educational writing by Ahmed Elmadani; licensed references support verification and enrichment, while other repositories inform structure only."}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 grid gap-3">
+                {page.sources.map((source) => (
+                  <a
+                    key={source.key}
+                    href={source.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-2xl border border-[#A88765]/15 bg-white p-4 transition hover:border-[#A88765]/45"
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <strong className="text-sm text-[#1C1B19]">{source.name}</strong>
+                      <span className="rounded-full bg-[#A88765]/12 px-2.5 py-1 text-[10px] font-black text-[#7c6045]">
+                        {source.license}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-xs leading-6 text-[#625950]">{source.purpose[lang]}</p>
+                    <p className="mt-2 font-mono text-[10px] text-[#8A8179]">
+                      {isArabic ? "نسخة المراجعة" : "Reviewed revision"}:{" "}
+                      {source.revision.slice(0, 12)}
+                    </p>
+                  </a>
+                ))}
+              </div>
             </section>
           </div>
 

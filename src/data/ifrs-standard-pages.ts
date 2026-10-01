@@ -6,6 +6,12 @@ import {
 } from "./ifrs-standards";
 import { getStandardGuide, type StandardGuide } from "./ifrs-standard-guides";
 import { IFRS_LOCAL_QUESTION_COUNTS } from "./ifrs-question-bank";
+import {
+  getStandardEnrichment,
+  IFRS_CONTENT_SOURCES,
+  type IfrsContentSource,
+  type StandardEnrichment,
+} from "./ifrs-standard-enrichment";
 
 type LocalizedText = { ar: string; en: string };
 
@@ -25,6 +31,8 @@ export interface StandardLearningPage {
   journalEntries: JournalEntryTemplate[];
   checklist: { ar: string[]; en: string[] };
   questionCount: number;
+  enrichment: StandardEnrichment;
+  sources: IfrsContentSource[];
 }
 
 const NO_STANDALONE_ENTRY = new Set([
@@ -200,7 +208,8 @@ function makeJournalEntries(standard: AccountingStandard): JournalEntryTemplate[
 
 function buildPage(standard: AccountingStandard): StandardLearningPage | null {
   const guide = getStandardGuide(standard.code);
-  if (!guide) return null;
+  const enrichment = getStandardEnrichment(standard.code);
+  if (!guide || !enrichment) return null;
   const hasNumber = /[0-9٠-٩]/.test(`${guide.example.ar} ${guide.example.en}`);
 
   return {
@@ -217,6 +226,8 @@ function buildPage(standard: AccountingStandard): StandardLearningPage | null {
     journalEntries: makeJournalEntries(standard),
     checklist: makeChecklist(guide),
     questionCount: IFRS_LOCAL_QUESTION_COUNTS[standard.code] ?? 0,
+    enrichment,
+    sources: IFRS_CONTENT_SOURCES.filter((source) => enrichment.sourceKeys.includes(source.key)),
   };
 }
 

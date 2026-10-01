@@ -2,7 +2,7 @@
 /**
  * Guardrail for the IFRS question bank.
  * Verifies unique IDs, full 43-standard coverage, difficulty metadata totals,
- * the twenty-question all-standard baseline and the deeper priority targets.
+ * the twenty-five-question all-standard baseline and the deeper priority targets.
  */
 
 import { promises as fs } from "node:fs";
@@ -21,6 +21,7 @@ const files = [
   "src/data/ifrs-quiz-phase5-a.ts",
   "src/data/ifrs-quiz-phase5-b.ts",
   "src/data/ifrs-quiz-phase6-guide-mastery.ts",
+  "src/data/ifrs-quiz-phase8-enrichment.ts",
 ];
 
 const priority = [
@@ -51,8 +52,7 @@ function readQuestions(content) {
       const track = block.match(/"?track"?\s*:\s*"([^"]+)"/)?.[1] ?? "";
       const topic = block.match(/"?topic"?\s*:\s*"([^"]+)"/)?.[1] ?? "";
       const reference = block.match(/"?reference"?\s*:\s*"([^"]+)"/)?.[1] ?? "";
-      const difficulty =
-        block.match(/"?difficulty"?\s*:\s*"([^"]+)"/)?.[1] ?? "intermediate";
+      const difficulty = block.match(/"?difficulty"?\s*:\s*"([^"]+)"/)?.[1] ?? "intermediate";
       const match = `${topic} ${reference}`.match(/\b(IFRS|IAS)\s*([0-9]{1,2})\b/i);
       return {
         id,
@@ -72,9 +72,7 @@ function readPhase6GeneratedQuestions(file, content) {
   if (start < 0 || end < 0) return [];
 
   const targetBlock = content.slice(start, end);
-  const targets = [
-    ...targetBlock.matchAll(/"((?:IFRS|IAS) \d+)"/g),
-  ].map((match) => match[1]);
+  const targets = [...targetBlock.matchAll(/"((?:IFRS|IAS) \d+)"/g)].map((match) => match[1]);
 
   const difficultyPattern = [
     "easy",
@@ -99,6 +97,28 @@ function readPhase6GeneratedQuestions(file, content) {
   );
 }
 
+function readPhase8GeneratedQuestions(file, content) {
+  if (!file.endsWith("ifrs-quiz-phase8-enrichment.ts")) return [];
+
+  const start = content.indexOf("export const IFRS_PHASE8_TARGETS = [");
+  const end = content.indexOf("] as const;", start);
+  if (start < 0 || end < 0) return [];
+
+  const targets = [...content.slice(start, end).matchAll(/"((?:IFRS|IAS) \d+)"/g)].map(
+    (match) => match[1],
+  );
+  const difficultyPattern = ["easy", "intermediate", "intermediate", "hard", "hard"];
+
+  return targets.flatMap((standard) =>
+    difficultyPattern.map((difficulty, index) => ({
+      id: `ifrs-p8-${standard.toLowerCase().replace(" ", "")}-${String(index + 1).padStart(2, "0")}`,
+      track: "IFRS",
+      standard,
+      difficulty,
+    })),
+  );
+}
+
 function readCompactQuestions(file, content) {
   const prefix = file.endsWith("ifrs-quiz-phase4-baseline.ts")
     ? "ifrs-p4base"
@@ -110,9 +130,11 @@ function readCompactQuestions(file, content) {
 
   if (!prefix) return [];
 
-  return [...content.matchAll(
-    /q\("((?:IFRS|IAS) \d+)",\s*(\d+),\s*"([^"]+)",\s*"(easy|intermediate|hard)"/g,
-  )].map((match) => {
+  return [
+    ...content.matchAll(
+      /q\("((?:IFRS|IAS) \d+)",\s*(\d+),\s*"([^"]+)",\s*"(easy|intermediate|hard)"/g,
+    ),
+  ].map((match) => {
     const standard = match[1];
     const sequence = Number(match[2]);
     return {
@@ -130,6 +152,7 @@ for (const file of files) {
   all.push(...readQuestions(content));
   all.push(...readCompactQuestions(file, content));
   all.push(...readPhase6GeneratedQuestions(file, content));
+  all.push(...readPhase8GeneratedQuestions(file, content));
 }
 
 const byId = new Map();
@@ -153,15 +176,13 @@ for (const question of questions) {
 const standardsSource = await fs.readFile("src/data/ifrs-standards.ts", "utf8");
 const indexed = [
   ...new Set(
-    [...standardsSource.matchAll(/\bcode:\s*"((?:IFRS|IAS) \d+)"/g)].map(
-      (match) => match[1],
-    ),
+    [...standardsSource.matchAll(/\bcode:\s*"((?:IFRS|IAS) \d+)"/g)].map((match) => match[1]),
   ),
 ];
 
 const missing = indexed.filter((code) => (counts.get(code) ?? 0) === 0);
-const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 20);
-const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 20);
+const belowBaseline = indexed.filter((code) => (counts.get(code) ?? 0) < 25);
+const belowPriority = priority.filter((code) => (counts.get(code) ?? 0) < 25);
 const belowPhase4Depth = phase4Depth.filter((code) => (counts.get(code) ?? 0) < 10);
 const unmapped = counts.get("Unmapped") ?? 0;
 
@@ -179,7 +200,7 @@ console.log(
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
       below_phase4_depth_target: belowPhase4Depth,
-      expected_total: 860,
+      expected_total: 1075,
     },
     null,
     2,
@@ -192,11 +213,11 @@ if (duplicateIds.length) failures.push(`Duplicate IDs: ${duplicateIds.join(", ")
 if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a standard`);
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
-  failures.push(`Standards below twenty-question baseline: ${belowBaseline.join(", ")}`);
-if (questions.length !== 860)
-  failures.push(`Expected 860 IFRS questions; found ${questions.length}`);
+  failures.push(`Standards below twenty-five-question baseline: ${belowBaseline.join(", ")}`);
+if (questions.length !== 1075)
+  failures.push(`Expected 1075 IFRS questions; found ${questions.length}`);
 if (belowPriority.length)
-  failures.push(`Priority standards below 20 questions: ${belowPriority.join(", ")}`);
+  failures.push(`Priority standards below 25 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)
   failures.push(`Phase 4 depth standards below 10 questions: ${belowPhase4Depth.join(", ")}`);
 
