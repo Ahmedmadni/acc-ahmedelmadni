@@ -43,6 +43,7 @@ import { Route as AuthenticatedAdminKnowledgeRouteImport } from './routes/_authe
 import { Route as AuthenticatedAdminLibraryRouteImport } from './routes/_authenticated/admin.library'
 import { Route as AuthenticatedAdminProfileRouteImport } from './routes/_authenticated/admin.profile'
 import { Route as AuthenticatedAdminTemplatesRouteImport } from './routes/_authenticated/admin.templates'
+import { Route as ApiPublicTemplateFileRouteImport } from './routes/api/public/template-file'
 import { Route as KnowledgeCategorySlugIndexRouteImport } from './routes/knowledge.$categorySlug.index'
 import { Route as KnowledgeCategorySlugArticleSlugRouteImport } from './routes/knowledge.$categorySlug.$articleSlug'
 import { Route as ApiPublicHooksGenerateArticlesRouteImport } from './routes/api/public/hooks/generate-articles'
@@ -221,6 +222,11 @@ const AuthenticatedAdminTemplatesRoute =
     path: '/admin/templates',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const ApiPublicTemplateFileRoute = ApiPublicTemplateFileRouteImport.update({
+  id: '/api/public/template-file',
+  path: '/api/public/template-file',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KnowledgeCategorySlugIndexRoute =
   KnowledgeCategorySlugIndexRouteImport.update({
     id: '/knowledge/$categorySlug/',
@@ -274,6 +280,7 @@ export interface FileRoutesByFullPath {
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
   '/admin/templates': typeof AuthenticatedAdminTemplatesRoute
+  '/api/public/template-file': typeof ApiPublicTemplateFileRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -311,6 +318,7 @@ export interface FileRoutesByTo {
   '/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/admin/profile': typeof AuthenticatedAdminProfileRoute
   '/admin/templates': typeof AuthenticatedAdminTemplatesRoute
+  '/api/public/template-file': typeof ApiPublicTemplateFileRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -351,6 +359,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/library': typeof AuthenticatedAdminLibraryRoute
   '/_authenticated/admin/profile': typeof AuthenticatedAdminProfileRoute
   '/_authenticated/admin/templates': typeof AuthenticatedAdminTemplatesRoute
+  '/api/public/template-file': typeof ApiPublicTemplateFileRoute
   '/knowledge/$categorySlug/$articleSlug': typeof KnowledgeCategorySlugArticleSlugRoute
   '/knowledge/$categorySlug/': typeof KnowledgeCategorySlugIndexRoute
   '/api/public/hooks/generate-articles': typeof ApiPublicHooksGenerateArticlesRoute
@@ -391,6 +400,7 @@ export interface FileRouteTypes {
     | '/admin/library'
     | '/admin/profile'
     | '/admin/templates'
+    | '/api/public/template-file'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
@@ -428,6 +438,7 @@ export interface FileRouteTypes {
     | '/admin/library'
     | '/admin/profile'
     | '/admin/templates'
+    | '/api/public/template-file'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug'
     | '/api/public/hooks/generate-articles'
@@ -467,6 +478,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/library'
     | '/_authenticated/admin/profile'
     | '/_authenticated/admin/templates'
+    | '/api/public/template-file'
     | '/knowledge/$categorySlug/$articleSlug'
     | '/knowledge/$categorySlug/'
     | '/api/public/hooks/generate-articles'
@@ -494,6 +506,7 @@ export interface RootRouteChildren {
   ToolsStudyCompanionRoute: typeof ToolsStudyCompanionRoute
   KnowledgeIndexRoute: typeof KnowledgeIndexRoute
   ToolsIndexRoute: typeof ToolsIndexRoute
+  ApiPublicTemplateFileRoute: typeof ApiPublicTemplateFileRoute
   KnowledgeCategorySlugArticleSlugRoute: typeof KnowledgeCategorySlugArticleSlugRoute
   KnowledgeCategorySlugIndexRoute: typeof KnowledgeCategorySlugIndexRoute
   ApiPublicHooksGenerateArticlesRoute: typeof ApiPublicHooksGenerateArticlesRoute
@@ -739,6 +752,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminTemplatesRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/api/public/template-file': {
+      id: '/api/public/template-file'
+      path: '/api/public/template-file'
+      fullPath: '/api/public/template-file'
+      preLoaderRoute: typeof ApiPublicTemplateFileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge/$categorySlug/': {
       id: '/knowledge/$categorySlug/'
       path: '/knowledge/$categorySlug'
@@ -829,6 +849,7 @@ const rootRouteChildren: RootRouteChildren = {
   ToolsStudyCompanionRoute: ToolsStudyCompanionRoute,
   KnowledgeIndexRoute: KnowledgeIndexRoute,
   ToolsIndexRoute: ToolsIndexRoute,
+  ApiPublicTemplateFileRoute: ApiPublicTemplateFileRoute,
   KnowledgeCategorySlugArticleSlugRoute: KnowledgeCategorySlugArticleSlugRoute,
   KnowledgeCategorySlugIndexRoute: KnowledgeCategorySlugIndexRoute,
   ApiPublicHooksGenerateArticlesRoute: ApiPublicHooksGenerateArticlesRoute,

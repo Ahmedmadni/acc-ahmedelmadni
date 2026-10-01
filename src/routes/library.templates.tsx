@@ -116,7 +116,7 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
       <div className="mt-auto">
         {t.file_url ? (
           <a
-            href={t.file_url}
+            href={`/api/public/template-file?path=${encodeURIComponent(t.file_url)}`}
             download
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2.5 text-xs font-black text-[#1C1B19] shadow-lg shadow-[#4A3023]/20 transition-transform hover:scale-105"
           >
