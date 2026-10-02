@@ -653,8 +653,8 @@ const cases: AppliedCase[] = [
   {
     code: "IAS 21",
     question: {
-      ar: "اشترت شركة سعودية بضاعة بمبلغ 100,000 دولار على الحساب عندما كان الدولار 3.70 ريال، وبقي الدين قائمًا في نهاية الفترة عندما أصبح 3.75 ريال. ما فرق الصرف؟",
-      en: "A Saudi entity buys goods on credit for USD 100,000 at SAR 3.70/USD. The payable remains open at period-end when the rate is SAR 3.75/USD. What exchange difference arises?",
+      ar: "اشترت شركة عملتها الوظيفية الريال السعودي بضاعة بمبلغ 100,000 دولار على الحساب عندما كان الدولار 3.70 ريال، وبقي الدين قائمًا في نهاية الفترة عندما أصبح 3.75 ريال. ما فرق الصرف؟",
+      en: "An entity whose functional currency is SAR buys goods on credit for USD 100,000 at SAR 3.70/USD. The payable remains open at period-end when the rate is SAR 3.75/USD. What exchange difference arises?",
     },
     choices: {
       ar: ["ربح 5,000 ريال", "خسارة 5,000 ريال", "خسارة 50,000 ريال", "لا فرق"],
@@ -671,8 +671,8 @@ const cases: AppliedCase[] = [
   {
     code: "IAS 21",
     question: {
-      ar: "سجلت منشأة مخزونًا غير نقدي بالتكلفة عند شرائه بـ10,000 دولار وسعر صرف 3.70 ريال. في تاريخ التقرير أصبح السعر 3.80 ريال، ولم يُعد قياس المخزون بقيمة عادلة. ما قيمته من منظور سعر الصرف وحده؟",
-      en: "An entity records non-monetary inventory at historical cost of USD 10,000 when the rate is SAR 3.70. At reporting date the rate is SAR 3.80, and inventory is not remeasured at fair value. What amount results from currency translation alone?",
+      ar: "سجلت منشأة عملتها الوظيفية الريال السعودي مخزونًا غير نقدي بالتكلفة عند شرائه بـ10,000 دولار وسعر صرف 3.70 ريال. في تاريخ التقرير أصبح السعر 3.80 ريال، ولم يُعد قياس المخزون بقيمة عادلة. ما قيمته من منظور سعر الصرف وحده؟",
+      en: "An entity whose functional currency is SAR records non-monetary inventory at historical cost of USD 10,000 when the rate is SAR 3.70. At reporting date the rate is SAR 3.80, and inventory is not remeasured at fair value. What amount results from currency translation alone?",
     },
     choices: {
       ar: ["37,000 ريال", "38,000 ريال", "فرق صرف ربح 1,000 ريال", "يعتمد على معدل الإقفال حتمًا"],
@@ -707,8 +707,8 @@ const cases: AppliedCase[] = [
   {
     code: "IAS 33",
     question: {
-      ar: "ربح الفترة العائد لحملة حقوق الملكية 1,000,000 ريال، وتوزيعات الأسهم الممتازة المستحقة 100,000، والمتوسط المرجح للأسهم العادية 300,000 سهم. ما ربحية السهم الأساسية؟",
-      en: "Profit attributable to equity holders is SAR 1,000,000, preference dividends are SAR 100,000 and weighted average ordinary shares are 300,000. What is basic EPS?",
+      ar: "ربح الفترة العائد لحملة حقوق ملكية الشركة الأم، قبل خصم توزيعات أسهم ممتازة تراكمية وغير مشاركة ومصنفة حقوق ملكية، 1,000,000 ريال. بلغت توزيعاتها المستحقة للفترة 100,000 ريال، والمتوسط المرجح للأسهم العادية 300,000 سهم. ما ربحية السهم الأساسية؟",
+      en: "Profit attributable to the parent's equity holders before deducting dividends on cumulative, non-participating, equity-classified preference shares is SAR 1,000,000. Dividends required for the period are SAR 100,000 and weighted average ordinary shares are 300,000. What is basic EPS?",
     },
     choices: {
       ar: ["2.70 ريال", "3.00 ريالات", "3.33 ريالات", "3.67 ريالات"],
@@ -891,7 +891,7 @@ export const IFRS_PHASE9_APPLIED_QUESTIONS: ExamQuestion[] = cases.map((item) =>
     choices: item.choices,
     answerIndex: item.answerIndex,
     explanation: item.explanation,
-    reference: `${item.paragraph}; technical cross-check: ramyatrouny/ifrs-skill @ fda78bbc`,
+    reference: item.paragraph,
     difficulty: item.difficulty,
     examDomain: item.code,
   };

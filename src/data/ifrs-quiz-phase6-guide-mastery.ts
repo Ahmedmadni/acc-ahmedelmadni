@@ -110,7 +110,7 @@ function makeSectionQuestion(
       ar: `الإجابة مأخوذة من قسم «${sectionLabels[section].ar}» في الشرح العملي الأصلي لمعيار ${code}. راجع القسم نفسه واربطه ببقية أجزاء المعيار قبل الانتقال للسؤال التالي.`,
       en: `The answer is derived from the ${sectionLabels[section].en} section of the original practical guide for ${code}. Review that section and connect it with the rest of the Standard before continuing.`,
     },
-    reference: `${code} — Ahmed Elmadani practical guide`,
+    reference: code,
     difficulty,
     examDomain: `Guide: ${section}`,
   };
@@ -139,7 +139,7 @@ function makeIdentifyQuestion(
       ar: `هذا الوصف جزء من شرح المحاسب أحمد المدني لمعيار ${code}، وتحديد المعيار من جوهر الفكرة يساعد على تثبيت الفروق بين المعايير المتقاربة.`,
       en: `This description comes from Ahmed Elmadani's guide to ${code}. Identifying a Standard from its core idea helps distinguish closely related requirements.`,
     },
-    reference: `${code} — Ahmed Elmadani practical guide`,
+    reference: code,
     difficulty,
     examDomain: `Guide identification: ${section}`,
   };
@@ -177,7 +177,7 @@ function makePairQuestion(code: Phase6Target, sequence: number): ExamQuestion {
       ar: `الاقتران الصحيح يربط ${code} مباشرة بمبدأ الاعتراف والقياس الوارد في شرح أحمد المدني، بينما البدائل تستخدم مبادئ من معايير أخرى.`,
       en: `The correct pairing links ${code} to the recognition and measurement principle in Ahmed Elmadani's guide; the distractors use principles from other Standards.`,
     },
-    reference: `${code} — Ahmed Elmadani practical guide`,
+    reference: code,
     difficulty: "hard",
     examDomain: "Guide integration",
   };
@@ -203,8 +203,7 @@ function buildForStandard(code: Phase6Target): ExamQuestion[] {
  * entered this phase with ten questions. Combined with the existing bank,
  * every indexed IFRS/IAS standard reaches at least twenty local questions.
  */
-export const IFRS_PHASE6_GUIDE_QUESTIONS: ExamQuestion[] = IFRS_PHASE6_TARGETS.flatMap(
-  buildForStandard,
-);
+export const IFRS_PHASE6_GUIDE_QUESTIONS: ExamQuestion[] =
+  IFRS_PHASE6_TARGETS.flatMap(buildForStandard);
 
 export const IFRS_PHASE6_QUESTION_COUNT = IFRS_PHASE6_GUIDE_QUESTIONS.length;

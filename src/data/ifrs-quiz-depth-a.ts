@@ -1123,8 +1123,8 @@ export const IFRS_DEPTH_A_QUESTION_SEED = [
     "track": "IFRS",
     "topic": "IFRS 16 — Depreciation period",
     "question": {
-      "ar": "إذا كان من المتوقع انتقال ملكية الأصل للمستأجر بنهاية الإيجار، على أي فترة يستهلك أصل حق الاستخدام عادةً؟",
-      "en": "If ownership is expected to transfer to the lessee by lease end, over what period is the ROU asset generally depreciated?"
+      "ar": "إذا نص عقد الإيجار على انتقال ملكية الأصل إلى المستأجر بنهاية مدة الإيجار، على أي فترة يستهلك أصل حق الاستخدام عادةً؟",
+      "en": "If the lease transfers ownership of the underlying asset to the lessee by the end of the lease term, over what period is the ROU asset generally depreciated?"
     },
     "choices": {
       "ar": [
@@ -1142,10 +1142,10 @@ export const IFRS_DEPTH_A_QUESTION_SEED = [
     },
     "answerIndex": 0,
     "explanation": {
-      "ar": "عند انتقال الملكية أو اليقين المعقول من ممارسة خيار شراء، يستخدم العمر الإنتاجي؛ وإلا فالأقصر من العمر ومدة الإيجار.",
-      "en": "If ownership transfers or purchase is reasonably certain, useful life is used; otherwise generally the shorter of useful life and lease term."
+      "ar": "إذا انتقلت الملكية بنهاية الإيجار، أو عكست تكلفة حق الاستخدام ممارسة خيار شراء، فيُستهلك الأصل حتى نهاية عمره الإنتاجي؛ وإلا فإلى الأقرب من نهاية العمر الإنتاجي أو مدة الإيجار.",
+      "en": "If ownership transfers by lease end, or ROU cost reflects exercise of a purchase option, depreciate to the end of the underlying asset's useful life; otherwise use the earlier of useful-life end and lease-term end."
     },
-    "reference": "IFRS 16 — depreciation",
+    "reference": "IFRS 16.32 — depreciation",
     "difficulty": "hard",
     "examDomain": "Depreciation period"
   },

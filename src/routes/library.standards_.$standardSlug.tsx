@@ -66,9 +66,7 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
                 educationalLevel: "Professional",
                 citation: [
                   standard.officialUrl ?? IFRS_NAVIGATOR_URL,
-                  ...page.sources
-                    .filter((source) => source.usage === "paraphrased_with_attribution")
-                    .map((source) => source.url),
+                  ...page.sources.map((source) => source.url),
                 ],
                 keywords: [
                   standard.code,
@@ -488,15 +486,8 @@ function StandardLearningPage() {
                   >
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <strong className="text-sm text-[#1C1B19]">{source.name}</strong>
-                      <span className="rounded-full bg-[#A88765]/12 px-2.5 py-1 text-[10px] font-black text-[#7c6045]">
-                        {source.license}
-                      </span>
                     </div>
                     <p className="mt-2 text-xs leading-6 text-[#625950]">{source.purpose[lang]}</p>
-                    <p className="mt-2 font-mono text-[10px] text-[#8A8179]">
-                      {isArabic ? "نسخة المراجعة" : "Reviewed revision"}:{" "}
-                      {source.revision.slice(0, 12)}
-                    </p>
                   </a>
                 ))}
               </div>

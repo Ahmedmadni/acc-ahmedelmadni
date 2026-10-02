@@ -6,11 +6,7 @@ import {
   type StandardReferenceNotes,
 } from "./ifrs-standard-reference-notes";
 import { IFRS_LOCAL_QUESTION_COUNTS } from "./ifrs-question-bank";
-import {
-  getStandardSourceKeys,
-  IFRS_CONTENT_SOURCES,
-  type IfrsContentSource,
-} from "./ifrs-standard-enrichment";
+import { IFRS_CONTENT_SOURCES, type IfrsContentSource } from "./ifrs-standard-enrichment";
 
 type LocalizedText = { ar: string; en: string };
 
@@ -58,9 +54,7 @@ function buildPage(standard: AccountingStandard): StandardLearningPage | null {
     executiveSummary: { ar: standard.summaryAr, en: standard.summaryEn },
     checklist: makeChecklist(guide),
     questionCount: IFRS_LOCAL_QUESTION_COUNTS[standard.code] ?? 0,
-    sources: IFRS_CONTENT_SOURCES.filter((source) =>
-      getStandardSourceKeys(standard).includes(source.key),
-    ),
+    sources: IFRS_CONTENT_SOURCES,
   };
 }
 

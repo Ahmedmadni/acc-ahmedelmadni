@@ -38,10 +38,11 @@ const layers: ExamQuestion[][] = [
   IFRS_PHASE9_APPLIED_QUESTIONS,
 ];
 
+/** Unmerged local items, retained so audits can detect IDs hidden by Map replacement. */
+export const IFRS_LOCAL_QUESTION_SOURCE_ITEMS = layers.flat();
+
 const byId = new Map<string, ExamQuestion>();
-for (const layer of layers) {
-  for (const question of layer) byId.set(question.id, question);
-}
+for (const question of IFRS_LOCAL_QUESTION_SOURCE_ITEMS) byId.set(question.id, question);
 
 export const IFRS_LOCAL_QUESTIONS = [...byId.values()];
 

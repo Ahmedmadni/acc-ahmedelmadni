@@ -18,11 +18,9 @@ import {
   XCircle,
 } from "lucide-react";
 import { IFRS_STANDARDS } from "@/data/ifrs-standards";
-import {
-  detectIfrsStandardCode,
-  IFRS_LOCAL_QUESTIONS,
-} from "@/data/ifrs-question-bank";
+import { detectIfrsStandardCode, IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import type { ExamQuestion } from "@/lib/exam-bank";
+import { reorderIfrsChoices } from "@/lib/ifrs-question-choice-order";
 import { listExamQuestions } from "@/lib/exam-questions.functions";
 import {
   buildWeaknessStats,
@@ -47,9 +45,7 @@ const syncProgress = createClientOnlyFn((localAttempts: IfrsAttemptRecord[]) =>
 
 const saveAttemptToAccount = createClientOnlyFn(
   (userId: string | null, attempt: IfrsAttemptRecord) =>
-    import("@/lib/ifrs-progress.client").then((m) =>
-      m.saveIfrsAttemptToAccount(userId, attempt),
-    ),
+    import("@/lib/ifrs-progress.client").then((m) => m.saveIfrsAttemptToAccount(userId, attempt)),
 );
 
 const clearAccountProgress = createClientOnlyFn((userId: string | null) =>
@@ -146,7 +142,6 @@ export function IfrsQuestionBank({
         setSyncState("error");
       });
 
-
     return () => {
       active = false;
     };
@@ -201,15 +196,14 @@ export function IfrsQuestionBank({
   );
 
   const pool = useMemo(() => {
+    let selectedPool: typeof filteredPool;
     if (mode === "exam") {
-      return [...filteredPool]
+      selectedPool = [...filteredPool]
         .sort((a, b) => orderScore(a.id, sessionSeed) - orderScore(b.id, sessionSeed))
         .slice(0, EXAM_LIMIT);
-    }
-
-    if (mode === "adaptive") {
+    } else if (mode === "adaptive") {
       const accuracy = new Map(weaknessStats.map((stat) => [stat.domain, stat.accuracy]));
-      return [...filteredPool]
+      selectedPool = [...filteredPool]
         .sort((a, b) => {
           const aAccuracy = accuracy.get(a.domain) ?? 55;
           const bAccuracy = accuracy.get(b.domain) ?? 55;
@@ -221,9 +215,10 @@ export function IfrsQuestionBank({
           return orderScore(a.id, sessionSeed) - orderScore(b.id, sessionSeed);
         })
         .slice(0, ADAPTIVE_LIMIT);
+    } else {
+      selectedPool = filteredPool;
     }
-
-    return filteredPool;
+    return selectedPool.map((question) => reorderIfrsChoices(question, sessionSeed));
   }, [filteredPool, mode, sessionSeed, weaknessStats]);
 
   const currentQuestion = pool[current];
@@ -310,7 +305,6 @@ export function IfrsQuestionBank({
     saveAttemptToAccount(accountUserId, record)?.catch(() => {
       setSyncState("error");
     });
-
   }
 
   function chooseAnswer(index: number) {
@@ -360,16 +354,17 @@ export function IfrsQuestionBank({
     clearAccountProgress(accountUserId)?.catch(() => {
       setSyncState("error");
     });
-
   }
 
   const activeAnswer =
-    mode === "exam" ? (currentQuestion ? examAnswers[currentQuestion.id] ?? null : null) : selected;
+    mode === "exam"
+      ? currentQuestion
+        ? (examAnswers[currentQuestion.id] ?? null)
+        : null
+      : selected;
   const revealAnswer = mode === "exam" ? examSubmitted : selected !== null;
   const isCorrect =
-    currentQuestion && activeAnswer !== null
-      ? activeAnswer === currentQuestion.answerIndex
-      : null;
+    currentQuestion && activeAnswer !== null ? activeAnswer === currentQuestion.answerIndex : null;
   const answeredExamCount = Object.keys(examAnswers).filter((id) =>
     pool.some((question) => question.id === id),
   ).length;
@@ -591,7 +586,9 @@ export function IfrsQuestionBank({
                       <span className="truncate text-[10px] font-bold text-[#AFA69D]">
                         {stat.domain}
                       </span>
-                      <span className="text-[10px] font-black text-[#D2B390]">{stat.accuracy}%</span>
+                      <span className="text-[10px] font-black text-[#D2B390]">
+                        {stat.accuracy}%
+                      </span>
                     </div>
                     <div className="mt-2 h-1 overflow-hidden rounded-full bg-white/5">
                       <div
@@ -731,8 +728,7 @@ export function IfrsQuestionBank({
                         classes = "border-emerald-600/40 bg-emerald-50 text-emerald-950";
                       else if (revealAnswer && picked && !correct)
                         classes = "border-red-500/40 bg-red-50 text-red-950";
-                      else if (picked)
-                        classes = "border-[#7C6045]/60 bg-[#EEE4D9] text-[#3B342E]";
+                      else if (picked) classes = "border-[#7C6045]/60 bg-[#EEE4D9] text-[#3B342E]";
 
                       return (
                         <button
@@ -746,7 +742,9 @@ export function IfrsQuestionBank({
                             {String.fromCharCode(65 + index)}
                           </span>
                           <span className="flex-1">{choice}</span>
-                          {revealAnswer && correct && <CheckCircle2 className="mt-0.5 size-5 shrink-0" />}
+                          {revealAnswer && correct && (
+                            <CheckCircle2 className="mt-0.5 size-5 shrink-0" />
+                          )}
                           {revealAnswer && picked && !correct && (
                             <XCircle className="mt-0.5 size-5 shrink-0" />
                           )}
@@ -766,7 +764,11 @@ export function IfrsQuestionBank({
                     aria-live="polite"
                   >
                     <div className="flex items-center gap-2">
-                      {isCorrect ? <CheckCircle2 className="size-5" /> : <XCircle className="size-5" />}
+                      {isCorrect ? (
+                        <CheckCircle2 className="size-5" />
+                      ) : (
+                        <XCircle className="size-5" />
+                      )}
                       <h5 className="font-display text-lg font-black">
                         {isCorrect
                           ? lang === "ar"
@@ -789,11 +791,10 @@ export function IfrsQuestionBank({
                       <p className="text-xs font-black uppercase tracking-wider opacity-70">
                         {lang === "ar" ? "الشرح المبسط" : "Simplified explanation"}
                       </p>
-                      <p className="mt-2 text-sm leading-7">
-                        {currentQuestion.explanation[lang]}
-                      </p>
+                      <p className="mt-2 text-sm leading-7">{currentQuestion.explanation[lang]}</p>
                       <p className="mt-3 text-[11px] font-bold opacity-65">
-                        {lang === "ar" ? "المرجع:" : "Reference:"} {currentQuestion.reference}
+                        {lang === "ar" ? "المرجع المحاسبي:" : "Accounting reference:"}{" "}
+                        {currentQuestion.reference}
                       </p>
                     </div>
                   </div>
@@ -804,7 +805,9 @@ export function IfrsQuestionBank({
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <div>
                         <p className="text-xs font-black text-[#4A433D]">
-                          {lang === "ar" ? "الاختبار لا يكشف الإجابات أثناء الحل" : "Answers stay hidden during the exam"}
+                          {lang === "ar"
+                            ? "الاختبار لا يكشف الإجابات أثناء الحل"
+                            : "Answers stay hidden during the exam"}
                         </p>
                         <p className="mt-1 text-[11px] text-[#8A8078]">
                           {lang === "ar"
@@ -835,7 +838,9 @@ export function IfrsQuestionBank({
                             {lang === "ar" ? "نتيجة الاختبار" : "Exam result"}
                           </span>
                         </div>
-                        <div className="mt-2 font-display text-4xl font-black">{examResult.percent}%</div>
+                        <div className="mt-2 font-display text-4xl font-black">
+                          {examResult.percent}%
+                        </div>
                         <p className="mt-1 text-xs text-[#AFA69D]">
                           {examResult.correct} / {examResult.total}
                         </p>
@@ -858,7 +863,11 @@ export function IfrsQuestionBank({
                     onClick={previous}
                     className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 px-4 py-2 text-xs font-extrabold text-[#7C6045] transition hover:bg-[#A88765]/10"
                   >
-                    {lang === "ar" ? <ArrowRight className="size-4" /> : <ArrowLeft className="size-4" />}
+                    {lang === "ar" ? (
+                      <ArrowRight className="size-4" />
+                    ) : (
+                      <ArrowLeft className="size-4" />
+                    )}
                     {lang === "ar" ? "السابق" : "Previous"}
                   </button>
 
@@ -875,7 +884,11 @@ export function IfrsQuestionBank({
                     className="inline-flex items-center gap-2 rounded-full bg-[#1C1B19] px-4 py-2 text-xs font-extrabold text-[#F5F1EB] transition hover:bg-[#3A332D]"
                   >
                     {lang === "ar" ? "التالي" : "Next"}
-                    {lang === "ar" ? <ArrowLeft className="size-4" /> : <ArrowRight className="size-4" />}
+                    {lang === "ar" ? (
+                      <ArrowLeft className="size-4" />
+                    ) : (
+                      <ArrowRight className="size-4" />
+                    )}
                   </button>
                 </div>
               </>
@@ -884,8 +897,8 @@ export function IfrsQuestionBank({
 
           <div className="mt-4 rounded-2xl border border-[#A88765]/15 bg-[#1C1B19] px-4 py-3 text-[11px] leading-5 text-[#8F877F]">
             {lang === "ar"
-              ? "الأسئلة للتعلم والتدريب وليست أسئلة امتحانات رسمية. يُحفظ التقدم محلياً للزائر، ويُزامن مع حساب المستخدم عند تسجيل الدخول وتوفر جدول التقدم. عند استيراد مصدر خارجي يجب حفظ المصدر والترخيص ومراجعة الترجمة قبل النشر."
-              : "Questions are for learning and practice and are not official exam questions. Guest progress is saved locally and signed-in progress syncs to the user account when the progress table is available. Imported external content must retain source/licence provenance and pass translation review before publication."}
+              ? "الأسئلة الحالية تدريبات للموقع، وليست موثقة بوصفها أسئلة امتحانات رسمية؛ المرجع المذكور يخص المعالجة المحاسبية لا أصل نص السؤال. يُحفظ التقدم محليًا ويُزامن مع الحساب عند توفر جدول التقدم."
+              : "The current practice questions are not documented as official exam questions. References support the accounting treatment, not the question wording. Progress is saved locally and syncs to the account when the progress table is available."}
           </div>
         </div>
       </div>

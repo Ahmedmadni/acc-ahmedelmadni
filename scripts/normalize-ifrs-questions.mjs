@@ -9,15 +9,21 @@
  *
  * The script intentionally does not scrape or bypass access controls. Supply a
  * local export/check-out whose licence has already been verified.
+ * Numeric answer keys require --numeric-answer-base 0|1. Every record must
+ * identify its original source URL, revision and licence.
  */
 
 import { promises as fs } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
+import { importedAnswerIndex } from "./lib/ifrs-answer-index.mjs";
 
 const args = Object.fromEntries(
   process.argv
     .slice(2)
-    .map((value, index, list) => (value.startsWith("--") ? [value.slice(2), list[index + 1]] : null))
+    .map((value, index, list) =>
+      value.startsWith("--") ? [value.slice(2), list[index + 1]] : null,
+    )
     .filter(Boolean),
 );
 
@@ -45,54 +51,37 @@ function asText(value) {
   return String(value).trim();
 }
 
+function asOriginalText(value) {
+  return typeof value === "string" ? value : "";
+}
+
 function asOptions(value) {
-  if (Array.isArray(value)) return value.map(asText).filter(Boolean);
+  // Keep positions intact: dropping an empty choice could silently move the keyed answer.
+  if (Array.isArray(value)) return value.map(asOriginalText);
   if (value && typeof value === "object") {
     return Object.keys(value)
       .sort()
-      .map((key) => asText(value[key]))
-      .filter(Boolean);
+      .map((key) => asOriginalText(value[key]));
   }
   return [];
 }
 
-function answerIndex(rawAnswer, options) {
-  if (Number.isInteger(rawAnswer)) {
-    const numeric = Number(rawAnswer);
-    if (numeric >= 0 && numeric < options.length) return numeric;
-    if (numeric >= 1 && numeric <= options.length) return numeric - 1;
-  }
-
-  const answer = asText(rawAnswer);
-  if (!answer) return null;
-
-  if (/^[A-F]$/i.test(answer)) return answer.toUpperCase().charCodeAt(0) - 65;
-  if (/^\d+$/.test(answer)) {
-    const numeric = Number(answer);
-    if (numeric >= 1 && numeric <= options.length) return numeric - 1;
-    if (numeric >= 0 && numeric < options.length) return numeric;
-  }
-
-  const exact = options.findIndex((option) => option.toLowerCase() === answer.toLowerCase());
-  return exact >= 0 ? exact : null;
-}
-
-function normalizeRecord(raw, sourcePath, sourceIndex) {
-  const questionEn = asText(
-    raw.question_en ?? raw.question ?? raw.prompt ?? raw.text ?? raw.stem,
-  );
-  const optionsEn = asOptions(
-    raw.options_en ?? raw.options ?? raw.choices_en ?? raw.choices ?? raw.answers,
-  );
-  const correct = answerIndex(
+function normalizeRecord(raw, sourcePath) {
+  if (!raw || typeof raw !== "object") return null;
+  const rawQuestion = raw.question_en ?? raw.question ?? raw.prompt ?? raw.text ?? raw.stem;
+  const rawOptions = raw.options_en ?? raw.options ?? raw.choices_en ?? raw.choices ?? raw.answers;
+  const rawAnswer =
     raw.correct_answer ??
-      raw.correctAnswer ??
-      raw.answer ??
-      raw.answer_index ??
-      raw.answerIndex ??
-      raw.key,
-    optionsEn,
-  );
+    raw.correctAnswer ??
+    raw.answer ??
+    raw.answer_index ??
+    raw.answerIndex ??
+    raw.key;
+  const questionEn = asOriginalText(rawQuestion);
+  const optionsEn = asOptions(rawOptions);
+  const baseValue = raw.answer_index_base ?? args["numeric-answer-base"];
+  const numericBase = baseValue == null ? undefined : Number(baseValue);
+  const correct = importedAnswerIndex(rawAnswer, optionsEn, numericBase);
 
   const standardCode = detectStandardCode(
     raw.standard_code,
@@ -103,7 +92,22 @@ function normalizeRecord(raw, sourcePath, sourceIndex) {
     questionEn,
   );
 
-  if (!questionEn || optionsEn.length < 2 || correct == null || !standardCode) return null;
+  const sourceUrl = asText(raw.source_url ?? args["source-url"]);
+  const sourceRevision = asText(raw.source_revision ?? args["source-revision"]);
+  const sourceLicense = asText(raw.source_license ?? args["source-license"]);
+  const sourceItemId = asText(raw.source_item_id ?? raw.id ?? raw.source_page);
+  if (
+    !questionEn.trim() ||
+    optionsEn.length !== 4 ||
+    optionsEn.some((option) => !option.trim()) ||
+    correct == null ||
+    !standardCode ||
+    !/^https?:\/\//.test(sourceUrl) ||
+    !sourceRevision ||
+    !sourceLicense ||
+    !sourceItemId
+  )
+    return null;
 
   const explanationEn = asText(
     raw.explanation_en ?? raw.explanation ?? raw.rationale ?? raw.reason,
@@ -125,9 +129,17 @@ function normalizeRecord(raw, sourcePath, sourceIndex) {
     explanation_ar: asText(raw.explanation_ar),
     reference: asText(raw.reference) || standardCode,
     source_path: sourcePath,
-    source_item_id: asText(raw.id) || `${sourcePath}#${sourceIndex + 1}`,
+    source_item_id: sourceItemId,
+    source_url: sourceUrl,
+    source_revision: sourceRevision,
+    source_license: sourceLicense,
+    source_answer_key: rawAnswer,
+    source_fingerprint: createHash("sha256")
+      .update(JSON.stringify([rawQuestion, rawOptions, rawAnswer]))
+      .digest("hex"),
     translation_status:
-      asText(raw.question_ar) && asOptions(raw.options_ar ?? raw.choices_ar).length === optionsEn.length
+      asText(raw.question_ar) &&
+      asOptions(raw.options_ar ?? raw.choices_ar).length === optionsEn.length
         ? "review_required"
         : "original",
   };
@@ -160,9 +172,7 @@ async function collectFiles(target) {
 
   const entries = await fs.readdir(target, { withFileTypes: true });
   const nested = await Promise.all(
-    entries.map((entry) =>
-      collectFiles(path.join(target, entry.name)).catch(() => []),
-    ),
+    entries.map((entry) => collectFiles(path.join(target, entry.name)).catch(() => [])),
   );
   return nested.flat();
 }
@@ -178,7 +188,7 @@ for (const file of files) {
   const records = await readJsonFile(file);
   records.forEach((raw, index) => {
     const relative = path.relative(process.cwd(), file);
-    const item = normalizeRecord(raw, relative, index);
+    const item = normalizeRecord(raw, relative);
     if (item) normalized.push(item);
     else rejected.push({ source_path: relative, source_index: index + 1 });
   });
@@ -193,22 +203,30 @@ for (const item of normalized) {
   if (!unique.has(fingerprint)) unique.set(fingerprint, item);
 }
 
-await fs.mkdir(path.dirname(outputPath), { recursive: true });
-await fs.writeFile(
-  outputPath,
-  JSON.stringify(
-    {
-      schema_version: "1.0.0",
-      generated_at: new Date().toISOString(),
-      records: [...unique.values()],
-      rejected,
-    },
-    null,
-    2,
-  ),
-  "utf8",
-);
+if (rejected.length || unique.size === 0) {
+  console.error(
+    `Import review failed: ${rejected.length} invalid records; ${unique.size} eligible records. Every question needs a valid answer, source item ID, URL, revision and licence. Output was not updated.`,
+  );
+  if (rejected.length) console.error(JSON.stringify(rejected.slice(0, 20), null, 2));
+  process.exitCode = 1;
+} else {
+  await fs.mkdir(path.dirname(outputPath), { recursive: true });
+  await fs.writeFile(
+    outputPath,
+    JSON.stringify(
+      {
+        schema_version: "1.0.0",
+        generated_at: new Date().toISOString(),
+        records: [...unique.values()],
+        rejected,
+      },
+      null,
+      2,
+    ),
+    "utf8",
+  );
 
-console.log(
-  `Normalized ${unique.size} questions from ${files.length} files; rejected ${rejected.length}. Output: ${outputPath}`,
-);
+  console.log(
+    `Normalized ${unique.size} questions from ${files.length} files; rejected ${rejected.length}. Output: ${outputPath}`,
+  );
+}

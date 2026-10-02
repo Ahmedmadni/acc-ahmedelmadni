@@ -105,36 +105,6 @@ const RESEARCH_SOURCES = [
     ar: "المصدر الرسمي للمعايير. نربط إليه للتحقق من النصوص والتحديثات ولا نعيد نشر النص الكامل للمعايير.",
     en: "Official standards source. We link to it for authoritative wording and updates rather than republishing full standard text.",
   },
-  {
-    name: "ramyatrouny / ifrs-skill",
-    url: "https://github.com/ramyatrouny/ifrs-skill",
-    ar: "مرجع تقني مفتوح يُستخدم للتحقق من بنية الموضوعات والمصطلحات فقط؛ الشرح المنشور هنا مستقل ومكتوب خصيصاً للموقع.",
-    en: "Open technical reference used only to verify topic structure and terminology; published explanations are independently authored for this site.",
-  },
-  {
-    name: "CharlesHoffmanCPA / fac-ifrs",
-    url: "https://github.com/CharlesHoffmanCPA/fac-ifrs",
-    ar: "مرجع GPL-3.0 للعلاقات المحاسبية وخرائط مفاهيم XBRL. لم تُدمج ملفاته أو شفرته في هذه الصفحة.",
-    en: "GPL-3.0 reference for accounting relationships and XBRL concept mappings. Its files and code are not embedded in this page.",
-  },
-  {
-    name: "Systemorph / IFRS17CalculationEngine",
-    url: "https://github.com/Systemorph/IFRS17CalculationEngine",
-    ar: "مرجع تطبيقي لمحركات IFRS 17؛ أجزاء المشروع الخاصة بالمحرك والقالب تحمل MIT.",
-    en: "Implementation reference for IFRS 17 calculation workflows; the engine/template subprojects include MIT licensing.",
-  },
-  {
-    name: "IFRS Connect — Public",
-    url: "https://github.com/adamjabenn-prog/ifrsconnect-public",
-    ar: "استُخدم كمرجع لمنهجية وأفكار IFRS 16 فقط؛ المستودع يوضح أن محرك الحساب الفعلي مملوك وغير منشور.",
-    en: "Used only as a methodology/product reference for IFRS 16; the repository states that its actual calculation engine is proprietary.",
-  },
-  {
-    name: "API Evangelist / accounting-standards",
-    url: "https://github.com/api-evangelist/accounting-standards",
-    ar: "فهرس لمصادر وواجهات بيانات عامة. لا يوجد ترخيص مستودع صريح ظاهر، لذلك لم تُنسخ قواعد بياناته أو ملفاته.",
-    en: "Index of public standards/data resources. No explicit repository licence was found, so its datasets and files are not copied here.",
-  },
 ];
 
 type FamilyFilter = "all" | StandardFamily;

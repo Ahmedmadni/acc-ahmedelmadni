@@ -38,8 +38,8 @@ export const IFRS_DEPTH_B_QUESTION_SEED = [
     "track": "IFRS",
     "topic": "IFRS 18 — Defined subtotal",
     "question": {
-      "ar": "ما المجموع الفرعي المحدد بجانب الربح التشغيلي؟",
-      "en": "Which defined subtotal is required in addition to operating profit?"
+      "ar": "لمنشأة لا ينطبق عليها استثناء الفقرة 73 من IFRS 18، ما المجموع الفرعي المحدد بجانب الربح التشغيلي؟",
+      "en": "For an entity outside the IFRS 18 paragraph 73 exception, which defined subtotal is required in addition to operating profit?"
     },
     "choices": {
       "ar": [
@@ -57,10 +57,10 @@ export const IFRS_DEPTH_B_QUESTION_SEED = [
     },
     "answerIndex": 0,
     "explanation": {
-      "ar": "يتطلب IFRS 18 عرض الربح التشغيلي والربح قبل التمويل وضرائب الدخل ضمن المجاميع المحددة.",
-      "en": "IFRS 18 requires operating profit and profit before financing and income taxes among defined subtotals."
+      "ar": "تتطلب الفقرة 69 من IFRS 18 عرض الربح التشغيلي والربح قبل التمويل وضرائب الدخل، مع مراعاة استثناء الفقرة 73 لبعض المنشآت.",
+      "en": "IFRS 18 paragraph 69 specifies operating profit and profit before financing and income taxes, subject to the paragraph 73 exception for certain entities."
     },
-    "reference": "IFRS 18 — subtotals",
+    "reference": "IFRS 18.69, 73 — subtotals",
     "difficulty": "easy",
     "examDomain": "Defined subtotal"
   },
