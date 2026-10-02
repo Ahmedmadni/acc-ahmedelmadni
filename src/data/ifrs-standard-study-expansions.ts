@@ -397,6 +397,559 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 38": {
+    sections: [
+      {
+        title: text(
+          "بوابة الاعتراف: التعريف والسيطرة والقياس",
+          "Recognition gateway: definition, control and measurement",
+        ),
+        explanation: text(
+          "لا يكفي أن يكون الإنفاق مفيدًا أو ذا اسم تجاري جذاب حتى يصبح أصلًا غير ملموس. يجب أن يكون المورد غير نقدي بلا جوهر مادي، وقابلًا للتحديد إما لأنه منفصل وقابل للبيع أو الترخيص، أو لأنه ناشئ من حقوق تعاقدية أو قانونية. ثم يلزم احتمال تدفق المنافع المستقبلية وإمكان قياس التكلفة بموثوقية مع سيطرة المنشأة على المورد.",
+          "Useful expenditure or an attractive commercial label is not enough to create an intangible asset. The resource must be an identifiable non-monetary asset without physical substance: either separable and capable of sale or licensing, or arising from contractual or legal rights. Probable future benefits, reliable cost measurement and the entity's control over the resource are then required.",
+        ),
+        keyPoints: [
+          text(
+            "الشهرة المتولدة داخليًا لا تثبت أصلًا لأنها ليست موردًا قابلًا للتحديد تقاس تكلفته بموثوقية.",
+            "Internally generated goodwill is not recognised because it is not an identifiable resource with reliably measurable cost.",
+          ),
+          text(
+            "العلامات التجارية وقوائم العملاء وعناوين النشر المتولدة داخليًا تحمل على المصروف.",
+            "Internally generated brands, customer lists and publishing titles are expensed.",
+          ),
+          text(
+            "الأصل المكتسب منفردًا يقاس مبدئيًا بالتكلفة، أما المكتسب في تجميع أعمال فيقاس وفق IFRS 3.",
+            "A separately acquired asset is initially measured at cost; one acquired in a business combination follows IFRS 3.",
+          ),
+        ],
+        reference: "IAS 38.8–17, 18–23, 48–64",
+      },
+      {
+        title: text(
+          "البحث مقابل التطوير: نقطة التحول الحاسمة",
+          "Research versus development: the decisive transition",
+        ),
+        explanation: text(
+          "ينفق البحث فورًا لأنه لا يمكن في تلك المرحلة إثبات وجود أصل سيولد منافع محتملة. أما نفقات التطوير فتُرسمل من التاريخ الذي تثبت فيه المنشأة جميع الشروط الستة معًا: الجدوى الفنية، والنية والقدرة على الإكمال، والقدرة على الاستخدام أو البيع، وكيفية توليد المنافع أو وجود سوق، وتوافر الموارد، والقدرة على قياس الإنفاق بموثوقية. لا يجوز الرجوع لاحقًا ورسملة مبالغ سبق إثباتها مصروفًا.",
+          "Research is expensed immediately because an asset capable of generating probable benefits cannot yet be demonstrated. Development expenditure is capitalised only from the date all six conditions are demonstrated together: technical feasibility, intention and ability to complete, ability to use or sell, probable benefits or a market, adequate resources, and reliable measurement of expenditure. Amounts previously expensed cannot later be reinstated as an asset.",
+        ),
+        keyPoints: [
+          text(
+            "حدد تاريخ استيفاء الشروط بوثائق مجلس الإدارة والميزانية والاختبارات الفنية ودراسة السوق.",
+            "Evidence the criteria date with board approval, budgets, technical tests and market support.",
+          ),
+          text(
+            "إذا تعذر فصل البحث عن التطوير، تعامل مع كامل المشروع كمرحلة بحث.",
+            "If research cannot be distinguished from development, treat the whole project as research.",
+          ),
+          text(
+            "تبدأ الرسملة مستقبلًا من تاريخ الاستيفاء، وليست خيارًا محاسبيًا بعد تحقق الشروط.",
+            "Capitalisation starts prospectively when the criteria are met; it is not an accounting-policy choice once they are satisfied.",
+          ),
+        ],
+        reference: "IAS 38.52–67, 71",
+      },
+      {
+        title: text(
+          "العمر الإنتاجي والقياس اللاحق والانخفاض",
+          "Useful life, subsequent measurement and impairment",
+        ),
+        explanation: text(
+          "بعد الاعتراف تختار المنشأة نموذج التكلفة أو نموذج إعادة التقييم للفئة، لكن إعادة التقييم لا تتاح إلا عند وجود سوق نشط، وهو أمر نادر للأصول غير الملموسة الفريدة. الأصل ذو العمر المحدد يستهلك من تاريخ إتاحته للاستخدام وفق نمط المنافع، أما ذو العمر غير المحدد فلا يستهلك ويُختبر سنويًا للانخفاض وتراجع صفة العمر غير المحدد كل فترة.",
+          "After recognition, the entity applies the cost model or, for a class, the revaluation model; revaluation is available only when an active market exists, which is rare for unique intangibles. A finite-life asset is amortised from the date it is available for use according to the benefit pattern. An indefinite-life asset is not amortised, is tested annually for impairment, and its indefinite-life assessment is reconsidered each period.",
+        ),
+        keyPoints: [
+          text(
+            "القيمة التخريدية للأصل ذي العمر المحدد تساوي صفرًا عادةً إلا في حالات محددة.",
+            "The residual value of a finite-life intangible is normally zero except in specified circumstances.",
+          ),
+          text(
+            "راجع العمر والطريقة والقيمة التخريدية سنويًا، وعالج التغير كتغير في تقدير محاسبي.",
+            "Review useful life, method and residual value annually and account for changes as estimate changes.",
+          ),
+          text(
+            "الأصل غير المتاح للاستخدام والأصل ذو العمر غير المحدد يخضعان لاختبار انخفاض سنوي.",
+            "An asset not yet available for use and an indefinite-life asset require annual impairment testing.",
+          ),
+        ],
+        reference: "IAS 38.72–87, 97–110; IAS 36.9–10",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "مشروع بحث وتطوير ومصروف السنة",
+          "Research and development project: annual expense",
+        ),
+        facts: text(
+          "في 1 يناير 20X5 كان لدى Moor Labs تكاليف تطوير مرسملة بتكلفة أصلية 10 ملايين وقيمة دفترية 5 ملايين، وتستهلك بنسبة 25% سنويًا بالقسط الثابت. أنفق مشروع جديد 1.6 مليون في البحث حتى 31 أغسطس، ثم 750 ألفًا شهريًا في التطوير. لم تثبت الجدوى التجارية إلا في 1 نوفمبر وظل المشروع قيد التطوير في 31 ديسمبر.",
+          "At 1 January 20X5, Moor Labs had capitalised development costs with original cost of $10m and carrying amount of $5m, amortised at 25% a year straight-line. A new project incurred $1.6m of research costs to 31 August and then $750,000 a month of development expenditure. Commercial success was not demonstrated until 1 November and the project remained in development at year-end.",
+        ),
+        calculations: [
+          text("مصروف البحث = 1.6 مليون.", "Research expense = $1.6m."),
+          text(
+            "تطوير سبتمبر وأكتوبر قبل استيفاء الشروط = 0.75 × شهرين = 1.5 مليون مصروف.",
+            "September and October development before the criteria date = $0.75m × 2 = $1.5m expense.",
+          ),
+          text(
+            "تطوير نوفمبر وديسمبر بعد استيفاء الشروط = 0.75 × شهرين = 1.5 مليون يرسمل.",
+            "November and December development after the criteria date = $0.75m × 2 = $1.5m capitalised.",
+          ),
+          text(
+            "استهلاك الأصل القائم = 10 × 25% = 2.5 مليون؛ إجمالي مصروف السنة = 1.6 + 1.5 + 2.5 = 5.6 مليون.",
+            "Amortisation of the existing asset = $10m × 25% = $2.5m; total annual expense = $1.6m + $1.5m + $2.5m = $5.6m.",
+          ),
+        ],
+        conclusion: text(
+          "يثبت 5.6 مليون مصروفًا في 20X5، بينما يضاف 1.5 مليون فقط إلى أصل التطوير الجديد.",
+          "$5.6m is recognised as expense in 20X5, while only $1.5m is added to the new development asset.",
+        ),
+        journalEntries: [
+          {
+            label: text("البحث والتطوير قبل الاستيفاء", "Research and pre-criteria development"),
+            debit: text("مصروف بحث وتطوير", "Research and development expense"),
+            credit: text("نقدية/دائنون", "Cash/payables"),
+            amount: text("3.1 مليون", "$3.1m"),
+          },
+          {
+            label: text("التطوير بعد استيفاء الشروط", "Post-criteria development"),
+            debit: text("أصل تكاليف تطوير", "Development cost asset"),
+            credit: text("نقدية/دائنون", "Cash/payables"),
+            amount: text("1.5 مليون", "$1.5m"),
+          },
+          {
+            label: text("استهلاك الأصل القائم", "Existing asset amortisation"),
+            debit: text("مصروف استهلاك", "Amortisation expense"),
+            credit: text("مجمع الاستهلاك", "Accumulated amortisation"),
+            amount: text("2.5 مليون", "$2.5m"),
+          },
+        ],
+        reference: "IAS 38.54–67, 71, 97",
+      },
+    ],
+  },
+  "IAS 40": {
+    sections: [
+      {
+        title: text("التصنيف بحسب الغرض الاقتصادي", "Classification by economic purpose"),
+        explanation: text(
+          "العقار الاستثماري أرض أو مبنى، أو جزء منهما، يحتفظ به المالك أو المستأجر كأصل حق استخدام لكسب الإيجار أو الزيادة الرأسمالية أو كليهما. التصنيف تحكمه طريقة استخدام العقار لا شكله القانوني: عقار يستخدم في الإنتاج أو الإدارة يقع عادة ضمن IAS 16، وعقار مطور للبيع في النشاط المعتاد ضمن IAS 2.",
+          "Investment property is land or a building, or part of either, held by an owner or by a lessee as a right-of-use asset to earn rentals, for capital appreciation, or both. Classification follows economic use rather than legal form: property used in production or administration normally falls under IAS 16, while property developed for ordinary-course sale falls under IAS 2.",
+        ),
+        keyPoints: [
+          text(
+            "تشمل الفئة العقار الشاغر المحتفظ به للتأجير والعقار الجاري تطويره ليصبح استثماريًا.",
+            "The category includes vacant property held for rental and property being developed for future investment use.",
+          ),
+          text(
+            "إذا أمكن بيع الأجزاء أو تأجيرها تمويليًا بصورة منفصلة، يحاسب عن كل جزء وفق استخدامه.",
+            "If portions can be sold or finance-leased separately, account for each portion according to its use.",
+          ),
+          text(
+            "إذا تعذر الفصل وكان الجزء المستخدم ذاتيًا غير مهم، قد يصنف العقار كله استثماريًا.",
+            "If portions cannot be separated and the owner-occupied portion is insignificant, the whole property may qualify as investment property.",
+          ),
+        ],
+        reference: "IAS 40.5–15",
+      },
+      {
+        title: text("القيمة العادلة أم التكلفة؟", "Fair value or cost?"),
+        explanation: text(
+          "يقاس العقار الاستثماري أولًا بالتكلفة بما فيها تكاليف المعاملة. بعد ذلك تختار المنشأة عادة نموذج القيمة العادلة أو نموذج التكلفة لجميع عقاراتها الاستثمارية. في نموذج القيمة العادلة يثبت التغير مباشرة في الربح أو الخسارة؛ وفي نموذج التكلفة يطبق القياس المناسب وفق IAS 16 أو IFRS 16 مع الإفصاح عن القيمة العادلة.",
+          "Investment property is initially measured at cost including transaction costs. The entity then generally selects either the fair value model or the cost model for all investment property. Under fair value, changes go directly to profit or loss. Under cost, subsequent measurement follows IAS 16 or IFRS 16 as applicable, while fair value is disclosed.",
+        ),
+        keyPoints: [
+          text(
+            "مكاسب القيمة العادلة لا تمر عبر الدخل الشامل الآخر أو فائض إعادة التقييم.",
+            "Fair value gains do not pass through OCI or a revaluation surplus.",
+          ),
+          text(
+            "تعكس القيمة العادلة ظروف السوق في تاريخ التقرير وفق IFRS 13.",
+            "Fair value reflects market conditions at the reporting date under IFRS 13.",
+          ),
+          text(
+            "عدم القدرة على القياس الموثوق استثناء محدود ولا يبرر الانتقاء بين العقارات.",
+            "Inability to measure reliably is a narrow exception and does not permit cherry-picking among properties.",
+          ),
+        ],
+        reference: "IAS 40.20–32A, 33–56, 79; IFRS 13",
+      },
+      {
+        title: text("التحويلات لا تحدث إلا بتغير الاستخدام", "Transfers require a change in use"),
+        explanation: text(
+          "لا يكفي تغير نية الإدارة وحده للتحويل من أو إلى العقار الاستثماري؛ يلزم دليل على تغير الاستخدام. عند التحويل من عقار استثماري بالقيمة العادلة إلى إشغال ذاتي أو مخزون تصبح القيمة العادلة يوم التغيير هي التكلفة المفترضة. وعند التحويل من إشغال ذاتي إلى نموذج القيمة العادلة يطبق IAS 16 حتى تاريخ التغيير ثم تعالج الفروق كإعادة تقييم قبل الانتقال.",
+          "A change in management intention alone is insufficient for a transfer to or from investment property; evidence of changed use is required. For a transfer from fair-value investment property to owner occupation or inventory, fair value at the date of change becomes deemed cost. For owner-occupied property moving to the fair value model, IAS 16 applies up to the change date and the difference is treated as a revaluation before transfer.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ الإشغال الذاتي أو التطوير للبيع من أمثلة دليل تغير الاستخدام.",
+            "Commencement of owner occupation or development for sale are examples of evidence of changed use.",
+          ),
+          text(
+            "إعادة تصنيف الاسم في السجل لا تكفي من دون تغير فعلي يمكن إثباته.",
+            "Relabelling the asset in a register is not enough without a demonstrable actual change.",
+          ),
+        ],
+        reference: "IAS 40.57–65",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("مبنى من خمسة طوابق متعدد الاستخدام", "A five-storey mixed-use building"),
+        facts: text(
+          "حصلت Spruce Co على مبنى من خمسة طوابق، وكل طابق مساحة مكتبية مستقلة كان يمكن الحصول عليها منفردة. تستخدم الشركة طابقًا للمبيعات والتسويق، وتؤجر الطوابق الأربعة الأخرى للغير.",
+          "Spruce Co obtains a five-storey building. Each floor is self-contained office space that could have been obtained separately. The company uses one floor for sales and marketing and rents the other four to third parties.",
+        ),
+        calculations: [
+          text(
+            "الجزء المشغول ذاتيًا = طابق واحد من خمسة = 20% إذا كانت الطوابق متكافئة في أساس التخصيص.",
+            "Owner-occupied portion = one floor out of five = 20% if the floors are equivalent for allocation purposes.",
+          ),
+          text(
+            "الجزء المؤجر = أربعة طوابق من خمسة = 80% على الأساس نفسه.",
+            "Rented portion = four floors out of five = 80% on the same basis.",
+          ),
+          text(
+            "يفصل القياس: الجزء الأول وفق IAS 16، والجزء الثاني وفق IAS 40؛ ويستخدم أساس تخصيص معقول إذا اختلفت قيم الطوابق.",
+            "Split the measurement: the first portion follows IAS 16 and the second IAS 40; use a reasonable allocation basis if floor values differ.",
+          ),
+        ],
+        conclusion: text(
+          "قابلية الفصل تمنع تصنيف المبنى كله تصنيفًا واحدًا؛ يحاسب عن كل جزء بحسب استخدامه الفعلي.",
+          "Because the portions are separable, the whole building is not forced into one classification; each portion follows its actual use.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات مبسط عند الاعتراف الأولي", "Simplified initial recognition"),
+            debit: text("عقار وآلات ومعدات — الجزء المشغول", "PPE — occupied portion"),
+            credit: text("النقدية/الالتزام", "Cash/liability"),
+            amount: text("20% من المبلغ المخصص", "20% of allocated amount"),
+          },
+          {
+            label: text("الجزء المؤجر", "Rented portion"),
+            debit: text("عقار استثماري", "Investment property"),
+            credit: text("النقدية/الالتزام", "Cash/liability"),
+            amount: text("80% من المبلغ المخصص", "80% of allocated amount"),
+          },
+        ],
+        reference: "IAS 40.5–15, 20–29; IFRS 16.23–24",
+      },
+    ],
+  },
+  "IAS 23": {
+    sections: [
+      {
+        title: text("ما الذي يرسمل ولماذا؟", "What is capitalised and why?"),
+        explanation: text(
+          "تكاليف الاقتراض المنسوبة مباشرة إلى اقتناء أصل مؤهل أو إنشائه أو إنتاجه تدخل في تكلفة الأصل؛ وما عداها يثبت مصروفًا. الأصل المؤهل هو الذي يحتاج بالضرورة إلى فترة زمنية جوهرية ليصبح جاهزًا للاستخدام المقصود أو البيع، وقد يكون مصنعًا أو عقارًا استثماريًا قيد الإنشاء أو مخزونًا يستغرق إنتاجه مدة طويلة.",
+          "Borrowing costs directly attributable to acquiring, constructing or producing a qualifying asset form part of that asset's cost; other borrowing costs are expensed. A qualifying asset necessarily takes a substantial period to become ready for intended use or sale and may include a plant, investment property under construction or long-cycle inventory.",
+        ),
+        keyPoints: [
+          text(
+            "الأصل الجاهز عند اقتنائه ليس أصلًا مؤهلًا لمجرد تمويله بقرض.",
+            "An asset ready for use when acquired is not qualifying merely because debt financed it.",
+          ),
+          text(
+            "قد تشمل تكاليف الاقتراض فائدة الالتزامات الإيجارية وفروق صرف تعد تعديلًا للفائدة.",
+            "Borrowing costs may include lease-liability interest and exchange differences treated as interest adjustments.",
+          ),
+          text(
+            "تقيد الرسملة بالمبلغ الذي كان يمكن تجنبه لولا الإنفاق على الأصل.",
+            "Capitalisation is constrained to costs that would have been avoided without expenditure on the asset.",
+          ),
+        ],
+        reference: "IAS 23.1–8",
+      },
+      {
+        title: text("بداية الرسملة وتعليقها وإيقافها", "Commencement, suspension and cessation"),
+        explanation: text(
+          "تبدأ الرسملة فقط عندما تجتمع ثلاثة شروط: تحمل إنفاق على الأصل، وتحمل تكاليف اقتراض، ومباشرة الأنشطة اللازمة لإعداده. وتشمل الأنشطة العمل الفني والإداري السابق للبناء، لكنها لا تشمل الاحتفاظ بأرض بلا تطوير. تعلق الرسملة خلال فترات ممتدة تتوقف فيها أنشطة التطوير الفعلية، وتتوقف عند اكتمال معظم الأنشطة اللازمة أو عند اكتمال جزء صالح للاستخدام بصورة مستقلة.",
+          "Capitalisation begins only when three conditions coincide: expenditure on the asset, borrowing costs, and activities necessary to prepare it. Those activities include technical and administrative work before physical construction, but not merely holding undeveloped land. Capitalisation is suspended during extended periods in which active development is interrupted and ceases when substantially all necessary activities are complete or when an independently usable part is completed.",
+        ),
+        keyPoints: [
+          text(
+            "التأخير الفني الطبيعي أو الإداري الضروري لا يؤدي تلقائيًا إلى التعليق.",
+            "A normal technical delay or necessary administrative process does not automatically trigger suspension.",
+          ),
+          text(
+            "توقف قصير لا يوصف بأنه فترة ممتدة يحتاج حكمًا موثقًا بدل تطبيق آلي.",
+            "A short interruption not amounting to an extended period requires documented judgement rather than an automatic stop.",
+          ),
+        ],
+        reference: "IAS 23.17–25",
+      },
+      {
+        title: text("الاقتراض المحدد والاقتراض العام", "Specific and general borrowings"),
+        explanation: text(
+          "في القرض المخصص للمشروع يرسمل ما تحملته المنشأة فعليًا خلال الفترة ناقصًا دخل الاستثمار المؤقت للأموال. أما عند استخدام الاقتراض العام فتطبق نسبة رسملة هي المتوسط المرجح لتكاليف الاقتراض السارية على الإنفاق المؤهل، مع استبعاد القروض المخصصة لأصول أخرى حتى تصبح تلك الأصول جاهزة.",
+          "For a project-specific loan, capitalise actual borrowing costs during the period less income from temporary investment of those funds. When general borrowings fund the asset, apply a capitalisation rate based on the weighted average borrowing costs applicable to qualifying expenditure, excluding borrowings specific to other assets until those assets are ready.",
+        ),
+        keyPoints: [
+          text(
+            "لا يتجاوز المبلغ المرسمل إجمالي تكاليف الاقتراض المتحملة خلال الفترة.",
+            "The capitalised amount cannot exceed total borrowing costs incurred during the period.",
+          ),
+          text(
+            "استخدم متوسط القيمة الدفترية للإنفاق عندما يقارب فترات تراكم الإنفاق.",
+            "Use average carrying expenditure when it reasonably approximates accumulated expenditure periods.",
+          ),
+        ],
+        reference: "IAS 23.10–16",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("مخزن ممول من الاقتراض العام", "Warehouse funded from general borrowings"),
+        facts: text(
+          "لدى Hazlenut Co طوال 20X4 قرض مصرفي بمليون دولار وفائدة 5% وسندات قرض بثلاثة ملايين وفائدة 7%. في 1 أغسطس استخدمت 1.5 مليون من الاقتراض العام لإنشاء مخزن، وبدأ المعماريون التصميم في اليوم نفسه، ثم بدأ البناء في 1 سبتمبر. المطلوب حساب الرسملة حتى 30 نوفمبر 20X4.",
+          "Throughout 20X4, Hazlenut Co has a $1m bank loan at 5% and $3m loan notes at 7%. On 1 August it uses $1.5m of general borrowings to construct a warehouse. Architects begin design that day and physical construction starts on 1 September. Capitalisation is required through 30 November 20X4.",
+        ),
+        calculations: [
+          text(
+            "نسبة الرسملة = (1÷4 × 5%) + (3÷4 × 7%) = 6.5%.",
+            "Capitalisation rate = (1÷4 × 5%) + (3÷4 × 7%) = 6.5%.",
+          ),
+          text(
+            "تبدأ الرسملة في أغسطس لأن أنشطة الإعداد بدأت بالتصميم، لا يلزم انتظار البناء الفعلي.",
+            "Capitalisation starts in August because preparation began with design; physical construction need not have started.",
+          ),
+          text(
+            "تكلفة الاقتراض المرسملة من أغسطس إلى نوفمبر = 1,500,000 × 6.5% × 4÷12 = 32,500.",
+            "Borrowing cost capitalised from August through November = $1,500,000 × 6.5% × 4÷12 = $32,500.",
+          ),
+        ],
+        conclusion: text(
+          "يضاف 32,500 إلى تكلفة المخزن عن الفترة من أغسطس إلى ديسمبر وفق بيانات المثال التي تحتسب أربعة أشهر.",
+          "$32,500 is added to warehouse cost for the example's four-month capitalisation period.",
+        ),
+        journalEntries: [
+          {
+            label: text("رسملة الفائدة المؤهلة", "Capitalise eligible interest"),
+            debit: text(
+              "أصل مؤهل — مخزن تحت الإنشاء",
+              "Qualifying asset — warehouse under construction",
+            ),
+            credit: text("فائدة مستحقة/نقدية", "Interest payable/cash"),
+            amount: text("32,500", "$32,500"),
+          },
+        ],
+        reference: "IAS 23.14, 17–19",
+      },
+    ],
+  },
+  "IAS 20": {
+    sections: [
+      {
+        title: text("الاعتراف عند وجود تأكيد معقول", "Recognition on reasonable assurance"),
+        explanation: text(
+          "لا يعترف بالمنحة الحكومية لمجرد صدور الموافقة أو استلام النقد. يلزم تأكيد معقول بأن المنشأة ستلتزم بالشروط وأن المنحة ستُستلم. لا يعني ذلك ضمانًا مطلقًا، لكنه يتطلب أدلة عملية على القدرة والنية وسجل الامتثال. استلام النقد قبل تحقق معيار الاعتراف ينشئ عادة التزامًا إلى أن يتوافر الأساس المناسب.",
+          "A government grant is not recognised merely because approval is issued or cash is received. There must be reasonable assurance that the entity will comply with conditions and the grant will be received. This is not absolute certainty, but it requires practical evidence of ability, intent and compliance. Cash received before recognition criteria are met will normally create a liability until an appropriate basis exists.",
+        ),
+        keyPoints: [
+          text(
+            "فرّق بين شرط يمنح الاستحقاق وبين إجراء إداري لا يخلق عدم تأكد جوهريًا.",
+            "Distinguish entitlement conditions from administrative steps that do not create substantive uncertainty.",
+          ),
+          text(
+            "لا يثبت الاستلام وحده أن جميع الشروط قد تحققت.",
+            "Receipt alone does not prove that all conditions have been satisfied.",
+          ),
+          text(
+            "تعالج المنحة واجبة السداد كتغير في تقدير محاسبي مع تطبيق قواعد السداد.",
+            "A grant that becomes repayable is treated as a change in accounting estimate under the repayment requirements.",
+          ),
+        ],
+        reference: "IAS 20.7–11, 32",
+      },
+      {
+        title: text("المطابقة المنهجية والعرض", "Systematic matching and presentation"),
+        explanation: text(
+          "تعترف المنحة في الربح أو الخسارة بصورة منهجية خلال الفترات التي تثبت فيها التكاليف التي تهدف إلى تعويضها. منحة الأصل تعرض إما كدخل مؤجل يطلق على مدى العمر الإنتاجي، أو بخصمها من القيمة الدفترية للأصل. ومنحة الدخل تعرض كدخل منفصل أو تخصم من المصروف المرتبط، مع ثبات السياسة والإفصاح عنها.",
+          "A grant is recognised in profit or loss on a systematic basis over the periods in which the related costs are recognised. An asset-related grant is presented either as deferred income released over the useful life or as a deduction from the asset's carrying amount. An income-related grant is shown separately or deducted from the related expense, with a consistent disclosed policy.",
+        ),
+        keyPoints: [
+          text(
+            "التوقيت تحكمه التكاليف المرتبطة لا موعد التحصيل.",
+            "Timing follows the related costs rather than the collection date.",
+          ),
+          text(
+            "المنحة لتعويض خسائر سابقة أو دعم فوري بلا تكاليف مستقبلية تثبت عند استحقاقها.",
+            "A grant compensating past losses or giving immediate support with no future costs is recognised when receivable.",
+          ),
+          text(
+            "أفصح عن السياسة وطبيعة المنح والشروط غير المستوفاة والالتزامات المحتملة.",
+            "Disclose the policy, nature of grants, unfulfilled conditions and contingencies.",
+          ),
+        ],
+        reference: "IAS 20.12–31, 39",
+      },
+      {
+        title: text(
+          "المنح غير النقدية والمساعدة الحكومية",
+          "Non-monetary grants and government assistance",
+        ),
+        explanation: text(
+          "قد تمنح الحكومة أرضًا أو موردًا غير نقدي؛ يسمح المعيار عادة بقياس الأصل والمنحة بالقيمة العادلة، كما يجيز أحيانًا إثباتهما بالقيمة الاسمية. أما المساعدة التي لا يمكن إعطاؤها قيمة معقولة، مثل بعض الاستشارات المجانية، فقد لا تولد قيدًا لكنها تتطلب إفصاحًا إذا كانت مهمة لفهم القوائم.",
+          "Government may grant land or another non-monetary resource. The Standard commonly permits recognition of both asset and grant at fair value, while nominal amount is also permitted in some circumstances. Assistance that cannot reasonably be valued, such as some free advice, may create no entry but requires disclosure when significant to understanding the financial statements.",
+        ),
+        keyPoints: [
+          text(
+            "القروض القابلة للإعفاء تعامل كمنحة عند وجود تأكيد معقول باستيفاء شروط الإعفاء.",
+            "A forgivable loan is treated as a grant when there is reasonable assurance that forgiveness conditions will be met.",
+          ),
+          text(
+            "الفائدة الناتجة من قرض حكومي بأقل من سعر السوق تعالج مع تطبيق IFRS 9.",
+            "The benefit of a below-market government loan is accounted for together with IFRS 9.",
+          ),
+        ],
+        reference: "IAS 20.10A, 21–23, 34–39",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("منحة أصل عمره عشر سنوات", "Grant for an asset with a ten-year life"),
+        facts: text(
+          "حصلت منشأة على منحة أصل قدرها مليون لاقتناء أصل عمره عشر سنوات، ويوجد تأكيد معقول باستمرار الالتزام بالشروط. اختارت سياسة الدخل المؤجل وافترض عدم وجود قيمة تخريدية.",
+          "An entity receives a $1m asset-related grant for an asset with a ten-year life, with reasonable assurance of continued compliance. It selects the deferred-income presentation and assumes no residual value.",
+        ),
+        calculations: [
+          text(
+            "الإطلاق السنوي المنتظم = 1,000,000 ÷ 10 = 100,000.",
+            "Annual systematic release = $1,000,000 ÷ 10 = $100,000.",
+          ),
+          text(
+            "لا يثبت المليون كاملًا دخلًا يوم الاستلام لأن التكلفة المرتبطة تُستهلك على عشر سنوات.",
+            "The full $1m is not income on receipt because the related cost is consumed over ten years.",
+          ),
+          text(
+            "إذا اختير بديل صافي الأصل، يخفض الأصل بمليون وتظهر المنفعة عبر انخفاض الإهلاك بدل دخل منحة منفصل.",
+            "Under the net-asset alternative, the asset is reduced by $1m and the benefit appears through lower depreciation rather than separate grant income.",
+          ),
+        ],
+        conclusion: text(
+          "في سياسة الدخل المؤجل يظهر التزام أولي ثم يثبت 100,000 دخل منحة سنويًا بالتوازي مع إهلاك الأصل.",
+          "Under deferred income, an initial liability is recognised and $100,000 of grant income is released annually alongside asset depreciation.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "عند استلام المنحة واستيفاء الاعتراف",
+              "On receipt when recognition criteria are met",
+            ),
+            debit: text("النقدية", "Cash"),
+            credit: text("دخل منحة مؤجل", "Deferred grant income"),
+            amount: text("1,000,000", "$1,000,000"),
+          },
+          {
+            label: text("الإطلاق السنوي", "Annual release"),
+            debit: text("دخل منحة مؤجل", "Deferred grant income"),
+            credit: text("دخل منحة", "Grant income"),
+            amount: text("100,000", "$100,000"),
+          },
+        ],
+        reference: "IAS 20.7, 12, 24–28",
+      },
+    ],
+  },
+  "IAS 2": {
+    sections: [
+      {
+        title: text("بناء التكلفة: ما يدخل وما يستبعد", "Building cost: inclusions and exclusions"),
+        explanation: text(
+          "تشمل تكلفة المخزون تكلفة الشراء بعد الخصومات، وتكاليف التحويل، وأي تكلفة أخرى لازمة لإحضاره إلى موقعه وحالته الحاليين. توزع التكاليف الصناعية الثابتة على أساس الطاقة العادية، بينما توزع المتغيرة على أساس الاستخدام الفعلي. أما الفاقد غير الطبيعي والتخزين غير الضروري والبيع والإدارة غير المرتبطة بالإنتاج فتثبت مصروفًا.",
+          "Inventory cost includes purchase cost net of discounts, conversion costs and other costs necessary to bring inventory to its present location and condition. Fixed production overhead is allocated using normal capacity, while variable overhead follows actual use. Abnormal waste, unnecessary storage, selling and unrelated administration are expensed.",
+        ),
+        keyPoints: [
+          text(
+            "انخفاض الإنتاج لا يرفع نصيب الوحدة من التكاليف الثابتة؛ الجزء غير الموزع مصروف فترة.",
+            "Low production does not inflate fixed overhead per unit; unallocated overhead is a period expense.",
+          ),
+          text(
+            "قد تدخل تكلفة الاقتراض فقط إذا كان المخزون أصلًا مؤهلًا وفق IAS 23.",
+            "Borrowing costs enter inventory only when it is a qualifying asset under IAS 23.",
+          ),
+          text(
+            "تكاليف الوفاء بعقد العميل التي لا تنشئ مخزونًا قد تخضع لـIFRS 15 بدل IAS 2.",
+            "Customer-contract fulfilment costs that do not create inventory may fall under IFRS 15 instead of IAS 2.",
+          ),
+        ],
+        reference: "IAS 2.10–22; IAS 23.7",
+      },
+      {
+        title: text("صيغ التكلفة واتساق التطبيق", "Cost formulas and consistent application"),
+        explanation: text(
+          "تستخدم التكلفة المحددة للأصناف غير القابلة للتبادل أو المخصصة لمشروعات محددة. وللأصناف القابلة للتبادل تستخدم FIFO أو المتوسط المرجح؛ ولا يسمح LIFO. تطبق الصيغة نفسها على المخزونات المتشابهة في طبيعتها واستخدامها، ويمكن اختلاف الصيغة عندما تختلف الطبيعة أو الاستخدام فعلًا لا لمجرد اختلاف الموقع الجغرافي.",
+          "Specific identification is used for non-interchangeable items or goods allocated to specific projects. Interchangeable items use FIFO or weighted average; LIFO is prohibited. Apply the same formula to inventories with similar nature and use, and use a different formula only when nature or use truly differs, not merely because of geography.",
+        ),
+        keyPoints: [
+          text(
+            "يجوز استخدام التكلفة المعيارية أو طريقة التجزئة إذا كانت النتيجة تقارب التكلفة الفعلية.",
+            "Standard cost or the retail method may be used when the result approximates actual cost.",
+          ),
+          text(
+            "يحدث المتوسط المرجح دوريًا أو مع كل شحنة بحسب نظام المنشأة.",
+            "Weighted average may be updated periodically or upon each delivery, depending on the system.",
+          ),
+        ],
+        reference: "IAS 2.21–27",
+      },
+      {
+        title: text("اختبار صافي القيمة القابلة للتحقق والعكس", "NRV testing and reversal"),
+        explanation: text(
+          "في كل تاريخ تقرير يقارن المخزون، عادة صنفًا بصنف، بين التكلفة وصافي القيمة القابلة للتحقق: سعر البيع المقدر ناقص تكاليف الإكمال والبيع الضرورية. يثبت الانخفاض فورًا مصروفًا. إذا زالت أسبابه في فترة لاحقة يعكس في حدود الانخفاض الأصلي، فيصبح القياس الجديد الأقل من التكلفة وصافي القيمة القابلة للتحقق المعدل.",
+          "At each reporting date, inventory—normally item by item—is compared between cost and net realisable value: estimated selling price less necessary completion and selling costs. A write-down is expensed immediately. If the reasons reverse later, reverse only up to the original write-down, producing the new lower of cost and revised NRV.",
+        ),
+        keyPoints: [
+          text(
+            "صافي القيمة القابلة للتحقق قيمة خاصة بالمنشأة وليست هي القيمة العادلة ناقص تكاليف البيع.",
+            "NRV is entity-specific and is not the same as fair value less costs to sell.",
+          ),
+          text(
+            "لا تخفض المواد الخام دون التكلفة إذا كان المنتج النهائي المتوقع سيباع بالتكلفة أو أعلى.",
+            "Raw materials are not written below cost when the finished goods are expected to sell at or above cost.",
+          ),
+          text(
+            "عند بيع المخزون تصبح قيمته الدفترية مصروفًا في الفترة التي يثبت فيها الإيراد المرتبط.",
+            "When inventory is sold, its carrying amount is expensed in the period of related revenue.",
+          ),
+        ],
+        reference: "IAS 2.6–9, 28–35",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "انخفاض مخزون إلى صافي القيمة القابلة للتحقق",
+          "Inventory write-down to net realisable value",
+        ),
+        facts: text(
+          "تكلفة وحدة مخزون 120. سعر بيعها المتوقع 135، وتحتاج إلى 12 لإكمالها و8 لإتمام البيع.",
+          "An inventory item costs $120. Its expected selling price is $135, with $12 needed for completion and $8 needed to make the sale.",
+        ),
+        calculations: [
+          text("صافي القيمة القابلة للتحقق = 135 − 12 − 8 = 115.", "NRV = $135 − $12 − $8 = $115."),
+          text(
+            "القياس هو الأقل من التكلفة 120 وNRV البالغ 115، إذن القيمة الدفترية 115.",
+            "Measurement is the lower of $120 cost and $115 NRV, so carrying amount is $115.",
+          ),
+          text("خسارة الانخفاض = 120 − 115 = 5.", "Write-down loss = $120 − $115 = $5."),
+        ],
+        conclusion: text(
+          "يثبت انخفاض قدره 5 في الربح أو الخسارة؛ ولا تستبدل NRV بالقيمة العادلة السوقية.",
+          "Recognise a $5 write-down in profit or loss; do not substitute market fair value for NRV.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات الانخفاض", "Record the write-down"),
+            debit: text("مصروف انخفاض مخزون", "Inventory write-down expense"),
+            credit: text("مخصص انخفاض/المخزون", "Allowance/inventory"),
+            amount: text("5", "$5"),
+          },
+        ],
+        reference: "IAS 2.28–34",
+      },
+    ],
+  },
   "IFRS 16": {
     sections: [
       {

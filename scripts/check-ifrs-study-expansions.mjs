@@ -84,6 +84,34 @@ const reviewedEnglishSourceText = new Map([
       ],
     },
   ],
+  [
+    "ifrs-reviewed-ias38-rd-expense-01",
+    {
+      question:
+        "At 1 January 20X5, Moor Labs Co has capitalised development costs with an original cost of $10million and carrying amount of $5million. The company started a new R&D project on 1 January 20X5, incurring $1.6 million costs during the research phase, which lasted until 31 August 20X5. From that date, average development costs incurred on the project were $750,000 per month. On 1 November 20X5, the management of Moor Labs Co became confident that the project would be a commercial success and make good profits. The project is still in development at 31 December 20X5. Capitalised development expenditure is amortised at 25% per annum using the straight line method. What amount is recognised as an expense in terms of R&D in the year ended 31 December 20X5?",
+      choices: ["$1.6million", "$3.1million", "$4.1million", "$5.6million"],
+    },
+  ],
+  [
+    "ifrs-reviewed-ias38-statements-01",
+    {
+      question:
+        "Which of the following statements is/are true? 1. IAS 38 requires that intangible assets are assigned a useful life of no more than 20 years 2. When certain criteria are met, IAS 38 allows a company to choose to capitalise development expenditure or continue to recognise it as an expense 3. IAS 38 allows intangible assets to be revalued if there is an active market for the asset",
+      choices: ["1 and 2", "3 only", "1 and 3", "All of the above"],
+    },
+  ],
+  [
+    "ifrs-reviewed-ias40-fair-value-01",
+    {
+      question: "In accordance with IAS 40, an investment property",
+      choices: [
+        "May be held at fair value with gains and losses recorded through other comprehensive income",
+        "May be held at fair value with gains and losses recorded through profit and loss",
+        "Must be held at historical cost less depreciation",
+        "Must be held at net realisable value",
+      ],
+    },
+  ],
 ]);
 for (const question of reviewedQuestions) {
   if (ids.has(question.id)) failures.push(`${question.id}: duplicate reviewed question ID`);
