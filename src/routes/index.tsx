@@ -1,3 +1,4 @@
+import { useSiteLang } from "@/lib/use-site-lang";
 import "../styles.css";
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
@@ -303,7 +304,7 @@ function StickyOutgoingLayer({ children }: { children: React.ReactNode }) {
 }
 
 function Index() {
-  const [lang, setLang] = useState<Lang>("ar");
+  const [lang, setLang] = useSiteLang();
 
   const [skillModal, setSkillModal] = useState<SkillItem | null>(null);
   const [serviceModal, setServiceModal] = useState<ServiceItem | null>(null);

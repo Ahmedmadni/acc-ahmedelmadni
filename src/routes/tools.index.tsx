@@ -1,3 +1,4 @@
+import { useSiteLang } from "@/lib/use-site-lang";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
@@ -419,7 +420,7 @@ function ToolCard({
 /* ------------------------------ page shell -------------------------------- */
 
 function ToolsPage() {
-  const [lang, setLang] = useState<Lang>("ar");
+  const [lang, setLang] = useSiteLang();
   const [cat, setCat] = useState<ToolCategory | "all">("all");
   const [q, setQ] = useState("");
   const isRTL = lang === "ar";

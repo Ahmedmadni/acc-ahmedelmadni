@@ -1,3 +1,4 @@
+import { useSiteLang } from "@/lib/use-site-lang";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
@@ -115,7 +116,7 @@ function InfoBlock({
 
 function ToolDetailPage() {
   const { tool } = Route.useLoaderData();
-  const [lang, setLang] = useState<Lang>("ar");
+  const [lang, setLang] = useSiteLang();
   const [copied, setCopied] = useState(false);
   const [exporting, setExporting] = useState(false);
   const [printing, setPrinting] = useState(false);
