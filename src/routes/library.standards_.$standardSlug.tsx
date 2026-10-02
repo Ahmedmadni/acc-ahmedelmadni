@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IfrsStandardCase } from "@/components/library/IfrsStandardCase";
+import { IfrsStandardStudyExpansion } from "@/components/library/IfrsStandardStudyExpansion";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
 import { IFRS_NAVIGATOR_URL } from "@/data/ifrs-standards";
 import { useLibLang } from "./library";
@@ -66,9 +67,7 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
                 educationalLevel: "Professional",
                 citation: [
                   standard.officialUrl ?? IFRS_NAVIGATOR_URL,
-                  ...page.sources
-                    .filter((source) => source.usage === "paraphrased_with_attribution")
-                    .map((source) => source.url),
+                  ...page.sources.map((source) => source.url),
                 ],
                 keywords: [
                   standard.code,
@@ -129,6 +128,7 @@ const SECTION_LINKS = [
   { id: "accounting", ar: "الاعتراف والقياس", en: "Recognition" },
   { id: "presentation", ar: "العرض والإفصاح", en: "Presentation" },
   { id: "workflow", ar: "خطوات التطبيق", en: "Workflow" },
+  { id: "expanded-study", ar: "شرح تفصيلي", en: "Detailed study" },
   { id: "techniques", ar: "الفنيات", en: "Techniques" },
   { id: "data", ar: "البيانات والعلاقات", en: "Data & relations" },
   { id: "example", ar: "المثال والقيود", en: "Example & entries" },
@@ -309,6 +309,10 @@ function StandardLearningPage() {
               icon={TriangleAlert}
             />
 
+            {page.studyExpansion && (
+              <IfrsStandardStudyExpansion expansion={page.studyExpansion} lang={lang} />
+            )}
+
             <section
               id="techniques"
               className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 sm:p-7"
@@ -488,15 +492,8 @@ function StandardLearningPage() {
                   >
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <strong className="text-sm text-[#1C1B19]">{source.name}</strong>
-                      <span className="rounded-full bg-[#A88765]/12 px-2.5 py-1 text-[10px] font-black text-[#7c6045]">
-                        {source.license}
-                      </span>
                     </div>
                     <p className="mt-2 text-xs leading-6 text-[#625950]">{source.purpose[lang]}</p>
-                    <p className="mt-2 font-mono text-[10px] text-[#8A8179]">
-                      {isArabic ? "نسخة المراجعة" : "Reviewed revision"}:{" "}
-                      {source.revision.slice(0, 12)}
-                    </p>
                   </a>
                 ))}
               </div>

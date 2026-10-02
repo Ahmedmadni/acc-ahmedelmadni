@@ -23,6 +23,7 @@ const files = [
   "src/data/ifrs-quiz-phase6-guide-mastery.ts",
   "src/data/ifrs-quiz-phase8-enrichment.ts",
   "src/data/ifrs-quiz-phase9-applied.ts",
+  "src/data/ifrs-quiz-reviewed-extracts.ts",
 ];
 
 const priority = [
@@ -236,7 +237,7 @@ console.log(
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
       below_phase4_depth_target: belowPhase4Depth,
-      expected_total: 1117,
+      expected_total: 1122,
     },
     null,
     2,
@@ -250,8 +251,8 @@ if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
   failures.push(`Standards below twenty-five-question baseline: ${belowBaseline.join(", ")}`);
-if (questions.length !== 1117)
-  failures.push(`Expected 1117 IFRS questions; found ${questions.length}`);
+if (questions.length !== 1122)
+  failures.push(`Expected 1122 IFRS questions; found ${questions.length}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 25 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)

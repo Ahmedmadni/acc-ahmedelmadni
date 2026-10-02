@@ -4,6 +4,10 @@ const standardsSource = await fs.readFile("src/data/ifrs-standards.ts", "utf8");
 const pagesSource = await fs.readFile("src/data/ifrs-standard-pages.ts", "utf8");
 const deepDiveSource = await fs.readFile("src/data/ifrs-standard-deep-dives.ts", "utf8");
 const referenceNotesSource = await fs.readFile("src/data/ifrs-standard-reference-notes.ts", "utf8");
+const studyExpansionSource = await fs.readFile(
+  "src/data/ifrs-standard-study-expansions.ts",
+  "utf8",
+);
 const routeSource = await fs.readFile("src/routes/library.standards_.$standardSlug.tsx", "utf8");
 const caseSource = await fs.readFile("src/components/library/IfrsStandardCase.tsx", "utf8");
 const sitemapSource = await fs.readFile("src/routes/sitemap[.]xml.ts", "utf8");
@@ -30,6 +34,7 @@ const requiredPageSignals = [
   "الاعتراف والقياس",
   "العرض والإفصاح",
   "خطوات التطبيق",
+  "IfrsStandardStudyExpansion",
   "أخطاء شائعة",
   "IfrsStandardCase",
   "فنيات وملاحظات مهنية",
@@ -55,6 +60,10 @@ if (!pagesSource.includes("IFRS_STANDARDS.map(buildPage)"))
   failures.push("Learning pages are not generated from the unified standards source");
 if (!pagesSource.includes("IFRS_LOCAL_QUESTION_COUNTS"))
   failures.push("Learning pages are not linked to local question counts");
+if (!pagesSource.includes("getStandardStudyExpansion"))
+  failures.push("Learning pages are not linked to the unified study-expansion source");
+if (!studyExpansionSource.includes("IFRS_STANDARD_STUDY_EXPANSIONS"))
+  failures.push("Unified study-expansion source is missing");
 for (const signal of requiredPageSignals) {
   if (!routeSource.includes(signal)) failures.push(`Dynamic route is missing: ${signal}`);
 }

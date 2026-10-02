@@ -13,6 +13,7 @@ import { IFRS_PHASE5_B_QUESTION_SEED } from "@/data/ifrs-quiz-phase5-b";
 import { IFRS_PHASE6_GUIDE_QUESTIONS } from "@/data/ifrs-quiz-phase6-guide-mastery";
 import { IFRS_PHASE8_ENRICHMENT_QUESTIONS } from "@/data/ifrs-quiz-phase8-enrichment";
 import { IFRS_PHASE9_APPLIED_QUESTIONS } from "@/data/ifrs-quiz-phase9-applied";
+import { IFRS_REVIEWED_EXTRACT_QUESTIONS } from "@/data/ifrs-quiz-reviewed-extracts";
 
 export function detectIfrsStandardCode(question: ExamQuestion): string | null {
   const haystack = `${question.topic} ${question.reference}`;
@@ -36,12 +37,14 @@ const layers: ExamQuestion[][] = [
   IFRS_PHASE6_GUIDE_QUESTIONS,
   IFRS_PHASE8_ENRICHMENT_QUESTIONS,
   IFRS_PHASE9_APPLIED_QUESTIONS,
+  IFRS_REVIEWED_EXTRACT_QUESTIONS,
 ];
 
+/** Unmerged local items, retained so audits can detect IDs hidden by Map replacement. */
+export const IFRS_LOCAL_QUESTION_SOURCE_ITEMS = layers.flat();
+
 const byId = new Map<string, ExamQuestion>();
-for (const layer of layers) {
-  for (const question of layer) byId.set(question.id, question);
-}
+for (const question of IFRS_LOCAL_QUESTION_SOURCE_ITEMS) byId.set(question.id, question);
 
 export const IFRS_LOCAL_QUESTIONS = [...byId.values()];
 

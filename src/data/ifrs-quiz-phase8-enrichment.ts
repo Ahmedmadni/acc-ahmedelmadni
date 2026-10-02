@@ -117,7 +117,7 @@ function makeEnrichmentQuestion(
       ar: `هذه العبارة مأخوذة من تحليل الحالة التطبيقية لمعيار ${code}. اربطها بوقائع الحالة وحساباتها قبل اختيار المعالجة النهائية.`,
       en: `This statement follows the worked case for ${code}. Connect it to the case facts and calculations before reaching a final accounting conclusion.`,
     },
-    reference: `${code} — Ahmed Elmadani enriched guide; technical reference: ramyatrouny/ifrs-skill @ fda78bb`,
+    reference: code,
     difficulty,
     examDomain: `Enriched guide: ${key}`,
   };
@@ -153,7 +153,7 @@ function makeConclusionQuestion(code: Phase8Target): ExamQuestion {
       ar: `النتيجة تستند إلى وقائع وحسابات الحالة في شرح ${code}؛ راجع خطوات الحساب والقيد أو أثر العرض المبينين في الصفحة.`,
       en: `The conclusion follows the facts and calculations in the ${code} guide; review the steps and entry or presentation effect shown on the page.`,
     },
-    reference: `${code} — Ahmed Elmadani enriched guide; technical reference: ramyatrouny/ifrs-skill @ fda78bb`,
+    reference: code,
     difficulty: "hard",
     examDomain: "Enriched guide: worked-case conclusion",
   };
