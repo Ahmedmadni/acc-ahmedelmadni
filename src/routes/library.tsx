@@ -1,3 +1,4 @@
+import { useSiteLang } from "@/lib/use-site-lang";
 import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
 import { createContext, useContext, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -69,7 +70,7 @@ export function useLibFocus(): boolean {
 }
 
 function LibraryLayout() {
-  const [lang, setLang] = useState<Lang>("ar");
+  const [lang, setLang] = useSiteLang();
   const [focus, setFocus] = useState(false);
   const isRTL = lang === "ar";
   const matches = useChildMatches();

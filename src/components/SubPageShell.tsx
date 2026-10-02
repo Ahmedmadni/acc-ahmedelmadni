@@ -1,3 +1,4 @@
+import { useSiteLang } from "@/lib/use-site-lang";
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Navbar, Footer, FloatingSocial } from "@/routes/index";
 import type { Lang } from "@/lib/i18n";
@@ -7,7 +8,7 @@ const AIAssistant = lazy(() =>
 );
 
 export function SubPageShell({ children }: { children: (lang: Lang) => React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>("ar");
+  const [lang, setLang] = useSiteLang();
   const dir = lang === "ar" ? "rtl" : "ltr";
   const isRTL = lang === "ar";
 
