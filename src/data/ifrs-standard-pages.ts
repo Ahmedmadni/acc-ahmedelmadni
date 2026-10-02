@@ -7,6 +7,10 @@ import {
 } from "./ifrs-standard-reference-notes";
 import { IFRS_LOCAL_QUESTION_COUNTS } from "./ifrs-question-bank";
 import { IFRS_CONTENT_SOURCES, type IfrsContentSource } from "./ifrs-standard-enrichment";
+import {
+  getStandardStudyExpansion,
+  type StandardStudyExpansion,
+} from "./ifrs-standard-study-expansions";
 
 type LocalizedText = { ar: string; en: string };
 
@@ -15,6 +19,7 @@ export interface StandardLearningPage {
   guide: StandardGuide;
   deepDive: StandardDeepDive;
   referenceNotes: StandardReferenceNotes;
+  studyExpansion: StandardStudyExpansion | null;
   href: string;
   executiveSummary: LocalizedText;
   checklist: { ar: string[]; en: string[] };
@@ -50,6 +55,7 @@ function buildPage(standard: AccountingStandard): StandardLearningPage | null {
     guide,
     deepDive,
     referenceNotes,
+    studyExpansion: getStandardStudyExpansion(standard.code),
     href: standardPath(standard.code),
     executiveSummary: { ar: standard.summaryAr, en: standard.summaryEn },
     checklist: makeChecklist(guide),

@@ -17,7 +17,8 @@
     "ifrs:check-integrity": "node scripts/check-ifrs-question-integrity.mjs && node --test scripts/tests/ifrs-answer-index.test.mjs scripts/tests/ifrs-normalize.test.mjs",
     "ifrs:check-guides": "node scripts/check-ifrs-guide-coverage.mjs",
     "ifrs:check-pages": "node scripts/check-ifrs-page-coverage.mjs",
-    "ifrs:check-content": "node scripts/check-ifrs-question-coverage.mjs && node scripts/check-ifrs-question-integrity.mjs && node --test scripts/tests/ifrs-answer-index.test.mjs scripts/tests/ifrs-normalize.test.mjs && node scripts/check-ifrs-guide-coverage.mjs && node scripts/check-ifrs-page-coverage.mjs"
+    "ifrs:check-study": "node scripts/check-ifrs-study-expansions.mjs",
+    "ifrs:check-content": "node scripts/check-ifrs-question-coverage.mjs && node scripts/check-ifrs-question-integrity.mjs && node --test scripts/tests/ifrs-answer-index.test.mjs scripts/tests/ifrs-normalize.test.mjs && node scripts/check-ifrs-guide-coverage.mjs && node scripts/check-ifrs-page-coverage.mjs && node scripts/check-ifrs-study-expansions.mjs"
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^2.0.48",

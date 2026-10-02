@@ -77,6 +77,13 @@ function questionDifficulty(question: ExamQuestion): IfrsDifficulty {
   return question.difficulty ?? "intermediate";
 }
 
+function publicIfrsReference(reference: string, standardCode: string | null) {
+  const citations =
+    reference.match(/\b(?:IFRS|IAS)\s*\d+(?:\.[0-9A-Z]+(?:[–-][0-9A-Z]+)?)?/gi) ?? [];
+  const unique = [...new Set(citations.map((item) => item.replace(/\s+/, " ").toUpperCase()))];
+  return unique.join(" / ") || standardCode || "IFRS Foundation";
+}
+
 function normalizeQuestion(question: ExamQuestion) {
   return {
     ...question,
@@ -794,7 +801,10 @@ export function IfrsQuestionBank({
                       <p className="mt-2 text-sm leading-7">{currentQuestion.explanation[lang]}</p>
                       <p className="mt-3 text-[11px] font-bold opacity-65">
                         {lang === "ar" ? "المرجع المحاسبي:" : "Accounting reference:"}{" "}
-                        {currentQuestion.reference}
+                        {publicIfrsReference(
+                          currentQuestion.reference,
+                          currentQuestion.standardCode,
+                        )}
                       </p>
                     </div>
                   </div>

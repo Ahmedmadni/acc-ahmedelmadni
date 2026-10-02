@@ -116,6 +116,7 @@ for (const question of questions) {
   if (question.id.startsWith("ifrs-p6-")) provenance.guide_generated += 1;
   else if (question.id.startsWith("ifrs-p8-")) provenance.deep_dive_generated += 1;
   else if (question.id.startsWith("ifrs-p9-")) provenance.original_applied += 1;
+  else if (question.id.startsWith("ifrs-reviewed-")) provenance.verbatim_source_verified += 1;
   else provenance.legacy_without_verbatim_source += 1;
 }
 

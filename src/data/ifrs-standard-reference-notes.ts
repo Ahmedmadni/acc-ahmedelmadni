@@ -1,8 +1,6 @@
 /**
- * Original teaching notes, paraphrased from ramyatrouny/ifrs-skill at
- * fda78bbc4080790ae9cf5d1fe47b931c1610e44e. Technical references:
- * ifrs/standards-reference.md and ifrs/compliance-templates.md.
- * Status and effective dates in that source were reviewed as at 28 August 2026.
+ * Original teaching notes for the learning pages. Public technical references
+ * are limited to the relevant IFRS/IAS literature and IFRS Foundation updates.
  * Keep period-specific requirements under review when standards change.
  */
 

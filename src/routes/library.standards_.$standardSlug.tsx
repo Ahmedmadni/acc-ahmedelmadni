@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IfrsStandardCase } from "@/components/library/IfrsStandardCase";
+import { IfrsStandardStudyExpansion } from "@/components/library/IfrsStandardStudyExpansion";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
 import { IFRS_NAVIGATOR_URL } from "@/data/ifrs-standards";
 import { useLibLang } from "./library";
@@ -127,6 +128,7 @@ const SECTION_LINKS = [
   { id: "accounting", ar: "الاعتراف والقياس", en: "Recognition" },
   { id: "presentation", ar: "العرض والإفصاح", en: "Presentation" },
   { id: "workflow", ar: "خطوات التطبيق", en: "Workflow" },
+  { id: "expanded-study", ar: "شرح تفصيلي", en: "Detailed study" },
   { id: "techniques", ar: "الفنيات", en: "Techniques" },
   { id: "data", ar: "البيانات والعلاقات", en: "Data & relations" },
   { id: "example", ar: "المثال والقيود", en: "Example & entries" },
@@ -306,6 +308,10 @@ function StandardLearningPage() {
               items={referenceNotes.pitfalls.map((item) => item[lang])}
               icon={TriangleAlert}
             />
+
+            {page.studyExpansion && (
+              <IfrsStandardStudyExpansion expansion={page.studyExpansion} lang={lang} />
+            )}
 
             <section
               id="techniques"
