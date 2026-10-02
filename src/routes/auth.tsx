@@ -1,6 +1,7 @@
 import { createFileRoute, useRouter } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { lovable } from "@/integrations/lovable/index";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { toast } from "sonner";
 
@@ -14,12 +15,63 @@ export const Route = createFileRoute("/auth")({
   component: AuthPage,
 });
 
+async function redirectByRole() {
+  try {
+    const { data: meData } = await supabase.auth.getUser();
+    const userId = meData?.user?.id;
+    if (userId) {
+      const { data: role } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", userId)
+        .eq("role", "admin")
+        .maybeSingle();
+      if (role) {
+        window.location.assign("/crm");
+        return;
+      }
+    }
+  } catch (e) {
+    console.error("role check failed", e);
+  }
+  window.location.assign("/knowledge");
+}
+
 function AuthPage() {
-  const router = useRouter();
+  useRouter();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!window.location.hash.includes("access_token") && !sessionStorage.getItem("google-auth-pending")) return;
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
+      if (session && (event === "SIGNED_IN" || event === "INITIAL_SESSION")) {
+        sessionStorage.removeItem("google-auth-pending");
+        void redirectByRole();
+      }
+    });
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  async function signInWithGoogle() {
+    setLoading(true);
+    sessionStorage.setItem("google-auth-pending", "1");
+    const result = await lovable.auth.signInWithOAuth("google", {
+      redirect_uri: `${window.location.origin}/auth`,
+    });
+    if (result.error) {
+      sessionStorage.removeItem("google-auth-pending");
+      toast.error(result.error.message ?? "تعذّر تسجيل الدخول بجوجل");
+      setLoading(false);
+      return;
+    }
+    if (result.redirected) return;
+    sessionStorage.removeItem("google-auth-pending");
+    toast.success("تم تسجيل الدخول");
+    await redirectByRole();
+  }
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -37,32 +89,7 @@ function AuthPage() {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
         toast.success("تم تسجيل الدخول");
-
-        // After sign-in, check whether the user has the admin role and
-        // redirect accordingly. Regular users go to /knowledge, admins to /crm.
-        try {
-          const { data: meData } = await supabase.auth.getUser();
-          const userId = meData?.user?.id;
-          if (userId) {
-            const { data: role } = await supabase
-              .from("user_roles")
-              .select("role")
-              .eq("user_id", userId)
-              .eq("role", "admin")
-              .maybeSingle();
-            if (role) {
-              // Admin found — go to admin dashboard
-              window.location.assign("/crm");
-              return;
-            }
-          }
-        } catch (e) {
-          // swallow role-check errors and fall back to knowledge page
-          console.error("role check failed", e);
-        }
-
-        // Default redirect for non-admins
-        window.location.assign("/knowledge");
+        await redirectByRole();
         return;
       }
     } catch (err) {
