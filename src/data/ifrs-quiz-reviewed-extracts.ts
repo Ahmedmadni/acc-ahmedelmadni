@@ -72,7 +72,7 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
       en: "Expense comprises $1.6m research, $1.5m September–October development before the capitalisation criteria were demonstrated, and $2.5m amortisation of the existing asset ($10m × 25%). The $1.5m spent in November–December is capitalised, giving total expense of $5.6m.",
     },
     reference: "IAS 38.54–67, 71, 97",
-    difficulty: "advanced",
+    difficulty: "hard",
     examDomain: "IAS 38 research and development",
   },
   {
@@ -124,7 +124,7 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
       en: "IAS 40 permits the fair value model, under which fair value changes are recognised in profit or loss for the period. The cost model is also permitted, so historical cost is not mandatory, and net realisable value is not an investment-property measurement basis.",
     },
     reference: "IAS 40.30–35, 56",
-    difficulty: "beginner",
+    difficulty: "easy",
     examDomain: "IAS 40 subsequent measurement",
   },
   {
@@ -155,7 +155,7 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
       en: "Prior revaluation does not prevent classification. The asset must be available for immediate sale and the sale highly probable, supported by management commitment, an active programme, reasonable pricing and expected completion normally within one year.",
     },
     reference: "IFRS 5.6–9",
-    difficulty: "beginner",
+    difficulty: "easy",
     examDomain: "IFRS 5 classification",
   },
   {
@@ -248,7 +248,7 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
       en: "IFRS 9's specific recognition rule is that the entity becomes party to the instrument's contractual provisions; it is not replaced by a probability-of-benefits test or a generic control description.",
     },
     reference: "IFRS 9.3.1.1",
-    difficulty: "beginner",
+    difficulty: "easy",
     examDomain: "IFRS 9 recognition",
   },
   {
@@ -279,7 +279,7 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
       en: "Discounting the liability cash flows at the 5% rate for comparable non-convertible debt gives $964,840. The $35,160 residual between $1m proceeds and the liability is recognised in equity as the conversion option.",
     },
     reference: "IAS 32.28–32, AG30–AG35",
-    difficulty: "advanced",
+    difficulty: "hard",
     examDomain: "IAS 32 compound instruments",
   },
 ];
