@@ -127,4 +127,159 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
     difficulty: "beginner",
     examDomain: "IAS 40 subsequent measurement",
   },
+  {
+    id: "ifrs-reviewed-ifrs5-sale-criteria-01",
+    track: "IFRS",
+    topic: "IFRS 5 — held-for-sale criteria",
+    question: {
+      ar: "أي الشروط التالية غير مطلوب لتصنيف أصل على أنه محتفظ به للبيع وفق IFRS 5؟",
+      en: "Which of the following conditions is not required for an asset to be classified as held for sale under IFRS 5?",
+    },
+    choices: {
+      ar: [
+        "التزام الإدارة بخطة للبيع",
+        "أن يكون سعر البيع متوافقًا مع القيمة العادلة الحالية",
+        "ألا يكون الأصل قد أعيد تقييمه",
+        "أن يكون البيع عالي الاحتمال",
+      ],
+      en: [
+        "Management is committed to a plan to sell",
+        "The selling price must be in line with current fair value",
+        "Asset has not been revalued",
+        "Sale is highly probable",
+      ],
+    },
+    answerIndex: 2,
+    explanation: {
+      ar: "إعادة تقييم الأصل سابقًا لا تمنع التصنيف. المطلوب أن يكون متاحًا للبيع الفوري وأن يكون البيع عالي الاحتمال، مع التزام الإدارة وخطة نشطة وسعر معقول وتوقع الإتمام عادة خلال سنة.",
+      en: "Prior revaluation does not prevent classification. The asset must be available for immediate sale and the sale highly probable, supported by management commitment, an active programme, reasonable pricing and expected completion normally within one year.",
+    },
+    reference: "IFRS 5.6–9",
+    difficulty: "beginner",
+    examDomain: "IFRS 5 classification",
+  },
+  {
+    id: "ifrs-reviewed-ifrs5-acquired-subsidiary-01",
+    track: "IFRS",
+    topic: "IFRS 5 — subsidiary acquired for resale",
+    question: {
+      ar: "استحوذت Poetry Co على Prose Co، وهي شركة تابعة، في 1 أكتوبر 20X7 حصريًا بغرض بيعها. تستوفي Prose Co شروط التصنيف كمحتفظ بها للبيع، لكنها لم تُبع حتى تاريخ القوائم المالية في 31 مايو 20X8. بأي مبلغ تقاس Prose Co في قائمة المركز المالي في ذلك التاريخ؟",
+      en: "Poetry Co acquires Prose Co, a subsidiary, on 1 October 20X7, exclusively with a view to selling it. Prose Co meets the criteria to be classified as held for sale. At the date of the financial statements 31 May 20X8, Prose Co has not yet been sold. At what amount should Prose Co be measured in the statement of financial position at 31 May 20X8?",
+    },
+    choices: {
+      ar: [
+        "بالقيمة العادلة ناقص تكلفة البيع",
+        "بالأقل من التكلفة والقيمة العادلة ناقص تكاليف البيع",
+        "بالقيمة الدفترية بعد الإهلاك",
+        "بالقيمة القابلة للتحقق",
+      ],
+      en: [
+        "At fair value less cost to sell",
+        "At the lower of cost and fair value less costs to sell",
+        "At depreciated carrying amount",
+        "At realisable value",
+      ],
+    },
+    answerIndex: 1,
+    explanation: {
+      ar: "تقاس الشركة التابعة المشتراة حصريًا لإعادة البيع، بعد استيفاء شروط التصنيف، بالأقل من قيمتها الدفترية عند الاقتناء والقيمة العادلة ناقص تكاليف البيع، مع عرضها ضمن مجموعة استبعاد محتفظ بها للبيع.",
+      en: "A subsidiary acquired exclusively for resale and meeting the classification criteria is measured at the lower of its acquisition carrying amount and fair value less costs to sell and presented in a held-for-sale disposal group.",
+    },
+    reference: "IFRS 5.11, 15–18",
+    difficulty: "intermediate",
+    examDomain: "IFRS 5 measurement",
+  },
+  {
+    id: "ifrs-reviewed-ias32-liability-01",
+    track: "IFRS",
+    topic: "IAS 32 — financial liability definition",
+    question: {
+      ar: "أي مما يلي يعد التزامًا ماليًا وفق IAS 32: العرض؟",
+      en: "Which of the following is a financial liability under IAS 32:Presentation?",
+    },
+    choices: {
+      ar: [
+        "إيراد مؤجل من منحة حكومية",
+        "مخصص مدفوعات ضمان",
+        "التزام بتسليم أسهم ذاتية بقيمة نقدية ثابتة",
+        "عقد مثقل بالأعباء",
+      ],
+      en: [
+        "Deferred revenue from a government grant",
+        "A provision for warranty payments",
+        "An obligation to deliver own shares worth a fixed amount of cash",
+        "An onerous contract",
+      ],
+    },
+    answerIndex: 2,
+    explanation: {
+      ar: "الالتزام بتسليم عدد متغير من أسهم المنشأة يعادل قيمة نقدية ثابتة هو التزام مالي، لأنه لا يحقق شرط مبادلة مبلغ ثابت بعدد ثابت من الأسهم. أما البدائل الأخرى فليست أدوات مالية تعاقدية ضمن IAS 32.",
+      en: "An obligation to deliver a variable number of the entity's own shares equal to a fixed cash value is a financial liability because it fails the fixed-for-fixed condition. The other items are not contractual financial instruments within IAS 32.",
+    },
+    reference: "IAS 32.11, 16–27",
+    difficulty: "intermediate",
+    examDomain: "IAS 32 classification",
+  },
+  {
+    id: "ifrs-reviewed-ifrs9-recognition-01",
+    track: "IFRS",
+    topic: "IFRS 9 — initial recognition",
+    question: {
+      ar: "متى يجب الاعتراف بأصل مالي أو التزام مالي وفق IFRS 9 الأدوات المالية؟",
+      en: "When should a financial asset or liability be recognised in accordance with IFRS 9 Financial Instruments?",
+    },
+    choices: {
+      ar: [
+        "عندما يكون من المحتمل تدفق منافع اقتصادية مستقبلية إلى المنشأة",
+        "عندما تصبح المنشأة طرفًا في الأحكام التعاقدية للأداة",
+        "عندما تحصل المنشأة على السيطرة على الأداة",
+        "عندما تحصل المنشأة على مخاطر ومنافع الملكية",
+      ],
+      en: [
+        "When it is probable that future economic benefits will flow to the entity",
+        "When the entity becomes a party to the contractual provisions of the instrument",
+        "When the entity obtains control of the instrument",
+        "When the entity obtains the risks and rewards of ownership",
+      ],
+    },
+    answerIndex: 1,
+    explanation: {
+      ar: "قاعدة الاعتراف المحددة في IFRS 9 هي أن تصبح المنشأة طرفًا في الأحكام التعاقدية للأداة؛ فلا تستبدل هذه القاعدة باختبار احتمال المنافع أو صياغة عامة عن السيطرة.",
+      en: "IFRS 9's specific recognition rule is that the entity becomes party to the instrument's contractual provisions; it is not replaced by a probability-of-benefits test or a generic control description.",
+    },
+    reference: "IFRS 9.3.1.1",
+    difficulty: "beginner",
+    examDomain: "IFRS 9 recognition",
+  },
+  {
+    id: "ifrs-reviewed-ias32-convertible-01",
+    track: "IFRS",
+    topic: "IAS 32 — compound convertible bond",
+    question: {
+      ar: "في 1 يوليو 20X1 أصدرت White Co عدد 10,000 سند قابل للتحويل بقيمة اسمية 100 دولار للسند. تدفع السندات فائدة سنوية متأخرة 4% وتسترد بالقيمة الاسمية في 30 يونيو 20X5، ويمكن حينها تحويل كل سند إلى 15 سهمًا عاديًا. سعر الفائدة لسندات مماثلة بلا حق تحويل 5%. ما الذي يثبت عند إصدار السندات؟",
+      en: "On 1 July 20X1 White Co issues 10,000 $100 convertible bonds at par. The bonds pay interest annually in arrears at 4% and are redeemable at par on 30 June 20X5. On this date each of the bonds can be exchanged for 15 ordinary shares. The market rate of interest for similar bonds with no conversion rights attached is 5%. What should be recognised in the financial statements when the bonds are issued?",
+    },
+    choices: {
+      ar: [
+        "التزام 964,840 دولارًا ورصيد حقوق ملكية 35,160 دولارًا",
+        "التزام 1,000,000 دولار",
+        "التزام 855,920 دولارًا ورصيد حقوق ملكية 144,080 دولارًا",
+        "أصل 1,000,000 دولار",
+      ],
+      en: [
+        "A liability of $964,840 and an equity balance of $35,160.",
+        "A liability of $1,000,000",
+        "A liability of $855,920 and an equity balance of $144,080",
+        "An asset of $1,000,000",
+      ],
+    },
+    answerIndex: 0,
+    explanation: {
+      ar: "تقاس تدفقات الالتزام بسعر 5% لأداة مماثلة بلا تحويل، فتبلغ قيمتها الحالية 964,840 دولارًا. الفرق بين المتحصلات البالغة مليونًا والالتزام، وقدره 35,160 دولارًا، يثبت ضمن حقوق الملكية كخيار تحويل.",
+      en: "Discounting the liability cash flows at the 5% rate for comparable non-convertible debt gives $964,840. The $35,160 residual between $1m proceeds and the liability is recognised in equity as the conversion option.",
+    },
+    reference: "IAS 32.28–32, AG30–AG35",
+    difficulty: "advanced",
+    examDomain: "IAS 32 compound instruments",
+  },
 ];

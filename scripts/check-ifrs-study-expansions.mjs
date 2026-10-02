@@ -112,6 +112,70 @@ const reviewedEnglishSourceText = new Map([
       ],
     },
   ],
+  [
+    "ifrs-reviewed-ifrs5-sale-criteria-01",
+    {
+      question:
+        "Which of the following conditions is not required for an asset to be classified as held for sale under IFRS 5?",
+      choices: [
+        "Management is committed to a plan to sell",
+        "The selling price must be in line with current fair value",
+        "Asset has not been revalued",
+        "Sale is highly probable",
+      ],
+    },
+  ],
+  [
+    "ifrs-reviewed-ifrs5-acquired-subsidiary-01",
+    {
+      question:
+        "Poetry Co acquires Prose Co, a subsidiary, on 1 October 20X7, exclusively with a view to selling it. Prose Co meets the criteria to be classified as held for sale. At the date of the financial statements 31 May 20X8, Prose Co has not yet been sold. At what amount should Prose Co be measured in the statement of financial position at 31 May 20X8?",
+      choices: [
+        "At fair value less cost to sell",
+        "At the lower of cost and fair value less costs to sell",
+        "At depreciated carrying amount",
+        "At realisable value",
+      ],
+    },
+  ],
+  [
+    "ifrs-reviewed-ias32-liability-01",
+    {
+      question: "Which of the following is a financial liability under IAS 32:Presentation?",
+      choices: [
+        "Deferred revenue from a government grant",
+        "A provision for warranty payments",
+        "An obligation to deliver own shares worth a fixed amount of cash",
+        "An onerous contract",
+      ],
+    },
+  ],
+  [
+    "ifrs-reviewed-ifrs9-recognition-01",
+    {
+      question:
+        "When should a financial asset or liability be recognised in accordance with IFRS 9 Financial Instruments?",
+      choices: [
+        "When it is probable that future economic benefits will flow to the entity",
+        "When the entity becomes a party to the contractual provisions of the instrument",
+        "When the entity obtains control of the instrument",
+        "When the entity obtains the risks and rewards of ownership",
+      ],
+    },
+  ],
+  [
+    "ifrs-reviewed-ias32-convertible-01",
+    {
+      question:
+        "On 1 July 20X1 White Co issues 10,000 $100 convertible bonds at par. The bonds pay interest annually in arrears at 4% and are redeemable at par on 30 June 20X5. On this date each of the bonds can be exchanged for 15 ordinary shares. The market rate of interest for similar bonds with no conversion rights attached is 5%. What should be recognised in the financial statements when the bonds are issued?",
+      choices: [
+        "A liability of $964,840 and an equity balance of $35,160.",
+        "A liability of $1,000,000",
+        "A liability of $855,920 and an equity balance of $144,080",
+        "An asset of $1,000,000",
+      ],
+    },
+  ],
 ]);
 for (const question of reviewedQuestions) {
   if (ids.has(question.id)) failures.push(`${question.id}: duplicate reviewed question ID`);
