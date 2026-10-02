@@ -237,7 +237,7 @@ console.log(
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
       below_phase4_depth_target: belowPhase4Depth,
-      expected_total: 1127,
+      expected_total: 1131,
     },
     null,
     2,
@@ -251,8 +251,8 @@ if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
   failures.push(`Standards below twenty-five-question baseline: ${belowBaseline.join(", ")}`);
-if (questions.length !== 1127)
-  failures.push(`Expected 1127 IFRS questions; found ${questions.length}`);
+if (questions.length !== 1131)
+  failures.push(`Expected 1131 IFRS questions; found ${questions.length}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 25 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)

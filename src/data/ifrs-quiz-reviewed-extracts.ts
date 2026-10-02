@@ -282,4 +282,118 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
     difficulty: "hard",
     examDomain: "IAS 32 compound instruments",
   },
+  {
+    id: "ifrs-reviewed-ifrs3-goodwill-01",
+    track: "IFRS",
+    topic: "IFRS 3 — goodwill at acquisition",
+    question: {
+      ar: "اشترت Netley Co كامل رأس مال Orell Co نقدًا بمبلغ 2,500,000 دولار. في تاريخ الشراء كان رأس مال Orell مبلغ 2,000,000 دولار وأرباحها المحتجزة 250,000 دولار، وكانت القيمة العادلة لأصولها الملموسة أعلى من قيمتها الدفترية بمبلغ 150,000 دولار. ما رصيد الشهرة الذي يظهر في قائمة المركز المالي الموحدة عند الاستحواذ؟",
+      en: "Netley Co purchased the whole of the share capital of Orell Co for $2,500,000 cash. Shareholders’ funds of the two companies at the date of the purchase were as follows: Netley—share capital $5,000,000 and retained earnings $600,000; Orell—share capital $2,000,000 and retained earnings $250,000. The fair value of Orell Co’s tangible assets exceeded carrying amount by $150,000. What balance should appear in the consolidated statement of financial position of Netley Co for goodwill at acquisition?",
+    },
+    choices: {
+      ar: ["400,000 دولار", "100,000 دولار", "250,000 دولار", "500,000 دولار"],
+      en: ["$400,000", "$100,000", "$250,000", "$500,000"],
+    },
+    answerIndex: 1,
+    explanation: {
+      ar: "صافي الأصول القابلة للتحديد يساوي 2,000,000 + 250,000 + 150,000 = 2,400,000 دولار. الشهرة هي المقابل 2,500,000 ناقص صافي الأصول 2,400,000، أي 100,000 دولار.",
+      en: "Identifiable net assets are $2,000,000 + $250,000 + $150,000 = $2,400,000. Goodwill is the $2,500,000 consideration less $2,400,000 net assets, giving $100,000.",
+    },
+    reference: "IFRS 3.18–19, 32",
+    difficulty: "intermediate",
+    examDomain: "IFRS 3 goodwill",
+  },
+  {
+    id: "ifrs-reviewed-ifrs11-joint-control-01",
+    track: "IFRS",
+    topic: "IFRS 11 — joint control",
+    question: {
+      ar: "يمتلك كل من Sneezy Co وSleepy Co وDopey Co ثلث الأسهم وحقوق التصويت في Snow White Co. أي العبارات التالية صحيحة؟",
+      en: "One third of the shares, and also voting rights, in Snow White Co are held by each of Sneezy Co, Sleepy Co and Dopey Co. Which of the following statements is true?",
+    },
+    choices: {
+      ar: [
+        "إذا نص اتفاق على أن اتخاذ القرار يتطلب 60% على الأقل من حقوق التصويت، تكون لـSneezy Co سيطرة مشتركة.",
+        "إذا اشترط الاتفاق كحد أدنى موافقة Sleepy Co وDopey Co بالإجماع، تكون لـSneezy Co سيطرة مشتركة بسبب تساوي حقوق التصويت.",
+        "إذا نص الاتفاق على أن اتخاذ القرار يتطلب موافقة Sneezy Co وSleepy Co وDopey Co بالإجماع، تكون لـSneezy Co سيطرة مشتركة.",
+        "لا شيء مما سبق.",
+      ],
+      en: [
+        "If an agreement has been drawn up specifying that decision making requires at least 60% of the voting rights Sneezy Co would therefore have joint control.",
+        "If an agreement has been drawn up specifying that, as a minimum, decision making requires unanimous agreement by Sleepy Co and Dopey Co, Sneezy Co would have joint control due to the equal share in voting rights.",
+        "If an agreement has been drawn up specifying that decision making requires unanimous consent of Sneezy Co, Sleepy Co and Dopey Co, Sneezy Co would have joint control.",
+        "None of the above",
+      ],
+    },
+    answerIndex: 2,
+    explanation: {
+      ar: "لا تنشأ السيطرة المشتركة من حد 60% يمكن بلوغه بتوليفات مختلفة، ولا من قرار يمكن اتخاذه دون Sneezy. اشتراط موافقة الأطراف الثلاثة التي تسيطر جماعيًا بالإجماع هو الذي يحقق تعريف السيطرة المشتركة.",
+      en: "A 60% threshold can be achieved by different combinations, and an agreement that excludes Sneezy does not give it joint control. Requiring unanimous consent of all three parties that collectively control the arrangement meets the definition of joint control.",
+    },
+    reference: "IFRS 11.7–13, B5–B11",
+    difficulty: "intermediate",
+    examDomain: "IFRS 11 joint control",
+  },
+  {
+    id: "ifrs-reviewed-ifrs10-voting-control-01",
+    track: "IFRS",
+    topic: "IFRS 10 — voting rights and control",
+    question: {
+      ar: "تملك Harwich Co عدد 70,000 سهم ممتاز غير مصوت في Sall Co، وتملك Felixstowe Co عدد 20,000 سهم عادي مصوت. يتكون رأس مال Sall من 100,000 سهم ممتاز و30,000 سهم عادي. أي شركة تعد Sall Co شركة تابعة لها؟",
+      en: "Harwich Co holds 70,000 $1 preference shares in Sall Co. These are non-voting but rank equally with the ordinary shares in a winding-up. Felixstowe Co holds 20,000 $1 voting ordinary shares in Sall Co. The share capital of Sall Co is made up of the following: 100,000 preference shares of $1 each and 30,000 ordinary shares of $1 each. Sall Co is a subsidiary undertaking of:",
+    },
+    choices: {
+      ar: [
+        "Harwich Co وFelixstowe Co معًا",
+        "Harwich Co",
+        "Felixstowe Co",
+        "لا Harwich Co ولا Felixstowe Co",
+      ],
+      en: [
+        "Both Harwich Co and Felixstowe Co",
+        "Harwich Co",
+        "Felixstowe Co",
+        "Neither Harwich Co nor Felixstowe Co",
+      ],
+    },
+    answerIndex: 2,
+    explanation: {
+      ar: "أسهم Harwich غير مصوتة، بينما تملك Felixstowe ثلثي الأسهم العادية المصوتة (20,000 من 30,000). وبافتراض أن هذه الأصوات توجه الأنشطة ذات الصلة، تكون السلطة لدى Felixstowe مع تعرضها للعوائد وقدرتها على التأثير فيها.",
+      en: "Harwich's shares are non-voting, while Felixstowe holds two thirds of the voting ordinary shares (20,000 of 30,000). Assuming those votes direct relevant activities, Felixstowe has power together with exposure to returns and the ability to affect them.",
+    },
+    reference: "IFRS 10.5–8, B34–B50",
+    difficulty: "intermediate",
+    examDomain: "IFRS 10 control",
+  },
+  {
+    id: "ifrs-reviewed-ias28-equity-method-01",
+    track: "IFRS",
+    topic: "IAS 28 — equity method carrying amount",
+    question: {
+      ar: "ما الذي يظهر في قائمة المركز المالي الموحدة للمستثمر عند استخدام طريقة حقوق الملكية للمحاسبة عن الشركات الزميلة؟",
+      en: "What is disclosed in the consolidated statement of financial position of an investor when the equity method is used to account for associates?",
+    },
+    choices: {
+      ar: [
+        "الذمم المدينة دون نصيب من صافي أصول الشركة الزميلة.",
+        "الاستثمار في الشركة الزميلة بالتكلفة زائدًا أو ناقصًا نصيب المجموعة من أرباحها أو خسائرها المحتجزة بعد الاستحواذ.",
+        "نصيب صافي أصول الشركة الزميلة والذمم المدينة.",
+        "تكلفة الاستثمار زائد الشهرة عند الاستحواذ ناقص المبالغ المشطوبة دون الذمم المدينة.",
+      ],
+      en: [
+        "Receivables but not share of net assets of the associate.",
+        "Investment in associate at cost plus /minus the group's share of the associate's post acquisition retained profits or losses.",
+        "Share of net assets of the associate and receivables.",
+        "Cost of investment plus goodwill on acquisition less amounts written off but not receivables.",
+      ],
+    },
+    answerIndex: 1,
+    explanation: {
+      ar: "تبدأ طريقة حقوق الملكية بالتكلفة، ثم تعدل القيمة الدفترية بنصيب المستثمر من نتائج الشركة الزميلة بعد الاستحواذ، وتخفض بالتوزيعات وأي خسائر انخفاض واجبة.",
+      en: "The equity method starts at cost and adjusts the carrying amount for the investor's share of post-acquisition results, reduced by distributions and any required impairment losses.",
+    },
+    reference: "IAS 28.10–11",
+    difficulty: "easy",
+    examDomain: "IAS 28 equity method",
+  },
 ];

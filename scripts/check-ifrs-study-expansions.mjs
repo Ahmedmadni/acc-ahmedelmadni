@@ -176,6 +176,53 @@ const reviewedEnglishSourceText = new Map([
       ],
     },
   ],
+  [
+    "ifrs-reviewed-ifrs3-goodwill-01",
+    {
+      question:
+        "Netley Co purchased the whole of the share capital of Orell Co for $2,500,000 cash. Shareholders’ funds of the two companies at the date of the purchase were as follows: Netley—share capital $5,000,000 and retained earnings $600,000; Orell—share capital $2,000,000 and retained earnings $250,000. The fair value of Orell Co’s tangible assets exceeded carrying amount by $150,000. What balance should appear in the consolidated statement of financial position of Netley Co for goodwill at acquisition?",
+      choices: ["$400,000", "$100,000", "$250,000", "$500,000"],
+    },
+  ],
+  [
+    "ifrs-reviewed-ifrs11-joint-control-01",
+    {
+      question:
+        "One third of the shares, and also voting rights, in Snow White Co are held by each of Sneezy Co, Sleepy Co and Dopey Co. Which of the following statements is true?",
+      choices: [
+        "If an agreement has been drawn up specifying that decision making requires at least 60% of the voting rights Sneezy Co would therefore have joint control.",
+        "If an agreement has been drawn up specifying that, as a minimum, decision making requires unanimous agreement by Sleepy Co and Dopey Co, Sneezy Co would have joint control due to the equal share in voting rights.",
+        "If an agreement has been drawn up specifying that decision making requires unanimous consent of Sneezy Co, Sleepy Co and Dopey Co, Sneezy Co would have joint control.",
+        "None of the above",
+      ],
+    },
+  ],
+  [
+    "ifrs-reviewed-ifrs10-voting-control-01",
+    {
+      question:
+        "Harwich Co holds 70,000 $1 preference shares in Sall Co. These are non-voting but rank equally with the ordinary shares in a winding-up. Felixstowe Co holds 20,000 $1 voting ordinary shares in Sall Co. The share capital of Sall Co is made up of the following: 100,000 preference shares of $1 each and 30,000 ordinary shares of $1 each. Sall Co is a subsidiary undertaking of:",
+      choices: [
+        "Both Harwich Co and Felixstowe Co",
+        "Harwich Co",
+        "Felixstowe Co",
+        "Neither Harwich Co nor Felixstowe Co",
+      ],
+    },
+  ],
+  [
+    "ifrs-reviewed-ias28-equity-method-01",
+    {
+      question:
+        "What is disclosed in the consolidated statement of financial position of an investor when the equity method is used to account for associates?",
+      choices: [
+        "Receivables but not share of net assets of the associate.",
+        "Investment in associate at cost plus /minus the group's share of the associate's post acquisition retained profits or losses.",
+        "Share of net assets of the associate and receivables.",
+        "Cost of investment plus goodwill on acquisition less amounts written off but not receivables.",
+      ],
+    },
+  ],
 ]);
 for (const question of reviewedQuestions) {
   if (ids.has(question.id)) failures.push(`${question.id}: duplicate reviewed question ID`);

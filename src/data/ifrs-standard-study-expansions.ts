@@ -1628,6 +1628,541 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IFRS 3": {
+    sections: [
+      {
+        title: text("منطق طريقة الاستحواذ", "The acquisition-method logic"),
+        explanation: text(
+          "تبدأ محاسبة تجميع الأعمال بتحديد المستحوذ وتاريخ السيطرة، ثم الاعتراف بالأصول القابلة للتحديد والالتزامات المتحملة وحقوق غير المسيطرين. لا تُجمع تكلفة الصفقة في رقم واحد؛ فالأصول غير الملموسة القابلة للفصل والالتزامات المحتملة التي تستوفي شروط المعيار قد تظهر منفصلة عن الشهرة، بينما تحمل تكاليف الاستحواذ الإدارية والمهنية على الربح أو الخسارة عند تكبدها.",
+          "Accounting for a business combination starts by identifying the acquirer and the date control is obtained, followed by recognising identifiable assets acquired, liabilities assumed and non-controlling interests. The transaction cost is not bundled into one number: separable intangible assets and qualifying contingent liabilities may be recognised separately from goodwill, while acquisition-related professional and administrative costs are expensed as incurred.",
+        ),
+        keyPoints: [
+          text(
+            "تاريخ الاستحواذ هو تاريخ الحصول على السيطرة، لا تاريخ توقيع النوايا تلقائيًا.",
+            "The acquisition date is the date control is obtained, not automatically the date a letter of intent is signed.",
+          ),
+          text(
+            "يقاس المقابل المحول بالقيمة العادلة ويشمل المقابل المحتمل.",
+            "Consideration transferred is measured at fair value and includes contingent consideration.",
+          ),
+          text(
+            "تُفصل الأصول غير الملموسة القابلة للتحديد عن الشهرة حتى لو لم يثبتها المستحوذ عليه سابقًا.",
+            "Identifiable intangible assets are separated from goodwill even if the acquiree did not previously recognise them.",
+          ),
+        ],
+        reference: "IFRS 3.4–18, 37–40, 53",
+      },
+      {
+        title: text("الشهرة الكاملة والجزئية", "Full and partial goodwill"),
+        explanation: text(
+          "تحسب الشهرة من مجموع المقابل المحول وحقوق غير المسيطرين، مع إضافة القيمة العادلة لأي حصة سابقة في الاستحواذ المرحلي، ثم طرح القيمة العادلة لصافي الأصول القابلة للتحديد. يمكن قياس حقوق غير المسيطرين التي تمثل حصص ملكية حالية بالقيمة العادلة أو بنسبة حصتها في صافي الأصول؛ الاختيار لكل عملية على حدة ويؤثر مباشرة في مبلغ الشهرة.",
+          "Goodwill is calculated from consideration transferred plus non-controlling interests and, in a step acquisition, the fair value of any previously held interest, less the fair value of identifiable net assets. Present ownership interests in NCI may be measured at fair value or at their proportionate share of net assets; the election is transaction-specific and directly changes the amount of goodwill.",
+        ),
+        keyPoints: [
+          text(
+            "قياس NCI بالقيمة العادلة ينتج شهرة كاملة تشمل نصيب غير المسيطرين.",
+            "Fair-value measurement of NCI produces full goodwill including the NCI share.",
+          ),
+          text(
+            "القياس النسبي ينتج شهرة جزئية تخص مساهمي الشركة الأم.",
+            "Proportionate measurement produces partial goodwill attributable to the parent owners.",
+          ),
+          text(
+            "لا تُستهلك الشهرة؛ تُختبر سنويًا للانخفاض وفق IAS 36.",
+            "Goodwill is not amortised; it is tested annually for impairment under IAS 36.",
+          ),
+        ],
+        reference: "IFRS 3.19, 32–34; IAS 36.80–90",
+      },
+      {
+        title: text(
+          "الشراء بسعر صفقة والقياس المؤقت",
+          "Bargain purchase and provisional measurement",
+        ),
+        explanation: text(
+          "إذا تجاوزت القيمة العادلة لصافي الأصول المقابل وحقوق غير المسيطرين، يعاد فحص تحديد الأصول والالتزامات والقياسات قبل إثبات مكسب شراء بسعر صفقة في الربح أو الخسارة. وإذا لم تكتمل معلومات التقييم في نهاية الفترة، تستخدم مبالغ مؤقتة ويجوز تعديلها بأثر رجعي خلال فترة القياس التي لا تتجاوز سنة من تاريخ الاستحواذ عندما تتعلق المعلومات بظروف قائمة في ذلك التاريخ.",
+          "If the fair value of identifiable net assets exceeds consideration and NCI, the identification and measurements are reassessed before recognising a bargain-purchase gain in profit or loss. When valuation information is incomplete at period end, provisional amounts are used and may be adjusted retrospectively during the measurement period, which cannot exceed one year from the acquisition date, for information about conditions existing at that date.",
+        ),
+        keyPoints: [
+          text(
+            "لا يُثبت مكسب الصفقة قبل إعادة تقييم دقة كل مكونات الحساب.",
+            "A bargain gain is not recognised before reassessing every component of the calculation.",
+          ),
+          text(
+            "تغييرات ما بعد الاستحواذ الناتجة عن أحداث جديدة ليست تعديلات فترة قياس.",
+            "Post-acquisition changes caused by new events are not measurement-period adjustments.",
+          ),
+          text(
+            "الإفصاح يشرح طبيعة التجميع وآثاره المالية على المستخدمين.",
+            "Disclosure explains the nature and financial effects of the combination to users.",
+          ),
+        ],
+        reference: "IFRS 3.34–36, 45–50, 59–63",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("حساب الشهرة عند شراء 100%", "Goodwill on a 100% acquisition"),
+        facts: text(
+          "اشترت Netley Co كامل أسهم Orell Co نقدًا بمبلغ 2,500,000. في تاريخ الاستحواذ بلغ رأس مال Orell مبلغ 2,000,000 والأرباح المحتجزة 250,000، وكانت القيمة العادلة لأصولها الملموسة أعلى من قيمتها الدفترية بمبلغ 150,000.",
+          "Netley Co purchased all of Orell Co for $2,500,000 cash. At acquisition Orell had $2,000,000 share capital and $250,000 retained earnings, and the fair value of its tangible assets exceeded carrying amount by $150,000.",
+        ),
+        calculations: [
+          text(
+            "صافي الأصول القابلة للتحديد = 2,000,000 + 250,000 + 150,000 = 2,400,000.",
+            "Identifiable net assets = $2,000,000 + $250,000 + $150,000 = $2,400,000.",
+          ),
+          text(
+            "الشهرة = المقابل 2,500,000 − صافي الأصول 2,400,000 = 100,000.",
+            "Goodwill = $2,500,000 consideration − $2,400,000 net assets = $100,000.",
+          ),
+        ],
+        conclusion: text(
+          "تعرض شهرة قدرها 100,000 ضمن الأصول غير المتداولة للمجموعة وتخضع لاختبار الانخفاض.",
+          "The group recognises $100,000 goodwill as a non-current asset subject to impairment testing.",
+        ),
+        journalEntries: [
+          {
+            label: text("قيد توضيحي للتجميع", "Illustrative consolidation entry"),
+            debit: text(
+              "صافي الأصول القابلة للتحديد 2,400,000 + الشهرة 100,000",
+              "Identifiable net assets $2,400,000 + goodwill $100,000",
+            ),
+            credit: text(
+              "المقابل المحول / الاستثمار 2,500,000",
+              "Consideration transferred / investment $2,500,000",
+            ),
+            amount: text("2,500,000", "$2,500,000"),
+          },
+        ],
+        reference: "IFRS 3.18–19, 32",
+      },
+    ],
+  },
+  "IFRS 10": {
+    sections: [
+      {
+        title: text("اختبار السيطرة بثلاثة عناصر", "The three-element control test"),
+        explanation: text(
+          "لا تكفي نسبة الملكية وحدها. يسيطر المستثمر عندما يملك سلطة حالية على الأنشطة ذات الصلة، ويتعرض لعوائد متغيرة أو تكون له حقوق فيها، ويستطيع استخدام سلطته للتأثير في تلك العوائد. لذلك قد توجد السيطرة بأقل من نصف الأصوات إذا كانت بقية الملكية مشتتة وكانت الحقوق الأخرى جوهرية، وقد لا توجد رغم أغلبية اقتصادية إذا كانت حقوق التصويت غير مؤثرة في الأنشطة ذات الصلة.",
+          "Ownership percentage alone is not enough. An investor controls an investee when it has current power over relevant activities, exposure or rights to variable returns, and the ability to use that power to affect those returns. Control may therefore exist below half the votes when other ownership is dispersed and rights are substantive, and may be absent despite economic exposure when voting rights do not direct the relevant activities.",
+        ),
+        keyPoints: [
+          text(
+            "حدد الأنشطة التي تؤثر جوهريًا في العوائد قبل تحديد من يوجهها.",
+            "Identify the activities that significantly affect returns before deciding who directs them.",
+          ),
+          text(
+            "افحص الحقوق الجوهرية والحقوق الوقائية وترتيبات الوكلاء.",
+            "Assess substantive rights, protective rights and agency arrangements.",
+          ),
+          text(
+            "أعد تقييم السيطرة عندما تتغير الوقائع والظروف.",
+            "Reassess control when facts and circumstances change.",
+          ),
+        ],
+        reference: "IFRS 10.5–18, B11–B85",
+      },
+      {
+        title: text("التجميع ككيان اقتصادي واحد", "Consolidation as one economic entity"),
+        explanation: text(
+          "من تاريخ الحصول على السيطرة تُجمع الأصول والالتزامات والإيرادات والمصروفات والتدفقات النقدية بندًا ببند، ويُلغى استثمار الأم مقابل حقوق ملكية التابعة عند الاستحواذ. كما تُلغى الأرصدة والمعاملات والأرباح غير المحققة داخل المجموعة بالكامل، وتطبق سياسات محاسبية موحدة حتى تعكس القوائم المجموعة كأنها منشأة اقتصادية واحدة.",
+          "From the date control is obtained, assets, liabilities, income, expenses and cash flows are combined line by line, and the parent's investment is eliminated against the subsidiary's acquisition-date equity. Intragroup balances, transactions and unrealised profits are eliminated in full, and uniform accounting policies are applied so the statements depict the group as a single economic entity.",
+        ),
+        keyPoints: [
+          text(
+            "يبدأ التجميع عند السيطرة وينتهي عند فقدها.",
+            "Consolidation begins when control is obtained and ends when control is lost.",
+          ),
+          text(
+            "تعرض حقوق غير المسيطرين داخل حقوق الملكية منفصلة عن حقوق مالكي الأم.",
+            "NCI is presented within equity separately from owners of the parent.",
+          ),
+          text(
+            "توحّد تواريخ التقارير قدر الإمكان، وألا يتجاوز الفرق ثلاثة أشهر عند التعذر.",
+            "Reporting dates are aligned where practicable; any difference cannot exceed three months.",
+          ),
+        ],
+        reference: "IFRS 10.19–26, B86–B93",
+      },
+      {
+        title: text("تغير الملكية وفقد السيطرة", "Ownership changes and loss of control"),
+        explanation: text(
+          "شراء أو بيع حصة مع بقاء السيطرة يعد معاملة حقوق ملكية ولا ينشأ عنه ربح أو خسارة في قائمة الدخل. أما فقد السيطرة فيؤدي إلى استبعاد أصول والتزامات التابعة وحقوق غير المسيطرين، وإثبات المقابل المستلم وأي حصة محتفظ بها بالقيمة العادلة، وإعادة تصنيف أو تحويل أرصدة الدخل الشامل الآخر كما لو استبعدت الأصول والالتزامات ذات الصلة مباشرة.",
+          "Buying or selling an interest while retaining control is an equity transaction and produces no profit-or-loss gain. Loss of control requires derecognition of the subsidiary's assets, liabilities and NCI, recognition of consideration received and any retained interest at fair value, and reclassification or transfer of related OCI balances as if the underlying assets and liabilities had been disposed of directly.",
+        ),
+        keyPoints: [
+          text(
+            "التغير دون فقد السيطرة يضبط أرصدة الأم وNCI داخل حقوق الملكية.",
+            "A change without loss of control adjusts parent and NCI balances within equity.",
+          ),
+          text(
+            "القيمة العادلة للحصة المحتفظ بها تدخل في حساب ربح أو خسارة فقد السيطرة.",
+            "The fair value of a retained interest enters the loss-of-control gain or loss.",
+          ),
+          text(
+            "بعد الفقد تطبق IAS 28 أو IFRS 11 أو IFRS 9 بحسب طبيعة الحصة المتبقية.",
+            "After loss of control, IAS 28, IFRS 11 or IFRS 9 applies according to the retained interest.",
+          ),
+        ],
+        reference: "IFRS 10.23, 25, B96–B99",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("ربح المجموعة وتوزيعه على غير المسيطرين", "Group profit and allocation to NCI"),
+        facts: text(
+          "استحوذت Jam Co على 80% من Marmalade Co في 1 يوليو. للسنة المنتهية في 31 ديسمبر بلغ ربح Jam بعد الضريبة 8.4 مليون وربح Marmalade السنوي 4.2 مليون، بافتراض تحقق الربح بالتساوي وعدم وجود تعديلات أخرى.",
+          "Jam Co acquired 80% of Marmalade Co on 1 July. For the year ended 31 December, Jam's profit after tax was $8.4 million and Marmalade's annual profit was $4.2 million, assumed to accrue evenly with no other adjustments.",
+        ),
+        calculations: [
+          text(
+            "ربح التابعة بعد الاستحواذ لستة أشهر = 4.2 × 6÷12 = 2.1 مليون.",
+            "Subsidiary post-acquisition profit for six months = $4.2m × 6/12 = $2.1m.",
+          ),
+          text(
+            "ربح المجموعة بعد الضريبة = 8.4 + 2.1 = 10.5 مليون.",
+            "Group profit after tax = $8.4m + $2.1m = $10.5m.",
+          ),
+          text(
+            "نصيب NCI من ربح التابعة = 2.1 × 20% = 0.42 مليون؛ ونصيب مالكي الأم من الإجمالي = 10.08 مليون.",
+            "NCI share of subsidiary profit = $2.1m × 20% = $0.42m; total attributable to owners of the parent = $10.08m.",
+          ),
+        ],
+        conclusion: text(
+          "تجمع المجموعة 100% من ربح التابعة بعد الاستحواذ ثم توزع صافي الربح بين مالكي الأم وحقوق غير المسيطرين.",
+          "The group includes 100% of post-acquisition subsidiary profit and then allocates total profit between parent owners and NCI.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 10.19–22, B94",
+      },
+    ],
+  },
+  "IFRS 11": {
+    sections: [
+      {
+        title: text("إثبات وجود السيطرة المشتركة", "Establishing joint control"),
+        explanation: text(
+          "السيطرة المشتركة لا تنشأ من تشابه نسب الملكية وحده، بل من ترتيب تعاقدي يجعل القرارات عن الأنشطة ذات الصلة بحاجة إلى موافقة بالإجماع من الأطراف التي تسيطر جماعيًا. فإذا أمكن بلوغ نسبة التصويت المطلوبة بأكثر من مجموعة من المساهمين دون تحديد من يجب أن يوافق، فقد توجد سيطرة جماعية ولكن لا توجد سيطرة مشتركة بمفهوم IFRS 11.",
+          "Joint control does not arise merely from equal ownership. A contractual arrangement must require unanimous consent of the parties that collectively control decisions about relevant activities. If a voting threshold can be reached by several combinations of shareholders without specifying whose agreement is required, collective control may exist but joint control under IFRS 11 does not.",
+        ),
+        keyPoints: [
+          text(
+            "حدد أولًا مجموعة الأطراف التي تسيطر جماعيًا.",
+            "First identify the group of parties that controls collectively.",
+          ),
+          text(
+            "اختبر هل القرارات الجوهرية تتطلب موافقة جميع أطراف تلك المجموعة.",
+            "Then test whether relevant decisions require every party in that group to agree.",
+          ),
+          text(
+            "الحقوق الوقائية وحدها لا تمنح سيطرة مشتركة.",
+            "Protective rights alone do not confer joint control.",
+          ),
+        ],
+        reference: "IFRS 11.4–13, B5–B11",
+      },
+      {
+        title: text("عملية مشتركة أم مشروع مشترك؟", "Joint operation or joint venture?"),
+        explanation: text(
+          "التصنيف يتبع الحقوق والالتزامات لا اسم العقد. العملية المشتركة تمنح الأطراف حقوقًا في الأصول والتزامات عن الخصوم؛ أما المشروع المشترك فيمنحهم حقوقًا في صافي الأصول. عند وجود كيان منفصل يُفحص شكله القانوني وشروط العقد، ثم الوقائع والظروف مثل تخصيص كامل المخرجات للأطراف واعتماد تسوية الخصوم باستمرار على تدفقاتهم النقدية.",
+          "Classification follows rights and obligations, not the contract label. In a joint operation, parties have rights to assets and obligations for liabilities; in a joint venture they have rights to net assets. When a separate vehicle exists, its legal form and contractual terms are assessed, followed by other facts and circumstances such as the parties taking substantially all output and continuously funding settlement of liabilities.",
+        ),
+        keyPoints: [
+          text(
+            "الترتيب غير المنظم في كيان منفصل يكون عادة عملية مشتركة.",
+            "An arrangement not structured through a separate vehicle is normally a joint operation.",
+          ),
+          text(
+            "وجود شركة مستقلة لا يحسم وحده أن الترتيب مشروع مشترك.",
+            "A separate company alone does not conclusively make the arrangement a joint venture.",
+          ),
+          text(
+            "أعد التصنيف عندما تتغير الحقوق أو الالتزامات أو الوقائع الجوهرية.",
+            "Reassess classification when rights, obligations or significant facts change.",
+          ),
+        ],
+        reference: "IFRS 11.14–19, B12–B33",
+      },
+      {
+        title: text("المعالجة المحاسبية حسب النوع", "Accounting follows the classification"),
+        explanation: text(
+          "يثبت المشغل المشترك أصوله ونصيبه من الأصول المشتركة، والتزاماته ونصيبه من الالتزامات، وإيراداته ومصروفاته المرتبطة بالعملية. أما الشريك في مشروع مشترك فيثبت استثمارًا واحدًا ويطبق طريقة حقوق الملكية وفق IAS 28، مع الاستثناءات المحدودة المقررة هناك. لذا فإن خطأ التصنيف يغير بنية القائمة بالكامل لا مجرد إفصاح هامشي.",
+          "A joint operator recognises its assets and share of joint assets, its liabilities and share of joint liabilities, and related revenue and expenses. A joint venturer recognises one investment and applies the equity method under IAS 28, subject to limited exceptions. A classification error therefore changes the architecture of the statements, not merely a note disclosure.",
+        ),
+        keyPoints: [
+          text(
+            "العملية المشتركة تعرض الحقوق والالتزامات بندًا بندًا.",
+            "A joint operation presents rights and obligations line by line.",
+          ),
+          text(
+            "المشروع المشترك يظهر عادة كبند استثمار واحد.",
+            "A joint venture normally appears as a single investment line.",
+          ),
+          text(
+            "عند شراء حصة في عملية مشتركة تمثل أعمالًا تطبق مبادئ IFRS 3 الملائمة.",
+            "An acquired interest in a joint operation that constitutes a business applies the relevant IFRS 3 principles.",
+          ),
+        ],
+        reference: "IFRS 11.20–25",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("شرط الإجماع بين ثلاثة مستثمرين", "Unanimity among three investors"),
+        facts: text(
+          "يمتلك كل من Sneezy وSleepy وDopey ثلث حقوق التصويت. ينص الاتفاق على أن قرارات الأنشطة ذات الصلة تحتاج موافقة الأطراف الثلاثة بالإجماع.",
+          "Sneezy, Sleepy and Dopey each hold one third of the voting rights. The agreement requires unanimous consent of all three for decisions about relevant activities.",
+        ),
+        calculations: [
+          text(
+            "كل طرف يملك 33⅓%، لكن أي طرف يستطيع منع قرار متعلق بالأنشطة ذات الصلة.",
+            "Each party holds 33⅓%, but each can block a decision about relevant activities.",
+          ),
+          text(
+            "لا تستطيع أي مجموعة أصغر اتخاذ القرار دون الطرف الثالث؛ لذلك يحدد العقد الأطراف التي تتقاسم السيطرة.",
+            "No smaller combination can decide without the third party, so the contract identifies the parties sharing control.",
+          ),
+        ],
+        conclusion: text(
+          "يوجد ترتيب خاضع لسيطرة مشتركة، ثم يلزم فحص الحقوق والالتزامات لتصنيفه كعملية مشتركة أو مشروع مشترك.",
+          "A jointly controlled arrangement exists; rights and obligations must then be assessed to classify it as a joint operation or joint venture.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 11.7–13",
+      },
+    ],
+  },
+  "IFRS 12": {
+    sections: [
+      {
+        title: text(
+          "الإفصاح يبدأ بالأحكام المهمة",
+          "Disclosure starts with significant judgements",
+        ),
+        explanation: text(
+          "لا يكفي سرد أسماء الشركات ونسب الملكية. يجب شرح الأحكام والافتراضات المهمة التي أدت إلى نتيجة السيطرة أو السيطرة المشتركة أو النفوذ المؤثر، بما في ذلك الحالات غير الواضحة: سيطرة بأقل من نصف الأصوات، أو عدم سيطرة رغم امتلاك أكثر من النصف، وتصنيف الترتيب المشترك عند استخدام كيان منفصل.",
+          "Listing entities and ownership percentages is not enough. An entity explains the significant judgements and assumptions behind control, joint control and significant influence conclusions, including unclear cases: control with less than half the votes, no control despite more than half, and classification of a joint arrangement conducted through a separate vehicle.",
+        ),
+        keyPoints: [
+          text(
+            "اربط كل حكم بالوقائع التي جعلته مهمًا للمستخدم.",
+            "Connect each judgement to the facts that make it significant to users.",
+          ),
+          text(
+            "حدّث الإفصاح عندما تتغير الوقائع أو يتغير الاستنتاج.",
+            "Update disclosure when facts or the conclusion change.",
+          ),
+          text(
+            "اشرح تعريف المنشأة الاستثمارية إذا كان مطبقًا.",
+            "Explain the investment-entity determination when applicable.",
+          ),
+        ],
+        reference: "IFRS 12.7–9B",
+      },
+      {
+        title: text("مخاطر الشركات التابعة والقيود", "Subsidiary risks and restrictions"),
+        explanation: text(
+          "تساعد إفصاحات الشركات التابعة المستخدم على فهم تكوين المجموعة وحقوق غير المسيطرين المهمة والقيود الجوهرية على تحويل النقد أو الأصول داخل المجموعة. كما تشرح طبيعة المخاطر المرتبطة بالدعم المقدم إلى منشآت مهيكلة موحدة، وآثار التغير في حصة الملكية دون فقد السيطرة أو عند فقدها.",
+          "Subsidiary disclosures help users understand group composition, material NCI and significant restrictions on transferring cash or assets within the group. They also explain risks from support provided to consolidated structured entities and the effects of ownership changes with or without loss of control.",
+        ),
+        keyPoints: [
+          text(
+            "حدد أين توجد قيود قانونية أو تعاقدية على التوزيعات والقروض.",
+            "Identify legal or contractual restrictions on distributions and loans.",
+          ),
+          text(
+            "قدم معلومات مالية ملخصة للتابعات ذات NCI الجوهري.",
+            "Provide summarised financial information for subsidiaries with material NCI.",
+          ),
+          text(
+            "اكشف الدعم غير التعاقدي وأسباب تقديمه عندما يكون مطلوبًا.",
+            "Disclose non-contractual support and why it was provided when required.",
+          ),
+        ],
+        reference: "IFRS 12.10–19",
+      },
+      {
+        title: text(
+          "المشروعات المشتركة والزميلة والمنشآت المهيكلة",
+          "Joint ventures, associates and structured entities",
+        ),
+        explanation: text(
+          "للحصص الجوهرية في المشروعات المشتركة والزميلة، تجمع المنشأة بين وصف طبيعة العلاقة ومعلومات مالية ملخصة ومخاطر الالتزامات. وبالنسبة للمنشآت المهيكلة غير الموحدة، يركز الإفصاح على طبيعة ومدى الحصة، وكيفية التمويل، والحد الأقصى للتعرض للخسارة، وأي دعم دون التزام تعاقدي.",
+          "For material joint ventures and associates, an entity combines a description of the relationship with summarised financial information and commitment risks. For unconsolidated structured entities, disclosure focuses on the nature and extent of the interest, financing, maximum exposure to loss and any support provided without a contractual obligation.",
+        ),
+        keyPoints: [
+          text(
+            "لا تخفِ المخاطر المختلفة داخل تجميع واسع غير مفيد.",
+            "Do not obscure different risks through overly broad aggregation.",
+          ),
+          text(
+            "وازن مستوى التفصيل بحيث لا تغطي البنود غير المهمة على المعلومات المهمة.",
+            "Balance detail so immaterial items do not obscure important information.",
+          ),
+          text(
+            "أضف أي معلومات ضرورية إذا لم تحقق المتطلبات المحددة هدف الإفصاح.",
+            "Add information when specified requirements do not meet the disclosure objective.",
+          ),
+        ],
+        reference: "IFRS 12.20–31, B2–B6",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("بناء إفصاح عن حصة في منشأة مهيكلة", "Building a structured-entity disclosure"),
+        facts: text(
+          "ترعى منشأة وعاء تمويل غير موحد يحمل محفظة قروض. لا تملك المنشأة أسهم تصويت، لكنها توفر تسهيل سيولة بحد أقصى 8 ملايين وبلغ المستخدم منه في نهاية السنة 3 ملايين، وقدمت خلال السنة دعمًا إضافيًا غير ملزم قدره مليون.",
+          "An entity sponsors an unconsolidated financing vehicle holding a loan portfolio. It has no voting shares but provides an $8 million liquidity facility, of which $3 million is drawn at year end, and supplied an additional non-contractual $1 million during the year.",
+        ),
+        calculations: [
+          text(
+            "التعرض المسجل الحالي يشمل المبلغ المسحوب 3 ملايين وفق طبيعته المحاسبية.",
+            "Current recognised exposure includes the $3 million drawn amount according to its accounting nature.",
+          ),
+          text(
+            "يشرح الإفصاح كذلك الحد الأقصى للتعرض البالغ 8 ملايين، ولا يكتفي بالمبلغ المسجل.",
+            "Disclosure also explains the $8 million maximum exposure rather than stopping at the recognised amount.",
+          ),
+          text(
+            "يُوصف الدعم الإضافي البالغ مليون وسبب تقديمه رغم غياب الالتزام التعاقدي.",
+            "The additional $1 million support and the reason for providing it despite no contractual obligation are described.",
+          ),
+        ],
+        conclusion: text(
+          "الهدف هو كشف مسار الخطر الاقتصادي الكامل وطبيعته، لا عرض رقم واحد منفصل عن تصميم المنشأة.",
+          "The objective is to reveal the full path and nature of economic risk, not a single number detached from the vehicle's design.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 12.24–31",
+      },
+    ],
+  },
+  "IAS 28": {
+    sections: [
+      {
+        title: text(
+          "النفوذ المؤثر ليس اختبار نسبة آليًا",
+          "Significant influence is not an automatic percentage test",
+        ),
+        explanation: text(
+          "النفوذ المؤثر هو القدرة على المشاركة في قرارات السياسات المالية والتشغيلية دون السيطرة أو السيطرة المشتركة. حيازة 20% أو أكثر من حقوق التصويت تنشئ افتراضًا قابلًا للدحض، وأقل من 20% ينشئ افتراضًا معاكسًا يمكن دحضه بأدلة مثل تمثيل مجلس الإدارة والمشاركة في السياسات والمعاملات الجوهرية وتبادل الإدارة أو المعلومات الفنية الأساسية.",
+          "Significant influence is the power to participate in financial and operating policy decisions without control or joint control. Holding 20% or more of voting power creates a rebuttable presumption; below 20% creates the opposite presumption, which can be overcome by evidence such as board representation, policy participation, material transactions, managerial interchange or essential technical information.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق الأدلة النوعية ولا تعتمد على النسبة وحدها.",
+            "Document qualitative evidence rather than relying on percentage alone.",
+          ),
+          text(
+            "افحص حقوق التصويت المحتملة الجوهرية عند تقييم النفوذ.",
+            "Consider substantive potential voting rights when assessing influence.",
+          ),
+          text(
+            "توقف طريقة حقوق الملكية عند فقد النفوذ المؤثر أو السيطرة المشتركة.",
+            "Stop the equity method when significant influence or joint control is lost.",
+          ),
+        ],
+        reference: "IAS 28.3, 5–9, 22–23",
+      },
+      {
+        title: text("كيف تعمل طريقة حقوق الملكية", "How the equity method works"),
+        explanation: text(
+          "يثبت الاستثمار أولًا بالتكلفة، ثم يزيد أو ينقص بنصيب المستثمر من ربح أو خسارة المستثمر فيه ودخله الشامل الآخر بعد الاستحواذ. التوزيعات المستلمة لا تعد دخلًا جديدًا تحت هذه الطريقة؛ بل تخفض القيمة الدفترية للاستثمار لأن الربح سبق إدراجه عند تحققه لدى المستثمر فيه.",
+          "The investment is initially recognised at cost and subsequently increased or decreased by the investor's share of the investee's post-acquisition profit or loss and OCI. Distributions received are not new income under the method; they reduce the investment carrying amount because the underlying profit was recognised as the investee earned it.",
+        ),
+        keyPoints: [
+          text(
+            "وحّد السياسات المحاسبية للمعاملات والأحداث المتشابهة.",
+            "Use uniform accounting policies for like transactions and events.",
+          ),
+          text(
+            "اعترف بحصة الخسائر حتى تصبح الحصة صفرًا ثم طبّق قواعد الالتزامات الإضافية.",
+            "Recognise losses until the interest is reduced to zero, then apply rules for further obligations.",
+          ),
+          text(
+            "اختبر الانخفاض عند وجود مؤشر بعد تطبيق متطلبات الخسائر.",
+            "Test for impairment when indicators exist after applying loss-recognition requirements.",
+          ),
+        ],
+        reference: "IAS 28.10–15, 26, 38–43",
+      },
+      {
+        title: text(
+          "الأرباح غير المحققة والمعاملات مع المستثمر فيه",
+          "Unrealised profits and investee transactions",
+        ),
+        explanation: text(
+          "في المعاملات الصاعدة أو الهابطة بين المستثمر والمنشأة الزميلة أو المشروع المشترك، لا يعترف المستثمر بالأرباح أو الخسائر إلا بقدر حصص المستثمرين غير المرتبطين. لذلك يُلغى نصيب المستثمر من الربح غير المحقق في أصل ما زال داخل العلاقة، مع بقاء الخسارة دلالة محتملة على انخفاض قيمة الأصل المنقول.",
+          "For upstream or downstream transactions between an investor and an associate or joint venture, gains and losses are recognised only to the extent of unrelated investors' interests. The investor's share of an unrealised gain on an asset remaining within the relationship is eliminated, while a loss may still signal impairment of the transferred asset.",
+        ),
+        keyPoints: [
+          text(
+            "حدد اتجاه المعاملة ومن يحتفظ بالأصل في نهاية الفترة.",
+            "Identify the direction of the transaction and who holds the asset at period end.",
+          ),
+          text(
+            "الإلغاء يكون بقدر حصة المستثمر لا بكامل الربح عادة.",
+            "Elimination is normally limited to the investor's interest, not the entire gain.",
+          ),
+          text(
+            "لا تستخدم الإلغاء لإخفاء خسارة انخفاض حقيقية.",
+            "Do not use elimination to hide a genuine impairment loss.",
+          ),
+        ],
+        reference: "IAS 28.28–31",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تحديث رصيد الاستثمار بطريقة حقوق الملكية",
+          "Updating an investment under the equity method",
+        ),
+        facts: text(
+          "اشترت منشأة 30% من شركة زميلة بمبلغ 4,000,000. حققت الزميلة بعد الاستحواذ ربحًا 1,200,000 ودخلًا شاملًا آخر 200,000 ووزعت أرباحًا نقدية 300,000. لا توجد تعديلات قيمة عادلة أو انخفاض.",
+          "An entity acquired 30% of an associate for $4,000,000. Post-acquisition, the associate earned $1,200,000 profit, reported $200,000 OCI and paid $300,000 dividends. There are no fair-value adjustments or impairment.",
+        ),
+        calculations: [
+          text(
+            "نصيب الربح = 1,200,000 × 30% = 360,000.",
+            "Share of profit = $1,200,000 × 30% = $360,000.",
+          ),
+          text(
+            "نصيب الدخل الشامل الآخر = 200,000 × 30% = 60,000.",
+            "Share of OCI = $200,000 × 30% = $60,000.",
+          ),
+          text(
+            "التوزيعات المخفضة للاستثمار = 300,000 × 30% = 90,000.",
+            "Dividends reducing the investment = $300,000 × 30% = $90,000.",
+          ),
+          text(
+            "الرصيد الختامي = 4,000,000 + 360,000 + 60,000 − 90,000 = 4,330,000.",
+            "Closing carrying amount = $4,000,000 + $360,000 + $60,000 − $90,000 = $4,330,000.",
+          ),
+        ],
+        conclusion: text(
+          "يظهر الاستثمار بمبلغ 4,330,000؛ يثبت نصيب الربح في الربح أو الخسارة ونصيب OCI في الدخل الشامل الآخر.",
+          "The investment is presented at $4,330,000; the profit share is recognised in profit or loss and the OCI share in OCI.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات نصيب الربح", "Recognise share of profit"),
+            debit: text("استثمار في شركة زميلة", "Investment in associate"),
+            credit: text("نصيب في ربح شركة زميلة", "Share of associate profit"),
+            amount: text("360,000", "$360,000"),
+          },
+          {
+            label: text("استلام التوزيعات", "Receive dividends"),
+            debit: text("نقدية", "Cash"),
+            credit: text("استثمار في شركة زميلة", "Investment in associate"),
+            amount: text("90,000", "$90,000"),
+          },
+        ],
+        reference: "IAS 28.10–11",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
