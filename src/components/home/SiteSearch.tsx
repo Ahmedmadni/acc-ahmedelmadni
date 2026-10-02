@@ -307,12 +307,12 @@ export default function SiteSearch({
                 maxHeight: rect.maxHeight,
                 transformOrigin: rect.flip ? "bottom center" : "top center",
               }}
-              className="z-[200] overflow-y-auto rounded-2xl border border-[#c9a986]/30 bg-[#171512]/97 p-2 shadow-[0_30px_80px_-24px_rgba(0,0,0,0.85)] backdrop-blur-xl"
+              className="z-[200] overflow-y-auto rounded-2xl border border-[#1c1b19]/10 bg-[#fcfbf9]/[0.98] p-2 shadow-[0_30px_80px_-24px_rgba(28,27,25,0.5)] backdrop-blur-xl"
               dir={isRTL ? "rtl" : "ltr"}
               role="listbox"
             >
               {results.length === 0 ? (
-                <p className="px-4 py-6 text-center text-sm text-[#8a8078]">
+                <p className="px-4 py-6 text-center text-sm text-[#746e67]">
                   {isRTL
                     ? "لا توجد نتائج مطابقة — جرّب كلمة أخرى."
                     : "No matches — try another keyword."}
@@ -323,10 +323,10 @@ export default function SiteSearch({
                   const Icon = meta.icon;
                   return (
                     <div key={group} className="mb-1 last:mb-0">
-                      <div className="flex items-center gap-1.5 px-3 pb-1 pt-2 text-[11px] font-bold tracking-wide text-[#c9a986]">
+                      <div className="flex items-center gap-1.5 px-3 pb-1 pt-2 text-[11px] font-bold tracking-wide text-[#76543f]">
                         <Icon className="size-3.5" />
                         {isRTL ? meta.ar : meta.en}
-                        <span className="text-[#8a8078]/70">
+                        <span className="text-[#746e67]/70">
                           {isRTL ? `(${items.length})` : `(${items.length})`}
                         </span>
                       </div>
@@ -343,22 +343,22 @@ export default function SiteSearch({
                             onClick={() => go(r)}
                             className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-start transition-colors ${
                               idx === active
-                                ? "bg-[#c9a986]/15 ring-1 ring-inset ring-[#c9a986]/25"
-                                : "hover:bg-white/5"
+                                ? "bg-[#a88765]/12 ring-1 ring-inset ring-[#a88765]/30"
+                                : "hover:bg-[#1c1b19]/[0.04]"
                             }`}
                           >
                             <span className="min-w-0">
-                              <span className="block truncate text-sm font-bold text-[#FCFBF9]">
+                              <span className="block truncate text-sm font-bold text-[#1c1b19]">
                                 {r.title}
                               </span>
                               {r.subtitle && (
-                                <span className="block truncate text-xs text-[#8a8078]">
+                                <span className="block truncate text-xs text-[#746e67]">
                                   {r.subtitle}
                                 </span>
                               )}
                             </span>
                             {idx === active && (
-                              <CornerDownLeft className="size-3.5 shrink-0 text-[#c9a986]" />
+                              <CornerDownLeft className="size-3.5 shrink-0 text-[#76543f]" />
                             )}
                           </button>
                         );
@@ -394,9 +394,9 @@ export default function SiteSearch({
           className="pointer-events-none absolute -inset-4 rounded-full bg-[radial-gradient(closest-side,rgba(201,169,134,0.28),transparent)] opacity-0 blur-xl transition-opacity duration-500 group-focus-within/bar:opacity-100"
         />
 
-        <div className="relative flex h-14 items-center gap-3 rounded-full bg-[#171512]/95 px-4 backdrop-blur-xl sm:px-5">
-          <span className="grid size-8 shrink-0 place-items-center rounded-full border border-[#c9a986]/30 bg-[#c9a986]/12">
-            <Search className="size-4 text-[#e2c9a5]" />
+        <div className="relative flex h-14 items-center gap-3 rounded-full bg-[#fcfbf9]/95 px-4 shadow-[0_18px_50px_-20px_rgba(0,0,0,0.6)] ring-1 ring-inset ring-[#1c1b19]/[0.06] backdrop-blur-xl sm:px-5">
+          <span className="grid size-8 shrink-0 place-items-center rounded-full border border-[#a88765]/35 bg-[#a88765]/12">
+            <Search className="size-4 text-[#76543f]" />
           </span>
           <input
             ref={inputRef}
@@ -416,7 +416,7 @@ export default function SiteSearch({
                 : "Search tools, services, articles, pages…"
             }
             aria-label={isRTL ? "بحث في الموقع" : "Search the site"}
-            className="w-full min-w-0 bg-transparent text-[15px] text-[#FCFBF9] outline-none placeholder:text-[#8a8078]"
+            className="w-full min-w-0 bg-transparent text-[15px] text-[#1c1b19] outline-none placeholder:text-[#746e67]"
           />
           {q ? (
             <button
@@ -426,14 +426,14 @@ export default function SiteSearch({
                 inputRef.current?.focus();
               }}
               aria-label={isRTL ? "مسح البحث" : "Clear search"}
-              className="shrink-0 rounded-full p-1.5 text-[#8a8078] transition hover:bg-white/10 hover:text-[#FCFBF9]"
+              className="shrink-0 rounded-full p-1.5 text-[#746e67] transition hover:bg-[#1c1b19]/[0.06] hover:text-[#1c1b19]"
             >
               <X className="size-4" />
             </button>
           ) : (
             <kbd
               aria-hidden
-              className="hidden shrink-0 items-center gap-1 rounded-md border border-white/12 bg-white/[0.06] px-2 py-1 font-sans text-[10px] font-bold text-[#c9a986] sm:flex"
+              className="hidden shrink-0 items-center gap-1 rounded-md border border-[#1c1b19]/12 bg-[#1c1b19]/[0.05] px-2 py-1 font-sans text-[10px] font-bold text-[#76543f] sm:flex"
             >
               {isMac ? "⌘" : "Ctrl"} K
             </kbd>
@@ -456,8 +456,8 @@ export default function SiteSearch({
             className={cn(
               "rounded-full border px-3 py-1 text-[11.5px] font-semibold transition-colors",
               q === (isRTL ? item.ar : item.en)
-                ? "border-[#c9a986]/60 bg-[#c9a986]/18 text-[#f0dcc0]"
-                : "border-[#c9a986]/22 bg-white/[0.03] text-[#d6c8b6]/80 hover:border-[#c9a986]/50 hover:text-[#f0dcc0]",
+                ? "border-transparent bg-[#fcfbf9] text-[#1c1b19]"
+                : "border-[#fcfbf9]/20 bg-[#fcfbf9]/10 text-[#efe6d9] hover:border-[#a88765]/60 hover:bg-[#fcfbf9]/15",
             )}
           >
             {isRTL ? item.ar : item.en}
