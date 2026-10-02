@@ -2163,6 +2163,417 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 27": {
+    sections: [
+      {
+        title: text(
+          "ما المقصود بالقوائم المالية المنفصلة؟",
+          "What are separate financial statements?",
+        ),
+        explanation: text(
+          "القوائم المنفصلة تعرض المنشأة المستثمرة بذاتها، فلا تجمع أصول والتزامات الشركات التابعة بندًا ببند ولا تطبق تلقائيًا طريقة حقوق الملكية على الشركات الزميلة والمشروعات المشتركة. وهي تختلف عن القوائم الموحدة، وقد تُعرض بالإضافة إليها أو بوصفها القوائم الوحيدة في حالات الإعفاء المحددة. وجود استثمار عادي خاضع لـIFRS 9 وحده لا يحول القوائم إلى قوائم منفصلة بمفهوم IAS 27.",
+          "Separate financial statements present the investing entity itself: they do not combine a subsidiary's assets and liabilities line by line and do not automatically equity-account associates and joint ventures. They differ from consolidated statements and may accompany them or, in specified exemption cases, be the entity's only statements. Merely holding an ordinary IFRS 9 investment does not make financial statements 'separate' under IAS 27.",
+        ),
+        keyPoints: [
+          text(
+            "IFRS 10 يحدد متى يلزم التجميع، بينما IAS 27 يحدد محاسبة الاستثمارات في القوائم المنفصلة.",
+            "IFRS 10 determines when consolidation is required; IAS 27 governs investments in separate statements.",
+          ),
+          text(
+            "القوائم المنفصلة لا تعني قوائم غير ممتثلة لبقية معايير IFRS.",
+            "Separate statements still comply with all other applicable IFRS requirements.",
+          ),
+          text(
+            "المنشأة الاستثمارية التي تقيس تابعاتها بالقيمة العادلة قد تعرض قوائم منفصلة بوصفها قوائمها الوحيدة.",
+            "An investment entity measuring subsidiaries at fair value may present separate statements as its only statements.",
+          ),
+        ],
+        reference: "IAS 27.1–9",
+      },
+      {
+        title: text(
+          "ثلاثة أسس للقياس واختيار متسق",
+          "Three measurement bases and a consistent choice",
+        ),
+        explanation: text(
+          "تختار المنشأة لكل فئة من الاستثمارات في الشركات التابعة أو المشروعات المشتركة أو الشركات الزميلة القياس بالتكلفة، أو وفق IFRS 9، أو بطريقة حقوق الملكية كما يصفها IAS 28. يجب تطبيق الأساس نفسه على جميع الاستثمارات داخل الفئة الواحدة؛ فلا يجوز انتقاء القياس أصلًا بأصل لتحقيق نتيجة مرغوبة. وإذا صُنّف استثمار مقاس بالتكلفة أو بطريقة حقوق الملكية كمحتفظ به للبيع، تطبق عليه متطلبات IFRS 5.",
+          "For each category of investments in subsidiaries, joint ventures or associates, an entity chooses cost, IFRS 9 measurement, or the IAS 28 equity method. The same basis is applied to all investments in a category; asset-by-asset selection to engineer an outcome is not permitted. An investment measured at cost or under the equity method applies IFRS 5 when classified as held for sale.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق السياسة لكل فئة: تابعات، مشروعات مشتركة، وشركات زميلة.",
+            "Document the policy for each category: subsidiaries, joint ventures and associates.",
+          ),
+          text(
+            "اختيار IFRS 9 يجلب قواعد التصنيف والقياس والانخفاض ذات الصلة.",
+            "Choosing IFRS 9 brings its relevant classification, measurement and impairment rules.",
+          ),
+          text(
+            "الاستثمارات التي يقيسها كيان استثماري بالقيمة العادلة تظل كذلك في قوائمه المنفصلة.",
+            "Investments measured at fair value by an investment entity remain so in its separate statements.",
+          ),
+        ],
+        reference: "IAS 27.10–11A",
+      },
+      {
+        title: text(
+          "التوزيعات وإعادة التنظيم والإفصاح",
+          "Dividends, reorganisations and disclosure",
+        ),
+        explanation: text(
+          "عند استخدام التكلفة أو IFRS 9 يُعترف بالتوزيع من التابعة أو الزميلة أو المشروع المشترك في الربح أو الخسارة عندما يثبت الحق في استلامه، ما لم تفرض قاعدة أخرى معالجة مختلفة. أما تحت طريقة حقوق الملكية فيخفض التوزيع رصيد الاستثمار. وتشرح الإيضاحات أن القوائم منفصلة، وأسباب إعدادها عند وجود إعفاء، وقائمة الاستثمارات الجوهرية وسياسة المحاسبة المطبقة على كل فئة.",
+          "Under cost or IFRS 9, a dividend from a subsidiary, associate or joint venture is recognised in profit or loss when the right to receive it is established, unless another requirement dictates otherwise. Under the equity method, the distribution reduces the investment. Notes identify the statements as separate, explain any exemption relied on, list material investments and describe the accounting policy for each category.",
+        ),
+        keyPoints: [
+          text(
+            "لا تخلط بين دخل التوزيع ونصيب الربح المعترف به سابقًا بطريقة حقوق الملكية.",
+            "Do not confuse dividend income with profit already recognised under the equity method.",
+          ),
+          text(
+            "افحص مؤشرات الانخفاض في الاستثمار المقاس بالتكلفة وفق المتطلبات ذات الصلة.",
+            "Assess impairment indicators for a cost-measured investment under the relevant requirements.",
+          ),
+          text(
+            "الإفصاح يربط اسم المستثمر فيه ومقره ونسبة الملكية وطريقة القياس.",
+            "Disclosure connects the investee, domicile, ownership interest and measurement basis.",
+          ),
+        ],
+        reference: "IAS 27.12, 15–17",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "التكلفة مقابل طريقة حقوق الملكية في القوائم المنفصلة",
+          "Cost versus equity method in separate statements",
+        ),
+        facts: text(
+          "اشترت شركة أم 80% من شركة تابعة مقابل 5,000,000. حققت التابعة بعد الاستحواذ ربحًا 900,000 ووزعت 200,000. لا توجد فروق قيمة عادلة أو انخفاض، وتعرض الأم أثر سياستي التكلفة وحقوق الملكية للمقارنة.",
+          "A parent buys 80% of a subsidiary for $5,000,000. After acquisition the subsidiary earns $900,000 and pays $200,000 dividends. There are no fair-value differences or impairment, and the parent compares cost and equity-method policies.",
+        ),
+        calculations: [
+          text(
+            "وفق التكلفة: يبقى الاستثمار 5,000,000، ويثبت دخل توزيعات 160,000 = 200,000 × 80%.",
+            "Under cost: the investment remains $5,000,000 and dividend income is $160,000 = $200,000 × 80%.",
+          ),
+          text(
+            "وفق حقوق الملكية: نصيب الربح 720,000 = 900,000 × 80%، والتوزيعات 160,000 تخفض الاستثمار.",
+            "Under the equity method: profit share is $720,000 = $900,000 × 80%, and $160,000 dividends reduce the investment.",
+          ),
+          text(
+            "رصيد الاستثمار بطريقة حقوق الملكية = 5,000,000 + 720,000 − 160,000 = 5,560,000.",
+            "Equity-method carrying amount = $5,000,000 + $720,000 − $160,000 = $5,560,000.",
+          ),
+        ],
+        conclusion: text(
+          "السياسة المختارة تغيّر توقيت ومكان ظهور العائد، ويجب تطبيقها باتساق على فئة الشركات التابعة.",
+          "The selected policy changes the timing and location of reported returns and must be applied consistently to the subsidiary category.",
+        ),
+        journalEntries: [
+          {
+            label: text("التوزيع وفق نموذج التكلفة", "Dividend under the cost model"),
+            debit: text("نقدية / توزيعات مستحقة", "Cash / dividend receivable"),
+            credit: text("دخل توزيعات", "Dividend income"),
+            amount: text("160,000", "$160,000"),
+          },
+          {
+            label: text("نصيب الربح بطريقة حقوق الملكية", "Profit share under the equity method"),
+            debit: text("استثمار في شركة تابعة", "Investment in subsidiary"),
+            credit: text("نصيب في ربح الشركة التابعة", "Share of subsidiary profit"),
+            amount: text("720,000", "$720,000"),
+          },
+        ],
+        reference: "IAS 27.10, 12; IAS 28.10–11",
+      },
+    ],
+  },
+  "IAS 21": {
+    sections: [
+      {
+        title: text(
+          "العملة الوظيفية قبل عملة العرض",
+          "Functional currency before presentation currency",
+        ),
+        explanation: text(
+          "العملة الوظيفية هي عملة البيئة الاقتصادية الأساسية التي تولد فيها المنشأة النقد وتنفقه، ويحددها جوهر عوامل التسعير والتكاليف والتمويل لا رغبة الإدارة في شكل التقرير. أما عملة العرض فيمكن أن تكون أي عملة تختارها المنشأة. تحديد العملة الوظيفية قرار تأسيسي؛ لأنه يحدد ما يعد معاملة أجنبية وكيف تقاس فروق الصرف لاحقًا.",
+          "Functional currency is the currency of the primary economic environment in which an entity generates and spends cash. It follows pricing, cost and financing substance rather than management's preferred reporting format. Presentation currency may be any selected currency. Functional-currency determination is foundational because it decides what is a foreign-currency transaction and how later exchange differences are measured.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ بعملة أسعار المبيعات والعمل المؤثرة في تلك الأسعار.",
+            "Start with the currency influencing sales prices and the competitive environment.",
+          ),
+          text(
+            "افحص عملة تكاليف العمل والمواد والتكاليف الأخرى، ثم عوامل التمويل والاحتفاظ بالمتحصلات.",
+            "Assess the currency of labour, materials and other costs, then financing and receipts-retention factors.",
+          ),
+          text(
+            "لا تتغير العملة الوظيفية إلا إذا تغيرت المعاملات والأحداث والظروف الأساسية.",
+            "Functional currency changes only when underlying transactions, events and conditions change.",
+          ),
+        ],
+        reference: "IAS 21.8–14",
+      },
+      {
+        title: text(
+          "المعاملات الأجنبية: نقدي أم غير نقدي؟",
+          "Foreign transactions: monetary or non-monetary?",
+        ),
+        explanation: text(
+          "تثبت المعاملة أولًا بسعر الصرف الفوري في تاريخها، ويجوز استخدام متوسط مناسب إذا كان تقريبًا معقولًا. في نهاية الفترة تترجم البنود النقدية بالسعر الختامي وتذهب الفروق عادة إلى الربح أو الخسارة. أما البند غير النقدي بالتكلفة التاريخية فيبقى بسعر تاريخ المعاملة، والبند غير النقدي بالقيمة العادلة يستخدم سعر تاريخ قياس القيمة العادلة ويتبع فرق الصرف مكان الاعتراف بمكسب أو خسارة القياس الأصلية.",
+          "A transaction is initially recorded at the spot rate on its date, with a suitable average permitted as a reasonable approximation. At period end monetary items use the closing rate and differences normally go to profit or loss. A historical-cost non-monetary item keeps the transaction-date rate; a fair-value non-monetary item uses the rate when fair value was measured, with the exchange component following the location of the underlying valuation gain or loss.",
+        ),
+        keyPoints: [
+          text(
+            "النقدي هو حق في استلام أو التزام بتسليم عدد ثابت أو قابل للتحديد من وحدات العملة.",
+            "A monetary item is a right to receive or obligation to deliver a fixed or determinable number of currency units.",
+          ),
+          text(
+            "المخزون والأصول الثابتة بالتكلفة بنود غير نقدية؛ الذمم المدينة والدائنة نقدية.",
+            "Cost-based inventory and PPE are non-monetary; receivables and payables are monetary.",
+          ),
+          text(
+            "سداد البند النقدي يولد فرق صرف بين سعر الإثبات أو آخر ترجمة وسعر السداد.",
+            "Settlement of a monetary item creates an exchange difference between its recognition or last-translation rate and settlement rate.",
+          ),
+        ],
+        reference: "IAS 21.20–37",
+      },
+      {
+        title: text(
+          "ترجمة العمليات الأجنبية وصافي الاستثمار",
+          "Foreign operations and net investment",
+        ),
+        explanation: text(
+          "عند ترجمة عملية أجنبية إلى عملة عرض المجموعة، تترجم الأصول والالتزامات بالسعر الختامي، والإيرادات والمصروفات بأسعار تواريخ المعاملات أو متوسط مناسب، وتثبت فروق الترجمة في الدخل الشامل الآخر حتى التخلص من العملية وفق الشروط. ويعامل البند النقدي الذي لا يُخطط لسداده ولا يرجح سداده مستقبلًا قريبًا كجزء من صافي الاستثمار في القوائم الموحدة، مع بقاء فرق الصرف في الربح أو الخسارة بالقوائم المنفصلة.",
+          "When translating a foreign operation into the group's presentation currency, assets and liabilities use the closing rate, income and expenses use transaction-date rates or a suitable average, and translation differences remain in OCI until disposal under the applicable conditions. A monetary item whose settlement is neither planned nor likely in the foreseeable future may form part of the net investment in consolidated statements, although its exchange difference remains in profit or loss in separate statements.",
+        ),
+        keyPoints: [
+          text(
+            "تترجم الشهرة وتعديلات القيمة العادلة للعملية الأجنبية كأصول والتزامات لها بالسعر الختامي.",
+            "Goodwill and fair-value adjustments of a foreign operation are translated as its assets and liabilities at the closing rate.",
+          ),
+          text(
+            "يُجمع فرق الترجمة العائد لحقوق غير المسيطرين ضمن رصيدهم.",
+            "Translation differences attributable to NCI are accumulated in the NCI balance.",
+          ),
+          text(
+            "التخلص الكامل أو الجزئي المحدد قد يؤدي إلى إعادة تصنيف فرق الترجمة المتراكم.",
+            "A qualifying full or partial disposal may reclassify accumulated translation differences.",
+          ),
+        ],
+        reference: "IAS 21.32–33, 38–49",
+      },
+      {
+        title: text(
+          "غياب قابلية التحويل: متطلبات سارية منذ 2025",
+          "Lack of exchangeability: requirements effective since 2025",
+        ),
+        explanation: text(
+          "من الفترات السنوية التي تبدأ في أو بعد 1 يناير 2025، تختبر المنشأة هل تستطيع الحصول على العملة الأخرى خلال إطار زمني يسمح بالتأخير الإداري الطبيعي ومن خلال سوق أو آلية تنشئ حقوقًا والتزامات واجبة النفاذ. إذا لم تكن العملة قابلة للتحويل لغرض القياس المحدد، تقدر المنشأة سعرًا فوريًا يحقق هدف إظهار السعر الذي كانت ستتم به معاملة تبادل منظمة بين مشاركين في السوق في تاريخ القياس، وتقدم إفصاحات عن طبيعة المشكلة ومخاطرها ومنهج التقدير.",
+          "For annual periods beginning on or after 1 January 2025, an entity assesses whether it can obtain the other currency within a time frame allowing normal administrative delay through a market or mechanism that creates enforceable rights and obligations. If a currency is not exchangeable for the specified measurement purpose, the entity estimates a spot rate aimed at the rate for an orderly exchange transaction between market participants at the measurement date and discloses the nature, risks and estimation method.",
+        ),
+        keyPoints: [
+          text(
+            "قابلية التحويل تُقيّم في تاريخ القياس ولغرض محدد، وليست وصفًا دائمًا للعملة.",
+            "Exchangeability is assessed at a measurement date for a specified purpose, not as a permanent currency label.",
+          ),
+          text(
+            "يمكن استخدام سعر قابل للملاحظة دون تعديل أو تقنية تقدير أخرى إذا حقق هدف التقدير.",
+            "An observable rate without adjustment or another estimation technique may be used if it meets the objective.",
+          ),
+          text(
+            "الإفصاح يمكّن المستخدم من فهم كيفية تأثير غياب التحويل في الأداء والمركز والتدفقات.",
+            "Disclosure enables users to understand how lack of exchangeability affects performance, position and cash flows.",
+          ),
+        ],
+        reference: "IAS 21.8A–8B, 19A, 57A–57B, Appendix A",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "شراء عقار بالروبية وتسوية الجزء المؤجل",
+          "Rupee property purchase and deferred settlement",
+        ),
+        facts: text(
+          "عملتها الوظيفية اليورو، اشترت Europe Co عقارًا في 18 أغسطس بمبلغ 220 مليون روبية. دفعت 200 مليون فورًا وبقي 20 مليون حتى 31 أكتوبر. الأسعار: 85 روبية لليورو عند الشراء، و87 عند السداد، و88 في 31 ديسمبر. لم تختلف القيمة العادلة للعقار جوهريًا عن قيمته الدفترية.",
+          "Europe Co's functional currency is the euro. On 18 August it buys a property for INR220 million, paying INR200 million immediately and INR20 million on 31 October. Rates are INR85/€ at purchase, INR87/€ at settlement and INR88/€ at year end. The property's fair value is not materially different from carrying amount.",
+        ),
+        calculations: [
+          text(
+            "تكلفة العقار = 220,000,000 ÷ 85 = 2,588,235 يورو تقريبًا.",
+            "Property cost = INR220,000,000 ÷ 85 = approximately €2,588,235.",
+          ),
+          text(
+            "النقد المدفوع فورًا = 200,000,000 ÷ 85 = 2,352,941 يورو؛ والدائن الأولي = 235,294 يورو.",
+            "Immediate cash = INR200,000,000 ÷ 85 = €2,352,941; initial payable = €235,294.",
+          ),
+          text(
+            "مبلغ السداد = 20,000,000 ÷ 87 = 229,885 يورو؛ مكسب الصرف = 235,294 − 229,885 = 5,409 يورو تقريبًا.",
+            "Settlement = INR20,000,000 ÷ 87 = €229,885; exchange gain = €235,294 − €229,885 = approximately €5,409.",
+          ),
+          text(
+            "العقار بند غير نقدي بالتكلفة، فيبقى بسعر 18 أغسطس ما لم يجر قياس قيمة عادلة جديد.",
+            "The property is a historical-cost non-monetary item and retains the 18 August rate unless a new fair-value measurement is made.",
+          ),
+        ],
+        conclusion: text(
+          "يثبت مكسب الصرف عند تسوية الدائن، ولا يعاد ترجمة تكلفة العقار بالسعر الختامي لمجرد تغير سعر العملة.",
+          "The exchange gain is recognised when the payable is settled; the property's cost is not retranslated at the closing rate merely because the currency moved.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات الشراء", "Record the purchase"),
+            debit: text("عقار", "Property"),
+            credit: text("نقدية 2,352,941 + دائن 235,294", "Cash €2,352,941 + payable €235,294"),
+            amount: text("2,588,235 يورو", "€2,588,235"),
+          },
+          {
+            label: text("سداد الدائن", "Settle the payable"),
+            debit: text("دائن 235,294", "Payable €235,294"),
+            credit: text("نقدية 229,885 + مكسب صرف 5,409", "Cash €229,885 + exchange gain €5,409"),
+            amount: text("235,294 يورو", "€235,294"),
+          },
+        ],
+        reference: "IAS 21.21–23, 28",
+      },
+    ],
+  },
+  "IAS 29": {
+    sections: [
+      {
+        title: text(
+          "متى تصبح البيئة مفرطة التضخم؟",
+          "When does an economy become hyperinflationary?",
+        ),
+        explanation: text(
+          "لا يضع IAS 29 نسبة واحدة فاصلة، بل يتطلب حكمًا مبنيًا على خصائص البيئة الاقتصادية: تفضيل الاحتفاظ بالثروة في أصول غير نقدية أو عملة مستقرة، تسعير الائتمان بما يعوض فقد القوة الشرائية، ربط الأسعار بمؤشر، واتجاه معدل التضخم التراكمي لثلاث سنوات إلى 100% أو تجاوزه. يفضل أن تبدأ جميع المنشآت ذات العملة الوظيفية نفسها التطبيق في التاريخ ذاته.",
+          "IAS 29 sets no single bright-line rate. Judgement considers characteristics such as holding wealth in non-monetary assets or stable currency, credit pricing that compensates for purchasing-power loss, index-linked prices, and three-year cumulative inflation approaching or exceeding 100%. Entities with the same functional currency should preferably begin applying the Standard at the same date.",
+        ),
+        keyPoints: [
+          text(
+            "مؤشر 100% خلال ثلاث سنوات علامة مهمة وليس تعريفًا آليًا وحيدًا.",
+            "The 100% three-year indicator is important but not the sole automatic definition.",
+          ),
+          text(
+            "التطبيق يعتمد على العملة الوظيفية لا موقع تسجيل الشركة فقط.",
+            "Application follows functional currency, not merely the entity's place of registration.",
+          ),
+          text(
+            "لا تعرض قوائم غير معدلة ثم تجعل إعادة البيان ملحقًا اختياريًا.",
+            "Do not present unrestated statements with restatement as an optional supplement.",
+          ),
+        ],
+        reference: "IAS 29.1–7",
+      },
+      {
+        title: text(
+          "إعادة البيان بوحدة القياس الجارية",
+          "Restatement into the current measuring unit",
+        ),
+        explanation: text(
+          "تعاد القوائم، بما فيها المقارنات، إلى وحدة القياس الجارية في نهاية الفترة باستخدام مؤشر أسعار عام يعكس تغير القوة الشرائية. البنود النقدية لا تعاد لأنها معبر عنها أصلًا بوحدات نقدية جارية، بينما تعاد البنود غير النقدية بالتكلفة وحقوق الملكية والإيرادات والمصروفات من تواريخ نشأتها. البنود غير النقدية المعروضة أصلًا بقيمة جارية في نهاية الفترة لا يعاد تعديلها مرة أخرى.",
+          "Financial statements, including comparatives, are restated into the measuring unit current at period end using a general price index reflecting purchasing-power changes. Monetary items are not restated because they are already expressed in current monetary units; historical-cost non-monetary items, equity, income and expenses are restated from their recognition dates. Non-monetary items already carried at a current period-end amount are not adjusted again.",
+        ),
+        keyPoints: [
+          text(
+            "حدد تاريخ نشأة كل رصيد غير نقدي ومؤشر ذلك التاريخ.",
+            "Identify each non-monetary balance's recognition date and corresponding index.",
+          ),
+          text(
+            "اخفض المبلغ المعاد إذا تجاوز قيمته القابلة للاسترداد أو صافي قيمته القابلة للتحقق.",
+            "Reduce a restated amount if it exceeds recoverable amount or net realisable value.",
+          ),
+          text(
+            "أعد بيان قائمة الربح أو الخسارة من تواريخ تسجيل الدخل والمصروف.",
+            "Restate profit-or-loss items from the dates income and expenses were recorded.",
+          ),
+        ],
+        reference: "IAS 29.8, 11–27",
+      },
+      {
+        title: text("مكسب أو خسارة المركز النقدي", "Gain or loss on the net monetary position"),
+        explanation: text(
+          "في التضخم تفقد الأصول النقدية الصافية قوة شرائية فتولد خسارة، بينما تحقق الالتزامات النقدية الصافية مكسبًا اقتصاديًا لأن السداد يتم بوحدات أقل قوة شرائية. يحسب الأثر من تغير المؤشر المطبق على المتوسط المرجح للفروق بين الأصول والالتزامات النقدية خلال الفترة، ويثبت في الربح أو الخسارة ويُفصح عنه منفصلًا.",
+          "In inflation, a net monetary asset position loses purchasing power, while a net monetary liability position creates an economic gain because repayment uses units with lower purchasing power. The effect is derived from index changes applied to the weighted exposure between monetary assets and liabilities through the period, recognised in profit or loss and separately disclosed.",
+        ),
+        keyPoints: [
+          text(
+            "الرصيد الختامي وحده قد لا يمثل التعرض إذا تحركت الأرصدة خلال السنة.",
+            "The closing balance alone may misstate exposure when balances changed during the year.",
+          ),
+          text(
+            "يمكن التحقق التقريبي من المكسب أو الخسارة باستخدام متوسط صافي المركز النقدي.",
+            "An approximate check can use the average net monetary position.",
+          ),
+          text(
+            "اعرض أثر صافي المركز النقدي منفصلًا حتى يفهم المستخدم مصدره.",
+            "Present the net monetary effect separately so users understand its source.",
+          ),
+        ],
+        reference: "IAS 29.9, 27–28",
+      },
+      {
+        title: text(
+          "أول تطبيق وترجمة عملية أجنبية",
+          "First application and translation of a foreign operation",
+        ),
+        explanation: text(
+          "عند أول تطبيق تُعامل المنشأة الاقتصاد كما لو كان دائمًا مفرط التضخم لأغراض إعادة بيان أرصدة الافتتاح وفق IFRIC 7، مع معالجة الضريبة المؤجلة بعد إعادة البيان. وإذا كانت العملية الأجنبية ذات عملة وظيفية مفرطة التضخم، تعيد قوائمها أولًا وفق IAS 29 ثم تترجم جميع المبالغ إلى عملة العرض بالسعر الختامي وفق IAS 21.",
+          "On first application, IFRIC 7 applies the restatement approach as if the economy had always been hyperinflationary for opening balances, with deferred tax considered after restatement. A foreign operation with a hyperinflationary functional currency first restates under IAS 29 and then translates all amounts into the presentation currency at the closing rate under IAS 21.",
+        ),
+        keyPoints: [
+          text(
+            "رتّب العمل: إعادة بيان IAS 29 أولًا، ثم ترجمة IAS 21.",
+            "Sequence the work: IAS 29 restatement first, IAS 21 translation second.",
+          ),
+          text(
+            "عند توقف التضخم المفرط تصبح مبالغ نهاية آخر فترة مطبقة أساس القيم الدفترية اللاحقة.",
+            "When hyperinflation ceases, amounts at the end of the last applied period become the basis for later carrying amounts.",
+          ),
+          text(
+            "اكشف المؤشر المستخدم ومستواه وحركة الفترة وطبيعة أساس القياس.",
+            "Disclose the index used, its level and movement, and the measurement basis.",
+          ),
+        ],
+        reference: "IAS 29.34–41; IAS 21.42–43",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "أصل غير نقدي ومركز نقدي صافٍ في سنة تضخم",
+          "A non-monetary asset and net monetary position in an inflationary year",
+        ),
+        facts: text(
+          "في 1 يناير كان مؤشر الأسعار 100، واشترت منشأة معدات بمبلغ 1,000. احتفظت طوال السنة تقريبًا بنقد 200 والتزام نقدي 500. بلغ المؤشر 160 في 31 ديسمبر، ولا توجد حركات جوهرية أخرى.",
+          "On 1 January the price index is 100 and an entity buys equipment for $1,000. Throughout the year it holds approximately $200 cash and a $500 monetary liability. The index is 160 at 31 December, with no other significant movements.",
+        ),
+        calculations: [
+          text("معامل إعادة البيان = 160 ÷ 100 = 1.60.", "Restatement factor = 160 ÷ 100 = 1.60."),
+          text(
+            "المعدات المعاد بيانها = 1,000 × 1.60 = 1,600.",
+            "Restated equipment = $1,000 × 1.60 = $1,600.",
+          ),
+          text(
+            "النقد والالتزام لا يعاد بيانهما؛ صافي الالتزام النقدي = 500 − 200 = 300.",
+            "Cash and the liability are not restated; net monetary liability = $500 − $200 = $300.",
+          ),
+          text(
+            "مع ثبات التعرض طوال السنة، مكسب القوة الشرائية التقريبي = 300 × 60% = 180.",
+            "If exposure is constant through the year, the approximate purchasing-power gain = $300 × 60% = $180.",
+          ),
+        ],
+        conclusion: text(
+          "يزداد الأصل غير النقدي إلى وحدة القياس الجارية، ويظهر مكسب مستقل لأن المنشأة كانت ممولة بصافي التزامات نقدية أثناء التضخم.",
+          "The non-monetary asset is updated to the current measuring unit, and a separate gain arises because the entity was financed by net monetary liabilities during inflation.",
+        ),
+        journalEntries: [],
+        reference: "IAS 29.11–27",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
