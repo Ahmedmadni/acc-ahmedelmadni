@@ -2995,6 +2995,458 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 33": {
+    sections: [
+      {
+        title: text("النطاق ومقام الربحية الأساسية", "Scope and the basic EPS numerator"),
+        explanation: text(
+          "يطبق IAS 33 على المنشأة التي تكون أسهمها العادية أو أسهمها العادية المحتملة متداولة في سوق عام، أو التي تودع قوائمها بغرض إصدارها في سوق عام. وإذا عرضت منشأة أخرى ربحية السهم اختيارًا فعليها حسابها والإفصاح عنها وفق المعيار. في القوائم الموحدة يبدأ بسط الربحية الأساسية من الربح أو الخسارة العائد لحملة الأسهم العادية في الشركة الأم، بعد استبعاد نصيب الحقوق غير المسيطرة وطرح توزيعات الأسهم الممتازة المصنفة حقوق ملكية وأي فروق تسوية تتعلق بها. لا تُطرح فائدة أداة مصنفة التزامًا مرة أخرى لأنها تدخل أصلًا ضمن الربح أو الخسارة.",
+          "IAS 33 applies when an entity's ordinary shares or potential ordinary shares are publicly traded, or when it files statements to issue them in a public market. Any other entity that voluntarily presents EPS must calculate and disclose it under the Standard. In consolidated statements, the basic-EPS numerator begins with profit or loss attributable to the parent's ordinary equity holders, excluding non-controlling interests and deducting dividends on equity-classified preference shares and related settlement differences. Interest on a liability-classified instrument is not deducted again because it is already reflected in profit or loss.",
+        ),
+        keyPoints: [
+          text(
+            "اعرض الربحية الأساسية والمخفضة بالأهمية نفسها حتى إذا كانت القيمة خسارة للسهم.",
+            "Present basic and diluted EPS with equal prominence even when the result is a loss per share.",
+          ),
+          text(
+            "استخدم الربح العائد لمساهمي الأم لا إجمالي ربح المجموعة.",
+            "Use profit attributable to the parent's shareholders, not total group profit.",
+          ),
+          text(
+            "افصل ربحية العمليات المستمرة عن أثر العملية المتوقفة عندما تنطبق.",
+            "Separate continuing-operation EPS from the effect of a discontinued operation when applicable.",
+          ),
+        ],
+        reference: "IAS 33.2–4A, 10–18, 66–69",
+      },
+      {
+        title: text(
+          "المتوسط المرجح والأسهم المجانية وحقوق الأولوية",
+          "Weighted average shares, bonus issues and rights issues",
+        ),
+        explanation: text(
+          "مقام الربحية الأساسية هو المتوسط المرجح للأسهم العادية القائمة خلال الفترة، بعد استبعاد أسهم الخزينة. الإصدار النقدي بالقيمة العادلة يدخل من تاريخ استحقاق المقابل موزونًا بالزمن، أما الإصدار المجاني أو تجزئة الأسهم فتغير عدد الأسهم دون موارد جديدة، لذلك تعدل المقارنات وكل الفترات السابقة المعروضة بأثر رجعي كما لو أن الحدث وقع في بداية أقدم فترة. يتضمن إصدار حقوق الأولوية عادة عنصرًا مجانيًا إذا كان سعر الاكتتاب أقل من القيمة العادلة؛ عندها يحسب السعر النظري بعد الحق ومعامل التعديل، ويطبق العنصر المجاني على الأسهم السابقة للإصدار، ثم توزن الأسهم الجديدة زمنيًا.",
+          "The basic-EPS denominator is the weighted average ordinary shares outstanding during the period, excluding treasury shares. A cash issue at fair value enters from the date consideration is receivable and is time-weighted. A bonus issue or share split changes share count without new resources, so comparative and all earlier periods presented are adjusted retrospectively as if the event occurred at the start of the earliest period. A rights issue normally contains a bonus element when the subscription price is below fair value; the theoretical ex-rights price and adjustment factor are calculated, the bonus element is applied to pre-issue shares, and new shares are then time-weighted.",
+        ),
+        keyPoints: [
+          text(
+            "أنشئ خطًا زمنيًا لكل تغير في الأسهم قبل تنفيذ الحساب.",
+            "Build a timeline of every share-count change before performing the calculation.",
+          ),
+          text(
+            "صحح المقارنات للأحداث المجانية الواقعة بعد الفترة وقبل اعتماد القوائم للإصدار.",
+            "Adjust comparatives for bonus events occurring after period end but before the statements are authorised.",
+          ),
+          text(
+            "لا تعامل كامل إصدار الحقوق كإصدار مجاني؛ افصل عنصر الموارد عن عنصر الخصم.",
+            "Do not treat the entire rights issue as a bonus issue; separate the resource and discount elements.",
+          ),
+        ],
+        reference: "IAS 33.19–29, 64",
+      },
+      {
+        title: text("الربحية المخفضة واختبار التخفيف", "Diluted EPS and the dilution test"),
+        explanation: text(
+          "تفترض الربحية المخفضة تحويل الأسهم العادية المحتملة المخفضة منذ بداية الفترة أو تاريخ إصدارها إن كان لاحقًا. في السند القابل للتحويل يضاف إلى البسط أثر الفائدة بعد الضريبة والمصروفات أو التغيرات الأخرى التي كانت ستختفي عند التحويل، وتضاف الأسهم الناتجة إلى المقام. في الخيارات والضمانات تستخدم طريقة أسهم الخزينة: يفترض استعمال متحصلات الممارسة لشراء أسهم بالقيمة السوقية المتوسطة، ولا يضاف سوى صافي الأسهم المجانية. تُستبعد الأدوات المضادة للتخفيف، وتُرتب مجموعات الأدوات من الأكثر تخفيضًا إلى الأقل حتى لا تخفي أداة مضادة للتخفيف أثر أداة أخرى.",
+          "Diluted EPS assumes conversion of dilutive potential ordinary shares from the beginning of the period or, if later, their issue date. For a convertible bond, the numerator adds back after-tax interest and other expenses or changes that conversion would eliminate, while conversion shares enter the denominator. Options and warrants use the treasury-stock method: assumed exercise proceeds buy shares at the average market price and only the net no-consideration shares are added. Antidilutive instruments are excluded, and instrument groups are sequenced from most to least dilutive so that an antidilutive instrument cannot conceal another instrument's dilution.",
+        ),
+        keyPoints: [
+          text(
+            "قارن الربح الإضافي لكل سهم إضافي بربحية العمليات المستمرة المستخدمة كرقم تحكم.",
+            "Compare incremental earnings per incremental share with continuing-operations EPS used as the control number.",
+          ),
+          text(
+            "في حالة الخسارة قد تكون الأدوات التي تبدو مخفضة في الربح مضادة للتخفيف.",
+            "In a loss period, instruments that look dilutive in a profit period may be antidilutive.",
+          ),
+          text(
+            "أعد الاختبار لكل فترة معروضة؛ فالنتيجة لا تنتقل تلقائيًا من سنة إلى أخرى.",
+            "Repeat the test for every period presented; the conclusion does not automatically carry forward.",
+          ),
+        ],
+        reference: "IAS 33.30–63",
+      },
+      {
+        title: text(
+          "العرض والإفصاح وقائمة المراجعة",
+          "Presentation, disclosure and review checklist",
+        ),
+        explanation: text(
+          "تعرض الربحية الأساسية والمخفضة لكل فئة من الأسهم العادية ذات الحق المختلف في الربح، وبالأهمية نفسها لجميع الفترات. تكشف المنشأة مبالغ البسط ومصالحتها مع الربح أو الخسارة، والمتوسط المرجح للأسهم في كل مقام ومصالحته، والأدوات التي قد تخفض الربحية مستقبلًا لكنها استبعدت حاليًا، ومعاملات الأسهم الجوهرية بعد الفترة التي كانت ستغير الحساب. إذا عرضت المنشأة مقياسًا إضافيًا للسهم يستخدم عنصرًا آخر من الربح أو الخسارة، فيجب تحديد بسطه وفق أساس متسق وبيان مطابقته والإفصاح عنه في الإيضاحات لا بطريقة تطغى على مقاييس IAS 33.",
+          "Basic and diluted EPS are presented for each class of ordinary shares with a different right to profit, with equal prominence for all periods. The entity discloses numerator amounts and their reconciliation to profit or loss, weighted-average shares in each denominator and their reconciliation, instruments that could dilute EPS in future but are currently excluded, and significant post-period share transactions that would have changed the calculation. If an additional per-share measure uses another profit-or-loss component, its numerator must be consistently determined, identified and reconciled, and it is disclosed in the notes without overshadowing IAS 33 measures.",
+        ),
+        keyPoints: [
+          text(
+            "طابق سجل رأس المال مع محاضر المجلس والسجل القانوني وأحداث ما بعد الفترة.",
+            "Reconcile the share register to board minutes, statutory records and post-period events.",
+          ),
+          text(
+            "راجع الضرائب وشروط التحويل وسعر السوق المتوسط لكل أداة محتملة.",
+            "Review tax effects, conversion terms and average market price for every potential instrument.",
+          ),
+          text(
+            "احفظ ورقة مصالحة مستقلة للبسط والمقام الأساسي والمخفض.",
+            "Retain separate reconciliation schedules for basic and diluted numerators and denominators.",
+          ),
+        ],
+        reference: "IAS 33.66–73A",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "إصدار نقدي ثم أسهم مجانية وسند قابل للتحويل",
+          "Cash issue, bonus issue and a convertible bond",
+        ),
+        facts: text(
+          "كان لدى منشأة 5,000,000 سهم في 1 يناير. أصدرت 1,000,000 سهم نقدًا بالقيمة العادلة في 1 أبريل، ثم أصدرت في 1 أكتوبر سهمًا مجانيًا لكل خمسة أسهم قائمة. بلغ الربح بعد الضريبة العائد لمساهمي الأم 3,600,000 وتوزيعات الأسهم الممتازة المصنفة حقوق ملكية 120,000. يوجد سند قابل للتحويل بفائدة سنوية 60,000 ومعدل ضريبة 25%، قابل للتحويل إلى 300,000 سهم، وكان قائمًا طوال السنة.",
+          "An entity has 5,000,000 shares on 1 January. It issues 1,000,000 shares for cash at fair value on 1 April and makes a one-for-five bonus issue on 1 October. After-tax profit attributable to the parent's owners is 3,600,000 and dividends on equity-classified preference shares are 120,000. A convertible bond with annual interest of 60,000 and a 25% tax rate converts into 300,000 shares and was outstanding all year.",
+        ),
+        calculations: [
+          text(
+            "البسط الأساسي = 3,600,000 − 120,000 = 3,480,000.",
+            "Basic numerator = 3,600,000 − 120,000 = 3,480,000.",
+          ),
+          text(
+            "المقام المرجح = (5,000,000 × 3÷12 × 1.2) + (6,000,000 × 6÷12 × 1.2) + (7,200,000 × 3÷12) = 6,900,000 سهم.",
+            "Weighted denominator = (5,000,000 × 3/12 × 1.2) + (6,000,000 × 6/12 × 1.2) + (7,200,000 × 3/12) = 6,900,000 shares.",
+          ),
+          text(
+            "الربحية الأساسية = 3,480,000 ÷ 6,900,000 = 0.5043 للسهم تقريبًا.",
+            "Basic EPS = 3,480,000 ÷ 6,900,000 = approximately 0.5043 per share.",
+          ),
+          text(
+            "فائدة التحويل بعد الضريبة = 60,000 × 75% = 45,000؛ وربحها الإضافي لكل سهم = 45,000 ÷ 300,000 = 0.15، وهو أقل من الربحية الأساسية، لذا فهي مخفضة.",
+            "After-tax convertible interest = 60,000 × 75% = 45,000; incremental earnings per share = 45,000 ÷ 300,000 = 0.15, below basic EPS, so the instrument is dilutive.",
+          ),
+          text(
+            "الربحية المخفضة = (3,480,000 + 45,000) ÷ (6,900,000 + 300,000) = 0.4896 للسهم تقريبًا.",
+            "Diluted EPS = (3,480,000 + 45,000) ÷ (6,900,000 + 300,000) = approximately 0.4896 per share.",
+          ),
+        ],
+        conclusion: text(
+          "يطبق معامل الأسهم المجانية بأثر رجعي على الأسهم القائمة قبل 1 أكتوبر، بينما يختبر السند على أساس أثره الإضافي بعد الضريبة ويضاف فقط لأنه يخفض ربحية السهم.",
+          "The bonus factor is applied retrospectively to shares outstanding before 1 October; the bond is tested using its incremental after-tax effect and included only because it reduces EPS.",
+        ),
+        journalEntries: [],
+        reference: "IAS 33.10–12, 19–29, 31–49, 64",
+      },
+    ],
+  },
+  "IAS 34": {
+    sections: [
+      {
+        title: text(
+          "النطاق والحد الأدنى للتقرير المرحلي",
+          "Scope and minimum interim report content",
+        ),
+        explanation: text(
+          "لا يفرض IAS 34 على منشأة بعينها إصدار تقرير مرحلي ولا يحدد تواتره أو موعد نشره؛ تتولى القوانين والجهات التنظيمية ذلك. لكنه يطبق عندما تصف منشأة تستخدم IFRS تقريرها المرحلي بأنه ممتثل للمعايير. يمكن إعداد مجموعة كاملة من القوائم أو مجموعة مختصرة تشمل قائمة المركز المالي والربح أو الخسارة والدخل الشامل الآخر والتغيرات في حقوق الملكية والتدفقات النقدية وإيضاحات مختارة. ويجب أن يحتوي التقرير المختصر على الأقل على كل العناوين والمجاميع الفرعية الواردة في آخر قوائم سنوية، مع إضافة بنود إذا كان حذفها يجعل التقرير مضللًا.",
+          "IAS 34 does not mandate which entity publishes an interim report, its frequency or publication deadline; laws and regulators decide those matters. It applies when an IFRS-reporting entity describes its interim report as complying with IFRS. The report may contain a complete set or a condensed set comprising financial position, profit or loss and other comprehensive income, changes in equity, cash flows and selected notes. A condensed report includes at least all headings and subtotals in the latest annual statements and adds lines when omission would make the report misleading.",
+        ),
+        keyPoints: [
+          text(
+            "لا تصف التقرير بأنه ممتثل لـIFRS إذا لم يستوف جميع متطلبات IAS 34.",
+            "Do not describe the report as IFRS-compliant unless it meets all IAS 34 requirements.",
+          ),
+          text(
+            "استخدم التقرير السنوي الأخير كنقطة بداية ثم ركز على الجديد والمتغير.",
+            "Use the latest annual report as the baseline and focus on what is new or changed.",
+          ),
+          text(
+            "اعرض ربحية السهم الأساسية والمخفضة في التقرير المرحلي عندما ينطبق IAS 33.",
+            "Present basic and diluted EPS in the interim report when IAS 33 applies.",
+          ),
+        ],
+        reference: "IAS 34.1–19",
+      },
+      {
+        title: text("الفترات المقارنة والأهمية النسبية", "Comparative periods and materiality"),
+        explanation: text(
+          "تقارن قائمة المركز المالي بنهاية السنة السابقة مباشرة. أما الربح أو الخسارة والدخل الشامل الآخر فيعرضان للفترة المرحلية الحالية وللسنة حتى تاريخهما، مع فترتي المقارنة المناظرتين من السنة السابقة. وتعرض التغيرات في حقوق الملكية والتدفقات النقدية تراكميًا من بداية السنة مع المقارنة التراكمية المناظرة. تُقاس الأهمية النسبية بالرجوع إلى البيانات المرحلية نفسها، لأن بندًا قد يكون مؤثرًا في ربع سنة ولو بدا صغيرًا أمام أرقام السنة كاملة. ولا تبرر السرعة إخفاء معلومات جوهرية أو تجميع بنود مختلفة الطبيعة.",
+          "The statement of financial position is compared with the immediately preceding year-end. Profit or loss and other comprehensive income are shown for the current interim period and year-to-date, with corresponding prior-year periods. Changes in equity and cash flows are cumulative year-to-date with corresponding cumulative comparatives. Materiality is assessed against interim-period data because an item may influence a quarter even when small relative to the full year. Timeliness does not justify obscuring material information or aggregating items with different characteristics.",
+        ),
+        keyPoints: [
+          text(
+            "ضع جدولًا للفترات المطلوبة قبل إعداد القوائم حتى لا تختلط مقارنة الربع بالمقارنة التراكمية.",
+            "Prepare a required-period matrix before drafting statements to avoid mixing current-quarter and year-to-date comparatives.",
+          ),
+          text(
+            "قيّم الموسمية وإتاحة معلومات اثني عشر شهرًا إضافية عندما تفيد المستخدم.",
+            "Consider seasonality and whether additional trailing-twelve-month information would help users.",
+          ),
+          text(
+            "راجع الأهمية نوعيًا وكميًا على مستوى الفترة المرحلية.",
+            "Assess materiality qualitatively and quantitatively at the interim-period level.",
+          ),
+        ],
+        reference: "IAS 34.20–25",
+      },
+      {
+        title: text(
+          "القياس من بداية السنة وعدم تمهيد الأرباح",
+          "Year-to-date measurement without earnings smoothing",
+        ),
+        explanation: text(
+          "تطبق السياسات المحاسبية نفسها المستخدمة سنويًا، وتقاس المبالغ على أساس السنة حتى التاريخ بحيث لا يغير عدد التقارير المرحلية النتيجة السنوية. لا يعجل إيراد موسمي متوقع ولا يؤجل مصروف غير مؤهل لمجرد تسوية النتائج بين الأرباع. يثبت مصروف ضريبة الدخل المرحلي باستخدام أفضل تقدير لمتوسط معدل الضريبة السنوي الفعلي على الربح قبل الضريبة حتى التاريخ، مع معالجة البنود غير العادية ضريبيًا على نحو مناسب. ويمكن تغيير تقدير فترة سابقة في الفترة اللاحقة دون إعادة إصدار التقرير السابق، مع الإفصاح عن طبيعة وحجم التغير الجوهري.",
+          "The same annual accounting policies apply and measurements are made year-to-date so reporting frequency does not change annual results. Expected seasonal revenue is not anticipated and an otherwise ineligible cost is not deferred merely to smooth quarters. Interim income tax expense uses the best estimate of the weighted-average annual effective tax rate applied to year-to-date pre-tax income, with appropriate treatment for unusual tax items. An earlier interim estimate may change in a later period without reissuing the earlier report, with the nature and amount of a material change disclosed.",
+        ),
+        keyPoints: [
+          text(
+            "حدّث توقع معدل الضريبة السنوي في كل تاريخ مرحلي ووثق عناصر المعدل.",
+            "Update the expected annual effective tax rate at each interim date and document its components.",
+          ),
+          text(
+            "لا تؤجل تكلفة إلا إذا كانت ستؤهل أصلًا في نهاية السنة في الظروف نفسها.",
+            "Defer a cost only if it would qualify as an asset at year-end in the same circumstances.",
+          ),
+          text(
+            "استخدم تقديرات معقولة لكن وسّع الإفصاح عندما تكون درجة عدم التأكد أعلى.",
+            "Use reasonable estimates but expand disclosure when estimation uncertainty is greater.",
+          ),
+        ],
+        reference: "IAS 34.28–43, B12–B22",
+      },
+      {
+        title: text(
+          "الأحداث الجوهرية والانخفاض وIFRS 18",
+          "Significant events, impairment and IFRS 18",
+        ),
+        explanation: text(
+          "تركز الإيضاحات على الأحداث والمعاملات الجوهرية منذ آخر سنة، مثل انخفاض المخزون أو الأصول وعكسه المسموح، الاستحواذات والتصرفات وإعادة الهيكلة والتقاضي والتعثر وتغيرات القيمة العادلة والمعاملات مع الأطراف ذات العلاقة. لا يجوز وفق IFRIC 10 عكس خسارة انخفاض شهرة سبق إثباتها في فترة مرحلية حتى لو لم تكن ستظهر لو أجري الاختبار فقط في نهاية السنة. وعند تطبيق IFRS 18، تتسع إيضاحات القوائم المرحلية المختصرة لتشمل معلومات مقاييس الأداء المحددة من الإدارة التي يطلبها IFRS 18؛ لذلك ينبغي ربط حزمة الإقفال المرحلي بالمقاييس المعلنة خارجيًا.",
+          "Notes focus on significant events and transactions since the latest year-end, such as inventory or asset impairment and permitted reversals, acquisitions, disposals, restructurings, litigation, defaults, fair-value changes and related-party transactions. IFRIC 10 prohibits reversing a goodwill impairment recognised in an earlier interim period even if no loss would have arisen had testing occurred only at year-end. When IFRS 18 is applied, condensed interim notes also include the management-defined performance measure information required by IFRS 18, so the interim close package should connect to externally communicated measures.",
+        ),
+        keyPoints: [
+          text(
+            "حدّث سجل الأحداث الجوهرية من تاريخ التقرير السنوي لا من بداية الربع فقط.",
+            "Update the significant-events register from the annual reporting date, not merely the quarter's start.",
+          ),
+          text(
+            "اربط اختبار الانخفاض المرحلي بقيود العكس الخاصة بكل معيار.",
+            "Connect interim impairment testing with the reversal restrictions in each applicable Standard.",
+          ),
+          text(
+            "طبّق إفصاحات مقاييس الأداء المحددة من الإدارة عند سريان وتطبيق IFRS 18.",
+            "Apply management-defined performance measure disclosures when IFRS 18 is effective and applied.",
+          ),
+        ],
+        reference: "IAS 34.15–16A, 26, 41; IFRIC 10.8; IFRS 18",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تطوير أصل ومعدل ضريبة سنوي في تقرير نصف سنوي",
+          "Development asset and annual tax rate in a half-year report",
+        ),
+        facts: text(
+          "أنفقت منشأة 240,000 خلال الربع الأول على مشروع لم يثبت بعد استيفاؤه معايير IAS 38، ثم أثبتت في 1 أبريل تحقق جميع معايير رسملة التطوير وأنفقت 180,000 إضافية حتى 30 يونيو. بلغ الربح قبل الضريبة للنصف الأول 800,000، وأفضل تقدير لمعدل الضريبة السنوي الفعلي 25%.",
+          "An entity spends 240,000 in the first quarter on a project that has not yet demonstrated the IAS 38 capitalisation criteria. On 1 April all development recognition criteria are demonstrably met, and another 180,000 is spent by 30 June. Half-year profit before tax is 800,000 and the best estimate of the annual effective tax rate is 25%.",
+        ),
+        calculations: [
+          text(
+            "يبقى إنفاق الربع الأول البالغ 240,000 مصروفًا؛ لا تعاد رسملته بعد تحقق المعايير.",
+            "The first-quarter expenditure of 240,000 remains expensed; it is not reinstated after the criteria are met.",
+          ),
+          text(
+            "يرسمل إنفاق 1 أبريل إلى 30 يونيو البالغ 180,000 من تاريخ تحقق الشروط، مع بدء الإطفاء عند إتاحة الأصل للاستخدام.",
+            "The 180,000 spent from 1 April to 30 June is capitalised from the qualification date, with amortisation beginning when the asset is available for use.",
+          ),
+          text(
+            "مصروف الضريبة المرحلي التقديري = 800,000 × 25% = 200,000، قبل أي بنود ضريبية منفصلة غير عادية.",
+            "Estimated interim tax expense = 800,000 × 25% = 200,000, before any separately treated unusual tax items.",
+          ),
+        ],
+        conclusion: text(
+          "التقرير المرحلي لا يسمح باستخدام معلومات لاحقة لإلغاء مصروف صحيح سابقًا، ويستخدم توقع السنة كاملة للضريبة حتى لا يؤدي توقيت الأرباح وحده إلى معدل مرحلي مضلل.",
+          "Interim reporting does not permit hindsight to reverse a previously correct expense and uses a full-year tax expectation so profit timing alone does not create a misleading interim rate.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "رسملة الإنفاق المؤهل بعد 1 أبريل",
+              "Capitalise qualifying spend after 1 April",
+            ),
+            debit: text("أصل تطوير", "Development asset"),
+            credit: text("نقدية أو دائنون", "Cash or payables"),
+            amount: text("180,000", "180,000"),
+          },
+          {
+            label: text("إثبات ضريبة النصف الأول", "Recognise first-half tax"),
+            debit: text("مصروف ضريبة الدخل", "Income tax expense"),
+            credit: text("ضريبة دخل مستحقة", "Income tax payable"),
+            amount: text("200,000", "200,000"),
+          },
+        ],
+        reference: "IAS 34.28–30, B12; IAS 38.54–65",
+      },
+    ],
+  },
+  "IFRS 1": {
+    sections: [
+      {
+        title: text(
+          "تحديد أول قوائم IFRS وتاريخ الانتقال",
+          "Identifying first IFRS statements and the transition date",
+        ),
+        explanation: text(
+          "تكون المنشأة متبنية لأول مرة عندما تعرض أول قوائم سنوية تحتوي بيانًا صريحًا وغير متحفظ بالامتثال لـIFRS ولم تكن قوائمها السابقة تتضمن هذا البيان. تعد قائمة مركز مالي افتتاحية وفق IFRS في تاريخ الانتقال، وهو بداية أقدم فترة مقارنة كاملة معروضة. فإذا كانت أول قوائم IFRS للسنة المنتهية في 31 ديسمبر 2026 وتعرض مقارنة سنة كاملة واحدة، يكون تاريخ الانتقال 1 يناير 2025. تستخدم السياسات نفسها في القائمة الافتتاحية وجميع الفترات المعروضة، وفق المعايير النافذة في نهاية أول فترة تقرير IFRS، مع مراعاة استثناءات وإعفاءات IFRS 1.",
+          "An entity is a first-time adopter when its first annual statements contain an explicit and unreserved IFRS compliance statement and its previous statements did not. It prepares an opening IFRS statement of financial position at the transition date—the beginning of the earliest full comparative period presented. If the first IFRS statements are for the year ended 31 December 2026 with one full comparative year, transition is 1 January 2025. The same policies apply in the opening statement and throughout all periods presented, using Standards effective at the end of the first IFRS reporting period, subject to IFRS 1 exceptions and exemptions.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق سبب انطباق تعريف المتبني لأول مرة قبل اختيار أي إعفاء.",
+            "Document why the first-time-adopter definition is met before choosing exemptions.",
+          ),
+          text(
+            "اربط تاريخ الانتقال بعدد سنوات المقارنة الكاملة التي ستعرضها المنشأة.",
+            "Link the transition date to the number of full comparative years the entity will present.",
+          ),
+          text(
+            "ضع قائمة بالمعايير النافذة في نهاية أول سنة IFRS ولا تستخدم نسخًا تاريخية مختلفة لكل مقارنة.",
+            "List Standards effective at the first IFRS year-end rather than using different historical versions for each comparative period.",
+          ),
+        ],
+        reference: "IFRS 1.2–9, Appendix A",
+      },
+      {
+        title: text(
+          "بناء قائمة المركز المالي الافتتاحية",
+          "Building the opening statement of financial position",
+        ),
+        explanation: text(
+          "تبدأ خريطة التحويل بأربع حركات: الاعتراف بكل أصل والتزام يطلبه IFRS، إلغاء ما لا يسمح IFRS بالاعتراف به، إعادة تصنيف البنود إلى العرض المناسب، ثم قياس الأرصدة وفق IFRS. تثبت فروق الانتقال عادة مباشرة في الأرباح المحتجزة أو فئة أخرى من حقوق الملكية في تاريخ الانتقال. تشمل الأعمال العملية مطابقة ميزان المراجعة السابق بكل معيار، وفصل تعديلات السياسة عن تصحيح الأخطاء، وحساب الضريبة المؤجلة على فروق التحويل، وربط كل تعديل بدليل ومالك وتاريخ إنجاز. القائمة الافتتاحية هي أساس الأرقام اللاحقة وليست قائمة منشورة منفصلة بالضرورة.",
+          "The conversion map has four movements: recognise every asset and liability required by IFRS, derecognise items IFRS does not permit, reclassify items into the appropriate presentation, and measure balances under IFRS. Transition differences are generally recognised directly in retained earnings or another equity category at the transition date. Practical work includes mapping the previous-GAAP trial balance to each Standard, separating policy changes from error corrections, calculating deferred tax on conversion differences, and assigning evidence, ownership and completion dates to each adjustment. The opening statement is the basis for later amounts and is not necessarily a separately published statement.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر الاكتمال قبل القياس؛ الأصل أو الالتزام المفقود لا يعالجه نموذج تقييم متقن.",
+            "Test completeness before measurement; a valuation model cannot fix a missing asset or liability.",
+          ),
+          text(
+            "سجل كل تعديل بالقيد والمرجع والضريبة والأثر على الإفصاح.",
+            "Record every adjustment with its entry, reference, tax and disclosure effect.",
+          ),
+          text(
+            "استخدم المعلومات المتاحة في التاريخ التاريخي ولا تدخل معرفة لاحقة بصورة انتقائية.",
+            "Use information available at the historical date and avoid selective hindsight.",
+          ),
+        ],
+        reference: "IFRS 1.10–14",
+      },
+      {
+        title: text(
+          "الاستثناءات الإلزامية ومنع المعرفة اللاحقة",
+          "Mandatory exceptions and the hindsight barrier",
+        ),
+        explanation: text(
+          "يمنع IFRS 1 التطبيق بأثر رجعي في مجالات محددة تشمل بعض حالات إلغاء الاعتراف بالأدوات المالية ومحاسبة التحوط والتقديرات والحقوق غير المسيطرة وتصنيف وقياس الأصول المالية والانخفاض وغيرها وفق الملحق B. التقدير في تاريخ الانتقال يجب أن يتسق مع تقدير GAAP السابق في التاريخ نفسه بعد تعديل اختلافات السياسة، ما لم يوجد دليل موضوعي على خطأ؛ فلا يجوز تحسين تاريخ الأداء بمعلومة ظهرت لاحقًا. ومن 1 يناير 2026 توضّح تحسينات المعيار اتساق متطلبات محاسبة التحوط للمتبني لأول مرة مع معايير الأهلية والتخصيص والتوثيق في IFRS 9، مع معالجة التحوطات غير المؤهلة وفق قواعد الانتقال.",
+          "IFRS 1 prohibits retrospective application in specified areas including aspects of financial-instrument derecognition, hedge accounting, estimates, non-controlling interests, classification and measurement of financial assets, impairment and other Appendix B matters. A transition-date estimate must be consistent with the previous-GAAP estimate at that same date after policy differences, unless objective evidence shows error; later knowledge cannot be selectively used to improve history. From 1 January 2026, the annual improvement clarifies alignment of first-time-adopter hedge-accounting requirements with IFRS 9 eligibility, designation and documentation criteria, with non-qualifying hedges handled under the transition rules.",
+        ),
+        keyPoints: [
+          text(
+            "افصل الاستثناء الإلزامي عن الإعفاء الاختياري في سجل القرارات.",
+            "Separate mandatory exceptions from optional exemptions in the decision log.",
+          ),
+          text(
+            "احتفظ بتاريخ المعلومات المستخدمة لإثبات عدم توظيف المعرفة اللاحقة.",
+            "Retain the date of information used to demonstrate that hindsight was not applied.",
+          ),
+          text(
+            "راجع علاقات التحوط والتوثيق عند تاريخ الانتقال وفق صياغة IFRS 1 النافذة في 2026.",
+            "Review hedge relationships and documentation at transition using the IFRS 1 wording effective in 2026.",
+          ),
+        ],
+        reference: "IFRS 1.14–17, Appendix B; Annual Improvements—Volume 11",
+      },
+      {
+        title: text(
+          "الإعفاءات الاختيارية والمصالحات والإفصاح",
+          "Optional exemptions, reconciliations and disclosure",
+        ),
+        explanation: text(
+          "يقدم الملحق D إعفاءات اختيارية محددة لتخفيف تكلفة إعادة التاريخ، مثل عدم إعادة تركيبات الأعمال السابقة، واستخدام القيمة العادلة أو إعادة تقييم سابقة كتكلفة مفترضة لبعض الأصول، وتصفير فروق الترجمة التراكمية، وبعض ترتيبات المدفوعات بالأسهم وعقود الإيجار وتكاليف الاقتراض. لا يجوز القياس عليها لإنشاء إعفاء جديد، ويختار كل إعفاء بعد تحليل أثره المستقبلي لا لتجميل الرصيد الافتتاحي فقط. تشرح أول قوائم IFRS الانتقال بمصالحة حقوق الملكية في تاريخ الانتقال ونهاية آخر فترة GAAP، ومصالحة الدخل الشامل لآخر فترة، وشرح التعديلات الجوهرية على التدفقات وأي خسائر انخفاض، مع عرض ثلاثة مراكز مالية عند اقتضاء العرض.",
+          "Appendix D offers specified optional exemptions to reduce the cost of reconstructing history, including not restating past business combinations, using fair value or a previous revaluation as deemed cost for specified assets, resetting cumulative translation differences, and relief for some share-based arrangements, leases and borrowing costs. They cannot be analogised into new exemptions, and each choice considers future consequences rather than merely improving opening balances. The first IFRS statements explain transition through equity reconciliations at transition and the latest previous-GAAP year-end, a total comprehensive income reconciliation for the latest period, explanation of material cash-flow adjustments and impairment losses, and three statements of financial position when required.",
+        ),
+        keyPoints: [
+          text(
+            "اعتمد مصفوفة لكل إعفاء: الأهلية والاختيار والدليل والأثر الحالي والمستقبلي.",
+            "Approve an exemption matrix covering eligibility, election, evidence, and current and future effects.",
+          ),
+          text(
+            "طابق المصالحات مع القوائم المنشورة ودفتر تحويل قابل للتدقيق.",
+            "Reconcile published statements to an auditable conversion ledger.",
+          ),
+          text(
+            "اشرح للمستخدم طبيعة التعديل لا الرقم وحده، خصوصًا عندما يغير مؤشرات الأداء.",
+            "Explain an adjustment's nature, not only its amount, especially when it changes performance indicators.",
+          ),
+        ],
+        reference: "IFRS 1.20–33, Appendices C–E",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قائمة انتقال افتتاحية واختيارات التكلفة المفترضة",
+          "Opening transition statement and deemed-cost elections",
+        ),
+        facts: text(
+          "ستصدر منشأة أول قوائم IFRS للسنة المنتهية في 31 ديسمبر 2026 مع مقارنة 2025. في 1 يناير 2025 أظهرت سجلات GAAP السابق معدات بقيمة 8,000,000، ومخصص احتياطي عام غير مستوفٍ IAS 37 بمبلغ 400,000، ولم تثبت التزام إزالة أصل بقيمة حالية 300,000 وتكلفة أصل مساوية له. اختارت القيمة العادلة 9,200,000 تكلفة مفترضة للمعدات، وصفّرت احتياطي ترجمة تراكميًا ذا رصيد مدين 250,000. تُهمل الضريبة المؤجلة في المثال فقط لتوضيح حركة حقوق الملكية.",
+          "An entity will issue its first IFRS statements for the year ended 31 December 2026 with 2025 comparatives. At 1 January 2025, previous GAAP records equipment at 8,000,000 and a 400,000 general reserve provision that fails IAS 37, while omitting a 300,000 present-value decommissioning obligation and equal asset cost. It elects fair value of 9,200,000 as the equipment's deemed cost and resets a cumulative translation reserve with a 250,000 debit balance. Deferred tax is omitted only to illustrate equity movements.",
+        ),
+        calculations: [
+          text(
+            "تاريخ الانتقال هو 1 يناير 2025: بداية أقدم مقارنة كاملة.",
+            "The transition date is 1 January 2025: the beginning of the earliest full comparative period.",
+          ),
+          text(
+            "زيادة المعدات بالتكلفة المفترضة = 9,200,000 − 8,000,000 = 1,200,000 تضاف إلى الأرباح المحتجزة قبل الضريبة.",
+            "Deemed-cost increase = 9,200,000 − 8,000,000 = 1,200,000 added to retained earnings before tax.",
+          ),
+          text(
+            "إلغاء المخصص غير المؤهل يرفع الأرباح المحتجزة 400,000؛ وإثبات أصل والتزام الإزالة بمبلغ 300,000 لكل منهما لا يغير صافي حقوق الملكية عند البداية.",
+            "Derecognising the ineligible provision increases retained earnings by 400,000; recognising the 300,000 decommissioning asset and liability has no opening net-equity effect.",
+          ),
+          text(
+            "تصفير رصيد الترجمة المدين ينقل 250,000 داخل حقوق الملكية من الأرباح المحتجزة إلى احتياطي الترجمة دون تغيير إجماليها؛ صافي زيادة الأرباح المحتجزة قبل هذا النقل 1,600,000 وبعده 1,350,000.",
+            "Resetting the debit translation reserve transfers 250,000 within equity from retained earnings to the translation reserve without changing total equity; retained earnings rise 1,600,000 before that transfer and 1,350,000 after it.",
+          ),
+        ],
+        conclusion: text(
+          "تثبت القيود في قائمة المركز المالي الافتتاحية ثم تمتد سياسات IFRS نفسها إلى مقارنة 2025 وسنة 2026، مع إضافة الضريبة المؤجلة الفعلية والمصالحات المطلوبة في التطبيق الواقعي.",
+          "The entries establish the opening IFRS statement and the same policies continue through the 2025 comparative and 2026 current year, with actual deferred tax and required reconciliations added in a real implementation.",
+        ),
+        journalEntries: [
+          {
+            label: text("القيمة العادلة كتكلفة مفترضة", "Fair value as deemed cost"),
+            debit: text("معدات", "Equipment"),
+            credit: text("أرباح محتجزة", "Retained earnings"),
+            amount: text("1,200,000", "1,200,000"),
+          },
+          {
+            label: text("إلغاء احتياطي عام غير مؤهل", "Remove ineligible general reserve"),
+            debit: text("مخصص احتياطي عام", "General reserve provision"),
+            credit: text("أرباح محتجزة", "Retained earnings"),
+            amount: text("400,000", "400,000"),
+          },
+          {
+            label: text("إثبات التزام إزالة الأصل", "Recognise decommissioning obligation"),
+            debit: text("تكلفة أصل", "Asset cost"),
+            credit: text("مخصص إزالة الأصل", "Decommissioning provision"),
+            amount: text("300,000", "300,000"),
+          },
+          {
+            label: text("تصفير احتياطي الترجمة المدين", "Reset debit translation reserve"),
+            debit: text("أرباح محتجزة", "Retained earnings"),
+            credit: text("احتياطي فروق ترجمة", "Translation reserve"),
+            amount: text("250,000", "250,000"),
+          },
+        ],
+        reference: "IFRS 1.6–14, 24–26, D5–D8, D13",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
