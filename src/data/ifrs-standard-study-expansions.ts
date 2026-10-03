@@ -4329,6 +4329,605 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 41": {
+    sections: [
+      {
+        title: text(
+          "النطاق والتحول البيولوجي والنباتات المثمرة",
+          "Scope, biological transformation and bearer plants",
+        ),
+        explanation: text(
+          "يطبق IAS 41 على الأصول البيولوجية أثناء إدارتها زراعيًا، وعلى المحصول الزراعي عند نقطة الحصاد، وبعض المنح الحكومية المتعلقة بها. الأصل البيولوجي حيوان أو نبات حي، والنشاط الزراعي هو إدارة تحوله البيولوجي وحصاده للبيع أو للتحويل إلى محصول أو أصول بيولوجية إضافية. تستبعد الأرض الزراعية وتخضع لـIAS 16 أو IAS 40، كما تستبعد النباتات المثمرة الناضجة وتخضع لـIAS 16، لكن الثمار النامية عليها تبقى ضمن IAS 41. بعد الحصاد يتحول المحصول إلى مخزون وتطبق عليه IAS 2. لا يشمل المعيار تصنيع المحصول بعد الحصاد مثل تحويل العنب إلى نبيذ.",
+          "IAS 41 applies to biological assets managed in agricultural activity, agricultural produce at harvest and specified related government grants. A biological asset is a living animal or plant, while agricultural activity manages biological transformation and harvest for sale, conversion into produce or creation of additional biological assets. Agricultural land is outside the Standard and follows IAS 16 or IAS 40; mature bearer plants follow IAS 16, while produce growing on them remains within IAS 41. At harvest, produce becomes inventory under IAS 2. Post-harvest processing, such as turning grapes into wine, is outside IAS 41.",
+        ),
+        keyPoints: [
+          text(
+            "افصل النبات المثمر عن المحصول النامي عليه في سجل الأصول.",
+            "Separate a bearer plant from the produce growing on it in the asset register.",
+          ),
+          text(
+            "حدد نقطة الحصاد بدقة لأنها تنقل القياس من IAS 41 إلى IAS 2.",
+            "Identify the harvest point precisely because it moves measurement from IAS 41 to IAS 2.",
+          ),
+          text(
+            "اختبر وجود إدارة للتحول البيولوجي؛ اقتناء حيوان لغرض غير زراعي قد يخضع لمعيار آخر.",
+            "Test whether biological transformation is managed; an animal held for a non-agricultural purpose may fall under another Standard.",
+          ),
+        ],
+        reference: "IAS 41.1–7; IAS 16.3(b), 22A",
+      },
+      {
+        title: text(
+          "الاعتراف والقيمة العادلة ناقص تكاليف البيع",
+          "Recognition and fair value less costs to sell",
+        ),
+        explanation: text(
+          "يثبت الأصل البيولوجي أو المحصول عندما تسيطر المنشأة عليه نتيجة حدث سابق، ويرجح تدفق المنافع، ويمكن قياس قيمته العادلة أو تكلفته بصورة موثوقة. يقاس الأصل البيولوجي عند الاعتراف وفي كل نهاية فترة بالقيمة العادلة ناقص تكاليف البيع، ويقاس المحصول عند الحصاد على الأساس نفسه ويصبح ذلك المبلغ تكلفته عند بدء IAS 2. القيمة العادلة تتبع IFRS 13 وتراعي موقع الأصل وحالته، بينما تكاليف البيع هي التكاليف الإضافية المنسوبة مباشرة للتصرف ولا تشمل تكاليف التمويل أو ضريبة الدخل. تدخل أرباح وخسائر الاعتراف والتغير في القياس مباشرة في الربح أو الخسارة.",
+          "A biological asset or produce is recognised when the entity controls it from a past event, benefits are probable, and fair value or cost can be measured reliably. Biological assets are measured initially and at each reporting date at fair value less costs to sell; produce uses the same basis at harvest, which becomes its cost on entering IAS 2. Fair value follows IFRS 13 and reflects asset location and condition, while costs to sell are incremental disposal costs excluding finance costs and income taxes. Initial and subsequent measurement gains and losses go directly to profit or loss.",
+        ),
+        keyPoints: [
+          text(
+            "لا تخصم تكاليف النقل إلى السوق مرتين؛ تعكس في تحديد القيمة في الموقع لا ضمن تكاليف البيع أيضًا.",
+            "Do not deduct transport to market twice; reflect it in location-adjusted fair value, not again as a cost to sell.",
+          ),
+          text(
+            "افصل أثر السعر عن التغير الفيزيائي في التحليل الإداري عندما يكون مفيدًا.",
+            "Separate price effects from physical change in management analysis when useful.",
+          ),
+          text(
+            "استخدم قياس الحصاد كتكلفة ابتدائية ثابتة للمخزون بعد ذلك.",
+            "Use the harvest measurement as the fixed initial cost of inventory thereafter.",
+          ),
+        ],
+        reference: "IAS 41.10–29; IFRS 13",
+      },
+      {
+        title: text(
+          "استثناء التكلفة النادر والمنح الحكومية",
+          "Rare cost exception and government grants",
+        ),
+        explanation: text(
+          "يفترض أن القيمة العادلة للأصل البيولوجي قابلة للقياس بصورة موثوقة، ولا يدحض الافتراض إلا عند الاعتراف الأولي إذا لم تتوافر أسعار سوقية وكانت البدائل غير موثوقة بوضوح. عندها يقاس الأصل بالتكلفة ناقص الإهلاك والانخفاض إلى أن تصبح القيمة العادلة قابلة للقياس، ثم ينتقل إليها. هذا الاستثناء لا يطبق على المحصول عند الحصاد. المنحة غير المشروطة المتعلقة بأصل مقاس بالقيمة العادلة ناقص تكاليف البيع تثبت دخلًا عندما تصبح مستحقة القبض، أما المشروطة فتثبت عندما تستوفى الشروط؛ وتطبق IAS 20 على المنح المتعلقة بأصل مقاس بالتكلفة.",
+          "Fair value of a biological asset is presumed reliably measurable. The presumption is rebutted only on initial recognition when market prices are unavailable and alternatives are clearly unreliable. The asset is then measured at cost less depreciation and impairment until fair value becomes reliably measurable, when fair-value accounting begins. The exception does not apply to produce at harvest. An unconditional grant related to an asset measured at fair value less costs to sell is income when receivable; a conditional grant is income only when conditions are met. IAS 20 applies to grants related to cost-measured assets.",
+        ),
+        keyPoints: [
+          text(
+            "وثق سبب عدم موثوقية كل بديل للقيمة العادلة عند الاعتراف الأولي.",
+            "Document why each fair-value alternative is unreliable at initial recognition.",
+          ),
+          text(
+            "لا تستمر في التكلفة بعد ظهور قياس عادل موثوق.",
+            "Do not remain on cost once reliable fair-value measurement becomes available.",
+          ),
+          text(
+            "اربط توقيت دخل المنحة بشرطها الفعلي لا بموعد استلام النقد فقط.",
+            "Link grant-income timing to its substantive condition, not merely cash receipt.",
+          ),
+        ],
+        reference: "IAS 41.30–37",
+      },
+      {
+        title: text(
+          "العرض والإفصاحات والرقابة التشغيلية",
+          "Presentation, disclosures and operating controls",
+        ),
+        explanation: text(
+          "تعرض المنشأة الأصول البيولوجية منفصلة وتصف كل مجموعة، مع معلومات كمية مناسبة تميز الأصول الاستهلاكية عن المثمرة والناضجة عن غير الناضجة عندما يكون ذلك مفيدًا. تفصح عن مكاسب وخسائر القياس، وطبيعة الأنشطة، والقيود والضمانات والتعهدات، واستراتيجية المخاطر المالية، ومصالحة الرصيد الافتتاحي والختامي تشمل المشتريات والمبيعات والحصاد وتغير القيمة وفروق العملة والاندماجات. للأصول المقاسة بالتكلفة إفصاحات إضافية عن سبب تعذر القيمة العادلة ونطاق التقديرات والإهلاك والانخفاض. تتطلب الجودة ربط الجرد الميداني بالعمر والوزن والحالة ومصادر الأسعار.",
+          "Biological assets are presented separately and each group is described, with useful quantitative distinctions between consumable and bearer, and mature and immature assets. Disclosures cover measurement gains and losses, activity nature, restrictions, pledges and commitments, financial-risk strategy, and an opening-to-closing reconciliation including purchases, sales, harvest, value changes, currency effects and combinations. Cost-measured assets require additional explanation of fair-value unreliability, estimate ranges, depreciation and impairment. Quality depends on linking field counts to age, weight, condition and price sources.",
+        ),
+        keyPoints: [
+          text(
+            "صالح أعداد النظام مع العد الميداني وحلل النفوق والمواليد والتحويلات.",
+            "Reconcile system quantities to field counts and analyse deaths, births and transfers.",
+          ),
+          text(
+            "احتفظ بدليل مستقل للأسعار وتكاليف البيع في تاريخ القياس.",
+            "Retain independent evidence for prices and costs to sell at measurement date.",
+          ),
+          text(
+            "اربط حركة الكميات بحركة القيمة قبل اعتماد مكسب القيمة العادلة.",
+            "Link quantity movement to value movement before approving the fair-value gain.",
+          ),
+        ],
+        reference: "IAS 41.40–57",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قياس قطيع بالقيمة العادلة ناقص تكاليف البيع",
+          "Measuring a herd at fair value less costs to sell",
+        ),
+        facts: text(
+          "اشترت مزرعة في 1 يناير 2026 عدد 100 رأس ماشية مقابل 85,000. كانت قيمتها العادلة في حالتها وموقعها 82,000 وتكاليف البيع المقدرة 2,000، فبلغ القياس الأولي 80,000. في 31 ديسمبر بقي 95 رأسًا وبلغت قيمتها العادلة 116,000 وتكاليف البيع 2,000. لا توجد مشتريات أو مبيعات أخرى.",
+          "On 1 January 2026 a farm buys 100 cattle for 85,000. Their fair value in their condition and location is 82,000 and estimated costs to sell are 2,000, giving initial measurement of 80,000. At 31 December 95 cattle remain, with fair value of 116,000 and costs to sell of 2,000. There are no other purchases or sales.",
+        ),
+        calculations: [
+          text(
+            "القياس الأولي = 82,000 − 2,000 = 80,000؛ خسارة الاعتراف الأولي مقارنة بالنقد المدفوع = 5,000.",
+            "Initial measurement = 82,000 − 2,000 = 80,000; initial-recognition loss versus cash paid = 5,000.",
+          ),
+          text(
+            "قياس 31 ديسمبر = 116,000 − 2,000 = 114,000.",
+            "31 December measurement = 116,000 − 2,000 = 114,000.",
+          ),
+          text(
+            "مكسب التغير خلال السنة = 114,000 − 80,000 = 34,000، ويشمل الأثر الصافي للنمو والأسعار والنفوق.",
+            "Current-year change gain = 114,000 − 80,000 = 34,000, including the net effect of growth, price and mortality.",
+          ),
+        ],
+        conclusion: text(
+          "يعرض الأصل البيولوجي في 31 ديسمبر بمبلغ 114,000، وتدخل خسارة البداية 5,000 ثم مكسب التغير 34,000 في الربح أو الخسارة، مع شرح حركة الكميات والقيمة.",
+          "The biological asset is presented at 114,000 at 31 December. The 5,000 initial loss and subsequent 34,000 gain enter profit or loss, supported by quantity and value movement disclosures.",
+        ),
+        journalEntries: [
+          {
+            label: text("الشراء والاعتراف الأولي", "Purchase and initial recognition"),
+            debit: text("أصل بيولوجي 80,000 + خسارة 5,000", "Biological asset 80,000 + loss 5,000"),
+            credit: text("نقدية", "Cash"),
+            amount: text("85,000", "85,000"),
+          },
+          {
+            label: text("إعادة القياس في نهاية السنة", "Year-end remeasurement"),
+            debit: text("أصل بيولوجي", "Biological asset"),
+            credit: text("مكسب تغير القيمة العادلة", "Fair-value change gain"),
+            amount: text("34,000", "34,000"),
+          },
+        ],
+        reference: "IAS 41.12–29",
+      },
+    ],
+  },
+  "IFRS 6": {
+    sections: [
+      {
+        title: text(
+          "حدود مرحلة الاستكشاف والتقييم",
+          "Boundary of the exploration and evaluation phase",
+        ),
+        explanation: text(
+          "يغطي IFRS 6 النفقات المتكبدة بعد حصول المنشأة على الحقوق القانونية للاستكشاف في منطقة محددة وقبل إثبات الجدوى الفنية والقدرة التجارية لاستخراج المورد. النفقات قبل الحقوق—مثل البحث العام عن مناطق محتملة—لا تدخل نطاقه، كما أن التطوير بعد إثبات الجدوى يخضع لمعايير أخرى مثل IAS 16 وIAS 38. لا يتناول المعيار الأنشطة السابقة للاستكشاف أو تكلفة استخراج الموارد بعد بدء التطوير. لذا يجب أن تتضمن بوابة المشروع تواريخ الحق القانوني وقرار الجدوى وإثبات الانتقال بين المراحل.",
+          "IFRS 6 covers expenditure after an entity obtains legal rights to explore a specific area and before technical feasibility and commercial viability of extraction are demonstrable. Pre-right expenditure, such as general area research, is outside its scope, while development after feasibility follows other Standards such as IAS 16 and IAS 38. The Standard does not cover pre-exploration activity or extraction cost after development begins. Project controls should therefore record the legal-right date, feasibility decision and evidence supporting each phase transfer.",
+        ),
+        keyPoints: [
+          text(
+            "افصل كل منطقة امتياز لأن الحقوق والمؤشرات والقرارات تختلف.",
+            "Separate each licence area because rights, indicators and decisions differ.",
+          ),
+          text(
+            "لا ترسمل نفقات سبقت الحق القانوني لمجرد نجاح المشروع لاحقًا.",
+            "Do not capitalise pre-right expenditure merely because the project later succeeds.",
+          ),
+          text(
+            "وثق تاريخ ثبوت الجدوى لأنه ينهي تطبيق IFRS 6 على الإنفاق اللاحق.",
+            "Document the feasibility date because it ends IFRS 6 treatment for subsequent expenditure.",
+          ),
+        ],
+        reference: "IFRS 6.3–5; Appendix A",
+      },
+      {
+        title: text("السياسة المحاسبية وعناصر التكلفة", "Accounting policy and cost components"),
+        explanation: text(
+          "يمنح IFRS 6 إعفاءً محدودًا من تسلسل IAS 8 عند تطوير سياسة الاعتراف والقياس لأصول الاستكشاف والتقييم، لكنه لا يسمح بسياسة اعتباطية؛ يجب أن تنتج معلومات ملائمة وموثوقة وتطبق باتساق على النفقات المتشابهة. تحدد المنشأة ما ترسمله لكل منطقة، وقد تشمل اقتناء الحقوق والدراسات الطبوغرافية والجيولوجية والجيوكيميائية والجيوفيزيائية والحفر الاستكشافي وأخذ العينات والأنشطة المرتبطة بتقييم الجدوى. لا تدخل عادة المصروفات الإدارية العامة غير المرتبطة مباشرة. أي تغيير في السياسة يجب أن يجعل القوائم أكثر ملاءمة دون خفض الموثوقية أو أكثر موثوقية دون خفض الملاءمة.",
+          "IFRS 6 gives a limited exemption from the IAS 8 hierarchy when developing recognition and measurement policies for exploration and evaluation assets, but it does not permit arbitrary policy. Information must remain relevant and reliable, and the policy is applied consistently to similar expenditure. The entity defines capitalisable cost by area, potentially including acquisition of rights, topographical, geological, geochemical and geophysical studies, exploratory drilling, sampling and feasibility-evaluation activities. Unrelated general administration is normally excluded. A policy change must make statements more relevant without reducing reliability, or more reliable without reducing relevance.",
+        ),
+        keyPoints: [
+          text(
+            "اكتب مصفوفة رسملة تربط نوع النفقة والمرحلة والمنطقة والدليل.",
+            "Maintain a capitalisation matrix linking expenditure type, phase, area and evidence.",
+          ),
+          text(
+            "طبق السياسة نفسها على مشاريع متشابهة ولا تغيرها لإدارة الأرباح.",
+            "Apply the same policy to similar projects and do not change it to manage earnings.",
+          ),
+          text(
+            "افصل الالتزامات البيئية عن تكلفة الاستكشاف وعالجها وفق IAS 37 عند نشوئها.",
+            "Separate environmental obligations from exploration cost and apply IAS 37 when they arise.",
+          ),
+        ],
+        reference: "IFRS 6.6–14",
+      },
+      {
+        title: text(
+          "التصنيف وإعادة التصنيف والانخفاض",
+          "Classification, reclassification and impairment",
+        ),
+        explanation: text(
+          "تصنف أصول الاستكشاف والتقييم كملموسة أو غير ملموسة وفق طبيعتها وتطبق سياسة القياس اللاحق المختارة بما يتوافق مع IAS 16 أو IAS 38. عند ثبوت الجدوى الفنية والقدرة التجارية لا يبقى الأصل ضمن IFRS 6؛ يختبر أولًا للانخفاض ثم يعاد تصنيفه. تشمل مؤشرات الانخفاض انتهاء حق الاستكشاف أو قرب انتهائه دون توقع التجديد، وعدم وجود إنفاق جوهري مخطط، وقرار وقف الاستكشاف لعدم اكتشاف كميات مجدية، ووجود بيانات تشير إلى عدم استرداد القيمة رغم احتمال استمرار التطوير. عند وجود مؤشر تقاس الخسارة وفق IAS 36، ويجوز تحديد وحدات اختبار لا تتجاوز حجم قطاع تشغيلي.",
+          "Exploration and evaluation assets are classified as tangible or intangible according to nature, with subsequent policy consistent with IAS 16 or IAS 38. Once technical feasibility and commercial viability become demonstrable, the asset leaves IFRS 6: it is first tested for impairment and then reclassified. Indicators include licence expiry without expected renewal, no substantial planned expenditure, a decision to stop after no commercial discovery, or data indicating the carrying amount will not be recovered despite possible development. When an indicator exists, loss is measured under IAS 36, and the testing unit cannot be larger than an operating segment.",
+        ),
+        keyPoints: [
+          text(
+            "لا تؤخر اختبار الانخفاض حتى قرار التخلي الرسمي إذا ظهرت المؤشرات قبله.",
+            "Do not delay impairment testing until formal abandonment if indicators arise earlier.",
+          ),
+          text(
+            "اختبر قبل إعادة التصنيف إلى أصول التطوير.",
+            "Test for impairment before reclassification into development assets.",
+          ),
+          text(
+            "لا تجمع مناطق غير مرتبطة في وحدة اختبار تخفي مشروعًا ضعيفًا.",
+            "Do not combine unrelated areas into a testing unit that masks a weak project.",
+          ),
+        ],
+        reference: "IFRS 6.15–22; IAS 36",
+      },
+      {
+        title: text("العرض والإفصاح ومسار التدقيق", "Presentation, disclosure and audit trail"),
+        explanation: text(
+          "تفصح المنشأة عن سياساتها لنفقات الاستكشاف والتقييم والاعتراف بالأصول، وعن مبالغ الأصول والالتزامات والدخل والمصروف والتدفقات التشغيلية والاستثمارية الناشئة عنها. تعامل الأصول كفئة مستقلة للإفصاح وفق IAS 16 أو IAS 38 بما يتفق مع تصنيفها. عمليًا يجب أن يربط ملف كل امتياز المصروفات بالعقود والفواتير ونتائج الحفر والاحتياطيات وقرارات الاستثمار وتجديد الحقوق ومؤشرات الانخفاض. ويساعد الفصل بين تدفقات التشغيل والاستثمار وفق IAS 7 على منع تصنيف كل إنفاق قطاع التعدين تلقائيًا كاستثماري.",
+          "The entity discloses policies for exploration and evaluation expenditure and asset recognition, plus related assets, liabilities, income, expense and operating and investing cash flows. Such assets form a separate disclosure class under IAS 16 or IAS 38 according to classification. In practice, each licence file links expenditure to contracts, invoices, drilling results, reserves, investment decisions, licence renewals and impairment indicators. Separating operating and investing cash flows under IAS 7 also prevents automatic classification of all extractive-sector spending as investing.",
+        ),
+        keyPoints: [
+          text(
+            "صالح دفتر الأستاذ مع سجل التكلفة لكل امتياز ومشروع.",
+            "Reconcile the ledger to the cost register by licence and project.",
+          ),
+          text(
+            "احتفظ بمحاضر القرارات الفنية والتجارية لأنها تحدد المرحلة والمحاسبة.",
+            "Retain technical and commercial decision records because they determine phase and accounting.",
+          ),
+          text(
+            "اربط الإفصاح عن التدفقات بطبيعة النشاط لا باسم الحساب فقط.",
+            "Link cash-flow disclosure to activity nature, not merely account name.",
+          ),
+        ],
+        reference: "IFRS 6.23–25; IAS 7",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "منطقة استكشاف انتهى حقها دون تجديد",
+          "Exploration area with an expiring, non-renewed right",
+        ),
+        facts: text(
+          "حصلت منشأة على حق استكشاف منطقة في 2026. دفعت 2,000,000 لاقتناء الحق، و600,000 لدراسات جيولوجية، و1,400,000 لحفر استكشافي، و300,000 إدارة عامة غير مرتبطة مباشرة. تسمح سياستها برسملة النفقات المباشرة بعد الحصول على الحق. في نهاية السنة انتهى الحق وقررت الإدارة عدم التجديد، وقدرت القيمة القابلة للاسترداد للمعلومات والمعدات المرتبطة بـ1,100,000.",
+          "An entity obtains exploration rights to an area in 2026. It pays 2,000,000 for the right, 600,000 for geological studies, 1,400,000 for exploratory drilling and 300,000 of unrelated general administration. Its policy capitalises direct expenditure after rights are obtained. At year-end the right expires and management decides not to renew; recoverable amount of related data and equipment is 1,100,000.",
+        ),
+        calculations: [
+          text(
+            "تكلفة أصل الاستكشاف والتقييم = 2,000,000 + 600,000 + 1,400,000 = 4,000,000.",
+            "Exploration and evaluation asset cost = 2,000,000 + 600,000 + 1,400,000 = 4,000,000.",
+          ),
+          text(
+            "المصروف الإداري غير المباشر 300,000 يثبت في الربح أو الخسارة ولا يضاف للأصل.",
+            "The unrelated 300,000 administration cost is expensed and not added to the asset.",
+          ),
+          text(
+            "انتهاء الحق دون تجديد مؤشر انخفاض؛ الخسارة = 4,000,000 − 1,100,000 = 2,900,000.",
+            "Expiry without renewal is an impairment indicator; loss = 4,000,000 − 1,100,000 = 2,900,000.",
+          ),
+        ],
+        conclusion: text(
+          "يعرض الأصل بعد الاختبار بمبلغ 1,100,000، مع إثبات مصروف الإدارة 300,000 وخسارة انخفاض 2,900,000 بصورة منفصلة.",
+          "The post-test asset is 1,100,000, with 300,000 administration expense and 2,900,000 impairment loss recognised separately.",
+        ),
+        journalEntries: [
+          {
+            label: text("رسملة النفقات المباشرة", "Capitalise direct expenditure"),
+            debit: text("أصل استكشاف وتقييم", "Exploration and evaluation asset"),
+            credit: text("نقدية/دائنون", "Cash/payables"),
+            amount: text("4,000,000", "4,000,000"),
+          },
+          {
+            label: text("إثبات الانخفاض", "Recognise impairment"),
+            debit: text("خسارة انخفاض", "Impairment loss"),
+            credit: text("مجمع انخفاض أصل الاستكشاف", "Exploration asset impairment allowance"),
+            amount: text("2,900,000", "2,900,000"),
+          },
+        ],
+        reference: "IFRS 6.8–22; IAS 36",
+      },
+    ],
+  },
+  "IFRS 14": {
+    sections: [
+      {
+        title: text(
+          "نطاق ضيق واختيار لمتبني IFRS لأول مرة",
+          "Narrow scope and first-time adopter election",
+        ),
+        explanation: text(
+          "IFRS 14 معيار مرحلي لا يتيح لكل منشأة منظمة الأسعار إنشاء أصول جديدة. يمكن تطبيقه فقط في أول قوائم IFRS لمنشأة تمارس أنشطة منظمة الأسعار وكانت تعترف وفق مبادئها السابقة بأرصدة تستوفي تعريف حسابات التأجيل التنظيمية. الاختيار عند التحول اختياري، لكن من يختاره يطبقه على جميع الأرصدة المؤهلة ويستمر في الفترات اللاحقة؛ والمنشأة التي كانت تطبق IFRS أصلًا لا تبدأ استخدامه. الرصيد المؤهل هو مصروف أو دخل لا يعترف به كأصل أو التزام وفق معيار آخر، لكنه يؤجل لأن منظم الأسعار أدخله أو يتوقع إدخاله في تحديد الأسعار المستقبلية.",
+          "IFRS 14 is an interim Standard and does not let every rate-regulated entity create new assets. It is available only in an entity's first IFRS statements when the entity conducts rate-regulated activities and recognised qualifying balances under previous GAAP. Election at transition is optional, but an electing entity applies it to all qualifying balances and continues in later periods; an existing IFRS reporter cannot start using it. A qualifying balance is expense or income that would not be an asset or liability under another Standard but is deferred because the rate regulator includes, or is expected to include, it in future rate setting.",
+        ),
+        keyPoints: [
+          text(
+            "تحقق من حالة المتبني لأول مرة قبل دراسة طبيعة الرصيد.",
+            "Confirm first-time adopter status before analysing the balance.",
+          ),
+          text(
+            "لا تستخدم IFRS 14 لتجاوز اعتراف أو قياس يفرضه معيار آخر.",
+            "Do not use IFRS 14 to override recognition or measurement required by another Standard.",
+          ),
+          text(
+            "وثق دليل إدخال المبلغ في الأسعار الخاضعة للتنظيم.",
+            "Document evidence that the amount enters regulated rate setting.",
+          ),
+        ],
+        reference: "IFRS 14.1–8; Appendix A",
+      },
+      {
+        title: text(
+          "استمرار سياسة المبادئ السابقة والتغييرات المحدودة",
+          "Continuation of previous-GAAP policy and limited changes",
+        ),
+        explanation: text(
+          "يستفيد من يطبق IFRS 14 من إعفاء مؤقت من بعض متطلبات IAS 8 ليستمر في سياسات المبادئ السابقة للاعتراف والقياس والانخفاض وإلغاء الاعتراف بأرصدة التأجيل، مع التعديلات التي يفرضها IFRS 14 وتطبيق بقية معايير IFRS على الأرصدة المتداخلة. لا يغير السياسة إلا إذا جعل القوائم أكثر ملاءمة دون خفض الموثوقية أو أكثر موثوقية دون خفض الملاءمة. لا يعيد التصنيف إلى رصيد تنظيمي لمجرد أن نتيجة معيار آخر غير مرغوبة، وتدرس آثار الضرائب والعرض لكل رصيد وفق الاستثناءات المحددة.",
+          "An IFRS 14 entity uses a temporary exemption from parts of IAS 8 to continue previous-GAAP policies for recognition, measurement, impairment and derecognition of deferral balances, subject to IFRS 14 modifications and the application of other IFRS Standards to intersecting balances. Policy changes are allowed only when statements become more relevant without less reliability, or more reliable without less relevance. Amounts are not reclassified as regulatory merely because another Standard's result is undesirable, and tax and presentation effects are analysed under the specified exceptions.",
+        ),
+        keyPoints: [
+          text(
+            "احتفظ بجسر واضح بين سياسة المبادئ السابقة والتعديلات المطلوبة في IFRS 14.",
+            "Maintain a clear bridge between previous-GAAP policy and IFRS 14 modifications.",
+          ),
+          text(
+            "اختبر الانخفاض وفق السياسة المستمرة ومتطلبات المعايير المتداخلة.",
+            "Test impairment under the continued policy and intersecting Standard requirements.",
+          ),
+          text(
+            "لا توسع فئة الأرصدة المؤهلة بعد التحول خارج أساس السياسة المختارة.",
+            "Do not expand eligible balance categories after transition beyond the elected policy basis.",
+          ),
+        ],
+        reference: "IFRS 14.9–17",
+      },
+      {
+        title: text(
+          "العرض المنفصل والحركة التنظيمية",
+          "Separate presentation and regulatory movements",
+        ),
+        explanation: text(
+          "يعزل IFRS 14 أثر التنظيم عن البنود المعترف بها وفق بقية المعايير. تعرض مجاميع الأرصدة المدينة والدائنة لحسابات التأجيل في بنود منفصلة، ولا تصنف عادة ضمن الأصول والالتزامات الجارية وغير الجارية المعتادة. تعرض صافي الحركة المتعلقة بالربح أو الخسارة منفصلة، وتفصل الحركة المرتبطة بالدخل الشامل الآخر بما يتوافق مع البند الذي تتعلق به. تقدم الضريبة المؤجلة المتعلقة بالأرصدة التنظيمية مع تلك الأرصدة والحركات بدل خلطها بمجاميع IAS 12 الأخرى. يمنع هذا الفصل المستخدم من تفسير الرصيد التنظيمي كذمم عميل عادية.",
+          "IFRS 14 isolates rate-regulation effects from items recognised under other Standards. Aggregate debit and credit regulatory deferral balances are separate line items and are generally not placed within ordinary current/non-current asset and liability subtotals. Net profit-or-loss movements are presented separately, while OCI-related movements follow the related OCI item. Deferred tax related to regulatory balances and movements is presented with them rather than mixed into other IAS 12 totals. This separation prevents users from reading a regulatory balance as an ordinary customer receivable.",
+        ),
+        keyPoints: [
+          text(
+            "لا تقاص الأرصدة المدينة والدائنة إلا عند استيفاء شروط المقاصة المحددة.",
+            "Do not offset debit and credit balances unless the specified offsetting conditions are met.",
+          ),
+          text(
+            "اربط كل حركة تنظيمية ببند الربح أو الخسارة أو OCI المناسب.",
+            "Link each regulatory movement to its appropriate profit-or-loss or OCI line.",
+          ),
+          text(
+            "قدم مصالحة تفصل النشأة والاسترداد والإطفاء والانخفاض والعملات.",
+            "Provide a reconciliation separating origination, recovery, amortisation, impairment and currency effects.",
+          ),
+        ],
+        reference: "IFRS 14.18–26",
+      },
+      {
+        title: text(
+          "الإفصاح والانتقال المخطط إلى IFRS 20",
+          "Disclosure and planned transition to IFRS 20",
+        ),
+        explanation: text(
+          "تشرح الإفصاحات طبيعة ومخاطر تنظيم الأسعار وكيف أثّر في المركز والأداء والتدفقات، وتشمل وصف الأنشطة والمنظم وآلية تحديد السعر وفترات الاسترداد أو العكس ومصالحة كل فئة ومعدلات العائد أو الخصم المتبعة. صدر IFRS 20 في مايو 2026 ويحل محل IFRS 14 للفترات التي تبدأ في أو بعد 1 يناير 2029 مع السماح بالتطبيق المبكر. لذلك يجب ألا يكتفي مستخدم IFRS 14 بتدوير سياسة المبادئ السابقة؛ بل يبني سجل الحقوق والالتزامات القابلة للإنفاذ وفروق التوقيت والبيانات اللازمة للقياس القائم على التدفقات في IFRS 20.",
+          "Disclosures explain the nature and risks of rate regulation and its effects on position, performance and cash flows, including activities, regulator, rate-setting mechanism, recovery or reversal periods, class reconciliations and return or discount rates. IFRS 20 was issued in May 2026 and replaces IFRS 14 for periods beginning on or after 1 January 2029, with earlier application permitted. An IFRS 14 reporter should therefore move beyond rolling forward previous-GAAP policy and build a register of enforceable rights and obligations, timing differences and data required for IFRS 20 cash-flow-based measurement.",
+        ),
+        keyPoints: [
+          text(
+            "حدد فجوات البيانات بين سجل IFRS 14 وتعريفات وقياس IFRS 20.",
+            "Identify data gaps between the IFRS 14 register and IFRS 20 definitions and measurement.",
+          ),
+          text(
+            "افصل تاريخ السريان الإلزامي عن قرار التطبيق المبكر الموثق.",
+            "Separate mandatory effective date from a documented early-adoption decision.",
+          ),
+          text(
+            "لا تخلط أرصدة IFRS 14 الانتقالية بأرصدة IFRS 20 قبل اعتماد المعيار الجديد.",
+            "Do not mix transitional IFRS 14 balances with IFRS 20 balances before adopting the new Standard.",
+          ),
+        ],
+        reference: "IFRS 14.27–36; IFRS 20 effective-date requirements",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تكلفة عاصفة مؤجلة وفق سياسة المبادئ السابقة",
+          "Storm cost deferred under previous-GAAP policy",
+        ),
+        facts: text(
+          "منشأة كهرباء تتبنى IFRS لأول مرة في 2026 وتختار IFRS 14. كانت سياستها السابقة—المطبقة على أرصدة مؤهلة—تؤجل تكلفة إصلاح عاصفة قدرها 1,200,000 وافق المنظم على استردادها بالتساوي في أسعار ثلاث سنوات. أثبتت المنشأة تكلفة الإصلاح وفق المعايير الأخرى، واستردت في أسعار 2026 مبلغ 400,000. نهمل الضريبة والخصم للتبسيط.",
+          "An electricity entity first adopts IFRS in 2026 and elects IFRS 14. Its qualifying previous-GAAP policy defers a 1,200,000 storm-repair cost approved by the regulator for equal recovery through rates over three years. The repair cost is recognised under other Standards, and 400,000 is recovered in 2026 rates. Tax and discounting are ignored for simplicity.",
+        ),
+        calculations: [
+          text(
+            "الرصيد التنظيمي الأولي المؤهل = 1,200,000 وفق السياسة السابقة المستمرة.",
+            "Initial qualifying regulatory balance = 1,200,000 under the continued previous-GAAP policy.",
+          ),
+          text(
+            "الاسترداد خلال 2026 = 1,200,000 ÷ 3 = 400,000.",
+            "Recovery during 2026 = 1,200,000 ÷ 3 = 400,000.",
+          ),
+          text(
+            "الرصيد المدين الختامي المعروض منفصلًا = 1,200,000 − 400,000 = 800,000.",
+            "Closing separately presented debit balance = 1,200,000 − 400,000 = 800,000.",
+          ),
+        ],
+        conclusion: text(
+          "لا ينشأ الرصيد لأن التكلفة أصل وفق معيار آخر، بل لأن المنشأة المتبنية لأول مرة واصلت سياسة سابقة مؤهلة. وتحتاج خطة الانتقال إلى تقييم مختلف عند تطبيق IFRS 20.",
+          "The balance does not arise because the cost is an asset under another Standard, but because the first-time adopter continues a qualifying previous-GAAP policy. IFRS 20 transition will require a different assessment.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "إثبات رصيد التأجيل وفق السياسة المؤهلة",
+              "Recognise qualifying deferral balance",
+            ),
+            debit: text("رصيد مدين لحساب تأجيل تنظيمي", "Regulatory deferral debit balance"),
+            credit: text(
+              "صافي حركة تنظيمية في الربح أو الخسارة",
+              "Net regulatory movement in profit or loss",
+            ),
+            amount: text("1,200,000", "1,200,000"),
+          },
+          {
+            label: text(
+              "استرداد جزء من الرصيد خلال السنة",
+              "Recover part of the balance during the year",
+            ),
+            debit: text(
+              "صافي حركة تنظيمية في الربح أو الخسارة",
+              "Net regulatory movement in profit or loss",
+            ),
+            credit: text("رصيد مدين لحساب تأجيل تنظيمي", "Regulatory deferral debit balance"),
+            amount: text("400,000", "400,000"),
+          },
+        ],
+        reference: "IFRS 14.5–17, 20–26",
+      },
+    ],
+  },
+  "IFRS 20": {
+    sections: [
+      {
+        title: text("الهدف والنطاق وفروق التوقيت", "Objective, scope and timing differences"),
+        explanation: text(
+          "صدر IFRS 20 في مايو 2026 لسد فجوة الإفصاح عن نوع محدد من تنظيم الأسعار. يطبق على منشأة تكون طرفًا مع منظم في اتفاق قابل للإنفاذ يحدد السعر المنظم وينشئ أصولًا أو التزامات تنظيمية. جوهر النموذج أن يثبت إجمالي التعويض المسموح به عن السلع أو الخدمات التنظيمية في الفترة التي قدمت فيها، حتى إذا حصلت المنشأة عليه من العملاء عبر سعر فترة مختلفة. فرق التوقيت بين فترة التوريد وفترة التحصيل أو الرد هو ما ينشئ الرصيد التنظيمي. تستبعد الأرصدة الناشئة من تنظيم أقساط عقود التأمين ضمن IFRS 17.",
+          "Issued in May 2026, IFRS 20 fills a reporting gap for a specified type of rate regulation. It applies when an entity and regulator are parties to an enforceable agreement that determines a regulated rate and creates regulatory assets or liabilities. The model recognises total allowed compensation for regulatory goods or services in the period those goods or services are supplied, even if customers are charged through another period's rate. The timing difference between supply and recovery or return creates the regulatory balance. Balances arising from regulated premiums on IFRS 17 insurance contracts are excluded.",
+        ),
+        keyPoints: [
+          text(
+            "أثبت وجود حقوق والتزامات قابلة للإنفاذ؛ التنظيم الاقتصادي العام وحده لا يكفي.",
+            "Establish enforceable rights and obligations; general economic regulation alone is insufficient.",
+          ),
+          text(
+            "حدد إجمالي التعويض المسموح به لكل فترة توريد قبل مقارنة فواتير IFRS 15.",
+            "Determine total allowed compensation for each supply period before comparing IFRS 15 billings.",
+          ),
+          text(
+            "طبق المعايير الأخرى على الحقوق والالتزامات أولًا، ثم IFRS 20 على فروق التوقيت المتبقية.",
+            "Apply other Standards to rights and obligations first, then IFRS 20 to remaining timing differences.",
+          ),
+        ],
+        reference: "IFRS 20 (2026), objective, scope and defined terms",
+      },
+      {
+        title: text(
+          "الاعتراف والعلاقة المباشرة وعدم تأكد الوجود",
+          "Recognition, direct relationship and existence uncertainty",
+        ),
+        explanation: text(
+          "تعترف المنشأة عمومًا بكل أصل والتزام تنظيمي قائم في نهاية الفترة وبالدخل والمصروف التنظيمي الناشئ خلالها. الأصل حق حالي قابل للإنفاذ لإضافة مبلغ إلى أسعار مستقبلية لأن تعويض خدمة قدمت لم يدخل بعد في إيراد IFRS 15، والالتزام واجب حالي لخصم مبلغ لأن تعويض خدمة مستقبلية دخل بالفعل في الإيراد. يثبت الرصيد إذا كان وجوده أرجح من عدمه. أما الأرصدة الناشئة من الإهلاك التنظيمي لقاعدة رأس المال التنظيمية فتحتاج علاقة مباشرة يمكن فيها تتبع كيفية تقديم الإهلاك التنظيمي للتعويض حسب المبلغ والفترة إلى البنود المرتبطة.",
+          "An entity generally recognises all regulatory assets and liabilities existing at period end and related regulatory income and expense arising during the period. An asset is an enforceable present right to add an amount to future rates because compensation for services already supplied is not yet in IFRS 15 revenue; a liability is a present obligation to deduct an amount because compensation for future services is already in revenue. A balance is recognised when it is more likely than not to exist. Balances arising from regulatory depreciation of a regulatory capital base require a direct relationship that allows tracking how regulatory depreciation provides compensation by amount and period to related items.",
+        ),
+        keyPoints: [
+          text(
+            "ابنِ سجلًا يربط كل حق أو التزام بنص الاتفاق وقرار المنظم وفترة الخدمة.",
+            "Build a register linking each right or obligation to agreement terms, regulator decisions and service period.",
+          ),
+          text(
+            "وثق أدلة احتمال الوجود مثل السوابق والقرارات والمشورة القانونية.",
+            "Document existence evidence such as precedent, decisions and legal advice.",
+          ),
+          text(
+            "اكشف الرصيد غير المعترف به عندما تمنع متطلبات العلاقة المباشرة الاعتراف رغم وجود معلومات مفيدة.",
+            "Disclose unrecognised balances when direct-relationship requirements prevent recognition despite useful information.",
+          ),
+        ],
+        reference: "IFRS 20 (2026), recognition and direct-relationship requirements",
+      },
+      {
+        title: text(
+          "القياس القائم على التدفقات والفائدة التنظيمية",
+          "Cash-flow-based measurement and regulatory interest",
+        ),
+        explanation: text(
+          "تقاس الأصول والالتزامات التنظيمية عمومًا بتقنية قائمة على التدفقات النقدية: تقدّر جميع التدفقات المستقبلية من الاسترداد أو الوفاء، بما فيها عدم التأكد الملائم، ثم تخصم بمعدل الفائدة التنظيمي. في حالات معينة يشتق معدل ضمني يساوي بين القيمة الأولية والتدفقات المقدرة. تحدث المنشأة مبلغ وتوقيت التدفقات للمعلومات الجديدة، ولا تغير طريقة التقدير إلا إذا تغيرت الوقائع، وتستمر في معدل الاعتراف الأولي ما لم يعدل الاتفاق معدل الفائدة. توجد طريقة مبسطة لبنود تؤثر في الأسعار فقط عند دفع أو استلام النقد، مثل بعض تكاليف مزايا الموظفين.",
+          "Regulatory assets and liabilities are generally measured using a cash-flow-based technique: estimate all future recovery or fulfilment cash flows, including relevant uncertainty, then discount using the regulatory interest rate. In specified cases an implied rate equates initial value with estimated cash flows. Amount and timing estimates are updated for new information, the estimation method changes only with changed facts, and the initial rate continues unless the agreement changes the regulatory interest rate. A simplified approach applies to items affecting rates only when cash is paid or received, such as some employee-benefit costs.",
+        ),
+        keyPoints: [
+          text(
+            "صالح جدول التدفقات مع التعرفة المتوقعة وحجم الطلب وفترة الاسترداد.",
+            "Reconcile cash-flow schedules to expected tariffs, demand volumes and recovery periods.",
+          ),
+          text(
+            "افصل الفائدة التنظيمية المتراكمة عن التدفقات التي لم تتراكم بعد.",
+            "Separate accrued regulatory interest from interest cash flows not yet accrued.",
+          ),
+          text(
+            "حدّث التقديرات دون تغيير معدل الخصم إلا في الحالات التي يحددها الاتفاق.",
+            "Update estimates without changing the discount rate except when the agreement requires it.",
+          ),
+        ],
+        reference: "IFRS 20 (2026), measurement requirements",
+      },
+      {
+        title: text(
+          "العرض والإفصاح والسريان والانتقال",
+          "Presentation, disclosure, effective date and transition",
+        ),
+        explanation: text(
+          "يعرض صافي الدخل التنظيمي ناقص المصروف التنظيمي كبند في قائمة الربح أو الخسارة، ويصنف عمومًا كإيراد، مع معالجة الحركات المرتبطة ببنود OCI بصورة متسقة. تعرض الأصول والالتزامات التنظيمية وفق هيكل الجاري وغير الجاري أو السيولة في IFRS 18. تشمل الإفصاحات مصالحات الأرصدة، ومكونات الدخل والمصروف، وتحليل آجال الاسترداد والوفاء، وعدم التأكد، والعلاقة بين قاعدة رأس المال والبنود المرتبطة، والأرصدة غير المعترف بها. يطبق IFRS 20 للفترات التي تبدأ في أو بعد 1 يناير 2029 مع التطبيق المبكر، ويحل محل IFRS 14. يسمح بالانتقال الكامل بأثر رجعي أو المعدل، مع مقارنة معدلة للسنة السابقة مباشرة.",
+          "Net regulatory income less regulatory expense is a profit-or-loss line item and is generally classified as revenue, while movements linked to OCI items are treated consistently. Regulatory assets and liabilities follow the current/non-current or liquidity structure under IFRS 18. Disclosures include balance reconciliations, income and expense components, recovery and fulfilment maturities, uncertainty, the relationship between regulatory capital base and related items, and unrecognised balances. IFRS 20 applies from periods beginning on or after 1 January 2029, permits early application and supersedes IFRS 14. Full retrospective or modified retrospective transition is permitted, with an adjusted immediately preceding comparative.",
+        ),
+        keyPoints: [
+          text(
+            "خطط لربط IFRS 15 وIFRS 18 وIFRS 20 في مخطط حسابات واحد.",
+            "Plan an integrated chart of accounts across IFRS 15, IFRS 18 and IFRS 20.",
+          ),
+          text(
+            "ابنِ تحليل آجال من بيانات العقود والتنظيم لا من تقدير إجمالي غير مسند.",
+            "Build maturity analysis from contractual and regulatory data, not unsupported totals.",
+          ),
+          text(
+            "اختر منهج الانتقال مبكرًا لأن المقارنة السابقة يجب تعديلها في الحالتين.",
+            "Choose the transition method early because the immediately preceding comparative is adjusted under either approach.",
+          ),
+        ],
+        reference: "IFRS 20 (2026), presentation, disclosure and transition requirements",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تكلفة مسموح باستردادها في تعرفة السنة التالية",
+          "Allowed cost recovered through next year's tariff",
+        ),
+        facts: text(
+          "قدمت منشأة كهرباء خدمات تنظيمية في 2029 وتكبدت تكلفة إصلاح مسموحًا بها قدرها 1,200,000. ينص الاتفاق القابل للإنفاذ على استرداد التكلفة بالكامل عبر تعرفة 2030، لذلك لم تدخل في إيراد IFRS 15 لعام 2029. الاسترداد متوقع خلال سنة ولا يوجد أثر خصم جوهري. في 2030 أضيف المبلغ إلى الفواتير وحُصل من العملاء.",
+          "An electricity entity supplies regulatory services in 2029 and incurs an allowed repair cost of 1,200,000. The enforceable agreement provides full recovery through the 2030 tariff, so the amount is absent from 2029 IFRS 15 revenue. Recovery is expected within one year and discounting is immaterial. In 2030 the amount is added to customer bills and collected.",
+        ),
+        calculations: [
+          text(
+            "في 2029 يوجد حق حالي لإضافة 1,200,000 إلى سعر مستقبلي مقابل خدمة قدمت؛ يثبت أصل تنظيمي ودخل تنظيمي 1,200,000.",
+            "In 2029 a present right exists to add 1,200,000 to a future rate for service already supplied; a 1,200,000 regulatory asset and regulatory income are recognised.",
+          ),
+          text(
+            "في 2030 يتضمن إيراد IFRS 15 مبلغ 1,200,000 عند الفوترة، ويستوفى الأصل التنظيمي بإثبات مصروف تنظيمي مساوٍ.",
+            "In 2030 IFRS 15 revenue includes 1,200,000 on billing, and fulfilment of the regulatory asset creates equal regulatory expense.",
+          ),
+          text(
+            "الأثر عبر السنتين: يعكس 2029 التعويض المسموح للخدمة المقدمة، بينما لا يتكرر الأثر الاقتصادي عند تحصيله في 2030.",
+            "Across both years, 2029 reflects allowed compensation for service supplied, while the economic effect is not duplicated when collected in 2030.",
+          ),
+        ],
+        conclusion: text(
+          "لا يستبدل IFRS 20 إيراد IFRS 15؛ بل يضيف الدخل أو المصروف التنظيمي ليعكس فرق توقيت التعويض بين فترة الخدمة وفترة التعرفة.",
+          "IFRS 20 does not replace IFRS 15 revenue; regulatory income or expense overlays it to reflect the compensation timing difference between service and tariff periods.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات حق 2029", "Recognise the 2029 right"),
+            debit: text("أصل تنظيمي", "Regulatory asset"),
+            credit: text("دخل تنظيمي", "Regulatory income"),
+            amount: text("1,200,000", "1,200,000"),
+          },
+          {
+            label: text("استيفاء الأصل عند تحصيله في 2030", "Fulfil the asset on 2030 recovery"),
+            debit: text("مصروف تنظيمي", "Regulatory expense"),
+            credit: text("أصل تنظيمي", "Regulatory asset"),
+            amount: text("1,200,000", "1,200,000"),
+          },
+        ],
+        reference: "IFRS 20 (2026), timing-difference model",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
