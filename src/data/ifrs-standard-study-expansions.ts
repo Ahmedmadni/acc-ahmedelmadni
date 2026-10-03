@@ -2163,6 +2163,1290 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 27": {
+    sections: [
+      {
+        title: text(
+          "ما المقصود بالقوائم المالية المنفصلة؟",
+          "What are separate financial statements?",
+        ),
+        explanation: text(
+          "القوائم المنفصلة تعرض المنشأة المستثمرة بذاتها، فلا تجمع أصول والتزامات الشركات التابعة بندًا ببند ولا تطبق تلقائيًا طريقة حقوق الملكية على الشركات الزميلة والمشروعات المشتركة. وهي تختلف عن القوائم الموحدة، وقد تُعرض بالإضافة إليها أو بوصفها القوائم الوحيدة في حالات الإعفاء المحددة. وجود استثمار عادي خاضع لـIFRS 9 وحده لا يحول القوائم إلى قوائم منفصلة بمفهوم IAS 27.",
+          "Separate financial statements present the investing entity itself: they do not combine a subsidiary's assets and liabilities line by line and do not automatically equity-account associates and joint ventures. They differ from consolidated statements and may accompany them or, in specified exemption cases, be the entity's only statements. Merely holding an ordinary IFRS 9 investment does not make financial statements 'separate' under IAS 27.",
+        ),
+        keyPoints: [
+          text(
+            "IFRS 10 يحدد متى يلزم التجميع، بينما IAS 27 يحدد محاسبة الاستثمارات في القوائم المنفصلة.",
+            "IFRS 10 determines when consolidation is required; IAS 27 governs investments in separate statements.",
+          ),
+          text(
+            "القوائم المنفصلة لا تعني قوائم غير ممتثلة لبقية معايير IFRS.",
+            "Separate statements still comply with all other applicable IFRS requirements.",
+          ),
+          text(
+            "المنشأة الاستثمارية التي تقيس تابعاتها بالقيمة العادلة قد تعرض قوائم منفصلة بوصفها قوائمها الوحيدة.",
+            "An investment entity measuring subsidiaries at fair value may present separate statements as its only statements.",
+          ),
+        ],
+        reference: "IAS 27.1–9",
+      },
+      {
+        title: text(
+          "ثلاثة أسس للقياس واختيار متسق",
+          "Three measurement bases and a consistent choice",
+        ),
+        explanation: text(
+          "تختار المنشأة لكل فئة من الاستثمارات في الشركات التابعة أو المشروعات المشتركة أو الشركات الزميلة القياس بالتكلفة، أو وفق IFRS 9، أو بطريقة حقوق الملكية كما يصفها IAS 28. يجب تطبيق الأساس نفسه على جميع الاستثمارات داخل الفئة الواحدة؛ فلا يجوز انتقاء القياس أصلًا بأصل لتحقيق نتيجة مرغوبة. وإذا صُنّف استثمار مقاس بالتكلفة أو بطريقة حقوق الملكية كمحتفظ به للبيع، تطبق عليه متطلبات IFRS 5.",
+          "For each category of investments in subsidiaries, joint ventures or associates, an entity chooses cost, IFRS 9 measurement, or the IAS 28 equity method. The same basis is applied to all investments in a category; asset-by-asset selection to engineer an outcome is not permitted. An investment measured at cost or under the equity method applies IFRS 5 when classified as held for sale.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق السياسة لكل فئة: تابعات، مشروعات مشتركة، وشركات زميلة.",
+            "Document the policy for each category: subsidiaries, joint ventures and associates.",
+          ),
+          text(
+            "اختيار IFRS 9 يجلب قواعد التصنيف والقياس والانخفاض ذات الصلة.",
+            "Choosing IFRS 9 brings its relevant classification, measurement and impairment rules.",
+          ),
+          text(
+            "الاستثمارات التي يقيسها كيان استثماري بالقيمة العادلة تظل كذلك في قوائمه المنفصلة.",
+            "Investments measured at fair value by an investment entity remain so in its separate statements.",
+          ),
+        ],
+        reference: "IAS 27.10–11A",
+      },
+      {
+        title: text(
+          "التوزيعات وإعادة التنظيم والإفصاح",
+          "Dividends, reorganisations and disclosure",
+        ),
+        explanation: text(
+          "عند استخدام التكلفة أو IFRS 9 يُعترف بالتوزيع من التابعة أو الزميلة أو المشروع المشترك في الربح أو الخسارة عندما يثبت الحق في استلامه، ما لم تفرض قاعدة أخرى معالجة مختلفة. أما تحت طريقة حقوق الملكية فيخفض التوزيع رصيد الاستثمار. وتشرح الإيضاحات أن القوائم منفصلة، وأسباب إعدادها عند وجود إعفاء، وقائمة الاستثمارات الجوهرية وسياسة المحاسبة المطبقة على كل فئة.",
+          "Under cost or IFRS 9, a dividend from a subsidiary, associate or joint venture is recognised in profit or loss when the right to receive it is established, unless another requirement dictates otherwise. Under the equity method, the distribution reduces the investment. Notes identify the statements as separate, explain any exemption relied on, list material investments and describe the accounting policy for each category.",
+        ),
+        keyPoints: [
+          text(
+            "لا تخلط بين دخل التوزيع ونصيب الربح المعترف به سابقًا بطريقة حقوق الملكية.",
+            "Do not confuse dividend income with profit already recognised under the equity method.",
+          ),
+          text(
+            "افحص مؤشرات الانخفاض في الاستثمار المقاس بالتكلفة وفق المتطلبات ذات الصلة.",
+            "Assess impairment indicators for a cost-measured investment under the relevant requirements.",
+          ),
+          text(
+            "الإفصاح يربط اسم المستثمر فيه ومقره ونسبة الملكية وطريقة القياس.",
+            "Disclosure connects the investee, domicile, ownership interest and measurement basis.",
+          ),
+        ],
+        reference: "IAS 27.12, 15–17",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "التكلفة مقابل طريقة حقوق الملكية في القوائم المنفصلة",
+          "Cost versus equity method in separate statements",
+        ),
+        facts: text(
+          "اشترت شركة أم 80% من شركة تابعة مقابل 5,000,000. حققت التابعة بعد الاستحواذ ربحًا 900,000 ووزعت 200,000. لا توجد فروق قيمة عادلة أو انخفاض، وتعرض الأم أثر سياستي التكلفة وحقوق الملكية للمقارنة.",
+          "A parent buys 80% of a subsidiary for $5,000,000. After acquisition the subsidiary earns $900,000 and pays $200,000 dividends. There are no fair-value differences or impairment, and the parent compares cost and equity-method policies.",
+        ),
+        calculations: [
+          text(
+            "وفق التكلفة: يبقى الاستثمار 5,000,000، ويثبت دخل توزيعات 160,000 = 200,000 × 80%.",
+            "Under cost: the investment remains $5,000,000 and dividend income is $160,000 = $200,000 × 80%.",
+          ),
+          text(
+            "وفق حقوق الملكية: نصيب الربح 720,000 = 900,000 × 80%، والتوزيعات 160,000 تخفض الاستثمار.",
+            "Under the equity method: profit share is $720,000 = $900,000 × 80%, and $160,000 dividends reduce the investment.",
+          ),
+          text(
+            "رصيد الاستثمار بطريقة حقوق الملكية = 5,000,000 + 720,000 − 160,000 = 5,560,000.",
+            "Equity-method carrying amount = $5,000,000 + $720,000 − $160,000 = $5,560,000.",
+          ),
+        ],
+        conclusion: text(
+          "السياسة المختارة تغيّر توقيت ومكان ظهور العائد، ويجب تطبيقها باتساق على فئة الشركات التابعة.",
+          "The selected policy changes the timing and location of reported returns and must be applied consistently to the subsidiary category.",
+        ),
+        journalEntries: [
+          {
+            label: text("التوزيع وفق نموذج التكلفة", "Dividend under the cost model"),
+            debit: text("نقدية / توزيعات مستحقة", "Cash / dividend receivable"),
+            credit: text("دخل توزيعات", "Dividend income"),
+            amount: text("160,000", "$160,000"),
+          },
+          {
+            label: text("نصيب الربح بطريقة حقوق الملكية", "Profit share under the equity method"),
+            debit: text("استثمار في شركة تابعة", "Investment in subsidiary"),
+            credit: text("نصيب في ربح الشركة التابعة", "Share of subsidiary profit"),
+            amount: text("720,000", "$720,000"),
+          },
+        ],
+        reference: "IAS 27.10, 12; IAS 28.10–11",
+      },
+    ],
+  },
+  "IAS 21": {
+    sections: [
+      {
+        title: text(
+          "العملة الوظيفية قبل عملة العرض",
+          "Functional currency before presentation currency",
+        ),
+        explanation: text(
+          "العملة الوظيفية هي عملة البيئة الاقتصادية الأساسية التي تولد فيها المنشأة النقد وتنفقه، ويحددها جوهر عوامل التسعير والتكاليف والتمويل لا رغبة الإدارة في شكل التقرير. أما عملة العرض فيمكن أن تكون أي عملة تختارها المنشأة. تحديد العملة الوظيفية قرار تأسيسي؛ لأنه يحدد ما يعد معاملة أجنبية وكيف تقاس فروق الصرف لاحقًا.",
+          "Functional currency is the currency of the primary economic environment in which an entity generates and spends cash. It follows pricing, cost and financing substance rather than management's preferred reporting format. Presentation currency may be any selected currency. Functional-currency determination is foundational because it decides what is a foreign-currency transaction and how later exchange differences are measured.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ بعملة أسعار المبيعات والعمل المؤثرة في تلك الأسعار.",
+            "Start with the currency influencing sales prices and the competitive environment.",
+          ),
+          text(
+            "افحص عملة تكاليف العمل والمواد والتكاليف الأخرى، ثم عوامل التمويل والاحتفاظ بالمتحصلات.",
+            "Assess the currency of labour, materials and other costs, then financing and receipts-retention factors.",
+          ),
+          text(
+            "لا تتغير العملة الوظيفية إلا إذا تغيرت المعاملات والأحداث والظروف الأساسية.",
+            "Functional currency changes only when underlying transactions, events and conditions change.",
+          ),
+        ],
+        reference: "IAS 21.8–14",
+      },
+      {
+        title: text(
+          "المعاملات الأجنبية: نقدي أم غير نقدي؟",
+          "Foreign transactions: monetary or non-monetary?",
+        ),
+        explanation: text(
+          "تثبت المعاملة أولًا بسعر الصرف الفوري في تاريخها، ويجوز استخدام متوسط مناسب إذا كان تقريبًا معقولًا. في نهاية الفترة تترجم البنود النقدية بالسعر الختامي وتذهب الفروق عادة إلى الربح أو الخسارة. أما البند غير النقدي بالتكلفة التاريخية فيبقى بسعر تاريخ المعاملة، والبند غير النقدي بالقيمة العادلة يستخدم سعر تاريخ قياس القيمة العادلة ويتبع فرق الصرف مكان الاعتراف بمكسب أو خسارة القياس الأصلية.",
+          "A transaction is initially recorded at the spot rate on its date, with a suitable average permitted as a reasonable approximation. At period end monetary items use the closing rate and differences normally go to profit or loss. A historical-cost non-monetary item keeps the transaction-date rate; a fair-value non-monetary item uses the rate when fair value was measured, with the exchange component following the location of the underlying valuation gain or loss.",
+        ),
+        keyPoints: [
+          text(
+            "النقدي هو حق في استلام أو التزام بتسليم عدد ثابت أو قابل للتحديد من وحدات العملة.",
+            "A monetary item is a right to receive or obligation to deliver a fixed or determinable number of currency units.",
+          ),
+          text(
+            "المخزون والأصول الثابتة بالتكلفة بنود غير نقدية؛ الذمم المدينة والدائنة نقدية.",
+            "Cost-based inventory and PPE are non-monetary; receivables and payables are monetary.",
+          ),
+          text(
+            "سداد البند النقدي يولد فرق صرف بين سعر الإثبات أو آخر ترجمة وسعر السداد.",
+            "Settlement of a monetary item creates an exchange difference between its recognition or last-translation rate and settlement rate.",
+          ),
+        ],
+        reference: "IAS 21.20–37",
+      },
+      {
+        title: text(
+          "ترجمة العمليات الأجنبية وصافي الاستثمار",
+          "Foreign operations and net investment",
+        ),
+        explanation: text(
+          "عند ترجمة عملية أجنبية إلى عملة عرض المجموعة، تترجم الأصول والالتزامات بالسعر الختامي، والإيرادات والمصروفات بأسعار تواريخ المعاملات أو متوسط مناسب، وتثبت فروق الترجمة في الدخل الشامل الآخر حتى التخلص من العملية وفق الشروط. ويعامل البند النقدي الذي لا يُخطط لسداده ولا يرجح سداده مستقبلًا قريبًا كجزء من صافي الاستثمار في القوائم الموحدة، مع بقاء فرق الصرف في الربح أو الخسارة بالقوائم المنفصلة.",
+          "When translating a foreign operation into the group's presentation currency, assets and liabilities use the closing rate, income and expenses use transaction-date rates or a suitable average, and translation differences remain in OCI until disposal under the applicable conditions. A monetary item whose settlement is neither planned nor likely in the foreseeable future may form part of the net investment in consolidated statements, although its exchange difference remains in profit or loss in separate statements.",
+        ),
+        keyPoints: [
+          text(
+            "تترجم الشهرة وتعديلات القيمة العادلة للعملية الأجنبية كأصول والتزامات لها بالسعر الختامي.",
+            "Goodwill and fair-value adjustments of a foreign operation are translated as its assets and liabilities at the closing rate.",
+          ),
+          text(
+            "يُجمع فرق الترجمة العائد لحقوق غير المسيطرين ضمن رصيدهم.",
+            "Translation differences attributable to NCI are accumulated in the NCI balance.",
+          ),
+          text(
+            "التخلص الكامل أو الجزئي المحدد قد يؤدي إلى إعادة تصنيف فرق الترجمة المتراكم.",
+            "A qualifying full or partial disposal may reclassify accumulated translation differences.",
+          ),
+        ],
+        reference: "IAS 21.32–33, 38–49",
+      },
+      {
+        title: text(
+          "غياب قابلية التحويل: متطلبات سارية منذ 2025",
+          "Lack of exchangeability: requirements effective since 2025",
+        ),
+        explanation: text(
+          "من الفترات السنوية التي تبدأ في أو بعد 1 يناير 2025، تختبر المنشأة هل تستطيع الحصول على العملة الأخرى خلال إطار زمني يسمح بالتأخير الإداري الطبيعي ومن خلال سوق أو آلية تنشئ حقوقًا والتزامات واجبة النفاذ. إذا لم تكن العملة قابلة للتحويل لغرض القياس المحدد، تقدر المنشأة سعرًا فوريًا يحقق هدف إظهار السعر الذي كانت ستتم به معاملة تبادل منظمة بين مشاركين في السوق في تاريخ القياس، وتقدم إفصاحات عن طبيعة المشكلة ومخاطرها ومنهج التقدير.",
+          "For annual periods beginning on or after 1 January 2025, an entity assesses whether it can obtain the other currency within a time frame allowing normal administrative delay through a market or mechanism that creates enforceable rights and obligations. If a currency is not exchangeable for the specified measurement purpose, the entity estimates a spot rate aimed at the rate for an orderly exchange transaction between market participants at the measurement date and discloses the nature, risks and estimation method.",
+        ),
+        keyPoints: [
+          text(
+            "قابلية التحويل تُقيّم في تاريخ القياس ولغرض محدد، وليست وصفًا دائمًا للعملة.",
+            "Exchangeability is assessed at a measurement date for a specified purpose, not as a permanent currency label.",
+          ),
+          text(
+            "يمكن استخدام سعر قابل للملاحظة دون تعديل أو تقنية تقدير أخرى إذا حقق هدف التقدير.",
+            "An observable rate without adjustment or another estimation technique may be used if it meets the objective.",
+          ),
+          text(
+            "الإفصاح يمكّن المستخدم من فهم كيفية تأثير غياب التحويل في الأداء والمركز والتدفقات.",
+            "Disclosure enables users to understand how lack of exchangeability affects performance, position and cash flows.",
+          ),
+        ],
+        reference: "IAS 21.8A–8B, 19A, 57A–57B, Appendix A",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "شراء عقار بالروبية وتسوية الجزء المؤجل",
+          "Rupee property purchase and deferred settlement",
+        ),
+        facts: text(
+          "عملتها الوظيفية اليورو، اشترت Europe Co عقارًا في 18 أغسطس بمبلغ 220 مليون روبية. دفعت 200 مليون فورًا وبقي 20 مليون حتى 31 أكتوبر. الأسعار: 85 روبية لليورو عند الشراء، و87 عند السداد، و88 في 31 ديسمبر. لم تختلف القيمة العادلة للعقار جوهريًا عن قيمته الدفترية.",
+          "Europe Co's functional currency is the euro. On 18 August it buys a property for INR220 million, paying INR200 million immediately and INR20 million on 31 October. Rates are INR85/€ at purchase, INR87/€ at settlement and INR88/€ at year end. The property's fair value is not materially different from carrying amount.",
+        ),
+        calculations: [
+          text(
+            "تكلفة العقار = 220,000,000 ÷ 85 = 2,588,235 يورو تقريبًا.",
+            "Property cost = INR220,000,000 ÷ 85 = approximately €2,588,235.",
+          ),
+          text(
+            "النقد المدفوع فورًا = 200,000,000 ÷ 85 = 2,352,941 يورو؛ والدائن الأولي = 235,294 يورو.",
+            "Immediate cash = INR200,000,000 ÷ 85 = €2,352,941; initial payable = €235,294.",
+          ),
+          text(
+            "مبلغ السداد = 20,000,000 ÷ 87 = 229,885 يورو؛ مكسب الصرف = 235,294 − 229,885 = 5,409 يورو تقريبًا.",
+            "Settlement = INR20,000,000 ÷ 87 = €229,885; exchange gain = €235,294 − €229,885 = approximately €5,409.",
+          ),
+          text(
+            "العقار بند غير نقدي بالتكلفة، فيبقى بسعر 18 أغسطس ما لم يجر قياس قيمة عادلة جديد.",
+            "The property is a historical-cost non-monetary item and retains the 18 August rate unless a new fair-value measurement is made.",
+          ),
+        ],
+        conclusion: text(
+          "يثبت مكسب الصرف عند تسوية الدائن، ولا يعاد ترجمة تكلفة العقار بالسعر الختامي لمجرد تغير سعر العملة.",
+          "The exchange gain is recognised when the payable is settled; the property's cost is not retranslated at the closing rate merely because the currency moved.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات الشراء", "Record the purchase"),
+            debit: text("عقار", "Property"),
+            credit: text("نقدية 2,352,941 + دائن 235,294", "Cash €2,352,941 + payable €235,294"),
+            amount: text("2,588,235 يورو", "€2,588,235"),
+          },
+          {
+            label: text("سداد الدائن", "Settle the payable"),
+            debit: text("دائن 235,294", "Payable €235,294"),
+            credit: text("نقدية 229,885 + مكسب صرف 5,409", "Cash €229,885 + exchange gain €5,409"),
+            amount: text("235,294 يورو", "€235,294"),
+          },
+        ],
+        reference: "IAS 21.21–23, 28",
+      },
+    ],
+  },
+  "IAS 29": {
+    sections: [
+      {
+        title: text(
+          "متى تصبح البيئة مفرطة التضخم؟",
+          "When does an economy become hyperinflationary?",
+        ),
+        explanation: text(
+          "لا يضع IAS 29 نسبة واحدة فاصلة، بل يتطلب حكمًا مبنيًا على خصائص البيئة الاقتصادية: تفضيل الاحتفاظ بالثروة في أصول غير نقدية أو عملة مستقرة، تسعير الائتمان بما يعوض فقد القوة الشرائية، ربط الأسعار بمؤشر، واتجاه معدل التضخم التراكمي لثلاث سنوات إلى 100% أو تجاوزه. يفضل أن تبدأ جميع المنشآت ذات العملة الوظيفية نفسها التطبيق في التاريخ ذاته.",
+          "IAS 29 sets no single bright-line rate. Judgement considers characteristics such as holding wealth in non-monetary assets or stable currency, credit pricing that compensates for purchasing-power loss, index-linked prices, and three-year cumulative inflation approaching or exceeding 100%. Entities with the same functional currency should preferably begin applying the Standard at the same date.",
+        ),
+        keyPoints: [
+          text(
+            "مؤشر 100% خلال ثلاث سنوات علامة مهمة وليس تعريفًا آليًا وحيدًا.",
+            "The 100% three-year indicator is important but not the sole automatic definition.",
+          ),
+          text(
+            "التطبيق يعتمد على العملة الوظيفية لا موقع تسجيل الشركة فقط.",
+            "Application follows functional currency, not merely the entity's place of registration.",
+          ),
+          text(
+            "لا تعرض قوائم غير معدلة ثم تجعل إعادة البيان ملحقًا اختياريًا.",
+            "Do not present unrestated statements with restatement as an optional supplement.",
+          ),
+        ],
+        reference: "IAS 29.1–7",
+      },
+      {
+        title: text(
+          "إعادة البيان بوحدة القياس الجارية",
+          "Restatement into the current measuring unit",
+        ),
+        explanation: text(
+          "تعاد القوائم، بما فيها المقارنات، إلى وحدة القياس الجارية في نهاية الفترة باستخدام مؤشر أسعار عام يعكس تغير القوة الشرائية. البنود النقدية لا تعاد لأنها معبر عنها أصلًا بوحدات نقدية جارية، بينما تعاد البنود غير النقدية بالتكلفة وحقوق الملكية والإيرادات والمصروفات من تواريخ نشأتها. البنود غير النقدية المعروضة أصلًا بقيمة جارية في نهاية الفترة لا يعاد تعديلها مرة أخرى.",
+          "Financial statements, including comparatives, are restated into the measuring unit current at period end using a general price index reflecting purchasing-power changes. Monetary items are not restated because they are already expressed in current monetary units; historical-cost non-monetary items, equity, income and expenses are restated from their recognition dates. Non-monetary items already carried at a current period-end amount are not adjusted again.",
+        ),
+        keyPoints: [
+          text(
+            "حدد تاريخ نشأة كل رصيد غير نقدي ومؤشر ذلك التاريخ.",
+            "Identify each non-monetary balance's recognition date and corresponding index.",
+          ),
+          text(
+            "اخفض المبلغ المعاد إذا تجاوز قيمته القابلة للاسترداد أو صافي قيمته القابلة للتحقق.",
+            "Reduce a restated amount if it exceeds recoverable amount or net realisable value.",
+          ),
+          text(
+            "أعد بيان قائمة الربح أو الخسارة من تواريخ تسجيل الدخل والمصروف.",
+            "Restate profit-or-loss items from the dates income and expenses were recorded.",
+          ),
+        ],
+        reference: "IAS 29.8, 11–27",
+      },
+      {
+        title: text("مكسب أو خسارة المركز النقدي", "Gain or loss on the net monetary position"),
+        explanation: text(
+          "في التضخم تفقد الأصول النقدية الصافية قوة شرائية فتولد خسارة، بينما تحقق الالتزامات النقدية الصافية مكسبًا اقتصاديًا لأن السداد يتم بوحدات أقل قوة شرائية. يحسب الأثر من تغير المؤشر المطبق على المتوسط المرجح للفروق بين الأصول والالتزامات النقدية خلال الفترة، ويثبت في الربح أو الخسارة ويُفصح عنه منفصلًا.",
+          "In inflation, a net monetary asset position loses purchasing power, while a net monetary liability position creates an economic gain because repayment uses units with lower purchasing power. The effect is derived from index changes applied to the weighted exposure between monetary assets and liabilities through the period, recognised in profit or loss and separately disclosed.",
+        ),
+        keyPoints: [
+          text(
+            "الرصيد الختامي وحده قد لا يمثل التعرض إذا تحركت الأرصدة خلال السنة.",
+            "The closing balance alone may misstate exposure when balances changed during the year.",
+          ),
+          text(
+            "يمكن التحقق التقريبي من المكسب أو الخسارة باستخدام متوسط صافي المركز النقدي.",
+            "An approximate check can use the average net monetary position.",
+          ),
+          text(
+            "اعرض أثر صافي المركز النقدي منفصلًا حتى يفهم المستخدم مصدره.",
+            "Present the net monetary effect separately so users understand its source.",
+          ),
+        ],
+        reference: "IAS 29.9, 27–28",
+      },
+      {
+        title: text(
+          "أول تطبيق وترجمة عملية أجنبية",
+          "First application and translation of a foreign operation",
+        ),
+        explanation: text(
+          "عند أول تطبيق تُعامل المنشأة الاقتصاد كما لو كان دائمًا مفرط التضخم لأغراض إعادة بيان أرصدة الافتتاح وفق IFRIC 7، مع معالجة الضريبة المؤجلة بعد إعادة البيان. وإذا كانت العملية الأجنبية ذات عملة وظيفية مفرطة التضخم، تعيد قوائمها أولًا وفق IAS 29 ثم تترجم جميع المبالغ إلى عملة العرض بالسعر الختامي وفق IAS 21.",
+          "On first application, IFRIC 7 applies the restatement approach as if the economy had always been hyperinflationary for opening balances, with deferred tax considered after restatement. A foreign operation with a hyperinflationary functional currency first restates under IAS 29 and then translates all amounts into the presentation currency at the closing rate under IAS 21.",
+        ),
+        keyPoints: [
+          text(
+            "رتّب العمل: إعادة بيان IAS 29 أولًا، ثم ترجمة IAS 21.",
+            "Sequence the work: IAS 29 restatement first, IAS 21 translation second.",
+          ),
+          text(
+            "عند توقف التضخم المفرط تصبح مبالغ نهاية آخر فترة مطبقة أساس القيم الدفترية اللاحقة.",
+            "When hyperinflation ceases, amounts at the end of the last applied period become the basis for later carrying amounts.",
+          ),
+          text(
+            "اكشف المؤشر المستخدم ومستواه وحركة الفترة وطبيعة أساس القياس.",
+            "Disclose the index used, its level and movement, and the measurement basis.",
+          ),
+        ],
+        reference: "IAS 29.34–41; IAS 21.42–43",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "أصل غير نقدي ومركز نقدي صافٍ في سنة تضخم",
+          "A non-monetary asset and net monetary position in an inflationary year",
+        ),
+        facts: text(
+          "في 1 يناير كان مؤشر الأسعار 100، واشترت منشأة معدات بمبلغ 1,000. احتفظت طوال السنة تقريبًا بنقد 200 والتزام نقدي 500. بلغ المؤشر 160 في 31 ديسمبر، ولا توجد حركات جوهرية أخرى.",
+          "On 1 January the price index is 100 and an entity buys equipment for $1,000. Throughout the year it holds approximately $200 cash and a $500 monetary liability. The index is 160 at 31 December, with no other significant movements.",
+        ),
+        calculations: [
+          text("معامل إعادة البيان = 160 ÷ 100 = 1.60.", "Restatement factor = 160 ÷ 100 = 1.60."),
+          text(
+            "المعدات المعاد بيانها = 1,000 × 1.60 = 1,600.",
+            "Restated equipment = $1,000 × 1.60 = $1,600.",
+          ),
+          text(
+            "النقد والالتزام لا يعاد بيانهما؛ صافي الالتزام النقدي = 500 − 200 = 300.",
+            "Cash and the liability are not restated; net monetary liability = $500 − $200 = $300.",
+          ),
+          text(
+            "مع ثبات التعرض طوال السنة، مكسب القوة الشرائية التقريبي = 300 × 60% = 180.",
+            "If exposure is constant through the year, the approximate purchasing-power gain = $300 × 60% = $180.",
+          ),
+        ],
+        conclusion: text(
+          "يزداد الأصل غير النقدي إلى وحدة القياس الجارية، ويظهر مكسب مستقل لأن المنشأة كانت ممولة بصافي التزامات نقدية أثناء التضخم.",
+          "The non-monetary asset is updated to the current measuring unit, and a separate gain arises because the entity was financed by net monetary liabilities during inflation.",
+        ),
+        journalEntries: [],
+        reference: "IAS 29.11–27",
+      },
+    ],
+  },
+  "IAS 7": {
+    sections: [
+      {
+        title: text(
+          "خريطة التدفقات النقدية والنقد المعادل",
+          "Mapping cash flows and cash equivalents",
+        ),
+        explanation: text(
+          "تشرح قائمة التدفقات النقدية كيف انتقل رصيد النقد والنقد المعادل من أول الفترة إلى آخرها. النقد يشمل النقد بالصندوق والودائع تحت الطلب، أما النقد المعادل فهو استثمار قصير الأجل عالي السيولة يمكن تحويله بسهولة إلى مبلغ نقدي معلوم ويتعرض لمخاطر ضئيلة في تغير القيمة. الغرض منه مقابلة الالتزامات النقدية القصيرة لا الاستثمار أو تحقيق العائد؛ لذلك يكون الاستحقاق الأصلي لثلاثة أشهر أو أقل مؤشرًا عمليًا مهمًا وليس اختبارًا منفردًا يكفي بذاته. تُقسم الحركة إلى تشغيل واستثمار وتمويل بحسب طبيعة المنشأة والغرض الاقتصادي للتدفق.",
+          "The statement of cash flows explains how cash and cash equivalents moved from the beginning to the end of the period. Cash comprises cash on hand and demand deposits; a cash equivalent is a short-term, highly liquid investment readily convertible to a known amount of cash and subject to insignificant value-change risk. Its purpose is to meet short-term cash commitments rather than investment or return, so an original maturity of three months or less is an important practical indicator, not a stand-alone test. Movements are classified as operating, investing or financing according to the entity's business and the economic purpose of the flow.",
+        ),
+        keyPoints: [
+          text(
+            "التشغيل هو النشاط الرئيسي المولد للإيراد وما لا يدخل بوضوح ضمن الاستثمار أو التمويل.",
+            "Operating activities are the principal revenue-producing activities and items not clearly investing or financing.",
+          ),
+          text(
+            "الاستثمار يتعلق بشراء وبيع الأصول طويلة الأجل والاستثمارات غير المصنفة نقدًا معادلًا.",
+            "Investing relates to acquiring and disposing of long-term assets and investments not classified as cash equivalents.",
+          ),
+          text(
+            "التمويل يغير حجم أو تكوين حقوق الملكية والاقتراض، مثل إصدار أسهم أو سداد أصل قرض.",
+            "Financing changes the size or composition of equity and borrowings, such as issuing shares or repaying loan principal.",
+          ),
+        ],
+        reference: "IAS 7.6–17",
+      },
+      {
+        title: text(
+          "التدفقات التشغيلية: الطريقة المباشرة وغير المباشرة",
+          "Operating cash flows: direct and indirect methods",
+        ),
+        explanation: text(
+          "يمكن عرض التدفقات التشغيلية بالطريقة المباشرة، فتظهر الفئات الرئيسية للمتحصلات والمدفوعات النقدية الإجمالية، أو بالطريقة غير المباشرة، فتبدأ من الربح أو الخسارة وتزيل آثار البنود غير النقدية والاستحقاقات والتأجيلات والبنود التي تنتمي لتدفقات الاستثمار أو التمويل. يشجع IAS 7 الطريقة المباشرة لأنها تقدم معلومات تساعد في تقدير التدفقات المستقبلية، لكن الطريقتين مقبولتان. في الطريقة غير المباشرة لا تُعامل زيادة المخزون أو المدينين على أنها مصروف جديد؛ بل تعديل يربط الربح المحاسبي بالنقد الناتج من التشغيل.",
+          "Operating cash flows may be presented using the direct method, showing major classes of gross cash receipts and payments, or the indirect method, starting from profit or loss and removing non-cash items, accruals, deferrals and items whose cash effects belong to investing or financing. IAS 7 encourages the direct method because it provides information useful in estimating future cash flows, although both methods are permitted. Under the indirect method, increases in inventory or receivables are not new expenses; they are reconciliation adjustments from accounting profit to operating cash.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ من رقم الربح الذي تستخدمه المنشأة ثم افصل منه آثار الاستثمار والتمويل بصورة متسقة.",
+            "Start from the entity's chosen profit measure and consistently separate investing and financing effects.",
+          ),
+          text(
+            "أضف المصروفات غير النقدية مثل الإهلاك، واعكس الأرباح أو الخسائر التي يرد تدفقها النقدي في قسم آخر.",
+            "Add back non-cash expenses such as depreciation and reverse gains or losses whose cash flow appears elsewhere.",
+          ),
+          text(
+            "زيادة أصل تشغيلي تخفض النقد التشغيلي عادة، وزيادة التزام تشغيلي ترفعه عادة.",
+            "An increase in an operating asset normally reduces operating cash; an increase in an operating liability normally increases it.",
+          ),
+        ],
+        reference: "IAS 7.18–20",
+      },
+      {
+        title: text(
+          "الفوائد والتوزيعات والضرائب والعملات والبنود غير النقدية",
+          "Interest, dividends, tax, foreign currency and non-cash items",
+        ),
+        explanation: text(
+          "تُعرض الفوائد والتوزيعات المقبوضة والمدفوعة كل فئة على حدة، ويُختار لها تصنيف تشغيلي أو استثماري أو تمويلي بحسب البدائل التي يسمح بها المعيار وطبيعة المنشأة، مع الثبات من فترة لأخرى. تُصنف ضرائب الدخل عادة تشغيلية إلا إذا أمكن ربطها تحديدًا باستثمار أو تمويل. تُترجم تدفقات العملة الأجنبية بسعر تاريخ التدفق، ويمكن استخدام متوسط يقارب السعر الفعلي، بينما أثر تغير سعر الصرف على النقد المحتفظ به لا يعد تدفقًا ويعرض منفصلًا للمصالحة. معاملات مثل شراء أصل بإصدار أسهم أو عقد إيجار دون دفعة نقدية تستبعد من القائمة وتفصح في موضع آخر.",
+          "Interest and dividends received and paid are each disclosed separately and classified consistently from period to period as operating, investing or financing within the alternatives permitted by the Standard and the entity's circumstances. Income taxes are normally operating unless specifically identifiable with investing or financing. Foreign-currency cash flows are translated at the rate on the cash-flow date; a representative average may be used, while exchange effects on cash held are not cash flows and are shown separately in the reconciliation. Transactions such as acquiring an asset by issuing shares or entering a lease with no cash payment are excluded from the statement and disclosed elsewhere.",
+        ),
+        keyPoints: [
+          text(
+            "لا تغيّر تصنيف الفائدة أو التوزيعات بهدف تجميل التدفق التشغيلي بين الفترات.",
+            "Do not change interest or dividend classification to improve operating cash flow between periods.",
+          ),
+          text(
+            "اعرض التدفقات على أساس إجمالي إلا في الحالات المحدودة التي يسمح فيها بالصافي.",
+            "Present cash flows gross except in the limited circumstances in which net presentation is permitted.",
+          ),
+          text(
+            "افصل المعاملة غير النقدية عن أي دفعة نقدية لاحقة مرتبطة بها.",
+            "Separate a non-cash transaction from any later cash payment related to it.",
+          ),
+        ],
+        reference: "IAS 7.21–24, 28, 31–37, 43–44",
+      },
+      {
+        title: text(
+          "مصالحة التمويل وترتيبات تمويل الموردين",
+          "Financing reconciliation and supplier finance arrangements",
+        ),
+        explanation: text(
+          "يلزم الإفصاح عن التغيرات في الالتزامات الناتجة عن أنشطة التمويل، بما يفصل التغير النقدي عن الاستحواذات وفروق العملة والقيمة العادلة وغيرها من التغيرات غير النقدية. كما تتطلب تعديلات ترتيبات تمويل الموردين معلومات تمكن المستخدم من فهم أثر هذه الترتيبات على الالتزامات والتدفقات ومخاطر السيولة: شروط الترتيب، القيم الدفترية ومكان عرض الالتزامات، الجزء الذي سدده مقدمو التمويل للموردين، نطاق آجال السداد مقارنة بالدائنين التجاريين غير المشمولين، والتغيرات غير النقدية. لا يكفي نقل مبلغ من الدائنين إلى الاقتراض دون شرح طبيعة الترتيب.",
+          "An entity discloses changes in liabilities arising from financing activities, distinguishing cash changes from acquisitions, foreign-exchange effects, fair-value movements and other non-cash changes. Supplier-finance amendments also require information enabling users to understand effects on liabilities, cash flows and liquidity risk: arrangement terms, carrying amounts and statement line items, amounts for which finance providers have already paid suppliers, ranges of payment due dates compared with comparable trade payables outside the arrangements, and non-cash changes. Merely reclassifying an amount from trade payables to borrowings does not explain the arrangement's substance.",
+        ),
+        keyPoints: [
+          text(
+            "أنشئ حركة افتتاحي–نقدي–غير نقدي–ختامي لكل فئة تمويل جوهرية.",
+            "Prepare an opening–cash–non-cash–closing roll-forward for each material financing class.",
+          ),
+          text(
+            "قيّم العرض في قائمة المركز المالي والتدفقات وفق الشروط والجوهر، لا اسم المنتج المصرفي.",
+            "Assess balance-sheet and cash-flow presentation from terms and substance, not the bank product's label.",
+          ),
+          text(
+            "اربط إفصاح تمويل الموردين بإفصاحات مخاطر السيولة في IFRS 7.",
+            "Connect supplier-finance information with IFRS 7 liquidity-risk disclosures.",
+          ),
+        ],
+        reference: "IAS 7.44A–44H",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "إعداد التدفق النقدي التشغيلي بالطريقة غير المباشرة",
+          "Preparing operating cash flow using the indirect method",
+        ),
+        facts: text(
+          "حققت منشأة ربحًا قبل الضريبة قدره 500,000. يتضمن الربح إهلاكًا 80,000 وربح بيع آلة 20,000 وتكلفة تمويل 30,000. زاد المخزون 40,000، وانخفض العملاء 25,000، وزاد الموردون 15,000. دفعت المنشأة فوائد 30,000 وضريبة دخل 70,000، وتصنف الفائدة المدفوعة تشغيلية بثبات.",
+          "An entity reports profit before tax of 500,000, including depreciation of 80,000, a 20,000 gain on disposal of machinery and finance costs of 30,000. Inventory increased by 40,000, receivables decreased by 25,000 and payables increased by 15,000. Interest paid was 30,000 and income tax paid was 70,000; the entity consistently classifies interest paid as operating.",
+        ),
+        calculations: [
+          text(
+            "الربح قبل تغير رأس المال العامل = 500,000 + 80,000 − 20,000 + 30,000 = 590,000.",
+            "Profit before working-capital changes = 500,000 + 80,000 − 20,000 + 30,000 = 590,000.",
+          ),
+          text(
+            "أثر رأس المال العامل = −40,000 + 25,000 + 15,000 = صفر؛ إذ عوض انخفاض العملاء وزيادة الموردين زيادة المخزون.",
+            "Working-capital effect = −40,000 + 25,000 + 15,000 = nil; the receivables fall and payables rise offset the inventory increase.",
+          ),
+          text(
+            "النقد الناتج من العمليات = 590,000؛ وبعد الفائدة والضريبة يصبح صافي التدفق التشغيلي = 590,000 − 30,000 − 70,000 = 490,000.",
+            "Cash generated from operations = 590,000; after interest and tax, net operating cash flow = 590,000 − 30,000 − 70,000 = 490,000.",
+          ),
+          text(
+            "متحصل بيع الآلة يعرض كاملًا ضمن الاستثمار؛ وربح البيع 20,000 أزيل من مصالحة التشغيل حتى لا يتكرر أثره.",
+            "The full disposal proceeds are shown in investing; the 20,000 gain is removed from the operating reconciliation to prevent double counting.",
+          ),
+        ],
+        conclusion: text(
+          "يفصل العرض بين نتيجة الاستحقاق وقدرة النشاط على توليد النقد، مع إبقاء التدفقات الاستثمارية والتمويلية في أقسامها الصحيحة.",
+          "The presentation separates accrual profit from operating cash generation while keeping investing and financing cash flows in their proper sections.",
+        ),
+        journalEntries: [],
+        reference: "IAS 7.18–20, 31–35",
+      },
+    ],
+  },
+  "IFRS 8": {
+    sections: [
+      {
+        title: text(
+          "النطاق ومنهج الإدارة ومتخذ القرار التشغيلي",
+          "Scope, management approach and the CODM",
+        ),
+        explanation: text(
+          "يطبق IFRS 8 على القوائم المنفصلة أو الفردية للمنشأة التي تتداول أدوات دينها أو حقوق ملكيتها في سوق عام أو تودع قوائمها بغرض إصدار أدوات في سوق عام، وعلى القوائم الموحدة للمجموعة التي لها شركة أم بهذه الصفات. القطاع التشغيلي مكوّن يزاول أنشطة قد يحقق منها إيرادات ويتحمل عنها مصروفات، وتراجع نتائجه بانتظام جهة متخذ القرار التشغيلي لتخصيص الموارد وتقييم الأداء، وتتوفر عنه معلومات مالية منفصلة. متخذ القرار التشغيلي وظيفة إدارية لا مسمى وظيفيًا ثابتًا، وقد يكون فردًا أو لجنة.",
+          "IFRS 8 applies to separate or individual financial statements of an entity whose debt or equity instruments trade in a public market, or that files statements to issue instruments in a public market, and to consolidated statements of a group with such a parent. An operating segment is a component that engages in activities from which it may earn revenue and incur expenses, whose results are regularly reviewed by the chief operating decision maker to allocate resources and assess performance, and for which discrete financial information is available. The CODM is a management function, not a fixed title, and may be a person or committee.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ بالتقارير الداخلية الفعلية التي تصل إلى متخذ القرار، لا بالهيكل القانوني للشركات.",
+            "Start with actual internal reports reviewed by the CODM, not the group's legal-company structure.",
+          ),
+          text(
+            "قد يكون نشاط ما قطاعًا قبل أن يحقق إيرادات، مثل عملية ناشئة تراجعها الإدارة منفصلة.",
+            "An activity may be a segment before earning revenue, such as a start-up operation reviewed separately.",
+          ),
+          text(
+            "إذا تضمن تقرير واحد قوائم موحدة ومنفصلة للأم، تعرض معلومات القطاعات في القوائم الموحدة فقط.",
+            "If one report contains consolidated and parent separate statements, segment information is required only in the consolidated statements.",
+          ),
+        ],
+        reference: "IFRS 8.2–9",
+      },
+      {
+        title: text(
+          "تجميع القطاعات وحدود الحكم",
+          "Aggregation of segments and limits of judgement",
+        ),
+        explanation: text(
+          "يجوز جمع قطاعين أو أكثر في قطاع تشغيلي واحد فقط إذا كان التجميع متسقًا مع المبدأ الأساسي للمعيار، وكانت للقطاعات خصائص اقتصادية متشابهة، وتشابهت في طبيعة المنتجات والخدمات وعمليات الإنتاج ونوع العميل وطرق التوزيع، وكذلك البيئة التنظيمية حين تكون ملائمة. تشابه هامش الربح في سنة واحدة لا يثبت وحده تشابه الخصائص الاقتصادية طويلة الأجل. ويجب الإفصاح عن الأحكام التي اتخذتها الإدارة عند تطبيق معايير التجميع، بما في ذلك وصف القطاعات المجمعة والمؤشرات التي دعمت التشابه.",
+          "Two or more operating segments may be aggregated only when aggregation is consistent with the Standard's core principle, the segments have similar economic characteristics, and they are similar in products and services, production processes, customer type, distribution methods and, when relevant, regulatory environment. Similar profit margins in one year do not by themselves demonstrate similar long-term economic characteristics. Management also discloses judgements made in applying aggregation criteria, including the segments combined and indicators supporting similarity.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق التشابه عبر فترة مناسبة، لا عند تاريخ واحد فقط.",
+            "Document similarity over an appropriate period, not only at one date.",
+          ),
+          text(
+            "لا تستخدم التجميع لإخفاء قطاع ضعيف الأداء أو مختلف المخاطر.",
+            "Do not use aggregation to conceal an underperforming or differently exposed segment.",
+          ),
+          text(
+            "أعد تقييم القطاعات إذا تغيرت التقارير الداخلية أو طريقة تخصيص الموارد.",
+            "Reassess segments when internal reporting or resource-allocation processes change.",
+          ),
+        ],
+        reference: "IFRS 8.11–12, 22(aa)",
+      },
+      {
+        title: text("اختبارات 10% وحد تغطية 75%", "The 10% tests and 75% coverage rule"),
+        explanation: text(
+          "يصبح القطاع قابلًا للتقرير إذا بلغ 10% أو أكثر في أي اختبار: إيراده الداخلي والخارجي من مجموع إيرادات القطاعات؛ أو القيمة المطلقة لربحه أو خسارته مقارنة بالأكبر مطلقًا بين مجموع أرباح القطاعات الرابحة ومجموع خسائر القطاعات الخاسرة؛ أو أصوله من مجموع أصول القطاعات. بعد تحديد القطاعات القابلة للتقرير يجب أن تغطي إيراداتها من العملاء الخارجيين 75% على الأقل من إيرادات المنشأة الخارجية، وإلا تضاف قطاعات حتى بلوغ الحد ولو لم تنجح منفردة في اختبار 10%. يمكن جمع الباقي في «قطاعات أخرى» مع وصف مصادر الإيراد.",
+          "A segment becomes reportable if it meets any 10% test: internal plus external revenue against total segment revenue; the absolute amount of profit or loss against the greater absolute total of profitable-segment profits and loss-making-segment losses; or assets against total segment assets. After reportable segments are identified, their external revenue must cover at least 75% of the entity's external revenue; otherwise additional segments are added until the threshold is reached even if they do not individually pass a 10% test. The remainder may be combined as 'all other segments', with revenue sources described.",
+        ),
+        keyPoints: [
+          text(
+            "في اختبار الإيراد استخدم الإيراد الخارجي وبين القطاعات، لكن في اختبار 75% استخدم الإيراد الخارجي فقط.",
+            "Use external and intersegment revenue for the revenue test, but external revenue only for the 75% coverage test.",
+          ),
+          text(
+            "اختبار الربح أو الخسارة يعتمد القيمة المطلقة والمقام الأكبر؛ لا تصفّر القطاعات الخاسرة.",
+            "The profit-or-loss test uses absolute amounts and the larger denominator; do not net loss-making segments to zero.",
+          ),
+          text(
+            "يمكن استمرار عرض قطاع كان قابلًا للتقرير سابقًا إذا ظل مهمًا في تقدير الإدارة.",
+            "A previously reportable segment may continue to be shown when management judges it remains significant.",
+          ),
+        ],
+        reference: "IFRS 8.13–19",
+      },
+      {
+        title: text("القياس والإفصاح والمصالحات", "Measurement, disclosures and reconciliations"),
+        explanation: text(
+          "تعرض المنشأة مقياس الربح أو الخسارة لكل قطاع قابل للتقرير وفق المقياس المقدم إلى متخذ القرار التشغيلي، وتعرض الأصول والالتزامات إذا كانت تقدم له بانتظام. كما تكشف أساس القياس والفروق عن سياسات القوائم، وتُجري مصالحات بين مجموع إيرادات وربح أو خسارة وأصول والتزامات القطاعات وبين أرقام المنشأة. مبالغ الإيراد والمصروف المحددة في الفقرة 23 تفصح إذا كانت داخلة في مقياس الربح الذي يراجعه متخذ القرار أو تقدم إليه بانتظام؛ ولا يعني ذلك نسخ كل بند من قائمة الربح أو الخسارة لكل قطاع. وتضاف إفصاحات على مستوى المنشأة عن المنتجات والخدمات والمناطق الجغرافية والعملاء الرئيسيين متى انطبقت.",
+          "The entity reports a profit-or-loss measure for each reportable segment using the measure reported to the CODM, and reports assets and liabilities when regularly provided to the CODM. It explains the measurement basis and differences from financial-statement policies, and reconciles total segment revenue, profit or loss, assets and liabilities to entity amounts. Paragraph 23's specified income and expense amounts are disclosed when included in the segment profit measure reviewed by the CODM or otherwise regularly provided; this does not require copying every income-statement line for every segment. Entity-wide disclosures about products and services, geography and major customers are added when applicable.",
+        ),
+        keyPoints: [
+          text(
+            "الإدارة الداخلية تحدد مقياس القطاع، لكن المصالحة تمنع انفصاله عن القوائم المالية.",
+            "Internal management reporting determines the segment measure, but reconciliation anchors it to the financial statements.",
+          ),
+          text(
+            "قيّم أهمية معلومات الدخل والمصروف في سياق القوائم ككل، مع مراعاة الطبيعة والحجم وعدم إخفاء المعلومات بالتجميع.",
+            "Assess material income and expense information in the context of the financial statements as a whole, considering nature, magnitude and obscuring aggregation.",
+          ),
+          text(
+            "افصح عن الاعتماد على عميل خارجي يساوي 10% أو أكثر من الإيراد دون وجوب تسمية العميل.",
+            "Disclose reliance on an external customer representing 10% or more of revenue without necessarily naming the customer.",
+          ),
+        ],
+        reference: "IFRS 8.20–34; IFRIC agenda decision (July 2024, updated January 2026)",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("تحديد القطاعات القابلة للتقرير", "Identifying reportable segments"),
+        facts: text(
+          "تعرض الإدارة أربعة قطاعات: ألف بإيراد إجمالي 500 وربح 80 وأصول 400 وإيراد خارجي 420؛ باء 260 وربح 20 وأصول 180 وإيراد خارجي 230؛ جيم 120 وخسارة 35 وأصول 90 وإيراد خارجي 100؛ دال 70 وربح 5 وأصول 30 وإيراد خارجي 50. لا توجد قطاعات أخرى، والأرقام بالملايين.",
+          "Management reviews four segments: A has total revenue 500, profit 80, assets 400 and external revenue 420; B has 260, profit 20, assets 180 and external revenue 230; C has 120, loss 35, assets 90 and external revenue 100; D has 70, profit 5, assets 30 and external revenue 50. There are no other segments; amounts are in millions.",
+        ),
+        calculations: [
+          text(
+            "حد الإيراد = 10% × (500 + 260 + 120 + 70) = 95؛ فتنجح ألف وباء وجيم.",
+            "Revenue threshold = 10% × (500 + 260 + 120 + 70) = 95; A, B and C pass.",
+          ),
+          text(
+            "مجموع أرباح القطاعات الرابحة = 105، ومجموع الخسائر المطلقة = 35؛ المقام الأكبر 105، وحد الاختبار 10.5. تنجح ألف وباء وجيم بالقيمة المطلقة.",
+            "Total profit of profitable segments = 105 and absolute losses = 35; the larger denominator is 105, so the threshold is 10.5. A, B and C pass on an absolute basis.",
+          ),
+          text(
+            "حد الأصول = 10% × 700 = 70؛ فتنجح ألف وباء وجيم أيضًا، بينما لا ينجح دال في أي اختبار.",
+            "Asset threshold = 10% × 700 = 70; A, B and C also pass, while D passes none of the tests.",
+          ),
+          text(
+            "تغطية الإيراد الخارجي للقطاعات ألف وباء وجيم = (420 + 230 + 100) ÷ 800 = 93.75%، أعلى من 75%؛ فلا يلزم إضافة دال.",
+            "External-revenue coverage for A, B and C = (420 + 230 + 100) ÷ 800 = 93.75%, above 75%; D need not be added.",
+          ),
+        ],
+        conclusion: text(
+          "تعرض ألف وباء وجيم كقطاعات قابلة للتقرير، ويمكن إدراج دال ضمن «القطاعات الأخرى» مع وصف مصادر إيراده ومصالحة المجاميع.",
+          "A, B and C are reportable; D may be included in 'all other segments', with its revenue sources described and totals reconciled.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 8.13–16",
+      },
+    ],
+  },
+  "IAS 24": {
+    sections: [
+      {
+        title: text(
+          "لماذا نكشف ومن هو الشخص ذو العلاقة؟",
+          "Why disclose and which people are related?",
+        ),
+        explanation: text(
+          "قد تتأثر نتيجة المنشأة ومركزها المالي بعلاقة طرف ذي علاقة حتى دون وقوع معاملة، لأن العلاقة قد تغير قرارات التسعير أو الشراء أو التمويل. يكون الشخص أو أحد أفراد أسرته المقربين طرفًا ذا علاقة إذا كان يسيطر أو يشارك في السيطرة على المنشأة المعدة للتقرير، أو يملك تأثيرًا جوهريًا عليها، أو كان من أفراد الإدارة العليا للمنشأة أو لشركتها الأم. أفراد الأسرة المقربون هم من المتوقع أن يؤثروا في الشخص أو يتأثروا به في تعاملاتهم مع المنشأة، ويشملون على الأقل الأبناء والزوج أو الشريك وأبناء الزوج أو الشريك والمعالين.",
+          "An entity's profit and financial position may be affected by a related-party relationship even without a transaction because the relationship can influence pricing, purchasing or financing decisions. A person, or a close family member, is related when the person controls or jointly controls the reporting entity, has significant influence over it, or is a member of key management personnel of the entity or its parent. Close family members are those expected to influence, or be influenced by, that person in dealings with the entity and include at least children, spouse or domestic partner, their children and dependants.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر السيطرة والسيطرة المشتركة والتأثير الجوهري والإدارة العليا كلًا على حدة.",
+            "Test control, joint control, significant influence and key management separately.",
+          ),
+          text(
+            "وسّع الفحص إلى أفراد الأسرة المقربين والمنشآت التي يسيطرون عليها أو يؤثرون فيها.",
+            "Extend the review to close family members and entities they control or influence.",
+          ),
+          text(
+            "أفصح عن علاقة الأم والمسيطر النهائي حتى إذا لم تحدث معاملات خلال الفترة.",
+            "Disclose the parent and ultimate controlling party relationship even when no transactions occurred.",
+          ),
+        ],
+        reference: "IAS 24.1–9, 13",
+      },
+      {
+        title: text(
+          "العلاقات بين المنشآت وما لا يصنع علاقة تلقائيًا",
+          "Entity relationships and what is not automatically related",
+        ),
+        explanation: text(
+          "تشمل المنشآت ذات العلاقة أعضاء المجموعة نفسها، والمنشأة الزميلة أو المشروع المشترك للطرف الآخر، والمنشآت التي تكون مشروعات مشتركة لطرف ثالث، والعلاقة بين مشروع مشترك ومنشأة زميلة للطرف الثالث، وخطط منافع ما بعد الخدمة للعاملين، والمنشآت التي يسيطر عليها شخص ذو علاقة، وبعض علاقات الإدارة العليا أو خدماتها. في المقابل لا تنشأ العلاقة تلقائيًا لمجرد وجود مدير مشترك، أو لأن منشأتين مشاركتان في مشروع مشترك، أو بسبب التعامل مع بنك أو نقابة أو مرفق عام أو جهة حكومية في المسار العادي، أو بسبب الاعتماد الاقتصادي على عميل أو مورد كبير وحده. الحكم يتبع جوهر العلاقة لا شكلها القانوني.",
+          "Related entities include members of the same group, an associate or joint venture of the other entity, entities that are joint ventures of the same third party, a joint venture and associate of the same third party, employee post-employment benefit plans, entities controlled by a related person, and specified key-management or management-service relationships. Conversely, a relationship does not arise automatically merely from a common director, two joint venturers, ordinary dealings with a bank, union, utility or government body, or economic dependence on a major customer or supplier alone. Judgement follows the relationship's substance, not only its legal form.",
+        ),
+        keyPoints: [
+          text(
+            "ارسم خريطة ملكية وتأثير تشمل المجموعة والزملاء والمشروعات المشتركة والأشخاص المؤثرين.",
+            "Map ownership and influence across the group, associates, joint ventures and influential people.",
+          ),
+          text(
+            "لا تخلط بين الاعتماد الاقتصادي والتأثير الجوهري أو السيطرة.",
+            "Do not confuse economic dependence with significant influence or control.",
+          ),
+          text(
+            "حدّث السجل عند تغير مجلس الإدارة أو الملكية أو هيكل المجموعة.",
+            "Update the register when the board, ownership or group structure changes.",
+          ),
+        ],
+        reference: "IAS 24.9–12",
+      },
+      {
+        title: text(
+          "مصفوفة الإفصاح والتعويضات والأرصدة",
+          "Disclosure matrix, compensation and balances",
+        ),
+        explanation: text(
+          "معاملة الطرف ذي العلاقة هي نقل موارد أو خدمات أو التزامات سواء فُرض سعر أم لا. إذا حدثت معاملات، تفصح المنشأة عن طبيعة العلاقة ومعلومات تكفي لفهم أثرها: مبلغ المعاملات، الأرصدة والالتزامات القائمة وشروطها وضماناتها، مخصص الديون المشكوك فيها والمصروف المعترف به للديون المعدومة أو المشكوك فيها. تُعرض المعلومات حسب فئات مثل الأم والمنشآت ذات السيطرة أو التأثير المشترك، والتابعة والزميلة والمشروعات المشتركة والإدارة العليا والأطراف الأخرى. كما يفصح إجمالي تعويض الإدارة العليا موزعًا إلى المنافع القصيرة، وما بعد الخدمة، وطويلة الأجل الأخرى، وإنهاء الخدمة، والمدفوعات على أساس الأسهم.",
+          "A related-party transaction is a transfer of resources, services or obligations whether or not a price is charged. When transactions occur, the entity discloses the relationship and information sufficient to understand its effect: transaction amounts, outstanding balances and commitments, their terms and guarantees, doubtful-debt provisions and recognised bad- or doubtful-debt expense. Information is presented by categories such as the parent, entities with joint control or significant influence, subsidiaries, associates, joint ventures, key management and other related parties. Total key-management compensation is also split into short-term, post-employment, other long-term, termination and share-based payment categories.",
+        ),
+        keyPoints: [
+          text(
+            "اجمع العقود غير المسعرة والخدمات المجانية والضمانات والالتزامات، لا الفواتير فقط.",
+            "Capture unpriced contracts, free services, guarantees and commitments, not only invoices.",
+          ),
+          text(
+            "لا تقل إن الشروط مماثلة للسوق إلا إذا أمكن إثبات ذلك.",
+            "Do not state that terms are at arm's length unless the claim can be substantiated.",
+          ),
+          text(
+            "تُفصح المعاملات داخل المجموعة في القوائم المنفصلة ذات الصلة، ثم تُلغى في القوائم الموحدة.",
+            "Intragroup transactions are disclosed in relevant separate statements and eliminated in consolidated statements.",
+          ),
+        ],
+        reference: "IAS 24.17–24",
+      },
+      {
+        title: text(
+          "الإعفاء الجزئي للجهات الحكومية وضبط الاكتمال",
+          "Partial government-related exemption and completeness controls",
+        ),
+        explanation: text(
+          "يعطي IAS 24 إعفاءً جزئيًا من تفاصيل المعاملات والأرصدة عندما تكون العلاقة ناشئة لأن حكومة تسيطر أو تشترك في السيطرة أو تؤثر جوهريًا على الطرفين. لكنه لا يلغي الإفصاح: تُذكر الجهة الحكومية وطبيعة العلاقة، وتعرض كل معاملة جوهرية منفردة ومؤشرًا نوعيًا أو كميًا لغيرها من المعاملات المهمة مجتمعة. عمليًا يبدأ ضبط الاكتمال بإقرارات دورية من أعضاء الإدارة العليا، وسجل مركزي للأطراف، ومطابقة أسماء العملاء والموردين والمقرضين والضمانات والعقود مع السجل، ثم مراجعة المعاملات غير المعتادة قرب نهاية الفترة.",
+          "IAS 24 provides a partial exemption from detailed transaction and balance disclosures when the relationship arises because a government controls, jointly controls or significantly influences both parties. It does not remove disclosure entirely: the government and nature of the relationship are identified, each individually significant transaction is reported, and a qualitative or quantitative indication is given for other collectively significant transactions. In practice, completeness controls begin with periodic key-management declarations, a central party register, matching customer, supplier, lender, guarantee and contract names to that register, and reviewing unusual transactions near period end.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق لماذا ينطبق الإعفاء وحدد المعاملات الجوهرية فرديًا أو جماعيًا.",
+            "Document why the exemption applies and identify individually or collectively significant transactions.",
+          ),
+          text(
+            "اجعل إقرار تعارض المصالح جزءًا من دورة الإقفال لا إجراءً سنويًا متأخرًا.",
+            "Make conflict-of-interest declarations part of the close cycle, not a late annual exercise.",
+          ),
+          text(
+            "راجع الأرصدة الصفرية أيضًا؛ فقد توجد علاقة أو التزام أو ضمان يحتاج إلى إفصاح.",
+            "Review zero balances too; a relationship, commitment or guarantee may still require disclosure.",
+          ),
+        ],
+        reference: "IAS 24.25–27",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قرض لشركة يسيطر عليها قريب من الإدارة العليا",
+          "Loan to an entity controlled by a close family member of key management",
+        ),
+        facts: text(
+          "المدير التنفيذي عضو في الإدارة العليا للشركة ألف. تسيطر زوجته على الشركة باء. منحت ألف باء في 1 يوليو قرضًا قدره 1,000,000 بفائدة سنوية 3%، بينما تبلغ فائدة قرض مماثل في السوق 8%. تستحق الفائدة سنويًا ولم يُسدد شيء حتى 31 ديسمبر. يفترض المثال أن القرض يقاس وفق IFRS 9 وأن الفائدة التعاقدية مستحقة بالكامل.",
+          "The chief executive is key management of Company A. The executive's spouse controls Company B. On 1 July, A lends B 1,000,000 at 3% annual interest while a comparable market loan bears 8%. Interest is due annually and nothing is paid by 31 December. The example assumes the loan is measured under IFRS 9 and all contractual interest has accrued.",
+        ),
+        calculations: [
+          text(
+            "باء طرف ذو علاقة لأن فردًا قريبًا من عضو الإدارة العليا يسيطر عليها.",
+            "B is related because a close family member of A's key management controls it.",
+          ),
+          text(
+            "الفائدة التعاقدية لنصف سنة = 1,000,000 × 3% × 6÷12 = 15,000.",
+            "Contractual interest for six months = 1,000,000 × 3% × 6÷12 = 15,000.",
+          ),
+          text(
+            "مؤشر منفعة التسعير مقارنة بالسوق = 1,000,000 × (8% − 3%) × 6÷12 = 25,000، لكنه لا يغني عن تطبيق القياس الفعلي في IFRS 9.",
+            "An indicator of the pricing benefit versus market = 1,000,000 × (8% − 3%) × 6÷12 = 25,000, but it does not replace the required IFRS 9 measurement.",
+          ),
+          text(
+            "إفصاح IAS 24 يذكر طبيعة العلاقة، مبلغ القرض، المعاملة وشروطها وسعر الفائدة والرصيد والفائدة المستحقة وأي ضمان أو مخصص خسارة ائتمانية.",
+            "IAS 24 disclosure describes the relationship, loan amount, transaction and terms, interest rate, outstanding balance and interest, and any guarantee or credit-loss allowance.",
+          ),
+        ],
+        conclusion: text(
+          "لا يجوز وصف القرض بأنه بشروط السوق لأن فرق الفائدة يناقض ذلك. القياس والإيراد والخسارة الائتمانية تتبع IFRS 9، بينما يضمن IAS 24 شفافية العلاقة والشروط والأرصدة.",
+          "The loan cannot be described as arm's length because the rate difference contradicts that claim. Measurement, income and credit loss follow IFRS 9; IAS 24 ensures transparency about the relationship, terms and balances.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "إثبات الفائدة التعاقدية لنصف السنة",
+              "Record six months' contractual interest",
+            ),
+            debit: text("فائدة مستحقة القبض", "Interest receivable"),
+            credit: text("إيراد فائدة", "Interest income"),
+            amount: text("15,000", "15,000"),
+          },
+        ],
+        reference: "IAS 24.9, 18–23; IFRS 9",
+      },
+    ],
+  },
+  "IAS 33": {
+    sections: [
+      {
+        title: text("النطاق ومقام الربحية الأساسية", "Scope and the basic EPS numerator"),
+        explanation: text(
+          "يطبق IAS 33 على المنشأة التي تكون أسهمها العادية أو أسهمها العادية المحتملة متداولة في سوق عام، أو التي تودع قوائمها بغرض إصدارها في سوق عام. وإذا عرضت منشأة أخرى ربحية السهم اختيارًا فعليها حسابها والإفصاح عنها وفق المعيار. في القوائم الموحدة يبدأ بسط الربحية الأساسية من الربح أو الخسارة العائد لحملة الأسهم العادية في الشركة الأم، بعد استبعاد نصيب الحقوق غير المسيطرة وطرح توزيعات الأسهم الممتازة المصنفة حقوق ملكية وأي فروق تسوية تتعلق بها. لا تُطرح فائدة أداة مصنفة التزامًا مرة أخرى لأنها تدخل أصلًا ضمن الربح أو الخسارة.",
+          "IAS 33 applies when an entity's ordinary shares or potential ordinary shares are publicly traded, or when it files statements to issue them in a public market. Any other entity that voluntarily presents EPS must calculate and disclose it under the Standard. In consolidated statements, the basic-EPS numerator begins with profit or loss attributable to the parent's ordinary equity holders, excluding non-controlling interests and deducting dividends on equity-classified preference shares and related settlement differences. Interest on a liability-classified instrument is not deducted again because it is already reflected in profit or loss.",
+        ),
+        keyPoints: [
+          text(
+            "اعرض الربحية الأساسية والمخفضة بالأهمية نفسها حتى إذا كانت القيمة خسارة للسهم.",
+            "Present basic and diluted EPS with equal prominence even when the result is a loss per share.",
+          ),
+          text(
+            "استخدم الربح العائد لمساهمي الأم لا إجمالي ربح المجموعة.",
+            "Use profit attributable to the parent's shareholders, not total group profit.",
+          ),
+          text(
+            "افصل ربحية العمليات المستمرة عن أثر العملية المتوقفة عندما تنطبق.",
+            "Separate continuing-operation EPS from the effect of a discontinued operation when applicable.",
+          ),
+        ],
+        reference: "IAS 33.2–4A, 10–18, 66–69",
+      },
+      {
+        title: text(
+          "المتوسط المرجح والأسهم المجانية وحقوق الأولوية",
+          "Weighted average shares, bonus issues and rights issues",
+        ),
+        explanation: text(
+          "مقام الربحية الأساسية هو المتوسط المرجح للأسهم العادية القائمة خلال الفترة، بعد استبعاد أسهم الخزينة. الإصدار النقدي بالقيمة العادلة يدخل من تاريخ استحقاق المقابل موزونًا بالزمن، أما الإصدار المجاني أو تجزئة الأسهم فتغير عدد الأسهم دون موارد جديدة، لذلك تعدل المقارنات وكل الفترات السابقة المعروضة بأثر رجعي كما لو أن الحدث وقع في بداية أقدم فترة. يتضمن إصدار حقوق الأولوية عادة عنصرًا مجانيًا إذا كان سعر الاكتتاب أقل من القيمة العادلة؛ عندها يحسب السعر النظري بعد الحق ومعامل التعديل، ويطبق العنصر المجاني على الأسهم السابقة للإصدار، ثم توزن الأسهم الجديدة زمنيًا.",
+          "The basic-EPS denominator is the weighted average ordinary shares outstanding during the period, excluding treasury shares. A cash issue at fair value enters from the date consideration is receivable and is time-weighted. A bonus issue or share split changes share count without new resources, so comparative and all earlier periods presented are adjusted retrospectively as if the event occurred at the start of the earliest period. A rights issue normally contains a bonus element when the subscription price is below fair value; the theoretical ex-rights price and adjustment factor are calculated, the bonus element is applied to pre-issue shares, and new shares are then time-weighted.",
+        ),
+        keyPoints: [
+          text(
+            "أنشئ خطًا زمنيًا لكل تغير في الأسهم قبل تنفيذ الحساب.",
+            "Build a timeline of every share-count change before performing the calculation.",
+          ),
+          text(
+            "صحح المقارنات للأحداث المجانية الواقعة بعد الفترة وقبل اعتماد القوائم للإصدار.",
+            "Adjust comparatives for bonus events occurring after period end but before the statements are authorised.",
+          ),
+          text(
+            "لا تعامل كامل إصدار الحقوق كإصدار مجاني؛ افصل عنصر الموارد عن عنصر الخصم.",
+            "Do not treat the entire rights issue as a bonus issue; separate the resource and discount elements.",
+          ),
+        ],
+        reference: "IAS 33.19–29, 64",
+      },
+      {
+        title: text("الربحية المخفضة واختبار التخفيف", "Diluted EPS and the dilution test"),
+        explanation: text(
+          "تفترض الربحية المخفضة تحويل الأسهم العادية المحتملة المخفضة منذ بداية الفترة أو تاريخ إصدارها إن كان لاحقًا. في السند القابل للتحويل يضاف إلى البسط أثر الفائدة بعد الضريبة والمصروفات أو التغيرات الأخرى التي كانت ستختفي عند التحويل، وتضاف الأسهم الناتجة إلى المقام. في الخيارات والضمانات تستخدم طريقة أسهم الخزينة: يفترض استعمال متحصلات الممارسة لشراء أسهم بالقيمة السوقية المتوسطة، ولا يضاف سوى صافي الأسهم المجانية. تُستبعد الأدوات المضادة للتخفيف، وتُرتب مجموعات الأدوات من الأكثر تخفيضًا إلى الأقل حتى لا تخفي أداة مضادة للتخفيف أثر أداة أخرى.",
+          "Diluted EPS assumes conversion of dilutive potential ordinary shares from the beginning of the period or, if later, their issue date. For a convertible bond, the numerator adds back after-tax interest and other expenses or changes that conversion would eliminate, while conversion shares enter the denominator. Options and warrants use the treasury-stock method: assumed exercise proceeds buy shares at the average market price and only the net no-consideration shares are added. Antidilutive instruments are excluded, and instrument groups are sequenced from most to least dilutive so that an antidilutive instrument cannot conceal another instrument's dilution.",
+        ),
+        keyPoints: [
+          text(
+            "قارن الربح الإضافي لكل سهم إضافي بربحية العمليات المستمرة المستخدمة كرقم تحكم.",
+            "Compare incremental earnings per incremental share with continuing-operations EPS used as the control number.",
+          ),
+          text(
+            "في حالة الخسارة قد تكون الأدوات التي تبدو مخفضة في الربح مضادة للتخفيف.",
+            "In a loss period, instruments that look dilutive in a profit period may be antidilutive.",
+          ),
+          text(
+            "أعد الاختبار لكل فترة معروضة؛ فالنتيجة لا تنتقل تلقائيًا من سنة إلى أخرى.",
+            "Repeat the test for every period presented; the conclusion does not automatically carry forward.",
+          ),
+        ],
+        reference: "IAS 33.30–63",
+      },
+      {
+        title: text(
+          "العرض والإفصاح وقائمة المراجعة",
+          "Presentation, disclosure and review checklist",
+        ),
+        explanation: text(
+          "تعرض الربحية الأساسية والمخفضة لكل فئة من الأسهم العادية ذات الحق المختلف في الربح، وبالأهمية نفسها لجميع الفترات. تكشف المنشأة مبالغ البسط ومصالحتها مع الربح أو الخسارة، والمتوسط المرجح للأسهم في كل مقام ومصالحته، والأدوات التي قد تخفض الربحية مستقبلًا لكنها استبعدت حاليًا، ومعاملات الأسهم الجوهرية بعد الفترة التي كانت ستغير الحساب. إذا عرضت المنشأة مقياسًا إضافيًا للسهم يستخدم عنصرًا آخر من الربح أو الخسارة، فيجب تحديد بسطه وفق أساس متسق وبيان مطابقته والإفصاح عنه في الإيضاحات لا بطريقة تطغى على مقاييس IAS 33.",
+          "Basic and diluted EPS are presented for each class of ordinary shares with a different right to profit, with equal prominence for all periods. The entity discloses numerator amounts and their reconciliation to profit or loss, weighted-average shares in each denominator and their reconciliation, instruments that could dilute EPS in future but are currently excluded, and significant post-period share transactions that would have changed the calculation. If an additional per-share measure uses another profit-or-loss component, its numerator must be consistently determined, identified and reconciled, and it is disclosed in the notes without overshadowing IAS 33 measures.",
+        ),
+        keyPoints: [
+          text(
+            "طابق سجل رأس المال مع محاضر المجلس والسجل القانوني وأحداث ما بعد الفترة.",
+            "Reconcile the share register to board minutes, statutory records and post-period events.",
+          ),
+          text(
+            "راجع الضرائب وشروط التحويل وسعر السوق المتوسط لكل أداة محتملة.",
+            "Review tax effects, conversion terms and average market price for every potential instrument.",
+          ),
+          text(
+            "احفظ ورقة مصالحة مستقلة للبسط والمقام الأساسي والمخفض.",
+            "Retain separate reconciliation schedules for basic and diluted numerators and denominators.",
+          ),
+        ],
+        reference: "IAS 33.66–73A",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "إصدار نقدي ثم أسهم مجانية وسند قابل للتحويل",
+          "Cash issue, bonus issue and a convertible bond",
+        ),
+        facts: text(
+          "كان لدى منشأة 5,000,000 سهم في 1 يناير. أصدرت 1,000,000 سهم نقدًا بالقيمة العادلة في 1 أبريل، ثم أصدرت في 1 أكتوبر سهمًا مجانيًا لكل خمسة أسهم قائمة. بلغ الربح بعد الضريبة العائد لمساهمي الأم 3,600,000 وتوزيعات الأسهم الممتازة المصنفة حقوق ملكية 120,000. يوجد سند قابل للتحويل بفائدة سنوية 60,000 ومعدل ضريبة 25%، قابل للتحويل إلى 300,000 سهم، وكان قائمًا طوال السنة.",
+          "An entity has 5,000,000 shares on 1 January. It issues 1,000,000 shares for cash at fair value on 1 April and makes a one-for-five bonus issue on 1 October. After-tax profit attributable to the parent's owners is 3,600,000 and dividends on equity-classified preference shares are 120,000. A convertible bond with annual interest of 60,000 and a 25% tax rate converts into 300,000 shares and was outstanding all year.",
+        ),
+        calculations: [
+          text(
+            "البسط الأساسي = 3,600,000 − 120,000 = 3,480,000.",
+            "Basic numerator = 3,600,000 − 120,000 = 3,480,000.",
+          ),
+          text(
+            "المقام المرجح = (5,000,000 × 3÷12 × 1.2) + (6,000,000 × 6÷12 × 1.2) + (7,200,000 × 3÷12) = 6,900,000 سهم.",
+            "Weighted denominator = (5,000,000 × 3/12 × 1.2) + (6,000,000 × 6/12 × 1.2) + (7,200,000 × 3/12) = 6,900,000 shares.",
+          ),
+          text(
+            "الربحية الأساسية = 3,480,000 ÷ 6,900,000 = 0.5043 للسهم تقريبًا.",
+            "Basic EPS = 3,480,000 ÷ 6,900,000 = approximately 0.5043 per share.",
+          ),
+          text(
+            "فائدة التحويل بعد الضريبة = 60,000 × 75% = 45,000؛ وربحها الإضافي لكل سهم = 45,000 ÷ 300,000 = 0.15، وهو أقل من الربحية الأساسية، لذا فهي مخفضة.",
+            "After-tax convertible interest = 60,000 × 75% = 45,000; incremental earnings per share = 45,000 ÷ 300,000 = 0.15, below basic EPS, so the instrument is dilutive.",
+          ),
+          text(
+            "الربحية المخفضة = (3,480,000 + 45,000) ÷ (6,900,000 + 300,000) = 0.4896 للسهم تقريبًا.",
+            "Diluted EPS = (3,480,000 + 45,000) ÷ (6,900,000 + 300,000) = approximately 0.4896 per share.",
+          ),
+        ],
+        conclusion: text(
+          "يطبق معامل الأسهم المجانية بأثر رجعي على الأسهم القائمة قبل 1 أكتوبر، بينما يختبر السند على أساس أثره الإضافي بعد الضريبة ويضاف فقط لأنه يخفض ربحية السهم.",
+          "The bonus factor is applied retrospectively to shares outstanding before 1 October; the bond is tested using its incremental after-tax effect and included only because it reduces EPS.",
+        ),
+        journalEntries: [],
+        reference: "IAS 33.10–12, 19–29, 31–49, 64",
+      },
+    ],
+  },
+  "IAS 34": {
+    sections: [
+      {
+        title: text(
+          "النطاق والحد الأدنى للتقرير المرحلي",
+          "Scope and minimum interim report content",
+        ),
+        explanation: text(
+          "لا يفرض IAS 34 على منشأة بعينها إصدار تقرير مرحلي ولا يحدد تواتره أو موعد نشره؛ تتولى القوانين والجهات التنظيمية ذلك. لكنه يطبق عندما تصف منشأة تستخدم IFRS تقريرها المرحلي بأنه ممتثل للمعايير. يمكن إعداد مجموعة كاملة من القوائم أو مجموعة مختصرة تشمل قائمة المركز المالي والربح أو الخسارة والدخل الشامل الآخر والتغيرات في حقوق الملكية والتدفقات النقدية وإيضاحات مختارة. ويجب أن يحتوي التقرير المختصر على الأقل على كل العناوين والمجاميع الفرعية الواردة في آخر قوائم سنوية، مع إضافة بنود إذا كان حذفها يجعل التقرير مضللًا.",
+          "IAS 34 does not mandate which entity publishes an interim report, its frequency or publication deadline; laws and regulators decide those matters. It applies when an IFRS-reporting entity describes its interim report as complying with IFRS. The report may contain a complete set or a condensed set comprising financial position, profit or loss and other comprehensive income, changes in equity, cash flows and selected notes. A condensed report includes at least all headings and subtotals in the latest annual statements and adds lines when omission would make the report misleading.",
+        ),
+        keyPoints: [
+          text(
+            "لا تصف التقرير بأنه ممتثل لـIFRS إذا لم يستوف جميع متطلبات IAS 34.",
+            "Do not describe the report as IFRS-compliant unless it meets all IAS 34 requirements.",
+          ),
+          text(
+            "استخدم التقرير السنوي الأخير كنقطة بداية ثم ركز على الجديد والمتغير.",
+            "Use the latest annual report as the baseline and focus on what is new or changed.",
+          ),
+          text(
+            "اعرض ربحية السهم الأساسية والمخفضة في التقرير المرحلي عندما ينطبق IAS 33.",
+            "Present basic and diluted EPS in the interim report when IAS 33 applies.",
+          ),
+        ],
+        reference: "IAS 34.1–19",
+      },
+      {
+        title: text("الفترات المقارنة والأهمية النسبية", "Comparative periods and materiality"),
+        explanation: text(
+          "تقارن قائمة المركز المالي بنهاية السنة السابقة مباشرة. أما الربح أو الخسارة والدخل الشامل الآخر فيعرضان للفترة المرحلية الحالية وللسنة حتى تاريخهما، مع فترتي المقارنة المناظرتين من السنة السابقة. وتعرض التغيرات في حقوق الملكية والتدفقات النقدية تراكميًا من بداية السنة مع المقارنة التراكمية المناظرة. تُقاس الأهمية النسبية بالرجوع إلى البيانات المرحلية نفسها، لأن بندًا قد يكون مؤثرًا في ربع سنة ولو بدا صغيرًا أمام أرقام السنة كاملة. ولا تبرر السرعة إخفاء معلومات جوهرية أو تجميع بنود مختلفة الطبيعة.",
+          "The statement of financial position is compared with the immediately preceding year-end. Profit or loss and other comprehensive income are shown for the current interim period and year-to-date, with corresponding prior-year periods. Changes in equity and cash flows are cumulative year-to-date with corresponding cumulative comparatives. Materiality is assessed against interim-period data because an item may influence a quarter even when small relative to the full year. Timeliness does not justify obscuring material information or aggregating items with different characteristics.",
+        ),
+        keyPoints: [
+          text(
+            "ضع جدولًا للفترات المطلوبة قبل إعداد القوائم حتى لا تختلط مقارنة الربع بالمقارنة التراكمية.",
+            "Prepare a required-period matrix before drafting statements to avoid mixing current-quarter and year-to-date comparatives.",
+          ),
+          text(
+            "قيّم الموسمية وإتاحة معلومات اثني عشر شهرًا إضافية عندما تفيد المستخدم.",
+            "Consider seasonality and whether additional trailing-twelve-month information would help users.",
+          ),
+          text(
+            "راجع الأهمية نوعيًا وكميًا على مستوى الفترة المرحلية.",
+            "Assess materiality qualitatively and quantitatively at the interim-period level.",
+          ),
+        ],
+        reference: "IAS 34.20–25",
+      },
+      {
+        title: text(
+          "القياس من بداية السنة وعدم تمهيد الأرباح",
+          "Year-to-date measurement without earnings smoothing",
+        ),
+        explanation: text(
+          "تطبق السياسات المحاسبية نفسها المستخدمة سنويًا، وتقاس المبالغ على أساس السنة حتى التاريخ بحيث لا يغير عدد التقارير المرحلية النتيجة السنوية. لا يعجل إيراد موسمي متوقع ولا يؤجل مصروف غير مؤهل لمجرد تسوية النتائج بين الأرباع. يثبت مصروف ضريبة الدخل المرحلي باستخدام أفضل تقدير لمتوسط معدل الضريبة السنوي الفعلي على الربح قبل الضريبة حتى التاريخ، مع معالجة البنود غير العادية ضريبيًا على نحو مناسب. ويمكن تغيير تقدير فترة سابقة في الفترة اللاحقة دون إعادة إصدار التقرير السابق، مع الإفصاح عن طبيعة وحجم التغير الجوهري.",
+          "The same annual accounting policies apply and measurements are made year-to-date so reporting frequency does not change annual results. Expected seasonal revenue is not anticipated and an otherwise ineligible cost is not deferred merely to smooth quarters. Interim income tax expense uses the best estimate of the weighted-average annual effective tax rate applied to year-to-date pre-tax income, with appropriate treatment for unusual tax items. An earlier interim estimate may change in a later period without reissuing the earlier report, with the nature and amount of a material change disclosed.",
+        ),
+        keyPoints: [
+          text(
+            "حدّث توقع معدل الضريبة السنوي في كل تاريخ مرحلي ووثق عناصر المعدل.",
+            "Update the expected annual effective tax rate at each interim date and document its components.",
+          ),
+          text(
+            "لا تؤجل تكلفة إلا إذا كانت ستؤهل أصلًا في نهاية السنة في الظروف نفسها.",
+            "Defer a cost only if it would qualify as an asset at year-end in the same circumstances.",
+          ),
+          text(
+            "استخدم تقديرات معقولة لكن وسّع الإفصاح عندما تكون درجة عدم التأكد أعلى.",
+            "Use reasonable estimates but expand disclosure when estimation uncertainty is greater.",
+          ),
+        ],
+        reference: "IAS 34.28–43, B12–B22",
+      },
+      {
+        title: text(
+          "الأحداث الجوهرية والانخفاض وIFRS 18",
+          "Significant events, impairment and IFRS 18",
+        ),
+        explanation: text(
+          "تركز الإيضاحات على الأحداث والمعاملات الجوهرية منذ آخر سنة، مثل انخفاض المخزون أو الأصول وعكسه المسموح، الاستحواذات والتصرفات وإعادة الهيكلة والتقاضي والتعثر وتغيرات القيمة العادلة والمعاملات مع الأطراف ذات العلاقة. لا يجوز وفق IFRIC 10 عكس خسارة انخفاض شهرة سبق إثباتها في فترة مرحلية حتى لو لم تكن ستظهر لو أجري الاختبار فقط في نهاية السنة. وعند تطبيق IFRS 18، تتسع إيضاحات القوائم المرحلية المختصرة لتشمل معلومات مقاييس الأداء المحددة من الإدارة التي يطلبها IFRS 18؛ لذلك ينبغي ربط حزمة الإقفال المرحلي بالمقاييس المعلنة خارجيًا.",
+          "Notes focus on significant events and transactions since the latest year-end, such as inventory or asset impairment and permitted reversals, acquisitions, disposals, restructurings, litigation, defaults, fair-value changes and related-party transactions. IFRIC 10 prohibits reversing a goodwill impairment recognised in an earlier interim period even if no loss would have arisen had testing occurred only at year-end. When IFRS 18 is applied, condensed interim notes also include the management-defined performance measure information required by IFRS 18, so the interim close package should connect to externally communicated measures.",
+        ),
+        keyPoints: [
+          text(
+            "حدّث سجل الأحداث الجوهرية من تاريخ التقرير السنوي لا من بداية الربع فقط.",
+            "Update the significant-events register from the annual reporting date, not merely the quarter's start.",
+          ),
+          text(
+            "اربط اختبار الانخفاض المرحلي بقيود العكس الخاصة بكل معيار.",
+            "Connect interim impairment testing with the reversal restrictions in each applicable Standard.",
+          ),
+          text(
+            "طبّق إفصاحات مقاييس الأداء المحددة من الإدارة عند سريان وتطبيق IFRS 18.",
+            "Apply management-defined performance measure disclosures when IFRS 18 is effective and applied.",
+          ),
+        ],
+        reference: "IAS 34.15–16A, 26, 41; IFRIC 10.8; IFRS 18",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تطوير أصل ومعدل ضريبة سنوي في تقرير نصف سنوي",
+          "Development asset and annual tax rate in a half-year report",
+        ),
+        facts: text(
+          "أنفقت منشأة 240,000 خلال الربع الأول على مشروع لم يثبت بعد استيفاؤه معايير IAS 38، ثم أثبتت في 1 أبريل تحقق جميع معايير رسملة التطوير وأنفقت 180,000 إضافية حتى 30 يونيو. بلغ الربح قبل الضريبة للنصف الأول 800,000، وأفضل تقدير لمعدل الضريبة السنوي الفعلي 25%.",
+          "An entity spends 240,000 in the first quarter on a project that has not yet demonstrated the IAS 38 capitalisation criteria. On 1 April all development recognition criteria are demonstrably met, and another 180,000 is spent by 30 June. Half-year profit before tax is 800,000 and the best estimate of the annual effective tax rate is 25%.",
+        ),
+        calculations: [
+          text(
+            "يبقى إنفاق الربع الأول البالغ 240,000 مصروفًا؛ لا تعاد رسملته بعد تحقق المعايير.",
+            "The first-quarter expenditure of 240,000 remains expensed; it is not reinstated after the criteria are met.",
+          ),
+          text(
+            "يرسمل إنفاق 1 أبريل إلى 30 يونيو البالغ 180,000 من تاريخ تحقق الشروط، مع بدء الإطفاء عند إتاحة الأصل للاستخدام.",
+            "The 180,000 spent from 1 April to 30 June is capitalised from the qualification date, with amortisation beginning when the asset is available for use.",
+          ),
+          text(
+            "مصروف الضريبة المرحلي التقديري = 800,000 × 25% = 200,000، قبل أي بنود ضريبية منفصلة غير عادية.",
+            "Estimated interim tax expense = 800,000 × 25% = 200,000, before any separately treated unusual tax items.",
+          ),
+        ],
+        conclusion: text(
+          "التقرير المرحلي لا يسمح باستخدام معلومات لاحقة لإلغاء مصروف صحيح سابقًا، ويستخدم توقع السنة كاملة للضريبة حتى لا يؤدي توقيت الأرباح وحده إلى معدل مرحلي مضلل.",
+          "Interim reporting does not permit hindsight to reverse a previously correct expense and uses a full-year tax expectation so profit timing alone does not create a misleading interim rate.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "رسملة الإنفاق المؤهل بعد 1 أبريل",
+              "Capitalise qualifying spend after 1 April",
+            ),
+            debit: text("أصل تطوير", "Development asset"),
+            credit: text("نقدية أو دائنون", "Cash or payables"),
+            amount: text("180,000", "180,000"),
+          },
+          {
+            label: text("إثبات ضريبة النصف الأول", "Recognise first-half tax"),
+            debit: text("مصروف ضريبة الدخل", "Income tax expense"),
+            credit: text("ضريبة دخل مستحقة", "Income tax payable"),
+            amount: text("200,000", "200,000"),
+          },
+        ],
+        reference: "IAS 34.28–30, B12; IAS 38.54–65",
+      },
+    ],
+  },
+  "IFRS 1": {
+    sections: [
+      {
+        title: text(
+          "تحديد أول قوائم IFRS وتاريخ الانتقال",
+          "Identifying first IFRS statements and the transition date",
+        ),
+        explanation: text(
+          "تكون المنشأة متبنية لأول مرة عندما تعرض أول قوائم سنوية تحتوي بيانًا صريحًا وغير متحفظ بالامتثال لـIFRS ولم تكن قوائمها السابقة تتضمن هذا البيان. تعد قائمة مركز مالي افتتاحية وفق IFRS في تاريخ الانتقال، وهو بداية أقدم فترة مقارنة كاملة معروضة. فإذا كانت أول قوائم IFRS للسنة المنتهية في 31 ديسمبر 2026 وتعرض مقارنة سنة كاملة واحدة، يكون تاريخ الانتقال 1 يناير 2025. تستخدم السياسات نفسها في القائمة الافتتاحية وجميع الفترات المعروضة، وفق المعايير النافذة في نهاية أول فترة تقرير IFRS، مع مراعاة استثناءات وإعفاءات IFRS 1.",
+          "An entity is a first-time adopter when its first annual statements contain an explicit and unreserved IFRS compliance statement and its previous statements did not. It prepares an opening IFRS statement of financial position at the transition date—the beginning of the earliest full comparative period presented. If the first IFRS statements are for the year ended 31 December 2026 with one full comparative year, transition is 1 January 2025. The same policies apply in the opening statement and throughout all periods presented, using Standards effective at the end of the first IFRS reporting period, subject to IFRS 1 exceptions and exemptions.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق سبب انطباق تعريف المتبني لأول مرة قبل اختيار أي إعفاء.",
+            "Document why the first-time-adopter definition is met before choosing exemptions.",
+          ),
+          text(
+            "اربط تاريخ الانتقال بعدد سنوات المقارنة الكاملة التي ستعرضها المنشأة.",
+            "Link the transition date to the number of full comparative years the entity will present.",
+          ),
+          text(
+            "ضع قائمة بالمعايير النافذة في نهاية أول سنة IFRS ولا تستخدم نسخًا تاريخية مختلفة لكل مقارنة.",
+            "List Standards effective at the first IFRS year-end rather than using different historical versions for each comparative period.",
+          ),
+        ],
+        reference: "IFRS 1.2–9, Appendix A",
+      },
+      {
+        title: text(
+          "بناء قائمة المركز المالي الافتتاحية",
+          "Building the opening statement of financial position",
+        ),
+        explanation: text(
+          "تبدأ خريطة التحويل بأربع حركات: الاعتراف بكل أصل والتزام يطلبه IFRS، إلغاء ما لا يسمح IFRS بالاعتراف به، إعادة تصنيف البنود إلى العرض المناسب، ثم قياس الأرصدة وفق IFRS. تثبت فروق الانتقال عادة مباشرة في الأرباح المحتجزة أو فئة أخرى من حقوق الملكية في تاريخ الانتقال. تشمل الأعمال العملية مطابقة ميزان المراجعة السابق بكل معيار، وفصل تعديلات السياسة عن تصحيح الأخطاء، وحساب الضريبة المؤجلة على فروق التحويل، وربط كل تعديل بدليل ومالك وتاريخ إنجاز. القائمة الافتتاحية هي أساس الأرقام اللاحقة وليست قائمة منشورة منفصلة بالضرورة.",
+          "The conversion map has four movements: recognise every asset and liability required by IFRS, derecognise items IFRS does not permit, reclassify items into the appropriate presentation, and measure balances under IFRS. Transition differences are generally recognised directly in retained earnings or another equity category at the transition date. Practical work includes mapping the previous-GAAP trial balance to each Standard, separating policy changes from error corrections, calculating deferred tax on conversion differences, and assigning evidence, ownership and completion dates to each adjustment. The opening statement is the basis for later amounts and is not necessarily a separately published statement.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر الاكتمال قبل القياس؛ الأصل أو الالتزام المفقود لا يعالجه نموذج تقييم متقن.",
+            "Test completeness before measurement; a valuation model cannot fix a missing asset or liability.",
+          ),
+          text(
+            "سجل كل تعديل بالقيد والمرجع والضريبة والأثر على الإفصاح.",
+            "Record every adjustment with its entry, reference, tax and disclosure effect.",
+          ),
+          text(
+            "استخدم المعلومات المتاحة في التاريخ التاريخي ولا تدخل معرفة لاحقة بصورة انتقائية.",
+            "Use information available at the historical date and avoid selective hindsight.",
+          ),
+        ],
+        reference: "IFRS 1.10–14",
+      },
+      {
+        title: text(
+          "الاستثناءات الإلزامية ومنع المعرفة اللاحقة",
+          "Mandatory exceptions and the hindsight barrier",
+        ),
+        explanation: text(
+          "يمنع IFRS 1 التطبيق بأثر رجعي في مجالات محددة تشمل بعض حالات إلغاء الاعتراف بالأدوات المالية ومحاسبة التحوط والتقديرات والحقوق غير المسيطرة وتصنيف وقياس الأصول المالية والانخفاض وغيرها وفق الملحق B. التقدير في تاريخ الانتقال يجب أن يتسق مع تقدير GAAP السابق في التاريخ نفسه بعد تعديل اختلافات السياسة، ما لم يوجد دليل موضوعي على خطأ؛ فلا يجوز تحسين تاريخ الأداء بمعلومة ظهرت لاحقًا. ومن 1 يناير 2026 توضّح تحسينات المعيار اتساق متطلبات محاسبة التحوط للمتبني لأول مرة مع معايير الأهلية والتخصيص والتوثيق في IFRS 9، مع معالجة التحوطات غير المؤهلة وفق قواعد الانتقال.",
+          "IFRS 1 prohibits retrospective application in specified areas including aspects of financial-instrument derecognition, hedge accounting, estimates, non-controlling interests, classification and measurement of financial assets, impairment and other Appendix B matters. A transition-date estimate must be consistent with the previous-GAAP estimate at that same date after policy differences, unless objective evidence shows error; later knowledge cannot be selectively used to improve history. From 1 January 2026, the annual improvement clarifies alignment of first-time-adopter hedge-accounting requirements with IFRS 9 eligibility, designation and documentation criteria, with non-qualifying hedges handled under the transition rules.",
+        ),
+        keyPoints: [
+          text(
+            "افصل الاستثناء الإلزامي عن الإعفاء الاختياري في سجل القرارات.",
+            "Separate mandatory exceptions from optional exemptions in the decision log.",
+          ),
+          text(
+            "احتفظ بتاريخ المعلومات المستخدمة لإثبات عدم توظيف المعرفة اللاحقة.",
+            "Retain the date of information used to demonstrate that hindsight was not applied.",
+          ),
+          text(
+            "راجع علاقات التحوط والتوثيق عند تاريخ الانتقال وفق صياغة IFRS 1 النافذة في 2026.",
+            "Review hedge relationships and documentation at transition using the IFRS 1 wording effective in 2026.",
+          ),
+        ],
+        reference: "IFRS 1.14–17, Appendix B; Annual Improvements—Volume 11",
+      },
+      {
+        title: text(
+          "الإعفاءات الاختيارية والمصالحات والإفصاح",
+          "Optional exemptions, reconciliations and disclosure",
+        ),
+        explanation: text(
+          "يقدم الملحق D إعفاءات اختيارية محددة لتخفيف تكلفة إعادة التاريخ، مثل عدم إعادة تركيبات الأعمال السابقة، واستخدام القيمة العادلة أو إعادة تقييم سابقة كتكلفة مفترضة لبعض الأصول، وتصفير فروق الترجمة التراكمية، وبعض ترتيبات المدفوعات بالأسهم وعقود الإيجار وتكاليف الاقتراض. لا يجوز القياس عليها لإنشاء إعفاء جديد، ويختار كل إعفاء بعد تحليل أثره المستقبلي لا لتجميل الرصيد الافتتاحي فقط. تشرح أول قوائم IFRS الانتقال بمصالحة حقوق الملكية في تاريخ الانتقال ونهاية آخر فترة GAAP، ومصالحة الدخل الشامل لآخر فترة، وشرح التعديلات الجوهرية على التدفقات وأي خسائر انخفاض، مع عرض ثلاثة مراكز مالية عند اقتضاء العرض.",
+          "Appendix D offers specified optional exemptions to reduce the cost of reconstructing history, including not restating past business combinations, using fair value or a previous revaluation as deemed cost for specified assets, resetting cumulative translation differences, and relief for some share-based arrangements, leases and borrowing costs. They cannot be analogised into new exemptions, and each choice considers future consequences rather than merely improving opening balances. The first IFRS statements explain transition through equity reconciliations at transition and the latest previous-GAAP year-end, a total comprehensive income reconciliation for the latest period, explanation of material cash-flow adjustments and impairment losses, and three statements of financial position when required.",
+        ),
+        keyPoints: [
+          text(
+            "اعتمد مصفوفة لكل إعفاء: الأهلية والاختيار والدليل والأثر الحالي والمستقبلي.",
+            "Approve an exemption matrix covering eligibility, election, evidence, and current and future effects.",
+          ),
+          text(
+            "طابق المصالحات مع القوائم المنشورة ودفتر تحويل قابل للتدقيق.",
+            "Reconcile published statements to an auditable conversion ledger.",
+          ),
+          text(
+            "اشرح للمستخدم طبيعة التعديل لا الرقم وحده، خصوصًا عندما يغير مؤشرات الأداء.",
+            "Explain an adjustment's nature, not only its amount, especially when it changes performance indicators.",
+          ),
+        ],
+        reference: "IFRS 1.20–33, Appendices C–E",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قائمة انتقال افتتاحية واختيارات التكلفة المفترضة",
+          "Opening transition statement and deemed-cost elections",
+        ),
+        facts: text(
+          "ستصدر منشأة أول قوائم IFRS للسنة المنتهية في 31 ديسمبر 2026 مع مقارنة 2025. في 1 يناير 2025 أظهرت سجلات GAAP السابق معدات بقيمة 8,000,000، ومخصص احتياطي عام غير مستوفٍ IAS 37 بمبلغ 400,000، ولم تثبت التزام إزالة أصل بقيمة حالية 300,000 وتكلفة أصل مساوية له. اختارت القيمة العادلة 9,200,000 تكلفة مفترضة للمعدات، وصفّرت احتياطي ترجمة تراكميًا ذا رصيد مدين 250,000. تُهمل الضريبة المؤجلة في المثال فقط لتوضيح حركة حقوق الملكية.",
+          "An entity will issue its first IFRS statements for the year ended 31 December 2026 with 2025 comparatives. At 1 January 2025, previous GAAP records equipment at 8,000,000 and a 400,000 general reserve provision that fails IAS 37, while omitting a 300,000 present-value decommissioning obligation and equal asset cost. It elects fair value of 9,200,000 as the equipment's deemed cost and resets a cumulative translation reserve with a 250,000 debit balance. Deferred tax is omitted only to illustrate equity movements.",
+        ),
+        calculations: [
+          text(
+            "تاريخ الانتقال هو 1 يناير 2025: بداية أقدم مقارنة كاملة.",
+            "The transition date is 1 January 2025: the beginning of the earliest full comparative period.",
+          ),
+          text(
+            "زيادة المعدات بالتكلفة المفترضة = 9,200,000 − 8,000,000 = 1,200,000 تضاف إلى الأرباح المحتجزة قبل الضريبة.",
+            "Deemed-cost increase = 9,200,000 − 8,000,000 = 1,200,000 added to retained earnings before tax.",
+          ),
+          text(
+            "إلغاء المخصص غير المؤهل يرفع الأرباح المحتجزة 400,000؛ وإثبات أصل والتزام الإزالة بمبلغ 300,000 لكل منهما لا يغير صافي حقوق الملكية عند البداية.",
+            "Derecognising the ineligible provision increases retained earnings by 400,000; recognising the 300,000 decommissioning asset and liability has no opening net-equity effect.",
+          ),
+          text(
+            "تصفير رصيد الترجمة المدين ينقل 250,000 داخل حقوق الملكية من الأرباح المحتجزة إلى احتياطي الترجمة دون تغيير إجماليها؛ صافي زيادة الأرباح المحتجزة قبل هذا النقل 1,600,000 وبعده 1,350,000.",
+            "Resetting the debit translation reserve transfers 250,000 within equity from retained earnings to the translation reserve without changing total equity; retained earnings rise 1,600,000 before that transfer and 1,350,000 after it.",
+          ),
+        ],
+        conclusion: text(
+          "تثبت القيود في قائمة المركز المالي الافتتاحية ثم تمتد سياسات IFRS نفسها إلى مقارنة 2025 وسنة 2026، مع إضافة الضريبة المؤجلة الفعلية والمصالحات المطلوبة في التطبيق الواقعي.",
+          "The entries establish the opening IFRS statement and the same policies continue through the 2025 comparative and 2026 current year, with actual deferred tax and required reconciliations added in a real implementation.",
+        ),
+        journalEntries: [
+          {
+            label: text("القيمة العادلة كتكلفة مفترضة", "Fair value as deemed cost"),
+            debit: text("معدات", "Equipment"),
+            credit: text("أرباح محتجزة", "Retained earnings"),
+            amount: text("1,200,000", "1,200,000"),
+          },
+          {
+            label: text("إلغاء احتياطي عام غير مؤهل", "Remove ineligible general reserve"),
+            debit: text("مخصص احتياطي عام", "General reserve provision"),
+            credit: text("أرباح محتجزة", "Retained earnings"),
+            amount: text("400,000", "400,000"),
+          },
+          {
+            label: text("إثبات التزام إزالة الأصل", "Recognise decommissioning obligation"),
+            debit: text("تكلفة أصل", "Asset cost"),
+            credit: text("مخصص إزالة الأصل", "Decommissioning provision"),
+            amount: text("300,000", "300,000"),
+          },
+          {
+            label: text("تصفير احتياطي الترجمة المدين", "Reset debit translation reserve"),
+            debit: text("أرباح محتجزة", "Retained earnings"),
+            credit: text("احتياطي فروق ترجمة", "Translation reserve"),
+            amount: text("250,000", "250,000"),
+          },
+        ],
+        reference: "IFRS 1.6–14, 24–26, D5–D8, D13",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
