@@ -3447,6 +3447,441 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 1": {
+    sections: [
+      {
+        title: text(
+          "مجموعة القوائم الكاملة والعرض العادل",
+          "Complete financial statements and fair presentation",
+        ),
+        explanation: text(
+          "يضع IAS 1 الأساس العام لعرض القوائم حتى تكون قابلة للمقارنة عبر الفترات والمنشآت. تشمل المجموعة الكاملة قائمة المركز المالي، وقائمة الربح أو الخسارة والدخل الشامل الآخر، والتغيرات في حقوق الملكية، والتدفقات النقدية، والإيضاحات والمقارنات، وقائمة مركز مالي ثالثة في بداية الفترة المقارنة عندما يؤدي تطبيق سياسة بأثر رجعي أو تصحيح أو إعادة تصنيف إلى أثر جوهري على ذلك التاريخ. يلزم بيان صريح وغير متحفظ بالامتثال، ولا يكفي تطبيق بعض المعايير. يفترض الامتثال مع الإفصاح الإضافي عند الحاجة تحقيق العرض العادل، أما الخروج عن متطلب معياري فلا يحدث إلا في ظروف نادرة للغاية وبإفصاحات واسعة إذا سمح الإطار التنظيمي بذلك.",
+          "IAS 1 establishes the overall presentation basis so statements are comparable across periods and entities. A complete set includes financial position, profit or loss and other comprehensive income, changes in equity, cash flows, notes and comparatives, plus a third statement of financial position at the beginning of the comparative period when retrospective policy application, correction or reclassification has a material effect at that date. An explicit and unreserved compliance statement is required; applying only some Standards is insufficient. Compliance plus additional disclosure when necessary is presumed to achieve fair presentation, while departure from a requirement occurs only in extremely rare circumstances with extensive disclosures when the regulatory framework permits.",
+        ),
+        keyPoints: [
+          text(
+            "اعرض مجموعة كاملة مرة سنويًا على الأقل وبالأهمية نفسها لكل قائمة.",
+            "Present a complete set at least annually with equal prominence for each statement.",
+          ),
+          text(
+            "أضف القائمة الثالثة فقط عندما يكون أثر الرجوع جوهريًا على مركز بداية المقارنة.",
+            "Add the third statement only when the retrospective effect at comparative opening is material.",
+          ),
+          text(
+            "لا تصف القوائم بأنها ممتثلة ما لم تستوف جميع المتطلبات المنطبقة.",
+            "Do not describe statements as compliant unless all applicable requirements are met.",
+          ),
+        ],
+        reference: "IAS 1.1–18, 36–40D",
+      },
+      {
+        title: text(
+          "الاستمرارية والاستحقاق والأهمية وعدم المقاصة",
+          "Going concern, accruals, materiality and no offsetting",
+        ),
+        explanation: text(
+          "تقيّم الإدارة قدرة المنشأة على الاستمرار آخذة جميع المعلومات المتاحة عن المستقبل، لفترة لا تقل عن اثني عشر شهرًا من نهاية الفترة وليست محدودة بها. إذا وجدت شكوك جوهرية قد تثير عدم تأكد جوهريًا، تفصح المنشأة عن الأحداث والظروف وخطط التعامل؛ وإذا لم يعد أساس الاستمرارية مناسبًا فلا تعد القوائم عليه وتكشف الأساس البديل. فيما عدا التدفقات النقدية، تستخدم المحاسبة على أساس الاستحقاق. تعرض كل فئة جوهرية من البنود المتشابهة منفصلة، ولا تخفي المعلومات الجوهرية بتجميع غير مناسب. ولا تقاص الأصول والالتزامات أو الدخل والمصروف إلا إذا طلب أو سمح معيار آخر.",
+          "Management assesses the entity's ability to continue as a going concern using all available future information, for at least twelve months from period end but not limited to that period. Material uncertainties arising from events or conditions are disclosed with management's response; if going concern is no longer appropriate, statements are prepared on another basis and that basis is explained. Except for cash-flow information, accrual accounting applies. Each material class of similar items is presented separately and material information is not obscured by inappropriate aggregation. Assets and liabilities, or income and expenses, are not offset unless another Standard requires or permits it.",
+        ),
+        keyPoints: [
+          text(
+            "قيّم المنشأة ككل، ثم عالج مشكلات مكوّن منفرد وفق معايير الانخفاض أو المخصصات عند الحاجة.",
+            "Assess the entity as a whole, then address component-specific difficulties under impairment or provision Standards as needed.",
+          ),
+          text(
+            "وثّق السيناريوهات والسيولة والتمويل والحساسيات الداعمة لحكم الاستمرارية.",
+            "Document scenarios, liquidity, financing and sensitivities supporting the going-concern judgement.",
+          ),
+          text(
+            "اختبر المقاصة على أساس نص معياري محدد لا على الرغبة في تقليل حجم القائمة.",
+            "Test offsetting against a specific Standard, not a desire to shorten the statement.",
+          ),
+        ],
+        reference: "IAS 1.25–35, 29–35",
+      },
+      {
+        title: text(
+          "التصنيف الجاري وحقوق التأجيل والتعهدات",
+          "Current classification, deferral rights and covenants",
+        ),
+        explanation: text(
+          "يصنف الأصل جاريًا إذا كان ضمن دورة التشغيل العادية أو محتفظًا به للمتاجرة أو متوقعًا تحقيقه خلال اثني عشر شهرًا أو كان نقدًا غير مقيد طويلًا. ويصنف الالتزام جاريًا إذا كان ضمن دورة التشغيل أو للمتاجرة أو مستحقًا خلال اثني عشر شهرًا أو لم تكن للمنشأة في نهاية الفترة تسوية حق في تأجيل تسويته اثني عشر شهرًا على الأقل. النية في إعادة التمويل لا تكفي: يجب أن يكون الحق قائمًا في تاريخ التقرير. التعهد الذي يجب الالتزام به في ذلك التاريخ يؤثر في وجود الحق، أما التعهد الواجب بعد التاريخ فلا يغير التصنيف لكنه قد يستلزم إفصاحًا يمكّن المستخدم من فهم خطر أن يصبح الالتزام مستحقًا خلال اثني عشر شهرًا.",
+          "An asset is current when it is in the normal operating cycle, held for trading, expected to be realised within twelve months, or unrestricted cash. A liability is current when it is in the operating cycle, held for trading, due within twelve months, or the entity lacks at period end the right to defer settlement for at least twelve months. An intention to refinance is insufficient: the right must exist at the reporting date. A covenant with which the entity must comply on that date affects the right; a covenant tested only after that date does not change classification but may require disclosure enabling users to understand the risk that the liability becomes repayable within twelve months.",
+        ),
+        keyPoints: [
+          text(
+            "استخدم الحق القائم وشروط العقد في تاريخ التقرير، لا توقعات الإدارة وحدها.",
+            "Use the existing right and contract terms at the reporting date, not management expectations alone.",
+          ),
+          text(
+            "اتفاق إعادة التمويل أو تنازل المقرض بعد الفترة لا يصلح عادة تصنيف نهاية الفترة.",
+            "A refinancing agreement or lender waiver obtained after period end generally does not repair period-end classification.",
+          ),
+          text(
+            "افصح عن التعهدات المستقبلية والمعلومات التي تشير إلى صعوبة الالتزام بها عندما يكون الخطر جوهريًا.",
+            "Disclose future covenants and facts indicating possible non-compliance when the risk is material.",
+          ),
+        ],
+        reference: "IAS 1.60–76ZA",
+      },
+      {
+        title: text(
+          "العرض والمقارنات والانتقال إلى IFRS 18",
+          "Presentation, comparatives and transition to IFRS 18",
+        ),
+        explanation: text(
+          "يتطلب IAS 1 حدًا أدنى من البنود ويضيف بنودًا ومجاميع فرعية عندما تكون ملائمة، مع فصل الدخل الشامل الآخر القابل لإعادة التصنيف عن غير القابل. تحلل المصروفات بالطبيعة أو الوظيفة وفق ما يقدم معلومات أكثر فائدة، وإذا استخدمت الوظيفة تقدم معلومات طبيعية إضافية مطلوبة. تثبت معاملات الملاك في قائمة التغيرات في حقوق الملكية، وتعرض الإيضاحات سياسات محاسبية جوهرية لا نصوصًا نمطية. يعاد تصنيف المقارنات عند تغيير العرض إن كان عمليًا مع شرح الأثر. سيحل IFRS 18 محل IAS 1 للفترات التي تبدأ في أو بعد 1 يناير 2027—مع السماح بالتطبيق المبكر—ولذلك يجب ألا تُخلط متطلبات العرض الجديدة مع قوائم 2026 ما لم تطبق المنشأة IFRS 18 مبكرًا.",
+          "IAS 1 specifies minimum line items and adds lines and subtotals when relevant, separating OCI that may be reclassified from OCI that will not. Expenses are analysed by nature or function according to whichever provides more useful information; a functional analysis requires specified additional nature information. Owner transactions appear in changes in equity, while notes disclose material accounting policy information rather than boilerplate. Comparatives are reclassified when presentation changes if practicable, with the effect explained. IFRS 18 replaces IAS 1 for periods beginning on or after 1 January 2027, with earlier application permitted, so its new presentation requirements are not mixed into 2026 statements unless the entity early applies IFRS 18.",
+        ),
+        keyPoints: [
+          text(
+            "طابق كل مجموع فرعي إضافي مع البنود المعترف بها والمقاسة وفق IFRS.",
+            "Reconcile each additional subtotal to items recognised and measured under IFRS.",
+          ),
+          text(
+            "افصل تغيرات الملاك عن الدخل الشامل في حركة حقوق الملكية.",
+            "Separate owner changes from comprehensive income in the equity roll-forward.",
+          ),
+          text(
+            "ضع خطة انتقال مستقلة لـIFRS 18 تشمل المقارنات والمجاميع ومقاييس الإدارة.",
+            "Maintain a separate IFRS 18 transition plan covering comparatives, subtotals and management measures.",
+          ),
+        ],
+        reference: "IAS 1.38–46, 54–59, 81A–117; IFRS 18.C1–C3",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قرض مع تعهد منقوض وتنازل لاحق",
+          "Loan with a breached covenant and a later waiver",
+        ),
+        facts: text(
+          "لدى منشأة قرض قدره 5,000,000 يستحق تعاقديًا في 2030. يشترط العقد ألا تتجاوز نسبة الدين إلى الأرباح 3.0 في 31 ديسمبر 2026. بلغت النسبة 3.4 في ذلك التاريخ، فأصبح للمقرض حق طلب السداد. حصلت المنشأة على تنازل من المقرض في 10 فبراير 2027، قبل اعتماد القوائم في 20 مارس. ويوجد تعهد آخر سيُختبر لأول مرة في 30 يونيو 2027.",
+          "An entity has a 5,000,000 loan contractually due in 2030. The agreement requires debt-to-earnings not to exceed 3.0 at 31 December 2026. The ratio is 3.4 on that date, giving the lender a right to demand repayment. The lender waives the breach on 10 February 2027 before the statements are authorised on 20 March. Another covenant will first be tested on 30 June 2027.",
+        ),
+        calculations: [
+          text(
+            "في 31 ديسمبر لا تملك المنشأة حق تأجيل التسوية اثني عشر شهرًا بسبب خرق التعهد القائم في ذلك التاريخ.",
+            "At 31 December the entity lacks a right to defer settlement for twelve months because it breached the covenant applicable on that date.",
+          ),
+          text(
+            "يصنف مبلغ 5,000,000 التزامًا جاريًا؛ التنازل في 10 فبراير حدث غير معدل ويُفصح عنه إذا كان جوهريًا.",
+            "The 5,000,000 is classified as current; the 10 February waiver is a non-adjusting event disclosed if material.",
+          ),
+          text(
+            "تعهد 30 يونيو لا يؤثر وحده في تصنيف 31 ديسمبر لأنه لا يلزم الالتزام به في تاريخ التقرير، لكن تكشف معلومات الخطر إذا أشارت الوقائع إلى صعوبة تحقيقه.",
+            "The 30 June covenant alone does not affect 31 December classification because compliance is not required at the reporting date, but risk information is disclosed if facts indicate possible non-compliance.",
+          ),
+        ],
+        conclusion: text(
+          "التصنيف يتبع الحق القائم في تاريخ التقرير وليس تاريخ الاستحقاق الأصلي وحده أو التنازل الذي تم الحصول عليه لاحقًا. وهذا يصحح التطبيق القديم الذي كان قد يعتمد على مجرد نية إعادة التمويل.",
+          "Classification follows the right existing at the reporting date, not merely original maturity or a waiver obtained later. This corrects the older approach that could rely on refinancing intention alone.",
+        ),
+        journalEntries: [
+          {
+            label: text("إعادة عرض القرض في القسم الجاري", "Reclassify the loan as current"),
+            debit: text("قرض غير جاري", "Non-current loan"),
+            credit: text("قرض جاري", "Current loan"),
+            amount: text("5,000,000", "5,000,000"),
+          },
+        ],
+        reference: "IAS 1.69–76ZA; IAS 10.22",
+      },
+    ],
+  },
+  "IAS 8": {
+    sections: [
+      {
+        title: text(
+          "اختيار السياسة المحاسبية وتسلسل الحكم",
+          "Selecting accounting policies and the judgement hierarchy",
+        ),
+        explanation: text(
+          "السياسة المحاسبية هي المبادئ والأسس والقواعد والممارسات المحددة المستخدمة في إعداد القوائم. عندما ينطبق معيار أو تفسير على معاملة، تطبق متطلباته وإرشاداته ذات الصلة. وعند غياب نص خاص تستخدم الإدارة حكمها لإنتاج معلومات ملائمة وموثوقة: ترجع أولًا إلى متطلبات المعايير في مسائل مشابهة ومرتبطة، ثم إلى تعريفات ومعايير الاعتراف ومفاهيم القياس في الإطار المفاهيمي. ويمكن النظر إلى إصدارات جهات أخرى ذات إطار مشابه والممارسات المقبولة ما دامت لا تتعارض مع المصدرين الأعلى. تطبق السياسة باتساق على المعاملات المتشابهة إلا إذا طلب معيار تصنيفًا يسمح بسياسات مختلفة.",
+          "An accounting policy is a specific principle, basis, convention, rule or practice used in preparing statements. When a Standard or Interpretation applies to a transaction, its relevant requirements and guidance are applied. Without specific guidance, management uses judgement to produce relevant and reliable information: first considering IFRS requirements for similar and related issues, then definitions, recognition criteria and measurement concepts in the Conceptual Framework. Pronouncements of other bodies with a similar framework and accepted practice may be considered only when they do not conflict with those higher sources. A policy is applied consistently to similar transactions unless a Standard requires or permits categories with different policies.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق البحث عن معيار مباشر قبل استخدام القياس أو الممارسة بالقياس.",
+            "Document the search for directly applicable guidance before using analogy or practice.",
+          ),
+          text(
+            "السياسة تحدد أساس القياس أو الاعتراف؛ التطبيق العددي لذلك الأساس قد يحتاج تقديرًا.",
+            "A policy sets the recognition or measurement basis; applying that basis numerically may require an estimate.",
+          ),
+          text(
+            "لا تنقل ممارسة قطاعية إذا تعارضت مع معيار أو الإطار المفاهيمي.",
+            "Do not import industry practice that conflicts with a Standard or the Conceptual Framework.",
+          ),
+        ],
+        reference: "IAS 8.5, 7–13",
+      },
+      {
+        title: text(
+          "تغير السياسة والتطبيق بأثر رجعي",
+          "Policy changes and retrospective application",
+        ),
+        explanation: text(
+          "لا تغير المنشأة سياسة إلا إذا طلب معيار ذلك أو نتج عن التغيير معلومات أكثر موثوقية وملاءمة. تتبع الأحكام الانتقالية الخاصة عند صدور معيار جديد؛ وفي التغيير الاختياري أو عند غياب أحكام انتقالية يطبق التغيير بأثر رجعي كما لو كانت السياسة الجديدة مستخدمة دائمًا، فتعدل المقارنات والرصيد الافتتاحي لكل مكوّن متأثر من حقوق الملكية في أقدم فترة معروضة. يتوقف الرجوع فقط عندما يكون تحديد أثر فترة معينة أو الأثر التراكمي غير عملي بعد بذل كل جهد معقول، وعندها يبدأ التطبيق من أقدم تاريخ عملي مع شرح سبب عدم العملية.",
+          "An entity changes a policy only when a Standard requires it or the change produces more reliable and relevant information. Specific transition provisions apply for a new Standard; otherwise a voluntary change is applied retrospectively as if the new policy had always been used, adjusting comparatives and the opening balance of each affected equity component in the earliest period presented. Retrospection stops only when determining a period-specific or cumulative effect is impracticable after every reasonable effort; application then begins from the earliest practicable date with the reason explained.",
+        ),
+        keyPoints: [
+          text(
+            "الانتقال من أساس تكلفة إلى أساس قيمة عادلة محدد هو عادة تغير سياسة، لا تغير تقدير.",
+            "Moving from a specified cost basis to a fair-value basis is generally a policy change, not an estimate change.",
+          ),
+          text(
+            "لا تستخدم عدم العملية كمرادف لارتفاع التكلفة أو ضيق الوقت.",
+            "Do not treat impracticability as a synonym for cost or time pressure.",
+          ),
+          text(
+            "افصح عن طبيعة التغيير وسببه وأثره على كل بند وربحية السهم عند الانطباق.",
+            "Disclose the change's nature, reason and line-item and EPS effects when applicable.",
+          ),
+        ],
+        reference: "IAS 8.14–31",
+      },
+      {
+        title: text(
+          "التقديرات: معلومات جديدة لا إعادة كتابة الماضي",
+          "Estimates: new information, not rewritten history",
+        ),
+        explanation: text(
+          "التقديرات المحاسبية مبالغ نقدية في القوائم تخضع لعدم تأكد القياس، مثل خسائر الائتمان والقيمة القابلة للتحقق والالتزامات المقدرة والأعمار والقيم المتبقية. تغير مدخل أو افتراض أو أسلوب قياس يعد تغير تقدير ما لم يصحح خطأ سابقًا؛ أما تغير أساس القياس نفسه فهو تغير سياسة. يثبت أثر تغير التقدير مستقبلًا في فترة التغيير فقط أو فيها والفترات المقبلة بحسب الأثر، أو بتعديل القيمة الدفترية للأصل أو الالتزام أو حقوق الملكية عند الاقتضاء. وإذا تعذر عمليًا الفصل بين تغير سياسة وتقدير، يعامل كتغير تقدير بعد تحليل كافٍ.",
+          "Accounting estimates are monetary amounts in the statements subject to measurement uncertainty, such as credit losses, net realisable value, provisions, useful lives and residual values. A change in an input, assumption or measurement technique is an estimate change unless it corrects a prior error; changing the measurement basis itself is a policy change. An estimate change is recognised prospectively in the current period only or in current and future periods depending on its effects, or by adjusting the related asset, liability or equity carrying amount. If policy and estimate cannot be distinguished after sufficient analysis, the change is treated as an estimate change.",
+        ),
+        keyPoints: [
+          text(
+            "اسأل: هل كانت المعلومات الجديدة متاحة ويمكن توقع استخدامها سابقًا؟",
+            "Ask whether the new information was available and could reasonably have been used previously.",
+          ),
+          text(
+            "لا تعدل مقارنات صحيحة لمجرد أن التوقع الحالي اختلف.",
+            "Do not restate correct comparatives merely because today's expectation differs.",
+          ),
+          text(
+            "افصح عن طبيعة ومبلغ الأثر الحالي والمتوقع مستقبلًا أو سبب تعذر تقديره.",
+            "Disclose the nature and amount of current and expected future effects or why estimation is impracticable.",
+          ),
+        ],
+        reference: "IAS 8.5, 32–40",
+      },
+      {
+        title: text("أخطاء الفترات السابقة وإعادة البيان", "Prior-period errors and restatement"),
+        explanation: text(
+          "الخطأ السابق هو حذف أو تحريف ناشئ من عدم استخدام أو سوء استخدام معلومات موثوقة كانت متاحة عندما اعتمدت القوائم وكان متوقعًا بصورة معقولة الحصول عليها واستخدامها. تشمل الأخطاء الحسابية وسوء تطبيق السياسة وإغفال الوقائع والغش. يصحح الخطأ الجوهري بأثر رجعي في أول قوائم تعتمد بعد اكتشافه: تعاد أرقام الفترة التي وقع فيها، أو تعدل الأرصدة الافتتاحية لأقدم فترة إذا سبقها. لا يدخل أثر التصحيح في ربح الفترة المكتشف فيها. تفصح المنشأة عن طبيعة الخطأ ومبلغ التصحيح لكل بند ولكل فترة وربحية السهم، أو تشرح عدم العملية وكيف ومتى تم التصحيح.",
+          "A prior-period error is an omission or misstatement from failing to use, or misusing, reliable information available when the statements were authorised and reasonably expected to have been obtained and considered. Errors include arithmetic mistakes, policy misapplication, overlooked facts and fraud. A material error is corrected retrospectively in the first statements authorised after discovery: amounts are restated in the affected period or opening balances of the earliest period when the error predates it. The correction does not enter profit in the discovery period. The entity discloses the error's nature and correction by line item, period and EPS, or explains impracticability and how and when correction occurred.",
+        ),
+        keyPoints: [
+          text(
+            "ميّز الخطأ عن نتيجة تقدير معقول ثبت لاحقًا أنه غير دقيق.",
+            "Distinguish an error from a reasonable estimate later shown to be inaccurate.",
+          ),
+          text(
+            "قيّم الجوهرية منفردة ومجتمعة ولا ترحل الخطأ عمدًا إلى السنة الحالية.",
+            "Assess materiality individually and collectively; do not intentionally roll an error into the current year.",
+          ),
+          text(
+            "اربط إعادة البيان بقائمة مركز مالي ثالثة وفق IAS 1 إذا كان أثر البداية جوهريًا.",
+            "Connect restatement to an IAS 1 third statement of financial position when the opening effect is material.",
+          ),
+        ],
+        reference: "IAS 8.5, 41–53",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تغير عمر إنتاجي مقابل خطأ مخزون",
+          "Useful-life revision versus an inventory error",
+        ),
+        facts: text(
+          "اشترت منشأة آلة بمبلغ 1,000,000 في 1 يناير 2024 بعمر مقدر عشر سنوات وقيمة متبقية صفر، واستخدمت القسط الثابت. في 1 يناير 2026 أظهرت معلومات فنية جديدة أن العمر المتبقي أربع سنوات. وفي 2026 اكتشفت أيضًا أن مخزون 31 ديسمبر 2025 كان منخفضًا بمبلغ 150,000 بسبب خطأ عدّ كانت معلوماته متاحة عند الإقفال. نهمل الضريبة للتوضيح.",
+          "An entity buys a machine for 1,000,000 on 1 January 2024 with a ten-year life, zero residual value and straight-line depreciation. On 1 January 2026 new engineering information indicates a four-year remaining life. In 2026 the entity also discovers that 31 December 2025 inventory was understated by 150,000 because of a counting error whose information was available at close. Tax is ignored for illustration.",
+        ),
+        calculations: [
+          text(
+            "إهلاك 2024 و2025 الصحيح = 1,000,000 ÷ 10 = 100,000 سنويًا؛ القيمة في 1 يناير 2026 = 800,000.",
+            "Correct 2024 and 2025 depreciation = 1,000,000 ÷ 10 = 100,000 annually; carrying amount at 1 January 2026 = 800,000.",
+          ),
+          text(
+            "العمر الجديد تغير تقدير مبني على معلومات جديدة: إهلاك 2026 وما بعده = 800,000 ÷ 4 = 200,000 سنويًا دون إعادة بيان 2024 أو 2025.",
+            "The new life is an estimate change based on new information: depreciation from 2026 = 800,000 ÷ 4 = 200,000 annually, without restating 2024 or 2025.",
+          ),
+          text(
+            "نقص المخزون 150,000 خطأ سابق، فيعاد بيان مقارنة 2025 بزيادة المخزون والربح قبل الضريبة 150,000، لا كدخل جديد في 2026.",
+            "The 150,000 inventory understatement is a prior error, so the 2025 comparative inventory and pre-tax profit increase by 150,000; it is not new 2026 income.",
+          ),
+        ],
+        conclusion: text(
+          "مصدر المعلومة وتوافرها في التاريخ السابق هو الفاصل: التطور الفني اللاحق يغير التقدير مستقبلًا، بينما معلومة العد المتاحة تكشف خطأ يعاد بيانه.",
+          "The source and historical availability of information drive the answer: later engineering developments change the estimate prospectively, while available count information reveals an error requiring restatement.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "إهلاك سنة 2026 وفق التقدير الجديد",
+              "2026 depreciation under the new estimate",
+            ),
+            debit: text("مصروف إهلاك", "Depreciation expense"),
+            credit: text("مجمع إهلاك", "Accumulated depreciation"),
+            amount: text("200,000", "200,000"),
+          },
+          {
+            label: text(
+              "قيد تصحيح الخطأ في الأرصدة الافتتاحية",
+              "Opening entry to correct the prior error",
+            ),
+            debit: text("مخزون", "Inventory"),
+            credit: text("أرباح محتجزة", "Retained earnings"),
+            amount: text("150,000", "150,000"),
+          },
+        ],
+        reference: "IAS 8.32–40, 41–49",
+      },
+    ],
+  },
+  "IAS 10": {
+    sections: [
+      {
+        title: text("نافذة الأحداث وتاريخ الاعتماد", "The event window and authorisation date"),
+        explanation: text(
+          "أحداث ما بعد الفترة هي الأحداث المواتية وغير المواتية الواقعة بين نهاية الفترة وتاريخ اعتماد القوائم للإصدار. يختلف تاريخ الاعتماد باختلاف هيكل الحوكمة والقانون: إذا كان المساهمون يعتمدون القوائم بعد إصدارها، يكون تاريخ الإصدار هو نهاية النافذة لا اجتماع المساهمين. تفصح المنشأة عن تاريخ الاعتماد والجهة التي اعتمدت القوائم، وما إذا كان يحق للملاك أو غيرهم تعديلها بعد الإصدار. يجب أن يغطي إجراء الإقفال جميع مصادر الأحداث حتى ذلك التاريخ، مثل محاضر المجلس والقضايا والتحصيلات والتعثرات والعقود والتقييمات.",
+          "Events after the reporting period are favourable and unfavourable events between period end and the date the statements are authorised for issue. The authorisation date depends on governance and law: when shareholders approve statements after issuance, the issue date closes the window, not the shareholder meeting. The entity discloses the authorisation date, who authorised the statements and whether owners or others can amend them after issue. Closing procedures cover all event sources through that date, including board minutes, litigation, collections, defaults, contracts and valuations.",
+        ),
+        keyPoints: [
+          text(
+            "ثبت تاريخ الاعتماد رسميًا ولا تستخدم تاريخ توقيع المدقق تلقائيًا دون تحليل.",
+            "Establish the formal authorisation date; do not automatically use the auditor's signing date without analysis.",
+          ),
+          text(
+            "اجمع الأحداث المواتية وغير المواتية؛ المعيار لا يقتصر على الخسائر.",
+            "Capture favourable and unfavourable events; the Standard is not limited to losses.",
+          ),
+          text(
+            "استمر في تحديث السجل حتى لحظة الاعتماد لا حتى انتهاء العمل الميداني فقط.",
+            "Keep the event register current through authorisation, not merely the end of fieldwork.",
+          ),
+        ],
+        reference: "IAS 10.1–7, 17–18",
+      },
+      {
+        title: text(
+          "الحدث المعدل: دليل على حالة قائمة",
+          "Adjusting events: evidence about an existing condition",
+        ),
+        explanation: text(
+          "يعدل الحدث الأرقام عندما يقدم دليلًا إضافيًا عن حالة كانت موجودة في نهاية الفترة. من الأمثلة تسوية قضية تؤكد وجود التزام، وإفلاس عميل بعد الفترة بما يؤكد انخفاض الرصيد في نهايتها، وبيع مخزون بما يقدم دليلًا على صافي قيمته القابلة للتحقق في التاريخ، وتحديد تكلفة أصل تم شراؤه أو حصيلة أصل بيع قبل النهاية، واكتشاف غش أو خطأ. لا يكفي أن يقع الحدث لاحقًا؛ السؤال الحاكم هو متى نشأت الحالة الاقتصادية التي يوضحها. يراجع التعديل القياس والإفصاح معًا، وقد يغير مخصصًا أو انخفاضًا أو إيرادًا أو ضريبة.",
+          "An event adjusts amounts when it provides additional evidence about a condition existing at period end. Examples include litigation settlement confirming an obligation, a customer's post-period bankruptcy confirming closing-date impairment, an inventory sale evidencing period-end net realisable value, determining the cost or proceeds of an asset purchased or sold before period end, and discovering fraud or error. Mere later occurrence is insufficient; the controlling question is when the underlying economic condition arose. Adjustment covers measurement and disclosure and may change a provision, impairment, income or tax.",
+        ),
+        keyPoints: [
+          text(
+            "اكتب الحالة في تاريخ التقرير ثم حدد ما الدليل الجديد الذي قدمه الحدث.",
+            "Describe the reporting-date condition, then identify the new evidence supplied by the event.",
+          ),
+          text(
+            "لا تجعل تاريخ الفاتورة أو الحكم القضائي بديلًا عن تحليل نشأة الالتزام.",
+            "Do not substitute invoice or judgment date for analysis of when the obligation arose.",
+          ),
+          text(
+            "أعد حساب التقدير وفق المعيار المختص، مثل IFRS 9 أو IAS 2 أو IAS 37.",
+            "Remeasure under the relevant Standard, such as IFRS 9, IAS 2 or IAS 37.",
+          ),
+        ],
+        reference: "IAS 10.8–9",
+      },
+      {
+        title: text(
+          "الحدث غير المعدل والإفصاح الجوهري",
+          "Non-adjusting events and material disclosure",
+        ),
+        explanation: text(
+          "إذا دل الحدث على حالة نشأت بعد نهاية الفترة فلا تعدل أرقام النهاية، لكن تكشف طبيعة الحدث وتقدير أثره المالي عندما يكون جوهريًا، أو تصرح بتعذر التقدير. تشمل الأمثلة اندماجًا كبيرًا أو بيع شركة تابعة، وحريقًا لاحقًا، وإعادة هيكلة أُعلنت بعد الفترة، وإصدار أسهم، وتغيرًا غير عادي في أسعار الأصول أو العملات، وتغير معدل ضريبة سُن بعد الفترة، والتزامًا أو ضمانًا مهمًا جديدًا، وبدء تقاضٍ عن حدث لاحق. قد يكون عدم الإفصاح مضللًا حتى لو كان القيد صفرًا في تاريخ التقرير.",
+          "When an event indicates a condition arising after period end, closing amounts are not adjusted, but the event's nature and estimated financial effect are disclosed if material, or inability to estimate is stated. Examples include a major combination or subsidiary disposal, a later fire, a restructuring announced after period end, a share issue, unusually large asset-price or currency movements, a tax-rate change enacted later, a new major commitment or guarantee, and litigation arising from a later event. Omission can be misleading even when the period-end journal entry is nil.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر الجوهرية على قرارات المستخدم لا على وجود قيد محاسبي.",
+            "Assess materiality by user decisions, not by whether a journal entry exists.",
+          ),
+          text(
+            "حدّث تقدير الأثر حتى الاعتماد، وفسّر عدم إمكان التقدير بدل ترك الإفصاح فارغًا.",
+            "Update effect estimates through authorisation and explain inability to estimate rather than leaving disclosure blank.",
+          ),
+          text(
+            "اربط الحدث بتعهدات التمويل والسيولة والقطاعات والمخاطر الأخرى المتأثرة.",
+            "Connect the event to financing covenants, liquidity, segments and other affected risks.",
+          ),
+        ],
+        reference: "IAS 10.10, 21–22",
+      },
+      {
+        title: text(
+          "التوزيعات والاستمرارية وتحديث الإفصاح",
+          "Dividends, going concern and updated disclosure",
+        ),
+        explanation: text(
+          "التوزيعات المعلنة بعد نهاية الفترة لا تثبت التزامًا في ذلك التاريخ لأنها لم تصبح التزامًا قائمًا، لكنها تفصح وفق المتطلبات ذات الصلة. أما إذا أظهرت أحداث لاحقة أن الإدارة تنوي تصفية المنشأة أو وقف نشاطها أو لا تملك بديلًا واقعيًا، فلا تعد القوائم على أساس الاستمرارية؛ وهذا تغيير جوهري في أساس المحاسبة وليس مجرد تعديل مبلغ. كذلك إذا وردت بعد الفترة معلومات جديدة عن حالة كانت مفصحًا عنها أصلًا، تحدّث المنشأة الإفصاح حتى لو لم يتغير مبلغ معترف به، مثل تطور التزام محتمل كان قائمًا عند النهاية.",
+          "Dividends declared after period end are not liabilities at that date because no present obligation then exists, though they are disclosed under the applicable requirements. If later events show management intends to liquidate or cease trading, or has no realistic alternative, the statements are not prepared on a going-concern basis; this is a fundamental change in accounting basis, not merely an amount adjustment. New post-period information about a condition previously disclosed also updates that disclosure even if no recognised amount changes, such as developments in a closing-date contingent liability.",
+        ),
+        keyPoints: [
+          text(
+            "ميّز بين اقتراح التوزيع واعتماده وفق قانون الشركة قبل تحديد الالتزام.",
+            "Distinguish proposing from authorising a dividend under company law before determining the obligation.",
+          ),
+          text(
+            "أعد تقييم الاستمرارية حتى تاريخ الاعتماد باستخدام أحدث السيولة وخطط التمويل.",
+            "Reassess going concern through authorisation using the latest liquidity and financing plans.",
+          ),
+          text(
+            "حدّث الإفصاح عن الحالات القائمة حتى إذا لم ينتج الحدث قيدًا جديدًا.",
+            "Update disclosures about existing conditions even when the event produces no new entry.",
+          ),
+        ],
+        reference: "IAS 10.12–16, 19–20",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "إفلاس عميل وحريق وتوزيعات بعد نهاية السنة",
+          "Customer bankruptcy, fire and dividend after year-end",
+        ),
+        facts: text(
+          "تنتهي سنة منشأة في 31 ديسمبر 2026 وتعتمد القوائم في 20 مارس 2027. كان على عميل متعثر رصيد 600,000 في نهاية السنة، ثم أعلن إفلاسه في 20 يناير بسبب صعوبات كانت قائمة قبل ديسمبر ولا يتوقع تحصيل شيء. وفي 15 يناير دمر حريق مستودعًا قيمته 2,000,000 ولم تكن أسبابه قائمة في نهاية السنة. وفي 5 فبراير أعلن المجلس توزيعات قدرها 400,000.",
+          "An entity's year ends on 31 December 2026 and its statements are authorised on 20 March 2027. A financially distressed customer owes 600,000 at year-end and enters bankruptcy on 20 January because of difficulties existing before December; no recovery is expected. On 15 January a fire destroys a 2,000,000 warehouse, with no underlying condition at year-end. On 5 February the board declares a 400,000 dividend.",
+        ),
+        calculations: [
+          text(
+            "الإفلاس يؤكد حالة ائتمانية قائمة في 31 ديسمبر: يثبت انخفاض 600,000 وفق IFRS 9 مع تحديث الإفصاح.",
+            "Bankruptcy confirms a credit condition existing at 31 December: a 600,000 IFRS 9 impairment is recognised and disclosure updated.",
+          ),
+          text(
+            "الحريق حالة نشأت في يناير: لا تخفض أصول 31 ديسمبر، لكن يفصح عن طبيعته وأثر 2,000,000 إذا كان جوهريًا.",
+            "The fire is a January condition: 31 December assets are not reduced, but its nature and 2,000,000 effect are disclosed if material.",
+          ),
+          text(
+            "التوزيعات المعلنة في فبراير لا تثبت التزامًا بمبلغ 400,000 في 31 ديسمبر؛ تعرض في الإفصاح المناسب.",
+            "The February dividend does not create a 400,000 liability at 31 December; it is presented in the appropriate disclosure.",
+          ),
+        ],
+        conclusion: text(
+          "ليس تاريخ وقوع الخبر هو الاختبار الوحيد: إفلاس يناير عدل الأرقام لأنه أكد حالة قديمة، بينما الحريق والتوزيع نشآ بعد الفترة فلا يعدلان الرصيد الختامي.",
+          "The news date is not the sole test: January bankruptcy adjusts amounts because it confirms an old condition, while the fire and dividend arise after period end and do not adjust closing balances.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات انخفاض رصيد العميل", "Recognise customer impairment"),
+            debit: text("خسارة انخفاض ائتماني", "Credit impairment loss"),
+            credit: text("مخصص خسائر ائتمانية", "Credit loss allowance"),
+            amount: text("600,000", "600,000"),
+          },
+        ],
+        reference: "IAS 10.8–16, 21–22; IFRS 9",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
