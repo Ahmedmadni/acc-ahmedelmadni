@@ -3882,6 +3882,453 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IFRS 2": {
+    sections: [
+      {
+        title: text(
+          "الفكرة الأساسية والنطاق وتاريخ الاعتراف",
+          "Core principle, scope and recognition timing",
+        ),
+        explanation: text(
+          "يطبق IFRS 2 عندما تحصل المنشأة على سلع أو خدمات مقابل أدوات حقوق ملكيتها أو مقابل مبالغ تعتمد على سعر أسهمها أو أدوات حقوق ملكيتها. تثبت السلعة أو الخدمة عند الحصول عليها، كأصل إذا استوفت شروط معيار آخر أو كمصروف بخلاف ذلك، مع زيادة مقابلة في حقوق الملكية للمعاملة المسواة بحقوق الملكية أو التزام للمعاملة المسواة نقدًا. لا يؤجل المصروف لمجرد أن المقابل أسهم أو خيارات، ولا تعني معاملة المساهم بصفته مالكًا بالضرورة أنها دفعة على أساس السهم؛ يلزم تحديد السلع أو الخدمات المستلمة وصفة الطرف المتعامل.",
+          "IFRS 2 applies when an entity receives goods or services for its own equity instruments or for amounts based on the price of its shares or equity instruments. The goods or services are recognised when received, as an asset if another Standard's criteria are met and otherwise as an expense, with a corresponding increase in equity for an equity-settled transaction or a liability for a cash-settled transaction. Expense recognition is not deferred merely because consideration is shares or options, and a shareholder transaction is not automatically share-based payment; the goods or services received and the counterparty's capacity must be identified.",
+        ),
+        keyPoints: [
+          text(
+            "حدد أولًا هل توجد سلع أو خدمات مستلمة، ثم صنف طريقة التسوية.",
+            "First identify the goods or services received, then classify the settlement method.",
+          ),
+          text(
+            "إذا لم تتأهل الخدمة أو السلعة كأصل، يثبت أثرها مصروفًا عند الاستهلاك.",
+            "If the service or good does not qualify as an asset, recognise its effect as expense when consumed.",
+          ),
+          text(
+            "افصل معاملات الاستحواذ وإعادة الهيكلة الرأسمالية ومعاملات المالك الخالصة عن نطاق المعيار عند انطباق استثناءاتها.",
+            "Separate acquisition, equity-restructuring and pure owner transactions when their scope exceptions apply.",
+          ),
+        ],
+        reference: "IFRS 2.2–6A, 7–9",
+      },
+      {
+        title: text(
+          "المعاملات المسواة بحقوق الملكية وشروط الاستحقاق",
+          "Equity-settled awards and vesting conditions",
+        ),
+        explanation: text(
+          "تقاس السلع أو الخدمات مباشرة بقيمتها العادلة إن أمكن؛ وبالنسبة لخدمات الموظفين ومن يقدمون خدمات مماثلة يستخدم عادةً للقيمة العادلة للأدوات الممنوحة في تاريخ المنح. إذا كان الاستحقاق فوريًا يثبت المبلغ فورًا، وإذا اشترطت خدمة مستقبلية يوزع على فترة الاستحقاق مع تحديث عدد الأدوات المتوقع استحقاقها للشروط الخدمية وشروط الأداء غير السوقية. تدخل الشروط السوقية وغير الاستحقاقية في القيمة العادلة ولا يعكس أثرها عادةً بعكس المصروف لاحقًا ما دامت شروط الخدمة وبقية الشروط غير السوقية مستوفاة. بعد تاريخ المنح لا يعاد قياس رصيد حقوق الملكية لمجرد تغير سعر السهم.",
+          "Goods or services are measured directly at fair value when possible; employee and similar services are normally measured by reference to the grant-date fair value of the equity instruments granted. Immediate vesting is recognised immediately, while future service conditions spread recognition over the vesting period and the expected number of instruments is updated for service and non-market performance conditions. Market and non-vesting conditions enter grant-date fair value and normally do not reverse expense later if service and other non-market vesting conditions are met. After grant date the equity balance is not remeasured merely because the share price changes.",
+        ),
+        keyPoints: [
+          text(
+            "ميّز الشرط السوقي عن هدف الأداء التشغيلي لأن المعالجة اللاحقة تختلف.",
+            "Distinguish a market condition from an operational performance target because subsequent accounting differs.",
+          ),
+          text(
+            "راجع تقدير عدد المستحقين في كل إقفال للشروط الخدمية وغير السوقية.",
+            "Revise the expected number vesting at each close for service and non-market conditions.",
+          ),
+          text(
+            "لا تعكس الرصيد النهائي بسبب عدم ممارسة خيار استحق بالفعل.",
+            "Do not reverse the final balance merely because a vested option is not exercised.",
+          ),
+        ],
+        reference: "IFRS 2.10–21A, B1–B41",
+      },
+      {
+        title: text(
+          "المعاملات المسواة نقدًا وإعادة القياس",
+          "Cash-settled awards and remeasurement",
+        ),
+        explanation: text(
+          "في الحقوق التي تدفع نقدًا بحسب سعر السهم—مثل حقوق ارتفاع قيمة السهم—يثبت التزام بالقيمة العادلة للخدمات المستلمة. يعاد قياس الالتزام في كل تاريخ تقرير وعند التسوية، وتدخل التغيرات في الربح أو الخسارة، مع توزيع التكلفة على فترة الاستحقاق إن وجدت. تراعي القيمة العادلة شروط الاستحقاق وغير الاستحقاق وفق متطلبات المعيار الخاصة بالمعاملات النقدية. لذلك يختلف ملف الربح والخسارة عن المنحة المسواة بحقوق الملكية: سعر السهم والتقلبات بعد المنح يستمران في التأثير حتى التسوية.",
+          "For rights paid in cash by reference to share price—such as share appreciation rights—a liability is recognised at the fair value of the services received. The liability is remeasured at every reporting date and at settlement, with changes in profit or loss, while cost is spread over any vesting period. Fair value reflects vesting and non-vesting conditions under the Standard's cash-settled requirements. The profit-or-loss profile therefore differs from an equity-settled grant: post-grant share-price and valuation changes continue to affect expense until settlement.",
+        ),
+        keyPoints: [
+          text(
+            "أعد التقييم حتى تاريخ السداد لا حتى تاريخ الاستحقاق فقط.",
+            "Remeasure through payment date, not only through vesting date.",
+          ),
+          text(
+            "افصل مصروف الخدمة عن حركة إعادة قياس الالتزام في ورقة العمل.",
+            "Separate service expense from liability remeasurement in the workpaper.",
+          ),
+          text(
+            "اختبر التصنيف من شروط التسوية الفعلية لا من اسم الخطة.",
+            "Determine classification from substantive settlement terms, not the plan's label.",
+          ),
+        ],
+        reference: "IFRS 2.30–33D",
+      },
+      {
+        title: text(
+          "اختيارات التسوية والتعديلات والإفصاح",
+          "Settlement choices, modifications and disclosure",
+        ),
+        explanation: text(
+          "إذا كان للطرف المقابل حق اختيار النقد أو الأسهم تنشأ عادة أداة مركبة بجزء التزام وجزء حقوق ملكية. وإذا كان الاختيار للمنشأة، تعامل المعاملة كحقوق ملكية ما لم يوجد التزام حالي بالتسوية نقدًا. لا يجوز لتعديل غير مفيد للموظف أن يخفض القيمة الدنيا المعترف بها للمنحة الأصلية، بينما تثبت الزيادة في القيمة العادلة عندما يكون التعديل مفيدًا. وتوجد متطلبات خاصة لصافي التسوية المتعلق بحجز ضريبة الموظف وللتغيير من التسوية النقدية إلى حقوق الملكية. تكشف المنشأة طبيعة الخطط وكيفية تحديد القيمة العادلة وأثرها في الربح أو الخسارة والمركز المالي.",
+          "When the counterparty can choose cash or shares, the award generally contains a liability component and an equity component. When the entity chooses, the award is equity-settled unless a present obligation to settle in cash exists. A modification that is not beneficial to the employee cannot reduce the minimum amount recognised for the original grant, while incremental fair value is recognised when a modification is beneficial. Specific requirements cover net settlement for employee withholding tax and changes from cash to equity settlement. Disclosures explain plan nature, fair-value determination, and effects on profit or loss and financial position.",
+        ),
+        keyPoints: [
+          text(
+            "وثق من يملك خيار التسوية وما إذا كانت الممارسة السابقة أنشأت التزامًا نقديًا.",
+            "Document who controls settlement and whether past practice creates a cash obligation.",
+          ),
+          text(
+            "احسب القيمة الإضافية للتعديل في تاريخه دون محو تكلفة المنحة الأصلية.",
+            "Calculate modification-date incremental value without erasing original grant cost.",
+          ),
+          text(
+            "اربط حركة رصيد حقوق الملكية أو الالتزام بعدد الأدوات ومتوسط أسعارها.",
+            "Reconcile equity or liability movements to instrument counts and weighted prices.",
+          ),
+        ],
+        reference: "IFRS 2.27–29, 34–43C, 44–52",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "خيارات موظفين بشرط خدمة ثلاث سنوات",
+          "Employee options with a three-year service condition",
+        ),
+        facts: text(
+          "في 1 يناير 2026 منحت منشأة 100 موظف لكل منهم 1,000 خيار، على أن يبقى الموظف ثلاث سنوات. بلغت القيمة العادلة للخيار في تاريخ المنح 6. في نهاية 2026 توقعت المنشأة استحقاق 90 موظفًا، وفي نهاية 2027 عدلت التقدير إلى 88، وفي نهاية 2028 استحق فعليًا 85 موظفًا. لا توجد شروط سوقية أخرى.",
+          "On 1 January 2026 an entity grants each of 100 employees 1,000 options, conditional on three years of service. Grant-date fair value is 6 per option. At the end of 2026 the entity expects 90 employees to vest, at the end of 2027 it revises the estimate to 88, and at the end of 2028 85 employees actually vest. There are no other market conditions.",
+        ),
+        calculations: [
+          text(
+            "2026: المصروف التراكمي = 90 × 1,000 × 6 × 1/3 = 180,000.",
+            "2026: cumulative expense = 90 × 1,000 × 6 × 1/3 = 180,000.",
+          ),
+          text(
+            "2027: المصروف التراكمي = 88 × 1,000 × 6 × 2/3 = 352,000؛ مصروف السنة = 172,000.",
+            "2027: cumulative expense = 88 × 1,000 × 6 × 2/3 = 352,000; current-year expense = 172,000.",
+          ),
+          text(
+            "2028: المبلغ النهائي = 85 × 1,000 × 6 = 510,000؛ مصروف السنة = 510,000 − 352,000 = 158,000.",
+            "2028: final amount = 85 × 1,000 × 6 = 510,000; current-year expense = 510,000 − 352,000 = 158,000.",
+          ),
+        ],
+        conclusion: text(
+          "القيمة العادلة للوحدة ثابتة عند تاريخ المنح لأن المعاملة مسواة بحقوق الملكية، بينما يتغير عدد الأدوات حتى الاستحقاق لأن شرط الخدمة غير سوقي.",
+          "Unit fair value remains fixed at grant date because the award is equity-settled, while the instrument count changes through vesting because service is a non-market condition.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "قيد كل سنة بحسب مصروفها المحسوب",
+              "Annual entry for the calculated expense",
+            ),
+            debit: text("مصروف مدفوعات على أساس السهم", "Share-based payment expense"),
+            credit: text("احتياطي مدفوعات على أساس السهم", "Share-based payment reserve"),
+            amount: text("180,000 ثم 172,000 ثم 158,000", "180,000, then 172,000, then 158,000"),
+          },
+        ],
+        reference: "IFRS 2.10–21A",
+      },
+    ],
+  },
+  "IAS 19": {
+    sections: [
+      {
+        title: text(
+          "مبدأ الاستحقاق والمزايا قصيرة الأجل",
+          "Accrual principle and short-term benefits",
+        ),
+        explanation: text(
+          "يحمّل IAS 19 تكلفة مزايا الموظفين للفترة التي قدم فيها الموظف الخدمة لا للفترة التي تم فيها الدفع. تشمل المزايا قصيرة الأجل الأجور والمساهمات والغياب المدفوع والمكافآت المتوقع تسويتها كليًا قبل اثني عشر شهرًا من نهاية فترة الخدمة. تقاس دون خصم ويثبت التزام بعد طرح ما دفع، أو أصل مدفوع مقدمًا إذا تجاوز الدفع الالتزام وسيؤدي إلى استرداد أو خفض مدفوعات مستقبلية. في الإجازات المتراكمة ينشأ الالتزام مع اكتساب الموظف الحق، أما الإجازات غير المتراكمة فتثبت عند حدوث الغياب. وتثبت المكافأة فقط عند وجود التزام قانوني أو ضمني وإمكان التقدير الموثوق.",
+          "IAS 19 attributes employee-benefit cost to the period in which the employee renders service, not the payment period. Short-term benefits include wages, contributions, paid absences and bonuses expected to be settled wholly before twelve months after the end of the service period. They are measured without discounting, with a liability after payments or a prepaid asset when payment exceeds the obligation and will produce a refund or reduced future payments. Accumulating leave creates an obligation as entitlement is earned; non-accumulating leave is recognised when absence occurs. A bonus is recognised only when a legal or constructive obligation exists and can be reliably estimated.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر مدة التسوية المتوقعة لا الاسم المستخدم في سياسة الموارد البشرية.",
+            "Test expected settlement timing rather than the HR policy label.",
+          ),
+          text(
+            "استخدم عدد أيام الإجازة المتوقع استعمالها أو دفعها، لا الرصيد النظري دائمًا.",
+            "Use leave days expected to be used or paid, not always the theoretical balance.",
+          ),
+          text(
+            "لا تثبت مشاركة الأرباح الاختيارية ما لم تنشئ الممارسة توقعًا صحيحًا والتزامًا ضمنيًا.",
+            "Do not accrue discretionary profit sharing unless practice creates a valid expectation and constructive obligation.",
+          ),
+        ],
+        reference: "IAS 19.8–25",
+      },
+      {
+        title: text(
+          "خطط المساهمات المحددة والمنافع المحددة",
+          "Defined contribution and defined benefit plans",
+        ),
+        explanation: text(
+          "في خطة المساهمات المحددة يقتصر التزام المنشأة على المساهمات المتفق عليها، فتثبت المصروفات والمبالغ المستحقة مقابل الخدمة. أما خطة المنافع المحددة فتبقي مخاطر الاكتوار والاستثمار على المنشأة؛ ويقاس الالتزام بالقيمة الحالية للمنافع المنسوبة للخدمة باستخدام طريقة وحدة الائتمان المتوقعة، ثم يطرح منه القيمة العادلة لأصول الخطة. يخضع أي صافي أصل لسقف الأصل، أي القيمة الحالية للمنافع الاقتصادية المتاحة في صورة رد أو تخفيض مساهمات مستقبلية. تستعمل افتراضات ديموغرافية ومالية غير متحيزة ومتوافقة، ويستند معدل الخصم إلى عوائد سندات شركات عالية الجودة بالعملة نفسها، أو السندات الحكومية عند غياب سوق عميقة لتلك السندات.",
+          "A defined contribution plan limits the entity's obligation to agreed contributions, so expense and amounts payable are recognised for service. A defined benefit plan leaves actuarial and investment risk with the entity; the obligation is the present value of benefits attributed to service using the projected unit credit method, less the fair value of plan assets. Any net asset is capped at the present value of economic benefits available as refunds or reductions in future contributions. Unbiased, mutually compatible demographic and financial assumptions are used, and the discount rate is based on high-quality corporate bonds in the same currency, or government bonds when no deep corporate-bond market exists.",
+        ),
+        keyPoints: [
+          text(
+            "صنف الخطة من جوهر الضمان والمخاطر، لا من اسمها القانوني.",
+            "Classify the plan from the substance of guarantees and risks, not its legal name.",
+          ),
+          text(
+            "طابق عملة ومدة معدل الخصم مع عملة ومدة الالتزام.",
+            "Match the discount rate's currency and duration to the obligation.",
+          ),
+          text(
+            "اختبر سقف الأصل وأي حد أدنى للتمويل قبل عرض فائض الخطة.",
+            "Test the asset ceiling and any minimum funding requirement before presenting a plan surplus.",
+          ),
+        ],
+        reference: "IAS 19.27–49, 55–98, 113–115, 133–134",
+      },
+      {
+        title: text(
+          "مكونات التكلفة: الربح أو الخسارة والدخل الشامل الآخر",
+          "Cost components: profit or loss and OCI",
+        ),
+        explanation: text(
+          "تفصل تكلفة خطة المنافع المحددة إلى تكلفة خدمة وصافي فائدة وإعادة قياس. تشمل تكلفة الخدمة الحالية والسابقة وأثر التسويات وتثبت في الربح أو الخسارة. يحسب صافي الفائدة بتطبيق معدل الخصم في بداية الفترة على صافي التزام أو أصل المنافع المحددة، مع مراعاة التغيرات الناتجة عن المساهمات والمدفوعات. أما إعادة القياس—المكاسب والخسائر الاكتوارية، وعائد أصول الخطة باستبعاد مبلغ الفائدة، وتغير سقف الأصل باستبعاد الفائدة—فتثبت فورًا في الدخل الشامل الآخر ولا يعاد تصنيفها لاحقًا إلى الربح أو الخسارة. لا يستخدم عائد متوقع مستقل لأصول الخطة بدل هذا النموذج.",
+          "Defined-benefit cost is separated into service cost, net interest and remeasurement. Current and past service cost and settlement effects go to profit or loss. Net interest applies the opening discount rate to the net defined-benefit liability or asset, considering changes from contributions and benefit payments. Remeasurements—actuarial gains and losses, plan-asset return excluding interest, and asset-ceiling changes excluding interest—are recognised immediately in OCI and are never reclassified to profit or loss. A separate expected-return assumption for plan assets is not substituted for this model.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ بصافي الرصيد لا بحساب معدل مختلف متوقع لأصول الخطة.",
+            "Start from the net balance rather than a separate expected plan-asset return rate.",
+          ),
+          text(
+            "اعترف بتكلفة الخدمة السابقة عند تعديل الخطة أو التقليص، أيهما أسبق مع إعادة الهيكلة ذات الصلة.",
+            "Recognise past service cost when amendment or curtailment occurs, or earlier with a related restructuring.",
+          ),
+          text(
+            "أبق إعادة القياس داخل حقوق الملكية بعد OCI ولا تعيد تدويرها للربح أو الخسارة.",
+            "Retain remeasurement in equity after OCI without recycling it to profit or loss.",
+          ),
+        ],
+        reference: "IAS 19.99–112, 120–130",
+      },
+      {
+        title: text(
+          "المزايا طويلة الأجل وإنهاء الخدمة والإفصاح",
+          "Other long-term, termination benefits and disclosure",
+        ),
+        explanation: text(
+          "تقاس المزايا الأخرى طويلة الأجل بطريقة قريبة من المنافع المحددة، لكن جميع مكونات صافي التكلفة—بما فيها إعادة القياس—تثبت في الربح أو الخسارة. أما مزايا إنهاء الخدمة فهي مقابل إنهاء العمل لا مقابل خدمة الموظف؛ تثبت عند التاريخ الأسبق بين تعذر سحب العرض وبين إثبات إعادة هيكلة ضمن IAS 37 تتضمن تلك المدفوعات. إذا كانت المنفعة تجمع بين مقابل خدمة وحافز إنهاء، يفصل كل جزء حسب جوهره. في خطط المنافع المحددة تشرح الإفصاحات خصائص الخطة ومخاطرها، والمبالغ في القوائم، والمصالحة، والافتراضات الاكتوارية الجوهرية والحساسيات وآثار التدفقات النقدية المستقبلية.",
+          "Other long-term benefits use measurement broadly similar to defined-benefit plans, but every component of net cost—including remeasurement—is recognised in profit or loss. Termination benefits compensate for ending employment rather than employee service and are recognised at the earlier of when the offer cannot be withdrawn and when an IAS 37 restructuring involving those payments is recognised. If a benefit combines service consideration and a termination incentive, components are separated by substance. Defined-benefit disclosures explain plan characteristics and risks, statement amounts, reconciliations, significant actuarial assumptions and sensitivities, and future cash-flow effects.",
+        ),
+        keyPoints: [
+          text(
+            "اسأل هل الدفع مقابل خدمة مستقبلية؛ إن كان كذلك فليس كله منفعة إنهاء.",
+            "Ask whether payment is for future service; if so, it is not wholly a termination benefit.",
+          ),
+          text(
+            "لا تعرض إعادة قياس المزايا الطويلة الأخرى في OCI.",
+            "Do not present remeasurement of other long-term benefits in OCI.",
+          ),
+          text(
+            "ركز الحساسية على الافتراضات الجوهرية دون الإيحاء بأن السيناريوهات مستقلة تمامًا.",
+            "Focus sensitivity on significant assumptions without implying scenarios are fully independent.",
+          ),
+        ],
+        reference: "IAS 19.135–179",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "مصالحة خطة منافع محددة وصافي الفائدة",
+          "Defined-benefit reconciliation and net interest",
+        ),
+        facts: text(
+          "في 1 يناير 2026 كان التزام المنافع المحددة 5,000,000 والقيمة العادلة لأصول الخطة 4,200,000، ومعدل الخصم 5%. بلغت تكلفة الخدمة الحالية 600,000 وساهمت المنشأة بـ500,000 ودُفعت من الخطة منافع 300,000. في 31 ديسمبر قيّم الخبير الالتزام بـ5,700,000 وبلغت أصول الخطة 4,550,000. نهمل سقف الأصل والضريبة.",
+          "At 1 January 2026 the defined-benefit obligation is 5,000,000 and plan assets are 4,200,000, with a 5% discount rate. Current service cost is 600,000, the entity contributes 500,000 and the plan pays benefits of 300,000. At 31 December the actuary values the obligation at 5,700,000 and plan assets are 4,550,000. Asset ceiling and tax are ignored.",
+        ),
+        calculations: [
+          text(
+            "صافي الالتزام الافتتاحي = 5,000,000 − 4,200,000 = 800,000؛ صافي الفائدة في الربح أو الخسارة = 800,000 × 5% = 40,000.",
+            "Opening net liability = 5,000,000 − 4,200,000 = 800,000; net interest in profit or loss = 800,000 × 5% = 40,000.",
+          ),
+          text(
+            "التزام متوقع قبل إعادة القياس = 5,000,000 + 250,000 فائدة + 600,000 خدمة − 300,000 منافع = 5,550,000؛ الخسارة الاكتوارية = 150,000.",
+            "Expected obligation before remeasurement = 5,000,000 + 250,000 interest + 600,000 service − 300,000 benefits = 5,550,000; actuarial loss = 150,000.",
+          ),
+          text(
+            "أصول متوقعة قبل إعادة القياس = 4,200,000 + 210,000 فائدة + 500,000 مساهمة − 300,000 منافع = 4,610,000؛ خسارة العائد خارج الفائدة = 60,000. إجمالي خسارة OCI = 210,000 وصافي الالتزام الختامي = 1,150,000.",
+            "Expected assets before remeasurement = 4,200,000 + 210,000 interest + 500,000 contribution − 300,000 benefits = 4,610,000; return loss excluding interest = 60,000. Total OCI loss = 210,000 and closing net liability = 1,150,000.",
+          ),
+        ],
+        conclusion: text(
+          "مصروف الربح أو الخسارة 640,000 (خدمة 600,000 + صافي فائدة 40,000)، وخسارة إعادة القياس 210,000 في OCI. وتتحقق المصالحة: 800,000 + 640,000 + 210,000 − 500,000 = 1,150,000.",
+          "Profit-or-loss expense is 640,000 (600,000 service + 40,000 net interest), and the 210,000 remeasurement loss goes to OCI. The reconciliation is 800,000 + 640,000 + 210,000 − 500,000 = 1,150,000.",
+        ),
+        journalEntries: [
+          {
+            label: text("تكلفة الخدمة وصافي الفائدة", "Service cost and net interest"),
+            debit: text("مصروف مزايا موظفين", "Employee-benefit expense"),
+            credit: text("صافي التزام منافع محددة", "Net defined-benefit liability"),
+            amount: text("640,000", "640,000"),
+          },
+          {
+            label: text("إعادة القياس", "Remeasurement"),
+            debit: text("الدخل الشامل الآخر", "Other comprehensive income"),
+            credit: text("صافي التزام منافع محددة", "Net defined-benefit liability"),
+            amount: text("210,000", "210,000"),
+          },
+          {
+            label: text("مساهمة المنشأة في الخطة", "Employer contribution to the plan"),
+            debit: text("صافي التزام منافع محددة", "Net defined-benefit liability"),
+            credit: text("نقدية", "Cash"),
+            amount: text("500,000", "500,000"),
+          },
+        ],
+        reference: "IAS 19.55–64, 120–130",
+      },
+    ],
+  },
+  "IAS 37": {
+    sections: [
+      {
+        title: text(
+          "الاعتراف بالمخصص والالتزام الحالي",
+          "Provision recognition and present obligation",
+        ),
+        explanation: text(
+          "المخصص التزام غير مؤكد التوقيت أو المبلغ. يثبت فقط عندما ينشأ عن حدث سابق التزام حالي قانوني أو ضمني، ويكون خروج الموارد للتسوية محتملًا، ويمكن تقدير المبلغ تقديرًا موثوقًا. ينشأ الالتزام الضمني من نمط ممارسة أو سياسة منشورة أو بيان محدد أنشأ توقعًا صحيحًا لدى الأطراف المتأثرة. إذا تعذر حسم وجود الالتزام في حالات نادرة، تعامل المنشأة معه كحالي عندما تشير جميع الأدلة المتاحة—ومنها أحداث ما بعد الفترة—إلى أن وجوده أرجح من عدمه. لا يثبت مخصص لخسائر التشغيل المستقبلية أو إنفاق يمكن تجنبه بتصرفات مستقبلية.",
+          "A provision is a liability of uncertain timing or amount. It is recognised only when a past event creates a present legal or constructive obligation, an outflow of resources is probable, and the amount can be estimated reliably. A constructive obligation arises from established practice, a published policy or a sufficiently specific statement that creates a valid expectation among affected parties. In rare cases where obligation existence is unclear, it is treated as present when all available evidence—including subsequent events—makes existence more likely than not. No provision is recognised for future operating losses or expenditure avoidable by future actions.",
+        ),
+        keyPoints: [
+          text(
+            "حدد الحدث الملزم الذي لم يترك بديلًا واقعيًا للتسوية.",
+            "Identify the obligating event that leaves no realistic alternative to settlement.",
+          ),
+          text(
+            "لا تساوِ بين خطة الإدارة الداخلية والتزام تجاه طرف آخر.",
+            "Do not equate an internal management plan with an obligation to another party.",
+          ),
+          text(
+            "وثق حكم الاحتمال والأدلة القانونية والتشغيلية في تاريخ التقرير.",
+            "Document probability judgement and legal and operational evidence at reporting date.",
+          ),
+        ],
+        reference: "IAS 37.10, 14–26",
+      },
+      {
+        title: text("أفضل تقدير والمخاطر والقيمة الحالية", "Best estimate, risk and present value"),
+        explanation: text(
+          "يقاس المخصص بالمبلغ الذي تدفعه المنشأة عقلانيًا لتسوية الالتزام أو نقله في نهاية الفترة. للعدد الكبير من البنود يستخدم المتوسط المرجح بالاحتمالات، أما الالتزام المنفرد فقد تكون النتيجة الأرجح نقطة البداية مع مراعاة النتائج الأخرى. تدخل المخاطر وعدم التأكد دون مضاعفة الأثر في التدفقات ومعدل الخصم. إذا كان أثر الزمن جوهريًا تخصم التدفقات بمعدل قبل الضريبة يعكس تقييم السوق للقيمة الزمنية والمخاطر غير المدرجة في التدفقات، وتثبت زيادة المخصص بسبب مرور الزمن كتكلفة تمويل. تراجع المخصصات في كل إقفال وتعكس إذا لم يعد الخروج محتملًا، ولا تستخدم إلا للغرض الذي أنشئت من أجله.",
+          "A provision is measured at the amount the entity would rationally pay to settle or transfer the obligation at period end. A large population uses probability-weighted expected value, while a single obligation may begin with the most likely outcome adjusted for other possible results. Risk and uncertainty are included without double counting them in cash flows and discount rate. When the time-value effect is material, cash flows are discounted at a pre-tax rate reflecting market time value and risks not already in cash flows, with unwinding recognised as finance cost. Provisions are reviewed each close, reversed when outflow is no longer probable, and used only for their original purpose.",
+        ),
+        keyPoints: [
+          text(
+            "طابق أسلوب الاحتمال مع طبيعة مجتمع الالتزامات.",
+            "Match the probability method to the obligation population.",
+          ),
+          text(
+            "حدّث التدفقات والمعدل في نهاية كل فترة وفسر الحركة.",
+            "Update cash flows and rate each period end and explain movements.",
+          ),
+          text(
+            "لا تخصم المخاطر مرتين داخل التدفق ومعدل الخصم.",
+            "Do not count risk twice in cash flows and discount rate.",
+          ),
+        ],
+        reference: "IAS 37.36–52, 59–61",
+      },
+      {
+        title: text(
+          "العقود المرهقة وإعادة الهيكلة والإزالة",
+          "Onerous contracts, restructuring and decommissioning",
+        ),
+        explanation: text(
+          "يثبت للعقد المرهق مخصص عندما تتجاوز التكاليف التي لا يمكن تجنبها المنافع الاقتصادية المتوقعة، بعد إثبات أي انخفاض في الأصول المستخدمة في تنفيذه. تكلفة تنفيذ العقد تشمل التكاليف الإضافية وتوزيع التكاليف الأخرى المرتبطة مباشرة بالتنفيذ، ويقارن بها تعويض أو غرامة الخروج أيهما أقل تكلفة لا يمكن تجنبها. في إعادة الهيكلة لا يكفي قرار مجلس الإدارة؛ يلزم برنامج رسمي مفصل وبدء التنفيذ أو إعلان سماته الرئيسية بما ينشئ توقعًا صحيحًا، ويقتصر المخصص على النفقات المباشرة الضرورية غير المرتبطة بالنشاط المستمر. التزام إزالة أصل أو إعادة موقعه يثبت عند نشوئه، وغالبًا يضاف القياس الأولي إلى تكلفة الأصل وفق المعيار المختص.",
+          "An onerous-contract provision is recognised when unavoidable costs exceed expected economic benefits, after impairment of assets used to fulfil the contract. Fulfilment cost includes incremental costs and an allocation of other costs directly related to fulfilling it; unavoidable cost is the lower of fulfilment cost and compensation or penalties for exit. A board decision alone does not create a restructuring provision: a detailed formal plan plus implementation or announcement of its main features must create a valid expectation, and the provision includes only direct necessary expenditures unrelated to continuing activities. An asset-removal or site-restoration obligation is recognised when it arises, with initial measurement often added to the related asset's cost under the relevant Standard.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر انخفاض أصول العقد قبل حساب مخصص العقد المرهق.",
+            "Test contract assets for impairment before measuring an onerous provision.",
+          ),
+          text(
+            "استبعد تدريب الموظفين والتسويق والاستثمار في الأنظمة المستقبلية من مخصص إعادة الهيكلة.",
+            "Exclude staff retraining, marketing and future systems investment from a restructuring provision.",
+          ),
+          text(
+            "افصل التزام الإزالة الناشئ عند إنشاء الأصل عن الالتزام الناشئ تدريجيًا من الإنتاج.",
+            "Separate removal obligations arising on asset construction from obligations generated progressively by production.",
+          ),
+        ],
+        reference: "IAS 37.63–83; IAS 16.16(c)",
+      },
+      {
+        title: text(
+          "الالتزامات والأصول المحتملة والتعويض",
+          "Contingent liabilities, contingent assets and reimbursement",
+        ),
+        explanation: text(
+          "لا يثبت الالتزام المحتمل، بل يفصح عن طبيعته وتقدير أثره وعدم التأكد وإمكان التعويض ما لم يكن احتمال الخروج بعيدًا. ويشمل التزامًا ممكنًا يعتمد وجوده على حدث غير مؤكد، أو التزامًا حاليًا لا يثبت لأن الخروج غير محتمل أو القياس غير موثوق. الأصل المحتمل لا يثبت؛ يفصح عنه عندما يكون التدفق الداخل محتملًا، وعندما يصبح مؤكدًا فعليًا يثبت الأصل لأنه لم يعد محتملًا. إذا كان طرف ثالث سيعوض إنفاق المخصص، يثبت أصل منفصل فقط عندما يكون التحصيل مؤكدًا فعليًا إذا تمت التسوية، وبحد لا يتجاوز المخصص، ويمكن عرض المصروف صافي التعويض في الربح أو الخسارة.",
+          "A contingent liability is not recognised; its nature, estimated effect, uncertainty and reimbursement are disclosed unless outflow is remote. It includes a possible obligation dependent on an uncertain event, or a present obligation not recognised because outflow is not probable or measurement is unreliable. A contingent asset is not recognised; it is disclosed when inflow is probable, and recognised once inflow is virtually certain because it is no longer contingent. Third-party reimbursement is a separate asset only when receipt is virtually certain if settlement occurs, capped at the provision amount, while the related expense may be presented net of reimbursement in profit or loss.",
+        ),
+        keyPoints: [
+          text(
+            "راجع الاحتمالات في كل إقفال لأن التصنيف قد ينتقل من إفصاح إلى اعتراف.",
+            "Reassess probabilities each close because classification can move from disclosure to recognition.",
+          ),
+          text(
+            "لا تخصم أصل التعويض من المخصص في قائمة المركز المالي.",
+            "Do not offset the reimbursement asset against the provision in financial position.",
+          ),
+          text(
+            "يجوز حجب تفاصيل نادرة إذا أضرت النزاع بجدية، مع بيان الطبيعة وسبب الحجب.",
+            "Rarely, prejudicial detail may be withheld, with the general nature and reason disclosed.",
+          ),
+        ],
+        reference: "IAS 37.27–35, 53–58, 84–92",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "مخصص ضمان مع تعويض مؤكد فعليًا",
+          "Warranty provision with virtually certain reimbursement",
+        ),
+        facts: text(
+          "باعت منشأة 100,000 جهاز في 2026 بضمان سنة. تشير الخبرة إلى أن 5% تحتاج إصلاحًا بسيطًا متوسطه 40، و1% تحتاج إصلاحًا كبيرًا متوسطه 150، والباقي بلا عيوب. وافق مورد مكوّن معيب تعاقديًا على تعويض المنشأة عن 120,000 من تكاليف الضمان، وأصبح التحصيل مؤكدًا فعليًا إذا تمت الإصلاحات.",
+          "An entity sells 100,000 devices in 2026 with a one-year warranty. Experience indicates 5% require minor repairs averaging 40, 1% require major repairs averaging 150, and the remainder have no defects. A supplier of a defective component contractually agrees to reimburse 120,000 of warranty costs, and collection is virtually certain if repairs occur.",
+        ),
+        calculations: [
+          text(
+            "الإصلاحات البسيطة = 100,000 × 5% × 40 = 200,000.",
+            "Minor repairs = 100,000 × 5% × 40 = 200,000.",
+          ),
+          text(
+            "الإصلاحات الكبيرة = 100,000 × 1% × 150 = 150,000؛ أفضل تقدير للمخصص = 350,000.",
+            "Major repairs = 100,000 × 1% × 150 = 150,000; best-estimate provision = 350,000.",
+          ),
+          text(
+            "يثبت أصل تعويض مستقل 120,000 ولا يخصم من المخصص؛ يمكن عرض صافي المصروف 230,000 في الربح أو الخسارة.",
+            "A separate 120,000 reimbursement asset is recognised and not offset against the provision; net expense of 230,000 may be presented in profit or loss.",
+          ),
+        ],
+        conclusion: text(
+          "عدد كبير من الضمانات يقاس بالقيمة المتوقعة. وجود التعويض لا يخفض الالتزام تجاه العملاء، بل ينشئ أصلًا مستقلًا عند بلوغ التحصيل درجة التأكد الفعلي.",
+          "A large warranty population uses expected value. Reimbursement does not reduce the customer obligation; it creates a separate asset once receipt is virtually certain.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات مخصص الضمان", "Recognise warranty provision"),
+            debit: text("مصروف ضمان", "Warranty expense"),
+            credit: text("مخصص ضمان", "Warranty provision"),
+            amount: text("350,000", "350,000"),
+          },
+          {
+            label: text("إثبات أصل التعويض", "Recognise reimbursement asset"),
+            debit: text("ذمم تعويض مستحقة", "Reimbursement receivable"),
+            credit: text("دخل تعويض الضمان", "Warranty reimbursement income"),
+            amount: text("120,000", "120,000"),
+          },
+        ],
+        reference: "IAS 37.36–40, 53–54",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
