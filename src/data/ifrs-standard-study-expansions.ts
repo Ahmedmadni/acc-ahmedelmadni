@@ -2574,6 +2574,427 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IAS 7": {
+    sections: [
+      {
+        title: text(
+          "خريطة التدفقات النقدية والنقد المعادل",
+          "Mapping cash flows and cash equivalents",
+        ),
+        explanation: text(
+          "تشرح قائمة التدفقات النقدية كيف انتقل رصيد النقد والنقد المعادل من أول الفترة إلى آخرها. النقد يشمل النقد بالصندوق والودائع تحت الطلب، أما النقد المعادل فهو استثمار قصير الأجل عالي السيولة يمكن تحويله بسهولة إلى مبلغ نقدي معلوم ويتعرض لمخاطر ضئيلة في تغير القيمة. الغرض منه مقابلة الالتزامات النقدية القصيرة لا الاستثمار أو تحقيق العائد؛ لذلك يكون الاستحقاق الأصلي لثلاثة أشهر أو أقل مؤشرًا عمليًا مهمًا وليس اختبارًا منفردًا يكفي بذاته. تُقسم الحركة إلى تشغيل واستثمار وتمويل بحسب طبيعة المنشأة والغرض الاقتصادي للتدفق.",
+          "The statement of cash flows explains how cash and cash equivalents moved from the beginning to the end of the period. Cash comprises cash on hand and demand deposits; a cash equivalent is a short-term, highly liquid investment readily convertible to a known amount of cash and subject to insignificant value-change risk. Its purpose is to meet short-term cash commitments rather than investment or return, so an original maturity of three months or less is an important practical indicator, not a stand-alone test. Movements are classified as operating, investing or financing according to the entity's business and the economic purpose of the flow.",
+        ),
+        keyPoints: [
+          text(
+            "التشغيل هو النشاط الرئيسي المولد للإيراد وما لا يدخل بوضوح ضمن الاستثمار أو التمويل.",
+            "Operating activities are the principal revenue-producing activities and items not clearly investing or financing.",
+          ),
+          text(
+            "الاستثمار يتعلق بشراء وبيع الأصول طويلة الأجل والاستثمارات غير المصنفة نقدًا معادلًا.",
+            "Investing relates to acquiring and disposing of long-term assets and investments not classified as cash equivalents.",
+          ),
+          text(
+            "التمويل يغير حجم أو تكوين حقوق الملكية والاقتراض، مثل إصدار أسهم أو سداد أصل قرض.",
+            "Financing changes the size or composition of equity and borrowings, such as issuing shares or repaying loan principal.",
+          ),
+        ],
+        reference: "IAS 7.6–17",
+      },
+      {
+        title: text(
+          "التدفقات التشغيلية: الطريقة المباشرة وغير المباشرة",
+          "Operating cash flows: direct and indirect methods",
+        ),
+        explanation: text(
+          "يمكن عرض التدفقات التشغيلية بالطريقة المباشرة، فتظهر الفئات الرئيسية للمتحصلات والمدفوعات النقدية الإجمالية، أو بالطريقة غير المباشرة، فتبدأ من الربح أو الخسارة وتزيل آثار البنود غير النقدية والاستحقاقات والتأجيلات والبنود التي تنتمي لتدفقات الاستثمار أو التمويل. يشجع IAS 7 الطريقة المباشرة لأنها تقدم معلومات تساعد في تقدير التدفقات المستقبلية، لكن الطريقتين مقبولتان. في الطريقة غير المباشرة لا تُعامل زيادة المخزون أو المدينين على أنها مصروف جديد؛ بل تعديل يربط الربح المحاسبي بالنقد الناتج من التشغيل.",
+          "Operating cash flows may be presented using the direct method, showing major classes of gross cash receipts and payments, or the indirect method, starting from profit or loss and removing non-cash items, accruals, deferrals and items whose cash effects belong to investing or financing. IAS 7 encourages the direct method because it provides information useful in estimating future cash flows, although both methods are permitted. Under the indirect method, increases in inventory or receivables are not new expenses; they are reconciliation adjustments from accounting profit to operating cash.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ من رقم الربح الذي تستخدمه المنشأة ثم افصل منه آثار الاستثمار والتمويل بصورة متسقة.",
+            "Start from the entity's chosen profit measure and consistently separate investing and financing effects.",
+          ),
+          text(
+            "أضف المصروفات غير النقدية مثل الإهلاك، واعكس الأرباح أو الخسائر التي يرد تدفقها النقدي في قسم آخر.",
+            "Add back non-cash expenses such as depreciation and reverse gains or losses whose cash flow appears elsewhere.",
+          ),
+          text(
+            "زيادة أصل تشغيلي تخفض النقد التشغيلي عادة، وزيادة التزام تشغيلي ترفعه عادة.",
+            "An increase in an operating asset normally reduces operating cash; an increase in an operating liability normally increases it.",
+          ),
+        ],
+        reference: "IAS 7.18–20",
+      },
+      {
+        title: text(
+          "الفوائد والتوزيعات والضرائب والعملات والبنود غير النقدية",
+          "Interest, dividends, tax, foreign currency and non-cash items",
+        ),
+        explanation: text(
+          "تُعرض الفوائد والتوزيعات المقبوضة والمدفوعة كل فئة على حدة، ويُختار لها تصنيف تشغيلي أو استثماري أو تمويلي بحسب البدائل التي يسمح بها المعيار وطبيعة المنشأة، مع الثبات من فترة لأخرى. تُصنف ضرائب الدخل عادة تشغيلية إلا إذا أمكن ربطها تحديدًا باستثمار أو تمويل. تُترجم تدفقات العملة الأجنبية بسعر تاريخ التدفق، ويمكن استخدام متوسط يقارب السعر الفعلي، بينما أثر تغير سعر الصرف على النقد المحتفظ به لا يعد تدفقًا ويعرض منفصلًا للمصالحة. معاملات مثل شراء أصل بإصدار أسهم أو عقد إيجار دون دفعة نقدية تستبعد من القائمة وتفصح في موضع آخر.",
+          "Interest and dividends received and paid are each disclosed separately and classified consistently from period to period as operating, investing or financing within the alternatives permitted by the Standard and the entity's circumstances. Income taxes are normally operating unless specifically identifiable with investing or financing. Foreign-currency cash flows are translated at the rate on the cash-flow date; a representative average may be used, while exchange effects on cash held are not cash flows and are shown separately in the reconciliation. Transactions such as acquiring an asset by issuing shares or entering a lease with no cash payment are excluded from the statement and disclosed elsewhere.",
+        ),
+        keyPoints: [
+          text(
+            "لا تغيّر تصنيف الفائدة أو التوزيعات بهدف تجميل التدفق التشغيلي بين الفترات.",
+            "Do not change interest or dividend classification to improve operating cash flow between periods.",
+          ),
+          text(
+            "اعرض التدفقات على أساس إجمالي إلا في الحالات المحدودة التي يسمح فيها بالصافي.",
+            "Present cash flows gross except in the limited circumstances in which net presentation is permitted.",
+          ),
+          text(
+            "افصل المعاملة غير النقدية عن أي دفعة نقدية لاحقة مرتبطة بها.",
+            "Separate a non-cash transaction from any later cash payment related to it.",
+          ),
+        ],
+        reference: "IAS 7.21–24, 28, 31–37, 43–44",
+      },
+      {
+        title: text(
+          "مصالحة التمويل وترتيبات تمويل الموردين",
+          "Financing reconciliation and supplier finance arrangements",
+        ),
+        explanation: text(
+          "يلزم الإفصاح عن التغيرات في الالتزامات الناتجة عن أنشطة التمويل، بما يفصل التغير النقدي عن الاستحواذات وفروق العملة والقيمة العادلة وغيرها من التغيرات غير النقدية. كما تتطلب تعديلات ترتيبات تمويل الموردين معلومات تمكن المستخدم من فهم أثر هذه الترتيبات على الالتزامات والتدفقات ومخاطر السيولة: شروط الترتيب، القيم الدفترية ومكان عرض الالتزامات، الجزء الذي سدده مقدمو التمويل للموردين، نطاق آجال السداد مقارنة بالدائنين التجاريين غير المشمولين، والتغيرات غير النقدية. لا يكفي نقل مبلغ من الدائنين إلى الاقتراض دون شرح طبيعة الترتيب.",
+          "An entity discloses changes in liabilities arising from financing activities, distinguishing cash changes from acquisitions, foreign-exchange effects, fair-value movements and other non-cash changes. Supplier-finance amendments also require information enabling users to understand effects on liabilities, cash flows and liquidity risk: arrangement terms, carrying amounts and statement line items, amounts for which finance providers have already paid suppliers, ranges of payment due dates compared with comparable trade payables outside the arrangements, and non-cash changes. Merely reclassifying an amount from trade payables to borrowings does not explain the arrangement's substance.",
+        ),
+        keyPoints: [
+          text(
+            "أنشئ حركة افتتاحي–نقدي–غير نقدي–ختامي لكل فئة تمويل جوهرية.",
+            "Prepare an opening–cash–non-cash–closing roll-forward for each material financing class.",
+          ),
+          text(
+            "قيّم العرض في قائمة المركز المالي والتدفقات وفق الشروط والجوهر، لا اسم المنتج المصرفي.",
+            "Assess balance-sheet and cash-flow presentation from terms and substance, not the bank product's label.",
+          ),
+          text(
+            "اربط إفصاح تمويل الموردين بإفصاحات مخاطر السيولة في IFRS 7.",
+            "Connect supplier-finance information with IFRS 7 liquidity-risk disclosures.",
+          ),
+        ],
+        reference: "IAS 7.44A–44H",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "إعداد التدفق النقدي التشغيلي بالطريقة غير المباشرة",
+          "Preparing operating cash flow using the indirect method",
+        ),
+        facts: text(
+          "حققت منشأة ربحًا قبل الضريبة قدره 500,000. يتضمن الربح إهلاكًا 80,000 وربح بيع آلة 20,000 وتكلفة تمويل 30,000. زاد المخزون 40,000، وانخفض العملاء 25,000، وزاد الموردون 15,000. دفعت المنشأة فوائد 30,000 وضريبة دخل 70,000، وتصنف الفائدة المدفوعة تشغيلية بثبات.",
+          "An entity reports profit before tax of 500,000, including depreciation of 80,000, a 20,000 gain on disposal of machinery and finance costs of 30,000. Inventory increased by 40,000, receivables decreased by 25,000 and payables increased by 15,000. Interest paid was 30,000 and income tax paid was 70,000; the entity consistently classifies interest paid as operating.",
+        ),
+        calculations: [
+          text(
+            "الربح قبل تغير رأس المال العامل = 500,000 + 80,000 − 20,000 + 30,000 = 590,000.",
+            "Profit before working-capital changes = 500,000 + 80,000 − 20,000 + 30,000 = 590,000.",
+          ),
+          text(
+            "أثر رأس المال العامل = −40,000 + 25,000 + 15,000 = صفر؛ إذ عوض انخفاض العملاء وزيادة الموردين زيادة المخزون.",
+            "Working-capital effect = −40,000 + 25,000 + 15,000 = nil; the receivables fall and payables rise offset the inventory increase.",
+          ),
+          text(
+            "النقد الناتج من العمليات = 590,000؛ وبعد الفائدة والضريبة يصبح صافي التدفق التشغيلي = 590,000 − 30,000 − 70,000 = 490,000.",
+            "Cash generated from operations = 590,000; after interest and tax, net operating cash flow = 590,000 − 30,000 − 70,000 = 490,000.",
+          ),
+          text(
+            "متحصل بيع الآلة يعرض كاملًا ضمن الاستثمار؛ وربح البيع 20,000 أزيل من مصالحة التشغيل حتى لا يتكرر أثره.",
+            "The full disposal proceeds are shown in investing; the 20,000 gain is removed from the operating reconciliation to prevent double counting.",
+          ),
+        ],
+        conclusion: text(
+          "يفصل العرض بين نتيجة الاستحقاق وقدرة النشاط على توليد النقد، مع إبقاء التدفقات الاستثمارية والتمويلية في أقسامها الصحيحة.",
+          "The presentation separates accrual profit from operating cash generation while keeping investing and financing cash flows in their proper sections.",
+        ),
+        journalEntries: [],
+        reference: "IAS 7.18–20, 31–35",
+      },
+    ],
+  },
+  "IFRS 8": {
+    sections: [
+      {
+        title: text(
+          "النطاق ومنهج الإدارة ومتخذ القرار التشغيلي",
+          "Scope, management approach and the CODM",
+        ),
+        explanation: text(
+          "يطبق IFRS 8 على القوائم المنفصلة أو الفردية للمنشأة التي تتداول أدوات دينها أو حقوق ملكيتها في سوق عام أو تودع قوائمها بغرض إصدار أدوات في سوق عام، وعلى القوائم الموحدة للمجموعة التي لها شركة أم بهذه الصفات. القطاع التشغيلي مكوّن يزاول أنشطة قد يحقق منها إيرادات ويتحمل عنها مصروفات، وتراجع نتائجه بانتظام جهة متخذ القرار التشغيلي لتخصيص الموارد وتقييم الأداء، وتتوفر عنه معلومات مالية منفصلة. متخذ القرار التشغيلي وظيفة إدارية لا مسمى وظيفيًا ثابتًا، وقد يكون فردًا أو لجنة.",
+          "IFRS 8 applies to separate or individual financial statements of an entity whose debt or equity instruments trade in a public market, or that files statements to issue instruments in a public market, and to consolidated statements of a group with such a parent. An operating segment is a component that engages in activities from which it may earn revenue and incur expenses, whose results are regularly reviewed by the chief operating decision maker to allocate resources and assess performance, and for which discrete financial information is available. The CODM is a management function, not a fixed title, and may be a person or committee.",
+        ),
+        keyPoints: [
+          text(
+            "ابدأ بالتقارير الداخلية الفعلية التي تصل إلى متخذ القرار، لا بالهيكل القانوني للشركات.",
+            "Start with actual internal reports reviewed by the CODM, not the group's legal-company structure.",
+          ),
+          text(
+            "قد يكون نشاط ما قطاعًا قبل أن يحقق إيرادات، مثل عملية ناشئة تراجعها الإدارة منفصلة.",
+            "An activity may be a segment before earning revenue, such as a start-up operation reviewed separately.",
+          ),
+          text(
+            "إذا تضمن تقرير واحد قوائم موحدة ومنفصلة للأم، تعرض معلومات القطاعات في القوائم الموحدة فقط.",
+            "If one report contains consolidated and parent separate statements, segment information is required only in the consolidated statements.",
+          ),
+        ],
+        reference: "IFRS 8.2–9",
+      },
+      {
+        title: text(
+          "تجميع القطاعات وحدود الحكم",
+          "Aggregation of segments and limits of judgement",
+        ),
+        explanation: text(
+          "يجوز جمع قطاعين أو أكثر في قطاع تشغيلي واحد فقط إذا كان التجميع متسقًا مع المبدأ الأساسي للمعيار، وكانت للقطاعات خصائص اقتصادية متشابهة، وتشابهت في طبيعة المنتجات والخدمات وعمليات الإنتاج ونوع العميل وطرق التوزيع، وكذلك البيئة التنظيمية حين تكون ملائمة. تشابه هامش الربح في سنة واحدة لا يثبت وحده تشابه الخصائص الاقتصادية طويلة الأجل. ويجب الإفصاح عن الأحكام التي اتخذتها الإدارة عند تطبيق معايير التجميع، بما في ذلك وصف القطاعات المجمعة والمؤشرات التي دعمت التشابه.",
+          "Two or more operating segments may be aggregated only when aggregation is consistent with the Standard's core principle, the segments have similar economic characteristics, and they are similar in products and services, production processes, customer type, distribution methods and, when relevant, regulatory environment. Similar profit margins in one year do not by themselves demonstrate similar long-term economic characteristics. Management also discloses judgements made in applying aggregation criteria, including the segments combined and indicators supporting similarity.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق التشابه عبر فترة مناسبة، لا عند تاريخ واحد فقط.",
+            "Document similarity over an appropriate period, not only at one date.",
+          ),
+          text(
+            "لا تستخدم التجميع لإخفاء قطاع ضعيف الأداء أو مختلف المخاطر.",
+            "Do not use aggregation to conceal an underperforming or differently exposed segment.",
+          ),
+          text(
+            "أعد تقييم القطاعات إذا تغيرت التقارير الداخلية أو طريقة تخصيص الموارد.",
+            "Reassess segments when internal reporting or resource-allocation processes change.",
+          ),
+        ],
+        reference: "IFRS 8.11–12, 22(aa)",
+      },
+      {
+        title: text("اختبارات 10% وحد تغطية 75%", "The 10% tests and 75% coverage rule"),
+        explanation: text(
+          "يصبح القطاع قابلًا للتقرير إذا بلغ 10% أو أكثر في أي اختبار: إيراده الداخلي والخارجي من مجموع إيرادات القطاعات؛ أو القيمة المطلقة لربحه أو خسارته مقارنة بالأكبر مطلقًا بين مجموع أرباح القطاعات الرابحة ومجموع خسائر القطاعات الخاسرة؛ أو أصوله من مجموع أصول القطاعات. بعد تحديد القطاعات القابلة للتقرير يجب أن تغطي إيراداتها من العملاء الخارجيين 75% على الأقل من إيرادات المنشأة الخارجية، وإلا تضاف قطاعات حتى بلوغ الحد ولو لم تنجح منفردة في اختبار 10%. يمكن جمع الباقي في «قطاعات أخرى» مع وصف مصادر الإيراد.",
+          "A segment becomes reportable if it meets any 10% test: internal plus external revenue against total segment revenue; the absolute amount of profit or loss against the greater absolute total of profitable-segment profits and loss-making-segment losses; or assets against total segment assets. After reportable segments are identified, their external revenue must cover at least 75% of the entity's external revenue; otherwise additional segments are added until the threshold is reached even if they do not individually pass a 10% test. The remainder may be combined as 'all other segments', with revenue sources described.",
+        ),
+        keyPoints: [
+          text(
+            "في اختبار الإيراد استخدم الإيراد الخارجي وبين القطاعات، لكن في اختبار 75% استخدم الإيراد الخارجي فقط.",
+            "Use external and intersegment revenue for the revenue test, but external revenue only for the 75% coverage test.",
+          ),
+          text(
+            "اختبار الربح أو الخسارة يعتمد القيمة المطلقة والمقام الأكبر؛ لا تصفّر القطاعات الخاسرة.",
+            "The profit-or-loss test uses absolute amounts and the larger denominator; do not net loss-making segments to zero.",
+          ),
+          text(
+            "يمكن استمرار عرض قطاع كان قابلًا للتقرير سابقًا إذا ظل مهمًا في تقدير الإدارة.",
+            "A previously reportable segment may continue to be shown when management judges it remains significant.",
+          ),
+        ],
+        reference: "IFRS 8.13–19",
+      },
+      {
+        title: text("القياس والإفصاح والمصالحات", "Measurement, disclosures and reconciliations"),
+        explanation: text(
+          "تعرض المنشأة مقياس الربح أو الخسارة لكل قطاع قابل للتقرير وفق المقياس المقدم إلى متخذ القرار التشغيلي، وتعرض الأصول والالتزامات إذا كانت تقدم له بانتظام. كما تكشف أساس القياس والفروق عن سياسات القوائم، وتُجري مصالحات بين مجموع إيرادات وربح أو خسارة وأصول والتزامات القطاعات وبين أرقام المنشأة. مبالغ الإيراد والمصروف المحددة في الفقرة 23 تفصح إذا كانت داخلة في مقياس الربح الذي يراجعه متخذ القرار أو تقدم إليه بانتظام؛ ولا يعني ذلك نسخ كل بند من قائمة الربح أو الخسارة لكل قطاع. وتضاف إفصاحات على مستوى المنشأة عن المنتجات والخدمات والمناطق الجغرافية والعملاء الرئيسيين متى انطبقت.",
+          "The entity reports a profit-or-loss measure for each reportable segment using the measure reported to the CODM, and reports assets and liabilities when regularly provided to the CODM. It explains the measurement basis and differences from financial-statement policies, and reconciles total segment revenue, profit or loss, assets and liabilities to entity amounts. Paragraph 23's specified income and expense amounts are disclosed when included in the segment profit measure reviewed by the CODM or otherwise regularly provided; this does not require copying every income-statement line for every segment. Entity-wide disclosures about products and services, geography and major customers are added when applicable.",
+        ),
+        keyPoints: [
+          text(
+            "الإدارة الداخلية تحدد مقياس القطاع، لكن المصالحة تمنع انفصاله عن القوائم المالية.",
+            "Internal management reporting determines the segment measure, but reconciliation anchors it to the financial statements.",
+          ),
+          text(
+            "قيّم أهمية معلومات الدخل والمصروف في سياق القوائم ككل، مع مراعاة الطبيعة والحجم وعدم إخفاء المعلومات بالتجميع.",
+            "Assess material income and expense information in the context of the financial statements as a whole, considering nature, magnitude and obscuring aggregation.",
+          ),
+          text(
+            "افصح عن الاعتماد على عميل خارجي يساوي 10% أو أكثر من الإيراد دون وجوب تسمية العميل.",
+            "Disclose reliance on an external customer representing 10% or more of revenue without necessarily naming the customer.",
+          ),
+        ],
+        reference: "IFRS 8.20–34; IFRIC agenda decision (July 2024, updated January 2026)",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("تحديد القطاعات القابلة للتقرير", "Identifying reportable segments"),
+        facts: text(
+          "تعرض الإدارة أربعة قطاعات: ألف بإيراد إجمالي 500 وربح 80 وأصول 400 وإيراد خارجي 420؛ باء 260 وربح 20 وأصول 180 وإيراد خارجي 230؛ جيم 120 وخسارة 35 وأصول 90 وإيراد خارجي 100؛ دال 70 وربح 5 وأصول 30 وإيراد خارجي 50. لا توجد قطاعات أخرى، والأرقام بالملايين.",
+          "Management reviews four segments: A has total revenue 500, profit 80, assets 400 and external revenue 420; B has 260, profit 20, assets 180 and external revenue 230; C has 120, loss 35, assets 90 and external revenue 100; D has 70, profit 5, assets 30 and external revenue 50. There are no other segments; amounts are in millions.",
+        ),
+        calculations: [
+          text(
+            "حد الإيراد = 10% × (500 + 260 + 120 + 70) = 95؛ فتنجح ألف وباء وجيم.",
+            "Revenue threshold = 10% × (500 + 260 + 120 + 70) = 95; A, B and C pass.",
+          ),
+          text(
+            "مجموع أرباح القطاعات الرابحة = 105، ومجموع الخسائر المطلقة = 35؛ المقام الأكبر 105، وحد الاختبار 10.5. تنجح ألف وباء وجيم بالقيمة المطلقة.",
+            "Total profit of profitable segments = 105 and absolute losses = 35; the larger denominator is 105, so the threshold is 10.5. A, B and C pass on an absolute basis.",
+          ),
+          text(
+            "حد الأصول = 10% × 700 = 70؛ فتنجح ألف وباء وجيم أيضًا، بينما لا ينجح دال في أي اختبار.",
+            "Asset threshold = 10% × 700 = 70; A, B and C also pass, while D passes none of the tests.",
+          ),
+          text(
+            "تغطية الإيراد الخارجي للقطاعات ألف وباء وجيم = (420 + 230 + 100) ÷ 800 = 93.75%، أعلى من 75%؛ فلا يلزم إضافة دال.",
+            "External-revenue coverage for A, B and C = (420 + 230 + 100) ÷ 800 = 93.75%, above 75%; D need not be added.",
+          ),
+        ],
+        conclusion: text(
+          "تعرض ألف وباء وجيم كقطاعات قابلة للتقرير، ويمكن إدراج دال ضمن «القطاعات الأخرى» مع وصف مصادر إيراده ومصالحة المجاميع.",
+          "A, B and C are reportable; D may be included in 'all other segments', with its revenue sources described and totals reconciled.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 8.13–16",
+      },
+    ],
+  },
+  "IAS 24": {
+    sections: [
+      {
+        title: text(
+          "لماذا نكشف ومن هو الشخص ذو العلاقة؟",
+          "Why disclose and which people are related?",
+        ),
+        explanation: text(
+          "قد تتأثر نتيجة المنشأة ومركزها المالي بعلاقة طرف ذي علاقة حتى دون وقوع معاملة، لأن العلاقة قد تغير قرارات التسعير أو الشراء أو التمويل. يكون الشخص أو أحد أفراد أسرته المقربين طرفًا ذا علاقة إذا كان يسيطر أو يشارك في السيطرة على المنشأة المعدة للتقرير، أو يملك تأثيرًا جوهريًا عليها، أو كان من أفراد الإدارة العليا للمنشأة أو لشركتها الأم. أفراد الأسرة المقربون هم من المتوقع أن يؤثروا في الشخص أو يتأثروا به في تعاملاتهم مع المنشأة، ويشملون على الأقل الأبناء والزوج أو الشريك وأبناء الزوج أو الشريك والمعالين.",
+          "An entity's profit and financial position may be affected by a related-party relationship even without a transaction because the relationship can influence pricing, purchasing or financing decisions. A person, or a close family member, is related when the person controls or jointly controls the reporting entity, has significant influence over it, or is a member of key management personnel of the entity or its parent. Close family members are those expected to influence, or be influenced by, that person in dealings with the entity and include at least children, spouse or domestic partner, their children and dependants.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر السيطرة والسيطرة المشتركة والتأثير الجوهري والإدارة العليا كلًا على حدة.",
+            "Test control, joint control, significant influence and key management separately.",
+          ),
+          text(
+            "وسّع الفحص إلى أفراد الأسرة المقربين والمنشآت التي يسيطرون عليها أو يؤثرون فيها.",
+            "Extend the review to close family members and entities they control or influence.",
+          ),
+          text(
+            "أفصح عن علاقة الأم والمسيطر النهائي حتى إذا لم تحدث معاملات خلال الفترة.",
+            "Disclose the parent and ultimate controlling party relationship even when no transactions occurred.",
+          ),
+        ],
+        reference: "IAS 24.1–9, 13",
+      },
+      {
+        title: text(
+          "العلاقات بين المنشآت وما لا يصنع علاقة تلقائيًا",
+          "Entity relationships and what is not automatically related",
+        ),
+        explanation: text(
+          "تشمل المنشآت ذات العلاقة أعضاء المجموعة نفسها، والمنشأة الزميلة أو المشروع المشترك للطرف الآخر، والمنشآت التي تكون مشروعات مشتركة لطرف ثالث، والعلاقة بين مشروع مشترك ومنشأة زميلة للطرف الثالث، وخطط منافع ما بعد الخدمة للعاملين، والمنشآت التي يسيطر عليها شخص ذو علاقة، وبعض علاقات الإدارة العليا أو خدماتها. في المقابل لا تنشأ العلاقة تلقائيًا لمجرد وجود مدير مشترك، أو لأن منشأتين مشاركتان في مشروع مشترك، أو بسبب التعامل مع بنك أو نقابة أو مرفق عام أو جهة حكومية في المسار العادي، أو بسبب الاعتماد الاقتصادي على عميل أو مورد كبير وحده. الحكم يتبع جوهر العلاقة لا شكلها القانوني.",
+          "Related entities include members of the same group, an associate or joint venture of the other entity, entities that are joint ventures of the same third party, a joint venture and associate of the same third party, employee post-employment benefit plans, entities controlled by a related person, and specified key-management or management-service relationships. Conversely, a relationship does not arise automatically merely from a common director, two joint venturers, ordinary dealings with a bank, union, utility or government body, or economic dependence on a major customer or supplier alone. Judgement follows the relationship's substance, not only its legal form.",
+        ),
+        keyPoints: [
+          text(
+            "ارسم خريطة ملكية وتأثير تشمل المجموعة والزملاء والمشروعات المشتركة والأشخاص المؤثرين.",
+            "Map ownership and influence across the group, associates, joint ventures and influential people.",
+          ),
+          text(
+            "لا تخلط بين الاعتماد الاقتصادي والتأثير الجوهري أو السيطرة.",
+            "Do not confuse economic dependence with significant influence or control.",
+          ),
+          text(
+            "حدّث السجل عند تغير مجلس الإدارة أو الملكية أو هيكل المجموعة.",
+            "Update the register when the board, ownership or group structure changes.",
+          ),
+        ],
+        reference: "IAS 24.9–12",
+      },
+      {
+        title: text(
+          "مصفوفة الإفصاح والتعويضات والأرصدة",
+          "Disclosure matrix, compensation and balances",
+        ),
+        explanation: text(
+          "معاملة الطرف ذي العلاقة هي نقل موارد أو خدمات أو التزامات سواء فُرض سعر أم لا. إذا حدثت معاملات، تفصح المنشأة عن طبيعة العلاقة ومعلومات تكفي لفهم أثرها: مبلغ المعاملات، الأرصدة والالتزامات القائمة وشروطها وضماناتها، مخصص الديون المشكوك فيها والمصروف المعترف به للديون المعدومة أو المشكوك فيها. تُعرض المعلومات حسب فئات مثل الأم والمنشآت ذات السيطرة أو التأثير المشترك، والتابعة والزميلة والمشروعات المشتركة والإدارة العليا والأطراف الأخرى. كما يفصح إجمالي تعويض الإدارة العليا موزعًا إلى المنافع القصيرة، وما بعد الخدمة، وطويلة الأجل الأخرى، وإنهاء الخدمة، والمدفوعات على أساس الأسهم.",
+          "A related-party transaction is a transfer of resources, services or obligations whether or not a price is charged. When transactions occur, the entity discloses the relationship and information sufficient to understand its effect: transaction amounts, outstanding balances and commitments, their terms and guarantees, doubtful-debt provisions and recognised bad- or doubtful-debt expense. Information is presented by categories such as the parent, entities with joint control or significant influence, subsidiaries, associates, joint ventures, key management and other related parties. Total key-management compensation is also split into short-term, post-employment, other long-term, termination and share-based payment categories.",
+        ),
+        keyPoints: [
+          text(
+            "اجمع العقود غير المسعرة والخدمات المجانية والضمانات والالتزامات، لا الفواتير فقط.",
+            "Capture unpriced contracts, free services, guarantees and commitments, not only invoices.",
+          ),
+          text(
+            "لا تقل إن الشروط مماثلة للسوق إلا إذا أمكن إثبات ذلك.",
+            "Do not state that terms are at arm's length unless the claim can be substantiated.",
+          ),
+          text(
+            "تُفصح المعاملات داخل المجموعة في القوائم المنفصلة ذات الصلة، ثم تُلغى في القوائم الموحدة.",
+            "Intragroup transactions are disclosed in relevant separate statements and eliminated in consolidated statements.",
+          ),
+        ],
+        reference: "IAS 24.17–24",
+      },
+      {
+        title: text(
+          "الإعفاء الجزئي للجهات الحكومية وضبط الاكتمال",
+          "Partial government-related exemption and completeness controls",
+        ),
+        explanation: text(
+          "يعطي IAS 24 إعفاءً جزئيًا من تفاصيل المعاملات والأرصدة عندما تكون العلاقة ناشئة لأن حكومة تسيطر أو تشترك في السيطرة أو تؤثر جوهريًا على الطرفين. لكنه لا يلغي الإفصاح: تُذكر الجهة الحكومية وطبيعة العلاقة، وتعرض كل معاملة جوهرية منفردة ومؤشرًا نوعيًا أو كميًا لغيرها من المعاملات المهمة مجتمعة. عمليًا يبدأ ضبط الاكتمال بإقرارات دورية من أعضاء الإدارة العليا، وسجل مركزي للأطراف، ومطابقة أسماء العملاء والموردين والمقرضين والضمانات والعقود مع السجل، ثم مراجعة المعاملات غير المعتادة قرب نهاية الفترة.",
+          "IAS 24 provides a partial exemption from detailed transaction and balance disclosures when the relationship arises because a government controls, jointly controls or significantly influences both parties. It does not remove disclosure entirely: the government and nature of the relationship are identified, each individually significant transaction is reported, and a qualitative or quantitative indication is given for other collectively significant transactions. In practice, completeness controls begin with periodic key-management declarations, a central party register, matching customer, supplier, lender, guarantee and contract names to that register, and reviewing unusual transactions near period end.",
+        ),
+        keyPoints: [
+          text(
+            "وثّق لماذا ينطبق الإعفاء وحدد المعاملات الجوهرية فرديًا أو جماعيًا.",
+            "Document why the exemption applies and identify individually or collectively significant transactions.",
+          ),
+          text(
+            "اجعل إقرار تعارض المصالح جزءًا من دورة الإقفال لا إجراءً سنويًا متأخرًا.",
+            "Make conflict-of-interest declarations part of the close cycle, not a late annual exercise.",
+          ),
+          text(
+            "راجع الأرصدة الصفرية أيضًا؛ فقد توجد علاقة أو التزام أو ضمان يحتاج إلى إفصاح.",
+            "Review zero balances too; a relationship, commitment or guarantee may still require disclosure.",
+          ),
+        ],
+        reference: "IAS 24.25–27",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قرض لشركة يسيطر عليها قريب من الإدارة العليا",
+          "Loan to an entity controlled by a close family member of key management",
+        ),
+        facts: text(
+          "المدير التنفيذي عضو في الإدارة العليا للشركة ألف. تسيطر زوجته على الشركة باء. منحت ألف باء في 1 يوليو قرضًا قدره 1,000,000 بفائدة سنوية 3%، بينما تبلغ فائدة قرض مماثل في السوق 8%. تستحق الفائدة سنويًا ولم يُسدد شيء حتى 31 ديسمبر. يفترض المثال أن القرض يقاس وفق IFRS 9 وأن الفائدة التعاقدية مستحقة بالكامل.",
+          "The chief executive is key management of Company A. The executive's spouse controls Company B. On 1 July, A lends B 1,000,000 at 3% annual interest while a comparable market loan bears 8%. Interest is due annually and nothing is paid by 31 December. The example assumes the loan is measured under IFRS 9 and all contractual interest has accrued.",
+        ),
+        calculations: [
+          text(
+            "باء طرف ذو علاقة لأن فردًا قريبًا من عضو الإدارة العليا يسيطر عليها.",
+            "B is related because a close family member of A's key management controls it.",
+          ),
+          text(
+            "الفائدة التعاقدية لنصف سنة = 1,000,000 × 3% × 6÷12 = 15,000.",
+            "Contractual interest for six months = 1,000,000 × 3% × 6÷12 = 15,000.",
+          ),
+          text(
+            "مؤشر منفعة التسعير مقارنة بالسوق = 1,000,000 × (8% − 3%) × 6÷12 = 25,000، لكنه لا يغني عن تطبيق القياس الفعلي في IFRS 9.",
+            "An indicator of the pricing benefit versus market = 1,000,000 × (8% − 3%) × 6÷12 = 25,000, but it does not replace the required IFRS 9 measurement.",
+          ),
+          text(
+            "إفصاح IAS 24 يذكر طبيعة العلاقة، مبلغ القرض، المعاملة وشروطها وسعر الفائدة والرصيد والفائدة المستحقة وأي ضمان أو مخصص خسارة ائتمانية.",
+            "IAS 24 disclosure describes the relationship, loan amount, transaction and terms, interest rate, outstanding balance and interest, and any guarantee or credit-loss allowance.",
+          ),
+        ],
+        conclusion: text(
+          "لا يجوز وصف القرض بأنه بشروط السوق لأن فرق الفائدة يناقض ذلك. القياس والإيراد والخسارة الائتمانية تتبع IFRS 9، بينما يضمن IAS 24 شفافية العلاقة والشروط والأرصدة.",
+          "The loan cannot be described as arm's length because the rate difference contradicts that claim. Measurement, income and credit loss follow IFRS 9; IAS 24 ensures transparency about the relationship, terms and balances.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "إثبات الفائدة التعاقدية لنصف السنة",
+              "Record six months' contractual interest",
+            ),
+            debit: text("فائدة مستحقة القبض", "Interest receivable"),
+            credit: text("إيراد فائدة", "Interest income"),
+            amount: text("15,000", "15,000"),
+          },
+        ],
+        reference: "IAS 24.9, 18–23; IFRS 9",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
