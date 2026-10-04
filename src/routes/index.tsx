@@ -722,7 +722,7 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
             onClick={playClick}
             className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-xs font-bold text-[#1C1B19] shadow-lg shadow-[#4A3023]/40 transition-all hover:scale-105"
           >
-            <Sparkles className="size-4" />
+            <FileText className="size-4" />
             {lang === "ar" ? "اطلب خدمة" : "Request Service"}
             {lang === "ar" ? (
               <ArrowLeft className="size-3.5" />
@@ -786,7 +786,7 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
                   onClick={() => setMobileOpen(false)}
                   className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2.5 text-sm font-bold text-[#1C1B19]"
                 >
-                  <Sparkles className="size-4" />
+                  <FileText className="size-4" />
                   {lang === "ar" ? "اطلب خدمة" : "Request Service"}
                 </RouterLink>
               </li>
