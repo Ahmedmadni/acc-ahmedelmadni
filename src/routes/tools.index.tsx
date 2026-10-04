@@ -35,7 +35,7 @@ import {
   Scissors,
   Search,
   ShieldCheck,
-  Sparkles,
+  LayoutGrid,
   TrendingDown,
   TrendingUp,
   Users,
@@ -601,7 +601,7 @@ function ToolsPage() {
               />
             </div>
             <div className="flex items-center gap-3 text-sm text-[#A9A29A]">
-              <Sparkles className="size-4 text-[#C7A77F]" />
+              <LayoutGrid className="size-4 text-[#C7A77F]" />
               <span>
                 {lang === "ar" ? "عرض" : "Showing"}{" "}
                 <span className="font-extrabold text-[#F5F1E8]">{filtered.length}</span>{" "}

@@ -1,7 +1,7 @@
 import { DefaultChatTransport } from "ai";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { Send, Sparkles, X } from "lucide-react";
+import { Send, Bot, X } from "lucide-react";
 import { playClick, playHover } from "@/lib/sound";
 import mascotImg from "@/assets/ai-mascot.webp";
 import type { Lang } from "@/lib/i18n";
@@ -229,7 +229,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                 {messages.length === 0 && (
                   <div className="mt-2 rounded-2xl border border-[#A88765]/20 bg-white/[0.04] p-4 text-sm text-white/85">
                     <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#A88765]/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#c9a986]">
-                      <Sparkles className="size-3" />
+                      <Bot className="size-3" />
                       {lang === "ar" ? "مرحباً" : "Welcome"}
                     </div>
                     {/* Sets the expectation up front — Saudi dialect, and

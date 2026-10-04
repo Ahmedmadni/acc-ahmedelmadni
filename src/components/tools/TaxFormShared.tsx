@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import {
   Download,
   FileSpreadsheet,
-  Sparkles,
+  Bot,
   Save,
   Archive,
   Info,
@@ -123,7 +123,7 @@ export function ActionsBar({
           {explaining ? (
             <Loader2 className="size-3.5 animate-spin" />
           ) : (
-            <Sparkles className="size-3.5" />
+            <Bot className="size-3.5" />
           )}
           {lang === "ar" ? "اشرح بالذكاء الاصطناعي" : "AI Explanation"}
         </button>
@@ -353,7 +353,7 @@ export function ExplanationPanel({ text, lang }: { text: string | null; lang: La
   return (
     <div className="mt-4 rounded-xl border border-emerald-400/30 bg-emerald-400/5 p-4">
       <h4 className="mb-2 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-200">
-        <Sparkles className="size-4" />
+        <Bot className="size-4" />
         {lang === "ar" ? "شرح الذكاء الاصطناعي" : "AI Explanation"}
       </h4>
       <div className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]">

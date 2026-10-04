@@ -10,7 +10,7 @@ import {
   Scale,
   Search,
   ShieldCheck,
-  Sparkles,
+
 } from "lucide-react";
 import {
   IFRS_NAVIGATOR_URL,
@@ -259,7 +259,7 @@ function StandardsPage() {
           <>
             <section className="mx-auto mt-8 max-w-6xl">
               <div className="mb-4 flex items-center gap-2">
-                <Sparkles className="size-5 text-[#c9a986]" />
+                <Scale className="size-5 text-[#c9a986]" />
                 <h3 className="font-display text-lg font-extrabold text-[#FCFBF9]">
                   {lang === "ar" ? "تغييرات مهمة أمامك" : "Key changes ahead"}
                 </h3>

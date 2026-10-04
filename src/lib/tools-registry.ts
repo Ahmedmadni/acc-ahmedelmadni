@@ -711,7 +711,7 @@ export const TOOLS: ToolMeta[] = [
   {
     id: "office-ai",
     category: "excel",
-    icon: "Sparkles",
+    icon: "FileSpreadsheet",
     title: { ar: "مساعد Excel & Office الذكي", en: "Excel & Office AI Assistant" },
     short: {
       ar: "اسأل عن أي دالة Excel أو اشرح مشكلتك بلغتك، واحصل على صيغة جاهزة + شرح + كود VBA.",

@@ -44,7 +44,6 @@ import {
   Quote,
   Share2,
   ShieldCheck,
-  Sparkles,
   Star,
   Target,
   TrendingUp,
@@ -1009,7 +1008,7 @@ function Hero({ lang }: { lang: Lang }) {
             className="order-1 mb-5 inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-[#1C1B19]/45 px-3.5 py-1.5 text-[12px] font-semibold tracking-[0.01em] text-[#e9d9c3]/90 backdrop-blur-md"
 
           >
-            <Sparkles className="size-3.5 text-[#A88765]" />
+            <Star className="size-3.5 text-[#A88765]" />
             {t.hero.badge[lang]}
           </motion.div>
 

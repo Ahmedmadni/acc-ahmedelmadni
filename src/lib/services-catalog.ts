@@ -12,7 +12,7 @@ import {
   MessagesSquare,
   PieChart,
   ShieldCheck,
-  Sparkles,
+  ReceiptText,
   Star,
   Target,
   TrendingUp,
@@ -281,7 +281,7 @@ export const SERVICES_CATALOG: ServiceEntry[] = [
   {
     id: "e-invoicing",
     formGroup: "vat",
-    icon: Sparkles,
+    icon: ReceiptText,
     titleAr: "الفاتورة الإلكترونية",
     titleEn: "E-Invoicing",
     descAr: "تأهيل زاتكا للفوترة الإلكترونية.",

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { Link as RouterLink } from "@tanstack/react-router";
-import { Sparkles, X } from "lucide-react";
+import { BadgeCheck, X } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 
 export type ServiceItem = (typeof t.services.items)[number];
@@ -84,7 +84,7 @@ export default function ServiceModal({
           <X className="size-4" />
         </button>
         <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#A88765]/15 px-3 py-1 text-xs font-bold text-[#c9a986]">
-          <Sparkles className="size-3.5" />
+          <BadgeCheck className="size-3.5" />
           {lang === "ar" ? "خدمة" : "Service"}
         </div>
         <h3

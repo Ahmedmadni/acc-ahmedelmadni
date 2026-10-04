@@ -1,7 +1,7 @@
 import { Link as RouterLink } from "@tanstack/react-router";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { Handshake, Sparkles, ArrowUpRight } from "lucide-react";
+import { Handshake, ArrowUpRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { playClick, playHover } from "@/lib/sound";
 import odooLogo from "@/assets/software/Odoo.png";
@@ -283,7 +283,7 @@ export default function PartnersSection({ lang }: { lang: Lang }) {
                   من تسجيل المعاملات اليومية والتسويات إلى إعداد التقارير المالية والإقرارات الضريبية، نقدم الدعم
                   المحاسبي عبر مجموعة من الأنظمة والمنصات المحاسبية.
                   <span className="mt-5 flex items-center gap-2 font-bold text-[#f3d28a]">
-                    <Sparkles className="size-4" />
+                    <Handshake className="size-4" />
                     اختر البرنامج المناسب واطلب استشارتك.
                   </span>
                 </>
@@ -292,7 +292,7 @@ export default function PartnersSection({ lang }: { lang: Lang }) {
                   From day-to-day bookkeeping and reconciliations to financial reporting and tax support, I work across
                   the accounting platforms businesses use to keep their finances moving.
                   <span className="mt-5 flex items-center gap-2 font-bold text-[#f3d28a]">
-                    <Sparkles className="size-4" />
+                    <Handshake className="size-4" />
                     Choose a platform and request your advisory.
                   </span>
                 </>
