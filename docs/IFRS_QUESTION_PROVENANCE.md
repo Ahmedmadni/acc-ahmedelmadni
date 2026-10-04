@@ -1,6 +1,6 @@
 # IFRS/IAS question provenance and review
 
-The local bank currently contains 1,117 practice questions across 43 full IFRS/IAS Standards. The `reference` field describes the accounting topic or technical basis; it is **not** evidence that the wording, options, and answer key were copied from that source.
+The local bank currently contains 1,158 practice questions across 43 full IFRS/IAS Standards. The `reference` field describes the accounting topic or technical basis; it is **not** evidence that the wording, options, and answer key were copied from that source.
 
 | Existing group                     | Count | Provenance status                                             |
 | ---------------------------------- | ----: | ------------------------------------------------------------- |
@@ -8,9 +8,9 @@ The local bank currently contains 1,117 practice questions across 43 full IFRS/I
 | Phase 8 enrichment questions       |   215 | Generated from this site's worked cases                       |
 | Phase 9 applied questions          |    42 | Original applied scenarios                                    |
 | Earlier questions                  |   540 | Site/legacy wording; no question-level verbatim source record |
-| Verbatim source-verified questions |     0 | None yet                                                      |
+| Verbatim source-verified questions |    41 | Reviewed wording, choices and answer key                      |
 
-No ready-to-import, source-verified four-option bank for full IFRS/IAS Standards was identified in the materials reviewed. The [IFRS Foundation's IFRS 16 illustrative examples](https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2026/issued/ifrs16-ie.html) are first-party worked cases, not MCQs. IFRS for SMEs module quizzes must not be relabelled as full IFRS/IAS questions. Historical exam questions require a version and applicability check before reuse. Public-facing references cite the IFRS Foundation.
+The 41 source-verified items preserve reviewed question wording, choices and answer keys, with a faithful Arabic translation and an IFRS/IAS technical citation. IFRS for SMEs module quizzes must not be relabelled as full IFRS/IAS questions. Historical questions require a version and applicability check before reuse. Public-facing references cite the IFRS Foundation.
 
 ## Current review boundary
 
