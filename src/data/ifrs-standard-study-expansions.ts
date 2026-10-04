@@ -4928,6 +4928,550 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
       },
     ],
   },
+  "IFRS 17": {
+    sections: [
+      {
+        title: text("النطاق وفصل المكونات", "Scope and separation of components"),
+        explanation: text(
+          "يطبق IFRS 17 على عقود التأمين الصادرة، وعقود إعادة التأمين المحتفظ بها، وبعض عقود الاستثمار ذات ميزات المشاركة الاختيارية. يبدأ التحليل بتحديد ما إذا كان العقد ينقل خطر تأمين جوهريًا، ثم تُفصل المشتقات الضمنية والمكونات الاستثمارية والتزامات الأداء المتميزة عندما تستوفي شروط الفصل، وتطبق عليها المعايير المناسبة. لا يكفي أن يسمى المنتج وثيقة تأمين؛ فجوهر الخطر والحقوق والالتزامات هو الحاكم.",
+          "IFRS 17 applies to issued insurance contracts, reinsurance contracts held and specified investment contracts with discretionary participation features. Analysis starts by determining whether the contract transfers significant insurance risk, then separating embedded derivatives, investment components and distinct performance obligations when separation criteria are met and applying the relevant Standards to them. A product label is not decisive; the substance of risk, rights and obligations governs.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر الخطر التأميني على أساس السيناريوهات ذات الجوهر التجاري، لا متوسط النتيجة وحده.",
+            "Test insurance risk using scenarios with commercial substance, not only the average outcome.",
+          ),
+          text(
+            "افصل المكون فقط عندما يطلب المعيار ذلك؛ الفصل غير الصحيح يشوه الإيراد والالتزام.",
+            "Separate a component only when required; incorrect separation distorts revenue and the liability.",
+          ),
+          text(
+            "ميّز بين العقود الصادرة وإعادة التأمين المحتفظ بها لأن التجميع والقياس لا يتطابقان تمامًا.",
+            "Distinguish issued contracts from reinsurance held because grouping and measurement are not identical.",
+          ),
+        ],
+        reference: "IFRS 17.3–13 and Appendix A",
+      },
+      {
+        title: text("التجميع والاعتراف", "Grouping and recognition"),
+        explanation: text(
+          "تقسم المحفظة إلى مجموعات لا تضم عقودًا صادرة بفاصل يزيد على سنة، وتفصل على الأقل العقود الخاسرة عند الاعتراف الأولي، والعقود التي لا يوجد احتمال جوهري لأن تصبح خاسرة، والعقود الأخرى. يُعترف بالمجموعة من أسبق تواريخ: بداية فترة التغطية، أو استحقاق أول دفعة من حامل الوثيقة، أو التاريخ الذي تصبح فيه المجموعة خاسرة. يمنع هذا التجميع تعويض خسائر عقود ضعيفة بأرباح عقود أخرى على نحو يخفي الأداء.",
+          "A portfolio is divided into groups that do not include contracts issued more than one year apart and that distinguish, at a minimum, contracts onerous at initial recognition, contracts with no significant possibility of becoming onerous and remaining contracts. A group is recognised at the earliest of the coverage-period start, the date the first policyholder payment becomes due, and the date the group becomes onerous. This grouping prevents losses on weak contracts being obscured by profits on other contracts.",
+        ),
+        keyPoints: [
+          text(
+            "حدد المحافظ بحسب أخطار متشابهة تدار معًا قبل تقسيم الربحية.",
+            "Identify portfolios of similar risks managed together before profitability grouping.",
+          ),
+          text(
+            "لا تنقل العقود بين المجموعات بعد الاعتراف الأولي لمجرد تغير التقديرات.",
+            "Do not move contracts between groups after initial recognition merely because estimates change.",
+          ),
+          text(
+            "العقود الخاسرة تولد خسارة فورية ومكون خسارة؛ لا تنشئ هامش خدمة تعاقدية موجبًا.",
+            "Onerous contracts create an immediate loss and loss component; they do not create a positive CSM.",
+          ),
+        ],
+        reference: "IFRS 17.14–28",
+      },
+      {
+        title: text("القياس العام وهامش الخدمة", "General measurement and the CSM"),
+        explanation: text(
+          "في نموذج القياس العام تساوي قيمة المجموعة تدفقات الوفاء مضافًا إليها هامش الخدمة التعاقدية. تدفقات الوفاء تشمل تقديرًا حاليًا غير متحيز مرجحًا بالاحتمالات للتدفقات المستقبلية، وتعديل القيمة الزمنية والمخاطر المالية، وتعديلًا صريحًا للمخاطر غير المالية. يمنع هامش الخدمة إثبات ربح اليوم الأول للمجموعة المربحة، ثم يحرر في الربح أو الخسارة مع تقديم خدمات عقود التأمين وفق وحدات التغطية. أما الخسارة في المجموعة الخاسرة فتثبت فورًا.",
+          "Under the general measurement model, a group's carrying amount comprises fulfilment cash flows plus the contractual service margin. Fulfilment cash flows include current, unbiased, probability-weighted estimates of future cash flows, adjustments for time value and financial risk, and an explicit risk adjustment for non-financial risk. The CSM prevents day-one profit for a profitable group and is then released to profit or loss as insurance contract services are provided using coverage units. A loss on an onerous group is recognised immediately.",
+        ),
+        keyPoints: [
+          text(
+            "حدّث الافتراضات في كل تاريخ تقرير واستخدم معلومات معقولة ومؤيدة متاحة دون تكلفة أو جهد لا مبرر لهما.",
+            "Update assumptions at each reporting date using reasonable and supportable information available without undue cost or effort.",
+          ),
+          text(
+            "افصل أثر الخدمة المستقبلية الذي يعدل CSM عن أثر الخدمة الحالية أو الماضية الذي يمر بالنتيجة.",
+            "Separate future-service effects that adjust the CSM from current- or past-service effects recognised in results.",
+          ),
+          text(
+            "يجوز نهج تخصيص الأقساط للعقود المؤهلة، لكنه تبسيط للقياس وليس إعفاءً من التجميع أو عرض المطالبات.",
+            "The premium allocation approach is available for eligible contracts, but is a measurement simplification, not an exemption from grouping or claims presentation.",
+          ),
+        ],
+        reference: "IFRS 17.29–59 and B36–B119",
+      },
+      {
+        title: text("العرض والإفصاح والانتقال", "Presentation, disclosure and transition"),
+        explanation: text(
+          "يعرض IFRS 17 إيراد التأمين ومصروفات خدمة التأمين منفصلين عن دخل أو مصروف تمويل التأمين، ولا يعامل تحصيل الأقساط أو سداد المكون الاستثماري كإيراد أو مصروف تأمين. يمكن للمنشأة اختيار عرض كامل دخل ومصروف التمويل في الربح أو الخسارة أو تفكيك جزء منه إلى الدخل الشامل الآخر وفق السياسة المسموح بها. تشمل الإفصاحات مصالحات أرصدة العقود وCSM ومكون الخسارة، والأحكام الجوهرية، وطبيعة ومدى المخاطر. الانتقال بأثر رجعي كامل ما لم يكن غير عملي، وعندها يستخدم الأثر الرجعي المعدل أو منهج القيمة العادلة.",
+          "IFRS 17 presents insurance revenue and insurance service expenses separately from insurance finance income or expenses, and does not treat premium receipts or repayments of investment components as insurance revenue or expense. An entity may present all insurance finance income or expense in profit or loss or, where permitted, disaggregate a portion into OCI. Disclosures include reconciliations of contract balances, the CSM and loss components, significant judgements, and the nature and extent of risks. Transition is fully retrospective unless impracticable, in which case the modified retrospective or fair value approach is used.",
+        ),
+        keyPoints: [
+          text(
+            "صالح الإيراد التأميني مع حركة التزام التغطية المتبقية بدل مساواته بالأقساط المحصلة.",
+            "Reconcile insurance revenue to movements in the liability for remaining coverage rather than equating it with premiums collected.",
+          ),
+          text(
+            "احتفظ بسجل منفصل لخدمة التأمين وتمويل التأمين والمكونات الاستثمارية.",
+            "Maintain separate ledgers for insurance service, insurance finance and investment components.",
+          ),
+          text(
+            "وثق سبب تعذر الأثر الرجعي الكامل قبل اختيار منهج انتقال بديل.",
+            "Document why full retrospective application is impracticable before selecting an alternative transition approach.",
+          ),
+        ],
+        reference: "IFRS 17.78–132 and Appendix C",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "مجموعة عقود خاسرة عند الاعتراف الأولي",
+          "Onerous group at initial recognition",
+        ),
+        facts: text(
+          "أصدرت شركة تأمين مجموعة عقود لمدة سنة. القيمة الحالية للأقساط المستقبلية المتوقعة 1,000,000، والقيمة الحالية للمطالبات والمصروفات المستقبلية 1,050,000، وتعديل المخاطر غير المالية 100,000. نهمل أثر التمويل الإضافي، ولم تُستلم الأقساط بعد.",
+          "An insurer issues a one-year group of contracts. The present value of expected future premiums is 1,000,000, the present value of future claims and expenses is 1,050,000, and the risk adjustment for non-financial risk is 100,000. Additional finance effects are ignored and premiums have not yet been received.",
+        ),
+        calculations: [
+          text(
+            "صافي التدفقات النقدية المستقبلية = 1,050,000 − 1,000,000 = تدفق خارج 50,000.",
+            "Net future cash flows = 1,050,000 − 1,000,000 = 50,000 net outflow.",
+          ),
+          text(
+            "تدفقات الوفاء = 50,000 + تعديل مخاطر 100,000 = التزام 150,000.",
+            "Fulfilment cash flows = 50,000 + 100,000 risk adjustment = 150,000 liability.",
+          ),
+          text(
+            "لأن تدفقات الوفاء التزام صافي، فالمجموعة خاسرة: CSM = صفر والخسارة الفورية = 150,000.",
+            "Because fulfilment cash flows are a net liability, the group is onerous: CSM is zero and the immediate loss is 150,000.",
+          ),
+        ],
+        conclusion: text(
+          "تثبت الخسارة عند الاعتراف الأولي ولا تؤجل داخل CSM. ويُتتبع مبلغ 150,000 كمكون خسارة داخل التزام التغطية المتبقية لتخصيص التغيرات اللاحقة بصورة صحيحة.",
+          "The loss is recognised at initial recognition and is not deferred in the CSM. The 150,000 is tracked as a loss component within the liability for remaining coverage so later changes are allocated correctly.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات خسارة المجموعة عند الاعتراف", "Recognise the group loss"),
+            debit: text("مصروف خدمة التأمين", "Insurance service expense"),
+            credit: text("التزام عقود التأمين", "Insurance contract liability"),
+            amount: text("150,000", "150,000"),
+          },
+        ],
+        reference: "IFRS 17.32–38 and 47–52",
+      },
+    ],
+  },
+  "IFRS 18": {
+    sections: [
+      {
+        title: text(
+          "الهدف والسريان والعلاقة مع IAS 1",
+          "Objective, effective date and IAS 1 transition",
+        ),
+        explanation: text(
+          "يحل IFRS 18 محل IAS 1 للفترات السنوية التي تبدأ في أو بعد 1 يناير 2027، مع السماح بالتطبيق المبكر. يحافظ على كثير من متطلبات القوائم الكاملة والمقارنات، لكنه يعيد تنظيم متطلبات العرض والإفصاح ويركز خصوصًا على قائمة الربح أو الخسارة. لا يغير المعيار قواعد الاعتراف والقياس الخاصة بالأصول والالتزامات؛ وإنما يغير موضع وطريقة تجميع وعرض بعض النتائج ومعلومات الأداء.",
+          "IFRS 18 replaces IAS 1 for annual periods beginning on or after 1 January 2027, with earlier application permitted. It retains many requirements for a complete set of financial statements and comparatives, but reorganises presentation and disclosure requirements and focuses especially on the statement of profit or loss. It does not change asset and liability recognition or measurement; it changes where and how specified results and performance information are aggregated and presented.",
+        ),
+        keyPoints: [
+          text(
+            "خطط للمقارنات لأن التطبيق بأثر رجعي وفق IAS 8 يحتاج إعادة عرض الفترة المقارنة.",
+            "Plan for comparatives because retrospective application under IAS 8 requires restating the comparative period.",
+          ),
+          text(
+            "حدّث مخطط الحسابات والتقارير الإدارية معًا حتى تتطابق مصادر التصنيف والمصالحة.",
+            "Update the chart of accounts and management reporting together so classification and reconciliation share consistent sources.",
+          ),
+          text(
+            "افصل أثر العرض عن أي تغيير قياس صادر من معيار آخر.",
+            "Separate presentation effects from measurement changes arising under another Standard.",
+          ),
+        ],
+        reference: "IFRS 18.1–18 and C1–C7",
+      },
+      {
+        title: text(
+          "فئات قائمة الربح أو الخسارة والمجاميع الجديدة",
+          "Profit-or-loss categories and new subtotals",
+        ),
+        explanation: text(
+          "يصنف الدخل والمصروف في فئات التشغيل والاستثمار والتمويل وضريبة الدخل والعمليات غير المستمرة. التشغيل فئة متبقية لكنها ليست مرادفًا للبنود المتكررة؛ فقد تضم بنودًا متقلبة أو غير معتادة. يطلب المعيار مجموعين محددين: الربح التشغيلي، والربح قبل التمويل وضريبة الدخل. وتوجد متطلبات خاصة للمنشآت التي يكون الاستثمار في أصول أو تقديم التمويل للعملاء نشاطًا رئيسيًا، لأن بعض البنود التي تكون استثمارية أو تمويلية لغيرها قد تصبح تشغيلية لديها.",
+          "Income and expenses are classified into operating, investing, financing, income tax and discontinued-operation categories. Operating is a residual category but is not synonymous with recurring items; it can include volatile or unusual items. The Standard requires two defined subtotals: operating profit and profit before financing and income taxes. Special rules apply when investing in assets or providing financing to customers is a main business activity, because items that would be investing or financing for other entities may be operating for those entities.",
+        ),
+        keyPoints: [
+          text(
+            "حدد الأنشطة الرئيسية على مستوى المنشأة المبلغة وبأدلة يمكن ملاحظتها، لا بمجرد رغبة الإدارة في عرض نتيجة أفضل.",
+            "Assess main business activities at reporting-entity level using observable evidence, not management preference for a better result.",
+          ),
+          text(
+            "لا تستخدم وصف غير متكرر لتبرير إخراج بند من التشغيل.",
+            "Do not use a non-recurring label to justify excluding an item from operating.",
+          ),
+          text(
+            "اربط كل حساب دخل أو مصروف بقاعدة تصنيف موثقة وقابلة للتطبيق على المقارنة.",
+            "Map every income and expense account to a documented classification rule applicable to the comparative period.",
+          ),
+        ],
+        reference: "IFRS 18.47–85 and B29–B76",
+      },
+      {
+        title: text("مقاييس الأداء المحددة من الإدارة", "Management-defined performance measures"),
+        explanation: text(
+          "مقياس الأداء المحدد من الإدارة هو مجموع فرعي للدخل والمصروف تستخدمه المنشأة في اتصالات عامة خارج القوائم لإبلاغ نظرة الإدارة لأداء المنشأة ككل، ولا يكون مجموعًا محددًا في IFRS. تجمع الإفصاحات الخاصة بهذه المقاييس في إيضاح واحد، وتشمل وصف سبب فائدتها وطريقة حسابها، ومصالحة مع أقرب مجموع محدد في IFRS، والأثر الضريبي وأثر حقوق غير المسيطرين لكل بند مصالحة، وشرح التغييرات من فترة لأخرى.",
+          "A management-defined performance measure is a subtotal of income and expenses used in public communications outside the financial statements to convey management's view of the entity's overall financial performance and is not a subtotal specified by IFRS. Related disclosures are placed in a single note and include why the measure is useful, how it is calculated, a reconciliation to the most directly comparable IFRS subtotal, the tax and non-controlling-interest effects of each reconciling item, and explanations of period-to-period changes.",
+        ),
+        keyPoints: [
+          text(
+            "امسح البيانات الصحفية وتعليقات الإدارة وعروض المستثمرين لتحديد المقاييس المستخدمة فعليًا.",
+            "Inventory press releases, management commentary and investor presentations to identify measures actually used.",
+          ),
+          text(
+            "لا تفترض أن كل رقم غير GAAP هو MPM؛ يجب أن يكون مجموعًا فرعيًا للدخل والمصروف ويخص أداء المنشأة ككل.",
+            "Do not assume every non-GAAP number is an MPM; it must be an income-and-expense subtotal concerning the entity as a whole.",
+          ),
+          text(
+            "اضبط المصالحة والضريبة وحقوق غير المسيطرين من نفس بيانات الإقفال المالي.",
+            "Control the reconciliation, tax and NCI effects from the same financial-close data.",
+          ),
+        ],
+        reference: "IFRS 18.117–125 and B113–B142",
+      },
+      {
+        title: text(
+          "التجميع والتفكيك وتحليل المصروفات",
+          "Aggregation, disaggregation and expense analysis",
+        ),
+        explanation: text(
+          "تقدم القوائم الأساسية ملخصات منظمة مفيدة، بينما تقدم الإيضاحات المعلومات الجوهرية اللازمة للتفسير. لذلك تجمع البنود ذات الخصائص المشتركة وتفكك البنود ذات الخصائص المختلفة متى كانت المعلومات الناتجة جوهرية، ولا تستخدم تسمية مثل «أخرى» إذا كانت تحجب طبيعة بنود مهمة. تعرض مصروفات التشغيل بطريقة الطبيعة أو الوظيفة أو مزيج منهما بما يقدم الملخص الأكثر فائدة؛ وعند عرض بنود بالوظيفة يلزم إفصاح واحد عن مصروفات محددة بطبيعتها، ومنها الإهلاك والاستهلاك ومنافع الموظفين والانخفاض والمخزون المعترف به مصروفًا.",
+          "Primary financial statements provide useful structured summaries, while notes provide material explanatory information. Items with shared characteristics are aggregated and those with dissimilar characteristics are disaggregated when the resulting information is material; labels such as 'other' must not obscure significant items. Operating expenses are presented by nature, function or a mixed approach that gives the most useful summary. When functional line items are used, a single note discloses specified expenses by nature, including depreciation, amortisation, employee benefits, impairment and inventory recognised as expense.",
+        ),
+        keyPoints: [
+          text(
+            "اختبر الجوهرية بحسب الطبيعة والحجم معًا وعلى مستوى القوائم ككل.",
+            "Assess materiality by nature and magnitude together in the context of the financial statements as a whole.",
+          ),
+          text(
+            "اربط تفاصيل الإيضاح مباشرة بالبند التجميعي في القائمة الأساسية.",
+            "Link note disaggregation directly to its aggregated primary-statement line item.",
+          ),
+          text(
+            "تجنب تكرار مصروف الطبيعة نفسه إذا دخل في أكثر من وظيفة عند إعداد الإفصاح المطلوب.",
+            "Avoid double counting a nature expense included in more than one function when preparing the required disclosure.",
+          ),
+        ],
+        reference: "IFRS 18.16–43, 78–83 and B16–B28",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "تصنيف قائمة الربح أو الخسارة ومصالحة MPM",
+          "Profit-or-loss classification and MPM reconciliation",
+        ),
+        facts: text(
+          "منشأة صناعية لا يعد الاستثمار أو التمويل نشاطًا رئيسيًا لها. لديها إيراد 1,000، ومصروفات تشغيل 700 تشمل إعادة هيكلة 30، وحصة ربح شركة زميلة 40، وفائدة ودائع 10، ومصروف تمويل 50، وضريبة دخل 60. تعلن الإدارة «الربح التشغيلي المعدل» بعد استبعاد إعادة الهيكلة.",
+          "A manufacturer for which investing and financing are not main business activities has revenue of 1,000, operating expenses of 700 including 30 restructuring costs, a 40 share of profit of an associate, 10 deposit interest, 50 finance expense and 60 income tax. Management publicly communicates 'adjusted operating profit' excluding restructuring.",
+        ),
+        calculations: [
+          text("الربح التشغيلي = 1,000 − 700 = 300.", "Operating profit = 1,000 − 700 = 300."),
+          text(
+            "فئة الاستثمار = 40 + 10 = 50؛ الربح قبل التمويل وضريبة الدخل = 300 + 50 = 350.",
+            "Investing category = 40 + 10 = 50; profit before financing and income taxes = 300 + 50 = 350.",
+          ),
+          text(
+            "الربح قبل الضريبة = 350 − 50 = 300؛ الربح = 300 − 60 = 240.",
+            "Profit before tax = 350 − 50 = 300; profit = 300 − 60 = 240.",
+          ),
+          text(
+            "MPM المعلن = 330، ويصالح إلى الربح التشغيلي 300 بإضافة مصروف إعادة الهيكلة 30، مع إفصاح أثر الضريبة وحقوق غير المسيطرين للبند.",
+            "The communicated MPM is 330 and reconciles to operating profit of 300 by adding back the 30 restructuring expense, with tax and NCI effects disclosed for the item.",
+          ),
+        ],
+        conclusion: text(
+          "إعادة الهيكلة تبقى في فئة التشغيل رغم وصفها بأنها غير متكررة، بينما يشرح إيضاح MPM التعديل بشفافية. المثال يغير العرض والإفصاح ولا ينشئ قيدًا محاسبيًا جديدًا.",
+          "Restructuring remains in operating despite being described as non-recurring, while the MPM note transparently explains the adjustment. The example changes presentation and disclosure and creates no new accounting entry.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 18.47–85 and 117–125",
+      },
+    ],
+  },
+  "IFRS 19": {
+    sections: [
+      {
+        title: text("شروط الأهلية والاختيار", "Eligibility and election"),
+        explanation: text(
+          "يجوز للمنشأة تطبيق IFRS 19 إذا كانت شركة تابعة في نهاية فترة التقرير، ولا تخضع للمساءلة العامة، وكان لها كيان أم نهائي أو وسيط ينتج قوائم مالية موحدة متاحة للاستخدام العام ومتوافقة مع IFRS. توجد المساءلة العامة عادة عندما تكون أدوات الدين أو حقوق الملكية متداولة علنًا أو في طريقها للإصدار العام، أو عندما تحتفظ المنشأة بأصول مجموعة واسعة من الأطراف بصفة ائتمانية كنشاط رئيسي، كما في كثير من البنوك وشركات التأمين وصناديق الاستثمار.",
+          "An entity may apply IFRS 19 if, at the end of the reporting period, it is a subsidiary, does not have public accountability, and has an ultimate or intermediate parent that produces consolidated financial statements available for public use and compliant with IFRS. Public accountability generally arises when debt or equity instruments are publicly traded or being prepared for public issue, or when the entity holds assets in a fiduciary capacity for a broad group of outsiders as a primary business, as many banks, insurers and investment funds do.",
+        ),
+        keyPoints: [
+          text(
+            "أعد تقييم الأهلية في نهاية كل فترة تقرير ولا تعتمد على نتيجة السنة الماضية.",
+            "Reassess eligibility at the end of every reporting period rather than relying on last year's conclusion.",
+          ),
+          text(
+            "احتفاظ عارض بأموال العملاء لا يعني دائمًا مساءلة عامة؛ اختبر هل الصفة الائتمانية نشاط رئيسي.",
+            "Incidental custody of customer funds does not always create public accountability; test whether fiduciary holding is a primary business.",
+          ),
+          text(
+            "وثق إتاحة قوائم الأم المتوافقة مع IFRS للاستخدام العام.",
+            "Document that the parent's IFRS-compliant consolidated statements are available for public use.",
+          ),
+        ],
+        reference: "IFRS 19.4–8",
+      },
+      {
+        title: text("ما الذي يتغير وما الذي لا يتغير", "What changes and what does not"),
+        explanation: text(
+          "IFRS 19 معيار إفصاح مخفض، وليس إطار اعتراف أو قياس مبسطًا. تطبق الشركة التابعة المؤهلة متطلبات الاعتراف والقياس والعرض في معايير IFRS الأخرى كما هي، ثم تستخدم إفصاحات IFRS 19 بدل إفصاحات تلك المعايير، مع مراعاة المتطلبات التي يحيل إليها IFRS 19 أو يبقيها واجبة. لذلك لا يجوز استخدامه لتغيير قيمة أصل أو مخصص أو إيراد، ولا يساوي معيار IFRS للمنشآت الصغيرة والمتوسطة.",
+          "IFRS 19 is a reduced-disclosure Standard, not a simplified recognition or measurement framework. An eligible subsidiary applies recognition, measurement and presentation requirements in other IFRS Accounting Standards unchanged, then uses IFRS 19 disclosures instead of those Standards' disclosures, subject to requirements incorporated or retained by IFRS 19. It therefore cannot be used to change the amount of an asset, provision or revenue, and it is not the IFRS for SMEs Accounting Standard.",
+        ),
+        keyPoints: [
+          text(
+            "ضع مصفوفة تفصل متطلبات الاعتراف والقياس والعرض عن متطلبات الإفصاح لكل معيار.",
+            "Build a matrix separating recognition, measurement and presentation from disclosure requirements for every Standard.",
+          ),
+          text(
+            "لا تنقل إعفاءات القياس من IFRS للمنشآت الصغيرة والمتوسطة إلى IFRS 19.",
+            "Do not import IFRS for SMEs measurement simplifications into IFRS 19.",
+          ),
+          text(
+            "راجع الإحالات داخل الإفصاحات المخفضة حتى لا يسقط إفصاح لازم من معيار آخر.",
+            "Review cross-references in reduced disclosures so a required disclosure from another Standard is not omitted.",
+          ),
+        ],
+        reference: "IFRS 19.1–3 and disclosure requirements by Standard",
+      },
+      {
+        title: text("التطبيق والتغيير والمقارنات", "Application, changes and comparatives"),
+        explanation: text(
+          "يمكن للشركة المؤهلة اختيار IFRS 19 أو التوقف عنه من فترة إلى أخرى دون أن يكون قرارها غير قابل للعكس، لكن يجب تطبيق متطلبات الانتقال والمقارنة المناسبة. عند تطبيقه في الفترة الحالية دون السابقة، تقدم معلومات مقارنة لجميع المبالغ المعروضة في الفترة الحالية ما لم يسمح معيار آخر بخلاف ذلك. وعند فقد الأهلية تعود إفصاحات IFRS الكاملة؛ لذلك يلزم الاحتفاظ ببيانات يمكنها دعم التوسع في الإفصاحات مستقبلًا.",
+          "An eligible subsidiary may elect IFRS 19 or stop applying it in later periods; the decision is not irrevocable, but applicable transition and comparative requirements must be followed. When applying it in the current period but not the preceding period, comparative information is provided for all amounts reported in the current period unless another Standard permits otherwise. Loss of eligibility restores full IFRS disclosures, so data capable of supporting future expanded disclosures should be retained.",
+        ),
+        keyPoints: [
+          text(
+            "لا تحذف بيانات الإفصاح الكاملة من النظام لمجرد أن تقرير السنة الحالية مخفض.",
+            "Do not remove full-disclosure data from systems merely because the current report is reduced.",
+          ),
+          text(
+            "حدّث قائمة التحقق عند صدور أو تعديل أي معيار لأن IFRS 19 يحتاج تحديثًا دوريًا.",
+            "Update the checklist when any Standard is issued or amended because IFRS 19 requires periodic maintenance.",
+          ),
+          text(
+            "عالج التغيير في سياسة الإفصاح دون تغيير أرقام الاعتراف والقياس الأساسية.",
+            "Treat the disclosure-policy change without altering underlying recognition and measurement amounts.",
+          ),
+        ],
+        reference: "IFRS 19.9–14 and Appendix A",
+      },
+      {
+        title: text(
+          "السريان وتحديثات 2025 وضبط الإفصاح",
+          "Effective date, 2025 updates and disclosure control",
+        ),
+        explanation: text(
+          "يسري IFRS 19 للفترات السنوية التي تبدأ في أو بعد 1 يناير 2027 مع السماح بالتطبيق المبكر. وقد أصدر IASB في أغسطس 2025 تعديلات توفر إفصاحات مخفضة لمتطلبات ناشئة عن معايير وتعديلات صدرت بين فبراير 2021 ومايو 2024، بما يحافظ على مواكبة المعيار. عمليًا يجب استخدام نسخة قائمة التحقق المطابقة لتاريخ التقرير وحالة تطبيق IFRS 18 والتعديلات الأخرى، لا نسخة ثابتة قديمة.",
+          "IFRS 19 is effective for annual periods beginning on or after 1 January 2027, with earlier application permitted. In August 2025 the IASB issued amendments providing reduced disclosures for requirements arising from Standards and amendments issued between February 2021 and May 2024, keeping the Standard current. In practice, use a disclosure checklist matched to the reporting date and the entity's application of IFRS 18 and other amendments rather than a stale fixed version.",
+        ),
+        keyPoints: [
+          text(
+            "ثبت تاريخ إصدار قائمة التحقق والمجموعة الكاملة من التعديلات المطبقة.",
+            "Record the checklist version and the complete set of applied amendments.",
+          ),
+          text(
+            "صالح كل إفصاح مخفض مع رصيد دفتر الأستاذ أو إيضاح المجموعة ذي الصلة.",
+            "Reconcile each reduced disclosure to the related ledger balance or group note.",
+          ),
+          text(
+            "راجع أهلية التطبيق واعتماد السياسة ضمن إقفال كل سنة.",
+            "Include eligibility and policy approval in every year-end close.",
+          ),
+        ],
+        reference: "IFRS 19 Appendix A; Amendments to IFRS 19 (August 2025)",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "شركة تصنيع تابعة مؤهلة للإفصاح المخفض",
+          "Eligible manufacturing subsidiary using reduced disclosures",
+        ),
+        facts: text(
+          "شركة تصنيع تابعة مملوكة بالكامل لا تتداول أدواتها علنًا ولا تحتفظ بأصول الغير بصفة ائتمانية كنشاط رئيسي. تنشر أمها النهائية قوائم موحدة متوافقة مع IFRS للاستخدام العام. لدى التابعة آلة تكلفتها 5,000,000 ومجمع إهلاكها 2,000,000، وقرض 1,000,000 بفائدة 8%. اختارت IFRS 19 للفترة المؤهلة.",
+          "A wholly owned manufacturing subsidiary has no publicly traded instruments and does not hold outsiders' assets in a fiduciary capacity as a primary business. Its ultimate parent publishes IFRS-compliant consolidated financial statements for public use. The subsidiary has machinery costing 5,000,000 with accumulated depreciation of 2,000,000 and a 1,000,000 loan at 8%. It elects IFRS 19 for the eligible period.",
+        ),
+        calculations: [
+          text(
+            "القيمة الدفترية للآلة = 5,000,000 − 2,000,000 = 3,000,000 وفق IAS 16 دون تغيير بسبب IFRS 19.",
+            "Machinery carrying amount = 5,000,000 − 2,000,000 = 3,000,000 under IAS 16, unchanged by IFRS 19.",
+          ),
+          text(
+            "مصروف الفائدة السنوي = 1,000,000 × 8% = 80,000 وفق IFRS 9، أيضًا دون تخفيض قياس.",
+            "Annual interest expense = 1,000,000 × 8% = 80,000 under IFRS 9, also without a measurement reduction.",
+          ),
+          text(
+            "الفرق يقع في مجموعة الإفصاحات: تستخدم متطلبات IFRS 19 المتعلقة بـIAS 16 وIFRS 7/IFRS 9 بدل قوائم الإفصاح الكاملة، مع إبقاء البيانات اللازمة للمصالحة.",
+            "The difference is the disclosure set: IFRS 19 requirements relating to IAS 16 and IFRS 7/IFRS 9 replace full disclosure lists, while data needed for reconciliation is retained.",
+          ),
+        ],
+        conclusion: text(
+          "الأهلية تخفض عبء الإفصاح، لكنها لا تغير 3,000,000 قيمة الآلة ولا 80,000 مصروف الفائدة ولا العرض المطلوب في المعايير الأخرى؛ لذلك لا ينتج قيد محاسبي من انتخاب IFRS 19 نفسه.",
+          "Eligibility reduces disclosure burden but changes neither the 3,000,000 machinery amount nor the 80,000 interest expense nor presentation required by other Standards; the IFRS 19 election itself therefore creates no journal entry.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 19.1–14 and disclosure requirements relating to IAS 16 and IFRS 7",
+      },
+    ],
+  },
+  "IAS 26": {
+    sections: [
+      {
+        title: text(
+          "وحدة التقرير والعلاقة مع IAS 19",
+          "Reporting entity and relationship with IAS 19",
+        ),
+        explanation: text(
+          "يعالج IAS 26 القوائم المالية لخطة منافع التقاعد باعتبارها كيان تقرير منفصلًا عن أصحاب العمل المشاركين. فهو يبين معلومات الخطة للمشاركين كمجموعة، بينما يعالج IAS 19 تكلفة والتزام منافع الموظفين في قوائم صاحب العمل. يطبق IAS 26 سواء كان للصندوق شخصية قانونية مستقلة أو أمناء، ولا يغطي تقارير الحق الفردي لكل مشارك أو خطط الضمان الاجتماعي الحكومية.",
+          "IAS 26 addresses the financial statements of a retirement benefit plan as a reporting entity separate from participating employers. It reports information about the plan to participants as a group, while IAS 19 addresses employee-benefit cost and obligations in an employer's financial statements. IAS 26 applies whether or not the fund has separate legal identity or trustees and does not cover individual participant entitlement reports or government social-security arrangements.",
+        ),
+        keyPoints: [
+          text(
+            "لا تنقل التزام IAS 19 الخاص بصاحب العمل مباشرة إلى قوائم الخطة.",
+            "Do not copy the employer's IAS 19 obligation directly into the plan's financial statements.",
+          ),
+          text(
+            "حدد هل التقرير يخص الخطة ككل أم كشف مشارك فردي قبل تطبيق المعيار.",
+            "Determine whether the report concerns the plan as a whole or an individual participant statement before applying the Standard.",
+          ),
+          text(
+            "طبق المعايير الأخرى على معاملات الخطة بالقدر الذي لا يستبدله IAS 26.",
+            "Apply other Standards to plan transactions to the extent IAS 26 does not supersede them.",
+          ),
+        ],
+        reference: "IAS 26.1–8",
+      },
+      {
+        title: text("خطط المساهمات المحددة", "Defined contribution plans"),
+        explanation: text(
+          "في خطة المساهمات المحددة تعتمد المنافع المستقبلية أساسًا على مساهمات صاحب العمل والمشارك وكفاءة تشغيل الصندوق وعائد استثماراته. تركز القوائم على صافي الأصول المتاحة للمنافع وسياسة التمويل، وتعرض بيان صافي الأصول وبيان التغيرات فيه ووصفًا للسياسة التمويلية. الخطر الاستثماري والنتيجة المتاحة للمشارك يرتبطان بأداء موجودات الخطة، لذلك تعد شفافية العائد والمصروفات والتحويلات أساسية.",
+          "In a defined contribution plan, future benefits depend primarily on employer and participant contributions, the fund's operating efficiency and investment returns. Financial statements focus on net assets available for benefits and funding policy, presenting a statement of net assets, a statement of changes in net assets and a description of funding policy. Investment risk and participants' outcomes depend on plan assets, making transparency over returns, expenses and transfers essential.",
+        ),
+        keyPoints: [
+          text(
+            "صالح المساهمات المستحقة والمحصلة مع سجلات المشاركين وأصحاب العمل.",
+            "Reconcile contributions due and received to participant and employer records.",
+          ),
+          text(
+            "اعرض المنافع المدفوعة والمصروفات الإدارية منفصلة عن عائد الاستثمار.",
+            "Present benefits paid and administrative expenses separately from investment return.",
+          ),
+          text(
+            "اشرح أي تغيير جوهري في سياسة التمويل أو شروط الخطة.",
+            "Explain any material change in funding policy or plan terms.",
+          ),
+        ],
+        reference: "IAS 26.13–16 and 32–36",
+      },
+      {
+        title: text(
+          "خطط المنافع المحددة والقيمة الاكتوارية",
+          "Defined benefit plans and actuarial value",
+        ),
+        explanation: text(
+          "تربط خطة المنافع المحددة المنفعة الموعودة بصيغة مثل الراتب وسنوات الخدمة، لذلك يلزم إظهار العلاقة بين صافي الأصول والقيمة الحالية الاكتوارية للمنافع الموعودة. تعرض القوائم إما بيانًا يجمع صافي الأصول والقيمة الحالية للمنافع المستحقة وغير المستحقة والفائض أو العجز، أو بيان صافي الأصول مع الإفصاح عن القيمة الاكتوارية في إيضاح أو بالإحالة إلى تقرير اكتواري مرفق. يوضح التقرير هل حسبت المنافع على الرواتب الحالية أم المتوقعة وأثر التغييرات الجوهرية.",
+          "A defined benefit plan links promised benefits to a formula such as salary and service, so reporting must show the relationship between net assets and the actuarial present value of promised benefits. Statements either show net assets, the actuarial present value of vested and non-vested benefits and the resulting surplus or deficit together, or show net assets with the actuarial amount in a note or an accompanying actuarial report. Reporting explains whether benefits are based on current or projected salaries and the effect of material changes.",
+        ),
+        keyPoints: [
+          text(
+            "افصل المنافع المستحقة قانونًا أو غير المشروطة عن غير المستحقة.",
+            "Distinguish vested or unconditional benefits from non-vested benefits.",
+          ),
+          text(
+            "لا تقدم رقم العجز أو الفائض دون تاريخ وأساس التقييم الاكتواري.",
+            "Do not present a surplus or deficit without the actuarial valuation date and basis.",
+          ),
+          text(
+            "اشرح أثر التعديلات على الخطة والتغيرات في الافتراضات على المعلومات المعروضة.",
+            "Explain the effect of plan amendments and assumption changes on reported information.",
+          ),
+        ],
+        reference: "IAS 26.17–31",
+      },
+      {
+        title: text(
+          "قياس الاستثمارات والعرض والإفصاح",
+          "Investment measurement, presentation and disclosure",
+        ),
+        explanation: text(
+          "تقاس استثمارات خطة منافع التقاعد بالقيمة العادلة، ويستخدم سعر السوق للاستثمارات القابلة للتداول. وإذا تعذر تقدير القيمة العادلة لاستثمار يبين سبب استخدام أساس آخر. تشمل القوائم وصف الخطة وسياساتها المحاسبية، وبيان صافي الأصول المتاحة للمنافع، وبيان التغيرات فيه أو المعلومات المكافئة، ومعلومات التمويل والاستثمارات والالتزامات غير القيمة الحالية الاكتوارية للمنافع. ويجب أن تساعد المعلومات المستخدم على تقييم قدرة الخطة على سداد المنافع عبر الزمن.",
+          "Retirement benefit plan investments are measured at fair value, using market value for marketable securities. If fair value cannot be estimated for an investment, the reason for using another basis is disclosed. Financial statements include a plan description and accounting policies, a statement of net assets available for benefits, a statement of changes or equivalent information, and information about funding, investments and liabilities other than the actuarial present value of promised benefits. The information should help users assess the plan's ability to pay benefits over time.",
+        ),
+        keyPoints: [
+          text(
+            "صالح تقييم الاستثمار مع أمين الحفظ والأسعار المستخدمة في تاريخ التقرير.",
+            "Reconcile investment valuations to custodian records and prices used at the reporting date.",
+          ),
+          text(
+            "افصل تغير القيمة العادلة عن دخل الفوائد والتوزيعات عند تحليل عائد الاستثمار.",
+            "Separate fair value changes from interest and dividend income when analysing investment return.",
+          ),
+          text(
+            "اكشف وصف الخطة وعدد المشاركين ونوعها وشروط الإنهاء والتغيرات المهمة.",
+            "Disclose the plan description, participant numbers, plan type, termination terms and significant changes.",
+          ),
+        ],
+        reference: "IAS 26.32–36",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "حركة صافي أصول خطة مساهمات محددة",
+          "Movement in defined contribution plan net assets",
+        ),
+        facts: text(
+          "لدى خطة مساهمات محددة صافي أصول أول المدة 2,000,000. استلمت مساهمات 500,000، وحققت دخل استثمار 80,000، ودفعت منافع 220,000، وتحملت مصروفات إدارية 20,000. نفترض عدم وجود تغير قيمة عادلة آخر.",
+          "A defined contribution plan has opening net assets of 2,000,000. It receives contributions of 500,000, earns investment income of 80,000, pays benefits of 220,000 and incurs administrative expenses of 20,000. Assume no other fair value movement.",
+        ),
+        calculations: [
+          text(
+            "الزيادة الصافية = 500,000 + 80,000 − 220,000 − 20,000 = 340,000.",
+            "Net increase = 500,000 + 80,000 − 220,000 − 20,000 = 340,000.",
+          ),
+          text(
+            "صافي الأصول المتاحة للمنافع آخر المدة = 2,000,000 + 340,000 = 2,340,000.",
+            "Closing net assets available for benefits = 2,000,000 + 340,000 = 2,340,000.",
+          ),
+          text(
+            "يعرض بيان التغيرات مصادر الزيادة والتخفيض كلًا على حدة، لا الرقم الصافي وحده.",
+            "The statement of changes presents each source of increase and decrease separately, not only the net figure.",
+          ),
+        ],
+        conclusion: text(
+          "يمثل 2,340,000 موارد الخطة المتاحة للمنافع في نهاية الفترة، ولا يمثل التزام IAS 19 في دفاتر صاحب العمل.",
+          "The 2,340,000 represents plan resources available for benefits at period end; it is not the employer's IAS 19 liability.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات المساهمات المستلمة", "Recognise contributions received"),
+            debit: text("النقدية/الاستثمارات", "Cash/investments"),
+            credit: text("مساهمات", "Contributions"),
+            amount: text("500,000", "500,000"),
+          },
+          {
+            label: text("إثبات دخل الاستثمار", "Recognise investment income"),
+            debit: text("النقدية/دخل مستحق", "Cash/accrued income"),
+            credit: text("دخل استثمار", "Investment income"),
+            amount: text("80,000", "80,000"),
+          },
+          {
+            label: text("دفع المنافع والمصروفات", "Pay benefits and expenses"),
+            debit: text("منافع ومصروفات إدارية", "Benefits and administrative expenses"),
+            credit: text("النقدية", "Cash"),
+            amount: text("240,000", "240,000"),
+          },
+        ],
+        reference: "IAS 26.13–16 and 32–36",
+      },
+    ],
+  },
 };
 
 export function getStandardStudyExpansion(code: string) {
