@@ -10,7 +10,6 @@ import {
   FileText,
   LayoutGrid,
   CornerDownLeft,
-  Search,
   X,
 } from "lucide-react";
 import { TOOLS } from "@/lib/tools-registry";

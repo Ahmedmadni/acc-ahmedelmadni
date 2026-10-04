@@ -10,6 +10,7 @@ import {
   Percent,
   ArrowUpLeft,
   GraduationCap,
+  Wrench,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
