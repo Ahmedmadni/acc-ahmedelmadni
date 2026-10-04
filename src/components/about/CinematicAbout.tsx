@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useScroll, useTransform, useSpring } from "motion/react";
 import { Link } from "@tanstack/react-router";
 import {
-  Sparkles,
+  BadgeCheck,
   ArrowLeft,
   ArrowRight,
   Download,
@@ -117,7 +117,7 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
               >
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/50 bg-white/[0.04] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.28em] text-[#c9a986]">
                   <motion.span style={{ rotate: rotateBadge }} className="inline-flex">
-                    <Sparkles className="size-3.5" />
+                    <BadgeCheck className="size-3.5" />
                   </motion.span>
                   {lang === "ar" ? "نبذة عني" : "About Me"}
                 </div>

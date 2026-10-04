@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
-import { CheckCircle2, Sparkles, Star, X } from "lucide-react";
+import { CheckCircle2, Star, X } from "lucide-react";
 import { t, type Lang } from "@/lib/i18n";
 
 export default function EidBanner({ lang, onClose }: { lang: Lang; onClose: () => void }) {
@@ -75,7 +75,7 @@ export default function EidBanner({ lang, onClose }: { lang: Lang; onClose: () =
           <h3 className="font-display mt-2 text-3xl font-black gold-text">{t.eid.title[lang]}</h3>
           <p className="mt-3 text-sm leading-loose text-white/85">{t.eid.msg[lang]}</p>
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#A88765]/30 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-[#c9a986]">
-            <Sparkles className="size-3" />
+            <Star className="size-3" />
             {t.eid.from[lang]}
           </div>
 

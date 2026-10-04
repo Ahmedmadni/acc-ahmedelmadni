@@ -11,7 +11,7 @@ import {
   PlayCircle,
   BookOpen,
   GraduationCap,
-  Sparkles,
+  Monitor,
 } from "lucide-react";
 import { t } from "@/lib/i18n";
 import { useLibLang } from "./library";
@@ -215,7 +215,7 @@ type PriceKey = "all" | "free" | "paid";
 
 function CourseIcon({ cat }: { cat: string }) {
   if (cat === "certifications") return <GraduationCap className="size-5" />;
-  if (cat === "software") return <Sparkles className="size-5" />;
+  if (cat === "software") return <Monitor className="size-5" />;
   if (cat === "audit") return <BookOpen className="size-5" />;
   return <BookOpen className="size-5" />;
 }

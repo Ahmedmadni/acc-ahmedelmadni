@@ -10,7 +10,6 @@ import {
   FileText,
   LayoutGrid,
   CornerDownLeft,
-  Sparkles,
   X,
 } from "lucide-react";
 import { TOOLS } from "@/lib/tools-registry";
@@ -377,7 +376,7 @@ export default function SiteSearch({
     <div ref={boxRef} className={cn("relative", className)} dir={isRTL ? "rtl" : "ltr"}>
       {/* Eyebrow — names the axis so the bar reads as a feature, not a field. */}
       <div className="mb-2.5 flex items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-[#c9a986]/90">
-        <Sparkles className="size-3.5" />
+        <Search className="size-3.5" />
         <span>{isRTL ? "محور البحث" : "SEARCH AXIS"}</span>
         <span className="h-px flex-1 bg-gradient-to-l from-transparent via-[#c9a986]/35 to-transparent" />
       </div>

@@ -9,7 +9,8 @@ import {
   Wallet,
   Percent,
   ArrowUpLeft,
-  Sparkles,
+  GraduationCap,
+  Wrench,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { EASE, useMotionSafe } from "@/lib/motion";
@@ -100,7 +101,7 @@ const ITEMS: Item[] = [
   },
   {
     id: "study-companion",
-    icon: Sparkles,
+    icon: GraduationCap,
     ar: "رفيق المذاكرة المهني",
     en: "Study Companion",
     descAr: "تتبع منهج CMA وDipIFR، بطاقات مراجعة، ومؤقت تركيز.",
@@ -170,7 +171,7 @@ export default function FeaturedTools({ lang }: { lang: Lang }) {
             variants={m.staggerChild}
             className="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] text-[#A88765]"
           >
-            <Sparkles className="size-3.5" />
+            <Wrench className="size-3.5" />
             {ar ? "الأدوات" : "Tools"}
           </motion.p>
           <motion.h2

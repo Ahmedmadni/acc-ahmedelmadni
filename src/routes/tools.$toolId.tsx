@@ -15,7 +15,7 @@ import {
   Sigma,
   Download,
   Loader2,
-  Sparkles,
+  Handshake,
 } from "lucide-react";
 import { CalculatorById } from "@/components/tools/Calculators";
 import { labelByCategory, toolById, TOOLS } from "@/lib/tools-registry";
@@ -341,7 +341,7 @@ function ToolDetailPage() {
             {tool.requestServiceId && (
               <div className="rounded-2xl border border-emerald-400/40 bg-gradient-to-br from-emerald-400/15 to-transparent p-5 backdrop-blur print:hidden">
                 <h2 className="mb-1.5 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-200">
-                  <Sparkles className="size-4" />
+                  <Handshake className="size-4" />
                   {lang === "ar" ? "تفضّل نتولى الأمر عنك؟" : "Prefer to have this done for you?"}
                 </h2>
                 <p className="mb-3 text-sm leading-relaxed text-[var(--fg-soft)]">

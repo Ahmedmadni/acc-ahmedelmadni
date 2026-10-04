@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useChatWidget, extractMessageText } from "@/lib/chat-widget";
 import {
   Send,
-  Sparkles,
+  Bot,
   Copy,
   Check,
   RefreshCw,
@@ -308,7 +308,7 @@ export function OfficeAiAssistant({ lang }: { lang: Lang }) {
           <div className="grid h-full place-items-center">
             <div className="max-w-md text-center">
               <div className="mx-auto mb-3 grid size-16 place-items-center rounded-2xl bg-gradient-to-br from-[#f3d28a] to-[#b8862e] text-[#04101f] shadow-[0_8px_30px_-8px_rgba(215,170,82,0.6)]">
-                <Sparkles className="size-8" />
+                <Bot className="size-8" />
               </div>
               <h3 className="mb-1 text-base font-extrabold text-[#f3d28a]">
                 {lang === "ar"

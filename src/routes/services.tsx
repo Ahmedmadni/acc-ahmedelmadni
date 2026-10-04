@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Sparkles } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 import { SubPageShell } from "@/components/SubPageShell";
 import { RequestService } from "@/routes/request-service";
 import type { Lang } from "@/lib/i18n";
@@ -129,7 +129,7 @@ function ServicesPage({ lang, initialService }: { lang: Lang; initialService?: s
           className="text-center"
         >
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#c9a986]">
-            <Sparkles className="size-3" />
+            <BadgeCheck className="size-3" />
             {lang === "ar" ? "خدماتي الاحترافية" : "Professional Services"}
           </span>
           <h1

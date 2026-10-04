@@ -40,7 +40,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, Pencil, Trash2, Plus, BookOpen } from "lucide-react";
+import { Bot, Pencil, Trash2, Plus, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/admin/library")({
   head: () => ({
@@ -349,7 +349,7 @@ function ItemForm({
       {/* AI assist */}
       <div className="rounded-xl border border-[#A88765]/30 bg-[#A88765]/5 p-3">
         <div className="mb-2 flex items-center gap-2 text-xs font-bold text-[#c9a986]">
-          <Sparkles className="size-4" /> توليد بالذكاء الاصطناعي
+          <Bot className="size-4" /> توليد بالذكاء الاصطناعي
         </div>
         <div className="flex gap-2">
           <Input
@@ -712,7 +712,7 @@ function ArticlesPanel() {
             to="/admin/knowledge"
             className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-4 py-2 text-sm font-bold text-[#1C1B19]"
           >
-            <Sparkles className="size-4" /> توليد مقال جديد بالـ AI
+            <Bot className="size-4" /> توليد مقال جديد بالـ AI
           </Link>
         </div>
       </div>
