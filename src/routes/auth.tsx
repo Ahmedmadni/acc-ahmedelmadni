@@ -15,10 +15,10 @@ export const Route = createFileRoute("/auth")({
   component: AuthPage,
 });
 
-async function redirectByRole() {
+async function redirectByRole(go: (to: string) => void) {
   try {
-    const { data: meData } = await supabase.auth.getUser();
-    const userId = meData?.user?.id;
+    const { data: sess } = await supabase.auth.getSession();
+    const userId = sess.session?.user?.id;
     if (userId) {
       const { data: role } = await supabase
         .from("user_roles")
@@ -26,19 +26,21 @@ async function redirectByRole() {
         .eq("user_id", userId)
         .eq("role", "admin")
         .maybeSingle();
+      sessionStorage.setItem("is-admin", role ? `${userId}:1` : `${userId}:0`);
       if (role) {
-        window.location.assign("/crm");
+        go("/crm");
         return;
       }
     }
   } catch (e) {
     console.error("role check failed", e);
   }
-  window.location.assign("/knowledge");
+  go("/knowledge");
 }
 
 function AuthPage() {
-  useRouter();
+  const router = useRouter();
+  const go = (to: string) => void router.navigate({ to, replace: true });
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,7 +51,7 @@ function AuthPage() {
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
       if (session && (event === "SIGNED_IN" || event === "INITIAL_SESSION")) {
         sessionStorage.removeItem("google-auth-pending");
-        void redirectByRole();
+        void redirectByRole(go);
       }
     });
     return () => sub.subscription.unsubscribe();
@@ -70,7 +72,7 @@ function AuthPage() {
     if (result.redirected) return;
     sessionStorage.removeItem("google-auth-pending");
     toast.success("تم تسجيل الدخول");
-    await redirectByRole();
+    await redirectByRole(go);
   }
 
   async function submit(e: React.FormEvent) {
@@ -89,7 +91,7 @@ function AuthPage() {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
         toast.success("تم تسجيل الدخول");
-        await redirectByRole();
+        await redirectByRole(go);
         return;
       }
     } catch (err) {

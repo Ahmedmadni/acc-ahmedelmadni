@@ -26,21 +26,27 @@ export function AdminHeader() {
   useEffect(() => {
     let active = true;
     const load = async () => {
-      const { data } = await supabase.auth.getUser();
-      const current = data.user ? { id: data.user.id, email: data.user.email ?? null } : null;
+      const { data } = await supabase.auth.getSession();
+      const u = data.session?.user;
+      const current = u ? { id: u.id, email: u.email ?? null } : null;
       if (!active) return;
       setUser(current);
       if (!current) {
         setIsAdmin(false);
         return;
       }
+      // Show cached admin links instantly; the DB check below confirms them.
+      const cached = sessionStorage.getItem("is-admin");
+      if (cached === `${current.id}:1`) setIsAdmin(true);
       const { data: role } = await supabase
         .from("user_roles")
         .select("role")
         .eq("user_id", current.id)
         .eq("role", "admin")
         .maybeSingle();
-      if (active) setIsAdmin(Boolean(role));
+      if (!active) return;
+      setIsAdmin(Boolean(role));
+      sessionStorage.setItem("is-admin", `${current.id}:${role ? 1 : 0}`);
     };
     void load();
     const { data: sub } = supabase.auth.onAuthStateChange(() => void load());
@@ -51,6 +57,7 @@ export function AdminHeader() {
   }, []);
 
   const signOut = async () => {
+    sessionStorage.removeItem("is-admin");
     await supabase.auth.signOut();
     window.location.assign("/auth");
   };
