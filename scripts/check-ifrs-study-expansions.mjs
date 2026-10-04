@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { createHash } from "node:crypto";
 import { createServer } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -13,6 +14,7 @@ const server = await createServer({
 let expansions;
 let standards;
 let reviewedQuestions;
+let reviewedExtensionQuestions;
 try {
   ({ IFRS_STANDARD_STUDY_EXPANSIONS: expansions } = await server.ssrLoadModule(
     "/src/data/ifrs-standard-study-expansions.ts",
@@ -21,9 +23,14 @@ try {
   ({ IFRS_REVIEWED_EXTRACT_QUESTIONS: reviewedQuestions } = await server.ssrLoadModule(
     "/src/data/ifrs-quiz-reviewed-extracts.ts",
   ));
+  ({ IFRS_REVIEWED_EXTENSION_QUESTIONS: reviewedExtensionQuestions } = await server.ssrLoadModule(
+    "/src/data/ifrs-quiz-reviewed-extensions.ts",
+  ));
 } finally {
   await server.close();
 }
+
+reviewedQuestions = [...reviewedQuestions, ...reviewedExtensionQuestions];
 
 const failures = [];
 const indexed = new Set(standards.map((standard) => standard.code));
@@ -224,6 +231,116 @@ const reviewedEnglishSourceText = new Map([
     },
   ],
 ]);
+const reviewedEnglishSourceFingerprints = new Map([
+  [
+    "ifrs-reviewed-ias8-prior-error-02",
+    "c04d5a30d6214adfae965256641f62701e976b0b611963179a7d88b24cdf316b",
+  ],
+  [
+    "ifrs-reviewed-ifrs15-software-support-02",
+    "0dbfc87703ef078303180cea60d605cb02dfe3648ed95e71208c2aa42519b30b",
+  ],
+  [
+    "ifrs-reviewed-ifrs16-rou-initial-02",
+    "38582f7b5079c563a063c70766655abc6b2481b6c406ba2dcdcf3181fd132d3a",
+  ],
+  [
+    "ifrs-reviewed-ias23-general-borrowings-02",
+    "b833a6c979d18b0a7725f117658c51c4862f38da3673bc6e188647bb45788314",
+  ],
+  [
+    "ifrs-reviewed-ias38-development-testing-02",
+    "24cd632f34f95a3a6bf6fcfd275206bb21f499cea4574c9b3c96b3f888ddb262",
+  ],
+  [
+    "ifrs-reviewed-ias40-rental-property-02",
+    "95c6e05c88571677026f0297bd62dbfed6559a1ac3e2ba56006c81e1a3874a59",
+  ],
+  [
+    "ifrs-reviewed-ias10-flood-02",
+    "12534c20f01714375926c63f52e49c9733fa76cca2a470c7a898b678b27de370",
+  ],
+  [
+    "ifrs-reviewed-ias37-onerous-contract-02",
+    "36f0767e999b94a04e8e0b561824e9b020e35ce204a9e0d6ce306e3bd7601a36",
+  ],
+  [
+    "ifrs-reviewed-ias12-accelerated-allowances-02",
+    "ec03dd683cf41b6e06772c075ffa9f5ea0bb9cc256fae4c472f5e6606b0ce4f0",
+  ],
+  [
+    "ifrs-reviewed-ias37-warranty-population-02",
+    "ccf854844244b1771f5815c4a44f695fda007ef9b009060fef5dec56a54c6776",
+  ],
+  [
+    "ifrs-reviewed-ias37-contingent-asset-02",
+    "87106ea5bb0026471bd8c0e4cb697ad320ee3a397318089ec912127fee8d739e",
+  ],
+  [
+    "ifrs-reviewed-ifrs9-sppi-assets-02",
+    "e1d1400cc321d2e6aae66762613e3fa49fe16e424d70f14a371abf8e4422be85",
+  ],
+  [
+    "ifrs-reviewed-ias8-material-error-03",
+    "6a1b1556e39b4258b1cebcab4784e4c5383831fb8790af2ba28f37678ff9a141",
+  ],
+  [
+    "ifrs-reviewed-ifrs15-vehicle-control-03",
+    "c63d025aad4e6b2879769042eec8fb43980d2d992f04311f2978eb861651df67",
+  ],
+  [
+    "ifrs-reviewed-ias16-revalued-disposal-03",
+    "f90c24f75e602af3f959872c9bc5104dc257d9157741b3bdeff88d9bae1de596",
+  ],
+  [
+    "ifrs-reviewed-ias36-value-in-use-02",
+    "30968ae275fd26e64fa4c1d124a8d13d4272bca9bb454b29c5421ab4470456b1",
+  ],
+  [
+    "ifrs-reviewed-ias10-going-concern-03",
+    "d301d020485c8239e8312a86a015ba4b78ce4d5e65da0f5bd6330096e57ff059",
+  ],
+  [
+    "ifrs-reviewed-ias19-actuarial-assumptions-02",
+    "40e7f0cb8ec56b22a1b1e8a72257bebb019dd5ef3ca239359ac833fa27ec8f90",
+  ],
+  [
+    "ifrs-reviewed-ias12-revaluation-tax-03",
+    "2a68841b08fa6076de67beb9548f4e351dfc23db0fa840f30287a28ada211cb3",
+  ],
+  [
+    "ifrs-reviewed-ifrs3-trademark-02",
+    "cf844ea8a806356c7b14dc177d942794508e425a0a8c57760496717071e76ab2",
+  ],
+  [
+    "ifrs-reviewed-ifrs3-full-goodwill-03",
+    "8aa234f1d3696da3c5068eb861cccb752f2ab6beeada02544eece14d4f564e30",
+  ],
+  [
+    "ifrs-reviewed-ifrs3-partial-goodwill-04",
+    "210335e048ddd2f126f9961e26b1ee9abcc27eabf042e1ddb625c20d83d03a63",
+  ],
+  [
+    "ifrs-reviewed-ifrs11-joint-operation-02",
+    "d3ee66d8cf3cb05b9bbc799b4150eedd1ab2d590ed35c061be55506c4319b0ed",
+  ],
+  [
+    "ifrs-reviewed-ias8-residual-value-04",
+    "6bb94ad7c79c2597b46a6ae932816fc9bd6f99f09da3fead5b70a2c857a477db",
+  ],
+  [
+    "ifrs-reviewed-ifrs8-segment-definition-02",
+    "4213eeaf60be6843b4e7d486d048fb392efee24f3ea117a69efe06750e205f9d",
+  ],
+  [
+    "ifrs-reviewed-ias24-supplier-02",
+    "db3af5b73dc73df7ad899fd79ddb990f2710e69de6cab7409861e49f2c199042",
+  ],
+  [
+    "ifrs-reviewed-ias33-convertible-eps-02",
+    "79e4d745501dcb9893eb0759f3be485f0ce7337ab16714be87aa6d8e6ea9fbee",
+  ],
+]);
 for (const question of reviewedQuestions) {
   if (ids.has(question.id)) failures.push(`${question.id}: duplicate reviewed question ID`);
   ids.add(question.id);
@@ -250,12 +367,20 @@ for (const question of reviewedQuestions) {
   )
     failures.push(`${question.id}: invalid answer index`);
   const sourceText = reviewedEnglishSourceText.get(question.id);
-  if (!sourceText) failures.push(`${question.id}: missing locked source-text check`);
-  else {
+  const lockedFingerprint = reviewedEnglishSourceFingerprints.get(question.id);
+  if (!sourceText && !lockedFingerprint)
+    failures.push(`${question.id}: missing locked source-text check`);
+  else if (sourceText) {
     if (question.question.en !== sourceText.question)
       failures.push(`${question.id}: English prompt no longer matches the reviewed source text`);
     if (JSON.stringify(question.choices.en) !== JSON.stringify(sourceText.choices))
       failures.push(`${question.id}: English choices no longer match the reviewed source text`);
+  } else {
+    const actualFingerprint = createHash("sha256")
+      .update(`${question.question.en}\n${JSON.stringify(question.choices.en)}`)
+      .digest("hex");
+    if (actualFingerprint !== lockedFingerprint)
+      failures.push(`${question.id}: reviewed source fingerprint no longer matches`);
   }
 }
 

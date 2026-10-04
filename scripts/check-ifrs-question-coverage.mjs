@@ -24,6 +24,7 @@ const files = [
   "src/data/ifrs-quiz-phase8-enrichment.ts",
   "src/data/ifrs-quiz-phase9-applied.ts",
   "src/data/ifrs-quiz-reviewed-extracts.ts",
+  "src/data/ifrs-quiz-reviewed-extensions.ts",
 ];
 
 const priority = [
@@ -182,11 +183,25 @@ function readCompactQuestions(file, content) {
   });
 }
 
+function readReviewedExtensionQuestions(file, content) {
+  if (!file.endsWith("ifrs-quiz-reviewed-extensions.ts")) return [];
+
+  return [
+    ...content.matchAll(/rq\(\s*"([^"]+)",\s*"((?:IFRS|IAS) \d+)",\s*"(easy|intermediate|hard)"/g),
+  ].map((match) => ({
+    id: match[1],
+    track: "IFRS",
+    standard: match[2],
+    difficulty: match[3],
+  }));
+}
+
 const all = [];
 for (const file of files) {
   const content = await fs.readFile(file, "utf8");
   all.push(...readQuestions(content));
   all.push(...readCompactQuestions(file, content));
+  all.push(...readReviewedExtensionQuestions(file, content));
   all.push(...readPhase6GeneratedQuestions(file, content));
   all.push(...readPhase8GeneratedQuestions(file, content));
   all.push(...readPhase9GeneratedQuestions(file, content));
@@ -237,7 +252,7 @@ console.log(
       below_baseline: belowBaseline,
       below_priority_target: belowPriority,
       below_phase4_depth_target: belowPhase4Depth,
-      expected_total: 1131,
+      expected_total: 1158,
     },
     null,
     2,
@@ -251,8 +266,8 @@ if (unmapped) failures.push(`${unmapped} IFRS questions could not be mapped to a
 if (missing.length) failures.push(`Standards without questions: ${missing.join(", ")}`);
 if (belowBaseline.length)
   failures.push(`Standards below twenty-five-question baseline: ${belowBaseline.join(", ")}`);
-if (questions.length !== 1131)
-  failures.push(`Expected 1131 IFRS questions; found ${questions.length}`);
+if (questions.length !== 1158)
+  failures.push(`Expected 1158 IFRS questions; found ${questions.length}`);
 if (belowPriority.length)
   failures.push(`Priority standards below 25 questions: ${belowPriority.join(", ")}`);
 if (belowPhase4Depth.length)
