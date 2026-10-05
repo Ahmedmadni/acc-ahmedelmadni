@@ -86,6 +86,8 @@ const protectedPracticeIds = [
   "ifrs-book2-pqr-debentures",
   "ifrs-book2-pqr-preference-shares",
   "ifrs-book2-barcelona-madrid-consolidation",
+  "ifrs-book2-fallowfield-rusholme-profit",
+  "ifrs-book2-hever-subsidiary-associate",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -161,6 +163,27 @@ const reviewedCalculations = [
     920 + 2238.4 + 796 + 201.6 + 726 + 1351 + 23,
     6256,
   ],
+  ["Fallowfield unrealised inventory profit", 40000 * 0.5 * (25 / 125), 4000],
+  ["Fallowfield group revenue", 403400 + 193000 - 40000, 556400],
+  ["Fallowfield group cost of sales", 201400 + 92600 - 40000 + 4000, 258000],
+  ["Fallowfield group profit", 298400 - 30600 - 42050 - 83750, 142000],
+  ["Fallowfield NCI profit", (46000 - 4000) * 0.4, 16800],
+  ["Fallowfield opening retained earnings", 163000 + (61000 - 16000) * 0.6, 190000],
+  ["Fallowfield closing retained earnings", 238000 + (82000 - 16000 - 4000) * 0.6, 275200],
+  ["Hever ownership of Spiro", 48000 / 80000, 0.6],
+  ["Hever ownership of Aldridge", 15000 / 50000, 0.3],
+  ["Hever Spiro acquisition net assets", 80 + 80 + 20 + 50 - 20, 210],
+  ["Hever Spiro goodwill", 128 + 90 - 210, 8],
+  ["Hever associate carrying amount", 90 + (400 - 150) * 0.3, 165],
+  ["Hever unrealised downstream profit", (16 - 10) * 0.25, 1.5],
+  [
+    "Hever group retained earnings",
+    568 - 1.5 + (200 - 20 + 20 - 5) * 0.6 + (400 - 150) * 0.3,
+    758.5,
+  ],
+  ["Hever NCI", 90 + (200 - 20 + 20 - 5) * 0.4, 168],
+  ["Hever consolidated assets", 605 + 8 + 165 + 258.5 + 260 + 90, 1386.5],
+  ["Hever equity and liabilities", 200 + 100 + 758.5 + 168 + 160, 1386.5],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)
