@@ -106,6 +106,24 @@ const reviewedCalculations = [
   ["advance-payment first-year interest", Math.round(65586 * 0.125), 8198],
   ["market leaseback right-of-use asset", Math.round((500000 * 700000) / 740000), 472973],
   ["market leaseback recognised gain", Math.round(240000 * (1 - 700000 / 740000)), 12973],
+  ["Courtney initial payable", 300000 / 20, 15000],
+  ["Courtney closing payable", 300000 / 16, 18750],
+  ["Courtney exchange loss", 300000 / 16 - 300000 / 20, 3750],
+  ["Pilum preference dividend", 4600000 * 0.06, 276000],
+  ["Pilum ordinary earnings", 1403000 - 4600000 * 0.06, 1127000],
+  ["Pilum rights issue shares", 4120000 / 5, 824000],
+  [
+    "Pilum weighted-average shares",
+    Math.round((4120000 * (1.78 / (10.1 / 6)) * 9) / 12 + (4944000 * 3) / 12),
+    4503446,
+  ],
+  ["Pilum diluted conversion shares", (1500000 / 100) * 90, 1350000],
+  ["Pilum diluted earnings", 1127000 + 1500000 * 0.1 * (1 - 0.3), 1232000],
+  ["Hewlett year one cumulative charge", ((800 - 95) * 200 * 7.5) / 3, 352500],
+  ["Hewlett year two cumulative charge", ((800 - 70) * 200 * 7.5 * 2) / 3, 730000],
+  ["Hewlett final cumulative charge", (800 - 60) * 200 * 7.5, 1110000],
+  ["Hewlett exercise proceeds", 740 * 200 * 1.5, 222000],
+  ["Hewlett balanced share premium", 222000 + 1110000 - 740 * 200, 1184000],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (actual !== expected) failures.push(`${label}: expected ${expected}, got ${actual}`);

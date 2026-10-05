@@ -8,6 +8,219 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 2": {
+    sections: [
+      {
+        title: text(
+          "خدمة الموظف تُقاس عبر فترة الاستحقاق",
+          "Employee services accrue over the vesting period",
+        ),
+        explanation: text(
+          "في منح الخيارات المسددة بأسهم للموظفين، تُستخدم القيمة العادلة للخيار في تاريخ المنح أساسًا لقياس خدمات الموظفين. شرط البقاء في الخدمة لا يُخفض قيمة الخيار المقاسة؛ بدلًا من ذلك، يُحدَّث عدد الخيارات المتوقع استحقاقها عند كل تاريخ تقرير. المصروف التراكمي يساوي عدد الأدوات المتوقع استحقاقها × قيمتها في تاريخ المنح × نسبة فترة الخدمة المنقضية. قيد كل سنة هو الفرق بين المصروف التراكمي الجديد وما سُجل سابقًا، ويقابله رصيد في حقوق الملكية. عند الممارسة، تُضاف حصيلة سعر الممارسة إلى حقوق الملكية ولا يُعاد قياس تكلفة الخدمة بسبب سعر السهم اللاحق.",
+          "For equity-settled employee options, grant-date option fair value provides the basis for measuring employee services. A service vesting condition does not reduce the measured option value; instead, update the number expected to vest at each reporting date. Cumulative expense equals expected vesting instruments × grant-date value × proportion of service period completed. Each year's charge is the revised cumulative amount less previous charges, with a corresponding equity credit. On exercise, the exercise proceeds enter equity; later share prices do not remeasure the service cost.",
+        ),
+        keyPoints: [
+          text(
+            "لا تضرب القيمة العادلة بسعر الممارسة؛ لكل منهما دور مختلف.",
+            "Do not multiply fair value by the exercise price; they serve different purposes.",
+          ),
+          text(
+            "أعد تقدير المغادرين كل سنة، ثم احسب مصروف السنة من تغير الرصيد التراكمي.",
+            "Revise expected leavers each year, then derive annual expense from the change in cumulative cost.",
+          ),
+          text(
+            "تحقق من توازن قيد الإصدار: النقد مع احتياطي الخيارات في المدين يساوي رأس المال والعلاوة في الدائن.",
+            "Check the issue entry balances: cash plus the options reserve debits equal share capital plus premium credits.",
+          ),
+        ],
+        reference: "IFRS 2.14–23",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("برنامج 800 موظف خلال ثلاث سنوات", "Three-year grant to 800 employees"),
+        facts: text(
+          "مُنح كل من 800 موظف 200 خيار، قيمته العادلة في تاريخ المنح 7.50 دولارات وسعر ممارسته 1.50 دولار. يشترط البقاء ثلاث سنوات. التقدير النهائي للمغادرين 60 موظفًا، ومارس 740 موظفًا الخيارات. القيمة الاسمية للسهم دولار واحد.",
+          "Each of 800 employees receives 200 options, with grant-date fair value $7.50 and exercise price $1.50. Vesting requires three years' service. Ultimately 60 employees leave and the remaining 740 exercise. Par value is $1 per share.",
+        ),
+        calculations: [
+          text(
+            "عدد الخيارات المستحقة = 740 × 200 = 148,000.",
+            "Vested options = 740 × 200 = 148,000.",
+          ),
+          text(
+            "إجمالي تكلفة الخدمات = 148,000 × 7.50 = 1,110,000 دولار تُثبت عبر فترة الخدمة.",
+            "Total service cost = 148,000 × $7.50 = $1,110,000 across the service period.",
+          ),
+          text(
+            "حصيلة الممارسة = 148,000 × 1.50 = 222,000 دولار؛ رأس المال الاسمي = 148,000 دولار؛ العلاوة = 222,000 + 1,110,000 − 148,000 = 1,184,000 دولار.",
+            "Exercise proceeds = 148,000 × $1.50 = $222,000; par share capital = $148,000; share premium = $222,000 + $1,110,000 − $148,000 = $1,184,000.",
+          ),
+        ],
+        conclusion: text(
+          "المصروف النهائي 1,110,000؛ يتوازن قيد الإصدار بمجموع 1,332,000 على كل جانب.",
+          "Final service expense is $1,110,000; the share issue entry balances at $1,332,000 on each side.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "تكلفة الخدمة الإجمالية خلال السنوات الثلاث",
+              "Total service cost over three years",
+            ),
+            debit: text("مصروف موظفين", "Staff expense"),
+            credit: text("احتياطي مدفوعات أسهم", "Share-based-payment reserve"),
+            amount: text("1,110,000 دولار إجمالًا", "$1,110,000 in total"),
+          },
+          {
+            label: text("الممارسة — قيد مركب", "Exercise — compound entry"),
+            debit: text("نقدية 222,000 + احتياطي 1,110,000", "Cash 222,000 + reserve 1,110,000"),
+            credit: text(
+              "رأس مال 148,000 + علاوة إصدار 1,184,000",
+              "Share capital 148,000 + share premium 1,184,000",
+            ),
+            amount: text("1,332,000 لكل جانب", "1,332,000 each side"),
+          },
+        ],
+        reference: "IFRS 2.14–23",
+      },
+    ],
+  },
+  "IAS 21": {
+    sections: [
+      {
+        title: text(
+          "المعاملة الأجنبية: ما الذي يعاد ترجمته؟",
+          "Foreign-currency transactions: what is retranslated?",
+        ),
+        explanation: text(
+          "ابدأ بتحديد العملة الوظيفية من البيئة الاقتصادية الأساسية، ثم حوّل المعاملة الأجنبية بسعر الصرف الفوري يوم نشوئها. عند الإقفال، أعد ترجمة البنود النقدية غير المسددة بسعر الإقفال؛ يظهر فرق الصرف عادة في الربح أو الخسارة. أما الأصل غير النقدي المقاس بالتكلفة التاريخية فيبقى بسعر تاريخ المعاملة. اختيار مجموعة لعملة عرض مختلفة لا يبدّل عملة الشركة التابعة الوظيفية وحده.",
+          "First establish functional currency from the primary economic environment, then translate a foreign-currency transaction at the transaction-date spot rate. At year-end, retranslate outstanding monetary items at the closing rate; the exchange difference normally enters profit or loss. A non-monetary asset measured at historical cost stays at its transaction-date rate. A group's different presentation currency does not by itself change a subsidiary's functional currency.",
+        ),
+        keyPoints: [
+          text(
+            "اسأل: هل سيُسدد البند بعدد ثابت أو محدد من وحدات النقد الأجنبي؟",
+            "Ask whether the item will be settled in a fixed or determinable number of foreign-currency units.",
+          ),
+          text(
+            "لا تُعد ترجمة المخزون التاريخي لمجرد أن الدائن المقابل له ما زال مفتوحًا.",
+            "Do not retranslate historical-cost inventory merely because the related payable remains outstanding.",
+          ),
+          text(
+            "ترجمة قوائم عملية أجنبية إلى عملة عرض المجموعة خطوة منفصلة عن إعادة قياس المعاملة داخل دفاتر التابعة.",
+            "Translation of a foreign operation into the group's presentation currency is distinct from remeasurement within the subsidiary's books.",
+          ),
+        ],
+        reference: "IAS 21.8–12, 21–23, 28, 38–39",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "دائن تجاري بالوون عند انخفاض قيمة الدولار",
+          "Won-denominated payable as the dollar weakens",
+        ),
+        facts: text(
+          "في 1 ديسمبر اشترت منشأة موادًا بمبلغ 300,000 وون على الحساب. عملتها الوظيفية الدولار: الدولار = 20 وون عند الشراء و16 وون عند 31 ديسمبر. لم تُسدد الفاتورة ولم تُستخدم المواد.",
+          "On 1 December an entity bought materials on credit for 300,000 won. Its functional currency is the US dollar: US$1 = 20 won at purchase and 16 won at 31 December. The invoice remains unpaid and the materials unused.",
+        ),
+        calculations: [
+          text(
+            "التكلفة والدائن عند الشراء = 300,000 ÷ 20 = 15,000 دولار.",
+            "Initial inventory and payable = 300,000 ÷ 20 = US$15,000.",
+          ),
+          text(
+            "الدائن النقدي عند الإقفال = 300,000 ÷ 16 = 18,750 دولار.",
+            "Closing monetary payable = 300,000 ÷ 16 = US$18,750.",
+          ),
+          text(
+            "خسارة الصرف = 18,750 − 15,000 = 3,750 دولار؛ يظل المخزون التاريخي 15,000 دولار.",
+            "Exchange loss = 18,750 − 15,000 = US$3,750; historical-cost inventory remains US$15,000.",
+          ),
+        ],
+        conclusion: text(
+          "المركز المالي: مخزون 15,000 ودائنون 18,750؛ الربح أو الخسارة: خسارة صرف 3,750.",
+          "Financial position: inventory 15,000 and payable 18,750; profit or loss: exchange loss 3,750.",
+        ),
+        journalEntries: [
+          {
+            label: text("عند شراء المواد", "On purchase"),
+            debit: text("مخزون مواد", "Materials inventory"),
+            credit: text("دائنون تجاريون", "Trade payables"),
+            amount: text("15,000 دولار", "US$15,000"),
+          },
+          {
+            label: text("في 31 ديسمبر", "At 31 December"),
+            debit: text("خسارة صرف", "Exchange loss"),
+            credit: text("دائنون تجاريون", "Trade payables"),
+            amount: text("3,750 دولار", "US$3,750"),
+          },
+        ],
+        reference: "IAS 21.21–23, 28",
+      },
+    ],
+  },
+  "IAS 33": {
+    sections: [
+      {
+        title: text(
+          "الحقوق والتحويل: افصل البسط عن المقام",
+          "Rights and convertibles: separate numerator from denominator",
+        ),
+        explanation: text(
+          "ربحية السهم الأساسية تقسم الربح المنسوب إلى حملة الأسهم العادية على المتوسط المرجح لعدد الأسهم. تُستبعد توزيعات الأسهم الممتازة من البسط، لكن توزيعات الأسهم العادية وتحويل الربح إلى الاحتياطيات لا يُخصمان مرة أخرى. إصدار الحقوق بسعر أقل من السوق يتضمن عنصر منحة يستوجب تعديل عدد الأسهم السابق للإصدار بمعامل القيمة العادلة قبل الحق إلى السعر النظري بعد الحق. عند اختبار قرض قابل للتحويل للمخفضة، افترض التحويل من بداية الفترة إن كان قائمًا حينها: أضف الفائدة بعد الضريبة إلى البسط والأسهم الناشئة إلى المقام، ثم ادرج الأثر فقط إن كان مخفِّضًا.",
+          "Basic EPS divides profit attributable to ordinary shareholders by weighted-average ordinary shares. Preference dividends reduce the numerator; ordinary dividends and reserve transfers are not deducted again. A below-market rights issue contains a bonus element, requiring the pre-issue shares to be adjusted by the pre-rights fair value divided by theoretical ex-rights price. For a convertible loan, assume conversion from the period's start if outstanding then: add after-tax interest to the numerator and conversion shares to the denominator, including the effect only if dilutive.",
+        ),
+        keyPoints: [
+          text(
+            "احسب السعر النظري للحقوق دون تقريب مبكر، ثم زن الأسهم قبل الإصدار وبعده زمنيًا.",
+            "Calculate theoretical ex-rights price without premature rounding, then time-weight pre- and post-issue shares.",
+          ),
+          text(
+            "لا تفترض أن كل أداة قابلة للتحويل مخفِّضة؛ قارن الربحية الناتجة بالأساسية.",
+            "Do not assume every convertible is dilutive; compare resulting EPS with basic EPS.",
+          ),
+          text(
+            "اعرض الأساسية والمخفضة حتى عندما تتساويان لعدم وجود أسهم محتملة مخفِّضة.",
+            "Present basic and diluted EPS even when equal because no dilutive potential shares exist.",
+          ),
+        ],
+        reference: "IAS 33.12–15, 19–27, 31–40, A2",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("إصدار حقوق بنسبة سهم لكل خمسة", "One-for-five rights issue"),
+        facts: text(
+          "الربح العائد للأسهم العادية 1,127,000 دولار، والأسهم العادية 4,120,000 في بداية السنة. أصدرت الشركة في 1 أكتوبر سهمًا لكل خمسة بسعر 1.20 دولار؛ سعر السهم قبل الحق 1.78 دولار. لا توجد أسهم محتملة مخفِّضة أخرى.",
+          "Profit attributable to ordinary shares is $1,127,000 and 4,120,000 ordinary shares were outstanding at the year's start. On 1 October the entity offered one new share for every five at $1.20; the pre-rights price was $1.78. No other dilutive potential shares exist.",
+        ),
+        calculations: [
+          text(
+            "الأسهم الجديدة = 4,120,000 ÷ 5 = 824,000؛ الأسهم بعد الإصدار = 4,944,000.",
+            "New shares = 4,120,000 ÷ 5 = 824,000; post-issue shares = 4,944,000.",
+          ),
+          text(
+            "السعر النظري = (5 × 1.78 + 1.20) ÷ 6 = 1.683333؛ معامل المنحة = 1.78 ÷ 1.683333 ≈ 1.057426.",
+            "Theoretical ex-rights price = (5 × 1.78 + 1.20) ÷ 6 = 1.683333; bonus factor = 1.78 ÷ 1.683333 ≈ 1.057426.",
+          ),
+          text(
+            "المتوسط المرجح ≈ 4,120,000 × 1.057426 × 9/12 + 4,944,000 × 3/12 = 4,503,446 سهمًا.",
+            "Weighted average ≈ 4,120,000 × 1.057426 × 9/12 + 4,944,000 × 3/12 = 4,503,446 shares.",
+          ),
+          text(
+            "الربحية = 1,127,000 ÷ 4,503,446 ≈ 0.250253 دولار = 25.03 سنتًا للسهم.",
+            "EPS = 1,127,000 ÷ 4,503,446 ≈ $0.250253 = 25.03 cents per share.",
+          ),
+        ],
+        conclusion: text(
+          "الأساسية والمخفضة 25.03 سنتًا، على افتراض عدم وجود أدوات أخرى قد تخفّض الربحية.",
+          "Basic and diluted EPS are 25.03 cents, assuming no other potentially dilutive instruments.",
+        ),
+        journalEntries: [],
+        reference: "IAS 33.19–27, A2",
+      },
+    ],
+  },
   "IFRS 15": {
     sections: [
       {
