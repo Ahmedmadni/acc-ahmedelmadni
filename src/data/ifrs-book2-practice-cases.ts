@@ -15,6 +15,116 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-vident-share-options",
+    standardCode: "IFRS 2",
+    title: text(
+      "Vident: شرطان مختلفان لاستحقاق خيارات المديرين",
+      "Vident: two different conditions for director share options",
+    ),
+    facts: text(
+      "للسنة المنتهية في 31 مايو 20X5، منحت Vident في 1 يونيو 20X3 عدد 20,000 خيار للمدير الأول، القيمة العادلة يوم المنح 5 دولارات للخيار وسعر الممارسة 4.50. يشترط نمو ربحية السهم السنوية 4% مع استمرار الخدمة حتى 1 يونيو 20X5؛ معدلات النمو الفعلية المعطاة 4.5% ثم 4.1% ثم 4.2%، ولم يغادر المدير. ومنحت في 1 يونيو 20X4 عدد 50,000 خيار لمدير ثانٍ، قيمتها العادلة يوم المنح 6 دولارات وسعر الممارسة 6؛ تتطلب خدمته ثلاث سنوات حتى 1 يونيو 20X7 وبلوغ السهم مستوى أعلى من 13.50 دولار، بينما سعره في 31 مايو 20X5 هو 12. لم يغادر أي مدير ولا يُتوقع مغادرته قبل الاستحقاق. Vident تنتقل إلى IFRS في السنة الحالية، ويطلب السؤال تعديل افتتاحي 1 يونيو 20X4 ومصروف السنة.",
+      "For the year ended 31 May 20X5, Vident granted 20,000 options to one director on 1 June 20X3 at grant-date fair value $5 per option and exercise price $4.50. Annual EPS growth of at least 4% and continued service until 1 June 20X5 are required; stated growth rates are 4.5%, 4.1% and 4.2%, and the director remains employed. Another director received 50,000 options on 1 June 20X4, grant-date fair value $6 and exercise price $6; three years' service to 1 June 20X7 and a share price above $13.50 are required. The 31 May 20X5 share price is $12. Neither director has left or is expected to leave before vesting. Vident adopts IFRS in the current year; the question asks for the 1 June 20X4 opening adjustment and current-year expense.",
+    ),
+    question: text(
+      "اشرح سبب إثبات خدمة المديرين مصروفًا، وفصل شرط الأداء غير السوقي عن الشرط السوقي، ثم احسب التعديل الافتتاحي ومصروف 20X5 ورصيد احتياطي الخيارات.",
+      "Explain why the directors' services are expensed, distinguish the non-market from the market condition, then calculate the opening adjustment, 20X5 expense and option reserve.",
+    ),
+    solution: [
+      text(
+        "تُقابل الخيارات خدمة المديرين التي تستهلكها المنشأة؛ عدم دفع نقد لا يلغي تكلفة الخدمة. إثبات المصروف يعكس تلقي الخدمة، بينما ربحية السهم المخفضة تعكس احتمال زيادة عدد الأسهم، فلا يوجد احتساب مزدوج للحدث نفسه.",
+        "The options are consideration for director services consumed by the entity; the absence of a cash payment does not make the service free. Expense recognition reflects receiving services, whereas diluted EPS depicts possible additional shares, so these are not duplicate recognition of the same event.",
+      ),
+      text(
+        "شرط نمو ربحية السهم غير سوقي، وتؤخذ احتمالات الاستحقاق منه ومن الخدمة في عدد الخيارات المتوقع استحقاقها؛ وفق الوقائع، يستحق 20,000 خيار للمدير الأول. إجمالي تكلفة المنحة = 20,000 × 5 = 100,000 دولار على سنتين، أي 50,000 للسنة السابقة و50,000 للسنة الحالية.",
+        "EPS-growth is a non-market condition; its expected outcome and service affect the number of options expected to vest. On the stated facts, all 20,000 first-director options are expected to vest. Total grant cost = 20,000 × $5 = $100,000 over two years, or $50,000 for each year.",
+      ),
+      text(
+        "هدف سعر السهم للمدير الثاني شرط سوقي أُدخل في القيمة العادلة يوم المنح؛ هبوط السعر إلى 12 في يوم الإقفال لا يلغي مصروف الخدمة ما دامت خدمته المتوقعة مستمرة. تكلفة المنحة 50,000 × 6 = 300,000 على ثلاث سنوات؛ مصروف السنة الأولى 100,000.",
+        "The second director's share-price target is a market condition reflected in grant-date fair value; a $12 closing share price does not reverse the service expense while continued service is expected. Grant cost is 50,000 × $6 = $300,000 over three years; first-year expense is $100,000.",
+      ),
+      text(
+        "عند الانتقال، وبافتراض تطبيق IFRS 2 على المنحة السابقة، يُخفض رصيد الأرباح الافتتاحي 50,000 ويُزاد احتياطي خيارات الأسهم 50,000. في 20X5 يكون القيد: مدين مصروف مكافآت بالأسهم 150,000، دائن احتياطي الخيارات 150,000؛ رصيد الاحتياطي التراكمي في 31 مايو 20X5 = 200,000.",
+        "At transition, assuming IFRS 2 applies to the earlier grant, debit opening retained earnings $50,000 and credit the share-option reserve $50,000. For 20X5, debit share-based remuneration expense $150,000 and credit the option reserve $150,000; the cumulative closing reserve is $200,000.",
+      ),
+    ],
+    reference: "IFRS 2.14–23; IFRS 1.D2; IAS 33.31–32",
+  },
+  {
+    id: "ifrs-book2-vident-share-option-tax",
+    standardCode: "IAS 12",
+    title: text("Vident: ضريبة مؤجلة لخيارات الأسهم", "Vident: deferred tax on share options"),
+    facts: text(
+      "في مسألة Vident ذاتها، لا تسمح القواعد الضريبية بخصم مكافأة الخيارات إلا عند ممارستها، ويعتمد الخصم على قيمتها الجوهرية يوم الممارسة. منحة المدير الأول 20,000 خيار، سعر الممارسة 4.50، وسعر السهم في 31 مايو 20X4 كان 12.50 وفي 31 مايو 20X5 أصبح 12؛ المنحة تُحمّل على سنتين، وكان المصروف التراكمي 50,000 ثم 100,000. منحة المدير الثاني 50,000 خيار بسعر ممارسة 6، بدأت في 1 يونيو 20X4 وتُحمّل على ثلاث سنوات؛ مصروفها التراكمي في 31 مايو 20X5 هو 100,000. معدل الضريبة 30%. تفترض الحسابات أن الخصومات المستقبلية ستكون قابلة للاستخدام مقابل أرباح ضريبية محتملة.",
+      "In the same Vident case, tax law permits a deduction for options only on exercise, based on intrinsic value at exercise. The first grant has 20,000 options with $4.50 exercise price; share prices were $12.50 at 31 May 20X4 and $12 at 31 May 20X5. Its two-year cumulative remuneration expense was $50,000 then $100,000. The second grant has 50,000 options at $6 exercise price, beginning 1 June 20X4 and expensed over three years; its cumulative expense at 31 May 20X5 is $100,000. The tax rate is 30%. Calculations assume future deductions are usable against probable taxable profits.",
+    ),
+    question: text(
+      "احسب أصل الضريبة المؤجلة افتتاحًا وختامًا، ووزع تغيره بين الربح أو الخسارة وحقوق الملكية وفق IAS 12، مع ذكر شرط الاعتراف.",
+      "Calculate opening and closing deferred-tax assets and allocate their change between profit or loss and equity under IAS 12, stating the recognition condition.",
+    ),
+    solution: [
+      text(
+        "في 31 مايو 20X4، الخصم الضريبي المستقبلي المقدَّر لخدمة المدير الأول المقدمة حتى ذلك التاريخ = 20,000 × (12.50 − 4.50) × نصف مدة الخدمة = 80,000 دولار؛ أصل الضريبة المؤجلة = 80,000 × 30% = 24,000، بشرط رجحان أرباح ضريبية كافية.",
+        "At 31 May 20X4, estimated future deduction for the first director's service received to that date = 20,000 × ($12.50 − $4.50) × one half = $80,000; deferred-tax asset = $80,000 × 30% = $24,000, subject to probable sufficient taxable profits.",
+      ),
+      text(
+        "المصروف التراكمي للمنحة الأولى عند الافتتاح 50,000، وأثره الضريبي 15,000 في الأرباح؛ الزيادة في الخصم المقدَّر فوق المصروف 80,000 − 50,000 = 30,000 ينتج عنها 9,000 تُنسب مباشرة إلى حقوق الملكية. هذا بيان أثر الانتقال في الأرصدة الافتتاحية، لا دخل السنة الجديدة.",
+        "Opening cumulative first-grant expense is $50,000, with $15,000 of tax benefit attributable to profit or loss; the $30,000 excess of estimated deduction over expense creates $9,000 recognised directly in equity. These are opening-transition amounts, not current-year income.",
+      ),
+      text(
+        "في 31 مايو 20X5، الخصم المقدَّر للمنحة الأولى = 20,000 × (12 − 4.50) = 150,000، وللثانية = 50,000 × (12 − 6) × ثلث مدة الخدمة = 100,000؛ المجموع 250,000، وأصل الضريبة المؤجلة = 75,000.",
+        "At 31 May 20X5, estimated first-grant deduction = 20,000 × ($12 − $4.50) = $150,000, and second-grant deduction = 50,000 × ($12 − $6) × one third = $100,000; total $250,000, giving a $75,000 deferred-tax asset.",
+      ),
+      text(
+        "المصروف التراكمي لكلتا المنحتين 200,000، وأثره الضريبي 60,000؛ والزيادة في الخصم المقدَّر 50,000 تعطي 15,000 تراكميًا في حقوق الملكية. مقارنة بالافتتاح، يرتفع أصل الضريبة 51,000، منها 45,000 منفعة ضريبية في ربح أو خسارة 20X5 و6,000 في حقوق الملكية. لا يُثبت الأصل إذا لم تتحقق متطلبات الاعتراف بأصل الضريبة المؤجلة.",
+        "Cumulative remuneration expense for both grants is $200,000, with $60,000 associated tax benefit; the $50,000 excess estimated deduction results in cumulative $15,000 in equity. Relative to opening, the asset increases $51,000: $45,000 current-year tax benefit in profit or loss and $6,000 in equity. No deferred-tax asset is recognised unless its recognition criteria are met.",
+      ),
+    ],
+    reference: "IAS 12.24, 68A–68C; IFRS 2.19–21",
+  },
+  {
+    id: "ifrs-book2-reprise-encore-consolidation",
+    standardCode: "IFRS 10",
+    title: text(
+      "Reprise وEncore: تسوية النقدية في الطريق والتجميع",
+      "Reprise and Encore: cash in transit and consolidation",
+    ),
+    facts: text(
+      "جميع الأرقام بآلاف الدولارات في 31 مارس 20X4. اشترت Reprise نسبة 75% من Encore مقابل 2,000 قبل عشر سنوات، حين بلغت أرباح Encore المحتجزة 1,044 ورأس مالها 500. كانت القيمة السوقية للسهم 4.40 دولارات يوم الشراء؛ يقاس غير المسيطرين بالقيمة العادلة، ويبلغ انخفاض الشهرة المتراكم 180. أرصدة الأم/التابعة: أرض ومبانٍ 3,350/صفر؛ آلات ومعدات 1,010/2,210؛ مركبات 510/345؛ مخزون 890/352؛ مدينون 1,372/514؛ نقدية 89/51؛ أرباح محتجزة 4,225/2,610؛ دائنون 996/362. للأم رأس مال 1,000، فائض إعادة تقييم 2,500 وسندات طويلة 500. تشمل مدينون الأم 75 مستحقة على التابعة؛ أرسلت التابعة منها 39 نقدًا لم يصل إلى الأم عند الإقفال، فأصبحت مديونيتها الدفترية 36. يضم مخزون التابعة بضاعة اشترتها من الأم مقابل 31.2 مع زيادة سعر بيع 30% على التكلفة. لا تورد الوقائع فروق قيمة عادلة أخرى أو بيانات ضريبة مؤجلة.",
+      "All figures are in $000 at 31 March 20X4. Reprise acquired 75% of Encore for 2,000 ten years earlier, when Encore had retained earnings of 1,044 and capital of 500. Encore shares traded at $4.40 each at acquisition; NCI is measured at fair value and cumulative goodwill impairment is 180. Parent/subsidiary balances: land and buildings 3,350/nil; plant and equipment 1,010/2,210; vehicles 510/345; inventory 890/352; receivables 1,372/514; cash 89/51; retained earnings 4,225/2,610; payables 996/362. The parent also has capital 1,000, revaluation surplus 2,500 and long-term debentures 500. Parent receivables include 75 due from the subsidiary; the latter sent 39 in cash that had not reached the parent by closing, leaving its recorded payable at 36. Subsidiary inventory includes goods bought from the parent for 31.2 at a 30% mark-up on cost. The facts provide no other acquisition-date fair-value differences or deferred-tax data.",
+    ),
+    question: text(
+      "أعد قائمة المركز المالي الموحدة، مع تسوية النقدية في الطريق، الرصيد المتبادل، الربح غير المحقق، الشهرة، والأرباح المحتجزة وحقوق غير المسيطرين.",
+      "Prepare the consolidated statement of financial position, reconciling cash in transit, the reciprocal balance, unrealised profit, goodwill, retained earnings and NCI.",
+    ),
+    solution: [
+      text(
+        "حقوق غير المسيطرين يوم الشراء = 25% × 500,000 سهم × 4.40 دولار = 550 ألفًا. صافي أصول Encore المعطى يوم الاستحواذ = 500 + 1,044 = 1,544. الشهرة الكاملة = 2,000 + 550 − 1,544 = 1,006؛ رصيدها بعد انخفاض 180 = 826.",
+        "Acquisition-date NCI = 25% × 500,000 shares × $4.40 = $550,000. Encore's stated acquisition-date net assets = 500 + 1,044 = 1,544 ($000). Full goodwill = 2,000 + 550 − 1,544 = 1,006; closing goodwill after impairment of 180 is 826.",
+      ),
+      text(
+        "الربح غير المحقق في مخزون التابعة = 31.2 × 30/130 = 7.2. لأن البيع من الأم إلى التابعة، يخصم الربح 7.2 من مخزون المجموعة ومن أرباح ملاك الأم، دون تخصيصه لغير المسيطرين.",
+        "Unrealised profit in subsidiary inventory = 31.2 × 30/130 = 7.2. As the sale was downstream from parent to subsidiary, reduce group inventory and owners' retained earnings by 7.2, without allocating it to NCI.",
+      ),
+      text(
+        "أثبت النقدية في الطريق 39 بزيادة نقد المجموعة وتخفيض مديني الأم 39؛ يصبح الرصيد المتبادل 36 لدى الجانبين ويُلغى. لذلك المدينون الموحدون = 1,372 + 514 − 39 − 36 = 1,811، والدائنون = 996 + 362 − 36 = 1,322، والنقد = 89 + 51 + 39 = 179.",
+        "Record the 39 cash in transit by increasing group cash and reducing parent receivables by 39; the reciprocal balance is then 36 on both sides and is eliminated. Consolidated receivables = 1,372 + 514 − 39 − 36 = 1,811; payables = 996 + 362 − 36 = 1,322; cash = 89 + 51 + 39 = 179.",
+      ),
+      text(
+        "أرباح المجموعة المحتجزة = 4,225 − 7.2 + 75% × (2,610 − 1,044) − 75% × 180 = 5,257.3. حقوق غير المسيطرين = 550 + 25% × 1,566 − 25% × 180 = 896.5؛ يقسم انخفاض الشهرة عليهما لأن الشهرة قِيست كاملة.",
+        "Group retained earnings = 4,225 − 7.2 + 75% × (2,610 − 1,044) − 75% × 180 = 5,257.3. NCI = 550 + 25% × 1,566 − 25% × 180 = 896.5; goodwill impairment is shared because full goodwill was measured.",
+      ),
+      text(
+        "الأصول غير المتداولة: أرض ومبانٍ 3,350، آلات 3,220، مركبات 855، شهرة 826؛ مجموعها 8,251 بعد إلغاء استثمار الأم في Encore. الأصول المتداولة: مخزون 890 + 352 − 7.2 = 1,234.8، ومدينون 1,811، ونقد 179؛ مجموعها 3,224.8. مجموع الأصول 11,475.8.",
+        "Non-current assets: land and buildings 3,350; plant 3,220; vehicles 855; goodwill 826; total 8,251 after eliminating the parent's investment in Encore. Current assets: inventory 890 + 352 − 7.2 = 1,234.8; receivables 1,811; cash 179; total 3,224.8. Assets total 11,475.8.",
+      ),
+      text(
+        "الحقوق والخصوم: رأس مال الأم 1,000 + فائض إعادة تقييمها 2,500 + أرباح محتجزة 5,257.3 + غير مسيطرين 896.5 = حقوق 9,653.8؛ سندات 500 ودائنون 1,322، ليصبح الإجمالي 11,475.8. هذه الأرقام تفترض عدم وجود تعديل ضريبي إضافي لم تتوافر مدخلاته في السؤال.",
+        "Equity and liabilities: parent capital 1,000 + its revaluation surplus 2,500 + group retained earnings 5,257.3 + NCI 896.5 = equity 9,653.8; debentures 500 and payables 1,322 bring the total to 11,475.8. These figures assume no additional tax adjustment for which the case provides no inputs.",
+      ),
+    ],
+    reference: "IFRS 10.B86–B94; IFRS 3.18–19, 32; IAS 36.104",
+  },
+  {
     id: "ifrs-book2-smith-loss-of-control",
     standardCode: "IFRS 10",
     title: text(

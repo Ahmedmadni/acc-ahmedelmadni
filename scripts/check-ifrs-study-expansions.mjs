@@ -89,6 +89,9 @@ const protectedPracticeIds = [
   "ifrs-book2-fallowfield-rusholme-profit",
   "ifrs-book2-hever-subsidiary-associate",
   "ifrs-book2-smith-loss-of-control",
+  "ifrs-book2-reprise-encore-consolidation",
+  "ifrs-book2-vident-share-options",
+  "ifrs-book2-vident-share-option-tax",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -192,6 +195,29 @@ const reviewedCalculations = [
   ["Smith group retained earnings", 414 + 182 + (360 - 180) * 0.8, 740],
   ["Smith consolidated assets", 360 + 370 + 650, 1380],
   ["Smith equity and liabilities", 540 + 740 + 100, 1380],
+  ["Reprise fair-value NCI at acquisition", 500 * 0.25 * 4.4, 550],
+  ["Reprise acquisition goodwill", 2000 + 550 - 500 - 1044, 1006],
+  ["Reprise closing goodwill", 1006 - 180, 826],
+  ["Reprise unrealised downstream profit", 31.2 * (30 / 130), 7.2],
+  ["Reprise reciprocal balance after cash transit", 75 - 39, 36],
+  ["Reprise consolidated receivables", 1372 + 514 - 39 - 36, 1811],
+  ["Reprise consolidated cash", 89 + 51 + 39, 179],
+  ["Reprise retained earnings", 4225 - 7.2 + (2610 - 1044) * 0.75 - 180 * 0.75, 5257.3],
+  ["Reprise NCI", 550 + (2610 - 1044) * 0.25 - 180 * 0.25, 896.5],
+  ["Reprise consolidated assets", 3350 + 3220 + 855 + 826 + 1234.8 + 1811 + 179, 11475.8],
+  ["Reprise equity and liabilities", 1000 + 2500 + 5257.3 + 896.5 + 500 + 1322, 11475.8],
+  ["Vident first grant opening expense", (20000 * 5) / 2, 50000],
+  ["Vident first grant current expense", (20000 * 5) / 2, 50000],
+  ["Vident second grant current expense", (50000 * 6) / 3, 100000],
+  ["Vident current share-based expense", 50000 + 100000, 150000],
+  ["Vident cumulative option reserve", 50000 + 150000, 200000],
+  ["Vident opening tax deduction", 20000 * (12.5 - 4.5) * 0.5, 80000],
+  ["Vident opening deferred tax asset", 80000 * 0.3, 24000],
+  ["Vident closing tax deduction", 20000 * (12 - 4.5) + (50000 * (12 - 6)) / 3, 250000],
+  ["Vident closing deferred tax asset", 250000 * 0.3, 75000],
+  ["Vident closing cumulative equity tax", (250000 - 200000) * 0.3, 15000],
+  ["Vident current profit or loss tax benefit", 150000 * 0.3, 45000],
+  ["Vident current equity tax benefit", 15000 - (80000 - 50000) * 0.3, 6000],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)
