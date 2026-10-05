@@ -81,6 +81,11 @@ const protectedPracticeIds = [
   "ifrs-book2-hewlett-options",
   "ifrs-book2-biological-assets",
   "ifrs-book2-ace-related-parties",
+  "ifrs-book2-jenson-repurchase",
+  "ifrs-book2-jenson-subscriptions",
+  "ifrs-book2-pqr-debentures",
+  "ifrs-book2-pqr-preference-shares",
+  "ifrs-book2-barcelona-madrid-consolidation",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -136,9 +141,30 @@ const reviewedCalculations = [
   ["Hewlett final cumulative charge", (800 - 60) * 200 * 7.5, 1110000],
   ["Hewlett exercise proceeds", 740 * 200 * 1.5, 222000],
   ["Hewlett balanced share premium", 222000 + 1110000 - 740 * 200, 1184000],
+  ["Jenson nine-month finance cost", (35000 * 0.12 * 9) / 12, 3150],
+  ["Jenson closing financing liability", 35000 + 3150, 38150],
+  ["Jenson delivered subscription revenue", (240000 / 24) * 6, 60000],
+  ["Jenson remaining contract liability", 240000 - 60000, 180000],
+  ["PQR effective interest income", Math.round(34000 * 0.086), 2924],
+  ["PQR cash coupon", 40000 * 0.04, 1600],
+  ["PQR gross year-end debenture balance", 34000 + 2924 - 1600, 35324],
+  ["PQR annual preference payment", 100000 * 0.06, 6000],
+  ["Barcelona consideration", (50 / 0.2) * 0.6 * 1.06, 159],
+  ["Barcelona acquisition net assets", 50 + 104 + 11 + 8 + 6 + 20, 199],
+  ["Barcelona full goodwill", 159 + 86 - 199, 46],
+  ["Barcelona closing goodwill", 46 - 20, 26],
+  ["Barcelona retained earnings", 2086 + (394 - 104 - 8 - (20 / 10) * 4) * 0.6 - 20 * 0.6, 2238.4],
+  ["Barcelona NCI", 86 + (394 - 104 - 8 - 8) * 0.4 + (46 - 11) * 0.4 - 20 * 0.4, 201.6],
+  ["Barcelona consolidated assets", 3220 + 45 + 26 + 1120 + 1599 + 246, 6256],
+  [
+    "Barcelona consolidated equity and liabilities",
+    920 + 2238.4 + 796 + 201.6 + 726 + 1351 + 23,
+    6256,
+  ],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
-  if (actual !== expected) failures.push(`${label}: expected ${expected}, got ${actual}`);
+  if (Math.abs(actual - expected) > 1e-9)
+    failures.push(`${label}: expected ${expected}, got ${actual}`);
 }
 
 const ids = new Set();
