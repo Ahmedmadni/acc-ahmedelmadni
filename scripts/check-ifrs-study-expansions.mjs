@@ -15,6 +15,7 @@ let expansions;
 let standards;
 let reviewedQuestions;
 let reviewedExtensionQuestions;
+let openPracticeCases;
 try {
   ({ IFRS_STANDARD_STUDY_EXPANSIONS: expansions } = await server.ssrLoadModule(
     "/src/data/ifrs-standard-study-expansions.ts",
@@ -25,6 +26,9 @@ try {
   ));
   ({ IFRS_REVIEWED_EXTENSION_QUESTIONS: reviewedExtensionQuestions } = await server.ssrLoadModule(
     "/src/data/ifrs-quiz-reviewed-extensions.ts",
+  ));
+  ({ IFRS_BOOK2_PRACTICE_CASES: openPracticeCases } = await server.ssrLoadModule(
+    "/src/data/ifrs-book2-practice-cases.ts",
   ));
 } finally {
   await server.close();
@@ -66,6 +70,45 @@ for (const [code, expansion] of Object.entries(expansions)) {
     if (!Array.isArray(example.calculations) || example.calculations.some((item) => !hasText(item)))
       failures.push(`${code}: incomplete calculation steps`);
   }
+}
+
+const practiceIds = new Set();
+for (const practiceCase of openPracticeCases) {
+  if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
+  practiceIds.add(practiceCase.id);
+  if (!indexed.has(practiceCase.standardCode))
+    failures.push(`${practiceCase.id}: standard is not indexed`);
+  if (
+    !hasText(practiceCase.title) ||
+    !hasText(practiceCase.facts) ||
+    !hasText(practiceCase.question)
+  )
+    failures.push(`${practiceCase.id}: incomplete bilingual question`);
+  if (
+    !Array.isArray(practiceCase.solution) ||
+    practiceCase.solution.length === 0 ||
+    practiceCase.solution.some((step) => !hasText(step))
+  )
+    failures.push(`${practiceCase.id}: missing bilingual solution`);
+  if (!practiceCase.reference.startsWith(practiceCase.standardCode))
+    failures.push(`${practiceCase.id}: public reference does not match its Standard`);
+  if ("choices" in practiceCase || "answerIndex" in practiceCase)
+    failures.push(`${practiceCase.id}: open-response case has invented MCQ fields`);
+}
+
+const reviewedCalculations = [
+  [
+    "advance-payment lease liability",
+    Math.round(18420 * [1, 2, 3, 4, 5].reduce((sum, year) => sum + 1 / 1.125 ** year, 0)),
+    65586,
+  ],
+  ["advance-payment right-of-use asset", 65586 + 18420, 84006],
+  ["advance-payment first-year interest", Math.round(65586 * 0.125), 8198],
+  ["market leaseback right-of-use asset", Math.round((500000 * 700000) / 740000), 472973],
+  ["market leaseback recognised gain", Math.round(240000 * (1 - 700000 / 740000)), 12973],
+];
+for (const [label, actual, expected] of reviewedCalculations) {
+  if (actual !== expected) failures.push(`${label}: expected ${expected}, got ${actual}`);
 }
 
 const ids = new Set();
@@ -397,6 +440,7 @@ console.log(
         0,
       ),
       reviewed_source_questions: reviewedQuestions.length,
+      open_practice_cases: openPracticeCases.length,
       public_reference_policy: "IFRS/IAS only",
     },
     null,

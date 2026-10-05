@@ -1,3 +1,5 @@
+import { IFRS_BOOK2_STUDY_EXPANSIONS } from "./ifrs-book2-study-expansions";
+
 export type StudyText = { ar: string; en: string };
 
 export interface StudyJournalEntry {
@@ -33,7 +35,7 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * cites only the applicable IFRS/IAS literature; acquisition provenance is not
  * part of the learner-facing content.
  */
-export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
   "IFRS 15": {
     sections: [
       {
@@ -5473,6 +5475,24 @@ export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStud
     ],
   },
 };
+
+export const IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> =
+  Object.fromEntries(
+    Object.keys(BASE_IFRS_STANDARD_STUDY_EXPANSIONS).map((code) => {
+      const base = BASE_IFRS_STANDARD_STUDY_EXPANSIONS[code];
+      const addition = IFRS_BOOK2_STUDY_EXPANSIONS[code];
+      if (!base) throw new Error(`Missing base study expansion for ${code}`);
+      return [
+        code,
+        addition
+          ? {
+              sections: [...base.sections, ...addition.sections],
+              workedExamples: [...base.workedExamples, ...addition.workedExamples],
+            }
+          : base,
+      ];
+    }),
+  );
 
 export function getStandardStudyExpansion(code: string) {
   return IFRS_STANDARD_STUDY_EXPANSIONS[code] ?? null;
