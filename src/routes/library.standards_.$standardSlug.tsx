@@ -23,7 +23,7 @@ import { IfrsStandardCase } from "@/components/library/IfrsStandardCase";
 import { IfrsStandardStudyExpansion } from "@/components/library/IfrsStandardStudyExpansion";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
 import { IFRS_NAVIGATOR_URL } from "@/data/ifrs-standards";
-import { useLibLang } from "./library";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 export const Route = createFileRoute("/library/standards_/$standardSlug")({
   loader: ({ params }) => {
@@ -181,7 +181,7 @@ function ContentSection({
 
 function StandardLearningPage() {
   const { page } = Route.useLoaderData();
-  const lang = useLibLang();
+  const [lang] = useSiteLang();
   const { standard, guide, deepDive, referenceNotes } = page;
   const isArabic = lang === "ar";
 

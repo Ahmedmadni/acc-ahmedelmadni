@@ -21,7 +21,7 @@ import {
 } from "@/data/ifrs-standards";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IFRS_LOCAL_QUESTION_COUNTS, IFRS_LOCAL_QUESTION_TOTAL } from "@/data/ifrs-question-bank";
-import { useLibLang } from "./library";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 export const Route = createFileRoute("/library/standards")({
   head: () => {
@@ -110,7 +110,7 @@ const RESEARCH_SOURCES = [
 type FamilyFilter = "all" | StandardFamily;
 
 function StandardsPage() {
-  const lang = useLibLang();
+  const [lang] = useSiteLang();
   const [section, setSection] = useState<"articles" | "questions">("articles");
   const [questionStandardCode, setQuestionStandardCode] = useState("IAS 2");
   const [family, setFamily] = useState<FamilyFilter>("all");
