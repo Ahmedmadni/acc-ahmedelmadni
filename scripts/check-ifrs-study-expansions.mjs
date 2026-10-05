@@ -88,6 +88,7 @@ const protectedPracticeIds = [
   "ifrs-book2-barcelona-madrid-consolidation",
   "ifrs-book2-fallowfield-rusholme-profit",
   "ifrs-book2-hever-subsidiary-associate",
+  "ifrs-book2-smith-loss-of-control",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -184,6 +185,13 @@ const reviewedCalculations = [
   ["Hever NCI", 90 + (200 - 20 + 20 - 5) * 0.4, 168],
   ["Hever consolidated assets", 605 + 8 + 165 + 258.5 + 260 + 90, 1386.5],
   ["Hever equity and liabilities", 200 + 100 + 758.5 + 168 + 160, 1386.5],
+  ["Smith goodwill", 324 + 360 * 0.2 - 360, 36],
+  ["Smith disposal gain", 650 + 540 * 0.2 - 540 - 36, 182],
+  ["Smith consolidated profit", 153 + 126 + 182 - 45 - 36, 380],
+  ["Smith NCI profit", (126 - 36) * 0.2, 18],
+  ["Smith group retained earnings", 414 + 182 + (360 - 180) * 0.8, 740],
+  ["Smith consolidated assets", 360 + 370 + 650, 1380],
+  ["Smith equity and liabilities", 540 + 740 + 100, 1380],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)

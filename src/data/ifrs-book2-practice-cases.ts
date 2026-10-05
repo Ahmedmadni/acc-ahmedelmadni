@@ -15,6 +15,41 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-smith-loss-of-control",
+    standardCode: "IFRS 10",
+    title: text(
+      "Smith: بيع كامل الحصة وفقد السيطرة يوم الإقفال",
+      "Smith: sale of the entire holding and loss of control at year-end",
+    ),
+    facts: text(
+      "جميع الأرقام بآلاف الدولارات. اشترت Smith نسبة 80% من Jones مقابل 324 في 1 أكتوبر 20X5، وكانت أرباح Jones المحتجزة يومها 180 ورأس مالها 180. تقاس حقوق غير المسيطرين بحصتها النسبية في صافي الأصول، ولا انخفاض شهرة. في 30 سبتمبر 20X8، قبل تسجيل البيع، كان لدى Smith أصول غير متداولة 360، استثمار Jones 324، أصول متداولة 370، رأس مال 540، أرباح محتجزة 414، وخصوم متداولة 100. ولدى Jones أصول غير متداولة 270، متداولة 370، رأس مال 180، أرباح محتجزة 360، وخصوم 100. ربح السنة قبل الضريبة Smith/Jones = 153/126، والضريبة = 45/36. باعت Smith حصتها كلها نقدًا في 30 سبتمبر 20X8 مقابل 650، ولم تسجل أي قيد بعد. يُتجاهل أثر الضريبة على البيع وتفترض المسألة أن الربح نشأ بانتظام خلال السنة.",
+      "All figures are in $000. Smith bought 80% of Jones for 324 on 1 October 20X5, when Jones had retained earnings of 180 and capital of 180. NCI is measured as its proportionate share of identifiable net assets and there has been no goodwill impairment. Immediately before recording the sale on 30 September 20X8, Smith shows non-current assets 360, investment in Jones 324, current assets 370, capital 540, retained earnings 414 and current liabilities 100. Jones shows non-current assets 270, current assets 370, capital 180, retained earnings 360 and current liabilities 100. Smith/Jones profit before tax for the year is 153/126, with tax of 45/36. Smith sold its entire holding for 650 cash on 30 September 20X8 but recorded no entry. Tax on disposal is ignored and profit is assumed to accrue evenly through the year.",
+    ),
+    question: text(
+      "احسب شهرة الاستحواذ ومكسب فقد السيطرة، ثم أعد مقتطف الربح أو الخسارة الموحد والمركز المالي في تاريخ البيع.",
+      "Calculate acquisition goodwill and the gain on loss of control, then prepare consolidated profit or loss and financial-position extracts at the sale date.",
+    ),
+    solution: [
+      text(
+        "صافي أصول Jones يوم الاستحواذ = 180 رأس مال + 180 أرباح محتجزة = 360؛ حقوق غير المسيطرين يومها = 20% × 360 = 72؛ الشهرة بالطريقة النسبية = 324 + 72 − 360 = 36.",
+        "Jones's acquisition-date net assets = 180 capital + 180 retained earnings = 360; acquisition-date NCI = 20% × 360 = 72; proportionate-method goodwill = 324 + 72 − 360 = 36.",
+      ),
+      text(
+        "صافي أصول Jones عند فقد السيطرة = 270 + 370 − 100 = 540؛ حقوق غير المسيطرين حينئذ = 20% × 540 = 108. مكسب البيع في القوائم الموحدة = المقبوض 650 + استبعاد حقوق غير المسيطرين 108 − صافي الأصول 540 − الشهرة 36 = 182.",
+        "Jones's net assets when control is lost = 270 + 370 − 100 = 540; NCI then is 20% × 540 = 108. Consolidated disposal gain = proceeds 650 + derecognised NCI 108 − net assets 540 − goodwill 36 = 182.",
+      ),
+      text(
+        "لأن البيع في آخر يوم من السنة، تُجمع نتائج Jones طوال السنة حتى تاريخ فقد السيطرة رغم عدم تجميع أصولها في المركز المالي عند الإقفال. ربح المجموعة قبل الضريبة = 153 + 126 + 182 = 461؛ الضريبة المعطاة 45 + 36 = 81؛ صافي الربح = 380. حصة غير المسيطرين في ربح Jones = 20% × (126 − 36) = 18؛ لملاك الأم 362.",
+        "Because the disposal is on the final day, Jones's results are consolidated up to loss of control for the full year although its assets are not consolidated at closing. Group profit before tax = 153 + 126 + 182 = 461; stated tax = 45 + 36 = 81; profit = 380. NCI's share of Jones's $90 net profit = 18; owners' share = 362.",
+      ),
+      text(
+        "في مركز 30 سبتمبر بعد البيع، تخرج أصول Jones والتزاماتها وشهرتها وحقوق غير المسيطرين بالكامل، ويلغى استثمار Smith المسجل 324؛ تضاف حصيلة النقد 650 إلى أصول Smith المتداولة 370. أرباح المجموعة المحتجزة = 414 + مكسب 182 + 80% × (360 − 180) = 740. الأصول = 360 غير متداولة + 1,020 متداولة = 1,380؛ رأس مال 540 + أرباح 740 + خصوم 100 = 1,380.",
+        "At 30 September after disposal, all Jones assets, liabilities, goodwill and NCI are removed and Smith's recorded investment of 324 is eliminated; 650 cash proceeds are added to Smith's current assets of 370. Group retained earnings = 414 + gain 182 + 80% × (360 − 180) = 740. Assets = 360 non-current + 1,020 current = 1,380; capital 540 + retained earnings 740 + liabilities 100 = 1,380.",
+      ),
+    ],
+    reference: "IFRS 10.20, 25, B97–B99; IFRS 3.19, 32",
+  },
+  {
     id: "ifrs-book2-hever-subsidiary-associate",
     standardCode: "IFRS 10",
     title: text(
