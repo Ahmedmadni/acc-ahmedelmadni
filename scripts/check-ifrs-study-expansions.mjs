@@ -73,6 +73,15 @@ for (const [code, expansion] of Object.entries(expansions)) {
 }
 
 const practiceIds = new Set();
+const protectedPracticeIds = [
+  "ifrs-book2-lease-lis",
+  "ifrs-book2-retail-unit-eastway",
+  "ifrs-book2-courtney-currency",
+  "ifrs-book2-pilum-eps",
+  "ifrs-book2-hewlett-options",
+  "ifrs-book2-biological-assets",
+  "ifrs-book2-ace-related-parties",
+];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
   practiceIds.add(practiceCase.id);
@@ -94,6 +103,9 @@ for (const practiceCase of openPracticeCases) {
     failures.push(`${practiceCase.id}: public reference does not match its Standard`);
   if ("choices" in practiceCase || "answerIndex" in practiceCase)
     failures.push(`${practiceCase.id}: open-response case has invented MCQ fields`);
+}
+for (const id of protectedPracticeIds) {
+  if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
 }
 
 const reviewedCalculations = [
