@@ -65,7 +65,7 @@ function ArticlesPage() {
       const { data, error } = await supabasePublic
         .from("kb_articles")
         .select(
-          "id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at,category_id,author_name",
+          "id,slug,title_ar,title_en,excerpt_ar,excerpt_en,featured_image,reading_minutes,published_at,category_id,author_name",
         )
         .order("published_at", { ascending: false });
       if (error) throw error;
@@ -76,14 +76,14 @@ function ArticlesPage() {
   const cats = useQuery({
     queryKey: ["kb-cats-slim"],
     queryFn: async () => {
-      const { data, error } = await supabasePublic.from("kb_categories").select("id,slug,name_ar");
+      const { data, error } = await supabasePublic.from("kb_categories").select("id,slug,name_ar,name_en");
       if (error) throw error;
       return data ?? [];
     },
   });
 
   const catSlug = (id: string | null) => cats.data?.find((c) => c.id === id)?.slug ?? "general";
-  const catName = (id: string | null) => cats.data?.find((c) => c.id === id)?.name_ar ?? "";
+  const catName = (id: string | null) => cats.data?.find((c) => c.id === id)?.[lang === "en" ? "name_en" : "name_ar"] ?? "";
   /* Previously a 5s timer flipped this to `false` while the request was still
      in flight, so a slow load rendered the "no articles yet" empty state over
      live data that then popped in behind it. Loading is now driven purely by
@@ -96,7 +96,7 @@ function ArticlesPage() {
     if (cat !== "all" && catSlug(a.category_id) !== cat) return false;
     if (!q.trim()) return true;
     const term = q.trim();
-    return a.title_ar.includes(term) || (a.excerpt_ar ?? "").includes(term);
+    return [a.title_ar, a.excerpt_ar, a.title_en, a.excerpt_en].some((x) => (x ?? "").toLowerCase().includes(term.toLowerCase()));
   });
 
   return (
@@ -146,7 +146,7 @@ function ArticlesPage() {
                         : "border-[#A88765]/20 text-[#8a8078] hover:bg-white/5"
                     }`}
                   >
-                    {c.name_ar}
+                    {lang === "en" ? c.name_en : c.name_ar}
                   </button>
                 ))}
               </div>
@@ -229,18 +229,18 @@ function ArticlesPage() {
                     </span>
                   )}
                   <h3 className="font-display text-xl font-extrabold leading-snug text-[#1C1B19] group-hover:text-[#7c6045] sm:text-2xl">
-                    {a.title_ar}
+                    {lang === "en" ? a.title_en || a.title_ar : a.title_ar}
                   </h3>
                   {a.excerpt_ar && (
                     <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-[#6B6259]">
-                      {a.excerpt_ar}
+                      {lang === "en" ? a.excerpt_en || a.excerpt_ar : a.excerpt_ar}
                     </p>
                   )}
                   <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11px] text-[#8a8078]">
                     {published && (
                       <span className="inline-flex items-center gap-1">
                         <Calendar className="size-3" />
-                        {published.toLocaleDateString("ar-SA")}
+                        {published.toLocaleDateString(lang === "en" ? "en-GB" : "ar-SA")}
                       </span>
                     )}
                     {a.author_name && (
