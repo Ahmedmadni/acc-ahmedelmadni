@@ -94,6 +94,8 @@ const protectedPracticeIds = [
   "ifrs-book2-vident-share-option-tax",
   "ifrs-book2-sirus-director-shares",
   "ifrs-book2-alpha-gamma-associate",
+  "ifrs-book2-biogenics-research-project",
+  "ifrs-book2-extract-provision-criteria",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -226,6 +228,8 @@ const reviewedCalculations = [
   ["Alpha Gamma post-acquisition share", (28 - 15) * 0.4, 5.2],
   ["Alpha unrealised downstream profit share", 16 * (25 / 125) * 0.4, 1.28],
   ["Alpha Gamma associate carrying amount", 32 + 5.2 - 1.28, 35.92],
+  ["Biogenics research equipment depreciation", (200000 / 4) * (3 / 12), 12500],
+  ["Biogenics research equipment closing balance", 200000 - 12500, 187500],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)

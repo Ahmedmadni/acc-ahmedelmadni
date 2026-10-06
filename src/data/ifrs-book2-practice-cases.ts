@@ -15,6 +15,68 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-extract-provision-criteria",
+    standardCode: "IAS 37",
+    title: text(
+      "Extract: متى نعترف بمخصص لا مجرد تكلفة مستقبلية؟",
+      "Extract: when is a provision more than an expected future cost?",
+    ),
+    facts: text(
+      "تستخرج Extract المعادن من موقع في Copperland، ولا تعالج تلوث الموقع إلا إذا أوجب القانون ذلك. في 23 ديسمبر 20X0 بلغ مجلس الإدارة توقعٌ بأن تشريعًا يلزم المنشآت بإصلاح مواقع التعدين سيصدر، وصدر التشريع فعليًا في 15 مارس 20X1. تقدر الشركة الإنفاق النقدي للإصلاح في نهاية 20X5 بمليوني دولار. لا يقدم هذا الجزء دليلًا موضوعيًا كافيًا على أن نص التشريع كان شبه مؤكد الإقرار بصيغته عند 31 ديسمبر 20X0، ولا يبين أي التلوث نشأ قبل أو بعد فرض الالتزام القانوني.",
+      "Extract mines at a Copperland site and remediates contamination only where legislation requires it. On 23 December 20X0 directors expected a law obliging remediation of mining sites; the law was actually enacted on 15 March 20X1. Extract estimates $2m cash restoration expenditure at the end of 20X5. This part supplies insufficient objective evidence that the drafted law was virtually certain to be enacted as worded by 31 December 20X0, and does not separate contamination before and after the legal obligation arose.",
+    ),
+    question: text(
+      "لماذا يشترط IAS 37 ضوابط لإثبات المخصص، وما شروطه الثلاثة؟ وهل يكفي مجرد توقع الإدارة صدور قانون لتسجيل مليوني دولار في 20X0؟",
+      "Why does IAS 37 constrain provision recognition, what are its three conditions, and is management's expectation of a future law alone enough to record the $2m in 20X0?",
+    ),
+    solution: [
+      text(
+        "لا يُستخدم المخصص لتقديم خسائر التشغيل المستقبلية أو تكاليف يمكن تجنبها بتغيير النشاط إلى سنة حالية. إثباته يحتاج التزامًا حاليًا قانونيًا أو ضمنيًا نتج من حدث ماضٍ، ورجحان خروج موارد لتسويته، وإمكان تقدير المبلغ بثقة كافية؛ إن غاب شرط فلا يثبت المخصص.",
+        "A provision cannot move future operating losses or avoidable future costs into the current year. Recognition requires a present legal or constructive obligation from a past event, probable outflow to settle it and a sufficiently reliable estimate; if a condition fails, no provision is recognised.",
+      ),
+      text(
+        "مجرد توقع مجلس الإدارة أن البرلمان سيصدر قانونًا لا يكفي وحده لإثبات التزام قائم في 31 ديسمبر 20X0. عند الاعتماد على تشريع لم يُسن بعد، يجب إثبات أن إقراره بصيغته شبه مؤكد عند تاريخ التقرير وتحديد الحدث الملزم؛ صدوره لاحقًا في مارس لا يحول التوقع السابق تلقائيًا إلى التزام في ديسمبر.",
+        "The board's prediction that legislation will pass does not by itself establish a 31 December 20X0 obligation. For an unenacted law, evidence that enactment as drafted was virtually certain at the reporting date and identification of the obligating event are needed; enactment the following March does not retroactively turn a prediction into a December obligation.",
+      ),
+      text(
+        "حتى إذا ثبت الالتزام بعد صدور القانون، يلزم قياس أفضل تقدير لتدفقات الإصلاح وخصمها عند جوهرية أثر الزمن، ثم تحليل مكان تحميل التكلفة بين أصل مؤهل ومصروف وفق المعيار الخاص بالأصل وسبب التلوث. لا تنتج الوقائع المتاحة وحدها رقم مخصص أو أصل قاطع لسنة 20X0.",
+        "If an obligation is established after enactment, measure the best estimate of settlement cash flows and discount when the time-value effect is material. Then analyse whether the cost belongs to a qualifying asset or expense under the relevant asset standard and the cause of contamination. These facts alone do not yield a definitive 20X0 provision or asset amount.",
+      ),
+    ],
+    reference: "IAS 37.14–22, 36, 45; IAS 16.16(c)–18",
+  },
+  {
+    id: "ifrs-book2-biogenics-research-project",
+    standardCode: "IAS 38",
+    title: text(
+      "Biogenics: رواتب البحث والحاسب المستخدم في المشروع",
+      "Biogenics: research salaries and project equipment",
+    ),
+    facts: text(
+      "في 1 أكتوبر 20X9 بدأت Biogenics مشروع بحث عن دواء جديد للسرطان. حتى 31 ديسمبر 20X9 أنفقت 400,000 دولار على رواتب الباحثين واشترت أجهزة حاسب للمشروع بمبلغ 200,000 دولار، عمرها النافع المتوقع أربع سنوات. لا يذكر هذا الجزء تحقق شروط الاعتراف بأصل تطوير أو قيمة متبقية للجهاز؛ وتُعرض أرقام الإهلاك بافتراض أن الجهاز أصبح جاهزًا للاستخدام في 1 أكتوبر ويستهلك بالقسط الثابت بلا قيمة متبقية.",
+      "On 1 October 20X9 Biogenics began a research project for a new cancer drug. By 31 December 20X9 it incurred $400,000 researcher salaries and bought computer equipment for the project costing $200,000 with a four-year expected useful life. This part states no development-asset recognition criteria or equipment residual value. Depreciation figures below assume the equipment was available for use on 1 October, is depreciated straight-line and has no residual value.",
+    ),
+    question: text(
+      "ما معالجة رواتب البحث وأجهزة الحاسب في قوائم 31 ديسمبر 20X9؟ ولماذا لا تعامل تكلفة الجهاز بأكملها كمصروف بحث؟",
+      "How should the research salaries and computer equipment be treated at 31 December 20X9, and why is the full equipment cost not research expense?",
+    ),
+    solution: [
+      text(
+        "رواتب 400,000 تخص مرحلة البحث، فتثبت مصروفًا عند تكبدها وفق IAS 38؛ لا تثبت أصلًا غير ملموس لمجرد توقع إنتاج دواء ناجح. إن تعذر تمييز البحث من التطوير في مشروع داخلي، تعامل المصروفات غير المميزة معاملة البحث حتى تثبت شروط التطوير.",
+        "The $400,000 salaries relate to the research phase and are expensed as incurred under IAS 38; an intangible asset is not recognised merely because a successful drug is hoped for. If an internal project's research and development phases cannot be distinguished, unseparated expenditure is treated as research until development criteria can be demonstrated.",
+      ),
+      text(
+        "الحاسب أصل مادي منفصل يستخدم خلال أربع سنوات، فتثبت تكلفته 200,000 ضمن الممتلكات والآلات وفق IAS 16 بدل تحميلها كاملة على نتيجة البحث. يبدأ الإهلاك عند الجاهزية للاستخدام، وليس لمجرد دفع ثمن الجهاز.",
+        "The computer equipment is a separate physical asset used over four years, so its $200,000 cost is recognised as property, plant and equipment under IAS 16 rather than expensed in full with research. Depreciation begins when available for use, not merely when paid for.",
+      ),
+      text(
+        "بفرض الجاهزية في 1 أكتوبر وعدم القيمة المتبقية: إهلاك ثلاثة أشهر = 200,000 ÷ 4 × 3/12 = 12,500؛ الرصيد في 31 ديسمبر = 187,500. القيد: مدين مصروف بحث 400,000 ودائن نقد/مستحقات 400,000؛ ومدين مصروف إهلاك 12,500 ودائن مجمع الإهلاك 12,500. إذا تأخرت الجاهزية أو وُجدت قيمة متبقية يتغير رقم الإهلاك.",
+        "If available for use on 1 October with no residual value, three months' depreciation = $200,000 ÷ 4 × 3/12 = $12,500 and 31 December carrying amount = $187,500. Entries: debit research expense $400,000 and credit cash/payables $400,000; debit depreciation expense $12,500 and credit accumulated depreciation $12,500. A later available-for-use date or residual value would change the depreciation figure.",
+      ),
+    ],
+    reference: "IAS 38.52–57; IAS 16.15–16, 55",
+  },
+  {
     id: "ifrs-book2-alpha-gamma-associate",
     standardCode: "IAS 28",
     title: text(
