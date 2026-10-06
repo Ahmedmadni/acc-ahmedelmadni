@@ -99,6 +99,8 @@ const protectedPracticeIds = [
   "ifrs-book2-jerzy-defined-benefit",
   "ifrs-book2-gains-investment-property",
   "ifrs-book2-panther-inventory-timing",
+  "ifrs-book2-dt-tax-components",
+  "ifrs-book2-jenson-franchise-licence",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -236,6 +238,12 @@ const reviewedCalculations = [
   ["Jerzy closing defined-benefit deficit", 208 - 200, 8],
   ["Gains investment-property fair-value loss", 160000 - 110000, 50000],
   ["Panther maximum inventory unrealised profit", 60000 * (20 / 120), 10000],
+  ["DT Bravo acquisition deferred-tax liability", (76 - 60) * 0.25, 4],
+  ["DT Bravo goodwill including deferred tax", 90 - (76 - 4), 18],
+  ["DT intragroup inventory profit", 30 * 0.2, 6],
+  ["DT inventory deferred-tax asset", (30 - (30 - 6)) * 0.25, 1.5],
+  ["Jenson nominal five-year franchise cash", 50000 + 4 * 5000, 70000],
+  ["Jenson indicative cost-plus service price", 8000 / (1 - 0.2), 10000],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)

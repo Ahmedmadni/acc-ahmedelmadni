@@ -15,6 +15,68 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-jenson-franchise-licence",
+    standardCode: "IFRS 15",
+    title: text(
+      "Jenson: رسم امتياز أولي وخدمات مستمرة",
+      "Jenson: franchise upfront fee and continuing services",
+    ),
+    facts: text(
+      "منحت Jenson في 1 أبريل 20X4 السيد Cody امتيازًا لفتح منفذ وجبات سريعة لمدة خمس سنوات. قبضت 50,000 دولار مقدمًا عن السنة الأولى، وتستحق لها 5,000 سنويًا في السنوات التالية. تلتزم طوال مدة الامتياز بإعلانات وتطوير منتجات بتكلفة تقارب 8,000 سنويًا للمنفذ، وتقدر هامش ربح هذه الخدمات بنحو 20% من إيراداتها. لا يحدد السؤال سعر بيع مستقل قابل للملاحظة للترخيص أو الخدمات، ولا يبين هل أنشطة Jenson المستمرة تغير المنفعة من العلامة تغييرًا مهمًا أو هل يُستفاد من الترخيص بمعزل عن الخدمات.",
+      "On 1 April 20X4 Jenson granted Mr Cody a five-year fast-food outlet franchise. It received $50,000 upfront for year one and is due $5,000 annually for the remaining years. It must provide advertising and product-development services throughout the franchise at about $8,000 annual cost per outlet and estimates a 20% revenue margin on those services. The case gives no observable stand-alone selling prices for the licence or services and does not establish whether Jenson's continuing activities significantly affect the brand's utility or whether the licence can be benefited from separately.",
+    ),
+    question: text(
+      "كيف يُحدد عدد التزامات الأداء وتوقيت الإيراد في عقد الامتياز؟ وهل يجوز تسجيل 10,000 من رسم البداية في السنة الأولى و15,000 بعدها كل سنة مباشرة دون تحليل إضافي؟",
+      "How should the franchise's performance obligations and revenue timing be determined? Can $10,000 of the upfront fee be recognised in year one and $15,000 annually thereafter without further analysis?",
+    ),
+    solution: [
+      text(
+        "يبدأ التحليل بتحديد ما إذا كان الترخيص والخدمات المستمرة وعودًا مميزة منفصلة أم التزام أداء واحدًا. رسم الـ50,000 المقبوض مقدمًا ليس إيرادًا تلقائيًا يوم القبض؛ إن لم ينقل الرسم نفسه خدمة مميزة فهو دفعة عن أداء لاحق. وتحدد طبيعة الترخيص: حق وصول إلى ملكية فكرية تتأثر جوهريًا بنشاط المرخص المستمر فيعترف به على مدى الزمن، أم حق استخدام ما كان قائمًا عند المنح في نقطة زمنية؛ ولا يكفي وصف العقد «امتيازًا» للحسم.",
+        "First identify whether the licence and continuing services are distinct promises or a combined performance obligation. Receipt of the $50,000 fee does not itself create revenue; if the fee transfers no distinct service, it is an advance for later performance. Assess whether the licence is a right to access intellectual property significantly affected by the licensor's continuing activities over time or a right to use intellectual property as it exists at grant. Calling the arrangement a franchise does not decide that question.",
+      ),
+      text(
+        "النقد التعاقدي الاسمي عبر السنوات الخمس = 50,000 + 4 × 5,000 = 70,000 دولار، قبل أي تحليل لعنصر تمويل مهم. إذا كانت الخدمات مميزة، يوزع سعر المعاملة على الالتزامات بحسب أسعار البيع المستقلة النسبية، لا بحسب جدول التحصيل وحده. تكلفة الخدمة 8,000 مع هامش 20% من الإيراد توحي بتقدير تكلفة مضافًا إليها هامش = 8,000 ÷ 80% = 10,000 سنويًا، لكنها لا تثبت وحدها سعر الترخيص المستقل أو التوزيع النهائي.",
+        "Nominal contractual cash across five years is $50,000 + 4 × $5,000 = $70,000, before assessing any significant financing component. If services are distinct, allocate the transaction price by relative stand-alone selling prices, not simply by the cash schedule. Service cost of $8,000 with a 20% revenue margin suggests a cost-plus estimate of $8,000 ÷ 80% = $10,000 a year, but that alone does not establish the licence's stand-alone price or the final allocation.",
+      ),
+      text(
+        "بعد التوزيع يُعترف بإيراد كل التزام عند الوفاء به وبمقياس تقدم ملائم لما ينفذ على مدى الزمن. لا تسمح الوقائع الحالية باعتماد جدول 10,000 في السنة الأولى و15,000 لكل سنة لاحقة أو نسبة ربح نهائية؛ يلزم العقد وتقييم التمييز وطبيعة الترخيص وأسعار البيع المستقلة وأثر التمويل المحتمل أولًا.",
+        "Recognise each allocated component when its promise is satisfied, using an appropriate progress measure for performance over time. The stated facts do not justify a definitive $10,000 first-year and $15,000 later-year schedule or profit margin: obtain the contract, distinctness assessment, licence nature, stand-alone prices and any financing analysis first.",
+      ),
+    ],
+    reference: "IFRS 15.22–30, 60–65, 73–80, B48–B60",
+  },
+  {
+    id: "ifrs-book2-dt-tax-components",
+    standardCode: "IAS 12",
+    title: text(
+      "DT Group: ضريبة جارية وفروق مؤقتة عند الاستحواذ وبيع المخزون",
+      "DT Group: current tax and acquisition and inventory temporary differences",
+    ),
+    facts: text(
+      "جميع المبالغ بالمليون دولار. في 30 نوفمبر 20X1 اشترت DT كامل Bravo مقابل 90؛ بلغت القيمة الدفترية لصافي الأصول المحددة المستحوذ عليها 76 وأساسها الضريبي 60، ومعدل الضريبة لدى Bravo 25%، ولا خصم ضريبي للشهرة. بعد الشراء مباشرة باعت DT إلى Bravo مخزونًا بـ30 يتضمن ربحًا 20% من سعر البيع، ولم يُبع المخزون خارج المجموعة حتى نهاية اليوم. وكان على DT ضريبة دخل قدرها 165 عن عقار باعته في 20X0، لكن القانون يؤجل دفعها إلى نوفمبر 20X4. لا تتناول هذه الحالة بقية فروق المسألة أو إجمالي مصروف الضريبة.",
+      "All amounts are in $m. On 30 November 20X1 DT acquired all of Bravo for 90. Identifiable acquired net assets had carrying amount 76 and tax base 60; Bravo's tax rate is 25%, and goodwill has no tax deduction. Immediately after acquisition DT sold Bravo inventory for 30 at a profit of 20% of the selling price; Bravo had not sold it outside the group by that day's end. DT also owed income tax of 165 on property it sold in 20X0, but tax law defers payment until November 20X4. This case excludes the other temporary differences and the total tax expense in the source problem.",
+    ),
+    question: text(
+      "احسب الضريبة المؤجلة الناشئة من صافي أصول Bravo والمخزون غير المباع، وميزها عن ضريبة العقار المبيع سابقًا. لماذا لا يصح جمع 165 مع الضريبة المؤجلة لمجرد تأجيل الدفع؟",
+      "Calculate deferred tax on Bravo's acquired net assets and unsold inventory and distinguish it from tax on the previously sold property. Why does postponed payment not by itself make the 165 deferred tax?",
+    ),
+    solution: [
+      text(
+        "فرق صافي الأصول المحددة عند الاستحواذ = 76 − 60 = 16؛ وبمعدل 25% ينشأ التزام ضريبة مؤجلة 4 عند تاريخ الشراء. إذا لم توجد تعديلات أخرى، ينخفض صافي الأصول المحددة بعد الضريبة إلى 72، وترتفع الشهرة الأولية من 90 − 76 = 14 إلى 90 − 72 = 18. لا يُثبت التزام ضريبة مؤجلة مستقل عن الاعتراف الأولي بالشهرة نفسها.",
+        "The acquisition-date taxable difference on identifiable net assets is 76 − 60 = 16, producing a deferred-tax liability of 4 at 25%. Absent other adjustments, identifiable net assets after tax are 72, so preliminary goodwill rises from 90 − 76 = 14 to 90 − 72 = 18. No separate deferred-tax liability arises from the initial recognition of goodwill itself.",
+      ),
+      text(
+        "ربح البيع الداخلي المضمن في المخزون = 30 × 20% من سعر البيع = 6، فتبلغ قيمة المخزون المجمعة 24. إذا ظل أساسه الضريبي لدى Bravo هو تكلفة الشراء 30، فإن الفرق القابل للخصم = 30 − 24 = 6، وأصل الضريبة المؤجلة المحتمل = 6 × 25% = 1.5. يثبت الأصل فقط بقدر احتمال توافر أرباح خاضعة للضريبة تسمح بالاستفادة من الخصم عند تحقق المخزون؛ ولا يستخدم معدل ضريبة DT البالغ 30% بدل معدل Bravo.",
+        "The intragroup profit in inventory is 30 × 20% of selling price = 6, leaving consolidated inventory of 24. If Bravo's tax base remains its purchase cost of 30, the deductible temporary difference is 30 − 24 = 6 and the potential deferred-tax asset is 6 × 25% = 1.5. Recognise it only to the extent that future taxable profits are probable when the inventory is realised; use Bravo's 25% rate, not DT's 30% rate.",
+      ),
+      text(
+        "ضريبة الـ165 تخص بيعًا وقع في 20X0. إذا نشأ الالتزام الضريبي وقت البيع وتأجل السداد فقط، فهي ضريبة جارية غير مدفوعة عن فترة سابقة وفق IAS 12، ولو حُدد تاريخ السداد في 20X4. أما إن كان القانون يؤجل نشأة الربح الخاضع للضريبة نفسها، فيلزم تحليل نصه وأي أصل أو أساس ضريبي متبقٍ. مجرد تأجيل موعد الدفع لا ينشئ فرقًا مؤقتًا قدره 165؛ لذلك لا يعتمد إجمالي الضريبة المؤجلة أو مصروفها في حل المسألة قبل إعادة فحص جميع بنوده.",
+        "The 165 relates to a sale completed in 20X0. If the tax obligation arose on sale and only payment was deferred, it is unpaid current tax for a prior period under IAS 12 even though due in 20X4. If the law instead defers when the gain becomes taxable, its terms and any surviving asset or tax base require separate analysis. Payment deferral alone creates no temporary difference of 165, so the source problem's aggregate deferred-tax balance and expense cannot be adopted without reassessing all components.",
+      ),
+    ],
+    reference: "IAS 12.5, 12, 15(a), 24, 46–47, 66; IFRS 3.10",
+  },
+  {
     id: "ifrs-book2-panther-inventory-timing",
     standardCode: "IFRS 10",
     title: text(
