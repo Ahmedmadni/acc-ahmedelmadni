@@ -19,8 +19,10 @@ import {
   Wrench,
 } from "lucide-react";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
+import { IfrsOpenPracticeCases } from "@/components/library/IfrsOpenPracticeCases";
 import { IfrsStandardCase } from "@/components/library/IfrsStandardCase";
 import { IfrsStandardStudyExpansion } from "@/components/library/IfrsStandardStudyExpansion";
+import { getIfrsPracticeCases } from "@/data/ifrs-book2-practice-cases";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
 import { IFRS_NAVIGATOR_URL } from "@/data/ifrs-standards";
 import { useSiteLang } from "@/lib/use-site-lang";
@@ -183,6 +185,14 @@ function StandardLearningPage() {
   const { page } = Route.useLoaderData();
   const [lang] = useSiteLang();
   const { standard, guide, deepDive, referenceNotes } = page;
+  const practiceCases = getIfrsPracticeCases(standard.code);
+  const sectionLinks = practiceCases.length
+    ? [
+        ...SECTION_LINKS.slice(0, -1),
+        { id: "practice-cases", ar: "حالات تدريبية", en: "Practice cases" },
+        SECTION_LINKS[SECTION_LINKS.length - 1],
+      ]
+    : SECTION_LINKS;
   const isArabic = lang === "ar";
 
   return (
@@ -242,6 +252,17 @@ function StandardLearningPage() {
               <ReceiptText className="size-4" />
               {isArabic ? "اقرأ الحالة العملية" : "Read the worked case"}
             </a>
+            {practiceCases.length > 0 && (
+              <a
+                href="#practice-cases"
+                className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/35 px-5 py-3 text-sm font-bold text-[#E3D9CE] transition hover:bg-white/5"
+              >
+                <BookOpenText className="size-4" />
+                {isArabic
+                  ? `حل ${practiceCases.length} من الحالات المفتوحة`
+                  : `Try ${practiceCases.length} open-response cases`}
+              </a>
+            )}
           </div>
 
           <p className="mt-7 border-t border-white/10 pt-5 text-xs leading-6 text-[#8F877F]">
@@ -256,7 +277,7 @@ function StandardLearningPage() {
           className="sticky top-2 z-20 mt-5 overflow-x-auto rounded-2xl border border-[#A88765]/20 bg-[#F7F3ED]/95 p-2 shadow-lg shadow-black/5 backdrop-blur"
         >
           <div className="flex min-w-max gap-1">
-            {SECTION_LINKS.map((item) => (
+            {sectionLinks.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
@@ -411,6 +432,8 @@ function StandardLearningPage() {
 
             <IfrsStandardCase deepDive={deepDive} lang={lang} />
 
+            <IfrsOpenPracticeCases cases={practiceCases} lang={lang} />
+
             <section
               id="checklist"
               className="scroll-mt-28 rounded-3xl border border-[#A88765]/20 bg-[#FCFBF9] p-5 sm:p-7"
@@ -505,7 +528,7 @@ function StandardLearningPage() {
               {isArabic ? "خريطة الدرس" : "Lesson map"}
             </h2>
             <ol className="mt-4 space-y-2">
-              {SECTION_LINKS.map((item, index) => (
+              {sectionLinks.map((item, index) => (
                 <li key={item.id}>
                   <a
                     href={`#${item.id}`}

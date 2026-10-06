@@ -15,6 +15,7 @@ let expansions;
 let standards;
 let reviewedQuestions;
 let reviewedExtensionQuestions;
+let openPracticeCases;
 try {
   ({ IFRS_STANDARD_STUDY_EXPANSIONS: expansions } = await server.ssrLoadModule(
     "/src/data/ifrs-standard-study-expansions.ts",
@@ -25,6 +26,9 @@ try {
   ));
   ({ IFRS_REVIEWED_EXTENSION_QUESTIONS: reviewedExtensionQuestions } = await server.ssrLoadModule(
     "/src/data/ifrs-quiz-reviewed-extensions.ts",
+  ));
+  ({ IFRS_BOOK2_PRACTICE_CASES: openPracticeCases } = await server.ssrLoadModule(
+    "/src/data/ifrs-book2-practice-cases.ts",
   ));
 } finally {
   await server.close();
@@ -66,6 +70,176 @@ for (const [code, expansion] of Object.entries(expansions)) {
     if (!Array.isArray(example.calculations) || example.calculations.some((item) => !hasText(item)))
       failures.push(`${code}: incomplete calculation steps`);
   }
+}
+
+const practiceIds = new Set();
+const protectedPracticeIds = [
+  "ifrs-book2-lease-lis",
+  "ifrs-book2-retail-unit-eastway",
+  "ifrs-book2-courtney-currency",
+  "ifrs-book2-pilum-eps",
+  "ifrs-book2-hewlett-options",
+  "ifrs-book2-biological-assets",
+  "ifrs-book2-ace-related-parties",
+  "ifrs-book2-jenson-repurchase",
+  "ifrs-book2-jenson-subscriptions",
+  "ifrs-book2-pqr-debentures",
+  "ifrs-book2-pqr-preference-shares",
+  "ifrs-book2-barcelona-madrid-consolidation",
+  "ifrs-book2-fallowfield-rusholme-profit",
+  "ifrs-book2-hever-subsidiary-associate",
+  "ifrs-book2-smith-loss-of-control",
+  "ifrs-book2-reprise-encore-consolidation",
+  "ifrs-book2-vident-share-options",
+  "ifrs-book2-vident-share-option-tax",
+  "ifrs-book2-sirus-director-shares",
+  "ifrs-book2-alpha-gamma-associate",
+  "ifrs-book2-biogenics-research-project",
+  "ifrs-book2-extract-provision-criteria",
+  "ifrs-book2-jerzy-defined-benefit",
+  "ifrs-book2-gains-investment-property",
+  "ifrs-book2-panther-inventory-timing",
+];
+for (const practiceCase of openPracticeCases) {
+  if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
+  practiceIds.add(practiceCase.id);
+  if (!indexed.has(practiceCase.standardCode))
+    failures.push(`${practiceCase.id}: standard is not indexed`);
+  if (
+    !hasText(practiceCase.title) ||
+    !hasText(practiceCase.facts) ||
+    !hasText(practiceCase.question)
+  )
+    failures.push(`${practiceCase.id}: incomplete bilingual question`);
+  if (
+    !Array.isArray(practiceCase.solution) ||
+    practiceCase.solution.length === 0 ||
+    practiceCase.solution.some((step) => !hasText(step))
+  )
+    failures.push(`${practiceCase.id}: missing bilingual solution`);
+  if (!practiceCase.reference.startsWith(practiceCase.standardCode))
+    failures.push(`${practiceCase.id}: public reference does not match its Standard`);
+  if ("choices" in practiceCase || "answerIndex" in practiceCase)
+    failures.push(`${practiceCase.id}: open-response case has invented MCQ fields`);
+}
+for (const id of protectedPracticeIds) {
+  if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
+}
+
+const reviewedCalculations = [
+  [
+    "advance-payment lease liability",
+    Math.round(18420 * [1, 2, 3, 4, 5].reduce((sum, year) => sum + 1 / 1.125 ** year, 0)),
+    65586,
+  ],
+  ["advance-payment right-of-use asset", 65586 + 18420, 84006],
+  ["advance-payment first-year interest", Math.round(65586 * 0.125), 8198],
+  ["market leaseback right-of-use asset", Math.round((500000 * 700000) / 740000), 472973],
+  ["market leaseback recognised gain", Math.round(240000 * (1 - 700000 / 740000)), 12973],
+  ["Courtney initial payable", 300000 / 20, 15000],
+  ["Courtney closing payable", 300000 / 16, 18750],
+  ["Courtney exchange loss", 300000 / 16 - 300000 / 20, 3750],
+  ["Pilum preference dividend", 4600000 * 0.06, 276000],
+  ["Pilum ordinary earnings", 1403000 - 4600000 * 0.06, 1127000],
+  ["Pilum rights issue shares", 4120000 / 5, 824000],
+  [
+    "Pilum weighted-average shares",
+    Math.round((4120000 * (1.78 / (10.1 / 6)) * 9) / 12 + (4944000 * 3) / 12),
+    4503446,
+  ],
+  ["Pilum diluted conversion shares", (1500000 / 100) * 90, 1350000],
+  ["Pilum diluted earnings", 1127000 + 1500000 * 0.1 * (1 - 0.3), 1232000],
+  ["Hewlett year one cumulative charge", ((800 - 95) * 200 * 7.5) / 3, 352500],
+  ["Hewlett year two cumulative charge", ((800 - 70) * 200 * 7.5 * 2) / 3, 730000],
+  ["Hewlett final cumulative charge", (800 - 60) * 200 * 7.5, 1110000],
+  ["Hewlett exercise proceeds", 740 * 200 * 1.5, 222000],
+  ["Hewlett balanced share premium", 222000 + 1110000 - 740 * 200, 1184000],
+  ["Jenson nine-month finance cost", (35000 * 0.12 * 9) / 12, 3150],
+  ["Jenson closing financing liability", 35000 + 3150, 38150],
+  ["Jenson delivered subscription revenue", (240000 / 24) * 6, 60000],
+  ["Jenson remaining contract liability", 240000 - 60000, 180000],
+  ["PQR effective interest income", Math.round(34000 * 0.086), 2924],
+  ["PQR cash coupon", 40000 * 0.04, 1600],
+  ["PQR gross year-end debenture balance", 34000 + 2924 - 1600, 35324],
+  ["PQR annual preference payment", 100000 * 0.06, 6000],
+  ["Barcelona consideration", (50 / 0.2) * 0.6 * 1.06, 159],
+  ["Barcelona acquisition net assets", 50 + 104 + 11 + 8 + 6 + 20, 199],
+  ["Barcelona full goodwill", 159 + 86 - 199, 46],
+  ["Barcelona closing goodwill", 46 - 20, 26],
+  ["Barcelona retained earnings", 2086 + (394 - 104 - 8 - (20 / 10) * 4) * 0.6 - 20 * 0.6, 2238.4],
+  ["Barcelona NCI", 86 + (394 - 104 - 8 - 8) * 0.4 + (46 - 11) * 0.4 - 20 * 0.4, 201.6],
+  ["Barcelona consolidated assets", 3220 + 45 + 26 + 1120 + 1599 + 246, 6256],
+  [
+    "Barcelona consolidated equity and liabilities",
+    920 + 2238.4 + 796 + 201.6 + 726 + 1351 + 23,
+    6256,
+  ],
+  ["Fallowfield unrealised inventory profit", 40000 * 0.5 * (25 / 125), 4000],
+  ["Fallowfield group revenue", 403400 + 193000 - 40000, 556400],
+  ["Fallowfield group cost of sales", 201400 + 92600 - 40000 + 4000, 258000],
+  ["Fallowfield group profit", 298400 - 30600 - 42050 - 83750, 142000],
+  ["Fallowfield NCI profit", (46000 - 4000) * 0.4, 16800],
+  ["Fallowfield opening retained earnings", 163000 + (61000 - 16000) * 0.6, 190000],
+  ["Fallowfield closing retained earnings", 238000 + (82000 - 16000 - 4000) * 0.6, 275200],
+  ["Hever ownership of Spiro", 48000 / 80000, 0.6],
+  ["Hever ownership of Aldridge", 15000 / 50000, 0.3],
+  ["Hever Spiro acquisition net assets", 80 + 80 + 20 + 50 - 20, 210],
+  ["Hever Spiro goodwill", 128 + 90 - 210, 8],
+  ["Hever associate carrying amount", 90 + (400 - 150) * 0.3, 165],
+  ["Hever unrealised downstream profit", (16 - 10) * 0.25, 1.5],
+  [
+    "Hever group retained earnings",
+    568 - 1.5 + (200 - 20 + 20 - 5) * 0.6 + (400 - 150) * 0.3,
+    758.5,
+  ],
+  ["Hever NCI", 90 + (200 - 20 + 20 - 5) * 0.4, 168],
+  ["Hever consolidated assets", 605 + 8 + 165 + 258.5 + 260 + 90, 1386.5],
+  ["Hever equity and liabilities", 200 + 100 + 758.5 + 168 + 160, 1386.5],
+  ["Smith goodwill", 324 + 360 * 0.2 - 360, 36],
+  ["Smith disposal gain", 650 + 540 * 0.2 - 540 - 36, 182],
+  ["Smith consolidated profit", 153 + 126 + 182 - 45 - 36, 380],
+  ["Smith NCI profit", (126 - 36) * 0.2, 18],
+  ["Smith group retained earnings", 414 + 182 + (360 - 180) * 0.8, 740],
+  ["Smith consolidated assets", 360 + 370 + 650, 1380],
+  ["Smith equity and liabilities", 540 + 740 + 100, 1380],
+  ["Reprise fair-value NCI at acquisition", 500 * 0.25 * 4.4, 550],
+  ["Reprise acquisition goodwill", 2000 + 550 - 500 - 1044, 1006],
+  ["Reprise closing goodwill", 1006 - 180, 826],
+  ["Reprise unrealised downstream profit", 31.2 * (30 / 130), 7.2],
+  ["Reprise reciprocal balance after cash transit", 75 - 39, 36],
+  ["Reprise consolidated receivables", 1372 + 514 - 39 - 36, 1811],
+  ["Reprise consolidated cash", 89 + 51 + 39, 179],
+  ["Reprise retained earnings", 4225 - 7.2 + (2610 - 1044) * 0.75 - 180 * 0.75, 5257.3],
+  ["Reprise NCI", 550 + (2610 - 1044) * 0.25 - 180 * 0.25, 896.5],
+  ["Reprise consolidated assets", 3350 + 3220 + 855 + 826 + 1234.8 + 1811 + 179, 11475.8],
+  ["Reprise equity and liabilities", 1000 + 2500 + 5257.3 + 896.5 + 500 + 1322, 11475.8],
+  ["Vident first grant opening expense", (20000 * 5) / 2, 50000],
+  ["Vident first grant current expense", (20000 * 5) / 2, 50000],
+  ["Vident second grant current expense", (50000 * 6) / 3, 100000],
+  ["Vident current share-based expense", 50000 + 100000, 150000],
+  ["Vident cumulative option reserve", 50000 + 150000, 200000],
+  ["Vident opening tax deduction", 20000 * (12.5 - 4.5) * 0.5, 80000],
+  ["Vident opening deferred tax asset", 80000 * 0.3, 24000],
+  ["Vident closing tax deduction", 20000 * (12 - 4.5) + (50000 * (12 - 6)) / 3, 250000],
+  ["Vident closing deferred tax asset", 250000 * 0.3, 75000],
+  ["Vident closing cumulative equity tax", (250000 - 200000) * 0.3, 15000],
+  ["Vident current profit or loss tax benefit", 150000 * 0.3, 45000],
+  ["Vident current equity tax benefit", 15000 - (80000 - 50000) * 0.3, 6000],
+  ["Sirus presented equity before classification review", 100 + 20 + 30, 150],
+  ["Alpha ownership of Gamma", 20 / 50, 0.4],
+  ["Alpha Gamma associate cost", 20 * 1.6, 32],
+  ["Alpha Gamma post-acquisition share", (28 - 15) * 0.4, 5.2],
+  ["Alpha unrealised downstream profit share", 16 * (25 / 125) * 0.4, 1.28],
+  ["Alpha Gamma associate carrying amount", 32 + 5.2 - 1.28, 35.92],
+  ["Biogenics research equipment depreciation", (200000 / 4) * (3 / 12), 12500],
+  ["Biogenics research equipment closing balance", 200000 - 12500, 187500],
+  ["Jerzy closing defined-benefit deficit", 208 - 200, 8],
+  ["Gains investment-property fair-value loss", 160000 - 110000, 50000],
+  ["Panther maximum inventory unrealised profit", 60000 * (20 / 120), 10000],
+];
+for (const [label, actual, expected] of reviewedCalculations) {
+  if (Math.abs(actual - expected) > 1e-9)
+    failures.push(`${label}: expected ${expected}, got ${actual}`);
 }
 
 const ids = new Set();
@@ -397,6 +571,7 @@ console.log(
         0,
       ),
       reviewed_source_questions: reviewedQuestions.length,
+      open_practice_cases: openPracticeCases.length,
       public_reference_policy: "IFRS/IAS only",
     },
     null,
