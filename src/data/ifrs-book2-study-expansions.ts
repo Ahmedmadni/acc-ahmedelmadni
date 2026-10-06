@@ -8,6 +8,155 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 20": {
+    sections: [
+      {
+        title: text(
+          "منحة الأصل تتبع استهلاك الأصل لا يوم قبضها",
+          "An asset grant follows the asset's consumption, not its receipt date",
+        ),
+        explanation: text(
+          "إذا توافر التأكيد المعقول باستيفاء شروط المنحة وتحصيلها، تُعترف منحة الأصل بصورة منهجية عبر الفترات التي تحمل إهلاك الأصل. يجوز عرضها دخلًا مؤجلًا يُطلق تدريجيًا، أو خصمها من القيمة الدفترية للأصل بحيث يظهر أثرها بخفض مصروف الإهلاك. لا يجوز الجمع بين الطريقتين للمنحة نفسها، ولا يغير اختلاف طريقة الإهلاك مجموع المنحة المستحق.",
+          "Once there is reasonable assurance of compliance with grant conditions and receipt, an asset grant is recognised systematically over the periods bearing the asset's depreciation. It may be presented as deferred income released over time or deducted from the asset's carrying amount so its effect reduces depreciation expense. Do not apply both methods to the same grant; the depreciation pattern changes timing, not total grant entitlement.",
+        ),
+        keyPoints: [
+          text(
+            "في طريقة الدخل المؤجل، قابل نسبة الإيراد المعترف به بنسبة إهلاك الأصل المرتبط.",
+            "Under deferred income, match the proportion of grant income to the related asset's depreciation pattern.",
+          ),
+          text(
+            "قبل الإثبات تحقق من شروط المنحة والتأكيد المعقول، ولا تفترض أن القبض وحده يكفي.",
+            "Check grant conditions and reasonable assurance before recognition; cash receipt alone is insufficient.",
+          ),
+        ],
+        reference: "IAS 20.7, 12, 24–27",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "منحة تغطي نصف تكلفة آلة مع طريقتين للإهلاك",
+          "Grant covering half a machine's cost under two depreciation patterns",
+        ),
+        facts: text(
+          "تكلفة آلة 40,000 دولار، وعمرها أربع سنوات وقيمتها المتبقية صفر. تغطي منحة حكومية 50% من تكلفتها، أي 20,000 دولار. يفترض المثال تحقق شروط الاعتراف واختيار عرض المنحة دخلًا مؤجلًا. قارن الإهلاك الخطي بإهلاك 40% من الرصيد المتناقص مع تسوية المتبقي في السنة الأخيرة لإتمام العمر المحدد.",
+          "A machine costs $40,000, has a four-year useful life and nil residual value. A government grant covers 50% of its cost, or $20,000. Assume recognition conditions are met and the grant is presented as deferred income. Compare straight-line depreciation with 40% reducing balance, clearing the remaining balance in the final year to meet the specified life.",
+        ),
+        calculations: [
+          text(
+            "القسط الثابت: إهلاك كل سنة = 40,000 ÷ 4 = 10,000؛ إيراد المنحة المقابل = 20,000 ÷ 4 = 5,000. إجمالي كل منهما خلال أربع سنوات 40,000 و20,000.",
+            "Straight line: annual depreciation = $40,000 ÷ 4 = $10,000; related annual grant income = $20,000 ÷ 4 = $5,000. Four-year totals are $40,000 and $20,000 respectively.",
+          ),
+          text(
+            "الرصيد المتناقص: إهلاك السنوات 1–3 = 16,000 ثم 9,600 ثم 5,760؛ الرصيد الباقي للسنة 4 = 8,640. إيراد المنحة المقابل = 8,000 ثم 4,800 ثم 2,880 ثم 4,320؛ مجموعه 20,000.",
+            "Reducing balance: depreciation in years 1–3 is $16,000, $9,600 and $5,760; the remaining year-four amount is $8,640. Corresponding grant income is $8,000, $4,800, $2,880 and $4,320, totalling $20,000.",
+          ),
+          text(
+            "بديل العرض بخصم المنحة من الأصل يخفض الأساس القابل للإهلاك إلى 20,000، ويخفض كل قسط إهلاك في هذا المثال إلى نصف القسط الإجمالي المقابل؛ لا يُثبت حينئذ إيراد منحة منفصل.",
+            "The alternative presentation deducts the grant from the asset, leaving a $20,000 depreciable base and halving each corresponding gross depreciation charge in this example; no separate grant income is then recorded.",
+          ),
+        ],
+        conclusion: text(
+          "نمط الإهلاك يحدد توقيت تحرير المنحة، لكن إجمالي الأثر الصافي عبر عمر الأصل يبقى 20,000 دولار قبل أي ضرائب أو تغييرات تقدير.",
+          "The depreciation pattern determines grant-release timing, but the total net effect over the asset's life remains $20,000 before tax or estimate changes.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "عند استحقاق المنحة وتحصيلها، بطريقة الدخل المؤجل",
+              "On entitlement and collection, deferred-income method",
+            ),
+            debit: text("النقدية", "Cash"),
+            credit: text("دخل منحة مؤجل", "Deferred grant income"),
+            amount: text("20,000", "20,000"),
+          },
+          {
+            label: text(
+              "إهلاك السنة الأولى بطريقة القسط الثابت",
+              "Year-one straight-line depreciation",
+            ),
+            debit: text("مصروف إهلاك", "Depreciation expense"),
+            credit: text("مجمع إهلاك", "Accumulated depreciation"),
+            amount: text("10,000", "10,000"),
+          },
+          {
+            label: text(
+              "تحرير منحة السنة الأولى بطريقة القسط الثابت",
+              "Year-one straight-line grant release",
+            ),
+            debit: text("دخل منحة مؤجل", "Deferred grant income"),
+            credit: text("إيراد منحة", "Grant income"),
+            amount: text("5,000", "5,000"),
+          },
+        ],
+        reference: "IAS 20.7, 12, 24–27; IAS 16.50–62",
+      },
+    ],
+  },
+  "IAS 23": {
+    sections: [
+      {
+        title: text(
+          "الإنفاق على أصل مؤهل بتمويل عام: عامل الزمن حاسم",
+          "General borrowings for a qualifying asset: timing matters",
+        ),
+        explanation: text(
+          "عند تمويل أصل مؤهل من اقتراض عام، تُحسب نسبة الرسملة من المتوسط المرجح لتكاليف القروض المعنية ثم تطبق على الإنفاق المؤهل خلال المدة التي تتحقق فيها شروط بدء الرسملة. مبلغ يصرف في أول السنة يتحمل وزنًا زمنيًا مختلفًا عن مبلغ يصرف في أول الربع الأخير. لا يتجاوز مجموع الرسملة تكاليف الاقتراض الفعلية للفترة، وتبقى التكاليف غير المؤهلة مصروفًا.",
+          "For a qualifying asset funded by general borrowings, derive the capitalisation rate from the weighted average borrowing costs and apply it to qualifying expenditure for the period in which commencement criteria are met. Spending at the year's start has a different time weight from spending at the final quarter's start. Capitalisation cannot exceed borrowing costs actually incurred; ineligible costs remain an expense.",
+        ),
+        keyPoints: [
+          text(
+            "احسب معدل كل قرض موزونًا بحجم القرض، ثم زن كل دفعة إنفاق بعدد أشهرها.",
+            "Weight each borrowing rate by its loan balance, then time-weight each expenditure tranche.",
+          ),
+          text(
+            "وجود قرض طوال السنة لا يجعل إنفاق أكتوبر كأنه أنفق في يناير.",
+            "A loan outstanding all year does not make October expenditure a January expenditure.",
+          ),
+        ],
+        reference: "IAS 23.8, 14, 17–18",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "آلة كهرومائية وقرضان عامان بإنفاق مرحلي",
+          "Hydroelectric machine with two general loans and staged expenditure",
+        ),
+        facts: text(
+          "بدأ إنشاء آلة مؤهلة للرسملة في 1 يناير 20X6، واستمرت أنشطة تجهيزها خلال السنة. لدى المنشأة قرضان عامان قائمان طوال السنة: 120 مليون دولار بفائدة 10% و80 مليونًا بفائدة 9.5%. أنفقت 30 مليونًا على الآلة في 1 يناير و20 مليونًا إضافية في 1 أكتوبر. يفترض المثال عدم وجود قروض مخصصة أو أصول مؤهلة أخرى تؤثر في الحد الأقصى.",
+          "Construction of a qualifying machine starts on 1 January 20X6 and necessary preparation continues through the year. The entity has two general loans outstanding throughout: $120m at 10% and $80m at 9.5%. It spends $30m on the machine on 1 January and another $20m on 1 October. Assume no specific borrowings or other qualifying assets affect the cap.",
+        ),
+        calculations: [
+          text(
+            "نسبة الرسملة = (120 × 10% + 80 × 9.5%) ÷ (120 + 80) = 19.6 ÷ 200 = 9.8%.",
+            "Capitalisation rate = (120 × 10% + 80 × 9.5%) ÷ (120 + 80) = 19.6 ÷ 200 = 9.8%.",
+          ),
+          text(
+            "نصيب إنفاق يناير = 30 × 9.8% × 12÷12 = 2.94 مليون؛ ونصيب إنفاق أكتوبر = 20 × 9.8% × 3÷12 = 0.49 مليون.",
+            "January expenditure contributes $30m × 9.8% × 12÷12 = $2.94m; October expenditure contributes $20m × 9.8% × 3÷12 = $0.49m.",
+          ),
+          text(
+            "تكلفة الاقتراض المرسملة = 3.43 مليون. إجمالي فائدة القرضين خلال السنة = 19.6 مليون؛ فلا يتجاوز المبلغ المرسمل السقف. إذا لم توجد أصول مؤهلة أخرى، يبقى 16.17 مليون مصروف تمويل.",
+            "Capitalised borrowing cost is $3.43m. Total interest on both loans for the year is $19.6m, so the capitalised amount is below the cap. With no other qualifying assets, the remaining $16.17m is finance expense.",
+          ),
+        ],
+        conclusion: text(
+          "يضاف 3.43 مليون إلى تكلفة الآلة تحت الإنشاء، ولا تُرسمل فائدة إنفاق أكتوبر إلا عن الأشهر الثلاثة الأخيرة من السنة.",
+          "Add $3.43m to the machine under construction; interest on the October tranche is capitalised only for the year's final three months.",
+        ),
+        journalEntries: [
+          {
+            label: text("رسملة التكلفة المؤهلة", "Capitalise eligible borrowing cost"),
+            debit: text("آلة تحت الإنشاء", "Machine under construction"),
+            credit: text("فوائد مستحقة أو نقدية", "Interest payable or cash"),
+            amount: text("3.43 مليون", "$3.43m"),
+          },
+        ],
+        reference: "IAS 23.8, 14, 17–18",
+      },
+    ],
+  },
   "IFRS 2": {
     sections: [
       {

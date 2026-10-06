@@ -15,6 +15,89 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-arturo-asset-grant",
+    standardCode: "IAS 20",
+    title: text("Arturo: منحة آلة وإهلاكها", "Arturo: machine grant and depreciation"),
+    facts: text(
+      "حصلت Arturo على منحة حكومية تمثل 50% من تكلفة آلة تبلغ 40,000 دولار. عمر الآلة أربع سنوات وقيمتها المتبقية صفر. يعرض السؤال احتمالين لطريقة الإهلاك: القسط الثابت، أو 40% من الرصيد المتناقص مع إهلاك كامل المتبقي في السنة الرابعة. افترض تحقق التأكيد المعقول بشروط المنحة واختيار عرضها دخلًا مؤجلًا.",
+      "Arturo receives a government grant equal to 50% of a $40,000 machine's cost. The machine has a four-year life and nil residual value. The question compares straight-line depreciation with 40% reducing balance and a final-year charge for the remaining balance. Assume reasonable assurance about grant conditions and deferred-income presentation.",
+    ),
+    question: text(
+      "ما إيراد المنحة الذي يقابل إهلاك كل سنة في كل من طريقتَي الإهلاك؟",
+      "What grant income corresponds to each year's depreciation under each method?",
+    ),
+    solution: [
+      text(
+        "قيمة المنحة = 40,000 × 50% = 20,000 دولار. في القسط الثابت، الإهلاك 10,000 سنويًا لأربع سنوات، ويحرر من الدخل المؤجل 5,000 في كل سنة.",
+        "Grant amount = $40,000 × 50% = $20,000. Under straight line, depreciation is $10,000 annually for four years and $5,000 of deferred grant is released each year.",
+      ),
+      text(
+        "عند 40% من الرصيد المتناقص، الإهلاك للسنوات الأربع = 16,000؛ 9,600؛ 5,760؛ ثم المتبقي 8,640 في السنة الأخيرة. يقابلها إيراد منحة = 8,000؛ 4,800؛ 2,880؛ 4,320. مجموع الإهلاك 40,000 ومجموع المنحة 20,000.",
+        "Under 40% reducing balance, depreciation is $16,000, $9,600, $5,760 and the $8,640 remaining in the final year. Corresponding grant income is $8,000, $4,800, $2,880 and $4,320. Total depreciation is $40,000 and total grant income $20,000.",
+      ),
+      text(
+        "إذا اختير بدلًا من ذلك خصم المنحة من الأصل، يصبح الأساس الصافي 20,000 ويظهر أثر المنحة في مصروف إهلاك أقل، لا في إيراد منحة منفصل. يلزم تطبيق سياسة العرض المختارة باتساق.",
+        "If the grant is instead deducted from the asset, the net depreciable base is $20,000 and the grant affects lower depreciation rather than separate grant income. Apply the selected presentation policy consistently.",
+      ),
+    ],
+    reference: "IAS 20.7, 12, 24–27; IAS 16.50–62",
+  },
+  {
+    id: "ifrs-book2-acruni-general-borrowings",
+    standardCode: "IAS 23",
+    title: text("Acruni: رسملة فائدة قرضين عامين", "Acruni: capitalising two general loans"),
+    facts: text(
+      "خلال سنة 20X6 كان لدى Acruni قرضان عامان ثابتان: 120 مليون دولار بمعدل 10% و80 مليونًا بمعدل 9.5%. بدأت في 1 يناير إنشاء آلة مؤهلة للرسملة، وأنفقت 30 مليونًا يوم البدء ثم 20 مليونًا في 1 أكتوبر. افترض استمرار الأنشطة اللازمة خلال السنة وعدم وجود قروض مخصصة أو توقف ممتد.",
+      "Throughout 20X6 Acruni has two general loans outstanding: $120m at 10% and $80m at 9.5%. It begins constructing a qualifying machine on 1 January, spending $30m then and another $20m on 1 October. Assume necessary activities continue all year, with no specific borrowing or extended suspension.",
+    ),
+    question: text(
+      "احسب نسبة الرسملة وتكلفة الاقتراض التي تضاف إلى تكلفة الآلة في 20X6، مع إظهار أثر توقيت دفعة أكتوبر.",
+      "Calculate the capitalisation rate and borrowing cost added to the machine in 20X6, showing the time weighting of the October expenditure.",
+    ),
+    solution: [
+      text(
+        "إجمالي فائدة القرضين = 120 × 10% + 80 × 9.5% = 19.6 مليون، وإجمالي أصل القروض 200 مليون؛ نسبة الرسملة المرجحة = 19.6 ÷ 200 = 9.8%.",
+        "Interest on both loans = $120m × 10% + $80m × 9.5% = $19.6m; loan principal totals $200m, so the weighted capitalisation rate is 19.6 ÷ 200 = 9.8%.",
+      ),
+      text(
+        "تكلفة إنفاق يناير = 30 × 9.8% × 12÷12 = 2.94 مليون؛ وتكلفة إنفاق أكتوبر = 20 × 9.8% × 3÷12 = 0.49 مليون. المبلغ المرسمل = 3.43 مليون دولار، وهو دون فائدة السنة الفعلية 19.6 مليون.",
+        "January spending contributes $30m × 9.8% × 12÷12 = $2.94m; October spending contributes $20m × 9.8% × 3÷12 = $0.49m. Capitalised cost is $3.43m, below actual annual interest of $19.6m.",
+      ),
+      text(
+        "يضاف 3.43 مليون إلى الآلة تحت الإنشاء، ولا تعامل دفعة أكتوبر كأنها قائمة طوال السنة. إذا لم توجد أصول مؤهلة أخرى، يعترف بباقي الفائدة 16.17 مليون كمصروف.",
+        "Add $3.43m to the machine under construction rather than treating October's spending as outstanding all year. If there are no other qualifying assets, the remaining $16.17m is expensed.",
+      ),
+    ],
+    reference: "IAS 23.8, 14, 17–18",
+  },
+  {
+    id: "ifrs-book2-jameson-consignment",
+    standardCode: "IFRS 15",
+    title: text(
+      "Jameson: مجوهرات لدى تاجر على سبيل الأمانة",
+      "Jameson: jewellery held by a dealer on consignment",
+    ),
+    facts: text(
+      "تعرض Jameson مجوهرات صنعتها Rochester. تحتفظ Rochester بحق تعديل سعر البيع، وتسترد القطع غير المبيعة بعد تسعة أشهر، وينتقل سند الملكية منها مباشرة إلى المشتري النهائي. دفعت Jameson وديعة كبيرة تخصم عند البيع أو ترد كاملة عند إعادة القطع، ولا تدفع باقي الثمن إلا إذا باعت القطع للعملاء.",
+      "Jameson displays jewellery made by Rochester. Rochester can change selling prices, recalls unsold items after nine months and transfers legal title directly to the final buyer. Jameson pays a large deposit that is offset on sale or refunded in full on return, and owes the remaining amount only when the jewellery is sold to customers.",
+    ),
+    question: text(
+      "هل تعرض Jameson المجوهرات في مخزونها قبل بيعها للمستهلك، وما أثر الوديعة القابلة للرد؟",
+      "Should Jameson include the jewellery in its inventory before sale to the final customer, and what is the effect of the refundable deposit?",
+    ),
+    solution: [
+      text(
+        "الحيازة المادية والوديعة لا تثبتان انتقال السيطرة. تحتفظ Rochester بتحديد السعر ومخاطر عدم البيع، ويمكنها استرداد القطع، ولا ينشأ على Jameson التزام غير مشروط بسداد ثمنها. هذه مؤشرات قوية على ترتيب أمانة وفق IFRS 15.B77–B78.",
+        "Physical possession and a deposit do not establish transfer of control. Rochester retains pricing discretion and unsold-goods risk, can recover the items, and Jameson has no unconditional duty to pay their price. These strongly indicate consignment under IFRS 15.B77–B78.",
+      ),
+      text(
+        "لذلك لا تُدرج Jameson القطع في مخزونها قبل انتقال السيطرة، وتبقى لدى Rochester محاسبيًا. الوديعة القابلة للرد تُقيّم كحق استرداد منفصل، لا كتكلفة مخزون لم تحصل Jameson على السيطرة عليه. يحدد عقد التاجر لاحقًا ما إذا كان إيراد Jameson عمولة بصفته وكيلًا أم مقابلًا إجماليًا بعد فحص السيطرة على الخدمة أو السلعة الموعودة.",
+        "Jameson therefore does not recognise the jewellery as its inventory before obtaining control; it remains Rochester's inventory. The refundable deposit is assessed as a separate recovery right, not inventory cost for goods Jameson does not control. The dealer contract then determines whether Jameson's own revenue is a commission as agent or gross consideration after assessing control of the promised good or service.",
+      ),
+    ],
+    reference: "IFRS 15.B34–B38, B77–B78",
+  },
+  {
     id: "ifrs-book2-santolina-contract-profit",
     standardCode: "IFRS 15",
     title: text(

@@ -102,6 +102,9 @@ const protectedPracticeIds = [
   "ifrs-book2-dt-tax-components",
   "ifrs-book2-jenson-franchise-licence",
   "ifrs-book2-santolina-contract-profit",
+  "ifrs-book2-arturo-asset-grant",
+  "ifrs-book2-acruni-general-borrowings",
+  "ifrs-book2-jameson-consignment",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -256,6 +259,13 @@ const reviewedCalculations = [
   ["Santolina gross profit", 244000 - 220450, 23550],
   ["Santolina contract asset", 230000 - 210000, 20000],
   ["Santolina trade receivable", 210000 - 194000 + 14000, 30000],
+  ["Arturo asset grant", 40000 * 0.5, 20000],
+  ["Arturo year-one reducing-balance grant", 40000 * 0.4 * 0.5, 8000],
+  ["Arturo final-year depreciation", 40000 - 16000 - 9600 - 5760, 8640],
+  ["Arturo final-year grant income", 20000 - 8000 - 4800 - 2880, 4320],
+  ["Acruni weighted capitalisation rate", (120 * 0.1 + 80 * 0.095) / 200, 0.098],
+  ["Acruni borrowing cost capitalised", 30 * 0.098 + 20 * 0.098 * (3 / 12), 3.43],
+  ["Acruni remaining interest expense", 120 * 0.1 + 80 * 0.095 - 3.43, 16.17],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)
