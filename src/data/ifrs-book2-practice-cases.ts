@@ -15,6 +15,64 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-gains-investment-property",
+    standardCode: "IAS 40",
+    title: text(
+      "Gains: انخفاض القيمة العادلة للعقار الاستثماري",
+      "Gains: investment-property fair-value decrease",
+    ),
+    facts: text(
+      "كانت القيمة المسجلة لعقارات Gains الاستثمارية في 1 يناير 20X9 مبلغ 160,000 دولار، وتتضمن فائض إعادة تقييم 40,000 دولار وفق قواعد محلية سابقة. بلغت قيمتها العادلة في 31 ديسمبر 20X9 مبلغ 110,000 دولار. ترغب الشركة في تطبيق نموذج القيمة العادلة وفق IAS 40، ولم تسجل بعد أثر التغيير أو الانخفاض اللاحق. هذه الحالة تعزل قياس العقار خلال 20X9 بافتراض أن نموذج IAS 40 مطبق من أول السنة؛ ولا تحسم معالجة الانتقال من القواعد المحلية أو بقية عناصر قائمة التغيرات في حقوق الملكية.",
+      "Gains carried its investment properties at $160,000 on 1 January 20X9, including a $40,000 revaluation surplus under previous local accounting rules. Their fair value at 31 December 20X9 was $110,000. Gains wishes to apply the IAS 40 fair-value model and has not yet recorded the change or subsequent fall. This case isolates the 20X9 measurement assuming the IAS 40 model applies from the start of the year; it does not resolve transition from local rules or the remaining statement of changes in equity.",
+    ),
+    question: text(
+      "إذا كان نموذج القيمة العادلة ساريًا طوال 20X9، فما رصيد العقار وخسارة تغير القيمة العادلة؟ وهل يجوز تحميل خسارة السنة مباشرة على فائض إعادة التقييم المحلي القديم؟",
+      "If the fair-value model applied throughout 20X9, what are the property balance and fair-value loss? Can the year's loss be charged directly against the old local-GAAP revaluation surplus?",
+    ),
+    solution: [
+      text(
+        "رصيد العقار في 31 ديسمبر = قيمته العادلة 110,000 دولار. التغير خلال السنة = 110,000 − 160,000 = خسارة 50,000 دولار، بافتراض أن رصيد أول السنة يمثل أساس القيمة العادلة الصحيح عند بدء التطبيق. يعترف بتغير القيمة العادلة في الربح أو الخسارة عن سنة حدوثه وفق IAS 40، لا في الدخل الشامل الآخر.",
+        "The 31 December property balance is its $110,000 fair value. The year's movement is $110,000 − $160,000 = a $50,000 loss, assuming the opening amount is the correct fair-value starting point. IAS 40 recognises the fair-value change in profit or loss for the year, not in other comprehensive income.",
+      ),
+      text(
+        "لا يتيح فائض إعادة التقييم القديم البالغ 40,000 دولار استخدامه تلقائيًا لامتصاص خسارة القيمة العادلة للسنة. يجب فحص تسوية الرصيد القديم عند الانتقال إلى IFRS أو تغيير السياسة المحاسبية على حدة، ومعرفة ما إذا كانت هذه أول قوائم IFRS؛ كما لا يمكن استخراج قائمة حقوق ملكية كاملة من هذا الجزء دون حسم ما إذا كان هبوط أصول التكلفة 25,000 دولار مدرجًا أصلًا في الربح المعطى.",
+        "The old $40,000 local-rule revaluation surplus does not automatically absorb the year's fair-value loss. Analyse its opening-balance transition under first-time IFRS adoption or an accounting-policy change separately, including whether these are the first IFRS financial statements. The full equity statement is not determinable from this isolated part without resolving whether the $25,000 impairment of cost-model assets is already included in the stated profit.",
+      ),
+    ],
+    reference: "IAS 40.33–35; IAS 8.19–22; IFRS 1.10–11",
+  },
+  {
+    id: "ifrs-book2-jerzy-defined-benefit",
+    standardCode: "IAS 19",
+    title: text(
+      "Jerzy: عجز خطة المنافع المحددة وحدود بيانات التسوية",
+      "Jerzy: defined-benefit deficit and limits of the reconciliation",
+    ),
+    facts: text(
+      "خلال السنة المنتهية في 30 نوفمبر 20X3 أنشأت Jerzy خطة معاشات ذات منافع محددة، ودفعت إليها 160 مليون دولار نقدًا في آخر يوم من السنة، لكن الدفعة سجلت خطأً ضمن الذمم التجارية المدينة. في ذلك التاريخ بلغت القيمة الحالية لالتزام المنافع 208 ملايين والقيمة العادلة لأصول الخطة 200 مليون. وردت تكلفة خدمة حالية 176 مليونًا وتكلفة فائدة على الالتزام 32 مليونًا و«عائد متوقع» على أصول الخطة 16 مليونًا. لا يقدم السؤال معدل الخصم ولا جدول تغير أصول الخطة والتزاماتها وتوقيت تكون الأصول الأخرى.",
+      "During the year ended 30 November 20X3 Jerzy established a defined-benefit pension plan and contributed $160m cash on the final day, but wrongly recorded the payment in trade receivables. At that date the present value of the obligation was $208m and the fair value of plan assets was $200m. The case lists $176m current service cost, $32m interest cost on the obligation and a $16m 'expected return' on plan assets. It gives no discount rate or complete movement schedule for plan assets and obligations, including when the other assets arose.",
+    ),
+    question: text(
+      "ما صافي التزام المنافع المحددة في نهاية السنة؟ وأي عناصر تذهب إلى الربح أو الخسارة أو الدخل الشامل الآخر، وما الأرقام التي لا يجوز استنتاجها من هذه الوقائع؟",
+      "What is the closing net defined-benefit liability? Which components belong in profit or loss versus other comprehensive income, and which amounts cannot be derived from these facts?",
+    ),
+    solution: [
+      text(
+        "العجز في 30 نوفمبر = القيمة الحالية للالتزام 208 − القيمة العادلة لأصول الخطة 200 = 8 ملايين دولار؛ يعرض صافي التزام منافع محددة في قائمة المركز المالي، مع الإفصاحات المطلوبة، وليس مجرد رقم في الإيضاحات. ويجب إلغاء إدراج دفعة الـ160 مليونًا ضمن الذمم المدينة لأنها مساهمة في الخطة وليست حق تحصيل من عميل.",
+        "The 30 November deficit is the $208m present-value obligation less $200m fair-value plan assets = $8m. Present a net defined-benefit liability in the statement of financial position, with the required disclosures, rather than only a note figure. Remove the $160m plan contribution from trade receivables: it is not a customer receivable.",
+      ),
+      text(
+        "تكلفة الخدمة الحالية البالغة 176 مليونًا تدخل عادةً في الربح أو الخسارة، ما لم يتطلب معيار آخر إدراجها في تكلفة أصل مؤهل. ويحسب صافي الفائدة باستخدام معدل الخصم على صافي الالتزام/الأصل مع مراعاة تغيراته خلال الفترة؛ لا يساوي تلقائيًا 32 − 16 = 16 مليونًا، لأن «العائد المتوقع» على أصول الخطة ليس أساس قياس صافي الفائدة في IAS 19 الحالي.",
+        "The $176m current service cost is normally in profit or loss unless another Standard requires inclusion in the cost of a qualifying asset. Net interest uses the discount rate on the net liability or asset, taking account of changes during the period; it is not automatically $32m − $16m = $16m because 'expected return' on plan assets is not the current IAS 19 basis for net interest.",
+      ),
+      text(
+        "تعاد قياسات صافي الالتزام، بما فيها عائد أصول الخطة المستبعد من صافي الفائدة، إلى الدخل الشامل الآخر ولا يعاد تدويرها لاحقًا إلى الربح أو الخسارة. لا يجوز إثبات مكسب إعادة قياس 24 مليونًا كرقم متوازن: مساهمة الـ160 مليونًا دُفعت في آخر يوم، ولا يكشف السؤال كيف بلغت أصول الخطة 200 مليونًا أو معدل الخصم وحركة الالتزام. لذلك لا يمكن استخراج صافي فائدة ومكسب إعادة قياس وقيد تسوية شامل موثوق من هذه البيانات وحدها.",
+        "Remeasurements of the net liability, including plan-asset return excluded from net interest, go to other comprehensive income and are not later recycled to profit or loss. Do not force a $24m remeasurement gain as a balancing figure: the $160m contribution was paid on the final day and the case does not explain how plan assets reached $200m or give the discount rate and obligation movements. A reliable net-interest figure, remeasurement gain and complete correcting entry therefore cannot be derived from these facts alone.",
+      ),
+    ],
+    reference: "IAS 19.57–64, 120–124, 127–130, 140",
+  },
+  {
     id: "ifrs-book2-extract-provision-criteria",
     standardCode: "IAS 37",
     title: text(
