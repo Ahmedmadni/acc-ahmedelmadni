@@ -244,6 +244,12 @@ const reviewedCalculations = [
   ["DT inventory deferred-tax asset", (30 - (30 - 6)) * 0.25, 1.5],
   ["Jenson nominal five-year franchise cash", 50000 + 4 * 5000, 70000],
   ["Jenson indicative cost-plus service price", 8000 / (1 - 0.2), 10000],
+  ["IFRS 15 retrospective discount quarter one", 70 * 500, 35000],
+  ["IFRS 15 retrospective discount quarter two", 250 * 450 - 70 * 50, 109000],
+  ["IFRS 15 financing first-year interest", 10000 * 0.1, 1000],
+  ["IFRS 15 financing second-year interest", 11000 * 0.1, 1100],
+  ["IFRS 15 extended warranty machine allocation", 196000 * (196000 / 200000), 192080],
+  ["IFRS 15 extended warranty service allocation", 196000 * (4000 / 200000), 3920],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)
