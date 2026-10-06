@@ -786,24 +786,6 @@ export type Database = {
           },
         ]
       }
-      kb_translation_staging: {
-        Row: {
-          content_en: Json | null
-          faq_en: Json | null
-          id: string
-        }
-        Insert: {
-          content_en?: Json | null
-          faq_en?: Json | null
-          id: string
-        }
-        Update: {
-          content_en?: Json | null
-          faq_en?: Json | null
-          id?: string
-        }
-        Relationships: []
-      }
       kb_trusted_sources: {
         Row: {
           base_url: string

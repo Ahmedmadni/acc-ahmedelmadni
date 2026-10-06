@@ -1,0 +1,1 @@
+DROP TABLE public.kb_translation_staging;
