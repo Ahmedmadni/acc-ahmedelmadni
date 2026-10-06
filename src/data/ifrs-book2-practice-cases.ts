@@ -15,6 +15,37 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-minimart-cgu",
+    standardCode: "IAS 36",
+    title: text(
+      "Minimart: هل المتجر وحدة توليد نقد مستقلة؟",
+      "Minimart: is one store a separate cash-generating unit?",
+    ),
+    facts: text(
+      "تشتري Minimart بضائعها عبر مركز شراء مجموعة Maximart، وتحدد المجموعة الأسعار والتسويق والإعلان وسياسات العاملين. لدى المجموعة خمسة متاجر أخرى في أحياء مختلفة بالمدينة وعشرون متجرًا في مدن أخرى. يبدو أن لكل موقع قاعدة عملاء مختلفة، وقد نشأت شهرة عند شراء بعض المتاجر. لا تتضمن الوقائع بيانات تدفقات نقدية رقمية لكل متجر.",
+      "Minimart buys goods through its parent Maximart's central purchasing function, while the group sets pricing, marketing, advertising and staff policies. Maximart has five other stores in different neighbourhoods of the city and twenty in other cities. Each location appears to have a different customer base, and goodwill arose when some stores were acquired. The facts provide no numerical cash flows by store.",
+    ),
+    question: text(
+      "ما العوامل التي تفحصها المجموعة لتحديد هل Minimart وحدة توليد نقد منفصلة لاختبار انخفاض القيمة؟ وهل المركزية الإدارية تمنع ذلك تلقائيًا؟",
+      "What factors determine whether Minimart is a separate cash-generating unit for impairment testing? Does centralised management automatically prevent that conclusion?",
+    ),
+    solution: [
+      text(
+        "الاختبار الأساسي هو أصغر مجموعة أصول تولد تدفقات نقدية داخلة من أطراف خارجية مستقلة إلى حد كبير عن تدفقات الوحدات الأخرى. افحص مبيعات عملاء المتجر، وتداخل قواعد العملاء مع المتاجر المجاورة، وكيف تراقب الإدارة الأداء وتتخذ قرارات استمرار كل موقع أو إغلاقه.",
+        "The primary test is the smallest asset group generating cash inflows from external parties that are largely independent of other units' inflows. Examine customer receipts, overlap with neighbouring stores, and how management monitors performance and decides whether each location continues or closes.",
+      ),
+      text(
+        "الشراء والإعلان والتسعير المركزيان قد يشاركون في التكاليف والقرارات، لكن استقلال التدفقات الداخلة أهم من استقلال المصروفات. وجود أحياء وقواعد عملاء مختلفة يدعم — ولا يثبت قطعيًا — أن Minimart وحدة مستقلة؛ يلزم فحص الوقائع الفعلية قبل تحديد حدود الوحدة.",
+        "Central purchasing, advertising and pricing may share costs and decisions, but independence of cash inflows matters more than independence of outflows. Different neighbourhoods and customer bases support, but do not conclusively prove, a separate Minimart unit; actual facts must be assessed.",
+      ),
+      text(
+        "وجود شهرة من شراء المتاجر لا يحسم حدود وحدة توليد النقد ولا يعني توزيعها تلقائيًا بالتساوي؛ يخصص اختبار الشهرة إلى الوحدة أو مجموعة الوحدات التي يُتوقع أن تنتفع من منافع التجميع وفق ضوابط IAS 36.",
+        "Goodwill from acquiring stores does not by itself fix CGU boundaries or require equal allocation; impairment testing allocates it to the unit or group expected to benefit from combination synergies under IAS 36.",
+      ),
+    ],
+    reference: "IAS 36.6, 66–69, 80–87",
+  },
+  {
     id: "ifrs-book2-arturo-asset-grant",
     standardCode: "IAS 20",
     title: text("Arturo: منحة آلة وإهلاكها", "Arturo: machine grant and depreciation"),
