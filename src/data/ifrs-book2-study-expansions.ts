@@ -8,6 +8,73 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 36": {
+    sections: [
+      {
+        title: text(
+          "احسب القيمة من الاستخدام من التدفقات، ثم قارنها بالبيع",
+          "Discount use cash flows before comparing with disposal value",
+        ),
+        explanation: text(
+          "اختبار الانخفاض ليس مقارنة القيمة الدفترية بإجمالي التدفقات المستقبلية غير المخصومة. تُقدّر التدفقات النقدية الملائمة الناتجة من الأصل في حالته الحالية، وتُخصم بمعدل مناسب إلى تاريخ القياس لاستخراج القيمة من الاستخدام. ثم تُقارن بالقيمة العادلة ناقص تكاليف التصرف؛ الأكبر منهما هو القيمة القابلة للاسترداد. تفصل الخطوات بين إهلاك السنة السابقة وتقدير الخسارة الجديدة، وتوضح أثر التقريب في المثال الرقمي.",
+          "An impairment test does not compare carrying amount with undiscounted future cash flows. Estimate relevant cash flows from the asset in its current condition and discount them at an appropriate rate to the measurement date to obtain value in use. Compare that with fair value less costs of disposal; the higher is recoverable amount. Keep the prior year's depreciation separate from the new loss estimate and disclose rounding in numerical examples.",
+        ),
+        keyPoints: [
+          text(
+            "استخدم القيمة الأعلى بين الاستخدام والتصرف، لا مجموعهما ولا الأقل منهما.",
+            "Use the higher of use and disposal values, neither their sum nor the lower value.",
+          ),
+          text(
+            "طابق تاريخ التدفقات ومعدل الخصم، ولا تضف تدفقات تمويل أو تحسينات مستقبلية غير مسموحة.",
+            "Align cash-flow timing and discount rate; do not add financing flows or unsupported future enhancement benefits.",
+          ),
+        ],
+        reference: "IAS 36.6, 18–21, 30–57, 59–60",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "قيمة من الاستخدام لأربع سنوات وخسارة انخفاض مع أثر التقريب",
+          "Four-year value-in-use estimate and impairment with rounding",
+        ),
+        facts: text(
+          "اشترت منشأة أصلًا بمبلغ 3,000,000 دولار في 1 يونيو 20X3، ويهلك خطيًا خلال خمس سنوات دون قيمة متبقية. في 31 مايو 20X4 قدرت صافي التدفقات السنوية في نهاية السنوات الأربع التالية بمبالغ 280,000 و450,000 و500,000 و550,000 دولار. القيمة العادلة ناقص تكاليف التصرف 1,400,000 دولار. يفترض المثال ملاءمة معدل خصم 5% والتدفقات المعطاة، وعدم وجود تدفقات إضافية بعد السنة الرابعة.",
+          "An entity acquires an asset for $3,000,000 on 1 June 20X3, depreciated straight-line over five years with nil residual value. At 31 May 20X4 it estimates net cash flows at the ends of the next four years of $280,000, $450,000, $500,000 and $550,000. Fair value less costs of disposal is $1,400,000. Assume the supplied 5% discount rate and cash flows are appropriate and no additional flows arise after year four.",
+        ),
+        calculations: [
+          text(
+            "إهلاك السنة الأولى = 3,000,000 ÷ 5 = 600,000؛ القيمة الدفترية قبل اختبار الانخفاض = 2,400,000.",
+            "Year-one depreciation = $3,000,000 ÷ 5 = $600,000; pre-test carrying amount = $2,400,000.",
+          ),
+          text(
+            "القيمة من الاستخدام = 280,000÷1.05 + 450,000÷1.05² + 500,000÷1.05³ + 550,000÷1.05⁴ = 1,559,235 دولارًا تقريبًا. إذا قُرِّب كل تدفق مخصوم إلى أقرب ألف، يصبح المجموع 1,559,000.",
+            "Value in use = $280,000÷1.05 + $450,000÷1.05² + $500,000÷1.05³ + $550,000÷1.05⁴ ≈ $1,559,235. Rounding each discounted flow to the nearest thousand gives a total of $1,559,000.",
+          ),
+          text(
+            "القيمة القابلة للاسترداد هي الأعلى بين 1,559,235 تقريبًا و1,400,000، أي 1,559,235. خسارة الانخفاض بالحساب غير المقرب ≈ 2,400,000 − 1,559,235 = 840,765؛ وتصبح 841,000 عند عرض المثال بأقرب ألف.",
+            "Recoverable amount is the higher of approximately $1,559,235 and $1,400,000, so about $1,559,235. The unrounded impairment is approximately $2,400,000 − $1,559,235 = $840,765; reporting to the nearest thousand gives $841,000.",
+          ),
+        ],
+        conclusion: text(
+          "يخفض الأصل إلى قيمته القابلة للاسترداد، ويعاد حساب إهلاكه اللاحق على قيمته الجديدة وعمره المتبقي. الفرق بين 840,765 و841,000 تقريب عرض فقط، لا قاعدتان مختلفتان للقياس.",
+          "Write the asset down to recoverable amount and recalculate subsequent depreciation using its revised carrying amount and remaining life. The difference between $840,765 and $841,000 is display rounding, not a different measurement rule.",
+        ),
+        journalEntries: [
+          {
+            label: text(
+              "إثبات الخسارة بالحساب غير المقرب تقريبًا",
+              "Recognise approximately unrounded loss",
+            ),
+            debit: text("خسارة انخفاض — الربح أو الخسارة", "Impairment loss — profit or loss"),
+            credit: text("مجمع انخفاض الأصل", "Accumulated impairment"),
+            amount: text("840,765 تقريبًا", "approximately $840,765"),
+          },
+        ],
+        reference: "IAS 36.6, 18, 30–57, 59–60, 63",
+      },
+    ],
+  },
   "IAS 20": {
     sections: [
       {

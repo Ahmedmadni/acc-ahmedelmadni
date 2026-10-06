@@ -105,6 +105,7 @@ const protectedPracticeIds = [
   "ifrs-book2-arturo-asset-grant",
   "ifrs-book2-acruni-general-borrowings",
   "ifrs-book2-jameson-consignment",
+  "ifrs-book2-minimart-cgu",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -266,6 +267,26 @@ const reviewedCalculations = [
   ["Acruni weighted capitalisation rate", (120 * 0.1 + 80 * 0.095) / 200, 0.098],
   ["Acruni borrowing cost capitalised", 30 * 0.098 + 20 * 0.098 * (3 / 12), 3.43],
   ["Acruni remaining interest expense", 120 * 0.1 + 80 * 0.095 - 3.43, 16.17],
+  [
+    "Krisp value in use to nearest dollar",
+    Math.round(
+      [280000, 450000, 500000, 550000].reduce(
+        (sum, cash, index) => sum + cash / 1.05 ** (index + 1),
+        0,
+      ),
+    ),
+    1559235,
+  ],
+  ["Krisp carrying amount before impairment", 3000000 - 3000000 / 5, 2400000],
+  ["Krisp impairment to nearest dollar", 2400000 - 1559235, 840765],
+  [
+    "Krisp rounded teaching example",
+    [280000, 450000, 500000, 550000].reduce(
+      (sum, cash, index) => sum + Math.round(cash / 1.05 ** (index + 1) / 1000) * 1000,
+      0,
+    ),
+    1559000,
+  ],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)
