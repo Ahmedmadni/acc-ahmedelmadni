@@ -1,0 +1,1 @@
+ALTER TABLE public.kb_articles ADD COLUMN IF NOT EXISTS content_en jsonb, ADD COLUMN IF NOT EXISTS faq_en jsonb;
