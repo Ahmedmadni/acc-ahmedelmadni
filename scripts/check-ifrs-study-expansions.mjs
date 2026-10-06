@@ -98,6 +98,7 @@ const protectedPracticeIds = [
   "ifrs-book2-extract-provision-criteria",
   "ifrs-book2-jerzy-defined-benefit",
   "ifrs-book2-gains-investment-property",
+  "ifrs-book2-panther-inventory-timing",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -234,6 +235,7 @@ const reviewedCalculations = [
   ["Biogenics research equipment closing balance", 200000 - 12500, 187500],
   ["Jerzy closing defined-benefit deficit", 208 - 200, 8],
   ["Gains investment-property fair-value loss", 160000 - 110000, 50000],
+  ["Panther maximum inventory unrealised profit", 60000 * (20 / 120), 10000],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)

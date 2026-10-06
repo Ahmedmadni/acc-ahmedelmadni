@@ -15,6 +15,37 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-panther-inventory-timing",
+    standardCode: "IFRS 10",
+    title: text(
+      "Panther وSabre: ربح المخزون يتوقف على تاريخ الشراء",
+      "Panther and Sabre: inventory profit depends on purchase timing",
+    ),
+    facts: text(
+      "اشترت Panther حصة مسيطرة 60% في Sabre في 1 يوليو 20X4. خلال سنة 20X4 كلها اشترت Panther بضاعة من Sabre بمبلغ 640,000 دولار؛ بقي منها مخزون بقيمة فواتير 60,000 دولار في 31 ديسمبر. تسعر Sabre البيع على أساس التكلفة مضافًا إليها 20%. ينص السؤال على تراكم الإيرادات والمصروفات العادية بالتساوي خلال السنة لكنه يستثني البنود الداخلية، ولا يحدد تواريخ شراء البضاعة المتبقية.",
+      "Panther acquired a controlling 60% interest in Sabre on 1 July 20X4. Across all of 20X4 Panther bought $640,000 of goods from Sabre; $60,000 at invoice price remained in inventory at 31 December. Sabre sells at a 20% markup on cost. The case says ordinary income and expenses accrue evenly during the year but expressly excludes intragroup items from that assumption, and it does not date the purchases remaining on hand.",
+    ),
+    question: text(
+      "كم ربح البضاعة الباقية ضمن سعرها؟ ومتى يُستبعد عند التجميع، ولماذا لا يمكن الجزم بتعديل المخزون أو الإيراد الداخلي من البيانات الحالية؟",
+      "How much profit is embedded in the unsold goods, when is it eliminated on consolidation, and why are the inventory and intragroup-revenue adjustments not definitive?",
+    ),
+    solution: [
+      text(
+        "الهامش 20% على التكلفة، لا على سعر البيع؛ لذلك الربح المضمن في المخزون الباقي = 60,000 × 20/120 = 10,000 دولار. هذا هو الحد الأقصى القابل للاستبعاد إذا كانت كل هذه الوحدات مشتراة بعد 1 يوليو ولم تُبع لطرف خارجي حتى نهاية السنة.",
+        "The 20% markup is on cost, not selling price. Embedded profit in unsold inventory is therefore $60,000 × 20/120 = $10,000. This is the maximum eliminable amount if all those units were bought after 1 July and remained unsold to outsiders at year-end.",
+      ),
+      text(
+        "إذا تم بيع الوحدات بعد حصول Panther على السيطرة، فالبيع بين عضوين في المجموعة ويُستبعد الربح غير المحقق كاملًا عند التجميع؛ وبما أن البائع Sabre التابعة، يخفض تعديل الربح اللاحق للاقتناء أيضًا حصة غير المسيطرين بحسب نسبتهم 40% قبل تحليل أثر الضريبة. أما البضاعة المشتراة قبل 1 يوليو فلا يمثل بيعها حينئذ معاملة داخل المجموعة، ولا يُستبعد ربحها لمجرد أن Sabre أصبحت تابعة لاحقًا.",
+        "Goods sold after Panther obtained control represent an intragroup transaction; eliminate the full unrealised profit on consolidation. Because Sabre is the selling subsidiary, the adjustment also reduces post-acquisition profit attributable to the 40% non-controlling interest before considering tax effects. Goods bought before 1 July were not an intragroup sale at that time, so their profit is not eliminated merely because Sabre became a subsidiary later.",
+      ),
+      text(
+        "إذا اختلطت المشتريات السابقة واللاحقة، يحتاج الحل قيمة المخزون الباقي من مبيعات ما بعد الاستحواذ؛ ولا يصح افتراض أن نصف الـ60,000 أو نصف مبيعات الـ640,000 وقع بعد 1 يوليو لأن فرض التوزيع المنتظم في السؤال لا يشمل التعاملات الداخلية. من دون جدول تواريخ التعامل لا يمكن اعتماد تعديل 10,000 أو قائمة الربح الموحد الكاملة كرقم نهائي.",
+        "For a mix of pre- and post-acquisition purchases, the value of closing inventory sourced after control is needed. Do not simply assume half of the $60,000 or half the $640,000 sales arose after 1 July: the even-accrual assumption excludes intragroup items. Without dated transaction detail, neither the $10,000 elimination nor the full consolidated profit statement is definitive.",
+      ),
+    ],
+    reference: "IFRS 10.20, B86(c)",
+  },
+  {
     id: "ifrs-book2-gains-investment-property",
     standardCode: "IAS 40",
     title: text(
