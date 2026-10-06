@@ -381,6 +381,157 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 15.22–30, 31–38, 106",
       },
+      {
+        title: text("خصم كميات بأثر رجعي", "Retrospective volume discount"),
+        facts: text(
+          "تبيع منشأة حواسيب بسعر 500 دولار للوحدة، ويصبح السعر 450 دولارًا لكل الوحدات المبيعة خلال سنة العقد إذا تجاوزت مشتريات العميل 500 وحدة. في الربع الأول باعت 70 وحدة وتوقعت، على أساس الأدلة المتاحة، عدم بلوغ الحد. في الربع الثاني باعت 250 وحدة أخرى وأصبح تجاوز الحد متوقعًا بدرجة تستوفي قيد المقابل المتغير.",
+          "An entity sells computers for $500 each, reduced retrospectively to $450 for every unit bought during the contract year if the customer buys more than 500. It sells 70 in quarter one and, on the available evidence, does not expect the threshold to be met. It sells another 250 in quarter two, when meeting the threshold becomes sufficiently probable under the variable-consideration constraint.",
+        ),
+        calculations: [
+          text(
+            "إيراد الربع الأول = 70 × 500 = 35,000 دولار.",
+            "Quarter-one revenue = 70 × $500 = $35,000.",
+          ),
+          text(
+            "القيمة التراكمية المحدثة للوحدات الـ320 = (70 + 250) × 450 = 144,000 دولار.",
+            "Revised cumulative consideration for 320 units = (70 + 250) × $450 = $144,000.",
+          ),
+          text(
+            "إيراد الربع الثاني = 144,000 − 35,000 المعترف بها سابقًا = 109,000 دولار؛ أو 250 × 450 − 70 × 50 = 109,000 دولار.",
+            "Quarter-two revenue = $144,000 − $35,000 already recognised = $109,000; equivalently 250 × $450 − 70 × $50 = $109,000.",
+          ),
+        ],
+        conclusion: text(
+          "التغيير في تقدير المقابل المتغير يعدل الإيراد التراكمي عند ظهور المعلومات الجديدة؛ مبلغ 3,500 دولار تصحيح لخصم الوحدات السابقة، وليس مصروف بيع جديدًا. يعاد تقييم التقدير في كل تاريخ تقرير.",
+          "The revised estimate of variable consideration adjusts cumulative revenue as new information becomes available; $3,500 corrects the discount on earlier units, rather than being a new selling expense. Reassess the estimate at each reporting date.",
+        ),
+        journalEntries: [
+          {
+            label: text("إيراد وحدات الربع الأول", "Quarter-one units"),
+            debit: text("ذمم مدينة", "Receivable"),
+            credit: text("إيراد", "Revenue"),
+            amount: text("35,000", "35,000"),
+          },
+          {
+            label: text("وحدات الربع الثاني بالسعر المحدث", "Quarter-two units at revised price"),
+            debit: text("ذمم مدينة", "Receivable"),
+            credit: text("إيراد", "Revenue"),
+            amount: text("112,500", "112,500"),
+          },
+          {
+            label: text("تعديل خصم الوحدات السابقة", "True-up for earlier units"),
+            debit: text("إيراد", "Revenue"),
+            credit: text(
+              "التزام رد أو تخفيض ذمم مدينة بحسب شروط التسوية",
+              "Refund liability or receivable reduction, depending on settlement terms",
+            ),
+            amount: text("3,500", "3,500"),
+          },
+        ],
+        reference: "IFRS 15.50–59, 87–90",
+      },
+      {
+        title: text("بيع بتمويل مؤجل لسنتين", "Sale with two-year deferred financing"),
+        facts: text(
+          "سُلّم منتج للعميل في 31 ديسمبر 20X7 وانتقلت إليه السيطرة. سعره النقدي 10,000 دولار وتكلفته 8,000 دولار، لكن العميل سيدفع 12,100 دولار بعد سنتين. يفترض المثال أن الفرق يمثل مكون تمويل مهمًا وأن معدل الخصم الملائم عند نشأة العقد 10% سنويًا.",
+          "A product is delivered and control passes on 31 December 20X7. Its cash selling price is $10,000 and cost $8,000, but the customer will pay $12,100 two years later. Assume the difference is a significant financing component and the appropriate rate at contract inception is 10% annually.",
+        ),
+        calculations: [
+          text(
+            "10,000 × 1.10² = 12,100؛ لذلك لا يُعرض كامل المبلغ المؤجل إيرادًا عند البيع.",
+            "$10,000 × 1.10² = $12,100; the entire deferred amount is not revenue on sale.",
+          ),
+          text(
+            "في 31 ديسمبر 20X7: الإيراد والذمم المدينة 10,000، وتكلفة المبيعات 8,000.",
+            "At 31 December 20X7: revenue and receivable $10,000, and cost of sales $8,000.",
+          ),
+          text(
+            "في نهاية 20X8: دخل فائدة 10,000 × 10% = 1,000؛ رصيد الذمم 11,000.",
+            "At the end of 20X8: interest income $10,000 × 10% = $1,000; receivable $11,000.",
+          ),
+          text(
+            "في نهاية 20X9: دخل فائدة 11,000 × 10% = 1,100؛ رصيد الذمم 12,100 يسوى عند التحصيل.",
+            "At the end of 20X9: interest income $11,000 × 10% = $1,100; receivable $12,100 settled on collection.",
+          ),
+        ],
+        conclusion: text(
+          "يفصل الإيراد عند انتقال السيطرة عن دخل التمويل اللاحق، مع مراعاة متطلبات قياس الذمم وخسائرها الائتمانية بموجب IFRS 9.",
+          "Separate revenue when control transfers from subsequent financing income, while applying IFRS 9 to receivable measurement and credit losses.",
+        ),
+        journalEntries: [
+          {
+            label: text("عند تسليم المنتج", "On product delivery"),
+            debit: text("ذمم مدينة", "Receivable"),
+            credit: text("إيراد", "Revenue"),
+            amount: text("10,000", "10,000"),
+          },
+          {
+            label: text("إخراج تكلفة المنتج", "Recognise product cost"),
+            debit: text("تكلفة مبيعات", "Cost of sales"),
+            credit: text("مخزون", "Inventory"),
+            amount: text("8,000", "8,000"),
+          },
+          {
+            label: text("فائدة 20X8", "20X8 interest"),
+            debit: text("ذمم مدينة", "Receivable"),
+            credit: text("دخل تمويل", "Finance income"),
+            amount: text("1,000", "1,000"),
+          },
+          {
+            label: text("فائدة 20X9", "20X9 interest"),
+            debit: text("ذمم مدينة", "Receivable"),
+            credit: text("دخل تمويل", "Finance income"),
+            amount: text("1,100", "1,100"),
+          },
+        ],
+        reference: "IFRS 15.60–65; IFRS 9.5.5",
+      },
+      {
+        title: text(
+          "آلة مع ضمان مطابقة وضمان خدمة ممتد",
+          "Machine with assurance and extended service warranties",
+        ),
+        facts: text(
+          "بيعت آلة بمبلغ 196,000 دولار، وهو سعرها المستقل. يضمن البائع مطابقتها للمواصفات لمدة سنة، ويضيف ستة أشهر من خدمة ضمان ممتد يمكن بيعها منفصلة بسعر 4,000 دولارات. يفترض المثال أن الخدمة الممتدة التزام أداء مميز وأن المقابل يدفع عند التسليم.",
+          "A machine is sold for $196,000, its stand-alone selling price. The seller assures compliance with specifications for one year and adds six months of extended warranty service available separately for $4,000. Assume the extended service is a distinct performance obligation and payment is made on delivery.",
+        ),
+        calculations: [
+          text(
+            "الضمان الأساسي للمطابقة ليس التزام أداء منفصلًا؛ تُقيّم مخصصاته بموجب IAS 37. مجموع الأسعار المستقلة للآلة والخدمة = 196,000 + 4,000 = 200,000.",
+            "The basic assurance warranty is not a separate performance obligation; assess its provision under IAS 37. Combined stand-alone prices = $196,000 + $4,000 = $200,000.",
+          ),
+          text(
+            "المقابل المخصص للآلة = 196,000 × 196,000 ÷ 200,000 = 192,080 دولارًا.",
+            "Consideration allocated to the machine = $196,000 × $196,000 ÷ $200,000 = $192,080.",
+          ),
+          text(
+            "المقابل المخصص للخدمة الممتدة = 196,000 × 4,000 ÷ 200,000 = 3,920 دولارًا؛ إذا قُدمت بالتساوي خلال ستة أشهر، فحصة الشهر 653.33 تقريبًا مع تسوية التقريب في الشهر الأخير.",
+            "Consideration allocated to extended service = $196,000 × $4,000 ÷ $200,000 = $3,920; if provided evenly over six months, each month is approximately $653.33, with rounding adjusted in the final month.",
+          ),
+        ],
+        conclusion: text(
+          "يثبت إيراد الآلة عند انتقال السيطرة، ويبقى 3,920 التزام عقد إلى أن تؤدى خدمة الضمان الممتد خلال فترتها؛ لا تُثبت قيمة الخدمة كلها إيرادًا لمجرد أنها وصفت بأنها مجانية.",
+          "Recognise machine revenue when control passes and retain $3,920 as a contract liability until extended warranty service is performed; describing the service as free does not make its allocated consideration immediate revenue.",
+        ),
+        journalEntries: [
+          {
+            label: text("عند البيع والتحصيل", "On sale and collection"),
+            debit: text("النقدية", "Cash"),
+            credit: text(
+              "إيراد آلة 192,080 + التزام عقد 3,920",
+              "Machine revenue $192,080 + contract liability $3,920",
+            ),
+            amount: text("196,000 لكل جانب", "$196,000 on each side"),
+          },
+          {
+            label: text("بعد اكتمال خدمة الأشهر الستة", "After completing six months of service"),
+            debit: text("التزام عقد", "Contract liability"),
+            credit: text("إيراد خدمة الضمان", "Warranty service revenue"),
+            amount: text("3,920", "3,920"),
+          },
+        ],
+        reference: "IFRS 15.73–86, B28–B33; IAS 37.14",
+      },
     ],
   },
   "IFRS 16": {
