@@ -15,6 +15,41 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-santolina-contract-profit",
+    standardCode: "IFRS 15",
+    title: text(
+      "Santolina: عقد بناء وبيع طوب مستقل",
+      "Santolina: construction contract and separate brick sale",
+    ),
+    facts: text(
+      "في 30 سبتمبر 20X3، يبلغ مقابل عقد بناء 290,000 دولار، والتكلفة المتكبدة 210,450 دولارًا، وقيمة الأداء المنجز المقاسة بصورة مناسبة 230,000 دولار. أصدرت المنشأة فواتير بمبلغ 210,000 وحصلت منها 194,000. وفي معاملة منفصلة نقلت طوبًا تكلفته 10,000 إلى العميل ليستعمله في مشروع آخر لن تنفذه المنشأة، وباعته له بمبلغ 14,000 على الحساب. يفترض الحل تحقق أحد شروط الاعتراف بإيراد البناء على مدى الزمن، وانتقال السيطرة على الطوب في التاريخ المذكور.",
+      "At 30 September 20X3 a construction contract has consideration of $290,000, costs incurred of $210,450 and appropriately measured performance to date of $230,000. The entity has invoiced $210,000 and collected $194,000. In a separate transaction it transfers bricks costing $10,000 to the customer for another project the entity will not undertake, selling them on credit for $14,000. The solution assumes an over-time criterion is met for the building work and control of the bricks transfers on that date.",
+    ),
+    question: text(
+      "احسب الإيراد وتكلفة المبيعات والربح الإجمالي، ثم افصل أصل العقد عن الذمم التجارية في قائمة المركز المالي في 30 سبتمبر 20X3. لماذا لا تعد الفواتير أو المتحصلات وحدها مقياسًا للإيراد؟",
+      "Calculate revenue, cost of sales and gross profit, then distinguish contract asset from trade receivables at 30 September 20X3. Why do invoices or cash receipts alone not measure revenue?",
+    ),
+    solution: [
+      text(
+        "إيراد البناء المعترف به على مدى الزمن = قيمة الأداء المنجز 230,000، وإيراد الطوب عند انتقال السيطرة = 14,000؛ إجمالي الإيراد 244,000 دولار. لا يدخل سعر عقد البناء الكامل 290,000 إيرادًا قبل استيفاء الأداء المقابل.",
+        "Over-time construction revenue equals measured performance of $230,000 and brick revenue on control transfer is $14,000; total revenue is $244,000. The full $290,000 construction price is not revenue before the corresponding performance is satisfied.",
+      ),
+      text(
+        "تكلفة المبيعات = تكلفة البناء المتكبدة 210,450 + تكلفة الطوب 10,000 = 220,450 دولارًا. الربح الإجمالي = 244,000 − 220,450 = 23,550 دولارًا.",
+        "Cost of sales is $210,450 of incurred construction costs plus $10,000 for the bricks, or $220,450. Gross profit is $244,000 − $220,450 = $23,550.",
+      ),
+      text(
+        "من أداء البناء المنجز لم يصبح 20,000 مستحق الدفع بلا شرط بعد: أصل العقد = 230,000 − 210,000 المفوترة = 20,000 دولار. أما الذمم التجارية غير المحصلة = (210,000 − 194,000) للبناء + 14,000 للطوب = 30,000 دولار، بافتراض استحقاق الفواتير دون شرط سوى مرور الوقت.",
+        "Of the completed building performance, $20,000 is not yet an unconditional right to payment: contract asset = $230,000 − $210,000 invoiced = $20,000. Uncollected trade receivables are ($210,000 − $194,000) for building plus $14,000 for bricks, or $30,000, assuming the invoices are unconditional apart from the passage of time.",
+      ),
+      text(
+        "يلزم التحقق فعليًا من شرط الاعتراف على مدى الزمن وطريقة قياس التقدم؛ كون النشاط بناءً أو وجود شهادات لا يكفي وحده. كما يخضع أصل العقد والذمم لتقييم خسائر الائتمان وفق IFRS 9، لكن لا توجد بيانات لتحديد مبلغ خسارة هنا.",
+        "The actual over-time criterion and progress measure must be verified; construction activity or certificates alone are insufficient. The contract asset and receivables also require IFRS 9 credit-loss assessment, but no loss amount can be determined from these facts.",
+      ),
+    ],
+    reference: "IFRS 15.35–40, 105–108; IFRS 9.5.5",
+  },
+  {
     id: "ifrs-book2-jenson-franchise-licence",
     standardCode: "IFRS 15",
     title: text(

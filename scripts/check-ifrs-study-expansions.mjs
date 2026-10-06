@@ -101,6 +101,7 @@ const protectedPracticeIds = [
   "ifrs-book2-panther-inventory-timing",
   "ifrs-book2-dt-tax-components",
   "ifrs-book2-jenson-franchise-licence",
+  "ifrs-book2-santolina-contract-profit",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -250,6 +251,11 @@ const reviewedCalculations = [
   ["IFRS 15 financing second-year interest", 11000 * 0.1, 1100],
   ["IFRS 15 extended warranty machine allocation", 196000 * (196000 / 200000), 192080],
   ["IFRS 15 extended warranty service allocation", 196000 * (4000 / 200000), 3920],
+  ["Santolina combined revenue", 230000 + 14000, 244000],
+  ["Santolina combined cost of sales", 210450 + 10000, 220450],
+  ["Santolina gross profit", 244000 - 220450, 23550],
+  ["Santolina contract asset", 230000 - 210000, 20000],
+  ["Santolina trade receivable", 210000 - 194000 + 14000, 30000],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)
