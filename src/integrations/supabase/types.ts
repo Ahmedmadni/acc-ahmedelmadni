@@ -458,12 +458,14 @@ export type Database = {
           author_title: string | null
           category_id: string
           content_ar: Json
+          content_en: Json | null
           content_hash: string | null
           created_at: string
           excerpt_ar: string
           excerpt_en: string
           external_sources: Json
           faq: Json
+          faq_en: Json | null
           featured_image: string | null
           generation_source: string
           id: string
@@ -491,12 +493,14 @@ export type Database = {
           author_title?: string | null
           category_id: string
           content_ar?: Json
+          content_en?: Json | null
           content_hash?: string | null
           created_at?: string
           excerpt_ar: string
           excerpt_en: string
           external_sources?: Json
           faq?: Json
+          faq_en?: Json | null
           featured_image?: string | null
           generation_source?: string
           id?: string
@@ -524,12 +528,14 @@ export type Database = {
           author_title?: string | null
           category_id?: string
           content_ar?: Json
+          content_en?: Json | null
           content_hash?: string | null
           created_at?: string
           excerpt_ar?: string
           excerpt_en?: string
           external_sources?: Json
           faq?: Json
+          faq_en?: Json | null
           featured_image?: string | null
           generation_source?: string
           id?: string

@@ -25,6 +25,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { toast } from "sonner";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 type Section = { heading: string; paragraphs?: string[]; body?: string };
 
@@ -195,6 +196,9 @@ function isRecommendationsHeading(heading: string) {
 
 function ArticlePage() {
   const { categorySlug, articleSlug } = Route.useParams();
+  const [lang] = useSiteLang();
+  const en = lang === "en";
+  const pick = (ar?: string | null, e?: string | null) => (en && e ? e : (ar ?? ""));
   const qc = useQueryClient();
 
   const cat = useQuery({
@@ -229,7 +233,7 @@ function ArticlePage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("kb_articles")
-        .select("id,slug,title_ar,featured_image,reading_minutes,keywords,category_id")
+        .select("id,slug,title_ar,title_en,featured_image,reading_minutes,keywords,category_id")
         .neq("id", article.data!.id)
         .limit(6);
       if (error) throw error;
@@ -259,7 +263,7 @@ function ArticlePage() {
       if (!ids.length) return [];
       const { data: targets } = await supabase
         .from("kb_articles")
-        .select("id, slug, title_ar, category_id")
+        .select("id, slug, title_ar, title_en, category_id")
         .in("id", ids);
       const byId = new Map((targets ?? []).map((t) => [t.id, t]));
       return (data ?? [])
@@ -324,8 +328,8 @@ function ArticlePage() {
     },
   });
 
-  const sections = (article.data?.content_ar as Section[] | undefined) ?? [];
-  const faq = (article.data?.faq as FaqItem[] | undefined) ?? [];
+  const sections = ((en && article.data?.content_en ? article.data.content_en : article.data?.content_ar) as Section[] | undefined) ?? [];
+  const faq = ((en && article.data?.faq_en ? article.data.faq_en : article.data?.faq) as FaqItem[] | undefined) ?? [];
   const refs = (article.data?.references as Ref[] | undefined) ?? [];
 
   const avg = ratingSummary.data?.avg_rating ?? 0;
@@ -484,7 +488,7 @@ function ArticlePage() {
         {/* breadcrumb */}
         <nav className="mb-4 flex flex-wrap items-center gap-1 text-xs text-[#D8D1C8]">
           <Link to="/knowledge" className="hover:text-[#c9a986]">
-            المكتبة
+            {en ? "Library" : "المكتبة"}
           </Link>
           <ChevronLeft className="size-3" />
           <Link
@@ -492,10 +496,10 @@ function ArticlePage() {
             params={{ categorySlug }}
             className="hover:text-[#c9a986]"
           >
-            {cat.data?.name_ar ?? categorySlug}
+            {pick(cat.data?.name_ar, cat.data?.name_en) || categorySlug}
           </Link>
           <ChevronLeft className="size-3" />
-          <span className="text-[#FCFBF9]">{a.title_ar}</span>
+          <span className="text-[#FCFBF9]">{pick(a.title_ar, a.title_en)}</span>
         </nav>
 
         {/* Header */}
@@ -503,7 +507,7 @@ function ArticlePage() {
           {a.featured_image && (
             <img
               src={a.featured_image}
-              alt={a.title_ar}
+              alt={pick(a.title_ar, a.title_en)}
               loading="eager"
               fetchPriority="high"
               className="h-56 w-full object-cover sm:h-72"
@@ -511,10 +515,10 @@ function ArticlePage() {
           )}
           <div className="p-6 sm:p-8">
             <h1 className="font-display text-2xl font-extrabold leading-snug text-[#FCFBF9] sm:text-4xl">
-              {a.title_ar}
+              {pick(a.title_ar, a.title_en)}
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-[#D8D1C8] sm:text-base">
-              {a.excerpt_ar}
+              {pick(a.excerpt_ar, a.excerpt_en)}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-[#D8D1C8]">
               <span className="inline-flex items-center gap-1.5">
@@ -599,7 +603,7 @@ function ArticlePage() {
           <aside className="hidden lg:block">
             <div className="sticky top-32 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-4">
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#7c6045]">
-                المحتويات
+                {en ? "Contents" : "المحتويات"}
               </h3>
               <ul className="mt-3 space-y-2 text-sm">
                 {sections.map((s, i) => (
@@ -618,7 +622,7 @@ function ArticlePage() {
                       href="#faq"
                       className="block rounded px-2 py-1 text-[#4a453e] transition-colors hover:bg-[#A88765]/10 hover:text-[#7c6045]"
                     >
-                      الأسئلة الشائعة
+                      {en ? "FAQ" : "الأسئلة الشائعة"}
                     </a>
                   </li>
                 )}
@@ -628,7 +632,7 @@ function ArticlePage() {
                       href="#refs"
                       className="block rounded px-2 py-1 text-[#4a453e] transition-colors hover:bg-[#A88765]/10 hover:text-[#7c6045]"
                     >
-                      المراجع
+                      {en ? "References" : "المراجع"}
                     </a>
                   </li>
                 )}
@@ -687,7 +691,7 @@ function ArticlePage() {
             {faq.length > 0 && (
               <section id="faq" className="mb-10 scroll-mt-32">
                 <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">
-                  الأسئلة الشائعة
+                  {en ? "Frequently asked questions" : "الأسئلة الشائعة"}
                 </h2>
                 <Accordion
                   type="multiple"
@@ -695,7 +699,7 @@ function ArticlePage() {
                 >
                   {faq.map((f, i) => (
                     <AccordionItem key={i} value={`f-${i}`} className="border-[#A88765]/15">
-                      <AccordionTrigger className="text-right text-[#1C1B19]">
+                      <AccordionTrigger className="text-start text-[#1C1B19]">
                         {f.q}
                       </AccordionTrigger>
                       <AccordionContent className="text-[#6B6259]">{f.a}</AccordionContent>
@@ -709,10 +713,10 @@ function ArticlePage() {
             <section className="mb-10 flex flex-col items-start gap-4 rounded-2xl border border-[#A88765]/20 bg-[#F5F1EB] p-6 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="font-display text-lg font-bold text-[#1C1B19]">
-                  تحتاج مساعدة في تطبيق هذا على منشأتك؟
+                  {en ? "Need help applying this to your business?" : "تحتاج مساعدة في تطبيق هذا على منشأتك؟"}
                 </h2>
                 <p className="mt-1 text-sm text-[#6B6259]">
-                  اطلب استشارة أو خدمة محاسبية مباشرة — سأتواصل معك شخصيًا.
+                  {en ? "Request a consultation or accounting service — I'll contact you personally." : "اطلب استشارة أو خدمة محاسبية مباشرة — سأتواصل معك شخصيًا."}
                 </p>
               </div>
               <Link
@@ -749,7 +753,7 @@ function ArticlePage() {
             {(internalLinks.data?.length ?? 0) > 0 && (
               <section className="mb-10">
                 <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">
-                  روابط داخلية
+                  {en ? "Internal links" : "روابط داخلية"}
                 </h2>
                 <ul className="grid gap-2 sm:grid-cols-2">
                   {internalLinks.data!.map((l, i) => (
@@ -762,7 +766,7 @@ function ArticlePage() {
                         }}
                         className="block rounded-xl border border-[#A88765]/20 bg-[#F5F1EB] px-4 py-3 text-sm text-[#1C1B19] transition-colors hover:border-[#A88765]/50 hover:text-[#7c6045]"
                       >
-                        {l.anchor || l.target!.title_ar}
+                        {l.anchor || pick(l.target!.title_ar, l.target!.title_en)}
                       </Link>
                     </li>
                   ))}
@@ -774,7 +778,7 @@ function ArticlePage() {
             {(related.data?.length ?? 0) > 0 && (
               <section className="mb-12">
                 <h2 className="mb-4 font-display text-2xl font-bold text-[#1C1B19]">
-                  مقالات ذات صلة
+                  {en ? "Related articles" : "مقالات ذات صلة"}
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-3">
                   {related.data!.map((r) => (
@@ -790,14 +794,14 @@ function ArticlePage() {
                       {r.featured_image && (
                         <img
                           src={r.featured_image}
-                          alt={r.title_ar}
+                          alt={pick(r.title_ar, r.title_en)}
                           loading="lazy"
                           className="h-28 w-full object-cover"
                         />
                       )}
                       <div className="p-3">
                         <h4 className="line-clamp-2 font-display text-sm font-bold text-[#1C1B19] group-hover:text-[#7c6045]">
-                          {r.title_ar}
+                          {pick(r.title_ar, r.title_en)}
                         </h4>
                         <div className="mt-1 inline-flex items-center gap-1 text-[11px] text-[#8a8078]">
                           <Clock className="size-3" /> {r.reading_minutes} د

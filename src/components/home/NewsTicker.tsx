@@ -11,7 +11,7 @@ export default function NewsTicker({ lang }: { lang: Lang }) {
   const ar = lang === "ar";
 
   const news = useQuery({
-    queryKey: ["home-news-ticker"],
+    queryKey: ["home-news-ticker", lang],
     queryFn: async () => {
       const [{ data: arts, error }, { data: cats }] = await Promise.all([
         supabasePublic
