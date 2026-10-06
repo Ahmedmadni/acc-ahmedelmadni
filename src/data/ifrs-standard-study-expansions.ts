@@ -721,7 +721,7 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
           ),
         ],
         conclusion: text(
-          "يضاف 32,500 إلى تكلفة المخزن عن الفترة من أغسطس إلى ديسمبر وفق بيانات المثال التي تحتسب أربعة أشهر.",
+          "يضاف 32,500 إلى تكلفة المخزن عن الفترة من أغسطس إلى نوفمبر، وهي أربعة أشهر وفق بيانات المثال.",
           "$32,500 is added to warehouse cost for the example's four-month capitalisation period.",
         ),
         journalEntries: [
