@@ -92,6 +92,8 @@ const protectedPracticeIds = [
   "ifrs-book2-reprise-encore-consolidation",
   "ifrs-book2-vident-share-options",
   "ifrs-book2-vident-share-option-tax",
+  "ifrs-book2-sirus-director-shares",
+  "ifrs-book2-alpha-gamma-associate",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -218,6 +220,12 @@ const reviewedCalculations = [
   ["Vident closing cumulative equity tax", (250000 - 200000) * 0.3, 15000],
   ["Vident current profit or loss tax benefit", 150000 * 0.3, 45000],
   ["Vident current equity tax benefit", 15000 - (80000 - 50000) * 0.3, 6000],
+  ["Sirus presented equity before classification review", 100 + 20 + 30, 150],
+  ["Alpha ownership of Gamma", 20 / 50, 0.4],
+  ["Alpha Gamma associate cost", 20 * 1.6, 32],
+  ["Alpha Gamma post-acquisition share", (28 - 15) * 0.4, 5.2],
+  ["Alpha unrealised downstream profit share", 16 * (25 / 125) * 0.4, 1.28],
+  ["Alpha Gamma associate carrying amount", 32 + 5.2 - 1.28, 35.92],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)

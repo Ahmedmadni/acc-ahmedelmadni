@@ -15,6 +15,68 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-alpha-gamma-associate",
+    standardCode: "IAS 28",
+    title: text(
+      "Alpha وGamma: زميلة وربح بيع لم يتحقق",
+      "Alpha and Gamma: associate and unrealised downstream profit",
+    ),
+    facts: text(
+      "جميع الأرقام بملايين الدولارات. في 1 أبريل 20X5 اشترت Alpha عدد 20 مليون سهم من أصل 50 مليون سهم في Gamma مقابل 1.60 دولار للسهم، وأصبحت قادرة على المشاركة في قراراتها التشغيلية والمالية دون السيطرة عليها. كانت أرباح Gamma المحتجزة يوم الشراء 15؛ وفي 31 مارس 20X7 بلغت 28. لم تُذكر فروق قيمة عادلة يوم الشراء أو انخفاض في الاستثمار. في نهاية 20X7 بقي لدى Gamma مخزون اشترته من Alpha خلال السنة بـ16؛ باعت Alpha البضاعة بسعر التكلفة مضافًا إليه 25%. لا تتوافر في هذا الجزء معطيات لقياس أثر ضريبي مستقل.",
+      "All figures are in $m. On 1 April 20X5 Alpha bought 20m of Gamma's 50m shares for $1.60 each and obtained significant influence over operating and financial policies without control. Gamma's retained earnings were 15 at investment and 28 at 31 March 20X7. No acquisition-date fair-value difference or investment impairment is stated. At the 20X7 year-end Gamma still holds inventory it bought from Alpha during the year for 16; Alpha priced it at cost plus 25%. This part of the case provides no inputs for a separate tax-effect calculation.",
+    ),
+    question: text(
+      "احسب القيمة الدفترية لاستثمار Alpha في Gamma بطريقة حقوق الملكية، وفسر سبب استبعاد جزء من ربح البيع رغم عدم تجميع مخزون Gamma بندًا ببند.",
+      "Calculate the carrying amount of Alpha's investment in Gamma under the equity method and explain why part of the sale profit is eliminated although Gamma inventory is not consolidated line by line.",
+    ),
+    solution: [
+      text(
+        "حصة Alpha = 20 ÷ 50 = 40%. لأن الوقائع تثبت تأثيرًا مهمًا دون سيطرة، تعالج Gamma كزميلة بطريقة حقوق الملكية لا كتابعة؛ تكلفة الاستثمار الأولية = 20 مليون سهم × 1.60 = 32 مليون دولار.",
+        "Alpha's interest is 20 ÷ 50 = 40%. With significant influence but no control, Gamma is an associate accounted for by the equity method, not a line-by-line subsidiary; initial investment cost = 20m shares × $1.60 = $32m.",
+      ),
+      text(
+        "حصة Alpha في الأرباح المحتجزة اللاحقة للاقتناء = 40% × (28 − 15) = 5.2 مليون. ربح بيع المخزون = 16 × 25/125 = 3.2 مليون؛ الجزء الذي لم يتحقق من منظور المستثمر وحصته في الزميلة = 40% × 3.2 = 1.28 مليون.",
+        "Alpha's share of Gamma's post-investment retained earnings = 40% × (28 − 15) = $5.2m. Profit included in the inventory sale = 16 × 25/125 = $3.2m; the portion unrealised to the investor through its associate interest = 40% × $3.2m = $1.28m.",
+      ),
+      text(
+        "القيمة الدفترية للاستثمار في الزميلة = 32 + 5.2 − 1.28 = 35.92 مليون دولار. يُخصم الربح غير المحقق من رصيد الاستثمار بطريقة حقوق الملكية وربح المستثمر، ولا يُخفض كامل مخزون Gamma في قائمة المجموعة لأن الزميلة غير مجمعة بندًا ببند. الرقم يستبعد أي أثر ضريبي لا يمكن اشتقاقه من هذا الجزء وحده.",
+        "Associate carrying amount = $32m + $5.2m − $1.28m = $35.92m. Eliminate Alpha's unrealised downstream gain against the equity-method investment and investor profit; do not reduce all of Gamma's inventory in the consolidated statement because an associate is not consolidated line by line. This amount excludes any tax effect not determinable from these isolated facts.",
+      ),
+    ],
+    reference: "IAS 28.10, 28–30; IFRS 10.7",
+  },
+  {
+    id: "ifrs-book2-sirus-director-shares",
+    standardCode: "IAS 32",
+    title: text(
+      "Sirus: أسهم مديرين واجبة الاسترداد وتوزيعات غير معتمدة",
+      "Sirus: redeemable directors' shares and unapproved distributions",
+    ),
+    facts: text(
+      "تلزم عقود خدمة مديري Sirus كل مدير بشراء أسهم عادية من الفئة B عند تعيينه، وترد الشركة رأس المال له نقدًا عند مغادرته. المديرون وحدهم يحملون هذه الفئة. في 30 أبريل 20X8 تعرض الشركة أسهم الفئة A بمبلغ 100 مليون دولار، والفئة B بمبلغ 20 مليونًا، وأرباحًا محتجزة 30 مليونًا تحت بند حقوق الملكية. أوصى مجلس الإدارة بدفع 3 ملايين لحملة B إضافة إلى أجور تعاقدية للمديرين 10 ملايين؛ لكن دفع الـ3 ملايين يتطلب موافقة أغلبية جميع المساهمين في اجتماع عام، ولم تصدر الموافقة بعد. لا يورد السؤال توقيت مغادرة المديرين أو معدل الخصم أو نصًا يجعل توزيعات B إلزامية.",
+      "The service agreements of Sirus directors require each director to buy class B ordinary shares on appointment, and Sirus must repay the subscribed capital in cash when the director leaves. Directors alone hold class B. At 30 April 20X8 Sirus presents class A shares of $100m, class B shares of $20m and retained earnings of $30m as equity. The board recommends a $3m payment to B holders in addition to $10m contractual remuneration, but the $3m requires approval by a majority of all shareholders at a general meeting; approval has not occurred. The case supplies no directors' departure dates, discount rate or term making the B distributions compulsory.",
+    ),
+    question: text(
+      "بيّن تصنيف أسهم B وأثر التزام رد رأس المال، وهل تُثبت توصية توزيع 3 ملايين كالتزام في تاريخ القوائم، مع التمييز بينها وبين الأجور التعاقدية.",
+      "Classify the B shares and the repayment obligation, determine whether the recommended $3m distribution is a reporting-date liability, and distinguish it from contractual remuneration.",
+    ),
+    solution: [
+      text(
+        "الاسم القانوني «أسهم عادية» لا يحسم التصنيف. يوجب العقد تسليم نقد للمدير عند مغادرته، ولا تستطيع Sirus تجنب السداد؛ لذلك يتضمن ترتيب B التزامًا ماليًا، ولا يصح عرض كامل المبلغ المكتتب به تلقائيًا ضمن حقوق الملكية. استثناء الأدوات القابلة للرد في IAS 32 يحتاج شروطًا محددة، ولا تثبتها وقائع هذه الفئة التي يحملها المديرون وحدهم مع وجود الفئة A.",
+        "The legal label 'ordinary shares' does not determine classification. The contract obliges Sirus to deliver cash when a director leaves, without an unconditional ability to avoid payment; the B arrangement therefore contains a financial liability and cannot automatically remain wholly in equity. IAS 32's puttable-instrument equity exception has specific conditions not established for this directors-only class alongside class A.",
+      ),
+      text(
+        "يقاس عنصر الالتزام وفق الشروط التعاقدية وقواعد القياس ذات الصلة؛ لا يمكن استنتاج أن رصيده في 30 أبريل يساوي 20 مليونًا، أو حساب قيمته الحالية، دون مبلغ الاسترداد التفصيلي وتوقيته ومعدل مناسب. يلزم أيضًا فحص أي حقوق متبقية قد تشكل مكون حقوق ملكية؛ لا تكفي المعطيات لتقسيم رقمي قاطع.",
+        "Measure the liability component under the contractual terms and relevant measurement rules. The facts do not establish that its 30 April carrying amount is exactly $20m, nor permit present-value calculation without detailed redemption amounts, timing and an appropriate rate. Any residual equity rights must also be assessed; no defensible numerical split is possible here.",
+      ),
+      text(
+        "توصية توزيع 3 ملايين ليست التزامًا قائمًا في 30 أبريل، لأن أغلبية المساهمين تستطيع رفضها ولم تعتمدها بعد. إذا نشأ لاحقًا التزام بدفع عائد على أداة مصنفة التزامًا ماليًا، يعرض العائد وفق طبيعتها ضمن الربح أو الخسارة لا كتوزيع حقوق ملكية. أما أجور المديرين التعاقدية البالغة 10 ملايين فهي مصروف خدمة منفصل وليست جزءًا من توصية التوزيع.",
+        "The recommended $3m is not a present obligation at 30 April because shareholder approval can still be withheld. If an obligation to pay a return on a liability-classified instrument later arises, the return follows the instrument's liability classification in profit or loss rather than being an equity distribution. The $10m contractual directors' remuneration is a separate service expense, not part of the proposed distribution.",
+      ),
+    ],
+    reference: "IAS 32.15–18, 16A–16B, 35–36; IFRS 9.4.2.1",
+  },
+  {
     id: "ifrs-book2-vident-share-options",
     standardCode: "IFRS 2",
     title: text(
