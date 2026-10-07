@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-plyman-accumulating-sick-leave",
+  "ifrs-book2-factory-termination-retention",
   "ifrs-book2-lease-lis",
   "ifrs-book2-retail-unit-eastway",
   "ifrs-book2-courtney-currency",
@@ -142,8 +144,21 @@ for (const practiceCase of openPracticeCases) {
 for (const id of protectedPracticeIds) {
   if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
 }
+for (const id of [
+  "ifrs-book2-plyman-accumulating-sick-leave",
+  "ifrs-book2-factory-termination-retention",
+]) {
+  const practiceCase = openPracticeCases.find((item) => item.id === id);
+  if (practiceCase?.standardCode !== "IAS 19")
+    failures.push(`${id}: chapter 9 case must stay with IAS 19`);
+}
 
 const reviewedCalculations = [
+  ["Plyman incremental sick days", 8 * (6.5 - 5), 12],
+  ["factory total expected cash", 20 * 10000 + 100 * 30000, 3200000],
+  ["factory termination component", 120 * 10000, 1200000],
+  ["factory service component", 100 * (30000 - 10000), 2000000],
+  ["factory monthly service cost", (100 * (30000 - 10000)) / 10, 200000],
   ["Doug development recognised cost", 100000 - 90000, 10000],
   ["IAS 38 revaluation loss through profit or loss", 500 - 400, 100],
   ["Parker warranty expected value", 0.75 * 0 + 0.2 * 1000000 + 0.05 * 4000000, 400000],
