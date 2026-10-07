@@ -15,6 +15,36 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-eramu-loss-carryback",
+    standardCode: "IAS 12",
+    title: text("Eramu: منفعة ترحيل خسارة للخلف", "Eramu: benefit of a loss carryback"),
+    facts: text(
+      "دفعت Eramu ضريبة قدرها 50,000 دولار عن أرباح 20X7، ثم تكبدت في 20X8 خسارة ضريبية 24,000. يجيز القانون ترحيل الخسارة إلى الفترة السابقة لاسترداد الضريبة المدفوعة، ومعدل الضريبة 30%. افترض أن كامل الخسارة مؤهل لهذا الرد.",
+      "Eramu paid $50,000 tax on 20X7 profits and then incurs a $24,000 tax loss in 20X8. Law permits carryback to recover prior tax paid, and the tax rate is 30%. Assume the full loss qualifies for the refund.",
+    ),
+    question: text("احسب منفعة الضريبة عن 20X8، وحدد هل ينشأ أصل أم التزام ضريبة جارية، واكتب القيد.", "Calculate the 20X8 tax benefit, identify whether a current-tax asset or liability arises, and give the entry."),
+    solution: [
+      text("الاسترداد = 24,000 × 30% = 7,200 دولار، وهو أقل من ضريبة 20X7 المدفوعة البالغة 50,000؛ لذا يمكن استرداده وفق الفرض.", "Refund = $24,000 × 30% = $7,200, below the $50,000 prior tax paid and therefore recoverable under the stated assumption."),
+      text("القيد: مدين ضريبة جارية مستردة 7,200، ودائن دخل/منفعة ضريبة جارية في الربح أو الخسارة 7,200. يعرض الأصل حتى التحصيل؛ لا ينشأ من الترحيل للخلف أصل ضريبة مؤجلة أو التزام ضريبة جارية عن الخسارة نفسها.", "Entry: debit current tax receivable $7,200 and credit current-tax benefit in profit or loss $7,200. Present the asset until collected; the carryback itself is neither a deferred tax asset nor a current-tax payable from the loss."),
+    ],
+    reference: "IAS 12.12–14, 46, 58",
+  },
+  {
+    id: "ifrs-book2-carrol-anchor-dividend-tax",
+    standardCode: "IAS 12",
+    title: text("Carrol وAnchor: ضريبة التوزيعات المخطط لها", "Carrol and Anchor: tax on planned distributions"),
+    facts: text(
+      "تملك Carrol شركة Anchor التابعة. كانت أرباح Anchor المحتجزة عند الشراء 2,000,000 دولار. قرر مديرو Carrol تلقي توزيعات 500,000 دولار كل سنة من السنوات الثلاث القادمة، وتُفرض ضريبة على تحويلها، لكن لم يعلن توزيع عن السنة الحالية. لا يذكر السؤال معدل الضريبة أو أساس الاستثمار الضريبي.",
+      "Carrol owns subsidiary Anchor, whose retained earnings at acquisition were $2,000,000. Carrol's directors plan $500,000 annual distributions for the next three years, taxable on remittance, but no current-year dividend has been declared. Neither the tax rate nor the investment's tax base is given.",
+    ),
+    question: text("ناقش أثر الخطة في الاعتراف بالضريبة المؤجلة على الاستثمار في Anchor، وهل يمكن حساب مبلغ الالتزام من البيانات المعطاة؟", "Discuss how the plan affects deferred-tax recognition on the Anchor investment and whether a liability amount can be calculated from the given facts."),
+    solution: [
+      text("استثناء IAS 12 يشترط معًا التحكم في توقيت انعكاس الفرق المؤقت ورجحان ألا ينعكس في المستقبل المنظور. تتحكم Carrol في سياسة التوزيع، لكن خطة دفع 500,000 سنويًا لثلاث سنوات تجعل الشرط الثاني غير متحقق للجزء المتوقع توزيعه، ولو لم يعلن توزيع حاليًا.", "The IAS 12 exception requires both control of temporary-difference reversal and probable non-reversal in the foreseeable future. Carrol controls dividend policy, but the three-year $500,000 annual plan defeats the second condition for the portion expected to be distributed, even without a current declaration."),
+      text("تُقيّم ضريبة مؤجلة على الفرق المؤقت الخاضع ذي الصلة بالاستثمار والمتوقع انعكاسه. مجموع التوزيعات المخطط 1,500,000 لا يساوي تلقائيًا الفرق المؤقت؛ وبغياب أساس الاستثمار ومعدل الضريبة لا يجوز اختلاق مبلغ للالتزام أو قيد رقمي.", "Assess deferred tax on the taxable investment difference expected to reverse. Planned distributions total $1,500,000 but do not automatically equal the temporary difference; without the investment tax base and applicable tax rate, no numerical liability or journal amount can be derived."),
+    ],
+    reference: "IAS 12.38–40, 47",
+  },
+  {
     id: "ifrs-book2-beta-land-revaluation-tax",
     standardCode: "IAS 12",
     title: text("Beta: قيد ضريبة إعادة تقييم أرض", "Beta: tax entry on land revaluation"),

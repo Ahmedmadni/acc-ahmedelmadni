@@ -88,6 +88,32 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 12.20, 47, 58, 61A–62; IAS 16.39, 42",
       },
+      {
+        title: text("خسارة تُرحّل للخلف: أصل ضريبة جارية لا أصل مؤجل", "A loss carried back: current tax receivable, not deferred tax"),
+        explanation: text(
+          "إذا أجاز قانون الضريبة استخدام خسارة السنة الحالية لاسترداد ضريبة جارية سبق دفعها عن سنة سابقة، فالمنفعة القابلة للاسترداد أصل ضريبة جارية في سنة وقوع الخسارة. حدد أولًا ما تسمح به قواعد الترحيل للخلف وما دُفع فعلًا، ثم اضرب الجزء المؤهل من الخسارة في معدل الضريبة المناسب مع مراعاة أي قيود قانونية. يثبت الأصل مقابل دخل ضريبي جارٍ في الربح أو الخسارة في الحالة المعتادة، ويبقى ذمة على الجهة الضريبية حتى التحصيل. لا تخلطه بأصل ضريبة مؤجلة من خسارة مُرحّلة للأمام؛ الأخير يتطلب اختبارًا منفصلًا لاحتمال أرباح ضريبية مستقبلية. وإذا كان استرداد الضريبة أقل من ناتج ضرب كامل الخسارة في المعدل، اقتصر الأصل على المبلغ القابل للاسترداد قانونًا.",
+          "If tax law permits this year's loss to recover current tax actually paid for a prior year, the recoverable benefit is a current-tax asset in the loss year. First determine the carryback permitted and tax already paid, then apply the appropriate rate to the eligible loss subject to legal limits. Ordinarily recognise the receivable against current-tax income in profit or loss and retain it until collected. Do not confuse it with a deferred tax asset for a loss carried forward, which needs a separate probable-future-taxable-profit test. If only part of the computed benefit can legally be recovered, recognise only that recoverable amount.",
+        ),
+        keyPoints: [
+          text("الترحيل للخلف يسترد ضريبة ماضية؛ الترحيل للأمام يعتمد على استخدام مستقبلي.", "Carryback recovers past tax; carryforward relies on future use."),
+          text("الأصل يعكس الاسترداد المتوقع، وليس التزام ضريبة جديدًا رغم عنوان سؤال قديم.", "The asset reflects expected recovery, not a new tax payable even if an exercise labels it that way."),
+          text("افحص حدود قانون الترحيل وسقف الضريبة المدفوعة قبل إثبات المبلغ.", "Check carryback limits and past tax paid before recognising the amount."),
+        ],
+        reference: "IAS 12.12–14, 46, 58",
+      },
+      {
+        title: text("ضريبة أرباح التابعة غير الموزعة: اختبار شرطان معًا", "Tax on undistributed subsidiary profits: a two-condition exception"),
+        explanation: text(
+          "قد ينشأ فرق مؤقت خاضع مرتبط باستثمار الشركة الأم في تابعة، ومنها الأرباح غير الموزعة التي لا تُفرض عليها ضريبة لدى الأم إلا عند التحويل. يلزم الاعتراف بالتزام ضريبة مؤجلة إلا بقدر تحقق شرطين معًا: قدرة الأم على التحكم في توقيت انعكاس الفرق، ورجحان ألا ينعكس في المستقبل المنظور. السيطرة على سياسة التوزيعات تحقق الشرط الأول غالبًا لكنها لا تعفي المنشأة إذا كانت قد قررت التوزيع قريبًا. لا تساوِ آليًا بين رصيد أرباح تابعة أو مجموع توزيعات مخطط لها وبين مبلغ الفرق المؤقت الخاضع؛ يلزم تحليل القيمة الدفترية والأساس الضريبي للاستثمار وطريقة الاسترداد والضريبة المتوقعة عند الانعكاس. وإذا لم يُعط معدل الضريبة أو أساس الاستثمار، يمكن حسم مبدأ الاعتراف دون اختلاق مبلغ أو قيد رقمي.",
+          "A taxable temporary difference may arise on a parent's investment in a subsidiary, including undistributed profits taxed at parent level only on remittance. Recognise deferred tax unless both conditions hold: the parent controls the timing of reversal and it is probable the difference will not reverse in the foreseeable future. Control of dividend policy usually meets the first condition but does not exempt planned near-term distributions. Do not automatically equate the subsidiary's retained earnings or planned dividends with the taxable temporary difference: examine the investment carrying amount and tax base, expected recovery and tax on reversal. Without the investment tax base or applicable rate, the recognition principle can be answered without inventing a numeric balance or entry.",
+        ),
+        keyPoints: [
+          text("التحكم في توقيت التوزيع وحده غير كافٍ للإعفاء.", "Control over dividend timing alone is insufficient for the exception."),
+          text("خطة التوزيع القريب تعني أن شرط عدم الانعكاس المتوقع قد فشل.", "A near-term distribution plan defeats the probable-no-reversal condition."),
+          text("لا تحسب التزامًا رقميًا دون معدل الضريبة والفرق المؤقت ذي الصلة.", "Do not calculate a numeric liability without the relevant tax rate and temporary difference."),
+        ],
+        reference: "IAS 12.38–40, 47",
+      },
     ],
     workedExamples: [
       {
@@ -225,6 +251,34 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("ضريبة زيادة التقييم وحدها", "Tax on the revaluation uplift only"), debit: text("الدخل الشامل الآخر — ضريبة فائض التقييم", "OCI — revaluation tax"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("150,000 دولار", "$150,000") },
         ],
         reference: "IAS 12.20, 47, 58, 61A–62; IAS 16.39, 42",
+      },
+      {
+        title: text("Eramu: استرداد ضريبة سنة سابقة بخسارة السنة", "Eramu: recover prior tax with this year's loss"),
+        facts: text(
+          "دفعت Eramu ضريبة قدرها 50,000 دولار عن أرباح 20X7. في 20X8 تكبدت خسارة ضريبية 24,000، ويسمح القانون برد الخسارة إلى سنة سابقة لاسترداد الضريبة الجارية المدفوعة. معدل الضريبة 30%؛ يفترض أن كامل الخسارة مؤهل للرد وأن الضريبة السابقة تكفي لتغطية المبلغ.",
+          "Eramu paid $50,000 tax on 20X7 profits. In 20X8 it incurs a $24,000 tax loss, and law permits carryback to recover current tax paid for an earlier period. The tax rate is 30%; assume the entire loss qualifies and prior tax paid is sufficient.",
+        ),
+        calculations: [
+          text("الاسترداد المتوقع = 24,000 × 30% = 7,200 دولار، وهو دون الضريبة المدفوعة سابقًا 50,000. لذلك يُثبت أصل ضريبة جارية 7,200 ودخل/منفعة ضريبة جارية بالمبلغ نفسه في 20X8، ولا ينشأ من هذه الخسارة نفسها مطلوب ضريبة جارية.", "Expected refund = $24,000 × 30% = $7,200, less than $50,000 tax previously paid. Thus recognise a $7,200 current-tax receivable and corresponding current-tax benefit in 20X8; the loss itself does not create a current-tax payable."),
+        ],
+        conclusion: text("ترحيل الخسارة للخلف أصل ضريبة جارية؛ لا يسمى أصل ضريبة مؤجلة لمجرد أن النقد سيصل لاحقًا.", "The carryback is a current-tax asset; it is not deferred tax merely because cash arrives later."),
+        journalEntries: [
+          { label: text("إثبات منفعة الترحيل للخلف", "Recognise carryback benefit"), debit: text("ضريبة جارية مستردة", "Current tax receivable"), credit: text("دخل ضريبة جارية", "Current tax income"), amount: text("7,200 دولار", "$7,200") },
+        ],
+        reference: "IAS 12.12–14, 46, 58",
+      },
+      {
+        title: text("Carrol وAnchor: السيطرة لا تعفي مع خطة توزيعات", "Carrol and Anchor: control does not exempt planned dividends"),
+        facts: text(
+          "لدى Carrol شركة تابعة واحدة Anchor. كانت أرباح Anchor المحتجزة عند الاستحواذ 2,000,000 دولار. قرر مديرو Carrol تحصيل توزيعات من Anchor قدرها 500,000 سنويًا خلال السنوات الثلاث المقبلة، وتُفرض ضريبة على تحويل التوزيعات. لم يعلن توزيع عن السنة الحالية، ولم يحدد السؤال أساس الاستثمار الضريبي أو معدل الضريبة.",
+          "Carrol has one subsidiary, Anchor. Anchor's retained earnings at acquisition were $2,000,000. Carrol's directors plan $500,000 annual distributions from Anchor over the next three years, and remittances are taxable. No dividend is declared for the current year; neither the investment tax base nor tax rate is specified.",
+        ),
+        calculations: [
+          text("التوزيعات المخطط لها = 500,000 × 3 = 1,500,000 دولار، لكنها ليست تلقائيًا مبلغ الفرق المؤقت أو الالتزام الضريبي. تتحكم Carrol في موعد التوزيع، غير أن خطة الثلاث سنوات تعني أن شرط رجحان عدم الانعكاس في المستقبل المنظور لا يتحقق للجزء المزمع توزيعه.", "Planned distributions total $500,000 × 3 = $1,500,000, but that is not automatically the temporary difference or tax liability. Carrol controls dividend timing, yet its three-year plan means the probable-no-reversal condition is not met for the portion expected to reverse."),
+        ],
+        conclusion: text("يلزم تحليل وإثبات ضريبة مؤجلة على الفرق المؤقت الخاضع المرتبط بالاستثمار المتوقع انعكاسه، لكن المعطيات لا تكفي لمبلغ محدد. عدم إعلان توزيع هذا العام لا يلغي خطة التوزيع خلال المستقبل المنظور.", "Assess and recognise deferred tax on the taxable investment difference expected to reverse, but the facts do not support a numeric balance. No declaration this year does not negate planned foreseeable distributions."),
+        journalEntries: [],
+        reference: "IAS 12.38–40, 47",
       },
     ],
   },

@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-eramu-loss-carryback",
+  "ifrs-book2-carrol-anchor-dividend-tax",
   "ifrs-book2-beta-land-revaluation-tax",
   "ifrs-book2-charlton-revaluation-tax-split",
   "ifrs-book2-tax-base-five-assets",
@@ -186,6 +188,8 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Eramu carryback refund", 24000 * 0.3, 7200],
+  ["Carrol planned distributions, not an asserted tax base", 500000 * 3, 1500000],
   ["Beta land revaluation taxable difference", 500000 - 400000, 100000],
   ["Beta land revaluation OCI tax", (500000 - 400000) * 0.3, 30000],
   ["Charlton prior difference if base unchanged", 2000000 - 1800000, 200000],
