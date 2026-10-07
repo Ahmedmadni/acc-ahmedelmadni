@@ -15,6 +15,21 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-redblack-receivables-matrix",
+    standardCode: "IFRS 9",
+    title: text("Redblack: مصفوفة خسائر الذمم لسنتين", "Redblack: two-year receivables loss matrix"),
+    facts: text(
+      "في 30 يونيو 20X4 كانت أرصدة الذمم بالملايين حسب فئات التأخر (جارية، 1–30، 31–60، 61–90، أكثر من 90 يومًا): 30، 15، 8، 5، 2؛ والمعدلات المقابلة 0.3%، 1.6%، 3.6%، 6.6%، 10.6%. في 30 يونيو 20X5 صارت الأرصدة 32، 16، 10، 7، 3؛ والمعدلات 0.5%، 1.8%، 3.8%، 7%، 11%. لأغراض الحساب افترض أن النسب معدلات خسارة متوقعة على مدى العمر بعد معايرة الاسترداد والمعلومات المستقبلية، وأن مخصص 20X4 لم يتأثر بالشطب أو الاستخدام أو حركات أخرى.",
+      "At 30 June 20X4, receivables balances in millions by ageing bucket (current, 1–30, 31–60, 61–90 and over 90 days overdue) are 30, 15, 8, 5 and 2; corresponding rates are 0.3%, 1.6%, 3.6%, 6.6% and 10.6%. At 30 June 20X5, balances are 32, 16, 10, 7 and 3; rates are 0.5%, 1.8%, 3.8%, 7% and 11%. For calculation assume calibrated lifetime expected-loss rates after recoveries and forward-looking information, and no write-offs, utilisation or other movements in the 20X4 allowance.",
+    ),
+    question: text("احسب مخصص كل تاريخ وقيد التغير في 20X5. ماذا يتغير لو كانت النسب احتمالات تعثر مجردة؟", "Calculate the allowance at each date and the 20X5 movement entry. What changes if the rates are only default probabilities?"),
+    solution: [
+      text("بالآلاف: مخصص 20X4 = 90 + 240 + 288 + 330 + 212 = 1,160. مخصص 20X5 = 160 + 288 + 380 + 490 + 330 = 1,648. تختلف الشرائح ومعدلاتها، لذلك لا تستخدم معدلًا موحدًا على 68 مليونًا.", "In $000, the 20X4 allowance is 90 + 240 + 288 + 330 + 212 = 1,160. The 20X5 allowance is 160 + 288 + 380 + 490 + 330 = 1,648. Bucket balances and rates differ, so do not apply one blanket rate to $68m."),
+      text("في ظل فرض عدم حركات أخرى، الزيادة 488,000 دولار: مدين مصروف خسائر ائتمانية متوقعة ودائن مخصص خسائر الذمم. إن كانت النسب احتمالات تعثر فقط، فلا يكفي ضربها في الرصيد؛ يلزم تقدير العجز النقدي بعد الاسترداد وتوقيته، ولا تُستنتج قيمة خسارة قطعية من هذه البيانات وحدها.", "With no other movements, the $488,000 increase is a debit to ECL expense and a credit to receivables loss allowance. If rates are only default probabilities, multiplying them by gross balances is insufficient: estimate the cash shortfall after recoveries and its timing, so no definitive ECL amount follows from these data alone."),
+    ],
+    reference: "IFRS 9.5.5.15–5.5.17, B5.5.35; IFRS 7.35N",
+  },
+  {
     id: "ifrs-book2-plyman-accumulating-sick-leave",
     standardCode: "IAS 19",
     title: text("Plyman: قياس الإجازة المرضية المرحلة", "Plyman: measuring carried-forward sick leave"),
