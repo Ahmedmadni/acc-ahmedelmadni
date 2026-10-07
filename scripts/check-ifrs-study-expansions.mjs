@@ -180,6 +180,9 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Pappa intragroup profit", 200 - 150, 50],
+  ["Pappa current tax", (200 - 150) * 0.4, 20],
+  ["Sierra deferred tax asset on group difference", (200 - 150) * 0.5, 25],
   ["Darton current-year tax", 120000 * 0.3, 36000],
   ["Darton underassessment tax expense", 36000 + (35000 - 30000), 41000],
   ["Darton overassessment tax expense", 36000 - (30000 - 25000), 31000],

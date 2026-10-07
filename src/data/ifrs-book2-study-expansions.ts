@@ -36,6 +36,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 12.15, 19, 47, 66; IFRS 3.10, 18",
       },
+      {
+        title: text("ربح المخزون داخل المجموعة: استرداد ضريبي بمعدل المشتري", "Intragroup inventory profit: deferred tax at the buyer's rate"),
+        explanation: text(
+          "إذا باعت شركة في المجموعة مخزونًا لشركة تابعة وما زال المخزون لدى المشتري بنهاية الفترة، تُلغى الأرباح غير المحققة في القوائم المجمعة. قد يبقى الأساس الضريبي للمخزون في دفاتر المشتري مساويًا لسعر شرائه الداخلي، بينما تنخفض قيمته الدفترية المجمعة إلى تكلفة المجموعة؛ هنا ينشأ فرق مؤقت قابل للخصم. استخدم معدل الضريبة المتوقع عند استرداد المخزون في ولاية الشركة التي ستحصل على الخصم الضريبي، لا معدل البائع لمجرد أنه سدد ضريبة الربح الداخلي. يعترف بأصل الضريبة المؤجلة فقط بقدر احتمال وجود ربح خاضع في الولاية الملائمة يسمح باستخدام الخصم. الضريبة الجارية التي ترتبت على البائع أمام سلطته الضريبية لا تُلغى كمعاملة داخلية، ثم ينعكس الأصل المؤجل عند بيع المخزون لطرف خارجي، مع إعادة فحص معدل الضريبة والأساس الضريبي الفعليين.",
+          "If one group company sells inventory to another and the buyer still holds it at period-end, eliminate the unrealised profit in consolidated accounts. The buyer's tax base may remain at its intragroup purchase price while consolidated carrying amount falls to group cost, creating a deductible temporary difference. Use the rate expected when the inventory is recovered in the jurisdiction that receives the tax deduction, not the seller's rate merely because the seller paid tax on its intragroup profit. Recognise a deferred tax asset only to the extent probable taxable profit in the appropriate jurisdiction will permit use of the deduction. Do not eliminate the seller's tax payable to its authority as an intragroup item. The deferred tax reverses when the inventory is sold outside the group, subject to the actual tax base and reversal rate.",
+        ),
+        keyPoints: [
+          text("ألغِ الربح الداخلي قبل مقارنة القيمة الدفترية المجمعة بأساس المشتري الضريبي.", "Eliminate internal profit before comparing group carrying amount with the buyer's tax base."),
+          text("معدل البائع يفسر ضريبته الجارية، ومعدل المشتري يقيس أثر خصمه المستقبلي.", "The seller's rate explains its current tax; the buyer's rate measures its future deduction."),
+          text("اختبر احتمال توفر الربح الخاضع المناسب قبل إثبات أصل الضريبة المؤجلة.", "Test probable suitable taxable profit before recognising the deferred tax asset."),
+        ],
+        reference: "IAS 12.5, 24, 28–29, 47; IFRS 10.B86(c)",
+      },
     ],
     workedExamples: [
       {
@@ -70,6 +83,22 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("أثر ضريبة المعدة عند الاستحواذ", "Acquisition-date tax effect of equipment"), debit: text("شهرة ضمن تخصيص ثمن الشراء", "Goodwill within purchase-price allocation"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("مليون دولار", "$1 million") },
         ],
         reference: "IAS 12.15, 19, 47, 66; IFRS 3.10, 18",
+      },
+      {
+        title: text("Pappa وSierra: مخزون مباع داخل المجموعة", "Pappa and Sierra: inventory sold within the group"),
+        facts: text(
+          "باعت Pappa بضاعة تكلفتها 150 دولارًا إلى شركتها التابعة Sierra مقابل 200 دولار، وبقيت البضاعة لدى Sierra بنهاية السنة. تخضع أرباح كل شركة للضريبة في ولايتها منفردة: معدل Pappa هو 40% ومعدل Sierra هو 50%. يحق لـSierra عند الاسترداد خصم سعر شرائها البالغ 200 دولار. يفترض المثال احتمال توفر أرباح خاضعة لدى Sierra تكفي لاستخدام فرق الخصم، وثبات المعدل عند انعكاسه.",
+          "Pappa sells goods costing $150 to subsidiary Sierra for $200, and Sierra still holds the goods at year-end. Each entity is taxed separately in its jurisdiction: Pappa's rate is 40% and Sierra's is 50%. On recovery Sierra may deduct its $200 purchase price. Assume probable taxable profits at Sierra sufficient to use the deductible difference and an unchanged rate on reversal.",
+        ),
+        calculations: [
+          text("ربح Pappa الداخلي = 200 − 150 = 50، وضريبتها الجارية عليه = 50 × 40% = 20 دولارًا. بعد إلغاء الربح غير المحقق تصبح القيمة الدفترية المجمعة للمخزون 150، لكن أساسه الضريبي لدى Sierra يبقى 200؛ الفرق القابل للخصم 50.", "Pappa's intragroup profit is $200 − $150 = $50 and its current tax on that profit is $50 × 40% = $20. Eliminating unrealised profit leaves consolidated inventory carrying amount at $150, while its tax base at Sierra remains $200: a $50 deductible difference."),
+          text("أصل الضريبة المؤجلة، بافتراض تحقق شرط الاعتراف، = 50 × معدل Sierra 50% = 25 دولارًا. اختلاف 25 عن ضريبة Pappa الجارية 20 طبيعي لاختلاف الولايتين والمعدلين؛ لا تستخدم 40% لقياس خصم Sierra المستقبلي.", "Subject to the recognition condition, deferred tax asset = $50 × Sierra's 50% rate = $25. The $25 differs from Pappa's $20 current tax because the jurisdictions and rates differ; do not measure Sierra's future deduction at 40%."),
+        ],
+        conclusion: text("يثبت في القوائم المجمعة أصل ضريبة مؤجلة 25 دولارًا يقابله دخل ضريبة مؤجلة، مع بقاء ضريبة Pappa الجارية منفصلة. إذا لم يرجح توفر ربح خاضع لدى Sierra، فلا يثبت الأصل بالكامل تلقائيًا.", "Recognise a $25 deferred tax asset and corresponding deferred tax income in consolidated accounts while retaining Pappa's separate current tax. If suitable taxable profit at Sierra is not probable, the full asset is not automatically recognised."),
+        journalEntries: [
+          { label: text("أثر الضريبة المؤجلة في القوائم المجمعة", "Deferred tax in consolidated accounts"), debit: text("أصل ضريبة مؤجلة", "Deferred tax asset"), credit: text("دخل ضريبة مؤجلة", "Deferred tax income"), amount: text("25 دولارًا", "$25") },
+        ],
+        reference: "IAS 12.5, 24, 28–29, 47; IFRS 10.B86(c)",
       },
     ],
   },
