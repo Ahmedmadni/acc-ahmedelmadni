@@ -8,6 +8,41 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 9": {
+    sections: [
+      {
+        title: text("مصفوفة الخسائر المتوقعة: معدل تعثر أم معدل خسارة؟", "ECL provision matrix: default rate or loss rate?"),
+        explanation: text(
+          "يسمح IFRS 9 باستخدام مصفوفة عملية للذمم التجارية ضمن المنهج المبسط، فتُجمع الأرصدة بحسب خصائص المخاطر وأعمار التأخر وتطبق معدلات خسائر ائتمانية متوقعة على مدى العمر. تُشتق المعدلات من خبرة التحصيل السابقة بعد تعديلها للظروف الراهنة والتوقعات المستقبلية المعقولة، مع مراعاة المبالغ المتوقع استردادها والقيمة الزمنية للنقود عند جوهريتها. لا يكفي ضرب احتمال التعثر وحده في كامل الرصيد إذا كانت هناك تحصيلات بعد التعثر؛ يجب أن يعكس المعدل الخسارة النقدية المتوقعة. عند مقارنة مخصص تاريخين، يسجل فرق الرصيد المطلوب عن الرصيد القائم فقط بعد النظر في الشطب والاستخدام والتحصيل والحركات الأخرى.",
+          "IFRS 9 permits a practical provision matrix for trade receivables under the simplified approach. Group balances by shared credit risk and ageing, then apply lifetime expected credit-loss rates. Derive the rates from collection experience adjusted for current conditions and reasonable forward-looking forecasts, considering recoveries and the time value of money where material. Multiplying a probability of default alone by the full balance overstates ECL if post-default recovery is expected: the rate must represent expected cash shortfall. When comparing allowances at two dates, record the difference between required and existing balances only after considering write-offs, utilisation, collections and other movements.",
+        ),
+        keyPoints: [
+          text("المنهج المبسط يعني خسائر العمر من البداية لذمم IFRS 15 بلا عنصر تمويل مهم.", "The simplified approach means lifetime ECL from inception for IFRS 15 receivables without significant financing."),
+          text("استخدم معدلات خسارة معايرة، لا احتمالات تعثر مجردة دون معدل عدم الاسترداد.", "Use calibrated loss rates, not bare default probabilities without loss-given-default."),
+          text("طابق المخصص الختامي مع القيد بعد تحليل حركات الرصيد الافتتاحي.", "Reconcile the closing allowance to the entry after analysing opening-balance movements."),
+        ],
+        reference: "IFRS 9.5.5.15–5.5.17, B5.5.35; IFRS 7.35N",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Redblack: مصفوفة أعمار الذمم وحركة المخصص", "Redblack: receivables ageing matrix and allowance movement"),
+        facts: text(
+          "في 30 يونيو 20X4 بلغ إجمالي الذمم 60 مليون دولار موزعًا على شرائح: جارية 30 مليون بمعدل 0.3%؛ متأخرة 1–30 يومًا 15 مليون بمعدل 1.6%؛ 31–60 يومًا 8 ملايين بمعدل 3.6%؛ 61–90 يومًا 5 ملايين بمعدل 6.6%؛ أكثر من 90 يومًا مليونان بمعدل 10.6%. في 30 يونيو 20X5 كانت الأرصدة 32 و16 و10 و7 و3 ملايين، والمعدلات 0.5% و1.8% و3.8% و7% و11% بالترتيب. يفترض للحساب أن النسب المعطاة معدلات خسارة ائتمانية متوقعة على مدى العمر بعد معايرة التحصيلات والتوقعات، وأن المخصص الافتتاحي بقي 1.16 مليون دون شطب أو استخدام أو حركة أخرى.",
+          "At 30 June 20X4 gross receivables total $60m by bucket: current $30m at 0.3%; 1–30 days overdue $15m at 1.6%; 31–60 days $8m at 3.6%; 61–90 days $5m at 6.6%; over 90 days $2m at 10.6%. At 30 June 20X5, balances are $32m, $16m, $10m, $7m and $3m, with rates of 0.5%, 1.8%, 3.8%, 7% and 11%. For this calculation, assume those rates are calibrated lifetime ECL rates after considering recoveries and forecasts, and that the opening $1.16m allowance has no intervening write-offs, use or other movement.",
+        ),
+        calculations: [
+          text("مخصص 20X4 بالآلاف = 30,000 × 0.3% + 15,000 × 1.6% + 8,000 × 3.6% + 5,000 × 6.6% + 2,000 × 10.6% = 90 + 240 + 288 + 330 + 212 = 1,160.", "20X4 allowance in $000 = 30,000 × 0.3% + 15,000 × 1.6% + 8,000 × 3.6% + 5,000 × 6.6% + 2,000 × 10.6% = 90 + 240 + 288 + 330 + 212 = 1,160."),
+          text("مخصص 20X5 بالآلاف = 32,000 × 0.5% + 16,000 × 1.8% + 10,000 × 3.8% + 7,000 × 7% + 3,000 × 11% = 160 + 288 + 380 + 490 + 330 = 1,648. الزيادة = 1,648 − 1,160 = 488 ألف دولار إذا لم توجد حركات أخرى.", "20X5 allowance in $000 = 32,000 × 0.5% + 16,000 × 1.8% + 10,000 × 3.8% + 7,000 × 7% + 3,000 × 11% = 160 + 288 + 380 + 490 + 330 = 1,648. Increase = 1,648 − 1,160 = $488,000 if there are no other movements."),
+        ],
+        conclusion: text("رصيد المخصص المطلوب في 20X5 هو 1,648,000 دولار، والزيادة المفترضة في الربح أو الخسارة 488,000 دولار. إذا كانت النسب مجرد احتمالات تعثر وليست معدلات خسارة بعد الاسترداد، فلا تكفي لحساب IFRS 9 دون بيانات الخسارة عند التعثر وغيرها.", "The required 20X5 allowance is $1,648,000 and the assumed increase in profit or loss is $488,000. If the percentages are merely default probabilities rather than post-recovery loss rates, IFRS 9 ECL cannot be determined without loss-given-default and other inputs."),
+        journalEntries: [
+          { label: text("زيادة المخصص المفترضة في 20X5", "Assumed 20X5 allowance increase"), debit: text("مصروف خسائر ائتمانية متوقعة", "Expected credit-loss expense"), credit: text("مخصص خسائر الذمم", "Receivables loss allowance"), amount: text("488,000 دولار", "$488,000") },
+        ],
+        reference: "IFRS 9.5.5.15–5.5.17, B5.5.35; IFRS 7.35N",
+      },
+    ],
+  },
   "IAS 19": {
     sections: [
       {

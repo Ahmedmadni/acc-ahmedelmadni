@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-redblack-receivables-matrix",
   "ifrs-book2-plyman-accumulating-sick-leave",
   "ifrs-book2-factory-termination-retention",
   "ifrs-book2-lease-lis",
@@ -144,6 +145,11 @@ for (const practiceCase of openPracticeCases) {
 for (const id of protectedPracticeIds) {
   if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
 }
+if (
+  openPracticeCases.find((item) => item.id === "ifrs-book2-redblack-receivables-matrix")
+    ?.standardCode !== "IFRS 9"
+)
+  failures.push("Redblack matrix case must stay with IFRS 9");
 for (const id of [
   "ifrs-book2-plyman-accumulating-sick-leave",
   "ifrs-book2-factory-termination-retention",
@@ -154,6 +160,17 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  [
+    "Redblack 20X4 allowance",
+    30000000 * 0.003 + 15000000 * 0.016 + 8000000 * 0.036 + 5000000 * 0.066 + 2000000 * 0.106,
+    1160000,
+  ],
+  [
+    "Redblack 20X5 allowance",
+    32000000 * 0.005 + 16000000 * 0.018 + 10000000 * 0.038 + 7000000 * 0.07 + 3000000 * 0.11,
+    1648000,
+  ],
+  ["Redblack allowance increase without other movements", 1648000 - 1160000, 488000],
   ["Plyman incremental sick days", 8 * (6.5 - 5), 12],
   ["factory total expected cash", 20 * 10000 + 100 * 30000, 3200000],
   ["factory termination component", 120 * 10000, 1200000],
