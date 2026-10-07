@@ -106,6 +106,7 @@ const protectedPracticeIds = [
   "ifrs-book2-acruni-general-borrowings",
   "ifrs-book2-jameson-consignment",
   "ifrs-book2-minimart-cgu",
+  "ifrs-book2-capital-sale-leaseback",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -287,6 +288,16 @@ const reviewedCalculations = [
     ),
     1559000,
   ],
+  ["Capital leaseback opening liability", 90000 * 4.329, 389610],
+  ["Capital retained right-of-use asset", 300000 * (389610 / 400000), 292207.5],
+  ["Capital transferred-right gain", 100000 * ((400000 - 389610) / 400000), 2597.5],
+  ["Capital first-year depreciation", 292207.5 / 5, 58441.5],
+  ["Capital first-year lease interest", 389610 * 0.05, 19480.5],
+  ["Capital first-year closing liability", 389610 + 19480.5 - 90000, 319090.5],
+  ["Capital closing right-of-use carrying amount", 292207.5 - 58441.5, 233766],
+  ["Capital next-year interest to cents", Math.round(319090.5 * 0.05 * 100) / 100, 15954.53],
+  ["Capital current lease liability", 90000 - 15954.53, 74045.47],
+  ["Capital noncurrent lease liability", 319090.5 - 74045.47, 245045.03],
 ];
 for (const [label, actual, expected] of reviewedCalculations) {
   if (Math.abs(actual - expected) > 1e-9)

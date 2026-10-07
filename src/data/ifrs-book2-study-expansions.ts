@@ -754,6 +754,27 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
     sections: [
       {
         title: text(
+          "تحديد الإيجار: الأصل المحدد وحق الاستبدال",
+          "Identifying a lease: specified assets and substitution rights",
+        ),
+        explanation: text(
+          "ليس كل عقد لتوفير مركبات أو معدات إيجارًا. يبدأ الفحص بوجود أصل محدد صراحة أو ضمنًا، ثم حق العميل في معظم المنافع الاقتصادية وحقه في توجيه كيفية استخدام الأصل وغرضه طوال المدة. استبدال الأصل للإصلاح أو الصيانة وحده لا يلغي تحديده. أما قدرة المورد الحقيقية على اختيار أي أصل بديل متاح عند كل طلب فقد تعني أن العميل اشترى خدمة نقل لا حق استخدام أصل محدد.",
+          "Not every contract to provide vehicles or equipment is a lease. First identify an explicit or implicit asset, then assess the customer's rights to substantially all economic benefits and to direct how and for what purpose it is used throughout the period. Substitution solely for repair or maintenance does not remove identification. A supplier's substantive ability to choose any available asset for each request may mean the customer bought transport services rather than the right to use an identified asset.",
+        ),
+        keyPoints: [
+          text(
+            "تحديد عشر مركبات بعينها في العقد يختلف عن اشتراط حافلة بأي رقم تتسع لعشرة ركاب.",
+            "Naming ten particular vehicles differs from requiring any available ten-seat minibus.",
+          ),
+          text(
+            "السؤال ليس من يملك الأصل قانونيًا، بل من يسيطر على استخدامه خلال فترة العقد.",
+            "The test is not legal ownership, but who controls use during the contract period.",
+          ),
+        ],
+        reference: "IFRS 16.9, B9, B13–B30",
+      },
+      {
+        title: text(
           "الدفعة المقدمة ليست جزءًا من التزام الإيجار غير المدفوع",
           "An advance payment is not an unpaid lease liability",
         ),
@@ -796,6 +817,31 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
     workedExamples: [
+      {
+        title: text(
+          "عقدا نقل محلي متشابهان ظاهريًا لكن أحدهما إيجار",
+          "Two local transport contracts: only one contains a lease",
+        ),
+        facts: text(
+          "في العقد الأول تتسلم جهة محلية عشر مركبات محددة لخمس سنوات، وتحدد المسارات والأسعار واستخدام المركبات، وتبقى عندها بين الرحلات؛ لا يستبدل المورد مركبة إلا للصيانة أو العطل. في العقد الثاني تطلب جهة محلية حافلة تتسع لعشرة عند الحاجة لمدة سنتين؛ يختار المورد في كل مرة أي حافلة متاحة من أسطوله وتبقى الحافلات في مقره.",
+          "Under the first contract a local authority receives ten specified vehicles for five years, sets routes, fares and use, and keeps them between trips; the supplier substitutes one only for repair or maintenance. Under the second contract an authority requests a ten-seat minibus as needed for two years; the supplier selects any available minibus each time and holds its fleet at its own premises.",
+        ),
+        calculations: [
+          text(
+            "العقد الأول: المركبات محددة، والجهة تحدد استخدامها وتحصل على منافعها طوال المدة؛ استبدال الصيانة ليس حق استبدال جوهريًا، فيحتوي العقد على إيجار.",
+            "First contract: the vehicles are specified and the authority directs use and receives benefits throughout; repair-only substitution is not substantive, so the contract contains a lease.",
+          ),
+          text(
+            "العقد الثاني: لا تتحدد حافلة بعينها ويستطيع المورد الوفاء بكل طلب من أسطوله؛ على هذه الوقائع لا يوجد حق استخدام أصل محدد، بل خدمة نقل.",
+            "Second contract: no particular minibus is identified and the supplier can fulfil each request from its fleet; on these facts there is no right to use an identified asset, but a transport service.",
+          ),
+        ],
+        conclusion: text(
+          "في الحالة الأولى يقيّم المستأجر أصل حق استخدام والتزام إيجار وفق المدفوعات وشروط العقد؛ وفي الثانية يعترف بتكلفة الخدمة عند تلقيها. لا تتوافر مبالغ مدفوعات لاحتساب قيد رقمي هنا.",
+          "In the first case the lessee measures a right-of-use asset and lease liability using the contract's payments and terms; in the second it expenses the service as received. No payment amounts are provided for a numerical entry.",
+        ),
+        reference: "IFRS 16.9, B9, B13–B30",
+      },
       {
         title: text("إيجار بست دفعات سنوية مقدمًا", "Lease with six annual payments in advance"),
         facts: text(
