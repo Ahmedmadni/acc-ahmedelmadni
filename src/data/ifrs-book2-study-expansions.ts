@@ -75,6 +75,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 12.5, 7–10, 15, 24",
       },
+      {
+        title: text("ضريبة إعادة التقييم: افصل رصيد الفرق القديم عن حركة الدخل الشامل", "Revaluation tax: separate the old difference from the OCI movement"),
+        explanation: text(
+          "إذا زادت القيمة الدفترية لأصل وفق نموذج إعادة التقييم في IAS 16 ولم يتغير أساسه الضريبي، يتسع الفرق المؤقت الخاضع للضريبة. احسب أولًا كامل رصيد الالتزام المؤجل في تاريخ التقرير من القيمة الدفترية الجديدة ناقص الأساس الضريبي؛ ثم حلّل الفرق إلى جزء كان موجودًا قبل إعادة التقييم وجزء نشأ من الزيادة الجديدة. يتبع الأثر الضريبي للزيادة المعترف بها في الدخل الشامل الآخر المكان نفسه، فلا يصبح كله مصروفًا في الربح أو الخسارة لمجرد أن رصيد الالتزام المؤجل يظهر في قائمة المركز المالي. وإذا كان قبل إعادة التقييم فرق ناتج من اختلاف الإهلاك، فيجب الرجوع إلى رصيد الضريبة المؤجلة الافتتاحي وحركاته قبل وصفه بأنه مصروف السنة الحالية. يفترض المثال أن زيادة إعادة التقييم كلها في OCI ولا تعكس انخفاضًا سابقًا مسجلًا في الربح أو الخسارة؛ إن تغير هذا الواقع، يتبع الأثر الضريبي موضع الاعتراف الفعلي للزيادة.",
+          "If IAS 16 revaluation increases an asset's carrying amount without resetting its tax base, the taxable temporary difference grows. First calculate the full reporting-date deferred tax liability from new carrying amount less tax base; then distinguish the difference already present before revaluation from the new uplift. The tax effect of an uplift recognised in other comprehensive income follows it into OCI; the entire closing liability is not this year's profit-or-loss tax expense merely because it appears on the statement of financial position. If a pre-revaluation difference arose from depreciation timing, inspect opening deferred tax and intervening movements before calling it a current-period charge. These illustrations assume the uplift is wholly in OCI and does not reverse a prior profit-or-loss revaluation loss; otherwise follow the actual location of the recognised gain.",
+        ),
+        keyPoints: [
+          text("احسب الرصيد الكلي أولًا ثم وزع حركته وفق موضع الاعتراف بالمعاملة الأصلية.", "Compute the total balance first, then allocate its movement to where the underlying event was recognised."),
+          text("ضريبة زيادة إعادة التقييم في OCI إذا كانت الزيادة نفسها في OCI.", "Tax on an OCI revaluation increase also belongs in OCI."),
+          text("لا تضع فرق الإهلاك المتراكم القديم في مصروف السنة دون رصيد افتتاحي وحركة مثبتة.", "Do not charge an old cumulative depreciation difference to this year without an opening balance and demonstrated movement."),
+        ],
+        reference: "IAS 12.20, 47, 58, 61A–62; IAS 16.39, 42",
+      },
     ],
     workedExamples: [
       {
@@ -182,6 +195,36 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         conclusion: text("أساس الغرامة 100، لا صفر، لأنها لن تحصل على خصم مستقبلًا؛ وهذا فرق دائم في المصروف لا فرق مؤقت في رصيد الالتزام.", "The fine's tax base is $100, not nil, because no future deduction will arise; its non-deductibility is permanent, not a temporary difference on the liability."),
         journalEntries: [],
         reference: "IAS 12.8",
+      },
+      {
+        title: text("Beta: ضريبة زيادة قيمة أرض", "Beta: tax on a land revaluation"),
+        facts: text(
+          "اشترت Beta أرضًا في 1 يناير 20X7 بمبلغ 400,000 دولار، وأعيد تقييمها في 31 ديسمبر 20X8 إلى 500,000. لا يؤثر التقييم في الربح الخاضع أو الأساس الضريبي، ومعدل الضريبة 30%. يفترض عدم وجود انخفاض سابق للأرض أُثبت في الربح أو الخسارة.",
+          "Beta buys land on 1 January 20X7 for $400,000 and revalues it to $500,000 at 31 December 20X8. The revaluation changes neither taxable profit nor tax base; the tax rate is 30%. Assume no prior profit-or-loss revaluation decrease of this land.",
+        ),
+        calculations: [
+          text("زيادة إعادة التقييم = 500,000 − 400,000 = 100,000، وهي أيضًا الفرق المؤقت الخاضع لأن الأساس الضريبي بقي 400,000. الالتزام المؤجل = 100,000 × 30% = 30,000؛ صافي زيادة فائض التقييم بعد الضريبة = 70,000.", "Revaluation uplift = $500,000 − $400,000 = $100,000, also the taxable temporary difference because tax base stays $400,000. Deferred tax liability = $100,000 × 30% = $30,000; the net-of-tax revaluation surplus increase is $70,000."),
+        ],
+        conclusion: text("تسجل ضريبة 30,000 في OCI مقابل الالتزام المؤجل، لا في مصروف الضريبة ضمن الربح أو الخسارة، ما دامت زيادة الأرض نفسها في OCI.", "Record the $30,000 tax in OCI against a deferred tax liability, not in profit-or-loss tax expense, while the land uplift itself is in OCI."),
+        journalEntries: [
+          { label: text("ضريبة إعادة تقييم الأرض", "Tax on land revaluation"), debit: text("الدخل الشامل الآخر — ضريبة فائض التقييم", "OCI — revaluation tax"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("30,000 دولار", "$30,000") },
+        ],
+        reference: "IAS 12.20, 47, 61A–62; IAS 16.39, 42",
+      },
+      {
+        title: text("Charlton: رصيد 210,000 وحركة إعادة تقييم 150,000", "Charlton: a $210,000 balance and $150,000 revaluation movement"),
+        facts: text(
+          "رفعت Charlton قيمة عقار خلال الفترة من قيمة دفترية 2,000,000 دولار إلى 2,500,000. كانت تكلفته التاريخية 2,200,000 وأساسه الضريبي في تاريخ التقرير 1,800,000. معدل الضريبة 30%، ولا يؤثر التقييم في الأساس الضريبي. يفترض أن الزيادة تسجل بالكامل في OCI، ولا تُعطى حركة ضريبية أخرى أو رصيد افتتاحي مفصل.",
+          "Charlton revalues property during the period from a $2,000,000 carrying amount to $2,500,000. Its historical cost was $2,200,000 and reporting-date tax base is $1,800,000. The tax rate is 30% and revaluation does not reset tax base. Assume the uplift is wholly in OCI; no other tax movements or detailed opening deferred-tax balance are supplied.",
+        ),
+        calculations: [
+          text("قبل الزيادة كان الفرق، إذا كان الأساس 1,800,000 آنذاك، يساوي 2,000,000 − 1,800,000 = 200,000 والتزامه 60,000. الزيادة الجديدة 500,000 وضريبتها 150,000. عند التقرير الفرق الكلي = 2,500,000 − 1,800,000 = 700,000 والالتزام الختامي 210,000 = 60,000 + 150,000.", "Before the uplift, if the tax base was already $1,800,000, the difference was $2,000,000 − $1,800,000 = $200,000 and related liability $60,000. The new $500,000 uplift adds $150,000 tax. At reporting date total difference is $2,500,000 − $1,800,000 = $700,000, giving a $210,000 closing liability = $60,000 + $150,000."),
+        ],
+        conclusion: text("ينسب 150,000 من حركة الالتزام إلى OCI مع زيادة التقييم. أما 60,000 المرتبطة بالفرق السابق فلا يصح وصفها بمصروف الربح أو الخسارة لهذه الفترة دون معرفة ما كان معترفًا به افتتاحًا وحركة الأساس الضريبي خلال السنة.", "Attribute the $150,000 liability movement caused by revaluation to OCI. Do not describe the $60,000 related to the pre-existing difference as this period's profit-or-loss expense without opening recognition and tax-base movement information."),
+        journalEntries: [
+          { label: text("ضريبة زيادة التقييم وحدها", "Tax on the revaluation uplift only"), debit: text("الدخل الشامل الآخر — ضريبة فائض التقييم", "OCI — revaluation tax"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("150,000 دولار", "$150,000") },
+        ],
+        reference: "IAS 12.20, 47, 58, 61A–62; IAS 16.39, 42",
       },
     ],
   },
