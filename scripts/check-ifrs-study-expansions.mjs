@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-darton-current-tax-true-up",
+  "ifrs-book2-alpha-beta-acquisition-tax",
   "ifrs-book2-bets-cash-flow-hedge-cumulative",
   "ifrs-book2-jules-inventory-fair-value-hedge",
   "ifrs-book2-rathbone-compound-bond",
@@ -178,6 +180,10 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Darton current-year tax", 120000 * 0.3, 36000],
+  ["Darton underassessment tax expense", 36000 + (35000 - 30000), 41000],
+  ["Darton overassessment tax expense", 36000 - (30000 - 25000), 31000],
+  ["Alpha-Beta acquisition deferred tax liability in millions", (54 - 50) * 0.25, 1],
   ["Black seven-year promise fair value", Math.round((20000 / 1.04 ** 7) * 100) / 100, 15198.36],
   ["Blue seven-year promise fair value", Math.round((20000 / 1.08 ** 7) * 100) / 100, 11669.81],
   ["Issuer credit comparison difference", 15198.36 - 11669.81, 3528.55],
