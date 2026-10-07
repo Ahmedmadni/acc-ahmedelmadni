@@ -62,6 +62,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 12.7, 15, 17, 47, 58; IAS 38.97",
       },
+      {
+        title: text("اختبار الأساس الضريبي: لا تحكم من اسم الحساب وحده", "Tax-base test: the account name alone is not enough"),
+        explanation: text(
+          "اسأل عن الأثر الضريبي لاسترداد الأصل أو تسوية الالتزام مستقبلًا. أساس الأصل هو ما سيخصم من منافع الاسترداد الخاضعة للضريبة؛ وإذا كانت تلك المنافع غير خاضعة أصلًا، فعادةً يعادل الأساس القيمة الدفترية. أما أساس الالتزام فهو قيمته الدفترية ناقص ما سيُخصم ضريبيًا عند تسويته؛ والإيراد المقبوض مقدمًا الذي ضُرّب بالفعل يخفض أساس التزامه بمقدار الإيراد الذي لن يخضع ثانيةً. لذلك قد يكون للذمة المدينة أساس صفر إن تُفرض الضريبة عند التحصيل، أو أساس يساوي رصيدها إن سبق خضوع الإيراد. وقد يكون للمصروف المستحق أساس صفر إذا لم يُخصم إلا عند الدفع، أو يساوي الالتزام إذا استنفد الخصم بالفعل. الغرامات غير القابلة للخصم والقروض التي لا يترتب على سداد أصلها أثر ضريبي لا تولد فروقًا مؤقتة لمجرد وجود رصيد محاسبي. حدّد أولًا قانون الولاية وطريقة الاسترداد ثم قرر إن كان الفرق خاضعًا أم قابلًا للخصم، ولا تفترض تلقائيًا إثبات أصل ضريبي مؤجل دون اختبار احتمالية استخدامه.",
+          "Ask what tax consequence follows when an asset is recovered or a liability settled. An asset's tax base is the amount deductible against taxable recovery; if the benefits are not taxable, its tax base generally equals carrying amount. A liability's tax base is carrying amount less any future tax deduction on settlement; for revenue already taxed when received in advance, subtract the amount that will not be taxed again. A receivable can therefore have a nil tax base if taxed on collection, or a tax base equal to its balance if the income was already taxed. An accrued expense can have a nil tax base if deductible only on payment, or one equal to the liability if the deduction was already used. Non-deductible fines and tax-neutral loan principal do not create temporary differences merely because accounting balances exist. Identify the jurisdiction's rule and recovery path before classifying a difference, and do not automatically recognise a deferred tax asset without testing probable utilisation.",
+        ),
+        keyPoints: [
+          text("للأصول: ما الخصم الباقي مقابل المنافع المستقبلية الخاضعة للضريبة؟", "For assets: what deduction remains against future taxable benefits?"),
+          text("للالتزامات: ما الخصم المستقبلي عند السداد، أو ما الإيراد الذي لن يعاد فرض الضريبة عليه؟", "For liabilities: what future deduction arises on settlement, or what income will not be taxed again?"),
+          text("فرق دائم مثل غرامة غير قابلة للخصم لا يساوي أصل ضريبة مؤجلة.", "A permanent non-deductible fine is not a deferred tax asset."),
+        ],
+        reference: "IAS 12.5, 7–10, 15, 24",
+      },
     ],
     workedExamples: [
       {
@@ -143,6 +156,32 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("أثر الفرق المؤقت عند نهاية السنة", "Year-end temporary-difference effect"), debit: text("مصروف ضريبة مؤجلة", "Deferred tax expense"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("380,000 دولار", "$380,000") },
         ],
         reference: "IAS 12.7, 15, 17, 47, 58; IAS 38.97",
+      },
+      {
+        title: text("خمسة أصول: لماذا يختلف أساس الذمم؟", "Five assets: why receivables have different tax bases"),
+        facts: text(
+          "معدة تكلفتها 10,000 خُصم منها ضريبيًا 3,000 وسيخصم الباقي مستقبلًا؛ فوائد مستحقة 1,000 تُفرض عليها الضريبة عند التحصيل؛ ذمم تجارية 10,000 سبق خضوع إيرادها؛ قرض مدين 1,000,000 لا أثر ضريبي لاسترداد أصله؛ وتوزيعات مستحقة 5,000 من تابعة غير خاضعة للضريبة.",
+          "Consider equipment costing $10,000 with $3,000 tax depreciation already deducted and the rest deductible later; $1,000 interest receivable taxed only on collection; $10,000 trade receivables whose revenue has already been taxed; a $1,000,000 loan receivable whose principal recovery is tax-neutral; and $5,000 non-taxable dividends receivable from a subsidiary.",
+        ),
+        calculations: [
+          text("الأسس الضريبية بالترتيب: المعدة 10,000 − 3,000 = 7,000؛ الفوائد صفر؛ الذمم التجارية 10,000؛ القرض 1,000,000؛ التوزيعات 5,000 لأن المنفعة غير خاضعة للضريبة.", "Tax bases in order: equipment $10,000 − $3,000 = $7,000; interest nil; trade receivables $10,000; loan $1,000,000; dividends $5,000 because the benefit is non-taxable."),
+        ],
+        conclusion: text("عدم خضوع التوزيعات لا يولد التزامًا مؤجلًا؛ ويمكن تحليلها بديلًا بأساس صفر ومعدل ضريبة صفر، فتظل النتيجة الضريبية نفسها.", "Non-taxable dividends do not create a deferred tax liability. An alternative nil-base and nil-tax-rate analysis leads to the same tax result."),
+        journalEntries: [],
+        reference: "IAS 12.7",
+      },
+      {
+        title: text("خمسة التزامات: الخصم المستقبلي أم الخصم المستنفد؟", "Five liabilities: future deduction or deduction already taken?"),
+        facts: text(
+          "مصروف مستحق 1,000 يخصم عند الدفع؛ إيراد فوائد مقبوض مقدمًا 10,000 خضع للضريبة عند القبض؛ مصروف مستحق 2,000 سبق خصمه؛ غرامة مستحقة 100 لا يجوز خصمها؛ وقرض دائن 1,000,000 لا أثر ضريبي لسداد أصله.",
+          "Consider a $1,000 expense accrual deductible on payment; $10,000 interest received in advance already taxed on cash receipt; a $2,000 expense accrual already deducted; a $100 fine payable that is never deductible; and a $1,000,000 loan payable whose principal settlement is tax-neutral.",
+        ),
+        calculations: [
+          text("الأسس الضريبية بالترتيب: المصروف الأول 1,000 − 1,000 = صفر؛ الإيراد المقدم 10,000 − 10,000 = صفر؛ المصروف المخصوم سابقًا 2,000؛ الغرامة 100؛ أصل القرض 1,000,000.", "Tax bases in order: first accrual $1,000 − $1,000 = nil; advance income $10,000 − $10,000 = nil; already-deducted expense $2,000; fine $100; loan principal $1,000,000."),
+        ],
+        conclusion: text("أساس الغرامة 100، لا صفر، لأنها لن تحصل على خصم مستقبلًا؛ وهذا فرق دائم في المصروف لا فرق مؤقت في رصيد الالتزام.", "The fine's tax base is $100, not nil, because no future deduction will arise; its non-deductibility is permanent, not a temporary difference on the liability."),
+        journalEntries: [],
+        reference: "IAS 12.8",
       },
     ],
   },

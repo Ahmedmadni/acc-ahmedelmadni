@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-tax-base-five-assets",
+  "ifrs-book2-tax-base-five-liabilities",
   "ifrs-book2-catsu-tax-depreciation",
   "ifrs-book2-epsilon-development-tax",
   "ifrs-book2-darton-current-tax-true-up",
@@ -182,6 +184,10 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["machine future tax deduction", 10000 - 3000, 7000],
+  ["cash-deductible accrual tax base", 1000 - 1000, 0],
+  ["taxed advance income tax base", 10000 - 10000, 0],
+  ["non-deductible fine tax base", 100 - 0, 100],
   ["Catsu accounting depreciation", (1000000 - 100000) / 10, 90000],
   ["Catsu year-one deferred tax", (910000 - 800000) * 0.3, 33000],
   ["Catsu year-two tax base", 800000 * (1 - 0.2), 640000],
