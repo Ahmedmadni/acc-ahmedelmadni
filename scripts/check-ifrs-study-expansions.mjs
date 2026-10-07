@@ -178,6 +178,9 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Black seven-year promise fair value", Math.round((20000 / 1.04 ** 7) * 100) / 100, 15198.36],
+  ["Blue seven-year promise fair value", Math.round((20000 / 1.08 ** 7) * 100) / 100, 11669.81],
+  ["Issuer credit comparison difference", 15198.36 - 11669.81, 3528.55],
   ["Bets inception locked dollar outflow", 60000000 / 1.5, 40000000],
   ["Bets December derivative gain", Math.round((60000000 / 1.24 - 60000000 / 1.5) * 100) / 100, 8387096.77],
   ["Bets December exposure change", Math.round((60000000 / 1.2 - 60000000 / 1.45) * 100) / 100, 8620689.66],

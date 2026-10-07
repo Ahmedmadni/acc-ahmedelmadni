@@ -8,6 +8,42 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 13": {
+    sections: [
+      {
+        title: text("القيمة العادلة للالتزام: أثر الجدارة الائتمانية للمنشأة", "Liability fair value: the entity's own credit risk"),
+        explanation: text(
+          "القيمة العادلة للالتزام هي سعر تحويله إلى مشارك في السوق في معاملة منتظمة بتاريخ القياس، لا المبلغ الذي تختار المنشأة دفعه لتسويته مبكرًا. يفترض القياس استمرار الالتزام بعد التحويل، ويشمل خطر عدم الوفاء به، ومنه الجدارة الائتمانية للمدين نفسه. لذلك قد تنخفض القيمة العادلة لوعد نقدي ثابت كلما زاد عائد السوق المطلوب لتحمل خطر المُصدر، مع ثبات المبلغ وتاريخ السداد وسائر الافتراضات. استخدم مدخلات المشاركين في السوق الملائمة ولا تُدخل فرق الائتمان مرتين في التدفقات ومعدل الخصم. IFRS 13 يحدد طريقة القياس عندما يطلب أو يجيز معيار آخر القيمة العادلة؛ ولا يحول تلقائيًا كل ذمة دائنة مقاسة بالتكلفة المستهلكة إلى التزام بالقيمة العادلة، ولا يعني انخفاض القيمة العادلة أن الدائن تنازل عن أصل المطالبة الاسمية.",
+          "A liability's fair value is the price to transfer it to a market participant in an orderly transaction at the measurement date, not an amount the entity elects to pay for early settlement. The liability is assumed to continue after transfer, and the measure includes non-performance risk, including the debtor's own credit risk. Thus, with the promised cash flow, maturity and other assumptions unchanged, a higher market yield for the issuer's risk can reduce the promise's fair value. Use relevant market-participant inputs and do not double count credit risk in both cash flows and the discount rate. IFRS 13 specifies how to measure fair value when another Standard requires or permits it; it does not automatically convert every amortised-cost payable to fair value, and a lower fair value does not extinguish the creditor's nominal claim.",
+        ),
+        keyPoints: [
+          text("حدد أولًا هل يطلب أو يسمح المعيار المختص بقياس الالتزام بالقيمة العادلة.", "First establish whether the applicable Standard requires or permits fair-value measurement of this liability."),
+          text("قارن التزامات متماثلة في التدفق والأجل قبل عزل أثر ائتمان المُصدر.", "Compare liabilities with the same cash flow and term before isolating issuer credit risk."),
+          text("ارتفاع معدل الخصم قد يخفض القيمة العادلة؛ لا يعني ذلك سقوط أصل الدين المستحق.", "A higher discount rate can lower fair value without cancelling the contractual principal."),
+        ],
+        reference: "IFRS 13.9, 34–43, 61–67",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("وعدان بسداد 20,000 بعد سبع سنوات", "Two promises to pay 20,000 in seven years"),
+        facts: text(
+          "تعهدت Black وBlue، كل منهما على حدة، بسداد 20,000 دولار نقدًا إلى Green بعد سبع سنوات. عائد السوق الملائم لوعد Black ذي الجدارة الأعلى 4% سنويًا، وللوعد المماثل من Blue ذي الجدارة الأقل 8%. لأجل عزل خطر ائتمان المُصدر، يفترض تطابق العملة وموعد السداد وسائر شروط العقد ومخاطره، وعدم وجود كوبونات أو تدفقات وسيطة؛ والمعدلان يعكسان مدخلات المشاركين في السوق لهذا القياس.",
+          "Black and Blue each independently promise to pay Green $20,000 cash in seven years. The relevant market yield is 4% a year for higher-credit-quality Black and 8% for otherwise comparable lower-credit-quality Blue. To isolate issuer credit risk, assume identical currency, maturity, other contractual terms and risks, with no coupons or interim cash flows; the yields represent market-participant inputs for this measurement.",
+        ),
+        calculations: [
+          text("القيمة الحالية لوعد Black = 20,000 ÷ (1.04)^7 = 15,198.36 دولار.", "Present value of Black's promise = $20,000 ÷ (1.04)^7 = $15,198.36."),
+          text("القيمة الحالية لوعد Blue = 20,000 ÷ (1.08)^7 = 11,669.81 دولار؛ الفرق بين القيمتين = 3,528.55 دولار. استُخدمت معاملات خصم كاملة ثم قربت النتيجة إلى السنت، فلا يُستبدل الناتج الدقيق بتقدير ناتج عن تقريب المعاملات.", "Present value of Blue's promise = $20,000 ÷ (1.08)^7 = $11,669.81; the values differ by $3,528.55. Full discount factors were used before rounding to cents, rather than substituting an estimate from prematurely rounded factors."),
+        ],
+        conclusion: text(
+          "إذا كان مطلوبًا قياس هذين الالتزامين بالقيمة العادلة، فإن قيمة وعد Blue الأقل تعكس العائد الأعلى المطلوب لتحمل خطر عدم وفائه، لا إعفاءه من التزامه التعاقدي بدفع 20,000. المثال مقارنة قياس، ولا يقدم وقائع إصدار أو تصنيف تكفي لاشتقاق قيد اعتراف أو ربح إعادة قياس.",
+          "Where fair-value measurement is required, Blue's lower measured value reflects the higher yield demanded for its non-performance risk; Blue still contractually owes $20,000. This is a measurement comparison, not a complete issuance or classification fact pattern from which an initial-recognition entry or remeasurement gain can be derived.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 13.9, 34–43, 61–67",
+      },
+    ],
+  },
   "IAS 32": {
     sections: [
       {
