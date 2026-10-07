@@ -15,6 +15,36 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-beta-land-revaluation-tax",
+    standardCode: "IAS 12",
+    title: text("Beta: قيد ضريبة إعادة تقييم أرض", "Beta: tax entry on land revaluation"),
+    facts: text(
+      "اشترت Beta أرضًا في 1 يناير 20X7 مقابل 400,000 دولار. أعيد تقييمها في 31 ديسمبر 20X8 إلى 500,000؛ لا تغير إعادة التقييم الأساس الضريبي أو الربح الخاضع. معدل الضريبة 30%، ولا يذكر السؤال انخفاضًا سابقًا مسجلًا في الربح أو الخسارة.",
+      "Beta bought land on 1 January 20X7 for $400,000. On 31 December 20X8 it is revalued to $500,000; revaluation changes neither tax base nor taxable profit. The tax rate is 30%, and no earlier profit-or-loss decrease is stated.",
+    ),
+    question: text("أعد قيد الضريبة المؤجلة المتعلق بإعادة التقييم لسنة 20X8، مع بيان موضع عرض أثره.", "Prepare the 20X8 deferred-tax entry relating to revaluation and identify where its effect is presented."),
+    solution: [
+      text("القيمة الدفترية بعد التقييم 500,000 والأساس الضريبي 400,000؛ الفرق المؤقت الخاضع 100,000 والالتزام المؤجل 100,000 × 30% = 30,000 دولار.", "Post-revaluation carrying amount is $500,000 and tax base remains $400,000; taxable temporary difference is $100,000 and deferred tax liability $100,000 × 30% = $30,000."),
+      text("إذا سُجلت زيادة الأرض البالغة 100,000 في الدخل الشامل الآخر، فالقيد مدين ضريبة إعادة التقييم في OCI 30,000 ودائن التزام ضريبة مؤجلة 30,000. صافي الزيادة في فائض إعادة التقييم 70,000، ولا يحمل أثرها الضريبي على ربح الفترة.", "If the $100,000 land uplift is recorded in OCI, debit revaluation tax in OCI $30,000 and credit deferred tax liability $30,000. The net increase in revaluation surplus is $70,000; its tax is not charged to period profit."),
+    ],
+    reference: "IAS 12.20, 47, 61A–62; IAS 16.39, 42",
+  },
+  {
+    id: "ifrs-book2-charlton-revaluation-tax-split",
+    standardCode: "IAS 12",
+    title: text("Charlton: فصل الضريبة القديمة عن أثر إعادة التقييم", "Charlton: separating old tax from revaluation effect"),
+    facts: text(
+      "رفعت Charlton عقارًا خلال الفترة من قيمة دفترية 2,000,000 دولار إلى قيمة عادلة 2,500,000. تكلفته التاريخية 2,200,000 وأساسه الضريبي في تاريخ التقرير 1,800,000. معدل الضريبة 30%. لا يذكر السؤال رصيد ضريبة مؤجلة افتتاحيًا أو تغير الأساس الضريبي خلال السنة؛ افترض أن زيادة التقييم كلها في OCI.",
+      "Charlton revalues property during the period from $2,000,000 carrying amount to $2,500,000 fair value. Historical cost is $2,200,000 and reporting-date tax base $1,800,000. The tax rate is 30%. No opening deferred-tax balance or tax-base movement during the year is stated; assume the uplift is wholly in OCI.",
+    ),
+    question: text("احسب الالتزام المؤجل الختامي والضريبة المرتبطة بزيادة إعادة التقييم، وناقش هل يمكن تحميل الفرق الباقي على ربح الفترة من المعطيات وحدها.", "Calculate closing deferred tax and the tax attributable to the revaluation uplift, and discuss whether the remaining difference can be charged to this period's profit from the stated facts alone."),
+    solution: [
+      text("الفرق المؤقت الختامي = 2,500,000 − 1,800,000 = 700,000، فالالتزام المؤجل الختامي 210,000. زيادة إعادة التقييم 500,000، وضريبتها 150,000 في OCI مع قيد مدين OCI ودائن الالتزام.", "Closing temporary difference is $2,500,000 − $1,800,000 = $700,000, giving a $210,000 closing liability. The $500,000 revaluation uplift adds $150,000 tax in OCI: debit OCI and credit the liability."),
+      text("إذا كان الأساس قبل التقييم 1,800,000 بالفعل، فالفرق القديم 200,000 وضريبته 60,000 كانت قائمة قبل الزيادة. عدم بيان رصيد الالتزام الافتتاحي أو حركات الإهلاك والأساس الضريبي يمنع الجزم بأن 60,000 مصروف ربح أو خسارة جديد لهذه الفترة؛ فهو جزء من رصيد ختامي لا حركة مثبتة للسنة.", "If tax base already equalled $1,800,000 before revaluation, the old $200,000 difference carried $60,000 tax before the uplift. Without the opening liability and depreciation or tax-base movements, the $60,000 cannot be asserted as a new profit-or-loss expense for this period; it is part of a closing balance, not a demonstrated period movement."),
+    ],
+    reference: "IAS 12.20, 47, 58, 61A–62; IAS 16.39, 42",
+  },
+  {
     id: "ifrs-book2-tax-base-five-assets",
     standardCode: "IAS 12",
     title: text("الأساس الضريبي لخمسة أصول", "Tax bases of five assets"),

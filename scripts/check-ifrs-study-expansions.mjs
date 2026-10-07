@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-beta-land-revaluation-tax",
+  "ifrs-book2-charlton-revaluation-tax-split",
   "ifrs-book2-tax-base-five-assets",
   "ifrs-book2-tax-base-five-liabilities",
   "ifrs-book2-catsu-tax-depreciation",
@@ -184,6 +186,12 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Beta land revaluation taxable difference", 500000 - 400000, 100000],
+  ["Beta land revaluation OCI tax", (500000 - 400000) * 0.3, 30000],
+  ["Charlton prior difference if base unchanged", 2000000 - 1800000, 200000],
+  ["Charlton prior deferred tax if base unchanged", (2000000 - 1800000) * 0.3, 60000],
+  ["Charlton total deferred tax at reporting date", (2500000 - 1800000) * 0.3, 210000],
+  ["Charlton revaluation tax in OCI", (2500000 - 2000000) * 0.3, 150000],
   ["machine future tax deduction", 10000 - 3000, 7000],
   ["cash-deductible accrual tax base", 1000 - 1000, 0],
   ["taxed advance income tax base", 10000 - 10000, 0],
