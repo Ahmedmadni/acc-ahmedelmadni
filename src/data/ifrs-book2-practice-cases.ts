@@ -15,6 +15,36 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-darton-current-tax-true-up",
+    standardCode: "IAS 12",
+    title: text("Darton: تصحيح ضريبة سنة سابقة", "Darton: prior-year current-tax true-up"),
+    facts: text(
+      "في 20X8 حققت Darton ربحًا خاضعًا للضريبة قدره 120,000 دولار ومعدل الضريبة 30%. قُدرت ضريبة 20X7 بمبلغ 30,000 وسُدد هذا التقدير. حُددت ضريبة 20X7 نهائيًا لاحقًا بمبلغ 35,000 في البديل (أ) أو 25,000 في البديل (ب). لا تسوى فروق الدفع أو الاسترداد إلا عند دفعة ضريبة السنة التالية.",
+      "In 20X8 Darton earns taxable profit of $120,000 and the tax rate is 30%. Its 20X7 tax was estimated at $30,000 and that estimate was paid. The 20X7 final assessment is subsequently set at $35,000 in alternative (a) or $25,000 in alternative (b). Payment or recovery of the difference awaits the following year's tax payment.",
+    ),
+    question: text("احسب مصروف الضريبة والمطلوب أو المسترد في 20X8 لكل بديل، وبيّن متى يجوز عرض الأصل والمطلوب بالصافي.", "Calculate 20X8 tax expense and the payable or receivable under each alternative, explaining when assets and liabilities may be presented net."),
+    solution: [
+      text("ضريبة ربح 20X8 = 120,000 × 30% = 36,000 دولار. في البديل (أ)، نقص تقدير 20X7 = 35,000 − 30,000 = 5,000، فمصروف الضريبة الجارية 41,000 والمطلوب الكلي قبل السداد 41,000.", "Tax on 20X8 profit = $120,000 × 30% = $36,000. In (a), the 20X7 underestimate is $35,000 − $30,000 = $5,000, giving $41,000 current-tax expense and $41,000 total payable before settlement."),
+      text("في البديل (ب)، زيادة تقدير 20X7 = 30,000 − 25,000 = 5,000، فمصروف الضريبة الجارية 31,000. يُثبت أصل مسترد 5,000 مقابل مطلوب السنة الجارية 36,000؛ لا يعرضان بصافي 31,000 إلا مع حق مقاصة قانوني نافذ ونية تسوية صافية أو متزامنة. تأجيل السداد وحده لا ينشئ ضريبة مؤجلة.", "In (b), the 20X7 overestimate is $30,000 − $25,000 = $5,000, giving $31,000 current-tax expense. Record a $5,000 receivable alongside the $36,000 current-year payable; show them net at $31,000 only with an enforceable set-off right and an intention to settle net or simultaneously. Payment delay alone creates no deferred tax."),
+    ],
+    reference: "IAS 12.12, 46, 58, 71",
+  },
+  {
+    id: "ifrs-book2-alpha-beta-acquisition-tax",
+    standardCode: "IAS 12",
+    title: text("Alpha وBeta: الضريبة المؤجلة للمعدة المقتناة", "Alpha and Beta: deferred tax on acquired equipment"),
+    facts: text(
+      "في 1 أبريل 20X5 اشترت Alpha كامل أسهم Beta. كانت القيم العادلة للأصول والالتزامات المقتناة مساوية لقيمها الدفترية باستثناء معدة قيمتها العادلة 54 مليون دولار وأساسها الضريبي 50 مليونًا. تعديل القيمة العادلة لا يغير أساس المعدة الضريبي. معدل الضريبة 25%.",
+      "On 1 April 20X5 Alpha acquired all Beta's ordinary shares. Acquired assets and liabilities had fair values equal to carrying amounts except for equipment with a $54m fair value and $50m tax base. The fair-value adjustment does not change the equipment's tax base. The tax rate is 25%.",
+    ),
+    question: text("ناقش أثر هذه البيانات في الضريبة المؤجلة بالقوائم المجمعة وفي الشهرة الناتجة عن الاستحواذ؛ لا تفترض مقابل شراء غير معطى.", "Discuss the deferred-tax effect in the consolidated accounts and its effect on acquisition goodwill; do not assume an unstated consideration."),
+    solution: [
+      text("القيمة الدفترية المجمعة 54 مليونًا والأساس الضريبي 50 مليونًا، فينشأ فرق مؤقت خاضع 4 ملايين والتزام ضريبة مؤجلة 4 × 25% = مليون دولار.", "Consolidated carrying amount is $54m and tax base $50m, producing a $4m taxable temporary difference and a $4m × 25% = $1m deferred tax liability."),
+      text("يُدرج الالتزام ضمن محاسبة تاريخ الاستحواذ: مدين الشهرة ودائن التزام الضريبة المؤجلة بمليون، بوصفه أثرًا على صافي الأصول المقتناة. تزيد الشهرة مليونًا مقارنة بحساب يستبعد هذا الالتزام، لكن لا يمكن حساب إجماليها دون مقابل الشراء وبقية عناصر التخصيص. لا يطبق استثناء الاعتراف الأول بالشهرة على فرق المعدة القابلة للتحديد.", "Include the liability in acquisition-date accounting: debit goodwill and credit deferred tax liability $1m as an effect on acquired net assets. Goodwill is $1m higher than a calculation omitting that liability, but total goodwill requires consideration and the rest of the allocation. The initial-recognition exception for goodwill itself does not exempt the identifiable equipment difference."),
+    ],
+    reference: "IAS 12.15, 19, 47, 66; IFRS 3.10, 18",
+  },
+  {
     id: "ifrs-book2-bets-cash-flow-hedge-cumulative",
     standardCode: "IFRS 9",
     title: text("Bets: احتياطي تحوط شراء أصل باليورو", "Bets: hedge reserve on a euro asset purchase"),

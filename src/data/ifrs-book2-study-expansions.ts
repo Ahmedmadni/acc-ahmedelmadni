@@ -8,6 +8,71 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 12": {
+    sections: [
+      {
+        title: text("الضريبة الجارية: فرّق بين التزام السنة وتصحيح تقدير السنة السابقة", "Current tax: separate this year's charge from a prior-year estimate adjustment"),
+        explanation: text(
+          "تُقاس ضريبة الدخل الجارية بالمبلغ المتوقع دفعه أو استرداده وفق القانون ومعدلات الضريبة المقررة أو المقررة موضوعيًا بنهاية الفترة. عند حسم تقدير سنة سابقة، لا تعِد حساب ضريبة السنة الجارية على ربح السنة السابقة؛ أثبت الفرق بين التقدير والربط النهائي في مصروف الضريبة للفترة التي عُرف فيها، ما لم يكن مرتبطًا ببند اعترف به خارج الربح أو الخسارة. افصل حساب ضريبة الفترة الحالية عن رصيد مستحق أو مسترد السنة السابقة. ولا تعرض الأصل والمطلوب الضريبيين بصافي مبلغ لمجرد أنهما يخصان المنشأة ذاتها؛ يلزم حق قانوني نافذ في المقاصة ونية التسوية صافيًا أو المتزامنة. هذا ضبط لضريبة جارية، لا أصل أو التزام ضريبة مؤجلة.",
+          "Measure current income tax at the amount expected to be paid or recovered under tax law and rates enacted or substantively enacted by period-end. When a prior-year estimate is finalised, do not recompute this year's tax on last year's profit: recognise the estimate-to-final-assessment difference in the period it becomes known, unless it relates to an item recognised outside profit or loss. Keep the current-period obligation distinct from a prior-year payable or receivable. Do not net a tax asset and liability merely because they belong to the same entity: an enforceable set-off right and an intention to settle net or simultaneously are needed. This is a current-tax true-up, not deferred tax.",
+        ),
+        keyPoints: [
+          text("احسب ضريبة ربح السنة الحالية، ثم صحح تقدير السنة السابقة بخطوة مستقلة.", "Compute tax on current-year taxable profit, then true up the prior estimate separately."),
+          text("فرّق بين مصروف الضريبة الإجمالي والعرض الصافي للأصل والمطلوب عند تحقق شروط المقاصة.", "Distinguish total tax expense from net presentation of assets and liabilities when offset criteria are met."),
+          text("التعديل اللاحق لتقدير سابق لا يصبح ضريبة مؤجلة بسبب تأخر التسوية النقدية.", "A later correction of a prior estimate is not deferred tax merely because cash settlement is delayed."),
+        ],
+        reference: "IAS 12.12, 46, 58, 71",
+      },
+      {
+        title: text("الاستحواذ: فرق القيمة العادلة والأساس الضريبي يؤثر في الشهرة", "Acquisition: the fair-value versus tax-base difference affects goodwill"),
+        explanation: text(
+          "عند قياس أصل مقتنى في تجميع أعمال بقيمته العادلة في القوائم المجمعة، افحص ما إذا عدّل قانون الضريبة أساسه الضريبي أيضًا. إذا بقي الأساس أقل من القيمة الدفترية، ينتج فرق مؤقت خاضع للضريبة والتزام ضريبة مؤجلة بمعدل الضريبة المتوقع عند الانعكاس وفق القوانين النافذة. يُعترف بالتزام الضريبة المؤجلة في محاسبة الاستحواذ، فيخفض صافي الأصول القابلة للتحديد عند الشراء، ويرفع الشهرة بالمقدار نفسه مقارنة بحساب الشهرة دون الضريبة؛ لا تضع ضريبة فرق الاستحواذ مباشرة في مصروف الفترة عند الاعتراف الأول. لا تخلط ذلك باستثناء عدم إثبات ضريبة مؤجلة تنشأ من الاعتراف الأول بالشهرة نفسها، ولا تفترض أن كل زيادة في القيمة العادلة تولد ضريبة مؤجلة إذا تعدل الأساس الضريبي بالمقابل.",
+          "When an acquired asset is measured at fair value in consolidated business-combination accounting, check whether tax law also resets its tax base. If the tax base remains below the carrying amount, a taxable temporary difference creates a deferred tax liability measured using the tax rate expected on reversal under enacted or substantively enacted law. Recognise the liability within acquisition accounting: it reduces identifiable net assets at acquisition and raises goodwill by the same amount relative to goodwill calculated without that tax. Do not put the acquisition-date tax effect directly in period expense. This differs from the exception for deferred tax arising on initial recognition of goodwill itself, and no difference arises merely from a fair-value uplift if the tax base is also reset.",
+        ),
+        keyPoints: [
+          text("قارن القيمة الدفترية المجمعة بالأساس الضريبي للأصل في تاريخ الاستحواذ.", "Compare consolidated carrying amount with the asset's tax base at acquisition."),
+          text("أثبت ضريبة فرق الأصل القابل للتحديد ضمن محاسبة الشراء، لا باعتبار الشهرة نفسها أساسًا للضريبة.", "Recognise tax on the identifiable asset's difference within purchase accounting, not as tax on goodwill itself."),
+          text("راجع قانون الولاية الضريبية ومعدل الانعكاس قبل ضرب الفرق في النسبة.", "Check the jurisdiction's tax law and reversal rate before multiplying the difference."),
+        ],
+        reference: "IAS 12.15, 19, 47, 66; IFRS 3.10, 18",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Darton: ربط نهائي أعلى أو أقل من التقدير", "Darton: final assessment above or below the estimate"),
+        facts: text(
+          "بلغ الربح الخاضع للضريبة في 20X8 لدى Darton مبلغ 120,000 دولار، ومعدل الضريبة 30%. قُدرت ضريبة 20X7 بمبلغ 30,000 وسُدد هذا التقدير، ثم حددتها الجهة الضريبية نهائيًا عند 35,000 في البديل الأول أو 25,000 في الثاني. يُسوّى الفرق مع دفعة السنة التالية، ويفترض أن أثر التعديل يدخل الربح أو الخسارة.",
+          "Darton's 20X8 taxable profit is $120,000 at a 30% tax rate. Its 20X7 tax was estimated at $30,000 and that estimate was paid; the authority later finalises it at $35,000 in one alternative or $25,000 in the other. The difference is settled with the following year's payment; assume the true-up belongs in profit or loss.",
+        ),
+        calculations: [
+          text("ضريبة 20X8 = 120,000 × 30% = 36,000. إذا كان الربط النهائي 35,000، فالزيادة عن التقدير 5,000؛ مصروف الضريبة الجاري الكلي 41,000، ومطلوب الضريبة 41,000 قبل السداد.", "20X8 tax = $120,000 × 30% = $36,000. If the final assessment is $35,000, the $5,000 underestimate makes total current-tax expense $41,000 and tax payable $41,000 before payment."),
+          text("إذا كان الربط النهائي 25,000، فالمبالغة في التقدير 5,000؛ مصروف الضريبة الجاري 31,000. يعرض مطلوب 20X8 البالغ 36,000 وأصل استرداد 20X7 البالغ 5,000 على نحو منفصل؛ يصبح صافي العرض 31,000 فقط إذا تحققت شروط IAS 12 للمقاصة.", "If the final assessment is $25,000, the $5,000 overestimate makes current-tax expense $31,000. Present the $36,000 current-year payable and $5,000 prior-year recoverable separately; net presentation of $31,000 is permitted only if IAS 12's offset conditions are met."),
+        ],
+        conclusion: text("التصحيح الموجب أو السالب يخص ضريبة جارية من فترة سابقة. إجمالي المصروف 41,000 أو 31,000، لكن صافي العرض في بديل الاسترداد اختبار مستقل.", "The positive or negative true-up relates to prior-period current tax. Total expense is $41,000 or $31,000, while balance-sheet netting in the recoverable alternative is a separate test."),
+        journalEntries: [
+          { label: text("ضريبة ربح 20X8 في كلا البديلين", "20X8 profit tax in both alternatives"), debit: text("مصروف ضريبة جارية", "Current-tax expense"), credit: text("ضريبة جارية مستحقة", "Current tax payable"), amount: text("36,000 دولار", "$36,000") },
+          { label: text("بديل نقص تقدير 20X7", "20X7 underestimation alternative"), debit: text("مصروف ضريبة جارية", "Current-tax expense"), credit: text("ضريبة سنوات سابقة مستحقة", "Prior-year tax payable"), amount: text("5,000 دولار", "$5,000") },
+          { label: text("بديل زيادة تقدير 20X7", "20X7 overestimation alternative"), debit: text("ضريبة سنوات سابقة مستردة", "Prior-year tax receivable"), credit: text("مصروف ضريبة جارية", "Current-tax expense"), amount: text("5,000 دولار", "$5,000") },
+        ],
+        reference: "IAS 12.12, 46, 58, 71",
+      },
+      {
+        title: text("Alpha وBeta: ضريبة تعديل أصل مقتنى", "Alpha and Beta: tax on an acquired asset adjustment"),
+        facts: text(
+          "اشترت Alpha كامل أسهم Beta في 1 أبريل 20X5. في تاريخ الشراء بلغت القيمة العادلة لمعدة مقتناة 54 مليون دولار، بينما بقي أساسها الضريبي 50 مليونًا؛ لم يؤثر تعديل القيمة العادلة في الأساس الضريبي، ومعدل الضريبة الملائم 25%. بقية فروق القيمة العادلة غير معطاة في هذه الحالة.",
+          "Alpha acquired all of Beta's ordinary shares on 1 April 20X5. At acquisition, an acquired item of equipment has a fair value of $54 million but a tax base of $50 million; the fair-value adjustment does not reset the tax base, and the relevant tax rate is 25%. No other fair-value differences are given for this case.",
+        ),
+        calculations: [
+          text("الفرق المؤقت الخاضع = 54 − 50 = 4 ملايين دولار. التزام الضريبة المؤجلة = 4 × 25% = مليون دولار. ينخفض صافي الأصول القابلة للتحديد بمليون، فتزيد الشهرة المحسوبة بمليون مقارنة باحتسابها دون الالتزام، مع ثبات بقية العناصر.", "Taxable temporary difference = $54m − $50m = $4m. Deferred tax liability = $4m × 25% = $1m. Identifiable net assets decrease by $1m, increasing calculated goodwill by $1m compared with omitting the liability, all else equal."),
+        ],
+        conclusion: text("يظهر التزام ضريبة مؤجلة بمليون ضمن محاسبة الاستحواذ. لا يمكن استخراج إجمالي الشهرة دون مقابل الشراء وسائر الأصول والالتزامات.", "Recognise a $1m deferred tax liability in acquisition accounting. Total goodwill cannot be calculated without consideration and the remaining assets and liabilities."),
+        journalEntries: [
+          { label: text("أثر ضريبة المعدة عند الاستحواذ", "Acquisition-date tax effect of equipment"), debit: text("شهرة ضمن تخصيص ثمن الشراء", "Goodwill within purchase-price allocation"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("مليون دولار", "$1 million") },
+        ],
+        reference: "IAS 12.15, 19, 47, 66; IFRS 3.10, 18",
+      },
+    ],
+  },
   "IFRS 13": {
     sections: [
       {
