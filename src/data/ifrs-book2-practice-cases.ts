@@ -15,6 +15,36 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-tax-base-five-assets",
+    standardCode: "IAS 12",
+    title: text("الأساس الضريبي لخمسة أصول", "Tax bases of five assets"),
+    facts: text(
+      "(أ) معدة تكلفتها 10,000 دولار خُصم إهلاك ضريبي 3,000 وسيكون الباقي قابلًا للخصم عند استخدامها أو بيعها؛ منافع استخدامها ومكسب بيعها خاضعة، والخسارة قابلة للخصم. (ب) فوائد مستحقة 1,000 تُفرض عليها الضريبة عند التحصيل. (ج) ذمم تجارية 10,000 سبق خضوع إيرادها للضريبة. (د) قرض مدين 1,000,000 لا أثر ضريبي لسداد أصله. (هـ) توزيعات مستحقة من تابعة 5,000 غير خاضعة للضريبة.",
+      "(a) Equipment costs $10,000, of which $3,000 tax depreciation has been deducted; the remainder is deductible on use or disposal, with taxable benefits and gains and deductible losses. (b) $1,000 interest receivable is taxed on collection. (c) $10,000 trade receivables relate to revenue already taxed. (d) Recovery of a $1,000,000 loan receivable principal has no tax consequence. (e) $5,000 dividends receivable from a subsidiary are non-taxable.",
+    ),
+    question: text("حدد الأساس الضريبي لكل أصل من (أ) إلى (هـ)، وبيّن لماذا لا تنشأ ضريبة مؤجلة عن التوزيعات غير الخاضعة.", "State the tax base of each asset (a)–(e) and explain why non-taxable dividends create no deferred tax."),
+    solution: [
+      text("(أ) 7,000 = 10,000 − 3,000، وهو الخصم المستقبلي المتبقي. (ب) صفر لأن الفوائد ستدخل الربح الخاضع عند التحصيل. (ج) 10,000 لأن إيراد البيع سبق خضوعه ولن يعاد فرض الضريبة عند التحصيل.", "(a) $7,000 = $10,000 − $3,000, the remaining future deduction. (b) Nil because interest becomes taxable on collection. (c) $10,000 because the sales revenue was already taxed and collection is not taxed again."),
+      text("(د) 1,000,000 لأن استرداد أصل القرض محايد ضريبيًا. (هـ) 5,000 بتحليل أن المنفعة غير خاضعة، فلا فرق مؤقت خاضع. ويمكن تحليل (هـ) بأساس صفر ومعدل ضريبة صفر؛ النتيجة أيضًا عدم وجود التزام ضريبة مؤجلة.", "(d) $1,000,000 because principal recovery is tax-neutral. (e) $5,000 because the benefit is non-taxable, producing no taxable temporary difference. Alternatively a nil tax base and nil tax rate likewise produce no deferred tax liability."),
+    ],
+    reference: "IAS 12.7",
+  },
+  {
+    id: "ifrs-book2-tax-base-five-liabilities",
+    standardCode: "IAS 12",
+    title: text("الأساس الضريبي لخمسة التزامات", "Tax bases of five liabilities"),
+    facts: text(
+      "(أ) مصروف مستحق 1,000 دولار لا يخصم ضريبيًا إلا عند الدفع. (ب) فوائد مقبوضة مقدمًا 10,000 ضُرّبت عند القبض وسُجلت التزامًا محاسبيًا. (ج) مصروف مستحق 2,000 سبق خصمه ضريبيًا. (د) غرامة مستحقة 100 غير قابلة للخصم أبدًا. (هـ) قرض دائن 1,000,000 لا أثر ضريبي لسداد أصله.",
+      "(a) A $1,000 accrued expense is deductible only on payment. (b) $10,000 interest received in advance was taxed on receipt and recorded as an accounting liability. (c) A $2,000 accrued expense has already been deducted for tax. (d) A $100 accrued fine is never deductible. (e) Settlement of a $1,000,000 loan payable principal has no tax consequence.",
+    ),
+    question: text("حدد الأساس الضريبي لكل التزام من (أ) إلى (هـ)، وفسر لماذا لا يكون أساس الغرامة صفرًا.", "State the tax base of each liability (a)–(e), explaining why the fine's tax base is not nil."),
+    solution: [
+      text("(أ) صفر = 1,000 − خصم مستقبلي 1,000. (ب) صفر = 10,000 − إيراد لن يخضع ثانيةً 10,000. (ج) 2,000 لأن الخصم استُخدم بالفعل ولا يتبقى خصم عند الدفع.", "(a) Nil = $1,000 less a $1,000 future deduction. (b) Nil = $10,000 less $10,000 income not taxable again. (c) $2,000 because the deduction was already used and no future deduction remains."),
+      text("(د) 100؛ لا خصم مستقبلي للغرامة غير القابلة للخصم، فهي فرق دائم ولا يولد الالتزام نفسه أصل ضريبة مؤجلة. (هـ) 1,000,000 لأن سداد أصل القرض محايد ضريبيًا.", "(d) $100: a non-deductible fine yields no future deduction, so the expense difference is permanent and the liability itself creates no deferred tax asset. (e) $1,000,000 because repayment of principal is tax-neutral."),
+    ],
+    reference: "IAS 12.8",
+  },
+  {
     id: "ifrs-book2-catsu-tax-depreciation",
     standardCode: "IAS 12",
     title: text("Catsu: حركة الضريبة المؤجلة على معدة", "Catsu: equipment deferred-tax movement"),
