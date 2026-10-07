@@ -15,6 +15,87 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-parker-warranty-expected-value",
+    standardCode: "IAS 37",
+    title: text(
+      "Parker: مخصص الضمان لمجموعة مبيعات",
+      "Parker: warranty provision for a sales population",
+    ),
+    facts: text(
+      "باعت Parker Co منتجات بضمان أداء ستة أشهر. التقدير المستند إلى الخبرة: 75% بلا عيوب، 20% بإصلاحات بسيطة، 5% بإصلاحات كبيرة. لو أصابت العيوب البسيطة جميع السلع لبلغت كلفة إصلاحها مليون دولار، ولو أصابتها العيوب الكبيرة كلها لبلغت 4 ملايين دولار. يفترض أن الضمان لتأكيد المطابقة لا خدمة مستقلة، وأن الخصم غير جوهري.",
+      "Parker Co sold products with a six-month performance warranty. Experience estimates 75% with no defects, 20% needing minor repairs and 5% major repairs. Minor repairs for the entire population would cost $1 million; major repairs for all items would cost $4 million. Assume an assurance rather than a separate service warranty and immaterial discounting.",
+    ),
+    question: text(
+      "ما أفضل تقدير لمخصص الضمان؟ بيّن أثر كل نتيجة محتملة والقيد عند الاعتراف.",
+      "What is the best estimate of the warranty provision? Show each outcome's contribution and the recognition entry.",
+    ),
+    solution: [
+      text(
+        "تكلفة فئة بلا عيوب = 75% × صفر = صفر؛ البسيطة = 20% × 1,000,000 = 200,000؛ الكبيرة = 5% × 4,000,000 = 200,000. إجمالي القيمة المتوقعة = 400,000 دولار.",
+        "No-defect cost = 75% × nil = nil; minor = 20% × $1,000,000 = $200,000; major = 5% × $4,000,000 = $200,000. Total expected value is $400,000.",
+      ),
+      text(
+        "مدين مصروف الضمان 400,000 ودائن مخصص الضمان 400,000. تراجع الشركة الاحتمالات والتكلفة المتوقعة في الإقفالات اللاحقة؛ عدم يقين مطالبة عميل منفرد لا يلغي التزام المجموعة.",
+        "Debit warranty expense $400,000 and credit warranty provision $400,000. Reassess probabilities and expected costs at later closes; uncertainty over one customer's claim does not remove the population-level obligation.",
+      ),
+    ],
+    reference: "IAS 37.14, 24, 36–40; IFRS 15.B28–B33",
+  },
+  {
+    id: "ifrs-book2-leaf-onerous-construction",
+    standardCode: "IAS 37",
+    title: text(
+      "Leaf: عقد إنشاء خاسر مع خيار تعويض الانسحاب",
+      "Leaf: loss-making construction contract with an exit penalty",
+    ),
+    facts: text(
+      "تعاقدت Leaf Co على إنشاء أصل بمقابل ثابت 100,000 دولار، وتقدر تكاليف التنفيذ المرتبطة مباشرة بالعقد بـ120,000 دولار. يلزمها العقد بتعويض العميل 30,000 دولار إذا انسحبت. تأمل الشركة الحصول على أعمال مستقبلية منفصلة من العميل، لكن لا يضمنها العقد. يفترض عدم وجود أصول مرتبطة بالعقد تتطلب إثبات انخفاض قبل المخصص وعدم جوهرية الخصم.",
+      "Leaf Co contracts to build an asset for a fixed $100,000, with estimated directly related fulfilment costs of $120,000. Exiting requires $30,000 compensation to the customer. It hopes for separate future business, which this contract does not guarantee. Assume no related asset needs impairment before the provision and discounting is immaterial.",
+    ),
+    question: text(
+      "احسب مخصص العقد المرهق واشرح لماذا لا يساوي كامل تكلفة الإنشاء أو غرامة الانسحاب.",
+      "Calculate the onerous-contract provision and explain why it is neither the full construction cost nor the exit penalty.",
+    ),
+    solution: [
+      text(
+        "الوفاء يسبب خسارة صافية 120,000 − 100,000 = 20,000، بينما الانسحاب يكلف 30,000. المبلغ الأقل الذي لا يمكن تجنبه هو 20,000 دولار، فيثبت مخصص بهذا المبلغ.",
+        "Fulfilment causes a $120,000 − $100,000 = $20,000 net loss, while exit costs $30,000. The lower unavoidable amount is $20,000, recognised as a provision.",
+      ),
+      text(
+        "مدين خسارة عقد مرهق 20,000 ودائن المخصص 20,000. لا تدخل مكاسب أعمال مستقبلية غير مضمونة في منافع هذا العقد؛ ولو وجدت أصول مرتبطة به لاختبر انخفاضها أولًا وفق IAS 36.",
+        "Debit onerous-contract loss $20,000 and credit provision $20,000. Unguaranteed future work is not a benefit of this contract; if related assets existed, test their impairment first under IAS 36.",
+      ),
+    ],
+    reference: "IAS 37.66–69; IAS 36.9",
+  },
+  {
+    id: "ifrs-book2-ias37-provision-trigger-matrix",
+    standardCode: "IAS 37",
+    title: text(
+      "أربع وقائع: متى ينشأ التزام يجيز المخصص؟",
+      "Four situations: when does a provision-triggering obligation arise?",
+    ),
+    facts: text(
+      "قارن أربع وقائع مستقلة عند 31 ديسمبر 20X9: (أ) قرر مجلس الإدارة إغلاق قسم في 13 ديسمبر ولم يبلغ المتأثرين ولم يبدأ التنفيذ؛ (ب) اعتمد المجلس خطة إغلاق تفصيلية في 20 ديسمبر وأبلغ الموظفين والعملاء بسماتها الرئيسية؛ (ج) لحق ضرر بيئي فعلي بالمنشأة وعليها التزام قائم بتنظيفه؛ (د) تعتزم المنشأة إنفاق مبالغ مستقبلًا لتغيير أسلوب عملها، ولم يحدث بعد ما يلزمها بذلك. لا توجد مبالغ أو احتمالات قياس معطاة.",
+      "Compare four independent facts at 31 December 20X9: (a) on 13 December the board decided to close a division but neither informed affected parties nor began implementation; (b) on 20 December it approved a detailed closure plan and communicated its main features to employees and customers; (c) environmental damage has already occurred and the entity has a present clean-up obligation; (d) it intends future expenditure to change how it operates, with no obligating action yet. No measurement amounts or probabilities are supplied.",
+    ),
+    question: text(
+      "حدد في كل واقعة هل يوجد أساس للاعتراف بمخصص، وما الشروط الإضافية اللازمة قبل تسجيل رقم.",
+      "For each situation, determine whether a provision has a recognition basis and what further conditions are needed before recording an amount.",
+    ),
+    solution: [
+      text(
+        "(أ) لا التزام ضمنيًا من قرار داخلي غير معلن وحده، فلا مخصص. (ب) الخطة التفصيلية مع إعلان سماتها للمتأثرين قد تنشئ توقعًا صحيحًا والتزامًا ضمنيًا؛ يتحقق أيضًا من احتمال خروج الموارد وموثوقية التقدير، ويقتصر المبلغ على التكاليف المباشرة الضرورية لإعادة الهيكلة.",
+        "(a) An uncommunicated internal decision alone creates no constructive obligation, so no provision. (b) A detailed plan communicated to those affected can create a valid expectation and constructive obligation; also assess probable outflow and reliable estimate, and include only necessary direct restructuring costs.",
+      ),
+      text(
+        "(ج) الضرر السابق مع التزام التنظيف الحالي يوفر الحدث الملزم؛ يثبت مخصص إذا رجح خروج الموارد وأمكن تقدير المبلغ. (د) الإنفاق المتوقع لتشغيل مختلف في المستقبل يمكن تجنبه بتغيير التصرفات، ولا ينشئ في ذاته التزامًا حاليًا. لا يمكن حساب مبلغ لأي من الوقائع من البيانات المقدمة.",
+        "(c) Past damage plus a present clean-up obligation supplies the obligating event; recognise a provision if outflow is probable and estimable. (d) Planned future operating expenditure can be avoided through future action and creates no present obligation by itself. No monetary amount can be computed from these facts.",
+      ),
+    ],
+    reference: "IAS 37.14–22, 63–83",
+  },
+  {
     id: "ifrs-book2-doug-development-threshold",
     standardCode: "IAS 38",
     title: text(
