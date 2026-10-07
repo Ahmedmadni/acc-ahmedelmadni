@@ -111,6 +111,11 @@ const protectedPracticeIds = [
   "ifrs-book2-jameson-consignment",
   "ifrs-book2-minimart-cgu",
   "ifrs-book2-capital-sale-leaseback",
+  "ifrs-book2-doug-development-threshold",
+  "ifrs-book2-intangible-downward-revaluation",
+  "ifrs-book2-parker-warranty-expected-value",
+  "ifrs-book2-leaf-onerous-construction",
+  "ifrs-book2-ias37-provision-trigger-matrix",
 ];
 for (const practiceCase of openPracticeCases) {
   if (practiceIds.has(practiceCase.id)) failures.push(`duplicate practice case ${practiceCase.id}`);
@@ -139,6 +144,11 @@ for (const id of protectedPracticeIds) {
 }
 
 const reviewedCalculations = [
+  ["Doug development recognised cost", 100000 - 90000, 10000],
+  ["IAS 38 revaluation loss through profit or loss", 500 - 400, 100],
+  ["Parker warranty expected value", 0.75 * 0 + 0.2 * 1000000 + 0.05 * 4000000, 400000],
+  ["Leaf net fulfilment loss", 120000 - 100000, 20000],
+  ["Leaf unavoidable contract loss", Math.min(120000 - 100000, 30000), 20000],
   [
     "advance-payment lease liability",
     Math.round(18420 * [1, 2, 3, 4, 5].reduce((sum, year) => sum + 1 / 1.125 ** year, 0)),

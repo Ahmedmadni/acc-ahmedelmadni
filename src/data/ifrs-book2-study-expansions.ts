@@ -8,6 +8,112 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 37": {
+    sections: [
+      {
+        title: text(
+          "من نسب عيوب الضمان إلى مخصص واحد قابل للتسوية",
+          "From warranty defect frequencies to one reconcilable provision",
+        ),
+        explanation: text(
+          "عند بيع مجموعة كبيرة من المنتجات بضمان مطابقة، لا تختبر المنشأة احتمال مطالبة كل عميل منفردًا ثم تهمل الباقي. تقيّم الالتزام على مستوى مجموعة الضمانات، وتضرب احتمال كل نتيجة في تكلفة تحققها لو انطبقت على كامل المجموعة، ثم تجمع القيم المتوقعة. تحقق من أن فئات النتائج حصرية ومجموع احتمالاتها 100%، وأن تقديرات التكلفة تخص المبيعات التي نشأ عنها التزام في تاريخ التقرير. ضمان الخدمة المنفصل يخضع لتحليل IFRS 15 بدل افتراض دخوله تلقائيًا في هذا المخصص.",
+          "For a large population of assurance warranties, do not dismiss each individual claim because it is uncertain. Evaluate the population, multiply each outcome's probability by its cost if applied to the whole population, and sum the expected values. Check that outcomes are mutually exclusive and probabilities total 100%, and that costs relate to sales already creating an obligation at reporting date. A separate service warranty requires IFRS 15 analysis rather than automatic inclusion in this provision.",
+        ),
+        keyPoints: [
+          text(
+            "استخدم التوزيع الاحتمالي الكامل، بما فيه فئة «بلا عيوب» بتكلفة صفر.",
+            "Use the complete probability distribution, including a zero-cost no-defect category.",
+          ),
+          text(
+            "راجع ما إذا كان الضمان لتأكيد المطابقة أو خدمة مستقلة قبل اختيار المعيار.",
+            "Check whether the warranty assures compliance or provides a separate service before choosing the Standard.",
+          ),
+        ],
+        reference: "IAS 37.14, 24, 36–40; IFRS 15.B28–B33",
+      },
+      {
+        title: text(
+          "العقد المرهق: قارن الخسارة الصافية بخيار الخروج",
+          "Onerous contract: compare net fulfilment loss with exit cost",
+        ),
+        explanation: text(
+          "وجود عقد بسعر أقل من تكلفة تنفيذه لا يعني تلقائيًا أن المخصص يساوي كامل تكلفة التنفيذ. احسب صافي خسارة الوفاء بعد المنافع المتوقعة من العقد، ثم قارنها بالتعويض أو الغرامة الواجبة عند الإخلال؛ الأقل يمثل تكلفة الخروج التي لا يمكن تجنبها. تشمل تكلفة التنفيذ التكاليف الإضافية وتوزيع التكاليف الأخرى المرتبطة مباشرة بالعقد وفق IAS 37 الحالي. قبل إنشاء مخصص منفصل، أثبت أي انخفاض في الأصول المستخدمة لتنفيذه. لا تعدّ احتمال الحصول على عقود مستقبلية مستقلة منفعة مؤكدة من العقد القائم بلا حق تعاقدي.",
+          "A fixed price below fulfilment cost does not make the provision equal to total fulfilment cost. Calculate the net fulfilment loss after benefits expected from the contract, then compare it with compensation or penalty for failing to perform; the lower figure is the unavoidable exit cost. Current IAS 37 includes incremental costs and allocated other directly related costs in fulfilment cost. Recognise impairment of assets used to fulfil the contract before a separate provision. Do not treat hopes of separate future contracts as enforceable benefits of this one.",
+        ),
+        keyPoints: [
+          text(
+            "افحص أولًا انخفاض الأصول المتعلقة بالعقد ثم احسب المخصص المتبقي.",
+            "Test assets related to the contract for impairment before measuring the remaining provision.",
+          ),
+          text(
+            "لا تخلط بين مبلغ الإيراد المتوقع والخسارة الصافية من الوفاء.",
+            "Do not confuse expected contract revenue with the net loss from fulfilment.",
+          ),
+        ],
+        reference: "IAS 37.66–69; IAS 36.9",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "مخصص ضمان Parker بالقيمة المتوقعة",
+          "Parker warranty provision using expected value",
+        ),
+        facts: text(
+          "تبيع Parker Co سلعًا بضمان مطابقة ستة أشهر. تشير الخبرة إلى أن 75% من المبيعات بلا عيوب، و20% تحتاج إصلاحًا بسيطًا، و5% إصلاحًا كبيرًا. لو احتاجت جميع الوحدات إصلاحًا بسيطًا لكانت تكلفته مليون دولار؛ ولو احتاجتها جميعًا إصلاحًا كبيرًا لكانت التكلفة 4 ملايين. يفترض المثال أن المبيعات أنشأت التزام ضمان حاليًا وأن أثر خصم ستة أشهر غير جوهري.",
+          "Parker Co sells goods with a six-month assurance warranty. Experience suggests 75% will have no defect, 20% a minor defect and 5% a major defect. Repairing the entire population for minor defects would cost $1 million; repairing it all for major defects would cost $4 million. Assume the sales created a present warranty obligation and discounting over six months is immaterial.",
+        ),
+        calculations: [
+          text(
+            "القيمة المتوقعة = 75% × صفر + 20% × 1,000,000 + 5% × 4,000,000 = 400,000 دولار. لا تجمع 1 و4 ملايين ثم تضربهما في إجمالي نسبة العيوب 25%؛ لكل فئة احتمالها وتكلفتها.",
+            "Expected value = 75% × nil + 20% × $1,000,000 + 5% × $4,000,000 = $400,000. Do not add the two full-population costs and multiply by the combined 25% defect rate; each outcome has its own probability and cost.",
+          ),
+        ],
+        conclusion: text(
+          "يثبت مخصص ضمان 400,000 دولار للمجموعة المباعة، ويعاد تقديره لاحقًا حسب المطالبات والمعلومات الجديدة.",
+          "Recognise a $400,000 provision for the sold population and update the estimate as claims and information change.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات مخصص الضمان", "Recognise warranty provision"),
+            debit: text("مصروف الضمان", "Warranty expense"),
+            credit: text("مخصص الضمان", "Warranty provision"),
+            amount: text("400,000 دولار", "$400,000"),
+          },
+        ],
+        reference: "IAS 37.14, 24, 36–40; IFRS 15.B28–B33",
+      },
+      {
+        title: text(
+          "عقد Leaf المرهق: الوفاء أم دفع التعويض؟",
+          "Leaf's onerous contract: perform or pay compensation?",
+        ),
+        facts: text(
+          "وقعت Leaf Co عقدًا لإنشاء أصل لدى عميل بسعر ثابت 100,000 دولار. التكاليف المقدرة اللازمة للوفاء 120,000 دولار، وتعويض الانسحاب من العقد 30,000. تأمل الشركة كسب أعمال مستقبلية بسبب علاقتها بالعميل، لكن لا حق تعاقدي لها في تلك الأعمال. يفترض المثال أن الـ120,000 تشمل جميع التكاليف المرتبطة مباشرة بالعقد، ولا توجد أصول متعلقة به يلزم اختبار انخفاضها أو أثر خصم جوهري.",
+          "Leaf Co signs a contract to build an asset on a customer's premises for a fixed $100,000. Estimated costs to fulfil are $120,000 and compensation for withdrawing is $30,000. The company hopes for future customer business but has no contractual right to it. Assume the $120,000 includes all costs directly related to this contract, there is no related asset requiring an impairment test, and discounting is immaterial.",
+        ),
+        calculations: [
+          text(
+            "خسارة الوفاء الصافية = 120,000 − 100,000 = 20,000. تكلفة الانسحاب = 30,000؛ الأقل غير القابل للتجنب = 20,000 دولار.",
+            "Net fulfilment loss = $120,000 − $100,000 = $20,000. Exit compensation = $30,000; the lower unavoidable cost is $20,000.",
+          ),
+        ],
+        conclusion: text(
+          "يثبت مخصص عقد مرهق 20,000 دولار لا 30,000 أو 120,000. الأمل في عمل مستقبلي منفصل لا يقلل التزام هذا العقد.",
+          "Recognise a $20,000 onerous-contract provision, not $30,000 or $120,000. Hoped-for separate future business does not reduce this contract's obligation.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات خسارة العقد المرهق", "Recognise onerous-contract loss"),
+            debit: text("خسارة عقد مرهق", "Onerous-contract loss"),
+            credit: text("مخصص عقد مرهق", "Onerous-contract provision"),
+            amount: text("20,000 دولار", "$20,000"),
+          },
+        ],
+        reference: "IAS 37.66–69",
+      },
+    ],
+  },
   "IAS 38": {
     sections: [
       {
