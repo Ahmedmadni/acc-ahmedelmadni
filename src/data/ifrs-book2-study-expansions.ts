@@ -60,8 +60,43 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 9.5.5.15–5.5.17, B5.5.35; IFRS 7.35N",
       },
+      {
+        title: text("تحوط القيمة العادلة للمخزون: افصل أثر الخطر المحوّط", "Inventory fair value hedge: isolate the hedged-risk adjustment"),
+        explanation: text(
+          "عندما توثق المنشأة منذ البداية تحوطًا مؤهلًا لمخاطر تغير السعر في مخزون قائم، يقاس عقد التحوط المشتق بالقيمة العادلة ويذهب ربحه أو خسارته إلى الربح أو الخسارة. ويعدل رصيد المخزون فقط بمقدار تغير قيمته العادلة المنسوب إلى الخطر المحدد في العلاقة، مع إثبات المقابل في الربح أو الخسارة. لذلك قد يظهر تعديل موجب في قيمة المخزون رغم أن القاعدة المعتادة في IAS 2 هي التكلفة أو صافي القيمة القابلة للتحقق أيهما أقل؛ ذلك التعديل استثناء خاص بمحاسبة التحوط وليس اختيار نموذج قيمة عادلة للمخزون كله. لا يكفي وجود عقد آجل اقتصاديًا: يلزم تعيين وتوثيق عند البدء، وأداة وبند مؤهلان، وعلاقة اقتصادية ونسبة تحوط ملائمة. عند البيع، تدخل القيمة الدفترية المعدلة للمخزون في تكلفة المبيعات، ويُسوّى المشتق منفصلًا.",
+          "For a qualifying, documented hedge of price risk in recognised inventory, measure the derivative hedging instrument at fair value and recognise its gain or loss in profit or loss. Adjust the inventory only for the fair value change attributable to the designated risk, also in profit or loss. A positive inventory adjustment can therefore arise even though ordinary IAS 2 measurement is lower of cost and net realisable value: this is a hedge-accounting adjustment, not a general fair-value model for inventory. An economically protective forward alone is insufficient; inception designation and documentation, eligible items, an economic relationship and an appropriate hedge ratio are required. On sale, the adjusted inventory carrying amount becomes cost of sales and the derivative is settled separately.",
+        ),
+        keyPoints: [
+          text("سجل المشتق وتعديل البند المحوّط في مسارين منفصلين ثم احسب صافي عدم الفاعلية في الربح أو الخسارة.", "Record derivative and hedged-item adjustments separately, then identify net ineffectiveness in profit or loss."),
+          text("لا ترفع جميع المخزونات للقيمة العادلة لمجرد ارتفاع سعر السوق.", "Do not uplift all inventory to fair value merely because its market price rose."),
+          text("أدخل تعديل التحوط المتراكم في تكلفة المبيعات عند بيع المخزون.", "Include the cumulative hedge adjustment in cost of sales when the inventory is sold."),
+        ],
+        reference: "IFRS 9.6.4.1, 6.5.2(a), 6.5.8; IAS 2.9, 34",
+      },
     ],
     workedExamples: [
+      {
+        title: text("Jules: تحوط مخزون المعدن حتى بيعه", "Jules: hedging metal inventory through sale"),
+        facts: text(
+          "في 1 يوليو 20X6 اشترت Jules كمية 10,000 أونصة معدن بتكلفة 200 دولار للأونصة، وعيّنت عقد بيع مستقبلي للكمية نفسها بسعر 210 دولارات للتسليم في 30 يونيو 20X7 تحوطًا مؤهلًا لتغير سعر المخزون. في 31 ديسمبر 20X6 أصبح سعر المخزون 220 دولارًا للأونصة وسعر العقد المستقبلي للتسليم المحدد 227 دولارًا. في 30 يونيو 20X7 بيع المخزون وأغلق العقد عند سعر فوري 230 دولارًا للأونصة. يفترض المثال أن 200 دولار كان سعر البند المعين عند بدء التحوط، وأن تغير الأسعار المعطى يقيس خطر السعر المحوّط وقيمة المشتق دون أثر خصم أو هامش جوهري، وأن شروط IFRS 9 للتحوط موثقة ومستوفاة.",
+          "On 1 July 20X6 Jules buys 10,000 ounces of metal at $200 per ounce and designates a futures sale of the same quantity at $210 for 30 June 20X7 as a qualifying hedge of inventory price risk. On 31 December 20X6 inventory price is $220 per ounce and the future for that delivery date is $227. On 30 June 20X7 the inventory is sold and the future closed at a $230 spot price. Assume $200 was the designated item's inception price, the quoted changes represent hedged-risk and derivative fair value changes without material discount or margin effects, and IFRS 9 hedge criteria are documented and met.",
+        ),
+        calculations: [
+          text("في 31 ديسمبر: ربح البند المحوّط = 10,000 × (220 − 200) = 200,000 دولار؛ خسارة العقد = 10,000 × (227 − 210) = 170,000؛ صافي الربح في الفترة 30,000، ورصيد المخزون المعدل 2,200,000 والتزام المشتق 170,000.", "At 31 December: hedged-item gain = 10,000 × ($220 − $200) = $200,000; futures loss = 10,000 × ($227 − $210) = $170,000. Net period gain is $30,000, adjusted inventory $2,200,000 and derivative liability $170,000."),
+          text("من 1 يناير إلى 30 يونيو: زيادة تعديل المخزون = 10,000 × (230 − 220) = 100,000؛ خسارة مشتق إضافية = 10,000 × (230 − 227) = 30,000. يصبح رصيد المخزون 2,300,000 والتزام المشتق 200,000. عند البيع بمبلغ 2,300,000 تظهر إيرادات وتكلفة مبيعات متساويتان في ذلك التاريخ، بينما صافي أثر التحوط على مدى الفترتين ربح 300,000 من البند ناقص خسارة 200,000 من العقد = 100,000 قبل أي مصروفات أخرى.", "From 1 January to 30 June: inventory adjustment rises 10,000 × ($230 − $220) = $100,000; further derivative loss is 10,000 × ($230 − $227) = $30,000. Inventory reaches $2,300,000 and derivative liability $200,000. Sale for $2,300,000 produces equal revenue and cost of sales at that date, while the cumulative price movement on the hedged item of $300,000 less $200,000 futures loss gives $100,000 profit before other costs."),
+        ],
+        conclusion: text("المحصلة الاقتصادية من الشراء والبيع والعقد هي 2,300,000 − 2,000,000 − 200,000 = 100,000 دولار. محاسبة التحوط توزع أثر تغير السعر عبر الفترتين بصورة متسقة؛ لا تُعامل زيادة المخزون 300,000 كإعادة تقييم عامة وفق IAS 2.", "The combined economic result is $2,300,000 sale proceeds − $2,000,000 original cost − $200,000 futures settlement = $100,000. Hedge accounting allocates price changes across periods consistently; the $300,000 inventory uplift is not a general IAS 2 revaluation."),
+        journalEntries: [
+          { label: text("31 ديسمبر: خسارة العقد", "31 December: futures loss"), debit: text("خسارة مشتق في الربح أو الخسارة", "Derivative loss in profit or loss"), credit: text("التزام عقد مستقبلي", "Futures liability"), amount: text("170,000 دولار", "$170,000") },
+          { label: text("31 ديسمبر: تعديل المخزون للخطر المحوّط", "31 December: hedged-risk inventory adjustment"), debit: text("مخزون", "Inventory"), credit: text("ربح تحوط في الربح أو الخسارة", "Hedged-item gain in profit or loss"), amount: text("200,000 دولار", "$200,000") },
+          { label: text("30 يونيو: خسارة العقد الإضافية", "30 June: further futures loss"), debit: text("خسارة مشتق في الربح أو الخسارة", "Derivative loss in profit or loss"), credit: text("التزام عقد مستقبلي", "Futures liability"), amount: text("30,000 دولار", "$30,000") },
+          { label: text("30 يونيو: تعديل المخزون الإضافي", "30 June: further inventory adjustment"), debit: text("مخزون", "Inventory"), credit: text("ربح تحوط في الربح أو الخسارة", "Hedged-item gain in profit or loss"), amount: text("100,000 دولار", "$100,000") },
+          { label: text("البيع: إثبات المتحصل", "Sale: recognise proceeds"), debit: text("نقدية", "Cash"), credit: text("إيراد", "Revenue"), amount: text("2,300,000 دولار", "$2,300,000") },
+          { label: text("البيع: إخراج المخزون المعدل", "Sale: derecognise adjusted inventory"), debit: text("تكلفة مبيعات", "Cost of sales"), credit: text("مخزون", "Inventory"), amount: text("2,300,000 دولار", "$2,300,000") },
+          { label: text("إقفال العقد بدفع صافي الالتزام", "Close the future by paying its net liability"), debit: text("التزام عقد مستقبلي", "Futures liability"), credit: text("نقدية", "Cash"), amount: text("200,000 دولار", "$200,000") },
+        ],
+        reference: "IFRS 9.6.4.1, 6.5.2(a), 6.5.8; IAS 2.34",
+      },
       {
         title: text("Redblack: مصفوفة أعمار الذمم وحركة المخصص", "Redblack: receivables ageing matrix and allowance movement"),
         facts: text(
