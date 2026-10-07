@@ -69,6 +69,10 @@ for (const [code, expansion] of Object.entries(expansions)) {
       failures.push(`${code}: non-IFRS public reference in worked example`);
     if (!Array.isArray(example.calculations) || example.calculations.some((item) => !hasText(item)))
       failures.push(`${code}: incomplete calculation steps`);
+    if (!Array.isArray(example.journalEntries))
+      failures.push(
+        `${code}: worked example must declare journal entries, even when none are quantified`,
+      );
   }
 }
 
