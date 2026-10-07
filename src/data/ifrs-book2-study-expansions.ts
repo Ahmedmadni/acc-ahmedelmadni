@@ -8,6 +8,80 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 19": {
+    sections: [
+      {
+        title: text(
+          "الإجازة المرضية المتراكمة: احسب الزيادة المتوقعة في المدفوعات",
+          "Accumulating sick leave: measure expected incremental payments",
+        ),
+        explanation: text(
+          "الإجازة المدفوعة المتراكمة تنشئ التزامًا مع تقديم الخدمة التي تزيد حق الموظف في غياب مستقبلي، حتى لو كان الرصيد غير قابل للصرف نقدًا عند ترك العمل. لكن رصيد الأيام المرحلة ليس هو المصروف تلقائيًا: يقاس الالتزام بالمبلغ الإضافي المتوقع دفعه بسبب الأيام غير المستعملة في نهاية الفترة. افحص ترتيب استهلاك أيام السنة الجديدة والمرحلة، واحتمال بلوغ الموظفين سقف أيام السنة الجديدة؛ إذا استعمل الموظف أيام السنة الجديدة أولًا ولم يتجاوزها، فلن يتطلب الرصيد القديم دفعًا إضافيًا. عند عدم إعطاء أجر اليوم، أعرض النتيجة بوحدة أيام ولا تخترع مبلغًا نقديًا.",
+          "Accumulating paid absence creates an obligation as service increases entitlement to future leave, even if unused days are not paid out on departure. Yet the carried-forward balance is not automatically the expense: measure the additional amount expected to be paid because of unused entitlement at period-end. Check the order in which new-year and carried-forward days are consumed and the likelihood of employees exceeding the new-year allowance. If current-year days are used first and an employee stays within that allowance, the old balance causes no incremental payment. Without a daily pay rate, report days rather than inventing a currency amount.",
+        ),
+        keyPoints: [
+          text("ميّز التراكم عن استحقاق التعويض النقدي عند انتهاء العمل.", "Distinguish accumulation from cash vesting on leaving employment."),
+          text("استخرج الأيام الإضافية المتوقعة، لا كامل الرصيد المرحّل.", "Calculate expected incremental days, not the entire carried-forward balance."),
+          text("راجع ترتيب الاستهلاك وتاريخ انتهاء صلاحية الأيام.", "Check consumption order and expiry of days."),
+        ],
+        reference: "IAS 19.13–17",
+      },
+      {
+        title: text(
+          "إغلاق منشأة: افصل تعويض الإنهاء عن مكافأة البقاء",
+          "Factory closure: separate termination pay from retention pay",
+        ),
+        explanation: text(
+          "قد تعلن المنشأة مبلغًا أكبر لمن يظل حتى الإغلاق، مع مبلغ أساس تدفعه لكل من تنتهي خدمته بسبب القرار. مبلغ الأساس مقابل إنهاء العمل، فيعترف به عند التاريخ الأسبق لتعذر سحب العرض أو إثبات تكلفة إعادة هيكلة مؤهلة تشمل تلك المدفوعات. الزيادة المشروطة بأداء خدمة حتى الإغلاق ليست كلها تعويض إنهاء؛ إنها مقابل الخدمة المستقبلية وتُحمّل على فترات تقديمها مع تحديث عدد المتوقع بقائهم. اختبر مدة التسوية لتحديد ما إذا كانت الزيادة منفعة قصيرة الأجل، ولا تثبتها كلها يوم إعلان الخطة. في خطط المنافع المحددة، لا تستخدم نموذج «العائد المتوقع» القديم لقياس صافي الفائدة؛ تكلفة الخدمة وصافي الفائدة في الربح أو الخسارة، وإعادة القياس في الدخل الشامل الآخر.",
+          "An entity may announce a larger payment for employees who stay until closure and a base amount for everyone whose employment ends because of the decision. The base amount is for termination and is recognised at the earlier of the offer becoming non-withdrawable and recognition of a qualifying restructuring cost involving the payments. The increment conditional on service until closure is not entirely termination pay: it compensates future service and is accrued over the service periods, updating the expected number who stay. Assess settlement timing to classify the increment as short-term when appropriate; do not expense it all on announcement. For defined-benefit plans, do not use the old separate expected-return model for net interest; service cost and net interest are in profit or loss, while remeasurements are in OCI.",
+        ),
+        keyPoints: [
+          text("حدد المبلغ المستحق سواء بقي الموظف أم غادر قبل الإغلاق.", "Identify the amount payable whether the employee stays or leaves early."),
+          text("وزع فقط الزيادة المشروطة بالخدمة على فترة البقاء المطلوبة.", "Spread only the service-dependent increment over the required retention period."),
+          text("أعد تقدير العدد المتوقع بقاؤه ولا تخلط بين التوقيت والتصنيف.", "Re-estimate expected stayers and keep timing separate from classification."),
+        ],
+        reference: "IAS 19.8, 11, 159–170; IAS 37.72–83",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Plyman: اثنا عشر يومًا لا مئتا يوم", "Plyman: twelve days, not two hundred"),
+        facts: text(
+          "لدى Plyman مئة موظف، ولكل منهم خمسة أيام مرضية مدفوعة سنويًا. تنتقل الأيام غير المستعملة لسنة واحدة، وتستهلك أيام السنة الجديدة قبل الأيام المرحلة. في نهاية 20X8 تبقى في المتوسط يومان لكل موظف. يتوقع أن يستخدم 92 موظفًا خمسة أيام أو أقل في 20X9، وأن يستخدم الثمانية الآخرون 6.5 أيام لكل منهم. لم يحدد أجر اليوم.",
+          "Plyman has 100 employees, each entitled to five paid sick days a year. Unused days carry forward for one year, and new-year days are used before carried-forward days. At the end of 20X8, each employee has two unused days on average. In 20X9, 92 employees are expected to use no more than five days, and the other eight to use 6.5 days each. No daily pay rate is given.",
+        ),
+        calculations: [
+          text("الرصيد النظري = 100 × 2 = 200 يوم. للـ92 موظفًا لا توجد أيام إضافية متوقعة. لكل من الثمانية الآخرين: 6.5 − 5 = 1.5 يوم من الرصيد القديم، وهو أقل من الحد المرحّل البالغ يومين؛ الإجمالي 8 × 1.5 = 12 يومًا.", "The nominal balance is 100 × 2 = 200 days. The 92 employees generate no expected incremental days. Each of the other eight needs 6.5 − 5 = 1.5 carried-forward days, below the two-day balance; total incremental days are 8 × 1.5 = 12."),
+        ],
+        conclusion: text("يعترف بتكلفة والتزام يعادلان أجر 12 يومًا وفق الأجر المعمول به؛ لا يمكن تحديد مبلغ نقدي من الوقائع ولا يصح ضرب الأجر في 200 يوم.", "Recognise expense and liability for 12 days at the applicable pay rate. The facts do not support a currency amount, nor an expense for all 200 days."),
+        journalEntries: [
+          {
+            label: text("استحقاق الإجازة المرضية الإضافية", "Accrue incremental sick leave"),
+            debit: text("مصروف منافع الموظفين", "Employee-benefit expense"),
+            credit: text("التزام إجازات مرضية مستحقة", "Accrued sick-leave liability"),
+            amount: text("أجر 12 يومًا؛ المعدل غير معطى", "Pay for 12 days; rate not supplied"),
+          },
+        ],
+        reference: "IAS 19.13–17",
+      },
+      {
+        title: text("إغلاق المصنع: 1.2 مليون إنهاء و2 مليون خدمة", "Factory closure: 1.2 million termination and 2 million service"),
+        facts: text(
+          "ستغلق منشأة مصنعًا بعد عشرة أشهر وتنهي عمل العاملين المتبقين. تعرض 10,000 وحدة نقد لكل عامل يغادر قبل الإغلاق و30,000 لمن يستمر حتى يوم الإغلاق. عدد العاملين 120، ويتوقع مغادرة 20 مبكرًا وبقاء 100. نفترض استيفاء شروط الاعتراف بمزايا الإنهاء عند إعلان خطة الإغلاق، وأن المنفعة الإضافية قصيرة الأجل ولا يلزم خصمها.",
+          "An entity will close a factory in ten months and terminate remaining staff. It offers CU10,000 to each employee leaving early and CU30,000 to each who serves until closure. There are 120 employees; 20 are expected to leave early and 100 to remain. Assume the termination-recognition criteria are met when the plan is announced, and the incremental benefit is short-term with no discount required.",
+        ),
+        calculations: [
+          text("التدفق النقدي المتوقع = 20 × 10,000 + 100 × 30,000 = 3,200,000. جزء الإنهاء الأساسي = 120 × 10,000 = 1,200,000. الزيادة المقابلة للخدمة = 100 × (30,000 − 10,000) = 2,000,000، وتكلفتها الشهرية المبدئية 2,000,000 ÷ 10 = 200,000.", "Expected cash outflow = 20 × CU10,000 + 100 × CU30,000 = CU3,200,000. Base termination component = 120 × CU10,000 = CU1,200,000. Service-dependent increment = 100 × (CU30,000 − CU10,000) = CU2,000,000, initially CU200,000 per month over ten months."),
+        ],
+        conclusion: text("عند تحقق شرط الاعتراف يثبت 1,200,000 فورًا كمزايا إنهاء. ويثبت 200,000 شهريًا، وفق تقدير البقاء المحدّث، مقابل الخدمة اللاحقة؛ لا يثبت كامل 3,200,000 في يوم الإعلان.", "When the recognition trigger occurs, CU1,200,000 is recognised as termination benefits. Accrue the service component initially at CU200,000 a month, revising expected retention; do not recognise all CU3,200,000 on announcement."),
+        journalEntries: [
+          { label: text("عند تحقق شرط إنهاء الخدمة", "At termination recognition trigger"), debit: text("مصروف مزايا إنهاء الخدمة", "Termination-benefit expense"), credit: text("التزام مزايا إنهاء الخدمة", "Termination-benefit liability"), amount: text("1,200,000 وحدة نقد", "CU1,200,000") },
+          { label: text("في كل شهر خدمة، مبدئيًا", "Each service month, initially"), debit: text("مصروف مزايا الموظفين قصيرة الأجل", "Short-term employee-benefit expense"), credit: text("التزام مكافأة البقاء", "Retention-benefit liability"), amount: text("200,000 وحدة نقد", "CU200,000") },
+        ],
+        reference: "IAS 19.11, 159–170; IAS 37.72–83",
+      },
+    ],
+  },
   "IAS 37": {
     sections: [
       {

@@ -15,6 +15,42 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-plyman-accumulating-sick-leave",
+    standardCode: "IAS 19",
+    title: text("Plyman: قياس الإجازة المرضية المرحلة", "Plyman: measuring carried-forward sick leave"),
+    facts: text(
+      "لدى الشركة 100 موظف، لكل واحد خمسة أيام مرضية مدفوعة في السنة. يرحّل غير المستخدم لسنة واحدة، لكن أيام السنة الجديدة تستهلك أولًا. رصيد نهاية 20X8 المتوسط يومان لكل موظف. في السنة التالية يتوقع أن يستخدم 92 موظفًا خمسة أيام أو أقل، وأن يستخدم الثمانية الآخرون 6.5 أيام لكل منهم. لم يذكر أجر اليوم.",
+      "The entity has 100 employees, each with five paid sick days annually. Unused days carry forward one year, but new-year days are consumed first. The average unused balance at the end of 20X8 is two days per employee. Next year, 92 employees are expected to use no more than five days and the other eight 6.5 days each. No daily pay rate is given.",
+    ),
+    question: text(
+      "كم يومًا من الإجازات المرحلة يدخل في قياس الالتزام؟ ولماذا لا تساوي التكلفة كامل رصيد الأيام؟",
+      "How many carried-forward days enter the liability measurement, and why does the expense differ from the full balance?",
+    ),
+    solution: [
+      text("الرصيد النظري 200 يوم، لكنه ليس مقياس المدفوعات الإضافية المتوقعة. الـ92 موظفًا لا يتجاوزون حق السنة الجديدة، فلا يستهلكون من الرصيد القديم. الثمانية الآخرون يتجاوزونه بواقع 1.5 يوم لكل منهم: 8 × 1.5 = 12 يومًا.", "The nominal balance is 200 days, but that is not the measure of expected incremental payments. The 92 employees stay within the new-year allowance and use no old entitlement. The other eight exceed it by 1.5 days each: 8 × 1.5 = 12 days."),
+      text("يثبت مصروف والتزام بقدر أجر 12 يومًا في 20X8، إذا تحققت هذه التوقعات. لا يمكن تحديد مبلغ نقدي أو كتابة قيد برقم عملة دون معدل أجر اليوم.", "Recognise an expense and liability for 12 days of pay in 20X8 on these estimates. A currency amount cannot be computed without a daily pay rate."),
+    ],
+    reference: "IAS 19.13–17",
+  },
+  {
+    id: "ifrs-book2-factory-termination-retention",
+    standardCode: "IAS 19",
+    title: text("إغلاق مصنع: تعويض إنهاء أم مكافأة بقاء؟", "Factory closure: termination pay or retention bonus?"),
+    facts: text(
+      "قررت منشأة إغلاق مصنع بعد عشرة أشهر. سيحصل كل من يغادر قبل الإغلاق على 10,000 وحدة نقد، بينما من يظل ويعمل حتى الإغلاق يحصل على 30,000. يعمل بها 120 شخصًا؛ يتوقع أن يغادر 20 مبكرًا ويبقى 100. افترض تحقق شروط الاعتراف بمزايا الإنهاء عند إعلان الخطة، وأن الزيادة مقابل الخدمة منفعة قصيرة الأجل دون خصم.",
+      "An entity plans to close a factory in ten months. Each employee leaving before closure receives CU10,000, while each who works until closure receives CU30,000. There are 120 employees; 20 are expected to leave early and 100 to stay. Assume termination-benefit recognition criteria are met when the plan is announced and the service increment is a short-term benefit without discounting.",
+    ),
+    question: text(
+      "حلل التدفق المتوقع بين مزايا الإنهاء والخدمة، وحدد توقيت الاعتراف والمصروف الشهري المبدئي.",
+      "Split expected cash flows between termination and service benefits, and determine recognition timing and the initial monthly expense.",
+    ),
+    solution: [
+      text("التدفق المتوقع 20 × 10,000 + 100 × 30,000 = 3,200,000. مبلغ 10,000 لكل من 120 موظفًا مستحق بسبب إنهاء العمل بغض النظر عن البقاء، فينشأ جزء إنهاء 1,200,000 عند تحقق شرط الاعتراف؛ لا يؤجل كله للعشرة أشهر.", "Expected outflow is 20 × CU10,000 + 100 × CU30,000 = CU3,200,000. CU10,000 for each of 120 employees is attributable to termination regardless of staying, so recognise a CU1,200,000 termination component when its recognition trigger occurs; do not defer it all for ten months."),
+      text("الزيادة 20,000 × 100 المتوقع بقاؤهم = 2,000,000 مقابل خدمة مستقبلية. يثبت مبدئيًا 200,000 شهريًا عبر عشرة أشهر مع تحديث تقدير البقاء؛ لا تُسجل كامل 3,200,000 عند إعلان الخطة.", "The CU20,000 increment for 100 expected stayers is CU2,000,000 for future service. Accrue initially CU200,000 monthly over ten months, revising expected retention; do not expense the entire CU3,200,000 on announcement."),
+    ],
+    reference: "IAS 19.11, 159–170; IAS 37.72–83",
+  },
+  {
     id: "ifrs-book2-parker-warranty-expected-value",
     standardCode: "IAS 37",
     title: text(
