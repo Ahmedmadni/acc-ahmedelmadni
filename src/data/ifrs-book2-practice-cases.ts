@@ -15,6 +15,36 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-catsu-tax-depreciation",
+    standardCode: "IAS 12",
+    title: text("Catsu: حركة الضريبة المؤجلة على معدة", "Catsu: equipment deferred-tax movement"),
+    facts: text(
+      "اشترت Catsu معدة في 1 يناير 20X1 بتكلفة 1,000,000 دولار وقيمة متبقية 100,000 وعمر نافع عشر سنوات، ويحسب الإهلاك المحاسبي بالقسط الثابت. يسمح القانون بخصم ضريبي 20% سنويًا من الرصيد المتناقص، ومعدل ضريبة الدخل 30%. لا توجد حركات ضريبية أخرى لهذه المعدة.",
+      "Catsu buys equipment on 1 January 20X1 for $1,000,000, with $100,000 residual value and a ten-year useful life, depreciated straight-line for accounting. Tax depreciation is 20% annually on the reducing balance; the income-tax rate is 30%. There are no other tax movements for this equipment.",
+    ),
+    question: text("احسب مصروف الضريبة المؤجلة في الربح أو الخسارة لسنة 20X2 ورصيد التزام الضريبة المؤجلة في 31 ديسمبر 20X2، مع إظهار حساب 20X1 الافتتاحي.", "Calculate the 20X2 profit-or-loss deferred-tax charge and the deferred-tax liability at 31 December 20X2, showing the opening 20X1 calculation."),
+    solution: [
+      text("الإهلاك المحاسبي = (1,000,000 − 100,000) ÷ 10 = 90,000 سنويًا. نهاية 20X1: القيمة الدفترية 910,000، والأساس الضريبي بعد خصم 200,000 يساوي 800,000؛ الفرق 110,000 والالتزام المؤجل 33,000.", "Accounting depreciation is ($1,000,000 − $100,000) ÷ 10 = $90,000 each year. End-20X1 carrying amount is $910,000 and tax base after a $200,000 deduction is $800,000; the $110,000 taxable difference gives a $33,000 liability."),
+      text("في 20X2 الخصم الضريبي 800,000 × 20% = 160,000، فيهبط الأساس إلى 640,000؛ القيمة الدفترية 910,000 − 90,000 = 820,000. الفرق الخاضع 180,000 × 30% = التزام ختامي 54,000. مصروف السنة = 54,000 − 33,000 = 21,000: مدين مصروف ضريبة مؤجلة ودائن الالتزام بهذا المبلغ.", "20X2 tax depreciation is $800,000 × 20% = $160,000, reducing tax base to $640,000; carrying amount is $910,000 − $90,000 = $820,000. The $180,000 taxable difference × 30% gives a $54,000 closing liability. The year's charge is $54,000 − $33,000 = $21,000: debit deferred tax expense and credit the liability."),
+    ],
+    reference: "IAS 12.7, 15, 17, 47, 58",
+  },
+  {
+    id: "ifrs-book2-epsilon-development-tax",
+    standardCode: "IAS 12",
+    title: text("Epsilon: ضريبة أصل تطوير خُصم فورًا", "Epsilon: tax on development deducted immediately"),
+    facts: text(
+      "رسملت Epsilon خلال السنة المنتهية في 31 مارس 20X4 تكاليف تطوير مؤهلة قدرها 1,600,000 دولار. أصبح الأصل متاحًا للاستخدام وبدأ توليد المنافع في 1 يناير 20X4، بعمر نافع خمس سنوات وإطفاء موزع شهريًا. خُصمت النفقات كلها ضريبيًا عن السنة المنتهية في 31 مارس 20X4، ومعدل الضريبة 25%.",
+      "During the year to 31 March 20X4 Epsilon capitalises $1,600,000 of qualifying development costs. The asset becomes available for use and begins generating benefits on 1 January 20X4, with a five-year useful life and monthly amortisation. All expenditure is deducted for tax for the year to 31 March 20X4; the tax rate is 25%. ",
+    ),
+    question: text("ناقش واحسب أثر الضريبة المؤجلة في 31 مارس 20X4، مبينًا الإطفاء والقيمة الدفترية والأساس الضريبي.", "Discuss and calculate deferred tax at 31 March 20X4, showing amortisation, carrying amount and tax base."),
+    solution: [
+      text("إطفاء ثلاثة أشهر = 1,600,000 ÷ 5 × 3/12 = 80,000؛ القيمة الدفترية 1,520,000. بما أن التكلفة خُصمت كلها ضريبيًا، فلا يبقى خصم مستقبلي ويكون الأساس الضريبي صفرًا.", "Three months' amortisation is $1,600,000 ÷ 5 × 3/12 = $80,000; carrying amount is $1,520,000. Because the full cost has been deducted for tax, no future deduction remains and the tax base is nil."),
+      text("الفرق المؤقت الخاضع 1,520,000، والالتزام المؤجل 1,520,000 × 25% = 380,000 دولار. يثبت مدين مصروف ضريبة مؤجلة ودائن التزام ضريبة مؤجلة بالمبلغ عند نهاية السنة، بافتراض عدم وجود رصيد افتتاحي لهذا الفرق. الخصم الضريبي الفوري يمنع تبرير إعفاء الاعتراف الأول بالقول إن المعاملة لم تؤثر في الربح الخاضع.", "The taxable temporary difference is $1,520,000 and the deferred tax liability is $1,520,000 × 25% = $380,000. Debit deferred tax expense and credit the liability at year-end, assuming no opening balance for this difference. The immediate tax deduction means the initial-recognition exception cannot be justified by saying the transaction did not affect taxable profit."),
+    ],
+    reference: "IAS 12.7, 15, 17, 47, 58; IAS 38.97",
+  },
+  {
     id: "ifrs-book2-darton-current-tax-true-up",
     standardCode: "IAS 12",
     title: text("Darton: تصحيح ضريبة سنة سابقة", "Darton: prior-year current-tax true-up"),

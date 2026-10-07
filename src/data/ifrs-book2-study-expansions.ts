@@ -49,6 +49,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 12.5, 24, 28–29, 47; IFRS 10.B86(c)",
       },
+      {
+        title: text("من القيمة الدفترية إلى الأساس الضريبي: الإهلاك وتكاليف التطوير", "From carrying amount to tax base: depreciation and development costs"),
+        explanation: text(
+          "ابدأ بتحديد القيمة الدفترية للأصل وفق معيارها المحاسبي، ثم احسب المبلغ الذي سيبقى قابلًا للخصم ضريبيًا عند استرداد الأصل وفق قانون الولاية المعنية. إذا سبق الإهلاك الضريبي الإهلاك المحاسبي، تقل القاعدة الضريبية عن القيمة الدفترية وينشأ فرق مؤقت خاضع للضريبة، حتى لو لم تتغير تكلفة الأصل. وبالمثل، إذا رُسملت تكاليف تطوير مستوفية IAS 38 محاسبيًا لكنها خُصمت ضريبيًا بالكامل عند إنفاقها، فقد يبقى أصل محاسبي بأساس ضريبي صفر. اضرب الفرق في معدل الضريبة المتوقع عند انعكاسه والمقرر أو المقرر موضوعيًا بنهاية الفترة، ثم قارِن رصيد الضريبة المؤجلة المطلوب برصيد افتتاحها لاستخراج مصروف الفترة. لا تصنف كل فرق بين ربح المحاسبة وربح الضريبة ضريبةً مؤجلة؛ يلزم تحليل أساس الأصل أو الالتزام وما سيحدث عند استرداده أو تسويته.",
+          "First establish the asset's carrying amount under its accounting Standard, then determine the deduction that will remain available for tax when it is recovered under the relevant jurisdiction's law. If tax depreciation runs ahead of accounting depreciation, the tax base falls below carrying amount and creates a taxable temporary difference even though original cost is unchanged. Likewise, qualifying development costs capitalised under IAS 38 but fully deducted for tax when incurred may leave an accounting asset with a nil tax base. Apply the tax rate expected on reversal under law enacted or substantively enacted by period-end, then compare required closing deferred tax with its opening balance to find the period charge. Not every accounting-versus-tax profit difference is deferred tax: analyse the asset's or liability's tax base and future recovery or settlement.",
+        ),
+        keyPoints: [
+          text("القيمة الدفترية تُحسب بقواعد المحاسبة، والأساس الضريبي بقواعد الخصم المستقبلي.", "Carrying amount follows accounting rules; tax base follows future tax-deduction rules."),
+          text("رصيد الضريبة المؤجلة الختامي ليس تلقائيًا مصروف السنة؛ احسب حركته.", "The closing deferred-tax balance is not automatically this year's expense; calculate its movement."),
+          text("اختبر تاريخ بدء إهلاك الأصل المعنوي ولا تعترف باستهلاك قبل جاهزيته للاستخدام.", "Check when an intangible becomes available for use; do not amortise it earlier."),
+        ],
+        reference: "IAS 12.7, 15, 17, 47, 58; IAS 38.97",
+      },
     ],
     workedExamples: [
       {
@@ -99,6 +112,37 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("أثر الضريبة المؤجلة في القوائم المجمعة", "Deferred tax in consolidated accounts"), debit: text("أصل ضريبة مؤجلة", "Deferred tax asset"), credit: text("دخل ضريبة مؤجلة", "Deferred tax income"), amount: text("25 دولارًا", "$25") },
         ],
         reference: "IAS 12.5, 24, 28–29, 47; IFRS 10.B86(c)",
+      },
+      {
+        title: text("Catsu: فرق الإهلاك المحاسبي والضريبي على سنتين", "Catsu: accounting versus tax depreciation over two years"),
+        facts: text(
+          "اشترت Catsu معدة في 1 يناير 20X1 بتكلفة 1,000,000 دولار، قيمة متبقية 100,000 وعمر نافع عشر سنوات. الإهلاك المحاسبي قسط ثابت، والخصم الضريبي 20% سنويًا من الرصيد الضريبي المتناقص. معدل ضريبة الدخل 30%. لا توجد فروق ضريبية أو أحداث أخرى في هذه المعدة.",
+          "Catsu buys equipment on 1 January 20X1 for $1,000,000, with a $100,000 residual value and ten-year useful life. Accounting depreciation is straight-line, while tax depreciation is 20% a year on the reducing tax balance. The income-tax rate is 30%. Assume no other tax differences or events for this equipment.",
+        ),
+        calculations: [
+          text("الإهلاك المحاسبي السنوي = (1,000,000 − 100,000) ÷ 10 = 90,000. نهاية 20X1: القيمة الدفترية 910,000؛ الأساس الضريبي 1,000,000 − 200,000 = 800,000؛ الفرق الخاضع 110,000 والالتزام المؤجل 33,000.", "Annual accounting depreciation = ($1,000,000 − $100,000) ÷ 10 = $90,000. End-20X1 carrying amount is $910,000; tax base is $1,000,000 − $200,000 = $800,000; taxable difference is $110,000 and deferred tax liability $33,000."),
+          text("في 20X2 الخصم الضريبي = 800,000 × 20% = 160,000، فيصبح الأساس 640,000. القيمة الدفترية 910,000 − 90,000 = 820,000؛ الفرق الخاضع 180,000 والالتزام الختامي 54,000. مصروف الضريبة المؤجلة لسنة 20X2 = 54,000 − 33,000 = 21,000، وليس 54,000.", "20X2 tax deduction is $800,000 × 20% = $160,000, leaving tax base $640,000. Carrying amount is $910,000 − $90,000 = $820,000; taxable difference $180,000 and closing liability $54,000. The 20X2 deferred-tax charge is $54,000 − $33,000 = $21,000, not $54,000."),
+        ],
+        conclusion: text("يعرض التزام ضريبة مؤجلة 54,000 في 31 ديسمبر 20X2 ومصروف زيادة 21,000 في ربح أو خسارة السنة، بافتراض عدم وجود حركة أخرى.", "Present a $54,000 deferred tax liability at 31 December 20X2 and a $21,000 increase in that year's profit or loss, assuming no other movements."),
+        journalEntries: [
+          { label: text("زيادة الالتزام المؤجل في 20X2", "Increase in deferred tax liability in 20X2"), debit: text("مصروف ضريبة مؤجلة", "Deferred tax expense"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("21,000 دولار", "$21,000") },
+        ],
+        reference: "IAS 12.7, 15, 17, 47, 58",
+      },
+      {
+        title: text("Epsilon: تطوير مرسمل وخصم ضريبي فوري", "Epsilon: capitalised development and immediate tax deduction"),
+        facts: text(
+          "رسملت Epsilon نفقات تطوير مؤهلة قدرها 1,600,000 دولار خلال السنة المنتهية في 31 مارس 20X4. بدأ الأصل توليد المنافع وأصبح متاحًا للاستخدام في 1 يناير 20X4، وعمره النافع المتوقع خمس سنوات من ذلك التاريخ؛ يوزع الإطفاء شهريًا. خُصم الإنفاق كله ضريبيًا خلال السنة نفسها، ومعدل الضريبة 25%.",
+          "Epsilon capitalises $1,600,000 of qualifying development expenditure during the year to 31 March 20X4. The asset starts generating benefits and is available for use on 1 January 20X4, with an expected five-year useful life from that date; amortisation is monthly. The full expenditure is deducted for tax in the same year and the tax rate is 25%.",
+        ),
+        calculations: [
+          text("إطفاء يناير–مارس = 1,600,000 ÷ 5 × 3/12 = 80,000؛ القيمة الدفترية في 31 مارس = 1,520,000. لم يبق خصم ضريبي للمبلغ المرسمل، فالأساس الضريبي صفر. الفرق الخاضع والالتزام المؤجل = 1,520,000 × 25% = 380,000 دولار.", "January–March amortisation = $1,600,000 ÷ 5 × 3/12 = $80,000; 31 March carrying amount is $1,520,000. No further tax deduction remains for the capitalised cost, so tax base is nil. Taxable difference is $1,520,000 and deferred tax liability is $1,520,000 × 25% = $380,000."),
+        ],
+        conclusion: text("يثبت التزام ضريبة مؤجلة 380,000 عند نهاية السنة. لا ينطبق إعفاء الاعتراف الأول على أساس أن المعاملة لم تؤثر في الربح الضريبي؛ فقد خُصم الإنفاق فعلًا عند تكبده.", "Recognise a $380,000 deferred tax liability at year-end. The initial-recognition exception cannot be justified by claiming the transaction did not affect taxable profit: the expenditure was in fact deducted when incurred."),
+        journalEntries: [
+          { label: text("أثر الفرق المؤقت عند نهاية السنة", "Year-end temporary-difference effect"), debit: text("مصروف ضريبة مؤجلة", "Deferred tax expense"), credit: text("التزام ضريبة مؤجلة", "Deferred tax liability"), amount: text("380,000 دولار", "$380,000") },
+        ],
+        reference: "IAS 12.7, 15, 17, 47, 58; IAS 38.97",
       },
     ],
   },

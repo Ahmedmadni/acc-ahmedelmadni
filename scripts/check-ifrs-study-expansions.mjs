@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-catsu-tax-depreciation",
+  "ifrs-book2-epsilon-development-tax",
   "ifrs-book2-darton-current-tax-true-up",
   "ifrs-book2-alpha-beta-acquisition-tax",
   "ifrs-book2-bets-cash-flow-hedge-cumulative",
@@ -180,6 +182,13 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Catsu accounting depreciation", (1000000 - 100000) / 10, 90000],
+  ["Catsu year-one deferred tax", (910000 - 800000) * 0.3, 33000],
+  ["Catsu year-two tax base", 800000 * (1 - 0.2), 640000],
+  ["Catsu year-two deferred tax balance", (820000 - 640000) * 0.3, 54000],
+  ["Catsu year-two deferred tax charge", 54000 - 33000, 21000],
+  ["Epsilon three-month amortisation", (1600000 / 5) * (3 / 12), 80000],
+  ["Epsilon deferred tax liability", (1600000 - 80000) * 0.25, 380000],
   ["Pappa intragroup profit", 200 - 150, 50],
   ["Pappa current tax", (200 - 150) * 0.4, 20],
   ["Sierra deferred tax asset on group difference", (200 - 150) * 0.5, 25],
