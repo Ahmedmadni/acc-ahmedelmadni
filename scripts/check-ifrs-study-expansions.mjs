@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-jules-inventory-fair-value-hedge",
   "ifrs-book2-rathbone-compound-bond",
   "ifrs-book2-redblack-receivables-matrix",
   "ifrs-book2-plyman-accumulating-sick-leave",
@@ -147,6 +148,11 @@ for (const id of protectedPracticeIds) {
   if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
 }
 if (
+  openPracticeCases.find((item) => item.id === "ifrs-book2-jules-inventory-fair-value-hedge")
+    ?.standardCode !== "IFRS 9"
+)
+  failures.push("Jules fair value hedge case must stay with IFRS 9");
+if (
   openPracticeCases.find((item) => item.id === "ifrs-book2-rathbone-compound-bond")
     ?.standardCode !== "IAS 32"
 )
@@ -166,6 +172,13 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Jules year-end hedged-item gain", 10000 * (220 - 200), 200000],
+  ["Jules year-end futures loss", 10000 * (227 - 210), 170000],
+  ["Jules year-end net gain", 200000 - 170000, 30000],
+  ["Jules subsequent hedged-item gain", 10000 * (230 - 220), 100000],
+  ["Jules subsequent futures loss", 10000 * (230 - 227), 30000],
+  ["Jules settlement liability", 170000 + 30000, 200000],
+  ["Jules whole-trade profit", 2300000 - 2000000 - 200000, 100000],
   ["Rathbone precise liability", Math.round((2000000 / 1.09 ** 3 + 120000 * [1, 2, 3].reduce((sum, year) => sum + 1 / 1.09 ** year, 0)) * 100) / 100, 1848122.32],
   ["Rathbone precise equity residual", Math.round((2000000 - (2000000 / 1.09 ** 3 + 120000 * [1, 2, 3].reduce((sum, year) => sum + 1 / 1.09 ** year, 0))) * 100) / 100, 151877.68],
   ["Rathbone truncated-factor equity", 2000000 - (2000000 * 0.772 + 120000 * 2.531), 152280],

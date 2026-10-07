@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-jules-inventory-fair-value-hedge",
+    standardCode: "IFRS 9",
+    title: text("Jules: قيود تحوط القيمة العادلة للمخزون", "Jules: entries for an inventory fair value hedge"),
+    facts: text(
+      "اشترت Jules في 1 يوليو 20X6 عدد 10,000 أونصة من معدن بسعر 200 دولار للأونصة. وعيّنت عقد بيع مستقبلي لها بسعر 210 دولارات للتسليم في 30 يونيو 20X7 تحوطًا مؤهلًا ومُوثقًا لخطر السعر. في 31 ديسمبر 20X6 كان سعر المعدن 220 دولارًا وسعر العقد المستقبلي 227 دولارًا للأونصة. في 30 يونيو 20X7 بيع المخزون وأغلق العقد بسعر فوري 230 دولارًا. افترض أن 200 دولار كان السعر عند التعيين، وأن تغير الأسعار المعطى يمثل تغير الخطر المحوّط والقيمة العادلة للعقد دون أثر خصم أو هامش جوهري.",
+      "Jules bought 10,000 ounces of metal on 1 July 20X6 at $200 per ounce and designated a futures sale at $210 for delivery on 30 June 20X7 as a qualifying, documented hedge of price risk. At 31 December 20X6 metal price was $220 and the futures price $227 per ounce. On 30 June 20X7 inventory was sold and the future closed at a $230 spot price. Assume $200 was the designation-date price and that quoted price movements represent hedged-risk and derivative fair value changes without material discount or margin effects.",
+    ),
+    question: text(
+      "بيّن قيود العقد والمخزون في تاريخ التقرير والتسوية والبيع، واحسب صافي أثر التحوط. لماذا لا تعني الزيادة في المخزون اختيار نموذج قيمة عادلة عام؟",
+      "Show derivative and inventory entries at reporting date, settlement and sale, and calculate the hedge's net effect. Why is the inventory uplift not a general fair-value accounting policy?",
+    ),
+    solution: [
+      text("في 31 ديسمبر تثبت خسارة مشتق 170,000 مدينًا والتزام عقد 170,000 دائنًا؛ وتزيد قيمة المخزون 200,000 مدينًا مع ربح بند محوّط 200,000 دائنًا. الصافي في الربح أو الخسارة 30,000، ورصيد المخزون 2,200,000.", "At 31 December debit derivative loss $170,000 and credit futures liability $170,000; debit inventory $200,000 and credit hedged-item gain $200,000. Net profit-or-loss effect is $30,000 and inventory carries $2,200,000."),
+      text("في 30 يونيو تثبت خسارة عقد إضافية 30,000 وربح تعديل مخزون إضافي 100,000، فيصبح المخزون 2,300,000 والتزام العقد 200,000. البيع: مدين نقدية 2,300,000 ودائن إيراد 2,300,000، ثم مدين تكلفة مبيعات 2,300,000 ودائن مخزون 2,300,000. تسوية العقد: مدين التزام 200,000 ودائن نقدية 200,000.", "At 30 June record a further $30,000 derivative loss and $100,000 inventory hedge gain, bringing inventory to $2,300,000 and futures liability to $200,000. On sale debit cash $2,300,000/credit revenue $2,300,000, then debit cost of sales $2,300,000/credit inventory $2,300,000. Settle the future by debiting its $200,000 liability and crediting cash."),
+      text("النتيجة الكلية = 2,300,000 متحصل − 2,000,000 تكلفة أصلية − 200,000 تسوية عقد = 100,000 دولار؛ تقسم محاسبيًا إلى 30,000 حتى ديسمبر و70,000 بعده. تعديل المخزون يخص فقط تغير الخطر المعين في علاقة تحوط مستوفية IFRS 9. بخلاف ذلك تطبق قواعد IAS 2 المعتادة، ولا يُرفع كل المخزون للقيمة العادلة لمجرد ارتفاع السوق.", "Overall result = $2,300,000 sale proceeds − $2,000,000 original cost − $200,000 futures settlement = $100,000, reflected as $30,000 through December and $70,000 thereafter. The inventory adjustment is limited to the designated risk in a qualifying IFRS 9 hedge. Otherwise normal IAS 2 measurement applies; a market-price rise does not revalue all inventory."),
+    ],
+    reference: "IFRS 9.6.4.1, 6.5.2(a), 6.5.8; IAS 2.9, 34",
+  },
+  {
     id: "ifrs-book2-rathbone-compound-bond",
     standardCode: "IAS 32",
     title: text("Rathbone: قيمة خيار تحويل السند", "Rathbone: value of a bond conversion option"),
