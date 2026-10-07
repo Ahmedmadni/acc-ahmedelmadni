@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-bets-cash-flow-hedge-cumulative",
   "ifrs-book2-jules-inventory-fair-value-hedge",
   "ifrs-book2-rathbone-compound-bond",
   "ifrs-book2-redblack-receivables-matrix",
@@ -148,6 +149,11 @@ for (const id of protectedPracticeIds) {
   if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
 }
 if (
+  openPracticeCases.find((item) => item.id === "ifrs-book2-bets-cash-flow-hedge-cumulative")
+    ?.standardCode !== "IFRS 9"
+)
+  failures.push("Bets cash flow hedge case must stay with IFRS 9");
+if (
   openPracticeCases.find((item) => item.id === "ifrs-book2-jules-inventory-fair-value-hedge")
     ?.standardCode !== "IFRS 9"
 )
@@ -172,6 +178,14 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Bets inception locked dollar outflow", 60000000 / 1.5, 40000000],
+  ["Bets December derivative gain", Math.round((60000000 / 1.24 - 60000000 / 1.5) * 100) / 100, 8387096.77],
+  ["Bets December exposure change", Math.round((60000000 / 1.2 - 60000000 / 1.45) * 100) / 100, 8620689.66],
+  ["Bets closing cumulative derivative gain", 60000000 / 1 - 60000000 / 1.5, 20000000],
+  ["Bets closing cumulative hedged change", Math.round((60000000 / 1 - 60000000 / 1.45) * 100) / 100, 18620689.66],
+  ["Bets second-period reserve movement on rounded balances", 18620689.66 - 8387096.77, 10233592.89],
+  ["Bets cumulative ineffectiveness", 20000000 - 18620689.66, 1379310.34],
+  ["Bets asset after basis adjustment", 60000000 - 18620689.66, 41379310.34],
   ["Jules year-end hedged-item gain", 10000 * (220 - 200), 200000],
   ["Jules year-end futures loss", 10000 * (227 - 210), 170000],
   ["Jules year-end net gain", 200000 - 170000, 30000],
