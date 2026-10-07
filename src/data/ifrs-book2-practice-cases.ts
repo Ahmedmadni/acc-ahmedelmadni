@@ -15,6 +15,21 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-rathbone-compound-bond",
+    standardCode: "IAS 32",
+    title: text("Rathbone: قيمة خيار تحويل السند", "Rathbone: value of a bond conversion option"),
+    facts: text(
+      "في بداية 20X2 أصدرت Rathbone عدد 2,000 سند قابل للتحويل بقيمة اسمية ومتحصل 1,000 دولار لكل سند. مدته ثلاث سنوات وكوبونه 6% سنويًا في نهاية السنة، ويحوّل كل سند إلى 250 سهمًا عاديًا عند اختيار الحامل خلال مدته. عائد دين مشابه بلا تحويل 9%. سعر السهم عند الإصدار 3 دولارات والتوزيع المتوقع 0.14 دولار للسهم. افترض استيفاء خيار التحويل شرط مبلغ ثابت مقابل عدد ثابت وعدم وجود بديل تسوية نقدية أو تكاليف إصدار.",
+      "At the start of 20X2 Rathbone issues 2,000 convertible bonds for $1,000 each, equal to face value. The term is three years, coupon 6% annually in arrears, and each bond converts at the holder's option into 250 ordinary shares during its term. Comparable debt without conversion yields 9%. Issue-date share price is $3 and expected dividend $0.14 a share. Assume a fixed-for-fixed option, no alternative cash settlement and no issue costs.",
+    ),
+    question: text("ما قيمة مكون حقوق الملكية لخيار التحويل عند الإصدار؟ احسب مكون الدين أولًا، وبيّن أثر تقريب معاملات الخصم.", "What is the issue-date equity component of the conversion option? Value the debt first and explain the effect of rounded discount factors."),
+    solution: [
+      text("متحصل الإصدار 2,000,000 دولار والكوبون السنوي 120,000. بسعر 9%، القيمة الحالية للأصل 1,544,366.96 والكوبونات 303,755.36، فيساوي مكون الالتزام 1,848,122.32 دولار.", "Proceeds are $2,000,000 and annual coupon $120,000. At 9%, principal present value is $1,544,366.96 and coupons $303,755.36, giving a $1,848,122.32 liability component."),
+      text("مكون خيار التحويل = 2,000,000 − 1,848,122.32 = 151,877.68 دولار ضمن حقوق الملكية. معاملات خصم مختصرة 0.772 للأصل و2.531 للكوبونات تعطي تقريبًا 152,280 للخيار؛ لا تختلط فروق التقريب مع فروق التصنيف. سعر السهم والتوزيع المتوقع ليسا مدخلين لهذا التخصيص بطريقة الباقي.", "Residual equity option = $2,000,000 − $1,848,122.32 = $151,877.68. Shortened factors of 0.772 for principal and 2.531 for coupons give about $152,280 for the option; do not mistake factor rounding for a classification difference. Share price and expected dividend do not enter this residual allocation."),
+    ],
+    reference: "IAS 32.16, 22, 28–32, AG30–AG35; IFRS 9.5.4.1",
+  },
+  {
     id: "ifrs-book2-redblack-receivables-matrix",
     standardCode: "IFRS 9",
     title: text("Redblack: مصفوفة خسائر الذمم لسنتين", "Redblack: two-year receivables loss matrix"),
