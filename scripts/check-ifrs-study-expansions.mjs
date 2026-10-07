@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-rathbone-compound-bond",
   "ifrs-book2-redblack-receivables-matrix",
   "ifrs-book2-plyman-accumulating-sick-leave",
   "ifrs-book2-factory-termination-retention",
@@ -146,6 +147,11 @@ for (const id of protectedPracticeIds) {
   if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
 }
 if (
+  openPracticeCases.find((item) => item.id === "ifrs-book2-rathbone-compound-bond")
+    ?.standardCode !== "IAS 32"
+)
+  failures.push("Rathbone convertible bond case must stay with IAS 32");
+if (
   openPracticeCases.find((item) => item.id === "ifrs-book2-redblack-receivables-matrix")
     ?.standardCode !== "IFRS 9"
 )
@@ -160,6 +166,9 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["Rathbone precise liability", Math.round((2000000 / 1.09 ** 3 + 120000 * [1, 2, 3].reduce((sum, year) => sum + 1 / 1.09 ** year, 0)) * 100) / 100, 1848122.32],
+  ["Rathbone precise equity residual", Math.round((2000000 - (2000000 / 1.09 ** 3 + 120000 * [1, 2, 3].reduce((sum, year) => sum + 1 / 1.09 ** year, 0))) * 100) / 100, 151877.68],
+  ["Rathbone truncated-factor equity", 2000000 - (2000000 * 0.772 + 120000 * 2.531), 152280],
   [
     "Redblack 20X4 allowance",
     30000000 * 0.003 + 15000000 * 0.016 + 8000000 * 0.036 + 5000000 * 0.066 + 2000000 * 0.106,

@@ -8,6 +8,43 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 32": {
+    sections: [
+      {
+        title: text("السند القابل للتحويل: قيّم الدين أولًا ثم خيار الأسهم", "Convertible bond: value the debt before the share option"),
+        explanation: text(
+          "إذا ألزم السند المصدر بسداد نقد أو كوبونات ومنح حامله خيار تحويل مؤهلًا إلى عدد ثابت من أسهم المصدر مقابل مبلغ ثابت، فهو أداة مركبة: التزام مالي وخيار حقوق ملكية منفصلان. حدد القيمة العادلة للالتزام بما كان سيدفعه السوق لسند مماثل بلا حق تحويل؛ اخصم أصل الدين والكوبونات بسعر دين مماثل، ثم خصص باقي متحصلات الإصدار لحقوق الملكية. سعر السهم الحالي والتوزيعات المتوقعة لا يحلان محل سعر الدين في هذه الطريقة. بعد الإصدار تبقى قيمة الخيار في حقوق الملكية دون إعادة قياس بسبب تغير احتمال التحويل، بينما يقاس الالتزام بالتكلفة المستهلكة وبالفائدة الفعلية. تحقق أولًا من عدم وجود بديل تسوية نقدية أو شرط يجعل عدد الأسهم أو مبلغ المقابل متغيرًا، فقد يغير ذلك تصنيف الخيار.",
+          "If the issuer must pay cash principal or coupons and the holder has a qualifying option to exchange a fixed amount for a fixed number of the issuer's shares, the bond contains separately presented debt and equity components. First measure the liability at the value of comparable debt without conversion by discounting principal and coupons at that debt yield; assign the residual proceeds to equity. Current share price and expected dividends do not replace the comparable debt yield in this allocation. Subsequently, the equity option is not remeasured for changes in conversion likelihood, while the liability follows amortised cost and effective interest. First inspect any cash-settlement alternative or variable share or consideration clause, which may change the option's classification.",
+        ),
+        keyPoints: [
+          text("اختبر مبلغًا ثابتًا مقابل عدد ثابت قبل افتراض أن خيار التحويل حقوق ملكية.", "Test fixed consideration for a fixed number of shares before treating the conversion option as equity."),
+          text("استخدم معاملات خصم دقيقة؛ المعاملات المدوّرة قد تغير الباقي المخصص للخيار.", "Use sufficiently precise discount factors; rounded factors change the residual allocated to the option."),
+          text("مكون حقوق الملكية ثابت بعد الإصدار، أما رصيد الدين فيتغير بالفائدة الفعلية والكوبونات.", "The equity component remains fixed after issue; the debt balance changes with effective interest and coupons."),
+        ],
+        reference: "IAS 32.16, 22, 28–32, AG30–AG35; IFRS 9.5.4.1",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Rathbone: فصل 2,000 سند قابل للتحويل", "Rathbone: separating 2,000 convertible bonds"),
+        facts: text(
+          "أصدرت Rathbone في بداية 20X2 عدد 2,000 سند قابل للتحويل، القيمة الاسمية ومتحصل الإصدار لكل منها 1,000 دولار، لمدة ثلاث سنوات. الكوبون السنوي 6% يدفع آخر كل سنة، ويجوز تحويل كل سند إلى 250 سهمًا عاديًا خلال المدة. عائد سند مماثل بلا خيار تحويل 9%. يفترض أن خيار التحويل يفي بشرط المبلغ الثابت مقابل العدد الثابت، ولا توجد بدائل تسوية أخرى أو تكاليف إصدار. سعر السهم الحالي 3 دولارات والتوزيع المتوقع 0.14 دولار للسهم، لكنهما لا يدخلان تقييم جزء الدين.",
+          "At the start of 20X2, Rathbone issues 2,000 three-year convertible bonds at face value and proceeds of $1,000 each. The 6% annual coupon is paid in arrears, and each bond can convert to 250 ordinary shares during its term. Comparable debt without conversion yields 9%. Assume the conversion option meets fixed-for-fixed, with no other settlement alternatives or issue costs. Current share price is $3 and expected dividend $0.14 a share, neither of which measures the debt component.",
+        ),
+        calculations: [
+          text("المتحصلات = 2,000 × 1,000 = 2,000,000 دولار، والكوبون السنوي = 2,000,000 × 6% = 120,000. القيمة الحالية لأصل الدين = 2,000,000 ÷ 1.09³ = 1,544,366.96؛ القيمة الحالية للكوبونات = 120,000 × (1/1.09 + 1/1.09² + 1/1.09³) = 303,755.36.", "Proceeds are 2,000 × $1,000 = $2,000,000 and annual coupon is $2,000,000 × 6% = $120,000. Principal present value = $2,000,000 ÷ 1.09³ = $1,544,366.96; coupon present value = $120,000 × (1/1.09 + 1/1.09² + 1/1.09³) = $303,755.36."),
+          text("مكون الالتزام = 1,848,122.32 دولار؛ مكون حقوق الملكية المتبقي = 151,877.68. إن استُخدمت معاملات مختصرة إلى 0.772 و2.531، تنتج قيمة التزام تقريبية 1,847,720 وخيار 152,280؛ الفارق 402.32 دولار سببه تقريب المعاملات لا اختلاف المبدأ.", "Liability component = $1,848,122.32; residual equity component = $151,877.68. Truncating discount factors to 0.772 and 2.531 gives an approximate $1,847,720 liability and $152,280 option; the $402.32 difference is discount-factor rounding, not a different accounting principle."),
+          text("تكلفة الفائدة الفعلية للسنة الأولى = 1,848,122.32 × 9% = 166,331.01؛ بعد دفع كوبون 120,000 يصبح رصيد الالتزام نحو 1,894,453.33. لا يعاد قياس خيار حقوق الملكية البالغ 151,877.68.", "First-year effective interest is $1,848,122.32 × 9% = $166,331.01; after the $120,000 coupon, the liability is about $1,894,453.33. The $151,877.68 equity option is not remeasured."),
+        ],
+        conclusion: text("يعرض عند الإصدار التزام 1,848,122.32 وخيار تحويل ضمن حقوق الملكية 151,877.68 باستخدام خصم 9% الدقيق، بشرط ثبات التحويل. لا تستخدم سعر السهم أو توزيعاته لقياس هذا الباقي.", "At issue, present a $1,848,122.32 liability and a $151,877.68 equity conversion option using precise 9% discounting, subject to fixed-for-fixed conversion. Do not use the share price or dividend to measure this residual."),
+        journalEntries: [
+          { label: text("إصدار السند المركب", "Issue the compound bond"), debit: text("نقدية", "Cash"), credit: text("التزام سند 1,848,122.32 + خيار تحويل ضمن حقوق الملكية 151,877.68", "Bond liability $1,848,122.32 + equity conversion option $151,877.68"), amount: text("2,000,000 دولار", "$2,000,000") },
+          { label: text("فائدة السنة الأولى وسداد الكوبون", "Year-one interest and coupon"), debit: text("مصروف تمويل", "Finance cost"), credit: text("نقدية 120,000 + التزام سند 46,331.01", "Cash $120,000 + bond liability $46,331.01"), amount: text("166,331.01 دولار", "$166,331.01") },
+        ],
+        reference: "IAS 32.28–32, AG30–AG35; IFRS 9.5.4.1",
+      },
+    ],
+  },
   "IFRS 9": {
     sections: [
       {
