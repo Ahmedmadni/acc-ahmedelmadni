@@ -15,6 +15,60 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-doug-development-threshold",
+    standardCode: "IAS 38",
+    title: text(
+      "Doug Co: متى تبدأ رسملة مشروع التطوير؟",
+      "Doug Co: when does development capitalisation begin?",
+    ),
+    facts: text(
+      "أنفقت Doug Co خلال 20X3 مبلغ 100,000 دولار لتطوير عملية إنتاج؛ تكبدت 90,000 قبل 1 ديسمبر و10,000 من 1 إلى 31 ديسمبر. استطاعت في 1 ديسمبر لأول مرة إثبات جميع معايير الاعتراف بأصل غير ملموس، وقدرت القيمة القابلة للاسترداد للمعرفة الفنية بـ50,000 في نهاية السنة.",
+      "In 20X3 Doug Co spent $100,000 developing a production process: $90,000 before 1 December and $10,000 from 1 to 31 December. On 1 December it could first demonstrate all intangible-asset recognition criteria. At year-end, the know-how's recoverable amount was estimated at $50,000.",
+    ),
+    question: text(
+      "كم من الإنفاق يُعترف به أصلًا في 31 ديسمبر، وكم يُحمل على المصروف؟ هل تسمح القيمة القابلة للاسترداد برسملة النفقات السابقة؟",
+      "How much expenditure is recognised as an asset at 31 December and how much is expensed? Can the recoverable amount justify capitalising earlier expenditure?",
+    ),
+    solution: [
+      text(
+        "يُعترف بأصل تطوير 10,000 دولار فقط، وهي النفقة منذ تاريخ تحقق جميع الشروط. تحمل 90,000 دولار السابقة على مصروف 20X3 ولا يُعاد إثباتها أصلًا بأثر رجعي.",
+        "Recognise only the $10,000 incurred from the date all criteria were demonstrated as development cost. Expense the earlier $90,000 in 20X3; it is not reinstated retrospectively.",
+      ),
+      text(
+        "القيمة القابلة للاسترداد البالغة 50,000 ليست تكلفة الأصل ولا تسمح برفعه إليها؛ وعلى الأرقام المعطاة لا تشير إلى انخفاض عن التكلفة المعترف بها. لا يُحسب إهلاك دون تاريخ إتاحة الأصل للاستخدام وعمره النافع.",
+        "The $50,000 recoverable amount is not asset cost and does not uplift the asset to that amount; the supplied figures do not suggest impairment below recognised cost. Amortisation cannot be calculated without an available-for-use date and useful life.",
+      ),
+    ],
+    reference: "IAS 38.54–57, 65–67, 71; IAS 36.18",
+  },
+  {
+    id: "ifrs-book2-intangible-downward-revaluation",
+    standardCode: "IAS 38",
+    title: text(
+      "هبوط إعادة تقييم أصل غير ملموس بعد تكوين فائض",
+      "Intangible downward revaluation after a previous surplus",
+    ),
+    facts: text(
+      "تطبق منشأة نموذج إعادة تقييم مسموحًا لأصل غير ملموس بافتراض وجود سوق نشط. بلغ فائض إعادة التقييم الخاص بالأصل 400 دولار بعد زيادة في 20X3. في نهاية 20X4 انخفضت قيمته الدفترية 500 دولار، ولا توجد تغيرات أخرى في الفائض.",
+      "An entity applies a permitted revaluation model to an intangible, assuming an active market. A 20X3 increase created a $400 surplus for that asset. At the end of 20X4 its carrying amount must decrease by $500, with no other surplus movements.",
+    ),
+    question: text(
+      "وزع هبوط 500 دولار بين الدخل الشامل الآخر والربح أو الخسارة، وبين أثره على فائض إعادة التقييم.",
+      "Allocate the $500 decrease between other comprehensive income and profit or loss, and state its effect on the revaluation surplus.",
+    ),
+    solution: [
+      text(
+        "يثبت 400 دولار من الانخفاض في الدخل الشامل الآخر ويخفض رصيد فائض هذا الأصل إلى صفر، ويثبت 100 دولار المتبقية خسارة في الربح أو الخسارة. القيد المجمع: مدين الدخل الشامل الآخر 400 ومدين خسارة إعادة التقييم 100؛ دائن الأصل 500.",
+        "Recognise $400 of the decrease in other comprehensive income, reducing this asset's surplus to nil, and the remaining $100 as a loss in profit or loss. Combined entry: debit OCI $400 and revaluation loss $100; credit the asset $500.",
+      ),
+      text(
+        "هذه النتيجة تفترض أن نموذج إعادة التقييم متاح لوجود سوق نشط، وأن الـ400 تتعلق بالأصل نفسه. لا يُسحب من فائض أصل آخر.",
+        "This assumes an active market permits revaluation and that the $400 belongs to this same asset. Another asset's surplus cannot be used.",
+      ),
+    ],
+    reference: "IAS 38.75–78, 86",
+  },
+  {
     id: "ifrs-book2-capital-sale-leaseback",
     standardCode: "IFRS 16",
     title: text(

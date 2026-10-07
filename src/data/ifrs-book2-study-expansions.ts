@@ -8,6 +8,113 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 38": {
+    sections: [
+      {
+        title: text(
+          "تاريخ استيفاء شروط التطوير هو بداية الأصل",
+          "The development criteria date is the asset's starting point",
+        ),
+        explanation: text(
+          "تُحمل تكاليف البحث والتطوير السابقة لتاريخ إثبات شروط IAS 38 الستة جميعًا على المصروف. من ذلك التاريخ فقط يبدأ تجميع تكاليف الأصل غير الملموس. نجاح المشروع لاحقًا أو ارتفاع قيمته القابلة للاسترداد لا يسمح بإعادة رسملة ما سبق إثباته مصروفًا. افصل في ملف المشروع بين إثبات الجدوى والموارد والقدرة على البيع أو الاستخدام، وتاريخ كل نفقة.",
+          "Expense research and development costs incurred before all six IAS 38 criteria can be demonstrated. Only costs from that date form the internally generated intangible's cost. Later success or a high recoverable amount does not permit reinstatement of earlier expenses. Record evidence of feasibility, resources and ability to use or sell alongside each expenditure date.",
+        ),
+        keyPoints: [
+          text(
+            "الرسملة تبدأ مستقبلًا عندما تُثبت كل الشروط؛ ليست خيارًا بأثر رجعي.",
+            "Capitalisation begins prospectively once every criterion is demonstrated; it is not a retrospective choice.",
+          ),
+          text(
+            "لا تخلط بين تكلفة الأصل والقيمة القابلة للاسترداد في اختبار الانخفاض.",
+            "Do not confuse asset cost with recoverable amount in an impairment test.",
+          ),
+        ],
+        reference: "IAS 38.54–57, 65–67, 71; IAS 36.18",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text(
+          "مشروع تطوير: إنفاق قبل استيفاء الشروط وبعده",
+          "Development spending before and after the criteria date",
+        ),
+        facts: text(
+          "أنفقت Doug Co مبلغ 100,000 دولار على عملية إنتاج جديدة خلال 20X3: منها 90,000 قبل 1 ديسمبر و10,000 في ديسمبر. في 1 ديسمبر أمكن إثبات جميع شروط الاعتراف بأصل تطوير. قدرت القيمة القابلة للاسترداد للمعرفة الفنية الناتجة في نهاية السنة بـ50,000 دولار. لا يحدد السؤال متى أصبح الأصل متاحًا للاستخدام أو عمره النافع.",
+          "Doug Co spent $100,000 on a new production process in 20X3: $90,000 before 1 December and $10,000 during December. All development-asset recognition criteria could first be demonstrated on 1 December. The resulting know-how's year-end recoverable amount was estimated at $50,000. The facts do not specify an available-for-use date or useful life.",
+        ),
+        calculations: [
+          text(
+            "تكلفة الأصل المؤهل = 10,000 فقط منذ 1 ديسمبر. تبقى الـ90,000 السابقة مصروفًا، ولا يعاد إثباتها أصلًا عند نجاح المشروع.",
+            "Qualifying asset cost is only the $10,000 incurred from 1 December. The earlier $90,000 remains expense and is not reinstated after the project's success.",
+          ),
+          text(
+            "القيمة القابلة للاسترداد 50,000 لا ترفع تكلفة الأصل من 10,000 إلى 50,000، ولا تشير الأرقام المعطاة إلى خسارة انخفاض. لا يخترع المثال إهلاكًا دون تاريخ الإتاحة والعمر النافع.",
+            "The $50,000 recoverable amount does not uplift $10,000 cost to $50,000, and the supplied figures do not indicate impairment. No amortisation is invented without an available-for-use date and useful life.",
+          ),
+        ],
+        conclusion: text(
+          "تظهر تكلفة تطوير 10,000 دولار قبل أي إهلاك يحتاج وقائع إضافية، مع مصروف سابق 90,000 دولار في 20X3.",
+          "Development cost is $10,000 before any amortisation needing further facts, while $90,000 is a 20X3 expense.",
+        ),
+        journalEntries: [
+          {
+            label: text("الإنفاق السابق لاستيفاء الشروط", "Spending before the criteria date"),
+            debit: text("مصروف بحث وتطوير", "Research and development expense"),
+            credit: text("نقدية أو دائنون", "Cash or payables"),
+            amount: text("90,000 دولار", "$90,000"),
+          },
+          {
+            label: text("التطوير المؤهل منذ 1 ديسمبر", "Qualifying development from 1 December"),
+            debit: text("أصل غير ملموس — تطوير", "Intangible asset — development"),
+            credit: text("نقدية أو دائنون", "Cash or payables"),
+            amount: text("10,000 دولار", "$10,000"),
+          },
+        ],
+        reference: "IAS 38.54–57, 65–67, 71; IAS 36.18",
+      },
+      {
+        title: text(
+          "هبوط إعادة تقييم يتجاوز فائض الأصل",
+          "Downward revaluation exceeding the asset's surplus",
+        ),
+        facts: text(
+          "لأصل غير ملموس مطبق عليه نموذج إعادة التقييم بافتراض وجود سوق نشط، رصيد فائض خاص به 400 دولار من إعادة تقييم 20X3. في نهاية 20X4 لزم خفض قيمته الدفترية 500 دولار، دون تغير آخر في فائض الأصل.",
+          "For an intangible measured under the revaluation model, assuming an active market, a $400 surplus for that asset arose in 20X3. At the end of 20X4 its carrying amount must fall by $500, with no other change in this asset's surplus.",
+        ),
+        calculations: [
+          text(
+            "من هبوط 500 دولار، يُعترف بـ400 في الدخل الشامل الآخر مع خفض فائض الأصل إلى صفر، وبالـ100 الزائدة في الربح أو الخسارة.",
+            "Of the $500 decrease, $400 goes to other comprehensive income and reduces this asset's surplus to nil; the $100 excess goes to profit or loss.",
+          ),
+        ],
+        conclusion: text(
+          "لا يُسجل الانخفاض كله مصروفًا، ولا يُستخدم فائض أصل آخر. يشترط السوق النشط أصلًا لتطبيق نموذج إعادة التقييم.",
+          "Do not expense the entire decrease or use another asset's surplus. An active market is a prerequisite for this revaluation model.",
+        ),
+        journalEntries: [
+          {
+            label: text("الجزء المقابل لفائض الأصل", "Amount offset against this asset's surplus"),
+            debit: text(
+              "الدخل الشامل الآخر — فائض إعادة التقييم",
+              "Other comprehensive income — revaluation surplus",
+            ),
+            credit: text("الأصل غير الملموس", "Intangible asset"),
+            amount: text("400 دولار", "$400"),
+          },
+          {
+            label: text("الجزء الزائد على الفائض", "Amount exceeding the surplus"),
+            debit: text(
+              "خسارة إعادة تقييم — الربح أو الخسارة",
+              "Revaluation loss — profit or loss",
+            ),
+            credit: text("الأصل غير الملموس", "Intangible asset"),
+            amount: text("100 دولار", "$100"),
+          },
+        ],
+        reference: "IAS 38.75–78, 86",
+      },
+    ],
+  },
   "IAS 36": {
     sections: [
       {
