@@ -15,6 +15,41 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-capital-sale-leaseback",
+    standardCode: "IFRS 16",
+    title: text(
+      "Capital: بيع آلة وإعادة استئجارها مع فصل الربح والإهلاك",
+      "Capital: machine sale-and-leaseback with gain and depreciation separated",
+    ),
+    facts: text(
+      "في 1 أبريل 20X7 باعت Capital آلة قيمتها الدفترية 300,000 دولار مقابل قيمتها العادلة 400,000، ثم استأجرتها فورًا لخمس سنوات هي عمرها النافع المتبقي. دفعات الإيجار 90,000 سنويًا في نهاية كل سنة، ومعدل الفائدة 5%. معامل القيمة الحالية المعطى لخمس دفعات = 4.329، وهو معامل مقرب. يفترض السؤال أن نقل الأصل بيع وفق IFRS 15 وأن شروط البيع والإيجار سوقية، ولا توجد عناصر تعاقدية أخرى.",
+      "On 1 April 20X7 Capital sells a machine with a $300,000 carrying amount at its $400,000 fair value and immediately leases it back for five years, equal to its remaining useful life. Annual lease payments of $90,000 are due in arrears at 5%. The supplied five-payment present-value factor is 4.329, a rounded factor. Assume the transfer qualifies as a sale under IFRS 15, sale and lease terms are at market, and there are no other contract components.",
+    ),
+    question: text(
+      "احسب قيد البيع وإعادة الاستئجار، والمكسب الذي يجوز إثباته، وأثر السنة المنتهية في 31 مارس 20X8 على الربح أو الخسارة والقيمة الدفترية لحق الاستخدام والتزام الإيجار.",
+      "Calculate the sale-and-leaseback entry, recognisable gain, and the year to 31 March 20X8 effects on profit or loss and the carrying amounts of the right-of-use asset and lease liability.",
+    ),
+    solution: [
+      text(
+        "القيمة الحالية لدفعات الإيجار وفق المعامل المعطى = 90,000 × 4.329 = 389,610. نسبة الحق المحتفظ به = 389,610 ÷ 400,000 = 97.4025%. أصل حق الاستخدام عند البدء = 300,000 × 97.4025% = 292,207.50 دولار.",
+        "Present value using the supplied factor = $90,000 × 4.329 = $389,610. The retained-right proportion is $389,610 ÷ $400,000 = 97.4025%; the opening right-of-use asset is $300,000 × 97.4025% = $292,207.50.",
+      ),
+      text(
+        "الربح الإجمالي لو بيع الأصل دون احتفاظ بحق = 400,000 − 300,000 = 100,000. لا يعترف من هذا الربح إلا بالجزء المنقول للمشتري-المؤجر: 100,000 × (400,000 − 389,610) ÷ 400,000 = 2,597.50 دولار. قيد البدء: مدين نقدية 400,000 وحق استخدام 292,207.50؛ دائن الآلة 300,000 والتزام الإيجار 389,610 ومكسب الحقوق المنقولة 2,597.50.",
+        "The gain on an outright transfer would be $400,000 − $300,000 = $100,000. Only the transferred-right portion is recognised: $100,000 × ($400,000 − $389,610) ÷ $400,000 = $2,597.50. Opening entry: debit cash $400,000 and right-of-use asset $292,207.50; credit machine $300,000, lease liability $389,610 and transferred-right gain $2,597.50.",
+      ),
+      text(
+        "في السنة الأولى: إهلاك حق الاستخدام = 292,207.50 ÷ 5 = 58,441.50، وفائدة الالتزام = 389,610 × 5% = 19,480.50. بعد دفع 90,000 يصبح الالتزام في 31 مارس 20X8 = 389,610 + 19,480.50 − 90,000 = 319,090.50. القيمة الدفترية لحق الاستخدام بعد الإهلاك = 292,207.50 − 58,441.50 = 233,766.00، وليست قيمته عند البدء.",
+        "In year one, right-of-use depreciation is $292,207.50 ÷ 5 = $58,441.50 and interest is $389,610 × 5% = $19,480.50. After the $90,000 payment, the 31 March 20X8 liability is $389,610 + $19,480.50 − $90,000 = $319,090.50. The right-of-use asset's carrying amount after depreciation is $292,207.50 − $58,441.50 = $233,766.00, not its opening amount.",
+      ),
+      text(
+        "للتصنيف في 31 مارس 20X8، فائدة السنة التالية بالتقريب للسنتات = 319,090.50 × 5% = 15,954.53. الجزء الذي يسدد من أصل الالتزام خلال 12 شهرًا = 90,000 − 15,954.53 = 74,045.47 متداول، والمتبقي 245,045.03 غير متداول؛ مجموعهما 319,090.50. أثر الربح أو الخسارة خلال السنة: مكسب 2,597.50، ومصروف إهلاك 58,441.50، ومصروف تمويل 19,480.50.",
+        "For classification at 31 March 20X8, next year's interest rounded to cents is $319,090.50 × 5% = $15,954.53. Principal due within 12 months is $90,000 − $15,954.53 = $74,045.47 current, leaving $245,045.03 non-current; these total $319,090.50. Year-one profit or loss includes a $2,597.50 gain, $58,441.50 depreciation expense and $19,480.50 finance cost.",
+      ),
+    ],
+    reference: "IFRS 16.29–36, 98–102A; IFRS 15.31–38",
+  },
+  {
     id: "ifrs-book2-minimart-cgu",
     standardCode: "IAS 36",
     title: text(
