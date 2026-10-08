@@ -8,6 +8,45 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 6": {
+    sections: [
+      {
+        title: text("بوابة نطاق الاستكشاف: حق قانوني لا ملكية أرض", "Exploration scope gate: legal right, not land ownership"),
+        explanation: text(
+          "يبدأ نطاق IFRS 6 بعد حصول المنشأة على حق قانوني للاستكشاف في منطقة محددة وينتهي عندما يمكن إثبات الجدوى الفنية والقدرة التجارية للاستخراج. لا يشترط المعيار امتلاك الأرض؛ قد يكون الحق ترخيصًا أو امتيازًا منفصلًا. تحدد سياسة محاسبية متسقة أي نفقات الاستكشاف والتقييم ترتبط بالبحث عن مورد محدد وتُعترف بها أصلًا؛ اقتناء الحق والحفر الاستكشافي من الأمثلة المحتملة، ولا تعني القائمة رسملة كل إنفاق تلقائيًا. افصل تكلفة شراء الأرض نفسها، والمصاريف الإدارية العامة غير المرتبطة مباشرة، والإنفاق على الاستخراج بعد مرحلة الاستكشاف. كون بند خارج IFRS 6 لا يحدد وحده هل هو مصروف فوري أم مخزون أو أصل وفق معيار آخر.",
+          "IFRS 6 applies after an entity obtains a legal right to explore a specified area and before technical feasibility and commercial viability of extraction are demonstrable. The entity need not own the land: a separate licence or concession may supply the legal right. A consistently applied accounting policy identifies which exploration and evaluation expenditure associated with finding a specific resource is recognised as an asset. Acquiring rights and exploratory drilling are possible elements, not an automatic capitalisation rule. Separate the acquisition of land itself, unrelated general administration and extraction after the exploration phase. An item being outside IFRS 6 does not by itself prove it is immediately expensed rather than inventory or an asset under another Standard.",
+        ),
+        keyPoints: [
+          text("تحقق من تاريخ الحق القانوني وتاريخ ثبوت الجدوى قبل تصنيف أي فاتورة.", "Check the legal-right and feasibility dates before classifying each invoice."),
+          text("المبلغ المعروض بوحدة «ألف دولار» لا يُقرأ على أنه دولار واحد لكل وحدة رقمية.", "An amount stated in thousands of dollars must not be read as a dollar amount."),
+          text("إذا نشأ التزام إزالة أو إعادة تأهيل من الاستكشاف، افحص IAS 37 منفصلًا.", "If exploration creates a removal or restoration obligation, assess IAS 37 separately."),
+        ],
+        reference: "IFRS 6.3–11, Appendix A; IAS 16; IAS 37",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("فرز تكاليف Gold Diggers حسب المرحلة", "Gold Diggers: classify costs by phase"),
+        facts: text(
+          "خلال سنة الاستكشاف والتقييم تكبدت منشأة تعدين، بالألف دولار: مصروفًا قانونيًا لاقتناء الأرض 15,000، وللحصول على حق استكشافها 12,000، وحفرًا استكشافيًا 123,000، وأعباء إدارية عامة موزعة على المشروع 25,000، واستخراج ذهب 152,000. يفترض المثال وجود حق قانوني للاستكشاف وأن سياسة المنشأة ترسمل النفقات المباشرة المؤهلة.",
+          "During an exploration and evaluation year a miner incurred, in US$ thousands: legal costs of acquiring land 15,000; legal costs of obtaining exploration rights 12,000; exploratory drilling 123,000; allocated general administration 25,000; and gold extraction 152,000. The illustration assumes a legal exploration right and a policy that capitalises qualifying direct expenditure.",
+        ),
+        calculations: [
+          text("نفقات الاستكشاف والتقييم التي يمكن إدراجها في الأصل وفق السياسة المفترضة = 12,000 + 123,000 = 135,000 ألف دولار.", "Potential exploration and evaluation asset under the stated policy = 12,000 + 123,000 = US$135,000 thousand."),
+          text("مصروف اقتناء الأرض 15,000 ألف دولار منفصل عن أصل الاستكشاف؛ يدخل في تكلفة الأرض إذا استوفى شروط IAS 16.", "Land-acquisition legal cost of US$15,000 thousand is separate from the exploration asset and enters land cost if IAS 16 criteria are met."),
+          text("الأعباء الإدارية العامة 25,000 ألف دولار لا تندرج لمجرد توزيعها على المشروع؛ وتكلفة استخراج الذهب 152,000 ألف دولار تقع بعد نطاق الاستكشاف وتحتاج تحليل معيارها اللاحق.", "Allocated general administration of US$25,000 thousand is not included merely because it was allocated; US$152,000 thousand of gold extraction occurs outside the exploration phase and needs analysis under the later applicable Standard."),
+        ],
+        conclusion: text(
+          "الجواب عن «ما الذي يمكن رسملته كأصل استكشاف وتقييم وفق IFRS 6؟» هو حقوق الاستكشاف والحفر، بإجمالي 135,000 ألف دولار وفق السياسة المفترضة. لا يُقرر هذا الجواب مصير تكاليف الاستخراج وفق IAS 2 أو تكلفة الأرض وفق IAS 16 من دون الوقائع اللازمة.",
+          "For the question 'which costs may be capitalised as IFRS 6 exploration and evaluation assets?', the rights and drilling total US$135,000 thousand under the assumed policy. That answer does not settle the subsequent IAS 2 treatment of extraction costs or IAS 16 land costs without further facts.",
+        ),
+        journalEntries: [
+          { label: text("إثبات النفقات المباشرة المؤهلة وفق السياسة", "Recognise qualifying direct expenditure under the policy"), debit: text("أصل استكشاف وتقييم", "Exploration and evaluation asset"), credit: text("نقدية/دائنون", "Cash/payables"), amount: text("135,000 ألف دولار", "US$135,000 thousand") },
+        ],
+        reference: "IFRS 6.3–11, Appendix A; IAS 16; IAS 37",
+      },
+    ],
+  },
   "IAS 2": {
     sections: [
       {

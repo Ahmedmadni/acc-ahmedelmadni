@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-gold-diggers-exploration-costs",
+    standardCode: "IFRS 6",
+    title: text("فرز تكاليف الاستكشاف والتقييم", "Gold Diggers: exploration and evaluation costs"),
+    facts: text(
+      "تكبدت Gold Diggers خلال سنة استكشاف الذهب المصروفات التالية، وكل الأرقام بالألف دولار: مصروفات قانونية لاقتناء أرض الاستكشاف 15,000؛ مصروفات قانونية للحصول على حق استكشاف الأرض 12,000؛ تكاليف حفر استكشافي 123,000؛ أعباء إدارية عامة موزعة على استكشاف المنطقة 25,000؛ تكاليف استخراج ذهب 152,000. يفترض عند تطبيق الحل وجود حق قانوني للاستكشاف وسياسة محاسبية متسقة تعترف بالنفقات المباشرة المؤهلة أصلًا.",
+      "Gold Diggers Co incurred the following during a gold exploration year, all amounts in US$ thousands: legal expenses for acquiring land for exploration 15,000; legal expenses for acquiring the right to explore that land 12,000; exploratory drilling 123,000; general administrative overhead allocated to the area 25,000; and gold extraction 152,000. Applying the solution assumes legal exploration rights and a consistently applied policy recognising qualifying direct expenditure as an asset.",
+    ),
+    question: text(
+      "أي من هذه التكاليف يجوز رسملته ضمن أصول الاستكشاف والتقييم وفق IFRS 6؟",
+      "Which of the above costs may be capitalised as exploration and evaluation assets in accordance with IFRS 6?",
+    ),
+    solution: [
+      text("إذا شملتهما سياسة الاعتراف المتسقة، فإن تكلفة اقتناء حق الاستكشاف 12,000 وتكلفة الحفر الاستكشافي 123,000 من أمثلة النفقات المرتبطة بالبحث عن مورد محدد. الإجمالي المحتمل لأصل IFRS 6 هو 135,000 ألف دولار؛ مدين أصل استكشاف وتقييم، دائن نقدية/دائنون بالمبلغ نفسه.", "If covered by the consistent recognition policy, the 12,000 right-acquisition cost and 123,000 exploratory drilling cost are examples of expenditure associated with finding a specific resource. The potential IFRS 6 asset is US$135,000 thousand: debit exploration and evaluation asset, credit cash/payables."),
+      text("تكلفة اقتناء الأرض 15,000 ليست تكلفة أصل استكشاف IFRS 6 لمجرد وجود المشروع؛ تُفحص ضمن تكلفة الأرض وفق IAS 16 إن تحققت شروطها. الحصول على حق قانوني للاستكشاف لا يتطلب ملكية الأرض؛ لذلك لا يُعتمد تعليل الملكية المطلق.", "The 15,000 land-acquisition cost is not an IFRS 6 exploration asset merely because of the project; assess it as land cost under IAS 16 if its criteria are met. A legal right to explore does not require ownership of the land, so an absolute land-ownership rationale is not valid."),
+      text("توزيع أعباء إدارية عامة 25,000 لا يثبت ارتباطها المباشر باستكشاف المورد، فلا تدخل في أصل IFRS 6 بالوقائع المعطاة. استخراج الذهب 152,000 يقع خارج مرحلة الاستكشاف؛ لا يدخل أصل IFRS 6، ولا يُحكم بصرفه الفوري دون معرفة هل هو تكلفة مخزون إنتاج أو غير ذلك وفق معيار آخر.", "Allocating 25,000 of general administration does not demonstrate direct association with the resource search, so the stated facts do not support its inclusion in the IFRS 6 asset. Gold extraction of 152,000 is beyond the exploration phase and cannot be included in an IFRS 6 asset; without further facts one cannot conclude it is immediately expensed rather than production inventory or another item under a different Standard."),
+    ],
+    reference: "IFRS 6.3–11, Appendix A; IAS 16; IAS 2",
+  },
+  {
     id: "ifrs-book2-ias2-two-items-nrv",
     standardCode: "IAS 2",
     title: text("تقييم مخزون صنفين", "Two-item inventory valuation"),

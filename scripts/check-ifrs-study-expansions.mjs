@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-gold-diggers-exploration-costs",
   "ifrs-book2-ias2-two-items-nrv",
   "ifrs-book2-ias12-quiz-investment-difference",
   "ifrs-book2-ias12-quiz-three-differences",
@@ -197,6 +198,7 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IFRS 6 Gold Diggers qualifying E&E cost in thousands", 12000 + 123000, 135000],
   ["IAS 2 A unit cost", 160 + 15, 175],
   ["IAS 2 A unit NRV", 185 - 12, 173],
   ["IAS 2 A carrying amount", 300 * Math.min(160 + 15, 185 - 12), 51900],
