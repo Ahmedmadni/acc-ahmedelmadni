@@ -15,6 +15,68 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias1-quiz-current-assets",
+    standardCode: "IAS 1",
+    title: text("تحديد الأصول المتداولة", "Identify current assets"),
+    facts: text(
+      "تضم القائمة عقارات وآلات ومعدات، ومصروفات مدفوعة مقدمًا، ومعادلات نقدية، وتراخيص تصنيع، وأرباحًا محتجزة. لا يحدد السؤال آجال المدفوعات المقدمة.",
+      "The list contains property, plant and equipment, prepayments, cash equivalents, manufacturing licences and retained earnings. The prepayment periods are not specified.",
+    ),
+    question: text("أي البنود المذكورة يُصنف عادةً أصلًا متداولًا؟", "Which listed items would normally be current assets?"),
+    solution: [
+      text("المعادلات النقدية أصل متداول ما لم تكن مقيدة عن المبادلة أو الاستخدام لتسوية التزام لمدة لا تقل عن 12 شهرًا بعد تاريخ التقرير. والمدفوعات المقدمة تكون متداولة بقدر ما تُستهلك في دورة التشغيل العادية أو خلال 12 شهرًا؛ الجزء الأطول أمدًا ليس متداولًا تلقائيًا.", "Cash equivalents are current unless restricted from exchange or use to settle a liability for at least 12 months after the reporting date. Prepayments are current to the extent consumed in the normal operating cycle or within 12 months; any longer-term part is not automatically current."),
+      text("العقارات والآلات والمعدات وتراخيص التصنيع أصول غير متداولة عادةً، والأرباح المحتجزة حقوق ملكية وليست أصلًا. إذن اختيار السؤال هو المدفوعات المقدمة المتداولة والمعادلات النقدية، مع مراعاة القيود والآجال الفعلية.", "Property, plant and equipment and manufacturing licences are normally non-current assets; retained earnings are equity, not an asset. The intended selections are current prepayments and cash equivalents, subject to their actual terms and restrictions."),
+    ],
+    reference: "IAS 1.54, 66–68; IAS 7.6–7",
+  },
+  {
+    id: "ifrs-book2-ias1-quiz-provisions-line",
+    standardCode: "IAS 1",
+    title: text("عرض المخصصات في المركز المالي", "Presenting provisions in financial position"),
+    facts: text("سؤال صح أو خطأ عن بند المخصصات في قائمة المركز المالي.", "A true-or-false question about provisions in the statement of financial position."),
+    question: text("صح أم خطأ: تُعرض المخصصات في قائمة المركز المالي؟", "True or false: are provisions presented in the statement of financial position?"),
+    solution: [
+      text("صح في حالة المخصص المعترف به: يذكر IAS 1 المخصصات ضمن الحد الأدنى لبنود قائمة المركز المالي. تُراعى الأهمية النسبية والتجميع الملائم، ويُفصل المتداول عن غير المتداول عند تطبيق هذا العرض؛ أما الالتزام المحتمل غير المعترف به وفق IAS 37 فلا يتحول إلى مخصص معروض لمجرد وجود إفصاح عنه.", "True for a recognised provision: IAS 1 includes provisions among the minimum financial-position line items. Apply materiality and appropriate aggregation, with current/non-current classification where used. An unrecognised contingent liability under IAS 37 is not presented as a provision merely because it is disclosed."),
+    ],
+    reference: "IAS 1.29–31, 54(l), 60; IAS 37.14, 27–30",
+  },
+  {
+    id: "ifrs-book2-ias1-quiz-profit-loss-lines",
+    standardCode: "IAS 1",
+    title: text("بنود قائمة الربح أو الخسارة", "Profit-or-loss line items"),
+    facts: text("في سياق عرض IAS 1 قبل التطبيق المبكر لـIFRS 18، الخيارات هي مصروف الضريبة، وتحليل المصروفات، والربح أو الخسارة.", "Under IAS 1 presentation before any early application of IFRS 18, the candidates are tax expense, an analysis of expenses, and profit or loss."),
+    question: text("أي هذه البنود يلزم عرضه في قائمة الربح أو الخسارة نفسها؟", "Which candidates must appear in the statement of profit or loss itself?"),
+    solution: [
+      text("مصروف الضريبة والربح أو الخسارة من البنود/المجاميع المطلوبة في القائمة. أما تحليل المصروفات بالطبيعة أو الوظيفة فيمكن تقديمه في القائمة أو في الإيضاحات وفق IAS 1، فلا يلزم أن يكون سطرًا مستقلًا في صلب القائمة.", "Tax expense and profit or loss are required in the statement. The analysis of expenses by nature or function can be presented in the statement or in the notes under IAS 1, so it need not be a separate face-of-statement line."),
+      text("هذه إجابة لفترة تطبيق IAS 1. يحل IFRS 18 محله للفترات السنوية التي تبدأ في أو بعد 1 يناير 2027، مع السماح بالتطبيق المبكر، فلا تُنقل صياغة السؤال القديمة إليه دون مراجعة متطلباته.", "This answer assumes IAS 1 applies. IFRS 18 replaces it for annual periods beginning on or after 1 January 2027, with early application permitted; do not carry this older question into IFRS 18 without reassessing its requirements."),
+    ],
+    reference: "IAS 1.82, 99–104; IFRS 18.C1",
+  },
+  {
+    id: "ifrs-book2-ias16-quiz-revaluation-presentation",
+    standardCode: "IAS 16",
+    title: text("موضع فائض إعادة تقييم الأصل الثابت", "Where a PPE revaluation surplus appears"),
+    facts: text("يسأل النص عن عرض زيادة إعادة تقييم دون تحديد نوع الأصل أو بيان خسائر إعادة تقييم سابقة. يوضح الحل أدناه حالة أصل ثابت يخضع لـIAS 16 فقط.", "The question asks about presentation of a revaluation increase without specifying the asset type or any earlier revaluation losses. The solution below addresses only PPE within IAS 16."),
+    question: text("أين تظهر زيادة إعادة التقييم في القوائم المالية؟", "Where does a revaluation increase appear in the financial statements?"),
+    solution: [
+      text("إذا كانت الزيادة تخص أصلًا ثابتًا وفق IAS 16، تُعترف عادةً في الدخل الشامل الآخر وتتراكم ضمن حقوق الملكية في فائض إعادة التقييم؛ وتظهر حركة الدخل الشامل الآخر وحقوق الملكية في قائمة التغيرات في حقوق الملكية. كذلك تتغير القيمة الدفترية للأصل في قائمة المركز المالي.", "For PPE under IAS 16, an increase is normally recognised in other comprehensive income and accumulated in equity as revaluation surplus; the OCI/equity movement is reflected in the statement of changes in equity. The asset's carrying amount also changes in financial position."),
+      text("الاستثناء: الجزء الذي يعكس انخفاض إعادة تقييم سابقًا لنفس الأصل سبق تحميله على الربح أو الخسارة يُعترف به في الربح أو الخسارة حتى حدود ذلك الانخفاض؛ ولذلك لا يجوز تعميم الدخل الشامل الآخر على كل زيادة دون مراجعة تاريخ الأصل.", "Exception: to the extent the increase reverses a previous revaluation decrease of the same asset recognised in profit or loss, it goes to profit or loss. Do not generalise OCI treatment without checking the asset's history."),
+    ],
+    reference: "IAS 16.31, 39–40; IAS 1.106",
+  },
+  {
+    id: "ifrs-book2-ias1-quiz-expense-function",
+    standardCode: "IAS 1",
+    title: text("تحليل المصروفات بحسب الوظيفة", "Expense analysis by function"),
+    facts: text("تظهر في قائمة الربح أو الخسارة عناوين تكلفة المبيعات وتكاليف التوزيع والمصروفات الإدارية.", "The profit-or-loss statement uses cost of sales, distribution costs and administrative expenses headings."),
+    question: text("هل تصنف هذه المصروفات بحسب طبيعتها أم وظيفتها؟", "Are these expenses classified by nature or function?"),
+    solution: [
+      text("بحسب الوظيفة: يبين كل عنوان دور التكلفة في نشاط المنشأة، لا نوعها الاقتصادي مثل الأجور أو الإهلاك. عند تطبيق IAS 1 يلزم كذلك تقديم المعلومات الإضافية المطلوبة عن طبيعة المصروفات، بما فيها الإهلاك والإطفاء ومنافع الموظفين.", "By function: each heading describes the cost's role in the entity's activities rather than its economic nature, such as wages or depreciation. Under IAS 1, the required additional nature information, including depreciation, amortisation and employee benefits, must also be disclosed."),
+      text("لفترات تطبيق IFRS 18، يُعاد تقييم طريقة العرض والإفصاح وفق متطلباته؛ وقد تكون طريقة تجمع الطبيعة والوظيفة هي الأجدى، ولا تفترض أن قالب IAS 1 ينتقل بلا تغيير.", "For periods applying IFRS 18, reassess presentation and disclosure under that Standard; a mixture of nature and function can be the most useful structure, so the IAS 1 template should not be assumed unchanged."),
+    ],
+    reference: "IAS 1.99–104; IFRS 18.78–85",
+  },
+  {
     id: "ifrs-book2-piper-replacement-options",
     standardCode: "IFRS 2",
     title: text("Piper: إلغاء الخيارات ومنح بدائل", "Piper: cancellation and replacement options"),
