@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-saddler-settlement-choice",
+    standardCode: "IFRS 2",
+    title: text("خيار المدير بين الأسهم والنقد", "Saddler: director chooses shares or cash"),
+    facts: text(
+      "في 1 أكتوبر 20X2 منح Saddler أحد مديريه حق الاختيار بين 24,000 سهم ودفعة نقدية تعادل قيمة 20,000 سهم، بشرط بقائه في الخدمة ثلاث سنوات من تاريخ المنح. القيمة العادلة لبديل الأسهم عند المنح 4.50 دولارات للسهم، وسعر السهم السوقي عند المنح 5.20 دولارات وعند 30 سبتمبر 20X3 بلغ 6.10 دولارات.",
+      "On 1 October 20X2, Saddler granted a director a choice of 24,000 shares or cash equal to the value of 20,000 phantom shares, conditional on three years' employment. Grant-date fair value of the share alternative was $4.50 per share; market share price was $5.20 at grant and $6.10 on 30 September 20X3.",
+    ),
+    question: text(
+      "اشرح المعالجة المحاسبية لهذه المعاملة للسنة المنتهية في 30 سبتمبر 20X3، وافصل مكوّن حقوق الملكية عن مكوّن الالتزام مع قيودهما.",
+      "Explain the accounting treatment for the year ended 30 September 20X3, separating the equity and liability components and their entries.",
+    ),
+    solution: [
+      text("بما أن المدير، لا المنشأة، يملك خيار التسوية، فالمنحة أداة مركبة وفق IFRS 2.35–38. يقاس الالتزام النقدي أولًا، ثم مكوّن حقوق الملكية المتبقي، ويعترف بالخدمة على ثلاث سنوات.", "Because the director, not the entity, chooses settlement, the award is a compound instrument under IFRS 2.35–38. Measure the cash component first, then residual equity, recognising service over three years."),
+      text("عند المنح: بديل الأسهم = 24,000 × 4.50 = 108,000 دولار؛ بديل النقد = 20,000 × 5.20 = 104,000؛ مكوّن حقوق الملكية = 4,000. نصيب السنة الأولى = 4,000 ÷ 3 = 1,333.33 تقريبًا: مدين مصروف موظفين ودائن حقوق ملكية.", "At grant: share alternative = 24,000 × $4.50 = $108,000; cash alternative = 20,000 × $5.20 = $104,000; residual equity = $4,000. First-year share = $4,000 ÷ 3 ≈ $1,333.33: debit staff expense and credit equity."),
+      text("في 30 سبتمبر 20X3 يعاد قياس المكوّن النقدي بسعر التقرير: 20,000 × 6.10 × 1/3 = 40,666.67 دولار تقريبًا؛ مدين مصروف موظفين ودائن التزام. مجموع مصروف السنة 42,000 دولار قبل أي تقريب؛ لا يعاد قياس مكوّن حقوق الملكية البالغ 4,000 لمجرد تغير سعر السهم.", "At 30 September 20X3, remeasure the cash component: 20,000 × $6.10 × 1/3 ≈ $40,666.67; debit staff expense and credit a liability. Total first-year expense is $42,000 before rounding. The $4,000 equity component is not remeasured merely because the share price changes."),
+    ],
+    reference: "IFRS 2.35–38",
+  },
+  {
     id: "ifrs-book2-cash-sars-five-years",
     standardCode: "IFRS 2",
     title: text("حقوق ارتفاع السهم النقدية على خمس سنوات", "Five-year cash share appreciation rights"),

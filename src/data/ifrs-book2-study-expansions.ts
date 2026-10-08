@@ -1112,6 +1112,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 2.30–33D",
       },
+      {
+        title: text("من يملك خيار التسوية يحدد شكل المحاسبة", "Who chooses settlement determines the accounting"),
+        explanation: text(
+          "إذا امتلك الموظف حق الاختيار بين أسهم ونقد، تمنحه المنشأة أداة مركبة: التزامًا يمثل حق طلب النقد ومكوّن حقوق ملكية يمثل منفعة اختيار الأسهم بدلًا من النقد. في تاريخ المنح يُقاس مكوّن الالتزام أولًا، ثم تُحدد القيمة المتبقية لمكوّن حقوق الملكية وفق قيم البديلين. يثبت كل مكوّن مع تقديم الخدمة: الالتزام النقدي يعاد قياسه في تواريخ التقرير حتى التسوية، أما مكوّن حقوق الملكية فيبقى بقيمة المنح ولا يعاد قياسه لمجرد تغير سعر السهم. أما إذا كان حق الاختيار للمنشأة نفسها، فيجب تحديد وجود التزام حالي بالدفع النقدي؛ السياسة أو الممارسة السابقة في الدفع نقدًا، أو غياب الجوهر التجاري لبديل الأسهم، قد تجعلها معاملة نقدية. لا تصنف الخيارين كمعاملة واحدة دائمًا دون فحص صاحب القرار والالتزام.",
+          "If the employee can choose cash or shares, the entity grants a compound instrument: a liability for the cash demand and an equity component for the additional benefit of choosing shares. At grant date, measure the liability component first, then determine the residual equity component from the alternatives' values. Recognise both as service is rendered: remeasure the cash liability at each reporting date until settlement, but do not remeasure the grant-date equity component merely because the share price changes. If the entity itself chooses settlement, assess whether it has a present cash-settlement obligation; a cash-settlement policy or practice, or an equity alternative without commercial substance, may require cash-settled accounting. Do not classify every settlement choice alike without identifying who chooses and whether a present obligation exists.",
+        ),
+        keyPoints: [
+          text("اختيار الموظف: التزام وحقوق ملكية منفصلان؛ اختيار المنشأة: اختبر الالتزام الحالي أولًا.", "Employee's choice: separate liability and equity; entity's choice: test for a present obligation first."),
+          text("أعد قياس المكوّن النقدي فقط، مع استمرار إثبات الخدمة على فترة الاستحقاق.", "Remeasure only the cash component while recognising service over the vesting period."),
+        ],
+        reference: "IFRS 2.34–43",
+      },
     ],
     workedExamples: [
       {
@@ -1237,6 +1249,24 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("عند ممارسة الحقوق", "On exercise of rights"), debit: text("التزام حقوق نقدية", "Cash SAR liability"), credit: text("نقدية", "Cash"), amount: text("القيمة النقدية المدفوعة", "Cash settlement amount") },
         ],
         reference: "IFRS 2.30–33D",
+      },
+      {
+        title: text("مدير يختار 24,000 سهمًا أو قيمة 20,000 سهم نقدًا", "Director chooses 24,000 shares or cash for 20,000 phantom shares"),
+        facts: text(
+          "في 1 أكتوبر 20X2 منح Saddler مديرًا حق اختيار 24,000 سهم أو مبلغ نقدي يعادل قيمة 20,000 سهم، بشرط خدمة ثلاث سنوات. القيمة العادلة لبديل الأسهم عند المنح 4.50 دولارات للسهم، وسعر السهم 5.20 دولارات في تاريخ المنح و6.10 دولارات في 30 سبتمبر 20X3.",
+          "On 1 October 20X2 Saddler grants a director the choice between 24,000 shares and cash equal to the value of 20,000 phantom shares, conditional on three years' service. Grant-date fair value of the share alternative is $4.50 per share; market share price is $5.20 at grant and $6.10 on 30 September 20X3.",
+        ),
+        calculations: [
+          text("قيمة بديل الأسهم عند المنح = 24,000 × 4.50 = 108,000 دولار؛ قيمة البديل النقدي عند المنح = 20,000 × 5.20 = 104,000 دولار.", "Grant-date share alternative = 24,000 × $4.50 = $108,000; grant-date cash alternative = 20,000 × $5.20 = $104,000."),
+          text("مكوّن حقوق الملكية المتبقي = 108,000 − 104,000 = 4,000 دولار، ومصروف خدمته في السنة الأولى = 4,000 ÷ 3 = 1,333.33.", "Residual equity component = $108,000 − $104,000 = $4,000, with first-year service cost of $4,000 ÷ 3 = $1,333.33."),
+          text("الالتزام النقدي في نهاية السنة الأولى = 20,000 × 6.10 × 1/3 = 40,666.67 دولار؛ يثبت مصروفًا والتزامًا بهذا المبلغ، ويعاد قياسه في الأعوام اللاحقة.", "First-year cash liability = 20,000 × $6.10 × 1/3 = $40,666.67; recognise expense and liability for this amount, then remeasure in later years."),
+        ],
+        conclusion: text("في 30 سبتمبر 20X3 يثبت مصروف إجمالي يقارب 42,000 دولار: نحو 1,333 في حقوق الملكية ونحو 40,667 التزامًا. التقريب إلى الدولار يجعل القيدين المعروضين 1,333 و40,667، لا تغييرًا في قاعدة القياس.", "At 30 September 20X3 total expense is approximately $42,000: about $1,333 credited to equity and $40,667 to a liability. Whole-dollar presentation of $1,333 and $40,667 reflects rounding, not a different measurement rule."),
+        journalEntries: [
+          { label: text("30 سبتمبر 20X3: مكوّن الأسهم", "30 September 20X3: equity component"), debit: text("مصروف موظفين", "Staff expense"), credit: text("حقوق ملكية", "Equity"), amount: text("1,333.33 دولار تقريبًا", "Approximately $1,333.33") },
+          { label: text("30 سبتمبر 20X3: مكوّن النقد", "30 September 20X3: cash component"), debit: text("مصروف موظفين", "Staff expense"), credit: text("التزام تسوية نقدية", "Cash-settlement liability"), amount: text("40,666.67 دولار تقريبًا", "Approximately $40,666.67") },
+        ],
+        reference: "IFRS 2.35–38",
       },
     ],
   },
