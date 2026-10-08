@@ -15,6 +15,27 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-jb-options-and-cash-alternative",
+    standardCode: "IFRS 2",
+    title: text("خيارات J&B وبديل السداد النقدي", "J&B options and a cash-settled alternative"),
+    facts: text(
+      "في 1 يناير 20X1 منحت J&B عدد 200 خيار على أسهم عادية قيمتها الاسمية دولار واحد لكل من 800 موظف، بشرط استمرار العمل حتى 31 ديسمبر 20X3. القيمة العادلة للخيار عند المنح 4 دولارات، وسعر الممارسة 1.50 دولار، وسعر السهم يوم المنح 3 دولارات. توقعت أولًا مغادرة 50 ثم 40 ثم 30 خلال السنوات الثلاث. غادر فعليًا 40 في 20X1، وعدلت تقدير إجمالي المغادرين إلى 95؛ وغادر 20 في 20X2، وعدلت الإجمالي إلى 70؛ ولم يغادر أحد في 20X3. مارس جميع المستحقين خياراتهم في 31 ديسمبر 20X3. لا يورد السؤال قيمًا عادلة لحقوق نقدية افتراضية في تواريخ التقرير.",
+      "On 1 January 20X1 J&B granted 200 options on $1 ordinary shares to each of 800 employees, conditional on service through 31 December 20X3. Grant-date option fair value was $4, exercise price $1.50 and grant-date share price $3. Initially 50, then 40, then 30 departures were forecast for the three years. Forty actually left in 20X1, when estimated total leavers changed to 95; twenty left in 20X2, when the total forecast changed to 70; none left in 20X3. All vested options were exercised on 31 December 20X3. No reporting-date fair values for hypothetical cash rights are provided.",
+    ),
+    question: text(
+      "أظهر قيود مصروف خدمات الموظفين في السنوات الثلاث وقيد إصدار الأسهم عند ممارسة جميع الخيارات المستحقة. ثم اشرح كيف ستختلف المعالجة لو وعدت المنشأة الموظفين بمبالغ نقدية تعتمد على قيمة السهم بدلًا من الخيارات.",
+      "Show the double entries for employee-service charges over the three years and the share issue if all vested options are exercised. Explain how the accounting would differ if employees received cash based on share value instead of share options.",
+    ),
+    solution: [
+      text("20X1: التقدير 800 − 95 = 705 موظفين. المصروف والاحتياطي التراكميان = 705 × 200 × 4 × 1/3 = 188,000 دولار؛ مدين مصروف موظفين ودائن احتياطي خيارات.", "20X1: 800 − 95 = 705 employees are expected to vest. Cumulative expense and option reserve = 705 × 200 × $4 × 1/3 = $188,000; debit staff expense and credit option reserve."),
+      text("20X2: التقدير 730 موظفًا. الاحتياطي التراكمي = 730 × 200 × 4 × 2/3 = 389,333.33 دولار، ومن ثم مصروف السنة 201,333.33 تقريبًا؛ مدين مصروف موظفين ودائن الاحتياطي. التقريب إلى دولار كامل يعطي 201,333.", "20X2: 730 employees are expected to vest. Cumulative reserve = 730 × 200 × $4 × 2/3 = $389,333.33, so the current-year expense is approximately $201,333.33; debit staff expense and credit the reserve. Rounded to whole dollars this is $201,333."),
+      text("20X3: المغادرون الفعليون 40 + 20 = 60، فالمستحقون 740، والاحتياطي النهائي = 740 × 200 × 4 = 592,000 دولار. مصروف السنة = 592,000 − 389,333.33 = 202,666.67 تقريبًا، أو 202,667 بعد التقريب؛ مدين مصروف موظفين ودائن الاحتياطي.", "20X3: actual leavers total 40 + 20 = 60, so 740 vest; final reserve = 740 × 200 × $4 = $592,000. Current-year expense = $592,000 − $389,333.33 ≈ $202,666.67, or $202,667 rounded; debit staff expense and credit the reserve."),
+      text("عند الممارسة يصدر 148,000 سهم. القيد: مدين نقدية 222,000 ومدين احتياطي خيارات 592,000؛ دائن رأس مال 148,000 ودائن علاوة إصدار 666,000 دولار. يتساوى جانبا القيد عند 814,000.", "On exercise 148,000 shares are issued. Debit cash $222,000 and option reserve $592,000; credit share capital $148,000 and share premium $666,000. Both sides equal $814,000."),
+      text("لو كان الوعد نقدًا مرتبطًا بقيمة السهم، يقابل الخدمة التزام لا احتياطي حقوق ملكية. يُعاد قياس الحق النقدي بالقيمة العادلة في كل تاريخ تقرير وعند السداد، وتثبت التغيرات في الربح أو الخسارة. الصيغة خلال الاستحقاق: الحقوق المتوقع استحقاقها × قيمتها العادلة الحالية × نسبة الخدمة المنقضية، ناقص الالتزام المثبت سابقًا لاستخراج مصروف السنة؛ يستمر إعادة القياس بعد الاستحقاق حتى الدفع. لا يمكن استخراج التزام أو مصروف نقدي رقمي من سعر خيار المنحة البالغ 4 دولارات وحده لأن قيم الحقوق النقدية غير معطاة.", "For a cash promise linked to share value, service credits a liability rather than an equity reserve. Remeasure each cash right to fair value at every reporting date and settlement, taking changes to profit or loss. During vesting, cumulative liability is rights expected to vest × current fair value × elapsed service fraction; deduct the previous liability to obtain the year's charge. Continue remeasuring after vesting until payment. The $4 grant-date equity-option value alone cannot produce numerical cash-liability or expense amounts because fair values of the cash rights are not supplied."),
+    ],
+    reference: "IFRS 2.14–23, 30–33",
+  },
+  {
     id: "ifrs-book2-four-year-employee-options",
     standardCode: "IFRS 2",
     title: text("خيارات موظفين مشروطة بخدمة أربع سنوات", "Four-year employee share options"),
