@@ -3,6 +3,37 @@ import type { ExamQuestion } from "@/lib/exam-bank";
 /** Reviewed source extracts. Public references intentionally cite IFRS/IAS only. */
 export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
   {
+    id: "ifrs-reviewed-ias12-current-tax-measurement-01",
+    track: "IFRS",
+    topic: "IAS 12 — current tax measurement",
+    question: {
+      ar: "كيف تُقاس الضريبة الجارية؟",
+      en: "How should current tax be measured?",
+    },
+    choices: {
+      ar: [
+        "إجمالي الالتزام شاملًا الضريبة المؤجلة",
+        "المبلغ المتوقع دفعه إلى السلطات الضريبية أو استرداده منها",
+        "المبلغ المحسوب على الربح بمعدلات الضريبة الحالية",
+        "المبلغ المحسوب على الربح بمعدلات الضريبة المستقبلية",
+      ],
+      en: [
+        "The total liability, including deferred tax",
+        "The amount expected to be paid to (or recovered from) the tax authorities",
+        "The amount calculated on profit at current tax rates",
+        "The amount calculated on profit at future tax rates",
+      ],
+    },
+    answerIndex: 1,
+    explanation: {
+      ar: "يقاس أصل أو التزام الضريبة الجارية بالمبلغ المتوقع استرداده من الجهة الضريبية أو دفعه إليها، وفق القانون ومعدلات الضريبة المقررة أو المقررة موضوعيًا بنهاية الفترة. الضريبة المؤجلة بند قياس منفصل.",
+      en: "Measure a current-tax asset or liability at the amount expected to be recovered from or paid to the tax authority, using tax law and rates enacted or substantively enacted by period-end. Deferred tax is measured separately.",
+    },
+    reference: "IAS 12.46",
+    difficulty: "easy",
+    examDomain: "IAS 12 current tax",
+  },
+  {
     id: "ifrs-reviewed-ias16-disposal-01",
     track: "IFRS",
     topic: "IAS 16 — disposal after revaluation",

@@ -15,6 +15,36 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias12-quiz-investment-difference",
+    standardCode: "IAS 12",
+    title: text("كيف يظهر فرق مؤقت في استثمار تابع أو زميل؟", "How does a temporary difference arise on a subsidiary or associate investment?"),
+    facts: text(
+      "تحتفظ منشأة باستثمار في شركة تابعة أو زميلة، وقد تختلف القيمة الدفترية المرتبطة بالاستثمار في التقارير المالية عن أساس الاستثمار المعترف به لأغراض الضريبة. لم تُعط قيم رقمية أو خطة توزيعات.",
+      "An entity holds an investment in a subsidiary or associate, whose financial-reporting carrying amount may differ from its tax base. No numerical balances or distribution plan are supplied.",
+    ),
+    question: text("كيف ينشأ الفرق المؤقت المرتبط بالاستثمار، وما الذي يجب اختباره قبل استنتاج التزام ضريبة مؤجلة؟", "How does the investment-related temporary difference arise, and what must be tested before concluding that a deferred tax liability is recognised?"),
+    solution: [
+      text("ينشأ الفرق عندما تختلف القيمة الدفترية المرتبطة بالاستثمار عن أساسه الضريبي؛ قد تسهم الأرباح غير الموزعة أو فروق التحويل أو خفض قيمة الاستثمار في ذلك. لا يكفي وجود ربح محتجز لدى المستثمر فيه وحده لتحديد مبلغ الفرق.", "A difference arises when the investment's carrying amount differs from its tax base; undistributed profits, translation differences or impairment of the investment can contribute. Retained earnings at the investee alone do not quantify the difference."),
+      text("في الفرق الخاضع، اختبر استثناء IAS 12.39: هل يستطيع المستثمر التحكم في توقيت الانعكاس وهل يُرجح عدم انعكاسه في المستقبل المنظور؟ يجب تحقق الشرطين معًا. قد تختلف قواعد الاستثمارات في الزميلة عن التابعة من حيث القدرة على التحكم في التوزيع.", "For a taxable difference test IAS 12.39: can the investor control reversal timing, and is non-reversal probable in the foreseeable future? Both conditions are required. Control over distributions may differ between an associate and a subsidiary."),
+    ],
+    reference: "IAS 12.38–40",
+  },
+  {
+    id: "ifrs-book2-ias12-quiz-three-differences",
+    standardCode: "IAS 12",
+    title: text("ثلاثة أمثلة على فروق مؤقتة", "Three examples of temporary differences"),
+    facts: text(
+      "تختلف قواعد المحاسبة عن قواعد الضريبة في توقيت الاعتراف ببعض المنافع والتكاليف. لا تُعط معطيات رقمية أو ولاية ضريبية محددة.",
+      "Accounting and tax rules can recognise certain benefits and costs at different times. No amounts or particular tax jurisdiction are provided.",
+    ),
+    question: text("اذكر ثلاثة أمثلة صحيحة على فروق مؤقتة، موضحًا في كل مثال القاعدة الضريبية التي تجعل الفرق مؤقتًا لا دائمًا.", "Give three valid examples of temporary differences, stating in each the tax rule that makes the difference temporary rather than permanent."),
+    solution: [
+      text("1) أصل ثابت يُهلك ضريبيًا أسرع من إهلاكه المحاسبي، فيقل أساسه الضريبي عن قيمته الدفترية. 2) فوائد مستحقة محاسبيًا لا تُفرض عليها الضريبة إلا عند التحصيل، فيكون أساس الذمة الضريبي صفرًا حتى القبض.", "1) Equipment with faster tax than accounting depreciation has a tax base below carrying amount. 2) Accrued interest taxed only on collection has a nil receivable tax base until cash is received."),
+      text("3) تكلفة تطوير مرسملة محاسبيًا بعد استيفاء شروط IAS 38 لكنها خُصمت ضريبيًا عند الإنفاق، فيبقى أصل محاسبي بأساس ضريبي صفر. لا يكفي ذكر «الإيرادات المقدمة» أو «المصروفات المستحقة» دون بيان متى تخضع أو تخصم ضريبيًا؛ فالفرق يعتمد على القانون.", "3) Qualifying development cost capitalised under IAS 38 but deducted for tax on expenditure leaves an accounting asset with a nil tax base. Merely naming advances or accruals without their tax timing is insufficient: the tax law determines whether a difference exists."),
+    ],
+    reference: "IAS 12.5, 7–8, 15, 24",
+  },
+  {
     id: "ifrs-book2-eramu-loss-carryback",
     standardCode: "IAS 12",
     title: text("Eramu: منفعة ترحيل خسارة للخلف", "Eramu: benefit of a loss carryback"),
