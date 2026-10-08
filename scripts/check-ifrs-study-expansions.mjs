@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-saddler-settlement-choice",
   "ifrs-book2-cash-sars-five-years",
   "ifrs-book2-jb-options-and-cash-alternative",
   "ifrs-book2-four-year-employee-options",
@@ -219,6 +220,11 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IFRS 2 Saddler share alternative grant value", 24000 * 4.5, 108000],
+  ["IFRS 2 Saddler cash alternative grant value", 20000 * 5.2, 104000],
+  ["IFRS 2 Saddler residual equity", 108000 - 104000, 4000],
+  ["IFRS 2 Saddler first-year cash liability", 20000 * 6.1 / 3, 40666.666666666664],
+  ["IFRS 2 Saddler first-year total cost", 4000 / 3 + 20000 * 6.1 / 3, 42000],
   ["IFRS 2 cash SAR year-one liability", (500 - 35 - 60) * 100 * 14.4 / 3, 194400],
   ["IFRS 2 cash SAR year-two liability", (500 - 35 - 40 - 25) * 100 * 15.5 * 2 / 3, 413333.3333333333],
   ["IFRS 2 cash SAR year-three settlement", 150 * 100 * 15, 225000],
