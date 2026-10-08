@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ias12-quiz-investment-difference",
+  "ifrs-book2-ias12-quiz-three-differences",
   "ifrs-book2-eramu-loss-carryback",
   "ifrs-book2-carrol-anchor-dividend-tax",
   "ifrs-book2-beta-land-revaluation-tax",
@@ -427,6 +429,18 @@ for (const [label, actual, expected] of reviewedCalculations) {
 
 const ids = new Set();
 const reviewedEnglishSourceText = new Map([
+  [
+    "ifrs-reviewed-ias12-current-tax-measurement-01",
+    {
+      question: "How should current tax be measured?",
+      choices: [
+        "The total liability, including deferred tax",
+        "The amount expected to be paid to (or recovered from) the tax authorities",
+        "The amount calculated on profit at current tax rates",
+        "The amount calculated on profit at future tax rates",
+      ],
+    },
+  ],
   [
     "ifrs-reviewed-ias16-disposal-01",
     {
