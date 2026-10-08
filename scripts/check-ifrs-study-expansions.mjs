@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ias2-two-items-nrv",
   "ifrs-book2-ias12-quiz-investment-difference",
   "ifrs-book2-ias12-quiz-three-differences",
   "ifrs-book2-eramu-loss-carryback",
@@ -196,6 +197,14 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IAS 2 A unit cost", 160 + 15, 175],
+  ["IAS 2 A unit NRV", 185 - 12, 173],
+  ["IAS 2 A carrying amount", 300 * Math.min(160 + 15, 185 - 12), 51900],
+  ["IAS 2 B unit cost", 50 + 10, 60],
+  ["IAS 2 B unit NRV", 75 - 10, 65],
+  ["IAS 2 B carrying amount", 250 * Math.min(50 + 10, 75 - 10), 15000],
+  ["IAS 2 total inventory", 51900 + 15000, 66900],
+  ["IAS 2 A write-down", 300 * ((160 + 15) - (185 - 12)), 600],
   ["Eramu carryback refund", 24000 * 0.3, 7200],
   ["Carrol planned distributions, not an asserted tax base", 500000 * 3, 1500000],
   ["Beta land revaluation taxable difference", 500000 - 400000, 100000],
