@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-four-year-employee-options",
+    standardCode: "IFRS 2",
+    title: text("خيارات موظفين مشروطة بخدمة أربع سنوات", "Four-year employee share options"),
+    facts: text(
+      "في 1 يناير 20X3 مُنح كل من 200 موظف 250 خيار سهم، وشرط الاستحقاق الوحيد بقاؤهم في الخدمة حتى 31 ديسمبر 20X6. غادر خمسة موظفين خلال 20X3. سعر كل خيار في 1 يناير 12 دولارًا، وفي 31 ديسمبر 15 دولارًا. لا تُحدد المعطيات وحدها عدد من سيغادر في السنوات الثلاث التالية.",
+      "On 1 January 20X3 an entity grants 250 share options to each of its 200 employees. The only vesting condition is continued employment until 31 December 20X6. Five employees leave during 20X3. The price of each option is $12 at 1 January and $15 at 31 December. The facts alone do not specify departures over the next three years.",
+    ),
+    question: text(
+      "بيّن أثر المعاملة في القوائم المالية للسنة المنتهية في 31 ديسمبر 20X3، مع بيان أي تقدير للمغادرين تستخدمه.",
+      "Show how this transaction will be reflected in the financial statements for the year ended 31 December 20X3.",
+    ),
+    solution: [
+      text("منحة الأسهم تقاس بقيمة الخيار في تاريخ المنح 12 دولارًا، لا بقيمته في 31 ديسمبر البالغة 15 دولارًا. يُعدّل عدد الخيارات المتوقع استحقاقها وفق أفضل تقدير متاح لشرط الخدمة، ويثبت ربع إجمالي تكلفة الخدمة في السنة الأولى من فترة السنوات الأربع.", "The equity-settled grant uses the $12 grant-date option value, not the $15 year-end value. Update the number of options expected to vest for the service condition using the best available estimate and recognise one quarter of expected total service cost in the first of four service years."),
+      text("إذا قدّرت الإدارة، استنادًا إلى معدل المغادرة المرصود ومعلوماتها الأخرى، استمرار خروج خمسة موظفين كل سنة، فتتوقع 20 مغادرًا طوال الفترة، و180 مستحقًا، و180 × 250 = 45,000 خيار. المصروف التراكمي في نهاية 20X3 = 45,000 × 12 × 1/4 = 135,000 دولار.", "If management, using observed attrition and other available information, estimates five departures each year, it forecasts 20 leavers over the period, 180 vesting employees and 180 × 250 = 45,000 options. Cumulative 20X3 expense is 45,000 × $12 × 1/4 = $135,000."),
+      text("القيد وفق هذا التقدير: مدين مصروف موظفين 135,000، دائن احتياطي مدفوعات أسهم 135,000. خمسة مغادرين في السنة الأولى لا يفرضان هذا التوقع حسابيًا؛ لو توفر تقدير موثق مختلف لعدد الخيارات المستحقة، يعاد حساب المصروف وفقه في كل تاريخ تقرير.", "On that explicit estimate: debit staff expense $135,000 and credit share-based-payment reserve $135,000. Five first-year departures do not mathematically compel the forecast; a different supported estimate of options expected to vest would change the period-end amount and is reassessed at each reporting date."),
+    ],
+    reference: "IFRS 2.19–23",
+  },
+  {
     id: "ifrs-book2-ias41-quiz-biological-asset",
     standardCode: "IAS 41",
     title: text("تعريف الأصل البيولوجي", "Quick check: biological asset"),

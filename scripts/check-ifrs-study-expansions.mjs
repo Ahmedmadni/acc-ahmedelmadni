@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-four-year-employee-options",
   "ifrs-book2-ias41-quiz-biological-asset",
   "ifrs-book2-ias41-quiz-produce",
   "ifrs-book2-ias41-quiz-categories",
@@ -216,6 +217,9 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IFRS 2 four-year expected leavers", 5 * 4, 20],
+  ["IFRS 2 four-year expected options", (200 - 20) * 250, 45000],
+  ["IFRS 2 four-year first-year service cost", (45000 * 12) / 4, 135000],
   ["IFRS 6 Gold Diggers qualifying E&E cost in thousands", 12000 + 123000, 135000],
   ["IAS 2 A unit cost", 160 + 15, 175],
   ["IAS 2 A unit NRV", 185 - 12, 173],

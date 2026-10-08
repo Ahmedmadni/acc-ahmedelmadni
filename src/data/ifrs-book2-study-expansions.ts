@@ -1064,6 +1064,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 2.14–23",
       },
+      {
+        title: text("تقدير المغادرين ليس إعادة قياس قيمة الخيار", "Estimating leavers is not remeasuring the option"),
+        explanation: text(
+          "إذا اشترط المنح بقاء الموظف أربع سنوات، تُثبت خدمة كل سنة حسب أفضل تقدير متاح لعدد الخيارات المتوقع استحقاقها، لا بمجرد عدد من بقي في نهاية السنة الأولى. يمكن الاستدلال بمعدل مغادرة السنة الأولى إذا كان ممثلًا للسنوات التالية، لكن لا يفرض IFRS 2 تكراره آليًا؛ ينبغي تحديث التقدير عند ظهور أدلة جديدة. القيمة العادلة لخيار التسوية بالأسهم تُقاس في تاريخ المنح ولا تُستبدل بسعر الخيار في نهاية السنة. المصروف التراكمي بعد سنة = الخيارات المتوقع استحقاقها × القيمة العادلة بتاريخ المنح × 1/4، ويقابله احتياطي في حقوق الملكية. افصل هذا عن المنح المسددة نقدًا التي يعاد قياس التزامها في كل تاريخ تقرير.",
+          "When a four-year service condition applies, recognise each year's service using the best available estimate of options expected to vest, not simply the employees present at the first year-end. First-year departures can inform a forecast if representative, but IFRS 2 does not mandate mechanically repeating them; revise the estimate as better evidence arrives. Grant-date fair value of an equity-settled option is not replaced by its year-end price. After one year, cumulative expense is expected vesting options × grant-date fair value × 1/4, with an equity reserve credit. This differs from a cash-settled award, whose liability is remeasured at each reporting date.",
+        ),
+        keyPoints: [
+          text("افصح في الحل عن أي افتراض بشأن المغادرين المستقبليين بدل تقديمه كواقعة من السؤال.", "State any assumption about future leavers explicitly rather than treating it as a supplied fact."),
+          text("لا تستخدم سعر الخيار في نهاية السنة لإعادة قياس منحة مسددة بالأسهم.", "Do not use the year-end option price to remeasure an equity-settled award."),
+        ],
+        reference: "IFRS 2.19–23, 30–33",
+      },
     ],
     workedExamples: [
       {
@@ -1111,6 +1123,23 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           },
         ],
         reference: "IFRS 2.14–23",
+      },
+      {
+        title: text("250 خيارًا لكل موظف وخدمة أربع سنوات", "250 options per employee over four years"),
+        facts: text(
+          "في 1 يناير 20X3 منحت منشأة 250 خيارًا لكل من 200 موظف بشرط استمرار الخدمة حتى 31 ديسمبر 20X6. غادر خمسة خلال 20X3. سعر الخيار عند المنح 12 دولارًا وعند نهاية السنة 15 دولارًا. لغرض بيان مبلغ 20X3 تفترض الإدارة، بعد دراسة المغادرات، استمرار معدل خمسة مغادرين سنويًا خلال الأربع سنوات؛ هذا التوقع افتراض تقديري لا نتيجة لازمة من الخمسة المغادرين وحدهم.",
+          "On 1 January 20X3 an entity grants 250 options to each of 200 employees conditional on service through 31 December 20X6. Five leave during 20X3. The option price is $12 at grant and $15 at year-end. To illustrate a 20X3 amount, management, after assessing departures, assumes five leavers per year over four years; this is an explicit estimate, not a deduction compelled by five first-year departures alone.",
+        ),
+        calculations: [
+          text("المغادرون المتوقعون وفق الافتراض = 5 × 4 = 20؛ الموظفون المتوقع استحقاقهم = 200 − 20 = 180.", "Under the stated estimate, projected leavers = 5 × 4 = 20; employees expected to vest = 200 − 20 = 180."),
+          text("الخيارات المتوقع استحقاقها = 180 × 250 = 45,000؛ القيمة الكلية بتاريخ المنح = 45,000 × 12 = 540,000 دولار.", "Expected vesting options = 180 × 250 = 45,000; total grant-date value = 45,000 × $12 = $540,000."),
+          text("مصروف 20X3 = 540,000 × 1/4 = 135,000 دولار. سعر نهاية السنة 15 دولارًا لا يغير هذا القياس لمنحة مسددة بأسهم.", "20X3 expense = $540,000 × 1/4 = $135,000. The $15 year-end option price does not change this equity-settled measurement."),
+        ],
+        conclusion: text("يظهر مصروف موظفين 135,000 واحتياطي حقوق ملكية 135,000 على أساس تقدير المغادرين المعلن؛ إذا دلّت معلومات أخرى على تقدير مختلف يتغير مبلغ السنة تبعًا له.", "Recognise staff expense and an equity reserve of $135,000 on the stated leaver estimate; other evidence supporting a different vesting estimate would change the amount."),
+        journalEntries: [
+          { label: text("31 ديسمبر 20X3: خدمة السنة", "31 December 20X3: service for the year"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي مدفوعات أسهم", "Share-based-payment reserve"), amount: text("135,000 دولار", "$135,000") },
+        ],
+        reference: "IFRS 2.19–23",
       },
     ],
   },
