@@ -78,6 +78,12 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ias41-quiz-biological-asset",
+  "ifrs-book2-ias41-quiz-produce",
+  "ifrs-book2-ias41-quiz-categories",
+  "ifrs-book2-ias41-quiz-cost-exception",
+  "ifrs-book2-ias2-quiz-nrv-formula",
+  "ifrs-book2-ias2-quiz-fifo-lifo",
   "ifrs-book2-gold-diggers-exploration-costs",
   "ifrs-book2-ias2-two-items-nrv",
   "ifrs-book2-ias12-quiz-investment-difference",
@@ -167,6 +173,18 @@ for (const practiceCase of openPracticeCases) {
 }
 for (const id of protectedPracticeIds) {
   if (!practiceIds.has(id)) failures.push(`${id}: previously reviewed practice case is missing`);
+}
+const chapter13QuickQuizText = new Map([
+  ["ifrs-book2-ias41-quiz-biological-asset", "What is a biological asset?"],
+  ["ifrs-book2-ias41-quiz-produce", "What is agricultural produce?"],
+  ["ifrs-book2-ias41-quiz-categories", "What are the two categories in the agricultural production system?"],
+  ["ifrs-book2-ias41-quiz-cost-exception", "IAS 41 has abolished the concept of cost for measurement purposes. True/False?"],
+  ["ifrs-book2-ias2-quiz-nrv-formula", "Net realisable value = selling price less ............... less ..............."],
+  ["ifrs-book2-ias2-quiz-fifo-lifo", "Which inventory costing method is allowed under IAS 2? (a) FIFO; (b) LIFO."],
+]);
+for (const [id, sourceQuestion] of chapter13QuickQuizText) {
+  if (openPracticeCases.find((item) => item.id === id)?.question.en !== sourceQuestion)
+    failures.push(`${id}: reviewed chapter 13 question wording changed`);
 }
 if (
   openPracticeCases.find((item) => item.id === "ifrs-book2-bets-cash-flow-hedge-cumulative")
