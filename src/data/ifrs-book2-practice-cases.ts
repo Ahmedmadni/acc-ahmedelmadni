@@ -1396,6 +1396,98 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 21.8–12, 21–23, 28, 38–39",
   },
   {
+    id: "ifrs-book2-white-cliffs-instalments",
+    standardCode: "IAS 21",
+    title: text("فاتورة يورو وسدادها عبر سنتين", "White Cliffs: euro instalments across two years"),
+    facts: text(
+      "اشترت White Cliffs بضائع من Rinka في 30 سبتمبر مقابل 40,000 يورو، تُسدد على دفعتين متساويتين في 30 نوفمبر و31 يناير. تنتهي السنة في 31 ديسمبر. أسعار الصرف، يورو لكل دولار: 1.60 في 30 سبتمبر، 1.80 في 30 نوفمبر، 1.90 في 31 ديسمبر، 1.85 في 31 يناير.",
+      "White Cliffs Co, whose year-end is 31 December, buys goods from Rinka SA on 30 September for €40,000, payable in equal instalments on 30 November and 31 January. Exchange rates, euros per US dollar: 1.60 on 30 September, 1.80 on 30 November, 1.90 on 31 December and 1.85 on 31 January.",
+    ),
+    question: text(
+      "اذكر القيود المحاسبية في دفاتر White Cliffs، مع فصل فروق الصرف بين السنتين.",
+      "State the accounting entries in the books of White Cliffs Co.",
+    ),
+    solution: [
+      text(
+        "30 سبتمبر: 40,000 ÷ 1.60 = 25,000 دولار؛ مدين مشتريات/مخزون ودائن دائنون تجاريون بالمبلغ نفسه. يبقى نصيب كل دفعة من الدائن الأصلي 12,500 دولار.",
+        "30 September: €40,000 ÷ 1.60 = US$25,000; debit purchases/inventory and credit trade payables. The initial carrying amount attributable to each half is US$12,500.",
+      ),
+      text(
+        "30 نوفمبر: تكلفة 20,000 يورو = 20,000 ÷ 1.80 ≈ 11,111 دولار. القيد: مدين دائنون 12,500؛ دائن نقدية 11,111 ومكسب صرف 1,389 في الربح أو الخسارة.",
+        "30 November: €20,000 costs €20,000 ÷ 1.80 ≈ US$11,111. Debit payables 12,500; credit cash 11,111 and an exchange gain in profit or loss of 1,389.",
+      ),
+      text(
+        "31 ديسمبر: يعاد قياس الدائن المتبقي 20,000 ÷ 1.90 ≈ 10,526 دولار؛ مدين دائنون 1,974 ودائن مكسب صرف 1,974. إجمالي مكاسب السنة الأولى 3,363 دولار. لا تُعاد ترجمة تكلفة البضائع التاريخية.",
+        "31 December: retranslate the remaining payable to €20,000 ÷ 1.90 ≈ US$10,526; debit payables 1,974 and credit exchange gain 1,974. Total first-year gains are US$3,363. The historical cost of the goods is not retranslated.",
+      ),
+      text(
+        "31 يناير: تكلفة السداد 20,000 ÷ 1.85 ≈ 10,811 دولار. القيد: مدين دائنون 10,526 وخسارة صرف 285؛ دائن نقدية 10,811. خسارة يناير تخص السنة الثانية فقط. كل المبالغ مقربة إلى أقرب دولار.",
+        "31 January: settlement costs €20,000 ÷ 1.85 ≈ US$10,811. Debit payables 10,526 and exchange loss 285; credit cash 10,811. The January loss belongs in the second year only. All amounts are rounded to whole dollars.",
+      ),
+    ],
+    reference: "IAS 21.21–23, 28–29",
+  },
+  {
+    id: "ifrs-book2-ias21-quiz-monetary",
+    standardCode: "IAS 21",
+    title: text("اختبار مفهوم البند النقدي", "IAS 21 quick check: monetary item"),
+    facts: text("سؤال مفاهيمي عن تعريف IAS 21 للبند النقدي.", "A conceptual question about IAS 21's definition of a monetary item."),
+    question: text("عرّف البنود النقدية وفق IAS 21.", "Define 'monetary' items according to IAS 21."),
+    solution: [text(
+      "تشمل وحدات النقد المحتفظ بها، والأصول والالتزامات التي ستُستلم أو تُدفع بعدد ثابت أو قابل للتحديد من وحدات النقد. لذلك يختلف الدائن المحدد باليورو عن مخزون البضاعة الذي لا يُسدد نقدًا في ذاته.",
+      "They are units of currency held and assets or liabilities to be received or paid in a fixed or determinable number of currency units. A euro-denominated payable is therefore distinct from the underlying goods inventory.",
+    )],
+    reference: "IAS 21.8, 16",
+  },
+  {
+    id: "ifrs-book2-ias21-quiz-conversion-translation",
+    standardCode: "IAS 21",
+    title: text("اختبار الاستبدال والترجمة", "IAS 21 quick check: conversion and translation"),
+    facts: text("سؤال مفاهيمي عن عمليتين مرتبطتين بالعملة الأجنبية.", "A conceptual question distinguishing two foreign-currency activities."),
+    question: text("ما الفرق بين استبدال العملة وترجمتها لأغراض المحاسبة؟", "What is the difference between conversion and translation?"),
+    solution: [text(
+      "استبدال العملة هو مبادلة مبلغ فعلي من عملة بأخرى؛ أما الترجمة المحاسبية فتحول قيمة معاملة أو رصيد أو قوائم إلى العملة المطلوبة للقياس أو العرض دون مبادلة نقدية بالضرورة. هذه تسمية تعليمية للتمييز بين النشاطين؛ معالجة فروق الصرف نفسها تُحكم بقواعد IAS 21 للبند وتوقيت التسوية أو التقرير، لا بلفظ «استبدال» وحده.",
+      "Conversion exchanges one currency amount for another. Accounting translation expresses a transaction, balance or financial statements in the required currency without necessarily exchanging cash. This is a teaching distinction: IAS 21 determines exchange-difference treatment by the item and the settlement or reporting date, not merely by a label such as 'conversion'.",
+    )],
+    reference: "IAS 21.8, 21–23, 28",
+  },
+  {
+    id: "ifrs-book2-ias21-quiz-initial-rate",
+    standardCode: "IAS 21",
+    title: text("اختبار سعر الاعتراف الأولي", "IAS 21 quick check: initial rate"),
+    facts: text("سؤال مفاهيمي عن تسجيل المعاملة بعملة أجنبية لدى منشأة منفردة.", "A conceptual question on recording a foreign-currency transaction by an individual entity."),
+    question: text("كيف يُعترف أوليًا بمعاملة بعملة أجنبية في حسابات المنشأة؟", "How should foreign currency transactions be recognised initially in an individual entity's accounts?"),
+    solution: [text(
+      "سجّل المعاملة بعملتها الوظيفية مستخدمًا سعر الصرف الفوري بتاريخ المعاملة، أي تاريخ تأهلها للاعتراف. يجوز استخدام سعر متوسط تقريبي لفترة قصيرة عندما يقارب الأسعار الفعلية ولم تتقلب الأسعار تقلبًا جوهريًا؛ لا تستخدم متوسطًا مضللًا إذا تقلبت الأسعار بقوة.",
+      "Record the transaction in the functional currency at the spot exchange rate on the transaction date, when it first qualifies for recognition. A period-average approximation is acceptable only when it approximates actual rates; an average is unsuitable when rates fluctuate significantly.",
+    )],
+    reference: "IAS 21.21–22",
+  },
+  {
+    id: "ifrs-book2-ias21-quiz-functional-change",
+    standardCode: "IAS 21",
+    title: text("اختبار تغيير العملة الوظيفية", "IAS 21 quick check: changing functional currency"),
+    facts: text("سؤال مفاهيمي عن توقيت تغيير العملة الوظيفية.", "A conceptual question about when functional currency changes."),
+    question: text("متى يمكن تغيير العملة الوظيفية للمنشأة؟", "When can an entity's functional currency be changed?"),
+    solution: [text(
+      "عندما تتغير المعاملات أو الأحداث أو الظروف الأساسية التي تحدد العملة الوظيفية، وليس لمجرد رغبة الإدارة. تُترجم البنود إلى العملة الجديدة بسعر تاريخ التغيير ويطبق الأثر مستقبلًا.",
+      "Only when the underlying transactions, events and conditions relevant to the entity change, not merely by management preference. Translate all items at the rate on the change date and apply the change prospectively.",
+    )],
+    reference: "IAS 21.35–37",
+  },
+  {
+    id: "ifrs-book2-ias21-quiz-presentation-change",
+    standardCode: "IAS 21",
+    title: text("اختبار تغيير عملة العرض", "IAS 21 quick check: changing presentation currency"),
+    facts: text("سؤال مفاهيمي يميّز عملة العرض عن العملة الوظيفية.", "A conceptual question distinguishing presentation from functional currency."),
+    question: text("متى يمكن للمنشأة تغيير عملة عرض قوائمها؟", "When can an entity's presentation currency be changed?"),
+    solution: [text(
+      "يجوز اختيار عملة العرض أو تغييرها؛ IAS 21 لا يربط هذا الاختيار بتغير المعاملات الأساسية مثلما يشترط لتغير العملة الوظيفية. عند اختلاف عملة العرض عن الوظيفية تُترجم القوائم وفق قواعد IAS 21، وتُفصح المنشأة عن العملة الوظيفية وسبب عرض القوائم بعملة مختلفة، مع مراعاة الإفصاحات الأخرى ذات الصلة.",
+      "An entity may choose or change its presentation currency; IAS 21 does not require the same change in underlying transactions that governs a functional-currency change. If presentation currency differs from functional currency, translate the statements under IAS 21 and disclose the functional currency and reason for using another presentation currency, with other relevant disclosures.",
+    )],
+    reference: "IAS 21.38–39, 53–57",
+  },
+  {
     id: "ifrs-book2-pilum-eps",
     standardCode: "IAS 33",
     title: text("ربحية السهم وإصدار الحقوق والتحويل", "Pilum: EPS, rights and conversion"),
