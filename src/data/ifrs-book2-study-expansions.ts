@@ -1088,6 +1088,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 2.14–23, 30–33",
       },
+      {
+        title: text("تعديل سعر ممارسة الخيار: أضف المنفعة ولا تمحُ المنحة الأصلية", "Option repricing: add the benefit, retain the original grant"),
+        explanation: text(
+          "إذا خفضت المنشأة سعر ممارسة خيار موظف أثناء فترة الاستحقاق وزادت قيمته العادلة، تستمر أولًا في إثبات تكلفة المنحة الأصلية بالقيمة العادلة بتاريخ المنح طوال فترة خدمتها الأصلية، بحسب عدد الخيارات المتوقع استحقاقها. ثم تقيس الزيادة في القيمة العادلة في لحظة التعديل: قيمة الخيار بعد التعديل ناقص قيمته قبل التعديل في التاريخ نفسه، وتوزعها على الخدمة المتبقية حتى استحقاق الأدوات المعدلة. لا تستبدل قيمة المنحة الأصلية بالقيمة الجديدة كاملة ولا تعترف بالزيادة كلها فورًا إذا بقيت خدمة مطلوبة. عند تغير تقدير المغادرين، أعد حساب المصروف التراكمي لكل مكوّن ثم اطرح ما سبق إثباته لاستخراج مصروف السنة.",
+          "When repricing an employee option during vesting increases its fair value, continue recognising the original award's grant-date fair value over its original service period for options expected to vest. Then measure incremental fair value at the modification date: the modified option's fair value less the original option's fair value immediately before the change, both measured on that date, and recognise it over remaining service until the modified award vests. Do not replace the whole original grant-date value with the new value or recognise the entire increment immediately while service remains. When leaver estimates change, recompute each component's cumulative cost and deduct previously recognised expense to obtain the current-year charge.",
+        ),
+        keyPoints: [
+          text("المقارنة بين القيمتين قبل التعديل وبعده تجري في تاريخ التعديل نفسه، لا بين تاريخ المنح ونهاية السنة.", "Compare pre- and post-modification fair values on the same modification date, not grant date against year-end."),
+          text("حافظ على خط زمني منفصل للمنحة الأصلية وآخر للزيادة الناتجة عن التعديل.", "Keep separate service timelines for the original award and the modification increment."),
+        ],
+        reference: "IFRS 2.27, B42–B43(a)",
+      },
     ],
     workedExamples: [
       {
@@ -1173,6 +1185,26 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("20X3: ممارسة جميع الخيارات المستحقة", "20X3: exercise of all vested options"), debit: text("نقدية 222,000 + احتياطي 592,000", "Cash 222,000 + reserve 592,000"), credit: text("رأس مال 148,000 + علاوة 666,000", "Share capital 148,000 + premium 666,000"), amount: text("814,000 دولار لكل جانب", "$814,000 each side") },
         ],
         reference: "IFRS 2.14–23, 30–33",
+      },
+      {
+        title: text("إعادة تسعير خيارات Cello بعد السنة الأولى", "Cello option repricing after year one"),
+        facts: text(
+          "في بداية السنة الأولى مُنح 500 موظف 100 خيار لكل منهم بشرط خدمة ثلاث سنوات، والقيمة العادلة عند المنح 15 دولارًا، وكان التقدير الأولي لمغادرة 100 موظف. عند نهاية السنة الأولى غادر 40 وصار المتوقع 110 مغادرين إجمالًا. خُفض سعر الممارسة في هذا التاريخ، فكانت القيمة العادلة للخيار الأصلي قبل التعديل 5 دولارات وللخيار المعدل 8 دولارات. في السنة الثانية غادر 35 آخرون وصار المتوقع 105 مغادرين إجمالًا؛ وفي الثالثة غادر 28، فأصبح الإجمالي الفعلي 103 واستحقت خيارات 397 موظفًا.",
+          "At the start of year one, 500 employees each receive 100 options subject to three years' service, with grant-date fair value of $15; initially 100 employees are expected to leave. At the first year-end, 40 have left and total expected leavers rise to 110. The exercise price is reduced then; fair value immediately before repricing is $5 per original option and $8 per modified option. Another 35 leave in year two, when total expected leavers become 105; 28 leave in year three, so actual total leavers are 103 and 397 employees vest.",
+        ),
+        calculations: [
+          text("الزيادة عند تعديل السنة الأولى = 8 − 5 = 3 دولارات لكل خيار، توزع على السنتين المتبقيتين؛ لا تُستبدل بها قيمة المنحة الأصلية 15 دولارًا.", "Modification-date increment = $8 − $5 = $3 per option, spread over the two remaining service years; it does not replace the original $15 grant value."),
+          text("السنة الأولى: (500 − 110) × 100 × 15 × 1/3 = 195,000 دولار مصروفًا تراكميًا.", "Year one: (500 − 110) × 100 × $15 × 1/3 = $195,000 cumulative expense."),
+          text("السنة الثانية: (500 − 105) × 100 × [15 × 2/3 + 3 × 1/2] = 454,250 دولار تراكميًا؛ مصروف السنة = 454,250 − 195,000 = 259,250.", "Year two: (500 − 105) × 100 × [$15 × 2/3 + $3 × 1/2] = $454,250 cumulative; current-year expense = $454,250 − $195,000 = $259,250."),
+          text("السنة الثالثة: (500 − 103) × 100 × (15 + 3) = 714,600 دولار تراكميًا؛ مصروف السنة = 714,600 − 454,250 = 260,350.", "Year three: (500 − 103) × 100 × ($15 + $3) = $714,600 cumulative; current-year expense = $714,600 − $454,250 = $260,350."),
+        ],
+        conclusion: text("المصروف عبر السنوات الثلاث 195,000 ثم 259,250 ثم 260,350، ومجموعه 714,600 دولار؛ يقابله احتياطي في حقوق الملكية. أساس الزيادة هو 3 دولارات بتاريخ التعديل، لا 8 دولارات مضافة إلى 15.", "The three annual charges are $195,000, $259,250 and $260,350, totalling $714,600, with an equity reserve credit. Only the $3 modification-date increment is added to the original $15, not the entire $8 modified fair value."),
+        journalEntries: [
+          { label: text("السنة الأولى: خدمة قبل التعديل", "Year one: pre-modification service"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("195,000 دولار", "$195,000") },
+          { label: text("السنة الثانية: خدمة وتعديل", "Year two: service and modification"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("259,250 دولار", "$259,250") },
+          { label: text("السنة الثالثة: اكتمال الاستحقاق", "Year three: vesting completed"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("260,350 دولار", "$260,350") },
+        ],
+        reference: "IFRS 2.27, B42–B43(a)",
       },
     ],
   },
