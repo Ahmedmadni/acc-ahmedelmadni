@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-bruce-option-tax",
   "ifrs-book2-saddler-settlement-choice",
   "ifrs-book2-cash-sars-five-years",
   "ifrs-book2-jb-options-and-cash-alternative",
@@ -218,8 +219,18 @@ for (const id of [
   if (practiceCase?.standardCode !== "IAS 19")
     failures.push(`${id}: chapter 9 case must stay with IAS 19`);
 }
+if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?.standardCode !== "IAS 12")
+  failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IAS 12 Bruce first-year service cost", 5000 * 3 / 2, 7500],
+  ["IAS 12 Bruce first-year expected tax deduction", 5000 * 1.2 / 2, 3000],
+  ["IAS 12 Bruce first-year deferred tax asset", 3000 * 0.3, 900],
+  ["IAS 12 Bruce final tax deduction", 5000 * 3.4, 17000],
+  ["IAS 12 Bruce final deferred tax asset", 17000 * 0.3, 5100],
+  ["IAS 12 Bruce cumulative P&L tax benefit", 5000 * 3 * 0.3, 4500],
+  ["IAS 12 Bruce equity tax benefit", (17000 - 15000) * 0.3, 600],
+  ["IAS 12 Bruce year-two P&L movement", 4500 - 900, 3600],
   ["IFRS 2 Saddler share alternative grant value", 24000 * 4.5, 108000],
   ["IFRS 2 Saddler cash alternative grant value", 20000 * 5.2, 104000],
   ["IFRS 2 Saddler residual equity", 108000 - 104000, 4000],

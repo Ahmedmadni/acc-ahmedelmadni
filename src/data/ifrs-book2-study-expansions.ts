@@ -189,6 +189,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 12.38–40, 47",
       },
+      {
+        title: text("ضريبة خيارات الموظفين: قارن الخصم المتوقع بمصروف الخدمة التراكمي", "Employee-option tax: compare expected deduction with cumulative service cost"),
+        explanation: text(
+          "قد يثبت مصروف خيارات الموظفين محاسبيًا على فترة الخدمة وفق IFRS 2 بينما لا يسمح القانون بخصمه ضريبيًا إلا عند ممارسة الخيار وبمبلغ يعتمد على قيمته الجوهرية آنذاك. تحدد IAS 12 أساس خدمات الموظفين المستلمة حتى تاريخ التقرير بالمبلغ الذي يتوقع السماح بخصمه مستقبلًا، اعتمادًا على المعلومات والقيمة السوقية المتاحة في ذلك التاريخ ونسبة الخدمة المكتسبة؛ وبما أن الخدمات صُرفت وليس لها أصل دفتري، قد ينشأ فرق مؤقت قابل للخصم. يخضع إثبات أصل الضريبة المؤجلة لاحتمال وجود أرباح خاضعة كافية لاستخدام الخصم. وزّع المنفعة الضريبية التراكمية بين الربح أو الخسارة، بقدر ما يتعلق بمصروف الخدمة التراكمي، وحقوق الملكية مباشرةً لأي خصم ضريبي متوقع يزيد عليه. عند ممارسة الخيارات حلّل الضريبة الجارية الفعلية واعكس الأصل المؤجل دون عدّ المنفعة مرتين؛ لا تخلط أثر حقوق الملكية مع الدخل الشامل الآخر.",
+          "An employee-option expense may be recognised over service under IFRS 2 while tax law permits a deduction only when options are exercised, measured by intrinsic value then. IAS 12 measures the tax base of employee services received to date by the future deduction expected under information and share price available at the reporting date, reflecting service already rendered; the services have no carrying amount after being expensed, so a deductible temporary difference may arise. Recognise a deferred tax asset only to the extent probable taxable profits will permit use of the deduction. Allocate cumulative tax benefit to profit or loss up to the amount attributable to cumulative service expense, with any excess deduction benefit directly in equity. On exercise, recognise the actual current-tax effect and reverse the deferred asset without double counting the benefit; direct equity is not OCI.",
+        ),
+        keyPoints: [
+          text("استخدم خصم الخدمات المكتسبة حتى تاريخ التقرير، لا كامل خصم خيار لم يستحق بعد.", "Use the deduction attributable to service received to date, not the full deduction for an unvested option."),
+          text("اختبر قابلية استرداد الأصل المؤجل، ثم افصل أثر الربح أو الخسارة عن الزيادة المعترف بها مباشرة في حقوق الملكية.", "Test deferred-asset recoverability, then separate profit-or-loss tax from any excess recognised directly in equity."),
+        ],
+        reference: "IAS 12.24, 28–29, 68A–68C; IFRS 2.19–23",
+      },
     ],
     workedExamples: [
       {
@@ -354,6 +366,25 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         conclusion: text("يلزم تحليل وإثبات ضريبة مؤجلة على الفرق المؤقت الخاضع المرتبط بالاستثمار المتوقع انعكاسه، لكن المعطيات لا تكفي لمبلغ محدد. عدم إعلان توزيع هذا العام لا يلغي خطة التوزيع خلال المستقبل المنظور.", "Assess and recognise deferred tax on the taxable investment difference expected to reverse, but the facts do not support a numeric balance. No declaration this year does not negate planned foreseeable distributions."),
         journalEntries: [],
         reference: "IAS 12.38–40, 47",
+      },
+      {
+        title: text("Bruce: ضريبة خصم خيارات الأسهم عند الممارسة", "Bruce: tax deduction for employee options on exercise"),
+        facts: text(
+          "في 1 يناير 20X2 منح Bruce أحد موظفيه 5,000 خيار يستحق بعد خدمته حتى 31 ديسمبر 20X3. القيمة العادلة للخيار عند المنح 3 دولارات. يسمح قانون الضريبة بخصم القيمة الجوهرية فقط عند الممارسة؛ بلغت 1.20 دولار للخيار في نهاية 20X2 و3.40 دولارات في نهاية 20X3 حين مورست الخيارات. معدل الضريبة 30%. يفترض إثبات الأصل المؤجل احتمال توفر أرباح ضريبية كافية للاستفادة من الخصم.",
+          "On 1 January 20X2 Bruce grants an employee 5,000 options vesting on 31 December 20X3 after service. Grant-date fair value is $3 per option. Tax law allows a deduction of intrinsic value only on exercise; estimated intrinsic value is $1.20 per option at end-20X2 and $3.40 at end-20X3, when all options are exercised. Tax rate is 30%. Recognition of the deferred tax asset assumes probable taxable profits sufficient to use the deduction.",
+        ),
+        calculations: [
+          text("نهاية 20X2: مصروف خدمة تراكمي = 5,000 × 3 × 1/2 = 7,500. الخصم المتوقع المنسوب للخدمة حتى تاريخه = 5,000 × 1.20 × 1/2 = 3,000؛ أصل الضريبة المؤجلة = 3,000 × 30% = 900 دولار، كله في الربح أو الخسارة.", "End-20X2: cumulative service cost = 5,000 × $3 × 1/2 = $7,500. Estimated future deduction attributable to service to date = 5,000 × $1.20 × 1/2 = $3,000; deferred tax asset = $3,000 × 30% = $900, all in profit or loss."),
+          text("نهاية 20X3 قبل الممارسة: مصروف الخدمة التراكمي = 5,000 × 3 = 15,000؛ الخصم المتوقع = 5,000 × 3.40 = 17,000؛ أصل الضريبة المؤجلة = 5,100. المنفعة التراكمية المرتبطة بالمصروف = 15,000 × 30% = 4,500، والزيادة إلى حقوق الملكية مباشرة = (17,000 − 15,000) × 30% = 600.", "End-20X3 before exercise: cumulative service cost = 5,000 × $3 = $15,000; expected deduction = 5,000 × $3.40 = $17,000; deferred tax asset = $5,100. Cumulative benefit attributable to expense is $15,000 × 30% = $4,500; excess recognised directly in equity is ($17,000 − $15,000) × 30% = $600."),
+          text("حركة 20X3 قبل الممارسة = أصل مؤجل زائد 4,200: دخل ضريبة مؤجلة في الربح أو الخسارة 4,500 − 900 = 3,600، وحقوق ملكية 600. عند الممارسة يصبح الخصم الفعلي 17,000 والمنفعة الجارية 5,100؛ يعكس الأصل المؤجل 5,100 ويثبت الأثر الجاري بالمبلغ نفسه وفق توزيعه، دون منفعة إضافية صافية.", "The 20X3 pre-exercise asset increase is $4,200: deferred tax income in profit or loss of $4,500 − $900 = $3,600 and $600 in equity. On exercise the actual $17,000 deduction yields $5,100 current-tax benefit; reverse the $5,100 deferred asset and recognise current tax with the same allocation, without a second net benefit."),
+        ],
+        conclusion: text("لا تقاس الضريبة المؤجلة بالقيمة العادلة للخيار البالغة 3 دولارات، بل بالخصم الضريبي المتوقع للخدمة المستلمة. في نهاية 20X3 يوزع أصل 5,100 إلى منفعة تراكمية 4,500 في الربح أو الخسارة و600 مباشرةً في حقوق الملكية، بشرط قابلية الاستفادة الضريبية.", "Deferred tax is not measured from the $3 option fair value, but from the expected tax deduction for service received. At end-20X3, the $5,100 asset is allocated to $4,500 cumulative profit-or-loss benefit and $600 directly in equity, subject to recoverability."),
+        journalEntries: [
+          { label: text("31 ديسمبر 20X2: المنفعة المؤجلة", "31 December 20X2: deferred benefit"), debit: text("أصل ضريبة مؤجلة", "Deferred tax asset"), credit: text("دخل ضريبة مؤجلة — ربح أو خسارة", "Deferred tax income — profit or loss"), amount: text("900 دولار", "$900") },
+          { label: text("31 ديسمبر 20X3: زيادة الأصل المؤجل قبل الممارسة", "31 December 20X3: pre-exercise deferred asset increase"), debit: text("أصل ضريبة مؤجلة 4,200", "Deferred tax asset 4,200"), credit: text("دخل ضريبة مؤجلة 3,600 + حقوق ملكية 600", "Deferred tax income 3,600 + equity 600"), amount: text("4,200 دولار لكل جانب", "$4,200 each side") },
+          { label: text("عند الممارسة: تحويل المنفعة من مؤجلة إلى جارية", "On exercise: transfer benefit from deferred to current"), debit: text("أصل ضريبة جارية أو تخفيض التزام ضريبي جارٍ", "Current tax receivable or reduction of current tax payable"), credit: text("أصل ضريبة مؤجلة", "Deferred tax asset"), amount: text("5,100 دولار؛ عرض مبسط للحركة الصافية", "$5,100; simplified net reclassification") },
+        ],
+        reference: "IAS 12.24, 28–29, 68A–68C; IFRS 2.19–23",
       },
     ],
   },
