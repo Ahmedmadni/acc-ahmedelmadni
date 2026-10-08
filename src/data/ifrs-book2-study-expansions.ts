@@ -1076,6 +1076,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 2.19–23, 30–33",
       },
+      {
+        title: text("عند تحويل الوعد إلى نقد: التزام يعاد قياسه", "A cash promise creates a remeasured liability"),
+        explanation: text(
+          "في منحة الخيارات التي تسوّى بأسهم، يقابل تكلفة خدمة الموظفين احتياطي في حقوق الملكية على أساس القيمة العادلة بتاريخ المنح وعدد الأدوات المتوقع استحقاقها. إذا كان الوعد بدلًا من ذلك دفع نقد يعتمد على قيمة السهم، يقابل الخدمة التزام، ويعاد قياس هذا الالتزام بالقيمة العادلة لكل حق نقدي في كل تاريخ تقرير وعند التسوية؛ تذهب حركة القياس إلى الربح أو الخسارة. خلال فترة الخدمة يُضرب عدد الحقوق المتوقع استحقاقها في قيمتها العادلة الحالية وفي نسبة الخدمة المنقضية؛ وبعد الاستحقاق يستمر تحديث الالتزام حتى السداد. لا يُنشأ قيد إصدار أسهم عند الدفع النقدي، ولا يجوز استخدام قيمة خيار التسوية بالأسهم بتاريخ المنح لحساب التزام نقدي لم تُذكر قيمه العادلة اللاحقة.",
+          "An equity-settled option grant credits an equity reserve for employee service using grant-date fair value and the number expected to vest. If the promise is instead cash based on share value, the service credits a liability remeasured to each cash right's fair value at every reporting date and settlement; remeasurement changes go to profit or loss. During service, multiply rights expected to vest by current fair value and elapsed service proportion; after vesting, continue remeasuring until payment. Cash payment creates no share-issue entry, and the equity option's grant-date value cannot stand in for missing later fair values of the cash right.",
+        ),
+        keyPoints: [
+          text("الأسهم: مصروف خدمة مقابل حقوق ملكية؛ النقد: مصروف خدمة وتغير قيمة مقابل التزام.", "Shares: service cost against equity; cash: service cost and fair-value changes against a liability."),
+          text("بغياب قيمة الحق النقدي في تواريخ التقرير، اشرح طريقة الحساب ولا تختلق مبالغ.", "Without reporting-date cash-right fair values, explain the method rather than inventing amounts."),
+        ],
+        reference: "IFRS 2.14–23, 30–33",
+      },
     ],
     workedExamples: [
       {
@@ -1140,6 +1152,27 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("31 ديسمبر 20X3: خدمة السنة", "31 December 20X3: service for the year"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي مدفوعات أسهم", "Share-based-payment reserve"), amount: text("135,000 دولار", "$135,000") },
         ],
         reference: "IFRS 2.19–23",
+      },
+      {
+        title: text("تغير تقديرات الاستحقاق ثم ممارسة الخيارات", "Revised vesting estimates and option exercise"),
+        facts: text(
+          "مُنح 800 موظف 200 خيار لكل منهم على سهم قيمته الاسمية دولار واحد. القيمة العادلة للخيار عند المنح 4 دولارات وسعر الممارسة 1.50 دولار؛ يشترط البقاء ثلاث سنوات. في نهاية السنة الأولى كان المتوقع مغادرة 95 موظفًا، وفي الثانية 70، وعند الاستحقاق غادر 60 فعليًا. مارس جميع المستحقين الخيارات في نهاية السنة الثالثة.",
+          "Eight hundred employees each receive 200 options on $1 par shares. Grant-date option fair value is $4 and exercise price $1.50; three years' service is required. Expected total leavers are 95 at the first year-end and 70 at the second; 60 actually leave by vesting. All vested options are exercised at the end of year three.",
+        ),
+        calculations: [
+          text("نهاية 20X1: (800 − 95) × 200 × 4 × 1/3 = 188,000 دولار مصروفًا ورصيد احتياطي.", "20X1: (800 − 95) × 200 × $4 × 1/3 = $188,000 expense and closing reserve."),
+          text("نهاية 20X2: الرصيد التراكمي (800 − 70) × 200 × 4 × 2/3 = 389,333.33؛ مصروف السنة ≈ 201,333.33 دولار.", "20X2 cumulative reserve: (800 − 70) × 200 × $4 × 2/3 = $389,333.33; current-year charge ≈ $201,333.33."),
+          text("نهاية 20X3: 740 × 200 × 4 = 592,000 دولار رصيدًا نهائيًا؛ مصروف السنة ≈ 202,666.67 دولار. قد تعرض القوائم المصروفين 201,333 و202,667 بعد التقريب.", "20X3 final reserve: 740 × 200 × $4 = $592,000; current-year charge ≈ $202,666.67. The two annual charges may be displayed as $201,333 and $202,667 after rounding."),
+          text("عند الممارسة: 148,000 سهم؛ نقدية 148,000 × 1.50 = 222,000؛ علاوة إصدار = 222,000 + 592,000 − 148,000 = 666,000 دولار.", "On exercise: 148,000 shares; cash = 148,000 × $1.50 = $222,000; share premium = $222,000 + $592,000 − $148,000 = $666,000."),
+        ],
+        conclusion: text("تُثبت تكلفة الخدمة التراكمية 592,000 في حقوق الملكية، ثم يُحوّل الاحتياطي مع النقد إلى رأس مال وعلاوة عند الممارسة. لو كان الوعد نقديًا لظهر التزام معاد القياس بدل الاحتياطي، لكن قيم الحقوق النقدية اللازمة لاستخراج مبالغ سنوية غير معطاة.", "Cumulative service cost of $592,000 is credited to equity and transferred with cash to share capital and premium on exercise. A cash promise would instead create a remeasured liability; the cash-right fair values needed for annual figures are not supplied."),
+        journalEntries: [
+          { label: text("20X1: خدمة الموظفين", "20X1: employee service"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("188,000 دولار", "$188,000") },
+          { label: text("20X2: خدمة الموظفين وتعديل التقدير", "20X2: service and revised estimate"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("201,333 دولار تقريبًا", "Approximately $201,333") },
+          { label: text("20X3: استكمال الخدمة", "20X3: remaining service"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("202,667 دولار تقريبًا", "Approximately $202,667") },
+          { label: text("20X3: ممارسة جميع الخيارات المستحقة", "20X3: exercise of all vested options"), debit: text("نقدية 222,000 + احتياطي 592,000", "Cash 222,000 + reserve 592,000"), credit: text("رأس مال 148,000 + علاوة 666,000", "Share capital 148,000 + premium 666,000"), amount: text("814,000 دولار لكل جانب", "$814,000 each side") },
+        ],
+        reference: "IFRS 2.14–23, 30–33",
       },
     ],
   },

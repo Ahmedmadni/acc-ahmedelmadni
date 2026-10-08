@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-jb-options-and-cash-alternative",
   "ifrs-book2-four-year-employee-options",
   "ifrs-book2-ias41-quiz-biological-asset",
   "ifrs-book2-ias41-quiz-produce",
@@ -217,6 +218,10 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IFRS 2 J&B first-year service cost", ((800 - 95) * 200 * 4) / 3, 188000],
+  ["IFRS 2 J&B second-year cumulative reserve", ((800 - 70) * 200 * 4 * 2) / 3, 389333.3333333333],
+  ["IFRS 2 J&B final option reserve", (800 - 60) * 200 * 4, 592000],
+  ["IFRS 2 J&B exercise premium", (740 * 200 * 1.5) + 592000 - (740 * 200), 666000],
   ["IFRS 2 four-year expected leavers", 5 * 4, 20],
   ["IFRS 2 four-year expected options", (200 - 20) * 250, 45000],
   ["IFRS 2 four-year first-year service cost", (45000 * 12) / 4, 135000],
