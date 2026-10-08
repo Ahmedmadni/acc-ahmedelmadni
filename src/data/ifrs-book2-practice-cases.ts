@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-bruce-option-tax",
+    standardCode: "IAS 12",
+    title: text("خصم خيارات الموظف والضريبة المؤجلة", "Bruce: employee-option tax deduction and deferred tax"),
+    facts: text(
+      "في 1 يناير 20X2 منحت Bruce موظفًا 5,000 خيار يستحق في 31 ديسمبر 20X3 بعد سنتين من الخدمة. القيمة العادلة لكل خيار عند المنح 3 دولارات. يسمح قانون الضريبة بخصم القيمة الجوهرية للخيار فقط عند الممارسة؛ بلغت 1.20 دولار لكل خيار في 31 ديسمبر 20X2 و3.40 دولارات في 31 ديسمبر 20X3، حين مورست جميع الخيارات. معدل الضريبة 30%. يفترض الحل احتمال توفر ربح ضريبي كافٍ لاستعمال الخصم المتوقع؛ إن غاب هذا الاحتمال يعاد تقييم إثبات الأصل المؤجل.",
+      "On 1 January 20X2 Bruce grants an employee 5,000 options vesting on 31 December 20X3 after two years' service. Grant-date fair value is $3 per option. Tax law allows deduction of intrinsic value only when options are exercised; intrinsic value is $1.20 per option at 31 December 20X2 and $3.40 at 31 December 20X3, when all options are exercised. The tax rate is 30%. The solution assumes probable taxable profits to utilise the future deduction; otherwise deferred-asset recognition must be reassessed.",
+    ),
+    question: text(
+      "أظهر معالجة الضريبة المؤجلة في 31 ديسمبر 20X2، وفي 31 ديسمبر 20X3 قبل الممارسة، ثم عند ممارسة الخيارات، مبينًا ما يذهب إلى الربح أو الخسارة وما يثبت مباشرة في حقوق الملكية.",
+      "Show deferred tax accounting at 31 December 20X2, at 31 December 20X3 before exercise, and on exercise, distinguishing profit or loss from amounts recognised directly in equity.",
+    ),
+    solution: [
+      text("20X2: مصروف الخدمة التراكمي 5,000 × 3 × 1/2 = 7,500 دولار. الخصم الضريبي المتوقع المنسوب إلى الخدمة المكتسبة = 5,000 × 1.20 × 1/2 = 3,000؛ الفرق القابل للخصم 3,000 وأصل الضريبة المؤجلة = 900. القيد: مدين أصل ضريبة مؤجلة 900، دائن دخل ضريبة مؤجلة في الربح أو الخسارة 900.", "20X2: cumulative service expense is 5,000 × $3 × 1/2 = $7,500. Estimated future deduction attributable to earned service is 5,000 × $1.20 × 1/2 = $3,000; deductible difference is $3,000 and deferred tax asset $900. Debit deferred tax asset $900; credit deferred tax income in profit or loss $900."),
+      text("20X3 قبل الممارسة: مصروف الخدمة التراكمي 15,000، والخصم الضريبي المتوقع 5,000 × 3.40 = 17,000، فأصل الضريبة المؤجلة 5,100. المنفعة الضريبية التراكمية حتى حد المصروف = 15,000 × 30% = 4,500 في الربح أو الخسارة، والزيادة 2,000 × 30% = 600 مباشرة في حقوق الملكية، لا في OCI.", "20X3 before exercise: cumulative service expense is $15,000 and estimated deduction 5,000 × $3.40 = $17,000, giving a $5,100 deferred tax asset. Cumulative tax benefit up to the expense is $15,000 × 30% = $4,500 in profit or loss; the excess $2,000 × 30% = $600 goes directly to equity, not OCI."),
+      text("حركة 20X3: مدين أصل ضريبة مؤجلة 4,200؛ دائن دخل ضريبة مؤجلة في الربح أو الخسارة 3,600 ودائن حقوق ملكية 600. عند الممارسة يسمح بخصم فعلي 17,000 ومنفعة ضريبة جارية 5,100؛ يعكس أصل الضريبة المؤجلة ويثبت الأثر الجاري. يمكن عرض القيد الصافي مدين أصل ضريبة جارية أو تخفيض ضريبة جارية مستحقة 5,100، دائن أصل ضريبة مؤجلة 5,100؛ لا تضف المنفعة مرة ثانية إلى ربح السنة.", "20X3 movement: debit deferred tax asset $4,200; credit deferred tax income in profit or loss $3,600 and equity $600. On exercise the actual $17,000 deduction yields a $5,100 current-tax benefit; reverse deferred tax and recognise current tax. A net presentation is debit current tax receivable or reduction of current tax payable $5,100, credit deferred tax asset $5,100; do not count the benefit in income twice."),
+    ],
+    reference: "IAS 12.24, 28–29, 68A–68C; IFRS 2.19–23",
+  },
+  {
     id: "ifrs-book2-saddler-settlement-choice",
     standardCode: "IFRS 2",
     title: text("خيار المدير بين الأسهم والنقد", "Saddler: director chooses shares or cash"),
