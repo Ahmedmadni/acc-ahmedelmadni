@@ -1066,6 +1066,48 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 21.8–12, 21–23, 28, 38–39",
       },
+      {
+        title: text(
+          "سعر الصرف المناسب لكل بند وتاريخ",
+          "Match the exchange rate to the item and date",
+        ),
+        explanation: text(
+          "تبدأ المعاملة الأجنبية بسعرها الفوري في تاريخ الاعتراف. في كل تاريخ تقرير لاحق تُترجم الذمم والنقد والقروض المسددة بمبلغ محدد من العملة الأجنبية بسعر الإقفال، وتُثبت فروقها عادة في الربح أو الخسارة. لا تُغيّر تلك الترجمة تكلفة المخزون أو الأصل غير النقدي المقاس بالتكلفة التاريخية؛ أما البند غير النقدي المقاس بالقيمة العادلة فيستخدم سعر تاريخ قياس تلك القيمة. وعند السداد بعد نهاية السنة، قارن النقد المدفوع بالقيمة الدفترية للدائن في نهاية السنة السابقة، لا بقيمة يوم الشراء، لتحديد فرق صرف السنة الجديدة دون تكرار مكسب السنة الماضية.",
+          "Initially translate a foreign-currency transaction at the spot rate on its recognition date. At each later reporting date, translate cash, receivables and loans or payables settled in fixed foreign-currency amounts at the closing rate; their exchange differences normally enter profit or loss. This does not change the historical cost of inventory or another non-monetary asset. A non-monetary item measured at fair value instead uses the exchange rate on the date that fair value was measured. When settlement follows a year-end, compare cash paid with the payable's carrying amount at that preceding year-end, not with its original amount, so the prior-year exchange gain is not recognised twice.",
+        ),
+        keyPoints: [
+          text(
+            "افصل أثر تغير الصرف حتى 31 ديسمبر عن أثره من 1 يناير إلى يوم السداد.",
+            "Separate exchange movements up to 31 December from those between 1 January and settlement.",
+          ),
+          text(
+            "حدد أولًا هل الرصيد نقدي أم غير نقدي وما أساس قياس غير النقدي.",
+            "First identify whether the balance is monetary or non-monetary and the measurement basis of any non-monetary item.",
+          ),
+        ],
+        reference: "IAS 21.21–23, 28–30",
+      },
+      {
+        title: text(
+          "تحديد العملة الوظيفية وتغييرها",
+          "Determining and changing functional currency",
+        ),
+        explanation: text(
+          "العملة الوظيفية تُستنتج من العملة التي تؤثر أساسًا في أسعار البيع وفي تكاليف العمالة والمواد والخدمات؛ وإذا لم تحسم هذه المؤشرات، انظر إلى عملة التمويل وعملة الاحتفاظ بمتحصلات التشغيل. وللعملية الأجنبية يُراعى مدى استقلالها عن الشركة الأم، وحجم التعاملات معها، وإمكانية تحويل تدفقاتها إليها ومصدر تمويلها. لا يختار المديرون تغيير العملة الوظيفية لمجرد تحسين العرض؛ لا تتغير إلا بتغير المعاملات والظروف الأساسية، ويُطبق التغيير مستقبلًا من تاريخه. عملة العرض أمر مختلف، ويمكن اختيارها مستقلة عن العملة الوظيفية، مع تطبيق قواعد ترجمة القوائم والإفصاحات ذات الصلة.",
+          "Functional currency follows the currency that primarily influences sales prices and labour, material and other costs. If those primary indicators are inconclusive, consider financing currency and the currency in which operating receipts are retained. For a foreign operation, consider its autonomy from the parent, the scale of transactions with the parent, whether its cash flows are readily remittable and how it is financed. Management cannot change functional currency merely to improve presentation: a change requires altered underlying transactions and conditions, and is applied prospectively from the change date. Presentation currency is different and may be chosen separately, subject to the relevant financial-statement translation and disclosure requirements.",
+        ),
+        keyPoints: [
+          text(
+            "عملة عرض المجموعة لا تحدد وحدها العملة الوظيفية لكل شركة تابعة.",
+            "The group's presentation currency alone does not determine each subsidiary's functional currency.",
+          ),
+          text(
+            "عند تغير العملة الوظيفية، تُترجم جميع البنود إلى العملة الجديدة بسعر يوم التغيير، بصورة مستقبلية.",
+            "On a functional-currency change, translate all items into the new currency at the change-date rate, prospectively.",
+          ),
+        ],
+        reference: "IAS 21.9–12, 34–37, 38–39, 53–57",
+      },
     ],
     workedExamples: [
       {
@@ -1110,6 +1152,45 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           },
         ],
         reference: "IAS 21.21–23, 28",
+      },
+      {
+        title: text(
+          "فاتورة باليورو تُسدد على دفعتين عبر سنتين",
+          "Euro invoice settled in two instalments across year-ends",
+        ),
+        facts: text(
+          "اشترت White Cliffs بضائع من Rinka في 30 سبتمبر مقابل 40,000 يورو. يُدفع نصف الثمن في 30 نوفمبر والنصف الآخر في 31 يناير؛ نهاية سنتها المالية 31 ديسمبر. أسعار الصرف (يورو لكل دولار): 1.60 عند الشراء، 1.80 في نوفمبر، 1.90 في ديسمبر، 1.85 في يناير.",
+          "White Cliffs bought goods from Rinka on 30 September for €40,000. Half is paid on 30 November and the rest on 31 January; its year-end is 31 December. Rates, expressed as euros per US dollar, are 1.60 at purchase, 1.80 in November, 1.90 at year-end and 1.85 in January.",
+        ),
+        calculations: [
+          text(
+            "الشراء والدائن الأولي: 40,000 ÷ 1.60 = 25,000 دولار؛ نصيب كل دفعة 12,500 دولار قبل فروق الصرف.",
+            "Initial purchase and payable: €40,000 ÷ 1.60 = US$25,000; each instalment initially represents US$12,500.",
+          ),
+          text(
+            "دفعة نوفمبر: 20,000 ÷ 1.80 = 11,111 دولار بالتقريب؛ مكسب الصرف = 12,500 − 11,111 = 1,389 دولار.",
+            "November payment: €20,000 ÷ 1.80 ≈ US$11,111; exchange gain = 12,500 − 11,111 = US$1,389.",
+          ),
+          text(
+            "دائن ديسمبر المتبقي: 20,000 ÷ 1.90 ≈ 10,526 دولار؛ مكسب ديسمبر = 12,500 − 10,526 = 1,974 دولار. مكاسب السنة الأولى = 3,363 دولار.",
+            "Remaining payable at December: €20,000 ÷ 1.90 ≈ US$10,526; December gain = 12,500 − 10,526 = US$1,974. First-year gains total US$3,363.",
+          ),
+          text(
+            "السداد في يناير: 20,000 ÷ 1.85 ≈ 10,811 دولار؛ خسارة السنة الثانية = 10,811 − 10,526 = 285 دولار.",
+            "January settlement: €20,000 ÷ 1.85 ≈ US$10,811; second-year loss = 10,811 − 10,526 = US$285.",
+          ),
+        ],
+        conclusion: text(
+          "تُثبت مكاسب 1,389 و1,974 في ربح أو خسارة السنة المنتهية في ديسمبر، وخسارة 285 في سنة يناير؛ يبقى مبلغ شراء البضائع الأصلي 25,000 دولار دون إعادة ترجمة لمجرد بقاء الدائن مفتوحًا. المبالغ مقربة إلى أقرب دولار، لذلك يُستخدم الرصيد المقرب نفسه في قيد يناير.",
+          "Recognise gains of 1,389 and 1,974 in the year ending December, and the loss of 285 in the January year. The original US$25,000 goods purchase is not retranslated merely because the payable remains open. Amounts are rounded to whole dollars, with the same rounded closing payable carried into January.",
+        ),
+        journalEntries: [
+          { label: text("30 سبتمبر: إثبات الشراء", "30 September: purchase"), debit: text("مشتريات/مخزون", "Purchases/inventory"), credit: text("دائنون تجاريون", "Trade payables"), amount: text("25,000 دولار", "US$25,000") },
+          { label: text("30 نوفمبر: سداد نصف الفاتورة", "30 November: first instalment"), debit: text("دائنون تجاريون 12,500", "Trade payables 12,500"), credit: text("نقدية 11,111 ومكسب صرف 1,389", "Cash 11,111 and exchange gain 1,389"), amount: text("12,500 دولار", "US$12,500") },
+          { label: text("31 ديسمبر: إعادة ترجمة الدائن المتبقي", "31 December: retranslate remaining payable"), debit: text("دائنون تجاريون", "Trade payables"), credit: text("مكسب صرف في الربح أو الخسارة", "Exchange gain in profit or loss"), amount: text("1,974 دولار", "US$1,974") },
+          { label: text("31 يناير: السداد النهائي", "31 January: final settlement"), debit: text("دائنون 10,526 وخسارة صرف 285", "Payables 10,526 and exchange loss 285"), credit: text("نقدية", "Cash"), amount: text("10,811 دولار", "US$10,811") },
+        ],
+        reference: "IAS 21.21–23, 28–29",
       },
     ],
   },
