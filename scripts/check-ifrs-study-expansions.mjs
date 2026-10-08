@@ -78,6 +78,11 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ifrs2-quiz-cash-settled",
+  "ifrs-book2-ifrs2-quiz-grant-date",
+  "ifrs-book2-ifrs2-quiz-equity-recognition",
+  "ifrs-book2-ifrs2-quiz-employee-options-measurement",
+  "ifrs-book2-ifrs2-quiz-cash-remeasurement",
   "ifrs-book2-bruce-option-tax",
   "ifrs-book2-saddler-settlement-choice",
   "ifrs-book2-cash-sars-five-years",
@@ -187,9 +192,21 @@ const chapter13QuickQuizText = new Map([
   ["ifrs-book2-ias2-quiz-nrv-formula", "Net realisable value = selling price less ............... less ..............."],
   ["ifrs-book2-ias2-quiz-fifo-lifo", "Which inventory costing method is allowed under IAS 2? (a) FIFO; (b) LIFO."],
 ]);
+const chapter14QuickQuizText = new Map([
+  ["ifrs-book2-ifrs2-quiz-cash-settled", "What is a cash-settled share-based payment transaction?"],
+  ["ifrs-book2-ifrs2-quiz-grant-date", "What is the grant date?"],
+  ["ifrs-book2-ifrs2-quiz-equity-recognition", "If an entity has entered into an equity-settled share-based payment transaction, what should it recognise in its financial statements?"],
+  ["ifrs-book2-ifrs2-quiz-employee-options-measurement", "Where an entity has granted share options to its employees in return for services, how is the transaction measured?"],
+  ["ifrs-book2-ifrs2-quiz-cash-remeasurement", "Why does remeasurement at each year end occur only in the case of cash-settled share-based payments?"],
+]);
 for (const [id, sourceQuestion] of chapter13QuickQuizText) {
   if (openPracticeCases.find((item) => item.id === id)?.question.en !== sourceQuestion)
     failures.push(`${id}: reviewed chapter 13 question wording changed`);
+}
+for (const [id, sourceQuestion] of chapter14QuickQuizText) {
+  const practiceCase = openPracticeCases.find((item) => item.id === id);
+  if (practiceCase?.question.en !== sourceQuestion || practiceCase.standardCode !== "IFRS 2")
+    failures.push(`${id}: reviewed chapter 14 question wording or standard changed`);
 }
 if (
   openPracticeCases.find((item) => item.id === "ifrs-book2-bets-cash-flow-hedge-cumulative")
