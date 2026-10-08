@@ -8,6 +8,42 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 2": {
+    sections: [
+      {
+        title: text("التقييم صنفًا بصنف: التكلفة أم صافي القيمة القابلة للتحقق؟", "Item-by-item valuation: cost or net realisable value?"),
+        explanation: text(
+          "كوّن تكلفة كل صنف من تكلفة الشراء والتحويل والتكاليف اللازمة لإيصاله إلى مكانه وحالته الحاليين. قد يدخل نصيبه المنتظم من تكاليف الإنتاج المؤهلة، لكن تكلفة البيع ليست جزءًا من تكلفة المخزون. احسب صافي القيمة القابلة للتحقق من سعر البيع المتوقع في النشاط المعتاد بعد طرح تكلفة الإتمام والتكاليف الضرورية لإتمام البيع، ثم خذ الأقل من التكلفة وهذا الصافي لكل صنف أو مجموعة مناسبة؛ لا تعوض خسارة صنف بزيادة محتملة في صنف آخر. إذا كان الصافي أقل، أثبت التخفيض مصروفًا للفترة. قيّم ما يلزم للبيع وفق الوقائع، فلا تحصره آليًا في التكاليف الإضافية لكل صفقة فقط.",
+          "Build each item's cost from purchase, conversion and other costs needed to bring it to its present location and condition. Eligible systematically allocated production overhead may be included, but selling costs are not inventory cost. Determine net realisable value from the expected ordinary-course selling price less estimated completion costs and costs necessary to make the sale. Carry each item or appropriate group at the lower of cost and that net amount; do not offset one item's shortfall against another item's potential upside. Recognise a necessary write-down as a period expense. Judge which selling costs are necessary on the facts; they are not automatically limited to costs incremental to an individual sale.",
+        ),
+        keyPoints: [
+          text("أضف أعباء الإنتاج المؤهلة إلى التكلفة، لكن اطرح تكاليف البيع عند حساب صافي القيمة القابلة للتحقق.", "Add eligible production overhead to cost, but deduct necessary selling costs when calculating net realisable value."),
+          text("قارن التكلفة والصافي لكل صنف قبل ضرب القيمة المختارة في الكمية.", "Compare cost and net realisable value per item before multiplying the selected amount by units held."),
+          text("إذا ارتفع الصافي لاحقًا، تُراجع خسارة التخفيض السابقة في حدود التكلفة الأصلية.", "If net realisable value later rises, reverse a prior write-down only up to original cost."),
+        ],
+        reference: "IAS 2.6, 9–16, 28–34",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("تقييم صنفين عند نهاية الفترة", "Valuing two inventory items at period-end"),
+        facts: text(
+          "لدى المنشأة 300 وحدة من الصنف A: مواد 160 دولارًا، أعباء إنتاج مؤهلة 15، تكلفة بيع ضرورية 12، وسعر بيع متوقع 185 للوحدة. ولديها 250 وحدة من B: مواد 50، أعباء إنتاج 10، تكلفة بيع 10، وسعر بيع 75 للوحدة. لا توجد تكلفة إتمام إضافية مذكورة.",
+          "The entity holds 300 units of item A: materials US$160, eligible production overhead US$15, necessary selling costs US$12 and expected selling price US$185 per unit. It also holds 250 units of B: materials 50, overhead 10, selling costs 10 and selling price 75 per unit. No additional completion costs are specified.",
+        ),
+        calculations: [
+          text("A: التكلفة للوحدة = 160 + 15 = 175؛ الصافي = 185 − 12 = 173؛ القيمة المختارة = 173 × 300 = 51,900 دولار.", "A: unit cost = 160 + 15 = 175; NRV = 185 − 12 = 173; selected carrying amount = 173 × 300 = US$51,900."),
+          text("B: التكلفة للوحدة = 50 + 10 = 60؛ الصافي = 75 − 10 = 65؛ القيمة المختارة = 60 × 250 = 15,000 دولار.", "B: unit cost = 50 + 10 = 60; NRV = 75 − 10 = 65; selected carrying amount = 60 × 250 = US$15,000."),
+          text("إجمالي المخزون = 51,900 + 15,000 = 66,900 دولار؛ تخفيض A = (175 − 173) × 300 = 600 دولار، ولا تخفيض لـB.", "Total inventory = 51,900 + 15,000 = US$66,900; A write-down = (175 − 173) × 300 = US$600, with no write-down for B."),
+        ],
+        conclusion: text("لا ترفع B إلى صافي قيمته 65 لموازنة خسارة A؛ الزيادة فوق التكلفة لا تُعترف بها.", "Do not raise B to its US$65 NRV to offset A's write-down; an increase above cost is not recognised."),
+        journalEntries: [
+          { label: text("تخفيض A في نهاية الفترة", "Period-end write-down of A"), debit: text("مصروف تخفيض مخزون", "Inventory write-down expense"), credit: text("مخزون أو مخصص تخفيضه", "Inventory or valuation allowance"), amount: text("600 دولار", "US$600") },
+        ],
+        reference: "IAS 2.6, 9–16, 28–34",
+      },
+    ],
+  },
   "IAS 12": {
     sections: [
       {

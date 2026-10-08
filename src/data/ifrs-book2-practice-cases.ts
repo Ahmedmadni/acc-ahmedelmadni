@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias2-two-items-nrv",
+    standardCode: "IAS 2",
+    title: text("تقييم مخزون صنفين", "Two-item inventory valuation"),
+    facts: text(
+      "في نهاية الفترة، الصنف A: 300 وحدة، تكلفة مواد للوحدة 160 دولارًا، أعباء إنتاج منسوبة 15، تكاليف بيع منسوبة 12، سعر بيع متوقع 185. الصنف B: 250 وحدة، تكلفة مواد 50، أعباء إنتاج 10، تكاليف بيع 10، سعر بيع متوقع 75. لم تُذكر تكاليف إتمام أخرى.",
+      "At period-end, item A comprises 300 units with per-unit raw material cost US$160, attributable production overhead US$15, attributable selling costs US$12 and expected selling price US$185. Item B comprises 250 units with corresponding amounts of US$50, US$10, US$10 and US$75. No further completion costs are stated.",
+    ),
+    question: text(
+      "بأي مبلغ سيظهر المخزون في قائمة المركز المالي وفق IAS 2؟",
+      "At what amount will inventories be stated in the statement of financial position in accordance with IAS 2?",
+    ),
+    solution: [
+      text("A: تكلفة الوحدة 160 + 15 = 175، وصافي القيمة القابلة للتحقق 185 − 12 = 173؛ الأقل 173. قيمة 300 وحدة = 51,900 دولار.", "A: unit cost is 160 + 15 = 175 and net realisable value is 185 − 12 = 173; use 173. For 300 units, carrying amount is US$51,900."),
+      text("B: تكلفة الوحدة 50 + 10 = 60، وصافي القيمة القابلة للتحقق 75 − 10 = 65؛ الأقل 60. قيمة 250 وحدة = 15,000 دولار.", "B: unit cost is 50 + 10 = 60 and net realisable value is 75 − 10 = 65; use 60. For 250 units, carrying amount is US$15,000."),
+      text("الإجمالي 66,900 دولار. تخفيض A من تكلفته الأصلية 52,500 إلى 51,900 يساوي 600 دولار: مدين مصروف تخفيض المخزون، دائن المخزون أو مخصص التخفيض. لا يُرفع B فوق تكلفته ولا يُدخل سعر البيع المتوقع ضمن تكلفة المخزون.", "Total inventory is US$66,900. Item A falls from original cost of US$52,500 to US$51,900, so debit inventory write-down expense and credit inventory or a valuation allowance for US$600. Do not raise B above cost or include expected selling price in inventory cost."),
+    ],
+    reference: "IAS 2.6, 9–16, 28–34",
+  },
+  {
     id: "ifrs-book2-ias12-quiz-investment-difference",
     standardCode: "IAS 12",
     title: text("كيف يظهر فرق مؤقت في استثمار تابع أو زميل؟", "How does a temporary difference arise on a subsidiary or associate investment?"),
