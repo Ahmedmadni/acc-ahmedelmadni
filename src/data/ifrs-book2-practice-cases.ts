@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs2-quiz-cash-settled",
+    standardCode: "IFRS 2",
+    title: text("تعريف التسوية النقدية", "Cash-settled share-based payment"),
+    facts: text("سؤال مفاهيمي عن نوع معاملة الدفع المبني على الأسهم، دون بيانات رقمية.", "A conceptual question about a type of share-based payment, with no numeric facts."),
+    question: text("ما معاملة الدفع المبني على الأسهم التي تُسوّى نقدًا؟", "What is a cash-settled share-based payment transaction?"),
+    solution: [
+      text("هي معاملة تتلقى فيها المنشأة سلعًا أو خدمات، وينشأ مقابلها التزام بنقل نقد أو أصول أخرى يحدد مبلغه بالاعتماد على سعر أو قيمة أدوات حقوق ملكية للمنشأة أو لشركة أخرى في مجموعتها. فالمعيار لا يقتصر على أسهم المنشأة ذاتها ولا على دفع النقد وحده؛ يقاس الالتزام ويعاد قياسه حتى التسوية.", "The entity receives goods or services and incurs an obligation to transfer cash or other assets in an amount based on the price or value of equity instruments of the entity or another group entity. The definition is not limited to the entity's own shares or cash alone; the liability is measured and remeasured until settlement."),
+    ],
+    reference: "IFRS 2 Appendix A, 30–33",
+  },
+  {
+    id: "ifrs-book2-ifrs2-quiz-grant-date",
+    standardCode: "IFRS 2",
+    title: text("تحديد تاريخ المنح", "Identify the grant date"),
+    facts: text("سؤال تعريفي عن نقطة قياس أدوات حقوق الملكية الممنوحة للموظف.", "A definition question about the measurement date for equity instruments granted to an employee."),
+    question: text("ما تاريخ المنح؟", "What is the grant date?"),
+    solution: [
+      text("هو تاريخ اتفاق المنشأة والطرف المقابل على ترتيب الدفع المبني على الأسهم مع فهم مشترك لشروطه وأحكامه. وإذا كان الاتفاق خاضعًا لإجراء اعتماد مطلوب، يكون تاريخ المنح عند الحصول على ذلك الاعتماد. لا يلزم أن تكون كل المبالغ النهائية معلومة في ذلك التاريخ ما دامت الشروط متفقًا عليها.", "It is when the entity and counterparty agree to the share-based payment arrangement with a shared understanding of its terms and conditions. If a required approval applies, grant date is when that approval is obtained. Final amounts need not all be known if the agreed terms are understood."),
+    ],
+    reference: "IFRS 2 Appendix A",
+  },
+  {
+    id: "ifrs-book2-ifrs2-quiz-equity-recognition",
+    standardCode: "IFRS 2",
+    title: text("ما يُعترف به في التسوية بالأسهم", "Recognition for an equity-settled award"),
+    facts: text("السؤال عن أثر معاملة تسوّى بأدوات حقوق ملكية مقابل سلع أو خدمات.", "The question concerns goods or services received for an equity-settled award."),
+    question: text("إذا دخلت المنشأة في معاملة دفع مبني على الأسهم تُسوّى بأدوات حقوق الملكية، فما الذي تعترف به في قوائمها المالية؟", "If an entity has entered into an equity-settled share-based payment transaction, what should it recognise in its financial statements?"),
+    solution: [
+      text("تعترف بالسلع أو الخدمات المستلمة وبزيادة مقابلة في حقوق الملكية عندما تحصل على السلع أو تُقدم الخدمات. تسجل السلع أصلًا فقط إذا استوفت شروط الاعتراف بأصل؛ وإلا يثبت مقابل الخدمة أو السلعة مصروفًا. شروط الاستحقاق قد توزع تكلفة خدمة الموظفين على فترة الاستحقاق.", "Recognise the goods or services received and a corresponding increase in equity as the goods are obtained or services rendered. Capitalise goods only if they qualify as an asset; otherwise expense them. Employee service conditions can spread the cost across the vesting period."),
+    ],
+    reference: "IFRS 2.7–9, 14–15",
+  },
+  {
+    id: "ifrs-book2-ifrs2-quiz-employee-options-measurement",
+    standardCode: "IFRS 2",
+    title: text("قياس خيارات الموظفين", "Measure employee share options"),
+    facts: text("تمنح المنشأة خيارات أسهم لموظفين مقابل خدماتهم؛ لا توجد قيم رقمية في السؤال.", "The entity grants employee share options for their services; no numerical values are supplied."),
+    question: text("إذا منحت المنشأة موظفيها خيارات أسهم مقابل خدماتهم، فكيف تقاس المعاملة؟", "Where an entity has granted share options to its employees in return for services, how is the transaction measured?"),
+    solution: [
+      text("تقاس خدمات الموظفين بصورة غير مباشرة بالرجوع إلى القيمة العادلة للخيارات الممنوحة في تاريخ المنح، ويضرب هذا الأساس في عدد الخيارات الذي يستحق وفق شرط الخدمة؛ يعاد تقدير عدد الأدوات المتوقع استحقاقها عند كل تاريخ تقرير. لا تعاد قيمة الخيار العادلة بتاريخ المنح لمجرد تغير سعر السهم في معاملة مسددة بالأسهم.", "Measure employee services indirectly by reference to the options' grant-date fair value, applied to the number vesting under the service condition; update estimated vesting numbers at reporting dates. An equity-settled option's grant-date fair value is not remeasured merely because the share price moves."),
+    ],
+    reference: "IFRS 2.11, 15, 19–23",
+  },
+  {
+    id: "ifrs-book2-ifrs2-quiz-cash-remeasurement",
+    standardCode: "IFRS 2",
+    title: text("سبب إعادة قياس الالتزام النقدي", "Why remeasure a cash-settled liability"),
+    facts: text("تقارن المسألة بين منحة موظف مسددة بالأسهم وأخرى مسددة نقدًا مرتبطة بقيمة السهم.", "The question contrasts an employee equity award with a cash award linked to share value."),
+    question: text("لماذا تحدث إعادة القياس في نهاية كل سنة في حالة معاملات الدفع المبني على الأسهم المسددة نقدًا فقط؟", "Why does remeasurement at each year end occur only in the case of cash-settled share-based payments?"),
+    solution: [
+      text("لأن المبلغ النقدي المطلوب سداده قد يتغير مع قيمة الأداة الأساسية، فيعاد قياس الالتزام بالقيمة العادلة في كل تاريخ تقرير وعند التسوية وتثبت حركته في الربح أو الخسارة. في المقابل، تثبت منحة الموظف المسددة بالأسهم عادة على أساس القيمة العادلة بتاريخ المنح ولا تعاد قيمتها لهذا السبب، مع استمرار تحديث عدد الأدوات المتوقع استحقاقها. كلمة «فقط» هنا تخص المقارنة الأساسية بين هذين النوعين؛ قد توجد تعديلات أو ترتيبات خاصة لها أحكام إضافية.", "Cash ultimately payable changes with the underlying equity value, so the liability is remeasured to fair value at each reporting date and settlement, with changes in profit or loss. By contrast, an ordinary equity-settled employee award retains grant-date fair value, though expected vesting numbers are updated. The question's 'only' describes that basic comparison; modifications and special arrangements have additional rules."),
+    ],
+    reference: "IFRS 2.19–23, 27–28, 30–33",
+  },
+  {
     id: "ifrs-book2-bruce-option-tax",
     standardCode: "IAS 12",
     title: text("خصم خيارات الموظف والضريبة المؤجلة", "Bruce: employee-option tax deduction and deferred tax"),
