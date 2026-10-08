@@ -1155,6 +1155,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 2.34–43",
       },
+      {
+        title: text("استبدال خيار ملغى: اختبر صفة البديل ثم افصل قيمته الإضافية", "Replacing a cancelled option: identify the replacement and its increment"),
+        explanation: text(
+          "عندما تلغي المنشأة منحة أسهم قائمة وتمنح أدوات جديدة في التاريخ نفسه، لا تعد الجديدة تعديلًا للأصلية تلقائيًا: يجب أن تحددها المنشأة صراحةً كأدوات بديلة للملغاة عند المنح. عندئذ تستمر تكلفة المنحة الأصلية بالقيمة العادلة بتاريخ منحها، وتضاف منفعة الاستبدال المقاسة بفرق القيمة العادلة للبديل عن صافي القيمة العادلة للملغى في تاريخ الاستبدال، مع مراعاة أي مبلغ دُفع للموظف عند الإلغاء. وزّع تكلفة المنحة الأصلية على فترة استحقاقها الأصلية، والزيادة على فترة الخدمة من تاريخ الاستبدال إلى استحقاق الأداة البديلة؛ ثم حدّث عدد الموظفين المتوقع استحقاقهم وفق شروط الخدمة غير السوقية. إن لم تعيّن الأدوات الجديدة بديلًا، تعامل معها كمنحة مستقلة وتراجع معالجة إلغاء القديمة. لا تستخدم قيمة البديل الكاملة إضافةً إلى المنحة الأصلية فيتضاعف المصروف.",
+          "When an existing equity award is cancelled and new instruments are granted, the new award is not automatically a modification: it must be identified as a replacement on its grant date. Then continue the original grant-date fair-value cost and add the incremental benefit measured as replacement-date fair value less the cancelled award's net fair value at the same date, allowing for any cancellation payment. Recognise original cost over its original vesting period and the increment over service from replacement until the replacement vests; update expected vesting numbers for non-market service conditions. If the new instruments are not designated replacements, account for them as a new grant and assess cancellation of the original award separately. Do not add the replacement's entire fair value to the original cost and double-count service.",
+        ),
+        keyPoints: [
+          text("التعيين كبديل وقت المنح شرط مهم، لا مجرد وصف لاحق للحدث.", "Identification as a replacement at grant date matters; a later label is not enough."),
+          text("لكل من التكلفة الأصلية والزيادة فترة خدمة قد تختلف عن الأخرى.", "Original cost and the increment may have different service periods."),
+        ],
+        reference: "IFRS 2.27–28(c), B42–B43(a)",
+      },
     ],
     workedExamples: [
       {
@@ -1298,6 +1310,24 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("30 سبتمبر 20X3: مكوّن النقد", "30 September 20X3: cash component"), debit: text("مصروف موظفين", "Staff expense"), credit: text("التزام تسوية نقدية", "Cash-settlement liability"), amount: text("40,666.67 دولار تقريبًا", "Approximately $40,666.67") },
         ],
         reference: "IFRS 2.35–38",
+      },
+      {
+        title: text("Piper: بديل بخدمة أطول بعد إلغاء الخيارات", "Piper: replacement options with a longer service period"),
+        facts: text(
+          "في 1 يناير 20X1 منحت Piper ألف موظف 3,000 خيار لكل منهم مشروطة بالبقاء حتى نهاية 20X3، والقيمة العادلة للخيار بتاريخ المنح 5 دولارات. في نهاية 20X1 توقعت مغادرة 100 موظف وسجلت مصروف خدمة 4.5 ملايين دولار. في 1 يناير 20X2 ألغت الخيارات القديمة ومنحت أخرى بدلًا عنها تستحق نهاية 20X4، دون دفع تعويض؛ كانت القيمة العادلة للقديم 1 دولار وللجديد 7 دولارات في ذلك التاريخ. بقي 975 موظفًا في بداية 20X2، وغادر 35 خلاله، وتوقعت 40 مغادرًا في 20X3 و40 في 20X4. يعتمد الحساب التالي على تحقق شرط تعيين الخيارات الجديدة بدائل عند منحها وفق IFRS 2.",
+          "On 1 January 20X1 Piper grants 3,000 options each to 1,000 employees, conditional on service until end-20X3; grant-date fair value is $5 per option. At end-20X1 it expects 100 leavers and has recognised $4.5 million service cost. On 1 January 20X2 the old awards are cancelled and new options granted in their place, vesting at end-20X4, with no compensation; fair values then are $1 for the old and $7 for the new option. Nine hundred seventy-five employees remain at the start of 20X2, 35 leave during it, and 40 more are expected to leave in each of 20X3 and 20X4. The calculation below assumes the new awards qualify as identified replacements under IFRS 2 at grant date.",
+        ),
+        calculations: [
+          text("المتوقع استحقاقهم في نهاية 20X2 = 975 − 35 − 40 − 40 = 860. الزيادة في القيمة العادلة بتاريخ الاستبدال = 7 − 1 = 6 دولارات لكل خيار.", "Expected vesting employees at end-20X2 = 975 − 35 − 40 − 40 = 860. Replacement-date incremental fair value is $7 − $1 = $6 per option."),
+          text("التكلفة الأصلية التراكمية حتى نهاية 20X2 = 860 × 3,000 × 5 × 2/3 = 8.60 ملايين دولار؛ فترة الأصلية تنتهي في 20X3.", "Cumulative original-award cost at end-20X2 = 860 × 3,000 × $5 × 2/3 = $8.60 million; the original service period ends in 20X3."),
+          text("تكلفة الزيادة التراكمية للسنة الأولى بعد الاستبدال = 860 × 3,000 × 6 × 1/3 = 5.16 ملايين دولار؛ فترة البديل تمتد من بداية 20X2 إلى نهاية 20X4.", "First-year cumulative increment after replacement = 860 × 3,000 × $6 × 1/3 = $5.16 million; replacement service runs from start-20X2 through end-20X4."),
+          text("الرصيد التراكمي في نهاية 20X2 = 13.76 مليون دولار؛ مصروف 20X2 = 13.76 − 4.50 = 9.26 ملايين دولار.", "End-20X2 cumulative reserve = $13.76 million; 20X2 expense = $13.76m − $4.50m = $9.26 million."),
+        ],
+        conclusion: text("يكون قيد 20X2 مدين مصروف موظفين ودائن احتياطي خيارات بمبلغ 9.26 ملايين دولار، بشرط تعيين الخيارات الجديدة بدائل عند منحها. هذا فرع الاستبدال؛ لا يستنتج منه مبلغ فرع الإلغاء المصحوب بتعويض نقدي.", "Debit staff expense and credit option reserve by $9.26 million in 20X2, provided the new awards were identified as replacements when granted. This replacement branch does not determine the separate cash-compensated cancellation branch."),
+        journalEntries: [
+          { label: text("31 ديسمبر 20X2: الخدمة والتعديل", "31 December 20X2: service and replacement increment"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("9.26 ملايين دولار", "$9.26 million") },
+        ],
+        reference: "IFRS 2.19–23, 27–28(c), B42–B43(a)",
       },
     ],
   },

@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-piper-replacement-options",
   "ifrs-book2-ifrs2-quiz-cash-settled",
   "ifrs-book2-ifrs2-quiz-grant-date",
   "ifrs-book2-ifrs2-quiz-equity-recognition",
@@ -240,6 +241,11 @@ if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?
   failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IFRS 2 Piper expected replacement vesting employees", 975 - 35 - 40 - 40, 860],
+  ["IFRS 2 Piper replacement increment per option", 7 - 1, 6],
+  ["IFRS 2 Piper original cumulative cost", 860 * 3000 * 5 * 2 / 3, 8600000],
+  ["IFRS 2 Piper increment cumulative cost", 860 * 3000 * 6 / 3, 5160000],
+  ["IFRS 2 Piper second-year charge", 8600000 + 5160000 - 4500000, 9260000],
   ["IAS 12 Bruce first-year service cost", 5000 * 3 / 2, 7500],
   ["IAS 12 Bruce first-year expected tax deduction", 5000 * 1.2 / 2, 3000],
   ["IAS 12 Bruce first-year deferred tax asset", 3000 * 0.3, 900],

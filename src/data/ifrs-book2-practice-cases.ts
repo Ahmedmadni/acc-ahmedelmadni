@@ -15,6 +15,25 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-piper-replacement-options",
+    standardCode: "IFRS 2",
+    title: text("Piper: إلغاء الخيارات ومنح بدائل", "Piper: cancellation and replacement options"),
+    facts: text(
+      "في 1 يناير 20X1 منحت Piper كلًا من 1,000 موظف 3,000 خيار سهم بشرط البقاء حتى 31 ديسمبر 20X3. القيمة العادلة للخيار عند المنح 5 دولارات. في نهاية 20X1 قدرت مغادرة 100 موظف وكانت قد أثبتت تكلفة خدمة 4.5 ملايين دولار. انخفضت القيمة العادلة للخيار القديم إلى دولار واحد في 1 يناير 20X2، وبقي حينها 975 موظفًا. خلال 20X2 غادر 35، وتوقعت مغادرة 40 في 20X3. في 1 يناير 20X2 ألغت الإدارة الخيارات القديمة ومنحت خيارات جديدة بدلًا منها تستحق 31 ديسمبر 20X4، قيمتها العادلة عند المنح 7 دولارات، ولم تدفع تعويضًا. توقعت مغادرة 40 موظفًا إضافيين في 20X4. لا يذكر النص صراحةً إن كانت الخيارات الجديدة قد عُيّنت بدائل للأصلية عند منحها.",
+      "On 1 January 20X1 Piper granted 3,000 options to each of 1,000 employees, subject to service until 31 December 20X3. Grant-date fair value was $5. At end-20X1 management expected 100 leavers and had recognised $4.5 million service cost. The old option fair value fell to $1 at 1 January 20X2, when 975 employees remained. During 20X2, 35 left and a further 40 were expected in 20X3. On 1 January 20X2 management cancelled the old options and granted new options in their place vesting on 31 December 20X4, with $7 grant-date fair value and no compensation paid. Another 40 employees were expected to leave during 20X4. The facts do not expressly say whether the new awards were identified as replacements at grant date.",
+    ),
+    question: text(
+      "ناقش مع الحسابات المناسبة معالجة فرع إلغاء الخيارات القديمة ومنح خيارات جديدة بدلًا منها في القوائم المالية للسنة المنتهية في 31 ديسمبر 20X2؛ وبيّن أثر شرط تعيينها بدائل وقت المنح.",
+      "Discuss, with suitable calculations, the accounting treatment for the year ended 31 December 20X2 when the original options were cancelled and replaced with new share options, including the condition for replacement accounting.",
+    ),
+    solution: [
+      text("إذا عُيّنت الخيارات الجديدة بدائل للأصلية عند منحها، تعالج كتعديل للمنحة الأصلية وفق IFRS 2.28(c)، لا كمنحة مستقلة مضافة بالكامل. لم يدفع تعويض؛ الزيادة في القيمة العادلة لكل خيار في تاريخ الاستبدال = 7 − 1 = 6 دولارات.", "If the new options were identified as replacements at grant date, IFRS 2.28(c) treats the arrangement as a modification of the original grant, not a wholly additional award. With no cancellation payment, incremental fair value per option on the replacement date is $7 − $1 = $6."),
+      text("المتوقع استحقاقهم في نهاية 20X2 = 975 − 35 − 40 − 40 = 860. تكلفة المنحة الأصلية التراكمية = 860 × 3,000 × 5 × 2/3 = 8.60 ملايين دولار عبر فترة الاستحقاق الأصلية حتى نهاية 20X3. تكلفة الزيادة التراكمية = 860 × 3,000 × 6 × 1/3 = 5.16 ملايين دولار عبر فترة خدمة البديل من بداية 20X2 حتى نهاية 20X4.", "Expected vesting employees at end-20X2 = 975 − 35 − 40 − 40 = 860. Cumulative original-award cost is 860 × 3,000 × $5 × 2/3 = $8.60 million over the original period through end-20X3. Cumulative incremental cost is 860 × 3,000 × $6 × 1/3 = $5.16 million over replacement service from start-20X2 through end-20X4."),
+      text("الرصيد التراكمي = 8.60 + 5.16 = 13.76 مليون دولار. بطرح احتياطي 20X1 البالغ 4.50 ملايين يكون مصروف 20X2 = 9.26 ملايين: مدين مصروف موظفين، دائن احتياطي خيارات. إذا لم تكن الخيارات الجديدة قد عُيّنت بدائل عند المنح، يلزم فصل محاسبة إلغاء المنحة الأصلية عن منحة جديدة؛ لا يصح تعميم مبلغ 9.26 ملايين على هذه الحالة المختلفة.", "Cumulative reserve is $8.60m + $5.16m = $13.76m. Less the $4.50m opening reserve, 20X2 expense is $9.26m: debit staff expense and credit option reserve. If the new awards were not identified as replacements when granted, account separately for cancellation of the old award and the new grant; $9.26m cannot automatically be used for that different fact pattern."),
+    ],
+    reference: "IFRS 2.19–23, 27–28(c), B42–B43(a)",
+  },
+  {
     id: "ifrs-book2-ifrs2-quiz-cash-settled",
     standardCode: "IFRS 2",
     title: text("تعريف التسوية النقدية", "Cash-settled share-based payment"),
