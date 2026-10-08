@@ -218,6 +218,12 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IFRS 2 Cello modification-date increment", 8 - 5, 3],
+  ["IFRS 2 Cello year-one expense", (500 - 110) * 100 * 15 / 3, 195000],
+  ["IFRS 2 Cello year-two cumulative cost", (500 - 105) * 100 * (15 * 2 / 3 + 3 / 2), 454250],
+  ["IFRS 2 Cello year-two expense", 454250 - 195000, 259250],
+  ["IFRS 2 Cello final cumulative cost", (500 - 103) * 100 * (15 + 3), 714600],
+  ["IFRS 2 Cello year-three expense", 714600 - 454250, 260350],
   ["IFRS 2 J&B first-year service cost", ((800 - 95) * 200 * 4) / 3, 188000],
   ["IFRS 2 J&B second-year cumulative reserve", ((800 - 70) * 200 * 4 * 2) / 3, 389333.3333333333],
   ["IFRS 2 J&B final option reserve", (800 - 60) * 200 * 4, 592000],
