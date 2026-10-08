@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-cash-sars-five-years",
   "ifrs-book2-jb-options-and-cash-alternative",
   "ifrs-book2-four-year-employee-options",
   "ifrs-book2-ias41-quiz-biological-asset",
@@ -218,6 +219,14 @@ for (const id of [
 }
 
 const reviewedCalculations = [
+  ["IFRS 2 cash SAR year-one liability", (500 - 35 - 60) * 100 * 14.4 / 3, 194400],
+  ["IFRS 2 cash SAR year-two liability", (500 - 35 - 40 - 25) * 100 * 15.5 * 2 / 3, 413333.3333333333],
+  ["IFRS 2 cash SAR year-three settlement", 150 * 100 * 15, 225000],
+  ["IFRS 2 cash SAR year-three liability", (500 - 35 - 40 - 22 - 150) * 100 * 18.2, 460460],
+  ["IFRS 2 cash SAR year-four liability", (253 - 140) * 100 * 21.4, 241820],
+  ["IFRS 2 cash SAR year-four expense", 241820 + 280000 - 460460, 61360],
+  ["IFRS 2 cash SAR year-five expense", 113 * 100 * 25 - 241820, 40680],
+  ["IFRS 2 cash SAR total cash settlement", 225000 + 280000 + 282500, 787500],
   ["IFRS 2 Cello modification-date increment", 8 - 5, 3],
   ["IFRS 2 Cello year-one expense", (500 - 110) * 100 * 15 / 3, 195000],
   ["IFRS 2 Cello year-two cumulative cost", (500 - 105) * 100 * (15 * 2 / 3 + 3 / 2), 454250],

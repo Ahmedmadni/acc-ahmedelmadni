@@ -1100,6 +1100,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 2.27, B42–B43(a)",
       },
+      {
+        title: text("حقوق ارتفاع السهم النقدية: افصل المصروف عن الرصيد والمدفوع", "Cash SARs: separate expense, liability and payment"),
+        explanation: text(
+          "في حق ارتفاع قيمة السهم المسدد نقدًا يُقاس الالتزام بالقيمة العادلة للحقوق غير المسددة في كل تاريخ تقرير، مع مراعاة الخدمة المقدمة وشروط الاستحقاق غير السوقية في عدد الحقوق المتوقع استحقاقها. أثناء فترة الخدمة: الالتزام التراكمي = الموظفون المتوقع استحقاقهم × الحقوق لكل موظف × القيمة العادلة الحالية للحق × نسبة الخدمة المنقضية. بعد الاستحقاق تُقاس الحقوق الباقية بالقيمة العادلة الكاملة حتى السداد. عند ممارسة بعض الموظفين حقوقهم، تخفض النقدية الالتزام بالقيمة المدفوعة لهم، ويحسب مصروف السنة من العلاقة: التزام الإقفال + النقد المدفوع خلال السنة − التزام الافتتاح. لا تخلط بين القيمة العادلة للحقوق التي ما زالت قائمة والقيمة النقدية الفعلية للحقوق الممارسة، ولا تتوقف إعادة القياس عند تاريخ الاستحقاق إذا بقيت حقوق غير مسددة.",
+          "For cash-settled share appreciation rights, remeasure the liability for outstanding rights at fair value at each reporting date, reflecting service rendered and expected vesting numbers for non-market conditions. During service, cumulative liability is employees expected to vest × rights per employee × current fair value per right × elapsed service fraction. After vesting, outstanding rights remain at full current fair value until settlement. When some employees exercise, cash paid reduces the liability; derive the year's expense as closing liability + cash paid during the year − opening liability. Do not confuse fair value of outstanding rights with actual cash on exercised rights, and do not stop remeasurement at vesting while rights remain unpaid.",
+        ),
+        keyPoints: [
+          text("تغير توقع المغادرين يؤثر في عدد الحقوق قبل الاستحقاق؛ تغير القيمة العادلة يؤثر في الالتزام إلى حين السداد.", "Revised leaver estimates affect pre-vesting rights; fair-value changes affect the liability until settlement."),
+          text("اختبر المصالحة: رصيد الافتتاح + مصروف السنة − النقد المدفوع = رصيد الإقفال.", "Reconcile opening liability + annual expense − cash paid = closing liability."),
+        ],
+        reference: "IFRS 2.30–33D",
+      },
     ],
     workedExamples: [
       {
@@ -1205,6 +1217,26 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("السنة الثالثة: اكتمال الاستحقاق", "Year three: vesting completed"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("260,350 دولار", "$260,350") },
         ],
         reference: "IFRS 2.27, B42–B43(a)",
+      },
+      {
+        title: text("تسوية حقوق ارتفاع السهم على ثلاث دفعات نقدية", "Cash SARs settled in three instalments"),
+        facts: text(
+          "مُنح 500 موظف 100 حق ارتفاع قيمة سهم لكل منهم، مشروطًا بالخدمة ثلاث سنوات حتى نهاية 20X3. كان المتوقع استحقاق 405 موظفين في 20X1 ثم 400 في 20X2؛ واستحق بالفعل 403 في 20X3. مارس 150 حقهم في 20X3، ثم 140 في 20X4، ثم الباقون 113 في 20X5. القيم العادلة لكل حق قائم في نهاية 20X1–20X4 هي 14.40 و15.50 و18.20 و21.40 دولارًا، والمبالغ النقدية لكل حق ممارس في 20X3–20X5 هي 15 و20 و25 دولارًا.",
+          "Five hundred employees each receive 100 cash share appreciation rights, conditional on service through 20X3. Vesting is expected for 405 employees in 20X1 and 400 in 20X2; 403 actually vest in 20X3. Rights are exercised by 150 employees in 20X3, 140 in 20X4 and the remaining 113 in 20X5. Year-end fair values per outstanding right in 20X1–20X4 are $14.40, $15.50, $18.20 and $21.40; cash amounts per right exercised in 20X3–20X5 are $15, $20 and $25.",
+        ),
+        calculations: [
+          text("20X1: الالتزام والمصروف = 405 × 100 × 14.40 × 1/3 = 194,400 دولار.", "20X1: liability and expense = 405 × 100 × $14.40 × 1/3 = $194,400."),
+          text("20X2: الالتزام = 400 × 100 × 15.50 × 2/3 = 413,333.33؛ المصروف ≈ 218,933.33.", "20X2: liability = 400 × 100 × $15.50 × 2/3 = $413,333.33; expense ≈ $218,933.33."),
+          text("20X3: المدفوع = 150 × 100 × 15 = 225,000؛ الالتزام الباقي = 253 × 100 × 18.20 = 460,460؛ المصروف ≈ 460,460 + 225,000 − 413,333.33 = 272,126.67.", "20X3: cash paid = 150 × 100 × $15 = $225,000; remaining liability = 253 × 100 × $18.20 = $460,460; expense ≈ $460,460 + $225,000 − $413,333.33 = $272,126.67."),
+          text("20X4: المدفوع = 140 × 100 × 20 = 280,000؛ الالتزام الباقي = 113 × 100 × 21.40 = 241,820؛ المصروف = 241,820 + 280,000 − 460,460 = 61,360.", "20X4: cash paid = 140 × 100 × $20 = $280,000; remaining liability = 113 × 100 × $21.40 = $241,820; expense = $241,820 + $280,000 − $460,460 = $61,360."),
+          text("20X5: سداد الباقي = 113 × 100 × 25 = 282,500؛ الالتزام الختامي صفر؛ المصروف = 282,500 − 241,820 = 40,680. مجموع المصروف = مجموع النقد المدفوع = 787,500.", "20X5: settle remaining rights for 113 × 100 × $25 = $282,500; closing liability is nil; expense = $282,500 − $241,820 = $40,680. Total expense equals total cash paid of $787,500."),
+        ],
+        conclusion: text("بعد الاستحقاق يستمر تعديل الالتزام على أساس القيمة العادلة للحقوق غير الممارسة؛ لا تعد المدفوعات النقدية مصروفًا إضافيًا بذاتها، بل تُصالح مع حركة الالتزام لتحديد مصروف كل سنة.", "After vesting, continue fair-value remeasurement of unexercised rights. Cash payments are not automatically extra expense; reconcile them with the liability movement to determine each year's charge."),
+        journalEntries: [
+          { label: text("كل سنة: خدمة وإعادة قياس", "Each year: service and remeasurement"), debit: text("مصروف مدفوعات أسهم", "Share-based-payment expense"), credit: text("التزام حقوق نقدية", "Cash SAR liability"), amount: text("وفق مصروف السنة المحسوب", "Calculated annual expense") },
+          { label: text("عند ممارسة الحقوق", "On exercise of rights"), debit: text("التزام حقوق نقدية", "Cash SAR liability"), credit: text("نقدية", "Cash"), amount: text("القيمة النقدية المدفوعة", "Cash settlement amount") },
+        ],
+        reference: "IFRS 2.30–33D",
       },
     ],
   },

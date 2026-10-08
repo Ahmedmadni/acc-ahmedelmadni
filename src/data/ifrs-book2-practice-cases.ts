@@ -15,6 +15,27 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-cash-sars-five-years",
+    standardCode: "IFRS 2",
+    title: text("حقوق ارتفاع السهم النقدية على خمس سنوات", "Five-year cash share appreciation rights"),
+    facts: text(
+      "في 1 يناير 20X1 مُنح كل من 500 موظف 100 حق ارتفاع سهم تُسوى نقدًا بشرط البقاء حتى 31 ديسمبر 20X3. في 20X1 غادر 35 وتُوقع مغادرة 60 آخرين؛ وفي 20X2 غادر 40 إضافيون وتُوقع مغادرة 25 في 20X3؛ وفي 20X3 غادر 22. مارس 150 من المستحقين حقوقهم في نهاية 20X3، ثم 140 في نهاية 20X4، ثم 113 الباقون في نهاية 20X5. القيم العادلة للحق القائم في نهايات 20X1–20X4 هي على الترتيب 14.40 و15.50 و18.20 و21.40 دولارًا؛ قيمة السداد النقدي لكل حق ممارس في 20X3–20X5 هي 15 و20 و25 دولارًا.",
+      "On 1 January 20X1, each of 500 employees receives 100 cash-settled share appreciation rights conditional on employment through 31 December 20X3. In 20X1, 35 leave and a further 60 are expected to leave; in 20X2 another 40 leave and a further 25 are expected in 20X3; 22 leave in 20X3. At each year-end, 150 vested employees exercise in 20X3, 140 in 20X4, and the remaining 113 in 20X5. Fair values per outstanding right at the ends of 20X1–20X4 are $14.40, $15.50, $18.20 and $21.40; settlement values per exercised right in 20X3–20X5 are $15, $20 and $25.",
+    ),
+    question: text(
+      "احسب المصروف في الربح أو الخسارة لكل سنة من 20X1 إلى 20X5، والتزام نهاية كل سنة، مع فصل قيمة الحقوق القائمة عن النقد المدفوع عند الممارسة.",
+      "Calculate the profit-or-loss expense for each year from 20X1 to 20X5 and the liability at each year-end, distinguishing outstanding rights from cash paid on exercise.",
+    ),
+    solution: [
+      text("20X1: المتوقع استحقاقهم 500 − 35 − 60 = 405؛ الالتزام والمصروف = 405 × 100 × 14.40 × 1/3 = 194,400 دولار.", "20X1: 500 − 35 − 60 = 405 are expected to vest; liability and expense = 405 × 100 × $14.40 × 1/3 = $194,400."),
+      text("20X2: المتوقع استحقاقهم 500 − 35 − 40 − 25 = 400؛ الالتزام التراكمي = 400 × 100 × 15.50 × 2/3 = 413,333.33؛ مصروف السنة = 218,933.33 تقريبًا.", "20X2: 500 − 35 − 40 − 25 = 400 are expected to vest; cumulative liability = 400 × 100 × $15.50 × 2/3 = $413,333.33; annual expense ≈ $218,933.33."),
+      text("20X3: استحق 500 − 35 − 40 − 22 = 403 موظفين. سُدد لـ150 منهم 150 × 100 × 15 = 225,000، وبقي التزام 253 × 100 × 18.20 = 460,460؛ مصروف السنة = 460,460 + 225,000 − 413,333.33 ≈ 272,126.67.", "20X3: 500 − 35 − 40 − 22 = 403 employees vest. Pay 150 × 100 × $15 = $225,000; remaining liability is 253 × 100 × $18.20 = $460,460. Annual expense = $460,460 + $225,000 − $413,333.33 ≈ $272,126.67."),
+      text("20X4: المدفوع لـ140 موظفًا = 140 × 100 × 20 = 280,000؛ التزام 113 الباقين = 113 × 100 × 21.40 = 241,820؛ المصروف = 241,820 + 280,000 − 460,460 = 61,360.", "20X4: pay 140 × 100 × $20 = $280,000; liability for 113 remaining employees = 113 × 100 × $21.40 = $241,820; expense = $241,820 + $280,000 − $460,460 = $61,360."),
+      text("20X5: المدفوع لـ113 = 113 × 100 × 25 = 282,500؛ الالتزام الختامي صفر؛ المصروف = 282,500 − 241,820 = 40,680. مجموع المصروفات عبر السنوات يساوي 787,500 دولار، وهو مجموع المدفوعات عند انقضاء جميع الحقوق. يعاد قياس الالتزام حتى السداد وفق IFRS 2.", "20X5: pay 113 × 100 × $25 = $282,500; closing liability is nil; expense = $282,500 − $241,820 = $40,680. Total five-year expense is $787,500, equal to all cash paid once every right is settled. The liability is remeasured until settlement under IFRS 2."),
+    ],
+    reference: "IFRS 2.30–33D",
+  },
+  {
     id: "ifrs-book2-jb-options-and-cash-alternative",
     standardCode: "IFRS 2",
     title: text("خيارات J&B وبديل السداد النقدي", "J&B options and a cash-settled alternative"),
