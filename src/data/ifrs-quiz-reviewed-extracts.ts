@@ -8,7 +8,7 @@ export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
     topic: "IFRS 10 — intragroup inventory profit attributable to parent",
     question: {
       ar: "تُعد Major Co قوائمها في 31 ديسمبر وتمتلك 80% من Minor Co. تبيع Minor بضاعة إلى Major بزيادة 33.33% على التكلفة. في 31 ديسمبر 20X8 احتفظت Major ببضاعة من هذا المصدر بقيمة 12,000 دولار، وفي 31 ديسمبر 20X9 احتفظت ببضاعة بقيمة 15,000 دولار. بمقدار كم يُعدّل الربح الموحد المنسوب لمساهمي Major؟ تجاهل الضريبة.",
-      en: "Major Co, which makes up its accounts to 31 December, has an 80% owned subsidiary Minor Co. Minor Co sells goods to Major Co at a mark-up of 33.33% on cost. At 31 December 20X8, Major had $12,000 of such goods in its inventory and at 31 December 20X9 had $15,000. What is the amount by which the consolidated profit attributable to Major Co's shareholders should be adjusted in respect of the above? Ignore taxation.",
+      en: "Major Co, which makes up its accounts to 31 December, has an 80% owned subsidiary Minor Co. Minor Co sells goods to Major Co at a mark-up on cost of 33.33%. At 31 December 20X8, Major had $12,000 of such goods in its inventory and at 31 December 20X9 had $15,000 of such goods in its inventory. What is the amount by which the consolidated profit attributable to Major Co's shareholders should be adjusted in respect of the above? Ignore taxation.",
     },
     choices: {
       ar: ["1,000 دولار مدين", "800 دولار دائن", "750 دولار دائن", "600 دولار مدين"],
