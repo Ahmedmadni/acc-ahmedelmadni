@@ -15,6 +15,38 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias8-global-inventory-error",
+    standardCode: "IAS 8",
+    title: text("Global: خطأ مخزون المقارنة", "Global: comparative inventory error"),
+    facts: text(
+      "اكتشفت Global خلال 20X7 أن مخزون 31 ديسمبر 20X6 تضمن بضاعة بمبلغ 4,200 ألف دولار بيعت قبل نهاية 20X6. أرقام 20X6 المنشورة بالألف: المبيعات 47,400، تكلفة المبيعات 34,570، ضريبة الدخل 3,880، صافي الربح 8,950. مسودة 20X7: المبيعات 67,200، تكلفة المبيعات 55,800 (تشمل خطأ مخزون أول المدة)، ضريبة الدخل 3,400، صافي الربح 8,000. الأرباح المحتجزة أول 20X6 هي 13,000، بلا توزيعات، ومعدل الضريبة 30%.",
+      "During 20X7 Global finds that 31 December 20X6 inventory included US$4,200 thousand of goods sold before 20X6 year-end. Published 20X6 amounts in thousands: revenue 47,400, cost of sales 34,570, income tax 3,880 and net profit 8,950. The 20X7 draft shows revenue 67,200, cost of sales 55,800 (including the opening-inventory error), tax 3,400 and net profit 8,000. Opening 20X6 retained earnings are 13,000, with no dividends; the stated tax rate is 30%."
+    ),
+    question: text("أعد عرض قائمة الربح أو الخسارة لسنة 20X7 مع مقارنة 20X6 والأرباح المحتجزة، وبيّن أثر المعلومات الضريبية الناقصة.", "Show 20X7 profit or loss with the 20X6 comparative and retained earnings, noting the tax information needed."),
+    solution: [
+      text("أعد بيان 20X6: المبيعات 47,400؛ تكلفة المبيعات 34,570 + 4,200 = 38,770؛ الربح قبل الضريبة 8,630. في 20X7: المبيعات 67,200؛ تكلفة المبيعات 55,800 − 4,200 = 51,600؛ الربح قبل الضريبة 15,600. لا يُحمل خطأ السنة السابقة على ربح 20X7 بدعوى أن الخطأ انعكس فيه.", "Restate 20X6: revenue 47,400; cost of sales 34,570 + 4,200 = 38,770; pre-tax profit 8,630. For 20X7: revenue 67,200; cost of sales 55,800 − 4,200 = 51,600; pre-tax profit 15,600. Do not charge the prior-year error to 20X7 profit merely because it reversed there."),
+      text("إذا افترضنا أن كامل تصحيح المخزون يؤثر في الضريبة بنسبة 30% بكل سنة وأن مبلغ السنة السابقة قابل للاسترداد أو التسوية، فالأثر 1,260 لكل سنة: ضريبة 20X6 تصبح 2,620 وصافي الربح 6,010؛ وضريبة 20X7 تصبح 4,660 وصافي الربح 10,940.", "If the full inventory correction affects tax at 30% in each year and prior-year tax is recoverable or adjustable, the effect is 1,260 in each year: 20X6 tax becomes 2,620 and net profit 6,010; 20X7 tax becomes 4,660 and net profit 10,940."),
+      text("تحت الافتراض الضريبي نفسه، الأرباح المحتجزة الختامية لـ20X6 = 13,000 + 6,010 = 19,010، ولـ20X7 = 19,010 + 10,940 = 29,950. أما إذا اختلف وضع الإقرارات أو الوعاء الضريبي، فلا تكفي نسبة 30% وحدها لتثبيت مبلغ الضريبة؛ يلزم تطبيق IAS 12 على المبالغ المتوقع استردادها أو دفعها، مع إبقاء إعادة بيان الأرباح قبل الضريبة وفق IAS 8.", "Under the same tax assumption, closing retained earnings are 13,000 + 6,010 = 19,010 for 20X6 and 19,010 + 10,940 = 29,950 for 20X7. If returns or taxable bases differ, the 30% rate alone cannot establish the tax amount: IAS 12 must be applied to amounts expected to be recovered or paid, while the IAS 8 pre-tax restatement remains."),
+    ],
+    reference: "IAS 8.4, 42–49; IAS 12.12–14, 58–61A",
+  },
+  {
+    id: "ifrs-book2-ifrs5-steelworks-closure",
+    standardCode: "IFRS 5",
+    title: text("إغلاق مصنع الصلب تدريجيًا", "Gradual closure of a steelworks"),
+    facts: text(
+      "أعلن مديرو شركة أم في 20 أكتوبر 20X3 نية إغلاق مصنع صلب يمثل نحو 10% من إيرادات المجموعة، وينتهي الإغلاق في يوليو 20X4. انخفض الإنتاج فعلًا واستغني عن بعض العاملين قبل 31 ديسمبر 20X3، ويمكن تمييز تدفقات المصنع وإيراداته ومصروفاته عن بقية العمليات. الخطة إغلاق لا بيع.",
+      "A parent company's directors announced on 20 October 20X3 a plan to close a steelworks that had represented about 10% of group revenue. Closure is expected in July 20X4. By 31 December 20X3 output is substantially reduced and some redundancies have occurred. Its cash flows, revenue and expenses are distinguishable from other operations. The plan is closure, not sale."
+    ),
+    question: text("كيف يعرض الإغلاق في القوائم المالية للسنة المنتهية في 31 ديسمبر 20X3؟", "How is the closure treated in the financial statements for the year ended 31 December 20X3?"),
+    solution: [
+      text("لا يصنف المصنع أو مجموعة أصوله محتفظًا بها للبيع، لأن القيمة الدفترية ستسترد أساسًا من الاستخدام أثناء الإغلاق لا من صفقة بيع. لا تكفي خطة الإغلاق أو الإعلان عنها لتغيير التصنيف.", "The steelworks and its assets are not held for sale: their carrying amounts will be recovered principally through use during wind-down, not a sale transaction. A closure plan or announcement alone does not change classification."),
+      text("في 31 ديسمبر 20X3 لم يتوقف استخدام المصنع بعد؛ لذلك لا تعرض نتائجه عملية متوقفة حينها وتبقى ضمن العمليات المستمرة. إذا تحقق شرط خط نشاط رئيسي مستقل وتوقف استخدام المجموعة لاحقًا، يعاد تقييم عرض العملية المتوقفة عند ذلك التاريخ وفق IFRS 5.13 و32؛ نسبة 10% وحدها ليست حدًا رقميًا تلقائيًا في المعيار.", "At 31 December 20X3 the plant has not ceased to be used, so its results are not yet presented as discontinued and remain in continuing operations. If it is a separate major line of business and the group ceases to be used later, reassess discontinued-operation presentation at that date under IFRS 5.13 and 32; the 10% revenue share alone is not a numerical threshold in the Standard."),
+      text("تقيَّم بصورة منفصلة التزامات الاستغناء أو إعادة الهيكلة والانخفاض في القيمة وفق IAS 19 وIAS 37 وIAS 36 بحسب الوقائع؛ لا يحدد السؤال مبلغًا كافيًا لقيد موحد. ويمكن الإفصاح عن خطة الإغلاق إذا كانت المعلومات جوهرية.", "Assess termination or restructuring obligations and impairment separately under IAS 19, IAS 37 and IAS 36 as facts warrant; the question supplies no amount for a single journal entry. Disclose the closure plan if material."),
+    ],
+    reference: "IFRS 5.6, 13, 31–33; IAS 19; IAS 36; IAS 37",
+  },
+  {
     id: "ifrs-book2-ias8-quiz-prior-error",
     standardCode: "IAS 8",
     title: text("تصحيح خطأ فترة سابقة", "Correcting a prior-period error"),

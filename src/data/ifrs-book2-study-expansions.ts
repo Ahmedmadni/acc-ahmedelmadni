@@ -47,6 +47,48 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
   },
+  "IAS 8": {
+    sections: [
+      {
+        title: text("خطأ المخزون الذي ينعكس في السنة التالية", "An inventory error that reverses in the next year"),
+        explanation: text(
+          "إذا تضمن مخزون نهاية سنة بضاعة بيعت قبل تاريخ التقرير، يكون المخزون والربح في تلك السنة زائدين، وتنتقل الزيادة خطأً إلى تكلفة مبيعات السنة التالية من رصيد أول المدة. لا يُترك الخطآن ليتقاصا في العرض؛ يعاد بيان المقارنة وفق IAS 8، وتُصحح أرقام السنة الحالية من دون إدراج أثر الفترة السابقة في ربحها. يُفحص أثر الضريبة بشكل مستقل وفق IAS 12: معدل الضريبة وحده لا يثبت أن تعديل إقرار السنة السابقة قابل للاسترداد أو أن أثر الضريبة مؤجل أو جارٍ.",
+          "If closing inventory includes goods already sold before the reporting date, inventory and that year's profit are overstated; the same error flows through next year's opening inventory and cost of sales. Do not let the two errors offset in presentation: restate the comparative under IAS 8 and correct the current year without putting the prior-period effect into current profit. Assess tax separately under IAS 12: the stated tax rate alone does not prove that prior-year tax is recoverable or establish whether the effect is current or deferred tax.",
+        ),
+        keyPoints: [
+          text("أعد حساب تكلفة المبيعات في السنتين بإشارتين متعاكستين؛ لا تغير المبيعات إذا كانت البضاعة بيعت وأثبت إيرادها بالفعل.", "Recalculate cost of sales in the two years with opposite signs; do not change revenue when the goods were already sold and revenue recorded."),
+          text("اعرض الأرباح المحتجزة الافتتاحية بعد إعادة البيان، ولا تضف خسارة السنة السابقة إلى مصروف السنة الحالية.", "Present opening retained earnings after restatement; do not charge the earlier year's loss to the current year's expense."),
+          text("افصل أثر IAS 8 عن تحليل الضريبة الجارية أو المؤجلة ومتطلبات القانون الضريبي في IAS 12.", "Separate IAS 8 restatement from current/deferred-tax and tax-law analysis under IAS 12."),
+        ],
+        reference: "IAS 8.4, 41–49; IAS 12.12–14, 58–61A",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Global: إعادة بيان مخزون بيع قبل الإقفال", "Global: restating inventory sold before year-end"),
+        facts: text(
+          "اكتشفت Global في 20X7 أن مخزون 31 ديسمبر 20X6 تضمن بضاعة بقيمة 4,200 ألف دولار بيعت قبل ذلك التاريخ. في 20X6 كانت المبيعات 47,400 وتكلفة المبيعات 34,570 وضريبة الدخل 3,880؛ وفي مسودة 20X7 المبيعات 67,200 وتكلفة المبيعات 55,800 وضريبة الدخل 3,400، وكل الأرقام بالألف. تضمنت تكلفة 20X7 خطأ مخزون أول المدة. رصيد الأرباح المحتجزة في 1 يناير 20X6 هو 13,000، ولا توزيعات. معدل الضريبة المذكور 30%، لكن لا يوضح السؤال وضع التصحيح لدى مصلحة الضرائب.",
+          "Global discovers in 20X7 that 31 December 20X6 inventory included goods worth US$4,200 thousand sold before that date. In 20X6 revenue was 47,400, cost of sales 34,570 and income tax expense 3,880; the 20X7 draft shows revenue 67,200, cost of sales 55,800 and tax expense 3,400, all in thousands. The 20X7 cost of sales includes the opening-inventory error. Opening retained earnings on 1 January 20X6 are 13,000, with no dividends. The stated tax rate is 30%, but the question does not specify how tax authorities treat the correction.",
+        ),
+        calculations: [
+          text("20X6 بعد إعادة البيان: تكلفة المبيعات = 34,570 + 4,200 = 38,770؛ الربح قبل الضريبة = 47,400 − 38,770 = 8,630.", "Restated 20X6: cost of sales = 34,570 + 4,200 = 38,770; profit before tax = 47,400 − 38,770 = 8,630."),
+          text("20X7 المصححة: تكلفة المبيعات = 55,800 − 4,200 = 51,600؛ الربح قبل الضريبة = 67,200 − 51,600 = 15,600.", "Corrected 20X7: cost of sales = 55,800 − 4,200 = 51,600; profit before tax = 67,200 − 51,600 = 15,600."),
+          text("إذا كان أثر التصحيح الضريبي كاملًا وقابلًا للتسوية في السنتين كما يفترض الحل التعليمي، فكل تعديل ضريبي = 4,200 × 30% = 1,260: ضريبة 20X6 = 3,880 − 1,260 = 2,620 وصافي ربحها = 6,010؛ ضريبة 20X7 = 3,400 + 1,260 = 4,660 وصافي ربحها = 10,940.", "If the full tax effect is recoverable/payable across the two years as the teaching solution assumes, each tax adjustment is 4,200 × 30% = 1,260: 20X6 tax = 3,880 − 1,260 = 2,620 and net profit = 6,010; 20X7 tax = 3,400 + 1,260 = 4,660 and net profit = 10,940."),
+          text("تحت هذا الافتراض فقط: الأرباح المحتجزة في 31 ديسمبر 20X6 = 13,000 + 6,010 = 19,010؛ وفي 31 ديسمبر 20X7 = 19,010 + 10,940 = 29,950. قبل حسم المعالجة الضريبية يبقى الربح قبل الضريبة المصحح وحده محسومًا من المعطيات.", "Only under that tax assumption: retained earnings at 31 December 20X6 = 13,000 + 6,010 = 19,010; at 31 December 20X7 = 19,010 + 10,940 = 29,950. Without resolving tax treatment, only the corrected pre-tax profits follow conclusively from the facts."),
+        ],
+        conclusion: text(
+          "الخطأ ينتمي إلى مقارنة 20X6، لا إلى ربح 20X7. يفسر انعكاسه زيادة ربح 20X7 قبل الضريبة بالمبلغ نفسه. الأرقام بعد الضريبة مشروطة بفحص IAS 12 وحقوق الاسترداد أو المبالغ المستحقة لدى السلطة الضريبية.",
+          "The error belongs in the 20X6 comparative, not 20X7 profit. Its reversal explains the equal increase in 20X7 pre-tax profit. After-tax amounts require IAS 12 analysis of recoverable or payable tax balances.",
+        ),
+        journalEntries: [
+          { label: text("تعديل مسودة 20X7 بعد انتقال خطأ أول المدة إلى تكلفة المبيعات — قبل الضريبة", "Adjust the 20X7 draft after the opening error reached cost of sales — before tax"), debit: text("أرباح محتجزة افتتاحية", "Opening retained earnings"), credit: text("تكلفة المبيعات 20X7", "20X7 cost of sales"), amount: text("4,200 ألف دولار", "US$4,200 thousand") },
+          { label: text("مشروط: ضريبة 20X6 القابلة للاسترداد أو تسوية التزامها", "Conditional: recoverable 20X6 tax or payable adjustment"), debit: text("ضريبة جارية مستردة أو خفض التزامها", "Current-tax receivable or reduction of payable"), credit: text("أرباح محتجزة افتتاحية", "Opening retained earnings"), amount: text("1,260 ألف دولار", "US$1,260 thousand") },
+          { label: text("مشروط: أثر التصحيح في ضريبة 20X7", "Conditional: correction of 20X7 tax"), debit: text("مصروف ضريبة الدخل 20X7", "20X7 income-tax expense"), credit: text("ضريبة جارية مستحقة", "Current tax payable"), amount: text("1,260 ألف دولار", "US$1,260 thousand") },
+        ],
+        reference: "IAS 8.4, 42–49; IAS 12.12–14, 58–61A",
+      },
+    ],
+  },
   "IAS 2": {
     sections: [
       {
