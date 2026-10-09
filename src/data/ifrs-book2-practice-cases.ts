@@ -15,6 +15,62 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias33-quiz-basic-eps",
+    standardCode: "IAS 33",
+    title: text("صيغة ربحية السهم الأساسية", "Basic earnings-per-share formula"),
+    facts: text("سؤال مفاهيمي عن بسط ومقام ربحية السهم الأساسية.", "A conceptual question about the numerator and denominator of basic EPS."),
+    question: text("كيف تُحسب ربحية السهم الأساسية؟", "How is basic earnings per share calculated?"),
+    solution: [
+      text("تقسم نتيجة الفترة المنسوبة لحملة الأسهم العادية في الشركة الأم، بعد التعديلات المتعلقة بالأسهم الممتازة المصنفة حقوق ملكية عند انطباقها، على المتوسط المرجح للأسهم العادية القائمة خلال الفترة. في القوائم الموحدة لا يستخدم إجمالي ربح المجموعة قبل استبعاد حصة غير المسيطرين.", "Divide profit or loss attributable to ordinary equity holders of the parent, after applicable adjustments for equity-classified preference shares, by the weighted-average ordinary shares outstanding during the period. Consolidated EPS does not use total group profit before non-controlling interests are excluded."),
+    ],
+    reference: "IAS 33.10–20",
+  },
+  {
+    id: "ifrs-book2-ias33-quiz-rights-bonus-factor",
+    standardCode: "IAS 33",
+    title: text("معامل عنصر المنحة في إصدار الحقوق", "Rights-issue bonus factor"),
+    facts: text("سؤال عن تعديل عدد الأسهم لفترات ما قبل إصدار حقوق بسعر دون القيمة العادلة.", "A question about adjusting pre-rights share counts when rights are issued below fair value."),
+    question: text("ما صيغة معامل عنصر المنحة في إصدار الحقوق؟", "What is the rights-issue bonus-element adjustment factor?"),
+    solution: [
+      text("المعامل = القيمة العادلة للسهم مباشرة قبل ممارسة الحقوق (السعر شامل الحق) ÷ القيمة النظرية للسهم بعد فصل الحق. وتحسب القيمة النظرية = (القيمة العادلة لكل الأسهم القائمة قبل الممارسة + متحصلات ممارسة الحقوق) ÷ عدد الأسهم بعد الممارسة.", "Factor = fair value per share immediately before rights exercise (cum-rights price) ÷ theoretical ex-rights fair value per share. Theoretical ex-rights value = (fair value of all shares outstanding before exercise + total rights proceeds) ÷ shares outstanding after exercise."),
+      text("يضرب عدد الأسهم في فترات ما قبل ممارسة الحقوق في هذا المعامل عند حساب المتوسط المرجح، وتُعاد أرقام ربحية السهم المقارنة ذات الصلة؛ لا يُضرب الربح نفسه فيه.", "Multiply pre-exercise share counts by this factor in the weighted average and restate relevant comparative EPS figures; do not multiply earnings by it."),
+    ],
+    reference: "IAS 33.26–27, A2–A3",
+  },
+  {
+    id: "ifrs-book2-ias33-quiz-dilutive-potential-share",
+    standardCode: "IAS 33",
+    title: text("تعريف السهم العادي المحتمل المخفِّض", "Define a dilutive potential ordinary share"),
+    facts: text("قد تمنح أداة قابلة للتحويل أو خيار أو ضمان حق الحصول على أسهم عادية مستقبلًا.", "A convertible instrument, option or warrant may give a right to ordinary shares in the future."),
+    question: text("ما السهم العادي المحتمل المخفِّض؟", "What is a dilutive potential ordinary share?"),
+    solution: [
+      text("السهم العادي المحتمل ينشأ من أداة مالية أو عقد آخر قد يُخوِّل حامله الحصول على أسهم عادية. يكون مخفِّضًا فقط إذا أدى افتراض تحويله أو ممارسته إلى انخفاض ربحية السهم، أو زيادة خسارة السهم، من العمليات المستمرة. وجود حق تحويل وحده لا يكفي؛ الأدوات المضادة للتخفيف تستبعد من ربحية السهم المخففة.", "A potential ordinary share arises from a financial instrument or other contract that may entitle its holder to ordinary shares. It is dilutive only if assumed conversion or exercise decreases earnings per share, or increases loss per share, from continuing operations. A conversion right alone is insufficient; antidilutive instruments are excluded from diluted EPS."),
+    ],
+    reference: "IAS 33.5, 31, 41–43",
+  },
+  {
+    id: "ifrs-book2-ias33-quiz-dilution-control-number",
+    standardCode: "IAS 33",
+    title: text("بسط اختبار التخفيف", "Numerator for the dilution test"),
+    facts: text("سؤال عن رقم الربح أو الخسارة المرجعي عند تحديد ما إذا كانت الأسهم المحتملة مخفِّضة.", "A question about the earnings control number for judging whether potential shares are dilutive."),
+    question: text("أي بسط يُستخدم لاختبار ما إذا كانت الأسهم العادية المحتملة مخفِّضة؟", "Which numerator is used to test whether potential ordinary shares are dilutive?"),
+    solution: [
+      text("يستخدم ربح أو خسارة العمليات المستمرة المنسوب إلى الشركة الأم، بعد تعديل البسط وفق IAS 33.12 للأسهم الممتازة وما يرتبط بها عند الحاجة، مع استبعاد نتائج العمليات المتوقفة. ثم يُقارن الأثر الافتراضي لكل إصدار أو سلسلة على حدة وبالترتيب الأكثر تخفيفًا.", "Use profit or loss from continuing operations attributable to the parent, adjusted under IAS 33.12 for preference-share effects when relevant, and exclude discontinued operations. Assess each issue or series separately in the most-dilutive sequence."),
+    ],
+    reference: "IAS 33.12, 41–44",
+  },
+  {
+    id: "ifrs-book2-ias33-quiz-convertible-interest",
+    standardCode: "IAS 33",
+    title: text("تعديل البسط عند تحويل السندات", "Numerator adjustment for convertible debt"),
+    facts: text("سؤال عن فرض تحويل سندات قابلة للتحويل إلى أسهم عادية في حساب ربحية السهم المخففة.", "A question about assuming convertible debt converts into ordinary shares for diluted EPS."),
+    question: text("لماذا يُعدل بسط ربحية السهم المخففة عند وجود سندات قابلة للتحويل؟", "Why is the diluted-EPS numerator adjusted for convertible bonds?"),
+    solution: [
+      text("لأن فرض التحويل يزيل مصروف الفائدة المتعلق بالسندات، فيعاد إلى الربح أثر الفائدة بعد الضريبة لا مبلغها الإجمالي تلقائيًا. وتُراعى أيضًا أي تغيرات أخرى في الإيرادات أو المصروفات كانت ستنجم عن التحويل. وبالمقابل يزيد المقام بالأسهم العادية الإضافية المرجحة، لكن تُدرج الأداة فقط إذا كانت مخفِّضة وفق اختبار IAS 33.", "Assumed conversion eliminates the bond-related interest expense, so its after-tax effect—not automatically gross interest—is added back to earnings. Any other consequential income or expense changes are also considered. The denominator increases by weighted additional ordinary shares, but the instrument is included only if it is dilutive under IAS 33."),
+    ],
+    reference: "IAS 33.31–36, 41–44",
+  },
+  {
     id: "ifrs-book2-ias8-global-inventory-error",
     standardCode: "IAS 8",
     title: text("Global: خطأ مخزون المقارنة", "Global: comparative inventory error"),
