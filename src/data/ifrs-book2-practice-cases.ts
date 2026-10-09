@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias24-quiz-related-transaction",
+    standardCode: "IAS 24",
+    title: text("معاملة الطرف ذي العلاقة", "A related party transaction"),
+    facts: text("قد تنتقل موارد أو خدمات أو التزامات بين منشأة وطرف ذي علاقة، بمقابل أو بدونه.", "Resources, services or obligations may pass between an entity and a related party, with or without consideration."),
+    question: text("ما المقصود بمعاملة الطرف ذي العلاقة؟", "What is a related party transaction?"),
+    solution: [
+      text("هي تحويل موارد أو خدمات أو التزامات بين المنشأة المعدّة للتقرير وطرف ذي علاقة، بغض النظر عما إذا حُدِّد سعر أو فُرض مقابل. لذلك لا يُسقط غياب المقابل وصف المعاملة أو متطلبات الإفصاح ذات الصلة.", "It is a transfer of resources, services or obligations between the reporting entity and a related party, regardless of whether a price is charged. A nil price does not by itself remove the transaction from related-party disclosure requirements."),
+    ],
+    reference: "IAS 24.9, 18",
+  },
+  {
+    id: "ifrs-book2-ias24-quiz-managing-director",
+    standardCode: "IAS 24",
+    title: text("المدير المنتدب والأطراف ذات العلاقة", "Managing director as a related party"),
+    facts: text("يشغل شخص منصب المدير المنتدب للمنشأة المعدّة للتقرير.", "An individual is the reporting entity's managing director."),
+    question: text("صح أم خطأ: المدير المنتدب طرف ذو علاقة بالمنشأة؟ وضّح السبب.", "True or false: a managing director is a related party of the entity. Explain why."),
+    solution: [
+      text("صح. المدير المنتدب من أفراد الإدارة العليا الرئيسيين لأن له سلطة ومسؤولية تخطيط أنشطة المنشأة وتوجيهها والرقابة عليها؛ ويشمل التعريف أي مدير، تنفيذيًا كان أو غير تنفيذي. لذلك يُعد الشخص طرفًا ذا علاقة وفق تعريف IAS 24.", "True. A managing director is key management personnel because the role carries authority and responsibility for planning, directing and controlling the entity's activities. The definition includes any director, executive or otherwise; that person is therefore a related party under IAS 24."),
+    ],
+    reference: "IAS 24.9",
+  },
+  {
+    id: "ifrs-book2-ias24-quiz-nonrelated-examples",
+    standardCode: "IAS 24",
+    title: text("علاقات لا تكفي وحدها لإثبات الارتباط", "Relationships insufficient on their own"),
+    facts: text("قد تتشابه الإدارة بين منشأتين، أو تعتمد إحداهما اقتصاديًا على عميل كبير، دون وقائع أخرى عن السيطرة أو النفوذ.", "Two entities may share a director, or one may depend economically on a major customer, with no other evidence of control or influence."),
+    question: text("اذكر مثالين لعلاقات لا تُنشئ صفة الطرف ذي العلاقة بالضرورة.", "Give two examples of circumstances that do not necessarily create a related party relationship."),
+    solution: [
+      text("(1) منشأتان لهما مدير أو فرد من الإدارة العليا الرئيسيين مشترك، لمجرد هذا الاشتراك. (2) عميل أو مورد كبير توجد معه معاملات كثيرة، لمجرد الاعتماد الاقتصادي. افحص الوقائع الأخرى في كل حالة؛ فقد تنشأ العلاقة إذا وُجدت سيطرة أو سيطرة مشتركة أو نفوذ مؤثر وفق تعريف المعيار.", "(1) Two entities merely sharing a director or other key management person. (2) A major customer or supplier merely because of economic dependence or a large transaction volume. Other facts must still be assessed: control, joint control or significant influence can establish a relationship."),
+    ],
+    reference: "IAS 24.9–11",
+  },
+  {
+    id: "ifrs-book2-ifrs8-quiz-reportable-thresholds",
+    standardCode: "IFRS 8",
+    title: text("تحديد القطاع الواجب التقرير عنه", "Identify a reportable segment"),
+    facts: text("حددت المنشأة قطاعاتها التشغيلية وفق التقارير التي يراجعها متخذ القرار التشغيلي الرئيسي.", "An entity has identified operating segments from the reports reviewed by its chief operating decision maker."),
+    question: text("ما معايير تحديد القطاع التشغيلي الواجب التقرير عنه؟", "What criteria determine whether an operating segment is reportable?"),
+    solution: [
+      text("بعد تحديد القطاع التشغيلي وتطبيق شروط التجميع إن انطبقت، يُبلّغ عنه منفصلًا إذا حقق أيًا من حدود 10%: إيراده المبلّغ، بما فيه الإيراد بين القطاعات، من مجموع إيرادات القطاعات الداخلية والخارجية؛ أو القيمة المطلقة لربحه أو خسارته من الأكبر بالقيمة المطلقة بين مجموع أرباح القطاعات الرابحة ومجموع خسائر القطاعات الخاسرة؛ أو أصوله من مجموع أصول القطاعات. يكفي تحقق حد واحد، وقد تُعرض قطاعات أخرى منفصلة إذا كانت معلوماتها مفيدة أو لازمة لتغطية إيرادات العملاء الخارجيين بنسبة 75% على الأقل.", "After identifying operating segments and applying the aggregation criteria where appropriate, report one separately if it meets any 10% threshold: reported revenue including intersegment revenue versus total internal and external segment revenue; absolute reported profit or loss versus the greater absolute total of profitable segments' profits and loss-making segments' losses; or segment assets versus total segment assets. One threshold is enough. Other segments may be reported if useful or needed to reach at least 75% external-revenue coverage."),
+    ],
+    reference: "IFRS 8.5, 11–15",
+  },
+  {
+    id: "ifrs-book2-ifrs8-quiz-revenue-coverage",
+    standardCode: "IFRS 8",
+    title: text("تغطية إيرادات القطاعات المبلّغ عنها", "Reportable-segment revenue coverage"),
+    facts: text("تجاوز بعض القطاعات الحدود الكمية للتقرير، وتبقى إيرادات لعملاء خارجيين من قطاعات أخرى.", "Some segments pass the quantitative tests, while other segments generate external-customer revenue."),
+    question: text("ما الحد الأدنى من إيراد المنشأة الذي يجب أن تغطيه القطاعات الواجب التقرير عنها؟", "What minimum proportion of entity revenue must reportable segments cover?"),
+    solution: [
+      text("يجب أن تبلغ إيرادات العملاء الخارجيين للقطاعات الواجب التقرير عنها 75% على الأقل من إجمالي إيرادات المنشأة من العملاء الخارجيين. إذا كانت النسبة أقل، تُحدد قطاعات تشغيلية إضافية للتقرير عنها حتى الوصول إلى الحد، ولو لم تبلغ حدود 10%. لا تُستخدم التحويلات بين القطاعات في بسط اختبار 75%.", "External-customer revenue of reportable segments must account for at least 75% of the entity's total external-customer revenue. If coverage falls short, identify additional operating segments for separate reporting until the threshold is reached, even if they fail the 10% tests. Intersegment transfers do not form the numerator of this 75% test."),
+    ],
+    reference: "IFRS 8.15",
+  },
+  {
     id: "ifrs-book2-ias33-greymatter-bonus-comparative",
     standardCode: "IAS 33",
     title: text("Greymatter: أثر أسهم المنحة على المقارنة", "Greymatter: bonus shares and comparative EPS"),
