@@ -15,6 +15,55 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias33-greymatter-bonus-comparative",
+    standardCode: "IAS 33",
+    title: text("Greymatter: أثر أسهم المنحة على المقارنة", "Greymatter: bonus shares and comparative EPS"),
+    facts: text("كان لدى Greymatter عدد 400,000 سهم عادي، ثم أصدرت 100,000 سهم منحة في 30 سبتمبر 20X2. بلغ ربح 20X2 مبلغ 80,000 دولار، وكانت ربحية 20X1 المنشورة 18.75 سنتًا للسهم. السنة من يناير إلى ديسمبر.", "Greymatter had 400,000 ordinary shares, then issued 100,000 bonus shares on 30 September 20X2. Its 20X2 earnings were $80,000, and previously reported 20X1 EPS was 18.75 cents. Its year runs January–December."),
+    question: text("احسب ربحية 20X2 وأعد بيان رقم المقارنة 20X1.", "Calculate 20X2 EPS and restate the 20X1 comparative."),
+    solution: [
+      text("إصدار المنحة لا يجلب موارد جديدة؛ يعامل عدد الأسهم بعده، 500,000 سهم، كأنه قائم من بداية أقدم فترة معروضة. ربحية 20X2 = 80,000 ÷ 500,000 = 0.16 دولار = 16 سنتًا. لا يُرجَّح إصدار المنحة لثلاثة أشهر فقط كما لو كان إصدارًا نقديًا.", "A bonus issue brings no new resources. Treat the post-bonus 500,000 shares as outstanding from the beginning of the earliest period presented. 20X2 EPS = $80,000 ÷ 500,000 = $0.16 = 16 cents. Do not weight the bonus shares for only three months as if they were issued for cash."),
+      text("معامل تعديل مقارنة 20X1 = 400,000 ÷ 500,000 = 0.8؛ ربحيتها المعاد بيانها = 18.75 × 0.8 = 15 سنتًا. يعاد بيان مقام المقارنة لا أرباح 20X1 نفسها.", "Comparative adjustment factor = 400,000 ÷ 500,000 = 0.8; restated 20X1 EPS = 18.75 × 0.8 = 15 cents. Restate the comparative denominator, not the 20X1 earnings themselves."),
+    ],
+    reference: "IAS 33.26–28, 64",
+  },
+  {
+    id: "ifrs-book2-ias33-egghead-theoretical-ex-rights",
+    standardCode: "IAS 33",
+    title: text("Egghead: السعر النظري بعد فصل الحق", "Egghead: theoretical ex-rights price"),
+    facts: text("لدى Egghead عشرة ملايين سهم، وتقترح إصدار حق بسهم جديد لكل أربعة أسهم قائمة بسعر 3 دولارات، بينما سعر السهم شامل الحق مباشرة قبل الإصدار 3.50 دولارات.", "Egghead has 10,000,000 shares and proposes one new share for every four held at $3, while the cum-rights price immediately before issue is $3.50."),
+    question: text("ما القيمة النظرية للسهم بعد فصل الحق؟", "What is the theoretical ex-rights value per share?"),
+    solution: [
+      text("على أساس أربع أسهم قديمة وسهم جديد: (4 × 3.50 + 1 × 3.00) ÷ 5 = 17 ÷ 5 = 3.40 دولارات للسهم. وبالأعداد الكلية: (10,000,000 × 3.50 + 2,500,000 × 3.00) ÷ 12,500,000 = 3.40 دولارات.", "Using four old shares and one new share: (4 × $3.50 + 1 × $3.00) ÷ 5 = $17 ÷ 5 = $3.40 per share. On total shares: (10,000,000 × $3.50 + 2,500,000 × $3.00) ÷ 12,500,000 = $3.40."),
+      text("هذا سعر نظري لتقدير عنصر المنحة، وليس سعر تداول مضمونًا. معامل تعديل عدد الأسهم السابق لممارسة الحقوق سيكون 3.50 ÷ 3.40 إذا تمت الممارسة؛ الاقتراح وحده لا يعني أن الأسهم الجديدة أصبحت قائمة.", "This is a theoretical value for estimating the bonus element, not a guaranteed traded price. The pre-exercise share adjustment factor would be $3.50 ÷ $3.40 if the rights are exercised; the proposal alone does not mean the new shares are outstanding."),
+    ],
+    reference: "IAS 33.26–27, A2",
+  },
+  {
+    id: "ifrs-book2-ias33-brains-rights-comparison",
+    standardCode: "IAS 33",
+    title: text("Brains: إصدار حقوق وربحية سنتين", "Brains: rights issue across two EPS periods"),
+    facts: text("لدى Brains عدد 100,000 سهم قبل إصدار حق بسهم لكل خمسة في 1 أكتوبر 20X2 بسعر دولار واحد. سعر السهم شامل الحق 1.60 دولار. الربح 50,000 دولار في 20X2 و40,000 دولار في 20X1.", "Brains had 100,000 shares before a one-for-five rights issue on 1 October 20X2 at $1. The cum-rights share price was $1.60. Earnings were $50,000 in 20X2 and $40,000 in 20X1."),
+    question: text("احسب ربحية 20X2 ورقم 20X1 المقارن بعد تعديل عنصر المنحة.", "Calculate 20X2 EPS and the bonus-adjusted 20X1 comparative."),
+    solution: [
+      text("السعر النظري بعد فصل الحق = (5 × 1.60 + 1) ÷ 6 = 1.50 دولار؛ معامل عنصر المنحة = 1.60 ÷ 1.50 = 1.0666667. ربحية 20X1 الأصلية = 40,000 ÷ 100,000 = 40 سنتًا؛ المعاد بيانها = 40 × 1.50 ÷ 1.60 = 37.5 سنتًا.", "Theoretical ex-rights value = (5 × $1.60 + $1) ÷ 6 = $1.50; bonus factor = $1.60 ÷ $1.50 = 1.0666667. Original 20X1 EPS = $40,000 ÷ 100,000 = 40 cents; restated EPS = 40 × $1.50 ÷ $1.60 = 37.5 cents."),
+      text("المتوسط المرجح في 20X2 = 100,000 × 1.0666667 × 9/12 + 120,000 × 3/12 = 80,000 + 30,000 = 110,000 سهم. ربحية 20X2 = 50,000 ÷ 110,000 = 0.454545 دولار ≈ 45.5 سنتًا. لا يُعدل الربح بعنصر المنحة.", "20X2 weighted-average shares = 100,000 × 1.0666667 × 9/12 + 120,000 × 3/12 = 80,000 + 30,000 = 110,000. 20X2 EPS = $50,000 ÷ 110,000 = $0.454545 ≈ 45.5 cents. The bonus element does not adjust earnings."),
+    ],
+    reference: "IAS 33.19–27, 64, A2",
+  },
+  {
+    id: "ifrs-book2-ias33-marcoli-rights-three-years",
+    standardCode: "IAS 33",
+    title: text("Marcoli: أثر حقوق الاكتتاب خلال ثلاث سنوات", "Marcoli: rights issue across three years"),
+    facts: text("بلغ ربح Marcoli في 20X6 و20X7 و20X8 على التوالي 1.1 و1.5 و1.8 مليون دولار. في 1 يناير 20X7 كان لديها 500,000 سهم؛ أعلنت خلال 20X7 حقًا بسهم لكل خمسة، أي 100,000 سهم جديد، بسعر تنفيذ 5 دولارات. آخر يوم للممارسة 1 مارس 20X7، وسعر السهم قبل ممارسة الحقوق مباشرة 11 دولارًا.", "Marcoli's earnings for 20X6, 20X7 and 20X8 were $1.1m, $1.5m and $1.8m. It had 500,000 shares on 1 January 20X7 and announced a one-for-five rights issue during 20X7, 100,000 new shares, at $5. The last exercise date was 1 March 20X7 and the immediately pre-exercise share price was $11."),
+    question: text("احسب ربحية السهم للسنوات الثلاث، مع توضيح الفرض اللازم لتوقيت الممارسة.", "Calculate EPS for all three years, identifying the required exercise-date assumption."),
+    solution: [
+      text("السعر النظري بعد فصل الحق = (500,000 × 11 + 100,000 × 5) ÷ 600,000 = 10 دولارات؛ معامل المنحة = 11 ÷ 10 = 1.1. يفترض حل المسألة أن 500,000 سهم كانت قائمة طوال 20X6 وأن الحقوق مُورست في 1 مارس؛ آخر موعد للممارسة وحده لا يثبت تاريخ كل ممارسة فعليًا.", "Theoretical ex-rights value = (500,000 × $11 + 100,000 × $5) ÷ 600,000 = $10; bonus factor = $11 ÷ $10 = 1.1. The worked result assumes 500,000 shares throughout 20X6 and exercise on 1 March; a final exercise deadline alone does not prove each actual exercise date."),
+      text("تحت هذه الفروض: ربحية 20X6 المعاد بيانها = 1,100,000 ÷ (500,000 × 1.1) = 2.00 دولار؛ مقام 20X7 = 500,000 × 1.1 × 2/12 + 600,000 × 10/12 = 591,666.67 سهم، وربحيته = 1,500,000 ÷ 591,666.67 ≈ 2.54 دولار؛ ربحية 20X8 = 1,800,000 ÷ 600,000 = 3.00 دولارات للسهم.", "Under those assumptions: restated 20X6 EPS = $1,100,000 ÷ (500,000 × 1.1) = $2.00; 20X7 denominator = 500,000 × 1.1 × 2/12 + 600,000 × 10/12 = 591,666.67 shares, giving $1,500,000 ÷ 591,666.67 ≈ $2.54; 20X8 EPS = $1,800,000 ÷ 600,000 = $3.00 per share."),
+      text("إذا اختلفت تواريخ الممارسة الفعلية أو حركة أسهم 20X6 يتغير المقام الزمني؛ لا تعمم هذه الأرقام من دون تلك الوقائع.", "If actual exercise dates or the 20X6 share movement differed, time-weighted shares would differ. Do not generalise the figures without those facts."),
+    ],
+    reference: "IAS 33.19–27, 64, A2",
+  },
+  {
     id: "ifrs-book2-ias33-justina-weighted-shares",
     standardCode: "IAS 33",
     title: text("Justina: ترجيح الأسهم الصادرة نقدًا", "Justina: time-weight a cash share issue"),
