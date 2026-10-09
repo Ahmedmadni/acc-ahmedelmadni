@@ -3,6 +3,27 @@ import type { ExamQuestion } from "@/lib/exam-bank";
 /** Reviewed source extracts. Public references intentionally cite IFRS/IAS only. */
 export const IFRS_REVIEWED_EXTRACT_QUESTIONS: ExamQuestion[] = [
   {
+    id: "ifrs-reviewed-ifrs10-major-minor-inventory-01",
+    track: "IFRS",
+    topic: "IFRS 10 — intragroup inventory profit attributable to parent",
+    question: {
+      ar: "تُعد Major Co قوائمها في 31 ديسمبر وتمتلك 80% من Minor Co. تبيع Minor بضاعة إلى Major بزيادة 33.33% على التكلفة. في 31 ديسمبر 20X8 احتفظت Major ببضاعة من هذا المصدر بقيمة 12,000 دولار، وفي 31 ديسمبر 20X9 احتفظت ببضاعة بقيمة 15,000 دولار. بمقدار كم يُعدّل الربح الموحد المنسوب لمساهمي Major؟ تجاهل الضريبة.",
+      en: "Major Co, which makes up its accounts to 31 December, has an 80% owned subsidiary Minor Co. Minor Co sells goods to Major Co at a mark-up on cost of 33.33%. At 31 December 20X8, Major had $12,000 of such goods in its inventory and at 31 December 20X9 had $15,000 of such goods in its inventory. What is the amount by which the consolidated profit attributable to Major Co's shareholders should be adjusted in respect of the above? Ignore taxation.",
+    },
+    choices: {
+      ar: ["1,000 دولار مدين", "800 دولار دائن", "750 دولار دائن", "600 دولار مدين"],
+      en: ["$1,000 Debit", "$800 Credit", "$750 Credit", "$600 Debit"],
+    },
+    answerIndex: 3,
+    explanation: {
+      ar: "تعادل الزيادة على التكلفة 33.33% هامشًا يقارب 25% من سعر التحويل. ربح المخزون غير المحقق أول المدة يقارب 12,000 × 25% = 3,000، وآخرها 15,000 × 25% = 3,750؛ صافي تخفيض ربح التابعة للسنة 750. يُحذف الربح الداخلي كله من المجموعة، ثم يُنسب 80% من تخفيض ربح التابعة إلى ملاك الأم: 750 × 80% = 600 مدين. التقريب في 33.33% لا يغير الاختيار.",
+      en: "A 33.33% mark-up on cost is approximately 25% of transfer price. Opening unrealised inventory profit is about $12,000 × 25% = $3,000; closing profit is $15,000 × 25% = $3,750. The subsidiary's current-year profit therefore falls by $750. Eliminate intragroup profit in full, then attribute 80% of the subsidiary-profit reduction to parent owners: $750 × 80% = $600 debit. Rounding of 33.33% does not affect the option.",
+    },
+    reference: "IFRS 10.B86(c), B94",
+    difficulty: "intermediate",
+    examDomain: "IFRS 10 intragroup inventory and NCI attribution",
+  },
+  {
     id: "ifrs-reviewed-ias12-current-tax-measurement-01",
     track: "IFRS",
     topic: "IAS 12 — current tax measurement",

@@ -537,6 +537,14 @@ for (const [label, actual, expected] of reviewedCalculations) {
 const ids = new Set();
 const reviewedEnglishSourceText = new Map([
   [
+    "ifrs-reviewed-ifrs10-major-minor-inventory-01",
+    {
+      question:
+        "Major Co, which makes up its accounts to 31 December, has an 80% owned subsidiary Minor Co. Minor Co sells goods to Major Co at a mark-up on cost of 33.33%. At 31 December 20X8, Major had $12,000 of such goods in its inventory and at 31 December 20X9 had $15,000 of such goods in its inventory. What is the amount by which the consolidated profit attributable to Major Co's shareholders should be adjusted in respect of the above? Ignore taxation.",
+      choices: ["$1,000 Debit", "$800 Credit", "$750 Credit", "$600 Debit"],
+    },
+  ],
+  [
     "ifrs-reviewed-ias12-current-tax-measurement-01",
     {
       question: "How should current tax be measured?",
