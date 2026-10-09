@@ -15,6 +15,40 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-chicken-egg-inventory-profit",
+    standardCode: "IFRS 10",
+    title: text("Chicken وEgg: ربح مخزون داخل المجموعة", "Chicken and Egg: intragroup inventory profit"),
+    facts: text("تمتلك Chicken نسبة 80% من Egg. باعت Egg إلى Chicken خلال السنة المنتهية في 31 ديسمبر 20X9 بضائع مفوترة بمبلغ 900,000، بسعر التكلفة مضافًا إليه 50%. بقيت في مخزون Chicken في نهاية السنة بضائع من هذه المشتريات بقيمة فاتورة 60,000.", "Chicken owns 80% of Egg. In the year ended 31 December 20X9, Egg invoiced goods to Chicken for 900,000 at cost plus 50%. Goods from these purchases invoiced at 60,000 remained in Chicken's closing inventory."),
+    question: text("ما مقدار التخفيض في إجمالي الربح المجمع؟", "What is the reduction in aggregate gross profit?"),
+    solution: [
+      text("الربح في سعر التحويل يساوي 50 ÷ 150 من الفاتورة، وليس 50% منها. الربح غير المحقق في المخزون الباقي = 60,000 × 50 ÷ 150 = 20,000. يُخفض مخزون المجموعة وتكلفة المبيعات/إجمالي الربح المجمع بهذا المبلغ كاملًا، ولا يقتصر الحذف على ملكية الأم البالغة 80%.", "The profit fraction of the transfer price is 50 ÷ 150, not 50%. Unrealised profit in closing inventory is 60,000 × 50 ÷ 150 = 20,000. Reduce group inventory and aggregate gross profit by the full 20,000; the elimination is not limited to the parent's 80% ownership."),
+      text("تُحذف أيضًا المبيعات والمشتريات الداخلية 900,000 من الإيراد وتكلفة المبيعات عند التجميع، لكنهما يتقابلان ولا يغيران إجمالي الربح بذاتهما. وبما أن البائع هو التابعة، يُوزع أثر الربح غير المحقق على ملاك الأم وغير المسيطرين عند إسناد نتيجة التابعة؛ هذه خطوة منفصلة عن التخفيض الكامل لإجمالي ربح المجموعة.", "The 900,000 intragroup sales and purchases are also eliminated from group revenue and cost of sales; that matching elimination alone does not change gross profit. Because the subsidiary is the seller, attribution of the unrealised-profit adjustment between parent owners and NCI is a separate step from the full group gross-profit reduction."),
+    ],
+    reference: "IFRS 10.B86(c), B94",
+  },
+  {
+    id: "ifrs-book2-ifrs3-negative-goodwill-true-false",
+    standardCode: "IFRS 3",
+    title: text("هل الشهرة دائمًا موجبة؟", "Is goodwill always positive?"),
+    facts: text("سؤال صح أو خطأ عن نتيجة احتساب الشهرة في تجميع الأعمال.", "A true-or-false question about the outcome of a business-combination goodwill calculation."),
+    question: text("«الشهرة دائمًا رقم موجب». هل العبارة صحيحة أم خاطئة؟", "‘Goodwill is always a positive figure.’ True or false?"),
+    solution: [
+      text("خاطئة: قد تكون الشهرة صفرًا. وإذا تجاوزت حصة المشتري في صافي الأصول القابلة للتحديد المقابلَ والحصةَ غير المسيطرة وأي حصة سابقة، تُعاد مراجعة تحديد الأصول والالتزامات وقياس جميع المكونات أولًا. وإذا بقي الفائض فهو ربح شراء بسعر مغرٍ يُعترف به في الربح أو الخسارة يوم الاقتناء، وليس «شهرة سالبة» تُعرض كأصل أو رصيد شهرة سالب.", "False: goodwill can be zero. If identifiable net assets exceed the consideration, NCI and any previously held interest, the acquirer first reassesses the identification and measurement of the acquisition components. Any remaining excess is a bargain-purchase gain recognised in profit or loss at acquisition, not a negative goodwill asset or a negative goodwill balance."),
+    ],
+    reference: "IFRS 3.32, 34–36",
+  },
+  {
+    id: "ifrs-book2-ifrs13-level-one-inputs-quick-quiz",
+    standardCode: "IFRS 13",
+    title: text("مدخلات المستوى الأول للقيمة العادلة", "Level 1 fair-value inputs"),
+    facts: text("يتعلق السؤال بهرم مدخلات قياس القيمة العادلة في IFRS 13.", "The question concerns the IFRS 13 fair-value input hierarchy."),
+    question: text("ما المقصود بمدخلات المستوى الأول وفق IFRS 13؟", "Under IFRS 13, what are Level 1 inputs?"),
+    solution: [
+      text("هي أسعار معلنة غير معدلة في أسواق نشطة لأصول أو التزامات مطابقة، تستطيع المنشأة الوصول إليها في تاريخ القياس. السعر لأصل مشابه أو في سوق غير نشطة لا يحقق وحده تعريف المستوى الأول؛ كما أن تعديل السعر عادةً ينقل القياس إلى مستوى أدنى بحسب IFRS 13.", "They are unadjusted quoted prices in active markets for identical assets or liabilities that the entity can access at the measurement date. A price for a merely similar item or from an inactive market does not itself meet Level 1; adjusting a quoted price generally moves the measurement to a lower hierarchy level under IFRS 13."),
+    ],
+    reference: "IFRS 13.72, 76–79",
+  },
+  {
     id: "ifrs-book2-ifrs3-fair-value-uplift-deferred-tax",
     standardCode: "IFRS 3",
     title: text("زيادة القيمة العادلة عند الاقتناء والضريبة المؤجلة", "Acquisition fair-value uplift and deferred tax"),
