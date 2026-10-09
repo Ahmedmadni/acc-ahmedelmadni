@@ -15,6 +15,45 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias33-farrah-convertible",
+    standardCode: "IAS 33",
+    title: text("Farrah: أثر القرض القابل للتحويل", "Farrah: convertible loan and diluted EPS"),
+    facts: text("في 20X7 بلغت ربحية السهم الأساسية 105 سنتات، بناءً على ربح 105,000 دولار و100,000 سهم عادي. لدى Farrah قرض قابل للتحويل بقيمة 40,000 دولار وفائدة 15%، يمكن تحويله بعد سنتين بمعدل 4 أسهم عادية لكل 5 دولارات من أصل القرض. معدل الضريبة 30%.", "In 20X7 Farrah had basic EPS of 105 cents based on earnings of $105,000 and 100,000 ordinary shares. It also had $40,000 of 15% convertible loan stock, convertible in two years at four ordinary shares for every $5 of stock. The tax rate is 30%."),
+    question: text("احسب ربحية السهم المخففة.", "Calculate diluted earnings per share."),
+    solution: [
+      text("أسهم التحويل = 40,000 ÷ 5 × 4 = 32,000 سهم؛ المقام المفترض = 132,000 سهم، بافتراض بقاء القرض قائمًا طوال الفترة كما يفترض المثال.", "Conversion shares = $40,000 ÷ $5 × 4 = 32,000; assumed denominator = 132,000 shares, on the example's assumption that the loan was outstanding throughout the period."),
+      text("الفائدة السنوية = 40,000 × 15% = 6,000 دولار؛ أثرها بعد الضريبة = 6,000 × (1 − 30%) = 4,200؛ البسط المعدل = 105,000 + 4,200 = 109,200 دولار، ما لم توجد آثار دخل أو مصروف أخرى ناشئة عن التحويل.", "Annual interest = $40,000 × 15% = $6,000; after-tax effect = $6,000 × (1 − 30%) = $4,200; adjusted numerator = $105,000 + $4,200 = $109,200, assuming no other consequential income or expense."),
+      text("المخففة = 109,200 ÷ 132,000 = 0.82727 دولار ≈ 82.7 سنتًا للسهم. وهي أدنى من الأساسية البالغة 105 سنتات، لذلك يُدرج القرض في هذا الفرض. لا يُثبت قيد تحويل فعلي؛ هذا حساب افتراضي للعرض فقط.", "Diluted EPS = $109,200 ÷ 132,000 = $0.82727 ≈ 82.7 cents per share. This is below the 105-cent basic EPS, so the loan is included on these facts. No actual conversion entry is recorded; this is a presentation calculation."),
+    ],
+    reference: "IAS 33.31–36, 41–44",
+  },
+  {
+    id: "ifrs-book2-ias33-ardent-two-convertibles",
+    standardCode: "IAS 33",
+    title: text("Ardent: فرز قرضين قابلين للتحويل", "Ardent: test two convertible issues separately"),
+    facts: text("لدى Ardent خمسة ملايين سهم عادي، وربح 20X4 يبلغ 1,750,000 دولار. لديها قرض قابل للتحويل بمليون دولار وفائدة 14% إلى سهمين لكل 10 دولارات، وآخر بمليوني دولار وفائدة 10% إلى ثلاثة أسهم لكل 5 دولارات. معدل ضريبة الدخل 35%.", "Ardent has 5,000,000 ordinary shares and 20X4 earnings of $1,750,000. It has $1,000,000 of 14% convertible debt at two shares per $10 of stock, and $2,000,000 of 10% convertible debt at three shares per $5 of stock. Income tax is 35%."),
+    question: text("احسب ربحية السهم الأساسية والمخففة، وافحص كل قرض على حدة.", "Calculate basic and diluted EPS and test each loan separately."),
+    solution: [
+      text("بافتراض أن الربح المعطى منسوب كله للأسهم العادية وأن الأرقام قائمة طوال الفترة: الأساسية = 1,750,000 ÷ 5,000,000 = 0.35 دولار = 35 سنتًا للسهم.", "Assuming all stated earnings belong to ordinary shareholders and the instruments were outstanding throughout the period: basic EPS = $1,750,000 ÷ 5,000,000 = $0.35 = 35 cents per share."),
+      text("قرض 14%: أسهمه الإضافية = 1,000,000 ÷ 10 × 2 = 200,000؛ فائدة بعد الضريبة = 1,000,000 × 14% × 65% = 91,000 دولار؛ ربحية السهم الإضافي = 91,000 ÷ 200,000 = 45.5 سنتًا. هذا أعلى من الأساسية 35 سنتًا، لذلك يكون مضادًا للتخفيف ويُستبعد.", "14% loan: incremental shares = $1,000,000 ÷ $10 × 2 = 200,000; after-tax interest = $1,000,000 × 14% × 65% = $91,000; incremental earnings per share = $91,000 ÷ 200,000 = 45.5 cents. This exceeds basic EPS of 35 cents, so the issue is antidilutive and excluded."),
+      text("قرض 10%: أسهمه الإضافية = 2,000,000 ÷ 5 × 3 = 1,200,000؛ فائدة بعد الضريبة = 2,000,000 × 10% × 65% = 130,000 دولار؛ ربحية السهم الإضافي ≈ 10.83 سنتات. يُدرج لأنه مخفف: (1,750,000 + 130,000) ÷ (5,000,000 + 1,200,000) = 0.30323 دولار ≈ 30.3 سنتًا. لا تجمع أثر القرضين قبل اختبار كل إصدار.", "10% loan: incremental shares = $2,000,000 ÷ $5 × 3 = 1,200,000; after-tax interest = $2,000,000 × 10% × 65% = $130,000; incremental earnings per share ≈ 10.83 cents. Include it because it is dilutive: ($1,750,000 + $130,000) ÷ (5,000,000 + 1,200,000) = $0.30323 ≈ 30.3 cents. Do not aggregate the two issues before testing each one."),
+    ],
+    reference: "IAS 33.31–36, 41–44",
+  },
+  {
+    id: "ifrs-book2-ias33-brand-options",
+    standardCode: "IAS 33",
+    title: text("Brand: خيارات الأسهم وربحية السهم", "Brand: options and diluted EPS"),
+    facts: text("في سنة 20X7 بلغ ربح Brand مليونًا ومئتي ألف دولار، والمتوسط المرجح للأسهم العادية القائمة 500,000 سهم. متوسط السعر العادل للسهم 20 دولارًا، والمتوسط المرجح للأسهم تحت الخيار 100,000 سهم، وسعر التنفيذ 15 دولارًا للسهم.", "In 20X7 Brand's earnings were $1,200,000, weighted-average ordinary shares outstanding were 500,000, average market value per share was $20, weighted-average shares under option were 100,000, and the exercise price was $15 per share."),
+    question: text("احسب ربحية السهم الأساسية والمخففة.", "Calculate basic and diluted earnings per share."),
+    solution: [
+      text("بافتراض أن الربح المعطى منسوب كله للأسهم العادية: الأساسية = 1,200,000 ÷ 500,000 = 2.40 دولار للسهم.", "Assuming all stated earnings belong to ordinary shareholders: basic EPS = $1,200,000 ÷ 500,000 = $2.40 per share."),
+      text("لأن سعر التنفيذ 15 دولارًا أقل من متوسط السوق 20 دولارًا فالخيارات مخففة. متحصلات التنفيذ المفترضة = 100,000 × 15 = 1,500,000 دولار؛ الأسهم التي تكافئ هذا المبلغ بسعر السوق = 1,500,000 ÷ 20 = 75,000؛ الأسهم المجانية ضمنًا = 100,000 − 75,000 = 25,000.", "The $15 exercise price is below the $20 average market price, so the options are dilutive. Assumed proceeds = 100,000 × $15 = $1,500,000; equivalent shares at market price = $1,500,000 ÷ $20 = 75,000; deemed no-consideration shares = 100,000 − 75,000 = 25,000."),
+      text("المقام المخفف = 500,000 + 25,000 = 525,000؛ المخففة = 1,200,000 ÷ 525,000 = 2.285714 دولار ≈ 2.29 دولار للسهم. لا تُضاف متحصلات تنفيذ مفترضة إلى ربح الفترة، ولا يُثبت قيد ممارسة حقيقي.", "Diluted denominator = 500,000 + 25,000 = 525,000; diluted EPS = $1,200,000 ÷ 525,000 = $2.285714 ≈ $2.29 per share. Assumed exercise proceeds are not added to period earnings, and no actual exercise entry is recorded."),
+    ],
+    reference: "IAS 33.41–47",
+  },
+  {
     id: "ifrs-book2-ias33-quiz-basic-eps",
     standardCode: "IAS 33",
     title: text("صيغة ربحية السهم الأساسية", "Basic earnings-per-share formula"),
