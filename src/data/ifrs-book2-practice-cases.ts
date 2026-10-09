@@ -15,6 +15,39 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-quiz-even-profit-assumption",
+    standardCode: "IFRS 10",
+    title: text("هل تُوزع أرباح سنة الاقتناء بالتساوي؟", "Can acquisition-year profit be assumed even?"),
+    facts: text("اقتنت شركة أم شركة تابعة خلال فترة إعداد قوائمها المالية.", "A parent acquired a subsidiary during its accounting period."),
+    question: text("«يمكن للشركة الأم افتراض أن أرباح التابعة تتحقق بالتساوي على مدار السنة». هل العبارة صحيحة أم خاطئة؟", "A parent company can assume that, for a subsidiary acquired during its accounting period, profits accrue evenly during the year. True or false?"),
+    solution: [
+      text("خاطئة كقاعدة عامة. يبدأ تضمين إيرادات ومصروفات التابعة في القوائم الموحدة من تاريخ حصول السيطرة، ولذلك يُحدد الربح اللاحق للاقتناء من سجلاتها الفعلية متى توفرت. لا يُستخدم التقسيم الزمني المنتظم إلا كافتراض مبسط إذا نصت عليه المسألة أو كان ملائمًا للوقائع وغياب بيانات أدق؛ فقد تغير الموسمية أو الصفقات المهمة توزيع الربح.", "False as a general rule. Subsidiary income and expenses enter consolidated statements from the date control is obtained, so post-acquisition profit should be based on actual records when available. An even time split is only a simplifying assumption when stated or justified by the facts and no better information exists; seasonality or major transactions may make it inappropriate."),
+    ],
+    reference: "IFRS 10.B88",
+  },
+  {
+    id: "ifrs-book2-ifrs10-quiz-pre-acquisition-profit-workings",
+    standardCode: "IFRS 10",
+    title: text("معالجة أرباح التابعة قبل الاقتناء في أوراق التجميع", "Pre-acquisition subsidiary profit in consolidation workings"),
+    facts: text("كانت لدى الشركة التابعة أرباح محتجزة قبل أن تحصل الشركة الأم على السيطرة.", "The subsidiary had retained earnings before the parent obtained control."),
+    question: text("ما التسويات التي تُجرى في أوراق التجميع لإثبات أرباح التابعة السابقة للاقتناء؟", "What entries are made in the workings to record pre-acquisition profits of a subsidiary?"),
+    solution: [
+      text("تُحدد الأرباح المحتجزة للتابعة في تاريخ الاقتناء ضمن صافي أصولها القابلة للتحديد آنذاك، وتدخل في حساب الشهرة وفق IFRS 3. في ورقة التجميع تُقابل حقوق ملكية التابعة القائمة يوم الاقتناء، بما فيها هذه الأرباح، باستثمار الأم عند حذف الاستثمار/الحقوق. لا تُضاف أرباح ما قبل الاقتناء إلى الأرباح المحتجزة الموحدة لملاك الأم باعتبارها ربحًا لاحقًا؛ يُنسب فقط تغير الأرباح بعد الاقتناء إلى الأم وغير المسيطرين بحسب حصصهما، بعد تسويات التجميع.", "Identify the subsidiary's acquisition-date retained earnings within its acquisition-date identifiable net assets and include them in the IFRS 3 goodwill calculation. In consolidation workings, offset the subsidiary's acquisition-date equity, including those earnings, against the parent's investment when eliminating the investment/equity. Do not add pre-acquisition earnings to consolidated retained earnings of parent owners as post-acquisition profit; attribute only post-acquisition movements between parent owners and NCI after consolidation adjustments."),
+    ],
+    reference: "IFRS 10.B86(b), B88, B94; IFRS 3.32",
+  },
+  {
+    id: "ifrs-book2-ifrs10-quiz-unrealised-profit-cost-of-sales",
+    standardCode: "IFRS 10",
+    title: text("أثر الربح الداخلي غير المحقق في تكلفة المبيعات", "Unrealised intragroup profit in cost of sales"),
+    facts: text("تتضمن بضاعة نهاية الفترة للمجموعة ربحًا من بيع بين منشأتين داخل المجموعة.", "Group closing inventory contains profit from a sale between group entities."),
+    question: text("أين يظهر تعديل الربح غير المحقق من التداول داخل المجموعة في قائمة الربح أو الخسارة؟", "Where does unrealised profit on intragroup trading appear in the statement of profit or loss?"),
+    solution: [
+      text("عند عرض المصروفات بحسب الوظيفة وتحديد تكلفة المبيعات، تُضاف قيمة الربح غير المحقق في مخزون نهاية الفترة إلى تكلفة المبيعات الموحدة، فينخفض إجمالي الربح؛ ويُخفض المخزون بالمبلغ نفسه. وتُحذف كذلك المبيعات وتكلفة الشراء الداخلية بالكامل عند التجميع. هذا وصف لتعديل مخزون الإقفال؛ أما ربح مخزون الافتتاح المحقق ببيعه خارج المجموعة خلال الفترة فينعكس أثره في الاتجاه المقابل.", "When expenses are presented by function using cost of sales, add the unrealised profit in closing inventory to consolidated cost of sales, reducing gross profit, and reduce inventory by the same amount. The intragroup sale and matching purchase/cost are also eliminated in full on consolidation. This describes the closing-inventory adjustment; profit in opening inventory realised through an external sale during the period reverses in the opposite direction."),
+    ],
+    reference: "IFRS 10.B86(c)",
+  },
+  {
     id: "ifrs-book2-ifrs10-chicken-egg-inventory-profit",
     standardCode: "IFRS 10",
     title: text("Chicken وEgg: ربح مخزون داخل المجموعة", "Chicken and Egg: intragroup inventory profit"),
