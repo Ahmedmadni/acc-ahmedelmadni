@@ -15,6 +15,72 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-quiz-subsidiary-definition",
+    standardCode: "IFRS 10",
+    title: text("تعريف الشركة التابعة", "Definition of a subsidiary"),
+    facts: text("يرتبط تصنيف الاستثمار بتقييم السيطرة، لا بمجرد نسبة الأسهم الاسمية.", "Investment classification depends on control, not merely the nominal shareholding percentage."),
+    question: text("عرّف الشركة التابعة.", "Define a subsidiary."),
+    solution: [
+      text("الشركة التابعة منشأة تسيطر عليها منشأة أخرى. تُثبت السيطرة بفحص السلطة على الأنشطة ذات الصلة، والتعرض لعوائد متغيرة أو الحق فيها، والقدرة على استخدام السلطة للتأثير في تلك العوائد؛ لذلك قد تختلف نتيجة التقييم عن مجرد أغلبية الأسهم.", "A subsidiary is an entity controlled by another entity. Control requires power over relevant activities, exposure or rights to variable returns, and the ability to use that power to affect those returns; a simple share-majority test is not always conclusive."),
+    ],
+    reference: "IFRS 10.6–7, Appendix A",
+  },
+  {
+    id: "ifrs-book2-ifrs10-quiz-control-assessment",
+    standardCode: "IFRS 10",
+    title: text("متى تتحقق السيطرة؟", "When does control exist?"),
+    facts: text("يملك مستثمر حقوقًا في منشأة أخرى ويتلقى عوائد من مشاركته فيها.", "An investor holds rights in another entity and receives returns from its involvement."),
+    question: text("متى يمكن القول إن المستثمر يسيطر على المنشأة المستثمر فيها؟", "When can an investor be considered to control an investee?"),
+    solution: [
+      text("يلزم اجتماع العناصر الثلاثة: سلطة حالية تتيح توجيه الأنشطة ذات الصلة، وتعرض أو حقوق لعوائد متغيرة، وقدرة على استخدام السلطة للتأثير في مقدار هذه العوائد. لا تكفي حقوق الحماية أو التعرض للعوائد وحده. تُراجع حقوق التصويت الحالية والمحتملة الجوهرية والترتيبات التعاقدية بحسب الوقائع.", "All three elements are required: existing power to direct relevant activities, exposure or rights to variable returns, and the ability to use that power to affect those returns. Protective rights or returns alone are insufficient. Assess substantive present and potential voting rights and contractual arrangements in context."),
+    ],
+    reference: "IFRS 10.6–10, B11–B25, B47",
+  },
+  {
+    id: "ifrs-book2-ifrs10-quiz-parent-treatment",
+    standardCode: "IFRS 10",
+    title: text("معالجة الشركة الأم للقوائم", "Parent's consolidation requirement"),
+    facts: text("تسيطر شركة أم على شركة تابعة وتعد قوائم مالية وفق المعايير الدولية.", "A parent controls a subsidiary and prepares IFRS financial statements."),
+    question: text("ما المعالجة التي يتطلبها IFRS 10 من الشركة الأم؟", "What accounting treatment does IFRS 10 require of a parent?"),
+    solution: [
+      text("الأصل أن تعد الشركة الأم قوائم مالية موحدة تعرض أصول الأم وتابعاتها والتزاماتها وحقوق ملكيتها وإيراداتها ومصروفاتها وتدفقاتها النقدية كما لو كانت منشأة اقتصادية واحدة، مع حذف المعاملات والأرصدة داخل المجموعة. يُفحص استثناء الإعفاء في IFRS 10.4 أو استثناء المنشأة الاستثمارية حيث ينطبق؛ ولا يحل عرض الاستثمار بالقيمة فقط في قوائم الأم المنفصلة محل التوحيد المطلوب.", "Ordinarily the parent presents consolidated financial statements showing the parent and subsidiaries' assets, liabilities, equity, income, expenses and cash flows as one economic entity, eliminating intragroup items. Assess the IFRS 10.4 exemption or the investment-entity exception where relevant; merely recognising an investment in the parent's separate statements does not replace required consolidation."),
+    ],
+    reference: "IFRS 10.4, 19–20, 31–32, Appendix A, B86",
+  },
+  {
+    id: "ifrs-book2-ifrs10-quiz-consolidation-exemption",
+    standardCode: "IFRS 10",
+    title: text("إعفاء الشركة الأم الوسيطة من التوحيد", "Intermediate-parent consolidation exemption"),
+    facts: text("تريد شركة أم داخل مجموعة أكبر معرفة ما إذا كان يجوز لها عدم عرض قوائم موحدة خاصة بها.", "A parent within a larger group asks whether it may omit its own consolidated financial statements."),
+    question: text("متى تُعفى الشركة الأم من إعداد القوائم المالية الموحدة؟", "When is a parent exempt from presenting consolidated financial statements?"),
+    solution: [
+      text("إعفاء IFRS 10.4(a) مشروط بتحقق جميع الشروط: تكون تابعة مملوكة بالكامل أو جزئيًا، ويُبلّغ سائر الملاك بمن فيهم من لا يملكون حق التصويت ولا يعترضون؛ لا تتداول أدوات دينها أو حقوق ملكيتها في سوق عام؛ لا تودع قوائمها ولا تستعد لإيداعها بغرض إصدار أدوات في سوق عام؛ وتصدر أمها النهائية أو وسيطة قوائم متاحة للجمهور ملتزمة بـIFRS، تُوحَّد فيها التابعات أو تُقاس بالقيمة العادلة عبر الربح أو الخسارة طبقًا للاستثناء. وهناك استثناء مختلف للمنشأة الاستثمارية في IFRS 10.4B و31؛ فلا تجعل مجرد كونها تابعة إعفاءً عامًا.", "The IFRS 10.4(a) exemption requires every condition: the parent is wholly or partly owned by another entity and all other owners, including non-voting owners, have been informed and do not object; its debt or equity is not publicly traded; it is not filing or preparing to file statements to issue instruments in a public market; and an ultimate or intermediate parent issues publicly available IFRS-compliant statements consolidating subsidiaries or measuring them at fair value through profit or loss as IFRS 10 permits. A distinct investment-entity exception appears in IFRS 10.4B and 31. Merely being a subsidiary is not enough."),
+    ],
+    reference: "IFRS 10.4(a), 4B, 31–32",
+  },
+  {
+    id: "ifrs-book2-ias27-quiz-subsidiary-separate-statements",
+    standardCode: "IAS 27",
+    title: text("استثمار التابعة في القوائم المنفصلة", "Subsidiary investment in separate statements"),
+    facts: text("تعرض شركة أم قوائم مالية منفصلة إلى جانب قوائم المجموعة، ولديها استثمار في شركة تابعة.", "A parent presents separate financial statements alongside group statements and holds an investment in a subsidiary."),
+    question: text("كيف تحاسب الشركة الأم عن استثمارها في التابعة في قوائمها المالية المنفصلة؟", "How does a parent account for an investment in a subsidiary in its separate financial statements?"),
+    solution: [
+      text("يجوز وفق IAS 27.10 اختيار التكلفة، أو تطبيق IFRS 9، أو طريقة حقوق الملكية وفق IAS 28، مع توحيد السياسة لكل فئة من الاستثمارات. الاستثمار الذي يُحاسب عنه بالتكلفة أو بحقوق الملكية ويُصنف محتفظًا به للبيع يُعالَج وفق IFRS 5؛ أما قياس استثمار IFRS 9 فلا يتغير لهذا السبب. لا تخلط هذه الخيارات مع متطلبات التوحيد في قوائم المجموعة.", "IAS 27.10 permits cost, IFRS 9 measurement or the equity method described in IAS 28, applying the same policy within each investment category. An investment at cost or under the equity method classified as held for sale is accounted for under IFRS 5; IFRS 9 measurement does not change solely for that classification. These separate-statement choices are distinct from group consolidation requirements."),
+    ],
+    reference: "IAS 27.9–10; IFRS 5; IFRS 9; IAS 28",
+  },
+  {
+    id: "ifrs-book2-ifrs10-quiz-noncontrolling-interest",
+    standardCode: "IFRS 10",
+    title: text("حقوق الملكية غير المسيطرة", "Non-controlling interest"),
+    facts: text("تُوحَّد شركة تابعة لا تعود ملكيتها كلها إلى الشركة الأم.", "A subsidiary that is not wholly owned is consolidated."),
+    question: text("ما المقصود بحقوق الملكية غير المسيطرة؟", "What is a non-controlling interest?"),
+    solution: [
+      text("هي حقوق الملكية في الشركة التابعة التي لا تُنسب مباشرة أو غير مباشرة إلى الشركة الأم. تُعرض في حقوق الملكية بالقائمة الموحدة منفصلة عن حقوق ملاك الأم، ولا تعني استبعاد نسبة غير المسيطرين من أصول التابعة والتزاماتها عند التوحيد الكامل.", "It is equity in a subsidiary not attributable, directly or indirectly, to the parent. Present it within equity in the consolidated statement separately from the parent's owners' equity; it does not mean omitting the non-controlling share of a consolidated subsidiary's assets and liabilities."),
+    ],
+    reference: "IFRS 10.22, Appendix A",
+  },
+  {
     id: "ifrs-book2-ifrs8-jesmond-segment-tests",
     standardCode: "IFRS 8",
     title: text("Jesmond: اختبار القطاعات وحد 75%", "Jesmond: segment tests and the 75% rule"),
