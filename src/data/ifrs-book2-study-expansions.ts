@@ -1555,6 +1555,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 33.12–15, 19–27, 31–40, A2",
       },
+      {
+        title: text("أسهم لا تدخل المقام بالطريقة المعتادة", "Shares that need a different denominator test"),
+        explanation: text(
+          "ليس كل حق في سهم مستقبلي سهمًا عاديًا قائمًا اليوم. في الربحية الأساسية تدخل الأسهم الصادرة نقدًا عندما يصبح المقابل مستحق التحصيل، وأسهم الاستحواذ من تاريخ الاقتناء، والأسهم المشروطة فقط من تاريخ تحقق جميع شروط إصدارها. أما الأسهم القابلة للاسترجاع فتستبعد حتى زوال شرط الاسترجاع. الأسهم التي سيصدرها عقد تحويل إلزامي تدخل الأساسية من تاريخ العقد وفق النص الخاص. السهم المدفوع جزئيًا يحسب في الأساسية ككسر من سهم كامل بقدر مشاركته في التوزيعات؛ والجزء الذي لا يشارك يُختبر في المخفضة كخيار أو ضمان. في المخفضة قد تدخل الأسهم المشروطة غير المستوفية بعدد ما كان سيصدر لو انتهت فترة الشرط في تاريخ التقرير، فقط إذا كان الأثر مخفِّضًا. هذا اختبار افتراضي ولا يعني أن الشرط تحقق فعليًا أو أن أسهمًا صدرت. عند إصدار منحة أو تجزئة بعد تاريخ التقرير وقبل اعتماد القوائم، تعاد أرقام السهم لكل الفترات المعروضة؛ أما الإصدار النقدي اللاحق فلا يغير حساب فترة منتهية، وقد يلزم وصفه في الإفصاح إن كان جوهريًا. ورقة ربحية السهم مصالحة عرض لا قيد محاسبي مستقل.",
+          "A future right to shares is not automatically an ordinary share outstanding today. In basic EPS, cash-issued shares enter when consideration is receivable, acquisition shares from the acquisition date, and contingently issuable shares only when all issue conditions are met. Contingently returnable shares are excluded until the recall condition lapses. Shares issuable on a mandatorily convertible contract enter basic EPS from the contract date under the specific rule. A partly paid share counts as a fraction in basic EPS to the extent it participates in dividends relative to a fully paid share; its non-participating portion is tested like an option or warrant in diluted EPS. In diluted EPS, unsatisfied contingent shares may be included in the number that would be issuable if the reporting date ended the contingency period, only when dilutive. This hypothetical test does not mean the condition was actually met or shares were issued. A bonus issue or split after the period but before authorisation restates per-share amounts for all periods presented; a later cash issue does not change a completed period's EPS, though significant transactions may need disclosure. The EPS schedule is a presentation reconciliation, not a separate journal entry.",
+        ),
+        keyPoints: [
+          text("تحقق أولًا من تاريخ استحقاق المقابل، وتاريخ تحقق الشرط، وحق المشاركة في توزيعات الأرباح؛ ثم اختر مقام الأساسية.", "First check when consideration is receivable, when conditions are met and the right to dividends; only then determine the basic denominator."),
+          text("افصل بين تحقق الشرط فعلًا في الأساسية ومحاكاة نهاية فترة الشرط في المخفضة، ولا تضم أداة مضادة للتخفيف.", "Separate actual satisfaction of conditions for basic EPS from the hypothetical period-end test for diluted EPS, excluding antidilutive instruments."),
+          text("أعد بيان الأسهم المجانية والتجزئة بأثر رجعي، وميّزها عن إصدار نقدي لاحق يُفصح عنه عند اللزوم دون تغيير المقام السابق.", "Restate bonus issues and splits retrospectively; distinguish a later cash issue, disclosed when required without changing the earlier denominator."),
+        ],
+        reference: "IAS 33.21–24, 52–57, 64, 70(d), A15–A16",
+      },
     ],
     workedExamples: [
       {
