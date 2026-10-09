@@ -15,6 +15,66 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias8-quiz-prior-error",
+    standardCode: "IAS 8",
+    title: text("تصحيح خطأ فترة سابقة", "Correcting a prior-period error"),
+    facts: text("سؤال مفاهيمي عن معالجة خطأ جوهري يخص فترة سابقة.", "A conceptual question about a material error relating to a prior period."),
+    question: text("كيف يُصحح خطأ فترة سابقة وفق IAS 8؟", "How is a prior-period error corrected under IAS 8?"),
+    solution: [
+      text("يعاد عرض مبالغ المقارنة للفترة أو الفترات التي وقع فيها الخطأ، أو يُعدل الرصيد الافتتاحي للأصول والالتزامات وحقوق الملكية في أقدم فترة مقارنة معروضة إذا سبقها الخطأ. يظهر أثر الأرباح المحتجزة الافتتاحية عندما يتعلق بها التصحيح؛ ليس التصحيح مجرد قيد مباشر فيها في جميع الحالات.", "Restate the comparative amounts for the period or periods in which the error occurred, or restate opening assets, liabilities and equity for the earliest comparative period presented if the error predates it. Adjust opening retained earnings when the correction affects them; it is not invariably only a direct retained-earnings entry."),
+      text("يطبق التصحيح بأثر رجعي ما لم يتعذر تحديد أثره على فترة بعينها أو أثره التراكمي عمليًا؛ عندئذ تُطبق قواعد التعذر المحددة في IAS 8 مع الإفصاح اللازم. لا يُدرج أثر خطأ فترة سابقة ضمن ربح السنة الحالية لمجرد اكتشافه الآن.", "The correction is retrospective unless it is impracticable to determine the period-specific or cumulative effect; the specific IAS 8 impracticability rules and disclosures then apply. Do not put a prior-period error into current-year profit merely because it was discovered now."),
+    ],
+    reference: "IAS 8.42–49",
+  },
+  {
+    id: "ifrs-book2-ias8-quiz-policy-change",
+    standardCode: "IAS 8",
+    title: text("متى تتغير السياسة المحاسبية؟", "When may an accounting policy change?"),
+    facts: text("سؤال مفاهيمي عن الحالات التي تبرر تغيير سياسة محاسبية قائمة.", "A conceptual question about when an existing accounting policy may change."),
+    question: text("ما الحالتان اللتان قد تستلزمان أو تسمحان بتغيير سياسة محاسبية؟", "Which two circumstances may require or permit a change in accounting policy?"),
+    solution: [
+      text("تتغير السياسة إذا طلب معيار IFRS ذلك، أو إذا جعلها التغيير الطوعي تقدم معلومات موثوقة وأكثر ملاءمة عن أثر المعاملات والظروف على المركز والأداء والتدفقات النقدية. لا تكفي رغبة الإدارة في تحسين ربح سنة معينة.", "A policy changes when required by an IFRS Standard, or when a voluntary change makes the financial statements provide reliable and more relevant information about transactions and conditions affecting financial position, performance and cash flows. A wish to improve one year's profit is insufficient."),
+      text("يُتبع الحكم الانتقالي المحدد في المعيار الجديد إن وجد؛ وإلا يطبق التغيير بأثر رجعي، ما لم يكن ذلك غير عملي. أما المعاملات الجديدة المختلفة جوهريًا والتغيرات في التقديرات فلا تُصنف آليًا تغييرًا في السياسة.", "Follow any specific transition provisions in a new Standard; otherwise apply the change retrospectively unless impracticable. A substantively different new transaction or a change in estimate is not automatically a policy change."),
+    ],
+    reference: "IAS 8.14–19, 22–27, 32–40",
+  },
+  {
+    id: "ifrs-book2-ifrs5-quiz-classification",
+    standardCode: "IFRS 5",
+    title: text("متى يصنف الأصل محتفظًا به للبيع؟", "When is an asset held for sale?"),
+    facts: text("سؤال عن شروط تصنيف أصل غير متداول على أنه محتفظ به للبيع.", "A question about classifying a non-current asset as held for sale."),
+    question: text("متى يجوز تصنيف أصل غير متداول على أنه محتفظ به للبيع؟", "When may a non-current asset be classified as held for sale?"),
+    solution: [
+      text("حين يُسترد مبلغه الدفتري أساسًا من عملية بيع لا من الاستخدام المستمر، ويكون متاحًا للبيع الفوري بحالته الراهنة وفق شروط البيع المعتادة، ويكون البيع مرجحًا بدرجة عالية. يتطلب ذلك التزام الإدارة المختصة بخطة البيع وبرنامجًا نشطًا لإيجاد مشترٍ وإتمام الخطة، وتسويقًا بسعر معقول قياسًا إلى القيمة العادلة، وتوقع إتمام البيع عادةً خلال سنة إلا إذا تحققت استثناءات التأخير المحددة.", "Its carrying amount must be recovered principally through sale rather than continuing use; it must be available for immediate sale in its present condition on usual terms and the sale must be highly probable. This involves appropriate management commitment, an active buyer-search/completion programme, marketing at a price reasonable relative to fair value and expected completion normally within one year, subject to specified delay exceptions."),
+      text("مجرد نية البيع أو الإعلان عنه لا يكفي ما لم تستوف الشروط مجتمعة في تاريخ التصنيف.", "A sale intention or announcement alone is insufficient unless the conditions are met together at classification date."),
+    ],
+    reference: "IFRS 5.6–9",
+  },
+  {
+    id: "ifrs-book2-ifrs5-quiz-measurement",
+    standardCode: "IFRS 5",
+    title: text("قياس الأصل المحتفظ به للبيع", "Measuring an asset held for sale"),
+    facts: text("سؤال مفاهيمي عن أصل غير متداول يقع ضمن متطلبات قياس IFRS 5 واستوفى شروط الاحتفاظ به للبيع.", "A conceptual question about a non-current asset within IFRS 5's measurement requirements that qualifies as held for sale."),
+    question: text("كيف يقاس الأصل المحتفظ به للبيع؟", "How is an asset held for sale measured?"),
+    solution: [
+      text("بالأقل من مبلغه الدفتري وقيمته العادلة ناقصًا تكاليف البيع. قبل القياس عند إعادة التصنيف، تُقاس أصول المجموعة والتزاماتها وفق معاييرها المنطبقة، ثم يُطبق قياس IFRS 5 على المجموعة عند الاقتضاء؛ ويتوقف إهلاك الأصل الذي يقع ضمن متطلبات القياس بعد التصنيف.", "At the lower of carrying amount and fair value less costs to sell. Immediately before classification, measure the assets and liabilities under their applicable Standards, then apply IFRS 5 measurement to the group where relevant; depreciation ceases for an asset within the measurement requirements after classification."),
+      text("هذه ليست قاعدة قياس شاملة لكل عنصر في مجموعة الاستبعاد: يستثني IFRS 5 بعض الأصول من متطلبات قياسه، فتستمر بالقياس وفق معيارها الخاص، وإن شملها عرض مجموعة الاستبعاد.", "This is not a blanket measurement rule for every disposal-group item: IFRS 5 excludes specified assets from its measurement requirements, and those continue under their own Standards even when included in disposal-group presentation."),
+    ],
+    reference: "IFRS 5.5, 15, 18, 25",
+  },
+  {
+    id: "ifrs-book2-ifrs5-quiz-discontinued-definition",
+    standardCode: "IFRS 5",
+    title: text("تعريف العملية المتوقفة", "Definition of a discontinued operation"),
+    facts: text("سؤال تعريفي عن عملية يمكن فصل عملياتها وتدفقاتها النقدية عن بقية المنشأة.", "A definition question about an operation whose activities and cash flows can be distinguished from the rest of the entity."),
+    question: text("متى تكون العملية «متوقفة» وفق IFRS 5؟", "When is an operation 'discontinued' under IFRS 5?"),
+    solution: [
+      text("هي مكوّن من المنشأة جرى استبعاده أو صُنّف محتفظًا به للبيع، ويمثل خط نشاط رئيسيًا مستقلًا أو منطقة جغرافية رئيسية، أو يدخل في خطة واحدة منسقة لاستبعاد أحدهما، أو يكون منشأة تابعة اشتريت حصريًا لإعادة البيع. يجب إمكان تمييز عملياته وتدفقاته النقدية تشغيليًا ولأغراض التقرير عن بقية المنشأة.", "It is a component that has been disposed of or classified as held for sale and represents a separate major line of business or geographical area, forms part of one coordinated plan to dispose of either, or is a subsidiary acquired exclusively for resale. Its operations and cash flows must be clearly distinguishable operationally and for reporting purposes."),
+      text("إعلان نية إغلاق نشاط تدريجيًا لا يحقق وحده هذا التعريف؛ العملية التي ستُهجر دون بيع لا تعرض كعملية متوقفة حتى يتوقف استخدامها فعليًا، كما لا تصنف أصولها محتفظًا بها للبيع لمجرد خطة الإغلاق.", "Announcing a gradual closure alone does not meet this definition. An operation to be abandoned rather than sold is not reported as discontinued until it ceases to be used; its assets are not held for sale merely because of the closure plan."),
+    ],
+    reference: "IFRS 5.13, 31–32, Appendix A",
+  },
+  {
     id: "ifrs-book2-ias1-quiz-current-assets",
     standardCode: "IAS 1",
     title: text("تحديد الأصول المتداولة", "Identify current assets"),
