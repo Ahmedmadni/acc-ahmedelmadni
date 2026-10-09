@@ -15,6 +15,54 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias24-fancy-feet-suppliers",
+    standardCode: "IAS 24",
+    title: text("Fancy Feet: صلة الموردين", "Fancy Feet: supplier relationships"),
+    facts: text("شركة بريطانية يملكها ويديرها السيد Kostades وأبناؤه الثلاثة؛ تشتري الأحذية من شركة فرنسية يملكها صندوق عائلة Kostades، وتستورد سلعًا من مورد يوناني لم يُذكر مالكه.", "A UK company is owned and run by Mr Kostades and his three children. It buys shoes from a French company owned by the Kostades Family Trust and goods from a Greek supplier whose owners are not identified."),
+    question: text("ما مسائل IAS 24 التي يلزم فحصها؟ هل يكفي الوصف وحده لتصنيف الموردين طرفين ذوي علاقة؟", "What IAS 24 issues need investigation? Is the description alone enough to classify either supplier as related?"),
+    solution: [
+      text("افحص من يسيطر على الشركة البريطانية والصندوق والشركة الفرنسية، بما في ذلك صلاحيات الأمناء والمستفيدين. تشابه اسم العائلة لا يثبت وحده سيطرة الأشخاص أنفسهم؛ إذا ثبتت سيطرة شخص أو فرد مقرب من أسرته على المنشأتين، فاختبر علاقة IAS 24.9 والإفصاح عن المعاملات والأرصدة والالتزامات ذات الصلة.", "Establish who controls the UK entity, trust and French company, including trustees' powers and beneficiaries. A common family name alone does not establish common control. If a person or close family member controls the relevant entities, assess the IAS 24.9 relationship and related transactions, balances and commitments."),
+      text("لا تُظهر الوقائع صلة المورد اليوناني؛ حجم التوريد أو الاعتماد عليه لا يكفي وحده. ولا توصف أي معاملة ذات علاقة بأنها بسعر مستقل إلا إذا أمكن إثبات ذلك.", "The facts do not establish that the Greek supplier is related; supply volume or economic dependence alone is insufficient. Do not assert arm's-length terms for a related-party transaction unless substantiated."),
+    ],
+    reference: "IAS 24.9–11, 18, 23",
+  },
+  {
+    id: "ifrs-book2-ias24-rp-ab-investment",
+    standardCode: "IAS 24",
+    title: text("RP وAB: التمويل والتأثير المهم", "RP and AB: finance and significant influence"),
+    facts: text("مولت RP شراء إدارة AB للشركة، واحتفظت بحصة ملكية 25% ومقعد بمجلس إدارة AB. تلقت أتعاب إدارة وفوائد وتوزيعات أرباح؛ وبقية الحصة لدى إدارة AB.", "RP financed a management buyout of AB, retained a 25% equity stake and a board seat, and received management fees, interest and dividends. AB's management owns the remainder."),
+    question: text("هل يُستبعد إفصاح IAS 24 لأن RP مقدم تمويل؟ وما أثر الحصة ومقعد المجلس؟", "Does RP's financing role remove IAS 24 disclosure? How do the holding and board seat affect the conclusion?"),
+    solution: [
+      text("مقدم التمويل العادي ليس طرفًا ذا علاقة لمجرد القرض، لكن ذلك لا يلغي علاقة تنشأ من التأثير المهم. إذا كانت 25% من حقوق التصويت، يُفترض التأثير المهم وفق IAS 28.5 ما لم يثبت بوضوح عكسه؛ ويدعمه مقعد المجلس. افحص حقوق التصويت الفعلية، فلا تتساوى بالضرورة مع نسبة الأسهم، ولا تنفي ملكية الإدارة للباقي التأثير تلقائيًا.", "A normal lender is not related merely by lending, but that does not negate a relationship arising from significant influence. If the holding represents 25% of voting power, IAS 28.5 presumes significant influence unless clearly rebutted; the board seat supports it. Verify actual voting rights, which need not equal equity percentage. Management's remaining stake does not automatically rebut the presumption."),
+      text("إذا كانت AB زميلة، أفصح عن طبيعة العلاقة والمعاملات والأرصدة والالتزامات وشروط القرض اللازمة لفهم أثرها؛ لا يعفي السعر السوقي من الإفصاح ولا يدعم وصف المعاملة بأنها مستقلة دون دليل. لا تضع قيدًا رقميًا لمبالغ لم تُعط.", "If AB is an associate, disclose the relationship and transaction, balance, commitment and loan-term information needed to understand its effect. Market pricing does not waive disclosure or justify an unsubstantiated arm's-length claim. No transaction amounts are given for journal entries."),
+    ],
+    reference: "IAS 24.9, 11, 18–19, 23; IAS 28.5–6",
+  },
+  {
+    id: "ifrs-book2-ias24-rp-xino-disposal",
+    standardCode: "IAS 24",
+    title: text("RP وXino: تغير العلاقة خلال السنة", "RP and Xino: relationship changes during the year"),
+    facts: text("باعت RP تابعتها Xino إلى Zukk في 1 يوليو 20X9، وسنتها تنتهي في 31 أكتوبر. باعت RP معدات مستعملة إلى Xino وأجّرت لها مصنعًا خلال السنة بأسعار وُصفت بالسوقية؛ تواريخ المعاملات وروابط الطرفين بعد البيع غير محددة.", "RP sold subsidiary Xino to Zukk on 1 July 20X9; its year ends on 31 October. RP sold equipment to Xino and leased it a factory at stated market rates. Transaction dates and post-sale links are unspecified."),
+    question: text("كيف يختلف حكم إفصاح IAS 24 قبل البيع وبعده في قوائم RP المجمعة؟", "How does IAS 24 disclosure in RP's consolidated statements differ before and after disposal?"),
+    solution: [
+      text("قبل فقد السيطرة تُحذف معاملات وأرصدة RP مع تابعتها في القوائم المجمعة، وفق IAS 24.4 وIFRS 10؛ أما قوائم RP المنفصلة فلا تُحذف فيها بالطريقة ذاتها.", "Before loss of control, RP–subsidiary transactions and balances are eliminated from consolidated statements under IAS 24.4 and IFRS 10. They are not eliminated in the same way in RP's separate statements."),
+      text("بعد 1 يوليو لا يجعل البيعُ السابق أو الإيجارُ المستمر Xino طرفًا ذا علاقة تلقائيًا. افحص أي سيطرة أو نفوذ أو روابط أشخاص باقية، وحدد تاريخ كل معاملة. طبّق إفصاح IAS 24 فقط حيث توجد علاقة فعلية خلال الفترة المعنية، مع الأرصدة والالتزامات ذات الصلة؛ لا تفترض وجوب الإفصاح عن كل معاملات يوليو–أكتوبر لمجرد أنها كانت تابعة. السعر السوقي لا يلغي الإفصاح إذا ثبتت العلاقة.", "After 1 July, former-subsidiary status and a continuing lease do not automatically make Xino related. Assess retained control, influence or personal links and each transaction date. Apply IAS 24 where a relationship actually exists during the relevant period, including relevant balances and commitments; do not assume every July–October transaction is related merely because Xino was formerly a subsidiary. Market rates do not waive disclosure if a relationship remains."),
+    ],
+    reference: "IAS 24.4, 9, 18, 23; IFRS 10.B86",
+  },
+  {
+    id: "ifrs-book2-ias24-rp-retirement-plan",
+    standardCode: "IAS 24",
+    title: text("RP: خطة التقاعد ومدير الاستثمار", "RP: retirement plan and investment manager"),
+    facts: text("تدير جهة أخرى خطة تقاعد موظفي RP. مساهمة المجموعة السنوية 16 مليون دولار؛ نقلت أصولًا ثابتة للخطة بقيمة 10 ملايين وحمّلتها تكاليف إدارية 3 ملايين في 20X9. مدير استثمار الخطة عضو غير تنفيذي بمجلس RP ويتلقى 25,000 دولار سنويًا.", "Another institution manages RP's employee retirement plan. RP contributes $16m annually, transferred $10m of PPE to the plan and recharged $3m of administration costs in 20X9. The plan's investment manager is a non-executive RP director receiving $25,000 annually."),
+    question: text("ما الأطراف ذات العلاقة هنا وما الإفصاحات اللازمة؟ ميّز الخطة عن الشخص الذي يدير استثماراتها.", "Which parties are related and what disclosures are required? Distinguish the plan from its investment manager."),
+    solution: [
+      text("خطة منافع ما بعد الخدمة للموظفين طرف ذو علاقة وفق IAS 24.9. افحص مساهمات 16 مليون ونقل الأصول 10 ملايين وتحميل التكاليف 3 ملايين، وأفصح عن أنواع المعاملات ومبالغها وأرصدة نهاية الفترة وشروطها اللازمة لفهم الأثر. لا تعرف المعطيات القيمة الدفترية للأصول أو ربح النقل، فلا تختلق قيدًا عدديًا.", "An employee post-employment benefit plan is related under IAS 24.9. Assess the $16m contributions, $10m asset transfer and $3m recharge, disclosing transaction types, amounts, year-end balances and terms needed to understand their effect. Carrying amounts and any transfer gain are unknown, so no numerical journal entry can be derived."),
+      text("البنك المدير لا يصبح طرفًا ذا علاقة لمجرد تقديم الخدمة. عضو مجلس RP غير التنفيذي من الإدارة العليا الرئيسيين؛ حدد من يدفع مبلغ 25,000 وطبيعة الخدمة، وأدرج تعويضه المناسب ضمن إجمالي وفئات تعويض الإدارة العليا في IAS 24.17. لا يفرض المعيار نشر مبلغ كل مدير منفردًا لمجرد صفته.", "The managing bank is not related merely by providing services. RP's non-executive director is key management personnel; establish who pays the $25,000 and for which service, and include relevant compensation in IAS 24.17 totals and categories. The standard does not require individual publication of every director's fee merely because of the role."),
+    ],
+    reference: "IAS 24.9, 11, 17–19, 24",
+  },
+  {
     id: "ifrs-book2-ias24-quiz-related-transaction",
     standardCode: "IAS 24",
     title: text("معاملة الطرف ذي العلاقة", "A related party transaction"),
