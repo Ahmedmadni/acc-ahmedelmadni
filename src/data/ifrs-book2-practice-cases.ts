@@ -15,6 +15,42 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias33-justina-weighted-shares",
+    standardCode: "IAS 33",
+    title: text("Justina: ترجيح الأسهم الصادرة نقدًا", "Justina: time-weight a cash share issue"),
+    facts: text("بدأت Justina سنة 20X7 ولديها 170,000 سهم عادي. في 31 مايو أصدرت 80,000 سهم جديد مقابل نقد، فأصبح رصيد نهاية السنة 250,000 سهم.", "Justina began 20X7 with 170,000 ordinary shares. On 31 May it issued 80,000 new shares for cash, leaving 250,000 shares at year-end."),
+    question: text("احسب المتوسط المرجح للأسهم العادية القائمة في 20X7.", "Calculate weighted-average ordinary shares outstanding in 20X7."),
+    solution: [
+      text("باستخدام التقريب الشهري في المسألة، تُوزن الأسهم الأصلية طوال 12 شهرًا والجديدة سبعة أشهر من يونيو إلى ديسمبر: 170,000 × 12/12 + 80,000 × 7/12 = 216,666.67، أي نحو 216,667 سهمًا. ويمكن التحقق أيضًا: 170,000 × 5/12 + 250,000 × 7/12 = النتيجة نفسها.", "Using the question's monthly approximation, weight the original shares for 12 months and the new shares for seven months, June–December: 170,000 × 12/12 + 80,000 × 7/12 = 216,666.67, or approximately 216,667 shares. Equivalently, 170,000 × 5/12 + 250,000 × 7/12 gives the same result."),
+      text("في التطبيق العملي يبدأ احتساب أسهم الإصدار النقدي عندما يصبح المقابل مستحق التحصيل؛ ويمكن استخدام الأيام الفعلية إذا كان فرق يوم الإصدار جوهريًا. رصيد 250,000 في نهاية السنة ليس مقام السنة كلها.", "In practice cash-issued shares enter the average when consideration becomes receivable; actual days can be used if the issue-day difference matters. The 250,000 year-end balance is not the denominator for the entire year."),
+    ],
+    reference: "IAS 33.19–21",
+  },
+  {
+    id: "ifrs-book2-ias33-flame-basic-eps",
+    standardCode: "IAS 33",
+    title: text("Flame: الأسهم الممتازة وربحية السهم", "Flame: preference shares and basic EPS"),
+    facts: text("لدى Flame عدد 100,000 سهم عادي و20,000 سهم ممتاز قابل للاسترداد بقيمة اسمية دولار واحد وفائدة/توزيع 10%. مجمل الربح 200,000 دولار، ومصاريف النشاط 50,000، وضريبة السنة المقدرة 40,000. سددت المنشأة عائد الأسهم الممتازة وتوزيعًا للأسهم العادية قدره 42 سنتًا للسهم.", "Flame has 100,000 $1 ordinary shares and 20,000 $1 10% redeemable preference shares. Gross profit is $200,000, trading expenses are $50,000 and estimated tax is $40,000. It paid the preference return and a 42-cent ordinary dividend per share."),
+    question: text("احسب ربحية السهم الأساسية للسنة، مع بيان أثر تصنيف الأسهم الممتازة.", "Calculate basic EPS for the year, explaining the effect of preference-share classification."),
+    solution: [
+      text("عائد الأسهم الممتازة = 20,000 × 10% × 1 = 2,000 دولار. حل المسألة المطبوع يفترض إدراج كامل العائد ضمن المصروفات: (200,000 − 50,000 − 2,000 − 40,000) ÷ 100,000 = 1.08 دولار = 108 سنتات للسهم. في هذا الفرض لا يُخصم مبلغ 2,000 مرة ثانية من بسط الربحية.", "Preference return = 20,000 × 10% × $1 = $2,000. The question's worked treatment assumes the full return is recognised as an expense: ($200,000 − $50,000 − $2,000 − $40,000) ÷ 100,000 = $1.08 = 108 cents per share. On that assumption, do not deduct the $2,000 again from the EPS numerator."),
+      text("لو كان العائد توزيعًا على عنصر حقوق ملكية، لكان الربح قبل توزيعه 110,000 دولار، ثم يُخصم العائد الملائم من بسط ربحية السهم وفق IAS 33، فتظل النتيجة الحسابية هنا 108 سنتات إذا لم يتغير أثر الضريبة. كلمة «قابلة للاسترداد» وحدها لا تحدد هل الأداة التزام أم حقوق ملكية أم أداة مركبة؛ يلزم فحص شروط الاسترداد وقرار التوزيع وفق IAS 32. توزيع الأسهم العادية 42 سنتًا لا يُخصم من البسط.", "If the return is a distribution on an equity component, profit before that distribution would be $110,000, then the applicable preference return is deducted from the IAS 33 numerator, again giving 108 cents here if the tax effect is unchanged. The word 'redeemable' alone does not determine whether the instrument is a liability, equity or compound; inspect redemption and dividend terms under IAS 32. The 42-cent ordinary dividend is not deducted."),
+    ],
+    reference: "IAS 33.10–15; IAS 32.16–18",
+  },
+  {
+    id: "ifrs-book2-ias33-boffin-cash-issue-comparison",
+    standardCode: "IAS 33",
+    title: text("Boffin: مقارنة ربحية السهم بعد إصدار نقدي", "Boffin: compare EPS after a cash issue"),
+    facts: text("في 30 سبتمبر 20X2 أصدرت Boffin مليون سهم عادي بالقيمة السوقية. كان عدد الأسهم بنهاية 20X1 ثمانية ملايين وبنهاية 20X2 تسعة ملايين. الربح بعد الضريبة وتوزيعات الأسهم الممتازة 3,280,000 دولار في 20X1 و3,300,000 دولار في 20X2. السنة المالية من يناير إلى ديسمبر.", "On 30 September 20X2 Boffin issued 1,000,000 ordinary shares at full market price. Shares at the end of 20X1 were 8,000,000 and at the end of 20X2 were 9,000,000. Profit after tax and preference dividends was $3,280,000 in 20X1 and $3,300,000 in 20X2. The financial year runs January–December."),
+    question: text("احسب ربحية السهم للسنتين 20X1 و20X2 وقارن الاتجاه.", "Calculate EPS for 20X1 and 20X2 and compare the trend."),
+    solution: [
+      text("بافتراض ثبات الأسهم الثمانية ملايين طوال 20X1 وقبل الإصدار في 20X2، مقام 20X2 = 8,000,000 × 9/12 + 9,000,000 × 3/12 = 8,250,000 سهم. إذن ربحية 20X2 = 3,300,000 ÷ 8,250,000 = 0.40 دولار = 40 سنتًا.", "Assuming the 8,000,000 shares were outstanding throughout 20X1 and before the 20X2 issue, the 20X2 denominator = 8,000,000 × 9/12 + 9,000,000 × 3/12 = 8,250,000. Thus 20X2 EPS = $3,300,000 ÷ 8,250,000 = $0.40 = 40 cents."),
+      text("مقام 20X1 = 8,000,000؛ ربحيتها = 3,280,000 ÷ 8,000,000 = 0.41 دولار = 41 سنتًا. زاد الربح الإجمالي 20,000 دولار، لكن ربحية السهم انخفضت سنتًا واحدًا لأن الإصدار زاد المتوسط المرجح للأسهم؛ لا يُعاد بيان مقارنة 20X1 لإصدار نقدي بمقابل سوقي.", "The 20X1 denominator is 8,000,000; EPS = $3,280,000 ÷ 8,000,000 = $0.41 = 41 cents. Total earnings rose by $20,000, yet EPS fell by one cent because the issue increased weighted-average shares. A full-market cash issue does not restate 20X1 comparative EPS."),
+    ],
+    reference: "IAS 33.19–21, 26, 64",
+  },
+  {
     id: "ifrs-book2-ias33-farrah-convertible",
     standardCode: "IAS 33",
     title: text("Farrah: أثر القرض القابل للتحويل", "Farrah: convertible loan and diluted EPS"),
