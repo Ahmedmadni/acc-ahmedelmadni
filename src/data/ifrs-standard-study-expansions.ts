@@ -2966,12 +2966,12 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
             "B is related because a close family member of A's key management controls it.",
           ),
           text(
-            "الفائدة التعاقدية لنصف سنة = 1,000,000 × 3% × 6÷12 = 15,000.",
-            "Contractual interest for six months = 1,000,000 × 3% × 6÷12 = 15,000.",
+            "الفائدة الاسمية التعاقدية المستحقة لنصف سنة = 1,000,000 × 3% × 6÷12 = 15,000. هذا مبلغ مطالبة تعاقدية، وليس بالضرورة إيراد الفائدة بطريقة الفائدة الفعلية إذا قيس القرض أولًا بالقيمة العادلة الأقل من المبلغ المدفوع.",
+            "The contractual coupon accruing for six months = 1,000,000 × 3% × 6÷12 = 15,000. This is a contractual receivable, not necessarily effective-interest revenue if the loan is initially measured at fair value below the cash advanced.",
           ),
           text(
-            "مؤشر منفعة التسعير مقارنة بالسوق = 1,000,000 × (8% − 3%) × 6÷12 = 25,000، لكنه لا يغني عن تطبيق القياس الفعلي في IFRS 9.",
-            "An indicator of the pricing benefit versus market = 1,000,000 × (8% − 3%) × 6÷12 = 25,000, but it does not replace the required IFRS 9 measurement.",
+            "مؤشر فرق الفائدة السنوية لنصف سنة = 1,000,000 × (8% − 3%) × 6÷12 = 25,000؛ ليس هذا القيمة العادلة لعنصر المنفعة ولا قيدًا محاسبيًا. يحتاج قياس القرض الأولي وإيراد الفائدة الفعلية إلى مدة السداد والتدفقات المتوقعة وشروط القرض، وهي غير معطاة.",
+            "A six-month indicator of the rate gap = 1,000,000 × (8% − 3%) × 6÷12 = 25,000; it is neither the below-market benefit's fair value nor a journal amount. Initial measurement and effective-interest revenue need repayment dates, expected cash flows and terms that have not been provided.",
           ),
           text(
             "إفصاح IAS 24 يذكر طبيعة العلاقة، مبلغ القرض، المعاملة وشروطها وسعر الفائدة والرصيد والفائدة المستحقة وأي ضمان أو مخصص خسارة ائتمانية.",
@@ -2979,21 +2979,11 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
           ),
         ],
         conclusion: text(
-          "لا يجوز وصف القرض بأنه بشروط السوق لأن فرق الفائدة يناقض ذلك. القياس والإيراد والخسارة الائتمانية تتبع IFRS 9، بينما يضمن IAS 24 شفافية العلاقة والشروط والأرصدة.",
-          "The loan cannot be described as arm's length because the rate difference contradicts that claim. Measurement, income and credit loss follow IFRS 9; IAS 24 ensures transparency about the relationship, terms and balances.",
+          "لا يجوز وصف القرض بأنه بشروط السوق لأن فرق الفائدة يناقض ذلك. IAS 24 معيار إفصاح، أما قياس القرض أولًا وإيراد الفائدة بطريقة الفائدة الفعلية والخسارة الائتمانية فتتبع IFRS 9. لا تكفي بيانات المثال لاشتقاق قيد إيراد فائدة صحيح أو قياس منفعة القرض.",
+          "The loan cannot be described as arm's length because the rate difference contradicts that claim. IAS 24 governs disclosure; IFRS 9 governs initial loan measurement, effective-interest revenue and credit loss. The facts are insufficient to derive a correct interest-income journal entry or measure the loan benefit.",
         ),
-        journalEntries: [
-          {
-            label: text(
-              "إثبات الفائدة التعاقدية لنصف السنة",
-              "Record six months' contractual interest",
-            ),
-            debit: text("فائدة مستحقة القبض", "Interest receivable"),
-            credit: text("إيراد فائدة", "Interest income"),
-            amount: text("15,000", "15,000"),
-          },
-        ],
-        reference: "IAS 24.9, 18–23; IFRS 9",
+        journalEntries: [],
+        reference: "IAS 24.9, 18–23; IFRS 9.5.1.1, 5.4.1",
       },
     ],
   },
