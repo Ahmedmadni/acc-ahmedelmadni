@@ -15,6 +15,31 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias36-two-cgus-partial-goodwill",
+    standardCode: "IAS 36",
+    title: text("انخفاض قيمة وحدتين مع شهرة جزئية", "Impairment of two units with partial goodwill"),
+    facts: text("اشترت Acetone نسبة 80% من Dushanbe مقابل 600,000، وكانت صافي أصولها القابلة للتحديد بالقيمة العادلة 400,000. في تاريخ الاختبار بقيت صافي الأصول 400,000، والمبلغ القابل للاسترداد للوحدة 520,000. واشترت 85% من Maclullich مقابل 800,000 حين بلغت صافي أصولها 700,000؛ وفي تاريخ الاختبار بقيت صافي الأصول 700,000، والمبلغ القابل للاسترداد 660,000. تُقاس الحصص غير المسيطرة بنصيبها النسبي في صافي الأصول، ولا توجد خسائر شهرة سابقة.", "Acetone bought 80% of Dushanbe for 600,000 when its identifiable net assets had a fair value of 400,000. At testing, those net assets remain 400,000 and the unit's recoverable amount is 520,000. It also bought 85% of Maclullich for 800,000 when its net assets were 700,000. At testing, net assets remain 700,000 and recoverable amount is 660,000. NCI is measured as a proportionate share of net assets, and no earlier goodwill impairment is stated."),
+    question: text("احسب لـDushanbe القيمة الدفترية المعدلة لأغراض اختبار الانخفاض والشهرة المتبقية، ثم احسب حصة غير المسيطرين في Maclullich بعد توزيع خسارة الانخفاض.", "For Dushanbe, calculate the adjusted carrying amount for the impairment test and the remaining recognised goodwill. Then calculate Maclullich's closing NCI after allocating the impairment loss."),
+    solution: [
+      text("Dushanbe: الشهرة المثبتة = 600,000 − 80% × 400,000 = 280,000. للاختبار فقط، تُزاد افتراضيًا إلى 280,000 ÷ 80% = 350,000 لتشمل شهرة الأقلية غير المثبتة. القيمة المقارنة = 400,000 + 350,000 = 750,000، وخسارة الوحدة الافتراضية = 750,000 − 520,000 = 230,000.", "Dushanbe: recognised goodwill is 600,000 − 80% × 400,000 = 280,000. Solely for testing, gross it up to 280,000 ÷ 80% = 350,000 to include unrecognised NCI goodwill. The comparable unit carrying amount is 400,000 + 350,000 = 750,000; notional unit impairment is 750,000 − 520,000 = 230,000."),
+      text("تُخصص الخسارة أولًا للشهرة، ولكن لا يثبت من شطب الشهرة الافتراضية إلا نصيب الأم: 80% × 230,000 = 184,000. الشهرة المثبتة المتبقية = 280,000 − 184,000 = 96,000؛ ولا يُقيد نصيب شهرة الأقلية غير المثبتة، وهو 46,000، كخسارة مستقلة.", "Allocate the loss first to goodwill, but only the parent's 80% of notional goodwill impairment is recognised: 80% × 230,000 = 184,000. Remaining recognised goodwill is 280,000 − 184,000 = 96,000. The 46,000 attributable to unrecognised NCI goodwill is not separately booked."),
+      text("Maclullich: الشهرة المثبتة = 800,000 − 85% × 700,000 = 205,000؛ والشهرة الافتراضية للاختبار = 205,000 ÷ 85% ≈ 241,176.47. لذا الخسارة الافتراضية ≈ (700,000 + 241,176.47) − 660,000 = 281,176.47. تُستهلك الشهرة الافتراضية أولًا بالكامل، ومنها الشهرة المثبتة 205,000، ثم يُخفض صافي الأصول 40,000. وبافتراض عدم وجود حدود خاصة للأصول الفردية تمنع هذا التخصيص، تصبح حصة غير المسيطرين = 15% × (700,000 − 40,000) = 99,000. الجزء الافتراضي من شهرة الأقلية لا يدخل رصيدها.", "Maclullich: recognised goodwill is 800,000 − 85% × 700,000 = 205,000; notional grossed-up goodwill is 205,000 ÷ 85% ≈ 241,176.47. Notional impairment is (700,000 + 241,176.47) − 660,000 ≈ 281,176.47. All notional goodwill is absorbed first, including 205,000 recognised goodwill; the remaining 40,000 reduces identifiable net assets. Assuming no individual-asset floor restricts that allocation, closing NCI is 15% × (700,000 − 40,000) = 99,000. Unrecognised NCI goodwill does not enter the NCI balance."),
+    ],
+    reference: "IAS 36.104–105, C3–C8; IFRS 3.19, 32",
+  },
+  {
+    id: "ifrs-book2-ias36-dushanbe-full-goodwill",
+    standardCode: "IAS 36",
+    title: text("مقارنة الشهرة الكاملة في Dushanbe", "Dushanbe full-goodwill comparison"),
+    facts: text("في اقتناء Acetone لنسبة 80% من Dushanbe مقابل 600,000، كانت القيمة العادلة لصافي الأصول القابلة للتحديد 400,000. في هذه الحالة تُقاس حصة غير المسيطرين بالقيمة العادلة 100,000 عند الاقتناء، لا بالنصيب النسبي. بقي صافي الأصول 400,000 في تاريخ الاختبار، والمبلغ القابل للاسترداد للوحدة 520,000، ولم تُثبت خسارة سابقة.", "Acetone acquired 80% of Dushanbe for 600,000; acquisition-date fair value of identifiable net assets was 400,000. In this variation, NCI is measured at acquisition-date fair value of 100,000, not proportionately. Net assets remain 400,000 at testing and the unit's recoverable amount is 520,000; no earlier impairment is stated."),
+    question: text("احسب القيمة الدفترية المقارنة للوحدة والشهرة المتبقية بعد انخفاض القيمة عند استخدام الشهرة الكاملة.", "Compute the comparable unit carrying amount and remaining goodwill after impairment under full goodwill."),
+    solution: [
+      text("الشهرة الكاملة المثبتة عند الاقتناء = المقابل 600,000 + القيمة العادلة لحصة غير المسيطرين 100,000 − صافي الأصول 400,000 = 300,000. القيمة الدفترية للوحدة = 400,000 + 300,000 = 700,000؛ والخسارة = 700,000 − 520,000 = 180,000، وكلها تخفض الشهرة أولًا. المتبقي من الشهرة = 120,000.", "Full recognised goodwill at acquisition is consideration 600,000 + fair-value NCI 100,000 − identifiable net assets 400,000 = 300,000. Unit carrying amount is 400,000 + 300,000 = 700,000; impairment is 700,000 − 520,000 = 180,000, wholly allocated to goodwill first. Remaining goodwill is 120,000."),
+      text("لأن حصة الأقلية قِيست بالقيمة العادلة ودخل نصيبها من الشهرة في القوائم، تُحمّل خسارة 180,000 على نتيجة المجموعة، ويُنسب منها 144,000 لملاك الأم و36,000 لغير المسيطرين بنسبة 80%/20% وفق فرضية الوحدة المستقلة هنا. لا تُستخدم زيادة افتراضية للشهرة في اختبار هذه الحالة.", "Because fair-value NCI includes recognised goodwill, the full 180,000 loss enters group profit or loss; 144,000 is attributed to parent owners and 36,000 to NCI at 80%/20% for this stand-alone unit. No notional goodwill gross-up is needed in this variation."),
+    ],
+    reference: "IAS 36.104, C3–C6; IFRS 3.19, 32",
+  },
+  {
     id: "ifrs-book2-ifrs10-quiz-subsidiary-definition",
     standardCode: "IFRS 10",
     title: text("تعريف الشركة التابعة", "Definition of a subsidiary"),
