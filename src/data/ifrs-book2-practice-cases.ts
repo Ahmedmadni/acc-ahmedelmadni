@@ -15,6 +15,43 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-horse-hoof-full-disposal",
+    standardCode: "IFRS 10",
+    title: text("Horse وHoof: بيع الحصة المسيطرة بالكامل", "Horse and Hoof: disposal of the entire controlling interest"),
+    facts: text(
+      "اشترت مجموعة Horse في 1 أكتوبر 20X5 نسبة 80% من Hoof مقابل 648 ألفًا. كان رصيد أرباح Hoof المحتجزة يوم الاقتناء 360 ألفًا ورأس مالها 360 ألفًا، ولا تذكر الحالة فروق قيمة عادلة للأصول والالتزامات. اختير قياس حصة غير المسيطرين بنسبة حصتهم في صافي الأصول، ولم تنخفض قيمة الشهرة. لدى Horse شركات تابعة أخرى مملوكة بالكامل. في 30 سبتمبر 20X8، قبل إثبات البيع، كانت أرقام مجموعة Horse باستبعاد Hoof، بالآلاف: أصول غير متداولة 720، استثمار في Hoof بقيمة 648، أصول متداولة 740، رأس مال 1,080، أرباح محتجزة 828، والتزامات متداولة 200. أرقام Hoof في اليوم نفسه: أصول غير متداولة 540، أصول متداولة 740، رأس مال 360، أرباح محتجزة 720، والتزامات متداولة 200. في السنة المنتهية بذلك اليوم بلغ ربح Horse قبل الضريبة 306 والضريبة 90، وربح Hoof قبل الضريبة 252 والضريبة 72. باعت Horse جميع حصتها في Hoof في 30 سبتمبر 20X8 مقابل نقد 1,300 ألف ولم تثبت البيع بعد. الأرباح منتظمة خلال السنة، ولم تُدفع توزيعات. يُفترض في الحساب الرقمي أن المقابل والقوائم بعملة قياس واحدة؛ إن اختلفت العملة فعليًا يلزم سعر الصرف قبل اعتماد المبالغ. لا تُضاف ضريبة على التصرف لعدم توافر بياناتها.",
+      "On 1 October 20X5 the Horse group acquired 80% of Hoof for 648 thousand. Hoof's acquisition-date retained earnings and share capital were 360 thousand each; no fair-value adjustments are supplied. The group elected proportionate-share NCI and goodwill has not been impaired. Horse has other wholly owned subsidiaries. At 30 September 20X8, before recording the disposal, Horse group figures excluding Hoof, in thousands, were: non-current assets 720, investment in Hoof 648, current assets 740, share capital 1,080, retained earnings 828 and current liabilities 200. Hoof's figures were: non-current assets 540, current assets 740, share capital 360, retained earnings 720 and current liabilities 200. For the year then ended, Horse's profit before tax was 306 and tax 90; Hoof's profit before tax was 252 and tax 72. Horse sold its entire Hoof interest for cash consideration of 1,300 thousand on 30 September 20X8, but had not recorded the sale. Profit accrues evenly and no dividends were paid. The numerical answer assumes consideration and statements share one measurement currency; if they do not, the exchange rate is required before amounts can be finalised. No incremental disposal tax is calculated because the necessary data are absent.",
+    ),
+    question: text(
+      "أعد قائمة المركز المالي الموحدة لمجموعة Horse في 30 سبتمبر 20X8 وقائمة الربح أو الخسارة الموحدة للسنة المنتهية في ذلك اليوم.",
+      "Prepare the Horse group consolidated statement of financial position at 30 September 20X8 and consolidated statement of profit or loss for the year then ended.",
+    ),
+    solution: [
+      text(
+        "يوم الاقتناء صافي أصول Hoof = 360 + 360 = 720 ألفًا. حصة غير المسيطرين = 20% × 720 = 144؛ والشهرة = 648 + 144 − 720 = 72. هذا القياس يفترض عدم وجود تعديلات قيمة عادلة أو مقابل إضافي غير مذكور.",
+        "At acquisition Hoof's net assets were 360 + 360 = 720 thousand. NCI = 20% × 720 = 144; goodwill = 648 + 144 − 720 = 72. This calculation assumes no unmentioned fair-value adjustments or additional consideration.",
+      ),
+      text(
+        "في تاريخ فقد السيطرة يبلغ صافي أصول Hoof الدفتري 360 + 720 = 1,080؛ وحصة غير المسيطرين 20% × 1,080 = 216. يُستبعد كامل أصول Hoof والتزاماتها والشهرة وحصة غير المسيطرين، ويُثبت المقابل النقدي. ربح التصرف الموحد = 1,300 − (1,080 + 72 − 216) = 364 ألفًا. لا يُستخدم ربح بيع الاستثمار في قوائم Horse المنفصلة، 1,300 − 648 = 652، بوصفه ربح المجموعة.",
+        "At loss of control Hoof's carrying net assets are 360 + 720 = 1,080 and NCI is 20% × 1,080 = 216. Derecognise all Hoof assets, liabilities, goodwill and NCI, and recognise the cash proceeds. The consolidated disposal gain is 1,300 − (1,080 + 72 − 216) = 364 thousand. The 1,300 − 648 = 652 gain on sale of the investment in Horse's separate figures is not the group gain.",
+      ),
+      text(
+        "ظلّت Hoof تابعة حتى نهاية يوم السنة المالية، فتُضم نتائجها عن السنة كلها ثم يُعرض ربح فقد السيطرة. بالآلاف: الربح قبل الضريبة من النشاط = 306 + 252 = 558؛ ربح التصرف = 364؛ المجموع قبل الضريبة = 922؛ الضريبة المثبتة في المعطيات = 90 + 72 = 162؛ ربح السنة = 760. ينسب إلى غير المسيطرين 20% × ربح Hoof بعد الضريبة 180 = 36، وإلى ملاك الأم 724. لا تُنسب حصة من ربح التصرف لغير المسيطرين لأنه ربح فقد السيطرة المنسوب إلى الأم.",
+        "Hoof remained a subsidiary until the financial year-end disposal date, so include its full-year results and then recognise the loss-of-control gain. In thousands: operating profit before tax = 306 + 252 = 558; disposal gain = 364; total profit before tax = 922; tax in the supplied figures = 90 + 72 = 162; period profit = 760. Attribute 20% × Hoof's 180 after-tax profit = 36 to NCI and 724 to parent owners. The loss-of-control gain itself is attributable to the parent.",
+      ),
+      text(
+        "في مركز المجموعة بعد البيع لا يبقى استثمار Hoof ولا أصولها والتزاماتها أو حصتها غير المسيطرة: أصول غير متداولة 720؛ أصول متداولة 740 + نقد البيع 1,300 = 2,040؛ مجموع الأصول 2,760. رأس المال 1,080؛ والأرباح المحتجزة = 828 + ربح التصرف الموحد 364 + حصة الأم 80% × (أرباح Hoof المحتجزة 720 − 360 يوم الاقتناء) = 1,480؛ الالتزامات المتداولة 200. المجموع 1,080 + 1,480 + 200 = 2,760.",
+        "After disposal the group has no Hoof investment, assets, liabilities or NCI: non-current assets 720; current assets 740 + sale cash 1,300 = 2,040; total assets 2,760. Share capital is 1,080; retained earnings = 828 + consolidated disposal gain 364 + parent's 80% × (Hoof retained earnings 720 − 360 at acquisition) = 1,480; current liabilities 200. The total is 1,080 + 1,480 + 200 = 2,760.",
+      ),
+      text(
+        "للتثبت من القيد الموحد عند فقد السيطرة، يُحمَّل النقد 1,300 والالتزامات المستبعدة 200 وحصة غير المسيطرين المستبعدة 216، وتُدائن أصول Hoof المستبعدة 1,280 والشهرة 72 وربح التصرف 364؛ الطرفان 1,716. هذا قيد توضيحي لورقة التوحيد، ولا يحل محل قيد البيع في الدفاتر المنفصلة. إن كان ثمن البيع بعملة أخرى فلا يكفي هذا المثال لتحديد ربح نهائي من دون سعر صرف؛ كما تُفحص أي مكونات دخل شامل آخر سابقة قابلة لإعادة التصنيف إن وُجدت.",
+        "As a consolidation worksheet check on loss of control, debit cash 1,300, derecognised liabilities 200 and derecognised NCI 216; credit Hoof assets derecognised 1,280, goodwill 72 and disposal gain 364; both sides equal 1,716. This illustrative group worksheet entry does not replace the sale entry in separate books. If the consideration is denominated in another currency, a final gain requires an exchange rate; also assess any pre-existing OCI components requiring reclassification, if present.",
+      ),
+    ],
+    reference: "IFRS 10.25, B97–B99; IFRS 3.18–19",
+  },
+
+  {
     id: "ifrs-book2-ifrs10-crystal-pebble-oci",
     standardCode: "IFRS 10",
     title: text("Crystal وPebble: ربح المجموعة والدخل الشامل الآخر", "Crystal and Pebble: group profit and other comprehensive income"),
