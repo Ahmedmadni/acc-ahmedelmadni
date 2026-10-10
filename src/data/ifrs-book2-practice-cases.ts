@@ -15,6 +15,64 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs11-ch24-quiz-1-joint-venture-definition",
+    standardCode: "IFRS 11",
+    title: text("تعريف المشروع المشترك", "Definition of a joint venture"),
+    facts: text("أكمل تعريف المشروع المشترك في IFRS 11.", "Complete the IFRS 11 definition of a joint venture."),
+    question: text("المشروع المشترك ترتيب مشترك يكون للأطراف التي تتمتع بـ____ على الترتيب حقوق في ____ الترتيب. ما الكلمتان الناقصتان؟", "A joint venture is a joint arrangement whereby the parties that have ____ of the arrangement have rights to the ____ of the arrangement. Fill in the blanks."),
+    solution: [
+      text("الكلمتان هما «سيطرة مشتركة» و«صافي أصول». ليست ملكية نسبة من الأصول الفردية أو تحمل نسبة من الالتزامات هي السمة الحاسمة للمشروع المشترك.", "The missing terms are “joint control” and “net assets”. Direct rights to individual assets and obligations for liabilities instead characterise a joint operation."),
+    ],
+    reference: "IFRS 11.4, 16, Appendix A",
+  },
+  {
+    id: "ifrs-book2-ifrs11-ch24-quiz-2-joint-operation-accounting",
+    standardCode: "IFRS 11",
+    title: text("حصة المشغّل المشترك في العملية المشتركة", "Joint operator's interest in a joint operation"),
+    facts: text("لدى المنشأة حصة في ترتيب صُنّف عملية مشتركة، وهي أحد المشغّلين المشتركين.", "An entity is a joint operator in an arrangement classified as a joint operation."),
+    question: text("كيف يُحاسب المشغّل عن حصته في العملية المشتركة؟", "How should a joint operator account for its interest in a joint operation?"),
+    solution: [
+      text("يعترف المشغّل بأصوله، بما فيها حصته في الأصول المحتفظ بها بصورة مشتركة؛ وبالتزاماته، بما فيها حصته في الالتزامات المتكبدة بصورة مشتركة.", "The joint operator recognises its assets, including its share of assets held jointly, and its liabilities, including its share of liabilities incurred jointly."),
+      text("ويعترف بإيراد بيع حصته من مخرجات العملية، وحصته في إيراد بيع المخرجات بواسطة العملية المشتركة، ومصروفاته بما فيها حصته في المصروفات المتكبدة بصورة مشتركة. تُحدد الحصص وفق الحقوق والالتزامات التعاقدية، لا بنسبة الملكية آليًا.", "It also recognises revenue from selling its share of output, its share of revenue from output sold by the joint operation, and its expenses including its share of jointly incurred expenses. The allocation follows contractual rights and obligations, not an automatic ownership percentage."),
+    ],
+    reference: "IFRS 11.20–22",
+  },
+  {
+    id: "ifrs-book2-ifrs11-ch24-quiz-3-joint-venture-equity-method",
+    standardCode: "IFRS 11",
+    title: text("المحاسبة عن حصة المشروع المشترك", "Accounting for an interest in a joint venture"),
+    facts: text("المنشأة طرف يتمتع بسيطرة مشتركة، وتصنيف الترتيب مشروع مشترك.", "An entity has joint control and the arrangement is classified as a joint venture."),
+    question: text("كيف تُحاسب المنشأة عن حصتها في المشروع المشترك؟", "How should the entity account for its interest in the joint venture?"),
+    solution: [
+      text("تعترف بالحصة استثمارًا وتطبق طريقة حقوق الملكية بموجب IAS 28، ما لم ينطبق استثناء محدد من تلك الطريقة. لا تضم كل أصل والتزام للمشروع المشترك سطرًا بسطر كما في العملية المشتركة.", "It recognises the interest as an investment and applies the equity method under IAS 28, unless a specified exemption applies. It does not line-by-line recognise the venture's assets and liabilities as for a joint operation."),
+      text("إذا كان المطلوب قوائم مالية منفصلة، فيرجع قياس الحصة إلى خيارات IAS 27 بدل افتراض أن طريقة حقوق الملكية إلزامية في كل قائمة.", "For separate financial statements, the interest is accounted for under the options in IAS 27; the equity method should not be assumed mandatory for every set of statements."),
+    ],
+    reference: "IFRS 11.24, 26; IAS 28.16; IAS 27.10",
+  },
+  {
+    id: "ifrs-book2-ifrs11-ch24-quiz-4-separate-vehicle",
+    standardCode: "IFRS 11",
+    title: text("هل تعني المنشأة المنفصلة مشروعًا مشتركًا دائمًا؟", "Does a separate vehicle always mean a joint venture?"),
+    facts: text("صُمم ترتيب مشترك عبر منشأة منفصلة.", "A joint arrangement is structured through a separate vehicle."),
+    question: text("هل يصبح الترتيب دائمًا مشروعًا مشتركًا لمجرد وجود منشأة منفصلة؟ صح أم خطأ؟", "A joint arrangement structured through a separate vehicle will always be a joint venture. True or false?"),
+    solution: [
+      text("خطأ. قد يكون الترتيب عملية مشتركة أو مشروعًا مشتركًا. يُفحص الشكل القانوني للمنشأة وشروط العقد، وعند اللزوم الوقائع والظروف الأخرى، لتحديد ما إذا كانت للأطراف حقوق مباشرة في الأصول والتزامات عن الخصوم أم حقوق في صافي الأصول فقط.", "False. The arrangement can be a joint operation or joint venture. Assess the vehicle's legal form, contractual terms and, when relevant, other facts and circumstances to determine whether the parties have direct rights to assets and obligations for liabilities or rights only to net assets."),
+    ],
+    reference: "IFRS 11.B19–B33",
+  },
+  {
+    id: "ifrs-book2-ias28-ch24-quiz-5-downstream-gains",
+    standardCode: "IAS 28",
+    title: text("ربح بيع أصل من المستثمر إلى مشروعه المشترك", "Gain on a downstream sale to a joint venture"),
+    facts: text("باع المستثمر أصلًا لا يشكل نشاط أعمال إلى مشروع مشترك يُحاسب عنه بطريقة حقوق الملكية. يطلب السؤال معالجة أرباح معاملات المصب؛ أي انتقال الأصل من المستثمر إلى المشروع المشترك.", "An investor sells an asset that is not a business to its equity-accounted joint venture. The question concerns a downstream transaction—an asset moving from the investor to the joint venture."),
+    question: text("كيف تُعالج أرباح معاملة المصب مع المشروع المشترك في قوائم المستثمر؟", "How should the investor account for gains on the downstream transaction with its joint venture?"),
+    solution: [
+      text("يعترف المستثمر بالربح فقط بقدر حصص المستثمرين غير المرتبطين به في المشروع المشترك، ويلغي/يؤجل حصته هو من الربح غير المحقق أثناء بقاء الأصل داخل المشروع. ويُعترف بالجزء المؤجل عند تحققه لاحقًا بحسب طبيعة الأصل.", "The investor recognises the gain only to the extent of unrelated investors' interests in the joint venture and eliminates or defers its own share of the unrealised gain while the asset remains in the venture. The deferred element is recognised when it is subsequently realised, according to the nature of the asset."),
+      text("هذه معالجة البيع من المستثمر إلى المشروع المشترك؛ أما شراء المستثمر أصلًا من المشروع فهو معاملة منبع مختلفة. وإذا دلّت خسارة المصب على انخفاض صافي القيمة القابلة للتحقق أو اضمحلال الأصل، تُعترف الخسارة ذات الصلة بالكامل وفق IAS 28.", "This is the treatment of a sale from investor to joint venture; a purchase by the investor from the venture is a distinct upstream transaction. A downstream loss evidencing reduced net realisable value or impairment is recognised in full under IAS 28."),
+    ],
+    reference: "IAS 28.28–29",
+  },
+  {
     id: "ifrs-book2-ifrs11-shopping-centre-x-classification",
     standardCode: "IFRS 11",
     title: text("المركز التجاري X: عملية مشتركة أم مشروع مشترك؟", "Shopping centre X: joint operation or joint venture?"),
