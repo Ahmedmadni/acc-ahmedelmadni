@@ -15,6 +15,28 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-sanus-portus-margin",
+    standardCode: "IFRS 10",
+    title: text("Sanus وPortus: هامش 40% من سعر البيع", "Sanus and Portus: 40% sales margin"),
+    facts: text("باعت Sanus بضاعة إلى تابعتها المملوكة بالكامل Portus مقابل 200,000 بهامش ربح إجمالي 40% من سعر البيع. بقيت البضاعة كلها في مخزون Portus في نهاية السنة.", "Sanus sold goods to its wholly owned subsidiary Portus for 200,000 at a gross-profit margin of 40% of selling price. All the goods remained in Portus's year-end inventory."),
+    question: text("كم الربح غير المحقق من هذا البيع؟", "What is the unrealised profit on this sale?"),
+    solution: [
+      text("الهامش هنا نسبة من سعر البيع نفسه: 200,000 × 40% = 80,000. وبما أن كل البضاعة لا تزال داخل المجموعة، يُحذف كامل الربح 80,000 من المخزون ومن أرباح المجموعة؛ فتكون تكلفة المجموعة الأصلية للبضاعة 120,000. لا يُحسب 40% على التكلفة، ولا يثبت ربح حتى تباع البضاعة لطرف خارجي. البائع هو الأم، لذا لا يحمل هذا الحذف على حصة غير المسيطرين، وهي أصلًا غير موجودة في هذه الحالة.", "Margin is a percentage of selling price: 200,000 × 40% = 80,000. Because all goods remain within the group, eliminate the full 80,000 from inventory and group profit; the original group cost is 120,000. Do not apply 40% to cost, and do not recognise group profit until an external sale. The parent is the seller, so this adjustment is not attributed to NCI, which does not exist in this wholly owned case."),
+    ],
+    reference: "IFRS 10.B86(c)",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ramus-dorsal-markup",
+    standardCode: "IFRS 10",
+    title: text("Ramus وDorsal: زيادة 25% على التكلفة", "Ramus and Dorsal: 25% cost mark-up"),
+    facts: text("باعت Ramus بضاعة إلى تابعتها المملوكة بالكامل Dorsal مقابل 200,000 بزيادة 25% على التكلفة. بقيت البضاعة كلها في مخزون Dorsal في نهاية السنة.", "Ramus sold goods to its wholly owned subsidiary Dorsal for 200,000 at a 25% mark-up on cost. All the goods remained in Dorsal's year-end inventory."),
+    question: text("كم الربح غير المحقق من هذا البيع؟", "What is the unrealised profit on this sale?"),
+    solution: [
+      text("سعر البيع يمثل 125% من التكلفة، ولذلك تكلفة المجموعة = 200,000 ÷ 1.25 = 160,000، والربح غير المحقق = 200,000 − 160,000 = 40,000؛ أو 200,000 × 25 ÷ 125. يُحذف 40,000 كاملًا من مخزون المجموعة وربحها. لا تخلط زيادة 25% على التكلفة مع هامش 25% من سعر البيع، لأنهما ينتجان مبلغين مختلفين.", "Selling price is 125% of cost, so group cost is 200,000 ÷ 1.25 = 160,000 and unrealised profit is 200,000 − 160,000 = 40,000, equivalently 200,000 × 25 ÷ 125. Eliminate the full 40,000 from group inventory and profit. A 25% mark-up on cost is not a 25% margin on selling price; the two produce different answers."),
+    ],
+    reference: "IFRS 10.B86(c)",
+  },
+  {
     id: "ifrs-book2-ifrs3-tyzo-kono-acquisition-goodwill",
     standardCode: "IFRS 3",
     title: text("Tyzo وKono: الشهرة عند الاقتناء", "Tyzo and Kono: acquisition-date goodwill"),
