@@ -15,6 +15,20 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-ps-plant-transfer",
+    standardCode: "IFRS 10",
+    title: text("P وS: بيع أصل ثابت داخل المجموعة", "P and S: intragroup sale of plant"),
+    facts: text("تمتلك P نسبة 60% من S. في 1 يناير 20X1 باعت S إلى P آلة بلغت تكلفتها الدفترية 10,000 بمبلغ 12,500. تنتهي سنة الشركتين في 31 ديسمبر 20X1، وتحسبان إهلاك الآلة بمعدل 10% سنويًا. تتضمن أرباح P المحتجزة البالغة 27,000 إهلاك الآلة على تكلفة شرائها، وتتضمن أرباح S المحتجزة البالغة 18,000 ربح بيعها الداخلي. لا تُعطى بيانات للضريبة أو أرباح ما قبل الاقتناء.", "P owns 60% of S. On 1 January 20X1 S sold plant with a 10,000 carrying amount to P for 12,500. Both entities report at 31 December 20X1 and depreciate the plant at 10% a year. P's retained earnings of 27,000 include depreciation based on its purchase price; S's retained earnings of 18,000 include the intragroup sale profit. Tax data and pre-acquisition profits are not supplied."),
+    question: text("أظهر تسوية أرباح المجموعة المحتجزة عن بيع الآلة داخل المجموعة في 31 ديسمبر 20X1، وبيّن أثرها على قيمة الآلة وحصة غير المسيطرين.", "Show the consolidated retained-earnings working for the intragroup plant sale at 31 December 20X1, and its effect on the plant and NCI."),
+    solution: [
+      text("ربح البيع المثبت لدى S = 12,500 − 10,000 = 2,500، وهو غير محقق من منظور المجموعة. يخفض ربح S المحتجز إلى 18,000 − 2,500 = 15,500 ويخفض الأصل 2,500 عند الإلغاء. لأن S هي البائع، يتحمل ملاك الأم وغير المسيطرين الربح الملغى بنسبة ملكيتهما.", "S recorded a 12,500 − 10,000 = 2,500 gain, unrealised from the group's perspective. Eliminate it by reducing S's retained earnings from 18,000 to 15,500 and reducing plant by 2,500. Because S is the seller, the eliminated gain affects parent owners and NCI in their ownership proportions."),
+      text("إهلاك P الزائد بسبب سعر التحويل = 10% × (12,500 − 10,000) = 250 لسنة كاملة. يُعكس هذا الإهلاك بزيادة الأصل وأرباح P المحتجزة 250. صافي تخفيض القيمة الدفترية للآلة في القوائم الموحدة = 2,500 − 250 = 2,250؛ فتساوي قيمتها بعد سنة، في حدود هذه المعطيات، 10,000 − 1,000 = 9,000 لا 12,500 − 1,250 = 11,250.", "P's excess depreciation arising from the transfer price is 10% × (12,500 − 10,000) = 250 for the full year. Reverse that depreciation by increasing plant and P's retained earnings by 250. The net reduction in the consolidated plant balance is 2,500 − 250 = 2,250; on these facts its year-end amount is 10,000 − 1,000 = 9,000 rather than 12,500 − 1,250 = 11,250."),
+      text("أرباح المجموعة المحتجزة المنسوبة لملاك الأم في هذا التمرين = أرباح P المصححة (27,000 + 250) + 60% × أرباح S المصححة 15,500 = 36,550. حصة غير المسيطرين من أرباح S المذكورة = 40% × 15,500 = 6,200؛ وهذا جزء الأرباح فقط، وليس إجمالي رصيد حصة غير المسيطرين الذي يحتاج بيانات الاقتناء. لا يُنشأ مبلغ ضريبة مؤجلة لأن الأساس الضريبي والمعدل غير معطيين؛ تُراجع آثار IAS 12 عند توفرهما.", "Parent-attributable consolidated retained earnings in this exercise are corrected P retained earnings (27,000 + 250) + 60% × corrected S retained earnings of 15,500 = 36,550. NCI's share of the stated S earnings is 40% × 15,500 = 6,200; this is the earnings component, not total NCI, which requires acquisition-date data. No deferred-tax amount is invented without tax-base and rate information; assess IAS 12 when those data are available."),
+    ],
+    reference: "IFRS 10.B86(c); IAS 12.24",
+  },
+
+  {
     id: "ifrs-book2-ifrs10-ping-pong-consolidated-position",
     standardCode: "IFRS 10",
     title: text("Ping وPong: قائمة المركز المالي الموحدة", "Ping and Pong: consolidated statement of financial position"),
