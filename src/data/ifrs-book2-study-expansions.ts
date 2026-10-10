@@ -8,6 +8,51 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 10": {
+    sections: [
+      {
+        title: text("خسائر التابعة قبل الاستحواذ ليست خسائر المجموعة اللاحقة", "Pre-acquisition subsidiary losses are not later group losses"),
+        explanation: text(
+          "عند إعداد القوائم الموحدة، تُستبعد حصة الأم في حقوق ملكية التابعة عند تاريخ الاستحواذ مقابل الاستثمار، وتدخل قيم صافي الأصول المحددة في قياس الشهرة وفق IFRS 3. إذا كانت أرباح التابعة المحتجزة سالبة عند الشراء، فإن العجز جزء من صافي الأصول المشتراة؛ لا يُخصم مرة ثانية من أرباح المجموعة المحتجزة بعد الاستحواذ. ما يُضاف لاحقًا هو حصة الأم في حركة أرباح التابعة منذ تاريخ السيطرة، بعد تسويات التجميع ذات الصلة.",
+          "On consolidation, the parent's investment is eliminated against the subsidiary's acquisition-date equity, and the identifiable net assets enter the IFRS 3 goodwill calculation. If the subsidiary has a retained deficit at acquisition, that deficit is part of the acquired net assets; it is not deducted again from the group's post-acquisition retained earnings. The later addition is the parent's share of the subsidiary's movement since control began, after relevant consolidation adjustments.",
+        ),
+        keyPoints: [
+          text("جمّد حقوق ملكية التابعة بتاريخ الشراء، بما فيها الخسائر المتراكمة، لحساب صافي الأصول المقتناة.", "Fix the subsidiary's equity at acquisition, including accumulated losses, to calculate acquired net assets."),
+          text("احسب الحركة اللاحقة من رصيد نهاية الفترة ناقص رصيد تاريخ الشراء؛ اطرح منها تسويات القيمة العادلة والربح الداخلي عند انطباقها.", "Calculate the post-acquisition movement from closing less acquisition-date retained earnings, adjusting for fair-value depreciation and intragroup profit where relevant."),
+          text("قيد الاستبعاد ورقة عمل للتجميع، وليس تسجيلًا جديدًا في دفاتر الشركة الأم أو التابعة.", "The elimination is a consolidation worksheet entry, not a new posting in either company's separate ledger."),
+        ],
+        reference: "IFRS 10.B86(a)–(c); IFRS 3.18–19, 32",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("P وS: خسائر 35,000 قبل الشراء", "P and S: 35,000 pre-acquisition deficit"),
+        facts: text(
+          "اشترت P كامل أسهم S البالغة 50,000 سهم بقيمة اسمية 1 للسهم مقابل 20,000 عندما كان رصيد أرباح S المحتجزة مدينًا 35,000. حققت S بعد الاستحواذ أرباحًا تراكمية 40,000، فأصبح رصيدها الختامي دائنًا 5,000. أرباح P المحتجزة في نهاية الفترة 70,000. يوضح الحساب بافتراض أن S منشأة أعمال وأن صافي الأصول الدفترية المعطى يساوي القيم المعترف بها عند الشراء، دون فروق قيمة عادلة أو انخفاض شهرة إضافي.",
+          "P bought all 50,000 one-unit ordinary shares of S for 20,000 when S had a 35,000 debit retained-earnings balance. S subsequently earned cumulative profits of 40,000, leaving a closing credit retained balance of 5,000; P's closing retained earnings are 70,000. The calculation assumes S is a business, the supplied book net assets equal recognised acquisition-date values, and there are no additional fair-value differences or goodwill impairment.",
+        ),
+        calculations: [
+          text("صافي أصول S عند الشراء = رأس المال 50,000 − خسائر مبقاة 35,000 = 15,000.", "S acquisition-date net assets = share capital 50,000 − retained deficit 35,000 = 15,000."),
+          text("الشهرة = المقابل 20,000 − صافي الأصول 15,000 = 5,000.", "Goodwill = consideration 20,000 − net assets 15,000 = 5,000."),
+          text("أرباح S بعد الشراء = رصيد ختامي 5,000 − رصيد افتتاحي (−35,000) = 40,000.", "S post-acquisition earnings = closing 5,000 − acquisition-date (−35,000) = 40,000."),
+          text("الأرباح المحتجزة الموحدة المنسوبة للأم = 70,000 + 100% × 40,000 = 110,000، قبل أي تسويات أخرى.", "Consolidated retained earnings attributable to the parent = 70,000 + 100% × 40,000 = 110,000 before other adjustments."),
+        ],
+        conclusion: text(
+          "الخسارة السابقة للشراء خفضت صافي الأصول عند قياس الشهرة، بينما ربح 40,000 اللاحق هو وحده الذي يدخل حركة الأرباح الموحدة. لا يُطرح عجز 35,000 من الأرباح الموحدة مرة أخرى.",
+          "The earlier loss reduced acquisition-date net assets for goodwill; only the subsequent 40,000 earnings enter the consolidated retained-earnings movement. The 35,000 deficit is not deducted a second time.",
+        ),
+        journalEntries: [
+          {
+            label: text("ورقة التجميع: استبعاد استثمار P وحقوق S عند الشراء", "Consolidation worksheet: eliminate P's investment and S's acquisition-date equity"),
+            debit: text("رأس مال S 50,000؛ شهرة 5,000", "S share capital 50,000; goodwill 5,000"),
+            credit: text("عجز أرباح S السابق للشراء 35,000؛ الاستثمار في S 20,000", "S pre-acquisition retained deficit 35,000; investment in S 20,000"),
+            amount: text("55,000 لكل جانب", "55,000 on each side"),
+          },
+        ],
+        reference: "IFRS 10.B86(b); IFRS 3.18–19, 32",
+      },
+    ],
+  },
   "IFRS 3": {
     sections: [
       {
