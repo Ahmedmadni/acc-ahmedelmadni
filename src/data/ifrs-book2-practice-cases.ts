@@ -15,6 +15,67 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias28-p-a-investment-amount",
+    standardCode: "IAS 28",
+    title: text("P وA: رصيد الاستثمار في الزميلة عند الإقفال", "P and A: closing associate investment"),
+    facts: text(
+      "في 1 يناير 20X6 كانت صافي الأصول الملموسة لـA تساوي 220,000، ممولة بـ100,000 سهم عادي قيمة كل سهم 1 واحتياطيات 120,000. تملك P شركات تابعة واشترت 30,000 سهم من A مقابل 75,000. ربحت A خلال السنة المنتهية في 31 ديسمبر 20X6 مبلغ 30,000 ودفعت توزيعات إجمالية 12,000. يفترض المثال أن حصة الأسهم 30% تعكس حقوق التصويت والتأثير المهم، وأن الأرباح والتوزيعات تخص فترة ما بعد الاقتناء، ولا توجد تسويات أخرى معطاة.",
+      "On 1 January 20X6 A had net tangible assets of 220,000, financed by 100,000 ordinary shares of 1 each and reserves of 120,000. P has subsidiaries and acquired 30,000 A shares for 75,000. In the year ended 31 December 20X6, A earned 30,000 and paid total dividends of 12,000. The illustration assumes the 30% ordinary-share holding reflects voting power and significant influence, that profit and distributions are post-acquisition, and that no other adjustments are supplied."
+    ),
+    question: text(
+      "بكم يظهر استثمار P في A في قائمة المركز المالي الموحدة في 31 ديسمبر 20X6؟",
+      "At what amount does P's investment in A appear in the consolidated statement of financial position at 31 December 20X6?"
+    ),
+    solution: [
+      text(
+        "بعد إثبات التأثير المهم تُقاس الزميلة بطريقة حقوق الملكية: حصة P من ربح A = 30% × 30,000 = 9,000، وحصتها من التوزيعات = 30% × 12,000 = 3,600. التوزيع استرداد لجزء من القيمة الدفترية، وليس ربحًا إضافيًا فوق حصة الربح.",
+        "Once significant influence is established, equity-account the associate: P's share of A's profit = 30% × 30,000 = 9,000; its share of dividends = 30% × 12,000 = 3,600. A distribution reduces the carrying amount and is not additional profit on top of the profit share."
+      ),
+      text(
+        "الحركة في الاستثمار = التكلفة 75,000 + حصة الربح 9,000 − التوزيعات 3,600 = 80,400. وفحص بديل: زيادة أرباح A المحتجزة بعد الاقتناء = 30,000 − 12,000 = 18,000؛ حصة P = 5,400؛ لذلك 75,000 + 5,400 = 80,400.",
+        "Investment roll-forward = initial cost 75,000 + profit share 9,000 − distributions 3,600 = 80,400. Alternative check: A's post-acquisition retained-profit increase is 30,000 − 12,000 = 18,000; P's share is 5,400, so 75,000 + 5,400 = 80,400."
+      ),
+      text(
+        "يبقى الاستثمار أصلًا واحدًا في القوائم الموحدة؛ لا تُجمع أصول A والتزاماتها بندًا ببند ولا تُضاف توزيعات 3,600 إلى ربح الزميلة 9,000. لا يمكن استخراج تعديل قيمة عادلة أو انخفاض قيمة من المعطيات وحدها.",
+        "The investment remains one asset in consolidated statements; A's individual assets and liabilities are not added line by line, and the 3,600 distribution is not added to the 9,000 associate profit share. The data alone do not establish a fair-value adjustment or impairment."
+      )
+    ],
+    reference: "IAS 28.5–6, 10",
+  },
+  {
+    id: "ifrs-book2-ias28-alfred-grimbald-profit-dividend",
+    standardCode: "IAS 28",
+    title: text("Alfred وGrimbald: الربح بعد الضريبة وأثر التوزيع", "Alfred and Grimbald: after-tax profit and dividend"),
+    facts: text(
+      "اشترت Alfred نسبة 25% من أسهم Grimbald في 31 ديسمبر 20X8 بتكلفة 38,000. حققت Grimbald في السنة المنتهية في 31 ديسمبر 20X9 ربحًا قبل الضريبة 82,000، وبلغت ضريبة أرباحها 32,000. دفعت Grimbald توزيعات إجمالية 20,000 في 31 ديسمبر 20X9 من أرباح السنة. يُفترض أن الملكية تعكس حقوق التصويت والتأثير المهم، ولا توجد فروق أو معاملات أو انخفاض قيمة أخرى مذكورة.",
+      "Alfred acquired a 25% holding in Grimbald on 31 December 20X8 for 38,000. For the year ended 31 December 20X9 Grimbald's pre-tax profit was 82,000 and its tax charge was 32,000. Grimbald paid total dividends of 20,000 on 31 December 20X9 out of that year's profits. Assume ownership reflects voting power and significant influence; no other differences, transactions or impairment are supplied."
+    ),
+    question: text(
+      "احسب البنود والقيود المتعلقة بالزميلة التي تظهر في القوائم الموحدة لمجموعة Alfred وفق IAS 28.",
+      "Calculate the associate-related amounts and entries in Alfred group's consolidated statements under IAS 28."
+    ),
+    solution: [
+      text(
+        "ربح Grimbald بعد الضريبة = 82,000 − 32,000 = 50,000؛ حصة Alfred في ربح الزميلة = 25% × 50,000 = 12,500. يمكن التحقق من ذلك بـ25% × 82,000 = 20,500 مطروحًا منها 25% × 32,000 = 8,000؛ لكن العرض النهائي بند واحد لحصة الربح 12,500، لا بند ربح قبل الضريبة 20,500 وبند ضريبة مجموعة إضافي 8,000.",
+        "Grimbald's after-tax profit = 82,000 − 32,000 = 50,000; Alfred's associate-profit share is 25% × 50,000 = 12,500. Cross-check: 25% × 82,000 = 20,500 less 25% × 32,000 = 8,000; the final presentation is one 12,500 associate-profit line, not a 20,500 pre-tax associate-profit line plus 8,000 of extra group tax."
+      ),
+      text(
+        "حصة Alfred من التوزيعات = 25% × 20,000 = 5,000. رصيد الاستثمار في 31 ديسمبر 20X9 = تكلفة 38,000 + حصة ربح 12,500 − توزيعات 5,000 = 45,500. الفحص البديل: الأرباح المحتجزة بعد الاقتناء لدى Grimbald = 50,000 − 20,000 = 30,000؛ حصتها 7,500، ومن ثم 38,000 + 7,500 = 45,500.",
+        "Alfred's dividend entitlement = 25% × 20,000 = 5,000. Investment at 31 December 20X9 = cost 38,000 + profit share 12,500 − dividends 5,000 = 45,500. Alternative check: Grimbald's post-acquisition retained profit is 50,000 − 20,000 = 30,000; Alfred's 25% share is 7,500, giving 38,000 + 7,500 = 45,500."
+      ),
+      text(
+        "في سجل طريقة حقوق الملكية: مدين استثمار في زميلة 12,500 / دائن حصة ربح زميلة 12,500؛ ثم مدين نقد أو توزيعات مستحقة 5,000 / دائن استثمار في زميلة 5,000. إذا أثبتت القوائم المنفصلة توزيعات 5,000 كإيراد على أساس التكلفة، فيُستبعد إيراد التوزيع من ورقة التوحيد مقابل تخفيض الاستثمار، حتى لا يتكرر مع حصة الربح.",
+        "Equity-method entries: debit investment in associate 12,500 / credit share of associate profit 12,500; then debit cash or dividend receivable 5,000 / credit investment in associate 5,000. If cost-basis separate statements recorded the 5,000 as dividend income, eliminate that income against the investment in the consolidation worksheet so it is not counted again beside the profit share."
+      ),
+      text(
+        "لا تُوحد إيرادات Grimbald أو مصاريفها أو ضريبتها بندًا ببند، ولا تنشأ حصة غير مسيطرة لمجرد امتلاك Alfred نسبة 25% من زميلة. أي انخفاض في الاستثمار أو تعديلات إضافية تحتاج وقائع غير مقدمة.",
+        "Do not consolidate Grimbald's revenue, expenses or tax line by line, and do not recognise subsidiary-style NCI merely because Alfred owns 25% of an associate. Any investment impairment or further adjustments need facts not supplied."
+      )
+    ],
+    reference: "IAS 28.5–6, 10; IAS 1.82(c)",
+  },
+
+  {
     id: "ifrs-book2-ias28-parent-associate-summary",
     standardCode: "IAS 28",
     title: text("مجموعة Parent والزميلة Associate: قائمتان مختصرتان", "Parent group and Associate: two summarised statements"),
