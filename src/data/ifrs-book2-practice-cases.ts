@@ -15,6 +15,59 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-j-p-s-group-position",
+    standardCode: "IFRS 10",
+    title: text("J وP وS: مركز مالي موحد يجمع تابعة وزميلة", "J, P and S: consolidated position with a subsidiary and an associate"),
+    facts: text(
+      "جميع الأرقام بالألف دولار في 31 ديسمبر 20X5. أرصدة J: عقارات 1,950، آلات 795، استثمارات 1,500، مخزون 575، ذمم مدينة 330، نقد 50؛ رأس مال 2,000، أرباح محتجزة 1,460، سندات قرض 500، ذمم دائنة 680، سحب بنكي 560. أرصدة P: عقارات 1,250، آلات 375، مخزون 300، ذمم مدينة 290، نقد 120؛ رأس مال 1,000، أرباح محتجزة 885، سندات قرض 100، ذمم دائنة 350. أرصدة S: عقارات 500، آلات 285، مخزون 265، ذمم مدينة 370، نقد 20؛ رأس مال 750، أرباح محتجزة 390، ذمم دائنة 300.",
+      "All figures are US$ thousands at 31 December 20X5. J balances: property 1,950, plant 795, investments 1,500, inventory 575, receivables 330, cash 50; share capital 2,000, retained earnings 1,460, loan stock 500, payables 680, overdraft 560. P balances: property 1,250, plant 375, inventory 300, receivables 290, cash 120; share capital 1,000, retained earnings 885, loan stock 100, payables 350. S balances: property 500, plant 285, inventory 265, receivables 370, cash 20; share capital 750, retained earnings 390 and payables 300."
+    ),
+    question: text(
+      "أعد قائمة المركز المالي الموحدة لمجموعة J في 31 ديسمبر 20X5 بعد مراعاة الاقتناء وفرق القيمة العادلة وربحي المخزون غير المحققين والانخفاض في القيمة.",
+      "Prepare J group's consolidated statement of financial position at 31 December 20X5, allowing for acquisition, the fair-value uplift, both unrealised inventory profits and impairment."
+    ),
+    solution: [
+      text(
+        "هيكل المجموعة: اشترت J في 1 يناير 20X0 عدد 600,000 من أصل مليون سهم في P مقابل 1,000؛ أي 60%، مع افتراض أن الأسهم تمنح السيطرة، فتُوحَّد P بالكامل وتعرض حصة غير مسيطرة 40%. كانت أرباح P المحتجزة عند الاقتناء 200. واشترت J في 1 يناير 20X4 عدد 225,000 من أصل 750,000 سهم في S مقابل 500؛ أي 30%، مع افتراض التأثير المهم، فتُحاسب S زميلة بطريقة حقوق الملكية لا بتجميع أصولها والتزاماتها.",
+        "Group structure: on 1 January 20X0 J acquired 600,000 of P's one million shares for 1,000 (60%). Assuming these shares convey control, consolidate all of P and report 40% NCI. P's acquisition-date retained earnings were 200. On 1 January 20X4 J acquired 225,000 of S's 750,000 shares for 500 (30%). Assuming significant influence, equity-account S as an associate rather than adding its assets and liabilities line by line."
+      ),
+      text(
+        "عند اقتناء P زادت القيمة العادلة لعقارها 400. خُصص نصف الفرق للمبنى القابل للإهلاك؛ كان عمر العقار الأصلي 50 سنة من يناير 20W0، وبقي منه 40 سنة في يناير 20X0. الإهلاك الإضافي السنوي = 400 × 50% ÷ 40 = 5، وعن ست سنوات 20X0–20X5 = 30. فرق القيمة الباقي 370، فتكون العقارات الموحدة = 1,950 + 1,250 + 370 = 3,570، والآلات = 795 + 375 = 1,170.",
+        "At P's acquisition its property fair value exceeded carrying amount by 400. Half of the uplift relates to depreciable buildings; the property originally had a 50-year life from January 20W0, leaving 40 years in January 20X0. Additional annual depreciation = 400 × 50% ÷ 40 = 5, or 30 over 20X0–20X5. The remaining uplift is 370, so consolidated property = 1,950 + 1,250 + 370 = 3,570 and plant = 795 + 375 = 1,170."
+      ),
+      text(
+        "قِيست حصة غير المسيطرين في P بالقيمة العادلة: 400,000 سهم × 1.60 دولار = 640. صافي الأصول المحددة عند الاقتناء = رأس مال 1,000 + أرباح محتجزة 200 + فرق قيمة عادلة 400 = 1,600؛ الشهرة المعترف بها = مقابل 1,000 + حصة غير مسيطرة 640 − 1,600 = 40. نصت الوقائع على انخفاض هذه الشهرة بالكامل، فيصبح رصيدها صفرًا وتخفض الخسارة 40 ربح المجموعة وحصة غير المسيطرين وفق أساس توزيع الربح في هذه الوحدة.",
+        "P's NCI was measured at fair value: 400,000 shares × US$1.60 = 640. Acquisition-date identifiable net assets = share capital 1,000 + retained earnings 200 + fair-value uplift 400 = 1,600. Recognised goodwill = consideration 1,000 + NCI 640 − 1,600 = 40. The facts state that this goodwill is wholly impaired, leaving nil goodwill and reducing group profit and NCI according to the profit-attribution basis for this unit."
+      ),
+      text(
+        "باعت P مكونات إلى J بسعر التكلفة مضافًا إليه 25%، وبقي لدى J مخزون منها بسعر تحويل 100. الربح غير المحقق = 100 × 25/125 = 20؛ لأنه بيع داخل مجموعة موحدة، يخفض مخزون J والمجموعة كاملًا 20 ويخفض أرباح P المعدلة قبل تقسيمها بين ملاك J وغير المسيطرين. إذن المخزون الموحد = 575 + 300 − 20 = 855.",
+        "P sold components to J at cost plus 25%, and J still holds inventory priced at 100 at the transfer price. Unrealised profit = 100 × 25/125 = 20. As a sale within the consolidated group, eliminate the full 20 from J's/group inventory and from P's adjusted earnings before splitting the effect between J's owners and NCI. Consolidated inventory = 575 + 300 − 20 = 855."
+      ),
+      text(
+        "باعت J إلى الزميلة S بضاعة بقي منها لدى S بسعر تحويل 80 وبزيادة سعرية 25% على التكلفة. الربح الكامن = 80 × 25/125 = 16؛ حصة J التي لا تزال غير محققة = 30% × 16 = 4.8. لا تُضاف بضاعة S إلى مخزون المجموعة، لذا يُخفض ربح J والاستثمار في S بمبلغ 4.8 ولا يُخفض المخزون الموحد ثانية. كانت أرباح S عند الاقتناء 150 وعند الإقفال 390؛ نصيب J في الزيادة = 30% × (390 − 150) = 72. مع خسارة انخفاض استثمار S المحددة صراحة بمبلغ 92، يصبح رصيد الزميلة = 500 + 72 − 4.8 − 92 = 475.2.",
+        "J sold goods to associate S; S retains goods at a transfer price of 80 with a 25% mark-up on cost. Embedded gain = 80 × 25/125 = 16; J's still-unrealised 30% share = 4.8. S's goods are not consolidated inventory, so reduce J's profit and the investment in S by 4.8 without a second inventory reduction. S's acquisition-date and closing retained earnings were 150 and 390; J's share of their increase is 30% × (390 − 150) = 72. Given the explicit 92 impairment of S's investment, the associate carrying amount is 500 + 72 − 4.8 − 92 = 475.2."
+      ),
+      text(
+        "أرباح P المحتجزة اللاحقة للاقتناء بعد التسويات = 885 − 200 قبل الاقتناء − 30 إهلاك فرق القيمة − 20 ربح المخزون الداخلي − 40 انخفاض الشهرة = 595. حصة ملاك J منها = 60% × 595 = 357، وحصة غير المسيطرين = 40% × 595 = 238. تُعرض حصة غير المسيطرين الإقفالية = 640 عند الاقتناء + 238 = 878؛ وهي تشمل نصيبها من انخفاض الشهرة المعترف بها وفق IAS 36.C6.",
+        "P's adjusted post-acquisition retained earnings = 885 − 200 pre-acquisition − 30 uplift depreciation − 20 intragroup inventory gain − 40 goodwill impairment = 595. J owners' share is 60% × 595 = 357; NCI's share is 40% × 595 = 238. Closing NCI = acquisition-date 640 + 238 = 878, including its share of recognised goodwill impairment under IAS 36.C6."
+      ),
+      text(
+        "الأرباح المحتجزة الموحدة لملاك J = أرباح J البالغة 1,460 − ربح البيع إلى S غير المحقق 4.8 + حصة P المعدلة 357 + حصة أرباح S اللاحقة للاقتناء 72 − انخفاض استثمار S البالغ 92 = 1,792.2. لا يُضاف رأس مال P أو S إلى رأس مال المجموعة؛ يبقى رأس مال J فقط 2,000.",
+        "Consolidated retained earnings attributable to J owners = J's 1,460 − unrealised sale profit to S 4.8 + adjusted share of P 357 + post-acquisition share of S earnings 72 − S investment impairment 92 = 1,792.2. Do not add P or S share capital to group share capital; retain J's 2,000 only."
+      ),
+      text(
+        "القائمة المختصرة بالألف: الأصول غير المتداولة عقارات 3,570 + آلات 1,170 + استثمار في S بمبلغ 475.2 = 5,215.2. الأصول المتداولة مخزون 855 + ذمم 620 (330+290) + نقد 170 (50+120) = 1,645. إجمالي الأصول 6,860.2. يقابله رأس مال J 2,000 + أرباح ملاك J 1,792.2 + حصة غير المسيطرين 878 = حقوق ملكية 4,670.2؛ وسندات قرض غير متداولة 600 (500+100) + التزامات متداولة 1,590 (680+350+560) = 2,190؛ الإجمالي 6,860.2.",
+        "Summarised statement, in thousands: non-current assets comprise property 3,570 + plant 1,170 + S investment 475.2 = 5,215.2. Current assets are inventory 855 + receivables 620 (330+290) + cash 170 (50+120) = 1,645. Total assets = 6,860.2. On the other side J share capital 2,000 + J-owner retained earnings 1,792.2 + NCI 878 = equity 4,670.2; non-current loan stock 600 (500+100) + current liabilities 1,590 (680+350+560) = 2,190; total 6,860.2."
+      ),
+      text(
+        "فحص القيود: تسوية ربح P الداخلي تخفض المخزون والأرباح المجمعة 20؛ وتسوية بيع J للزميلة تخفض ربح J والاستثمار 4.8؛ وانخفاض استثمار S يخفض الاستثمار والربح 92؛ وانخفاض شهرة P يخفض الشهرة والربح 40. لا تحذف ذممًا أو قروضًا بين J وP بلا رصيد متقابل معطى، ولا تحسب ضريبة مؤجلة رقمية من دون معدل وأساس ضريبي؛ يظل تحليل IAS 12 مطلوبًا إذا توافرت البيانات.",
+        "Entry check: P's intragroup gain adjustment reduces group inventory and earnings by 20; J's associate-sale adjustment reduces J profit and the investment by 4.8; S's investment impairment reduces investment and profit by 92; P goodwill impairment reduces goodwill and profit by 40. Do not eliminate receivables or loans between J and P without matching balances supplied, or invent deferred tax without a tax rate and tax bases; IAS 12 analysis remains necessary if facts become available."
+      )
+    ],
+    reference: "IFRS 10.B86(c), B94; IAS 28.10, 28, 40–43; IFRS 3.18–19, 32; IAS 16.50, 56; IAS 36.104, C6; IAS 12",
+  },
+
+  {
     id: "ifrs-book2-ias28-ch23-quiz-associate-definition",
     standardCode: "IAS 28",
     title: text("متى تُسمى المنشأة زميلة؟", "When is an investee an associate?"),
