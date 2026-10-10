@@ -52,6 +52,43 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   },
 
   {
+    id: "ifrs-book2-ifrs10-quadra-saturn-midyear-disposal",
+    standardCode: "IFRS 10",
+    title: text("Quadra وSaturn: بيع شركة تابعة منتصف السنة بعد توزيع أرباح", "Quadra and Saturn: mid-year subsidiary disposal after a dividend"),
+    facts: text(
+      "اقتنت Quadra نسبة 80% من Saturn في 1 يناير 20X6 مقابل 560 ألفًا. يوم الاقتناء كان رأس مال Saturn بقيمة 200 ألف وأرباحها المحتجزة 376 ألفًا، والقيمة العادلة لحصة غير المسيطرين 134 ألفًا. اختارت Quadra قياس هذه الحصة بالقيمة العادلة ولم يحدث انخفاض في الشهرة. في 30 يونيو 20X9 باعت Quadra حصتها كلها في Saturn مقابل 700 ألف. تعرض بيانات Saturn للسنة المنتهية في 31 ديسمبر 20X9 أرباحًا محتجزة افتتاحية 430 ألفًا وربحًا للسنة كلها 48 ألفًا. دُفع توزيع نهائي عن 20X8 بقيمة 20 ألفًا في 14 مارس 20X9 ولم يكن قد سُجل في الأرصدة المعطاة. يفترض انتظام الربح خلال السنة؛ الأرقام جميعها بالآلاف وبعملة واحدة.",
+      "Quadra acquired 80% of Saturn on 1 January 20X6 for 560 thousand. Saturn's acquisition-date share capital was 200 thousand, retained earnings 376 thousand and the fair value of NCI 134 thousand. Quadra elected fair-value NCI measurement, and goodwill has not been impaired. On 30 June 20X9 Quadra sold its entire Saturn interest for 700 thousand. Saturn's figures for the year ended 31 December 20X9 show opening retained earnings of 430 thousand and full-year profit of 48 thousand. A 20-thousand final dividend for 20X8 was paid on 14 March 20X9 but had not been recorded in the supplied balances. Profit is assumed to accrue evenly; all figures are in thousands in one currency.",
+    ),
+    question: text(
+      "ما ربح بيع Saturn الذي يظهر في القوائم الموحدة لمجموعة Quadra للسنة المنتهية في 31 ديسمبر 20X9؟",
+      "What gain on disposal of Saturn is reported in the Quadra group's consolidated financial statements for the year ended 31 December 20X9?",
+    ),
+    solution: [
+      text(
+        "حتى تاريخ فقد السيطرة يدخل من ربح Saturn السنوي نصفه فقط = 48 × 6/12 = 24 ألفًا. يجب تنزيل التوزيع المدفوع 20 من أرباح Saturn المحتجزة رغم عدم تسجيله في الأرصدة المعطاة. إذن أرباحها المحتجزة عند البيع = 430 + 24 − 20 = 434؛ وصافي الأصول = رأس المال 200 + 434 = 634 ألفًا. لا تُستخدم الأرباح السنوية كاملة لتقييم صافي الأصول في 30 يونيو.",
+        "Include only Saturn's profit up to loss of control: 48 × 6/12 = 24 thousand. Deduct the paid 20 dividend from Saturn's retained earnings even though it was omitted from the supplied balances. Retained earnings on disposal = 430 + 24 − 20 = 434; net assets = share capital 200 + 434 = 634 thousand. Full-year profit must not be used for 30 June net assets.",
+      ),
+      text(
+        "صافي الأصول يوم الاقتناء = 200 + 376 = 576؛ والشهرة على أساس حصة غير المسيطرين بالقيمة العادلة = المقابل 560 + القيمة العادلة للحصة 134 − 576 = 118 ألفًا. لا يُعاد حساب حصة غير المسيطرين يوم الاقتناء كنسبة 20% من صافي الأصول؛ فالسياسة المختارة هي القيمة العادلة.",
+        "Acquisition-date net assets = 200 + 376 = 576; goodwill using fair-value NCI = consideration 560 + NCI fair value 134 − 576 = 118 thousand. Do not substitute 20% of net assets for acquisition-date NCI because the fair-value election was made.",
+      ),
+      text(
+        "تتغير حصة غير المسيطرين من قيمتها العادلة عند الاقتناء بمقدار نصيبها في حركة صافي الأصول بعد الاقتناء. عند البيع = 134 + 20% × (الأرباح المحتجزة 434 − 376) = 145.6 ألفًا، مع غياب أي حركات أخرى أو انخفاض في الشهرة. التوزيع المدفوع مؤثر بالفعل في صافي الأصول والحصة؛ لا يُضاف ثمنه مرة ثانية إلى مقابل البيع.",
+        "NCI rolls forward from acquisition-date fair value by its share of post-acquisition changes in net assets. At disposal it is 134 + 20% × (retained earnings 434 − 376) = 145.6 thousand, assuming no other movements or goodwill impairment. The paid dividend already affects net assets and NCI; it is not added again to sale consideration.",
+      ),
+      text(
+        "ربح فقد السيطرة الموحد = المقابل 700 − [صافي أصول Saturn البالغ 634 + الشهرة 118 − حصة غير المسيطرين 145.6] = 93.6 ألفًا. يستبعد التوحيد أصول Saturn والتزاماتها وشهرتها وحصة غير المسيطرين اعتبارًا من 30 يونيو، ويُعترف بهذا الربح ضمن ربح أو خسارة المجموعة والمنسوب إلى ملاك الأم.",
+        "Consolidated loss-of-control gain = consideration 700 − [Saturn net assets 634 + goodwill 118 − NCI 145.6] = 93.6 thousand. The group derecognises Saturn's assets, liabilities, goodwill and NCI on 30 June, and recognises this gain in group profit or loss attributable to parent owners.",
+      ),
+      text(
+        "هذا حساب ربح البيع، لا حكمًا تلقائيًا بأن Saturn «عملية متوقفة». يُختبر عرض العملية المتوقفة بصورة مستقلة وفق تعريف IFRS 5 إذا توفرت وقائع كافية؛ كما تُفحص الضرائب وآثار الدخل الشامل الآخر السابق إن وُجدت قبل اعتماد قائمة كاملة.",
+        "This calculates the disposal gain; it does not automatically classify Saturn as a discontinued operation. Assess IFRS 5's discontinued-operation definition separately if sufficient facts exist, and consider tax and any previous OCI effects before finalising a complete statement.",
+      ),
+    ],
+    reference: "IFRS 10.25, B97–B99; IFRS 3.18–19; IFRS 5.32–33",
+  },
+
+  {
     id: "ifrs-book2-ifrs10-crystal-pebble-oci",
     standardCode: "IFRS 10",
     title: text("Crystal وPebble: ربح المجموعة والدخل الشامل الآخر", "Crystal and Pebble: group profit and other comprehensive income"),
