@@ -2910,6 +2910,42 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 10.B86–B94; IFRS 3.18–19, 32; IAS 36.104",
   },
   {
+    id: "ifrs-book2-pqr-oil-futures",
+    standardCode: "IFRS 9",
+    title: text("PQR: عقد مستقبلي على النفط ومخزون قائم", "PQR: oil futures and existing inventory"),
+    facts: text(
+      "اشترت PQR في 1 يوليو 2025 عدد 100,000 برميل من النفط الخام بتكلفة 26 دولارًا للبرميل، وأبرمت في اليوم نفسه عقدًا مستقبليًا لتسليم الكمية في 31 مارس 2026 بسعر 27.50 دولار للبرميل. في 31 ديسمبر 2025 أصبح سعر السوق الفوري 22.50 دولارًا، وسعر العقد المستقبلي للتسليم في 31 مارس 2026 هو 23.25 دولارًا للبرميل. لا تذكر الوقائع تعيين علاقة تحوط وتوثيقها عند البداية، أو تكاليف إتمام البيع، أو ترتيبات التسوية والهامش.",
+      "On 1 July 2025 PQR bought 100,000 barrels of crude oil at $26 per barrel and on the same day entered into a futures contract to deliver that quantity on 31 March 2026 at $27.50 per barrel. At 31 December 2025 the spot market price was $22.50 and the futures price for 31 March 2026 delivery was $23.25 per barrel. The facts do not specify inception hedge designation and documentation, selling or completion costs, or margin and settlement arrangements.",
+    ),
+    question: text(
+      "اشرح أثر المخزون والعقد المستقبلي في قوائم PQR عن السنة المنتهية في 31 ديسمبر 2025، وبيّن ما يمكن حسابه وما يتوقف على معلومات إضافية.",
+      "Explain the inventory and futures-contract effects in PQR's financial statements for the year ended 31 December 2025, distinguishing calculable amounts from matters requiring further facts.",
+    ),
+    solution: [
+      text(
+        "تكلفة شراء المخزون = 100,000 × 26 = 2,600,000 دولار. يقاس لاحقًا بالتكلفة أو صافي القيمة القابلة للتحقق أيهما أقل. وصافي القيمة القابلة للتحقق هو سعر البيع المتوقع في سياق الأعمال المعتاد ناقص تكاليف الإتمام والبيع اللازمة؛ لا يثبت السعر الفوري 22.50 وحده هذه القيمة.",
+        "Inventory purchase cost is 100,000 × $26 = $2,600,000. Subsequent measurement is at the lower of cost and net realisable value (NRV). NRV is expected ordinary-course selling price less necessary completion and selling costs; the $22.50 spot quote alone does not establish NRV.",
+      ),
+      text(
+        "إذا افترضنا صراحةً أن 22.50 دولارًا هو سعر البيع المتوقع وأنه لا توجد تكاليف إتمام أو بيع، يصبح صافي القيمة القابلة للتحقق 2,250,000 دولار ويكون خفض المخزون 350,000 دولار في الربح أو الخسارة. هذا مثال مشروط لا مبلغًا نهائيًا تتيحه الوقائع؛ وقد يختلف الخفض عند معرفة التكاليف أو أسعار البيع المتوقعة.",
+        "Only if $22.50 is assumed to be the expected selling price with no completion or selling costs does NRV equal $2,250,000, producing a $350,000 inventory write-down in profit or loss. This is a conditional illustration, not a definitive amount from the stated facts; the write-down can differ when selling prices and costs are established.",
+      ),
+      text(
+        "فرق السعرين المستقبليين = (27.50 − 23.25) × 100,000 = 425,000 دولار لصالح مركز البيع؛ وهو مكسب اقتصادي تقريبي قبل أثر التسوية اليومية والخصم وأي فروق تعاقدية. يقاس المشتق وفق شروطه بالقيمة العادلة، وتذهب تغيراته عادة إلى الربح أو الخسارة إن لم تطبق محاسبة تحوط مؤهلة؛ ولا يمكن الجزم بأن 425,000 رصيد أصل مشتق قائم إذا كانت مكاسب العقد قد سويت نقدًا عبر الهامش.",
+        "The futures-price movement is ($27.50 − $23.25) × 100,000 = $425,000 in favour of the short position, an indicative economic gain before daily settlement, discounting and contract-basis effects. Measure the derivative on its actual terms at fair value, generally recognising changes in profit or loss absent qualifying hedge accounting. A $425,000 outstanding derivative asset cannot be asserted if variation margin has already settled gains in cash.",
+      ),
+      text(
+        "لا يثبت وصف الإدارة للعقد بأنه حماية من هبوط السعر أهلية تحوط القيمة العادلة. يتطلب IFRS 9 تعيينًا وتوثيقًا رسميين عند بدء العلاقة، وتحديد الأداة والبند والخطر المحوط، واختبار شروط الفاعلية. وإن ثبتت الأهلية، يقاس تعديل المخزون المنسوب إلى الخطر المعين منفصلًا؛ فلا يُعد خفض IAS 2 إلى صافي القيمة القابلة للتحقق تلقائيًا تعديل التحوط نفسه ولا يُسجل الأثر مرتين.",
+        "Management's protective purpose alone does not establish a qualifying fair value hedge. IFRS 9 requires formal inception designation and documentation identifying the instrument, item and hedged risk, plus effectiveness criteria. If qualification is evidenced, measure the inventory adjustment attributable to the designated risk separately; an IAS 2 NRV write-down is not automatically that hedge adjustment and must not be double-counted.",
+      ),
+      text(
+        "بافتراضات التبسيط السابقة فقط، يكون صافي الأثر الحسابي 425,000 مكسبًا ناقص 350,000 خسارة = 75,000 دولار مكسبًا قبل الضرائب. لا تعرض هذا الرقم كإجابة نهائية أو دليلاً على تطبيق محاسبة التحوط دون بيانات التقييم وصافي القيمة القابلة للتحقق وتوثيق العلاقة.",
+        "Under the stated simplifying assumptions only, the arithmetic net is $425,000 gain less $350,000 loss = $75,000 pre-tax gain. Do not present that figure as a definitive answer or evidence of hedge accounting without valuation, NRV and hedge-designation facts.",
+      ),
+    ],
+    reference: "IFRS 9.5.7.1, 6.4.1, 6.5.2(a), 6.5.8; IAS 2.6–7, 9, 28–33",
+  },
+  {
     id: "ifrs-book2-pqr-debentures",
     standardCode: "IFRS 9",
     title: text("PQR: سندات مشتراة بخصم", "PQR: debentures purchased at a discount"),
