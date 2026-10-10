@@ -8,6 +8,49 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 11": {
+    sections: [
+      {
+        title: text("صنّف الترتيب بحسب الحقوق والالتزامات", "Classify the arrangement by rights and obligations"),
+        explanation: text(
+          "ابدأ بإثبات أن قرارات الأنشطة ذات الصلة تتطلب موافقة الأطراف التي تتقاسم السيطرة بالإجماع. بعد ذلك اسأل: هل لكل طرف حقوق مباشرة في الأصول والتزامات عن الخصوم، أم حق في صافي أصول الترتيب فقط؟ الأولى عملية مشتركة والثانية مشروع مشترك. وجود شركة أو وعاء قانوني منفصل لا يحسم التصنيف وحده؛ راجع الشكل القانوني وشروط العقد والوقائع الأخرى عند اللزوم. وكذلك لا تجعل تشابه نسب الملكية أو توزيع الأرباح بديلًا عن تحليل الحقوق والالتزامات.",
+          "First establish that decisions over relevant activities require unanimous consent of the parties sharing control. Then ask whether each party has direct rights to assets and obligations for liabilities, or rights only to the arrangement's net assets. The former is a joint operation and the latter a joint venture. A separate legal vehicle does not decide the classification by itself; examine its legal form, contractual terms and, when relevant, other facts and circumstances. Matching ownership or profit-sharing percentages are no substitute for analysing enforceable rights and obligations.",
+        ),
+        keyPoints: [
+          text("وثّق بند القرارات التي تحتاج إجماع الأطراف قبل استخدام وصف «سيطرة مشتركة».", "Document which relevant-activity decisions require unanimous consent before concluding that joint control exists."),
+          text("اختبر حق الأصل والتزام الخصم مباشرة، لا مجرد حق توزيع صافي الربح.", "Test direct asset rights and liability obligations, not just entitlement to a share of net profit."),
+          text("المنشأة المنفصلة قد تستضيف عملية مشتركة أو مشروعًا مشتركًا.", "A separate vehicle may house either a joint operation or a joint venture."),
+        ],
+        reference: "IFRS 11.7–16, B15–B33",
+      },
+      {
+        title: text("غيّر المعالجة بعد التصنيف، لا قبله", "Apply the accounting only after classification"),
+        explanation: text(
+          "في العملية المشتركة يعترف المشغّل بأصوله والتزاماته وإيراداته ومصروفاته، ويضيف حصته فيما يُحتفظ به أو يُتكبد بصورة مشتركة وفق الحقوق التعاقدية؛ ليست العملية نسبة موحدة تُضرب آليًا في كل بند. أما في المشروع المشترك فيثبت الطرف استثمارًا ويستخدم طريقة حقوق الملكية بموجب IAS 28 ما لم ينطبق استثناء. وعند إعداد القوائم المنفصلة لحصة في مشروع مشترك، تُراجع خيارات IAS 27 بدل افتراض أن معالجة القوائم الموحدة تنسخ بحذافيرها.",
+          "For a joint operation, the operator recognises its own assets, liabilities, revenue and expenses together with its contractual share of jointly held or incurred items; do not mechanically multiply every line by one percentage. For a joint venture, the venturer recognises an investment and applies the IAS 28 equity method unless an exemption applies. For a joint-venture interest in separate financial statements, consider the IAS 27 options rather than copying the consolidated-statement treatment without analysis.",
+        ),
+        keyPoints: [
+          text("مثال خط أنابيب تشغّله شركات معًا يستلزم تحليل الحقوق في الخط والمخرجات والتزامات التشغيل.", "A jointly operated pipeline requires analysis of rights to the pipeline and output and obligations for operating costs."),
+          text("في عقار مشترك تُفحص حصة كل طرف في الأصل وإيراد الإيجار والمصروفات بموجب الاتفاق.", "For jointly held property, assess each party's rights to the property, rent and expenses under the agreement."),
+          text("احسب الاستثمار بطريقة حقوق الملكية للمشروع المشترك، لا حصة سطرية من أصوله وديونه.", "Equity-account a joint venture investment rather than taking line-by-line shares of its assets and debts."),
+        ],
+        reference: "IFRS 11.20–26; IAS 28.16; IAS 27.10",
+      },
+      {
+        title: text("شراء حصة في عملية مشتركة تشكل نشاط أعمال", "Acquiring an interest in a joint operation that is a business"),
+        explanation: text(
+          "إذا كانت أنشطة العملية المشتركة تُكوّن نشاط أعمال وفق IFRS 3 واشترت المنشأة حصة فيها، فلا يكفي وصف الشراء بأنه «حصة أصول». تُطبَّق، في حدود الحصة المكتسبة، مبادئ المحاسبة عن تجميع الأعمال التي لا تتعارض مع IFRS 11؛ فتُقاس الأصول والالتزامات القابلة للتحديد وفق المبادئ المنطبقة، ويُفحص وجود شهرة أو مكسب شراء بسعر منخفض وتُستوفى الإفصاحات ذات الصلة. لا تطبق هذه المعالجة لمجرد امتلاك أصل مشترك لا يشكل نشاط أعمال، ولا تفترض أن كل شراء حصة يمنح السيطرة على منشأة تابعة.",
+          "If the joint operation's activities constitute a business as defined in IFRS 3 and an entity acquires an interest in it, the purchase is not merely an undifferentiated asset-share acquisition. To the extent of the interest acquired, apply business-combination principles that do not conflict with IFRS 11: measure identifiable assets and liabilities under the applicable principles, assess goodwill or a bargain-purchase gain, and provide the relevant disclosures. Do not apply this treatment merely to a jointly held asset that is not a business, or assume that every interest acquisition gives control of a subsidiary.",
+        ),
+        keyPoints: [
+          text("اختبر أولًا تعريف «نشاط أعمال» في IFRS 3 قبل اختيار قواعد الاقتناء.", "Test the IFRS 3 definition of a business before choosing acquisition accounting."),
+          text("طبّق المبادئ في حدود الحصة المقتناة وبشرط عدم تعارضها مع IFRS 11.", "Apply the principles to the acquired interest only insofar as they do not conflict with IFRS 11."),
+        ],
+        reference: "IFRS 11.21A, B33A–B33D; IFRS 3",
+      },
+    ],
+    workedExamples: [],
+  },
   "IAS 28": {
     sections: [
       {
