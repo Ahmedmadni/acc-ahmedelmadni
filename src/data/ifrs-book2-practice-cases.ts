@@ -2649,6 +2649,38 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 28.10, 28–30; IFRS 10.7",
   },
   {
+    id: "ifrs-book2-sirus-marne-director-payments",
+    standardCode: "IFRS 3",
+    title: text("Sirus/Marne: دفعات المديرين بعد الاستحواذ", "Sirus/Marne: payments to directors after acquisition"),
+    facts: text(
+      "استحوذت Sirus على Marne في 1 مايو 20X7. كان مديرو Marne هم ملاكها الوحيدين، وعُرضت عليهم حصة أرباح أعلى في الأعمال المدمجة لسنتين بعد الاستحواذ لحثهم على قبول العرض، ثم تعود مكافآتهم إلى مستواها المعتاد. قدرت Sirus تكلفة الدفعات بخمسة ملايين دولار عند 30 أبريل 20X8 وستة ملايين عند 30 أبريل 20X9، وتدفع نقدًا بعد نهاية كل سنة بقليل. لا يذكر السؤال هل يسقط الحق عند توقف المدير عن العمل، ولا شروط خدمة ملزمة، أو معادلة الحصة، أو معدل خصم.",
+      "Sirus acquired Marne on 1 May 20X7. Marne's directors were its only shareholders and were offered a higher profit share in the combined business for two years after acquisition as an incentive to accept the offer; remuneration then returns to normal. Sirus estimated the payments at $5 million at 30 April 20X8 and a further $6 million at 30 April 20X9, payable in cash shortly after each year-end. The question does not state whether entitlement is forfeited on termination of employment, any required service term, the profit-share formula or a discount rate.",
+    ),
+    question: text(
+      "هل تدخل دفعات المديرين في مقابل الاستحواذ وشهرة Marne، أم تُعالج كتعويض عن خدماتهم اللاحقة؟ بيّن أثر كل مسار وما يلزم لحسم التصنيف.",
+      "Are the directors' payments part of Marne's acquisition consideration and goodwill, or compensation for their later services? Explain each outcome and the facts needed to decide.",
+    ),
+    solution: [
+      text(
+        "يفصل IFRS 3 بين ثمن الحصول على المنشأة ومعاملة مستقلة تكافئ الملاك السابقين عن خدمات ما بعد الاستحواذ. صفة «ملاك سابقين» أو عبارة «حافز لقبول العرض» لا تحسمان وحدهما التصنيف؛ راجع اتفاقي البيع والعمل، وسبب الدفعة، ومن يحصل عليها، ومدة العمل مقارنة بمدة الدفع، ومستوى الأجر المعتاد.",
+        "IFRS 3 separates consideration for the business from a separate transaction remunerating former owners for post-combination services. Being former shareholders or describing a payment as an incentive to accept the offer is not conclusive. Review the sale and employment agreements, why the payment was arranged, who receives it, the service and payment periods, and normal remuneration.",
+      ),
+      text(
+        "إذا سقطت الدفعات آليًا عند انتهاء عمل المدير وكان شرط الخدمة جوهريًا، فهي تعويض عن خدمة لاحقة لا مقابل استحواذ، حتى لو كان المستفيدون هم البائعين. تُثبت تكلفة الخدمة والالتزام تبعًا لفترات استحقاقها وفق IAS 19، لا تضاف إلى الشهرة يوم 1 مايو. في 30 أبريل 20X8 قد يستحق مبلغ السنة الأولى المقدر بخمسة ملايين إذا أُديت الخدمة ونشأ التزام قابل للتقدير؛ ولا يُحمّل مبلغ السنة الثانية البالغ ستة ملايين على السنة الأولى لمجرد توقعه.",
+        "If payments are automatically forfeited when a director's substantive employment ends, they are compensation for post-combination service rather than acquisition consideration, even though the recipients sold Marne. Recognise service cost and the related obligation over the earning periods under IAS 19, not in goodwill on 1 May. At 30 April 20X8 the estimated $5 million for year one may be accrued if the service was rendered and a reliably measurable obligation arose; do not charge the further $6 million for unrendered year-two service to year one merely because it is forecast.",
+      ),
+      text(
+        "إذا بقي حق المديرين في الدفعات عند ترك العمل، فقد تكون مقابلًا احتماليًا للاستحواذ بحسب بقية الشروط. عندئذ يُقاس الجزء المصنف مقابلًا بالقيمة العادلة في تاريخ الاستحواذ مع احتمالات التدفقات والقيمة الزمنية، ويؤثر في الشهرة؛ والمقابل النقدي المصنف التزامًا يعاد قياسه لاحقًا وفق القواعد المطبقة. لا يصح إدراج 5 + 6 = 11 مليون دولار غير مخصومة تلقائيًا في الشهرة، ولا يمكن حساب القيمة العادلة من الوقائع المعطاة.",
+        "If the directors retain entitlement after leaving employment, the payments may instead be contingent acquisition consideration depending on the other terms. Measure any consideration component at acquisition-date fair value using cash-flow probabilities and time value, affecting goodwill; a cash-settled liability is subsequently remeasured under the applicable rules. Automatically adding the undiscounted $5 million + $6 million = $11 million to goodwill is unsupported, and the facts do not permit a fair-value calculation.",
+      ),
+      text(
+        "قد يتطلب العقد فصل جزء يُدفع ثمنًا وجزء يرتبط بالخدمة إذا دلّت البنود على عنصرين. قبل إعداد قيد عددي، احصل على نص شرط انتهاء العمل، وشرط الربح، وتوقعات الدفع عند تاريخ الشراء، وطريقة التسوية. لا تحول التقديرين بنهاية السنتين إلى أرقام شراء مؤكدة.",
+        "The contract may require separating an acquisition-price element from a service element if its terms contain both. Before recording an amount, obtain the termination provision, profit formula, acquisition-date payment expectations and settlement terms. The two year-end estimates are not automatically fixed acquisition-date amounts.",
+      ),
+    ],
+    reference: "IFRS 3.39–40, 51–52, 58, B54–B55; IAS 19.11, 19–22",
+  },
+  {
     id: "ifrs-book2-sirus-director-shares",
     standardCode: "IAS 32",
     title: text(
