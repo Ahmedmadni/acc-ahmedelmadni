@@ -3262,6 +3262,38 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 41.1–5, 12–13, 43–46; IAS 16.3(b)",
   },
   {
+    id: "ifrs-book2-polymer-going-concern",
+    standardCode: "IAS 1",
+    title: text("Polymer: إعداد القوائم عند انتفاء الاستمرارية", "Polymer: statements when going concern no longer applies"),
+    facts: text(
+      "طُلب من Polymer بيان أثر عدم صلاحية فرض الاستمرارية على القوائم المالية المنشورة مع مثال. لا يذكر السؤال أن الشركة قررت التصفية فعلًا، أو موعد تسوية الالتزامات، أو قيمة بيع الأصول. يورد المثال آلة تكلفتها الأصلية 10,000 وقيمتها الدفترية 6,000، ولا يوجد لها سوق بيع مستقل.",
+      "Polymer is asked to explain, with an example, how published financial statements change if the going-concern basis is inappropriate. The question does not establish that liquidation has actually been decided, when liabilities fall due, or asset disposal proceeds. Its illustration describes a machine originally costing 10,000, with a 6,000 carrying amount and no standalone sales market.",
+    ),
+    question: text(
+      "إذا لم تعد الاستمرارية مناسبة، كيف تختار Polymer أساس إعداد القوائم وتعرض أثره؟ وهل تُصفّر الآلة تلقائيًا وتتحول جميع البنود غير المتداولة إلى متداولة؟",
+      "If going concern is no longer appropriate, how should Polymer choose and disclose its preparation basis? Must the machine automatically be written down to zero and every non-current item become current?",
+    ),
+    solution: [
+      text(
+        "تقيّم الإدارة الاستمرارية من المعلومات المتاحة حتى تاريخ اعتماد القوائم. لا يكفي مجرد احتمال الصعوبات؛ ينتفي الأساس إذا قصدت الإدارة التصفية أو وقف النشاط، أو لم يبقَ بديل واقعي لذلك. وإذا نشأ هذا الاستنتاج بعد تاريخ التقرير وقبل اعتماد القوائم، فلا تُعد القوائم على أساس الاستمرارية.",
+        "Management assesses going concern using information available up to authorisation of the statements. Difficulty alone is not enough: the basis ceases to be appropriate if management intends to liquidate or cease trading, or has no realistic alternative. A conclusion reached after the reporting date but before authorisation also prevents preparation on a going-concern basis.",
+      ),
+      text(
+        "عند إعداد القوائم على أساس آخر، تفصح Polymer بوضوح عن عدم استخدام الاستمرارية، وأساس الإعداد المختار، وسبب انتفاء الاستمرارية. لا يفرض IAS 1 نموذجًا رقميًا واحدًا لقيم التصفية؛ يُحدد القياس والعرض بحسب الحقائق وأساس الإعداد المعلن، مع اختبار كل أصل والتزام على حدة.",
+        "When statements use another basis, Polymer discloses that fact, the basis used and why it is not a going concern. IAS 1 does not prescribe one universal numerical liquidation model: measurement and presentation follow the facts and the disclosed preparation basis, with each asset and liability assessed individually.",
+      ),
+      text(
+        "في مثال الآلة: القيمة الدفترية 6,000 ليست بالضرورة القيمة التي ستظهر عند توقف النشاط، لكن انعدام سوق بيع مستقل وحده لا يثبت أن قيمتها صفر؛ افحص إمكان نقلها مع نشاط آخر أو الحصول على منافع أو متحصلات منها والتكاليف المرتبطة. إن خلص القياس الملائم إلى عدم وجود قيمة قابلة للاسترداد، تُعكس الخسارة وفق الأساس المختار؛ وإلا فلا يجوز اختلاق تخفيض كامل إلى الصفر.",
+        "For the illustrated machine, the 6,000 carrying amount need not remain appropriate after trading ceases. Yet no standalone market does not by itself prove a zero value: consider transfer with another business, other obtainable benefits or proceeds, and related costs. A loss follows only if the applicable measurement yields no recoverable amount; an automatic full write-off would be unsupported.",
+      ),
+      text(
+        "لا تُعاد تسمية جميع الأصول والالتزامات غير المتداولة على أنها متداولة آليًا؛ يُراجع توقيت تحقيق كل أصل وتسوية كل التزام والحقوق القائمة عند تاريخ التقرير ومتطلبات العرض. ويُشرح للمستخدمين أي تغيير جوهري في القياس أو التصنيف بدل افتراض قواعد شاملة من واقعة انتفاء الاستمرارية.",
+        "Do not automatically relabel all non-current assets and liabilities as current. Reassess each item's expected realisation or settlement, reporting-date rights and presentation requirements, explaining material measurement or classification changes instead of applying a blanket rule.",
+      ),
+    ],
+    reference: "IAS 1.25–26, 66, 69; IAS 10.14",
+  },
+  {
     id: "ifrs-book2-hewlett-options",
     standardCode: "IFRS 2",
     title: text("خيارات الموظفين وشروط البقاء", "Hewlett: employee options and service vesting"),
