@@ -2717,6 +2717,38 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.4.2.1, Appendix A, B5.4.6; IAS 1.69(d), 75A",
   },
   {
+    id: "ifrs-book2-sirus-retirement-annuities",
+    standardCode: "IAS 19",
+    title: text("Sirus: نوعان من معاشات المديرين السابقين", "Sirus: two former-director annuities"),
+    facts: text(
+      "تلتزم Sirus تعاقديًا أو بحكم الممارسة بدفعات سنوية لمديرين بعد التقاعد، وتتحدد حقوقهم بمدة خدمتهم. تتلقى مجموعة مبلغًا سنويًا ثابتًا لمدة محددة تبدأ بعد أول ذكرى للتقاعد؛ وإذا توفي أحدهم يُدفع لتركته المبلغ الذي يمثل القيمة الحالية للدفعات الباقية. وتتلقى مجموعة أخرى مبلغًا سنويًا ثابتًا ينتهي عند الوفاة. لا يذكر السؤال قيمة الأقساط أو مدد الخدمة أو أعمار المستفيدين أو معدل الخصم أو أصول خطة.",
+      "Sirus has contractual or constructive obligations to pay annual amounts to former directors after retirement, with entitlements based on length of service. One group receives a fixed annual amount for a fixed term beginning on the first anniversary of retirement; if a director dies, the present value of remaining payments is paid to the estate. Another group receives a fixed annual amount that ceases on death. Instalment amounts, service periods, beneficiaries' ages, discount rates and plan assets are not supplied.",
+    ),
+    question: text(
+      "كيف تُصنف وتعالج مجموعتا المعاشات عن خدمة المديرين؟ وما أثر شرط الدفع للتركة مقارنة بشرط توقف الدفعات عند الوفاة؟",
+      "How should the two service-earned annuities be classified and accounted for, and how do the estate-payment and death-cessation terms affect measurement?",
+    ),
+    solution: [
+      text(
+        "كلتا الحالتين وعد بمنافع ما بعد انتهاء العمل نشأ من خدمة المديرين، فيُختبر ضمن IAS 19. الوعد بدفع معاش محدد من صاحب العمل ليس خطة مساهمات محددة لمجرد ثبات القسط؛ ما لم يقتصر التزام صاحب العمل على مساهمة ثابتة لصندوق بلا التزام إضافي، فهو التزام منافع محددة. لا تُنقل الحالة الأولى تلقائيًا إلى IAS 32 أو IFRS 9 لأنها تُسدد نقدًا، ولا الثانية إلى IAS 37 لمجرد عدم يقين موعد الوفاة؛ التزامات أصحاب العمل ضمن خطط منافع الموظفين مستثناة من نطاق معايير الأدوات المالية وتُعالج بـIAS 19.",
+        "Both arrangements promise post-employment benefits earned through directors' service and are assessed under IAS 19. An employer's promise of a specified annuity is not a defined contribution plan merely because the instalment is fixed; absent a fixed-only contribution to a fund with no further obligation, it is a defined benefit obligation. Cash settlement does not automatically move the first plan to IAS 32 or IFRS 9, nor does uncertain death timing move the second to IAS 37: employers' employee-benefit-plan obligations are accounted for under IAS 19 rather than the financial-instrument standards.",
+      ),
+      text(
+        "في المعاش محدد المدة، يبقى التزام الدفعات الباقية خلال الفترة المضمونة حتى بعد وفاة المدير لأن التركة تستلم قيمتها الحالية؛ لذا لا يُفترض أن الوفاة بعد التقاعد تُسقط تلك التدفقات. تُقدّر القيمة الحالية للمنافع المنسوبة إلى سنوات الخدمة مع مراعاة توقيت الدفعات والخصم وأي شروط أهلية قبل التقاعد.",
+        "For the fixed-term annuity, the guaranteed remaining payments persist after the director dies because the estate receives their present value; post-retirement death therefore does not eliminate those cash flows. Estimate the present value of benefits attributed to service years, taking payment timing, discounting and any pre-retirement eligibility terms into account.",
+      ),
+      text(
+        "في المعاش المنتهي بالوفاة، تعتمد الدفعات المتوقعة على بقاء المستفيد حيًا؛ فتدخل افتراضات الوفيات وسنوات الحياة المتوقعة ضمن القياس الاكتواري إلى جانب الخصم. لا تعامل مدة الحياة مجهولة كسبب لإهمال الالتزام أو لتطبيق نموذج مخصص ضمانات بدل نموذج منافع الموظفين.",
+        "For the annuity ending at death, expected payments depend on the beneficiary's survival, so mortality and expected lifetime enter the actuarial measurement along with discounting. Uncertain lifetime is not a reason to ignore the obligation or replace employee-benefit measurement with a warranty-provision model.",
+      ),
+      text(
+        "تُنسب المنافع إلى فترات الخدمة وفق IAS 19 ويقاس التزام المنافع المحددة بالقيمة الحالية، مطروحًا منه أصول الخطة المؤهلة إن وجدت. تُعرض تكلفة الخدمة وصافي الفائدة في الربح أو الخسارة، وإعادة القياس الاكتواري في الدخل الشامل الآخر وفق المتطلبات المطبقة. لا يمكن استخراج قيد أو رصيد عددي من البيانات المذكورة وحدها.",
+        "Attribute benefits to service periods under IAS 19 and measure the defined benefit obligation at present value, net of qualifying plan assets if any. Service cost and net interest affect profit or loss; actuarial remeasurements are recognised in other comprehensive income under the applicable requirements. No numerical entry or balance can be derived from the supplied facts alone.",
+      ),
+    ],
+    reference: "IAS 19.8, 26–27, 57–67, 70–73, 81–83, 120; IAS 32.4(b); IFRS 9.2.1(c)",
+  },
+  {
     id: "ifrs-book2-sirus-director-shares",
     standardCode: "IAS 32",
     title: text(
