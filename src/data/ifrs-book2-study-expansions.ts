@@ -8,6 +8,63 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 28": {
+    sections: [
+      {
+        title: text("وحّد تاريخ المعلومات والسياسات قبل حساب حصة الزميلة", "Align reporting information and policies before calculating the associate share"),
+        explanation: text(
+          "ابدأ من قوائم الزميلة في تاريخ تقرير المستثمر نفسه متى أمكن. إذا تعذر إعداد قوائم بذلك التاريخ، تُستخدم أحدث قوائم متاحة مع تسوية آثار المعاملات والأحداث المهمة بين التاريخين، ولا يتجاوز الفارق ثلاثة أشهر. ثم عدّل البنود التي تستخدم سياسة محاسبية مختلفة عن سياسة المجموعة في معاملات وظروف متماثلة. لا تعالج فرق التاريخ أو السياسة بإضافة نسبة الملكية آليًا إلى أرقام لم تُهيأ للمقارنة.",
+          "Start with associate statements drawn up to the investor's reporting date when practicable. If that is impracticable, use the most recent available statements, adjust for significant intervening transactions and events, and keep the date gap within three months. Then adjust unlike accounting policies for similar transactions and circumstances to the group's policies. Do not apply an ownership percentage mechanically to figures that have not first been made comparable."
+        ),
+        keyPoints: [
+          text("سجّل تاريخ قوائم الزميلة وتاريخ قوائم المجموعة قبل إدخال أي ربح في طريقة حقوق الملكية.", "Record both reporting dates before equity-accounting any profit."),
+          text("عالج الأحداث المهمة بين التاريخين؛ حد الثلاثة أشهر ليس إعفاءً من التسوية.", "Adjust significant intervening events; the three-month limit is not a waiver of adjustment."),
+          text("سوِّ السياسات في المعاملات والظروف المتماثلة، ثم احسب حصة الربح بعد الضريبة.", "Align policies for like transactions and circumstances before calculating the after-tax profit share.")
+        ],
+        reference: "IAS 28.33–36",
+      },
+      {
+        title: text("بيع المستثمر لزميلته: ليس حذفًا كاملًا كبيع بين شركتين تابعتين", "Investor-to-associate sales: not full subsidiary-style elimination"),
+        explanation: text(
+          "في البيع من المستثمر أو تابعاته إلى زميلة لا تشكل البضاعة المبيعة نشاطًا تجاريًا، تعترف المجموعة من مكسب البيع فقط بالجزء المنسوب إلى المستثمرين الآخرين في الزميلة ما دام الأصل لدى الزميلة. يُستبعد الجزء المنسوب إلى حصة المجموعة من الربح، لا قيمة البيع كلها، لأن الزميلة لا تُضاف أصولها ومصروفاتها بندًا ببند إلى القوائم الموحدة. اقسم الربح الداخلي الحقيقي على أساس سعر البيع أو التكلفة وفق صياغة المعطيات أولًا، ثم اضرب الجزء غير المحقق في نسبة ملكية المستثمر. يختلف تحديد موضع التسوية واتجاهها بين البيع من المستثمر إلى الزميلة والبيع العكسي؛ لا تنسخ قيد اتجاه إلى الاتجاه الآخر بلا تحليل.",
+          "For a sale of ordinary goods that do not constitute a business from an investor or its subsidiaries to an associate, the group recognises the gain only to the extent of the other investors' interests while the asset remains with the associate. Eliminate the share attributable to the investor's interest, not the whole sale, because the associate's assets and expenses are not line-by-line consolidated. First calculate the actual embedded profit using the question's cost-versus-selling-price basis, then multiply the unrealised portion by the investor's percentage. Determine the location and direction of the worksheet adjustment separately for downstream and upstream sales; do not copy one directional entry into the other without analysis."
+        ),
+        keyPoints: [
+          text("«25% زيادة على التكلفة» تعني ربحًا يساوي 25/125 من سعر البيع، لا 25% منه.", "A 25% mark-up on cost means profit is 25/125 of selling price, not 25% of it."),
+          text("لا يُحذف كامل إيراد البيع لزميلة كما يحدث بين الأم وتابعة تُوحَّد بالكامل.", "Do not eliminate all revenue from a sale to an associate as if it were a sale between fully consolidated group companies."),
+          text("إن ظهرت دلائل انخفاض قيمة أو كان الأصل المباع نشاطًا تجاريًا، اختبر القواعد الخاصة قبل تعميم المثال.", "If there is impairment evidence or the asset transferred is a business, test the specific requirements before generalising this illustration.")
+        ],
+        reference: "IAS 28.28–29; IFRS 10.B86(c)",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("بيع Parent بضاعة إلى Associate بهامش 25% على التكلفة", "Parent sells inventory to Associate at 25% mark-up on cost"),
+        facts: text(
+          "تملك Parent، التي لديها شركات تابعة، نسبة 25% من أسهم Associate، ويُفترض أنها تقابل 25% من حقوق التصويت مع استمرار التأثير المهم. باعت Parent إلى Associate بضاعة بسعر إجمالي 1,000,000 دولار، وهو التكلفة مضافًا إليها 25%. ظلت البضاعة كلها لدى Associate في نهاية السنة، ولا تُذكر خسارة قيمة أو معاملة مع طرف خارجي لاحقة. المثال عن بضاعة عادية لا تمثل نشاطًا تجاريًا.",
+          "Parent, which has subsidiaries, holds 25% of Associate's shares, assumed to correspond to 25% of voting rights with continuing significant influence. Parent sold goods to Associate for total proceeds of US$1,000,000 at cost plus a 25% mark-up. All the goods remained with Associate at year-end; no impairment or subsequent outside sale is supplied. The goods are ordinary inventory, not a business."
+        ),
+        calculations: [
+          text("التكلفة الأصلية = 1,000,000 ÷ 1.25 = 800,000 دولار؛ وربح Parent من البيع = 200,000 دولار. يمكن التحقق بـ1,000,000 × 25/125 = 200,000.", "Original cost = US$1,000,000 ÷ 1.25 = US$800,000; Parent's sale profit = US$200,000. Check: 1,000,000 × 25/125 = 200,000."),
+          text("حصة المجموعة من الربح غير المحقق = 25% × 200,000 = 50,000 دولار؛ الجزء المنسوب إلى المستثمرين الآخرين الذي يجوز إبقاؤه = 75% × 200,000 = 150,000 دولار.", "The group's unrealised-interest share = 25% × US$200,000 = US$50,000; the portion attributable to other investors that remains recognised = 75% × US$200,000 = US$150,000."),
+          text("تسوية حقوق الملكية تخفض الربح الموحد والاستثمار في الزميلة بـ50,000 دولار. لا تخفض مخزون المجموعة بمبلغ 200,000؛ مخزون الزميلة ليس مخزونًا موحدًا بندًا ببند.", "The equity-method adjustment reduces consolidated profit and the investment in Associate by US$50,000. Do not reduce group inventory by US$200,000: Associate's inventory is not line-by-line consolidated group inventory."),
+        ],
+        conclusion: text(
+          "القيد التعليمي في ورقة التجميع: مدين تعديل أرباح بيع غير محققة لزميلة 50,000؛ دائن استثمار في الزميلة 50,000. لا يعني ذلك حذف إيراد البيع البالغ 1,000,000 بكامله. لا نُعيد إثبات الجزء المؤجل إلا عندما يصبح الربح محققًا للمجموعة وفق وقائع بيع لاحقة معلومة.",
+          "Illustrative group worksheet entry: debit unrealised-gain adjustment on sale to Associate 50,000; credit investment in Associate 50,000. This is not an elimination of the entire US$1,000,000 sale revenue. Reverse the deferred portion only when later facts show the gain has become realised from the group's perspective."
+        ),
+        journalEntries: [
+          {
+            label: text("استبعاد حصة المستثمر في ربح البيع الذي لا يزال غير محقق", "Eliminate the investor's share of the unrealised downstream gain"),
+            debit: text("تعديل ربح بيع بضاعة إلى زميلة — الربح أو الخسارة الموحدة", "Downstream unrealised-gain adjustment — consolidated profit or loss"),
+            credit: text("استثمار في زميلة", "Investment in associate"),
+            amount: text("50,000 دولار", "US$50,000"),
+          },
+        ],
+        reference: "IAS 28.28–29",
+      },
+    ],
+  },
   "IFRS 6": {
     sections: [
       {
