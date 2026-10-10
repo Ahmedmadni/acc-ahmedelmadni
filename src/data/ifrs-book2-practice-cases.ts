@@ -15,6 +15,43 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias1-delta-group-changes-in-equity",
+    standardCode: "IAS 1",
+    title: text("Delta: قائمة التغيرات في حقوق الملكية وسند قابل للتحويل", "Delta: consolidated changes in equity and a convertible bond"),
+    facts: text(
+      "تُعد مجموعة Delta قوائمها للسنة المنتهية في 31 مارس 20X1. في 31 مارس 20X0، وبالآلاف، بلغ رأس مال المجموعة 90,000 والأرباح المحتجزة المنسوبة للأم 40,000 وحصة غير المسيطرين 25,000. في 1 أبريل 20X0 أصدرت سندًا صفري الفائدة بمتحصلات 12,000، يستحق في 31 مارس 20X5 بمبلغ 16,105.1، ولحامليه خيار تحويله إلى أسهم. لولا خيار التحويل لبلغت القيمة العادلة لالتزام مماثل 10,000 بمعدل عائد 10%. دُفعت خلال السنة توزيعات 20,000 للمساهمين العاديين في الأم بحسب افتراض الحل. إجمالي الدخل الشامل النهائي للسنة 10,000، منه 500 لحصة غير المسيطرين. لا تبين المعطيات عدد الأسهم أو شروط تسوية خيار التحويل؛ لذلك يظل تصنيفه كأداة حقوق ملكية مشروطًا باستيفاء شرط مبلغ ثابت مقابل عدد ثابت من أسهم المُصدر.",
+      "The Delta group prepares accounts for the year ended 31 March 20X1. At 31 March 20X0, in thousands, group share capital was 90,000, retained earnings attributable to the parent 40,000 and NCI 25,000. On 1 April 20X0 it issued a zero-coupon bond for 12,000, redeemable for 16,105.1 on 31 March 20X5; holders have an option to convert it into shares. Without that option the fair value of a comparable liability would have been 10,000 at a 10% yield. Dividends of 20,000 were paid to ordinary shareholders of the parent under the teaching answer's assumption. Final total comprehensive income for the year was 10,000, of which 500 was attributable to NCI. The facts do not specify the number of shares or settlement terms of the conversion option; equity classification therefore depends on a fixed amount for a fixed number of the issuer's own shares.",
+    ),
+    question: text(
+      "أعد قائمة التغيرات في حقوق الملكية الموحدة والمقتطفات ذات الصلة من قائمة المركز المالي في 31 مارس 20X1.",
+      "Prepare the consolidated statement of changes in equity and relevant extracts from the statement of financial position at 31 March 20X1.",
+    ),
+    solution: [
+      text(
+        "أولًا افحص عقد التحويل: إذا أمكن الوفاء به بمبلغ ثابت مقابل عدد ثابت من أسهم Delta نفسها ولا يوجد شرط آخر يغيّر التصنيف، يكون السند أداة مركبة وفق IAS 32. لا يكفي مجرد وصفه بأنه «قابل للتحويل إلى أسهم» لإثبات هذه الشروط؛ إذا كان عدد الأسهم متغيرًا فقد يختلف التصنيف والقياس، ولا تكون أرقام حقوق الملكية المشروطة أدناه نتيجة نهائية.",
+        "First inspect the conversion contract: if settlement exchanges a fixed amount for a fixed number of Delta's own shares and no other term changes the classification, the bond is a compound instrument under IAS 32. Merely saying 'convertible into shares' does not establish those terms; a variable number of shares could change classification and measurement, so the conditional equity amounts below are not unconditional results.",
+      ),
+      text(
+        "بفرض استيفاء شرط الأداة المركبة، تقاس مديونية الإصدار أولًا بالقيمة العادلة لسند مماثل بلا خيار تحويل: 16,105.1 ÷ (1.10)^5 ≈ 10,000 ألف. مكون حقوق الملكية المتبقي = متحصلات 12,000 − التزام 10,000 = 2,000. قيد الإصدار النموذجي بالآلاف: مدين نقد 12,000؛ دائن التزام سند 10,000؛ دائن مكون حقوق ملكية لخيار التحويل 2,000. لا تُعد الـ2,000 ربحًا للسنة.",
+        "Assuming compound-instrument treatment applies, initially measure the liability at the fair value of comparable debt without conversion: 16,105.1 ÷ (1.10)^5 ≈ 10,000 thousand. Residual equity component = proceeds 12,000 − liability 10,000 = 2,000. Illustrative issue entry, in thousands: debit cash 12,000; credit bond liability 10,000; credit conversion-option equity 2,000. The 2,000 is not current-year profit.",
+      ),
+      text(
+        "تُحمّل مديونية السند بعد الإصدار بمعدل الفائدة الفعلي: تكلفة تمويل السنة الأولى 10% × 10,000 = 1,000، والقيمة الدفترية للالتزام في 31 مارس 20X1 = 11,000، بافتراض عدم وجود تكاليف إصدار أو شروط أخرى. يُفهم أن إجمالي الدخل الشامل المعطى 10,000 رقم نهائي بعد تسجيل هذه التكلفة؛ إن لم يكن كذلك يجب تعديل الربح والأرباح المحتجزة قبل إعداد القائمة، ولا تُخصم التكلفة مرتين.",
+        "Subsequently accrete the bond liability using the effective interest rate: first-year finance cost = 10% × 10,000 = 1,000 and the liability carrying amount at 31 March 20X1 = 11,000, assuming no issue costs or other terms. The supplied 10,000 total comprehensive income is treated as a final figure after this cost; if it is not, adjust profit and retained earnings before preparing the statement rather than deducting the cost twice.",
+      ),
+      text(
+        "قائمة التغيرات الموحدة، بالآلاف وبافتراض تصنيف خيار التحويل ضمن حقوق الملكية: الرصيد الافتتاحي = رأس مال 90,000 + أرباح محتجزة للأم 40,000 + حصة غير مسيطرين 25,000 = 155,000. الدخل الشامل للأم = 10,000 − 500 = 9,500؛ ولغير المسيطرين 500. توزيعات الأم تخفض أرباحها المحتجزة 20,000. مكون خيار التحويل يزيد احتياطي حقوق ملكية الأم 2,000. الرصيد الختامي: رأس مال 90,000؛ احتياطي الخيار 2,000؛ أرباح محتجزة للأم 40,000 + 9,500 − 20,000 = 29,500؛ إجمالي حقوق ملاك الأم 121,500؛ حصة غير مسيطرين 25,500؛ إجمالي حقوق الملكية 147,000.",
+        "Consolidated changes in equity, in thousands and conditional on equity classification of the conversion option: opening balance = share capital 90,000 + parent retained earnings 40,000 + NCI 25,000 = 155,000. Parent comprehensive income = 10,000 − 500 = 9,500; NCI comprehensive income 500. Parent dividends reduce retained earnings by 20,000. The conversion option adds 2,000 to parent equity reserves. Closing balances: share capital 90,000; option reserve 2,000; parent retained earnings 40,000 + 9,500 − 20,000 = 29,500; total attributable to parent owners 121,500; NCI 25,500; total equity 147,000.",
+      ),
+      text(
+        "مقتطف المركز المالي الموافق لنفس الفرض: حقوق ملكية ملاك الأم 121,500؛ حصة غير المسيطرين 25,500؛ إجمالي الحقوق 147,000؛ والتزام السند بالتكلفة المطفأة 11,000 ضمن الالتزامات غير المتداولة ما دام الاستحقاق بعد أكثر من 12 شهرًا ولا يوجد حق يفرض التسوية المبكرة. لا تُدرج حصة غير المسيطرين في التزامات المجموعة، ولا يُضاف خيار التحويل إلى رأس المال المصدر قبل التحويل الفعلي.",
+        "Matching statement-of-financial-position extract on the same assumption: parent owners' equity 121,500; NCI 25,500; total equity 147,000; bond liability at amortised cost 11,000 within non-current liabilities provided settlement is due after more than 12 months and no term requires earlier settlement. NCI is not a group liability, and the conversion option is not issued share capital before actual conversion.",
+      ),
+    ],
+    reference: "IAS 1.106–107; IAS 32.16, 22, 28–32; IFRS 9 Appendix A (effective interest method); IFRS 10.B94",
+  },
+
+  {
     id: "ifrs-book2-ifrs10-horse-hoof-full-disposal",
     standardCode: "IFRS 10",
     title: text("Horse وHoof: بيع الحصة المسيطرة بالكامل", "Horse and Hoof: disposal of the entire controlling interest"),
