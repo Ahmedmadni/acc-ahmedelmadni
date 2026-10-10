@@ -2681,6 +2681,42 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 3.39–40, 51–52, 58, B54–B55; IAS 19.11, 19–22",
   },
   {
+    id: "ifrs-book2-sirus-bank-loan-repayment",
+    standardCode: "IFRS 9",
+    title: text("Sirus: قرض مع خيار سداد بعد سبع سنوات", "Sirus: loan with a seven-year repayment option"),
+    facts: text(
+      "اقترضت Sirus مليوني دولار في 1 مايو 20X7؛ فائدة 8% سنويًا تُدفع متأخرة، وأصل القرض يستحق بعد عشر سنوات. يسمح العقد للشركة بالسداد بعد سبع سنوات بدفع أصل المليوني دولار، وفائدة السنة السابعة، وغرامة 200,000 دولار. يعطى معدل فعلي 9.1% لمسار استعمال هذا الخيار. في 30 أبريل 20X8 كانت الإدارة تناقش مبدئيًا مع البنك إمكان السداد في السنة المالية التالية، دون اتفاق معدل. لا يحدد السؤال التوقع المثبت عند نشأة القرض بشأن استعمال خيار السنوات السبع، أو تاريخ دفع أول فائدة بدقة.",
+      "Sirus borrowed $2 million on 1 May 20X7 at 8% annual interest payable in arrears, with principal due after ten years. The contract permits Sirus to repay after seven years by paying the $2 million principal, year-seven interest and a $200,000 penalty. An effective rate of 9.1% is supplied for the seven-year option path. At 30 April 20X8 management was in preliminary discussions with the bank about repayment in the following financial year, without an amended agreement. The question does not establish the inception expectation about exercise of the seven-year option or the exact first-interest payment date.",
+    ),
+    question: text(
+      "كيف تقيس Sirus القرض وتكلفة تمويله في 30 أبريل 20X8؟ وهل تجعل مباحثات السداد المبكر أصل القرض التزامًا متداولًا؟",
+      "How should Sirus measure the loan and its finance cost at 30 April 20X8, and do early-repayment discussions make its principal a current liability?",
+    ),
+    solution: [
+      text(
+        "الفائدة النقدية السنوية 2,000,000 × 8% = 160,000 دولار، لكن مصروف التمويل بالتكلفة المطفأة يستخدم معدل الفائدة الفعلي المستند إلى التدفقات المتوقعة عند الاعتراف الأولي، مع مراعاة الشروط الفعلية وتكاليف التعامل إن وجدت. لا يُختار 8% أو 9.1% من نية الإدارة في نهاية السنة وحدها.",
+        "Annual contractual interest is $2,000,000 × 8% = $160,000, but amortised-cost finance expense uses the effective interest rate based on initially estimated contractual cash flows and actual terms, including any transaction costs. Management's year-end intention alone does not select 8% or 9.1%.",
+      ),
+      text(
+        "إذا كان المسار المتوقع عند النشأة هو السداد بعد عشر سنوات بالقيمة الاسمية، ولا توجد تكاليف أو فروق أولية أخرى، تكون الفائدة الفعلية 8%: مصروف السنة 160,000 ودفع الفائدة أو إثبات مستحقها 160,000، ويبقى أصل القرض بتكلفة مطفأة قدرها مليونا دولار.",
+        "If ten-year repayment at par was expected at inception and there were no other initial costs or differences, the effective rate is 8%: first-year finance expense is $160,000, with $160,000 paid or accrued, and the principal remains at $2 million amortised cost.",
+      ),
+      text(
+        "إذا كان استعمال خيار السنوات السبع متوقعًا عند النشأة وكان 9.1% هو المعدل الفعلي الصحيح لذلك المسار، فمصروف السنة التقريبي 2,000,000 × 9.1% = 182,000 دولار. بعد فائدة نقدية 160,000، تزيد التكلفة المطفأة بنحو 22,000 إلى 2,022,000 دولار؛ قد يختلف التقريب بحسب معدل الفائدة الفعلي الدقيق وتوقيت الدفع.",
+        "If exercising the seven-year option was expected at inception and 9.1% is the correct effective rate for that path, approximate first-year expense is $2,000,000 × 9.1% = $182,000. After $160,000 contractual interest, amortised cost rises by about $22,000 to $2,022,000; rounding and payment timing can affect the precise figure.",
+      ),
+      text(
+        "إذا تغير تقدير التدفقات التعاقدية المسموح بها لاحقًا، يُعاد حساب التكلفة المطفأة بالقيمة الحالية للتدفقات المقدرة باستخدام المعدل الفعلي الأصلي ويُعترف بأثر التعديل وفق IFRS 9؛ أما التفاوض الأولي على سداد العام التالي، الذي لا يتيحه العقد الحالي، فلا يثبت وحده تعديلًا تعاقديًا نافذًا أو مبلغ إعادة قياس قابلًا للحساب.",
+        "If estimated permitted contractual cash flows subsequently change, recalculate amortised cost as their present value discounted at the original effective rate and recognise the adjustment under IFRS 9. Preliminary talks about next-year repayment, which the existing contract does not itself permit, do not alone establish an effective modification or a calculable remeasurement.",
+      ),
+      text(
+        "في 30 أبريل 20X8 لا يستحق أصل القرض خلال 12 شهرًا وفق العقد القائم؛ وأقرب سداد اختياري تعاقدي للشركة يأتي بعد سبع سنوات من بدء القرض. ما دامت Sirus تملك في تاريخ التقرير حق تأجيل تسوية أصل الدين لأكثر من 12 شهرًا، يعرض أصل القرض غير متداول حتى لو رغبت الإدارة في التفاوض على سداده مبكرًا. تصنف الفائدة المستحقة القريبة منفصلة ضمن المتداول إن لم تكن قد دفعت.",
+        "At 30 April 20X8 the principal is not contractually due within twelve months; the earliest contractual optional repayment by Sirus is seven years from origination. If Sirus has the reporting-date right to defer principal settlement beyond twelve months, classify principal as non-current even if management hopes to negotiate earlier payment. Any near-term accrued interest is current separately if unpaid.",
+      ),
+    ],
+    reference: "IFRS 9.4.2.1, Appendix A, B5.4.6; IAS 1.69(d), 75A",
+  },
+  {
     id: "ifrs-book2-sirus-director-shares",
     standardCode: "IAS 32",
     title: text(
