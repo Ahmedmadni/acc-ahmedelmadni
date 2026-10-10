@@ -15,6 +15,124 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias28-ch23-quiz-associate-definition",
+    standardCode: "IAS 28",
+    title: text("متى تُسمى المنشأة زميلة؟", "When is an investee an associate?"),
+    facts: text(
+      "يسأل تمرين تعريفي عن وصف المنشأة التي يستطيع مستثمر المشاركة في قرارات سياساتها المالية والتشغيلية من دون أن يسيطر عليها أو يشترك في السيطرة عليها.",
+      "A definition exercise asks about an investee whose financial and operating policy decisions an investor can influence without controlling or jointly controlling it."
+    ),
+    question: text("عرّف المنشأة الزميلة.", "Define an associate."),
+    solution: [
+      text(
+        "الزميلة منشأة يتمتع المستثمر عليها بتأثير مهم، ولا تكون تابعة له ولا ترتيبًا مشتركًا؛ والتأثير المهم سلطة المشاركة في القرارات المالية والتشغيلية، لا سلطة التحكم فيها.",
+        "An associate is an entity over which the investor has significant influence, but which is neither its subsidiary nor a joint arrangement. Significant influence is the power to participate in financial and operating policy decisions, not to control them."
+      ),
+      text(
+        "توجد قرينة قابلة للدحض للتأثير المهم عند امتلاك 20% أو أكثر من حقوق التصويت، مباشرة أو غير مباشرة؛ لا تكفي نسبة الأسهم وحدها إذا اختلفت عن حقوق التصويت، وقد تدل قرائن أخرى على تأثير مهم بنسبة أقل.",
+        "A direct or indirect holding of at least 20% of voting power creates a rebuttable presumption of significant influence. An ordinary-share percentage alone is insufficient if voting rights differ, and other evidence may establish influence below that threshold."
+      )
+    ],
+    reference: "IAS 28.3, 5–6",
+  },
+  {
+    id: "ifrs-book2-ias27-ch23-quiz-separate-associate",
+    standardCode: "IAS 27",
+    title: text("الزميلة في القوائم المنفصلة: ما الخيارات؟", "Associate in separate statements: what are the options?"),
+    facts: text(
+      "أعد مستثمر قوائم مالية منفصلة تتضمن استثماره في منشأة زميلة، ويسأل التمرين عن أساس المحاسبة في هذه القوائم لا في القوائم الموحدة.",
+      "An investor prepares separate financial statements including its investment in an associate. The exercise concerns the accounting policy in those separate statements, not group consolidated statements."
+    ),
+    question: text(
+      "كيف يحاسب المستثمر عن زميلته في قوائمه المالية المنفصلة؟",
+      "How does the investor account for its associate in its separate financial statements?"
+    ),
+    solution: [
+      text(
+        "يسمح IAS 27 لكل فئة من الاستثمارات في التابعات والمشروعات المشتركة والزميلات بسياسة محاسبية متسقة من ثلاثة أسس: التكلفة، أو وفق IFRS 9، أو بطريقة حقوق الملكية كما في IAS 28. لا تفرض ملكية الزميلة استخدام التكلفة في القوائم المنفصلة.",
+        "IAS 27 permits a consistent policy for each category of investments in subsidiaries, joint ventures and associates using one of three bases: cost, IFRS 9 or the IAS 28 equity method. An associate holding does not make cost mandatory in separate statements."
+      ),
+      text(
+        "افصل هذه الإجابة عن القوائم الموحدة للمستثمر؛ هناك تُطبق طريقة حقوق الملكية على الزميلة عند انطباق IAS 28، إلا إذا تحقق استثناء خاص.",
+        "Keep this separate from the investor's consolidated financial statements, where an associate is equity-accounted under IAS 28 unless a specific exemption applies."
+      )
+    ],
+    reference: "IAS 27.9–10; IAS 28.16–17",
+  },
+  {
+    id: "ifrs-book2-ias28-ch23-quiz-equity-method-effect",
+    standardCode: "IAS 28",
+    title: text("أثر طريقة حقوق الملكية في الأداء والمركز المالي", "Equity method effects on performance and financial position"),
+    facts: text(
+      "لدى مجموعة استثمار في زميلة تتأثر قيمته بأرباح الزميلة وخسائرها وتوزيعاتها بعد الاقتناء. لا يطلب السؤال قيمة رقمية بل موضع الأثر في قائمتين موحدتين.",
+      "A group has an associate investment whose carrying amount responds to the associate's post-acquisition profits, losses and distributions. The exercise asks for statement effects rather than a numerical amount."
+    ),
+    question: text(
+      "ما أثر طريقة حقوق الملكية في قائمة الربح أو الخسارة الموحدة وقائمة المركز المالي الموحدة؟",
+      "How does the equity method affect the consolidated statement of profit or loss and the consolidated statement of financial position?"
+    ),
+    solution: [
+      text(
+        "في الربح أو الخسارة تثبت المجموعة نصيبها من ربح الزميلة أو خسارتها بعد الضريبة كبند مستقل؛ لا تضم إيرادات الزميلة ومصروفاتها بندًا ببند، ولا تعامل توزيعاتها على أنها ربح إضافي فوق نصيب الأرباح.",
+        "In profit or loss, the group recognises its share of the associate's after-tax profit or loss as one line. It does not consolidate the associate's individual revenue and expense lines, nor count distributions as extra income in addition to its profit share."
+      ),
+      text(
+        "في المركز المالي يبدأ الاستثمار بالتكلفة، ثم يُزاد أو يُخفض بنصيب النتائج والدخل الشامل الآخر اللاحقين للاقتناء، وتخفضه التوزيعات المستلمة. تُراجع الفروق عند الاقتناء والمعاملات بين الطرفين والانخفاض في القيمة إذا توفرت وقائعها؛ لا تنحصر الحركة دائمًا في الأرباح فقط.",
+        "In financial position, the investment starts at cost, changes for the group's post-acquisition share of profit or loss and other comprehensive income, and decreases for distributions received. Acquisition differences, investor–associate transactions and impairment need assessment when facts arise; the roll-forward is not always limited to profit alone."
+      )
+    ],
+    reference: "IAS 28.10, 28, 32, 40–43",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch23-quiz-alpha-bravo-gamma-revenue",
+    standardCode: "IFRS 10",
+    title: text("Alpha وBravo وGamma: الإيراد بعد الاقتناء", "Alpha, Bravo and Gamma: post-acquisition revenue"),
+    facts: text(
+      "اشترت Alpha في 1 سبتمبر 20X5 نسبة 80% من أسهم Bravo ونسبة 30% من أسهم Gamma. إيرادات السنة المنتهية في 31 ديسمبر 20X5 هي 2.1 مليون لـAlpha و1.5 مليون لـBravo و0.9 مليون لـGamma. لا يقدم السؤال إيراد Bravo الفعلي من سبتمبر إلى ديسمبر ولا بيانات تعاملات بين الشركات. لغرض الحل الحسابي الوارد في التمرين فقط يُفترض أن نسبة الأسهم تعكس السيطرة على Bravo والتأثير المهم على Gamma وأن إيرادات Bravo انتظمت خلال السنة.",
+      "On 1 September 20X5 Alpha acquired 80% of Bravo's shares and 30% of Gamma's shares. Revenue for the year ended 31 December 20X5 was 2.1 million for Alpha, 1.5 million for Bravo and 0.9 million for Gamma. The question does not provide Bravo's actual September–December revenue or intragroup sales. Solely for the exercise's numerical illustration, assume the holdings reflect control of Bravo and significant influence over Gamma and that Bravo's revenue was earned evenly."
+    ),
+    question: text(
+      "ما الإيراد الذي يعرض في قائمة الربح أو الخسارة الموحدة لـAlpha للسنة المنتهية في 31 ديسمبر 20X5؟",
+      "What revenue appears in Alpha's consolidated statement of profit or loss for the year ended 31 December 20X5?"
+    ),
+    solution: [
+      text(
+        "تضم المجموعة إيراد Alpha السنوي 2.1 مليون وإيراد Bravo كاملاً عن فترة السيطرة فقط، لا 80% منه. على افتراض انتظام الإيراد: 1.5 مليون × 4/12 = 0.5 مليون؛ فيكون الإجمالي التوضيحي 2.6 مليون قبل أي حذف لمبيعات داخلية. لا تضاف نسبة 30% من إيراد Gamma؛ تعرض حصة أرباحها بعد الضريبة وفق IAS 28 لا مبيعاتها.",
+        "The group includes Alpha's full-year 2.1 million and 100% of Bravo's revenue only during the period of control, not 80% of it. Assuming even earning: 1.5 million × 4/12 = 0.5 million; illustrative total revenue is 2.6 million before any intragroup eliminations. Do not add 30% of Gamma's revenue: IAS 28 reports a share of its after-tax result, not its sales."
+      ),
+      text(
+        "الرقم 2.6 مليون مشروط بالتبسيط التعليمي؛ لا يفرض IFRS 10 توزيع إيراد Bravo على الأشهر بالتساوي. إذا اختلف إيراد الأشهر الفعلي أو وُجدت مبيعات بين شركات المجموعة، يلزم سجلها لتحديد رقم نهائي صحيح.",
+        "The 2.6 million figure depends on the teaching simplification; IFRS 10 does not require an even monthly allocation of Bravo's revenue. Actual monthly revenue and intragroup sales records are needed for a definitive figure if either differs."
+      )
+    ],
+    reference: "IFRS 10.7, 20, B86(c), B88; IAS 28.5–6, 10",
+  },
+  {
+    id: "ifrs-book2-ias28-ch23-quiz-associate-inventory",
+    standardCode: "IAS 28",
+    title: text("بضاعة في مخزون الزميلة: أي مخزون يُعدل؟", "Goods held by an associate: which inventory is adjusted?"),
+    facts: text(
+      "باعت أم بضاعة إلى زميلة تملك منها 30% ونتج ربح بيع 100,000. بقيت البضاعة كلها لدى الزميلة في نهاية السنة. يفترض السؤال استمرار التأثير المهم وأن البضاعة أصلًا عاديًا لا يمثل نشاطًا تجاريًا.",
+      "A parent sold goods to a 30%-owned associate and earned a sales profit of 100,000. All the goods remained in the associate's inventory at year-end. Assume continuing significant influence and that the goods are ordinary assets, not a business."
+    ),
+    question: text(
+      "ما التعديل المطلوب في رقم المخزون بقائمة المركز المالي الموحدة بسبب هذا الربح غير المحقق؟",
+      "What adjustment to consolidated statement of financial position inventory is required because of this unrealised profit?"
+    ),
+    solution: [
+      text(
+        "تعديل مخزون المجموعة يساوي صفرًا؛ لأن مخزون الزميلة لا يضاف بندًا ببند إلى مخزون الأم وتابعاتها. لا تخفض مخزون المجموعة بقيمة 100,000 ولا بنصيب 30,000، ما دامت البضاعة ليست لدى منشأة موحدة.",
+        "The adjustment to group inventory is zero because the associate's inventory is not added line by line to the parent and subsidiaries' inventory. Reduce group inventory by neither 100,000 nor 30,000 while the goods are held outside the consolidated group."
+      ),
+      text(
+        "لكن نصيب المجموعة من ربح البيع غير المحقق = 30% × 100,000 = 30,000. يُخفض ربح المجموعة والاستثمار في الزميلة بهذا المقدار وفق IAS 28.28، مع بقاء الجزء المنسوب إلى المستثمرين الآخرين 70,000 معترفًا به. موقع التسوية في الاستثمار لا يغير جواب السؤال عن المخزون: صفر.",
+        "The group's share of unrealised sale profit is nevertheless 30% × 100,000 = 30,000. Reduce group profit and the associate investment by that amount under IAS 28.28; the other investors' 70,000 share remains recognised. Adjusting the investment does not change the answer about inventory: zero."
+      )
+    ],
+    reference: "IAS 28.28; IFRS 10.B86(c)",
+  },
+
+  {
     id: "ifrs-book2-ias28-p-a-investment-amount",
     standardCode: "IAS 28",
     title: text("P وA: رصيد الاستثمار في الزميلة عند الإقفال", "P and A: closing associate investment"),
