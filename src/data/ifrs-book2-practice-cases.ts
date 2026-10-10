@@ -15,6 +15,43 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias28-parent-associate-summary",
+    standardCode: "IAS 28",
+    title: text("مجموعة Parent والزميلة Associate: قائمتان مختصرتان", "Parent group and Associate: two summarised statements"),
+    facts: text(
+      "الأرقام بالآلاف. اشترت مجموعة Parent نسبة 40% من رأس مال Associate قبل ثلاث سنوات حين كانت احتياطيات Associate تساوي 40. في تاريخ التقرير لدى مجموعة Parent أصول ثابتة ملموسة 220، واستثمار في Associate بالتكلفة 60، وقرض لها 20، وأصول متداولة 100؛ ورأس مال 250 وأرباح محتجزة 150. لدى Associate أصول ثابتة 170 وأصول متداولة 50، وعليها قرض لمجموعة Parent قدره 20؛ ورأس مال 100 وأرباح محتجزة 100. ربح مجموعة Parent قبل الضريبة 95 وضريبتها 35، وربح Associate قبل الضريبة 80 وضريبتها 30. يُفترض أن أصول والتزامات Associate بالقيمة العادلة وألا توجد حصص غير مسيطرة في الشركات التابعة. ولتطبيق المثال يُفترض استمرار التأثير المهم وعدم وجود توزيعات أو انخفاض قيمة أو تعديلات أخرى غير مذكورة.",
+      "Figures are in thousands. Parent group acquired 40% of Associate three years ago when Associate's reserves were 40. At the reporting date Parent group's tangible non-current assets are 220, its investment in Associate at cost is 60, its loan to Associate is 20, and current assets are 100; share capital is 250 and retained earnings 150. Associate has tangible non-current assets of 170, current assets of 50, a loan payable to Parent group of 20, share capital of 100 and retained earnings of 100. Parent group's pre-tax profit is 95 and tax expense 35; Associate's pre-tax profit is 80 and tax expense 30. Associate's assets and liabilities are assumed to be at fair value, with no NCI in Parent's subsidiaries. The illustration assumes significant influence continues and no unmentioned distributions, impairment or other adjustments."
+    ),
+    question: text(
+      "أعد قائمة مختصرة للربح أو الخسارة وقائمة مركز مالي موحدة لمجموعة Parent، مع بيان معالجة القرض إلى الزميلة.",
+      "Prepare Parent group's summarised consolidated statement of profit or loss and statement of financial position, including the treatment of the loan to Associate."
+    ),
+    solution: [
+      text(
+        "تعالج Associate زميلة بطريقة حقوق الملكية، بافتراض تحقق التأثير المهم، ولا تُضاف أصولها 170 و50 أو التزاماتها وإيراداتها ومصاريفها بندًا ببند إلى المجموعة. ربحها بعد الضريبة = 80 − 30 = 50؛ حصة المجموعة في الربح = 40% × 50 = 20. يظهر مبلغ 20 في بند مستقل «حصة في ربح زميلة»؛ فلا تُضاف ضريبة Associate البالغة 30 إلى ضريبة المجموعة.",
+        "Subject to significant influence, Associate is equity-accounted rather than consolidated line by line. Its assets of 170 and 50, liabilities, revenue and expenses are not added individually to group amounts. Associate's after-tax profit is 80 − 30 = 50; the group's share is 40% × 50 = 20. Report 20 as a separate share-of-associate-profit line; do not add Associate's tax expense of 30 to group tax."
+      ),
+      text(
+        "قائمة الربح أو الخسارة المختصرة، بالآلاف: ربح مجموعة Parent قبل حصة الزميلة والضريبة 95؛ زائد حصة ربح الزميلة 20؛ الربح قبل ضريبة المجموعة 115؛ مصروف ضريبة المجموعة (35)؛ ربح السنة 80. لا تعني ملكية 40% إضافة 40% من إيرادات Associate ومصروفاتها كل على حدة.",
+        "Summarised profit or loss, in thousands: Parent group's profit before associate share and group tax 95; add share of Associate's profit 20; profit before group tax 115; group tax expense (35); profit for the year 80. A 40% holding does not mean adding 40% of Associate's revenue and expenses line by line."
+      ),
+      text(
+        "الاحتياطيات اللاحقة للاقتناء في Associate = 100 − 40 = 60؛ حصة المجموعة المتراكمة = 40% × 60 = 24. لذا قيمة الاستثمار في الزميلة = التكلفة 60 + 24 = 84، والأرباح المحتجزة الموحدة = 150 + 24 = 174. حصة الربح الجاري 20 جزء من التغير المتراكم 24 وليست إضافة ثانية إليه.",
+        "Associate's post-acquisition reserves = 100 − 40 = 60; the group's cumulative share is 40% × 60 = 24. Investment in Associate is therefore cost 60 + 24 = 84, and consolidated retained earnings are 150 + 24 = 174. The current-year profit share of 20 is part of the cumulative 24, not a second addition."
+      ),
+      text(
+        "قائمة المركز المالي المختصرة، بالآلاف: أصول ثابتة ملموسة 220 + استثمار في زميلة 84 + قرض إلى الزميلة 20 + أصول متداولة 100 = إجمالي أصول 424. يقابلها رأس مال Parent البالغ 250 + أرباح محتجزة موحدة 174 = 424. لا تُحذف قيمة القرض 20 مع دين الزميلة المقابل لأن Associate ليست منشأة تابعة تُوحد بندًا ببند؛ يبقى قرض المجموعة أصلًا مستقلًا، ويخضع عند اللزوم لمتطلبات IFRS 9 بشأن الائتمان والخسائر المتوقعة دون اختلاق مبلغ من المعطيات.",
+        "Summarised financial position, in thousands: tangible non-current assets 220 + investment in Associate 84 + loan to Associate 20 + current assets 100 = total assets 424. This equals Parent share capital 250 + consolidated retained earnings 174 = 424. Do not cancel the 20 loan against Associate's payable because an associate is not consolidated line by line; Parent's loan remains a separate asset, subject where relevant to IFRS 9 credit-loss requirements without inventing an amount from the facts."
+      ),
+      text(
+        "فحص مزدوج: الزيادة في رصيد الاستثمار 84 − 60 = 24 تساوي زيادة الأرباح المحتجزة 174 − 150 = 24؛ والربح السنوي 80 = ربح مجموعة Parent بعد ضريبتها 60 + حصة ربح الزميلة 20. لا تكفي الوقائع لاستنتاج ربح استحواذ أو فرق قيمة عادلة أو استبعاد خسارة ائتمانية.",
+        "Cross-check: the investment increase 84 − 60 = 24 equals the retained-earnings increase 174 − 150 = 24; current-year profit 80 equals Parent group's own after-tax 60 plus the 20 associate profit share. The facts do not support inventing an acquisition gain, fair-value adjustment or credit-loss amount."
+      )
+    ],
+    reference: "IAS 28.5–6, 10; IAS 1.82(c); IFRS 9.5.5",
+  },
+
+  {
     id: "ifrs-book2-ias28-p-a-associate-profit-dividend",
     standardCode: "IAS 28",
     title: text("P وA: حصة ربح الزميلة مقابل توزيعاتها", "P and A: associate profit share versus dividend income"),
