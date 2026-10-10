@@ -8,6 +8,56 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 16": {
+    sections: [
+      {
+        title: text("فائض إعادة التقييم عند الاستخدام والاستبعاد", "Revaluation surplus during use and on derecognition"),
+        explanation: text(
+          "يُعرض فائض إعادة تقييم الأصل ضمن حقوق الملكية بعد الاعتراف بالزيادة في الدخل الشامل الآخر وفق شروط IAS 16. يجوز تحويل الجزء المتحقق منه مباشرةً إلى الأرباح المحتجزة عندما يُستبعد الأصل، أو تدريجيًا أثناء استخدامه بمقدار الفرق بين الإهلاك على القيمة المعاد تقييمها والإهلاك على التكلفة الأصلية. هذا التحويل داخل حقوق الملكية ولا يمر عبر الربح أو الخسارة. وعند بيع الأصل، يُحسب ربح الاستبعاد منفصلًا بوصفه صافي المتحصلات ناقص القيمة الدفترية في تاريخ البيع؛ لا تخلط بينه وبين تحويل الفائض.",
+          "A qualifying upward revaluation is recognised in other comprehensive income and accumulated in equity as a revaluation surplus under IAS 16. The realised portion may be transferred directly to retained earnings when the asset is derecognised, or progressively as it is used for the difference between depreciation on the revalued amount and depreciation on original cost. This is an equity-to-equity transfer, never a profit-or-loss item. On disposal, calculate the separate derecognition gain as net proceeds less the asset's carrying amount at the sale date; do not confuse it with the surplus transfer.",
+        ),
+        keyPoints: [
+          text("حدد فائض الأصل المحدد، لا رصيد احتياطي إعادة التقييم الكلي للشركة.", "Track the surplus of the particular asset, not the entity's entire revaluation reserve."),
+          text("احسب التحويل السنوي الاختياري من فرق الإهلاك، ثم اطرح ما نُقل بالفعل قبل الاستبعاد.", "Calculate any optional annual transfer from excess depreciation, then deduct amounts already transferred before disposal."),
+          text("اعرض ربح بيع الأصل في الربح أو الخسارة وتحويل باقي الفائض في حقوق الملكية دون تدويره في الربح أو الخسارة.", "Show any disposal gain in profit or loss and the residual-surplus transfer within equity, without recycling the surplus through profit or loss."),
+        ],
+        reference: "IAS 16.39–41, 67–71",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Gains: فائض أصل أُعيد تقييمه ثم بيع", "Gains: a revalued asset subsequently sold"),
+        facts: text(
+          "كانت القيمة الدفترية لأصل 30,000 دولار عند إعادة تقييمه، وزادت قيمته حينها بمبلغ 50,000 إلى 80,000. يبلغ عمر الإهلاك المستخدم في السؤال عشر سنوات. بعد ثلاث سنوات أظهر السجل إهلاكًا تراكميًا 24,000 على المبلغ المعاد تقييمه، ثم بيع الأصل بمبلغ 60,000. تنقل المنشأة فائض الإهلاك المتحقق إلى الأرباح المحتجزة أثناء الاستخدام. لا يورد السؤال أثرًا ضريبيًا لهذه الأرقام.",
+          "At revaluation an asset's carrying amount was US$30,000 and the uplift was US$50,000 to US$80,000. The question uses a ten-year depreciation period. After three years it shows cumulative depreciation of US$24,000 on the revalued amount, and the asset is sold for US$60,000. The entity transfers realised excess-depreciation surplus to retained earnings during use. No tax effect is specified for these figures.",
+        ),
+        calculations: [
+          text("الإهلاك السنوي بعد إعادة التقييم = 80,000 ÷ 10 = 8,000؛ وعلى المبلغ الأصلي = 30,000 ÷ 10 = 3,000؛ الفرق المحوّل خلال ثلاث سنوات = (8,000 − 3,000) × 3 = 15,000 دولار.", "Annual depreciation on revalued amount = 80,000 ÷ 10 = 8,000; on original amount = 30,000 ÷ 10 = 3,000; three-year excess transferred = (8,000 − 3,000) × 3 = US$15,000."),
+          text("فائض إعادة التقييم المتبقي قبل البيع = 50,000 − 15,000 = 35,000 دولار.", "Residual revaluation surplus immediately before sale = 50,000 − 15,000 = US$35,000."),
+          text("القيمة الدفترية عند البيع = 80,000 − 24,000 = 56,000؛ وربح الاستبعاد المنفصل = 60,000 − 56,000 = 4,000 دولار.", "Carrying amount at disposal = 80,000 − 24,000 = 56,000; separate disposal gain = 60,000 − 56,000 = US$4,000."),
+        ],
+        conclusion: text(
+          "يمكن تحويل 35,000 دولار مباشرةً من فائض إعادة التقييم إلى الأرباح المحتجزة عند البيع. هذه حركة داخل حقوق الملكية، مستقلة عن ربح الاستبعاد البالغ 4,000 دولار المعترف به في الربح أو الخسارة. تجنب إدخال 35,000 مرة ثانية في ربح الفترة.",
+          "US$35,000 may be transferred directly from revaluation surplus to retained earnings on disposal. This equity movement is distinct from the US$4,000 disposal gain recognised in profit or loss. Do not count the US$35,000 a second time in current-period profit.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات البيع وربح الاستبعاد", "Record sale and derecognition gain"),
+            debit: text("نقدية 60,000", "Cash 60,000"),
+            credit: text("أصل ثابت 56,000 + ربح استبعاد 4,000", "Property, plant and equipment 56,000 + disposal gain 4,000"),
+            amount: text("60,000 لكل جانب", "60,000 on each side"),
+          },
+          {
+            label: text("تحويل الفائض المتبقي داخل حقوق الملكية", "Transfer residual surplus within equity"),
+            debit: text("فائض إعادة التقييم 35,000", "Revaluation surplus 35,000"),
+            credit: text("أرباح محتجزة 35,000", "Retained earnings 35,000"),
+            amount: text("35,000 لكل جانب", "35,000 on each side"),
+          },
+        ],
+        reference: "IAS 16.41, 67–71",
+      },
+    ],
+  },
   "IFRS 11": {
     sections: [
       {
