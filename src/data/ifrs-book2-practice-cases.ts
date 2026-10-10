@@ -2551,6 +2551,42 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 37.14–22, 36, 45; IAS 16.16(c)–18",
   },
   {
+    id: "ifrs-book2-biogenics-development-patent-list",
+    standardCode: "IAS 38",
+    title: text("Biogenics: تطوير الدواء والبراءة وقائمة الأطباء", "Biogenics: drug development, patent and GP list"),
+    facts: text(
+      "خلال السنة المنتهية في 31 ديسمبر 20X9 أنفقت Biogenics ستة ملايين دولار على تطوير دواء للسمنة. حصل الدواء على موافقة سريرية في 1 يوليو 20X9 وأصبح ناجحًا تجاريًا، ويتوقع المديرون أن يحقق ربحًا خلال 12 شهرًا من الموافقة. سُجلت براءة في 1 يوليو بتكلفة 1.5 مليون دولار وتسري ثلاث سنوات. وفي 1 سبتمبر اشترت الشركة قائمة حديثة بأطباء الممارسة العامة مقابل 500,000 دولار وتستخدمها في زيارات ترويجية؛ ويتوقع أن تولد مبيعات طوال دورة حياة الدواء. لا تفصل الوقائع إنفاق التطوير قبل تاريخ تحقق شروط IAS 38 وبعده، ولا تحدد تاريخ جاهزية الدواء للاستعمال، أو العمر النافع المحدد للقائمة.",
+      "During the year ended 31 December 20X9 Biogenics spent $6 million developing an obesity drug. It received clinical approval on 1 July 20X9 and is proving commercially successful; directors expect a profit within 12 months of approval. A patent was registered on 1 July at a cost of $1.5 million and lasts three years. On 1 September the company bought an up-to-date list of general practitioners for $500,000 and uses it for promotional visits; sales are expected throughout the drug's life cycle. The facts do not split development spending before and after the IAS 38 criteria date, identify when the drug became available for use, or quantify the list's useful life.",
+    ),
+    question: text(
+      "ما الأصول والمصروفات المتعلقة بتطوير الدواء والبراءة والقائمة التي يمكن إثباتها في 31 ديسمبر 20X9؟ وما الأرقام التي لا يمكن تحديدها من هذه الوقائع؟",
+      "Which drug-development, patent and list assets or expenses can be supported at 31 December 20X9, and which amounts cannot be determined from these facts?",
+    ),
+    solution: [
+      text(
+        "لا تُرسمل الستة ملايين دولار كلها لمجرد الموافقة السريرية أو النجاح اللاحق. يبدأ أصل التطوير من تاريخ إثبات جميع شروط IAS 38.57، بما فيها الجدوى الفنية، والنية والقدرة على الاستخدام أو البيع، والمنافع المتوقعة، والموارد، والقياس الموثوق. يُصرف الإنفاق السابق لذلك التاريخ ولا يعاد إحياؤه أصلًا لاحقًا. لا يحدد السؤال متى استوفيت الشروط الستة ولا مقدار الإنفاق منذ ذلك التاريخ؛ لذا لا يمكن استخراج تكلفة أصل التطوير أو مصروفه النهائيين.",
+        "Do not capitalise the entire $6 million merely because of clinical approval or later success. A development asset begins when all IAS 38.57 criteria can be demonstrated, including feasibility, intention and ability to use or sell, probable benefits, resources and reliable measurement. Earlier expenditure remains expense and cannot later be reinstated as an asset. The question states neither the date all six criteria were met nor spending thereafter, so definitive development-asset cost and expense cannot be calculated.",
+      ),
+      text(
+        "تكلفة البراءة المسجلة 1.5 مليون دولار تُحلل حقًا قانونيًا قابلًا للتحديد؛ وتبدأ تكلفة حق مؤهل من المبلغ المدفوع، مع فحص ما إذا كان جزءًا من أصل التطوير أو أصلًا منفصلًا لتجنب ازدواج التكلفة. مدة الحماية القانونية ثلاث سنوات ليست دليلًا على عمر اقتصادي أطول منها. يبدأ الإطفاء عند إتاحة الأصل للاستخدام، لا لمجرد دفع التكلفة أو توقع الربح.",
+        "Analyse the registered $1.5 million patent as an identifiable legal right measured from its qualifying cost, while assessing whether it is part of the development asset or a separate asset to avoid double-counting. Its three-year legal protection does not support a longer economic useful life. Amortisation starts when the asset is available for use, not merely when paid for or when profit is forecast.",
+      ),
+      text(
+        "إذا كانت البراءة متاحة للاستخدام من 1 يوليو، وكان عمرها النافع ثلاث سنوات، وقيمتها المتبقية صفرًا، واستخدم القسط الثابت، يصبح إطفاء ستة أشهر = 1,500,000 ÷ 3 × 6 ÷ 12 = 250,000 دولار، والقيمة الدفترية 1,250,000 دولار قبل أي انخفاض. هذه أرقام مشروطة؛ إن اختلف تاريخ الإتاحة أو العمر الاقتصادي تغيرت.",
+        "If the patent was available for use on 1 July, its useful life is three years, residual value is nil and straight-line amortisation is appropriate, six months' amortisation is $1,500,000 ÷ 3 × 6 ÷ 12 = $250,000 and carrying amount is $1,250,000 before impairment. These figures are conditional; a different availability date or economic life changes them.",
+      ),
+      text(
+        "القائمة مشتراة من الغير مقابل 500,000 دولار، فلا تُطبق عليها آليًا قاعدة منع إثبات القوائم المولدة داخليًا. اختبر قابلية فصل حق القائمة وسيطرة الشركة عليه والمنافع المستقبلية؛ إن استوفت تعريف وشروط الأصل غير الملموس تثبت بالتكلفة، ثم يبدأ إطفاؤها من تاريخ إتاحتها للاستخدام على عمرها النافع. عبارة «دورة حياة الدواء» لا تحدد عدد الأشهر، ولا تسمح بافتراض 34 شهرًا أو مصروف إطفاء معين في 20X9.",
+        "The $500,000 list was bought from a third party, so the prohibition on recognising internally generated lists does not automatically apply. Test separability, the entity's control and future benefits; if it meets the intangible-asset definition and recognition criteria, record its cost and amortise from the available-for-use date over its useful life. 'Drug life cycle' supplies no number of months and does not justify assuming 34 months or a specific 20X9 amortisation charge.",
+      ),
+      text(
+        "تكاليف الزيارات الترويجية نفسها مصروفات عند تلقي الخدمات، ولا تدخل تلقائيًا في تكلفة القائمة أو الدواء؛ لم يعط السؤال مبلغها. لذلك لا يمكن إعداد مجموع نهائي موثوق للأصول غير الملموسة أو الإطفاء أو مصروف السنة من البنود الثلاثة دون سجل الإنفاق وتواريخ الجاهزية وتقدير عمر القائمة.",
+        "Promotional-visit costs themselves are expensed as services are received and are not automatically added to the list or drug; their amount is unstated. A reliable total for intangible assets, amortisation or current-year expense from these three items therefore requires the spending schedule, availability dates and estimated list life.",
+      ),
+    ],
+    reference: "IAS 38.18–23, 25–32, 54–57, 63–67, 69, 71, 88–97",
+  },
+  {
     id: "ifrs-book2-biogenics-research-project",
     standardCode: "IAS 38",
     title: text(
