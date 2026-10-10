@@ -15,6 +15,43 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias1-bull-lamb-changes-in-equity",
+    standardCode: "IAS 1",
+    title: text("Bull وLamb: التغيرات الموحدة في حقوق الملكية", "Bull and Lamb: consolidated changes in equity"),
+    facts: text(
+      "تعد مجموعة Bull قائمتها للسنة المنتهية في 30 أبريل 20X7، والأرقام بالآلاف. ربح المجموعة بعد الضريبة 340، منه 332 لملاك الأم و8 لغير المسيطرين. ربح إعادة تقييم عقار ضمن الدخل الشامل الآخر 300؛ لذا إجمالي الدخل الشامل 640، منه 592 للأم و48 لغير المسيطرين. دفعت Bull توزيعات 200 ودفعت تابعتها Lamb توزيعات 30. أرباح Bull/احتياطياتها في أول السنة 360 وفي آخرها 584، ولدى Lamb 105 و315 على الترتيب. رأس مال Bull هو 5,000 ورأس مال Lamb هو 1,000. اشترت Bull نسبة 80% من Lamb في 20X0 عندما كان رصيد احتياطيات Lamb 50، ولم يكن لأي منهما فائض إعادة تقييم قبل السنة الحالية. تقيس المجموعة حصة غير المسيطرين بنسبة حصتها في صافي أصول التابعة. يُستخدم تاريخا 30 أبريل 20X6 و30 أبريل 20X7 لرصيدَي الافتتاح والإقفال وفق سنة السؤال.",
+      "The Bull group prepares its statement for the year ended 30 April 20X7, with figures in thousands. Group after-tax profit is 340, attributed 332 to parent owners and 8 to NCI. A property revaluation gain of 300 is in OCI; total comprehensive income is therefore 640, attributed 592 to parent owners and 48 to NCI. Bull paid dividends of 200 and its subsidiary Lamb paid dividends of 30. Bull's opening and closing reserves are 360 and 584; Lamb's are 105 and 315. Bull's share capital is 5,000 and Lamb's is 1,000. Bull acquired 80% of Lamb in 20X0 when Lamb's reserves were 50; neither entity had a revaluation surplus before the current year. The group uses proportionate-share NCI measurement. Opening and closing dates are 30 April 20X6 and 30 April 20X7, consistently with the question's reporting year.",
+    ),
+    question: text(
+      "أعد قائمة التغيرات في حقوق الملكية الموحدة لمجموعة Bull عن السنة المنتهية في 30 أبريل 20X7.",
+      "Prepare the Bull group consolidated statement of changes in equity for the year ended 30 April 20X7.",
+    ),
+    solution: [
+      text(
+        "حقوق ملاك الأم افتتاحًا = رأس مال Bull فقط 5,000 + احتياطياتها 360 + 80% × احتياطيات Lamb اللاحقة للاقتناء (105 − 50) = 5,404. حصة غير المسيطرين افتتاحًا = 20% × [رأس مال Lamb 1,000 + احتياطياتها 105] = 221. مجموع حقوق الملكية الافتتاحي = 5,625. لا يضاف رأس مال Lamb إلى رأس مال المجموعة.",
+        "Opening parent-owner equity = Bull share capital only 5,000 + Bull reserves 360 + 80% × Lamb post-acquisition reserves (105 − 50) = 5,404. Opening NCI = 20% × [Lamb share capital 1,000 + reserves 105] = 221. Total opening equity is 5,625. Lamb's share capital is not added to group share capital.",
+      ),
+      text(
+        "يُنسب ربح السنة 332 للأم و8 لغير المسيطرين. الدخل الشامل الآخر المنسوب للأم = 592 − 332 = 260؛ ولغير المسيطرين = 48 − 8 = 40؛ والمجموع 300 كما في المعطيات. تعرض قائمة التغيرات إجمالي الدخل الشامل 592 في عمود ملاك الأم و48 في عمود غير المسيطرين، ولا يوضع كله في عمود الأرباح المحتجزة إذا عُرض فائض إعادة التقييم في احتياطي مستقل.",
+        "Attribute current-year profit 332 to the parent and 8 to NCI. Parent OCI = 592 − 332 = 260; NCI OCI = 48 − 8 = 40, totalling the supplied 300. Show total comprehensive income of 592 in the parent column and 48 in the NCI column; do not put all OCI into retained earnings if the revaluation surplus is displayed in a separate reserve.",
+      ),
+      text(
+        "توزيع Bull البالغ 200 يخفض حقوق ملاك الأم. من توزيع Lamb البالغ 30، يخرج من المجموعة فقط نصيب غير المسيطرين = 20% × 30 = 6 فينخفض عمودهم؛ أما نصيب الأم 24 فهو توزيع داخل المجموعة لا يظهر كتوزيع خارجي ثانٍ. وعليه يتصالح الإجمالي: 5,625 + 640 − 200 − 6 = 6,059.",
+        "Bull's 200 dividend reduces parent-owner equity. Of Lamb's 30 dividend, only NCI's 20% × 30 = 6 leaves the group and reduces the NCI column; the parent's 24 share is intragroup and not a second external distribution. Total equity reconciles: 5,625 + 640 − 200 − 6 = 6,059.",
+      ),
+      text(
+        "حقوق ملاك الأم إقفالًا = 5,404 + 592 − 200 = 5,796؛ ويمكن إثباتها استقلالًا: 5,000 + احتياطيات Bull 584 + 80% × (احتياطيات Lamb 315 − 50 عند الاقتناء) = 5,796. حصة غير المسيطرين إقفالًا = 221 + 48 − 6 = 263؛ وتساوي 20% × (1,000 + 315). إجمالي الإقفال = 5,796 + 263 = 6,059.",
+        "Closing parent-owner equity = 5,404 + 592 − 200 = 5,796; independently, 5,000 + Bull reserves 584 + 80% × (Lamb reserves 315 − 50 at acquisition) = 5,796. Closing NCI = 221 + 48 − 6 = 263; it also equals 20% × (1,000 + 315). Closing total = 5,796 + 263 = 6,059.",
+      ),
+      text(
+        "تُعنون بداية القائمة 30 أبريل 20X6 ونهايتها 30 أبريل 20X7، اتساقًا مع السنة المطلوبة؛ أي تواريخ افتتاح أو إقفال مختلفة في نموذج عرض لا تتوافق مع وقائع السؤال. ولعرض تفصيلي حسب مكونات حقوق الملكية، يُفصل ربح السنة عن فائض إعادة التقييم بدل عرضهما كحركة واحدة غير مفصلة.",
+        "Label the statement's opening and closing balances 30 April 20X6 and 30 April 20X7, consistent with the requested reporting year; different opening or closing dates in a sample presentation would not match the question. For component-by-component presentation, separate current-year profit from the revaluation surplus rather than leave them as one undifferentiated movement.",
+      ),
+    ],
+    reference: "IAS 1.106–108; IFRS 10.B86(c), B94; IAS 16.39",
+  },
+
+  {
     id: "ifrs-book2-ias1-delta-group-changes-in-equity",
     standardCode: "IAS 1",
     title: text("Delta: قائمة التغيرات في حقوق الملكية وسند قابل للتحويل", "Delta: consolidated changes in equity and a convertible bond"),
