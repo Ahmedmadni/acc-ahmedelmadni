@@ -15,6 +15,43 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias28-p-a-associate-profit-dividend",
+    standardCode: "IAS 28",
+    title: text("P وA: حصة ربح الزميلة مقابل توزيعاتها", "P and A: associate profit share versus dividend income"),
+    facts: text(
+      "لدى P شركات تابعة، واشترت في 1 يناير 20X8 عدد 25,000 من أصل 100,000 سهم عادي في A مقابل 60,000. حققت A خلال السنة المنتهية في 31 ديسمبر 20X8 ربحًا قدره 24,000 ودفعت توزيعات إجمالية 6,000. تُفترض في المثال مساواة نسبة الأسهم العادية لنسبة حقوق التصويت واستمرار التأثير المهم، وعدم وجود فروق قيمة عادلة أو انخفاض أو معاملات مع الزميلة مذكورة. لم تُحدد سياسة P في قوائمها المنفصلة، لذا يوضح الحل بديل التكلفة رقميًا ويفصل البدائل الأخرى.",
+      "P has subsidiaries and on 1 January 20X8 acquired 25,000 of A's 100,000 ordinary shares for 60,000. For the year ended 31 December 20X8, A earned profit of 24,000 and paid total dividends of 6,000. For this example ordinary-share ownership is assumed to match voting power, significant influence continues, and no fair-value adjustments, impairment or transactions with the associate are supplied. P's separate-statement policy is unspecified, so the numerical illustration uses cost and distinguishes other permitted policies.",
+    ),
+    question: text(
+      "كيف تُعالج نتائج A وتوزيعاتها في القوائم المنفصلة لـP وفي قوائم مجموعتها الموحدة للسنة المنتهية في 31 ديسمبر 20X8؟",
+      "How are A's results and dividends accounted for in P's separate and group consolidated financial statements for the year ended 31 December 20X8?",
+    ),
+    solution: [
+      text(
+        "امتلاك 25% من حقوق التصويت، بافتراض مساواتها لحصة الأسهم، يولد قرينة تأثير مهم قابلة للدحض وفق IAS 28؛ فإذا ثبتت تكون A زميلة لا تابعة، ولا تُدمج إيراداتها ومصروفاتها بندًا ببند. نصيب P من ربح السنة = 25% × 24,000 = 6,000، ونصيبها من التوزيعات = 25% × 6,000 = 1,500.",
+        "A 25% voting interest, assuming it matches the ordinary-share holding, creates the rebuttable IAS 28 presumption of significant influence. If established, A is an associate rather than a subsidiary, and its revenue and expenses are not consolidated line by line. P's share of annual profit = 25% × 24,000 = 6,000 and its dividend entitlement = 25% × 6,000 = 1,500.",
+      ),
+      text(
+        "في القوائم المنفصلة يسمح IAS 27 بالقياس بالتكلفة أو وفق IFRS 9 أو بطريقة حقوق الملكية، بحسب السياسة المنطبقة؛ التكلفة ليست إلزامية بمجرد كون الاستثمار في زميلة. بافتراض اختيار التكلفة، يبقى الاستثمار 60,000 قبل أي اختبار انخفاض، ويُثبت حق التوزيع 1,500 عند نشوئه: مدين نقد/توزيعات مستحقة 1,500، دائن إيراد توزيعات 1,500. لو اختيرت طريقة حقوق الملكية في القوائم المنفصلة، يُثبت ربح 6,000 وتخفض التوزيعات الاستثمار 1,500؛ أما قيمة IFRS 9 فتحتاج معلومات قيمة عادلة غير معطاة.",
+        "IAS 27 permits cost, IFRS 9 or the equity method in separate financial statements according to the applicable policy; cost is not compulsory simply because the investment is an associate. If cost is chosen, the investment remains 60,000 before any impairment assessment, and the 1,500 dividend entitlement is recognised when established: debit cash/dividend receivable 1,500, credit dividend income 1,500. If the equity method is elected separately, recognise the 6,000 profit share and reduce the investment by the 1,500 distribution; an IFRS 9 carrying amount needs fair-value information not supplied.",
+      ),
+      text(
+        "في القوائم الموحدة وبافتراض عدم انطباق استثناء من IAS 28، تعرض P بندًا واحدًا «حصة في ربح الزميلة» بمبلغ 6,000، ولا تُبقي مبلغ 1,500 إيراد توزيعات إضافة إليه. القيمة الدفترية للاستثمار = تكلفة 60,000 + نصيب الربح 6,000 − التوزيع المستلم 1,500 = 64,500؛ لا تُضاف إيرادات ومصاريف A تفصيليًا إلى إيرادات ومصاريف المجموعة.",
+        "In consolidated statements, assuming no IAS 28 exemption applies, P reports a single 6,000 share-of-associate-profit line and does not retain the 1,500 dividend income in addition to it. Investment carrying amount = initial cost 60,000 + profit share 6,000 − distribution received 1,500 = 64,500; A's individual revenues and expenses are not added line by line to those of the group.",
+      ),
+      text(
+        "إذا بدأت ورقة التوحيد من قوائم P المنفصلة المقاسة بالتكلفة والتي سجلت التوزيع، فالقيدان الواضحان: (1) مدين استثمار في زميلة 6,000 / دائن حصة ربح زميلة 6,000؛ (2) مدين إيراد توزيعات 1,500 / دائن استثمار في زميلة 1,500. الأثر الصافي زيادة الاستثمار والربح عن أرقام P المنفصلة بمقدار 4,500، لكن العرض النهائي لربح الزميلة 6,000 وليس 4,500 مع إبقاء إيراد التوزيع 1,500.",
+        "If the consolidation worksheet starts from P's cost-basis separate statements, which include dividend income, show both adjustments: (1) debit investment in associate 6,000 / credit share of associate profit 6,000; (2) debit dividend income 1,500 / credit investment in associate 1,500. The net increase to investment and profit over P's separate figures is 4,500, but the final associate-profit line is 6,000, not 4,500 alongside an uneliminated 1,500 dividend line.",
+      ),
+      text(
+        "لا تكفي المعطيات لحساب شهرة مضمنة في الاستثمار أو تعديل أرباح A عن فروق قيمة عادلة عند الاقتناء أو ضريبة؛ لا تُختلق هذه المبالغ. وتبقى خسائر الانخفاض أو معاملات المستثمر مع الزميلة موضوع فحص مستقل إن ظهرت أدلتها.",
+        "The facts do not permit calculation of any goodwill embedded in the investment, acquisition-date fair-value profit adjustments or tax; do not invent these amounts. Assess impairment and investor–associate transactions separately if evidence arises.",
+      ),
+    ],
+    reference: "IAS 28.5–6, 10, 32; IAS 27.10, 12",
+  },
+
+  {
     id: "ifrs-book2-ifrs10-ch22-quiz-unrealised-trading-profit",
     standardCode: "IFRS 10",
     title: text("أين يظهر ربح المخزون الداخلي غير المحقق؟", "Where does unrealised intragroup inventory profit appear?"),
