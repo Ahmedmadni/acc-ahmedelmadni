@@ -15,6 +15,30 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs11-ch24-joint-operation-examples",
+    standardCode: "IFRS 11",
+    title: text("أمثلة على العملية المشتركة", "Examples of a joint operation"),
+    facts: text(
+      "يسأل الفصل عن مواقف قد تنشأ فيها عملية مشتركة وفق IFRS 11.",
+      "The chapter asks for situations in which an IFRS 11 joint operation might arise.",
+    ),
+    question: text(
+      "اذكر أمثلة لمواقف قد ينشأ فيها هذا النوع من الترتيبات المشتركة.",
+      "Can you think of examples of situations where this type of joint arrangement might take place?",
+    ),
+    solution: [
+      text(
+        "قد تتفق شركات استخراج النفط أو الغاز أو المعادن على تشغيل خط أنابيب مشترك؛ تنقل كل شركة إنتاجها وتتحمل نصيبها التعاقدي من تكاليف التشغيل. وقد تُشغّل أطراف عقارًا تملكه على نحو مشترك، فتتقاسم إيراد الإيجار والمصروفات وفق الاتفاق.",
+        "Oil, gas or mineral-extraction companies may jointly operate a pipeline, each transporting its output and bearing an agreed share of operating costs. Parties may also operate jointly held property and share rental income and expenses under their agreement.",
+      ),
+      text(
+        "هذه أمثلة محتملة وليست تصنيفًا تلقائيًا: لا بد من إثبات السيطرة المشتركة وحقوق الأطراف المباشرة في الأصول والتزاماتها عن الخصوم. إن اقتصر حقها على صافي أصول منشأة منفصلة، فالترتيب مشروع مشترك لا عملية مشتركة.",
+        "These are possible examples, not automatic classifications: establish joint control and the parties' direct rights to assets and obligations for liabilities. If their rights are only to the net assets of a separate vehicle, the arrangement is a joint venture instead.",
+      ),
+    ],
+    reference: "IFRS 11.7, 15–20, B16–B21",
+  },
+  {
     id: "ifrs-book2-ifrs11-ch24-quiz-1-joint-venture-definition",
     standardCode: "IFRS 11",
     title: text("تعريف المشروع المشترك", "Definition of a joint venture"),
