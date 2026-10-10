@@ -15,6 +15,39 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs11-shopping-centre-x-classification",
+    standardCode: "IFRS 11",
+    title: text("المركز التجاري X: عملية مشتركة أم مشروع مشترك؟", "Shopping centre X: joint operation or joint venture?"),
+    facts: text(
+      "أسست شركتان عقاريتان منشأة منفصلة X لاقتناء مركز تجاري وتشغيله. يمنح العقد الطرفين سيطرة مشتركة على الأنشطة ذات الصلة؛ وتشمل أنشطة X تأجير الوحدات وإدارة المواقف وصيانة المركز ومعداته وتنمية قاعدة العملاء. يملك X المركز باسمه وله حقوق الأصول والتزامات الديون وفق شكله القانوني. لا يمنح العقد الشركتين حقًا مباشرًا في المركز، ولا يلزمهما بسداد ديون X للدائنين؛ يقتصر تعرض كل طرف للدائنين على مساهمته الرأسمالية غير المسددة. يستطيع كل طرف بيع حصته في X أو رهنها، ويتلقى نصيبًا من دخل تشغيل المركز بعد المصروفات بحسب حصته.",
+      "Two real estate companies form a separate entity, X, to acquire and operate a shopping centre. Their contract gives both parties joint control of the relevant activities, including letting retail units, managing parking, maintaining the centre and its equipment and developing its customer base. Under its legal form X owns the centre and holds the rights to assets and obligations for its debts. The contract gives the parties no direct right to the centre and does not make them liable to X's creditors beyond their unpaid capital contributions. Each party may sell or pledge its interest in X and receives a share of net operating income in proportion to that interest."
+    ),
+    question: text(
+      "كيف تُصنف المنشأة X وفق IFRS 11؟",
+      "How is entity X classified under IFRS 11?"
+    ),
+    solution: [
+      text(
+        "توجد سيطرة مشتركة تعاقدية؛ لكن وجود منشأة منفصلة لا يحدد التصنيف وحده. يُختبر الشكل القانوني والعقد والوقائع الأخرى لمعرفة هل للشركتين حقوق مباشرة في أصول الترتيب والتزامات مباشرة بخصومه، أم حقوق في صافي أصول X فقط.",
+        "There is contractually agreed joint control, but the separate vehicle alone does not determine classification. Assess its legal form, contractual terms and other facts to decide whether the parties have direct rights to arrangement assets and direct obligations for liabilities, or rights only to X's net assets."
+      ),
+      text(
+        "X، لا الشركتان، يملك المركز ويلتزم بديونه. لم ينقل العقد حقوق المركز أو التزامات دائنيه مباشرة إلى الشركتين؛ وحصر مطالبة الدائنين في مساهمة رأسمالية غير مسددة لا يحوّل كل ديون X إلى ديون مباشرة على الطرفين. حق كل طرف في بيع حصته والحصول على جزء من صافي الدخل يتسق مع حق في صافي أصول X.",
+        "X, not the parties, owns the centre and owes its debts. The contract does not transfer rights in the centre or obligations to its creditors directly to the parties; exposure limited to unpaid capital does not make every X liability a direct liability of the parties. Each party's transferable interest and share of net income are consistent with rights to X's net assets."
+      ),
+      text(
+        "لذلك تُصنف X مشروعًا مشتركًا، لا عملية مشتركة، في الوقائع المعطاة. يحاسب كل طرف ذي سيطرة مشتركة عن استثماره بطريقة حقوق الملكية وفق IAS 28 في قوائمه التي تطبق IFRS 11، ما لم ينطبق استثناء محدد؛ فلا يسجل تلقائيًا نسبة من مبنى المركز وقروض X وإيراد الإيجارات ومصاريف التشغيل بندًا ببند.",
+        "On these facts X is a joint venture, not a joint operation. Each party with joint control accounts for its investment using the IAS 28 equity method in statements applying IFRS 11, subject to any specific exemption; it does not automatically recognise a proportional slice of the centre building, X's borrowings, rental revenue and operating costs line by line."
+      ),
+      text(
+        "لا يكفي توزيع دخل التشغيل بنسبة الملكية لإثبات عملية مشتركة؛ المعيار الحاسم هو الحقوق في الأصول والالتزامات تجاه الخصوم. لو تغيرت الشروط لتمنح الطرفين تلك الحقوق والالتزامات مباشرة، وجب إعادة تقييم التصنيف بدل الاعتماد على اسم X أو شكله وحده.",
+        "Sharing operating income in ownership proportions is not enough to establish a joint operation; the decisive test is rights to assets and obligations for liabilities. If terms changed to grant those direct rights and obligations, reassess classification rather than relying on X's name or form alone."
+      )
+    ],
+    reference: "IFRS 11.4–7, 14–16, 20, 24, B15–B21, B25–B33; IAS 28.16",
+  },
+
+  {
     id: "ifrs-book2-ifrs10-j-p-s-group-position",
     standardCode: "IFRS 10",
     title: text("J وP وS: مركز مالي موحد يجمع تابعة وزميلة", "J, P and S: consolidated position with a subsidiary and an associate"),
