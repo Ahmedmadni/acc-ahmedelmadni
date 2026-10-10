@@ -8,6 +8,56 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IFRS 3": {
+    sections: [
+      {
+        title: text("الأصل المحتمل عند الاستحواذ: لا تخلطه بالالتزام المحتمل", "Do not confuse an acquired contingent asset with a contingent liability"),
+        explanation: text(
+          "إذا كانت الشركة المستحوذ عليها تطالب موردًا بتعويض وما زال قبول الدعوى أو نتيجتها غير مؤكدين في تاريخ الاستحواذ، فإن تقدير «قيمة عادلة» للمطالبة أو عرض تسوية مرفوض لا يحوّلانها إلى أصل قابل للاعتراف في تجميع الأعمال. ينص IFRS 3 صراحةً على عدم اعتراف المستحوذ بأصل محتمل في تاريخ الاستحواذ، خلافًا لقاعدة بعض الالتزامات المحتملة المستحوذ عليها القابلة للقياس. لذا لا تُضف المطالبة إلى صافي الأصول المحددة ولا تُنشئ فرقًا ضريبيًا مؤجلًا لعنصر لم يُعترف به. تحقق المطالبة بعد الاستحواذ يُحلل في فترته على أساس وقائعه؛ لا يُستخدم آليًا لإعادة كتابة الشهرة في تاريخ الاستحواذ.",
+          "If an acquiree has a damages claim against a supplier and success remains uncertain at the acquisition date, an estimated 'fair value' or rejected settlement offer does not make the claim a recognisable business-combination asset. IFRS 3 explicitly prohibits recognition of a contingent asset at acquisition, unlike the rule for certain measurable contingent liabilities assumed. Do not add the claim to identifiable net assets or create deferred tax on an unrecognised item. A later successful claim is analysed in the later period on its facts, not automatically used to rewrite acquisition-date goodwill.",
+        ),
+        keyPoints: [
+          text("في حالة Alpha/Beta، عرض تسوية بمبلغ 3 ملايين رفضته Beta لا يجعل الدعوى أصلًا معترفًا به في تاريخ الشراء.", "In the Alpha/Beta facts, a rejected US$3 million settlement offer does not make the lawsuit a recognised acquisition-date asset."),
+          text("افصل الالتزام المحتمل المستحوذ عليه عن الأصل المحتمل؛ IFRS 3 لا يسوي بينهما.", "Distinguish an assumed contingent liability from a contingent asset; IFRS 3 does not treat them symmetrically."),
+          text("لا تحسب ضريبة مؤجلة على أصل افتراضي أُبعد أصلًا من تسويات الاستحواذ.", "Do not calculate deferred tax on a hypothetical asset already excluded from acquisition accounting."),
+        ],
+        reference: "IFRS 3.10–13, 23–23A; IAS 37.31–35; IAS 12",
+      },
+      {
+        title: text("العلاقات مع العملاء قد تنفصل عن الشهرة، أما فريق العمل فلا", "Customer relationships may be separate; assembled workforce is not"),
+        explanation: text(
+          "لا يمنع عدم اعتراف الشركة المقتناة بعلاقات العملاء التي كوّنتها داخليًا من إثباتها عند الاستحواذ إذا استوفت معيار الأصل غير الملموس القابل للتحديد: تنشأ من حق تعاقدي/قانوني أو تكون قابلة للفصل، ويُقاس الأصل المستحوذ عليه بالقيمة العادلة. افحص أدلة هذه القابلية قبل نقل تقييم 20 مليونًا إلى الأصول المحددة. أما مهارة مجموعة العاملين القائمة أو قيمة «فريق العمل المجمع» فلا تُثبت أصلًا مستقلًا لمجرد وجود تقدير 15 مليونًا؛ تُستوعب قيمتها في الشهرة. تُقدّر الحياة النافعة للعلاقات المثبتة من نمط المنافع المتوقعة، ولا تجعل عبارة «على الأقل خمس سنوات» عمرًا نهائيًا مقداره خمس سنوات بلا تحليل.",
+          "The acquiree's earlier failure to recognise internally generated customer relationships does not prevent acquisition-date recognition if they satisfy the identifiable-intangible criterion: contractual/legal rights or separability, measured at acquisition-date fair value. Check evidence for that criterion before including the US$20 million estimate in identifiable assets. An assembled workforce or the value of existing staff expertise is not a separate identifiable asset merely because it has a US$15 million valuation; its value is subsumed in goodwill. Estimate the recognised relationship's useful life from expected benefits, rather than treating 'at least five years' as an exact five-year life without analysis.",
+        ),
+        keyPoints: [
+          text("اختبر سبب قابلية تحديد علاقات العملاء؛ الرقم المقوّم وحده لا يكفي.", "Establish why customer relationships are identifiable; a valuation alone is not enough."),
+          text("لا تُنشئ أصلًا منفصلًا بقيمة 15 مليونًا لفريق العمل المجمع.", "Do not create a separate US$15 million assembled-workforce asset."),
+          text("افصل تقييم الأصل عند الاستحواذ عن تقدير عمره وإطفائه اللاحق.", "Separate acquisition-date recognition from subsequent useful-life and amortisation estimates."),
+        ],
+        reference: "IFRS 3.10–13, B31–B33, B37; IAS 38.97–104",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Alpha/Beta: أثر استبعاد المطالبة المحتملة من الشهرة", "Alpha/Beta: goodwill effect of excluding a contingent claim"),
+        facts: text(
+          "دفعت Alpha ثمن 80% من Beta بإصدار 20 مليون سهم قيمتها العادلة 6 دولارات للسهم؛ والقيمة العادلة للحقوق غير المسيطرة 24 مليون دولار. بلغ صافي أصول Beta الدفتري عند الاستحواذ 85 مليونًا. زادت قيمة الأرض 10 ملايين والمعدات 8 ملايين، وقُدرت علاقات العملاء بـ20 مليونًا إذا ثبت أنها قابلة للتحديد. وردت مطالبة قضائية غير محسومة بقيمة تقديرية 3 ملايين، وقيمة مقدرة لفريق العمل 15 مليونًا. معدل الضريبة على الفروق المؤقتة 25%، مع افتراض بقاء الأسس الضريبية للعناصر المعترف بها دون تعديل.",
+          "Alpha paid for 80% of Beta with 20 million shares worth US$6 each; non-controlling interests were measured at US$24 million. Beta's acquisition-date book net assets were US$85 million. Land had a US$10 million uplift and equipment US$8 million; customer relationships were valued at US$20 million if identifiable. An unresolved legal claim had an estimated US$3 million value and an assembled workforce was valued at US$15 million. The temporary-difference tax rate is 25%, assuming unchanged tax bases for the recognised items.",
+        ),
+        calculations: [
+          text("المقابل 20 × 6 = 120 مليونًا؛ ومع الحقوق غير المسيطرة 24 مليونًا يصبح إجمالي طرفي معادلة الشهرة 144 مليونًا.", "Consideration is 20 × 6 = US$120 million; adding US$24 million NCI gives US$144 million for the goodwill equation."),
+          text("إذا ثبتت قابلية تحديد علاقات العملاء: زيادات القيمة المعترف بها = 10 + 8 + 20 = 38 مليونًا؛ أصل الدعوى المحتمل 3 ملايين وفريق العمل 15 مليونًا لا يدخلان هنا. الضريبة المؤجلة على الزيادات = 38 × 25% = 9.5 ملايين، بافتراض الأسس الضريبية المذكور.", "If customer relationships are identifiable, recognised uplifts are 10 + 8 + 20 = US$38 million; the US$3 million contingent claim and US$15 million workforce are excluded. Deferred tax on those uplifts is 38 × 25% = US$9.5 million under the stated tax-base assumption."),
+          text("صافي الأصول المحددة = 85 + 38 − 9.5 = 113.5 مليونًا؛ الشهرة = 144 − 113.5 = 30.5 مليونًا. إدخال المطالبة خطأً مع فرقها الضريبي كان سيخفض الشهرة بمقدار 3 − 0.75 = 2.25 مليون.", "Identifiable net assets = 85 + 38 − 9.5 = US$113.5 million; goodwill = 144 − 113.5 = US$30.5 million. Incorrectly adding the claim and related tax difference would understate goodwill by 3 − 0.75 = US$2.25 million."),
+        ],
+        conclusion: text(
+          "30.5 مليون دولار نتيجة مشروطة بثبوت قابلية تحديد علاقات العملاء وبفرض الأسس الضريبية المذكور، وليست حلًا كاملًا لقائمة المركز المالي الموحدة. لا يُثبت أصل المطالبة المحتملة أو فريق العمل منفصلين؛ ويعاد تقدير أرقام الشهرة إن لم تتحقق شروط علاقة العملاء.",
+          "US$30.5 million is conditional on identifiable customer relationships and the stated tax-base assumption, not a full consolidated statement of financial position. Neither the contingent claim nor assembled workforce is recognised separately; reassess goodwill if the customer relationship fails the identifiability test.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 3.18–19, 23A, 32, B31–B33, B37; IAS 12",
+      },
+    ],
+  },
   "IAS 16": {
     sections: [
       {
