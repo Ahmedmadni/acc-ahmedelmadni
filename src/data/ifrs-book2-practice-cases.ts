@@ -15,6 +15,103 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-ch22-quiz-unrealised-trading-profit",
+    standardCode: "IFRS 10",
+    title: text("أين يظهر ربح المخزون الداخلي غير المحقق؟", "Where does unrealised intragroup inventory profit appear?"),
+    facts: text(
+      "تتاجر منشأتان ضمن مجموعة واحدة في بضاعة، ويبقى جزء من البضاعة في مخزون المجموعة عند نهاية الفترة. السؤال عن موضع أثر الربح الداخلي الذي لم يتحقق ببيع لطرف خارجي في قائمة الربح أو الخسارة الموحدة.",
+      "Two entities in one group trade goods, some of which remain in group inventory at period-end. The question concerns where the profit not yet realised through a sale outside the group affects the consolidated statement of profit or loss.",
+    ),
+    question: text(
+      "أين يظهر الربح غير المحقق من التداول داخل المجموعة في قائمة الربح أو الخسارة؟",
+      "Where does unrealised profit on intragroup trading appear in the statement of profit or loss?",
+    ),
+    solution: [
+      text(
+        "تُحذف المبيعات والمشتريات الداخلية من الإيراد وتكلفة المبيعات، ثم يخفض ربح المخزون الداخلي غير المحقق قيمة المخزون النهائي ويرفع تكلفة المبيعات الموحدة؛ لذلك يظهر أثره تخفيضًا لمجمل الربح الموحد، لا إيرادًا منفصلًا أو ربحًا مكتسبًا للمجموعة.",
+        "Eliminate intragroup sales and purchases from revenue and cost of sales. Then reduce ending inventory for unrealised intragroup profit and increase consolidated cost of sales; its profit-or-loss effect is a reduction of consolidated gross profit, not separate revenue or realised group profit.",
+      ),
+      text(
+        "إذا بيعت البضاعة لاحقًا إلى طرف خارجي، ينعكس الحذف في الفترة التي يتحقق فيها الربح للمجموعة. ويُختبر اتجاه البيع عند توزيع أثر الحذف بين ملاك الأم وغير المسيطرين.",
+        "When the goods are subsequently sold outside the group, the elimination reverses as the profit becomes realised by the group. Consider whether the sale was upstream or downstream when attributing the adjustment between parent owners and NCI.",
+      ),
+    ],
+    reference: "IFRS 10.B86(c), B94; IAS 2.9, 10",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch22-quiz-subsidiary-inventory-revenue",
+    standardCode: "IFRS 10",
+    title: text("بيع بضاعة من التابعة للأم: تعديل الإيراد", "Subsidiary-to-parent inventory sale: revenue adjustment"),
+    facts: text(
+      "باعت تابعة إلى أمها بضاعة تكلفتها 100,000 بزيادة سعرية 25% على التكلفة. بقي 30% من هذه البضاعة في مخزون الأم عند نهاية السنة.",
+      "A subsidiary sells goods costing 100,000 to its parent at a mark-up of 25% on cost. At year-end, 30% of those goods remain in the parent's inventory.",
+    ),
+    question: text(
+      "ما التعديل المطلوب في الإيراد بقائمة الربح أو الخسارة الموحدة؟",
+      "What adjustment is required to revenue in the consolidated statement of profit or loss?",
+    ),
+    solution: [
+      text(
+        "سعر البيع الداخلي = 100,000 × 1.25 = 125,000. يُحذف من إيراد المجموعة مبلغ 125,000 كاملًا، وتُحذف المشتريات الداخلية المقابلة من تكلفة المبيعات؛ نسبة المخزون المتبقي لا تغيّر مقدار حذف الإيراد.",
+        "Internal selling price = 100,000 × 1.25 = 125,000. Eliminate the full 125,000 from group revenue and the matching intragroup purchase from cost of sales; the percentage of goods remaining does not change the revenue elimination.",
+      ),
+      text(
+        "فحص مستقل للمخزون: الربح الداخلي الإجمالي 25,000؛ وغير المحقق في الـ30% المتبقية 7,500، فيخفض المخزون ومجمل الربح. هذا تعديل آخر غير مبلغ 125,000 المطلوب للإيراد، ولا يُخلط بينهما.",
+        "Separate inventory check: total intragroup profit is 25,000, of which 30% or 7,500 remains unrealised, reducing inventory and gross profit. That is a distinct adjustment from the 125,000 revenue elimination asked for.",
+      ),
+    ],
+    reference: "IFRS 10.B86(c), B94; IAS 2.9",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch22-quiz-downstream-nci",
+    standardCode: "IFRS 10",
+    title: text("بيع من الأم للتابعة: هل تتأثر حصة غير المسيطرين؟", "Downstream sale: is NCI adjusted?"),
+    facts: text(
+      "باعت أم بضاعة إلى تابعة تملك منها 70% وحققت ربحًا داخليًا مقداره 14,000. بقي ربع هذا الربح غير محقق في مخزون المجموعة عند نهاية السنة.",
+      "A parent sells goods to a 70%-owned subsidiary, generating intragroup profit of 14,000. One quarter of that profit remains unrealised in group inventory at year-end.",
+    ),
+    question: text(
+      "ما التعديل المطلوب على حصة غير المسيطرين نتيجة الربح غير المحقق؟",
+      "What adjustment to NCI is required for the unrealised profit?",
+    ),
+    solution: [
+      text(
+        "الربح غير المحقق = 14,000 × 25% = 3,500 ويُحذف من ربح المجموعة ومن المخزون. البائع هو الأم، لذلك يُحمَّل حذف هذا الربح على ربح ملاك الأم ولا يُعدل نصيب غير المسيطرين في ربح التابعة: التعديل على NCI يساوي صفرًا.",
+        "Unrealised profit = 14,000 × 25% = 3,500; eliminate it from group profit and inventory. The seller is the parent, so the adjustment is attributed to parent owners rather than to the subsidiary's NCI: the NCI adjustment is zero.",
+      ),
+      text(
+        "نسبة ملكية الأم 70% لا تعني حذف 70% فقط من الربح الداخلي؛ يُحذف الربح غير المحقق كاملًا على مستوى المجموعة، ثم يُحدد الطرف الذي يتحمل أثره.",
+        "The parent's 70% ownership does not mean eliminating only 70% of the internal profit. Eliminate the entire unrealised amount at group level, then determine attribution.",
+      ),
+    ],
+    reference: "IFRS 10.B86(c), B94",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch22-quiz-alpha-beta-disposal-revenue",
+    standardCode: "IFRS 10",
+    title: text("Alpha وBeta: الإيراد حتى تاريخ فقد السيطرة", "Alpha and Beta: revenue up to loss of control"),
+    facts: text(
+      "امتلكت Alpha نسبة 75% من Beta ثم باعت حصتها كلها في 1 سبتمبر 20X5. للسنة المنتهية في 31 ديسمبر 20X5 بلغ إيراد Alpha منفردة 1.5 مليون، وإيراد Beta للسنة الكاملة 360,000. لا تذكر المعطيات إيراد Beta الفعلي حتى البيع أو معاملات داخلية بين الشركتين.",
+      "Alpha owned 75% of Beta and sold its entire holding on 1 September 20X5. For the year ended 31 December 20X5, Alpha's own revenue was 1.5 million and Beta's full-year revenue was 360,000. The facts do not give Beta's actual revenue up to disposal or any intragroup transactions.",
+    ),
+    question: text(
+      "ما الإيراد الذي يظهر في قائمة الربح أو الخسارة الموحدة للسنة المنتهية في 31 ديسمبر 20X5؟",
+      "What revenue appears in the consolidated statement of profit or loss for the year ended 31 December 20X5?",
+    ),
+    solution: [
+      text(
+        "تُضم إيرادات Beta بالكامل، لا بنسبة ملكية Alpha البالغة 75%، عن المدة التي ظلت فيها السيطرة قائمة من يناير إلى أغسطس فقط. ويفترض الحل الحسابي التعليمي انتظام إيراد Beta خلال السنة، فيكون 360,000 × 8/12 = 240,000؛ والإيراد الموحد التوضيحي = 1,500,000 + 240,000 = 1,740,000، بافتراض عدم وجود معاملات داخلية تحتاج الحذف.",
+        "Consolidate 100% of Beta's revenue, not Alpha's 75% ownership share, for the January–August period of control only. The illustrative calculation assumes Beta's revenue arose evenly, giving 360,000 × 8/12 = 240,000; illustrative group revenue is 1,500,000 + 240,000 = 1,740,000, assuming no intragroup sales requiring elimination.",
+      ),
+      text(
+        "القاعدة المحاسبية هي استخدام إيراد Beta الفعلي حتى تاريخ فقد السيطرة؛ لا يفرض IFRS 10 التوزيع الزمني الآلي. إذا تركزت المبيعات في أشهر معينة أو وُجدت معاملات داخل المجموعة، يلزم سجل الإيراد الفعلي لتحديد رقم نهائي مختلف.",
+        "The accounting requirement is to use Beta's actual revenue up to loss of control; IFRS 10 does not mandate straight-line time apportionment. If sales were seasonal or intragroup transactions existed, actual records are needed for a definitive figure.",
+      ),
+    ],
+    reference: "IFRS 10.20, 25, B86(c), B88",
+  },
+
+  {
     id: "ifrs-book2-ias1-bull-lamb-changes-in-equity",
     standardCode: "IAS 1",
     title: text("Bull وLamb: التغيرات الموحدة في حقوق الملكية", "Bull and Lamb: consolidated changes in equity"),
