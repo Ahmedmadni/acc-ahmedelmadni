@@ -70,6 +70,24 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         journalEntries: [],
         reference: "IFRS 3.19, 23A, 32; IFRS 10.22, B94–B96; IAS 12",
       },
+      {
+        title: text("Panther وSabre: حدود تجميع نصف السنة وقرض سبق السيطرة", "Panther and Sabre: a half-year consolidation and pre-control loan"),
+        facts: text(
+          "حصلت Panther على 60% من Sabre في 1 يوليو 20X4. بلغ ربح Sabre بعد الضريبة عن السنة 610 آلاف دولار، ودخلها الشامل الآخر 180 ألفًا، مع افتراض انتظام البنود غير الداخلية خلال السنة. زادت القيمة العادلة لعقار تابع بمقدار 200 ألف عند الشراء، وعمره المتبقي 20 سنة. كان لدى Panther قرض ممنوح إلى Sabre منذ 1 يناير بمبلغ 800 ألف وفائدة سوقية 5%. ترد مشتريات البضاعة الداخلية في حالة مستقلة لأن السؤال لا يحدد توزيعها الزمني أو تاريخ شراء مخزون الإقفال؛ كما لم يُعط الأساس الضريبي لزيادة قيمة العقار.",
+          "Panther obtained 60% control of Sabre on 1 July 20X4. Sabre's full-year profit after tax was US$610 thousand and other comprehensive income was US$180 thousand; non-intragroup items accrue evenly. Acquisition-date fair value of property exceeded its carrying amount by US$200 thousand, with 20 years' remaining life. Panther had lent Sabre US$800 thousand from 1 January at a market rate of 5%. Intragroup goods are analysed separately because their transaction timing and closing-inventory sourcing are unspecified; the tax base of the property uplift is also not supplied.",
+        ),
+        calculations: [
+          text("تدخل نتائج Sabre من 1 يوليو فقط: ربحها بعد الضريبة قبل تسويات التجميع = 610 × 6/12 = 305 آلاف دولار؛ والدخل الشامل الآخر = 180 × 6/12 = 90 ألفًا.", "Include Sabre's results only from 1 July: post-control profit after tax before consolidation adjustments = 610 × 6/12 = US$305 thousand; other comprehensive income = 180 × 6/12 = US$90 thousand."),
+          text("الإهلاك الإضافي على زيادة القيمة العادلة للعقار للفترة اللاحقة للشراء = 200 ÷ 20 × 6/12 = 5 آلاف دولار قبل الضريبة؛ ورصيد الزيادة غير المستهلك في 31 ديسمبر = 195 ألفًا.", "Additional post-acquisition depreciation on the property uplift = 200 ÷ 20 × 6/12 = US$5 thousand before tax; unconsumed uplift at 31 December = US$195 thousand."),
+          text("فائدة القرض السنوية = 800 × 5% = 40 ألفًا. كان نصفها الأول بين طرفين منفصلين؛ يُلغى عند التجميع فقط نصف السنة اللاحق للسيطرة = 20 ألفًا من إيراد فائدة Panther ومصروف فائدة Sabre، فضلًا عن إلغاء رصيد القرض المتقابل في المركز المالي الموحد.", "Annual loan interest = 800 × 5% = US$40 thousand. The first half arose between separate entities; eliminate only the post-control half-year, US$20 thousand, from Panther's interest income and Sabre's interest expense, as well as the reciprocal loan balances in the consolidated statement of financial position."),
+        ],
+        conclusion: text(
+          "هذه حسابات فرعية مؤكدة، وليست قائمة ربح موحدة نهائية. لا يكفي ضرب كل المبيعات الداخلية في 6/12؛ فالفرض الزمني يستثني تلك التعاملات. كما أن نصيب غير المسيطرين بعد الضريبة يتطلب تحديد أثر الضريبة لزيادة القيمة العادلة وربح المخزون الداخلي، فلا يُعرض له رقم نهائي من البيانات المتاحة.",
+          "These are supportable workings, not a definitive consolidated profit statement. Do not multiply all intragroup sales by 6/12: the even-accrual assumption excludes those transactions. A final after-tax NCI allocation also requires the tax effect of the fair-value uplift and the dated inventory-profit adjustment, neither of which can be settled from the supplied facts.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 10.20, B86(c), B88, B94; IFRS 3.18; IAS 12.15, 24",
+      },
     ],
   },
   "IFRS 3": {
