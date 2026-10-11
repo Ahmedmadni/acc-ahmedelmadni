@@ -297,6 +297,32 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 28.28–29",
       },
+      {
+        title: text("Alpha وGamma: قيمة الاستثمار بعد بيع مخزون غير محقق", "Alpha and Gamma: associate carrying amount after unrealised inventory profit"),
+        facts: text(
+          "اشترت Alpha في 1 أبريل 20X5 عدد 20 مليون سهم من Gamma مقابل 1.60 دولار للسهم. لدى Gamma رأس مال من 50 مليون سهم بقيمة اسمية دولار واحد، وتتمتع Alpha بتأثير مهم لا بسيطرة. ارتفعت الأرباح المحتجزة لـGamma من 15 مليونًا عند الاقتناء إلى 28 مليون دولار في 31 مارس 20X7. تضمنت مخازن Gamma في تاريخ التقرير مكونات اشترتها من Alpha بسعر 16 مليون دولار؛ وكان تسعير Alpha هو التكلفة مضافًا إليها 25%. لم يُذكر انخفاض قيمة الاستثمار.",
+          "On 1 April 20X5 Alpha bought 20 million Gamma shares for US$1.60 each. Gamma has 50 million US$1 ordinary shares and Alpha has significant influence rather than control. Gamma's retained earnings rose from US$15 million at acquisition to US$28 million at 31 March 20X7. Gamma's closing inventories include components bought from Alpha for US$16 million, priced at Alpha's cost plus 25%. No investment impairment is specified.",
+        ),
+        calculations: [
+          text("حصة Alpha في Gamma = 20 ÷ 50 = 40%؛ تكلفة الاستثمار = 20 مليون × 1.60 = 32 مليون دولار.", "Alpha's interest in Gamma = 20 ÷ 50 = 40%; investment cost = 20 million × US$1.60 = US$32 million."),
+          text("حركة الأرباح المحتجزة بعد الاقتناء = 28 − 15 = 13 مليونًا؛ حصة Alpha المستخدمة في هذا المثال = 13 × 40% = 5.2 ملايين دولار، بشرط عدم وجود توزيعات أو حركات أخرى غير مذكورة تتطلب تسوية مستقلة.", "Post-acquisition retained-earnings movement = 28 − 15 = US$13 million; Alpha's share used here = 13 × 40% = US$5.2 million, subject to any unreported distributions or other movements requiring separate adjustment."),
+          text("ربح Alpha المضمّن في المخزون = 16 × 25/125 = 3.2 ملايين؛ الجزء غير المحقق المنسوب لحصة Alpha = 3.2 × 40% = 1.28 مليون دولار.", "Alpha's profit embedded in inventory = 16 × 25/125 = US$3.2 million; the unrealised portion attributable to Alpha's 40% interest = US$1.28 million."),
+          text("القيمة الدفترية للاستثمار بطريقة حقوق الملكية = 32 + 5.2 − 1.28 = 35.92 مليون دولار، قبل أي تسوية مستقلة للضريبة المؤجلة أو وقائع إضافية.", "Equity-method investment carrying amount = 32 + 5.2 − 1.28 = US$35.92 million, before any separate deferred-tax adjustment or additional facts."),
+        ],
+        conclusion: text(
+          "لا تُضاف أصول Gamma والتزاماتها بندًا ببند إلى المجموعة لأنها زميلة وليست تابعة. لا يُحذف كامل ربح البيع 3.2 ملايين ولا كامل رصيد مخزونها 16 مليونًا؛ تُستبعد فقط حصة Alpha غير المحققة 1.28 مليون من الربح والاستثمار. تختلف هذه التسوية عن إلغاء معاملات Alpha مع تابعتها Beta إلغاءً كاملًا.",
+          "Gamma's assets and liabilities are not consolidated line by line because it is an associate, not a subsidiary. Neither the full US$3.2 million sale profit nor all US$16 million of Gamma inventory is eliminated; only Alpha's US$1.28 million unrealised-interest share is removed from group profit and the investment. This differs from full elimination of Alpha's intragroup transactions with its subsidiary Beta.",
+        ),
+        journalEntries: [
+          {
+            label: text("تسوية ورقة التجميع للربح غير المحقق لدى الزميلة", "Group worksheet adjustment for unrealised associate profit"),
+            debit: text("تعديل ربح بيع مخزون إلى زميلة 1.28 مليون", "Adjustment to gain on sale to associate US$1.28 million"),
+            credit: text("استثمار في زميلة Gamma 1.28 مليون", "Investment in Gamma US$1.28 million"),
+            amount: text("1.28 مليون دولار لكل جانب", "US$1.28 million on each side"),
+          },
+        ],
+        reference: "IAS 28.3, 10, 28–29",
+      },
     ],
   },
   "IFRS 6": {
