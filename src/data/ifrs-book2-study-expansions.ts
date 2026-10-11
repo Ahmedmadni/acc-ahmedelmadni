@@ -88,6 +88,23 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         journalEntries: [],
         reference: "IFRS 10.20, B86(c), B88, B94; IFRS 3.18; IAS 12.15, 24",
       },
+      {
+        title: text("Alpha: متى يُلغى الرصيد المتبادل مع التابعة ولا يُلغى مع الزميلة؟", "Alpha: eliminate subsidiary balances, not associate balances"),
+        facts: text(
+          "في 31 مارس 20X7 تسيطر Alpha على Beta بنسبة 80% ولها تأثير مهم في Gamma بنسبة 40% دون سيطرة. بالمليون دولار، يبلغ رصيد المدينين التجاريين 43 لدى Alpha و30 لدى Beta. يتضمن رصيد Alpha مبلغ 5 مستحقًا من Beta و4 مستحقًا من Gamma. ويبلغ رصيد الدائنين التجاريين 25 لدى Alpha و17 لدى Beta، ويتضمن رصيد Beta مبلغ 5 مستحقًا لـAlpha؛ أما Gamma فتظهر في قوائمها المنفصلة رصيدًا مقابلًا قدره 4. يُعرض استثمار Gamma بطريقة حقوق الملكية بدل إدراج أصولها والتزاماتها بندًا ببند.",
+          "At 31 March 20X7 Alpha controls 80% of Beta and has 40% significant influence, but not control, over Gamma. In US$m, trade receivables are 43 for Alpha and 30 for Beta. Alpha's balance includes 5 due from Beta and 4 due from Gamma. Trade payables are 25 for Alpha and 17 for Beta, with 5 due to Alpha included in Beta's balance; Gamma separately reports the reciprocal 4. Gamma is equity-accounted rather than consolidated line by line.",
+        ),
+        calculations: [
+          text("المدينون التجاريون الموحدون = 43 + 30 − 5 = 68 مليون دولار. يُلغى مبلغ Beta من الطرفين لأنه داخل المجموعة؛ لا تُضاف مدينو Gamma البالغة 31 ولا يُطرح منها رصيدها 4، فالزميلة ليست تابعة مجمعة.", "Consolidated trade receivables = 43 + 30 − 5 = US$68m. Eliminate the Beta balance on both sides because it is intragroup. Do not add Gamma's own 31 of receivables or deduct its reciprocal 4: the associate is not consolidated line by line."),
+          text("الدائنون التجاريون الموحدون = 25 + 17 − 5 = 37 مليون دولار. يبقى مبلغ 4 المستحق من Gamma ضمن مديني Alpha بوصفه رصيدًا مع منشأة خارج حدود التجميع، مع فحص الإفصاح عن الطرف ذي العلاقة عند اللزوم.", "Consolidated trade payables = 25 + 17 − 5 = US$37m. The 4 due from Gamma remains in Alpha's receivables because the associate is outside the consolidation boundary, subject to applicable related-party disclosure."),
+        ],
+        conclusion: text(
+          "الملكية بنسبة 40% والتأثير المهم لا يحولان كل رصيد مع Gamma إلى رصيد داخلي قابل للإلغاء. تختلف تسوية ربح البيع غير المحقق إلى الزميلة، التي تؤثر في قيمة الاستثمار وفق IAS 28، عن إلغاء أصل الذمة المدينة أو الدائنة بالكامل.",
+          "A 40% holding with significant influence does not turn every balance with Gamma into an intragroup balance for full elimination. Restricting unrealised downstream profit against the equity-method investment under IAS 28 is distinct from eliminating an entire receivable or payable.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 10.B86(c); IAS 28.10, 28; IAS 24.18",
+      },
     ],
   },
   "IFRS 3": {
