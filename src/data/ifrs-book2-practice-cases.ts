@@ -3544,6 +3544,41 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     ],
     reference: "IFRS 16.9, 12–13, B9–B19, B21–B30",
   },
+  {
+    id: "ifrs-book2-dt-health-benefits-and-tax-losses",
+    standardCode: "IAS 12",
+    title: text(
+      "DT Group: اختبار استرداد أصل الضريبة المؤجلة",
+      "DT Group: testing recovery of deferred-tax assets",
+    ),
+    facts: text(
+      "جميع المبالغ بالمليون دولار. لدى DT خسائر ضريبية قدرها 300 نشأت في 20X0 ويُسمح بترحيلها ثلاث سنوات. يذكر السؤال أرباحًا خاضعة للضريبة قدرها 110 في 20X1 ومتوقعة قدرها 100 في 20X2 و130 في 20X3؛ لكن توقع 20X3 يعتمد على شراء شركة مربحة لم يثبت بعد. في 30 نوفمبر 20X1 بلغ التزام الرعاية الصحية 100 وأساسه الضريبي صفر، ولا تُخصم هذه المنافع ضريبيًا إلا عند دفعها. لا يحدد السؤال موعد الدفع. لا يُتوقع انعكاس الفروق المؤقتة الخاضعة للضريبة القائمة قبل نهاية 20X3، ومعدل الضريبة المحلي 30%. تتناول هذه الحالة قابلية استرداد الأصل فقط، لا إجمالي ضريبة المجموعة.",
+      "All figures are in $m. DT has 300 of tax losses from 20X0, available for carryforward for three years. The question states taxable profit of 110 for 20X1 and forecasts of 100 for 20X2 and 130 for 20X3, but the 20X3 forecast depends on an unconfirmed acquisition of a profitable company. At 30 November 20X1 the healthcare-benefit liability is 100 with a nil tax base; its tax deductions arise only on payment. No payment date is given. Existing taxable temporary differences are not expected to reverse before the end of 20X3. The domestic tax rate is 30%. This case concerns recoverability of the asset, not the group's total tax charge.",
+    ),
+    question: text(
+      "حلّل أصل الضريبة المؤجلة المحتمل من الخسائر المرحلة والتزام الرعاية الصحية في 30 نوفمبر 20X1. ما المبالغ الحسابية الأولية، وما الأدلة اللازمة للاعتراف، وهل تكفي أرباح 20X2 وحدها لإثبات الأصلين كاملين؟",
+      "Analyse potential deferred-tax assets for the carried-forward losses and healthcare liability at 30 November 20X1. What are the initial numerical amounts, what evidence is needed for recognition, and can the 20X2 profits alone support both assets in full?",
+    ),
+    solution: [
+      text(
+        "إذا تحقق الربح الخاضع للضريبة 110 في 20X1 واستُخدم ضده جزء من خسائر 20X0 وفق القانون، فالمتبقي للترحيل 300 − 110 = 190. هذا الاستخدام يخفض الضريبة الجارية للسنة ولا يمثل أصلًا ضريبيًا مؤجلًا إضافيًا في تاريخ الإقفال. يجب تأكيد تحقق الربح وسريان حق المقاصة؛ فلا يُعامل التوقع وحده على أنه استخدام منجز.",
+        "If the 110 taxable profit was realised in 20X1 and 20X0 losses could legally be offset against it, 300 − 110 = 190 remains available for carryforward. That utilisation reduces current-year tax, rather than creating another closing deferred-tax asset. Confirm the realised profit and legal offset; a forecast alone is not completed utilisation.",
+      ),
+      text(
+        "إذا كان ربح 20X2 البالغ 100 مدعومًا بأدلة كافية ومتاحًا قانونًا للخسائر قبل انتهائها، فإن منفعة خسائر مقدارها 100 تساوي أصلًا محتملًا قدره 30 عند معدل 30%. لا يُضاف تلقائيًا أصل عن 130 المتوقعة في 20X3؛ فالشراء الذي يعتمد عليه التوقع غير مؤكد، والخسائر السابقة قرينة تستلزم دليلًا مقنعًا على الربح المستقبلي أو مصدرًا ملائمًا آخر وفق IAS 12.",
+        "If the 100 forecast taxable profit for 20X2 is adequately supported and legally available to the losses before expiry, the benefit of 100 of losses is a potential 30 asset at 30%. No asset is automatically added for the 130 forecast for 20X3: it relies on an unconfirmed acquisition, and recent losses call for convincing evidence of future profit or another suitable source under IAS 12.",
+      ),
+      text(
+        "التزام الرعاية الصحية 100 وأساسه الضريبي صفر يعني فرقًا مؤقتًا قابلًا للخصم قدره 100، ومنفعة ضريبية حسابية قصوى 30. لكن الاعتراف يتوقف على موعد دفع المنافع ووجود أرباح خاضعة للضريبة مناسبة حين تصبح قابلة للخصم، مع مراعاة الكيان والسلطة الضريبية وحدود الترحيل. لا يثبت السؤال موعد الانعكاس أو مصدر أرباح مستقلًا لهذا الخصم.",
+        "The healthcare liability of 100 and its nil tax base give a deductible temporary difference of 100 and a gross potential tax benefit of 30. Recognition depends on when benefits are paid and on suitable taxable profit when the deduction becomes available, considering the taxable entity, tax authority and carryforward limits. The question supplies neither the reversal date nor a separate profit source for this deduction.",
+      ),
+      text(
+        "لا يجوز استعمال ربح 20X2 البالغ 100 مرتين لتبرير أصل 30 للخسائر وأصل 30 للرعاية الصحية معًا. تُقيَّم الخصومات والخسائر التي تُستعمل ضد الربح نفسه معًا، وتُراجع أولويات استخدامها ونوافذ انتهاء الصلاحية. قد يختلف المبلغ المعترف به إذا دُفعت المنافع في سنة أخرى أو ظهرت أرباح أو فروق خاضعة للضريبة مؤهلة؛ لذلك لا يُثبت إجمالي 60 من هذه الوقائع وحدها، ولا يُستنتج منها مصروف ضريبة مؤجلة نهائي.",
+        "The same 100 of 20X2 taxable profit cannot be counted twice to justify both a 30 loss asset and a 30 healthcare asset. Assess deductions and losses drawing on the same profit together, including utilisation priority and expiry. Recognition could differ if benefits are paid in another year or other qualifying profit or taxable differences arise. The facts alone therefore do not establish a combined 60 asset or a final deferred-tax expense.",
+      ),
+    ],
+    reference: "IAS 12.24, 27–29, 34–37, 82",
+  },
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
