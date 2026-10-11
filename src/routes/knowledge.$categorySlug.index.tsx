@@ -102,10 +102,12 @@ function CategoryPage() {
       <section className="mx-auto max-w-6xl px-4 pt-12 pb-10 sm:px-6">
         <nav className="mb-4 flex items-center gap-1 text-xs text-[#D8D1C8]">
           <Link to="/knowledge" className="hover:text-[#c9a986]">
-            المكتبة
+            {isEN ? "Library" : "المكتبة"}
           </Link>
-          <ChevronLeft className="size-3" />
-          <span className="text-[#FCFBF9]">{cat.data?.name_ar ?? "..."}</span>
+          <ChevronLeft className="size-3 rtl:rotate-0 ltr:rotate-180" />
+          <span className="text-[#FCFBF9]">
+            {cat.data ? (isEN ? cat.data.name_en : cat.data.name_ar) : "..."}
+          </span>
         </nav>
 
         {cat.data && (
@@ -115,11 +117,15 @@ function CategoryPage() {
             </div>
             <div>
               <h1 className="font-display text-3xl font-extrabold text-[#FCFBF9] sm:text-4xl">
-                {cat.data.name_ar}
+                {isEN ? cat.data.name_en : cat.data.name_ar}
               </h1>
-              <p className="mt-1 text-sm text-[#D8D1C8]">{cat.data.name_en}</p>
-              {cat.data.description_ar && (
-                <p className="mt-2 max-w-2xl text-sm text-[#D8D1C8]">{cat.data.description_ar}</p>
+              <p className="mt-1 text-sm text-[#D8D1C8]">
+                {isEN ? cat.data.name_ar : cat.data.name_en}
+              </p>
+              {(isEN ? cat.data.description_en : cat.data.description_ar) && (
+                <p className="mt-2 max-w-2xl text-sm text-[#D8D1C8]">
+                  {isEN ? cat.data.description_en : cat.data.description_ar}
+                </p>
               )}
             </div>
           </div>
