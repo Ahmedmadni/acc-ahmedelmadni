@@ -5,6 +5,7 @@ import { supabasePublic } from "@/integrations/supabase/public-client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
 import { t } from "@/lib/i18n";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 const KB_TO_LIB_CAT: Record<string, string[]> = {
   "financial-accounting": ["fundamentals", "reporting"],
@@ -66,6 +67,8 @@ export const Route = createFileRoute("/knowledge/$categorySlug/")({
 
 function CategoryPage() {
   const { categorySlug } = Route.useParams();
+  const [lang] = useSiteLang();
+  const isEN = lang === "en";
 
   const cat = useQuery({
     queryKey: ["kb-cat", categorySlug],
@@ -86,7 +89,7 @@ function CategoryPage() {
     queryFn: async () => {
       const { data, error } = await supabasePublic
         .from("kb_articles")
-        .select("id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at")
+        .select("id,slug,title_ar,title_en,excerpt_ar,excerpt_en,featured_image,reading_minutes,published_at")
         .eq("category_id", cat.data!.id)
         .order("published_at", { ascending: false });
       if (error) throw error;
