@@ -118,6 +118,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 16.39–41, 67–71",
       },
+      {
+        title: text("تكلفة الاقتناء والإهلاك بحسب الاستخدام", "Acquisition cost and depreciation by use"),
+        explanation: text(
+          "تدخل الأتعاب المهنية المرتبطة مباشرة بشراء الأرض في تكلفة الأرض حتى لو سُجلت أولًا ضمن المصروفات العامة. الأرض المملوكة ذات العمر غير المحدد لا تُهلك عادة، بخلاف المعدات والأثاث والسيارات التي يبدأ إهلاكها عندما تصبح متاحة للاستخدام. حدّد أساس وطريقة الإهلاك لكل فئة ثم وزّع مصروف الفترة بحسب وظيفة الأصل: إنتاج أو إدارة أو توزيع. إهلاك معدات الإنتاج قد يدخل تكلفة تحويل المخزون وفق IAS 2؛ لا يُحمّل تلقائيًا كله على مصروف الفترة. أما حق استخدام العقار المؤجّر والتزام الإيجار فيحتاجان تقييمًا منفصلًا بموجب IFRS 16 وفق شروط العقد، ولا يُخلطان بالأرض المملوكة.",
+          "Professional fees directly attributable to acquiring freehold land form part of its cost even if initially recorded in general expenses. Owned land with an unlimited useful life is generally not depreciated, unlike equipment, furniture and vehicles, whose depreciation starts when available for use. Determine each class's depreciation base and method, then allocate the period's charge to production, administration or distribution according to the asset's use. Production-equipment depreciation may enter inventory conversion cost under IAS 2; it is not automatically all a period expense. An interest in leased property and its lease liability require separate IFRS 16 assessment based on contract terms and must not be conflated with owned land.",
+        ),
+        keyPoints: [
+          text("انقل رسوم الشراء المباشرة من المصروف إلى تكلفة الأرض؛ لا تضف إليها رسومًا غير مرتبطة بالشراء.", "Reclassify directly attributable purchase fees into land cost; do not add unrelated fees."),
+          text("طريقة الرصيد المتناقص تُطبّق على القيمة الدفترية الافتتاحية، بينما النسبة على التكلفة تُطبّق على التكلفة الأصلية.", "Apply a reducing-balance rate to opening carrying amount, but a cost-based rate to original cost."),
+          text("افصل إهلاك التصنيع عن الإدارة والتوزيع، وقيّم إدراج جزء التصنيع في المخزون بحسب IAS 2.", "Separate manufacturing depreciation from administration and distribution, and assess inventory inclusion under IAS 2."),
+        ],
+        reference: "IAS 16.16–17, 48–49, 55, 58, 60–61; IAS 2.12–13; IFRS 16.22–28",
+      },
     ],
     workedExamples: [
       {
@@ -150,6 +163,39 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           },
         ],
         reference: "IAS 16.41, 67–71",
+      },
+      {
+        title: text("Polymer: تكلفة الأرض وإهلاك الأصول المملوكة", "Polymer: land cost and depreciation of owned assets"),
+        facts: text(
+          "في 31 مايو 20X8 تظهر أرض مملوكة بتكلفة 250,000 دولار، ورسوم محاماة مباشرة لشرائها بمبلغ 5,000 سُجلت ضمن المصروفات القانونية. تكلفة معدات المصنع 150,000 ومجمع إهلاكها الافتتاحي 68,500، وإهلاك السنة 8% من التكلفة. تكلفة الأثاث 50,000 ومجمعه 15,750، وإهلاكه 10% من التكلفة. تكلفة السيارات 75,000 ومجمعها 25,000، وإهلاكها 20% بطريقة الرصيد المتناقص. يُستخدم ربع السيارات إداريًا وثلاثة أرباعها في التوزيع. يظهر أيضًا عقار ذو حق إيجار لكن شروط عقده غير متاحة لهذا الحساب.",
+          "At 31 May 20X8 owned land is carried at US$250,000, while US$5,000 of legal fees directly attributable to its purchase were recorded in legal expenses. Factory equipment cost US$150,000 with opening accumulated depreciation of US$68,500 and current depreciation at 8% of cost. Furniture cost US$50,000 with accumulated depreciation of US$15,750 and 10% of cost depreciation. Vehicles cost US$75,000 with accumulated depreciation of US$25,000 and depreciation at 20% reducing balance. One-quarter of vehicle use is administrative and three-quarters relates to distribution. A leased property interest also appears, but its contract terms are unavailable for this calculation.",
+        ),
+        calculations: [
+          text("تكلفة الأرض المصححة = 250,000 + 5,000 = 255,000 دولار؛ لا يُحتسب إهلاك للأرض في هذه الوقائع.", "Corrected land cost = 250,000 + 5,000 = US$255,000; no land depreciation arises on these facts."),
+          text("إهلاك معدات المصنع = 150,000 × 8% = 12,000؛ قيمتها الختامية = 150,000 − 68,500 − 12,000 = 69,500 دولار.", "Factory-equipment depreciation = 150,000 × 8% = 12,000; closing carrying amount = 150,000 − 68,500 − 12,000 = US$69,500."),
+          text("إهلاك الأثاث = 50,000 × 10% = 5,000؛ قيمته الختامية = 50,000 − 15,750 − 5,000 = 29,250 دولار.", "Furniture depreciation = 50,000 × 10% = 5,000; closing carrying amount = 50,000 − 15,750 − 5,000 = US$29,250."),
+          text("القيمة الافتتاحية للسيارات = 75,000 − 25,000 = 50,000؛ إهلاك الرصيد المتناقص = 50,000 × 20% = 10,000؛ القيمة الختامية = 40,000 دولار.", "Opening vehicle carrying amount = 75,000 − 25,000 = 50,000; reducing-balance depreciation = 50,000 × 20% = 10,000; closing carrying amount = US$40,000."),
+          text("إجمالي إهلاك الأصول الثلاثة = 27,000: تكلفة تصنيع 12,000، إدارة 5,000 + 2,500 = 7,500، توزيع 7,500. مجموع القيم الدفترية للأصول المملوكة المذكورة = 255,000 + 69,500 + 29,250 + 40,000 = 393,750 دولار.", "Depreciation on the three depreciable classes totals 27,000: manufacturing 12,000, administration 5,000 + 2,500 = 7,500, distribution 7,500. The specified owned assets' aggregate carrying amount is 255,000 + 69,500 + 29,250 + 40,000 = US$393,750."),
+        ],
+        conclusion: text(
+          "تُعرض الأرض والمعدات والأثاث والسيارات المملوكة هنا بقيمة إجمالية 393,750 دولار قبل أي معلومات إضافية عن انخفاض القيمة. يدخل إهلاك المصنع 12,000 في مجمع تكلفة الإنتاج؛ ويتحدد ما يبقى في مخزون آخر المدة وما يُحمّل لتكلفة المبيعات وفق حركة المخزون وIAS 2. لا تُضف قيمة العقار المؤجّر إلى هذا المجموع ولا تفترض له معالجة IAS 16 قبل فحص عقد الإيجار وفق IFRS 16.",
+          "The specified owned land, equipment, furniture and vehicles total US$393,750 before any further impairment information. Factory depreciation of US$12,000 enters the production-cost pool; its split between closing inventory and cost of sales depends on inventory movements and IAS 2. Do not add the leased property to this subtotal or assume IAS 16 treatment without assessing its contract under IFRS 16.",
+        ),
+        journalEntries: [
+          {
+            label: text("تصحيح تصنيف رسوم شراء الأرض", "Reclassify land-purchase legal fees"),
+            debit: text("أرض مملوكة 5,000", "Owned land 5,000"),
+            credit: text("مصروفات قانونية 5,000", "Legal expenses 5,000"),
+            amount: text("5,000 لكل جانب", "5,000 on each side"),
+          },
+          {
+            label: text("إثبات إهلاك السنة حسب الوظيفة", "Record annual depreciation by function"),
+            debit: text("تكلفة إنتاج 12,000 + مصروفات إدارية 7,500 + مصروفات توزيع 7,500", "Production cost 12,000 + administrative expense 7,500 + distribution expense 7,500"),
+            credit: text("مجمع إهلاك المعدات 12,000 + مجمع إهلاك الأثاث 5,000 + مجمع إهلاك السيارات 10,000", "Equipment accumulated depreciation 12,000 + furniture accumulated depreciation 5,000 + vehicle accumulated depreciation 10,000"),
+            amount: text("27,000 لكل جانب", "27,000 on each side"),
+          },
+        ],
+        reference: "IAS 16.16–17, 48–49, 58, 60–61; IAS 2.12–13; IFRS 16.22–28",
       },
     ],
   },
