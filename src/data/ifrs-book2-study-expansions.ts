@@ -368,6 +368,25 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 2.6, 9–16, 28–34",
       },
+      {
+        title: text("Polymer: مخزون التصنيع وتكلفة المبيعات", "Polymer: manufacturing inventories and cost of sales"),
+        facts: text(
+          "في مسألة Polymer، مخزون أول الفترة مواد خام 108,400 وتحت التشغيل 32,750 ومنتجات تامة 184,500. خلال السنة كانت مشتريات المواد 750,600، ونقلها إلى المصنع 10,500، وأجور التصنيع 250,000، وأعباء التصنيع 125,000، وإهلاك معدات الإنتاج 8% من تكلفة 150,000. مخزون آخر الفترة: مواد خام 112,600، وتحت التشغيل 37,800، ومنتجات تامة 275,350. لا يقدم السؤال بيانات عن صافي القيمة القابلة للتحقق أو الطاقة الإنتاجية المعتادة.",
+          "In Polymer, opening inventories are raw materials 108,400, work in progress 32,750 and finished goods 184,500. During the year raw-material purchases are 750,600, inward carriage 10,500, manufacturing wages 250,000, manufacturing overhead 125,000 and production-equipment depreciation is 8% of 150,000 cost. Closing inventories are raw materials 112,600, work in progress 37,800 and finished goods 275,350. The facts do not specify net realisable values or normal production capacity.",
+        ),
+        calculations: [
+          text("مخزون أول الفترة = 108,400 + 32,750 + 184,500 = 325,650.", "Opening inventory = 108,400 + 32,750 + 184,500 = 325,650."),
+          text("إهلاك معدات الإنتاج = 150,000 × 8% = 12,000؛ ويُدرج ضمن تكلفة التحويل إذا كان توزيع أعباء المصنع مؤهلًا وفق IAS 2.", "Production-equipment depreciation = 150,000 × 8% = 12,000; it enters conversion cost if the factory-overhead allocation qualifies under IAS 2."),
+          text("تكلفة الموارد المتاحة = 325,650 + 750,600 + 10,500 + 250,000 + 125,000 + 12,000 = 1,473,750.", "Cost available = 325,650 + 750,600 + 10,500 + 250,000 + 125,000 + 12,000 = 1,473,750."),
+          text("مخزون آخر الفترة = 112,600 + 37,800 + 275,350 = 425,750؛ تكلفة المبيعات المحسوبة = 1,473,750 − 425,750 = 1,048,000.", "Closing inventory = 112,600 + 37,800 + 275,350 = 425,750; computed cost of sales = 1,473,750 − 425,750 = 1,048,000."),
+        ],
+        conclusion: text(
+          "مبلغ 1,048,000 صحيح حسابيًا إذا كانت الأعباء 125,000 والإهلاك 12,000 قابلين للتحميل على الإنتاج وفق الطاقة المعتادة، ولم يظهر تخفيض إلى صافي القيمة القابلة للتحقق أو هدر غير عادي. لا تُدرج مصروفات الإدارة والتوزيع ضمن هذه المعادلة لمجرد ورودها في ميزان المراجعة.",
+          "The 1,048,000 arithmetic holds if the 125,000 overhead and 12,000 depreciation are eligible for allocation at normal capacity, with no net-realisable-value write-down or abnormal waste. Administrative and distribution expenses do not enter this inventory-cost bridge merely because they appear in the trial balance.",
+        ),
+        journalEntries: [],
+        reference: "IAS 2.9–16, 28–34",
+      },
     ],
   },
   "IAS 12": {
