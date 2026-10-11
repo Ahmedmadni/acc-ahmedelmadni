@@ -191,7 +191,7 @@ function CategoryPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <h2 className="mb-4 inline-flex items-center gap-2 font-display text-lg font-bold text-[#FCFBF9]">
           <BookOpen className="size-5 text-[#c9a986]" />
-          المقالات
+          {isEN ? "Articles" : "المقالات"}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(articles.data ?? []).map((a) => (
@@ -207,17 +207,17 @@ function CategoryPage() {
               />
               <div className="flex flex-1 flex-col p-4">
                 <h3 className="line-clamp-2 font-display text-base font-bold text-[#1C1B19] group-hover:text-[#7c6045]">
-                  {a.title_ar}
+                  {isEN ? a.title_en || a.title_ar : a.title_ar}
                 </h3>
                 <p className="mt-2 line-clamp-3 flex-1 text-xs leading-relaxed text-[#6B6259]">
-                  {a.excerpt_ar}
+                  {isEN ? a.excerpt_en || a.excerpt_ar : a.excerpt_ar}
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[11px] text-[#8a8078]">
                   <span className="inline-flex items-center gap-1">
-                    <Clock className="size-3" /> {a.reading_minutes} د
+                    <Clock className="size-3" /> {a.reading_minutes} {isEN ? "min" : "د"}
                   </span>
                   <span className="inline-flex items-center gap-1 font-bold text-[#7c6045]">
-                    اقرأ <ArrowLeft className="size-3" />
+                    {isEN ? "Read" : "اقرأ"} <ArrowLeft className="size-3 rtl:rotate-0 ltr:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -225,7 +225,7 @@ function CategoryPage() {
           ))}
           {articles.data && articles.data.length === 0 && (
             <p className="col-span-full rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9] p-8 text-center text-sm text-[#6B6259]">
-              لا توجد مقالات بعد في هذا التصنيف.
+              {isEN ? "No articles in this category yet." : "لا توجد مقالات بعد في هذا التصنيف."}
             </p>
           )}
         </div>
