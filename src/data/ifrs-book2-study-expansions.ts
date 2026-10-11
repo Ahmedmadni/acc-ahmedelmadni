@@ -155,6 +155,38 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         journalEntries: [],
         reference: "IFRS 3.18–19, 23A, 32, B31–B33, B37; IAS 12",
       },
+      {
+        title: text("Alpha/Beta: مقابل أسهم الشراء وتكاليف إصدارها", "Alpha/Beta: share consideration and issue costs"),
+        facts: text(
+          "في 1 أبريل 20X6 اشترت Alpha أربعين مليون سهم في Beta بإصدار سهم واحد من أسهمها لكل سهمين مشتراة؛ القيمة الاسمية لسهم Alpha دولار واحد وسعره المدرج يوم الشراء 6 دولارات. لم تسجل Alpha إصدار الأسهم في دفاترها، لكنها حمّلت مبلغ 0.8 مليون دولار من التكاليف المباشرة لإصدارها على الربح أو الخسارة خلال السنة. رأس مال Alpha قبل التصحيح 70 مليون دولار ولا يظهر في بياناتها رصيد سابق لعلاوة إصدار.",
+          "On 1 April 20X6 Alpha bought 40 million Beta shares by issuing one of its own shares for every two acquired. Each Alpha share has US$1 par value and a quoted acquisition-date price of US$6. Alpha did not record the share issue, but charged US$0.8 million of directly attributable share-issue costs to profit or loss during the year. Its unadjusted share capital is US$70 million, with no pre-existing share-premium balance shown.",
+        ),
+        calculations: [
+          text("الأسهم المصدرة = 40 ÷ 2 = 20 مليون سهم؛ مقابل الاستحواذ بالقيمة العادلة = 20 × 6 = 120 مليون دولار، يدخل في حساب الشهرة قبل فحص صافي الأصول المقتناة.",
+          "Shares issued = 40 ÷ 2 = 20 million; acquisition-date fair-value consideration = 20 × 6 = US$120 million, used in the goodwill equation before assessing acquired net assets."),
+          text("يثبت رأس مال جديد 20 × 1 = 20 مليونًا، وعلاوة إصدار أولية 20 × (6 − 1) = 100 مليون. تكلفة إصدار الأسهم المباشرة 0.8 تُخصم من علاوة الإصدار، لا من المقابل 120 ولا من ربح الفترة؛ فتكون علاوة الإصدار 99.2 مليون ورأس المال الختامي 90 مليونًا، قبل أي أثر ضريبي غير معطى.",
+          "Record new share capital of 20 × 1 = US$20 million and initial share premium of 20 × (6 − 1) = US$100 million. Deduct the US$0.8 million direct issue cost from share premium, not from US$120 million consideration or period profit: share premium becomes US$99.2 million and closing share capital US$90 million, before any unspecified tax effect."),
+        ],
+        conclusion: text(
+          "صحح المصروف المحمل خطأً على الربح أو الخسارة بزيادة الربح/الأرباح المحتجزة 0.8 مليون وخفض علاوة الإصدار بالمبلغ نفسه. لا تخلط هذه التكلفة المباشرة لإصدار أداة حقوق ملكية مع أتعاب الاستحواذ الأخرى التي تعالج عادةً مصروفًا وفق IFRS 3.",
+          "Reverse the issue cost incorrectly charged to profit or loss, increasing profit/retained earnings by US$0.8 million and decreasing share premium by the same amount. Direct equity-issue costs are distinct from other acquisition-related fees, which IFRS 3 generally expenses.",
+        ),
+        journalEntries: [
+          {
+            label: text("إثبات أسهم المقابل التي لم تسجلها Alpha", "Record the previously omitted consideration shares"),
+            debit: text("استثمار في Beta", "Investment in Beta"),
+            credit: text("رأس المال 20 مليونًا وعلاوة الإصدار 100 مليون", "Share capital US$20m and share premium US$100m"),
+            amount: text("120 مليون دولار", "US$120m"),
+          },
+          {
+            label: text("إعادة تبويب تكلفة إصدار الأسهم المباشرة", "Reclassify direct share-issue costs"),
+            debit: text("علاوة إصدار الأسهم", "Share premium"),
+            credit: text("مصروف إصدار الأسهم، أو الأرباح المحتجزة إذا أُقفل", "Share-issue expense, or retained earnings if closed"),
+            amount: text("0.8 مليون دولار", "US$0.8m"),
+          },
+        ],
+        reference: "IFRS 3.37, 53; IAS 32.35, 37; IAS 12.61A",
+      },
     ],
   },
   "IAS 16": {
