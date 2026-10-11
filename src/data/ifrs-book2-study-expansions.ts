@@ -2420,4 +2420,40 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
   },
+  "IAS 10": {
+    sections: [
+      {
+        title: text("التوزيع المقترح بعد الإقفال لا يصبح التزامًا بأثر رجعي", "A post-period proposed dividend is not a retrospective liability"),
+        explanation: text(
+          "اربط قرار توزيع الأرباح بتاريخ نشوء الالتزام، لا بتاريخ الأرباح التي سيموَّل منها. إذا أوصى مجلس الإدارة بتوزيع على حملة أدوات حقوق الملكية بعد نهاية الفترة، فلا يُثبت التوزيع دائنًا عند نهاية الفترة؛ حتى إعلان التوزيع بعد الإقفال وقبل اعتماد القوائم لا يخلق التزامًا في تاريخ الإقفال. افصل ذلك عن فوائد أو عوائد أداة مصنفة التزامًا ماليًا، التي تُقيَّم بشروطها ومواعيد استحقاقها. افحص تاريخ اعتماد القوائم ومتطلبات الإفصاح عن التوزيعات المقترحة أو المعلنة، دون تحويل الإفصاح إلى قيد استحقاق.",
+          "Tie a dividend obligation to the date it arises, not the period in which the profits funding it were earned. When directors recommend a distribution on equity instruments after the reporting period, it is not a payable at period-end; even a declaration after year-end but before authorisation of the financial statements does not create an obligation at year-end. Distinguish this from interest or returns on an instrument classified as a financial liability, which must be assessed under its own terms and due dates. Check the authorisation date and applicable disclosure requirements for proposed or declared dividends without turning disclosure into an accrual.",
+        ),
+        keyPoints: [
+          text("حدد تاريخ نهاية الفترة وتاريخ التوصية أو الإعلان وتاريخ اعتماد القوائم كلًّا على حدة.", "Identify separately the reporting date, recommendation or declaration date, and financial-statement authorisation date."),
+          text("لا تعالج توزيعات الأسهم العادية المقترحة مثل فائدة أداة دين مستحقة.", "Do not treat a proposed ordinary-share dividend like accrued debt interest."),
+          text("غياب التزام نهاية الفترة يعني عدم وجود قيد دائن للتوزيع في ذلك التاريخ.", "No period-end obligation means no dividend payable entry at that date."),
+        ],
+        reference: "IAS 10.3, 12–13; IAS 32.15–16, 35",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("Polymer: توصية توزيع بعد تاريخ القوائم", "Polymer: a dividend recommendation after year-end"),
+        facts: text(
+          "تنتهي سنة Polymer في 31 مايو 20X8، ولديها 300,000 سهم عادي مدفوع. في 30 يونيو التالي أوصى المديرون بتوزيع 3.5 سنت للسهم. لا تذكر الوقائع إعلانًا ملزمًا قبل 31 مايو ولا تاريخ اعتماد القوائم للنشر.",
+          "Polymer's year ends on 31 May 20X8 and it has 300,000 fully paid ordinary shares. On the following 30 June the directors recommended a dividend of 3.5 cents per share. The facts do not identify a binding declaration before 31 May or the date when the statements were authorised for issue.",
+        ),
+        calculations: [
+          text("قيمة التوزيع المقترح = 300,000 × 0.035 دولار = 10,500 دولار.", "Proposed dividend = 300,000 × US$0.035 = US$10,500."),
+          text("الالتزام المعترف به عن هذا التوزيع في 31 مايو 20X8 = صفر؛ ولا يُخصم 10,500 من أرباح الفترة أو الأرباح المحتجزة في قائمة ذلك التاريخ.", "Liability recognised for this dividend at 31 May 20X8 = nil; the US$10,500 is not deducted from period profit or retained earnings in the statement at that date."),
+        ],
+        conclusion: text(
+          "التوصية اللاحقة حدث غير معدل بالنسبة إلى التزام التوزيع. لا قيد في 31 مايو؛ وإذا كانت التوصية قبل اعتماد القوائم للنشر فتُراجع متطلبات الإفصاح عن التوزيع المقترح. لا تفترض أن التوصية نفسها جعلت المبلغ مستحق الدفع في 30 يونيو؛ يتوقف قيد الفترة اللاحقة على الموافقة الملزمة وشروط الشركة.",
+          "The later recommendation is non-adjusting for the dividend liability. Make no entry at 31 May; if the recommendation precedes authorisation for issue, assess disclosure of the proposed distribution. Do not assume the recommendation itself made the amount payable on 30 June; a later-period entry depends on binding approval and the entity's terms.",
+        ),
+        journalEntries: [],
+        reference: "IAS 10.3, 12–13; IAS 32.15–16, 35",
+      },
+    ],
+  },
 };
