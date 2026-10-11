@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { Download, BookOpen, ChevronDown, MessageCircle, FolderOpen, Search } from "lucide-react";
-import { useLibLang } from "./library";
+import { useSiteLang } from "@/lib/use-site-lang";
 import type { Lang } from "@/lib/i18n";
 import { supabasePublic } from "@/integrations/supabase/public-client";
 import type { Database } from "@/integrations/supabase/types";
@@ -144,7 +144,7 @@ function TemplateCard({ t, lang }: { t: AccountingTemplateRow; lang: Lang }) {
 }
 
 function TemplatesPage() {
-  const lang = useLibLang();
+  const [lang] = useSiteLang();
   const [cat, setCat] = useState("all");
   const [q, setQ] = useState("");
   const isAR = lang === "ar";
