@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { FileText, ExternalLink, Calendar, User, Search } from "lucide-react";
 import { supabasePublic } from "@/integrations/supabase/public-client";
-import { useLibLang } from "./library";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 /**
  * Category badge accents, keyed by `kb_categories.slug`.
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/library/articles")({
 });
 
 function ArticlesPage() {
-  const lang = useLibLang();
+  const [lang] = useSiteLang();
   const [cat, setCat] = useState("all");
   const [q, setQ] = useState("");
 

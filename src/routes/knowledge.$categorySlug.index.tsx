@@ -5,6 +5,7 @@ import { supabasePublic } from "@/integrations/supabase/public-client";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
 import { CategoryIcon } from "@/components/knowledge/CategoryIcon";
 import { t } from "@/lib/i18n";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 const KB_TO_LIB_CAT: Record<string, string[]> = {
   "financial-accounting": ["fundamentals", "reporting"],
@@ -66,6 +67,8 @@ export const Route = createFileRoute("/knowledge/$categorySlug/")({
 
 function CategoryPage() {
   const { categorySlug } = Route.useParams();
+  const [lang] = useSiteLang();
+  const isEN = lang === "en";
 
   const cat = useQuery({
     queryKey: ["kb-cat", categorySlug],
@@ -86,7 +89,7 @@ function CategoryPage() {
     queryFn: async () => {
       const { data, error } = await supabasePublic
         .from("kb_articles")
-        .select("id,slug,title_ar,excerpt_ar,featured_image,reading_minutes,published_at")
+        .select("id,slug,title_ar,title_en,excerpt_ar,excerpt_en,featured_image,reading_minutes,published_at")
         .eq("category_id", cat.data!.id)
         .order("published_at", { ascending: false });
       if (error) throw error;
@@ -99,10 +102,12 @@ function CategoryPage() {
       <section className="mx-auto max-w-6xl px-4 pt-12 pb-10 sm:px-6">
         <nav className="mb-4 flex items-center gap-1 text-xs text-[#D8D1C8]">
           <Link to="/knowledge" className="hover:text-[#c9a986]">
-            المكتبة
+            {isEN ? "Library" : "المكتبة"}
           </Link>
-          <ChevronLeft className="size-3" />
-          <span className="text-[#FCFBF9]">{cat.data?.name_ar ?? "..."}</span>
+          <ChevronLeft className="size-3 rtl:rotate-0 ltr:rotate-180" />
+          <span className="text-[#FCFBF9]">
+            {cat.data ? (isEN ? cat.data.name_en : cat.data.name_ar) : "..."}
+          </span>
         </nav>
 
         {cat.data && (
@@ -112,11 +117,15 @@ function CategoryPage() {
             </div>
             <div>
               <h1 className="font-display text-3xl font-extrabold text-[#FCFBF9] sm:text-4xl">
-                {cat.data.name_ar}
+                {isEN ? cat.data.name_en : cat.data.name_ar}
               </h1>
-              <p className="mt-1 text-sm text-[#D8D1C8]">{cat.data.name_en}</p>
-              {cat.data.description_ar && (
-                <p className="mt-2 max-w-2xl text-sm text-[#D8D1C8]">{cat.data.description_ar}</p>
+              <p className="mt-1 text-sm text-[#D8D1C8]">
+                {isEN ? cat.data.name_ar : cat.data.name_en}
+              </p>
+              {(isEN ? cat.data.description_en : cat.data.description_ar) && (
+                <p className="mt-2 max-w-2xl text-sm text-[#D8D1C8]">
+                  {isEN ? cat.data.description_en : cat.data.description_ar}
+                </p>
               )}
             </div>
           </div>
@@ -134,13 +143,13 @@ function CategoryPage() {
             <div className="mb-4 flex items-center justify-between">
               <h2 className="inline-flex items-center gap-2 font-display text-lg font-bold text-[#FCFBF9]">
                 <GraduationCap className="size-5 text-[#c9a986]" />
-                كورسات مرتبطة
+                {isEN ? "Related Courses" : "كورسات مرتبطة"}
               </h2>
               <Link
                 to="/library"
                 className="inline-flex items-center gap-1 text-xs font-bold text-[#c9a986] hover:underline"
               >
-                كل الكورسات <ArrowLeft className="size-3" />
+                {isEN ? "All courses" : "كل الكورسات"} <ArrowLeft className="size-3 rtl:rotate-0 ltr:rotate-180" />
               </Link>
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -154,11 +163,13 @@ function CategoryPage() {
                     <GraduationCap className="size-4" />
                   </div>
                   <h3 className="line-clamp-2 font-display text-sm font-bold text-[#1C1B19] group-hover:text-[#7c6045]">
-                    {c.ar}
+                    {isEN ? c.en : c.ar}
                   </h3>
                   <div className="mt-auto flex items-center justify-between text-[10px] text-[#6B6259]">
                     <span>
-                      {c.hours} ساعة · {c.lessons} درس
+                      {isEN
+                        ? `${c.hours}h · ${c.lessons} lessons`
+                        : `${c.hours} ساعة · ${c.lessons} درس`}
                     </span>
                     <span
                       className={`rounded-full px-2 py-0.5 font-bold uppercase ${
@@ -167,7 +178,7 @@ function CategoryPage() {
                           : "bg-[#A88765]/15 text-[#7c6045]"
                       }`}
                     >
-                      {c.price === "free" ? "مجاني" : "مدفوع"}
+                      {c.price === "free" ? (isEN ? "Free" : "مجاني") : isEN ? "Paid" : "مدفوع"}
                     </span>
                   </div>
                 </Link>
@@ -180,7 +191,7 @@ function CategoryPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
         <h2 className="mb-4 inline-flex items-center gap-2 font-display text-lg font-bold text-[#FCFBF9]">
           <BookOpen className="size-5 text-[#c9a986]" />
-          المقالات
+          {isEN ? "Articles" : "المقالات"}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {(articles.data ?? []).map((a) => (
@@ -196,17 +207,17 @@ function CategoryPage() {
               />
               <div className="flex flex-1 flex-col p-4">
                 <h3 className="line-clamp-2 font-display text-base font-bold text-[#1C1B19] group-hover:text-[#7c6045]">
-                  {a.title_ar}
+                  {isEN ? a.title_en || a.title_ar : a.title_ar}
                 </h3>
                 <p className="mt-2 line-clamp-3 flex-1 text-xs leading-relaxed text-[#6B6259]">
-                  {a.excerpt_ar}
+                  {isEN ? a.excerpt_en || a.excerpt_ar : a.excerpt_ar}
                 </p>
                 <div className="mt-3 flex items-center justify-between text-[11px] text-[#8a8078]">
                   <span className="inline-flex items-center gap-1">
-                    <Clock className="size-3" /> {a.reading_minutes} د
+                    <Clock className="size-3" /> {a.reading_minutes} {isEN ? "min" : "د"}
                   </span>
                   <span className="inline-flex items-center gap-1 font-bold text-[#7c6045]">
-                    اقرأ <ArrowLeft className="size-3" />
+                    {isEN ? "Read" : "اقرأ"} <ArrowLeft className="size-3 rtl:rotate-0 ltr:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -214,7 +225,7 @@ function CategoryPage() {
           ))}
           {articles.data && articles.data.length === 0 && (
             <p className="col-span-full rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9] p-8 text-center text-sm text-[#6B6259]">
-              لا توجد مقالات بعد في هذا التصنيف.
+              {isEN ? "No articles in this category yet." : "لا توجد مقالات بعد في هذا التصنيف."}
             </p>
           )}
         </div>

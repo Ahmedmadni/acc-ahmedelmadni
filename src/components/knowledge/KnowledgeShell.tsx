@@ -11,6 +11,7 @@ import {
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 type KnowledgeUser = { id: string; email: string | null };
 
@@ -57,10 +58,13 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
     window.location.assign("/auth");
   };
 
+  const [lang] = useSiteLang();
+  const isEN = lang === "en";
+
   return (
     <div
-      dir="rtl"
-      lang="ar"
+      dir={isEN ? "ltr" : "rtl"}
+      lang={lang}
       className="min-h-screen text-[var(--fg)]"
       style={{
         background: "#151412",
@@ -74,7 +78,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
             className="inline-flex items-center gap-2 text-sm font-bold text-[#c9a986]"
           >
             <BookOpen className="size-5" />
-            المكتبة المحاسبية
+            {isEN ? "Accounting Library" : "المكتبة المحاسبية"}
           </Link>
           <nav className="flex flex-wrap items-center justify-end gap-2">
             <Link
@@ -82,19 +86,19 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
               className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
             >
               <Home className="size-3.5" />
-              الرئيسية
+              {isEN ? "Home" : "الرئيسية"}
             </Link>
             <Link
               to="/tools"
               className="hidden rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 sm:inline-flex"
             >
-              الأدوات
+              {isEN ? "Tools" : "الأدوات"}
             </Link>
             <Link
               to="/library"
               className="hidden rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15 sm:inline-flex"
             >
-              المكتبة
+              {isEN ? "Library" : "المكتبة"}
             </Link>
             {user ? (
               <>
@@ -103,7 +107,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
                   className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
                 >
                   <Bookmark className="size-3.5" />
-                  محفوظاتي
+                  {isEN ? "My Bookmarks" : "محفوظاتي"}
                 </Link>
                 {isAdmin && (
                   <Link
@@ -111,7 +115,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
                     className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-3 py-1.5 text-xs font-bold text-emerald-100 transition-all hover:bg-emerald-400/20"
                   >
                     <ShieldCheck className="size-3.5" />
-                    لوحة التحكم
+                    {isEN ? "Dashboard" : "لوحة التحكم"}
                   </Link>
                 )}
                 <span className="hidden max-w-[220px] items-center gap-1.5 truncate rounded-full border border-[#A88765]/25 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#D8D1C8] md:inline-flex">
@@ -126,7 +130,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
                   className="inline-flex items-center gap-1.5 rounded-full border border-red-300/30 bg-red-400/10 px-3 py-1.5 text-xs font-bold text-red-100 transition-all hover:bg-red-400/20"
                 >
                   <LogOut className="size-3.5" />
-                  خروج
+                  {isEN ? "Sign out" : "خروج"}
                 </button>
               </>
             ) : (
@@ -135,7 +139,7 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
                 className="inline-flex items-center gap-1.5 rounded-full border border-[#A88765]/40 bg-[#A88765]/10 px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/20"
               >
                 <UserCircle className="size-3.5" />
-                دخول
+                {isEN ? "Sign in" : "دخول"}
               </Link>
             )}
           </nav>
@@ -144,9 +148,13 @@ export function KnowledgeShell({ children }: { children: ReactNode }) {
       {children}
       <footer className="mt-16 border-t border-[#A88765]/15 bg-[#151412]">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-[#D8D1C8] sm:flex-row sm:px-6">
-          <p>© {new Date().getFullYear()} المكتبة المحاسبية — أحمد المدني</p>
+          <p>
+            © {new Date().getFullYear()}{" "}
+            {isEN ? "Accounting Library — Ahmed Elmadni" : "المكتبة المحاسبية — أحمد المدني"}
+          </p>
           <Link to="/" className="inline-flex items-center gap-1 text-[#c9a986] hover:underline">
-            عودة للموقع <ArrowRight className="size-3.5" />
+            {isEN ? "Back to site" : "عودة للموقع"}{" "}
+            <ArrowRight className="size-3.5 rtl:rotate-0 ltr:rotate-180" />
           </Link>
         </div>
       </footer>

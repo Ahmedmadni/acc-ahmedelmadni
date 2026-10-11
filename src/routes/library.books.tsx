@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { ExternalLink, Search, Filter } from "lucide-react";
-import { useLibLang } from "./library";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 export const Route = createFileRoute("/library/books")({
   head: () => ({
@@ -192,7 +192,7 @@ const BOOKS: Book[] = [
 const typeIcon = (t: Book["type"]) => (t === "PDF" ? "📄" : t === "Excel" ? "📊" : "📖");
 
 function BooksPage() {
-  const lang = useLibLang();
+  const [lang] = useSiteLang();
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<string>("all");
   const [price, setPrice] = useState<"all" | "free" | "paid">("all");

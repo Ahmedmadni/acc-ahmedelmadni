@@ -14,7 +14,7 @@ import {
   Monitor,
 } from "lucide-react";
 import { t } from "@/lib/i18n";
-import { useLibLang } from "./library";
+import { useSiteLang } from "@/lib/use-site-lang";
 
 export const Route = createFileRoute("/library/courses")({
   head: () => ({
@@ -221,7 +221,7 @@ function CourseIcon({ cat }: { cat: string }) {
 }
 
 function CoursesPage() {
-  const lang = useLibLang();
+  const [lang] = useSiteLang();
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<CatKey>("all");
   const [level, setLevel] = useState<LevelKey>("all");
