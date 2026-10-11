@@ -386,6 +386,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ),
         journalEntries: [],
         reference: "IAS 2.9–16, 28–34",
+      },
     ],
   },
   "IAS 12": {
