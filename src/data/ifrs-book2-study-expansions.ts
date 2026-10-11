@@ -51,6 +51,25 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 10.B86(b); IFRS 3.18–19, 32",
       },
+      {
+        title: text("Alpha وBeta: حقوق غير مسيطرة بعد استبعاد أصل دعوى محتمل", "Alpha and Beta: NCI after excluding a contingent claim"),
+        facts: text(
+          "اشترت Alpha نسبة 80% من Beta في 1 أبريل 20X6، وقُدرت القيمة العادلة للحصة غير المسيطرة حينها بـ24 مليون دولار. بلغ رأس مال Beta وأرباحها المحتجزة في تاريخ الشراء 50 و35 مليونًا. زيادات القيمة القابلة للاعتراف: أرض 10 ملايين، معدات 8 ملايين، وعلاقات عملاء قابلة للتحديد بافتراض استيفاء شروط IFRS 3 بقيمة 20 مليونًا. توجد مطالبة قضائية محتملة قُدرت بـ3 ملايين لكنها لا تُعترف أصلًا في تاريخ الشراء. بافتراض ثبات الأسس الضريبية، ينشأ التزام ضريبة مؤجلة بمعدل 25% على زيادات القيمة المعترف بها. في 31 مارس 20X7 بلغت حقوق Beta الدفترية 94 مليونًا، وأصبحت فروق القيمة الباقية قبل ضريبتها 10 ملايين للأرض و6 للمعدات و16 للعلاقات؛ ولم تُثبت خسارة انخفاض للشهرة.",
+          "Alpha acquired 80% of Beta on 1 April 20X6 and measured NCI at acquisition-date fair value of US$24 million. Beta's share capital and retained earnings at acquisition were US$50 million and US$35 million. Recognisable uplifts were land US$10 million, equipment US$8 million and, assuming IFRS 3 identifiability, customer relationships US$20 million. A US$3 million lawsuit claim remained contingent and is not an acquisition-date asset. Assuming unchanged tax bases, a 25% deferred tax liability arises on the recognised uplifts. At 31 March 20X7 Beta's book equity was US$94 million and remaining pre-tax uplifts were land US$10 million, equipment US$6 million and customer relationships US$16 million; no goodwill impairment is specified.",
+        ),
+        calculations: [
+          text("صافي الأصول المحددة عند الشراء = 50 + 35 + (10 + 8 + 20) − 25% × 38 = 113.5 مليون دولار. المطالبة المحتملة 3 ملايين وضريبتها الافتراضية لا تدخلان الحساب.", "Acquisition-date identifiable net assets = 50 + 35 + (10 + 8 + 20) − 25% × 38 = US$113.5 million. The US$3 million contingent claim and hypothetical related tax are excluded."),
+          text("إذا كان المقابل 120 مليونًا، فالشهرة الكلية = 120 + 24 − 113.5 = 30.5 مليون. نصيب الحصة غير المسيطرة الضمني من الشهرة = 24 − 20% × 113.5 = 1.3 مليون.", "With consideration of US$120 million, total goodwill = 120 + 24 − 113.5 = US$30.5 million. The NCI's implied goodwill share = 24 − 20% × 113.5 = US$1.3 million."),
+          text("فروق القيمة الصافية في نهاية الفترة = (10 + 6 + 16) × 75% = 24 مليونًا؛ صافي أصول Beta المعدل = 94 + 24 = 118 مليونًا.", "Closing net fair-value uplifts = (10 + 6 + 16) × 75% = US$24 million; adjusted Beta net assets = 94 + 24 = US$118 million."),
+          text("الحصة غير المسيطرة الختامية = 20% × 118 + 1.3 = 24.9 مليون دولار. حركة صافي الأصول بعد الشراء = 118 − 113.5 = 4.5 ملايين، وحصة الأم منها = 80% × 4.5 = 3.6 ملايين، قبل تسويات أخرى.", "Closing NCI = 20% × 118 + 1.3 = US$24.9 million. Post-acquisition net-asset movement = 118 − 113.5 = US$4.5 million; the parent's share is 80% × 4.5 = US$3.6 million before other adjustments."),
+        ],
+        conclusion: text(
+          "هذه تسوية توحيد للحصة غير المسيطرة وليست إثبات أصل دعوى جديد. عدم إدخال المطالبة المحتملة عند الاستحواذ يزيد الشهرة المصححة بمقدار 2.25 مليون مقارنة بحساب يُدخلها مع ضريبتها، ويرفع نصيب الشهرة المنسوب للحصة غير المسيطرة بمقدار 0.45 مليون. لا تُحوّل كامل نتيجة صافي أصول Beta إلى حصة الأم؛ تُفصل نسبة 20% والحصة الضمنية من الشهرة.",
+          "This is an NCI consolidation worksheet, not recognition of a new lawsuit asset. Excluding the acquisition-date contingent claim increases corrected goodwill by US$2.25 million compared with a calculation including the claim and related tax, and increases the NCI goodwill share by US$0.45 million. Do not attribute all of Beta's adjusted net assets to the parent; separate the 20% NCI and its implied goodwill share.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 3.19, 23A, 32; IFRS 10.22, B94–B96; IAS 12",
+      },
     ],
   },
   "IFRS 3": {
