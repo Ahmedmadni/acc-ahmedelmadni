@@ -143,13 +143,13 @@ function CategoryPage() {
             <div className="mb-4 flex items-center justify-between">
               <h2 className="inline-flex items-center gap-2 font-display text-lg font-bold text-[#FCFBF9]">
                 <GraduationCap className="size-5 text-[#c9a986]" />
-                كورسات مرتبطة
+                {isEN ? "Related Courses" : "كورسات مرتبطة"}
               </h2>
               <Link
                 to="/library"
                 className="inline-flex items-center gap-1 text-xs font-bold text-[#c9a986] hover:underline"
               >
-                كل الكورسات <ArrowLeft className="size-3" />
+                {isEN ? "All courses" : "كل الكورسات"} <ArrowLeft className="size-3 rtl:rotate-0 ltr:rotate-180" />
               </Link>
             </div>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -163,11 +163,13 @@ function CategoryPage() {
                     <GraduationCap className="size-4" />
                   </div>
                   <h3 className="line-clamp-2 font-display text-sm font-bold text-[#1C1B19] group-hover:text-[#7c6045]">
-                    {c.ar}
+                    {isEN ? c.en : c.ar}
                   </h3>
                   <div className="mt-auto flex items-center justify-between text-[10px] text-[#6B6259]">
                     <span>
-                      {c.hours} ساعة · {c.lessons} درس
+                      {isEN
+                        ? `${c.hours}h · ${c.lessons} lessons`
+                        : `${c.hours} ساعة · ${c.lessons} درس`}
                     </span>
                     <span
                       className={`rounded-full px-2 py-0.5 font-bold uppercase ${
@@ -176,7 +178,7 @@ function CategoryPage() {
                           : "bg-[#A88765]/15 text-[#7c6045]"
                       }`}
                     >
-                      {c.price === "free" ? "مجاني" : "مدفوع"}
+                      {c.price === "free" ? (isEN ? "Free" : "مجاني") : isEN ? "Paid" : "مدفوع"}
                     </span>
                   </div>
                 </Link>
