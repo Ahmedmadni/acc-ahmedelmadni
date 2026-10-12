@@ -140,6 +140,41 @@ export const IFRS_COMPANION_MODULES: CompanionModule[] = [
           en: "In the third edition, internally incurred research and development is normally expensed under Section 18 unless it forms part of another qualifying asset; eligible development can require capitalisation under full IAS 38. Section 16 measures investment property at fair value when reliable measurement is available without undue cost or effort, otherwise at cost—not every property is at fair value. Section 19 measures NCI at its proportionate share of net assets. The 2025 edition materially revises Sections 2, 11, 12, 19 and 23, so comparisons from an older edition cannot be reused uncritically.",
         },
       },
+      {
+        prompt: { ar: "ما المقصود بالتقرير المالي المتمايز؟", en: "What is differential financial reporting?" },
+        answer: {
+          ar: "هو تكييف متطلبات التقارير لفئات مختلفة من المنشآت بدل افتراض أن حجم الإفصاح والتعقيد المناسب للشركات ذات المساءلة العامة يناسب الجميع. في معيار SMEs يُحدد النطاق أساسًا بمفهوم المساءلة العامة وإعداد قوائم عامة، لا بمجرد حد رقمي موحّد للحجم.",
+          en: "It tailors reporting requirements to different classes of entities rather than assuming the full disclosure and complexity of publicly accountable companies suits everyone. SME eligibility centres on public accountability and general purpose reporting, not a universal numeric size threshold.",
+        },
+      },
+      {
+        prompt: { ar: "هل تختلف مبادئ إثبات المخصص في معيار SMEs جذريًا عن IAS 37؟", en: "Are SME provision-recognition principles fundamentally different from IAS 37?" },
+        answer: {
+          ar: "لا. يتطلب القسم 21 التزامًا حاليًا ناشئًا عن حدث سابق، ورجحان تدفق موارد للتسوية، وإمكان تقدير المبلغ بموثوقية. الاختلاف في حجم وتفصيل النظام لا يعني أن أي نية إنفاق مستقبلية تصبح مخصصًا. يُرجع إلى نص القسم 21 للفترة المطبقة بدل تعميم كل فروق IAS 37.",
+          en: "No. Section 21 requires a present obligation from a past event, probable outflow and a reliably estimable amount. A simpler reporting regime does not turn an intention to incur future costs into a provision. Apply the version of Section 21 relevant to the reporting period rather than generalising every IAS 37 difference.",
+        },
+      },
+      {
+        prompt: { ar: "اذكر موضوعين من IFRS الكامل لا يعالجهما معيار SMEs كمعايير مستقلة.", en: "Name two full-IFRS topics not separately covered by the SME Standard." },
+        answer: {
+          ar: "من أمثلة الفصل ربحية السهم وفق IAS 33، وتقارير القطاعات وفق IFRS 8، والتقرير المالي المرحلي وفق IAS 34. لا تُستنتج من غياب فصل مستقل حرية خلط متطلبات IFRS الكامل مع نظام SMEs؛ يمكن تقديم معلومات طوعية مفيدة دون الادعاء بتطبيق معيار كامل منفرد.",
+          en: "Examples include earnings per share under IAS 33, operating segments under IFRS 8 and interim financial reporting under IAS 34. The absence of a separate SME section is not permission to mix selected full-IFRS recognition rules into the SME regime; useful voluntary information can be supplied without asserting piecemeal compliance.",
+        },
+      },
+      {
+        prompt: { ar: "متى يُعترف بإيراد بيع سلعة وفق إصدار SMEs لعام 2025؟", en: "When is revenue from a sale of goods recognised under the 2025 SME edition?" },
+        answer: {
+          ar: "يطبق القسم 23 المحدَّث نموذج العقود مع العملاء: يُحدد الوعد والأداء المقابل له ويُثبت الإيراد عندما أو كلما تستوفي المنشأة الوعد بنقل السيطرة إلى العميل. انتقال المخاطر والمنافع مؤشر على السيطرة، لكنه ليس الاختبار الوحيد. جواب الطبعة الأقدم القائم على انتقال المخاطر وحده لا يكفي للإصدار الثالث.",
+          en: "Revised Section 23 uses a customer-contract model: identify the promise and recognise revenue when or as it is fulfilled by transferring control to the customer. Transfer of risks and rewards is an indicator of control, not the sole test. The older edition's risks-and-rewards answer is insufficient for the third edition.",
+        },
+      },
+      {
+        prompt: { ar: "كيف تُعالج تكاليف الاقتراض وفق معيار SMEs؟", en: "How are borrowing costs treated under the SME Standard?" },
+        answer: {
+          ar: "ينص القسم 25.2 على إثبات جميع تكاليف الاقتراض مصروفًا في الربح أو الخسارة عند تكبدها؛ لا تطبق رسملة IAS 23 الخاصة بالأصل المؤهل داخل هذا النظام. حدد أولًا أن المنشأة تستخدم معيار SMEs بصورة صحيحة.",
+          en: "Section 25.2 expenses all borrowing costs in profit or loss as incurred; the full-IFRS IAS 23 capitalisation rule for qualifying assets is not imported into this regime. First establish that the entity correctly applies the SME Standard.",
+        },
+      },
     ],
     referenceLabel: "IFRS Foundation — IFRS for SMEs (2025)",
     referenceUrl: "https://www.ifrs.org/supporting-implementation/2025-ifrs-for-smes-supporting-materials/",
