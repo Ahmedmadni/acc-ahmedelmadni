@@ -314,6 +314,37 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 16.16–17, 48–49, 58, 60–61; IAS 2.12–13; IFRS 16.22–28",
       },
+      {
+        title: text("عقار مملوك: افصل إهلاك المبنى عن إعادة التقييم", "Owner-occupied property: separate building depreciation from revaluation"),
+        facts: text(
+          "تكلفة أرض ومبنى مملوكين 430 ألف دولار. جزء المبنى من التكلفة 100 ألف، وعمره النافع 50 سنة دون قيمة متبقية مفترضة في الحساب المعروض. بلغ مجمع إهلاك المبنى أول السنة 20 ألفًا، وأعيد تقييم العقار في نهاية السنة إلى 800 ألف. لا تتوافر في هذه الوقائع بيانات عن خسائر إعادة تقييم سابقة للأصل أو عن بقية أصول الفئة.",
+          "Owner-occupied land and building cost $430 thousand. The building's cost component is $100 thousand with a 50-year useful life and no residual amount in the presented calculation. Opening accumulated building depreciation is $20 thousand, and the property is revalued to $800 thousand at year-end. These facts provide no information about earlier revaluation losses on the asset or other assets in the class.",
+        ),
+        calculations: [
+          text("إهلاك المبنى للسنة = 100 ÷ 50 = 2 ألف دولار؛ الأرض لا تُهلك لمجرد أنها ضمن العقار.", "Annual building depreciation = 100 ÷ 50 = $2 thousand; land is not depreciated merely because it is included in the property."),
+          text("القيمة الدفترية قبل إعادة التقييم = 430 − 20 − 2 = 408 آلاف دولار؛ الزيادة الحسابية إلى القيمة الجديدة = 800 − 408 = 392 ألفًا.", "Pre-revaluation carrying amount = 430 − 20 − 2 = $408 thousand; the numerical uplift to the new value is 800 − 408 = $392 thousand."),
+          text("إذا لم تكن هناك خسارة إعادة تقييم سابقة لنفس الأصل أُثبتت في الربح أو الخسارة، تُعترف الزيادة 392 ألفًا في الدخل الشامل الآخر وتُجمع في فائض إعادة التقييم. إن وُجدت خسارة سابقة، يُعترف بجزء عكسها في الربح أو الخسارة أولًا وفق IAS 16.", "If no previous revaluation decrease for the same asset was recognised in profit or loss, the $392 thousand increase goes to other comprehensive income and revaluation surplus. If such a decrease exists, the portion reversing it first goes to profit or loss under IAS 16."),
+        ],
+        conclusion: text(
+          "هذه مصالحة للعقار فقط، وليست قائمة مالية كاملة. لا تكفي قيمة 800 ألف غير المفصلة بين الأرض والمبنى لحساب إهلاك المبنى بعد إعادة التقييم؛ ويجب أيضًا التأكد من تطبيق سياسة إعادة التقييم على الفئة كلها، لا اختيار هذا العقار منفردًا.",
+          "This is a property reconciliation, not a complete set of financial statements. The unallocated $800 thousand valuation does not determine post-revaluation building depreciation; also confirm that the revaluation policy applies to the entire class rather than selectively to this property.",
+        ),
+        journalEntries: [
+          {
+            label: text("إهلاك المبنى خلال السنة", "Annual building depreciation"),
+            debit: text("مصروف إهلاك المبنى", "Building depreciation expense"),
+            credit: text("مجمع إهلاك المبنى", "Accumulated building depreciation"),
+            amount: text("2,000", "2,000"),
+          },
+          {
+            label: text("زيادة إعادة التقييم — بشرط عدم وجود عكس خسارة سابقة", "Revaluation uplift — if no prior loss is reversed"),
+            debit: text("العقار، على أساس القيمة الدفترية الصافية", "Property, on a net-carrying-amount basis"),
+            credit: text("فائض إعادة التقييم عبر الدخل الشامل الآخر", "Revaluation surplus through other comprehensive income"),
+            amount: text("392,000", "392,000"),
+          },
+        ],
+        reference: "IAS 16.31, 35–40, 58, 60–62",
+      },
     ],
   },
   "IFRS 11": {
