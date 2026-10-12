@@ -15,6 +15,72 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs9-ch10-quiz-subsequent-assets",
+    standardCode: "IFRS 9",
+    title: text("قياس الأصول المالية لاحقًا", "Subsequent measurement of financial assets"),
+    facts: text("سؤال عن فئات قياس الأصل المالي بعد الاعتراف الأول.", "A question on subsequent financial-asset measurement categories."),
+    question: text("ما فئات القياس اللاحق للأصول المالية في IFRS 9؟", "What are the IFRS 9 subsequent-measurement categories for financial assets?"),
+    solution: [
+      text("التكلفة المطفأة، أو القيمة العادلة من خلال الدخل الشامل الآخر، أو القيمة العادلة من خلال الربح أو الخسارة. يحدد تصنيف أدوات الدين نموذج الأعمال وخصائص التدفقات النقدية التعاقدية، وتوجد اختيارات أو متطلبات خاصة لبعض استثمارات حقوق الملكية؛ ليست الفئات الثلاث اختيارًا حرًا لكل أصل.", "Amortised cost, fair value through other comprehensive income (FVOCI), or fair value through profit or loss (FVTPL). Debt classification depends on business model and contractual cash-flow characteristics, with specific requirements or elections for some equity investments; the three categories are not a free choice for every asset."),
+    ],
+    reference: "IFRS 9.4.1.1–4.1.5, 5.7.5",
+  },
+  {
+    id: "ifrs-book2-ifrs9-ch10-quiz-ecl-worst-case",
+    standardCode: "IFRS 9",
+    title: text("هل خسائر الائتمان المتوقعة أسوأ حالة؟", "Are expected credit losses the worst case?"),
+    facts: text("العبارة المطروحة: «عند قياس خسائر الائتمان المتوقعة يجب دائمًا اعتماد أسوأ سيناريو».", "The statement is: 'Expected credit losses must always use the worst-case scenario.'"),
+    question: text("هل العبارة صحيحة؟", "Is the statement true?"),
+    solution: [
+      text("خطأ. التقدير مبلغ غير متحيز مرجح بالاحتمالات عبر نطاق من النتائج الممكنة، ويعكس احتمال وقوع خسارة واحتمال عدم وقوعها، مع مراعاة قيمة الزمن للمبلغ ومعلومات معقولة ومؤيدة عن الماضي والحاضر والمستقبل. أسوأ حالة وحدها قد تبالغ في الخسارة.", "False. Estimate an unbiased probability-weighted amount across possible outcomes, reflecting both a credit-loss outcome and a no-loss outcome, the time value of money, and reasonable supportable past, current and forward-looking information. Worst case alone can overstate the loss."),
+    ],
+    reference: "IFRS 9.5.5.17, B5.5.41–B5.5.42",
+  },
+  {
+    id: "ifrs-book2-ifrs9-ch10-quiz-embedded",
+    standardCode: "IFRS 9",
+    title: text("المشتقات الضمنية في العقد المختلط", "Embedded derivatives in hybrid contracts"),
+    facts: text("سؤال يميز بين عقد مضيف أصل مالي داخل IFRS 9 ومضيف آخر.", "A question contrasting a financial-asset host within IFRS 9 with another type of host."),
+    question: text("متى يُفصل المشتق الضمني عن العقد المضيف؟", "When is an embedded derivative separated from its host?"),
+    solution: [
+      text("إذا كان المضيف أصلًا ماليًا داخل IFRS 9 تُطبق قواعد تصنيف وقياس الأصل على العقد المختلط كله، ولا يُفصل المشتق. وإذا لم يكن المضيف أصلًا ماليًا داخل المعيار، يُفصل المشتق فقط عند تحقق الشروط الثلاثة: عدم الارتباط الوثيق بين خصائصه ومخاطر المضيف، وأن أداة مستقلة بالشروط نفسها مشتق، وألا يكون العقد المختلط كله مقاسًا بالقيمة العادلة من خلال الربح أو الخسارة. وإلا يُعالج العقد وفق القواعد المنطبقة.", "For a host that is a financial asset within IFRS 9, classify and measure the whole hybrid contract without separating the derivative. For another host, separate only if the embedded component is not closely related to the host, a stand-alone instrument with the same terms would be a derivative, and the whole hybrid is not at FVTPL. Otherwise apply the relevant whole-contract requirements."),
+    ],
+    reference: "IFRS 9.4.3.2–4.3.6",
+  },
+  {
+    id: "ifrs-book2-ifrs9-ch10-quiz-hedge-accounting",
+    standardCode: "IFRS 9",
+    title: text("معنى محاسبة التحوط", "Meaning of hedge accounting"),
+    facts: text("سؤال تعريفي عن أداة التحوط والبند المتحوط له.", "A definition question about a hedging instrument and hedged item."),
+    question: text("ما المقصود بمحاسبة التحوط؟", "What is hedge accounting?"),
+    solution: [
+      text("هي تمثيل في القوائم لتأثير إدارة المخاطر عبر تخصيص علاقة بين أداة تحوط مؤهلة وبند متحوط له، بحيث تنعكس آثار تغيرات القيمة العادلة أو التدفقات النقدية المرتبطة بالخطر المتحوط له وفق نوع التحوط. لا يكفي وجود مشتق أو تعويض اقتصادي محتمل: يلزم توثيق العلاقة والهدف والاستراتيجية واستيفاء اختبارات التأهل في IFRS 9؛ ولا تكون محاسبة التحوط واجبة لمجرد وجود خطر.", "Hedge accounting represents risk-management effects by designating a qualifying relationship between a hedging instrument and hedged item, reflecting offsetting fair-value or cash-flow changes attributable to the hedged risk according to hedge type. An economic offset or derivative alone is insufficient: designation, documentation and IFRS 9 qualifying criteria are required; hedge accounting is not automatic whenever risk exists."),
+    ],
+    reference: "IFRS 9.6.1.1, 6.4.1, 6.5.1–6.5.2",
+  },
+  {
+    id: "ifrs-book2-ifrs9-ch10-quiz-hedge-types",
+    standardCode: "IFRS 9",
+    title: text("أنواع علاقات التحوط الثلاثة", "Three hedging relationship types"),
+    facts: text("سؤال تعداد لأنواع التحوط في IFRS 9.", "An enumeration question on IFRS 9 hedge types."),
+    question: text("سمّ الأنواع الثلاثة لعلاقات التحوط.", "Name the three types of hedging relationship."),
+    solution: [
+      text("تحوط القيمة العادلة، وتحوط التدفقات النقدية، وتحوط صافي الاستثمار في عملية أجنبية. يحدد نوع الخطر والبند المؤهل المعالجة، ولا تُستنتج أهلية أي علاقة من مجرد تسميتها.", "Fair value hedge, cash flow hedge, and hedge of a net investment in a foreign operation. The qualifying exposure and hedged item drive accounting; a label alone does not establish eligibility."),
+    ],
+    reference: "IFRS 9.6.5.2",
+  },
+  {
+    id: "ifrs-book2-ifrs13-ch10-quiz-inputs",
+    standardCode: "IFRS 13",
+    title: text("مدخلات قياس القيمة العادلة", "Fair-value valuation inputs"),
+    facts: text("سؤال لإكمال مبدأ اختيار مدخلات أسلوب التقييم.", "A fill-in question on the principle for valuation-technique inputs."),
+    question: text("أي مدخلات ينبغي تعظيم استخدامها، وأيها ينبغي تقليلها؟", "Which valuation inputs should be maximised and which minimised?"),
+    solution: [
+      text("يُعظَّم استخدام المدخلات الملحوظة ذات الصلة، ويُقلَّل استخدام المدخلات غير الملحوظة، مع اختيار أسلوب تقييم مناسب للظروف وتوافر بيانات كافية. لا يعني ذلك تجاهل فرضيات المشاركين في السوق أو استعمال مدخل ملحوظ غير ذي صلة لمجرد أنه متاح.", "Maximise relevant observable inputs and minimise unobservable inputs, using an appropriate valuation technique and sufficient data. This does not mean ignoring market-participant assumptions or using irrelevant observable inputs merely because they are available."),
+    ],
+    reference: "IFRS 13.61, 67, 81–89",
+  },
+  {
     id: "ifrs-book2-ias32-ch10-quiz-scope",
     standardCode: "IAS 32",
     title: text("موضوع معيار IAS 32", "What IAS 32 addresses"),
