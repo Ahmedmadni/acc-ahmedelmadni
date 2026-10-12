@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs2-ch14-quiz-cash-settled",
+    standardCode: "IFRS 2",
+    title: text("المعاملة المسددة نقدًا", "Cash-settled share-based payment"),
+    facts: text("السؤال يطلب تعريف معاملة دفع على أساس الأسهم تسدد نقدًا.", "The question asks for the definition of a cash-settled share-based payment."),
+    question: text("ما معاملة الدفع على أساس الأسهم المسددة نقدًا؟", "What is a cash-settled share-based payment transaction?"),
+    solution: [
+      text("تحصل المنشأة على سلع أو خدمات مقابل التزام بتحويل نقد أو أصول أخرى بمبلغ يعتمد على سعر أو قيمة أدوات حقوق ملكيتها، مثل حق ارتفاع قيمة السهم المسدد نقدًا. يُعترف بالخدمة أو السلعة والالتزام المقابل وفق شروط الاستحقاق والقياس.", "The entity receives goods or services in exchange for an obligation to transfer cash or other assets at an amount based on the price or value of its equity instruments, such as cash-settled share appreciation rights. Recognise the goods or services and corresponding liability under the applicable vesting and measurement rules."),
+    ],
+    reference: "IFRS 2 Appendix A, 30–33",
+  },
+  {
+    id: "ifrs-book2-ifrs2-ch14-quiz-grant-date",
+    standardCode: "IFRS 2",
+    title: text("تاريخ المنح", "Grant date"),
+    facts: text("السؤال يطلب تعريف تاريخ المنح في اتفاق دفع على أساس الأسهم.", "The question asks for the grant-date definition in a share-based payment arrangement."),
+    question: text("ما تاريخ المنح؟", "What is the grant date?"),
+    solution: [
+      text("التاريخ الذي تتفق فيه المنشأة والطرف الآخر، بما في ذلك الموظف، على ترتيب الدفع على أساس الأسهم ويصبح لدى الطرفين فهم مشترك لشروطه وأحكامه؛ وإذا كان الاتفاق مشروطًا بموافقة لازمة، لا يحل تاريخ المنح قبل الحصول عليها.", "The date when the entity and counterparty, including an employee, agree to a share-based payment arrangement and share an understanding of its terms and conditions; if a required approval is a condition, grant date is not before that approval is obtained."),
+    ],
+    reference: "IFRS 2 Appendix A",
+  },
+  {
+    id: "ifrs-book2-ifrs2-ch14-quiz-equity-entry",
+    standardCode: "IFRS 2",
+    title: text("إثبات التسوية بأدوات حقوق الملكية", "Recognising equity-settled payment"),
+    facts: text("منشأة تدخل في معاملة دفع على أساس الأسهم تُسوّى بأدوات حقوق ملكيتها.", "An entity enters an equity-settled share-based payment transaction."),
+    question: text("ماذا تثبت المنشأة في قوائمها؟", "What does the entity recognise in its financial statements?"),
+    solution: [
+      text("تثبت السلع أو الخدمات المستلمة عند الحصول عليها، مع زيادة مقابلة في حقوق الملكية. تُثبت مصروفًا ما لم تستوفِ شروط الاعتراف بأصل؛ وتُوزع خدمات الموظفين على فترة الاستحقاق عند وجود شرط خدمة مناسب.", "Recognise the goods or services received when obtained, with a corresponding increase in equity. Expense them unless they qualify as an asset, and recognise employee services over the vesting period when a service condition applies."),
+    ],
+    reference: "IFRS 2.7–9, 14–15",
+  },
+  {
+    id: "ifrs-book2-ifrs2-ch14-quiz-employee-options",
+    standardCode: "IFRS 2",
+    title: text("قياس خيارات الأسهم الممنوحة للموظفين", "Measuring employee share options"),
+    facts: text("منحت المنشأة موظفين خيارات أسهم مقابل خدماتهم.", "An entity grants employees share options in exchange for services."),
+    question: text("كيف تُقاس المعاملة؟", "How is the transaction measured?"),
+    solution: [
+      text("تُقاس الخدمات المستلمة بالإشارة إلى القيمة العادلة لأدوات حقوق الملكية الممنوحة في تاريخ المنح، لأن القيمة العادلة لخدمات الموظفين لا يمكن عادة تقديرها مباشرة بصورة موثوقة. يُراعى عدد الأدوات المتوقع استحقاقها وشروط الاستحقاق ذات الصلة عبر الفترة، مع عدم إعادة قياس القيمة العادلة للوحدة كل نهاية فترة لمجرد تغير السعر.", "Measure employee services by reference to the fair value of equity instruments granted at grant date, because the fair value of employee services generally cannot be reliably measured directly. Reflect the expected vesting quantity and relevant vesting conditions over the period, without remeasuring each instrument's grant-date fair value every reporting date merely because its price changes."),
+    ],
+    reference: "IFRS 2.19–20, 15–16",
+  },
+  {
+    id: "ifrs-book2-ifrs2-ch14-quiz-remeasurement",
+    standardCode: "IFRS 2",
+    title: text("سبب إعادة قياس الالتزام النقدي", "Why remeasure a cash-settled liability?"),
+    facts: text("السؤال يقارن التزام التسوية النقدية بمكون حقوق الملكية في معاملة مسددة بأدوات الملكية.", "The question contrasts a cash-settled liability with equity in an equity-settled arrangement."),
+    question: text("لماذا يُعاد قياس المعاملة المسددة نقدًا في نهاية كل فترة، بخلاف القيمة العادلة المقررة عند المنح للمعاملة المسددة بأدوات الملكية؟", "Why is a cash-settled award remeasured at each reporting date, unlike grant-date fair value for an equity-settled award?"),
+    solution: [
+      text("لأن مبلغ النقد المستحق يعتمد على قيمة متغيرة لأداة حقوق الملكية، فيبقى التزامًا يُقاس بالقيمة العادلة بنهاية كل فترة وحتى التسوية، ويُعترف بتغيره في الربح أو الخسارة. أما المعاملة المسددة بأدوات الملكية فتُثبت عادة بالقيمة العادلة بتاريخ المنح ولا يُعاد قياس تلك القيمة لاحقًا؛ مع تحديث تقدير عدد الأدوات المتوقع استحقاقها لشروط الخدمة أو الأداء غير السوقي حيث يلزم. لذلك كلمة «فقط» في السؤال تخص إعادة قياس القيمة العادلة للالتزام، لا كل تقدير لاحق.", "The cash amount owed changes with the underlying equity value, so the liability is remeasured at fair value at each reporting date and settlement, with changes in profit or loss. In an equity-settled award, grant-date fair value is generally not subsequently remeasured, though estimates of instruments expected to vest are updated for service or non-market performance conditions where required. Thus 'only' concerns remeasurement of liability fair value, not every later estimate."),
+    ],
+    reference: "IFRS 2.19–20, 23, 30",
+  },
+  {
     id: "ifrs-book2-ias41-ch13-quiz-biological",
     standardCode: "IAS 41",
     title: text("تعريف الأصل الحيوي", "What is a biological asset?"),
