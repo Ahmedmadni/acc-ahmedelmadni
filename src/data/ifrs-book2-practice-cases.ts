@@ -2380,8 +2380,8 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       "This conceptual question concerns identifying a promise to transfer a good or service to a customer in a contract that may contain more than one promise. This part supplies no transaction amounts or dates.",
     ),
     question: text(
-      "اشرح المقصود بالتزام الأداء في الاعتراف بإيراد عقد مع عميل، ومتى يُعترف بإيراد الوفاء به.",
-      "Explain what a performance obligation means for revenue from a contract with a customer and when revenue from satisfying it is recognised.",
+      "اشرح المقصود بالتزام الأداء فيما يتعلق بالاعتراف بإيراد العقود مع العملاء.",
+      "Explain what is meant by a performance obligation in relation to revenue recognition from contracts with customers.",
     ),
     solution: [
       text(
