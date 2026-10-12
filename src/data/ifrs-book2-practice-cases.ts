@@ -2527,8 +2527,8 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       "Panther acquired a controlling 60% interest in Sabre on 1 July 20X4. Across all of 20X4 Panther bought $640,000 of goods from Sabre; $60,000 at invoice price remained in inventory at 31 December. Sabre sells at a 20% markup on cost. The case says ordinary income and expenses accrue evenly during the year but expressly excludes intragroup items from that assumption, and it does not date the purchases remaining on hand.",
     ),
     question: text(
-      "كم ربح البضاعة الباقية ضمن سعرها؟ ومتى يُستبعد عند التجميع، ولماذا لا يمكن الجزم بتعديل المخزون أو الإيراد الداخلي من البيانات الحالية؟",
-      "How much profit is embedded in the unsold goods, when is it eliminated on consolidation, and why are the inventory and intragroup-revenue adjustments not definitive?",
+      "أعد قائمة الربح أو الخسارة والدخل الشامل الآخر الموحدة وكشف احتياطيات المجموعة للسنة المنتهية في 31 ديسمبر 20X4، وبيّن الأرقام التي تتوقف على توقيت التعاملات الداخلية أو أثر الضريبة غير المعطى.",
+      "Prepare the consolidated profit or loss and other comprehensive income statement and group-reserves extract for the year ended 31 December 20X4, identifying amounts conditional on the timing of intragroup trading or unspecified tax effects.",
     ),
     solution: [
       text(
@@ -2543,8 +2543,20 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
         "إذا اختلطت المشتريات السابقة واللاحقة، يحتاج الحل قيمة المخزون الباقي من مبيعات ما بعد الاستحواذ؛ ولا يصح افتراض أن نصف الـ60,000 أو نصف مبيعات الـ640,000 وقع بعد 1 يوليو لأن فرض التوزيع المنتظم في السؤال لا يشمل التعاملات الداخلية. من دون جدول تواريخ التعامل لا يمكن اعتماد تعديل 10,000 أو قائمة الربح الموحد الكاملة كرقم نهائي.",
         "For a mix of pre- and post-acquisition purchases, the value of closing inventory sourced after control is needed. Do not simply assume half of the $60,000 or half the $640,000 sales arose after 1 July: the even-accrual assumption excludes intragroup items. Without dated transaction detail, neither the $10,000 elimination nor the full consolidated profit statement is definitive.",
       ),
+      text(
+        "لإكمال القائمة دون افتراض تاريخ غير معطى، عرّف x بمبيعات Sabre إلى Panther بعد 1 يوليو وy بقيمة المخزون الختامي من تلك المبيعات، وكلاهما بآلاف الدولارات؛ 0 ≤ y ≤ 60 وy ≤ x ≤ 640. الإيراد الموحد = 22,800 + نصف 4,300 − x = 24,950 − x. تكلفة المبيعات = 13,600 + نصف 2,600 − x + y/6 + 5 = 14,905 − x + y/6؛ إذ إن y/6 هو ربح البائع غير المحقق، و5 إهلاك نصف سنة على زيادة القيمة العادلة للعقار 200 بعمر متبق 20 سنة. لا تُستنتج قيمة x أو y من عبارة تراكم البنود الأخرى بالتساوي.",
+        "To complete the statement without assuming an unstated transaction date, let x be Sabre-to-Panther sales after 1 July and y the closing inventory invoiced from those sales, both in $000; 0 ≤ y ≤ 60 and y ≤ x ≤ 640. Consolidated revenue is 22,800 + half of 4,300 − x = 24,950 − x. Cost of sales is 13,600 + half of 2,600 − x + y/6 + 5 = 14,905 − x + y/6: y/6 is the seller's unrealised profit and 5 is six months' depreciation on the 200 acquisition-date property uplift over 20 remaining years. The even-accrual statement for other items cannot determine x or y.",
+      ),
+      text(
+        "تكاليف التوزيع 3,150 والإدارة 1,950؛ تُلغى فائدة القرض الداخلية لستة أشهر بعد السيطرة فقط، 800 × 5% × 6/12 = 20، فتكون تكلفة التمويل 215 وإيراد التمويل 30. وعليه الربح قبل الضريبة = 4,760 − y/6. مصروف الضريبة الظاهر في القائمتين بعد ضم نصف سنة للتابعة = 1,410 قبل أي تعديل ضريبي مؤجل؛ ويجب فحص فروق إلغاء الربح الداخلي وزيادة القيمة العادلة وفق IAS 12، لكن لا يوجد معدل ضريبي أو أساس ضريبي يسمح بحسابها. الدخل الشامل الآخر المعطى صافيًا من الضريبة = 1,600 + نصف 180 = 1,690.",
+        "Distribution costs are 3,150 and administration costs 1,950. Eliminate intragroup loan interest only for the six months after control, 800 × 5% × 6/12 = 20, giving finance costs of 215 and finance income of 30. Profit before tax is therefore 4,760 − y/6. The two companies' stated tax charges after including half a year of Sabre total 1,410 before any deferred-tax adjustment; IAS 12 applies to temporary differences from profit elimination and the fair-value uplift, but no tax rate or tax base is supplied to quantify them. Stated OCI, already net of tax, is 1,600 + half of 180 = 1,690.",
+      ),
+      text(
+        "إذا اقتصر الحساب على مصروف الضريبة المعطى ولم تنشأ تسوية ضريبية إضافية، يكون ربح السنة 3,350 − y/6، والدخل الشامل الكلي 5,040 − y/6. نصيب غير المسيطرين من الربح = 40% × (305 − 5 − y/6) = 120 − y/15؛ ونصيبهم من الدخل الشامل الكلي = 156 − y/15. نصيب ملاك الأم من الدخل الشامل الكلي = 4,884 − y/10، ومن ثم احتياطيات المجموعة الختامية = 12,750 − 900 + (4,884 − y/10) = 16,734 − y/10. هذه صيغ مشروطة؛ تتغير الأرباح والحصص والاحتياطيات إذا لزم تعديل ضريبي وفق IAS 12، ولا يصح عرض أرقام نهائية واحدة من الوقائع المتاحة.",
+        "If the calculation uses only the stated tax charges and no further tax adjustment arises, profit for the year is 3,350 − y/6 and total comprehensive income is 5,040 − y/6. NCI's profit share is 40% × (305 − 5 − y/6) = 120 − y/15; its total comprehensive income is 156 − y/15. Owners' total comprehensive income is 4,884 − y/10, giving closing group reserves of 12,750 − 900 + (4,884 − y/10) = 16,734 − y/10. These are conditional formulas: profit, attribution and reserves change if IAS 12 tax adjustments are required, and the stated facts do not support a single definitive set of figures.",
+      ),
     ],
-    reference: "IFRS 10.20, B86(c)",
+    reference: "IFRS 10.20, B86(c)–(d), B88, B94; IAS 12.11, 24",
   },
   {
     id: "ifrs-book2-gains-investment-property",
