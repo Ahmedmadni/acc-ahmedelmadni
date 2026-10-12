@@ -2567,11 +2567,50 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
         "The 31 December property balance is its $110,000 fair value. The year's movement is $110,000 − $160,000 = a $50,000 loss, assuming the opening amount is the correct fair-value starting point. IAS 40 recognises the fair-value change in profit or loss for the year, not in other comprehensive income.",
       ),
       text(
-        "لا يتيح فائض إعادة التقييم القديم البالغ 40,000 دولار استخدامه تلقائيًا لامتصاص خسارة القيمة العادلة للسنة. يجب فحص تسوية الرصيد القديم عند الانتقال إلى IFRS أو تغيير السياسة المحاسبية على حدة، ومعرفة ما إذا كانت هذه أول قوائم IFRS؛ كما لا يمكن استخراج قائمة حقوق ملكية كاملة من هذا الجزء دون حسم ما إذا كان هبوط أصول التكلفة 25,000 دولار مدرجًا أصلًا في الربح المعطى.",
-        "The old $40,000 local-rule revaluation surplus does not automatically absorb the year's fair-value loss. Analyse its opening-balance transition under first-time IFRS adoption or an accounting-policy change separately, including whether these are the first IFRS financial statements. The full equity statement is not determinable from this isolated part without resolving whether the $25,000 impairment of cost-model assets is already included in the stated profit.",
+        "لا يتيح فائض إعادة التقييم القديم البالغ 40,000 دولار استخدامه تلقائيًا لامتصاص خسارة القيمة العادلة للسنة. يجب فحص تسوية الرصيد القديم عند الانتقال إلى IFRS أو تغيير السياسة المحاسبية على حدة، ومعرفة ما إذا كانت هذه أول قوائم IFRS؛ ولا يمكن استخراج رصيد ختامي واحد قاطع لقائمة حقوق الملكية دون حسم ما إذا كان هبوط أصول التكلفة 25,000 دولار مدرجًا أصلًا في الربح المعطى.",
+        "The old $40,000 local-rule revaluation surplus does not automatically absorb the year's fair-value loss. Analyse its opening-balance transition under first-time IFRS adoption or an accounting-policy change separately, including whether these are the first IFRS financial statements. A single definitive closing equity balance cannot be derived from this isolated part without resolving whether the $25,000 impairment of cost-model assets is already included in the stated profit.",
       ),
     ],
     reference: "IAS 40.33–35; IAS 8.19–22; IFRS 1.10–11",
+  },
+  {
+    id: "ifrs-book2-gains-changes-in-equity",
+    standardCode: "IAS 1",
+    title: text(
+      "Gains: قائمة التغيرات في حقوق الملكية مع توضيح شرط انخفاض القيمة",
+      "Gains: changes in equity with an explicit impairment condition",
+    ),
+    facts: text(
+      "جميع المبالغ بآلاف الدولارات للسنة المنتهية في 31 ديسمبر 20X9. أرصدة أول السنة: رأس مال 2,800، علاوة إصدار 1,150، أرباح محتجزة 2,120، وفائض إعادة تقييم 750. الربح بعد الضريبة المعطى 566، ودخل شامل آخر من إعادة تقييم أرض 120. كان رصيد عقار استثماري أول السنة 160 يتضمن فائض 40 وفق سياسة محلية سابقة، وانخفضت قيمته العادلة إلى 110 دون تسجيل الأثر؛ يفترض السؤال تسوية تغيير السياسة وفق IAS 8. ورد انخفاض بقيمة 25 في أصول محمولة بالتكلفة، دون بيان صريح هل أُدرج في الربح 566. بيع أصل سبق رفع قيمته من 30 إلى 80، بعد ثلاث سنوات من عمر عشر سنوات؛ تنقل الشركة سنويًا فائض الإهلاك إلى الأرباح المحتجزة. أصدرت 200 ألف سهم مجاني بقيمة اسمية دولار من علاوة الإصدار، ثم 400 ألف سهم بقيمة اسمية دولار مقابل 1.40 للسهم، ودفعت توزيعات 200. لا يحدد السؤال ما إذا كان ربح بيع الأصل أو أثر ضريبي إضافي يحتاجان تعديل الربح المعطى.",
+      "All amounts are in $000 for the year ended 31 December 20X9. Opening balances are share capital 2,800, share premium 1,150, retained earnings 2,120 and revaluation surplus 750. Stated after-tax profit is 566 and land-revaluation OCI is 120. Investment property opened at 160 including a 40 surplus under prior local policy and fell to fair value 110 without an entry; the question directs policy-change treatment under IAS 8. A cost-model asset was impaired by 25, but the question does not expressly say whether this is already in the 566 profit. A previously revalued asset, uplifted from 30 to 80, was sold after three years of a ten-year life; excess depreciation is transferred annually to retained earnings. Gains issued 200,000 $1 bonus shares from premium and 400,000 $1 shares for $1.40 each, and paid dividends of 200. Whether the disposal gain or additional tax is already reflected in stated profit is not specified.",
+    ),
+    question: text(
+      "أعد قائمة التغيرات في حقوق الملكية لشركة Gains للسنة المنتهية في 31 ديسمبر 20X9.",
+      "Prepare Gains Co's statement of changes in equity for the year ended 31 December 20X9.",
+    ),
+    solution: [
+      text(
+        "إذا صح تطبيق التغيير بأثر رجعي على رصيد الافتتاح كما تفترض المسألة، يعاد تصنيف فائض العقار الاستثماري القديم 40 من فائض إعادة التقييم إلى الأرباح المحتجزة؛ لا يغير ذلك إجمالي حقوق الملكية الافتتاحية 6,820. الأرصدة المعدلة تصبح 2,800 لرأس المال، 1,150 للعلاوة، 2,160 للأرباح المحتجزة، و710 للفائض. يجب عرض أثر تغيير السياسة منفصلًا عن معاملات السنة ومراعاة المقارنات وفق IAS 8.",
+        "If retrospective application to the opening balance is appropriate as the question assumes, reclassify the old investment-property surplus of 40 from revaluation surplus to retained earnings. Opening total equity remains 6,820. Restated components are capital 2,800, premium 1,150, retained earnings 2,160 and surplus 710. Present the policy-change effect separately from current-year transactions and address comparatives under IAS 8.",
+      ),
+      text(
+        "الأسهم المجانية: زيادة رأس المال 200 ونقص العلاوة 200 بلا تغير في إجمالي الحقوق. إصدار النقد: زيادة رأس المال 400 والعلاوة 160، أي مساهمة ملاك 560. لذلك الحركة الصافية لرأس المال +600 والعلاوة −40؛ الرصيد الختامي 3,400 و1,110. التوزيعات المدفوعة 200 تخفض الأرباح المحتجزة، ولا تدخل الربح أو الخسارة.",
+        "The bonus issue raises capital by 200 and reduces premium by 200, with no total-equity effect. The cash issue raises capital by 400 and premium by 160, an owner contribution of 560. Thus net capital movement is +600 and premium movement −40, leaving 3,400 and 1,110 respectively. Paid dividends of 200 reduce retained earnings, not profit or loss.",
+      ),
+      text(
+        "خسارة القيمة العادلة للعقار الاستثماري في السنة = 160 − 110 = 50 تُحمّل على الربح أو الخسارة وفق IAS 40. إعادة تقييم الأرض 120 تبقى في الدخل الشامل الآخر وفائض إعادة التقييم. فائض الأصل المباع المتبقي = 50 − [(80 − 30) ÷ 10 × 3] = 35؛ يُحوّل مباشرة من الفائض إلى الأرباح المحتجزة دون مروره بالربح أو الخسارة. لذلك يصبح فائض إعادة التقييم الختامي 710 + 120 − 35 = 795.",
+        "The current-year investment-property fair-value loss is 160 − 110 = 50 in profit or loss under IAS 40. The 120 land revaluation remains in OCI and revaluation surplus. Surplus remaining on the disposed asset is 50 − [(80 − 30) ÷ 10 × 3] = 35; transfer it directly from surplus to retained earnings, without recycling through profit or loss. Closing revaluation surplus is therefore 710 + 120 − 35 = 795.",
+      ),
+      text(
+        "بافتراض أن مكسب بيع الأصل البالغ 60 − (80 − 24) = 4 وأي أثر ضريبي ذي صلة داخلان أصلًا في الربح المعطى، ولا ينشأ أثر ضريبي إضافي من التعديلات غير المعطى تفصيلها، يكون الربح المعدل 516 إذا كان انخفاض الـ25 مدرجًا فيه سابقًا، أو 491 إذا لم يكن مدرجًا ويستلزم قيد مصروف IAS 36. لا يجوز خصم الـ25 مرتين. إذا لم يدخل مكسب البيع في الربح المعطى، يُزاد الربح المناسب 4 بعد التحقق من القيد الأصلي.",
+        "Assuming the disposal gain of 60 − (80 − 24) = 4 and any related tax are already in stated profit, with no further tax effect from adjustments for which no tax detail is supplied, adjusted profit is 516 if the 25 impairment was previously included, or 491 if it was not and IAS 36 expense is still required. Do not deduct the 25 twice. If the disposal gain is not in stated profit, increase the relevant profit figure by 4 after checking the original entry.",
+      ),
+      text(
+        "على افتراض إدراج مكسب البيع والضريبة مسبقًا وعدم وجود أثر ضريبي إضافي، الأرباح المحتجزة الختامية = 2,160 + الربح المعدل − 200 + 35، أي 2,511 أو 2,486 حسب معالجة انخفاض الـ25. الإجمالي الختامي = 3,400 رأس مال + 1,110 علاوة + 795 فائض + الأرباح المحتجزة، أي 7,816 أو 7,791. يعرض الخياران بوضوح ولا يقدَّم أي منهما بوصفه جوابًا قطعيًا قبل فحص سجل الربح والانخفاض.",
+        "Assuming the disposal gain and tax were already recorded and no further tax effect arises, closing retained earnings are 2,160 + adjusted profit − 200 + 35, or 2,511 versus 2,486 depending on the 25 impairment. Closing equity totals 3,400 capital + 1,110 premium + 795 surplus + retained earnings, or 7,816 versus 7,791. Present both as conditional outcomes, not as one definitive answer until the profit and impairment ledger is checked.",
+      ),
+    ],
+    reference: "IAS 1.106–110; IAS 8.19–22; IAS 16.41; IAS 36.60; IAS 40.35",
   },
   {
     id: "ifrs-book2-jerzy-defined-benefit",
