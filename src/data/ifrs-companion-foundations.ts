@@ -41,6 +41,27 @@ export const IFRS_COMPANION_MODULES: CompanionModule[] = [
           en: "It supports consistent application of existing Accounting Standards by analysing widespread application questions, publishing agenda decisions that explain existing requirements, and sometimes developing an Interpretation or recommending a narrow-scope amendment. Answering a question does not itself create a new Standard.",
         },
       },
+      {
+        prompt: { ar: "لماذا تفيد معايير محاسبية دولية قابلة للمقارنة؟", en: "Why are globally comparable Accounting Standards useful?" },
+        answer: {
+          ar: "تساعد لغة تقرير موحدة على مقارنة المخاطر والأداء عبر المنشآت والحدود وتقلل تكلفة تفسير قوائم أُعدت بأسس متباينة. لكنها لا تلغي اختلاف الوقائع الاقتصادية أو قرارات التبني والإنفاذ المحلية، ولا تضمن بذاتها انخفاض تكلفة رأس المال لكل منشأة.",
+          en: "A common reporting language helps compare performance and risk across entities and borders and reduces the cost of interpreting accounts prepared on different bases. It does not erase economic differences or local adoption and enforcement decisions, nor guarantee a lower cost of capital for every company.",
+        },
+      },
+      {
+        prompt: { ar: "هل تملك مؤسسة IFRS سلطة إنفاذ المعايير في كل دولة؟", en: "Can the IFRS Foundation enforce Standards in every jurisdiction?" },
+        answer: {
+          ar: "لا؛ تضع المؤسسة المعايير وتدعم تطبيقها المتسق، بينما تقرر السلطات في كل ولاية اعتمادها وتنظيم الالتزام والإنفاذ. لذلك لا يُخلط بين سلطة وضع المعيار وسلطة الجهات الرقابية على المنشآت.",
+          en: "No. The Foundation sets Standards and supports consistent application, while jurisdictions decide adoption and regulate and enforce compliance. Standard setting is distinct from a regulator's authority over reporting entities.",
+        },
+      },
+      {
+        prompt: { ar: "هل IASB مسؤول عن وضع معايير المحاسبة؟", en: "Is the IASB responsible for setting IFRS Accounting Standards?" },
+        answer: {
+          ar: "نعم. IASB هو مجلس وضع معايير المحاسبة الدولية ضمن مؤسسة IFRS؛ ويجب تمييزه عن ISSB الذي يضع معايير إفصاحات الاستدامة، وعن لجنة التفسيرات التي تدعم التطبيق المتسق لمعايير المحاسبة.",
+          en: "Yes. The IASB sets IFRS Accounting Standards within the IFRS Foundation. It differs from the ISSB, which sets Sustainability Disclosure Standards, and the Interpretations Committee, which supports consistent application of Accounting Standards.",
+        },
+      },
     ],
     referenceLabel: "IFRS Foundation — Due Process",
     referenceUrl: "https://www.ifrs.org/about-us/our-due-process/",
@@ -65,6 +86,13 @@ export const IFRS_COMPANION_MODULES: CompanionModule[] = [
         answer: {
           ar: "لأنها تساعدهم على تقييم التدفقات النقدية المستقبلية والقدرة على التمويل وتكلفته ومرونة نموذج الأعمال. ينظم IFRS S2 الإفصاح حول الحوكمة والاستراتيجية وإدارة المخاطر والمقاييس والأهداف؛ لا يحول كل خطر مناخي بحد ذاته إلى مخصص أو أصل في القوائم المحاسبية.",
           en: "They help investors assess future cash flows, access to finance, cost of capital and business-model resilience. IFRS S2 structures disclosure around governance, strategy, risk management, metrics and targets; a climate risk does not by itself become an accounting provision or asset.",
+        },
+      },
+      {
+        prompt: { ar: "ما المحاور الأربعة الرئيسية لإفصاحات IFRS S2؟", en: "What are the four main IFRS S2 disclosure areas?" },
+        answer: {
+          ar: "الحوكمة، والاستراتيجية، وإدارة المخاطر، والمقاييس والأهداف. يشرح كل محور جانبًا مختلفًا: من يشرف على مخاطر وفرص المناخ، وكيف تؤثر في نموذج الأعمال والخطة، وكيف تُحدد وتراقب، وكيف يُقاس الأداء والتقدم.",
+          en: "Governance, strategy, risk management, and metrics and targets. Together they explain who oversees climate matters, how risks and opportunities affect the business and plan, how they are identified and monitored, and how performance and progress are measured.",
         },
       },
     ],
@@ -112,6 +140,27 @@ export const IFRS_COMPANION_MODULES: CompanionModule[] = [
         answer: {
           ar: "الملاءمة تجعل المعلومة قادرة على التأثير في القرار بقيمة تنبؤية أو تأكيدية؛ والتمثيل الصادق يقتضي اكتمال الوصف وحياده وخلو عمليته من الخطأ. هاتان خاصيتان أساسيتان. المقارنة تكشف أوجه الشبه والاختلاف بين الفترات والمنشآت، والتحقق يمكّن ملاحظين مستقلين مطلعين من بلوغ اتفاق معقول بشأن الوصف؛ وهما خاصيتان معززتان، ولا تعني المقارنة فرض معالجة موحدة لوقائع مختلفة.",
           en: "Relevance means information can affect a decision through predictive or confirmatory value; faithful representation calls for a complete, neutral and error-free depiction. Both are fundamental. Comparability reveals similarities and differences across periods and entities; verifiability allows independent knowledgeable observers to reach reasonable agreement. Both are enhancing characteristics; comparability is not enforced uniformity for unlike facts.",
+        },
+      },
+      {
+        prompt: { ar: "ما مزايا إطار مفاهيمي موحد، وما حدوده؟", en: "What are the advantages and limits of a shared conceptual framework?" },
+        answer: {
+          ar: "يمنح واضعي المعايير والمعدين لغة مفاهيمية متسقة ويساعد على تفسير المسائل الجديدة وتقليل التعارض بين المتطلبات. لكنه لا يلبي كل احتياجات المستخدمين على نحو منفرد ولا يحل تلقائيًا خلافات القياس، ولا يتغلب على معيار خاص واجب التطبيق.",
+          en: "It gives standard setters and preparers a consistent conceptual language and helps analyse new issues and avoid conflicting requirements. It cannot satisfy every user's needs or automatically settle measurement trade-offs, and it never overrides a specific applicable Standard.",
+        },
+      },
+      {
+        prompt: { ar: "متى يُعترف ببند يطابق تعريف أصل أو التزام؟", en: "When is an item that meets an asset or liability definition recognised?" },
+        answer: {
+          ar: "لا يكفي انطباق التعريف وحده. يُعترف بالبند عندما يوفر الاعتراف معلومات ملائمة وتمثيلًا صادقًا، بعد مراعاة عدم اليقين في الوجود أو القياس وقيد التكلفة. ثم تُطبق قواعد الاعتراف الخاصة بأي معيار ذي صلة قبل اللجوء إلى الإطار.",
+          en: "Meeting the definition alone is not enough. Recognition should provide relevant information and a faithful representation, considering existence or measurement uncertainty and the cost constraint. Specific applicable Standard requirements take precedence over the Framework.",
+        },
+      },
+      {
+        prompt: { ar: "ما أسس القياس الرئيسة في الإطار؟", en: "What are the Framework's main measurement bases?" },
+        answer: {
+          ar: "التكلفة التاريخية والقيمة الحالية؛ وتضم القيمة الحالية القيمة العادلة وقيمة الاستخدام للأصول أو قيمة الوفاء للالتزامات والتكلفة الحالية. لا تُختار التكلفة التاريخية لمجرد شيوعها: يحدد المعيار المنطبق أساس القياس المناسب.",
+          en: "Historical cost and current value; current value encompasses fair value, value in use for assets or fulfilment value for liabilities, and current cost. Historical cost is not selected merely because it is common: the applicable Standard determines the measurement basis.",
         },
       },
     ],
