@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias21-ch12-quiz-conversion-translation",
+    standardCode: "IAS 21",
+    title: text("صرف العملة وترجمة المبالغ", "Currency conversion and translation"),
+    facts: text("سؤال يفرق بين مبادلة العملات فعليًا وعرض مبلغ بعملة أخرى.", "A question contrasting actual currency exchange with expressing an amount in another currency."),
+    question: text("ما الفرق بين تحويل عملة إلى أخرى وترجمة مبلغ بعملة أخرى؟", "What is the difference between conversion and translation?"),
+    solution: [
+      text("التحويل أو الصرف بالمعنى العام مبادلة مبلغ نقدي من عملة إلى أخرى. أما الترجمة المحاسبية فهي التعبير عن مبلغ محدد بعملة أخرى وفق سعر صرف مناسب دون اشتراط مبادلة النقد فعليًا؛ ويحدد IAS 21 توقيت وسعر ترجمة المعاملة أو القوائم. لا يُستدل على تحقق صرف نقدي من مجرد ظهور فرق ترجمة.", "Conversion in ordinary usage exchanges cash in one currency for another. Accounting translation expresses an amount in another currency at the appropriate exchange rate without necessarily exchanging cash; IAS 21 sets rates for transactions and financial statements. A translation difference does not itself prove a cash exchange occurred."),
+    ],
+    reference: "IAS 21.8, 20–23, 38–42",
+  },
+  {
+    id: "ifrs-book2-ias21-ch12-quiz-monetary",
+    standardCode: "IAS 21",
+    title: text("تعريف البند النقدي", "Definition of a monetary item"),
+    facts: text("سؤال تعريفي عن النقد والحقوق أو الالتزامات ذات عدد الوحدات المحدد.", "A definition question about cash and fixed or determinable currency-unit claims and obligations."),
+    question: text("ما المقصود بالبند النقدي في IAS 21؟", "What is a monetary item under IAS 21?"),
+    solution: [
+      text("هو وحدات عملة محتفظ بها، أو أصل أو التزام يُستلم أو يُدفع بعدد ثابت أو قابل للتحديد من وحدات العملة؛ مثل النقد والمدينين والدائنين النقديين. ولا يصبح المخزون أو دفعة مقدمة لاستلام سلعة بندًا نقديًا لمجرد تقويمه بعملة أجنبية.", "It is currency held, or an asset or liability to be received or paid in a fixed or determinable number of currency units, such as cash and monetary receivables/payables. Inventory or a prepayment for goods does not become monetary merely because its price is foreign-currency-denominated."),
+    ],
+    reference: "IAS 21.8, 16",
+  },
+  {
+    id: "ifrs-book2-ias21-ch12-quiz-initial-transaction",
+    standardCode: "IAS 21",
+    title: text("إثبات معاملة بعملة أجنبية مبدئيًا", "Initial recognition of a foreign-currency transaction"),
+    facts: text("منشأة لديها معاملة بعملة غير عملتها الوظيفية.", "An entity has a transaction denominated in a currency other than its functional currency."),
+    question: text("بأي سعر صرف تثبت المعاملة عند الاعتراف الأول؟", "Which exchange rate applies at initial recognition?"),
+    solution: [
+      text("تُترجم إلى العملة الوظيفية بسعر الصرف الفوري في تاريخ المعاملة. يجوز استخدام متوسط تقريبي عملي لفترة قصيرة عندما يقارب أسعار التواريخ الفعلية؛ لا يلائم ذلك فترة شهدت تقلبات كبيرة. وتتبع الأرصدة اللاحقة قواعد البنود النقدية وغير النقدية في IAS 21.", "Translate into the functional currency at the spot exchange rate on the transaction date. A period average can be a practical approximation when it closely approximates the actual dates' rates; it is inappropriate during significant fluctuations. Subsequent balances follow IAS 21 monetary/non-monetary rules."),
+    ],
+    reference: "IAS 21.21–22, 23",
+  },
+  {
+    id: "ifrs-book2-ias21-ch12-quiz-functional-change",
+    standardCode: "IAS 21",
+    title: text("تغيير العملة الوظيفية", "Changing functional currency"),
+    facts: text("سؤال عن ظروف تغيير عملة البيئة الاقتصادية الأساسية للمنشأة.", "A question on changing the currency of the primary economic environment."),
+    question: text("متى يجوز تغيير العملة الوظيفية؟", "When may functional currency change?"),
+    solution: [
+      text("فقط عندما تتغير المعاملات والأحداث والظروف الأساسية ذات الصلة بنشاط المنشأة، مثل العملة التي تؤثر أساسًا في أسعار المبيعات؛ لا يكفي تفضيل الإدارة أو اختيار عملة عرض جديدة. ويُطبق التغيير مستقبلًا من تاريخه وفق إجراءات IAS 21.", "Only when underlying transactions, events and conditions relevant to operations change, for example the currency mainly influencing sales prices; management preference or a new presentation currency alone is insufficient. Apply the new functional currency prospectively from the change date under IAS 21."),
+    ],
+    reference: "IAS 21.9–14, 35–37",
+  },
+  {
+    id: "ifrs-book2-ias21-ch12-quiz-presentation-change",
+    standardCode: "IAS 21",
+    title: text("تغيير عملة العرض", "Changing presentation currency"),
+    facts: text("سؤال عن اختيار العملة التي تُعرض بها القوائم المالية.", "A question on selecting the currency in which statements are presented."),
+    question: text("هل عملة العرض مقيدة بشروط تغيير العملة الوظيفية نفسها؟", "Is presentation currency subject to the same change restriction as functional currency?"),
+    solution: [
+      text("لا. يجيز IAS 21 عرض القوائم بأي عملة أو عملات؛ يمكن اختيار عملة عرض أخرى دون حدوث تغيير في العملة الوظيفية. لكن يجب ترجمة المركز والنتائج والمقارنات وفق القواعد المناسبة والإفصاح عن العملة الوظيفية وسبب اختلافها عن عملة العرض، مع الحفاظ على عرض مفهوم وقابل للمقارنة. لا يعني تغيير العرض تبديل قياس المعاملات الأصلية اعتباطيًا.", "No. IAS 21 permits presentation in any currency or currencies, so a different presentation currency need not reflect a functional-currency change. Translate financial position, results and comparatives under the applicable rules and disclose the functional currency and reason for a different presentation currency, preserving understandable comparability. Changing presentation does not arbitrarily remeasure the original transactions."),
+    ],
+    reference: "IAS 21.38–42, 53–55",
+  },
+  {
     id: "ifrs-book2-ias12-ch11-quiz-current-tax",
     standardCode: "IAS 12",
     title: text("قياس ضريبة الدخل الحالية", "Measuring current income tax"),
