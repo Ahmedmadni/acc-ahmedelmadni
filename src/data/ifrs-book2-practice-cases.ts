@@ -15,6 +15,76 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs15-ch3-quiz-output-methods",
+    standardCode: "IFRS 15",
+    title: text("قياس التقدم بطريقة المخرجات", "Output methods for measuring progress"),
+    facts: text("سؤال قصير عن التزام أداء يستوفى على مدى الزمن.", "A short question about a performance obligation satisfied over time."),
+    question: text("ما المقصود بطرق المخرجات لقياس استيفاء التزام الأداء؟", "What are output methods of measuring satisfaction of a performance obligation?"),
+    solution: [
+      text(
+        "تقيس طريقة المخرجات قيمة السلع أو الخدمات التي انتقلت إلى العميل حتى تاريخه مقارنة بما تبقى في العقد، متى صوّرت تقدم الأداء بأمانة. من أمثلتها معاينة العمل المنجز، أو الوحدات المنتجة أو المسلّمة، أو مراحل الإنجاز المتحققة؛ لا يكفي عدد الوحدات إذا لم يمثّل نقل السيطرة. تستخدم فقط عندما يستوفى الالتزام على مدى الزمن وتُقاس نسبة الإنجاز بصورة معقولة.",
+        "An output method measures the value to the customer of goods or services transferred to date relative to those remaining, when it faithfully depicts performance. Examples include surveys of work performed, units produced or delivered and milestones reached; a unit count is inappropriate if it does not represent transfer of control. It applies to an over-time obligation when progress can be reasonably measured.",
+      ),
+    ],
+    reference: "IFRS 15.35, 39–42, B14–B15",
+  },
+  {
+    id: "ifrs-book2-ifrs15-ch3-quiz-point-or-over-time",
+    standardCode: "IFRS 15",
+    title: text("توقيت استيفاء التزام الأداء", "Point-in-time or over-time satisfaction"),
+    facts: text("السؤال يطلب التمييز بين نمطي الوفاء في عقود العملاء.", "The question distinguishes the two patterns of satisfying customer promises."),
+    question: text("ما نمطا استيفاء التزامات الأداء في IFRS 15؟", "What are the two patterns of satisfying performance obligations under IFRS 15?"),
+    solution: [
+      text(
+        "التمييز يخص التزام الأداء لا مجرد اسم العقد: قد تنتقل السيطرة في نقطة زمنية محددة، أو يستوفى الوعد على مدى الزمن إذا تحقق أحد اختبارات الفقرة 35. قد يتضمن عقد واحد أكثر من التزام ولكل منها نمط مختلف؛ يحدد ذلك قبل قياس الإيراد.",
+        "The distinction concerns each performance obligation, not merely the contract label: control can pass at a point in time or the promise can be satisfied over time if one of paragraph 35's criteria is met. A single contract may contain obligations with different patterns; determine the pattern before measuring revenue.",
+      ),
+    ],
+    reference: "IFRS 15.22–23, 35, 38",
+  },
+  {
+    id: "ifrs-book2-ifrs15-ch3-quiz-control",
+    standardCode: "IFRS 15",
+    title: text("شرط الاعتراف بإيراد العقد", "Control and revenue recognition"),
+    facts: text("سؤال عن النقل الذي يسبق الاعتراف بالإيراد.", "A question about the transfer underlying revenue recognition."),
+    question: text("ما الذي يجب نقله إلى العميل قبل إثبات الإيراد؟", "What must transfer to the customer before revenue is recognised?"),
+    solution: [
+      text(
+        "تعترف المنشأة بالإيراد عندما أو كلما تستوفي التزام الأداء بنقل السيطرة على السلعة أو الخدمة الموعودة إلى العميل. التسليم المادي أو الفاتورة أو انتقال المخاطر قد تكون مؤشرات، لكنها لا تحل منفردة محل اختبار السيطرة.",
+        "An entity recognises revenue when or as it satisfies a performance obligation by transferring control of the promised good or service to the customer. Physical delivery, invoicing or transfer of risks may be indicators but do not individually replace the control assessment.",
+      ),
+    ],
+    reference: "IFRS 15.31–34, 38",
+  },
+  {
+    id: "ifrs-book2-ifrs15-ch3-quiz-repurchase",
+    standardCode: "IFRS 15",
+    title: text("معنى اتفاق إعادة الشراء", "Meaning of a repurchase agreement"),
+    facts: text("السؤال يطلب تعريفًا دون أسعار أو شروط عقدية أخرى.", "The question asks for a definition without prices or other contractual terms."),
+    question: text("ما اتفاق إعادة الشراء؟", "What is a repurchase agreement?"),
+    solution: [
+      text(
+        "هو ترتيب تبيع فيه المنشأة أصلًا وتَعِد أو تمتلك حقًا في إعادة شرائه، سواء في العقد نفسه أو عقد آخر. قد يكون الأصل نفسه أو أصلًا مماثلًا جوهريًا. لا يعني وجود فاتورة بيع اعترافًا فوريًا بالإيراد: يختلف الحكم بين التزام/خيار البائع وخيار العميل، وبين إعادة الشراء دون سعر البيع أو عنده أو فوقه؛ وتُراجع شروط IFRS 15 قبل التكييف.",
+        "It is an arrangement in which an entity sells an asset and also promises or has an option to repurchase it, in the same or another contract; the asset may be the same or substantially similar. A sale invoice does not automatically establish revenue: accounting depends on whether the entity or customer holds the right and on the repurchase-price terms under IFRS 15.",
+      ),
+    ],
+    reference: "IFRS 15.B64–B76",
+  },
+  {
+    id: "ifrs-book2-ifrs15-ch3-quiz-five-steps",
+    standardCode: "IFRS 15",
+    title: text("خطوات نموذج الإيراد الخمس", "The five-step revenue model"),
+    facts: text("السؤال يطلب ترتيب خطوات الاعتراف بإيراد عقود العملاء.", "The question asks for the ordered steps for customer-contract revenue."),
+    question: text("اذكر خطوات نموذج الإيراد الخمس في IFRS 15.", "List the five steps of the IFRS 15 revenue model."),
+    solution: [
+      text(
+        "1) حدد العقد مع العميل؛ 2) حدد التزامات الأداء المتميزة؛ 3) حدد سعر المعاملة؛ 4) وزع السعر على الالتزامات بحسب أسعار البيع المستقلة النسبية؛ 5) اعترف بالإيراد عندما أو كلما استوفيت كل التزام بنقل السيطرة. تحديد الخطوات لا يغني عن تقدير المقابل المتغير أو اختبار تعديل العقد عندما ينطبقان.",
+        "1) Identify the customer contract; 2) identify distinct performance obligations; 3) determine the transaction price; 4) allocate it to obligations using relative stand-alone selling prices; 5) recognise revenue when or as each obligation is satisfied by transferring control. The outline does not remove the need to assess variable consideration or contract modifications when relevant.",
+      ),
+    ],
+    reference: "IFRS 15.9, 22–30, 47, 73–86, 31–38",
+  },
+  {
     id: "ifrs-book2-ifrs11-ch24-joint-operation-examples",
     standardCode: "IFRS 11",
     title: text("أمثلة على العملية المشتركة", "Examples of a joint operation"),
