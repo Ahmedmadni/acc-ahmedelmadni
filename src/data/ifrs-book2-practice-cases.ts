@@ -2818,17 +2818,21 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       "Vident: two different conditions for director share options",
     ),
     facts: text(
-      "للسنة المنتهية في 31 مايو 20X5، منحت Vident في 1 يونيو 20X3 عدد 20,000 خيار للمدير الأول، القيمة العادلة يوم المنح 5 دولارات للخيار وسعر الممارسة 4.50. يشترط نمو ربحية السهم السنوية 4% مع استمرار الخدمة حتى 1 يونيو 20X5؛ معدلات النمو الفعلية المعطاة 4.5% ثم 4.1% ثم 4.2%، ولم يغادر المدير. ومنحت في 1 يونيو 20X4 عدد 50,000 خيار لمدير ثانٍ، قيمتها العادلة يوم المنح 6 دولارات وسعر الممارسة 6؛ تتطلب خدمته ثلاث سنوات حتى 1 يونيو 20X7 وبلوغ السهم مستوى أعلى من 13.50 دولار، بينما سعره في 31 مايو 20X5 هو 12. لم يغادر أي مدير ولا يُتوقع مغادرته قبل الاستحقاق. Vident تنتقل إلى IFRS في السنة الحالية، ويطلب السؤال تعديل افتتاحي 1 يونيو 20X4 ومصروف السنة.",
-      "For the year ended 31 May 20X5, Vident granted 20,000 options to one director on 1 June 20X3 at grant-date fair value $5 per option and exercise price $4.50. Annual EPS growth of at least 4% and continued service until 1 June 20X5 are required; stated growth rates are 4.5%, 4.1% and 4.2%, and the director remains employed. Another director received 50,000 options on 1 June 20X4, grant-date fair value $6 and exercise price $6; three years' service to 1 June 20X7 and a share price above $13.50 are required. The 31 May 20X5 share price is $12. Neither director has left or is expected to leave before vesting. Vident adopts IFRS in the current year; the question asks for the 1 June 20X4 opening adjustment and current-year expense.",
+      "للسنة المنتهية في 31 مايو 20X5، منحت Vident في 1 يونيو 20X3 عدد 20,000 خيار للمدير الأول، القيمة العادلة يوم المنح 5 دولارات للخيار وسعر الممارسة 4.50. يشترط نمو ربحية السهم السنوية 4% مع استمرار الخدمة حتى 1 يونيو 20X5؛ معدلات النمو الفعلية المعطاة 4.5% ثم 4.1% ثم 4.2%، ولم يغادر المدير. ومنحت في 1 يونيو 20X4 عدد 50,000 خيار لمدير ثانٍ، قيمتها العادلة يوم المنح 6 دولارات وسعر الممارسة 6؛ تتطلب خدمته ثلاث سنوات حتى 1 يونيو 20X7 وبلوغ السهم مستوى أعلى من 13.50 دولار، بينما سعره في 31 مايو 20X5 هو 12. لم يغادر أي مدير ولا يُتوقع مغادرته قبل الاستحقاق. تعترض الإدارة على إثبات تكلفة للخيارات لأنها لا تدفع نقدًا، وتشكك في وصف الخدمة مصروفًا، وتخشى تكرار الأثر في ربحية السهم المخفضة أو تثبيط خطط الخيارات الجديدة. Vident تنتقل إلى IFRS في السنة الحالية، ويطلب السؤال تعديل افتتاحي 1 يونيو 20X4 ومصروف السنة.",
+      "For the year ended 31 May 20X5, Vident granted 20,000 options to one director on 1 June 20X3 at grant-date fair value $5 per option and exercise price $4.50. Annual EPS growth of at least 4% and continued service until 1 June 20X5 are required; stated growth rates are 4.5%, 4.1% and 4.2%, and the director remains employed. Another director received 50,000 options on 1 June 20X4, grant-date fair value $6 and exercise price $6; three years' service to 1 June 20X7 and a share price above $13.50 are required. The 31 May 20X5 share price is $12. Neither director has left or is expected to leave before vesting. Management argues that options have no cash cost, questions whether service consumption is an expense, fears double counting in diluted EPS, and worries the accounting may discourage new option plans. Vident adopts IFRS in the current year; the question asks for the 1 June 20X4 opening adjustment and current-year expense.",
     ),
     question: text(
-      "اشرح سبب إثبات خدمة المديرين مصروفًا، وفصل شرط الأداء غير السوقي عن الشرط السوقي، ثم احسب التعديل الافتتاحي ومصروف 20X5 ورصيد احتياطي الخيارات.",
-      "Explain why the directors' services are expensed, distinguish the non-market from the market condition, then calculate the opening adjustment, 20X5 expense and option reserve.",
+      "ناقش اعتراضات المديرين الأربعة على إثبات مكافآت الخيارات، ثم افصل شرط الأداء غير السوقي عن الشرط السوقي واحسب التعديل الافتتاحي ومصروف 20X5 ورصيد احتياطي الخيارات.",
+      "Address the directors' four objections to recognising option remuneration, distinguish the non-market from the market condition, then calculate the opening adjustment, 20X5 expense and option reserve.",
     ),
     solution: [
       text(
         "تُقابل الخيارات خدمة المديرين التي تستهلكها المنشأة؛ عدم دفع نقد لا يلغي تكلفة الخدمة. إثبات المصروف يعكس تلقي الخدمة، بينما ربحية السهم المخفضة تعكس احتمال زيادة عدد الأسهم، فلا يوجد احتساب مزدوج للحدث نفسه.",
         "The options are consideration for director services consumed by the entity; the absence of a cash payment does not make the service free. Expense recognition reflects receiving services, whereas diluted EPS depicts possible additional shares, so these are not duplicate recognition of the same event.",
+      ),
+      text(
+        "إذا استُلمت خدمة المدير واستهلكت فورًا ولم تنشئ أصلًا قابلًا للإثبات، يقيد IFRS 2 تكلفة الخدمة مصروفًا يقابله زيادة في حقوق الملكية؛ وسيلة السداد بأسهم لا تغير طبيعة الخدمة المستهلكة. وإظهار أثر الخيارات على مقام ربحية السهم المخفضة يعرض احتمال التخفيف لا تكلفة الخدمة مرة ثانية. قد يؤثر الإفصاح الصادق في قرار المنشأة بمنح خيارات مستقبلًا، لكن هذا أثر اقتصادي لا مبرر لإخفاء تكلفة المكافأة أو تعطيل متطلبات الاعتراف.",
+        "When a director's service is received and consumed without creating a recognisable asset, IFRS 2 records the service cost as an expense with a corresponding equity increase; settlement in shares does not change the nature of the consumed service. Potential dilution in the denominator of diluted EPS is not a second charge for that service. Transparent reporting may affect decisions about future option plans, but that economic consequence is no basis for omitting remuneration cost or suspending recognition.",
       ),
       text(
         "شرط نمو ربحية السهم غير سوقي، وتؤخذ احتمالات الاستحقاق منه ومن الخدمة في عدد الخيارات المتوقع استحقاقها؛ وفق الوقائع، يستحق 20,000 خيار للمدير الأول. إجمالي تكلفة المنحة = 20,000 × 5 = 100,000 دولار على سنتين، أي 50,000 للسنة السابقة و50,000 للسنة الحالية.",
@@ -2843,7 +2847,7 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
         "At transition, assuming IFRS 2 applies to the earlier grant, debit opening retained earnings $50,000 and credit the share-option reserve $50,000. For 20X5, debit share-based remuneration expense $150,000 and credit the option reserve $150,000; the cumulative closing reserve is $200,000.",
       ),
     ],
-    reference: "IFRS 2.14–23; IFRS 1.D2; IAS 33.31–32",
+    reference: "IFRS 2.7–8, 14–23; IFRS 1.D2; IAS 33.31–32",
   },
   {
     id: "ifrs-book2-vident-share-option-tax",
