@@ -3336,6 +3336,58 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 41.1–5, 12–13, 43–46; IAS 16.3(b)",
   },
   {
+    id: "ifrs-book2-polymer-redeemable-preference-shares",
+    standardCode: "IAS 32",
+    title: text("Polymer: هل السهم الممتاز القابل للاسترداد دين أم حقوق ملكية؟", "Polymer: is a redeemable preference share debt or equity?"),
+    facts: text(
+      "تظهر في أرصدة Polymer عند 31 مايو 20X8 أسهم ممتازة تراكمية قابلة للاسترداد، عددها 100,000 سهم بقيمة اسمية دولار واحد وعائد اسمي 8.4%، ضمن رأس المال. لا يبين السؤال تاريخ الاسترداد أو من يملك حق طلبه أو ما إذا كان دفع العائد إلزاميًا.",
+      "Polymer's 31 May 20X8 balances include 100,000 cumulative redeemable $1 preference shares carrying a stated 8.4% return, initially listed in share capital. The question gives no redemption date, holder put right or terms establishing whether distributions are mandatory.",
+    ),
+    question: text(
+      "وفق IAS 32، ما الشروط التي تحدد تصنيف هذه الأسهم وتوزيعاتها؟ احسب العائد السنوي الاسمي، وبيّن متى يصبح مصروف تمويل ولماذا لا تكفي الوقائع للجزم برصيد التزام 100,000 دولار.",
+      "Under IAS 32, what terms determine the classification of these shares and their distributions? Calculate the stated annual return, and explain when it is a finance expense and why the facts do not establish an unconditional $100,000 liability balance.",
+    ),
+    solution: [
+      text(
+        "العبرة بجوهر العقد لا باسم «سهم». إذا ألزم العقد Polymer باسترداد السهم نقدًا في تاريخ محدد أو عند طلب الحامل، ينشأ مكوّن التزام مالي، ما لم ينطبق استثناء محدد في IAS 32. أما إذا كان الاسترداد والتوزيع تحت سيطرة المصدر وله حق غير مشروط في تجنب دفع النقد، فقد يكون السهم حقوق ملكية. يلزم الاطلاع على شروط الإصدار الفعلية قبل الحسم.",
+        "Classification follows the contract's substance, not the label 'share'. Mandatory cash redemption on a specified date or at the holder's option creates a financial-liability component, subject to any applicable IAS 32 exception. If redemption and distributions remain at the issuer's discretion and it has an unconditional right to avoid cash settlement, the instrument may be equity. The actual issue terms must be checked.",
+      ),
+      text(
+        "حتى إذا كان الاسترداد النقدي إلزاميًا فقد يحتوي السهم على مكوّن حقوق ملكية إذا كانت التوزيعات قبل الاسترداد اختيارية؛ يقاس مكوّن الالتزام مبدئيًا بالقيمة الحالية لالتزام الاسترداد، ويعالج الفرق وفق شروط الأداة. لذلك لا يثبت من كلمة «قابل للاسترداد» وحدها أن القيمة الدفترية للالتزام عند الإقفال تساوي 100,000 دولار.",
+        "Even with mandatory cash redemption, discretionary pre-redemption distributions may create an equity component alongside the liability. The liability component is initially measured at the present value of the redemption obligation, with any residual treated under the instrument's actual terms. 'Redeemable' alone does not prove that the closing liability carrying amount is $100,000.",
+      ),
+      text(
+        "العائد السنوي الاسمي = 100,000 × 8.4% = 8,400 دولار. إذا أوجبت الشروط دفع هذا العائد وكان السهم مصنفًا بالكامل التزامًا، يعرض العائد مصروف تمويل وتثبت ذمته غير المدفوعة. أما التوزيع التقديري المرتبط بمكوّن حقوق ملكية فيعالج مباشرة ضمن حقوق الملكية عند نشوء الالتزام به، لا كمصروف؛ والتراكمية وحدها لا تحسم الاختيار أو توقيت الالتزام.",
+        "The stated annual return is 100,000 × 8.4% = $8,400. If the terms require that return and the shares are wholly liabilities, it is a finance expense with an unpaid payable where relevant. A discretionary distribution attributable to an equity component is recognised directly in equity when an obligation to distribute arises, not as an expense. The word 'cumulative' alone does not settle discretion or timing.",
+      ),
+    ],
+    reference: "IAS 32.15–19, 35–36, AG25–AG26, AG37",
+  },
+  {
+    id: "ifrs-book2-polymer-post-reporting-dividend",
+    standardCode: "IAS 10",
+    title: text("Polymer: توصية بتوزيع أرباح بعد تاريخ التقرير", "Polymer: dividend proposed after the reporting date"),
+    facts: text(
+      "نهاية سنة Polymer هي 31 مايو 20X8. يوجد 300,000 سهم عادي قائم. في 30 يونيو، بعد نهاية السنة، أوصى المديرون بتوزيع 3.5 سنتات للسهم؛ لا يذكر السؤال اعتماد المساهمين لهذا التوزيع قبل 31 مايو أو تاريخ اعتماد القوائم للنشر.",
+      "Polymer's reporting date is 31 May 20X8 and it has 300,000 ordinary shares outstanding. On 30 June, after year-end, the directors recommended a dividend of 3.5 cents per share. The question does not say shareholders approved it by 31 May or state the financial statements' authorisation date.",
+    ),
+    question: text(
+      "احسب مبلغ التوزيع المقترح، وبيّن هل ينشأ عنه التزام في 31 مايو 20X8 وكيف يعرض أو يفصح عنه إذا تم اقتراحه قبل اعتماد القوائم للنشر.",
+      "Calculate the proposed dividend and explain whether it creates a 31 May 20X8 liability and how it is presented or disclosed if proposed before the financial statements are authorised for issue.",
+    ),
+    solution: [
+      text(
+        "المبلغ الحسابي = 300,000 × 0.035 دولار = 10,500 دولار. التوصية الصادرة في 30 يونيو لا تنشئ التزامًا في 31 مايو؛ فلا يثبت دائن توزيعات ولا يخصم 10,500 دولار من ربح السنة أو رصيد الالتزامات في ذلك التاريخ.",
+        "The proposed amount is 300,000 × $0.035 = $10,500. A recommendation made on 30 June creates no obligation at 31 May; no dividend payable is recognised then and $10,500 is not deducted from that year's profit or included in year-end liabilities.",
+      ),
+      text(
+        "إذا وقع الاقتراح أو الإعلان قبل اعتماد القوائم للنشر، يفصح عن التوزيع المقترح ومبلغه للسهم في الإيضاحات وفق متطلبات العرض السارية؛ ويثبت التوزيع في الفترة اللاحقة فقط حين يصبح معتمدًا وغير خاضع لتقدير المنشأة. إن لم يقع الاقتراح قبل الاعتماد، فلا تفترض وقائع المسألة إفصاحًا حدث بعد التقرير داخل تلك القوائم.",
+        "If proposed or declared before authorisation for issue, disclose the proposal and amount per share under the applicable presentation requirements. Recognise a distribution in a later period only when duly authorised and no longer at the entity's discretion. If the proposal occurred after authorisation, the question does not establish a post-reporting-event disclosure in those statements.",
+      ),
+    ],
+    reference: "IAS 10.12–13; IFRS 18.132(a)",
+  },
+  {
     id: "ifrs-book2-polymer-going-concern",
     standardCode: "IAS 1",
     title: text("Polymer: إعداد القوائم عند انتفاء الاستمرارية", "Polymer: statements when going concern no longer applies"),
