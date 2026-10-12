@@ -15,6 +15,72 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias41-ch13-quiz-biological",
+    standardCode: "IAS 41",
+    title: text("تعريف الأصل الحيوي", "What is a biological asset?"),
+    facts: text("السؤال عن تعريف الأصل الحيوي في النشاط الزراعي.", "The question asks for the definition of a biological asset in agricultural activity."),
+    question: text("ما الأصل الحيوي؟", "What is a biological asset?"),
+    solution: [
+      text("حيوان حي أو نبات حي. تُطبق IAS 41 على الأصول الحيوية المرتبطة بالنشاط الزراعي، باستثناء النباتات المثمرة الواقعة ضمن IAS 16؛ ويبقى الثمر النامي عليها ضمن IAS 41.", "A living animal or plant. IAS 41 covers biological assets in agricultural activity except bearer plants accounted for under IAS 16; produce growing on those plants remains within IAS 41."),
+    ],
+    reference: "IAS 41.5, 2(b), 5C",
+  },
+  {
+    id: "ifrs-book2-ias41-ch13-quiz-produce",
+    standardCode: "IAS 41",
+    title: text("تعريف المنتج الزراعي", "What is agricultural produce?"),
+    facts: text("السؤال يميز المنتج المحصود عن الأصل الحيوي قبل الحصاد.", "The question distinguishes harvested produce from a pre-harvest biological asset."),
+    question: text("ما المنتج الزراعي؟", "What is agricultural produce?"),
+    solution: [
+      text("المنتج المحصود من أصول المنشأة الحيوية، مثل الصوف بعد جزّه أو الثمار بعد قطفها. يُقاس عند نقطة الحصاد بالقيمة العادلة ناقصًا تكاليف البيع بموجب IAS 41؛ ثم يُطبق IAS 2 على المخزون الناتج حيث يلزم.", "Produce harvested from the entity's biological assets, such as shorn wool or picked fruit. At harvest it is measured at fair value less costs to sell under IAS 41; resulting inventory is subsequently dealt with under IAS 2 as applicable."),
+    ],
+    reference: "IAS 41.5, 13",
+  },
+  {
+    id: "ifrs-book2-ias41-ch13-quiz-categories",
+    standardCode: "IAS 41",
+    title: text("الفئات الإنتاجية للأصول الحيوية", "Production categories of biological assets"),
+    facts: text("السؤال يطلب فئتين في نظام الإنتاج الزراعي.", "The question asks for two categories within agricultural production."),
+    question: text("ما الفئتان اللتان تُستخدمان لتصنيف الأصول الحيوية في الإنتاج الزراعي؟", "What are the two categories used to classify biological assets in agricultural production?"),
+    solution: [
+      text("أصول حيوية استهلاكية، وأصول حيوية حاملة للإنتاج. هذا تصنيف وصفي لا يلغي تعديل نطاق المعايير: النبات المثمر نفسه يخضع لـIAS 16، بينما المنتج النامي عليه يخضع لـIAS 41؛ ولا تُعامل كل الأصول الحاملة بالطريقة نفسها.", "Consumable biological assets and bearer biological assets. This descriptive distinction does not override the scope amendment: the bearer plant itself is under IAS 16, while its growing produce remains under IAS 41; not all bearer assets share one accounting treatment."),
+    ],
+    reference: "IAS 41.43–44, 2(b), 5C",
+  },
+  {
+    id: "ifrs-book2-ias41-ch13-quiz-cost",
+    standardCode: "IAS 41",
+    title: text("هل ألغى IAS 41 التكلفة؟", "Did IAS 41 abolish cost?"),
+    facts: text("العبارة المطروحة: «ألغى IAS 41 مفهوم التكلفة لأغراض القياس».", "The statement is: 'IAS 41 has abolished cost for measurement purposes.'"),
+    question: text("هل العبارة صحيحة؟", "Is the statement true?"),
+    solution: [
+      text("خطأ. القاعدة هي القيمة العادلة ناقصًا تكاليف البيع للأصل الحيوي، لكن يمكن دحض افتراض إمكان قياس القيمة العادلة بصورة موثوقة فقط عند الاعتراف الأولي في ظروف IAS 41.30، فيُستخدم حينها مقياس التكلفة ناقص الاستهلاك والهبوط المتراكمين حتى تتاح قيمة عادلة موثوقة. وتوجد النباتات المثمرة ضمن IAS 16، حيث يوجد نموذجا التكلفة وإعادة التقييم.", "False. Fair value less costs to sell is the usual biological-asset measurement, but the presumption of reliable fair-value measurement can be rebutted only at initial recognition in the circumstances of IAS 41.30; cost less accumulated depreciation and impairment is then used until fair value becomes reliably measurable. Bearer plants fall under IAS 16, which permits cost or revaluation models."),
+    ],
+    reference: "IAS 41.12, 30; IAS 16.29",
+  },
+  {
+    id: "ifrs-book2-ias2-ch13-quiz-nrv",
+    standardCode: "IAS 2",
+    title: text("مكونات صافي القيمة القابلة للتحقق", "Components of net realisable value"),
+    facts: text("السؤال يطلب إكمال الصيغة: سعر البيع ناقصًا بندين.", "The question asks to complete the formula: selling price less two items."),
+    question: text("ما البندان المخصومان من سعر البيع للوصول إلى صافي القيمة القابلة للتحقق؟", "Which two items are deducted from selling price to arrive at net realisable value?"),
+    solution: [
+      text("التكاليف المقدرة للإكمال، والتكاليف المقدرة اللازمة لإتمام البيع في سياق الأعمال العادية. لذلك لا يُساوى صافي القيمة القابلة للتحقق بسعر البيع الخام.", "Estimated costs of completion and estimated costs necessary to make the sale in the ordinary course of business. Net realisable value is not the gross selling price."),
+    ],
+    reference: "IAS 2.6",
+  },
+  {
+    id: "ifrs-book2-ias2-ch13-quiz-fifo",
+    standardCode: "IAS 2",
+    title: text("FIFO أم LIFO في IAS 2", "FIFO or LIFO under IAS 2"),
+    facts: text("الاختياران الواردان: أ) الوارد أولًا يُصرف أولًا (FIFO)؛ ب) الوارد أخيرًا يُصرف أولًا (LIFO).", "The given choices are A first-in, first-out (FIFO) and B last-in, first-out (LIFO)."),
+    question: text("أي الطريقتين الواردتين مسموحة في IAS 2؟", "Which of the two stated methods is permitted under IAS 2?"),
+    solution: [
+      text("الخيار أ: FIFO. طريقة LIFO غير مسموحة. ويجيز IAS 2 أيضًا المتوسط المرجح للمخزون المتبادل عادة، والتحديد المحدد للتكلفة للأصناف غير المتبادلة؛ فلا يوحي اختيار FIFO من هذين البديلين بأنه الصيغة الوحيدة المسموحة.", "Choice A: FIFO; LIFO is not permitted. IAS 2 also permits weighted-average cost for ordinarily interchangeable inventory and specific identification for non-interchangeable items; choosing FIFO over the two listed options does not make it the only permitted formula."),
+    ],
+    reference: "IAS 2.23–27",
+  },
+  {
     id: "ifrs-book2-ias21-ch12-quiz-conversion-translation",
     standardCode: "IAS 21",
     title: text("صرف العملة وترجمة المبالغ", "Currency conversion and translation"),
