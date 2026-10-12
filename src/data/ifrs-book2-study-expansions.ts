@@ -105,6 +105,37 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         journalEntries: [],
         reference: "IFRS 10.B86(c); IAS 28.10, 28; IAS 24.18",
       },
+      {
+        title: text("Alpha وBeta: ربح مخزون داخلي وأثره الضريبي", "Alpha and Beta: intragroup inventory profit and tax"),
+        facts: text(
+          "تسيطر Alpha على 80% من Beta. في 31 مارس 20X7 بلغ مخزون Alpha مبلغ 33 مليون دولار ومخزون Beta مبلغ 30 مليونًا. يتضمن مخزون Beta مكونات اشترتها من Alpha بمبلغ 20 مليونًا، ولا تزال ضمن المخزون عند الإقفال. باعتهـا Alpha بالتكلفة مضافًا إليها هامش 25% من التكلفة. معدل الضريبة المذكور للفروق المؤقتة 25%. تمتلك Alpha أيضًا زميلة منفصلة، لكن مخزون تلك الزميلة لا يدخل في التجميع سطرًا بسطر.",
+          "Alpha controls 80% of Beta. At 31 March 20X7 Alpha's inventory is US$33 million and Beta's is US$30 million. Beta's closing inventory includes components bought from Alpha for US$20 million, still held at year-end. Alpha priced them at cost plus a 25% markup on cost. The stated tax rate for temporary differences is 25%. Alpha also has a separate associate, whose inventory is not consolidated line by line.",
+        ),
+        calculations: [
+          text("تكلفة المكونات للمجموعة = 20 ÷ 1.25 = 16 مليون دولار؛ الربح الداخلي غير المحقق = 20 − 16 = 4 ملايين. لا تضرب 20 في 25%؛ فالهامش محسوب على التكلفة، لا على سعر البيع.", "Cost to the group = 20 ÷ 1.25 = US$16m; unrealised intragroup profit = 20 − 16 = US$4m. Do not multiply 20 by 25%: the markup is on cost, not selling price."),
+          text("المخزون الموحد = مخزون Alpha 33 + مخزون Beta 30 − الربح الداخلي 4 = 59 مليون دولار. لا تُضاف أصول الزميلة إلى هذا الجمع.", "Consolidated inventory = Alpha 33 + Beta 30 − intragroup profit 4 = US$59m. The associate's assets are not added to this line."),
+          text("إذا كان الأساس الضريبي للمكونات لدى Beta هو سعر شرائها 20 مليونًا، فإن الفرق المؤقت القابل للخصم على مستوى المجموعة = 20 − 16 = 4 ملايين؛ وأصل الضريبة المؤجلة المحتمل = 4 × 25% = مليون دولار، بشرط توافر ربح ضريبي مستقبلي يُرجّح استخدام الفرق مقابله.", "If Beta's tax base for the components is its US$20m purchase price, the group's deductible temporary difference is 20 − 16 = US$4m; the potential deferred tax asset is 4 × 25% = US$1m, subject to probable future taxable profit against which it can be used."),
+        ],
+        conclusion: text(
+          "يُلغى الربح الداخلي كاملًا، لا بنسبة ملكية الأم البالغة 80%، لأن Beta تابعة مجمعة. الرقم 59 مليونًا يخص المخزون الموحد؛ أما أصل الضريبة المؤجلة البالغ مليونًا فمشروط بتأكيد الأساس الضريبي وشروط الاعتراف في IAS 12، ولا يمثل إجمالي الضريبة المؤجلة في مسألة تجميع أوسع.",
+          "Eliminate the full intragroup profit, not merely the parent's 80% interest, because Beta is consolidated. US$59m is the consolidated inventory amount. The US$1m deferred tax asset is conditional on the tax base and IAS 12 recognition criteria; it is not the total deferred tax balance for a wider consolidation problem.",
+        ),
+        journalEntries: [
+          {
+            label: text("ورقة التجميع: استبعاد البيع الداخلي", "Consolidation worksheet: eliminate intragroup sale"),
+            debit: text("الإيراد 20 مليون دولار", "Revenue US$20m"),
+            credit: text("تكلفة المبيعات 20 مليون دولار", "Cost of sales US$20m"),
+            amount: text("20 مليون دولار لكل جانب", "US$20m on each side"),
+          },
+          {
+            label: text("ورقة التجميع: استبعاد الربح الذي بقي في المخزون", "Consolidation worksheet: remove profit remaining in inventory"),
+            debit: text("تكلفة المبيعات 4 ملايين دولار", "Cost of sales US$4m"),
+            credit: text("المخزون 4 ملايين دولار", "Inventory US$4m"),
+            amount: text("4 ملايين دولار لكل جانب", "US$4m on each side"),
+          },
+        ],
+        reference: "IFRS 10.B86(c); IAS 12.11, 24",
+      },
     ],
   },
   "IFRS 3": {
