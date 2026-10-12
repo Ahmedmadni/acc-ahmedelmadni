@@ -3266,6 +3266,45 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.4.1.2, 5.4.1, 5.5.1–5.5.8",
   },
   {
+    id: "ifrs-book2-pqr-forward-machine-commitment",
+    standardCode: "IFRS 9",
+    title: text(
+      "PQR: عقد عملة آجل لشراء آلة مستقبلًا",
+      "PQR: foreign-currency forward for a future machine purchase",
+    ),
+    facts: text(
+      "لدى PQR عن السنة المنتهية في 31 ديسمبر 20X5 عقد عملة آجل للتحوط من التزام بشراء آلة بعملة أجنبية بعد نهاية السنة بستة أشهر. لا يذكر السؤال قيمة الالتزام أو عملته، وسعر العقد الآجل أو أسعار الصرف، والقيمة العادلة للعقد في تاريخ الإقفال، أو شروط الالتزام الملزم، أو وجود تعيين وتوثيق للتحوط عند بدايته. تطلب المسألة مشورة محاسبية وأثر الأداة في المديونية بقدر ما تسمح به الوقائع.",
+      "For the year ended 31 December 20X5, PQR has entered into a foreign-currency forward intended to hedge a commitment to buy a machine six months after year-end. The question supplies no notional amount or currency, contracted or closing exchange rates, year-end fair value, enforceable commitment terms, or evidence of hedge designation and documentation at inception. It asks for accounting advice and the gearing effect only insofar as the facts permit.",
+    ),
+    question: text(
+      "قدّم المشورة بشأن المعالجة المحاسبية لعقد العملة الآجل المرتبط بشراء الآلة، وبيّن أثره في المديونية بقدر ما تسمح به المعلومات المتاحة.",
+      "Advise on the accounting for the foreign-currency forward associated with the machine purchase and its effect on gearing, insofar as the information permits.",
+    ),
+    solution: [
+      text(
+        "العقد الآجل مشتق مالي يُقاس بالقيمة العادلة. عند بدايته قد تكون القيمة العادلة صفرًا، لكن لا يجوز افتراض ذلك أو تجاهل إعادة القياس في 31 ديسمبر. إذا لم تتوافر شروط محاسبة التحوط، يظهر المشتق أصلًا أو التزامًا بحسب قيمته العادلة وتذهب تغيراته إلى الربح أو الخسارة؛ ولا تُثبت الآلة قبل استيفاء شروط الاعتراف بها لمجرد توقيع عقد التحوط.",
+        "The forward is a derivative measured at fair value. Its initial fair value may be zero, but that cannot be presumed or used to omit 31 December remeasurement. Without qualifying hedge accounting, recognise a derivative asset or liability according to its fair value and take changes to profit or loss. Signing the hedge alone does not bring the undelivered machine into assets.",
+      ),
+      text(
+        "لا تكفي عبارة «للتحوط» في وصف العملية. يشترط IFRS 9 عند بدء العلاقة تعيينها وتوثيق أداة التحوط والبند المحوط والمخاطرة والاستراتيجية وطريقة تقييم الفاعلية، مع تحقق العلاقة الاقتصادية وضوابط الفاعلية الأخرى. لا يثبت السؤال وقوع ذلك، لذا لا يصح عرض نتيجة تحوط مؤهل بوصفها معالجة مؤكدة.",
+        "Calling the contract a hedge is insufficient. At inception IFRS 9 requires formal designation and documentation of the instrument, hedged item, risk, strategy and effectiveness assessment, together with the economic relationship and other qualifying criteria. The question does not establish these facts, so qualified hedge accounting cannot be asserted as the actual treatment.",
+      ),
+      text(
+        "إذا كان شراء الآلة التزامًا ملزمًا، واستوفت العلاقة شروط التحوط واختير تحوط القيمة العادلة لمخاطر العملة، يعترف بتغير قيمة المشتق في الربح أو الخسارة وبالتغير المقابل في قيمة الالتزام غير المعترف به المرتبط بالمخاطرة المحوطة أصلًا أو التزامًا مع أثره في الربح أو الخسارة. عند تنفيذ الالتزام، يدخل التعديل المتراكم للبند المحوط في التكلفة الأولية للآلة.",
+        "If the machine purchase is a firm commitment, the hedge qualifies and fair-value-hedge accounting is designated for currency risk, recognise the derivative change in profit or loss and the corresponding hedged-risk change in the unrecognised commitment as an asset or liability through profit or loss. On fulfilment, include the accumulated hedged-item adjustment in the machine's initial cost.",
+      ),
+      text(
+        "يمكن بدلًا من ذلك، للتحوط المؤهل من مخاطر عملة التزام ملزم، اختيار تحوط التدفقات النقدية. يثبت الجزء الفعال من تغير المشتق في الدخل الشامل الآخر واحتياطي التحوط، وعدم الفاعلية في الربح أو الخسارة. عندما ينشأ أصل الآلة غير المالي، يُزال الرصيد الملائم من الاحتياطي ويُدرج مباشرة في تكلفتها الأولية؛ ليس تأجيله إلى الربح أو الخسارة على مدى الإهلاك خيارًا حرًا لهذه الحالة وفق IFRS 9 الحالي.",
+        "Alternatively, a qualifying hedge of the foreign-currency risk of a firm commitment may be designated a cash-flow hedge. Recognise the effective derivative movement in OCI and the cash-flow hedge reserve, with ineffectiveness in profit or loss. When the non-financial machine is recognised, remove the relevant reserve balance and include it directly in the asset's initial cost; deferring that amount for discretionary recycling with depreciation is not an option for this case under current IFRS 9.",
+      ),
+      text(
+        "لا تسمح الوقائع بحساب قيمة المشتق أو فاعلية التحوط أو أثر محدد في نسبة المديونية؛ فالاتجاه يعتمد على ما إذا كانت قيمة المشتق أصلًا أم التزامًا، وعلى نوع التحوط المؤهل وأرصدة الحقوق والالتزامات وطريقة تعريف النسبة. القيمة الاسمية لعقد الآجل ليست تلقائيًا قرضًا أو التزامًا مساويًا لها.",
+        "The facts do not permit a derivative valuation, effectiveness calculation or quantified gearing effect. Direction depends on whether the derivative is an asset or liability, the qualifying hedge type, equity and liability balances, and the gearing definition. A forward's notional amount is not automatically a loan or an equal-sized liability.",
+      ),
+    ],
+    reference: "IFRS 9.4.2.1, 5.7.1, 6.4.1, 6.5.4, 6.5.8–6.5.11",
+  },
+  {
     id: "ifrs-book2-pqr-preference-shares",
     standardCode: "IAS 32",
     title: text("PQR: أسهم ممتازة قابلة للاسترداد", "PQR: redeemable preference shares"),
