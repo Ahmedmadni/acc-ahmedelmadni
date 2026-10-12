@@ -951,6 +951,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           "الرقم 18,400 قابل للتبرير فقط بعد التحقق من شروط الاسترداد والتوزيع والقياس؛ لا تنقل وصف «سهم» أو «تراكمي» مباشرةً إلى القيد.",
           "The $18,400 amount is supportable only after confirming redemption and distribution obligations and measurement; neither 'share' nor 'cumulative' determines the entry.",
         ),
+        journalEntries: [],
         reference: "IAS 32.15–19, 28, 35–36, AG25–AG27, AG37; IFRS 9.4.2.1",
       },
     ],
