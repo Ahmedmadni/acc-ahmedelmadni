@@ -2601,6 +2601,26 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 37.14–22, 36, 45; IAS 16.16(c)–18",
   },
   {
+    id: "ifrs-book2-biogenics-internally-generated-ias38",
+    standardCode: "IAS 38",
+    title: text("Biogenics: متى يُعترف بأصل غير ملموس مطوّر داخليًا؟", "Biogenics: when is an internally generated intangible recognised?"),
+    facts: text(
+      "سؤال نظري عن أصل غير ملموس تطوره المنشأة داخليًا، مثل البرمجيات؛ لا يقدم مبالغ أو تواريخ مشروع محدد.",
+      "A conceptual question about an internally generated intangible asset such as software; it supplies no project-specific amounts or dates.",
+    ),
+    question: text(
+      "وفق IAS 38، ناقش بإيجاز متى يُعترف بأصل غير ملموس مطوّر داخليًا، وكيف يُقاس أولًا ويُحاسب عنه بعد الاعتراف.",
+      "Under IAS 38, briefly discuss whether an internally developed intangible asset can be recognised and, if so, how it is initially measured and subsequently accounted for.",
+    ),
+    solution: [
+      text("ليس كل إنفاق داخلي أصلًا، وليس كل أصل مطوّر داخليًا ممنوع الاعتراف به. يجب أن يكون المورد غير نقدي بلا جوهر مادي، قابلًا للتحديد، خاضعًا لسيطرة المنشأة، ومتوقعًا منه منافع مستقبلية مع إمكان قياس تكلفته بموثوقية. لا يُعترف بالشهرة والعلامات التجارية وقوائم العملاء المتولدة داخليًا لمجرد الإنفاق عليها.", "Internal spending is not automatically an asset, but internally developed assets are not categorically prohibited. The resource must be identifiable, non-monetary and without physical substance, controlled by the entity, with probable future benefits and reliably measurable cost. Internally generated goodwill, brands and customer lists are not recognised merely because expenditure was incurred."),
+      text("إنفاق مرحلة البحث مصروف حين يُتكبد. تبدأ رسملة التطوير فقط من تاريخ إثبات الشروط الستة مجتمعة: إمكان الإكمال تقنيًا، ونية الإكمال، والقدرة على الاستخدام أو البيع، ومنافع اقتصادية مستقبلية محتملة، وموارد كافية، وقياس موثوق للنفقات المنسوبة. إذا تعذر فصل البحث عن التطوير، يعامل الإنفاق كله كبحث. ما حُمّل مصروفًا سابقًا لا يُعاد إلى تكلفة الأصل لاحقًا.", "Research expenditure is expensed as incurred. Development cost is capitalised only from the date all six conditions are demonstrated: technical feasibility, intention and ability to complete and use or sell, probable future benefits, adequate resources, and reliable measurement of attributable expenditure. If research and development cannot be distinguished, treat the expenditure as research. Previously expensed amounts are not reinstated as asset cost later."),
+      text("يقاس الأصل المؤهل أولًا بتكاليف التطوير المنسوبة إليه من تاريخ تحقق الشروط. بعد الاعتراف تختار المنشأة نموذج التكلفة ناقص الإطفاء والانخفاض، أو نموذج إعادة التقييم للفئة إذا وُجد سوق نشطة نادرة لهذا الأصل. يبدأ إطفاء الأصل ذي العمر المحدد عندما يصبح متاحًا للاستخدام، لا بمجرد دفع التكاليف؛ أما العمر غير المحدد فلا إطفاء له لكنه يخضع لاختبار انخفاض سنوي. الأصل غير الجاهز للاستخدام يُختبر سنويًا أيضًا.", "Initially measure a qualifying asset at directly attributable development cost incurred from the date the criteria are met. Subsequently use cost less amortisation and impairment, or the class-wide revaluation model when the rare required active market exists. Amortise a finite-life asset from when it is available for use, not simply from when cash is spent. An indefinite-life asset is not amortised but is tested annually for impairment; an asset not yet available for use is also tested annually."),
+      text("تغيّر التوقعات بعد الاعتراف لا يؤدي وحده إلى شطب الأصل فورًا؛ تُراجع القيمة القابلة للاسترداد والعمر النافع وفق IAS 36 وIAS 38. ولا تُستنتج قيمة أصل أو قيد رقمي من هذا السؤال النظري دون بيانات مشروع فعلية.", "A later change in expectations does not by itself automatically write off a recognised asset; assess recoverable amount and useful life under IAS 36 and IAS 38. This conceptual question supplies no basis for a project-specific asset value or journal amount."),
+    ],
+    reference: "IAS 38.8, 18–23, 48–67, 71–75, 97, 107–108; IAS 36.10",
+  },
+  {
     id: "ifrs-book2-biogenics-development-patent-list",
     standardCode: "IAS 38",
     title: text("Biogenics: تطوير الدواء والبراءة وقائمة الأطباء", "Biogenics: drug development, patent and GP list"),
