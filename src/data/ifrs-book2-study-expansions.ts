@@ -903,6 +903,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 32.16, 22, 28–32, AG30–AG35; IFRS 9.5.4.1",
       },
+      {
+        title: text("الأسهم الممتازة القابلة للاسترداد: العقد قبل الاسم", "Redeemable preference shares: contract before label"),
+        explanation: text(
+          "لا يكفي وصف الأداة بأنها «سهم ممتاز تراكمي قابل للاسترداد» لتصنيفها بالكامل دينًا أو حقوق ملكية. افحص أولًا هل يفرض العقد سداد نقد في تاريخ محدد أو بطلب الحامل؛ إن وُجد، ينشأ مكوّن التزام. أما خيار الاسترداد الذي يملكه المصدر وحده فلا يفرض التسوية نقدًا بذاته. ثم افحص التوزيعات مستقلةً: هل يستطيع المصدر تجنب دفعها بلا قيد أم أنها إلزامية؟ قد تضم الأداة مكوّن التزام للاسترداد ومكوّن حقوق ملكية للتوزيعات الاختيارية. المصروف في الربح أو الخسارة يتعلق بمكوّن الالتزام؛ أما توزيع مكوّن حقوق الملكية فيُعرض مباشرةً في حقوق الملكية. التراكم لا يحل محل قراءة شروط الالتزام والتفويض بالتوزيع.",
+          "The label 'cumulative redeemable preference share' does not by itself classify the entire instrument as debt or equity. First test whether the contract requires cash redemption on a specified date or at the holder's option: that creates a liability component. Redemption solely at the issuer's choice does not itself create a cash obligation. Test distributions separately: can the issuer avoid them unconditionally, or are they mandatory? An instrument may have a redemption liability and an equity component for discretionary distributions. Returns on a liability component affect profit or loss; distributions on an equity component are recognised directly in equity. Cumulativeness does not replace reading the payment and approval terms.",
+        ),
+        keyPoints: [
+          text("اسأل: من يملك قرار الاسترداد، ومتى يصبح النقد واجب السداد؟", "Ask who controls redemption and when cash becomes payable."),
+          text("تراكم العائد لا يعني وحده أن العائد مستحق أو مصروف تمويل.", "A cumulative return alone does not make it an accrued finance cost."),
+          text("قسّم الأداة عند وجود التزام استرداد مع حق توزيعات اختياري.", "Separate components when cash redemption is obligatory but distributions are discretionary."),
+        ],
+        reference: "IAS 32.15–19, 28, 35–36, AG25–AG27, AG37",
+      },
     ],
     workedExamples: [
       {
@@ -922,6 +935,24 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           { label: text("فائدة السنة الأولى وسداد الكوبون", "Year-one interest and coupon"), debit: text("مصروف تمويل", "Finance cost"), credit: text("نقدية 120,000 + التزام سند 46,331.01", "Cash $120,000 + bond liability $46,331.01"), amount: text("166,331.01 دولار", "$166,331.01") },
         ],
         reference: "IAS 32.28–32, AG30–AG35; IFRS 9.5.4.1",
+      },
+      {
+        title: text("Polymer: متى يصبح مبلغ 18,400 تكلفة تمويل؟", "Polymer: when is $18,400 a finance cost?"),
+        facts: text(
+          "لدى Polymer عدد 100,000 سهم ممتاز تراكمي قابل للاسترداد بقيمة اسمية دولار واحد وعائد مسمى 8.4%، وسندات قرض بقيمة 100,000 دولار بكوبون 10%. لم توضح المسألة هل استرداد الأسهم إلزامي أو باختيار الحامل أو المصدر، ولا هل توزيعها إلزامي. يظهر مبلغ 18,400 في الحل التقليدي كمصروف تمويل، لكن استحقاق جزء الأسهم يحتاج إثبات شروطه.",
+          "Polymer has 100,000 cumulative redeemable $1 preference shares with a stated 8.4% return and $100,000 of 10% loan notes. The question does not say whether share redemption is mandatory, holder-controlled or issuer-controlled, nor whether distributions are obligatory. A traditional solution presents $18,400 of finance costs, but the preference component depends on the missing terms.",
+        ),
+        calculations: [
+          text("كوبون سندات القرض = 100,000 × 10% = 10,000 دولار. العائد الاسمي المسمى للأسهم الممتازة = 100,000 × 8.4% = 8,400 دولار؛ الجمع الحسابي = 18,400.", "Loan-note coupon = $100,000 × 10% = $10,000. Stated preference return = $100,000 × 8.4% = $8,400; arithmetic total = $18,400."),
+          text("إذا كان استرداد الأسهم نقدًا واجبًا، وكان عائد 8.4% نفسه واجبًا عن سنة كاملة، مع إصدار بالقيمة الاسمية ودون تكاليف أو خصم مؤثر، يصبح 8,400 مصروفًا مرتبطًا بالالتزام، ويصل مجموع التمويل الاسمي إلى 18,400. هذا افتراض مشروط لا معلومة معطاة.", "If cash redemption is obligatory and the 8.4% return is also unavoidable for a full year, with issue at par and no material cost or discount, the $8,400 is a liability-related expense and stated total finance cost reaches $18,400. This is a conditional assumption, not a stated fact."),
+          text("إذا كانت التوزيعات اختيارية، فلا يمكن إثبات 8,400 مصروفًا أو مستحقًا تلقائيًا. قد يلزم فصل التزام الاسترداد عن حق التوزيع ضمن حقوق الملكية؛ وإذا كان الاسترداد باختيار المصدر وحده، افحص احتمال تصنيف الأداة حقوق ملكية. لا يمكن إكمال رصيد الالتزام أو الربح النهائي دون نص العقد.", "If distributions are discretionary, the $8,400 cannot automatically be expensed or accrued. A redemption liability may need separation from an equity distribution right; with issuer-only redemption, assess whether the instrument is equity. The liability balance and final profit cannot be completed without the contract."),
+        ],
+        conclusion: text(
+          "الرقم 18,400 قابل للتبرير فقط بعد التحقق من شروط الاسترداد والتوزيع والقياس؛ لا تنقل وصف «سهم» أو «تراكمي» مباشرةً إلى القيد.",
+          "The $18,400 amount is supportable only after confirming redemption and distribution obligations and measurement; neither 'share' nor 'cumulative' determines the entry.",
+        ),
+        journalEntries: [],
+        reference: "IAS 32.15–19, 28, 35–36, AG25–AG27, AG37; IFRS 9.4.2.1",
       },
     ],
   },
