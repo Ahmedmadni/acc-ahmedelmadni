@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias37-ch8-quiz-provision-definition",
+    standardCode: "IAS 37",
+    title: text("تعريف المخصص", "Definition of a provision"),
+    facts: text("سؤال لإكمال تعريف المخصص.", "A fill-in question asking for the definition of a provision."),
+    question: text("المخصص التزام غير مؤكد من أي ناحيتين؟", "A provision is a liability uncertain in which two respects?"),
+    solution: [
+      text("المخصص التزام غير مؤكد التوقيت أو المبلغ. لا يكفي مجرد عدم اليقين لإثباته: يجب وجود التزام حالي ناتج عن حدث سابق، ورجحان تدفق موارد للخارج، وإمكان تقدير المبلغ بموثوقية.", "A provision is a liability of uncertain timing or amount. Uncertainty alone is insufficient: recognition requires a present obligation from a past event, a probable outflow and a reliable estimate."),
+    ],
+    reference: "IAS 37.10, 14",
+  },
+  {
+    id: "ifrs-book2-ias37-ch8-quiz-franchising-restructuring",
+    standardCode: "IAS 37",
+    title: text("تحويل سلسلة مطاعم إلى امتيازات", "Converting restaurants to franchises"),
+    facts: text("أطلقت الإدارة برنامجًا لتحويل سلسلة مطاعم تملكها بالكامل إلى نظام امتيازات.", "Management undertakes a programme to convert a wholly owned restaurant chain into franchises."),
+    question: text("هل يمثل التغيير إعادة هيكلة، وهل يكفي القرار وحده لإثبات مخصص؟", "Is this a restructuring, and does management's decision alone create a provision?"),
+    solution: [
+      text("نعم، قد يكون إعادة هيكلة لأنه يغير بصورة جوهرية طريقة ممارسة النشاط. لكن التصنيف لا ينشئ مخصصًا تلقائيًا: يلزم خطة رسمية مفصلة تنشئ توقعًا صحيحًا لدى المتأثرين ببدء التنفيذ أو إعلان السمات الرئيسية، مع استيفاء شروط المخصص العامة؛ ويقتصر المخصص على النفقات المباشرة الملازمة لإعادة الهيكلة لا تكاليف التشغيل المستقبلية.", "Yes, it can be a restructuring because it fundamentally changes how the business is conducted. Classification alone does not create a provision: a detailed formal plan must give those affected a valid expectation through implementation or announcement, and the general provision criteria must be met. Include only direct expenditures necessarily entailed by restructuring, not future operating costs."),
+    ],
+    reference: "IAS 37.14, 70–72, 80–82",
+  },
+  {
+    id: "ifrs-book2-ias37-ch8-quiz-contingencies",
+    standardCode: "IAS 37",
+    title: text("الأصل والالتزام المحتملان", "Contingent asset and liability"),
+    facts: text("سؤال لتعريف الأصل والالتزام المحتملين والتمييز بينهما.", "A definition question distinguishing contingent assets and liabilities."),
+    question: text("عرّف الأصل المحتمل والالتزام المحتمل، واذكر قاعدة الاعتراف المختصرة.", "Define a contingent asset and contingent liability and state the basic recognition rule."),
+    solution: [
+      text("الأصل المحتمل أصل ممكن من حدث سابق لا يتأكد وجوده إلا بحدث مستقبلي غير خاضع بالكامل لسيطرة المنشأة. والالتزام المحتمل إما التزام ممكن مماثل، أو التزام حالي لا يُثبت لعدم رجحان التدفق الخارجي أو تعذر القياس الموثوق. لا يُثبت أي منهما كأصل أو التزام وفق IAS 37؛ يُفصح عن الأصل عند رجحان التدفق الداخل وعن الالتزام ما لم تكن فرصة التدفق الخارجي بعيدة. وإذا أصبح التدفق الداخل شبه مؤكد يخرج الأصل من وصف «محتمل» ويُعترف به.", "A contingent asset is a possible asset from a past event whose existence depends on uncertain future events not wholly within the entity's control. A contingent liability is either a similar possible obligation or a present obligation not recognised because outflow is not probable or reliable measurement is unavailable. Neither is recognised under IAS 37; disclose a contingent asset when inflow is probable and a contingent liability unless outflow is remote. A virtually certain inflow is no longer contingent and an asset is recognised."),
+    ],
+    reference: "IAS 37.10, 27–31, 33–34, 86, 89",
+  },
+  {
+    id: "ifrs-book2-ias37-ch8-quiz-oilfield-decommissioning",
+    standardCode: "IAS 37",
+    title: text("تكلفة إزالة منشأة حقل نفط", "Oilfield decommissioning costs"),
+    facts: text("ينشأ على المنشأة التزام بإزالة منشأة حقل نفط وإعادة الموقع إلى حالته.", "An entity incurs an obligation to decommission an oilfield installation and restore the site."),
+    question: text("كيف تُثبت التكلفة والالتزام عند نشوئه؟", "How are the decommissioning cost and obligation initially recognised?"),
+    solution: [
+      text("يُثبت التزام إزالة/إعادة تأهيل وفق IAS 37 بأفضل تقدير، ويُخصم للقيمة الحالية عند جوهرية أثر الزمن. ويُضاف التقدير الأولي المؤهل إلى تكلفة أصل المنشأة وفق IAS 16 عندما ينشأ من اقتنائها أو إنشائها؛ ثم يُهلك جزء الأصل وتُعالج زيادة المخصص بمرور الزمن تكلفةَ تمويل. يختلف الحكم إذا نشأ الالتزام من استخدام الأصل لإنتاج مخزون في فترة لاحقة.", "Recognise the decommissioning/restoration obligation at the IAS 37 best estimate, discounted when time value is material. Add a qualifying initial estimate to the installation's cost under IAS 16 when arising from acquisition or construction, then depreciate that asset component and recognise unwinding of the provision as finance cost. An obligation arising from later use to produce inventory needs separate analysis."),
+    ],
+    reference: "IAS 37.14, 36, 45–47, 60; IAS 16.16(c); IFRIC 1",
+  },
+  {
+    id: "ifrs-book2-ias37-ch8-quiz-overhaul",
+    standardCode: "IAS 37",
+    title: text("هل تُكوَّن مخصصات للعمرة الدورية؟", "Provision for a future major overhaul"),
+    facts: text("تقترح المنشأة تجميع مخصص تدريجيًا خلال الفترة بين عمرتين رئيسيتين لمعدة.", "An entity proposes to accrue a provision over the period between two major equipment overhauls."),
+    question: text("هل تكوين المخصص بهذه الطريقة صحيح؟", "Is that rolling accrual appropriate?"),
+    solution: [
+      text("لا. الإنفاق على عمرة مستقبلية لا ينشئ التزامًا حاليًا لمجرد استخدام المعدة؛ تستطيع المنشأة غالبًا تجنبه ببيع الأصل أو وقف تشغيله. لا تُكوَّن له مخصصات دورية دون حدث ملزم. إذا استوفت العمرة الفعلية شروط IAS 16 تُرسمل تكلفة الفحص/الاستبدال عند تنفيذها ويُلغى رصيد تكلفة الفحص السابق المتبقي، مع إهلاك المكوّن المناسب خلال الفترة المعنية.", "No. A future overhaul does not create a present obligation merely because equipment is used; the entity can generally avoid it by disposing of or ceasing to use the asset. Do not accrue a rolling provision without an obligating event. When a major inspection occurs and IAS 16 criteria are met, capitalise its cost as a replacement, derecognise the remaining previous inspection component and depreciate the appropriate component over its period."),
+    ],
+    reference: "IAS 37.18–19; IAS 16.13–14, 43–47",
+  },
+  {
     id: "ifrs-book2-ias38-ch7-quiz-recognition",
     standardCode: "IAS 38",
     title: text("شرطا الاعتراف بالأصل غير الملموس", "Intangible-asset recognition criteria"),
