@@ -2052,7 +2052,6 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 33.21–24, 52–57, 64, 70(d), A15–A16",
       },
-    ],
       {
         title: text("من الرقم إلى الإفصاح: كيف يقرأ المستثمر ربحية السهم؟", "From calculation to disclosure: reading earnings per share"),
         explanation: text(
@@ -2066,6 +2065,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 33.66–70, 71",
       },
+    ],
     workedExamples: [
       {
         title: text("إصدار حقوق بنسبة سهم لكل خمسة", "One-for-five rights issue"),
