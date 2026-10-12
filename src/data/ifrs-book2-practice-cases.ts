@@ -2573,32 +2573,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     id: "ifrs-book2-extract-provision-criteria",
     standardCode: "IAS 37",
     title: text(
-      "Extract: متى نعترف بمخصص لا مجرد تكلفة مستقبلية؟",
-      "Extract: when is a provision more than an expected future cost?",
+      "Extract: مخصص إصلاح موقع التعدين بين تاريخين",
+      "Extract: mining-site restoration provision across two reporting dates",
     ),
     facts: text(
-      "تستخرج Extract المعادن من موقع في Copperland، ولا تعالج تلوث الموقع إلا إذا أوجب القانون ذلك. في 23 ديسمبر 20X0 بلغ مجلس الإدارة توقعٌ بأن تشريعًا يلزم المنشآت بإصلاح مواقع التعدين سيصدر، وصدر التشريع فعليًا في 15 مارس 20X1. تقدر الشركة الإنفاق النقدي للإصلاح في نهاية 20X5 بمليوني دولار. لا يقدم هذا الجزء دليلًا موضوعيًا كافيًا على أن نص التشريع كان شبه مؤكد الإقرار بصيغته عند 31 ديسمبر 20X0، ولا يبين أي التلوث نشأ قبل أو بعد فرض الالتزام القانوني.",
-      "Extract mines at a Copperland site and remediates contamination only where legislation requires it. On 23 December 20X0 directors expected a law obliging remediation of mining sites; the law was actually enacted on 15 March 20X1. Extract estimates $2m cash restoration expenditure at the end of 20X5. This part supplies insufficient objective evidence that the drafted law was virtually certain to be enacted as worded by 31 December 20X0, and does not separate contamination before and after the legal obligation arose.",
+      "تستخرج Extract المعادن في Copperland منذ يناير 20W8 وتتوقع استمرار الإنتاج حتى 31 ديسمبر 20X5، ولا تعالج التلوث إلا إذا ألزمها القانون. في 23 ديسمبر 20X0 علم المديرون أن تمرير تشريع يلزم بإصلاح مواقع التعدين كان شبه مؤكد؛ وصدر القانون في 15 مارس 20X1. تقدر الشركة دفع مليوني دولار في 31 ديسمبر 20X5. معدل الخصم 10%، ومعاملا القيمة الحالية المعطيان لأربع وخمس سنوات 0.683 و0.621. لا يحدد السؤال نص القانون المتوقع بصيغته النهائية أو ما إذا كان يشمل التلوث السابق، ولا يوزع تكاليف الإصلاح بين استخدام الموقع للإنتاج وغيره.",
+      "Extract has mined at a Copperland site since January 20W8 and expects production until 31 December 20X5. It remediates contamination only where legally required. On 23 December 20X0 directors learned that legislation requiring restoration of mining sites was virtually certain to pass; it was enacted on 15 March 20X1. Estimated cash restoration cost is $2m on 31 December 20X5. The given discount rate is 10%, with four- and five-year present-value factors of 0.683 and 0.621. The question does not establish the exact drafted law's terms or whether it covers pre-existing contamination, or allocate restoration costs between inventory production and other uses of the site.",
     ),
     question: text(
-      "لماذا يشترط IAS 37 ضوابط لإثبات المخصص، وما شروطه الثلاثة؟ وهل يكفي مجرد توقع الإدارة صدور قانون لتسجيل مليوني دولار في 20X0؟",
-      "Why does IAS 37 constrain provision recognition, what are its three conditions, and is management's expectation of a future law alone enough to record the $2m in 20X0?",
+      "لماذا يضبط IAS 37 إثبات المخصص، وما شروطه؟ احسب أثر الإصلاح المحتمل في 20X0 و20X1 باستخدام العوامل المعطاة، وبيّن الافتراضات اللازمة للاعتراف ومكان تحميل التكلفة.",
+      "Why does IAS 37 constrain provision recognition, and what conditions apply? Calculate the potential 20X0 and 20X1 restoration amounts using the supplied factors, stating the assumptions needed for recognition and for allocating the related cost.",
     ),
     solution: [
       text(
-        "لا يُستخدم المخصص لتقديم خسائر التشغيل المستقبلية أو تكاليف يمكن تجنبها بتغيير النشاط إلى سنة حالية. إثباته يحتاج التزامًا حاليًا قانونيًا أو ضمنيًا نتج من حدث ماضٍ، ورجحان خروج موارد لتسويته، وإمكان تقدير المبلغ بثقة كافية؛ إن غاب شرط فلا يثبت المخصص.",
-        "A provision cannot move future operating losses or avoidable future costs into the current year. Recognition requires a present legal or constructive obligation from a past event, probable outflow to settle it and a sufficiently reliable estimate; if a condition fails, no provision is recognised.",
+        "لا يجوز تكوين مخصص لخسائر تشغيل مستقبلية أو تكاليف يمكن تجنبها. يلزم التزام حالي قانوني أو ضمني من حدث ماضٍ، ورجحان خروج موارد، وتقدير موثوق. وعند التعويل على قانون لم يصدر بعد، يلزم أن يكون إقراره بصيغته شبه مؤكد وأن يكون الحدث الملزم قد وقع؛ مجرد احتمال سياسي أو إعلان لا يكفي.",
+        "A provision cannot be used for future operating losses or avoidable costs. Recognition requires a present legal or constructive obligation from a past event, a probable outflow and a reliable estimate. For an unenacted law, enactment as drafted must be virtually certain and the obligating event must already have occurred; political expectation or announcement alone is insufficient.",
       ),
       text(
-        "مجرد توقع مجلس الإدارة أن البرلمان سيصدر قانونًا لا يكفي وحده لإثبات التزام قائم في 31 ديسمبر 20X0. عند الاعتماد على تشريع لم يُسن بعد، يجب إثبات أن إقراره بصيغته شبه مؤكد عند تاريخ التقرير وتحديد الحدث الملزم؛ صدوره لاحقًا في مارس لا يحول التوقع السابق تلقائيًا إلى التزام في ديسمبر.",
-        "The board's prediction that legislation will pass does not by itself establish a 31 December 20X0 obligation. For an unenacted law, evidence that enactment as drafted was virtually certain at the reporting date and identification of the obligating event are needed; enactment the following March does not retroactively turn a prediction into a December obligation.",
+        "إذا ثبت في 31 ديسمبر 20X0 أن القانون شبه مؤكد بصيغته وأنه يلزم Extract بإصلاح تلوث حدث بالفعل، وافترض أن كامل التدفق النقدي البالغ مليوني دولار يخص هذا الالتزام، فالقيمة الحالية = 2,000,000 × 0.621 = 1,242,000 دولار. هذا مبلغ مشروط، وليس مخصصًا مثبتًا قطعًا من عبارة «شبه مؤكد تمريره» وحدها؛ صدور القانون في مارس لا ينشئ التزام ديسمبر بأثر رجعي.",
+        "If, at 31 December 20X0, enactment as drafted is virtually certain and the law will oblige Extract to repair contamination already caused, and the entire $2m cash flow relates to that obligation, present value is $2,000,000 × 0.621 = $1,242,000. This is a conditional amount, not a definitive 20X0 provision from 'virtually certain to pass' alone; enactment in March does not retrospectively create a December obligation.",
       ),
       text(
-        "حتى إذا ثبت الالتزام بعد صدور القانون، يلزم قياس أفضل تقدير لتدفقات الإصلاح وخصمها عند جوهرية أثر الزمن، ثم تحليل مكان تحميل التكلفة بين أصل مؤهل ومصروف وفق المعيار الخاص بالأصل وسبب التلوث. لا تنتج الوقائع المتاحة وحدها رقم مخصص أو أصل قاطع لسنة 20X0.",
-        "If an obligation is established after enactment, measure the best estimate of settlement cash flows and discount when the time-value effect is material. Then analyse whether the cost belongs to a qualifying asset or expense under the relevant asset standard and the cause of contamination. These facts alone do not yield a definitive 20X0 provision or asset amount.",
+        "إذا شمل القانون النافذ كامل التلوث المعني في 31 ديسمبر 20X1 وظل التدفق والتوقيت ثابتين، تكون القيمة الحالية = 2,000,000 × 0.683 = 1,366,000 دولار. إذا كان مخصص 1,242,000 قد أُثبت في 20X0، فالزيادة التقريبية من فك الخصم 124,000 دولار، وتعرض تكلفة تمويل؛ فرق التقريب عن 10% × 1,242,000 سببه المعاملات المقربة. أما إذا نشأ الالتزام لأول مرة في 20X1 فلا يُنسب فك خصم إلى سنة سابقة.",
+        "If the enacted law covers all relevant contamination at 31 December 20X1 and amount and timing are unchanged, present value is $2,000,000 × 0.683 = $1,366,000. If a $1,242,000 provision was recognised in 20X0, the approximately $124,000 increase from unwinding the discount is a finance cost; the small difference from 10% × $1,242,000 is caused by rounded factors. If the obligation first arose in 20X1, there is no prior-year discount unwind to attribute.",
+      ),
+      text(
+        "لا يثبت أصل غير متداول تلقائيًا مقابل كامل المخصص. تكلفة إعادة الموقع التي ترتبط بأصل مؤهل قد تدخل IAS 16؛ أما الالتزامات الناشئة من استخدام الموقع لإنتاج مخزون في فترة معينة فتخضع لتحليل IAS 2 مع قياس المخصص وفق IAS 37. فقط إذا رُسمل مبلغ 1,242,000 كاملًا في أصل يستفاد منه لخمس سنوات من نهاية 20X0، يكون إهلاك 20X1 = 248,400 وقيمته الدفترية = 993,600؛ لا تتوافر في السؤال تفاصيل تكفي لاعتماد هذه الرسملة لكل المبلغ دون شرط.",
+        "Do not automatically debit a non-current asset for the entire provision. Restoration attributable to a qualifying asset may be included under IAS 16; obligations arising from using the site to produce inventory in a period require IAS 2 analysis, while the provision is measured under IAS 37. Only if all $1,242,000 was properly capitalised in an asset benefiting five years from the end of 20X0 would 20X1 depreciation be $248,400 and closing carrying amount $993,600. The question does not establish that whole-amount capitalisation without qualification.",
       ),
     ],
-    reference: "IAS 37.14–22, 36, 45; IAS 16.16(c)–18",
+    reference: "IAS 37.14–22, 36, 45–47, 60; IAS 16.16(c)–18; IAS 2.9–16; IFRIC 1.8",
   },
   {
     id: "ifrs-book2-biogenics-internally-generated-ias38",
