@@ -3465,6 +3465,49 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 41.1–5, 12–13, 43–46; IAS 16.3(b)",
   },
   {
+    id: "ifrs-book2-wislon-conditional-statements",
+    standardCode: "IAS 1",
+    title: text(
+      "Wislon: إعداد القوائم مع اختبار الشهرة والاستثمارات",
+      "Wislon: statements conditional on goodwill and investments",
+    ),
+    facts: text(
+      "جميع الأرقام بآلاف الدولارات في 31 ديسمبر 20X7. ميزان Wislon: أسهم عادية 450، قرض 10% بمبلغ 200، أرباح محتجزة افتتاحية 242، مكونات حقوق أخرى 171؛ عقار بتكلفة 430 ومجمع إهلاك مبانٍ 20، آلات بتكلفة 830 ومجمع إهلاك 222؛ مخزون افتتاحي 190، مبيعات 2,695، مشتريات 2,152، توزيعات عادية مدفوعة 15، فائدة قرض مدفوعة 10، أجور ورواتب 254، إنارة وتدفئة 31، مصروفات متفرقة 113، ذمم مدينة 179 ودائنة 195، نقد 126، وحساب معلق دائن 135. الحساب المعلق = 120 متحصلات إصدار 100,000 سهم عادي بقيمة اسمية 0.50 دولار + 300 بيع آلة − 285 ثمن شراء صافي أصول Mary & Co في 3 مارس. الصافي المشتَرى وفق السؤال استثمارات أسهم قيمتها 231 ومخزون 34 بيع كاملًا خلال السنة، ولا يذكر وجود عملية أو قوة عمل مقتناة، أو قيمة الاستثمارات العادلة بنهاية السنة. أُدرج تأمين 9 ضمن المتفرقات يغطي السنة حتى 1 سبتمبر 20X8، ولم تُسجل فاتورة كهرباء 3؛ وتضم الإنارة عمولة بائعين 20. كلفة المباني ضمن العقار 100 وعمرها 50 سنة؛ القيمة المعاد تقييم العقار إليها آخر السنة 800. آلة مباعة كلفتها 350 وقيمتها الدفترية 274 في أول السنة؛ لا يحدد تاريخ بيعها. إهلاك الآلات للسنة 36؛ رسوم تدقيق مستحقة 4، وتحويل داخلي إلى مكونات حقوق الملكية 16. مخزون الإقفال 220 بالتكلفة، ولا تُعطى صافي قيمته القابلة للتحقق. تُهمل الضرائب.",
+      "All amounts are $000 at 31 December 20X7. Wislon's balances include ordinary capital 450, 10% loan notes 200, opening retained earnings 242 and other equity components 171; property cost 430 with building accumulated depreciation 20, plant cost 830 with accumulated depreciation 222; opening inventory 190, sales 2,695, purchases 2,152, ordinary dividends paid 15, loan interest paid 10, wages/salaries 254, light/heat 31, sundry expense 113, receivables 179, payables 195, cash 126 and a 135 credit suspense balance. Suspense comprises 120 proceeds from 100,000 new 50-cent ordinary shares plus 300 proceeds on sale of plant less 285 paid on 3 March for Mary & Co's net assets. The acquired items are equity investments with a stated value of 231 and inventory of 34, all sold during the year. No acquired process or workforce, nor closing fair value of the investments, is supplied. Sundry expense includes 9 insurance through 1 September 20X8; electricity of 3 is unrecorded; light/heat includes 20 salespeople's commission. The building element of property cost is 100 with a 50-year life, and the property is revalued to 800 at year-end. Plant sold had cost 350 and a carrying amount of 274 at the start of the year, but its sale date is unspecified. Current plant depreciation is 36, audit fees due 4, and management transfers 16 within equity. Closing inventory is 220 at cost without net-realisable-value data. Ignore income tax.",
+    ),
+    question: text(
+      "أعد قائمة الربح أو الخسارة والدخل الشامل الآخر، وقائمة المركز المالي، وتغيرات حقوق الملكية للسنة، ثم حدد البيانات الإضافية اللازمة لاعتمادها وفق IFRS الحالية.",
+      "Prepare the year's profit or loss and other comprehensive income, financial-position and changes-in-equity statements, and identify the additional facts needed to finalise them under current IFRS.",
+    ),
+    solution: [
+      text(
+        "أولًا تُحل التسويات المؤكدة: التأمين المدفوع مقدمًا 6، والكهرباء المستحقة 3، وفائدة القرض السنوية 20 منها 10 غير مدفوعة، ورسوم التدقيق المستحقة 4. إصدار الأسهم: مدين نقد 120، دائن رأس مال 50 وعلاوة إصدار 70. تُعرض عمولة البائعين 20 ضمن التوزيع لا الإدارة عند اختيار العرض حسب الوظيفة. إهلاك المباني 100/50 = 2؛ القيمة قبل إعادة التقييم 430 − 20 − 2 = 408، وزيادة إعادة التقييم 392 في الدخل الشامل الآخر ما لم توجد خسارة سابقة ذات صلة. إهلاك الآلات المتبقية المقرر 36.",
+        "First resolve supported adjustments: prepaid insurance 6, accrued electricity 3, annual loan interest 20 with 10 unpaid, and audit fees due 4. Share issue: debit cash 120, credit capital 50 and premium 70. Classify the 20 salespeople's commission as distribution rather than administration under a functional presentation. Building depreciation is 100/50 = 2; pre-revaluation property carrying amount is 430 − 20 − 2 = 408, producing a 392 OCI revaluation gain absent a related earlier loss. Stated current depreciation of the remaining plant is 36.",
+      ),
+      text(
+        "يصلح الحساب التالي قالبًا مشروطًا فقط إذا كانت مجموعة Mary نشاطًا تجاريًا مؤهلًا وفق IFRS 3، وكانت الاستثمارات المقتناة لا تختلف قيمتها العادلة في تاريخ الإقفال عن 231، وكان 274 قيمة الآلة المباعة عند التصرف بلا إهلاك إضافي قبل البيع، ومخزون 220 لا يتطلب خفضًا، ولا توجد فروق أخرى. عندئذ تكون الشهرة = 285 − (231 + 34) = 20؛ وربح بيع الآلة = 300 − 274 = 26؛ والآلات الباقية = (830 − 350) − (222 − (350 − 274) + 36) = 298. لا تثبت هذه الافتراضات من نص الوقائع.",
+        "The following is only a conditional template if Mary constitutes a qualifying business under IFRS 3, the acquired investments' closing fair value remains 231, the sold plant's 274 is its carrying amount at disposal without further interim depreciation, closing inventory of 220 needs no write-down, and no other adjustments arise. Then goodwill is 285 − (231 + 34) = 20; plant disposal gain is 300 − 274 = 26; and remaining plant is (830 − 350) − (222 − (350 − 274) + 36) = 298. The facts do not establish those assumptions.",
+      ),
+      text(
+        "وفق هذه الشروط: تكلفة المبيعات = مخزون افتتاحي 190 + مشتريات (2,152 + 34) − مخزون ختامي 220 = 2,156. الإيراد 2,695 ومجمل الربح 539؛ ربح بيع الآلة 26؛ مصروف توزيع 20؛ إدارة = أجور 254 + متفرقات (113 − 6) + إنارة مصححة (31 − 20 + 3) + إهلاك مبانٍ 2 + آلات 36 + تدقيق 4 = 417؛ تمويل 20؛ ربح السنة 108. دخل شامل آخر من إعادة التقييم 392؛ الإجمالي الشامل 500. مجموع الإدارة والتوزيع 437، لكن فصلهما يبيّن وظيفة العمولة بوضوح.",
+        "Under those conditions, cost of sales is opening inventory 190 + purchases (2,152 + 34) − closing inventory 220 = 2,156. Revenue is 2,695 and gross profit 539; plant-disposal gain 26; distribution expense 20; administration is wages 254 + sundry (113 − 6) + corrected light/heat (31 − 20 + 3) + building depreciation 2 + plant depreciation 36 + audit 4 = 417; finance expense 20; profit for the year 108. Revaluation OCI is 392 and total comprehensive income 500. Administration plus distribution is 437, but separating the commission makes its function clear.",
+      ),
+      text(
+        "قائمة المركز المالي المشروطة: عقار 800، آلات 298، شهرة 20، استثمارات أسهم 231؛ أصول غير متداولة 1,349. المخزون 220، الذمم المدينة 179، مصروف مقدم 6 والنقد 126؛ متداولة 531، ومجموع الأصول 1,880. رأس المال 500، علاوة الإصدار 70، فائض إعادة تقييم 392، مكونات حقوق أخرى 187، وأرباح محتجزة 319؛ حقوق الملكية 1,468. قرض غير متداول 200؛ دائنون تجاريون 195 ومستحقات 17؛ إجمالي الالتزامات 412، فيتوازن المجموع عند 1,880.",
+        "Conditional financial position: property 800, plant 298, goodwill 20 and equity investments 231 give non-current assets of 1,349. Inventory 220, receivables 179, prepayment 6 and cash 126 give current assets of 531 and total assets of 1,880. Capital 500, premium 70, revaluation surplus 392, other equity components 187 and retained earnings 319 give equity of 1,468. Non-current loan notes are 200; trade payables 195 and accruals 17 give liabilities of 412, balancing at 1,880.",
+      ),
+      text(
+        "تغيرات حقوق الملكية المشروطة: الافتتاح 450 رأس مال + 242 أرباح محتجزة + 171 مكونات أخرى = 863؛ إصدار أسهم 120؛ توزيعات مدفوعة (15)؛ الربح 108 والدخل الشامل الآخر 392؛ التحويل الداخلي 16 من الأرباح المحتجزة إلى المكونات الأخرى بلا أثر في إجمالي الحقوق؛ الإقفال 1,468. لا يجعل توازن القوائم الافتراضات المفقودة صحيحة تلقائيًا.",
+        "Conditional changes in equity: opening capital 450 + retained earnings 242 + other components 171 = 863; new shares 120; dividends paid (15); profit 108 and OCI 392; transfer of 16 from retained earnings to other components with no effect on total equity; closing equity 1,468. A balanced statement does not validate missing assumptions.",
+      ),
+      text(
+        "قبل اعتماد القوائم، اختبر هل اشتريت عملية جوهرية مع المدخلات لا مجرد مخزون واستثمارات؛ إن لم تكن مجموعة Mary نشاطًا تجاريًا فلا تُعترف شهرة تلقائيًا، بل تطبق قواعد اقتناء مجموعة الأصول وقياس الاستثمار المالي. قياس استثمارات الأسهم اللاحق بالقيمة العادلة وفق IFRS 9، مع تحديد إن كان اختيار عرض التغير في الدخل الشامل الآخر متاحًا ومختارًا؛ ولا يعطي السؤال قيمة الإقفال. اطلب تاريخ بيع الآلة لإكمال إهلاكها وربح التصرف، وصافي القيمة القابلة للتحقق للمخزون، وتحقق من سياسة إعادة تقييم فئة العقار. أي اختلاف يغير القوائم أعلاه.",
+        "Before finalising, determine whether inputs and a substantive process were acquired rather than merely inventory and investments. If Mary is not a business, do not recognise goodwill automatically; apply the asset-group acquisition rules and financial-asset measurement. Equity investments subsequently follow IFRS 9 fair value, subject to any eligible elected OCI presentation, but closing fair value is absent. Obtain the plant disposal date for depreciation and gain, inventory net realisable value, and the property-class revaluation policy. Differences change the statements above.",
+      ),
+    ],
+    reference: "IAS 1.54, 81A, 106; IFRS 3.2(b), B7–B12D; IFRS 9.4.1.4, 5.7.5; IAS 16.36, 39–40, 55, 67–71; IAS 2.9, 28",
+  },
+  {
     id: "ifrs-book2-polymer-conditional-financial-statements",
     standardCode: "IAS 1",
     title: text(
