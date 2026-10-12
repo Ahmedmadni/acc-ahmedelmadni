@@ -15,6 +15,72 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias32-ch10-quiz-scope",
+    standardCode: "IAS 32",
+    title: text("موضوع معيار IAS 32", "What IAS 32 addresses"),
+    facts: text("سؤال عن وظيفة معيار الأدوات المالية IAS 32.", "A question on the role of IAS 32 for financial instruments."),
+    question: text("ما المسائل التي يعالجها IAS 32؟", "Which financial-instrument issues does IAS 32 address?"),
+    solution: [
+      text("يعالج تصنيف وعرض الأدوات المالية، ولا سيما التمييز بين الالتزام المالي وأداة حقوق الملكية وفصل مكونات الأداة المركبة، وشروط المقاصة في العرض. يتناول IFRS 9 الاعتراف والقياس، وIFRS 7 الإفصاحات، فلا تُنسب هذه المجالات كلها إلى IAS 32.", "It addresses classification and presentation, notably the liability/equity distinction, compound-instrument components and offsetting conditions. IFRS 9 handles recognition and measurement, and IFRS 7 disclosures; these should not all be attributed to IAS 32."),
+    ],
+    reference: "IAS 32.2, 15–16, 28–32, 42",
+  },
+  {
+    id: "ifrs-book2-ias32-ch10-quiz-non-instruments",
+    standardCode: "IAS 32",
+    title: text("بنود ليست أدوات مالية", "Items that are not financial instruments"),
+    facts: text("يطلب السؤال أمثلة لبنود لا تستوفي تعريف أداة مالية.", "The question asks for examples that do not meet the definition of a financial instrument."),
+    question: text("اذكر أنواع البنود التي لا تُعد أدوات مالية في IAS 32.", "Which types of items are not financial instruments under IAS 32?"),
+    solution: [
+      text("الأصول المادية بذاتها، والمصروفات المدفوعة مقدمًا التي تعطي حق خدمة أو سلعة لا نقدًا، والأصول أو الالتزامات القانونية غير التعاقدية مثل ضريبة الدخل، والحقوق التعاقدية التي تنتهي بتسلم سلعة أو خدمة لا نقد أو أصل مالي، لا تعد عادةً أدوات مالية. الحكم على مضمون الحق أو الالتزام التعاقدي، لا مجرد وجود عقد.", "Physical assets themselves, prepayments entitling the holder to goods or services rather than cash, non-contractual statutory balances such as income tax, and contractual rights settled in goods or services rather than cash or another financial asset generally are not financial instruments. Assess the contractual substance, not merely the presence of a contract."),
+    ],
+    reference: "IAS 32.11, AG10–AG12",
+  },
+  {
+    id: "ifrs-book2-ias32-ch10-quiz-liability-feature",
+    standardCode: "IAS 32",
+    title: text("السمة الحاسمة للالتزام المالي", "Key feature of a financial liability"),
+    facts: text("سؤال عن التمييز بين الالتزام المالي وحقوق الملكية عند جهة الإصدار.", "A question on distinguishing a financial liability from equity for the issuer."),
+    question: text("ما السمة التعاقدية الحاسمة لوجود التزام مالي؟", "What contractual feature is central to identifying a financial liability?"),
+    solution: [
+      text("وجود التزام تعاقدي بتسليم نقد أو أصل مالي آخر للطرف المقابل، أو مبادلة أصول أو التزامات مالية بشروط قد تكون غير مواتية، هو السمة الأساسية. وقد تكون تسوية بأسهم المنشأة نفسها التزامًا ماليًا بحسب عدد الأسهم وأسلوب التسوية؛ لذا لا يُكتفى بعبارة «يدفع نقدًا» في جميع الحالات.", "The core feature is a contractual obligation to deliver cash or another financial asset, or to exchange financial assets or liabilities under potentially unfavourable conditions. Settlement in the issuer's own shares can also produce a liability depending on the number of shares and settlement terms, so 'cash payment' is not an exhaustive test."),
+    ],
+    reference: "IAS 32.11, 16, 22",
+  },
+  {
+    id: "ifrs-book2-ias32-ch10-quiz-compound",
+    standardCode: "IAS 32",
+    title: text("عرض الأداة المالية المركبة", "Presentation of a compound instrument"),
+    facts: text("جهة إصدار أداة تتضمن التزامًا بالسداد وخيار تحويل مؤهلًا لحقوق الملكية.", "An issuer has an instrument with a repayment obligation and a qualifying equity conversion option."),
+    question: text("كيف تُعرض مكونات الأداة المركبة أوليًا؟", "How are the compound instrument's components initially presented?"),
+    solution: [
+      text("يُفصل مكون الالتزام عن مكون حقوق الملكية. يُقاس الالتزام أولًا بالقيمة العادلة لالتزام مماثل بلا خيار تحويل مؤهل، ويُحدد مكون حقوق الملكية كباقي القيمة العادلة للأداة كلها بعد طرح مكون الالتزام. ثم يُعرضان منفصلين في قائمة المركز المالي؛ لا يُعاد تصنيفهما لمجرد تغير احتمال التحويل.", "Separate liability and equity. First measure the liability at the fair value of a comparable liability without the qualifying conversion option; assign the residual of the entire instrument's fair value to equity. Present both components separately in the statement of financial position; a changed likelihood of conversion alone does not reclassify them."),
+    ],
+    reference: "IAS 32.28–32",
+  },
+  {
+    id: "ifrs-book2-ifrs9-ch10-quiz-derecognition",
+    standardCode: "IFRS 9",
+    title: text("استبعاد أصل مالي", "Derecognition of a financial asset"),
+    facts: text("سؤال عام عن انتهاء الحق أو نقل الأصل المالي لطرف آخر.", "A general question about expiry of rights or transfer of a financial asset."),
+    question: text("متى يُستبعد الأصل المالي من قائمة المركز المالي؟", "When is a financial asset derecognised?"),
+    solution: [
+      text("يُستبعد عندما تنقضي الحقوق التعاقدية في تدفقاته النقدية، أو عندما يُنقل الأصل نقلًا يحقق شروط الاستبعاد. عند النقل تُختبر المخاطر والمنافع: نقل معظمها يحقق الاستبعاد، واحتفاظ المنشأة بمعظمها يمنعه؛ وإذا لم تنقل أو تحتفظ بمعظمها يُختبر انتقال السيطرة وقد يستمر الاعتراف بقدر الارتباط المستمر. لذلك لا يكفي مجرد توقيع عقد بيع أو تحويل التدفقات.", "Derecognise when contractual cash-flow rights expire or when a transfer qualifies. For a transfer, assess risks and rewards: transferring substantially all supports derecognition, retaining substantially all prevents it; if neither, assess control and possible continuing involvement. A sale agreement or cash-flow assignment alone is insufficient."),
+    ],
+    reference: "IFRS 9.3.2.3–3.2.6, 3.2.15–3.2.16",
+  },
+  {
+    id: "ifrs-book2-ifrs9-ch10-quiz-initial-measurement",
+    standardCode: "IFRS 9",
+    title: text("القياس الأولي للأداة المالية", "Initial measurement of a financial instrument"),
+    facts: text("سؤال عن أساس قياس الأصل أو الالتزام المالي عند الاعتراف الأول.", "A question on the initial measurement basis of a financial asset or liability."),
+    question: text("كيف يُقاس الأصل أو الالتزام المالي مبدئيًا؟", "How is a financial asset or liability initially measured?"),
+    solution: [
+      text("الأصل العام هو القيمة العادلة. إذا لم تكن الأداة بالقيمة العادلة من خلال الربح أو الخسارة، تُضاف أو تُطرح تكاليف المعاملة المنسوبة مباشرة بحسب كونها أصلًا أو التزامًا. ولا تعني عبارة «بالتكلفة = القيمة العادلة» أن سعر الصفقة يساويها دائمًا؛ وقد تُقاس الذمم التجارية غير ذات التمويل المهم بسعر المعاملة وفق الاستثناء في IFRS 9 وIFRS 15.", "The general starting point is fair value. For an instrument not at fair value through profit or loss, add or subtract directly attributable transaction costs as appropriate for an asset or liability. 'Cost equals fair value' is not universally true: transaction price can differ from fair value, and eligible trade receivables without significant financing use their IFRS 15 transaction price under the specific exception."),
+    ],
+    reference: "IFRS 9.5.1.1–5.1.3",
+  },
+  {
     id: "ifrs-book2-ias19-ch9-quiz-categories",
     standardCode: "IAS 19",
     title: text("فئات منافع الموظفين", "Categories of employee benefits"),
