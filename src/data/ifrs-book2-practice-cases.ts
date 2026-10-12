@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias36-ch5-quiz-recoverable-amount",
+    standardCode: "IAS 36",
+    title: text("تعريف المبلغ القابل للاسترداد", "Recoverable amount"),
+    facts: text("سؤال تعريفي عن اختبار هبوط قيمة أصل.", "A definition question about testing an asset for impairment."),
+    question: text("ما المبلغ القابل للاسترداد للأصل؟", "What is an asset's recoverable amount?"),
+    solution: [
+      text("هو الأعلى من القيمة العادلة مطروحًا منها تكاليف الاستبعاد والقيمة قيد الاستخدام. يُقارن بالقيمة الدفترية؛ وإذا تعذر تقديره للأصل منفردًا يُنظر إلى أصغر وحدة مولدة للنقد تحقق تدفقات مستقلة إلى حد كبير.", "It is the higher of fair value less costs of disposal and value in use. Compare it with the carrying amount; if it cannot be estimated for an individual asset, assess the smallest cash-generating unit with largely independent cash inflows."),
+    ],
+    reference: "IAS 36.6, 18, 66–67",
+  },
+  {
+    id: "ifrs-book2-ias36-ch5-quiz-revalued-asset",
+    standardCode: "IAS 36",
+    title: text("هبوط قيمة أصل مُعاد تقييمه", "Impairment of a revalued asset"),
+    facts: text("أصل مدرج بالمبلغ المعاد تقييمه أصابه هبوط قيمة.", "An asset carried at a revalued amount is impaired."),
+    question: text("كيف يُعالج خسارة هبوط قيمته؟", "How is its impairment loss accounted for?"),
+    solution: [
+      text("تُعامل بوصفها انخفاضًا في إعادة التقييم وفق المعيار الحاكم للأصل: تُثبت في الدخل الشامل الآخر إلى حد رصيد فائض إعادة التقييم الخاص بالأصل، ويذهب ما زاد إلى الربح أو الخسارة. لا يجوز افتراض أن كل الخسارة تُحمّل تلقائيًا على فائض إعادة تقييم لأصول أخرى.", "Treat it as a revaluation decrease under the asset's applicable Standard: recognise it in other comprehensive income to the extent of that asset's existing revaluation surplus, and recognise any excess in profit or loss. Do not automatically charge the entire loss to a surplus relating to other assets."),
+    ],
+    reference: "IAS 36.60–61; IAS 16.40",
+  },
+  {
+    id: "ifrs-book2-ias36-ch5-quiz-cgu-allocation",
+    standardCode: "IAS 36",
+    title: text("توزيع خسارة هبوط الوحدة المولدة للنقد", "Allocating a CGU impairment loss"),
+    facts: text("وحدة مولدة للنقد تضم شهرة وأصولًا أخرى، وقد تظهر مؤشرات هبوط لأصل محدد داخلها.", "A cash-generating unit includes goodwill and other assets, and a specific asset within it may have its own impairment indicator."),
+    question: text("ما ترتيب اختبار الهبوط وتوزيع خسارة الوحدة؟", "In what order are impairment testing and allocation performed for the unit?"),
+    solution: [
+      text("إذا أمكن اختبار أصل متضرر أو وحدة أصغر وظهرت مؤشرات هبوط، يُختبر أولًا وتُثبت خسارته الفردية قبل اختبار الوحدة الحاوية للشهرة. ثم تُوزع خسارة الوحدة أولًا على الشهرة المخصصة لها، وبعدها على الأصول الأخرى بنسبة قيمها الدفترية، مع عدم خفض أي أصل دون أعلى قيمته العادلة ناقص تكاليف الاستبعاد، وقيمته قيد الاستخدام إن أمكن تحديدها، والصفر. مجرد التلف لا يجعل خصمًا اعتباطيًا من أي أصل خطوة عامة تسبق اختبار قيمته.", "If an identifiable damaged asset or smaller unit has an impairment indicator and can be tested, test it and recognise its individual loss before testing the goodwill-containing unit. Allocate the remaining unit loss first to allocated goodwill, then pro rata to other assets based on carrying amounts, without reducing an asset below the highest of fair value less costs of disposal (if measurable), value in use (if determinable) and zero. Damage does not justify an arbitrary deduction without an individual impairment test."),
+    ],
+    reference: "IAS 36.97–98, 104–105",
+  },
+  {
+    id: "ifrs-book2-ias36-ch5-quiz-reversal",
+    standardCode: "IAS 36",
+    title: text("شروط عكس هبوط القيمة", "When an impairment loss may be reversed"),
+    facts: text("خسارة هبوط أُثبتت في فترة سابقة.", "An impairment loss was recognised in an earlier period."),
+    question: text("متى يمكن عكس الخسارة، وهل يجوز عكس خسارة الشهرة؟", "When may the loss be reversed, and may goodwill impairment be reversed?"),
+    solution: [
+      text("يجوز عكس خسارة أصل غير الشهرة فقط عندما تتغير التقديرات المستخدمة لتحديد المبلغ القابل للاسترداد منذ إثبات آخر هبوط. يُقيد الرفع بالقيمة الدفترية التي كانت ستوجد لو لم يحدث الهبوط، بعد الإهلاك أو الإطفاء المحتمل. لا تُعكس خسارة الشهرة في فترة لاحقة؛ ومرور الزمن وحده لا يثبت تحسنًا يبرر العكس.", "An impairment loss for an asset other than goodwill is reversed only after a change in the estimates used to determine recoverable amount since the last loss. The increase is capped at the carrying amount that would have existed without impairment, net of any depreciation or amortisation. Goodwill impairment is never reversed in a subsequent period; the passage of time alone does not justify reversal."),
+    ],
+    reference: "IAS 36.110–117, 124",
+  },
+  {
+    id: "ifrs-book2-ias36-ch5-quiz-reversal-amount",
+    standardCode: "IAS 36",
+    title: text("حساب الحد الأقصى لعكس الهبوط", "Calculating the reversal cap"),
+    facts: text("أصل لا يُهلك قيمته الدفترية 300,000، هبط مبلغه القابل للاسترداد إلى 280,000، ثم ارتفع في الفترة اللاحقة إلى 310,000.", "A non-depreciable asset had a carrying amount of 300,000, was impaired to a recoverable amount of 280,000, and had a recoverable amount of 310,000 in the next period."),
+    question: text("كم من خسارة الهبوط السابقة يمكن عكسه؟", "How much of the prior impairment loss may be reversed?"),
+    solution: [
+      text("الخسارة السابقة = 300,000 − 280,000 = 20,000. رغم ارتفاع المبلغ القابل للاسترداد إلى 310,000، لا تتجاوز القيمة الدفترية بعد العكس 300,000، لأنها القيمة التي كانت ستظهر دون الهبوط لأصل لا يُهلك؛ لذا يُعكس 20,000 فقط، ولا يُثبت 30,000 بوصفه عكسًا للهبوط.", "The previous loss was 300,000 − 280,000 = 20,000. Even though recoverable amount rose to 310,000, the post-reversal carrying amount cannot exceed 300,000—the amount that would have existed without impairment for this non-depreciable asset. Reverse only 20,000, not 30,000."),
+    ],
+    reference: "IAS 36.114, 117",
+  },
+  {
     id: "ifrs-book2-ias16-ch4-quiz-depreciation",
     standardCode: "IAS 16",
     title: text("تعريف الإهلاك", "Definition of depreciation"),
