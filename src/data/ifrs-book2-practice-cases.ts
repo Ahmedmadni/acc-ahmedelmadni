@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias19-ch9-quiz-categories",
+    standardCode: "IAS 19",
+    title: text("فئات منافع الموظفين", "Categories of employee benefits"),
+    facts: text("سؤال يطلب الفئات الأربع في IAS 19.", "The question asks for the four IAS 19 benefit categories."),
+    question: text("ما الفئات الأربع لمنافع الموظفين؟", "What are the four categories of employee benefits?"),
+    solution: [
+      text("منافع الموظفين قصيرة الأجل، ومنافع ما بعد انتهاء الخدمة، والمنافع طويلة الأجل الأخرى، ومنافع إنهاء الخدمة. تُصنف بحسب طبيعة المنفعة وتوقيت تسويتها وشروطها، وليس بحسب اسم البرنامج وحده.", "Short-term employee benefits, post-employment benefits, other long-term employee benefits, and termination benefits. Classification follows the benefit's substance, settlement timing and terms rather than the programme's label alone."),
+    ],
+    reference: "IAS 19.5, 8",
+  },
+  {
+    id: "ifrs-book2-ias19-ch9-quiz-plan-types",
+    standardCode: "IAS 19",
+    title: text("خطة مساهمة محددة مقابل منفعة محددة", "Defined contribution versus defined benefit"),
+    facts: text("سؤال يقارن نوعي خطط ما بعد انتهاء الخدمة.", "A question comparing the two types of post-employment plans."),
+    question: text("ما الفرق الجوهري بين خطة المساهمة المحددة وخطة المنفعة المحددة؟", "What is the core difference between a defined contribution and a defined benefit plan?"),
+    solution: [
+      text("في خطة المساهمة المحددة تدفع المنشأة مساهمات ثابتة إلى صندوق منفصل ولا يكون عليها التزام قانوني أو ضمني بدفع المزيد إذا لم تكفِ أصول الصندوق. وأي خطة ما بعد خدمة غير ذلك تُعد منفعة محددة؛ تتحمل المنشأة فيها مخاطر اكتوارية أو استثمارية وتتطلب قياس التزام المنفعة وأصول الخطة وفق IAS 19.", "Under a defined contribution plan the entity pays fixed contributions into a separate fund and has no legal or constructive obligation to pay more if assets are insufficient. Any other post-employment plan is defined benefit; the entity bears actuarial or investment risk and measures the benefit obligation and plan assets under IAS 19."),
+    ],
+    reference: "IAS 19.27–30",
+  },
+  {
+    id: "ifrs-book2-ias19-ch9-quiz-constructive-obligation",
+    standardCode: "IAS 19",
+    title: text("التزام ضمني بمنافع الموظفين", "Constructive employee-benefit obligation"),
+    facts: text("تلتزم منشأة بممارسات سابقة أو سياسات معلنة تجاه الموظفين إضافة إلى شروط العقود.", "An entity has past practice or published policies towards employees in addition to contractual terms."),
+    question: text("كيف يختلف الالتزام الضمني عن الالتزام القانوني في منافع الموظفين؟", "How does a constructive obligation differ from a legal one for employee benefits?"),
+    solution: [
+      text("ينشأ الالتزام القانوني من عقد أو قانون. أما الضمني فينشأ من سلوك المنشأة أو سياستها المعلنة التي أوجدت لدى الموظفين توقعًا صحيحًا بالوفاء، بحيث لا تملك بديلًا واقعيًا عن الدفع. عند قياس التزام المنفعة المحددة تؤخذ الالتزامات القانونية والضمنية معًا.", "A legal obligation arises from contract or law. A constructive obligation arises from the entity's actions or announced policy creating a valid employee expectation such that it has no realistic alternative to paying. Both legal and constructive obligations are included in measuring defined benefit obligations."),
+    ],
+    reference: "IAS 19.4, 61; IAS 37.10",
+  },
+  {
+    id: "ifrs-book2-ias19-ch9-quiz-defined-benefit-expense",
+    standardCode: "IAS 19",
+    title: text("مكونات مصروف المنفعة المحددة", "Defined benefit cost in profit or loss"),
+    facts: text("سؤال عن توزيع تكلفة خطة المنفعة المحددة بين الربح أو الخسارة والدخل الشامل الآخر.", "The question asks how defined benefit cost is split between profit or loss and other comprehensive income."),
+    question: text("ما المكونات التي تُعترف عادةً في الربح أو الخسارة، وأين تذهب إعادة القياس؟", "Which components normally enter profit or loss, and where do remeasurements go?"),
+    solution: [
+      text("تُثبت تكلفة الخدمة، بما فيها الحالية والسابقة وأثر تقليص الخطة أو تسويتها، وصافي الفائدة على صافي التزام أو أصل المنفعة المحددة في الربح أو الخسارة، ما لم يوجب أو يسمح معيار آخر برسملة جزء ضمن تكلفة أصل. أما إعادة القياس، ومنها المكاسب والخسائر الاكتوارية وعائد أصول الخطة المستبعد من صافي الفائدة، فتُثبت في الدخل الشامل الآخر، ولا تدخل ضمن مصروف الفترة في الربح أو الخسارة. لا يُستخدم «العائد المتوقع» القديم أو ترحيل مكاسب اكتوارية معترف بها إلى الربح أو الخسارة.", "Recognise service cost—including current and past service cost and plan curtailment or settlement effects—and net interest on the net defined benefit liability or asset in profit or loss, unless another Standard requires or permits an amount in an asset's cost. Remeasurements, including actuarial gains/losses and plan-asset return outside net interest, go to other comprehensive income, not current profit-or-loss expense. Do not use the superseded expected-return or actuarial-gain recycling model."),
+    ],
+    reference: "IAS 19.57(c)–(d), 120–124, 127–130",
+  },
+  {
+    id: "ifrs-book2-ias19-ch9-quiz-actuarial-gains",
+    standardCode: "IAS 19",
+    title: text("أسباب المكاسب والخسائر الاكتوارية", "Causes of actuarial gains and losses"),
+    facts: text("سؤال عن تغير قياس التزام منافع محددة بين تاريخين.", "A question about changes in a defined benefit obligation between measurement dates."),
+    question: text("ما الذي يسبب المكاسب أو الخسائر الاكتوارية؟", "What causes actuarial gains or losses?"),
+    solution: [
+      text("تنشأ من تعديلات الخبرة عندما تختلف النتائج الفعلية عما افترض سابقًا، ومن التغير في الافتراضات الديموغرافية أو المالية مثل دوران الموظفين أو الأجور أو معدل الخصم. تُعد جزءًا من إعادة قياس صافي التزام/أصل المنفعة المحددة وتُثبت في الدخل الشامل الآخر لخطة ما بعد الخدمة ذات المنفعة المحددة.", "They arise from experience adjustments when actual outcomes differ from prior assumptions, and from changes in demographic or financial assumptions such as turnover, salary growth or the discount rate. They are remeasurements of the net defined benefit liability or asset, recognised in other comprehensive income for post-employment defined benefit plans."),
+    ],
+    reference: "IAS 19.120(c), 127–129",
+  },
+  {
     id: "ifrs-book2-ias37-ch8-quiz-provision-definition",
     standardCode: "IAS 37",
     title: text("تعريف المخصص", "Definition of a provision"),
