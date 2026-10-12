@@ -2369,6 +2369,37 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 15.35–40, 105–108; IFRS 9.5.5",
   },
   {
+    id: "ifrs-book2-jenson-performance-obligation",
+    standardCode: "IFRS 15",
+    title: text(
+      "التزام الأداء في عقد العميل وتوقيت الإيراد",
+      "Performance obligations and revenue timing",
+    ),
+    facts: text(
+      "يتناول السؤال النظري تحديد الوعد الذي ينقل إلى العميل سلعة أو خدمة في عقد قد يضم أكثر من وعد. لا تُعطى في هذا الجزء مبالغ أو تواريخ لمعاملة محددة.",
+      "This conceptual question concerns identifying a promise to transfer a good or service to a customer in a contract that may contain more than one promise. This part supplies no transaction amounts or dates.",
+    ),
+    question: text(
+      "اشرح المقصود بالتزام الأداء في الاعتراف بإيراد عقد مع عميل، ومتى يُعترف بإيراد الوفاء به.",
+      "Explain what a performance obligation means for revenue from a contract with a customer and when revenue from satisfying it is recognised.",
+    ),
+    solution: [
+      text(
+        "التزام الأداء هو وعد في العقد بنقل سلعة أو خدمة مميزة، أو حزمة مميزة، إلى العميل؛ وقد يكون سلسلة من سلع أو خدمات مميزة متشابهة جوهريًا ولها نمط نقل واحد. لا يعد كل نشاط داخلي للمنشأة وعدًا منفصلًا للعميل.",
+        "A performance obligation is a contractual promise to transfer a distinct good or service, or a distinct bundle, to a customer; it can also be a series of substantially similar distinct goods or services with the same pattern of transfer. Not every internal activity of the entity is a separate promise to the customer.",
+      ),
+      text(
+        "يكون الوعد مميزًا إذا استطاع العميل الانتفاع به وحده أو مع موارد متاحة بسهولة، وكان قابلاً للفصل عن الوعود الأخرى في سياق العقد. لذلك يُفحص العقد وارتباط الوعود قبل تحديد عدد الالتزامات وتوزيع سعر المعاملة عليها.",
+        "A promise is distinct when the customer can benefit from it on its own or with readily available resources and it is separately identifiable from other promises in the contract. Examine the contract and interdependence of promises before counting obligations and allocating the transaction price.",
+      ),
+      text(
+        "يُعترف بالإيراد عند الوفاء بالوعد بنقل السيطرة إلى العميل: على مدى الزمن إذا استوفى أحد معايير IFRS 15.35، وإلا عند نقطة زمنية تُحدد بمؤشرات انتقال السيطرة. إصدار فاتورة أو قبض مبلغ مقدم لا يكفيان وحدهما لإثبات الوفاء.",
+        "Recognise revenue as control transfers to the customer: over time if one of the IFRS 15.35 criteria is met, otherwise at the point in time indicated by transfer of control. Billing or receiving an advance alone does not establish satisfaction.",
+      ),
+    ],
+    reference: "IFRS 15.22–30, 31–38",
+  },
+  {
     id: "ifrs-book2-jenson-franchise-licence",
     standardCode: "IFRS 15",
     title: text(
@@ -2380,8 +2411,8 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       "On 1 April 20X4 Jenson granted Mr Cody a five-year fast-food outlet franchise. It received $50,000 upfront for year one and is due $5,000 annually for the remaining years. It must provide advertising and product-development services throughout the franchise at about $8,000 annual cost per outlet and estimates a 20% revenue margin on those services. The case gives no observable stand-alone selling prices for the licence or services and does not establish whether Jenson's continuing activities significantly affect the brand's utility or whether the licence can be benefited from separately.",
     ),
     question: text(
-      "كيف يُحدد عدد التزامات الأداء وتوقيت الإيراد في عقد الامتياز؟ وهل يجوز تسجيل 10,000 من رسم البداية في السنة الأولى و15,000 بعدها كل سنة مباشرة دون تحليل إضافي؟",
-      "How should the franchise's performance obligations and revenue timing be determined? Can $10,000 of the upfront fee be recognised in year one and $15,000 annually thereafter without further analysis?",
+      "صف معالجة Jenson لعقد الامتياز في قوائم السنة المنتهية في 31 مارس 20X5، مع بيان كيفية تحديد التزامات الأداء وتوقيت إيرادها.",
+      "Explain Jenson's accounting for the franchise in the year ended 31 March 20X5, including how to identify its performance obligations and revenue timing.",
     ),
     solution: [
       text(
@@ -2393,8 +2424,8 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
         "Nominal contractual cash across five years is $50,000 + 4 × $5,000 = $70,000, before assessing any significant financing component. If services are distinct, allocate the transaction price by relative stand-alone selling prices, not simply by the cash schedule. Service cost of $8,000 with a 20% revenue margin suggests a cost-plus estimate of $8,000 ÷ 80% = $10,000 a year, but that alone does not establish the licence's stand-alone price or the final allocation.",
       ),
       text(
-        "بعد التوزيع يُعترف بإيراد كل التزام عند الوفاء به وبمقياس تقدم ملائم لما ينفذ على مدى الزمن. لا تسمح الوقائع الحالية باعتماد جدول 10,000 في السنة الأولى و15,000 لكل سنة لاحقة أو نسبة ربح نهائية؛ يلزم العقد وتقييم التمييز وطبيعة الترخيص وأسعار البيع المستقلة وأثر التمويل المحتمل أولًا.",
-        "Recognise each allocated component when its promise is satisfied, using an appropriate progress measure for performance over time. The stated facts do not justify a definitive $10,000 first-year and $15,000 later-year schedule or profit margin: obtain the contract, distinctness assessment, licence nature, stand-alone prices and any financing analysis first.",
+        "بعد التوزيع يُعترف بإيراد كل التزام عند الوفاء به وبمقياس تقدم ملائم لما ينفذ على مدى الزمن. لا تسمح الوقائع الحالية باعتماد جدول إيراد أو نسبة ربح نهائية من جدول التحصيل وحده؛ يلزم تقييم العقد، وتمييز الوعود، وطبيعة الترخيص، وأسعار البيع المستقلة، وأثر التمويل المحتمل أولًا.",
+        "Recognise each allocated component when its promise is satisfied, using an appropriate progress measure for performance over time. The stated facts do not justify a definitive revenue schedule or profit margin from the cash schedule alone: assess the contract, distinctness of promises, licence nature, stand-alone prices and any financing effect first.",
       ),
     ],
     reference: "IFRS 15.22–30, 60–65, 73–80, B48–B60",
