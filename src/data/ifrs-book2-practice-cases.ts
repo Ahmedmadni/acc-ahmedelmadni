@@ -1523,6 +1523,25 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 2.19–23, 27–28(c), B42–B43(a)",
   },
   {
+    id: "ifrs-book2-piper-cancellation-cash-compensation",
+    standardCode: "IFRS 2",
+    title: text("Piper: إلغاء الخيارات وتعويض نقدي", "Piper: cancelled options and cash compensation"),
+    facts: text(
+      "منحت Piper في 1 يناير 20X1 كلًا من 1,000 موظف 3,000 خيار سهم، مشروطة بالبقاء حتى 31 ديسمبر 20X3، بقيمة عادلة 5 دولارات للخيار عند المنح. في نهاية 20X1 قدرت مغادرة 100 موظف وأثبتت 4.5 ملايين دولار تكلفة خدمة. في 1 يناير 20X2 بقي 975 موظفًا، وانخفضت القيمة العادلة للخيار القائم إلى دولار واحد. في ذلك اليوم ألغت الشركة الخيارات القديمة ودفعت 4 ملايين دولار للموظفين تعويضًا. لا يُحدد السؤال صراحةً هل مقارنة مبلغ إعادة الشراء تشمل جميع خيارات الموظفين الموجودين عند الإلغاء أم الخيارات المتوقع استحقاقها فقط.",
+      "On 1 January 20X1 Piper granted 3,000 options to each of 1,000 employees, conditional on service until 31 December 20X3, at $5 grant-date fair value per option. At end-20X1 it estimated 100 leavers and recognised $4.5 million service cost. On 1 January 20X2, 975 employees remained and the outstanding option fair value was $1. On that date the company cancelled the old options and paid employees $4 million compensation. The question does not expressly resolve whether the repurchase comparison includes all options held by employees present at cancellation or only options expected to vest.",
+    ),
+    question: text(
+      "ناقش، مع الحسابات المناسبة، معالجة إلغاء الخيارات الأصلية ودفع تعويض 4 ملايين دولار في قوائم Piper للسنة المنتهية في 31 ديسمبر 20X2.",
+      "Discuss, with suitable calculations, the accounting treatment in Piper's financial statements for the year ended 31 December 20X2 when the original options were cancelled and $4 million compensation was paid.",
+    ),
+    solution: [
+      text("الإلغاء بقرار المنشأة ليس سقوطًا بسبب عدم تحقق شرط الخدمة. وفق IFRS 2.28(a)، تُسرَّع تكلفة الخدمة التي كان سيثبتها الكيان خلال فترة الاستحقاق المتبقية. إذا ظل أفضل تقدير للخيارات التي كانت ستستحق هو 900 موظف، فتكون تكلفة المنحة الأصلية 900 × 3,000 × 5 = 13.5 مليون دولار، منها 4.5 ملايين سبق إثباتها؛ يُثبت الفرق 9 ملايين فور الإلغاء: مدين مصروف موظفين، دائن احتياطي خيارات.", "Entity-initiated cancellation is not forfeiture for failure to satisfy the service condition. IFRS 2.28(a) accelerates service cost otherwise recognised over the remaining vesting period. If the best estimate of employees who would have vested remains 900, original grant cost is 900 × 3,000 × $5 = $13.5 million. With $4.5 million already recognised, the $9 million difference is charged immediately: debit staff expense, credit option reserve."),
+      text("تعويض الـ4 ملايين خطوة منفصلة: تُعامل الدفعة كإعادة شراء لحق ملكية حتى القيمة العادلة للأدوات الملغاة في تاريخ الإلغاء، ويذهب ما زاد إلى الربح أو الخسارة وفق IFRS 2.28(b). سعر الدولار للخيار ليس تكلفة الخدمة الأصلية البالغة 5 دولارات، ولا يصح خصم التعويض كله من المصروف المسرَّع.", "The $4 million payment is separate. Treat it as repurchase of an equity interest up to the cancellation-date fair value of the cancelled instruments, with any excess in profit or loss under IFRS 2.28(b). The $1 cancellation-date value is not the original $5 service-cost measure, and the payment should not simply be netted against accelerated expense."),
+      text("إذا شملت مقارنة إعادة الشراء جميع خيارات 975 موظفًا الموجودين عند الإلغاء، فالقيمة 975 × 3,000 × 1 = 2.925 مليون دولار، والزيادة على القيمة = 1.075 مليون. وإذا اقتصر عدد الأدوات المعتمد على 900 المتوقع استحقاقهم، فالقيمة 2.7 مليون والزيادة 1.3 مليون. لا يُعرض أي تقسيم منهما باعتباره النتيجة الوحيدة من المعطيات؛ يلزم حسم عدد الأدوات التي شملتها التسوية وشروطها قبل قيد نهائي للتعويض.", "If the repurchase comparison covers all options held by the 975 employees present at cancellation, fair value is 975 × 3,000 × $1 = $2.925 million and the excess is $1.075 million. If the population is limited to the 900 expected to vest, fair value is $2.7 million and the excess is $1.3 million. Neither split is presented as the unique answer on these facts; establish the number of instruments actually settled and the arrangement's terms before posting a final compensation entry."),
+    ],
+    reference: "IFRS 2.27–28(b)",
+  },
+  {
     id: "ifrs-book2-ifrs2-quiz-cash-settled",
     standardCode: "IFRS 2",
     title: text("تعريف التسوية النقدية", "Cash-settled share-based payment"),
