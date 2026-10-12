@@ -2481,6 +2481,41 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 12.5, 12, 15(a), 24, 46–47, 66; IFRS 3.10",
   },
   {
+    id: "ifrs-book2-dt-directors-tax-report",
+    standardCode: "IAS 12",
+    title: text(
+      "DT Group: تقرير آثار تطبيق ضريبة الدخل للمديرين",
+      "DT Group: directors' report on applying income-tax accounting",
+    ),
+    facts: text(
+      "تطبق DT معايير IFRS لأول مرة في قوائم السنة المنتهية في 30 نوفمبر 20X1. أظهرت ملاحظة 20X0 صافي التزام ضريبة مؤجلة قدره 3 ملايين دولار وفق السياسة السابقة، وقدّر المديرون رصيد البداية وفق IAS 12 بمبلغ 280 مليونًا. توجد فروق ضريبية تخص أصولًا أعيد تقييمها، واستحواذ Bravo، وخسائر ضريبية مرحلة، ومنافع رعاية صحية تخصم عند السداد. كذلك تستحق ضريبة قدرها 165 مليونًا عن بيع عقار وقع في 20X0، لكن سدادها مؤجل إلى 20X4. المطلوب تقرير موجز للمديرين عن أثر IAS 12، لا إعادة حساب كامل رصيد الإقفال من معطيات غير محسومة.",
+      "DT first applies IFRS in its financial statements for the year ended 30 November 20X1. The 20X0 note reported a net deferred-tax liability of $3m under the previous policy; directors estimate an opening IAS 12 balance of $280m. Tax differences concern revalued property, the Bravo acquisition, carried-forward tax losses and healthcare benefits deductible on payment. A further $165m tax relating to a property sold in 20X0 is payable only in 20X4. The task is a brief directors' report on IAS 12's effects, not a complete closing-balance calculation from unresolved facts.",
+    ),
+    question: text(
+      "أعد تقريرًا موجزًا للمديرين يبيّن أثر تطبيق IAS 12 على القوائم المالية لمجموعة DT.",
+      "Prepare a brief report for DT Group's directors on the effect of applying IAS 12 to its financial statements.",
+    ),
+    solution: [
+      text(
+        "إلى المديرين: سيُعرض أثر الضريبة الجارية والضريبة المؤجلة بصورة منفصلة من حيث طبيعة كل منهما. يُنشأ الالتزام أو الأصل المؤجل من الفروق بين القيمة الدفترية والأساس الضريبي للأصول والالتزامات، مع اختبار قابلية استرداد أصول الضريبة المؤجلة. قد تتغير الالتزامات وصافي الأصول المعروضة دون أن يعني الاعتراف بضريبة مؤجلة دفع نقدية في تاريخ القيد.",
+        "To the directors: current and deferred tax must be analysed separately. Deferred tax arises from differences between the carrying amounts and tax bases of assets and liabilities, subject to recoverability testing for deferred-tax assets. Recognising deferred tax can change reported liabilities and net assets without itself causing a cash payment on the recognition date.",
+      ),
+      text(
+        "رقما 3 و280 مليونًا يعطيان فرق تسوية حسابيًا قدره 277 مليونًا فقط إذا كانا يمثلان الرصيد الصافي للكيانات نفسها وفي التاريخ نفسه وعلى أساس قابل للمقارنة. يجب مراجعة تقدير 280 أولًا وتحديد تاريخ الانتقال الرسمي وفترات المقارنة؛ ولا يُحمّل فرق السياسة الافتتاحي تلقائيًا على ربح 20X1. تعديلات قائمة المركز المالي الافتتاحية عند الانتقال تُثبت عادة في الأرباح المبقاة أو بند آخر مناسب من حقوق الملكية وفق IFRS 1.",
+        "The $3m and $280m figures yield an arithmetic bridge of $277m only if they cover the same entities, date and comparable net balance. First validate the $280m estimate and identify the formal IFRS transition date and comparative periods. An opening accounting-policy adjustment is not automatically a 20X1 profit-or-loss charge; IFRS 1 generally records opening adjustments in retained earnings or another appropriate equity component.",
+      ),
+      text(
+        "لا يساوي مصروف الضريبة المؤجلة للسنة الفرق بين رصيد الإقفال ورصيد البداية دون تسوية الحركات. تُفصل ضريبة إعادة تقييم أصل مُثبتة في الدخل الشامل الآخر عن ضريبة معاملات الربح أو الخسارة؛ وضريبة فروق أصول Bravo المحددة بتاريخ الاستحواذ تؤثر في قياس الشهرة، لا في مصروف السنة بمجرد نشأتها. لا تُثبت منفعة الخسائر المرحلة أو خصم منافع الرعاية الصحية إلا بقدر توافر أرباح خاضعة للضريبة مناسبة وبأدلة كافية، ولا يُستخدم الربح المتوقع نفسه مرتين.",
+        "The year's deferred-tax expense is not simply the difference between opening and closing balances without reconciling the movements. Tax on a property revaluation recognised in other comprehensive income follows that presentation, while acquisition-date tax on Bravo's identifiable assets affects goodwill rather than becoming current-year expense merely on recognition. Loss carryforwards and healthcare deductions support an asset only to the extent suitable taxable profits are probable and evidenced; the same forecast profit cannot be counted twice.",
+      ),
+      text(
+        "ضريبة الـ165 مليونًا عن العقار المباع سابقًا تُصنف ضريبة جارية غير مدفوعة إذا نشأ الالتزام عند البيع وتأجل السداد فقط. أما إذا أجّل القانون خضوع الربح نفسه للضريبة، فيلزم فحص النص القانوني والأساس الضريبي قبل استنتاج فرق مؤقت. لذلك لا يمكن الجزم من موعد السداد وحده برصيد ضريبة مؤجلة أو مصروف نهائي للمجموعة. كما لا يجوز خصم رصيد الضريبة المؤجلة بمعدل فائدة؛ يظل تقرير الأثر الرقمي النهائي معلقًا على هذه التحليلات.",
+        "The $165m tax on the previously sold property is unpaid current tax if the obligation arose on sale and only settlement was delayed. If the law instead postpones taxation of the gain itself, its terms and tax bases must be examined before identifying any temporary difference. The payment date alone therefore cannot establish a final group deferred-tax balance or expense. Deferred-tax balances must not be discounted; the final numerical effect remains subject to these analyses.",
+      ),
+    ],
+    reference: "IAS 12.5, 12, 24, 34–36, 53, 57–58, 61A, 66, 71–74; IFRS 1.6–11",
+  },
+  {
     id: "ifrs-book2-panther-inventory-timing",
     standardCode: "IFRS 10",
     title: text(
