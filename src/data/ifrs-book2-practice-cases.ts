@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias1-ch15-quiz-current-assets",
+    standardCode: "IAS 1",
+    title: text("أمثلة الأصول المتداولة", "Examples of current assets"),
+    facts: text("الخيارات المعطاة: أ) عقارات وآلات ومعدات؛ ب) مصروفات مدفوعة مقدمًا؛ ج) معادلات نقدية؛ د) تراخيص تصنيع؛ هـ) أرباح محتجزة.", "Given choices: A property, plant and equipment; B prepayments; C cash equivalents; D manufacturing licences; E retained earnings."),
+    question: text("أي الخيارات أمثلة لأصول متداولة؟", "Which choices are examples of current assets?"),
+    solution: [
+      text("ب وج في الظروف المعتادة: المدفوعات مقدمًا التي ستُستهلك في دورة التشغيل أو خلال 12 شهرًا، ومعادلات النقد غير المقيدة بما يمنع استخدامها 12 شهرًا. قد تكون دفعة مقدمة طويلة الأجل غير متداولة؛ وتصنيفها يعتمد على توقيت الاسترداد. الأصول الثابتة والتراخيص عادة غير متداولة، والأرباح المحتجزة من حقوق الملكية وليست أصلًا.", "B and C in the usual circumstances: prepayments to be consumed in the operating cycle or within 12 months, and unrestricted cash equivalents. A longer-term prepayment can be non-current, depending on realisation. PPE and licences are generally non-current; retained earnings are equity, not an asset."),
+    ],
+    reference: "IAS 1.66–68",
+  },
+  {
+    id: "ifrs-book2-ias1-ch15-quiz-provisions",
+    standardCode: "IAS 1",
+    title: text("عرض المخصصات", "Presentation of provisions"),
+    facts: text("العبارة المطروحة: «يجب الإفصاح عن المخصصات في قائمة المركز المالي».", "The statement is: 'Provisions must be disclosed in the statement of financial position.'"),
+    question: text("هل العبارة صحيحة؟", "Is the statement true?"),
+    solution: [
+      text("صحيحة في إطار متطلبات IAS 1 لعرض المخصصات كبند ضمن الحد الأدنى لعناصر قائمة المركز المالي، مع مراعاة الأهمية النسبية وإمكان تجميع البنود غير الجوهرية؛ ويقدم IAS 37 إفصاحات إضافية في الإيضاحات. ليست كل فئة صغيرة من المخصصات سطرًا منفصلًا بالضرورة.", "True under IAS 1's minimum statement-of-financial-position line items, subject to materiality and aggregation of immaterial items; IAS 37 requires further note disclosures. Every small provision category need not occupy a separate line."),
+    ],
+    reference: "IAS 1.54(l), 55, 29–31; IAS 37.84–85",
+  },
+  {
+    id: "ifrs-book2-ias1-ch15-quiz-profit-lines",
+    standardCode: "IAS 1",
+    title: text("بنود قائمة الربح أو الخسارة", "Profit-or-loss line items"),
+    facts: text("الخيارات المعطاة: أ) مصروف الضريبة؛ ب) تحليل المصروفات؛ ج) الربح أو الخسارة.", "Given choices: A tax expense; B analysis of expenses; C profit or loss."),
+    question: text("أي الخيارات يجب عرضها كبنود في قائمة الربح أو الخسارة وفق IAS 1؟", "Which choices must be presented as line items in profit or loss under IAS 1?"),
+    solution: [
+      text("أ وج: مصروف الضريبة، ومجموع الربح أو الخسارة. تحليل المصروفات حسب الطبيعة أو الوظيفة مطلوب ضمن العرض/الإيضاحات وفق القواعد المناسبة، لكنه ليس بحد ذاته سطرًا واحدًا واجبًا في القائمة. ترتبط الإجابة بفترات تطبق IAS 1؛ يبدأ تطبيق IFRS 18 إلزاميًا للفترات السنوية التي تبدأ في 1 يناير 2027، مع جواز التطبيق المبكر.", "A and C: tax expense and the profit-or-loss total. Expense analysis by nature or function is required in the appropriate statement or notes, but is not itself one mandatory single line item. This answer concerns periods applying IAS 1; IFRS 18 becomes mandatory for annual periods beginning 1 January 2027, with early application permitted."),
+    ],
+    reference: "IAS 1.81A–82, 99–105; IFRS 18.C1",
+  },
+  {
+    id: "ifrs-book2-ias16-ch15-quiz-revaluation",
+    standardCode: "IAS 16",
+    title: text("مكان عرض فائض إعادة التقييم", "Where revaluation gains are presented"),
+    facts: text("السؤال عن مكاسب إعادة تقييم أصول وفق نموذج إعادة التقييم.", "The question asks about revaluation gains under a revaluation model."),
+    question: text("أين تُعرض مكاسب إعادة التقييم في القوائم المالية؟", "Where are revaluation gains shown in the financial statements?"),
+    solution: [
+      text("تُعرض الزيادة عادة في الدخل الشامل الآخر وتتراكم في حقوق الملكية ضمن فائض إعادة التقييم، فتظهر حركتها في قائمة التغيرات في حقوق الملكية. أما بقدر عكس هبوط إعادة تقييم سابق للأصل نفسه أُثبت في الربح أو الخسارة، فتُعترف الزيادة في الربح أو الخسارة؛ لذلك ليست كل زيادة حتمًا في OCI.", "An increase is ordinarily recognised in other comprehensive income and accumulated in equity as revaluation surplus, with its movement in the statement of changes in equity. To the extent it reverses a previous revaluation decrease for the same asset recognised in profit or loss, the increase is recognised in profit or loss; not every increase necessarily goes to OCI."),
+    ],
+    reference: "IAS 16.39–40; IAS 1.106",
+  },
+  {
+    id: "ifrs-book2-ias1-ch15-quiz-expense-function",
+    standardCode: "IAS 1",
+    title: text("تحليل المصروفات حسب الوظيفة", "Expense analysis by function"),
+    facts: text("تظهر في القائمة عناوين تكلفة المبيعات وتكاليف التوزيع والمصروفات الإدارية.", "The statement headings are cost of sales, distribution costs and administrative expenses."),
+    question: text("هل صُنفت هذه المصروفات بحسب الطبيعة أم الوظيفة؟", "Are these expenses analysed by nature or function?"),
+    solution: [
+      text("بحسب الوظيفة؛ فالعناوين تجمع النفقة تبعًا للدور الذي أدته في المنشأة لا نوعها مثل الرواتب والاستهلاك. في فترات IAS 1 يلزم عند هذا العرض تقديم معلومات إضافية عن طبيعة المصروفات، بما فيها الاستهلاك ومنافع العاملين، وفق المعيار.", "By function: the headings group expenses by the organisational role they serve rather than by type such as wages or depreciation. In periods applying IAS 1, additional nature-of-expense information, including depreciation and employee benefits, is required under the Standard."),
+    ],
+    reference: "IAS 1.99–105",
+  },
+  {
     id: "ifrs-book2-ifrs2-ch14-quiz-cash-settled",
     standardCode: "IFRS 2",
     title: text("المعاملة المسددة نقدًا", "Cash-settled share-based payment"),
