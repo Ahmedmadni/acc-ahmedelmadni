@@ -2065,6 +2065,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 33.66–70, 71",
       },
+      {
+        title: text("ربحية السهم المعدلة وتاريخ تطبيق IFRS 18", "Adjusted EPS and the IFRS 18 transition"),
+        explanation: text(
+          "قد تعرض المنشأة رقمًا إضافيًا للسهم إلى جانب الربحية الأساسية والمخفضة، لكن لا يجوز مساواته بهما أو اختيار بسط اعتباطي. كانت قاعدة IAS 33 السابقة تسمح باستخدام مكون معلن من قائمة الدخل الشامل بشروط الإفصاح. عند تطبيق IFRS 18—إلزاميًا للفترات السنوية التي تبدأ في 1 يناير 2027 أو بعده، أو مبكرًا إذا اختارته المنشأة—تُقيَّد مبالغ السهم الإضافية: يكون البسط مبلغًا عائدًا لحملة أسهم الأم العادية من مجموع أو مجموع فرعي حدده IFRS 18، أو من مقياس أداء محدد من الإدارة وفقه. تُعرض الأساسية والمخفضة الإضافيتان بالقدر نفسه من الأهمية في الإيضاحات لا في القوائم الرئيسية، وباستخدام أعداد الأسهم المرجحة وفق IAS 33. لذلك ابدأ دائمًا بتحديد معيار العرض المطبق على الفترة قبل قبول رقم «ربحية معدلة» مطبوع في مرجع أقدم.",
+          "An entity may disclose an additional per-share measure alongside basic and diluted EPS, but it cannot treat it as interchangeable with them or select an arbitrary numerator. The earlier IAS 33 rule allowed a reported component of comprehensive income, subject to disclosure requirements. Once IFRS 18 is applied—mandatorily for annual periods beginning on or after 1 January 2027, or earlier by election—additional per-share measures are restricted: the numerator must be an amount attributable to the parent's ordinary equity holders of a total or subtotal identified in IFRS 18, or a management-defined performance measure under that Standard. Disclose the additional basic and diluted measures with equal prominence in the notes, not in the primary statements, using IAS 33 weighted-average share counts. Identify the presentation Standard applicable to the period before accepting an 'adjusted EPS' figure from older study material.",
+        ),
+        keyPoints: [
+          text("تحقق من تاريخ بداية الفترة ومن اختيار التطبيق المبكر لـIFRS 18؛ لا تطبق قيوده الجديدة بأثر افتراضي على فترة لم يُطبق فيها.", "Check the period start and any early adoption of IFRS 18; do not retrospectively impose its new restriction on a period in which it was not applied."),
+          text("اختبر البسط أولًا، ثم المقام؛ تسمية الرقم «معدلًا» لا تكفي لإجازته.", "Test the numerator before the denominator; labelling an amount 'adjusted' does not make it permissible."),
+          text("المبلغ الإضافي للسهم إفصاح في الإيضاحات، أما الربحية الأساسية والمخفضة المطلوبة فتظل في قائمة الأداء.", "An additional per-share amount belongs in the notes; required basic and diluted EPS remain in the performance statement."),
+        ],
+        reference: "IAS 33.73B–73C; IFRS 18.C1",
+      },
     ],
     workedExamples: [
       {
