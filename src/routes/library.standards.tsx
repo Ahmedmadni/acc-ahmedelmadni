@@ -21,6 +21,7 @@ import {
 } from "@/data/ifrs-standards";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IFRS_LOCAL_QUESTION_COUNTS, IFRS_LOCAL_QUESTION_TOTAL } from "@/data/ifrs-question-bank";
+import { IFRS_COMPANION_MODULES } from "@/data/ifrs-companion-foundations";
 import { useSiteLang } from "@/lib/use-site-lang";
 
 export const Route = createFileRoute("/library/standards")({
@@ -286,6 +287,54 @@ function StandardsPage() {
                     </p>
                   </article>
                 ))}
+              </div>
+            </section>
+
+            <section id="companion-foundations" className="mx-auto mt-10 max-w-6xl">
+              <div className="rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-5 sm:p-7">
+                <div className="mb-5 flex items-center gap-3">
+                  <BookOpenText className="size-5 text-[#c9a986]" />
+                  <div>
+                    <h3 className="font-display text-lg font-extrabold text-[#FCFBF9]">
+                      {lang === "ar" ? "موضوعات مكملة خارج قائمة المعايير المحاسبية" : "Companion topics outside the Accounting Standards list"}
+                    </h3>
+                    <p className="mt-1 text-xs leading-6 text-[#AFA69D]">
+                      {lang === "ar"
+                        ? "حوكمة المعايير والإطار المفاهيمي والاستدامة وIFRS للمنشآت الصغيرة والمتوسطة؛ لكل موضوع أسئلة تحليلية بإجابات مشروحة، دون إدراجه خطأً ضمن معايير IAS وIFRS الكاملة."
+                        : "Standard-setting, the Conceptual Framework, sustainability and IFRS for SMEs, with explained open-response questions, without misclassifying them as full IAS/IFRS Accounting Standards."}
+                    </p>
+                  </div>
+                </div>
+                <div className="grid gap-3 lg:grid-cols-2">
+                  {IFRS_COMPANION_MODULES.map((module) => (
+                    <details key={module.id} className="group rounded-2xl border border-[#A88765]/20 bg-[#151412] p-4">
+                      <summary className="cursor-pointer text-sm font-extrabold text-[#F5F1EB]">
+                        {module.title[lang]}
+                        <span className="ms-2 text-xs font-medium text-[#AFA69D]">
+                          ({module.questions.length} {lang === "ar" ? "أسئلة مفتوحة" : "open questions"})
+                        </span>
+                      </summary>
+                      <p className="mt-3 text-xs leading-6 text-[#AFA69D]">{module.note[lang]}</p>
+                      <div className="mt-4 space-y-4">
+                        {module.questions.map((question, index) => (
+                          <article key={index} className="rounded-xl border border-[#A88765]/15 bg-[#1C1B19] p-4">
+                            <h4 className="text-sm font-bold leading-7 text-[#E6D5BF]">{index + 1}. {question.prompt[lang]}</h4>
+                            <p className="mt-2 text-xs leading-7 text-[#D8D1C8]">{question.answer[lang]}</p>
+                          </article>
+                        ))}
+                      </div>
+                      <a
+                        href={module.referenceUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#c9a986] underline underline-offset-4"
+                      >
+                        {module.referenceLabel}
+                        <ExternalLink className="size-3" />
+                      </a>
+                    </details>
+                  ))}
+                </div>
               </div>
             </section>
 
