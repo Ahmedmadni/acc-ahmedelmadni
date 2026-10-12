@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs16-ch6-quiz-definition",
+    standardCode: "IFRS 16",
+    title: text("متى يتضمن العقد إيجارًا؟", "When does a contract contain a lease?"),
+    facts: text("سؤال لإكمال تعريف العقد الذي يتضمن إيجارًا.", "A fill-in question about the definition of a lease."),
+    question: text("ما الحق الذي يجب أن يمنحه العقد، ومقابل ماذا؟", "What right must the contract convey, and in exchange for what?"),
+    solution: [
+      text("يكون العقد إيجارًا أو يتضمن إيجارًا إذا منح حق السيطرة على استخدام أصل محدد لفترة زمنية مقابل عوض. يتطلب ذلك، في الجوهر، حق الحصول على المنافع الاقتصادية من الاستخدام وحق توجيه كيفية استخدام الأصل والغرض منه ضمن حدود العقد.", "A contract is, or contains, a lease if it conveys the right to control the use of an identified asset for a period of time in exchange for consideration. In substance the customer must obtain substantially all economic benefits from use and have the right to direct its use within the contract's bounds."),
+    ],
+    reference: "IFRS 16.9, B9–B30",
+  },
+  {
+    id: "ifrs-book2-ifrs16-ch6-quiz-initial-entry",
+    standardCode: "IFRS 16",
+    title: text("قيد بدء إيجار مرتفع القيمة", "Initial entry for a high-value lease"),
+    facts: text("منشأة تستأجر أصلًا مرتفع القيمة لمدة خمس سنوات؛ لا ينطبق إعفاء الأصل منخفض القيمة.", "An entity leases a high-value asset for five years; the low-value exemption is unavailable."),
+    question: text("ما القيد المبدئي لدى المستأجر عند بدء الإيجار؟", "What is the lessee's initial double entry at commencement?"),
+    solution: [
+      text("من حـ/ أصل حق الاستخدام، إلى حـ/ التزام الإيجار، وفق القياسين الأوليين في IFRS 16. هذا هو القيد الأساسي الذي يطلبه السؤال؛ قد تختلف قيمة أصل حق الاستخدام عن قيمة الالتزام إذا وجدت دفعات مقدمة أو حوافز أو تكاليف مباشرة أولية أو التزام بإزالة الأصل، ولا تُفترض هذه البنود دون معطيات.", "Debit right-of-use asset; credit lease liability, using the IFRS 16 initial measurements. This is the basic entry requested; the ROU asset may differ from the liability if prepayments, incentives, initial direct costs or restoration obligations exist, none of which is supplied here."),
+    ],
+    reference: "IFRS 16.22–28",
+  },
+  {
+    id: "ifrs-book2-ifrs16-ch6-quiz-depreciation-term",
+    standardCode: "IFRS 16",
+    title: text("مدة إهلاك حق استخدام شاحنة", "ROU depreciation period for a lorry"),
+    facts: text("العمر الاقتصادي الكلي للشاحنة ست سنوات، ومدة الإيجار خمس سنوات بلا خيار شراء، ويتوقع المستأجر الانتفاع بها أربع سنوات.", "A lorry has a six-year total economic life, a five-year lease with no purchase option, and an expected four-year period of benefit to the lessee."),
+    question: text("على أي مدة يُهلك المستأجر أصل حق الاستخدام؟", "Over what period does the lessee depreciate the right-of-use asset?"),
+    solution: [
+      text("أربع سنوات: أقصر مدة الإيجار (خمس سنوات) والعمر النافع للمستأجر (أربع سنوات)، ما دام العقد لا ينقل الملكية ولا توجد ممارسة متوقعة بدرجة يقين معقول لخيار شراء. الست سنوات عمر الشاحنة الاقتصادي الكلي، وليست عمر حق الاستخدام لدى المستأجر في هذه الوقائع.", "Four years: the shorter of the five-year lease term and the four-year useful life to the lessee, because ownership does not transfer and there is no reasonably certain purchase option. The lorry's six-year total economic life is not the ROU asset's useful life for this lessee on these facts."),
+    ],
+    reference: "IFRS 16.29, 31–32; IAS 16.55",
+  },
+  {
+    id: "ifrs-book2-ifrs16-ch6-quiz-tablet",
+    standardCode: "IFRS 16",
+    title: text("إيجار جهاز لوحي منخفض القيمة", "Low-value tablet lease"),
+    facts: text("شركة تستأجر جهازًا لوحيًا منفصلًا يمكنها الانتفاع به وحده؛ لا يورد السؤال ثمنًا أو دفعات محددة.", "A company leases a stand-alone tablet computer; no price or payment schedule is supplied."),
+    question: text("كيف يمكنها معالجة هذا الإيجار إذا كان الأصل منخفض القيمة عند كونه جديدًا؟", "How may it account for the lease if the underlying asset is low value when new?"),
+    solution: [
+      text("يجوز للمستأجر اختيار إعفاء الأصول منخفضة القيمة لكل إيجار مؤهل؛ وعند اختياره تُثبت دفعات الإيجار مصروفًا على أساس القسط الثابت خلال المدة أو أساس منتظم آخر أكثر تمثيلًا. لا يُفترض أن الإعفاء واجب أو أن كل جهاز لوحي مؤهل بصرف النظر عن قيمته الجديدة أو اعتماده على أصول أخرى؛ وإلا يُثبت أصل حق استخدام والتزام إيجار.", "The lessee may elect the low-value-asset exemption lease by lease. If elected, recognise lease payments as expense on a straight-line basis over the term or another systematic basis that better represents benefit. The exemption is optional and depends on the asset's value when new and its stand-alone use; otherwise recognise a ROU asset and lease liability."),
+    ],
+    reference: "IFRS 16.5–8, B3–B8",
+  },
+  {
+    id: "ifrs-book2-ifrs16-ch6-quiz-sale-leaseback",
+    standardCode: "IFRS 16",
+    title: text("سعر بيع فوق القيمة العادلة مع إعادة الاستئجار", "Above-market sale and leaseback"),
+    facts: text("بيع أصل ثم إعادة استئجاره، وسعر البيع المتفق عليه أعلى من القيمة العادلة.", "An asset is sold and leased back, and the agreed selling price exceeds fair value."),
+    question: text("كيف يُعالج الجزء الذي يزيد عن القيمة العادلة إذا تحققت شروط البيع؟", "How is the excess above fair value treated if the transfer qualifies as a sale?"),
+    solution: [
+      text("يُعامل الجزء الزائد بوصفه تمويلًا إضافيًا قدمه المشتري-المؤجر إلى البائع-المستأجر، لا ربح بيع. ويُضبط مقابل البيع إلى القيمة العادلة وفق IFRS 16.101–102. أولًا يجب اختبار ما إذا كان نقل الأصل بيعًا وفق IFRS 15؛ إن لم يكن بيعًا فلا تطبق محاسبة البيع وإعادة الاستئجار هذه.", "Treat the above-market portion as additional financing provided by the buyer-lessor to the seller-lessee, not a sale gain, and adjust sale proceeds to fair value under IFRS 16.101–102. First assess whether transfer is a sale under IFRS 15; if not, sale-and-leaseback sale accounting does not apply."),
+    ],
+    reference: "IFRS 16.99–102",
+  },
+  {
     id: "ifrs-book2-ias36-ch5-quiz-recoverable-amount",
     standardCode: "IAS 36",
     title: text("تعريف المبلغ القابل للاسترداد", "Recoverable amount"),
