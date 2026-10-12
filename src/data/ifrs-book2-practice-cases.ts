@@ -15,6 +15,72 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias38-ch7-quiz-recognition",
+    standardCode: "IAS 38",
+    title: text("شرطا الاعتراف بالأصل غير الملموس", "Intangible-asset recognition criteria"),
+    facts: text("سؤال لإكمال شرطي الاعتراف الأساسيين للأصل غير الملموس.", "A fill-in question on two core recognition tests for an intangible asset."),
+    question: text("ما الشرطان المتعلقان بالمنافع الاقتصادية والتكلفة؟", "What conditions concern future economic benefits and cost?"),
+    solution: [
+      text("يلزم رجحان تدفق المنافع الاقتصادية المستقبلية المنسوبة للأصل إلى المنشأة، وإمكان قياس تكلفته بصورة موثوقة، فضلًا عن تحقق تعريف الأصل غير الملموس وقواعد فئته. مجرد الإنفاق أو غياب الشكل المادي لا يكفيان للاعتراف.", "It must be probable that attributable future economic benefits will flow to the entity and that its cost can be measured reliably, in addition to meeting the intangible-asset definition and applicable category rules. Expenditure or lack of physical substance alone is insufficient."),
+    ],
+    reference: "IAS 38.8, 18–23",
+  },
+  {
+    id: "ifrs-book2-ias38-ch7-quiz-development",
+    standardCode: "IAS 38",
+    title: text("شروط رسملة تكاليف التطوير", "Criteria for capitalising development expenditure"),
+    facts: text("مشروع داخلي انتقل من البحث إلى مرحلة التطوير.", "An internal project has progressed from research to development."),
+    question: text("ما الذي يجب إثباته قبل الاعتراف بإنفاق التطوير أصلًا؟", "What must be demonstrated before development expenditure is recognised as an asset?"),
+    solution: [
+      text("ستة شروط مجتمعة: الجدوى الفنية لإكمال الأصل؛ نية إكماله واستخدامه أو بيعه؛ القدرة على استخدامه أو بيعه؛ كيفية توليده منافع اقتصادية مستقبلية محتملة؛ توافر الموارد الفنية والمالية وغيرها للإكمال والاستخدام أو البيع؛ والقدرة على قياس الإنفاق المنسوب إليه بموثوقية. يُصرف البحث وما أُنفق قبل تحقق الشروط، ولا يُعاد رسملته لاحقًا لمجرد نجاح المشروع.", "All six must be demonstrated: technical feasibility to complete; intention to complete and use or sell; ability to use or sell; probable future economic benefits; adequate technical, financial and other resources; and reliable measurement of attributable expenditure. Research and expenditure incurred before the criteria are met are expensed and not reinstated merely because the project later succeeds."),
+    ],
+    reference: "IAS 38.54, 57, 65, 71",
+  },
+  {
+    id: "ifrs-book2-ias38-ch7-quiz-start-up",
+    standardCode: "IAS 38",
+    title: text("مصروفات بدء النشاط", "Start-up expenditure"),
+    facts: text("العبارة المطروحة: «يجب تحميل تكاليف بدء النشاط مصروفًا».", "The statement is: 'Start-up costs must be expensed.'"),
+    question: text("هل العبارة صحيحة في إطار IAS 38؟", "Is the statement true under IAS 38?"),
+    solution: [
+      text("صحيحة في الأصل: تكاليف تأسيس المنشأة وافتتاح مرفق أو نشاط جديد تُثبت مصروفًا عند تكبدها، ولا تصبح أصلًا غير ملموس لمجرد توقع إيراد مستقبلي. الاستثناء أن تكون تكلفة مؤهلة لأصل آخر، مثل بند عقارات وآلات ومعدات وفق IAS 16، أو دفعة مقدمة لخدمة لم تُستلم بعد؛ فلا يُعمم الحكم خارج نطاقه.", "Generally yes: incorporation, pre-opening and pre-operating expenditure is expensed as incurred and is not an intangible asset merely because future revenue is expected. A cost may instead qualify as part of another asset, for example PPE under IAS 16, or as a prepayment for services not yet received; the rule is not absolute outside its scope."),
+    ],
+    reference: "IAS 38.68–70; IAS 16.16–17",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch7-quiz-peggy-phil-goodwill",
+    standardCode: "IFRS 3",
+    title: text("حساب شهرة شراء نشاط فيل", "Goodwill in Peggy's purchase of Phil's business"),
+    facts: text("اشترت بيجي نشاط فيل مقابل 30,000. القيم العادلة المعطاة: حانة 20,000، مخزون 3,000، ومدينون 3,000. لا يذكر السؤال التزامات أو حصصًا غير مسيطرة.", "Peggy bought Phil's business for 30,000. Given fair values are a bar 20,000, inventory 3,000 and receivables 3,000. The question identifies no liabilities or non-controlling interest."),
+    question: text("كم تبلغ الشهرة وفق هذه المعطيات؟", "What is goodwill on the stated facts?"),
+    solution: [
+      text("صافي الأصول المحددة المعطاة = 20,000 + 3,000 + 3,000 = 26,000. بافتراض أن الصفقة تجميع أعمال وأن هذه كل الأصول والالتزامات ذات الصلة، الشهرة = 30,000 − 26,000 = 4,000. إذا ظهرت التزامات أو تعديلات قيمة عادلة أخرى تتغير النتيجة؛ لا نفترضها دون بيانات.", "Given identifiable net assets total 20,000 + 3,000 + 3,000 = 26,000. Assuming a business combination and that these are all relevant assets and liabilities, goodwill is 30,000 − 26,000 = 4,000. Additional liabilities or fair-value adjustments would change the result; none is supplied."),
+    ],
+    reference: "IFRS 3.10, 18, 32",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch7-quiz-goodwill-subsequent",
+    standardCode: "IFRS 3",
+    title: text("المحاسبة اللاحقة عن شهرة التجميع", "Subsequent accounting for combination goodwill"),
+    facts: text("سؤال عن الشهرة الناشئة عن تجميع أعمال بعد الاعتراف المبدئي.", "A question on goodwill arising from a business combination after initial recognition."),
+    question: text("ما المعالجة المطلوبة للشهرة بعد تاريخ الاستحواذ؟", "How is goodwill accounted for after acquisition?"),
+    solution: [
+      text("تبقى الشهرة بالتكلفة بعد طرح خسائر هبوط القيمة المتراكمة؛ لا تُطفأ دوريًا. وتُخصص للوحدات المولدة للنقد أو مجموعاتها المتوقع استفادتها من التآزر، وتُختبر سنويًا للهبوط، وكذلك عند وجود مؤشر هبوط. الخسارة المثبتة للشهرة لا تُعكس لاحقًا.", "Goodwill is carried at cost less accumulated impairment losses, not amortised. Allocate it to the cash-generating units or groups expected to benefit from synergies, test it annually and when indicators arise, and never reverse a recognised goodwill impairment."),
+    ],
+    reference: "IFRS 3.32; IAS 36.80, 90, 124",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch7-quiz-bargain-purchase",
+    standardCode: "IFRS 3",
+    title: text("مكسب الشراء بسعر منخفض", "Gain on a bargain purchase"),
+    facts: text("بعد حساب تجميع أعمال، تظهر الأصول الصافية المحددة أكبر من مجموع المقابل وعناصر حصة المالكين ذات الصلة.", "A business-combination calculation indicates identifiable net assets exceed the consideration and relevant ownership components."),
+    question: text("كيف يُعالج مكسب الشراء بسعر منخفض؟", "How is a gain on a bargain purchase accounted for?"),
+    solution: [
+      text("تُراجع المنشأة أولًا تحديد الأصول والالتزامات والحصة غير المسيطرة والمقابل وقياس كل منها؛ وإذا بقي الفرق بعد إعادة التقييم تُثبت مكسب الشراء بسعر منخفض فورًا في الربح أو الخسارة بتاريخ الاستحواذ. لا تُسجل «شهرة سالبة» مؤجلة.", "First reassess identification and measurement of acquired assets, assumed liabilities, non-controlling interest and consideration. If the excess remains, recognise the bargain-purchase gain immediately in profit or loss at the acquisition date; do not defer 'negative goodwill'."),
+    ],
+    reference: "IFRS 3.32–36",
+  },
+  {
     id: "ifrs-book2-ifrs16-ch6-quiz-definition",
     standardCode: "IFRS 16",
     title: text("متى يتضمن العقد إيجارًا؟", "When does a contract contain a lease?"),
