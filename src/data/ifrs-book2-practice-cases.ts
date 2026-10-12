@@ -15,6 +15,61 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias16-ch4-quiz-depreciation",
+    standardCode: "IAS 16",
+    title: text("تعريف الإهلاك", "Definition of depreciation"),
+    facts: text("سؤال تعريفي عن أصل مادي ذي عمر نافع محدود.", "A definition question about a tangible asset with a limited useful life."),
+    question: text("عرّف الإهلاك.", "Define depreciation."),
+    solution: [
+      text("الإهلاك هو التوزيع المنتظم للمبلغ القابل للإهلاك للأصل على مدى عمره النافع. والمبلغ القابل للإهلاك هو التكلفة، أو مبلغ بديل عنها، مطروحًا منه القيمة المتبقية. لا يمثل الإهلاك بالضرورة هبوط القيمة السوقية في كل فترة.", "Depreciation is the systematic allocation of the depreciable amount of an asset over its useful life. The depreciable amount is cost, or an amount substituted for cost, less residual value. It is not necessarily the period's decline in market value."),
+    ],
+    reference: "IAS 16.6, 50",
+  },
+  {
+    id: "ifrs-book2-ias16-ch4-quiz-production-cost",
+    standardCode: "IAS 16",
+    title: text("عناصر تكلفة أصل يُنشأ ذاتيًا", "Cost of a self-constructed asset"),
+    facts: text("يعرض السؤال أربعة عناصر: شراء المواد الخام، أتعاب المهندس المعماري، رسوم الاستيراد، وتكاليف التركيب.", "The question lists four items: raw-material purchase price, architect fees, import duties, and installation costs."),
+    question: text("أي العناصر الأربعة يمكن إدخاله في تكلفة إنتاج أصل غير متداول؟", "Which of these four items may form part of the production cost of a non-current asset?"),
+    solution: [
+      text("يمكن إدخال العناصر الأربعة متى ارتبطت مباشرة بإنشاء الأصل وتجهيزه للموقع والحالة اللازمين لتشغيله كما تنوي الإدارة: المواد المستهلكة في البناء، والأتعاب المهنية، ورسوم الاستيراد غير القابلة للاسترداد، والتركيب. لا تُرسمل مواد لم تُستخدم أو أتعاب عامة لا تخص الأصل؛ ويتوقف الرسملة عند جاهزية الأصل للاستخدام.", "All four can qualify when directly attributable to constructing the asset and bringing it to the location and condition needed for intended operation: materials consumed, professional fees, non-refundable import duties and installation. Unused materials or unrelated overhead are not capitalised; capitalisation stops when the asset is ready for use."),
+    ],
+    reference: "IAS 16.16–22",
+  },
+  {
+    id: "ifrs-book2-ifrs13-ch4-quiz-market-value",
+    standardCode: "IFRS 13",
+    title: text("القيمة السوقية والقيمة العادلة", "Market value and fair value"),
+    facts: text("العبارة المطروحة: «يمكن عادةً أخذ القيمة السوقية بوصفها قيمة عادلة».", "The statement is: 'Market value can usually be taken as fair value.'"),
+    question: text("هل العبارة صحيحة؟ وما القيد المهم عند استخدام سعر السوق؟", "Is the statement true, and what qualification matters when using a market price?"),
+    solution: [
+      text("صحيحة على نحو مشروط: السعر المعلن لأصل أو التزام مطابق في سوق نشطة يمكن للمنشأة الوصول إليها عند تاريخ القياس هو عادةً أفضل دليل، ويستخدم دون تعديل إلا في استثناءات المعيار. أما أي «قيمة سوقية» عامة أو سعر صفقة غير منتظمة فلا يكفي وحده؛ القيمة العادلة سعر خروج في معاملة منتظمة بين مشاركين في السوق في السوق الرئيسي، أو الأكثر ملاءمة عند غيابه، وفق خصائص البند المقاس.", "Conditionally true: an unadjusted quoted price for an identical item in an active market accessible at the measurement date is normally the strongest evidence, subject to the Standard's exceptions. A generic 'market value' or a disorderly transaction price is not automatically fair value. Fair value is an exit price in an orderly transaction between market participants in the principal market, or the most advantageous market if none exists, considering the item's characteristics."),
+    ],
+    reference: "IFRS 13.24, 16–19, 69, 76–80",
+  },
+  {
+    id: "ifrs-book2-ias40-ch4-quiz-cost-model",
+    standardCode: "IAS 40",
+    title: text("هل القيمة العادلة إلزامية للعقار الاستثماري؟", "Is fair value mandatory for investment property?"),
+    facts: text("العبارة المطروحة: «يجب دائمًا عرض العقار الاستثماري بالقيمة العادلة».", "The statement is: 'Investment properties must always be shown at fair value.'"),
+    question: text("هل العبارة صحيحة؟", "Is the statement true?"),
+    solution: [
+      text("لا. بعد الاعتراف الأولي تختار المنشأة سياسة القيمة العادلة أو نموذج التكلفة، وتطبق السياسة باتساق على عقاراتها الاستثمارية مع مراعاة استثناءات IAS 40. وفي نموذج التكلفة تُحدد القيمة العادلة للإفصاح وإن لم تكن هي القيمة الدفترية.", "No. After initial recognition an entity selects the fair value model or cost model as its accounting policy and applies it consistently to investment property, subject to IAS 40's exceptions. Under the cost model fair value is determined for disclosure even though carrying amount is cost-based."),
+    ],
+    reference: "IAS 40.30, 32, 35, 56, 75",
+  },
+  {
+    id: "ifrs-book2-ias40-ch4-quiz-under-construction",
+    standardCode: "IAS 40",
+    title: text("عقار تحت الإنشاء للاستثمار", "Investment property under construction"),
+    facts: text("عقار يُبنى بقصد تأجيره أو الاحتفاظ به لزيادة قيمته مستقبلًا.", "A property is being constructed for future rental income or capital appreciation."),
+    question: text("ما المعيار الذي يحكم العقار أثناء الإنشاء إذا كان استخدامه المستقبلي عقارًا استثماريًا؟", "Which Standard governs property under construction for future use as investment property?"),
+    solution: [
+      text("يدخل ضمن العقار الاستثماري في IAS 40 منذ الإنشاء إذا كان الغرض المثبت هو التأجير أو زيادة القيمة، وليس ضمن عقارات التشغيل في IAS 16 لمجرد أنه لم يكتمل. يبدأ القياس بالتكلفة، ثم تطبق سياسة القياس اللاحق المختارة؛ ويمكن أن تنطبق أحكام IAS 40 الخاصة بعدم إمكان قياس القيمة العادلة بصورة موثوقة أثناء الإنشاء.", "It is within IAS 40 while under construction when its intended use is to earn rentals or capital appreciation; incompleteness alone does not make it owner-occupied PPE under IAS 16. Initial measurement is at cost, followed by the selected subsequent-measurement policy, with IAS 40's special rules if fair value cannot yet be measured reliably during construction."),
+    ],
+    reference: "IAS 40.8(e), 20, 30, 53A–53B",
+  },
+  {
     id: "ifrs-book2-ifrs15-ch3-quiz-output-methods",
     standardCode: "IFRS 15",
     title: text("قياس التقدم بطريقة المخرجات", "Output methods for measuring progress"),
