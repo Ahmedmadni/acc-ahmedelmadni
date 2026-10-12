@@ -15,6 +15,50 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias12-ch11-quiz-current-tax",
+    standardCode: "IAS 12",
+    title: text("قياس ضريبة الدخل الحالية", "Measuring current income tax"),
+    facts: text("الخيارات الأصلية: أ) إجمالي الالتزام بما فيه المؤجل؛ ب) المتوقع دفعه أو استرداده من سلطة الضريبة؛ ج) الربح في معدل الضريبة الحالي؛ د) الربح في معدل ضريبة مستقبلي.", "The given choices are: A total liability including deferred tax; B amount expected to be paid to or recovered from tax authorities; C profit times current tax rate; D profit times future tax rate."),
+    question: text("أي أساس يقيس ضريبة الدخل الحالية؟", "Which basis measures current income tax?"),
+    solution: [
+      text("الخيار ب: يُقاس أصل أو التزام الضريبة الحالية بالمبلغ المتوقع دفعه إلى سلطة الضريبة أو استرداده منها، باستخدام قوانين ومعدلات الضريبة النافذة أو النافذة عمليًا بنهاية الفترة. لا تكفي عملية ضرب الربح المحاسبي في المعدل دون تعديل القاعدة الضريبية.", "Choice B: measure the current tax asset or liability at the amount expected to be paid to or recovered from tax authorities, using rates and laws enacted or substantively enacted by the reporting date. Simply multiplying accounting profit by a rate may ignore tax-base adjustments."),
+    ],
+    reference: "IAS 12.12, 46",
+  },
+  {
+    id: "ifrs-book2-ias12-ch11-quiz-taxable-difference",
+    standardCode: "IAS 12",
+    title: text("الفروق المؤقتة الخاضعة للضريبة", "Taxable temporary differences"),
+    facts: text("العبارة المطروحة: «الفارق المؤقت الخاضع للضريبة ينتج عنه التزام ضريبة مؤجلة».", "The statement is: 'A taxable temporary difference gives rise to a deferred tax liability.'"),
+    question: text("هل العبارة صحيحة؟", "Is the statement true?"),
+    solution: [
+      text("صحيحة كقاعدة عامة: الفارق المؤقت الخاضع للضريبة يؤدي إلى التزام ضريبة مؤجلة عند استرداد الأصل أو تسوية الالتزام. لكن IAS 12 يتضمن استثناءات محددة، ومنها بعض فروق الاعتراف الأولي بالشّهرة وبعض فروق الاستثمار في شركات تابعة عند تحقق شروط التحكم في توقيت الانعكاس وعدم توقعه قريبًا؛ فلا تُطبق العبارة بلا استثناء.", "Generally true: a taxable temporary difference ordinarily produces a deferred tax liability as the asset is recovered or liability settled. IAS 12 has specific exceptions, including certain initial-goodwill differences and some investment outside-basis differences when reversal timing is controlled and reversal is not expected in the foreseeable future. It is not an exception-free rule."),
+    ],
+    reference: "IAS 12.5, 15, 39",
+  },
+  {
+    id: "ifrs-book2-ias12-ch11-quiz-investment-differences",
+    standardCode: "IAS 12",
+    title: text("الفروق المؤقتة لاستثمارات الشركات", "Temporary differences on investments"),
+    facts: text("استثمار في شركة تابعة أو زميلة أو ترتيب مشترك له مبلغ دفتري وأساس ضريبي.", "An investment in a subsidiary, associate or joint arrangement has a carrying amount and tax base."),
+    question: text("كيف تنشأ فروق مؤقتة مرتبطة بهذا الاستثمار؟", "How do temporary differences arise on that investment?"),
+    solution: [
+      text("تنشأ عندما يختلف المبلغ الدفتري للاستثمار أو حصة المستثمر في صافي الأصول عن أساسه الضريبي، مثل أثر الأرباح غير الموزعة أو فروق العملة أو هبوط قيمة الاستثمار. يُختبر بعد ذلك حكم الاعتراف بضريبة مؤجلة والاستثناءات الخاصة بفروق الاستثمار، بدل افتراض أن كل فرق يُثبت فورًا.", "They arise when the carrying amount of the investment or investor's share of net assets differs from its tax base, for example from undistributed profits, currency changes or an impairment. Then apply the deferred-tax recognition criteria and investment-specific exceptions rather than assuming every difference is immediately recognised."),
+    ],
+    reference: "IAS 12.38–45",
+  },
+  {
+    id: "ifrs-book2-ias12-ch11-quiz-examples",
+    standardCode: "IAS 12",
+    title: text("أمثلة للفروق المؤقتة", "Examples of temporary differences"),
+    facts: text("السؤال يطلب ثلاثة أمثلة من اختلاف القيمة الدفترية والأساس الضريبي.", "The question asks for three examples of carrying amount differing from tax base."),
+    question: text("اذكر ثلاثة أمثلة لفروق مؤقتة.", "Give three examples of temporary differences."),
+    solution: [
+      text("1) إهلاك ضريبي معجل يجعل الأساس الضريبي لأصل أقل من قيمته الدفترية؛ 2) تكلفة تطوير رُسملت محاسبيًا وخُصمت ضريبيًا عند تكبدها؛ 3) إيراد فوائد أُثبت محاسبيًا قبل تحصيله ويُفرض عليه الضريبة عند التحصيل. الأمثلة الثانية والثالثة مشروطة بالقانون الضريبي المنطبق؛ مجرد تأخر التحصيل لا يخلق فرقًا إذا كانت الضريبة على أساس الاستحقاق أيضًا.", "1) Accelerated tax depreciation leaving an asset's tax base below its carrying amount; 2) development expenditure capitalised for accounting but deducted immediately for tax; 3) interest revenue accrued in accounts but taxed only on receipt. The second and third depend on the applicable tax law: delayed cash collection alone does not create a difference if taxation is also accrual-based."),
+    ],
+    reference: "IAS 12.5, 17–20, 26",
+  },
+  {
     id: "ifrs-book2-ifrs9-ch10-quiz-subsequent-assets",
     standardCode: "IFRS 9",
     title: text("قياس الأصول المالية لاحقًا", "Subsequent measurement of financial assets"),
