@@ -2053,6 +2053,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         reference: "IAS 33.21–24, 52–57, 64, 70(d), A15–A16",
       },
     ],
+      {
+        title: text("من الرقم إلى الإفصاح: كيف يقرأ المستثمر ربحية السهم؟", "From calculation to disclosure: reading earnings per share"),
+        explanation: text(
+          "بعد حساب الربحية الأساسية والمخفضة، لا يكفي عرض رقمين بلا تفسير. تعرض المنشأة الربحية لكل منهما بالقدر نفسه من الأهمية، وذلك للربح أو الخسارة العائدة لحملة أسهم الأم العادية وللعمليات المستمرة العائدة لهم. إذا كانت لديها عملية متوقفة، تعرض نصيب السهم الأساسي والمخفض منها في قائمة الأداء أو الإيضاحات. وفي الإيضاحات تصالح بسط كل حساب مع الربح أو الخسارة، ثم تصالح المتوسط المرجح للأسهم في الأساسية مع مقام المخفضة؛ هكذا يرى القارئ أثر توزيعات الأسهم الممتازة والفائدة بعد الضريبة والأسهم المحتملة، بدلاً من الاكتفاء برقم نهائي. وتصف الأدوات المستبعدة لأنها مضادة للتخفيف هذا العام رغم احتمال تخفيفها لاحقًا، ومعاملات الأسهم اللاحقة للفترة التي كان يمكن أن تغيّر الربحية تغييرًا مهمًا لو وقعت قبل نهايتها. الإفصاح ليس قيدًا محاسبيًا جديدًا؛ إنه جسر قابل للتتبع بين الربح وعدد الأسهم والرقم المعروض للسهم.",
+          "Basic and diluted EPS need more than two unexplained figures. Present them with equal prominence for profit or loss attributable to the parent's ordinary shareholders and for continuing operations attributable to them. If there is a discontinued operation, present its basic and diluted per-share amounts in the performance statement or notes. In the notes, reconcile each numerator to profit or loss and the basic weighted-average share denominator to the diluted denominator. This makes the effects of preference dividends, after-tax interest and potential shares visible instead of hiding them in a final number. Describe instruments excluded as antidilutive this year that could dilute EPS later, and post-period ordinary-share transactions that would have significantly changed EPS had they occurred before period-end. The disclosure is not a new journal entry; it is a traceable bridge from profit and share counts to each reported per-share amount.",
+        ),
+        keyPoints: [
+          text("جهز جدولًا للبسط: ربح مساهمي الأم العاديين، ثم تعديلات الأدوات المخفِّضة بعد الضريبة؛ لا تخلط بين ربح المجموعة وربح حملة أسهم الأم.", "Build a numerator bridge from profit attributable to the parent's ordinary shareholders to after-tax dilutive-instrument adjustments; do not confuse group profit with profit attributable to the parent's ordinary shareholders."),
+          text("جهز جدولًا للمقام: المتوسط المرجح للأسهم القائمة، ثم الزيادة من كل فئة أدوات مخفِّضة؛ اشرح ما استُبعد لأنه مضاد للتخفيف.", "Build a denominator bridge from weighted-average outstanding shares to each class of dilutive potential shares, explaining instruments excluded as antidilutive."),
+          text("اعرض نصيب السهم من العملية المتوقفة منفصلًا إذا وجدت، وميز معاملات الأسهم اللاحقة التي تتطلب إفصاحًا عن إعادة حساب المنح والتجزئات بأثر رجعي.", "Show per-share amounts for discontinued operations separately when applicable, and distinguish subsequent share transactions requiring disclosure from bonus issues and splits that require retrospective recalculation."),
+        ],
+        reference: "IAS 33.66–70, 71",
+      },
     workedExamples: [
       {
         title: text("إصدار حقوق بنسبة سهم لكل خمسة", "One-for-five rights issue"),
