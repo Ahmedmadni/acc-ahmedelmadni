@@ -15,6 +15,26 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ias8-kelshall-policy-incentive",
+    standardCode: "IAS 8",
+    title: text("تغيير نموذج قياس العقارات تحت ضغط الحوافز", "Changing a property measurement model under incentive pressure"),
+    facts: text(
+      "في شركة Kelshall المدرجة، نهاية السنة 31 ديسمبر 20X5. تقيس الشركة فئة عقارات تشغلها بنفسها بنموذج إعادة التقييم. تراجعت أسعار العقارات، واقترح المدير المالي التحول إلى نموذج التكلفة. ترتبط مكافأته بالربح ولديه خيارات أسهم. تحدث الرئيس التنفيذي، الذي يملك خيارات كثيرة ويعتزم التقاعد خلال العام التالي، عن رغبته في رفع سعر السهم قبل تقاعده. لا يذكر السؤال فروق القيم أو رصيد فائض إعادة التقييم أو سببًا مدعومًا لتحسين ملاءمة المعلومات.",
+      "Listed Kelshall has a 31 December 20X5 year-end and measures its class of owner-occupied properties using the revaluation model. Property prices have fallen and the finance director proposes switching to the cost model. Their remuneration includes a profit-related bonus and share options. The CEO, who holds many options and expects to retire within a year, speaks of wanting to raise the share price before retirement. No valuation difference, revaluation-surplus balance or evidence of improved information relevance is given."
+    ),
+    question: text(
+      "هل يجوز تغيير نموذج القياس في هذه الظروف؟ وكيف يُقيّم المدير المالي ضغط الحوافز وتصرف الرئيس التنفيذي؟",
+      "May the measurement model be changed in these circumstances, and how should the finance director assess the incentive pressure and the CEO's conduct?"
+    ),
+    solution: [
+      text("لا يكفي انخفاض الأسعار أو رغبة الإدارة في نتيجة ربحية معينة لتغيير سياسة محاسبية اختيارياً. يشترط IAS 8.14 أن يفرض معيار التغيير أو أن ينتج عنه معلومات موثوقة وأكثر ملاءمة؛ ويجب توثيق هذا الأساس على الوقائع. يسمح IAS 16.29 بالاختيار بين التكلفة وإعادة التقييم لفئة كاملة من الممتلكات والآلات والمعدات، لا لعقار متراجع وحده.",
+        "Falling prices or a preferred profit outcome alone do not justify a voluntary policy change. IAS 8.14 requires a Standard to mandate it or the change to yield reliable and more relevant information, supported by the facts. IAS 16.29 permits a cost or revaluation policy for an entire class of property, plant and equipment, not just a single declining property."),
+      text("لا يمكن الجزم بأن التحول سيزيد الربح: تخفيض القيمة تحت نموذج إعادة التقييم يعترف به في الربح أو الخسارة إلا بقدر ما يقابل فائض إعادة تقييم لنفس الأصل في الدخل الشامل الآخر؛ ونموذج التكلفة لا يلغي اختبار الانخفاض. لا تتوافر مبالغ كافية لقيد أو أثر عددي. ينبغي للمدير المالي طلب تقييم مستقل ومراجعة مبرر التغيير ورفع تعارض المصالح إلى الحوكمة الملائمة؛ ولا تثبت نية التلاعب من تعليق الرئيس التنفيذي وحده، لكن ضغط الحوافز يستلزم يقظة وتوثيقًا.",
+        "The switch cannot be assumed to increase profit. A revaluation decrease is recognised in profit or loss except to the extent of a revaluation surplus for that asset in other comprehensive income; the cost model does not remove impairment requirements. No numerical entry is determinable here. The finance director should obtain an objective valuation, document the rationale and escalate conflicts to appropriate governance. The CEO's comment alone does not prove manipulation, but the incentive pressure calls for scrutiny and documentation.")
+    ],
+    reference: "IAS 8.14–15; IAS 16.29–31, 40; IAS 36.9",
+  },
+  {
     id: "ifrs-book2-ifrs10-alpha-beta-gamma-full-consolidation",
     standardCode: "IFRS 10",
     title: text("Alpha وBeta وGamma: مركز مالي موحد مع زميلة", "Alpha, Beta and Gamma: consolidated position with an associate"),
