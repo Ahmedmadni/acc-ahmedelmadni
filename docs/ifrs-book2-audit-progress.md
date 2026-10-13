@@ -26,12 +26,12 @@ The scanned question-bank prompts on PDF pp. 506–525 contain Q1–Q29. On Octo
 
 | Bank items | Status in standard library |
 | --- | --- |
-| Q1 IFRS Foundation governance; Q2 sustainability disclosure; Q3–Q4 Conceptual Framework | Not members of the 43 accounting-standard pages. Need separate placement/exclusion review. |
+| Q1 IFRS Foundation governance; Q2 sustainability disclosure; Q3–Q4 Conceptual Framework | Not members of the 43 accounting-standard pages. Separate companion modules already present; verify each prompt and answer against those modules. |
 | Q5 Jenson; Q6 Gains; Q7 Lis; Q8 Eastway; Q9 Biogenics; Q10 Extract; Q11 Jerzy; Q12 PQR; Q13 Sirus; Q14 DT Group; Q15 Courtney; Q16 biological assets; Q17 Vident; Q18 Polymer; Q19 Hewlett; Q20 Pilum; Q21 Ace | Mapped to existing open practice cases, often split across standards. Conditional answers remain conditional where source facts are insufficient. |
 | Q22 IFRS for SMEs | Separate standard, not one of the 43; verify current SME edition/effective date before any dedicated placement. |
 | Q23 Barcelona/Madrid; Q24 Reprise/Encore; Q25 Alpha Group; Q26 Fallowfield/Rusholme; Q27 Panther Group; Q28 Hever; Q29 Smith Group | Mapped to open practice cases. Q25 now also has a full corrected consolidated statement in PR #202. |
 
-The inventory above confirms **prompt presence**, not final line-by-line validation of every solution. The answer-bank pages 528–566 still require a comprehensive image-by-image audit, including reconciliation with cases on the site. The prior targeted checks of Q25's printed answer used PDF pp. 558–560.
+The inventory above confirms prompt presence; the answer-bank comparison below records the subsequent visual and technical review. Earlier worked examples and commentary remain separately in scope.
 
 ## Answer-bank image audit: PDF pp. 528–566
 
@@ -39,7 +39,7 @@ This register records the **answer** pages, not a claim that every earlier lesso
 
 | Answer pages | Questions | Publication and technical disposition |
 | --- | --- | --- |
-| 528–531 | Q1–Q4 | Foundation governance, IFRS S2 sustainability and Conceptual Framework material. Outside the 43 accounting-standard pages; retain for a separately scoped foundations/sustainability area after verification, not mislabelled as IAS/IFRS accounting-standard questions. |
+| 528–531 | Q1–Q4 | Foundation governance, IFRS S2 sustainability and Conceptual Framework material. Outside the 43 accounting-standard pages; separate companion modules exist and require a prompt-by-prompt reconciliation, not mislabelling as accounting-standard questions. |
 | 531–532 | Q5 Jenson, Q6 Gains | IFRS 15 cases separate repurchase, franchise and subscriptions; the franchise revenue split is **not** determinable from receipts without distinctness and stand-alone-price analysis. Gains is conditional on whether the 25 impairment and disposal gain are included in stated profit; both branches are shown rather than copying one unexplained total. |
 | 532–534 | Q7 Lis, Q8 Eastway | IFRS 16 numerical lease schedule and identified-asset/control test match the published cases. Lis: ROU 84,006 initially, 67,205 closing; liability 73,784 split 18,420 current and 55,364 non-current, subject to rounding. |
 | 534–537 | Q9 Biogenics, Q10 Extract, Q11 Jerzy | IAS 38/IAS 16, IAS 37/IAS 12 and IAS 19 cases correct the answer-book overreach. Q9 lacks a pre/post-capitalisation spending split; Q10 needs a virtually certain law *as drafted* and asset-versus-inventory analysis; Q11's alternative actuarial-gain-in-P&L language and balancing 24m are not adopted under current IAS 19. |
@@ -56,8 +56,14 @@ The inventory establishes that accounting-standard bank prompts Q5–Q21 and Q23
 ## Remaining work before completion
 
 1. Build a page-level register for the full 582-page PDF. Mark each substantive worked example, end-of-chapter question, quick quiz, bank question and answer as: published and independently verified; incorporated into an existing case; corrected with rationale; or excluded with reason. Record chapter and PDF page.
-2. Reconcile bank answers pp. 528–566 against the mapped cases, visually verify all amounts and options, recalculate the entries, and correct any proven error. Do not invent MCQ options, numeric assumptions or definitive answers where the source is indeterminate.
+2. Recheck unresolved or conditional bank answers against current official standards and complete the prompt-by-prompt reconciliation for the separate companion modules. Do not invent MCQ options, numeric assumptions or definitive answers where the source is indeterminate.
 3. Re-audit worked examples and technical commentary throughout the earlier chapters, not just the quick quizzes and bank prompts; verify classification to the correct standard and split cross-standard examples.
 4. Revisit conditional cases, especially Gains' $25,000 impairment in reported profit, Biogenics' pre-/post-recognition development spend, PQR's hedge-designation and NRV facts, and Panther's undated intragroup inventory transfers. Keep uncertainty explicit unless evidence resolves it.
 5. Run content/coverage, TypeScript and build checks for each small PR, verify GitHub CI and mergeability, then merge. Do not delete or move source/user files.
 
+
+## Chapter 1 worked-example audit (PDF pp. 35–37)
+
+- The Kelshall owner-occupied property scenario and its two requirements were checked against the page 36–37 images. It is primarily an IAS 8 policy-change and IAS 16 measurement-model judgment, with a governance/ethics dimension outside the 43 accounting standards. The published open case `ifrs-book2-ias8-kelshall-policy-incentive` preserves that two-part form and does not invent numerical facts or an MCQ.
+- The source solution speculates that switching to cost may improve profit, but the effect depends on the existing revaluation surplus and any IAS 36 impairment. The published answer therefore makes no unsupported numerical or directional claim, notes IAS 16's class-wide policy requirement, and treats the CEO's comment as a risk signal rather than proof of misconduct. Official requirements checked: IAS 8.14–15; IAS 16.29–31, 40; IAS 36.9.
+- Chapter 1's broader institutional, sustainability and ethical commentary must be reconciled with the existing companion modules, not forced into one accounting-standard page. Earlier chapter-1 examples and the chapter-2 Framework discussion remain open in the full page-level register.
