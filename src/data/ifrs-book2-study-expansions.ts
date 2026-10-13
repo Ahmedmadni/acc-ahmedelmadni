@@ -260,6 +260,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 16.16–17, 48–49, 55, 58, 60–61; IAS 2.12–13; IFRS 16.22–28",
       },
+      {
+        title: text("تغيّر تقدير العمر وإهلاك المكونات", "Useful-life changes and component depreciation"),
+        explanation: text(
+          "راجع العمر الإنتاجي والقيمة المتبقية وطريقة الإهلاك سنويًا على الأقل. عند تغيّر التقدير، وزّع القيمة الدفترية المتبقية على العمر أو وحدات الاستخدام المتبقية بأثر مستقبلي، ولا تُعد إهلاك السنوات الماضية. أهلك كل جزء جوهري من الأصل المركب بحسب نمط منافعه. تُرسمل تكلفة الفحص الرئيسي عند تنفيذه إذا تحققت شروط الاعتراف، مع إلغاء الرصيد المتبقي لفحص سابق؛ لا تُرسمل تكلفة فحص مستقبلي.",
+          "Review useful life, residual value and depreciation method at least annually. Allocate remaining carrying amount over revised remaining life or use prospectively; do not restate past depreciation. Depreciate each significant part in line with its benefit pattern. Capitalise a major inspection when performed if recognition criteria are met, derecognising any remaining previous-inspection component; do not capitalise a future inspection.",
+        ),
+        keyPoints: [
+          text("تعديل العمر أو الطريقة تغيير في التقدير يطبق على الحاضر والمستقبل.", "A useful-life or method change is an estimate change applied currently and prospectively."),
+          text("للمكونات الجوهرية أعمار أو وحدات استخدام مستقلة.", "Significant components have separate lives or units of use."),
+          text("رسملة الفحص مشروطة بوقوعه وإلغاء رصيد الفحص السابق.", "Inspection capitalisation depends on performance and removal of any prior-inspection balance."),
+        ],
+        reference: "IAS 16.14, 43–44, 50–51, 60–62; IAS 8.36–38",
+      },
     ],
     workedExamples: [
       {
@@ -356,6 +369,34 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           },
         ],
         reference: "IAS 16.31, 35–40, 58, 60–62",
+      },
+      {
+        title: text("طائرة: إهلاك المكونات والفحص الرئيسي", "Aircraft: components and major inspection"),
+        facts: text(
+          "بدن طائرة بتكلفة 20 مليون دولار وعمر 20 سنة؛ معدات هبوط 5 ملايين لكل 500 هبوط؛ محركات 8 ملايين لكل 1,600 ساعة طيران. السنة الأولى 150 رحلة و400 ساعة. يُجرى فحص رئيسي بقيمة 1.2 مليون في نهاية السنة الثالثة وكل ثلاث سنوات بعدها.",
+          "Fuselage costs $20m over 20 years; undercarriage $5m over 500 landings; engines $8m over 1,600 flying hours. Year 1 has 150 flights and 400 hours. A $1.2m major overhaul is performed at the end of year 3 and every three years thereafter.",
+        ),
+        calculations: [
+          text("إهلاك البدن 20 ÷ 20 = مليون دولار؛ الهبوط 5 × 150 ÷ 500 = 1.5 مليون بافتراض هبوط لكل رحلة؛ المحركات 8 × 400 ÷ 1,600 = 2 مليون؛ المجموع للسنة الأولى 4.5 مليون.", "Fuselage $20m ÷ 20 = $1m; undercarriage $5m × 150 ÷ 500 = $1.5m assuming one landing per flight; engines $8m × 400 ÷ 1,600 = $2m; year-1 total $4.5m."),
+          text("بعد إنجاز فحص 1.2 مليون بنهاية السنة الثالثة، يكون إهلاكه على السنوات الثلاث التالية 1.2 ÷ 3 = 0.4 مليون سنويًا؛ يُلغى أي جزء غير مستهلك من الفحص السابق.", "After the $1.2m inspection is completed at end of year 3, depreciate it over the next three years: $1.2m ÷ 3 = $0.4m annually; derecognise any undepreciated previous-inspection component."),
+          text("إذا بقي استعمال الأجزاء الأخرى مساويًا للسنة الأولى، يكون المجموع المقارن بعد الفحص 4.5 + 0.4 = 4.9 ملايين؛ لا يُعدّ هذا إهلاك السنة الأولى.", "If use of the other parts matches year 1, comparative depreciation after the overhaul is $4.5m + $0.4m = $4.9m; this is not year-1 depreciation."),
+        ],
+        conclusion: text("افصل الأجزاء الجوهرية ولا ترسمل الفحص قبل حدوثه؛ عدد الرحلات يساوي الهبوط فقط وفق افتراض المثال.", "Separate significant components and do not capitalise an overhaul before it occurs; flights equal landings only under this example's assumption."),
+        journalEntries: [
+          {
+            label: text("إهلاك السنة الأولى", "First-year depreciation"),
+            debit: text("مصروف الإهلاك: البدن 1 مليون + الهبوط 1.5 مليون + المحركات 2 مليون", "Depreciation expense: fuselage $1m + undercarriage $1.5m + engines $2m"),
+            credit: text("مجمع إهلاك المكونات", "Accumulated component depreciation"),
+            amount: text("4.5 ملايين دولار", "$4.5m"),
+          },
+          {
+            label: text("رسملة الفحص عند إنجازه", "Capitalise inspection when completed"),
+            debit: text("مكوّن الفحص الرئيسي", "Major-inspection component"),
+            credit: text("نقدية أو دائنون", "Cash or payables"),
+            amount: text("1.2 مليون دولار", "$1.2m"),
+          },
+        ],
+        reference: "IAS 16.7, 14, 43–44, 50, 55, 60–62",
       },
     ],
   },
