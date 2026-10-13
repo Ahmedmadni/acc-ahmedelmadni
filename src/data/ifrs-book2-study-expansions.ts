@@ -2175,6 +2175,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 15": {
     sections: [
       {
+        title: text("حدود IFRS 15 الحالية: النطاق، السعر، ومخاطر الائتمان", "Current IFRS 15 boundaries: scope, price and credit risk"),
+        explanation: text(
+          "ابدأ بتحديد ما إذا كان العقد عقدًا مع عميل يقع ضمن IFRS 15. الإيجارات الخاضعة لـIFRS 16، وعقود التأمين الخاضعة لـIFRS 17، والأدوات والحقوق المالية الخاضعة لمعاييرها لا تُنقل تلقائيًا إلى نموذج الإيراد. لبعض عقود الخدمة برسوم ثابتة التي تستوفي شروط IFRS 17 خيار سياسة بينه وبين IFRS 15؛ افحص الشروط قبل الحكم. إذا انطبق IFRS 15، تحقق من الموافقة والالتزام والحقوق وشروط الدفع والجوهر التجاري وإمكان تحصيل المقابل. يُقدّر سعر المعاملة بعد المقابل المتغير والتنازلات السعرية ومكون التمويل المهم عند انطباقها، لكنه لا يُخفض آليًا بمخصص تعثر العميل: قيّم خسائر الائتمان المتوقعة للذمم وأصول العقود وفق IFRS 9 بعد تحديد قيمها الإجمالية.",
+          "First determine whether the customer contract falls within IFRS 15. Leases in IFRS 16, insurance contracts in IFRS 17 and financial instruments or rights within their own Standards do not automatically enter the revenue model. Certain fixed-fee service contracts meeting IFRS 17 conditions permit an accounting-policy choice between IFRS 17 and IFRS 15; check those conditions. If IFRS 15 applies, assess approval and commitment, identifiable rights and payment terms, commercial substance and probable collection. Estimate the transaction price for variable consideration, price concessions and any significant financing component when relevant, but do not automatically deduct a customer-default allowance from revenue: assess expected credit losses on receivables and contract assets under IFRS 9 after determining their gross amounts.",
+        ),
+        keyPoints: [
+          text("لا تستخدم إحالة IFRS 4 القديمة لعقود التأمين؛ حلّ IFRS 17 محله.", "Do not rely on the obsolete IFRS 4 insurance reference; IFRS 17 replaced it."),
+          text("افصل تنازل السعر الحقيقي، الذي يغير المقابل، عن خسارة الائتمان المتوقعة على حق ثابت.", "Distinguish a genuine price concession that changes consideration from an expected credit loss on a fixed right."),
+          text("العقد المكتوب والشفهي والضمني قد ينطبق عليه النموذج؛ شكل العقد ليس شرطًا سادسًا مستقلًا عن شروط IFRS 15.9.", "Written, oral and implied contracts can qualify; contract form is not a sixth criterion separate from IFRS 15.9."),
+        ],
+        reference: "IFRS 15.5, 9–10, 47–59, 105–108; IFRS 17.8; IFRS 9.5.5",
+      },
+      {
         title: text("الشهادات والفواتير لا تحسم طبيعة الحق في المقابل", "Certificates and invoices do not determine the nature of the right"),
         explanation: text(
           "عند البناء على مدى الزمن، ابدأ بالتحقق من أحد معايير IFRS 15.35 ثم اختر مقياس تقدم يعكس ما نُقل للعميل. شهادة العمل قد تكون دليلًا على قيمة المخرجات لكنها لا تثبت تلقائيًا حقًا نافذًا في الدفع عن الأداء طوال العقد، خصوصًا عند إنهاء العميل. بعد الاعتراف بالإيراد، اسأل سؤالًا منفصلًا عن العرض: هل أصبح الحق في المقابل غير مشروط إلا بمرور الوقت؟ إذا نعم فهو ذمة مدينة، حتى قبل إصدار الفاتورة؛ وإلا فهو أصل عقد ما دام الأداء سبق الدفع أو استحقاقه. التحصيل أو الفوترة ليسا مقياس الإيراد.",
