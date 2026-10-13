@@ -1604,6 +1604,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 20.7, 12, 24–27",
       },
+      {
+        title: text("التأكد المعقول والعرض ورد المنحة", "Reasonable assurance, presentation and repayment"),
+        explanation: text(
+          "لا تعترف بالمنحة الحكومية لمجرد قبض النقد؛ يلزم تأكيد معقول باستيفاء الشروط وتلقيها. اعترف بمنحة الدخل بصورة منهجية في الفترات التي تتحمل فيها المصروفات المرتبطة، كدخل مستقل أو تخفيض للمصروف ذي الصلة. واعرض منحة الأصل إما دخلًا مؤجلًا أو خصمًا من القيمة الدفترية للأصل، دون جمع الطريقتين. إذا أصبحت المنحة واجبة الرد، عالجها كتغير في تقدير محاسبي: استخدم الرصيد المؤجل أولًا لمنحة الدخل، وحمّل الفائض على الربح أو الخسارة؛ ولمنحة الأصل عدّل قيمة الأصل أو رصيد الدخل المؤجل وأثبت فورًا الإهلاك الإضافي التراكمي اللازم عند طريقة الخصم، ثم افحص انخفاض القيمة عند الاقتضاء.",
+          "Cash receipt alone does not establish a government grant: reasonable assurance of compliance and receipt is required. Recognise income-related grants systematically over the periods bearing the related costs, either as separate income or a reduction of related expense. Present an asset-related grant as deferred income or deduct it from the asset's carrying amount, never both. If a grant becomes repayable, treat it as an estimate change: apply any unamortised income-grant credit first and expense any excess; for an asset grant adjust asset carrying amount or deferred income, immediately recognise any cumulative extra depreciation required by the deduction method, and assess impairment where relevant.",
+        ),
+        keyPoints: [
+          text("قبض المنحة لا يثبت بذاته الوفاء بالشروط.", "Receipt alone does not prove compliance with conditions."),
+          text("عرض منحة الأصل بطريقتين بديلتين لا متزامنتين.", "Asset-grant presentations are alternatives, not simultaneous entries."),
+          text("رد المنحة قد يوجب إهلاكًا إضافيًا فوريًا واختبار انخفاض قيمة.", "Repayment can require immediate catch-up depreciation and an impairment assessment."),
+        ],
+        reference: "IAS 20.7, 12, 24–29, 32",
+      },
     ],
     workedExamples: [
       {
@@ -1663,6 +1676,43 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           },
         ],
         reference: "IAS 20.7, 12, 24–27; IAS 16.50–62",
+      },
+      {
+        title: text("منحة آلة بنسبة 20%: طريقتا العرض والنتيجة نفسها", "20% machinery grant: two presentations, same profit"),
+        facts: text(
+          "آلة تكلفتها 100,000 دولار وعمرها أربع سنوات بلا قيمة متبقية؛ حصلت الشركة على منحة حكومية تعادل 20% من التكلفة، أي 20,000. الربح قبل إهلاك الآلة والمنحة 50,000 كل سنة. افترض تحقق شروط الاعتراف، وإهلاك الآلة بالقسط الثابت.",
+          "A machine costs $100,000, lasts four years and has nil residual value. The entity receives a government grant of 20% of cost, or $20,000. Annual profit before machine depreciation and grant is $50,000. Assume the grant recognition conditions are met and straight-line depreciation.",
+        ),
+        calculations: [
+          text("عند خصم المنحة من قيمة الأصل: الأساس 100,000 − 20,000 = 80,000؛ الإهلاك السنوي 20,000؛ الربح السنوي 50,000 − 20,000 = 30,000. القيم الدفترية بنهاية السنوات 1–4: 60,000 ثم 40,000 ثم 20,000 ثم صفر.", "Deduction method: asset base $100,000 − $20,000 = $80,000; annual depreciation $20,000; annual profit $50,000 − $20,000 = $30,000. Year-end carrying amounts for years 1–4 are $60,000, $40,000, $20,000 and nil."),
+          text("عند إثبات دخل مؤجل: إهلاك الأصل الإجمالي 100,000 ÷ 4 = 25,000 سنويًا؛ تحرير المنحة 20,000 ÷ 4 = 5,000 سنويًا؛ الربح 50,000 − 25,000 + 5,000 = 30,000. القيم الدفترية للأصل 75,000/50,000/25,000/صفر، وأرصدة الدخل المؤجل المقابلة 15,000/10,000/5,000/صفر.", "Deferred-income method: gross depreciation $100,000 ÷ 4 = $25,000 a year; release $20,000 ÷ 4 = $5,000 a year; profit $50,000 − $25,000 + $5,000 = $30,000. Asset carrying amounts are $75,000/$50,000/$25,000/nil and corresponding deferred-income balances $15,000/$10,000/$5,000/nil."),
+          text("مجموع الأرباح عبر السنوات الأربع 120,000 في الطريقتين، لكن عرض الأصل والالتزام المؤجل يختلف؛ لا تسجل إيراد 5,000 مع أساس أصل مخفّض 80,000 لأن ذلك يكرر أثر المنحة.", "Total four-year profit is $120,000 under either method, but asset and deferred-income presentation differ. Do not add $5,000 grant income to an already reduced $80,000 asset base, which would double-count the grant."),
+        ],
+        conclusion: text(
+          "طريقتا IAS 20.24 بديلتان في العرض مع الأثر الصافي نفسه على ربح المثال. قبل التطبيق العملي تحقق من الشروط، وتقييم الضريبة، وأي تغير لاحق أو التزام برد المنحة.",
+          "IAS 20.24 permits alternative presentations with the same net profit in this fact pattern. In practice, verify conditions, tax effects, later changes and any repayment obligation.",
+        ),
+        journalEntries: [
+          {
+            label: text("الطريقة الأولى: منحة تخصم من تكلفة الآلة", "Deduction method: grant reduces asset base"),
+            debit: text("نقدية", "Cash"),
+            credit: text("أصل الآلة", "Machinery asset"),
+            amount: text("20,000", "20,000"),
+          },
+          {
+            label: text("الطريقة الثانية: تسجيل المنحة كدخل مؤجل", "Deferred-income method: initial grant"),
+            debit: text("نقدية", "Cash"),
+            credit: text("دخل منحة مؤجل", "Deferred grant income"),
+            amount: text("20,000", "20,000"),
+          },
+          {
+            label: text("الطريقة الثانية: تحرير المنحة سنويًا", "Deferred-income method: annual release"),
+            debit: text("دخل منحة مؤجل", "Deferred grant income"),
+            credit: text("إيراد منحة", "Grant income"),
+            amount: text("5,000 سنويًا", "5,000 each year"),
+          },
+        ],
+        reference: "IAS 20.7, 12, 24–27; IAS 16.50–55",
       },
     ],
   },
