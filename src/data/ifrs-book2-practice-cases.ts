@@ -15,6 +15,17 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-ch21-quiz-major-minor",
+    standardCode: "IFRS 10",
+    title: text("Major وMinor: تغير الربح غير المحقق", "Major and Minor: change in unrealised profit"),
+    facts: text("تمتلك Major نسبة 80% من Minor التي تبيع لها بسعر التكلفة مضافًا إليه 33.33%. بضاعة من هذه المبيعات في مخزون Major بلغت 12,000 بنهاية 20X8 و15,000 بنهاية 20X9. أُهملت الضريبة. الخيارات: أ) مدين 1,000؛ ب) دائن 800؛ ج) دائن 750؛ د) مدين 600.", "Major owns 80% of Minor, which sells goods to Major at cost plus 33.33%. Goods from those sales in Major's inventory were 12,000 at 20X8 year-end and 15,000 at 20X9 year-end. Ignore tax. Options: A 1,000 debit; B 800 credit; C 750 credit; D 600 debit."),
+    question: text("بكم يُعدل ربح المجموعة العائد لمساهمي Major بسبب تغير المخزون غير المحقق؟", "By how much is consolidated profit attributable to Major shareholders adjusted for the change in unrealised inventory profit?"),
+    solution: [
+      text("الخيار د: مدين 600 تقريبًا. نسبة الربح إلى سعر التحويل = 33.33 ÷ 133.33 ≈ 25%. ربح المخزون الافتتاحي غير المحقق ≈ 12,000 × 25% = 3,000 ويُعكس؛ وربح الختامي ≈ 15,000 × 25% = 3,750 ويُلغى. صافي تخفيض ربح المجموعة = 750، وحصة ملاك الأم 80% × 750 = 600؛ وحصة غير المسيطرين 150. الفروق الصغيرة المحتملة من تقريب 33.33% لا تغير الاختيار.", "Choice D: approximately 600 debit. Profit as a share of transfer price = 33.33 / 133.33 ≈ 25%. Opening unrealised profit ≈ 12,000 × 25% = 3,000 reverses; closing unrealised profit ≈ 15,000 × 25% = 3,750 is eliminated. Net group-profit reduction is 750; parent owners bear 80% × 750 = 600 and NCI bears 150. Minor rounding from the stated 33.33% does not change the choice."),
+    ],
+    reference: "IFRS 10.B86(c), B94",
+  },
+  {
     id: "ifrs-book2-ifrs10-ch20-quiz-subsidiary",
     standardCode: "IFRS 10",
     title: text("تعريف الشركة التابعة", "Subsidiary definition"),
