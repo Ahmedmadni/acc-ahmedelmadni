@@ -5184,6 +5184,91 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 16.50–51, 60–62",
   },
 
+  {
+    id: "ifrs-book2-ias16-carrying-amount-versus-market",
+    standardCode: "IAS 16",
+    title: text("القيمة الدفترية والقيمة السوقية لأصل مستخدم", "Carrying amount versus market value of a used asset"),
+    facts: text(
+      "السؤال المفاهيمي عن أصل مستخدم جزئيًا معروض في قائمة المركز المالي وفق IAS 16، ولا يقدم أرقامًا أو سياسة قياس محددة. قارن بين قيمته الدفترية وقيمته الممكنة في سوق بيع ثانوي.",
+      "A conceptual question concerns a partly used asset in a statement of financial position prepared under IAS 16. No figures or measurement policy are supplied. Compare its carrying amount with its possible secondary-market value.",
+    ),
+    question: text(
+      "ماذا تمثل القيمة الدفترية؟ وهل يجب ألا تتجاوز القيمة السوقية الصافية للأصل المستخدم في تاريخ التقرير؟ فسّر.",
+      "What does the carrying amount represent? Must it never exceed the used asset's net market value at the reporting date? Explain.",
+    ),
+    solution: [
+      text(
+        "القيمة الدفترية هي المبلغ المعترف به بعد طرح مجمع الإهلاك وخسائر الانخفاض المتراكمة من تكلفة الأصل، أو من مبلغه بعد إعادة التقييم إذا كانت تلك سياسة الفئة. لذلك لا تختزل دائمًا إلى «التكلفة ناقص الإهلاك».",
+        "Carrying amount is the recognised amount after accumulated depreciation and accumulated impairment losses are deducted from cost, or from a revalued amount when that class uses the revaluation model. It is not invariably just original cost less depreciation.",
+      ),
+      text(
+        "نعم، قد تتجاوز القيمة الدفترية سعر البيع الصافي أو القيمة العادلة ناقص تكاليف الاستبعاد إذا كانت قيمة الاستخدام أعلى. وبموجب IAS 36 يكون المبلغ القابل للاسترداد هو الأعلى بين القيمة العادلة ناقص تكاليف الاستبعاد وقيمة الاستخدام؛ وعند وجود مؤشر انخفاض، يُختبر الأصل أو وحدة توليد النقد المناسبة ولا يُترك مبلغ دفتري يتجاوز المبلغ القابل للاسترداد.",
+        "Yes. Carrying amount may exceed the net sale value or fair value less costs of disposal if value in use is higher. IAS 36 defines recoverable amount as the higher of fair value less costs of disposal and value in use; when an impairment indicator exists, test the asset or appropriate cash-generating unit rather than leaving carrying amount above recoverable amount.",
+      ),
+      text(
+        "الإهلاك توزيع منهجي للمبلغ القابل للإهلاك خلال العمر الإنتاجي، وليس إعادة قياس تلقائية إلى سعر السوق ولا صندوقًا مخصصًا لشراء بديل. لا تفترض من السؤال وحده أن القيمة الدفترية مساوية للمبلغ القابل للاسترداد أو أن أصلًا محددًا منخفض القيمة.",
+        "Depreciation systematically allocates depreciable amount over useful life; it is neither automatic remeasurement to market price nor a cash fund for a replacement. The facts alone do not establish that carrying amount equals recoverable amount or that a particular asset is impaired.",
+      ),
+    ],
+    reference: "IAS 16.6, 29–31, 50–55; IAS 36.9, 18, 22",
+  },
+  {
+    id: "ifrs-book2-ias16-depreciation-purpose-and-pattern",
+    standardCode: "IAS 16",
+    title: text("غرض الإهلاك واختيار نمطه", "Purpose of depreciation and choice of pattern"),
+    facts: text(
+      "سؤالان تفسيران عن سبب إثبات الإهلاك ومتى تكون طريقة الرصيد المتناقص أنسب من القسط الثابت. لا تُعطى مبالغ أو أصل معين.",
+      "Two conceptual prompts ask why depreciation is provided and when diminishing balance is more appropriate than straight-line. No amounts or specific asset are given.",
+    ),
+    question: text(
+      "ما أغراض إثبات الإهلاك؟ وفي أي ظروف تكون طريقة الرصيد المتناقص أنسب من القسط الثابت، ولماذا؟",
+      "What are the purposes of providing for depreciation? In what circumstances is diminishing balance more appropriate than straight-line, and why?",
+    ),
+    solution: [
+      text(
+        "الغرض هو توزيع المبلغ القابل للإهلاك بطريقة منهجية على العمر الإنتاجي، بما يعكس استهلاك المنشأة للمنافع الاقتصادية للأصل. يبدأ الإهلاك عند جاهزية الأصل للاستخدام ولا يتوقف لمجرد خمول الأصل، وإن كان مصروف طريقة وحدات الإنتاج قد يساوي صفرًا عند عدم الإنتاج. الإهلاك ليس مخصصًا نقديًا لاستبدال الأصل ولا قياسًا لهبوط سعره السوقي.",
+        "Depreciation systematically allocates the depreciable amount over useful life in line with consumption of the asset's benefits. It begins when available for use and does not stop merely because an asset is idle, although units-of-production depreciation may be zero without output. It is not a cash reserve for replacement or a market-price decline measurement.",
+      ),
+      text(
+        "الرصيد المتناقص يلائم نمطًا متوقعًا لاستهلاك منافع أكبر في السنوات الأولى وأقل لاحقًا؛ أما القسط الثابت فيلائم نمطًا أقرب للانتظام. لا تكفي الرغبة في تسوية تكاليف الإصلاح أو تعديل الربح لتبرير الطريقة. راجع النمط سنويًا وعدل الطريقة بأثر مستقبلي إذا تغير التوقع جوهريًا.",
+        "Diminishing balance fits an expected benefit-consumption pattern weighted toward early years; straight-line fits a more even pattern. A desire to smooth repair costs or manage profit is insufficient. Review the pattern annually and change method prospectively if the expectation changes significantly.",
+      ),
+    ],
+    reference: "IAS 16.50–55, 60–62; IAS 8.36–38",
+  },
+  {
+    id: "ifrs-book2-riveting-machines-disposals",
+    standardCode: "IAS 16",
+    title: text("آلتان لصناعة المسامير: الإهلاك والاستبعاد", "Two riveting machines: depreciation and disposal"),
+    facts: text(
+      "اشترت منشأة آلتين لصناعة المسامير في 1 يناير 20X5 بتكلفة 15,000 دولار لكل آلة، بعمر خمس سنوات وقيمة متبقية صفر، وبطريقة القسط الثابت. باعت الأولى آجلًا في 31 مارس 20X7 مقابل 8,000 دولار، وباعت الثانية نقدًا في 1 ديسمبر 20X7 مقابل 2,500 دولار. لا تذكر الوقائع تصنيفًا كأصول محتفظ بها للبيع قبل تاريخي البيع.",
+      "An entity bought two riveting machines on 1 January 20X5 for $15,000 each, with five-year lives, nil residual values and straight-line depreciation. It sold the first on credit on 31 March 20X7 for $8,000 and the second for cash on 1 December 20X7 for $2,500. The facts do not state any held-for-sale classification before the sale dates.",
+    ),
+    question: text(
+      "أعد حساب حركة تكلفة الآلات ومجمع إهلاكها والاستبعاد خلال سنة 20X7، مع تحديد نتيجة بيع كل آلة.",
+      "Prepare the machinery cost, accumulated depreciation and disposal movements for 20X7, identifying the result on each machine.",
+    ),
+    solution: [
+      text(
+        "تكلفة كل آلة 15,000، وإهلاكها السنوي 3,000 والشهري 250. في 1 يناير 20X7 تكلفة الآلتين 30,000 ومجمع إهلاكهما 12,000، أي 6,000 لكل آلة.",
+        "Each machine costs $15,000, with $3,000 annual and $250 monthly depreciation. On 1 January 20X7 their aggregate cost is $30,000 and accumulated depreciation $12,000, or $6,000 per machine.",
+      ),
+      text(
+        "الآلة الأولى: إهلاك يناير–مارس 750، ومجمع الإهلاك عند البيع 6,750، والقيمة الدفترية 8,250. مقابل البيع الآجل 8,000؛ خسارة الاستبعاد 250. أزل تكلفة 15,000 ومجمع 6,750 وأثبت ذمة مدينة 8,000 والخسارة 250.",
+        "First machine: January–March depreciation $750, accumulated depreciation at sale $6,750, carrying amount $8,250. Credit sale proceeds $8,000 give a $250 disposal loss. Remove $15,000 cost and $6,750 accumulated depreciation, and recognise an $8,000 receivable and $250 loss.",
+      ),
+      text(
+        "الآلة الثانية: إهلاك يناير–نوفمبر 2,750، ومجمع الإهلاك عند البيع 8,750، والقيمة الدفترية 6,250. مقابل البيع النقدي 2,500؛ خسارة الاستبعاد 3,750. أزل تكلفة 15,000 ومجمع 8,750 وأثبت النقد والخسارة.",
+        "Second machine: January–November depreciation $2,750, accumulated depreciation at sale $8,750, carrying amount $6,250. Cash proceeds $2,500 give a $3,750 disposal loss. Remove $15,000 cost and $8,750 accumulated depreciation, and recognise cash and the loss.",
+      ),
+      text(
+        "مصروف إهلاك 20X7 للآلتين = 750 + 2,750 = 3,500، وإجمالي خسائر الاستبعاد = 250 + 3,750 = 4,000. تصبح أرصدة تكلفة الآلات ومجمع إهلاكهما صفرًا بعد بيع الآلتين. لا تُصنف الخسارة إيرادًا.",
+        "20X7 depreciation for both machines totals $750 + $2,750 = $3,500; aggregate disposal losses are $250 + $3,750 = $4,000. Both machinery cost and accumulated depreciation close to nil after the two sales. The loss is not revenue.",
+      ),
+    ],
+    reference: "IAS 16.55, 67–68, 71–72",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
