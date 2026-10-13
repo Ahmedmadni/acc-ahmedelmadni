@@ -1811,6 +1811,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 23.8, 14, 17–18",
       },
+      {
+        title: text("الاقتراض المخصص ودخل الاستثمار المؤقت", "Specific borrowing and temporary investment income"),
+        explanation: text(
+          "إذا اقترضت المنشأة مبلغًا خصيصًا لإنشاء أصل مؤهل، فإن المبلغ الممكن رسملته خلال الفترة المؤهلة هو تكلفة الاقتراض الفعلية على ذلك التمويل مطروحًا منها دخل استثمار الأموال المقترضة مؤقتًا قبل استخدامها. لا تبدأ الرسملة بمجرد سحب القرض؛ يلزم في الوقت نفسه إنفاق على الأصل، وتكبد تكلفة اقتراض، ومباشرة أنشطة إعداد الأصل لاستخدامه أو بيعه. إذا كان قرض واحد يمول أصلين، فوزع التكلفة والدخل على أساس يمكن إثباته من استخدام الأموال، ولا تفترض تاريخًا لم تبدأ فيه الأنشطة من وصف عام يقول «خلال السنة».",
+          "For funds borrowed specifically for a qualifying asset, capitalisable costs during the eligible period are actual borrowing costs on those funds less income from their temporary investment. Drawing the loan alone does not start capitalisation: expenditure, borrowing costs and necessary preparation activities must all be underway. If one loan funds two assets, allocate cost and investment income on a supportable use-of-funds basis, and do not infer an exact activity start date from a broad 'during the year' description.",
+        ),
+        keyPoints: [
+          text("خصم دخل الاستثمار المؤقت يخص التمويل المخصص في فترة الرسملة المؤهلة.", "Deduct temporary-investment income on specific borrowings in the eligible capitalisation period."),
+          text("ثلاثة شروط بدء الرسملة يجب أن تتحقق معًا لكل أصل.", "All three commencement conditions must be met together for each asset."),
+        ],
+        reference: "IAS 23.8, 12–13, 17–18",
+      },
     ],
     workedExamples: [
       {
