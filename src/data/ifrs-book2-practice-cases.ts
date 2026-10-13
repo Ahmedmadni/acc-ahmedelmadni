@@ -5355,6 +5355,62 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 23.8, 12–13, 17–18, 20–22",
   },
 
+  {
+    id: "ifrs-book2-ch4-quiz-define-depreciation",
+    standardCode: "IAS 16",
+    title: text("مراجعة الفصل الرابع: تعريف الإهلاك", "Chapter 4 quiz: define depreciation"),
+    facts: text("سؤال تعريفي دون معطيات رقمية.", "A definition prompt with no numerical facts."),
+    question: text("عرّف الإهلاك.", "Define depreciation."),
+    solution: [
+      text("الإهلاك هو التوزيع المنهجي للمبلغ القابل للإهلاك للأصل على مدى عمره الإنتاجي؛ والمبلغ القابل للإهلاك هو التكلفة أو مبلغ بديل عنها مطروحًا منه القيمة المتبقية. لا يساوي بالضرورة هبوط القيمة السوقية.", "Depreciation is the systematic allocation of an asset's depreciable amount over its useful life. Depreciable amount is cost, or an amount substituted for cost, less residual value; it is not necessarily a fall in market value."),
+    ],
+    reference: "IAS 16.6, 50",
+  },
+  {
+    id: "ifrs-book2-ch4-quiz-asset-production-costs",
+    standardCode: "IAS 16",
+    title: text("مراجعة الفصل الرابع: بنود تكلفة إنشاء أصل", "Chapter 4 quiz: costs of constructing an asset"),
+    facts: text("البنود الواردة في السؤال: ثمن المواد الخام، أتعاب المهندس المعماري، رسوم الاستيراد، وتكاليف التركيب.", "The listed items are raw-material purchase price, architect's fees, import duties and installation costs."),
+    question: text("أي البنود الأربعة يمكن إدخاله في تكلفة إنتاج أصل غير متداول؟", "Which of the following elements can be included in the production cost of a non-current asset?"),
+    solution: [
+      text("يمكن إدراج البنود الأربعة كلها إذا كانت تخص الأصل مباشرة وتستوفي شروط الاعتراف: المواد المستخدمة في الإنشاء، الأتعاب المهنية المباشرة، الرسوم غير القابلة للاسترداد، والتركيب اللازم لجعل الأصل جاهزًا للاستخدام المقصود. لا يعني ذلك إدراج أي مادة أو أتعاب عامة لا تتصل بالأصل.", "All four may qualify when directly attributable to the asset and recognition criteria are met: construction materials, directly attributable professional fees, non-refundable import duties and installation needed to make it ready for intended use. Unrelated materials or general fees do not qualify merely because they share these labels."),
+    ],
+    reference: "IAS 16.7, 16–17",
+  },
+  {
+    id: "ifrs-book2-ch4-quiz-market-value-fair-value",
+    standardCode: "IFRS 13",
+    title: text("مراجعة الفصل الرابع: سعر السوق والقيمة العادلة", "Chapter 4 quiz: market price and fair value"),
+    facts: text("يسأل الاختبار هل يمكن عادةً اعتبار قيمة السوق قيمة عادلة، دون تحديد سوق أو تاريخ أو حالة البيع.", "The quiz asks whether market value can usually be treated as fair value, without identifying the market, date or transaction conditions."),
+    question: text("يمكن عادةً اعتبار القيمة السوقية قيمة عادلة: صحيح أم خطأ؟", "Market value can usually be taken as fair value. True or false?"),
+    solution: [
+      text("إجابة الاختبار الموجزة: صحيح عادةً إذا كان السعر يعكس معاملة منتظمة في السوق الرئيسية أو الأكثر منفعة بين مشاركين في السوق بتاريخ القياس. لكنهما ليسا مترادفين تلقائيًا: قد يلزم تعديل سعر معلن أو استخدام أسلوب تقييم إذا لم يكن السعر مناسبًا، ولا تُطرح تكاليف المعاملة من قياس القيمة العادلة بموجب IFRS 13.", "The quiz's short answer is usually true when the price represents an orderly transaction in the principal or most advantageous market between market participants at the measurement date. But the terms are not automatically interchangeable: a quoted price may need adjustment or a valuation technique may be required, and transaction costs are not deducted from IFRS 13 fair value."),
+    ],
+    reference: "IFRS 13.9, 16, 22–26, 61",
+  },
+  {
+    id: "ifrs-book2-ch4-quiz-investment-property-fair-value",
+    standardCode: "IAS 40",
+    title: text("مراجعة الفصل الرابع: نموذج قياس العقار الاستثماري", "Chapter 4 quiz: investment-property model"),
+    facts: text("عبارة اختبار عن القياس اللاحق لجميع العقارات الاستثمارية.", "A quiz statement about subsequent measurement of all investment property."),
+    question: text("يجب دائمًا عرض العقارات الاستثمارية بالقيمة العادلة: صحيح أم خطأ؟", "Investment properties must always be shown at fair value. True or false?"),
+    solution: [
+      text("خطأ. تختار المنشأة نموذج القيمة العادلة أو نموذج التكلفة سياسةً محاسبية للعقارات الاستثمارية وفق شروط IAS 40. حتى عند اختيار نموذج التكلفة، تحدد القيمة العادلة للإفصاح المطلوب ما لم ينطبق استثناء محدد.", "False. IAS 40 permits a fair value model or a cost model as an accounting policy for investment property, subject to its requirements. Fair value is normally determined for disclosure even under the cost model, subject to specific exceptions."),
+    ],
+    reference: "IAS 40.30–35, 56, 79(e)",
+  },
+  {
+    id: "ifrs-book2-ch4-quiz-ip-under-construction",
+    standardCode: "IAS 40",
+    title: text("مراجعة الفصل الرابع: عقار قيد الإنشاء للاستثمار", "Chapter 4 quiz: property under construction for investment"),
+    facts: text("عقار يجري تشييده الآن بغرض استخدامه مستقبلًا كعقار استثماري، وليس بغرض البيع في النشاط العادي أو إشغال المنشأة.", "Property is being built for future use as investment property, not for ordinary-course sale or the entity's own occupation."),
+    question: text("ما المعالجة الصحيحة للعقار الذي يُنشأ للاستخدام المستقبلي كعقار استثماري؟", "What is the correct treatment for property being constructed for future use as investment property?"),
+    solution: [
+      text("يدخل العقار قيد الإنشاء ضمن تعريف العقار الاستثماري وفق IAS 40.8(e). يُعترف به أولًا بالتكلفة بما فيها تكاليف المعاملة المؤهلة، ثم يطبق نموذج القياس اللاحق المختار وفق IAS 40 مع مراعاة شروطه؛ لا يُحول آليًا إلى مخزون IAS 2 أو أصل مشغول IAS 16.", "Property being constructed for future use as investment property is within IAS 40.8(e). Recognise it initially at cost including qualifying transaction costs, then apply the chosen IAS 40 subsequent-measurement model subject to its requirements; do not automatically classify it as IAS 2 inventory or IAS 16 owner-occupied property."),
+    ],
+    reference: "IAS 40.8(e), 16–20, 30–35",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
