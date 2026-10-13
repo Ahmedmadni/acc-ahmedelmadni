@@ -109,6 +109,8 @@ const protectedPracticeIds = [
   "ifrs-book2-epsilon-development-tax",
   "ifrs-book2-darton-current-tax-true-up",
   "ifrs-book2-alpha-beta-acquisition-tax",
+  "ifrs-book2-ifrs15-office-software-obligations",
+  "ifrs-book2-ifrs15-taplop-retrospective-volume-discount",
   "ifrs-book2-ias8-kelshall-policy-incentive",
   "ifrs-book2-ifrs10-ch21-quiz-major-minor",
   "ifrs-book2-ifrs10-ch22-quiz-intragroup-asset",
