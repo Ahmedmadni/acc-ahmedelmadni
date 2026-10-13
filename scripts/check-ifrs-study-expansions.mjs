@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-rich-undetermined-land-use",
+  "ifrs-book2-office-transfer-to-investment-property",
   "ifrs-book2-ias16-carrying-amount-versus-market",
   "ifrs-book2-ias16-depreciation-purpose-and-pattern",
   "ifrs-book2-riveting-machines-disposals",
@@ -266,6 +268,10 @@ if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?
   failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IAS 40 head office depreciation to transfer", 250000 / 50 * 9.5, 47500],
+  ["IAS 40 head office transfer carrying amount", 250000 - 47500, 202500],
+  ["IAS 40 head office transfer uplift", 350000 - 202500, 147500],
+  ["IAS 40 later fair-value change", 380000 - 350000, 30000],
   ["IAS 20 20-percent machinery grant", 100000 * 0.2, 20000],
   ["IAS 20 net method annual depreciation", (100000 - 20000) / 4, 20000],
   ["IAS 20 deferred method annual net profit", 50000 - 100000 / 4 + 20000 / 4, 30000],
