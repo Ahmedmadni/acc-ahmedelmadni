@@ -2175,6 +2175,20 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 15": {
     sections: [
       {
+        title: text("تكاليف الحصول على العقد والوفاء به: أصل أم مصروف؟", "Contract acquisition and fulfilment costs: asset or expense?"),
+        explanation: text(
+          "تُرسمل التكلفة الإضافية للحصول على عقد، كالعمولة التي ما كانت لتنشأ لولا نجاحه، إذا توقعت المنشأة استردادها. أما تكلفة كانت ستتحملها سواء فازت بالعقد أم لا فتُحمل مصروفًا ما لم تكن قابلة للتحميل صراحةً على العميل. وتكاليف الوفاء تُفحص أولًا تحت IAS 2 أو IAS 16 أو IAS 38 عند انطباقها؛ وإذا لم يحكمها معيار آخر، يثبت أصل IFRS 15 فقط إن كانت مرتبطة مباشرة بعقد محدد، وتنشئ أو تعزز موارد لأداء مستقبلي، ويتوقع استردادها. يُستهلك الأصل على نحو يتسق مع نقل السلع والخدمات المرتبطة به ويُختبر للانخفاض.",
+          "Capitalise an incremental cost of obtaining a contract, such as a commission that would not arise without winning it, when recovery is expected. Costs incurred whether or not the contract is won are expensed unless explicitly chargeable to the customer. For fulfilment costs, first assess IAS 2, IAS 16 or IAS 38 if applicable; otherwise IFRS 15 permits an asset only if costs relate directly to an identifiable contract, create or enhance resources for future performance, and are expected to be recovered. Amortise the asset consistently with transfer of related goods or services and test it for impairment."
+        ),
+        keyPoints: [
+          text("اختبار تكلفة الحصول: هل كانت ستنشأ لو خسرنا العقد؟ إن نعم فهي ليست «إضافية» لمجرد ارتباطها بالمناقصة.", "Acquisition-cost test: would it arise if the bid failed? If yes, it is not incremental merely because it relates to the tender."),
+          text("اختبار الوفاء ثلاثي: ارتباط مباشر، مورد لأداء لاحق، واسترداد متوقع؛ وتُطبق المعايير الأخرى أولًا.", "Fulfilment-cost test: direct relationship, resource for later performance, and expected recovery; apply other relevant Standards first."),
+          text("يجوز تبسيط تحميل تكاليف الحصول الإضافية على المصروف إذا كانت فترة إهلاك أصلها سنة أو أقل.", "The practical expedient permits expensing incremental acquisition costs when the otherwise-recognised asset would be amortised over one year or less.")
+        ],
+        reference: "IFRS 15.91–99, 101–104; IAS 2; IAS 16; IAS 38",
+      },
+
+      {
         title: text(
           "إعادة الشراء: لماذا قد لا يكون البيع إيرادًا؟",
           "Repurchase: why a sale may not be revenue",
@@ -2243,6 +2257,21 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
     workedExamples: [
+      {
+        title: text("هاتف مجاني ظاهريًا مع خدمة لمدة سنتين", "Apparently free handset with two years of service"),
+        facts: text(
+          "يحصل العميل على هاتف عند توقيع عقد خدمة شبكة مدته 24 شهرًا بسعر 20 دولارًا شهريًا. سعر بيع الهاتف المستقل 100 دولار، وسعر الخدمة المستقل لعامين 480 دولارًا. يفترض المثال أن الهاتف والخدمة التزاما أداء منفصلان، ولا يذكر خصمًا خاصًا بأحدهما أو مكون تمويل مهمًا.",
+          "A customer receives a handset on signing a 24-month network-service contract for $20 a month. The handset's stand-alone selling price is $100 and the two-year service's stand-alone price is $480. Assume handset and service are distinct obligations with no discount specific to one obligation and no significant financing component."
+        ),
+        calculations: [
+          text("مقابل العقد 24 × 20 = 480 دولارًا؛ مجموع الأسعار المستقلة 100 + 480 = 580. يخصص للهاتف 480 × 100/580 = 82.7586 دولارًا، وللخدمة 480 × 480/580 = 397.2414 دولارًا.", "Contract consideration = 24 × $20 = $480; total stand-alone prices = $100 + $480 = $580. Allocate $480 × 100/580 = $82.7586 to the handset and $480 × 480/580 = $397.2414 to service."),
+          text("يُعترف بحصة الهاتف عند انتقال السيطرة عليه. وبافتراض تقديم الخدمة بالتساوي، إيرادها السنوي 397.2414 ÷ 2 = 198.6207؛ في السنة الأولى إجمالي 281.3793، وفي الثانية 198.6207. لا تُقرب نسب 100/580 و480/580 إلى 17% و83% قبل الحساب: التقريب الوسيط يعطي 82 و199، بينما الدقة تعطي نحو 82.76 و198.62.", "Recognise the handset share when its control transfers. If service is provided evenly, annual service revenue is $397.2414 / 2 = $198.6207; total year-one revenue is $281.3793 and year two $198.6207. Do not round 100/580 and 480/580 to 17% and 83% before calculation: premature rounding gives $82 and $199 rather than about $82.76 and $198.62.")
+        ],
+        conclusion: text("وصف الهاتف بأنه مجاني لا يلغي إيراده: 82.76 دولارًا من المقابل الكلي يخصه، ويبقى 397.24 للخدمة. يعتمد عرض أصل العقد أو الذمة المدينة على حقوق الفوترة والدفع غير المعطاة، فلا يُخترع قيد تحصيل.", "Calling the handset free does not eliminate its revenue: about $82.76 of total consideration relates to it, leaving $397.24 for service. Contract-asset or receivable presentation depends on unspecified billing rights, so no cash or billing entry is invented."),
+        journalEntries: [],
+        reference: "IFRS 15.22–30, 73–86, 105–108",
+      },
+
       {
         title: text(
           "تحصيل مليون مع خيار إعادة الشراء",
