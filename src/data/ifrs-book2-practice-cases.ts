@@ -5147,6 +5147,43 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     ],
     reference: "IAS 12.24, 27–29, 34–37, 82",
   },
+  {
+    id: "ifrs-book2-bco-revised-useful-life",
+    standardCode: "IAS 16",
+    title: text("B Co: تعديل العمر الإنتاجي المتبقي", "B Co: revision of remaining useful life"),
+    facts: text(
+      "اشترت B Co أصلًا غير متداول في 1 يناير 20X2 بمبلغ 80,000 دولار، بلا قيمة متبقية، وكان عمره الإنتاجي المقدر عشر سنوات. في 1 يناير 20X5 عُدّل العمر المتبقي إلى أربع سنوات.",
+      "B Co acquired a non-current asset on 1 January 20X2 for $80,000, with no residual value and an original ten-year useful life. On 1 January 20X5, the remaining useful life was revised to four years.",
+    ),
+    question: text("ما مصروف إهلاك سنة 20X5؟", "What is the depreciation charge for 20X5?"),
+    solution: [
+      text("الإهلاك السنوي الأصلي = 80,000 ÷ 10 = 8,000 دولار. إهلاك السنوات 20X2–20X4 = 24,000، فتكون القيمة الدفترية في 1 يناير 20X5 = 56,000.", "Original annual depreciation = $80,000 ÷ 10 = $8,000. Depreciation for 20X2–20X4 totals $24,000, leaving a $56,000 carrying amount on 1 January 20X5."),
+      text("يُطبّق تعديل التقدير بأثر مستقبلي: مصروف 20X5 = 56,000 ÷ 4 = 14,000 دولار، مع افتراض عدم تغير القيمة المتبقية وعدم وجود انخفاض قيمة أو تعديل آخر. لا يُعاد فتح مصروف السنوات السابقة.", "Apply the estimate change prospectively: 20X5 depreciation is $56,000 ÷ 4 = $14,000, assuming no change in residual value, impairment or other adjustment. Do not restate earlier depreciation."),
+      text("قيد 20X5: من حـ/ مصروف الإهلاك 14,000 إلى حـ/ مجمع الإهلاك 14,000.", "20X5 entry: debit depreciation expense $14,000; credit accumulated depreciation $14,000."),
+    ],
+    reference: "IAS 16.50–51, 55–57; IAS 8.36–38",
+  },
+  {
+    id: "ifrs-book2-lorry-four-depreciation-methods",
+    standardCode: "IAS 16",
+    title: text("شاحنة: أربع طرق لحساب الإهلاك", "Lorry: four depreciation calculations"),
+    facts: text(
+      "تكلفة شاحنة 17,000 دولار، وقيمتها المتبقية المتوقعة بعد خمس سنوات 2,000 دولار. الاستخدام المتوقع بالأيام للسنوات الخمس: 200، 100، 100، 150، 40. طُلبت طريقة القسط الثابت، والرصيد المتناقص بمعدل 35%، وطريقة الاستخدام، ومجموع أرقام السنوات.",
+      "A lorry costs $17,000, with expected residual value of $2,000 after five years. Expected use in days is 200, 100, 100, 150 and 40 for years 1–5. Calculate straight-line, 35% diminishing-balance, use-based and sum-of-years-digits depreciation.",
+    ),
+    question: text(
+      "احسب إهلاك كل سنة بالطرق الأربع، وبيّن كيف تحافظ طريقة الاستخدام على إجمالي المبلغ القابل للإهلاك.",
+      "Calculate each year's depreciation under the four methods and show how the use-based method allocates the full depreciable amount.",
+    ),
+    solution: [
+      text("المبلغ القابل للإهلاك = 17,000 − 2,000 = 15,000 دولار. القسط الثابت: 3,000 دولار في كل سنة من السنوات الخمس.", "Depreciable amount = $17,000 − $2,000 = $15,000. Straight-line: $3,000 in each of the five years."),
+      text("الرصيد المتناقص 35% من القيمة الدفترية الافتتاحية، مقربًا لأقرب دولار: 5,950؛ 3,868؛ 2,514؛ 1,634؛ ثم 1,034 في السنة الخامسة للوصول إلى القيمة المتبقية 2,000، لا للنزول دونها. إجمالي الإهلاك 15,000.", "At 35% of opening carrying amount, rounded to whole dollars: $5,950; $3,868; $2,514; $1,634; then $1,034 in year 5 to reach the $2,000 residual value, not below it. Total depreciation is $15,000."),
+      text("إجمالي الاستخدام = 590 يومًا. خصص 15,000 × أيام كل سنة ÷ 590 مع تقريب الناتج السنوي فقط: 5,084.75؛ 2,542.37؛ 2,542.37؛ 3,813.56؛ 1,016.95 دولار. المجموع 15,000؛ تقريب معدل اليوم إلى 25.42 قبل الضرب يخلق فرق تقريب غير ضروري.", "Total expected use is 590 days. Allocate $15,000 × each year's days ÷ 590, rounding each annual result only: $5,084.75; $2,542.37; $2,542.37; $3,813.56; $1,016.95. The sum is $15,000; prematurely rounding the daily rate to $25.42 creates an avoidable rounding difference."),
+      text("مجموع أرقام السنوات = 5 + 4 + 3 + 2 + 1 = 15. الإهلاك للسنوات 1–5 = 5,000؛ 4,000؛ 3,000؛ 2,000؛ 1,000 دولار. هذه مقارنات حسابية مطلوبة بالسؤال؛ تُختار السياسة الفعلية وفق نمط استهلاك المنافع الاقتصادية، لا وفق أكبر أو أصغر ربح.", "Sum of years' digits = 5 + 4 + 3 + 2 + 1 = 15. Year 1–5 depreciation is $5,000; $4,000; $3,000; $2,000; $1,000. These are the requested numerical comparisons; the actual method must reflect the pattern of benefit consumption, not a desired profit figure."),
+    ],
+    reference: "IAS 16.50–51, 60–62",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
