@@ -223,6 +223,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 16": {
     sections: [
       {
+        title: text("عكس خسارة إعادة التقييم: الأصل نفسه أولًا", "Reversing a revaluation loss: test the same asset first"),
+        explanation: text(
+          "عند ارتفاع أصل ثابت سبق تسجيل خسارة إعادة تقييم له في الربح أو الخسارة، يُعاد إلى الربح أو الخسارة فقط الجزء الذي يعكس خسارة ذلك الأصل؛ وما زاد يدخل الدخل الشامل الآخر وفائض إعادة التقييم. وعند هبوط أصل له فائض قائم، يُستنفد فائض الأصل نفسه عبر الدخل الشامل الآخر أولًا، ثم يسجل الباقي في الربح أو الخسارة. لا تخلط رصيد شركة كاملًا أو فائض أصل آخر مع رصيد الأصل محل القياس. في جميع الحالات يلزم تطبيق سياسة إعادة التقييم على فئة الأصول كاملة، وتقييم آثار الضريبة المؤجلة عند وجودها.",
+          "For an increase in PPE after a prior revaluation decrease charged to profit or loss, recognise in profit or loss only the portion reversing that same asset's earlier loss; the excess goes to other comprehensive income and revaluation surplus. For a decrease when the asset has an existing surplus, use that same asset's surplus through other comprehensive income first and recognise the rest in profit or loss. Do not substitute an entity-wide reserve or another asset's surplus. Apply the revaluation policy to the entire asset class and assess related deferred tax when relevant.",
+        ),
+        keyPoints: [
+          text("الاختبار مرتبط بتاريخ وأثر إعادة تقييم الأصل المحدد، لا بالسعر الأصلي فقط.", "The test follows the particular asset's prior revaluation history, not merely original cost."),
+          text("الزيادة التي تعكس خسارة سابقة في الربح أو الخسارة تختلف عن فائض جديد في الدخل الشامل الآخر.", "An increase reversing a prior profit-or-loss loss differs from new surplus in other comprehensive income."),
+        ],
+        reference: "IAS 16.36, 39–40; IAS 12.61A",
+      },
+      {
         title: text("فائض إعادة التقييم عند الاستخدام والاستبعاد", "Revaluation surplus during use and on derecognition"),
         explanation: text(
           "يُعرض فائض إعادة تقييم الأصل ضمن حقوق الملكية بعد الاعتراف بالزيادة في الدخل الشامل الآخر وفق شروط IAS 16. يجوز تحويل الجزء المتحقق منه مباشرةً إلى الأرباح المحتجزة عندما يُستبعد الأصل، أو تدريجيًا أثناء استخدامه بمقدار الفرق بين الإهلاك على القيمة المعاد تقييمها والإهلاك على التكلفة الأصلية. هذا التحويل داخل حقوق الملكية ولا يمر عبر الربح أو الخسارة. وعند بيع الأصل، يُحسب ربح الاستبعاد منفصلًا بوصفه صافي المتحصلات ناقص القيمة الدفترية في تاريخ البيع؛ لا تخلط بينه وبين تحويل الفائض.",
