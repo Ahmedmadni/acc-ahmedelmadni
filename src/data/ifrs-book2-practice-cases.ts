@@ -5269,6 +5269,59 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 16.55, 67–68, 71–72",
   },
 
+  {
+    id: "ifrs-book2-rich-undetermined-land-use",
+    standardCode: "IAS 40",
+    title: text("Rich Co: أرض لم يتحدد استخدامها بعد", "Rich Co: land with undetermined future use"),
+    facts: text(
+      "تملك Rich Co قطعة أرض. لم يقرر المديرون بعد هل سيبنون عليها مصنعًا للشركة أم سيحتفظون بها إلى حين ارتفاع قيمتها ثم يبيعونها.",
+      "Rich Co owns land. Its directors have not decided whether to build a factory for the business or retain the land and sell it after its value rises.",
+    ),
+    question: text(
+      "هل تُصنف الأرض عقارًا استثماريًا بموجب IAS 40؟",
+      "Would the land be classified as investment property under IAS 40?",
+    ),
+    solution: [
+      text(
+        "نعم في الوقائع المعطاة، إذا لم تتحدد بعد نية إشغال الأرض بواسطة المنشأة أو بيعها في النشاط العادي قصير الأجل، تُعامل الأرض ذات الاستخدام المستقبلي غير المحدد على أنها محتفظ بها لزيادة القيمة الرأسمالية وفق IAS 40.8(b). مجرد احتمال مصنع مستقبلي لا يجعلها أصلًا مشغولًا من المالك الآن.",
+        "Yes on the stated facts: where neither owner-occupation nor short-term sale in the ordinary course has been determined, land with currently undetermined future use is treated as held for capital appreciation under IAS 40.8(b). A possible future factory does not yet make it owner-occupied.",
+      ),
+      text(
+        "إذا ظهرت أدلة لاحقة على بدء تطويرها لمصنع الشركة، تُقيّم إعادة التصنيف وفق قواعد تغير الاستخدام؛ وإذا كانت مخصصة فعليًا للبيع في النشاط العادي، يطبق IAS 2 بدل IAS 40. لا تكفي نية إدارية مجردة منفردة لإثبات تغير الاستخدام.",
+        "If later evidence shows development for the entity's factory has commenced, assess transfer under the change-in-use rules. If the land is actually held for ordinary-course sale, IAS 2 applies instead. A management intention in isolation does not prove a change in use.",
+      ),
+    ],
+    reference: "IAS 40.5, 7–9, 57; IAS 2.6",
+  },
+  {
+    id: "ifrs-book2-office-transfer-to-investment-property",
+    standardCode: "IAS 40",
+    title: text("نقل مبنى المقر إلى عقار استثماري", "Transfer of head office to investment property"),
+    facts: text(
+      "اشترت شركة مبنى مقرها في 1 يناير 20X0 بمبلغ 250,000 دولار، ويُهلك على 50 سنة. في 30 يونيو 20X9 نقلت وظائف المقر إلى مكان آخر وبدأت تأجير المبنى، مع اختيار نموذج القيمة العادلة للعقار الاستثماري. قُدّرت قيمته العادلة يوم النقل بمبلغ 350,000 دولار. ويذكر المثال قيمة عادلة 380,000 في نهاية السنة التالية. لا يذكر خسارة انخفاض سابقة للمبنى.",
+      "An entity bought its head-office building on 1 January 20X0 for $250,000 and depreciates it over 50 years. On 30 June 20X9 it moved its head-office functions elsewhere and began letting the building, applying the fair value model for investment property. Fair value at transfer was $350,000; the illustration also gives $380,000 at the end of the following year. No prior impairment loss is stated.",
+    ),
+    question: text(
+      "كيف يُعرض المبنى في 30 يونيو 20X9، وكيف يُعالج ارتفاع القيمة العادلة اللاحق إلى 380,000 دولار؟",
+      "How is the building accounted for at 30 June 20X9, and how is the later increase to $380,000 treated?",
+    ),
+    solution: [
+      text(
+        "الإهلاك السنوي قبل النقل = 250,000 ÷ 50 = 5,000. من 1 يناير 20X0 حتى 30 يونيو 20X9 = 9.5 سنوات، فيكون مجمع الإهلاك 47,500 والقيمة الدفترية قبل النقل 202,500 دولار.",
+        "Pre-transfer annual depreciation is $250,000 ÷ 50 = $5,000. The 9.5 years from 1 January 20X0 to 30 June 20X9 give $47,500 accumulated depreciation and $202,500 pre-transfer carrying amount.",
+      ),
+      text(
+        "انتهاء الإشغال الإداري وبدء التأجير دليل تغير استخدام إلى عقار استثماري. الفرق في يوم النقل = 350,000 − 202,500 = 147,500 دولار. وفق IAS 40.61–62 يعامل كما لو كان إعادة تقييم بموجب IAS 16؛ وبافتراض عدم وجود خسارة سابقة قابلة للعكس، يدخل الدخل الشامل الآخر وفائض إعادة التقييم، لا ربح القيمة العادلة في الربح أو الخسارة.",
+        "Ending administrative occupation and beginning letting evidence a transfer to investment property. The transfer-date difference is $350,000 − $202,500 = $147,500. IAS 40.61–62 treats this like an IAS 16 revaluation; absent a prior impairment reversal, recognise it in other comprehensive income and revaluation surplus, not as a fair-value profit-or-loss gain.",
+      ),
+      text(
+        "بعد النقل يطبق نموذج القيمة العادلة لـ IAS 40. إذا كان 350,000 هو مبلغ القياس السابق وبلغت القيمة في تاريخ تقرير لاحق 380,000، يُعترف بتغير قدره 30,000 في الربح أو الخسارة في تلك الفترة، لا في فائض إعادة التقييم. لا تُحسب إيجارات أو ضرائب لم تُعطَ.",
+        "After transfer, apply the IAS 40 fair value model. If $350,000 was the prior measurement and fair value later reaches $380,000, recognise the $30,000 change in that later period's profit or loss, not in revaluation surplus. No unprovided rent or tax effects are calculated.",
+      ),
+    ],
+    reference: "IAS 40.35, 57, 61–62; IAS 16.39–40, 50–55",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
