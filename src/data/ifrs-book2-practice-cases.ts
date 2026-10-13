@@ -15,6 +15,17 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs10-ch22-quiz-intragroup-asset",
+    standardCode: "IFRS 10",
+    title: text("بيع أصل غير متداول داخل المجموعة", "Intragroup transfer of a non-current asset"),
+    facts: text("في بداية السنة باعت تابعة تملك الأم 75% منها أصلًا إلى الأم مقابل 500,000؛ كانت قيمته الدفترية لدى التابعة 400,000 وبقيت أربع سنوات من عمره النافع. لا يذكر السؤال طريقة الإهلاك أو القيمة المتبقية.", "At the start of the year a 75%-owned subsidiary transferred an asset to its parent for 500,000; its pre-transfer carrying amount was 400,000 with four years' useful life remaining. Depreciation method and residual value are not stated."),
+    question: text("كيف تُعالج الصفقة في ربح أو خسارة المجموعة بنهاية السنة؟", "How is the transaction treated in group profit or loss at year-end?"),
+    solution: [
+      text("يُلغى ربح البيع الداخلي البالغ 100,000 كاملًا ويُعاد الأصل إلى أساسه الدفتري للمجموعة، ثم يُعدّل إهلاكه اللاحق لإزالة الزيادة الناتجة عن سعر التحويل. إذا استُخدم القسط الثابت بلا قيمة متبقية وتوزعت السنوات الأربع بالتساوي، فالزيادة في إهلاك الأم = 100,000 ÷ 4 = 25,000، فيكون صافي تخفيض ربح المجموعة 75,000؛ والقيمة الدفترية للأصل تقل في نهاية السنة بمقدار 75,000. ولا يكفي السؤال وحده لتحديد تفاصيل عرض التوزيع بين ملاك الأم وغير المسيطرين دون تحليل قيود البائع والمشتري منفصلة. إن كانت طريقة الإهلاك أو القيمة المتبقية مختلفة فلا يمكن الجزم بمبلغ 25,000 من المعطيات وحدها، لكن يلزم حذف الربح الداخلي وتعديل الإهلاك الفعلي في جميع الأحوال.", "Eliminate the entire 100,000 intragroup disposal gain and restore the group's carrying basis, then reverse transfer-price excess depreciation. If straight-line depreciation with no residual value applies evenly over the remaining four years, the parent's excess depreciation is 100,000 / 4 = 25,000, giving a net group-profit reduction of 75,000 and an asset closing carrying amount 75,000 lower. The question alone does not establish a reliable owner/NCI allocation without analysing seller and buyer entries separately. A different depreciation method or residual value makes the exact 25,000 indeterminable from the stated facts, but the internal gain and actual excess depreciation must still be eliminated."),
+    ],
+    reference: "IFRS 10.B86(c), B94; IAS 16.50, 60",
+  },
+  {
     id: "ifrs-book2-ifrs10-ch21-quiz-major-minor",
     standardCode: "IFRS 10",
     title: text("Major وMinor: تغير الربح غير المحقق", "Major and Minor: change in unrealised profit"),
