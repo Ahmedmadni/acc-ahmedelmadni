@@ -1716,6 +1716,78 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
   },
+  "IAS 40": {
+    sections: [
+      {
+        title: text("أرض غير محددة الاستعمال والعقار المشغول من المالك", "Undetermined-use land versus owner-occupied property"),
+        explanation: text(
+          "يشمل العقار الاستثماري أرضًا محتفظًا بها لزيادة قيمتها أو لم يتحدد استعمالها المستقبلي بعد، وكذلك عقارًا مؤجرًا لتحقيق الإيجار، لا عقارًا تستخدمه المنشأة في الإدارة أو الإنتاج ولا عقارًا معدًا للبيع في النشاط العادي. عند وجود أجزاء مختلفة، افصلها إذا أمكن بيعها أو تأجيرها تمويليًا كل على حدة. لا تكفي نية الإدارة المنفردة لنقل التصنيف؛ يلزم تغير استخدام تثبته الوقائع، مثل انتهاء إشغال المالك أو بدء التطوير لغرض الاستخدام الذاتي.",
+          "Investment property includes land held for capital appreciation or with currently undetermined future use, and property held for rentals. It excludes owner-occupied production or administrative property and ordinary-course inventory. Separate mixed-use portions when they can be sold or finance-leased separately. Management intention alone is not enough for transfer; evidence of changed use, such as ending owner-occupation or commencing development for own use, is required.",
+        ),
+        keyPoints: [
+          text("الأرض غير المحددة الاستعمال تدخل IAS 40 إذا لم تخصص للإشغال أو للبيع في النشاط العادي.", "Undetermined-use land falls under IAS 40 when not designated for owner-occupation or ordinary-course sale."),
+          text("حالة المالك الذي يؤجر مبنى لتابعة تختلف بين القوائم الفردية والموحدة.", "A parent's lease of a building to a subsidiary can differ between separate and consolidated statements."),
+        ],
+        reference: "IAS 40.5, 7–10, 57",
+      },
+      {
+        title: text("تاريخ النقل إلى نموذج القيمة العادلة وما بعده", "Transfer-date revaluation versus subsequent fair value"),
+        explanation: text(
+          "إذا انتهى استخدام مبنى كمقر إداري وصار مؤجرًا، أهلكه حتى تاريخ تغير الاستخدام وفق IAS 16. عند تحويله إلى عقار استثماري يقاس بالقيمة العادلة، عالج الفرق بين قيمته الدفترية وقيمته العادلة في ذلك التاريخ كما تعالج إعادة تقييم IAS 16: قد يذهب العكس المحدود لخسارة سابقة إلى الربح أو الخسارة، وتذهب الزيادة الباقية إلى الدخل الشامل الآخر. بعد النقل، تسجل تغيرات القيمة العادلة اللاحقة للعقار الاستثماري في الربح أو الخسارة وفق IAS 40، لا في فائض إعادة التقييم. أما نموذج التكلفة فيتبع الإهلاك والانخفاض مع الإفصاح عن القيمة العادلة.",
+          "Depreciate a former administrative building under IAS 16 until the evidenced change-of-use date. On transfer to investment property carried at fair value, treat the difference between carrying amount and fair value at that date like an IAS 16 revaluation: a limited reversal of a prior loss may enter profit or loss and the remaining increase enters other comprehensive income. Subsequent fair-value movements under IAS 40 enter profit or loss, not revaluation surplus. Under the cost model, apply depreciation and impairment and disclose fair value.",
+        ),
+        keyPoints: [
+          text("فرق يوم النقل ليس بالضرورة مكسب قيمة عادلة في الربح أو الخسارة.", "The transfer-date difference is not automatically a fair-value gain in profit or loss."),
+          text("التغيرات بعد النقل، بنموذج القيمة العادلة، تدخل الربح أو الخسارة.", "Post-transfer fair-value changes enter profit or loss under the fair value model."),
+        ],
+        reference: "IAS 40.30–35, 56–62, 75(e); IAS 16.39–40",
+      },
+    ],
+    workedExamples: [
+      {
+        title: text("مبنى مقر أصبح مؤجرًا في منتصف السنة", "Head office becomes a rental property mid-year"),
+        facts: text(
+          "تكلفة مبنى المقر 250,000 دولار من 1 يناير 20X0، وعمر الإهلاك 50 عامًا. توقف استخدامه الإداري وبدأ تأجيره في 30 يونيو 20X9. قيمته العادلة عند النقل 350,000 دولار، وفي نهاية سنة لاحقة 380,000. تفترض الحسابات عدم خسارة انخفاض سابقة.",
+          "A head-office building cost $250,000 on 1 January 20X0 and has a 50-year depreciable life. Administrative use ended and letting began on 30 June 20X9. Fair value was $350,000 at transfer and $380,000 at a later year-end. Calculations assume no prior impairment loss.",
+        ),
+        calculations: [
+          text("إهلاك 9.5 سنوات = (250,000 ÷ 50) × 9.5 = 47,500؛ القيمة الدفترية يوم النقل 202,500؛ الزيادة إلى 350,000 = 147,500.", "Depreciation for 9.5 years = ($250,000 ÷ 50) × 9.5 = $47,500; transfer-date carrying amount $202,500; uplift to $350,000 = $147,500."),
+          text("في غياب خسارة سابقة، تسجل زيادة 147,500 في الدخل الشامل الآخر وفائض إعادة التقييم. تغير لاحق من 350,000 إلى 380,000 = 30,000 في الربح أو الخسارة.", "Absent a prior loss, $147,500 goes to other comprehensive income and revaluation surplus. A later rise from $350,000 to $380,000 gives a $30,000 profit-or-loss fair-value gain."),
+        ],
+        conclusion: text(
+          "يختلف موضع الاعتراف بفرق يوم النقل عن التغير اللاحق في القيمة العادلة. لا تضف إيرادات إيجار أو آثارًا ضريبية غير معطاة.",
+          "The transfer-date difference and later fair-value movement are recognised in different places. Do not invent rental income or tax effects.",
+        ),
+        journalEntries: [
+          {
+            label: text("إهلاك نصف سنة قبل النقل", "Six-month depreciation before transfer"),
+            debit: text("مصروف إهلاك", "Depreciation expense"),
+            credit: text("مجمع الإهلاك", "Accumulated depreciation"),
+            amount: text("2,500", "2,500"),
+          },
+          {
+            label: text("نقل القيمة الدفترية إلى العقار الاستثماري", "Reclassify pre-transfer carrying amount"),
+            debit: text("العقار الاستثماري", "Investment property"),
+            credit: text("مبنى مشغول من المالك، بالقيمة الدفترية الصافية", "Owner-occupied building at net carrying amount"),
+            amount: text("202,500", "202,500"),
+          },
+          {
+            label: text("إثبات الزيادة يوم النقل — دون خسارة سابقة", "Transfer-date uplift — absent prior loss"),
+            debit: text("العقار الاستثماري، صافي الزيادة", "Investment property, net uplift"),
+            credit: text("فائض إعادة التقييم عبر الدخل الشامل الآخر", "Revaluation surplus through other comprehensive income"),
+            amount: text("147,500", "147,500"),
+          },
+          {
+            label: text("زيادة القيمة العادلة اللاحقة", "Subsequent fair-value rise"),
+            debit: text("العقار الاستثماري", "Investment property"),
+            credit: text("مكسب القيمة العادلة في الربح أو الخسارة", "Fair-value gain in profit or loss"),
+            amount: text("30,000", "30,000"),
+          },
+        ],
+        reference: "IAS 40.35, 57, 61–62; IAS 16.39–40, 50–55",
+      },
+    ],
+  },
   "IAS 23": {
     sections: [
       {
