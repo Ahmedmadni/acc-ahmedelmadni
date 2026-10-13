@@ -5411,6 +5411,54 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 40.8(e), 16–20, 30–35",
   },
 
+  {
+    id: "ifrs-book2-aco-machinery-impairment",
+    standardCode: "IAS 36",
+    title: text("A Co: مقارنة البيع بالاستخدام لاختبار آلة", "A Co: compare disposal and use values for a machine"),
+    facts: text(
+      "تمسك A Co آلة وفق نموذج التكلفة بقيمة دفترية 10,500 دولار. قيمتها العادلة 10,000، وتكاليف التصرف 500، والقيمة الحالية للتدفقات من استخدامها 9,000 دولار.",
+      "A Co carries a machine under the cost model at $10,500. Its fair value is $10,000, costs of disposal are $500 and present value of its future use cash flows is $9,000.",
+    ),
+    question: text(
+      "هل حدث انخفاض قيمة للآلة؟ إذا نعم، احسب الخسارة.",
+      "Is the machine impaired and, if so, what is the impairment loss?",
+    ),
+    solution: [
+      text("القيمة العادلة ناقص تكاليف التصرف = 10,000 − 500 = 9,500 دولار. قيمة الاستخدام 9,000. القيمة القابلة للاسترداد هي الأعلى، أي 9,500، لا الأقل ولا مجموع القيمتين.", "Fair value less costs of disposal is $10,000 − $500 = $9,500. Value in use is $9,000. Recoverable amount is the higher, $9,500, not the lower or their sum."),
+      text("القيمة الدفترية 10,500 تتجاوز القابلة للاسترداد 9,500؛ خسارة الانخفاض = 1,000 دولار. يخفض الأصل إلى 9,500 وتثبت الخسارة في الربح أو الخسارة لأن الآلة مسجلة بالتكلفة.", "Carrying amount $10,500 exceeds recoverable amount $9,500, so impairment is $1,000. Reduce the asset to $9,500 and recognise the loss in profit or loss because the machine is cost-measured."),
+      text("قيد نموذجي: من حـ/ خسارة انخفاض 1,000 إلى حـ/ مجمع انخفاض الآلة 1,000.", "Illustrative entry: debit impairment loss $1,000; credit accumulated impairment on the machine $1,000."),
+    ],
+    reference: "IAS 36.18–19, 59–60, 63",
+  },
+  {
+    id: "ifrs-book2-krisp-value-in-use",
+    standardCode: "IAS 36",
+    title: text("Krisp: خصم تدفقات أربع سنوات واختبار الانخفاض", "Krisp: discount four-year cash flows and test impairment"),
+    facts: text(
+      "اشترت Krisp أصلًا في 1 يونيو 20X3 بمبلغ 3,000,000 دولار، ويهلك بالقسط الثابت خلال خمس سنوات. في 31 مايو 20X4 قدرت تدفقات نهاية السنوات الأربع اللاحقة بـ 280,000 و450,000 و500,000 و550,000 دولار. معدل الخصم المعطى 5%، والقيمة العادلة ناقص تكاليف التصرف 1,400,000. لا تذكر الوقائع قيمة متبقية.",
+      "Krisp bought an asset on 1 June 20X3 for $3,000,000, depreciated straight-line over five years. At 31 May 20X4 it forecasts end-of-year cash flows for the next four years of $280,000, $450,000, $500,000 and $550,000. The stated discount rate is 5%, fair value less costs of disposal is $1,400,000, and no residual value is stated.",
+    ),
+    question: text(
+      "احسب قيمة الاستخدام للأصل وخسارة الانخفاض الناشئة، مع بيان أثر تقريب التدفقات.",
+      "Calculate the asset's value in use and any impairment loss, showing the effect of rounding discounted cash flows.",
+    ),
+    solution: [
+      text(
+        "بافتراض قيمة متبقية صفر وملاءمة التدفقات ومعدل الخصم: إهلاك السنة الأولى = 3,000,000 ÷ 5 = 600,000؛ القيمة الدفترية في 31 مايو 20X4 = 2,400,000.",
+        "Assuming nil residual value and appropriate cash flows and discount rate, year-one depreciation is $3,000,000 ÷ 5 = $600,000 and carrying amount at 31 May 20X4 is $2,400,000.",
+      ),
+      text(
+        "قيمة الاستخدام = 280,000÷1.05 + 450,000÷1.05² + 500,000÷1.05³ + 550,000÷1.05⁴ ≈ 1,559,235 دولارًا. تقريب التدفقات المخصومة لأقرب ألف في العرض يعطي نحو 1,559,000.",
+        "Value in use = $280,000÷1.05 + $450,000÷1.05² + $500,000÷1.05³ + $550,000÷1.05⁴ ≈ $1,559,235. Rounding discounted flows to the nearest thousand for display gives about $1,559,000.",
+      ),
+      text(
+        "القيمة القابلة للاسترداد هي 1,559,235 تقريبًا، لأنها أعلى من 1,400,000. خسارة الانخفاض ≈ 2,400,000 − 1,559,235 = 840,765 دولارًا؛ وتُعرض 841,000 لأقرب ألف. لا تستخدم التدفقات غير المخصومة، ولا تجمع قيمة الاستخدام بقيمة البيع.",
+        "Recoverable amount is approximately $1,559,235, exceeding $1,400,000. Impairment is approximately $2,400,000 − $1,559,235 = $840,765, or $841,000 to the nearest thousand. Do not use undiscounted flows or add use value to disposal value.",
+      ),
+    ],
+    reference: "IAS 36.18, 30–57, 59–60, 63",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
