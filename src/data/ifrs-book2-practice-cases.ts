@@ -1030,6 +1030,52 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 16.6, 50",
   },
   {
+    id: "ifrs-book2-ias16-binkie-revaluation-reversal",
+    standardCode: "IAS 16",
+    title: text("Binkie: ارتفاع أرض بعد خسارة إعادة تقييم", "Binkie: land increase after a revaluation loss"),
+    facts: text(
+      "بلغت تكلفة أرض Binkie أصلًا 15,000 دولار. قبل سنتين هبطت قيمتها إلى 13,000، فأثبتت المنشأة انخفاض إعادة التقييم البالغ 2,000 في الربح أو الخسارة. قيمتها العادلة الآن 20,000، ولم يرد تغير آخر يخص الأرض.",
+      "Binkie's land originally cost $15,000. Two years ago its value fell to $13,000 and the $2,000 revaluation decrease was recognised in profit or loss. Its current fair value is $20,000, with no other change specified for this land.",
+    ),
+    question: text("كيف توزع زيادة إعادة التقييم الحالية وما القيد؟", "How is the current revaluation increase split and recorded?"),
+    solution: [
+      text("الزيادة الكلية = 20,000 − 13,000 = 7,000 دولار. يُرد في الربح أو الخسارة 2,000 بقدر الخسارة السابقة للأرض نفسها؛ وتعترف المنشأة بباقي الزيادة 5,000 في الدخل الشامل الآخر ويتراكم ضمن فائض إعادة التقييم.", "Total increase = $20,000 − $13,000 = $7,000. Recognise $2,000 in profit or loss to reverse the earlier loss on the same land; recognise the remaining $5,000 in other comprehensive income and accumulate it in revaluation surplus."),
+      text("القيد: من حـ/ الأرض 7,000؛ إلى حـ/ ربح عكس انخفاض إعادة تقييم 2,000؛ وإلى حـ/ الدخل الشامل الآخر — فائض إعادة تقييم 5,000. لا تُحوّل الزيادة كلها إلى الإيراد.", "Entry: debit land $7,000; credit profit or loss—reversal of the earlier revaluation decrease $2,000; credit other comprehensive income—revaluation surplus $5,000. Do not take the entire increase to revenue."),
+    ],
+    reference: "IAS 16.39",
+  },
+  {
+    id: "ifrs-book2-ias16-binkie-revaluation-decrease",
+    standardCode: "IAS 16",
+    title: text("Binkie: انخفاض أرض بعد فائض إعادة تقييم", "Binkie: land decrease after a revaluation surplus"),
+    facts: text(
+      "في حالة مستقلة، كلفت أرض 15,000 دولار ثم أعيد تقييمها قبل سنتين إلى 20,000 مع إثبات فائض 5,000 يخص الأرض نفسها. أصبحت قيمتها العادلة الآن 13,000، ولم يُستخدم الفائض في الفترة الفاصلة.",
+      "In a separate scenario, land cost $15,000 and was revalued two years ago to $20,000, creating a $5,000 surplus for that same land. Its current fair value is $13,000 and that surplus has not been used in the intervening period.",
+    ),
+    question: text("كيف توزع خسارة إعادة التقييم الحالية وما القيد؟", "How is the current revaluation decrease split and recorded?"),
+    solution: [
+      text("الانخفاض الكلي = 20,000 − 13,000 = 7,000 دولار. يُخفض الدخل الشامل الآخر وفائض إعادة التقييم الخاص بالأرض بمبلغ 5,000؛ ويُعترف بالمتبقي 2,000 في الربح أو الخسارة.", "Total decrease = $20,000 − $13,000 = $7,000. Reduce other comprehensive income and this land's revaluation surplus by $5,000; recognise the remaining $2,000 in profit or loss."),
+      text("القيد: من حـ/ الدخل الشامل الآخر — فائض إعادة تقييم 5,000، ومن حـ/ خسارة إعادة تقييم في الربح أو الخسارة 2,000؛ إلى حـ/ الأرض 7,000. لا تُقابل الخسارة بفائض أصل آخر.", "Entry: debit other comprehensive income—revaluation surplus $5,000 and profit or loss—revaluation loss $2,000; credit land $7,000. Do not offset the decrease against another asset's surplus."),
+    ],
+    reference: "IAS 16.40",
+  },
+  {
+    id: "ifrs-book2-ias16-crinkle-revaluation-depreciation",
+    standardCode: "IAS 16",
+    title: text("Crinkle: إعادة التقييم والإهلاك اللاحق", "Crinkle: revaluation and subsequent depreciation"),
+    facts: text(
+      "اشترت Crinkle أصلًا في أول 20X6 بتكلفة 10,000 دولار وعمر نافع خمس سنوات. في 1 يناير 20X8، بعد سنتين من إهلاك القسط الثابت وبافتراض قيمة متبقية صفر، أعيد تقييمه إلى 12,000؛ بقي العمر النافع ثلاث سنوات.",
+      "Crinkle bought an asset at the start of 20X6 for $10,000 with a five-year useful life. On 1 January 20X8, after two years of straight-line depreciation and assuming nil residual value, it was revalued to $12,000; three years of useful life remain.",
+    ),
+    question: text("احسب قيد إعادة التقييم وإهلاك 20X8 وما بعده، وبيّن كيف يمكن تحويل فائض الإهلاك المتحقق.", "Calculate the revaluation entry, depreciation from 20X8 and any permitted transfer of realised excess-depreciation surplus."),
+    solution: [
+      text("الإهلاك قبل إعادة التقييم = 10,000 ÷ 5 = 2,000 سنويًا؛ مجمع سنتين 4,000 والقيمة الدفترية في 1 يناير 20X8 هي 6,000. الزيادة إلى 12,000 = 6,000 فائض إعادة تقييم في الدخل الشامل الآخر، بافتراض عدم وجود خسارة سابقة للأصل.", "Pre-revaluation depreciation is $10,000 / 5 = $2,000 annually; two-year accumulated depreciation is $4,000 and 1 January 20X8 carrying amount is $6,000. The increase to $12,000 is $6,000 recognised in other comprehensive income as revaluation surplus, assuming no prior loss on this asset."),
+      text("باستخدام أسلوب إلغاء المجمع في IAS 16.35: من حـ/ مجمع الإهلاك 4,000 ومن حـ/ الأصل 2,000؛ إلى حـ/ فائض إعادة التقييم 6,000. هذا أحد أساليب عرض المجمع المسموح بها، وليس معالجة إلزامية وحيدة.", "Using IAS 16.35's accumulated-depreciation elimination method: debit accumulated depreciation $4,000 and asset $2,000; credit revaluation surplus $6,000. This is one permitted presentation method, not the only required one."),
+      text("إهلاك كل سنة من السنوات الثلاث ابتداءً من 20X8 = 12,000 ÷ 3 = 4,000 مقابل 2,000 على التكلفة السابقة. يجوز، لا يجب، تحويل فرق 2,000 سنويًا مباشرةً من الفائض إلى الأرباح المحتجزة؛ لا يمر التحويل في الربح أو الخسارة. يبقى مصروف الإهلاك 4,000 سنويًا.", "Depreciation each year from 20X8 for the three remaining years is $12,000 / 3 = $4,000, compared with $2,000 on original cost. The $2,000 annual excess may, but need not, be transferred directly from surplus to retained earnings; this transfer never passes through profit or loss. Depreciation expense remains $4,000 per year."),
+    ],
+    reference: "IAS 16.35, 39, 41, 50–55, 60",
+  },
+  {
     id: "ifrs-book2-ias16-ch4-quiz-production-cost",
     standardCode: "IAS 16",
     title: text("عناصر تكلفة أصل يُنشأ ذاتيًا", "Cost of a self-constructed asset"),
