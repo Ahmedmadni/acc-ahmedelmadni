@@ -266,6 +266,10 @@ if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?
   failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IAS 20 20-percent machinery grant", 100000 * 0.2, 20000],
+  ["IAS 20 net method annual depreciation", (100000 - 20000) / 4, 20000],
+  ["IAS 20 deferred method annual net profit", 50000 - 100000 / 4 + 20000 / 4, 30000],
+  ["IAS 20 four-year total profit", 30000 * 4, 120000],
   ["IAS 16 two machines 20X7 depreciation", 15000 / 5 / 12 * (3 + 11), 3500],
   ["IAS 16 first machine loss", 15000 - (6000 + 750) - 8000, 250],
   ["IAS 16 second machine loss", 15000 - (6000 + 2750) - 2500, 3750],
