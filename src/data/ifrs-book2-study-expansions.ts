@@ -273,6 +273,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 16.14, 43–44, 50–51, 60–62; IAS 8.36–38",
       },
+      {
+        title: text("القيمة الدفترية والمبلغ القابل للاسترداد", "Carrying amount and recoverable amount"),
+        explanation: text(
+          "القيمة الدفترية للأصل ليست بالضرورة سعر بيعه ولا مجرد التكلفة ناقص الإهلاك: تُطرح أيضًا خسائر الانخفاض المتراكمة، وقد يكون أساس القياس مبلغًا معاد تقييمه. وفق IAS 36، المبلغ القابل للاسترداد هو الأعلى بين القيمة العادلة ناقص تكاليف الاستبعاد وقيمة الاستخدام. لذلك قد تتجاوز القيمة الدفترية سعر البيع الصافي إذا كانت قيمة الاستخدام تدعمها. افحص مؤشرات الانخفاض، واختبر الأصل أو وحدة توليد النقد عند اللزوم؛ لا تعتمد على سعر سوقي واحد أو تفترض أن كل انخفاض في سعر البيع يوجب خسارة.",
+          "An asset's carrying amount is not necessarily its selling price or simply cost less depreciation: accumulated impairment is deducted too, and the measurement base may be revalued. IAS 36 defines recoverable amount as the higher of fair value less costs of disposal and value in use. Carrying amount can therefore exceed net selling value when supported by value in use. Assess impairment indicators and test the asset or cash-generating unit where required; one market quote alone does not prove an impairment loss.",
+        ),
+        keyPoints: [
+          text("الاسترداد = الأعلى بين قيمة الاستخدام والقيمة العادلة ناقص تكاليف الاستبعاد.", "Recoverable amount is the higher of value in use and fair value less costs of disposal."),
+          text("الإهلاك توزيع منافع، لا تقييم سوقي ولا احتياطي نقدي للشراء.", "Depreciation allocates benefits; it is neither market remeasurement nor a replacement cash reserve."),
+        ],
+        reference: "IAS 16.6, 29–31, 50–55; IAS 36.9, 18, 22",
+      },
+      {
+        title: text("إيقاف الإهلاك والاستبعاد عند البيع", "Depreciation cut-off and derecognition on sale"),
+        explanation: text(
+          "يبدأ الإهلاك حين يصبح الأصل متاحًا للاستخدام. ولا يتوقف لمجرد التوقف المؤقت عن تشغيله؛ بل يتوقف عند التصنيف المحتفظ به للبيع وفق IFRS 5 أو الاستبعاد، أيهما أسبق، مع احتمال صفر مصروف في طريقة وحدات الإنتاج عند عدم الإنتاج. عند البيع احسب إهلاك الفترة حتى تاريخ التوقف، ثم ألغِ تكلفة الأصل ومجمع إهلاكه وأثبت المقابل المستحق أو النقد؛ ربح أو خسارة الاستبعاد = صافي المتحصلات ناقص القيمة الدفترية. لا تصنف ربح بيع أصل ثابت عادي ضمن الإيراد، مع مراعاة استثناء IAS 16.69 لبيع الأصول المؤجرة بانتظام ضمن النشاط العادي.",
+          "Depreciation starts when an asset is available for use and does not stop merely because it becomes idle. It ceases on IFRS 5 held-for-sale classification or derecognition, whichever is earlier, though a units-of-production charge can be zero without output. On sale, charge depreciation to the cut-off date, remove asset cost and accumulated depreciation and recognise cash or receivable; disposal gain or loss equals net proceeds less carrying amount. An ordinary PPE disposal gain is not revenue, subject to the IAS 16.69 exception for routine sales of former rental assets in ordinary activities.",
+        ),
+        keyPoints: [
+          text("تاريخ البيع يحدد إهلاك السنة الجزئية قبل حساب ربح أو خسارة الاستبعاد.", "Sale date sets the partial-year depreciation before measuring disposal gain or loss."),
+          text("أزل تكلفة الأصل ومجمع إهلاكه معًا ولا تسجل المتحصلات كلها كربح.", "Remove both gross cost and accumulated depreciation; proceeds are not wholly profit."),
+        ],
+        reference: "IAS 16.55, 67–72; IFRS 5.25",
+      },
     ],
     workedExamples: [
       {
