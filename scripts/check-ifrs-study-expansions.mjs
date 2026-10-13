@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-stremans-specific-borrowing-two-assets",
   "ifrs-book2-rich-undetermined-land-use",
   "ifrs-book2-office-transfer-to-investment-property",
   "ifrs-book2-ias16-carrying-amount-versus-market",
@@ -268,6 +269,12 @@ if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?
   failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IAS 23 Stremans annual loan interest", 1500000 * 0.09, 135000],
+  ["IAS 23 Stremans A net specific cost", 500000 * 0.09 - 250000 * 0.07 * 6 / 12, 36250],
+  ["IAS 23 Stremans B net specific cost", 1000000 * 0.09 - 500000 * 0.07 * 6 / 12, 72500],
+  ["IAS 23 Stremans net capitalisation", 36250 + 72500, 108750],
+  ["IAS 23 Stremans A conditional asset cost", 500000 + 36250, 536250],
+  ["IAS 23 Stremans B conditional asset cost", 1000000 + 72500, 1072500],
   ["IAS 40 head office depreciation to transfer", 250000 / 50 * 9.5, 47500],
   ["IAS 40 head office transfer carrying amount", 250000 - 47500, 202500],
   ["IAS 40 head office transfer uplift", 350000 - 202500, 147500],

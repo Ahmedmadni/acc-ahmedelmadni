@@ -5322,6 +5322,39 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 40.35, 57, 61–62; IAS 16.39–40, 50–55",
   },
 
+  {
+    id: "ifrs-book2-stremans-specific-borrowing-two-assets",
+    standardCode: "IAS 23",
+    title: text("Stremans: تمويل مخصص لأصلين مؤهلين", "Stremans: specific borrowing for two qualifying assets"),
+    facts: text(
+      "في 1 يناير 20X6 اقترضت Stremans مبلغ 1.5 مليون دولار بفائدة 9% لتمويل أصلين يتطلب كل منهما عامًا للبناء. في 1 يناير أنفقت 250,000 على A و500,000 على B؛ وفي 1 يوليو أنفقت 250,000 أخرى على A و500,000 أخرى على B. استثمرت الأموال غير المستخدمة مؤقتًا بعائد 7%. يقول السؤال إن العمل بدأ خلال 20X6 لكنه لا يحدد يوم بدء الأنشطة اللازمة لإعداد كل أصل.",
+      "On 1 January 20X6 Stremans borrowed $1.5m at 9% specifically for two assets each expected to take a year to build. On 1 January it spent $250,000 on A and $500,000 on B; on 1 July it spent another $250,000 on A and $500,000 on B. Unused funds earned 7% temporarily. The question says work began during 20X6 but does not specify the date necessary preparation activities began for each asset.",
+    ),
+    question: text(
+      "بتجاهل الفائدة المركبة، احسب تكلفة الاقتراض الممكن رسملتها وتكلفة كل أصل في 31 ديسمبر 20X6، واذكر شرط تاريخ بدء الرسملة.",
+      "Ignoring compound interest, calculate capitalisable borrowing costs and each asset's cost at 31 December 20X6, and state the capitalisation commencement condition.",
+    ),
+    solution: [
+      text(
+        "إذا كانت نفقات الأصلين وتكاليف الاقتراض وأنشطة الإعداد اللازمة قد بدأت جميعها في 1 يناير واستمرت دون توقف جوهري، ففائدة القرض السنوية 1,500,000 × 9% = 135,000 دولار. يخصص للأصل A ثلثها، 45,000، ولـ B ثلثاها، 90,000، بحسب حصة كل أصل المتسقة من القرض.",
+        "If expenditures, borrowing costs and necessary preparation activities for both assets all began on 1 January and continued without a substantive interruption, annual loan interest is $1,500,000 × 9% = $135,000. On the consistently one-third/two-thirds funding allocation, A bears $45,000 and B $90,000.",
+      ),
+      text(
+        "الأموال التي لم تستخدم حتى 1 يوليو = 250,000 مخصصة لـ A و500,000 لـ B. دخل الاستثمار لستة أشهر: A = 250,000 × 7% × 6/12 = 8,750؛ B = 500,000 × 7% × 6/12 = 17,500. صافي تكاليف الاقتراض الممكن رسملتها = 36,250 لـ A و72,500 لـ B؛ المجموع 108,750 دولار.",
+        "Until 1 July, unused funds are $250,000 attributable to A and $500,000 to B. Six-month investment income is A: $250,000 × 7% × 6/12 = $8,750; B: $500,000 × 7% × 6/12 = $17,500. Net potentially capitalisable borrowing costs are $36,250 for A and $72,500 for B, totalling $108,750.",
+      ),
+      text(
+        "على هذا الافتراض فقط، تكلفة A بنهاية السنة = 500,000 إنفاق + 36,250 رسملة = 536,250؛ وتكلفة B = 1,000,000 + 72,500 = 1,072,500 دولار، قبل أي عناصر تكلفة أخرى غير معطاة.",
+        "Only on that assumption, A's year-end cost is $500,000 expenditure + $36,250 capitalisation = $536,250; B's is $1,000,000 + $72,500 = $1,072,500, before any unprovided cost elements.",
+      ),
+      text(
+        "لكن عبارة «بدأ العمل خلال السنة» لا تثبت أن أنشطة إعداد الأصلين بدأت في 1 يناير. يشترط IAS 23.17 تزامن الإنفاق وتكبد تكلفة الاقتراض ومباشرة الأنشطة اللازمة. إذا بدأت الأنشطة لاحقًا، يلزم تاريخها لإعادة تحديد الفترة المؤهلة وصافي تكلفة الاقتراض؛ لا تُعامل الأرقام السابقة كإجابة قطعية من الوقائع وحدها.",
+        "However, 'work started during the year' does not establish that necessary preparation for both assets began on 1 January. IAS 23.17 requires expenditure, borrowing costs and preparation activities concurrently. If activities began later, their dates are needed to redetermine eligible periods and net borrowing costs; the above figures are not unconditional conclusions from the facts alone.",
+      ),
+    ],
+    reference: "IAS 23.8, 12–13, 17–18, 20–22",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
