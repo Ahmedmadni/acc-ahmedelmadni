@@ -1740,7 +1740,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           text("فرق يوم النقل ليس بالضرورة مكسب قيمة عادلة في الربح أو الخسارة.", "The transfer-date difference is not automatically a fair-value gain in profit or loss."),
           text("التغيرات بعد النقل، بنموذج القيمة العادلة، تدخل الربح أو الخسارة.", "Post-transfer fair-value changes enter profit or loss under the fair value model."),
         ],
-        reference: "IAS 40.30–35, 56–62, 75(e); IAS 16.39–40",
+        reference: "IAS 40.30–35, 56–62, 79(e); IAS 16.39–40",
       },
     ],
     workedExamples: [

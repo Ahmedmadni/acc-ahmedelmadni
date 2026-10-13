@@ -78,6 +78,11 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ch4-quiz-define-depreciation",
+  "ifrs-book2-ch4-quiz-asset-production-costs",
+  "ifrs-book2-ch4-quiz-market-value-fair-value",
+  "ifrs-book2-ch4-quiz-investment-property-fair-value",
+  "ifrs-book2-ch4-quiz-ip-under-construction",
   "ifrs-book2-stremans-specific-borrowing-two-assets",
   "ifrs-book2-rich-undetermined-land-use",
   "ifrs-book2-office-transfer-to-investment-property",
@@ -267,6 +272,19 @@ for (const id of [
 }
 if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?.standardCode !== "IAS 12")
   failures.push("Bruce option-tax case must stay with IAS 12");
+
+const chapter4QuickQuiz = [
+  ["ifrs-book2-ch4-quiz-define-depreciation", "IAS 16", "Define depreciation."],
+  ["ifrs-book2-ch4-quiz-asset-production-costs", "IAS 16", "Which of the following elements can be included in the production cost of a non-current asset?"],
+  ["ifrs-book2-ch4-quiz-market-value-fair-value", "IFRS 13", "Market value can usually be taken as fair value. True or false?"],
+  ["ifrs-book2-ch4-quiz-investment-property-fair-value", "IAS 40", "Investment properties must always be shown at fair value. True or false?"],
+  ["ifrs-book2-ch4-quiz-ip-under-construction", "IAS 40", "What is the correct treatment for property being constructed for future use as investment property?"],
+];
+for (const [id, standardCode, prompt] of chapter4QuickQuiz) {
+  const item = openPracticeCases.find((practiceCase) => practiceCase.id === id);
+  if (item?.standardCode !== standardCode || item.question.en !== prompt)
+    failures.push(`${id}: chapter 4 quick-quiz source wording or standard mapping changed`);
+}
 
 const reviewedCalculations = [
   ["IAS 23 Stremans annual loan interest", 1500000 * 0.09, 135000],
