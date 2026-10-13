@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-bco-revised-useful-life",
+  "ifrs-book2-lorry-four-depreciation-methods",
   "ifrs-book2-piper-replacement-options",
   "ifrs-book2-ifrs2-quiz-cash-settled",
   "ifrs-book2-ifrs2-quiz-grant-date",
@@ -261,6 +263,13 @@ if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?
   failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IAS 16 B Co revised annual depreciation", (80000 - 80000 * 3 / 10) / 4, 14000],
+  ["IAS 16 aircraft first-year components", 20000000 / 20 + 5000000 * 150 / 500 + 8000000 * 400 / 1600, 4500000],
+  ["IAS 16 aircraft post-overhaul comparable charge", 4500000 + 1200000 / 3, 4900000],
+  ["IAS 16 lorry use-days total", 200 + 100 + 100 + 150 + 40, 590],
+  ["IAS 16 lorry rounded annual use allocation", 5084.75 + 2542.37 + 2542.37 + 3813.56 + 1016.95, 15000],
+  ["IAS 16 lorry reducing balance rounded total", 5950 + 3868 + 2514 + 1634 + 1034, 15000],
+  ["IAS 16 lorry years-digits total", 5000 + 4000 + 3000 + 2000 + 1000, 15000],
   ["IFRS 2 Piper expected replacement vesting employees", 975 - 35 - 40 - 40, 860],
   ["IFRS 2 Piper replacement increment per option", 7 - 1, 6],
   ["IFRS 2 Piper original cumulative cost", 860 * 3000 * 5 * 2 / 3, 8600000],
