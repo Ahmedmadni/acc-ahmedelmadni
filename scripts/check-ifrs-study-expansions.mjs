@@ -78,6 +78,9 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ias16-carrying-amount-versus-market",
+  "ifrs-book2-ias16-depreciation-purpose-and-pattern",
+  "ifrs-book2-riveting-machines-disposals",
   "ifrs-book2-bco-revised-useful-life",
   "ifrs-book2-lorry-four-depreciation-methods",
   "ifrs-book2-piper-replacement-options",
@@ -263,6 +266,10 @@ if (openPracticeCases.find((item) => item.id === "ifrs-book2-bruce-option-tax")?
   failures.push("Bruce option-tax case must stay with IAS 12");
 
 const reviewedCalculations = [
+  ["IAS 16 two machines 20X7 depreciation", 15000 / 5 / 12 * (3 + 11), 3500],
+  ["IAS 16 first machine loss", 15000 - (6000 + 750) - 8000, 250],
+  ["IAS 16 second machine loss", 15000 - (6000 + 2750) - 2500, 3750],
+  ["IAS 16 disposal losses total", 250 + 3750, 4000],
   ["IAS 16 B Co revised annual depreciation", (80000 - 80000 * 3 / 10) / 4, 14000],
   ["IAS 16 aircraft first-year components", 20000000 / 20 + 5000000 * 150 / 500 + 8000000 * 400 / 1600, 4500000],
   ["IAS 16 aircraft post-overhaul comparable charge", 4500000 + 1200000 / 3, 4900000],
