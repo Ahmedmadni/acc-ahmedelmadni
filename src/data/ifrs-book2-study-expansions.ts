@@ -297,6 +297,31 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 16.55, 67–72; IFRS 5.25",
       },
+      {
+        title: text("نطاق IAS 16 واختبار الاعتراف", "IAS 16 scope and recognition test"),
+        explanation: text(
+          "يطبق IAS 16 على الأصول الملموسة المستخدمة في الإنتاج أو توريد الخدمات أو التأجير أو الإدارة لأكثر من فترة، بما في ذلك النباتات المثمرة نفسها؛ أما المنتج الذي ينمو عليها فيبقى ضمن IAS 41. تُوجّه حقوق التعدين والاحتياطيات، والأصول المصنفة محتفظًا بها للبيع، إلى المعايير المختصة وفق حدود نطاق IAS 16. اعترف بالأصل أو الجزء البديل فقط إذا رجح تدفق منافعه الاقتصادية إلى المنشأة وأمكن قياس تكلفته بموثوقية. لا تضف شرطًا مستقلًا بانتقال «المخاطر والمكافآت» كما لو كان معيار الإيراد، ولا ترسمل أي قطعة غيار أو معدات سلامة بلا اختبار شروط الاعتراف؛ قد تكون معدات السلامة لازمة للاستفادة من الأصول الأخرى ويُراجع انخفاض قيمة المجموعة المرتبطة.",
+          "IAS 16 covers tangible items used for production, services, rental or administration over more than one period, including bearer plants themselves; produce growing on them remains under IAS 41. Mineral rights/reserves and assets classified as held for sale follow their applicable Standards within IAS 16's scope boundaries. Recognise an item or replacement only when associated future benefits are probable and cost is reliably measurable. Do not introduce a separate transfer-of-risks-and-rewards rule as if it were a revenue test, or capitalise every spare or safety item without the recognition test; safety equipment may enable benefits from other assets and prompt impairment assessment of the related group.",
+        ),
+        keyPoints: [
+          text("افصل النبات المثمر عن المنتج الزراعي النامي عليه.", "Distinguish a bearer plant from produce growing on it."),
+          text("الإنفاق اللاحق وإحلال المكونات يخضعان لمبدأ الاعتراف نفسه.", "Subsequent expenditure and component replacement face the same recognition principle."),
+        ],
+        reference: "IAS 16.2–11, 13–14; IAS 41.2–3",
+      },
+      {
+        title: text("تكلفة الأصل والاختبار والاستبدال والمبادلة", "Asset cost, testing, replacement and exchange"),
+        explanation: text(
+          "تبدأ تكلفة الأصل بثمن الشراء بعد الخصومات، ورسوم الاستيراد والضرائب غير القابلة للاسترداد، والتكاليف المباشرة اللازمة لجعله في الموقع والحالة المقصودة، والتقدير الأولي لالتزام التفكيك وإعادة الموقع إن وجد. لا ترسمل مصروفات الإدارة العامة أو التأسيس أو الخسائر التشغيلية الأولية لمجرد وقوعها أثناء المشروع. اختبر عمل الأصل، لكن اعترف بمتحصلات بيع المنتجات المصنوعة قبل جاهزيته وتكلفتها في الربح أو الخسارة وفق المعايير المنطبقة؛ لا تخصم المتحصلات من تكلفة الأصل. عند استبدال جزء جوهري، ألغِ القيمة الدفترية للجزء القديم واعترف بالجديد إذا تحققت الشروط. وفي مبادلة أصل غير نقدي، استخدم القيمة العادلة عادة، إلا إذا افتقرت العملية إلى الجوهر التجاري أو تعذر قياس القيمة العادلة لكلا طرفيها بموثوقية؛ حينها يكون الأساس قيمة الأصل المتنازل عنه الدفترية.",
+          "Asset cost starts with purchase price after discounts, import duties and non-refundable taxes, directly attributable costs to bring it to intended location and condition, and any initial dismantling/restoration obligation estimate. Do not capitalise general administration, start-up or initial operating losses merely because they arise during the project. Test functionality, but recognise proceeds and costs of items produced before intended use in profit or loss under applicable Standards; do not net sale proceeds against asset cost. On replacement, derecognise the old part's carrying amount and recognise the new part if criteria are met. A non-monetary exchange is normally measured at fair value unless it lacks commercial substance or neither fair value is reliably measurable; then use the carrying amount of the asset given up.",
+        ),
+        keyPoints: [
+          text("بيع منتجات الاختبار لا يخفض تكلفة الأصل بعد تعديل IAS 16.20A.", "Selling test output does not reduce asset cost after IAS 16.20A."),
+          text("ألغِ الجزء المستبدل عند الاعتراف بالجزء الجديد؛ لا تُبقِهما معًا.", "Derecognise the replaced part when recognising its replacement."),
+          text("مبادلة الأصل تختبر الجوهر التجاري وقابلية القياس قبل اختيار التكلفة.", "For an exchange, assess commercial substance and reliable fair-value measurement."),
+        ],
+        reference: "IAS 16.7, 13–24; IAS 37.14",
+      },
     ],
     workedExamples: [
       {
