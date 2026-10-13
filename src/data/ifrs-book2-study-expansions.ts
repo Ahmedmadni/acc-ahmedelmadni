@@ -2175,6 +2175,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 15": {
     sections: [
       {
+        title: text("الشهادات والفواتير لا تحسم طبيعة الحق في المقابل", "Certificates and invoices do not determine the nature of the right"),
+        explanation: text(
+          "عند البناء على مدى الزمن، ابدأ بالتحقق من أحد معايير IFRS 15.35 ثم اختر مقياس تقدم يعكس ما نُقل للعميل. شهادة العمل قد تكون دليلًا على قيمة المخرجات لكنها لا تثبت تلقائيًا حقًا نافذًا في الدفع عن الأداء طوال العقد، خصوصًا عند إنهاء العميل. بعد الاعتراف بالإيراد، اسأل سؤالًا منفصلًا عن العرض: هل أصبح الحق في المقابل غير مشروط إلا بمرور الوقت؟ إذا نعم فهو ذمة مدينة، حتى قبل إصدار الفاتورة؛ وإلا فهو أصل عقد ما دام الأداء سبق الدفع أو استحقاقه. التحصيل أو الفوترة ليسا مقياس الإيراد.",
+          "For over-time construction, first establish an IFRS 15.35 criterion and use a progress measure that depicts transfer to the customer. A work certificate may evidence output value but does not automatically establish an enforceable right to payment for performance throughout the contract, especially on customer termination. After revenue recognition, assess presentation separately: if the right to consideration is unconditional except for time, it is a receivable even before an invoice; otherwise it is a contract asset when performance precedes payment or payment due. Billing and collection do not measure revenue.",
+        ),
+        keyPoints: [
+          text("افحص العقد والقانون: قيمة شهادة الأعمال ليست بديلًا عن حق الدفع عند إنهاء العميل دون إخلال.", "Inspect contract and law: a work certificate is not a substitute for a right to payment on termination without seller default."),
+          text("فرّق بين قياس الأداء وتوقيت استحقاق المقابل وتصنيف الحق في الميزانية.", "Separate progress measurement, payment entitlement and statement-of-financial-position classification."),
+        ],
+        reference: "IFRS 15.35–40, 105–108, B14–B19",
+      },
+      {
         title: text("تكاليف الحصول على العقد والوفاء به: أصل أم مصروف؟", "Contract acquisition and fulfilment costs: asset or expense?"),
         explanation: text(
           "تُرسمل التكلفة الإضافية للحصول على عقد، كالعمولة التي ما كانت لتنشأ لولا نجاحه، إذا توقعت المنشأة استردادها. أما تكلفة كانت ستتحملها سواء فازت بالعقد أم لا فتُحمل مصروفًا ما لم تكن قابلة للتحميل صراحةً على العميل. وتكاليف الوفاء تُفحص أولًا تحت IAS 2 أو IAS 16 أو IAS 38 عند انطباقها؛ وإذا لم يحكمها معيار آخر، يثبت أصل IFRS 15 فقط إن كانت مرتبطة مباشرة بعقد محدد، وتنشئ أو تعزز موارد لأداء مستقبلي، ويتوقع استردادها. يُستهلك الأصل على نحو يتسق مع نقل السلع والخدمات المرتبطة به ويُختبر للانخفاض.",

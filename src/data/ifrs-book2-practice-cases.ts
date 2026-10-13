@@ -3506,6 +3506,34 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 15.B34–B38",
   },
   {
+    id: "ifrs-book2-ifrs15-certified-tower-progress",
+    standardCode: "IFRS 15",
+    title: text("عقد البرج: الإنجاز المعتمد والحق في المقابل", "Tower contract: certified progress and the right to consideration"),
+    facts: text(
+      "بدأ عقد بناء في 1 يناير 20X5 بقيمة 1,500,000 دولار، وينتظر إتمامه في 31 ديسمبر 20X6. حتى 31 ديسمبر 20X5 تكبدت المنشأة 600,000 دولار، واكتمل نصف العمل، وأصدرت شهادات بقيمة العمل المنجز 750,000 دولار. تتوقع تكاليف أخرى 600,000 لإتمامه. لا تذكر الوقائع شروط إنهاء العميل للعقد أو أثر الشهادات على استحقاق الدفع أو الفواتير والتحصيل.",
+      "A $1,500,000 construction contract begins on 1 January 20X5 and is expected to finish on 31 December 20X6. By 31 December 20X5 the entity has incurred $600,000, completed half the work and obtained work certificates for $750,000. Another $600,000 of cost is expected to complete it. The facts do not state customer termination rights, whether certificates make payment unconditional, or invoicing and cash collections.",
+    ),
+    question: text(
+      "احسب إيراد وربح 20X5 إذا تحقق شرط الاعتراف على مدى الزمن وكانت نسبة 50% مقياس تقدم مناسبًا؛ وهل تثبت الشهادات وحدها حقًا نافذًا في الدفع أو ذممًا مدينة بقيمة 750,000؟",
+      "Calculate 20X5 revenue and profit if an over-time criterion is met and 50% appropriately measures progress. Do certificates alone establish an enforceable right to payment or a $750,000 receivable?",
+    ),
+    solution: [
+      text(
+        "بشرط تحقق IFRS 15.35 وطريقة تقدم تعكس الأداء، إيراد 20X5 = 1,500,000 × 50% = 750,000 دولار؛ تكلفة الأداء المتكبدة 600,000؛ الربح = 150,000. التكاليف المتوقعة الكلية 1,200,000 تعطي ربحًا متوقعًا 300,000، لكن هذه الأرقام لا تُثبت بذاتها تحقق شرط الاعتراف على مدى الزمن.",
+        "Subject to IFRS 15.35 and a faithful progress measure, 20X5 revenue is $1,500,000 × 50% = $750,000, cost is $600,000 and profit is $150,000. Total expected cost of $1,200,000 implies expected profit of $300,000, but these figures alone do not establish over-time eligibility.",
+      ),
+      text(
+        "تُختبر شروط IFRS 15.35(a)–(c): استفادة العميل بالتزامن، أو سيطرته على أصل قيد الإنشاء، أو عدم إمكان استخدام الأصل لغيره مع حق نافذ في مقابل الأداء المنجز. شهادة الـ750,000 قد تساعد في قياس المخرجات، لكنها لا تثبت وحدها حقًا نافذًا طوال مدة العقد؛ يلزم فحص الشروط التعاقدية والقانونية، ولا سيما التعويض عند إنهاء العميل دون إخلال من البائع.",
+        "Test IFRS 15.35(a)–(c): simultaneous customer benefit, customer control of the work in progress, or no alternative use plus an enforceable right to payment for performance to date. A $750,000 certificate may support output measurement but does not by itself prove an enforceable right throughout the contract; inspect contract and law, especially compensation on customer termination without seller default.",
+      ),
+      text(
+        "إذا كان الحق في الـ750,000 غير مشروط إلا بمرور الوقت، يعرض ذممًا مدينة حتى لو لم تصدر فاتورة. وإذا كان الحق مشروطًا بأداء إضافي، يعرض أصل عقد. لا تُعطى شروط كافية لاختيار أحد العرضين أو إثبات تحصيل نقدي، كما أن الفرق بين الشهادات والفواتير ليس بذاته أصل العقد.",
+        "If the $750,000 right is unconditional except for time, present a receivable even without an invoice. If it depends on further performance, present a contract asset. The facts do not support choosing one presentation or recording cash; certificates less invoices are not automatically a contract asset.",
+      ),
+    ],
+    reference: "IFRS 15.35–40, 105–108, B14–B19",
+  },
+  {
     id: "ifrs-book2-santolina-contract-profit",
     standardCode: "IFRS 15",
     title: text(
