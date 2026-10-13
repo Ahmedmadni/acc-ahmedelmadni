@@ -2265,7 +2265,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ),
         calculations: [
           text("سعر الرد أقل من المبلغ المقبوض بمقدار 100,000، لكنه أعلى من القيمة السوقية المتوقعة بمقدار 150,000؛ لدى العميل حافز اقتصادي مهم لممارسة الخيار.", "The put price is $100,000 below the proceeds but $150,000 above expected market value; the customer has a significant economic incentive to exercise."),
-          text("مع هذا الحافز لا تعامل المتحصلات بيعًا نهائيًا؛ يعالج الترتيب إيجارًا وفق IFRS 16، مع بقاء الأصل في دفاتر المنشأة وتقييم تصنيف الإيجار وشروطه.", "With that incentive the proceeds are not an outright sale; account for the arrangement as a lease under IFRS 16, retaining the asset and assessing lease classification and terms."),
+          text("مع هذا الحافز لا تعامل المتحصلات بيعًا نهائيًا؛ يعالج الترتيب وفق IFRS 16. يلزم تصنيف الإيجار وشروطه لتحديد عرض الأصل أو صافي الاستثمار والإيراد.", "With that incentive the proceeds are not an outright sale; apply IFRS 16. Lease classification and terms determine presentation of the asset or net investment and income."),
         ],
         conclusion: text(
           "فرق 100,000 ليس تلقائيًا إيراد إيجار تشغيليًا يُثبت دفعة واحدة؛ يحتاج توقيت الدخل وتصنيف الإيجار إلى شروط إضافية غير مذكورة. لا يُخترع قيد إيجار محدد.",
