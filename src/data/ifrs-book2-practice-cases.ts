@@ -15,6 +15,37 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs15-office-software-obligations",
+    standardCode: "IFRS 15",
+    title: text("حزمة البرمجيات: أربع وعود قابلة للتمييز", "Software package: four distinct promises"),
+    facts: text(
+      "تتعاقد Office Solutions مع عميل لتوفير ترخيص استخدام برنامج اتصالات، وتركيبه، ودعم فني لمدة ثلاث سنوات، وتحديثات للبرنامج لثلاث سنوات. قد يتطلب التركيب تحديث نظام التشغيل لكنه لا يخصص البرنامج للعميل؛ ويمكن لمزود آخر إجراء التركيب أو الدعم، ويعمل البرنامج بلا التحديثات والدعم.",
+      "Office Solutions contracts to provide a communications-software licence, installation, three years of technical support and three years of software updates. Installation might require an operating-system upgrade but does not customise the software; another provider can install or support it, and the software functions without updates or support."
+    ),
+    question: text("حدد ما إذا كانت الوعود في العقد التزامات أداء منفصلة وفق IFRS 15.", "Determine whether the promises are separate performance obligations under IFRS 15."),
+    solution: [
+      text("كل من الترخيص والتركيب والدعم والتحديثات قابل لأن ينتفع منه العميل بذاته أو مع موارد متاحة بسهولة. كما أنها قابلة للتحديد على حدة ضمن العقد: لا يدمج التركيب البرمجية في مخرج معدل جوهريًا، ولا يعتمد تشغيلها على الدعم أو التحديثات. بناءً على الوقائع المعطاة توجد أربعة التزامات أداء متميزة.", "The customer can benefit from each of the licence, installation, support and updates on its own or with readily available resources. The promises are also separately identifiable in this contract: installation does not significantly modify the software, which operates without the later support or updates. On the stated facts there are four distinct performance obligations."),
+      text("لا يحدد السؤال أسعار البيع المستقلة أو المقابل أو تواريخ تقديم الخدمات، فلا يُحسب تخصيص سعر الصفقة ولا توقيت الإيراد. إذا اختلفت الوقائع، مثل تخصيص جوهري أو تكامل مرتفع، يجب إعادة تقييم التمييز ولا يكفي عدّ عناصر العقد آليًا.", "The prompt gives no stand-alone selling prices, total consideration or service dates, so allocation and revenue timing cannot be calculated. Material customisation or significant integration would require reassessing distinctness; merely counting contract line items is not enough.")
+    ],
+    reference: "IFRS 15.22–30, 73–74",
+  },
+  {
+    id: "ifrs-book2-ifrs15-taplop-retrospective-volume-discount",
+    standardCode: "IFRS 15",
+    title: text("Taplop: خصم كمية بأثر رجعي وتحديث الإيراد", "Taplop: retrospective volume rebate and revenue update"),
+    facts: text(
+      "اتفقت Taplop في 1 يوليو 20X5 على بيع حواسيب إلى TrillCo بسعر 500 دولار للوحدة، وينخفض سعر جميع وحدات سنة العقد بأثر رجعي إلى 450 دولارًا إذا تجاوزت المشتريات 500 وحدة. بنهاية سبتمبر باعت 70 وحدة وقدّرت أن العميل لن يتجاوز العتبة خلال السنة. في الربع المنتهي في ديسمبر اشترى العميل 250 وحدة أخرى بعد توسع كبير، فأصبحت Taplop تتوقع تجاوز عتبة الخصم. نهاية سنة Taplop في 30 يونيو.",
+      "On 1 July 20X5 Taplop agreed to sell laptops to TrillCo for $500 per unit, retrospectively reduced to $450 for all units in the contract year if purchases exceed 500. By September it had sold 70 and estimated the customer would not pass the threshold. During the December quarter the customer purchased another 250 after substantial expansion, and Taplop then expected the threshold to be exceeded. Taplop's year-end is 30 June."
+    ),
+    question: text("احسب إيراد Taplop في ربعي سبتمبر وديسمبر، مع توضيح أثر الخصم الرجعي.", "Calculate Taplop's September and December quarter revenue, explaining the retrospective rebate."),
+    solution: [
+      text("في 30 سبتمبر، طبقًا للتقدير المدعوم حينها وقيود المقابل المتغير، إيراد 70 × 500 = 35,000 دولار. لا يُعاد توصيف هذا التقدير القديم بأنه خطأ لمجرد تغير الوقائع لاحقًا.", "At 30 September, on the supported estimate then and subject to the variable-consideration constraint, revenue is 70 × $500 = $35,000. A later change in facts does not make that earlier estimate an error."),
+      text("في ربع ديسمبر، يقدّر السعر الجديد 450 دولارًا لجميع الوحدات: إيراد 250 وحدة جديدة = 250 × 450 = 112,500؛ ويُخفض إيراد الـ70 وحدة السابقة بمقدار 70 × (500 − 450) = 3,500. إذن إيراد ربع ديسمبر = 112,500 − 3,500 = 109,000 دولار، ويصبح الإيراد التراكمي 35,000 + 109,000 = 144,000 = 320 × 450.", "For the December quarter the revised price is $450 for all units: new-unit revenue is 250 × $450 = $112,500, less a $3,500 catch-up reduction for the first 70 (70 × ($500 − $450)). December-quarter revenue is $109,000; cumulative revenue is $144,000 = 320 × $450."),
+      text("يعاد تقييم المقابل المتغير في نهاية كل فترة. إذا لم يكن تجاوز عتبة 500 وحدة مرجحًا بدرجة تدعم التقدير المقيد في ديسمبر، فلا يثبت التخفيض بهذه الصورة؛ الوقائع المعطاة تفترض أن تغير نمط الشراء يبرر التقدير الجديد.", "Variable consideration is reassessed each reporting date. If exceeding the threshold were not sufficiently supportable under the constraint in December, this particular adjustment would not follow; the stated facts establish the changed purchasing pattern supporting the new estimate.")
+    ],
+    reference: "IFRS 15.50–59, 87–89",
+  },
+  {
     id: "ifrs-book2-ias8-kelshall-policy-incentive",
     standardCode: "IAS 8",
     title: text("تغيير نموذج قياس العقارات تحت ضغط الحوافز", "Changing a property measurement model under incentive pressure"),
