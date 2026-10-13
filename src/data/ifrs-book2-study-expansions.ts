@@ -2258,6 +2258,40 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
     ],
     workedExamples: [
       {
+        title: text("خيار رد يملكه العميل وسعر إعادة شراء 900,000", "Customer-held put with a 900,000 repurchase price"),
+        facts: text(
+          "تقبض منشأة 1,000,000 دولار عن أصل، وللعميل حق إلزامها بإعادة شرائه خلال سنة مقابل 900,000. القيمة السوقية المتوقعة عندئذ 750,000. تُقيّم الحوافز والحقوق عند بداية العقد وفق الشروط المعطاة.",
+          "An entity receives $1,000,000 for an asset. The customer can require it to repurchase the asset within a year for $900,000; expected market value then is $750,000. Assess incentives and rights at contract inception from the stated terms.",
+        ),
+        calculations: [
+          text("سعر الرد أقل من المبلغ المقبوض بمقدار 100,000، لكنه أعلى من القيمة السوقية المتوقعة بمقدار 150,000؛ لدى العميل حافز اقتصادي مهم لممارسة الخيار.", "The put price is $100,000 below the proceeds but $150,000 above expected market value; the customer has a significant economic incentive to exercise."),
+          text("مع هذا الحافز لا تعامل المتحصلات بيعًا نهائيًا؛ يعالج الترتيب وفق IFRS 16. يلزم تصنيف الإيجار وشروطه لتحديد عرض الأصل أو صافي الاستثمار والإيراد.", "With that incentive the proceeds are not an outright sale; apply IFRS 16. Lease classification and terms determine presentation of the asset or net investment and income."),
+        ],
+        conclusion: text(
+          "فرق 100,000 ليس تلقائيًا إيراد إيجار تشغيليًا يُثبت دفعة واحدة؛ يحتاج توقيت الدخل وتصنيف الإيجار إلى شروط إضافية غير مذكورة. لا يُخترع قيد إيجار محدد.",
+          "The $100,000 difference is not automatically operating-lease income recognised at once; income timing and lease classification need further terms not given. No specific lease entry is invented.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 15.B70–B72; IFRS 16",
+      },
+      {
+        title: text("آلة وقطع غيار مدفوعة مع بقاء القطع لدى البائع", "Machine and paid-for spares retained by the seller"),
+        facts: text(
+          "يسدد العميل مقابل آلة وقطع غيار بعد صنعهما، ويتسلم الآلة. يفحص قطع الغيار ويقبلها لكنه يطلب إبقاءها في مخزن البائع، مع قدرته على سحبها في أي وقت. لا تتوافر أسعار بيع مستقلة أو مقابل محدد في الوقائع.",
+          "After production, the customer pays for a machine and spare parts and takes the machine. The customer inspects and accepts the spares but asks that they remain at the seller's warehouse and can collect them at any time. No stand-alone prices or total consideration are stated.",
+        ),
+        calculations: [
+          text("إيراد الآلة يتبع انتقال السيطرة عند التسليم. أما قطع الغيار فلا يكفي لقبولها أو دفع ثمنها وحده: اختبر السبب الجوهري للاحتفاظ، وتخصيص القطع للعميل، وجاهزيتها للنقل، وعدم قدرة البائع على استخدامها أو إعادة توجيهها.", "Machine revenue follows control transfer on delivery. Acceptance or payment alone does not settle the spares: test the substantive reason for holding, separate identification for the customer, readiness for transfer, and the seller's inability to use or redirect them."),
+          text("إذا تحققت شروط الاحتفاظ الأربعة وانتقلت السيطرة، فقيّم خدمة الحفظ المتبقية بوصفها وعدًا متميزًا محتملاً، وخصص السعر نسبيًا فقط بعد تحديد أسعار البيع المستقلة.", "If all four bill-and-hold conditions are met and control transfers, assess the remaining custody service as a possible distinct promise and allocate price relatively only once stand-alone selling prices are established."),
+        ],
+        conclusion: text(
+          "لا تُثبت إيرادات القطع أو الحفظ بمبالغ مخترعة. إن لم تستوف شروط IFRS 15.B81، يُؤجل إيراد قطع الغيار رغم الفاتورة والتحصيل إلى انتقال السيطرة.",
+          "Do not invent amounts for spares or custody. If IFRS 15.B81 is not satisfied, defer spares revenue despite invoicing and cash receipt until control transfers.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 15.22–30, 31–38, 73–86, B79–B82",
+      },
+      {
         title: text("هاتف مجاني ظاهريًا مع خدمة لمدة سنتين", "Apparently free handset with two years of service"),
         facts: text(
           "يحصل العميل على هاتف عند توقيع عقد خدمة شبكة مدته 24 شهرًا بسعر 20 دولارًا شهريًا. سعر بيع الهاتف المستقل 100 دولار، وسعر الخدمة المستقل لعامين 480 دولارًا. يفترض المثال أن الهاتف والخدمة التزاما أداء منفصلان، ولا يذكر خصمًا خاصًا بأحدهما أو مكون تمويل مهمًا.",

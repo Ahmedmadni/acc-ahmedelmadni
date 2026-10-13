@@ -3482,6 +3482,30 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 15.B34–B38, B77–B78",
   },
   {
+    id: "ifrs-book2-ifrs15-fancy-goods-agent",
+    standardCode: "IFRS 15",
+    title: text("Fancy Goods: منصة ترتب البيع بعمولة", "Fancy Goods: platform arranging sales for a commission"),
+    facts: text(
+      "تشغل Fancy Goods موقعًا يمكّن العملاء من شراء منتجات موردين متعددين. يحدد الموردون الأسعار ويسلمون المنتجات مباشرة إلى العملاء الذين دفعوا مقدمًا. تسهّل المنصة الدفع وتتقاضى عمولة 5% من سعر البيع، ولا يبقى عليها التزام تجاه العميل بعد ترتيب التوريد.",
+      "Fancy Goods operates a website through which customers buy products from different suppliers. Suppliers set the prices and deliver directly to customers who have paid in advance. The platform facilitates payment, earns a 5% commission on the selling price and has no further customer obligation after arranging supply.",
+    ),
+    question: text(
+      "هل تتصرف Fancy Goods أصيلًا أم وكيلًا، وبأي أساس تعرض الإيراد؟",
+      "Is Fancy Goods a principal or an agent, and on what basis does it present revenue?",
+    ),
+    solution: [
+      text(
+        "حدد أولًا الوعد المحدد: ترتيب تقديم المورد للسلعة. المورد مسؤول عن الوفاء، ويتحمل مخاطر المخزون ويحدد السعر. لا تسيطر Fancy Goods على السلعة قبل نقلها للعميل، فتتصرف وكيلًا؛ وهذه المؤشرات تدعم حكم السيطرة ولا تحل محله.",
+        "First identify the specified promise: arranging the supplier's provision of the product. The supplier is responsible for fulfilment, bears inventory risk and sets the price. Fancy Goods does not control the product before customer transfer and acts as agent; the indicators support rather than replace the control assessment.",
+      ),
+      text(
+        "تعترف المنصة بإيراد عمولتها فقط، وهو 5% من سعر البيع عند الوفاء بخدمة الترتيب، لا بكامل متحصلات العميل. لم يحدد السؤال سعر بيع عدديًا أو تفاصيل توقيت التسوية، فلا يُفترض مبلغ أو قيد نقدي غير معطى.",
+        "The platform recognises only its 5% commission as revenue when its arranging service is satisfied, not the customer's gross payment. No numerical selling price or settlement timing is provided, so no unsupported amount or cash entry is assumed.",
+      ),
+    ],
+    reference: "IFRS 15.B34–B38",
+  },
+  {
     id: "ifrs-book2-santolina-contract-profit",
     standardCode: "IFRS 15",
     title: text(
