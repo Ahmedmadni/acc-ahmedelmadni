@@ -557,6 +557,20 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 2": {
     sections: [
       {
+        title: text("متى تصبح العملة المشفرة مخزونًا؟", "When is a cryptocurrency holding inventory?"),
+        explanation: text(
+          "بالنسبة للفئة غير التعاقدية من العملات المشفرة التي عالجها قرار لجنة تفسيرات IFRS، إذا كانت المنشأة تحتفظ بالرموز للبيع في السياق المعتاد لأعمالها فهي مخزون ضمن IAS 2. ويُقاس المخزون عادةً بالأقل من التكلفة وصافي القيمة القابلة للتحقق. أما تاجر السلع الوسيط الذي يستوفي شروط IAS 2.3(b) ويقيس مخزونه بالقيمة العادلة ناقص تكاليف البيع، فيعترف بتغير ذلك القياس في الربح أو الخسارة. لا يكفي وصف المنشأة بأنها «متداولة» وحده لإثبات استثناء الوسيط؛ افحص طبيعة نشاطها وغرض الشراء وسرعة إعادة البيع.",
+          "For the non-contractual cryptocurrency subset considered by the IFRS Interpretations Committee, tokens held for sale in an entity's ordinary course of business are IAS 2 inventory. Inventory is normally measured at the lower of cost and net realisable value. A qualifying commodity broker-trader applying IAS 2.3(b) measures its inventory at fair value less costs to sell and recognises changes in profit or loss. A trading label alone does not establish that exception; inspect the entity's activity, acquisition purpose and expected resale."
+        ),
+        keyPoints: [
+          text("حيازة للاستثمار أو الاستخدام خارج البيع المعتاد تُراجع تحت IAS 38، لا تُسمّى مخزونًا لمجرد إمكان بيعها.", "An investment or use holding outside ordinary-course sales is assessed under IAS 38, not called inventory merely because it can be sold."),
+          text("ميّز صافي القيمة القابلة للتحقق لمخزون النشاط المعتاد عن القيمة العادلة ناقص تكاليف البيع لاستثناء تاجر السلع الوسيط.", "Distinguish ordinary inventory's net realisable value from the broker-trader exception's fair value less costs to sell."),
+          text("لا تعمم النتيجة على العملات المستقرة أو الرموز ذات حقوق تعاقدية دون تحليل الحقوق الفعلية.", "Do not extend the conclusion to stablecoins or tokens with contractual rights without analysing those rights.")
+        ],
+        reference: "IAS 2.3(b), 5–6, 9; IAS 38.8, 12; IFRS Interpretations Committee, Holdings of Cryptocurrencies (June 2019)",
+      },
+
+      {
         title: text("التقييم صنفًا بصنف: التكلفة أم صافي القيمة القابلة للتحقق؟", "Item-by-item valuation: cost or net realisable value?"),
         explanation: text(
           "كوّن تكلفة كل صنف من تكلفة الشراء والتحويل والتكاليف اللازمة لإيصاله إلى مكانه وحالته الحاليين. قد يدخل نصيبه المنتظم من تكاليف الإنتاج المؤهلة، لكن تكلفة البيع ليست جزءًا من تكلفة المخزون. احسب صافي القيمة القابلة للتحقق من سعر البيع المتوقع في النشاط المعتاد بعد طرح تكلفة الإتمام والتكاليف الضرورية لإتمام البيع، ثم خذ الأقل من التكلفة وهذا الصافي لكل صنف أو مجموعة مناسبة؛ لا تعوض خسارة صنف بزيادة محتملة في صنف آخر. إذا كان الصافي أقل، أثبت التخفيض مصروفًا للفترة. قيّم ما يلزم للبيع وفق الوقائع، فلا تحصره آليًا في التكاليف الإضافية لكل صفقة فقط.",
@@ -1304,6 +1318,20 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   },
   "IAS 38": {
     sections: [
+      {
+        title: text("الأصول المشفرة: افحص حقوق الرمز وغرض الاحتفاظ قبل التصنيف", "Cryptoassets: inspect token rights and holding purpose before classification"),
+        explanation: text(
+          "قرار لجنة تفسيرات IFRS بشأن حيازة العملات المشفرة ينطبق على فئة محددة: أصل رقمي قائم على دفتر موزع ومؤمن بالتشفير، لا يصدره طرف ولا ينشئ عقدًا بين حامل الرمز وطرف آخر. إذا لم يُحتفظ بهذا الأصل للبيع في سياق النشاط المعتاد، يعالج عادةً أصلًا غير ملموسًا وفق IAS 38؛ فهو قابل للفصل والتحويل، وليس نقدًا أو حقًا تعاقديًا في نقد لمجرد قبوله في بعض المدفوعات. يجب فحص شروط كل رمز؛ فالرموز التي تمنح مطالبة تعاقدية أو حقًا في أداة مالية قد تقع في نطاق مختلف.",
+          "The IFRS Interpretations Committee's cryptocurrency decision covers a defined subset: a cryptographically secured distributed-ledger asset with no issuer and no contract between the holder and another party. Unless held for sale in the ordinary course of business, such a holding is generally an IAS 38 intangible: it is separable and transferable, but is not cash or a contractual right to cash merely because some merchants accept it. Assess each token's rights; contractual claims or financial-instrument rights can lead to different accounting."
+        ),
+        keyPoints: [
+          text("اسأل أولًا: هل الرمز ضمن نطاق القرار، وهل تحتفظ به المنشأة للبيع في نشاطها المعتاد؟ إذا نعم، انتقل إلى IAS 2 بدل IAS 38.", "First ask whether the token fits the decision's defined subset and is held for sale in ordinary activities; if so, consider IAS 2 instead of IAS 38."),
+          text("تبدأ المعالجة في IAS 38 بالتكلفة، ثم يُختار نموذج التكلفة أو إعادة التقييم إذا وُجد سوق نشط قابل للإثبات؛ لا تفترض أن كل سوق تداول نشط بالمعنى المحاسبي.", "IAS 38 starts at cost, then uses the cost model or a revaluation model only where an active market is demonstrable; an exchange listing is not by itself proof of an active market."),
+          text("يُقيّم العمر النافع والانخفاض والإفصاح بحسب الوقائع، ولا يُفترض تلقائيًا أن كل العملات المشفرة ذات عمر غير محدد أو أداة مالية.", "Assess useful life, impairment and disclosure from the facts; do not presume every cryptoasset has an indefinite life or is a financial asset.")
+        ],
+        reference: "IAS 38.8, 12, 72–75, 88–91; IAS 2.6; IFRS Interpretations Committee, Holdings of Cryptocurrencies (June 2019)",
+      },
+
       {
         title: text(
           "تاريخ استيفاء شروط التطوير هو بداية الأصل",
