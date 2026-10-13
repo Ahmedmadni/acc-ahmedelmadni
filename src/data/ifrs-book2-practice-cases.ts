@@ -15,6 +15,22 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs15-p-contract-cost-progress",
+    standardCode: "IFRS 15",
+    title: text("عقد P: التقدم بالتكلفة وتصنيف الحق في المقابل", "P contract: cost-based progress and right-to-payment presentation"),
+    facts: text(
+      "لدى P عقد بسعر إجمالي 750 مليون دولار. تكبدت حتى التاريخ 225 مليونًا، وتتوقع 340 مليونًا إضافية للإكمال. أصدرت فواتير وتلقت 290 مليونًا. تستخدم طريقة المدخلات بالتكلفة لقياس التقدم. يفترض التحليل أن التزام الأداء مستوفى على مدى الزمن وأن تكاليف الـ225 مليونًا تعكس فعلًا الأداء المنقول إلى العميل؛ لا يوضح النص ما إذا كان الحق في باقي المقابل غير مشروط.",
+      "P has a $750m contract, with $225m cost incurred and $340m further cost expected to complete. It has invoiced and collected $290m. It uses a cost-based input measure of progress. The analysis assumes the performance obligation qualifies for over-time recognition and all $225m depicts performance transferred; the facts do not say whether the remaining right to consideration is unconditional."
+    ),
+    question: text("احسب التقدم والإيراد والربح حتى التاريخ، وفسّر عرض المبلغ الزائد عن المقبوض.", "Calculate progress, revenue and profit to date, and explain presentation of the amount exceeding cash received."),
+    solution: [
+      text("التكلفة الكلية المتوقعة = 225 + 340 = 565 مليونًا؛ نسبة التقدم الدقيقة = 225 ÷ 565 = 39.8230%، بشرط أن تكون المدخلات ملائمة لقياس نقل السيطرة وفق IFRS 15.39–40 وB19.", "Expected total cost = 225 + 340 = $565m; exact progress is 225 / 565 = 39.8230%, assuming the inputs appropriately depict transfer of control under IFRS 15.39–40 and B19."),
+      text("الإيراد الدقيق حتى التاريخ = 750 × 225 ÷ 565 = 298.6726 مليون؛ تكلفة المبيعات 225 مليونًا؛ الربح 73.6726 مليونًا. بتقريب نسبة التقدم أولًا إلى 40% كما في حل تدريبي مبسط، تظهر أرقام 300 و75 مليونًا؛ الفرق 1.3274 مليون من تقريب وسيط، وليس معاملة أخرى.", "Exact revenue to date = 750 × 225 / 565 = $298.6726m; cost of sales $225m; profit $73.6726m. Rounding progress first to 40% produces a simplified $300m revenue and $75m profit; the $1.3274m difference is intermediate rounding, not another transaction."),
+      text("الفارق بين الإيراد الدقيق والمقبوض والمفوتر 290 مليونًا هو 8.6726 مليون. إن بقي الحق في ذلك المبلغ معلقًا على أداء آخر أو شهادة مستقبلية فهو أصل عقد؛ وإن لم يبق سوى مرور الزمن لاستحقاق دفعه فهو ذمة مدينة، ولو لم تصدر فاتورته بعد. لا تكفي واقعة عدم الفوترة وحدها للجزم بالتصنيف.", "Revenue above the $290m billed and collected is $8.6726m. It is a contract asset if entitlement remains conditional on further performance or certification; if only time must pass before payment is due, it is a receivable even if not yet invoiced. Lack of an invoice alone does not determine classification.")
+    ],
+    reference: "IFRS 15.35, 39–40, B19, 105–108",
+  },
+  {
     id: "ifrs-book2-ifrs15-office-software-obligations",
     standardCode: "IFRS 15",
     title: text("حزمة البرمجيات: أربع وعود قابلة للتمييز", "Software package: four distinct promises"),
