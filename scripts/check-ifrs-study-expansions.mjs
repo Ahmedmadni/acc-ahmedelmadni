@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-alpha-operating-lease-rent-free",
   "ifrs-book2-company-a-five-year-advance-lease",
   "ifrs-book2-cgu-reversal-three-years-later",
   "ifrs-book2-ias36-ch5-quiz-recoverable-amount",
@@ -299,6 +300,10 @@ for (const [id, standardCode, prompt] of chapter4QuickQuiz) {
 }
 
 const reviewedCalculations = [
+  ["IFRS 16 Alpha first-year cash conditional", 3600 * 10 / 12, 3000],
+  ["IFRS 16 Alpha total consideration conditional", 3000 + 3600 * 2, 10200],
+  ["IFRS 16 Alpha straight-line total conditional", 10200 / 3, 3400],
+  ["IFRS 16 Alpha year-one accrued balance conditional", 3400 - 3000, 400],
   ["IFRS 16 off-market additional financing", 800000 - 750000, 50000],
   ["IFRS 16 off-market gross contractual PV", 120000 * 4.39, 526800],
   ["IFRS 16 off-market lease component", 526800 - 50000, 476800],
