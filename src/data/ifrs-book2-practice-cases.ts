@@ -5632,6 +5632,80 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 16.17, 61–66, 81–84; IFRS 15.73–90; IAS 16.55",
   },
 
+
+  {
+    id: "ifrs-book2-ias38-purchased-brand-useful-life",
+    standardCode: "IAS 38",
+    title: text("تقدير العمر النافع لعلامة تجارية مشتراة", "Assessing the useful life of a purchased brand"),
+    facts: text(
+      "اشترت منشأة اسم علامة تجارية. لا يقدم السؤال مدة قانونية أو توقعات نقدية أو تاريخ تجديد محدد.",
+      "An entity has purchased a brand name. The question provides no legal term, cash-flow forecast or specified renewal date.",
+    ),
+    question: text(
+      "كيف تحدد المنشأة العمر النافع للعلامة المشتراة، وما أثر تصنيفه محدودًا أو غير محدد؟",
+      "How should the entity determine the purchased brand's useful life, and what follows if it is finite or indefinite?",
+    ),
+    solution: [
+      text(
+        "تفحص حقوق الحماية وتجديدها وتكلفة التجديد، وعمر العلامة ومكانتها، واستقرار السوق والانتشار الجغرافي، ومخاطر المنافسة والتقادم، والإنفاق اللازم لدعمها، وخطط الإدارة وقدرتها على الحفاظ على المنافع، والفترة المتوقعة لتدفقات النقد. لا تُساوي بين امتداد حق قانوني وبين ضمان استمرار المنافع.",
+        "Examine legal protection, renewal rights and renewal cost; the brand's age and market position; market stability and geographic reach; competition and obsolescence; supporting expenditure; management's plans and ability to maintain benefits; and the expected cash-flow period. A renewable legal right does not by itself guarantee continuing benefits.",
+      ),
+      text(
+        "إن وُجد حد متوقع للمنافع، تُطفأ العلامة على عمرها المحدود بدءًا من جاهزيتها للاستخدام ويُراجع العمر والطريقة سنويًا. وإن لم يوجد حد منظور بعد تحليل الأدلة فهي غير محددة العمر، فلا تُطفأ بل تُختبر للانخفاض سنويًا، ويُراجع حكم عدم التحديد كل سنة. لا يمكن اختيار عدد سنوات أو مبلغ إطفاء من معطيات السؤال.",
+        "If benefits have a foreseeable limit, amortise the finite-life brand from when it is available for use and review life and method annually. If no foreseeable limit remains after analysing the evidence, do not amortise; test for impairment annually and revisit the indefinite-life assessment each year. The facts do not support inventing a term or charge.",
+      ),
+    ],
+    reference: "IAS 38.88–96, 97–110; IAS 36.10",
+  },
+  {
+    id: "ifrs-book2-ias38-research-development-activity-examples",
+    standardCode: "IAS 38",
+    title: text("أمثلة أنشطة البحث والتطوير", "Examples of research and development activities"),
+    facts: text(
+      "يطلب تمرين تصنيف أمثلة الأنشطة التي يوردها IAS 38 في مرحلتي البحث والتطوير، دون مبالغ أو تواريخ مشروع.",
+      "A review prompt asks for the activity examples in IAS 38's research and development phases, without project amounts or dates.",
+    ),
+    question: text(
+      "ما أمثلة أنشطة البحث وأنشطة التطوير؟ وهل دخول النشاط في التطوير يكفي وحده لرسملة تكلفته؟",
+      "What activities exemplify research and development? Is being in the development phase alone enough to capitalise cost?",
+    ),
+    solution: [
+      text(
+        "من البحث: السعي إلى معرفة جديدة؛ البحث عن تطبيقات نتائج الأبحاث وتقييمها واختيارها؛ استكشاف بدائل للمواد أو الأجهزة أو المنتجات أو العمليات أو الأنظمة أو الخدمات؛ وتصميم البدائل الممكنة وتقييمها واختيارها. يُحمل الإنفاق البحثي على المصروف عند تكبده.",
+        "Research includes seeking new knowledge; searching for, evaluating and selecting applications of findings; searching for alternatives to materials, devices, products, processes, systems or services; and formulating, evaluating and selecting possible alternatives. Expense research expenditure as incurred.",
+      ),
+      text(
+        "من التطوير: تصميم وبناء واختبار نماذج ما قبل الإنتاج؛ تصميم أدوات وقوالب بتقنية جديدة؛ إنشاء وتشغيل مصنع تجريبي غير مجدٍ للإنتاج التجاري؛ وتصميم واختبار البديل المختار لتحسين منتج أو عملية. هذه أمثلة على المرحلة وليست إذنًا آليًا بالرسملة؛ يلزم إثبات شروط IAS 38 الستة جميعًا، ولا تُجمع في تكلفة الأصل إلا النفقات اللاحقة لتاريخ تحققها.",
+        "Development examples include designing, building and testing pre-production prototypes; designing tools or moulds using new technology; constructing and operating a pilot plant not economically feasible for commercial production; and designing and testing the selected improvement. These identify a phase, not automatic capitalisation: all six IAS 38 criteria must be demonstrated, and only expenditure from that date enters asset cost.",
+      ),
+    ],
+    reference: "IAS 38.54–59, 65–67",
+  },
+  {
+    id: "ifrs-book2-ifrs3-goodwill-distinguishing-characteristics",
+    standardCode: "IFRS 3",
+    title: text("ما الذي يميز شهرة الاستحواذ عن الأصل غير الملموس المحدد؟", "How does acquisition goodwill differ from an identifiable intangible?"),
+    facts: text(
+      "يسأل تمرين تفسيري عن طبيعة الشهرة، وقابلية فصلها، وارتباط قيمتها بعوامل مثل فريق العمل والعلاقات مع العملاء، وعن أثر ذلك على معالجتها المحاسبية.",
+      "An explanatory prompt asks about goodwill's nature, separability and links to factors such as an assembled workforce and customer relationships, and how these affect its accounting.",
+    ),
+    question: text(
+      "اذكر الخصائص الرئيسية التي تميز الشهرة عن أصل غير ملموس محدد، وبيّن المعالجة الواجبة لشهرة تجميع الأعمال والشهرة المتولدة داخليًا.",
+      "State the main characteristics distinguishing goodwill from an identifiable intangible, and the required treatment of business-combination and internally generated goodwill.",
+    ),
+    solution: [
+      text(
+        "تمثل الشهرة منافع مستقبلية متبقية من عناصر مشتراة في تجميع أعمال لا يمكن تحديدها والاعتراف بكل منها منفصلًا. لا تباع عادةً بمعزل عن النشاط، ولا تقاس مباشرةً بتكلفة بناء السمعة أو تدريب العاملين؛ وتختلف عن أصل قابل للفصل أو ناشئ من حق تعاقدي/قانوني يمكن تحديده. يجب فصل الأصول غير الملموسة المحددة المستحوذ عليها عن الشهرة متى استوفت متطلبات IFRS 3 وIAS 38.",
+        "Goodwill is the residual future benefit from acquired items in a business combination that cannot individually be identified and separately recognised. It is not ordinarily sold apart from the business or measured by spending on reputation or staff training. An identifiable intangible is separable or arises from contractual or legal rights; recognise qualifying acquired identifiable intangibles separately from goodwill.",
+      ),
+      text(
+        "لا تُعترف الشهرة المتولدة داخليًا أصلًا. أما شهرة تجميع الأعمال فتُقاس وفق معادلة IFRS 3 التي تشمل المقابل والحصة غير المسيطرة وأي حصة سابقة مقابل صافي الأصول المحددة في تاريخ الاستحواذ، وتبقى بالتكلفة ناقص خسائر الانخفاض؛ لا تُطفأ وتُختبر سنويًا. إمكان الجدل النظري بشأن صعوبة تقييمها لا يجيز شطب شهرة الاستحواذ فورًا أو استبدال المعالجة الإلزامية.",
+        "Do not recognise internally generated goodwill. Measure combination goodwill under IFRS 3 using consideration, non-controlling interest and any previously held interest less acquisition-date identifiable net assets; subsequently carry it at cost less impairment, without amortisation, and test it annually. Conceptual debate about valuation does not permit immediate write-off of acquired goodwill or override the required treatment.",
+      ),
+    ],
+    reference: "IFRS 3.10–13, 32; IAS 38.11–12, 48–50; IAS 36.80, 90, 124",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
