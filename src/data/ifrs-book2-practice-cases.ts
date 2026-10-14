@@ -5459,6 +5459,64 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 36.18, 30–57, 59–60, 63",
   },
 
+
+  {
+    id: "ifrs-book2-cgu-identification-examples",
+    standardCode: "IAS 36",
+    title: text("أمثلة تحديد وحدة توليد النقد", "Examples of identifying a cash-generating unit"),
+    facts: text(
+      "توجد حالتان: سكة خاصة بمنجم لا تولد تدفقات داخلة مستقلة ولا يمكن بيعها إلا خردة؛ وشركة حافلات ذات أربعة خطوط، تُحدد أصول وتدفقات كل خط، لكنها ملزمة تعاقديًا بتشغيل الخطوط الأربعة ولا تستطيع إيقاف الخط الخاسر وحده.",
+      "Two situations are described: a mine's private railway has no independent cash inflows and only scrap value; a bus company has four routes with identifiable route assets and cash flows, but its contract requires all four routes and it cannot discontinue the loss-making route on its own.",
+    ),
+    question: text(
+      "هل يمكنك إعطاء أمثلة على كيفية تحديد وحدة توليد النقد؟",
+      "Can you think of some examples of how a cash-generating unit would be identified?",
+    ),
+    solution: [
+      text(
+        "السكة لا تُختبر كوحدة نقدية مستقلة لمجرد أن لها قيمة خردة؛ لأنها تخدم مخرجات المنجم ولا تولد تدفقات مستقلة إلى حد كبير. افحص المنجم مع السكة في أصغر مجموعة تولد تدفقات مستقلة.",
+        "The railway is not a separate unit merely because it has scrap value. It supports the mine's output without largely independent inflows, so test the mine and railway in the smallest group with independent inflows.",
+      ),
+      text(
+        "في مثال الحافلات، رغم إمكانية رصد نتائج كل خط، فإن الالتزام بتشغيل الأربعة ومنع إيقاف الخاسر منفردًا يجعل المجموعة المتعاقد عليها وحدة الاختبار على الوقائع المذكورة. لا تعمم عدد الخطوط أو حدود الوحدة على منشآت أخرى دون اختبار استقلال التدفقات والعقد.",
+        "For the bus company, separate route results do not override the binding requirement to run all four. On these facts the contracted routes form the test unit; do not assume the same boundary for another operator without examining independent inflows and its contract.",
+      ),
+      text(
+        "افحص كيف تراقب الإدارة الأداء وتتخذ قرارات الاستمرار أو التخلص، واستخدم حدودًا متسقة عبر الفترات ما لم يتغير الأساس بمبرر. وجود سوق نشطة لمخرجات مجموعة أصول قد يجعلها وحدة منفصلة حتى إن استُخدم ناتجها داخليًا.",
+        "Consider how management monitors performance and makes continuation or disposal decisions, and identify units consistently between periods unless a change is justified. An active market for a group's output may make it a separate unit even when output is used internally.",
+      ),
+    ],
+    reference: "IAS 36.6, 66–72",
+  },
+  {
+    id: "ifrs-book2-fourways-cgu-loss-allocation",
+    standardCode: "IAS 36",
+    title: text("Fourways: توزيع خسارة وحدة توليد النقد", "Fourways: allocate a CGU impairment loss"),
+    facts: text(
+      "لدى Fourways وحدة توليد نقد تضم مبنى بقيمة دفترية 30 مليون دولار، وآلات ومعدات 6 ملايين، وشهرة مخصصة 10 ملايين، وأصولًا متداولة 20 مليونًا؛ مجموع البنود 66 مليونًا. قُدرت القيمة القابلة للاسترداد للوحدة، على أساس متسق مع هذه البنود، بـ50 مليونًا. لا يحدد السؤال ماهية الأصول المتداولة أو نتائج قياسها بموجب معاييرها.",
+      "Fourways has a cash-generating unit with a building carried at $30 million, plant and equipment $6 million, allocated goodwill $10 million and current assets $20 million, total $66 million. The unit's recoverable amount, assumed consistently measured on this basis, is $50 million. The question does not identify the current assets or their measurements under their own Standards.",
+    ),
+    question: text(
+      "كيف توزع خسارة انخفاض القيمة البالغة 16 مليون دولار بين بنود الوحدة؟",
+      "How do we allocate the impairment loss?",
+    ),
+    solution: [
+      text(
+        "إذا كان مجموع القيمة الدفترية 66 مليونًا والقيمة القابلة للاسترداد 50 مليونًا على أساس متسق، فإن خسارة الوحدة 16 مليونًا. وفق IAS 36، اختبر أولًا أي أصل يحتاج قياسًا منفردًا، ثم خفض الشهرة المخصصة أولًا بمقدار 10 ملايين إلى صفر.",
+        "On a consistent $66 million carrying and $50 million recoverable basis, the unit loss is $16 million. First test any assets requiring an individual assessment; under IAS 36 reduce allocated goodwill by $10 million to zero before allocating the remaining loss.",
+      ),
+      text(
+        "إذا كانت الأصول المتداولة قد قيست بالفعل بمعاييرها ولا تتحمل جزءًا آخر من خسارة IAS 36، ولا يوجد حد أدنى فردي يمنع التخفيض، يوزع الرصيد 6 ملايين بين المبنى والآلات بنسبة 30:6: خسارة المبنى 5 ملايين وخسارة الآلات مليون؛ فتكون القيم 25 و5 و0 و20 مليونًا على الترتيب، ومجموعها 50 مليونًا.",
+        "If the current assets have been measured under their applicable Standards and bear no further IAS 36 allocation, and no individual floor restricts the write-down, split the remaining $6 million over building and plant in the 30:6 ratio: $5 million to the building and $1 million to plant. Resulting balances are $25 million, $5 million, nil goodwill and $20 million current assets, totalling $50 million.",
+      ),
+      text(
+        "هذه القسمة الأخيرة مشروطة؛ فمجرد وصف الأصول المتداولة بأنها «متداولة» لا يثبت أنها بقيمتها العادلة أو أنها لا تحتاج تخفيضًا وفق IAS 2 أو IFRS 9 مثلًا. تحقق من قياسها واتساق طرفي المقارنة ومن حدود IAS 36.105 قبل اعتماد توزيع 5/1 نهائيًا.",
+        "That final split is conditional: calling assets 'current' does not prove they are at fair value or need no adjustment under, for example, IAS 2 or IFRS 9. Verify their measurements, the consistency of both sides of the test and IAS 36.105 floors before treating the $5m/$1m allocation as unconditional.",
+      ),
+    ],
+    reference: "IAS 36.2, 76–79, 97–98, 104–105",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
