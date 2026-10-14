@@ -5517,6 +5517,32 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 36.2, 76–79, 97–98, 104–105",
   },
 
+
+  {
+    id: "ifrs-book2-oil-platform-restoration-cgu",
+    standardCode: "IAS 36",
+    title: text("منصة نفط: مقارنة متسقة مع التزام التفكيك", "Oil platform: compare amounts consistently with dismantling liability"),
+    facts: text(
+      "تبلغ القيمة الدفترية لمنصة حفر 3 ملايين دولار، وقد اعترفت المنشأة منفصلًا بالتزام تفكيك وإزالة قيمته الدفترية 0.6 مليون. عرض مشترٍ دفع 2.8 مليون مقابل المنصة مع تحمل التزام الإزالة. تقدر القيمة الحالية لتدفقات استخدامها بـ3.3 ملايين قبل طرح الالتزام. لا تذكر الوقائع تكاليف تصرف إضافية.",
+      "A drilling platform has a $3 million asset carrying amount and a separately recognised dismantling liability of $0.6 million. A buyer offers $2.8 million for the platform while assuming the removal obligation. Present value of use cash flows is $3.3 million before the liability; no additional disposal costs are specified.",
+    ),
+    question: text(
+      "ما القيمة التي تستمر بها المنصة في قائمة المركز المالي؟ وهل نشأت خسارة انخفاض قيمة؟",
+      "What should be the value of the drilling platform in the statement of financial position, and what, if anything, is the impairment loss?",
+    ),
+    solution: [
+      text(
+        "لأن عرض الشراء يتضمن تولي المشتري التزامًا معترفًا به، قارن على أساس صافٍ متسق: القيمة الدفترية للوحدة = 3 − 0.6 = 2.4 مليون. القيمة من الاستخدام بعد الالتزام = 3.3 − 0.6 = 2.7 مليون، وعرض البيع الصافي 2.8 مليون، بافتراض أنه يمثل القيمة العادلة ناقص تكاليف التصرف.",
+        "Because the bid requires the buyer to assume a recognised obligation, compare on a consistent net basis: the unit carrying amount is $3m − $0.6m = $2.4m. Value in use after the liability is $3.3m − $0.6m = $2.7m; assuming the bid represents fair value less costs of disposal, the net disposal amount is $2.8m.",
+      ),
+      text(
+        "القيمة القابلة للاسترداد للوحدة = 2.8 مليون، وهي أعلى من القيمة الدفترية الصافية 2.4 مليون؛ لا تنشأ خسارة انخفاض في هذه الوقائع. يبقى الأصل معروضًا بقيمته الدفترية 3 ملايين والالتزام منفصلًا بـ0.6 مليون. طرح الالتزام من قيمة الاستخدام فقط ثم مقارنة 2.8 مليون بالأصل الإجمالي 3 ملايين يخلط أساسين وينتج خسارة 0.2 مليون غير مبررة.",
+        "Recoverable amount of the net unit is $2.8m, above its $2.4m net carrying amount, so the facts produce no impairment. The asset remains at its $3m carrying amount with the $0.6m liability separately presented. Deducting the liability from value in use but comparing the $2.8m net bid to the $3m gross asset would mix bases and wrongly suggest a $0.2m loss.",
+      ),
+    ],
+    reference: "IAS 36.18, 29, 75–79",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
