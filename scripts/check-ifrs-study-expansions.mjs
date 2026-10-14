@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-cgu-identification-examples",
+  "ifrs-book2-fourways-cgu-loss-allocation",
   "ifrs-book2-aco-machinery-impairment",
   "ifrs-book2-krisp-value-in-use",
   "ifrs-book2-ch4-quiz-define-depreciation",
@@ -580,6 +582,11 @@ const reviewedCalculations = [
   ["Acruni weighted capitalisation rate", (120 * 0.1 + 80 * 0.095) / 200, 0.098],
   ["Acruni borrowing cost capitalised", 30 * 0.098 + 20 * 0.098 * (3 / 12), 3.43],
   ["Acruni remaining interest expense", 120 * 0.1 + 80 * 0.095 - 3.43, 16.17],
+  ["Fourways CGU carrying total", 30 + 6 + 10 + 20, 66],
+  ["Fourways conditional unit loss", 66 - 50, 16],
+  ["Fourways loss after goodwill", 16 - 10, 6],
+  ["Fourways conditional building allocation", 6 * 30 / 36, 5],
+  ["Fourways conditional plant allocation", 6 * 6 / 36, 1],
   ["A Co fair value less costs of disposal", 10000 - 500, 9500],
   ["A Co recoverable amount", Math.max(9500, 9000), 9500],
   ["A Co impairment loss", 10500 - 9500, 1000],

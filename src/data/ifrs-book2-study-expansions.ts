@@ -1578,6 +1578,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 36.6, 18–21, 30–57, 59–60",
       },
+      {
+        title: text("تحديد وحدة توليد النقد وتوزيع الشهرة", "Identify a CGU and allocate goodwill"),
+        explanation: text(
+          "إذا تعذر تحديد القيمة القابلة للاسترداد لأصل منفرد لعدم استقلال تدفقاته، انتقل إلى أصغر مجموعة أصول تولد تدفقات داخلة مستقلة إلى حد كبير. راجع الموقع وقاعدة العملاء، وطريقة متابعة الإدارة للأداء، والقدرة القانونية والتشغيلية على استمرار النشاط أو إنهائه. لا تجعل الشراء المركزي وحده سببًا لدمج متاجر متمايزة؛ ولا تفصل خط حافلات لا تسمح الاتفاقية بإيقافه وحده. ثبت حدود الوحدات من فترة لأخرى ما لم يوجد مبرر للتغيير. خصص الشهرة للوحدة أو مجموعة الوحدات المنتفعة من منافع الاستحواذ عند أدنى مستوى تراقبها فيه الإدارة، بشرط ألا تتجاوز قطاعًا تشغيليًا قبل التجميع.",
+          "If an asset's recoverable amount cannot be determined separately because its inflows are not largely independent, use the smallest group of assets with largely independent inflows. Consider location and customer base, how management monitors performance and whether operations can legally and practically continue or cease separately. Central purchasing alone need not combine distinct stores; a bus route that the contract does not permit discontinuing may not be a separate unit. Identify units consistently from period to period unless a change is justified. Allocate goodwill to benefiting units or groups at the lowest internal monitoring level, no larger than an operating segment before aggregation.",
+        ),
+        keyPoints: [
+          text("استقلال التدفقات الداخلة هو جوهر تحديد الوحدة، لا مجرد فصل التكاليف.", "Independent cash inflows are central; separately tracked costs are not enough."),
+          text("تحدد قيمة الوحدة الدفترية والقابلة للاسترداد على أساس متسق، ولا تخصم التزامًا معترفًا به إلا في الحالة المناسبة.", "Measure CGU carrying and recoverable amounts consistently; include a recognised liability only when the test requires it."),
+        ],
+        reference: "IAS 36.6, 66–80",
+      },
+      {
+        title: text("توزيع خسارة الوحدة وحدود تخفيض الأصول", "Allocate CGU loss within asset floors"),
+        explanation: text(
+          "اختبر أولًا الأصول الفردية التي يظهر لها انخفاض أو تحكمها معايير قياس خاصة. إن كانت قيمة الوحدة الدفترية أعلى من القابلة للاسترداد، خفض الشهرة المخصصة أولًا، ثم وزع الرصيد على الأصول الأخرى الخاضعة للتوزيع بنسبة قيمها الدفترية. لا تخفض أي أصل عن الأعلى من قيمته العادلة ناقص تكاليف التصرف إن أمكن قياسها، وقيمة استخدامه إن أمكن تحديدها، والصفر. أعد توزيع ما منعه الحد الأدنى على بقية الأصول المؤهلة. وفي المثال العددي، افتراض بقاء الأصول المتداولة عند 20 مليونًا وتوزيع 6 ملايين بين المبنى والآلات بنسبة 30:6 يحتاج تحققًا من قياس تلك الأصول واتساق اختبار الوحدة؛ لا يكفي القول إنها متداولة.",
+          "Test separately impaired assets and assets governed by other measurement Standards first. If a unit's carrying amount exceeds recoverable amount, reduce allocated goodwill first, then allocate the balance pro rata to other eligible assets. Do not reduce an asset below the highest of measurable fair value less costs of disposal, determinable value in use and zero; redistribute any amount blocked by that floor. In the numerical example, leaving current assets at $20m and splitting $6m over building and plant in a 30:6 ratio requires evidence about those assets and consistency of the CGU test, not merely their current classification.",
+        ),
+        keyPoints: [
+          text("الشهرة أولًا، ثم الأصول المؤهلة بنسبة قيمها، مع مراعاة الحدود الدنيا.", "Goodwill first, then eligible assets pro rata, subject to individual floors."),
+          text("لا تفترض أن كل الأصول المتداولة مقاسة بالقيمة العادلة أو خارج المقارنة.", "Do not assume all current assets are fair-valued or excluded from the comparison."),
+        ],
+        reference: "IAS 36.2, 76–79, 97–98, 104–108",
+      },
     ],
     workedExamples: [
       {
