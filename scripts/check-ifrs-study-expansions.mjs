@@ -78,6 +78,12 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-cgu-reversal-three-years-later",
+  "ifrs-book2-ias36-ch5-quiz-recoverable-amount",
+  "ifrs-book2-ias36-ch5-quiz-revalued-asset",
+  "ifrs-book2-ias36-ch5-quiz-cgu-allocation",
+  "ifrs-book2-ias36-ch5-quiz-reversal",
+  "ifrs-book2-ias36-ch5-quiz-reversal-amount",
   "ifrs-book2-oil-platform-restoration-cgu",
   "ifrs-book2-cgu-identification-examples",
   "ifrs-book2-fourways-cgu-loss-allocation",
@@ -292,6 +298,11 @@ for (const [id, standardCode, prompt] of chapter4QuickQuiz) {
 }
 
 const reviewedCalculations = [
+  ["IAS 36 reversal case original carrying", 40 + 20 + 80, 140],
+  ["IAS 36 reversal case original unit loss", 140 - 60, 80],
+  ["IAS 36 conditional tangible reversal cap", 70 - 60, 10],
+  ["IAS 36 quick quiz prior loss", 300000 - 280000, 20000],
+  ["IAS 36 quick quiz reversal ceiling", Math.min(310000, 300000) - 280000, 20000],
   ["IAS 23 Stremans annual loan interest", 1500000 * 0.09, 135000],
   ["IAS 23 Stremans A net specific cost", 500000 * 0.09 - 250000 * 0.07 * 6 / 12, 36250],
   ["IAS 23 Stremans B net specific cost", 1000000 * 0.09 - 500000 * 0.07 * 6 / 12, 72500],

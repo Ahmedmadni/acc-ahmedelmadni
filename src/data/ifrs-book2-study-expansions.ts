@@ -1614,6 +1614,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 36.29, 75–79",
       },
+      {
+        title: text("عكس الانخفاض: حدد التغير الحقيقي وسقف كل أصل", "Reversing impairment: identify changed estimates and each asset cap"),
+        explanation: text(
+          "افحص بنهاية فترة التقرير مؤشرات زوال الانخفاض السابق. لا يكفي ارتفاع القيمة القابلة للاسترداد بمرور الزمن؛ يلزم تغير في التقديرات التي بُني عليها الاختبار السابق. لا تعكس خسارة الشهرة مطلقًا. في غير الشهرة، لا ترفع القيمة الدفترية بعد العكس فوق قيمتها التي كانت ستظهر لولا الانخفاض، بعد الإهلاك أو الإطفاء. وإذا كان الاختبار لوحدة مولدة للنقد، يوزع العكس على أصولها عدا الشهرة بنسبة قيمها الدفترية، مع مراعاة القيمة القابلة للاسترداد الفردية متى أمكن تحديدها وسقف القيمة دون انخفاض. بعد ذلك حدّث الإهلاك المستقبلي. عكس أصل التكلفة يذهب عادة إلى الربح أو الخسارة؛ أما الأصل المعاد تقييمه فيتبع أحكام إعادة التقييم.",
+          "At each reporting date look for evidence that a prior loss has diminished. A rise caused solely by passage of time is insufficient: estimates used in the prior recoverable-amount test must have changed. Never reverse goodwill impairment. For other assets, cap the post-reversal carrying amount at what it would have been without impairment, after depreciation or amortisation. For a CGU, allocate reversal to its assets other than goodwill pro rata by carrying amount, subject to each asset's determinable recoverable amount and no-impairment carrying cap. Then revise future depreciation. A cost-model reversal generally enters profit or loss; a revalued asset follows revaluation accounting.",
+        ),
+        keyPoints: [
+          text("في حالة الوحدة 140 إلى 60 ثم 90 مليونًا، حد الأصل الملموس دون انخفاض 70 مليونًا؛ لا يعني ذلك ثبوت عكس 10 ملايين ما لم تُعرف قيمته الفعلية بعد ثلاث سنوات.", "In the CGU case, 140 falls to 60 then recoverable amount rises to 90; the tangible no-impairment cap is 70, but a 10m reversal is not established without its actual carrying amount three years later."),
+          text("في سؤال الأصل غير القابل للإهلاك: 300,000 إلى 280,000 ثم قابل للاسترداد 310,000؛ العكس 20,000 فقط لا 30,000.", "For the non-depreciable asset: 300,000 to 280,000 then recoverable 310,000; reverse only 20,000, not 30,000."),
+        ],
+        reference: "IAS 36.110–115, 117–124",
+      },
     ],
     workedExamples: [
       {
