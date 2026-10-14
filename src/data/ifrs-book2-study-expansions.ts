@@ -1578,7 +1578,6 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 36.6, 18–21, 30–57, 59–60",
       },
-    ],
       {
         title: text("تحديد وحدة توليد النقد وتوزيع الشهرة", "Identify a CGU and allocate goodwill"),
         explanation: text(
@@ -1603,6 +1602,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 36.2, 76–79, 97–98, 104–108",
       },
+    ],
     workedExamples: [
       {
         title: text(
