@@ -5602,6 +5602,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 16.22–29, 36–38, 47; IAS 1.69",
   },
 
+
+  {
+    id: "ifrs-book2-alpha-operating-lease-rent-free",
+    standardCode: "IFRS 16",
+    title: text("مؤجر تشغيلي: شهران بلا إيجار في بداية العقد", "Operating lessor: two rent-free months at commencement"),
+    facts: text(
+      "أجّرت Alpha آلة إلى Beta لمدة ثلاث سنوات تبدأ 1 يناير 20X1؛ العمر النافع المتبقي للآلة عشر سنوات. الإيجار السنوي 3,600 دولار يُدفع في 31 ديسمبر، مع إعفاء Beta من أول شهرين عند بداية العقد. تتولى Alpha صيانة الآلة. لا تذكر الوقائع قيمة الآلة أو سعر خدمة الصيانة المستقل.",
+      "Alpha leases a machine to Beta for three years from 1 January 20X1; the machine's remaining useful life is ten years. Annual rent of $3,600 is payable on 31 December, with Beta granted the first two months rent-free. Alpha maintains the machine. The facts give neither the machine's carrying amount nor a stand-alone price for maintenance.",
+    ),
+    question: text(
+      "ناقش معالجة العقد في قوائم Alpha عن السنة المنتهية في 31 ديسمبر 20X1، مع الحسابات الممكنة.",
+      "Discuss Alpha's accounting for the year ended 31 December 20X1, including relevant calculations.",
+    ),
+    solution: [
+      text(
+        "بحسب المعطيات، مدة الثلاث سنوات جزء محدود من عمر الآلة الباقي ولا تظهر قرائن نقل معظم مخاطر ومنافع الملكية؛ فيُصنف العقد لدى المؤجر تشغيليًا. تبقى الآلة ضمن أصول Alpha ويستمر إهلاكها وفق IAS 16؛ لا يمكن حساب الإهلاك لغياب قيمتها الدفترية وتفاصيلها.",
+        "On the stated facts, three years is a limited portion of the machine's remaining life and there is no evidence that substantially all ownership risks and rewards transfer, so the lessor classifies it as operating. Alpha retains and depreciates the machine under IAS 16; its depreciation cannot be calculated without carrying amount and other details.",
+      ),
+      text(
+        "إذا كان مبلغ 3,600 السنوي كله مقابل حق الاستخدام، فالنقد المستحق عن السنة الأولى بعد إعفاء شهرين = 3,600 × 10 ÷ 12 = 3,000، ثم 3,600 في كل من السنتين التاليتين. مجموع المقابل 10,200؛ إيراد الإيجار السنوي على أساس منتظم = 10,200 ÷ 3 = 3,400. لذلك يُثبت 3,400 إيرادًا و400 ذمة مستحقة بنهاية السنة الأولى فوق مبلغ 3,000 المحصل.",
+        "If the annual $3,600 is entirely lease consideration, first-year cash due after two free months is $3,600 × 10 / 12 = $3,000, followed by $3,600 in each later year. Total consideration is $10,200, so straight-line lease income is $10,200 / 3 = $3,400 yearly. Recognise $3,400 income and a $400 accrued receivable at year-end above the $3,000 collected.",
+      ),
+      text(
+        "لكن إن كانت الصيانة خدمة مميزة ضمن المقابل، يجب فصل عنصر الإيجار والخدمة وتوزيع المقابل وفق IFRS 16.17 وIFRS 15؛ لا يتيح السؤال سعرًا مستقلًا لحساب إيراد الإيجار منفردًا. عندئذ يكون 3,400 توزيعًا مشروطًا للمقابل الكلي لا رقمًا مؤكدًا لإيراد الإيجار وحده.",
+        "If maintenance is a distinct service within the consideration, separate the lease and service components and allocate consideration under IFRS 16.17 and IFRS 15; no stand-alone prices are given to compute lease-only income. In that case $3,400 is a conditional straight-line total-consideration illustration, not a proven amount of lease revenue alone.",
+      ),
+    ],
+    reference: "IFRS 16.17, 61–66, 81–84; IFRS 15.73–90; IAS 16.55",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
