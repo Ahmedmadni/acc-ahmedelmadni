@@ -2969,8 +2969,63 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 16.98–103, 102A; IFRS 15.31–38",
       },
+      {
+        title: text("استثناء الاعتراف لا يلغي اختبار وجود الإيجار", "Recognition exemptions do not replace the lease test"),
+        explanation: text(
+          "بعد تقرير أن العقد يحتوي على إيجار، يمكن للمستأجر انتخاب استثناء الإيجار قصير الأجل إذا لم تتجاوز مدته 12 شهرًا ولا يتضمن خيار شراء؛ يكون الانتخاب بحسب فئة الأصل. ويمكن انتخاب استثناء الأصل منخفض القيمة عقدًا بعقد، ويُقيّم الأصل بقيمته عندما يكون جديدًا لا وفق حجم المنشأة. لا يصلح الاستثناء إذا كان الأصل شديد الاعتماد أو الترابط مع أصول أخرى على نحو يمنع الانتفاع به مستقلًا. عند الانتخاب تُثبت الدفعات مصروفًا على أساس القسط الثابت أو أساس منهجي آخر أكثر تمثيلًا للمنفعة، بدل أصل حق الاستخدام والالتزام المعتادين.",
+          "After determining that a contract contains a lease, the lessee may elect the short-term exemption when the lease term is no more than 12 months and there is no purchase option; this election is by class of underlying asset. The low-value election is lease by lease, assessed by the asset's value when new rather than the lessee's size. An asset highly dependent on or interrelated with other assets does not qualify if it cannot be benefited from independently. If elected, payments are expensed straight-line or on another systematic basis more representative of benefits, instead of the usual ROU asset and liability.",
+        ),
+        keyPoints: [
+          text("لا يوجد حد نقدي ثابت في نص IFRS 16 لتعريف منخفض القيمة.", "IFRS 16 specifies no fixed monetary low-value threshold."),
+          text("حق الاستبدال للإصلاح فقط لا يلغي وجود أصل محدد.", "Repair-only substitution does not remove an identified asset."),
+        ],
+        reference: "IFRS 16.5–8, B3–B8, B13–B20",
+      },
     ],
     workedExamples: [
+      {
+        title: text("ثلاثة ألياف ضوئية مميزة: من يوجه استخدامها؟", "Three distinct dark fibres: who directs their use?"),
+        facts: text(
+          "لعميل حق استخدام ثلاثة ألياف مظلمة محددة ومتميزة ماديًا داخل كابل أكبر لعشر سنوات. يصل العميل أطرافها بمعداته ويحدد توقيت تشغيلها والبيانات وحجمها. المورد يصلحها ويصونها، ولا يملك استبدالها إلا عند العطل أو للصيانة.",
+          "A customer has a ten-year right to three specified, physically distinct dark fibres in a larger cable. It connects them to its equipment and decides when to light them and what data and volume they carry. The supplier repairs and maintains them and may substitute only for malfunction or maintenance.",
+        ),
+        calculations: [
+          text("الألياف الثلاثة أصول محددة ماديًا، وليست مجرد نسبة غير مميزة من سعة الكابل. حق إصلاحها لا يعد استبدالًا جوهريًا طوال فترة الاستخدام.", "The three fibres are physically distinct identified assets, not an undifferentiated share of cable capacity. Repair-only replacement is not a substantive substitution right throughout use."),
+          text("يحصل العميل على معظم المنافع من الاستعمال الحصري، ويتخذ قرارات كيفية الاستخدام وغرضه: التشغيل وتوقيت نقل البيانات ونوعها وحجمها. الصيانة لا تنقل هذه القرارات للمورد.", "The customer obtains substantially all benefits from exclusive use and directs how and for what purpose the fibres are used: lighting, timing, data type and volume. Maintenance does not transfer those decisions to the supplier."),
+        ],
+        conclusion: text("العقد يحتوي إيجارًا لحق استخدام الألياف الثلاثة؛ لا تتوفر مدفوعات لقياس أصل وخصم رقمي.", "The contract contains a lease of the three fibres; payment amounts are not given for numerical ROU and liability measurement."),
+        journalEntries: [],
+        reference: "IFRS 16.9, B9, B13–B24",
+      },
+      {
+        title: text("خمس دفعات سنوية: أثر التقديم والتأخير في قياس الإيجار", "Five annual payments: advance versus arrears"),
+        facts: text(
+          "إيجار مبنى لخمس سنوات بدفعة 50,000 دولار سنويًا، وتكاليف مباشرة أولية 20,000 وحافز مستلم 5,000. لا تنتقل الملكية ولا يوجد خيار شراء. معدل اقتراض المستأجر 5% لأن المعدل الضمني غير متاح. قارن دفع أول 50,000 عند البدء بدفع الدفعات الخمس كلها في نهاية السنوات.",
+          "A five-year building lease requires $50,000 annually, $20,000 initial direct costs and a $5,000 incentive received. Ownership does not transfer and there is no purchase option. The lessee's incremental borrowing rate is 5% because the implicit rate is not readily determinable. Compare a first $50,000 paid at commencement with all five payments in arrears.",
+        ),
+        calculations: [
+          text("مقدمًا: القيمة الحالية لأربع دفعات غير مدفوعة = مجموع 50,000 ÷ 1.05^t للسنوات 1–4 = 177,297 تقريبًا بجمع كل سطر مقرب؛ أصل حق الاستخدام = 177,297 + 50,000 + 20,000 − 5,000 = 242,297.", "Advance: PV of four unpaid payments = sum of $50,000 / 1.05^t for years 1–4 = about $177,297 when individually rounded lines are summed; ROU asset = $177,297 + $50,000 + $20,000 − $5,000 = $242,297."),
+          text("في نهاية السنة الأولى قبل الدفعة التالية، فائدة التزام المقدم = 177,297 × 5% = 8,865 تقريبًا؛ الالتزام 186,162، والدفعة التالية 50,000 عند بداية السنة الثانية. إهلاك حق الاستخدام على خمس سنوات ≈ 48,459 سنويًا إن استُخدم القسط الثابت وبافتراض قيمة متبقية صفر.", "At the first year-end before the next payment, interest on the advance liability is $177,297 × 5% ≈ $8,865; liability $186,162, with $50,000 due at the start of year two. Straight-line ROU depreciation over five years is about $48,459 annually, assuming nil residual value."),
+          text("مؤخرًا: القيمة الحالية لخمس دفعات = مجموع 50,000 ÷ 1.05^t للسنوات 1–5 = 216,473 تقريبًا بجمع السطور المقربة؛ أصل حق الاستخدام = 216,473 + 20,000 − 5,000 = 231,473. فائدة السنة الأولى 10,824 تقريبًا؛ وبعد دفع 50,000 يصبح الالتزام 177,297.", "Arrears: PV of five payments = sum of $50,000 / 1.05^t for years 1–5 ≈ $216,473 when individually rounded lines are summed; ROU asset = $216,473 + $20,000 − $5,000 = $231,473. First-year interest ≈ $10,824; after the $50,000 payment, liability is $177,297."),
+          text("تقريب كل خصم أولًا يختلف بنحو دولار عن تقريب مجموع القيم الحالية غير المقربة؛ ثبّت سياسة تقريب واحدة في الجدول والقيود.", "Rounding each discounted payment first can differ by about one dollar from rounding the unrounded PV total; use one rounding policy throughout the schedule and entries."),
+        ],
+        conclusion: text("الدفعة المدفوعة عند البدء تدخل أصل حق الاستخدام لا التزام الدفعات غير المسددة؛ لذلك يختلف القيد الافتتاحي والفائدة بين الحالتين.", "A payment at commencement enters the ROU asset, not the unpaid-payments liability; opening entries and interest therefore differ."),
+        journalEntries: [
+          {
+            label: text("عند البدء — دفعات مقدمة", "Commencement — advance"),
+            debit: text("أصل حق الاستخدام 242,297", "ROU asset 242,297"),
+            credit: text("التزام إيجار 177,297 + نقدية 65,000", "Lease liability 177,297 + cash 65,000"),
+            amount: text("242,297 لكل جانب", "242,297 each side"),
+          },
+          {
+            label: text("عند البدء — دفعات مؤخرة", "Commencement — arrears"),
+            debit: text("أصل حق الاستخدام 231,473", "ROU asset 231,473"),
+            credit: text("التزام إيجار 216,473 + نقدية 15,000", "Lease liability 216,473 + cash 15,000"),
+            amount: text("231,473 لكل جانب", "231,473 each side"),
+          },
+        ],
+        reference: "IFRS 16.5–8, 22–29, 36–38",
+      },
       {
         title: text(
           "عقدا نقل محلي متشابهان ظاهريًا لكن أحدهما إيجار",

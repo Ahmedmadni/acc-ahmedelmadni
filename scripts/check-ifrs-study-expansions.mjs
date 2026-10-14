@@ -298,6 +298,12 @@ for (const [id, standardCode, prompt] of chapter4QuickQuiz) {
 }
 
 const reviewedCalculations = [
+  ["IFRS 16 advance PV line rounded", [1, 2, 3, 4].reduce((sum, year) => sum + Math.round(50000 / 1.05 ** year), 0), 177297],
+  ["IFRS 16 arrears PV line rounded", [1, 2, 3, 4, 5].reduce((sum, year) => sum + Math.round(50000 / 1.05 ** year), 0), 216473],
+  ["IFRS 16 advance ROU", 177297 + 50000 + 20000 - 5000, 242297],
+  ["IFRS 16 arrears ROU", 216473 + 20000 - 5000, 231473],
+  ["IFRS 16 advance year-one closing liability", 177297 + Math.round(177297 * 0.05), 186162],
+  ["IFRS 16 arrears year-one closing liability", 216473 + Math.round(216473 * 0.05) - 50000, 177297],
   ["IAS 36 reversal case original carrying", 40 + 20 + 80, 140],
   ["IAS 36 reversal case original unit loss", 140 - 60, 80],
   ["IAS 36 conditional tangible reversal cap", 70 - 60, 10],
