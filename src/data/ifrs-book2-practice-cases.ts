@@ -5545,32 +5545,32 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
 
 
   {
-    id: "ifrs-book2-cgu-reversal-three-years-later",
-    standardCode: "IAS 36",
-    title: text("وحدة مولدة للنقد: حدود عكس الانخفاض بعد ثلاث سنوات", "CGU: reversal limits three years after impairment"),
+    id: "ifrs-book2-company-a-five-year-advance-lease",
+    standardCode: "IFRS 16",
+    title: text("شركة أ: عرض أصل حق الاستخدام والتزام الإيجار", "Company A: presenting the ROU asset and lease liability"),
     facts: text(
-      "قبل اختبار الانخفاض كانت وحدة تضم شهرة 40 مليون دولار، وبراءة اختراع 20 مليونًا، وأصولًا ملموسة 80 مليونًا. هبط المبلغ القابل للاسترداد إلى 60 مليونًا؛ خُفضت الشهرة والبراءة إلى صفر، وخُفضت الأصول الملموسة إلى 60 مليونًا، وهو قيمتها السوقية حينذاك. بعد ثلاث سنوات ارتفع المبلغ القابل للاسترداد للوحدة إلى 90 مليونًا بفعل تطور تقني للمنشأة، وكانت القيمة الدفترية للأصول الملموسة التي كانت ستظهر دون الانخفاض السابق 70 مليونًا. لا يحدد السؤال قيمتها الفعلية بعد إهلاك السنوات الثلاث ولا قيمة قابلة للاسترداد للبراءة منفردة.",
-      "Before impairment a CGU held goodwill $40m, a patent $20m and tangible assets $80m. Its recoverable amount fell to $60m; goodwill and patent were written to nil and tangible assets to $60m as stated in the case allocation; their then market value was $60m. Three years later the unit's recoverable amount rose to $90m after an entity-specific technological breakthrough. The tangible assets would have carried $70m absent the prior impairment. The question does not give their actual post-depreciation carrying amount or a separate recoverable amount for the patent.",
+      "تبدأ شركة أ في 1 يناير 20X1 إيجار معدة لخمس سنوات. تسدد 2,000 دولار عند البدء ثم 2,000 في بداية كل سنة من السنوات الأربع التالية. القيمة العادلة للمعدة 8,000، والقيمة الحالية للدفعات الأربع غير المسددة 6,075، وعمر الاستخدام خمس سنوات، والمعدل الضمني 12%. تُعد القوائم في 31 ديسمبر.",
+      "On 1 January 20X1 Company A leases equipment for five years. It pays $2,000 at commencement and $2,000 at the beginning of each of the next four years. The equipment's fair value is $8,000, present value of the four unpaid payments is $6,075, useful life is five years, and the implicit rate is 12%. Its reporting date is 31 December.",
     ),
     question: text(
-      "اشرح هل يجوز عكس خسارة الانخفاض، واحسب مبلغ العكس حيث تسمح المعطيات.",
-      "Explain whether the impairment loss can be reversed, calculating the amount of the reversal where relevant.",
+      "كيف يظهر هذا الإيجار في قائمة المركز المالي في 31 ديسمبر 20X1؟",
+      "How should the lease be presented in Company A's statement of financial position at 31 December 20X1?",
     ),
     solution: [
       text(
-        "الخسارة الأصلية للوحدة 140 − 60 = 80 مليونًا: 40 على الشهرة، و20 على البراءة، و20 على الأصول الملموسة وفق توزيع الحالة المعطى. لا تكفي القيمة السوقية وحدها لإثبات حد IAS 36.105 دون تكاليف التصرف وقيمة الاستخدام عند الاقتضاء. لا يجوز عكس خسارة الشهرة مطلقًا في فترة لاحقة بموجب IAS 36.124.",
-        "The original CGU loss was $140m − $60m = $80m: $40m goodwill, $20m patent and $20m tangible assets under the allocation supplied. Market value alone does not establish the IAS 36.105 floor without disposal costs and, where relevant, value in use. IAS 36.124 prohibits reversing the goodwill loss in a later period.",
+        "عند البدء: التزام الإيجار 6,075 يمثل الدفعات غير المسددة فقط. تكلفة أصل حق الاستخدام = 6,075 + 2,000 = 8,075؛ لا تُستبدل بالقيمة العادلة المعطاة 8,000. القيد: من حـ/ أصل حق الاستخدام 8,075، إلى حـ/ التزام الإيجار 6,075 وإلى حـ/ النقدية 2,000.",
+        "At commencement, the $6,075 liability is the PV of unpaid payments only. ROU cost = $6,075 + $2,000 = $8,075; do not replace it with the stated $8,000 equipment fair value. Entry: Dr ROU asset $8,075; Cr lease liability $6,075 and cash $2,000.",
       ),
       text(
-        "قد يجيز تغير التقديرات عكس انخفاض الأصول الأخرى، لكن قيمة الأصل الملموس بعد العكس لا تتجاوز 70 مليونًا، أي قيمته المفترضة بعد الإهلاك لو لم يُثبت انخفاض سابق. إن كانت قيمته الحالية فعلًا 60 مليونًا وكانت بقية شروط العكس مستوفاة، فالحد العددي لعكسه 10 ملايين. أما إذا تغيرت قيمته الحالية بالإهلاك خلال السنوات الثلاث، فمبلغ العكس هو الفرق بين الحد 70 والقيمة الحالية المؤهلة، ضمن حدود IAS 36 وتوزيع خسارة الوحدة؛ لا يمكن تحديده من هذه المعطيات وحدها.",
-        "A change in estimates may permit reversal for other assets, but tangible assets cannot be raised above $70m, the depreciated amount that would have existed without prior impairment. If their actual current carrying amount is $60m and other reversal conditions hold, the numerical cap gives $10m. If depreciation changed their current carrying amount over three years, the reversal depends on the gap to $70m and the IAS 36 unit-allocation limits; the facts alone do not determine it.",
+        "إهلاك السنة الأولى بالقسط الثابت = 8,075 ÷ 5 = 1,615؛ صافي أصل حق الاستخدام في 31 ديسمبر = 6,460. فائدة الالتزام = 6,075 × 12% = 729، فيصبح 6,804 قبل دفعة 1 يناير 20X2.",
+        "Straight-line first-year depreciation = $8,075 / 5 = $1,615, leaving a $6,460 ROU asset at 31 December. Liability interest = $6,075 × 12% = $729, producing $6,804 before the 1 January 20X2 payment.",
       ),
       text(
-        "في عكس خسارة الوحدة يوزع المبلغ على أصولها عدا الشهرة بنسبة قيمها الدفترية، مع حدود IAS 36.123 لكل أصل؛ والبراءة قيمتها الدفترية صفر في الوقائع المعطاة، فلا يخصص لها عكس من توزيع الوحدة على هذا الأساس. يلزم فحص منفصل إذا ظهرت أدلة جديدة على استرداد البراءة، ولا تكفي زيادة قيمة الوحدة وحدها لإثبات عكسها. استمرار تفوق منتج المنافس لا يحسم مدى أثر تطور المنشأة على منافع براءتها.",
-        "A unit-level reversal is allocated to assets other than goodwill pro rata with their carrying amounts, subject to IAS 36.123 caps. The patent has nil carrying amount on the stated facts, so it receives no allocation from the unit reversal on that basis. Separate evidence would be needed to assess a patent-specific reversal; the unit's increase alone does not establish it. A competitor's continuing superior product does not itself resolve whether the entity's breakthrough restores patent benefits.",
+        "يعرض التزام 6,804 منه 2,000 متداول لأنه يُسدد في بداية السنة التالية، و4,804 غير متداول بعد تلك الدفعة. لا تخصم الدفعة من التزام 31 ديسمبر قبل حدوثها. قيد السنة: من حـ/ تكلفة التمويل 729 إلى حـ/ التزام الإيجار 729، ومن حـ/ مصروف إهلاك 1,615 إلى حـ/ مجمع إهلاك حق الاستخدام 1,615.",
+        "Present the $6,804 liability as $2,000 current, payable at the start of the next year, and $4,804 non-current after that payment. Do not deduct the next payment from the 31 December liability before it occurs. Year-one entries: Dr finance cost $729, Cr lease liability $729; Dr depreciation expense $1,615, Cr accumulated ROU depreciation $1,615.",
       ),
     ],
-    reference: "IAS 36.110–115, 117–123, 124",
+    reference: "IFRS 16.22–29, 36–38, 47; IAS 1.69",
   },
 
 ];
