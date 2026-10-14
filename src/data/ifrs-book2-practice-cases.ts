@@ -5573,6 +5573,35 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 36.110–115, 117–123, 124",
   },
 
+  {
+    id: "ifrs-book2-company-a-five-year-advance-lease",
+    standardCode: "IFRS 16",
+    title: text("شركة أ: عرض أصل حق الاستخدام والتزام الإيجار", "Company A: presenting the ROU asset and lease liability"),
+    facts: text(
+      "تبدأ شركة أ في 1 يناير 20X1 إيجار معدة لخمس سنوات. تسدد 2,000 دولار عند البدء ثم 2,000 في بداية كل سنة من السنوات الأربع التالية. القيمة العادلة للمعدة 8,000، والقيمة الحالية للدفعات الأربع غير المسددة 6,075، وعمر الاستخدام خمس سنوات، والمعدل الضمني 12%. تُعد القوائم في 31 ديسمبر.",
+      "On 1 January 20X1 Company A leases equipment for five years. It pays $2,000 at commencement and $2,000 at the beginning of each of the next four years. The equipment's fair value is $8,000, present value of the four unpaid payments is $6,075, useful life is five years, and the implicit rate is 12%. Its reporting date is 31 December.",
+    ),
+    question: text(
+      "كيف يظهر هذا الإيجار في قائمة المركز المالي في 31 ديسمبر 20X1؟",
+      "How should the lease be presented in Company A's statement of financial position at 31 December 20X1?",
+    ),
+    solution: [
+      text(
+        "عند البدء: التزام الإيجار 6,075 يمثل الدفعات غير المسددة فقط. تكلفة أصل حق الاستخدام = 6,075 + 2,000 = 8,075؛ لا تُستبدل بالقيمة العادلة المعطاة 8,000. القيد: من حـ/ أصل حق الاستخدام 8,075، إلى حـ/ التزام الإيجار 6,075 وإلى حـ/ النقدية 2,000.",
+        "At commencement, the $6,075 liability is the PV of unpaid payments only. ROU cost = $6,075 + $2,000 = $8,075; do not replace it with the stated $8,000 equipment fair value. Entry: Dr ROU asset $8,075; Cr lease liability $6,075 and cash $2,000.",
+      ),
+      text(
+        "إهلاك السنة الأولى بالقسط الثابت = 8,075 ÷ 5 = 1,615؛ صافي أصل حق الاستخدام في 31 ديسمبر = 6,460. فائدة الالتزام = 6,075 × 12% = 729، فيصبح 6,804 قبل دفعة 1 يناير 20X2.",
+        "Straight-line first-year depreciation = $8,075 / 5 = $1,615, leaving a $6,460 ROU asset at 31 December. Liability interest = $6,075 × 12% = $729, producing $6,804 before the 1 January 20X2 payment.",
+      ),
+      text(
+        "يعرض التزام 6,804 منه 2,000 متداول لأنه يُسدد في بداية السنة التالية، و4,804 غير متداول بعد تلك الدفعة. لا تخصم الدفعة من التزام 31 ديسمبر قبل حدوثها. قيد السنة: من حـ/ تكلفة التمويل 729 إلى حـ/ التزام الإيجار 729، ومن حـ/ مصروف إهلاك 1,615 إلى حـ/ مجمع إهلاك حق الاستخدام 1,615.",
+        "Present the $6,804 liability as $2,000 current, payable at the start of the next year, and $4,804 non-current after that payment. Do not deduct the next payment from the 31 December liability before it occurs. Year-one entries: Dr finance cost $729, Cr lease liability $729; Dr depreciation expense $1,615, Cr accumulated ROU depreciation $1,615.",
+      ),
+    ],
+    reference: "IFRS 16.22–29, 36–38, 47; IAS 1.69",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {

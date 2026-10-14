@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-company-a-five-year-advance-lease",
   "ifrs-book2-cgu-reversal-three-years-later",
   "ifrs-book2-ias36-ch5-quiz-recoverable-amount",
   "ifrs-book2-ias36-ch5-quiz-revalued-asset",
@@ -298,6 +299,11 @@ for (const [id, standardCode, prompt] of chapter4QuickQuiz) {
 }
 
 const reviewedCalculations = [
+  ["IFRS 16 Company A opening ROU", 6075 + 2000, 8075],
+  ["IFRS 16 Company A first-year depreciation", 8075 / 5, 1615],
+  ["IFRS 16 Company A first-year interest", 6075 * 0.12, 729],
+  ["IFRS 16 Company A year-end liability", 6075 + 729, 6804],
+  ["IFRS 16 Company A non-current portion", 6804 - 2000, 4804],
   ["IFRS 16 advance PV line rounded", [1, 2, 3, 4].reduce((sum, year) => sum + Math.round(50000 / 1.05 ** year), 0), 177297],
   ["IFRS 16 arrears PV line rounded", [1, 2, 3, 4, 5].reduce((sum, year) => sum + Math.round(50000 / 1.05 ** year), 0), 216473],
   ["IFRS 16 advance ROU", 177297 + 50000 + 20000 - 5000, 242297],
