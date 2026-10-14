@@ -141,6 +141,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 3": {
     sections: [
       {
+        title: text("افصل الشهرة عن العلامة والعلاقة المحددتين", "Separate goodwill from identifiable brands and relationships"),
+        explanation: text(
+          "الشهرة في تجميع الأعمال قيمة متبقية لا قائمة مستقلة للعاملين أو السمعة. قبل قياسها، حدد الأصول غير الملموسة المستحوذ عليها التي يمكن فصلها أو تنشأ عن حقوق تعاقدية أو قانونية، وقس كل عنصر مؤهل في تاريخ الاستحواذ وفق IFRS 3. ثم احسب الشهرة من المقابل والحصة غير المسيطرة وأي حصة سابقة مطروحًا منها صافي الأصول المحددة. الشهرة المتولدة داخليًا لا تسجل. شهرة الاستحواذ لا تُطفأ ولا تشطب لمجرد صعوبة تقييمها؛ تُخصص للوحدات المستفيدة وتُختبر للانخفاض سنويًا، ولا تُعكس خسارة انخفاضها.",
+          "Combination goodwill is a residual, not a separate listing of workforce or reputation. Before measuring it, identify acquired intangibles that are separable or arise from contractual or legal rights, and measure qualifying items at acquisition under IFRS 3. Then compute goodwill as consideration plus NCI and any previously held interest less identifiable net assets. Internally generated goodwill is unrecognised. Acquired goodwill is neither amortised nor written off merely because valuation is difficult; allocate it to benefiting units, test annually for impairment, and never reverse a recognised goodwill loss.",
+        ),
+        keyPoints: [
+          text("الشهرة المشتراة والأصل غير الملموس المحدد لا يحلان محل بعضهما في توزيع سعر الشراء.", "Acquired goodwill and an identifiable intangible are not interchangeable in purchase-price allocation."),
+          text("الرأي بأن الشهرة «ينبغي إلغاؤها فورًا» ليس سياسة مسموحة بدل IFRS 3.", "A view that goodwill should be immediately eliminated is not an allowed IFRS 3 policy."),
+        ],
+        reference: "IFRS 3.10–13, 18, 32; IAS 38.11–12, 48–50; IAS 36.80, 90, 124",
+      },
+      {
         title: text("الأصل المحتمل عند الاستحواذ: لا تخلطه بالالتزام المحتمل", "Do not confuse an acquired contingent asset with a contingent liability"),
         explanation: text(
           "إذا كانت الشركة المستحوذ عليها تطالب موردًا بتعويض وما زال قبول الدعوى أو نتيجتها غير مؤكدين في تاريخ الاستحواذ، فإن تقدير «قيمة عادلة» للمطالبة أو عرض تسوية مرفوض لا يحوّلانها إلى أصل قابل للاعتراف في تجميع الأعمال. ينص IFRS 3 صراحةً على عدم اعتراف المستحوذ بأصل محتمل في تاريخ الاستحواذ، خلافًا لقاعدة بعض الالتزامات المحتملة المستحوذ عليها القابلة للقياس. لذا لا تُضف المطالبة إلى صافي الأصول المحددة ولا تُنشئ فرقًا ضريبيًا مؤجلًا لعنصر لم يُعترف به. تحقق المطالبة بعد الاستحواذ يُحلل في فترته على أساس وقائعه؛ لا يُستخدم آليًا لإعادة كتابة الشهرة في تاريخ الاستحواذ.",
@@ -168,6 +180,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
     workedExamples: [
+      {
+        title: text("مقابل 61 ألفًا وصافي أصول محددة 38 ألفًا", "Consideration of $61,000 and identifiable net assets of $38,000"),
+        facts: text(
+          "تُذكر صفقة شراء نشاط بمقابل 61,000 دولار وتقييم المشتري لصافي الأصول المحددة بـ38,000 دولار. لا تُعطى حصة غير مسيطرة أو حصة ملكية سابقة.",
+          "A business purchase illustration gives $61,000 consideration and the acquirer's $38,000 valuation of identifiable net assets. No NCI or previously held interest is given.",
+        ),
+        calculations: [
+          text(
+            "إذا كان مبلغ 38,000 هو صافي القيم العادلة الصحيحة للأصول المحددة والالتزامات في تاريخ تجميع أعمال، وكانت الملكية كاملة، فالشهرة = 61,000 − 38,000 = 23,000 دولار.",
+            "If $38,000 is the correctly measured acquisition-date fair value of identifiable assets less liabilities in a business combination, and ownership is complete, goodwill is $61,000 − $38,000 = $23,000.",
+          ),
+          text(
+            "تقييم تفاوضي للبائع أو المشتري لا يكفي وحده بدل قياسات تاريخ الاستحواذ وفق IFRS 3؛ ووجود حصة غير مسيطرة أو حصة سابقة يغير المعادلة. لا تُثبت الشهرة المتولدة داخليًا لدى البائع بمجرد الاتفاق على ثمن.",
+            "A seller's or buyer's negotiating estimate alone does not replace IFRS 3 acquisition-date measurements; NCI or a previously held interest changes the equation. Agreement on a price does not create internally generated goodwill in the seller's books.",
+          ),
+        ],
+        conclusion: text(
+          "23,000 دولار نتيجة مشروطة بصحة فرضيات تجميع الأعمال وقياس صافي الأصول، وليست قيمة مستقلة للسمعة.",
+          "$23,000 is conditional on the business-combination and net-asset measurement assumptions, not an independent valuation of reputation.",
+        ),
+        journalEntries: [],
+        reference: "IFRS 3.10, 18, 32; IAS 38.48",
+      },
+
       {
         title: text("Alpha/Beta: أثر استبعاد المطالبة المحتملة من الشهرة", "Alpha/Beta: goodwill effect of excluding a contingent claim"),
         facts: text(
@@ -1420,6 +1456,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   },
   "IAS 38": {
     sections: [
+      {
+        title: text("الحماية القانونية دليل على السيطرة وليست شرطًا منفردًا", "Legal protection is evidence of control, not the sole test"),
+        explanation: text(
+          "لأصل غير ملموس محدد، افحص قدرة المنشأة على الحصول على المنافع ومنع الغير من الوصول إليها. الحق القانوني القابل للإنفاذ دليل قوي، لكن IAS 38 لا يجعله الوسيلة الوحيدة في جميع الظروف؛ قد تثبت السرية الفعلية السيطرة على معرفة فنية. في المقابل، مهارات الموظفين والولاء العام للعملاء لا تصبح أصولًا لمجرد إنفاق التدريب أو الإعلان، لأن المنشأة غالبًا لا تتحكم في منافعها المستقبلية على نحو كافٍ. وعند الاستحواذ، افحص ما إذا كانت علاقة العميل أو العلامة أصلًا محددًا منفصلًا عن الشهرة.",
+          "For an identifiable intangible, assess the ability to obtain benefits and restrict others' access. Enforceable legal rights are strong evidence but IAS 38 does not make them the only means in every circumstance; effective secrecy can support control of know-how. Staff skills and general customer loyalty are not assets merely because training or advertising was paid for, since the entity generally lacks sufficient control over future benefits. On acquisition, test whether a customer relationship or brand is a separately identifiable asset rather than goodwill.",
+        ),
+        keyPoints: [
+          text("التحديد يتحقق بالقابلية للفصل أو بحق تعاقدي/قانوني، وليس بشرط تحقق الطريقين معًا.", "Identifiability is met by separability or contractual/legal rights, not necessarily both."),
+          text("لا تفترض أن انعدام براءة الاختراع يعني انعدام السيطرة، ولا أن كل إنفاق لبناء سمعة يخلق أصلًا.", "Do not assume no patent always means no control, or that reputation-building spend creates an asset."),
+        ],
+        reference: "IAS 38.11–16, 18–23, 48–50",
+      },
+      {
+        title: text("العمر المحدود وغير المحدد للعلامة المشتراة", "Finite and indefinite life of a purchased brand"),
+        explanation: text(
+          "ابدأ بتحليل مدة الحماية وإمكان التجديد، والاستعمال المتوقع ودورة المنتج والتقادم والمنافسة والإنفاق المطلوب لحفظ قوة العلامة. العمر غير المحدد لا يعني عمرًا أبديًا؛ بل عدم وجود حد منظور لتدفقات النقد بعد تحليل الأدلة. الأصل ذو العمر المحدود يُطفأ من تاريخ إتاحته للاستخدام، مع مراجعة العمر وطريقة الإطفاء سنويًا. غير المحدد لا يُطفأ، لكنه يخضع لاختبار انخفاض سنوي ومراجعة سنوية لاستمرار هذا التصنيف؛ وإذا تغير التقدير إلى عمر محدود عومل كتغير تقدير مع تقييم الانخفاض.",
+          "Assess legal protection and renewals, expected use, product cycles, obsolescence, competition and the spend needed to sustain a brand. Indefinite does not mean infinite: it means no foreseeable cash-inflow limit after reviewing evidence. A finite-life asset is amortised from availability for use, with annual life and method review. An indefinite-life asset is not amortised but is tested annually for impairment and reassessed annually; a change to finite life is a change in estimate and an impairment indicator.",
+        ),
+        keyPoints: [
+          text("لا تُحسب مدة إطفاء رقمية من اسم العلامة وحده.", "A numerical amortisation period cannot be inferred from the brand name alone."),
+          text("فترة الحق القانوني قد تُجدد إذا دعمت الأدلة التجديد، لكنها لا تضمن استمرار المنفعة الاقتصادية.", "Renewable legal rights can inform useful life when supported by evidence, but do not guarantee lasting benefits."),
+        ],
+        reference: "IAS 38.88–110; IAS 36.10",
+      },
       {
         title: text("الأصول المشفرة: افحص حقوق الرمز وغرض الاحتفاظ قبل التصنيف", "Cryptoassets: inspect token rights and holding purpose before classification"),
         explanation: text(
