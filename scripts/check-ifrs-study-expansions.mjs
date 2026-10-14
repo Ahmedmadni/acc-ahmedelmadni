@@ -78,6 +78,20 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ifrs16-ch6-quiz-definition",
+  "ifrs-book2-ifrs16-ch6-quiz-initial-entry",
+  "ifrs-book2-ifrs16-ch6-quiz-depreciation-term",
+  "ifrs-book2-ifrs16-ch6-quiz-tablet",
+  "ifrs-book2-ifrs16-ch6-quiz-sale-leaseback",
+  "ifrs-book2-ias38-ch7-quiz-recognition",
+  "ifrs-book2-ias38-ch7-quiz-development",
+  "ifrs-book2-ias38-ch7-quiz-start-up",
+  "ifrs-book2-ifrs3-ch7-quiz-peggy-phil-goodwill",
+  "ifrs-book2-ifrs3-ch7-quiz-goodwill-subsequent",
+  "ifrs-book2-ifrs3-ch7-quiz-bargain-purchase",
+  "ifrs-book2-ias38-purchased-brand-useful-life",
+  "ifrs-book2-ias38-research-development-activity-examples",
+  "ifrs-book2-ifrs3-goodwill-distinguishing-characteristics",
   "ifrs-book2-alpha-operating-lease-rent-free",
   "ifrs-book2-company-a-five-year-advance-lease",
   "ifrs-book2-cgu-reversal-three-years-later",
