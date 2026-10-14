@@ -1602,8 +1602,51 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 36.2, 76–79, 97–98, 104–108",
       },
+      {
+        title: text("التزام ملازم للأصل: لا تخلط القيمة الإجمالية والصافية", "An inseparable liability: never mix gross and net bases"),
+        explanation: text(
+          "عندما لا يمكن تحديد قيمة التصرف لوحدة توليد النقد دون أن يتحمل المشتري التزامًا معترفًا به، اطرح الالتزام من القيمة الدفترية للوحدة ومن قيمة الاستخدام لتبقى المقارنة متسقة. في مثال منصة الحفر: أصل 3 ملايين والتزام تفكيك 0.6، وعرض شراء صافٍ 2.8 يشمل تحمل الالتزام، وقيمة استخدام قبل الالتزام 3.3. صافي الدفترية 2.4، وصافي الاستخدام 2.7، والقابلة للاسترداد 2.8 مليون؛ لذلك لا تنشأ خسارة انخفاض. لا تقارن عرضًا صافيًا 2.8 بأصل إجمالي 3 لاستنتاج خسارة 0.2. يظل الأصل والالتزام منفصلين في العرض إن لم يحدث بيع.",
+          "When the disposal value of a unit cannot be determined without a buyer assuming a recognised liability, deduct that liability from both the unit's carrying amount and value in use to compare like with like. For the platform: a $3m asset and $0.6m dismantling liability, a net $2.8m bid including assumption, and $3.3m value in use before the liability give net carrying $2.4m, net use $2.7m and recoverable $2.8m; no impairment. Do not compare a net $2.8m bid with the gross $3m asset to infer a $0.2m loss. Without disposal, the asset and liability remain separately presented.",
+        ),
+        keyPoints: [
+          text("إذا دخل الالتزام في قيمة البيع، عالجه باتساق في القيمة الدفترية والاستخدام.", "If disposal value includes the liability, treat it consistently in carrying and use values."),
+          text("فائض القابلة للاسترداد على الدفترية لا يعني إعادة تقييم الأصل أو إثبات ربح.", "Headroom over carrying amount is not an asset revaluation or a recognised gain."),
+        ],
+        reference: "IAS 36.29, 75–79",
+      },
     ],
     workedExamples: [
+      {
+        title: text("أصل متلف وشهرة في اختبار وحدة واحدة", "Destroyed asset and goodwill in one CGU test"),
+        facts: text(
+          "تبلغ القيمة الدفترية لنشاط مكتسب 4.5 ملايين دولار: أصول ملموسة 4 ملايين وشهرة 0.5 مليون. دمر حادث أصلًا غير مؤمن عليه قيمته الدفترية مليون، وأصبحت القيمة القابلة للاسترداد للنشاط المتبقي 3.1 ملايين.",
+          "An acquired business carries $4.5m: tangible assets $4m and goodwill $0.5m. An uninsured asset carried at $1m is destroyed; the remaining business has a recoverable amount of $3.1m.",
+        ),
+        calculations: [
+          text("ألغِ الأصل المتلف أولًا: 4.5 − 1 = 3.5 ملايين قيمة دفترية للوحدة المتبقية.", "Write off the destroyed asset first: $4.5m − $1m = $3.5m carrying amount for the remaining unit."),
+          text("خسارة الوحدة اللاحقة = 3.5 − 3.1 = 0.4 مليون؛ تحملها الشهرة أولًا فتنخفض من 0.5 إلى 0.1 مليون. الأصول الملموسة المتبقية 3 ملايين؛ المجموع 3.1.", "Further CGU impairment is $3.5m − $3.1m = $0.4m; reduce goodwill first from $0.5m to $0.1m. Tangible assets remaining are $3m; total $3.1m."),
+          text("الأثر الكلي في الربح أو الخسارة 1.4 مليون = مليون شطب أصل متلف + 0.4 مليون انخفاض شهرة، وليس 1.4 مليون تخفيضًا للشهرة.", "Total profit-or-loss effect is $1.4m = $1m destroyed-asset write-off plus $0.4m goodwill impairment, not a $1.4m charge against goodwill."),
+        ],
+        conclusion: text(
+          "افصل فحص الأصل الفردي عن فحص الوحدة ثم طبّق أولوية تخفيض الشهرة على خسارة الوحدة فقط.",
+          "Separate the individual-asset write-off from the subsequent CGU test; goodwill absorbs the unit loss first, not the destroyed asset's own loss.",
+        ),
+        journalEntries: [
+          {
+            label: text("شطب الأصل المتلف", "Write off destroyed asset"),
+            debit: text("خسارة الأصل المتلف", "Destroyed-asset loss"),
+            credit: text("الأصل الملموس", "Tangible asset"),
+            amount: text("1 مليون دولار", "$1 million"),
+          },
+          {
+            label: text("خسارة الوحدة المخصصة للشهرة", "CGU loss allocated to goodwill"),
+            debit: text("خسارة انخفاض", "Impairment loss"),
+            credit: text("الشهرة", "Goodwill"),
+            amount: text("0.4 مليون دولار", "$0.4 million"),
+          },
+        ],
+        reference: "IAS 36.97–98, 104; IAS 16.67",
+      },
       {
         title: text(
           "قيمة من الاستخدام لأربع سنوات وخسارة انخفاض مع أثر التقريب",
