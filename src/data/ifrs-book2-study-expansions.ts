@@ -1351,6 +1351,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 37": {
     sections: [
       {
+        title: text("لا تنشئ مخصصًا قبل وجود التزام حالي", "A provision starts with a present obligation"),
+        explanation: text(
+          "وجود نية لإصلاح أصل أو إنفاق تشغيلي في المستقبل لا يكفي. افحص حدثًا ماضيًا أنشأ التزامًا قانونيًا أو ضمنيًا، ورجحان خروج الموارد، وإمكان التقدير الموثوق. الالتزام الضمني يحتاج ممارسة ثابتة أو سياسة منشورة أو إعلانًا محددًا أدى إلى توقع مشروع لدى الأطراف المعنية، لا مجرد قرار داخلي قابل للتغيير. لدى مجموعة كبيرة من ضمانات المطابقة تُقيّم احتمالية الخروج على مستوى المجموعة وتُستخدم القيمة المتوقعة، مع فصل ضمان الخدمة إذا كان التزام أداء مستقلًا.",
+          "An intention to repair an asset or incur future operating expenditure is not enough. Identify a past event creating a legal or constructive present obligation, a probable resource outflow and reliable measurement. A constructive obligation requires established practice, published policy or a sufficiently specific statement creating a valid expectation in affected parties, not merely a reversible internal plan. For a large population of assurance warranties assess probability at population level and use expected value, while separating a distinct service warranty if it is a separate performance obligation.",
+        ),
+        keyPoints: [
+          text("المخصص ليس احتياطيًا لتسوية الأرباح أو للصيانة المستقبلية بلا حدث ملزم.", "A provision is not a profit-smoothing reserve or a future-maintenance reserve without an obligating event."),
+          text("راجع الالتزام والتقدير في كل تاريخ تقرير، واعكس المخصص إذا لم يعد خروج الموارد مرجحًا.", "Review the obligation and estimate each reporting date and reverse the provision if an outflow is no longer probable."),
+        ],
+        reference: "IAS 37.10, 14, 24, 36–40, 59–61; IFRS 15.B28–B33",
+      },
+      {
+        title: text("خصم المخصص وفصل حق الاسترداد", "Discount a material provision and separate reimbursement rights"),
+        explanation: text(
+          "إذا كان أثر القيمة الزمنية جوهريًا، قس الالتزام بالقيمة الحالية للتدفقات المستقبلية باستخدام معدل خصم مناسب قبل الضريبة، دون تكرار المخاطر في التدفقات والمعدل. زيادة المخصص بسبب مرور الوقت تُثبت تكلفة تمويل. لا تخصم مكسب بيع أصل متوقع من مبلغ الالتزام. إذا سيسدد طرف ثالث تكلفة الالتزام، أبق المخصص إجماليًا وأثبت أصل استرداد منفصلًا فقط عندما يكون التحصيل مؤكدًا فعليًا عند تسوية الالتزام، وبما لا يزيد على المخصص؛ يجوز عرض مصروف المخصص صافيًا من الاسترداد في الربح أو الخسارة، لا مقاصة الأصل والالتزام في قائمة المركز المالي.",
+          "When the time-value effect is material, measure the obligation at the present value of future outflows using an appropriate pre-tax rate without double-counting risks in cash flows and rate. Recognise passage-of-time unwinding as finance cost. Do not deduct an expected asset-disposal gain from the obligation. If a third party will reimburse settlement, retain the gross provision and recognise a separate reimbursement asset only when receipt on settlement is virtually certain, capped at the provision; the related expense may be shown net in profit or loss, but the asset and liability are not offset in the statement of financial position.",
+        ),
+        keyPoints: [
+          text("الإضافة الأولية لتكلفة أصل مادي تتطلب ارتباط التزام الإزالة أو الاستعادة بذلك الأصل؛ ليست نتيجة آلية لكل مخصص.", "Initial inclusion in PPE cost requires a related dismantling or restoration obligation; it is not automatic for every provision."),
+          text("فرّق بين تحديث تقدير التدفقات أو معدل الخصم وبين فك الخصم الناشئ عن مرور الزمن.", "Distinguish a change in estimated flows or discount rate from the unwind caused by time passing."),
+        ],
+        reference: "IAS 37.36, 45–47, 51–60; IAS 16.16(c); IFRIC 1.4–8",
+      },
+      {
         title: text(
           "من نسب عيوب الضمان إلى مخصص واحد قابل للتسوية",
           "From warranty defect frequencies to one reconcilable provision",
@@ -1394,6 +1418,43 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
     workedExamples: [
+      {
+        title: text("استعادة بيئية بعد خمس سنوات: قيمة حالية وفك خصم", "Five-year restoration: present value and discount unwind"),
+        facts: text(
+          "تتوقع منشأة دفع 5,000,000 دولار لتنظيف موقع بعد خمس سنوات، بمعدل خصم 10% سنويًا. يفترض المثال أن نشاطًا سابقًا أنشأ التزام استعادة حاليًا وأن التدفق والمعدل مناسبان وفق IAS 37؛ لا يذكر السؤال تفاصيل كافية لحسم ما إذا كان المبلغ يُضاف إلى تكلفة أصل مادي أو يُحمل مصروفًا.",
+          "An entity expects to pay $5,000,000 to restore a site in five years, using a 10% annual discount rate. Assume past activity has created a present restoration obligation and the cash flow and rate meet IAS 37; the prompt lacks enough facts to decide whether the initial debit belongs in PPE cost or expense.",
+        ),
+        calculations: [
+          text(
+            "بالعوامل الدقيقة: القيمة الحالية = 5,000,000 ÷ 1.10^5 = 3,104,606.62، أي 3,104,607 دولار بالتقريب. بعد سنة ومع بقاء التدفق والخصم دون تغيير: 5,000,000 ÷ 1.10^4 = 3,415,067.28؛ تكلفة فك الخصم = 310,460.66، أي 310,461 دولار.",
+            "Using exact factors: present value = $5,000,000 / 1.10^5 = $3,104,606.62, or $3,104,607 rounded. One year later, with unchanged cash flow and rate, $5,000,000 / 1.10^4 = $3,415,067.28; discount unwind is $310,460.66, or $310,461.",
+          ),
+          text(
+            "إذا استُخدمت عوامل الجدول المقربة 0.62092 و0.68301، تكون القيم المعروضة 3,104,600 و3,415,050 وفك الخصم 310,450. فرق 17 دولارًا تقريبًا عند نهاية السنة ناشئ من تقريب عوامل الخصم، لا من اختلاف قاعدة الاعتراف.",
+            "Using table-rounded factors 0.62092 and 0.68301 gives displayed amounts of $3,104,600 and $3,415,050 and $310,450 unwind. The roughly $17 year-end difference is factor rounding, not a different recognition rule.",
+          ),
+        ],
+        conclusion: text(
+          "أثبت مخصص الاستعادة بالقيمة الحالية عند نشوء الالتزام، ثم تكلفة تمويل لفك الخصم كل فترة. لا تُضاف القيمة الأولية لأصل مادي إلا إذا كانت تكلفته مؤهلة وفق IAS 16.",
+          "Recognise the restoration provision at present value when the obligation arises, then finance cost for unwinding each period. Include the initial debit in PPE only if it qualifies as that asset's cost under IAS 16.",
+        ),
+        journalEntries: [
+          {
+            label: text("نشوء الالتزام — الطرف المدين بحسب طبيعة النفقة", "Obligation arises — debit depends on expenditure nature"),
+            debit: text("تكلفة أصل مؤهل أو مصروف استعادة", "Qualifying asset cost or restoration expense"),
+            credit: text("مخصص استعادة", "Restoration provision"),
+            amount: text("3,104,607 دولار", "$3,104,607"),
+          },
+          {
+            label: text("فك الخصم في السنة التالية", "Next year's discount unwind"),
+            debit: text("تكلفة تمويل", "Finance cost"),
+            credit: text("مخصص استعادة", "Restoration provision"),
+            amount: text("310,461 دولار", "$310,461"),
+          },
+        ],
+        reference: "IAS 37.14, 36, 45–47, 60; IAS 16.16(c); IFRIC 1.4–8",
+      },
+
       {
         title: text(
           "مخصص ضمان Parker بالقيمة المتوقعة",
