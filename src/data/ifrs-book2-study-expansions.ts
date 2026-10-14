@@ -3151,6 +3151,28 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 16.98–102; IFRS 15.31–38",
       },
+      {
+        title: text("بيع وإعادة استئجار بسعر أعلى من السوق: افصل التمويل", "Above-market sale and leaseback: separate financing"),
+        facts: text(
+          "باعت منشأة مبنى قيمته الدفترية 600,000 دولار مقابل 800,000، بينما قيمته العادلة 750,000. استأجرته فورًا لخمس سنوات بدفعات 120,000 سنويًا مؤخرًا، وعمره المتبقي 15 سنة. تحقق البيع وفق IFRS 15، ومعدل الخصم 4.5%؛ معامل القيمة الحالية المعطى لخمس دفعات 4.390.",
+          "An entity sells a building carried at $600,000 for $800,000 although its fair value is $750,000, then leases it back for five years at $120,000 annually in arrears. Remaining useful life is 15 years, the IFRS 15 sale criteria are met, the discount rate is 4.5%, and the supplied five-payment PV factor is 4.390.",
+        ),
+        calculations: [
+          text("المقابل فوق القيمة العادلة = 800,000 − 750,000 = 50,000؛ يعالج تمويلًا إضافيًا لا مكسب بيع. القيمة الحالية للدفعات التعاقدية = 120,000 × 4.390 = 526,800؛ منها 50,000 تمويل منفصل و476,800 قيمة دفعات حق الاستخدام المحتفظ به.", "Above-market consideration = $800,000 − $750,000 = $50,000, additional financing rather than sale gain. PV of contractual payments = $120,000 × 4.390 = $526,800; split $50,000 financing and $476,800 relating to the retained right of use."),
+          text("أصل حق الاستخدام = 600,000 × 476,800 ÷ 750,000 = 381,440. المكسب الإجمالي عند قيمة عادلة = 750,000 − 600,000 = 150,000؛ نصيب الحق المحتفظ به = 150,000 × 476,800 ÷ 750,000 = 95,360؛ المكسب المثبت للحق المنقول = 54,640.", "ROU asset = $600,000 × $476,800 / $750,000 = $381,440. Full fair-value gain = $750,000 − $600,000 = $150,000; retained-right share = $150,000 × $476,800 / $750,000 = $95,360; recognised transferred-right gain = $54,640."),
+          text("عند عدم انتقال الملكية أو وجود خيار شراء مؤكد، يهلك حق الاستخدام على خمس سنوات لا عمر المبنى الباقي 15 عامًا؛ بالقسط الثابت وقيمة متبقية صفر يكون 381,440 ÷ 5 = 76,288 سنويًا. يراجع توزيع دفعات 120,000 بين التزام الإيجار والتمويل الإضافي عند قياسهما اللاحق.", "Absent ownership transfer or a reasonably certain purchase option, depreciate the ROU asset over five years, not the building's remaining 15 years; straight-line with nil residual gives $381,440 / 5 = $76,288 annually. Allocate subsequent $120,000 payments between the lease liability and additional financing as appropriate."),
+        ],
+        conclusion: text("لا تعترف بربح 200,000 من الفرق بين النقد المحصل والقيمة الدفترية؛ الربح المثبت 54,640 فقط، و50,000 تمويل إضافي.", "Do not recognise a $200,000 gain from cash proceeds less book value; recognise only $54,640 gain and $50,000 additional financing."),
+        journalEntries: [
+          {
+            label: text("عند البيع وإعادة الاستئجار", "At sale and leaseback"),
+            debit: text("نقدية 800,000 + أصل حق استخدام 381,440", "Cash 800,000 + ROU asset 381,440"),
+            credit: text("مبنى 600,000 + التزام إيجار 476,800 + تمويل إضافي 50,000 + مكسب 54,640", "Building 600,000 + lease liability 476,800 + additional financing 50,000 + gain 54,640"),
+            amount: text("1,181,440 لكل جانب", "1,181,440 each side"),
+          },
+        ],
+        reference: "IFRS 16.99–102, 102A; IFRS 15.31–38",
+      },
     ],
   },
   "IAS 10": {
