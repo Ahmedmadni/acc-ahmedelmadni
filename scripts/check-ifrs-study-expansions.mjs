@@ -78,6 +78,8 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-aco-machinery-impairment",
+  "ifrs-book2-krisp-value-in-use",
   "ifrs-book2-ch4-quiz-define-depreciation",
   "ifrs-book2-ch4-quiz-asset-production-costs",
   "ifrs-book2-ch4-quiz-market-value-fair-value",
@@ -578,6 +580,9 @@ const reviewedCalculations = [
   ["Acruni weighted capitalisation rate", (120 * 0.1 + 80 * 0.095) / 200, 0.098],
   ["Acruni borrowing cost capitalised", 30 * 0.098 + 20 * 0.098 * (3 / 12), 3.43],
   ["Acruni remaining interest expense", 120 * 0.1 + 80 * 0.095 - 3.43, 16.17],
+  ["A Co fair value less costs of disposal", 10000 - 500, 9500],
+  ["A Co recoverable amount", Math.max(9500, 9000), 9500],
+  ["A Co impairment loss", 10500 - 9500, 1000],
   [
     "Krisp value in use to nearest dollar",
     Math.round(

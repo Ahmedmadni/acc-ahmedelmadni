@@ -1543,6 +1543,22 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
     sections: [
       {
         title: text(
+          "نطاق اختبار الانخفاض وتوقيته",
+          "Impairment scope and timing",
+        ),
+        explanation: text(
+          "يفحص IAS 36 ما إذا كانت القيمة الدفترية للأصل تتجاوز قيمته القابلة للاسترداد. لا يدخل المخزون وأصول ضريبة الدخل المؤجلة والأصول المالية الخاضعة لـ IFRS 9 والأصول المحتفظ بها للبيع في اختباره المعتاد لأن لها معايير قياس خاصة. لكن استبعاد العقارات الاستثمارية يقتصر على ما يُقاس بالقيمة العادلة وفق IAS 40؛ العقار الاستثماري المقاس بالتكلفة يخضع لاختبار IAS 36 عند وجود مؤشر. افحص مؤشرات الانخفاض بنهاية كل فترة تقرير، ومنها تراجع السوق غير المعتاد والتلف والتقادم وتدهور الأداء. وحتى دون مؤشر، اختبر سنويًا الشهرة المكتسبة والأصل غير الملموس ذي العمر غير المحدد والأصل غير الملموس الذي لم يجهز بعد للاستخدام.",
+          "IAS 36 tests whether an asset's carrying amount exceeds its recoverable amount. Inventories, deferred tax assets, IFRS 9 financial assets and assets held for sale have their own measurement rules. The investment-property exclusion is limited to IAS 40 property measured at fair value: cost-model investment property remains subject to IAS 36 when an impairment indicator exists. At each reporting date assess indicators such as an unusual market decline, damage, obsolescence or poorer performance. Even without an indicator, test acquired goodwill, indefinite-life intangibles and intangibles not yet available for use annually.",
+        ),
+        keyPoints: [
+          text("لا تستبعد عقار IAS 40 المقاس بالتكلفة من اختبار IAS 36.", "Do not exclude IAS 40 cost-model property from IAS 36."),
+          text("أضف الأصل غير الملموس غير الجاهز للاستخدام إلى قائمة الاختبارات السنوية.", "Include an intangible not yet available for use in annual testing."),
+          text("افصل خسارة أصل التكلفة في الربح أو الخسارة عن انخفاض الأصل المعاد تقييمه الذي يتبع IAS 16.", "Distinguish a cost-model loss in profit or loss from a revalued asset's IAS 16 decrease."),
+        ],
+        reference: "IAS 36.2, 9–12, 59–61; IAS 40.56",
+      },
+      {
+        title: text(
           "احسب القيمة من الاستخدام من التدفقات، ثم قارنها بالبيع",
           "Discount use cash flows before comparing with disposal value",
         ),
