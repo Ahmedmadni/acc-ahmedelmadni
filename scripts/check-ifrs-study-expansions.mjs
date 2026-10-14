@@ -78,6 +78,7 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-oil-platform-restoration-cgu",
   "ifrs-book2-cgu-identification-examples",
   "ifrs-book2-fourways-cgu-loss-allocation",
   "ifrs-book2-aco-machinery-impairment",
@@ -582,6 +583,12 @@ const reviewedCalculations = [
   ["Acruni weighted capitalisation rate", (120 * 0.1 + 80 * 0.095) / 200, 0.098],
   ["Acruni borrowing cost capitalised", 30 * 0.098 + 20 * 0.098 * (3 / 12), 3.43],
   ["Acruni remaining interest expense", 120 * 0.1 + 80 * 0.095 - 3.43, 16.17],
+  ["Oil platform net carrying amount", 3 - 0.6, 2.4],
+  ["Oil platform net value in use", 3.3 - 0.6, 2.7],
+  ["Oil platform net headroom", 2.8 - 2.4, 0.4],
+  ["Destroyed asset residual CGU carrying", 4.5 - 1, 3.5],
+  ["Destroyed asset later CGU loss", 3.5 - 3.1, 0.4],
+  ["Destroyed asset goodwill closing", 0.5 - 0.4, 0.1],
   ["Fourways CGU carrying total", 30 + 6 + 10 + 20, 66],
   ["Fourways conditional unit loss", 66 - 50, 16],
   ["Fourways loss after goodwill", 16 - 10, 6],
