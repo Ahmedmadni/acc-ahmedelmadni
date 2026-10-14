@@ -2981,6 +2981,29 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IFRS 16.5–8, B3–B8, B13–B20",
       },
+      {
+        title: text("المؤجر: تصنيف العقد يغير الأصل والإيراد", "Lessor: classification changes the asset and income"),
+        explanation: text(
+          "يصنف المؤجر العقد تمويليًا إذا نُقلت معظم مخاطر ومنافع ملكية الأصل، وإلا فهو تشغيلي؛ لا يحكم الاسم أو مدة العقد وحدها. في الإيجار التمويلي يثبت المؤجر صافي الاستثمار في الإيجار ويعترف بدخل التمويل بمعدل عائد دوري ثابت. في التشغيلي يحتفظ بالأصل ويهلكه وفق سياسته للأصول المماثلة، ويثبت دخل الإيجار بخط مستقيم أو أساس منهجي أكثر تمثيلًا لنمط المنفعة، حتى لو اختلفت مواعيد قبض النقد. افصل خدمات الصيانة المميزة ووزع المقابل وفق IFRS 15 قبل حساب دخل الإيجار وحده.",
+          "A lessor classifies a lease as finance when substantially all ownership risks and rewards transfer; otherwise it is operating. The contract label or term alone is not conclusive. For a finance lease the lessor recognises its net investment and finance income at a constant periodic rate of return. For an operating lease it retains and depreciates the asset under its policy for similar assets and recognises lease income straight-line or on a more representative systematic basis even when cash receipts differ. Separate distinct maintenance services and allocate consideration under IFRS 15 before calculating lease-only income.",
+        ),
+        keyPoints: [
+          text("إعفاء المستأجر من أول شهرين لا يعني غياب دخل الإيجار في هذين الشهرين.", "Two rent-free months do not necessarily mean no lease income in those months."),
+          text("لا تضف تكاليف المؤجر المباشرة الأولية في الإيجار التمويلي مرتين؛ تدخل قياس صافي الاستثمار.", "Do not double-count a finance lessor's initial direct costs: they are included in net investment measurement."),
+        ],
+        reference: "IFRS 16.17, 61–66, 67–73, 81–84; IFRS 15.73–90",
+      },
+      {
+        title: text("الإيجار من الباطن يقاس بحق الاستخدام المتبقي", "Classify a sublease by the remaining ROU asset"),
+        explanation: text(
+          "يصبح المستأجر الأصلي مؤجرًا وسيطًا عند إعادة تأجير الأصل. إذا لم يكن الإيجار الرئيسي قصير الأجل مع اختيار استثناء الاعتراف، يصنف الوسيط الإيجار من الباطن بمقارنته بحق الاستخدام الناتج عن الإيجار الرئيسي، لا بعمر المبنى أو الآلة المملوكة لطرف آخر. إذا كان الباطن يغطي كامل السنوات الست الباقية من حق استخدام مدته الأصلية عشر سنوات، فذلك مؤشر قوي إلى نقل معظم مخاطر ومنافع حق الاستخدام المتبقي، فيكون الإيجار من الباطن تمويليًا في الحالة المعطاة. أما إذا كان الرئيسي قصير الأجل وعولج باستثناء IFRS 16.6، فيصنف الباطن تشغيليًا.",
+          "The original lessee becomes an intermediate lessor when it subleases. Unless the head lease is short-term and the recognition exemption was elected, classify the sublease by reference to the ROU asset arising from the head lease, not the building or equipment owned by another party. A sublease covering all six years remaining of an original ten-year ROU is strong evidence that substantially all risks and rewards of that remaining right transfer, making the stated sublease a finance lease. If the head lease is short-term and accounted for using IFRS 16.6, the sublease is classified as operating.",
+        ),
+        keyPoints: [
+          text("المقارنة الصحيحة: ست سنوات باقية لحق الاستخدام مقابل ست سنوات للباطن، لا مقابل العمر الكلي للعقار.", "Compare six remaining ROU years with six sublease years, not with the property's total life."),
+        ],
+        reference: "IFRS 16.61–66, B58",
+      },
     ],
     workedExamples: [
       {
