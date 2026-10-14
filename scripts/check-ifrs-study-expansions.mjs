@@ -299,6 +299,12 @@ for (const [id, standardCode, prompt] of chapter4QuickQuiz) {
 }
 
 const reviewedCalculations = [
+  ["IFRS 16 off-market additional financing", 800000 - 750000, 50000],
+  ["IFRS 16 off-market gross contractual PV", 120000 * 4.39, 526800],
+  ["IFRS 16 off-market lease component", 526800 - 50000, 476800],
+  ["IFRS 16 off-market opening ROU", 600000 * 476800 / 750000, 381440],
+  ["IFRS 16 off-market recognised gain", (750000 - 600000) * (750000 - 476800) / 750000, 54640],
+  ["IFRS 16 off-market opening journal balance", 800000 + 381440, 600000 + 476800 + 50000 + 54640],
   ["IFRS 16 Company A opening ROU", 6075 + 2000, 8075],
   ["IFRS 16 Company A first-year depreciation", 8075 / 5, 1615],
   ["IFRS 16 Company A first-year interest", 6075 * 0.12, 729],
