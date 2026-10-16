@@ -5875,6 +5875,35 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 19.57, 64, 99–112, 120–130; IFRIC 14.7–9",
   },
 
+  {
+    id: "ifrs-book2-ias19-jett-timed-contributions-benefits",
+    standardCode: "IAS 19",
+    title: text("Jett: توقيت مساهمة الخطة ومدفوعات المنافع", "Jett: timing of plan contribution and benefit payments"),
+    facts: text(
+      "تغطي سنة Jett المنتهية في 31 يناير 20X8 اثني عشر شهرًا تبدأ في 1 فبراير 20X7. في بدايتها بلغت أصول خطة المنافع المحددة 4.1 ملايين دولار والتزامها 4.8 ملايين. دفعت الشركة مساهمة 680,000 دولار في 1 فبراير. دفعت الخطة منافع 440,000 على دفعتين متساويتين في 31 يوليو و31 يناير. معدل الخصم 6%، وعائد أصول الخطة الفعلي خلال السنة 282,000. تساوي تكلفة الخدمة الجارية 4.2% من أجور السنة البالغة 5.9 ملايين دولار. بلغت القيمة الحالية للالتزام في 31 يناير 4.95 ملايين. تُهمل الضريبة؛ تفترض الحسابات أن أصول الخطة مؤهلة وأن معدل الخصم المعطى مناسب.",
+      "Jett's year ended 31 January 20X8 runs for twelve months from 1 February 20X7. Opening defined-benefit plan assets were $4.1 million and the obligation was $4.8 million. The employer contributed $680,000 on 1 February. The plan paid $440,000 of benefits in equal instalments on 31 July and 31 January. The discount rate is 6% and actual return on plan assets for the year is $282,000. Current service cost is 4.2% of annual wages of $5.9 million. The obligation's 31 January present value is $4.95 million. Ignore tax; the calculations assume qualifying plan assets and an appropriate stated discount rate."
+    ),
+    question: text(
+      "أعد مصالحة الالتزام وأصول الخطة، واحسب صافي الفائدة وإعادة القياس ومبالغ الربح أو الخسارة والدخل الشامل الآخر وصافي الالتزام الختامي، مع مراعاة توقيت التدفقات النقدية.",
+      "Reconcile the obligation and plan assets; calculate time-weighted net interest, remeasurements, profit or loss, OCI and the closing net liability."
+    ),
+    solution: [
+      text(
+        "تكلفة الخدمة الجارية = 5,900,000 × 4.2% = 247,800 دولار. دُفعت 220,000 من المنافع في 31 يوليو، و220,000 في 31 يناير؛ الدفعة الثانية لا تؤثر في فائدة السنة. فائدة الالتزام = 4,800,000 × 6% × 6/12 + (4,800,000 − 220,000) × 6% × 6/12 = 281,400. الرصيد المتوقع قبل إعادة القياس = 4,800,000 + 281,400 + 247,800 − 440,000 = 4,889,200؛ بالمقارنة مع 4,950,000 تظهر خسارة اكتوارية 60,800 في الدخل الشامل الآخر.",
+        "Current service cost is $5,900,000 × 4.2% = $247,800. Benefits of $220,000 were paid on 31 July and $220,000 on 31 January; the second payment bears no interest in this year. Obligation interest is $4,800,000 × 6% × 6/12 + ($4,800,000 − $220,000) × 6% × 6/12 = $281,400. The obligation before remeasurement is $4,800,000 + $281,400 + $247,800 − $440,000 = $4,889,200; compared with $4,950,000 this gives a $60,800 actuarial loss in OCI."
+      ),
+      text(
+        "تدخل مساهمة 680,000 في أصول الخطة منذ 1 فبراير. فائدة الأصول = (4,100,000 + 680,000) × 6% × 6/12 + (4,100,000 + 680,000 − 220,000) × 6% × 6/12 = 280,200. العائد الفعلي 282,000، ولذلك يكون عائد الأصول خارج الفائدة 1,800 مكسبًا في الدخل الشامل الآخر. الأصول الختامية = 4,100,000 + 680,000 − 440,000 + 282,000 = 4,622,000.",
+        "The $680,000 contribution is in plan assets from 1 February. Asset interest is ($4,100,000 + $680,000) × 6% × 6/12 + ($4,100,000 + $680,000 − $220,000) × 6% × 6/12 = $280,200. Actual return was $282,000, so $1,800 is asset return beyond interest, an OCI gain. Closing assets are $4,100,000 + $680,000 − $440,000 + $282,000 = $4,622,000."
+      ),
+      text(
+        "صافي مصروف الفائدة = 281,400 − 280,200 = 1,200؛ مع تكلفة الخدمة 247,800 يكون مصروف الربح أو الخسارة 249,000. صافي خسارة إعادة القياس في الدخل الشامل الآخر = 60,800 − 1,800 = 59,000. يظهر صافي التزام منافع محددة قدره 4,950,000 − 4,622,000 = 328,000. وتؤكد المصالحة: التزام افتتاحي 700,000 + مصروف 249,000 − مساهمة صاحب العمل 680,000 + خسارة دخل شامل آخر 59,000 = 328,000. تصنيف الالتزام إلى متداول أو غير متداول يتطلب معلومات عن التسوية والحقوق بتاريخ التقرير، فلا يستنتج من العجز وحده.",
+        "Net interest expense is $281,400 − $280,200 = $1,200; with $247,800 service cost, profit-or-loss expense is $249,000. Net OCI remeasurement loss is $60,800 − $1,800 = $59,000. The net defined-benefit liability is $4,950,000 − $4,622,000 = $328,000. Cross-check: opening liability $700,000 + $249,000 expense − $680,000 employer contribution + $59,000 OCI loss = $328,000. Current/non-current classification needs settlement and reporting-date rights information; the deficit alone does not determine it."
+      ),
+    ],
+    reference: "IAS 19.57, 113–115, 120–130; IAS 1.69",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {

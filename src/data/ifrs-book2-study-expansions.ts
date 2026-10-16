@@ -1345,6 +1345,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 19.57, 64, 120–126, 127–130; IFRIC 14.7–9",
       },
+      {
+        title: text("مساهمات ومنافع خلال السنة: احسب الفائدة بحسب توقيت النقد", "Mid-year cash flows: time-weight defined-benefit interest"),
+        explanation: text(
+          "عند حساب صافي الفائدة لا تضرب رصيد نهاية السنة في معدل الخصم. ابدأ بصافي الالتزام أو الأصل ومعدل الخصم في أول الفترة، ثم راعِ مدة بقاء كل مساهمة من صاحب العمل وكل منفعة مدفوعة من الخطة ضمن أرصدتها. المساهمة في أول السنة تزيد أصول الخطة طوال السنة وتخفض صافي التزام صاحب العمل؛ دفع منفعة من أصول الخطة يخفض الالتزام الإجمالي والأصول معًا، فلا يغير الصافي بذاته، لكنه يؤثر في فائدة كل رصيد بعد تاريخ الدفع. افصل فائدة أصول الخطة المحسوبة بمعدل الخصم عن عائدها الفعلي؛ الفارق إعادة قياس في الدخل الشامل الآخر. لا تقرّب الفائدة الوسيطة قبل استخراج فرق إعادة القياس إذا كانت الأرقام الدقيقة متاحة.",
+          "Do not multiply a year-end balance by the discount rate to calculate net interest. Start with the opening net liability or asset and discount rate, then reflect how long each employer contribution and plan benefit payment changes the relevant balances. An opening-date contribution increases plan assets throughout the year and reduces the employer's net liability; a benefit paid from plan assets reduces gross obligation and assets equally, leaving net liability unchanged by the payment itself, but affects interest on each gross balance after payment. Separate discount-rate interest on plan assets from their actual return; the difference is an OCI remeasurement. Keep intermediate interest unrounded when deriving remeasurement if exact amounts are available.",
+        ),
+        keyPoints: [
+          text("احسب فترة بقاء كل مساهمة أو دفعة منافع في الرصيد المناسب.", "Time-weight each contribution and benefit payment in the appropriate balance."),
+          text("عائد الأصول الفعلي فوق الفائدة المحسوبة بمعدل الخصم يذهب إلى الدخل الشامل الآخر.", "Actual asset return beyond discount-rate interest goes to OCI."),
+        ],
+        reference: "IAS 19.120–130",
+      },
     ],
     workedExamples: [
       {
