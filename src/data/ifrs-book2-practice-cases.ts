@@ -5780,6 +5780,35 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.Appendix A, 2.1(e), 4.2.1(c), 5.1.1, 5.5; IFRS 15",
   },
 
+  {
+    id: "ifrs-book2-ias19-unused-holiday-carryforward",
+    standardCode: "IAS 19",
+    title: text("إجازة سنوية مرحلة: الالتزام المتوقع لا الرصيد الأقصى", "Carried-forward holiday: expected obligation, not a ceiling"),
+    facts: text(
+      "تسمح منشأة بترحيل الإجازة السنوية غير المستعملة حتى 12 شهرًا. في نهاية 20X9 رحّل الموظفون 50 يومًا إجمالًا، والأجر 100 دولار لليوم. لا يبين السؤال عدد الأيام التي يُتوقع استخدامها قبل انقضاء حق الترحيل أو ما إذا كانت تُدفع نقدًا عند المغادرة.",
+      "An entity permits unused annual holiday to be carried forward for up to 12 months. At the end of 20X9 employees have carried forward 50 days in total, at $100 per day. The prompt does not state how many days are expected to be used before expiry or whether unused days are payable on departure."
+    ),
+    question: text(
+      "حدد توقيت الاعتراف بالإجازة المرحلة وكيفية قياس الالتزام بنهاية 20X9.",
+      "State when carried-forward holiday is recognised and how the liability is measured at the end of 20X9."
+    ),
+    solution: [
+      text(
+        "لأن الغياب المدفوع تراكمي، تنشأ تكلفة والتزام مع خدمة الموظفين التي تزيد حقهم في إجازة مستقبلية؛ لا يؤجل الاعتراف حتى أخذ الإجازة. يُخفض الالتزام عند استهلاك الأيام أو سقوط الحق وفق شروطه.",
+        "Because the paid absence accumulates, recognise expense and liability as employee service increases entitlement to future leave; do not wait until the absence occurs. Release the liability as days are taken or entitlement expires under its terms."
+      ),
+      text(
+        "يقاس الالتزام بالمبلغ الإضافي المتوقع دفعه بسبب الأيام المرحلة. يمثل 50 × 100 = 5,000 دولار حدًا حسابيًا إذا استُخدمت جميع الأيام أو استحقت نقدًا، وليس تلقائيًا أفضل تقدير. لا يتيح السؤال توقع الاستخدام أو تسوية نقدية؛ لذلك لا يمكن الجزم برصيد 5,000 دولار دون معلومات إضافية.",
+        "Measure the liability at the additional amount expected to be paid because the entitlement has accumulated. Fifty days × $100 = $5,000 is the arithmetic amount if all days are used or paid in cash, not automatically the best estimate. Expected usage and cash-settlement terms are absent, so a $5,000 liability cannot be asserted unconditionally."
+      ),
+      text(
+        "القيد عند ثبوت التقدير: من حـ/مصروف منافع الموظفين (أو تكلفة أصل مؤهلة) إلى حـ/التزام الإجازات بالمبلغ الإضافي المتوقع؛ ولا يُختلق مبلغ نهائي من الرصيد الاسمي وحده.",
+        "Once a supportable estimate exists: debit employee-benefit expense (or an eligible asset cost) and credit accrued holiday liability for the expected additional amount. The nominal carry-forward balance alone does not supply a definitive journal amount."
+      )
+    ],
+    reference: "IAS 19.11, 13–17",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
