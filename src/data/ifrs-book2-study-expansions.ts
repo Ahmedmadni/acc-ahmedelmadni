@@ -8,6 +8,36 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+
+  "IFRS 5": {
+    sections: [
+      {
+        title: text("استثناء القياس لا يعني استثناء العرض", "A measurement exception is not a presentation exemption"),
+        explanation: text(
+          "تظل متطلبات التصنيف والعرض منفصلة عن استثناءات القياس في IFRS 5.5. تقاس أصول الضريبة المؤجلة ومنافع العاملين والأصول المالية والعقارات الاستثمارية بنموذج القيمة العادلة والأصول الخاضعة لقياس IAS 41 والعقود الخاضعة لـIFRS 17 وفق معاييرها المحددة، مع مراعاة النطاق الدقيق لكل استثناء. قبل قياس مجموعة الاستبعاد، حدّث البنود المستثناة وفق معاييرها؛ لا تطبق عليها تخفيضًا آليًا منفردًا إلى القيمة العادلة ناقص تكاليف البيع.",
+          "Classification and presentation are distinct from IFRS 5.5 measurement exceptions. Deferred-tax and employee-benefit assets, financial assets, fair-value-model investment property, assets subject to IAS 41 measurement and IFRS 17 contracts follow their specified Standards, observing each exception's precise scope. Before measuring a disposal group, update excluded items under their own Standards; do not automatically write each down separately to fair value less costs to sell.",
+        ),
+        keyPoints: [
+          text("القيمة العادلة ناقص تكاليف البيع ليست مرادفًا لصافي القيمة القابلة للتحقق؛ الأخير خاص بالمنشأة والمخزون وقد يختلف عن قياس السوق.", "Fair value less costs to sell is not synonymous with NRV: the latter is entity-specific inventory measurement and may differ from market-based measurement."),
+          text("قبل التصنيف يطبق المعيار الأصلي؛ وبعده لا تتحول خسارة IFRS 5 تلقائيًا إلى OCI لمجرد وجود فائض إعادة تقييم سابق.", "Apply the original Standard before classification; afterwards an IFRS 5 loss does not automatically become OCI merely because an earlier revaluation surplus exists."),
+        ],
+        reference: "IFRS 5.2–5, 15, 18–25, 38; IAS 2.6–7; IAS 16.39–40",
+      },
+      {
+        title: text("العدول عن البيع وإفصاحات العملية المتوقفة", "Withdrawal from sale and discontinued-operation disclosures"),
+        explanation: text(
+          "إذا زالت شروط الاحتفاظ للبيع، يقاس الأصل بالأقل من قيمته السابقة للتصنيف بعد تعديلها بما كان سيثبت من إهلاك أو إطفاء أو إعادة تقييم، ومبلغه القابل للاسترداد عند قرار العدول. لا يفرض مرور سنة وحده إعادة التصنيف إذا انطبق استثناء التأخير. في العملية المتوقفة يعرض مبلغ واحد بعد الضريبة، مع تحليل الإيرادات والمصروفات والنتيجة والضريبة ومكسب أو خسارة القياس أو التصرف والضريبة المرتبطة. كما تفصح التدفقات التشغيلية والاستثمارية والتمويلية المنسوبة إليها، وتُعاد معلومات الأداء المقارنة لتشمل العمليات المتوقفة حتى نهاية الفترة الحالية.",
+          "When sale criteria cease, measure at the lower of the pre-classification amount adjusted for depreciation, amortisation or revaluation that would otherwise have arisen, and recoverable amount at withdrawal. One year's passage alone does not force reclassification if the delay exception applies. A discontinued operation has one post-tax amount, with analysis of revenue, expenses, result and tax, and measurement/disposal gain or loss and related tax. Disclose attributable operating, investing and financing cash flows and re-present comparative performance for operations discontinued by the current period-end.",
+        ),
+        keyPoints: [
+          text("لا تُجرى مقاصة بين أصول مجموعة الاستبعاد والتزاماتها، ولا يعاد تصنيف مركز المقارنة المالي لمجرد تصنيف السنة الحالية.", "Do not offset disposal-group assets and liabilities or reclassify comparative financial-position amounts merely because of current-year classification."),
+          text("افصح عن الأصل وظروف البيع أو العدول وأثره، ومكسب أو خسارة التصرف وبنده والقطاع المقرر عند الانطباق.", "Disclose the asset, sale or withdrawal circumstances and effects, the gain/loss and its line item, and the reportable segment where applicable."),
+        ],
+        reference: "IFRS 5.9, 26–29, 33–34, 38–42",
+      },
+    ],
+    workedExamples: [],
+  },
   "IAS 41": {
     sections: [
       {

@@ -15,6 +15,22 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs5-facility-order-backlog",
+    standardCode: "IFRS 5",
+    title: text("بيع مصنع بعد إنهاء الطلبات القائمة", "Facility sale after clearing outstanding orders"),
+    facts: text(
+      "في 1 ديسمبر 20X3 التزمت شركة بخطة بيع مصنع ووجدت مشتريًا محتملًا، لكنها لا تعتزم وقف عملياته الحالية. في 31 ديسمبر بقيت طلبات عملاء غير مكتملة، ولا يمكن نقل المصنع للمشتري إلا بعد إنهاء التشغيل والطلبات، المتوقع في ربيع 20X4.",
+      "On 1 December 20X3 a company committed to selling a manufacturing facility and found a potential buyer, but did not intend to discontinue its current operations. At 31 December it had outstanding customer orders. The facility cannot be transferred until operations cease and the order backlog is cleared, expected in spring 20X4.",
+    ),
+    question: text("هل يصنف المصنع محتفظًا به للبيع في 31 ديسمبر 20X3؟", "Can the facility be classified as held for sale at 31 December 20X3?"),
+    solution: [
+      text("لا؛ المصنع ليس متاحًا للبيع الفوري بحالته الحالية، لأن التسليم مشروط بإنهاء الطلبات والتشغيل أولًا. وجود مشترٍ وخطة بيع خلال سنة لا يعوض عدم استيفاء هذا الشرط.", "No. The facility is not available for immediate sale in its present condition because transfer requires completing orders and ceasing operations first. A buyer and a sale expected within a year do not cure that unmet criterion."),
+      text("يبقى ضمن العقارات والآلات والمعدات ويستمر إهلاكه وفق IAS 16، مع فحص مؤشرات الانخفاض عند الاقتضاء. لا يعرض في بند الأصول المحتفظ بها للبيع في هذا التاريخ، لكن ذلك لا يعفي من الإفصاحات الأخرى إذا كانت جوهرية. يعاد اختبار الشروط عندما يصبح النقل الفوري ممكنًا؛ لا يقدم السؤال مبالغ لقيد عددي.", "Keep it within property, plant and equipment and continue IAS 16 depreciation, considering impairment indicators where relevant. Do not present it in the held-for-sale line at that date; other material disclosures are not thereby waived. Reassess when immediate transfer becomes possible. No amounts are supplied for a numerical entry."),
+    ],
+    reference: "IFRS 5.6–8; IAS 16.55; IAS 36.9",
+  },
+
+  {
     id: "ifrs-book2-400-employees-service-estimates",
     standardCode: "IFRS 2",
     title: text("400 موظف: تحديث تقدير المغادرين خلال ثلاث سنوات", "400 employees: revising three-year leaver estimates"),
