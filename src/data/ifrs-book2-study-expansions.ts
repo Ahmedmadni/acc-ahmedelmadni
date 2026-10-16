@@ -2529,6 +2529,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 2": {
     sections: [
       {
+        title: text("تاريخ القياس: خدمة الموظف والسلع من المورد", "Measurement date: employee service and supplier goods"),
+        explanation: text(
+          "في المعاملة المسددة بحقوق الملكية مع الموظفين أو من يقدمون خدمات مماثلة، تقاس الخدمة بالرجوع إلى القيمة العادلة للأدوات في تاريخ المنح. أما مع مورد غير موظف، فيفترض إمكان قياس السلع أو الخدمات المستلمة مباشرة بصورة موثوقة، ويكون القياس عند الحصول على السلع أو تقديم الخدمة. إذا دُحض هذا الافتراض، يقاس المقابل بالرجوع إلى القيمة العادلة للأدوات في تاريخ الحصول على السلع أو تقديم الخدمة أيضًا، وليس تلقائيًا بتاريخ منح الموظفين. حدد صفة الطرف وتاريخ تلقي الخدمة قبل اختيار قيمة الخيار من السؤال.",
+          "For equity-settled transactions with employees and others providing similar services, measure services by reference to the instruments' grant-date fair value. For a non-employee supplier, goods or services are presumed directly measurable at reliable fair value, measured when goods are obtained or services rendered. If that presumption is rebutted, use instrument fair value at the date goods are obtained or services rendered as well, rather than automatically using the employee grant-date rule. Identify the counterparty and receipt date before selecting an option value."
+        ),
+        keyPoints: [
+          text("قاعدة تاريخ المنح لخدمات الموظفين لا تعمم على جميع الموردين.", "Do not apply the employee grant-date rule to all suppliers."),
+          text("حدد أولًا هل يمكن قياس السلعة أو الخدمة المستلمة مباشرة.", "First assess whether the received goods or services can be measured directly.")
+        ],
+        reference: "IFRS 2.10–13",
+      },
+
+      {
         title: text("إلغاء المنحة يختلف عن سقوطها لعدم إكمال الخدمة", "Cancellation differs from failure to complete service"),
         explanation: text(
           "افحص سبب زوال الحق قبل حساب المصروف. إذا لم يكمل الموظف خدمة مشروطة بالمنحة، يحدث سقوط بسبب عدم استيفاء شرط استحقاق غير سوقي؛ يعدل العدد المتوقع استحقاقه ويعكس ما سبق إثباته عن تلك الأدوات عند ثبوت عدم استحقاقها. أما إلغاء منحة مسددة بحقوق الملكية أثناء فترة الاستحقاق، بخلاف السقوط لعدم استيفاء شروط الاستحقاق، فيعجل إثبات المبلغ الذي كان سيثبت عن بقية الفترة. ينطبق تحليل الإلغاء أيضًا على اختيار المنشأة أو الطرف المقابل عدم استيفاء شرط غير استحقاقي يقع تحت سيطرته وفق IFRS 2.28A. لذلك لا تعتبر كل مغادرة أو عدم ممارسة خيار إلغاءً يوجب التعجيل؛ فالخيار الذي استحق بالفعل ثم لم يمارس لا يعكس تكلفته السابقة. وعند منح أدوات بديلة راجع شروط تعيين البديل ومعالجة التعديل.",
