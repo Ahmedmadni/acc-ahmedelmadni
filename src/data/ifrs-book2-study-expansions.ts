@@ -3166,6 +3166,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 33": {
     sections: [
       {
+        title: text("تاريخ دخول الأسهم والمشروط والمدفوع جزئيًا", "Share inclusion dates, contingent and partly paid shares"),
+        explanation: text(
+          "أسهم مقابل اقتناء أعمال تدخل المتوسط من تاريخ الاقتناء؛ وأسهم مقابل خدمات تدخل مع تقديم الخدمات. في الأساسية لا تدخل الأسهم المشروطة إلا من تحقق جميع شروطها، والأسهم القابلة للاسترداد المشروط تستبعد حتى زوال شرط ردها. مجرد مرور الزمن ليس شرطًا احتماليًا. في المخفضة تُفحص الشروط كأن نهاية التقرير نهاية فترة الشرط، مع اختبار التخفيف. والأسهم المدفوعة جزئيًا تعادل كسر سهم وفق حق التوزيع النسبي، لا تلقائيًا بنسبة النقد المسدد؛ الجزء غير المشارك يعامل كالخيارات عند حساب المخفضة.",
+          "Business-combination consideration shares enter from acquisition; service shares as services are rendered. Basic EPS includes contingent shares only once all conditions are met and excludes contingently returnable shares until recall lapses. Time alone is not a contingency. Diluted EPS tests conditions as if reporting-end were contingency-end, subject to dilution. Partly paid shares count by relative dividend entitlement, not automatically by cash paid; the non-participating portion follows option treatment for diluted EPS.",
+        ),
+        keyPoints: [
+          text("طابق شروط العقد والتوقيت قبل ترجيح العدد؛ لا تسجل تحويلًا فعليًا لمجرد حساب الربحية المخفضة.", "Check contractual terms and timing before weighting shares; a diluted-EPS calculation does not record an actual conversion."),
+        ],
+        reference: "IAS 33.21–24, 36–38, 48, 52–57, A15–A16",
+      },
+
+      {
         title: text(
           "الحقوق والتحويل: افصل البسط عن المقام",
           "Rights and convertibles: separate numerator from denominator",
