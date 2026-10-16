@@ -1066,8 +1066,50 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
   },
+  "IFRS 7": {
+    sections: [
+      {
+        title: text("إفصاح حساسية مخاطر السوق: الربح أو الخسارة وحقوق الملكية", "Market-risk sensitivity: profit or loss and equity"),
+        explanation: text(
+          "يطلب IFRS 7.40 تحليل حساسية لكل نوع من مخاطر السوق تتعرض له المنشأة في نهاية فترة التقرير، يبين أثر التغيرات الممكنة بصورة معقولة في متغير الخطر على الربح أو الخسارة وحقوق الملكية، مع طرق التحليل وافتراضاته وتغيراتها. قد يختلف الأثران بحسب تصنيف الأداة ومكان الاعتراف بتغير قيمتها؛ فلا يكفي عرض الربح أو الخسارة وحده. إذا استُخدم تحليل بديل وفق IFRS 7.41، مثل القيمة المعرضة للمخاطر الذي يعكس الترابط بين المتغيرات، تنطبق شروط تلك الفقرة. نسبة هذا الإفصاح إلى IFRS 9.40 في صفحة الكتاب خطأ مرجعي؛ مصدره IFRS 7.",
+          "IFRS 7.40 requires a sensitivity analysis for each type of market risk at the reporting date, showing how reasonably possible changes in the risk variable would affect profit or loss and equity, together with the methods, assumptions and changes in them. The two effects can differ with an instrument's classification and where its remeasurement is recognised; profit or loss alone is insufficient. An alternative analysis such as value at risk that reflects interdependencies can be used under IFRS 7.41 when its conditions are met. The book's attribution to IFRS 9.40 is a reference error: the disclosure is in IFRS 7."
+        ),
+        keyPoints: [
+          text("اعرض الأثر على الربح أو الخسارة وحقوق الملكية، لا أحدهما فقط.", "Show effects on both profit or loss and equity, not only one."),
+          text("اذكر التغير المعقول في متغير الخطر والمنهج والافتراضات.", "State the reasonably possible risk change, method and assumptions."),
+        ],
+        reference: "IFRS 7.40–41, B17–B18",
+      },
+    ],
+    workedExamples: [],
+  },
   "IFRS 13": {
     sections: [
+      {
+        title: text("السوق الرئيسي والأكثر منفعة: اختيار السوق يسبق قياس سعر الخروج", "Principal and most advantageous markets: choose the market before measuring exit price"),
+        explanation: text(
+          "تستخدم القيمة العادلة سعر السوق الرئيسي الذي يمكن الوصول إليه، أي الأعلى حجمًا ونشاطًا للبند؛ لا تستبدله بسوق يعطي صافي عائد أكبر. عند غياب سوق رئيسي فقط، اختر السوق الأكثر منفعة بعد مقارنة صافي حصيلة البيع بعد تكاليف المعاملة والنقل. بعد اختيار السوق، لا تخصم تكاليف المعاملة من القيمة العادلة لأنها تخص الصفقة لا الأصل. تخصم تكاليف النقل إذا كان موقع الأصل خاصية تؤثر في قياسه. لا تنشئ مقارنة الأسواق بذاتها قيد بيع أو ربحًا؛ يلزم معيار يطلب القياس بالقيمة العادلة ووقائع الاعتراف.",
+          "Use the accessible principal market, with the greatest volume and activity for the item, even if another market yields better net proceeds. Only if there is no principal market, choose the most advantageous market by comparing net sale proceeds after transaction and transport costs. Once the market is chosen, exclude transaction costs from fair value because they belong to the transaction, not the asset. Deduct transport costs if the asset's location is a characteristic of the measurement. Comparing markets alone creates no sale entry or gain; a Standard requiring fair value and recognition facts are needed."
+        ),
+        keyPoints: [
+          text("وجود سوق رئيسي يحسم اختيار السوق المتاح للقياس.", "An accessible principal market determines the market used for measurement."),
+          text("تكاليف المعاملة تدخل مقارنة الأسواق الأكثر منفعة، ولا تخصم من القيمة العادلة.", "Transaction costs enter the most-advantageous-market comparison but are not deducted from fair value."),
+          text("تكاليف النقل تخصم فقط عندما يكون الموقع من خصائص الأصل.", "Transport costs are deducted when location is a characteristic of the asset."),
+        ],
+        reference: "IFRS 13.16–19, 24–26, Appendix A",
+      },
+      {
+        title: text("تصنيف قياس القيمة العادلة وفق مدخله المهم الأدنى", "Classify a fair-value measurement by its lowest significant input"),
+        explanation: text(
+          "المستوى الأول سعر معلن غير معدل لبند مطابق في سوق نشطة يمكن الوصول إليها؛ المستوى الثاني مدخلات أخرى قابلة للملاحظة مباشرة أو غير مباشرة؛ والمستوى الثالث مدخلات غير قابلة للملاحظة تعكس افتراضات المشاركين في السوق. يصنف القياس كاملًا بحسب أدنى مستوى لمدخل مهم في القياس، لا بحسب اسم أسلوب التقييم. لذلك لا يصبح معدل إتاوة تعاقدي مدخلًا من المستوى الثاني لمجرد أن الطرف المقابل مستقل، ولا يصنف مضاعف شركة مقارنة تلقائيًا في المستوى الثاني: تحقق من بيانات السوق ومدى ملاءمتها والتعديلات المهمة. قد يؤدي تعديل مهم غير قابل للملاحظة لمدخل من المستوى الثاني إلى تصنيف القياس بالمستوى الثالث.",
+          "Level 1 is an unadjusted accessible active-market quote for an identical item; Level 2 comprises other directly or indirectly observable inputs; Level 3 comprises unobservable inputs reflecting market-participant assumptions. Classify the entire measurement by its lowest-level significant input, not by the valuation technique's name. A contractual royalty rate is not Level 2 merely because the counterparty is unrelated, and a comparable-company multiple is not automatically Level 2: assess market observability, relevance and significant adjustments. A significant unobservable adjustment to a Level 2 input can place the measurement in Level 3."
+        ),
+        keyPoints: [
+          text("افحص أهمية كل مدخل للقياس ككل قبل تحديد المستوى.", "Assess each input's significance to the whole measurement before assigning a level."),
+          text("استقلال طرف العقد وحده لا يثبت قابلية المدخل للملاحظة في السوق.", "An unrelated contractual counterparty alone does not establish market observability."),
+        ],
+        reference: "IFRS 13.72–76, 81–89",
+      },
       {
         title: text("القيمة العادلة للالتزام: أثر الجدارة الائتمانية للمنشأة", "Liability fair value: the entity's own credit risk"),
         explanation: text(
