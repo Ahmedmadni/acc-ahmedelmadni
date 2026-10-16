@@ -1105,6 +1105,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 32": {
     sections: [
       {
+        title: text("عقد السلعة: التسليم الفعلي أم نطاق الأدوات المالية؟", "Commodity contract: physical delivery or financial-instrument scope?"),
+        explanation: text(
+          "المخزون والعقار ليسا أصلين ماليين لمجرد إمكان بيعهما نقدًا، والعقد الذي لا يسوى إلا بتسليم سلعة مقابل ثمنها لا ينشئ بذاته حقًا حاليًا في قبض أصل مالي مقابل التزام مالي. لكن لا تستبعد جميع عقود السلع الآجلة بعبارة واحدة: افحص إمكان التسوية الصافية بالنقد أو بأداة مالية، وممارسة المنشأة في تسوية العقود المماثلة، وقابلية السلعة للتحويل بسهولة إلى نقد. عند تحقق نطاق IAS 32/IFRS 9 يعامل العقد كما لو كان أداة مالية، ما لم ينطبق استثناء الاستخدام الخاص بعقد دخلت فيه المنشأة ولا تزال تحتفظ به لاستلام السلعة أو تسليمها وفق حاجتها المتوقعة. قد تتاح في شروط محددة تسمية اختيارية بالقيمة العادلة عبر الربح أو الخسارة عند بدء العقد لتفادي عدم اتساق القياس. لا يحدد اسم «عقد مستقبلي للسلع» النتيجة دون شروط التسوية والغرض والممارسة.",
+          "Inventory and property are not financial assets simply because they can be sold for cash, and a contract settled solely by delivery of a commodity for its price does not by itself create a present right and obligation to exchange financial assets. Yet commodity forwards and futures cannot all be excluded categorically: test net settlement in cash or a financial instrument, the entity's practice with similar contracts, and whether the item is readily convertible to cash. When IAS 32/IFRS 9 brings the contract into scope, account for it as if it were a financial instrument unless the own-use exception applies to a contract entered into and still held for expected receipt or delivery needs. In specified circumstances an inception-date fair-value-through-profit-or-loss designation can prevent an accounting mismatch. The label 'commodity future' alone cannot decide scope without settlement terms, purpose and practice.",
+        ),
+        keyPoints: [
+          text("فرّق بين بيع السلعة نفسها مقابل نقد وبين تسوية العقد صافيًا.", "Distinguish selling the commodity for cash from net settlement of its contract."),
+          text("اختبر نطاق IFRS 9 واستثناء الاستخدام الخاص قبل الحكم على عقد السلعة.", "Test IFRS 9 scope and the own-use exception before classifying a commodity contract."),
+        ],
+        reference: "IAS 32.8–10, AG20–AG23; IFRS 9.2.4–2.7, BA.2",
+      },
+      {
+        title: text("أداة يردها حاملها للمصدر: استثناء حقوق الملكية ضيق", "Holder-puttable instrument: a narrow equity exception"),
+        explanation: text(
+          "حق الحامل في طلب استرداد الأداة نقدًا يحقق عادة تعريف الالتزام المالي، لكن IAS 32 يسمح باستثناء محدود إذا استوفت الأداة جميع شروط الفقرتين 16A و16B، ومنها حق نسبي في صافي الأصول عند التصفية، وكونها في أدنى فئة من المطالبات، وتماثل خصائص أدوات تلك الفئة، واعتماد تدفقاتها أساسًا على أداء المنشأة أو صافي أصولها، وغياب عقد آخر يحد جوهريًا من عائد الحامل المتبقي. توجد شروط منفصلة للأداة التي تُلزم بدفع حصة نسبية من صافي الأصول عند التصفية فقط. لا تفترض تحقق الاستثناء من لفظ «سهم» أو حق الاسترداد وحده؛ اقرأ شروط الفئة والعقود الأخرى. وإذا بدأت أو توقفت شروط الاستثناء لاحقًا، طبّق إعادة التصنيف في تاريخ التغير وفق IAS 32، فلا تكون عبارة «التصنيف ثابت دائمًا حتى الاستبعاد» صحيحة على إطلاقها.",
+          "A holder's right to demand cash redemption normally meets the financial-liability definition. IAS 32 has a narrow exception if every condition in paragraphs 16A and 16B is met, including a pro rata residual interest on liquidation, membership in the most subordinate class, identical features across that class, cash flows substantially based on performance or net assets, and no other arrangement that substantially fixes or restricts the holder's residual return. Separate conditions address an obligation to deliver a pro rata share of net assets only on liquidation. Neither a 'share' label nor putability proves the exception: inspect the class and other contracts. If the exception's conditions begin or cease to be met later, apply IAS 32's reclassification rules from that date; classification is not invariably fixed until derecognition.",
+        ),
+        keyPoints: [
+          text("الأصل في حق الاسترداد النقدي التزام؛ الاستثناء مشروط بكل متطلبات IAS 32.", "Cash putability normally creates a liability; the equity exception requires every IAS 32 condition."),
+          text("راجع تغير شروط الاستثناء لإمكان إعادة التصنيف.", "Reassess changes to the exception's conditions for required reclassification."),
+        ],
+        reference: "IAS 32.11, 16A–16F, 17",
+      },
+      {
         title: text("السند القابل للتحويل: قيّم الدين أولًا ثم خيار الأسهم", "Convertible bond: value the debt before the share option"),
         explanation: text(
           "إذا ألزم السند المصدر بسداد نقد أو كوبونات ومنح حامله خيار تحويل مؤهلًا إلى عدد ثابت من أسهم المصدر مقابل مبلغ ثابت، فهو أداة مركبة: التزام مالي وخيار حقوق ملكية منفصلان. حدد القيمة العادلة للالتزام بما كان سيدفعه السوق لسند مماثل بلا حق تحويل؛ اخصم أصل الدين والكوبونات بسعر دين مماثل، ثم خصص باقي متحصلات الإصدار لحقوق الملكية. سعر السهم الحالي والتوزيعات المتوقعة لا يحلان محل سعر الدين في هذه الطريقة. بعد الإصدار تبقى قيمة الخيار في حقوق الملكية دون إعادة قياس بسبب تغير احتمال التحويل، بينما يقاس الالتزام بالتكلفة المستهلكة وبالفائدة الفعلية. تحقق أولًا من عدم وجود بديل تسوية نقدية أو شرط يجعل عدد الأسهم أو مبلغ المقابل متغيرًا، فقد يغير ذلك تصنيف الخيار.",
