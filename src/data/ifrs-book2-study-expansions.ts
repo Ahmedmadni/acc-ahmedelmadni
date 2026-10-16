@@ -40,6 +40,31 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 1": {
     sections: [
       {
+        title: text("دورة التشغيل والإفصاح عما يسترد بعد سنة", "Operating cycle and amounts recovered after one year"),
+        explanation: text(
+          "لا تختزل تصنيف الأصل أو الالتزام في مدة اثني عشر شهرًا وحدها. قد يبقى المخزون أو العميل متداولًا إذا تحقق في دورة التشغيل المعتادة ولو تجاوزت سنة، وقد يبقى الدائن التشغيلي متداولًا وفق الدورة نفسها. الأدوات المحتفظ بها أساسًا للمتاجرة تخضع لمعيار المتاجرة في التصنيف، فلا يجعلها توقع بيع متأخر غير متداولة تلقائيًا. وعندما يجمع بند واحد مبالغ تسترد أو تسدد خلال اثني عشر شهرًا وبعدها، افصح عن الجزء المتوقع بعد اثني عشر شهرًا وفق IAS 1.61؛ ينطبق ذلك حتى عند اختيار عرض السيولة. افصل هذا الإفصاح الزمني عن قرار التصنيف، وراجع حقوق تأجيل الالتزام القائمة في تاريخ التقرير قبل الاستناد إلى إعادة تمويل لاحقة.",
+          "Do not reduce asset or liability classification to a twelve-month test alone. Inventory or receivables realised in the normal operating cycle can remain current even when that cycle exceeds a year, as can operating payables settled within it. Assets held primarily for trading meet the trading classification criterion; expected later sale does not automatically make them non-current. When one line combines amounts recovered or settled within and after twelve months, disclose the portion expected after twelve months under IAS 1.61, including under liquidity presentation. Distinguish that time-band disclosure from classification and assess period-end deferral rights before relying on later refinancing."
+        ),
+        keyPoints: [
+          text("اختبر دورة التشغيل والمتاجرة والمدة، ولا تعتمد شرطًا واحدًا فقط.", "Assess operating cycle, trading and timing rather than relying on one criterion alone."),
+          text("الإفصاح عن الجزء بعد سنة قد يلزم داخل بند مصنف متداولًا.", "A current line may still require disclosure of its portion recovered after one year.")
+        ],
+        reference: "IAS 1.60–75A",
+      },
+      {
+        title: text("قائمة واحدة أو قائمتان: تصنيف OCI لا يتغير", "One or two statements: OCI classification stays the same"),
+        explanation: text(
+          "يمكن في سياق IAS 1 عرض الربح أو الخسارة والدخل الشامل الآخر في قائمة واحدة، أو عرض قائمة ربح أو خسارة تتبعها قائمة تبدأ بالربح وتضيف OCI. لا يغير اختيار الشكل المعالجة: تجمع بنود OCI بحسب قابليتها لإعادة التصنيف وفق معيارها المختص، مع الضريبة المرتبطة بكل مجموعة. تغير قيمة استثمار أسهم اختير له OCI وفق IFRS 9.5.7.5 لا يعاد تدويره إلى الربح أو الخسارة؛ يمكن تحويل المتراكم داخل حقوق الملكية. يختلف ذلك عن أدوات الدين FVOCI أو فروق ترجمة عملية أجنبية أو تحوطات تستوفي شروط إعادة التصنيف المحددة. راجع طبيعة البند قبل نقله بين المجموعتين حتى لو بقي إجمالي الدخل الشامل متوازنًا، وافصل نصيب ملاك الأم وحصة الأقلية في الربح وفي مجموع الدخل الشامل.",
+          "Under IAS 1, profit or loss and OCI can appear in one statement, or a profit-or-loss statement can be followed by a statement beginning with profit and adding OCI. The layout does not change accounting: group OCI by whether its applicable Standard permits subsequent reclassification, with the related tax allocation. Fair-value movements of an equity investment elected into OCI under IFRS 9.5.7.5 are not recycled to profit or loss; accumulated amounts may transfer within equity. This differs from debt FVOCI, foreign-operation translation or hedges subject to specific reclassification conditions. Check the item's nature before moving it between groups even if total comprehensive income still balances, and separately attribute profit and total comprehensive income to owners and NCI."
+        ),
+        keyPoints: [
+          text("تطابق المجموع لا يثبت صحة تصنيف OCI.", "Matching totals do not establish correct OCI classification."),
+          text("اختيار قائمتين لا يسمح بتغيير قابلية إعادة التصنيف.", "Choosing two statements does not change recycling eligibility.")
+        ],
+        reference: "IAS 1.10A, 81A–82A, 90–96; IFRS 9.5.7.5, B5.7.1",
+      },
+
+      {
         title: text("هوية القوائم وفترة التقرير ووحدة العرض", "Statement identity, reporting period and display units"),
         explanation: text(
           "قبل قراءة الأرقام، عرّف المنشأة واذكر تغير اسمها إن وجد، وحدد هل القوائم منفصلة أم موحدة، وتاريخ المركز المالي أو الفترة التي تغطيها كل قائمة، وعملة العرض ومستوى التقريب. يجب تمييز القوائم والإيضاحات عن بقية التقرير السنوي، وتكرار هذه البيانات حيث يلزم للفهم، بما في ذلك العرض الإلكتروني. لا يحول التقريب إلى آلاف أو ملايين دون إظهار المعلومات الجوهرية. تعرض مجموعة كاملة سنويًا على الأقل؛ وإذا تغيرت نهاية الفترة وأصبحت أقصر أو أطول من سنة، اشرح السبب وعدم قابلية بعض المقارنات للمقارنة التامة. لا يفترض من ذلك موعد قانوني موحد للنشر في كل بلد.",
@@ -65,6 +90,22 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       }
     ],
     workedExamples: [
+      {
+        title: text("XYZ: مصالحة الربح وOCI والدخل الشامل", "XYZ: reconciling profit, OCI and comprehensive income"),
+        facts: text(
+          "يعرض مثال XYZ لسنة 20X7 ربحًا قبل الضريبة 161,667 وضريبة 40,417، دون خسارة عمليات متوقفة. تشمل مجموعة OCI غير المعاد تصنيفها: 933 إعادة تقييم، وخسارة استثمار أسهم 24,000، وخسارة إعادة قياس منافع محددة 667، وحصة OCI لزميلة 400، ومنفعة ضريبية 5,834. وتشمل المجموعة الأخرى فروق ترجمة 5,334 وخسارة تحوط 667 وضريبة 1,167. الأرقام بالألف دولار.",
+          "XYZ's 20X7 example shows pretax profit 161,667 and tax 40,417, with no discontinued-operation loss. Non-recycling OCI comprises revaluation 933, equity-investment loss 24,000, defined-benefit remeasurement loss 667, associate OCI 400 and tax benefit 5,834. The other group comprises translation gains 5,334, hedge losses 667 and tax 1,167. Amounts are in thousands of dollars."
+        ),
+        calculations: [
+          text("ربح السنة = 161,667 − 40,417 = 121,250. OCI غير المعاد تصنيفه = 933 − 24,000 − 667 + 400 + 5,834 = −17,500.", "Annual profit = 161,667 − 40,417 = 121,250. Non-recycling OCI = 933 − 24,000 − 667 + 400 + 5,834 = −17,500."),
+          text("OCI القابل لإعادة التصنيف بشروطه = 5,334 − 667 − 1,167 = 3,500؛ إجمالي OCI = −14,000؛ الدخل الشامل = 121,250 − 14,000 = 107,250.", "OCI subject to recycling conditions = 5,334 − 667 − 1,167 = 3,500; total OCI = −14,000; comprehensive income = 121,250 − 14,000 = 107,250."),
+          text("توزيع الربح: 97,000 لملاك الأم + 24,250 للأقلية = 121,250. توزيع الدخل الشامل: 85,800 + 21,450 = 107,250. الفرق يخصص OCI بمبلغ −11,200 للأم و−2,800 للأقلية.", "Profit attribution: 97,000 to owners + 24,250 to NCI = 121,250. Comprehensive-income attribution: 85,800 + 21,450 = 107,250. The differences allocate OCI of −11,200 to owners and −2,800 to NCI.")
+        ],
+        conclusion: text("تظل هذه المجاميع والتصنيفات نفسها في شكل القائمة الواحدة أو القائمتين. خسارة الأسهم في مجموعة عدم إعادة التصنيف مبنية على اختيار OCI المؤهل؛ يعالج بند الدين وفق قواعده المختلفة. لا ينتج قيد مستقل من مجرد إعادة ترتيب العرض.", "Totals and classifications remain the same in a one- or two-statement presentation. The equity loss is non-recycling on the basis of an eligible equity OCI election; debt follows its different requirements. Merely rearranging presentation creates no separate entry."),
+        journalEntries: [],
+        reference: "IAS 1.81A–82A, 90–96; IFRS 9.5.7.5, B5.7.1; IFRS 10.22",
+      },
+
       {
         title: text("XYZ: فحص توازن قائمة المركز المالي المقارنة", "XYZ: reconciling comparative financial position"),
         facts: text(
