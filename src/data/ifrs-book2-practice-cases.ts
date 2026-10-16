@@ -6487,7 +6487,41 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       ),
     ],
     reference: "IFRS 3.19, 32; IFRS 10.B86, B94",
-  }
+  },
+
+  {
+    id: "ifrs-book2-ifrs10-ch21-quiz-even-profits",
+    standardCode: "IFRS 10",
+    title: text("افتراض انتظام أرباح التابعة خلال السنة", "Assuming subsidiary profits accrue evenly"),
+    facts: text("استحوذت شركة أم على شركة تابعة خلال فترتها المحاسبية، ويُسأل هل يجوز افتراض أن أرباح التابعة تتراكم بالتساوي على مدار السنة.", "A parent acquires a subsidiary during its accounting period and is asked whether subsidiary profits may be assumed to accrue evenly through the year."),
+    question: text("هل يجوز دائمًا افتراض تراكم أرباح التابعة بالتساوي خلال السنة؟", "Can subsidiary profits always be assumed to accrue evenly through the year?"),
+    solution: [
+      text("ليس دائمًا. تدخل نتائج التابعة في القوائم الموحدة من تاريخ الحصول على السيطرة، ولذلك تستخدم الأرباح الفعلية للفترة اللاحقة للاقتناء متى توافرت. لا يستخدم التوزيع الزمني المنتظم إلا إذا نصت المسألة على ذلك أو كان تقديرًا مناسبًا في غياب معلومات أفضل؛ وتستبعد البنود الموسمية أو غير المتكررة بحسب توقيتها الحقيقي.", "Not always. Subsidiary results enter the consolidated statements from the date control is obtained, so actual post-acquisition results are used when available. Time apportionment is used only when the facts instruct it or it is a reasonable estimate in the absence of better information; seasonal and non-recurring items follow their actual timing."),
+    ],
+    reference: "IFRS 10.20",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch21-quiz-pre-acquisition-workings",
+    standardCode: "IFRS 3",
+    title: text("أرباح ما قبل الاقتناء في أوراق التجميع", "Pre-acquisition profits in consolidation workings"),
+    facts: text("السؤال عن موضع أرباح التابعة السابقة لتاريخ سيطرة الأم في أوراق عمل التجميع.", "The question asks where a subsidiary's profits existing before the parent obtained control enter the consolidation workings."),
+    question: text("ما القيود أو التعديلات في أوراق العمل لإثبات أرباح ما قبل الاقتناء؟", "What working entries or adjustments record a subsidiary's pre-acquisition profits?"),
+    solution: [
+      text("تُدرج الاحتياطيات والأرباح المحتجزة للتابعة في تاريخ الاقتناء ضمن صافي أصولها القابلة للتحديد عند حساب الشهرة، ولا تُضاف إلى أرباح المجموعة المحتجزة. تحسب الحركة اللاحقة للاقتناء بمقارنة رصيد الإقفال برصيد تاريخ الاقتناء، ثم تنسب تلك الحركة إلى مالكي الأم وحقوق غير المسيطرين. هذه تسويات تجميع وليست قيدًا في دفاتر التابعة.", "Acquisition-date subsidiary reserves and retained earnings form part of identifiable net assets in the goodwill working; they are not added to group retained earnings. The post-acquisition movement is the closing balance less the acquisition-date balance and is then attributed to parent owners and NCI. These are consolidation adjustments, not entries in the subsidiary's own ledger."),
+    ],
+    reference: "IFRS 3.32; IFRS 10.B86, B94",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch21-quiz-unrealised-profit-cost-of-sales",
+    standardCode: "IFRS 10",
+    title: text("موضع الربح غير المحقق في قائمة الربح أو الخسارة", "Location of unrealised profit in profit or loss"),
+    facts: text("بقيت في مخزون الإقفال بضائع من بيع داخل المجموعة، ويُسأل أين يظهر تعديل الربح غير المحقق في قائمة الربح أو الخسارة الموحدة.", "Goods from an intragroup sale remain in closing inventory and the question asks where the unrealised-profit adjustment appears in the consolidated statement of profit or loss."),
+    question: text("أين يظهر الربح غير المحقق الناتج عن التعامل داخل المجموعة في قائمة الربح أو الخسارة؟", "Where does unrealised profit on intragroup trading appear in the statement of profit or loss?"),
+    solution: [
+      text("عند العرض بحسب الوظيفة، يضاف ربح مخزون الإقفال غير المحقق إلى تكلفة المبيعات، فيخفض إجمالي الربح، ويخفض المخزون بالمبلغ نفسه. وتلغى المبيعات والمشتريات الداخلية بالكامل على نحو منفصل؛ أما ربح مخزون الافتتاح الذي تحقق ببيعه خارج المجموعة فيُعكس في الاتجاه المقابل.", "When expenses are presented by function, closing-inventory unrealised profit is added to cost of sales, reducing gross profit, and inventory is reduced by the same amount. Intragroup sales and purchases are eliminated in full separately; opening-inventory profit realised through an external sale reverses in the opposite direction."),
+    ],
+    reference: "IFRS 10.B86(c)",
+  },
 
 ];
 
