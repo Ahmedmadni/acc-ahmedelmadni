@@ -182,6 +182,7 @@ const protectedPracticeIds = [
   "ifrs-book2-ifrs10-ps-basic-profit",
   "ifrs-book2-ifrs10-ps-intragroup-goods",
   "ifrs-book2-ifrs10-ps-midyear-dividends",
+  "ifrs-book2-ifrs10-brodick-lamlash-profit-oci",
   "ifrs-book2-ifrs10-ch21-basic-cancellation",
   "ifrs-book2-ifrs10-ch21-goods-transit-loan-stock",
   "ifrs-book2-ifrs3-ch21-nci-proportionate-example",
