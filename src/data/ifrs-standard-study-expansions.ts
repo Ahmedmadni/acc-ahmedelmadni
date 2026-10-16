@@ -1177,6 +1177,28 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
         journalEntries: [],
         reference: "IFRS 13.15–26",
       },
+      {
+        title: text("أرض المصنع والاستخدام البديل السكني", "Factory land and an alternative residential use"),
+        facts: text("تستخدم منشأة أرضًا ومصنعًا عليها استخدامًا صناعيًا، بينما تشير أدلة السوق إلى إمكان تطوير الموقع سكنيًا إذا أزيل المصنع وتحملت تكاليف التحويل.", "An entity uses land and its factory industrially, while market evidence indicates the site might be redeveloped for residential use after demolishing the factory and incurring conversion costs."),
+        calculations: [
+          text("تقارن قيمة الأرض ضمن الاستخدام الصناعي الحالي بقيمتها كموقع سكني شاغر بعد خصم الهدم والتحويل ومراعاة عدم التأكد.", "Compare the land's value within the current industrial use with its value as a vacant residential site after demolition and conversion costs and relevant uncertainty."),
+          text("لا يكون البديل السكني أساس القياس إلا إذا كان ممكنًا فعليًا ومسموحًا قانونًا ومجديًا ماليًا لمشارك السوق.", "Residential use is the measurement premise only if physically possible, legally permissible and financially feasible for a market participant."),
+        ],
+        conclusion: text("الاستخدام الأعلى والأفضل هو البديل الذي ينتج القيمة الأعلى من منظور المشاركين في السوق، لا الاستخدام الذي تفضله الإدارة وحدها.", "Highest and best use is the alternative producing the higher market-participant value, not merely management's preferred use."),
+        journalEntries: [],
+        reference: "IFRS 13.27–31",
+      },
+      {
+        title: text("مشروع بحث وتطوير محتفظ به دفاعيًا", "Research and development project held defensively"),
+        facts: text("استحوذت منشأة على مشروع بحث وتطوير وتنوي عدم استكماله، بل الاحتفاظ به لمنع منافسيها من الوصول إلى التقنية. ويستطيع مشارك سوق آخر تطوير المشروع مع أصول مكملة.", "An entity acquires an R&D project and intends not to complete it, but to hold it to deny competitors access to the technology. Another market participant could develop the project with complementary assets."),
+        calculations: [
+          text("نية المشتري الفعلية لا تحدد القيمة العادلة؛ يختبر القياس الاستخدام الأعلى والأفضل من منظور المشاركين في السوق.", "The buyer's actual intention does not determine fair value; measurement tests highest and best use from the market-participant perspective."),
+          text("إذا كان تطوير المشروع مع أصول مكملة يزيد قيمة مجموعة الأصول وكان ممكنًا ومسموحًا ومجديًا، تقاس القيمة على هذا الأساس حتى لو احتفظ به المشتري دفاعيًا.", "If development with complementary assets maximises the asset group's value and is possible, permissible and feasible, fair value uses that premise even when the buyer holds the project defensively."),
+        ],
+        conclusion: text("الاحتفاظ الدفاعي قد يحقق قيمة، لكنه لا يستبدل افتراضات المشاركين في السوق أو الاستخدام الأعلى والأفضل.", "Defensive holding can provide value, but it does not override market-participant assumptions or highest and best use."),
+        journalEntries: [],
+        reference: "IFRS 13.22–23, 27–31",
+      },
     ],
   },
   "IAS 32": {
