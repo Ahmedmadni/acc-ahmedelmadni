@@ -764,6 +764,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 12": {
     sections: [
       {
+        title: text("ضريبة القيمة المضافة في مثال الفصل ليست ضريبة دخل وفق IAS 12", "The chapter's VAT example is outside IAS 12 income tax"),
+        explanation: text(
+          "IAS 12 يخص الضرائب القائمة على الربح الخاضع للضريبة، بينما ضريبة القيمة المضافة على توريد السلع والخدمات تحكمها قواعد الولاية الضريبية. في سلسلة الكتاب وبفرض أن جميع الموردين مسجلون ومؤهلون لاسترداد ضريبة المدخلات وأن التوريدات خاضعة لمعدل 20%: الغابوي يبيع بـ100 جنيه فيورد 20؛ صانع الأثاث يبيع بـ150 فيحتسب مخرجات 30 ويخصم مدخلات 20 فيورد 10؛ المتجر يبيع بـ300 فيحتسب مخرجات 60 ويخصم مدخلات 30 فيورد 30. مجموع ما يورد 60، وهو 20% من سعر البيع النهائي قبل الضريبة. التوريد الصفري يخضع لمعدل صفر وقد تبقى ضريبة المدخلات قابلة للاسترداد؛ أما التوريد المعفى فلا ينتج ضريبة مخرجات وتقيّد عادةً قابلية استرداد مدخلاته. هذه نتيجة المثال وتعليمات HMRC العامة، وليست قاعدة اعتراف بضريبة مؤجلة في IAS 12 أو حكمًا لكل ولاية.",
+          "IAS 12 covers taxes based on taxable profit; VAT on supplies of goods or services follows the relevant jurisdiction's tax law. In the book's chain, assuming all traders are VAT registered, eligible to recover input tax and make 20%-rated taxable supplies: the forester sells for £100 and remits £20; the furniture maker sells for £150, charges £30 output VAT, deducts £20 input VAT and remits £10; the shop sells for £300, charges £60, deducts £30 and remits £30. Total remitted is £60, or 20% of the final pre-tax price. Zero-rated supplies bear a 0% output rate and can retain input-tax recovery; exempt supplies have no output VAT and normally restrict related input-tax recovery. This is the source illustration and general HMRC guidance, not an IAS 12 deferred-tax recognition rule or a universal tax-law conclusion."
+        ),
+        keyPoints: [
+          text("20 + 10 + 30 = 60 جنيهًا إجمالي الضريبة المحصلة عبر السلسلة.", "£20 + £10 + £30 = £60 total VAT remitted along the chain."),
+          text("الصفرية والإعفاء يختلفان في استرداد ضريبة المدخلات.", "Zero rating and exemption differ in input-tax recovery."),
+          text("افصل ضريبة المبيعات عن ضريبة الدخل المؤجلة وفق IAS 12.", "Keep sales tax separate from IAS 12 deferred income tax."),
+        ],
+        reference: "IAS 12.2; HMRC VAT Notice 700, sections 3 and 10",
+      },
+      {
         title: text("استثناء الاعتراف الأولي بعد تعديل IAS 12", "The IAS 12 initial-recognition exception after amendment"),
         explanation: text(
           "لا يعفي الاعتراف الأولي بأصل أو التزام من الضريبة المؤجلة تلقائيًا. استثناء IAS 12.15 و24 ضيق: مع مراعاة شروط كل فقرة، يتعلق بمعاملة ليست تجميع أعمال، لا تؤثر عند حدوثها في الربح المحاسبي أو الخاضع للضريبة، ولا تنشئ عند حدوثها فروقًا مؤقتة خاضعة وقابلة للخصم بمقادير متساوية. لذلك لا يطبق الاستثناء لمجرد أن قيد إيجار أو التزام إزالة أصل لم يؤثر فورًا في الربح؛ إذا نشأت فروق متساوية للأصل والالتزام، تُختبر ضريبة كل جانب ويظل إثبات أصل الضريبة المؤجلة مشروطًا باحتمال استخدامه. استثناء الشهرة عند الاعتراف الأولي حكم منفصل. عرض الكتاب الذي يقتصر على شرطي عدم تجميع الأعمال وعدم التأثير في الربح يحذف شرط الفروق المتساوية الذي أضيف بتعديل ساري للفترات السنوية التي تبدأ في 1 يناير 2023 أو بعده.",

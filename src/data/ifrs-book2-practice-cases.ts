@@ -617,6 +617,22 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 12.5, 17–20, 26",
   },
   {
+    id: "ifrs-book2-ias12-ch11-quiz-current-deferred-charge",
+    standardCode: "IAS 12",
+    title: text("اختبار الفصل 11: مصروف الضريبة الجارية والمؤجلة", "Chapter 11 quiz: current and deferred tax charge"),
+    facts: text(
+      "يعرض الاختبار ربحًا للسنة قدره 150,000 دولار، وزيادة في الفروق المؤقتة الخاضعة للضريبة قدرها 6,000 دولار، وزيادة سابقة في تقدير الضريبة الجارية قدرها 3,000 دولار ستعكس في السنة الحالية. معدل الضريبة 30%. لا يذكر النص صراحةً هل الربح المذكور هو الربح الخاضع للضريبة، ولا أين نشأت الزيادة في الفروق المؤقتة.",
+      "The quiz gives profit for the year of $150,000, a $6,000 increase in taxable temporary differences, and a $3,000 prior-year overprovision of current tax to be reversed this year. The tax rate is 30%. It does not explicitly say whether the quoted profit is taxable profit or where the temporary-difference movement arose."
+    ),
+    question: text("احسب مصروف الضريبة في الربح أو الخسارة وفق افتراضات الحل المبسط، وبيّن ما يلزم لحكم غير مشروط.", "Calculate the profit-or-loss tax charge under the quiz's simplified assumptions, and identify what is needed for an unconditional answer."),
+    solution: [
+      text("إذا كان مبلغ 150,000 هو الربح الخاضع للضريبة، أو لا توجد تعديلات بينه وبين الربح الخاضع، فالضريبة الجارية للسنة = 150,000 × 30% = 45,000 دولار. يخفّض تصحيح زيادة تقدير السنة السابقة مصروف الضريبة الجارية بمبلغ 3,000، ليصبح 42,000 دولار.", "If $150,000 is taxable profit, or no accounting-to-tax adjustments are needed, current tax for this year is $150,000 × 30% = $45,000. Reversing the prior-year $3,000 overprovision reduces current-tax expense to $42,000."),
+      text("إذا كانت زيادة الفرق الخاضع للضريبة البالغة 6,000 نشأت من بند في الربح أو الخسارة وكان معدل الانعكاس 30%، تزيد الضريبة المؤجلة على الربح أو الخسارة بمبلغ 6,000 × 30% = 1,800 دولار. المصروف الإجمالي = 45,000 − 3,000 + 1,800 = 43,800 دولار، كما في مفتاح الكتاب.", "If the $6,000 increase in the taxable difference arises from a profit-or-loss item and 30% is the reversal rate, deferred tax charged to profit or loss rises by $6,000 × 30% = $1,800. Total expense is $45,000 − $3,000 + $1,800 = $43,800, as in the book's key."),
+      text("إن كان 150,000 ربحًا محاسبيًا مع فروق ضريبية أخرى، فلا تكفي الوقائع لحساب الضريبة الجارية؛ وإن نشأ الفرق المؤقت في OCI أو حقوق الملكية، لا يضاف أثره إلى مصروف الربح أو الخسارة. يلزم الربح الخاضع ومصدر حركة الفرق وتحقق المعدل الساري عند الانعكاس قبل اعتماد 43,800 دون شرط.", "If $150,000 is accounting profit with other tax adjustments, current tax cannot be calculated from the facts. If the temporary difference arose in OCI or equity, its tax effect is not added to profit-or-loss expense. Taxable profit, the source of the difference movement and the reversal rate are needed before treating $43,800 as unconditional."),
+    ],
+    reference: "IAS 12.12, 15, 46–47, 57–58, 61A",
+  },
+  {
     id: "ifrs-book2-ifrs9-ch10-quiz-subsequent-assets",
     standardCode: "IFRS 9",
     title: text("قياس الأصول المالية لاحقًا", "Subsequent measurement of financial assets"),
