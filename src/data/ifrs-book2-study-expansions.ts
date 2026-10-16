@@ -1321,6 +1321,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         reference: "IAS 19.8, 11, 159–170; IAS 37.72–83",
       },
       {
+        title: text("إنهاء الخدمة الطوعي أو الإجباري: اختبر سبب المنفعة وتوقيت الالتزام", "Voluntary or involuntary termination: test the benefit and recognition date"),
+        explanation: text(
+          "لا تقتصر مزايا إنهاء الخدمة على قرار صاحب العمل بفصل الموظف. قد تنشأ أيضًا عندما يقبل الموظف عرضًا من المنشأة مقابل إنهاء عمله طوعًا؛ لكن مبلغًا يستحق عند الاستقالة أو التقاعد لأي سبب بموجب خدمة سابقة يُقيّم كمنفعة ما بعد انتهاء الخدمة، والزيادة المشروطة بخدمة مستقبلية تُحمّل على تلك الخدمة. في العرض الطوعي يصبح التعهد غير قابل للسحب عند قبول الموظف أو سريان قيد سابق يمنع سحبه، أيهما أسبق. وفي الإنهاء بقرار المنشأة يلزم إبلاغ المتأثرين بخطة تفصيلية لا يرجح تغييرها جوهريًا وتحدد العاملين والوظائف والمواقع والموعد والمزايا. يثبت التزام ومصروف الإنهاء في التاريخ الأسبق لتعذر سحب العرض وإثبات إعادة هيكلة مؤهلة تتضمن المزايا. إذا كانت المنفعة تعزيزًا لحق ما بعد الخدمة، تُقاس وفق متطلبات ذلك الحق؛ وإلا يتبع القياس متطلبات المنافع قصيرة الأجل أو الطويلة الأخرى بحسب موعد التسوية المتوقع.",
+          "Termination benefits are not confined to an employer's unilateral dismissal. They can also arise when an employee accepts the employer's offer in exchange for voluntary termination. A benefit payable on ordinary resignation or retirement regardless of cause is instead assessed as a post-employment benefit, and an increment conditional on future service is attributed to that service. For a voluntary offer, the employer can no longer withdraw it when the employee accepts or an earlier restriction on withdrawal takes effect. For an employer-initiated termination, it must communicate a detailed plan unlikely to change significantly, identifying affected numbers, roles, locations, completion date and benefits. Recognise a termination liability and expense at the earlier of the offer becoming non-withdrawable and recognition of a qualifying restructuring involving the payments. Measure an enhancement of post-employment benefits under those benefit requirements; otherwise use short-term or other long-term measurement according to expected settlement timing.",
+        ),
+        keyPoints: [
+          text("قبول عرض إنهاء طوعي من المنشأة قد ينشئ منفعة إنهاء خدمة.", "Accepting an employer's voluntary redundancy offer can create a termination benefit."),
+          text("افصل ما يستحق بغض النظر عن سبب المغادرة وما يعتمد على خدمة لاحقة.", "Separate benefits payable regardless of departure cause from amounts earned through later service."),
+          text("توقيت الاعتراف وتصنيف طريقة القياس سؤالان مختلفان.", "Recognition timing and measurement category are separate questions."),
+        ],
+        reference: "IAS 19.8, 159–170; IAS 37.72–83",
+      },
+      {
         title: text("تعديل الخطة وتقليصها وتسويتها", "Plan amendment, curtailment and settlement"),
         explanation: text(
           "تغيير المنافع عن خدمة سابقة أو خفض عدد المشمولين بالخطة يولد تكلفة خدمة سابقة، قد تكون مصروفًا أو تخفيضًا للمصروف إذا انخفض الالتزام. أما التسوية فهي معاملة تزيل التزام المنشأة القانوني أو الضمني عن منافع محددة؛ سداد المنافع المعتاد وفق شروط الخطة ليس تسوية مستقلة. أعد قياس الالتزام وأصول الخطة بافتراضات حديثة قبل تحديد تكلفة الخدمة السابقة أو ربح التسوية أو خسارتها. قارن قيمة الالتزام الذي أزيل بمقابل التسوية، بما فيه أصول الخطة المنقولة. تظهر تكلفة الخدمة السابقة وأثر التسوية في الربح أو الخسارة، بينما تُعرض إعادة القياس الاكتوارية وعوائد الأصول خارج صافي الفائدة في الدخل الشامل الآخر. بعد الحدث تُستخدم الافتراضات المحدّثة لحساب تكلفة الخدمة الجارية وصافي الفائدة لباقي الفترة.",
