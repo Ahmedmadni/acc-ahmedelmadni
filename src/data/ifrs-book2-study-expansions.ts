@@ -1173,6 +1173,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("الضمان المالي ليس مجرد التزام محتمل وفق IAS 37", "A financial guarantee is not merely an IAS 37 contingency"),
+        explanation: text(
+          "افحص نص الضمان: هل يلزم المُصدر بدفع مبالغ محددة لتعويض حامل أداة دين عن خسارة ناتجة من إخفاق مدين محدد في السداد عند الاستحقاق؟ إذا نعم، وفي غياب استثناء نطاق أو اختيار محاسبي ذي صلة، يدخل العقد ضمن IFRS 9. يثبت المُصدر التزامًا بالقيمة العادلة عند نشأته، ثم يقيسه عادة بالأعلى من مخصص الخسائر الائتمانية المتوقعة والمبلغ المبدئي ناقص الدخل التراكمي المناسب. تصنيف عقد القرض المضمون كمجرد التزام محتمل عند سلامة المدين ثم مخصص IAS 37 عند تعثره يتجاهل الاعتراف الأولي ونموذج الخسائر الائتمانية. لا تخترع قيمة عادلة أو خسارة متوقعة عندما تغيب شروط الضمان والتعرض واحتمالات التعثر والتحصيل.",
+          "Read the guarantee terms: must the issuer make specified payments to reimburse a debt holder for loss from a specified debtor's failure to pay when due? If so, absent a relevant scope exception or election, IFRS 9 applies. The issuer initially recognises a fair-value liability, then generally measures it at the higher of expected credit losses and the initial amount less appropriate cumulative income. Treating a borrowing guarantee as a mere contingent liability while the debtor is sound and an IAS 37 provision only after deterioration overlooks initial recognition and ECL. Do not invent fair value or ECL without the guarantee terms, exposure, default and recovery inputs.",
+        ),
+        keyPoints: [
+          text("ابدأ باختبار التعريف والنطاق قبل النظر إلى درجة احتمال مطالبة الضامن.", "Test definition and scope before considering how likely a call on the guarantee is."),
+          text("تدهور المدين يغير قياس الخسارة المتوقعة؛ لا يخلق الاعتراف الأولي لأول مرة إن كان العقد ضمن IFRS 9 أصلًا.", "Borrower deterioration affects ECL measurement; it does not first create recognition for a contract already within IFRS 9."),
+        ],
+        reference: "IFRS 9.Appendix A, 2.1(e), 4.2.1(c), 5.1.1, 5.5",
+      },
+      {
         title: text("مصفوفة الخسائر المتوقعة: معدل تعثر أم معدل خسارة؟", "ECL provision matrix: default rate or loss rate?"),
         explanation: text(
           "يسمح IFRS 9 باستخدام مصفوفة عملية للذمم التجارية ضمن المنهج المبسط، فتُجمع الأرصدة بحسب خصائص المخاطر وأعمار التأخر وتطبق معدلات خسائر ائتمانية متوقعة على مدى العمر. تُشتق المعدلات من خبرة التحصيل السابقة بعد تعديلها للظروف الراهنة والتوقعات المستقبلية المعقولة، مع مراعاة المبالغ المتوقع استردادها والقيمة الزمنية للنقود عند جوهريتها. لا يكفي ضرب احتمال التعثر وحده في كامل الرصيد إذا كانت هناك تحصيلات بعد التعثر؛ يجب أن يعكس المعدل الخسارة النقدية المتوقعة. عند مقارنة مخصص تاريخين، يسجل فرق الرصيد المطلوب عن الرصيد القائم فقط بعد النظر في الشطب والاستخدام والتحصيل والحركات الأخرى.",
@@ -1350,6 +1362,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   },
   "IAS 37": {
     sections: [
+      {
+        title: text("قرار المخصص أو الإفصاح أو عدم الإجراء", "Choose provision, contingent disclosure or no entry"),
+        explanation: text(
+          "عند وجود حدث ماضٍ، افصل ثلاثة أسئلة: هل الالتزام حالي أم محتمل؟ هل خروج الموارد مرجح؟ وهل يمكن تقدير المبلغ بثقة كافية؟ الالتزام الحالي مع خروج مرجح وتقدير موثوق يكوّن مخصصًا. إن بقي الوجود غير مؤكد، أو كان الخروج غير مرجح لكنه غير بعيد، يفصح عن التزام محتمل بدل إثبات مبلغ. إذا كان احتمال الخروج بعيدًا فلا يلزم عادة إفصاح. وفي جانب المطالبات، لا يثبت الأصل المحتمل: يفصح عنه عند رجحان التدفق، ولا يثبت أصلًا إلا عندما يصبح التدفق مؤكدًا فعليًا فلا يبقى احتماليًا. استثناءات النطاق مثل الضمان المالي يجب حسمها قبل تطبيق هذا المخطط.",
+          "After a past event, separate three questions: is the obligation present or merely possible, is an outflow probable, and can it be estimated reliably? A present obligation with probable outflow and reliable estimate is a provision. If existence remains uncertain, or outflow is not probable but more than remote, disclose a contingent liability instead of recording an amount. A remote outflow normally needs no disclosure. For possible inflows, do not recognise a contingent asset: disclose when inflow is probable and recognise an asset only once virtually certain, when it ceases to be contingent. Resolve scope exclusions such as financial guarantees before using this decision route.",
+        ),
+        keyPoints: [
+          text("الإفصاح عن التزام محتمل لا يعني تسجيله كالتزام في قائمة المركز المالي.", "Disclosing a contingent liability does not record a statement-of-financial-position liability."),
+          text("عند تغير أدلة دعوى قضائية بين سنتين، أعد التقييم في كل تاريخ تقرير ولا تفترض رقم تعويض غير معطى.", "Reassess litigation evidence at each reporting date; do not invent an unspecified damages amount."),
+        ],
+        reference: "IAS 37.14–16, 25–26, 27–35, 84–89",
+      },
+      {
+        title: text("إعلان إعادة الهيكلة وحدود تكاليفها", "Communicating restructuring and limiting its costs"),
+        explanation: text(
+          "الخطة التفصيلية المعتمدة داخل الإدارة لا تكفي وحدها لالتزام ضمني. يلزم بدء تنفيذها أو إعلان سماتها الرئيسية للأطراف المتأثرة بما يخلق توقعًا صحيحًا؛ ولبيع عملية، يفحص كذلك اتفاق البيع الملزم. عند نشوء المخصص، لا يدخل فيه سوى النفقات المباشرة الضرورية لإعادة الهيكلة وغير المرتبطة بالنشاط المستمر. التسويق والأنظمة الجديدة وإعادة تدريب الموظفين ليست مخصص إعادة هيكلة لمجرد ورودها في الميزانية التقديرية للخطة.",
+          "An internally approved detailed plan alone does not create a constructive obligation. The entity must start implementing it or announce its main features to those affected so as to create a valid expectation; a sale of an operation also requires assessing a binding sale agreement. Once a provision is justified, include only direct expenditures necessarily entailed by restructuring and unrelated to continuing activities. Marketing, new systems and staff retraining are not restructuring-provision costs merely because they appear in a plan budget.",
+        ),
+        keyPoints: [
+          text("فرّق بين قرار الإدارة وبين التزام لم يعد بإمكان المنشأة تفاديه واقعيًا تجاه المتأثرين.", "Distinguish management's decision from a commitment the entity can no longer realistically avoid to those affected."),
+          text("لا تُحمّل المخصص تكلفة تحسين التشغيل القادم.", "Do not load future operating enhancements into the provision."),
+        ],
+        reference: "IAS 37.70–83",
+      },
       {
         title: text("لا تنشئ مخصصًا قبل وجود التزام حالي", "A provision starts with a present obligation"),
         explanation: text(

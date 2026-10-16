@@ -5706,6 +5706,80 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 3.10–13, 32; IAS 38.11–12, 48–50; IAS 36.80, 90, 124",
   },
 
+
+  {
+    id: "ifrs-book2-warren-three-year-assurance-warranty",
+    standardCode: "IAS 37",
+    title: text("ضمان Warren لثلاث سنوات: هل ينشأ مخصص؟", "Warren's three-year warranty: is a provision required?"),
+    facts: text(
+      "تبيع Warren Co منتجات مع ضمان معياري عند البيع لتعمل كما هو متوقع ثلاث سنوات. لا يحدد السؤال مقابلًا منفصلًا للخدمة أو تكاليف إصلاح أو توزيع عيوب.",
+      "Warren Co sells products with a standard three-year promise that they will perform as expected. The prompt gives no separately priced service, repair costs or defect distribution.",
+    ),
+    question: text(
+      "هل يعترف بمخصص عن المنتجات المبيعة قبل تاريخ التقرير؟ وكيف يؤثر احتمال وجود خدمة إضافية في تصنيف الضمان؟",
+      "Is a provision recognised for products sold before reporting date? How would any additional service affect warranty classification?",
+    ),
+    solution: [
+      text(
+        "إذا كان الضمان يؤكد مطابقة المنتج لمواصفاته فقط، فإن البيع حدث ملزم؛ يُقدر في تاريخ التقرير إصلاح أو استبدال العيوب المبلغ عنها والعيوب الكامنة المتوقع ظهورها في الوحدات المبيعة خلال المدة المتبقية، ويثبت مخصص بأفضل تقدير عند رجحان خروج الموارد وإمكان القياس. لا يقتصر على المطالبات المبلغ عنها بالفعل، ولا يمكن حساب مبلغ من البيانات المتاحة.",
+        "If this is assurance that the product meets agreed specifications, the sale creates the obligation. At reporting date estimate repair or replacement for notified defects and latent defects expected in units already sold during remaining cover; recognise a best-estimate provision when outflow is probable and measurable. Do not restrict it to claims already notified; no amount can be computed here.",
+      ),
+      text(
+        "افحص مدة الثلاث سنوات وطبيعة المهام وخيار شراء الضمان منفصلًا وفق IFRS 15. إذا تضمن خدمة مستقلة إضافية، تُعالج الخدمة أو الجزء غير القابل للفصل كالتزام أداء، وليس كله مخصص IAS 37 تلقائيًا. طول المدة وحده مؤشر وليس حكمًا قاطعًا.",
+        "Assess the three-year term, promised tasks and any separate purchase option under IFRS 15. If additional distinct service is provided, account for that service or an inseparable combined warranty as a performance obligation rather than automatically placing the whole promise in IAS 37. Duration alone is an indicator, not conclusive.",
+      ),
+    ],
+    reference: "IAS 37.14, 24, 36–40; IFRS 15.B28–B33",
+  },
+  {
+    id: "ifrs-book2-callow-food-poisoning-litigation",
+    standardCode: "IAS 37",
+    title: text("دعوى Callow: تطور الدليل بين تاريخين", "Callow litigation: evidence changes between reporting dates"),
+    facts: text(
+      "بعد حفل في 20X0 توفي عشرة أشخاص، وربما ارتبطت الحالات بأغذية باعتها Callow Co. بدأت دعوى تعويض وتنكر الشركة مسؤوليتها. عند اعتماد قوائم 31 ديسمبر 20X0 رجح محاموها عدم ثبوت المسؤولية، لكن عند إعداد قوائم 31 ديسمبر 20X1 رجحوا ثبوتها بعد تطورات القضية. لا يقدم السؤال تقدير مبلغ التعويض.",
+      "Ten people died after a 20X0 event, possibly linked to food sold by Callow Co. Damages proceedings began and the company disputes liability. On authorising its 31 December 20X0 statements, lawyers expected it probably would not be liable; when preparing 31 December 20X1 statements, case developments led them to expect liability is probable. No damages estimate is supplied.",
+    ),
+    question: text(
+      "ما المعالجة في قوائم 20X0 و20X1، وما البيانات اللازمة لإثبات مبلغ؟",
+      "What is the treatment in the 20X0 and 20X1 statements, and what would be needed to record an amount?",
+    ),
+    solution: [
+      text(
+        "في 20X0، إذا لم يرجح وجود التزام حالي أو خروج موارد بناءً على الدليل المتاح عند اعتماد القوائم، لا يثبت مخصص؛ تفصح عن التزام محتمل ما لم تكن إمكانية الخروج بعيدة. لا يفترض الحكم أن كل حدث وفاة يثبت آليًا مسؤولية المنشأة.",
+        "In 20X0, if the available evidence at authorisation does not support a probable present obligation or outflow, do not recognise a provision; disclose a contingent liability unless outflow is remote. The deaths alone do not establish the entity's legal responsibility.",
+      ),
+      text(
+        "في 20X1 تعيد تقييم الوقائع: إذا صار الالتزام الحالي وخروج الموارد مرجحين وأمكن تقدير التعويض بصورة موثوقة، يثبت مخصص بأفضل تقدير في تلك القوائم. إذا تعذر التقدير بشكل نادر، يبقى إفصاح الالتزام المحتمل. لا يمكن اختراع رقم من السؤال، ولا يُعاد كتابة قوائم 20X0 تلقائيًا لمجرد تغير التقدير اللاحق.",
+        "Reassess in 20X1: if a present obligation and outflow are probable and damages can be reliably estimated, recognise a best-estimate provision then. In the rare absence of a reliable estimate, continue contingent-liability disclosure. The question gives no monetary amount, and later estimate changes do not automatically rewrite 20X0.",
+      ),
+    ],
+    reference: "IAS 37.14–16, 25–26, 36–40, 86",
+  },
+  {
+    id: "ifrs-book2-smack-pony-financial-guarantee",
+    standardCode: "IFRS 9",
+    title: text("ضمان Smack لقرض Pony: نطاق IFRS 9 أولًا", "Smack's guarantee of Pony borrowing: test IFRS 9 scope first"),
+    facts: text(
+      "ضمنت Smack Co في 20X0 اقتراض Pony Co عندما كانت حالتها المالية سليمة. تدهورت حالة Pony خلال 20X1 وطلبت حماية من الدائنين في 30 يونيو. لا يقدم السؤال نص الضمان أو المقابل أو القيمة العادلة أو الرصيد القائم أو بيانات الخسائر الائتمانية.",
+      "Smack Co guaranteed Pony Co borrowing in 20X0 when Pony was financially sound. Pony's condition deteriorated during 20X1 and it sought creditor protection on 30 June. The exact guarantee terms, fee, fair value, exposure and credit-loss inputs are not supplied.",
+    ),
+    question: text(
+      "ما المعالجة في 31 ديسمبر 20X0 و31 ديسمبر 20X1 إذا استوفى الضمان تعريف عقد الضمان المالي في IFRS 9؟ وهل يكفي تصنيفه التزامًا محتملًا ثم مخصصًا وفق IAS 37؟",
+      "What is the treatment at 31 December 20X0 and 31 December 20X1 if the guarantee meets IFRS 9's financial-guarantee definition? Is IAS 37 contingent-liability-then-provision treatment sufficient?",
+    ),
+    solution: [
+      text(
+        "تحقق أولًا أن العقد يلزم Smack بتعويض حامل الدين عن خسارة تنشأ من عدم سداد Pony دفعة مستحقة؛ عند انطباق تعريف الضمان المالي ونطاق IFRS 9، تثبت Smack التزام الضمان مبدئيًا بالقيمة العادلة حتى لو كانت Pony سليمة. سلامة المدين لا تجعل القيمة أو الخسائر الائتمانية صفرًا بحكم تلقائي، ولا يكفي إفصاح IAS 37 وحده في 20X0.",
+        "First determine whether Smack must reimburse a debt holder for loss caused by Pony's failure to pay when due. If the contract meets the financial-guarantee definition and IFRS 9 applies, Smack initially recognises a guarantee liability at fair value even when Pony is sound. Sound credit does not automatically mean nil fair value or nil expected losses; IAS 37 disclosure alone is insufficient in 20X0.",
+      ),
+      text(
+        "في 20X1، ومع عدم اختيار قياس آخر مسموح، يقاس الالتزام لاحقًا بالأعلى من مخصص الخسائر الائتمانية المتوقعة وفق IFRS 9 والمبلغ المثبت أولًا ناقص الدخل المعترف به وفق مبادئ IFRS 15. تعثر Pony مؤشر قوي على إعادة تقييم الخسائر المتوقعة، لكنه لا يحدد المبلغ وحده. إن لم يستوف العقد تعريف الضمان المالي أو انطبق استثناء نطاق محدد، يُعاد تحليل المعيار المناسب؛ لا يُفترض ذلك من العنوان فقط.",
+        "In 20X1, absent another permitted designation, subsequently measure the liability at the higher of IFRS 9's expected-credit-loss allowance and the initial amount less income recognised under IFRS 15 principles. Pony's financial distress requires reassessing expected losses but gives no amount by itself. If the terms fail the financial-guarantee definition or a specific scope exception applies, determine the appropriate Standard separately; a label alone is insufficient.",
+      ),
+    ],
+    reference: "IFRS 9.Appendix A, 2.1(e), 4.2.1(c), 5.1.1, 5.5; IFRS 15",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {

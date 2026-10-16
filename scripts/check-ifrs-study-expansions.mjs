@@ -78,6 +78,14 @@ for (const [code, expansion] of Object.entries(expansions)) {
 
 const practiceIds = new Set();
 const protectedPracticeIds = [
+  "ifrs-book2-ias37-ch8-quiz-provision-definition",
+  "ifrs-book2-ias37-ch8-quiz-franchising-restructuring",
+  "ifrs-book2-ias37-ch8-quiz-contingencies",
+  "ifrs-book2-ias37-ch8-quiz-oilfield-decommissioning",
+  "ifrs-book2-ias37-ch8-quiz-overhaul",
+  "ifrs-book2-warren-three-year-assurance-warranty",
+  "ifrs-book2-callow-food-poisoning-litigation",
+  "ifrs-book2-smack-pony-financial-guarantee",
   "ifrs-book2-ifrs16-ch6-quiz-definition",
   "ifrs-book2-ifrs16-ch6-quiz-initial-entry",
   "ifrs-book2-ifrs16-ch6-quiz-depreciation-term",
