@@ -5809,6 +5809,39 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 19.11, 13–17",
   },
 
+  {
+    id: "ifrs-book2-ias19-one-year-defined-benefit-remeasurement",
+    standardCode: "IAS 19",
+    title: text("خطة منافع محددة: مصالحة الالتزام وأصول الخطة", "Defined-benefit plan: reconcile obligation and plan assets"),
+    facts: text(
+      "في 1 يناير 20X2 بلغت القيمة الحالية لالتزام منافع محددة 1,250,000 دولار والقيمة العادلة لأصول الخطة 1,100,000. تكلفة الخدمة الجارية خلال السنة 360,000 ومعدل الخصم 6%. في 31 ديسمبر دفعت المنشأة مساهمة للخطة 490,000، وسددت الخطة منافع 190,000. في نهاية السنة قيّم الخبير الالتزام بمبلغ 1,553,600، وأصول الخطة بمبلغ 1,500,000. تمت المساهمة وسداد المنافع في نهاية السنة، فلا يحملان فائدة خلال 20X2.",
+      "On 1 January 20X2 the present value of a defined-benefit obligation was $1,250,000 and the fair value of plan assets was $1,100,000. Current service cost was $360,000 and the discount rate was 6%. At 31 December the employer contributed $490,000 and the plan paid $190,000 of benefits. The year-end actuarial obligation was $1,553,600 and plan assets had a fair value of $1,500,000. Contributions and benefits were paid at year-end, so they bear no interest during 20X2."
+    ),
+    question: text(
+      "احسب صافي الفائدة وإعادة قياس الالتزام وعائد أصول الخطة خارج الفائدة وصافي أثر الدخل الشامل الآخر والالتزام الختامي، مع توضيح عرضها في القوائم.",
+      "Calculate net interest, obligation remeasurement, plan-asset return excluding interest, net OCI effect and closing liability, and explain financial-statement presentation."
+    ),
+    solution: [
+      text(
+        "فائدة الالتزام = 1,250,000 × 6% = 75,000؛ فائدة أصول الخطة الداخلة في صافي الفائدة = 1,100,000 × 6% = 66,000؛ صافي مصروف الفائدة = 9,000. مع تكلفة الخدمة 360,000، يكون أثر الربح أو الخسارة مصروفًا قدره 369,000 دولار.",
+        "Interest on the obligation is $1,250,000 × 6% = $75,000; interest on plan assets included in net interest is $1,100,000 × 6% = $66,000; net interest expense is $9,000. Together with $360,000 current service cost, the profit-or-loss expense is $369,000."
+      ),
+      text(
+        "التزام ما قبل إعادة القياس = 1,250,000 + 75,000 + 360,000 − 190,000 = 1,495,000؛ وبمقارنته مع الالتزام الختامي 1,553,600 تظهر خسارة إعادة قياس 58,600. أصول ما قبل إعادة القياس = 1,100,000 + 66,000 + 490,000 − 190,000 = 1,466,000؛ وبمقارنتها مع 1,500,000 يظهر عائد إضافي على الأصول 34,000.",
+        "The obligation before remeasurement is $1,250,000 + $75,000 + $360,000 − $190,000 = $1,495,000; comparison with $1,553,600 closing obligation yields a $58,600 remeasurement loss. Plan assets before remeasurement are $1,100,000 + $66,000 + $490,000 − $190,000 = $1,466,000; comparison with $1,500,000 gives $34,000 asset return excluding interest."
+      ),
+      text(
+        "صافي خسارة إعادة القياس في الدخل الشامل الآخر = 58,600 − 34,000 = 24,600، ولا يعاد تدويرها لاحقًا إلى الربح أو الخسارة. صافي الالتزام في المركز المالي = 1,553,600 − 1,500,000 = 53,600. وتؤكد المصالحة: التزام أول المدة 150,000 + مصروف 369,000 − مساهمة 490,000 + خسارة دخل شامل آخر 24,600 = 53,600.",
+        "Net remeasurement loss in OCI is $58,600 − $34,000 = $24,600; it is not subsequently recycled to profit or loss. The closing statement-of-financial-position liability is $1,553,600 − $1,500,000 = $53,600. Cross-check: opening net liability $150,000 + $369,000 expense − $490,000 employer contribution + $24,600 OCI loss = $53,600."
+      ),
+      text(
+        "على مستوى صافي الالتزام: يثبت مصروف الخدمة والفائدة مدينًا 369,000 ودائنًا الالتزام؛ وتخفض المساهمة النقدية الالتزام 490,000؛ وتثبت خسارة إعادة القياس مدينًا في الدخل الشامل الآخر ودائنًا الالتزام 24,600. سداد المنافع من أصول الخطة يخفض الأصل والالتزام الإجماليين بالمبلغ نفسه ولا يغيّر صافي الالتزام.",
+        "At the net-liability level, debit service and net-interest expense and credit the liability $369,000; employer cash contribution reduces that liability by $490,000; debit OCI and credit the liability $24,600 for net remeasurement loss. Benefits paid from plan assets reduce gross assets and obligation equally, leaving the net liability unchanged."
+      )
+    ],
+    reference: "IAS 19.57, 113, 120–130",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
