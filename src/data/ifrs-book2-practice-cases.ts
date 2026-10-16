@@ -3238,6 +3238,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.4.1.1–4.1.2, B4.1.1–B4.1.4",
   },
   {
+    id: "ifrs-book2-indexed-bond-hybrid-host",
+    standardCode: "IFRS 9",
+    title: text("سند مرتبط بمؤشر أسهم: من هو صاحب العقد المضيف؟", "Equity-indexed bond: whose host contract is it?"),
+    facts: text(
+      "توضح الصفحة 229 سندًا يستحق بعد خمس سنوات ويعتمد جزء من مبلغ استرداده على ارتفاع مؤشر FTSE 100، وترسم المضيف كسند بالتكلفة المستهلكة وخيار المؤشر كمشتق منفصل. كما تذكر عقد إنشاء مسعرًا بعملة أجنبية دون بيان عملة النشاط أو عملة التسعير المعتادة أو وجود رافعة أو خيار. لا تقدم الصفحة سعر إصدار أو تدفقات محددة.",
+      "Scanned p229 describes a five-year bond whose redemption partly depends on a rise in the FTSE 100 and depicts an amortised-cost bond host with a separate index option. It also mentions a foreign-currency-priced construction contract without identifying functional currency, routinely used pricing currency, leverage or option features. No issue price or specified cash flows are supplied.",
+    ),
+    question: text("هل يطبق فصل الرسم على حامل السند ومصدره معًا؟ وهل تُفصل عملة عقد الإنشاء تلقائيًا؟", "Does the diagram's bifurcation apply to both holder and issuer? Is the construction contract's currency feature automatically separated?"),
+    solution: [
+      text("بالنسبة إلى مستثمر يحمل سندًا يمثل أصلًا ماليًا ضمن IFRS 9، يفحص العقد المختلط كله؛ تعرض التدفقات لارتفاع مؤشر أسهم يفشل عادة اختبار أصل المبلغ والفائدة ويقود إلى القيمة العادلة عبر الربح أو الخسارة دون فصل الخيار. فلا ينطبق رسم «سند بالتكلفة المستهلكة + خيار منفصل» على هذا الحامل.", "For a holder whose bond is a financial asset within IFRS 9, assess the entire hybrid. Equity-index exposure normally fails solely-principal-and-interest cash flows and leads to fair value through profit or loss without splitting the option. The diagram's 'amortised-cost bond plus separate option' does not apply to that holder."),
+      text("لدى المصدر، المضيف التزام مالي لا أصل مالي؛ قد يفصل الخيار المرتبط بالمؤشر إذا لم يكن وثيق الصلة، واستوفى تعريف المشتق، ولم يقس العقد كله بالقيمة العادلة عبر الربح أو الخسارة. عقد الإنشاء غير المالي يحتاج اختبار شروط العملة للارتباط الوثيق قبل الفصل؛ مجرد العملة الأجنبية لا يكفي. لا يمكن حساب قيم أو قيود دون الشروط والأسعار الغائبة.", "For the issuer, the host is a liability rather than a financial asset. Bifurcation may apply if the index feature is not closely related, would be a derivative on its own, and the entire hybrid is not at FVPL. A non-financial construction host needs the foreign-currency close-relationship test before splitting; currency denomination alone is insufficient. Values and entries cannot be calculated without the omitted terms and prices."),
+    ],
+    reference: "IFRS 9.4.1.2–4.1.4, 4.3.2–4.3.5, B4.3.5(a), B4.3.8(d)",
+  },
+  {
+    id: "ifrs-book2-oil-inventory-fair-value-hedge",
+    standardCode: "IFRS 9",
+    title: text("مخزون نفط وعقد بيع مستقبلي: أثر التعيين", "Oil inventory and sale future: effect of designation"),
+    facts: text(
+      "اشترت منشأة في 1 ديسمبر 20X3 مخزونًا من 20,000 غالون نفط بتكلفة 400,000 دولار، وأبرمت عقد بيع مستقبلي لتسليمه في 31 مارس 20X4 بسعر 22 دولارًا للغالون. في 31 ديسمبر 20X3 بلغ السعر الفوري 23 دولارًا، وسعر العقد للتسليم نفسه 24 دولارًا. لا يقدم المصدر وثيقة تعيين التحوط أو صافي القيمة القابلة للتحقق أو مدخلات خصم وهامش. عند مقارنة حالتي المحاسبة، افترض لأغراض حساب تغير العقد أن أسعار المستقبل المعطاة تمثل تغير قيمته العادلة دون أثر خصم جوهري.",
+      "On 1 December 20X3 an entity buys 20,000 gallons of oil for $400,000 and sells a future to deliver them on 31 March 20X4 at $22 per gallon. At 31 December 20X3 the spot price is $23 and the same-delivery futures price $24. The source gives no hedge designation document, net realisable value, discount or margin inputs. For comparing accounting treatments, assume the quoted futures-price movement represents the derivative fair-value change without material discount effect.",
+    ),
+    question: text("ما أثر العقد دون محاسبة التحوط؟ وما أثر تحوط قيمة عادلة مؤهل إذا ثبت تغير الخطر المعين من 20 إلى 23 دولارًا؟", "What is the futures effect without hedge accounting? What changes for a qualifying fair value hedge if the designated risk rises from $20 to $23?"),
+    solution: [
+      text("في الحالتين ينتج من عقد البيع المستقبلي خسارة قيمة عادلة (24 − 22) × 20,000 = 40,000 دولار؛ مدين خسارة في الربح أو الخسارة ودائن التزام مشتق. دون تعيين تحوط مؤهل لا ترفع المخزون 60,000 لمجرد ارتفاع السوق؛ تطبق قاعدة IAS 2: التكلفة أو صافي القيمة القابلة للتحقق أيهما أقل، ولا تكفي المعطيات لحساب الأخيرة.", "In both scenarios the sale future loses (24 − 22) × 20,000 = $40,000; debit profit-or-loss loss and credit derivative liability. Without a qualifying hedge designation do not uplift inventory by $60,000 merely because spot rose; apply IAS 2's lower of cost and net realisable value, whose latter input is absent."),
+      text("إذا وثقت المنشأة عند البداية تحوط قيمة عادلة مؤهل لخطر السعر، وثبت أن سعر 20 دولارًا عند الشراء يمثل قيمة البداية وأن ارتفاع السعر الفوري إلى 23 هو تغير القيمة العادلة المنسوب كله للخطر المعين، تعدل المخزون 20,000 × (23 − 20) = 60,000 مع ربح مقابل في الربح أو الخسارة؛ يصبح الأثر الصافي مع خسارة العقد ربحًا 20,000. لا تعني هذه المعالجة إعادة قياس عامة لكل المخزون بالقيمة العادلة، وإذا اختلفت قيمة البداية أو أثر الخطر فلا يفترض مبلغ 60,000 من التكلفة وحدها.", "If the entity documented an eligible fair value hedge at inception, $20 purchase price represented designation-date value, and the $23 spot quote fully represents the hedged-risk movement, adjust inventory by 20,000 × ($23 − $20) = $60,000 with a profit-or-loss gain. Net of the $40,000 futures loss, profit or loss gains $20,000. This is not general fair-value inventory accounting; if starting fair value or hedged-risk effect differs, $60,000 cannot be inferred from cost alone."),
+    ],
+    reference: "IFRS 9.6.1.2, 6.4.1, 6.5.2(a), 6.5.8; IAS 2.9",
+  },
+  {
     id: "ifrs-book2-credito-industry-mortgages",
     standardCode: "IFRS 9",
     title: text("Credito: ركود صناعة ورهون عقارية", "Credito: industry downturn and mortgages"),

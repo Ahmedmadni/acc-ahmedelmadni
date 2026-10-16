@@ -1209,6 +1209,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("مشتق مضمّن: اختبر نوع العقد المضيف قبل الفصل", "Embedded derivative: identify the host before bifurcation"),
+        explanation: text(
+          "إذا كان العقد المضيف أصلًا ماليًا يدخل نطاق IFRS 9، طبق اختبار التصنيف والقياس على العقد المختلط كله؛ لا تفصل خيارًا مرتبطًا بمؤشر أسهم داخل سند يحمله المستثمر ثم تفترض أن جزء الدين بالتكلفة المستهلكة. إذا لم يكن المضيف أصلًا ماليًا في هذا النطاق، مثل التزام مالي أو بعض العقود غير المالية، يفصل المشتق فقط عندما لا ترتبط مخاطره الاقتصادية ارتباطًا وثيقًا بالمضيف، وكان سيحقق تعريف المشتق لو انفصل، ولم يكن العقد المختلط كله مقاسًا بالقيمة العادلة عبر الربح أو الخسارة. فهرسة سداد سند يصدره كيان بمؤشر أسهم قد تستدعي فصلًا من جهة المصدر وفق هذه الشروط. أما مجرد تسعير عقد إنشاء بعملة أجنبية فلا يكفي للجزم بالفصل: افحص شروط العملة وما إذا كان الشرط وثيق الصلة وفق B4.3.8(d).",
+          "If the host is a financial asset within IFRS 9, classify and measure the entire hybrid; do not separate an equity-index option in a bond held by an investor and presume the remaining debt is at amortised cost. When the host is not such an asset, as with a financial liability or some non-financial contracts, separate the embedded derivative only if its risks are not closely related to the host, a standalone feature would meet the derivative definition, and the hybrid is not already at fair value through profit or loss. Equity-indexed redemption of a bond issued by an entity may require separation from the issuer's liability host when those tests hold. Foreign-currency pricing of a construction contract alone does not establish separation: inspect the currency and close-relationship conditions in B4.3.8(d).",
+        ),
+        keyPoints: [
+          text("أصل مالي مضيف ضمن IFRS 9: قيّم العقد المختلط كله.", "Financial-asset host within IFRS 9: assess the whole hybrid."),
+          text("مضيف آخر: لا تفصل إلا بعد اختبارات عدم الارتباط وتعريف المشتق وقياس العقد الكامل.", "Other host: bifurcate only after the close-relationship, derivative-definition and whole-contract tests."),
+        ],
+        reference: "IFRS 9.4.3.2–4.3.5, B4.3.5(a), B4.3.8(d)",
+      },
+      {
+        title: text("محاسبة التحوط اختيار موثق وأدواتها أوسع من المشتقات", "Hedge accounting is an eligible documented choice with broader instruments"),
+        explanation: text(
+          "وجود تحوط اقتصادي لا يفرض تلقائيًا محاسبة التحوط. تختار المنشأة تعيين العلاقة وتوثيقها عند بدايتها، ثم تطبق نموذج IFRS 9 إذا ضمت أداة وبندًا مؤهلين، وارتبطت تغيراتهما اقتصاديًا، ولم يطغَ خطر الائتمان، وعكست نسبة التحوط الكميات المستخدمة فعليًا دون انحراف مصطنع. المشتقات المؤهلة شائعة، لكن أصلًا أو التزامًا ماليًا غير مشتق مقاسًا بالقيمة العادلة عبر الربح أو الخسارة قد يؤهل أداة تحوط أيضًا ضمن شروط 6.2.2؛ لذلك لا يصح قصر كل الأدوات غير المشتقة على تحوط مخاطر العملة. لتحوط العملة قاعدة إضافية تسمح بتعيين مكون خطر العملة في أداة مالية غير مشتقة مؤهلة. وبعد اختيار علاقة مؤهلة، تصبح قواعد القياس والعرض المعينة لها واجبة التطبيق، لا خيارًا انتقائيًا لكل ربح أو خسارة.",
+          "An economic hedge does not automatically require hedge accounting. The entity chooses and documents a qualifying relationship at inception, then applies IFRS 9 when instrument and item are eligible, an economic relationship exists, credit risk does not dominate, and the hedge ratio reflects actual quantities without artificial imbalance. Qualifying derivatives are common, but a non-derivative financial asset or liability measured at fair value through profit or loss may also qualify as a hedging instrument under paragraph 6.2.2; non-derivatives are not confined to foreign-currency hedges. A separate foreign-currency rule permits designation of the FX-risk component of an eligible non-derivative instrument. Once a qualifying relationship is designated, its prescribed measurement and presentation rules apply rather than selectively choosing where each gain goes.",
+        ),
+        keyPoints: [
+          text("التعيين عند البداية اختياري؛ بعده يلزم استيفاء شروط العلاقة وتطبيق القياس المحدد.", "Inception designation is optional; then qualifying conditions and prescribed accounting apply."),
+          text("قد تؤهل أداة مالية غير مشتقة بالقيمة العادلة عبر الربح أو الخسارة للتحوط.", "A non-derivative FVPL financial instrument may qualify as a hedge instrument."),
+        ],
+        reference: "IFRS 9.6.1.2, 6.2.1–6.2.3, 6.4.1, 6.5.1",
+      },
+      {
         title: text("تسهيل غير مسحوب: السحب المتوقع ليس الخسارة المتوقعة", "Undrawn commitment: expected draw is not expected loss"),
         explanation: text(
           "يدخل التزام الإقراض غير المسحوب المؤهل ضمن نموذج الخسائر الائتمانية المتوقعة، وتقدر المنشأة ما يرجح سحبه في الأفق الملائم: خلال 12 شهرًا لتقدير خسائر 12 شهرًا، وخلال العمر المتوقع لتقدير خسائر العمر. لكن المبلغ المتوقع سحبه مضروبًا في احتمال التعثر يعطي تعرضًا مرجحًا للتعثر، وليس مخصصًا نهائيًا ما لم يكن العجز النقدي بعد التعثر يساوي كامل الرصيد ولا يوجد استرداد أو خصم جوهري. قس الفرق المخصوم بين التدفقات المستحقة لو سحب العميل والتدفقات التي تتوقع تحصيلها، بما في ذلك الضمانات والتحصيلات ذات الصلة. وإذا كان المنتج دوارًا مثل السحب المكشوف، افحص مدة التعرض الفعلية التي لا تحدها دائمًا مهلة الإلغاء التعاقدية وفق IFRS 9.5.5.20. يعرض مخصص التزام الإقراض عادة التزامًا، لا خصمًا من أصل لم يسحب بعد.",
