@@ -6451,6 +6451,38 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       ),
     ],
     reference: "IFRS 3.3, 10–19, 32; IFRS 10.B86",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch21-nci-fair-value-year-end",
+    standardCode: "IFRS 3",
+    title: text("P وS: حصة غير مسيطرة بالقيمة العادلة في نهاية السنة", "P and S: fair-value NCI at year end"),
+    facts: text(
+      "اقتنت P نسبة 75% من أسهم S في 1 يناير 20X7 عندما بلغت أرباح S المحتجزة 15,000. كان سعر سهم S مباشرة قبل الاستحواذ 1.60، وقِيست الحصة غير المسيطرة بالقيمة العادلة، ولم تنخفض الشهرة. في 31 ديسمبر 20X7 تعرض P: ممتلكات وآلات 60,000، استثمارًا في S بمبلغ 68,000، أصولًا متداولة 52,000، رأس مال 100,000، أرباحًا محتجزة 70,000 والتزامات متداولة 10,000. وتعرض S: ممتلكات وآلات 50,000، أصولًا متداولة 35,000، رأس مال 50,000، أرباحًا محتجزة 25,000 والتزامات متداولة 10,000.",
+      "P acquired 75% of S on 1 January 20X7 when S retained earnings were 15,000. S shares traded at 1.60 immediately before acquisition, NCI was measured at fair value and goodwill has not been impaired. At 31 December 20X7 P reports PPE 60,000, investment in S 68,000, current assets 52,000, share capital 100,000, retained earnings 70,000 and current liabilities 10,000. S reports PPE 50,000, current assets 35,000, share capital 50,000, retained earnings 25,000 and current liabilities 10,000."
+    ),
+    question: text(
+      "أعد قائمة المركز المالي الموحدة في 31 ديسمبر 20X7، واحسب الشهرة وحصة غير المسيطرين في نهاية السنة. قارن بإيجاز نتيجة القياس النسبي.",
+      "Prepare the consolidated statement of financial position at 31 December 20X7, calculate goodwill and year-end NCI, and briefly compare proportionate NCI measurement."
+    ),
+    solution: [
+      text(
+        "عدد أسهم S = 50,000 سهم بقيمة اسمية 1؛ تمتلك P نسبة 75%، فتملك الأقلية 12,500 سهم. القيمة العادلة لحصة غير المسيطرين يوم الاقتناء = 12,500 × 1.60 = 20,000. صافي الأصول المحددة يوم الاقتناء = 50,000 رأس مال + 15,000 أرباح محتجزة = 65,000. الشهرة = 68,000 + 20,000 − 65,000 = 23,000.",
+        "S has 50,000 one-dollar shares; P owns 75%, leaving 12,500 NCI shares. Acquisition-date fair value of NCI is 12,500 × 1.60 = 20,000. Identifiable net assets at acquisition are 50,000 share capital + 15,000 retained earnings = 65,000. Goodwill is 68,000 + 20,000 − 65,000 = 23,000."
+      ),
+      text(
+        "أرباح S اللاحقة للاستحواذ = 25,000 − 15,000 = 10,000. أرباح المجموعة المحتجزة المنسوبة لملاك P = 70,000 + 75% × 10,000 = 77,500. حصة غير المسيطرين في نهاية السنة = القيمة العادلة عند الاقتناء 20,000 + 25% × 10,000 = 22,500.",
+        "S post-acquisition retained earnings are 25,000 − 15,000 = 10,000. Group retained earnings attributable to P owners are 70,000 + 75% × 10,000 = 77,500. Year-end NCI is acquisition-date fair value 20,000 + 25% × 10,000 = 22,500."
+      ),
+      text(
+        "الأصول الموحدة: ممتلكات وآلات 110,000 + شهرة 23,000 + أصول متداولة 87,000 = 220,000. يقابلها رأس مال P البالغ 100,000 وأرباح محتجزة 77,500 وحصة غير مسيطرة 22,500 والتزامات 20,000؛ الإجمالي 220,000.",
+        "Consolidated assets are PPE 110,000 + goodwill 23,000 + current assets 87,000 = 220,000. These equal P share capital 100,000, retained earnings 77,500, NCI 22,500 and liabilities 20,000; total 220,000."
+      ),
+      text(
+        "لو قِيست NCI بنسبة صافي الأصول لكانت عند الاقتناء 25% × 65,000 = 16,250، والشهرة 19,250، وحصة غير المسيطرين في نهاية السنة 18,750. تنخفض الشهرة وNCI معًا 3,750؛ ولا تتغير بقية القائمة.",
+        "If NCI were measured proportionately, acquisition-date NCI would be 25% × 65,000 = 16,250, goodwill 19,250 and year-end NCI 18,750. Goodwill and NCI both fall by 3,750; the rest of the statement is unchanged."
+      ),
+    ],
+    reference: "IFRS 3.19, 32; IFRS 10.B86, B94",
   }
 
 ];
