@@ -1665,11 +1665,15 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
             "Consideration transferred is measured at fair value and includes contingent consideration.",
           ),
           text(
+            "بعد الاستحواذ لا يعاد قياس المقابل المحتمل المصنف أداة حقوق ملكية، أما المقابل الآخر فيعاد قياسه بالقيمة العادلة في كل تاريخ تقرير وتثبت تغيراته في الربح أو الخسارة، ما لم يكن التغير تعديل فترة قياس يتعلق بظروف قائمة يوم الاستحواذ. كون المقابل نقديًا لا يحيله تلقائيًا إلى IAS 37.",
+            "After acquisition, equity-classified contingent consideration is not remeasured. Other contingent consideration is remeasured to fair value at each reporting date with changes in profit or loss unless the change is a measurement-period adjustment about acquisition-date conditions. A cash form does not automatically route it to IAS 37.",
+          ),
+          text(
             "تُفصل الأصول غير الملموسة القابلة للتحديد عن الشهرة حتى لو لم يثبتها المستحوذ عليه سابقًا.",
             "Identifiable intangible assets are separated from goodwill even if the acquiree did not previously recognise them.",
           ),
         ],
-        reference: "IFRS 3.4–18, 37–40, 53",
+        reference: "IFRS 3.4–18, 37–40, 45–49, 53, 58",
       },
       {
         title: text("الشهرة الكاملة والجزئية", "Full and partial goodwill"),
@@ -1756,6 +1760,36 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
         ],
         reference: "IFRS 3.18–19, 32",
       },
+      {
+        title: text("مقابل مؤجل وتبادل أسهم", "Deferred consideration and a share exchange"),
+        facts: text(
+          "في المثال الأول اقتنت أم 75% من 80 مليون سهم في تابعة بسعر 3.50 للسهم نقدًا في 1 يناير 20X6، مع 108 ملايين إضافية تستحق في 1 يناير 20X7؛ معدل رأس المال 8%. وفي مثال مستقل اقتنت أم 12,000 سهم في تابعة بإصدار خمسة من أسهمها ذات القيمة الاسمية 1 لكل أربعة أسهم مقتناة؛ القيمة السوقية لسهم الأم 6.",
+          "In the first example a parent acquired 75% of a subsidiary's 80 million shares for 3.50 per share in cash on 1 January 20X6, plus 108 million due on 1 January 20X7; its cost of capital is 8%. In a separate example a parent acquired 12,000 subsidiary shares by issuing five of its own one-dollar shares for every four acquired; each parent share has a market value of 6."
+        ),
+        calculations: [
+          text(
+            "النقد الفوري = 80 مليون × 75% × 3.50 = 210 ملايين. القيمة الحالية للمبلغ المؤجل = 108 ÷ 1.08 = 100 مليون، فيكون المقابل يوم الاستحواذ 310 ملايين. خلال سنة 20X6 يفك خصم 8 ملايين كمصروف تمويل ويصبح الالتزام 108 ملايين عند الاستحقاق.",
+            "Immediate cash is 80 million × 75% × 3.50 = 210 million. Present value of deferred payment is 108 ÷ 1.08 = 100 million, so acquisition-date consideration is 310 million. During 20X6 the 8 million discount unwinds as finance cost, bringing the liability to 108 million at maturity."
+          ),
+          text(
+            "في تبادل الأسهم، عدد الأسهم المصدرة = 12,000 × 5/4 = 15,000، والقيمة العادلة للمقابل = 15,000 × 6 = 90,000. يقيد رأس المال 15,000 وعلاوة الإصدار 75,000؛ ولا تستخدم القيمة الاسمية وحدها لقياس المقابل.",
+            "For the share exchange, shares issued are 12,000 × 5/4 = 15,000 and consideration fair value is 15,000 × 6 = 90,000. Credit share capital 15,000 and share premium 75,000; nominal value alone does not measure consideration."
+          ),
+        ],
+        conclusion: text(
+          "يدخل المقابل المؤجل بالقيمة الحالية يوم الاستحواذ، بينما يظهر فك الخصم لاحقًا كتکلفة تمويل. وتقاس أدوات حقوق الملكية المصدرة بالقيمة العادلة يوم الاستحواذ مع فصل رأس المال عن علاوة الإصدار.",
+          "Deferred consideration enters acquisition accounting at present value and subsequent discount unwinding is finance cost. Equity instruments issued are measured at acquisition-date fair value with share capital separated from share premium."
+        ),
+        journalEntries: [
+          {
+            label: text("قيد تبادل الأسهم", "Share-exchange entry"),
+            debit: text("الاستثمار في التابعة", "Investment in subsidiary"),
+            credit: text("رأس المال 15,000 + علاوة إصدار 75,000", "Share capital 15,000 + share premium 75,000"),
+            amount: text("90,000", "90,000"),
+          },
+        ],
+        reference: "IFRS 3.37; IFRS 9.5.1.1; IAS 32.35",
+
     ],
   },
   "IFRS 10": {
