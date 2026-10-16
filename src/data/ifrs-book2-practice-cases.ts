@@ -3238,6 +3238,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.4.1.1–4.1.2, B4.1.1–B4.1.4",
   },
   {
+    id: "ifrs-book2-abacus-effective-interest",
+    standardCode: "IFRS 9",
+    title: text("Abacus: العائد الفعلي وخصم السند", "Abacus: effective yield and bond discount"),
+    facts: text(
+      "اشترت Abacus أصل دين في 1 يناير 20X1 بمبلغ 1,000 دولار، يستحق أصله 1,250 دولار في 31 ديسمبر 20X5، ويدفع سنويًا كوبون 4.72% من المبلغ الاسمي، أي 59 دولارًا. يذكر المصدر عائدًا فعليًا 10% ويعرض جدولًا بالدولار الكامل. افترض تحقق شرط الاحتفاظ للتحصيل واختبار أصل المبلغ والفائدة وعدم وجود خسائر ائتمانية أو تكاليف معاملة إضافية في هذا التوضيح.",
+      "Abacus buys a debt asset on 1 January 20X1 for $1,000. Its $1,250 principal matures on 31 December 20X5 and it pays an annual 4.72% coupon on face value, or $59. The source states a 10% effective yield and displays whole-dollar amounts. For this illustration assume hold-to-collect and solely-principal-and-interest conditions, with no credit loss or additional transaction costs.",
+    ),
+    question: text("احسب دخل الفائدة ورصيد نهاية 20X1، وفسر لماذا لا يغلق تطبيق 10% دون تقريب رصيد السنة الخامسة تمامًا.", "Calculate 20X1 interest income and closing carrying amount. Why does an unrounded 10% calculation leave a small residual after the fifth-year receipt?"),
+    solution: [
+      text("دخل فائدة 20X1 وفق 10% المعطاة = 1,000 × 10% = 100 دولار، والتحصيل 59 دولارًا، فتزداد القيمة الدفترية إلى 1,041 دولارًا. يمثل الفرق 41 دولارًا إطفاءً لخصم شراء السند؛ دخل الفائدة ليس الكوبون وحده.", "At the stated 10%, 20X1 interest income is $1,000 × 10% = $100. Cash coupon is $59, so carrying amount rises to $1,041. The $41 difference amortises part of the purchase discount; interest income is not just the coupon."),
+      text("معدل 10% مقرب: الخصم الدقيق للتدفقات الخمسة، 59 دولارًا سنويًا و1,250 دولارًا في النهاية، إلى سعر 1,000 دولار يعطي نحو 9.99531867%. تطبيق 10% على أرصدة غير مقربة يترك نحو 0.31 دولار بعد استلام 1,309 دولارات في السنة الخامسة. لذلك جدول المصدر بالدولار الكامل توضيحي، ولا يُفسر فرق التقريب أصلًا إضافيًا أو دخلًا جديدًا. باستخدام المعدل الضمني الدقيق يكون رصيد نهاية 20X1 نحو 1,040.95 دولار ويغلق الرصيد بعد التحصيل النهائي.", "The 10% rate is rounded: discounting five $59 coupons plus $1,250 principal to the $1,000 price implies about 9.99531867%. Applying exactly 10% to unrounded balances leaves about $0.31 after the final $1,309 receipt. The source's whole-dollar table is illustrative; that rounding residual is not another asset or a new income item. At the exact implied rate, 20X1 closing amount is about $1,040.95 and the asset clears on final receipt."),
+    ],
+    reference: "IFRS 9.Appendix A, 4.1.2, 5.4.1",
+  },
+  {
+    id: "ifrs-book2-wolf-equity-transaction-costs",
+    standardCode: "IFRS 9",
+    title: text("Wolf: أسهم متاجرة أم اختيار الدخل الشامل الآخر؟", "Wolf: trading shares or an OCI election?"),
+    facts: text(
+      "اشترت Wolf في يناير 20X6 عشرة ملايين سهم مدرج في Hall بسعر 5 دولارات للسهم، وتكبدت 3 ملايين دولار تكاليف معاملة. في 30 نوفمبر 20X6 بلغ السعر 6.50 دولارات للسهم؛ واستلمت في 31 أكتوبر توزيعات قدرها 0.20 دولار للسهم. قارن بين (أ) الاحتفاظ للمتاجرة و(ب) الاحتفاظ لدخل التوزيعات مع اختيار غير قابل للنقض عند الاعتراف الأولي لعرض تغير القيمة العادلة في الدخل الشامل الآخر. افترض أن التوزيع ليس بوضوح استردادًا لجزء من تكلفة الاستثمار.",
+      "In January 20X6 Wolf buys ten million listed Hall shares at $5 each and pays $3 million in transaction costs. The 30 November 20X6 quote is $6.50 per share; on 31 October it receives a $0.20 per-share dividend. Compare (a) held for trading with (b) held for dividend income and an irrevocable fair-value-change OCI election at initial recognition. Assume the dividend is not clearly a recovery of part of investment cost.",
+    ),
+    question: text("اعرض قيمة الاستثمار ودخل التوزيعات وأثر تغير السعر والتكاليف في الحالتين بالملايين.", "Show investment carrying value, dividend income, price movement and transaction-cost effects in both cases, in millions."),
+    solution: [
+      text("للمتاجرة: يثبت الاستثمار أولًا بـ50 مليون دولار وتحمّل تكاليف المعاملة 3 ملايين على الربح أو الخسارة. في 30 نوفمبر يساوي 65 مليونًا؛ ربح القيمة العادلة 15 مليونًا في الربح أو الخسارة، والتوزيعات 2 مليون فيه أيضًا. صافي البنود الثلاثة في ربح أو خسارة الفترة = 14 مليونًا، مع أصل ختامي 65 مليونًا.", "Trading: initially recognise the asset at $50 million and expense $3 million transaction costs in profit or loss. At 30 November it is $65 million: $15 million fair-value gain and $2 million dividend income enter profit or loss. These three items net to $14 million in period profit or loss, with a $65 million closing asset."),
+      text("مع اختيار الدخل الشامل الآخر المؤهل: قيمة البداية 53 مليون دولار شاملة تكاليف المعاملة، وقيمة الإقفال 65 مليونًا، فيثبت فرق 12 مليونًا في الدخل الشامل الآخر. دخل التوزيعات 2 مليون في الربح أو الخسارة. لا تحمل تكاليف 3 ملايين كمصروف منفصل في البداية ولا تعرض ربح سعر مقداره 15 مليونًا في الدخل الشامل الآخر؛ الزيادة من القيمة الدفترية الأولية هي 12 مليونًا.", "With the eligible OCI election: initial carrying amount is $53 million including transaction costs and closing fair value is $65 million, so $12 million goes to OCI. The $2 million dividend is in profit or loss. Do not separately expense the $3 million at inception or report a $15 million OCI gain; the increase from initial carrying amount is $12 million."),
+    ],
+    reference: "IFRS 9.5.1.1, 5.7.1A, 5.7.5–5.7.6, B5.2.2",
+  },
+  {
     id: "ifrs-book2-rathbone-compound-bond",
     standardCode: "IAS 32",
     title: text("Rathbone: قيمة خيار تحويل السند", "Rathbone: value of a bond conversion option"),
