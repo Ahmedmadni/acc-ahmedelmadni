@@ -1919,7 +1919,7 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
         ),
         journalEntries: [],
         reference: "IFRS 3.32; IFRS 10.20, B86, B94",
-
+      },
     ],
   },
   "IFRS 11": {
