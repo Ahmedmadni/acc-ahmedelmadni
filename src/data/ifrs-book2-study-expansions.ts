@@ -764,6 +764,31 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 12": {
     sections: [
       {
+        title: text("استثناء الاعتراف الأولي بعد تعديل IAS 12", "The IAS 12 initial-recognition exception after amendment"),
+        explanation: text(
+          "لا يعفي الاعتراف الأولي بأصل أو التزام من الضريبة المؤجلة تلقائيًا. استثناء IAS 12.15 و24 ضيق: مع مراعاة شروط كل فقرة، يتعلق بمعاملة ليست تجميع أعمال، لا تؤثر عند حدوثها في الربح المحاسبي أو الخاضع للضريبة، ولا تنشئ عند حدوثها فروقًا مؤقتة خاضعة وقابلة للخصم بمقادير متساوية. لذلك لا يطبق الاستثناء لمجرد أن قيد إيجار أو التزام إزالة أصل لم يؤثر فورًا في الربح؛ إذا نشأت فروق متساوية للأصل والالتزام، تُختبر ضريبة كل جانب ويظل إثبات أصل الضريبة المؤجلة مشروطًا باحتمال استخدامه. استثناء الشهرة عند الاعتراف الأولي حكم منفصل. عرض الكتاب الذي يقتصر على شرطي عدم تجميع الأعمال وعدم التأثير في الربح يحذف شرط الفروق المتساوية الذي أضيف بتعديل ساري للفترات السنوية التي تبدأ في 1 يناير 2023 أو بعده.",
+          "Initial recognition of an asset or liability does not automatically exempt deferred tax. The IAS 12.15 and .24 exception is narrow: subject to each paragraph's conditions, it concerns a transaction outside a business combination that affects neither accounting nor taxable profit at inception and does not then give rise to equal taxable and deductible temporary differences. Thus, a lease or decommissioning entry is not exempt merely because it has no immediate profit effect. If equal differences arise on the asset and liability, assess tax on each side; recognition of a deferred tax asset still depends on probable utilisation. Initial recognition of goodwill has a separate exception. The book's two-condition summary omits the equal-differences condition added by the amendment effective for annual periods beginning on or after 1 January 2023."
+        ),
+        keyPoints: [
+          text("افحص الفروق المتساوية للأصل والالتزام قبل استخدام إعفاء الاعتراف الأولي.", "Check equal asset/liability differences before invoking the initial-recognition exemption."),
+          text("عدم تأثير القيد في الربح وحده لا يمنع إثبات الضريبة المؤجلة.", "No immediate profit effect alone does not preclude deferred tax."),
+          text("اختبر احتمال استخدام فرق الخصم قبل إثبات الأصل المؤجل.", "Test probable utilisation before recognising a deferred tax asset."),
+        ],
+        reference: "IAS 12.15, 22A, 24, 28–29; Deferred Tax related to Assets and Liabilities arising from a Single Transaction (2021 amendment)",
+      },
+      {
+        title: text("مقاصة أصول والتزامات الضريبة المؤجلة: اختبر الجهة والكيان", "Offsetting deferred tax: test authority and taxable entity"),
+        explanation: text(
+          "تتطلب مقاصة أصل ضريبة مؤجلة والتزام ضريبة مؤجلة حقًا قانونيًا نافذًا لمقاصة أصول ومطلوبات الضريبة الجارية، وأن تتعلق الضريبتان بالسلطة نفسها. ثم يجب أن تخصا الكيان الخاضع نفسه، أو كيانين مختلفين ينويان تسوية الضرائب الجارية صافيًا أو تحقيق الأصل وتسوية الالتزام بالتزامن في كل فترة مستقبلية يُتوقع فيها عكس مبالغ مؤجلة مهمة. مجرد وحدة المجموعة أو السلطة الضريبية لا يكفي. ملخص الكتاب في صفحة 258 يذكر الحق القانوني والسلطة فقط، ويغفل اختبار الكيان أو نمط التسوية المستقبلية؛ لذلك لا تُعرض أرصدة مؤجلة لجهتين من المجموعة صافيًا دون وقائع إضافية.",
+          "To offset a deferred tax asset and liability, the entity needs a legally enforceable right to offset current-tax balances and both deferred amounts must relate to taxes levied by the same authority. They must then concern the same taxable entity, or different taxable entities intending net current-tax settlement or simultaneous realisation and settlement in each future period when significant deferred amounts reverse. Common group ownership or the same authority alone is insufficient. The book's page-258 summary gives only the legal right and authority, omitting the taxable-entity or future-settlement test; group deferred balances cannot be netted without those facts."
+        ),
+        keyPoints: [
+          text("تحقق من الحق القانوني لمقاصة الضريبة الجارية والسلطة الضريبية نفسها.", "Check the enforceable current-tax set-off right and same tax authority."),
+          text("إن اختلف الكيان الخاضع، اختبر نية التسوية المستقبلية في فترات الانعكاس المهمة.", "For different taxable entities, test future settlement intentions across significant reversal periods."),
+        ],
+        reference: "IAS 12.74–76",
+      },
+      {
         title: text("الضريبة الجارية: فرّق بين التزام السنة وتصحيح تقدير السنة السابقة", "Current tax: separate this year's charge from a prior-year estimate adjustment"),
         explanation: text(
           "تُقاس ضريبة الدخل الجارية بالمبلغ المتوقع دفعه أو استرداده وفق القانون ومعدلات الضريبة المقررة أو المقررة موضوعيًا بنهاية الفترة. عند حسم تقدير سنة سابقة، لا تعِد حساب ضريبة السنة الجارية على ربح السنة السابقة؛ أثبت الفرق بين التقدير والربط النهائي في مصروف الضريبة للفترة التي عُرف فيها، ما لم يكن مرتبطًا ببند اعترف به خارج الربح أو الخسارة. افصل حساب ضريبة الفترة الحالية عن رصيد مستحق أو مسترد السنة السابقة. ولا تعرض الأصل والمطلوب الضريبيين بصافي مبلغ لمجرد أنهما يخصان المنشأة ذاتها؛ يلزم حق قانوني نافذ في المقاصة ونية التسوية صافيًا أو المتزامنة. هذا ضبط لضريبة جارية، لا أصل أو التزام ضريبة مؤجلة.",
