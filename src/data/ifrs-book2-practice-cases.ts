@@ -3238,6 +3238,51 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.4.1.1–4.1.2, B4.1.1–B4.1.4",
   },
   {
+    id: "ifrs-book2-credito-industry-mortgages",
+    standardCode: "IFRS 9",
+    title: text("Credito: ركود صناعة ورهون عقارية", "Credito: industry downturn and mortgages"),
+    facts: text(
+      "يقدم Credito قروضًا شخصية ورهونًا في منطقة تعتمد على صناعة الملابس، وتطلب طلبات الاقتراض قطاع عمل العميل ورمز موقع العقار المرهون. متوسط نسبة القرض إلى قيمة العقار في الرهون 75%. انخفضت إيرادات وأرباح مصانع ملابس عديدة وقد يغلق بعضها. لاحقًا حدد البنك قروضًا تعثرت أو قاربت التعثر. لا تعرض الصفحة احتمالات أو قيم ضمانات محدثة أو تدفقات تحصيل لكل قرض.",
+      "Credito lends to consumers and mortgage borrowers in a clothing-industry region, collecting applicants' employment sector and mortgaged-property postcode. Average mortgage loan-to-value is 75%. Several clothing manufacturers have falling revenue and profit and may close. Later the bank identifies specific loans that defaulted or may be about to default. The page supplies no probabilities, updated collateral values or loan-by-loan recovery cash flows.",
+    ),
+    question: text("كيف يحدد البنك القروض ذات الزيادة الجوهرية في خطر التعثر، وما دور العقار المرهون والقروض التي تعثرت فعلًا؟", "How should the bank find loans with a significant rise in default risk, and how do collateral and actual defaults affect the analysis?"),
+    solution: [
+      text("قسّم القروض وفق تعرض المقترضين الحقيقي للصناعة، بما في ذلك العاملون لدى المصانع وموردوها وخدماتها ومناطقها عند وجود دليل ارتباط. قارن خطر التعثر الحالي بالخطر عند نشأة كل قرض باستخدام توقعات الإغلاق والدخل والبطالة وسلوك السداد. إذا ثبتت زيادة جوهرية، استخدم خسائر العمر للمجموعة المتأثرة؛ لا تعامل جميع قروض المنطقة تلقائيًا كمرحلة ثانية، ولا تنتظر التأخر إذا دل التوقع على الخطر مبكرًا.", "Segment loans by borrowers' actual exposure to the industry, including manufacturer staff, suppliers, services and local areas where evidence connects them. Compare current default risk with origination risk using closure, income, employment and payment forecasts. Apply lifetime ECL to a segment with a supported significant increase; neither move every regional loan automatically nor wait for arrears if forecasts reveal risk earlier."),
+      text("تقدير 75% متوسط قد يدعم استردادًا من الرهن ويخفض مبلغ الخسارة، لكنه لا يحسم خطر التعثر أو قيمة كل عقار. القروض المتعثرة فعلًا تفحص فرديًا كأصول متعثرة ائتمانيًا مع خسائر العمر وفائدة لاحقة على التكلفة المستهلكة؛ «على وشك التعثر» يحتاج دليل حدث ضار بالتدفقات قبل الجزم بالمرحلة الثالثة. لا يمكن تحديد مخصص رقمي بلا احتمالات وتحصلات مخصومة.", "A 75% average loan-to-value may support mortgage recovery and lower loss severity, but it proves neither each property's value nor absence of default risk. Assess defaulted loans individually for credit impairment, lifetime ECL and subsequent interest on amortised cost; 'about to default' needs evidence of a detrimental event before concluding Stage 3. No allowance amount follows without probabilities and discounted recoveries."),
+    ],
+    reference: "IFRS 9.5.4.1, 5.5.3–5.5.5, 5.5.9, 5.5.17, Appendix A, B5.5.5–B5.5.6",
+  },
+  {
+    id: "ifrs-book2-debita-undrawn-overdraft",
+    standardCode: "IFRS 9",
+    title: text("Debita: مخصص تسهيلات سحب غير مستخدمة", "Debita: undrawn overdraft allowance"),
+    facts: text(
+      "وافق Debita في 30 سبتمبر 20X4 على تسهيلات سحب مكشوف غير مستخدمة بقيمة 10 ملايين دولار. منها 8 ملايين بلا زيادة جوهرية في خطر الائتمان، ويتوقع سحب 4 ملايين منها خلال 12 شهرًا مع احتمال تعثر 3%. والـ2 مليون الأخرى زاد خطرها جوهريًا، ويتوقع سحبها كلها خلال العمر المتبقي مع احتمال تعثر 10%. لا يعطي السؤال التدفقات المستحقة بعد السحب أو نسبة الاسترداد أو توقيت التعثر والتحصيل أو أثر الخصم.",
+      "At 30 September 20X4 Debita has $10 million approved but undrawn overdraft facilities. For $8 million without a significant credit-risk increase, $4 million is expected to be drawn within twelve months with 3% default probability. For the other $2 million with significant deterioration, all $2 million is expected to be drawn over the remaining life with 10% default probability. The prompt gives no post-draw contractual and recovery cash flows, default/collection timing or discount effect.",
+    ),
+    question: text("فسر مبلغ 320,000 دولار المطبوع، وهل يثبت منه مخصص IFRS 9 نهائي؟", "Explain the printed $320,000 and whether the facts establish a final IFRS 9 allowance."),
+    solution: [
+      text("إذا افترض أن الخسارة عند التعثر تساوي كامل مبلغ السحب ولا استرداد ولا أثر خصم، يعطي الجزء الأول 4,000,000 × 3% = 120,000 دولار خسائر 12 شهرًا، والجزء الثاني 2,000,000 × 10% = 200,000 خسائر عمر؛ المجموع التعليمي 320,000. لا تضرب الـ10 ملايين كلها في نسبة واحدة، ولا تخلط أفق السحب في المرحلتين.", "If loss on default equals the entire expected draw with no recovery or discount effect, the first portion gives $4,000,000 × 3% = $120,000 twelve-month ECL and the second $2,000,000 × 10% = $200,000 lifetime ECL, totalling the illustrative $320,000. Do not apply one rate to all $10 million or mix the two draw horizons."),
+      text("القيمتان 120,000 و200,000 قبل افتراض الخسارة الكاملة ليستا إلا تعرضين مرجحين بالتعثر؛ يلزم تقدير عجز النقد المخصوم بعد التحصيلات والضمانات وربما مدة تعرض السحب المكشوف الدوار. لذلك لا تدعم المعطيات مخصصًا نهائيًا قدره 320,000 أو قيدًا دقيقًا؛ يثبت المخصص المناسب للتسهيل كالتزام عند اكتمال قياسه.", "Before assuming total loss, $120,000 and $200,000 are default-weighted exposures, not measured shortfalls. Estimate discounted losses after collections and collateral, and consider the risk-exposure period of a revolving overdraft. Thus the facts do not establish a final $320,000 allowance or precise entry; recognise the measured commitment provision as a liability."),
+    ],
+    reference: "IFRS 9.5.5.1, 5.5.3–5.5.5, 5.5.17, 5.5.20, B5.5.30–B5.5.31",
+  },
+  {
+    id: "ifrs-book2-kredco-detco-due-date",
+    standardCode: "IFRS 9",
+    title: text("Kredco وDetco: تاريخ الاستحقاق قبل شريحة التأخر", "Kredco and Detco: due date before overdue bucket"),
+    facts: text(
+      "باعت Kredco إلى Detco على الحساب بمبلغ 200,000 دولار في 1 يونيو 20X4 بشروط ائتمان وصفت بأنها 60 يومًا. مصفوفة Kredco تعطي 1% للذمم غير المتأخرة و5% للمتأخرة من 1 إلى 30 يومًا. لم تدفع Detco بحلول 31 يوليو، وعلمت Kredco أنها تواجه صعوبة نقدية جدية لفقد عميل رئيسي، رغم تطمينات موظف مالي لديها. لا يحدد المصدر نص تاريخ الاستحقاق التعاقدي أو معايرة النسب للخسارة بعد الاسترداد.",
+      "Kredco sells $200,000 on credit to Detco on 1 June 20X4 under terms described as sixty days. Kredco's matrix has a 1% current bucket and a 5% bucket for one to thirty days past due. Detco has not paid by 31 July, and Kredco learns of serious cash difficulty after loss of a major customer despite reassurance from its finance controller. The source does not give the contractual due-date wording or whether rates are calibrated for recoveries.",
+    ),
+    question: text("ما قيد المخصص الأولي، وهل تكفي الوقائع لإثبات زيادة 8,000 دولار في 31 يوليو؟", "What is the initial allowance entry, and do the facts justify a further $8,000 on 31 July?"),
+    solution: [
+      text("إذا كان معدل 1% معدل خسارة عمر معايرًا، يثبت في 1 يونيو ذمم مدينة وإيرادًا 200,000 دولار، ومصروف خسائر ائتمانية مقابل مخصص 2,000 = 200,000 × 1%. المصفوفة المبسطة تبدأ بخسائر العمر عند نشأة ذمة تجارية مؤهلة.", "If the 1% is a calibrated lifetime loss rate, on 1 June recognise $200,000 receivable and revenue, plus $2,000 ECL expense and allowance (1% × $200,000). The eligible trade receivable starts with lifetime ECL under the simplified approach."),
+      text("حدد أولًا تاريخ الاستحقاق الفعلي: إذا حل في 31 يوليو، عدم السداد بنهاية ذلك اليوم لا يثبت بالضرورة يومًا كاملًا من التأخر، أما استحقاق 30 يوليو فقد يدخل شريحة 1–30 يومًا. وإذا كان معدل 5% يمثل الخسارة المناسبة فعلًا، يصبح الرصيد المطلوب 10,000 ويضاف 8,000 إلى المخصص القائم. لكن الصعوبة النقدية الخاصة بـDetco قد تجعل معدل المجموعة غير ممثل؛ عدل الخسارة المتوقعة بمعلومات العميل والتحصيلات، فلا تفرض زيادة 8,000 قطعيًا من النص المختصر.", "First establish the actual due date: if it is 31 July, nonpayment by that day's end need not mean a full day past due, whereas a 30 July due date could put it in the one-to-thirty-day bucket. If 5% is truly the appropriate loss rate, target allowance is $10,000 and the increment is $8,000. But Detco's specific cash difficulties may make the group rate unrepresentative; adjust expected loss for customer evidence and recoveries, so the brief facts do not establish an unconditional $8,000 increase."),
+    ],
+    reference: "IFRS 9.5.5.8, 5.5.15–5.5.17, Appendix A, B5.5.35",
+  },
+  {
     id: "ifrs-book2-orange-lemon-ecl-stages",
     standardCode: "IFRS 9",
     title: text("Orange وLemon: خسائر 12 شهرًا والعمر", "Orange and Lemon: twelve-month and lifetime ECL"),

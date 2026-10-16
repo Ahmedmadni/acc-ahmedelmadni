@@ -1209,6 +1209,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("تسهيل غير مسحوب: السحب المتوقع ليس الخسارة المتوقعة", "Undrawn commitment: expected draw is not expected loss"),
+        explanation: text(
+          "يدخل التزام الإقراض غير المسحوب المؤهل ضمن نموذج الخسائر الائتمانية المتوقعة، وتقدر المنشأة ما يرجح سحبه في الأفق الملائم: خلال 12 شهرًا لتقدير خسائر 12 شهرًا، وخلال العمر المتوقع لتقدير خسائر العمر. لكن المبلغ المتوقع سحبه مضروبًا في احتمال التعثر يعطي تعرضًا مرجحًا للتعثر، وليس مخصصًا نهائيًا ما لم يكن العجز النقدي بعد التعثر يساوي كامل الرصيد ولا يوجد استرداد أو خصم جوهري. قس الفرق المخصوم بين التدفقات المستحقة لو سحب العميل والتدفقات التي تتوقع تحصيلها، بما في ذلك الضمانات والتحصيلات ذات الصلة. وإذا كان المنتج دوارًا مثل السحب المكشوف، افحص مدة التعرض الفعلية التي لا تحدها دائمًا مهلة الإلغاء التعاقدية وفق IFRS 9.5.5.20. يعرض مخصص التزام الإقراض عادة التزامًا، لا خصمًا من أصل لم يسحب بعد.",
+          "An eligible undrawn loan commitment falls under ECL. Estimate amounts expected to be drawn in the appropriate horizon: within twelve months for twelve-month ECL and over the expected life for lifetime ECL. But expected draw multiplied by default probability is default-weighted exposure, not automatically a loss allowance unless post-default shortfall is the entire balance and recovery and discount effects are immaterial. Measure the discounted difference between cash flows due if drawn and expected collections, including relevant collateral and recoveries. For revolving facilities such as overdrafts, assess the actual credit-risk exposure period, which IFRS 9.5.5.20 may extend beyond a contractual cancellation notice. Present an ECL provision for the commitment as a liability rather than deducting it from an asset that has not yet been drawn.",
+        ),
+        keyPoints: [
+          text("السحب المتوقع × احتمال التعثر يحتاج معدل خسارة بعد الاسترداد وخصمًا مناسبًا.", "Expected draw × default probability still needs post-recovery loss and appropriate discounting."),
+          text("قارن أفق السحب خلال 12 شهرًا بأفق السحب خلال عمر الالتزام.", "Distinguish the twelve-month draw horizon from the commitment's lifetime horizon."),
+        ],
+        reference: "IFRS 9.5.5.1, 5.5.3–5.5.5, 5.5.17, 5.5.20, B5.5.30–B5.5.31",
+      },
+      {
+        title: text("الصناعة والضمان والتأخر: لا تختزل خطر الائتمان في مؤشر واحد", "Industry, collateral and arrears: credit risk needs more than one indicator"),
+        explanation: text(
+          "يمكن لمعلومات ركود صناعة يعمل فيها المقترضون أن تكشف تدهورًا قبل التأخر عن السداد. جزئ المحفظة بحسب التعرض المشترك ذي الصلة، مثل عمل المقترض لدى المصنعين أو مورديهم، ثم اختبر تغير احتمال التعثر مقارنة ببداية كل قرض على أساس جماعي أو فردي مناسب. انخفاض نسبة القرض إلى قيمة العقار المرهون قد يخفض الخسارة عند التعثر، لكنه لا يلغي بالضرورة زيادة احتمال التعثر أو الانتقال إلى خسائر العمر. وعند تعثر قرض بعينه أو ظهور حدث يضر بالتدفقات، قيّم كونه متعثرًا ائتمانيًا والضمان والتحصيلات المخصومة على حدة. في مصفوفة ذمم تجارية، احسب أيام التأخر من تاريخ الاستحقاق التعاقدي المحدد، لا تاريخ الفاتورة أو مجرد انتهاء حد الائتمان؛ وعدل معدل المجموعة إذا أظهرت معلومات عميل معين صعوبات مالية أشد من متوسطها.",
+          "Industry stress affecting borrowers can reveal deterioration before payments become overdue. Segment the portfolio by relevant shared exposure, such as borrowers employed by manufacturers or their suppliers, then assess changes in default likelihood since each loan's origination on an appropriate collective or individual basis. A low loan-to-collateral-value ratio may reduce loss given default but does not necessarily prevent a significant rise in default risk or lifetime ECL. For a specific default or event harming cash flows, assess credit impairment and discounted collateral recoveries separately. In a trade-receivable matrix, count days past due from the actual contractual due date, not the invoice date or a vague credit-limit label; adjust a group rate when an individual customer's severe financial difficulty makes it unrepresentative.",
+        ),
+        keyPoints: [
+          text("الضمان يؤثر في مبلغ العجز المتوقع ولا يلغي تلقائيًا زيادة احتمال التعثر.", "Collateral affects expected shortfall and does not automatically cancel a rise in default risk."),
+          text("ثبت تاريخ الاستحقاق قبل نقل الذمة إلى شريحة التأخر التالية.", "Establish the due date before moving a receivable to an overdue bucket."),
+        ],
+        reference: "IFRS 9.5.5.4, 5.5.9–5.5.11, 5.5.17, B5.5.5–B5.5.6, B5.5.35",
+      },
+      {
         title: text("التزام مسمى بالقيمة العادلة: افصل خطر ائتمان المصدر", "Designated fair-value liability: separate the issuer's credit effect"),
         explanation: text(
           "في الالتزام المالي الذي عُيّن بالقيمة العادلة عبر الربح أو الخسارة، يُعرض عادة الجزء من تغير قيمته العادلة المنسوب إلى تغير خطر ائتمان المصدر في الدخل الشامل الآخر، والباقي في الربح أو الخسارة. إذا كان هذا الفصل يخلق عدم اتساق محاسبيًا في الربح أو الخسارة أو يزيده، يعرض التغير كله في الربح أو الخسارة؛ يحدد ذلك عند الاعتراف الأولي ولا يعاد تقريره لاحقًا. لا تعمم هذا العرض على كل التزامات المتاجرة، ولا تساوِ انخفاض القيمة العادلة للدين عند تدهور ائتمان المصدر مع إلغاء أصل المبلغ المستحق للدائن. يلزم قياس أثر الخطر الائتماني منفصلًا قبل وضع قيد، ولا توفر الصفحة مبالغ لذلك.",
