@@ -1828,6 +1828,10 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
             "Consolidation begins when control is obtained and ends when control is lost.",
           ),
           text(
+            "تدخل أرباح أو خسائر التابعة السابقة للسيطرة ضمن صافي الأصول عند الاقتناء وحساب الشهرة، ولا تضاف إلى أرباح المجموعة؛ تُنسب للمجموعة وNCI فقط الحركة اللاحقة للسيطرة بعد تعديلات التجميع.",
+            "A subsidiary's profits or losses before control form part of acquisition-date net assets and goodwill, not group retained earnings. Only post-control movements after consolidation adjustments are attributed to the group and NCI.",
+          ),
+          text(
             "تعرض حقوق غير المسيطرين داخل حقوق الملكية منفصلة عن حقوق مالكي الأم.",
             "NCI is presented within equity separately from owners of the parent.",
           ),
@@ -1892,6 +1896,29 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
         ),
         journalEntries: [],
         reference: "IFRS 10.19–22, B94",
+      },
+      {
+        title: text("خسارة سابقة للاقتناء تتحول إلى أرباح لاحقة", "Pre-acquisition loss followed by post-acquisition profits"),
+        facts: text(
+          "اشترت P جميع أسهم S البالغ عددها 50,000 سهم قيمة الواحد 1 مقابل 20,000 في 1 يناير 20X1، وكان رصيد أرباح S المحتجزة مدينًا 35,000. خلال 20X1–20X4 حققت S أرباحًا تراكمية 40,000، فأصبح رصيدها دائنًا 5,000 في 31 ديسمبر 20X4. بلغت أرباح P المحتجزة في التاريخ نفسه 70,000.",
+          "P acquired all 50,000 one-dollar shares of S for 20,000 on 1 January 20X1 when S had a 35,000 debit retained-earnings balance. During 20X1–20X4 S earned cumulative profits of 40,000, leaving 5,000 credit retained earnings at 31 December 20X4. P retained earnings at that date are 70,000."
+        ),
+        calculations: [
+          text(
+            "صافي أصول S يوم الاقتناء = رأس مال 50,000 − خسائر متراكمة 35,000 = 15,000؛ الشهرة = المقابل 20,000 − 15,000 = 5,000.",
+            "S acquisition-date net assets are share capital 50,000 − accumulated losses 35,000 = 15,000; goodwill is consideration 20,000 − 15,000 = 5,000."
+          ),
+          text(
+            "الحركة اللاحقة للاقتناء في الأرباح المحتجزة = رصيد الإقفال 5,000 − الرصيد المدين عند الاقتناء (−35,000) = 40,000. أرباح المجموعة المحتجزة = 70,000 + 40,000 = 110,000.",
+            "Post-acquisition retained-earnings movement is closing 5,000 − acquisition-date debit balance (−35,000) = 40,000. Group retained earnings are 70,000 + 40,000 = 110,000."
+          ),
+        ],
+        conclusion: text(
+          "لا تخفض خسائر ما قبل السيطرة أرباح الأم الحالية مرتين: تدخل أولًا في صافي الأصول والشهرة، ثم تدخل الأرباح اللاحقة كاملة في أرباح المجموعة وفق الملكية.",
+          "Do not deduct pre-control losses twice from current parent earnings: they first enter acquisition-date net assets and goodwill; subsequent profits then enter group retained earnings according to ownership."
+        ),
+        journalEntries: [],
+        reference: "IFRS 3.32; IFRS 10.20, B86, B94",
       },
     ],
   },

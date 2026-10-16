@@ -2187,8 +2187,12 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     solution: [
       text("في دفاتر S: الإهلاك السنوي على التكلفة التاريخية = 4,000 ÷ 4 = 1,000. عند الاقتناء كانت القيمة الدفترية 2,000 بعد سنتين، ثم يُحمّل نصف سنة إهلاك 500 حتى 30 يونيو. القيمة الدفترية عند البيع = 1,500، ومن ثم ربح التصرف الفردي = 2,600 − 1,500 = 1,100.", "In S's own accounts, annual depreciation on historical cost is 4,000 ÷ 4 = 1,000. After two years, carrying amount at acquisition was 2,000; another half-year's depreciation to 30 June is 500. Carrying amount at disposal is 1,500, so the separate-account gain is 2,600 − 1,500 = 1,100."),
       text("في قوائم المجموعة يبدأ قياس الأصل من قيمته العادلة يوم اقتناء S، وهي 3,000، ويُوزع على السنتين المتبقيتين وفق العمر المعطى: إهلاك نصف سنة = 3,000 ÷ 2 × 6÷12 = 750. القيمة الدفترية الموحدة عند البيع = 2,250، وربح التصرف الموحد = 2,600 − 2,250 = 350. الفرق 750 بين ربحي التصرف ليس معاملة بيع داخل المجموعة؛ سببه أساس القياس المختلف منذ الاقتناء. لا تُختلق ضريبة أو قيد لها دون معلومات إضافية.", "For consolidation, the asset starts at its 3,000 acquisition-date fair value and is depreciated over the stated two remaining years: half-year depreciation = 3,000 ÷ 2 × 6÷12 = 750. Group carrying amount on sale is 2,250 and group disposal gain is 2,600 − 2,250 = 350. The 750 difference between disposal gains is not an intragroup sale; it follows from the different acquisition-date measurement bases. Do not invent tax entries without further facts."),
+      text(
+        "لأن P تملك 80%، يُنسب إلى حصة غير المسيطرين 20% من نتيجة S المعدلة وفق أساس القياس الموحد. فإذا عُزل بند التصرف وحده، يكون نصيبها 20% × 350 = 70، لا 20% × 1,100 من الربح الفردي. أما نصيب NCI من ربح الفترة كله فيحتاج بقية نتائج S بعد جميع تعديلات التجميع.",
+        "Because P owns 80%, NCI is attributed 20% of S's result after applying the consolidated measurement basis. If this disposal item is isolated, its NCI share is 20% × 350 = 70, not 20% × 1,100 of the separate-account gain. Total period NCI attribution requires all of S's results after every consolidation adjustment."
+      ),
     ],
-    reference: "IAS 16.55, 67–68, 71; IFRS 3.18; IFRS 10.B86",
+    reference: "IAS 16.55, 67–68, 71; IFRS 3.18; IFRS 10.B86, B94",
   },
   {
     id: "ifrs-book2-ifrs10-hinge-singe-acquisition-period",
