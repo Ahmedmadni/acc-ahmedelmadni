@@ -2648,8 +2648,9 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         keyPoints: [
           text("التعيين كبديل وقت المنح شرط مهم، لا مجرد وصف لاحق للحدث.", "Identification as a replacement at grant date matters; a later label is not enough."),
           text("لكل من التكلفة الأصلية والزيادة فترة خدمة قد تختلف عن الأخرى.", "Original cost and the increment may have different service periods."),
+          text("عند تمديد الخدمة، قيّم عدد المستحقين لكل مكوّن وفق شروطه؛ لا تخفض تكلفة الأصلية بسبب مغادرين بعد نهايتها الأصلية.", "When service is extended, estimate vesting numbers separately for each component; do not reduce original cost for departures after its original end date."),
         ],
-        reference: "IFRS 2.27–28(c), B42–B43(a)",
+        reference: "IFRS 2.27–28(c), B42–B44(c)",
       },
     ],
     workedExamples: [
@@ -2802,16 +2803,16 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
           "On 1 January 20X1 Piper grants 3,000 options each to 1,000 employees, conditional on service until end-20X3; grant-date fair value is $5 per option. At end-20X1 it expects 100 leavers and has recognised $4.5 million service cost. On 1 January 20X2 the old awards are cancelled and new options granted in their place, vesting at end-20X4, with no compensation; fair values then are $1 for the old and $7 for the new option. Nine hundred seventy-five employees remain at the start of 20X2, 35 leave during it, and 40 more are expected to leave in each of 20X3 and 20X4. The calculation below assumes the new awards qualify as identified replacements under IFRS 2 at grant date.",
         ),
         calculations: [
-          text("المتوقع استحقاقهم في نهاية 20X2 = 975 − 35 − 40 − 40 = 860. الزيادة في القيمة العادلة بتاريخ الاستبدال = 7 − 1 = 6 دولارات لكل خيار.", "Expected vesting employees at end-20X2 = 975 − 35 − 40 − 40 = 860. Replacement-date incremental fair value is $7 − $1 = $6 per option."),
-          text("التكلفة الأصلية التراكمية حتى نهاية 20X2 = 860 × 3,000 × 5 × 2/3 = 8.60 ملايين دولار؛ فترة الأصلية تنتهي في 20X3.", "Cumulative original-award cost at end-20X2 = 860 × 3,000 × $5 × 2/3 = $8.60 million; the original service period ends in 20X3."),
+          text("المتوقع استحقاقهم للبديل حتى نهاية 20X4 = 975 − 35 − 40 − 40 = 860. الزيادة في القيمة العادلة بتاريخ الاستبدال = 7 − 1 = 6 دولارات لكل خيار.", "Employees expected to satisfy the replacement period through end-20X4 = 975 − 35 − 40 − 40 = 860. Replacement-date incremental fair value is $7 − $1 = $6 per option."),
+          text("التكلفة الأصلية التراكمية حتى نهاية 20X2 = 900 × 3,000 × 5 × 2/3 = 9.00 ملايين دولار؛ المتوقع إكمالهم شرطها الأصلي 975 − 35 − 40 = 900، وتنتهي في 20X3؛ لا يغير تمديد الخدمة هذا العدد للتكلفة الأصلية وفق IFRS 2.B44(c).", "Cumulative original-award cost at end-20X2 = 900 × 3,000 × $5 × 2/3 = $9.00 million; 975 − 35 − 40 = 900 are expected to complete the original period in 20X3; the service extension does not change that population for original cost under IFRS 2.B44(c)."),
           text("تكلفة الزيادة التراكمية للسنة الأولى بعد الاستبدال = 860 × 3,000 × 6 × 1/3 = 5.16 ملايين دولار؛ فترة البديل تمتد من بداية 20X2 إلى نهاية 20X4.", "First-year cumulative increment after replacement = 860 × 3,000 × $6 × 1/3 = $5.16 million; replacement service runs from start-20X2 through end-20X4."),
-          text("الرصيد التراكمي في نهاية 20X2 = 13.76 مليون دولار؛ مصروف 20X2 = 13.76 − 4.50 = 9.26 ملايين دولار.", "End-20X2 cumulative reserve = $13.76 million; 20X2 expense = $13.76m − $4.50m = $9.26 million."),
+          text("الرصيد التراكمي في نهاية 20X2 = 14.16 مليون دولار؛ مصروف 20X2 = 14.16 − 4.50 = 9.66 ملايين دولار.", "End-20X2 cumulative reserve = $14.16 million; 20X2 expense = $14.16m − $4.50m = $9.66 million."),
         ],
-        conclusion: text("يكون قيد 20X2 مدين مصروف موظفين ودائن احتياطي خيارات بمبلغ 9.26 ملايين دولار، بشرط تعيين الخيارات الجديدة بدائل عند منحها. هذا فرع الاستبدال؛ لا يستنتج منه مبلغ فرع الإلغاء المصحوب بتعويض نقدي.", "Debit staff expense and credit option reserve by $9.26 million in 20X2, provided the new awards were identified as replacements when granted. This replacement branch does not determine the separate cash-compensated cancellation branch."),
+        conclusion: text("يكون قيد 20X2 مدين مصروف موظفين ودائن احتياطي خيارات بمبلغ 9.66 ملايين دولار، بشرط تعيين الخيارات الجديدة بدائل عند منحها. هذا فرع الاستبدال؛ لا يستنتج منه مبلغ فرع الإلغاء المصحوب بتعويض نقدي.", "Debit staff expense and credit option reserve by $9.66 million in 20X2, provided the new awards were identified as replacements when granted. This replacement branch does not determine the separate cash-compensated cancellation branch."),
         journalEntries: [
-          { label: text("31 ديسمبر 20X2: الخدمة والتعديل", "31 December 20X2: service and replacement increment"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("9.26 ملايين دولار", "$9.26 million") },
+          { label: text("31 ديسمبر 20X2: الخدمة والتعديل", "31 December 20X2: service and replacement increment"), debit: text("مصروف موظفين", "Staff expense"), credit: text("احتياطي خيارات", "Option reserve"), amount: text("9.66 ملايين دولار", "$9.66 million") },
         ],
-        reference: "IFRS 2.19–23, 27–28(c), B42–B43(a)",
+        reference: "IFRS 2.19–23, 27–28(c), B42–B44(c)",
       },
     ],
   },
