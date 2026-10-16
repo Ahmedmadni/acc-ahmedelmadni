@@ -1197,6 +1197,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("اختباران مستقلان لأصل الدين: إدارة المحفظة وتدفق العقد", "Two separate debt-asset tests: portfolio management and contract cash flows"),
+        explanation: text(
+          "ابدأ بنموذج الأعمال كما يُدار فعليًا على مستوى المحفظة: التحصيل، أو التحصيل والبيع، أو إدارة أخرى على أساس القيمة العادلة. لا تنقل محفظة «الاحتفاظ للتحصيل» إلى فئة البيع لمجرد بيع قليل أو عرضي، خاصةً عند تدهور الائتمان؛ وافحص تكرار المبيعات وقيمتها وسببها مع الدليل المستقبلي. ثم اختبر شروط كل أصل: هل التدفقات في تواريخ محددة تمثل أصل المبلغ والفائدة على رصيده فقط؟ حتى لو كان الهدف التحصيل، فإن حقًا جوهريًا لتحويل القرض إلى أسهم المصدر يعرّض الحامل لقيمة حقوق الملكية ويفشل هذا الاختبار؛ يقاس الأصل المركب كله عادة بالقيمة العادلة عبر الربح أو الخسارة، دون فصل خيار التحويل عن أصل مالي مضيف. وإذا نجح اختبار التدفقات، تُقاس محفظة التحصيل بالتكلفة المستهلكة، ومحفظة التحصيل والبيع بالقيمة العادلة عبر الدخل الشامل الآخر، ما لم ينطبق تعيين مؤهل بالقيمة العادلة عبر الربح أو الخسارة.",
+          "First assess how the portfolio is actually managed: to collect, both collect and sell, or under another fair-value objective. Do not turn a hold-to-collect portfolio into a selling model merely because of limited incidental sales, especially sales following credit deterioration; evaluate their frequency, value, reasons and forward-looking evidence. Then inspect each asset's terms: are specified-date cash flows solely principal and interest on the outstanding principal? Even if the objective is collection, a substantive right to convert a loan into the issuer's shares exposes its holder to equity value and fails that test. The entire hybrid financial asset is generally measured at fair value through profit or loss without separating its conversion feature. If cash flows pass, collect-only debt is at amortised cost and collect-and-sell debt at fair value through OCI, absent a qualifying fair-value-through-profit-or-loss designation.",
+        ),
+        keyPoints: [
+          text("قيّم نموذج الأعمال للمحفظة، ثم اختبر تدفقات كل أصل على حدة.", "Assess the portfolio's business model, then each asset's cash-flow terms."),
+          text("قليل من المبيعات لا يحوّل هدف التحصيل تلقائيًا إلى هدف البيع.", "Limited sales do not automatically turn collection into a selling objective."),
+          text("خيار التحويل الجوهري يفشل اختبار أصل الدين والفائدة حتى مع نية الاحتفاظ.", "A substantive conversion option fails the principal-and-interest test despite an intention to hold."),
+        ],
+        reference: "IFRS 9.4.1.1–4.1.5, 4.3.2, B4.1.1–B4.1.4, B4.1.7A–B4.1.9",
+      },
+      {
         title: text("الاعتراف بالمشتق لا يفترض التزامًا موجبًا يوم التعاقد", "Recognising a derivative does not imply a day-one liability"),
         explanation: text(
           "عند دخول المنشأة طرفًا في شروط عقد مشتق يقع ضمن IFRS 9، يبدأ الاعتراف به وتُقاس قيمته العادلة في ذلك التاريخ، حتى لو لم تدفع المنشأة مبلغًا نقديًا أوليًا. لكن تاريخ الاعتراف شيء ومبلغ القياس واتجاهه شيء آخر: العقد الآجل المتفق عليه بسعر السوق قد تكون قيمته العادلة صفرًا عند البداية، أو يصبح أصلًا أو التزامًا بحسب شروطه والسوق. لا تثبت التزامًا ماليًا موجبًا لمجرد وجود وعد بشراء سلعة مستقبلًا، ولا تخترع مبلغًا إذا لم تُعط أسعار العقد والقيمة العادلة. ميّز عقد شراء سلعة للاستخدام بالتسليم الفعلي عن عقد تجوز تسويته صافيًا، ثم اختبر نطاق IFRS 9 واستثناء الاستخدام الخاص.",
