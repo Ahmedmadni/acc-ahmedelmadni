@@ -6,6 +6,7 @@ on:
       - "src/data/ifrs-*"
       - "src/components/library/Ifrs*"
       - "src/routes/library.standards*"
+      - "docs/ifrs-book2-audit-progress.md"
       - "scripts/check-ifrs-*"
       - "package.json"
       - "package-lock.json"
