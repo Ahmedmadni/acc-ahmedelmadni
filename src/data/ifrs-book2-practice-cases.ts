@@ -4933,6 +4933,34 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 24.4, 9, 13, 18–21; IFRS 10.B86",
   },
   {
+    id: "ifrs-book2-harvest-measurement-boundary",
+    standardCode: "IAS 41",
+    title: text("العنب قبل الحصاد وبعده", "Grapes before and after harvest"),
+    facts: text(
+      "تدير منشأة كرومًا مثمرة لإنتاج العنب. يبقى بعض العنب المقطوف في المخزن عند نهاية الفترة تمهيدًا لتصنيع النبيذ. لا تقدم الحالة مبالغ للقيمة العادلة أو تكاليف البيع أو صافي القيمة القابلة للتحقق.",
+      "An entity manages bearer vines to produce grapes. Some picked grapes remain in storage at period-end for later wine production. The case supplies no amounts for fair value, costs to sell or net realisable value.",
+    ),
+    question: text(
+      "حدد المعيار وأساس القياس للكروم والعنب النامي والعنب عند الحصاد والمخزون بعد الحصاد، وبيّن ما إذا كان يُعاد قياس العنب المخزن بالقيمة العادلة ناقصًا تكاليف البيع في نهاية الفترة.",
+      "Identify the Standard and measurement basis for the vines, growing grapes, grapes at harvest and post-harvest inventory, and state whether stored grapes are remeasured at fair value less costs to sell at period-end.",
+    ),
+    solution: [
+      text(
+        "الكروم المؤهلة نباتات مثمرة ضمن IAS 16، وتُحاسب عنها منفصلة عن العنب. العنب النامي أصل حيوي ضمن IAS 41 ويقاس عادة بالقيمة العادلة ناقصًا تكاليف البيع في كل تاريخ تقرير قبل الحصاد.",
+        "Qualifying vines are bearer plants under IAS 16 and are accounted for separately from the grapes. Growing grapes are biological assets under IAS 41, normally measured at fair value less costs to sell at each pre-harvest reporting date.",
+      ),
+      text(
+        "عند الحصاد يقاس العنب بالقيمة العادلة ناقصًا تكاليف البيع في تلك اللحظة. يصبح هذا المبلغ تكلفة المخزون عند بدء تطبيق IAS 2.",
+        "At harvest, measure the grapes at fair value less costs to sell at that point. This amount becomes inventory cost when IAS 2 starts to apply.",
+      ),
+      text(
+        "بعد الحصاد لا يعاد قياس العنب المخزن وفق IAS 41 في كل نهاية فترة؛ يقاس وفق IAS 2 بالأقل من تلك التكلفة وصافي القيمة القابلة للتحقق. كما تخضع تكاليف تحويله إلى نبيذ لقواعد تكلفة التحويل في IAS 2. لغياب مبالغ التكلفة وصافي القيمة القابلة للتحقق، لا يمكن اختراع قيد رقمي أو خسارة خفض.",
+        "After harvest, stored grapes are not remeasured under IAS 41 at every period-end; IAS 2 measures them at the lower of that cost and net realisable value. Costs of converting them into wine also follow IAS 2 conversion-cost rules. With no cost and NRV amounts, no numeric entry or write-down can be invented.",
+      ),
+    ],
+    reference: "IAS 41.2(b), 5C, 12–13; IAS 16.3(b); IAS 2.3(b), 9, 12–13, 20",
+  },
+  {
     id: "ifrs-book2-biological-assets",
     standardCode: "IAS 41",
     title: text("الأصل البيولوجي والمحصول عند الحصاد", "Biological assets and produce at harvest"),

@@ -3711,6 +3711,82 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
   },
+  "IAS 41": {
+    sections: [
+      {
+        title: text(
+          "حدود IAS 41: الأصل الحي والنبات المثمر والحصاد",
+          "IAS 41 boundaries: living assets, bearer plants and harvest",
+        ),
+        explanation: text(
+          "يطبق IAS 41 عندما تدير المنشأة التحول الحيوي أو حصاد أصل حيوي للبيع أو لتحويله إلى منتج زراعي أو إلى أصول حيوية إضافية. الحيوان أو النبات الحي أصل حيوي، لكن النبات المثمر المؤهل نفسه يقع ضمن IAS 16، بينما يظل المنتج النامي عليه ضمن IAS 41. تُقاس الأصول الحيوية الواقعة في النطاق عادة بالقيمة العادلة ناقصًا تكاليف البيع عند الاعتراف الأول وفي كل نهاية فترة تقرير. أما المنتج الزراعي فيُقاس بهذا الأساس عند نقطة الحصاد فقط؛ يصبح ذلك المبلغ تكلفته عند بدء تطبيق IAS 2، ثم يخضع لاحقًا للأقل من التكلفة وصافي القيمة القابلة للتحقق بدل إعادة قياسه بالقيمة العادلة ناقصًا تكاليف البيع كل فترة.",
+          "IAS 41 applies when an entity manages the biological transformation or harvest of a biological asset for sale, conversion into agricultural produce or creation of additional biological assets. A living animal or plant is a biological asset, but a qualifying bearer plant itself is within IAS 16 while produce growing on it remains within IAS 41. Biological assets within scope are normally measured at fair value less costs to sell on initial recognition and at each reporting date. Agricultural produce uses that measure only at the point of harvest; the amount becomes its cost when IAS 2 starts to apply, after which the lower of cost and net realisable value replaces recurring fair-value-less-costs-to-sell measurement.",
+        ),
+        keyPoints: [
+          text(
+            "افصل النبات المثمر نفسه عن المنتج الذي ينمو عليه، وافصل الأرض عن الأصل الحيوي المرتبط بها.",
+            "Separate a bearer plant from the produce growing on it, and separate land from a biological asset attached to it.",
+          ),
+          text(
+            "نقطة الحصاد هي الحد الفاصل: القياس عند الحصاد يصبح تكلفة IAS 2، لا قيمة عادلة جديدة في كل تاريخ لاحق.",
+            "Harvest is the boundary: the harvest-date measure becomes IAS 2 cost, not a fresh fair value at every later date.",
+          ),
+          text(
+            "حصاد مصادر غير مُدارة، مثل الصيد البحري أو قطع غابة طبيعية بلا إدارة للتحول، ليس نشاطًا زراعيًا لمجرد أن الناتج كان حيًا.",
+            "Harvesting unmanaged sources, such as ocean fishing or unmanaged natural forests, is not agricultural activity merely because the source was living.",
+          ),
+        ],
+        reference: "IAS 41.1–6, 12–13, 22; IAS 16.3(b); IAS 2.3(b), 9, 20",
+      },
+      {
+        title: text(
+          "القيمة العادلة والاستثناء والعرض: ثلاثة اختبارات مستقلة",
+          "Fair value, the exception and presentation: three separate tests",
+        ),
+        explanation: text(
+          "يُحدد IFRS 13 القيمة العادلة في السوق الرئيسية التي تستطيع المنشأة الوصول إليها؛ ليست «صافي قيمة سوقية» يختارها المديرون ولا السوق الأكثر ربحًا إذا وُجدت سوق رئيسية. بعد تحديد القيمة العادلة تُطرح تكاليف البيع الإضافية المباشرة وفق IAS 41. افتراض إمكان قياس القيمة العادلة لا يُدحض إلا عند الاعتراف الأول، عندما لا تتاح أسعار سوق مقتبسة وتكون القياسات البديلة محددة بوضوح على أنها غير موثوقة؛ عندها تستخدم التكلفة ناقصًا الاستهلاك والهبوط حتى تصبح القيمة العادلة قابلة للقياس بموثوقية. وبصرف النظر عن أساس القياس، يُصنف الأصل الحيوي متداولًا أو غير متداول وفق دورة التشغيل والتوقيت المتوقع للتحقق، ولا توجد فئة ثالثة معفاة من التصنيف.",
+          "IFRS 13 determines fair value in the principal market accessible to the entity; it is not a management-selected 'net market value' or the most profitable market when a principal market exists. IAS 41 costs to sell are deducted after fair value is determined. The presumption that fair value is measurable can be rebutted only on initial recognition when quoted market prices are unavailable and alternative fair-value measurements are determined to be clearly unreliable; cost less depreciation and impairment is then used until fair value becomes reliably measurable. Independently of that measurement basis, classify a biological asset as current or non-current using the operating cycle and expected realisation timing; there is no third exempt classification.",
+        ),
+        keyPoints: [
+          text(
+            "غياب سوق نشطة أو سعر مقتبس لا يثبت وحده أن كل قياس بديل للقيمة العادلة غير موثوق بوضوح.",
+            "Absence of an active market or quoted price does not by itself prove that every alternative fair-value measure is clearly unreliable.",
+          ),
+          text(
+            "تدخل مكاسب وخسائر الاعتراف الأول والتغير في القيمة العادلة ناقصًا تكاليف البيع في الربح أو الخسارة عند نشوئها.",
+            "Gains and losses on initial recognition and changes in fair value less costs to sell enter profit or loss as they arise.",
+          ),
+          text(
+            "التقسيم بين أصول استهلاكية وحاملة أو بين ناضجة وغير ناضجة إفصاح وصفي مفيد؛ لا يلغي اختبار متداول/غير متداول.",
+            "Consumable versus bearer and mature versus immature groupings are useful descriptive disclosures; they do not replace current/non-current classification.",
+          ),
+        ],
+        reference: "IAS 41.12, 26, 30–33, 41–43; IFRS 13.16, 24–26; IAS 1.66–68",
+      },
+      {
+        title: text(
+          "المنح الحكومية المرتبطة بالزراعة",
+          "Government grants related to agriculture",
+        ),
+        explanation: text(
+          "تعتمد معالجة المنحة على قياس الأصل الحيوي. إذا كان الأصل مقاسًا بالقيمة العادلة ناقصًا تكاليف البيع، تُثبت المنحة غير المشروطة في الربح أو الخسارة عندما تصبح مستحقة القبض، وتُثبت المنحة المشروطة فقط عندما تتحقق شروطها، بما فيها شرط عدم مزاولة نشاط زراعي محدد. إذا كان الأصل يُقاس بالتكلفة بسبب استثناء IAS 41.30، تطبق IAS 20. لا يجوز اختيار توقيت أسرع لمجرد أن النقد قُبض أو أن الإدارة تتوقع استيفاء الشرط.",
+          "Grant accounting follows the biological asset's measurement basis. For an asset measured at fair value less costs to sell, recognise an unconditional grant in profit or loss when it becomes receivable and a conditional grant only when its conditions are met, including a condition not to engage in specified agricultural activity. IAS 20 applies when the asset is measured at cost under the IAS 41.30 exception. Cash receipt or management's expectation of compliance does not permit earlier income recognition.",
+        ),
+        keyPoints: [
+          text(
+            "حدد أولًا هل المنحة مشروطة وهل الأصل بالقيمة العادلة ناقصًا تكاليف البيع أم بالتكلفة الاستثنائية.",
+            "First identify whether the grant is conditional and whether the asset uses fair value less costs to sell or exceptional cost measurement.",
+          ),
+          text(
+            "لا تطبق IAS 20 على منحة أصل حيوي مقاس بالقيمة العادلة ناقصًا تكاليف البيع.",
+            "Do not apply IAS 20 to a grant for a biological asset measured at fair value less costs to sell.",
+          ),
+        ],
+        reference: "IAS 41.34–38; IAS 20.7, 12, 20",
+      },
+    ],
+    workedExamples: [],
+  },
   "IAS 10": {
     sections: [
       {
