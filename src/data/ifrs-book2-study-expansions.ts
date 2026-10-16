@@ -68,7 +68,7 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       {
         title: text("XYZ: فحص توازن قائمة المركز المالي المقارنة", "XYZ: reconciling comparative financial position"),
         facts: text(
-          "يعرض مثال XYZ أرقام مجموعتين لسنتي 20X7 و20X6 بالألف دولار. في 20X7 تبلغ الأصول غير المتداولة 901,620 والمتداولة 564,880، وحقوق ملاك الأم 903,700 وحصة الأقلية 70,050، والالتزامات غير المتداولة 177,650 والمتداولة 315,100. في 20X6 تبلغ الأصول غير المتداولة 945,460 والمتداولة 578,740، وإجمالي حقوق الملكية 831,500 والالتزامات 692,700. هذا مثال عرض وليس معاملة جديدة.",
+          "يعرض مثال XYZ أرقامًا مقارنة لسنتي 20X7 و20X6 بالألف دولار. في 20X7 تبلغ الأصول غير المتداولة 901,620 والمتداولة 564,880، وحقوق ملاك الأم 903,700 وحصة الأقلية 70,050، والالتزامات غير المتداولة 177,650 والمتداولة 315,100. في 20X6 تبلغ الأصول غير المتداولة 945,460 والمتداولة 578,740، وإجمالي حقوق الملكية 831,500 والالتزامات 692,700. هذا مثال عرض وليس معاملة جديدة.",
           "XYZ presents two comparative years, 20X7 and 20X6, in thousands of dollars. In 20X7 non-current assets are 901,620 and current assets 564,880; owners' equity is 903,700 and NCI 70,050; non-current liabilities are 177,650 and current liabilities 315,100. In 20X6 non-current assets are 945,460 and current assets 578,740, with total equity of 831,500 and liabilities of 692,700. This illustrates presentation rather than a new transaction."
         ),
         calculations: [
