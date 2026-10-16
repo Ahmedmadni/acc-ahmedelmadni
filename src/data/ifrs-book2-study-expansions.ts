@@ -1320,6 +1320,31 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
         ],
         reference: "IAS 19.8, 11, 159–170; IAS 37.72–83",
       },
+      {
+        title: text("تعديل الخطة وتقليصها وتسويتها", "Plan amendment, curtailment and settlement"),
+        explanation: text(
+          "تغيير المنافع عن خدمة سابقة أو خفض عدد المشمولين بالخطة يولد تكلفة خدمة سابقة، قد تكون مصروفًا أو تخفيضًا للمصروف إذا انخفض الالتزام. أما التسوية فهي معاملة تزيل التزام المنشأة القانوني أو الضمني عن منافع محددة؛ سداد المنافع المعتاد وفق شروط الخطة ليس تسوية مستقلة. أعد قياس الالتزام وأصول الخطة بافتراضات حديثة قبل تحديد تكلفة الخدمة السابقة أو ربح التسوية أو خسارتها. قارن قيمة الالتزام الذي أزيل بمقابل التسوية، بما فيه أصول الخطة المنقولة. تظهر تكلفة الخدمة السابقة وأثر التسوية في الربح أو الخسارة، بينما تُعرض إعادة القياس الاكتوارية وعوائد الأصول خارج صافي الفائدة في الدخل الشامل الآخر. بعد الحدث تُستخدم الافتراضات المحدّثة لحساب تكلفة الخدمة الجارية وصافي الفائدة لباقي الفترة.",
+          "A change to benefits for prior service or a significant reduction in covered employees produces past service cost, which can be a credit when the obligation falls. A settlement eliminates the employer's further legal or constructive obligation for specified benefits; an ordinary benefit payment already provided for in the plan is not a separate settlement. Remeasure the obligation and plan assets using current assumptions before measuring past service cost or the settlement gain or loss. Compare the obligation extinguished with the settlement price, including plan assets transferred. Past service cost and settlement effects enter profit or loss; actuarial remeasurement and asset return beyond net interest enter OCI. Updated assumptions determine current service cost and net interest for the rest of the period after the event.",
+        ),
+        keyPoints: [
+          text("تعترف بتكلفة الخدمة السابقة في التاريخ الأسبق لتعديل الخطة أو تقليصها وإثبات إعادة هيكلة أو مزايا إنهاء مرتبطة بها.", "Recognise past service cost at the earlier of the amendment or curtailment and recognition of related restructuring or termination benefits."),
+          text("لا تعامل المنافع العادية المسددة من أصول الخطة على أنها ربح أو خسارة تسوية.", "Do not treat ordinary benefits paid from plan assets as a settlement gain or loss."),
+          text("افصل إعادة القياس السابقة للحدث عن تكلفة الخدمة السابقة وأثر التسوية.", "Separate pre-event remeasurement from past service cost and the settlement result."),
+        ],
+        reference: "IAS 19.99–112, 120–130",
+      },
+      {
+        title: text("سقف أصل المنفعة المحددة", "Defined-benefit asset ceiling"),
+        explanation: text(
+          "زيادة أصول الخطة على الالتزام لا تعني أن الفائض كله أصل للمنشأة. يقيد IAS 19 صافي الأصل المعترف به بالقيمة الحالية للمنافع الاقتصادية المتاحة في صورة رد مبالغ أو تخفيض مساهمات مستقبلية؛ ويُفحص حق المنشأة وشروط الخطة والحد الأدنى للتمويل وفق IFRIC 14. يدخل جزء الفائدة المتعلق بأثر السقف في صافي الفائدة بالربح أو الخسارة. أما تغير أثر السقف عدا الفائدة فيعد إعادة قياس بالدخل الشامل الآخر، لا ربحًا أو خسارة تشغيلية. إن لم يبين السؤال إمكان استرداد الفائض، اعرض الفائض الحسابي مع تعليق مبلغ الأصل المعترف به على اختبار السقف.",
+          "Plan assets exceeding the obligation do not automatically create an equally large employer asset. IAS 19 limits the recognised net asset to the present value of economic benefits available as refunds or reductions in future contributions; assess the plan terms, the employer's rights and minimum funding under IFRIC 14. Interest on the ceiling adjustment belongs in net interest in profit or loss. Other changes in the ceiling effect are remeasurements in OCI, not profit-or-loss gains or expenses. Without evidence that the surplus is available, show the arithmetic surplus but make the recognised asset conditional on the ceiling test.",
+        ),
+        keyPoints: [
+          text("احسب الفائض أولًا ثم اختبر المنافع الاقتصادية المتاحة للمنشأة.", "Calculate the surplus, then test economic benefits available to the employer."),
+          text("ضع تغير السقف خارج عنصر الفائدة في الدخل الشامل الآخر.", "Put changes in the ceiling effect beyond interest in OCI."),
+        ],
+        reference: "IAS 19.57, 64, 120–126, 127–130; IFRIC 14.7–9",
+      },
     ],
     workedExamples: [
       {
