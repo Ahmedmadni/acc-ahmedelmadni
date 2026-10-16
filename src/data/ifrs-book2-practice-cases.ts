@@ -15,6 +15,22 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-valor-principal-most-advantageous-market",
+    standardCode: "IFRS 13",
+    title: text("Valor: السوق الرئيسي والسوق الأكثر منفعة", "Valor: principal and most advantageous markets"),
+    facts: text(
+      "يمكن لـValor الوصول إلى سوقي X وY لبيع أصل متماثل بتاريخ القياس. سعر X هو 58 دولارًا، وتكاليف معاملته 4 دولارات ونقله 4 دولارات؛ سعر Y هو 57 دولارًا، وتكاليف معاملته 3 دولارات ونقله دولاران. يفترض المثال أن موقع الأصل خاصية له، وأن الأسعار من معاملات منتظمة وقابلة للوصول؛ لا يقدم حجم النشاط إلا في فرض أن X هو السوق الرئيسي.",
+      "Valor can access markets X and Y to sell an identical asset at the measurement date. X quotes $58 with $4 transaction and $4 transport costs; Y quotes $57 with $3 transaction and $2 transport costs. Assume location is a characteristic of the asset and prices represent accessible orderly transactions. Volume and activity are given only in the alternative assumption that X is the principal market."
+    ),
+    question: text("ما القيمة العادلة إذا كان X السوق الرئيسي؟ وما السوق والقيمة إذا لم يوجد سوق رئيسي؟", "What is fair value if X is the principal market? Which market and value apply if neither is principal?"),
+    solution: [
+      text("إذا كان X السوق الرئيسي المتاح، يُستخدم سعره ولو كان صافي Y أعلى: القيمة العادلة = 58 − 4 نقل = 54 دولارًا. لا يخصم مبلغ 4 تكاليف المعاملة من القياس.", "If accessible X is principal, use it even though Y offers better net proceeds: fair value = $58 − $4 transport = $54. Do not deduct X's $4 transaction costs from the measure."),
+      text("إذا لم يوجد سوق رئيسي، قارن صافي حصيلة اختيار السوق: X = 58 − 4 معاملة − 4 نقل = 50 دولارًا؛ Y = 57 − 3 معاملة − 2 نقل = 52 دولارًا. لذلك Y هو الأكثر منفعة.", "If there is no principal market, compare net proceeds to select a market: X = $58 − $4 transaction − $4 transport = $50; Y = $57 − $3 transaction − $2 transport = $52. Therefore Y is most advantageous."),
+      text("بعد اختيار Y، القيمة العادلة = 57 − 2 نقل = 55 دولارًا، وليست صافي الحصيلة 52 دولارًا؛ لا تخصم تكاليف المعاملة 3 دولارات من القياس. لا يعطي السؤال معيار القياس المحاسبي لهذا الأصل أو قيمته الدفترية، لذلك لا يُستنتج قيد أو مكسب إعادة تقييم.", "After selecting Y, fair value = $57 − $2 transport = $55, not the $52 net proceeds; its $3 transaction costs are excluded from fair value. The question supplies neither the asset's applicable accounting measurement basis nor its carrying amount, so no entry or remeasurement gain follows."),
+    ],
+    reference: "IFRS 13.16–19, 24–26, Appendix A",
+  },
+  {
     id: "ifrs-book2-ifrs15-p-contract-cost-progress",
     standardCode: "IFRS 15",
     title: text("عقد P: التقدم بالتكلفة وتصنيف الحق في المقابل", "P contract: cost-based progress and right-to-payment presentation"),
