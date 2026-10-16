@@ -5167,6 +5167,90 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 2.14–23",
   },
   {
+    id: "ifrs-book2-euro-purchase-settlement",
+    standardCode: "IAS 21",
+    title: text("شراء مخزون باليورو وتسوية الدائن", "Euro inventory purchase and payable settlement"),
+    facts: text(
+      "اشترت منشأة مخزونًا بالآجل مقابل 124,250 يورو. عملتها الوظيفية الدولار، وكان سعر الصرف عند استلام المخزون 3.50 يورو لكل دولار، ثم سددت الدائن عندما أصبح السعر 3.55 يورو لكل دولار. لأغراض هذه الحالة المركزة، افترض عدم وقوع نهاية فترة تقرير بين الشراء والسداد.",
+      "An entity buys inventory on credit for €124,250. Its functional currency is the US dollar. The rate is €3.50 per US dollar when the inventory is received and €3.55 per US dollar when the payable is settled. For this focused case, assume no reporting date falls between purchase and settlement.",
+    ),
+    question: text(
+      "احسب قيمة الاعتراف الأولي ومبلغ السداد وفرق الصرف، وبيّن أثرها في المخزون والربح أو الخسارة.",
+      "Calculate the initial recognition amount, settlement cash and exchange difference, and explain the effects on inventory and profit or loss.",
+    ),
+    solution: [
+      text(
+        "عند الاستلام: 124,250 ÷ 3.50 = 35,500 دولار. يُثبت المخزون والدائن التجاري بهذا المبلغ لأن سعر تاريخ المعاملة هو أساس الاعتراف الأولي.",
+        "On receipt: €124,250 ÷ 3.50 = US$35,500. Recognise inventory and the trade payable at this amount because initial recognition uses the transaction-date rate.",
+      ),
+      text(
+        "عند السداد: 124,250 ÷ 3.55 = 35,000 دولار نقدًا. إلغاء الدائن البالغ 35,500 مقابل نقدية 35,000 ينتج مكسب صرف 500 دولار في الربح أو الخسارة.",
+        "On settlement: €124,250 ÷ 3.55 = US$35,000 cash. Derecognising the US$35,500 payable against US$35,000 cash produces a US$500 exchange gain in profit or loss.",
+      ),
+      text(
+        "يبقى المخزون غير النقدي المقاس بالتكلفة التاريخية عند 35,500 دولار؛ لا يُخفض بمكسب الصرف. نشأ المكسب من تسوية الدائن النقدي، لا من إعادة قياس المخزون.",
+        "The non-monetary inventory measured at historical cost remains US$35,500; the exchange gain does not reduce it. The gain arises from settling the monetary payable, not from remeasuring the inventory.",
+      ),
+    ],
+    reference: "IAS 21.21–23, 28",
+  },
+  {
+    id: "ifrs-book2-yuan-sale-settlement",
+    standardCode: "IAS 21",
+    title: text("بيع باليوان وتحصيل المدين", "Yuan sale and receivable settlement"),
+    facts: text(
+      "باعت منشأة محلية بضاعة إلى عميل صيني مقابل 116,000 يوان. عملتها الوظيفية الدولار. كان السعر عند البيع 10.75 يوان لكل دولار، وعند التحصيل 10.8 يوان لكل دولار. لأغراض هذه الحالة المركزة، افترض عدم وقوع نهاية فترة تقرير بين التاريخين.",
+      "A local entity sells goods to a Chinese customer for CNY116,000. Its functional currency is the US dollar. The rate is CNY10.75 per US dollar at sale and CNY10.8 per US dollar on collection. For this focused case, assume no reporting date falls between the two dates.",
+    ),
+    question: text(
+      "احسب الإيراد والمدين والنقد المحصل وفرق الصرف دون تقريب مبكر، ثم فسّر أرقام المصدر المقربة.",
+      "Calculate revenue, the receivable, cash collected and the exchange difference without premature rounding, then explain the source's rounded figures.",
+    ),
+    solution: [
+      text(
+        "عند البيع: 116,000 ÷ 10.75 = 10,790.70 دولار تقريبًا؛ مدين ذمم مدينة ودائن إيراد مبيعات بهذا المبلغ.",
+        "At sale: CNY116,000 ÷ 10.75 = approximately US$10,790.70; debit the receivable and credit sales revenue for that amount.",
+      ),
+      text(
+        "عند التحصيل: 116,000 ÷ 10.8 = 10,740.74 دولار تقريبًا. خسارة الصرف = 10,790.70 − 10,740.74 = 49.96 دولار في الربح أو الخسارة.",
+        "On collection: CNY116,000 ÷ 10.8 = approximately US$10,740.74. The exchange loss is US$10,790.70 − US$10,740.74 = US$49.96 in profit or loss.",
+      ),
+      text(
+        "يعرض المصدر 10,800 و10,750 وخسارة 50 دولارًا؛ وهي توافق تقريب ناتجي القسمة إلى أقرب 50 دولارًا، رغم أن أساس التقريب غير مذكور صراحة. الحساب الدقيق أعلاه يحافظ على اتساق القيد، ويمكن عرض مبالغ مقربة وفق سياسة ثابتة دون تغيير جوهر خسارة الصرف.",
+        "The source prints US$10,800, US$10,750 and a US$50 loss. Those figures correspond to rounding each quotient to the nearest US$50, although the source does not state that rounding basis. The precise calculation above keeps the entry internally consistent; amounts may be presented under a consistent rounding policy without changing the substance of the exchange loss.",
+      ),
+    ],
+    reference: "IAS 21.21–22, 28",
+  },
+  {
+    id: "ifrs-book2-belgian-property-translation",
+    standardCode: "IAS 21",
+    title: text("عقار تابع بلجيكي وعملة عرض المجموعة", "Belgian subsidiary property and group presentation currency"),
+    facts: text(
+      "اشترت شركة تابعة بلجيكية عقارًا في 31 ديسمبر 20X7 مقابل 2,100,000 يورو عندما كان السعر 70 يورو لكل دولار. بلغ إهلاك 20X8 مبلغ 16,800 يورو، فأصبحت القيمة الدفترية في 31 ديسمبر 20X8 مقدارها 2,083,200 يورو، وكان سعر الإقفال 60 يورو لكل دولار. يعرض المصدر أيضًا متوسطًا سنويًا قدره 64 يورو لكل دولار. تعد المجموعة قوائمها بالدولار، ولا يذكر السؤال صراحة عملة التابعة الوظيفية أو وجود تضخم مفرط.",
+      "A Belgian subsidiary buys property on 31 December 20X7 for €2,100,000 when the rate is €70 per US dollar. Its 20X8 depreciation is €16,800, leaving a €2,083,200 carrying amount at 31 December 20X8, when the closing rate is €60 per US dollar. The source also gives a €64 per US dollar annual average. The group presents in US dollars; the question does not expressly state the subsidiary's functional currency or whether it is hyperinflationary.",
+    ),
+    question: text(
+      "بيّن نتيجة ترجمة العقار والإهلاك إذا كان اليورو عملة التابعة الوظيفية والدولار عملة عرض المجموعة، وقارنها بحالة كون الدولار عملتها الوظيفية.",
+      "Show the property and depreciation translation if the euro is the subsidiary's functional currency and the US dollar is the group's presentation currency, and compare that result with a US-dollar functional currency.",
+    ),
+    solution: [
+      text(
+        "إذا كان اليورو العملة الوظيفية والاقتصاد غير مفرط التضخم، تُترجم أصول والتزامات التابعة إلى عملة العرض بسعر الإقفال: 2,083,200 ÷ 60 = 34,720 دولار للقيمة الدفترية للعقار.",
+        "If the euro is the functional currency and the economy is not hyperinflationary, translate the subsidiary's assets and liabilities into the presentation currency at the closing rate: €2,083,200 ÷ 60 = US$34,720 for the property's carrying amount.",
+      ),
+      text(
+        "يُترجم مصروف الإهلاك بسعر تاريخ المعاملة. إذا كان متوسط 64 يقارب الأسعار الفعلية لتواريخ استهلاك منافع العقار ولم تكن التقلبات جوهرية، يكون المصروف 16,800 ÷ 64 = 262.50 دولار. لا يكفي المتوسط إذا لم يكن تقريبًا مناسبًا.",
+        "Translate depreciation expense at transaction-date rates. If the €64 average approximates the actual rates when the property's benefits were consumed and rates did not fluctuate significantly, the expense is €16,800 ÷ 64 = US$262.50. The average is not sufficient when it is not an appropriate approximation.",
+      ),
+      text(
+        "تذهب فروق ترجمة نتائج ومركز العملية الأجنبية إلى الدخل الشامل الآخر وفق IAS 21؛ لا يمكن حساب احتياطي الترجمة الكامل من العقار وحده لغياب بقية صافي الأصول وحقوق الملكية. وإذا كان الدولار هو العملة الوظيفية فعلًا والعقار أصلًا غير نقدي بالتكلفة التاريخية، يُثبت مبدئيًا بمبلغ 2,100,000 ÷ 70 = 30,000 دولار، ويكون الإهلاك المكافئ 16,800 ÷ 70 = 240 دولارًا والقيمة 29,760 دولارًا. لذلك يحدد تقدير العملة الوظيفية المسار، ولا يُختار 29,760 أو34,720 اعتباطيًا.",
+        "Exchange differences from translating a foreign operation's results and financial position go to OCI under IAS 21; a complete translation reserve cannot be calculated from the property alone because the other net assets and equity are missing. If the US dollar is in fact the functional currency and the property is a historical-cost non-monetary asset, initially recognise €2,100,000 ÷ 70 = US$30,000, with equivalent depreciation of €16,800 ÷ 70 = US$240 and a US$29,760 carrying amount. Functional-currency assessment therefore determines the route; US$29,760 and US$34,720 are not elective alternatives.",
+      ),
+    ],
+    reference: "IAS 21.9–12, 21–23, 34, 38–41",
+  },
+  {
     id: "ifrs-book2-courtney-currency",
     standardCode: "IAS 21",
     title: text("شراء مواد بعملة أجنبية", "Courtney: foreign-currency purchase"),
