@@ -1798,8 +1798,8 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
             "NCI is presented within equity separately from owners of the parent.",
           ),
           text(
-            "توحّد تواريخ التقارير قدر الإمكان، وألا يتجاوز الفرق ثلاثة أشهر عند التعذر.",
-            "Reporting dates are aligned where practicable; any difference cannot exceed three months.",
+            "تعد التابعة معلومات إضافية بتاريخ الأم ما لم يتعذر ذلك. وعند استخدام تاريخ مختلف لا يتجاوز الفرق ثلاثة أشهر، تعدّل آثار المعاملات أو الأحداث الجوهرية بين التاريخين، ويظل طول الفترات والفارق بين تاريخيهما متماثلين من فترة إلى أخرى ما لم يوجد سبب مبرر للتغيير.",
+            "A subsidiary prepares additional information as of the parent's reporting date unless impracticable. If a different date is used, the gap cannot exceed three months, significant intervening transactions or events are adjusted, and the length of the periods and the reporting-date difference remain consistent from period to period unless a justified change is made.",
           ),
         ],
         reference: "IFRS 10.19–26, B86–B93",
