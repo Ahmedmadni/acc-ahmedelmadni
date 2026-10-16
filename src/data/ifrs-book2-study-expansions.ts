@@ -1209,6 +1209,44 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("التزام مسمى بالقيمة العادلة: افصل خطر ائتمان المصدر", "Designated fair-value liability: separate the issuer's credit effect"),
+        explanation: text(
+          "في الالتزام المالي الذي عُيّن بالقيمة العادلة عبر الربح أو الخسارة، يُعرض عادة الجزء من تغير قيمته العادلة المنسوب إلى تغير خطر ائتمان المصدر في الدخل الشامل الآخر، والباقي في الربح أو الخسارة. إذا كان هذا الفصل يخلق عدم اتساق محاسبيًا في الربح أو الخسارة أو يزيده، يعرض التغير كله في الربح أو الخسارة؛ يحدد ذلك عند الاعتراف الأولي ولا يعاد تقريره لاحقًا. لا تعمم هذا العرض على كل التزامات المتاجرة، ولا تساوِ انخفاض القيمة العادلة للدين عند تدهور ائتمان المصدر مع إلغاء أصل المبلغ المستحق للدائن. يلزم قياس أثر الخطر الائتماني منفصلًا قبل وضع قيد، ولا توفر الصفحة مبالغ لذلك.",
+          "For a financial liability designated at fair value through profit or loss, the portion of its fair-value movement attributable to changes in the issuer's credit risk normally goes to OCI, with the remainder in profit or loss. If that split creates or enlarges a profit-or-loss accounting mismatch, present the entire change in profit or loss; make this determination at initial recognition and do not subsequently reassess it. Do not apply this presentation to every trading liability, or equate a lower liability fair value after credit deterioration with cancellation of the creditor's contractual principal. Isolate the credit-risk effect before posting an entry; the page supplies no amounts for one.",
+        ),
+        keyPoints: [
+          text("العرض المنفصل يخص الالتزام المعين بالقيمة العادلة، مع اختبار عدم الاتساق عند البداية.", "The split concerns a designated fair-value liability, with the mismatch test at inception."),
+          text("تغير ائتمان المصدر لا يطفئ أصل الدين التعاقدي.", "Issuer-credit movement does not extinguish contractual principal."),
+        ],
+        reference: "IFRS 9.5.7.7–5.7.9; IFRS 13.42",
+      },
+      {
+        title: text("الخسائر الائتمانية: مدة التعثر ومقارنة الخطر", "Expected credit losses: default horizon and risk comparison"),
+        explanation: text(
+          "خسائر 12 شهرًا هي الجزء من خسائر العمر الناتج من أحداث تعثر قد تقع خلال الاثني عشر شهرًا القادمة؛ تشمل العجز النقدي المتوقع طوال عمر الأداة بعد ذلك التعثر، وليست فقط التدفقات غير المحصلة خلال سنة. وفق المنهج العام ينتقل المخصص إلى خسائر العمر عند زيادة جوهرية في خطر التعثر منذ الاعتراف الأولي، لا لمجرد ارتفاع مبلغ الخسارة المحتملة عند التعثر. قارن خطر التعثر على العمر المتوقع المتبقي في تاريخ التقرير بما كان متوقعًا لذلك الأفق عند البداية، مستخدمًا معلومات تاريخية وحالية ومستقبلية معقولة؛ لا تجمع نسب فترات متتابعة ما لم تكن احتمالات هامشية غير متداخلة، ولا تقارن مجموعين لأفقين مختلفين كما لو كانا قابلين للمقارنة تلقائيًا. يجب أن يعكس القياس احتمالات النتائج والعجز بعد الاسترداد والقيمة الزمنية. عند تحسن الخطر بحيث لا تعود الزيادة الجوهرية قائمة، يعود الأصل المؤهل إلى مخصص 12 شهرًا.",
+          "Twelve-month ECL is the portion of lifetime ECL arising from defaults possible in the next twelve months; it includes all later cash shortfalls caused by such a default, not merely cash missed within one year. Under the general approach, move to lifetime ECL when default risk has increased significantly since initial recognition, not merely because loss severity has risen. Compare default risk over the remaining expected life at the reporting date with the risk originally expected for that horizon, using reasonable historical, current and forward-looking evidence. Do not add successive-period percentages unless they are non-overlapping marginal probabilities, or treat totals over different horizons as automatically comparable. Measurement reflects probability-weighted outcomes, recoveries and time value. If significant deterioration reverses, an eligible asset returns to twelve-month ECL.",
+        ),
+        keyPoints: [
+          text("خسائر 12 شهرًا تتعلق بوقت التعثر المحتمل، لا بوقت كل عجز نقدي.", "Twelve-month ECL limits possible default timing, not the timing of all cash shortfalls."),
+          text("الانتقال إلى خسائر العمر يقاس بتغير خطر التعثر المقارن منذ البداية.", "Move to lifetime ECL on a comparable increase in default risk since origination."),
+          text("لا يكفي احتمال التعثر × خسارة غير مخصومة دون اختبار الاسترداد والقيمة الزمنية.", "Probability times undiscounted loss is insufficient without recovery and time-value analysis."),
+        ],
+        reference: "IFRS 9.5.5.3–5.5.9, 5.5.17, Appendix A, B5.5.7–B5.5.11, B5.5.43",
+      },
+      {
+        title: text("تأخر 30 يومًا وخطر منخفض وفائدة الأصل المتعثر", "Thirty days past due, low risk and interest on a credit-impaired asset"),
+        explanation: text(
+          "تجاوز الدفعة التعاقدية 30 يومًا ينشئ افتراضًا قابلًا للدحض بزيادة جوهرية في خطر الائتمان، لا قاعدة آلية تنتظر التأخر أو تمنع اكتشاف التدهور قبله؛ يجب استخدام المعلومات المستقبلية المتاحة. ويمكن للمنشأة اختيار تبسيط الخطر الائتماني المنخفض إذا تحقق في تاريخ التقرير، ولا تعني تسمية «درجة استثمارية» غياب مخصص 12 شهرًا. في المرحلتين غير المتعثرتين يحسب دخل الفائدة على إجمالي القيمة الدفترية، وعندما يصبح أصل لم يكن متعثرًا عند نشأته متعثرًا ائتمانيًا يحسب من الفترة اللاحقة بالمعدل الفعلي على التكلفة المستهلكة بعد المخصص، مع استمرار قياس خسائر العمر. يستثنى الأصل المشترى أو المنشأ وهو متعثر ائتمانيًا من هذا التسلسل المعتاد ويستخدم معدل فائدة فعليًا معدلًا ائتمانيًا.",
+          "More than 30 days past due creates a rebuttable presumption of a significant credit-risk increase, not a rule to wait for arrears or ignore earlier forward-looking deterioration. An entity may use the low-credit-risk simplification if the instrument qualifies at the reporting date; an investment-grade label does not remove the twelve-month allowance. Interest on non-credit-impaired assets uses gross carrying amount. If an asset not credit-impaired at origination later becomes credit-impaired, subsequent-period interest uses the effective rate on amortised cost after the allowance while lifetime ECL continues. A purchased or originated credit-impaired asset follows a distinct credit-adjusted effective-interest approach from inception.",
+        ),
+        keyPoints: [
+          text("التأخر أكثر من 30 يومًا قرينة قابلة للدحض؛ قد يظهر التدهور قبلها.", "More than 30 days late is rebuttable; deterioration can be identified earlier."),
+          text("الخطر المنخفض تبسيط اختياري، لا إعفاء من مخصص خسائر 12 شهرًا.", "Low credit risk is an optional simplification, not an exemption from twelve-month ECL."),
+          text("الفائدة على إجمالي الرصيد قبل التعثر وعلى التكلفة المستهلكة بعد حدوثه.", "Interest uses gross amount before credit impairment and amortised cost after it arises."),
+        ],
+        reference: "IFRS 9.5.4.1–5.4.2, 5.5.10–5.5.11, B5.5.22–B5.5.24",
+      },
+      {
         title: text("إعادة تصنيف أصل الدين: وجهة الفرق تحدد موضعه", "Debt-asset reclassification: the destination determines where the difference goes"),
         explanation: text(
           "لا تعيد تصنيف أصل مالي إلا عندما يتغير نموذج الأعمال الفعلي لإدارة الأصول المالية، وتطبق النتيجة مستقبلًا من تاريخ إعادة التصنيف؛ تبدل النية بشأن أصل منفرد ليس كافيًا. إذا انتقل أصل دين من التكلفة المستهلكة إلى القيمة العادلة عبر الربح أو الخسارة، يقاس بالقيمة العادلة ويثبت الفرق مع تكلفته المستهلكة السابقة في الربح أو الخسارة. أما انتقاله من التكلفة المستهلكة إلى القيمة العادلة عبر الدخل الشامل الآخر فيقاس أيضًا بالقيمة العادلة، لكن الفرق يثبت في الدخل الشامل الآخر. لذلك لا يصح إرسال كل فروق الانتقال من التكلفة المستهلكة إلى الربح أو الخسارة دون تحديد الفئة الجديدة. لا يعاد تصنيف التزام مالي بهذه القاعدة، ولا يلغى اختيار العرض في الدخل الشامل الآخر لاستثمار أسهم مؤهل لأنه غير قابل للنقض.",

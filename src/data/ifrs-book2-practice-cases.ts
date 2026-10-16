@@ -3238,6 +3238,22 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.4.1.1–4.1.2, B4.1.1–B4.1.4",
   },
   {
+    id: "ifrs-book2-orange-lemon-ecl-stages",
+    standardCode: "IFRS 9",
+    title: text("Orange وLemon: خسائر 12 شهرًا والعمر", "Orange and Lemon: twelve-month and lifetime ECL"),
+    facts: text(
+      "منحت Orange قرضًا بفائدة مدته ثلاث سنوات إلى Lemon بمبلغ مليوني دولار في 1 يوليو 20X4. عند البداية قُدر خطر التعثر خلال 12 شهرًا بـ2%، وفي باقي المدة بـ5.5%، والخسارة إذا وقع التعثر بـ800,000 دولار. في 31 ديسمبر 20X4 أصبحت النسبتان 3.5% و10.5% والخسارة 750,000 دولار. في 31 ديسمبر 20X5 أصبحتا 1.5% و1% والخسارة 450,000 دولار. لا تحدد الصفحات هل نسب الفترات غير متداخلة وغير مشروطة، ولا توقيت العجز أو قيمة الخسارة المخصومة، ولا مقارنة الخطر على أفق ثابت.",
+      "Orange advances a three-year interest-bearing $2 million loan to Lemon on 1 July 20X4. Initially it estimates 2% default risk in the next twelve months, 5.5% in the remaining term and $800,000 loss if default occurs. At 31 December 20X4 the respective figures are 3.5%, 10.5% and $750,000; at 31 December 20X5 they are 1.5%, 1% and $450,000. The pages do not specify whether period percentages are non-overlapping unconditional probabilities, when shortfalls occur, whether loss amounts are discounted, or a fixed-horizon risk comparison.",
+    ),
+    question: text("بيّن أرقام المخصص التعليمية في التواريخ الثلاثة، وحدد الشروط اللازمة لاعتمادها وفق IFRS 9.", "Show the three illustrative allowance amounts and identify the IFRS 9 conditions needed to rely on them."),
+    solution: [
+      text("في البداية، إن كانت 800,000 دولار تمثل القيمة الحالية للعجز الناشئ عند التعثر في الاثني عشر شهرًا القادمة، وكان احتمال 2% مناسبًا، فمخصص 12 شهرًا التوضيحي = 16,000 دولار. لا يعني هذا حصر العجز النقدي في أول 12 شهرًا؛ توقيت التعثر هو المحدد.", "At inception, if $800,000 is the present value of all shortfalls arising from a default in the next twelve months and 2% is the relevant probability, illustrative twelve-month ECL is $16,000. This does not restrict the ensuing cash shortfalls to twelve months; it restricts default timing."),
+      text("في 31 ديسمبر 20X4، لا يكفي جمع 3.5% و10.5% ومقارنته بـ7.5% في تاريخ مختلف لإثبات زيادة جوهرية؛ يلزم مقارنة خطر التعثر على أفق متسق منذ البداية ومعلومات مستقبلية. إذا ثبتت الزيادة وكانت النسبتان احتمالين هامشيين غير متداخلين والخسارة 750,000 قيمة حالية ممثلة لكل مسار، يكون مخصص العمر التوضيحي (3.5% + 10.5%) × 750,000 = 105,000 دولار. دون تلك الشروط لا تكفي الوقائع لتحديد مبلغ نهائي.", "At 31 December 20X4, summing 3.5% and 10.5% and comparing with 7.5% at a different date does not itself prove a significant increase; compare default risk over a consistent horizon using forward-looking evidence. If significant increase is supported, the percentages are non-overlapping marginal probabilities and $750,000 is a representative present-value loss, illustrative lifetime ECL is (3.5% + 10.5%) × $750,000 = $105,000. Without those conditions the facts cannot establish a final allowance."),
+      text("في 31 ديسمبر 20X5، إذا أثبت تقييم مقارن أن الزيادة الجوهرية زالت وأن 450,000 دولار قيمة حالية مناسبة للخسارة الشرطية، يعود المخصص إلى خسائر 12 شهرًا التوضيحية: 1.5% × 450,000 = 6,750 دولارًا. تغير مبلغ الخسارة عند التعثر وحده لا يقرر الانتقال بين المرحلتين؛ وكذلك لا يمكن استخراج مصروف حركة المخصص دون حركات الشطب والسداد والتحديث الأخرى.", "At 31 December 20X5, if a comparable assessment shows significant deterioration has reversed and $450,000 is an appropriate conditional present-value loss, the illustrative twelve-month allowance returns to 1.5% × $450,000 = $6,750. Changed loss severity alone does not decide stages; allowance expense also needs write-offs, collections and other movements."),
+    ],
+    reference: "IFRS 9.5.5.3–5.5.9, 5.5.17, Appendix A, B5.5.7–B5.5.11, B5.5.43",
+  },
+  {
     id: "ifrs-book2-abacus-effective-interest",
     standardCode: "IFRS 9",
     title: text("Abacus: العائد الفعلي وخصم السند", "Abacus: effective yield and bond discount"),
