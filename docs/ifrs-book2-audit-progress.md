@@ -571,3 +571,14 @@ The inventory establishes that accounting-standard bank prompts Q5–Q21 and Q23
 - Matched page 463's OCI extension: the 200 post-acquisition revaluation gain produces total comprehensive income 520, attributed 476 to owners of the parent and 44 to NCI. Under the reconciled proportionate basis, NCI increases by 40 to 251.6 if there are no other movements.
 - Locked the new case identifier into coverage. Verified against IFRS 10.20, 22, B86 and B94; IFRS 3.19; and IAS 1.81A and 106. The source inconsistency is not reproduced as a false learner answer.
 - Chapter 22 is reconciled through PDF p463. Continue with the Crystal/Pebble full worked example beginning on p464; whole-book audit remains incomplete.
+
+
+## Chapter 22 — Crystal/Pebble full OCI example (PDF pp. 464–466)
+
+- Visually matched the full Crystal/Pebble question, solution and workings across pages 464–466. Confirmed it is already represented by `ifrs-book2-ifrs10-crystal-pebble-oci`; no duplicate case was added.
+- Reperformed the six-month consolidation and intragroup elimination in thousands: revenue 43,000 + 13,000 − 6,000 = 50,000; unrealised profit 6,000 × 20/120 = 1,000; cost of sales 28,000 + 9,000 − 6,000 + 1,000 = 32,000; gross profit 18,000; distribution 2,400; acquisition-date fair-value uplift depreciation 1,000 ÷ 20 × 6/12 = 25; finance costs 650; profit before tax 9,325; stated tax 1,850; illustrative profit 7,475.
+- Rechecked profit attribution under full-goodwill measurement: NCI receives 40% × (1,900 − 25 − 500) = 550 and owners of the parent receive 6,925. The existing learner answer presents the 500 goodwill impairment separately rather than teaching that it is inherently an administrative expense.
+- Rechecked OCI under the photographed solution's interpretation: post-acquisition property revaluation 1,000 plus Crystal's equity-investment OCI 200 gives OCI 1,200 and total comprehensive income 8,675, attributed 7,725/950 between parent owners/NCI. The case retains explicit caveats that deferred tax cannot be invented without tax bases/rates and that the wording of the further 1,000 revaluation may require recomputation if its comparison basis differs.
+- Matched page 466's full-disposal framework to the current IFRS 10 loss-of-control treatment: consolidate to the disposal date, derecognise subsidiary net assets and goodwill, derecognise NCI, recognise consideration and any retained interest, and recognise the resulting gain or loss with required OCI reclassification.
+- Locked the existing case identifier into coverage. Verified against IFRS 10.20, 25, B86(c), B88, B94 and B97–B99; IFRS 3.19; IAS 16.39 and 42; IAS 36.C6–C8; IAS 12.19–20 and 24; and IFRS 9.5.7.5.
+- Chapter 22 is reconciled through PDF p466. Continue with the Horse/Hoof disposal case beginning on p467; whole-book audit remains incomplete.
