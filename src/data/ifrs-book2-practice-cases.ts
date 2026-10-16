@@ -3178,6 +3178,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.6.4.1, 6.5.2(a), 6.5.8; IAS 2.9, 34",
   },
   {
+    id: "ifrs-book2-iron-order-versus-forward",
+    standardCode: "IFRS 9",
+    title: text("طلب حديد وعقد آجل: متى يظهر مشتق؟", "Iron order and forward: when does a derivative appear?"),
+    facts: text(
+      "تقارن الصفحة 205 عقدين مستقلين لكمية محددة من الحديد: طلب شراء ملزم ضمن النشاط المعتاد، وعقدًا آجلًا لشراء الحديد بسعر وتاريخ محددين في حالة عدم أخذ التسليم. لا تعطي الصفحة سعرًا سوقيًا عند التعاقد أو قيمة عادلة أو آلية تفصيلية للتسوية النقدية. حل الكتاب يفترض التزامًا ماليًا موجبًا للعقد الآجل فور الدخول فيه.",
+      "Scanned p205 compares two independent contracts for a specified quantity of iron: a firm ordinary-course purchase order and a forward purchase at a specified price and date if delivery is not taken. It gives no inception market price, fair value or detailed cash-settlement mechanism. The printed answer assumes an immediate positive financial liability for the forward.",
+    ),
+    question: text("كيف تقيّم الاعتراف الأولي لكل عقد؟ وهل يمكن تحديد مبلغ أو جهة رصيد العقد الآجل من هذه الوقائع؟", "How should each contract be assessed at inception? Can these facts establish the forward's amount or asset/liability direction?"),
+    solution: [
+      text("طلب الشراء الذي يستهدف استلام الحديد واستخدامه لا ينشئ بذاته أداة مالية أو مخزونًا عند توقيعه؛ يفحص استثناء الاستخدام الخاص وشروط التسوية، ثم يُثبت الحديد والدائن عند التسليم بحسب العقد. الوعد بإجراء شراء في المستقبل وحده لا يحدد مبلغ التزام مالي يوم الطلب.", "An order held for physical receipt and use does not by itself create a financial instrument or inventory on signing. Test the own-use exception and settlement terms; recognise iron and any payable on delivery as appropriate. A future purchase promise alone does not quantify a financial liability at order date."),
+      text("إذا كان العقد الآجل الثاني قابلاً للتسوية الصافية نقدًا ودخل نطاق IFRS 9، يبدأ الاعتراف بالمشتق عند الدخول في شروطه ويقاس بقيمته العادلة. قد تكون قيمته صفرًا عند التعاقد بسعر السوق، وقد تكون أصلًا أو التزامًا بشروط مختلفة. لذلك لا يثبت من الوقائع المعطاة مبلغ موجب أو إشارة الرصيد؛ يلزم سعر العقد والسوق وشروط التسوية. يعاد قياس مشتق غير معين لتحوط مؤهل عبر الربح أو الخسارة لاحقًا.", "If the second forward can be net settled in cash and is within IFRS 9, recognise it on becoming party to its terms at fair value. An at-market forward may initially be worth zero, while other terms may create an asset or liability. The supplied facts establish neither a positive amount nor its sign; contract and market prices and settlement terms are needed. A derivative outside a qualifying hedge is subsequently remeasured through profit or loss."),
+    ],
+    reference: "IFRS 9.2.4–2.7, 3.1.1, 5.1.1, 5.7.1; IAS 32.AG20–AG23",
+  },
+  {
+    id: "ifrs-book2-ab-ef-derecognition",
+    standardCode: "IFRS 9",
+    title: text("خيار AB وإقراض أسهم EF: اختبر المخاطر والعوائد", "AB call and EF securities loan: test risks and rewards"),
+    facts: text(
+      "في مثال الصفحة 207 تبيع AB استثمارًا في أسهم وتحتفظ بخيار شرائه لاحقًا بسعره السوقي حينئذ. وتُقرض EF استثمارها في أسهم إلى طرف ثالث لمدة محددة مقابل رسم. لا يقدم المثال مبالغ بيع أو قيمًا دفترية، ولا نصوصًا تفصيلية للعقدين.",
+      "In scanned p207, AB sells a share investment but retains a call to repurchase it at its market value when exercised. EF lends its share investment to a third party for a fixed period in return for a fee. No sale proceeds, carrying amounts or detailed contract terms are supplied.",
+    ),
+    question: text("هل يستبعد كل طرف استثماره؟ اشرح أثر سعر الخيار وطبيعة قرض الأسهم، وحدود الاستنتاج من النص المختصر.", "Does either party derecognise its investment? Explain the option price, the securities loan and the limits of the brief facts."),
+    solution: [
+      text("إذا انتقلت حقوق الأصل وبقي خيار AB عند سعر السوق الحقيقي وقت إعادة الشراء دون شرط آخر يبقي تعرضها، فإن المشتري يتحمل تغير قيمة السهم ويؤيد ذلك الاستبعاد. سبب النتيجة انتقال معظم المخاطر والعوائد، لا مجرد كون إعادة الشراء اختيارية؛ خيار ثابت السعر أو عميق الربحية قد يغير التقييم. لا يمكن حساب ربح بيع دون المقابل والقيمة الدفترية.", "If asset rights have transferred and AB's call is at genuine future market value with no other retained exposure, the buyer bears share-price changes and derecognition is supported. The reason is transfer of substantially all risks and rewards, not merely that repurchase is optional; a fixed-price or deeply in-the-money call could change the assessment. No sale gain can be calculated without proceeds and carrying amount."),
+      text("وصف EF بأنه قرض أسهم مؤقت مقابل رسم يشير إلى توقع رد الأسهم نفسها أو ما يعادلها؛ إذا أكدت الشروط ذلك، تحتفظ EF عادة بمعظم المخاطر والعوائد وتستمر في إثبات الاستثمار رغم انتقال الحيازة مؤقتًا. إن كانت شروط الرد أو نقل التعرض مختلفة، فيلزم اختبارها قبل حكم نهائي أو قيد.", "EF's temporary stock loan for a fee suggests return of the same or substantially the same shares. If its terms confirm that, EF normally retains substantially all risks and rewards and continues to recognise the investment despite temporary transfer of possession. Different return or exposure terms require reassessment before a definitive entry."),
+    ],
+    reference: "IFRS 9.3.2.3–3.2.6, B3.2.4–B3.2.5",
+  },
+  {
     id: "ifrs-book2-rathbone-compound-bond",
     standardCode: "IAS 32",
     title: text("Rathbone: قيمة خيار تحويل السند", "Rathbone: value of a bond conversion option"),

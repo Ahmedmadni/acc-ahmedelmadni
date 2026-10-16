@@ -1197,6 +1197,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("الاعتراف بالمشتق لا يفترض التزامًا موجبًا يوم التعاقد", "Recognising a derivative does not imply a day-one liability"),
+        explanation: text(
+          "عند دخول المنشأة طرفًا في شروط عقد مشتق يقع ضمن IFRS 9، يبدأ الاعتراف به وتُقاس قيمته العادلة في ذلك التاريخ، حتى لو لم تدفع المنشأة مبلغًا نقديًا أوليًا. لكن تاريخ الاعتراف شيء ومبلغ القياس واتجاهه شيء آخر: العقد الآجل المتفق عليه بسعر السوق قد تكون قيمته العادلة صفرًا عند البداية، أو يصبح أصلًا أو التزامًا بحسب شروطه والسوق. لا تثبت التزامًا ماليًا موجبًا لمجرد وجود وعد بشراء سلعة مستقبلًا، ولا تخترع مبلغًا إذا لم تُعط أسعار العقد والقيمة العادلة. ميّز عقد شراء سلعة للاستخدام بالتسليم الفعلي عن عقد تجوز تسويته صافيًا، ثم اختبر نطاق IFRS 9 واستثناء الاستخدام الخاص.",
+          "A derivative within IFRS 9 is recognised when the entity becomes party to its contractual provisions and measured at fair value on that date, even if there is no initial cash payment. Recognition date, measured amount and asset-or-liability direction are different questions: an at-market forward may have zero initial fair value, or the terms may give an asset or liability. Do not record a positive financial liability merely because the entity promises to buy a commodity later, and do not invent a value without contract pricing and fair-value inputs. Distinguish a physical-delivery purchase for use from a net-settleable contract, then apply IFRS 9 scope and the own-use test.",
+        ),
+        keyPoints: [
+          text("أثبت المشتق عند الدخول في العقد، ثم قسه بالقيمة العادلة المتاحة فعلًا.", "Recognise the derivative on becoming a party, then measure its actual fair value."),
+          text("قد يكون رصيد اليوم الأول صفرًا؛ لا تحدد أصلًا أو التزامًا بلا بيانات السوق.", "Day-one balance may be zero; do not assert an asset or liability without market inputs."),
+        ],
+        reference: "IFRS 9.2.4–2.7, 3.1.1, 5.1.1, 5.7.1; IAS 32.AG20–AG23",
+      },
+      {
+        title: text("بيع الأصل مع خيار استرداد أو إقراض أوراق مالية", "Asset sale with a repurchase option or securities lending"),
+        explanation: text(
+          "اختبار استبعاد الأصل المالي يمر بانتهاء حقوق التدفقات أو نقلها، ثم بانتقال مخاطر الملكية وعوائدها بدرجة جوهرية، ومع الحالات الوسطية باختبار السيطرة والاستمرار في الارتباط. خيار إعادة شراء بسعر القيمة العادلة في تاريخ الشراء قد يترك تقلب سعر السوق للمشتري فيسمح بالاستبعاد؛ كونه «خيارًا لا التزامًا» ليس وحده سبب النتيجة، إذ قد يحتفظ خيار شراء عميق الربحية بمعظم المخاطر والعوائد. وفي إقراض أسهم مع التزام رد الأسهم نفسها أو ما يعادلها، يحتفظ المقرض عادة بمخاطرها وعوائدها، فلا يستبعدها لمجرد انتقال الحيازة القانونية مؤقتًا. عند استبعاد جزء، يكون الربح هو المقابل الصافي عن الجزء المستبعد ناقص قيمته الدفترية المخصصة؛ لا تعكس إشارة الحساب. ولا تُستنتج قيمة مكسب أو قيد من أمثلة لا تتضمن قيمًا دفترية أو مقابلاً.",
+          "Financial-asset derecognition starts with expiry or transfer of cash-flow rights, then tests whether substantially all ownership risks and rewards passed; intermediate cases require a control and continuing-involvement assessment. A repurchase call at fair value on the future purchase date can leave market-price exposure with the buyer and permit derecognition. Being an 'option rather than an obligation' is not sufficient by itself: a deeply in-the-money call can retain substantially all risks and rewards. In a securities loan requiring return of the same or substantially the same shares, the lender normally keeps those risks and rewards and does not derecognise merely because legal possession temporarily passes. On partial derecognition, gain is net consideration for the derecognised part less its allocated carrying amount; do not reverse the sign. Do not infer a gain or journal amount from examples with no carrying values or consideration.",
+        ),
+        keyPoints: [
+          text("اختبر سعر خيار إعادة الشراء والمخاطر والعوائد، لا شكل الخيار وحده.", "Test repurchase price and risks and rewards, not option form alone."),
+          text("رد أوراق مماثلة في إقراض الأسهم يعني عادة استمرار إثبات الأصل.", "An obligation to return equivalent shares in a securities loan normally means continuing recognition."),
+        ],
+        reference: "IFRS 9.3.2.3–3.2.6, 3.2.13, B3.2.4–B3.2.5",
+      },
+      {
         title: text("الضمان المالي ليس مجرد التزام محتمل وفق IAS 37", "A financial guarantee is not merely an IAS 37 contingency"),
         explanation: text(
           "افحص نص الضمان: هل يلزم المُصدر بدفع مبالغ محددة لتعويض حامل أداة دين عن خسارة ناتجة من إخفاق مدين محدد في السداد عند الاستحقاق؟ إذا نعم، وفي غياب استثناء نطاق أو اختيار محاسبي ذي صلة، يدخل العقد ضمن IFRS 9. يثبت المُصدر التزامًا بالقيمة العادلة عند نشأته، ثم يقيسه عادة بالأعلى من مخصص الخسائر الائتمانية المتوقعة والمبلغ المبدئي ناقص الدخل التراكمي المناسب. تصنيف عقد القرض المضمون كمجرد التزام محتمل عند سلامة المدين ثم مخصص IAS 37 عند تعثره يتجاهل الاعتراف الأولي ونموذج الخسائر الائتمانية. لا تخترع قيمة عادلة أو خسارة متوقعة عندما تغيب شروط الضمان والتعرض واحتمالات التعثر والتحصيل.",
