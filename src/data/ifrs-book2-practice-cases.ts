@@ -15,6 +15,24 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-400-employees-service-estimates",
+    standardCode: "IFRS 2",
+    title: text("400 موظف: تحديث تقدير المغادرين خلال ثلاث سنوات", "400 employees: revising three-year leaver estimates"),
+    facts: text(
+      "في 1 يناير 20X1 منحت منشأة 100 خيار لكل من 400 موظف، بشرط استمرار العمل حتى 31 ديسمبر 20X3. القيمة العادلة لكل خيار عند المنح 20 دولارًا. غادر 20 موظفًا في 20X1، وقدرت المنشأة أن إجمالي المغادرين خلال السنوات الثلاث سيكون 20% من الموظفين الأصليين. غادر 25 آخرون في 20X2، وعُدل تقدير إجمالي المغادرين إلى 25%. وغادر عشرة آخرون في 20X3.",
+      "On 1 January 20X1 an entity grants 100 options to each of 400 employees, conditional on working until 31 December 20X3. Grant-date fair value is $20 per option. Twenty employees leave in 20X1 and estimated total departures over the three years are 20% of the original employees. Another 25 leave in 20X2 and the total-departure estimate is revised to 25%. Ten more leave in 20X3."
+    ),
+    question: text("احسب مصروف المكافآت عن معاملة الدفع على أساس الأسهم لكل سنة من السنوات الثلاث المنتهية في 31 ديسمبر 20X3.", "Calculate the remuneration expense for the share-based payment transaction for each of the three years ended 31 December 20X3."),
+    solution: [
+      text("شرط الخدمة يدخل في عدد الخيارات المتوقع استحقاقها. قيمة الوحدة 20 دولارًا بتاريخ المنح ثابتة لهذه المنحة المسددة بحقوق الملكية؛ ومصروف كل سنة هو تغير التكلفة التراكمية، لا التكلفة التراكمية كاملة.", "The service condition affects expected vesting numbers. The $20 grant-date unit value stays fixed for this equity-settled award; each year's expense is the movement in cumulative cost, not the full cumulative amount."),
+      text("20X1: المتوقع بقاء 400 × 80% = 320 موظفًا؛ المصروف التراكمي ومصروف السنة = 320 × 100 × 20 × 1/3 = 213,333.33 دولار تقريبًا.", "20X1: 400 × 80% = 320 employees expected to vest; cumulative and current-year expense = 320 × 100 × $20 × 1/3 ≈ $213,333.33."),
+      text("20X2: المتوقع بقاء 400 × 75% = 300 موظف؛ التكلفة التراكمية = 300 × 100 × 20 × 2/3 = 400,000 دولار؛ مصروف السنة = 400,000 − 213,333.33 ≈ 186,666.67 دولار.", "20X2: 400 × 75% = 300 employees expected to vest; cumulative cost = 300 × 100 × $20 × 2/3 = $400,000; annual expense = $400,000 − $213,333.33 ≈ $186,666.67."),
+      text("20X3: المغادرون الفعليون 20 + 25 + 10 = 55؛ يستحق 345 موظفًا 34,500 خيار. التكلفة النهائية = 34,500 × 20 = 690,000 دولار؛ مصروف السنة = 690,000 − 400,000 = 290,000 دولار. مجموع المصروفات 690,000، ويقابله رصيد حقوق ملكية بالمبلغ نفسه.", "20X3: actual leavers = 20 + 25 + 10 = 55; 345 employees vest in 34,500 options. Final cost = 34,500 × $20 = $690,000; annual expense = $690,000 − $400,000 = $290,000. Annual expenses total $690,000, matched by the equity balance.")
+    ],
+    reference: "IFRS 2.11, 15, 19–20, 23",
+  },
+
+  {
     id: "ifrs-book2-ifrs6-ch13-quiz-oil-funding",
     standardCode: "IFRS 6",
     title: text("استكشاف النفط وعدم التأكد من التمويل", "Oil exploration and uncertain funding"),
