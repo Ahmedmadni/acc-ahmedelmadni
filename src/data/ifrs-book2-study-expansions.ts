@@ -1197,6 +1197,30 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("إعادة تصنيف أصل الدين: وجهة الفرق تحدد موضعه", "Debt-asset reclassification: the destination determines where the difference goes"),
+        explanation: text(
+          "لا تعيد تصنيف أصل مالي إلا عندما يتغير نموذج الأعمال الفعلي لإدارة الأصول المالية، وتطبق النتيجة مستقبلًا من تاريخ إعادة التصنيف؛ تبدل النية بشأن أصل منفرد ليس كافيًا. إذا انتقل أصل دين من التكلفة المستهلكة إلى القيمة العادلة عبر الربح أو الخسارة، يقاس بالقيمة العادلة ويثبت الفرق مع تكلفته المستهلكة السابقة في الربح أو الخسارة. أما انتقاله من التكلفة المستهلكة إلى القيمة العادلة عبر الدخل الشامل الآخر فيقاس أيضًا بالقيمة العادلة، لكن الفرق يثبت في الدخل الشامل الآخر. لذلك لا يصح إرسال كل فروق الانتقال من التكلفة المستهلكة إلى الربح أو الخسارة دون تحديد الفئة الجديدة. لا يعاد تصنيف التزام مالي بهذه القاعدة، ولا يلغى اختيار العرض في الدخل الشامل الآخر لاستثمار أسهم مؤهل لأنه غير قابل للنقض.",
+          "Reclassify a financial asset only when the actual business model for managing financial assets changes, prospectively from the reclassification date; a changed intention for one asset is insufficient. On moving a debt asset from amortised cost to fair value through profit or loss, measure it at fair value and recognise the difference from its previous amortised cost in profit or loss. Moving it instead from amortised cost to fair value through OCI also requires fair-value measurement, but the difference goes to OCI. The destination category must therefore be identified before posting the difference. This reclassification rule does not reclassify financial liabilities or revoke an eligible equity investment's irrevocable OCI presentation election.",
+        ),
+        keyPoints: [
+          text("التكلفة المستهلكة ← الربح أو الخسارة بالقيمة العادلة: الفرق في الربح أو الخسارة.", "Amortised cost → fair value through profit or loss: difference in profit or loss."),
+          text("التكلفة المستهلكة ← الدخل الشامل الآخر بالقيمة العادلة: الفرق في الدخل الشامل الآخر.", "Amortised cost → fair value through OCI: difference in OCI."),
+        ],
+        reference: "IFRS 9.4.4.1–4.4.2, 5.6.1–5.6.4, B4.4.1–B4.4.3",
+      },
+      {
+        title: text("القيمة العادلة للأسهم والتكلفة كمدخل تقدير محدود", "Equity fair value and cost as a limited estimate"),
+        explanation: text(
+          "تقاس استثمارات أدوات حقوق الملكية الداخلة في IFRS 9 بالقيمة العادلة في التواريخ اللاحقة، سواء عُرض تغيرها في الربح أو الخسارة أو اختير لها الدخل الشامل الآخر عند الاعتراف الأولي. ليست صعوبة تقدير القيمة العادلة ترخيصًا عامًا لتحويل الاستثمار إلى فئة «التكلفة». في ظروف محدودة فقط قد تمثل التكلفة أفضل تقدير للقيمة العادلة، ويعاد فحص ذلك كلما ظهرت معلومات أو تغيرات في أداء المستثمر فيه أو سوقه. كذلك لا يوجد استثناء عام يحول التزامًا مصنفًا بالقيمة العادلة عبر الربح أو الخسارة إلى التكلفة لمجرد صعوبة التقدير. أضف تكاليف المعاملة المباشرة إلى القياس الأولي إذا لم تكن الأداة بالقيمة العادلة عبر الربح أو الخسارة؛ أما تكاليف أداة تلك الفئة فتحمل على الربح أو الخسارة، ثم تُقاس الأداة في نهاية الفترة بقيمتها العادلة دون إضافة تكاليف بيع محتملة.",
+          "Equity investments within IFRS 9 remain at fair value subsequently, whether changes pass through profit or loss or an eligible inception-date OCI election. Difficulty estimating fair value does not create a general cost measurement category. Only in limited circumstances may cost be the best estimate of fair value, reassessed as investee performance and market information change. There is likewise no general switch of a fair-value-through-profit-or-loss liability to cost because valuation is difficult. Add directly attributable transaction costs initially when an instrument is not at fair value through profit or loss; expense those costs for an instrument in that category. At each reporting date measure fair value without adding hypothetical disposal costs.",
+        ),
+        keyPoints: [
+          text("التكلفة قد تكون تقديرًا للقيمة العادلة في نطاق ضيق، لا أساس قياس بديلًا عامًا.", "Cost may estimate fair value narrowly; it is not a general alternative measurement basis."),
+          text("تكاليف المعاملة تدخل الأصل المختار له عرض OCI وتُحمّل على المصروف لأصل المتاجرة.", "Transaction costs enter an OCI-elected asset but are expensed for a trading asset."),
+        ],
+        reference: "IFRS 9.4.2.1, 5.1.1, 5.2.1, 5.7.1, 5.7.5–5.7.6, B5.2.2–B5.2.4; IFRS 13.25–26",
+      },
+      {
         title: text("اختباران مستقلان لأصل الدين: إدارة المحفظة وتدفق العقد", "Two separate debt-asset tests: portfolio management and contract cash flows"),
         explanation: text(
           "ابدأ بنموذج الأعمال كما يُدار فعليًا على مستوى المحفظة: التحصيل، أو التحصيل والبيع، أو إدارة أخرى على أساس القيمة العادلة. لا تنقل محفظة «الاحتفاظ للتحصيل» إلى فئة البيع لمجرد بيع قليل أو عرضي، خاصةً عند تدهور الائتمان؛ وافحص تكرار المبيعات وقيمتها وسببها مع الدليل المستقبلي. ثم اختبر شروط كل أصل: هل التدفقات في تواريخ محددة تمثل أصل المبلغ والفائدة على رصيده فقط؟ حتى لو كان الهدف التحصيل، فإن حقًا جوهريًا لتحويل القرض إلى أسهم المصدر يعرّض الحامل لقيمة حقوق الملكية ويفشل هذا الاختبار؛ يقاس الأصل المركب كله عادة بالقيمة العادلة عبر الربح أو الخسارة، دون فصل خيار التحويل عن أصل مالي مضيف. وإذا نجح اختبار التدفقات، تُقاس محفظة التحصيل بالتكلفة المستهلكة، ومحفظة التحصيل والبيع بالقيمة العادلة عبر الدخل الشامل الآخر، ما لم ينطبق تعيين مؤهل بالقيمة العادلة عبر الربح أو الخسارة.",
