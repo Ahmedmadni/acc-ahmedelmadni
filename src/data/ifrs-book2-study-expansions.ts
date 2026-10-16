@@ -1105,6 +1105,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 32": {
     sections: [
       {
+        title: text("بيع خيار أسهم للمستثمر: افحص التسوية والمقابل", "Selling an investor a share option: inspect settlement and consideration"),
+        explanation: text(
+          "بيع المنشأة خيارًا على أسهمها لا يثبت وحده أنه التزام مالي أو أداة حقوق ملكية، ولا يجعله تلقائيًا معاملة دفع على أساس الأسهم وفق IFRS 2. إذا منح الخيار المستثمر حق شراء عدد ثابت من أسهم المصدر مقابل مبلغ نقدي ثابت بعملة المنشأة الوظيفية، ولم يلزم المصدر بتسوية نقدية أو بعدد متغير من الأسهم، يصنف الخيار عادة ضمن حقوق الملكية وفق IAS 32. أما حق التسوية نقدًا أو المقابل المتغير أو عدد الأسهم المتغير فقد ينتج التزامًا أو مشتقًا؛ يلزم قراءة الشروط. IFRS 2 يعالج تلقي سلع أو خدمات مقابل أدوات حقوق ملكية أو مبالغ مبنية على قيمة الأسهم؛ مجرد بيع خيار تمويلي لمستثمر لا يثبت تلقي خدمة. في سؤال لا يذكر سعر الممارسة أو عدد الأسهم أو طريقة التسوية أو طبيعة المقابل، النتيجة القطعية غير مدعومة.",
+          "An issuer's sale of an option over its own shares alone proves neither liability nor equity classification, and does not automatically make it an IFRS 2 share-based payment. An option allowing an investor to buy a fixed number of the issuer's shares for a fixed cash amount in the issuer's functional currency, without cash or variable-share settlement, is normally equity under IAS 32. Cash settlement, variable consideration or a variable number of shares can instead create a liability or derivative; read the contract. IFRS 2 deals with goods or services received for equity instruments or share-price-based amounts; selling a financing option to an investor does not establish receipt of services. A prompt omitting exercise price, share count, settlement and consideration cannot support a categorical classification.",
+        ),
+        keyPoints: [
+          text("عدد أسهم ثابت مقابل مبلغ ثابت يدعم تصنيف خيار الإصدار حقوق ملكية مع تحقق بقية الشروط.", "A fixed number of issued shares for fixed consideration supports equity, subject to the other terms."),
+          text("بيع الخيار لا يعني تطبيق IFRS 2 دون دليل على سلع أو خدمات مستلمة.", "An option sale does not invoke IFRS 2 without goods or services received."),
+        ],
+        reference: "IAS 32.11, 16, 22, AG27(a); IFRS 2.2, Appendix A",
+      },
+      {
         title: text("عقد السلعة: التسليم الفعلي أم نطاق الأدوات المالية؟", "Commodity contract: physical delivery or financial-instrument scope?"),
         explanation: text(
           "المخزون والعقار ليسا أصلين ماليين لمجرد إمكان بيعهما نقدًا، والعقد الذي لا يسوى إلا بتسليم سلعة مقابل ثمنها لا ينشئ بذاته حقًا حاليًا في قبض أصل مالي مقابل التزام مالي. لكن لا تستبعد جميع عقود السلع الآجلة بعبارة واحدة: افحص إمكان التسوية الصافية بالنقد أو بأداة مالية، وممارسة المنشأة في تسوية العقود المماثلة، وقابلية السلعة للتحويل بسهولة إلى نقد. عند تحقق نطاق IAS 32/IFRS 9 يعامل العقد كما لو كان أداة مالية، ما لم ينطبق استثناء الاستخدام الخاص بعقد دخلت فيه المنشأة ولا تزال تحتفظ به لاستلام السلعة أو تسليمها وفق حاجتها المتوقعة. قد تتاح في شروط محددة تسمية اختيارية بالقيمة العادلة عبر الربح أو الخسارة عند بدء العقد لتفادي عدم اتساق القياس. لا يحدد اسم «عقد مستقبلي للسلع» النتيجة دون شروط التسوية والغرض والممارسة.",
