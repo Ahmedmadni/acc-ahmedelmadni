@@ -1209,6 +1209,18 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 9": {
     sections: [
       {
+        title: text("تحوط القيمة العادلة: أسهم OCI غير دين OCI", "Fair value hedge: elected equity OCI differs from debt OCI"),
+        explanation: text(
+          "في تحوط قيمة عادلة مؤهل، يثبت تغير أداة التحوط عادة في الربح أو الخسارة، ويثبت تغير البند المحوط المنسوب للخطر نفسه في الربح أو الخسارة مع تعديل قيمته الدفترية عند الاقتضاء. توجد معالجتان مهمتان لا تخلط بينهما: أصل الدين المصنف إلزاميًا بالقيمة العادلة عبر الدخل الشامل الآخر وفق IFRS 9.4.1.2A يبقى مقاسًا بالقيمة العادلة، لكن ربح أو خسارة الخطر المحوط يثبت في الربح أو الخسارة؛ أما استثمار الأسهم الذي اختارت المنشأة عند البداية عرض تغير قيمته في الدخل الشامل الآخر وفق 5.7.5 فيظل مكسبه أو خسارته المرتبطة بالخطر المحوط هناك، وكذلك تغير أداة التحوط المعينة لذلك الاستثمار. هذا الاستثناء لا يعني أن كل أداة تحوط أو كل أصل FVOCI يذهب إلى الدخل الشامل الآخر. قيود المخزون في تحوط القيمة العادلة تقيدها التغيرات المنسوبة للخطر المعين لا إعادة تقييم عامة.",
+          "In a qualifying fair value hedge, the hedging instrument's movement normally goes to profit or loss and the hedged-risk movement of the item also goes there, adjusting its carrying amount where applicable. Keep two FVOCI situations distinct: a debt asset mandatorily measured at FVOCI under IFRS 9.4.1.2A remains at fair value, but its hedged-risk gain or loss enters profit or loss. For an equity investment with the inception-date OCI election under 5.7.5, the relevant hedged-item gain or loss remains in OCI and so does the movement of a hedging instrument designated to hedge that investment. This exception does not send every hedging instrument or FVOCI asset to OCI. Inventory fair-value-hedge entries are limited to change attributable to the designated risk, not a general revaluation.",
+        ),
+        keyPoints: [
+          text("دين FVOCI: تغير الخطر المحوط في الربح أو الخسارة.", "Debt FVOCI: hedged-risk movement enters profit or loss."),
+          text("أسهم اختير لها OCI: تغير الاستثمار وأداة تحوطه المعينة في الدخل الشامل الآخر.", "Elected equity OCI: the investment and its designated hedge movement enter OCI."),
+        ],
+        reference: "IFRS 9.4.1.2A, 5.7.5, 6.4.1, 6.5.8(a)–(b)",
+      },
+      {
         title: text("مشتق مضمّن: اختبر نوع العقد المضيف قبل الفصل", "Embedded derivative: identify the host before bifurcation"),
         explanation: text(
           "إذا كان العقد المضيف أصلًا ماليًا يدخل نطاق IFRS 9، طبق اختبار التصنيف والقياس على العقد المختلط كله؛ لا تفصل خيارًا مرتبطًا بمؤشر أسهم داخل سند يحمله المستثمر ثم تفترض أن جزء الدين بالتكلفة المستهلكة. إذا لم يكن المضيف أصلًا ماليًا في هذا النطاق، مثل التزام مالي أو بعض العقود غير المالية، يفصل المشتق فقط عندما لا ترتبط مخاطره الاقتصادية ارتباطًا وثيقًا بالمضيف، وكان سيحقق تعريف المشتق لو انفصل، ولم يكن العقد المختلط كله مقاسًا بالقيمة العادلة عبر الربح أو الخسارة. فهرسة سداد سند يصدره كيان بمؤشر أسهم قد تستدعي فصلًا من جهة المصدر وفق هذه الشروط. أما مجرد تسعير عقد إنشاء بعملة أجنبية فلا يكفي للجزم بالفصل: افحص شروط العملة وما إذا كان الشرط وثيق الصلة وفق B4.3.8(d).",
