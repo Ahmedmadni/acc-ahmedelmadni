@@ -1289,6 +1289,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 19": {
     sections: [
       {
+        title: text("من الراتب النهائي إلى التزام كل سنة خدمة", "From final salary to each year's service obligation"),
+        explanation: text(
+          "في خطة تعد بنسبة من الراتب النهائي عن كل سنة خدمة، قدّر الراتب عند تاريخ دفع المنفعة أولًا. انسب إلى كل سنة وحدة منفعة وفق صيغة الخطة، ثم اخصم الوحدة التي اكتسبت في السنة الحالية حتى تاريخ الدفع لاستخراج تكلفة الخدمة الجارية. التزام نهاية السنة هو القيمة الحالية لجميع الوحدات المكتسبة حتى ذلك التاريخ. تزيد فائدة السنة التالية الالتزام الافتتاحي بسبب اقتراب موعد الدفع؛ ولا تُعد وحدة خدمة جديدة. حافظ على القيم غير المقربة في الحساب ثم بيّن أثر تقريب الجدول التعليمي، وافحص احتمالات المغادرة إذا كانت مؤثرة ومتاحًا تقديرها.",
+          "For a plan promising a percentage of final salary for each service year, project salary to the benefit-payment date first. Attribute one unit under the plan formula to each year and discount the unit earned in the current year to obtain current service cost. The year-end obligation is the present value of all units earned by that date. Next year's interest increases the opening obligation as payment approaches; it is not another service unit. Keep unrounded values in the calculation, then explain any rounding in a teaching table, and incorporate departure probabilities when relevant and estimable.",
+        ),
+        keyPoints: [
+          text("توقع الراتب النهائي قبل حساب وحدة المنفعة.", "Project final salary before measuring a benefit unit."),
+          text("افصل تكلفة الخدمة الحالية عن فائدة الالتزام الافتتاحي.", "Separate current service cost from interest on the opening obligation."),
+          text("لا تعرض أرقام الجدول المقربة بوصفها قيمًا دقيقة.", "Do not present whole-unit teaching figures as exact values."),
+        ],
+        reference: "IAS 19.66–71, 75–98, 120–123",
+      },
+      {
         title: text(
           "الإجازة المرضية المتراكمة: احسب الزيادة المتوقعة في المدفوعات",
           "Accumulating sick leave: measure expected incremental payments",
@@ -1372,6 +1385,24 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
     workedExamples: [
+      {
+        title: text("خمس سنوات: وحدة منفعة مرتبطة بالراتب النهائي", "Five years: one final-salary benefit unit per service year"),
+        facts: text(
+          "تدفع الخطة عند انتهاء الخدمة بنهاية السنة الخامسة 1% من الراتب النهائي عن كل سنة خدمة. راتب السنة الأولى 10,000 دولار، ويزيد 7% مركبة سنويًا؛ معدل الخصم 10%. كما يفعل المثال المصور في الصفحة 180، نفترض ثبات التقديرات ونتجاهل احتمال المغادرة في تاريخ أبكر أو لاحق. الأرقام أدناه حساب مستقل بالقيم غير المقربة، ثم مقارنة بأرقام الجدول الصحيحة على مستوى الوحدة الكاملة.",
+          "The plan pays 1% of final salary for each service year on departure at the end of year 5. Year-1 salary is $10,000, rising by 7% compounded annually; the discount rate is 10%. As in the scanned p180 illustration, assume unchanged estimates and omit the probability of leaving earlier or later. The calculations below use unrounded values and then compare with the source's whole-unit teaching figures.",
+        ),
+        calculations: [
+          text("الراتب النهائي بعد أربع زيادات = 10,000 × 1.07^4 = 13,107.9601؛ وحدة المنفعة لكل سنة = 1% × الراتب النهائي = 131.079601 دولار. في نهاية السنة n، تكلفة الخدمة الحالية = 131.079601 ÷ 1.10^(5 − n)، والالتزام = n × تكلفة الخدمة الحالية.", "Final salary after four increases = $10,000 × 1.07^4 = $13,107.9601; each service year's benefit unit = 1% × final salary = $131.079601. At the end of year n, current service cost = $131.079601 ÷ 1.10^(5 − n), and the obligation = n × that current service cost."),
+          text("تكلفة الخدمة للسنوات 1–5، بعد تقريب مستقل إلى سنتين: 89.53، 98.48، 108.33، 119.16، 131.08 دولار. التزامات الإقفال: 89.53، 196.96، 324.99، 476.65، 655.40 دولار. يعرض الجدول المصور التزامات تقريبية بوحدات صحيحة 89، 196، 324، 476، 655؛ لا يُستخدم هذا العرض المقرب لإعادة قياس السنوات التالية.", "Current service costs for years 1–5, each independently rounded to cents: $89.53, $98.48, $108.33, $119.16 and $131.08. Closing obligations: $89.53, $196.96, $324.99, $476.65 and $655.40. The scanned table displays approximate whole-unit obligations of 89, 196, 324, 476 and 655; those display figures are not inputs to later-year measurement."),
+          text("في السنة الثانية تنشأ فائدة تقارب 89.52913121 × 10% = 8.95291312 دولار، وتضاف تكلفة خدمة 98.48204433؛ فيكون التزام الإقفال غير المقرب 196.96408866. وفي السنة الخامسة: فائدة 476.65309455 × 10% = 47.66530946، مع خدمة 131.079601، تعطي 655.398005 دولار.", "In year 2, interest is approximately $89.52913121 × 10% = $8.95291312, plus $98.48204433 service cost, giving an unrounded closing obligation of $196.96408866. In year 5, interest of $476.65309455 × 10% = $47.66530946 plus $131.079601 service cost gives $655.398005."),
+        ],
+        conclusion: text("طريقة الوحدة الإضافية تربط كل سنة خدمة بوحدة من الراتب النهائي المتوقع؛ الفائدة تفك الخصم على الوحدات المكتسبة سابقًا. اختلاف السنتات عن الجدول ذي الأرقام الصحيحة أثر عرض وتقريب، لا تعديل في قاعدة IAS 19. في تقييم فعلي تُدخل أيضًا الافتراضات الديموغرافية المناسبة.", "Projected unit credit ties each service year to a unit of projected final salary; interest unwinds discounting on units already earned. Cent-level differences from the whole-unit table are presentation and rounding, not a different IAS 19 rule. An actual valuation also incorporates relevant demographic assumptions."),
+        journalEntries: [
+          { label: text("نهاية السنة الأولى: خدمة مكتسبة", "End of year 1: service earned"), debit: text("مصروف خدمة منافع محددة", "Defined-benefit service expense"), credit: text("التزام منفعة محددة", "Defined-benefit obligation"), amount: text("89.53 دولار تقريبًا", "Approximately $89.53") },
+          { label: text("السنة الثانية: فك خصم الرصيد الافتتاحي", "Year 2: interest on opening obligation"), debit: text("مصروف صافي فائدة", "Net interest expense"), credit: text("التزام منفعة محددة", "Defined-benefit obligation"), amount: text("8.95 دولار تقريبًا", "Approximately $8.95") },
+        ],
+        reference: "IAS 19.66–71, 75–98, 120–123",
+      },
       {
         title: text("Plyman: اثنا عشر يومًا لا مئتا يوم", "Plyman: twelve days, not two hundred"),
         facts: text(
