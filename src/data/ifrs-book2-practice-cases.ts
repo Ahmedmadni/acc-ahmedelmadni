@@ -15,6 +15,32 @@ const text = (ar: string, en: string): LocalizedText => ({ ar, en });
 /** Open-response questions are source-derived; no MCQ options are invented. */
 export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
   {
+    id: "ifrs-book2-ifrs6-ch13-quiz-oil-funding",
+    standardCode: "IFRS 6",
+    title: text("استكشاف النفط وعدم التأكد من التمويل", "Oil exploration and uncertain funding"),
+    facts: text(
+      "بدأت منشأة استكشاف منطقة من المحيط لم تُستكشف سابقًا بحثًا عن النفط. اكتشفت النفط وتوجد سوق نشطة لبيعه، لكنها غير متأكدة من قدرتها على جمع الأموال اللازمة لإكمال الاستكشاف. لا يحدد السؤال مبلغ التكاليف أو سياسة الاعتراف بها أو تفاصيل الحق القانوني أو القيمة القابلة للاسترداد.",
+      "An entity has just begun exploring a previously unexplored area of ocean for oil. It has discovered oil and there is an active market in which to sell it, but it is unsure whether it can raise the funds needed to complete exploration. The prompt gives no cost amount, recognition policy, legal-right details or recoverable amount."
+    ),
+    question: text("ما المعالجة المطلوبة لتكاليف الاستكشاف المتكبدة؟", "What is the required treatment of the exploration costs incurred?"),
+    solution: [
+      text(
+        "تحقق أولًا من نطاق IFRS 6: يلزم حصول المنشأة على حق قانوني للاستكشاف، وألا تكون الجدوى الفنية والقدرة التجارية للاستخراج قد أصبحتا قابلتين للإثبات. وجود نفط وسوق لبيعه لا يثبت وحده اكتمال هذه المرحلة. ضمن النطاق تطبق المنشأة سياستها المتسقة للاعتراف بنفقات الاستكشاف والتقييم؛ لا يفرض IFRS 6 رسملة كل نفقة.",
+        "First establish IFRS 6 scope: the entity must hold legal exploration rights, and technical feasibility and commercial viability of extraction must not yet be demonstrable. Finding oil and a market does not alone establish completion of that phase. Within scope, apply the entity's consistent policy for recognising exploration and evaluation expenditure; IFRS 6 does not require every cost to be capitalised."
+      ),
+      text(
+        "عدم التأكد من التمويل يستلزم فحص الوقائع التي قد تشير إلى تعذر استرداد أصل مثبت: هل يوجد إنفاق جوهري مخطط أو معتمد؟ هل ستستمر الأنشطة؟ وهل يمكن استرداد الرصيد بالتطوير أو البيع؟ عند وجود مؤشر انخفاض يجرى اختبار وفق IAS 36 وتثبت الخسارة اللازمة. لا تكفي عبارة «غير متأكدة» للجزم بانعدام الاسترداد أو صرف الرصيد كاملًا.",
+        "Funding uncertainty requires assessment of facts that may indicate a recognised asset is not recoverable: is substantial further expenditure budgeted or planned, will activity continue, and can the balance be recovered through development or sale? When impairment indicators exist, test under IAS 36 and recognise the resulting loss. Merely being unsure does not establish zero recovery or an automatic full write-off."
+      ),
+      text(
+        "إذا كانت السياسة تقضي بصرف هذه النفقات، تثبت مصروفًا عند تكبدها؛ وإذا رسملت وفق سياسة مؤهلة، تفحص للانخفاض. لا تتوافر مبالغ أو بيانات استرداد لقياس أصل أو خسارة أو إعداد قيد رقمي. اكتشاف المورد وحده لا يبرر تجاوز الاختبار.",
+        "If the policy expenses these costs, recognise expense as incurred; if they were capitalised under an eligible policy, assess impairment. No amounts or recovery data are supplied to measure an asset or loss or prepare a numerical entry. Discovery alone does not justify bypassing that assessment."
+      )
+    ],
+    reference: "IFRS 6.3–10, 17–22; IAS 36.18",
+  },
+
+  {
     id: "ifrs-book2-valor-principal-most-advantageous-market",
     standardCode: "IFRS 13",
     title: text("Valor: السوق الرئيسي والسوق الأكثر منفعة", "Valor: principal and most advantageous markets"),
