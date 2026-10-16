@@ -9,6 +9,41 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
 
+
+  "IAS 24": {
+    sections: [
+      {
+        title: text("الأم الأعلى والإفصاح عن طبيعة العلاقة", "Higher parent and the substance of the relationship"),
+        explanation: text(
+          "تُذكر الأم المباشرة والطرف المسيطر النهائي إذا اختلفا. وإذا لم يصدر أيهما قوائم موحدة متاحة للجمهور، يذكر أيضًا اسم أول أم أعلى من الأم المباشرة تصدر تلك القوائم. لا يعوض ذكر مبالغ التعاملات عن تحديد العلاقة. وقد تكون المعاملة مهمة بطبيعتها رغم صغر مبلغها؛ لكن تعويض الإدارة العليا يعرض إجمالًا وبالفئات المطلوبة، وليس بالضرورة لكل مدير منفردًا.",
+          "Identify the immediate parent and, if different, the ultimate controlling party. If neither issues publicly available consolidated statements, also identify the first higher parent above the immediate parent that does. Transaction amounts do not replace identifying the relationship. A transaction can matter by nature despite a small amount; key-management compensation is disclosed in total and required categories, not necessarily director by director.",
+        ),
+        keyPoints: [
+          text("التعامل بأسعار سوقية لا يلغي صفة الطرف ذي العلاقة ولا الإفصاح، ووصف الاستقلال يحتاج دليلًا.", "Market pricing neither removes related-party status nor disclosure; an arm's-length assertion needs evidence."),
+          text("افحص العلاقة الفعلية قبل بيع التابعة وبعده؛ السابقة التاريخية وحدها لا تمدد الارتباط إلى جميع التعاملات اللاحقة.", "Assess the actual relationship before and after a subsidiary sale; former status alone does not extend relatedness to all later transactions."),
+        ],
+        reference: "IAS 24.9–11, 13–18, 23–24",
+      },
+    ],
+    workedExamples: [],
+  },
+  "IFRS 8": {
+    sections: [
+      {
+        title: text("التجميع العام ليس هو تجميع القطاعات دون الحدود", "General aggregation differs from below-threshold combination"),
+        explanation: text(
+          "في التجميع العام وفق الفقرة 12 يلزم اتساقه مع المبدأ الأساسي وتشابه الخصائص الاقتصادية وجميع أوجه التشابه المحددة ذات الصلة. أما الفقرة 14 فتجيز جمع معلومات قطاعات لا يحقق أي منها الحدود الكمية عندما تتشابه خصائصها الاقتصادية وتشترك في أغلبية معايير التجميع. لا يجوز استخدام هذا المسار لإخفاء قطاع يحقق الحدود. وبعد الاختبارات تبقى تغطية 75% من إيراد العملاء الخارجيين واجبة؛ لا تدخل الإيرادات البينية في مقام التغطية.",
+          "General aggregation under paragraph 12 requires consistency with the core principle, similar economic characteristics and all relevant specified similarities. Paragraph 14 instead permits combining information about segments none of which meets the quantitative thresholds when economic characteristics are similar and a majority of aggregation criteria are shared. Do not use this route to conceal a segment meeting the thresholds. After testing, 75% external-customer-revenue coverage still applies; intersegment revenue does not enter that coverage denominator.",
+        ),
+        keyPoints: [
+          text("صف «مناطق أخرى» قد يكون قطاعًا واحدًا أو مجموع قطاعات؛ اطلب تقارير متخذ القرار قبل الحكم.", "An 'other regions' row may be one segment or a subtotal; obtain CODM reports before deciding."),
+          text("الأصول والالتزامات القطاعية تفصح إذا قدمت بانتظام لمتخذ القرار؛ لا يكفي وجود أعمدة لها في جدول تعليمي لتعميم الوجوب.", "Segment assets and liabilities are disclosed when regularly provided to the CODM; columns in a teaching table do not create an unconditional requirement."),
+        ],
+        reference: "IFRS 8.5, 12–16, 22(aa), 23",
+      },
+    ],
+    workedExamples: [],
+  },
   "IFRS 5": {
     sections: [
       {
