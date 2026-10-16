@@ -37,6 +37,51 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
     ],
     workedExamples: [],
   },
+  "IAS 1": {
+    sections: [
+      {
+        title: text("هوية القوائم وفترة التقرير ووحدة العرض", "Statement identity, reporting period and display units"),
+        explanation: text(
+          "قبل قراءة الأرقام، عرّف المنشأة واذكر تغير اسمها إن وجد، وحدد هل القوائم منفصلة أم موحدة، وتاريخ المركز المالي أو الفترة التي تغطيها كل قائمة، وعملة العرض ومستوى التقريب. يجب تمييز القوائم والإيضاحات عن بقية التقرير السنوي، وتكرار هذه البيانات حيث يلزم للفهم، بما في ذلك العرض الإلكتروني. لا يحول التقريب إلى آلاف أو ملايين دون إظهار المعلومات الجوهرية. تعرض مجموعة كاملة سنويًا على الأقل؛ وإذا تغيرت نهاية الفترة وأصبحت أقصر أو أطول من سنة، اشرح السبب وعدم قابلية بعض المقارنات للمقارنة التامة. لا يفترض من ذلك موعد قانوني موحد للنشر في كل بلد.",
+          "Before reading amounts, identify the entity and any name change, whether statements are individual or consolidated, the position date or period covered by each statement, presentation currency and rounding level. Clearly distinguish statements and notes from the rest of the annual report and repeat identifying information where needed, including electronic presentation. Rounding to thousands or millions must not obscure material information. Present a complete set at least annually; when a changed year-end produces a shorter or longer period, explain why and why some comparatives are not fully comparable. This does not establish one statutory publication deadline for every jurisdiction."
+        ),
+        keyPoints: [
+          text("ثبت عملة العرض ووحدة الأرقام قبل الجمع أو المقارنة.", "Confirm presentation currency and display units before adding or comparing amounts."),
+          text("اربط كل عمود مقارن بفترته الفعلية وبيّن تغير طول الفترة.", "Link each comparative column to its actual period and explain changes in period length.")
+        ],
+        reference: "IAS 1.36–37, 49–53",
+      },
+      {
+        title: text("رأس المال والاحتياطيات: افصح عن العدد والحقوق والحركة", "Capital and reserves: disclose counts, rights and movements"),
+        explanation: text(
+          "لا يكفي عرض رقم رأس المال وحده. لكل فئة أسهم، بيّن العدد المصرح به والمصدر والمدفوع بالكامل وغير المدفوع بالكامل، والقيمة الاسمية أو غيابها، وصالح عدد الأسهم القائمة بين أول الفترة وآخرها. اشرح حقوق الفئة وأفضلياتها وقيود توزيعات الأرباح ورد رأس المال، وحدد أسهم المنشأة المحتفظ بها داخلها أو لدى توابعها أو زميلاتها، والأسهم المحجوزة للخيارات وعقود إصدار الأسهم وشروطها ومبالغها. صف طبيعة كل احتياطي والغرض منه. يمكن تقديم هذه المعلومات في قائمة المركز المالي أو التغيرات في حقوق الملكية أو الإيضاحات وفق متطلبات IAS 1؛ والمنشأة بلا رأس مال سهمي تقدم معلومات مكافئة عن حركة فئات حقوقها وحقوق أصحابها. هذه إفصاحات لا تعني وجوب إثبات قيد جديد لمجرد إعداد جدولها.",
+          "A share-capital total alone is insufficient. For each class, explain authorised, issued, fully paid and partly paid shares, par value or its absence, and reconcile opening to closing outstanding shares. Explain class rights, preferences and restrictions on dividends or capital repayment, identify own shares held by the entity, subsidiaries or associates, and describe shares reserved for options and share-issue contracts with their terms and amounts. Describe each reserve's nature and purpose. IAS 1 permits these details in financial position, changes in equity or notes; an entity without share capital gives equivalent information about movements and rights for its equity classes. Preparing the disclosure table does not itself create a new accounting entry."
+        ),
+        keyPoints: [
+          text("صالح أعداد الأسهم مع سجل المساهمين، لا رصيد رأس المال النقدي فقط.", "Reconcile share counts to the share register, not only the monetary capital balance."),
+          text("افصل طبيعة الاحتياطي عن القيود القانونية أو التعاقدية على توزيعه.", "Distinguish a reserve's purpose from legal or contractual distribution restrictions.")
+        ],
+        reference: "IAS 1.77–80",
+      }
+    ],
+    workedExamples: [
+      {
+        title: text("XYZ: فحص توازن قائمة المركز المالي المقارنة", "XYZ: reconciling comparative financial position"),
+        facts: text(
+          "يعرض مثال XYZ أرقامًا مقارنة لسنتي 20X7 و20X6 بالألف دولار. في 20X7 تبلغ الأصول غير المتداولة 901,620 والمتداولة 564,880، وحقوق ملاك الأم 903,700 وحصة الأقلية 70,050، والالتزامات غير المتداولة 177,650 والمتداولة 315,100. في 20X6 تبلغ الأصول غير المتداولة 945,460 والمتداولة 578,740، وإجمالي حقوق الملكية 831,500 والالتزامات 692,700. هذا مثال عرض وليس معاملة جديدة.",
+          "XYZ presents two comparative years, 20X7 and 20X6, in thousands of dollars. In 20X7 non-current assets are 901,620 and current assets 564,880; owners' equity is 903,700 and NCI 70,050; non-current liabilities are 177,650 and current liabilities 315,100. In 20X6 non-current assets are 945,460 and current assets 578,740, with total equity of 831,500 and liabilities of 692,700. This illustrates presentation rather than a new transaction."
+        ),
+        calculations: [
+          text("20X7: مجموع الأصول = 901,620 + 564,880 = 1,466,500 ألف دولار. حقوق الملكية = 903,700 + 70,050 = 973,750؛ الالتزامات = 177,650 + 315,100 = 492,750؛ مجموعهما 1,466,500.", "20X7 total assets = 901,620 + 564,880 = 1,466,500 thousand dollars. Equity = 903,700 + 70,050 = 973,750; liabilities = 177,650 + 315,100 = 492,750; together they equal 1,466,500."),
+          text("20X6: مجموع الأصول = 945,460 + 578,740 = 1,524,200؛ حقوق الملكية والالتزامات = 831,500 + 692,700 = 1,524,200، بالوحدة نفسها.", "20X6 total assets = 945,460 + 578,740 = 1,524,200; equity and liabilities = 831,500 + 692,700 = 1,524,200 in the same units."),
+          text("صافي انخفاض الأصول بين التاريخين = 57,700 ألف دولار؛ لا يمثل وحده خسارة السنة، لأن تغير الأصول قد يرتبط بالتزامات أو معاملات ملاك أو تدفقات أخرى.", "Assets fall by 57,700 thousand dollars between the dates; that movement alone is not the year's loss, because assets can change with liabilities, owner transactions or other flows.")
+        ],
+        conclusion: text("يتوازن العمودان، وتظهر حصة الأقلية ضمن حقوق الملكية منفصلة عن ملاك الأم. هذا نموذج توضيحي؛ لا يفرض IAS 1 ترتيبًا واحدًا للبنود، وتوازن المجاميع وحده لا يثبت اكتمال القياس أو الإفصاح. يطبق سياق IAS 1 قبل الانتقال الإلزامي إلى IFRS 18 أو تطبيقه المبكر.", "Both columns balance and NCI is within equity separately from owners of the parent. This is illustrative: IAS 1 does not prescribe a single item order, and balanced totals alone do not prove complete measurement or disclosure. Apply the IAS 1 context before mandatory or early adoption of IFRS 18."),
+        journalEntries: [],
+        reference: "IAS 1.51, 54, 57; IAS 1 Implementation Guidance, statement of financial position; IFRS 10.22",
+      }
+    ],
+  },
   "IFRS 10": {
     sections: [
       {
