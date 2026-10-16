@@ -1789,7 +1789,7 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
           },
         ],
         reference: "IFRS 3.37; IFRS 9.5.1.1; IAS 32.35",
-
+      },
     ],
   },
   "IFRS 10": {
