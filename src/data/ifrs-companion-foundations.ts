@@ -224,6 +224,26 @@ export const IFRS_COMPANION_MODULES: CompanionModule[] = [
           en: "Section 25.2 expenses all borrowing costs in profit or loss as incurred; the full-IFRS IAS 23 capitalisation rule for qualifying assets is not imported into this regime. First establish that the entity correctly applies the SME Standard.",
         },
       },
+      {
+        prompt: {
+          ar: "كيف تُحدد المنشأة سياسة محاسبية إذا لم يعالج معيار SMEs المعاملة صراحة؟",
+          en: "How does an entity select an accounting policy when the SME Standard does not specifically address a transaction?",
+        },
+        answer: {
+          ar: "يطبق القسم 10 تسلسلًا ملزمًا: تُراجع أولًا متطلبات وإرشادات معيار SMEs للموضوعات المشابهة والمرتبطة، ثم تعريفات ومفاهيم الإثبات والقياس في القسم 2. يجوز بعد ذلك النظر في IFRS الكامل للموضوعات المشابهة، لكنه مصدر اختياري للاستئناس لا إذن لانتقاء متطلبات متفرقة أو الادعاء بتطبيق نظامين معًا. ويجب أن تنتج السياسة معلومات ملائمة وتمثل الجوهر الاقتصادي بصدق وتُطبق باتساق.",
+          en: "Section 10 requires a hierarchy: first consider the SME Standard's requirements and guidance for similar and related issues, then the definitions and recognition and measurement concepts in Section 2. Management may then consider full IFRS requirements on similar issues, but that optional reference is not permission to cherry-pick requirements or claim compliance with two regimes. The resulting policy must produce relevant, faithfully representative information and be applied consistently.",
+        },
+      },
+      {
+        prompt: {
+          ar: "هل تسمح موازنة التكلفة والمنفعة للمنشأة بتجاهل أي متطلب مكلف؟",
+          en: "Does the cost-benefit constraint let an entity ignore any requirement it finds costly?",
+        },
+        answer: {
+          ar: "لا. قيد التكلفة في القسم 2 لا ينشئ إعفاءً عامًا. لا يجوز استخدام إعفاء «تكلفة أو جهد لا داعي لهما» إلا حيث ينص عليه المتطلب المحدد، وبحسب ظروف المنشأة وأثر غياب المعلومة على قرارات المستخدمين؛ ولا يُمدد بالقياس إلى متطلبات أخرى. كما ألغى إصدار 2025 خيار الرجوع إلى متطلبات إثبات وقياس IAS 39، فتطبق المنشآت متطلبات القسم 11 المحدَّث.",
+          en: "No. Section 2's cost constraint is not a general opt-out. An 'undue cost or effort' exemption is available only where the specific requirement provides it, judged from the entity's circumstances and the effect of missing information on users' decisions; it cannot be extended by analogy. The 2025 edition also removes the option to use IAS 39 recognition and measurement requirements, so entities apply revised Section 11.",
+        },
+      },
     ],
     referenceLabel: "IFRS Foundation — IFRS for SMEs (2025)",
     referenceUrl: "https://www.ifrs.org/supporting-implementation/2025-ifrs-for-smes-supporting-materials/",
