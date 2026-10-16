@@ -3208,6 +3208,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.3.2.3–3.2.6, B3.2.4–B3.2.5",
   },
   {
+    id: "ifrs-book2-convertible-loan-sppi",
+    standardCode: "IFRS 9",
+    title: text("قرض قابل للتحويل: هل تدفقاته أصل وفائدة فقط؟", "Convertible loan: are its cash flows solely principal and interest?"),
+    facts: text(
+      "يسأل تمرين الصفحة 210 عن استثمار في قرض قابل للتحويل إلى أدوات حقوق ملكية، دون تقديم مبالغ أو نسب أو نموذج أعمال للمستثمر. يفترض الجواب أن حق التحويل جوهري وقابل للتنفيذ، ولا يضيف شروطًا رقمية غير مذكورة.",
+      "The p210 prompt asks about an investment in a loan convertible into equity instruments. It gives no amounts, rates or investor business model. The answer assumes a substantive exercisable conversion right and adds no unstated numerical terms.",
+    ),
+    question: text("هل تؤهل الأداة للقياس بالتكلفة المستهلكة؟ وهل يفصل المستثمر خيار التحويل من أصل القرض؟", "Can the instrument qualify for amortised cost? Does the investor separate the conversion option from the loan asset?"),
+    solution: [
+      text("التكلفة المستهلكة تتطلب معًا محفظة هدفها تحصيل التدفقات، وتدفقات عقدية تمثل أصل المبلغ والفائدة عليه فقط. حق التحويل الجوهري يربط العائد بقيمة حقوق الملكية، فلا يجتاز اختبار التدفقات حتى لو كان المستثمر ينوي الاحتفاظ بالقرض حتى التحويل أو الاستحقاق.", "Amortised cost requires both a hold-to-collect business model and contractual cash flows solely of principal and interest. A substantive conversion right links return to equity value, so the cash-flow test fails even if the holder intends to keep the loan until conversion or maturity."),
+      text("في أصل مالي مضيف داخل IFRS 9 يُختبر العقد المركب كله ولا يفصل خيار التحويل لمجرد تطبيق نموذج أصل الدين؛ تكون النتيجة عادة القيمة العادلة عبر الربح أو الخسارة. لا يمكن حساب القيمة العادلة أو الربح من معلومات السؤال وحدها.", "For a financial-asset host within IFRS 9, assess the whole hybrid rather than separating the conversion option for debt-asset classification; the normal result is fair value through profit or loss. No fair value or gain can be calculated from this prompt."),
+    ],
+    reference: "IFRS 9.4.1.1–4.1.4, 4.3.2, B4.1.7A–B4.1.9",
+  },
+  {
+    id: "ifrs-book2-d-co-collect-business-model",
+    standardCode: "IFRS 9",
+    title: text("محفظة D: مبيعات محدودة قبل تمويل الإنفاق الرأسمالي", "D's portfolio: limited sales before funding capital expenditure"),
+    facts: text(
+      "تتوقع D إنفاقًا رأسماليًا نقديًا بعد عشر سنوات، فتستثمر الفائض في أصول مالية قصيرة الأجل وتعيد استثمار المتحصلات عند استحقاقها إلى حين الحاجة للنقد. المبيعات قبل الاستحقاق قليلة القيمة، باستثناء ما قد تبيعه عند زيادة مخاطر الائتمان. لا يحدد التمرين شروط تدفقات كل أصل.",
+      "D expects a cash capital-expenditure outflow in ten years. It invests spare cash in short-term financial assets and reinvests their maturity proceeds until the funds are needed. Sales before maturity are insignificant in value except when credit risk rises. The prompt gives no contractual cash-flow terms for individual assets.",
+    ),
+    question: text("ما هدف نموذج أعمال المحفظة؟ وهل يكفي ذلك وحده للحكم بأن كل أصل فيها بالتكلفة المستهلكة؟", "What is this portfolio's business-model objective? Does that alone prove every asset is at amortised cost?"),
+    solution: [
+      text("دورة الاحتفاظ حتى الاستحقاق وإعادة استثمار التحصيلات، مع مبيعات مبكرة غير جوهرية أو مرتبطة بارتفاع خطر الائتمان، تدعم نموذج الاحتفاظ لتحصيل التدفقات التعاقدية. وجود حاجة نقدية بعد عشر سنوات لا يجعل البيع هدفًا ملازمًا للمحفظة.", "Holding assets to maturity and reinvesting collections, with only insignificant early sales or sales prompted by increased credit risk, supports a hold-to-collect model. A funding need in ten years does not itself make selling an integral portfolio objective."),
+      text("تحديد نموذج الأعمال خطوة واحدة فقط: التكلفة المستهلكة لكل أصل تتطلب أيضًا نجاح اختبار أصل المبلغ والفائدة على رصيده. إن فشلت تدفقات أصل معين، فلا تُستنتج تكلفته المستهلكة من وصف المحفظة، ولا يمكن تحديد مبلغ قياس دون شروطه وقيمته.", "Business model is only one test: amortised cost for each asset also requires solely principal-and-interest cash flows. If an asset fails that contractual test, the portfolio description cannot make it amortised cost, and no measured amount follows without its terms and value."),
+    ],
+    reference: "IFRS 9.4.1.1–4.1.2, B4.1.1–B4.1.4",
+  },
+  {
     id: "ifrs-book2-rathbone-compound-bond",
     standardCode: "IAS 32",
     title: text("Rathbone: قيمة خيار تحويل السند", "Rathbone: value of a bond conversion option"),
