@@ -2529,6 +2529,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IFRS 2": {
     sections: [
       {
+        title: text("إلغاء المنحة يختلف عن سقوطها لعدم إكمال الخدمة", "Cancellation differs from failure to complete service"),
+        explanation: text(
+          "افحص سبب زوال الحق قبل حساب المصروف. إذا لم يكمل الموظف خدمة مشروطة بالمنحة، يحدث سقوط بسبب عدم استيفاء شرط استحقاق غير سوقي؛ يعدل العدد المتوقع استحقاقه ويعكس ما سبق إثباته عن تلك الأدوات عند ثبوت عدم استحقاقها. أما إلغاء منحة مسددة بحقوق الملكية أثناء فترة الاستحقاق، بخلاف السقوط لعدم استيفاء شروط الاستحقاق، فيعجل إثبات المبلغ الذي كان سيثبت عن بقية الفترة. ينطبق تحليل الإلغاء أيضًا على اختيار المنشأة أو الطرف المقابل عدم استيفاء شرط غير استحقاقي يقع تحت سيطرته وفق IFRS 2.28A. لذلك لا تعتبر كل مغادرة أو عدم ممارسة خيار إلغاءً يوجب التعجيل؛ فالخيار الذي استحق بالفعل ثم لم يمارس لا يعكس تكلفته السابقة. وعند منح أدوات بديلة راجع شروط تعيين البديل ومعالجة التعديل.",
+          "Identify why the right ends before measuring expense. Failure to complete a required service period is forfeiture for failure of a non-market vesting condition: update vesting numbers and reverse amounts for instruments that will not vest. By contrast, cancellation of an equity-settled grant during vesting, other than forfeiture for failure of vesting conditions, accelerates the amount otherwise recognised over the remaining period. The cancellation analysis also applies when the entity or counterparty chooses not to meet a non-vesting condition within its control under IFRS 2.28A. Do not treat every departure or unexercised option as cancellation requiring acceleration: cost is not reversed when an already vested option is left unexercised. For replacement instruments, assess replacement designation and modification requirements."
+        ),
+        keyPoints: [
+          text("حدد هل الحدث عدم استيفاء شرط خدمة أم إلغاء منحة قائمة.", "Determine whether the event is failure of a service condition or cancellation of an existing award."),
+          text("وثق سبب التعجيل أو العكس؛ أثر الحدث يعتمد على نوع الشرط.", "Document the reason for acceleration or reversal; the condition type determines the effect.")
+        ],
+        reference: "IFRS 2.19–23, 27–28A",
+      },
+
+      {
         title: text(
           "خدمة الموظف تُقاس عبر فترة الاستحقاق",
           "Employee services accrue over the vesting period",
