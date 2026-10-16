@@ -810,6 +810,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 8": {
     sections: [
       {
+        title: text("حدود قاعدة الأثر الرجعي وإفصاح المعايير الجديدة", "Limits of retrospection and new-Standard disclosures"),
+        explanation: text(
+          "تطبيق سياسة إعادة التقييم لأول مرة يظل تغير سياسة، لكن يعالج كإعادة تقييم وفق IAS 16 أو IAS 38، لا بإعادة حساب الماضي وفق القاعدة العامة في IAS 8. أما المعاملات الجديدة أو المختلفة جوهريًا وتلك التي كانت غير جوهرية سابقًا فلا يعني اختيار سياسة لها تلقائيًا تغير سياسة. عند صدور معيار جديد تُراجع أحكام انتقاله أولًا. تميَّز إفصاحات التطبيق الأول في IAS 8.28 عن التغير الاختياري في الفقرة 29، وعن معيار صادر لم يسرِ بعد في الفقرتين 30–31.",
+          "First adopting a revaluation policy remains a policy change, but it is accounted for as a revaluation under IAS 16 or IAS 38, not by reconstructing earlier periods under IAS 8's general rule. Selecting a policy for new or substantively different transactions, or previously immaterial transactions, is not automatically a policy change. For a new Standard, check its transition rules first. Distinguish initial-application disclosures in IAS 8.28, voluntary-change disclosures in paragraph 29, and issued-but-not-yet-effective Standards in paragraphs 30–31.",
+        ),
+        keyPoints: [
+          text("عدم العملية يتطلب كل جهد معقول؛ لا تُعد بناء تقديرات قديمة باستخدام معرفة لاحقة.", "Impracticability requires every reasonable effort; do not reconstruct historical estimates using hindsight."),
+          text("للمعيار الصادر غير المطبق بعد: افصح عن ذلك وعن معلومات الأثر المعروفة أو الممكن تقديرها بصورة معقولة، أو تعذر التقدير.", "For an issued Standard not yet applied, disclose that fact and known or reasonably estimable impact information, or that the impact cannot yet be estimated."),
+        ],
+        reference: "IAS 8.5, 16–19, 28–31, 50–53",
+      },
+
+      {
         title: text("خطأ المخزون الذي ينعكس في السنة التالية", "An inventory error that reverses in the next year"),
         explanation: text(
           "إذا تضمن مخزون نهاية سنة بضاعة بيعت قبل تاريخ التقرير، يكون المخزون والربح في تلك السنة زائدين، وتنتقل الزيادة خطأً إلى تكلفة مبيعات السنة التالية من رصيد أول المدة. لا يُترك الخطآن ليتقاصا في العرض؛ يعاد بيان المقارنة وفق IAS 8، وتُصحح أرقام السنة الحالية من دون إدراج أثر الفترة السابقة في ربحها. يُفحص أثر الضريبة بشكل مستقل وفق IAS 12: معدل الضريبة وحده لا يثبت أن تعديل إقرار السنة السابقة قابل للاسترداد أو أن أثر الضريبة مؤجل أو جارٍ.",
@@ -824,6 +837,27 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       },
     ],
     workedExamples: [
+      {
+        title: text("تغيير تسعير المخزون: أثر السنة والأثر التراكمي", "Inventory policy change: annual versus cumulative effect"),
+        facts: text(
+          "تستخدم المنشأة FIFO وتقرر في 20X9 التحول إلى المتوسط المرجح. أرقام مقارنة 20X8 بآلاف الدولارات: إيراد 869، مشتريات 246، مخزون افتتاحي وفق FIFO بمبلغ 135 وختامي 174. بإعادة الحساب وفق المتوسط المرجح يصبح الافتتاحي 122 والختامي 143. لا تتضمن المعطيات أثرًا ضريبيًا أو أرصدة حقوق الملكية الكاملة.",
+          "An entity uses FIFO and decides in 20X9 to adopt weighted average. Its 20X8 comparative figures, in $000, are revenue 869, purchases 246, FIFO opening inventory 135 and closing inventory 174. Recalculation under weighted average gives opening inventory 122 and closing inventory 143. Tax effects and complete equity balances are not supplied.",
+        ),
+        calculations: [
+          text("قبل التغيير: تكلفة المبيعات = 135 + 246 − 174 = 207؛ مجمل الربح = 869 − 207 = 662.", "Before the change: cost of sales = 135 + 246 − 174 = 207; gross profit = 869 − 207 = 662."),
+          text("المقارنة المعدلة: تكلفة المبيعات = 122 + 246 − 143 = 225؛ مجمل الربح = 869 − 225 = 644. تكلفة المبيعات تزيد 18 وربح 20X8 ينخفض 18، قبل الضريبة.", "Restated comparative: cost of sales = 122 + 246 − 143 = 225; gross profit = 869 − 225 = 644. Cost of sales increases by 18 and 20X8 profit decreases by 18, before tax."),
+          text("عند بداية 20X8: فرق المخزون = 122 − 135 = (13)، يخفض الأرباح المحتجزة الافتتاحية قبل الضريبة. عند نهايتها وبداية 20X9: الفرق التراكمي = 143 − 174 = (31) = (13) + (18). لا يكفي تعديل 18 وحده لربط المخزون بحقوق الملكية.", "At the start of 20X8, inventory differs by 122 − 135 = (13), reducing opening retained earnings before tax. At its end/start of 20X9, the cumulative difference is 143 − 174 = (31) = (13) + (18). An adjustment of 18 alone does not reconcile inventory to equity."),
+        ],
+        conclusion: text(
+          "هذه حالة تغير سياسة لا تخفيض مخزون إلى صافي القيمة القابلة للتحقق ولا تغير تقدير. يلزم تبرير أن السياسة الجديدة توفر معلومات موثوقة وأكثر ملاءمة؛ مجرد قرار الإدارة لا يكفي. مع عرض 20X8 كمقارنة، يفصل العرض أثر 13 السابق لها عن أثر ربحها 18، ويبدأ 20X9 بمخزون 143 وأثر تراكمي 31 قبل الضريبة. لا تُفترض مبالغ ضريبة أو إجمالي أرباح محتجزة غير معطاة.",
+          "This is a policy change, not an NRV write-down or an estimate change. The new policy must be justified as providing reliable and more relevant information; management's decision alone is insufficient. With 20X8 presented comparatively, distinguish the preceding 13 effect from its 18 profit effect; 20X9 opens with inventory 143 and a cumulative 31 effect before tax. Do not invent tax amounts or total retained earnings.",
+        ),
+        journalEntries: [
+          { label: text("أثر تراكمي إذا كانت دفاتر افتتاح 20X9 لا تزال على FIFO — قبل الضريبة، وليس قيدًا إضافيًا فوق إعادة البيان", "Cumulative effect if opening 20X9 books remain on FIFO — before tax, not an additional entry on top of restatement"), debit: text("أرباح محتجزة افتتاحية", "Opening retained earnings"), credit: text("مخزون", "Inventory"), amount: text("31 ألف دولار", "US$31 thousand") },
+        ],
+        reference: "IAS 8.14, 19–27, 29; IAS 2.25",
+      },
+
       {
         title: text("Global: إعادة بيان مخزون بيع قبل الإقفال", "Global: restating inventory sold before year-end"),
         facts: text(
