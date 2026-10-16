@@ -6323,7 +6323,7 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
       ),
     ],
     reference: "IAS 19.57, 113–115, 120–130; IAS 1.69",
-  },,
+  },
   {
     id: "ifrs-book2-ifrs10-ch21-basic-cancellation",
     standardCode: "IFRS 10",
