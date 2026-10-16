@@ -40,6 +40,31 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 1": {
     sections: [
       {
+        title: text("حكم محاسبي أم عدم تأكد في تقدير؟", "Accounting judgement or estimation uncertainty?"),
+        explanation: text(
+          "افصل إفصاحين قد يبدوان متشابهين. الأول يشرح الأحكام التي اتخذتها الإدارة عند تطبيق السياسات، بخلاف التقديرات، وكان لها الأثر الأهم في المبالغ المثبتة؛ مثل الحكم على السيطرة أو طبيعة ترتيب تعاقدي. الثاني يشرح افتراضات المستقبل ومصادر عدم التأكد التقديري القائمة عند التقرير التي تحمل خطرًا مهمًا لتعديل جوهري في قيم الأصول أو الالتزامات خلال السنة المالية التالية. في الحالة الثانية بيّن طبيعة البنود وقيمها الدفترية، وأضف شرحًا ملائمًا للحساسية أو نطاق النتائج متى ساعد على فهم الخطر. تجنب قائمة عامة بكل حكم أو فرض؛ اربط الإفصاح بالوقائع والمبالغ الجوهرية للمنشأة.",
+          "Distinguish two disclosures. One explains management's judgements in applying accounting policies, apart from estimates, that most significantly affect recognised amounts, such as control or the substance of a contractual arrangement. The other explains future assumptions and sources of estimation uncertainty existing at period-end that create a significant risk of a material adjustment to asset or liability carrying amounts within the next financial year. For the latter, identify the items' nature and carrying amounts and provide relevant sensitivity or possible-outcome information where it helps explain the risk. Link disclosure to the entity's material facts and balances rather than listing every judgement or assumption."
+        ),
+        keyPoints: [
+          text("حكم اختيار المعالجة يختلف عن عدم الدقة في قياس مبلغها.", "A judgement about accounting treatment differs from uncertainty in measuring the amount."),
+          text("اربط خطر تعديل السنة التالية ببند محدد وقيمته الدفترية.", "Link next-year adjustment risk to a specified item and carrying amount.")
+        ],
+        reference: "IAS 1.122–133",
+      },
+      {
+        title: text("الإيضاحات والتوزيعات في مصالحة حقوق الملكية", "Notes and dividends in the equity reconciliation"),
+        explanation: text(
+          "رتب الإيضاحات بصورة منهجية واربط بنود القوائم بإيضاحاتها. اعرض معلومات أسس الإعداد والسياسات المحاسبية الجوهرية، والمعلومات المطلوبة غير المعروضة في القوائم الأساسية، والتفاصيل اللازمة لفهمها. في مصالحة حقوق الملكية افصل الربح وOCI عن مساهمات الملاك والتوزيعات، وأظهر أثر إعادة التطبيق أو التصحيح بأثر رجعي لكل مكوّن. التحويل بين احتياطي وأرباح محتجزة لا يغير إجمالي حقوق الملكية. افصح عن التوزيعات المعترف بها للملاك والمبلغ المتعلق بالسهم، وعن التوزيعات المقترحة أو المعلنة قبل اعتماد القوائم ولم تثبت توزيعًا خلال الفترة؛ الإفصاح وحده لا ينشئ التزامًا إذا لم تتحقق شروط الاعتراف.",
+          "Organise notes systematically and cross-reference statement lines to their notes. Explain preparation bases and material accounting policy information, required information not shown in primary statements and details needed to understand them. In equity reconciliation, distinguish profit and OCI from owner contributions and distributions and show retrospective application or correction for each component. A transfer between a reserve and retained earnings does not change total equity. Disclose dividends recognised as owner distributions with the related per-share amount, and dividends proposed or declared before authorisation but not recognised as period distributions; disclosure alone does not create a liability when recognition conditions are unmet."
+        ),
+        keyPoints: [
+          text("صالح كل مكوّن على حدة ثم مجموع حقوق الأم والأقلية.", "Reconcile each component before total parent equity and NCI."),
+          text("التوزيع والتحويل الداخلي وOCI حركات مختلفة في القائمة.", "Distributions, internal transfers and OCI are different equity movements.")
+        ],
+        reference: "IAS 1.106–117, 137; IAS 10.12–13",
+      },
+
+      {
         title: text("دورة التشغيل والإفصاح عما يسترد بعد سنة", "Operating cycle and amounts recovered after one year"),
         explanation: text(
           "لا تختزل تصنيف الأصل أو الالتزام في مدة اثني عشر شهرًا وحدها. قد يبقى المخزون أو العميل متداولًا إذا تحقق في دورة التشغيل المعتادة ولو تجاوزت سنة، وقد يبقى الدائن التشغيلي متداولًا وفق الدورة نفسها. الأدوات المحتفظ بها أساسًا للمتاجرة تخضع لمعيار المتاجرة في التصنيف، فلا يجعلها توقع بيع متأخر غير متداولة تلقائيًا. وعندما يجمع بند واحد مبالغ تسترد أو تسدد خلال اثني عشر شهرًا وبعدها، افصح عن الجزء المتوقع بعد اثني عشر شهرًا وفق IAS 1.61؛ ينطبق ذلك حتى عند اختيار عرض السيولة. افصل هذا الإفصاح الزمني عن قرار التصنيف، وراجع حقوق تأجيل الالتزام القائمة في تاريخ التقرير قبل الاستناد إلى إعادة تمويل لاحقة.",
@@ -90,6 +115,23 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
       }
     ],
     workedExamples: [
+      {
+        title: text("XYZ: مصالحة مستقلة لحركة حقوق الملكية", "XYZ: a standalone equity roll-forward"),
+        facts: text(
+          "في جدول حركة XYZ، إجمالي حقوق الملكية أول 20X6 هو 749,500، وتعديل السياسة بأثر رجعي 500، وتوزيعات 10,000 ودخل شامل 89,500. في 20X7 إصدار رأس مال 50,000 وتوزيعات 15,000 ودخل شامل 104,450، منها 83,000 للأم و21,450 للأقلية. تنقل المنشأة 200 من فائض إعادة التقييم إلى الأرباح المحتجزة. الأرقام بالألف دولار وتخص هذا الجدول المستقل.",
+          "In XYZ's equity roll-forward, opening 20X6 total equity is 749,500, a retrospective policy adjustment is 500, dividends are 10,000 and comprehensive income is 89,500. In 20X7 capital issued is 50,000, dividends are 15,000 and comprehensive income is 104,450, comprising 83,000 for owners and 21,450 for NCI. A 200 transfer moves from revaluation surplus to retained earnings. Amounts are in thousands of dollars and belong to this standalone table."
+        ),
+        calculations: [
+          text("الرصيد المعدل أول 20X6 = 749,500 + 500 = 750,000. الإقفال = 750,000 − 10,000 + 89,500 = 829,500.", "Restated opening 20X6 equity = 749,500 + 500 = 750,000. Closing equity = 750,000 − 10,000 + 89,500 = 829,500."),
+          text("إقفال 20X7 = 829,500 + 50,000 − 15,000 + 104,450 = 968,950. التحويل الداخلي 200 لا يضاف إلى هذا الإجمالي.", "Closing 20X7 equity = 829,500 + 50,000 − 15,000 + 104,450 = 968,950. The internal 200 transfer is not added to that total."),
+          text("الأرباح المحتجزة: 161,700 − 15,000 + 96,600 + 200 = 243,500. فائض إعادة التقييم: 1,600 + 800 − 200 = 2,200. حصة الأقلية: 48,600 + 21,450 = 70,050.", "Retained earnings: 161,700 − 15,000 + 96,600 + 200 = 243,500. Revaluation surplus: 1,600 + 800 − 200 = 2,200. NCI: 48,600 + 21,450 = 70,050."),
+          text("حقوق ملاك الأم عند الإقفال = رأس مال 650,000 + أرباح محتجزة 243,500 + احتياطي استثمارات 3,200 + فائض إعادة تقييم 2,200 = 898,900؛ بإضافة الأقلية 70,050 يصل الإجمالي إلى 968,950.", "Closing parent equity = capital 650,000 + retained earnings 243,500 + investment reserve 3,200 + revaluation surplus 2,200 = 898,900; plus NCI of 70,050 gives total equity of 968,950.")
+        ],
+        conclusion: text("يعرض تعديل السياسة في الرصيد المعاد عرضه، ولا يخلط مع ربح السنة. تزيد مساهمات الملاك الإجمالي وتخفضه التوزيعات، بينما يعيد التحويل الداخلي توزيع مكوناته فقط. يجب استعمال أرصدة البداية وحركات الجدول نفسه عند المصالحة.", "The policy adjustment is in the restated opening balance rather than current-year profit. Owner contributions increase total equity and distributions reduce it; an internal transfer only reallocates components. Use opening balances and movements from the same table when reconciling."),
+        journalEntries: [],
+        reference: "IAS 1.106–110; IAS 8.22; IAS 16.41",
+      },
+
       {
         title: text("XYZ: مصالحة الربح وOCI والدخل الشامل", "XYZ: reconciling profit, OCI and comprehensive income"),
         facts: text(
