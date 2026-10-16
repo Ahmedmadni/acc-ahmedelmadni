@@ -810,6 +810,19 @@ export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyEx
   "IAS 8": {
     sections: [
       {
+        title: text("حدود قاعدة الأثر الرجعي وإفصاح المعايير الجديدة", "Limits of retrospection and new-Standard disclosures"),
+        explanation: text(
+          "تطبيق سياسة إعادة التقييم لأول مرة يظل تغير سياسة، لكن يعالج كإعادة تقييم وفق IAS 16 أو IAS 38، لا بإعادة حساب الماضي وفق القاعدة العامة في IAS 8. أما المعاملات الجديدة أو المختلفة جوهريًا وتلك التي كانت غير جوهرية سابقًا فلا يعني اختيار سياسة لها تلقائيًا تغير سياسة. عند صدور معيار جديد تُراجع أحكام انتقاله أولًا. تميَّز إفصاحات التطبيق الأول في IAS 8.28 عن التغير الاختياري في الفقرة 29، وعن معيار صادر لم يسرِ بعد في الفقرتين 30–31.",
+          "First adopting a revaluation policy remains a policy change, but it is accounted for as a revaluation under IAS 16 or IAS 38, not by reconstructing earlier periods under IAS 8's general rule. Selecting a policy for new or substantively different transactions, or previously immaterial transactions, is not automatically a policy change. For a new Standard, check its transition rules first. Distinguish initial-application disclosures in IAS 8.28, voluntary-change disclosures in paragraph 29, and issued-but-not-yet-effective Standards in paragraphs 30–31.",
+        ),
+        keyPoints: [
+          text("عدم العملية يتطلب كل جهد معقول؛ لا تُعد بناء تقديرات قديمة باستخدام معرفة لاحقة.", "Impracticability requires every reasonable effort; do not reconstruct historical estimates using hindsight."),
+          text("للمعيار الصادر غير المطبق بعد: افصح عن ذلك وعن معلومات الأثر المعروفة أو الممكن تقديرها بصورة معقولة، أو تعذر التقدير.", "For an issued Standard not yet applied, disclose that fact and known or reasonably estimable impact information, or that the impact cannot yet be estimated."),
+        ],
+        reference: "IAS 8.5, 16–19, 28–31, 50–53",
+      },
+
+      {
         title: text("خطأ المخزون الذي ينعكس في السنة التالية", "An inventory error that reverses in the next year"),
         explanation: text(
           "إذا تضمن مخزون نهاية سنة بضاعة بيعت قبل تاريخ التقرير، يكون المخزون والربح في تلك السنة زائدين، وتنتقل الزيادة خطأً إلى تكلفة مبيعات السنة التالية من رصيد أول المدة. لا يُترك الخطآن ليتقاصا في العرض؛ يعاد بيان المقارنة وفق IAS 8، وتُصحح أرقام السنة الحالية من دون إدراج أثر الفترة السابقة في ربحها. يُفحص أثر الضريبة بشكل مستقل وفق IAS 12: معدل الضريبة وحده لا يثبت أن تعديل إقرار السنة السابقة قابل للاسترداد أو أن أثر الضريبة مؤجل أو جارٍ.",
