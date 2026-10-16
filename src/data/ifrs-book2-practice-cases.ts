@@ -5842,6 +5842,39 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IAS 19.57, 113, 120–130",
   },
 
+  {
+    id: "ifrs-book2-ias19-bcd-three-year-plan-settlement",
+    standardCode: "IAS 19",
+    title: text("BCD: تسوية خطة منافع محددة عبر ثلاث سنوات", "BCD: three-year defined-benefit plan and settlement"),
+    facts: text(
+      "جميع المبالغ بآلاف الدولارات، ومعدل الخصم 10% سنويًا، وجميع المعاملات بنهاية السنة. في بداية 20X2 كان الالتزام وأصول الخطة 1,000 لكل منهما. للسنوات 20X2 و20X3 و20X4 على الترتيب: تكلفة الخدمة الجارية 140 و150 و150؛ المنافع المدفوعة من الخطة 120 و140 و150؛ مساهمات المنشأة 110 و120 و120. كانت قيم الالتزام الختامية قبل تحويل 20X3 هي 1,200 و1,650 و1,700، وقيم أصول الخطة 1,250 و1,450 و1,610. بنهاية 20X3 انتقل استحقاق مجموعة موظفين إلى خطة صاحب عمل جديد، فانخفض التزام BCD بمقدار 50 ونُقلت أصول خطة بقيمة 48، بعد قياس القيم الختامية المذكورة. في نهاية 20X4 أعلنت BCD دفعة إضافية لمتقاعدين لم تتضمنها شروط الخطة السابقة؛ يشمل التزام 1,700 الختامي زيادة 40 لهذه الدفعة. لا تُعطى شروط تتيح استرداد فائض الخطة أو تخفيض المساهمات المستقبلية.",
+      "All amounts are in $000, the annual discount rate is 10%, and all transactions occur at year-end. At the start of 20X2 both the obligation and plan assets were 1,000. For 20X2, 20X3 and 20X4 respectively: current service cost is 140, 150 and 150; plan benefits paid are 120, 140 and 150; employer contributions are 110, 120 and 120. Year-end obligations before the 20X3 transfer are 1,200, 1,650 and 1,700; plan assets are 1,250, 1,450 and 1,610. At the end of 20X3 a group of employees transferred accrued entitlements to a new employer's plan, reducing BCD's obligation by 50 and transferring plan assets of 48 after the stated year-end valuations. At the end of 20X4 BCD announced an extra payment to pensioners outside the previous plan terms; the 1,700 closing obligation includes 40 for it. The terms governing refunds or future contribution reductions are not provided."
+    ),
+    question: text(
+      "صالح الالتزام وأصول الخطة لكل سنة؛ احسب أثر التسوية وتكلفة الخدمة السابقة والربح أو الخسارة والدخل الشامل الآخر، وحدد أثر غياب معلومات سقف الأصل على العرض.",
+      "Reconcile the obligation and plan assets for each year; calculate the settlement, past service cost, profit or loss and OCI, and explain how missing asset-ceiling information limits presentation."
+    ),
+    solution: [
+      text(
+        "الأرقام التالية لمصروف الربح أو الخسارة وصافي الدخل الشامل الآخر تفترض أن سقف الأصل لا يقيّد فائض 20X2؛ من دون هذا الافتراض تبقى حركتا الالتزام وأصول الخطة صحيحتين، لكن المبالغ المعروضة مشروطة. في 20X2 فائدة الالتزام والأصول 100 لكل منهما. قبل إعادة القياس: الالتزام 1,000 + 100 + 140 − 120 = 1,120، فخسارته الاكتوارية 80 ليصبح 1,200. الأصول 1,000 + 100 + 110 − 120 = 1,090، فعائدها خارج الفائدة 160 ليصبح 1,250. مصروف الربح أو الخسارة 140، وصافي الدخل الشامل الآخر مكسب 80 قبل أثر السقف، والفائض الحسابي 50. لا يثبت أصل 50 تلقائيًا قبل اختبار السقف.",
+        "The following profit-or-loss and net OCI figures assume that the asset ceiling does not limit the 20X2 surplus; without that assumption the gross obligation and asset movements remain valid, but the presented totals are conditional. In 20X2 interest on the obligation and assets is 100 each. Before remeasurement the obligation is 1,000 + 100 + 140 − 120 = 1,120; an actuarial loss of 80 brings it to 1,200. Assets are 1,000 + 100 + 110 − 120 = 1,090; return beyond interest of 160 brings them to 1,250. Profit-or-loss expense is 140, net OCI gain before any ceiling effect is 80 and the arithmetic surplus is 50. Recognition of a 50 asset still requires the ceiling test."
+      ),
+      text(
+        "في 20X3 فائدة الالتزام 120 وفائدة الأصول 125. بعد التسوية يصبح الالتزام 1,650 − 50 = 1,600، والأصول 1,450 − 48 = 1,402. قبل إعادة القياس والتسوية، الالتزام 1,200 + 120 + 150 − 140 = 1,330؛ بعد إضافة خسارة اكتوارية 320 يصل إلى 1,650. الأصول 1,250 + 125 + 120 − 140 = 1,355؛ عائد 95 خارج الفائدة يصل بها إلى 1,450. إذا أزال التحويل التزام BCD نهائيًا، ربح التسوية 50 − 48 = 2 في الربح أو الخسارة. صافي الفائدة دخل 5، فيكون مصروف الربح أو الخسارة 150 − 5 − 2 = 143؛ وصافي خسارة الدخل الشامل الآخر 320 − 95 = 225. العجز الختامي 1,600 − 1,402 = 198.",
+        "In 20X3 obligation interest is 120 and asset interest 125. After settlement the obligation is 1,650 − 50 = 1,600 and assets are 1,450 − 48 = 1,402. Before remeasurement and settlement, the obligation is 1,200 + 120 + 150 − 140 = 1,330; an actuarial loss of 320 brings it to 1,650. Assets are 1,250 + 125 + 120 − 140 = 1,355; return beyond interest of 95 brings them to 1,450. If the transfer extinguishes BCD's obligation, the settlement gain is 50 − 48 = 2 in profit or loss. Net interest is income of 5, so profit-or-loss expense is 150 − 5 − 2 = 143; net OCI loss is 320 − 95 = 225. The closing deficit is 1,600 − 1,402 = 198."
+      ),
+      text(
+        "في 20X4 فائدة الالتزام 160 وفائدة الأصول 140.2. الزيادة البالغة 40 مقابل منافع عن خدمة سابقة تكلفتها خدمة سابقة في الربح أو الخسارة، لا خسارة اكتوارية. قبل إعادة القياس يصبح الالتزام 1,600 + 160 + 150 + 40 − 150 = 1,800؛ قيمته 1,700 تعني مكسب إعادة قياس 100. الأصول قبل إعادة القياس 1,402 + 140.2 + 120 − 150 = 1,512.2؛ قيمتها 1,610 تعني عائدًا إضافيًا 97.8. صافي الفائدة 19.8، ومصروف الربح أو الخسارة 150 + 40 + 19.8 = 209.8، ومكسب الدخل الشامل الآخر 197.8. العجز الختامي 1,700 − 1,610 = 90. بالتقريب لأقرب ألف: 20 و210 و198 على التوالي.",
+        "In 20X4 obligation interest is 160 and asset interest 140.2. The 40 increase for earlier service is past service cost in profit or loss, not an actuarial loss. The obligation before remeasurement is 1,600 + 160 + 150 + 40 − 150 = 1,800; its 1,700 value implies a remeasurement gain of 100. Assets before remeasurement are 1,402 + 140.2 + 120 − 150 = 1,512.2; their 1,610 value implies additional return of 97.8. Net interest is 19.8, profit-or-loss expense is 150 + 40 + 19.8 = 209.8 and OCI gain is 197.8. The closing deficit is 1,700 − 1,610 = 90. Rounded to whole thousands, the first three amounts are 20, 210 and 198."
+      ),
+      text(
+        "تتحقق المصالحة على فرض عدم تقيد فائض 20X2 بالسقف: صافي 20X2 هو 0 + 140 − 110 − 80 = أصل 50؛ ثم −50 + 143 − 120 + 225 = التزام 198 في 20X3؛ ثم 198 + 209.8 − 120 − 197.8 = التزام 90 في 20X4. إذا كان الفائض غير متاح كاسترداد أو تخفيض مساهمات، يتغير الأصل المثبت وأثر السقف في صافي الفائدة والدخل الشامل الآخر، ولا تكفي الوقائع لحسابهما. تظل مصالحتا الالتزام وأصول الخطة الإجماليتان قائمتين.",
+        "The net roll-forward works if the 20X2 surplus is not ceiling-limited: 0 + 140 − 110 − 80 = 50 asset in 20X2; then −50 + 143 − 120 + 225 = 198 liability in 20X3; then 198 + 209.8 − 120 − 197.8 = 90 liability in 20X4. If the surplus is unavailable as a refund or contribution reduction, the recognised asset and ceiling effects in net interest and OCI change; the facts cannot quantify them. The gross obligation and asset reconciliations still hold."
+      ),
+    ],
+    reference: "IAS 19.57, 64, 99–112, 120–130; IFRIC 14.7–9",
+  },
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
