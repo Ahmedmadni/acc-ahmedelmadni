@@ -8,6 +8,35 @@ const text = (ar: string, en: string): StudyText => ({ ar, en });
  * learner-facing references identify the applicable Standard only.
  */
 export const IFRS_BOOK2_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyExpansion>> = {
+  "IAS 41": {
+    sections: [
+      {
+        title: text("عرض الأصل البيولوجي وتصنيفه بحسب دورة التشغيل", "Presenting biological assets and applying the operating cycle"),
+        explanation: text(
+          "عرض الأصول البيولوجية في بند مستقل لا يعفيها من تصنيف الأصول. عند إعداد قائمة مركز مالي تفصل المتداول وغير المتداول، قيّم متى تتوقع المنشأة بيع الأصل أو استهلاكه أو تحقيقه في دورة تشغيلها المعتادة، ثم طبق بقية شروط الأصل المتداول. قد يكون الأصل متداولًا ضمن دورة تشغيل تتجاوز اثني عشر شهرًا؛ أما الأصل المحتفظ به لإنتاج منافع على المدى الطويل فقد يكون غير متداول. وصف الأصل بأنه ناضج أو غير ناضج، أو استهلاكي أو مثمر، يفيد الإفصاح لكنه لا يحسم التصنيف وحده. وإذا كان العرض بحسب السيولة أكثر ملاءمة وموثوقية، يطبق أساس العرض هذا وفق شروط المعيار. تظل النباتات المثمرة نفسها ضمن IAS 16، وتبقى الثمار النامية عليها ضمن IAS 41.",
+          "A separate biological-asset line does not remove asset classification requirements. In a statement that distinguishes current and non-current assets, assess expected sale, consumption or realisation in the normal operating cycle, then the other current-asset criteria. An asset can be current within an operating cycle longer than twelve months; an asset retained to generate benefits over the longer term may be non-current. Mature/immature and consumable/bearer descriptions support disclosure but do not determine that classification alone. Use liquidity presentation when it provides reliable and more relevant information under the applicable requirements. Bearer plants themselves remain within IAS 16, while produce growing on them remains within IAS 41."
+        ),
+        keyPoints: [
+          text("حدد دورة التشغيل واستخدام الأصل وتوقيت تحقيقه قبل تصنيفه.", "Establish the operating cycle, asset use and expected realisation before classification."),
+          text("البند المستقل والإفصاح عن النضج لا يحلان محل اختبار المتداول وغير المتداول.", "A separate line and maturity disclosures do not replace the current/non-current assessment.")
+        ],
+        reference: "IAS 1.54(f), 60–68; IAS 41.2–5, 43–45",
+      },
+      {
+        title: text("نقطة الحصاد تنقل المحصول إلى قياس المخزون", "Harvest transfers produce into inventory measurement"),
+        explanation: text(
+          "ابدأ بتمييز المنتج الذي ما زال ينمو على الأصل الحي عن المنتج الذي حُصد. في لحظة الحصاد يقاس المحصول بالقيمة العادلة ناقص تكاليف البيع، ويثبت أثر الاعتراف في الربح أو الخسارة؛ ويصبح ذلك القياس تكلفة المحصول عند تطبيق IAS 2. بعد الحصاد لا تعاد زيادة كل محصول إلى القيمة العادلة في كل تاريخ تقرير بموجب IAS 41. يطبق عادة الأقل من التكلفة وصافي القيمة القابلة للتحقق، مع مراعاة استثناءات نطاق قياس IAS 2 إن انطبقت فعلًا. قد تدخل تكاليف التحويل اللاحقة المؤهلة ضمن تكلفة المخزون، لكن مجرد التخزين أو انتظار البيع لا يمدد نطاق IAS 41. وثّق تاريخ الحصاد والكمية وقياسها لكي يتصل سجل الأصل البيولوجي بسجل المخزون دون تكرار مكسب الحصاد.",
+          "Distinguish produce still growing on a living asset from harvested produce. At harvest, measure agricultural produce at fair value less costs to sell and recognise the initial-recognition effect in profit or loss; that measurement becomes its cost when IAS 2 applies. After harvest, IAS 41 does not require every crop to be uplifted to fair value at every reporting date. Normally apply the lower of cost and net realisable value, considering IAS 2 measurement-scope exceptions only when their conditions actually apply. Eligible subsequent conversion costs may enter inventory cost, but storage or waiting for sale does not extend IAS 41's scope. Document harvest date, quantity and measurement to connect biological-asset and inventory records without recognising the harvest gain twice."
+        ),
+        keyPoints: [
+          text("قيمة الحصاد ناقص تكاليف البيع تصبح تكلفة البداية وفق IAS 2.", "Harvest-date fair value less costs to sell becomes the initial IAS 2 cost."),
+          text("اختبر صافي القيمة القابلة للتحقق بعد الحصاد وفق نموذج المخزون المطبق.", "Assess net realisable value after harvest under the applicable inventory model.")
+        ],
+        reference: "IAS 41.3, 13, 28, 32; IAS 2.3, 9–10, 20",
+      }
+    ],
+    workedExamples: [],
+  },
   "IFRS 10": {
     sections: [
       {
