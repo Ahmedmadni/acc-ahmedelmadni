@@ -856,6 +856,19 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
   "IAS 2": {
     sections: [
       {
+        title: text("حدود النطاق واستثناءات القياس", "Scope boundaries and measurement exceptions"),
+        explanation: text(
+          "يطبق IAS 2 على المخزون عمومًا، لكنه يستبعد الأدوات المالية، والأصول الحيوية المرتبطة بالنشاط الزراعي، والمحصول الزراعي عند نقطة الحصاد. ينتقل المحصول بعد الحصاد إلى IAS 2، وتصبح قيمته العادلة ناقص تكاليف البيع عند الحصاد هي تكلفته عند ذلك التاريخ. كذلك لا تنطبق قواعد القياس المعتادة في IAS 2 على فئات محددة: بعض منتجي المنتجات الزراعية أو الحرجية والمحصول بعد الحصاد والمعادن يقيسون بصافي القيمة القابلة للتحقق إذا كانت هذه ممارسة راسخة في الصناعة، وتجار السلع الوسطاء المؤهلون يقيسون بالقيمة العادلة ناقص تكاليف البيع؛ وتثبت تغيرات كلا القياسين في الربح أو الخسارة.",
+          "IAS 2 generally applies to inventories, but excludes financial instruments, biological assets related to agricultural activity and agricultural produce at the point of harvest. Produce moves into IAS 2 after harvest, with its harvest-date fair value less costs to sell becoming cost at that date. The usual IAS 2 measurement rules also do not apply to specified holders: certain producers of agricultural or forest products, post-harvest produce and minerals use net realisable value when that is an established industry practice, while qualifying commodity broker-traders use fair value less costs to sell; changes in either measurement are recognised in profit or loss.",
+        ),
+        keyPoints: [
+          text("استثناء أصل حيوي لا يعني أن المحصول يبقى خارج IAS 2 بعد حصاده.", "Excluding a biological asset does not keep harvested produce outside IAS 2."),
+          text("استثناءات الفقرة 3 تخص القياس لدى حائزين محددين، وليست إعفاءً عامًا لكل مخزون زراعي أو سلعي.", "The paragraph 3 exceptions concern measurement by specified holders; they are not a general exemption for all agricultural or commodity inventory."),
+          text("صافي القيمة القابلة للتحقق خاص بالمنشأة، بينما القيمة العادلة ناقص تكاليف البيع مقياس سوقي؛ فلا يُستخدم المصطلحان بالتبادل.", "Net realisable value is entity-specific, whereas fair value less costs to sell is market-based; the terms are not interchangeable."),
+        ],
+        reference: "IAS 2.2–7; IAS 41.3, 13, 32",
+      },
+      {
         title: text("بناء التكلفة: ما يدخل وما يستبعد", "Building cost: inclusions and exclusions"),
         explanation: text(
           "تشمل تكلفة المخزون تكلفة الشراء بعد الخصومات، وتكاليف التحويل، وأي تكلفة أخرى لازمة لإحضاره إلى موقعه وحالته الحاليين. توزع التكاليف الصناعية الثابتة على أساس الطاقة العادية، بينما توزع المتغيرة على أساس الاستخدام الفعلي. أما الفاقد غير الطبيعي والتخزين غير الضروري والبيع والإدارة غير المرتبطة بالإنتاج فتثبت مصروفًا.",
@@ -913,6 +926,10 @@ const BASE_IFRS_STANDARD_STUDY_EXPANSIONS: Partial<Record<string, StandardStudyE
           text(
             "عند بيع المخزون تصبح قيمته الدفترية مصروفًا في الفترة التي يثبت فيها الإيراد المرتبط.",
             "When inventory is sold, its carrying amount is expensed in the period of related revenue.",
+          ),
+          text(
+            "تستخدم كمية المخزون المحتفظ بها لتنفيذ عقد بيع ملزم سعر العقد عند تقدير صافي القيمة القابلة للتحقق؛ أما الكمية الزائدة فتُقدّر على أساس أسعار البيع العامة.",
+            "For inventory held to satisfy a firm sales contract, use the contract price for the committed quantity when estimating NRV; estimate any excess quantity using general selling prices.",
           ),
         ],
         reference: "IAS 2.6–9, 28–35",
