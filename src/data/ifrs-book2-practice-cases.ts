@@ -3268,6 +3268,66 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 9.5.1.1, 5.7.1A, 5.7.5–5.7.6, B5.2.2",
   },
   {
+    id: "ifrs-book2-dazzle-zero-coupon-finance-cost",
+    standardCode: "IFRS 9",
+    title: text("Dazzle: فائدة فعلية لسند بلا كوبون", "Dazzle: effective interest on a zero-coupon note"),
+    facts: text(
+      "أصدرت Dazzle في 1 يناير 20X3 سندات قرض بمتحصل اسمي 600,000 دولار وتكلفة إصدار مباشرة 200 دولار. لا تحمل كوبونًا، وتسترد في 31 ديسمبر 20X4 بمبلغ 752,389 دولارًا، وهو الأصل مضافًا إليه علاوة الاسترداد 152,389 دولارًا. يعطي السؤال معدل فائدة فعلي 12%، ويفترض قياس الالتزام بالتكلفة المستهلكة دون تعديل أو استرداد مبكر.",
+      "On 1 January 20X3 Dazzle issues notes for $600,000 and pays $200 directly attributable issue costs. They have no coupon and are redeemed on 31 December 20X4 for $752,389, including a $152,389 premium. The question supplies a 12% effective rate and assumes amortised-cost liability measurement without modification or early repayment.",
+    ),
+    question: text("ما تكلفة التمويل لسنة 20X4؟ وضّح الرصيد الأولي ورصيد نهاية 20X3.", "What is the 20X4 finance cost? Show initial and end-20X3 carrying amounts."),
+    solution: [
+      text("المتحصل الصافي والتزام البداية = 600,000 − 200 = 599,800 دولار. تكلفة تمويل 20X3 = 599,800 × 12% = 71,976، ولا يوجد كوبون نقدي، فيصبح رصيد نهاية 20X3 مبلغ 671,776.", "Net proceeds and initial liability = $600,000 − $200 = $599,800. The 20X3 finance cost is $599,800 × 12% = $71,976. With no cash coupon, end-20X3 carrying amount is $671,776."),
+      text("تكلفة تمويل 20X4 = 671,776 × 12% = 80,613.12 دولار، أي 80,613 بالدولار الكامل. الرصيد قبل السداد 752,389.12 تقريبًا مقابل سداد 752,389؛ فرق 0.12 دولار من تقريب المعدل/المبلغ ولا يغير أن العلاوة وتكاليف الإصدار تُوزع بالفائدة الفعلية.", "The 20X4 finance cost is $671,776 × 12% = $80,613.12, or $80,613 in whole dollars. The pre-payment balance is about $752,389.12 versus the $752,389 redemption; the $0.12 residual reflects rate/amount rounding, not a separate gain. Effective interest allocates both redemption premium and issue costs."),
+    ],
+    reference: "IFRS 9.4.2.1, 5.1.1, 5.4.1, Appendix A",
+  },
+  {
+    id: "ifrs-book2-seven-year-note-total-finance-cost",
+    standardCode: "IFRS 9",
+    title: text("سند سبع سنوات: إجمالي تكلفة التمويل", "Seven-year note: total finance cost"),
+    facts: text(
+      "أصدرت منشأة في 1 يناير 20X1 سندًا اسميًا بمبلغ 6,000,000 دولار وكوبون سنوي 3.5%. بلغت تكاليف الإصدار المباشرة 120,000 دولار ويسترد السند في 31 ديسمبر 20X7 بعلاوة 1,100,000 دولار. افترض دفع الكوبونات السبعة في نهاية كل سنة واستمرار السند حتى الاسترداد دون تعديل.",
+      "On 1 January 20X1 an entity issues a $6,000,000 face-value note with a 3.5% annual coupon. Direct issue costs are $120,000 and it is redeemed on 31 December 20X7 at a $1,100,000 premium. Assume seven year-end coupons and no modification before redemption.",
+    ),
+    question: text("احسب إجمالي تكلفة التمويل على عمر السند، وراجع مجموع المصدر المطبوع.", "Calculate total finance cost over the note's life and check the source's printed total."),
+    solution: [
+      text("المتحصل الصافي أولًا = 6,000,000 − 120,000 = 5,880,000 دولار. كل كوبون 6,000,000 × 3.5% = 210,000؛ مجموع سبعة كوبونات = 1,470,000. مبلغ الاسترداد = 7,100,000. لذلك إجمالي تكلفة التمويل = 7,100,000 + 1,470,000 − 5,880,000 = 2,690,000 دولار، بما فيه تكلفة الإصدار والعلاوة.", "Initial net proceeds are $6,000,000 − $120,000 = $5,880,000. Each coupon is $210,000; seven coupons total $1,470,000. Redemption is $7,100,000. Lifetime finance cost is therefore $7,100,000 + $1,470,000 − $5,880,000 = $2,690,000, including issue cost and premium."),
+      text("المجموع 2,690,600 المطبوع في الصفحة يزيد 600 دولار عن جمع بنوده نفسها؛ والقيد الدوري يحتاج حساب معدل الفائدة الفعلي، الذي لم يعطه السؤال. لا توزع إجمالي التكلفة بالتساوي افتراضًا.", "The printed $2,690,600 total exceeds its own components by $600; the period-by-period entry would require an effective-rate calculation not supplied by the prompt. Do not assume straight-line allocation of the total."),
+    ],
+    reference: "IFRS 9.4.2.1, 5.1.1, 5.4.1, Appendix A",
+  },
+  {
+    id: "ifrs-book2-mn-preference-shares-options",
+    standardCode: "IAS 32",
+    title: text("MN: أسهم ممتازة وخيارات أسهم مباعة", "MN: preference shares and sold share options"),
+    facts: text(
+      "أصدرت MN خلال السنة المنتهية في 28 فبراير 20X5 أداتين: (1) أسهمًا ممتازة بمعدل معلن 8% قابلة للاسترداد في 28 فبراير 20X9 بعلاوة 10%؛ (2) خيارات أسهم باعتها، ويمكن ممارستها من 28 فبراير 20X8. لا يورد السؤال من يملك قرار الاسترداد، وهل التوزيعات إلزامية، ولا سعر ممارسة الخيارات أو عدد الأسهم أو التسوية أو وجود خدمة مقابلة.",
+      "In the year ended 28 February 20X5 MN issues (1) 8% preference shares redeemable on 28 February 20X9 at a 10% premium and (2) sold share options exercisable from 28 February 20X8. The prompt does not say who controls redemption, whether distributions are mandatory, or the option exercise price, share count, settlement and whether services were received.",
+    ),
+    question: text("ما الذي يمكن الجزم به في تصنيف كل أداة، وما شروط العقد اللازمة لإكمال الحكم؟", "What can be concluded about each instrument's classification, and which missing terms decide the rest?"),
+    solution: [
+      text("إذا كان على MN استرداد الأسهم الممتازة نقدًا في التاريخ المحدد، ينشأ مكوّن التزام، وتقاس تكلفة التمويل وفق شروطه؛ أما استرداد تملكه MN وحدها فلا ينشئ الالتزام بذاته. افحص 8%: التوزيع الإلزامي يضاف إلى خصائص الالتزام، بينما قد يكون الاختياري مكوّن حقوق ملكية. لا تكفي كلمة «قابلة للاسترداد» وحدها للجزم بأن الأداة كلها دين.", "If MN must redeem the preference shares for cash on that date, a liability component exists and finance cost follows its terms; redemption solely at MN's discretion does not itself impose the obligation. Test whether the 8% distributions are mandatory or discretionary. The label 'redeemable' alone does not prove the entire instrument is debt."),
+      text("الخيار المباع لمستثمر قد يكون حقوق ملكية إذا لزم تبادل مبلغ ثابت بعملة المنشأة الوظيفية مقابل عدد ثابت من أسهم MN دون بديل نقدي؛ وإلا قد يكون التزامًا أو مشتقًا. لا يمكن تصنيفه قطعيًا من تاريخ الممارسة وحده، ولا يُنسب تلقائيًا إلى IFRS 2 دون سلع أو خدمات مستلمة لقاء الخيار.", "A sold investor option may be equity if it exchanges fixed consideration in functional currency for a fixed number of MN shares with no cash alternative; otherwise it may be a liability or derivative. Exercise date alone cannot settle classification, and IFRS 2 does not automatically apply without goods or services received for the option."),
+    ],
+    reference: "IAS 32.11, 16–22, 28–32, AG27(a); IFRS 2.2, Appendix A",
+  },
+  {
+    id: "ifrs-book2-efg-convertible-bond",
+    standardCode: "IAS 32",
+    title: text("EFG: خيار تحويل سند ومعاملات خصم مقربة", "EFG: bond conversion option and rounded discount factors"),
+    facts: text(
+      "أصدرت EFG في 1 يناير 20X1 عدد 10,000 سند قابل للتحويل بقيمة اسمية 50 دولارًا للسند، وكوبون 5% سنويًا متأخرًا، ويسترد في 1 يناير 20X6 إن لم يحول. للحامل خيار التحويل خلال السنوات الخمس. عائد دين مماثل بلا تحويل 6%، ومعاملات السؤال المقربة: 0.747 لدولار بعد خمس سنوات و4.212 لدفعات سنوية. لا يذكر المصدر عدد الأسهم عند التحويل أو بديل التسوية؛ افترض لأجل تقسيم حقوق الملكية تحقق شرط مبلغ ثابت مقابل عدد ثابت وعدم التسوية النقدية.",
+      "On 1 January 20X1 EFG issues 10,000 convertible bonds at $50 face each, with a 5% annual arrears coupon and 1 January 20X6 redemption if unconverted. The holder may convert during five years. Comparable debt without conversion yields 6%; the question supplies rounded five-year factors of 0.747 for $1 due and 4.212 for annuity payments. Share count and settlement alternatives are absent; for an equity split, assume fixed-for-fixed conversion with no cash settlement option.",
+    ),
+    question: text("احسب مكوّن الدين والخيار عند الإصدار بمعاملات السؤال، ثم بيّن أثر استخدام معاملات دقيقة وحدود التصنيف.", "Value the initial liability and option using the supplied factors, then explain precise-factor rounding and classification limits."),
+    solution: [
+      text("المتحصل 500,000 دولار والكوبون السنوي 25,000. مكوّن الدين بمعاملات المصدر = 500,000 × 0.747 + 25,000 × 4.212 = 478,800 دولار، والباقي للخيار في حقوق الملكية = 21,200 دولار عند تحقق شرط التحويل المفترض.", "Proceeds are $500,000 and annual coupon $25,000. Using the supplied factors, liability = $500,000 × 0.747 + $25,000 × 4.212 = $478,800, leaving a $21,200 equity option if the assumed conversion terms qualify."),
+      text("بمعاملات 6% غير المقربة يبلغ مكوّن الدين نحو 478,938.18 دولار والخيار نحو 21,061.82؛ الاختلاف تقريب لا تغيير في القاعدة. إن كان عدد الأسهم أو المقابل متغيرًا أو وجدت تسوية نقدية، يعاد تقييم تصنيف الخيار قبل إثباته في حقوق الملكية؛ لا توفر الصفحة هذه الشروط.", "At unrounded 6% factors the liability is about $478,938.18 and residual option about $21,061.82; the difference is factor rounding, not a different principle. Variable shares, variable consideration or cash settlement would require reassessing option classification before recording equity; the page omits those terms."),
+    ],
+    reference: "IAS 32.16, 22, 28–32, AG30–AG35; IFRS 9.5.4.1",
+  },
+  {
     id: "ifrs-book2-rathbone-compound-bond",
     standardCode: "IAS 32",
     title: text("Rathbone: قيمة خيار تحويل السند", "Rathbone: value of a bond conversion option"),
