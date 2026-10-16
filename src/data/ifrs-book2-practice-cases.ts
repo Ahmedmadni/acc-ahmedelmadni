@@ -6324,6 +6324,134 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     ],
     reference: "IAS 19.57, 113–115, 120–130; IAS 1.69",
   },
+  {
+    id: "ifrs-book2-ifrs10-ch21-basic-cancellation",
+    standardCode: "IFRS 10",
+    title: text("P وS: الإلغاء الأساسي عند التجميع", "P and S: basic consolidation cancellation"),
+    facts: text(
+      "تمتلك P جميع أسهم S منذ تأسيسها. في 31 ديسمبر 20X6 لدى P: عقارات وآلات 35,000، استثمار في S بتكلفة 40,000، مخزون 16,000، ذمم على S مقدارها 2,000، ذمم أخرى 6,000، ونقد 1,000؛ ورأس مال 70,000 وأرباح محتجزة 16,000 ودائنون آخرون 14,000. لدى S: عقارات وآلات 45,000، مخزون 12,000، ذمم أخرى 9,000؛ ورأس مال 40,000 وأرباح محتجزة 19,000 وسحب بنكي 3,000 ودائنون لـP بمبلغ 2,000 ودائنون آخرون 2,000.",
+      "P has owned all of S since incorporation. At 31 December 20X6 P reports PPE 35,000, investment in S at cost 40,000, inventory 16,000, receivable from S 2,000, other receivables 6,000 and cash 1,000; share capital 70,000, retained earnings 16,000 and other payables 14,000. S reports PPE 45,000, inventory 12,000 and other receivables 9,000; share capital 40,000, retained earnings 19,000, bank overdraft 3,000, payable to P 2,000 and other payables 2,000."
+    ),
+    question: text(
+      "أعد قائمة المركز المالي الموحدة لـP في 31 ديسمبر 20X6.",
+      "Prepare P's consolidated statement of financial position at 31 December 20X6."
+    ),
+    solution: [
+      text(
+        "يلغى استثمار P البالغ 40,000 مقابل رأس مال S البالغ 40,000، وتلغى الذمم المتبادلة 2,000. تجمع الأصول المتبقية: العقارات والآلات 80,000؛ المخزون 28,000؛ الذمم 15,000؛ النقد 1,000؛ فيكون مجموع الأصول 124,000.",
+        "Eliminate P's 40,000 investment against S's 40,000 share capital and eliminate the reciprocal 2,000 balance. Combine the remaining assets: PPE 80,000; inventory 28,000; receivables 15,000; cash 1,000; total assets 124,000."
+      ),
+      text(
+        "حقوق الملكية تعرض رأس مال الأم فقط 70,000، والأرباح المحتجزة 16,000 + 19,000 = 35,000، أي 105,000. تعرض الالتزامات السحب البنكي 3,000 والدائنين 14,000 + 2,000 = 16,000، فيتوازن الإجمالي عند 124,000.",
+        "Equity presents only the parent's 70,000 share capital; retained earnings are 16,000 + 19,000 = 35,000, giving equity of 105,000. Liabilities are the 3,000 bank overdraft and payables of 14,000 + 2,000 = 16,000, balancing at 124,000."
+      ),
+      text(
+        "لا يقاص نقد P مع سحب S البنكي تلقائيًا. لا تجوز المقاصة وفق IAS 32 إلا مع حق قانوني نافذ حاليًا ونية للتسوية على أساس الصافي أو بالتزامن؛ هذه المعطيات غير موجودة.",
+        "P's cash is not automatically offset against S's overdraft. IAS 32 permits offsetting only with a currently enforceable legal right and an intention to settle net or simultaneously; those facts are not given."
+      ),
+    ],
+    reference: "IFRS 10.B86; IAS 32.42",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch21-goods-transit-loan-stock",
+    standardCode: "IFRS 10",
+    title: text("P وS: بضاعة بالطريق وقرض مملوك جزئيًا", "P and S: goods in transit and partly held loan stock"),
+    facts: text(
+      "تمتلك P جميع أسهم S البالغة 80,000 منذ تأسيسها و40% من قرض S ذي الـ12% (20,000 من أصل 50,000). في 30 يونيو: لدى P عقارات وآلات 120,000، استثمار أسهم 80,000، استثمار قرض 20,000، مخزون 50,000، ذمم 40,000، حساب جارٍ على S بمبلغ 18,000 ونقد 4,000؛ ورأس مال 100,000 وأرباح محتجزة 95,000 وقرض 75,000 ودائنون 47,000 وضريبة 15,000. لدى S عقارات وآلات 100,000، مخزون 60,000، ذمم 30,000 ونقد 6,000؛ ورأس مال 80,000 وأرباح محتجزة 28,000 وقرض 50,000 ودائنون 16,000 وضريبة 10,000 وحساب جارٍ لـP بمبلغ 12,000. الفرق في الحساب الجاري بضاعة بالطريق.",
+      "P has owned all 80,000 shares in S since incorporation and 40% of S's 12% loan stock (20,000 of 50,000). At 30 June P reports PPE 120,000, share investment 80,000, loan investment 20,000, inventory 50,000, receivables 40,000, current account with S 18,000 and cash 4,000; share capital 100,000, retained earnings 95,000, loan stock 75,000, payables 47,000 and tax 15,000. S reports PPE 100,000, inventory 60,000, receivables 30,000 and cash 6,000; share capital 80,000, retained earnings 28,000, loan stock 50,000, payables 16,000, tax 10,000 and current account with P 12,000. The current-account difference is goods in transit."
+    ),
+    question: text("أعد قائمة المركز المالي الموحدة لـP.", "Prepare P's consolidated statement of financial position."),
+    solution: [
+      text(
+        "يلغى استثمار الأسهم 80,000 مقابل رأس مال S، ويلغى 20,000 من استثمار القرض مقابل الجزء المقابل من التزام S؛ يبقى قرض S الخارجي 30,000. يسوى الحساب الجاري إلى 12,000 مقابل 12,000، ويثبت فرق 6,000 كبضاعة بالطريق داخل أصول المجموعة.",
+        "Eliminate the 80,000 share investment against S's share capital and eliminate the 20,000 loan investment against the corresponding part of S's liability; external S loan stock of 30,000 remains. Match 12,000 of the current accounts and recognise the 6,000 difference as goods in transit within group assets."
+      ),
+      text(
+        "الأصول الموحدة: عقارات وآلات 220,000؛ مخزون 110,000؛ بضاعة بالطريق 6,000؛ ذمم 70,000؛ نقد 10,000؛ الإجمالي 416,000.",
+        "Consolidated assets are PPE 220,000; inventory 110,000; goods in transit 6,000; receivables 70,000; cash 10,000; total 416,000."
+      ),
+      text(
+        "حقوق الملكية: رأس مال الأم 100,000 وأرباح محتجزة 95,000 + 28,000 = 123,000، أي 223,000. الالتزامات غير المتداولة 75,000 + 30,000 = 105,000؛ والمتداولة دائنون 63,000 وضريبة 25,000 = 88,000؛ وبذلك يتوازن الإجمالي عند 416,000.",
+        "Equity is the parent's 100,000 share capital plus retained earnings of 95,000 + 28,000 = 123,000, totalling 223,000. Non-current liabilities are 75,000 + 30,000 = 105,000; current liabilities are payables 63,000 and tax 25,000 = 88,000; the statement balances at 416,000."
+      ),
+    ],
+    reference: "IFRS 10.B86",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch21-nci-proportionate-example",
+    standardCode: "IFRS 3",
+    title: text("P وS: قياس الحصة غير المسيطرة نسبيًا", "P and S: proportionate NCI measurement"),
+    facts: text(
+      "تمتلك P منذ تأسيس S نسبة 75% من أسهمها، وتقاس الحصة غير المسيطرة بنسبة حصتها من صافي الأصول. لدى P عقارات وآلات 50,000، استثمار في S بمبلغ 30,000 وأصول متداولة 45,000؛ ورأس مال 80,000 وأرباح محتجزة 25,000 والتزامات متداولة 20,000. لدى S عقارات وآلات 35,000 وأصول متداولة 35,000؛ ورأس مال 40,000 وأرباح محتجزة 10,000 والتزامات متداولة 20,000.",
+      "P has owned 75% of S since S's incorporation, and NCI is measured at its proportionate share of net assets. P reports PPE 50,000, investment in S 30,000 and current assets 45,000; share capital 80,000, retained earnings 25,000 and current liabilities 20,000. S reports PPE 35,000 and current assets 35,000; share capital 40,000, retained earnings 10,000 and current liabilities 20,000."
+    ),
+    question: text("أعد قائمة المركز المالي الموحدة.", "Prepare the consolidated statement of financial position."),
+    solution: [
+      text(
+        "تجمع 100% من أصول والتزامات S رغم ملكية P البالغة 75%. العقارات والآلات = 50,000 + 35,000 = 85,000؛ الأصول المتداولة = 45,000 + 35,000 = 80,000؛ مجموع الأصول 165,000.",
+        "Include 100% of S's assets and liabilities despite P's 75% ownership. PPE is 50,000 + 35,000 = 85,000; current assets are 45,000 + 35,000 = 80,000; total assets 165,000."
+      ),
+      text(
+        "الحصة غير المسيطرة = 25% × (40,000 + 10,000) = 12,500. حقوق ملاك الأم: رأس مال P البالغ 80,000 وأرباح محتجزة 25,000 + 75% × 10,000 = 32,500، أي 112,500. مع NCI 12,500 والتزامات 40,000 يتوازن الإجمالي عند 165,000.",
+        "NCI is 25% × (40,000 + 10,000) = 12,500. Parent-owner equity is P's 80,000 share capital plus retained earnings of 25,000 + 75% × 10,000 = 32,500, totalling 112,500. With NCI 12,500 and liabilities 40,000, the statement balances at 165,000."
+      ),
+      text(
+        "اختيار القيمة العادلة أو الحصة النسبية في IFRS 3.19 لا يمتد لكل مكونات NCI؛ ينطبق هذا الاختيار على أدوات الملكية الحالية التي تمنح حصة نسبية من صافي الأصول عند التصفية. المثال يحدد صراحة القياس النسبي.",
+        "The IFRS 3.19 fair-value versus proportionate-share choice does not extend to every NCI component; it applies to present ownership interests that entitle holders to a proportionate share of net assets on liquidation. This example expressly selects proportionate measurement."
+      ),
+    ],
+    reference: "IFRS 3.19; IFRS 10.22, B86, B94",
+  },
+  {
+    id: "ifrs-book2-ifrs10-ch21-part-cancellation-nci",
+    standardCode: "IFRS 10",
+    title: text("P وS: إلغاء جزئي مع NCI وقرض خارجي", "P and S: part cancellation with NCI and external loan"),
+    facts: text(
+      "تمتلك P نسبة 60% من أسهم S (12,000 من 20,000 سهم) و8,000 من قرض S البالغ 26,000، وتقاس NCI بنسبة حصتها من صافي الأصول. لدى P عقارات وآلات 31,000، استثمار أسهم 12,000، استثمار قرض 8,000 وأصول متداولة 21,000؛ ورأس مال 40,000 وأرباح محتجزة 22,000 والتزامات متداولة 10,000. لدى S عقارات وآلات 34,000 وأصول متداولة 32,000؛ ورأس مال 20,000 وفائض إعادة تقييم 6,000 وأرباح محتجزة 4,000 وقرض 26,000 والتزامات متداولة 10,000.",
+      "P owns 60% of S's shares (12,000 of 20,000) and 8,000 of S's 26,000 loan stock; NCI is measured proportionately. P reports PPE 31,000, share investment 12,000, loan investment 8,000 and current assets 21,000; share capital 40,000, retained earnings 22,000 and current liabilities 10,000. S reports PPE 34,000 and current assets 32,000; share capital 20,000, revaluation surplus 6,000, retained earnings 4,000, loan stock 26,000 and current liabilities 10,000."
+    ),
+    question: text("أعد قائمة المركز المالي الموحدة.", "Prepare the consolidated statement of financial position."),
+    solution: [
+      text(
+        "الحصة غير المسيطرة = 40% × صافي أصول S البالغ 30,000 = 12,000. نصيب ملاك الأم من فائض إعادة التقييم = 60% × 6,000 = 3,600، والأرباح المحتجزة الموحدة = 22,000 + 60% × 4,000 = 24,400.",
+        "NCI is 40% × S's 30,000 net assets = 12,000. Parent owners' share of the revaluation surplus is 60% × 6,000 = 3,600, and consolidated retained earnings are 22,000 + 60% × 4,000 = 24,400."
+      ),
+      text(
+        "تجمع الأصول بعد إلغاء الاستثمارات: عقارات وآلات 65,000 وأصول متداولة 53,000، الإجمالي 118,000. تعرض حقوق ملاك الأم 40,000 + 3,600 + 24,400 = 68,000، وNCI مقدارها 12,000.",
+        "After eliminating investments, assets are PPE 65,000 and current assets 53,000, total 118,000. Parent-owner equity is 40,000 + 3,600 + 24,400 = 68,000, with NCI of 12,000."
+      ),
+      text(
+        "يلغى استثمار القرض 8,000 مقابل التزام S؛ يبقى قرض خارجي 18,000. تضاف الالتزامات المتداولة 10,000 + 10,000 = 20,000، فيتوازن الإجمالي: 68,000 + 12,000 + 18,000 + 20,000 = 118,000.",
+        "Eliminate the 8,000 loan investment against S's liability, leaving external loan stock of 18,000. Current liabilities combine to 10,000 + 10,000 = 20,000, so the statement balances: 68,000 + 12,000 + 18,000 + 20,000 = 118,000."
+      ),
+    ],
+    reference: "IFRS 10.22, B86, B94; IFRS 3.19",
+  },
+  {
+    id: "ifrs-book2-ifrs3-ch21-sing-wing-goodwill",
+    standardCode: "IFRS 3",
+    title: text("Sing وWing: الشهرة وأرباح ما قبل الاستحواذ", "Sing and Wing: goodwill and pre-acquisition profits"),
+    facts: text(
+      "استحوذت Sing في 31 مارس على جميع أسهم Wing مقابل 80,000. لدى Sing استثمار 80,000 وأصول متداولة 40,000؛ ورأس مال 75,000 وأرباح محتجزة 45,000. لدى Wing أصول متداولة 60,000؛ ورأس مال 50,000 وأرباح محتجزة عند الاستحواذ 10,000. لا تعرض المعطيات التزامات. يفترض الحساب أن الصفقة تجميع أعمال وأن 60,000 تمثل القيمة العادلة لصافي الأصول القابلة للتحديد بعد فحص IFRS 3.",
+      "Sing acquired all of Wing on 31 March for 80,000. Sing reports the 80,000 investment and current assets 40,000; share capital 75,000 and retained earnings 45,000. Wing reports current assets 60,000; share capital 50,000 and acquisition-date retained earnings 10,000. No liabilities are shown. The calculation assumes the transaction is a business combination and that 60,000 is the IFRS 3 acquisition-date fair value of identifiable net assets after the required review."
+    ),
+    question: text("احسب الشهرة وأعد قائمة المركز المالي الموحدة في تاريخ الاستحواذ.", "Calculate goodwill and prepare the acquisition-date consolidated statement of financial position."),
+    solution: [
+      text(
+        "صافي الأصول القابلة للتحديد = 50,000 رأس مال + 10,000 أرباح ما قبل الاستحواذ = 60,000. الشهرة = المقابل 80,000 − 60,000 = 20,000. تلغى أرباح Wing السابقة للاستحواذ ضمن صافي الأصول ولا تضاف إلى الأرباح المحتجزة للمجموعة.",
+        "Identifiable net assets are 50,000 share capital + 10,000 pre-acquisition retained earnings = 60,000. Goodwill is consideration 80,000 − 60,000 = 20,000. Wing's pre-acquisition earnings form part of acquired net assets and are not added to group retained earnings."
+      ),
+      text(
+        "الأصول الموحدة: شهرة 20,000 وأصول متداولة 40,000 + 60,000 = 100,000، أي 120,000. حقوق الملكية تعرض رأس مال Sing البالغ 75,000 وأرباحها المحتجزة 45,000، أي 120,000.",
+        "Consolidated assets are goodwill 20,000 and current assets of 40,000 + 60,000 = 100,000, total 120,000. Equity presents Sing's 75,000 share capital and 45,000 retained earnings, total 120,000."
+      ),
+      text(
+        "لا يثبت الفرق كشهرة لمجرد أنه دفع فوق القيمة الدفترية؛ يجب أولًا إثبات جميع الأصول القابلة للتحديد والالتزامات بالقيم المطلوبة وتأكيد أن المجموعة المستحوذ عليها تمثل عملًا. أي تعديل قيمة عادلة أو أصل غير ملموس منفصل يغير صافي الأصول والشهرة.",
+        "An excess over book value is not automatically goodwill. First recognise all identifiable assets and liabilities at the required acquisition-date amounts and confirm that the acquired set is a business. Any fair-value adjustment or separately identifiable intangible changes net assets and goodwill."
+      ),
+    ],
+    reference: "IFRS 3.3, 10–19, 32; IFRS 10.B86",
+  }
 
 ];
 
