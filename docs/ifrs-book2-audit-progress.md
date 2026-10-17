@@ -582,3 +582,13 @@ The inventory establishes that accounting-standard bank prompts Q5–Q21 and Q23
 - Matched page 466's full-disposal framework to the current IFRS 10 loss-of-control treatment: consolidate to the disposal date, derecognise subsidiary net assets and goodwill, derecognise NCI, recognise consideration and any retained interest, and recognise the resulting gain or loss with required OCI reclassification.
 - Locked the existing case identifier into coverage. Verified against IFRS 10.20, 25, B86(c), B88, B94 and B97–B99; IFRS 3.19; IAS 16.39 and 42; IAS 36.C6–C8; IAS 12.19–20 and 24; and IFRS 9.5.7.5.
 - Chapter 22 is reconciled through PDF p466. Continue with the Horse/Hoof disposal case beginning on p467; whole-book audit remains incomplete.
+
+
+## Chapter 22 — full and mid-year subsidiary disposals (PDF pp. 467–472)
+
+- Visually matched the Horse/Hoof full-disposal question and its statement/workings on pages 467–469. Confirmed the base case is already represented by `ifrs-book2-ifrs10-horse-hoof-full-disposal`: acquisition goodwill 72, disposal-date net assets 1,080, NCI 216 and group disposal gain 364. Rechecked consolidated profit 760, parent/NCI attribution 724/36, closing retained earnings 1,480 and post-disposal statement total 2,760.
+- Added the photographed 31 March mid-year variant to the same case. Recalculation in thousands: disposal-date net assets 990, NCI 198, goodwill 72 and gain 336; six-month group profit 642, attributed 624/18; statement total 2,660 and retained earnings 1,380. The answer remains conditional on even profit accrual, no dividends and no additional disposal tax.
+- Confirmed pages 470–471 are already represented by `ifrs-book2-ifrs10-quadra-saturn-midyear-disposal`. Rechecked disposal-date net assets 634 after six-month profit 24 and dividend 20; goodwill 118; closing NCI 145.6; and group disposal gain 93.6. The existing answer does not automatically label the sale a discontinued operation.
+- Added page 472's conditional discontinued-operation presentation to the Horse/Hoof case. If—and only if—the IFRS 5 definition is met, the post-tax discontinued amount is 180 operating profit + 364 disposal gain = 544, attributed 508 to parent owners and 36 to NCI; continuing profit is 216. Any disposal tax or relevant OCI reclassification requires additional facts.
+- Locked both existing disposal case identifiers into coverage. Verified against IFRS 10.20, 25 and B97–B99; IFRS 3.19 and 32; IFRS 5.32–33; and IAS 1.81A. No learner-facing book or repository references were introduced.
+- Chapter 22 is reconciled through PDF p472. Continue with the consolidated statement of changes in equity after p472; whole-book audit remains incomplete.
