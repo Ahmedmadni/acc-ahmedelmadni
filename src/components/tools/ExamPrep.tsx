@@ -21,6 +21,14 @@ import {
 } from "lucide-react";
 import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 import { extractExamQuestions } from "@/lib/exam.functions";
+import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
+
+const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
+  const m = new Map<string, ExamQuestion>();
+  for (const q of SEED_QUESTIONS) m.set(q.id, q);
+  for (const q of IFRS_LOCAL_QUESTIONS) m.set(q.id, { ...q, track: "IFRS" });
+  return [...m.values()];
+})();
 import {
   listExamQuestions,
   addExamQuestions,
@@ -128,7 +136,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   // Combine: SEED (built-in) + remote (DB public) + local (legacy localStorage). Dedupe by id.
   const allQuestions = useMemo(() => {
     const map = new Map<string, ExamQuestion>();
-    for (const q of SEED_QUESTIONS) map.set(q.id, q);
+    for (const q of BUILT_IN_QUESTIONS) map.set(q.id, q);
     for (const q of remote) map.set(q.id, q);
     for (const q of local) map.set(q.id, q);
     return Array.from(map.values());
@@ -379,7 +387,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
         </span>
         <span>·</span>
         <span>
-          {lang === "ar" ? "مدمج:" : "Built-in:"} <b>{SEED_QUESTIONS.length}</b>
+          {lang === "ar" ? "مدمج:" : "Built-in:"} <b>{BUILT_IN_QUESTIONS.length}</b>
         </span>
         {local.length > 0 && (
           <>
