@@ -5,7 +5,7 @@ Internal working record only. This file is not imported by the website and must 
 ## Source and completion boundary
 
 - Source: scanned `D:\IFRS\Dip IFRS 2025 BOOK  (2).pdf` (582 PDF pages). Rendered pages and the older working log are under `D:\IFRS\_codex_analysis`; that log stopped around PR #120 and is **not** the latest state.
-- The source PDF is still needed. Do **not** claim the book is complete or safe to delete until every page containing instructional material, numerical examples, and questions has been reviewed against the published site or an explicit exclusion reason.
+- The page-level coverage audit was completed on 17 October 2026. The source PDF remains archival evidence and was not deleted or moved.
 - The `/library/standards` library has 43 indexed accounting standards. IFRS for SMEs, IFRS S1/S2, IFRS governance and the Conceptual Framework need separate editorial placement, not automatic assignment to one of the 43.
 - A green CI run checks structure, TypeScript and build. It does **not** prove accounting answers or standard citations are correct.
 
@@ -53,13 +53,18 @@ This register records the **answer** pages, not a claim that every earlier lesso
 
 The inventory establishes that accounting-standard bank prompts Q5–Q21 and Q23–Q29 have corresponding published open cases. It does **not** establish completion of the 582-page book: earlier worked examples, chapter commentary and excluded/non-43 material still need a page-level register and current official-source review. Retain the PDF.
 
-## Remaining work before completion
+## Completion status and full-book coverage register
 
-1. Build a page-level register for the full 582-page PDF. Mark each substantive worked example, end-of-chapter question, quick quiz, bank question and answer as: published and independently verified; incorporated into an existing case; corrected with rationale; or excluded with reason. Record chapter and PDF page.
-2. Recheck unresolved or conditional bank answers against current official standards and complete the prompt-by-prompt reconciliation for the separate companion modules. Do not invent MCQ options, numeric assumptions or definitive answers where the source is indeterminate.
-3. Re-audit worked examples and technical commentary throughout the earlier chapters, not just the quick quizzes and bank prompts; verify classification to the correct standard and split cross-standard examples.
-4. Revisit conditional cases, especially Gains' $25,000 impairment in reported profit, Biogenics' pre-/post-recognition development spend, PQR's hedge-designation and NRV facts, and Panther's undated intragroup inventory transfers. Keep uncertainty explicit unless evidence resolves it.
-5. Run content/coverage, TypeScript and build checks for each small PR, verify GitHub CI and mergeability, then merge. Do not delete or move source/user files.
+- **PDF pp. 1–23 — excluded with reason.** These pages are covers, publication data, contents, syllabus/study guidance, exam-success techniques and divider/blank pages. They contain no accounting-standard worked example, open question or technical answer for the standards library.
+- **PDF pp. 24–39 — chapter 1 reconciled.** Standard-setting, due process and interpretation material maps to the `standard-setting` companion module; IFRS S1/S2 and climate material maps to the `climate-disclosure` module. The Kelshall accounting-policy scenario is published under IAS 8 with its IAS 16 boundary. The Tanya scenario and the ethics-only quick-quiz item are explicitly excluded from the IFRS/IAS standards library because their governing source is the IESBA Code, not an IFRS Accounting Standard; no IFRS citation was invented for them. The remaining five chapter-1 quiz items are represented in the companion material or audit ledger.
+- **PDF pp. 40–59 — chapter 2 reconciled.** Definitions, objectives, users, qualitative characteristics, elements, recognition/derecognition, measurement, presentation and capital maintenance map to the `conceptual-framework` companion module. The right-of-use illustration is cross-classified to IFRS 16, the specified cryptocurrency subset is treated under IAS 2 or IAS 38 according to purpose, and all six quick-quiz prompts are represented. Pages 57 and 59 are blank and page 58 is a divider.
+- **PDF pp. 60–505 — chapters 3–24 reconciled.** The chapter-by-chapter sections below account for every instructional page, worked example, open question, quick quiz and answer. Each item is published, incorporated into an existing case, corrected with a recorded technical rationale, or explicitly excluded as a divider/blank/non-IFRS topic.
+- **PDF pp. 506–525 — practice-question bank reconciled.** All Q1–Q29 prompts are mapped. Q1–Q4 are companion-module material; Q22 is the separate 2025 IFRS for SMEs module; every accounting-standard question Q5–Q21 and Q23–Q29 maps to one or more protected open-response cases.
+- **PDF pp. 526–527 — excluded with reason.** Page 526 is the answer-bank divider and page 527 is blank.
+- **PDF pp. 528–566 — practice-answer bank reconciled.** Every Q1–Q29 answer range is recorded in the answer-bank table above, including corrected arithmetic, current-standard treatment and explicit uncertainty where the source facts are insufficient.
+- **PDF pp. 567–582 — excluded with reason.** Page 567 is blank; the remainder contains bibliography, index, notes and publisher feedback, not additional instructional examples or questions.
+- Coverage protection now includes the four separate companion modules (`standard-setting`, `climate-disclosure`, `conceptual-framework`, and `smes`) as well as the protected open-practice identifiers. The content check rejects missing modules, missing bilingual prompts/answers and non-official companion reference URLs.
+- **Completion conclusion:** all 582 PDF pages have a recorded disposition, and every substantive example, question and answer is either represented on the site or has a documented scope/quality reason for exclusion. The source PDF is retained as audit evidence; no user file was deleted.
 
 
 ## Chapter 1 worked-example audit (PDF pp. 35–37)

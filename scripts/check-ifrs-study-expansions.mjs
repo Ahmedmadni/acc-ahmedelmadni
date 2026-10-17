@@ -16,6 +16,7 @@ let standards;
 let reviewedQuestions;
 let reviewedExtensionQuestions;
 let openPracticeCases;
+let companionModules;
 try {
   ({ IFRS_STANDARD_STUDY_EXPANSIONS: expansions } = await server.ssrLoadModule(
     "/src/data/ifrs-standard-study-expansions.ts",
@@ -29,6 +30,9 @@ try {
   ));
   ({ IFRS_BOOK2_PRACTICE_CASES: openPracticeCases } = await server.ssrLoadModule(
     "/src/data/ifrs-book2-practice-cases.ts",
+  ));
+  ({ IFRS_COMPANION_MODULES: companionModules } = await server.ssrLoadModule(
+    "/src/data/ifrs-companion-foundations.ts",
   ));
 } finally {
   await server.close();
@@ -45,6 +49,31 @@ const hasText = (value) =>
   value.ar.trim().length > 0 &&
   typeof value.en === "string" &&
   value.en.trim().length > 0;
+
+const requiredCompanionModuleIds = new Set([
+  "standard-setting",
+  "climate-disclosure",
+  "conceptual-framework",
+  "smes",
+]);
+const companionModuleIds = new Set();
+for (const module of companionModules) {
+  if (companionModuleIds.has(module.id)) failures.push(`${module.id}: duplicate companion module ID`);
+  companionModuleIds.add(module.id);
+  if (!hasText(module.title) || !hasText(module.note))
+    failures.push(`${module.id}: incomplete bilingual companion module`);
+  if (!Array.isArray(module.questions) || module.questions.length === 0)
+    failures.push(`${module.id}: companion module has no questions`);
+  for (const question of module.questions ?? []) {
+    if (!hasText(question.prompt) || !hasText(question.answer))
+      failures.push(`${module.id}: incomplete bilingual companion question`);
+  }
+  if (!module.referenceUrl?.startsWith("https://www.ifrs.org/"))
+    failures.push(`${module.id}: companion reference must use an official IFRS Foundation URL`);
+}
+for (const id of requiredCompanionModuleIds) {
+  if (!companionModuleIds.has(id)) failures.push(`${id}: required companion module is missing`);
+}
 
 for (const [code, expansion] of Object.entries(expansions)) {
   if (!indexed.has(code)) failures.push(`${code}: standard is not indexed`);
@@ -1098,6 +1127,7 @@ console.log(
       ),
       reviewed_source_questions: reviewedQuestions.length,
       open_practice_cases: openPracticeCases.length,
+      companion_modules: companionModules.length,
       public_reference_policy: "IFRS/IAS only",
     },
     null,
