@@ -6550,6 +6550,36 @@ export const IFRS_BOOK2_PRACTICE_CASES: IfrsPracticeCase[] = [
     reference: "IFRS 10.20, 22, B86, B94; IFRS 3.19; IAS 1.81A, 106",
   },
 
+  {
+    id: "ifrs-book2-ias28-parent-associate-downstream-inventory",
+    standardCode: "IAS 28",
+    title: text("Parent وAssociate: بيع مخزون من المستثمر إلى الزميلة", "Parent and Associate: downstream inventory sale"),
+    facts: text(
+      "تمتلك Parent، وهي شركة أم لها شركات تابعة، نسبة 25% من أسهم Associate. خلال السنة باعت Parent إلى Associate بضاعة بمبلغ 1,000,000 على أساس التكلفة مضافًا إليها هامش 25%. في نهاية السنة كانت Associate لا تزال تحتفظ بكل هذه البضاعة في مخزونها.",
+      "Parent, a parent with subsidiaries, holds 25% of Associate. During the year Parent sold goods to Associate for 1,000,000 at cost plus a 25% mark-up. At year-end Associate still held all of those goods in inventory."
+    ),
+    question: text(
+      "احسب الربح غير المحقق الواجب استبعاده وبيّن قيد التسوية في القوائم الموحدة وفق طريقة حقوق الملكية.",
+      "Calculate the unrealised profit to eliminate and show the consolidation adjustment under the equity method."
+    ),
+    solution: [
+      text(
+        "السعر البالغ 1,000,000 يشمل ربحًا بنسبة 25% من التكلفة؛ لذلك الربح الكامن = 1,000,000 × 25/125 = 200,000. ولأن كل البضاعة بقيت لدى الزميلة، لم يتحقق أي جزء من هذا الربح مع طرف خارجي حتى تاريخ التقرير.",
+        "The 1,000,000 transfer price includes a profit equal to 25% of cost, so the embedded gain is 1,000,000 × 25/125 = 200,000. Because the associate still holds all of the goods, none of that gain has been realised with an external party by the reporting date."
+      ),
+      text(
+        "وفق IAS 28 تُستبعد حصة المستثمر في ربح المعاملة الهابطة: 25% × 200,000 = 50,000. ويبقى الجزء المنسوب للمستثمرين غير المرتبطين في الزميلة، 150,000، معترفًا به.",
+        "IAS 28 eliminates the investor's share of the downstream gain: 25% × 200,000 = 50,000. The 150,000 attributable to unrelated investors in the associate remains recognised."
+      ),
+      text(
+        "في ورقة التوحيد: مدين ربح المجموعة أو تكلفة المبيعات 50,000، ودائن الاستثمار في الزميلة 50,000. قد يعرض نموذج العمل الخصم ضمن سطر حصة ربح الزميلة، لكن جوهر التسوية هو تخفيض ربح المجموعة والقيمة الدفترية للاستثمار؛ ولا يُخفض مخزون المجموعة لأن مخزون Associate لا يُجمع بندًا ببند.",
+        "Consolidation worksheet: debit group profit or cost of sales 50,000 and credit the investment in associate 50,000. A worksheet may present the debit within the share-of-associate-profit line, but the substance is to reduce group profit and the investment's carrying amount; group inventory is not reduced because Associate's inventory is not consolidated line by line."
+      ),
+    ],
+    reference: "IAS 28.10, 26–29",
+  },
+
+
 ];
 
 export function getIfrsPracticeCases(standardCode: string): IfrsPracticeCase[] {
