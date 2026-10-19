@@ -41,13 +41,15 @@ const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
 
-check(CMA_TOPICS.length === 19 && ids.size === 19, "Expected 19 unique sections for units 1–4");
-check(Object.keys(CMA_TOPIC_GUIDES).length === 19, "Guide count does not match topic count");
+check(CMA_TOPICS.length === 26 && ids.size === 26, "Expected 26 unique sections for units 1–6");
+check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Guide count does not match topic count");
 for (const [unit, expected] of [
   [1, 6],
   [2, 4],
   [3, 5],
   [4, 4],
+  [5, 3],
+  [6, 4],
 ]) {
   check(
     CMA_TOPICS.filter((topic) => topic.studyUnit === unit).length === expected,
@@ -82,7 +84,8 @@ for (const topic of CMA_TOPICS) {
     `Missing practical solution: ${topic.id}`,
   );
   check(
-    CMA_LOCAL_QUESTIONS.filter((question) => question.topicId === topic.id).length >= 6,
+    CMA_LOCAL_QUESTIONS.filter((question) => question.topicId === topic.id).length >=
+      (topic.studyUnit >= 5 ? 8 : 6),
     `Too few questions: ${topic.id}`,
   );
 }
@@ -111,7 +114,7 @@ for (const q of CMA_LOCAL_QUESTIONS) {
   );
   check(q.choices.ar.every(Boolean) && q.choices.en.every(Boolean), `Empty choice: ${q.id}`);
 }
-check(CMA_STUDY_UNIT_CASES.length === 4, "Expected a linked practice case for every unit");
+check(CMA_STUDY_UNIT_CASES.length === 6, "Expected a linked practice case for every unit");
 for (const item of CMA_STUDY_UNIT_CASES) {
   check(
     item.title.ar &&

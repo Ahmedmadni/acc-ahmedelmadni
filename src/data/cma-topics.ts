@@ -5,6 +5,8 @@ export const CMA_LOS_URL =
   "https://www.imaglobal.org/assets/static/cma-learning-outcome-statements-2024.HDHHOjUF.pdf";
 export const CMA_EXAM_FORMAT_URL =
   "https://www.imaglobal.org/learn/course/the-cma-handbook/the-cma-examinations/cma-examinations";
+export const CMA_IR_FRAMEWORK_URL =
+  "https://integratedreporting.ifrs.org/wp-content/uploads/2024/08/IntegratedReporting_Framework_061024.pdf";
 
 export type CmaPart = "part-1" | "part-2";
 
@@ -25,7 +27,7 @@ export type CmaDomain =
 export interface CmaTopic {
   id: string;
   code: string;
-  studyUnit: 1 | 2 | 3 | 4;
+  studyUnit: 1 | 2 | 3 | 4 | 5 | 6;
   section: string;
   sourcePages: string;
   losRef: string;
@@ -620,5 +622,194 @@ export const CMA_TOPICS: CmaTopic[] = [
       },
     ],
     searchTerms: ["bonds payable", "premium", "discount", "effective interest", "السندات"],
+  },
+  {
+    id: "su5-revenue-contracts",
+    code: "CMA-P1-SU5-5.1",
+    studyUnit: 5,
+    section: "5.1",
+    sourcePages: "2–6",
+    losRef: "A.2.x–y",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "عقود العملاء ونموذج الإيراد ذي الخطوات الخمس",
+    titleEn: "Customer Contracts and the Five-Step Revenue Model",
+    summaryAr:
+      "فحص العقد والتزامات الأداء والسعر وتوزيعه حسب الأسعار المستقلة، ثم إثبات الإيراد عند انتقال السيطرة.",
+    summaryEn:
+      "Identify contracts and distinct obligations, determine and allocate price, and recognize revenue as control transfers.",
+    keyFormulas: [
+      {
+        nameAr: "توزيع سعر الصفقة",
+        nameEn: "Relative standalone-price allocation",
+        formula:
+          "Allocated price = Contract price × Individual standalone price ÷ Sum of standalone prices",
+      },
+    ],
+    searchTerms: [
+      "ASC 606",
+      "five steps",
+      "standalone price",
+      "contract asset",
+      "contract liability",
+      "الاعتراف بالإيراد",
+    ],
+  },
+  {
+    id: "su5-over-time",
+    code: "CMA-P1-SU5-5.2",
+    studyUnit: 5,
+    section: "5.2",
+    sourcePages: "6–10",
+    losRef: "A.2.x–y",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "الاعتراف بالإيراد على مدى الزمن",
+    titleEn: "Revenue Recognition over Time",
+    summaryAr:
+      "اختبارات نقل السيطرة مع الزمن وقياس التقدم بالمدخلات أو المخرجات وإعادة تقدير تكلفة الإنجاز.",
+    summaryEn:
+      "Over-time criteria, input and output progress measures, and cumulative catch-up after revised cost estimates.",
+    keyFormulas: [
+      {
+        nameAr: "إيراد الفترة بطريقة التكلفة",
+        nameEn: "Current-period cost-to-cost revenue",
+        formula:
+          "Period revenue = Contract price × Eligible costs to date ÷ Revised total expected eligible costs − Revenue recognized previously",
+      },
+    ],
+    searchTerms: [
+      "cost-to-cost",
+      "output method",
+      "right to invoice",
+      "progress",
+      "contract loss",
+      "عقود طويلة الأجل",
+    ],
+  },
+  {
+    id: "su5-impairment-disposal",
+    code: "CMA-P1-SU5-5.3",
+    studyUnit: 5,
+    section: "5.3",
+    sourcePages: "11–14",
+    losRef: "A.2.n; A.2.aa–bb; A.2.ff(vi)",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "انخفاض قيمة الأصول طويلة الأجل واستبعادها",
+    titleEn: "Long-Lived Asset Impairment and Disposal",
+    summaryAr:
+      "اختبار الاسترداد للأصول المستخدمة، فحص غير الملموسات والشهرة، وحساب الربح أو الخسارة عند بيع أصل.",
+    summaryEn:
+      "Recoverability for held-and-used assets, indefinite intangibles and goodwill tests, and disposal gains or losses.",
+    keyFormulas: [
+      {
+        nameAr: "خسارة انخفاض الأصل المستخدم",
+        nameEn: "Held-and-used impairment",
+        formula: "If carrying value > undiscounted cash flows: loss = carrying value − fair value",
+      },
+      {
+        nameAr: "ربح أو خسارة البيع",
+        nameEn: "Disposal gain or loss",
+        formula: "Net sale proceeds − carrying value after depreciation through disposal date",
+      },
+    ],
+    searchTerms: ["undiscounted", "fair value", "goodwill", "reporting unit", "disposal", "الهبوط"],
+  },
+  {
+    id: "su6-ir-foundations",
+    code: "CMA-P1-SU6-6.1",
+    studyUnit: 6,
+    section: "6.1",
+    sourcePages: "2–3",
+    losRef: "A.1.l–m",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "التفكير والتقرير المتكامل",
+    titleEn: "Integrated Thinking and Reporting",
+    summaryAr:
+      "التفكير الترابطي داخل المنظمة، وعملية التقرير المتكامل، والتقرير بوصفه وسيلة لتفسير خلق القيمة.",
+    summaryEn:
+      "Distinguish connected management thinking, the reporting process and its concise report on value over time.",
+    searchTerms: [
+      "integrated reporting",
+      "integrated thinking",
+      "providers of financial capital",
+      "التقرير المتكامل",
+    ],
+  },
+  {
+    id: "su6-ir-capitals",
+    code: "CMA-P1-SU6-6.2",
+    studyUnit: 6,
+    section: "6.2",
+    sourcePages: "4–8",
+    losRef: "A.1.n",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "رؤوس الأموال الستة وعملية خلق القيمة",
+    titleEn: "Six Capitals and Value Creation",
+    summaryAr:
+      "تحديد المالي والمُصنّع والفكري والبشري والاجتماعي والعلاقات والطبيعي؛ ربط المدخلات والمخرجات بالنتائج.",
+    summaryEn:
+      "Classify financial, manufactured, intellectual, human, social and relationship, and natural capitals; connect inputs, outputs and outcomes.",
+    searchTerms: [
+      "six capitals",
+      "natural",
+      "manufactured",
+      "human",
+      "intellectual",
+      "outcomes",
+      "رؤوس الأموال",
+    ],
+  },
+  {
+    id: "su6-ir-principles-elements",
+    code: "CMA-P1-SU6-6.3",
+    studyUnit: 6,
+    section: "6.3",
+    sourcePages: "9–12",
+    losRef: "A.1.o",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "مبادئ وعناصر التقرير المتكامل",
+    titleEn: "Integrated Report Principles and Content Elements",
+    summaryAr:
+      "سبعة مبادئ توجيهية وثمانية عناصر محتوى رسمية من النظرة العامة والحوكمة إلى التوقعات وأساس الإعداد.",
+    summaryEn:
+      "Seven guiding principles and eight official content elements from overview and governance to outlook and preparation basis.",
+    searchTerms: [
+      "materiality",
+      "connectivity",
+      "governance",
+      "business model",
+      "outlook",
+      "IFRS Foundation",
+      "الأهمية النسبية",
+    ],
+  },
+  {
+    id: "su6-ir-adoption",
+    code: "CMA-P1-SU6-6.4",
+    studyUnit: 6,
+    section: "6.4",
+    sourcePages: "13–14",
+    losRef: "A.1.p",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "تبنّي التقرير المتكامل وتحدياته",
+    titleEn: "Adopting Integrated Reporting",
+    summaryAr:
+      "موازنة منافع القرار والترابط مع تكاليف البيانات وضوابط غير المالي والتأكيد ودعم الإدارة العليا.",
+    summaryEn:
+      "Weigh connected decisions and stakeholder benefits against data, controls, assurance and leadership challenges.",
+    searchTerms: [
+      "assurance",
+      "data quality",
+      "tone at the top",
+      "benefits",
+      "challenges",
+      "التحقق",
+    ],
   },
 ];

@@ -1,9 +1,10 @@
 import type { ExamQuestion } from "@/lib/exam-bank";
 import { CMA_MORE_QUESTIONS_1_2 } from "@/data/cma-questions-units-1-2";
 import { CMA_MORE_QUESTIONS_3_4 } from "@/data/cma-questions-units-3-4";
+import { CMA_MORE_QUESTIONS_5_6 } from "@/data/cma-questions-units-5-6";
 
-/** Original practice questions developed from the user's Gleim 2024 Study Units 1–4. */
-export type CmaLocalQuestion = ExamQuestion & { topicId: string; studyUnit: 1 | 2 | 3 | 4 };
+/** Original practice questions developed from the user's Gleim 2024 Study Units 1–6. */
+export type CmaLocalQuestion = ExamQuestion & { topicId: string; studyUnit: 1 | 2 | 3 | 4 | 5 | 6 };
 export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
   {
     id: "cma-su1-accrual-income",
@@ -607,4 +608,5 @@ export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
   },
   ...CMA_MORE_QUESTIONS_1_2,
   ...CMA_MORE_QUESTIONS_3_4,
+  ...CMA_MORE_QUESTIONS_5_6,
 ];

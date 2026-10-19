@@ -1,6 +1,7 @@
 import { CMA_STUDY_UNIT_CASES_3_4, CMA_TOPIC_GUIDES_3_4 } from "@/data/cma-guides-units-3-4";
+import { CMA_STUDY_UNIT_CASES_5_6, CMA_TOPIC_GUIDES_5_6 } from "@/data/cma-guides-units-5-6";
 
-/** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–4. */
+/** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–6. */
 export interface CmaTopicGuide {
   topicId: string;
   scope: { ar: string; en: string };
@@ -328,11 +329,12 @@ export const CMA_TOPIC_GUIDES: Record<string, CmaTopicGuide> = {
     },
   },
   ...CMA_TOPIC_GUIDES_3_4,
+  ...CMA_TOPIC_GUIDES_5_6,
 };
 
 /** Original linked practice cases for the 2026 case-based assessment style. */
 export interface CmaStudyUnitCase {
-  studyUnit: 1 | 2 | 3 | 4;
+  studyUnit: 1 | 2 | 3 | 4 | 5 | 6;
   title: { ar: string; en: string };
   scenario: { ar: string; en: string };
   tasks: { prompt: { ar: string; en: string }; solution: { ar: string; en: string } }[];
@@ -420,4 +422,5 @@ export const CMA_STUDY_UNIT_CASES: CmaStudyUnitCase[] = [
     ],
   },
   ...CMA_STUDY_UNIT_CASES_3_4,
+  ...CMA_STUDY_UNIT_CASES_5_6,
 ];

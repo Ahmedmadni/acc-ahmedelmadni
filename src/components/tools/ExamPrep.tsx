@@ -31,6 +31,7 @@ const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
   for (const q of CMA_LOCAL_QUESTIONS) m.set(q.id, { ...q, track: "CMA" });
   return [...m.values()];
 })();
+const EMPTY_QUESTIONS: ExamQuestion[] = [];
 import {
   listExamQuestions,
   addExamQuestions,
@@ -65,7 +66,7 @@ function saveLocal(qs: ExamQuestion[]) {
 
 export function ExamPrep({ lang }: { lang: Lang }) {
   const [track, setTrack] = useState<ExamTrack>("IFRS");
-  const [cmaUnit, setCmaUnit] = useState<"all" | 1 | 2 | 3 | 4>("all");
+  const [cmaUnit, setCmaUnit] = useState<"all" | 1 | 2 | 3 | 4 | 5 | 6>("all");
   const [local, setLocal] = useState<ExamQuestion[]>([]);
   const [mode, setMode] = useState<"quiz" | "upload">("quiz");
   const [current, setCurrent] = useState(0);
@@ -127,7 +128,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     staleTime: 60_000,
   });
 
-  const remote = dbQuery.data?.questions ?? [];
+  const remote = dbQuery.data?.questions ?? EMPTY_QUESTIONS;
   const adminQuery = useQuery({
     queryKey: ["exam-questions-admin", isAdmin],
     queryFn: () => listAdminQs(),
@@ -391,7 +392,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           className="flex flex-wrap gap-2"
           aria-label={lang === "ar" ? "اختيار وحدة CMA" : "Select CMA study unit"}
         >
-          {(["all", 1, 2, 3, 4] as const).map((unit) => (
+          {(["all", 1, 2, 3, 4, 5, 6] as const).map((unit) => (
             <button
               key={unit}
               type="button"
