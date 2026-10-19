@@ -1,0 +1,2229 @@
+[
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 1,
+    "page": 679,
+    "topicId": "su7-cost-terms",
+    "stem": "Inventoriable costs",
+    "choices": [
+      "Include only the prime costs of manufacturing a product.",
+      "Include only the conversion costs of manufacturing a product.",
+      "Are expensed when products become part of finished goods\ninventory.",
+      "Are regarded as assets before the products are sold."
+    ],
+    "answerIndex": 3,
+    "explanation": "Inventoriable (product) costs include all costs necessary for\ngood production. These include direct materials and\nconversion costs (direct labor and overhead). Inventoriable\ncosts are treated as assets until the products are sold\nbecause they represent future economic benefits. These costs\nare expensed at the time of sale.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 2,
+    "page": 680,
+    "topicId": "su7-cost-terms",
+    "stem": "Which of the following is a period cost rather than a product\ncost of a manufacturer?",
+    "choices": [
+      "Direct materials.",
+      "Variable overhead.",
+      "Fixed overhead.",
+      "Abnormal spoilage."
+    ],
+    "answerIndex": 3,
+    "explanation": "Materials, labor, and overhead (both fixed and variable) are\nexamples of product costs. Abnormal spoilage is an example\nof a period cost. Abnormal spoilage is not inherent in a\nproduction process and should not be categorized as a\nproduct cost. Abnormal spoilage should be charged to a loss\naccount in the period that detection of the spoilage occurs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 3,
+    "page": 680,
+    "topicId": "su7-cost-terms",
+    "stem": "Cost drivers are",
+    "choices": [
+      "Activities that cause costs to increase as the activity increases.",
+      "Accounting techniques used to control costs.",
+      "Accounting measurements used to evaluate whether or not\nperformance is proceeding according to plan.",
+      "A mechanical basis, such as machine hours, computer time,\nsize of equipment, or square footage of factory, used to assign\ncosts to activities."
+    ],
+    "answerIndex": 0,
+    "explanation": "A cost driver is “a measure of activity, such as direct labor\nhours, machine hours, beds occupied, computer time used,\nflight hours, miles driven, or contracts, that is a causal factor in\nthe incurrence of cost to an entity” (IMA). It is a basis used to\nassign costs to cost objects.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 4,
+    "page": 681,
+    "topicId": "su7-cost-terms",
+    "stem": "The terms direct cost and indirect cost are commonly used in\naccounting. A particular cost might be considered a direct cost\nof a manufacturing department but an indirect cost of the\nproduct produced in the manufacturing department. Classifying\na cost as either direct or indirect depends upon",
+    "choices": [
+      "The behavior of the cost in response to volume changes.",
+      "Whether the cost is expensed in the period in which it is\nincurred.",
+      "The cost object to which the cost is being related.",
+      "Whether an expenditure is unavoidable because it cannot be\nchanged regardless of any action taken."
+    ],
+    "answerIndex": 2,
+    "explanation": "A direct cost can be specifically associated with a single cost\nobject in an economically feasible way. An indirect cost cannot\nbe specifically associated with a single cost object. Thus, the\nspecific cost object influences whether a cost is direct or\nindirect. For example, a cost might be directly associated with\na single plant. The same cost, however, might not be directly\nassociated with a particular department in the plant.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 5,
+    "page": 682,
+    "topicId": "su7-cost-terms",
+    "stem": "Which one of the following best describes direct labor?",
+    "choices": [
+      "A prime cost.",
+      "A period cost.",
+      "A product cost.",
+      "Both a product cost and a prime cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "Direct labor is a product cost and a prime cost. Product costs\nare incurred to produce units of output and are deferred to\nfuture periods to the extent that output is not sold. Prime costs\nare the direct cost of manufacturing, for example, direct\nmaterials and direct labor.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 6,
+    "page": 683,
+    "topicId": "su7-cost-terms",
+    "stem": "In cost terminology, conversion costs consist of",
+    "choices": [
+      "Direct and indirect labor.",
+      "Direct labor and direct materials.",
+      "Direct labor and factory overhead.",
+      "Indirect labor and variable factory overhead."
+    ],
+    "answerIndex": 2,
+    "explanation": "Conversion costs consist of direct labor and factory overhead.\nThese are the costs of converting raw materials into a finished\nproduct.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 7,
+    "page": 683,
+    "topicId": "su7-cost-terms",
+    "stem": "Conversion costs do not include",
+    "choices": [
+      "Depreciation.",
+      "Direct materials.",
+      "Indirect labor.",
+      "Indirect materials."
+    ],
+    "answerIndex": 1,
+    "explanation": "Conversion costs are necessary to convert raw materials into\nfinished products. They include all manufacturing costs, for\nexample, direct labor and manufacturing overhead, other than\ndirect materials.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 8,
+    "page": 684,
+    "topicId": "su7-cost-terms",
+    "stem": "The term “prime costs” refers to",
+    "choices": [
+      "Manufacturing costs incurred to produce units of output.",
+      "All costs associated with manufacturing other than direct labor\ncosts and raw material costs.",
+      "The sum of direct labor costs and all factory overhead costs.",
+      "The sum of raw material costs and direct labor costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Prime costs are raw material costs and direct labor costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 9,
+    "page": 684,
+    "topicId": "su7-cost-terms",
+    "stem": "Direct labor costs are wages paid to\nMachine Factory          Corporate\nOperators Supervisors Vice-President",
+    "choices": [
+      "Yes          Yes         Yes",
+      "Yes          No          No",
+      "No          Yes           Yes",
+      "No          No            Yes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Direct labor costs are wages paid to labor that can be\nspecifically identified with the production of finished goods.\nBecause the wages of a factory machine operator are\nidentifiable with a finished product, the wages are a direct\nlabor cost. Because a supervisor’s or vice-president’s salary is\nnot identifiable with the production of specific finished goods, it\nis a part of factory overhead and not a direct labor cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 10,
+    "page": 685,
+    "topicId": "su7-cost-terms",
+    "stem": "A firm manufactures light bulbs. The following salaries were\nincluded in the firm’s manufacturing costs for the year:\nMachine operators       $145,000\nFactory supervisors       60,000\nMachinery mechanics 25,000\nWhat is the amount of direct labor for the year?",
+    "choices": [
+      "$230,000",
+      "$205,000",
+      "$170,000",
+      "$145,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Direct labor costs are wages paid to labor that can feasibly be\nspecifically identified with the production of finished goods.\nBecause the wages of machine operators are identifiable with\nthe production of finished goods, their $145,000 of salaries are\na direct labor cost. However, because the salaries and wages\nof the factory supervisors and machinery mechanics are not\nidentifiable with the production of finished goods, their $60,000\nand $25,000 of salaries are not direct labor costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 11,
+    "page": 686,
+    "topicId": "su7-cost-terms",
+    "stem": "Production costs for July are\nDirect materials $120,000\nDirect labor       108,000\nFactory overhead      6,000\nWhat is the amount of costs traceable to specific products?",
+    "choices": [
+      "$234,000",
+      "$228,000",
+      "$120,000",
+      "$108,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Product costs can be associated with a specific product.\nProduct costs include direct materials and direct labor. Factory\noverhead cannot be traced to specific products and therefore\nis allocated to all products produced. Thus, the amount of\ncosts traceable to specific products in the production process\nis $228,000 ($120,000 + $108,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 12,
+    "page": 687,
+    "topicId": "su7-cost-terms",
+    "stem": "An example of an operating cost at a hotel that is both direct\nand fixed is",
+    "choices": [
+      "Manager salary.",
+      "Water.",
+      "Toilet tissue.",
+      "Advertising for the hotel chain."
+    ],
+    "answerIndex": 0,
+    "explanation": "Direct costs are ones that can be associated with a particular\ncost object in an economically feasible way, that is, they can\nbe traced to that object. Fixed costs are those that remain\nunchanged in total over the relevant range of production. A\nhotel manager’s salary is traceable to the single location (s)he\nmanages, and it remains fixed over a set period of time\nregardless of the number of guests.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 13,
+    "page": 688,
+    "topicId": "su7-cost-terms",
+    "stem": "A company produces 200,000 units of a good that has the\nfollowing costs:\nDirect material costs              $2,000,000\nDirect manufacturing labor costs 1,000,000\nIndirect manufacturing labor costs    600,000\nThe company’s per unit prime costs and conversion costs,\nrespectively, are",
+    "choices": [
+      "$8 and $15.",
+      "$8 and $18.",
+      "$10 and $8.",
+      "$15 and $8."
+    ],
+    "answerIndex": 3,
+    "explanation": "Prime cost consists of direct materials and direct labor.\nConversion cost consists of direct labor and manufacturing\noverhead. The per unit calculations are as follows:\nDirect materials $2,000,000 Direct labor             $1,000,000\nDirect labor        1,000,000 Manufacturing              600,000\noverhead\nTotal prime        $3,000,000 Total conversion      $1,600,000\ncosts                         costs\nDivided by:      ÷       200,000 Divided by:        ÷       200,000\nproduction level                 production level\nPer unit prime       $        15 Per unit               $        8\ncost                             conversion cost",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 14,
+    "page": 689,
+    "topicId": "su7-cost-terms",
+    "stem": "Management accounting differs from financial accounting in\nthat financial accounting is",
+    "choices": [
+      "More oriented toward the future.",
+      "Primarily concerned with external financial reporting.",
+      "Primarily concerned with nonquantitative information.",
+      "Heavily involved with decision analysis and implementation of\ndecisions."
+    ],
+    "answerIndex": 1,
+    "explanation": "Financial accounting is primarily concerned with historical\naccounting, i.e., traditional financial statements, and with\nexternal financial reporting to creditors and shareholders.\nManagement accounting applies primarily to the planning and\ncontrol of organizational operations, considers nonquantitative\ninformation, and is usually less precise.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 15,
+    "page": 690,
+    "topicId": "su7-cost-terms",
+    "stem": "The allocation of costs to particular cost objects allows a firm\nto analyze all of the following except",
+    "choices": [
+      "Whether a particular department should be expanded.",
+      "Why the sales of a particular product have increased.",
+      "Whether a product line should be discontinued.",
+      "Why a particular product should be purchased rather than\nmanufactured in-house."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost allocation is an internal matter that does not affect\ndemand (except to the extent it results in a change in price).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 16,
+    "page": 690,
+    "topicId": "su7-cost-terms",
+    "stem": "Many companies recognize three major categories of costs of\nmanufacturing a product. These are direct materials, direct\nlabor, and overhead. Which of the following is an overhead\ncost in the production of an automobile?",
+    "choices": [
+      "The cost of small tools used in mounting tires on each\nautomobile.",
+      "The cost of the tires on each automobile.",
+      "The cost of the laborers who place tires on each automobile.",
+      "The delivery costs for the tires on each automobile."
+    ],
+    "answerIndex": 0,
+    "explanation": "The cost of small tools used in mounting tires cannot be\nidentified solely with the manufacture of a specific automobile.\nThis cost should be treated as factory overhead because it is\nidentifiable with the production process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 17,
+    "page": 691,
+    "topicId": "su7-cost-terms",
+    "stem": "A cost incurred for the benefit of more than one cost objective\nis",
+    "choices": [
+      "A variable cost.",
+      "A conversion cost.",
+      "A prime cost.",
+      "A common cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "A cost incurred for the benefit of more than one cost objective\nis known as a common cost. Allocation of common costs is a\npersistent problem in responsibility accounting. For example,\nhow should the costs of corporate headquarters be allocated\nto the segments of a conglomerate? Common cost is also a\nsynonym for joint cost. In this sense, common costs are\nincurred in the production of two or more inseparable products\n(e.g., costs of refining petroleum into gasoline, diesel fuel,\nkerosene, lubricating oils, etc.) up to the point at which the\nproducts become separable (the split-off point).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 18,
+    "page": 692,
+    "topicId": "su7-cost-terms",
+    "stem": "A cost that always can be directly traced to a cost object is",
+    "choices": [
+      "A variable cost.",
+      "An indirect cost.",
+      "A conversion cost.",
+      "A prime cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "Prime costs are direct materials and direct labor. They are\ndirectly identifiable elements of production costs and are\ndirectly traceable to the product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 19,
+    "page": 692,
+    "topicId": "su7-cost-terms",
+    "stem": "Conversion costs are",
+    "choices": [
+      "Manufacturing costs incurred to produce units of output.",
+      "All costs associated with manufacturing other than direct labor\ncosts and raw material costs.",
+      "The sum of direct labor costs and all factory overhead costs.",
+      "The sum of raw materials costs and direct labor costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "Conversion costs are the direct labor, indirect materials, and\nfactory overhead incurred to convert raw materials and\ntransferred-in goods in a cost center to finished goods.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 20,
+    "page": 693,
+    "topicId": "su7-cost-terms",
+    "stem": "A computer company charges indirect manufacturing costs to\na project at a fixed percentage of a cost pool. This project is\ncovered by a cost-plus government contract. Which of the\nfollowing is an appropriate guideline for determining how costs\nare assigned to the pool?",
+    "choices": [
+      "Establish separate pools for variable and fixed costs.",
+      "Assign prime costs and variable administrative costs to the\nsame pool.",
+      "Establish a separate pool for each assembly line worker to\naccount for wages.",
+      "Assign all manufacturing costs related to the project to the\nsame pool."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cost pools are accounts in which a variety of similar costs are\naccumulated prior to allocation to cost objects. The overhead\naccount is a cost pool into which various types of overhead\nare accumulated prior to their allocation. Indirect\nmanufacturing costs are an element of overhead allocated to a\ncost pool. Ordinarily, different allocation methods are applied\nto variable and fixed costs, thus requiring them to be\nseparated. Establishing separate pools allows the\ndetermination of dual overhead rates. As a result, the\nassessment of capacity costs, the charging of appropriate\nrates to user departments, and the isolation of variances are\nfacilitated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 21,
+    "page": 694,
+    "topicId": "su7-cost-terms",
+    "stem": "In a traditional manufacturing operation, direct costs would\nnormally include",
+    "choices": [
+      "Machine repairs in an automobile factory.",
+      "Electricity in an electronics plant.",
+      "Wood in a furniture factory.",
+      "Commissions paid to sales personnel."
+    ],
+    "answerIndex": 2,
+    "explanation": "Direct costs are readily identifiable with and attributable to\nspecific units of production. Wood is a raw material (a direct\ncost) of furniture.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 22,
+    "page": 695,
+    "topicId": "su7-cost-terms",
+    "stem": "In practice, items such as wood screws and glue used in the\nproduction of school desks and chairs would most likely be\nclassified as",
+    "choices": [
+      "Direct labor.",
+      "Factory overhead.",
+      "Direct materials.",
+      "Period costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Those tangible inputs to the manufacturing process that\ncannot practicably be traced to the product, such as wood\nscrews and glue used in the production of school desks and\nchairs, are referred to as indirect costs. Indirect costs are one\nof the three components of manufacturing overhead, the other\ntwo being indirect labor and factory operating costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 23,
+    "page": 695,
+    "topicId": "su7-cost-terms",
+    "stem": "Which one of the following items would not be considered a\nmanufacturing cost?",
+    "choices": [
+      "Cream for an ice cream maker.",
+      "Sales commissions for a car manufacturer.",
+      "Plant property taxes for an ice cream maker.",
+      "Tires for an automobile manufacturer."
+    ],
+    "answerIndex": 1,
+    "explanation": "Manufacturing costs consist of direct materials, direct labor,\nand manufacturing overhead. The cream, plant property taxes,\nand tires are all integral to the production of the final product\nand so are properly classified as manufacturing costs. Sales\ncommissions, however, are not incurred until after the product\nhas been manufactured. They are properly classified as a\nselling expense.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 24,
+    "page": 696,
+    "topicId": "su7-cost-terms",
+    "stem": "A painting contractor maintains a job-order cost system. Job\ncosts are accumulated by tracking the actual cost of paint and\nother materials used on each job, as well as the actual cost of\nwages earned by the painters on each job. In addition,\noverhead is applied to each job by using a predetermined rate\nbased on the actual painters’ wages. A painter earned $168\ntoday by working on Job 08-45. In computing prime cost and\nconversion cost for Job 08-45, how would the wages earned\ntoday by the painter be classified?",
+    "choices": [
+      "As a component of both prime and conversion cost.",
+      "As a component of prime cost but not as a component of\nconversion cost.",
+      "As a component of conversion cost but not as a component of\nprime cost.",
+      "As a component of neither prime cost nor conversion cost."
+    ],
+    "answerIndex": 0,
+    "explanation": "Manufacturing costs are often grouped into the following\nclassifications: prime cost, which equals direct materials plus\ndirect labor (i.e., those costs directly attributable to a product),\nand conversion cost, which equals direct labor plus\nmanufacturing overhead (i.e., the costs of converting raw\nmaterials into the finished product). The wages earned by a\npainter working for a painting contractor are thus properly\nclassified as both a prime cost and a conversion cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 25,
+    "page": 697,
+    "topicId": "su7-cost-terms",
+    "stem": "All of the following would be considered manufacturing\noverhead costs by a book publisher except",
+    "choices": [
+      "Depreciation on the printing equipment.",
+      "Wages paid to the production supervisor.",
+      "Rent on the warehouse containing the finished books\ninventory.",
+      "Fire insurance on the printing facilities."
+    ],
+    "answerIndex": 2,
+    "explanation": "Rent paid on the warehouse containing the finished books\ninventory is an example of an administrative expense, which is\nnot part of manufacturing overhead. This is an example of a\nnonmanufacturing cost since the warehouse contains the\nfinished books inventory and no manufacturing is occurring in\nthat warehouse. Administrative expenses are those costs\nincurred by a company not directly related to producing or\nmarketing the product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 26,
+    "page": 698,
+    "topicId": "su7-cost-terms",
+    "stem": "Indirect and common costs often make up a significant portion\nof the cost of a product. All of the following are reasons for\nindirect cost allocation to cost objects except to",
+    "choices": [
+      "Reduce total costs identified with products.",
+      "Measure income and assets for external reporting purposes.",
+      "Justify costs for reimbursement purposes.",
+      "Provide information for economic decision making."
+    ],
+    "answerIndex": 0,
+    "explanation": "The total costs identified with products are unaffected by the\ntreatment of indirect and common costs. The ability to identify\na cost with a product is determined by traceability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 27,
+    "page": 699,
+    "topicId": "su7-cost-terms",
+    "stem": "A fixed cost that would be considered a direct cost is",
+    "choices": [
+      "A cost accountant’s salary when the cost objective is a unit of\nproduct.",
+      "The rental cost of a warehouse to store inventory when the\ncost objective is the Purchasing Department.",
+      "A production supervisor’s salary when the cost objective is the\nProduction Department.",
+      "Board of directors’ fees when the cost objective is the\nMarketing Department."
+    ],
+    "answerIndex": 2,
+    "explanation": "A direct cost is one that can be specifically associated with a\nsingle cost objective in an economically feasible way. Thus, a\nproduction supervisor’s salary can be directly associated with\nthe department (s)he supervises.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 28,
+    "page": 700,
+    "topicId": "su7-cost-terms",
+    "stem": "Estimated unit costs for Cole Lab using full absorption\ncosting and operating at a production level of 12,000 units per month:\nEstimated\nCost Item                            Unit Cost\nDirect material                    $32\nDirect labor                        20\nVariable manufacturing overhead     15\nFixed manufacturing overhead         6\nVariable selling                     3\nFixed selling                        4\nCole Lab’s estimated conversion costs per unit are",
+    "choices": [
+      "$35",
+      "$41",
+      "$44",
+      "$48"
+    ],
+    "answerIndex": 1,
+    "explanation": "Conversion costs consist of labor plus fixed and variable\nmanufacturing overhead. The total is $41 ($20 + $15 + $6).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 29,
+    "page": 700,
+    "topicId": "su7-cost-terms",
+    "stem": "Estimated unit costs for Cole Lab using full absorption\ncosting and operating at a production level of 12,000 units per month:\nEstimated\nCost Item                            Unit Cost\nDirect material                    $32\nDirect labor                        20\nVariable manufacturing overhead     15\nFixed manufacturing overhead         6\nVariable selling                     3\nFixed selling                        4\nCole Lab’s estimated prime costs per unit are",
+    "choices": [
+      "$73",
+      "$32",
+      "$67",
+      "$52"
+    ],
+    "answerIndex": 3,
+    "explanation": "Prime costs consist of direct materials and direct labor. The\ntotal is $52 ($32 + $20).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 1,
+    "number": 30,
+    "page": 701,
+    "topicId": "su7-cost-terms",
+    "stem": "Estimated unit costs for Cole Lab using full absorption\ncosting and operating at a production level of 12,000 units per month:\nEstimated\nCost Item                            Unit Cost\nDirect material                    $32\nDirect labor                        20\nVariable manufacturing overhead     15\nFixed manufacturing overhead         6\nVariable selling                     3\nFixed selling                        4\nIn a broad sense, cost accounting can best be defined within\nthe accounting system as",
+    "choices": [
+      "Internal and external reporting that may be used in making\nnonroutine decisions and in developing plans and policies.",
+      "External reporting to government, various outside parties, and\nshareholders.",
+      "Internal reporting for use in management planning and control,\nand external reporting to the extent its product-costing function\nsatisfies external reporting requirements.",
+      "Internal reporting for use in planning and controlling routine\noperations."
+    ],
+    "answerIndex": 2,
+    "explanation": "Cost accounting is a combination of (1) management\naccounting in the sense that its purpose can be to provide\ninternal reports for use in planning and control and in making\nnonroutine decisions, and (2) financial accounting because its\nproduct-costing function satisfies external reporting\nrequirements for reporting to shareholders, government, and\nvarious outside parties.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 1,
+    "page": 703,
+    "topicId": "su7-cost-behavior",
+    "stem": "The controller of an online retailer has negotiated a 5-\nyear contract with a shipping company to pay the following\namounts annually for the delivery of its goods, regardless of\nthe amount:\nYear 1 €1,000,000\nYear 2 1,000,000\nYear 3 1,500,000\nYear 4 1,500,000\nYear 5 2,000,000\nWhat type of costs are these shipping expenditures?",
+    "choices": [
+      "Mixed.",
+      "Fixed.",
+      "Variable.",
+      "By-product."
+    ],
+    "answerIndex": 1,
+    "explanation": "A fixed cost remains constant regardless of production. Thus,\nthe shipping costs would be categorized as fixed costs since\nthey will remain constant regardless of the units shipped in a\nyear.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 2,
+    "page": 704,
+    "topicId": "su7-cost-behavior",
+    "stem": "An entity has the following cost components for 100,000 units\nof product for the year:\nDirect materials                      $200,000\nDirect labor                          100,000\nManufacturing overhead                200,000\nSelling and administrative expense 150,000\nAll costs are variable except for $100,000 of manufacturing\noverhead and $100,000 of selling and administrative\nexpenses. The total costs to produce and sell 110,000 units for\nthe year are",
+    "choices": [
+      "$650,000",
+      "$715,000",
+      "$695,000",
+      "$540,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Direct materials unit costs are strictly variable at $2 ($200,000\n÷ 100,000 units). Similarly, direct labor has a variable unit cost\nof $1 ($100,000 ÷ 100,000 units). The $200,000 of\nmanufacturing overhead for 100,000 units is 50% variable.\nThe variable unit cost is $1. Selling costs are $100,000 fixed\nand $50,000 variable for production of 100,000 units, and the\nvariable unit selling expenses is $0.50 ($50,000 ÷\n100,000 units). The total unit variable cost is therefore $4.50\n($2 + $1 + $1 + $0.50). Fixed costs are $200,000. At a\nproduction level of 110,000 units, variable costs are $495,000\n(110,000 units × $4.50). Thus, total costs are $695,000\n($495,000 + $200,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 3,
+    "page": 705,
+    "topicId": "su7-cost-behavior",
+    "stem": "Which one of the following is true regarding a relevant range?",
+    "choices": [
+      "Total variable costs will not change.",
+      "Total fixed costs will not change.",
+      "Actual fixed costs usually fall outside the relevant range.",
+      "The relevant range cannot be changed after being established."
+    ],
+    "answerIndex": 1,
+    "explanation": "The relevant range is the range of activity over which unit\nvariable costs and total fixed costs are constant. The\nincremental cost of one additional unit of production will be\nequal to the variable cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 4,
+    "page": 706,
+    "topicId": "su7-cost-behavior",
+    "stem": "The difference between variable costs and fixed costs is",
+    "choices": [
+      "Variable costs per unit fluctuate and fixed costs per unit remain\nconstant.",
+      "Variable costs per unit are fixed over the relevant range and\nfixed costs per unit are variable.",
+      "Total variable costs are variable over the relevant range and\nfixed in the long term, while fixed costs never change.",
+      "Variable costs per unit change in varying increments, while\nfixed costs per unit change in equal increments."
+    ],
+    "answerIndex": 1,
+    "explanation": "Fixed costs remain unchanged within the relevant range for a\ngiven period despite fluctuations in activity, but per unit fixed\ncosts do change as the level of activity changes. Thus, fixed\ncosts are fixed in total but vary per unit as activity changes.\nTotal variable costs vary directly with activity. They are fixed\nper unit, but vary in total.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 5,
+    "page": 706,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company has the following budget formula for annual\nelectricity expense in its shop:\nExpense = $7,200 + (Units produced × $0.60)\nIf management expects to produce 20,000 units during\nFebruary, for the purpose of performance evaluation, what\namount of expenses should the company expect to incur in\nFebruary?",
+    "choices": [
+      "$7,200",
+      "$12,000",
+      "$12,600",
+      "$19,200"
+    ],
+    "answerIndex": 2,
+    "explanation": "The formula is for an annual period. Thus, the first step is to\ndivide the $7,200 of fixed costs by 12 months to arrive at\nmonthly fixed costs of $600. Variable costs will be $.60 per\nunit, or $12,000 for 20,000 units. The total expected expenses\nare therefore $12,600 ($600 + $12,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 6,
+    "page": 707,
+    "topicId": "su7-cost-behavior",
+    "stem": "An assembly plant accumulates its variable and fixed\nmanufacturing overhead costs in a single cost pool, which is\nthen applied to work in process using a single application\nbase. The assembly plant management wants to estimate the\nmagnitude of the total manufacturing overhead costs for\ndifferent volume levels of the application activity base using a\nflexible budget formula. If there is an increase in the\napplication activity base that is within the relevant range of\nactivity for the assembly plant, which one of the following\nrelationships regarding variable and fixed costs is true?",
+    "choices": [
+      "The variable cost per unit is constant, and the total fixed costs\ndecrease.",
+      "The variable cost per unit is constant, and the total fixed costs\nincrease.",
+      "The variable cost per unit and the total fixed costs remain\nconstant.",
+      "The variable cost per unit increases, and the total fixed costs\nremain constant."
+    ],
+    "answerIndex": 2,
+    "explanation": "Total variable cost changes when changes in the activity level\noccur within the relevant range. The cost per unit for a variable\ncost is constant for all activity levels within the relevant range.\nThus, if the activity volume increases within the relevant\nrange, total variable costs will increase. A fixed cost does not\nchange when volume changes occur in the activity level within\nthe relevant range. If the activity volume increases within the\nrelevant range, total fixed costs will remain unchanged.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 7,
+    "page": 708,
+    "topicId": "su7-cost-behavior",
+    "stem": "Which of the following is the best example of a variable cost?",
+    "choices": [
+      "The corporate president’s salary.",
+      "Cost of raw material.",
+      "Interest charges.",
+      "Property taxes."
+    ],
+    "answerIndex": 1,
+    "explanation": "Variable costs vary directly with the level of production. As\nproduction increases or decreases, material cost increases or\ndecreases, usually in a direct relationship.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 8,
+    "page": 709,
+    "topicId": "su7-cost-behavior",
+    "stem": "Which one of the following categories of cost is most\nlikely not considered a component of fixed factory overhead?",
+    "choices": [
+      "Rent.",
+      "Property taxes.",
+      "Depreciation.",
+      "Power."
+    ],
+    "answerIndex": 3,
+    "explanation": "A fixed cost is one that remains unchanged within the relevant\nrange for a given period despite fluctuations in activity. Such\nitems as rent, property taxes, depreciation, and supervisory\nsalaries are normally fixed costs because they do not vary\nwith changes in production. Power costs, however, are at\nleast partially variable because they increase as usage\nincreases.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 9,
+    "page": 711,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company wants to determine its marketing costs for\nbudgeting purposes. Activity measures and costs incurred for 4\nmonths of the current year are presented in the table below.\nAdvertising is considered to be a discretionary cost. Salespersons are\npaid monthly salaries plus commissions. The sales force was\nincreased from 20 to 21 individuals during the month of May.\nMarch        April     May         June\nActivity\nmeasures:\nSales            2,000     1,800     2,400     2,300\norders\nUnits sold      55,000    60,000    70,000    65,000\nDollar sales $1,150,00 $1,200,00 $1,330,00 $1,275,00\n0         0         0         0\nMarketing\ncosts:\nAdvertising $ 190,00 $ 200,00 $ 190,00 $ 190,00\n0        0        0        0\nSales         20,000   20,000   21,000   21,000\nsalaries\nCommissio     23,000   24,000   26,600   25,500\nns\nShipping      93,000 100,000 114,000 107,000\ncosts\nTotal costs     $ 326,00 $ 344,00 $ 351,60 $ 343,50\n0        0        0        0\nIn relation to the dollar amount of sales, which of the following\ncost classifications is appropriate for advertising and sales\nsalaries costs?\nAdvertising       Sales Salaries",
+    "choices": [
+      "Variable cost     Fixed cost",
+      "Fixed cost       Variable cost",
+      "Mixed cost        Mixed cost",
+      "Fixed cost        Fixed cost"
+    ],
+    "answerIndex": 3,
+    "explanation": "Both advertising and sales salaries should be classified as\nfixed costs. The advertising was constant for 3 of the 4 months\nand would be considered fixed in terms of dollar sales. Sales\nsalaries also did not vary with dollar sales.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 10,
+    "page": 712,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company uses the following formula for annual maintenance\ncosts:\nTotal cost = $6,000 + $0.70 per machine hour\nThe current month’s budget is based on planned machine time\nof 30,000 hours. Monthly maintenance cost included in this\nbudget is",
+    "choices": [
+      "$20,500",
+      "$21,000",
+      "$21,500",
+      "$27,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The maintenance cost is a mixed cost containing both fixed\nand variable elements. To calculate the monthly total fixed\ncosts, divide the annual amount by 12.\nMonthly fixed maintenance       $6,000 ÷ 12         = $ 500\ncosts:\nVariable maintenance costs:     30,000 ×          =    21,000\n$0.70/hour\nTotal maintenance costs                               $21,500",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 11,
+    "page": 713,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company wants to determine its marketing costs for\nbudgeting purposes. Activity measures and costs incurred for 4\nmonths of the current year are presented in the table below.\nAdvertising is considered to be a discretionary cost. Salespersons are\npaid monthly salaries plus commissions. The sales force was\nincreased from 20 to 21 individuals during the month of May.\nMarch        April     May         June\nActivity\nmeasures:\nSales            2,000     1,800     2,400     2,300\norders\nUnits sold      55,000    60,000    70,000    65,000\nDollar sales $1,150,00 $1,200,00 $1,330,00 $1,275,00\n0         0         0         0\nMarketing\ncosts:\nAdvertising $ 190,00 $ 200,00 $ 190,00 $ 190,00\n0        0        0        0\nSales         20,000   20,000   21,000   21,000\nsalaries\nCommissio     23,000   24,000   26,600   25,500\nns\nShipping      93,000 100,000 114,000 107,000\ncosts\nTotal costs     $ 326,00 $ 344,00 $ 351,60 $ 343,50\n0        0        0        0\nManagement has prepared a graph showing the total costs of\noperating branch warehouses throughout the country. The cost\nline crosses the vertical axis at $200,000. The total cost of\noperating one branch is $350,000. The total cost of operating\nten branches is $1,700,000. For purposes of preparing a\nflexible budget based on the number of branch warehouses in\noperation, what formula should be used to determine budgeted\ncosts at various levels of activity?",
+    "choices": [
+      "Y = $200,000 + $150,000X",
+      "Y = $200,000 + $170,000X",
+      "Y = $350,000 + $200,000X",
+      "Y = $350,000 + $150,000X"
+    ],
+    "answerIndex": 0,
+    "explanation": "Fixed cost (FC) is $200,000, the amount at which the total\ncost (TC) line crosses the y-axis (when no warehouses are in\noperation). The total variable cost (VC) of operating 10\nwarehouses is $1,500,000 ($1,700,000 TC - $200,000 FC), so\nthe variable cost per warehouse is $150,000 ($1,500,000 ÷\n10). Y (TC) is therefore equal to $200,000 (FC) plus\n$150,000X (VC).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 12,
+    "page": 714,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company pays each member of its sales staff a salary as\nwell as a commission on each unit sold. For the coming year,\nthe company plans to increase all salaries by 5% and to keep\nunchanged the commission paid on each unit sold. Because of\nincreased demand, the company expects the volume of sales\nto increase by 10%. How will the total cost of sales salaries\nand commissions change for the coming year?",
+    "choices": [
+      "Increase by 5% or less.",
+      "Increase by more than 5% but less than 10%.",
+      "Increase by 10%.",
+      "Increase by more than 10%."
+    ],
+    "answerIndex": 1,
+    "explanation": "Sales salaries will increase by exactly 5%. The per-unit\ncommission amount will remain constant, but sales\ncommissions in total are expected to increase by 10%. Thus,\ntotal sales salaries and commissions will increase somewhere\nbetween 5% and 10%.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 13,
+    "page": 715,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company wants to determine its marketing costs for\nbudgeting purposes. Activity measures and costs incurred for 4\nmonths of the current year are presented in the table below.\nAdvertising is considered to be a discretionary cost. Salespersons are\npaid monthly salaries plus commissions. The sales force was\nincreased from 20 to 21 individuals during the month of May.\nMarch        April     May         June\nActivity\nmeasures:\nSales            2,000     1,800     2,400     2,300\norders\nUnits sold      55,000    60,000    70,000    65,000\nDollar sales $1,150,00 $1,200,00 $1,330,00 $1,275,00\n0         0         0         0\nMarketing\ncosts:\nAdvertising $ 190,00 $ 200,00 $ 190,00 $ 190,00\n0        0        0        0\nSales         20,000   20,000   21,000   21,000\nsalaries\nCommissio     23,000   24,000   26,600   25,500\nns\nShipping      93,000 100,000 114,000 107,000\ncosts\nTotal costs     $ 326,00 $ 344,00 $ 351,60 $ 343,50\n0        0        0        0\nProduction levels are expected to increase within the relevant\nrange. What are the anticipated effects on the following?\nFixed Costs       Variable Costs\nper Unit          per Unit",
+    "choices": [
+      "Increase       Increase",
+      "Increase       No change",
+      "Decrease       Decrease",
+      "Decrease       No change"
+    ],
+    "answerIndex": 3,
+    "explanation": "Fixed costs per unit decrease within the relevant range of\nactivity as production increases because more units are\navailable to absorb the constant amount of total fixed costs.\nUnit variable costs are assumed to remain the same per unit\nover the relevant range.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 14,
+    "page": 715,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company is determining the cost behavior of several items in\norder to budget for the upcoming year. Past trends have\nindicated the following dollars were spent at three different\nlevels of output:\nUnit Levels\n10,000      12,000        15,000\nCost A $25,000       $29,000      $35,000\nCost B 10,000          15,000      15,000\nCost C 15,000          18,000      22,500\nIn establishing a budget for 14,000 units, the company should\ntreat Costs A, B, and C, respectively, as",
+    "choices": [
+      "Semivariable, fixed, and variable.",
+      "Variable, fixed, and variable.",
+      "Semivariable, semivariable, and semivariable.",
+      "Variable, semivariable, and semivariable."
+    ],
+    "answerIndex": 0,
+    "explanation": "To properly understand the nature of a cost, its behavior in\ntotal and on a per-unit basis can be examined. Dividing the\ntotal costs incurred by the activity levels yields the following\nper-unit results:\n10,000 12,000 15,000\nCost A $2.50 $2.42 $2.33\nCost B  1.00  1.25  1.00\nCost C  1.50  1.50  1.50\nCost A increases disproportionately across the relevant range\nin total and decreases proportionately on a per-unit basis; A is\nthus a semivariable cost. Cost B is neither variable or semi-\nvariable, since the total cost does not increase with respect to\nthe units sold. Therefore, it must be considered as fixed for\npurposes of this question. Cost C increases steadily across\nthe relevant range in total but remains constant on a per-unit\nbasis; C is thus a variable cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 15,
+    "page": 717,
+    "topicId": "su7-cost-behavior",
+    "stem": "Which one of the following refers to a cost that remains the\nsame as the volume of activity decreases within the relevant\nrange?",
+    "choices": [
+      "Average cost per unit.",
+      "Variable cost per unit.",
+      "Unit fixed cost.",
+      "Total variable cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "Variable cost per unit remains constant in the short run\nregardless of the level of production. This is in contrast with\nvariable costs in total, which vary directly and proportionally\nwith changes in volume.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 16,
+    "page": 718,
+    "topicId": "su7-cost-behavior",
+    "stem": "An entity provides the following summary of its total budgeted\nproduction costs at three production levels:\nVolume in Units\n1,000       1,500      2,000\nCost A $1,420         $2,130     $2,840\nCost B 1,550            2,200      2,900\nCost C 1,000            1,000      1,000\nCost D 1,630            2,445      3,260\nThe cost behavior of each of the Costs A through D,\nrespectively, is",
+    "choices": [
+      "Semivariable, variable, fixed, and variable.",
+      "Variable, semivariable, fixed, and semivariable.",
+      "Variable, fixed, fixed, and variable.",
+      "Variable, semivariable, fixed, and variable."
+    ],
+    "answerIndex": 3,
+    "explanation": "To properly understand the nature of a cost, its behavior in\ntotal and on a per-unit basis can be examined. Dividing the\ntotal costs incurred by the activity levels yields the following\nper-unit results:\n1,000 1,500 2,000\nCost A $1.42 $1.42 $1.42\nCost B 1.55 1.47 1.45\nCost C 1.00 0.67 0.50\nCost D 1.63 1.63 1.63\nCosts A and D increase steadily across the relevant range in\ntotal but remain constant on a per-unit basis; they are thus\nvariable costs. Cost B increases disproportionately across the\nrelevant range in total and decreases disproportionately on a\nper-unit basis; B is thus a semivariable cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 17,
+    "page": 719,
+    "topicId": "su7-cost-behavior",
+    "stem": "The relevant range refers to the activity levels over which",
+    "choices": [
+      "Cost relationships hold constant.",
+      "Costs fluctuate.",
+      "Production varies.",
+      "Relevant costs are incurred."
+    ],
+    "answerIndex": 0,
+    "explanation": "The relevant range defines the limits within which per-unit\nvariable costs remain constant and fixed costs are not\nchangeable. It is synonymous with the short run. The relevant\nrange is established by the efficiency of a company’s current\nmanufacturing plant, its agreements with labor unions and\nsuppliers, etc.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 18,
+    "page": 720,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company has discovered that the cost of processing\ncustomer invoices is strictly variable within the relevant range.\nWhich one of the following statements concerning the cost of\nprocessing customer invoices is incorrect?",
+    "choices": [
+      "The total cost of processing customer invoices will increase as\nthe volume of customer invoices increases.",
+      "The cost per unit for processing customer invoices will decline\nas the volume of customer invoices increases.",
+      "The cost of processing the 100th customer invoice will be the\nsame as the cost of processing the first customer invoice.",
+      "The average cost per unit for processing a customer invoice\nwill equal the incremental cost of processing one more\ncustomer invoice."
+    ],
+    "answerIndex": 1,
+    "explanation": "Variable cost per unit remains constant in the short run\nregardless of the level of production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 19,
+    "page": 721,
+    "topicId": "su7-cost-behavior",
+    "stem": "When identifying fixed and variable costs, which one of the\nfollowing is a typical assumption concerning cost behavior?",
+    "choices": [
+      "General and administrative costs are assumed to be variable\ncosts.",
+      "Cost behavior is assumed to be realistic for all levels of activity\nfrom zero to maximum capacity.",
+      "Total costs are assumed to be linear when plotted on a graph.",
+      "The relevant time period is assumed to be 5 years."
+    ],
+    "answerIndex": 2,
+    "explanation": "Total costs, being a mixture of fixed and variable costs, are\nassumed to be linear.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 20,
+    "page": 721,
+    "topicId": "su7-cost-behavior",
+    "stem": "A management accountant is preparing graphs of total variable cost and variable cost per unit for a short-term plan. Dollars are on the vertical axis and activity is on the horizontal axis. How will the two graphs appear?",
+    "choices": [
+      "Total: upward straight line; per unit: horizontal straight line.",
+      "Total: upward curve; per unit: roughly horizontal line.",
+      "Total: upward straight line; per unit: upward straight line.",
+      "Total: horizontal straight line; per unit: upward straight line."
+    ],
+    "answerIndex": 0,
+    "explanation": "Variable costs in total vary directly and proportionally with\nchanges in volume. This is depicted as a straight line sloping\nupward to the right. Variable cost per unit, however, remains\nconstant in the short run regardless of the level of production.\nThis is depicted as a horizontal line.\nA line that basically para",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 21,
+    "page": 723,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company has found that its total electricity cost has both a\nfixed component and a variable component within the relevant\nrange. The variable component seems to vary directly with the\nnumber of units produced. Which one of the following\nstatements concerning electricity cost is incorrect?",
+    "choices": [
+      "The total electricity cost will increase as production volume\nincreases.",
+      "The total electricity cost per unit of production will increase as\nproduction volume increases.",
+      "The variable electricity cost per unit of production will remain\nconstant as production volume increases.",
+      "The fixed electricity cost per unit of production will decline as\nproduction volume increases."
+    ],
+    "answerIndex": 1,
+    "explanation": "Because of the fixed portion, the per-unit cost of a mixed, or\nsemivariable, cost will decrease as production volume\nincreases.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 22,
+    "page": 724,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company prepares a flexible budget each month for\nmanufacturing costs. Formulas have been developed for all\ncosts within a relevant range of 5,000 to 15,000 units per\nmonth. The budget for electricity (a semivariable cost) is\n$19,800 at 9,000 units per month, and $21,000 at 10,000 units\nper month. How much should be budgeted for electricity for the\ncoming month if 12,000 units are to be produced?",
+    "choices": [
+      "$26,400",
+      "$25,200",
+      "$23,400",
+      "$22,200"
+    ],
+    "answerIndex": 2,
+    "explanation": "The company’s budget consists of a fixed cost component and\na variable cost component. The fixed cost component can be\nexpected to remain constant throughout the budget’s relevant\nrange. The variable cost component, however, changes at a\nconstant rate within the budget’s range. The increase in\nbudgeted cost of $1,200 ($21,000 – $19,800) per 1,000 units\nof production can therefore be calculated as the variable cost\nper unit of $1.20 [($21,000 – $19,800) ÷ 1,000] and the total\nfixed costs of $9,000 [$21,000 – (10,000 × $1.20)]. These\ncosts can then be used to determine the total cost of using\n12,000 units of electricity [(12,000 × $1.20) variable +\n$9,000 fixed].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 23,
+    "page": 725,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company budgets its total production costs at $220,000 for\n75,000 units of output and $275,000 for 100,000 units of\noutput. Since additional facilities are needed to produce\n100,000 units, fixed costs are budgeted at 20% more than for\n75,000 units. What is the budgeted variable cost per unit of\noutput?",
+    "choices": [
+      "$1.10",
+      "$1.20",
+      "$2.20",
+      "$2.75"
+    ],
+    "answerIndex": 0,
+    "explanation": "First, state the information known about the two production\nlevels mathematically:\nVariable costs + Fixed costs = Total cost\n(75,000 × UVC) +      (1.0 × FC) = $220,000\n(100,000 × +     (1.2 × FC) = $275,000\nUVC)\nNext, state one of them in terms of fixed costs:\n(75,000 × UVC) +      (1.0 × FC) = $220,000\nFC = $220,000 – (75,000 ×\nUVC)\nSubstitute this relationship into the second equation and solve\nfor the budgeted unit variable cost:\n(100,000 × UVC) + 1.2 ($220,000 – 75,000 UVC) = $275,000\n(100,000 × UVC) + $264,000 – (90,000 × UVC) = $275,000\n(10,000 × UVC) = $11,000\nUVC = $1.10",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 24,
+    "page": 726,
+    "topicId": "su7-cost-behavior",
+    "stem": "A firm operated four sales offices last year. The firm’s costs\nwere $400,000, of which $60,000 were fixed. The firm’s total\ncosts are significantly influenced by the number of sales\noffices it operates. Using last year’s costs as the basis for\npredicting annual costs, what would the budgeted costs be if\nthe firm operated six sales offices?",
+    "choices": [
+      "$600,000",
+      "$570,000",
+      "$510,000",
+      "$485,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "First, state the known information mathematically and derive\nthe variable portion of the total:\nFixed costs + Variable costs = Total cost\n$60,000 + Variable costs = $400,000\nVariable costs = $340,000\nNext, calculate the unit variable cost of $85,000 per office\n($340,000 ÷ 4 offices). Total budgeted cost for the upcoming\nyear can now be calculated as $570,000 [($85,000 per office ×\n6 offices) + $60,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 25,
+    "page": 727,
+    "topicId": "su7-cost-behavior",
+    "stem": "Over the past several years, an entity has experienced the\nfollowing regarding shipping expenses:\nFixed costs          $16,000\nAverage shipment 15 pounds\nCost per pound          $.50\nShown below are the budget data for the coming year.\nNumber of units shipped      8,000\nNumber of sales orders          800\nNumber of shipments              800\nTotal sales              $1,200,000\nTotal pounds shipped           9,600\nExpected shipping costs for the coming year are",
+    "choices": [
+      "$4,800",
+      "$16,000",
+      "$20,000",
+      "$20,800"
+    ],
+    "answerIndex": 3,
+    "explanation": "The entity expects to ship 9,600 pounds of product at a rate of\n$0.50 per pound for a total of $4,800. Add this variable cost to\nthe $16,000 of fixed costs to arrive at a total of $20,800\nexpected shipping costs for the year.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 26,
+    "page": 728,
+    "topicId": "su7-cost-behavior",
+    "stem": "Within the relevant range, fixed cost per unit will",
+    "choices": [
+      "Increase as the activity level increases.",
+      "Decrease as the activity level decreases.",
+      "Remain the same as the activity level decreases.",
+      "Decrease as the activity level increases."
+    ],
+    "answerIndex": 3,
+    "explanation": "Fixed costs remain unchanged within the relevant range for a\ngiven period but per unit fixed costs do change as the level of\nactivity changes. Fixed cost per unit will decrease as the\nactivity level increases within the relevant range.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 27,
+    "page": 729,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company reported the following cost information for the last\nfiscal year when it produced 100,000 units.\nDirect labor                          $100,000\nDirect materials                      200,000\nManufacturing overhead                200,000\nSelling and administrative expenses 150,000\nAll costs are variable except for $100,000 of manufacturing\noverhead and $100,000 of selling and administrative\nexpenses. Using flexible budgeting, what are the total costs\nassociated with producing and selling 110,000 units?",
+    "choices": [
+      "$450,000",
+      "$650,000",
+      "$695,000",
+      "$715,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Direct materials unit costs are strictly variable at $2 ($200,000\n÷ 100,000 units). Similarly, direct labor has a variable unit cost\nof $1 ($100,000 ÷ 100,000 units). The manufacturing\noverhead costs are $100,000 fixed and $100,000 variable,\nand the variable manufacturing cost per unit is $1 ($100,000 ÷\n100,000 units). Selling costs are $100,000 fixed and $50,000\nvariable for production of 100,000 units, and the variable unit\nselling expenses is $.50 ($50,000 ÷ 100,000 units). The total\nunit variable cost is therefore $4.50 ($2 + $1 + $1 + $.50).\nFixed costs are $200,000. At a production level of 110,000\nunits, variable costs are $495,000 (110,000 units × $4.50).\nHence, total costs are $695,000 ($495,000 + $200,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 28,
+    "page": 731,
+    "topicId": "su7-cost-behavior",
+    "stem": "Huron Industries has developed                      Product A Product B\ntwo new products but has only        Raw        $ 44.00 $ 36.00\nenough plant capacity to             materials\nintroduce one product during the\nMachining 18.00    15.00\ncurrent year. The following data\n@ $12/hour\nwill assist management in\ndeciding which product should        Assembly @ 30.00   10.00\nbe selected.                         $10/hour\nHuron’s fixed overhead includes    Variable   36.00    18.00\nrent and utilities, equipment      overhead @\ndepreciation, and supervisory      $8/hour\nsalaries. Selling and              Fixed      18.00    9.00\nadministrative expenses are not    overhead @\nallocated to products.             $4/hour\nTotal cost $ 146.00 $ 88.00\nSuggested $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe total overhead cost of $27.00 for Huron’s Product B is a",
+    "choices": [
+      "Carrying cost.",
+      "Discretionary cost.",
+      "Sunk cost.",
+      "Mixed cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "A mixed cost is a combination of fixed and variable elements.\nConsequently, the $27 of total overhead cost is mixed\nbecause it contains both fixed overhead and variable\noverhead.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 29,
+    "page": 732,
+    "topicId": "su7-cost-behavior",
+    "stem": "A company has observed the following costs at different\nproduction levels.\nUnit Production Level\n25,000 50,000 75,000\nCost A $3,250 $5,250 $7,250\nCost B      7,500     7,500     7,500\nCost C      2,750     5,500     8,250\nCost D      1,750     2,500     3,000\nWhat are the cost behaviors of Costs A, B, C, and D,\nrespectively?",
+    "choices": [
+      "Variable, fixed, variable, mixed.",
+      "Mixed, fixed, variable, mixed.",
+      "Mixed, fixed, mixed, variable.",
+      "Variable, fixed, mixed, variable."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost A is a mixed cost because it changes with production\nlevel, but each production level does not have the same cost\nper unit of production. Cost B is fixed because it remains the\nsame regardless of production level. Cost C is variable\nbecause it changes uniformly with production level, and each\nlevel of production has the same cost per unit of production.\nCost D is mixed because it changes with production level, but\neach production level does not have the same cost per unit of\nproduction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 2,
+    "number": 30,
+    "page": 733,
+    "topicId": "su7-cost-behavior",
+    "stem": "Huron Industries has developed                      Product A Product B\ntwo new products but has only        Raw        $ 44.00 $ 36.00\nenough plant capacity to             materials\nintroduce one product during the\nMachining 18.00    15.00\ncurrent year. The following data\n@ $12/hour\nwill assist management in\ndeciding which product should        Assembly @ 30.00   10.00\nbe selected.                         $10/hour\nHuron’s fixed overhead includes    Variable   36.00    18.00\nrent and utilities, equipment      overhead @\ndepreciation, and supervisory      $8/hour\nsalaries. Selling and              Fixed      18.00    9.00\nadministrative expenses are not    overhead @\nallocated to products.             $4/hour\nTotal cost $ 146.00 $ 88.00\nSuggested $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe marketing manager has learned the following about a new\nproduct that is being introduced: Sales of this product are\nplanned at $100,000 for the first year. Sales commission\nexpense is budgeted at 8% of sales plus the marketing\nmanager’s incentive budgeted at an additional 1/2%. The\npreparation of a product brochure will require 20 hours of\nmarketing salaried staff time at an average rate of $100 per\nhour, and 10 hours at $150 per hour for an outside illustrator’s\neffort. The variable marketing cost for this new product will be",
+    "choices": [
+      "$8,000",
+      "$8,500",
+      "$10,000",
+      "$10,500"
+    ],
+    "answerIndex": 1,
+    "explanation": "The variable marketing costs for the new product consist of\nsales commissions and the marketing manager’s incentive\n($100,000 × 8.5% = $8,500).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 1,
+    "page": 735,
+    "topicId": "su7-costing-techniques",
+    "stem": "Which one of the following alternatives correctly classifies the\nbusiness application to the appropriate costing system?\nJob                    Process\nCosting System            Costing System",
+    "choices": [
+      "Wallpaper manufacturer          Oil refinery",
+      "Aircraft assembly        Public accounting firm",
+      "Paint manufacturer           Retail banking\nPrint",
+      "Beverage manufacturer\nshop"
+    ],
+    "answerIndex": 3,
+    "explanation": "A job costing system is used when products differ from one\ncustomer to the next, that is, when products are\nheterogeneous. A process costing system is used when\nsimilar products are mass produced on a continuous basis. A\nprint shop, for example, would use a job costing system\nbecause each job will be unique. Each customer provides the\nspecifications for the product desired. A beverage\nmanufacturer, however, would use a process costing system\nbecause homogeneous units are produced continuously.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 2,
+    "page": 736,
+    "topicId": "su7-costing-techniques",
+    "stem": "A standard-cost system may be used in\nProcess          Job-Order             Activity-Based\nCosting           Costing                 Costing",
+    "choices": [
+      "Yes                 Yes                  Yes",
+      "Yes                No                    Yes",
+      "No                 Yes                   No",
+      "No                 No                    No"
+    ],
+    "answerIndex": 0,
+    "explanation": "A standard-cost system records the product at standard\n(predetermined) costs and compares expected with actual\ncost. This comparison allows deviations (variances) from\nexpected results to be identified and investigated. A standard-\ncost system can be used in job-order, process-costing, and\nactivity-based systems to isolate variances.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 3,
+    "page": 736,
+    "topicId": "su7-costing-techniques",
+    "stem": "An accounting system that collects financial and operating\ndata on the basis of the underlying nature and extent of the\ncost drivers is",
+    "choices": [
+      "Direct costing.",
+      "Activity-based costing.",
+      "Cycle-time costing.",
+      "Variable costing."
+    ],
+    "answerIndex": 1,
+    "explanation": "An activity-based costing (ABC) system identifies the causal\nrelationship between the incurrence of cost and the underlying\nactivities that cause those costs. Under an ABC system, costs\nare applied to products on the basis of resources consumed\n(drivers).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 4,
+    "page": 737,
+    "topicId": "su7-costing-techniques",
+    "stem": "Companies characterized by the production of basically\nhomogeneous products will most likely use which of the\nfollowing methods for the purpose of averaging costs and\nproviding management with unit-cost data?",
+    "choices": [
+      "Job-order costing.",
+      "Direct costing.",
+      "Absorption costing.",
+      "Process costing."
+    ],
+    "answerIndex": 3,
+    "explanation": "Like products that are mass produced should be accounted for\nusing process costing techniques to assign costs to products.\nCosts are accumulated by departments or cost centers rather\nthan by jobs, work-in-process is stated in terms of equivalent\nunits, and unit costs are established on a departmental basis.\nProcess costing is an averaging process that calculates the\naverage cost of all units.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 5,
+    "page": 738,
+    "topicId": "su7-costing-techniques",
+    "stem": "Consider the cost of goods sold calculation shown below.\nBeginning inventory                         $ 100,000\nPlus cost of goods manufactured              2,500,000\nLess ending inventory                          (125,000)\nPlus variable overhead efficiency variance       10,000\nCost of goods sold                          $2,485,000\nThis is an example of which cost measurement technique?",
+    "choices": [
+      "Normal costing.",
+      "Standard costing.",
+      "Either actual costing or normal costing.",
+      "Either normal costing or standard costing."
+    ],
+    "answerIndex": 3,
+    "explanation": "In both normal and standard costing, immaterial efficiency\nvariances are accounted for as an addition to cost of goods\nsold.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 6,
+    "page": 739,
+    "topicId": "su7-costing-techniques",
+    "stem": "Which one of the following is least likely to be a reason to\nadopt a standard cost system?",
+    "choices": [
+      "Setting standards at an ideal level can motivate employees.",
+      "A standard cost system identifies what the level of costs\nshould be and who should be responsible for the costs.",
+      "Utilizing standard costs tends to simplify recordkeeping.",
+      "Costs of using standard costing are low relative to costs of\nusing actual costing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Setting standards at an ideal level can motivate employees.\nHowever, if the standards are too high, employees may be\ndiscouraged. If the standards are too low, employees may not\nbe competitive. Setting the correct level of standards is\ndifficult, but it can motivate employees when done correctly.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 7,
+    "page": 739,
+    "topicId": "su7-costing-techniques",
+    "stem": "Using management by exception allows managers to focus\ntheir attention on",
+    "choices": [
+      "Areas that have deviated most from expectations.",
+      "Non-administrative costs and revenues.",
+      "Unfavorable variances.",
+      "Variable costs and revenues."
+    ],
+    "answerIndex": 0,
+    "explanation": "Variance analysis enables management by exception, the\npractice of giving attention primarily to significant deviations\nfrom expectations, whether favorable or unfavorable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 8,
+    "page": 740,
+    "topicId": "su7-costing-techniques",
+    "stem": "A company sells specialty advertising items that are designed\nand produced to meet each customer’s specific needs.\nProminently displaying the customer’s company name, these\nitems are used by the customer to give to its clients as a form\nof promotion. The most appropriate cost accumulation system\nfor the company to use is",
+    "choices": [
+      "Actual costing.",
+      "Job order costing.",
+      "Life-cycle costing.",
+      "Process costing."
+    ],
+    "answerIndex": 1,
+    "explanation": "Job-order costing is appropriate when producing products with\nindividual characteristics or when identifiable groupings are\npossible. Costs are attached to specific “jobs.” Each job will\nresult in a single, identifiable end product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 3,
+    "number": 9,
+    "page": 741,
+    "topicId": "su7-costing-techniques",
+    "stem": "Which one of the following is least likely to be an objective of a\ncost accounting system?",
+    "choices": [
+      "Product costing.",
+      "Department efficiency.",
+      "Inventory valuation.",
+      "Sales commission determination."
+    ],
+    "answerIndex": 3,
+    "explanation": "A cost accounting system has numerous objectives, including\nproduct costing, assessing departmental efficiency, inventory\nvaluation, income determination, and planning, evaluating,\nand controlling operations. Determining sales commissions is\nnot an objective of a cost accounting system because such\ncommissions are based on sales, not costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 1,
+    "page": 742,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nIf Jubal uses variable costing, the inventoriable costs for the\nfiscal year are",
+    "choices": [
+      "$800,000",
+      "$900,000",
+      "$980,000",
+      "$1,060,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The only costs capitalized are the variable costs of\nmanufacturing. Prime costs (direct materials and direct labor)\nare variable.\nPrime costs (direct materials and direct labor) $800,000\nVariable manufacturing overhead                  100,000\nTotal inventoriable costs                    $900,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 2,
+    "page": 743,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nUsing absorption (full) costing, Jubal’s inventoriable costs are",
+    "choices": [
+      "$800,000",
+      "$900,000",
+      "$1,060,000",
+      "$1,180,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The absorption method is required for financial statements\nprepared according to GAAP. It charges all production costs to\ninventories. The prime costs of $800,000, variable\nmanufacturing overhead of $100,000, and fixed manufacturing\noverhead of $160,000 are included. They total $1,060,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 3,
+    "page": 743,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nWhich one of the following statements is true regarding\nabsorption costing and variable costing?",
+    "choices": [
+      "Overhead costs are treated in the same manner under both\ncosting methods.",
+      "If finished goods inventory increases, absorption costing\nresults in higher income.",
+      "Variable manufacturing costs are lower under variable costing.",
+      "Gross margins are the same under both costing methods."
+    ],
+    "answerIndex": 1,
+    "explanation": "Under variable costing, inventory is charged only with variable\nproduction costs. Fixed manufacturing costs are expensed as\nperiod costs. Absorption costing charges all production costs\nto inventory. If finished goods inventory increases, absorption\ncosting results in higher income because it capitalizes some\nfixed costs that are expensed under variable costing. When\ninventory declines, variable costing results in higher income\nbecause some fixed costs capitalized under the absorption\nmethod in prior periods are expensed in the current period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 4,
+    "page": 744,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nAbsorption costing and variable costing are two different\nmethods of assigning costs to units produced. Of the four cost\nitems listed below, identify the one that is not correctly\naccounted for as a product cost.\nPart of Product\nCost under\nAbsorption    Variable\nCosting      Costing",
+    "choices": [
+      "Manufacturing supplies       Yes              Yes",
+      "Insurance on factory         Yes              No",
+      "Direct labor cost            Yes              Yes",
+      "Packaging and shipping costs Yes              Yes"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under absorption costing, all manufacturing costs, both fixed\nand variable, are treated as product costs. Under variable\ncosting, only variable costs of manufacturing are inventoried\nas product costs. Fixed manufacturing costs are expensed as\nperiod costs. Packaging and shipping costs are not product\ncosts under either method because they are incurred after the\ngoods have been manufactured. Instead, they are included in\nselling and administrative expenses for the period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 5,
+    "page": 745,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nWhich of the following statements is true for a firm that uses\nvariable costing?",
+    "choices": [
+      "The cost of a unit of product changes because of changes in\nnumber of units manufactured.",
+      "Profits fluctuate with sales.",
+      "An idle facility variation is calculated.",
+      "Product costs include variable administrative costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "In a variable costing system, only the variable costs are\nrecorded as product costs. All fixed costs are expensed in the\nperiod incurred. Because changes in the relationship between\nproduction levels and sales levels do not cause changes in the\namount of fixed manufacturing cost expensed, profits more\ndirectly follow the trends in sales.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 6,
+    "page": 747,
+    "topicId": "su7-absorption-variable",
+    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nOsawa’s operating income for the year using variable costing\nis",
+    "choices": [
+      "$200,000",
+      "$440,000",
+      "$800,000",
+      "$600,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The contribution margin from manufacturing (Sales – Variable\ncosts) is $10 ($40 – $30) per unit sold, or $1,200,000 (120,000\nunits × $10). The fixed costs of manufacturing ($600,000) and\nselling and administrative costs ($400,000) are deducted from\nthe contribution margin to arrive at an operating income of\n$200,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 7,
+    "page": 747,
+    "topicId": "su7-absorption-variable",
+    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nOsawa’s operating income using absorption (full) costing is",
+    "choices": [
+      "$200,000",
+      "$440,000",
+      "$600,000",
+      "$840,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Absorption costing net income is computed as follows:\nSales (120,000 units × $40)                      $4,800,000\nVariable production costs\n(200,000 units × $30)                $6,000,000\nFixed production costs                   600,000\nTotal production costs             $6,600,000\nEnding inventory\n(80,000 units × $33)                 (2,640,000)\nCost of goods sold                                  (3,960,000)\nGross profit                                        $ 840,000\nSelling and administrative expenses                   (400,000)\nOperating income                                    $ 440,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 8,
+    "page": 748,
+    "topicId": "su7-absorption-variable",
+    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nWhich method of inventory costing treats direct manufacturing\ncosts and manufacturing overhead costs, both variable and\nfixed, as inventoriable costs?",
+    "choices": [
+      "Direct costing.",
+      "Variable costing.",
+      "Absorption costing.",
+      "Conversion costing."
+    ],
+    "answerIndex": 2,
+    "explanation": "Absorption (full) costing considers all manufacturing costs to\nbe inventoriable as product costs. These costs include\nvariable and fixed manufacturing costs, whether direct or\nindirect. The alternative to absorption is known as variable\n(direct) costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 9,
+    "page": 749,
+    "topicId": "su7-absorption-variable",
+    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nWhich one of the following considers the impact of fixed\noverhead costs?",
+    "choices": [
+      "Full absorption costing.",
+      "Marginal costing.",
+      "Direct costing.",
+      "Variable costing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Full absorption costing treats fixed factory overhead costs as\nproduct costs. Thus, inventory and cost of goods sold include\n(absorb) fixed factory overhead.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 10,
+    "page": 750,
+    "topicId": "su7-absorption-variable",
+    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nWhen a firm prepares financial reports by using absorption\ncosting,",
+    "choices": [
+      "Profits will always increase with increases in sales.",
+      "Profits will always decrease with decreases in sales.",
+      "Profits may decrease with increased sales even if there is no\nchange in selling prices and costs.",
+      "Decreased output and constant sales result in increased\nprofits."
+    ],
+    "answerIndex": 2,
+    "explanation": "In an absorption costing system, fixed overhead costs are\nincluded in inventory. When sales exceed production, more\noverhead is expensed under absorption costing due to fixed\noverhead carried over from the prior inventory. If sales\nincrease over production, more than one period’s overhead is\nrecognized as expense. Accordingly, if the increase in\noverhead expensed is greater than the contribution margin of\nthe increased units sold, profit may be lower with an increased\nlevel of sales.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 11,
+    "page": 750,
+    "topicId": "su7-absorption-variable",
+    "stem": "The contribution margin is the excess of revenues over",
+    "choices": [
+      "Cost of goods sold.",
+      "Manufacturing cost.",
+      "Direct cost.",
+      "All variable costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Contribution margin is the excess of revenues over all variable\ncosts (including both manufacturing and nonmanufacturing\nvariable costs) that vary with an output-related cost driver. The\ncontribution margin equals the revenues that contribute toward\ncovering the fixed costs and providing a net income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 12,
+    "page": 751,
+    "topicId": "su7-absorption-variable",
+    "stem": "A company pays bonuses to its managers based on operating\nincome. The company uses absorption costing, and overhead\nis applied on the basis of direct labor hours. To increase\nbonuses, the managers may do all of the following except",
+    "choices": [
+      "Produce those products requiring the most direct labor.",
+      "Defer expenses such as maintenance to a future period.",
+      "Increase production schedules independent of customer\ndemands.",
+      "Decrease production of those items requiring the most direct\nlabor."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under an absorption costing system, income can be\nmanipulated by producing more products than are sold\nbecause more fixed manufacturing overhead will be allocated\nto the ending inventory. When inventory increases, some fixed\ncosts are capitalized rather than expensed. Decreasing\nproduction, however, will result in lower income because more\nof the fixed manufacturing overhead will be expensed in the\ncurrent period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 13,
+    "page": 752,
+    "topicId": "su7-absorption-variable",
+    "stem": "Which one of the following is an advantage of using variable\ncosting?",
+    "choices": [
+      "Variable costing complies with the U.S. Internal Revenue\nCode.",
+      "Variable costing complies with generally accepted accounting\nprinciples.",
+      "Variable costing makes cost-volume relationships more easily\napparent.",
+      "Variable costing is more relevant to long-run pricing strategies."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under variable costing, only the variable costs of\nmanufacturing attach to the units of output; fixed costs are\nexpensed in the period in which they are incurred. Thus, the\nvariations in cost directly attributable to changes in production\nlevel are immediately apparent under variable costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 14,
+    "page": 753,
+    "topicId": "su7-absorption-variable",
+    "stem": "A corporation pays bonuses to its managers based on\noperating income, as calculated under variable costing. It is\nnow 2 months before year end, and earnings have been\ndepressed for some time. Which one of the following actions\nshould the production manager definitely implement to\nmaximize the bonus for this year?",
+    "choices": [
+      "Step up production so that more manufacturing costs are\ndeferred into inventory.",
+      "Cut $2.3 million of advertising and marketing costs.",
+      "Postpone $1.8 million of discretionary equipment maintenance\nuntil next year.",
+      "Implement, with the aid of the controller, an activity-based\ncosting and activity-based management system."
+    ],
+    "answerIndex": 2,
+    "explanation": "Because the production manager wishes to maximize the\nbonus for the coming year, the action the manager must take\nwill necessarily have most of its effect in the short run. The\naction the manager should take to achieve this goal is to defer\ncosts under the manager’s control until the following period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 15,
+    "page": 754,
+    "topicId": "su7-absorption-variable",
+    "stem": "When comparing absorption costing with variable costing,\nwhich of the following statements is false?",
+    "choices": [
+      "Absorption costing enables managers to increase operating\nprofits in the short run by increasing inventories.",
+      "When sales volume is more than production volume, variable\ncosting will result in higher operating profit.",
+      "A manager who is evaluated based on variable costing\noperating profit would be tempted to increase production at the\nend of a period in order to get a more favorable review.",
+      "Under absorption costing, operating profit is a function of both\nsales volume and production volume."
+    ],
+    "answerIndex": 2,
+    "explanation": "Absorption (full) costing is the accounting method that\nconsiders all manufacturing costs as product costs. These\ncosts include variable and fixed manufacturing costs whether\ndirect or indirect. Variable (direct) costing considers only\nvariable manufacturing costs to be product costs, i.e.,\ninventoriable. Fixed manufacturing costs are considered\nperiod costs and are expensed as incurred. If production is\nincreased without increasing sales, inventories will rise.\nHowever, all fixed costs associated with production will be an\nexpense of the period under variable costing. Thus, this action\nwill not artificially increase profits and improve the manager’s\nreview.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 16,
+    "page": 755,
+    "topicId": "su7-absorption-variable",
+    "stem": "Which one of the following is the best reason for using\nvariable costing?",
+    "choices": [
+      "Fixed factory overhead is more closely related to the capacity\nto produce than to the production of specific units.",
+      "All costs are variable in the long term.",
+      "Variable costing is acceptable for income tax reporting\npurposes.",
+      "Variable costing usually results in higher operating income\nthan if a company uses absorption costing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Because fixed factory overhead is more closely related to the\ncapacity to produce than to the production of specific units,\nvariable costing more accurately depicts the variations in cost\nresulting from changes in the level of output.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 17,
+    "page": 756,
+    "topicId": "su7-absorption-variable",
+    "stem": "If a manufacturing company uses variable costing to cost\ninventories, which of the following costs are considered\ninventoriable costs?",
+    "choices": [
+      "Only raw material, direct labor, and variable manufacturing\noverhead costs.",
+      "Only raw material, direct labor, and variable and fixed\nmanufacturing overhead costs.",
+      "Only raw material, direct labor, variable manufacturing\noverhead, and variable selling and administrative costs.",
+      "Only raw material and direct labor costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under variable costing, only variable costs (direct materials,\ndirect labor, and variable overhead) are considered product\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 18,
+    "page": 756,
+    "topicId": "su7-absorption-variable",
+    "stem": "An airline is in the process of preparing a contribution margin\nincome statement that will allow a detailed look at its variable\ncosts and profitability of operations. Which one of the following\ncost combinations should be used to evaluate the variable cost\nper flight of the company’s flights along a specific route?",
+    "choices": [
+      "Flight crew salary, fuel, and engine maintenance.",
+      "Fuel, food service, and airport landing fees.",
+      "Airplane depreciation, baggage handling, and airline\nmarketing.",
+      "Communication system operation, food service, and ramp\npersonnel."
+    ],
+    "answerIndex": 1,
+    "explanation": "Fuel, food service, and airport landing fees are all variable and\ntraceable to individual flights.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 19,
+    "page": 757,
+    "topicId": "su7-absorption-variable",
+    "stem": "A firm uses direct (variable) costing for internal reporting and\nabsorption costing for the external financial statements. A\nreview of the firm’s internal and external disclosures will likely\nfind",
+    "choices": [
+      "A difference in the treatment of fixed selling and administrative\ncosts.",
+      "A higher inventoriable unit cost reported to management than\nto the shareholders.",
+      "A contribution margin rather than gross margin in the reports\nreleased to shareholders.",
+      "Internal income figures that vary closely with sales and\nexternal income figures that are influenced by both units sold\nand productive output."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under variable costing, only costs that vary with the level of\nproduction are treated as product costs. Thus, internal income\nfigures will vary closely with sales. Under absorption costing,\nall production costs (both variable and fixed) are treated as\nproduct costs. Thus, external income figures are influenced by\nboth units sold and productive output.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 20,
+    "page": 758,
+    "topicId": "su7-absorption-variable",
+    "stem": "Which of the following correctly shows the treatment of (1)\nfactory insurance, (2) direct labor, and (3) finished goods\nshipping costs under absorption costing and variable costing?\nAbsorption Costing Variable Costing\nProduct       Period   Product Period\nCost          Cost     Cost    Cost",
+    "choices": [
+      "1, 2        3            2     1, 3",
+      "2               1, 3   1, 2   3",
+      "1, 2            3      1      2, 3",
+      "1               2, 3   2, 3   1"
+    ],
+    "answerIndex": 0,
+    "explanation": "Factory insurance (item 1) is a factory operating cost, one of\nthe three components of manufacturing overhead (the other\ntwo being indirect materials and indirect labor). Since it is a\nmanufacturing cost, it must be treated as a product cost under\nabsorption costing, and since it is fixed over the relevant\nrange, it must be treated as a period cost under variable\ncosting. Direct labor (item 2) is treated as a product cost under\nboth systems. Finished goods shipping (item 3) is a variable\nselling and administrative cost, and, as such, is treated as a\nperiod cost under both systems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 21,
+    "page": 759,
+    "topicId": "su7-absorption-variable",
+    "stem": "When comparing absorption costing with variable costing, the\ndifference in operating income can be explained by the\ndifference between the",
+    "choices": [
+      "Units sold and the units produced, multiplied by the unit sales\nprice.",
+      "Ending inventory in units and the beginning inventory in units,\nmultiplied by the budgeted fixed manufacturing cost per unit.",
+      "Ending inventory in units and the beginning inventory in units,\nmultiplied by the unit sales price.",
+      "Units sold and the units produced, multiplied by the budgeted\nvariable manufacturing cost per unit."
+    ],
+    "answerIndex": 1,
+    "explanation": "Absorption and variable costing differ in their treatment of\nfixed overhead: It is capitalized as inventory under absorption\ncosting and not under variable costing. Thus, the difference in\noperating income between the two can be explained by the\ndifference between the ending inventory in units and the\nbeginning inventory in units, multiplied by the budgeted fixed\nmanufacturing cost per unit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 22,
+    "page": 760,
+    "topicId": "su7-absorption-variable",
+    "stem": "A company has significant fixed overhead costs in the\nmanufacturing of its sole product, auto mufflers. For internal\nreporting purposes, in which one of the following situations\nwould ending finished goods inventory be higher under direct\n(variable) costing rather than under absorption costing?",
+    "choices": [
+      "If more units were produced than were sold during a given\nyear.",
+      "If more units were sold than were produced during a given\nyear.",
+      "In all cases when ending finished goods inventory exists.",
+      "None of these situations."
+    ],
+    "answerIndex": 3,
+    "explanation": "The monetary value of ending inventory is never higher under\ndirect costing than under absorption costing because fewer\ncosts are capitalized under direct costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 23,
+    "page": 761,
+    "topicId": "su7-absorption-variable",
+    "stem": "A corporation produces and sells smart phones. The following\ninformation relates to operations for the last year:\nVariable cost per unit                                             $5.20\nTotal fixed manufacturing overhead cost                         $260,000\nTotal fixed selling and administrative cost                     $180,000\nUnits produced and sold                                          400,000\nUsing absorption costing, what was the cost per unit last year?",
+    "choices": [
+      "$4.55",
+      "$5.00",
+      "$5.85",
+      "$6.30"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under absorption costing, the fixed portion of manufacturing\noverhead is “absorbed” into the cost of each unit of product.\nProduct cost thus include all manufacturing costs, both fixed\nand variable. The total manufacturing cost is equal to\n$2,340,000 [($5.20 × 400,000) + $260,000]. The cost per unit\nis thus $5.85 ($2,340,000 ÷ 400,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 24,
+    "page": 762,
+    "topicId": "su7-absorption-variable",
+    "stem": "The primary difference between absorption and variable\ncosting is that variable costing treats",
+    "choices": [
+      "Only direct materials and direct labor as product cost.",
+      "Direct materials, direct labor, the variable portion of\nmanufacturing overhead, and an allocated portion of fixed\nmanufacturing overhead as product costs.",
+      "Only direct materials, direct labor, the variable portion of\nmanufacturing overhead, and the variable portion of selling\nand administrative expenses as product cost.",
+      "Only direct materials, direct labor, and the variable portion of\nmanufacturing overhead as product costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Variable costing treats only direct materials, direct labor, and\nthe variable portion of manufacturing overhead as product\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 25,
+    "page": 763,
+    "topicId": "su7-absorption-variable",
+    "stem": "Management would like to determine profitability of its Alpha\nproduct line. To eliminate the possibility of profit distortion due\nto changes in production, the managers should primarily\nreview",
+    "choices": [
+      "Variable (direct) costing income statements.",
+      "Absorption costing income statements.",
+      "Multi-step income statements.",
+      "Cash flow statements."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under variable costing, fixed manufacturing costs are not\nincluded in product costs. Rather, they are period costs and\nexpensed in the current period as incurred. Consequently, any\nvariability in profits will not be attributed to changes in\nproduction. Instead, profits will vary closely with sales. Thus,\nmanagers should primarily review variable costing income\nstatements to eliminate the possibility of profit distortion due to\nchanges in production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 26,
+    "page": 764,
+    "topicId": "su7-absorption-variable",
+    "stem": "In which one of the following situations will ending inventory on\nthe balance sheet computed under absorption costing be\nexactly equal to ending inventory computed under variable\ncosting?",
+    "choices": [
+      "When the number of units produced equals the number of\nunits sold.",
+      "When there is no fixed factory overhead cost.",
+      "When the denominator variance is zero.",
+      "When there is no variable overhead cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "Fixed factory overhead cost is treated as a product cost under\nabsorption costing and as a period cost under variable\ncosting. Under variable costing, only variable costs are\nassigned to units of product and therefore included in the\ninventory. Under absorption costing, both variable factory\noverhead costs and fixed factory overhead costs are assigned\nto units of product and therefore included in the inventory.\nThus, ending inventory is the same under both absorption\ncosting and variable costing only when there is no fixed\nfactory overhead cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 27,
+    "page": 765,
+    "topicId": "su7-absorption-variable",
+    "stem": "Which of the following costs are generally included in a\ncalculation of operating income when using absorption\ncosting?\nI.      Fixed direct manufacturing costs\nII. Variable direct manufacturing costs\nIII. Variable manufacturing overhead costs\nIV. Fixed manufacturing overhead costs",
+    "choices": [
+      "II and III only.",
+      "I and IV only.",
+      "I, II, and III only.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under absorption costing, the fixed portion of manufacturing\noverhead is absorbed into the cost of each unit product.\nProduct cost thus includes all manufacturing costs, both fixed\nand variable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 28,
+    "page": 765,
+    "topicId": "su7-absorption-variable",
+    "stem": "Which one of the following is true with respect to variable and\nabsorption costing systems?",
+    "choices": [
+      "Variable costing systems include fixed manufacturing\noverhead as period costs.",
+      "Absorption costing systems include fixed manufacturing\noverhead as period costs.",
+      "Variable costing systems include variable manufacturing\noverhead as period costs.",
+      "Absorption costing systems include variable manufacturing\noverhead as period costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Variable costing capitalizes on the variable costs of\nproduction. Fixed manufacturing overhead is treated as a\nperiod cost and is expensed in the period that the cost is\nincurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 29,
+    "page": 766,
+    "topicId": "su7-absorption-variable",
+    "stem": "The costing method that is properly classified for both external\nand internal reporting purposes is\nExternal Internal\nReporting Reporting",
+    "choices": [
+      "Activity-based costing           No   Yes",
+      "Job-order costing                No   Yes",
+      "Variable costing                 No   Yes",
+      "Process costing                 No    No"
+    ],
+    "answerIndex": 2,
+    "explanation": "Activity-based costing, job-order costing, process costing, and\nstandard costing can all be used for both internal and external\npurposes. Variable costing is not acceptable under GAAP for\nexternal reporting purposes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 30,
+    "page": 767,
+    "topicId": "su7-absorption-variable",
+    "stem": "Which of the following statements is correct regarding the\ndifference between the absorption costing and variable costing\nmethods?",
+    "choices": [
+      "When production equals sales, absorption costing income is\ngreater than variable costing income.",
+      "When production equals sales, absorption costing income\nis less than variable costing income.",
+      "When production is greater than sales, absorption costing\nincome is greater than variable costing income.",
+      "When production is less than sales, absorption costing income\nis greater than variable costing income."
+    ],
+    "answerIndex": 2,
+    "explanation": "When production exceeds sales, ending inventory increases.\nUnder absorption costing, some fixed costs are included in\nending inventory. Under variable costing, all fixed costs are\nexpensed. Accordingly, income is higher under absorption\ncosting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 31,
+    "page": 768,
+    "topicId": "su7-absorption-variable",
+    "stem": "In an income statement prepared as an internal report, total\nfixed costs normally are shown separately under\nAbsorption Costing Variable Costing",
+    "choices": [
+      "No No",
+      "No Yes",
+      "Yes Yes",
+      "Yes No"
+    ],
+    "answerIndex": 1,
+    "explanation": "In a variable-costing income statement, all variable costs are\ndeducted from sales revenue to arrive at the contribution\nmargin. Total fixed costs are then deducted from the\ncontribution margin to determine operating income. In an\nabsorption-costing income statement, fixed factory overhead\nincluded in the cost of goods sold is deducted from sales\nrevenue in the calculation of the gross margin. Other fixed\ncosts are among the amounts subtracted from the gross\nmargin to determine operating income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 32,
+    "page": 769,
+    "topicId": "su7-absorption-variable",
+    "stem": "A manufacturing company employs variable costing for internal\nreporting and analysis purposes. However, it converts its\nrecords to absorption costing for external reporting. The\nAccounting Department always reconciles the two operating\nincome figures to assure that no errors have occurred in the\nconversion. The fixed manufacturing overhead cost per unit\nwas based on the planned level of production of 480,000 units.\nFinancial data for the year are presented below:\nBudget     Actual\nSales (in units)               495,000 510,000\nProduction (in units)          480,000 500,000\nVariable Absorption\nCosting Costing\nVariable costs               $10.00       $10.00\nFixed manufacturing overhead      0         6.00\nTotal unit manufacturing costs $10.00     $16.00\nThe difference between the operating income calculated under\nthe variable costing method and the operating income\ncalculated under the absorption costing method would be",
+    "choices": [
+      "$57,600",
+      "$60,000",
+      "$90,000",
+      "$120,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The difference between variable costing and absorption\ncosting is that variable costing treats fixed manufacturing\noverhead as a period cost. Absorption costing treats it as a\nproduct cost. Given that sales exceeded production, both\nmethods expense all fixed manufacturing overhead incurred\nduring the year. However, 10,000 units (510,000 sales –\n500,000 production) manufactured in a prior period were also\nsold. These units presumably were recorded at $10 under\nvariable costing and $16 under absorption costing.\nConsequently, absorption costing operating income is $60,000\n(10,000 units × $6) less than that under variable costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 33,
+    "page": 771,
+    "topicId": "su7-absorption-variable",
+    "stem": "Presented are Valenz Company’s records for the\ncurrent fiscal year ended November 30:\nDirect materials used               $300,000\nDirect labor                         100,000\nVariable manufacturing overhead       50,000\nFixed manufacturing overhead          80,000\nSelling and admin. costs -- variable 40,000\nSelling and admin. costs -- fixed     20,000\nIf Valenz Company uses variable costing, the inventoriable\ncosts for the fiscal year are",
+    "choices": [
+      "$400,000",
+      "$450,000",
+      "$490,000",
+      "$530,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under variable costing, the only costs that are capitalized are\nthe variable costs of manufacturing. These include\nDirect materials used                            $300,000\nDirect labor                                      100,000\nVariable overhead                                  50,000\nTotal inventoriable costs                    $450,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 34,
+    "page": 772,
+    "topicId": "su7-absorption-variable",
+    "stem": "Presented are Valenz Company’s records for the\ncurrent fiscal year ended November 30:\nDirect materials used               $300,000\nDirect labor                         100,000\nVariable manufacturing overhead       50,000\nFixed manufacturing overhead          80,000\nSelling and admin. costs -- variable 40,000\nSelling and admin. costs -- fixed     20,000\nUsing absorption (full) costing, Valenz Company’s\ninventoriable costs are",
+    "choices": [
+      "$400,000",
+      "$450,000",
+      "$530,000",
+      "$590,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The absorption method is required for financial statements\nprepared according to GAAP. It charges all costs of production\nto inventories. The variable cost of materials ($300,000), direct\nlabor ($100,000), variable overhead ($50,000), and fixed\noverhead ($80,000) are included. They total $530,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 35,
+    "page": 772,
+    "topicId": "su7-absorption-variable",
+    "stem": "Presented are Valenz Company’s records for the\ncurrent fiscal year ended November 30:\nDirect materials used               $300,000\nDirect labor                         100,000\nVariable manufacturing overhead       50,000\nFixed manufacturing overhead          80,000\nSelling and admin. costs -- variable 40,000\nSelling and admin. costs -- fixed     20,000\nA cracker and cookie manufacturer has the following unit costs\nfor the month of June:\nVariable          Variable               Fixed                Fixed\nmanufacturing      marketing           manufacturing           marketin\ncost              cost                  cost                 cost\n$5.00               $3.50                 $2.00             $4.00\nA total of 100,000 units were manufactured during June, 10,000\nof which remain in ending inventory. The manufacturer uses the\nfirst-in, first-out (FIFO) inventory method, and the 10,000 units\nare the only finished goods inventory at month end. Using the\nfull absorption costing method, the manufacturer’s finished\ngoods inventory value would be",
+    "choices": [
+      "$50,000",
+      "$70,000",
+      "$85,000",
+      "$145,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The manufacturer’s ending inventory consists of 10,000 units,\nmade up of $50,000 variable manufacturing cost (10,000 × $5)\nand $20,000 fixed manufacturing cost (10,000 × $2).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 36,
+    "page": 773,
+    "topicId": "su7-absorption-variable",
+    "stem": "A company has just completed the first month of producing a\nnew product but has not yet shipped any of this product. The\nproduct incurred variable manufacturing costs of $5,000,000,\nfixed manufacturing costs of $2,000,000, variable marketing\ncosts of $1,000,000, and fixed marketing costs of $3,000,000.\nIf the company uses the variable cost method to value\ninventory, the inventory value of the new product will be",
+    "choices": [
+      "$5,000,000",
+      "$6,000,000",
+      "$8,000,000",
+      "$11,000,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under variable costing, only variable manufacturing costs are\ncapitalized as part of inventory. Thus, ending inventory is\nvalued at $5,000,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 37,
+    "page": 775,
+    "topicId": "su7-absorption-variable",
+    "stem": "Consider the following situation for Weisman\nCorporation for the prior year:\n• The company produced 1,000 units and sold 900 units, both\nas budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all variable\nmanufacturing costs are affected by volume of production\nonly, and all variable selling costs are affected by sales\nvolume only.\n• Budgeted per unit revenues and costs were as follows.\nPer\nUnit\nSales price                    $100\nDirect materials                 30\nDirect labor                     20\nVariable manufacturing           10\noverhead\nFixed manufacturing                 5\noverhead\nVariable selling costs             12\nFixed selling costs ($3,600         4\ntotal)\nFixed administrative costs          2\n($1,800 total)\nIf Weisman uses absorption costing, its operating income earned in the last fiscal year was",
+    "choices": [
+      "$13,600",
+      "$14,200",
+      "$15,300",
+      "$15,840"
+    ],
+    "answerIndex": 2,
+    "explanation": "Weisman’s absorption-basis operating income can be\ncalculated as follows:\nSales                            900 units at $ 100   =\nBeginning inventory                                              $        0\nVariable production costs    1,000 units at $ 60 =                   60,000\nFixed production costs       1,000 units at $     5 =                 5,000\nGoods available for sale                                      $65,000\nLess: Ending inventory           100 units    at $   65     =     (6,500)\nAbs. cost of goods sold\nGross margin\nVariable S&A expenses             900 units    at $   12     =\nFixed S&A expenses                900 units    at $        6 =\nOperating income",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 38,
+    "page": 776,
+    "topicId": "su7-absorption-variable",
+    "stem": "Consider the following situation for Weisman\nCorporation for the prior year:\n• The company produced 1,000 units and sold 900 units, both\nas budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all variable\nmanufacturing costs are affected by volume of production\nonly, and all variable selling costs are affected by sales\nvolume only.\n• Budgeted per unit revenues and costs were as follows.\nPer\nUnit\nSales price                    $100\nDirect materials                 30\nDirect labor                     20\nVariable manufacturing           10\noverhead\nFixed manufacturing                 5\noverhead\nVariable selling costs             12\nFixed selling costs ($3,600         4\ntotal)\nFixed administrative costs          2\n($1,800 total)\nIf Weisman uses variable costing, its operating income earned in the last fiscal year was",
+    "choices": [
+      "$13,600",
+      "$14,200",
+      "$14,800",
+      "$15,300"
+    ],
+    "answerIndex": 2,
+    "explanation": "Weisman’s variable-basis operating income can be calculated\nas follows:\nSales                              900 units at $ 100      =\nBeginning inventory                                              $        0\nVariable production costs      1,000 units at $ 60 =                 60,000\nGoods available for sale                                      $60,000\nLess: Ending inventory           100 units    at $   60     =     (6,000)\nVar. cost of goods sold\nVariable S&A expenses          900 units    at $   12     =\nContribution margin\nFixed production costs          1,000 units    at $        5 =\nFixed S&A expenses                900 units    at $        6 =\nOperating income",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 39,
+    "page": 778,
+    "topicId": "su7-absorption-variable",
+    "stem": "A corporation had the following unit costs for the recently\nconcluded calendar year:\nVariable        Fixed\nManufacturing                      $8.00      $3.00\nNonmanufacturing                   $2.00      $5.50\nInventory for the sole product totaled 6,000 units on January 1\nand 5,200 units on December 31. When compared to variable\ncosting income, absorption costing income is",
+    "choices": [
+      "$2,400 lower.",
+      "$2,400 higher.",
+      "$6,800 lower.",
+      "$6,800 higher."
+    ],
+    "answerIndex": 0,
+    "explanation": "Since beginning inventory was 6,000 and ending inventory\nwas 5,200, inventory decreased by 800 units which means\nsales exceeded production. If production is less than sales,\noperating income is higher under variable costing. It follows\nthat income is lower under absorption costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 40,
+    "page": 778,
+    "topicId": "su7-absorption-variable",
+    "stem": "Consider the following situation for Weisman\nCorporation for the prior year:\n• The company produced 1,000 units and sold 900 units, both\nas budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all variable\nmanufacturing costs are affected by volume of production\nonly, and all variable selling costs are affected by sales\nvolume only.\n• Budgeted per unit revenues and costs were as follows.\nPer\nUnit\nSales price                    $100\nDirect materials                 30\nDirect labor                     20\nVariable manufacturing           10\noverhead\nFixed manufacturing                 5\noverhead\nVariable selling costs             12\nFixed selling costs ($3,600         4\ntotal)\nFixed administrative costs          2\n($1,800 total)\nDuring the month of May, a corporation sold 1,000 units. The\ncost per unit for May was as follows:\nCost per Unit\nDirect materials                              $ 5.50\nDirect labor                                    3.00\nVariable manufacturing overhead                 1.00\nFixed manufacturing overhead                    1.50\nVariable administrative costs                    .50\nFixed administrative costs                      3.50\nTotal                                      $15.00\nMay’s income using absorption costing was $9,500. The\nincome for May, if variable costing had been used, would have\nbeen $9,125. The number of units produced during May was",
+    "choices": [
+      "750",
+      "925",
+      "1,075",
+      "1,250"
+    ],
+    "answerIndex": 3,
+    "explanation": "The difference between absorption-basis and variable-basis\noperating income ($9,500 – $9,125 = $375) is equal to the\nchange in inventory for the period (in units) multiplied by fixed\nmanufacturing cost per unit. Stated another way, the\ndifference in operating incomes divided by fixed per-unit\nmanufacturing cost equals the change in ending inventory\n($375 ÷ $1.50 = 250 units). Since 1,000 units were sold and\nending inventory increased by 250 units, 1,250 units were\nproduced (1,000 + 250).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 41,
+    "page": 780,
+    "topicId": "su7-absorption-variable",
+    "stem": "Consider the following situation for Weisman\nCorporation for the prior year:\n• The company produced 1,000 units and sold 900 units, both\nas budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all variable\nmanufacturing costs are affected by volume of production\nonly, and all variable selling costs are affected by sales\nvolume only.\n• Budgeted per unit revenues and costs were as follows.\nPer\nUnit\nSales price                    $100\nDirect materials                 30\nDirect labor                     20\nVariable manufacturing           10\noverhead\nFixed manufacturing                 5\noverhead\nVariable selling costs             12\nFixed selling costs ($3,600         4\ntotal)\nFixed administrative costs          2\n($1,800 total)\nLast year a company had sales of 75,000 units and production\nof 100,000 units. Other information for the year is shown\nbelow.\nDirect manufacturing labor        $187,500\nVariable manufacturing overhead 100,000\nDirect materials                    150,000\nVariable selling expenses           100,000\nFixed administrative expenses       100,000\nFixed manufacturing overhead        200,000\nAssuming no beginning inventory, what is the total value of\nending finished goods inventory under absorption costing?",
+    "choices": [
+      "$159,375",
+      "$184,375",
+      "$209,375",
+      "$279,175"
+    ],
+    "answerIndex": 0,
+    "explanation": "With no beginning inventory, cost of goods manufactured is\nsimply the sum of direct labor, direct materials, variable\noverhead, and fixed overhead, or $637,500 ($187,500 +\n$100,000 + $150,000 + $200,000). The cost of the ending\ninventory is equal to $159,375 [$637,500 × (25,000 units ÷\n100,000 units)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 42,
+    "page": 781,
+    "topicId": "su7-absorption-variable",
+    "stem": "Using absorption costing, a company’s income for October\nwas $250,000. The company began the month with 10,000\nunits in finished goods inventory that contained $30,000 of\nfixed manufacturing overhead costs. During October, the\ncompany produced 330,000 units and sold 325,000 units. The\nfixed manufacturing overhead for October totaled $990,000. If\nthe company used variable costing, its income for October\nwould be",
+    "choices": [
+      "$265,000",
+      "$250,000",
+      "$235,000",
+      "$234,308"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under variable costing, fixed manufacturing overhead is\ntreated as a period expense and is expensed in the period\nincurred. Each of the units produced under absorption costing\ncarries $3/unit of fixed manufacturing overhead expense that\nis incurred when the unit is sold. Therefore, because they\nincreased their inventory by 5,000 units (330,000 produced –\n325,000 sold), an additional $15,000 ($5,000 × $3) must be\nexpensed in the current period that would not have been\notherwise expensed until sale under absorption costing,\nreducing income to $235,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 43,
+    "page": 782,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of Killo Co.’s first year of operations, 1,000 units of\ninventory remained on hand. Variable and fixed manufacturing\ncosts per unit were $90 and $20, respectively. If Killo uses\nabsorption costing rather than variable (direct) costing, the\nresult would be a higher pretax income of",
+    "choices": [
+      "$0",
+      "$20,000",
+      "$70,000",
+      "$90,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The difference between variable and absorption costing is that\nvariable costing eliminates fixed costs from product\ninventories. These fixed costs are charged to operating costs\nduring the period in which the costs are incurred under\nvariable costing. Absorption costing charges the fixed costs to\nthe remaining inventory for $20,000 (1,000 × $20). These\ncosts will be recognized during the following period, assuming\nthe inventory is sold. Because variable costing charges the\nfixed manufacturing costs to the current period, the operating\nexpenses will be $20,000 higher than under absorption\ncosting. Because operating costs would be $20,000 lower\nusing absorption costing, the result would be a higher pretax\nincome of $20,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 44,
+    "page": 783,
+    "topicId": "su7-absorption-variable",
+    "stem": "Last year, a company had sales of 75,000 units and production\nof 100,000 units. Other information for the year is shown\nbelow.\nDirect manufacturing labor        $187,500\nVariable manufacturing overhead 100,000\nDirect materials                    150,000\nVariable selling expenses           100,000\nFixed administrative expenses       100,000\nFixed manufacturing overhead     200,000\nAssuming no beginning inventory, what is the cost of goods\nsold under variable costing?",
+    "choices": [
+      "$553,125",
+      "$478,125",
+      "$403,125",
+      "$328,125"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under variable costing, product cost includes only the variable\nportion of manufacturing costs. Thus, the direct manufacturing\nlabor, the variable manufacturing overhead, and the direct\nmaterials costs are all included in the cost of goods sold\ncalculation. The total variable manufacturing cost is equal to\n$437,500 ($187,500 + 100,000 + 150,000), and the total\nvariable manufacturing cost per unit is equal to $4.375\n($437,500 ÷ 100,000 units manufactured). Because\n100,000 units were produced but only 75,000 were sold, the\ncost of goods sold is $328,125 ($4.375 × 75,000 units sold).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 45,
+    "page": 784,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of a company’s first year of operations, 2,000 units\nof inventory are on hand. Variable costs are $100 per unit, and\nfixed manufacturing costs are $30 per unit. The use of\nabsorption costing, rather than variable costing, would result in\na higher net income of what amount?",
+    "choices": [
+      "$60,000",
+      "$140,000",
+      "$200,000",
+      "$260,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Absorption costing is required under GAAP. It includes all\nmanufacturing costs in product cost: direct materials, direct\nlabor, and fixed as well as variable manufacturing overhead.\nVariable costing differs only in that it expenses fixed\nmanufacturing costs. Hence, given no beginning inventory,\npretax net income for absorption costing purposes exceeds\npretax net income for variable costing purposes by $60,000\n(2,000 units in EI × $30 fixed manufacturing cost per unit).\nThis amount is expensed using variable costing and treated as\na product cost using absorption costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 46,
+    "page": 785,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the start of its fiscal year, a company anticipated producing\n300,000 units throughout the year. The annual budgeted\nmanufacturing overhead was $150,000 for variable costs and\n$600,000 for fixed costs. In April, when there was a beginning\ninventory for finished goods of 5,000 units, the company\nshowed an income of $40,000 using absorption costing. That\nsame month, ending inventory for finished goods was\n7,000 units. What amount would the company recognize as\nincome for April using variable costing?",
+    "choices": [
+      "$35,000",
+      "$36,000",
+      "$44,000",
+      "$45,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The difference between variable costing and absorption\ncosting is the treatment of fixed costs. Under absorption\ncosting, the fixed portion of manufacturing overhead is\nincluded in the cost of each product. Under variable costing,\nproduct cost includes only variable manufacturing costs and\nfixed costs are treated as period costs. The rate for assigning\nfixed overhead costs is $2 per unit ($600,000 budgeted fixed\noverhead costs ÷ 300,000 budgeted production units).\nBecause the ending inventory in April is 2,000 units greater\nthan the beginning inventory, the company produced more\nunits than it sold. In April, under absorption costing, $4,000\n($2 fixed overhead rate per unit × 2,000 units produced and\nnot sold) of fixed manufacturing overhead costs were still\nembedded in ending inventory and were not expensed. Under\nvariable costing, these fixed manufacturing overhead costs of\n$4,000 were expensed. Therefore, the operating income\nunder the absorption costing is $4,000 greater than under the\nvariable costing. Therefore, operating income under variable\ncosting is $36,000 ($40,000 – $4,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 47,
+    "page": 787,
+    "topicId": "su7-absorption-variable",
+    "stem": "A manufacturing company is contemplating switching from\ntheir current costing approach, variable costing, to absorption\ncosting. Relevant data for the company in January 20X2 is as\nfollows.\nSelling price                                   $30/unit\nUnits produced                                   40,000\nUnits sold                                       30,000\nInventory as of 1/1/X2                             None\nDirect materials                                 $6/unit\nDirect labor                                     $3/unit\nVariable overhead                                $2/unit\nVariable selling and administrative expense      $1/unit\nFixed selling and administrative expense        $75,000\nFixed manufacturing overhead              $160,000\nBased on the information above, the company’s operating\nincome using absorption costing is",
+    "choices": [
+      "$295,000",
+      "$345,000",
+      "$335,000",
+      "$305,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Absorption costing (also called full costing or full absorption\ncosting) treats all manufacturing costs as product costs. Thus,\ndirect materials, direct labor, variable overhead, and fixed\noverhead are all treated as product costs and will be\nexpensed as cost of goods sold. During the period,\n30,000 units were sold. Thus, operating income is calculated\nas follows:\nRevenues ($30/unit × 30,000 units)                      $ 900,000\nDirect materials ($6/unit × 30,000 units)                (180,000)\nDirect labor ($3/unit × 30,000 units)                     (90,000)\nVariable overhead ($2/unit × 30,000 units)                (60,000)\nVariable S&A expense* ($1/unit × 30,000 units)            (30,000)\nFixed S&A expense*                                        (75,000)\nFixed manufacturing overhead ($4/unit** ×\n30,000 units)                                           (120,000)\nOperating income                                    $ 345,000\n* This is a period cost and is completely expensed in the\nperiod it is incurred.\n** $160,000 total ÷ 40,000 units produced = $4/unit",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 48,
+    "page": 789,
+    "topicId": "su7-absorption-variable",
+    "stem": "At the end of fiscal year 20X9, Monterrey Manufacturing had\nthe following data in its records:\nDirect materials                      $500,000\nDirect labor                           400,000\nVariable manufacturing overhead         90,000\nFixed manufacturing overhead           120,000\nVariable selling and other expenses 90,000\nFixed selling and other expenses        50,000\nAssuming Monterrey employs absorption costing, the\ninventoriable costs for fiscal year 20X9 equal",
+    "choices": [
+      "$900,000",
+      "$1,080,000",
+      "$1,110,000",
+      "$1,070,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under absorption costing, inventoriable costs include all\nmanufacturing costs, both fixed and variable. Thus, the\ninventoriable costs include the prime costs [$900,000\n($500,000 direct materials + $400,000 direct labor)], the\nvariable manufacturing overhead ($90,000), and the fixed\nmanufacturing overhead ($120,000), for a total inventoriable\ncost of $1,110,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 49,
+    "page": 791,
+    "topicId": "su7-absorption-variable",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe difference between the $99.98 suggested selling price for\nHuron’s Product B and its total unit cost of $88.00 represents\nthe unit’s",
+    "choices": [
+      "Contribution margin ratio.",
+      "Gross profit.",
+      "Contribution.",
+      "Gross profit margin ratio."
+    ],
+    "answerIndex": 1,
+    "explanation": "Gross profit is the difference between sales price and the full\nabsorption cost of goods sold.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 50,
+    "page": 792,
+    "topicId": "su7-absorption-variable",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe difference between the sales price and total variable costs\nis",
+    "choices": [
+      "Gross operating profit.",
+      "Net profit.",
+      "The breakeven point.",
+      "The contribution margin."
+    ],
+    "answerIndex": 3,
+    "explanation": "The contribution margin is calculated by subtracting all\nvariable costs from sales revenue. It represents the portion of\nsales that is available for covering fixed costs and profit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 51,
+    "page": 792,
+    "topicId": "su7-absorption-variable",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe term “gross margin” for a manufacturing firm refers to\nexcess of sales over",
+    "choices": [
+      "Cost of goods sold, excluding fixed indirect manufacturing\ncosts.",
+      "All variable costs, including variable selling and administrative\nexpenses.",
+      "Cost of goods sold, including fixed indirect manufacturing\ncosts.",
+      "Manufacturing costs, excluding fixed manufacturing costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "Gross margin or gross profit is the excess of sales over cost of\ngoods sold, calculated on a full absorption basis. Cost of\ngoods sold would include all manufacturing costs, both fixed\nand variable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 52,
+    "page": 793,
+    "topicId": "su7-absorption-variable",
+    "stem": "Consider the following information for Richardson Company for\nthe prior year:\n• The company produced 1,000 units and sold\n900 units, both as budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all\nvariable manufacturing costs were affected by\nproduction volume only, and all variable selling costs\nwere affected by sales volume only.\n• Budgeted per unit revenues and costs were as follows:\n•                                    Per unit\nSales price                               $100\nDirect materials                            30\nDirect labor                                20\nOther variable manufacturing costs          10\nFixed selling costs                          5\nVariable selling costs                      12\nFixed manufacturing costs ($3,600 total)     4\nFixed administrative costs ($1,800 total)    2\nThe contribution margin earned by Richardson for the prior\nyear was",
+    "choices": [
+      "$25,200",
+      "$28,000",
+      "$31,500",
+      "$35,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Contribution margin equals revenues minus all variable costs.\nGiven no WIP and no beginning finished goods, the\ncontribution margin was $25,200 [900 units × ($100 – $30 –\n$20 – $10 – $12)]. The variable costs of producing the units\nnot sold are embedded in ending inventory rather than\nexpensed as part of cost of goods sold. The fixed costs are\nthus excluded from computation of the contribution margin.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 53,
+    "page": 795,
+    "topicId": "su7-absorption-variable",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nConsider the following situation for a company for the prior\nyear.\n• The company produced 1,000 units and sold 900\nunits, both as budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all\nvariable manufacturing costs are affected by volume of\nproduction only, and all variable selling costs are\naffected by sales volume only.\n• Budgeted per unit revenues and costs were as follows:\nPer Unit\nSales price                                 $100\nDirect materials                              30\nDirect labor                                  20\nVariable manufacturing costs                  10\nFixed manufacturing costs                      5\nVariable selling costs                        12\nFixed selling costs ($3,600 total)          4\nFixed administrative costs ($1,800 total)   2\nAssuming that the company uses variable costing, the\noperating income for the prior year was",
+    "choices": [
+      "$13,600",
+      "$14,200",
+      "$14,800",
+      "$15,300"
+    ],
+    "answerIndex": 2,
+    "explanation": "Operating income based on variable costing is $14,800\ncalculated as follows:\nSales (900 × $100)              $90,000\nCOGS [900 × ($30 + $20 + $10)] 54,000\nFixed manufacturing (1,000 × $5) 5,000\nVariable selling (900 × $12)     10,800\nFixed selling                     3,600\nFixed administrative              1,800\nOperating income            $14,800",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 54,
+    "page": 797,
+    "topicId": "su7-absorption-variable",
+    "stem": "A company uses a standard cost accounting system. Data for\nthe last fiscal year are as follows.\nUnits\nBeginning inventory of finished goods 100\nProduction during the year            700\nSales                                 750\nEnding inventory of finished goods     50\nPer Unit\nProduct selling price                      $200\nStandard variable manufacturing cost          90\nStandard fixed manufacturing cost              20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the\nyear, and actual selling and administrative expenses equaled\nthe budget amount. Any volume variance is written off to cost\nof goods sold in the year incurred. There are no work-in-\nprogress inventories.\nThe amount of operating income earned for the last fiscal year\nusing variable costing was",
+    "choices": [
+      "$21,500",
+      "$22,500",
+      "$28,000",
+      "$31,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Variable-basis operating income can be calculated as follows:\nSales                                              $150,000\nBeginning inventory      100    @ $90 = $ 9,000\nunits\nVariable production      700    @ $90 = 63,000\ncosts                    units\nVolume variance write- 50       @ $20 = 1,000\noff                      units\nGoods available for sale            $73,000\nLess: ending inventory 50      @ $90 = (4,500)\nunits\nVariable cost of                                 (68,500)\ngoods sold\nVariable S&A         None                              0\nexpenses\nContribution margin                                $ 81,500\nFixed production costs 700      @ $20 =             (14,000)\nunits\nFixed S&A expenses      Fixed                        (45,000)\nOperating income                                     $ 22,500\nPlease note that the volume variance is used to find\ncontribution margin in this case because the first question\nstates, “Any volume variance is written off to cost of goods\nsold in the year incurred.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 55,
+    "page": 799,
+    "topicId": "su7-absorption-variable",
+    "stem": "Operating income under variable costing is contribution margin\nminus",
+    "choices": [
+      "Cost of goods sold and administrative expenses.",
+      "Fixed manufacturing overhead and fixed selling and\nadministrative expenses.",
+      "Fixed manufacturing overhead and variable manufacturing\noverhead.",
+      "Variable selling and administrative expenses and fixed selling\nand administrative expenses."
+    ],
+    "answerIndex": 1,
+    "explanation": "In a variable costing system, all variable costs are first\ndeducted from revenues to arrive at the contribution margin.\nAll fixed costs, including both fixed manufacturing overhead\nand fixed selling and administrative costs, are deducted from\nthe contribution margin.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 56,
+    "page": 800,
+    "topicId": "su7-absorption-variable",
+    "stem": "During the first month of its operations, a company\nmanufactured a product with variable production costs of $50\nper unit. Fixed manufacturing overhead totaled $1,800,000\nand is allocated based upon units produced. During the month,\nthe company completed 15,000 units, sold 12,000 units, and\nincurred no variances. If the company’s operating income\nunder absorption costing was $400,000, its operating income\n(loss) under variable costing was",
+    "choices": [
+      "$760,000",
+      "$40,000",
+      "$(50,000)",
+      "$(110,000)"
+    ],
+    "answerIndex": 1,
+    "explanation": "The key difference between variable costing and absorption\ncosting in this circumstance is the treatment of fixed overhead.\nAbsorption costing treats all manufacturing costs as product\ncosts, while variable costing considers only variable\nmanufacturing costs to be product costs. Under absorption\ncosting, only $1,440,000 [($1,800,000 ÷ 15,000 units\nproduced) × 12,000 units sold] of fixed overhead costs are\nrecognized in the period; under variable costing, all\n$1,800,000 of fixed overhead costs are recognized. Thus,\nthere is an increase in cost and a resulting decrease in\noperating income of $360,000 ($1,800,000 – $1,440,000),\nwhich leads to an operating income under variable costing of\n$40,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 57,
+    "page": 802,
+    "topicId": "su7-absorption-variable",
+    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nIf Dremmon uses absorption costing, its operating income earned in the last fiscal year was",
+    "choices": [
+      "$21,500",
+      "$27,000",
+      "$28,000",
+      "$30,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Dremmon’s absorption-basis operating income can be\ncalculated as follows:\nSales                                                                                  $1\nBeginning inventory          100 units @ $ 110                       =     $11,000\nVariable production costs    700 units @ $ 90                        =      63,000\nFixed production costs       700 units @ $ 20                        =      14,000\nVolume variance writeoff      50 units @ $ 20                        =       1,000\nGoods available for sale                                    $89,000\nLess: Ending inventory             50 units   @ $ 110   =       (5,500)\nAbsorption cost of goods sold                                               (\nGross margin                                                                $\nVariable S&A expenses              None\nFixed S&A expenses                 Fixed                                       (\nOperating income                                                            $",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 58,
+    "page": 803,
+    "topicId": "su7-absorption-variable",
+    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nIf Dremmon uses variable costing, its operating income earned in the last fiscal year was",
+    "choices": [
+      "$21,500",
+      "$22,500",
+      "$28,000",
+      "$31,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dremmon’s variable-basis operating income can be calculated\nas follows:\nSales                                                                            $\nBeginning inventory                  100 units   @ $ 90 =       $ 9,000\nVariable production costs            700 units   @ $ 90 =       63,000\nVolume variance writeoff              50 units   @ $ 20 =         1,000\nGoods available for sale                                      $73,000\nLess: Ending inventory                50 units   @ $ 90 =         (4,500)\nVariable cost of goods sold\nVariable S&A expenses              None\nContribution margin\nFixed production costs                700 units   @ $ 20 =\nFixed S&A expenses                    Fixed\nOperating income\nPlease note that the volume variance is used to find\ncontribution margin in this case because the question states,\n“Any volume variance is written off to cost of goods sold in the\nyear incurred.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 59,
+    "page": 805,
+    "topicId": "su7-absorption-variable",
+    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nUsing absorption costing, fixed manufacturing overhead costs\nare best described as",
+    "choices": [
+      "Direct period costs.",
+      "Indirect period costs.",
+      "Direct product costs.",
+      "Indirect product costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Using absorption costing, fixed manufacturing overhead is\nincluded in inventoriable (product) costs. Fixed manufacturing\noverhead costs are indirect costs because they cannot be\ndirectly traced to specific units produced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 60,
+    "page": 805,
+    "topicId": "su7-absorption-variable",
+    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nA review of accounting records for last year disclosed the\nfollowing selected information:\nVariable costs:\nDirect materials used    $ 56,000\nDirect labor               179,100\nManufacturing overhead 154,000\nSelling costs              108,400\nFixed costs:\nManufacturing overhead 267,000\nSelling costs             121,000\nAdministrative costs      235,900\nIn addition, the company suffered a $27,700 uninsured factory\nfire loss during the year. Under absorption costing, what were\nthe product costs and period costs for last year?\nProduct Period",
+    "choices": [
+      "$235,100 $914,000",
+      "$497,500 $651,600",
+      "$656,100 $493,000",
+      "$683,800 $465,300"
+    ],
+    "answerIndex": 2,
+    "explanation": "Product costs, also called inventoriable costs, are capitalized\nas part of finished goods inventory. They eventually become a\ncomponent of cost of goods sold. Period costs are expensed\nas incurred, i.e., they are not capitalized in finished goods\ninventory and are thus excluded from cost of goods sold. The\nproduct and period costs can be calculated as follows:\nProduct        Period\nCosts         Costs\nDirect materials      $ 56,000\nDirect labor           179,100\nVariable overhead      154,000\nFixed overhead         267,000\nVariable selling costs             $108,400\nFixed selling costs                 121,000\nAdministrative costs                235,900\nUninsured loss                       27,700\nTotals              $656,100     $493,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 61,
+    "page": 807,
+    "topicId": "su7-absorption-variable",
+    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nFixed manufacturing overhead costs totaled $150,000 and\nvariable selling costs totaled $75,000. How should these costs\nbe classified under variable costing?",
+    "choices": [
+      "$0 period costs; $225,000 product costs.",
+      "$75,000 period costs; $150,000 product costs.",
+      "$150,000 period costs; $75,000 product costs.",
+      "$225,000 period costs; $0 product costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Product costs are incurred to produce units of output. They\nare expensed when the product is sold. Such costs include\ndirect materials and direct labor. Period costs are charged to\nexpense as incurred because they are not identifiable with a\nproduct. Under variable costing, only variable manufacturing\ncosts are considered product costs; fixed manufacturing costs\nare considered period costs and are expensed as incurred.\nSelling costs are period costs under both variable and\nabsorption costing. Thus, the entire $225,000 ($150,000 +\n$75,000) is classified as period costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 7,
+    "section": 4,
+    "number": 62,
+    "page": 808,
+    "topicId": "su7-absorption-variable",
+    "stem": "The change in period-to-period operating income when using\nvariable costing can be explained by the change in the",
+    "choices": [
+      "Unit sales level multiplied by the unit sales price.",
+      "Finished goods inventory level multiplied by the unit sales\nprice.",
+      "Unit sales level multiplied by a constant unit contribution\nmargin.",
+      "Finished goods inventory level multiplied by a constant unit\ncontribution margin."
+    ],
+    "answerIndex": 2,
+    "explanation": "In a variable costing system, only the variable costs are\nrecorded as product costs. All fixed costs are expensed in the\nperiod incurred. Because changes in the relationship between\nproduction levels and sales levels do not cause changes in the\namount of fixed manufacturing cost expensed, profits more\ndirectly follow the trends in sales, especially when the UCM\n(Selling price per unit – Variable costs per unit) is constant.\nUnit sales times the UCM equals the total CM, and operating\nincome (a pretax amount) equals the CM minus fixed costs of\noperations. If the UCM is constant and fixed costs are stable,\nthe change in operating income will approximate the change in\nthe CM (Unit sales × UCM).",
+    "answerStatus": "source"
+  }
+]

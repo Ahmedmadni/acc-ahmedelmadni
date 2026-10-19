@@ -1,0 +1,1005 @@
+[
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 1,
+    "page": 1041,
+    "topicId": "su10-jit-lean",
+    "stem": "The effectiveness of a just-in-time (JIT) system is often\nfacilitated by the elimination of some common forms of internal\ncontrol. The elimination of which internal control is usually\nacceptable with a JIT system?",
+    "choices": [
+      "Preparation of hard copy receiving reports.",
+      "Voucher approval prior to paying accounts payable.",
+      "Two signatures required on large checks.",
+      "Locked doors on production areas."
+    ],
+    "answerIndex": 0,
+    "explanation": "Receiving departments are often eliminated with a JIT system\nso receiving reports are not needed. Also, the quantity\nreceived should be exactly equal to immediate production\nneeds.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 2,
+    "page": 1042,
+    "topicId": "su10-jit-lean",
+    "stem": "Just-in-time (JIT) manufacturing practices are based in part on\nthe belief that",
+    "choices": [
+      "High inventory levels provide greater flexibility in production\nscheduling.",
+      "Attempting to reduce inventory to a consistently low level can\nlead to “panic” situations.",
+      "Goods should be “pulled” through the production process, not\n“pushed.”",
+      "Beefed-up internal control in the central warehouse can greatly\nenhance productivity in the production areas."
+    ],
+    "answerIndex": 2,
+    "explanation": "JIT manufacturing is a pull system; items are pulled through\nproduction by current demand, not pushed through by\nanticipated demand as in traditional manufacturing setups.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 3,
+    "page": 1043,
+    "topicId": "su10-jit-lean",
+    "stem": "Which of the following internal controls is not one typically\neliminated when a just-in-time (JIT) inventory system is\nintroduced?",
+    "choices": [
+      "Sophisticated inventory tracking system.",
+      "Central receiving dock.",
+      "Statistical methods for quality assurance.",
+      "Hard copy receiving report."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under a JIT system, the quality of parts provided by suppliers\nis verified by use of statistical controls rather than inspection\nof incoming goods. Storage, counting, and inspection are\neliminated in an effort to perform only value-adding work.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 4,
+    "page": 1043,
+    "topicId": "su10-jit-lean",
+    "stem": "Just-in-time production is also called",
+    "choices": [
+      "Kaizen.",
+      "Lean manufacturing.",
+      "Activity-based management.",
+      "Backflush costing."
+    ],
+    "answerIndex": 1,
+    "explanation": "Lean manufacturing, or lean processes, expands the concept\nof just-in-time. The central focus is on accomplishing more\nwith less resources.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 5,
+    "page": 1044,
+    "topicId": "su10-jit-lean",
+    "stem": "Companies that adopt just-in-time (JIT) purchasing systems\noften experience",
+    "choices": [
+      "A reduction in the number of suppliers.",
+      "Fewer deliveries from suppliers.",
+      "A greater need for inspection of goods as the goods arrive.",
+      "Less need for linkage with a vendor’s computerized order entry\nsystem."
+    ],
+    "answerIndex": 0,
+    "explanation": "The objective of JIT is to reduce carrying costs by eliminating\ninventories and increasing the deliveries made by suppliers.\nIdeally, shipments of raw materials are received just in time to\nbe incorporated into the manufacturing process. The focus of\nquality control under JIT is the prevention of quality problems.\nQuality control is shifted to the supplier. JIT companies\ntypically do not inspect incoming goods; the assumption is that\nreceived goods are of perfect quality. Suppliers are limited to\nthose who guarantee perfect quality and prompt delivery.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 6,
+    "page": 1044,
+    "topicId": "su10-jit-lean",
+    "stem": "The benefits of a just-in-time system for raw materials usually\ninclude",
+    "choices": [
+      "Elimination of nonvalue-adding operations.",
+      "Increase in the number of suppliers, thereby ensuring\ncompetitive bidding.",
+      "Maximization of the standard delivery quantity, thereby\nlessening the paperwork for each delivery.",
+      "Decrease in the number of deliveries required to maintain\nproduction."
+    ],
+    "answerIndex": 0,
+    "explanation": "Nonvalue-adding activities are those that do not add to\ncustomer value or satisfy an organizational need. Inventory\nactivities are inherently nonvalue-adding. Thus, a system,\nsuch as JIT, that promotes lean production and reduces\ninventory and its attendant procedures (storage, handling,\netc.) also reduces nonvalue-adding activities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 7,
+    "page": 1045,
+    "topicId": "su10-jit-lean",
+    "stem": "A company changed from a traditional manufacturing\nphilosophy to a just-in-time philosophy. What are the expected\neffects of this change on inventory turnover and inventory as a\npercentage of total assets reported on the balance sheet?\nInventory        Inventory\nTurnover        Percentage",
+    "choices": [
+      "Decrease       Decrease",
+      "Decrease       Increase",
+      "Increase       Decrease",
+      "Increase       Increase"
+    ],
+    "answerIndex": 2,
+    "explanation": "A JIT system is intended to minimize inventory. Inventory\nshould be delivered or produced just in time to be used. Thus,\nJIT increases inventory turnover (Cost of sales ÷ Average\ninventory) and decreases inventory as a percentage of total\nassets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 8,
+    "page": 1046,
+    "topicId": "su10-jit-lean",
+    "stem": "Which trends in purchasing and carrying costs\nare most conducive to switching from a traditional inventory\nordering system to a just-in-time ordering system?\nCost per     Inventory Unit\nPurchase Order Carrying Costs",
+    "choices": [
+      "Increasing     Increasing",
+      "Decreasing     Increasing",
+      "Decreasing    Decreasing",
+      "Increasing    Decreasing"
+    ],
+    "answerIndex": 1,
+    "explanation": "A JIT system is intended to minimize inventory. Thus, if\ninventory carrying costs are increasing, a JIT system becomes\nmore cost effective. Moreover, purchases are more frequent in\na JIT system. Accordingly, a decreasing cost per purchase\norder is conducive to switching to a JIT system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 9,
+    "page": 1047,
+    "topicId": "su10-jit-lean",
+    "stem": "A manufacturing company is attempting to implement a just-in-\ntime (JIT) purchase policy system by negotiating with its\nprimary suppliers to accept long-term purchase orders which\nresult in more frequent deliveries of smaller quantities of raw\nmaterials. If the JIT purchase policy is successful in reducing\nthe total inventory costs of the manufacturing company, which\nof the following combinations of cost changes would\nbe most likely to occur?\nCost Category           Cost Category\nto Increase             to Decrease",
+    "choices": [
+      "Purchasing costs     Stockout costs",
+      "Purchasing costs     Quality costs",
+      "Quality costs      Ordering costs",
+      "Stockout costs     Carrying costs"
+    ],
+    "answerIndex": 3,
+    "explanation": "The objective of a JIT system is to reduce carrying costs by\neliminating inventories and increasing the deliveries made by\nsuppliers. Ideally, shipments are received just in time to be\nincorporated into the manufacturing process. This system\nincreases the risk of stockout costs because the inventory\nbuffer is reduced or eliminated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 10,
+    "page": 1048,
+    "topicId": "su10-jit-lean",
+    "stem": "Which of the following is not a benefit of lean production?",
+    "choices": [
+      "Reduced setup time.",
+      "Lower central support costs.",
+      "Lower training costs.",
+      "Improved on-time delivery."
+    ],
+    "answerIndex": 2,
+    "explanation": "Since every worker in a manufacturing cell must be able to\noperate every piece of machinery in the cell, reduced training\ncosts do not necessarily accompany the deployment of lean\nproduction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 11,
+    "page": 1049,
+    "topicId": "su10-jit-lean",
+    "stem": "Which of the following is not a correct comparison of a just-in-\ntime system with a traditional system?\nTraditional                          Just-in-Time",
+    "choices": [
+      "Longer lead times                        Shorter lead times",
+      "Inventory is an asset                    Inventory is a liability",
+      "Some scrap tolerated                      Zero defects desired\nLot size based on immediate            Lot size based on",
+      "need                                   formulas"
+    ],
+    "answerIndex": 3,
+    "explanation": "Lot sizes based on immediate need are typical of just-in-time\nsystems, while lot sizes based on formulas are characteristic\nof traditional inventory management systems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 12,
+    "page": 1049,
+    "topicId": "su10-jit-lean",
+    "stem": "The work cell concept relates to",
+    "choices": [
+      "A just-in-time production system.",
+      "Material requirements planning.",
+      "Throughput costing.",
+      "Enterprise resource planning."
+    ],
+    "answerIndex": 0,
+    "explanation": "To implement a JIT inventory or lean production system, the\nfactory is reorganized around what are called manufacturing\ncells. In a cellular layout, each cell is a miniature\nmanufacturing plant. Cells are sets of machines, often\ngrouped in semicircles, that produce a given product or\nproduct family. Because of the free flow of materials in cellular\nmanufacturing, it has the ability to produce products just in\ntime.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 13,
+    "page": 1050,
+    "topicId": "su10-jit-lean",
+    "stem": "Which one of the following is not an expected benefit of\nimplementing a just-in-time (JIT) production system?",
+    "choices": [
+      "Lower total storage costs.",
+      "Lower total setup costs.",
+      "Lower manufacturing lead time.",
+      "Lower total rework cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "Production setup costs and times per lot are reduced by a JIT\nproduction system. However, because smaller lots are used,\ntotal setup costs are not necessarily lower using a JIT\nproduction system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 14,
+    "page": 1051,
+    "topicId": "su10-jit-lean",
+    "stem": "A company is considering implementing a just-in-time system\nand would like to test the system on its packaging materials\npurchases. An analysis indicated that the company could\nreduce its carrying costs by $5,000 each month if the just-in-\ntime system was implemented. Before making this decision,\nthe company should also consider a possible change in all of\nthe following costs except an increase in the cost of",
+    "choices": [
+      "Ordering.",
+      "Packaging labor.",
+      "Packaging materials.",
+      "Stockouts."
+    ],
+    "answerIndex": 1,
+    "explanation": "Packaging labor should not increase with a just-in-time\nsystem. The new system should only impact the different\nfacets of direct material costs, not labor costs. The company\ndoes not need to consider a possible change in labor costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 15,
+    "page": 1051,
+    "topicId": "su10-jit-lean",
+    "stem": "A company recently installed just-in-time production and\npurchasing systems. If the company’s experience is similar to\nthat of other companies, the company will likely",
+    "choices": [
+      "Reduce the number of suppliers with which it does business.",
+      "Increase the size of individual orders of raw materials.",
+      "Increase the dollar investment in finished goods inventory.",
+      "Be less reliant on sales orders as “trigger” mechanisms for\nproduction runs."
+    ],
+    "answerIndex": 0,
+    "explanation": "The use of a just-in-time production system generally involves\ndeveloping relationships with a minimum number of suppliers\nthat reliably deliver high-quality products.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 16,
+    "page": 1052,
+    "topicId": "su10-jit-lean",
+    "stem": "A company is planning to implement a just-in-time (JIT)\ninventory management system. All of the following are benefits\nexpected from implementing JIT except",
+    "choices": [
+      "Lower investment in inventory.",
+      "Lower obsolescence and other carrying costs.",
+      "Higher inventory turnover.",
+      "Increased demand."
+    ],
+    "answerIndex": 3,
+    "explanation": "A company’s demand for its products is unaffected by its\ninventory management method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 17,
+    "page": 1053,
+    "topicId": "su10-jit-lean",
+    "stem": "All of the following are benefits of just-in-time\nmanufacturing except that it",
+    "choices": [
+      "Can significantly reduce inventory.",
+      "Helps produce a higher-quality product in less time.",
+      "Allows for minor defects without shutting down operations.",
+      "Helps eliminate rework costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "Since there is no safety stock with a JIT system, minor defects\nwill immediately halt production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 18,
+    "page": 1053,
+    "topicId": "su10-jit-lean",
+    "stem": "A production system in which a unit is produced only when\nneeded in the next step in the production line is called a",
+    "choices": [
+      "Just-in-time system.",
+      "Back-flush system.",
+      "Pareto system.",
+      "Material requirements planning system."
+    ],
+    "answerIndex": 0,
+    "explanation": "The just-in-time (JIT) model views inventory as a liability and\nlimits output to the demand of the subsequent operation.\nReductions in inventory levels result in less money invested in\nidle assets; reduction of storage space requirements; and\nlower inventory taxes, pilferage, and obsolescence risks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 19,
+    "page": 1054,
+    "topicId": "su10-jit-lean",
+    "stem": "An inventory management technique designed to minimize\ninventory investment by having materials arrive at the time\nthey are needed for use is known as",
+    "choices": [
+      "The economic order quantity model (EOQ).",
+      "Materials requirements planning (MRP).",
+      "First-in first-out (FIFO).",
+      "Just-in-time (JIT)."
+    ],
+    "answerIndex": 3,
+    "explanation": "A just-in-time (JIT) inventory management system limits the\noutput of each manufacturing operation to the demand of the\nnext operation. Shipment of raw materials from vendors are\nscheduled to arrive “just in time” to be used in the production\nprocess. Inventory storage is considered a nonvalue-adding\nactivity, and raw materials on hand are thus kept to a\nminimum.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 20,
+    "page": 1054,
+    "topicId": "su10-jit-lean",
+    "stem": "All of the following are features of a just-in-time (JIT) inventory\nsystem except",
+    "choices": [
+      "Decreased number of suppliers.",
+      "Increased number of shipments.",
+      "Push system of production.",
+      "Low inventory levels."
+    ],
+    "answerIndex": 2,
+    "explanation": "JIT is a pull system. Items are pulled through production by\ncurrent demand, not pushed through by anticipated demand.\nThe goal is to have materials arrive just in time for production\n(or sales).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 21,
+    "page": 1055,
+    "topicId": "su10-jit-lean",
+    "stem": "Which one of the following is an advantage of a just-in-time\n(JIT) inventory system?",
+    "choices": [
+      "Fewer stockouts.",
+      "Lower total setup cost.",
+      "Less dependency on suppliers.",
+      "Fewer defects."
+    ],
+    "answerIndex": 3,
+    "explanation": "JIT necessitates a high focus on quality. Because the\ncompany has no excess inventory, stopping production and\nwaiting for delivery of a part to replace a defect is costly. A JIT\nsystem generally has fewer defects and a higher level of\nquality. Zero defects and zero machine breakdowns are the\nultimate goals.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 22,
+    "page": 1056,
+    "topicId": "su10-jit-lean",
+    "stem": "Lean manufacturing is characterized by which principle?",
+    "choices": [
+      "Identifying processes that add value and processes that do not\nadd value.",
+      "Maximizing production efficiency initiated by the push of\nforecasted demand.",
+      "Restricting authority to make manufacturing decisions to top\nmanagement.",
+      "Focusing exclusively on reducing costs by using the minimum\nnumber of employees."
+    ],
+    "answerIndex": 0,
+    "explanation": "Lean manufacturing principles are (1) value, (2) value stream,\n(3) flow and pull, (4) empowerment, and (5) perfection. Value\nidentifies features that are valuable to the customer. Value\nstream identifies processes that add value and removing (if\npossible) those that do not.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 23,
+    "page": 1057,
+    "topicId": "su10-jit-lean",
+    "stem": "A manufacturing company does business with only two\nsuppliers and orders inventory in small batches. The company\nis most likely using which type of system?",
+    "choices": [
+      "Materials requirements planning.",
+      "Just-in-time.",
+      "Enterprise resource planning.",
+      "Enterprise performance management."
+    ],
+    "answerIndex": 1,
+    "explanation": "Just-in-time (JIT) is a pull system. Items are pulled through\nproduction by current demand, not pushed through by\nanticipated demand. Other features of JIT include (1) low\ninventory levels, (2) a decreased number of suppliers, and (3)\nmore frequent deliveries of smaller batches.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 24,
+    "page": 1057,
+    "topicId": "su10-jit-lean",
+    "stem": "Which one of the following is not an accurate comparison of a\njust-in-time (JIT) system with a traditional inventory\nmanagement system?",
+    "choices": [
+      "A traditional system has longer lead times than a JIT system.",
+      "In a traditional system, inventory is anticipated and held for\nadvantage, while in a JIT system, inventory is considered\ninefficient, and the goal is to not hold inventory.",
+      "Scrap is tolerated in a traditional system, whereas a JIT\nsystem strives for zero defects.",
+      "In a traditional system, lot size is based on immediate need,\nwhereas in a JIT system, lot size is based on formulas."
+    ],
+    "answerIndex": 3,
+    "explanation": "Lot sizes based on immediate needs are a characteristic of a\nJIT system. Lot sizes based on formulas are characteristic of a\ntraditional inventory management system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 25,
+    "page": 1058,
+    "topicId": "su10-jit-lean",
+    "stem": "A just-in-time (JIT) inventory system is most closely related to\nwhich of the following?",
+    "choices": [
+      "Lean manufacturing.",
+      "Continuous improvement.",
+      "Activity-based management.",
+      "Theory of constraints."
+    ],
+    "answerIndex": 0,
+    "explanation": "The core focus of lean manufacturing is to accomplish more\nwith less. Lean manufacturing expands the JIT concept of\nminimizing inventory to other resources.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 1,
+    "number": 26,
+    "page": 1059,
+    "topicId": "su10-jit-lean",
+    "stem": "A company recently adopted a just-in-time (JIT) inventory\nmanagement system. How will this new system most likely\naffect operations?",
+    "choices": [
+      "Frequent deliveries from suppliers means the company will\nhave less need for a sophisticated inventory control system.",
+      "Smaller lot sizes will require additional personnel to ensure the\ninventory count is correct and quality meets the company’s\nstandards.",
+      "The purchasing department will need to develop customer\nrelationships with more suppliers.",
+      "More storage space will be needed to store excess material\ninventory and ensure it is available quickly when needed."
+    ],
+    "answerIndex": 0,
+    "explanation": "JIT results in frequent deliveries of smaller lot sizes. Thus,\ncertain internal controls may be eliminated. Sophisticated\ninventory control systems and control personnel are less likely\nto be needed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 1,
+    "page": 1060,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "In contrast to just-in-time manufacturing, materials\nrequirements planning (MRP) is a(n)",
+    "choices": [
+      "Push system.",
+      "Pull system.",
+      "Automated system.",
+      "Manual system."
+    ],
+    "answerIndex": 0,
+    "explanation": "MRP is a push system, that is, the demand for raw materials is\ndriven by the forecasted demand for the final product, which\ncan be programmed into the computer. This is in contrast with\njust-in-time manufacturing, which is a pull system, meaning\nitems are pulled through production by current demand, not\npushed through by anticipated demand.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 2,
+    "page": 1060,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "A company uses material requirements planning (MRP) and\nmanufactures a product with the following product structure\ntree.\nThe company has just received an order for 100 units of X, the\nfinished product. The company has 20 units of X, 100 units of\nB, and 50 units of E in inventory. How many units of E must\nthe company purchase in order to fill the order?",
+    "choices": [
+      "1,000",
+      "950",
+      "800",
+      "550"
+    ],
+    "answerIndex": 3,
+    "explanation": "The company already has 20 units of the finished product in\ninventory so 80 will need to be manufactured to fill this order.\nThe amount of Subunit B that must be purchased is [(80 × 5) –\n100 on hand] = 300. The amount of Subunit E that must be\npurchased is therefore [(300 × 2) – 50 on hand] = 550.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 3,
+    "page": 1062,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "One reason to outsource is so a firm can focus on its",
+    "choices": [
+      "Customers.",
+      "Suppliers.",
+      "Undifferentiated activities.",
+      "Core competencies."
+    ],
+    "answerIndex": 3,
+    "explanation": "Firms may gain a competitive advantage by outsourcing those\nactivities which can be performed more efficiently, and thus at\nlower cost, by outside providers. Doing this allows the\ncompany to expend its effort on those activities which it\nperforms comparatively well, referred to as its core\ncompetencies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 4,
+    "page": 1062,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "Enterprise resource planning (ERP) systems integrate",
+    "choices": [
+      "Financial and non-financial information from an organization’s\nbusiness processes.",
+      "Financial information among different organizations only.",
+      "Financial and human resources systems only.",
+      "Financial and non-financial information from an organization’s\naccounting processes."
+    ],
+    "answerIndex": 0,
+    "explanation": "ERP is a software platform designed to integrate enterprise-\nwide information systems by creating one database linked to\nall of an organization’s applications and subsystems to share\ndata and coordinate their activities. ERP is used to plan and\nmaintain records of resources including finances, labor\ncapabilities and capacity, materials, and property.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 5,
+    "page": 1063,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "A primary advantage of an ERP system is",
+    "choices": [
+      "Program-data dependence.",
+      "Data redundancy.",
+      "Separate data updating for different functions.",
+      "Centralization of data."
+    ],
+    "answerIndex": 3,
+    "explanation": "An advantage of an ERP system is the elimination of data\nredundancy through the use of a central database. In\nprinciple, information about an item of data is stored once, and\nall functions have access to it. Thus, when the item (such as a\nprice) is updated, the change is effectively made for all\nfunctions. The result is reliability (data integrity).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 6,
+    "page": 1064,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "Materials requirements planning (MRP) sometimes results in",
+    "choices": [
+      "Longer idle periods.",
+      "Less flexibility in responding to customers.",
+      "Increased inventory carrying costs.",
+      "Decreased setup costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Among the benefits of MRP are reduced idle time, lower setup\ncosts, lower inventory carrying costs, and increased flexibility\nin responding to market changes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 7,
+    "page": 1064,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "The manufacturing concept that relates demand forecasts to\nspecific dates for completion is",
+    "choices": [
+      "Master production schedule.",
+      "Materials requirements planning.",
+      "Manufacturing resource planning.",
+      "Bill of materials."
+    ],
+    "answerIndex": 0,
+    "explanation": "The yearly/quarterly/monthly numbers and styles of finished\ngoods called for in the demand forecasts included in the\noperational plans must be turned into specific dates for\ncompletion and availability for shipment to the customer. This\nis the task of the master production schedule (MPS).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 8,
+    "page": 1065,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "Which of the following is not a typical benefit of an outsourcing\narrangement?",
+    "choices": [
+      "Reduced costs.",
+      "Access to technology.",
+      "Avoidance of risk of obsolescence.",
+      "Increased control over a necessary function."
+    ],
+    "answerIndex": 3,
+    "explanation": "Outsourcing results in a loss of control over the outsourced\nfunction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 9,
+    "page": 1065,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "Which of the following is not a goal of materials requirements\nplanning?",
+    "choices": [
+      "Right part.",
+      "Right quantity.",
+      "Right customer.",
+      "Right time."
+    ],
+    "answerIndex": 2,
+    "explanation": "The three basic goals of MRP are the right part in the right\nquantity at the right time.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 10,
+    "page": 1066,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "The following MRP (material requirements planning) diagram\ndescribes the assembly of Finished Good A.\nThe current inventory levels are shown below.\nA: 0     B: 50     C: 60      D: 100 E: 120\nIf the company has just received an order for 500 units of A,\nhow many units of E must the company purchase?",
+    "choices": [
+      "3,000",
+      "2,880",
+      "2,820",
+      "2,700"
+    ],
+    "answerIndex": 3,
+    "explanation": "Each unit of A requires 2 units of C, and in turn, each unit of C\nrequires 3 units of E. Since there is no inventory of A, the\ncompany must assemble all 500 units from the order. These\n500 units require a total of 1,000 units of C (500 units of A × 2\nunits of C). Since there are 60 units of C in the inventory, the\ncompany would need to assemble 940 units of C. These 940\nunits of C require 2,820 units of E (940 units of C × 3 units of\nE). Since there are 120 units of E in the inventory, the\ncompany only needs to purchase an additional 2,700 units of\nE (2,820 – 120).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 11,
+    "page": 1067,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "A manufacturer needs to produce 100 wreaths in November to\nmeet customer demand. The manufacturing facility has the\ncapacity to produce 120 wreaths. The bill of materials for\nwreaths is as follows.\nMaterial Quantity November 1 Inventory Level\nFrame           1                 100\nPine ribbon 3 feet              15 feet\nPinecones       6                  24\nTo produce 1 foot of pine ribbon, the manufacturer needs 4\nunits of TRX and 2 units of RBX. On November 1, the\nmanufacturer has 80 units of TRX and 110 units of RBX on\nhand. Using material requirements planning, how many units\nof TRX will the manufacturer need to purchase in November to\ncomplete the orders for wreaths?",
+    "choices": [
+      "1,020",
+      "1,060",
+      "1,200",
+      "1,360"
+    ],
+    "answerIndex": 1,
+    "explanation": "To produce 100 wreaths, 300 feet of pine ribbon are needed\n(3 feet per wreath). Beginning inventory already includes\n15 feet, so 285 feet need to be produced (300 – 15). To\nproduce 285 feet of pine ribbon, 1,140 TRX units are needed\n(4 units of TRX × 285 feet of pine ribbon). Beginning inventory\nalready includes 80 units, so 1,060 units of TRX need to be\npurchased (1,140 – 80).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 12,
+    "page": 1069,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "An advantage of an enterprise resource planning system is\nthat",
+    "choices": [
+      "It can usually be installed by organizations of all sizes.",
+      "The system can be easily customized to suit the unique needs\nof the organization.",
+      "The comprehensiveness of the system reduces resistance to\nchange.",
+      "Its implementation improves business processes."
+    ],
+    "answerIndex": 3,
+    "explanation": "An enterprise resource planning system allows a company to\ndetermine what hiring decisions might need to be made or\nwhether a company should invest in new capital assets. It also\nimproves productivity, increases efficiencies, decreases costs,\nand streamlines processes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 13,
+    "page": 1069,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "Which one of the following is a characteristic of enterprise\nresource planning?",
+    "choices": [
+      "It enables companies to respond quickly to changes in the\nmarketplace.",
+      "It enables supply chain management to integrate with the\nfinancial accounting subsystem.",
+      "It creates a decentralized database that collects and feeds\ndata into software applications.",
+      "It provides customers with superior products and services."
+    ],
+    "answerIndex": 1,
+    "explanation": "Enterprise resource planning (ERP) connects all functional\nfinancial and nonfinancial subsystems (e.g., human resources,\nthe financial accounting system, production, marketing,\ndistribution, purchasing, receiving, order processing, shipping,\netc.). ERP also connects the organization with its suppliers\nand customers. Thus, ERP facilitates demand analysis and\nmaterials requirements planning.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 14,
+    "page": 1070,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "A company uses a planning system that focuses first on the\namount and timing of finished goods demanded and then\ndetermines the derived demand for raw materials,\ncomponents, and subassemblies at each of the prior stages of\nproduction. This system is",
+    "choices": [
+      "An economic order quantity model.",
+      "Materials requirements planning.",
+      "Linear programming.",
+      "Just-in-time purchasing."
+    ],
+    "answerIndex": 1,
+    "explanation": "Materials requirements planning (MRP) is a system that\ntranslates a production schedule into requirements for each\ncomponent needed to meet the schedule. It is usually\nimplemented in the form of a computer-based information\nsystem designed to plan and control raw materials used in\nproduction. It assumes that forecasted demand is reasonably\naccurate and that suppliers can deliver based upon this\naccurate schedule. MRP is a centralized push-through\nsystem; output based on forecasted demand is pushed\nthrough to the next department or to inventory.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 15,
+    "page": 1071,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "In a materials requirements planning (MRP) system",
+    "choices": [
+      "Materials move through the production process when current\ndemand triggers a need for new production units.",
+      "Suppliers deliver needed materials when customer demand for\nnew products triggers an order.",
+      "Materials move through the production process according to a\ncomputerized schedule developed to align with forecasted\ndemand.",
+      "Suppliers focus on frequent delivery of inventory in small lots\nwith a goal of zero defects."
+    ],
+    "answerIndex": 2,
+    "explanation": "MRP is a push system. The demand for materials is driven by\nforecasted demand programmed into the IT system. In effect,\nschedules are created of when inventory items are needed in\nthe production departments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 16,
+    "page": 1072,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "A traditional enterprise resource planning (ERP) system is a",
+    "choices": [
+      "Closed loop system that integrates all facets of a\nmanufacturing business, including production, sales, inventory,\nschedules, and cash flows.",
+      "Software platform that integrates all functional financial and\nnonfinancial subsystems and connects the company with its\nsuppliers and customers.",
+      "Software system that helps companies plan, forecast, budget,\nmonitor, and report on performance.",
+      "Process used to administer customer relations using data\nanalysis and employee empowerment."
+    ],
+    "answerIndex": 1,
+    "explanation": "A traditional ERP system shares data with, and coordinates,\nactivities of subsystems. It creates one database linked to all\napplications. Accordingly, software connects financial and\nnonfinancial systems (accounting, human resources,\nproduction, marketing, distribution, purchasing, receiving,\netc.). It also connects the company to suppliers and\ncustomers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 17,
+    "page": 1073,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "The item not a benefit of an enterprise resource planning\n(ERP) system is",
+    "choices": [
+      "Enhanced decision making.",
+      "Elimination of data redundancy.",
+      "Integration of global operations.",
+      "Ease of implementation."
+    ],
+    "answerIndex": 3,
+    "explanation": "Among the benefits of a current-generation ERP system\ninclude (1) lower inventory costs, (2) greater productivity, (3)\nenhanced decision making, (4) elimination of data\nredundancy, (5) integration of global operations, (6) more\neffective supply chain management, and (7) increased\ncustomer satisfaction. Disadvantages include the challenge of\nimplementing a complex system that may take years and cost\nmillions of dollars.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 18,
+    "page": 1074,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "All of the following are benefits of outsourcing except",
+    "choices": [
+      "Reduced costs.",
+      "More control.",
+      "Reliable service.",
+      "Access to technology."
+    ],
+    "answerIndex": 1,
+    "explanation": "Outsourcing is management or daily execution of an entire\nbusiness function by a third-party service provider. Benefits of\noutsourcing include (1) reliable service, (2) reduced costs, (3)\navoidance of the risk of obsolescence, and (4) access to\ntechnology. Limitations include dependence on an outside\nparty and loss of control over a necessary function.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 19,
+    "page": 1074,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "The business function that is typically outsourced is",
+    "choices": [
+      "Customer service.",
+      "Quality control.",
+      "Strategic planning.",
+      "Payroll."
+    ],
+    "answerIndex": 3,
+    "explanation": "Outsourcing is the management of a business function by a\nthird party that enables a company to focus on its core\nbusiness rather than be concerned about marginal activities.\nBack-office functions, including payroll, typically are\noutsourced. Companies do not need full-time staff to manage\na process that is only done weekly, biweekly, or monthly.\nHiring an outside firm that specializes in payroll processing is\nmore efficient. However, core competencies should not be\noutsourced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 20,
+    "page": 1075,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "A company’s CFO is concerned about the coordination of the\ncompany’s information systems and the quality of its data.\nSeparate systems exist for accounting, human resources,\ncustomer relations, purchasing, and inventory management.\nAs a result, communication breakdowns occur between\ndepartments, supply chain management is inefficient, data\nredundancy is common, and the percentage of dissatisfied\ncustomers is too high. Which system is the best solution to\nthese problems?",
+    "choices": [
+      "Just-in-time (JIT).",
+      "Materials requirements planning (MRP).",
+      "Enterprise resource planning (ERP).",
+      "Enterprise performance management (EPM)."
+    ],
+    "answerIndex": 2,
+    "explanation": "An ERP system is software that connects financial and\nnonfinancial systems (accounting, human resources,\nproduction, marketing, distribution, purchasing, receiving,\netc.). It also connects the company with suppliers and\ncustomers. Benefits of an ERP system include (1) lower\ninventory costs, (2) higher productivity, (3) enhanced decision\nmaking, (4) elimination of data redundancy, (5) integration of\nglobal operations, (6) more effective supply chain\nmanagement, and (7) increased customer satisfaction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 2,
+    "number": 21,
+    "page": 1076,
+    "topicId": "su10-erp-outsourcing",
+    "stem": "All of the following are challenges of implementing an\nenterprise resource planning (ERP) system except",
+    "choices": [
+      "Complexity.",
+      "Cost.",
+      "Employee resistance.",
+      "Data integrity."
+    ],
+    "answerIndex": 3,
+    "explanation": "An ERP system is software that connects financial and\nnonfinancial systems. Benefits of an ERP system include (1)\nlower inventory costs, (2) higher productivity, (3) enhanced\ndecision making, and (4) elimination of data redundancy\nresulting in centralization of data and protection of data\nintegrity. Disadvantages include complexity, cost, and\nemployee resistance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 1,
+    "page": 1078,
+    "topicId": "su10-capacity",
+    "stem": "The upper limit of a company’s efficient output capacity given\nits existing resources is called",
+    "choices": [
+      "Excess capacity.",
+      "Cycle-time capacity.",
+      "Practical capacity.",
+      "Theoretical capacity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Practical capacity is the maximum level at which output is\nproduced efficiently, with an allowance for unavoidable\ninterruptions, for example, for holidays and scheduled\nmaintenance. Because this level will be higher than expected\ncapacity, its use will ordinarily result in underapplied fixed\nfactory overhead.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 2,
+    "page": 1078,
+    "topicId": "su10-capacity",
+    "stem": "A company’s practical capacity is 80% of its theoretical\ncapacity. The company writes off any variances to the cost of\ngoods sold at the end of the year. If the company uses\ntheoretical capacity to calculate its budgeted fixed\nmanufacturing cost, as compared with using practical capacity,\nthe company’s",
+    "choices": [
+      "Budgeted fixed overhead will be higher.",
+      "Selling price will be lower.",
+      "Income will be higher.",
+      "Assets will be lower."
+    ],
+    "answerIndex": 3,
+    "explanation": "Using practical capacity results in fixed overhead being higher\nper unit because the total costs are allocated over fewer units.\nThus, theoretical capacity will result in a lower inventory value\nper unit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 3,
+    "page": 1079,
+    "topicId": "su10-capacity",
+    "stem": "Which of the following terms best describes the average level\nof output that can be completed over a period of time?",
+    "choices": [
+      "Normal capacity.",
+      "Practical capacity.",
+      "Theoretical capacity.",
+      "Ideal capacity."
+    ],
+    "answerIndex": 0,
+    "explanation": "Normal capacity is defined as the average level of output that\ncan be completed over a period of time.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 4,
+    "page": 1080,
+    "topicId": "su10-capacity",
+    "stem": "According to the IMA’s Statement on Management\nAccounting Measuring the Cost of Capacity, several types of\nanalysis and assessment are required for effective capacity\ncost management. Which of the following is not required by\nthe IMA?",
+    "choices": [
+      "Investment analysis.",
+      "Breakeven analysis.",
+      "Capacity assessment.",
+      "Manufacturing process assessment."
+    ],
+    "answerIndex": 1,
+    "explanation": "Breakeven analysis measures the output at which all fixed\ncosts and cumulative variable costs have been covered. The\nbreakeven point is the point at which costs are covered, but no\nprofit is made. It is not required by the IMA for effective\ncapacity cost management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 5,
+    "page": 1080,
+    "topicId": "su10-capacity",
+    "stem": "A production manager at a manufacturing plant is considering\ndifferent levels of capacity while creating the production budget\nfor the year. The manager establishes the budget based on a\ncapacity that represents the maximum level of output that can\nreasonably be attained while still accounting for expected and\nunexpected downtime as well as expected waste. Which of the\nfollowing best describes the capacity level used to create the\nbudget?",
+    "choices": [
+      "Normal capacity.",
+      "Theoretical capacity.",
+      "Practical capacity.",
+      "Ideal capacity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Practical capacity is the highest level of output that can\nreasonably be attained, taking into account both planned and\nunplanned downtime (e.g., set-up costs, maintenance,\nbreakdowns, etc.) and expected waste.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 6,
+    "page": 1081,
+    "topicId": "su10-capacity",
+    "stem": "A production manager is about to start preparing a production\nbudget for the next fiscal year. Which level of capacity is the\nmanager least likely to use to establish an effective budget?",
+    "choices": [
+      "Long-term average level of capacity.",
+      "Normal capacity.",
+      "Practical capacity.",
+      "Theoretical capacity."
+    ],
+    "answerIndex": 3,
+    "explanation": "Budgeting and planning based on theoretical capacity is not\nrecommended because it is not reasonable to assume zero\ndowntime (i.e., no maintenance) and zero waste.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 7,
+    "page": 1082,
+    "topicId": "su10-capacity",
+    "stem": "Which of the following statements regarding capacity\nmanagement is false?",
+    "choices": [
+      "Excess capacity results in no opportunity cost.",
+      "Producing at full capacity can incur additional opportunity\ncosts.",
+      "Capacity planning is part of the capital budgeting process.",
+      "Capacity planning is an element of strategic planning."
+    ],
+    "answerIndex": 0,
+    "explanation": "Excess capacity has a cost. Having excess capacity means\nthat a company will either have to charge higher prices for its\nproducts or report lower income on its financial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 8,
+    "page": 1082,
+    "topicId": "su10-capacity",
+    "stem": "In order to better understand the capabilities of her production\nequipment, a production manager is creating a budget based\non the premise that the machines will run full time and will not\nrequire any maintenance or downtime. Which level of\ncapacity best describes the basis of the manager’s budget?",
+    "choices": [
+      "Normal capacity.",
+      "Practical capacity.",
+      "Theoretical capacity.",
+      "Long-term average level of capacity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Theoretical capacity is the optimal level of output that can be\ncompleted with zero downtime (e.g., no repairs, maintenance,\netc.) and zero waste.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 9,
+    "page": 1083,
+    "topicId": "su10-capacity",
+    "stem": "When a company prepares its annual budget,\nthe most appropriate capacity level to use in planning\nproduction is",
+    "choices": [
+      "Normal capacity.",
+      "Theoretical capacity.",
+      "Practical capacity.",
+      "Maximum capacity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Practical capacity is the highest level of output that can be\nachieved, given planned and unplanned downtime and\nexpected waste. Budgeting based on practical capacity aligns\nwith the allocation of fixed costs with normal production\nactivity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 10,
+    "page": 1084,
+    "topicId": "su10-capacity",
+    "stem": "How may capacity management affect the pricing of products?",
+    "choices": [
+      "Creating excess capacity decreases opportunity cost, which\nleads to lower pricing.",
+      "A company with excess capacity must either charge a higher\nproduct price or report lower net income.",
+      "Making new capital investments adds to capacity, which\ndecreases fixed costs, increases efficiency, and results in a\nlower product price.",
+      "Capacity planning has no effect on the pricing of products\nbecause product prices should be set based on customer\ndemand with no consideration of costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Excess capacity has a cost. The entity must either charge a\nhigher price for products to recoup the fixed costs or report\nlower net income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 11,
+    "page": 1084,
+    "topicId": "su10-capacity",
+    "stem": "Which statement about capacity management is true?",
+    "choices": [
+      "Excess capacity does not have a cost because it is an asset\non the balance sheet.",
+      "Budgeting based on theoretical capacity is recommended\nbecause it sets stretch goals.",
+      "Managing capacity is an element of strategic planning and is\nclosely related to capital budgeting.",
+      "A company should always strive to eliminate excess capacity\nregardless of changing market dynamics."
+    ],
+    "answerIndex": 2,
+    "explanation": "Capacity management strives to ensure a company\nmaximizes its production output by having the appropriate\nlevel of resources. It is an element of strategic planning\nclosely related to capital budgeting because it is influenced by\ncapital investment decisions. Maximizing value creation\nbegins with understanding the nature and capabilities of the\nentity’s resources, e.g., whether capacity is excessive or\nsufficient.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 10,
+    "section": 3,
+    "number": 12,
+    "page": 1085,
+    "topicId": "su10-capacity",
+    "stem": "As part of its annual strategic planning process, a company’s\nfinance team is working with senior management to develop a\n5-year capital budget. As a first step, the team has prepared a\ncapacity assessment, identifying capital needs to meet\nstrategic goals. The CFO explains that costs are incurred for\nhaving too much or too little capacity, and these costs need to\nbe estimated. Which statement best describes the concept\nexplained by the CFO?",
+    "choices": [
+      "Fixed costs must be minimized, and variable costs must be\nmaximized.",
+      "The cost of unused capacity should be compared with the\nopportunity cost of lack of capacity.",
+      "Sensitivity analysis should be performed at different levels of\ncapacity and customer demand.",
+      "The level of capital investment should be conservative\nbecause lack of capacity is less expensive than excess\ncapacity."
+    ],
+    "answerIndex": 1,
+    "explanation": "Capacity management is an element of strategic planning\nclosely related to capital budgeting because it affects\ndecisions on capital investment. Excess or lack of capacity\nresults in costs. When planning capacity investments, the\nestimated costs of unused capacity (e.g., capabilities that may\nbe physical, human, technological, or financial) are balanced\nagainst the estimated opportunity costs of lack of capacity\n(e.g., loss of profits and customer loyalty).",
+    "answerStatus": "source"
+  }
+]

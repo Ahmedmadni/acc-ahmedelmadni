@@ -1,0 +1,1430 @@
+[
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 1,
+    "page": 810,
+    "topicId": "su8-job-order",
+    "stem": "A company manufactures a specialty line of T-shirts using a\njob-order costing system. During March, the following costs\nwere incurred in completing job ICU2: direct materials,\n$13,700; direct labor, $4,800; administrative, $1,400; and\nselling, $5,600. Overhead was applied at the rate of $25 per\nmachine hour, and job ICU2 required 800 machine hours. If\njob ICU2 resulted in 7,000 good shirts, the cost of goods sold\nper unit would be",
+    "choices": [
+      "$6.50",
+      "$6.30",
+      "$5.70",
+      "$5.50"
+    ],
+    "answerIndex": 3,
+    "explanation": "Cost of goods sold is based on the manufacturing costs\nincurred in production but does not include selling or general\nand administrative expenses. Manufacturing costs equal\n$38,500 [$13,700 DM + $4,800 DL + (800 hours × $25) OH].\nThus, per-unit cost is $5.50 ($38,500 ÷ 7,000 units).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 2,
+    "page": 811,
+    "topicId": "su8-job-order",
+    "stem": "A company using job-order costing had the following\ntransactions during a calendar year for Job 101:\nDate              Transaction            Amount\nJanuary 1     Direct materials purchased      £500\nFebruary 1 Direct materials used                450\nMarch 1       Direct labor incurred             350\nJune 1        Overhead applied                   50\nThe company’s beginning finished goods inventory on January\n1 for Job 101 was £1,500. The company completed and\nshipped Job 101 on August 1. If the customer paid the\ncompany £5,000 for Job 101 on September 1, how much\nshould the company report as cost of goods sold for Job 101\nfor the year?",
+    "choices": [
+      "£1,350",
+      "£2,350",
+      "£2,400",
+      "£2,850"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost of goods sold consists of all costs charged to a job. In\nthis case, £1,500 was charged in the previous year. To that\nshould be added the £450 of material used, the £350 of direct\nlabor incurred, and the £50 of overhead applied, for a total of\n£2,350.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 3,
+    "page": 812,
+    "topicId": "su8-job-order",
+    "stem": "A company uses a job-order cost system and applies\noverhead using a corporate-wide rate of $5.75 per direct labor\nhour. The company is considering changing to two\ndepartmental overhead rates with annual information shown\nbelow.\nMachining            Assembly\nDepartment           Department\nAllocation base       Machine hours       Direct labor hours\nDepartmental\noverhead costs               $850,000            $300,000\nMachine hours used             250,000               30,000\nDirect labor hours\nused                            75,000             125,000\nThe company tested its new system by comparing the\ncorporate-wide and departmental overhead assigned to two\ndifferent jobs. The first job’s allocated overhead using the\ncorporate-wide rate totaled $23,000 and was $23,750 using\nthe two departmental rates. The second job took 5,000\nmachine hours in the Machining Department and a total of\n3,000 labor hours, 1,700 of which were used in the Assembly\nDepartment. The company should",
+    "choices": [
+      "Change to two departmental overhead rates because of the\nsignificant (more than 10%) difference between methods for\nthe second job.",
+      "Change to two departmental overhead rates regardless of the\ndifferences between methods for better cause-and-effect\nrelationships.",
+      "Continue to use the corporate-wide rate because of the\ninsignificant (less than 10%) difference between methods for\nthe first job.",
+      "Search for cost drivers that would present more consistent\nresults when the two methods are compared."
+    ],
+    "answerIndex": 0,
+    "explanation": "For the second job, allocated overhead using the two\ndepartmental rates is $21,080 {[($850,000 ÷ 250,000 hours) ×\n5,000] Machining + [($300,000 ÷ 125,000 hours) × 1,700]\nAssembly}. Under the corporate-wide rate, the applied\noverhead is $17,250 ($5.75 × 3,000). The difference of 22.2%\n[($21,080 – $17,250) ÷ $17,250] is significant, so the two\ndepartmental overhead rates should be used.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 4,
+    "page": 814,
+    "topicId": "su8-job-order",
+    "stem": "Job-order costs are most useful for",
+    "choices": [
+      "Determining inventory valuation using LIFO.",
+      "Estimating the overhead costs included in transfer prices.",
+      "Controlling indirect costs of future production.",
+      "Determining the cost of a specific project."
+    ],
+    "answerIndex": 3,
+    "explanation": "Job-order costs are used in determining the costs of a\nspecific, clearly identifiable job or project. In contrast, process\ncosting averages the costs of all production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 5,
+    "page": 815,
+    "topicId": "su8-job-order",
+    "stem": "When compared with normal spoilage, abnormal spoilage",
+    "choices": [
+      "Arises more frequently from factors that are inherent in the\nmanufacturing process.",
+      "Is given the same accounting treatment as normal spoilage.",
+      "Is generally thought to be more controllable by production\nmanagement than normal spoilage.",
+      "Is not typically influenced by the “tightness” of production\nstandards."
+    ],
+    "answerIndex": 2,
+    "explanation": "Spoiled goods are defective items that cannot be feasibly\nreworked. Traditional cost accounting systems distinguish\nbetween normal and abnormal spoilage because, in some\noperations, a degree of spoilage is viewed as inevitable.\nNormal spoilage occurs under normal, efficient operating\nconditions. It is spoilage that is uncontrollable in the short run\nand therefore should be expressed as a function of good\noutput (treated as a product cost). Accordingly, normal\nspoilage is assigned to all good units in process costing\nsystems, that is, all units that have passed the inspection point\nat which the spoilage was detected. If normal spoilage is\nattributable to a specific job, only the disposal value of the\nnormally spoiled goods is removed from work-in-process,\nthereby assigning the cost of normal spoilage to the good\nunits remaining in the specific job. Abnormal spoilage is not\nexpected to occur under normal, efficient operating conditions.\nThe cost of abnormal spoilage should be separately identified\nand reported. Abnormal spoilage is typically treated as a\nperiod cost (a loss) because it is unusual.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 6,
+    "page": 816,
+    "topicId": "su8-job-order",
+    "stem": "A corporation manufactures a specialty line of dresses using a\njob-order costing system. During January, the following costs\nwere incurred in completing job J-1:\nDirect materials     $27,400\nDirect labor            9,600\nAdministrative costs 2,800\nSelling costs         11,200\nFactory overhead was applied at the rate of $50 per direct\nlabor hour, and job J-1 required 400 direct labor hours. If job J-\n1 resulted in 4,000 good dresses, the cost of goods sold per\nunit is",
+    "choices": [
+      "$9.25",
+      "$14.25",
+      "$14.95",
+      "$17.75"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost of goods sold is based on the manufacturing costs\nincurred in production. It does not include selling or general\nand administrative expenses. Manufacturing costs consist of\ndirect materials, $27,400; direct labor, $9,600; and overhead,\n$20,000 (400 direct labor hours × $50 per hour). The total of\nthese three cost elements is $57,000. Dividing the $57,000 of\ntotal manufacturing costs by the 4,000 units produced results\nin a per-unit cost of $14.25.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 7,
+    "page": 817,
+    "topicId": "su8-job-order",
+    "stem": "A company makes lenses for telescopes. Because the\ncompany will only sell lenses of the highest quality, the normal\nspoilage during a reporting period is 1,000 units. At the\nbeginning of the current reporting period, the company had\n2,200 units in inventory, and during the period, production was\nstarted and completed on 4,000 units. Units in inventory at the\nend of the current reporting period were 1,500, and the units\ntransferred out were 3,000. During this period, the abnormal\nspoilage for the company’s lens production was",
+    "choices": [
+      "700 units.",
+      "1,000 units.",
+      "1,700 units.",
+      "3,200 units."
+    ],
+    "answerIndex": 0,
+    "explanation": "The company’s abnormal spoilage for the period can be\ncalculated as follows:\nBeginning inventory          2,200\nAdd: Started and completed 4,000\nLess: Transferred out       (3,000)\nLess: Ending inventory      (1,500)\nTotal spoilage for period       1,700\nLess: Normal spoilage            (1,000)\nAbnormal spoilage for period     700",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 8,
+    "page": 818,
+    "topicId": "su8-job-order",
+    "stem": "A calendar-year corporation had $17,000 of spoilage during\nApril that production management characterized as abnormal.\nThe spoilage was incurred on Job No. 532, which was sold 3\nmonths later for $459,000. Which of the following correctly\ndescribes the impact of the spoilage on the corporation’s unit\nmanufacturing cost for Job No. 532 and on the year’s\noperating income?\nUnit\nManufacturing       Operating\nCost            Income",
+    "choices": [
+      "Increase     No effect",
+      "Increase     Decrease",
+      "No effect    Decrease",
+      "No effect    Not enough information to judge"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under job-order costing, abnormal spoilage is not treated as a\nmanufacturing cost, therefore unit manufacturing cost is\nunaffected. Abnormal spoilage is a period cost. The difference\nbetween the disposal value of the spoiled goods and the value\nof the goods in work-in-process control must be recognized as\na loss, which will decrease operating income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 9,
+    "page": 819,
+    "topicId": "su8-job-order",
+    "stem": "A specialty instrument manufacturer is in the process of\nestablishing a cost system. The company produces machines\nthat are unique and distinctive. These machines are produced\nwhen purchase requests are received from customers.\nAlthough some common parts and sub-assemblies are to be\nheld in inventory, no finished goods inventory is maintained\nsince each purchase request is for a customized specialty\ninstrument. The type of cost accumulation system that would\nbe best suited for this type of environment would be",
+    "choices": [
+      "Backflush costing.",
+      "Batch-level costing.",
+      "Job-order costing.",
+      "Process costing."
+    ],
+    "answerIndex": 2,
+    "explanation": "Job-order costing applies to accumulating costs by specific\njob. This method is appropriate when producing products with\nindividual characteristics or when identifiable groupings are\npossible. Units (jobs) should be dissimilar enough to warrant\nthe special recordkeeping required by job-order costing.\nProducts are usually custom-made for a specific customer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 10,
+    "page": 820,
+    "topicId": "su8-job-order",
+    "stem": "During the production of its single product, a company\ndiscovers that an unusual overnight power failure ruined an\nentire day’s in-process production. How should the cost of\nthese spoiled units be charged?",
+    "choices": [
+      "Added to the cost of future good units produced.",
+      "Written off as a loss.",
+      "Added to the cost of the next day’s production.",
+      "Added to general factory overhead."
+    ],
+    "answerIndex": 1,
+    "explanation": "Abnormal spoilage is not expected to occur under normal,\nefficient operating conditions. The cost of abnormal spoilage\nshould be separately identified and reported to management.\nAbnormal spoilage is typically treated as a period cost and\nwritten off as a loss because of its unusual nature.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 11,
+    "page": 821,
+    "topicId": "su8-job-order",
+    "stem": "A company manufactures a single product. During the\nmanufacturing process, a small number of units do not pass\nfinal inspection and are destroyed. What is the appropriate\naccounting treatment for the cost of these units? The cost\nshould be",
+    "choices": [
+      "Added to the cost of good units produced.",
+      "Ignored as immaterial.",
+      "Expensed as incurred.",
+      "Added to the cost of warranties."
+    ],
+    "answerIndex": 0,
+    "explanation": "Output that does not meet the quality for salability is\nconsidered spoilage. The numbers that do not pass final\ninspection but that are considered acceptable as a part of\nefficient production are considered normal spoilage. The\naccounting treatment is to include normal spoilage as a\nproduct cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 12,
+    "page": 822,
+    "topicId": "su8-job-order",
+    "stem": "A manufacturer produces unique tapestries and bedding for\nhotel chains and uses a job order costing system. During the\ncurrent month, the manufacturer purchased $50,000 of direct\nmaterials and incurred $22,000 in direct labor. Overhead is\napplied on the basis of direct labor hours at a rate of 60%.\nOverapplied or underapplied overhead is closed to cost of\ngoods sold at the end of the period. The actual overhead\nincurred this month was $10,000. Balances in the\nmanufacturer’s inventory accounts are presented below.\nBeginning          End of\nof month          month\nDirect materials    $2,000        $3,500\nWork-in-process      5,000         9,000\nFinished goods       2,500         1,700\nWhat is the cost of goods manufactured this month?",
+    "choices": [
+      "$76,500",
+      "$79,700",
+      "$80,500",
+      "$83,700"
+    ],
+    "answerIndex": 1,
+    "explanation": "Before cost of goods manufactured this month can be\ncalculated, direct materials used must be determined. The\ndirect materials equation is as follows: Beginning inventory +\nMaterials purchased – Materials used = Ending inventory. The\nequation can be rearranged to find materials used of $48,500\n($2,000 beginning inventory + $50,000 materials purchased –\n$3,500 ending inventory). The work-in-process equation is as\nfollows: Beginning inventory + Direct materials used + Direct\nlabor + Manufacturing overhead applied – Cost of goods\nmanufactured = Ending inventory. This equation can be\nrearranged to find cost of goods manufactured of $79,700\n[$5,000 beginning inventory + $48,500 direct materials used +\n$22,000 direct labor + ($22,000 × 60%) manufacturing\noverhead applied – $9,000 ending inventory]. The\nmanufacturing overhead is applied on the basis of direct labor\nhours at a rate of 60%.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 13,
+    "page": 824,
+    "topicId": "su8-job-order",
+    "stem": "A company produces disk brakes for mountain bikes. During\nthe current reporting period, the company has normal spoilage\nof 700 units. At the beginning of the current reporting period,\nthe company had 3,400 units in inventory and started and\ncompleted 5,600 units. 4,900 units were transferred out, and\nending inventory had 3,100 units. In this reporting period, the\nabnormal spoilage for the company disk brakes production\nwas",
+    "choices": [
+      "300 units.",
+      "400 units.",
+      "1,000 units.",
+      "5,200 units."
+    ],
+    "answerIndex": 0,
+    "explanation": "Ending inventory is calculated as follows:\nEnding inventory =\nBeginning inventory + Units started and completed –\nUnits transferred out – Normal spoilage – Abnormal spoilage\nThe given values can be used to solve for abnormal spoilage:\n3,100 = 3,400 + 5,600 – 4,900 – 700 – Abnormal spoilage\n3,100 = 3,400 – Abnormal spoilage\nAbnormal spoilage = 300",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 14,
+    "page": 825,
+    "topicId": "su8-job-order",
+    "stem": "A manufacturing company uses machine hours as the only\noverhead cost allocation base. The accounting records contain\nthe following information.\nEstimated    Actual\nManufacturing overhead costs $200,000 $240,000\nMachine hours                      40,000     50,000\nUsing actual costing, the amount of manufacturing overhead\ncosts allocated to jobs is",
+    "choices": [
+      "$300,000",
+      "$250,000",
+      "$240,000",
+      "$200,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Actual costing is the recording of product costs based on the\nactual (1) cost of materials, (2) cost of labor, and (3) overhead\nincurred. Actual overhead costs incurred were given as\n$240,000. Thus, the amount of manufacturing overhead costs\nallocated to jobs under actual costing is $240,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 15,
+    "page": 826,
+    "topicId": "su8-job-order",
+    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nFarber Company’s total direct labor cost for the year is",
+    "choices": [
+      "$750,000",
+      "$600,000",
+      "$909,375",
+      "$937,500"
+    ],
+    "answerIndex": 3,
+    "explanation": "Total manufacturing cost of $2,500,000 is composed of raw\nmaterials, direct labor, and factory overhead. Factory\noverhead is 30% of total manufacturing costs, or $750,000. If\nfactory overhead is 80% of direct labor cost, direct labor cost\nis $937,500 ($750,000 ÷ 80%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 16,
+    "page": 827,
+    "topicId": "su8-job-order",
+    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nThe amount of raw materials left over from a production\nprocess or production cycle for which there is no further use is",
+    "choices": [
+      "Scrap.",
+      "Abnormal spoilage.",
+      "Waste.",
+      "Normal spoilage."
+    ],
+    "answerIndex": 2,
+    "explanation": "Waste is the amount of raw materials left over from a\nproduction process or production cycle for which there is no\nfurther use. Waste is usually not salable at any price and must\nbe discarded.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 17,
+    "page": 827,
+    "topicId": "su8-job-order",
+    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nThe cost associated with abnormal spoilage ordinarily is\ncharged to",
+    "choices": [
+      "Inventory.",
+      "A material variance account.",
+      "Manufacturing overhead.",
+      "A special loss account."
+    ],
+    "answerIndex": 3,
+    "explanation": "Abnormal spoilage is usually charged to a special loss\naccount because it is not expected to occur under normal,\nefficient operating conditions. Because it is unusual, it should\nbe separately reported as a period cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 18,
+    "page": 828,
+    "topicId": "su8-job-order",
+    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nSpoilage that is not expected to occur under normal, efficient\noperating conditions is considered",
+    "choices": [
+      "Abnormal spoilage.",
+      "Actual spoilage.",
+      "Normal spoilage.",
+      "Residual spoilage."
+    ],
+    "answerIndex": 0,
+    "explanation": "Abnormal spoilage is spoilage that is not expected to occur\nunder normal, efficient operation conditions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 19,
+    "page": 828,
+    "topicId": "su8-job-order",
+    "stem": "A company produces stereo speakers for automobile\nmanufacturers. The automobile manufacturers reject\napproximately 3% of the stereo speakers received as being of\nunacceptable quality. The company inspects the rejected\nspeakers to determine which ones should be reworked and\nwhich ones should be discarded. The discarded speakers are\nclassified as",
+    "choices": [
+      "Waste.",
+      "Scrap.",
+      "Spoilage.",
+      "Rework costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "Rejected units that are discarded are classified as spoilage.\nSpoilage is separated into abnormal or normal spoilage.\nNormal spoilage is an inherent result of the normal production\nprocess. Abnormal spoilage is spoilage that is not expected to\noccur under normal, efficient operating conditions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 20,
+    "page": 829,
+    "topicId": "su8-job-order",
+    "stem": "Abnormal spoilage",
+    "choices": [
+      "Cannot occur when perfection standards are used.",
+      "Is not usually controllable by the production supervisor.",
+      "Results from unrealistic production standards.",
+      "Is not expected to occur under efficient operating conditions."
+    ],
+    "answerIndex": 3,
+    "explanation": "Abnormal spoilage is spoilage that is not expected to occur\nunder normal, efficient operating conditions. The cost of\nabnormal spoilage should be separately identified and\nreported to management. Abnormal spoilage is typically\ntreated as a period cost (a loss) because of its unusual nature.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 1,
+    "number": 21,
+    "page": 830,
+    "topicId": "su8-job-order",
+    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nThe carrying value of Farber Company’s work-in-process\ninventory at December 31 is",
+    "choices": [
+      "$300,000.",
+      "$225,000.",
+      "$100,000.",
+      "$75,000."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cost of goods manufactured ($2,425,000) equals total\nmanufacturing costs ($2,500,000) plus beginning work-in-\nprocess (75% of EWIP) minus ending work-in-process. The\nending work-in-process is $300,000.\n$2,500,000 + .75 EWIP – EWIP = $2,425,000\n$2,500,000 – .25 EWIP = $2,425,000\nEWIP = $75,000 ÷ .25\nEWIP = $300,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 1,
+    "page": 832,
+    "topicId": "su8-process",
+    "stem": "When considering normal and abnormal spoilage, which one\nof the following is theoretically the best accounting method for\nspoilage in a process-costing system?",
+    "choices": [
+      "Both normal and abnormal spoilage cost should be charged to\na separate expense account.",
+      "Normal spoilage cost should be charged to good units and\nabnormal spoilage cost should be charged to a separate\nexpense account.",
+      "Both normal and abnormal spoilage costs should be charged\nto good units.",
+      "Normal spoilage costs should be charged to a separate\nexpense account and abnormal spoilage cost should be\ncharged to good units."
+    ],
+    "answerIndex": 1,
+    "explanation": "Under process costing, as with job-order costing, the cost of a\nnormal level of spoilage is left in cost of goods sold; abnormal\nspoilage is recognized separately as a loss.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 2,
+    "page": 833,
+    "topicId": "su8-process",
+    "stem": "A corporation manufactures two brands of barbed wire fencing\nfor sale to wholesalers and large ranchers. Which of the\nfollowing would be the best type of costing system for such a\ncompany to use?",
+    "choices": [
+      "EOQ system.",
+      "Job costing.",
+      "Process system.",
+      "Retail inventory system."
+    ],
+    "answerIndex": 2,
+    "explanation": "Process costing is used for mass production of a standardized\nproduct on a continuous basis. Costs are assigned to large\ngroups of similar items, and average unit costs are calculated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 3,
+    "page": 833,
+    "topicId": "su8-process",
+    "stem": "Which costing method is a gravel pit operation most likely to\nuse?",
+    "choices": [
+      "Job-order costing.",
+      "Process costing.",
+      "Process costing to a split-off point and job-order costing\nafterwards.",
+      "None of the answers are correct."
+    ],
+    "answerIndex": 1,
+    "explanation": "Job-order costing is used when each end product is unique.\nProcess cost accounting assigns costs to inventoriable goods\nor services. It applies to relatively homogeneous products that\nare mass produced on a continuous basis (e.g., petroleum\nproducts, thread, and computer monitors). A gravel pit\noperation produces homogeneous end products on a\ncontinuous basis that are inventoriable. Thus, it is most likely\nto use process costing",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 4,
+    "page": 834,
+    "topicId": "su8-process",
+    "stem": "In a process-costing system, the cost of abnormal spoilage\nshould be",
+    "choices": [
+      "Prorated between units transferred out and ending inventory.",
+      "Included in the cost of units transferred out.",
+      "Treated as a loss in the period incurred.",
+      "Ignored."
+    ],
+    "answerIndex": 2,
+    "explanation": "Abnormal spoilage is spoilage that is not expected to occur\nunder normal, efficient operating conditions. Because of its\nunusual nature, abnormal spoilage is typically treated as a\nloss in the period in which it is incurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 5,
+    "page": 835,
+    "topicId": "su8-process",
+    "stem": "A company that uses a process costing system inspects its\ngoods at the 60% stage of completion. If the firm’s ending\nwork-in-process inventory is 80% complete, how would the\nfirm account for its normal and abnormal spoilage?",
+    "choices": [
+      "Both normal and abnormal spoilage costs would be added to\nthe cost of the good units completed during the period.",
+      "Both normal and abnormal spoilage costs would be written off\nas an expense of the period.",
+      "Normal spoilage costs would be added to the cost of the good\nunits completed during the period. In contrast, abnormal\nspoilage costs would be written off as a loss.",
+      "Normal spoilage costs would be allocated between the cost of\ngood units completed during the period and the ending work-\nin-process inventory. In contrast, abnormal spoilage costs\nwould be written off as a loss."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under process costing, as with job-order costing, the cost of a\nnormal level of spoilage is left in cost of goods sold. Thus, the\ncost of the period’s normal spoilage must be allocated among\nall the units worked on during the period, both those finished\nand those remaining in work-in-process. Abnormal spoilage is\nrecognized separately as a loss.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 6,
+    "page": 836,
+    "topicId": "su8-process",
+    "stem": "A company uses a process cost system in accounting for its\nsingle product. The cost of units failing final inspection, termed\nnormal spoilage, is added to the inventory cost of the good\nunits produced. Units spoiled during production are termed\nabnormal spoilage, and their cost is immediately written off to\ncost of goods sold. During the previous month, the entire\ninventory of spoiled units (both normal and abnormal spoilage)\nwas sold at a price lower than it had cost to produce them.\nHow would this sale affect the reported net income of the\ncompany?",
+    "choices": [
+      "Increase net income from the sale of the abnormal spoilage\nand increase net income from the sale of the normal spoilage.",
+      "Increase net income from the sale of the abnormal spoilage\nand decrease net income from the sale of the normal spoilage.",
+      "Decrease net income from the sale of the abnormal spoilage\nand increase net income from the sale of the normal spoilage.",
+      "Decrease net income from the sale of the abnormal spoilage\nand decrease net income from the sale of the normal spoilage."
+    ],
+    "answerIndex": 0,
+    "explanation": "Since the entire inventory of spoiled units was sold and the\ncosts of those spoiled units were already included in the\ninventory cost of good units produced and written off to cost of\ngoods sold, the sale of these spoiled units would increase net\nincome from the sale of the abnormal spoilage and increase\nthe net income from the sale of the normal spoilage. In other\nwords, the spoiled units have already been expensed and are\nvalued for book purposes at zero, so any money received will\nincrease profits.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 7,
+    "page": 837,
+    "topicId": "su8-process",
+    "stem": "The completion of goods is recorded as a decrease in work-in-\nprocess control when using\nJob-Order Costing Process Costing",
+    "choices": [
+      "Yes        No",
+      "Yes        Yes",
+      "No          Yes",
+      "No          No"
+    ],
+    "answerIndex": 1,
+    "explanation": "The cost flow among accounts in process costing is similar to\nthat for job-order costing. Both use the basic general ledger\naccounts, for example, materials control, work-in-process\ncontrol, manufacturing overhead control, finished goods\ncontrol, and cost of goods sold. Consequently, each system\ncredits (decreases) work-in-process control and debits\n(increases) finished goods control when goods are completed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 8,
+    "page": 838,
+    "topicId": "su8-process",
+    "stem": "In a process cost system, the application of manufacturing\noverhead usually is recorded as an increase in",
+    "choices": [
+      "Cost of goods sold.",
+      "Work-in-process inventory control.",
+      "Manufacturing overhead control.",
+      "Finished goods inventory control."
+    ],
+    "answerIndex": 1,
+    "explanation": "The principal distinction between process costing and job\ncosting is that the latter uses subsidiary WIP and finished\ngoods ledgers to account for separate jobs. However, the\nsame general ledger accounts are used in both systems, and\ncost flow among accounts also is the same. Both systems\nincrease work-in-process (a general ledger account) to record\napplied overhead and other production costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 9,
+    "page": 839,
+    "topicId": "su8-process",
+    "stem": "Which of the following is a disadvantage of using a process\ncosting system versus job-order costing?",
+    "choices": [
+      "It is difficult to determine cost of goods sold when partial\nshipments are made before completion.",
+      "It is difficult to ensure that materials and labor are accurately\ncharged to each specific job.",
+      "It involves the calculation of stage of completion of goods-in-\nprocess and the use of equivalent units.",
+      "It is expensive to use as a good deal of clerical work is\nrequired."
+    ],
+    "answerIndex": 2,
+    "explanation": "Process costing is used to assign costs to similar products that\nare mass produced on a continuous basis. Costs are\naccumulated for a cost object consisting of a large number of\nsimilar units of goods or services, work-in-process is stated in\nterms of equivalent units, and unit costs are established based\non the average cost of all units. Process costing, therefore,\ninvolves the calculation of the stage of completion of goods-in-\nprocess, a necessary step in determining the number of\nequivalent units.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 10,
+    "page": 840,
+    "topicId": "su8-process",
+    "stem": "An equivalent unit of direct materials or conversion cost is\nequal to",
+    "choices": [
+      "The amount of direct materials or conversion cost necessary to\ncomplete one unit of production.",
+      "A unit of work-in-process inventory.",
+      "The amount of direct materials or conversion cost necessary to\nstart a unit of production in work-in-process.",
+      "Fifty percent of the direct materials or conversion cost of a unit\nof finished goods inventory (assuming a linear production\npattern)."
+    ],
+    "answerIndex": 0,
+    "explanation": "EUP measure the amount of work performed in each\nproduction phase in terms of fully processed units during a\ngiven period. Incomplete units are restated as the equivalent\namount of completed units. The calculation is made separately\nfor direct materials and conversion cost (direct labor and\noverhead).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 2,
+    "number": 11,
+    "page": 840,
+    "topicId": "su8-process",
+    "stem": "Which costing method is a gravel pit operation most likely to\nuse?",
+    "choices": [
+      "Job-order costing.",
+      "Process costing.",
+      "Process costing to a split-off point and job-order costing\nafterwards.",
+      "None of the answers are correct."
+    ],
+    "answerIndex": 1,
+    "explanation": "Job-order costing is used when each end product is unique.\nProcess cost accounting assigns costs to inventoriable goods\nor services. It applies to relatively homogeneous products that\nare mass produced on a continuous basis (e.g., petroleum\nproducts, thread, and computer monitors). A gravel pit\noperation produces homogeneous end products on a\ncontinuous basis that are inventoriable. Thus, it is most likely\nto use process costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 1,
+    "page": 843,
+    "topicId": "su8-abc",
+    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nUnder a costing system that allocates overhead on the basis of\ndirect labor hours, Zeta’s materials handling costs allocated to\none unit of wall mirrors would be",
+    "choices": [
+      "$1,000",
+      "$500",
+      "$2,000",
+      "$5,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "If direct labor hours are used as the allocation base, the\n$50,000 of costs is allocated over 400 hours of direct labor.\nMultiplying the 25 units of each product times 200 hours\nresults in 5,000 labor hours for each product, or a total of\n10,000 hours. Dividing $50,000 by 10,000 hours results in a\ncost of $5 per direct labor hour. Multiplying 200 hours times $5\nresults in an allocation of $1,000 of overhead per unit of\nproduct.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 2,
+    "page": 844,
+    "topicId": "su8-abc",
+    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nUnder activity-based costing (ABC), Zeta’s materials handling\ncosts allocated to one unit of wall mirrors would be",
+    "choices": [
+      "$1,000",
+      "$500",
+      "$1,500",
+      "$2,500"
+    ],
+    "answerIndex": 1,
+    "explanation": "An activity-based costing (ABC) system allocates overhead\ncosts on the basis of some causal relationship between the\nincurrence of cost and activities. Because the moves for wall\nmirrors constitute 25% (5 ÷ 20) of total moves, the mirrors\nshould absorb 25% of the total materials handling costs. Thus,\n$12,500 ($50,000 × 25%) is allocated to mirrors. The\nremaining $37,500 is allocated to specialty windows. Dividing\nthe $12,500 by 25 units produces a cost of $500 per unit of\nmirrors.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 3,
+    "page": 844,
+    "topicId": "su8-abc",
+    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nMultiple or departmental overhead rates are considered\npreferable to a single or corporate-wide overhead rate when",
+    "choices": [
+      "Manufacturing is limited to a single product flowing through\nidentical departments in a fixed sequence.",
+      "Various products are manufactured that do not pass through\nthe same departments or use the same manufacturing\ntechniques.",
+      "Cost drivers, such as direct labor, are the same over all\nprocesses.",
+      "Individual cost drivers cannot accurately be determined with\nrespect to cause-and-effect relationships."
+    ],
+    "answerIndex": 1,
+    "explanation": "Multiple rates are appropriate when a process differs\nsubstantially among departments or when products do not go\nthrough all departments or all processes. The trend in cost\naccounting is toward activity-based costing, which divides\nproduction into numerous activities and identifies the cost\ndriver(s) most relevant to each. The result is a more accurate\ntracing of costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 4,
+    "page": 845,
+    "topicId": "su8-abc",
+    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nThe use of activity-based costing (ABC) normally results in",
+    "choices": [
+      "Substantially greater unit costs for low-volume products than is\nreported by traditional product costing.",
+      "Substantially lower unit costs for low-volume products than is\nreported by traditional product costing.",
+      "Decreased setup costs being charged to low-volume products.",
+      "Equalizing setup costs for all product lines."
+    ],
+    "answerIndex": 0,
+    "explanation": "ABC differs from traditional product costing because it uses\nmultiple allocation bases and therefore allocates overhead\nmore accurately. The result is that ABC often charges low-\nvolume products with more overhead than a traditional\nsystem. For example, the cost of machine setup may be the\nsame for production runs of widely varying sizes. This\nrelationship is reflected in an ABC system that allocates setup\ncosts on the basis of the number of setups. However, a\ntraditional system using an allocation base such as machine\nhours may underallocate setup costs to low-volume products.\nMany companies adopting ABC find that they have been\nlosing money on low-volume products because costs were\nactually higher than originally thought.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 5,
+    "page": 846,
+    "topicId": "su8-abc",
+    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nBecause of changes that are occurring in the basic operations\nof many firms, all of the following represent trends in the way\nindirect costs are allocated except",
+    "choices": [
+      "Treating direct labor as an indirect manufacturing cost in an\nautomated factory.",
+      "Using throughput time as an application base to increase\nawareness of the costs associated with lengthened throughput\ntime.",
+      "Preferring corporate-wide application rates that are applied to\nmachine hours rather than incurring the cost of detailed\nallocations.",
+      "Using several machine cost pools to measure product costs on\nthe basis of time in a machine center."
+    ],
+    "answerIndex": 2,
+    "explanation": "With the automation of factories and the corresponding\nemphasis on activity-based costing (ABC), companies are\nfinding new ways of allocating indirect factory overhead. One\nchange is that corporate-wide application rates are being used\nless often because a closer matching of costs with cost drivers\nprovides better information to management. ABC results in a\nmore accurate application of indirect costs because it provides\nmore refined data. Instead of a single cost goal for a process,\na department, or even an entire plant, an indirect cost pool is\nestablished for each identified activity. The related cost driver,\nthe factor that changes the cost of the activity, also is\nidentified.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 6,
+    "page": 848,
+    "topicId": "su8-abc",
+    "stem": "A company with three products classifies its costs as\nbelonging to five functions: design, production, marketing,\ndistribution, and customer services. For pricing purposes, all\ncompany costs are assigned to the three products. The direct\ncosts of each of the five functions are traced directly to the\nthree products. The indirect costs of each of the five business\nfunctions are collected into five separate cost pools and then\nassigned to the three products using appropriate allocation\nbases. The allocation base that will most likely be the best for\nallocating the indirect costs of the distribution function is",
+    "choices": [
+      "Number of customer phone calls.",
+      "Number of shipments.",
+      "Number of sales persons.",
+      "Dollar sales volume."
+    ],
+    "answerIndex": 1,
+    "explanation": "Distribution is the transfer of goods from producers to\ncustomers or from distribution centers to merchandisers. Thus,\ndistribution manages outflows, and purchasing manages\ninflows. Among the interrelated issues involved in distribution\nare (1) selection of distribution channels, (2) inventory\nplacement, (3) means of transportation, (4) shipment\nschedules, (5) routes, and (6) carriers. Accordingly, the\nnumber of shipments is the cost driver most highly correlated\nwith the incurrence of the indirect costs of distribution.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 7,
+    "page": 849,
+    "topicId": "su8-abc",
+    "stem": "A cosmetics manufacturer has used a traditional cost\naccounting system to apply quality control costs uniformly to all\nproducts at a rate of 14.5% of direct labor cost. Monthly direct\nlabor cost for makeup is $27,500. In an attempt to distribute\nquality control costs more equitably, the manufacturer is\nconsidering activity-based costing. The monthly data shown in\nthe chart below have been gathered for makeup.\nCost       Quantity\nActivity          Cost Driver      Rates      of Makeup\nIncoming material        Type of       $11.50 per\ninspection               material      type          12 types\nIn-process inspection    Number of     $0.14          17,500 uni\nunits         per unit      ts\nProduct certification                  $77 per\nPer order      order         25 orders\nThe monthly quality control cost assigned to makeup using\nactivity-based costing (ABC) is",
+    "choices": [
+      "$88.64 per order.",
+      "$525.50 lower than the cost using the traditional system.",
+      "$8,500.50.",
+      "$525.50 higher than the cost using the traditional system."
+    ],
+    "answerIndex": 3,
+    "explanation": "ABC identifies the causal relationship between the incurrence\nof cost and activities, determines the drivers of the activities,\nestablishes cost pools related to the drivers and activities, and\nassigns costs to ultimate cost objects on the basis of the\ndemands (resources or drivers consumed) placed on the\nactivities by those cost objects. Hence, ABC assigns overhead\ncosts based on multiple allocation bases or cost drivers. Under\nthe traditional, single-base system, the amount allocated is\n$3,987.50 ($27,500 × 14.5%). Under ABC, the amount\nallocated is $4,513 [(12 × $11.50) + (17,500 × $.14) + (25 ×\n$77)], or $525.50 more than under the traditional system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 8,
+    "page": 850,
+    "topicId": "su8-abc",
+    "stem": "A profitable company with five departments uses corporate-\nwide overhead rates for its highly diversified operation. The\nfirm is studying a change to either allocating overhead by\nusing departmental rates or using activity-based costing\n(ABC). Which one of these two methods will likely result in the\nuse of a greater number of cost allocation bases and more\naccurate costing results?\nGreater Number\nMore Accurate\nof\nAllocation Bases            Costing Results",
+    "choices": [
+      "Departmental                Departmental",
+      "Departmental                ABC",
+      "ABC                         Departmental",
+      "ABC                         ABC"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under activity-based costing (ABC), the number of allocation\nbases increases dramatically over those of a traditional\n(volume-based) costing accumulation system. First, every\nactivity must be allocated to an indirect cost pool using\nresource drivers (“1st-stage allocations”), and every indirect\ncost pool must be allocated to final products using activity\ndrivers (“2nd-stage allocations”). This use of a larger number\nof allocation pools and bases leads to more accurate costing\nresults.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 9,
+    "page": 851,
+    "topicId": "su8-abc",
+    "stem": "A company is beginning operations and is considering three\nalternative ways in which to allocate manufacturing overhead\nto individual units produced. The company can use a\ncorporate-wide rate, departmental rates, or activity-based\ncosting. The company will produce many types of products in\nits single plant, and not all products will be processed through\nall departments. In which one of the following independent\nsituations would reported net income for the first year be the\nsame regardless of which overhead allocation method had\nbeen selected?",
+    "choices": [
+      "All production costs approach those costs that were budgeted.",
+      "The sales mix does not vary from the mix that was budgeted.",
+      "All manufacturing overhead is a fixed cost.",
+      "All ending inventory balances are zero."
+    ],
+    "answerIndex": 3,
+    "explanation": "When there is no beginning finished goods inventory, the only\ndifference in net income arising from the use of variant costing\nmethods is the treatment of costs that show up on the balance\nsheet because they are buried in the various ending\ninventories. In the company’s case, therefore, an identical net\nincome figure across the three different costing system\noptions will only occur when there are no ending inventories.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 10,
+    "page": 852,
+    "topicId": "su8-abc",
+    "stem": "Cost allocation is the process of assigning indirect costs to a\ncost object. The indirect costs are grouped in cost pools and\nthen allocated by a common allocation base to the cost object.\nThe base that is employed to allocate a homogeneous cost\npool should",
+    "choices": [
+      "Have a cause-and-effect relationship with the cost items in the\ncost pool.",
+      "Assign the costs in the pool uniformly to cost objects even if\nthe cost objects use resources in a nonuniform way.",
+      "Be a nonfinancial measure (e.g., number of setups) because a\nnonfinancial measure is more objective.",
+      "Have a high correlation with the cost items in the cost pool as\nthe sole criterion for selection."
+    ],
+    "answerIndex": 0,
+    "explanation": "A cost allocation base is the common denominator for\nsystematically correlating indirect costs and a cost object. The\ncost driver of the indirect costs is ordinarily the allocation\nbase. In a homogeneous cost pool, all costs should have the\nsame or a similar cause-and-effect relationship with the cost\nallocation base.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 11,
+    "page": 853,
+    "topicId": "su8-abc",
+    "stem": "Activities, their drivers, and their costs may be classified as\nunit-level, batch-level, product-level, and facility-level. If\nactivity-based costing (ABC) information is prepared for\ninternal purposes, which costs are most likely to be treated as\nperiod costs?",
+    "choices": [
+      "Unit-level.",
+      "Batch-level.",
+      "Product-level.",
+      "Facility-level."
+    ],
+    "answerIndex": 3,
+    "explanation": "A difficulty in applying ABC is that, although the first three\nlevels of activities pertain to specific products or services,\nfacility-level activities do not. Thus, facility-level costs are not\naccurately assignable to products. The theoretically sound\nsolution may be to treat these costs as period costs.\nNevertheless, organizations that apply ABC ordinarily assign\nthem to products to obtain a full absorption cost suitable for\nexternal financial reporting in accordance with GAAP.\nHowever, for internal purposes, facility-level costs should be\ntreated as period costs to avoid distorting decisions about cost\nefficiency, pricing, and profitability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 12,
+    "page": 854,
+    "topicId": "su8-abc",
+    "stem": "A manufacturer’s cost assignment and product costing\nprocedures follow activity-based costing principles. Activities\nhave been identified and classified as being either value-\nadding or nonvalue-adding as to each product. Which of the\nfollowing activities used in the production process is nonvalue-\nadding?",
+    "choices": [
+      "Design engineering activity.",
+      "Heat treatment activity.",
+      "Drill press activity.",
+      "Raw materials storage activity."
+    ],
+    "answerIndex": 3,
+    "explanation": "Analysis by activity provides for better cost control because of\nidentification of nonvalue-adding activities. A value-added\nactivity contributes to customer satisfaction or meets a need of\nthe entity. A nonvalue-adding activity does not make such a\ncontribution. It can be eliminated, reduced, or redesigned\nwithout impairing the quantity, quality, or responsiveness of\nthe product or service desired by customers or the entity. For\nexample, raw materials storage may be greatly reduced or\neliminated in a just-in-time (JIT) production system without\naffecting customer value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 13,
+    "page": 855,
+    "topicId": "su8-abc",
+    "stem": "A corporation has used a traditional cost accounting system to\napply quality control costs uniformly to all products at a rate of\n15% of direct labor cost. Monthly direct labor cost for its main\nproduct is $30,000. In an attempt to distribute quality control\ncosts more equitably, the corporation is considering activity-\nbased costing (ABC). The monthly data shown below have\nbeen gathered for the main product. The three activities are (1)\nincoming materials inspection, (2) in-process inspection, and\n(3) product certification. Costs are to be allocated to each\nactivity on the basis of cost drivers.\nQuantity\nfor\nActivit Cost Driver                        Cost             Main\ny                                       Rate          Product\n(1)    Number of types of           $12 per type      12 types\nmaterials\n(2)    Number of units                 $0.14 per 17,500 units\nunit\n(3) Number of orders                     $77 per   30 orders\norder\nThe monthly quality control cost assigned to the main product\nusing ABC is",
+    "choices": [
+      "$150 per order.",
+      "$404 lower than using the traditional system.",
+      "$4,500",
+      "$404 higher than using the traditional system."
+    ],
+    "answerIndex": 3,
+    "explanation": "ABC assigns overhead costs on the basis of multiple cost\ndrivers instead of only one driver. Using the three cost drivers\nin the question produces the following calculation:\nNumber of types\nof materials (12 × $12)         $ 144\nNumber of units (17,500 × $.14) 2,450\nNumber of orders (30 × $77)         2,310\nTotal                            $4,904\nUnder the old method of allocation based on direct labor, the\nallocated amount would have been 4,500 ($30,000 × 15%), or\n$404 lower than under ABC.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 14,
+    "page": 857,
+    "topicId": "su8-abc",
+    "stem": "Which of the following statements about activity-based costing\n(ABC) is false?",
+    "choices": [
+      "Activity-based costing is useful for allocating marketing and\ndistribution costs.",
+      "Activity-based costing is more likely to result in major\ndifferences from traditional costing systems if the firm\nmanufactures only one product rather than multiple products.",
+      "In activity-based costing, cost drivers are what cause costs to\nbe incurred.",
+      "Activity-based costing differs from traditional costing systems\nin that products are not cross-subsidized."
+    ],
+    "answerIndex": 1,
+    "explanation": "ABC determines the activities that will serve as cost objects\nand then accumulates a cost pool for each activity using the\nappropriate activity base (cost driver). It is a system that may\nbe employed with job order or process costing methods. Thus,\nwhen there is only one product, the allocation of costs to the\nproduct is trivial. All of the cost is assigned to the one product;\nthe particular method used to allocate the costs does not\nmatter.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 15,
+    "page": 860,
+    "topicId": "su8-abc",
+    "stem": "Believing that its traditional cost system may be providing\nmisleading information, Farragut Manufacturing is considering an\nactivity-based costing (ABC) approach. It now employs a\ntraditional cost system and has been applying its manufacturing\noverhead on the basis of machine hours.\nFarragut plans on using 50,000 direct labor hours and 30,000\nmachine hours in the coming year. The following data show the\nmanufacturing overhead that is budgeted.\nBudget Budget\ned    ed\nActiv        Cost Driver Activi Co\nity                           ty   st\nMaterial    No. of parts   6,000,0 $ 720,\nhandling    handled             00     000\nSetup costs No. of setups      750 315,000\nMachining Machine hours 30,000 540,000\ncosts\nQuality     No. of batches     500 225,000\ncontrol\nTotal manufacturing overhead cost: $1,800,\n000\nCost, sales, and production data for one of Farragut’s products for the\ncoming year are as follows:\nPrime costs:\nDirect material cost per unit            $4.40\nDirect labor cost per unit\n.05 DLH @ $15.00/DLH                        .75\nTotal prime cost                         $5.15\nSales and production data:\nExpected sales                    20,000 units\nBatch size                         5,000 units\nSetups                             2 per batch\nTotal parts per finished unit          5 parts\nMachine hours required        80 MH per batch\nIf Farragut uses the traditional cost system, the cost per unit\nfor this product for the coming year would be",
+    "choices": [
+      "$5.39",
+      "$5.44",
+      "$6.11",
+      "$6.95"
+    ],
+    "answerIndex": 2,
+    "explanation": "Given that manufacturing overhead is applied on the basis of\nmachine hours, the overhead rate is $60 per hour ($1,800,000\n÷ 30,000) or $.96 per unit [(80 machine hours per batch × $60)\n÷ 5,000 units per batch]. Accordingly, the unit full cost is $6.11\n($5.15 unit prime cost + $.96).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 16,
+    "page": 861,
+    "topicId": "su8-abc",
+    "stem": "Believing that its traditional cost system may be providing\nmisleading information, Farragut Manufacturing is considering an\nactivity-based costing (ABC) approach. It now employs a\ntraditional cost system and has been applying its manufacturing\noverhead on the basis of machine hours.\nFarragut plans on using 50,000 direct labor hours and 30,000\nmachine hours in the coming year. The following data show the\nmanufacturing overhead that is budgeted.\nBudget Budget\ned    ed\nActiv        Cost Driver Activi Co\nity                           ty   st\nMaterial    No. of parts   6,000,0 $ 720,\nhandling    handled             00     000\nSetup costs No. of setups      750 315,000\nMachining Machine hours 30,000 540,000\ncosts\nQuality     No. of batches     500 225,000\ncontrol\nTotal manufacturing overhead cost: $1,800,\n000\nCost, sales, and production data for one of Farragut’s products for the\ncoming year are as follows:\nPrime costs:\nDirect material cost per unit            $4.40\nDirect labor cost per unit\n.05 DLH @ $15.00/DLH                        .75\nTotal prime cost                         $5.15\nSales and production data:\nExpected sales                    20,000 units\nBatch size                         5,000 units\nSetups                             2 per batch\nTotal parts per finished unit          5 parts\nMachine hours required        80 MH per batch\nIf Farragut employs an activity-based costing system, the cost\nper unit for the product described for the coming year would be",
+    "choices": [
+      "$6.00",
+      "$6.08",
+      "$6.21",
+      "$6.30"
+    ],
+    "answerIndex": 3,
+    "explanation": "Materials handling cost per part is $.12 ($720,000 ÷\n6,000,000), cost per setup is $420 ($315,000 ÷ 750),\nmachining cost per hour is $18 ($540,000 ÷ 30,000), and\nquality cost per batch is $450 ($225,000 ÷ 500). Hence, total\nmanufacturing overhead applied is $22,920 [(5 parts per unit ×\n20,000 units × $.12) + (4 batches × 2 setups per batch ×\n$420) + (4 batches × 80 machine hours per batch × $18) + (4\nbatches × $450)]. The total unit cost is $6.296 [$5.15 prime\ncost + ($22,920 ÷ 20,000 units) overhead].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 17,
+    "page": 862,
+    "topicId": "su8-abc",
+    "stem": "Believing that its traditional cost system may be providing\nmisleading information, Farragut Manufacturing is considering an\nactivity-based costing (ABC) approach. It now employs a\ntraditional cost system and has been applying its manufacturing\noverhead on the basis of machine hours.\nFarragut plans on using 50,000 direct labor hours and 30,000\nmachine hours in the coming year. The following data show the\nmanufacturing overhead that is budgeted.\nBudget Budget\ned    ed\nActiv        Cost Driver Activi Co\nity                           ty   st\nMaterial    No. of parts   6,000,0 $ 720,\nhandling    handled             00     000\nSetup costs No. of setups      750 315,000\nMachining Machine hours 30,000 540,000\ncosts\nQuality     No. of batches     500 225,000\ncontrol\nTotal manufacturing overhead cost: $1,800,\n000\nCost, sales, and production data for one of Farragut’s products for the\ncoming year are as follows:\nPrime costs:\nDirect material cost per unit            $4.40\nDirect labor cost per unit\n.05 DLH @ $15.00/DLH                        .75\nTotal prime cost                         $5.15\nSales and production data:\nExpected sales                    20,000 units\nBatch size                         5,000 units\nSetups                             2 per batch\nTotal parts per finished unit          5 parts\nMachine hours required        80 MH per batch\nAn assisted-living facility provides services in the form of\nresidential space, meals, and other occupant assistance\n(OOA) to its occupants. The facility currently uses a traditional\ncost accounting system that charges each occupant a daily\nrate equal to the facility’s annual cost of providing residential\nspace, meals, and OOA divided by total occupant days.\nHowever, an activity-based costing (ABC) analysis has\nrevealed that occupants’ use of OOA varies substantially. This\nanalysis determined that occupants could be grouped into\nthree categories (low, moderate, and high usage of OOA) and\nthat the activity driver of OOA should be nursing hours. The\ndriver of the residential space and meals is occupant days.\nThe following quantitative information was also provided:\nAnnual            Annual\nOccupant Category Occupant Days Nursing Hours\nLow usage                  36,000             90,000\nMedium usage               18,000             90,000\nHigh usage                 6,000              120,000\n60,000             300,000\nThe total annual cost of OOA was $7.5 million, and the total\nannual cost of providing residential space and meals was $7.2\nmillion. Accordingly, the ABC analysis indicates that the daily\ncosting rate for providing residential space, meals, and OOA\nshould be",
+    "choices": [
+      "$182.50 for occupants in the low-usage category.",
+      "$145.00 for occupants in the medium-usage category.",
+      "$245.00 for occupants in the high-usage category.",
+      "$620.00 for all occupants."
+    ],
+    "answerIndex": 0,
+    "explanation": "This service organization produces three “products” (the three\noccupant categories), and the “units produced” equal\noccupant days. According to the ABC analysis, production\ninvolves two activities: (1) provision of residential space and\nmeals and (2) OOA. The drivers of these activities are\noccupant days and nursing hours, respectively. Thus, the cost\npool rate for the first activity (residential space and meals) is\n$120 per occupant day ($7,200,000 ÷ 60,000 days), and the\ncost pool rate for the second activity (OOA) is $25 ($7,500,000\n÷ 300,000 hours). The total cost for providing services to\noccupants in the low-usage category is $6,570,000 [($120 ×\n36,000 days) + ($25 × 90,000 hours)]. The daily cost rate for\nthese occupants is therefore $182.50 ($6,570,000 ÷ 36,000\noccupant days).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 18,
+    "page": 864,
+    "topicId": "su8-abc",
+    "stem": "A corporation utilizes an activity-based costing system for\napplying costs to its two products, P and Q. In the assembly\ndepartment, material handling costs vary directly with the\nnumber of parts inserted into the product. Machinery is\nrecalibrated and oiled each weekend regardless of the number\nof parts inserted during the previous week. Both material\nhandling and machinery maintenance costs are charged to the\nproduct on the basis of the number of parts inserted. Due to\nreengineering of the production process for Product P, the\nnumber of insertion parts per finished unit has been reduced.\nHow will the redesign of the production process for Product P\naffect the activity-based cost of Product Q?",
+    "choices": [
+      "Material handling cost per Q will remain unchanged, and\nmachinery maintenance cost per Q unit will remain\nunchanged.",
+      "Material handling cost per Q unit will increase, and machinery\nmaintenance cost per Q unit will remain unchanged.",
+      "Material handling cost per Q will remain unchanged, and\nmachinery maintenance cost per Q unit will increase.",
+      "Material handling cost per Q unit will increase, and machinery\nmaintenance cost per Q unit will increase."
+    ],
+    "answerIndex": 2,
+    "explanation": "Since materials handling costs vary directly with the number of\nparts inserted, the material handling cost (a variable cost) for\nboth products remains unchanged on a per-unit basis.\nHowever, the newly gained efficiency in the production of\nProduct P means the machinery maintenance cost (a fixed\ncost) of the assembly department is being spread over fewer\nunits of input, so per-unit fixed costs (for both products) will\nincrease.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 19,
+    "page": 865,
+    "topicId": "su8-abc",
+    "stem": "Believing that its traditional cost system may be providing\nmisleading information, Farragut Manufacturing is considering an\nactivity-based costing (ABC) approach. It now employs a\ntraditional cost system and has been applying its manufacturing\noverhead on the basis of machine hours.\nFarragut plans on using 50,000 direct labor hours and 30,000\nmachine hours in the coming year. The following data show the\nmanufacturing overhead that is budgeted.\nBudget Budget\ned    ed\nActiv        Cost Driver Activi Co\nity                           ty   st\nMaterial    No. of parts   6,000,0 $ 720,\nhandling    handled             00     000\nSetup costs No. of setups      750 315,000\nMachining Machine hours 30,000 540,000\ncosts\nQuality     No. of batches     500 225,000\ncontrol\nTotal manufacturing overhead cost: $1,800,\n000\nCost, sales, and production data for one of Farragut’s products for the\ncoming year are as follows:\nPrime costs:\nDirect material cost per unit            $4.40\nDirect labor cost per unit\n.05 DLH @ $15.00/DLH                        .75\nTotal prime cost                         $5.15\nSales and production data:\nExpected sales                    20,000 units\nBatch size                         5,000 units\nSetups                             2 per batch\nTotal parts per finished unit          5 parts\nMachine hours required        80 MH per batch\nWhen using activity-based costing techniques, which one of\nthe following departmental activities would be expected to use\nmachine hours as a cost driver to allocate overhead costs to\nproduction?",
+    "choices": [
+      "Plant cafeteria.",
+      "Machine setups.",
+      "Materials handling.",
+      "Robotics painting."
+    ],
+    "answerIndex": 3,
+    "explanation": "Machine hours are a direct measure of the level of use of a\nrobotic painting operation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 20,
+    "page": 866,
+    "topicId": "su8-abc",
+    "stem": "A company is considering the implementation of an activity-\nbased costing and management program. The company",
+    "choices": [
+      "Should focus on manufacturing activities and avoid\nimplementation with service-type functions.",
+      "Would probably find a lack of software in the marketplace to\nassist with the related recordkeeping.",
+      "Would normally gain added insights into causes of cost.",
+      "Would likely use fewer cost pools than it did under more\ntraditional accounting methods."
+    ],
+    "answerIndex": 2,
+    "explanation": "One of the benefits of activity-based costing is the discovery of\ncost relationships that went unnoticed under traditional\naccounting methods.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 21,
+    "page": 866,
+    "topicId": "su8-abc",
+    "stem": "All of the following are likely to be used as a cost allocation\nbase in activity-based costing except the",
+    "choices": [
+      "Number of different materials used to manufacture the product.",
+      "Units of materials used to manufacture the product.",
+      "Number of vendors supplying the materials used to\nmanufacture the product.",
+      "Cost of materials used to manufacture the product."
+    ],
+    "answerIndex": 3,
+    "explanation": "Activity-based costing is founded on the idea that drivers for\nindirect cost assignment should be based on some level of\nactivity. Cost of materials does not directly reflect a level of a\ngiven activity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 22,
+    "page": 867,
+    "topicId": "su8-abc",
+    "stem": "A company manufactures two types of engineering diagnostic\nequipment used in construction. The two products are based\non different technologies, x-ray and ultrasound, but are\nmanufactured in the same factory. The manufacturer has\ncomputed the manufacturing cost of the x-ray and ultrasound\nproducts by adding together direct materials, direct labor, and\noverhead cost applied based on the number of direct labor\nhours. The factory has three overhead departments that\nsupport the single production line that makes both products.\nBudgeted overhead spending for the departments is as\nfollows:\nDepartment\nEngineering      Material\ndesign           handling      Setup      Total\n$6,000           $5,000        $3,000     $14,000\nBudgeted manufacturing activities and costs for the period are\nas follows:\nActivity                                Product\nX-Ray      Ultrasound\nUnits produced and sold               50     100\nDirect materials used                 $5,000 $8,000\nDirect labor hours used               100    300\nDirect labor cost                     $4,000 $12,000\nNumber of parts used                  400    600\nNumber of engineering changes         2      1\nNumber of product setups              8      7\nThe budgeted cost to manufacture one ultrasound machine\nusing the activity-based costing method is",
+    "choices": [
+      "$225",
+      "$264",
+      "$293",
+      "$305"
+    ],
+    "answerIndex": 1,
+    "explanation": "Charges for direct materials and direct labor are traceable to\neach type of machine ($8,000 and $12,000 respectively for the\nultrasound). The departmental costs must be allocated based\non each machine’s proportional driver level. Engineering\ndesign costs can be allocated to the ultrasound machine at a\nrate of 33.3% [1 ÷ (1 + 2)], material handling at a rate of 60%\n[600 ÷ (600 + 400)], and setup at a rate of 46.7% [7 ÷ (7 + 8)].\nThe cost for a single ultrasound machine can thus be\ncalculated as follows:\nDirect materials ($8,000 ÷ 100 units)                        $ 80\nDirect labor ($12,000 ÷ 100 units)                           120\nEngineering changes {$6,000 × [1 engineering change ÷ 20\n(1 + 2)] ÷ 100 units}\nMaterial handling {$5,000 × [600 parts used ÷ (600 +         30\n400)] ÷ 100 units}\nSetup {$3,000 × [7 product setups ÷ (7 + 8)] ÷ 100 units} 14\nTotal                                                      $264",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 23,
+    "page": 869,
+    "topicId": "su8-abc",
+    "stem": "A firm that specializes in chocolate baked goods has long\nassessed the profitability of a product line by comparing\nrevenues to the cost of goods sold. However, the firm’s new\naccountant wants to use an activity-based costing system that\ntakes into consideration the cost of the delivery person. Listed\nbelow are activity and cost information relating to two of the\nfirm’s major products.\nMuffins Cheesecake\nRevenue             $53,000 $46,000\nCost of goods sold $26,000 $21,000\nDelivery activity:\nNumber of deliveries          150     85\nAvg. length of delivery   10 min. 15 min.\nCost per hour for delivery $20.00 $20.00\nUsing activity-based costing, which one of the following\nstatements is true?",
+    "choices": [
+      "The muffins are $2,000 more profitable.",
+      "The cheesecakes are $75 more profitable.",
+      "The muffins are $1,925 more profitable.",
+      "and therefore are more advantageous."
+    ],
+    "answerIndex": 2,
+    "explanation": "The first step is to calculate the gross margin on the two\nproducts:\nMuffins       Cheesecake\nRevenues              $53,000 $46,000\nCost of goods sold (26,000) (21,000)\nGross margin          $27,000 $25,000\nThe next step is to calculate total delivery cost for each\nproduct:\nMuffins      Cheesecake\nNumber of deliveries        150                       85\nTimes: Minutes per delivery × 10        × 15\nTotal delivery minutes         1,500               1,275\nDivided by: Minutes per hour ÷ 60       ÷ 60\nTotal delivery hours         25.00                 21.25\nTimes: Delivery cost per hour × $20                × $20\nTotal delivery cost            $500     $425\nThe operating profits on these two products, and the\ndifference between them, can now be determined:\nMuffins      ($27,000 – $500) $26,500\nCheesecake ($25,000 – $425) (24,575)\nExcess                         $ 1,925\nThe muffins have a higher profitability as a percentage of sales",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 24,
+    "page": 872,
+    "topicId": "su8-abc",
+    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nUsing activity-based costing, Atmel’s per unit overhead cost\nallocation of receiving costs for Product A is",
+    "choices": [
+      "$3.75",
+      "$10.75",
+      "$19.50",
+      "$28.13"
+    ],
+    "answerIndex": 0,
+    "explanation": "The first step in performing an activity-based costing\nassignment is to divide the dollar amount of the indirect cost\nactivity in question by the number of units of the appropriate\nallocation base. Total receiving costs for both products\namounted to $450,000. Between them, Products A and B had\n200 (50 + 150) receiving orders. Thus, the allocation rate is\n$2,250 per order ($450,000 ÷ 200 orders). The amount\nallocated to Product A is $112,500 (50 orders × $2,250).\nDividing this amount by the number of units of Product A\n(30,000) results in a per-unit receiving cost of $3.75.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 25,
+    "page": 873,
+    "topicId": "su8-abc",
+    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nAtmel’s cost driver for engineering costs is the number of\nproduction orders per product line. Using activity-based\ncosting, the engineering cost per unit for Product B is",
+    "choices": [
+      "$4.00",
+      "$10.00",
+      "$15.00",
+      "$29.25"
+    ],
+    "answerIndex": 2,
+    "explanation": "The first step in performing an activity-based costing\nassignment is to divide the dollar amount of the indirect cost\nactivity in question by the number of units of the appropriate\nallocation base. Total engineering costs for both products\namounted to $300,000. Between them, Products A and B had\n30 (12 + 18) production orders. Thus, the allocation rate is\n$10,000 per order ($300,000 ÷ 30 orders). The amount\nallocated to Product B is $180,000 (18 orders × $10,000).\nDividing this amount by the number of units of Product B\n(12,000) results in a per-unit engineering cost of $15.00.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 26,
+    "page": 874,
+    "topicId": "su8-abc",
+    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nA primary reason for a company to change from traditional\ncosting to activity-based costing (ABC) is that ABC",
+    "choices": [
+      "Is a simpler costing method to use.",
+      "Reduces product undercosting or overcosting.",
+      "Eliminates indirect cost application to products.",
+      "Identifies the nonvalue-added costs of production."
+    ],
+    "answerIndex": 1,
+    "explanation": "A primary advantage of ABC is that product costing is\nimproved, allowing for better decision making. The result is not\nonly more accurate cost assignments but also better cost\ncontrol and more efficient operations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 27,
+    "page": 875,
+    "topicId": "su8-abc",
+    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nA plant has two departments, Machining and Assembly. This\nyear’s budget for the plant contained the following information.\nMachining Assembly\nManufacturing overhead $4,000,000 $2,000,000\nDirect labor hours            100,000      200,000\nMachine hours                  40,000       40,000\nIf the plant allocates manufacturing overhead based on\nmachine hours, which of the following represents the allocation\nrates?\nMachining Assembly",
+    "choices": [
+      "$40/hr.         $10/hr.",
+      "$10/hr.         $40/hr.",
+      "$100/hr.        $50/hr.",
+      "$50/hr.         $100/hr."
+    ],
+    "answerIndex": 2,
+    "explanation": "The allocation rate is simply equal to the budgeted\nmanufacturing overhead divided by machine hours. Therefore,\nthe answer for Machining is $100/hr. [$4,000,000 ÷\n40,000 hours]. The rate for Assembly is $50/hr. [$2,000,000 ÷\n40,000 hours].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 28,
+    "page": 876,
+    "topicId": "su8-abc",
+    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nA manufacturing firm produces multiple families of products\nrequiring various combinations of different types of parts. The\nmanufacturer has identified various cost pools, one of which\nconsists of materials handling costs. This cost pool includes\nthe wages and employee benefits of the workers involved in\nreceiving materials, inspecting materials, storing materials in\ninventory, and moving materials to the workstations;\ndepreciation and maintenance of materials handling equipment\n(e.g., forklift trucks); and costs of supplies used as well as\nother related costs. Of the following, the most appropriate cost\ndriver for assigning materials handling costs to the various\nproducts most likely is",
+    "choices": [
+      "Direct labor hours.",
+      "Number of units produced.",
+      "Number of vendors involved.",
+      "Number of parts used."
+    ],
+    "answerIndex": 3,
+    "explanation": "Cost drivers should be related to the costs accumulated in\ncost pools. The number of parts used has a direct cause-and-\neffect relationship with materials handling costs. The more\nparts used, the more handling is involved.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 29,
+    "page": 877,
+    "topicId": "su8-abc",
+    "stem": "Which one of the following is the focus of activity-based\nmanagement?",
+    "choices": [
+      "To improve allocation of indirect production costs.",
+      "To reduce the number of cost pools.",
+      "To increase the number of volume-related allocation bases.",
+      "To improve the effectiveness of activities."
+    ],
+    "answerIndex": 3,
+    "explanation": "The process value analysis performed as part of ABC\nprovides information for eliminating or reducing nonvalue-\nadding activities. The result is therefore not only more\naccurate cost assignments, especially of overhead, but also\nbetter cost control and more efficient operations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 30,
+    "page": 877,
+    "topicId": "su8-abc",
+    "stem": "A plant has two departments, Machining and Assembly. This\nyear’s budget for the plant contained the following information.\nMachining Assembly\nManufacturing overhead $4,000,000 $2,000,000\nDirect labor hours            100,000     200,000\nMachine hours                 410,000       40,000\nIf the plant uses a corporate-wide overhead rate based on\ndirect labor hours, what would the rate be?",
+    "choices": [
+      "$10 per hour.",
+      "$20 per hour.",
+      "$40 per hour.",
+      "$75 per hour."
+    ],
+    "answerIndex": 1,
+    "explanation": "The total manufacturing overhead is $6,000,000 ($4,000,000 +\n$2,000,000), and the total direct labor hours are 300,000\n(100,000 + 200,000). Because the plant uses a corporate-wide\noverhead rate based on direct labor hours, the rate will be $20\nper hour ($6,000,000 ÷ 300,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 31,
+    "page": 878,
+    "topicId": "su8-abc",
+    "stem": "A plant has two departments, Machining and Assembly. This\nyear’s budget for the plant contained the following information.\nMachining Assembly\nManufacturing overhead $4,000,000 $2,000,000\nDirect labor hours           100,000   200,000\nMachine hours                 40,000     40,000\nAssume the plant uses machine hours as the overhead base\nin machining and direct labor in Assembly. If Job 2420 uses\n20 direct labor hours in each department, 10 machine hours in\nMachining and 5 machine hours in Assembly, how much\noverhead would be assigned to the job?",
+    "choices": [
+      "$1,100",
+      "$1,200",
+      "$2,100",
+      "$2,200"
+    ],
+    "answerIndex": 1,
+    "explanation": "The machining department uses machine hours as its\nallocation base. Thus, the machining allocation rate is equal to\n$100 per machine hour ($4,000,000 ÷ 40,000). The assembly\ndepartment uses direct labor hours as its allocation base.\nThus, the assembly allocation rate is equal to $10 per direct\nlabor hour ($2,000,000 ÷ 200,000).\nJob 2420 uses 20 direct labor hours in assembly and\n10 machine hours in machining (the 5 machine hours used in\nassembly are distractors). This job will be assigned $200\noverhead from assembly ($10 rate × 20 direct labor hours)\nand $1,000 overhead from machining ($100 rate × 10 machine\nhours) for a total overhead of $1,200 ($1,000 + $200).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 32,
+    "page": 880,
+    "topicId": "su8-abc",
+    "stem": "Which one of the following is not a benefit of activity-based\nmanagement?",
+    "choices": [
+      "Improved competitive advantage by using continuous\nimprovement methods.",
+      "Improving the value the customer receives.",
+      "Better allocation of resources to key value-added activities.",
+      "Better costing information."
+    ],
+    "answerIndex": 1,
+    "explanation": "By more accurately allocating costs to the products using\nactivity-based costing’s multiple allocation pools, the company\nbenefits by being able to make better decisions, but the\ncustomer is not provided any additional value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 33,
+    "page": 880,
+    "topicId": "su8-abc",
+    "stem": "A company manufactures diamond earrings and pendants.\nThe company uses activity-based budgeting and has\nestablished diamond inspection as one of its cost pools with\nnumber of diamonds used as its cost driver. Inspection\nsupplies for each diamond inspected are $0.35. For the\nupcoming year, the company originally believed it would\nproduce and sell 10,000 pendants containing one diamond\nand 5,000 sets of earrings containing two diamonds, resulting\nin the following inspection cost per diamond.\nSalary of inspector $60,000\nEquipment costs        3,000\nInspection supplies 7,000\nTotal               $70,000\nCost per diamond $ 3.50\nIf the company now believes it will only be able to produce and\nsell 8,000 pendants (in addition to the earrings), the inspection\ncost per set of earrings would be",
+    "choices": [
+      "$6.30",
+      "$7.00",
+      "$7.70",
+      "$7.78"
+    ],
+    "answerIndex": 2,
+    "explanation": "The original per-unit cost of inspection supplies was $0.35\n{$7,000 total inspection costs ÷ [10,000 diamonds for\npendants + (2 diamonds per set of earrings × 5,000 earring\nsets)]}. The new per-diamond cost of inspection is $3.85\n[($60,000 + $3,000) ÷ (8,000 + 5,000 × 2) + $0.35]. Since a\nset of earrings requires two diamonds, the inspection cost per\nset of earrings is $7.70 ($3.85 × 2).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 34,
+    "page": 882,
+    "topicId": "su8-abc",
+    "stem": "A company manufactures an increasing variety of consumer\ncommunications devices. The company has always used a\ntraditional cost allocation system, but now the accounting staff\nhas proposed a change to an activity-based costing system.\nThe vice president of operations argues, “Costs are costs,\nrearranging them won’t save any money and those systems\nare complicated and expensive.” The most logical response to\nthis argument is that activity-based costing systems",
+    "choices": [
+      "Provide more accurate reporting of each product’s cost so that\nmanagement can make more informed pricing decisions.",
+      "Are less expensive to use than traditional cost systems.",
+      "Eliminate the use of arbitrary cost allocations that are used in\ntraditional cost systems.",
+      "Focus on manufacturing activities and eliminate engineering,\nmarketing, and other non-traceable activities from costing\nconsiderations."
+    ],
+    "answerIndex": 0,
+    "explanation": "A traditional cost allocation system puts all the overhead costs\ninto a single pool and allocates them to the end products.\nActivity-based costing is more accurate because indirect costs\nare attached to activities that are then rationally allocated to\nend products. Therefore, activity-based costing provides a\nmore accurate report of each product’s cost so that\nmanagement can make more informed pricing decisions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 35,
+    "page": 883,
+    "topicId": "su8-abc",
+    "stem": "A manufacturing company has two departments, Machining\nand Assembly, at its Shanghai plant. This year’s budget for the\nplant contained the following information.\nMachining Assembly\nManufacturing overhead $4,000,000 $2,000,000\nDirect labor hours           100,000     200,000\nMachine hours                 40,000       40,000\nIf the Shanghai plant uses departmental allocation based on\nmachine hours for the Machining Department and direct labor\nhours for the Assembly Department, what would the rates be\nwhen allocating overhead to the individual products?\nMachining Assembly",
+    "choices": [
+      "$40/hr.         $10/hr.",
+      "$75/hr.         $30/hr.",
+      "$100/hr.        $10/hr.",
+      "$100/hr.        $50/hr."
+    ],
+    "answerIndex": 2,
+    "explanation": "The Machining Department allocates manufacturing overhead\nbased on machine hours; thus, the overhead rate is $100/hr.\n($4,000,000 ÷ 40,000). The Assembly Department allocates\nmanufacturing overhead based on direct labor hours; thus, the\noverhead rate is $10/hr. ($2,000,000 ÷ 200,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 36,
+    "page": 884,
+    "topicId": "su8-abc",
+    "stem": "A company is implementing an activity-based budgeting\nsystem. Set-up overhead is allocated based on set-up hours\nand manufacturing overhead is allocated based on direct\nmanufacturing labor hours. Budget information is listed in the\ntable below.\nCost driver information                 Product A Product B\nNumbers of units per batch                   50          25\nSet-up time per batch                       1.75        1.25\nhours       hours\nDirect manufacturing labor time per         1.00        0.75\nbatch                                      hours       hours\nThe company plans to produce 1,000 units of Product A and\n750 units of Product B. The activity rates are $100 per set-up\nhour and $150 per direct manufacturing labor hour. What is the\ntotal budgeted overhead?",
+    "choices": [
+      "$10,063",
+      "$13,625",
+      "$15,125",
+      "$22,188"
+    ],
+    "answerIndex": 1,
+    "explanation": "Because every batch of Product A contains 50 units and every\nbatch of Product B contains 25 units, the company will\nproduce 20 (1,000 ÷ 50) batches of Product A and 30 (750 ÷\n25) batches of Product B. Thus, the budgeted overhead is\ncalculated as follows:\nProduct A: (20 batches × 1.75 hours × $100) + (20 batches ×\n1.00 hours × $150) = $6,500\nProduct B: (30 batches × 1.25 hours × $100) + (30 batches ×\n0.75 hours × $150) = $7,125\nTherefore, total budgeted overhead is $13,625.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 37,
+    "page": 885,
+    "topicId": "su8-abc",
+    "stem": "The costing method that determines product cost by identifying\nthe costs of individual tasks and then assigning these costs to\nproducts on the basis of the tasks needed to produce each\nproduct is known as",
+    "choices": [
+      "Activity-based costing.",
+      "Job-order costing.",
+      "Process costing.",
+      "Operations costing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Activity-based costing involves defining the activities that drive\nindirect costs. A cost pool is established for each activity, and\na cost driver is identified for each pool. Drivers can include\nlabor hours, machine hours, or other variables.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 3,
+    "number": 38,
+    "page": 886,
+    "topicId": "su8-abc",
+    "stem": "A company’s operations include a high level of fixed costs and\nproduce a variety of products. What type of costing system\nshould be recommended?",
+    "choices": [
+      "Job-order costing.",
+      "Process costing.",
+      "Process value analysis.",
+      "Activity-based costing."
+    ],
+    "answerIndex": 3,
+    "explanation": "Activity-based costing (ABC) is a response to the significant\nincrease in indirect costs resulting from the rapid advance of\ntechnology. The real benefits of ABC occur when a company\nhas a high level of fixed costs and produces a wide variety of\nproducts with widely varying levels of production. ABC allows\ncosts to be allocated to products based on cost drivers\n(operations that drive, or cause, costs).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 1,
+    "page": 888,
+    "topicId": "su8-life-cycle",
+    "stem": "Life-cycle costing",
+    "choices": [
+      "Is sometimes used as a basis for cost planning and product\npricing.",
+      "Includes only manufacturing costs incurred over the life of the\nproduct.",
+      "Includes only manufacturing cost, selling expense, and\ndistribution expense.",
+      "Emphasizes cost savings opportunities during the\nmanufacturing cycle."
+    ],
+    "answerIndex": 0,
+    "explanation": "Life-cycle costing estimates a product’s revenues and\nexpenses over its expected life cycle. This approach is\nespecially useful when revenues and related costs do not\noccur in the same periods. It emphasizes the need to price\nproducts to cover all costs, not just those for production.\nHence, costs are determined for all value-chain categories:\nupstream (R&D, design), manufacturing, and downstream\n(marketing, distribution, and customer service). The result is to\nhighlight upstream and downstream costs in the cost planning\nprocess that often receive insufficient attention.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 2,
+    "page": 889,
+    "topicId": "su8-life-cycle",
+    "stem": "The series of activities in which customer usefulness is added\nto the product is the definition of",
+    "choices": [
+      "A value chain.",
+      "Process value analysis.",
+      "Integrated manufacturing.",
+      "Activity-based costing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Value-chain analysis for assessing competitive advantage is\nan integral part of the strategic planning process. Value-chain\nanalysis is a continuous process of gathering, evaluating, and\ncommunicating information for business decision making. A\nvalue chain depicts how customer value accumulates along a\nchain of activities that lead to an end product or service. A\nvalue chain consists of the activities required to research and\ndevelop, design, produce, market, deliver, and support its\nproduct. Extended value-chain analysis expands the view of\nthe parties involved to include those upstream (e.g., suppliers)\nand downstream (e.g., customers).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 3,
+    "page": 890,
+    "topicId": "su8-life-cycle",
+    "stem": "A company has been asked to evaluate the profitability of a\nproduct that it manufactured and sold from Year 7 through\nYear 10. The product had a 1-year warranty from date of sale.\nThe following information appears in the financial records:\nResearch,            Manufacturing\ndevelopment, and        and distribution   Warranty Warranty\ndesign cost                costs         costs        cost\nYr 5 & Yr 6           Yr 7 - Yr 10   Yr 7 - Yr 10 Yr 11\n$5,000,000             $7,000,000      $200,000 $100,000\nThe life-cycle cost for this product is",
+    "choices": [
+      "$10,000,000",
+      "$12,000,000",
+      "$12,200,000",
+      "$12,300,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Life-cycle costing takes into account costs incurred at all\nstages of the value-chain, not just manufacturing. The life-\ncycle cost for this product is thus $12,300,000 ($5,000,000 +\n$7,000,000 + $200,000 + $100,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 4,
+    "page": 891,
+    "topicId": "su8-life-cycle",
+    "stem": "The number of competing firms is highest at which stage in the\nproduct life cycle?",
+    "choices": [
+      "Introduction.",
+      "Growth.",
+      "Maturity.",
+      "Decline."
+    ],
+    "answerIndex": 2,
+    "explanation": "The product life cycle has five stages: product development,\nintroduction, growth, maturity, and decline. In the maturity\nstage, sales growth declines and competitors are most\nnumerous.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 5,
+    "page": 891,
+    "topicId": "su8-life-cycle",
+    "stem": "Under life-cycle costing, research and development costs are\nconsidered",
+    "choices": [
+      "Upstream costs.",
+      "Production process costs.",
+      "Downstream costs.",
+      "Manufacturing costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Costs incurred before production, such as research and\ndevelopment and product design, are referred to as upstream\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 6,
+    "page": 892,
+    "topicId": "su8-life-cycle",
+    "stem": "A company’s product has an expected 4-year life cycle from\nresearch, development, and design through its withdrawal from\nthe market. Budgeted costs are\nUpstream costs (R&D, design) $2,000,000\nManufacturing costs             3,000,000\nDownstream costs (marketing,\ndistribution, customer service) 1,200,000\nAfter-purchase costs            1,000,000\nThe company plans to produce 200,000 units and price the\nproduct at 125% of the whole-life unit cost. Thus, the budgeted\nunit selling price is",
+    "choices": [
+      "$15",
+      "$31",
+      "$36",
+      "$45"
+    ],
+    "answerIndex": 3,
+    "explanation": "Whole-life costs include after-purchase costs (operating,\nsupport, repair, and disposal) incurred by customers as well as\nlife-cycle costs (R&D, design, manufacturing, marketing,\ndistribution, and research). Hence, the budgeted unit whole-\nlife cost is $36 [($2,000,000 + $3,000,000 + $1,200,000 +\n$1,000,000) ÷ 200,000 units], and the budgeted unit selling\nprice is $45 ($36 × 125%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 7,
+    "page": 894,
+    "topicId": "su8-life-cycle",
+    "stem": "Dixon Porter Co., which uses life cycle costing, is\nconsidering the manufacture of a product with a 5-year life cycle that\nwill require spending $1,000,000 for R&D and $2,000,000 for design\nand testing. Annual fixed and unit variable costs for the product and\nprojected average annual unit sales at three selling prices are given\nbelow:\nSales Price\nFixed      Variable $ 750     $ 900    $1,125\nProduction $1,500,000            $100\ncosts\nMarketing     1,500,000            100\nand\ndistribution\ncosts\nCustomer        180,000             40\nservice costs\nUnit average                              8,000 6,000         4,800\nannual sales\nAt the highest price, R&D costs will increase by $500,000 and design\nand testing costs by $1,000,000. Additionally, at the highest price,\nfixed customer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit. At the lowest\nprice, fixed marketing and distribution costs will decrease by $30,000\nper year.\nAt a unit price of $750, Dixon Porter’s life cycle costs are",
+    "choices": [
+      "$7,620,000",
+      "$8,070,000",
+      "$27,000,000",
+      "$28,350,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The question states that “at the ‘highest price,’ R&D costs will\nincrease by $500,000 and design and testing costs by\n$1,000,000. Additionally, at the highest price, fixed customer\nservice costs will rise by $30,000 per year, and variable\ncustomer service costs will rise by $25 per unit.” Since the\nquestion asks for life cycle costs at a unit price of $750 (the\nlowest sales price), $30,000 must be subtracted from the fixed\nmarketing and distribution costs. Fixed customer service costs\nwill rise by $30,000 per year, and variable customer service\ncosts will rise by $25 per unit only at the ‘highest price.’\nAt a unit price of $750, upstream costs equal $3,000,000\n($1,000,000 + $2,000,000). Fixed costs of production and the\nfixed downstream costs equal $15,750,000 [($1,500,000 +\n$1,500,000 + $180,000 – $30,000) × 5 years], and variable\ncosts of production and variable downstream costs equal\n$9,600,000 [8,000 units × ($100 + $100 + $40) × 5 years].\nAccordingly, the life cycle costs at a price of $750 equal\n$28,350,000 ($3,000,000 + $15,750,000 + $9,600,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 8,
+    "page": 895,
+    "topicId": "su8-life-cycle",
+    "stem": "Dixon Porter Co., which uses life cycle costing, is\nconsidering the manufacture of a product with a 5-year life cycle that\nwill require spending $1,000,000 for R&D and $2,000,000 for design\nand testing. Annual fixed and unit variable costs for the product and\nprojected average annual unit sales at three selling prices are given\nbelow:\nSales Price\nFixed      Variable $ 750     $ 900    $1,125\nProduction $1,500,000            $100\ncosts\nMarketing     1,500,000            100\nand\ndistribution\ncosts\nCustomer        180,000             40\nservice costs\nUnit average                              8,000 6,000         4,800\nannual sales\nAt the highest price, R&D costs will increase by $500,000 and design\nand testing costs by $1,000,000. Additionally, at the highest price,\nfixed customer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit. At the lowest\nprice, fixed marketing and distribution costs will decrease by $30,000\nper year.\nAt a unit price of $900, Dixon Porter’s life cycle costs are",
+    "choices": [
+      "$18,900,000",
+      "$26,100,000",
+      "$26,910,000",
+      "$28,350,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The question states that “At the ‘highest price,’ R&D costs will\nincrease by $500,000 and design and testing costs by\n$1,000,000. Additionally, at the highest price, fixed customer\nservice costs will rise by $30,000 per year, and variable\ncustomer service costs will rise by $25 per unit.” Fixed\ncustomer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit only at\nthe ‘highest price.’ At a unit price of $900, upstream costs\nequal $3,000,000 ($1,000,000 + $2,000,000). Fixed costs of\nproduction and the fixed downstream costs equal $15,900,000\n[($1,500,000 + $1,500,000 + $180,000) × 5 years], and\nvariable costs of production and the variable downstream\ncosts equal $7,200,000 [6,000 units × ($100 + $100 + $40) × 5\nyears]. Thus, the life cycle costs at a price of $900 equal\n$26,100,000 ($3,000,000 + $15,900,000 + $7,200,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 9,
+    "page": 896,
+    "topicId": "su8-life-cycle",
+    "stem": "Dixon Porter Co., which uses life cycle costing, is\nconsidering the manufacture of a product with a 5-year life cycle that\nwill require spending $1,000,000 for R&D and $2,000,000 for design\nand testing. Annual fixed and unit variable costs for the product and\nprojected average annual unit sales at three selling prices are given\nbelow:\nSales Price\nFixed      Variable $ 750     $ 900    $1,125\nProduction $1,500,000            $100\ncosts\nMarketing     1,500,000            100\nand\ndistribution\ncosts\nCustomer        180,000             40\nservice costs\nUnit average                              8,000 6,000         4,800\nannual sales\nAt the highest price, R&D costs will increase by $500,000 and design\nand testing costs by $1,000,000. Additionally, at the highest price,\nfixed customer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit. At the lowest\nprice, fixed marketing and distribution costs will decrease by $30,000\nper year.\nWhich unit sales price should Dixon Porter select to obtain the\nmaximum profit over the product’s 5-year life cycle?",
+    "choices": [
+      "$750",
+      "$900",
+      "$1,125",
+      "No profit can be earned."
+    ],
+    "answerIndex": 0,
+    "explanation": "Life cycle costs include upstream (R&D and design and\ntesting) and downstream (marketing and distribution and\ncustomer service) costs over the product’s 5-year life cycle. At\na unit price of $750, upstream costs equal $3,000,000\n($1,000,000 + $2,000,000). Fixed costs of production and the\nfixed downstream costs equal $15,750,000 [($1,500,000 +\n$1,500,000 + $180,000 – $30,000) × 5 years], and variable\ncosts of production and variable downstream costs equal\n$9,600,000 [8,000 units × ($100 + $100 + $40) × 5 years].\nAccordingly, the life cycle costs at a price of $750 equal\n$28,350,000 ($3,000,000 + $15,750,000 + $9,600,000). Sales\nrevenue at this price is $30,000,000 (8,000 units × $750 ×\n5 years). Hence, profit at a price of $750 is $1,650,000\n($30,000,000 – $28,350,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 10,
+    "page": 897,
+    "topicId": "su8-life-cycle",
+    "stem": "A company will introduce a new product in Year 1 that is\nexpected to have a 3-year life. The company expects to sell\n100,000 units each year. Estimated costs are shown below.\nYear 0 Year 1 Year 2 Year 3\nResearch/design $260,000 $     0$      0$      0\nProduction             0 900,000 900,000 900,000\nMarketing         10,000 300,000 100,000 50,000\nCustomer service       0 40,000 60,000 80,000\nIf the company uses life-cycle costing to price its new product\nand desires a 10% mark-up over cost, the selling price for\nYear 3 would be",
+    "choices": [
+      "$13.20",
+      "$12.21",
+      "$11.66",
+      "$9.90"
+    ],
+    "answerIndex": 0,
+    "explanation": "Total life-cycle cost is equal to $3,600,000 [($260,000 +\n$10,000) + ($900,000 + $300,000 + $40,000) + ($900,000 +\n$100,000 + $60,000) + ($900,000 + $50,000 + $80,000)]. This\namount must be recovered over 3 years, with 100,000 units\nper year. Therefore, $1,200,000 of costs must be recovered in\nYear 3, with a per-unit cost of $12. At a 10% mark-up, the total\nprice per unit is $13.20 (110% × $12).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 11,
+    "page": 898,
+    "topicId": "su8-life-cycle",
+    "stem": "Dixon Porter Co., which uses life cycle costing, is\nconsidering the manufacture of a product with a 5-year life cycle that\nwill require spending $1,000,000 for R&D and $2,000,000 for design\nand testing. Annual fixed and unit variable costs for the product and\nprojected average annual unit sales at three selling prices are given\nbelow:\nSales Price\nFixed      Variable $ 750     $ 900    $1,125\nProduction $1,500,000            $100\ncosts\nMarketing     1,500,000            100\nand\ndistribution\ncosts\nCustomer        180,000             40\nservice costs\nUnit average                              8,000 6,000         4,800\nannual sales\nAt the highest price, R&D costs will increase by $500,000 and design\nand testing costs by $1,000,000. Additionally, at the highest price,\nfixed customer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit. At the lowest\nprice, fixed marketing and distribution costs will decrease by $30,000\nper year.\nAt the introduction stage of an innovative product, the profit\ngrowth is normally slow due to",
+    "choices": [
+      "Expensive sales promotion.",
+      "High competition.",
+      "A mass market.",
+      "Available alternatives."
+    ],
+    "answerIndex": 0,
+    "explanation": "The introduction stage is characterized by slow sales growth\nand lack of profits because of the high expenses of promotion\nand selective distribution to generate awareness of the\nproduct and encourage customers to try it.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 12,
+    "page": 899,
+    "topicId": "su8-life-cycle",
+    "stem": "An entity produced two new products last year. Sales and cost\ndata for the two products are summarized below.\nBM2     SM4\nSales price per unit     $100    $120\nQuantity sold           1,500     970\nCosts:\nR&D                   $20,000 $28,000\nMarketing               7,000 10,000\nDirect materials       46,000 42,000\nDirect labor           35,500 25,000\nManufacturing overhead 12,000 9,500\nWarranties              4,000 5,500\nManager A measures product performance using traditional\nabsorption costing. Manager B uses life-cycle costing for\nperformance measurement. Which one of the following\ncorrectly describes how the managers will evaluate the new\nproducts?",
+    "choices": [
+      "Manager B finds SM4 is not profitable.",
+      "Manager A finds SM4 to be more profitable than BM2.",
+      "Both managers conclude that BM2 and SM4 are profitable\nproducts.",
+      "Manager B finds both BM2 and SM4 to be unprofitable\nproducts."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under traditional absorption costing and life-cycle costing,\nrevenue for the products would be the same ($150,000 for\nBM2 and $116,400 for SM4). Traditional absorption costing\ntreats all manufacturing costs as product costs, but life-cycle\ncosting takes all costs incurred over the lifespan of a product\nas product costs. Thus, under traditional absorption costing,\nthe manufacturing cost for BM2 is $93,500 ($46,000 +\n$35,500 + $12,000), and the manufacturing cost for SM4 is\n$76,500 ($42,000 + $25,000 + $9,500). Both products are\nprofitable in traditional absorption costing. Under life-cycle\ncosting, the manufacturing cost for BM2 is $124,500 ($20,000\n+ $7,000 + $46,000 + $35,500 + $12,000 + $4,000), and the\nmanufacturing cost for SM4 is $120,000 ($28,000 + $10,000 +\n$42,000 + $25,000 + $9,500 + $5,500). After comparing\nrevenue with manufacturing costs, BM2 is found to be\nprofitable, but SM4 is found to be unprofitable under life-cycle\ncosting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 13,
+    "page": 901,
+    "topicId": "su8-life-cycle",
+    "stem": "The life-cycle costing method is",
+    "choices": [
+      "The process for examining the various aspects of a product to\nidentify cost efficiencies.",
+      "The process for managing all costs identified in the value\nchain.",
+      "A method of costing that minimizes the selling expenses\nassociated with a product.",
+      "A method of costing that focuses on the customer."
+    ],
+    "answerIndex": 1,
+    "explanation": "The life-cycle costing approach to budgeting estimates a\nproduct’s revenues and expenses over its entire life cycle or\nvalue chain. Costs incurred before production, such as R&D\ncosts, are referred to as upstream costs. Costs incurred after\nproduction, such as marketing and customer service, are\nreferred to as downstream costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 8,
+    "section": 4,
+    "number": 14,
+    "page": 902,
+    "topicId": "su8-life-cycle",
+    "stem": "During the growth stage of a product’s life cycle,",
+    "choices": [
+      "The quality of products is poor.",
+      "New product models and features are introduced.",
+      "There is little difference between competing products.",
+      "The quality of the products becomes more variable and\nproducts are less differentiated."
+    ],
+    "answerIndex": 1,
+    "explanation": "In the growth stage, sales and profits increase rapidly, cost\nper customer decreases, customers are early adopters, new\ncompetitors enter an expanding market, new product models\nand features are introduced, and promotion spending declines\nor remains stable.",
+    "answerStatus": "source"
+  }
+]

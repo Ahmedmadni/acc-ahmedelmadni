@@ -1,0 +1,1957 @@
+[
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 1,
+    "page": 904,
+    "topicId": "su9-joint-products",
+    "stem": "Atlas Foods produces the following Alfa       10,000 pounds of Alfa,\nthree supplemental food products              a popular but relatively\nsimultaneously through a refining             rare grain supplement\nprocess costing $93,000.                      having a caloric value\nThe joint products, Alfa and                  of 4,400 calories per\nBetters, have a final selling price of        pound\n$4 per pound and $10 per pound, Betters 5,000 pounds of\nrespectively, after additional                Betters, a flavoring\nprocessing costs of $2 per pound              material high in\nof each product are incurred after            carbohydrates with a\nthe split-off point. Morefeed, a by-          caloric value of\n\n\nproduct, is sold at the split-off point            11,200 calories per\nfor $3 per pound.                                  pound\nMorefeed 1,000 pounds of\nMorefeed, used as a\ncattle feed supplement\nwith a caloric value of\n1,000 calories per\npound\nAssuming Atlas Foods inventories Morefeed, the by-product,\nthe joint cost to be allocated to Alfa using the net realizable\nvalue method is",
+    "choices": [
+      "$3,000",
+      "$30,000",
+      "$31,000",
+      "$60,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The NRV at split-off for each of the joint products are as\nfollows:\nSelling                    NRV       Units of\nPrice       Additional     Per      Output       Total\nPer Lb.     Processing      Unit      (Lbs.)      NRV\nCost\nPer Lb.\nAlfa       $ 4 –         $2        = $2 × 10,000 = $20,000\nBetters $10 –            $2        = $8 ×       5,000 = $40,000\nThe 1,000 pounds of Morefeed has a split-off value of $3 per\npound, or $3,000. Assuming that Morefeed (a by-product) is\ninventoried (recognized in the accounts when produced) and\ntreated as a reduction of joint costs, the allocable joint cost is\n$90,000 ($93,000 – $3,000). (NOTE: Several other methods\nof accounting for by-products are possible.) The total net\nrealizable value of the main products is $60,000 ($20,000 Alfa\n+ $40,000 Betters). The allocation to Alfa is $30,000 [$90,000\n× ($20,000 ÷ $60,000)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 2,
+    "page": 905,
+    "topicId": "su9-joint-products",
+    "stem": "Atlas Foods produces the following Alfa       10,000 pounds of Alfa,\nthree supplemental food products              a popular but relatively\nsimultaneously through a refining             rare grain supplement\nprocess costing $93,000.                      having a caloric value\nThe joint products, Alfa and                  of 4,400 calories per\nBetters, have a final selling price of        pound\n$4 per pound and $10 per pound, Betters 5,000 pounds of\nrespectively, after additional                Betters, a flavoring\nprocessing costs of $2 per pound              material high in\nof each product are incurred after            carbohydrates with a\nthe split-off point. Morefeed, a by-          caloric value of\n\n\nproduct, is sold at the split-off point            11,200 calories per\nfor $3 per pound.                                  pound\nMorefeed 1,000 pounds of\nMorefeed, used as a\ncattle feed supplement\nwith a caloric value of\n1,000 calories per\npound\nAssuming Atlas Foods does not inventory Morefeed, the by-\nproduct, the joint cost to be allocated to Betters using the net\nrealizable value method is",
+    "choices": [
+      "$30,000",
+      "$31,000",
+      "$52,080",
+      "$62,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The NRV of Alfa is $20,000 [10,000 pounds × ($4 selling price\n– $2 additional processing costs)], and the NRV of Betters is\n$40,000 [5,000 pounds × ($10 selling price – $2 additional\nprocessing costs)]. If the joint cost is not adjusted for the value\nof the by-product, the amount allocated to Betters is $62,000\n{$93,000 × [$40,000 ÷ ($20,000 + $40,000)]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 3,
+    "page": 906,
+    "topicId": "su9-joint-products",
+    "stem": "Atlas Foods produces the following Alfa       10,000 pounds of Alfa,\nthree supplemental food products              a popular but relatively\nsimultaneously through a refining             rare grain supplement\nprocess costing $93,000.                      having a caloric value\nThe joint products, Alfa and                  of 4,400 calories per\nBetters, have a final selling price of        pound\n$4 per pound and $10 per pound, Betters 5,000 pounds of\nrespectively, after additional                Betters, a flavoring\nprocessing costs of $2 per pound              material high in\nof each product are incurred after            carbohydrates with a\nthe split-off point. Morefeed, a by-          caloric value of\n\n\nproduct, is sold at the split-off point            11,200 calories per\nfor $3 per pound.                                  pound\nMorefeed 1,000 pounds of\nMorefeed, used as a\ncattle feed supplement\nwith a caloric value of\n1,000 calories per\npound\nAssuming Atlas Foods inventories Morefeed, the by-product,\nthe joint cost to be allocated to Alfa, using the physical quantity\nmethod based on volume is",
+    "choices": [
+      "$3,000",
+      "$30,000",
+      "$31,000",
+      "$60,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Joint cost is $93,000 and Morefeed has a split-off value of\n$3,000 (1,000 pounds × $3 split-off value per pound).\nAssuming the latter amount is treated as a reduction in joint\ncost, the allocable joint cost is $90,000. The total physical\nquantity (volume) of the two joint products is 15,000 pounds\n(10,000 Alfa + 5,000 Betters). Thus, $60,000 of the net joint\ncosts [(10,000 ÷ 15,000) × $90,000] should be allocated to\nAlfa.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 4,
+    "page": 907,
+    "topicId": "su9-joint-products",
+    "stem": "Atlas Foods produces the following Alfa       10,000 pounds of Alfa,\nthree supplemental food products              a popular but relatively\nsimultaneously through a refining             rare grain supplement\nprocess costing $93,000.                      having a caloric value\nThe joint products, Alfa and                  of 4,400 calories per\nBetters, have a final selling price of        pound\n$4 per pound and $10 per pound, Betters 5,000 pounds of\nrespectively, after additional                Betters, a flavoring\nprocessing costs of $2 per pound              material high in\nof each product are incurred after            carbohydrates with a\nthe split-off point. Morefeed, a by-          caloric value of\n\n\nproduct, is sold at the split-off point            11,200 calories per\nfor $3 per pound.                                  pound\nMorefeed 1,000 pounds of\nMorefeed, used as a\ncattle feed supplement\nwith a caloric value of\n1,000 calories per\npound\nAssuming Atlas Foods inventories Morefeed, the by-product,\nthe joint cost to be allocated to Betters using the physical\nquantity method based on caloric value per pound is",
+    "choices": [
+      "$39,208",
+      "$39,600",
+      "$40,920",
+      "$50,400"
+    ],
+    "answerIndex": 3,
+    "explanation": "Joint cost is $93,000 and Morefeed has a split-off value of\n$3,000 (1,000 pounds × $3 split-off value per pound).\nAssuming the latter amount is treated as a reduction in joint\ncost, the allocable joint cost is $90,000. The caloric value of\nAlfa is 44,000,000 (4,400 × 10,000 pounds), the caloric value\nof Betters is 56,000,000 (11,200 × 5,000 pounds), and the\ntotal is 100,000,000. Of this total volume, Alfa makes up 44%\nand Betters 56%. Thus, $50,400 ($90,000 × 56%) is allocated\nto Betters.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 5,
+    "page": 908,
+    "topicId": "su9-joint-products",
+    "stem": "Atlas Foods produces the following Alfa       10,000 pounds of Alfa,\nthree supplemental food products              a popular but relatively\nsimultaneously through a refining             rare grain supplement\nprocess costing $93,000.                      having a caloric value\nThe joint products, Alfa and                  of 4,400 calories per\nBetters, have a final selling price of        pound\n$4 per pound and $10 per pound, Betters 5,000 pounds of\nrespectively, after additional                Betters, a flavoring\nprocessing costs of $2 per pound              material high in\nof each product are incurred after            carbohydrates with a\nthe split-off point. Morefeed, a by-          caloric value of\n\n\nproduct, is sold at the split-off point            11,200 calories per\nfor $3 per pound.                                  pound\nMorefeed 1,000 pounds of\nMorefeed, used as a\ncattle feed supplement\nwith a caloric value of\n1,000 calories per\npound\nAssuming Atlas Foods inventories Morefeed, the by-product,\nand that it incurs no additional processing costs for Alfa and\nBetters, the joint cost to be allocated to Alfa using the gross\nmarket value method is",
+    "choices": [
+      "$36,000",
+      "$40,000",
+      "$41,333",
+      "$50,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The gross sales value of Alfa is $40,000 (10,000 pounds ×\n$4), Betters has a total gross sales value of $50,000 (5,000\npounds × $10), and Morefeed has a split-off value of $3,000. If\nthe value of Morefeed is inventoried and treated as a\nreduction in joint cost, the allocable joint cost is $90,000\n($93,000 – $3,000). The total gross sales value of the two\nmain products is $90,000 ($40,000 + $50,000). Of this total,\n$40,000 should be allocated to Alfa [$90,000 × ($40,000 ÷\n$90,000)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 6,
+    "page": 909,
+    "topicId": "su9-joint-products",
+    "stem": "Joint costs are useful for",
+    "choices": [
+      "Setting the selling price of a product.",
+      "Determining whether to continue producing an item.",
+      "Evaluating management by means of a responsibility reporting\nsystem.",
+      "Determining inventory cost for accounting purposes."
+    ],
+    "answerIndex": 3,
+    "explanation": "Joint costs are useful for inventory costing when two or more\nidentifiable products emerge from a common production\nprocess. The joint costs of production must be allocated on\nsome basis, such as relative sales value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 7,
+    "page": 910,
+    "topicId": "su9-joint-products",
+    "stem": "Petro-Chem, Inc., is a small company that     Crude oil\nacquires high-grade crude oil from low-       acquired and\nvolume production wells owned by              placed\nindividuals and small partnerships. The       in production $5,000,000\ncrude oil is processed in a single refinery   Direct labor   2,000,000\ninto Two Oil, Six Oil, and impure             and related\ndistillates. Petro-Chem does not have the     costs\ntechnology or capacity to process these\nproducts further and sells most of its      Manufacturing 3,000,000\noutput each month to major refineries.      overhead\nThere were no beginning inventories of      Production\nfinished goods or work-in-process on        and sales\nNovember 1. The production costs and           • Two Oil, 300,000\noutput of Petro-Chem for November are               barrels produced;\nshown in the next column.                           80,000 barrels\nsold at $20 each\n• Six Oil, 240,000\nbarrels produced;\n120,000 barrels\nsold at $30 each\n• Distillates,\n120,000 barrels\nproduced\nand sold at $15\neach\nThe portion of Petro-Chem’s joint production costs assigned to\nSix Oil based upon physical output would be",
+    "choices": [
+      "$3,636,000",
+      "$3,750,000",
+      "$1,818,000",
+      "$7,500,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The total production costs incurred are $10,000,000,\nconsisting of crude oil of $5,000,000, direct labor of\n$2,000,000, and manufacturing overhead of $3,000,000. The\ntotal physical output was 660,000 barrels, consisting of\n300,000 barrels of Two Oil, 240,000 barrels of Six Oil, and\n120,000 barrels of distillates. Thus, the allocation (rounded) is\n$3,636,000 {[240,000 ÷ (300,000 + 240,000 + 120,000)] ×\n$10,000,000}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 8,
+    "page": 911,
+    "topicId": "su9-joint-products",
+    "stem": "Petro-Chem, Inc., is a small company that     Crude oil\nacquires high-grade crude oil from low-       acquired and\nvolume production wells owned by              placed\nindividuals and small partnerships. The       in production $5,000,000\ncrude oil is processed in a single refinery   Direct labor   2,000,000\ninto Two Oil, Six Oil, and impure             and related\ndistillates. Petro-Chem does not have the     costs\ntechnology or capacity to process these\nproducts further and sells most of its      Manufacturing 3,000,000\noutput each month to major refineries.      overhead\nThere were no beginning inventories of      Production\nfinished goods or work-in-process on        and sales\nNovember 1. The production costs and           • Two Oil, 300,000\noutput of Petro-Chem for November are               barrels produced;\nshown in the next column.                           80,000 barrels\nsold at $20 each\n• Six Oil, 240,000\nbarrels produced;\n120,000 barrels\nsold at $30 each\n• Distillates,\n120,000 barrels\nproduced\nand sold at $15\neach\nThe portion of Petro-Chem’s joint production costs assigned to\nTwo Oil based upon the relative sales value of output would be",
+    "choices": [
+      "$4,800,000",
+      "$4,000,000",
+      "$2,286,000",
+      "$2,500,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The total production costs incurred are $10,000,000,\nconsisting of crude oil of $5,000,000, direct labor of\n$2,000,000, and manufacturing overhead of $3,000,000. The\ntotal value of the output is as follows:\nTwo Oil (300,000 barrels × $20)                  $ 6,000,000\nSix Oil (240,000 barrels × $30)                    7,200,000\nDistillates (120,000 barrels × $15)                1,800,000\nTotal sales value                            $15,000,000\nBecause Two Oil composes 40% of the total sales value\n($6,000,000 ÷ $15,000,000), it will be assigned 40% of the\n$10,000,000 of joint costs, or $4,000,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 9,
+    "page": 912,
+    "topicId": "su9-joint-products",
+    "stem": "Petro-Chem, Inc., is a small company that     Crude oil\nacquires high-grade crude oil from low-       acquired and\nvolume production wells owned by              placed\nindividuals and small partnerships. The       in production $5,000,000\ncrude oil is processed in a single refinery   Direct labor   2,000,000\ninto Two Oil, Six Oil, and impure             and related\ndistillates. Petro-Chem does not have the     costs\ntechnology or capacity to process these\nproducts further and sells most of its      Manufacturing 3,000,000\noutput each month to major refineries.      overhead\nThere were no beginning inventories of      Production\nfinished goods or work-in-process on        and sales\nNovember 1. The production costs and           • Two Oil, 300,000\noutput of Petro-Chem for November are               barrels produced;\nshown in the next column.                           80,000 barrels\nsold at $20 each\n• Six Oil, 240,000\nbarrels produced;\n120,000 barrels\nsold at $30 each\n• Distillates,\n120,000 barrels\nproduced\nand sold at $15\neach\nThe principal disadvantage of using the physical quantity\nmethod of allocating joint costs is that",
+    "choices": [
+      "Costs assigned to inventories may have no relationship to\nvalue.",
+      "Physical quantities may be difficult to measure.",
+      "Additional processing costs affect the allocation base.",
+      "Joint costs, by definition, should not be separated on a unit\nbasis."
+    ],
+    "answerIndex": 0,
+    "explanation": "Joint costs are most often assigned on the basis of relative\nsales values or net realizable values. Basing allocations on\nphysical quantities, such as pounds, gallons, etc., is usually\nnot desirable because the costs assigned may have no\nrelationship to value. When large items have low selling prices\nand small items have high selling prices, the large items might\nalways sell at a loss when physical quantities are used to\nallocate joint costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 10,
+    "page": 914,
+    "topicId": "su9-joint-products",
+    "stem": "Travis Petroleum is a small company that acquires crude oil and\nmanufactures it into three intermediate products, differing only in\ngrade. The products are Grade One, Grade Two, and Grade\nThree. No beginning inventories of finished goods or work-in-\nprocess existed on November 1. The production costs for\nNovember were as follows (assume separable costs were\nnegligible):\nCrude oil acquired and put\ninto production              $4,000,000\nDirect labor and related costs 2,000,000\nManufacturing overhead       3,000,000\nThe output and sales for November were as follows:\nGrade One     Grade Two      Grade Three\nBarrels produced     300,000      240,000         120,000\nBarrels sold          80,000      120,000         120,000\nPrices per barrel        $30          $40             $50\nsold\nThe portion of Travis’ joint production costs assigned to Grade\nTwo based upon physical output is (rounded to the nearest\nthousand dollars)",
+    "choices": [
+      "$3,273,000",
+      "$3,375,000",
+      "$1,636,000",
+      "$3,512,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Total joint production costs incurred were $9,000,000\n($4,000,000 + $2,000,000 + $3,000,000). The total physical\noutput was 660,000 barrels (300,000 barrels of Grade One +\n240,000 barrels of Grade Two + 120,000 barrels of Grade\nThree). Thus, on a physical output basis, Grade Two should\nbe allocated $3,273,000 [(240,000 ÷ 660,000) × $9,000,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 11,
+    "page": 915,
+    "topicId": "su9-joint-products",
+    "stem": "Travis Petroleum is a small company that acquires crude oil and\nmanufactures it into three intermediate products, differing only in\ngrade. The products are Grade One, Grade Two, and Grade\nThree. No beginning inventories of finished goods or work-in-\nprocess existed on November 1. The production costs for\nNovember were as follows (assume separable costs were\nnegligible):\nCrude oil acquired and put\ninto production              $4,000,000\nDirect labor and related costs 2,000,000\nManufacturing overhead       3,000,000\nThe output and sales for November were as follows:\nGrade One     Grade Two      Grade Three\nBarrels produced     300,000      240,000         120,000\nBarrels sold          80,000      120,000         120,000\nPrices per barrel        $30          $40             $50\nsold\nThe portion of Travis’ joint production costs assigned to Grade\nOne based upon the relative sales value of output is (rounded\nto the nearest thousand dollars)",
+    "choices": [
+      "$3,512,000",
+      "$3,293,000",
+      "$1,636,000",
+      "$4,091,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Total joint production costs incurred were $9,000,000\n($4,000,000 + $2,000,000 + $3,000,000). The sales values of\nthe three products are as follows:\nGrade One (300,000 barrels × $30)                   $ 9,000,000\nGrade Two (240,000 barrels × $40)                     9,600,000\nGrade Three (120,000 barrels × $50)                   6,000,000\nTotal sales value                               $24,600,000\nConsequently, Grade One should be assigned joint costs of\n$3,293,000 [($9,000,000 ÷ $24,600,000) × $9,000,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 12,
+    "page": 916,
+    "topicId": "su9-joint-products",
+    "stem": "Travis Petroleum is a small company that acquires crude oil and\nmanufactures it into three intermediate products, differing only in\ngrade. The products are Grade One, Grade Two, and Grade\nThree. No beginning inventories of finished goods or work-in-\nprocess existed on November 1. The production costs for\nNovember were as follows (assume separable costs were\nnegligible):\nCrude oil acquired and put\ninto production              $4,000,000\nDirect labor and related costs 2,000,000\nManufacturing overhead       3,000,000\nThe output and sales for November were as follows:\nGrade One     Grade Two      Grade Three\nBarrels produced     300,000      240,000         120,000\nBarrels sold          80,000      120,000         120,000\nPrices per barrel        $30          $40             $50\nsold\nBased on the relative sales values of output, the cost of Travis’\nending inventory of Grade Two is",
+    "choices": [
+      "$3,512,000",
+      "$1,756,000",
+      "$1,636,000",
+      "$3,375,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Total joint production costs incurred were $9,000,000\n($4,000,000 + $2,000,000 + $3,000,000). The sales values of\nthe three products are as follows:\nGrade One (300,000 barrels × $30)                   $ 9,000,000\nGrade Two (240,000 barrels × $40)                     9,600,000\nGrade Three (120,000 barrels × $50)                   6,000,000\nTotal sales value                                 $24,600,000\nAccordingly, costs assigned to Grade Two on a relative sales\nvalue basis (rounded) equal $3,512,000 [($4,000,000 +\n$3,000,000 + $2,000,000) × ($9,600,000 ÷ $24,600,000)].\nThus, the value of the ending inventory of Grade Two should\nbe $1,756,000 [120,000 barrels in EI × ($3,512,000 ÷ 240,000\nbarrels produced)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 13,
+    "page": 917,
+    "topicId": "su9-joint-products",
+    "stem": "Pickett Manufacturing uses a joint production process\nthat produces three products at the split-off point. Joint production\ncosts during April were $720,000. Product information for April was as\nfollows:\nProduct\nR               S               T\nUnits produced                    2,500           5,000           7,500\nUnits sold                        2,000           6,000           7,000\nSales prices:\nAt split-off                      $100             $80             $20\nAfter further processing          $150            $115             $30\nCosts to process after        $150,000        $150,000        $100,000\nsplit-off\nAssume that all three products are main products and that they\ncan be sold at the split-off point or processed further,\nwhichever is economically beneficial to the company. What is\nPickett’s total cost of Product S in April if joint cost allocation is\nbased on sales value at split-off?",
+    "choices": [
+      "$375,000",
+      "$390,000",
+      "$510,000",
+      "$571,463"
+    ],
+    "answerIndex": 2,
+    "explanation": "Total sales value at split-off is $800,000 [(2,500 × $100) +\n(5,000 × $80) + (7,500 × $20)]. Product S accounts for 50%\n(5,000 × $80 = $400,000) of the sales value and therefore\n$360,000 ($720,000 × 50%) of the joint costs. The total cost of\nProduct S is $510,000 ($360,000 allocated costs + $150,000\ndifferential costs).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 14,
+    "page": 918,
+    "topicId": "su9-joint-products",
+    "stem": "Pickett Manufacturing uses a joint production process\nthat produces three products at the split-off point. Joint production\ncosts during April were $720,000. Product information for April was as\nfollows:\nProduct\nR               S               T\nUnits produced                    2,500           5,000           7,500\nUnits sold                        2,000           6,000           7,000\nSales prices:\nAt split-off                      $100             $80             $20\nAfter further processing          $150            $115             $30\nCosts to process after        $150,000        $150,000        $100,000\nsplit-off\nAssume that Product T is treated as a by-product and that the\ncompany accounts for the by-product at net realizable value as\na reduction of joint cost. Assume also that Products S and T\nmust be processed further before they can be sold. What is\nPickett’s total cost of Product R in April if joint cost allocation is\nbased on net realizable values?",
+    "choices": [
+      "$220,370",
+      "$370,370",
+      "$374,630",
+      "$595,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The net realizable value (NRV) method is an appropriate\nmethod of allocation when products cannot be sold at split-off.\nFurther processing of R, which is salable at split-off, is not\neconomical because the cost of $150,000 exceeds the benefit\n[2,500 units × ($150 – $100) = $125,000]. Thus, R’s NRV is\n$250,000 (2,500 units × $100 price at split-off). However, S\nand T must be processed further. S’s NRV is $425,000 [(5,000\nunits × $115) – $150,000], and T’s NRV is $125,000 [(7,500\nunits × $30) – $100,000]. Given that the NRV of T is a\nreduction of joint cost, the total joint cost to be allocated is\ntherefore $595,000 ($720,000 – $125,000 NRV of T).\nAccordingly, based on the NRV method, the joint cost\nallocated to R is $220,370 {[$250,000 R’s NRV ÷ ($250,000\nR’s NRV + $425,000 S’s NRV)] × $595,000 allocable joint\ncost}. Because further processing of R is uneconomical, the\ntotal cost of R is $220,370.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 15,
+    "page": 919,
+    "topicId": "su9-joint-products",
+    "stem": "Pickett Manufacturing uses a joint production process\nthat produces three products at the split-off point. Joint production\ncosts during April were $720,000. Product information for April was as\nfollows:\nProduct\nR               S               T\nUnits produced                    2,500           5,000           7,500\nUnits sold                        2,000           6,000           7,000\nSales prices:\nAt split-off                      $100             $80             $20\nAfter further processing          $150            $115             $30\nCosts to process after        $150,000        $150,000        $100,000\nsplit-off\nThe assignment of raw material costs to the major end\nproducts resulting from refining a barrel of crude oil\nis best described as",
+    "choices": [
+      "Indirect costing.",
+      "Joint costing.",
+      "Differential costing.",
+      "Incremental costing."
+    ],
+    "answerIndex": 1,
+    "explanation": "Joint products are common products created from processing\na single input (e.g., gasoline, diesel fuel, and kerosene). Joint\nproducts have common costs until they reach the split-off\npoint. Joint costing assigns common costs to joint products.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 16,
+    "page": 920,
+    "topicId": "su9-joint-products",
+    "stem": "A company produces two main products and a by-product out\nof a joint process. The ratio of output quantities to input\nquantities of direct material used in the joint process remains\nconsistent from month to month. The company has employed\nthe physical-volume method to allocate joint production costs\nto the two main products. The net realizable value of the by-\nproduct is used to reduce the joint production costs before the\njoint costs are allocated to the main products. Data regarding\nthe company’s operations for the current month are presented\nin the chart below. During the month, the company incurred\njoint production costs of $2,520,000. The main products are\nnot marketable at the split-off point and, thus, have to be\nprocessed further.\nFirst        Second        By-\nMain          Main       product\nProduct       Product\nMonthly output in\npounds                     90,000        150,000    60,000\nSelling price per\npound                        $30           $14        $2\nSeparable process costs $540,000         $660,000\nThe amount of joint production cost that the company would\nallocate to the Second Main Product by using the physical-\nvolume method to allocate joint production costs would be",
+    "choices": [
+      "$1,200,000",
+      "$1,260,000",
+      "$1,500,000",
+      "$1,575,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The joint cost to be allocated is $2,400,000 [$2,520,000 total\njoint cost – (60,000 pounds of the by-product) × $2].\nAccordingly, the joint cost to be allocated to the Second Main\nProduct on a physical-volume basis is $1,500,000 {[150,000\npounds ÷ (90,000 pounds + 150,000 pounds) × $2,400,000]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 17,
+    "page": 922,
+    "topicId": "su9-joint-products",
+    "stem": "A company produces three main joint products and one by-\nproduct. The by-product’s relative sales value is quite low\ncompared with that of the main products. The preferable\naccounting for the by-product’s net realizable value is as",
+    "choices": [
+      "An addition to the revenues of the other products allocated on\nthe basis of their respective net realizable values.",
+      "Revenue in the period it is sold.",
+      "A reduction in the common cost to be allocated to the three\nmain products.",
+      "A separate net realizable value upon which to allocate some of\nthe common costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "Because of the relatively small sales value, a cost-effective\nallocation method is used for by-products. The net realizable\nvalue of by-products is usually deducted from the cost of the\nmain products.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 18,
+    "page": 922,
+    "topicId": "su9-joint-products",
+    "stem": "The primary purpose for allocating common costs to joint\nproducts is to determine",
+    "choices": [
+      "The selling price of a by-product.",
+      "Whether one of the joint products should be discontinued.",
+      "The variance between budgeted and actual common costs.",
+      "The inventory cost of joint products for financial reporting."
+    ],
+    "answerIndex": 3,
+    "explanation": "Joint products must be valued for external financial reporting\npurposes based on the full (absorption) cost of the product.\nAny common costs attributable to the joint production process\nmust therefore be allocated on a systematic and rational\nbasis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 19,
+    "page": 923,
+    "topicId": "su9-joint-products",
+    "stem": "The distinction between joint products and by-products is\nlargely dependent on",
+    "choices": [
+      "Historical costs.",
+      "Prime costs.",
+      "Market value.",
+      "Salvage value."
+    ],
+    "answerIndex": 2,
+    "explanation": "A by-product is one of relatively small total value. The first\nquestion that must be answered in regard to by-products is:\nDo the benefits of further processing and bringing them to\nmarket exceed the costs; that is, is the incremental revenue\nworth the effort? Market price determines this. The same can\nessentially be said for the main products of the production\nprocess.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 20,
+    "page": 924,
+    "topicId": "su9-joint-products",
+    "stem": "In a production process where joint products are produced, the\nprimary factor that will distinguish a joint product from a by-\nproduct is the",
+    "choices": [
+      "Relative total sales value of the products.",
+      "Relative total volume of the products.",
+      "Relative ease of selling the products.",
+      "Accounting method used to allocate joint costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "If production results in joint products, the primary factor that\ndistinguishes a joint product from a by-product is the relative\ntotal sales value of the products.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 21,
+    "page": 924,
+    "topicId": "su9-joint-products",
+    "stem": "All of the following are methods of allocating joint costs to joint\nproducts except",
+    "choices": [
+      "Physical quantities method.",
+      "Net realizable value method.",
+      "Separable production cost method.",
+      "Gross market value method."
+    ],
+    "answerIndex": 2,
+    "explanation": "No “separable production cost method” is recognized for\nallocating joint costs. The nature of the problem is such that all\ncosts are joint and cannot be separated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 22,
+    "page": 925,
+    "topicId": "su9-joint-products",
+    "stem": "Tucariz Company processes Duo into two joint\nproducts, Big and Mini. Duo is purchased in 1,000 gallon drums for\n$2,000. Processing costs are $3,000 to process the 1,000 gallons of\nDuo into 800 gallons of Big and 200 gallons of Mini. The selling price\nis $9 per gallon for Big and $4 per gallon for Mini. Big can be\nprocessed further into 600 gallons of Giant if $1,000 of additional\nprocessing costs are incurred. Giant can be sold for $17 per gallon.\nIf Tucariz uses the net realizable value method to allocate\ncosts to the joint products, the total cost of producing Giant is",
+    "choices": [
+      "$5,600",
+      "$5,564",
+      "$5,520",
+      "$4,600"
+    ],
+    "answerIndex": 0,
+    "explanation": "First, the final sales prices are estimated:\nGiant:      600 gallons at $17/gallon = $10,200\nMini:      200 gallons at $ 4/gallon = $ 800\nFrom these amounts, separable costs are subtracted:\nGiant:        $10,200 – $1,000 = $9,200\nMini:         No separable costs\nThis yields a total net realizable value (NRV) for the entire\nproduction run of $10,000 ($9,200 Giant + $800 Mini). The\nnext step is to allocate the total joint costs of $5,000 ($2,000\ninput cost + $3,000 processing cost) based on the proportion\nof the total NRV represented by each product:\nGiant:     $5,000 × ($9,200 ÷ $10,000) = $4,600\nMini:      $5,000 × ($ 800 ÷ $10,000) = $ 400\nThe total cost of producing Giant using the estimated NRV\nmethod is therefore $5,600 ($4,600 allocated joint cost +\n$1,000 separable cost).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 23,
+    "page": 926,
+    "topicId": "su9-joint-products",
+    "stem": "Tucariz Company processes Duo into two joint\nproducts, Big and Mini. Duo is purchased in 1,000 gallon drums for\n$2,000. Processing costs are $3,000 to process the 1,000 gallons of\nDuo into 800 gallons of Big and 200 gallons of Mini. The selling price\nis $9 per gallon for Big and $4 per gallon for Mini. Big can be\nprocessed further into 600 gallons of Giant if $1,000 of additional\nprocessing costs are incurred. Giant can be sold for $17 per gallon.\nIf Tucariz uses the sales-value-at-split-off method to allocate\njoint costs to the final products, the per gallon cost (rounded to\nthe nearest cent) of producing Big is",
+    "choices": [
+      "$5.63",
+      "$5.00",
+      "$4.50",
+      "$3.38"
+    ],
+    "answerIndex": 0,
+    "explanation": "First, the final sales prices are estimated:\nBig:       800 gallons at $9/gallon = $7,200\nMini:      200 gallons at $4/gallon = $ 800\nThis yields a total sales value at split-off for the entire\nproduction run of $8,000 ($7,200 Big + $800 Mini). The next\nstep is to multiply the joint costs of $5,000 ($2,000 input cost +\n$3,000 processing cost) based on the proportion of the total\nfinal sales value represented by each product:\nBig:      $5,000 × ($7,200 ÷ $8,000) = $4,500\nMini:     $5,000 × ($ 800 ÷ $8,000) = $ 500\nThe per-unit cost of producing Big using the sales value at\nsplit-off method is therefore $5.63 ($4,500 allocated joint cost\n÷ 800 gallons).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 24,
+    "page": 927,
+    "topicId": "su9-joint-products",
+    "stem": "A company produces three products from a joint process. The three products are sold after further processing as there is no\nmarket for any of the products at the split-off point. Joint costs\nper batch are $315,000. Other product information is shown\nbelow.\nProduct A             Product B\nUnits produced per batch                     20,000                30,000\nFurther processing and\nmarketing cost per unit                     $ .70                 $3.00\nFinal sales value per unit                     5.00                  6.00\nIf the company uses the net realizable value method of\nallocating joint costs, how much of the joint costs will be\nallocated to each unit of Product C?",
+    "choices": [
+      "$2.10",
+      "$2.65",
+      "$3.15",
+      "$3.78"
+    ],
+    "answerIndex": 3,
+    "explanation": "First, the final sales prices are estimated:\nProduct A:           20,000 units at $5/unit = $100,000\nProduct B:           30,000 units at $6/unit = $180,000\nProduct C:           50,000 units at $7/unit = $350,000\nFrom these amounts, separable costs are deducted:\nProduct A:         $100,000 – (20,000 × $0.70) = $ 86,000\nProduct B:         $180,000 – (30,000 × $3.00) = $ 90,000\nProduct C:         $350,000 – (50,000 × $1.72) = $264,000\nThis yields a total final sales value for the entire production run\nof $440,000. Multiply the total joint costs to be allocated by the\nproportion of the final expected sales of each product:\nProduct A:        $315,000 × ($ 86,000 ÷ $440,000) =\nProduct B:        $315,000 × ($ 90,000 ÷ $440,000) =\nProduct C:        $315,000 × ($264,000 ÷ $440,000) =\nJoint costs -- check total\nThe per-unit amount allocated to Product C is therefore $3.78\n($189,000 ÷ 50,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 25,
+    "page": 929,
+    "topicId": "su9-joint-products",
+    "stem": "A company manufactures several products that originate in a\njoint process and are separated at a split-off point. Which one\nof the following methods of joint-cost allocation would allocate\nthe same unit cost to each separable product?",
+    "choices": [
+      "Net realizable value method.",
+      "Sales value at split-off method.",
+      "Physical quantity method.",
+      "Constant gross margin percentage method."
+    ],
+    "answerIndex": 2,
+    "explanation": "The physical quantity (unit) method is the simplest; it allocates\njoint production costs to each product based on their relative\nproportions of the measure selected. Using this method\nresults in a an identical unit cost for each separable product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 26,
+    "page": 930,
+    "topicId": "su9-joint-products",
+    "stem": "Tucariz Company processes Duo into two joint\nproducts, Big and Mini. Duo is purchased in 1,000 gallon drums for\n$2,000. Processing costs are $3,000 to process the 1,000 gallons of\nDuo into 800 gallons of Big and 200 gallons of Mini. The selling price\nis $9 per gallon for Big and $4 per gallon for Mini. Big can be\nprocessed further into 600 gallons of Giant if $1,000 of additional\nprocessing costs are incurred. Giant can be sold for $17 per gallon.\nIf all of the joint products are sold at the split-off point and an\noverall profit is made on all of the products, which one of the\nfollowing joint costing methods will result in the same gross\nmargin percentage on each joint product?",
+    "choices": [
+      "Sales value at split-off method.",
+      "Physical measures method using sales volume.",
+      "Physical measures method using production volume.",
+      "Physical measures method using weight."
+    ],
+    "answerIndex": 0,
+    "explanation": "The sales value at split-off method is based on the relative\nsales values of the separate costs at split-off. Gross margin\npercentage is calculated as the difference between sales price\nand cost divided by sales price. Since each joint product\nreceives the amount of separate cost proportional to its sales\nvalue, the gross margin percentage calculation will be the\nsame. For instance, if there are two products whose sales\nprices are $40 and $60, respectively, the joint product costs\nallocated will also be in a 2:3 ratio, e.g., $10 and $15.\n1. The first product will have a gross margin percentage\nof the following:\n2. ($40 – $10) ÷ $40 = 75%\n3. The second product will also have a gross margin\npercentage of the following:\n4. ($60 – $15) ÷ $60 = 75%",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 27,
+    "page": 931,
+    "topicId": "su9-joint-products",
+    "stem": "A company manufactures two products that incur joint costs of\n$60,000. It costs an additional $10,000 to produce 5,000 units\nof Product 1 and an additional $30,000 to produce 10,000 units\nof Product 2. Product 1 is sold for $8 per unit, and Product 2 is\nsold for $10 per unit. If the company uses the net realizable\nvalue method to allocate joint costs, the cost per unit of\nProduct 1 is",
+    "choices": [
+      "$3.60",
+      "$5.43",
+      "$5.60",
+      "$6.00"
+    ],
+    "answerIndex": 2,
+    "explanation": "Product 1     Product 2\nNumber of units                            5,000           10,000\nPrice per unit                           ×    $8         ×    $10\nFinal sales price                       $40,000          $100,000\nSeparable costs                         (10,000)          (30,000)\nNet realizable value                    $30,000          $ 70,000\nThis yields a total net realizable value (NRV) for the entire\nproduction run of $100,000 ($30,000 Product 1 + $70,000\nProduct 2). The next step is to allocate the total joint costs of\n$60,000 based on the proportion of the total NRV represented\nby each product: Product 1 = $60,000 × ($30,000 ÷ $100,000)\n= $18,000. Product 2 = $60,000 × ($70,000 ÷ $100,000) =\n$42,000. The cost per unit of Product 1 is therefore $2\n($10,000 ÷ 5,000 units) separable costs + $3.60 ($18,000 ÷\n5,000 units) joint cost = $5.60.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 28,
+    "page": 933,
+    "topicId": "su9-joint-products",
+    "stem": "A company produces two products that incur $50,000 of joint\ncosts. At the split-off point, 5,000 units of Product 1 and 15,000\nunits of Product 2 can be sold for $5 and $3 per unit,\nrespectively. These products are processed further. Product 1\nincurs $25,000 of separable costs and is then sold for $12 per\nunit, and Product 2’s separable costs total $30,000 with a final\nselling price of $6 per unit. If the company uses the constant\ngross profit method to allocate joint costs, the dollar amount of\njoint costs allocated to Product 1 would be",
+    "choices": [
+      "$17,000",
+      "$17,857",
+      "$18,421",
+      "$20,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Joint cost allocation ratio is computed using the constant\ngross margin percentage method as follows:\nEstimated gross = (5,000 × $12 + 15,000 × $6) – $50,000\nmargin – $25,000 – $30,000\n= $150,000 – $50,000 – $25,000 –\n$30,000\n= $45,000\nEstimated gross = $45,000 ÷ $150,000 = 30%\nmargin ratio\nTo determine the total costs that Product 1 will bear, we\nmultiply the gross margin ratio by the sales value of Product 1,\nand deduct this amount from the sales value to determine the\ncost:\nProduct 1 sales value = 5,000 × $12\n= $60,000\nProduct 1 total cost = $60,000 – ($60,000 × 30%)\n= $42,000\nThen, we deduct the separable costs of Product 1 from the\ntotal costs incurred by Product 1 to determine the joint cost\nallocated to Product 1:\n$42,000 – $25,000 = $17,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 29,
+    "page": 934,
+    "topicId": "su9-joint-products",
+    "stem": "A company produces products simultaneously through a\nrefining process costing $186,000. The joint products, Alpha\nand Beta, have selling prices of $8 and $20 per pound,\nrespectively, before additional processing costs of $4 per\npound of each product are incurred after the split-off point.\nOmega, a by-product, is sold at the split-off point for $6 per\npound. The number of pounds produced is shown below.\nAlpha             10,000 pounds\nBeta               5,000 pounds\nOmega              1,000 pounds\nAssuming the company inventories Omega, the joint cost\nallocated to Alpha using the sales value at split-off method is",
+    "choices": [
+      "$72,000",
+      "$80,000",
+      "$82,666",
+      "$100,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The sales-value at split-off method is based on the relative\nsales values of separate products at split-off. Given that Alpha\nhas an $8 selling price, the sales value at the split-off is\n$80,000. Beta has a $20 selling price; thus, the sales value at\nsplit-off is $100,000. The 1,000 pounds of Omega has a split-\noff value of $6 per unit, or $6,000. Assuming that Omega is\ninventoried and treated as a reduction of joint costs, the\nallocable joint cost is $180,000 ($186,000 – $6,000). The total\nsales value of the main products is $180,000. The allocation to\nAlpha is $80,000 [($80,000 ÷ $180,000) × $180,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 30,
+    "page": 936,
+    "topicId": "su9-joint-products",
+    "stem": "A company produces products simultaneously through a\nrefining process costing $96,000. The joint products, Alpha\nand Beta, have selling prices of $8 and $20 per pound,\nrespectively, after additional processing costs of $4 per pound\nof each product are incurred after the split-off point. Omega, a\nby-product, is sold at the split-off point for $6 per pound. The\nnumber of pounds produced is shown below.\nAlpha              10,000 pounds\nBeta                 5,000 pounds\nOmega                1,000 pounds\nAssuming the company inventories Omega, the joint cost\nallocated to Alpha using the sales value at split-off method is",
+    "choices": [
+      "$40,000",
+      "$30,000",
+      "$32,000",
+      "$60,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The sales-value at split-off method is based on the relative\nsales values of separate products at split-off. Given that Alpha\nhas a $4 relative sales value, the sales value at the split-off is\n$40,000. Beta has a $16 relative sales value; thus, the sales\nvalue at split-off is $80,000. The 1,000 pounds of Omega has\na split-off value of $6 per unit, or $6,000. Assuming that\nOmega is inventoried and treated as a reduction of joint costs,\nthe allocable joint cost is $90,000 ($96,000 – $6,000). The\ntotal sales value of the main products is $120,000. The\nallocation to Alpha is $30,000 [($40,000 ÷ $120,000) ×\n$90,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 31,
+    "page": 937,
+    "topicId": "su9-joint-products",
+    "stem": "A dairy farm produces the following products jointly during the\nfiscal year for a total joint cost of €9,000,000:\nProduct               Kilograms\nMilk                1,170,000\nButter                570,000\nYogurt                330,000\nCheese                930,000\nBased on the information, which one of the following\nis most accurate regarding the allocation of the joint cost\nunder the physical measure method?",
+    "choices": [
+      "The milk product line should be allocated €1,710,000 of the\njoint costs.",
+      "The butter product line should be allocated €990,000 of the\njoint costs.",
+      "The yogurt product line should be allocated €3,510,000 of the\njoint costs.",
+      "The cheese product line should be allocated €2,790,000 of the\njoint costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "The total production in kilograms is 3,000,000 (1,170,000 +\n570,000 + 330,000 + 930,000). Milk composes 39%\n(1,170,000 ÷ 3,000,000) of that total, butter makes up 19%\n(570,000 ÷ 3,000,000), yogurt makes up 11% (330,000 ÷\n3,000,000), and cheese makes up 31% (930,000 ÷\n3,000,000). Therefore, using a physical measure of allocation,\ncheese should be valued at 31% of the total €9,000,000 joint\ncost, or €2,790,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 32,
+    "page": 938,
+    "topicId": "su9-joint-products",
+    "stem": "A processing department produces joint products Ajac and\nBjac, each of which incurs separable production costs after\nsplit-off. Information concerning a batch produced at a $60,000\njoint cost before split-off follows:\nProduct            Costs           Separable\nSales Value\nAjac            $ 8,000         $ 80,000\nBjac             22,000             40,000\n$30,000           $120,000\nWhat is the joint cost assigned to Ajac if costs are assigned\nusing the relative net realizable value?",
+    "choices": [
+      "$16,000",
+      "$40,000",
+      "$48,000",
+      "$52,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The NRV of Ajac is $72,000 ($80,000 – $8,000), and the NRV\nof Bjac is $18,000 ($40,000 – $22,000). Thus, the joint cost\nassigned to Ajac if costs are assigned based on relative NRV\nis $48,000 {$60,000 × [$72,000 ÷ ($72,000 + $18,000)]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 33,
+    "page": 939,
+    "topicId": "su9-joint-products",
+    "stem": "LM Enterprises produces two products in a common\nproduction process, each of which is processed further after\nthe split-off point. Joint costs incurred for the current month are\n$36,000. The following information for the current month was\nalso gathered:\nSelling\nUnits      Units     Separable       Price\nProduct    Produced      Sold        Costs        per Unit\nL         10,000     9,500       $20,000         $ 8\nM          5,000     4,000        40,000          20\nWhat amount would be the joint cost allocated to product M,\nassuming that LM Enterprises uses the estimated net\nrealizable value method to allocate costs?",
+    "choices": [
+      "$20,000",
+      "$18,000",
+      "$15,000",
+      "$12,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The estimated net realizable value method allocates joint\ncosts based on the relative market values of the products after\nadditional processing is performed to make them salable. Net\nrealizable value at split-off is equal to the sales price at the\npoint of sale minus costs to complete after split-off (separable\ncosts). Accordingly, the $18,000 of joint costs allocated to M is\ncalculated as follows:\nStep 1: Determine NRV at split-off for both L and M\nL: $80,000 (10,000 units × $8) – $20,000 = $60,000\nM: $100,000 (5,000 units × $20) – $40,000 = $60,000\nStep 2: Determine the proportion of joint costs allocated to M\n$60,000 ÷ $120,000 = 50%\nStep 3: Multiply the proportion by the amount of joint costs\n$36,000 × 50% = $18,000 allocated to M",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 34,
+    "page": 941,
+    "topicId": "su9-joint-products",
+    "stem": "Warfield Corporation manufactures products C, D, and E from\na joint process. Joint costs are allocated on the basis of\nrelative sales value at split-off. Additional information is\npresented below.\nC            D            E         Total\nUnits produced           6,000       4,000        2,000      12,000\nJoint costs          $ 72,000          ?           ?      $120,000\nSales value at\nsplit-off               ?             ?       $30,000 $200,000\nAdditional costs if\nprocessed further $ 14,000 $10,000 $ 6,000 $ 30,000\nSales value if\nprocessed further $140,000 $60,000 $40,000 $240,000\nHow much of the joint costs should Warfield allocate to product\nD?",
+    "choices": [
+      "$24,000",
+      "$28,800",
+      "$30,000",
+      "$32,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Given that total joint costs are $120,000 and total sales value\nat split-off is $200,000, the ratio of joint costs to sales value is\n60% ($120,000 ÷ $200,000). The joint costs of product C are\n$72,000. Thus, C’s sales value at split-off is $120,000\n($72,000 ÷ 60%). If product C’s sales value is $120,000, D’s\nsales value is $50,000 ($200,000 – $30,000 E – $120,000 C).\nAccordingly, the joint costs of product D are $30,000, which is\n60% of D’s $50,000 sales value at split-off.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 35,
+    "page": 942,
+    "topicId": "su9-joint-products",
+    "stem": "Ashwood Company manufactures three main products, F, G,\nand W, from a joint process. Joint costs are allocated on the\nbasis of relative sales value at split-off. Additional information\nfor June production activity follows:\nF            G            W         Total\nUnits produced          50,000      40,000 10,000           100,000\nJoint costs              ?             ?           ?       $450,000\nSales value at\nsplit-off         $420,000 $270,000 $60,000 $750,000\nAdditional costs\nif processed\nfurther           $ 88,000 $ 30,000 $12,000 $130,000\nSales value if\nprocessed\nfurther           $538,000 $320,000 $78,000 $936,000\nAssuming that the 10,000 units of W were processed further\nand sold for $78,000, what was Ashwood’s gross profit on this\nsale?",
+    "choices": [
+      "$21,000",
+      "$28,500",
+      "$30,000",
+      "$36,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The relative sales-value at split-off method allocates joint\ncosts in proportion to the relative sales value of the individual\nproducts. The total sales value at split-off is $750,000.\nJoint Cost\nSales Value         Weighting Factor          Allocated\nW     $60,000        (60 ÷ 750) × $450,000        $36,000\nThe joint cost allocated at split-off is thus $36,000. The units\nare processed further at a cost of $12,000 and sold for\n$78,000. The gross profit is thus $30,000 ($78,000 – $36,000\n– $12,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 36,
+    "page": 944,
+    "topicId": "su9-joint-products",
+    "stem": "Lowe Co. manufactures products A and B from a joint process.\nSales value at split-off was $700,000 for 10,000 units of A and\n$300,000 for 15,000 units of B. Using the sales value at split-\noff approach, joint costs properly allocated to A were\n$140,000. Total joint costs were",
+    "choices": [
+      "$98,000",
+      "$200,000",
+      "$233,333",
+      "$350,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The relative sales value is a cost allocation method that\nallocates joint costs in proportion to the relative sales value of\nthe individual products. Total sales value is $1,000,000\n($700,000 for A + $300,000 for B). The $140,000 of joint costs\nallocated to product A was 70% ($700,000 ÷ $1,000,000) of\ntotal joint costs. The calculation for total joint costs (Y) is\n.7Y = $140,000\nY = $140,000 ÷ .7\nY = $200,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 37,
+    "page": 945,
+    "topicId": "su9-joint-products",
+    "stem": "Mighty, Inc., processes chickens for distribution to major\ngrocery chains. The two major products resulting from the\nproduction process are white breast meat and legs. Joint costs\nof $600,000 are incurred during standard production runs each\nmonth, which produce a total of 100,000 pounds of white\nbreast meat and 50,000 pounds of legs. Each pound of white\nbreast meat sells for $2, and each pound of legs sells for $1. If\nthere are no further processing costs incurred after the split-off\npoint, what amount of the joint costs would be allocated to the\nwhite breast meat on a relative sales value basis?",
+    "choices": [
+      "$120,000",
+      "$200,000",
+      "$400,000",
+      "$480,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Given no additional processing costs, white breast meat has a\nsales value of $200,000 (100,000 pounds × $2), and legs have\na sales value of $50,000 (50,000 pounds × $1). Thus, the joint\ncosts allocated to white breast meat based on relative sales\nvalue is $480,000 [$600,000 × ($200,000 ÷ $250,000)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 38,
+    "page": 946,
+    "topicId": "su9-joint-products",
+    "stem": "A rubber factory takes raw materials and converts them into one of the following products: footballs, basketballs, soccer balls,\nand hockey pucks. In the current year, the plant processed\n10,000 pounds of raw materials and incurred $500,000 of joint\nprocessing costs. The following table has been constructed to\nevaluate each product’s individual performance:\nTotal                  Estimated\nRaw         Units         Sales       Separabl\nMaterials     Manufac      Price per      e Costs\nProduct       Used         tured          Unit       per Unit\nBasketballs 3,000 lbs         3,000          $52           $2\nFootballs     4,000 lbs      4,000           63             3\nHockey      1,000 lbs      1,000           26             1\npucks\nSoccer      2,000 lbs      2,000           42             2\nballs\nUsing the estimated net realizable value (NRV) method, what\namount of the $500,000 joint processing costs should be\nallocated to footballs?",
+    "choices": [
+      "$151,515",
+      "$242,424",
+      "$200,000",
+      "$245,902"
+    ],
+    "answerIndex": 1,
+    "explanation": "The estimated NRV method is similar to the sales-value at split-\noff method. However, under the estimated NRV method, all\nseparable costs necessary to make the product salable are\nsubtracted before the allocation is made. The relevant\ncalculations follow:\nBasketballs: NRV per unit = $50 ($52 – $2); Total NRV =\n$150,000 ($50 × 3,000 units)\nFootballs: NRV per unit = $60 ($63 – $3); Total NRV = $240,000\n($60 × 4,000 units)\nHockey pucks: NRV per unit = $25 ($26 – $1); Total NRV =\n$25,000 ($25 × 1,000 units)\nSoccer balls: NRV per unit = $40 ($42 – $2); Total NRV =\n$80,000 ($40 × 2,000 units)\nTotal NRV across all products is therefore $495,000 ($150,000\n+ $240,000 + $25,000 + $80,000). Thus, the joint processing\ncosts to be allocated to footballs can be determined to be\n$242,424 [($240,000 ÷ $495,000) × $500,000] (rounded).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 39,
+    "page": 948,
+    "topicId": "su9-joint-products",
+    "stem": "A petroleum company acquires crude oil and manufactures it\ninto three intermediate products, differing only in grade. The\nproducts are Grade One, Grade Two, and Grade Three. No\nbeginning and ending inventories of finished goods or work-in-\nprocess existed on November 1. There were no separable\ncosts and the joint production costs for November are shown\nbelow.\nCrude oil acquired and put into production $4,000,000\nDirect labor and related costs                 2,000,000\nManufacturing overhead                         3,000,000\nThe November output and sales for each grade of products\nare shown below.\nGrade Grade Grade\nOne      Two       Three\nBarrels produced       300,000 240,000 120,000\nBarrels sold            80,000 120,000 120,000\nPrice per barrel sold    $30         $40      $50\nThe portion of the company’s joint production costs assigned\nto Grade Two based on physical output is",
+    "choices": [
+      "$1,636,363",
+      "$3,272,727",
+      "$3,375,000",
+      "$4,090,909"
+    ],
+    "answerIndex": 1,
+    "explanation": "The physical-unit method (also called the physical quantities\nmethod) allocates joint production costs to each product\nbased on their relative proportions of the measure selected.\nTo find the costs allocable to Grade Two, the total costs must\nbe multiplied by the proportion of Grade Two output to total\noutput. Total costs were $9,000,000 ($4,000,000 crude oil\nacquired and put into production + $2,000,000 direct labor and\nrelated costs + $3,000,000 manufacturing overhead). Of the\ntotal 660,000 barrels of oil produced, 36.363636% (240,000 ÷\n660,000) were Grade Two. Thus, the joint production cost\nallocated to Grade Two is $3,272,727 (36.363636% ×\n$9,000,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 40,
+    "page": 951,
+    "topicId": "su9-joint-products",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and            Fixed            18.00      9.00\nadministrative expenses are not   overhead  @\nallocated to products.            $4/hour\nTotal cost   $ 146.00 $ 88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts       $500,000 $350,000\nFor Huron’s Product A, the unit costs for raw materials,\nmachining, and assembly represent",
+    "choices": [
+      "Conversion costs.",
+      "Separable costs.",
+      "Committed costs.",
+      "Prime costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Raw materials and direct labor (such as machining and\nassembly) are a manufacturer’s prime costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 41,
+    "page": 951,
+    "topicId": "su9-joint-products",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and            Fixed            18.00      9.00\nadministrative expenses are not   overhead  @\nallocated to products.            $4/hour\nTotal cost   $ 146.00 $ 88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts       $500,000 $350,000\nResearch and development costs for Huron’s two new\nproducts are",
+    "choices": [
+      "Conversion costs.",
+      "Sunk costs.",
+      "Relevant costs.",
+      "Avoidable costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Before they are incurred, R&D costs are often considered to\nbe discretionary. However, Huron’s R&D costs have already\nbeen incurred. Thus, they are sunk costs. A sunk cost is a\npast cost or a cost that the entity has irrevocably committed to\nincur. Because it is unavoidable, it is not relevant to future\ndecisions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 42,
+    "page": 952,
+    "topicId": "su9-joint-products",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and            Fixed            18.00      9.00\nadministrative expenses are not   overhead  @\nallocated to products.            $4/hour\nTotal cost   $ 146.00 $ 88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts       $500,000 $350,000\nThe advertising and promotion costs for the product selected\nby Huron will be",
+    "choices": [
+      "Discretionary costs.",
+      "Opportunity costs.",
+      "Committed costs.",
+      "Incremental costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "A discretionary cost (a managed or program cost) results from\na periodic decision about the total amount to be spent. It is\nalso characterized by uncertainty about the relationship\nbetween input and the value of the related output. Examples\nare advertising and R&D costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 43,
+    "page": 953,
+    "topicId": "su9-joint-products",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and            Fixed            18.00      9.00\nadministrative expenses are not   overhead  @\nallocated to products.            $4/hour\nTotal cost   $ 146.00 $ 88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts       $500,000 $350,000\nThe costs included in Huron’s fixed overhead are",
+    "choices": [
+      "Joint costs.",
+      "Committed costs.",
+      "Opportunity costs.",
+      "Prime costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Committed costs are those for which management has made\na long-term commitment. They typically result when a firm\nholds fixed assets. Examples include long-term lease\npayments and depreciation. Committed costs are typically\nfixed costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 44,
+    "page": 953,
+    "topicId": "su9-joint-products",
+    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and            Fixed            18.00      9.00\nadministrative expenses are not   overhead  @\nallocated to products.            $4/hour\nTotal cost   $ 146.00 $ 88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts       $500,000 $350,000\nProducts of relatively small total value that are produced\nsimultaneously from a common manufacturing process with\nproducts of greater value and quantity are",
+    "choices": [
+      "Scrap.",
+      "By-products.",
+      "Waste.",
+      "Abnormal spoilage."
+    ],
+    "answerIndex": 1,
+    "explanation": "By-products are products of relatively small total value that are\nproduced simultaneously from a common manufacturing\nprocess with products of greater value and quantity (joint\nproducts).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 1,
+    "number": 45,
+    "page": 954,
+    "topicId": "su9-joint-products",
+    "stem": "A joint process is a manufacturing operation yielding two or\nmore identifiable products from the resources employed in the\nprocess. The two characteristics that identify a product\ngenerated from this type of process as a joint product are that\nit",
+    "choices": [
+      "Is identifiable as an individual product only upon reaching the\nsplit-off point, and it has relatively minor sales value when\ncompared to the other products.",
+      "Is identifiable as an individual product before the production\nprocess, and it has relatively significant physical volume when\ncompared with the other products.",
+      "Is identifiable as an individual product only upon reaching the\nsplit-off point, and it has relatively significant sales value when\ncompared with the other products.",
+      "Has relatively significant physical volume when compared with\nthe other products, and it can be sold immediately without any\nadditional processing."
+    ],
+    "answerIndex": 2,
+    "explanation": "Joint products are two or more separate products generated\nby a common process from a common input that are not\nseparable prior to the split-off point. Moreover, in contrast to\nby-products, they have significant sales values in relation to\neach other either before or after additional processing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 1,
+    "page": 956,
+    "topicId": "su9-overhead",
+    "stem": "The two most appropriate factors for budgeting manufacturing\noverhead expenses are",
+    "choices": [
+      "Machine hours and production volume.",
+      "Management judgment and contribution margin.",
+      "Management judgment and production volume.",
+      "Management judgment and sales dollars."
+    ],
+    "answerIndex": 2,
+    "explanation": "The most important factor in budgeting manufacturing\noverhead is production volume. Many overhead items have\nvariable costs, and those that are fixed with a relevant range\nof output may increase if production exceeds that range. The\nother essential consideration is management’s judgment with\nrespect to the nature and amount of costs to be incurred and\nexpectations for production volume. Because overhead is\napplied based on predetermined rates, accurate judgment is\nimportant.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 2,
+    "page": 957,
+    "topicId": "su9-overhead",
+    "stem": "In determining next year’s overhead application rates, a\ncompany desires to focus on manufacturing capacity rather\nthan output demand for its products. To derive a realistic\napplication rate, the denominator activity level should be based\non",
+    "choices": [
+      "Practical capacity.",
+      "Maximum capacity.",
+      "Normal capacity.",
+      "Master-budget (expected annual) capacity."
+    ],
+    "answerIndex": 0,
+    "explanation": "Practical capacity is based on realistic, attainable levels of\nproduction and input efficiency and is the most appropriate\ndenominator level to use in selecting an overhead application\nrate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 3,
+    "page": 957,
+    "topicId": "su9-overhead",
+    "stem": "The appropriate method for the disposition of underapplied or\noverapplied overhead of a manufacturer",
+    "choices": [
+      "Is to cost of goods sold only.",
+      "Is to finished goods inventory only.",
+      "Is apportioned to cost of goods sold and finished goods\ninventory.",
+      "Depends on the significance of the amount."
+    ],
+    "answerIndex": 3,
+    "explanation": "Overapplied or underapplied overhead should be disposed of\nat the end of an accounting period by transferring the balance\neither to cost of goods sold (if the amount is not material) or to\ncost of goods sold, finished goods inventory, and work-in-\nprocess inventory. Theoretically, the allocation is preferred,\nbut, because the amount is usually immaterial, the entire\nbalance is often transferred directly to cost of goods sold.\nThus, the entry depends upon the significance of the amount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 4,
+    "page": 958,
+    "topicId": "su9-overhead",
+    "stem": "Units of production is an appropriate overhead allocation base\nwhen",
+    "choices": [
+      "Several well-differentiated products are manufactured.",
+      "Direct labor costs are low.",
+      "Direct material costs are large relative to direct labor costs\nincurred.",
+      "Only one product is manufactured."
+    ],
+    "answerIndex": 3,
+    "explanation": "Allocating overhead on the basis of the number of units\nproduced is usually not appropriate. Costs should be allocated\non the basis of some plausible relationship between the cost\nobject and the incurrence of the cost, preferably cause and\neffect. The fixed portion of overhead costs is incurred\nregardless of the level of production. When multiple products\nare involved, the number of units of production may bear no\nrelationship to the incurrence of the allocated cost. If overhead\nis correlated with machine hours but different products require\ndifferent quantities of that input, the result may be an illogical\nallocation. However, if a firm manufactures only one product,\nthis allocation method may be acceptable because all costs\nare to be charged to the single product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 5,
+    "page": 959,
+    "topicId": "su9-overhead",
+    "stem": "Generally, individual departmental rates rather than a\ncorporate-wide rate for applying manufacturing overhead are\nused if",
+    "choices": [
+      "A company wants to adopt a standard cost system.",
+      "A company’s manufacturing operations are all highly\nautomated.",
+      "Manufacturing overhead is the largest cost component of its\nproduct cost.",
+      "The manufactured products differ in the resources consumed\nfrom the individual departments."
+    ],
+    "answerIndex": 3,
+    "explanation": "Overhead is usually assigned to products based on a\npredetermined rate or rates. The activity base for overhead\nallocation should have a high degree of correlation with the\nincurrence of overhead. Given only one cost driver, one\noverhead application rate is sufficient. If products differ in the\nresources consumed in individual departments, multiple rates\nare preferable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 6,
+    "page": 960,
+    "topicId": "su9-overhead",
+    "stem": "A company uses a job costing system and applies overhead to\nproducts on the basis of direct labor cost. Job No. 75, the only\njob in process on January 1, had the following costs assigned\nas of that date: direct materials, $40,000; direct labor, $80,000;\nand factory overhead, $120,000. The following selected costs\nwere incurred during the year:\nTraceable to jobs:\nDirect materials                     $178,000\nDirect labor                          345,000\nTotal                              $523,000\nNot traceable to jobs:\nFactory materials and supplies         $ 46,000\nIndirect labor                    235,000\nFactory maintenance                73,000\nDepreciation on factory equipment   29,000\nOther factory costs                76,000\nTotal                          $459,000\nThe company’s profit plan for the year included budgeted\ndirect labor of $320,000 and overhead of $448,000. Assuming\nno work-in-process on December 31, the company’s overhead\nfor the year was",
+    "choices": [
+      "$11,000 overapplied.",
+      "$24,000 overapplied.",
+      "$11,000 underapplied.",
+      "$24,000 underapplied."
+    ],
+    "answerIndex": 1,
+    "explanation": "The company applies overhead to products on the basis of\ndirect labor cost. The rate is 1.4 ($448,000 budgeted OH ÷\n$320,000 budgeted DL cost). Thus, $483,000 ($345,000\nactual DL cost × 1.4) of overhead was applied, of which\n$24,000 ($483,000 – $459,000 actual OH) was overapplied.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 7,
+    "page": 962,
+    "topicId": "su9-overhead",
+    "stem": "A company applies factory overhead based upon machine\nhours. At the beginning of the year, the company budgeted\nfactory overhead at $250,000 and estimated that 100,000\nmachine hours would be used to make 50,000 units of product.\nDuring the year, the company produced 48,000 units using\n97,000 machine hours. Actual overhead for the year was\n$252,000. Under a standard cost system, the amount of\nfactory overhead applied during the year was",
+    "choices": [
+      "$240,000",
+      "$242,500",
+      "$250,000",
+      "$252,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The company’s application rate for overhead is $2.50 per\nmachine hour ($250,000 budgeted total ÷ 100,000 estimated\nmachine hours), and each unit of output is estimated to\nrequire 2 machine hours (100,000 estimated machine hours ÷\n50,000 units budgeted output). Under a standard cost system,\nthe amount of overhead applied during the year was therefore\n$240,000 (48,000 units actual output × $2.50 per machine\nhour application rate × 2 machine hours standard per unit).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 8,
+    "page": 963,
+    "topicId": "su9-overhead",
+    "stem": "A manufacturer allocates overhead to jobs in process using\ndirect labor costs, direct materials costs, and machine hours.\nThe overhead application rates for the current year are\n100% of direct labor\n20% of direct materials\n$117 per machine hour\nA particular production run incurred the following costs:\nDirect labor, $8,000\nDirect materials, $2,000\nA total of 140 machine hours were required for the\nproduction run.\nWhat is the total cost charged to the production run?",
+    "choices": [
+      "$18,000.",
+      "$18,400.",
+      "$34,780.",
+      "None of the answers are true."
+    ],
+    "answerIndex": 2,
+    "explanation": "The total cost charged to the production run is calculated as\nfollows:\nDirect labor                                                     $ 8,000\nDirect materials                                                   2,000\nManufacturing overhead:\n$8,000 of direct labor × 100%                =      $ 8,000\n$2,000 of direct materials × 20%             =          400\n140 machine hours × $117                     =       16,380       24,780\nTotal charged to production                                      $34,780",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 9,
+    "page": 964,
+    "topicId": "su9-overhead",
+    "stem": "A review of the year-end accounting records of a company\ndiscloses the following information:\nRaw materials                           $ 80,000\nWork-in-process                            128,000\nFinished goods                             272,000\nCost of goods sold                       1,120,000\nThe company’s underapplied overhead equals $133,000. On\nthe basis of this information, cost of goods sold\nis most appropriately reported as",
+    "choices": [
+      "$987,000",
+      "$1,213,100",
+      "$1,218,000",
+      "$1,253,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Given the amounts involved, $133,000 is material; thus, over-\nor underapplied overhead should be allocated to all work-in-\nprocess, finished goods, and cost of goods sold. The\nproportion of the total of these three accounts represented by\ncost of goods sold is 73.68% [$1,120,000 ÷ ($128,000 +\n$272,000 + $1,120,000)]. The amount of underapplied\noverhead assigned to cost of goods sold is thus $98,000\n($133,000 × 73.68%), making the total reported amount of\ncost of goods sold $1,218,000 ($1,120,000 + $98,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 10,
+    "page": 967,
+    "topicId": "su9-overhead",
+    "stem": "Nash                                  Budgeted             Budgete\nGlassworks                           Denominator               d\nCompany                                  Level             Overhea\nhas                                (units of output)           d\nbudgeted     Capacity                                        Cost\nfixed        Levels                                          Rate\nmanufacturi Theoretical               1,500,000             $.0667\nng\nPractical                1,250,000              .0800\noverhead of\n$100,000     Normal                    775,000              .1290\nper month. Master-budget               800,000              .1250\nThe          Actual output for the month of April was 800,000 units of\ncompany      glassware.\nuses\nabsorption\ncosting for\nboth\nexternal and\ninternal\nfinancial\nreporting\npurposes.\nBudgeted\noverhead\nrates for\ncost\nallocations\nfor the\nmonth of\nApril using\nalternative\nunit output\ndenominator\nlevels are\nshown in\nthe next\ncolumn.\nWhen Nash Glassworks Company allocates fixed costs,\nmanagement will select a capacity level to use as the\ndenominator volume. All of the following are appropriate as the\ncapacity level that approximates actual volume levels except",
+    "choices": [
+      "Normal capacity.",
+      "Expected annual activity.",
+      "Theoretical capacity.",
+      "Master-budget capacity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Theoretical (ideal) capacity is the maximum capacity given\ncontinuous operations with no holidays, downtime, etc. It\nassumes perfect efficiency at all times. Consequently, it can\nnever be attained and is not a reasonable estimate of actual\nvolume.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 11,
+    "page": 967,
+    "topicId": "su9-overhead",
+    "stem": "Nash                                  Budgeted             Budgete\nGlassworks                           Denominator               d\nCompany                                  Level             Overhea\nhas                                (units of output)           d\nbudgeted     Capacity                                        Cost\nfixed        Levels                                          Rate\nmanufacturi Theoretical               1,500,000             $.0667\nng\nPractical                1,250,000              .0800\noverhead of\n$100,000     Normal                    775,000              .1290\nper month. Master-budget               800,000              .1250\nThe          Actual output for the month of April was 800,000 units of\ncompany      glassware.\nuses\nabsorption\ncosting for\nboth\nexternal and\ninternal\nfinancial\nreporting\npurposes.\nBudgeted\noverhead\nrates for\ncost\nallocations\nfor the\nmonth of\nApril using\nalternative\nunit output\ndenominator\nlevels are\nshown in\nthe next\ncolumn.\nThe numerator of the overhead application rate equals",
+    "choices": [
+      "Estimated overhead costs.",
+      "Actual overhead costs.",
+      "The estimated activity level.",
+      "The actual activity level."
+    ],
+    "answerIndex": 0,
+    "explanation": "The overhead application rate is established at the beginning\nof each year to determine how much overhead to accumulate\nfor each job throughout the period. The estimated annual\noverhead costs are divided by the annual activity level or\ncapacity in terms of units to arrive at the desired rate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 12,
+    "page": 968,
+    "topicId": "su9-overhead",
+    "stem": "Nash                                  Budgeted             Budgete\nGlassworks                           Denominator               d\nCompany                                  Level             Overhea\nhas                                (units of output)           d\nbudgeted     Capacity                                        Cost\nfixed        Levels                                          Rate\nmanufacturi Theoretical               1,500,000             $.0667\nng\nPractical                1,250,000              .0800\noverhead of\n$100,000     Normal                    775,000              .1290\nper month. Master-budget               800,000              .1250\nThe          Actual output for the month of April was 800,000 units of\ncompany      glassware.\nuses\nabsorption\ncosting for\nboth\nexternal and\ninternal\nfinancial\nreporting\npurposes.\nBudgeted\noverhead\nrates for\ncost\nallocations\nfor the\nmonth of\nApril using\nalternative\nunit output\ndenominator\nlevels are\nshown in\nthe next\ncolumn.\nIn a labor-intensive industry in which more overhead (service,\nsupport, more expensive equipment, etc.) is incurred by the\nmore highly skilled and paid employees, which activity base\nis most likely to be appropriate for applying overhead?",
+    "choices": [
+      "Direct labor hours.",
+      "Direct materials cost.",
+      "Machine hours.",
+      "Direct labor cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "In labor-intensive industries, overhead is usually allocated on\nthe basis of labor time. However, if more overhead is incurred\nby the more highly skilled and paid employees, the overhead\nrate should be based upon direct labor cost rather than direct\nlabor hours.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 13,
+    "page": 969,
+    "topicId": "su9-overhead",
+    "stem": "Nash                                  Budgeted             Budgete\nGlassworks                           Denominator               d\nCompany                                  Level             Overhea\nhas                                (units of output)           d\nbudgeted     Capacity                                        Cost\nfixed        Levels                                          Rate\nmanufacturi Theoretical               1,500,000             $.0667\nng\nPractical                1,250,000              .0800\noverhead of\n$100,000     Normal                    775,000              .1290\nper month. Master-budget               800,000              .1250\nThe          Actual output for the month of April was 800,000 units of\ncompany      glassware.\nuses\nabsorption\ncosting for\nboth\nexternal and\ninternal\nfinancial\nreporting\npurposes.\nBudgeted\noverhead\nrates for\ncost\nallocations\nfor the\nmonth of\nApril using\nalternative\nunit output\ndenominator\nlevels are\nshown in\nthe next\ncolumn.\nAnnual overhead application rates are used to",
+    "choices": [
+      "Budget overhead.",
+      "Smooth seasonal variability of overhead costs.",
+      "Simulate seasonal variability of activity levels.",
+      "Treat overhead as period costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Annual overhead application rates smooth seasonal variability\nof overhead costs and activity levels. If overhead were applied\nto the product as incurred, the overhead rate per unit in most\ncases would vary considerably from week to week or month to\nmonth. The purpose of an annual overhead application rate is\nto simulate constant overhead throughout the year.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 14,
+    "page": 969,
+    "topicId": "su9-overhead",
+    "stem": "Nash                                  Budgeted             Budgete\nGlassworks                           Denominator               d\nCompany                                  Level             Overhea\nhas                                (units of output)           d\nbudgeted     Capacity                                        Cost\nfixed        Levels                                          Rate\nmanufacturi Theoretical               1,500,000             $.0667\nng\nPractical                1,250,000              .0800\noverhead of\n$100,000     Normal                    775,000              .1290\nper month. Master-budget               800,000              .1250\nThe          Actual output for the month of April was 800,000 units of\ncompany      glassware.\nuses\nabsorption\ncosting for\nboth\nexternal and\ninternal\nfinancial\nreporting\npurposes.\nBudgeted\noverhead\nrates for\ncost\nallocations\nfor the\nmonth of\nApril using\nalternative\nunit output\ndenominator\nlevels are\nshown in\nthe next\ncolumn.\nDepartmental overhead rates are usually preferred to\ncorporate-wide overhead rates when",
+    "choices": [
+      "The activities of each of the various departments are not\nhomogeneous.",
+      "The costs of many service departments are being allocated to\neach of the various departments.",
+      "All products passing through the various departments require\nthe same manufacturing effort in each department.",
+      "Most of the overhead costs are fixed and all departments are\nheavily automated."
+    ],
+    "answerIndex": 0,
+    "explanation": "The activity base for overhead allocation should have a high\ncorrelation with the incurrence of overhead. Thus, the\nactivities of various departments are usually more appropriate\nas activity bases than corporate-wide activities, particularly\nwhen products and production activities are not\nhomogeneous.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 15,
+    "page": 970,
+    "topicId": "su9-overhead",
+    "stem": "Normal costing systems are said to offer a user several distinct\nbenefits when compared with actual costing systems. Which\none of the following is not a benefit associated with normal\ncosting systems?",
+    "choices": [
+      "More timely costing of jobs and products.",
+      "A smoothing of product costs throughout the period.",
+      "Improved accuracy of job and product costing.",
+      "A more economical way of attaching overhead to a job or\nproduct."
+    ],
+    "answerIndex": 2,
+    "explanation": "Normal costing can provide more timely information about job\nand product costs, and it can helpfully smooth product costs\nthroughout a period, but it cannot in and of itself improve the\naccuracy of costing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 16,
+    "page": 971,
+    "topicId": "su9-overhead",
+    "stem": "A company, which uses direct labor hours to apply overhead to\nits product line, undertook an extensive renovation and\nmodernization program 2 years ago. Manufacturing processes\nwere reengineered, considerable automated equipment was\nacquired, and 60% of the company’s nonunion factory workers\nwere terminated. Which of the following statements would\napply to the situation at the company?\nI.   The company’s factory overhead rate has likely\nincreased.\nII.   The use of direct labor hours seems to be appropriate.\nIII.   The company will lack the ability to properly determine\nlabor variances.\nIV.        The company has likely reduced its ability to quickly\ncut costs in order to respond to economic downturns.",
+    "choices": [
+      "I, II, III, and IV.",
+      "I and IV only.",
+      "II and IV only.",
+      "I and III only."
+    ],
+    "answerIndex": 1,
+    "explanation": "The company’s overhead rate will almost certainly increase\nbecause of all the new equipment that must be depreciated.\nAlso, this heavy investment in new machinery will make it\nmore difficult to quickly cut costs during economic downturns.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 17,
+    "page": 972,
+    "topicId": "su9-overhead",
+    "stem": "The most important criterion in accurate cost allocations is",
+    "choices": [
+      "Using a simple allocation method.",
+      "Allocating fixed and variable costs by using the same\nallocation base.",
+      "Using homogeneous cost pools.",
+      "Using multiple drivers for each cost pool."
+    ],
+    "answerIndex": 2,
+    "explanation": "All the cost objects gathered in a cost pool should be similar\nenough that a single allocation base can be selected that will\naccurately allocate the costs in the pool.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 18,
+    "page": 973,
+    "topicId": "su9-overhead",
+    "stem": "A capital-intensive manufacturer of large construction\nequipment has a manufacturing process that relies heavily on\nspecialized machinery. This machinery is run by a relatively\nsmall number of highly skilled laborers. In determining its\npredetermined overhead rate, what allocation base should the\ncompany use?",
+    "choices": [
+      "Sales dollars.",
+      "Direct labor costs.",
+      "Machine hours.",
+      "Direct labor hours."
+    ],
+    "answerIndex": 2,
+    "explanation": "A cost allocation base is the common denominator for\nsystematically correlating indirect costs and a cost object. The\ncost driver of the indirect costs is ordinarily the allocation\nbase. In a capital-intensive manufacturer, machine hours are\nthe best allocation base to use.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 19,
+    "page": 973,
+    "topicId": "su9-overhead",
+    "stem": "A company has budgeted overhead costs at its normal\ncapacity based on machine hours. Variable factory overhead is\n$180,000, and fixed manufacturing overhead is $560,000. If\nthe firm operates at a slightly lower rate of activity, it will expect\ntotal",
+    "choices": [
+      "Fixed manufacturing overhead of $560,000 and a lower hourly\nrate for variable overhead.",
+      "Fixed manufacturing overhead of $560,000 and the same\nhourly rate for variable overhead.",
+      "Fixed manufacturing overhead of $560,000 and a higher\nhourly rate for variable overhead.",
+      "Variable overhead of less than $180,000 and a lower hourly\nrate for variable overhead."
+    ],
+    "answerIndex": 1,
+    "explanation": "If costs are fixed within the relevant range, they remain\nconstant at $560,000. Additionally, variable overhead costs\nper hour remain constant in the relevant range.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 20,
+    "page": 974,
+    "topicId": "su9-overhead",
+    "stem": "A company produces a wide variety of hand-crafted rocking\nchairs. The most appropriate allocation base for allocating\nproduction supervisor salaries to the products is",
+    "choices": [
+      "Direct labor hours.",
+      "Machine hours.",
+      "Number of products.",
+      "Sales dollars."
+    ],
+    "answerIndex": 0,
+    "explanation": "In labor-intensive industries, direct labor hours are an\nappropriate driver. The “hand-crafted” rocking chairs industry\nis a labor-intensive industry; thus, direct labor hours is the\nmost appropriate allocation base.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 21,
+    "page": 975,
+    "topicId": "su9-overhead",
+    "stem": "A company manufactures and sells three products. The\nproducts are all manufactured at the same facility. The\ncontroller of the company has decided to accumulate all\nbudgeted overhead costs for the manufacturing facility into a\nsingle cost pool. The cost pool is then allocated to the three\nproducts based on the direct labor hours used by each\nproduct. What type of overhead rate has the\ncontroller most likely used in this allocation methodology?",
+    "choices": [
+      "Departmental rate.",
+      "Variable rate.",
+      "Fixed rate.",
+      "Corporate-wide rate."
+    ],
+    "answerIndex": 3,
+    "explanation": "Since the controller is using only a single cost pool and single\ncost driver for all overhead costs, the overhead rate being\nused is most likely a single corporate-wide rate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 22,
+    "page": 976,
+    "topicId": "su9-overhead",
+    "stem": "Which one of the following would not be an appropriate cost\nallocation base for an organization?",
+    "choices": [
+      "Machine hours.",
+      "Direct labor hours.",
+      "Square feet of a facility.",
+      "Supervisor salaries."
+    ],
+    "answerIndex": 3,
+    "explanation": "Costs should realistically be allocated on the basis of some\ncost driver. A cost driver should capture a cause-and-effect\nrelationship between the level of the driver and the level of the\ncost being allocated. In other words, costs should be allocated\non the basis of what causes the costs to occur. It is unlikely\nthat supervisory salaries would ever be a cost driver.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 23,
+    "page": 978,
+    "topicId": "su9-overhead",
+    "stem": "Madtack Company’s beginning and ending Production data for the\ninventories for the month of November are month of November\nNovember 1      November 30 follows:\nDirect        $ 67,000        $ 62,000    Direct labor       $200,000\nmaterials                                 Actual              132,000\nWork-in-       145,000         171,000    manufacturing\nprocess                                   overhead\nFinished         85,000         78,000    Direct materials 163,000\ngoods                                     purchased\nTransportation        4,000\nin\nPurchase              2,000\nreturns and\nallowances\nMadtack uses one\noverhead control account\nand charges overhead to\nproduction at 70% of\ndirect labor cost. The\ncompany does not\nformally recognize over-\nor underapplied overhead\nuntil year end.\nMadtack Company’s net charge to overhead control for the\nmonth of November is",
+    "choices": [
+      "$68,000, overapplied.",
+      "$68,000, underapplied.",
+      "$8,000, overapplied.",
+      "$8,000, underapplied."
+    ],
+    "answerIndex": 2,
+    "explanation": "The overhead control account would record $132,000 of\nactual overhead. The applied amount decreases the balance\nand would have totaled $140,000 representing 70% of direct\nlabor costs of $200,000. Hence, the $140,000 applied\nexceeds the $132,000 actual cost. Overhead was overapplied\nby $8,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 24,
+    "page": 978,
+    "topicId": "su9-overhead",
+    "stem": "A company allocates its variable factory overhead based on direct labor hours. During the past 3 months, the actual direct\nlabor hours and the total factory overhead allocated were as\nfollows:\nJanuary           February\nDirect labor hours                                   1,000             3,000\nTotal factory overhead allocated                 $80,000        $140,000\nBased upon this information, monthly fixed factory overhead\nwas",
+    "choices": [
+      "$50,000",
+      "$46,667",
+      "$33,333",
+      "$30,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "This question requires solving simultaneous equations because\nboth the variable overhead per direct labor hour (Y) and the\nfixed overhead (X) are unknown.\n$80,000 = X + 1,000Y\n$140,000 = X + 3,000Y\n$60,000 = 2,000Y\nY = $30 per direct labor hour\nSubstituting,\n$80,000 = X + 1,000($30)\nX = $50,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 25,
+    "page": 980,
+    "topicId": "su9-overhead",
+    "stem": "Madtack Company’s beginning and ending Production data for the\ninventories for the month of November are month of November\nNovember 1      November 30 follows:\nDirect        $ 67,000        $ 62,000    Direct labor       $200,000\nmaterials                                 Actual              132,000\nWork-in-       145,000         171,000    manufacturing\nprocess                                   overhead\nFinished         85,000         78,000    Direct materials 163,000\ngoods                                     purchased\nTransportation        4,000\nin\nPurchase              2,000\nreturns and\nallowances\nMadtack uses one\noverhead control account\nand charges overhead to\nproduction at 70% of\ndirect labor cost. The\ncompany does not\nformally recognize over-\nor underapplied overhead\nuntil year end.\nFrom the following budgeted data, calculate the budgeted\nindirect cost rate that would be used in a normal costing\nsystem.\nTotal direct labor hours                               250,000\nTotal indirect labor hours                              50,000\nDirect costs                                      $10,000,000\nTotal indirect labor related costs                  5,000,000\nTotal indirect nonlabor related costs               7,000,000",
+    "choices": [
+      "$20",
+      "$28",
+      "$40",
+      "$48"
+    ],
+    "answerIndex": 3,
+    "explanation": "Total indirect costs are $12,000,000 ($5,000,000 +\n$7,000,000). The appropriate allocation base is direct labor\nhours, since this more closely matches activity level than does\nindirect labor or the combination of the two. The budgeted\nindirect cost rate is thus $48 per direct labor hour\n($12,000,000 ÷ 250,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 26,
+    "page": 981,
+    "topicId": "su9-overhead",
+    "stem": "Madtack Company’s beginning and ending Production data for the\ninventories for the month of November are month of November\nNovember 1      November 30 follows:\nDirect        $ 67,000        $ 62,000    Direct labor       $200,000\nmaterials                                 Actual              132,000\nWork-in-       145,000         171,000    manufacturing\nprocess                                   overhead\nFinished         85,000         78,000    Direct materials 163,000\ngoods                                     purchased\nTransportation        4,000\nin\nPurchase              2,000\nreturns and\nallowances\nMadtack uses one\noverhead control account\nand charges overhead to\nproduction at 70% of\ndirect labor cost. The\ncompany does not\nformally recognize over-\nor underapplied overhead\nuntil year end.\nA printing company uses a job order costing system and\napplies overhead based on machine hours. A total of 150,000\nmachine hours have been budgeted for the year. During the\nyear, an order for 1,000 units was completed and incurred the\nfollowing:\nDirect material costs                 $1,000\nDirect labor costs                     1,500\nActual overhead                        1,980\nMachine hours                            450\nThe accountant calculated the inventory cost of this order to be\n$4.30 per unit. The annual budgeted overhead in dollars was",
+    "choices": [
+      "$577,500",
+      "$600,000",
+      "$645,000",
+      "$660,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The results from the production run of 1,000 units allow the\ncompany to calculate its per-unit costs for materials ($1,000 ÷\n1,000 units = $1.00) and labor ($1,500 ÷ 1,000 units = $1.50).\nOverhead can then be derived as follows:\nTotal cost per unit                        $4.30\nLess: Direct materials                     (1.00)\nLess: Direct labor                         (1.50)\nOverhead per unit                        $1.80\nThe number of machine hours required to manufacture a\nsingle unit is .45 (450 hours ÷ 1,000 units). Therefore, $1.80\nrepresents 45% of the cost of a machine hour ($1.80 ÷ .45 =\n$4.00). Since 150,000 hours were budgeted, total budgeted\noverhead for the year was $600,000 (150,000 hours × $4.00\nper hour).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 27,
+    "page": 982,
+    "topicId": "su9-overhead",
+    "stem": "Madtack Company’s beginning and ending Production data for the\ninventories for the month of November are month of November\nNovember 1      November 30 follows:\nDirect        $ 67,000        $ 62,000    Direct labor       $200,000\nmaterials                                 Actual              132,000\nWork-in-       145,000         171,000    manufacturing\nprocess                                   overhead\nFinished         85,000         78,000    Direct materials 163,000\ngoods                                     purchased\nTransportation        4,000\nin\nPurchase              2,000\nreturns and\nallowances\nMadtack uses one\noverhead control account\nand charges overhead to\nproduction at 70% of\ndirect labor cost. The\ncompany does not\nformally recognize over-\nor underapplied overhead\nuntil year end.\nA cost accountant is developing departmental factory overhead\napplication rates for the company’s tooling and fabricating\ndepartments. The budgeted overhead for each department and\nthe data for one job are shown below.\nDepartment:\nTooling        Fabricating\nSupplies                                       $ 850          $ 200\nSupervisor’s salaries                           1,500           2,000\nIndirect labor                                  1,200           4,880\nDepreciation                                    1,000           5,500\nRepairs                                       4,075             3,540\nTotal budgeted overhead                      $8,625           $16,120\nTotal direct labor hours                        460              620\nDirect labor hours on Job #231                   12                3\nUsing the departmental overhead application rates, total\noverhead applied to Job #231 in the Tooling and Fabricating\nDepartments will be",
+    "choices": [
+      "$225",
+      "$303",
+      "$537",
+      "$671"
+    ],
+    "answerIndex": 1,
+    "explanation": "The departmental overhead allocations are determined by the\nproportion of the total driver expended by each department on\nthis job, as follows:\nTooling:            $8,625 × (12 ÷ 460)         =   $225\nFabricating:        $16,120 × (3 ÷ 620)         =      78\nTotal                                              $303",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 28,
+    "page": 984,
+    "topicId": "su9-overhead",
+    "stem": "The cost accountant for a manufacturing company is preparing\na management report that must include an allocation of\noverhead. Budgeted overhead for each department and the\ndata for one job are shown below.\nDepartment\nTooling       Fabricating\nSupplies                                $ 690        $       80\nSupervisor’s salaries                    1,400            1,800\nIndirect labor                           1,000            4,000\nDepreciation                             1,200            5,200\nRepairs                                  4,400            3,000\nTotal budgeted overhead                 $8,690       $14,080\nTotal direct labor hours                       440        640\nDirect labor hours on Job #231                   10          2\nUsing the departmental overhead application rates and\nallocating overhead on the basis of direct labor hours,\noverhead applied to Job #231 in the Tooling Department would\nbe",
+    "choices": [
+      "$44.00",
+      "$197.50",
+      "$241.50",
+      "$501.00"
+    ],
+    "answerIndex": 1,
+    "explanation": "The departmental overhead allocations are determined by the\nproportion of the total driver expended by each department on\nthis job. Tooling’s allocation is $197.50 [$8,690 × (10 ÷ 440)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 29,
+    "page": 985,
+    "topicId": "su9-overhead",
+    "stem": "A corporation expects to incur $70,000 of factory overhead\nand $60,000 of general and administrative costs next year.\nDirect labor costs at $5 per hour are expected to total $50,000.\nIf factory overhead is to be applied per direct labor hour, how\nmuch overhead will be applied to a job incurring 20 hours of\ndirect labor?",
+    "choices": [
+      "$28",
+      "$120",
+      "$140",
+      "$260"
+    ],
+    "answerIndex": 2,
+    "explanation": "Direct labor hours budgeted for next year are 10,000 ($50,000\ntotal ÷ $5 per hour). Factory overhead is applied at the rate of\n$7 per direct labor hour ($70,000 ÷ 10,000 hours). A job\nincurring 20 hours of direct labor will thus be charged with\n$140 of overhead ($7 per direct labor hour × 20 hours).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 30,
+    "page": 986,
+    "topicId": "su9-overhead",
+    "stem": "Using the following budget data for a corporation, which\nproduces only one product, calculate the company’s\npredetermined factory overhead application rate for variable\noverhead.\nUnits to be produced                                     11,000\nUnits to be sold                                         10,000\nIndirect materials, varying with production            $ 1,000\nIndirect labor, varying with production                  10,000\nFactory supervisor’s salary, incurred regardless of\nproduction                                               20,000\nDepreciation on factory building and equipment            30,000\nUtilities to operate factory machines                    12,000\nSecurity lighting for factory                             2,000\nSelling, general, and administrative expenses              5,000",
+    "choices": [
+      "$2.09",
+      "$2.30",
+      "$4.73",
+      "$5.20"
+    ],
+    "answerIndex": 0,
+    "explanation": "Variable overhead consists of those inputs to the production\nprocess that (1) vary with the level of production and (2)\ncannot be practicably traced to end products. In the\ncorporation’s case, these include indirect materials ($1,000),\nindirect labor ($10,000), and utilities ($12,000), for a total of\n$23,000. Dividing this amount by the number of units\nscheduled for production yields a variable overhead\napplication rate of $2.09 ($23,000 ÷ 11,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 31,
+    "page": 987,
+    "topicId": "su9-overhead",
+    "stem": "A company uses departmental rates to assign overhead to its\ntwo products. Budgeted data for the next year are shown\nbelow.\nDepartment 1 Department 2\nOverhead costs $5,000,000 $7,000,000\nCost driver     Machine hours Labor hours\nMachine hours     500,000         120,000\nLabor hours       100,000        1,400,000\nThe company expects to manufacture 400,000 units of Product\nA during the year. Each unit of Product A requires 0.5 machine\nhours in Department 1 and 1.5 labor hours in Department 2.\nThe budgeted overhead cost for one unit of Product A is",
+    "choices": [
+      "$11.03",
+      "$12.50",
+      "$12.73",
+      "$15.00"
+    ],
+    "answerIndex": 1,
+    "explanation": "The allocation rate for Department 1 is $10/machine hour\n($5,000,000 ÷ 500,000 machine hours). The allocation rate for\nDepartment 2 is $5/labor hour ($7,000,000 ÷ 1,400,000 labor\nhours). Therefore, a product that requires 0.5 machine hours\nin Department 1 and 1.5 hours of labor in Department 2 will\nhave a budgeted overhead cost of $12.50 [(0.5 × $10) + (1.5 ×\n$5)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 32,
+    "page": 988,
+    "topicId": "su9-overhead",
+    "stem": "A corporation’s results for the past year are shown below.\nCost of goods available for sale              $136,000\nEnding balance, raw material inventory           6,000\nEnding balance, work-in-process inventory       14,000\nEnding balance, finished goods inventory        13,000\nManufacturing overhead applied                  50,000\nActual manufacturing overhead                   55,000\nIf the corporation prorates any overapplied or underapplied\noverhead at the end of the year, cost of goods sold after\nproration would total",
+    "choices": [
+      "$140,150",
+      "$127,100",
+      "$126,950",
+      "$118,900"
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost of goods sold before proration is calculated by\nsubtracting the ending balance of finished goods inventory\nfrom cost of goods available for sale to achieve $123,000\n($136,000 – $13,000). Manufacturing overhead was\nunderapplied by $5,000 ($55,000 actual – $50,000 applied).\nThat excess $5,000 is prorated among the ending balance of\nwork-in-process, the ending balance of finished goods, and\ncost of goods sold. The amount prorated to cost of goods sold\nis $4,100 {$5,000 × [$123,000 cost of goods sold ÷\n($123,000 cost of goods sold + $14,000 ending balance work-\nin-process + 13,000 ending balance finished goods)]}. The\ncost of goods sold after proration would total $127,100\n($123,000 + $4,100).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 33,
+    "page": 990,
+    "topicId": "su9-overhead",
+    "stem": "Information regarding a company’s year-end account balances\nis shown below.\nAccount Balance       Allocated Overhead\n(Before Proration)       in Each Balance\nDirect material\ninventory           $ 100,000                 $      0\nWork-in-\nprocess\ninventory               25,000                  10,000\nFinished\ngoods\ninventory              225,000                 100,000\nCost of goods          2,250,000                 890,000\nsold\nIf the company’s overhead was overapplied by $90,000 and\nthe company uses the most accurate method of prorating\noverapplied or underapplied overhead, the balance in the cost\nof goods sold account after proration would be",
+    "choices": [
+      "$2,169,000",
+      "$2,169,900",
+      "$2,172,115",
+      "$2,330,100"
+    ],
+    "answerIndex": 1,
+    "explanation": "The most accurate method of prorating overapplied or\nunderapplied overhead prorates based on the allocated\noverhead in each balance. Cost of goods sold after proration\nof the overapplied overhead would be $2,169,900\n{$2,250,000 cost of goods sold before proration – 90,000 ×\n[$890,000 overhead in cost of goods sold ÷\n($890,000 overhead in cost of goods sold +\n$100,000 overhead in finished goods + $10,000 overhead in\nwork-in-process)]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 34,
+    "page": 991,
+    "topicId": "su9-overhead",
+    "stem": "A company uses a normal costing system and a predetermined\noverhead rate to allocate its overhead costs. The manufacturing\nprocess requires the use of machining equipment, which is a\nprimary driver of overhead. The actual factory overhead amount\nis $450 for Department A, Job 120 as of the end of the year.\nProduction costs are shown below.\nEstimated annual overhead for all departments                     $220\nExpected annual machine hours for all departments                   20\nActual machine hours for Department A, Job 120\nActual labor hours for Department A, Job 120\nThe overhead cost for Department A, Job 120 is",
+    "choices": [
+      "$98 overapplied.",
+      "$98 underapplied.",
+      "$219 overapplied.",
+      "$219 underapplied."
+    ],
+    "answerIndex": 1,
+    "explanation": "The company applies overhead based on machine hours. The\nrate is 11 ($220,000 estimated annual overhead ÷ 20,000\nexpected annual machine hours). Thus, the actual applied\noverhead is $352 (32 actual machine hours × 11). The amount\nof underapplied overhead is $98 ($450 – $352).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 2,
+    "number": 35,
+    "page": 992,
+    "topicId": "su9-overhead",
+    "stem": "A company had the following applied fixed overhead balances\nat the end of the year:\nWork-in-process inventory $100,000\nFinished goods inventory    50,000\nCost of goods sold         250,000\nThe company is also showing that it has materially under-\napplied fixed overhead by $30,000. To record the fixed\noverhead variance, the company should charge",
+    "choices": [
+      "Work-in-process inventory for $18,750.",
+      "Finished goods inventory for $3,750.",
+      "Cost of goods sold for $7,500.",
+      "Cost of goods sold for $30,000."
+    ],
+    "answerIndex": 1,
+    "explanation": "A material overhead variance should be allocated\nproportionately to work-in-process, finished goods, and cost of\ngoods sold. The applied overhead totaled $400,000,\nconsisting of $100,000 in work-in-process, $50,000 in finished\ngoods, and $250,000 in cost of goods sold. Since finished\ngoods accounts for 12.5% ($50,000 ÷ $400,000) of the total, it\nshould absorb 12.5% of the $30,000 overhead variance, or\n$3,750 (12.5% × $30,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 1,
+    "page": 994,
+    "topicId": "su9-service-departments",
+    "stem": "In allocating factory service department costs to producing\ndepartments, which one of the following items\nwould most likely be used as an activity base?",
+    "choices": [
+      "Units of product sold.",
+      "Salary of service department employees.",
+      "Units of electric power consumed.",
+      "Direct materials usage."
+    ],
+    "answerIndex": 2,
+    "explanation": "Electricity usage is the activity driver for factory electric power; the other bases have no direct causal relationship.",
+    "answerStatus": "inferred"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 2,
+    "page": 994,
+    "topicId": "su9-service-departments",
+    "stem": "When allocating service department costs to production\ndepartments, the method that does not consider different cost\nbehavior patterns is the",
+    "choices": [
+      "Step method.",
+      "Reciprocal method.",
+      "Direct method.",
+      "Single-rate method."
+    ],
+    "answerIndex": 3,
+    "explanation": "The single-rate method combines fixed and variable costs.\nHowever, dual rates are preferable because they allow\nvariable costs to be allocated on a different basis from fixed\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 3,
+    "page": 996,
+    "topicId": "su9-service-departments",
+    "stem": "The managers of Rochester Manufacturing are discussing ways to\nallocate the cost of service departments, such as Quality Control and\nMaintenance, to the production departments. To aid them in this\ndiscussion, the controller has provided the following information:\nQuality      Maintena    Machini Assem           Total\nControl         nce         ng         bly\nBudgeted\noverhead\ncosts\nbefore        $350,000      $200,000 $400,000 $300,000 $1,250,00\nallocation                                                        0\nBudgeted           --         --         50,000      --         50,00\nmachine                                                         0\nhours\nBudgeted           --         --           --       25,000      25,00\ndirect                                                          0\nlabor\nhours\nBudgeted\nhours of\nservice:\nQuality            --         7,000      21,000      7,000      35,00\nControl                                                         0\nMaintena         10,000       --         18,000     12,000      40,00\nnce                                                             0\nIf Rochester uses the step-down method of allocating service\ncosts beginning with quality control, the maintenance costs\nallocated to the assembly department would be",
+    "choices": [
+      "$70,000",
+      "$108,000",
+      "$162,000",
+      "$200,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The step-down method allocates service costs to both service\nand production departments but does not involve reciprocal\nallocations among service departments. Accordingly, Quality\nControl will receive no allocation of maintenance costs. The\nfirst step is to allocate quality control costs to the Maintenance\nDepartment. Maintenance is expected to use 20% (7,000 ÷\n35,000) of the available quality control hours and will be\nallocated $70,000 ($350,000 × 20%) of quality control costs.\nThus, total allocable maintenance costs equal $270,000\n($70,000 + $200,000). The Assembly Department is estimated\nto use 40% (12,000 ÷ 30,000) of the available maintenance\nhours. Consequently, it will be allocated maintenance costs of\n$108,000 ($270,000 × 40%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 4,
+    "page": 997,
+    "topicId": "su9-service-departments",
+    "stem": "The managers of Rochester Manufacturing are discussing ways to\nallocate the cost of service departments, such as Quality Control and\nMaintenance, to the production departments. To aid them in this\ndiscussion, the controller has provided the following information:\nQuality      Maintena    Machini Assem           Total\nControl         nce         ng         bly\nBudgeted\noverhead\ncosts\nbefore        $350,000      $200,000 $400,000 $300,000 $1,250,00\nallocation                                                        0\nBudgeted           --         --         50,000      --         50,00\nmachine                                                         0\nhours\nBudgeted           --         --           --       25,000      25,00\ndirect                                                          0\nlabor\nhours\nBudgeted\nhours of\nservice:\nQuality            --         7,000      21,000      7,000      35,00\nControl                                                         0\nMaintena         10,000       --         18,000     12,000      40,00\nnce                                                             0\nUsing the direct method, the total amount of overhead\nallocated to each machine hour at Rochester would be",
+    "choices": [
+      "$2.40",
+      "$5.25",
+      "$8.00",
+      "$15.65"
+    ],
+    "answerIndex": 3,
+    "explanation": "Machining uses 75% (21,000 ÷ 28,000) of the total quality\ncontrol hours and 60% (18,000 ÷ 30,000) of the total\nmaintenance hours budgeted for the production departments.\nUnder the direct method, it will therefore be allocated\n$262,500 ($350,000 × 75%) of quality control costs and\n$120,000 ($200,000 × 60%) of maintenance costs. In addition,\nMachining is expected to incur another $400,000 of overhead\ncosts. Thus, the total estimated Machining overhead is\n$782,500 ($262,500 + $120,000 + $400,000), and the\noverhead cost per machine hour is $15.65 ($782,500 ÷ 50,000\nhours).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 5,
+    "page": 998,
+    "topicId": "su9-service-departments",
+    "stem": "The managers of Rochester Manufacturing are discussing ways to\nallocate the cost of service departments, such as Quality Control and\nMaintenance, to the production departments. To aid them in this\ndiscussion, the controller has provided the following information:\nQuality      Maintena    Machini Assem           Total\nControl         nce         ng         bly\nBudgeted\noverhead\ncosts\nbefore        $350,000      $200,000 $400,000 $300,000 $1,250,00\nallocation                                                        0\nBudgeted           --         --         50,000      --         50,00\nmachine                                                         0\nhours\nBudgeted           --         --           --       25,000      25,00\ndirect                                                          0\nlabor\nhours\nBudgeted\nhours of\nservice:\nQuality            --         7,000      21,000      7,000      35,00\nControl                                                         0\nMaintena         10,000       --         18,000     12,000      40,00\nnce                                                             0\nIf Rochester uses the direct method of allocating service\ndepartment costs, the total service costs allocated to the\nassembly department would be",
+    "choices": [
+      "$80,000",
+      "$87,500",
+      "$120,000",
+      "$167,500"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the direct method, service department costs are\nallocated directly to the production departments, with no\nallocation to other service departments. The total budgeted\nhours of service by the Quality Control Department to the two\nproduction departments is 28,000 (21,000 + 7,000). Given that\nthe Assembly Department is expected to use 25% (7,000 ÷\n28,000) of the total hours budgeted for the production\ndepartments, it will absorb 25% of total quality control costs\n($350,000 × 25% = $87,500). The total budgeted hours of\nservice by the Maintenance Department to the production\ndepartments is 30,000 (18,000 + 12,000). The Assembly\nDepartment is expected to use 40% (12,000 ÷ 30,000) of the\ntotal maintenance hours budgeted for the production\ndepartments. Thus, the Assembly Department will be\nallocated 40% of the $200,000 of maintenance costs, or\n$80,000. The total service department costs allocated to the\nAssembly Department is $167,500 ($87,500 + $80,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 6,
+    "page": 999,
+    "topicId": "su9-service-departments",
+    "stem": "The managers of Rochester Manufacturing are discussing ways to\nallocate the cost of service departments, such as Quality Control and\nMaintenance, to the production departments. To aid them in this\ndiscussion, the controller has provided the following information:\nQuality      Maintena    Machini Assem           Total\nControl         nce         ng         bly\nBudgeted\noverhead\ncosts\nbefore        $350,000      $200,000 $400,000 $300,000 $1,250,00\nallocation                                                        0\nBudgeted           --         --         50,000      --         50,00\nmachine                                                         0\nhours\nBudgeted           --         --           --       25,000      25,00\ndirect                                                          0\nlabor\nhours\nBudgeted\nhours of\nservice:\nQuality            --         7,000      21,000      7,000      35,00\nControl                                                         0\nMaintena         10,000       --         18,000     12,000      40,00\nnce                                                             0\nIf Rochester uses the reciprocal method of allocating service\ncosts, the total amount of quality control costs (rounded to the\nnearest dollar) to be allocated to the other departments would\nbe",
+    "choices": [
+      "$284,211",
+      "$336,842",
+      "$350,000",
+      "$421,053"
+    ],
+    "answerIndex": 3,
+    "explanation": "The reciprocal method involves mutual allocations of service\ncosts among service departments. For this purpose, a system\nof simultaneous equations is needed. The total costs for the\nQuality Control Department are $350,000 plus 25% (10,000\nhours ÷ 40,000 hours) of maintenance costs. The total costs\nfor the Maintenance Department are $200,000 plus 20%\n(7,000 hours ÷ 35,000 hours) of quality control costs. These\nrelationships can be expressed by the following equations:\nQ = $350,000 + .25M\nM = $200,000 + .2Q\nTo solve for Q, the second equation can be substituted into\nthe first as follows:\nQ = $350,000 + .25($200,000 + .2Q)\nQ = $350,000 + $50,000 + .05Q\n.95Q = $400,000\nQ = $421,053",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 7,
+    "page": 1001,
+    "topicId": "su9-service-departments",
+    "stem": "The managers of Rochester Manufacturing are discussing ways to\nallocate the cost of service departments, such as Quality Control and\nMaintenance, to the production departments. To aid them in this\ndiscussion, the controller has provided the following information:\nQuality      Maintena    Machini Assem           Total\nControl         nce         ng         bly\nBudgeted\noverhead\ncosts\nbefore        $350,000      $200,000 $400,000 $300,000 $1,250,00\nallocation                                                        0\nBudgeted           --         --         50,000      --         50,00\nmachine                                                         0\nhours\nBudgeted           --         --           --       25,000      25,00\ndirect                                                          0\nlabor\nhours\nBudgeted\nhours of\nservice:\nQuality            --         7,000      21,000      7,000      35,00\nControl                                                         0\nMaintena         10,000       --         18,000     12,000      40,00\nnce                                                             0\nIf Rochester decides not to allocate service costs to the\nproduction departments, the overhead allocated to each direct\nlabor hour in the Assembly Department would be",
+    "choices": [
+      "$3.20",
+      "$3.50",
+      "$12.00",
+      "$16.00"
+    ],
+    "answerIndex": 2,
+    "explanation": "With no allocation of service department costs, the only\noverhead applicable to the Assembly Department is the\n$300,000 budgeted for that department. Hence, the overhead\ncost applied per direct labor hour will be $12 ($300,000\nbudgeted overhead ÷ 25,000 hours).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 8,
+    "page": 1001,
+    "topicId": "su9-service-departments",
+    "stem": "Allocation of service department costs to the production\ndepartments is necessary to",
+    "choices": [
+      "Control costs.",
+      "Coordinate production activity.",
+      "Determine overhead rates.",
+      "Maximize efficiency."
+    ],
+    "answerIndex": 2,
+    "explanation": "Service department costs are indirect costs allocated to\nproduction departments to better determine overhead rates\nwhen the measurement of full (absorption) costs is desired.\nOverhead should be charged to production on some equitable\nbasis to provide information useful for such purposes as\nallocation of resources, pricing, measurement of profits, and\ncost reimbursement.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 9,
+    "page": 1002,
+    "topicId": "su9-service-departments",
+    "stem": "There are several methods for allocating service department\ncosts to the production departments. The method that\nrecognizes service provided by one service department to\nanother but does not recognize reciprocal interdepartmental\nservice is the",
+    "choices": [
+      "Direct method.",
+      "Variable method.",
+      "Reciprocal method.",
+      "Step-down method."
+    ],
+    "answerIndex": 3,
+    "explanation": "The three major methods of allocating service department\ncosts, in order of increasing sophistication, are the direct\nmethod, the step-down method, and the reciprocal (or\nsimultaneous-equations) method. The direct method is the\nsimplest. It involves allocating all service department costs to\nproduction departments without recognizing any service\nprovided by one service department to another. The step-\ndown method is a sequential process that allocates service\ncosts among service as well as production departments.\nHowever, once a department’s costs have been allocated, no\nadditional allocations are made back to that department. The\nreciprocal method uses simultaneous equations to recognize\nmutual services. The latter method is the most complex.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 10,
+    "page": 1003,
+    "topicId": "su9-service-departments",
+    "stem": "A large manufacturing company has two service departments\nand two production departments. Each of the service\ndepartments renders services to each other and to the two\nproduction departments. Which one of the following methods\nwould most accurately allocate the costs of the service\ndepartments to the production departments of this company?",
+    "choices": [
+      "The direct allocation method.",
+      "The step-down allocation method.",
+      "The linear allocation method.",
+      "The reciprocal allocation method."
+    ],
+    "answerIndex": 3,
+    "explanation": "The reciprocal method uses simultaneous equations to\nallocate each service department’s costs. It allocates costs by\nexplicitly including the mutual services rendered among all\ndepartments. When service departments render services to\neach other, the use of the direct method or the step-down\nmethod would not be theoretically accurate. Accordingly, in\nsuch situations, the reciprocal method would result in the most\naccurate allocation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 11,
+    "page": 1004,
+    "topicId": "su9-service-departments",
+    "stem": "A corporation allocates indirect corporate overhead costs to its\noperating divisions. The company uses a cause-and-effect\ncriterion in the selection of appropriate allocation bases. Which\nof the following would be an appropriate allocation base to\nassign the costs of the corporate personnel department to the\noperating divisions using a cause-and-effect criterion?",
+    "choices": [
+      "Number of employees in each division.",
+      "Square footage of space occupied by each division.",
+      "Total service years of employees in each division.",
+      "Total book value of identifiable division assets."
+    ],
+    "answerIndex": 0,
+    "explanation": "The cause-and-effect criterion seeks a relationship between\ncost and the cost objective (for example, an operating division)\nsuch that changes in total costs can be predicted based on\nactivities of the cost objective. Thus, the number of employees\nin an operating division is likely to correlate with incurrence of\ncosts by the personnel department.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 12,
+    "page": 1005,
+    "topicId": "su9-service-departments",
+    "stem": "A public accounting firm has two departments, Management\nConsulting Services (MCS) and Tax Advisory Services (TAS).\nThese two departments use the services of two service\ndepartments, Computer Programming (CP) and Computer\nOperations (CO). The percentages of each service used by\neach department for a typical period are\nCP         CO        MCS      TAS\nCP        --        30%       50%      20%\nCO      25%          --       45%      30%\nThe company prices its management consulting and tax\nadvisory services on the basis of estimated costs of providing\nthose services. Based upon this information,\nthe most appropriate method for allocating service department\ncosts is the",
+    "choices": [
+      "Physical-units method.",
+      "Step-down method.",
+      "Estimated NRV method.",
+      "Reciprocal method."
+    ],
+    "answerIndex": 3,
+    "explanation": "The reciprocal method uses simultaneous equations to\nallocate costs by explicitly recognizing the mutual services\nrendered among all departments. Because it acknowledges all\nsources of cost, it should be used when management is using\nthe results of allocations to make decisions on pricing\nproducts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 13,
+    "page": 1006,
+    "topicId": "su9-service-departments",
+    "stem": "When allocating costs from one department to another, a dual-\nrate cost-allocation method may be used. The dual-rate cost-\nallocation method is most useful when",
+    "choices": [
+      "Two or more cost pools are to be allocated.",
+      "Two or more departments’ costs are to be allocated.",
+      "Two or more products are produced.",
+      "Costs are separated into variable-cost and fixed-cost\nsubpools."
+    ],
+    "answerIndex": 3,
+    "explanation": "The dual-rate method of allocating costs from one department\nto another involves classifying the costs to be allocated into\ntwo pools, one variable and one fixed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 14,
+    "page": 1007,
+    "topicId": "su9-service-departments",
+    "stem": "A furniture company manufactures several steel products. It\nhas three production departments: Fabricating, Assembly, and\nFinishing. The service departments include Maintenance,\nMaterial Handling, and Designing. Currently, the company\ndoes not allocate service department costs to the production\ndepartments. The new cost accountant believes that service\ndepartment rates should be developed and charged to the\nproduction departments for services requested. If the company\nadopts this new policy, the production department managers\nwould be least likely to",
+    "choices": [
+      "Request an excessive amount of service.",
+      "Replace outdated and inefficient systems.",
+      "Refrain from using unnecessary services.",
+      "Be encouraged to control costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "When a user is forced to bear a realistic cost for a service, the\nuser is less likely to use an excessive amount of that service.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 15,
+    "page": 1008,
+    "topicId": "su9-service-departments",
+    "stem": "A company has two service departments and three operating\ndepartments. In allocating service department costs to the\noperating departments, which of the following three methods\n(direct, step-down, reciprocal) will result in the same amount of\nservice department costs being allocated to each operating\ndepartment, regardless of the order in which the service\ndepartment costs are allocated?",
+    "choices": [
+      "Direct and reciprocal methods only.",
+      "Step-down and reciprocal methods only.",
+      "Direct and step-down methods only.",
+      "Direct method only."
+    ],
+    "answerIndex": 0,
+    "explanation": "With the direct and reciprocal methods, the order of allocation\nis irrelevant. However, under the step-down method, some\nservice department cost is allocated to other service\ndepartments before allocation to the operating departments.\nThese first allocations change the proportions of the total\nconstituted by each department.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 16,
+    "page": 1009,
+    "topicId": "su9-service-departments",
+    "stem": "Wilcox Industrial has two support departments, the Information\nSystems Department and the Personnel Department, and two\nmanufacturing departments, the Machining Department and the\nAssembly Department. The support departments service each other\nas well as the two production departments. Company studies have\nshown that the Personnel Department provides support to a greater\nnumber of departments than the Information Systems Department.\nIf Wilcox uses the reciprocal method of department allocation,\nwhich one of the following departmental allocations would\noccur? The costs of the",
+    "choices": [
+      "Assembly Department are allocated to the Information\nSystems Department and the Personnel Department.",
+      "Information Systems Department are allocated to the\nMachining Department and the costs of the Machining\nDepartment are allocated to the Assembly Department.",
+      "Personnel Department are allocated solely to the Information\nSystems Department.",
+      "Information Systems Department are allocated to the\nPersonnel Department, Machining Department, and Assembly\nDepartment."
+    ],
+    "answerIndex": 3,
+    "explanation": "The reciprocal method is the most complex and the most\ntheoretically sound of the three service department allocation\nmethods. The reciprocal method recognizes services rendered\nby all service departments to each other as well as to the\nproduction departments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 17,
+    "page": 1010,
+    "topicId": "su9-service-departments",
+    "stem": "Wilcox Industrial has two support departments, the Information\nSystems Department and the Personnel Department, and two\nmanufacturing departments, the Machining Department and the\nAssembly Department. The support departments service each other\nas well as the two production departments. Company studies have\nshown that the Personnel Department provides support to a greater\nnumber of departments than the Information Systems Department.\nIf Wilcox uses the step-down method of departmental\nallocation, which one of the following cost allocations\nwould not occur? Some of the costs of the",
+    "choices": [
+      "Personnel Department would be allocated to the Information\nSystems Department.",
+      "Information Systems Department would be allocated to the\nPersonnel Department.",
+      "Personnel Department would be allocated to the Assembly\nDepartment.",
+      "Personnel Department would be allocated to the Assembly\nDepartment and the Machining Department."
+    ],
+    "answerIndex": 1,
+    "explanation": "The step or step-down method allocates some of the costs of\nservices rendered by service departments to each other. The\nstep method derives its name from the procedure involved:\nThe service departments are allocated in order, from the one\nthat provides the most service to other service departments\ndown to the one that provides the least. Since Personnel\nprovides more services than Information Systems, Personnel\nwill be allocated to Information Systems, but not the other way\naround.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 18,
+    "page": 1011,
+    "topicId": "su9-service-departments",
+    "stem": "Wilcox Industrial has two support departments, the Information\nSystems Department and the Personnel Department, and two\nmanufacturing departments, the Machining Department and the\nAssembly Department. The support departments service each other\nas well as the two production departments. Company studies have\nshown that the Personnel Department provides support to a greater\nnumber of departments than the Information Systems Department.\nIf Wilcox uses the direct method of departmental allocation,\nwhich one of the following cost allocations would occur? Some\nof the costs of the",
+    "choices": [
+      "Personnel Department would be allocated to the Information\nSystems Department.",
+      "Machining Department would be allocated to the Information\nSystems Department.",
+      "Information Systems Department would be allocated to the\nAssembly Department.",
+      "Assembly Department would be allocated to the Machining\nDepartment."
+    ],
+    "answerIndex": 2,
+    "explanation": "The direct method of service department allocation is the\nsimplest. Service department costs are allocated directly to the\nproducing departments without regard for services rendered\nby service departments to each other. Service department\ncosts are allocated to production departments based on an\nallocation base appropriate to each service department’s\nfunction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 19,
+    "page": 1012,
+    "topicId": "su9-service-departments",
+    "stem": "A company has four support departments (maintenance,\npower, human resources, and legal) and three operating\ndepartments. The support departments provide services to the\noperating departments as well as to the other support\ndepartments. The method of allocating the costs of the support\ndepartments that best recognizes the mutual services\nrendered by support departments to other support\ndepartments is the",
+    "choices": [
+      "Direct allocation method.",
+      "Dual-rate allocation method.",
+      "Step-down allocation method.",
+      "Reciprocal allocation method."
+    ],
+    "answerIndex": 3,
+    "explanation": "The reciprocal method is the most complex and the most\ntheoretically sound of the three service department allocation\nmethods. The reciprocal method recognizes services rendered\nby all service departments to each other as well as to the\nproduction departments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 20,
+    "page": 1013,
+    "topicId": "su9-service-departments",
+    "stem": "A company has two service departments and is planning to\nuse the reciprocal method to allocate service department\ncosts. The following information from operations was collected\nfor analysis.\nBudgeted overhead costs\nHuman Resources            $400,000\nData Processing              70,000\nMachining                   225,000\nAssembly                    125,000\nServices furnished         Labor Hours\nHuman Resources to\nData Processing             3,000\nMachining                   5,000\nAssembly                    8,200\nData Processing to\nHuman Resources               600\nMachining                   3,500\nAssembly                      600\nWhich one of the following equations represents the complete\nreciprocated cost of the Data Processing Department?",
+    "choices": [
+      "$70,000 + [(600 ÷ 4,700) × $400,000]",
+      "$70,000 + [Fully Reciprocated Cost of Human Resources ×\n(3,000 ÷ 16,200)]",
+      "$70,000 × (600 ÷ 4,700) + $350,000 × (3,000 ÷ 16,200)",
+      "$400,000 + [(600 ÷ 16,200) × $70,000]"
+    ],
+    "answerIndex": 1,
+    "explanation": "The reciprocal cost of a service department incorporates the\ncost of other service departments’ service. Therefore, Data\nProcessing has a reciprocal cost of $70,000, plus the allocable\nportion of Human Resources cost used. This is best\nrepresented by either of the following equations: $70,000 +\n[Fully Reciprocated Cost of Human Resources × (3,000 ÷\n16,200)] or $70,000 + {[$400,000 + (Fully Reciprocated Cost\nof Data Processing × 12.77%)] × (3,000 ÷ 16,200)}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 21,
+    "page": 1015,
+    "topicId": "su9-service-departments",
+    "stem": "A company produces two products that are serviced by two support areas. The company uses the reciprocal method to\nallocate support area costs to the products with information as\nfollows.\nSupport Area 1          Support Area 2   Prod\nAllocation base                Hours used              Square feet\nArea 1 hours used                                         5,000       120\nSpace occupied                    3,000                               40\nDirect costs                    $350,000                $200,000\nWhat additional information does Columbia need in order to\ncomplete the cost allocation?",
+    "choices": [
+      "Direct costs of Products 1 and 2.",
+      "Hours used by Support Area 1 and the space occupied by\nSupport Area 2.",
+      "Order in which the support areas will be allocated.",
+      "No additional information is needed."
+    ],
+    "answerIndex": 3,
+    "explanation": "All the information necessary to allocate costs is provided. The\nreciprocal method is the most complex and the most\ntheoretically sound of the three methods. Under the reciprocal\nmethod, services rendered by all service departments to each\nother are recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 22,
+    "page": 1016,
+    "topicId": "su9-service-departments",
+    "stem": "A large company is in the process of allocating service\ndepartment costs to revenue-generating departments. Under\nwhich one of the following allocation methods will the amount\nallocated to each revenue-generating department be different\nif the order in which service department costs are allocated is\ndifferent?",
+    "choices": [
+      "Step-down method.",
+      "Direct method.",
+      "Reciprocal method.",
+      "Activity-based method."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the step-down method, the service departments are\nallocated in order, from the one that provides the most service\nto other service departments down to the one that provides\nthe least service. Thus, the order in which service department\ncosts are allocated is important.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 23,
+    "page": 1017,
+    "topicId": "su9-service-departments",
+    "stem": "Longstreet Company’s Photocopying Department\nprovides photocopy services for both Departments A and B and has\nprepared its total budget using the following information for next year:\nFixed costs         $100,000\nAvailable capacity 4,000,000 pages\nBudgeted usage\nDepartment A 1,200,000 pages\nDepartment B 2,400,000 pages\nVariable cost       $0.03 per page\nAssume that Longstreet uses the single-rate method of cost\nallocation and the allocation base is budgeted usage. How\nmuch photocopying cost will be allocated to Department B in\nthe budget year?",
+    "choices": [
+      "$72,000",
+      "$122,000",
+      "$132,000",
+      "$138,667"
+    ],
+    "answerIndex": 3,
+    "explanation": "Department B is budgeted to use 66 2/3% of total production\n(2,400,000 ÷ 3,600,000), so it should be allocated fixed costs\nof $66,667 ($100,000 × 66 2/3%). The variable cost allocation\nis $72,000 (2,400,000 pages × $.03 per page), and the total\nallocated is therefore $138,667 ($66,667 + $72,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 24,
+    "page": 1018,
+    "topicId": "su9-service-departments",
+    "stem": "Longstreet Company’s Photocopying Department\nprovides photocopy services for both Departments A and B and has\nprepared its total budget using the following information for next year:\nFixed costs         $100,000\nAvailable capacity 4,000,000 pages\nBudgeted usage\nDepartment A 1,200,000 pages\nDepartment B 2,400,000 pages\nVariable cost       $0.03 per page\nAssume that Longstreet uses the dual-rate cost allocation\nmethod, and the allocation basis is budgeted usage for fixed\ncosts and actual usage for variable costs. How much cost\nwould be allocated to Department A during the year if actual\nusage for Department A is 1,400,000 pages and actual usage\nfor Department B is 2,100,000 pages?",
+    "choices": [
+      "$42,000",
+      "$72,000",
+      "$75,333",
+      "$82,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Based on budgeted usage, Department A should be allocated\n33 1/3% [1,200,000 pages ÷ (1,200,000 pages + 2,400,000\npages)] of fixed costs, or $33,333 ($100,000 × 33 1/3%). The\nvariable costs are allocated at $.03 per unit for 1,400,000\npages, or $42,000. The sum of the fixed and variable\nelements is $75,333.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 25,
+    "page": 1019,
+    "topicId": "su9-service-departments",
+    "stem": "M&P Tool has three service departments that support\nthe production area. Outlined below is the estimated overhead by\ndepartment for the upcoming year:\nService Departments        Estimated   Number of\nOverhead    Employees\nReceiving                  $25,000        2\nRepair                      35,000        2\nTool                        10,000        1\nProduction Departments\nAssembly                                 25\nBolting                                  12\nThe Repair Department supports the greatest number of departments,\nfollowed by the Tool Department. Overhead cost is allocated to\ndepartments based upon the number of employees.\nIf M&P uses the direct method of allocation, how much of the\nRepair Department’s overhead will be allocated to the Tool\nDepartment?",
+    "choices": [
+      "$0",
+      "$875",
+      "$7,000",
+      "$11,667"
+    ],
+    "answerIndex": 0,
+    "explanation": "The direct method allocates service department costs directly\nto the producing departments without recognition of services\nprovided among the service departments. Hence, no service\ncost is allocated to the Tool Department because it is a\nservice department.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 26,
+    "page": 1020,
+    "topicId": "su9-service-departments",
+    "stem": "M&P Tool has three service departments that support\nthe production area. Outlined below is the estimated overhead by\ndepartment for the upcoming year:\nService Departments        Estimated   Number of\nOverhead    Employees\nReceiving                  $25,000        2\nRepair                      35,000        2\nTool                        10,000        1\nProduction Departments\nAssembly                                 25\nBolting                                  12\nThe Repair Department supports the greatest number of departments,\nfollowed by the Tool Department. Overhead cost is allocated to\ndepartments based upon the number of employees.\nIf M&P uses the step-down method of allocation, the allocation\nfrom the Repair Department to the Tool Department would be",
+    "choices": [
+      "$0",
+      "$875",
+      "$7,000",
+      "$11,667"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the step-down method, service costs are allocated to all\ndepartments. However, no reciprocal allocations among\nservice departments are performed. The process usually\nbegins with the department that provides the greatest\npercentage of its services to other service departments. Thus,\nthe Repair Department is the logical starting point. Given that\nservice costs are allocated to each department (service or\nproduction) on the basis of its proportion of employees\n(excluding employees in the allocating department), the\nallocation of the Repair Department’s overhead to the Tool\nDepartment is $875 {[1 employee ÷ (1 + 2 + 25 + 12)] ×\n$35,000}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 27,
+    "page": 1022,
+    "topicId": "su9-service-departments",
+    "stem": "Fabricating and Finishing are the two production\ndepartments of Ewell Company. Building Operations and Information\nServices are service departments that provide support to the two\nproduction departments as well as to each other. Ewell uses\ndepartmental overhead rates in the two production departments to\nallocate the service department costs to the production departments.\nSquare footage is used to allocate Building Operations, and computer\ntime is used to allocate Information Services. The costs of the service\ndepartments and relevant operating data for the departments are as\nfollows:\nBuilding     Informati   Fabricati    Finishi\nOperation         on        ng           ng\ns         Services\nCosts:\nLabor and benefit c\nosts                $200,000       $ 300,000\nOther traceable cos   350,00         900,000\nts                         0\nTotal                   $550,0       $1,200,0\n00             00\nOperating Data:\nSquare feet               5,000        10,000 16,000         24,000\noccupied\nComputer time (in h\nours)                       200                  1,200          600\nIf Ewell employs the step method to allocate the costs of the\nservice departments and if Information Services costs are\nallocated first, then the total amount of service department\ncosts (Information Services and Building Operations) allocated\nto Finishing would be",
+    "choices": [
+      "$657,000",
+      "$681,600",
+      "$730,000",
+      "$762,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The step method of service department cost allocation is a\nsequential (but not a reciprocal) process. These costs are\nallocated to other service departments as well as to users.\nThe process usually begins with the service department that\nrenders the greatest percentage of its services to other service\ndepartments. If the $1,200,000 of Information Services costs\nis allocated first, the allocation base is 2,000 computer hours\n(200 + 1,200 + 600). Thus, $120,000 [$1,200,000 × (200 ÷\n2,000)] will be allocated to Building Operations and $360,000\n[$1,200,000 × (600 ÷ 2,000)] to Finishing. The total of the\nBuilding Operations costs to be allocated to production equals\n$670,000 ($550,000 + $120,000). The allocation base will be\n40,000 square feet because no costs are allocated back to\nInformation Services. Accordingly, the total of service costs\nallocated to Finishing equals $762,000 {$360,000 + [$670,000\n× (24,000 ÷ 40,000)]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 28,
+    "page": 1024,
+    "topicId": "su9-service-departments",
+    "stem": "Fabricating and Finishing are the two production\ndepartments of Ewell Company. Building Operations and Information\nServices are service departments that provide support to the two\nproduction departments as well as to each other. Ewell uses\ndepartmental overhead rates in the two production departments to\nallocate the service department costs to the production departments.\nSquare footage is used to allocate Building Operations, and computer\ntime is used to allocate Information Services. The costs of the service\ndepartments and relevant operating data for the departments are as\nfollows:\nBuilding     Informati   Fabricati    Finishi\nOperation         on        ng           ng\ns         Services\nCosts:\nLabor and benefit c\nosts                $200,000       $ 300,000\nOther traceable cos   350,00         900,000\nts                         0\nTotal                   $550,0       $1,200,0\n00             00\nOperating Data:\nSquare feet               5,000        10,000 16,000         24,000\noccupied\nComputer time (in h\nours)                       200                  1,200          600\nIf Ewell employs the direct method to allocate the costs of the\nservice departments, then the amount of Building Operations\ncosts allocated to Fabricating would be",
+    "choices": [
+      "$140,000",
+      "$160,000",
+      "$176,000",
+      "$220,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The direct method does not allocate service costs to other\nservice departments. Hence, the allocation base is the square\nfootage in the two production departments. Fabricating’s share\nis 40% (16,000 ÷ 40,000) of the total cost incurred by Building\nOperations, or $220,000 ($550,000 × 40%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 29,
+    "page": 1025,
+    "topicId": "su9-service-departments",
+    "stem": "Logo, Inc., has two service departments (the Systems\nDepartment and the Facilities Department) that provide support to the\ncompany’s three production departments (Machining Department,\nAssembly Department, and Finishing Department). The overhead\ncosts of the Systems Department are allocated to other departments\non the basis of computer usage hours. The overhead costs of the\nFacilities Department are allocated based on square feet occupied (in\nthousands). Other information pertaining to Logo is as follows:\nDepartment Overhead         Computer        Square Feet\nUsage Hours         Occupied\nSystems     $200,000         300               1,000\nFacilities   100,000         900                 600\nMachining    400,000       3,600               2,000\nAssembly     550,000       1,800               3,000\nFinishing    620,000       2,700               5,000\nTotal                    9,300             11,600\nLogo employs the direct method of allocating service\ndepartment costs. The overhead of the Systems Department\nwould be allocated by dividing the overhead amount by",
+    "choices": [
+      "1,200 hours.",
+      "8,100 hours.",
+      "9,000 hours.",
+      "9,300 hours."
+    ],
+    "answerIndex": 1,
+    "explanation": "The direct method of service department allocation is the\nsimplest. Service department costs are allocated directly to the\nproducing departments without regard for services rendered\nby service departments to each other. Service department\ncosts are allocated to production departments based on an\nallocation base appropriate to each service department’s\nfunction. The appropriate allocation base for the Systems\nDepartment is computer usage hours. Thus, the denominator\nfor allocating Systems will be the total computer hours used by\nthe production departments (3,600 + 1,800 + 2,700 = 8,100).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 30,
+    "page": 1026,
+    "topicId": "su9-service-departments",
+    "stem": "Logo, Inc., has two service departments (the Systems\nDepartment and the Facilities Department) that provide support to the\ncompany’s three production departments (Machining Department,\nAssembly Department, and Finishing Department). The overhead\ncosts of the Systems Department are allocated to other departments\non the basis of computer usage hours. The overhead costs of the\nFacilities Department are allocated based on square feet occupied (in\nthousands). Other information pertaining to Logo is as follows:\nDepartment Overhead         Computer        Square Feet\nUsage Hours         Occupied\nSystems     $200,000         300               1,000\nFacilities   100,000         900                 600\nMachining    400,000       3,600               2,000\nAssembly     550,000       1,800               3,000\nFinishing    620,000       2,700               5,000\nTotal                    9,300             11,600\nLogo employs the step-down method of allocating service department costs and begins with the Systems Department.\nWhich one of the following correctly denotes the amount of the\nSystems Department’s overhead that would be allocated to the\nFacilities Department and the Facilities Department’s overhead\ncharges that would be allocated to the Machining Department?\nSystems to Facilities Facilities to Machining",
+    "choices": [
+      "$0                      $20,000",
+      "$19,355                 $20,578",
+      "$20,000                 $20,000",
+      "$20,000                  $24,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The first step in applying the step-down method is to determine\nthe percentage of the total driver for the first service department\nthat is to be assigned to the other departments:\nAllocate            Computer           % of           Amount to     Departm\nSystems:              Hours            Total         Be Allocated    Alloca\nTo Facilities              900            10.0%          $200,000       $ 20\nTo Machining             3,600            40.0%           200,000          80\nTo Assembly              1,800            20.0%           200,000          40\nTo Finishing             2,700            30.0%           200,000          60\nTotals                 9,000          100.0%                          $200\nThe second step is to allocate the costs of the first service\ndepartment ($000 omitted):\nService          Production Departments\nDepartments\nSystem Facilitie Machini Assem Finishin Tota\ns          s        ng         bly         g    l\nTotals      $200       $100     $40      $550        $620     $1,8\nbefore                           0                             70\nallocation\nAllocate    (2          2       8            4        6           0\nSystems     00          0       0            0        0\n)\nTotals            $       $       $            $        $     $1,8\nafter             0      1       4            5        6       70\nfirst alloc              2       8            9        8\nation                    0       0            0        0\nThe third step is to determine the percentage of the total driver\nfor the second allocated service department that is to be\nassigned to each of the remaining departments:\nAllocate           Square         % of          Amount to            Departme\nFacilities:         Footage        Total        Be Allocated           Allocatio\nTo Machining            2,000         20.0%        $120,000               $ 24,0\nTo Assembly             3,000         30.0%          120,000                 36,0\nTo Finishing            5,000         50.0%          120,000                 60,0\nTotals               10,000         100.0%                              $120,0\nThe final step is to allocate the costs of the second service\ndepartment:\nService      Production Departments\nDepartme\nnt\nFacilities Machini Assem Finishin Total\nng        bly        g\nTotals after $120,00        $480,0 $590,000 $680,000 $1,870,0\nfirst allocati        0         00                           00\non\nAllocate       (120,00    24,000      36,000 60,000          0\nFacilities           0)\nTotals after     $          $504,0      $626,0 $740,0 $1,870,0\n2nd allocati          0         00          00       00      00\non",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 31,
+    "page": 1030,
+    "topicId": "su9-service-departments",
+    "stem": "Adam Corporation manufactures computer tables and\nhas the following budgeted indirect manufacturing cost information for\nnext year:\nSupport Departments         Operating\nDepartments\nMaintenanc   System Machinin      Fabricatio Total\ne          s       g             n\nBudgeted         $360,000    $95,000 $200,000     $300,000 $955,00\noverhead                                                      0\nSupport\nwork\nfinished:\nFrom                        10%       50%          40%       100%\nMaintenan\nce\nFrom                  5%              45%          50%       100%\nSystems\nIf Adam uses the step-down method, beginning with the Maintenance Department, to allocate support department costs\nto production departments, the total overhead (rounded to the\nnearest dollar) for the Machining Department to allocate to its\nproducts would be",
+    "choices": [
+      "$415,526",
+      "$422,750",
+      "$442,053",
+      "$445,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The first step in applying the step-down method is to determine\nthe percentage of the total driver for the first service department\nthat is to be assigned to the other departments:\nAllocate           Proportion         % of           Amount to     Dep\nMaintenance:                              Total         Be Allocated    Allo\nTo Systems                   10              10.0%         $360,000        $\nTo Machining                 50              50.0%          360,000          1\nTo Fabrication               40              40.0%          360,000          1\nTotals                                   100.0%                          $3\nThe second step is to allocate the costs of the first service\ndepartment:\nService Departments         Production\nDepartments\nMaintenan System Machinin Fabricati Total\nce           s         g            on\nTotal before $360,00 $ 95,000 $200,0 $300,000 $955,0\nallocation         0                     00                  00\nAllocate      (360,00     36,000 180,00 144,000                0\nMaintenan          0)                   0\nce\nTotals after $               $131,0 $380,0 $444,00 $955,0\nfirst allocati       0          00     00           0         00\non\nThe third step is to determine the percentage of the total driver\nfor the second allocated service department that is to be\nassigned to each of the remaining departments:\nAllocate          Proportion       % of          Amount to         Dep\nSystems:                            Total        Be Allocated        Allo\nTo Machining                45             47.4%         $131,000           $\nTo Fabrication              50             52.6%          131,000\nTotals                                100.0%                               $1\nThe final step is to allocate the costs of the second service\ndepartment:\nService      Production Department\nDepartment\nSystems       Machining       Fabricatio\nTotals after first allocation           $131,000       $380,000        $444,00\nAllocate Systems                       (131,000)         62,053         68,94\nTotals after second allocation          $      0        $442,053       $512,94",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 32,
+    "page": 1033,
+    "topicId": "su9-service-departments",
+    "stem": "Adam Corporation manufactures computer tables and\nhas the following budgeted indirect manufacturing cost information for\nnext year:\nSupport Departments         Operating\nDepartments\nMaintenanc   System Machinin      Fabricatio Total\ne          s       g             n\nBudgeted         $360,000    $95,000 $200,000     $300,000 $955,00\noverhead                                                      0\nSupport\nwork\nfinished:\nFrom                        10%       50%          40%       100%\nMaintenan\nce\nFrom                  5%              45%          50%       100%\nSystems\nIf Adam uses the direct method to allocate support department costs to production departments, the total overhead (rounded to\nthe nearest dollar) for the Machining Department to allocate to\nits products would be",
+    "choices": [
+      "$418,000",
+      "$422,750",
+      "$442,053",
+      "$445,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The first step in applying the direct method is to determine the\npercentage of the total drivers for the two service departments\nthat are to be assigned to the production departments:\nAllocate            Proportion        % of          Amount to       Dep\nMaintenance:                             Total        Be Allocated      All\nTo Machining                 50             55.6%        $360,000          $2\nTo Fabrication            40             44.4%            360,000      1\nTotals                                 100.0%                        $3\nAllocate          Proportion        % of          Amount to     Dep\nSystems:                            Total        Be Allocated    Allo\nTo Machining              45             47.4%         $95,000        $4\nTo Fabrication            50             52.6%          95,000          5\nTotals                               100.0%                         $9\nThe second step is to allocate the costs of the service\ndepartments:\nService              Production\nDepartments             Departments\nMaintenan System Machinin Fabricati            Total\nce            s        g           on\nTotals\nbefore     $360,00                $200,0                 $955,0\nallocation       0     $95,000        00 $300,000            00\nAllocate  (360,00         --     200,00  160,000             0\nMaintenan      0)                     0\nce\nAllocate        --       (95,00 45,000       50,000          0\nSystems                      0)\nTotals after      $        $        $445,0     $510,0    $955,0\nallocation            0        0       00         00        00",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 33,
+    "page": 1035,
+    "topicId": "su9-service-departments",
+    "stem": "A company has accumulated its support costs into three pools that will be allocated to numerous products using the step-down\nmethod. Usage of each pool’s services is shown below.\nAll\nPool 1      Pool 2      Pool 3        Products\nUsage of              0%        10%            8%         82%\nPool 1\nUsage of              6%         4%           10%         70%\nPool 2\nUsage of             10%         8%           10%         78%\nPool 3\nDirect          $150,000     $80,000     $55,000\ncosts\nIf the company allocates Pool 1’s costs first, Pool 2’s costs\nsecond, and Pool 3’s costs third, the amount of costs allocated\nfrom Pool 2 to Pool 3 is",
+    "choices": [
+      "$11,875",
+      "$11,047",
+      "$9,500",
+      "$8,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The amount of costs allocated from Pool 2 to Pool 3 can be\ncalculated as follows:\nPool 1   Pool 2\nTotal costs before allocation                  $150,000      $80,000\nAllocate Pool 1’s costs                        (150,000)       15,000\nTotal after allocating Pool 1’s costs                 0        95,000\nAllocate Pool 2’s costs                                       (95,000)\n*$150,000 × [10% ÷ (10% + 8% + 82%)] = $15,000\n**$150,000 × [8% ÷ (10% + 8% + 82%)] = $12,000\n***$95,000 × [10% ÷ (10% + 70%)] = $11,875",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 34,
+    "page": 1036,
+    "topicId": "su9-service-departments",
+    "stem": "A company has two supporting departments, Maintenance and\nInformation Systems, and two operating departments, the\nMachining Department and the Assembly Department. Each\ndepartment’s overhead costs are shown below.\nMaintenan    Informatio Machinin    Assembl\nce             n         g          y\nSystems\nOverhead $6,300,000          $1,452,150 $4,000,000 $2,000,000\ncosts\nMaintenan            -          4,000       6,000       10,000\nce hours\nInformatio         500               -      4,000          500\nn Systems\nhours\nUsing the step-down method, the total overhead costs allocated\nto each operating department are\nMachining     Assembly",
+    "choices": [
+      "$8,300,800 $5,451,350",
+      "$7,653,300 $6,098,850",
+      "$8,187,025 $5,565,125",
+      "$5,451,350 $8,300,800"
+    ],
+    "answerIndex": 0,
+    "explanation": "Using the step-down method, the first step is to allocate the\n$6,300,000 from Maintenance to the other three departments\nbased on the 20,000 maintenance hours worked for the other\nthree departments (4,000 + 6,000 + 10,000). Thus, 20% (4,000\n÷ 20,000) of the overhead cost, or $1,260,000, would be\nallocated to Information Systems. Another 30% (6,000 ÷\n20,000), or $1,890,000, would go to Machining, while the\nremaining 50% (10,000 ÷ 20,000), or $3,150,000, would go to\nAssembly. With the addition of $1,260,000 in the previous step,\nthe total for Information Systems becomes $2,712,150\n($1,452,150 + $1,260,000). The amount of $2,712,150 will be\nallocated to the other two departments at an 8/9 to 1/9 ratio\n(4,000 hours ÷ 4,500 hours to 500 hours ÷ 4,500 hours).\nMultiplying $2,712,150 by 8/9 equals $2,410,800 for\nMachining. Multiplying $2,712,150 by 1/9 equals $301,350 for\nAssembly. Adding all of the elements of cost together for each\nof the two operating departments results in $8,300,800\n($4,000,000 + $1,890,000 + $2,410,800) for Machining and\n$5,451,350 ($2,000,000 + $3,150,000 + $301,350) for\nAssembly.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 9,
+    "section": 3,
+    "number": 35,
+    "page": 1038,
+    "topicId": "su9-service-departments",
+    "stem": "A company has two service departments, Human Resources\n(HR) and Information Technology (IT). The HR department\ncosts of $150,000 are allocated on the basis of the number of\nemployees. The IT department costs of $200,000 are allocated\nbased on the IT service hours. The costs of operating\ndepartments X and Y are $250,000 and $180,000,\nrespectively. Data on budgeted number of employees and IT\nservice hours are shown below.\nService Department       Operating Department\nHR            IT           X           Y\nBudgeted       $150,000    $200,000   $250,000    $180,000\ncosts\nBudgeted             N/A         400        450         300\nIT hours\nNumber                20         N/A        120          90\nof\nemployee\ns\nUnder the direct method, what amount of IT department costs\nwill be allocated to Department Y?",
+    "choices": [
+      "$85,714",
+      "$83,721",
+      "$80,000",
+      "$52,174"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the direct method, service department costs are\nallocated directly to the producing departments without regard\nfor services rendered by service departments to each other.\nThus, the $200,000 costs of the IT department must be\nallocated between operating departments X and Y. IT\ndepartment costs are allocated based on the budgeted IT\nhours for the department. Department Y is budgeted\n300 hours out of 750 total hours budgeted to operating\ndepartments, or 40%. Thus, the IT costs allocated to\nDepartment Y will equal $80,000 ($200,000 × 40%).",
+    "answerStatus": "source"
+  }
+]

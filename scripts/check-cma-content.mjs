@@ -7,6 +7,9 @@ import ts from "typescript";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cache = new Map();
 function readDataFile(name) {
+  if (name.endsWith(".json")) {
+    return { default: JSON.parse(fs.readFileSync(path.resolve(root, "src/data", name), "utf8")) };
+  }
   const filepath = path.resolve(root, "src/data", `${name}.ts`);
   if (cache.has(filepath)) return cache.get(filepath).exports;
   const source = fs.readFileSync(filepath, "utf8");
@@ -37,11 +40,46 @@ function check(condition, message) {
 const { CMA_TOPICS } = readDataFile("cma-topics");
 const { CMA_TOPIC_GUIDES, CMA_STUDY_UNIT_CASES } = readDataFile("cma-guides");
 const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
+const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
 const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
 
 check(CMA_TOPICS.length === 40 && ids.size === 40, "Expected 40 unique sections for units 1–10");
+check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
+check(CMA_LOCAL_QUESTIONS.length === 1368, "Expected 308 original plus 1,060 source questions");
+const bookCounts = [
+  [10, 29, 33, 46, 69, 30],
+  [20, 18, 37, 32],
+  [7, 19, 27, 50, 22],
+  [30, 21, 12, 23],
+  [21, 33, 21],
+  [18, 20, 9, 14],
+  [30, 30, 9, 62],
+  [21, 11, 38, 14],
+  [45, 35, 35],
+  [26, 21, 12],
+];
+for (const [unitIndex, sectionCounts] of bookCounts.entries()) {
+  for (const [sectionIndex, expected] of sectionCounts.entries()) {
+    const unit = unitIndex + 1;
+    const section = sectionIndex + 1;
+    const prefix = `cma-gleim-2025-vol1-su${unit}-s${section}-q`;
+    const source = CMA_GLEIM_2025_VOL1_QUESTIONS.filter((question) =>
+      question.id.startsWith(prefix),
+    );
+    check(
+      source.length === expected,
+      `SU ${unit}.${section}: expected ${expected} source questions`,
+    );
+    for (let n = 1; n <= expected; n++) {
+      check(
+        source.some((question) => question.id === `${prefix}${String(n).padStart(3, "0")}`),
+        `Missing SU ${unit}.${section} question ${n}`,
+      );
+    }
+  }
+}
 check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Expected guides for published study units 1–6");
 for (const [unit, expected] of [
   [1, 6],
@@ -103,9 +141,10 @@ for (const q of CMA_LOCAL_QUESTIONS) {
     `Question/unit mismatch: ${q.id}`,
   );
   check(!questionIds.has(q.id), `Duplicate question ID: ${q.id}`);
-  check(!questionTexts.has(q.question.en), `Duplicate English question: ${q.id}`);
+  if (q.sourceLanguage !== "en")
+    check(!questionTexts.has(q.question.en), `Duplicate English question: ${q.id}`);
   questionIds.add(q.id);
-  questionTexts.add(q.question.en);
+  if (q.sourceLanguage !== "en") questionTexts.add(q.question.en);
   check(
     q.track === "CMA" &&
       q.choices.ar.length === 4 &&
@@ -117,8 +156,15 @@ for (const q of CMA_LOCAL_QUESTIONS) {
   );
   check(
     q.question.ar && q.question.en && q.explanation.ar && q.explanation.en && q.reference,
-    `Incomplete bilingual question: ${q.id}`,
+    `Incomplete question: ${q.id}`,
   );
+  if (q.sourceLanguage === "en") {
+    check(q.sourcePage >= 5 && q.sourcePage <= 1087, `Missing source page: ${q.id}`);
+    check(
+      q.question.ar === q.question.en && q.explanation.ar === q.explanation.en,
+      `Unreviewed source translation must be explicitly marked: ${q.id}`,
+    );
+  }
   check(q.choices.ar.every(Boolean) && q.choices.en.every(Boolean), `Empty choice: ${q.id}`);
 }
 check(CMA_STUDY_UNIT_CASES.length === 6, "Expected a linked practice case for every unit");
@@ -139,5 +185,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${CMA_LOCAL_QUESTIONS.length} bilingual MCQs, ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${CMA_LOCAL_QUESTIONS.length} MCQs (308 bilingual originals + 1,060 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );

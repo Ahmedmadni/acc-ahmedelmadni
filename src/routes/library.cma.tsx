@@ -30,11 +30,11 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | أسئلة الوحدات 1–10 من الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | بنك أسئلة الجزء الأول — أحمد المدني" },
         {
           name: "description",
           content:
-            "دليل CMA عربي وإنجليزي للوحدات 1–6 وبنك أسئلة للوحدات 1–10 في التقارير المالية وإدارة التكاليف.",
+            "دليل CMA عربي وإنجليزي للوحدات 1–6 مع 308 أسئلة تدريب أصلية ثنائية اللغة و1,060 سؤالًا من بنك Gleim 2025 باللغة الإنجليزية.",
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
@@ -73,6 +73,7 @@ function CmaPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [revealedTasks, setRevealedTasks] = useState<Record<string, boolean>>({});
+  const [visibleQuestions, setVisibleQuestions] = useState(12);
 
   const domains = CMA_DOMAINS.filter((item) => item.part === part);
   const filtered = useMemo(() => {
@@ -117,16 +118,21 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "أدلة وحالات للوحدات 1–6 في التقارير المالية، وأسئلة ثنائية اللغة للوحدات 1–10 تشمل إدارة التكاليف. ستضاف أدلة الوحدات 7–10 مع كتب الشرح."
-              : "Bilingual guides and cases for reporting Units 1–6, and practice for Units 1–10 including cost management. Guides for Units 7–10 will follow their textbooks."}
+              ? "أدلة وحالات للوحدات 1–6، و308 أسئلة أصلية ثنائية اللغة، وأسئلة كتاب 2025 للوحدات 1–10 باللغة الإنجليزية مع رقم صفحة المصدر. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 7–10 مع كتب الشرح."
+              : "Guides and cases for Units 1–6, 308 original bilingual questions, and the 2025 book's English questions for Units 1–10 with source pages. Arabic translation and table review are in progress; guides for Units 7–10 will follow their textbooks."}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
               {CMA_TOPICS.length} {lang === "ar" ? "موضوعات منشورة" : "published topics"}
             </span>
             <span>
-              {CMA_LOCAL_QUESTIONS.length}{" "}
-              {lang === "ar" ? "أسئلة تدريب أصلية" : "original practice questions"}
+              {CMA_LOCAL_QUESTIONS.length} {lang === "ar" ? "سؤالًا بالمجموع" : "questions total"}
+            </span>
+            <span>
+              {CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage === "en").length}{" "}
+              {lang === "ar"
+                ? "سؤالًا من كتاب 2025 بالإنجليزية"
+                : "English questions from the 2025 book"}
             </span>
             <span>
               {lang === "ar" ? "المجالان A وD: ‎15% لكل منهما" : "Domains A and D: 15% each"}
@@ -333,6 +339,7 @@ function CmaPage() {
                       onClick={() => {
                         setSelectedId(selectedId === item.id ? null : item.id);
                         setAnswers({});
+                        setVisibleQuestions(12);
                       }}
                       aria-expanded={selectedId === item.id}
                       className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#1C1B19] px-5 py-2 text-xs font-bold text-[#F5F1EB] hover:bg-[#3A332D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A88765]"
@@ -441,7 +448,7 @@ function CmaPage() {
               {lang === "ar" ? "تدرب على هذا الموضوع" : "Practice this topic"}
             </h4>
             <div className="mt-4 space-y-4">
-              {questions.map((q, index) => (
+              {questions.slice(0, visibleQuestions).map((q, index) => (
                 <article key={q.id} className="rounded-2xl border border-[#A88765]/25 bg-white p-5">
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs font-bold text-[#76543F]">
@@ -449,7 +456,24 @@ function CmaPage() {
                     </span>
                     <span className="text-xs text-[#82766B]">{q.difficulty}</span>
                   </div>
-                  <p className="mt-3 text-sm font-bold leading-7">{q.question[lang]}</p>
+                  {q.sourceLanguage === "en" && lang === "ar" && (
+                    <p className="mt-2 text-xs leading-6 text-[#76543F]">
+                      السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
+                    </p>
+                  )}
+                  {q.sourceLanguage === "en" && (
+                    <p className="mt-2 text-xs text-[#76543F]">
+                      {lang === "ar"
+                        ? `جليم 2025 · الصفحة ${q.sourcePage}`
+                        : `Gleim 2025 · p. ${q.sourcePage}`}
+                    </p>
+                  )}
+                  <p
+                    dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                    className="mt-3 whitespace-pre-wrap text-sm font-bold leading-7"
+                  >
+                    {q.question[lang]}
+                  </p>
                   <div className="mt-4 grid gap-2 sm:grid-cols-2">
                     {q.choices[lang].map((choice, choiceIndex) => {
                       const revealed = answers[q.id] !== undefined;
@@ -465,7 +489,12 @@ function CmaPage() {
                           }
                           className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 transition focus-visible:outline-2 focus-visible:outline-[#A88765] ${correct ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : "border-[#A88765]/25 hover:border-[#A88765] disabled:opacity-70"}`}
                         >
-                          {choice}
+                          <span
+                            dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                            className="whitespace-pre-wrap"
+                          >
+                            {choice}
+                          </span>
                         </button>
                       );
                     })}
@@ -489,7 +518,19 @@ function CmaPage() {
                             ? "Correct"
                             : "Incorrect"}
                       </span>
-                      <p className="mt-2">{q.explanation[lang]}</p>
+                      <p
+                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        className="mt-2 whitespace-pre-wrap"
+                      >
+                        {q.explanation[lang]}
+                      </p>
+                      {q.answerStatus === "inferred" && (
+                        <p className="mt-2 text-xs text-[#76543F]">
+                          {lang === "ar"
+                            ? "الإجابة مستنتجة؛ لا يذكر الملف المرفق حل هذا السؤال."
+                            : "Answer inferred: the supplied PDF does not give a solution."}
+                        </p>
+                      )}
                       <button
                         type="button"
                         onClick={() =>
@@ -508,6 +549,17 @@ function CmaPage() {
                 </article>
               ))}
             </div>
+            {visibleQuestions < questions.length && (
+              <button
+                type="button"
+                onClick={() => setVisibleQuestions((count) => count + 12)}
+                className="mt-5 rounded-full border border-[#A88765] px-5 py-2 text-sm font-bold text-[#76543F]"
+              >
+                {lang === "ar"
+                  ? `عرض 12 سؤالًا إضافيًا (${questions.length - visibleQuestions} متبقٍ)`
+                  : `Show 12 more (${questions.length - visibleQuestions} remaining)`}
+              </button>
+            )}
           </section>
         )}
 

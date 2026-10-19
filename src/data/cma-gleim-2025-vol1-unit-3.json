@@ -1,0 +1,2127 @@
+[
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 1,
+    "page": 336,
+    "topicId": "su3-equity-securities",
+    "stem": "On December 31, Ott Co. had investments in equity securities\nas follows:\nFair\nCost     Value\nMan Co. $10,000 $ 8,000\nKemo, Inc.    9,000 11,000\nFenn Corp. 11,000   9,000\n$30,000 $28,000\nOtt’s December 31 balance sheet should report the equity\nsecurities as",
+    "choices": [
+      "$26,000",
+      "$28,000",
+      "$29,000",
+      "$30,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "An investment in equity securities that does not result in\nsignificant influence or control over the investee is reported at\nfair value, and unrealized holding gains and losses are\nincluded in earnings. Consequently, the securities should be\nreported as $28,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 2,
+    "page": 337,
+    "topicId": "su3-equity-securities",
+    "stem": "An entity should report an investment in marketable equity\nsecurities that does not result in significant influence or control\nover the investee at",
+    "choices": [
+      "Lower of cost or market, with holding gains and losses\nincluded in earnings.",
+      "Lower of cost or market, with holding gains included in\nearnings only to the extent of previously recognized holding\nlosses.",
+      "Fair value, with holding gains included in earnings only to the\nextent of previously recognized holding losses.",
+      "Fair value, with holding gains and losses included in earnings."
+    ],
+    "answerIndex": 3,
+    "explanation": "Unrealized holding gains and losses on an investment in\nequity securities that do not result in significant influence or\ncontrol over the investee are reported in earnings. On a\nstatement of financial position, these securities are reported at\nfair value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 3,
+    "page": 338,
+    "topicId": "su3-equity-securities",
+    "stem": "Plack Co. purchased 10,000 shares (2% owner ship) of Ty\nCorp. on February 14 and did not elect the fair value option.\nPlack received a stock dividend of 2,000 shares on April 30,\nwhen the market value per share was $35. Ty paid a cash\ndividend of $2 per share on December 15. In its income\nstatement for the year, what amount should Plack report as\ndividend income?",
+    "choices": [
+      "$20,000",
+      "$24,000",
+      "$90,000",
+      "$94,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Plack Co. owns 2% of the stock of Ty Corp. Accordingly, this\ninvestment should be accounted for using the fair value\nmethod. Dividends from an investee are accounted for by the\ninvestor as dividend income unless a liquidating dividend is\nreceived. The recipient of a stock dividend does not recognize\nincome. Thus, Plack should report dividend income of $24,000\n[(10,000 shares + 2,000 shares received as a stock dividend\non April 30) × $2 per share dividend].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 4,
+    "page": 339,
+    "topicId": "su3-equity-securities",
+    "stem": "During Year 6, Wall Co. purchased 2,000 shares of Hemp\nCorp. common stock, properly classified as trading securities,\nfor $31,500. They represent 2% of ownership in Hemp Corp.\nThe fair value of this investment was $29,500 at December 31,\nYear 6. Wall sold all of the Hemp common stock for $14 per\nshare on December 15, Year 7, incurring $1,400 in brokerage\ncommissions and taxes. In its income statement for the year\nended December 31, Year 7, Wall should report a recognized\nloss of",
+    "choices": [
+      "$4,900",
+      "$3,500",
+      "$2,900",
+      "$1,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "A realized loss or gain is recognized when an individual equity\nsecurity is sold or otherwise disposed of. Wall would have\nincluded the $2,000 ($31,500 – $29,500) decline in the fair\nvalue of the equity securities (an unrealized holding loss) in\nearnings at 12/31/Yr 6. Consequently, the realized loss on\ndisposal at 12/15/Yr 7 is $2,900 {$29,500 carrying amount –\n[(2,000 shares × $14) – $1,400]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 5,
+    "page": 340,
+    "topicId": "su3-equity-securities",
+    "stem": "At the end of Year 1, Lane Co. held an investment in equity\nsecurities that cost $86,000 and had a year-end market value\nof $92,000. During Year 2, all of these securities were sold for\n$104,500. At the end of Year 2, Lane had acquired additional\nequity securities that cost $73,000 and had a year-end market\nvalue of $71,000. What is the impact of these stock activities\non Lane’s Year 2 income statement?",
+    "choices": [
+      "Loss of $2,000.",
+      "Gain of $10,500.",
+      "Gain of $16,500.",
+      "Gain of $18,500."
+    ],
+    "answerIndex": 1,
+    "explanation": "An investment in equity securities that does not result in\nsignificant influence or control over the investee is measured\nat fair value in the financial statements. Changes in fair value\nare included in earnings. In Year 1, Lane recorded the\nunrealized holding gain of $6,000 ($92,000 FV – $86,000\ncost). In Year 2, Lane recorded a realized gain of $12,500\n[$104,500 price – ($86,000 cost + $6,000 unrealized gain\nrecorded in Year 1)]. Also in Year 2, Lane recorded the\nunrealized holding loss of $2,000 ($73,000 cost – $71,000\nyear-end FV). Accordingly, the Year 2 effect is a gain of\n$10,500 ($12,500 – $2,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 6,
+    "page": 341,
+    "topicId": "su3-equity-securities",
+    "stem": "Janson traded stock in Flax Co. marketable equity securities\nduring Year 1 as follows:\nNumber of shares    Price per\npurchased (sold)      share\nFebruary 3, Year 1             1,100              $11\nApril 15, Year 1               2,500                9\nMay 28, Year 1                  (750)              13\nJuly 5, Year 1                  1,400                  12\nSeptember 30, Year 1           (4,000)                 15\nNo other transactions took place for Flax during the remainder\nof the year. At December 31, Year 1, Flax is trading at $10 per\nshare. Janson trades securities on a last in, first out basis.\nWhat amount is the net value of the investment in Flax at year\nend?",
+    "choices": [
+      "$(250)",
+      "$2,500",
+      "$2,750",
+      "$3,750"
+    ],
+    "answerIndex": 1,
+    "explanation": "At each balance sheet date, an investment in equity securities\nthat does not result in significant influence or control over the\ninvestee is measured at fair value. During the year, Janson\npurchased 5,000 shares and sold 4,750 shares for an ending\nbalance of 250 shares. At year end, the fair value of each\nshare is $10, so the year-end balance is $2,500 (250 shares ×\n$10 per share).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 1,
+    "number": 7,
+    "page": 342,
+    "topicId": "su3-equity-securities",
+    "stem": "Which of the following items is not considered an equity\nsecurity in the issuer?",
+    "choices": [
+      "Bonds convertible to common stock.",
+      "Call options.",
+      "Stock warrants.",
+      "Preferred stock."
+    ],
+    "answerIndex": 0,
+    "explanation": "An equity security is an ownership interest in an entity, such\nas through common or preferred stock, or a right to acquire or\ndispose or such an interest, such as through stock warrants or\ncall options. However, convertible debt securities are not\nequity interests in the issuer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 1,
+    "page": 344,
+    "topicId": "su3-equity-method",
+    "stem": "A company owns 10,000 shares of a corporation’s stock; the\ncorporation currently has 40,000 shares outstanding. During\nthe year, the corporation had net income of $200,000 and paid\n$160,000 in dividends. At the beginning of the year, there was\na balance of $150,000 in the company’s equity method\ninvestment in the corporation account. At the end of the year,\nthe balance in this account should be",
+    "choices": [
+      "$110,000",
+      "$150,000",
+      "$160,000",
+      "$240,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The company holds 25% (10,000 ÷ 40,000) of the\ncorporation’s voting common stock. Under the equity method,\n(1) an investor recognizes its share of the investee’s net\nincome as an increase in the investment account:\n$200,000 × 25% = $50,000\n(2) a dividend from the investee is treated as a return of an\ninvestment:\n$160,000 × 25% = $40,000\nThus, at the end of the year, the balance in the investment in\nthe corporation account is $160,000 ($150,000 + $50,000 –\n$40,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 2,
+    "page": 345,
+    "topicId": "su3-equity-method",
+    "stem": "A corporation acquires a 30% voting interest in another\ncorporation. In this situation, the long-term investment is\ngenerally accounted for on the investor corporation’s books\nusing which of the following reporting methods?",
+    "choices": [
+      "Lower-of-cost-or-market.",
+      "Cost.",
+      "Consolidated.",
+      "Equity."
+    ],
+    "answerIndex": 3,
+    "explanation": "If an investor can exercise significant influence over an\ninvestee, the investment should be accounted for by the equity\nmethod. When a corporation owns 20% or more of the voting\npower of the investee, the ability to exercise significant\ninfluence is presumed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 3,
+    "page": 346,
+    "topicId": "su3-equity-method",
+    "stem": "An investor uses the equity method to account for an\ninvestment in common stock. The investor’s equity in the\nearnings of the investee is affected by\nA Change in Fair\nCash Dividends Value of the Investee’s\nfrom Investee       Common Stock",
+    "choices": [
+      "No                   Yes",
+      "No                   No",
+      "Yes                  No",
+      "Yes                  Yes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the equity method, an investor debits an investment\nand credits revenue for its share of the investee’s earnings.\nThe receipt of a cash dividend from the investee is treated as\na return of an investment. Thus, it is credited to the investment\nbut does not affect equity-based earnings. A change in fair\nvalue has no effect on an investment in securities accounted\nfor under the equity method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 4,
+    "page": 347,
+    "topicId": "su3-equity-method",
+    "stem": "An investor uses the equity method to account for an\ninvestment in common stock. After the date of acquisition, the\ninvestment account of the investor is",
+    "choices": [
+      "Not affected by its share of the earnings or losses of the\ninvestee.",
+      "Not affected by its share of the earnings of the investee, but is\ndecreased by its share of the losses of the investee.",
+      "Increased by its share of the earnings of the investee, but is\nnot affected by its share of the losses of the investee.",
+      "Increased by its share of the earnings of the investee, and is\ndecreased by its share of the losses of the investee."
+    ],
+    "answerIndex": 3,
+    "explanation": "After the date of acquisition, an equity-based investment in\ncommon stock account of an investor is increased by its share\nof the earnings of the investee, decreased by its share of the\nlosses of the investee, and decreased by its share of cash\ndividends received from the investee.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 5,
+    "page": 347,
+    "topicId": "su3-equity-method",
+    "stem": "On January 1, a company acquired as a long-term investment\na 20% common stock interest in E Co. The company paid\n$700,000 for this investment when the fair value and carrying\namount of E’s net assets was $3.5 million. The company can\nexercise significant influence over E’s operating and financial\npolicies. For the year ended December 31, E reported net\nincome of $400,000 and declared and paid cash dividends of\n$160,000. How much revenue from this investment should the\ncompany report for the year?",
+    "choices": [
+      "$32,000",
+      "$48,000",
+      "$80,000",
+      "$112,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Because the investor can exercise significant influence over\nthe investee’s operating and financial policies, the investment\nshould be accounted for using the equity method. The\n$700,000 paid for the investment is equal to 20% of the $3.5\nmillion fair value. The carrying amount and fair value of the net\nassets were the same. Under these circumstances, revenue\nfrom the investment is 20% of the reported net income of\n$400,000, or $80,000. The cash dividend does not affect the\namount of income to be reported.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 6,
+    "page": 349,
+    "topicId": "su3-equity-method",
+    "stem": "A corporation received a cash dividend from a common stock\ninvestment. Should the corporation report an increase in the\ninvestment account if it uses the fair value method or the\nequity method of accounting?\nFair Value Equity",
+    "choices": [
+      "No              No",
+      "Yes             Yes",
+      "Yes             No",
+      "No              Yes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the fair value method and the cost method, (used only if\nthe fair value method and the equity method are not\napplicable), dividends from an investee should be accounted\nfor by the investor as dividend income unless a liquidating\ndividend is received. Thus, assuming that the dividend is not\nliquidating, it has no effect on the investment account under\nthe fair value method. Under the equity method, the investor\nrecognizes its equity in the undistributed earnings of the\ninvestee. Consequently, cash dividends decrease the\ninvestment account because the dividend is considered to be\na return of investment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 7,
+    "page": 350,
+    "topicId": "su3-equity-method",
+    "stem": "When an investor uses the equity method to account for\ninvestments in common stock, the investment account will be\nincreased when the investor recognizes",
+    "choices": [
+      "A proportionate interest in the net income of the investee.",
+      "A cash dividend received from the investee.",
+      "Periodic amortization of the goodwill related to the purchase.",
+      "Depreciation related to the excess of fair value over the\ncarrying amount of the investee’s depreciable assets at the\ndate of purchase by the investor."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the equity method, the investor’s share of the investee’s\nnet income is accounted for as an addition to the carrying\namount of the investment on the investor’s books. Losses and\ndividends are reflected as reductions of the carrying amount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 8,
+    "page": 350,
+    "topicId": "su3-equity-method",
+    "stem": "A company owns 30% of the outstanding common stock and\n100% of the outstanding noncumulative nonvoting preferred\nstock of A Corp. In Year 1, A declared dividends of $100,000\non its common stock and $60,000 on its preferred stock. The\ncompany exercises significant influence over A’s operations\nand uses the equity method to account for the investment in\nthe common stock. What amount of dividend revenue should\nthe company report in its income statement for the year ended\nDecember 31, Year 1?",
+    "choices": [
+      "$0",
+      "$30,000",
+      "$60,000",
+      "$90,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the equity method, the receipt of a cash dividend from\nthe investee should be credited to the investment account. It is\na return of, not a return on, the investment. However, the\nequity method is not applicable to preferred stock. Thus, the\ncompany should report $60,000 of revenue when the\npreferred dividends are declared.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 9,
+    "page": 351,
+    "topicId": "su3-equity-method",
+    "stem": "On July 1, Year 1, a corporation purchased 3,000 shares of E\nCo.’s 10,000 outstanding shares of common stock for $20 per\nshare but did not elect the fair value option. On December 15,\nYear 1, E paid $40,000 in dividends to its common\nshareholders. E’s net income for the year ended December 31,\nYear 1, was $120,000, earned evenly throughout the year. In\nits Year 1 income statement, what amount of income from this\ninvestment should the corporation report?",
+    "choices": [
+      "$36,000",
+      "$18,000",
+      "$12,000",
+      "$6,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The corporation’s purchase of 30% of E presumably allows it\nto exercise significant influence. Hence, it should apply the\nequity method. The investor’s share of the investee’s income\nis a function of the percentage of ownership and the length of\ntime the investment was held. The income from this\ninvestment was therefore $18,000 [$120,000 × 30% ×\n(6 months ÷ 12 months)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 10,
+    "page": 352,
+    "topicId": "su3-equity-method",
+    "stem": "Best Billiard Company owns 40% of Supreme Table\nCompany’s stock at a historical cost of $300,000. Supreme\nTable recently reported their earnings for the prior year. Best\nBilliard’s proportional share of Supreme Table’s prior year net\nincome was $10,000. Best Billiard also received $15,000 in\ndividends from Supreme Table in the prior year. Best Billiard\nuses the equity method as the accounting treatment for this\ninvestment. Based on the information presented, the proper\npresentation of this investment would result in Best Billiard\nreporting",
+    "choices": [
+      "A decrease in the book value of their investment in Supreme\nTable.",
+      "An increase in the book value of their investment in Supreme\nTable.",
+      "Their investment in Supreme Table at the original cost.",
+      "Consolidated financial statements with Supreme Table."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the equity method, an investor recognizes increases in\nearnings and the investment account for its share of the\ninvestee’s net income for the period and decreases in the\ninvestment account for dividends. Best Billiard should\nrecognize a $10,000 increase in the investment account for\nSupreme Table’s income and a $15,000 decrease in the\naccount for dividends. Thus, the account will experience a net\ndecrease in book value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 11,
+    "page": 353,
+    "topicId": "su3-equity-method",
+    "stem": "A company has an equity investment with a historical cost of\n$500,000 that is traded in an active market. On December 31,\nYear 1, the quoted price for an identical investment was\n$400,000, and the quoted price for a similar investment was\n$430,000. Using the company’s internal present value of cash\nflows model, the company arrived at a value of $410,000.\nWhat amount is the value of the investment on December 31,\nYear 1?",
+    "choices": [
+      "$400,000",
+      "$410,000",
+      "$430,000",
+      "$500,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Investment in equity securities that does not result in control or\nsignificant influence over the investee is measured at fair\nvalue each balance sheet date. Since the equity investment is\ntraded in an active market, the fair value of the investment is\nreadily determinable. Thus, the investment is measured at\n$400,000, the quoted price for an identical investment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 12,
+    "page": 354,
+    "topicId": "su3-equity-method",
+    "stem": "Goll Co. has a 25% interest in the common stock of Rose Co.\nand an 18% interest in the common stock of Jave Co. Neither\ninvestment gives Goll the ability to exercise significant\ninfluence over either company’s operating and financial\npolicies. Which of the two investments should Goll account for\nusing the equity method?",
+    "choices": [
+      "Both Rose and Jave.",
+      "Rose only.",
+      "Jave only.",
+      "Neither Rose nor Jave."
+    ],
+    "answerIndex": 3,
+    "explanation": "An investment in voting stock that enables the investor to\nexercise significant influence over the investee should be\naccounted for by the equity method (assuming that the fair\nvalue option is not elected). Because neither investment gives\nGoll Co. the ability to exercise significant influence over either\ncompany, neither the investment in Rose Co. nor the\ninvestment in Jave Co. should be accounted for using the\nequity method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 13,
+    "page": 355,
+    "topicId": "su3-equity-method",
+    "stem": "Chatham Co. owned 25% of the voting stock of Boyrum Co.\nChatham applied the equity method to account for this\ninvestment. Boyrum reported income of $100,000 and paid\n$30,000 in cash dividends during the period. What amount\nshould Chatham report as investment income?",
+    "choices": [
+      "$0",
+      "$7,500",
+      "$17,500",
+      "$25,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the equity method, the investor recognizes in income its\nshare of the investee’s earnings or losses in the periods for\nwhich they are reported by the investee. Thus, Chatham’s\nequity income (investment income) for the period is $25,000\n($100,000 net income reported by Boyrum × 25%). Under the\nequity method, dividends from the investee are treated as a\nreturn of an investment. They decrease the investment\nbalance but have no effect on the investor’s income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 14,
+    "page": 356,
+    "topicId": "su3-equity-method",
+    "stem": "The equity method would be used if a company owned what\npercentage of its investee company’s stock?",
+    "choices": [
+      "5%",
+      "15%",
+      "25%",
+      "75%"
+    ],
+    "answerIndex": 2,
+    "explanation": "The equity method should be used when the investor has\nsignificant influence over an investee and has not elected the\nfair value option. An investment of 20% or more, but not more\nthan 50%, in the voting stock of the investee generally results\nin a significant influence over an investee.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 15,
+    "page": 357,
+    "topicId": "su3-equity-method",
+    "stem": "On January 2, Well Co. purchased 10% of Rea, Inc.’s\noutstanding common shares for $400,000, which equaled the\ncarrying amount and the fair value of the interest purchased in\nRea’s net assets. Well did not elect the fair value option.\nBecause Well is the largest single shareholder in Rea, and\nWell’s officers are a majority on Rea’s board of directors, Well\nexercises significant influence over Rea. Rea reported net\nincome of $500,000 for the year and paid dividends of\n$150,000. In its December 31 balance sheet, what amount\nshould Well report as investment in Rea?",
+    "choices": [
+      "$450,000",
+      "$435,000",
+      "$400,000",
+      "$385,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The equity method should be used because Well Co.\nexercises significant influence over Rea. The investment in\nRea equals $435,000 [$400,000 investment + ($500,000 net\nincome × 10%) – ($150,000 of dividends × 10%)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 16,
+    "page": 358,
+    "topicId": "su3-equity-method",
+    "stem": "Peel Co. received a cash dividend from a common stock\ninvestment. Should Peel report an increase in the investment\nbalance if it uses the fair value method or the equity method of\naccounting?\nFair Value Equity",
+    "choices": [
+      "No         No",
+      "Yes         Yes",
+      "Yes         No",
+      "No          Yes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the fair value method, dividends from an investment in\nequity securities should be accounted for by the investor as\ndividend income unless a liquidating dividend is received.\nThus, assuming that the dividend is not liquidating, it has no\neffect on the investment balance under the fair value method.\nUnder the equity method, the investor recognizes its equity in\nthe undistributed earnings of the investee. Consequently, cash\ndividends decrease the investment balance because the\ndividend is considered to be a return of investment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 17,
+    "page": 359,
+    "topicId": "su3-equity-method",
+    "stem": "On January 1, Point, Inc., purchased 10% of Iona Co.’s\ncommon stock. Point purchased additional shares bringing its\nownership up to 40% of Iona’s common stock outstanding on\nAugust 1. During October, Iona declared and paid a cash\ndividend on all of its outstanding common stock. How much\nincome from the Iona investment should Point’s income\nstatement report?",
+    "choices": [
+      "10% of Iona’s income for January 1 to July 31 plus 40% of\nIona’s income for August 1 to December 31.",
+      "40% of Iona’s income for August 1 to December 31.",
+      "40% of Iona’s full-year income.",
+      "Amount equal to dividends received from Iona."
+    ],
+    "answerIndex": 1,
+    "explanation": "Once the ownership percentage increased from 10% to 40%,\nPoint was presumed to exercise significant influence over\nIona. Thus, Point applies the equity method prospectively from\nthe moment significant influence is achieved (August 1). Given\nthat Point held 40% of Iona’s common stock beginning August\n1, it should recognize its share (40%) of Iona’s income for the\nperiod August 1 to December 31.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 18,
+    "page": 360,
+    "topicId": "su3-equity-method",
+    "stem": "Larkin Co. has owned 25% of the common stock of Devon Co.\nfor a number of years and has the ability to exercise significant\ninfluence over Devon. The following information relates to\nLarkin’s investment in Devon during the most recent year:\nCarrying amount of Larkin’s investment in Devon at\nthe beginning of the year                            $200,000\nNet income of Devon for the year                         600,000\nTotal dividends paid to Devon’s stockholders during\nthe year                                               400,000\nWhat is the carrying amount of Larkin’s investment in Devon at\nyear end?",
+    "choices": [
+      "$100,000",
+      "$200,000",
+      "$250,000",
+      "$350,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "If an investor with significant influence over an investee has\nnot elected to account for the investment using the fair value\noption, it must apply the equity method. Thus, the carrying\namount of the investment is increased (decreased) by the\ninvestor’s share of the investee’s net income (dividends paid).\nThe year-end carrying amount is $250,000 [$200,000 +\n($600,000 × 25%) – ($400,000 × 25%)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 2,
+    "number": 19,
+    "page": 361,
+    "topicId": "su3-equity-method",
+    "stem": "At the beginning of the fiscal year, End Corp. purchased 25%\nof Turf Co. for $550,000. At the end of the fiscal year, Turf\nreported net income of $65,000 and declared and paid cash\ndividends of $30,000. End uses the equity method of\naccounting. At year end, what amount should End report in its\nbalance sheet for the investment in Turf?",
+    "choices": [
+      "$550,000",
+      "$558,750",
+      "$566,250",
+      "$573,750"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the equity method, the investor recognizes in income its\nshare of the investee’s earnings or losses in the periods for\nwhich they are reported by the investee. Therefore, the\ninvestment in Turf account is increased by the investor’s share\nof the investee’s income of $16,250 ($65,000 × 25%).\nDividends from the investee are treated as a return of an\ninvestment. Thus, the investment account is decreased by the\ndividends received of $7,500 ($30,000 × 25%). The year-end\ncarrying amount of investment in Turf is therefore $558,750\n($550,000 + $16,250 – $7,500).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 1,
+    "page": 363,
+    "topicId": "su3-debt-securities",
+    "stem": "Which one of the following statements with regard to\nmarketable securities is incorrect?",
+    "choices": [
+      "In the trading portfolio of marketable equity securities,\nunrealized gains and losses are recorded on the income\nstatement.",
+      "In the available-for-sale portfolio of marketable debt securities,\nunrealized gains and losses are recorded on the income\nstatement.",
+      "The held-to-maturity portfolio consists only of debt securities.",
+      "Debt securities may be transferred from the held-to-maturity to\nthe available-for-sale portfolio."
+    ],
+    "answerIndex": 1,
+    "explanation": "Assuming the fair value option has not been elected,\nunrealized holding gains and losses on available-for-sale debt\nsecurities are reported in other comprehensive income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 2,
+    "page": 364,
+    "topicId": "su3-debt-securities",
+    "stem": "On July 2, Year 4, Wynn, Inc., purchased as a short-term\ninvestment a $1 million face-value Kean Co. 8% bond for\n$910,000 plus accrued interest to yield 10%. The bonds\nmature on January 1, Year 11, and pay interest annually on\nJanuary 1. On December 31, Year 4, the bonds had a fair\nvalue of $945,000. On February 13, Year 5, Wynn sold the\nbonds for $920,000. In its December 31, Year 4, balance\nsheet, what amount should Wynn report for the bond if it is\nclassified as an available-for-sale security?",
+    "choices": [
+      "$910,000",
+      "$920,000",
+      "$945,000",
+      "$950,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Available-for-sale debt securities should be measured at fair\nvalue in the balance sheet. Thus, the bond should be reported\nat its fair value of $945,000 to reflect the unrealized holding\ngain (change in fair value).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 3,
+    "page": 364,
+    "topicId": "su3-debt-securities",
+    "stem": "The following information pertains to Lark Corp.’s available-for-\nsale debt securities:\nDecember 31\nYear 2      Year 3\nCost        $100,000 $100,000\nFair value    90,000     120,000\nDifferences between cost and fair values are considered to be\ntemporary. The decline in fair value was properly accounted\nfor at December 31, Year 2. Ignoring tax effects, by what\namount should other comprehensive income (OCI) be credited\nat December 31, Year 3?",
+    "choices": [
+      "$0",
+      "$10,000",
+      "$20,000",
+      "$30,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Unrealized holding gains and losses on available-for-sale debt\nsecurities, including those classified as current assets, are not\nincluded in earnings but ordinarily are reported in OCI, net of\ntax effects (ignored in this question). At December 31, Year 2,\nOCI should have been debited for $10,000 for the excess of\ncost over fair value to reflect an unrealized holding loss. At\nDecember 31, Year 3, OCI should be credited to reflect a\n$30,000 unrealized holding gain ($120,000 fair value at\n12/31/Year 3 – $90,000 fair value at 12/31/Year 2).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 4,
+    "page": 366,
+    "topicId": "su3-debt-securities",
+    "stem": "Investments classified as held-to-maturity are measured at",
+    "choices": [
+      "Fair value, with unrealized gains and losses reported in net\nincome.",
+      "Fair value, with unrealized gains and losses reported in other\ncomprehensive income (OCI).",
+      "Replacement cost, with no unrealized gains or losses reported.",
+      "Amortized cost, with no unrealized gains or losses reported."
+    ],
+    "answerIndex": 3,
+    "explanation": "Assuming the fair value option has not been elected, held-to-\nmaturity securities are reported at amortized cost, with no\nunrealized gains or losses reported.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 5,
+    "page": 366,
+    "topicId": "su3-debt-securities",
+    "stem": "Kale Co. purchased bonds at a discount on the open market\nas an investment and has the intent and ability to hold these\nbonds to maturity. Absent an election of the fair value option,\nKale should account for these bonds at",
+    "choices": [
+      "Cost.",
+      "Amortized cost.",
+      "Fair value.",
+      "Lower of cost or market."
+    ],
+    "answerIndex": 1,
+    "explanation": "Without an election of the fair value option, investments in\ndebt securities that the investor has the ability and positive\nintent to hold until maturity must be classified as held-to-\nmaturity and measured at amortized cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 6,
+    "page": 367,
+    "topicId": "su3-debt-securities",
+    "stem": "For available-for-sale debt securities included in noncurrent\nassets, which of the following amounts should be included in\nthe period’s net income?\nI.   Unrealized holding losses during the period\nII.   Realized gains during the period\nIII.    Changes in fair value during the period",
+    "choices": [
+      "III only.",
+      "II only.",
+      "I and II only.",
+      "I, II, and III."
+    ],
+    "answerIndex": 1,
+    "explanation": "The temporary decline below cost of the fair value of\navailable-for-sale debt securities is recorded in OCI, assuming\nthey are not designated as being hedged in a fair value hedge.\nThus, temporary changes in the valuation of these securities\ndo not flow through net income. A realized gain occurs when\nsecurities are sold at an amount greater than their cost basis.\nRealized gains are included in net income regardless of the\nclassification of the securities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 7,
+    "page": 368,
+    "topicId": "su3-debt-securities",
+    "stem": "When the fair value of an investment in debt securities\nexceeds its amortized cost, how should each of the following\ndebt securities be reported at the end of the year, given no\nelection of the fair value option?\nDebt Securities Classified As\nHeld-to-Maturity      Available-for-Sale",
+    "choices": [
+      "Amortized cost            Amortized cost",
+      "Amortized cost            Fair value",
+      "Fair value               Fair value",
+      "Fair value               Amortized cost"
+    ],
+    "answerIndex": 1,
+    "explanation": "Investments in debt securities must be classified as held-to-\nmaturity and measured at amortized cost in the balance sheet\nif the reporting entity has the positive intent and ability to hold\nthem to maturity. Debt securities that are not expected to be\nsold in the near term and that are not held-to-maturity should\nbe classified as available-for-sale. Available-for-sale debt\nsecurities should be reported at fair value, with unrealized\nholding gains and losses (except those on securities\ndesignated as being hedged in a fair value hedge) excluded\nfrom net income and reported in OCI.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 8,
+    "page": 369,
+    "topicId": "su3-debt-securities",
+    "stem": "An available-for-sale debt security was purchased on\nSeptember 1, Year 4, between interest dates. The next interest\npayment date was February 1, Year 5. Because of a\npermanent decline in fair value, the cost of the debt security\nsubstantially exceeded its fair value at December 31, Year 4.\nOn the balance sheet at December 31, Year 4, the debt\nsecurity should be carried at",
+    "choices": [
+      "Fair value plus the accrued interest paid.",
+      "Fair value.",
+      "Cost plus the accrued interest paid.",
+      "Cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "As a result of a permanent decline in fair value, the security\nshould be written down to fair value, and the loss should be\ntreated as a realized loss. Accordingly, the loss is recognized\nin net income, and the new cost basis is not adjusted for\nincreases in the fair value of the security. Interest paid is not\nadded to the fair value because it is part of the cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 9,
+    "page": 370,
+    "topicId": "su3-debt-securities",
+    "stem": "The amount by which the fair value of a debt security exceeds\nits cost should be accounted for in the financial statements\nwhen the security is classified as\nTrading Available-for-Sale",
+    "choices": [
+      "No              No",
+      "No              Yes",
+      "Yes             Yes",
+      "Yes             No"
+    ],
+    "answerIndex": 2,
+    "explanation": "Unrealized holding gains and losses on trading debt securities\nmust be recognized in earnings. Unrealized holding gains and\nlosses on available-for-sale debt securities are recognized in\nother comprehensive income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 10,
+    "page": 371,
+    "topicId": "su3-debt-securities",
+    "stem": "When the fair value of an investment in securities exceeds its\ncarrying amount, how should each of the following assets be\nreported at the end of the year?\nHeld-to-Maturity        Available-for-Sale\nSecurities               Securities",
+    "choices": [
+      "Fair value              Carrying amount",
+      "Carrying amount         Fair value",
+      "Carrying amount         Carrying amount",
+      "Fair value              Fair value"
+    ],
+    "answerIndex": 1,
+    "explanation": "When fair value exceeds the carrying amount of held-to-\nmaturity securities, GAAP do not permit recognition of the\nunrealized holding gain. Accordingly, these debt securities\nshould be reported at their carrying amount (amortized cost).\nHowever, fair value accounting applies to available-for-sale\nand trading securities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 11,
+    "page": 371,
+    "topicId": "su3-debt-securities",
+    "stem": "At December 31, Hull Corp. had the following debt securities\nthat were purchased during the year, its first year of\noperations:\nFair       Unrealized\nCost         value       gain (loss)\nIn Current Assets:\nSecurity A             $ 90,000      $ 60,000       $(30,000)\nSecurity B               15,000        20,000           5,000\nTotals                 $105,000      $ 80,000         $(25,000)\nIn Noncurrent Assets:\nSecurity Y            $ 70,000       $ 80,000         $ 10,000\nSecurity Z              90,000         45,000         (45,000)\nTotals                 $160,000      $125,000       $(35,000)\nAll changes in fair value are considered temporary. Security A\nis a trading security, and the other securities are available-for-\nsale securities. What amounts should be charged to earnings\nand other comprehensive income at December 31?\nOther Comprehensive\nEarnings                  Income",
+    "choices": [
+      "$(60,000)             $0",
+      "$(30,000)             $(30,000)",
+      "$(25,000)            $(30,000)",
+      "$(25,000)            $0"
+    ],
+    "answerIndex": 1,
+    "explanation": "The unrealized holding loss $(30,000) on the trading debt\nsecurity (Security A) is included in earnings. Unrealized\nholding gains and losses on available-for-sale debt securities,\nwhether classified as current or noncurrent, are included in\nother comprehensive income until realized. Thus, the net debit\nto other comprehensive income is $30,000 ($45,000 loss on Z\n– $10,000 gain of Y – $5,000 gain on B).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 12,
+    "page": 373,
+    "topicId": "su3-debt-securities",
+    "stem": "Reed, Inc., began operations on January 1. The following\ninformation pertains to Reed’s December 31 investments in\ndebt securities:\nTrading       Available-for-\nSale\nCost                         $360,000        $550,000\nFair value                     320,000         450,000\nLower of cost or fair value\napplied to each security     304,000         420,000\nIf the declines are judged to be temporary, what amounts\nshould Reed report for its trading and available-for-sale debt\nsecurities in the assets section of its December 31 balance\nsheet?\nTrading         Available-for-Sale",
+    "choices": [
+      "$360,000          $550,000",
+      "$360,000          $450,000",
+      "$320,000          $450,000",
+      "$304,000          $420,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Fair value accounting applies to both trading and available-for-\nsale debt securities. The difference in treatment is that the\nunrealized holding gains and losses are included in earnings\nfor trading securities and in other comprehensive income for\navailable-for-sale securities, assuming the latter are not\ndesignated as being hedged in a fair value hedge. Thus, these\nsecurities should be reported in the assets section of the\nbalance sheet at their fair values of $320,000 and $450,000,\nrespectively.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 13,
+    "page": 375,
+    "topicId": "su3-debt-securities",
+    "stem": "Debt securities held primarily for sale in the near term to\ngenerate income on short-term price differences are known as",
+    "choices": [
+      "Available-for-sale securities.",
+      "Discontinued operations.",
+      "Held-to-maturity securities.",
+      "Trading securities."
+    ],
+    "answerIndex": 3,
+    "explanation": "Trading debt securities are bought and held primarily for sale\nin the near term. They are purchased and sold frequently.\nThey are initially recorded at cost but are remeasured at fair\nvalue at each balance sheet date, with the unrealized holding\ngains or losses recognized in earnings.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 14,
+    "page": 375,
+    "topicId": "su3-debt-securities",
+    "stem": "Unrealized gains and losses on trading debt securities should\nbe presented in the",
+    "choices": [
+      "Statement of financial position.",
+      "Income statement.",
+      "Notes to the financial statements.",
+      "Statement of retained earnings."
+    ],
+    "answerIndex": 1,
+    "explanation": "Unrealized holding gains and losses on trading debt securities\nare included in earnings and are therefore reported in the\nincome statement.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 15,
+    "page": 376,
+    "topicId": "su3-debt-securities",
+    "stem": "Vanity Corporation holds investments in debt securities. These\ninvestments were acquired last year and have been properly\nclassified as available-for-sale (AFS) securities. During the\ncurrent year, the company sold some of the AFS securities at\na loss. At year end, the remaining portfolio of AFS securities\nhad appreciated in total value compared with the value at the\nend of last year. Based on these facts, which one of the\nfollowing should Vanity report in its financial statements at the\nend of the current year?\nIncome Statement               Balance sheet\nUnrealized holding gain on\nUnrealized loss on sale of",
+    "choices": [
+      "appreciation of AFS\nAFS securities\nsecurities\nUnrealized holding gain on\nRealized loss on sale of",
+      "appreciation of AFS\nAFS securities\nsecurities",
+      "sale of\nAFS securities\nAFS\nsecurities.\nUnrealized\nholding\nRealized loss on sale of AFS securities        gains/losses",
+      "and unrealized holding gain on                 not reported\nappreciation of AFS securities                 here on\nAFS\nsecurities"
+    ],
+    "answerIndex": 1,
+    "explanation": "AFS debt securities are measured at fair value at each\nbalance sheet date. Realized losses on the sale of available-\nfor-sale securities are included in the calculation of current\nperiod earnings. However, unrealized holding gains and\nlosses on available-for-sale securities are excluded from\nearnings and are reported as components of other\ncomprehensive income.\nUnrealized\nloss on\nUnrealized holding gain on appreciation of",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 16,
+    "page": 377,
+    "topicId": "su3-debt-securities",
+    "stem": "On January 1 of the current year, Barton Co. paid $900,000 to\npurchase two-year, 8%, $1,000,000 face value bonds that\nwere issued by another publicly-traded corporation. Barton\nplans to sell the bonds in the first quarter of the following year.\nThe fair value of the bonds at the end of the current year was\n$1,020,000. At what amount should Barton report the bonds in\nits balance sheet at the end of the current year?",
+    "choices": [
+      "$900,000",
+      "$950,000",
+      "$1,000,000",
+      "$1,020,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "An investment in a debt security is initially classified as\navailable for sale if the entity does not (1) plan to hold it to\nmaturity or (2) intend to sell it in the near term. Consequently,\nthe debt security is not initially classifiable as held-to-maturity\nor trading, respectively. At the reporting date, the classification\nis reassessed. Because Barton intends to sell the investment\nduring the first quarter, the investment should be reclassified\nas a trading debt security. Trading debt securities are\nmeasured at fair value. Thus, the bonds should be reported at\n$1,020,000. NOTE: Available-for-sale debt securities also are\nmeasured at fair value. But unrealized gains and losses are\nrecognized in other comprehensive income, not earnings.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 17,
+    "page": 379,
+    "topicId": "su3-debt-securities",
+    "stem": "At the beginning of Year 2, a company invested $40,000 in a\ndebt security. At that time the security was appropriately\nclassified as an available-for-sale security. At the end of Year\n2, the security had a fair value of $28,500. The change in fair\nvalue is deemed temporary. How should this change in fair\nvalue be reported in the financial statements?",
+    "choices": [
+      "As a realized loss of $11,500 as part of net income.",
+      "As a realized loss of $11,500 as part of other comprehensive\nincome.",
+      "As an unrealized loss of $11,500 as part of net income.",
+      "As an unrealized loss of $11,500 as part of other\ncomprehensive income."
+    ],
+    "answerIndex": 3,
+    "explanation": "Available-for-sale (AFS) debt securities are recognized initially\nat cost (the amount paid). At the balance sheet date, they are\nremeasured at fair value. Unrealized holding gains and losses\nfrom remeasurement are reported in other comprehensive\nincome (OCI) if they are temporary. Accordingly, the $11,500\n($40,000 – $28,500) decline in fair value is reported in OCI.\nHowever, a permanent decline in the fair value is recognized\ndirectly in earnings.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 18,
+    "page": 380,
+    "topicId": "su3-debt-securities",
+    "stem": "Long Co. invested in marketable securities. At year-end, fair-\nvalue changes in this investment were included in Long’s other\ncomprehensive income. How would Long classify this\ninvestment?",
+    "choices": [
+      "Held-to-maturity securities.",
+      "Trading securities.",
+      "Equity securities.",
+      "Available-for-sale debt securities."
+    ],
+    "answerIndex": 3,
+    "explanation": "Available-for-sale debt securities are measured at fair value at\neach balance sheet date. Unrealized holding gains and losses\nresulting from the remeasurement to fair value are reported in\nother comprehensive income (OCI).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 19,
+    "page": 380,
+    "topicId": "su3-debt-securities",
+    "stem": "An investment in trading securities is measured on the\nstatement of financial position at the",
+    "choices": [
+      "Cost to acquire the asset.",
+      "Accumulated income minus accumulated dividends since\nacquisition.",
+      "Lower of cost or market.",
+      "Fair value."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under U.S. GAAP, trading securities are those held principally\nfor sale in the near term. They are classified as current and\nconsist of debt securities with readily determinable fair values.\nUnrealized holding gains and losses on trading securities are\nreported in earnings. Hence, these securities are reported at\nfair value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 20,
+    "page": 381,
+    "topicId": "su3-debt-securities",
+    "stem": "An investment in available-for-sale securities is measured on\nthe statement of financial position at the",
+    "choices": [
+      "Cost to acquire the asset.",
+      "Accumulated income less accumulated dividends since\nacquisition.",
+      "Fair value.",
+      "Par or stated value of the securities."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under U.S. GAAP, available-for-sale securities are\ninvestments in debt securities. They are measured at fair\nvalue in the balance sheet.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 21,
+    "page": 382,
+    "topicId": "su3-debt-securities",
+    "stem": "Under U.S. GAAP, which one of the following\nstatements best describes the effects on the financial\nstatements resulting from a change in the accounting\nclassification for a security from available-for-sale to held-to-\nmaturity?",
+    "choices": [
+      "Comprehensive income will be impacted in the future by\nunrealized gains/losses.",
+      "Net income will not be impacted in the future by unrealized\ngains/losses.",
+      "The balance sheet will be impacted by unrealized\ngains/losses.",
+      "No change will occur regarding the accounting treatment for\nunrealized gains/losses."
+    ],
+    "answerIndex": 1,
+    "explanation": "When a security is classified as held-to-maturity, no unrealized\nholding gains or losses are recognized. Thus, unrealized\nholding gains and losses on held-to-maturity securities will not\naffect net income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 22,
+    "page": 382,
+    "topicId": "su3-debt-securities",
+    "stem": "Data regarding Ball Corp.’s investment in available-for-sale\ndebt securities follow:\nCost Fair Value\nDecember 31, Year 3 $150,000 $130,000\nDecember 31, Year 4 150,000 160,000\nDifferences between cost and fair values are considered\ntemporary. The decline in fair value was considered temporary\nand was properly accounted for at December 31, Year 3. Ball’s\nYear 4 statement of changes in equity should report an\nincrease of",
+    "choices": [
+      "$30,000",
+      "$20,000",
+      "$10,000",
+      "$0"
+    ],
+    "answerIndex": 0,
+    "explanation": "Available-for-sale debt securities are measured at fair value in\nthe financial statements. Unrealized holding gains or losses on\ntheir remeasurement to fair value are reported in OCI. On\n12/31/Year 3, the amount reported was $130,000. The\nincrease in the fair value in Year 4 of $30,000 ($160,000 –\n$130,000) is recognized as an unrealized holding gain in Year\n4 OCI. The OCI for the period is closed to accumulated OCI\nthat is reported in the equity section of the balance sheet.\nThus, the unrealized holding gain of $30,000 increases the\naccumulated OCI in Year 4. The statement of changes in\nequity reports the changes in all the equity accounts, including\naccumulated OCI.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 23,
+    "page": 384,
+    "topicId": "su3-debt-securities",
+    "stem": "Investments in debt securities may be classified as\nI.   Available-for-sale securities\nII.   Held-to-maturity securities\nIII.    Trading securities",
+    "choices": [
+      "I only.",
+      "I and II only.",
+      "I and III only.",
+      "I, II, and III."
+    ],
+    "answerIndex": 3,
+    "explanation": "An investment in debt securities may be classified as (1)\ntrading (if held for sale in the near term), (2) held-to-maturity (if\nthe holder has the positive intent and ability to hold until the\nmaturity date), or (3) available-for-sale (if not classified as\ntrading or held-to-maturity).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 24,
+    "page": 384,
+    "topicId": "su3-debt-securities",
+    "stem": "At year end, Rim Co. held several investments with the intent\nof selling them in the near term. The investments consisted of\n$100,000, 8%, 5-year bonds, purchased for $92,000, and\nshort-term notes purchased for $35,000. At year end, the\nbonds were selling on the open market for $105,000, and the\nshort-term notes had a market value of $50,000. What amount\nshould Rim report as trading securities in its year-end balance\nsheet?",
+    "choices": [
+      "$50,000",
+      "$127,000",
+      "$142,000",
+      "$155,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Debt securities that are bought and held primarily for sale in\nthe near term are classified as trading securities.\nConsequently, the bonds and the short-term notes are trading\nsecurities. They are initially recorded at cost but are\nsubsequently measured at fair value at each balance sheet\ndate. Quoted market prices in active markets are the best\nevidence of fair value. Based on market quotes at year end,\nthe bonds had a fair value of $105,000, and the short-term\nnotes had a fair value of $50,000. The total is $155,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 25,
+    "page": 385,
+    "topicId": "su3-debt-securities",
+    "stem": "Investments classified as held-to-maturity debt securities\nshould be measured at",
+    "choices": [
+      "Acquisition cost.",
+      "Amortized cost.",
+      "Lower of cost or market.",
+      "Fair value."
+    ],
+    "answerIndex": 1,
+    "explanation": "Debt securities classified as held-to-maturity are measured at\namortized cost if the reporting entity has the positive intent\nand ability to hold them to maturity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 26,
+    "page": 386,
+    "topicId": "su3-debt-securities",
+    "stem": "During the current year, Cooley Co. had an unrealized holding\ngain of $100,000 on a debt investment classified as available-\nfor-sale. Cooley’s corporate tax rate is 25%. What amount of\nthe gain should be included in Cooley’s net income and other\ncomprehensive income at the end of the current year?\nOther comprehensive\nNet income               income",
+    "choices": [
+      "$100,000           $0",
+      "$75,000           $25,000",
+      "$25,000           $75,000",
+      "$0                $75,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Unrealized holding gains and losses resulting from the\nremeasurement to fair value of available-for-sale debt\ninvestments are reported in other comprehensive income\n(OCI). Related tax effects are also recognized directly to OCI.\nThus, the net-of-tax unrealized gain of $75,000 [$100,000 × (1\n– 25%)] is recognized in OCI and no entries to net income are\nneeded.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 3,
+    "number": 27,
+    "page": 387,
+    "topicId": "su3-debt-securities",
+    "stem": "Dodd Co.’s debt securities at December 31 included available-\nfor-sale securities with a cost basis of $24,000 and a fair value\nof $30,000. Dodd’s income tax rate was 20%. What amount of\nunrealized gain or loss should Dodd recognize in its income\nstatement at December 31?",
+    "choices": [
+      "$6,000 loss.",
+      "$0.",
+      "$4,800 gain.",
+      "$6,000 gain."
+    ],
+    "answerIndex": 1,
+    "explanation": "Unrealized holding gains resulting from the remeasurement to\nfair value of available-for-sale debt investments are reported in\nother comprehensive income (OCI). Related tax effects are\nalso recognized directly to OCI. Thus, no unrealized gain is\nrecognized in the income statement at December 31.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 1,
+    "page": 389,
+    "topicId": "su3-ppe",
+    "stem": "Which of the following is not an appropriate basis for\nmeasuring the cost of property, plant, and equipment?",
+    "choices": [
+      "The purchase price, freight costs, and installation costs of a\nproductive asset should be included in the asset’s cost.",
+      "Proceeds obtained in the process of readying land for its\nintended purpose, such as from the sale of cleared timber,\nshould be recognized immediately as income.",
+      "The costs of improvements to equipment incurred after its\nacquisition should be added to the asset’s cost if they increase\nfuture service potential.",
+      "All costs incurred in the construction of a plant building, from\nexcavation to completion, should be considered as part of the\nasset’s cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "Accordingly, items of property, plant, and equipment (PPE)\nthat meet the recognition criterion are initially measured at\ncost. The cost includes the purchase price (minus trade\ndiscounts and rebates, plus purchase taxes) and the directly\nattributable costs of bringing the assets to working condition\nfor their intended use. Directly attributable costs include site\npreparation, installation, initial delivery and handling, architect\nand equipment fees, costs of removing the assets and\nrestoring the site, etc. Accordingly, the cost of land includes\nthe cost of obtaining the land and readying it for its intended\nuses, but it is inappropriate to recognize the proceeds related\nto site preparation immediately in profit or loss. They should\nbe treated as reductions in the price of the land.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 2,
+    "page": 390,
+    "topicId": "su3-ppe",
+    "stem": "The board of directors of a corporation authorized the\npresident of the corporation to pay as much as $90,000 to\npurchase a tract of land adjacent to the main factory. The\npresident negotiated a price of $75,800 for the land, and legal\nfees for closing costs amounted to $820. A contractor cleared,\nfilled, and graded the land for $6,800, and dug the foundation\nfor a new building for $4,300. A prefabricated building was\nerected at a cost of $181,000. The building has an estimated\nuseful life of 20 years with no residual value. The contractor’s\nbill indicated that the cost of the parking lot and driveways was\n$7,060. The parking lot and the driveways will need to be\nreplaced in 15 years. The proper amount to be recorded in the\ncorporation’s land account is",
+    "choices": [
+      "$76,620",
+      "$83,420",
+      "$87,720",
+      "$90,480"
+    ],
+    "answerIndex": 1,
+    "explanation": "The cost of acquiring and preparing land for its expected use\nis capitalized. The amount to be recorded in the land account\nis $83,420, consisting of the $75,800 purchase price, the $820\nclosing costs, and the $6,800 site preparation costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 3,
+    "page": 391,
+    "topicId": "su3-ppe",
+    "stem": "Which one of the following characteristics is not required for\nan asset to be properly described as property, plant, and\nequipment?",
+    "choices": [
+      "Held for use and not for investment.",
+      "Newly purchased.",
+      "Expected life of more than 1 year.",
+      "Tangible."
+    ],
+    "answerIndex": 1,
+    "explanation": "These assets are known variously as property, plant, and\nequipment (PPE); fixed assets; or plant assets.\n1. PPE are tangible. They have physical existence.\n2. PPE may be either personal property (something\nmovable, e.g., equipment) or real property (such as\nland or a building).\n3. PPE are used in the ordinary operations of an entity\nand are not held primarily for investment, resale, or\ninclusion in another product. But they are often sold.\n4. PPE are noncurrent. They are not expected to be\nused up within 1 year or the normal operating cycle of\nthe business, whichever is longer.\nHowever, an asset need not be newly purchased to be\nproperly described as PPE.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 4,
+    "page": 392,
+    "topicId": "su3-ppe",
+    "stem": "A corporation purchased manufacturing equipment for\n$100,000, with an estimated useful life of 10 years and a\nsalvage value of $15,000. The second year’s depreciation for\nthis equipment using the double-declining balance method is",
+    "choices": [
+      "$8,500",
+      "$13,600",
+      "$16,000",
+      "$20,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the double-declining balance method, the full cost of\nthe asset, or $100,000, is depreciated, but not below salvage\nvalue. Because the straight-line rate for a 10-year asset is\n10% (100% ÷ 10), the double-declining balance rate is 20%\n(10% × 2). The first year’s depreciation is $20,000 ($100,000\n× 20%), leaving a carrying amount for the second year of\n$80,000 ($100,000 – $20,000). The second year’s\ndepreciation is thus $16,000 ($80,000 × 20%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 5,
+    "page": 393,
+    "topicId": "su3-ppe",
+    "stem": "The types of assets that qualify for interest capitalization are",
+    "choices": [
+      "Assets that are being used in the earning activities of the\nreporting entity.",
+      "Assets that are ready for their intended use in the activities of\nthe reporting entity.",
+      "Assets that are constructed for the reporting entity’s own use.",
+      "Inventories that are manufactured in large quantities on a\ncontinuing basis."
+    ],
+    "answerIndex": 2,
+    "explanation": "Interest should be capitalized for (1) assets constructed or\notherwise produced for an entity’s own use, including those\nconstructed or produced by others; (2) assets intended for\nsale or lease that are constructed or produced as discrete\nprojects (e.g., ships); and (3) certain equity-based\ninvestments. An asset constructed for an entity’s own use\nqualifies for capitalization of interest if (1) relevant\nexpenditures have been made, (2) activities necessary to\nprepare the asset for its intended use are in progress, and\n(3) interest is being incurred. The investee must have activities\nin progress necessary to commence its planned principal\noperations and be expending funds to obtain qualifying assets\nfor its operations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 6,
+    "page": 394,
+    "topicId": "su3-ppe",
+    "stem": "Equipment bought by a company 3 years ago was charged to\nequipment expense in error. The cost of the equipment was\n$100,000, with no expected salvage value and a 10-year\nestimated life. The company uses the straight-line depreciation\nmethod on similar equipment. The error was discovered at the\nend of Year 3 prior to the issuance of the company’s financial\nstatements. After correction of the error, the correct carrying\nvalue of the equipment will be",
+    "choices": [
+      "$30,000",
+      "$70,000",
+      "$80,000",
+      "$100,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The straight-line depreciation that should have been charged\nto the equipment had it been properly capitalized is $30,000\n[$100,000 × (3 ÷ 10 years)]. Thus, after correction of the error,\nthe carrying amount of the equipment will be $70,000\n($100,000 – $30,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 7,
+    "page": 395,
+    "topicId": "su3-ppe",
+    "stem": "A company uses the sum-of-the-years’-digits (SYD) method of\ndepreciation. On January 1, the company purchased a\nmachine for $50,000. It had an estimated life of 5 years and no\nresidual value. Depreciation for the first year would be",
+    "choices": [
+      "$10,000",
+      "$15,000",
+      "$16,667",
+      "$20,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The SYD method multiplies a constant depreciable base (cost\nminus residual value) by a declining fraction. The numerator is\nthe number of years of the useful life minus the years elapsed\n(5 – 0 = 5). The denominator is the sum of the digits of the\nyears in the asset’s useful life (1 + 2 + 3 + 4 + 5). The first\nyear’s depreciation expense is therefore $16,667 [$50,000 ×\n(5 ÷ 15)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 8,
+    "page": 396,
+    "topicId": "su3-ppe",
+    "stem": "The selected data from statements of financial position on\nDecember 31, Year 1, and December 31, Year 2, is presented\nbelow:\n12/31/Year 1 12/31/Year 2\nProperty, plant, and equipment $295,000         $340,000\nAccumulated depreciation            (102,000)    (119,000)\nAdditional information for Year 2:\n1. Equipment was acquired for $65,000.\n2. Depreciation expense was $30,000.\nThe carrying amount (cost minus accumulated depreciation) of\nproperty, plant, and equipment disposed of in Year 2 was",
+    "choices": [
+      "$7,000",
+      "$17,000",
+      "$20,000",
+      "$32,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The Year 2 beginning carrying amount is $193,000 ($295,000\n– $102,000), and the Year 2 ending carrying amount is\n$221,000 ($340,000 – $119,000). The carrying amount of PPE\ndisposed of is $7,000 ($193,000 beginning balance +\n$65,000 acquired during Year 2 – $30,000 depreciation\nexpense – $221,000 ending balance).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 9,
+    "page": 397,
+    "topicId": "su3-ppe",
+    "stem": "An entity has owned its present facilities since 1981, and the\nCEO has authorized various expenditures to repair and\nimprove the building during the current year. The building was\nbeginning to sag, and without repair, it would only last another\n8 years. To correct the problem, the foundation was reinforced\nand several columns were added in the basement area at a\ncost of $47,200. As a result, engineers estimate that the\nbuilding will have a remaining useful life of 20 years. To install\na new local area network (LAN) and be ready for the next\ngeneration of computers, the phone lines and electrical\nsystems were updated at a cost of $81,300. The entity’s\nengineers estimate that these improvements should last\n25 years. The offices and open work spaces were rearranged\nto reduce exposure to electronic emissions at a materials cost\nof $31,000. The purchase and installation of the computers\nand software for the LAN cost $102,700. The LAN hardware\nand software will have to be replaced in 6 years, but further\nrearrangement of the offices and work spaces will not be\nnecessary. After these improvements were completed, the\nentire building was painted inside and outside at a cost of\n$9,450.\nAs controller of the entity, which one of the following actions\nwould you recommend to be in conformity with generally\naccepted accounting principles?",
+    "choices": [
+      "Treat all expenditures as expenses in the current year except\nthe cost of rearrangement ($31,000), which should be\namortized over a period not to exceed 20 years.",
+      "Capitalize all expenditures because they represent additions,\nimprovements, and rearrangements.",
+      "Capitalize all costs with the exception of the upgrade to the\nphone and electrical systems and the painting because they\nrepresent maintenance expenses.",
+      "Capitalize all costs with the exception of the painting because\nit represents maintenance expense."
+    ],
+    "answerIndex": 3,
+    "explanation": "Expenditures on capital assets that improve the asset’s\nperformance or extend its useful life are capitalized as part of\nthe asset’s cost. Accordingly, the building repairs are\ncapitalized. The substitution of a better computer system is\nclassified as an improvement, and the costs also should be\ncapitalized. Moreover, the entity capitalizes the costs of a\nrearrangement of the configurations of the offices and open\nwork spaces that (1) requires material outlays, (2) is separable\nfrom recurring expenses, and (3) provides probable future\nbenefits. However, expenditures that merely maintain the\nasset at an acceptable level of productivity are expensed as\nthey are incurred. Thus, the costs of painting the building are\nroutine, minor outlays that should be expensed immediately.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 10,
+    "page": 399,
+    "topicId": "su3-ppe",
+    "stem": "An entity installed an assembly line in Year 1. Four years later,\n$100,000 was invested to automate the line. The automation\nincreased the market value and productive capacity of the\nassembly line but did not affect its useful life. Proper\naccounting for the cost of the automation should be to",
+    "choices": [
+      "Report it as an expense in Year 5.",
+      "Establish a separate account for the $100,000.",
+      "Allocate the cost of automation between the asset and\naccumulated depreciation accounts.",
+      "Capitalize the cost to the property, plant, and equipment\naccount."
+    ],
+    "answerIndex": 3,
+    "explanation": "Subsequent costs are added to the carrying amount of an item\nof PPE if it is probable that, as a result, future economic\nbenefits will be received, and the costs are reliably\nmeasurable. An extended useful life, improved output quantity\nor quality, and reduced operating costs are all future economic\nbenefits.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 11,
+    "page": 400,
+    "topicId": "su3-ppe",
+    "stem": "A theme park purchased a new, exciting ride and financed it\nthrough the manufacturer. The following facts pertain:\nPurchase price                 $800,000\nDelivery cost                    50,000\nInstallation cost                70,000\nCost of trial runs               40,000\nInterest charges for first year 60,000\nThe straight-line method is to be used. Compute the\ndepreciation on the equipment for the first year assuming an\nestimated service life of 5 years.",
+    "choices": [
+      "$160,000",
+      "$184,000",
+      "$192,000",
+      "$204,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the straight-line method, the annual depreciation\nexpense for an asset equals the asset’s amount (cost –\nresidual value) divided by the asset’s estimated useful life.\nThe cost of the asset includes its price and the directly\nattributable costs of bringing it to working condition for\nintended use. Thus, the depreciation expense is $192,000\n[($800,000 purchase price + $50,000 delivery cost + $70,000\ninstallation cost + $40,000 trial-run cost) ÷ 5-year estimated\nservice life]. Borrowing costs incurred after the asset is\nprepared for its intended use are expensed even if the allowed\nalternative treatment of such costs is followed, and the asset\notherwise satisfies the criteria for capitalization of such\nexpenses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 12,
+    "page": 401,
+    "topicId": "su3-ppe",
+    "stem": "Which of the following is not an appropriate basis for\nmeasuring the historical cost of property, plant, and\nequipment?",
+    "choices": [
+      "Delivery and handling costs and installation costs of a\nproductive asset should be included in the asset’s cost.",
+      "The cost should include the purchase price without a\ndeduction for trade discounts.",
+      "The costs of improvements to equipment incurred after its\nacquisition should be added to the asset’s cost if they provide\nfuture economic benefits exceeding the originally assessed\nstandard of performance.",
+      "All costs incurred in the construction of a plant building, from\nexcavation to completion, should be considered as part of the\nasset’s cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "An asset classified under property, plant, and equipment is\nmeasured initially at cost. This amount includes the purchase\nprice and any directly attributable costs of bringing the asset to\nworking condition for its intended use. Directly attributable\ncosts include costs of, for example, site preparation, initial\ndelivery and handling, installation, professional fees (e.g.,\nthose of architects and engineers), and dismantling and\nremoving the asset and restoring the site. The purchase price\nis determined by adding any import fees and nonrefundable\npurchase taxes and subtracting any trade discounts and\nrebates.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 13,
+    "page": 403,
+    "topicId": "su3-ppe",
+    "stem": "On January 1, Year 1, an entity purchased an abandoned\nquarry for $1,200,000 to be used as a landfill to service its\ntrash collection contracts with nearby cities for the next 20\nyears. The entity depletes the quarry using the units-of-\nproduction method based on a surveyor’s measurements of\nvolume of the quarry’s pit. This amount was 500,000 cubic\nyards when purchased and 350,000 cubic yards at year-end\nYear 5. What is the net amount that should be shown on the\nentity’s December 31, Year 5, statement of financial position\nfor the quarry?",
+    "choices": [
+      "$1,200,000",
+      "$900,000",
+      "$840,000",
+      "$360,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The units-of-production method allocates cost based on\noutput. The net amount reported as an asset for the quarry\nusing this method is $840,000 [(350,000 cubic yards ÷\n500,000 total cubic yards) × $1,200,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 14,
+    "page": 404,
+    "topicId": "su3-ppe",
+    "stem": "A new machine has an initial cost of $300,000, an estimated\nuseful life of 2,000 hours of use over a 3-year period, and an\nestimated residual value of $70,000. Usage rates are\nestimated as 500 hours in the first year, 700 hours in the\nsecond year, and 800 hours in the third year. Depreciation\nexpense in Year 2 under the units-of-production method of\ndepreciation will be",
+    "choices": [
+      "$57,500",
+      "$75,000",
+      "$80,500",
+      "$105,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Depreciation expense equals cost minus residual value, times\nthe estimated hours of use in Year 2 divided by the total\nestimated hours of use. Thus, depreciation expense is\n$80,500 [($300,000 – $70,000) × (700 hours ÷ 2,000 hours)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 15,
+    "page": 404,
+    "topicId": "su3-ppe",
+    "stem": "An entity purchased a truck for $38,600 to transport equipment\nto various job sites. For this purpose, storage bins were\nwelded to the truck bed at a cost of $1,700. The controller of\nthe entity estimates the useful life of the truck to be 5 years\nand the residual value to be $1,000. Using the double-\ndeclining balance method, the depreciation expense on the\ntruck for its second year of use is",
+    "choices": [
+      "$9,024",
+      "$9,264",
+      "$9,432",
+      "$9,672"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the double-declining balance method, the full cost of\nthe asset, or $40,300 ($38,600 + $1,700), is depreciated, but\nnot below salvage value. Because the straight-line rate for a 5-\nyear asset is 20% (100% ÷ 5), the double-declining balance\nrate is 40% (20% × 2). The first year’s depreciation is $16,120\n($40,300 × 40%), leaving a carrying amount for the second\nyear of $24,180 ($40,300 – $16,120). The second year’s\ndepreciation is thus $9,672 ($24,180 × 40%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 16,
+    "page": 405,
+    "topicId": "su3-ppe",
+    "stem": "Which one of the following methods of depreciation will result\nin the lowest reported net income in the early life of a\ndepreciable asset?",
+    "choices": [
+      "Composite depreciation method.",
+      "Group depreciation method.",
+      "Straight-line depreciation method.",
+      "Sum-of-the-years’-digits depreciation method."
+    ],
+    "answerIndex": 3,
+    "explanation": "Sum-of-the-years’-digits depreciation has the highest\ndepreciation expense in the early years of an asset’s life,\nresulting in lower net income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 17,
+    "page": 406,
+    "topicId": "su3-ppe",
+    "stem": "A distributor of silk goods is in its first year of operation. The\ncompany has purchased ten computers at $3,500 each with an\nestimated life of 6 years; five desks at $500 each with an\nestimated life of 10 years; and two word processors at $300\neach, with an estimated life of 4 years. No residual value is\nanticipated for any of these assets. The distributor wants to\nadopt a depreciation method that will be easy to use and\nreflect an appropriate depreciation expense for the business\neach accounting period. The most appropriate method would\nbe",
+    "choices": [
+      "Composite depreciation.",
+      "Group depreciation.",
+      "Inventory method.",
+      "Replacement method."
+    ],
+    "answerIndex": 0,
+    "explanation": "Group and composite depreciation methods use the straight-\nline technique for an aggregate of assets. The composite\nmethod is used for dissimilar assets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 18,
+    "page": 407,
+    "topicId": "su3-ppe",
+    "stem": "In which of the following situations is the units-of-production\nmethod of depreciation most appropriate?",
+    "choices": [
+      "An asset’s service potential declines with use.",
+      "An asset’s service potential declines with the passage of time.",
+      "An asset is subject to rapid obsolescence.",
+      "An asset incurs increasing repairs and maintenance with use."
+    ],
+    "answerIndex": 0,
+    "explanation": "The units-of-production depreciation method allocates asset\ncost based on the level of production. As production varies, so\nwill the credit to accumulated depreciation. Consequently,\nwhen an asset’s service potential declines with use, the units-\nof-production method is the most appropriate method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 19,
+    "page": 408,
+    "topicId": "su3-ppe",
+    "stem": "Under IFRS, according to the revaluation model, an item of\nproperty, plant, and equipment must be carried at",
+    "choices": [
+      "Cost minus any accumulated depreciation.",
+      "Cost minus residual value.",
+      "Fair value minus any subsequent accumulated depreciation\nand impairment losses.",
+      "The lower of cost or net realizable value."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the revaluation model, if the fair value of an item of\nproperty, plant, and equipment can be reliably measured, it\nmust be carried subsequent to initial recognition at a revalued\namount. This amount is fair value at the date of the revaluation\nminus any subsequent accumulated depreciation and\nimpairment losses. The revaluation model is permitted by\nIFRS, not U.S. GAAP.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 20,
+    "page": 408,
+    "topicId": "su3-ppe",
+    "stem": "A company purchased a machine costing $125,000 for its\nmanufacturing operations and paid shipping costs of $20,000.\nThe company spent an additional $10,000 testing and\npreparing the machine for use. What amount should the\ncompany record as the cost of the machine?",
+    "choices": [
+      "$155,000",
+      "$145,000",
+      "$135,000",
+      "$125,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The amount to be recorded as the acquisition cost of a\nmachine includes all costs necessary to prepare it for its\nintended use. Thus, the cost of a machine used in the\nmanufacturing operations of a company includes the cost of\ntesting and preparing the machine for use and the shipping\ncosts. The acquisition cost is $155,000 ($125,000 + $20,000 +\n$10,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 21,
+    "page": 409,
+    "topicId": "su3-ppe",
+    "stem": "According to IFRS, which accounting policy may an entity\napply to measure investment property in periods subsequent\nto initial recognition?",
+    "choices": [
+      "Cost model or revaluation model.",
+      "Cost model or fair value model.",
+      "Fair value model only.",
+      "Fair value model or revaluation model."
+    ],
+    "answerIndex": 1,
+    "explanation": "An entity may choose either the cost model or the fair value\nmodel as its accounting policy. But it must apply that policy to\nall of its investment property. Under the cost model,\ninvestment property is carried at its cost minus any\naccumulated depreciation and impairment losses. Under the\nfair value model, investment property is measured at fair\nvalue, and gain or loss from a change in its fair value is\nrecognized immediately in profit or loss.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 22,
+    "page": 410,
+    "topicId": "su3-ppe",
+    "stem": "An expenditure to install an improved electrical system is a\nCapital Expenditure Revenue Expenditure",
+    "choices": [
+      "No                    Yes",
+      "No                    No",
+      "Yes                   No",
+      "Yes                   Yes"
+    ],
+    "answerIndex": 2,
+    "explanation": "A betterment (improvement) occurs when a replacement asset\nis substituted for an existing asset, and the result is increased\nproductivity, capacity, or expected useful life. If the\nimprovement benefits future periods, it should be capitalized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 23,
+    "page": 411,
+    "topicId": "su3-ppe",
+    "stem": "A firm began operating January 1 and spent $900,000 in the\nfirst month of operations on the following items:\nJanuary advertising campaign $ 40,000\nComputer equipment               280,000\n12-month insurance policy        120,000\nJanuary building rent              60,000\nJanuary salaries                 340,000\nOffice supplies                    10,000\nAutomobile                         30,000\nJanuary utilities                  20,000\nTotal                         $900,000\nThe total cash expenditures that should be capitalized as\nproperty, plant, and equipment is",
+    "choices": [
+      "$80,000",
+      "$310,000",
+      "$370,000",
+      "$440,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The assets purchased that are capitalized as property, plant,\nand equipment (PPE) are the computer equipment and\nautomobile. Therefore, PPE is $310,000 ($280,000 +\n$30,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 24,
+    "page": 412,
+    "topicId": "su3-ppe",
+    "stem": "Majesty Amusement Park recently installed a new thrill ride.\nAlthough this attraction has an average life of 40 years,\nMajesty estimates that the ride will be popular for 15 years, at\nwhich point it will be disassembled and replaced with a\ndifferent ride. Park attendance is based upon the local\neconomy, which is difficult to predict. The method Majesty\nshould use to depreciate this ride is",
+    "choices": [
+      "Declining balance.",
+      "Straight-line with a 15-year life.",
+      "Straight-line with a 40-year life.",
+      "Units-of-output."
+    ],
+    "answerIndex": 1,
+    "explanation": "Depreciation is the process of systematically and rationally\nallocating the depreciable cost of a tangible capital asset over\nits expected useful life. Estimated useful life is an estimated\nperiod over which services or economic benefits are expected\nto be obtained by the asset. Thus, the amusement park should\ndepreciate its asset over a 15-year life since that is the period\nover which it is expected to be used.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 25,
+    "page": 413,
+    "topicId": "su3-ppe",
+    "stem": "An entity purchased new machinery from a supplier before the\nentity’s year end. The entity paid freight charges for the\npurchased machinery. The entity took out a loan from a bank\nto finance the purchase. What is the proper accounting\ntreatment for the freight and interest costs related to the\nmachinery purchase?",
+    "choices": [
+      "The freight and interest costs should be immediately\nexpensed.",
+      "The freight and interest costs should be capitalized as part of\nproperty, plant, and equipment.",
+      "The interest cost should be capitalized as part of property,\nplant, and equipment, and the freight cost should be\nimmediately expensed.",
+      "The freight cost should be capitalized as part of property,\nplant, and equipment, and the interest cost should be\nimmediately expensed."
+    ],
+    "answerIndex": 3,
+    "explanation": "The costs needed to bring the asset to the condition and\nlocation necessary for its intended use must be capitalized to\nthe initial cost of the asset. Therefore, freight-in cost\nassociated with the purchase of machinery should be\ncapitalized, and interest costs incurred from a loan taken to\nfinance the purchase should be expensed as incurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 26,
+    "page": 414,
+    "topicId": "su3-ppe",
+    "stem": "Pine Co. purchased land for $450,000 as a factory site. An\nexisting building on the site was razed before construction\nbegan. Additional information is as follows:\nCost of razing old building                      $ 60,000\nTitle insurance and legal fees to purchase land       30,000\nArchitect’s fees                                      95,000\nNew building construction cost                    1,850,000\nWhat amount should Pine capitalize as the cost of the\ncompleted factory building?",
+    "choices": [
+      "$2,005,000",
+      "$1,975,000",
+      "$1,945,000",
+      "$1,910,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The capitalized costs of the building are the costs that are\nnecessary for the purchase or construction of the building and\nthat will result in future economic benefits. These include the\npurchase price, the costs of renovating and preparing the\nstructure for its expected use, the expenses of excavating the\nsite to build the foundation, the cost of construction, and the\ninterest costs incurred during construction of a building for the\nentity’s own use. The purchase price of the land, the cost of\nrazing the old building, and the title insurance and legal fees to\npurchase the land are capitalized as the cost of the land, not\nthe building. The initial cost of the building is $1,945,000\n($1,850,000 new building construction costs + $95,000\narchitect’s fees).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 27,
+    "page": 415,
+    "topicId": "su3-ppe",
+    "stem": "During the current year, Murdock Company made the following\nexpenditures relating to plant machinery and equipment:\n• Renovation of a group of machines at a cost of\n$100,000 to secure greater efficiency in production\nover their remaining 5-year useful lives. The project\nwas completed on December 31.\n• Continuing, frequent, and low-cost repairs at a cost of\n$70,000.\n• Replacement of a broken gear on a machine at a cost\nof $10,000.\nWhat total amount should be charged to repairs and\nmaintenance for the current year?",
+    "choices": [
+      "$70,000",
+      "$80,000",
+      "$170,000",
+      "$180,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Repair and maintenance costs are incurred to maintain plant\nassets in operating condition. The continuing, frequent, and\nlow-cost repairs and the replacement of a broken gear meet\nthe definition of repairs and maintenance expense.\nAccordingly, the amount that should be charged to repairs and\nmaintenance is $80,000 ($70,000 + $10,000). The renovation\ncost increased the quality of production during the expected\nuseful life of the group of machines. This $100,000 cost\nshould be capitalized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 28,
+    "page": 416,
+    "topicId": "su3-ppe",
+    "stem": "On November 2, Corley Co. incurred the following costs for\none of its printing presses:\nPurchase of collating and stapling attachment   $168,000\nInstallation of attachment                         72,000\nReplacement parts for overhaul of press               52,000\nLabor and overhead in connection with overhaul        28,000\nThe overhaul resulted in a significant increase in production.\nNeither the attachment nor the overhaul increased the\nestimated useful life of the press. What amount of the above\ncosts should be capitalized?",
+    "choices": [
+      "$0",
+      "$168,000",
+      "$240,000",
+      "$320,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Expenditures that increase the quality or quantity of a\nmachine’s output should be capitalized whether or not its\nuseful life is extended. Thus, the amount of the cost to be\ncapitalized equals $320,000 ($168,000 + $72,000 + $52,000 +\n$28,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 29,
+    "page": 417,
+    "topicId": "su3-ppe",
+    "stem": "Ott Co. purchased a machine at an original cost of $90,000 on\nJanuary 2, Year 1. The estimated useful life of the machine is\n10 years, and the machine has no salvage value. Ott uses the\nstraight-line method to calculate depreciation. On July 1, Year\n10, Ott sold the machine for $5,000. What is the amount of\ngain or loss on the disposal of the machine?",
+    "choices": [
+      "$500 loss.",
+      "$500 gain.",
+      "$4,500 loss.",
+      "$4,500 gain."
+    ],
+    "answerIndex": 1,
+    "explanation": "The gain (loss) on disposal of the machine is calculated as the\ndifference between the proceeds received and the carrying\namount of the machine on the transaction date. The carrying\namount of the machine on July 1, Year 10, is $4,500 [$90,000\ndepreciable base of the machine × (0.5 years of remaining\nuseful life ÷ 10 years total useful life)]. Therefore, the gain on\ndisposal is $500 ($5,000 – $4,500).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 30,
+    "page": 418,
+    "topicId": "su3-ppe",
+    "stem": "Under IFRS, when an entity chooses the revaluation model as\nits accounting policy for measuring property, plant, and\nequipment, which of the following statements is correct?",
+    "choices": [
+      "When an asset is revalued, the entire class of property, plant,\nand equipment to which that asset belongs must be revalued.",
+      "When an asset is revalued, individual assets within a class of\nproperty, plant, and equipment to which that asset belongs can\nbe revalued.",
+      "Revaluations of property, plant, and equipment must be made\nat least every 3 years.",
+      "Increases in an asset’s carrying amount as a result of the first\nrevaluation must be recognized as a component of profit or\nloss."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under IFRS, measurement of PPE subsequent to initial\nrecognition may be at fair value at the revaluation date (minus\nsubsequent depreciation and impairment losses). The\nassumption is that the PPE can be reliably measured. If an\nitem of PPE is revalued, every item in its class also should be\nrevalued.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 31,
+    "page": 419,
+    "topicId": "su3-ppe",
+    "stem": "Which of the following statements is false about an item of\nproperty, plant, and equipment (PPE)?",
+    "choices": [
+      "Under U.S. GAAP, such an item may be carried at an amount\nabove its historical cost.",
+      "Under IFRS, such an item may be carried at an amount above\nits historical cost.",
+      "Under IFRS, such an item may be carried at its fair value.",
+      "Under U.S. GAAP, such an item may be carried at its historical\ncost."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under U.S. GAAP, items of PPE cannot be carried above their\nhistorical cost. They are carried at historical cost minus\naccumulated depreciation and impairment losses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 32,
+    "page": 420,
+    "topicId": "su3-ppe",
+    "stem": "Under IFRS, the recoverable amount of an asset is",
+    "choices": [
+      "The higher of an asset’s value in use or its fair value minus\ncosts to sell.",
+      "The estimated selling price in the ordinary course of business\nminus the estimated costs of completion and the estimated\ncosts necessary to make the sale.",
+      "The present value of the future cash flows expected to be\nderived from an asset.",
+      "The amount obtainable from the sale of an asset in an arm’s\nlength transaction between knowledgeable, willing parties,\nminus the costs of disposal."
+    ],
+    "answerIndex": 0,
+    "explanation": "Any indication that an asset may be impaired requires the\nentity to estimate its recoverable amount. The recoverable\namount is the higher of an asset’s fair value minus costs to\nsell and its value in use. Value in use is the present value of\nestimated future cash flows expected from (1) continuing use\nof an asset and (2) its disposal at the end of its useful life. Fair\nvalue minus costs to sell is the amount obtainable from the\nsale of an asset in an arm’s length transaction between\nknowledgeable, willing parties, minus costs of disposal.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 33,
+    "page": 421,
+    "topicId": "su3-ppe",
+    "stem": "A company is performing an impairment test of one of its long-\nlived assets. IFRS, but not U.S. GAAP, require the company\nto compare the carrying amount of the asset with its",
+    "choices": [
+      "Fair value.",
+      "Purchase price.",
+      "Recoverable amount.",
+      "Undiscounted future cash flows."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under IFRS, an impairment test is a one-step test. The\ncarrying amount of an asset is compared with its recoverable\namount. An impairment loss is recognized for the excess of\nthe carrying amount over the recoverable amount. The\nrecoverable amount is the greater of an asset’s (1) fair value\nminus cost to sell or (2) value in use (i.e., the present value of\nan asset’s expected cash flows).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 34,
+    "page": 422,
+    "topicId": "su3-ppe",
+    "stem": "Depreciation of a plant asset is the process of",
+    "choices": [
+      "Asset valuation for statement of financial position purposes.",
+      "Allocation of the asset’s cost to the periods of use.",
+      "Fund accumulation for the replacement of the asset.",
+      "Asset valuation based on current replacement cost data."
+    ],
+    "answerIndex": 1,
+    "explanation": "In accounting, depreciation is the systematic and rational\nallocation of the cost of the productive capacity of a fixed\nasset to the accounting periods the asset benefits. The asset’s\nhistorical cost minus expected salvage value is the basis for\nthe allocation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 35,
+    "page": 422,
+    "topicId": "su3-ppe",
+    "stem": "Under which of the following depreciation methods is it\npossible for depreciation expense to be higher in the later\nyears of an asset’s useful life?",
+    "choices": [
+      "Straight-line.",
+      "Activity method based on units of production.",
+      "Sum-of-the-years’-digits.",
+      "Declining-balance."
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the activity method, depreciation is a function of use,\nnot the passage of time. If the estimated activity level (stated,\nfor example, in units of production) is higher in the later years\nof the asset’s useful life, depreciation expense will be higher.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 36,
+    "page": 423,
+    "topicId": "su3-ppe",
+    "stem": "Tunis Company purchased a van for $45,000. The estimated\nuseful life of the van is 5 years or 80,000 miles, and the\nsalvage value is $5,000. Actual mileage driven in the first year\nwas 20,000 miles. Which of the following methods will result in\nthe highest depreciation for the first year?",
+    "choices": [
+      "Straight-line.",
+      "Activity.",
+      "Sum-of-the-years’-digits.",
+      "Double-declining-balance."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the straight-line, activity, and SYD methods, the\ndepreciable base is $40,000 ($45,000 original cost – $5,000\nestimated salvage value). Under the straight-line method, this\nbase is allocated equally to the 5 years, resulting in a\ndepreciation expense of $8,000. Under the units-of-output\nmethod, the $40,000 is allocated evenly across the estimated\nmileage to produce a depreciation charge of $.50 per mile.\nThus, first-year depreciation expense is $10,000 (20,000 miles\n× $.50). Under SYD, the depreciable base is multiplied by the\nSYD factor (Years of useful life remaining at beginning of year\n÷ Sum of the digits). SYD depreciation expense in the first\nyear is therefore $13,333 [$40,000 × (5 ÷ 15)]. Under the DDB\nmethod, the $45,000 original cost is multiplied by a rate that is\nequal to twice the straight-line rate (2 × 20% = 40%). The\nresult is a depreciation expense of $18,000 ($45,000 × 40%)\nin the first year.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 37,
+    "page": 424,
+    "topicId": "su3-ppe",
+    "stem": "Freer Co. purchased a piece of machinery for $50,000. Freer\nwill use the machinery in the production of its product line for\nfive years, at which time the machinery will have a residual\nvalue of $5,000. Freer anticipates that it will produce 90,000\nunits the first year with total units of 450,000. Which of the\nfollowing methods will allow Freer to claim the greatest amount\nof depreciation in the first year?",
+    "choices": [
+      "Straight-line.",
+      "Sum-of-the-years’ digits.",
+      "Double declining balance.",
+      "Units of production."
+    ],
+    "answerIndex": 2,
+    "explanation": "Similar to the sum-of-the-years’ digits method, the double\ndeclining balance method is an accelerated method of\ndepreciation resulting in decreasing depreciation charges over\nthe asset’s useful life. Under this method, depreciation\nexpense is calculated as follows: Carrying amount × Double\nthe straight-line rate of depreciation. The carrying amount is\ncost less accumulated depreciation (NOTE: salvage value is\nnot considered). The straight-line rate of depreciation is\ncalculated as follows: 100% ÷ Useful life. Here, that rate is\n20% (100% ÷ 5 years). Accordingly, Freer’s depreciation\nexpense in the first year under the double declining balance\nmethod is $20,000 [$50,000 × (2 × 20%)], which is greater\nthan the other methods.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 38,
+    "page": 425,
+    "topicId": "su3-ppe",
+    "stem": "Pretoria Company acquired a new machine at a cost of\n$400,000 and incurred costs of $4,000 to have the machine\nshipped to its factory. Pretoria also paid $9,000 to construct\nand prepare a site for the new machine and $7,000 to install\nthe necessary electrical connections. Pretoria estimates that\nthe useful life of this new machine will be 5 years and that it\nwill have a salvage value of $30,000 at the end of that period.\nAssuming that Pretoria acquired the machine on January 1\nand will take a full year’s depreciation, the proper amount of\ndepreciation expense to be recorded by Pretoria if it uses the\ndouble-declining-balance method is",
+    "choices": [
+      "$148,000",
+      "$168,000",
+      "$160,000",
+      "$161,600"
+    ],
+    "answerIndex": 1,
+    "explanation": "The acquisition cost of the machine includes all costs\nnecessary to prepare it for its intended use. Hence, the\ndepreciable cost is $420,000 ($400,000 invoice price + $4,000\ndelivery expense + $9,000 site preparation + $7,000 electrical\nwork). Under the DDB method, salvage value is ignored at the\nbeginning. Thus, the full $420,000 is subject to depreciation.\nGiven a 5-year life, the annual straight-line rate is 20%, and\nthe DDB rate is 40%. Depreciation for the first year is therefore\n$168,000 ($420,000 × 40%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 39,
+    "page": 427,
+    "topicId": "su3-ppe",
+    "stem": "Sydney Co. purchased a machine that was installed and\nplaced in service on January 1, Year 1, at a cost of $480,000.\nSalvage value was estimated at $80,000. The machine is\nbeing depreciated over 10 years by the double-declining-\nbalance method. For the year ended December 31, Year 2,\nwhat amount should Sydney report as depreciation expense?",
+    "choices": [
+      "$96,000",
+      "$76,800",
+      "$64,000",
+      "$61,440"
+    ],
+    "answerIndex": 1,
+    "explanation": "DDB is an accelerated depreciation method that determines\nperiodic depreciation expense by multiplying the carrying\namount at the beginning of each period by a constant rate that\nis equal to twice the straight-line rate of depreciation. Given\nthat this machine has a 10-year useful life, the DDB rate is\n20%. Each year the carrying amount of the asset decreases\nby the depreciation expense recognized. Salvage value is\nignored in determining the carrying amount except as a\nminimum below which the asset may not be depreciated. The\ncarrying amount at the end of the first year was $384,000\n[$480,000 cost × (100% – 20%)]. Thus, second-year\ndepreciation is $76,800 ($384,000 × 20%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 40,
+    "page": 428,
+    "topicId": "su3-ppe",
+    "stem": "Turtle Co. purchased equipment on January 2, Year 1, for\n$50,000. The equipment had an estimated 5-year service life.\nTurtle’s policy for 5-year assets is to use the 200% double-\ndeclining-balance depreciation method for the first 2 years of\nthe asset’s life, and then switch to the straight-line depreciation\nmethod. In its December 31, Year 3, balance sheet, what\namount should Turtle report as accumulated depreciation for\nequipment?",
+    "choices": [
+      "$30,000",
+      "$38,000",
+      "$39,200",
+      "$42,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the DDB method, the assets are depreciated at a\nconstant rate of 40% (200% × 20% straight-line rate). This rate\nis applied in both of the first 2 years. For Year 3, straight-line\nis used based on the remaining carrying amount. The\ncalculation is as follows:\nYear 1: $50,000 × 40%                          $20,000\nYear 2: ($50,000 – $20,000) × 40%               12,000\nYear 3: ($50,000 – $20,000 – $12,000) ÷ 3     6,000\nAccumulated depreciation, 12/31/Year 3      $38,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 41,
+    "page": 430,
+    "topicId": "su3-ppe",
+    "stem": "Since Year 1, Canberra Company        •   A forge purchased\nhas replaced all of its major             January 1, Year 1, for\nmanufacturing equipment and now           $100,000. Installation\nhas the following equipment               costs were $20,000, and\nrecorded in the appropriate               the forge has an\naccounts. Canberra uses a                 estimated 5-year life with\ncalendar year as its fiscal year.         a salvage value of\n$10,000.\n•   A grinding machine\ncosting $45,000\npurchased January 1,\nYear 2. The machine has\nan estimated 5-year life\nwith a salvage value of\n$5,000.\n•   A lathe purchased\nJanuary 1, Year 4, for\n$60,000. The lathe has\nan estimated 5-year life\nwith a salvage value\nof $7,000.\nUsing the straight-line depreciation method, Canberra’s Year 4\ndepreciation expense is",
+    "choices": [
+      "$45,000",
+      "$40,334",
+      "$40,600",
+      "$40,848"
+    ],
+    "answerIndex": 2,
+    "explanation": "The straight-line method allocates the depreciation evenly\nover the estimated useful life of an asset. The depreciable\ncost equals cost minus salvage value for each asset, and\ndividing that amount by the life of the asset gives the periodic\ndepreciation as follows:\nAsset       Cost      Salvage       C–S      Life Expense\nForge $120,000       $10,000     $110,000     5 $22,000\nGrind   45,000         5,000       40,000     5   8,000\nLathe       60,000     7,000        53,000   5    10,600\nTotal                                         $40,600",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 42,
+    "page": 431,
+    "topicId": "su3-ppe",
+    "stem": "Since Year 1, Canberra Company        •   A forge purchased\nhas replaced all of its major             January 1, Year 1, for\nmanufacturing equipment and now           $100,000. Installation\nhas the following equipment               costs were $20,000, and\nrecorded in the appropriate               the forge has an\naccounts. Canberra uses a                 estimated 5-year life with\ncalendar year as its fiscal year.         a salvage value of\n$10,000.\n•   A grinding machine\ncosting $45,000\npurchased January 1,\nYear 2. The machine has\nan estimated 5-year life\nwith a salvage value of\n$5,000.\n•   A lathe purchased\nJanuary 1, Year 4, for\n$60,000. The lathe has\nan estimated 5-year life\nwith a salvage value\nof $7,000.\nUsing the double-declining-balance method, Canberra’s Year\n4 depreciation expense is",
+    "choices": [
+      "$36,464",
+      "$40,334",
+      "$40,600",
+      "$40,848"
+    ],
+    "answerIndex": 3,
+    "explanation": "The DDB method allocates a series of decreasing\ndepreciation charges over an asset’s life. A percentage that is\ndouble the straight-line rate is multiplied each year by an\nasset’s remaining carrying amount at the beginning of the\nyear. Given that each asset has a 5-year life, the straight-line\nrate is 20%. The DDB rate is therefore 40%. The forge was\npurchased in Year 1 at a total cost of $120,000. The\ndepreciation for each year is calculated as follows:\nYear Carrying Amount         %       Expense\nYear 1 $120,000             40% $48,000\nYear 2     72,000           40% 28,800\nYear 3     43,200           40% 17,280\nYear 4     25,920           40% 10,368\nFor the grinding machine, the calculations are\nYear Carrying Amount %            Expense\nYear 2 $45,000              40% $18,000\nYear 3 27,000               40% 10,800\nYear 4 16,200               40%     6,480\nThe Year 4 calculation for the new lathe requires multiplying\nthe $60,000 cost by 40% to yield a $24,000 expense. Adding\nthe Year 4 expense for each of the three machines ($10,368 +\n$6,480 + $24,000) produces total depreciation of $40,848.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 43,
+    "page": 434,
+    "topicId": "su3-ppe",
+    "stem": "Samoa                           Accumulated Acquisition Salvage\nCorporation’ Asset   Cost       Depreciation  Date       Value\ns schedule\nof             A   $100,00     $ 64,00          Year 2    $20,00\ndepreciable              0           0                         0\nassets at      B    55,000      36,000          Year 1    10,000\nDecember         C      70,000    33,600         Year 1   14,000\n31, Year 3,\n$225,00   $133,60                  $44,00\nis shown in\n0         0                       0\nthe next\ncolumn.\nSamoa\ntakes a full\nyear’s\ndepreciation\nexpense in\nthe year of\nan asset’s\nacquisition\nand no\ndepreciation\nexpense in\nthe year of\nan asset’s\ndisposition.\nThe\nestimated\nuseful life of\neach\ndepreciable\nasset is\n5 years.\nSamoa depreciates asset A on the double-declining-balance\nmethod. How much depreciation expense should Samoa\nrecord in Year 4 for asset A?",
+    "choices": [
+      "$32,000",
+      "$24,000",
+      "$14,400",
+      "$1,600"
+    ],
+    "answerIndex": 2,
+    "explanation": "DDB depreciation equals carrying amount at the beginning of\nthe year times twice the straight-line rate. Salvage value is\nconsidered only as a minimum below which the carrying\namount may not be reduced. Asset A has a useful life of 5\nyears, so the straight-line rate is 20%. The DDB rate is 40%\n(2 × 20%). The carrying amount is $36,000 ($100,000 cost –\n$64,000 accumulated depreciation). Annual depreciation\nexpense for its third year is thus $14,400 ($36,000 × 40%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 44,
+    "page": 435,
+    "topicId": "su3-ppe",
+    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nThe Year 3 depreciation expense for Roswell’s vehicle using\nthe sum-of-the-years’-digits (SYD) method was",
+    "choices": [
+      "$6,000",
+      "$8,000",
+      "$10,000",
+      "$16,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the SYD method, the amount to be depreciated is\n$40,000 ($50,000 original cost – $10,000 salvage). The\nportion expensed each year is based on a fraction, the\ndenominator of which is the summation of the years of life of\nthe asset being depreciated. For an asset with a 5-year life,\nthe denominator is 15 (5 + 4 + 3 + 2 + 1). The numerator\nequals the years remaining at the beginning of the year. For\nYear 3, the fraction is 3 ÷ 15, and depreciation expense is\n$8,000 [$40,000 × (3 ÷ 15)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 45,
+    "page": 436,
+    "topicId": "su3-ppe",
+    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nUsing the activity method, what was Roswell’s Year 5\ndepreciation expense?",
+    "choices": [
+      "$4,000",
+      "$4,800",
+      "$5,000",
+      "$6,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the activity method, periodic depreciation is based on\nthe proportion of expected total production that occurred. For\nYears 1 through 4, the total depreciation was $36,000\n{($50,000 – $10,000) × [(30,000 + 20,000 + 15,000 + 25,000)\n÷ 100,000]}. Accordingly, the remaining depreciable base was\n$4,000 ($50,000 cost – $10,000 salvage – $36,000). Given\nthat the 12,000 miles driven in Year 5 exceeded the remaining\nestimated production of 10,000 miles (100,000 – 30,000 –\n20,000 – 15,000 – 25,000), only the $4,000 of the remaining\ndepreciable base should be recognized in Year 5.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 46,
+    "page": 437,
+    "topicId": "su3-ppe",
+    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nSpiro Corp. uses the sum-of-the-years’-digits method to\ndepreciate equipment purchased in January Year 2 for\n$20,000. The estimated salvage value of the equipment is\n$2,000, and the estimated useful life is 4 years. What should\nSpiro report as the asset’s carrying amount as of December\n31, Year 4?",
+    "choices": [
+      "$1,800",
+      "$2,000",
+      "$3,800",
+      "$4,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "The sum-of-the-years’-digits (SYD) method multiplies a\nconstant depreciable base (Cost – Salvage value) by a\ndeclining fraction. It is a declining-rate, declining-charge\nmethod. Consequently, the depreciable base is $18,000\n($20,000 – $2,000). The SYD fraction’s numerator is the\nnumber of years of useful life minus the prior years elapsed.\nThe denominator is the sum of the digits of all the years in the\nasset’s life. The numerator is 1 year (4 – 3), and the\ndenominator is 10 (1 + 2 + 3 + 4). The depreciation for the last\nyear is $1,800 [$18,000 × (1 ÷ 10)], so the declining balance\nafter 3 years of the 4-year period (Year 2-Year 4) is $3,800\n($1,800 remaining depreciable base + $2,000 salvage value).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 47,
+    "page": 438,
+    "topicId": "su3-ppe",
+    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nCaracas Corp. purchased a computer on January 1 for\n$108,000. It was estimated to have a 4-year useful life and a\nsalvage value of $18,000. The double-declining-balance (DDB)\nmethod is to be used. The amount of depreciation to be\nreported at the end of the first year is",
+    "choices": [
+      "($108,000 – $18,000) × (25% × 2)",
+      "($108,000 – $18,000) × (25% × 1/2)",
+      "($108,000) × (25% × 2)",
+      "($108,000) × (25% × 1/2)"
+    ],
+    "answerIndex": 2,
+    "explanation": "When using a declining-balance method, a constant rate is\napplied to the changing carrying amount of the asset. The\ncarrying amount for the first period’s calculation is the\nacquisition cost ($108,000). The constant rate for the DDB\nmethod is twice the straight-line rate [(100% ÷ 4 years) × 2].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 48,
+    "page": 439,
+    "topicId": "su3-ppe",
+    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nThe sum-of-the-years’-digits (SYD) method of depreciation is\nbeing used for a machine with a 10-year estimated useful life.\nWhat would be the fraction applied to the cost to be\ndepreciated in the seventh year?",
+    "choices": [
+      "7/10",
+      "7/55",
+      "4/55",
+      "3/10"
+    ],
+    "answerIndex": 2,
+    "explanation": "SYD depreciation is calculated on a constant depreciable\nbase equal to the original cost minus the salvage value,\nmultiplied by the SYD fraction. The SYD fraction’s numerator\nis the number of years of remaining useful life of the asset.\nThus, the numerator is 4 (10 years – 6 years). The\ndenominator is the sum of the digits of the total years of the\nexpected useful life. In this case, the denominator is 55 {[(1 +\n2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)] or [10 (10 + 1) ÷ 2)]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 49,
+    "page": 440,
+    "topicId": "su3-ppe",
+    "stem": "Hall Co. purchased a machine on January 1 at a cost of\n$140,000. The machine had an estimated useful life of eight\nyears and a salvage value of $60,000. Hall chose to\ndepreciate the machine using the double-declining balance\nmethod. What was the carrying amount of the machine in\nHall’s balance sheet at the end of its second year of\noperations?",
+    "choices": [
+      "$60,000",
+      "$61,250",
+      "$78,750",
+      "$80,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the double-declining balance method, the salvage value\nis ignored in determining the carrying amount, but the asset is\nnot depreciated below the salvage value. Given an estimated\nuseful life of 8 years, the declining balance percentage is 25%\n(100% ÷ 8 × 2). The depreciation expense in the first year of\noperation is $35,000 ($140,000 × 25%), and the carrying\namount of the machine at the end of the first year is $105,000\n($140,000 – $35,000). The depreciation expense in the\nsecond year is $26,250 ($105,000 × 25%). The carrying\namount of the machine at the end of the second year of\noperations is $78,750 ($105,000 – $26,250).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 4,
+    "number": 50,
+    "page": 441,
+    "topicId": "su3-ppe",
+    "stem": "On January 1, Nick Co. purchased a delivery truck for\n$60,000. The truck’s salvage value is $2,000, and its\nestimated useful life is 10 years. The productive life of the\ntruck is estimated to be 100,000 miles. During the first year,\nthe truck was driven 19,000 miles. Nick uses the double-\ndeclining balance method of depreciation. What amount of\ndepreciation expense should Nick record for the first year?",
+    "choices": [
+      "$5,800",
+      "$11,020",
+      "$11,600",
+      "$12,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the double-declining balance depreciation method, the\nperiodic depreciation expense is calculated by multiplying the\ncarrying amount at the beginning of the period by two times\nthe percentage of the straight-line rate of depreciation.\nSalvage value is ignored in determining the carrying amount,\nbut the asset is not depreciated below the salvage value. The\ncarrying amount at the beginning of the first year is its cost of\n$60,000. The straight-line rate of depreciation is 10% (100% ÷\n10). The depreciation expense under the double-declining\nmethod is thus $12,000 ($60,000 × 2 × 10%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 1,
+    "page": 443,
+    "topicId": "su3-intangibles",
+    "stem": "A recognized intangible asset is amortized over its useful life",
+    "choices": [
+      "Unless the pattern of consumption of the economic benefits of\nthe asset is not reliably determinable.",
+      "If that life is determined to be finite.",
+      "Unless the precise length of that life is not known.",
+      "If that life is indefinite but not infinite."
+    ],
+    "answerIndex": 1,
+    "explanation": "A recognized intangible asset is amortized over its useful life if\nthat useful life is finite, that is, unless the useful life is\ndetermined to be indefinite. The useful life of an intangible\nasset is indefinite if no foreseeable limit exists on the period\nover which it will contribute, directly or indirectly, to the\nreporting entity’s cash flows.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 2,
+    "page": 443,
+    "topicId": "su3-intangibles",
+    "stem": "A corporation purchased a patent at the beginning of Year 1\nfor $22,100 that was to be amortized over 17 years. On July 1\nof Year 8, the corporation incurred legal costs of $11,400 to\nsuccessfully defend the patent. The amount of amortization\nexpense that the corporation should record for Year 8 is",
+    "choices": [
+      "$2,500",
+      "$1,971",
+      "$1,900",
+      "$1,300"
+    ],
+    "answerIndex": 2,
+    "explanation": "The corporation will amortize the cost of the patent on a\nstraight-line basis at the rate of $1,300 per year ($22,100 ÷\n17). The costs of a successful legal defense of a patent are\ncapitalized and amortized over the shorter of the remaining\nlegal life or the estimated useful life of the patent. Because the\nlegal costs to defend the patent were incurred when the patent\nhad 9.5 years of life remaining, they will be amortized at a rate\nof $1,200 per year ($11,400 ÷ 9.5). Because Year 8 only\nincludes a half year’s depreciation for the legal costs, total\namortization expense for that year is $1,900 ($1,300 + $600).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 3,
+    "page": 444,
+    "topicId": "su3-intangibles",
+    "stem": "Which of the following costs associated with an internally\ndeveloped patent should be capitalized?\nResearch and       Patent\nDevelopment      Registration",
+    "choices": [
+      "No              Yes",
+      "No              No",
+      "Yes             No",
+      "Yes             Yes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Generally, R&D costs are expensed as incurred. Legal fees\nand registration fees are excluded from the definition of R&D.\nThus, the patent registration fees should be capitalized as a\ncost associated with an internally developed patent. The\npatent’s R&D costs should have been expensed as they were\nincurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 4,
+    "page": 445,
+    "topicId": "su3-intangibles",
+    "stem": "On July 1, a company acquired a patent on its new\nmanufacturing process, which streamlines its production\noperation. The cost of the patent was $17,000, and the\ncompany expects that the useful life of the new process will be\n10 years, although the legal life of the patent is 17 years. The\ncompany is a calendar-year corporation and is preparing its\nDecember 31 Statement of Financial Position. At which\namount should the patent be reported at December 31 of the\nyear of acquisition?",
+    "choices": [
+      "$15,300",
+      "$16,000",
+      "$16,150",
+      "$16,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "A patent is amortized over the shorter of its useful life or legal\nlife, so annual amortization on this patent is $1,700 ($17,000 ÷\n10 years). The depreciation expense for the year of acquisition\nis $850 [$1,700 × (6 ÷ 12 months)]. The patent should\ntherefore be reported at December 31 at $16,150 ($17,000 –\n$850).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 5,
+    "page": 446,
+    "topicId": "su3-intangibles",
+    "stem": "Which of the following assets, if any, acquired this year in an\nexchange transaction is(are) potentially amortizable for public\ncompanies?\nGoodwill Trademarks",
+    "choices": [
+      "No          No",
+      "No          Yes",
+      "Yes         Yes",
+      "Yes         No"
+    ],
+    "answerIndex": 1,
+    "explanation": "Goodwill is tested for impairment at least annually but is never\namortized for public companies. Trademarks, however, may\nbe amortized but only if they have finite useful lives.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 6,
+    "page": 447,
+    "topicId": "su3-intangibles",
+    "stem": "Which one of the following statements correctly describes the\naccounting treatment of research and development costs\n(R&D) under U.S. GAAP and IFRS?",
+    "choices": [
+      "Both U.S. GAAP and IFRS allow for costs of R&D to be\ncapitalized.",
+      "Neither U.S. GAAP nor IFRS allow for costs of R&D to be\ncapitalized.",
+      "U.S. GAAP allow for the capitalization of the costs of R&D, and\nIFRS require R&D costs to be expensed.",
+      "U.S. GAAP require R&D to be expensed, and IFRS require\nresearch costs to be expensed but allow for the capitalization\nof the development costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "U.S. GAAP require that R&D costs be expensed as incurred,\nwhile IFRS separate research costs from development costs.\nUnder IFRS, research costs are to be expensed, while\ndevelopment costs can be capitalized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 7,
+    "page": 448,
+    "topicId": "su3-intangibles",
+    "stem": "Which of the following is not considered to be an intangible\nasset?",
+    "choices": [
+      "Goods on consignment.",
+      "Patents.",
+      "Copyrights.",
+      "Trademarks."
+    ],
+    "answerIndex": 0,
+    "explanation": "An intangible asset is an identifiable nonmonetary\n(nonfinancial) asset without physical substance. Inventory is a\ntangible asset. Thus, goods on consignment are not intangible\nassets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 8,
+    "page": 448,
+    "topicId": "su3-intangibles",
+    "stem": "Which of the following expenditures qualifies for asset\ncapitalization?",
+    "choices": [
+      "Cost of materials used in prototype testing.",
+      "Costs of testing a prototype and modifying its design.",
+      "Salaries of engineering staff developing a new product.",
+      "Legal costs associated with obtaining a patent on a new\nproduct."
+    ],
+    "answerIndex": 3,
+    "explanation": "Patents may be purchased or developed internally. The initial\ncapitalized cost of a purchased patent is normally the fair\nvalue of the consideration given, that is, its purchase price\nplus incidental costs, such as registration and attorney’s fees.\nInternally developed patents are less likely to be capitalized\nbecause related R&D costs generally are expensed when\nincurred. Thus, only relatively minor costs can be capitalized,\nfor example, patent registration fees and legal fees.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 9,
+    "page": 449,
+    "topicId": "su3-intangibles",
+    "stem": "During the year just ended, a company incurred research and\ndevelopment costs of $136,000 in its laboratories relating to a\npatent that was granted on July 1. Costs of registering the\npatent equaled $34,000. The patent’s legal life is 20 years, and\nits estimated economic life is 10 years. In its December 31\nbalance sheet, what amount should the company report for the\npatent, net of accumulated amortization?",
+    "choices": [
+      "$32,300",
+      "$33,150",
+      "$161,500",
+      "$165,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "R&D costs generally are expensed as incurred. However,\nlegal work in connection with patent applications or litigation\nand the sale or licensing of patents are specifically excluded\nfrom the definition of R&D. Hence, the legal costs of filing a\npatent should be capitalized. The patent should be amortized\nover its estimated economic life of 10 years. Amortization for\nthe year equals $1,700 [($34,000 ÷ 10) × (6 ÷ 12)]. Thus, the\nreported amount of the patent at year end equals $32,300\n($34,000 – $1,700).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 10,
+    "page": 450,
+    "topicId": "su3-intangibles",
+    "stem": "A purchased patent has a remaining legal life of 15 years. It\nshould be",
+    "choices": [
+      "Expensed in the year of acquisition.",
+      "Amortized over 15 years regardless of its useful life.",
+      "Amortized over its useful life if less than 15 years.",
+      "Amortized over 40 years."
+    ],
+    "answerIndex": 2,
+    "explanation": "The amortization period for an intangible asset distinct from\ngoodwill is the shorter of its useful life or the legal life\nremaining after acquisition.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 11,
+    "page": 451,
+    "topicId": "su3-intangibles",
+    "stem": "Under IFRS, an entity that acquires an intangible asset may\nuse the revaluation model for subsequent measurement only if",
+    "choices": [
+      "The useful life of the intangible asset can be reliably\ndetermined.",
+      "An active market exists for the intangible asset.",
+      "The cost of the intangible asset can be measured reliably.",
+      "The intangible asset is a monetary asset."
+    ],
+    "answerIndex": 1,
+    "explanation": "An intangible asset is carried at cost minus any accumulated\namortization and impairment losses, or at a revalued amount.\nThe revaluation model is similar to that for items of PPE (initial\nrecognition of an asset at cost). However, fair value must be\ndetermined based on an active market.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 12,
+    "page": 451,
+    "topicId": "su3-intangibles",
+    "stem": "Legal fees incurred by a company in defending its patent rights\nshould be capitalized when the outcome of litigation is\nSuccessful Unsuccessful",
+    "choices": [
+      "Yes       Yes",
+      "Yes        No",
+      "No        No",
+      "No        Yes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Legal fees incurred in the successful defense of a patent\nshould be capitalized as part of the cost of the patent and then\namortized over its remaining useful life because that useful life\nis finite. Legal fees incurred in an unsuccessful defense\nshould be expensed as the costs are incurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 13,
+    "page": 452,
+    "topicId": "su3-intangibles",
+    "stem": "Gray Co. was granted a patent on January 2, Year 5, and\nappropriately capitalized $45,000 of related costs. Gray was\namortizing the patent over its estimated useful life of 15 years.\nDuring Year 8, Gray paid $15,000 in legal costs in successfully\ndefending an attempted infringement of the patent. After the\nlegal action was completed, Gray sold the patent to the plaintiff\nfor $75,000. Gray’s policy is to take no amortization in the year\nof disposal. In its Year 8 income statement, what amount\nshould Gray report as gain from sale of patent?",
+    "choices": [
+      "$15,000",
+      "$24,000",
+      "$27,000",
+      "$39,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The patent was capitalized at $45,000 in Year 5. Annual\namortization of $3,000 ($45,000 ÷ 15 years) for Year 5, Year\n6, and Year 7 reduced the carrying amount to $36,000. The\n$15,000 in legal costs for successfully defending an attempted\ninfringement may be capitalized, which increases the carrying\namount of the patent to $51,000 ($36,000 + $15,000).\nAccordingly, the gain from the sale is $24,000 ($75,000 –\n$51,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 14,
+    "page": 453,
+    "topicId": "su3-intangibles",
+    "stem": "Which one of the following statements is correct about the\nreconciliation of U.S. GAAP and International Financial\nReporting Standards (IFRS)?",
+    "choices": [
+      "The costs of development generally are expensed under U.S.\nGAAP, but are capitalized under IFRS if they meet specific\ncriteria.",
+      "The costs of research must be expensed under U.S. GAAP,\nbut are capitalized under IFRS if they meet specific criteria.",
+      "All costs of research and development must be expensed\nunder both U.S. GAAP and IFRS.",
+      "Internally generated goodwill may not be capitalized under\nU.S. GAAP, but it may be capitalized under IFRS."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under IFRS, (1) costs incurred during the research phase of\nan internal project are expensed as incurred since the\ncompany cannot demonstrate that an intangible asset exists\nthat will generate probable future economic benefits; and\n(2) costs incurred during the development phase of an internal\nproject can be capitalized and recognized as an intangible\nasset if, and only if, the company can demonstrate all of the\nfollowing:\n1. The technical feasibility to complete the intangible\nasset\n2. Its intention to complete and use or sell the intangible\nasset\n3. Its ability to sell or use the intangible asset\n4. Availability of resources to complete and use or sell\nthe intangible asset\n5. The way in which the asset will generate probable\nfuture economic benefits\n6. Its ability to reliably measure expenditures attributable\nto the asset",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 15,
+    "page": 455,
+    "topicId": "su3-intangibles",
+    "stem": "How does IFRS differ from U.S. GAAP with respect to\naccounting for development costs?",
+    "choices": [
+      "U.S. GAAP does not allow capitalization of development costs,\neven after technically feasible, whereas IFRS does.",
+      "U.S. GAAP requires capitalization of development costs,\nwhereas IFRS makes capitalization of these costs optional.",
+      "U.S. GAAP treats development costs as part of goodwill,\nwhereas IFRS treats these costs as an intangible asset.",
+      "U.S. GAAP requires expensing of all development costs and\nIFRS requires capitalizing all development costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under U.S. GAAP, development costs must be expensed as\nincurred and are thus never capitalized. Under IFRS,\ndevelopment costs may result in recognition of an intangible\nasset if the entity can demonstrate the (1) technical feasibility\nof completion of the asset, (2) intent to complete, (3) ability to\nuse or sell the asset, (4) way in which it will generate probable\nfuture economic benefits, (5) availability of resources to\ncomplete and use or sell the asset, and (6) ability to measure\nreliably expenditures attributable to the asset.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 16,
+    "page": 456,
+    "topicId": "su3-intangibles",
+    "stem": "Amortization of intangible assets, such as copyrights or\npatents, is the accounting process of",
+    "choices": [
+      "Determining the cash flow from operations for the current\nperiod.",
+      "Systematically allocating the cost of the intangible asset to the\nperiods of use.",
+      "Accumulating a fund for the replacement of the asset at the\nend of its useful life.",
+      "Systematically reflecting the change in general price levels\nover the current period."
+    ],
+    "answerIndex": 1,
+    "explanation": "Amortization is a means of allocating an initial cost to the\nperiods that benefit from that cost. It is similar to depreciation,\na term associated with long-lived tangible assets, and\ndepletion, which is associated with natural resources.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 17,
+    "page": 456,
+    "topicId": "su3-intangibles",
+    "stem": "Which of the following types of assets would typically be\nreported on a company’s balance sheet as an intangible\nasset?",
+    "choices": [
+      "Derivative securities.",
+      "Cost of research and development.",
+      "Leasehold improvements.",
+      "Cost of patent registrations."
+    ],
+    "answerIndex": 3,
+    "explanation": "Internally developed intangibles other than goodwill are most\noften initially recorded at the amount of the incidental costs\nonly. Thus, cost of patent registration is capitalized as patent\ncost and reported in the financial statements as an intangible\nasset.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 18,
+    "page": 457,
+    "topicId": "su3-intangibles",
+    "stem": "Grayson Co. incurred significant costs in defending its patent\nrights. Which of the following is the appropriate treatment of\nthe related litigation costs?",
+    "choices": [
+      "Litigation costs would be capitalized regardless of the outcome\nof the litigation.",
+      "Litigation costs would be expensed regardless of the outcome\nof the litigation.",
+      "Litigation costs would be capitalized if the patent right is\nsuccessfully defended.",
+      "Litigation costs would be capitalized only if the patent was\npurchased rather than internally developed."
+    ],
+    "answerIndex": 2,
+    "explanation": "Subsequent to the grant of a patent, its owner may need to\nbring or defend a suit for patent infringement. The\nunrecovered costs of successful litigation are capitalized\nbecause they will benefit future periods. They are amortized\nover the shorter of the remaining legal life or the estimated\nuseful life of the patent. The costs of unsuccessful litigation\n(damages, attorneys’ fees) are expensed. An unsuccessful\nsuit also indicates that the unamortized cost of the patent has\nno value and should be recognized as a loss.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 19,
+    "page": 458,
+    "topicId": "su3-intangibles",
+    "stem": "Freya Co. has two patents that have allegedly been infringed\nby competitors. After investigation, legal counsel informed\nFreya that it had a weak case for Patent A34 and a strong\ncase in regard to Patent B19. Freya incurred additional legal\nfees to stop infringement on Patent B19. Both patents have a\nremaining legal life of 8 years. How should Freya account for\nthese legal costs incurred relating to the two patents?",
+    "choices": [
+      "Expense costs for Patent A34 and capitalize costs for\nPatent B19.",
+      "Expense costs for both Patent A34 and Patent B19.",
+      "Capitalize costs for both Patent A34 and Patent B19.",
+      "Capitalize costs for Patent A34 and expense costs for Patent\nB19."
+    ],
+    "answerIndex": 0,
+    "explanation": "Legal fees incurred in a successful defense of a patent should\nbe capitalized and amortized. Legal fees incurred in an\nunsuccessful defense should be expensed as incurred.\nHence, Freya should expense costs for Patent A34 and\ncapitalize costs for Patent B19.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 20,
+    "page": 459,
+    "topicId": "su3-intangibles",
+    "stem": "In Year 3, a company incurred $500,000 of legal costs\ndefending several patents. Included in that amount was\n$400,000 of legal costs associated with successful outcomes\nand $100,000 of legal costs associated with unsuccessful\noutcomes. What amount of legal costs, if any, should the\ncompany expense for Year 3?",
+    "choices": [
+      "$500,000",
+      "$400,000",
+      "$100,000",
+      "$0"
+    ],
+    "answerIndex": 2,
+    "explanation": "The legal costs associated with the successful litigation of a\npatent defense are capitalized because they benefit future\nperiods, while unsuccessful litigation costs must be expensed\nas incurred. Thus, only the $100,000 of legal costs associated\nwith unsuccessful outcomes are expensed in Year 3.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 21,
+    "page": 460,
+    "topicId": "su3-intangibles",
+    "stem": "Bay Co. incurred legal fees in defending its patent rights.\nThese legal fees should be capitalized when the outcome of\nthe litigation is\nSuccessful Unsuccessful",
+    "choices": [
+      "Yes         Yes",
+      "Yes         No",
+      "No           No",
+      "No           Yes"
+    ],
+    "answerIndex": 1,
+    "explanation": "The accounting treatment of the costs of the legal defense of a\npatent depends on the outcome of the litigation. The costs of\nsuccessful litigation are capitalized because they will benefit\nfuture periods. The costs of unsuccessful litigation are\nexpended as incurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 3,
+    "section": 5,
+    "number": 22,
+    "page": 461,
+    "topicId": "su3-intangibles",
+    "stem": "A company’s research department incurred $1,000,000 in\nmaterial, labor, and overhead costs to construct a prototype of\na new product and $100,000 to test and modify the prototype.\nWhich of the following statements correctly describes the\naccounting treatment of prototype costs incurred by the\ncompany?",
+    "choices": [
+      "Capitalize $1,100,000 and amortize it over the expected sales\nlife of the new product.",
+      "Capitalize $1,100,000 and amortize it over the life of the\nprototype.",
+      "Capitalize $1,000,000 and amortize it over the life of the\nprototype and expense $100,000 as incurred.",
+      "Expense $1,100,000 as incurred."
+    ],
+    "answerIndex": 3,
+    "explanation": "Research and development (R&D) costs must be expensed as\nincurred. Activities typically characterized as R&D include the\ndesign, construction, and testing of preproduction prototypes\nand models. Accordingly, the company will expense the entire\nR&D costs of $1,100,000 ($1,000,000 + $100,000) incurred in\nrespect to the prototype.",
+    "answerStatus": "source"
+  }
+]

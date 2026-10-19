@@ -492,7 +492,15 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 <span>·</span>
                 <span>{q.topic}</span>
               </div>
-              <h3 className="mb-4 text-base font-extrabold text-[var(--fg)] md:text-lg">
+              {q.sourceLanguage === "en" && lang === "ar" && (
+                <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
+                  هذا السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
+                </p>
+              )}
+              <h3
+                dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                className="mb-4 whitespace-pre-wrap text-base font-extrabold text-[var(--fg)] md:text-lg"
+              >
                 {q.question[lang]}
               </h3>
               <div className="space-y-2">
@@ -514,7 +522,12 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       <span className="mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full border border-current text-[10px] font-bold">
                         {String.fromCharCode(65 + i)}
                       </span>
-                      <span className="flex-1">{c}</span>
+                      <span
+                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        className="flex-1 whitespace-pre-wrap"
+                      >
+                        {c}
+                      </span>
                       {revealed && isCorrect && (
                         <CheckCircle2 className="size-4 shrink-0 text-emerald-300" />
                       )}
@@ -538,9 +551,19 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-[#f3d28a]">
                         {lang === "ar" ? "الشرح" : "Explanation"}
                       </div>
-                      <p className="text-sm leading-relaxed text-[var(--fg-soft)]">
+                      <p
+                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]"
+                      >
                         {q.explanation[lang]}
                       </p>
+                      {q.answerStatus === "inferred" && (
+                        <p className="mt-2 text-xs text-amber-200">
+                          {lang === "ar"
+                            ? "هذه الإجابة مستنتجة؛ لم يُذكر حلها في الملف المرفق."
+                            : "This answer was inferred; the supplied PDF does not state it."}
+                        </p>
+                      )}
                       <div className="mt-2 text-[11px] text-[#f3d28a]/70">
                         {lang === "ar" ? "المرجع:" : "Reference:"} {q.reference}
                       </div>

@@ -1,0 +1,1464 @@
+[
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 1,
+    "page": 463,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "A company is the plaintiff in two lawsuits. The first suit involves\na competitor who has made an exact copy of one of the\ncompany’s products, and the company is suing for patent\ninfringement. The attorneys estimate a $5,000,000 award for\nthe company; however, it is anticipated that the case will be in\nlitigation for 2 to 3 years before final resolution. The second\ncase also involves patent infringement; however, in this\ninstance, the attorneys do not believe the company has a\nstrong case. It is estimated that the company has a 50%\nchance of winning and the award, if any, would be in the\n$250,000 to $1,000,000 range. The most appropriate amount\nto be recorded as a gain contingency is",
+    "choices": [
+      "$0",
+      "$5,000,000",
+      "$5,125,000",
+      "$5,250,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Gain contingencies are not recorded; they are recognized only\nwhen realized. A gain contingency must be adequately\ndisclosed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 2,
+    "page": 464,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "A liability arising from a loss contingency should be recorded if\nthe",
+    "choices": [
+      "Amount of the loss can be reasonably estimated.",
+      "Contingent future events have a reasonably possible chance\nof occurring.",
+      "Contingent future events have a reasonably possible chance\nof occurring and the amount of the loss can be reasonably\nestimated.",
+      "Contingent future events will probably occur and the amount of\nthe loss can be reasonably estimated."
+    ],
+    "answerIndex": 3,
+    "explanation": "A material contingent loss must be accrued when the following\ntwo conditions are met:\n1. It is probable that, at the balance sheet date, an asset\nhas been impaired or a liability has been incurred.\n2. The amount of the loss can be reasonably estimated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 3,
+    "page": 465,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Which one of the following loss contingencies would be\naccrued as a liability rather than disclosed in the notes to the\nfinancial statement?",
+    "choices": [
+      "A guarantee of the indebtedness of another.",
+      "A dispute over additional income taxes assessed for prior\nyears (now in litigation).",
+      "A pending lawsuit with an uncertain outcome.",
+      "Liabilities for service or product warranties made as a regular\npart of business."
+    ],
+    "answerIndex": 3,
+    "explanation": "Similarly to the guidelines for loss contingencies, a liability for\nfuture warranty costs should be accrued if (1) the incurrence\nof the expense is probable and (2) the amount can be\nreasonably estimated. Warranty liabilities are usually probable\nand can be reasonably estimated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 4,
+    "page": 466,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "A company manufactures stereo systems that carry a 2-year\nassurance-type warranty against defects. Based on past\nexperience, warranty costs are estimated at 4% of sales for\nthe warranty period. During the year, stereo system sales\ntotaled $3 million, and warranty costs of $67,500 were\nincurred. In its income statement for the year ended December\n31, the company should report warranty expense of",
+    "choices": [
+      "$52,500",
+      "$60,000",
+      "$67,500",
+      "$120,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized. Expense for\nthe assurance-type warranty equals 4% of sales for the\nperiod, or $120,000 ($3,000,000 × 4%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 5,
+    "page": 467,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "On April 1, a corporation began offering a new product for sale\nunder a standard 1-year assurance-type warranty. Of the\n5,000 units in inventory at April 1, 3,000 had been sold by\nJune 30. Based on its experience with similar products, the\ncorporation estimated that the average warranty cost per unit\nsold would be $8. Actual warranty costs incurred from April 1\nthrough June 30 were $7,000. At June 30, what amount should\nthe corporation report as estimated warranty liability?",
+    "choices": [
+      "$9,000",
+      "$16,000",
+      "$17,000",
+      "$33,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "An assurance-type warranty creates a loss contingency.\nBecause the product is new, the balance of the estimated\nwarranty liability at the beginning of the year is $0. If 3,000\nunits were sold at an estimated $8 per unit warranty cost, the\ntotal credits to the liability account equaled $24,000 (3,000 ×\n$8). Given that actual warranty costs of $7,000 were debited\nto the account, the ending balance must have been $17,000\n($24,000 – $7,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 6,
+    "page": 468,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "An entity sells appliances that include a 3-year assurance-type\nwarranty. Service calls under the warranty are performed by\nan independent mechanic under a contract with the entity.\nBased on experience, warranty costs are estimated at $30 for\neach machine sold. When should the entity recognize these\nwarranty costs?",
+    "choices": [
+      "Evenly over the life of the warranty.",
+      "When the service calls are performed.",
+      "When payments are made to the mechanic.",
+      "When the machines are sold."
+    ],
+    "answerIndex": 3,
+    "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 7,
+    "page": 469,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "During Year 3, a new product carrying a 2-year assurance-\ntype warranty against defects was introduced. The estimated\nwarranty costs related to dollar sales are 2% within 12 months\nfollowing sale and 4% in the second 12 months following sale.\nSales and actual warranty expenditures for the years ended\nDecember 31, Year 3 and Year 4, are as follows:\nActual Warranty\nSales        Expenditures\nYear 3 $ 600,000         $ 9,000\nYear 4 1,000,000          30,000\n$1,600,000        $39,000\nAt December 31, Year 4, what amount of estimated warranty\nliability should be reported?",
+    "choices": [
+      "$0",
+      "$39,000",
+      "$57,000",
+      "$96,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "An assurance-type warranty creates a loss contingency. The\naccrual method therefore should be used if (1) incurrence of\nwarranty expense is probable, (2) the amount can be\nreasonably estimated, and (3) the amount is material. Thus, a\nprovision for costs incurred under an assurance-type warranty\nis made when the related revenue is recognized. Because this\nproduct is new, the beginning balance in the estimated\nwarranty liability account at the beginning of Year 3 is $0. For\nYear 3, the estimated warranty costs related to dollar sales\nare 6% (2% + 4%) of sales or $36,000 ($600,000 × 6%). For\nYear 4, the estimated warranty costs are $60,000 ($1,000,000\nsales × 6%). These amounts are charged to warranty expense\nand increase the estimated warranty liability account. This\nliability account is decreased for expenditures of $9,000 and\n$30,000 in Year 3 and Year 4, respectively. Accordingly, the\nestimated warranty liability at 12/31/Yr 4 is $57,000 ($0 +\n$36,000 – $9,000 + $60,000 – $30,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 8,
+    "page": 470,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Linden Corporation is a defendant in a lawsuit where the\nplaintiff is seeking $1,000,000 in damages. The company had\nterminated the plaintiff, George Russell, from his position with\nLinden after Russell allegedly sold specifications for one of\nLinden’s new products to a competitor. Linden’s attorney\nbelieves that it is quite possible Linden will lose the case and\nthat, if so, damages could range from $100,000 to $200,000.\nRegardless of the outcome of the case, Linden’s accountants\nestimate the company will incur an additional $5,000 in\nunemployment costs because of Russell’s termination. The\namount that Linden should accrue because of the contingency\nin this situation is",
+    "choices": [
+      "$200,000",
+      "$100,000",
+      "$5,000",
+      "$0"
+    ],
+    "answerIndex": 3,
+    "explanation": "Loss contingencies are accrued when the loss is probable.\nThe $5,000 in unemployment costs that will probably be\nincurred are a routine cost of doing business.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 9,
+    "page": 471,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "A company is being sued in a wrongful discharge suit for\n$500,000. The company attorney has advised that the\nprobability of the plaintiff prevailing and receiving the full\namount is about 80%. The attorney also indicated that the\ncase would likely be tied up in the courts for 2 to 3 years.\nThe most appropriate financial statement presentation for this\nloss contingency would be to",
+    "choices": [
+      "Record $500,000 as a loss contingency.",
+      "Record $400,000 as a loss contingency.",
+      "Disclose the loss contingency in the footnotes.",
+      "Not record or footnote the loss contingency."
+    ],
+    "answerIndex": 0,
+    "explanation": "A liability arising from a loss contingency should be recorded if\nthe contingent future event will probably occur and the amount\nof the loss can be reasonably estimated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 10,
+    "page": 472,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "In May Year 1, Caso Co. filed suit against Wayne, Inc.,\nseeking $1.9 million in damages for patent infringement. A\ncourt verdict in November Year 4 awarded Caso $1.5 million in\ndamages, but Wayne’s appeal is not expected to be decided\nbefore Year 6. Caso’s counsel believes it is probable that Caso\nwill be successful against Wayne for an estimated amount in\nthe range between $800,000 and $1.1 million, with $1 million\nconsidered the most likely amount. What amount should Caso\nrecord as income from the lawsuit in the year ended December\n31, Year 4?",
+    "choices": [
+      "$0",
+      "$800,000",
+      "$1,000,000",
+      "$1,500,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Gain contingencies are not recognized until they are realized.\nBecause the appeal is not expected to be decided before Year\n6, Caso should not record any revenue from the lawsuit in the\nYear 4 income statement. This gain contingency should be\ndisclosed; however, care should be taken to avoid misleading\nimplications as to the likelihood of realization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 11,
+    "page": 473,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "A loss contingency should be accrued on an entity’s records\nonly if it is",
+    "choices": [
+      "Reasonably possible that a liability has been incurred and the\namount of the loss is known.",
+      "Probable that a liability has been incurred and the amount of\nthe loss is unknown.",
+      "Probable that a liability has been incurred and the amount of\nthe loss can be reasonably estimated.",
+      "Remotely probable that a liability has been incurred but the\namount of the loss can be reasonably estimated."
+    ],
+    "answerIndex": 2,
+    "explanation": "Loss contingencies should be accrued when information\navailable prior to issuance of financial statements indicates\nthat it is probable that an asset has been impaired or a liability\nhas been incurred, and the amount of loss can be reasonably\nestimated. Probable is defined as a condition in which future\nevents are likely to occur.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 12,
+    "page": 474,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Conlon Co. is the plaintiff in a patent-infringement case.\nConlon has a high probability of a favorable outcome and can\nreasonably estimate the amount of the settlement. What is the\nproper accounting treatment of the patent infringement case?",
+    "choices": [
+      "A gain contingency for the minimum estimated amount of the\nsettlement.",
+      "A gain contingency for the estimated probable settlement.",
+      "Disclosure in the notes only.",
+      "No reporting is required at this time."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the conservatism restraint, when alternative accounting\nmethods are appropriate, the one having the less favorable\neffect on net income and total assets is preferable. Thus, a\nloss, not a gain, contingency may be recorded in the financial\nstatements. If the probability of realization of a gain is high, the\ncontingency is disclosed in the notes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 13,
+    "page": 475,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "A manufacturer of household appliances may incur a loss due\nto the discovery of a defect in one of its products. The\noccurrence of the loss is reasonably possible and the resulting\ncosts can be reasonably estimated. This possible loss should\nbe\nDisclosed\nAccrued      in Notes",
+    "choices": [
+      "Yes           No",
+      "Yes           Yes",
+      "No            Yes",
+      "No         No"
+    ],
+    "answerIndex": 2,
+    "explanation": "A contingent loss is accrued when two conditions are met: It is\nprobable that at a balance sheet date an asset is overstated or\na liability has been incurred, and the amount of the loss can\nbe reasonably estimated. If both conditions are not met, but\nthe probability of the loss is at least reasonably possible, the\namount of the loss must be disclosed. This loss is reasonably\npossible and reasonably estimable, and it therefore should be\ndisclosed but not accrued as a liability. The financial\nstatements should disclose the nature of the loss contingency\nand the amount or range of the possible loss. If an estimate\ncannot be made, the notes should state this.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 14,
+    "page": 476,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "When reporting contingencies,",
+    "choices": [
+      "A guarantee of another’s indebtedness is accrued as a loss\ncontingency only if the loss is considered imminent.",
+      "Disclosure of a loss contingency is to be made if there is a\nremote possibility that the loss has been incurred.",
+      "Disclosure of a loss contingency must include a dollar estimate\nof the loss.",
+      "A loss that is probable but not estimable must be disclosed\nwith a notation that the amount of the loss cannot be\nestimated."
+    ],
+    "answerIndex": 3,
+    "explanation": "Contingencies are probable (likely to occur), reasonably\npossible, or remote. When contingent losses are probable and\nthe amount can be reasonably estimated, the amount of the\nloss should be recognized. If the amount cannot be\nreasonably estimated but the loss is at least reasonably\npossible, full disclosure should be made, including a statement\nthat an estimate cannot be made.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 15,
+    "page": 477,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "On February 5, Year 2, an employee filed a $2 million lawsuit\nagainst Steel Co. for damages suffered when one of Steel’s\nplants exploded on December 29, Year 1. Steel’s legal counsel\nexpects the company will lose the lawsuit and estimates the\nloss to be between $500,000 and $1 million. The employee\nhas offered to settle the lawsuit out of court for $900,000, but\nSteel will not agree to the settlement. In its December 31, Year\n1, balance sheet, what amount should Steel report as liability\nfrom lawsuit?",
+    "choices": [
+      "$2,000,000",
+      "$1,000,000",
+      "$900,000",
+      "$500,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Because the loss is probable and can be reasonably\nestimated, it should be accrued if the amount is material. If the\nestimate is stated within a given range, and no amount within\nthat range appears to be a better estimate than any other, the\nminimum of the range should be accrued. Thus, Steel should\nreport a $500,000 contingent liability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 16,
+    "page": 478,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "On November 10, Year 4, a Garry Corp. truck was in an\naccident with an auto driven by Dacey. On January 10, Year 5,\nGarry received notice of a lawsuit seeking $800,000 in\ndamages for personal injuries suffered by Dacey. Garry\nCorp.’s counsel believes it is reasonably possible that Dacey\nwill be awarded an estimated amount in the range between\n$250,000 and $500,000, and that $400,000 is a better\nestimate of potential liability than any other amount. Garry’s\naccounting year ends on December 31, and the Year 4\nfinancial statements were issued on March 6, Year 5. What\namount of loss should Garry accrue at December 31, Year 4?",
+    "choices": [
+      "$0",
+      "$250,000",
+      "$400,000",
+      "$500,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "A contingent loss is accrued when it is probable that, at a\nbalance sheet date, an asset is overstated or a liability has\nbeen incurred and the amount of the loss can be reasonably\nestimated. If both conditions are not met but the probability of\nthe loss is at least reasonably possible, the amount of the loss\nmust be disclosed. This loss is reasonably possible and\nreasonably estimable. Hence, it should be disclosed but not\naccrued.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 17,
+    "page": 479,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "In Year 4, a contract dispute between Doll Co. and Brooker\nCo. was submitted to binding arbitration. In Year 4, each\nparty’s attorney indicated privately that the probable award in\nDoll’s favor could be reasonably estimated. In Year 5, the\narbitrator decided in favor of Doll. When should Doll and\nBrooker recognize their respective gain and loss?\nDoll’s Gain Brooker’s Loss",
+    "choices": [
+      "Year 4     Year 4",
+      "Year 4     Year 5",
+      "Year 5     Year 4",
+      "Year 5     Year 5"
+    ],
+    "answerIndex": 2,
+    "explanation": "A contingent loss is accrued when two conditions are met: (1)\nIt is probable that at a balance sheet date an asset is\noverstated or a liability has been incurred, and (2) the amount\nof the loss can be reasonably estimated. Gain contingencies\nshould not be recognized until they are realized. A gain\ncontingency should be disclosed, but care should be taken to\navoid misleading implications as to the likelihood of\nrealization. Because the award in favor of Doll is probable and\ncan be reasonably estimated, a loss should be recognized in\nYear 4 by Brooker. However, Doll should not recognize the\ngain until Year 5.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 18,
+    "page": 480,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Green Co. was preparing its year-end financial statements.\nGreen had a pending lawsuit against a competitor for\n$5,000,000 in damages. Green’s attorneys indicate that\nobtaining a favorable judgment was probable and the amount\nof damages is reasonably estimated. Green incurred $100,000\nin legal fees. The income tax rate was 30%. What amount, if\nany, should Green recognize as a contingency gain in its\nfinancial statements?",
+    "choices": [
+      "$0",
+      "$3,430,000",
+      "$3,500,000",
+      "$4,900,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Gain contingencies are recognized only when realized. A\nprobable favorable judgment and reasonably estimated\namount of damages may be disclosed in the notes to the\nfinancial statements, but no amount should be recognized as\na contingency gain until realized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 19,
+    "page": 481,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "During Year 2, a former employee of Dane Co. began a suit\nagainst Dane for wrongful termination in November Year 1.\nAfter considering all of the facts, Dane’s legal counsel believes\nthat the former employee will prevail and will probably receive\ndamages of between $1,000,000 and $1,500,000, with\n$1,300,000 being the most likely amount. Dane’s financial\nstatements for the year ended December 31, Year 1, will not\nbe issued until February Year 2. In its December 31, Year 1,\nbalance sheet, what amount should Dane report as a liability\nwith respect to the suit?",
+    "choices": [
+      "$0",
+      "$1,000,000",
+      "$1,300,000",
+      "$1,500,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "A contingent liability must be accrued when, based on the\ninformation available prior to the issuance of the financial\nstatements, the loss is probable and the amount of the loss\ncan be reasonably estimated. The most likely amount of the\nloss ($1,300,000) should be accrued if the estimate is stated\nwithin a range.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 20,
+    "page": 482,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Potter Co. has the following contingencies, all resulting from\nlawsuits in progress during the current year:\nProbable loss contingency               $1,500,000\nReasonably possible loss contingency       500,000\nProbable gain contingency                  700,000\nReasonably possible gain contingency       300,000\nPotter’s accountant believes the financial statements will be\nmisleading if the probable loss contingency is not disclosed.\nHow much should be disclosed, and how much should be\naccrued in Potter’s financial statements for the current year?\nDisclosed                    Accrued\n$ 500,000 loss               $1,500,000 loss",
+    "choices": [
+      "$1,000,000 gain              $ 700,000 gain\n$2,000,000 loss              $1,500,000 loss",
+      "$1,000,000 gain",
+      "$ 500,000 loss\n$500,000 loss                $1,500,000 loss",
+      "$300,000 gain"
+    ],
+    "answerIndex": 1,
+    "explanation": "A material contingent loss must be accrued (debit loss, credit\nliability) when it is probable that (1) an asset has been\nimpaired or a liability has been incurred and (2) the amount of\nthe loss can be reasonably estimated. Therefore, a probable\nloss contingency of $1.5 million must be accrued and\ndisclosed (Potter believes that the financial statements will be\nmisleading if it is not disclosed). If one or both conditions to\naccrue a contingent liability are not met but the probability of\nthe loss is at least reasonably possible, the nature of the\ncontingency must be described. Thus, a reasonably possible\nloss contingency of $500,000 must be disclosed. Gain\ncontingencies are recognized only when realized. However, a\ngain contingency must be adequately disclosed in the notes to\nthe financial statements. Therefore, both probable and\nreasonably possible gains must be disclosed but not accrued.\nAccordingly, a $2,000,000 ($1,500,000 + $500,000) loss and\n$1,000,000 ($700,000 + $300,000) gain must be disclosed.\n$1,000,000 gain              $1,500,000 loss",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 21,
+    "page": 484,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Which of the following methods should a company use to\naccount for a contingent liability when the loss is probable but\nnot reasonably estimated?",
+    "choices": [
+      "The liability should not be reported.",
+      "The liability should be reported as a short-term liability.",
+      "The liability should be reported as a long-term liability.",
+      "The liability should only be disclosed in the notes to the\nfinancial statements."
+    ],
+    "answerIndex": 3,
+    "explanation": "A material contingent loss must be accrued (debit loss and\ncredit contingent liability) when (1) it is probable that, at a\nbalance sheet date, an asset has been impaired or a liability\nhas been incurred and (2) the amount of the loss can be\nreasonably estimated. If the amount of loss cannot be\nreasonably estimated but the probability of the loss is at least\nreasonably possible, the nature of the contingency must be\ndescribed in the notes to the financial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 22,
+    "page": 485,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Prior to the issuance of its December 31 financial statements,\nStark Co. was named as a defendant in a lawsuit arising from\nan event that occurred in October. Stark’s legal counsel\nbelieves that it is reasonably possible that there will be an\nunfavorable outcome and that damages will range from\n$100,000 to $150,000. Which amount(s) should Stark accrue\nand/or disclose in its December 31 financial statements?\nAccrue contingent liability Disclose contingent liability",
+    "choices": [
+      "$100,000                    $100,000 - $150,000",
+      "$100,000                    $150,000",
+      "$0                         $100,000 - $150,000",
+      "$0                         $150,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "A material contingent loss must be accrued when (1) it is\nprobable that, at a balance sheet date, an asset has been\nimpaired or a liability has been incurred, and (2) the amount of\nthe loss can be reasonably estimated. Because the probability\nof the loss is reasonably possible, and not probable, no\naccrual is required. The nature of the contingency and an\nestimate of the amount of the possible loss or the range of\nloss must be disclosed when the probability of the loss is\nreasonably possible. Thus, Stark is only required to disclose\nthe range of the loss in the notes to the financial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 23,
+    "page": 486,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "True Co. did not record an accrual for a probable loss from a\nlawsuit in its financial statements. Which of the following\nexplanations for True’s not accruing the probable loss is in\naccordance with generally accepted accounting principles?",
+    "choices": [
+      "No reasonable estimate of the loss can be made.",
+      "An estimated range for the loss can be made but no amount in\nthe range is more accurate than any other amount.",
+      "Recognizing an amount in its financial statements would\nweaken the company’s defense of the lawsuit.",
+      "Accrual was not required because an estimated amount of the\nloss was disclosed in the notes to the financial statements."
+    ],
+    "answerIndex": 0,
+    "explanation": "A material contingent loss must be accrued when (1) it is\nprobable that, at a balance sheet date, an asset has been\nimpaired or a liability has been incurred, and (2) the amount of\nthe loss can be reasonably estimated. If one or both\nconditions are not met, no loss is accrued.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 24,
+    "page": 487,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Tiger Rags is evaluating its financial statement disclosures\nrelating to gain contingencies. When should Tiger Rags\nrecognize the gain on the contingency?",
+    "choices": [
+      "When realized.",
+      "When clearly defined.",
+      "When reasonably possible and the amount can be estimated.",
+      "When probable and the amount can be estimated."
+    ],
+    "answerIndex": 0,
+    "explanation": "Gain contingencies are recognized only when realized. A gain\ncontingency must be adequately disclosed in the notes to the\nfinancial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 25,
+    "page": 487,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Kamchatka sells a durable good on January 1, Year 1, and the\ncustomer is automatically given a 1-year standard warranty\nagainst manufacturing defects. The customer also buys an\nextended warranty package, extending the coverage for an\nadditional 2 years to the end of Year 3. At the time of the\noriginal sale, the company expects warranty costs to be\nincurred evenly over the life of the warranty contracts. The\ncustomer has only one warranty claim during the 3-year\nperiod, and the claim occurs during Year 2. The company will\nrecognize revenue from the sale of the extended warranty",
+    "choices": [
+      "On January 1, Year 1.",
+      "In Years 2 and 3.",
+      "At the time of the claim in Year 2.",
+      "December 31, Year 3, when the warranty expires."
+    ],
+    "answerIndex": 1,
+    "explanation": "Because the extended warranty was purchased separately, it\nis classified as a service-type warranty. Revenue from a\nservice-type warranty is recognized over the coverage period.\nBecause warranty costs are expected to be incurred evenly\nover the life of the warranty contracts, the revenue should be\nrecognized on the straight-line basis over the life of the\nextended warranty contract.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 26,
+    "page": 489,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "During Year 1, Gum Co. introduced a new product carrying a\nstandard 2-year warranty against defects. The estimated\nwarranty costs related to dollar sales are 2% within 12 months\nfollowing the sale and 4% in the second 12 months following\nthe sale. Sales and actual warranty expenditures for the years\nended December 31, Year 1 and Year 2, are as follows:\nActual Warranty\nSales       Expenditures\nYear 1 $150,000         $2,250\nYear 2 250,000           7,500\n$400,000    $9,750\nWhat amount should Gum report as estimated warranty liability\nin its December 31, Year 2, balance sheet?",
+    "choices": [
+      "$2,500",
+      "$3,250",
+      "$11,250",
+      "$14,250"
+    ],
+    "answerIndex": 3,
+    "explanation": "A standard warranty against manufacturing defects is an\nassurance-type warranty. This warranty creates a loss\ncontingency. A liability for warranty costs is recognized on the\ndate the product is sold. Because this product is new, the\nbeginning balance in the estimated warranty liability account\nat the beginning of Year 1 is $0. For Year 1, the estimated\nwarranty costs related to dollar sales are 6% (2% + 4%) of\nsales, or $9,000 ($150,000 × 6%). For Year 2, the estimated\nwarranty costs are $15,000 ($250,000 × 6%). These amounts\nare charged to warranty expense and the estimated warranty\nliability account. This liability account is decreased for\nexpenditures of $2,250 and $7,500 in Year 1 and Year 2,\nrespectively. Hence, the estimated warranty liability\nat 12/31/Year 2 is $14,250 ($9,000 – $2,250 + $15,000 –\n$7,500).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 27,
+    "page": 490,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "The selling price of a new company’s units is $20,000 each.\nThe buyers are provided with a 2-year assurance-type\nwarranty that is expected to cost the company $500 per unit in\nthe year of the sale and $1,500 per unit in the year following\nthe sale. The company sold 160 units in the first year of\noperation and 200 units in the second year. Actual payments\nfor warranty claims were $40,000 and $260,000 in Years 1 and\n2, respectively. The amount charged to warranty expense\nduring the second year of operation is",
+    "choices": [
+      "$100,000",
+      "$260,000",
+      "$340,000",
+      "$400,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the accrual method, the total estimated warranty costs\nare charged to operating expense in the year of sale. The total\nestimated warranty cost per unit is $2,000 ($500 + $1,500). In\nYear 2, 200 units were sold, so the warranty expense\nrecognized is $400,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 28,
+    "page": 491,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Wall Co. sells a product under a standard 2-year warranty\nagainst manufacturing defects. The estimated cost of warranty\nrepairs is 2% of net sales. During Wall’s first 2 years in\nbusiness, it made the following sales and incurred the\nfollowing warranty repair costs:\nYear 1\nTotal sales                 $250,000\nTotal repair costs incurred    4,500\nYear 2\nTotal sales               $300,000\nTotal repair costs incurred 5,000\nWhat amount should Wall report as warranty expense for Year\n2?",
+    "choices": [
+      "$1,000",
+      "$5,000",
+      "$5,900",
+      "$6,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "A standard warranty against manufacturing defects is an\nassurance-type warranty. This warranty creates a loss\ncontingency. A liability for warranty costs is recognized on the\ndate the product is sold. Warranty expense equals 2% of\nsales. In Year 2, warranty expense is $6,000 ($300,000 × 2%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 29,
+    "page": 492,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Hill Corp. began production of a new product. During the first\ncalendar year, 1,000 units of the product were sold for $1,200\nper unit. Each unit had a two-year warranty. Based on\nwarranty costs for similar products, Hill estimates that warranty\ncosts will average $100 per unit. Hill incurred $12,000 in\nwarranty costs during the first year and $22,000 in warranty\ncosts during the second year. The company uses the expense\nwarranty accrual method. What should be the balance in the\nestimated liability under warranties account at the end of the\nfirst calendar year?",
+    "choices": [
+      "$66,000",
+      "$88,000",
+      "$100,000",
+      "$112,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "A liability for warranty costs is recognized when the related\nrevenue is recognized (i.e., on the day the product is sold).\nEven if the warranty covers a period longer than the period in\nwhich the product is sold, the entire liability for the expected\nwarranty costs must be recognized on the day the product is\nsold. Thus, in the first calendar year a warranty liability of\n$100,000 (1,000 units × $100 estimated warranty cost per\nunit) was recognized. Actual payments for warranty costs\nreduce the amount of warranty liability recognized. Thus, at\nthe end of the first calendar year, the balance of the warranty\nliability is $88,000 ($100,000 warranty liability initially\nrecognized – $12,000 actual warranty costs incurred during\nthe first year).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 1,
+    "number": 30,
+    "page": 494,
+    "topicId": "su4-contingencies-warranties",
+    "stem": "Ace Co. settled litigation on February 1, Year 2, for an event\nthat occurred during Year 1. An estimated liability was\ndetermined as of December 31, Year 1. This estimate was\nsignificantly less than the final settlement. The transaction is\nconsidered to be material. The year-end financial statements\nfor Year 1 have not been issued. How should the settlement\nbe reported in Ace’s Year 1 financial statements?",
+    "choices": [
+      "Disclosure only of the settlement.",
+      "Only an accrual of the settlement.",
+      "Neither a disclosure nor an accrual.",
+      "Both a disclosure and an accrual."
+    ],
+    "answerIndex": 3,
+    "explanation": "A contingent loss must be accrued when, based on\ninformation available prior to the issuance of the financial\nstatements, two conditions are met: (1) It is probable that an\nasset has been impaired or a liability has been incurred at a\nbalance sheet date, and (2) the amount of the loss can be\nreasonably estimated. Because the liability was settled before\nthe financial statements were issued, it was certain that a\nliability had been incurred, and the amount could be\nspecifically determined. Thus, the contingent loss must be\naccrued. Disclosure of the amount of the accrual is necessary\nto keep the financial statements from being misleading, given\nthat the settlement was significantly greater than expected.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 1,
+    "page": 496,
+    "topicId": "su4-leases",
+    "stem": "If the lease term is less than 12 months, when may a lessee\nelect not to recognize the right-of-use asset and lease liability?",
+    "choices": [
+      "The lease transfers ownership of the leased asset to the\nlessee by the end of the lease term.",
+      "The present value of the sum of (1) the lease payments and\n(2) any residual value guaranteed by the lessee is 90% or\nmore of the fair value of the leased asset.",
+      "The lease does not include a purchase option that the lessee\nis reasonably certain to exercise.",
+      "The term of the lease is for the major part of the remaining\neconomic life of the leased asset."
+    ],
+    "answerIndex": 2,
+    "explanation": "As an accounting policy for short-term leases, a lessee may\nelect not to recognize the right-of-use asset and lease liability\nif, at the commencement date, the lease (1) has a term of 12\nmonths or less and (2) does not include a purchase option that\nthe lessee is reasonably certain to exercise.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 2,
+    "page": 497,
+    "topicId": "su4-leases",
+    "stem": "The amount recorded initially by the lessee as a lease liability\nshould normally",
+    "choices": [
+      "Exceed the total of the lease payments.",
+      "Exceed the present value of the lease payments at the\nbeginning of the lease.",
+      "Equal the total of the lease payments.",
+      "Equal the present value of the lease payments at the\nbeginning of the lease."
+    ],
+    "answerIndex": 3,
+    "explanation": "The lessee records a lease as an asset and a liability at the\npresent value of the lease payments. The discount rate is the\nlessor’s implicit interest rate (if known) or the lessee’s\nincremental borrowing rate of interest. Lease payments\ninclude the rental payments required during the lease term\nand the amount of a purchase option if the lessee is\nreasonably certain to exercise it. If no such option exists, the\nlease payments equal the sum of (1) the rental payments,\n(2) the amount of residual value guaranteed by the lessee,\nand (3) any nonrenewal penalty imposed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 3,
+    "page": 498,
+    "topicId": "su4-leases",
+    "stem": "On January 1, Year 1, Lessee entered into a 4-year lease that\ndoes not transfer ownership at the end of the lease term. It\nalso includes a purchase option not reasonably expected to be\nexercised. The leased asset has (1) a 6-year economic life,\n(2) no residual value, and (3) a present value of the annual\nlease payments equal to 75% of the leased asset’s fair value.\nIf the leased asset has no alternative use to the lessor at the\nend of the lease term, how should Lessee classify the lease?",
+    "choices": [
+      "Operating.",
+      "Sales-type.",
+      "Short-term.",
+      "Finance."
+    ],
+    "answerIndex": 3,
+    "explanation": "A lessee classifies a lease as a finance lease or an operating\nlease. A finance lease meets at least one of five classification\ncriteria. The lease does not (1) transfer ownership of the\nleased asset to the lessee or (2) contain a purchase option the\nlessee is reasonably certain to exercise. (3) The lease term\nalso is for 67% (4 years ÷ 6 years) of the leased asset’s\nremaining economic life, not a major part (at least 75%). (4)\nFurthermore, the present value of the sum of the lease\npayments is 75% of the leased asset’s fair value, not\nsubstantially all (at least 90%). However, (5) the leased asset\nis so specialized that it is expected to have no alternative use\nto the lessor at the end of the lease term. Consequently, a\ncriterion for classification of the lease as a finance lease is\nmet.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 4,
+    "page": 499,
+    "topicId": "su4-leases",
+    "stem": "Which of the following is a criterion for a lease to be classified\nas a finance lease in the books of a lessee?",
+    "choices": [
+      "The lease contains a purchase option that the lessee is\nreasonably certain to exercise.",
+      "The lease does not transfer ownership of the property to the\nlessee.",
+      "The lease term is equal to 65% or more of the estimated useful\nlife of the leased property.",
+      "The present value of the minimum lease payments is 70% or\nmore of the fair market value of the leased property."
+    ],
+    "answerIndex": 0,
+    "explanation": "A lease is classified as a finance lease by the lessee if, at\nlease commencement date, any of the following five criteria is\nsatisfied: (1) the lease transfers ownership of the leased asset\nto the lessee by the end of the lease term, (2) the lease\nincludes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise, (3) the lease term is\nfor the major part (generally is considered to be at least 75%)\nof the remaining economic life of the leased asset, (4) the\npresent value of the sum of the lease payments and any\nresidual value guaranteed by the lessee equals or exceeds\nsubstantially all (generally is considered to be at least 90%) of\nthe fair value of the leased asset, or (5) the leased asset is of\nsuch a specialized nature that it is expected to have no\nalternative use to the lessor at the end of the lease term.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 5,
+    "page": 500,
+    "topicId": "su4-leases",
+    "stem": "Manning Co. (lessee) has the following current lease liabilities\nat the end of Year 7:\nLease A – finance lease, 5 years, lease liability $125,000\nLease B – operating lease, 3 years, lease liability $65,000\nHow should Manning present the lease liabilities on its balance\nsheet?",
+    "choices": [
+      "Finance and operating lease liabilities may be presented\ntogether in the same line item on the balance sheet.",
+      "Finance and operating lease liabilities may be presented with\nother liabilities on the balance sheet.",
+      "Finance and operating lease liabilities must be presented\nseparately from each other and other liabilities on the balance\nsheet.",
+      "The finance lease liability, not the operating lease liability,\nmust be presented separately from other liabilities on the\nbalance sheet."
+    ],
+    "answerIndex": 2,
+    "explanation": "In the balance sheet, a lessee must not present (1) finance\nlease right-of-use assets in the same line item as operating\nlease right-of-use assets or (2) finance lease liabilities in the\nsame line item as operating lease liabilities. Moreover, they\nmust be presented separately from other assets or liabilities,\nrespectively.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 6,
+    "page": 501,
+    "topicId": "su4-leases",
+    "stem": "On January 1, Year 1, Frost Co. entered into a 2-year lease\nagreement with Ananz Co. to lease a new computer. The\nlease term begins on January 1, Year 1, and ends on\nDecember 31, Year 2. The lease agreement requires Frost to\npay Ananz two annual lease payments of $8,000. The present\nvalue of the minimum lease payments is $13,000. Which of the\nfollowing circumstances would require Frost to classify and\naccount for the arrangement as a finance lease?",
+    "choices": [
+      "The economic life of the computer is 3 years.",
+      "The fair value of the computer on January 1, Year 1, is\n$14,000.",
+      "Frost does not have the option of purchasing the computer at\nthe end of the lease term.",
+      "Ownership of the computer remains with Ananz throughout the\nlease term and after the lease ends."
+    ],
+    "answerIndex": 1,
+    "explanation": "A lease is classified as a finance lease by the lessee if, at\nlease commencement date, any one of five criteria is satisfied.\nOne criterion is that the present value of the sum of the lease\npayments and any residual value guaranteed by the lessee\nequals or exceeds substantially all (generally considered to be\nat least 90%) of the fair value of the leased asset.\nConsequently, if the fair value of the computer on January 1,\nYear 1, is $14,000, the lease is a finance lease because the\npresent value of the lease payments is 93% ($13,000 ÷\n$14,000) of the fair value of the computer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 7,
+    "page": 502,
+    "topicId": "su4-leases",
+    "stem": "Quick Company’s lease payments are made at the end of\neach period. Quick’s liability for a finance lease will be reduced\nperiodically by the",
+    "choices": [
+      "Lease payment minus the portion of the lease payment\nallocable to interest.",
+      "Lease payment plus the amortization of the related asset.",
+      "Lease payment minus the amortization of the related asset.",
+      "Lease payment."
+    ],
+    "answerIndex": 0,
+    "explanation": "The lease liability consists of the present value of the lease\npayments. The lease liability is reduced by the portion of the\nlease payment attributable to the lease liability. This amount is\nthe lease payment minus the interest component of the\npayment. Thus, the liability is decreased by the lease payment\neach period minus the portion of the payment allocable to\ninterest.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 8,
+    "page": 503,
+    "topicId": "su4-leases",
+    "stem": "On January 2, Cole Co. signed an 8-year noncancelable lease\nfor a new machine, requiring $15,000 annual payments at the\nbeginning of each year. The machine has a useful life of 12\nyears with no salvage value. Title passes to Cole at the lease\nexpiration date. Cole uses straight-line amortization for all of its\nplant assets. Aggregate lease payments have a present value\non January 2 of $108,000, based on an appropriate rate of\ninterest. For the current year, Cole should record amortization\nexpense for the right-of-use asset at",
+    "choices": [
+      "$0",
+      "$9,000",
+      "$13,500",
+      "$15,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "This lease is classified as a finance lease because the leased\nmachine is transferred to Cole at the end of the lease term.\nThe lease liability and right-of-use (ROU) asset are initially\nrecognized at the present value of the lease payments of\n$108,000. The lessee amortizes the ROU on a straight-line\nbasis. When, at the end of the lease term, the ownership of\nthe leased asset is transferred to the lessee or the lessee is\nreasonably certain to exercise the purchase option, the\namortization period is the useful life of the leased asset. Thus,\ncurrent amortization expense is $9,000 [($108,000 right-of-use\nasset – $0 salvage value) ÷ 12-year economic life].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 9,
+    "page": 504,
+    "topicId": "su4-leases",
+    "stem": "On January 1, Year 4, Mollat Co. signed a 6-year lease for\nequipment having a 10-year economic life. The present value\nof the monthly equal lease payments equaled 80% of the\nequipment’s fair value. The lease agreement provides for\nneither a transfer of title to Mollat nor a purchase option. In its\nYear 4 income statement, Mollat should report",
+    "choices": [
+      "Lease expense equal to the Year 4 lease payments.",
+      "Lease expense equal to the Year 4 lease payments less\ninterest expense.",
+      "Amortization expense equal to one-tenth of the equipment’s\nfair value.",
+      "Amortization expense equal to one-seventh of 80% of the\nequipment’s fair value."
+    ],
+    "answerIndex": 0,
+    "explanation": "The lease is classified as an operating lease by Mollat. No\ncriterion for classification as a financial lease is met: (1) The\nownership of the leased asset is transferred to the lessee by\nthe end of the lease term, (2) the lease includes an option to\npurchase the leased asset that the lessee is reasonably\ncertain to exercise, (3) the lease term is for the major part\n(generally considered as 75%) of the remaining economic life\nof the leased asset, (4) the present value of the sum of the\nlease payments and any residual value guaranteed by the\nlessee equals or exceeds substantially all of the fair value\n(generally considered as 90%) of the leased asset, and (5) the\nleased asset is so specialized that it is expected to have no\nalternative use to the lessor at the end of the lease term. In an\noperating lease, a lessee recognizes for each period a single\nlease expense. It is calculated so that the total undiscounted\nlease payments are allocated over the lease term on a\nstraight-line basis. Because Mollat makes equal monthly lease\npayments throughout the entire lease term, annual lease\nexpense equals the annual lease payments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 10,
+    "page": 507,
+    "topicId": "su4-leases",
+    "stem": "Neary Company has entered into a contract to lease\ncomputers from Baldwin Company starting on January 1, Year 1.\nRelevant information pertaining to the lease is provided below.\nLease term                                    4 Years\nUseful life of computers                      5 Years\nPresent value of future lease payments      $100,000\nFair value of leased asset on date of lease 105,000\nBaldwin’s implicit rate (known to Neary)         10%\nAt the end of the lease term, ownership of the asset transfers from\nBaldwin to Neary. Neary has properly classified this lease as a capital\nlease on its financial statements and uses straight-line depreciation\non comparable assets.\nAt January 1, Year 1, the lease would be reported on Neary’s\nbooks as a(n)",
+    "choices": [
+      "Asset only.",
+      "Asset and a liability.",
+      "Liability only.",
+      "Expense and a liability."
+    ],
+    "answerIndex": 1,
+    "explanation": "The lease is classified as a finance lease by the lessee\nbecause the ownership of the leased asset is transferred to\nthe lessee at the end of the lease term. The lessee must\nrecord a finance lease by debiting a right-of-use asset and\ncrediting a lease liability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 11,
+    "page": 507,
+    "topicId": "su4-leases",
+    "stem": "Neary Company has entered into a contract to lease\ncomputers from Baldwin Company starting on January 1, Year 1.\nRelevant information pertaining to the lease is provided below.\nLease term                                    4 Years\nUseful life of computers                      5 Years\nPresent value of future lease payments      $100,000\nFair value of leased asset on date of lease 105,000\nBaldwin’s implicit rate (known to Neary)         10%\nAt the end of the lease term, ownership of the asset transfers from\nBaldwin to Neary. Neary has properly classified this lease as a capital\nlease on its financial statements and uses straight-line depreciation\non comparable assets.\nWhat is the annual amortization expense that Neary will record\non the leased computers?",
+    "choices": [
+      "$20,000",
+      "$21,000",
+      "$25,000",
+      "$26,250"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under a finance lease, the lessee recognizes a right-of-use\nasset and lease liability at an amount equal to the present\nvalue of the lease payments ($100,000) given no initial direct\ncosts. Because the lease provides for the transfer of\nownership, the lease is a finance lease, and the lessee should\namortize the right-of-use asset using the straight-line method\nover the estimated useful life (5 years). Annual expense is\n$20,000 ($100,000 ÷ 5 years).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 12,
+    "page": 508,
+    "topicId": "su4-leases",
+    "stem": "Neary Company has entered into a contract to lease\ncomputers from Baldwin Company starting on January 1, Year 1.\nRelevant information pertaining to the lease is provided below.\nLease term                                    4 Years\nUseful life of computers                      5 Years\nPresent value of future lease payments      $100,000\nFair value of leased asset on date of lease 105,000\nBaldwin’s implicit rate (known to Neary)         10%\nAt the end of the lease term, ownership of the asset transfers from\nBaldwin to Neary. Neary has properly classified this lease as a capital\nlease on its financial statements and uses straight-line depreciation\non comparable assets.\nIf a lessee uses off-balance-sheet financing, assets have been\nacquired",
+    "choices": [
+      "For cash.",
+      "With short-term leases.",
+      "With finance leases.",
+      "With a line of credit."
+    ],
+    "answerIndex": 1,
+    "explanation": "A short-term lease has a term of 12 or fewer months and does\nnot include a purchase option reasonably expected to be\nexercised. For this type of lease, the lessee may elect not to\nrecognize the right-of-use asset and lease liability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 13,
+    "page": 509,
+    "topicId": "su4-leases",
+    "stem": "Neary Company has entered into a contract to lease\ncomputers from Baldwin Company starting on January 1, Year 1.\nRelevant information pertaining to the lease is provided below.\nLease term                                    4 Years\nUseful life of computers                      5 Years\nPresent value of future lease payments      $100,000\nFair value of leased asset on date of lease 105,000\nBaldwin’s implicit rate (known to Neary)         10%\nAt the end of the lease term, ownership of the asset transfers from\nBaldwin to Neary. Neary has properly classified this lease as a capital\nlease on its financial statements and uses straight-line depreciation\non comparable assets.\nWhich of the following meets a criterion for a lessee to account\nfor a lease as a finance lease?",
+    "choices": [
+      "The lease is for unspecialized equipment.",
+      "A third party has guaranteed the residual value of the leased\nasset.",
+      "The present value of the lease payments is 75% of the fair\nvalue of the leased asset.",
+      "The lessee is reasonably certain to exercise the option to\npurchase the leased asset."
+    ],
+    "answerIndex": 3,
+    "explanation": "A lease is classified as a sales-type lease by the lessor and as\na finance lease by the lessee if, at lease commencement, the\nlease includes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 14,
+    "page": 509,
+    "topicId": "su4-leases",
+    "stem": "A corporation signed a 3-year lease for an automobile on\nDecember 1. The automobile had a list price of $17,000 and\nan estimated useful life of 8 years. The lease called for\npayments of $500 per month for 36 months. The present value\nof the $500 payments was $15,054 at the corporation’s\nincremental borrowing rate and $15,496 at the lessor’s implicit\nrate, which is known to the lessee. Based on the above\ninformation, the corporation should record the lease as a(n)",
+    "choices": [
+      "Finance lease.",
+      "Operating lease.",
+      "Sale-leaseback.",
+      "Sales-type lease."
+    ],
+    "answerIndex": 0,
+    "explanation": "A lessee must report a lease as a finance lease if the present\nvalue of the lease payments and any residual value\nguaranteed by the lessee is 90% or more of the fair value of\nthe leased asset. If the lessor’s implicit rate is known to the\nlessee, that is the appropriate discount rate. Dividing the\npresent value by the list price of the automobile yields a result\n> 90% ($15,496 ÷ $17,000 = 91.2%). Thus, this lease must be\nclassified by the corporation as a finance lease.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 15,
+    "page": 510,
+    "topicId": "su4-leases",
+    "stem": "On July 1, Year 1, V Co. leased manufacturing equipment to\nW Co. to use in the production of widgets. The lease contained\na transfer of title and was noncancelable. At the\ncommencement of the lease, the equipment had an\namortizable base of $10,000 and will be amortized using the\nstraight-line method over its remaining useful life of 5 years.\nFor the period ending December 31, Year 2, what amount of\namortization should be claimed, and by which party?",
+    "choices": [
+      "$1,000; V Co.",
+      "$2,000; W Co.",
+      "$1,000; W Co.",
+      "$2,000; V Co."
+    ],
+    "answerIndex": 1,
+    "explanation": "The lease transfers ownership; thus, W Co. is entitled to claim\namortization on the equipment. Given an amortizable base of\n$10,000 and a 5-year useful life, the annual amortization\nexpense is $2,000 ($10,000 ÷ 5 years).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 16,
+    "page": 511,
+    "topicId": "su4-leases",
+    "stem": "Which of the following lease payments is not classified as an\noutflow from operating activities on the statement of cash\nflows?",
+    "choices": [
+      "Payments for operating leases.",
+      "Payments for short-term leases.",
+      "The principal portion of a payment for a finance-type lease.",
+      "The interest portion of a payment for a sales-type lease."
+    ],
+    "answerIndex": 2,
+    "explanation": "The principal portion of a finance-type lease payment is\nreported as a cash outflow from financing activities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 17,
+    "page": 512,
+    "topicId": "su4-leases",
+    "stem": "GAAP list five criteria for determining when a lease should be\nclassified as a finance lease by a lessee. Which of the\nfollowing is a criterion?",
+    "choices": [
+      "The present value of the lease payments equals or exceeds\n75% of the fair value of the leased property.",
+      "The lease agreement provides for the transfer of ownership of\nthe leased property.",
+      "The lease term equals 75% or more of the remaining\nestimated useful life of the leased property.",
+      "The lessee guarantees the residual value of the leased\nproperty."
+    ],
+    "answerIndex": 1,
+    "explanation": "A lease is classified as a finance lease if any of the following\nfive criteria are met: (1) the ownership of the leased asset is\ntransferred to the lessee by the end of the lease term, (2) the\nlease includes an option to purchase the leased asset that the\nlessee is reasonably certain to exercise, (3) the lease term is\nfor the major part (generally considered as 75%) of the\nremaining economic life of the leased asset, (4) the present\nvalue of the sum of the lease payments and any residual value\nguaranteed by the lessee equals or exceeds substantially all\nof the fair value (generally considered as 90%) of the leased\nasset, and (5) the leased asset is so specialized that it is\nexpected to have no alternative use to the lessor at the end of\nthe lease term.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 18,
+    "page": 513,
+    "topicId": "su4-leases",
+    "stem": "Which of the following is a condition for a lessee to elect an\naccounting policy not to recognize the right-of-use asset and\nlease liability?",
+    "choices": [
+      "The fair value of the leased asset is $5,000 or less.",
+      "The lease has a term of 12 months or less at the\ncommencement date.",
+      "The lease includes residual value guaranteed by the lessee.",
+      "A lease has a term of 24 months or less at the commencement\ndate and transfers ownership of the leased asset to the lessee\nat the end of the lease term."
+    ],
+    "answerIndex": 1,
+    "explanation": "As an accounting policy for short-term leases, a lessee may\nelect not to recognize the right-of-use asset and lease liability.\nA short-term lease is a lease that has a lease term of 12\nmonths or less and does not include a purchase option that\nthe lessee is reasonably certain to exercise. Under this short-\nterm lease exception, the lessee recognizes lease payments\nas rent expense on the straight-line basis over the full lease\nterm.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 19,
+    "page": 514,
+    "topicId": "su4-leases",
+    "stem": "Quinn Corp. (lessee) has entered into lease agreements with\nJacob Equipment. Quinn has classified Lease A as a finance\nlease and Lease B as an operating lease. Both leases have a\nlease term of 5 years and the same annual payment amounts.\nFor which of the following is the same accounting used by\nQuinn for Lease A and Lease B?",
+    "choices": [
+      "Cash lease payments are classified as outflows from operating\nactivities on the statement of cash flows.",
+      "Amortization of the right-of-use asset is on a straight-line basis\nover the asset’s useful life.",
+      "A single (equal) lease expense is recognized in each\naccounting period.",
+      "The reduction of the lease liability is recorded when periodic\nlease payments are made."
+    ],
+    "answerIndex": 3,
+    "explanation": "A lessee’s finance and operating leases result in the same\naccounting for (1) initial recognition and measurement of the\nright-of-use asset and the lease liability and (2) subsequent\nmeasurement of the lease liability. The reduction of the lease\nliability is the excess of the periodic lease payment over the\ninterest expense recognized during the period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 20,
+    "page": 515,
+    "topicId": "su4-leases",
+    "stem": "The present value of lease payments should be used by the\nlessee in determining the amount of a lease liability under a\nlease classified by the lessee as a(n)\nFinance Lease Operating Lease",
+    "choices": [
+      "Yes         Yes",
+      "Yes         No",
+      "No          No",
+      "No          Yes"
+    ],
+    "answerIndex": 0,
+    "explanation": "For finance and operating leases, a lessee must recognize a\nlease liability and a right-of-use asset at the lease\ncommencement date. A lease liability is measured initially at\nthe present value of the lease payments to be made over the\nlease term.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 2,
+    "number": 21,
+    "page": 516,
+    "topicId": "su4-leases",
+    "stem": "On January 1, Year 1, Lessee entered into a 4-year lease and\ndid not incur initial direct costs. At the lease commencement\ndate, Lessee",
+    "choices": [
+      "Must discount the lease payments using the lessor’s\nincremental borrowing rate.",
+      "Recognizes the same amount for the right-of-use asset and\nthe lease liability under a finance lease and an operating\nlease.",
+      "Applies different accounting for initial measurement of a right-\nof-use asset under finance and operating leases.",
+      "Measures the lease liability at the sum of the present values of\nthe rental payments and the expected residual value of the\nleased asset."
+    ],
+    "answerIndex": 1,
+    "explanation": "For finance and operating leases, a lessee must recognize a\nlease liability and a right-of-use asset at the lease\ncommencement date. The same accounting applies to\n(1) initial recognition and measurement of (a) the lease liability\nand (b) the right-of-use asset and (2) subsequent\nmeasurement of the lease liability. The accounting for\nsubsequent measurement of a right-of-use asset differs under\nfinance and operating leases. At the lease commencement\ndate, a right-of-use asset is measured at the amount at which\nthe lease liability was recognized plus initial direct costs\nincurred by the lessee. When no initial direct costs were\nincurred by the lessee, a right-of-use asset equals the lease\nliability recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 1,
+    "page": 518,
+    "topicId": "su4-income-taxes",
+    "stem": "Selected financial information for the year just ended is shown\nbelow.\nPretax income                                        $5,000,000\nInterest received on municipal bonds                     600,000\nGain on the sale of land reported this year but not\ntaxable until next year                             1,000,000\nTax rate for all years                                      40%\nBeginning balances:\nIncome taxes payable                                           0\nDeferred tax liability                                   $50,000\nThe total income tax expense reported on the income\nstatement for the year just ended should be",
+    "choices": [
+      "$960,000",
+      "$1,360,000",
+      "$1,760,000",
+      "$2,640,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Taxable income consists of pretax income adjusted for those\nitems that give rise to tax differences. Taxable income is\ntherefore $3,400,000 ($5,000,000 – $600,000 – $1,000,000),\nand current tax expense is $1,360,000 ($3,400,000 × 40%).\nThe interest on municipal bonds is a permanent difference\nbecause it is tax-exempt, i.e., it is recognized in GAAP income\nbut never in taxable income. Permanent differences have no\ndeferred tax effects. However, the gain on the sale of land is a\ntemporary difference because it is included in GAAP income\nthis year and is included in taxable income in the future. This\ntemporary difference gives rise to a future taxable amount,\nspecifically, a $400,000 deferred tax liability ($1,000,000 ×\n40%). This credit to the deferred tax liability account is\nbalanced by a debit to income tax expense. Total income tax\nexpense for the year is therefore $1,760,000 ($1,360,000\ncurrent portion + $400,000 deferred portion).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 2,
+    "page": 519,
+    "topicId": "su4-income-taxes",
+    "stem": "Income-tax-basis financial statements differ from those\nprepared under GAAP because they",
+    "choices": [
+      "Do not include nontaxable revenues and nondeductible\nexpenses in determining income.",
+      "Include detailed information about current and deferred income\ntax liabilities.",
+      "Contain no disclosures about finance and operating lease\ntransactions.",
+      "Recognize certain revenues and expenses in different\nreporting periods."
+    ],
+    "answerIndex": 3,
+    "explanation": "Financial statements prepared under the income tax basis of\naccounting and financial statements prepared under GAAP\ndiffer when the tax basis of an asset or a liability and its\nreported amount in the GAAP-based financial statements are\nnot the same. The result will be taxable or deductible amounts\nin future years when the reported amount of the asset is\nrecovered or the liability is settled. Thus, certain revenues and\nexpenses are recognized in different periods. An example is\nsubscriptions revenue received in advance, which is\nrecognized in taxable income when received and recognized\nin financial income when earned in a later period. Another\nexample is a warranty liability, which is recognized as an\nexpense in financial income when a product is sold and\nrecognized in taxable income when the expenditures are\nmade in a later period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 3,
+    "page": 521,
+    "topicId": "su4-income-taxes",
+    "stem": "Temporary differences arise when expenses are deductible for\ntax purposes\nAfter They Are Before They Are\nRecognized in    Recognized in\nFinancial Income Financial Income",
+    "choices": [
+      "No                  No",
+      "No                  Yes",
+      "Yes                 Yes",
+      "Yes                No"
+    ],
+    "answerIndex": 2,
+    "explanation": "A temporary difference exists when (1) the reported amount of\nan asset or liability in the financial statements differs from the\ntax basis of that asset or liability, and (2) the difference will\nresult in taxable or deductible amounts in future years when\nthe asset is recovered or the liability is settled at its reported\namount. A temporary difference may also exist although it\ncannot be identified with a specific asset or liability recognized\nfor financial reporting purposes. Temporary differences most\ncommonly arise when either expenses or revenues are\nrecognized for tax purposes either earlier or later than in the\ndetermination of financial income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 4,
+    "page": 522,
+    "topicId": "su4-income-taxes",
+    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nIf Lucas calculates taxable income of $1,000,000 for Year 2\nand is taxed at an effective income tax rate of 40%, how much\nincome tax expense will be reported on Lucas’s income\nstatement for Year 2?",
+    "choices": [
+      "$400,000",
+      "$402,000",
+      "$404,000",
+      "$406,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Deferred tax expense or benefit is the net change during the\nyear in the entity’s deferred tax liabilities and assets. It is\naggregated with the current tax expense or benefit to\ndetermine total income tax expense for the year. The amount\nof income taxes payable (current tax expense) is $400,000\n($1,000,000 × 40%). The deferred tax assets increased by\n$8,000 ($17,000 – $9,000) and the deferred tax liabilities\nincreased by $10,000 ($23,000 – $13,000). Thus, Lucas’s\nincome tax expense for Year 2 is $402,000 ($400,000 current\ntax expense – $8,000 increase in the deferred tax assets +\n$10,000 increase in the deferred tax liabilities).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 5,
+    "page": 523,
+    "topicId": "su4-income-taxes",
+    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nA liability that represents the accumulated difference between\nthe income tax expense reported on the firm’s books and the\nincome tax actually paid is",
+    "choices": [
+      "Capital gains tax.",
+      "Deferred taxes.",
+      "Taxes payable.",
+      "Value-added taxes."
+    ],
+    "answerIndex": 1,
+    "explanation": "Deferred tax liabilities arise when temporary differences in\nbook and taxable income result in future taxable amounts.\nDeferred tax assets arise when temporary differences in book\nand taxable income result in future deductible amounts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 6,
+    "page": 524,
+    "topicId": "su4-income-taxes",
+    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nWhich one of the following temporary differences will result in\na deferred tax asset?",
+    "choices": [
+      "Use of the straight-line depreciation method for financial\nstatement purposes and accelerated depreciation for income\ntax purposes.",
+      "Installment sale profits accounted for on the accrual basis for\nfinancial statement purposes and on a cash basis for income\ntax purposes.",
+      "Advance rental receipts accounted for on the accrual basis for\nfinancial statement purposes and on a cash basis for tax\npurposes.",
+      "Investment gains accounted for under the equity method for\nfinancial statement purposes and under the cost method for\nincome tax purposes."
+    ],
+    "answerIndex": 2,
+    "explanation": "A deferred tax asset records the deferred tax consequences\nattributable to deductible temporary differences and\ncarryforwards. Advance rental receipts accounted for on the\naccrual basis for financial statement purposes and on a cash\nbasis for tax purposes would give rise to a deferred tax asset.\nThe financial statements would report no income and no\nrelated tax expense because the rental payments apply to\nfuture periods. The tax return, however, would treat the rent as\nincome when the cash was received, and a tax would be due\nin the year of receipt. Because the tax is paid prior to\nrecording the income for financial statement purposes, it\nrepresents an asset that will be recognized as an expense\nwhen income is finally recorded.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 7,
+    "page": 525,
+    "topicId": "su4-income-taxes",
+    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nA tax rate other than the current tax rate may be used to\ncalculate the deferred income tax amount on the statement of\nfinancial position if a(n)",
+    "choices": [
+      "Future tax rate has been enacted into law.",
+      "Future tax rate change is considered more likely than not to\noccur.",
+      "Election has been made to apply past tax rates.",
+      "Net operating loss carryback exists."
+    ],
+    "answerIndex": 0,
+    "explanation": "A tax rate other than the current tax rate may be used to\ncalculate the deferred income tax amount on the statement of\nfinancial position if a future tax rate has been enacted into law.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 8,
+    "page": 526,
+    "topicId": "su4-income-taxes",
+    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nIntraperiod income tax allocation arises because",
+    "choices": [
+      "Items included in the determination of taxable income may be\npresented in different sections of the financial statements.",
+      "Income taxes must be allocated between current and future\nperiods.",
+      "Certain revenues and expenses appear in the financial\nstatements either before or after they are included in taxable\nincome.",
+      "Certain revenues and expenses appear in the financial\nstatements but are excluded from taxable income."
+    ],
+    "answerIndex": 0,
+    "explanation": "To provide a fair presentation, GAAP require that income tax\nexpense for the period be allocated among continuing\noperations, discontinued operations, other comprehensive\nincome, and items debited or credited directly to equity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 9,
+    "page": 527,
+    "topicId": "su4-income-taxes",
+    "stem": "When accounting for income taxes, a temporary difference\noccurs in which of the following scenarios?",
+    "choices": [
+      "An item is included in the calculation of net income but is\nneither taxable nor deductible.",
+      "An item is included in the calculation of net income in one year\nand in taxable income in a different year.",
+      "An item is no longer taxable due to a change in the tax law.",
+      "The accrual method of accounting is used."
+    ],
+    "answerIndex": 1,
+    "explanation": "A temporary difference results when the GAAP basis and the\ntax basis of an asset or liability differ. The effect is that a\ntaxable or deductible amount will occur in future years when\nthe asset is recovered or the liability is settled. But some\ntemporary differences are not related to an asset or liability for\nfinancial reporting. Thus, temporary differences occur when\nrevenues or gains, or expenses or losses, are used to\ncalculate net income under GAAP in a year before or after\nbeing used to calculate taxable income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 10,
+    "page": 527,
+    "topicId": "su4-income-taxes",
+    "stem": "The purpose of interperiod income tax allocation is to",
+    "choices": [
+      "Reconcile the tax consequences of permanent and temporary\ndifferences that appear on the company’s current financial\nstatements.",
+      "Recognize a tax asset or liability for the tax consequences of\ntemporary differences that exist at the date of the balance\nsheet.",
+      "Adjust the income tax expense on the income statement to be\nconsistent with the income tax liability shown on the balance\nsheet.",
+      "Provide proper disclosure of a distribution of earnings to a\ntaxing authority."
+    ],
+    "answerIndex": 1,
+    "explanation": "Interperiod tax allocation is designed to recognize a tax asset\nor liability for the tax consequences of temporary differences\nthat exist between a company’s financial accounting records\nand its tax records at the balance sheet date. These\ntemporary differences result when the GAAP basis and the tax\nbasis of an asset or liability differ.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 11,
+    "page": 528,
+    "topicId": "su4-income-taxes",
+    "stem": "For a corporation that is subject to the U.S. Income Tax Code\nand reports its financial results in accordance with U.S. GAAP,\nwhich one of the following requires the recognition of a\ndeferred tax liability?",
+    "choices": [
+      "Subscriptions received in advance and accounted for ratably\nover the subscription term.",
+      "An accrual for product warranty expenses that will be incurred\nand paid in the future.",
+      "Interest received on state and municipal bonds.",
+      "Sales accounted for on an accrual basis and on the cash basis\nfor tax purposes."
+    ],
+    "answerIndex": 3,
+    "explanation": "A deferred tax liability or asset is recognized for the estimated\nfuture tax effects of temporary differences and carryforwards.\nA temporary difference is created when a taxpayer accounts\nfor a sale on the accrual basis but uses the cash basis for tax\npurposes. When the income under U.S. GAAP is greater than\ntaxable income, as it is in this situation, a deferred tax liability\nshould be recognized. This is the only answer choice that\ncould possibly result in a liability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 3,
+    "number": 12,
+    "page": 529,
+    "topicId": "su4-income-taxes",
+    "stem": "A company uses straight-line depreciation for financial\nreporting purposes, but uses accelerated depreciation for tax\npurposes. Which of the following account balances would be\nlower in the financial statements used for tax purposes than it\nwould be in the general purpose financial statements?",
+    "choices": [
+      "Accumulated depreciation.",
+      "Cash.",
+      "Retained earnings.",
+      "Gross property, plant, and equipment."
+    ],
+    "answerIndex": 2,
+    "explanation": "Because the tax basis uses an accelerated method,\ndepreciation expense and accumulated depreciation will be\ngreater. Moreover, taxable income will be lower than financial\nnet income. Consequently, tax-basis retained earnings will be\nless than that in the general purpose financial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 1,
+    "page": 531,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nWhat is the amount of interest expense that should be reported\non Evangel’s income statement for the second year?",
+    "choices": [
+      "$8,779",
+      "$9,000",
+      "$9,559",
+      "$9,683"
+    ],
+    "answerIndex": 3,
+    "explanation": "An amortization schedule for the first 2 years of Evangel’s\nbonds can be prepared as follows:\nBeginn              Equal            Equals     Endin\ning     Times        s:   Min          :        g\nCarryi      :      Intere   us:     Discou     Carryi\nng      Effecti      st   Cas         nt       ng\nYe     Amoun       ve       Expe     h      Amorti     Amou\nar         t      Rate       nse   Paid       zed        nt\n1     $96,207    10%      $9,621 $9,000     $621     $96,828\n2      96,828    10%        9,683 9,000       683     97,511",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 2,
+    "page": 532,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nWhat is the amount of Evangel’s unamortized bond discount at\nthe end of the first year?",
+    "choices": [
+      "$621",
+      "$2,452",
+      "$3,172",
+      "$3,793"
+    ],
+    "answerIndex": 2,
+    "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%). Subtracting the cash interest payment from\nthis leaves the amount of discount amortized, or $621 ($9,621\n– $9,000). Subtracting this amount from the previous\nunamortized discount ($3,793) leaves a remaining\nunamortized discount at the end of Year 1 of $3,172.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 3,
+    "page": 533,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nThe net carrying amount of Evangel’s bonds payable at the\nend of the first year is",
+    "choices": [
+      "$94,866",
+      "$95,586",
+      "$96,828",
+      "$97,548"
+    ],
+    "answerIndex": 2,
+    "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%). Subtracting the cash interest payment from\nthis leaves the amount of discount amortized ($9,621 – $9,000\n= $621). Subtracting this amount from the previous\nunamortized discount ($3,793) leaves a remaining\nunamortized discount at the end of Year 1 of $3,172.\nSubtracting this amount from the face amount of the bonds\n($100,000) provides a carrying amount of $96,828.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 4,
+    "page": 534,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nWhat is the amount of interest expense that should be\nreported on Evangel’s income statement at the end of the first\nyear?",
+    "choices": [
+      "$8,659",
+      "$9,000",
+      "$9,621",
+      "$10,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $9,621\n($96,207 × 10%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 5,
+    "page": 534,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nA premium on bonds payable arises when",
+    "choices": [
+      "The semiannual bond interest becomes due.",
+      "The prevailing interest rate after the bond issuance falls below\nthe nominal rate of the bonds.",
+      "The amount received from sale of the bonds at issuance\nexceeds the face value of the bonds.",
+      "The cost of issuing the bonds is capitalized."
+    ],
+    "answerIndex": 2,
+    "explanation": "A premium on bonds payable arises when the amount\nreceived from sale of the bonds at issuance exceeds the face\nvalue of the bonds. This situation occurs if, at the time the\nbonds are sold, their stated rate is greater than the current\nmarket rate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 6,
+    "page": 535,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, bonds with a face amount of $200,000, an 8%\nannual effective yield, and a 7% annual coupon rate were sold\nby Thomas Dynamics, Inc., for $180,000. The bonds pay\ninterest on January 1 and July 1. Using the effective interest\nmethod, the company’s interest expense for the first 6 months\nended July 1 will be",
+    "choices": [
+      "$7,000",
+      "$7,200",
+      "$14,000",
+      "$14,400"
+    ],
+    "answerIndex": 1,
+    "explanation": "Total interest expense for the year equals the carrying amount\nof the bonds times the effective rate (yield), or $14,400\n($180,000 × 8%). Half of this amount is $7,200.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 7,
+    "page": 536,
+    "topicId": "su4-bonds",
+    "stem": "When using fair value accounting, it would be to a firm’s\nbenefit to report the liability at fair value when it has",
+    "choices": [
+      "$32 million in outstanding bonds trading at 101.",
+      "$50 million in variable-rate preferred shares outstanding.",
+      "$28 million in outstanding bonds trading at 98.",
+      "$25 million in put-able bonds trading at 102."
+    ],
+    "answerIndex": 2,
+    "explanation": "A firm would want to report a liability at fair value when its fair\nvalue is less than its carrying amount. The fair value of this\nbond ($27,440,000 = $28,000,000 × .98) is less than its\ncarrying amount of $28,000,000. This would decrease the\nliabilities section of the balance sheet, which a company would\nprefer to do.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 8,
+    "page": 537,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nWhat is the amount of interest Evangel will pay at the end of\nthe first year?",
+    "choices": [
+      "$8,659",
+      "$9,000",
+      "$9,621",
+      "$10,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The annual cash payment is the face amount of the bonds\ntimes the stated rate ($100,000 × 9% = $9,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 9,
+    "page": 537,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nOn November 1, Mason Corp. issued $800,000 of its 10-year,\n8% term bonds dated October 1. The bonds were sold to yield\n10%, with total proceeds of $700,000 plus accrued interest.\nInterest is paid every April 1 and October 1. What amount\nshould Mason report for interest payable in its December 31\nbalance sheet?",
+    "choices": [
+      "$17,500",
+      "$16,000",
+      "$11,667",
+      "$10,667"
+    ],
+    "answerIndex": 1,
+    "explanation": "Interest payable equals the face amount of the bonds, times\nthe nominal (stated) interest rate, times the portion of the\ninterest period included in the accounting period. The yield\nrate and sale between interest periods for an amount including\naccrued interest do not affect interest payable. Accordingly,\ninterest payable equals $16,000 [($800,000 × 8%) × (3 ÷\n12 months)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 10,
+    "page": 538,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Year 2, Oak Co. issued 400 of its 8%, $1,000\nbonds at 97 plus accrued interest. The bonds are dated\nOctober 1, Year 1, and mature on October 1, Year 11. Interest\nis payable semiannually on April 1 and October 1. Accrued\ninterest for the period October 1, Year 1, to January 1, Year 2,\namounted to $8,000. On January 1, Year 2, what amount\nshould Oak report as bonds payable, net of discount?",
+    "choices": [
+      "$380,300",
+      "$388,000",
+      "$388,300",
+      "$392,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "A bond issued “at 97” is issued at a price equal to 97% of its\nface amount (400 bonds × $1,000 face amount × .97 =\n$388,000). At the issue date, no time has passed, so no\namortization has occurred, and the accrued interest is credited\nto either interest payable or interest expense. The reported\namount is therefore $388,000 ($400,000 – $12,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 11,
+    "page": 539,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nWhen the effective interest method of amortization is used for\nbonds issued at a premium, the amount of interest payable for\nan interest period is calculated by multiplying the",
+    "choices": [
+      "Face value of the bonds at the beginning of the period by the\ncontractual interest rate.",
+      "Face value of the bonds at the beginning of the period by the\neffective interest rates.",
+      "Carrying value of the bonds at the beginning of the period by\nthe contractual interest rate.",
+      "Carrying value of the bonds at the beginning of the period by\nthe effective interest rates."
+    ],
+    "answerIndex": 0,
+    "explanation": "Interest payable does not vary with the issue price of bonds. It\nequals their face amount times the stated (contractual) rate at\nthe beginning of the period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 12,
+    "page": 540,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nUnamortized bond discount should be reported on the balance\nsheet of the issuer as a",
+    "choices": [
+      "Direct deduction from the face amount of the debt.",
+      "Direct deduction from the present value of the debt.",
+      "Deferred charge.",
+      "Part of the issue costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Bond discount must appear as a direct deduction from the\nface amount of the bond payable to report the effective liability\nfor the bonds. Thus, the bond liability is shown net of\nunamortized discount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 13,
+    "page": 540,
+    "topicId": "su4-bonds",
+    "stem": "How is the carrying amount of a bond payable affected by\namortization of the following?\nDiscount                   Premium",
+    "choices": [
+      "Increase                   Increase",
+      "Decrease                   Decrease",
+      "Increase                   Decrease",
+      "Decrease                  Increase"
+    ],
+    "answerIndex": 2,
+    "explanation": "The carrying amount of a bond payable is equal to its maturity\n(face) amount plus any unamortized premium or minus any\nunamortized discount. Amortization results in a reduction of\nthe discount or premium. Consequently, the carrying amount\nof a bond is increased when discount is amortized and\ndecreased when premium is amortized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 14,
+    "page": 541,
+    "topicId": "su4-bonds",
+    "stem": "On July 1, Dover Co. received $206,576 for $200,000 face\namount, 12% bonds, a price that yields 10%. Interest expense\nfor the 6 months ended December 31 should be",
+    "choices": [
+      "$12,394",
+      "$12,000",
+      "$10,328",
+      "$10,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the effective interest method, interest expense for the 6\nmonths since the bond was issued is equal to the carrying\namount of the bond multiplied by the effective interest rate for\nhalf a year. Thus, interest expense is $10,328 [$206,576 ×\n10% × (6 months ÷ 12 months)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 15,
+    "page": 542,
+    "topicId": "su4-bonds",
+    "stem": "On January 1, Year 1, Gilson Corporation issued 1,000 of its\n9%, $1,000 callable bonds for $1,030,000. The bonds are\ndated January 1, Year 1, and mature on December 31,\nYear 15. Interest is payable semiannually on January 1 and\nJuly 1. The bonds can be called by the issuer at 102 on any\ninterest payment date after December 31, Year 5. The\nunamortized bond premium was $14,000 at December 31,\nYear 8, and the market price of the bonds was 99 on this date.\nIn its December 31, Year 8, balance sheet, at what amount\nshould Gilson report the carrying value of the bonds?",
+    "choices": [
+      "$1,020,000",
+      "$1,016,000",
+      "$1,014,000",
+      "$990,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The face amount of the bonds is $1,000,000 (1,000 × $1,000),\nand the unamortized premium is $14,000 (given). The carrying\namount is thus $1,014,000. The other data are irrelevant.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 16,
+    "page": 543,
+    "topicId": "su4-bonds",
+    "stem": "On July 1, Year 3, Lundy Company issued $438,000 for 500 of\nits 8%, $1,000 bonds. The bonds were issued to yield 10%.\nThe bonds are dated July 1, Year 3, and mature on July 1,\nYear 13. Interest is payable semiannually on January 1 and\nJuly 1. Using the effective interest method, how much of the\nbond discount should be amortized for the 6 months ended\nDecember 31, Year 3?",
+    "choices": [
+      "$3,800",
+      "$3,100",
+      "$2,480",
+      "$1,900"
+    ],
+    "answerIndex": 3,
+    "explanation": "Interest expense for the 6 months since the bonds were\nissued is $21,900 [$438,000 carrying amount × 10% effective\nrate × (6 ÷ 12)]. The periodic cash payment is $20,000\n[$500,000 face amount × 8% stated rate × (6 ÷ 12)]. The\n$1,900 ($21,900 – $20,000) difference is the amount of\ndiscount to be amortized for this 6-month interest period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 17,
+    "page": 544,
+    "topicId": "su4-bonds",
+    "stem": "Clare Co. issued US $6 million of 12% bonds on\nDecember 1, Year 1, due on December 1, Year 6, with interest\npayable each December 1 and June 1. The bonds were sold for\nUS $5,194,770 to yield 16%.\nIf the discount were amortized by the effective interest method,\nClare’s interest expense for the fiscal year ended November\n30, Year 2, related to its $6 million bond issue would be",
+    "choices": [
+      "$623,372",
+      "$720,000",
+      "$831,163",
+      "$835,610"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the effective interest method, interest expense is equal\nto the carrying amount of the bonds at the beginning of the\ninterest period times the effective interest rate. The carrying\namount of the bonds at December 1, Year 1 (the issuance\ndate), was $5,194,770. The annual yield rate was 16%.\nInterest expense is therefore equal to $415,582 [$5,194,770 ×\n16% × (6 months ÷ 12 months)] for the first 6 months of the\nyear. For the same period, interest paid was $360,000\n[$6,000,000 × 12% × (6 months ÷ 12 months)]. Hence, the\nsemiannual discount amortization was $55,582 ($415,582\ninterest expense – $360,000 interest paid), and the carrying\namount of the bonds for the second 6-month period was\n$5,250,352 ($5,194,770 + $55,582). For this period, the\nsemiannual interest expense was $420,028 [$5,250,352 ×\n16% × (6 months ÷ 12 months)]. Total interest expense for the\nyear is equal to $835,610 ($415,582 + $420,028).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 18,
+    "page": 545,
+    "topicId": "su4-bonds",
+    "stem": "On January 2, Year 1, West Co. issued 9% bonds in the\namount of $500,000, which mature on January 2, Year 11. The\nbonds were issued for $469,500 to yield 10%. Interest is\npayable annually on December 31. West uses the effective\ninterest method of amortizing bond discount. In its June 30,\nYear 1, balance sheet, what amount should West report as\nbonds payable?",
+    "choices": [
+      "$469,500",
+      "$470,475",
+      "$471,025",
+      "$500,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Accrued interest expense is $23,475 [$469,500 carrying\namount × 10% effective rate × (6 ÷ 12)]. Accrued interest\npayable is $22,500 [$500,000 face amount × 9% stated rate ×\n(6 ÷ 12)]. The difference of $975 is the amount of discount\namortization for the period. The amount that should be\nreported as bonds payable equals $470,475 ($469,500\ncarrying amount at January 2 + $975 current-period discount\namortized).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 19,
+    "page": 546,
+    "topicId": "su4-bonds",
+    "stem": "Clare Co. issued US $6 million of 12% bonds on\nDecember 1, Year 1, due on December 1, Year 6, with interest\npayable each December 1 and June 1. The bonds were sold for\nUS $5,194,770 to yield 16%.\nOn January 1, Year 4, Celt Corp. issued 9% bonds in the face\namount of $1 million, which mature on January 1, Year 14. The\nbonds were issued for $939,000 to yield 10%, resulting in a\nbond discount of $61,000. Celt uses the effective interest\nmethod of amortizing bond discount. Interest is payable\nannually on December 31. At December 31, Year 4, Celt’s\nunamortized bond discount should be",
+    "choices": [
+      "$51,000",
+      "$51,610",
+      "$52,000",
+      "$57,100"
+    ],
+    "answerIndex": 3,
+    "explanation": "For the first year, interest expense is $93,900 ($939,000\ncarrying amount × 10% yield rate). The periodic interest\npayment is $90,000 ($1,000,000 face amount × 9% coupon\nrate). The $3,900 ($93,900 – $90,000) difference is the\namount of bond discount amortized. Thus, the $61,000\nunamortized bond discount at the beginning of the year should\nbe reduced by $3,900 to a year-end balance of $57,100.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 20,
+    "page": 547,
+    "topicId": "su4-bonds",
+    "stem": "Webb Co. has outstanding a 7%, 10-year bond with a\n$100,000 face amount. The bond was originally sold to yield\n6% annual interest. Webb uses the effective interest method to\namortize bond premium. On June 30, Year 3, the carrying\namount of the outstanding bond was $105,000. What amount\nof unamortized premium on the bond should Webb report in its\nJune 30, Year 4, balance sheet?",
+    "choices": [
+      "$1,050",
+      "$3,950",
+      "$4,300",
+      "$4,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the effective interest method, interest expense is the\ncarrying amount of the bonds at the beginning of the interest\nperiod times the market (yield) rate of interest. Assuming\ninterest is paid annually on June 30, interest expense for the\nyear ended June 30, Year 4, is $6,300 ($105,000 carrying\namount × 6% effective rate), and the periodic interest payment\nis $7,000 ($100,000 face amount × 7% stated rate). The\ndifference ($7,000 – $6,300 = $700) is the amount of premium\namortized. The remaining unamortized premium is therefore\n$4,300 ($5,000 – $700).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 21,
+    "page": 548,
+    "topicId": "su4-bonds",
+    "stem": "Clare Co. issued US $6 million of 12% bonds on\nDecember 1, Year 1, due on December 1, Year 6, with interest\npayable each December 1 and June 1. The bonds were sold for\nUS $5,194,770 to yield 16%.\nWhen debt is issued at a discount, interest expense over the\nterm of debt equals the cash interest paid",
+    "choices": [
+      "Minus discount.",
+      "Minus discount minus par value.",
+      "Plus discount.",
+      "Plus discount plus par value."
+    ],
+    "answerIndex": 2,
+    "explanation": "Debt is sold at a discount when it sells for less than its face\namount, that is, when the contract (stated) interest rate is less\nthan the market (effective) interest rate. Under the effective\ninterest method required by GAAP, the difference between\ninterest expense and interest paid is the discount amortization.\nWhen debt is issued at a discount, interest expense exceeds\ninterest (cash) paid. The entry is to debit interest expense,\ncredit discount, and credit cash. Consequently, interest\nexpense equals the sum of the periodic interest payments and\nthe discount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 22,
+    "page": 549,
+    "topicId": "su4-bonds",
+    "stem": "On June 1, Greendale Corp. issued $700,000, 5-year bonds at\n8%, with interest payable annually on May 31. The bonds sold\nfor $728,700 when the market rate of interest was 7%.\nGreendale uses the effective interest method for amortizing\npremiums on bonds payable. What is the balance of the\npremiums on bonds payable account immediately following the\nfirst interest payment?",
+    "choices": [
+      "$22,960",
+      "$23,709",
+      "$33,691",
+      "$34,440"
+    ],
+    "answerIndex": 1,
+    "explanation": "The annual interest expense (June 1-May 31) of the bonds is\n$51,009 ($728,700 × 7%). The cash interest paid is $56,000\n($700,000 × 8%). The difference of $4,991 ($56,000 –\n$51,009) is the portion to amortize the premium. The balance\nof the premiums on bonds payable account after the first\npayment is $23,709 ($28,700 – $4,991).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 4,
+    "section": 4,
+    "number": 23,
+    "page": 550,
+    "topicId": "su4-bonds",
+    "stem": "Which of the following statements describes the relationship of\ninterest expense related to bonds payable when a discount on\nbonds payable has been recorded using the effective interest\nmethod?",
+    "choices": [
+      "Interest expense will be the same each year.",
+      "Interest expense will decrease each year.",
+      "Interest expense will increase by the same amount each year.",
+      "Interest expense will increase by a larger amount each year."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the effective interest method, interest expense is equal\nto the carrying amount of the bonds at the beginning of the\nperiod times the effective interest rate. The cash interest paid\nis equal to the face amount of the bonds times the stated\ninterest rate. The difference is the amortization of discount of\nthe bonds. The amortization of discount of the bonds\nincreases the carrying amount of the bonds. Because the\ncarrying amount of the bonds increases each period, interest\nexpense on the bonds increases as well.",
+    "answerStatus": "source"
+  }
+]

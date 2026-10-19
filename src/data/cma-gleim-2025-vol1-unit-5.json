@@ -1,0 +1,1277 @@
+[
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 1,
+    "page": 551,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A hotel enters into a contract with a customer to provide 10\nrooms for 10 nights for $200 per room per night. In addition to\nthe room price per night, the hotel collects a city occupancy tax\nof $7 per room per night. According to the hotel’s promotion,\neach customer that purchases in total more than 50 room\nnights is entitled to a credit of $3,000 on the entire purchase.\nWhat is the total transaction price of the contract?",
+    "choices": [
+      "$20,000",
+      "$17,700",
+      "$17,000",
+      "$20,700"
+    ],
+    "answerIndex": 2,
+    "explanation": "The transaction price is the amount of consideration to which\nan entity expects to be entitled in exchange for transferring\npromised goods or services to a customer. It excludes\namounts collected on behalf of third parties. Thus, the amount\ncollected for city occupancy taxes must not be included in the\ntransaction price. In addition, any consideration payable to the\ncustomer, such as coupons, credit, or vouchers, reduces the\ntransaction price. Accordingly, the total transaction price of the\ncontract is $17,000 [(10 × 10 × $200) – $3,000].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 2,
+    "page": 552,
+    "topicId": "su5-revenue-contracts",
+    "stem": "ABC operates a catering service that specializes in business\nluncheons for large corporations. ABC requires customers to\nplace their orders 2 weeks in advance of the scheduled\nevents. ABC bills its customers on the 10th day of the month\nfollowing the date of service and requires that payment be\nmade within 30 days of the billing date. Conceptually, ABC\nshould recognize revenue from its catering services at the date\nwhen a",
+    "choices": [
+      "Customer places an order.",
+      "Luncheon is served.",
+      "Billing is mailed.",
+      "Customer’s payment is received."
+    ],
+    "answerIndex": 1,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. Accordingly, ABC recognizes\nrevenue when a luncheon is served.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 3,
+    "page": 553,
+    "topicId": "su5-revenue-contracts",
+    "stem": "An individual who recently founded a company that produces\nbaseball bats and balls wants to determine their policy for\nrevenue recognition. According to the revenue recognition\nprinciple, the most appropriate time to recognize revenue\nwould be when",
+    "choices": [
+      "The sale occurs.",
+      "Cash is received.",
+      "Production is completed.",
+      "Quarterly financial statements are prepared."
+    ],
+    "answerIndex": 0,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. Because transfers ordinarily\noccur at the point of sale, the most appropriate time to\nrecognize revenue is when the sale occurs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 4,
+    "page": 554,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A promised asset is transferred in full satisfaction of a\nperformance obligation in a contract when the customer",
+    "choices": [
+      "Obtains control of the asset.",
+      "Can direct use of the product.",
+      "Has physical possession of the asset.",
+      "Pays for the asset in full."
+    ],
+    "answerIndex": 0,
+    "explanation": "Revenue is recognized when a performance obligation is\nsatisfied by transferring a promised good or service to a\ncustomer. It happens when the customer obtains control of the\ngood or service (i.e., an asset). Control of an asset is\ntransferred to the customer when the customer (1) has the\nability to direct the use of the asset and (2) obtains\nsubstantially all of the remaining benefits (potential cash flows)\nfrom the asset.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 5,
+    "page": 554,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A department store sells gift certificates that may be redeemed\nfor merchandise. Each certificate expires 3 years after\nissuance. The revenue from the gift certificates should be\nrecognized",
+    "choices": [
+      "Evenly over 3 years from the date of issuance.",
+      "In the period the certificates are sold.",
+      "In the period the certificates expire.",
+      "In the period the certificates are redeemed or in the period\nthey expire if they are allowed to lapse."
+    ],
+    "answerIndex": 3,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. However, if an entity is\nrelieved of a performance obligation upon the passage of time\n(e.g., an expiration date), then revenue also is recognized at\nsuch time. Accordingly, the performance obligation is satisfied\nwhen the certificates are redeemed or expire.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 6,
+    "page": 555,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A company provides fertilization, insect control, and disease\ncontrol services for a variety of trees, plants, and shrubs on a\ncontract basis. For $50 per month, the company will visit the\nsubscriber’s premises and apply appropriate mixtures. If the\nsubscriber has any problems between the regularly scheduled\napplication dates, the company’s personnel will promptly make\nadditional service calls to correct the situation. Some\nsubscribers elect to pay for an entire year because the\ncompany offers an annual price of $540 if paid in advance. For\na subscriber who pays the annual fee in advance, the\ncompany should recognize the related revenue",
+    "choices": [
+      "When the cash is collected.",
+      "Evenly over the year as the services are performed.",
+      "At the end of the contract year after all of the services have\nbeen performed.",
+      "At the end of the fiscal year."
+    ],
+    "answerIndex": 1,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. A performance obligation\ncan be satisfied either over time or at a point in time. Under\nthe former scenario, an entity recognizes revenue as it\nsatisfies the performance obligation. Thus, the company\nshould recognize the advancement evenly over the year as\nthe services are performed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 7,
+    "page": 556,
+    "topicId": "su5-revenue-contracts",
+    "stem": "On February 1, Year 1, a computer software firm agrees to\nprogram a software package. Twelve payments of $10,000 on\nthe first of each month are to be made, with the first payment\nMarch 1, Year 1. The software is accepted by the client\nJune 1, Year 2. How much Year 1 revenue should be\nrecognized?",
+    "choices": [
+      "$0",
+      "$100,000",
+      "$110,000",
+      "$120,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. A contract liability is\nrecognized for an entity’s obligation to transfer goods or\nservices to a customer for which the entity has received\nconsideration from the customer. Deposits and other advance\npayments by the customer are recognized as contract\nliabilities. Thus, no revenue is recognized in Year 1 because\nall performance occurred in Year 2. However, a contract\nliability for $100,000 is recognized in Year 1 because it\nrepresents consideration received from the customer in Year 1\nfor a promise the firm was still obligated to perform at the end\nof Year 1.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 8,
+    "page": 558,
+    "topicId": "su5-revenue-contracts",
+    "stem": "An airline should recognize revenue from airline tickets in the\nperiod when",
+    "choices": [
+      "Passenger reservations are booked.",
+      "Passenger reservations are confirmed.",
+      "Tickets are issued.",
+      "Related flights occur."
+    ],
+    "answerIndex": 3,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. An airline’s performance\nobligation regarding airline tickets is to ensure promised flights\noccur. Thus, an airline should recognize revenue from airline\ntickets when related flights occur.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 9,
+    "page": 558,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A software developer enters into a contract with a new\ncustomer to sell a software license and perform installation\nservices. The entity sometimes sells the license and\ninstallation services separately. The installation service is\nroutinely performed by other entities and does not significantly\nmodify the software. The entity historically provided to new\ncustomers technical support for a 5-year period for no\nadditional consideration. The contract does not specify the\nterms or conditions for the technical support services.\nAccording to the revenue recognition principle governing\ncontracts with customers, which of the following represents the\nperformance obligations identified by the entity in this\ncontract?",
+    "choices": [
+      "One performance obligation: (1) Software license plus\ninstallation services.",
+      "Two performance obligations: (1) Software license and (2)\ninstallation services.",
+      "Three performance obligations: (1) Software license,\n(2) installation services, and (3) technical support services.",
+      "Two performance obligations: (1) Software license plus\ninstallation services and (2) technical support services."
+    ],
+    "answerIndex": 2,
+    "explanation": "The transfer of the software license and the performance of\ninstallation services are separately identifiable from other\npromises in the contract. The installation services do not\nsignificantly modify or customize the software itself. In\naddition, on the basis of the entity’s customary business\npractice, at contract inception, it made an implicit promise to\nprovide technical support services. The entity’s past practice\nof providing these services creates a valid expectation that the\ncustomer will receive these services. Consequently, the entity\nidentifies the following performance obligations in the contract:\n(1) software license, (2) installation services, and (3) technical\nsupport services.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 10,
+    "page": 560,
+    "topicId": "su5-revenue-contracts",
+    "stem": "The best evidence of a standalone selling price of a promised\ngood or service to a customer is",
+    "choices": [
+      "Expected cost.",
+      "Expected cost plus an appropriate margin.",
+      "An observable price.",
+      "Competitor’s selling price."
+    ],
+    "answerIndex": 2,
+    "explanation": "The standalone selling price is the price at which an entity\nwould sell a promised good or service separately to a\ncustomer. The best evidence of a standalone selling price is\nthe observable price of a good or service when it is sold\nseparately in similar circumstances and to similar customers\n(e.g., a contractually stated price or list price of a good or\nservice).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 11,
+    "page": 561,
+    "topicId": "su5-revenue-contracts",
+    "stem": "An entity enters into a contract with a customer to sell products\nX, Y, and Z in exchange for $250,000. Control over the\nproducts will be transferred to the customer at different points\nin time. The entity determines that the delivery of each product\nis a distinct performance obligation. Products X and Y are\nregularly sold separately and their standalone selling prices of\n$40,000 and $120,000, respectively, are directly observable.\nThe standalone selling price of product Z of $160,000 was\nestimated using the adjusted market assessment approach.\nThe entity determined that the discount provided to the\ncustomer does not relate to one or more specific products in\nthe contract. What revenue will be recognized by the entity on\nthe sale of product X?",
+    "choices": [
+      "$40,000",
+      "$22,500",
+      "$31,250",
+      "$62,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "The transaction price should be allocated to performance\nobligations in the contract based on their standalone selling\nprices. The sum of the products’ standalone selling prices is\n$320,000 ($40,000 + $120,000 + $160,000), and the\nstandalone selling price of product X is $40,000. Thus,\n$31,250 [($40,000 ÷ $320,000) × $250,000] of the total\ncontract price should be allocated to product X.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 12,
+    "page": 562,
+    "topicId": "su5-revenue-contracts",
+    "stem": "For contracts with customers, a contract modification is\naccounted for as a separate contract if the additional promised\ngoods are <List A> and the price for these additional goods is\n<List B>.\nList A                List B",
+    "choices": [
+      "Distinct           Based on the price of the original contract",
+      "Not distinct       Their incremental selling price",
+      "Distinct           Their standalone selling price",
+      "distinct                          revenue"
+    ],
+    "answerIndex": 2,
+    "explanation": "A contract modification exists when the parties approve a\nchange in the scope or price of a contract. A contract\nmodification is accounted for as a separate contract if (1) it\nresults in the addition to the contract of promised goods or\nservices that are distinct and (2) the price for these additional\ngoods or services is their standalone selling price.\nNot                 Cumulative catch-up adjustment to",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 13,
+    "page": 563,
+    "topicId": "su5-revenue-contracts",
+    "stem": "Which of the following is not a criterion that must be met for a\ncontract with a customer to be accounted for under the\nrevenue recognition standard?",
+    "choices": [
+      "The contract must have commercial substance.",
+      "The payment terms can be identified.",
+      "The costs to fulfill the contract are expected to be recovered.",
+      "Each party’s rights regarding goods or services to be\ntransferred can be identified."
+    ],
+    "answerIndex": 2,
+    "explanation": "A contract is accounted for under the revenue recognition\nstandard if all the following criteria are met: (1) The contract\nwas approved by both parties, (2) the contract has commercial\nsubstance, (3) each party’s rights regarding (a) goods or\nservices to be transferred and (b) the payment terms can be\nidentified, and (4) it is probable that the entity will collect the\nconsideration to which it is entitled according to the contract.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 14,
+    "page": 563,
+    "topicId": "su5-revenue-contracts",
+    "stem": "On October 1, Year 1, Company A sold 100,000 gallons of\nProduct X to Company B at $3 per gallon. Fifty thousand\ngallons were delivered to Company B on December 21, Year\n1, and the remaining quantity was delivered to Company B on\nJanuary 8, Year 2. Payment terms are 50% due on October 1,\nYear 1, 25% due on first delivery, and 25% on second delivery.\nWhat amount should Company A accrue as revenue related to\nthis transaction on December 31, Year 1?",
+    "choices": [
+      "$75,000",
+      "$150,000",
+      "$225,000",
+      "$300,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the accrual basis of accounting, revenue is recognized\nwhen earned. Revenue is earned when (or as) a performance\nobligation is satisfied. In this case, the delivery of 50,000\ngallons on December 21 would have been earned during Year\n1. Accordingly, Company A would accrue $150,000 (50,000\ngallons × $3) as revenue on December 31, Year 1. The\nremaining half of the order would be recognized in January.\nThe timing of the cash payment is not a consideration of when\nthe revenue is to be recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 15,
+    "page": 564,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A cable television entity receives deposits from customers that\nare refunded when service is terminated. The average\ncustomer stays with the entity 8 years. How should these\ndeposits be shown on the financial statements?",
+    "choices": [
+      "Operating revenue.",
+      "Other revenue.",
+      "Paid-in capital.",
+      "Contract liability."
+    ],
+    "answerIndex": 3,
+    "explanation": "A contract liability is recognized for an entity’s obligation to\ntransfer goods or services to a customer for which the entity\nhas received consideration from the customer. Deposits and\nother advance payments by the customer, such as sales of gift\ncertificates, are recognized as contract liabilities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 16,
+    "page": 565,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A company provides the following information:\nCash Receipts\nfrom Customers:                Year 1    Year 2   Year 3\nFrom Year 1 sales              $95,000 $120,000\nFrom Year 2 sales                         200,000 $ 75,000\nFrom Year 3 sales                          50,000 225,000\nWhat is the accrual-based revenue for Year 2?",
+    "choices": [
+      "$200,000",
+      "$275,000",
+      "$320,000",
+      "$370,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the accrual method, revenues and gains are realized\nwhen goods or services have been exchanged for cash or\nclaims to cash, not when that cash is collected. Consequently,\ngiven that total cash collected for Year 2 sales is $275,000\n($200,000 Year 2 + $75,000 Year 3), revenue for Year 2 is\n$275,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 17,
+    "page": 566,
+    "topicId": "su5-revenue-contracts",
+    "stem": "An entity that owns a new professional basketball team sells\nseason tickets to its team’s games. The first season lasts from\nNovember Year 1 through April Year 2, with 10 games played\neach month. In Year 1, the entity collected $3 million from\nadvance season-ticket sales. Its fiscal year-end is\nDecember 31. Based on this information, the entity should",
+    "choices": [
+      "Report income of $3 million on its Year 1 income statement.",
+      "Report income of $2 million on its Year 1 income statement.",
+      "Report income of $1 million on its Year 1 income statement.",
+      "Report no income from season-ticket sales."
+    ],
+    "answerIndex": 2,
+    "explanation": "An entity recognizes revenue for the transfer of promised\ngoods or services to customers in an amount that reflects the\nconsideration to which the entity expects to be entitled in the\nexchange. Revenue is recognized when the performance\nobligation is satisfied. Consideration received for an obligation\nyet to be satisfied (i.e., advance payment) is recorded as\ndeferred (or unearned) income, a liability. Thus, cash\ncollections from sales of season tickets are recorded initially\nas unearned income. As the service is performed (as the\nperformance obligation is satisfied by playing the games),\nportions of this liability are reclassified as earned income. The\nentity should recognize $1 million as income in Year 1\n[($3,000,000 ÷ 6 months) × 2 months]. The remaining $2\nmillion will be reported as a liability for Year 1.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 18,
+    "page": 567,
+    "topicId": "su5-revenue-contracts",
+    "stem": "On July 15, a company entered into a 3-month agreement to\nrent a machine the company needed to complete a special\norder. The machine would be delivered on August 1, and\nrental payments are due on the first day of each rental month.\nThe effect this event would have on the company’s July 31\nfinancial statements would be to",
+    "choices": [
+      "Cause no change in assets, liabilities, or income.",
+      "Increase both assets and income.",
+      "Increase both assets and liabilities.",
+      "Increase liabilities and decrease income."
+    ],
+    "answerIndex": 0,
+    "explanation": "No assets, liabilities, or income will result from a contract\nbefore consideration has changed hands.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 19,
+    "page": 568,
+    "topicId": "su5-revenue-contracts",
+    "stem": "After speaking to the company’s sales manager, a customer\nplaced a large order. The customer has no immediate need for\nthe products, so the customer asked the company to wait 60\ndays before delivering the products. In this case, the company\nshould recognize revenue for the sale when the order is",
+    "choices": [
+      "Placed by the customer.",
+      "Delivered to the customer.",
+      "Packed and ready for shipment.",
+      "Verified as in-stock by the company."
+    ],
+    "answerIndex": 1,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies a\nperformance obligation by transferring a promised good or\nservice (an asset) to a customer. The asset is transferred\nwhen the customer obtains control of that asset. Control of the\nproduct is transferred to the customer when it is delivered to\nthe customer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 20,
+    "page": 569,
+    "topicId": "su5-revenue-contracts",
+    "stem": "The best evidence of a standalone selling price, given different\nperformance obligations in the contract, is",
+    "choices": [
+      "Expected cost.",
+      "Expected cost plus an appropriate margin.",
+      "An observable price.",
+      "Competitor’s selling price."
+    ],
+    "answerIndex": 2,
+    "explanation": "The standalone selling price is the price at which an entity\nwould sell a promised good or service separately to a\ncustomer. The best evidence of a standalone selling price is\nthe observable price of a good or service when it is sold\nseparately in similar circumstances and to similar customers\n(e.g., a contractually stated price or list price of a good or\nservice).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 1,
+    "number": 21,
+    "page": 570,
+    "topicId": "su5-revenue-contracts",
+    "stem": "A contract with a customer has more than one performance\nobligation. The transaction price most likely is allocated to the\nperformance obligations based on",
+    "choices": [
+      "A residual approach.",
+      "Expected gross profit of performance obligations.",
+      "Directly observable prices.",
+      "Expected costs of satisfying performance obligations."
+    ],
+    "answerIndex": 2,
+    "explanation": "After separate performance obligations are identified and the\ntransaction price is determined, the transaction price is\nallocated to performance obligations in the contract based on\ntheir standalone selling prices. The standalone selling price is\nthe price at which an entity would sell a promised good or\nservice separately to a customer. The best evidence of a\nstandalone selling price is the observable price of a good or\nservice when it is sold separately in similar circumstances and\nto similar customers (e.g., a contractually stated price or list\nprice of a good or service).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 1,
+    "page": 571,
+    "topicId": "su5-over-time",
+    "stem": "An entity is calculating the income recognized in the third year\nof a 5-year construction contract. It uses the input method\nbased on costs incurred to measure the progress toward\ncompletion. The ratio used in calculating income is",
+    "choices": [
+      "Costs incurred in Year 3 to total billings.",
+      "Costs incurred in Year 3 to total estimated costs.",
+      "Total costs incurred to date to total billings.",
+      "Total costs incurred to date to total estimated costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "The entity is using a cost-to-cost accounting method. The\ninput method based on costs incurred to measure the\nprogress toward completion recognizes gross profit or revenue\nbased on the ratio of costs to date to estimated total costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 2,
+    "page": 571,
+    "topicId": "su5-over-time",
+    "stem": "Haft Construction Co. has consistently used the input method\nbased on costs incurred to measure progress toward\ncompletion of the project. On January 10, Year 3, Haft began\nwork on a $3 million construction contract. At the inception\ndate, the estimated cost of construction was $2,250,000. The\nfollowing data relate to the progress of the contract:\nGross profit recognized at 12/31/Yr 3         $ 300,000\nCosts incurred 1/10/Yr 3 through 12/31/Yr 4 1,800,000\nEstimated cost to complete at 12/31/Yr 4         600,000\nIn its income statement for the year ended December 31, Year\n4, what amount of gross profit should Haft report?",
+    "choices": [
+      "$450,000",
+      "$300,000",
+      "$262,500",
+      "$150,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The input method based on costs incurred provides for the\nrecognition of gross profit based on the relationship between\nthe costs incurred to date and estimated total costs for the\ncompletion of the contract. The total anticipated gross profit is\nmultiplied by the ratio of the costs incurred to date to the total\nestimated costs, and the product is reduced by previously\nrecognized gross profit. The percentage-of-completion at\n12/31/Yr 4 is 75% [$1,800,000 ÷ ($1,800,000 + $600,000)].\nThe total anticipated gross profit is $600,000 ($3,000,000\ncontract price – $2,400,000 expected total costs).\nConsequently, a gross profit of $150,000 [($600,000 total\ngross profit × 75%) – $300,000 previously recognized gross\nprofit] is recognized for Year 4.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 3,
+    "page": 573,
+    "topicId": "su5-over-time",
+    "stem": "Which of the following is used in calculating the gross profit\nrecognized in the fourth and final year of a contract accounted\nfor under the input method based on costs incurred to\nmeasure progress toward completion of the contract?\nActual             Gross Profit\nTotal Costs      Previously Recognized",
+    "choices": [
+      "Yes                   Yes",
+      "Yes                   No",
+      "No                    Yes",
+      "No                    No"
+    ],
+    "answerIndex": 0,
+    "explanation": "The cost-to-cost method recognizes revenues, costs, and\ngross profit depending on the progress made on the contract.\nGross profit recognized in the last year of the contract equals\nthe contract price, minus actual total costs, minus gross profit\npreviously recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 4,
+    "page": 574,
+    "topicId": "su5-over-time",
+    "stem": "Gow Constructors, Inc., has consistently used the input\nmethod based on costs incurred to measure the progress\ntoward completion of a long-term construction contract. In\nYear 1, Gow started work on an $18 million construction\ncontract that was completed in Year 2. The following\ninformation was taken from Gow’s Year 1 accounting records:\nCosts incurred               $ 5,400,000\nCollections                    4,200,000\nEstimated costs to complete 10,800,000\nWhat amount of gross profit should Gow have recognized in\nYear 1 on this contract?",
+    "choices": [
+      "$1,400,000",
+      "$1,200,000",
+      "$900,000",
+      "$600,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "In Year 1, one-third of the estimated costs of this construction\nproject were incurred [$5,400,000 ÷ ($5,400,000 +\n$10,800,000)]. The entity should therefore have recognized\none-third of the estimated gross profit in Year 1. At year-end,\nthe estimated gross profit was $1,800,000 [$18,000,000 price\n– $16,200,000 total estimated costs ($5,400,000 costs\nincurred + $10,800,000 estimated costs to complete)]. In\nYear 1, $600,000 ($1,800,000 × 1/3) should have been\nrecognized as gross profit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 5,
+    "page": 575,
+    "topicId": "su5-over-time",
+    "stem": "Kechara Corp. started a long-term construction project on a\ncustomer’s land in Year 1. The following data relate to this\nproject:\nContract price                 $4,200,000\nCosts incurred in Year 1        1,750,000\nEstimated costs to complete 1,750,000\nAmounts billed                    900,000\nCollections on amounts billed     800,000\nThe project is accounted for using the input method based on\ncosts incurred to measure progress toward completion of the\ncontract. In Kechara’s Year 1 income statement, what amount\nof gross profit should be reported for this project?",
+    "choices": [
+      "$350,000",
+      "$150,000",
+      "$133,333",
+      "$100,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "In Year 1, one-half of the estimated costs of this construction\nproject were incurred [$1,750,000 ÷ ($1,750,000 +\n$1,750,000)]. The company should therefore recognize one-\nhalf of the estimated gross profit in Year 1. At year-end, the\nestimated gross profit is $700,000, equal to the contract price\nminus total estimated costs [$4,200,000 – ($1,750,000 +\n$1,750,000)]. In Year 1, $350,000 should be recognized as\ngross profit ($700,000 × 50%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 6,
+    "page": 576,
+    "topicId": "su5-over-time",
+    "stem": "Paulson Company uses the input method based on costs\nincurred to measure progress toward completion of long-term\nconstruction contracts. The following information relates to a\ncontract that was awarded at a price of $700,000. The\nestimated costs were $500,000, and the contract duration was\n3 years.\nYear 1     Year 2     Year 3\nCumulative cost to date       $300,000 $390,000 $530,000\nYear end costs to complete      250,000 130,000               0\nProgress billings               325,000 220,000 155,000\nCollections on account          300,000 200,000 200,000\nAssuming that $65,000 was recognized as gross profit in Year\n1, the amount of gross profit Paulson recognized in Year 2 was",
+    "choices": [
+      "$35,000",
+      "$70,000",
+      "$135,000",
+      "$170,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Determining the annual recognized gross profit requires\ncalculation of the estimated total gross profit.\nYear 1     Year 2\nContract price                $700,000 $700,000\nMinus: Estimated total costs\nCosts to date                $300,000 $390,000\nEstimated costs to complete 250,000 130,000\nEstimated total costs        $550,000 $520,000\nEstimated total gross profit $150,000 $180,000\nThe completion percentage for Year 2 is the ratio of costs\nincurred to date to estimated total costs ($390,000 ÷ $520,000\n= 75%). The cumulative gross profit recognized at the end of\nYear 2 is therefore $135,000 ($180,000 × 75%). Because\n$65,000 was recognized in Year 1, the amount recognized in\nYear 2 is $70,000 ($135,000 – $65,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 7,
+    "page": 578,
+    "topicId": "su5-over-time",
+    "stem": "On January 1, Year 1, an entity enters into a contract with a\ncustomer to build a robot. The construction of the robot is\nexpected to be completed at the end of Year 2. The entity also\ndetermines that\n• It has no alternative use for the robot.\n• It has an enforceable right to payment for the\nperformance completed to date.\n• The progress toward complete construction of the\nrobot is reasonably measurable using the input\nmethod based on costs incurred.\nThe contract price is $800,000, and expected total costs are\n$500,000. The following additional information relates to the\nactual and expected costs incurred:\nYear 1      Year 2\nCosts incurred during each year $250,000 $350,000\nCosts expected in future            250,000            0\nWhat amounts of revenue, cost of goods sold, and gross profit\nare recognized by the entity for Year 2?\nCost of\nRevenue        Goods Sold          Gross Profit",
+    "choices": [
+      "$400,000        $350,000            $50,000",
+      "$400,000         $250,000            $150,000",
+      "$800,000         $350,000            $450,000",
+      "$800,000         $600,000            $200,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Revenue must be recognized over time, that is, over the\n2 years of the construction period, because (1) the robot has\nno alternative use to the entity and (2) the entity has an\nenforceable right to payment for the performance completed to\ndate. In Year 1, 50% ($250,000 ÷ $500,000) of expected costs\nhas been incurred. Using the input method based on costs\nincurred, the entity recognizes 50% of the expected revenue\nfrom the contract for Year 1 ($800,000 contract price × 50% =\n$400,000). The total gross profit from the contract is expected\nto be $300,000 ($800,000 – $500,000). Thus, $150,000\n($300,000 × 50%) of gross profit ($400,000 revenue –\n$250,000 cost of goods sold) is recognized in Year 1. In\nYear 2, the contract is completed, and the total gross profit\nfrom the contract is $200,000 [$800,000 contract price –\n($250,000 + $350,000) total costs incurred]. Because\n$150,000 of gross profit was recognized in Year 1, $50,000\n($200,000 – $150,000) of gross profit is recognized in Year 2.\nThe total revenue from the contract is $800,000. Revenue of\n$400,000 was recognized in Year 1, so Year 2 revenue is\n$400,000 ($800,000 – $400,000). Cost of goods sold in Year 2\nequals the actual costs incurred of $350,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 8,
+    "page": 580,
+    "topicId": "su5-over-time",
+    "stem": "An entity entered into a contract to construct a building. Based\non the contract’s terms, the entity appropriately determined\nthat the performance obligation in the contract will be satisfied\nover time. At an early stage of the contract, the entity cannot\nreasonably measure the outcome of the contract, but it\nexpects to recover the costs incurred in the construction of the\nbuilding. The revenue from the contract should be recognized",
+    "choices": [
+      "Only to the extent of the costs incurred.",
+      "Only upon completion of the construction.",
+      "Evenly over the contract period on a straight-line basis.",
+      "Based on the progress toward completion of the project."
+    ],
+    "answerIndex": 0,
+    "explanation": "When the outcome of the contract is not reasonably\nmeasurable but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 9,
+    "page": 581,
+    "topicId": "su5-over-time",
+    "stem": "Frame Construction Company’s contract requires the\nconstruction of a bridge on a customer’s land in 3 years. The\nexpected total cost of the bridge is $2,000,000, and Frame will\nreceive $2,500,000 for the project. The actual costs incurred to\ncomplete the project were $500,000, $900,000, and $600,000,\nrespectively, during each of the 3 years. Progress payments\nreceived by Frame were $600,000, $1,200,000, and $700,000,\nrespectively. Assuming that the input method based on costs\nincurred to measure progress toward completion of the\ncontract is used, what amount of gross profit would Frame\nreport during the last year of the project?",
+    "choices": [
+      "$120,000",
+      "$125,000",
+      "$140,000",
+      "$150,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The expected gross profit is $500,000 ($2,500,000 price –\n$2,000,000 expected cost). Recognized gross profit in Year 1\nis $125,000 [$500,000 × ($500,000 ÷ $2,000,000)].\nCumulative recognized gross profit in Year 2 is $350,000\n{$500,000 × [($500,000 + $900,000) ÷ $2,000,000]}.\nRecognized gross profit in Year 3 is $150,000 [($2,500,000\nprice – $500,000 – $900,000 – $600,000) actual gross profit –\n$350,000 previously recognized].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 10,
+    "page": 582,
+    "topicId": "su5-over-time",
+    "stem": "When revenue from contracts with customers is recognized\nover time, the progress toward complete satisfaction of a\nperformance obligation may be measured using the",
+    "choices": [
+      "Point-in-time method.",
+      "Zero-profit-margin method.",
+      "Estimated gross profit method.",
+      "Input method."
+    ],
+    "answerIndex": 3,
+    "explanation": "When revenue is recognized over time, the progress toward\ncomplete satisfaction of a performance obligation must be\nmeasured. This progress must be measured either by the\noutput method or the input method. To determine the\nappropriate method, an entity must consider the nature of the\ngood or service that it promised to transfer to the customer.\nThe chosen method should measure the entity’s performance\nin transferring control of the promised asset to the customer.\nThe input method recognizes revenue on the basis of (1) the\nentity’s inputs to the satisfaction of the performance obligation\nrelative to (2) the total expected inputs to the satisfaction of\nthat performance obligation. Examples of input methods\ninclude (1) resources consumed, (2) labor hours expended,\n(3) costs incurred, (4) time elapsed, or (5) machine hours\nused. When an entity’s inputs are incurred evenly over time,\nrecognition of revenue on a straight-line basis may be\nappropriate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 11,
+    "page": 583,
+    "topicId": "su5-over-time",
+    "stem": "Hansen Construction, Inc., has consistently used the input\nmethod based on costs incurred to recognize revenue. During\nYear 1, Hansen started work on a $3 million fixed-price\nconstruction contract. The accounting records disclosed the\nfollowing data for the year ended December 31, Year 1:\nCosts incurred                $ 930,000\nEstimated costs to complete 2,170,000\nAmounts billed            1,100,000\nCollections                 700,000\nHow much loss should Hansen have recognized in Year 1?",
+    "choices": [
+      "$230,000",
+      "$100,000",
+      "$30,000",
+      "$0"
+    ],
+    "answerIndex": 1,
+    "explanation": "As soon as an estimated loss becomes evident, it must be\nrecognized in full. The total of the costs incurred in Year 1 plus\nestimated costs to complete is $3,100,000 ($930,000 +\n$2,170,000). Because this sum exceeds the $3 million fixed-\nprice construction contract amount, a $100,000 loss should be\nrecognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 12,
+    "page": 585,
+    "topicId": "su5-over-time",
+    "stem": "Data pertaining to Pell Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                           $420,000 $300,000\nCosts incurred during Year 1               240,000 280,000\nEstimated costs to complete                120,000    40,000\nBilled to customers during Year 1          150,000 270,000\nReceived from customers during Year 1       90,000 250,000\nIf Pell used the input method based on costs incurred to\nmeasure its progress toward completion of the contract, what\namount of gross profit/loss would Pell report in its Year 1\nincome statement?",
+    "choices": [
+      "$(20,000)",
+      "$20,000",
+      "$22,500",
+      "$40,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "At the end of Year 1, Project 1 is 66 2/3% complete [$240,000\n÷ ($240,000 + $120,000)] and Project 2 is 87 1/2% complete\n[$280,000 ÷ ($280,000 + $40,000)]. Each project’s percentage\nof completion is multiplied by its expected total gross profit.\nAccordingly, Pell recognizes $40,000 [($420,000 contract\nprice – $240,000 costs incurred – $120,000 additional\nestimated costs) × 66 2/3%] of gross profit for Project 1.\nHowever, Project 2 estimates indicate a loss of $20,000\n($300,000 – $280,000 – $40,000). Because the full amount of\na loss is reported immediately irrespective of the accounting\nmethod used, a gross profit of $20,000 [$40,000 Project 1 +\n$(20,000) Project 2] is recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 13,
+    "page": 586,
+    "topicId": "su5-over-time",
+    "stem": "Data pertaining to Pell Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                           $420,000 $300,000\nCosts incurred during Year 1               240,000 280,000\nEstimated costs to complete                120,000    40,000\nBilled to customers during Year 1          150,000 270,000\nReceived from customers during Year 1       90,000 250,000\nA construction company recognizes revenue from construction\ncontracts over time using the input method based on costs\nincurred. It reports the following:\nYear 1 Year 2\nConstruction costs                        $100 $200\nEstimated cost to complete at year-end 300            0\nThe contract price is $1,000. What is the profit recognized in\nYear 2?",
+    "choices": [
+      "$150",
+      "$400",
+      "$550",
+      "$800"
+    ],
+    "answerIndex": 2,
+    "explanation": "At the end of Year 1, total cost was expected to be $400 ($100\nincurred + $300 estimated cost to complete), and estimated\ntotal profit was $600 ($1,000 price – $400 estimated total\ncost). Thus, the amount of profit recognized in Year 1 was\n$150 [$600 × ($100 cost incurred ÷ $400 estimated total\ncost)]. The project was completed in Year 2 at an additional\ncost of $200. Actual profit was therefore $700 ($1,000 – $300\nactual total cost). Profit recognized in Year 2 is $550 ($700\ntotal – $150 recognized in Year 1).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 14,
+    "page": 587,
+    "topicId": "su5-over-time",
+    "stem": "Howard Co. had the following first-year amounts for a\n$7,000,000 construction contract:\nActual costs                   $2,000,000\nEstimated costs to complete 6,000,000\nProgress billings               1,800,000\nCash collected                  1,500,000\nWhat gross profit (loss) is recognized using the input method\nbased on costs incurred to measure progress toward\ncompletion of the contract?",
+    "choices": [
+      "$(1,000,000)",
+      "$(200,000)",
+      "$800,000",
+      "$1,750,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Using the cost-to-cost method, the estimated loss from the\nproject is $1,000,000 ($7,000,000 contract price – $2,000,000\nactual costs in the first year – $6,000,000 estimated remaining\ncosts to complete the project). As soon as an estimated loss\non any project becomes apparent, it must be recognized in\nfull. Therefore, the total $1,000,000 loss must be recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 15,
+    "page": 588,
+    "topicId": "su5-over-time",
+    "stem": "An entity recognizes revenue from a long-term contract over\ntime. However, early in the performance of the contract, it\ncannot reasonably measure the outcome, but it expects to\nrecover the costs incurred. Revenue should be recognized\nbased on",
+    "choices": [
+      "The output method.",
+      "A straight-line calculation.",
+      "A zero profit margin.",
+      "The completed-contract method."
+    ],
+    "answerIndex": 2,
+    "explanation": "When the outcome of the contract is not reasonably\nmeasurable but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 16,
+    "page": 589,
+    "topicId": "su5-over-time",
+    "stem": "Data pertaining to Pell Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                           $420,000 $300,000\nCosts incurred during Year 1               240,000 280,000\nEstimated costs to complete                120,000    40,000\nBilled to customers during Year 1          150,000 270,000\nReceived from customers during Year 1       90,000 250,000\nA building contractor has a fixed-price contract to construct a\nbuilding on the customer’s land. The building is expected to be\ncompleted in 2 years. Progress billings will be sent to the\ncustomer at quarterly intervals. Which of the following\ndescribes the preferable point for revenue recognition for this\ncontract if its outcome can be reasonably measured?",
+    "choices": [
+      "After the contract is signed.",
+      "As progress is made toward completion of the contract.",
+      "As cash is received.",
+      "As and only to the extent of costs incurred."
+    ],
+    "answerIndex": 1,
+    "explanation": "An entity must recognize revenue when (or as) it satisfies each\nperformance obligation in the contract by transferring the\npromised good or service to a customer. Because the\ncustomer controls the building as it is constructed, the contract\nmeets the criteria for recognition of revenue over time. Thus,\nthe contractor must recognize revenue as progress is made\ntoward completion of the contract.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 17,
+    "page": 590,
+    "topicId": "su5-over-time",
+    "stem": "Cinnabar Construction Company has consistently used the\ninput method based on costs incurred to recognize revenue\nfrom a performance obligation satisfied over time. During Year\n1, Cinnabar entered into a fixed-price contract to construct an\noffice building for $10 million. Information relating to the\ncontract is as follows:\nDecember 31\nYear 1        Year 2\nProgress to completion      20%          60%\nEstimated total costs\nat completion            $7,500,000 $8,000,000\nGross profit recognized\n(cumulative)                 500,000    1,200,000\nContract costs incurred during Year 2 were",
+    "choices": [
+      "$3,200,000",
+      "$3,300,000",
+      "$3,500,000",
+      "$4,800,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "If the progress to completion is based on the relationship of\nthe cumulative costs incurred to date to estimated total costs\nat completion, the cumulative amount incurred at 12/31/Year 1\nwas $1,500,000 ($7,500,000 × 20%). At 12/31/Year 2, the\ncumulative amount incurred was $4,800,000 ($8,000,000 ×\n60%). The difference of $3,300,000 ($4,800,000 –\n$1,500,000) equals contract costs incurred during Year 2.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 18,
+    "page": 591,
+    "topicId": "su5-over-time",
+    "stem": "A company began work on a long-term construction contract in\nYear 1. The contract price was $3,000,000. Year-end\ninformation related to the contract is as follows:\nYear 1       Year 2        Year 3\nEstimated total cost $2,000,000 $2,000,000 $2,000,000\nCost incurred            700,000     900,000  400,000\nBillings                 800,000 1,200,000 1,000,000\nCollections              600,000 1,200,000 1,200,000\nUnder the input method based on costs incurred, the gross\nprofit to be recognized in Year 1 is",
+    "choices": [
+      "$(100,000)",
+      "$100,000",
+      "$200,000",
+      "$350,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The input method based on costs incurred recognizes revenue\nbased on the stage of completion of the contract. The\nprogress toward completion of the project is the calculation of\nratio of the contract costs incurred to date to the estimated\ntotal costs. The percentage-of-completion at year-end on the\ncost-to-cost basis is 35% ($700,000 ÷ $2,000,000). The gross\nprofit for Year 1 is the anticipated gross profit on the contract\ntimes the completion percentage. Thus, profit for Year 1 is\n$350,000 [($3,000,000 – $2,000,000) × 35%].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 19,
+    "page": 593,
+    "topicId": "su5-over-time",
+    "stem": "On January 1, Year 1, Big Co. enters into a contract\nwith a customer to build a bridge on the customer’s land for\n$2,500,000. The construction of the bridge is expected to be\ncompleted at the end of Year 3. Big determines that the progress\ntoward completion of the bridge is reasonably measurable using the\ninput method based on costs incurred. At contract inception, Big\nestimates that the expected total cost of construction will be\n$1,700,000. Below are the (1) actual costs incurred during each year,\n(2) expected costs to complete the construction, and (3) amounts\nbilled to the customer:\nYear 1      Year 2     Year 3\nCosts incurred each year            $ 700,000 $500,000 $800,000\nCosts expected in the following      1,300,000 675,000        0\nyears\nAmounts billed to (and paid by) the\ncustomer each year                    700,000 950,000 850,000\nWhat amount of revenue on this contract is recognized by Big\nin its Year 1 income statement?",
+    "choices": [
+      "$875,000",
+      "$650,000",
+      "$700,000",
+      "$175,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "By the end of Year 1, 35% [$700,000 ÷ ($700,000 +\n$1,300,000)] of total expected costs have been incurred.\nUsing the input method based on costs incurred, 35% of the\nrevenue from the contract is recognized in Year 1. Thus,\n$875,000 ($2,500,000 × 35%) of revenue from this contract is\nrecognized in Year 1.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 20,
+    "page": 594,
+    "topicId": "su5-over-time",
+    "stem": "On January 1, Year 1, Big Co. enters into a contract\nwith a customer to build a bridge on the customer’s land for\n$2,500,000. The construction of the bridge is expected to be\ncompleted at the end of Year 3. Big determines that the progress\ntoward completion of the bridge is reasonably measurable using the\ninput method based on costs incurred. At contract inception, Big\nestimates that the expected total cost of construction will be\n$1,700,000. Below are the (1) actual costs incurred during each year,\n(2) expected costs to complete the construction, and (3) amounts\nbilled to the customer:\nYear 1      Year 2     Year 3\nCosts incurred each year            $ 700,000 $500,000 $800,000\nCosts expected in the following      1,300,000 675,000        0\nyears\nAmounts billed to (and paid by) the\ncustomer each year                    700,000 950,000 850,000\nWhat amount of gross profit on this contract is recognized by\nBig in its Year 2 income statement?",
+    "choices": [
+      "$400,000",
+      "$225,000",
+      "$450,000",
+      "$0"
+    ],
+    "answerIndex": 1,
+    "explanation": "Revenue and gross profit are recognized over the 3 years of\nthe construction period using the input method based on costs\nincurred in measuring the progress toward completion. At the\nend of Year 2, 64% [($700,000 + $500,000) ÷ ($700,000 +\n$500,000 + $675,000)] of expected costs have been incurred.\nAt the end of Year 2, the total expected gross profit from the\ncontract is $625,000 [$2,500,000 – ($700,000 + $500,000 +\n$675,000)]. Thus, the gross profit in the first 2 years of the\ncontract is $400,000 ($625,000 × 64%). In Year 1, gross profit\nof $175,000 [$500,000 total expected gross profit estimated at\nthe end of Year 1 × ($700,000 ÷ $2,000,000) progress of\ncompletion at the end of Year 1] was recognized. Thus, the\ngross profit recognized in Year 2 is $225,000 ($400,000 gross\nprofit for the first 2 years – $175,000 gross profit recognized in\nYear 1).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 21,
+    "page": 595,
+    "topicId": "su5-over-time",
+    "stem": "On January 1, Year 1, Big Co. enters into a contract\nwith a customer to build a bridge on the customer’s land for\n$2,500,000. The construction of the bridge is expected to be\ncompleted at the end of Year 3. Big determines that the progress\ntoward completion of the bridge is reasonably measurable using the\ninput method based on costs incurred. At contract inception, Big\nestimates that the expected total cost of construction will be\n$1,700,000. Below are the (1) actual costs incurred during each year,\n(2) expected costs to complete the construction, and (3) amounts\nbilled to the customer:\nYear 1      Year 2     Year 3\nCosts incurred each year            $ 700,000 $500,000 $800,000\nCosts expected in the following      1,300,000 675,000        0\nyears\nAmounts billed to (and paid by) the\ncustomer each year                    700,000 950,000 850,000\nWhat amount of gross profit on this contract is recognized by\nBig in its Year 3 income statement?",
+    "choices": [
+      "$500,000",
+      "$50,000",
+      "$100,000",
+      "$166,667"
+    ],
+    "answerIndex": 2,
+    "explanation": "In this contract, revenue is recognized over time and based on\nthe progress toward completion. The progress toward\ncompletion is measured using the input method based on\ncosts incurred. The construction was completed in Year 3.\nAccordingly, the entire gross profit from the contract of\n$500,000 [$2,500,000 – ($700,000 + $500,000 + $800,000)]\nmust be recognized by the end of Year 3. At the end of Year\n2, the total expected gross profit from the contract was\n$625,000 [$2,500,000 – ($700,000 + $500,000 + $675,000)].\nBy the end of Year 2, 64% [($700,000 + $500,000) ÷\n($700,000 + $500,000 + $675,000)] of the expected contract\ncosts had been incurred. Because the recognized gross profit\nin the first 2 years of the contract was $400,000 ($625,000 ×\n64%), the gross profit recognized in Year 3 is $100,000\n($500,000 – $400,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 22,
+    "page": 596,
+    "topicId": "su5-over-time",
+    "stem": "On January 1, Year 1, Big Co. enters into a contract\nwith a customer to build a bridge on the customer’s land for\n$2,500,000. The construction of the bridge is expected to be\ncompleted at the end of Year 3. Big determines that the progress\ntoward completion of the bridge is reasonably measurable using the\ninput method based on costs incurred. At contract inception, Big\nestimates that the expected total cost of construction will be\n$1,700,000. Below are the (1) actual costs incurred during each year,\n(2) expected costs to complete the construction, and (3) amounts\nbilled to the customer:\nYear 1      Year 2     Year 3\nCosts incurred each year            $ 700,000 $500,000 $800,000\nCosts expected in the following      1,300,000 675,000        0\nyears\nAmounts billed to (and paid by) the\ncustomer each year                    700,000 950,000 850,000\nWhat amount of revenue on this contract is recognized by Big\nin its Year 3 income statement?",
+    "choices": [
+      "$900,000",
+      "$850,000",
+      "$2,500,000",
+      "$833,333"
+    ],
+    "answerIndex": 0,
+    "explanation": "In this contract, revenue is recognized over time based on\nprogress toward completion. The progress toward completion\nis measured using the input method based on costs incurred.\nThe construction was completed in Year 3. Accordingly, by the\nend of Year 3, the entire $2,500,000 of revenues should be\nrecognized. At the end of Year 2, 64% [($700,000 + $500,000)\n÷ ($700,000 + $500,000 + $675,000)] of the estimated\nconstruction costs had been incurred. Thus, revenue of\n$900,000 [$2,500,000 × (100% – 64%)] is recognized in Year\n3.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 23,
+    "page": 597,
+    "topicId": "su5-over-time",
+    "stem": "On October 1, Year 1, Little Co. enters into a contract with a\ncustomer to build a factory on the customer’s land for\n$1,000,000. The construction of the factory is expected to be\ncompleted at the end of Year 5. Based on Little’s accounting\npolicies, the progress toward completion of the factory is\nmeasured using the input method based on costs incurred.\nDuring Year 1, Little incurred $450,000 in costs in respect to\nthis contract and billed the customer for $600,000. At the end\nof Year 1, Little cannot reasonably estimate the total expected\ncosts of the construction and cannot reasonably estimate the\nprogress toward completion of the factory. However, Little\nexpects to recover the costs incurred in the construction. What\namount of revenue from this contract will be recognized in\nLittle’s Year 1 income statement?",
+    "choices": [
+      "$150,000",
+      "$600,000",
+      "$450,000",
+      "$0"
+    ],
+    "answerIndex": 2,
+    "explanation": "When the outcome of the contract is not reasonably\nmeasurable, but the costs incurred in satisfying the\nperformance obligation are expected to be recovered, revenue\nmust be recognized only to the extent of the costs incurred.\nRevenue recognized is based on a zero profit margin until the\nentity can reasonably measure the outcome of the\nperformance obligation. Because the costs incurred are\nexpected to be recovered, revenue is recognized equal to the\ncosts incurred of $450,000 in Year 1.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 24,
+    "page": 598,
+    "topicId": "su5-over-time",
+    "stem": "A building contractor has a contract to construct a large\nbuilding. It is estimated that the building will take 2 years to\ncomplete. Progress billings will be sent to the customer at\nquarterly intervals. Which of the following describes the\npreferable point for revenue and gross profit recognition for\nthis contract?",
+    "choices": [
+      "After the contract is signed.",
+      "As progress is made toward completion of the contract.",
+      "As cash is received.",
+      "When the contract is completed."
+    ],
+    "answerIndex": 1,
+    "explanation": "Two methods are used for revenue and gross profit\nrecognition for long-term construction-type contracts: the\npercentage-of-completion method and the completed-contract\nmethod. Under the percentage-of-completion method, revenue\nand gross profit are recognized each period based upon the\nprogress of the construction. The presumption is that the\npercentage-of-completion approach is the better method and\nthat the completed-contract method should be used only when\nthe percentage-of-completion method is inappropriate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 25,
+    "page": 599,
+    "topicId": "su5-over-time",
+    "stem": "Saskia Company’s construction projects extend over several\nyears, and collection of receivables is reasonably certain. Each\nproject has a firm contract price, reliable estimates of the\nextent of progress and cost to finish, and a contract that is\nspecific as to the rights and obligations of all parties. The\ncontractor and the buyer are expected to fulfill their contractual\nobligations on each project. Saskia should recognize revenue\nfrom the projects",
+    "choices": [
+      "As cash is collected from customers.",
+      "Based on the progress toward complete satisfaction of the\nperformance obligation for each project.",
+      "Only to the extent of the costs incurred.",
+      "At a point in time."
+    ],
+    "answerIndex": 1,
+    "explanation": "For each performance obligation satisfied over time, an entity\nmust recognize revenue over time. For this purpose, the entity\nmeasures the progress toward complete satisfaction using the\noutput method or the input method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 26,
+    "page": 600,
+    "topicId": "su5-over-time",
+    "stem": "A company used the input method based on costs incurred to\nmeasure the progress toward completion of a 4-year\nconstruction contract. Which of the following items should be\nused to calculate the gross profit recognized in the second\nyear?\nGross Profit\nPreviously          Amounts\nRecognized       Billed to Date",
+    "choices": [
+      "Yes               Yes",
+      "No                Yes",
+      "Yes               No",
+      "No                No"
+    ],
+    "answerIndex": 2,
+    "explanation": "The cost-to-cost method provides for the recognition of gross\nprofit based on the relationship between the costs incurred to\ndate and estimated total costs for the completion of the\ncontract. The amount of gross profit (based on the latest\navailable estimated costs) recognized in the second year of a\n4-year contract is calculated as follows: The total anticipated\ngross profit is multiplied by the ratio of the costs incurred to\ndate to the total estimated costs, and the product is reduced\nby previously recognized gross profit. Gross profit previously\nrecognized is therefore used to calculate gross profit to be\nrecognized in the second year. However, amounts billed to\ndate have no effect on the amount of gross profit to be\nrecognized in the second year.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 27,
+    "page": 601,
+    "topicId": "su5-over-time",
+    "stem": "A consulting company won a $20.8 million 3-year contract. The\ncontract requires software development, hosting, and\nmaintenance over 3 years. The total estimated cost of the\nproject is $17 million, with $10 million expected in Year 1,\n$5 million in Year 2, and $2 million in Year 3. The billing\nschedule shows that $5 million will be billed upon start of the\nwork, and then $5 million at each year end. At the end of the\nfirst year, the actual cost incurred is $9 million, and total\nestimated costs are unchanged at $17 million. Using the cost-\nto-cost method, how much revenue should be recognized at\nthe end of the first year?",
+    "choices": [
+      "$11 million.",
+      "$10 million.",
+      "$5 million.",
+      "No revenue."
+    ],
+    "answerIndex": 0,
+    "explanation": "At the end of the first year, the actual cost incurred was\n$9 million, which is 52.94% of the total estimated cost of the\nproject ($9 million actual cost ÷ $17 million total estimated\ncost). This percentage of completion is multiplied by the total\nrevenue amount of the contract to find recognized revenue in\nthe first year of $11 million ($20.8 million × 52.94%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 28,
+    "page": 602,
+    "topicId": "su5-over-time",
+    "stem": "Which of the following situations may result in recognition over\ntime of revenue from a contract with a customer by an entity?",
+    "choices": [
+      "The entity can enforce payment for work completed to date on\nan asset with an alternative use to the entity.",
+      "The customer simultaneously receives and consumes the\nbenefits from performance as the entity performs.",
+      "The customer has accepted the asset, and the entity has a\npresent right to payment.",
+      "The entity’s performance creates or enhances an asset not\ncontrolled by the customer during the process."
+    ],
+    "answerIndex": 1,
+    "explanation": "An entity recognizes revenue when (or as) it satisfies each\nperformance obligation in the contract by transferring the\npromised good or service (an asset) to a customer. An asset is\ntransferred when the customer obtains control of that asset.\nWhen the customer simultaneously receives and consumes\nthe benefits from performance as the entity performs, revenue\nis recognized over time.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 29,
+    "page": 603,
+    "topicId": "su5-over-time",
+    "stem": "Ailouros Construction, Inc., has consistently used the input\nmethod based on costs incurred to measure the progress\ntoward completion of a project. During Year 1, Ailouros started\nwork on a $6 million fixed-price construction contract. The\naccounting records disclosed the following data for the year\nended December 31, Year 1:\nCosts incurred                $1,860,000\nEstimated costs to complete 4,340,000\nAccounts receivable              600,000\nCollections                    1,400,000\nHow much loss should Ailouros have recognized in Year 1?",
+    "choices": [
+      "$460,000",
+      "$200,000",
+      "$60,000",
+      "$0"
+    ],
+    "answerIndex": 1,
+    "explanation": "As soon as an estimated loss on any project becomes\napparent, it must be recognized in full. The total of the costs\nincurred in Year 1 plus estimated costs to complete is\n$6,200,000 ($1,860,000 + $4,340,000). Because this sum\nexceeds the $6 million fixed-price construction contract\namount, a $200,000 loss should be recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 30,
+    "page": 605,
+    "topicId": "su5-over-time",
+    "stem": "Data pertaining to Catus Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                        $420,000 $300,000\nCosts incurred during Year 1           240,000 280,000\nEstimated costs to complete            120,000   40,000\nBilled to customers during Year 1      150,000 270,000\nReceived from customers during Year 1   90,000 250,000\nIf Catus cannot reasonably measure the progress toward\ncompletion of the projects but expects to recover the costs\nincurred, what amount of gross profit (loss) should Catus\nreport in its Year 1 income statement?",
+    "choices": [
+      "$(20,000)",
+      "$0",
+      "$40,000",
+      "$420,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Catus cannot reasonably measure the progress toward\nsatisfaction of the performance obligation (contract) but\nexpects to recover the costs incurred. Accordingly, it\nrecognizes revenue from the contracts to the extent of the cost\nincurred (zero profit margin). For Project 1, no gross profit is\nrecognized in Year 1. However, as soon as an estimated loss\non any project becomes apparent, it must be recognized in\nfull. Catus therefore recognizes a loss of $20,000 on Project 2\n($300,000 contract price – ($280,000 + $40,000) estimated\ncontract costs).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 31,
+    "page": 605,
+    "topicId": "su5-over-time",
+    "stem": "Data pertaining to Catus Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                        $420,000 $300,000\nCosts incurred during Year 1           240,000 280,000\nEstimated costs to complete            120,000   40,000\nBilled to customers during Year 1      150,000 270,000\nReceived from customers during Year 1   90,000 250,000\nIf Catus uses the input method based on costs incurred to\nmeasure the progress toward completion of the project, what\namount of gross profit (loss) should Catus report in its Year 1\nincome statement?",
+    "choices": [
+      "$(20,000)",
+      "$20,000",
+      "$22,500",
+      "$40,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The input method based on costs incurred provides for the\nrecognition of gross profit based on the relationship between\nthe costs incurred to date and estimated total costs for the\ncompletion of the contract. The total anticipated gross profit is\nmultiplied by the ratio of the costs incurred to date to the total\nestimated costs, and the product is reduced by previously\nrecognized gross profit. At the end of Year 1, Project 1 is 66\n2/3% complete [$240,000 ÷ ($240,000 + $120,000)] and\nProject 2 is 87 1/2% complete [$280,000 ÷ ($280,000 +\n$40,000)]. Each project’s percentage of completion is\nmultiplied by its expected total gross profit. Accordingly, Catus\nrecognizes $40,000 [($420,000 contract price – $240,000\ncosts incurred – $120,000 additional estimated costs) ×\n66 2/3%] of gross profit for Project 1. However, Project 2\nestimates indicate a loss of $20,000 ($300,000 – $280,000 –\n$40,000). Because the full amount of a loss is reported\nimmediately irrespective of the accounting method used, a\ngross profit of $20,000 [$40,000 Project 1 + $(20,000)\nProject 2] is recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 32,
+    "page": 607,
+    "topicId": "su5-over-time",
+    "stem": "Data pertaining to Catus Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                        $420,000 $300,000\nCosts incurred during Year 1           240,000 280,000\nEstimated costs to complete            120,000   40,000\nBilled to customers during Year 1      150,000 270,000\nReceived from customers during Year 1   90,000 250,000\nKechara Corp. started a long-term construction project in Year\n1. The following data relate to this project:\nContract price                    $4,200,000\nCosts incurred in Year 1           1,750,000\nEstimated costs to complete        1,750,000\nProgress billings                    900,000\nCollections on progress billings     800,000\nThe project is accounted for using the input method based on\ncosts incurred to recognize revenue from a performance\nobligation satisfied over time. In Kechara’s Year 1 income\nstatement, what amount of gross profit should be reported for\nthis project?",
+    "choices": [
+      "$350,000",
+      "$700,000",
+      "$900,000",
+      "$100,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "In Year 1, one-half of the estimated costs of this construction\nproject were incurred [$1,750,000 ÷ ($1,750,000 +\n$1,750,000)]. The company should therefore recognize one-\nhalf of the estimated gross profit in Year 1. At year end, the\nestimated gross profit is $700,000, equal to the contract price\nminus total estimated costs [$4,200,000 – ($1,750,000 +\n$1,750,000)]. In Year 1, $350,000 should be recognized as\ngross profit ($700,000 × 50%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 2,
+    "number": 33,
+    "page": 608,
+    "topicId": "su5-over-time",
+    "stem": "Ashke Co. recognizes construction revenue and gross profit\nusing the input method based on costs incurred to recognize\nrevenue from a performance obligation satisfied over time.\nDuring Year 1, a single long-term project was begun, which\ncontinued through Year 2. Information on the project follows:\nYear 1     Year 2\nAccounts receivable from\nconstruction contract                     $100,000 $300,000\nAnnual construction costs                  105,000 192,000\nCumulative gross profit and costs incurred 122,000 364,000\nPartial billings on contract               100,000 420,000\nGross profit recognized on the long-term construction contract\nin Year 2 should be",
+    "choices": [
+      "$50,000",
+      "$108,000",
+      "$120,000",
+      "$228,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Costs incurred through Year 2 equal $297,000 ($105,000 +\n$192,000). Thus, gross profit recognized in Year 1 and Year 2\nis $67,000 ($364,000 – $297,000 cumulative costs). Because\ngross profit of $17,000 was recognized in Year 1 ($122,000 –\n$105,000 of costs), $50,000 ($67,000 – $17,000) should be\nrecognized in Year 2.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 1,
+    "page": 610,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Testing for possible impairment of a long-lived asset (asset\ngroup) that an entity expects to hold and use is required",
+    "choices": [
+      "At each interim and annual balance sheet date.",
+      "At annual balance sheet dates only.",
+      "Periodically.",
+      "Whenever events or changes in circumstances indicate that its\ncarrying amount may not be recoverable."
+    ],
+    "answerIndex": 3,
+    "explanation": "A long-lived asset (asset group) is tested for recoverability\nwhenever events or changes in circumstances indicate that its\ncarrying amount may not be recoverable. The carrying amount\nis not recoverable when it exceeds the sum of the\nundiscounted cash flows expected to result from the use and\ndisposition of the asset (asset group). If the carrying amount is\nnot recoverable, an impairment loss is recognized equal to the\nexcess of the carrying amount over the fair value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 2,
+    "page": 611,
+    "topicId": "su5-impairment-disposal",
+    "stem": "An entity purchased a machine on January 1, Year 1, for\n$1,000,000. The machine had an estimated useful life of\n9 years and a residual value of $100,000. The entity uses\nstraight-line depreciation. On December 31, Year 4, the\nmachine was sold for $535,000. The gain or loss that should\nbe recorded on the disposal of this machine is",
+    "choices": [
+      "$35,000 gain.",
+      "$65,000 loss.",
+      "$365,000 loss.",
+      "$465,000 loss."
+    ],
+    "answerIndex": 1,
+    "explanation": "The accumulated depreciation was $400,000 {[($1,000,000\nhistorical cost – $100,000 residual value) ÷ 9 years estimated\nuseful life] × 4 years}, so the carrying amount was $600,000\n($1,000,000 – $400,000). Thus, the loss was $65,000\n($600,000 carrying amount – $535,000 sales price).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 3,
+    "page": 611,
+    "topicId": "su5-impairment-disposal",
+    "stem": "An entity purchased a machine for $700,000. The machine\nwas depreciated using the straight-line method and had a\nresidual value of $40,000. The machine was sold on\nDecember 31, Year 1. The accumulated depreciation related\nto the machine was $495,000 on that date. The entity reported\na gain on the sale of the machine of $75,000 in its income\nstatement for the fiscal year ending December 31, Year 1. The\nselling price of the machine was",
+    "choices": [
+      "$280,000",
+      "$240,000",
+      "$205,000",
+      "$115,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The selling price minus the carrying amount of the machine\nequals the gain or loss on disposal. The carrying amount\nequals $205,000 ($700,000 historical cost – $495,000\naccumulated depreciation). Thus, the selling price was\n$280,000 ($205,000 + $75,000 gain).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 4,
+    "page": 612,
+    "topicId": "su5-impairment-disposal",
+    "stem": "An impairment loss on a long-lived asset (asset group) to be\nheld and used is reported by a business enterprise in",
+    "choices": [
+      "Discontinued operations.",
+      "Extraordinary items.",
+      "Other comprehensive income.",
+      "Income from continuing operations."
+    ],
+    "answerIndex": 3,
+    "explanation": "An impairment loss is included in income from continuing\noperations before income taxes by a business enterprise\n(income from continuing operations in the statement of\nactivities by a not-for-profit organization). When a subtotal for\n“income from operations” is reported, the impairment loss is\nincluded.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 5,
+    "page": 614,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Blake Corporation has determined that one of its machines has\nexperienced an impairment in value. However, the company expects\nto continue to use the asset for another 3 full years because no active\nmarket exists for this machine. Selected information on the impaired\nasset (on the date that impairment was determined to exist) is\nprovided below.\nOriginal cost of the machine                         $22,000\nCarrying amount of the machine                       20,000\nUndiscounted future cash flows expected to be\ngenerated by the machine                            15,000\nFair value of the machine (determined by\ncalculating the present value of the future cash\nflows expected to be generated by the machine) 12,000\nAfter recognition of the impairment loss, Blake’s carrying\namount of the impaired asset will be",
+    "choices": [
+      "$0",
+      "$12,000",
+      "$14,000",
+      "$15,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "A long-lived asset (asset group) is impaired when its carrying\namount is greater than its fair value. However, a loss equal to\nthis excess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset\n(asset group).\nThe asset is impaired because its carrying amount ($20,000)\nexceeds its fair value ($12,000). This loss ($20,000 – $12,000\n= $8,000) is recognized in full because the carrying amount\n($20,000) exceeds the undiscounted cash flows from the\nasset ($15,000). Thus, the carrying amount is reduced to\n$12,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 6,
+    "page": 615,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Blake Corporation has determined that one of its machines has\nexperienced an impairment in value. However, the company expects\nto continue to use the asset for another 3 full years because no active\nmarket exists for this machine. Selected information on the impaired\nasset (on the date that impairment was determined to exist) is\nprovided below.\nOriginal cost of the machine                         $22,000\nCarrying amount of the machine                       20,000\nUndiscounted future cash flows expected to be\ngenerated by the machine                            15,000\nFair value of the machine (determined by\ncalculating the present value of the future cash\nflows expected to be generated by the machine) 12,000\nWhat is the amount of the impairment loss to be recorded by\nBlake?",
+    "choices": [
+      "$3,000",
+      "$5,000",
+      "$7,000",
+      "$8,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The impairment loss is the difference between the carrying\namount and fair value of the asset ($20,000 – $12,000 =\n$8,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 7,
+    "page": 615,
+    "topicId": "su5-impairment-disposal",
+    "stem": "An entity sold a depreciable asset in the middle of the fifth year\nof its estimated 10-year useful life. The original cost of the\nasset was $100,000, and it was being depreciated on the\nstraight-line basis. If the asset was sold for $80,000, the gain\non the sale will be",
+    "choices": [
+      "$20,000",
+      "$25,000",
+      "$30,000",
+      "$35,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The gain on the sale is the difference between the sale\nproceeds and the carrying amount of the asset (its remaining\nundepreciated cost). Depreciation must be taken up to the\ntime of sale. Assuming that residual value is $0, annual\ndepreciation is $10,000 ($100,000 ÷ 10 years). Thus, the gain\nis $25,000 {$80,000 sale proceeds – [$100,000 historical cost\n– ($10,000 × 4.5 years)]}.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 8,
+    "page": 616,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Blake Corporation has determined that one of its machines has\nexperienced an impairment in value. However, the company expects\nto continue to use the asset for another 3 full years because no active\nmarket exists for this machine. Selected information on the impaired\nasset (on the date that impairment was determined to exist) is\nprovided below.\nOriginal cost of the machine                         $22,000\nCarrying amount of the machine                       20,000\nUndiscounted future cash flows expected to be\ngenerated by the machine                            15,000\nFair value of the machine (determined by\ncalculating the present value of the future cash\nflows expected to be generated by the machine) 12,000\nTo determine whether to recognize the impairment of a\ndepreciable fixed asset, a company must compare the",
+    "choices": [
+      "Carrying amount of the asset and the present value of the\nfuture cash flows expected to be generated by the asset.",
+      "Original cost of the asset and the fair value of the asset.",
+      "Carrying amount of the asset and the undiscounted future\ncash flows expected to be generated by the asset.",
+      "Original cost of the asset and the carrying amount of the asset."
+    ],
+    "answerIndex": 2,
+    "explanation": "A long-lived asset (asset group) is impaired when its carrying\namount is greater than its fair value. However, a loss equal to\nthis excess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset\n(asset group).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 9,
+    "page": 617,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Blake Corporation has determined that one of its machines has\nexperienced an impairment in value. However, the company expects\nto continue to use the asset for another 3 full years because no active\nmarket exists for this machine. Selected information on the impaired\nasset (on the date that impairment was determined to exist) is\nprovided below.\nOriginal cost of the machine                         $22,000\nCarrying amount of the machine                       20,000\nUndiscounted future cash flows expected to be\ngenerated by the machine                            15,000\nFair value of the machine (determined by\ncalculating the present value of the future cash\nflows expected to be generated by the machine) 12,000\nWhich of the following statements is true regarding impairment\nof long-lived assets?",
+    "choices": [
+      "U.S. GAAP requires a one-step impairment test, and IFRS\nrequires a two-step impairment test.",
+      "Both IFRS and U.S. GAAP permit reversal of an impairment\nloss in subsequent periods.",
+      "Both IFRS and U.S. GAAP prohibit reversal of an impairment\nloss in subsequent periods.",
+      "Under U.S. GAAP, but not IFRS, reversal of an impairment\nloss in subsequent periods is prohibited."
+    ],
+    "answerIndex": 3,
+    "explanation": "Under IFRS, an impairment loss on an asset may be reversed\nin subsequent periods if a change in the estimates used to\nmeasure the recoverable amount has occurred. But an\nimpairment loss recognized for goodwill must not be reversed.\nUnder U.S. GAAP, a previously recognized impairment loss\nmust not be reversed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 10,
+    "page": 618,
+    "topicId": "su5-impairment-disposal",
+    "stem": "An entity applies IFRS. On December 31, Year 1, it estimates\nthe following information regarding its headquarters building:\nFair value           $100,000\nCost to sell         $15,000\nValue in use         $90,000\nResidual value       $17,000\nNet realizable value $82,000\nAccording to the information above, what is the recoverable\namount of the headquarters building on December 31, Year 1?",
+    "choices": [
+      "$85,000",
+      "$90,000",
+      "$100,000",
+      "$82,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The recoverable amount of an asset is the higher of its fair\nvalue minus costs to sell and its value in use. Thus, the\nrecoverable amount is $90,000 [$90,000 value in use >\n($100,000 – $15,000) FV minus costs to sell].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 11,
+    "page": 619,
+    "topicId": "su5-impairment-disposal",
+    "stem": "A company has a long-lived asset with a carrying value of\n$120,000, expected future cash flows of $130,000, present\nvalue of expected future cash flows of $100,000, and a market\nvalue of $105,000. What amount of impairment loss should be\nreported?",
+    "choices": [
+      "$0",
+      "$5,000",
+      "$15,000",
+      "$20,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "An impairment loss is recognized when a long-lived asset’s\ncarrying amount exceeds the sum of its undiscounted cash\nflows. Because the sum of the undiscounted cash flows\n($130,000) exceeds the carrying amount ($120,000), the\ncarrying amount is recoverable. Thus, no impairment is\nrecognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 12,
+    "page": 619,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Last year, a firm reduced the carrying amount of its long-lived\nassets used in operations from $120,000 to $100,000, in\nconnection with its annual impairment review. During the\ncurrent year, the firm determined that the fair value of the\nsame assets had increased to $130,000. Under U.S. GAAP,\nwhat amount should the firm record as restoration of\npreviously recognized impairment loss in the current year’s\nfinancial statements?",
+    "choices": [
+      "$0",
+      "$10,000",
+      "$20,000",
+      "$30,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "A previously recognized impairment loss may not be reversed\nunder U.S. GAAP. Under IFRS, an impairment loss (carrying\namount > recoverable amount) on an asset (except goodwill)\nmay be reversed if a change in the estimates used to measure\nthe recoverable amount has occurred. Furthermore, IFRS\npermit an item of property, plant, and equipment to be carried\nat a revalued amount if its fair value can be measured reliably.\nThus, an increase in excess of the prior carrying amount is\npermitted by IFRS.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 13,
+    "page": 620,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Under IFRS, an asset is impaired when its carrying amount\nexceeds its recoverable amount. The recoverable amount of\nan asset is",
+    "choices": [
+      "The lower of its fair value plus cost to sell or value in use.",
+      "The greater of its fair value plus cost to sell or value in use.",
+      "The lower of its fair value minus cost to sell or value in use.",
+      "The greater of its fair value minus cost to sell or value in use."
+    ],
+    "answerIndex": 3,
+    "explanation": "The recoverable amount of an asset is the greater of its fair\nvalue minus cost to sell or value in use. Value in use is the\npresent value of the asset’s expected cash flows. The\nrecognized impairment loss is the excess of the asset’s\ncarrying amount over its recoverable amount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 14,
+    "page": 621,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Goodwill should be tested for value impairment at which of the\nfollowing levels?",
+    "choices": [
+      "Each identifiable long-term asset.",
+      "Each reporting unit.",
+      "Each acquisition unit.",
+      "Entire business as a whole."
+    ],
+    "answerIndex": 1,
+    "explanation": "The cost of an acquired entity minus the net amount assigned\nto assets acquired and liabilities assumed is goodwill.\nGoodwill is not amortized. However, goodwill is assigned to a\nreporting unit that benefited from the business combination for\nthe purpose of testing impairment. Testing occurs each year at\nthe same time, but different reporting units may be tested at\ndifferent times. Furthermore, additional testing also may be\nindicated. Potential impairment of goodwill is deemed to exist\nonly if the carrying amount (including goodwill) of a reporting\nunit is greater than its fair value. Thus, accounting for goodwill\nis based on the units of the combined entity into which the\nacquired entity was absorbed. A reporting unit is an operating\nsegment or one of its components, that is, one level below an\noperating segment. A component qualifies as a reporting unit\nif (1) it is a business for which discrete financial information is\navailable, and (2) segment management regularly reviews its\noperating results. However, similar components are\naggregated. These provisions, including the determination of\noperating segments, apply even if the reporting entity is not\nrequired to report segment information.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 15,
+    "page": 622,
+    "topicId": "su5-impairment-disposal",
+    "stem": "When a fixed plant asset with a 5-year estimated useful life is\nsold during the second year, how would the use of an\naccelerated depreciation method instead of the straight-line\nmethod affect the gain or loss on the sale of the fixed plant\nasset?\nGain          Loss",
+    "choices": [
+      "Increase        Increase",
+      "Increase        Decrease",
+      "Decrease         Increase",
+      "Decrease         Decrease"
+    ],
+    "answerIndex": 1,
+    "explanation": "An accelerated method reduces the carrying amount of the\nasset more rapidly in the early years of the useful life than\ndoes the straight-line method. Hence, the effect of an early\nsale is to increase the gain or decrease the loss that would\nhave been recognized under the straight-line method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 16,
+    "page": 623,
+    "topicId": "su5-impairment-disposal",
+    "stem": "When should a long-lived asset be tested for recoverability?",
+    "choices": [
+      "When external financial statements are being prepared.",
+      "When events or changes in circumstances indicate that its\ncarrying amount may not be recoverable.",
+      "When the asset’s carrying amount is less than its fair value.",
+      "When the asset’s fair value has decreased, and the decrease\nis judged to be permanent."
+    ],
+    "answerIndex": 1,
+    "explanation": "A long-lived asset is impaired when its carrying amount is\ngreater than its fair value. However, a loss equal to this\nexcess is recognized for the impairment only when the\ncarrying amount is not recoverable. The carrying amount is\nnot recoverable when it exceeds the sum of the undiscounted\ncash flows expected from the use and disposition of the asset.\nTesting should occur when events or changes in\ncircumstances indicate that the carrying amount may not be\nrecoverable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 17,
+    "page": 624,
+    "topicId": "su5-impairment-disposal",
+    "stem": "The guidance for the recognition and measurement of\nimpairment losses on long-lived assets to be held and used\napplies to",
+    "choices": [
+      "Goodwill.",
+      "An asset group.",
+      "A financial instrument.",
+      "Any intangible asset not being amortized."
+    ],
+    "answerIndex": 1,
+    "explanation": "Such guidance applies to the long-lived assets of an entity that\nare to be held and used or disposed of, including those that\nare part of a group with other assets and liabilities not subject\nto such guidance. The unit of accounting for such a long-lived\nasset is the asset group. If a long-lived asset(s) is to be held\nand used, the asset group is the lowest level at which\nidentifiable cash flows are largely independent of those of\nother groups. If the carrying amount of a long-lived asset\n(asset group) is not recoverable, a loss equal to the excess of\nthat carrying amount over the fair value is recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 18,
+    "page": 625,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Which of the following conditions must exist in order for an\nimpairment loss to be recognized?\nI.   The carrying amount of the long-lived asset is less\nthan its fair value.\nII.   The carrying amount of the long-lived asset is not\nrecoverable.",
+    "choices": [
+      "I only.",
+      "II only.",
+      "Both I and II.",
+      "Neither I nor II."
+    ],
+    "answerIndex": 1,
+    "explanation": "A long-lived asset (or asset group) to which the guidance for\nimpairment or disposal applies is tested for recoverability\nwhenever events or changes in circumstances indicate that its\ncarrying amount may not be recoverable. The carrying amount\nis not recoverable when it exceeds the sum of the\nundiscounted cash flows expected to result from the use and\ndisposition of the asset (or asset group). If the carrying\namount is not recoverable, an impairment loss is recognized\nequal to the excess of the carrying amount over the fair value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 19,
+    "page": 626,
+    "topicId": "su5-impairment-disposal",
+    "stem": "After an impairment loss is recognized, the adjusted carrying\namount of the intangible asset shall be its new accounting\nbasis. Which of the following statements about subsequent\nreversal of a previously recognized impairment loss is correct?",
+    "choices": [
+      "It is prohibited.",
+      "It is required when the reversal is considered permanent.",
+      "It must be disclosed in the notes to the financial statements.",
+      "It is encouraged but not required."
+    ],
+    "answerIndex": 0,
+    "explanation": "When an impairment of an intangible asset is recognized, the\nprevious carrying amount of the asset is reduced by the\nimpairment loss. The adjusted carrying amount is the new\naccounting basis. Thus, it cannot be increased subsequently\nfor a change in fair value. This rule applies whether the\nintangible asset has a finite or an indefinite useful life.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 20,
+    "page": 627,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Which of the following is a pair of values that are compared to\ndetermine the amount of a possible impairment loss on an\nintangible asset, with an indefinite life, other than goodwill?",
+    "choices": [
+      "Fair value, present value.",
+      "Carrying value, book value.",
+      "Future value, carrying value.",
+      "Fair value, carrying value."
+    ],
+    "answerIndex": 3,
+    "explanation": "An intangible asset with an indefinite useful life other than\ngoodwill must be reviewed for impairment at least annually. A\nqualitative assessment may be performed prior to determining\nwhether it is necessary to perform the quantitative impairment\ntest. If the entity cannot determine based on quantitative\nfactors that it is more likely than not that an indefinite-lived\nintangible asset is not impaired, a quantitative impairment test\nmust be performed. In a quantitative test, the carrying amount\nof an asset is compared with its fair value. If the carrying\namount exceeds the fair value, the asset is impaired and the\nexcess is the recognized loss.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 5,
+    "section": 3,
+    "number": 21,
+    "page": 628,
+    "topicId": "su5-impairment-disposal",
+    "stem": "Which of the following is an intangible asset that is subject to\nthe recoverability test when testing for impairment?",
+    "choices": [
+      "A patent.",
+      "Goodwill.",
+      "R&D costs for a patent.",
+      "A trademark with indefinite useful life."
+    ],
+    "answerIndex": 0,
+    "explanation": "Intangible assets include those with finite useful lives (an\namortized intangible asset) and those with indefinite useful\nlives (a nonamortized intangible asset). An intangible asset\nwith a finite useful life (e.g., a patent) is reviewed for\nimpairment when events or changes in circumstances indicate\nthat its carrying amount may not be recovered. The test for\nimpairment is a two-step test: (1) perform the recoverability\ntest (the carrying amount is not recoverable if it exceeds the\nsum of the undiscounted future cash flows expected from the\nuse and disposition of the asset) and (2) determine the\nimpairment loss for the excess of the carrying amount over the\nfair value. A patent is an intangible asset with a finite useful\nlife, so it is subject to the recoverability test when testing for\nimpairment.",
+    "answerStatus": "source"
+  }
+]
