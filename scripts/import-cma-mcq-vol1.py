@@ -111,16 +111,14 @@ for i,(unit,sub,start,expected,topic) in enumerate(sections):
     for k,(pp,l) in enumerate(preamble):
         if 'Fact Pattern:' in l:
             context=([(pp,l.split('Fact Pattern:',1)[1])] if l.split('Fact Pattern:',1)[1].strip() else [])+preamble[k+1:]
-    context_age=0
     for j, (offset,n,page) in enumerate(anchors):
         until=anchors[j+1][0] if j+1<len(anchors) else len(lines)
         block=lines[offset:until]
-        question_context=context[:] if context_age<5 else []
+        question_context=context[:]
         for k,(_,line) in enumerate(block):
             if re.match(r'^\s*Fact Pattern:',line):
                 intro=line.split('Fact Pattern:',1)[1]
                 context=([(block[k][0],intro)] if intro.strip() else [])+block[k+1:]
-                context_age=-1
                 block=block[:k]
                 break
         if topic=='su8-abc' and n==34:
@@ -132,7 +130,6 @@ for i,(unit,sub,start,expected,topic) in enumerate(sections):
         q={'unit':unit,'section':sub,'number':n,'page':page,'topicId':topic,
            'block':block,'options':option_spans,'answers':answer_spans,
            'context': question_context}
-        context_age+=1
         questions.append(q)
         if len(option_spans)!=4 or [v for _,v in option_spans]!=list('ABCD') or len(answer_spans)!=(0 if topic=='su9-service-departments' and n==1 else 1):
             raise ValueError(f'Bad options/answer: {topic} question {n}, page {page}')
@@ -140,6 +137,15 @@ if len(questions)!=1060:
     raise ValueError(f'Expected 1,060 questions; extracted {len(questions)}')
 
 parsed=[]
+unnamed_case_references = {
+    (2,3,5), (2,3,6), # inventory card without a company name
+    (2,3,19),          # Metro's inventory activity table
+    (5,2,12),          # Pell's two construction contracts
+    (5,2,19), (5,2,20), (5,2,21), (5,2,22), # Big's construction contract
+    (5,2,30), (5,2,31), # Catus's construction contracts
+    (7,2,9),           # marketing-cost activity table
+    (9,1,13), (9,1,14), # Pickett's Products S and T
+}
 for q in questions:
     block=q['block']; opts=q['options']; ans=q['answers']; n=q['number']
     before=block[:opts[0][0]]
@@ -147,12 +153,18 @@ for q in questions:
     stem=flatten(before)
     context=flatten(q['context'])
     if context:
-        # The next standalone case supersedes a previously introduced fact pattern.
-        independent = re.match(r'^(A|An|The) (company|corporation|manufacturer|entity|firm)\b',stem,re.I)
-        name=re.search(r'\b([A-Z][a-z]{2,})\s+(?:Company|Corporation|Inc\.|Co\.)',stem)
-        conditional_name=re.match(r'^(?:If|For|Using)\s+([A-Z][a-z]{2,})\b',stem)
-        has_other_name=(name and name.group(1) not in context) or (conditional_name and conditional_name.group(1) not in context)
-        if not independent and not has_other_name:
+        # A PDF fact pattern has no explicit closing marker. Carry it only to
+        # questions that name its entity, or to reviewed unnamed references.
+        aliases=set(re.findall(
+            r'\b([A-Z][A-Za-z-]{2,})\s+(?:Company|Corporation|Corp\.|Co\.|Inc\.|Industries|Industrial|Manufacturing|Foods|Glassworks|Lab)\b',
+            context,
+        ))
+        first_name=re.match(r'^([A-Z][A-Za-z-]{2,})\b',context)
+        if first_name and first_name.group(1) not in {'The','During','On','At','A','An','Data','Believing','Estimated','Selected','Illustrated','Since','Consider'}:
+            aliases.add(first_name.group(1))
+        if 'M&P Tool' in context: aliases.add('M&P')
+        matches_entity=any(re.search(r'(?<![A-Za-z])'+re.escape(alias)+r'(?![A-Za-z])',stem) for alias in aliases)
+        if matches_entity or (q['unit'],q['section'],n) in unnamed_case_references:
             stem=context+'\n'+stem
     values=[]
     for ix,(start,letter) in enumerate(opts):

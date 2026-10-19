@@ -60,7 +60,22 @@ const bookCounts = [
   [45, 35, 35],
   [26, 21, 12],
 ];
+const sourceRecords = new Map();
 for (const [unitIndex, sectionCounts] of bookCounts.entries()) {
+  const unitRecords = readDataFile(`cma-gleim-2025-vol1-unit-${unitIndex + 1}.json`).default;
+  for (const record of unitRecords) {
+    const key = `${record.unit}.${record.section}.${record.number}`;
+    check(!sourceRecords.has(key), `Duplicate source record: ${key}`);
+    sourceRecords.set(key, record);
+    check(
+      record.stem.length >= 10 &&
+        record.choices.length === 4 &&
+        record.choices.every(Boolean) &&
+        record.explanation.length >= 10 &&
+        !record.choices.some((choice) => /Answer \([A-D]\) is correct/.test(choice)),
+      `Incomplete source transcription: ${key}`,
+    );
+  }
   for (const [sectionIndex, expected] of sectionCounts.entries()) {
     const unit = unitIndex + 1;
     const section = sectionIndex + 1;
@@ -79,6 +94,31 @@ for (const [unitIndex, sectionCounts] of bookCounts.entries()) {
       );
     }
   }
+}
+check(sourceRecords.size === 1060, "Source records must cover each book question exactly once");
+check(
+  [...sourceRecords.values()].filter((record) => record.answerStatus === "inferred").length === 1 &&
+    sourceRecords.get("9.3.1")?.answerStatus === "inferred",
+  "The single missing printed answer must be marked as inferred",
+);
+for (const [key, fact] of [
+  ["2.3.19", "During January, Metro Co."],
+  ["5.2.12", "Data pertaining to Pell Co."],
+  ["5.2.19", "On January 1, Year 1, Big Co."],
+  ["5.2.22", "On January 1, Year 1, Big Co."],
+  ["5.2.30", "Data pertaining to Catus Co."],
+  ["7.4.37", "Consider the following situation for Weisman"],
+  ["9.3.30", "Logo, Inc., has two service departments"],
+]) {
+  check(sourceRecords.get(key)?.stem.includes(fact), `Missing shared fact pattern: ${key}`);
+}
+for (const [key, unrelated] of [
+  ["4.4.5", "Evangel Company"],
+  ["7.4.40", "Weisman Corporation"],
+  ["7.4.53", "Huron Industries"],
+  ["9.2.25", "Madtack Company"],
+]) {
+  check(!sourceRecords.get(key)?.stem.includes(unrelated), `Leaked fact pattern: ${key}`);
 }
 check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Expected guides for published study units 1–6");
 for (const [unit, expected] of [

@@ -566,7 +566,7 @@
     "number": 13,
     "page": 586,
     "topicId": "su5-over-time",
-    "stem": "Data pertaining to Pell Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                           $420,000 $300,000\nCosts incurred during Year 1               240,000 280,000\nEstimated costs to complete                120,000    40,000\nBilled to customers during Year 1          150,000 270,000\nReceived from customers during Year 1       90,000 250,000\nA construction company recognizes revenue from construction\ncontracts over time using the input method based on costs\nincurred. It reports the following:\nYear 1 Year 2\nConstruction costs                        $100 $200\nEstimated cost to complete at year-end 300            0\nThe contract price is $1,000. What is the profit recognized in\nYear 2?",
+    "stem": "A construction company recognizes revenue from construction\ncontracts over time using the input method based on costs\nincurred. It reports the following:\nYear 1 Year 2\nConstruction costs                        $100 $200\nEstimated cost to complete at year-end 300            0\nThe contract price is $1,000. What is the profit recognized in\nYear 2?",
     "choices": [
       "$150",
       "$400",
@@ -617,7 +617,7 @@
     "number": 16,
     "page": 589,
     "topicId": "su5-over-time",
-    "stem": "Data pertaining to Pell Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                           $420,000 $300,000\nCosts incurred during Year 1               240,000 280,000\nEstimated costs to complete                120,000    40,000\nBilled to customers during Year 1          150,000 270,000\nReceived from customers during Year 1       90,000 250,000\nA building contractor has a fixed-price contract to construct a\nbuilding on the customer’s land. The building is expected to be\ncompleted in 2 years. Progress billings will be sent to the\ncustomer at quarterly intervals. Which of the following\ndescribes the preferable point for revenue recognition for this\ncontract if its outcome can be reasonably measured?",
+    "stem": "A building contractor has a fixed-price contract to construct a\nbuilding on the customer’s land. The building is expected to be\ncompleted in 2 years. Progress billings will be sent to the\ncustomer at quarterly intervals. Which of the following\ndescribes the preferable point for revenue recognition for this\ncontract if its outcome can be reasonably measured?",
     "choices": [
       "After the contract is signed.",
       "As progress is made toward completion of the contract.",
@@ -889,7 +889,7 @@
     "number": 32,
     "page": 607,
     "topicId": "su5-over-time",
-    "stem": "Data pertaining to Catus Co.’s long-term construction\njobs, which commenced during Year 1, are as follows:\nProject 1 Project 2\nContract price                        $420,000 $300,000\nCosts incurred during Year 1           240,000 280,000\nEstimated costs to complete            120,000   40,000\nBilled to customers during Year 1      150,000 270,000\nReceived from customers during Year 1   90,000 250,000\nKechara Corp. started a long-term construction project in Year\n1. The following data relate to this project:\nContract price                    $4,200,000\nCosts incurred in Year 1           1,750,000\nEstimated costs to complete        1,750,000\nProgress billings                    900,000\nCollections on progress billings     800,000\nThe project is accounted for using the input method based on\ncosts incurred to recognize revenue from a performance\nobligation satisfied over time. In Kechara’s Year 1 income\nstatement, what amount of gross profit should be reported for\nthis project?",
+    "stem": "Kechara Corp. started a long-term construction project in Year\n1. The following data relate to this project:\nContract price                    $4,200,000\nCosts incurred in Year 1           1,750,000\nEstimated costs to complete        1,750,000\nProgress billings                    900,000\nCollections on progress billings     800,000\nThe project is accounted for using the input method based on\ncosts incurred to recognize revenue from a performance\nobligation satisfied over time. In Kechara’s Year 1 income\nstatement, what amount of gross profit should be reported for\nthis project?",
     "choices": [
       "$350,000",
       "$700,000",
@@ -1042,7 +1042,7 @@
     "number": 8,
     "page": 616,
     "topicId": "su5-impairment-disposal",
-    "stem": "Blake Corporation has determined that one of its machines has\nexperienced an impairment in value. However, the company expects\nto continue to use the asset for another 3 full years because no active\nmarket exists for this machine. Selected information on the impaired\nasset (on the date that impairment was determined to exist) is\nprovided below.\nOriginal cost of the machine                         $22,000\nCarrying amount of the machine                       20,000\nUndiscounted future cash flows expected to be\ngenerated by the machine                            15,000\nFair value of the machine (determined by\ncalculating the present value of the future cash\nflows expected to be generated by the machine) 12,000\nTo determine whether to recognize the impairment of a\ndepreciable fixed asset, a company must compare the",
+    "stem": "To determine whether to recognize the impairment of a\ndepreciable fixed asset, a company must compare the",
     "choices": [
       "Carrying amount of the asset and the present value of the\nfuture cash flows expected to be generated by the asset.",
       "Original cost of the asset and the fair value of the asset.",
@@ -1059,7 +1059,7 @@
     "number": 9,
     "page": 617,
     "topicId": "su5-impairment-disposal",
-    "stem": "Blake Corporation has determined that one of its machines has\nexperienced an impairment in value. However, the company expects\nto continue to use the asset for another 3 full years because no active\nmarket exists for this machine. Selected information on the impaired\nasset (on the date that impairment was determined to exist) is\nprovided below.\nOriginal cost of the machine                         $22,000\nCarrying amount of the machine                       20,000\nUndiscounted future cash flows expected to be\ngenerated by the machine                            15,000\nFair value of the machine (determined by\ncalculating the present value of the future cash\nflows expected to be generated by the machine) 12,000\nWhich of the following statements is true regarding impairment\nof long-lived assets?",
+    "stem": "Which of the following statements is true regarding impairment\nof long-lived assets?",
     "choices": [
       "U.S. GAAP requires a one-step impairment test, and IFRS\nrequires a two-step impairment test.",
       "Both IFRS and U.S. GAAP permit reversal of an impairment\nloss in subsequent periods.",

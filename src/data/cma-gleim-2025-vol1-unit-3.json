@@ -1671,7 +1671,7 @@
     "number": 46,
     "page": 437,
     "topicId": "su3-ppe",
-    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nSpiro Corp. uses the sum-of-the-years’-digits method to\ndepreciate equipment purchased in January Year 2 for\n$20,000. The estimated salvage value of the equipment is\n$2,000, and the estimated useful life is 4 years. What should\nSpiro report as the asset’s carrying amount as of December\n31, Year 4?",
+    "stem": "Spiro Corp. uses the sum-of-the-years’-digits method to\ndepreciate equipment purchased in January Year 2 for\n$20,000. The estimated salvage value of the equipment is\n$2,000, and the estimated useful life is 4 years. What should\nSpiro report as the asset’s carrying amount as of December\n31, Year 4?",
     "choices": [
       "$1,800",
       "$2,000",
@@ -1688,7 +1688,7 @@
     "number": 47,
     "page": 438,
     "topicId": "su3-ppe",
-    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nCaracas Corp. purchased a computer on January 1 for\n$108,000. It was estimated to have a 4-year useful life and a\nsalvage value of $18,000. The double-declining-balance (DDB)\nmethod is to be used. The amount of depreciation to be\nreported at the end of the first year is",
+    "stem": "Caracas Corp. purchased a computer on January 1 for\n$108,000. It was estimated to have a 4-year useful life and a\nsalvage value of $18,000. The double-declining-balance (DDB)\nmethod is to be used. The amount of depreciation to be\nreported at the end of the first year is",
     "choices": [
       "($108,000 – $18,000) × (25% × 2)",
       "($108,000 – $18,000) × (25% × 1/2)",
@@ -1705,7 +1705,7 @@
     "number": 48,
     "page": 439,
     "topicId": "su3-ppe",
-    "stem": "Roswell Company has the following information on one\nof its vehicles purchased on January 1, Year 1:\nVehicle cost                  $50,000\nUseful life, years, estimated       5\nUseful life, miles, estimated 100,000\nSalvage value, estimated $10,000\nActual miles driven: Year 1 30,000\nYear 2    20,000\nYear 3    15,000\nYear 4    25,000\nYear 5    12,000\nNo estimates were changed during the life of the asset.\nThe sum-of-the-years’-digits (SYD) method of depreciation is\nbeing used for a machine with a 10-year estimated useful life.\nWhat would be the fraction applied to the cost to be\ndepreciated in the seventh year?",
+    "stem": "The sum-of-the-years’-digits (SYD) method of depreciation is\nbeing used for a machine with a 10-year estimated useful life.\nWhat would be the fraction applied to the cost to be\ndepreciated in the seventh year?",
     "choices": [
       "7/10",
       "7/55",

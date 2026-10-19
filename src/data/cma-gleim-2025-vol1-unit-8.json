@@ -260,7 +260,7 @@
     "number": 16,
     "page": 827,
     "topicId": "su8-job-order",
-    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nThe amount of raw materials left over from a production\nprocess or production cycle for which there is no further use is",
+    "stem": "The amount of raw materials left over from a production\nprocess or production cycle for which there is no further use is",
     "choices": [
       "Scrap.",
       "Abnormal spoilage.",
@@ -277,7 +277,7 @@
     "number": 17,
     "page": 827,
     "topicId": "su8-job-order",
-    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nThe cost associated with abnormal spoilage ordinarily is\ncharged to",
+    "stem": "The cost associated with abnormal spoilage ordinarily is\ncharged to",
     "choices": [
       "Inventory.",
       "A material variance account.",
@@ -294,7 +294,7 @@
     "number": 18,
     "page": 828,
     "topicId": "su8-job-order",
-    "stem": "Farber Company employs a normal cost system. The\nfollowing information is from the financial records of the company for\nthe year.\n• Total manufacturing costs were $2,500,000.\n• Cost of goods manufactured was $2,425,000.\n• Applied factory overhead was 30% of total manufacturing costs.\n• Factory overhead was applied to production at a rate of 80% of\ndirect labor cost.\n• Work-in-process inventory at January 1 was 75% of work-in-\nprocess inventory at December 31.\nSpoilage that is not expected to occur under normal, efficient\noperating conditions is considered",
+    "stem": "Spoilage that is not expected to occur under normal, efficient\noperating conditions is considered",
     "choices": [
       "Abnormal spoilage.",
       "Actual spoilage.",
@@ -583,7 +583,7 @@
     "number": 3,
     "page": 844,
     "topicId": "su8-abc",
-    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nMultiple or departmental overhead rates are considered\npreferable to a single or corporate-wide overhead rate when",
+    "stem": "Multiple or departmental overhead rates are considered\npreferable to a single or corporate-wide overhead rate when",
     "choices": [
       "Manufacturing is limited to a single product flowing through\nidentical departments in a fixed sequence.",
       "Various products are manufactured that do not pass through\nthe same departments or use the same manufacturing\ntechniques.",
@@ -600,7 +600,7 @@
     "number": 4,
     "page": 845,
     "topicId": "su8-abc",
-    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nThe use of activity-based costing (ABC) normally results in",
+    "stem": "The use of activity-based costing (ABC) normally results in",
     "choices": [
       "Substantially greater unit costs for low-volume products than is\nreported by traditional product costing.",
       "Substantially lower unit costs for low-volume products than is\nreported by traditional product costing.",
@@ -617,7 +617,7 @@
     "number": 5,
     "page": 846,
     "topicId": "su8-abc",
-    "stem": "Zeta                                                Wall    Specialty\nCompany is                                         Mirrors Windows\npreparing its Units produced                           25         25\nannual profit\nMaterial moves per product line         5        15\nplan. As part\nof its analysis  Direct labor hours per unit        200          200\nof the           Budgeted materials handling costs           $50,000\nprofitability of\nindividual\nproducts, the\ncontroller\nestimates the\namount of\noverhead that\nshould be\nallocated to\nthe individual\nproduct lines\n\nfrom the\ninformation\ngiven in the\nnext column:\nBecause of changes that are occurring in the basic operations\nof many firms, all of the following represent trends in the way\nindirect costs are allocated except",
+    "stem": "Because of changes that are occurring in the basic operations\nof many firms, all of the following represent trends in the way\nindirect costs are allocated except",
     "choices": [
       "Treating direct labor as an indirect manufacturing cost in an\nautomated factory.",
       "Using throughput time as an application base to increase\nawareness of the costs associated with lengthened throughput\ntime.",
@@ -821,7 +821,7 @@
     "number": 17,
     "page": 862,
     "topicId": "su8-abc",
-    "stem": "Believing that its traditional cost system may be providing\nmisleading information, Farragut Manufacturing is considering an\nactivity-based costing (ABC) approach. It now employs a\ntraditional cost system and has been applying its manufacturing\noverhead on the basis of machine hours.\nFarragut plans on using 50,000 direct labor hours and 30,000\nmachine hours in the coming year. The following data show the\nmanufacturing overhead that is budgeted.\nBudget Budget\ned    ed\nActiv        Cost Driver Activi Co\nity                           ty   st\nMaterial    No. of parts   6,000,0 $ 720,\nhandling    handled             00     000\nSetup costs No. of setups      750 315,000\nMachining Machine hours 30,000 540,000\ncosts\nQuality     No. of batches     500 225,000\ncontrol\nTotal manufacturing overhead cost: $1,800,\n000\nCost, sales, and production data for one of Farragut’s products for the\ncoming year are as follows:\nPrime costs:\nDirect material cost per unit            $4.40\nDirect labor cost per unit\n.05 DLH @ $15.00/DLH                        .75\nTotal prime cost                         $5.15\nSales and production data:\nExpected sales                    20,000 units\nBatch size                         5,000 units\nSetups                             2 per batch\nTotal parts per finished unit          5 parts\nMachine hours required        80 MH per batch\nAn assisted-living facility provides services in the form of\nresidential space, meals, and other occupant assistance\n(OOA) to its occupants. The facility currently uses a traditional\ncost accounting system that charges each occupant a daily\nrate equal to the facility’s annual cost of providing residential\nspace, meals, and OOA divided by total occupant days.\nHowever, an activity-based costing (ABC) analysis has\nrevealed that occupants’ use of OOA varies substantially. This\nanalysis determined that occupants could be grouped into\nthree categories (low, moderate, and high usage of OOA) and\nthat the activity driver of OOA should be nursing hours. The\ndriver of the residential space and meals is occupant days.\nThe following quantitative information was also provided:\nAnnual            Annual\nOccupant Category Occupant Days Nursing Hours\nLow usage                  36,000             90,000\nMedium usage               18,000             90,000\nHigh usage                 6,000              120,000\n60,000             300,000\nThe total annual cost of OOA was $7.5 million, and the total\nannual cost of providing residential space and meals was $7.2\nmillion. Accordingly, the ABC analysis indicates that the daily\ncosting rate for providing residential space, meals, and OOA\nshould be",
+    "stem": "An assisted-living facility provides services in the form of\nresidential space, meals, and other occupant assistance\n(OOA) to its occupants. The facility currently uses a traditional\ncost accounting system that charges each occupant a daily\nrate equal to the facility’s annual cost of providing residential\nspace, meals, and OOA divided by total occupant days.\nHowever, an activity-based costing (ABC) analysis has\nrevealed that occupants’ use of OOA varies substantially. This\nanalysis determined that occupants could be grouped into\nthree categories (low, moderate, and high usage of OOA) and\nthat the activity driver of OOA should be nursing hours. The\ndriver of the residential space and meals is occupant days.\nThe following quantitative information was also provided:\nAnnual            Annual\nOccupant Category Occupant Days Nursing Hours\nLow usage                  36,000             90,000\nMedium usage               18,000             90,000\nHigh usage                 6,000              120,000\n60,000             300,000\nThe total annual cost of OOA was $7.5 million, and the total\nannual cost of providing residential space and meals was $7.2\nmillion. Accordingly, the ABC analysis indicates that the daily\ncosting rate for providing residential space, meals, and OOA\nshould be",
     "choices": [
       "$182.50 for occupants in the low-usage category.",
       "$145.00 for occupants in the medium-usage category.",
@@ -855,7 +855,7 @@
     "number": 19,
     "page": 865,
     "topicId": "su8-abc",
-    "stem": "Believing that its traditional cost system may be providing\nmisleading information, Farragut Manufacturing is considering an\nactivity-based costing (ABC) approach. It now employs a\ntraditional cost system and has been applying its manufacturing\noverhead on the basis of machine hours.\nFarragut plans on using 50,000 direct labor hours and 30,000\nmachine hours in the coming year. The following data show the\nmanufacturing overhead that is budgeted.\nBudget Budget\ned    ed\nActiv        Cost Driver Activi Co\nity                           ty   st\nMaterial    No. of parts   6,000,0 $ 720,\nhandling    handled             00     000\nSetup costs No. of setups      750 315,000\nMachining Machine hours 30,000 540,000\ncosts\nQuality     No. of batches     500 225,000\ncontrol\nTotal manufacturing overhead cost: $1,800,\n000\nCost, sales, and production data for one of Farragut’s products for the\ncoming year are as follows:\nPrime costs:\nDirect material cost per unit            $4.40\nDirect labor cost per unit\n.05 DLH @ $15.00/DLH                        .75\nTotal prime cost                         $5.15\nSales and production data:\nExpected sales                    20,000 units\nBatch size                         5,000 units\nSetups                             2 per batch\nTotal parts per finished unit          5 parts\nMachine hours required        80 MH per batch\nWhen using activity-based costing techniques, which one of\nthe following departmental activities would be expected to use\nmachine hours as a cost driver to allocate overhead costs to\nproduction?",
+    "stem": "When using activity-based costing techniques, which one of\nthe following departmental activities would be expected to use\nmachine hours as a cost driver to allocate overhead costs to\nproduction?",
     "choices": [
       "Plant cafeteria.",
       "Machine setups.",
@@ -974,7 +974,7 @@
     "number": 26,
     "page": 874,
     "topicId": "su8-abc",
-    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nA primary reason for a company to change from traditional\ncosting to activity-based costing (ABC) is that ABC",
+    "stem": "A primary reason for a company to change from traditional\ncosting to activity-based costing (ABC) is that ABC",
     "choices": [
       "Is a simpler costing method to use.",
       "Reduces product undercosting or overcosting.",
@@ -991,7 +991,7 @@
     "number": 27,
     "page": 875,
     "topicId": "su8-abc",
-    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nA plant has two departments, Machining and Assembly. This\nyear’s budget for the plant contained the following information.\nMachining Assembly\nManufacturing overhead $4,000,000 $2,000,000\nDirect labor hours            100,000      200,000\nMachine hours                  40,000       40,000\nIf the plant allocates manufacturing overhead based on\nmachine hours, which of the following represents the allocation\nrates?\nMachining Assembly",
+    "stem": "A plant has two departments, Machining and Assembly. This\nyear’s budget for the plant contained the following information.\nMachining Assembly\nManufacturing overhead $4,000,000 $2,000,000\nDirect labor hours            100,000      200,000\nMachine hours                  40,000       40,000\nIf the plant allocates manufacturing overhead based on\nmachine hours, which of the following represents the allocation\nrates?\nMachining Assembly",
     "choices": [
       "$40/hr.         $10/hr.",
       "$10/hr.         $40/hr.",
@@ -1008,7 +1008,7 @@
     "number": 28,
     "page": 876,
     "topicId": "su8-abc",
-    "stem": "Atmel, Inc. manufactures and sells two products. Data\nwith regard to these products are given below.\nProduct A Product B\nUnits produced and sold            30,000   12,000\nMachine hours required per unit 2           3\nReceiving orders per product line 50        150\nProduction orders per product line 12       18\nProduction runs                    8        12\nInspections                        20       30\nTotal budgeted machine hours are 100,000. The budgeted overhead\ncosts are shown below.\nReceiving costs                    $450,000\nEngineering costs                  300,000\nMachine setup costs                25,000\nInspection costs                   200,000\nTotal budgeted overhead costs $975,000\nA manufacturing firm produces multiple families of products\nrequiring various combinations of different types of parts. The\nmanufacturer has identified various cost pools, one of which\nconsists of materials handling costs. This cost pool includes\nthe wages and employee benefits of the workers involved in\nreceiving materials, inspecting materials, storing materials in\ninventory, and moving materials to the workstations;\ndepreciation and maintenance of materials handling equipment\n(e.g., forklift trucks); and costs of supplies used as well as\nother related costs. Of the following, the most appropriate cost\ndriver for assigning materials handling costs to the various\nproducts most likely is",
+    "stem": "A manufacturing firm produces multiple families of products\nrequiring various combinations of different types of parts. The\nmanufacturer has identified various cost pools, one of which\nconsists of materials handling costs. This cost pool includes\nthe wages and employee benefits of the workers involved in\nreceiving materials, inspecting materials, storing materials in\ninventory, and moving materials to the workstations;\ndepreciation and maintenance of materials handling equipment\n(e.g., forklift trucks); and costs of supplies used as well as\nother related costs. Of the following, the most appropriate cost\ndriver for assigning materials handling costs to the various\nproducts most likely is",
     "choices": [
       "Direct labor hours.",
       "Number of units produced.",
@@ -1365,7 +1365,7 @@
     "number": 11,
     "page": 898,
     "topicId": "su8-life-cycle",
-    "stem": "Dixon Porter Co., which uses life cycle costing, is\nconsidering the manufacture of a product with a 5-year life cycle that\nwill require spending $1,000,000 for R&D and $2,000,000 for design\nand testing. Annual fixed and unit variable costs for the product and\nprojected average annual unit sales at three selling prices are given\nbelow:\nSales Price\nFixed      Variable $ 750     $ 900    $1,125\nProduction $1,500,000            $100\ncosts\nMarketing     1,500,000            100\nand\ndistribution\ncosts\nCustomer        180,000             40\nservice costs\nUnit average                              8,000 6,000         4,800\nannual sales\nAt the highest price, R&D costs will increase by $500,000 and design\nand testing costs by $1,000,000. Additionally, at the highest price,\nfixed customer service costs will rise by $30,000 per year, and\nvariable customer service costs will rise by $25 per unit. At the lowest\nprice, fixed marketing and distribution costs will decrease by $30,000\nper year.\nAt the introduction stage of an innovative product, the profit\ngrowth is normally slow due to",
+    "stem": "At the introduction stage of an innovative product, the profit\ngrowth is normally slow due to",
     "choices": [
       "Expensive sales promotion.",
       "High competition.",

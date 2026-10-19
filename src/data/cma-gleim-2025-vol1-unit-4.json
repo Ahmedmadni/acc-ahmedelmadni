@@ -702,7 +702,7 @@
     "number": 12,
     "page": 508,
     "topicId": "su4-leases",
-    "stem": "Neary Company has entered into a contract to lease\ncomputers from Baldwin Company starting on January 1, Year 1.\nRelevant information pertaining to the lease is provided below.\nLease term                                    4 Years\nUseful life of computers                      5 Years\nPresent value of future lease payments      $100,000\nFair value of leased asset on date of lease 105,000\nBaldwin’s implicit rate (known to Neary)         10%\nAt the end of the lease term, ownership of the asset transfers from\nBaldwin to Neary. Neary has properly classified this lease as a capital\nlease on its financial statements and uses straight-line depreciation\non comparable assets.\nIf a lessee uses off-balance-sheet financing, assets have been\nacquired",
+    "stem": "If a lessee uses off-balance-sheet financing, assets have been\nacquired",
     "choices": [
       "For cash.",
       "With short-term leases.",
@@ -719,7 +719,7 @@
     "number": 13,
     "page": 509,
     "topicId": "su4-leases",
-    "stem": "Neary Company has entered into a contract to lease\ncomputers from Baldwin Company starting on January 1, Year 1.\nRelevant information pertaining to the lease is provided below.\nLease term                                    4 Years\nUseful life of computers                      5 Years\nPresent value of future lease payments      $100,000\nFair value of leased asset on date of lease 105,000\nBaldwin’s implicit rate (known to Neary)         10%\nAt the end of the lease term, ownership of the asset transfers from\nBaldwin to Neary. Neary has properly classified this lease as a capital\nlease on its financial statements and uses straight-line depreciation\non comparable assets.\nWhich of the following meets a criterion for a lessee to account\nfor a lease as a finance lease?",
+    "stem": "Which of the following meets a criterion for a lessee to account\nfor a lease as a finance lease?",
     "choices": [
       "The lease is for unspecialized equipment.",
       "A third party has guaranteed the residual value of the leased\nasset.",
@@ -940,7 +940,7 @@
     "number": 5,
     "page": 523,
     "topicId": "su4-income-taxes",
-    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nA liability that represents the accumulated difference between\nthe income tax expense reported on the firm’s books and the\nincome tax actually paid is",
+    "stem": "A liability that represents the accumulated difference between\nthe income tax expense reported on the firm’s books and the\nincome tax actually paid is",
     "choices": [
       "Capital gains tax.",
       "Deferred taxes.",
@@ -957,7 +957,7 @@
     "number": 6,
     "page": 524,
     "topicId": "su4-income-taxes",
-    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nWhich one of the following temporary differences will result in\na deferred tax asset?",
+    "stem": "Which one of the following temporary differences will result in\na deferred tax asset?",
     "choices": [
       "Use of the straight-line depreciation method for financial\nstatement purposes and accelerated depreciation for income\ntax purposes.",
       "Installment sale profits accounted for on the accrual basis for\nfinancial statement purposes and on a cash basis for income\ntax purposes.",
@@ -974,7 +974,7 @@
     "number": 7,
     "page": 525,
     "topicId": "su4-income-taxes",
-    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nA tax rate other than the current tax rate may be used to\ncalculate the deferred income tax amount on the statement of\nfinancial position if a(n)",
+    "stem": "A tax rate other than the current tax rate may be used to\ncalculate the deferred income tax amount on the statement of\nfinancial position if a(n)",
     "choices": [
       "Future tax rate has been enacted into law.",
       "Future tax rate change is considered more likely than not to\noccur.",
@@ -991,7 +991,7 @@
     "number": 8,
     "page": 526,
     "topicId": "su4-income-taxes",
-    "stem": "Lucas Company computed the following deferred tax balances for the\n2 most recent years. Deferred tax assets are considered fully\nrealizable.\nYear 1 Year 2\nDeferred tax asset $ 9,000 $17,000\nDeferred tax liability 13,000 23,000\nIntraperiod income tax allocation arises because",
+    "stem": "Intraperiod income tax allocation arises because",
     "choices": [
       "Items included in the determination of taxable income may be\npresented in different sections of the financial statements.",
       "Income taxes must be allocated between current and future\nperiods.",
@@ -1144,7 +1144,7 @@
     "number": 5,
     "page": 534,
     "topicId": "su4-bonds",
-    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nA premium on bonds payable arises when",
+    "stem": "A premium on bonds payable arises when",
     "choices": [
       "The semiannual bond interest becomes due.",
       "The prevailing interest rate after the bond issuance falls below\nthe nominal rate of the bonds.",
@@ -1212,7 +1212,7 @@
     "number": 9,
     "page": 537,
     "topicId": "su4-bonds",
-    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nOn November 1, Mason Corp. issued $800,000 of its 10-year,\n8% term bonds dated October 1. The bonds were sold to yield\n10%, with total proceeds of $700,000 plus accrued interest.\nInterest is paid every April 1 and October 1. What amount\nshould Mason report for interest payable in its December 31\nbalance sheet?",
+    "stem": "On November 1, Mason Corp. issued $800,000 of its 10-year,\n8% term bonds dated October 1. The bonds were sold to yield\n10%, with total proceeds of $700,000 plus accrued interest.\nInterest is paid every April 1 and October 1. What amount\nshould Mason report for interest payable in its December 31\nbalance sheet?",
     "choices": [
       "$17,500",
       "$16,000",
@@ -1246,7 +1246,7 @@
     "number": 11,
     "page": 539,
     "topicId": "su4-bonds",
-    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nWhen the effective interest method of amortization is used for\nbonds issued at a premium, the amount of interest payable for\nan interest period is calculated by multiplying the",
+    "stem": "When the effective interest method of amortization is used for\nbonds issued at a premium, the amount of interest payable for\nan interest period is calculated by multiplying the",
     "choices": [
       "Face value of the bonds at the beginning of the period by the\ncontractual interest rate.",
       "Face value of the bonds at the beginning of the period by the\neffective interest rates.",
@@ -1263,7 +1263,7 @@
     "number": 12,
     "page": 540,
     "topicId": "su4-bonds",
-    "stem": "On January 1, Evangel Company issued 9% bonds in the face amount\nof $100,000, which mature in 5 years. The bonds were issued for\n$96,207 to yield 10%, resulting in a bond discount of $3,793. Evangel\nuses the effective interest method of amortizing bond discount.\nInterest is payable annually on December 31.\nUnamortized bond discount should be reported on the balance\nsheet of the issuer as a",
+    "stem": "Unamortized bond discount should be reported on the balance\nsheet of the issuer as a",
     "choices": [
       "Direct deduction from the face amount of the debt.",
       "Direct deduction from the present value of the debt.",
@@ -1382,7 +1382,7 @@
     "number": 19,
     "page": 546,
     "topicId": "su4-bonds",
-    "stem": "Clare Co. issued US $6 million of 12% bonds on\nDecember 1, Year 1, due on December 1, Year 6, with interest\npayable each December 1 and June 1. The bonds were sold for\nUS $5,194,770 to yield 16%.\nOn January 1, Year 4, Celt Corp. issued 9% bonds in the face\namount of $1 million, which mature on January 1, Year 14. The\nbonds were issued for $939,000 to yield 10%, resulting in a\nbond discount of $61,000. Celt uses the effective interest\nmethod of amortizing bond discount. Interest is payable\nannually on December 31. At December 31, Year 4, Celt’s\nunamortized bond discount should be",
+    "stem": "On January 1, Year 4, Celt Corp. issued 9% bonds in the face\namount of $1 million, which mature on January 1, Year 14. The\nbonds were issued for $939,000 to yield 10%, resulting in a\nbond discount of $61,000. Celt uses the effective interest\nmethod of amortizing bond discount. Interest is payable\nannually on December 31. At December 31, Year 4, Celt’s\nunamortized bond discount should be",
     "choices": [
       "$51,000",
       "$51,610",
@@ -1416,7 +1416,7 @@
     "number": 21,
     "page": 548,
     "topicId": "su4-bonds",
-    "stem": "Clare Co. issued US $6 million of 12% bonds on\nDecember 1, Year 1, due on December 1, Year 6, with interest\npayable each December 1 and June 1. The bonds were sold for\nUS $5,194,770 to yield 16%.\nWhen debt is issued at a discount, interest expense over the\nterm of debt equals the cash interest paid",
+    "stem": "When debt is issued at a discount, interest expense over the\nterm of debt equals the cash interest paid",
     "choices": [
       "Minus discount.",
       "Minus discount minus par value.",

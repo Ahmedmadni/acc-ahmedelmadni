@@ -498,7 +498,7 @@
     "number": 30,
     "page": 701,
     "topicId": "su7-cost-terms",
-    "stem": "Estimated unit costs for Cole Lab using full absorption\ncosting and operating at a production level of 12,000 units per month:\nEstimated\nCost Item                            Unit Cost\nDirect material                    $32\nDirect labor                        20\nVariable manufacturing overhead     15\nFixed manufacturing overhead         6\nVariable selling                     3\nFixed selling                        4\nIn a broad sense, cost accounting can best be defined within\nthe accounting system as",
+    "stem": "In a broad sense, cost accounting can best be defined within\nthe accounting system as",
     "choices": [
       "Internal and external reporting that may be used in making\nnonroutine decisions and in developing plans and policies.",
       "External reporting to government, various outside parties, and\nshareholders.",
@@ -685,7 +685,7 @@
     "number": 11,
     "page": 713,
     "topicId": "su7-cost-behavior",
-    "stem": "A company wants to determine its marketing costs for\nbudgeting purposes. Activity measures and costs incurred for 4\nmonths of the current year are presented in the table below.\nAdvertising is considered to be a discretionary cost. Salespersons are\npaid monthly salaries plus commissions. The sales force was\nincreased from 20 to 21 individuals during the month of May.\nMarch        April     May         June\nActivity\nmeasures:\nSales            2,000     1,800     2,400     2,300\norders\nUnits sold      55,000    60,000    70,000    65,000\nDollar sales $1,150,00 $1,200,00 $1,330,00 $1,275,00\n0         0         0         0\nMarketing\ncosts:\nAdvertising $ 190,00 $ 200,00 $ 190,00 $ 190,00\n0        0        0        0\nSales         20,000   20,000   21,000   21,000\nsalaries\nCommissio     23,000   24,000   26,600   25,500\nns\nShipping      93,000 100,000 114,000 107,000\ncosts\nTotal costs     $ 326,00 $ 344,00 $ 351,60 $ 343,50\n0        0        0        0\nManagement has prepared a graph showing the total costs of\noperating branch warehouses throughout the country. The cost\nline crosses the vertical axis at $200,000. The total cost of\noperating one branch is $350,000. The total cost of operating\nten branches is $1,700,000. For purposes of preparing a\nflexible budget based on the number of branch warehouses in\noperation, what formula should be used to determine budgeted\ncosts at various levels of activity?",
+    "stem": "Management has prepared a graph showing the total costs of\noperating branch warehouses throughout the country. The cost\nline crosses the vertical axis at $200,000. The total cost of\noperating one branch is $350,000. The total cost of operating\nten branches is $1,700,000. For purposes of preparing a\nflexible budget based on the number of branch warehouses in\noperation, what formula should be used to determine budgeted\ncosts at various levels of activity?",
     "choices": [
       "Y = $200,000 + $150,000X",
       "Y = $200,000 + $170,000X",
@@ -719,7 +719,7 @@
     "number": 13,
     "page": 715,
     "topicId": "su7-cost-behavior",
-    "stem": "A company wants to determine its marketing costs for\nbudgeting purposes. Activity measures and costs incurred for 4\nmonths of the current year are presented in the table below.\nAdvertising is considered to be a discretionary cost. Salespersons are\npaid monthly salaries plus commissions. The sales force was\nincreased from 20 to 21 individuals during the month of May.\nMarch        April     May         June\nActivity\nmeasures:\nSales            2,000     1,800     2,400     2,300\norders\nUnits sold      55,000    60,000    70,000    65,000\nDollar sales $1,150,00 $1,200,00 $1,330,00 $1,275,00\n0         0         0         0\nMarketing\ncosts:\nAdvertising $ 190,00 $ 200,00 $ 190,00 $ 190,00\n0        0        0        0\nSales         20,000   20,000   21,000   21,000\nsalaries\nCommissio     23,000   24,000   26,600   25,500\nns\nShipping      93,000 100,000 114,000 107,000\ncosts\nTotal costs     $ 326,00 $ 344,00 $ 351,60 $ 343,50\n0        0        0        0\nProduction levels are expected to increase within the relevant\nrange. What are the anticipated effects on the following?\nFixed Costs       Variable Costs\nper Unit          per Unit",
+    "stem": "Production levels are expected to increase within the relevant\nrange. What are the anticipated effects on the following?\nFixed Costs       Variable Costs\nper Unit          per Unit",
     "choices": [
       "Increase       Increase",
       "Increase       No change",
@@ -1008,7 +1008,7 @@
     "number": 30,
     "page": 733,
     "topicId": "su7-cost-behavior",
-    "stem": "Huron Industries has developed                      Product A Product B\ntwo new products but has only        Raw        $ 44.00 $ 36.00\nenough plant capacity to             materials\nintroduce one product during the\nMachining 18.00    15.00\ncurrent year. The following data\n@ $12/hour\nwill assist management in\ndeciding which product should        Assembly @ 30.00   10.00\nbe selected.                         $10/hour\nHuron’s fixed overhead includes    Variable   36.00    18.00\nrent and utilities, equipment      overhead @\ndepreciation, and supervisory      $8/hour\nsalaries. Selling and              Fixed      18.00    9.00\nadministrative expenses are not    overhead @\nallocated to products.             $4/hour\nTotal cost $ 146.00 $ 88.00\nSuggested $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe marketing manager has learned the following about a new\nproduct that is being introduced: Sales of this product are\nplanned at $100,000 for the first year. Sales commission\nexpense is budgeted at 8% of sales plus the marketing\nmanager’s incentive budgeted at an additional 1/2%. The\npreparation of a product brochure will require 20 hours of\nmarketing salaried staff time at an average rate of $100 per\nhour, and 10 hours at $150 per hour for an outside illustrator’s\neffort. The variable marketing cost for this new product will be",
+    "stem": "The marketing manager has learned the following about a new\nproduct that is being introduced: Sales of this product are\nplanned at $100,000 for the first year. Sales commission\nexpense is budgeted at 8% of sales plus the marketing\nmanager’s incentive budgeted at an additional 1/2%. The\npreparation of a product brochure will require 20 hours of\nmarketing salaried staff time at an average rate of $100 per\nhour, and 10 hours at $150 per hour for an outside illustrator’s\neffort. The variable marketing cost for this new product will be",
     "choices": [
       "$8,000",
       "$8,500",
@@ -1212,7 +1212,7 @@
     "number": 3,
     "page": 743,
     "topicId": "su7-absorption-variable",
-    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nWhich one of the following statements is true regarding\nabsorption costing and variable costing?",
+    "stem": "Which one of the following statements is true regarding\nabsorption costing and variable costing?",
     "choices": [
       "Overhead costs are treated in the same manner under both\ncosting methods.",
       "If finished goods inventory increases, absorption costing\nresults in higher income.",
@@ -1229,7 +1229,7 @@
     "number": 4,
     "page": 744,
     "topicId": "su7-absorption-variable",
-    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nAbsorption costing and variable costing are two different\nmethods of assigning costs to units produced. Of the four cost\nitems listed below, identify the one that is not correctly\naccounted for as a product cost.\nPart of Product\nCost under\nAbsorption    Variable\nCosting      Costing",
+    "stem": "Absorption costing and variable costing are two different\nmethods of assigning costs to units produced. Of the four cost\nitems listed below, identify the one that is not correctly\naccounted for as a product cost.\nPart of Product\nCost under\nAbsorption    Variable\nCosting      Costing",
     "choices": [
       "Manufacturing supplies       Yes              Yes",
       "Insurance on factory         Yes              No",
@@ -1246,7 +1246,7 @@
     "number": 5,
     "page": 745,
     "topicId": "su7-absorption-variable",
-    "stem": "At the end of its fiscal year, Jubal Manufacturing recorded the data\nbelow:\nPrime cost                             $800,000\nVariable manufacturing overhead         100,000\nFixed manufacturing overhead            160,000\nVariable selling and other expenses 80,000\nFixed selling and other expenses         40,000\nWhich of the following statements is true for a firm that uses\nvariable costing?",
+    "stem": "Which of the following statements is true for a firm that uses\nvariable costing?",
     "choices": [
       "The cost of a unit of product changes because of changes in\nnumber of units manufactured.",
       "Profits fluctuate with sales.",
@@ -1297,7 +1297,7 @@
     "number": 8,
     "page": 748,
     "topicId": "su7-absorption-variable",
-    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nWhich method of inventory costing treats direct manufacturing\ncosts and manufacturing overhead costs, both variable and\nfixed, as inventoriable costs?",
+    "stem": "Which method of inventory costing treats direct manufacturing\ncosts and manufacturing overhead costs, both variable and\nfixed, as inventoriable costs?",
     "choices": [
       "Direct costing.",
       "Variable costing.",
@@ -1314,7 +1314,7 @@
     "number": 9,
     "page": 749,
     "topicId": "su7-absorption-variable",
-    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nWhich one of the following considers the impact of fixed\noverhead costs?",
+    "stem": "Which one of the following considers the impact of fixed\noverhead costs?",
     "choices": [
       "Full absorption costing.",
       "Marginal costing.",
@@ -1331,7 +1331,7 @@
     "number": 10,
     "page": 750,
     "topicId": "su7-absorption-variable",
-    "stem": "Osawa, Inc., planned and actually manufactured 200,000 units of its\nsingle product during its first year of operations. Variable\nmanufacturing costs were $30 per unit of product. Planned and actual\nfixed manufacturing costs were $600,000, and selling and\nadministrative costs totaled $400,000. Osawa sold 120,000 units of\nproduct at a selling price of $40 per unit.\nWhen a firm prepares financial reports by using absorption\ncosting,",
+    "stem": "When a firm prepares financial reports by using absorption\ncosting,",
     "choices": [
       "Profits will always increase with increases in sales.",
       "Profits will always decrease with decreases in sales.",
@@ -1756,7 +1756,7 @@
     "number": 35,
     "page": 772,
     "topicId": "su7-absorption-variable",
-    "stem": "Presented are Valenz Company’s records for the\ncurrent fiscal year ended November 30:\nDirect materials used               $300,000\nDirect labor                         100,000\nVariable manufacturing overhead       50,000\nFixed manufacturing overhead          80,000\nSelling and admin. costs -- variable 40,000\nSelling and admin. costs -- fixed     20,000\nA cracker and cookie manufacturer has the following unit costs\nfor the month of June:\nVariable          Variable               Fixed                Fixed\nmanufacturing      marketing           manufacturing           marketin\ncost              cost                  cost                 cost\n$5.00               $3.50                 $2.00             $4.00\nA total of 100,000 units were manufactured during June, 10,000\nof which remain in ending inventory. The manufacturer uses the\nfirst-in, first-out (FIFO) inventory method, and the 10,000 units\nare the only finished goods inventory at month end. Using the\nfull absorption costing method, the manufacturer’s finished\ngoods inventory value would be",
+    "stem": "A cracker and cookie manufacturer has the following unit costs\nfor the month of June:\nVariable          Variable               Fixed                Fixed\nmanufacturing      marketing           manufacturing           marketin\ncost              cost                  cost                 cost\n$5.00               $3.50                 $2.00             $4.00\nA total of 100,000 units were manufactured during June, 10,000\nof which remain in ending inventory. The manufacturer uses the\nfirst-in, first-out (FIFO) inventory method, and the 10,000 units\nare the only finished goods inventory at month end. Using the\nfull absorption costing method, the manufacturer’s finished\ngoods inventory value would be",
     "choices": [
       "$50,000",
       "$70,000",
@@ -1841,7 +1841,7 @@
     "number": 40,
     "page": 778,
     "topicId": "su7-absorption-variable",
-    "stem": "Consider the following situation for Weisman\nCorporation for the prior year:\n• The company produced 1,000 units and sold 900 units, both\nas budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all variable\nmanufacturing costs are affected by volume of production\nonly, and all variable selling costs are affected by sales\nvolume only.\n• Budgeted per unit revenues and costs were as follows.\nPer\nUnit\nSales price                    $100\nDirect materials                 30\nDirect labor                     20\nVariable manufacturing           10\noverhead\nFixed manufacturing                 5\noverhead\nVariable selling costs             12\nFixed selling costs ($3,600         4\ntotal)\nFixed administrative costs          2\n($1,800 total)\nDuring the month of May, a corporation sold 1,000 units. The\ncost per unit for May was as follows:\nCost per Unit\nDirect materials                              $ 5.50\nDirect labor                                    3.00\nVariable manufacturing overhead                 1.00\nFixed manufacturing overhead                    1.50\nVariable administrative costs                    .50\nFixed administrative costs                      3.50\nTotal                                      $15.00\nMay’s income using absorption costing was $9,500. The\nincome for May, if variable costing had been used, would have\nbeen $9,125. The number of units produced during May was",
+    "stem": "During the month of May, a corporation sold 1,000 units. The\ncost per unit for May was as follows:\nCost per Unit\nDirect materials                              $ 5.50\nDirect labor                                    3.00\nVariable manufacturing overhead                 1.00\nFixed manufacturing overhead                    1.50\nVariable administrative costs                    .50\nFixed administrative costs                      3.50\nTotal                                      $15.00\nMay’s income using absorption costing was $9,500. The\nincome for May, if variable costing had been used, would have\nbeen $9,125. The number of units produced during May was",
     "choices": [
       "750",
       "925",
@@ -1858,7 +1858,7 @@
     "number": 41,
     "page": 780,
     "topicId": "su7-absorption-variable",
-    "stem": "Consider the following situation for Weisman\nCorporation for the prior year:\n• The company produced 1,000 units and sold 900 units, both\nas budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all variable\nmanufacturing costs are affected by volume of production\nonly, and all variable selling costs are affected by sales\nvolume only.\n• Budgeted per unit revenues and costs were as follows.\nPer\nUnit\nSales price                    $100\nDirect materials                 30\nDirect labor                     20\nVariable manufacturing           10\noverhead\nFixed manufacturing                 5\noverhead\nVariable selling costs             12\nFixed selling costs ($3,600         4\ntotal)\nFixed administrative costs          2\n($1,800 total)\nLast year a company had sales of 75,000 units and production\nof 100,000 units. Other information for the year is shown\nbelow.\nDirect manufacturing labor        $187,500\nVariable manufacturing overhead 100,000\nDirect materials                    150,000\nVariable selling expenses           100,000\nFixed administrative expenses       100,000\nFixed manufacturing overhead        200,000\nAssuming no beginning inventory, what is the total value of\nending finished goods inventory under absorption costing?",
+    "stem": "Last year a company had sales of 75,000 units and production\nof 100,000 units. Other information for the year is shown\nbelow.\nDirect manufacturing labor        $187,500\nVariable manufacturing overhead 100,000\nDirect materials                    150,000\nVariable selling expenses           100,000\nFixed administrative expenses       100,000\nFixed manufacturing overhead        200,000\nAssuming no beginning inventory, what is the total value of\nending finished goods inventory under absorption costing?",
     "choices": [
       "$159,375",
       "$184,375",
@@ -2011,7 +2011,7 @@
     "number": 50,
     "page": 792,
     "topicId": "su7-absorption-variable",
-    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe difference between the sales price and total variable costs\nis",
+    "stem": "The difference between the sales price and total variable costs\nis",
     "choices": [
       "Gross operating profit.",
       "Net profit.",
@@ -2028,7 +2028,7 @@
     "number": 51,
     "page": 792,
     "topicId": "su7-absorption-variable",
-    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nThe term “gross margin” for a manufacturing firm refers to\nexcess of sales over",
+    "stem": "The term “gross margin” for a manufacturing firm refers to\nexcess of sales over",
     "choices": [
       "Cost of goods sold, excluding fixed indirect manufacturing\ncosts.",
       "All variable costs, including variable selling and administrative\nexpenses.",
@@ -2062,7 +2062,7 @@
     "number": 53,
     "page": 795,
     "topicId": "su7-absorption-variable",
-    "stem": "Huron Industries has developed                Product A Product B\ntwo new products but has only Raw             $ 44.00 $ 36.00\nenough plant capacity to          materials\nintroduce one product during the\nMachining @      18.00     15.00\ncurrent year. The following data\n$12/hour\nwill assist management in\ndeciding which product should    Assembly @       30.00     10.00\nbe selected.                      $10/hour\nHuron’s fixed overhead includes Variable          36.00     18.00\nrent and utilities, equipment     overhead  @\ndepreciation, and supervisory     $8/hour\nsalaries. Selling and           Fixed         18.00              9.00\nadministrative expenses are not overhead @\nallocated to products.           $4/hour\nTotal cost $ 146.00 $           88.00\nSuggested      $ 169.95 $ 99.98\nselling price\nActual\nresearch &\ndevelopment\ncosts         $240,000 $175,000\nProposed\nadvertising\n& promotion\ncosts         $500,000 $350,000\nConsider the following situation for a company for the prior\nyear.\n• The company produced 1,000 units and sold 900\nunits, both as budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all\nvariable manufacturing costs are affected by volume of\nproduction only, and all variable selling costs are\naffected by sales volume only.\n• Budgeted per unit revenues and costs were as follows:\nPer Unit\nSales price                                 $100\nDirect materials                              30\nDirect labor                                  20\nVariable manufacturing costs                  10\nFixed manufacturing costs                      5\nVariable selling costs                        12\nFixed selling costs ($3,600 total)          4\nFixed administrative costs ($1,800 total)   2\nAssuming that the company uses variable costing, the\noperating income for the prior year was",
+    "stem": "Consider the following situation for a company for the prior\nyear.\n• The company produced 1,000 units and sold 900\nunits, both as budgeted.\n• There were no beginning or ending work-in-process\ninventories and no beginning finished goods inventory.\n• Budgeted and actual fixed costs were equal, all\nvariable manufacturing costs are affected by volume of\nproduction only, and all variable selling costs are\naffected by sales volume only.\n• Budgeted per unit revenues and costs were as follows:\nPer Unit\nSales price                                 $100\nDirect materials                              30\nDirect labor                                  20\nVariable manufacturing costs                  10\nFixed manufacturing costs                      5\nVariable selling costs                        12\nFixed selling costs ($3,600 total)          4\nFixed administrative costs ($1,800 total)   2\nAssuming that the company uses variable costing, the\noperating income for the prior year was",
     "choices": [
       "$13,600",
       "$14,200",
@@ -2164,7 +2164,7 @@
     "number": 59,
     "page": 805,
     "topicId": "su7-absorption-variable",
-    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nUsing absorption costing, fixed manufacturing overhead costs\nare best described as",
+    "stem": "Using absorption costing, fixed manufacturing overhead costs\nare best described as",
     "choices": [
       "Direct period costs.",
       "Indirect period costs.",
@@ -2181,7 +2181,7 @@
     "number": 60,
     "page": 805,
     "topicId": "su7-absorption-variable",
-    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nA review of accounting records for last year disclosed the\nfollowing selected information:\nVariable costs:\nDirect materials used    $ 56,000\nDirect labor               179,100\nManufacturing overhead 154,000\nSelling costs              108,400\nFixed costs:\nManufacturing overhead 267,000\nSelling costs             121,000\nAdministrative costs      235,900\nIn addition, the company suffered a $27,700 uninsured factory\nfire loss during the year. Under absorption costing, what were\nthe product costs and period costs for last year?\nProduct Period",
+    "stem": "A review of accounting records for last year disclosed the\nfollowing selected information:\nVariable costs:\nDirect materials used    $ 56,000\nDirect labor               179,100\nManufacturing overhead 154,000\nSelling costs              108,400\nFixed costs:\nManufacturing overhead 267,000\nSelling costs             121,000\nAdministrative costs      235,900\nIn addition, the company suffered a $27,700 uninsured factory\nfire loss during the year. Under absorption costing, what were\nthe product costs and period costs for last year?\nProduct Period",
     "choices": [
       "$235,100 $914,000",
       "$497,500 $651,600",
@@ -2198,7 +2198,7 @@
     "number": 61,
     "page": 807,
     "topicId": "su7-absorption-variable",
-    "stem": "Dremmon Corporation uses a standard cost\naccounting system. Data for the last fiscal year are as follows:\nUnits\nBeginning inventory of finished goods                   100\nProduction during the year                              700\nSales                                                   750\nEnding inventory of finished goods                        50\nPer Unit\nProduct selling price                                   $200\nStandard variable manufacturing cost                       90\nStandard fixed manufacturing cost                          20*\nBudgeted selling and administrative costs (all fixed) $45,000\n*Denominator level of activity is 750 units for the year.\nThere were no price, efficiency, or spending variances for the year,\nand actual selling and administrative expenses equaled the budget\namount. Any volume variance is written off to cost of goods sold in the\nyear incurred. There are no work-in-process inventories.\nFixed manufacturing overhead costs totaled $150,000 and\nvariable selling costs totaled $75,000. How should these costs\nbe classified under variable costing?",
+    "stem": "Fixed manufacturing overhead costs totaled $150,000 and\nvariable selling costs totaled $75,000. How should these costs\nbe classified under variable costing?",
     "choices": [
       "$0 period costs; $225,000 product costs.",
       "$75,000 period costs; $150,000 product costs.",
