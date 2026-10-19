@@ -65,6 +65,7 @@ function saveLocal(qs: ExamQuestion[]) {
 
 export function ExamPrep({ lang }: { lang: Lang }) {
   const [track, setTrack] = useState<ExamTrack>("IFRS");
+  const [cmaUnit, setCmaUnit] = useState<"all" | 1 | 2 | 3 | 4>("all");
   const [local, setLocal] = useState<ExamQuestion[]>([]);
   const [mode, setMode] = useState<"quiz" | "upload">("quiz");
   const [current, setCurrent] = useState(0);
@@ -150,7 +151,17 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     return c;
   }, [allQuestions]);
 
-  const pool = useMemo(() => allQuestions.filter((q) => q.track === track), [allQuestions, track]);
+  const pool = useMemo(
+    () =>
+      allQuestions.filter(
+        (q) =>
+          q.track === track &&
+          (track !== "CMA" ||
+            cmaUnit === "all" ||
+            q.examDomain === `Part 1 — Study Unit ${cmaUnit}`),
+      ),
+    [allQuestions, track, cmaUnit],
+  );
   const q = pool[current];
 
   // Clamp current when pool changes
@@ -374,6 +385,34 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           </button>
         </div>
       </div>
+
+      {track === "CMA" && mode === "quiz" && (
+        <div
+          className="flex flex-wrap gap-2"
+          aria-label={lang === "ar" ? "اختيار وحدة CMA" : "Select CMA study unit"}
+        >
+          {(["all", 1, 2, 3, 4] as const).map((unit) => (
+            <button
+              key={unit}
+              type="button"
+              aria-pressed={cmaUnit === unit}
+              onClick={() => {
+                setCmaUnit(unit);
+                resetScore();
+              }}
+              className={`min-h-10 rounded-full border px-3 py-2 text-xs font-bold transition ${cmaUnit === unit ? "border-[#f3d28a] bg-[#d7aa52]/15 text-[#f3d28a]" : "border-[#d7aa52]/30 text-[var(--fg-soft)] hover:border-[#f3d28a]"}`}
+            >
+              {unit === "all"
+                ? lang === "ar"
+                  ? "كل وحدات CMA"
+                  : "All CMA units"
+                : lang === "ar"
+                  ? `الوحدة ${unit}`
+                  : `Unit ${unit}`}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Source bar */}
       <div className="flex flex-wrap items-center gap-2 rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] px-3 py-2 text-[11px] text-[var(--fg-soft)]">

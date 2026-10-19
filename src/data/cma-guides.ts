@@ -1,4 +1,6 @@
-/** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–2. */
+import { CMA_STUDY_UNIT_CASES_3_4, CMA_TOPIC_GUIDES_3_4 } from "@/data/cma-guides-units-3-4";
+
+/** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–4. */
 export interface CmaTopicGuide {
   topicId: string;
   scope: { ar: string; en: string };
@@ -325,11 +327,12 @@ export const CMA_TOPIC_GUIDES: Record<string, CmaTopicGuide> = {
         "LIFO floor = 108,000 − 9,000 = 99,000; constrained replacement cost becomes 99,000; lower of 120,000 and 99,000 is 99,000, a 21,000 loss. FIFO uses cost/NRV: 108,000 carrying amount and 12,000 loss.",
     },
   },
+  ...CMA_TOPIC_GUIDES_3_4,
 };
 
 /** Original linked practice cases for the 2026 case-based assessment style. */
 export interface CmaStudyUnitCase {
-  studyUnit: 1 | 2;
+  studyUnit: 1 | 2 | 3 | 4;
   title: { ar: string; en: string };
   scenario: { ar: string; en: string };
   tasks: { prompt: { ar: string; en: string }; solution: { ar: string; en: string } }[];
@@ -416,4 +419,5 @@ export const CMA_STUDY_UNIT_CASES: CmaStudyUnitCase[] = [
       },
     ],
   },
+  ...CMA_STUDY_UNIT_CASES_3_4,
 ];
