@@ -1,3 +1,5 @@
+import { CMA_COST_MANAGEMENT_TOPICS } from "@/data/cma-topics-cost-management";
+
 /** IMA Content Specification Outline, effective September 2024. Content is original. */
 export const CMA_OUTLINE_URL =
   "https://www.imaglobal.org/assets/static/cma-content-specification-outlines-2024.Cr1Ox4aS.pdf";
@@ -9,6 +11,7 @@ export const CMA_IR_FRAMEWORK_URL =
   "https://integratedreporting.ifrs.org/wp-content/uploads/2024/08/IntegratedReporting_Framework_061024.pdf";
 
 export type CmaPart = "part-1" | "part-2";
+export type CmaStudyUnit = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export type CmaDomain =
   | "external-reporting"
@@ -27,7 +30,7 @@ export type CmaDomain =
 export interface CmaTopic {
   id: string;
   code: string;
-  studyUnit: 1 | 2 | 3 | 4 | 5 | 6;
+  studyUnit: CmaStudyUnit;
   section: string;
   sourcePages: string;
   losRef: string;
@@ -812,4 +815,5 @@ export const CMA_TOPICS: CmaTopic[] = [
       "التحقق",
     ],
   },
+  ...CMA_COST_MANAGEMENT_TOPICS,
 ];

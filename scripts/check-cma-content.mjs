@@ -41,8 +41,8 @@ const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
 
-check(CMA_TOPICS.length === 26 && ids.size === 26, "Expected 26 unique sections for units 1–6");
-check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Guide count does not match topic count");
+check(CMA_TOPICS.length === 40 && ids.size === 40, "Expected 40 unique sections for units 1–10");
+check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Expected guides for published study units 1–6");
 for (const [unit, expected] of [
   [1, 6],
   [2, 4],
@@ -50,6 +50,10 @@ for (const [unit, expected] of [
   [4, 4],
   [5, 3],
   [6, 4],
+  [7, 4],
+  [8, 4],
+  [9, 3],
+  [10, 3],
 ]) {
   check(
     CMA_TOPICS.filter((topic) => topic.studyUnit === unit).length === expected,
@@ -58,7 +62,10 @@ for (const [unit, expected] of [
 }
 for (const topic of CMA_TOPICS) {
   const guide = CMA_TOPIC_GUIDES[topic.id];
-  check(guide?.topicId === topic.id, `Missing guide for ${topic.id}`);
+  check(
+    topic.studyUnit <= 6 ? guide?.topicId === topic.id : !guide,
+    `Unexpected guide state for ${topic.id}`,
+  );
   check(
     topic.titleAr &&
       topic.titleEn &&
@@ -68,24 +75,24 @@ for (const topic of CMA_TOPICS) {
       topic.losRef,
     `Incomplete topic: ${topic.id}`,
   );
-  check(
-    guide.scope.ar &&
-      guide.scope.en &&
-      guide.concepts.ar &&
-      guide.concepts.en &&
-      guide.workflow.ar &&
-      guide.workflow.en &&
-      guide.pitfalls.ar &&
-      guide.pitfalls.en,
-    `Incomplete guide: ${topic.id}`,
-  );
-  check(
-    guide.practicalCase.solutionAr && guide.practicalCase.solutionEn,
-    `Missing practical solution: ${topic.id}`,
-  );
+  if (guide) {
+    check(
+      guide.scope.ar &&
+        guide.scope.en &&
+        guide.concepts.ar &&
+        guide.concepts.en &&
+        guide.workflow.ar &&
+        guide.workflow.en &&
+        guide.pitfalls.ar &&
+        guide.pitfalls.en &&
+        guide.practicalCase.solutionAr &&
+        guide.practicalCase.solutionEn,
+      `Incomplete guide: ${topic.id}`,
+    );
+  }
   check(
     CMA_LOCAL_QUESTIONS.filter((question) => question.topicId === topic.id).length >=
-      (topic.studyUnit >= 5 ? 12 : 6),
+      (topic.studyUnit >= 5 && topic.studyUnit <= 6 ? 12 : 6),
     `Too few questions: ${topic.id}`,
   );
 }

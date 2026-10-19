@@ -1,4 +1,4 @@
-import { CMA_TOPICS } from "@/data/cma-topics";
+import { CMA_TOPICS, type CmaStudyUnit } from "@/data/cma-topics";
 import type { CmaLocalQuestion } from "@/data/cma-question-bank";
 
 export type CmaQuestionSpec = readonly [
@@ -15,8 +15,9 @@ export type CmaQuestionSpec = readonly [
 ];
 
 export function makeCmaQuestions(
-  unit: 1 | 2 | 3 | 4 | 5 | 6,
+  unit: CmaStudyUnit,
   specs: readonly CmaQuestionSpec[],
+  source: "2024-outline" | "2025-mcq-vol1" = "2024-outline",
 ): CmaLocalQuestion[] {
   return specs.map(
     ([
@@ -41,7 +42,10 @@ export function makeCmaQuestions(
         topic: topic.titleEn,
         examDomain: `Part 1 — Study Unit ${unit}`,
         difficulty,
-        reference: `Gleim CMA Part 1 (2024), SU ${unit} §${topic.section}; IMA LOS ${topic.losRef}`,
+        reference:
+          source === "2025-mcq-vol1"
+            ? `Gleim CMA Part 1 MCQ Bank Vol. 1 (2025), SU ${unit} §${topic.section}, pp. ${topic.sourcePages}; IMA LOS ${topic.losRef}`
+            : `Gleim CMA Part 1 (2024), SU ${unit} §${topic.section}; IMA LOS ${topic.losRef}`,
         question: { ar, en },
         choices: { ar: [...choicesAr], en: [...choicesEn] },
         answerIndex,

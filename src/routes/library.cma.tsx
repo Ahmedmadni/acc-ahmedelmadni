@@ -21,6 +21,7 @@ import {
   CMA_TOPICS,
   type CmaDomain,
   type CmaPart,
+  type CmaStudyUnit,
 } from "@/data/cma-topics";
 import { useSiteLang } from "@/lib/use-site-lang";
 
@@ -29,11 +30,11 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | الوحدات 1–6 من الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | أسئلة الوحدات 1–10 من الجزء الأول — أحمد المدني" },
         {
           name: "description",
           content:
-            "دليل CMA عربي وإنجليزي للوحدات الست لمجال التقارير المالية الخارجية في الجزء الأول: القوائم والأصول والالتزامات والإيراد والتقرير المتكامل.",
+            "دليل CMA عربي وإنجليزي للوحدات 1–6 وبنك أسئلة للوحدات 1–10 في التقارير المالية وإدارة التكاليف.",
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
@@ -66,7 +67,7 @@ export const Route = createFileRoute("/library/cma")({
 function CmaPage() {
   const [lang] = useSiteLang();
   const [part, setPart] = useState<CmaPart>("part-1");
-  const [studyUnit, setStudyUnit] = useState<"all" | 1 | 2 | 3 | 4 | 5 | 6>("all");
+  const [studyUnit, setStudyUnit] = useState<"all" | CmaStudyUnit>("all");
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -107,7 +108,7 @@ function CmaPage() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-8">
         <header className="rounded-[2rem] border border-[#A88765]/25 bg-[#1C1B19] p-6 sm:p-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/30 bg-[#A88765]/10 px-3 py-1.5 text-xs font-bold text-[#c9a986]">
-            <GraduationCap className="size-4" /> CMA · Part 1 · A
+            <GraduationCap className="size-4" /> CMA · Part 1 · A / D
           </span>
           <h2 className="mt-5 font-display text-3xl font-black leading-tight text-[#FCFBF9] sm:text-5xl">
             {lang === "ar"
@@ -116,8 +117,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "تعلّم الوحدات الست لمجال التقارير المالية الخارجية في الجزء الأول: القوائم والأصول والالتزامات والإيراد والتقرير المتكامل، مع أدلة وحالات وبنك أسئلة ثنائي اللغة."
-              : "Study all six Part 1 external financial reporting units: statements, assets, liabilities, revenue and integrated reporting, with bilingual guides, cases and practice."}
+              ? "أدلة وحالات للوحدات 1–6 في التقارير المالية، وأسئلة ثنائية اللغة للوحدات 1–10 تشمل إدارة التكاليف. ستضاف أدلة الوحدات 7–10 مع كتب الشرح."
+              : "Bilingual guides and cases for reporting Units 1–6, and practice for Units 1–10 including cost management. Guides for Units 7–10 will follow their textbooks."}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -127,7 +128,9 @@ function CmaPage() {
               {CMA_LOCAL_QUESTIONS.length}{" "}
               {lang === "ar" ? "أسئلة تدريب أصلية" : "original practice questions"}
             </span>
-            <span>{lang === "ar" ? "وزن المجال A: ‎15%" : "Domain A weight: 15%"}</span>
+            <span>
+              {lang === "ar" ? "المجالان A وD: ‎15% لكل منهما" : "Domains A and D: 15% each"}
+            </span>
           </div>
         </header>
 
@@ -185,7 +188,7 @@ function CmaPage() {
               className="mt-4 flex flex-wrap gap-2"
               aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
             >
-              {(["all", 1, 2, 3, 4, 5, 6] as const).map((value) => (
+              {(["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const).map((value) => (
                 <button
                   key={value}
                   type="button"
@@ -202,7 +205,7 @@ function CmaPage() {
                       ? "كل الوحدات المنشورة"
                       : "All published units"
                     : lang === "ar"
-                      ? `الوحدة ${(["", "الأولى", "الثانية", "الثالثة", "الرابعة", "الخامسة", "السادسة"] as const)[value]}`
+                      ? `الوحدة ${value}`
                       : `Study Unit ${value}`}
                 </button>
               ))}
@@ -304,6 +307,11 @@ function CmaPage() {
                     <p className="mt-3 flex-1 text-sm leading-7 text-[#6B6259]">
                       {lang === "ar" ? item.summaryAr : item.summaryEn}
                     </p>
+                    {item.studyUnit >= 7 && (
+                      <span className="mt-3 text-xs font-bold text-[#76543F]">
+                        {lang === "ar" ? "بنك أسئلة · الشرح قادم" : "Question bank · guide pending"}
+                      </span>
+                    )}
                     {item.keyFormulas?.slice(0, 1).map((formula) => (
                       <div
                         key={formula.formula}
@@ -332,11 +340,15 @@ function CmaPage() {
                       <BookOpenText className="size-4" />
                       {lang === "ar"
                         ? selectedId === item.id
-                          ? "إغلاق الدليل"
-                          : "افتح الدليل والأسئلة"
+                          ? "إغلاق التدريب"
+                          : item.studyUnit >= 7
+                            ? "افتح الأسئلة"
+                            : "افتح الدليل والأسئلة"
                         : selectedId === item.id
-                          ? "Close guide"
-                          : "Open guide and questions"}
+                          ? "Close practice"
+                          : item.studyUnit >= 7
+                            ? "Open questions"
+                            : "Open guide and questions"}
                     </button>
                   </article>
                 );
@@ -345,11 +357,13 @@ function CmaPage() {
           )}
         </section>
 
-        {selected && guide && (
+        {selected && (
           <section
             id="cma-study-guide"
             className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#F5F1EB] p-6 text-[#1C1B19] sm:p-9"
-            aria-label={lang === "ar" ? `دليل ${selected.titleAr}` : `${selected.titleEn} guide`}
+            aria-label={
+              lang === "ar" ? `تدريب ${selected.titleAr}` : `${selected.titleEn} practice`
+            }
           >
             <p className="text-xs font-black text-[#76543F]" dir="ltr">
               {selected.code}
@@ -359,49 +373,69 @@ function CmaPage() {
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#76543F]">
               {lang === "ar"
-                ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}، الصفحات ${selected.sourcePages} · ${selected.losRef}`
-                : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}, pp. ${selected.sourcePages} · ${selected.losRef}`}
+                ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}، ${guide ? "صفحات الدليل" : "صفحات بنك الأسئلة 2025"} ${selected.sourcePages} · ${selected.losRef}`
+                : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}, ${guide ? "guide" : "2025 MCQ bank"} pp. ${selected.sourcePages} · ${selected.losRef}`}
             </p>
-            {(
-              [
-                [lang === "ar" ? "النطاق وأهداف التعلم" : "Scope and outcomes", guide.scope[lang]],
-                [lang === "ar" ? "المفاهيم الأساسية" : "Core concepts", guide.concepts[lang]],
-                [lang === "ar" ? "خطوات التطبيق" : "Application workflow", guide.workflow[lang]],
-                [lang === "ar" ? "أخطاء شائعة" : "Common pitfalls", guide.pitfalls[lang]],
-              ] as const
-            ).map(([title, content]) => (
-              <div key={title} className="mt-6 border-t border-[#A88765]/25 pt-5">
-                <h4 className="font-display text-lg font-black">{title}</h4>
-                <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
-                  {content}
-                </p>
-              </div>
-            ))}
-            {selected.keyFormulas?.map((formula) => (
-              <div
-                key={formula.formula}
-                className="mt-4 flex flex-col gap-2 rounded-2xl border border-[#A88765]/25 bg-white p-4 sm:flex-row sm:items-center sm:gap-4"
-              >
-                <span className="inline-flex items-center gap-2 text-xs font-black text-[#76543F]">
-                  <Calculator className="size-4" />
-                  {lang === "ar" ? formula.nameAr : formula.nameEn}
-                </span>
-                <code dir="ltr" className="break-words font-mono text-xs leading-6 sm:text-sm">
-                  {formula.formula}
-                </code>
-              </div>
-            ))}
-            <div className="mt-7 rounded-2xl bg-[#1C1B19] p-5 text-[#FCFBF9]">
-              <h4 className="font-display text-lg font-black text-[#d2b390]">
-                {lang === "ar" ? guide.practicalCase.titleAr : guide.practicalCase.titleEn}
-              </h4>
-              <p className="mt-3 text-sm leading-8">
-                {lang === "ar" ? guide.practicalCase.scenarioAr : guide.practicalCase.scenarioEn}
+            {guide ? (
+              <>
+                {(
+                  [
+                    [
+                      lang === "ar" ? "النطاق وأهداف التعلم" : "Scope and outcomes",
+                      guide.scope[lang],
+                    ],
+                    [lang === "ar" ? "المفاهيم الأساسية" : "Core concepts", guide.concepts[lang]],
+                    [
+                      lang === "ar" ? "خطوات التطبيق" : "Application workflow",
+                      guide.workflow[lang],
+                    ],
+                    [lang === "ar" ? "أخطاء شائعة" : "Common pitfalls", guide.pitfalls[lang]],
+                  ] as const
+                ).map(([title, content]) => (
+                  <div key={title} className="mt-6 border-t border-[#A88765]/25 pt-5">
+                    <h4 className="font-display text-lg font-black">{title}</h4>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                      {content}
+                    </p>
+                  </div>
+                ))}
+                {selected.keyFormulas?.map((formula) => (
+                  <div
+                    key={formula.formula}
+                    className="mt-4 flex flex-col gap-2 rounded-2xl border border-[#A88765]/25 bg-white p-4 sm:flex-row sm:items-center sm:gap-4"
+                  >
+                    <span className="inline-flex items-center gap-2 text-xs font-black text-[#76543F]">
+                      <Calculator className="size-4" />
+                      {lang === "ar" ? formula.nameAr : formula.nameEn}
+                    </span>
+                    <code dir="ltr" className="break-words font-mono text-xs leading-6 sm:text-sm">
+                      {formula.formula}
+                    </code>
+                  </div>
+                ))}
+                <div className="mt-7 rounded-2xl bg-[#1C1B19] p-5 text-[#FCFBF9]">
+                  <h4 className="font-display text-lg font-black text-[#d2b390]">
+                    {lang === "ar" ? guide.practicalCase.titleAr : guide.practicalCase.titleEn}
+                  </h4>
+                  <p className="mt-3 text-sm leading-8">
+                    {lang === "ar"
+                      ? guide.practicalCase.scenarioAr
+                      : guide.practicalCase.scenarioEn}
+                  </p>
+                  <p className="mt-4 border-t border-[#A88765]/30 pt-4 text-sm leading-8 text-[#d8c9b8]">
+                    {lang === "ar"
+                      ? guide.practicalCase.solutionAr
+                      : guide.practicalCase.solutionEn}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <p className="mt-6 rounded-2xl border border-[#A88765]/30 bg-white p-4 text-sm leading-7 text-[#554C44]">
+                {lang === "ar"
+                  ? "تدريب الوحدة متاح الآن. سيضاف دليل الشرح والحالة التطبيقية عند وصول كتاب الوحدة."
+                  : "Unit practice is available now. The study guide and worked case will follow with the unit textbook."}
               </p>
-              <p className="mt-4 border-t border-[#A88765]/30 pt-4 text-sm leading-8 text-[#d8c9b8]">
-                {lang === "ar" ? guide.practicalCase.solutionAr : guide.practicalCase.solutionEn}
-              </p>
-            </div>
+            )}
             <h4 className="mt-8 flex items-center gap-2 font-display text-lg font-black">
               <CircleHelp className="size-5 text-[#76543F]" />
               {lang === "ar" ? "تدرب على هذا الموضوع" : "Practice this topic"}
