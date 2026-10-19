@@ -85,7 +85,7 @@ for (const topic of CMA_TOPICS) {
   );
   check(
     CMA_LOCAL_QUESTIONS.filter((question) => question.topicId === topic.id).length >=
-      (topic.studyUnit >= 5 ? 8 : 6),
+      (topic.studyUnit >= 5 ? 12 : 6),
     `Too few questions: ${topic.id}`,
   );
 }
