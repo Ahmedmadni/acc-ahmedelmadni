@@ -11,9 +11,10 @@ import {
   XCircle,
 } from "lucide-react";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
-import { CMA_TOPIC_GUIDES } from "@/data/cma-guides";
+import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import {
   CMA_DOMAINS,
+  CMA_EXAM_FORMAT_URL,
   CMA_LOS_URL,
   CMA_OUTLINE_URL,
   CMA_TOPICS,
@@ -27,16 +28,16 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | الوحدة الأولى من الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | الوحدتان الأولى والثانية من الجزء الأول — أحمد المدني" },
         {
           name: "description",
           content:
-            "دليل CMA عربي وإنجليزي للوحدة الأولى من الجزء الأول: القوائم المالية والاعتراف والقياس، مع حالات محلولة وأسئلة تدريب أصلية.",
+            "دليل CMA عربي وإنجليزي للوحدتين الأولى والثانية من الجزء الأول: القوائم المالية والأصول قصيرة الأجل، مع حالات محلولة وأسئلة تدريب أصلية.",
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة للقوائم المالية والاعتراف والقياس في CMA.",
+          content: "دليل عملي ثنائي اللغة للقوائم المالية والأصول قصيرة الأجل في CMA.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -64,10 +65,12 @@ export const Route = createFileRoute("/library/cma")({
 function CmaPage() {
   const [lang] = useSiteLang();
   const [part, setPart] = useState<CmaPart>("part-1");
+  const [studyUnit, setStudyUnit] = useState<"all" | 1 | 2>("all");
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [revealedTasks, setRevealedTasks] = useState<Record<string, boolean>>({});
 
   const domains = CMA_DOMAINS.filter((item) => item.part === part);
   const filtered = useMemo(() => {
@@ -75,6 +78,7 @@ function CmaPage() {
     return CMA_TOPICS.filter(
       (item) =>
         item.part === part &&
+        (studyUnit === "all" || item.studyUnit === studyUnit) &&
         (domain === "all" || item.domain === domain) &&
         (!term ||
           [
@@ -89,7 +93,7 @@ function CmaPage() {
             .toLocaleLowerCase()
             .includes(term)),
     );
-  }, [part, domain, query]);
+  }, [part, studyUnit, domain, query]);
   const selected = filtered.find((item) => item.id === selectedId) ?? null;
   const guide = selected ? CMA_TOPIC_GUIDES[selected.id] : null;
   const questions = selected
@@ -111,8 +115,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "ابدأ بالوحدة الأولى من الجزء الأول: قرارات التقارير المالية الخارجية. دليل أصلي وحالات تطبيقية وأسئلة محلولة بالعربية والإنجليزية، وفق مخطط IMA وأهداف التعلم المنشورة."
-              : "Start with Part 1, Unit 1: External Financial Reporting Decisions. Original bilingual guides, worked cases and practice questions aligned with the published IMA outline and learning outcomes."}
+              ? "تعلّم الوحدتين الأولى والثانية من الجزء الأول: القوائم المالية الخارجية، ثم قياس الأصول قصيرة الأجل. أدلة وحالات تطبيقية وأسئلة أصلية بالعربية والإنجليزية، وفق أهداف التعلم المنشورة من IMA."
+              : "Study Part 1 Units 1 and 2: external financial statements and short-term assets. Original bilingual guides, worked cases and questions aligned with the published IMA learning outcomes."}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -126,6 +130,26 @@ function CmaPage() {
           </div>
         </header>
 
+        <aside className="mt-7 rounded-3xl border border-[#A88765]/30 bg-[#F5F1EB] p-5 text-sm leading-7 text-[#3A332D] sm:p-6">
+          <p className="font-black text-[#76543F]">
+            {lang === "ar" ? "تحديث IMA لصيغة الاختبار · 2026" : "IMA exam format update · 2026"}
+          </p>
+          <p className="mt-2">
+            {lang === "ar"
+              ? "من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة تدريب اختيار متعدد وحالتين مترابطتين للتطبيق؛ الحالات هنا تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية."
+              : "From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and two linked original practice cases, not an official simulation of the interactive item types."}
+          </p>
+          <a
+            className="mt-2 inline-flex items-center gap-1 font-bold text-[#76543F] underline"
+            href={CMA_EXAM_FORMAT_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ExternalLink className="size-3" />
+            {lang === "ar" ? "دليل الاختبار من IMA" : "IMA exam handbook"}
+          </a>
+        </aside>
+
         <section
           aria-label={lang === "ar" ? "تصفية المنهج" : "Filter curriculum"}
           className="mt-7 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-5 sm:p-6"
@@ -138,6 +162,7 @@ function CmaPage() {
                 aria-pressed={part === value}
                 onClick={() => {
                   setPart(value);
+                  setStudyUnit("all");
                   setDomain("all");
                   setSelectedId(null);
                   setAnswers({});
@@ -154,6 +179,34 @@ function CmaPage() {
               </button>
             ))}
           </div>
+          {part === "part-1" && (
+            <div
+              className="mt-4 flex flex-wrap gap-2"
+              aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
+            >
+              {(["all", 1, 2] as const).map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  aria-pressed={studyUnit === value}
+                  onClick={() => {
+                    setStudyUnit(value);
+                    setSelectedId(null);
+                    setAnswers({});
+                  }}
+                  className={`rounded-full border px-4 py-2 text-xs font-bold transition ${studyUnit === value ? "border-[#A88765] bg-[#A88765]/20 text-[#F5F1EB]" : "border-[#A88765]/20 text-[#BDB4AA] hover:text-[#c9a986]"}`}
+                >
+                  {value === "all"
+                    ? lang === "ar"
+                      ? "كل الوحدات المنشورة"
+                      : "All published units"
+                    : lang === "ar"
+                      ? `الوحدة ${value === 1 ? "الأولى" : "الثانية"}`
+                      : `Study Unit ${value}`}
+                </button>
+              ))}
+            </div>
+          )}
           <label className="relative mt-5 block">
             <Search
               aria-hidden="true"
@@ -238,6 +291,11 @@ function CmaPage() {
                       <span className="rounded-full bg-[#A88765]/15 px-3 py-1.5 text-[#76543F]">
                         {count} {lang === "ar" ? "أسئلة" : "questions"}
                       </span>
+                      <span className="rounded-full bg-[#A88765]/15 px-3 py-1.5 text-[#76543F]">
+                        {lang === "ar"
+                          ? `الوحدة ${item.studyUnit} · القسم ${item.section}`
+                          : `Unit ${item.studyUnit} · §${item.section}`}
+                      </span>
                     </div>
                     <h3 className="mt-5 font-display text-xl font-black leading-snug">
                       {lang === "ar" ? item.titleAr : item.titleEn}
@@ -298,6 +356,11 @@ function CmaPage() {
             <h3 className="mt-2 font-display text-2xl font-black">
               {lang === "ar" ? selected.titleAr : selected.titleEn}
             </h3>
+            <p className="mt-2 text-xs leading-6 text-[#76543F]">
+              {lang === "ar"
+                ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}، الصفحات ${selected.sourcePages} · ${selected.losRef}`
+                : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}, pp. ${selected.sourcePages} · ${selected.losRef}`}
+            </p>
             {(
               [
                 [lang === "ar" ? "النطاق وأهداف التعلم" : "Scope and outcomes", guide.scope[lang]],
@@ -412,6 +475,60 @@ function CmaPage() {
             </div>
           </section>
         )}
+
+        {part === "part-1" &&
+          CMA_STUDY_UNIT_CASES.filter(
+            (item) => studyUnit === "all" || item.studyUnit === studyUnit,
+          ).map((item) => (
+            <section
+              key={item.studyUnit}
+              className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-6 text-[#FCFBF9] sm:p-9"
+              aria-label={item.title[lang]}
+            >
+              <span className="text-xs font-bold text-[#c9a986]">
+                {lang === "ar"
+                  ? `تدريب حالات · الوحدة ${item.studyUnit}`
+                  : `Case practice · Unit ${item.studyUnit}`}
+              </span>
+              <h3 className="mt-2 font-display text-2xl font-black">{item.title[lang]}</h3>
+              <p className="mt-4 whitespace-pre-line text-sm leading-8 text-[#d8c9b8]">
+                {item.scenario[lang]}
+              </p>
+              <div className="mt-6 space-y-3">
+                {item.tasks.map((task, index) => {
+                  const key = `${item.studyUnit}-${index}`;
+                  return (
+                    <div key={key} className="rounded-2xl border border-[#A88765]/30 p-4">
+                      <p className="text-sm font-bold leading-7">
+                        {index + 1}. {task.prompt[lang]}
+                      </p>
+                      <button
+                        type="button"
+                        aria-expanded={Boolean(revealedTasks[key])}
+                        onClick={() =>
+                          setRevealedTasks((previous) => ({ ...previous, [key]: !previous[key] }))
+                        }
+                        className="mt-3 min-h-11 rounded-full border border-[#A88765]/50 px-4 py-2 text-xs font-bold text-[#d2b390] focus-visible:outline-2 focus-visible:outline-[#c9a986]"
+                      >
+                        {lang === "ar"
+                          ? revealedTasks[key]
+                            ? "إخفاء الحل"
+                            : "أظهر الحل"
+                          : revealedTasks[key]
+                            ? "Hide solution"
+                            : "Show solution"}
+                      </button>
+                      {revealedTasks[key] && (
+                        <p className="mt-3 border-t border-[#A88765]/25 pt-3 text-sm leading-8 text-[#d8c9b8]">
+                          {task.solution[lang]}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
 
         <footer className="mt-8 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5 text-xs leading-6 text-[#BDB4AA]">
           <p>
