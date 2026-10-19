@@ -15,7 +15,7 @@ export type CmaQuestionSpec = readonly [
 ];
 
 export function makeCmaQuestions(
-  unit: 1 | 2 | 3 | 4,
+  unit: 1 | 2 | 3 | 4 | 5 | 6,
   specs: readonly CmaQuestionSpec[],
 ): CmaLocalQuestion[] {
   return specs.map(

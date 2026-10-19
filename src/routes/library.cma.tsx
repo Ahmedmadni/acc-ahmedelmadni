@@ -15,6 +15,7 @@ import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import {
   CMA_DOMAINS,
   CMA_EXAM_FORMAT_URL,
+  CMA_IR_FRAMEWORK_URL,
   CMA_LOS_URL,
   CMA_OUTLINE_URL,
   CMA_TOPICS,
@@ -28,16 +29,16 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | الوحدات 1–4 من الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | الوحدات 1–6 من الجزء الأول — أحمد المدني" },
         {
           name: "description",
           content:
-            "دليل CMA عربي وإنجليزي للوحدات الأربع الأولى من الجزء الأول: القوائم المالية والأصول والالتزامات، مع حالات محلولة وبنك أسئلة موسع.",
+            "دليل CMA عربي وإنجليزي للوحدات الست لمجال التقارير المالية الخارجية في الجزء الأول: القوائم والأصول والالتزامات والإيراد والتقرير المتكامل.",
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة للقوائم المالية والأصول والالتزامات في CMA.",
+          content: "دليل عملي ثنائي اللغة للوحدات الست في مجال التقارير المالية الخارجية من CMA.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -65,7 +66,7 @@ export const Route = createFileRoute("/library/cma")({
 function CmaPage() {
   const [lang] = useSiteLang();
   const [part, setPart] = useState<CmaPart>("part-1");
-  const [studyUnit, setStudyUnit] = useState<"all" | 1 | 2 | 3 | 4>("all");
+  const [studyUnit, setStudyUnit] = useState<"all" | 1 | 2 | 3 | 4 | 5 | 6>("all");
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -115,8 +116,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "تعلّم الوحدات الأربع الأولى من الجزء الأول: القوائم المالية، والأصول قصيرة وطويلة الأجل، والالتزامات. أدلة وحالات تطبيقية وبنك أسئلة موسع بالعربية والإنجليزية وفق أهداف IMA المنشورة."
-              : "Study Part 1 Units 1–4: external statements, short- and long-term assets, and liabilities. Original bilingual guides, worked cases and expanded practice aligned with IMA learning outcomes."}
+              ? "تعلّم الوحدات الست لمجال التقارير المالية الخارجية في الجزء الأول: القوائم والأصول والالتزامات والإيراد والتقرير المتكامل، مع أدلة وحالات وبنك أسئلة ثنائي اللغة."
+              : "Study all six Part 1 external financial reporting units: statements, assets, liabilities, revenue and integrated reporting, with bilingual guides, cases and practice."}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -136,8 +137,8 @@ function CmaPage() {
           </p>
           <p className="mt-2">
             {lang === "ar"
-              ? "من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة أسئلة اختيار متعدد وأربع حالات مترابطة للتطبيق؛ هذه الحالات تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية."
-              : "From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and four linked original practice cases, not an official simulation of the interactive item types."}
+              ? "من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة أسئلة اختيار متعدد وست حالات مترابطة للتطبيق؛ هذه الحالات تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية."
+              : "From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and six linked original practice cases, not an official simulation of the interactive item types."}
           </p>
           <a
             className="mt-2 inline-flex items-center gap-1 font-bold text-[#76543F] underline"
@@ -184,7 +185,7 @@ function CmaPage() {
               className="mt-4 flex flex-wrap gap-2"
               aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
             >
-              {(["all", 1, 2, 3, 4] as const).map((value) => (
+              {(["all", 1, 2, 3, 4, 5, 6] as const).map((value) => (
                 <button
                   key={value}
                   type="button"
@@ -201,7 +202,7 @@ function CmaPage() {
                       ? "كل الوحدات المنشورة"
                       : "All published units"
                     : lang === "ar"
-                      ? `الوحدة ${(["", "الأولى", "الثانية", "الثالثة", "الرابعة"] as const)[value]}`
+                      ? `الوحدة ${(["", "الأولى", "الثانية", "الثالثة", "الرابعة", "الخامسة", "السادسة"] as const)[value]}`
                       : `Study Unit ${value}`}
                 </button>
               ))}
@@ -554,6 +555,17 @@ function CmaPage() {
             >
               <ExternalLink className="size-3" />
               {lang === "ar" ? "أهداف التعلم الرسمية" : "Official learning outcomes"}
+            </a>
+            <a
+              href={CMA_IR_FRAMEWORK_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 underline"
+            >
+              <ExternalLink className="size-3" />
+              {lang === "ar"
+                ? "إطار التقرير المتكامل الرسمي"
+                : "Official Integrated Reporting Framework"}
             </a>
           </div>
         </footer>
