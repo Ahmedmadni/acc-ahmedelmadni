@@ -267,8 +267,10 @@ function StandardsPage() {
               </div>
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {highlighted.map((standard) => (
-                  <article
+                  <Link
                     key={standard.code}
+                    to="/library/standards/$standardSlug"
+                    params={{ standardSlug: standardSlug(standard.code) }}
                     className="rounded-3xl border border-[#A88765]/25 bg-[#F5F1EB] p-5 text-[#1C1B19]"
                   >
                     <div className="flex items-center justify-between gap-3">
@@ -285,7 +287,7 @@ function StandardsPage() {
                     <p className="mt-3 text-xs leading-6 text-[#6B6259]">
                       {lang === "ar" ? standard.statusAr : standard.statusEn}
                     </p>
-                  </article>
+                  </Link>
                 ))}
               </div>
             </section>
