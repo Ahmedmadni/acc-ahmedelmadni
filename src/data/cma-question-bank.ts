@@ -1,7 +1,9 @@
 import type { ExamQuestion } from "@/lib/exam-bank";
+import { CMA_MORE_QUESTIONS_1_2 } from "@/data/cma-questions-units-1-2";
+import { CMA_MORE_QUESTIONS_3_4 } from "@/data/cma-questions-units-3-4";
 
-/** Original practice questions developed from the user's Gleim 2024 Study Units 1–2. */
-export type CmaLocalQuestion = ExamQuestion & { topicId: string; studyUnit: 1 | 2 };
+/** Original practice questions developed from the user's Gleim 2024 Study Units 1–4. */
+export type CmaLocalQuestion = ExamQuestion & { topicId: string; studyUnit: 1 | 2 | 3 | 4 };
 export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
   {
     id: "cma-su1-accrual-income",
@@ -603,4 +605,6 @@ export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
       en: "First average (100+140)/20=12; after selling 5, 15×12=180 remains. Add 5×18=90, then divide 270/20=13.5. Twelve omits the last buy; 14 and 15 use incorrect averaging.",
     },
   },
+  ...CMA_MORE_QUESTIONS_1_2,
+  ...CMA_MORE_QUESTIONS_3_4,
 ];

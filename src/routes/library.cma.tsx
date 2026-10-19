@@ -28,16 +28,16 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | الوحدتان الأولى والثانية من الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | الوحدات 1–4 من الجزء الأول — أحمد المدني" },
         {
           name: "description",
           content:
-            "دليل CMA عربي وإنجليزي للوحدتين الأولى والثانية من الجزء الأول: القوائم المالية والأصول قصيرة الأجل، مع حالات محلولة وأسئلة تدريب أصلية.",
+            "دليل CMA عربي وإنجليزي للوحدات الأربع الأولى من الجزء الأول: القوائم المالية والأصول والالتزامات، مع حالات محلولة وبنك أسئلة موسع.",
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة للقوائم المالية والأصول قصيرة الأجل في CMA.",
+          content: "دليل عملي ثنائي اللغة للقوائم المالية والأصول والالتزامات في CMA.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -65,7 +65,7 @@ export const Route = createFileRoute("/library/cma")({
 function CmaPage() {
   const [lang] = useSiteLang();
   const [part, setPart] = useState<CmaPart>("part-1");
-  const [studyUnit, setStudyUnit] = useState<"all" | 1 | 2>("all");
+  const [studyUnit, setStudyUnit] = useState<"all" | 1 | 2 | 3 | 4>("all");
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -115,8 +115,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "تعلّم الوحدتين الأولى والثانية من الجزء الأول: القوائم المالية الخارجية، ثم قياس الأصول قصيرة الأجل. أدلة وحالات تطبيقية وأسئلة أصلية بالعربية والإنجليزية، وفق أهداف التعلم المنشورة من IMA."
-              : "Study Part 1 Units 1 and 2: external financial statements and short-term assets. Original bilingual guides, worked cases and questions aligned with the published IMA learning outcomes."}
+              ? "تعلّم الوحدات الأربع الأولى من الجزء الأول: القوائم المالية، والأصول قصيرة وطويلة الأجل، والالتزامات. أدلة وحالات تطبيقية وبنك أسئلة موسع بالعربية والإنجليزية وفق أهداف IMA المنشورة."
+              : "Study Part 1 Units 1–4: external statements, short- and long-term assets, and liabilities. Original bilingual guides, worked cases and expanded practice aligned with IMA learning outcomes."}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -136,8 +136,8 @@ function CmaPage() {
           </p>
           <p className="mt-2">
             {lang === "ar"
-              ? "من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة تدريب اختيار متعدد وحالتين مترابطتين للتطبيق؛ الحالات هنا تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية."
-              : "From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and two linked original practice cases, not an official simulation of the interactive item types."}
+              ? "من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة أسئلة اختيار متعدد وأربع حالات مترابطة للتطبيق؛ هذه الحالات تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية."
+              : "From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and four linked original practice cases, not an official simulation of the interactive item types."}
           </p>
           <a
             className="mt-2 inline-flex items-center gap-1 font-bold text-[#76543F] underline"
@@ -184,7 +184,7 @@ function CmaPage() {
               className="mt-4 flex flex-wrap gap-2"
               aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
             >
-              {(["all", 1, 2] as const).map((value) => (
+              {(["all", 1, 2, 3, 4] as const).map((value) => (
                 <button
                   key={value}
                   type="button"
@@ -201,7 +201,7 @@ function CmaPage() {
                       ? "كل الوحدات المنشورة"
                       : "All published units"
                     : lang === "ar"
-                      ? `الوحدة ${value === 1 ? "الأولى" : "الثانية"}`
+                      ? `الوحدة ${(["", "الأولى", "الثانية", "الثالثة", "الرابعة"] as const)[value]}`
                       : `Study Unit ${value}`}
                 </button>
               ))}

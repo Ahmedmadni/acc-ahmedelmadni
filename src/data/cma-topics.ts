@@ -25,7 +25,7 @@ export type CmaDomain =
 export interface CmaTopic {
   id: string;
   code: string;
-  studyUnit: 1 | 2;
+  studyUnit: 1 | 2 | 3 | 4;
   section: string;
   sourcePages: string;
   losRef: string;
@@ -389,5 +389,236 @@ export const CMA_TOPICS: CmaTopic[] = [
       },
     ],
     searchTerms: ["LCM", "LCNRV", "NRV", "write-down", "انخفاض المخزون"],
+  },
+  {
+    id: "su3-equity-securities",
+    code: "CMA-P1-SU3-3.1",
+    studyUnit: 3,
+    section: "3.1",
+    sourcePages: "2–5",
+    losRef: "A.2.k",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "الاستثمار في أدوات حقوق الملكية",
+    titleEn: "Investments in Equity Securities",
+    summaryAr:
+      "تحديد مستوى التأثير، قياس الأسهم بالقيمة العادلة، عرض الأرباح غير المحققة والتوزيعات في الربح.",
+    summaryEn:
+      "Assess influence; measure non-equity-method equity securities at fair value and report holding changes and dividends in income.",
+    keyFormulas: [
+      {
+        nameAr: "ربح أو خسارة التقييم",
+        nameEn: "Holding gain or loss",
+        formula: "Shares held × (Closing fair value per share − Prior carrying value per share)",
+      },
+    ],
+    searchTerms: ["equity securities", "FVPL", "dividend income", "استثمارات الأسهم"],
+  },
+  {
+    id: "su3-equity-method",
+    code: "CMA-P1-SU3-3.2",
+    studyUnit: 3,
+    section: "3.2",
+    sourcePages: "5–7",
+    losRef: "A.2.k",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "طريقة حقوق الملكية",
+    titleEn: "Equity Method",
+    summaryAr:
+      "النفوذ المهم واعتراف حصة المستثمر من ربح المنشأة المستثمر فيها، وتخفيض الاستثمار بالتوزيعات.",
+    summaryEn:
+      "Significant influence, the investor's share of investee earnings or losses, and dividends as a reduction of the investment.",
+    keyFormulas: [
+      {
+        nameAr: "رصيد الاستثمار",
+        nameEn: "Investment rollforward",
+        formula:
+          "Ending investment = Opening cost + Share of post-acquisition earnings − Share of dividends",
+      },
+    ],
+    searchTerms: ["significant influence", "associate", "20%", "حقوق الملكية"],
+  },
+  {
+    id: "su3-debt-securities",
+    code: "CMA-P1-SU3-3.3",
+    studyUnit: 3,
+    section: "3.3",
+    sourcePages: "8–12",
+    losRef: "A.2.j–k",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "الاستثمار في أدوات الدين",
+    titleEn: "Investments in Debt Securities",
+    summaryAr:
+      "تصنيف المحتفظ به للاستحقاق والمتاح للبيع والمتاجرة؛ التكلفة المطفأة والقيمة العادلة والربح أو الدخل الشامل الآخر.",
+    summaryEn:
+      "Classify held-to-maturity, available-for-sale and trading debt; distinguish amortized cost, fair value, earnings and OCI.",
+    keyFormulas: [
+      {
+        nameAr: "الفائدة الفعلية",
+        nameEn: "Effective interest",
+        formula: "Interest income = Opening amortized cost × Effective yield",
+      },
+    ],
+    searchTerms: ["HTM", "AFS", "trading", "OCI", "debt securities", "السندات الاستثمارية"],
+  },
+  {
+    id: "su3-ppe",
+    code: "CMA-P1-SU3-3.4",
+    studyUnit: 3,
+    section: "3.4",
+    sourcePages: "12–18",
+    losRef: "A.2.l–m; A.2.ff(v)",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "الممتلكات والآلات والمعدات والإهلاك",
+    titleEn: "Property, Plant, Equipment and Depreciation",
+    summaryAr:
+      "التكلفة الأولية والنفقات اللاحقة والفرق بين القسط الثابت والإنتاج والمتناقص ومجموع أرقام السنوات.",
+    summaryEn:
+      "Initial cost, subsequent expenditures and straight-line, units-of-output, declining-balance and sum-of-years-digits depreciation.",
+    keyFormulas: [
+      {
+        nameAr: "القسط الثابت",
+        nameEn: "Straight-line depreciation",
+        formula: "Annual depreciation = (Cost − Residual value) ÷ Useful life",
+      },
+      {
+        nameAr: "المتناقص المزدوج",
+        nameEn: "Double-declining balance",
+        formula:
+          "Depreciation = Opening carrying amount × (2 ÷ Useful life), capped at residual value",
+      },
+    ],
+    searchTerms: ["PPE", "depreciation", "DDB", "SYD", "capital expenditure", "الإهلاك"],
+  },
+  {
+    id: "su3-intangibles",
+    code: "CMA-P1-SU3-3.5",
+    studyUnit: 3,
+    section: "3.5",
+    sourcePages: "18–20",
+    losRef: "A.2.n; A.2.ff(ii),(vi)",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "الأصول غير الملموسة",
+    titleEn: "Intangible Assets",
+    summaryAr:
+      "التكاليف المرسملة والبحث والتطوير والعمر المحدد وغير المحدد وإطفاء البراءات والشهرة.",
+    summaryEn:
+      "Capitalizable costs, R&D, finite and indefinite lives, patent amortization and goodwill.",
+    keyFormulas: [
+      {
+        nameAr: "إطفاء الأصل المحدد",
+        nameEn: "Finite-life amortization",
+        formula:
+          "Periodic amortization = (Capitalized cost − Residual value) ÷ Shorter relevant useful/legal life",
+      },
+    ],
+    searchTerms: ["patent", "R&D", "goodwill", "amortization", "البراءة", "الشهرة"],
+  },
+  {
+    id: "su4-contingencies-warranties",
+    code: "CMA-P1-SU4-4.1",
+    studyUnit: 4,
+    section: "4.1",
+    sourcePages: "2–6",
+    losRef: "A.2.p",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "الالتزامات المحتملة وضمانات المنتجات",
+    titleEn: "Contingencies and Warranties",
+    summaryAr:
+      "الاعتراف بالخسارة المحتملة والإفصاح عنها، وضمان الجودة مقابل خدمة الضمان والإيراد المؤجل.",
+    summaryEn:
+      "Accrue or disclose loss contingencies; distinguish assurance warranty provisions from separate service obligations.",
+    keyFormulas: [
+      {
+        nameAr: "حركة مخصص الضمان",
+        nameEn: "Warranty provision rollforward",
+        formula:
+          "Ending liability = Opening liability + Current assurance-warranty expense − Claims paid",
+      },
+    ],
+    searchTerms: [
+      "probable",
+      "reasonably possible",
+      "assurance",
+      "service warranty",
+      "مخصص الضمان",
+    ],
+  },
+  {
+    id: "su4-leases",
+    code: "CMA-P1-SU4-4.2",
+    studyUnit: 4,
+    section: "4.2",
+    sourcePages: "6–14",
+    losRef: "A.2.t–u; A.2.ff(iv)",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "عقود الإيجار",
+    titleEn: "Leases",
+    summaryAr:
+      "اختبارات تصنيف الإيجار التمويلي والتشغيلي، أصل حق الاستخدام والالتزام والعرض والتدفقات النقدية.",
+    summaryEn:
+      "Finance versus operating classification, right-of-use assets, lease liabilities, expense presentation and cash flows.",
+    keyFormulas: [
+      {
+        nameAr: "تسوية الالتزام",
+        nameEn: "Lease-liability reduction",
+        formula: "Principal reduction = Payment − Interest on opening liability",
+      },
+    ],
+    searchTerms: ["ROU", "ASC 842", "finance lease", "operating lease", "حق الاستخدام"],
+  },
+  {
+    id: "su4-income-taxes",
+    code: "CMA-P1-SU4-4.3",
+    studyUnit: 4,
+    section: "4.3",
+    sourcePages: "14–19",
+    losRef: "A.2.q–s",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "ضرائب الدخل المؤجلة",
+    titleEn: "Income Taxes and Deferred Taxes",
+    summaryAr:
+      "الفروق المؤقتة والدائمة، الأصول والالتزامات الضريبية المؤجلة، ومصروف الضريبة الحالي والمؤجل.",
+    summaryEn:
+      "Temporary versus permanent differences, deferred tax assets and liabilities, and current/deferred tax expense.",
+    keyFormulas: [
+      {
+        nameAr: "مصروف الضريبة",
+        nameEn: "Income-tax expense",
+        formula: "Current tax + Increase in DTL − Increase in DTA (assuming no other items)",
+      },
+    ],
+    searchTerms: ["DTA", "DTL", "temporary difference", "tax allocation", "الضرائب المؤجلة"],
+  },
+  {
+    id: "su4-bonds",
+    code: "CMA-P1-SU4-4.4",
+    studyUnit: 4,
+    section: "4.4",
+    sourcePages: "19–20",
+    losRef: "A.2 liability context; Part 2 B.2.c–e (bond fundamentals)",
+    part: "part-1",
+    domain: "external-reporting",
+    titleAr: "السندات المستحقة الدفع",
+    titleEn: "Accounting for Bonds Payable",
+    summaryAr:
+      "علاقة معدل الكوبون بالسوق، الإصدار بعلاوة أو خصم، القيمة الدفترية وإطفاء العلاوة أو الخصم بالفائدة الفعلية.",
+    summaryEn:
+      "Coupon versus market yield, issue premiums/discounts, carrying amount and effective-interest amortization.",
+    keyFormulas: [
+      {
+        nameAr: "فائدة السند الفعلية",
+        nameEn: "Effective-interest expense",
+        formula: "Interest expense = Opening carrying amount × Effective market yield",
+      },
+    ],
+    searchTerms: ["bonds payable", "premium", "discount", "effective interest", "السندات"],
   },
 ];
