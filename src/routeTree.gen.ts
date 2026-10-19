@@ -32,6 +32,7 @@ import { Route as KnowledgeBookmarksRouteImport } from './routes/knowledge.bookm
 import { Route as LibraryIndexRouteImport } from './routes/library.index'
 import { Route as LibraryArticlesRouteImport } from './routes/library.articles'
 import { Route as LibraryBooksRouteImport } from './routes/library.books'
+import { Route as LibraryCmaRouteImport } from './routes/library.cma'
 import { Route as LibraryCoursesRouteImport } from './routes/library.courses'
 import { Route as LibraryStandardsRouteImport } from './routes/library.standards'
 import { Route as LibraryTemplatesRouteImport } from './routes/library.templates'
@@ -163,6 +164,11 @@ const LibraryBooksRoute = LibraryBooksRouteImport.update({
   path: '/books',
   getParentRoute: () => LibraryRoute,
 } as any)
+const LibraryCmaRoute = LibraryCmaRouteImport.update({
+  id: '/cma',
+  path: '/cma',
+  getParentRoute: () => LibraryRoute,
+} as any)
 const LibraryCoursesRoute = LibraryCoursesRouteImport.update({
   id: '/courses',
   path: '/courses',
@@ -268,6 +274,7 @@ export interface FileRoutesByFullPath {
   '/knowledge/bookmarks': typeof KnowledgeBookmarksRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
+  '/library/cma': typeof LibraryCmaRoute
   '/library/courses': typeof LibraryCoursesRoute
   '/library/standards': typeof LibraryStandardsRoute
   '/library/templates': typeof LibraryTemplatesRoute
@@ -306,6 +313,7 @@ export interface FileRoutesByTo {
   '/knowledge/bookmarks': typeof KnowledgeBookmarksRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
+  '/library/cma': typeof LibraryCmaRoute
   '/library/courses': typeof LibraryCoursesRoute
   '/library/standards': typeof LibraryStandardsRoute
   '/library/templates': typeof LibraryTemplatesRoute
@@ -347,6 +355,7 @@ export interface FileRoutesById {
   '/knowledge/bookmarks': typeof KnowledgeBookmarksRoute
   '/library/articles': typeof LibraryArticlesRoute
   '/library/books': typeof LibraryBooksRoute
+  '/library/cma': typeof LibraryCmaRoute
   '/library/courses': typeof LibraryCoursesRoute
   '/library/standards': typeof LibraryStandardsRoute
   '/library/templates': typeof LibraryTemplatesRoute
@@ -388,6 +397,7 @@ export interface FileRouteTypes {
     | '/knowledge/bookmarks'
     | '/library/articles'
     | '/library/books'
+    | '/library/cma'
     | '/library/courses'
     | '/library/standards'
     | '/library/templates'
@@ -426,6 +436,7 @@ export interface FileRouteTypes {
     | '/knowledge/bookmarks'
     | '/library/articles'
     | '/library/books'
+    | '/library/cma'
     | '/library/courses'
     | '/library/standards'
     | '/library/templates'
@@ -466,6 +477,7 @@ export interface FileRouteTypes {
     | '/knowledge/bookmarks'
     | '/library/articles'
     | '/library/books'
+    | '/library/cma'
     | '/library/courses'
     | '/library/standards'
     | '/library/templates'
@@ -675,6 +687,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LibraryBooksRouteImport
       parentRoute: typeof LibraryRoute
     }
+    '/library/cma': {
+      id: '/library/cma'
+      path: '/cma'
+      fullPath: '/library/cma'
+      preLoaderRoute: typeof LibraryCmaRouteImport
+      parentRoute: typeof LibraryRoute
+    }
     '/library/courses': {
       id: '/library/courses'
       path: '/courses'
@@ -809,6 +828,7 @@ const AuthenticatedRouteRouteWithChildren =
 interface LibraryRouteChildren {
   LibraryArticlesRoute: typeof LibraryArticlesRoute
   LibraryBooksRoute: typeof LibraryBooksRoute
+  LibraryCmaRoute: typeof LibraryCmaRoute
   LibraryCoursesRoute: typeof LibraryCoursesRoute
   LibraryStandardsRoute: typeof LibraryStandardsRoute
   LibraryTemplatesRoute: typeof LibraryTemplatesRoute
@@ -819,6 +839,7 @@ interface LibraryRouteChildren {
 const LibraryRouteChildren: LibraryRouteChildren = {
   LibraryArticlesRoute: LibraryArticlesRoute,
   LibraryBooksRoute: LibraryBooksRoute,
+  LibraryCmaRoute: LibraryCmaRoute,
   LibraryCoursesRoute: LibraryCoursesRoute,
   LibraryStandardsRoute: LibraryStandardsRoute,
   LibraryTemplatesRoute: LibraryTemplatesRoute,

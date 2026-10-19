@@ -11,6 +11,7 @@ import {
   FileText,
   FolderOpen,
   Scale,
+  GraduationCap,
   Maximize2,
   Minimize2,
 } from "lucide-react";
@@ -75,24 +76,27 @@ function LibraryLayout() {
   const isRTL = lang === "ar";
   const matches = useChildMatches();
   const path = matches[matches.length - 1]?.pathname ?? "/library";
-  const current: "standards" | "courses" | "books" | "articles" | "templates" =
+  const current: "standards" | "cma" | "courses" | "books" | "articles" | "templates" =
     path.includes("/library/standards")
       ? "standards"
-      : path.includes("/library/books")
-        ? "books"
-        : path.includes("/library/templates")
-          ? "templates"
-          : path.includes("/library/articles")
-            ? "articles"
-            : "courses";
+      : path.includes("/library/cma")
+        ? "cma"
+        : path.includes("/library/books")
+          ? "books"
+          : path.includes("/library/templates")
+            ? "templates"
+            : path.includes("/library/articles")
+              ? "articles"
+              : "courses";
 
   const tabs: {
-    id: "standards" | "courses" | "books" | "articles" | "templates";
+    id: "standards" | "cma" | "courses" | "books" | "articles" | "templates";
     ar: string;
     en: string;
     Icon: typeof Video;
     to:
       | "/library/standards"
+      | "/library/cma"
       | "/library/courses"
       | "/library/books"
       | "/library/articles"
@@ -104,6 +108,13 @@ function LibraryLayout() {
       en: "IFRS / IAS Standards",
       Icon: Scale,
       to: "/library/standards",
+    },
+    {
+      id: "cma",
+      ar: "منهج CMA الأمريكي",
+      en: "CMA Curriculum",
+      Icon: GraduationCap,
+      to: "/library/cma",
     },
     { id: "articles", ar: "المقالات", en: "Articles", Icon: FileText, to: "/library/articles" },
     { id: "courses", ar: "الكورسات", en: "Courses", Icon: Video, to: "/library/courses" },

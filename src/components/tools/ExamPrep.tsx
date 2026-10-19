@@ -22,11 +22,13 @@ import {
 import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib/exam-bank";
 import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
+import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 
 const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
   const m = new Map<string, ExamQuestion>();
   for (const q of SEED_QUESTIONS) m.set(q.id, q);
   for (const q of IFRS_LOCAL_QUESTIONS) m.set(q.id, { ...q, track: "IFRS" });
+  for (const q of CMA_LOCAL_QUESTIONS) m.set(q.id, { ...q, track: "CMA" });
   return [...m.values()];
 })();
 import {
