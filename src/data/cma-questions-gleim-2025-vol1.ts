@@ -22,6 +22,7 @@ interface SourceRecord {
   answerIndex: number;
   explanation: string;
   answerStatus: string;
+  sourceTextStatus?: "reconstructed" | "table-reflowed";
 }
 
 const records: SourceRecord[] = [
@@ -59,5 +60,6 @@ export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourceLanguage: "en",
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
+    sourceTextStatus: item.sourceTextStatus,
   };
 });

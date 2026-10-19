@@ -126,14 +126,15 @@
     "topicId": "su6-ir-foundations",
     "stem": "Integrated reporting is a process founded on <List A>, which\nresults in <List B> about value creation and preservation in the\n<List C>.\nList A                 List B                List C\nIntegrated                     Integrated               Long",
     "choices": [
-      "reports                       thinking                 term\nShort,\nIntegrated                 Integrated                medium,",
-      "thinking                    reports                 and long\nterm",
-      "medium, and\nresponsibility           reports\nlong term\nIntegrated                    Integrated              Short",
-      "thinking                       reports               term"
+      "List A: Integrated reports. List B: Integrated thinking. List C: Long term.",
+      "List A: Integrated thinking. List B: Integrated reports. List C: Short, medium, and long term.",
+      "List A: Corporate social responsibility. List B: Integrated reports. List C: Short, medium, and long term.",
+      "List A: Integrated thinking. List B: Integrated reports. List C: Short term."
     ],
     "answerIndex": 1,
-    "explanation": "As defined by the IIRC, integrated reporting is a process\nfounded on integrated thinking, which results in a periodic\nintegrated report by an organization about value creation and\npreservation in the short, medium, and long term.\nShort,\nCorporate social        Integrated",
-    "answerStatus": "source"
+    "explanation": "As defined by the IIRC, integrated reporting is a process\nfounded on integrated thinking, which results in a periodic\nintegrated report by an organization about value creation and\npreservation in the short, medium, and long term.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 6,

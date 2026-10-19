@@ -687,14 +687,15 @@
     "topicId": "su3-debt-securities",
     "stem": "Vanity Corporation holds investments in debt securities. These\ninvestments were acquired last year and have been properly\nclassified as available-for-sale (AFS) securities. During the\ncurrent year, the company sold some of the AFS securities at\na loss. At year end, the remaining portfolio of AFS securities\nhad appreciated in total value compared with the value at the\nend of last year. Based on these facts, which one of the\nfollowing should Vanity report in its financial statements at the\nend of the current year?\nIncome Statement               Balance sheet\nUnrealized holding gain on\nUnrealized loss on sale of",
     "choices": [
-      "appreciation of AFS\nAFS securities\nsecurities\nUnrealized holding gain on\nRealized loss on sale of",
-      "appreciation of AFS\nAFS securities\nsecurities",
-      "sale of\nAFS securities\nAFS\nsecurities.\nUnrealized\nholding\nRealized loss on sale of AFS securities        gains/losses",
-      "and unrealized holding gain on                 not reported\nappreciation of AFS securities                 here on\nAFS\nsecurities"
+      "Income statement: Unrealized loss on sale of AFS securities. Balance sheet: Unrealized holding gain on appreciation of AFS securities.",
+      "Income statement: Realized loss on sale of AFS securities. Balance sheet: Unrealized holding gain on appreciation of AFS securities.",
+      "Income statement: Unrealized holding gain on appreciation of AFS securities. Balance sheet: Unrealized loss on sale of AFS securities.",
+      "Income statement: Realized loss on sale and unrealized holding gain on appreciation of AFS securities. Balance sheet: Unrealized holding gains/losses not reported here on AFS securities."
     ],
     "answerIndex": 1,
-    "explanation": "AFS debt securities are measured at fair value at each\nbalance sheet date. Realized losses on the sale of available-\nfor-sale securities are included in the calculation of current\nperiod earnings. However, unrealized holding gains and\nlosses on available-for-sale securities are excluded from\nearnings and are reported as components of other\ncomprehensive income.\nUnrealized\nloss on\nUnrealized holding gain on appreciation of",
-    "answerStatus": "source"
+    "explanation": "AFS debt securities are measured at fair value at each\nbalance sheet date. Realized losses on the sale of available-\nfor-sale securities are included in the calculation of current\nperiod earnings. However, unrealized holding gains and\nlosses on available-for-sale securities are excluded from\nearnings and are reported as components of other\ncomprehensive income.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 3,

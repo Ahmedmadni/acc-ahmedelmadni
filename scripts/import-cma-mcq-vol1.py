@@ -137,6 +137,46 @@ if len(questions)!=1060:
     raise ValueError(f'Expected 1,060 questions; extracted {len(questions)}')
 
 parsed=[]
+table_choice_reflows = {
+    (1,5,65): [
+        'Operating: $100,000 addition to net income. Investing: $400,000 cash inflow.',
+        'Operating: $100,000 subtraction from net income. Investing: $400,000 cash inflow.',
+        'Operating: $100,000 addition to net income. Investing: $500,000 cash inflow.',
+        'Operating: $100,000 subtraction from net income. Investing: $500,000 cash inflow.',
+    ],
+    (3,3,15): [
+        'Income statement: Unrealized loss on sale of AFS securities. Balance sheet: Unrealized holding gain on appreciation of AFS securities.',
+        'Income statement: Realized loss on sale of AFS securities. Balance sheet: Unrealized holding gain on appreciation of AFS securities.',
+        'Income statement: Unrealized holding gain on appreciation of AFS securities. Balance sheet: Unrealized loss on sale of AFS securities.',
+        'Income statement: Realized loss on sale and unrealized holding gain on appreciation of AFS securities. Balance sheet: Unrealized holding gains/losses not reported here on AFS securities.',
+    ],
+    (4,1,20): [
+        'Disclosed: $500,000 loss and $1,000,000 gain. Accrued: $1,500,000 loss and $700,000 gain.',
+        'Disclosed: $2,000,000 loss and $1,000,000 gain. Accrued: $1,500,000 loss.',
+        'Disclosed: $1,000,000 gain. Accrued: $1,500,000 loss and $500,000 loss.',
+        'Disclosed: $500,000 loss. Accrued: $1,500,000 loss and $300,000 gain.',
+    ],
+    (5,1,12): [
+        'List A: Distinct. List B: Based on the price of the original contract.',
+        'List A: Not distinct. List B: Their incremental selling price.',
+        'List A: Distinct. List B: Their standalone selling price.',
+        'List A: Not distinct. List B: Cumulative catch-up adjustment to revenue.',
+    ],
+    (6,1,8): [
+        'List A: Integrated reports. List B: Integrated thinking. List C: Long term.',
+        'List A: Integrated thinking. List B: Integrated reports. List C: Short, medium, and long term.',
+        'List A: Corporate social responsibility. List B: Integrated reports. List C: Short, medium, and long term.',
+        'List A: Integrated thinking. List B: Integrated reports. List C: Short term.',
+    ],
+}
+table_rationale_trailers = {
+    (1,5,65): '\n$100,000 subtraction',
+    (3,3,15): '\nUnrealized\nloss on\nUnrealized holding gain on appreciation of',
+    (4,1,20): '\n$1,000,000 gain',
+    (5,1,12): '\nNot                 Cumulative catch-up adjustment to',
+    (6,1,8): '\nShort,\nCorporate social',
+    (7,2,20): '\nA line that basically para',
+}
 unnamed_case_references = {
     (2,3,5), (2,3,6), # inventory card without a company name
     (2,3,19),          # Metro's inventory activity table
@@ -184,14 +224,17 @@ for q in questions:
         stem=stem.removesuffix('\nHistorical cost.').strip()
         values[0]='Historical cost.'
     if (q['unit'],q['section'],n)==(7,2,20):
-        stem=('A management accountant is preparing graphs of total variable cost and variable cost per unit '
-              'for a short-term plan. Dollars are on the vertical axis and activity is on the horizontal axis. '
-              'How will the two graphs appear?')
+        # The PDF cuts off the right-hand column of this answer table. Keep
+        # the legible source wording and reconstruct the obscured chart cells.
+        stem=('A management accountant is about to prepare graphs of total variable cost and '
+              'per-unit variable cost for use in a short-term planning model. Dollars will be '
+              'depicted on the vertical axis; activity will be shown on the horizontal axis. '
+              'How will these graphs appear under completion?')
         values=[
-            'Total: upward straight line; per unit: horizontal straight line.',
-            'Total: upward curve; per unit: roughly horizontal line.',
-            'Total: upward straight line; per unit: upward straight line.',
-            'Total: horizontal straight line; per unit: upward straight line.',
+            'Total variable cost: Straight line, sloping upward to the right.\nPer-unit variable cost: Straight line, parallel to the horizontal axis.',
+            'Total variable cost: Curvilinear, sloping upward to the right.\nPer-unit variable cost: A line roughly parallel to the horizontal axis.',
+            'Total variable cost: Straight line, sloping upward to the right.\nPer-unit variable cost: Straight line, sloping upward to the right.',
+            'Total variable cost: Straight line, parallel to the horizontal axis.\nPer-unit variable cost: Straight line, sloping upward to the right.',
         ]
     if ans:
         index='ABCD'.index(ans[0][1]); apos=ans[0][0]
@@ -199,10 +242,20 @@ for q in questions:
         rationale=flatten(block[apos+1:next_opt])
     else:
         index=2;rationale='Electricity usage is the activity driver for factory electric power; the other bases have no direct causal relationship.'
+    key=(q['unit'],q['section'],n)
+    if key in table_choice_reflows:
+        values=table_choice_reflows[key]
+    if key in table_rationale_trailers:
+        marker=table_rationale_trailers[key]
+        if marker not in rationale:
+            raise ValueError(f'Expected spilled table cell in rationale: {key}')
+        rationale=rationale.split(marker,1)[0]
     parsed.append({'unit':q['unit'],'section':q['section'],'number':n,'page':q['page'],
                    'topicId':q['topicId'],'stem':stem.replace('\uf0b7','•'),'choices':values,
                    'answerIndex':index,'explanation':rationale.replace('\uf0b7','•'),
-                   'answerStatus':'inferred' if not ans else 'source'})
+                   'answerStatus':'inferred' if not ans else 'source',
+                   **({'sourceTextStatus':'reconstructed'} if key==(7,2,20) else
+                      {'sourceTextStatus':'table-reflowed'} if key in table_choice_reflows else {})})
 
 for q in parsed:
     if len(q['stem'])<10 or min(map(len,q['choices']))<1 or len(q['explanation'])<10:

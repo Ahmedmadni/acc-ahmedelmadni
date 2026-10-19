@@ -330,14 +330,15 @@
     "topicId": "su4-contingencies-warranties",
     "stem": "Potter Co. has the following contingencies, all resulting from\nlawsuits in progress during the current year:\nProbable loss contingency               $1,500,000\nReasonably possible loss contingency       500,000\nProbable gain contingency                  700,000\nReasonably possible gain contingency       300,000\nPotter’s accountant believes the financial statements will be\nmisleading if the probable loss contingency is not disclosed.\nHow much should be disclosed, and how much should be\naccrued in Potter’s financial statements for the current year?\nDisclosed                    Accrued\n$ 500,000 loss               $1,500,000 loss",
     "choices": [
-      "$1,000,000 gain              $ 700,000 gain\n$2,000,000 loss              $1,500,000 loss",
-      "$1,000,000 gain",
-      "$ 500,000 loss\n$500,000 loss                $1,500,000 loss",
-      "$300,000 gain"
+      "Disclosed: $500,000 loss and $1,000,000 gain. Accrued: $1,500,000 loss and $700,000 gain.",
+      "Disclosed: $2,000,000 loss and $1,000,000 gain. Accrued: $1,500,000 loss.",
+      "Disclosed: $1,000,000 gain. Accrued: $1,500,000 loss and $500,000 loss.",
+      "Disclosed: $500,000 loss. Accrued: $1,500,000 loss and $300,000 gain."
     ],
     "answerIndex": 1,
-    "explanation": "A material contingent loss must be accrued (debit loss, credit\nliability) when it is probable that (1) an asset has been\nimpaired or a liability has been incurred and (2) the amount of\nthe loss can be reasonably estimated. Therefore, a probable\nloss contingency of $1.5 million must be accrued and\ndisclosed (Potter believes that the financial statements will be\nmisleading if it is not disclosed). If one or both conditions to\naccrue a contingent liability are not met but the probability of\nthe loss is at least reasonably possible, the nature of the\ncontingency must be described. Thus, a reasonably possible\nloss contingency of $500,000 must be disclosed. Gain\ncontingencies are recognized only when realized. However, a\ngain contingency must be adequately disclosed in the notes to\nthe financial statements. Therefore, both probable and\nreasonably possible gains must be disclosed but not accrued.\nAccordingly, a $2,000,000 ($1,500,000 + $500,000) loss and\n$1,000,000 ($700,000 + $300,000) gain must be disclosed.\n$1,000,000 gain              $1,500,000 loss",
-    "answerStatus": "source"
+    "explanation": "A material contingent loss must be accrued (debit loss, credit\nliability) when it is probable that (1) an asset has been\nimpaired or a liability has been incurred and (2) the amount of\nthe loss can be reasonably estimated. Therefore, a probable\nloss contingency of $1.5 million must be accrued and\ndisclosed (Potter believes that the financial statements will be\nmisleading if it is not disclosed). If one or both conditions to\naccrue a contingent liability are not met but the probability of\nthe loss is at least reasonably possible, the nature of the\ncontingency must be described. Thus, a reasonably possible\nloss contingency of $500,000 must be disclosed. Gain\ncontingencies are recognized only when realized. However, a\ngain contingency must be adequately disclosed in the notes to\nthe financial statements. Therefore, both probable and\nreasonably possible gains must be disclosed but not accrued.\nAccordingly, a $2,000,000 ($1,500,000 + $500,000) loss and\n$1,000,000 ($700,000 + $300,000) gain must be disclosed.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 4,

@@ -838,16 +838,17 @@
     "number": 20,
     "page": 721,
     "topicId": "su7-cost-behavior",
-    "stem": "A management accountant is preparing graphs of total variable cost and variable cost per unit for a short-term plan. Dollars are on the vertical axis and activity is on the horizontal axis. How will the two graphs appear?",
+    "stem": "A management accountant is about to prepare graphs of total variable cost and per-unit variable cost for use in a short-term planning model. Dollars will be depicted on the vertical axis; activity will be shown on the horizontal axis. How will these graphs appear under completion?",
     "choices": [
-      "Total: upward straight line; per unit: horizontal straight line.",
-      "Total: upward curve; per unit: roughly horizontal line.",
-      "Total: upward straight line; per unit: upward straight line.",
-      "Total: horizontal straight line; per unit: upward straight line."
+      "Total variable cost: Straight line, sloping upward to the right.\nPer-unit variable cost: Straight line, parallel to the horizontal axis.",
+      "Total variable cost: Curvilinear, sloping upward to the right.\nPer-unit variable cost: A line roughly parallel to the horizontal axis.",
+      "Total variable cost: Straight line, sloping upward to the right.\nPer-unit variable cost: Straight line, sloping upward to the right.",
+      "Total variable cost: Straight line, parallel to the horizontal axis.\nPer-unit variable cost: Straight line, sloping upward to the right."
     ],
     "answerIndex": 0,
-    "explanation": "Variable costs in total vary directly and proportionally with\nchanges in volume. This is depicted as a straight line sloping\nupward to the right. Variable cost per unit, however, remains\nconstant in the short run regardless of the level of production.\nThis is depicted as a horizontal line.\nA line that basically para",
-    "answerStatus": "source"
+    "explanation": "Variable costs in total vary directly and proportionally with\nchanges in volume. This is depicted as a straight line sloping\nupward to the right. Variable cost per unit, however, remains\nconstant in the short run regardless of the level of production.\nThis is depicted as a horizontal line.",
+    "answerStatus": "source",
+    "sourceTextStatus": "reconstructed"
   },
   {
     "unit": 7,

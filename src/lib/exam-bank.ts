@@ -16,6 +16,8 @@ export interface ExamQuestion {
   sourcePage?: number;
   /** A missing answer in the supplied source was independently reconstructed. */
   answerStatus?: "source" | "inferred";
+  /** A source table was reflowed, or a clipped source cell was reconstructed. */
+  sourceTextStatus?: "reconstructed" | "table-reflowed";
 }
 
 export const TRACKS: ExamTrack[] = ["IFRS", "CMA", "CPA", "FMAA", "ACCA", "CFA"];

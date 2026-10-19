@@ -497,6 +497,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                   هذا السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
                 </p>
               )}
+              {q.sourceTextStatus === "reconstructed" && (
+                <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
+                  {lang === "ar"
+                    ? "عمود من جدول الاختيارات مقطوع في ملف المصدر؛ أُعيد تكوين الاختيار المتأثر وفق الرسم والشرح."
+                    : "The source PDF clips one answer-table column; the affected choice was reconstructed from the chart and explanation."}
+                </p>
+              )}
               <h3
                 dir={q.sourceLanguage === "en" ? "ltr" : undefined}
                 className="mb-4 whitespace-pre-wrap text-base font-extrabold text-[var(--fg)] md:text-lg"

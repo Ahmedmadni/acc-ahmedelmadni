@@ -3101,14 +3101,15 @@
     "topicId": "su1-cash-flows",
     "stem": "Bear Co. prepares its statement of cash flows using the\nindirect method. Bear sold equipment with a carrying value of\n$500,000 for cash of $400,000. How should Bear report the\ntransaction in the operating and investing activities sections of\nits statement of cash flows?\nOperating Activities        Investing Activities\n$100,000 addition",
     "choices": [
-      "$400,000 cash inflow\nto net income",
-      "$400,000 cash inflow\nfrom net income\n$100,000 addition",
-      "$500,000 cash inflow\nto net income\n$100,000 subtraction",
-      "$500,000 cash inflow\nfrom net income"
+      "Operating: $100,000 addition to net income. Investing: $400,000 cash inflow.",
+      "Operating: $100,000 subtraction from net income. Investing: $400,000 cash inflow.",
+      "Operating: $100,000 addition to net income. Investing: $500,000 cash inflow.",
+      "Operating: $100,000 subtraction from net income. Investing: $500,000 cash inflow."
     ],
     "answerIndex": 0,
-    "explanation": "Cash receipts from the sale of property, plant, and equipment\nof $400,000 are reported as a cash inflow from investing\nactivities. Under the indirect method, the net cash flow from\noperating activities is determined by adjusting net income for\nthe effect of items included in net income whose cash effects\nrelate to investing or financing cash flows. Losses and\nexpenses whose cash effects are related to investing or\nfinancing cash flows are added to net income. Bear\nrecognized a loss on disposal of equipment of $100,000\n($500,000 carrying value – $400,000 cash receipts).\nAccordingly, $100,000 is reported as an addition to net income\nin the operating activities section of the statement of cash\nflows.\n$100,000 subtraction",
-    "answerStatus": "source"
+    "explanation": "Cash receipts from the sale of property, plant, and equipment\nof $400,000 are reported as a cash inflow from investing\nactivities. Under the indirect method, the net cash flow from\noperating activities is determined by adjusting net income for\nthe effect of items included in net income whose cash effects\nrelate to investing or financing cash flows. Losses and\nexpenses whose cash effects are related to investing or\nfinancing cash flows are added to net income. Bear\nrecognized a loss on disposal of equipment of $100,000\n($500,000 carrying value – $400,000 cash receipts).\nAccordingly, $100,000 is reported as an addition to net income\nin the operating activities section of the statement of cash\nflows.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 1,

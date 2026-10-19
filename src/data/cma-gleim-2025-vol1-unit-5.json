@@ -194,14 +194,15 @@
     "topicId": "su5-revenue-contracts",
     "stem": "For contracts with customers, a contract modification is\naccounted for as a separate contract if the additional promised\ngoods are <List A> and the price for these additional goods is\n<List B>.\nList A                List B",
     "choices": [
-      "Distinct           Based on the price of the original contract",
-      "Not distinct       Their incremental selling price",
-      "Distinct           Their standalone selling price",
-      "distinct                          revenue"
+      "List A: Distinct. List B: Based on the price of the original contract.",
+      "List A: Not distinct. List B: Their incremental selling price.",
+      "List A: Distinct. List B: Their standalone selling price.",
+      "List A: Not distinct. List B: Cumulative catch-up adjustment to revenue."
     ],
     "answerIndex": 2,
-    "explanation": "A contract modification exists when the parties approve a\nchange in the scope or price of a contract. A contract\nmodification is accounted for as a separate contract if (1) it\nresults in the addition to the contract of promised goods or\nservices that are distinct and (2) the price for these additional\ngoods or services is their standalone selling price.\nNot                 Cumulative catch-up adjustment to",
-    "answerStatus": "source"
+    "explanation": "A contract modification exists when the parties approve a\nchange in the scope or price of a contract. A contract\nmodification is accounted for as a separate contract if (1) it\nresults in the addition to the contract of promised goods or\nservices that are distinct and (2) the price for these additional\ngoods or services is their standalone selling price.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 5,

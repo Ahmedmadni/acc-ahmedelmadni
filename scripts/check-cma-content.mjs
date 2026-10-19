@@ -101,6 +101,28 @@ check(
     sourceRecords.get("9.3.1")?.answerStatus === "inferred",
   "The single missing printed answer must be marked as inferred",
 );
+check(
+  [...sourceRecords.values()].filter((record) => record.sourceTextStatus === "reconstructed")
+    .length === 1 && sourceRecords.get("7.2.20")?.sourceTextStatus === "reconstructed",
+  "The clipped answer table must be marked as reconstructed",
+);
+const reflowedTables = new Set(["1.5.65", "3.3.15", "4.1.20", "5.1.12", "6.1.8"]);
+const reflowedQuestionIds = new Set([
+  "cma-gleim-2025-vol1-su1-s5-q065",
+  "cma-gleim-2025-vol1-su3-s3-q015",
+  "cma-gleim-2025-vol1-su4-s1-q020",
+  "cma-gleim-2025-vol1-su5-s1-q012",
+  "cma-gleim-2025-vol1-su6-s1-q008",
+]);
+check(
+  [...sourceRecords]
+    .filter(([, record]) => record.sourceTextStatus === "table-reflowed")
+    .every(([key]) => reflowedTables.has(key)) &&
+    [...reflowedTables].every(
+      (key) => sourceRecords.get(key)?.sourceTextStatus === "table-reflowed",
+    ),
+  "PDF table choices must be marked when manually reflowed",
+);
 for (const [key, fact] of [
   ["2.3.19", "During January, Metro Co."],
   ["5.2.12", "Data pertaining to Pell Co."],
@@ -203,6 +225,15 @@ for (const q of CMA_LOCAL_QUESTIONS) {
     check(
       q.question.ar === q.question.en && q.explanation.ar === q.explanation.en,
       `Unreviewed source translation must be explicitly marked: ${q.id}`,
+    );
+    check(
+      q.sourceTextStatus ===
+        (q.id === "cma-gleim-2025-vol1-su7-s2-q020"
+          ? "reconstructed"
+          : reflowedQuestionIds.has(q.id)
+            ? "table-reflowed"
+            : undefined),
+      `Source transcription status was lost: ${q.id}`,
     );
   }
   check(q.choices.ar.every(Boolean) && q.choices.en.every(Boolean), `Empty choice: ${q.id}`);

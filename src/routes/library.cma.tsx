@@ -468,6 +468,13 @@ function CmaPage() {
                         : `Gleim 2025 · p. ${q.sourcePage}`}
                     </p>
                   )}
+                  {q.sourceTextStatus === "reconstructed" && (
+                    <p className="mt-2 text-xs text-[#76543F]">
+                      {lang === "ar"
+                        ? "عمود من جدول الاختيارات مقطوع في ملف المصدر؛ أُعيد تكوين الاختيار المتأثر وفق الرسم والشرح."
+                        : "The source PDF clips one answer-table column; the affected choice was reconstructed from the chart and explanation."}
+                    </p>
+                  )}
                   <p
                     dir={q.sourceLanguage === "en" ? "ltr" : undefined}
                     className="mt-3 whitespace-pre-wrap text-sm font-bold leading-7"
