@@ -42,6 +42,9 @@ const { CMA_TOPIC_GUIDES, CMA_STUDY_UNIT_CASES } = readDataFile("cma-guides");
 const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
 const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
 const { CMA_GLEIM_2025_VOL2_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol2");
+const newOutlineQuestions = [7, 8, 9].flatMap(
+  (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
+);
 const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
@@ -49,7 +52,8 @@ const questionTexts = new Set();
 check(CMA_TOPICS.length === 80 && ids.size === 80, "Expected 80 unique sections for units 1–20");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 2751, "Expected 308 original plus 2,443 source questions");
+check(CMA_LOCAL_QUESTIONS.length === 2795, "Expected 352 original plus 2,443 source questions");
+check(newOutlineQuestions.length === 44, "Expected 44 original SU 7–9 example questions");
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
   [20, 18, 37, 32],
@@ -223,7 +227,7 @@ for (const [key, unrelated] of [
 ]) {
   check(!sourceRecords.get(key)?.stem.includes(unrelated), `Leaked fact pattern: ${key}`);
 }
-check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Expected guides for published study units 1–6");
+check(Object.keys(CMA_TOPIC_GUIDES).length === 37, "Expected guides for published study units 1–9");
 for (const [unit, expected] of [
   [1, 6],
   [2, 4],
@@ -245,7 +249,7 @@ for (const [unit, expected] of [
 for (const topic of CMA_TOPICS) {
   const guide = CMA_TOPIC_GUIDES[topic.id];
   check(
-    topic.studyUnit <= 6 ? guide?.topicId === topic.id : !guide,
+    topic.studyUnit <= 9 ? guide?.topicId === topic.id : !guide,
     `Unexpected guide state for ${topic.id}`,
   );
   check(
@@ -270,6 +274,13 @@ for (const topic of CMA_TOPICS) {
         guide.practicalCase.solutionAr &&
         guide.practicalCase.solutionEn,
       `Incomplete guide: ${topic.id}`,
+    );
+  }
+  if (topic.studyUnit >= 7 && topic.studyUnit <= 9) {
+    check(topic.guidePages, `Missing supplied outline page range: ${topic.id}`);
+    check(
+      newOutlineQuestions.filter((question) => question.topicId === topic.id).length === 4,
+      `Expected four new bilingual example questions: ${topic.id}`,
     );
   }
   check(
@@ -330,7 +341,16 @@ for (const q of CMA_LOCAL_QUESTIONS) {
   }
   check(q.choices.ar.every(Boolean) && q.choices.en.every(Boolean), `Empty choice: ${q.id}`);
 }
-check(CMA_STUDY_UNIT_CASES.length === 6, "Expected a linked practice case for every unit");
+for (const q of newOutlineQuestions) {
+  check(CMA_LOCAL_QUESTIONS.includes(q), `Unregistered SU 7–9 question: ${q.id}`);
+  check(q.question.ar !== q.question.en, `Untranslated SU 7–9 question: ${q.id}`);
+  check(q.explanation.ar !== q.explanation.en, `Untranslated SU 7–9 solution: ${q.id}`);
+}
+check(CMA_STUDY_UNIT_CASES.length === 9, "Expected a linked practice case for every guided unit");
+check(
+  new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 9,
+  "Expected one distinct case per guided unit",
+);
 for (const item of CMA_STUDY_UNIT_CASES) {
   check(
     item.title.ar &&
@@ -348,5 +368,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${CMA_LOCAL_QUESTIONS.length} MCQs (308 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (352 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );

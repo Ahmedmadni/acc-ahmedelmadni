@@ -1,6 +1,6 @@
 import type { CmaTopic } from "@/data/cma-topics";
 
-/** Question-only map from the supplied Gleim 2025 Part 1 MCQ Bank, Volume 1, pp. 679–1087. */
+/** Topic map; sourcePages refer to the 2025 MCQ bank and guidePages to supplied 2024 outlines. */
 export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
   {
     id: "su7-cost-terms",
@@ -8,13 +8,26 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 7,
     section: "7.1",
     sourcePages: "679–702",
+    guidePages: "2–4",
     losRef: "D.1.a–d",
     part: "part-1",
     domain: "cost-mgmt",
     titleAr: "مصطلحات إدارة التكلفة",
     titleEn: "Cost Management Terminology",
-    summaryAr: "تمييز التكاليف المباشرة وغير المباشرة والمنتج والفترة والعناصر القابلة للرقابة.",
-    summaryEn: "Classify direct, indirect, product, period and controllable costs for decisions.",
+    summaryAr: "تمييز التكاليف المباشرة وغير المباشرة وتكلفة المنتج والفترة والأولية والتحويل.",
+    summaryEn: "Classify direct, indirect, product, period, prime and conversion costs.",
+    keyFormulas: [
+      {
+        nameAr: "التكلفة الأولية",
+        nameEn: "Prime cost",
+        formula: "Direct materials + Direct labor",
+      },
+      {
+        nameAr: "تكلفة التحويل",
+        nameEn: "Conversion cost",
+        formula: "Direct labor + Manufacturing overhead",
+      },
+    ],
     searchTerms: [
       "cost object",
       "prime cost",
@@ -29,18 +42,25 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 7,
     section: "7.2",
     sourcePages: "703–734",
+    guidePages: "5–7",
     losRef: "D.1.a,c",
     part: "part-1",
     domain: "cost-mgmt",
     titleAr: "سلوك التكلفة والمدى الملائم",
     titleEn: "Cost Behavior and Relevant Range",
-    summaryAr: "فصل الثابت والمتغير والمختلط وتحليل العالي والمنخفض وحدود المدى الملائم.",
+    summaryAr:
+      "فصل الثابت والمتغير والمختلط وحدود المدى الملائم، مع العالي والمنخفض إثراءً تحليليًا.",
     summaryEn:
-      "Separate fixed, variable and mixed costs; use high-low estimates within the relevant range.",
+      "Separate fixed, variable and mixed costs within the relevant range; high-low is supplemental.",
     keyFormulas: [
       {
-        nameAr: "طريقة العالي والمنخفض",
-        nameEn: "High-low variable rate",
+        nameAr: "التكلفة المختلطة",
+        nameEn: "Mixed cost",
+        formula: "Total cost = Fixed amount + Variable rate × Activity",
+      },
+      {
+        nameAr: "العالي والمنخفض (إثراء)",
+        nameEn: "High-low rate (enrichment)",
         formula: "Variable rate = (High cost − Low cost) ÷ (High activity − Low activity)",
       },
     ],
@@ -52,6 +72,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 7,
     section: "7.3",
     sourcePages: "735–741",
+    guidePages: "8–10",
     losRef: "D.1.d–e",
     part: "part-1",
     domain: "cost-mgmt",
@@ -61,6 +82,13 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
       "المقارنة بين التكلفة الفعلية والعادية والمعيارية ومعالجة التحميل المسبق للتكاليف الصناعية.",
     summaryEn:
       "Compare actual, normal and standard costing and apply predetermined overhead rates.",
+    keyFormulas: [
+      {
+        nameAr: "معدل التحميل المسبق",
+        nameEn: "Predetermined overhead rate",
+        formula: "Budgeted manufacturing overhead ÷ Budgeted driver units",
+      },
+    ],
     searchTerms: ["actual costing", "normal costing", "standard costing", "معدل التحميل"],
   },
   {
@@ -69,6 +97,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 7,
     section: "7.4",
     sourcePages: "742–809",
+    guidePages: "11–20",
     losRef: "D.1.f–i",
     part: "part-1",
     domain: "cost-mgmt",
@@ -92,6 +121,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 8,
     section: "8.1",
     sourcePages: "810–831",
+    guidePages: "2–5",
     losRef: "D.2.a–e",
     part: "part-1",
     domain: "cost-mgmt",
@@ -116,6 +146,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 8,
     section: "8.2",
     sourcePages: "832–841",
+    guidePages: "6–8",
     losRef: "D.2.f",
     part: "part-1",
     domain: "cost-mgmt",
@@ -124,6 +155,13 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     summaryAr:
       "تجميع التكلفة بحسب المرحلة وفهم الوحدات المكافئة دون التوسع خارج متطلبات IMA الحسابية.",
     summaryEn: "Accumulate costs by process and understand equivalent units conceptually.",
+    keyFormulas: [
+      {
+        nameAr: "الوحدات المكافئة (مفهومًا)",
+        nameEn: "Equivalent units (concept)",
+        formula: "Physical WIP units × Input completion percentage",
+      },
+    ],
     searchTerms: ["process", "equivalent units", "work in process", "مراحل الإنتاج"],
   },
   {
@@ -132,6 +170,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 8,
     section: "8.3",
     sourcePages: "842–887",
+    guidePages: "9–18",
     losRef: "D.2.g–i; D.3.l–n",
     part: "part-1",
     domain: "cost-mgmt",
@@ -151,6 +190,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 8,
     section: "8.4",
     sourcePages: "888–902",
+    guidePages: "19–20",
     losRef: "D.2.j",
     part: "part-1",
     domain: "cost-mgmt",
@@ -158,6 +198,13 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     titleEn: "Life-Cycle Costing",
     summaryAr: "تجميع البحث والتطوير والتصنيع والتسويق وخدمة ما بعد البيع طوال عمر المنتج.",
     summaryEn: "Assess upstream, manufacturing and downstream costs throughout a product's life.",
+    keyFormulas: [
+      {
+        nameAr: "سعر استرداد دورة الحياة",
+        nameEn: "Life-cycle recovery price",
+        formula: "Total lifetime costs ÷ Expected lifetime units",
+      },
+    ],
     searchTerms: ["R&D", "upstream", "downstream", "life cycle", "دورة حياة"],
   },
   {
@@ -166,6 +213,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 9,
     section: "9.1",
     sourcePages: "903–955",
+    guidePages: "2–7",
     losRef: "D.1.j–l",
     part: "part-1",
     domain: "cost-mgmt",
@@ -190,6 +238,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 9,
     section: "9.2",
     sourcePages: "956–993",
+    guidePages: "8–15",
     losRef: "D.3.a–n",
     part: "part-1",
     domain: "cost-mgmt",
@@ -198,6 +247,11 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     summaryAr: "معدلات التحميل وأساسها وفروق التحميل الزائد أو الناقص على أوامر الإنتاج.",
     summaryEn: "Apply predetermined rates and explain over- or underapplied overhead.",
     keyFormulas: [
+      {
+        nameAr: "معدل الصناعية المقدم",
+        nameEn: "Predetermined overhead rate",
+        formula: "Budgeted overhead ÷ Budgeted allocation base",
+      },
       {
         nameAr: "فرق التحميل",
         nameEn: "Overhead variance",
@@ -212,6 +266,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 9,
     section: "9.3",
     sourcePages: "994–1040",
+    guidePages: "16–21",
     losRef: "D.3.o–p",
     part: "part-1",
     domain: "cost-mgmt",
@@ -219,6 +274,13 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     titleEn: "Service Department Cost Allocation",
     summaryAr: "مقارنة طرق التوزيع المباشرة والتنازلية والتبادلية والمعدلات المزدوجة.",
     summaryEn: "Compare direct, step-down, reciprocal and dual-rate service-cost allocations.",
+    keyFormulas: [
+      {
+        nameAr: "التكلفة التبادلية الكاملة",
+        nameEn: "Fully reciprocated service cost",
+        formula: "Own cost + Services received from other support departments",
+      },
+    ],
     searchTerms: ["direct method", "step-down", "reciprocal", "dual rate", "أقسام خدمية"],
   },
   {

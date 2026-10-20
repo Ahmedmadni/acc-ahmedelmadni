@@ -35,6 +35,8 @@ export interface CmaTopic {
   studyUnit: CmaStudyUnit;
   section: string;
   sourcePages: string;
+  /** Printed page range in a supplied study-unit outline, distinct from the MCQ-bank pages. */
+  guidePages?: string;
   losRef: string;
   part: CmaPart;
   domain: CmaDomain;
