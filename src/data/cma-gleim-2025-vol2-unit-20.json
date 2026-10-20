@@ -1,0 +1,1532 @@
+[
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 1,
+    "page": 1294,
+    "topicId": "su20-finance-transformation",
+    "stem": "All of the following are correct statements regarding the use of\ncloud computing for big data projects except",
+    "choices": [
+      "Businesses are hesitant to invest in an extensive server and\nstorage infrastructure that might only be used occasionally to\ncomplete big data tasks.",
+      "Businesses only pay for the storage and computing time\nactually used.",
+      "An advantage of using cloud computing includes fast access to\nsoftware.",
+      "Analysts are not required to have a detailed understanding of\nthe available data and possess some sense of what answer(s)\nthey’re looking for."
+    ],
+    "answerIndex": 3,
+    "explanation": "Analysts must have a detailed understanding of the available\ndata and possess some sense of the answers they are looking\nfor. The value of data is only as valuable as the business\noutcomes it makes possible. It is how businesses make use of\ndata that allows full recognition of its true value and the\npotential to improve decision-making capabilities and measure\nthem against the results of positive business outcomes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 2,
+    "page": 1295,
+    "topicId": "su20-finance-transformation",
+    "stem": "The process of learning how the current system functions,\ndetermining the needs of users, and developing the logical\nrequirements of a proposed system is referred to as",
+    "choices": [
+      "Systems maintenance.",
+      "Systems analysis.",
+      "Systems feasibility study.",
+      "Systems design."
+    ],
+    "answerIndex": 1,
+    "explanation": "A systems analysis requires a survey of the existing system,\nthe organization itself, and the organization’s environment to\ndetermine (among other things) whether a new system is\nneeded. The survey results determine not only what, where,\nhow, and by whom activities are performed but also why, how\nwell, and whether they should be done at all. Ascertaining the\nproblems and informational needs of decision makers is the\nnext step. The systems analyst must consider the entity’s key\nsuccess variables (factors that determine its success or\nfailure), the decisions currently being made and those that\nshould be made, the factors important in decision making\n(timing, relation to other decisions, etc.), the information\nneeded for decisions, and how well the current system makes\nthose decisions. Finally, the systems analysis should establish\nthe requirements of a system that will meet user needs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 3,
+    "page": 1296,
+    "topicId": "su20-finance-transformation",
+    "stem": "The least risky strategy for converting from a manual to a\ncomputerized accounts receivable system would be a",
+    "choices": [
+      "Direct conversion.",
+      "Parallel conversion.",
+      "Pilot conversion.",
+      "Database conversion."
+    ],
+    "answerIndex": 1,
+    "explanation": "The least risky strategy for converting from a manual to a\ncomputerized system is a parallel conversion in which the old\nand new systems are operated simultaneously until\nsatisfaction is obtained that the new system is operating as\nexpected. Slightly more risky is a pilot conversion in which the\nnew system is introduced by module or segment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 4,
+    "page": 1297,
+    "topicId": "su20-finance-transformation",
+    "stem": "Which of the following are objectives for performing tests\nduring system development?\nI.     System responds correctly to all kinds of inputs\nII.     System achieves the general result its stakeholders\ndesire\nIII.      System meets the requirements that guided its design\nand development\nIV.       System performs its functions within an acceptable\ntime",
+    "choices": [
+      "I and III only.",
+      "II, III, and IV only.",
+      "I, II, and IV only.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 3,
+    "explanation": "Testing is performed during system development with the\nintent of identifying errors or other defects. The job of testing is\nan iterative process as when one error is corrected, it can\nilluminate other errors or even create new ones. All of the\nobjectives listed are objectives for performing tests during\nsystem development.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 5,
+    "page": 1298,
+    "topicId": "su20-finance-transformation",
+    "stem": "Two phases of systems planning are project definition and\nproject initiation. All of the following are steps in the project\ninitiation phase except",
+    "choices": [
+      "Preparing the project proposal.",
+      "Informing managers and employees of the project.",
+      "Assembling the project team.",
+      "Training selected personnel."
+    ],
+    "answerIndex": 0,
+    "explanation": "The project initiation phase includes promptly informing\nmanagers and employees about the project, assembling the\nproject team (possibly including systems analysts,\nprogrammers, accountants, and users), training selected\npersonnel to improve necessary skills and enhance\ncommunication among team members, and establishing\nproject controls (e.g., by implementing a project scheduling\ntechnique such as PERT). Preparing the project proposal is a\npart of the project definition phase, as are conducting\nfeasibility studies, determining project priority, and submitting\nthe proposal for approval.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 6,
+    "page": 1299,
+    "topicId": "su20-finance-transformation",
+    "stem": "An analyst prepared a forecast using newly developed system\nfeatures. The analyst recently left the company and her\nreplacement was unable to understand how to use these\nsystem functionalities. In accordance with systems\ndevelopment life-cycle best practices, which one of the\nfollowing controls would have prevented this situation from\noccurring?",
+    "choices": [
+      "End-user computing efforts are outlined.",
+      "Documentation standards and procedures are developed.",
+      "Backup activities and requirements are put into place.",
+      "Changes made to the system are monitored and evaluated."
+    ],
+    "answerIndex": 1,
+    "explanation": "A requirement for documentation standards would have\nprevented the problem.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 7,
+    "page": 1299,
+    "topicId": "su20-finance-transformation",
+    "stem": "Software-as-a-service can best be defined as a(n)",
+    "choices": [
+      "On-premises ERP system installed and serviced locally.",
+      "Type of cloud computing in which applications are hosted by a\nthird party for a monthly fee.",
+      "Type of database management system serviced by a third\nparty for an annual fee.",
+      "Infrastructure platform that replaces complex individual\ncomputers within a business."
+    ],
+    "answerIndex": 1,
+    "explanation": "Software-as-a-service (SaaS) is a software-user distribution\nmodel wherein a third-party provider hosts applications and\nmakes them available to subscribers over the Internet. With\nthis model, the user does not have to buy and maintain as\nmuch computer hardware, install software, or worry about\nmanning support services. Other benefits of SaaS include\nflexible payments, scalable usage, automatic updates, and\nflexible accessibility.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 8,
+    "page": 1300,
+    "topicId": "su20-finance-transformation",
+    "stem": "An insurance firm that follows the systems development life\ncycle concept for all major information system projects is\npreparing to start a feasibility study for a proposed\nunderwriting system. Some of the primary factors the feasibility\nstudy should include are",
+    "choices": [
+      "Possible vendors for the system and their reputation for\nquality.",
+      "Exposure to computer viruses and other intrusions.",
+      "Methods of implementation, such as parallel or cutover.",
+      "Technology and related costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "The feasibility study should consider the activity to be\nautomated, the needs of the user, the type of equipment\nrequired, the cost, and the potential benefit to the specific area\nand the company in general. Thus, technical feasibility and\ncost are determined during this stage.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 9,
+    "page": 1301,
+    "topicId": "su20-finance-transformation",
+    "stem": "The process of monitoring, evaluating, and modifying a system\nas needed is referred to as",
+    "choices": [
+      "Systems analysis.",
+      "Systems feasibility study.",
+      "Systems maintenance.",
+      "Systems implementation."
+    ],
+    "answerIndex": 2,
+    "explanation": "Systems maintenance must be undertaken by systems\nanalysts and applications programmers continuously\nthroughout the life of a system. Maintenance is the redesign of\nthe system and programs to meet new needs or to correct\ndesign flaws. Ideally, these changes should be made as part\nof a regular program of preventive maintenance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 10,
+    "page": 1302,
+    "topicId": "su20-finance-transformation",
+    "stem": "Workwell Company operates in several regions, with each\nregion performing its data processing in a regional data center.\nThe corporate management information systems (MIS) staff\nhas developed a database management system to handle\ncustomer service and billing. The director of MIS\nrecommended that the new system be implemented in the\nSouthwestern Region to ascertain if the system operates in a\nsatisfactory manner. This type of conversion is called a",
+    "choices": [
+      "Parallel conversion.",
+      "Direct conversion.",
+      "Prototype conversion.",
+      "Pilot conversion."
+    ],
+    "answerIndex": 3,
+    "explanation": "A modular conversion approach entails switching to the new\nor improved system in organizational (division, region, product\nline, etc.) segments or system segments (accounts receivable,\ndatabase, etc.). A pilot conversion is one in which the final\ntesting and switchover are accomplished at one segment or\ndivision of the company.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 11,
+    "page": 1303,
+    "topicId": "su20-finance-transformation",
+    "stem": "An information system (IS) project manager is currently in the\nprocess of adding a systems analyst to the IS staff. The new\nsystems analyst will be involved with testing the new\ncomputerized system. At which stage of the systems\ndevelopment life cycle will the analyst be primarily used?",
+    "choices": [
+      "Cost-benefit analysis.",
+      "Requirements definition.",
+      "Flowcharting.",
+      "Development."
+    ],
+    "answerIndex": 3,
+    "explanation": "The systems development life-cycle approach is the oldest\nmethodology applied to the development of medium or large\ninformation systems. The cycle is analytically divisible into\nstages: definition, design, development, implementation, and\nmaintenance. Testing is the most crucial step in the\ndevelopment stage of the life cycle.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 12,
+    "page": 1304,
+    "topicId": "su20-finance-transformation",
+    "stem": "A major disadvantage of the life cycle approach to system\ndevelopment is that it is not well-suited for projects that are",
+    "choices": [
+      "Structured.",
+      "Large.",
+      "Complex.",
+      "Unstructured."
+    ],
+    "answerIndex": 3,
+    "explanation": "The life cycle approach is best employed when systems are\nlarge and highly structured, users understand the tasks to be\nperformed by the information system, and the developers\nhave directly applicable experience in designing similar\nsystems. In the life cycle process, each stage of development\nis highly structured, and requirements are clearly defined.\nHowever, when the task is unstructured, prototyping may be\nthe better approach.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 13,
+    "page": 1304,
+    "topicId": "su20-finance-transformation",
+    "stem": "Which of the following large-scale conversion approaches to\nsystem implementation presents the greatest risk to an\norganization?",
+    "choices": [
+      "Parallel.",
+      "Direct.",
+      "Phase-in.",
+      "Pilot."
+    ],
+    "answerIndex": 1,
+    "explanation": "With direct changeover (direct cutover) conversion, the old\nsystem is shut down and the new one takes over processing\nat once. This may be the least expensive and time-consuming\nstrategy, but it is the riskiest because the new system cannot\nbe reverted to the original.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 14,
+    "page": 1305,
+    "topicId": "su20-finance-transformation",
+    "stem": "In which of the following phases of computer system\ndevelopment would training occur?",
+    "choices": [
+      "Planning phase.",
+      "Analysis phase.",
+      "Design phase.",
+      "Implementation phase."
+    ],
+    "answerIndex": 3,
+    "explanation": "Training occurs during the implementation (installation and\noperation) phase of computer system development. Training\nand educating users is important not only for proper use of the\nsystem, but also to offset the resistance of users whose jobs\nmay have been substantially changed. This phase also\nincludes acceptance testing, system conversion, and system\nfollow-up.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 15,
+    "page": 1306,
+    "topicId": "su20-finance-transformation",
+    "stem": "The process of developing specifications for hardware,\nsoftware, manpower, data resources, and information products\nrequired to develop a system is referred to as",
+    "choices": [
+      "Systems analysis.",
+      "Systems feasibility study.",
+      "Systems maintenance.",
+      "Systems design."
+    ],
+    "answerIndex": 3,
+    "explanation": "Detailed systems design involves developing specifications\nregarding input, processing, internal controls and security\nmeasures, programs, procedures, output, and databases.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 16,
+    "page": 1306,
+    "topicId": "su20-finance-transformation",
+    "stem": "Errors are most costly to correct during",
+    "choices": [
+      "Programming.",
+      "Conceptual design.",
+      "Analysis.",
+      "Implementation."
+    ],
+    "answerIndex": 3,
+    "explanation": "Errors can be corrected most easily and clearly when they are\nfound at an early stage of systems development. Their\ncorrection becomes more costly as the life cycle progresses.\nBecause implementation is the last stage of the process listed,\nerrors are most costly to correct when discovered at the\nimplementation stage.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 17,
+    "page": 1307,
+    "topicId": "su20-finance-transformation",
+    "stem": "Advantages of life cycle methodologies are",
+    "choices": [
+      "Lower overall development costs when requirements change\nfrequently.",
+      "Ability to give users a functioning system quickly.",
+      "Reduced application development time to achieve a\nfunctioning system.",
+      "Enhanced management and control of the development\nprocess."
+    ],
+    "answerIndex": 3,
+    "explanation": "The systems development life cycle approach is the most\ncommon methodology applied to the development of large,\nhighly structured application systems. The life cycle approach\nis based on the idea that an information system has a finite life\nspan that is limited by the changing needs of the organization.\nThis cycle is analytically divisible into stages. A new system\nlife cycle begins when the inadequacy of the current system\nleads to a decision to develop a new or improved system. This\nmethod is a structured process for controlling the creative\nactivity required to devise, develop, and implement an\ninformation system. The process is described in varying terms\nby different writers, but the nature and sequence of the steps\nare essentially the same. Life cycle methodologies provide\nenhanced management and control of the development\nprocess because they provide structure for a creative process\nby dividing it into manageable steps and specifying what must\nbe produced in each phase.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 18,
+    "page": 1308,
+    "topicId": "su20-finance-transformation",
+    "stem": "Which of the following is the final step before placing the\nsystem in live operation?",
+    "choices": [
+      "Phased conversion.",
+      "User acceptance testing.",
+      "Dynamic testing.",
+      "Static testing."
+    ],
+    "answerIndex": 1,
+    "explanation": "IT must demonstrate to the user department that the system\nperforms the desired functionality. Once the user department\nis satisfied with the new system, they acknowledge formal\nacceptance and implementation begins. Thus, user\nacceptance testing is the final step before placing the system\nin live operation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 19,
+    "page": 1309,
+    "topicId": "su20-finance-transformation",
+    "stem": "Effective internal control for application development should\nprovide for which of the following?\nI.   A project steering committee to initiate and oversee\nthe system\nII.   A technical systems programmer to evaluate systems\nsoftware\nIII.    Feasibility studies to evaluate existing systems\nIV.     The establishment of standards for systems design\nand programming",
+    "choices": [
+      "I and III only.",
+      "I, II, and IV only.",
+      "I, III, and IV only.",
+      "II, III, and IV only."
+    ],
+    "answerIndex": 2,
+    "explanation": "Effective systems development requires participation by top\nmanagement. This can be achieved through a steering\ncommittee composed of higher-level representatives of system\nusers. The committee approves or recommends projects and\nreviews their progress. Studies of the economic, operational,\nand technical feasibility of new applications necessarily entail\nevaluations of existing systems. Another necessary control is\nthe establishment of standards for system design and\nprogramming. Standards represent user and system\nrequirements determined during systems analysis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 20,
+    "page": 1310,
+    "topicId": "su20-finance-transformation",
+    "stem": "Which of the following best describes acceptance testing?",
+    "choices": [
+      "Determines whether the system meets the organization’s\nneeds and is ready for release.",
+      "Tests a completely integrated system to verify that the system\nmeets its requirements.",
+      "Seeks to verify the interfaces between components against\nsoftware design.",
+      "Verifies the functionality of a specific section of code and the\nhandling of data passed between various units."
+    ],
+    "answerIndex": 0,
+    "explanation": "Acceptance testing is conducted to determine whether the\nsystem meets the organization’s needs and is ready for\nrelease.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 21,
+    "page": 1311,
+    "topicId": "su20-finance-transformation",
+    "stem": "Ordinarily, the analysis tool for the systems analyst and\nsteering committee to use in selecting the best system\nalternative is",
+    "choices": [
+      "Pilot testing.",
+      "User selection.",
+      "Decision tree analysis.",
+      "Cost-benefit analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Feasibility studies should include an analysis of the cost-\nbenefit ratio of any system alternatives. In many cases, the\nbest possible system may not be cost effective. Thus, once\nthe decision makers have determined that two or more\nsystems alternatives are acceptable, the cost-benefit analysis\nshould be used to select the best system for a particular\napplication.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 22,
+    "page": 1311,
+    "topicId": "su20-finance-transformation",
+    "stem": "A systems development approach used to quickly produce a\nmodel of user interfaces, user interactions with the system,\nand process logic is called",
+    "choices": [
+      "Neural networking.",
+      "Prototyping.",
+      "Reengineering.",
+      "Application generation."
+    ],
+    "answerIndex": 1,
+    "explanation": "Prototyping produces the first model(s) of a new system. This\ntechnique usually employs a software tool for quick\ndevelopment of a model of the user interface (such as by\nreport or screen), interaction of users with the system (for\nexample, a menu-screen approach or data entry), and\nprocessing logic (the executable module). Prototyping\nstimulates user participation because the model allows for\nquick exploration of concepts and development of solutions\nwith quick results.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 23,
+    "page": 1312,
+    "topicId": "su20-finance-transformation",
+    "stem": "At what phase in the systems development process is a report\ngenerated that describes the content, processing flows,\nresource requirements, and procedures of a preliminary\nsystem design?",
+    "choices": [
+      "File and database design.",
+      "Conceptual systems design.",
+      "Physical systems design.",
+      "Procedures design."
+    ],
+    "answerIndex": 1,
+    "explanation": "The systems development life cycle begins with recognizing\nthat there is a need for a new system, gaining an\nunderstanding of the situation to determine whether it is\nfeasible to create a solution, and formulating a plan. A formal\nproposal for a new system is submitted to the IT steering\ncommittee, describing the need for the application and the\nbusiness function(s) that it will affect. Feasibility studies are\nconducted to determine (1) the technology the new system will\nrequire, (2) the economic resources that must be committed to\nthe new system, and (3) the impact the new system will have\non current operations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 24,
+    "page": 1313,
+    "topicId": "su20-finance-transformation",
+    "stem": "Which of the following is a correct statement regarding phased\nconversion?",
+    "choices": [
+      "The old system is shut down, and the new one takes over\nprocessing immediately.",
+      "The old and new systems both run at full capacity for a given\nperiod.",
+      "One function at a time of the new system is placed in\noperation.",
+      "One branch, department, or division at a time is fully converted\nto the new system."
+    ],
+    "answerIndex": 2,
+    "explanation": "Information technology conversion can involve hardware,\noperating systems, database management systems, and\napplications. Conversion methods utilized are (1) direct\ncutover, (2) pilot conversion, (3) phased conversion, and (4)\nparallel conversion. Under phased conversion, one function of\nthe new system at a time is placed in operation. For instance,\nif the new system is an integrated accounting application,\naccounts receivable could be installed, then accounts payable,\ncash management, materials handling, etc.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 25,
+    "page": 1314,
+    "topicId": "su20-finance-transformation",
+    "stem": "All of the following are characteristics associated with direct\ncutover conversion except",
+    "choices": [
+      "Time-saving.",
+      "Risky.",
+      "Inexpensive.",
+      "Safe."
+    ],
+    "answerIndex": 3,
+    "explanation": "Direct cutover conversion involves simultaneously shutting\ndown the old system and having the new one take over\nprocessing immediately. Direct cutover is the least expensive\nand time-consuming strategy, but it is also the riskiest.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 26,
+    "page": 1315,
+    "topicId": "su20-finance-transformation",
+    "stem": "What should a company do when seeking competitive\nadvantages in planning for the implementation of a new\nsoftware system?",
+    "choices": [
+      "Design an optimal process and then align the software.",
+      "Design the software to fit the existing processes.",
+      "Direct manpower to the nonbottleneck process areas.",
+      "Allow management to dictate processes."
+    ],
+    "answerIndex": 0,
+    "explanation": "IT pervades every aspect of operations in a modern\norganization, and the IT steering committee must study each\nrequest for a new process and either approve or deny it. Once\na new process or system has been approved, a project team\nis assembled, consisting of representatives of the end users\nwho requested it and the IT personnel who will design and\nbuild the software components that will support it.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 27,
+    "page": 1316,
+    "topicId": "su20-finance-transformation",
+    "stem": "Which of the following conversion strategies is characterized\nby a manager removing the old system and installing the new\nsystem without the possibility of reverting to the original?",
+    "choices": [
+      "Direct changeover.",
+      "Phased implementation.",
+      "Parallel conversion.",
+      "Integrated test facility."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under a direct changeover (direct cutover), the old system is\nshut down and the new one takes over processing\nimmediately, thereby removing the possibility of reverting to\nthe original.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 28,
+    "page": 1316,
+    "topicId": "su20-finance-transformation",
+    "stem": "In an effort to recognize improvement opportunities, a\ncompany is reviewing its in-house systems. The best reason\nfor the company to consider switching to cloud computing as a\nsolution is that it",
+    "choices": [
+      "Is the best way to secure sensitive corporate information.",
+      "Is accessible only from within the company on its intranet.",
+      "Usually has lower upfront costs for equipment and\nmaintenance.",
+      "Provides better program modification options."
+    ],
+    "answerIndex": 2,
+    "explanation": "With cloud computing, organizations are relieved of the need\nto manage the storage of both application and data. It is\ntypically pay-per-use and self serviced. Hence, it usually has\nlower upfront costs for equipment and maintenance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 29,
+    "page": 1317,
+    "topicId": "su20-finance-transformation",
+    "stem": "Cloud computing can best be defined as a model that",
+    "choices": [
+      "Streamlines business processes onto a well-secured and\nhighly available in-house e-commerce platform to optimize\ncustomers’ online experience.",
+      "Is designed for rapid application deployment by making\nseveral virtual servers run on one physical host.",
+      "Allows users to access network resources from remote\nlocations through a virtual private network.",
+      "Allows organizations to use the Internet to access and use\nservices and applications that run on remote third-party\ntechnology infrastructure."
+    ],
+    "answerIndex": 3,
+    "explanation": "Cloud computing can be used for management and storage of\nboth applications and data where all the software and data are\nstored via the Internet. It allows organizations to access\nservices and applications that run on remote third-party hosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 30,
+    "page": 1318,
+    "topicId": "su20-finance-transformation",
+    "stem": "A company has abandoned the large array of dedicated\nservers it formerly used to store and provide access to its\ndatabase. The company has entered into a contract with a\nprovider who will guarantee storage of the database at its own\nlocation along with access over the Internet. This arrangement\nis an example of",
+    "choices": [
+      "Distributed computing.",
+      "Cloud computing.",
+      "Wide area network.",
+      "Ethernet."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cloud computing is a popular term relating to on-demand\naccess to resources that are accessed on the Internet and\nshared by others. The entity has the ability to choose and pay\nfor only the applications needed from the array (cloud) of\nresources, reducing the need for a large investment in IT\ninfrastructure.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 1,
+    "number": 31,
+    "page": 1319,
+    "topicId": "su20-finance-transformation",
+    "stem": "A company is considering a move to a Software-as-a-Service\n(SaaS) offering instead of a traditional in-house application.\nWhich of the following concerns is unique to SaaS?",
+    "choices": [
+      "Disaster recovery capabilities and documented recovery\nprocedures.",
+      "User credential setup and control over the actions that\nemployees can perform.",
+      "Allocation of software expenses and overhead charged to\ndepartments.",
+      "Ownership of processed data and costs of data migrations."
+    ],
+    "answerIndex": 3,
+    "explanation": "Software-as-a-Service is one of the three primary cloud\nservices. A concern for companies considering SaaS is\nownership of processed data because, compared to traditional\nin-house systems, cloud services are not as stringent in the\nmaintenance of ownership and are more susceptible to\nunauthorized access through hacking. Additionally, unlike a\ntraditional in-house system, the use of cloud computing will\nlikely incur additional costs when data migrations occur.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 1,
+    "page": 1321,
+    "topicId": "su20-data-analytics",
+    "stem": "A financial analyst is determining the probability that certain\ncustomers will default on their loans. Which one of the\nfollowing statistical models would be the best model to use to\nestimate this probability?",
+    "choices": [
+      "Time series analysis.",
+      "Logistic regression.",
+      "Monte Carlo analysis.",
+      "Simple linear regression."
+    ],
+    "answerIndex": 1,
+    "explanation": "Logistic regression is a statistical model that estimates the\nprobability of an event occurring given a dataset of\nindependent variables. The binary dependent variable is\nbetween 0 and 1. An example is borrower will default on loan\nor borrower will pay back loan.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 2,
+    "page": 1321,
+    "topicId": "su20-data-analytics",
+    "stem": "Which one of the following statements is the best description\nof logistic regression?",
+    "choices": [
+      "A statistical tool that estimates the linear relationship between\na dependent variable and one or more independent variables.",
+      "A statistical technique used to explore data and group the data\ninto predefined categories.",
+      "A predictive modeling method that differs from standard linear\nregression in that it uses binary valued outcomes.",
+      "A predictive technique that estimates future values based on a\nsequence of data points collected over time."
+    ],
+    "answerIndex": 2,
+    "explanation": "Logistic regression is a statistical model that estimates the\nprobability of an event occurring given a dataset of\nindependent variables. The binary dependent variable is\nbetween 0 and 1. Examples include the following: candidate\nwill pass or candidate will fail, borrower will default on loan or\nborrower will pay back loan, email is spam or email is not\nspam, and transaction is fraud or transaction is not fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 3,
+    "page": 1322,
+    "topicId": "su20-data-analytics",
+    "stem": "The data analytics tool that is used to explore data sets and\ngroup them into predefined categories is called",
+    "choices": [
+      "Classification.",
+      "Clustering.",
+      "Linear regression.",
+      "Logistic regression."
+    ],
+    "answerIndex": 0,
+    "explanation": "Classification is a statistical technique used to explore data\nand group the data into predefined categories.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 4,
+    "page": 1323,
+    "topicId": "su20-data-analytics",
+    "stem": "All of the following are correct statements regarding big\ndata except",
+    "choices": [
+      "Big data is an evolving term that describes any voluminous\namount of structured, semi-structured, and unstructured data\nthat has the potential to be mined for information.",
+      "Big data includes information collected from social media, data\nfrom Internet-enabled devices, machine data, video, and voice\nrecordings. The information collected is converted from high-\ndensity data into low-density data.",
+      "Big data is often characterized by the “4 Vs”: volume, variety,\nvelocity, and veracity.",
+      "Big data involves processing data with analytic and algorithmic\ntools to reveal meaningful information."
+    ],
+    "answerIndex": 1,
+    "explanation": "The information collected is converted from low-density data\nto high-density data, not from high-density data to low-density\ndata.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 5,
+    "page": 1324,
+    "topicId": "su20-data-analytics",
+    "stem": "A hospital has observed an increase in the number of cases of\na disease and has asked an analyst to collect data on the\ncases over the last 3 years. The analyst noted that the disease\nappeared 3 years ago during the second quarter of the year.\nSince then, the third and fourth quarters of each year showed\nsignificant spikes in the number of cases when compared to\nthe first two quarters. What is the best way to present these\nfindings?",
+    "choices": [
+      "Table, showing the number of cases in each month for the last\n3 years.",
+      "Pie chart, showing the number of cases in each quarter for the\nlast 3 years.",
+      "Scatter plot, showing the change in the number of cases for\neach quarter for the last 3 years.",
+      "Bar graph, showing the number of cases in each quarter for\nthe last 3 years."
+    ],
+    "answerIndex": 3,
+    "explanation": "A bar chart (also called bar graph) is the best way to present\nthe findings because it shows the number of cases each\nquarter in comparison to other quarters.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 6,
+    "page": 1325,
+    "topicId": "su20-data-analytics",
+    "stem": "Which one of the following statements defines data mining?",
+    "choices": [
+      "A process of using statistical techniques to extract and analyze\ndata from large databases to discern patterns and trends.",
+      "A system used to develop a firm’s performance metrics.",
+      "A process of using algorithms that serve to facilitate efficient\ncommunication within a firm.",
+      "A system used to organize and interpret complex data to\nensure the data has been accurately recorded in the database."
+    ],
+    "answerIndex": 0,
+    "explanation": "Data mining examines large amounts of data to discover\npatterns using statistical models and techniques. The term\ndata mining is somewhat misleading because its purpose is\nthe discovery of patterns in large amounts of data, not the\nextraction of the data itself.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 7,
+    "page": 1326,
+    "topicId": "su20-data-analytics",
+    "stem": "A simple regression equation has an r 2 of 0.85. This means\nthat",
+    "choices": [
+      "85% of the variation of the dependent variable is explained by\nthe regression line.",
+      "85% of the variation of the independent variable is explained\nby the regression line.",
+      "The dependent and independent variables have a correlation\ncoefficient of 0.85.",
+      "The dependent variable does not have a strong correlation\nwith the independent variable."
+    ],
+    "answerIndex": 0,
+    "explanation": "The coefficient of determination (r 2) is a measure of the fit\nbetween the independent and dependent variables. The\ncoefficient of determination is the proportion of the total\nvariation in the dependent variable that is accounted for by the\nindependent variable. The value of r 2 ranges from 0 to 1. The\ncloser the value of r 2 to 1, the more useful the independent\nvariable (x) is for explaining or predicting the variation in the\ndependent variable (y). A coefficient of determination of 0.85\nequals 85% of the variation of the dependent variable\nexplained by the regression line.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 8,
+    "page": 1327,
+    "topicId": "su20-data-analytics",
+    "stem": "The type of data analytics that is most likely to yield the most\nimpact for an organization but is also the most complex is\ncalled",
+    "choices": [
+      "Diagnostic analysis.",
+      "Predictive analysis.",
+      "Descriptive analysis.",
+      "Prescriptive analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Prescriptive analysis concentrates on what an organization\nneeds to do in order for the predicted future results to actually\noccur. In other words, prescriptive analysis tells a company\nhow to get to where it wants to go. This type of analysis\nprovides the most benefit but requires more inputs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 9,
+    "page": 1327,
+    "topicId": "su20-data-analytics",
+    "stem": "An organization wants to utilize business intelligence (BI) to\nassist in the evaluation of key metrics. The IT manager has\nsuggested incorporating a dashboard feature in its BI tool.\nWhich one of the following is the main reason that\nmanagement should implement the dashboard feature?",
+    "choices": [
+      "It allows management to have as many different charts as\npossible.",
+      "It shows patterns and trends in data across the organization.",
+      "It is designed to focus on metrics that have not been met.",
+      "It can automatically generate reorders of important materials\nfor production."
+    ],
+    "answerIndex": 1,
+    "explanation": "Business intelligence refers to software applications, tools,\nand practices that can be used to analyze and organize raw\ndata. The objective is to speed up and improve managerial\ndecision making and to uncover new business opportunities.\nVisualizing and analyzing business data can be easier with\ndashboard features. A standard dashboard for key analytical\nfunctions makes collaboration easier by enabling a large\norganization to share its analyses across the entire entity.\nBasically, a dashboard is defined as an interactive user\ninterface that presents information in an easy-to-read and\neasy-to-understand manner.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 10,
+    "page": 1328,
+    "topicId": "su20-data-analytics",
+    "stem": "A car insurance company is considering opening branches in a\nforeign country. The country’s population has been growing\nrapidly for the last 5 years. The company wants to know\nwhether the number of car accidents are correlated with the\nrecent population growth. Which of the following charts\nprepared by an analyst would be most helpful to the\ncompany?",
+    "choices": [
+      "A line chart showing each month on the x-axis and the number\nof car accidents on the y-axis.",
+      "A scatter plot showing the number of car accidents on the y-\naxis and the population size on the x-axis.",
+      "A table showing the number of car accidents in rows and the\npopulation size in columns.",
+      "A pie chart showing the number of car accidents in each city\nfor the last 5 years."
+    ],
+    "answerIndex": 1,
+    "explanation": "A scatter plot is the best way to present the relationship by\nillustrating the correlation between the number of car\naccidents (y variable) and the population size (x variable).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 11,
+    "page": 1329,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following is included in the Four Vs of big data?",
+    "choices": [
+      "Volume.",
+      "Velocity.",
+      "Variety.",
+      "All of the answers are correct."
+    ],
+    "answerIndex": 3,
+    "explanation": "The four Vs of big data include volume, velocity, variety, and\nveracity. Some people include the value of the data as a fifth\nV.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 12,
+    "page": 1330,
+    "topicId": "su20-data-analytics",
+    "stem": "In a regression analysis, the coefficient of determination (r 2)",
+    "choices": [
+      "Identifies the causal factor in a linear model.",
+      "Tests that the independent variable has no correlation with the\ndependent variable.",
+      "Assesses how well a model can predict an outcome.",
+      "Is the proportion of the variance in the independent variable\nthat is predictable from the dependent variable."
+    ],
+    "answerIndex": 2,
+    "explanation": "The coefficient of determination (r 2) is a measure of the fit\nbetween the independent and dependent variables. The\ncoefficient of determination is the proportion of the total\nvariation in the dependent variable that is accounted for by the\nindependent variable. The value of r 2 ranges from 0 to 1. The\ncloser the value of r 2 to 1, the more useful the independent\nvariable (x) is for explaining or predicting the variation in the\ndependent variable (y).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 13,
+    "page": 1331,
+    "topicId": "su20-data-analytics",
+    "stem": "A company developed the following multiple regression\nequation, utilizing 10 years of data, and uses it to estimate the\ncost of its product.\nTotal cost = F + aL + bM\nWhere: F = fixed costs\nL = labor rate per hour\nM = material cost per pound\nWhich of the following changes would most likely have the\ngreatest impact on invalidating the results of this model?",
+    "choices": [
+      "Changing the source of material to a low-cost foreign source.",
+      "A significant reduction in factory overhead.",
+      "A significant change in labor productivity.",
+      "Renegotiation of the union contract resulting in a higher wage\nrate."
+    ],
+    "answerIndex": 2,
+    "explanation": "A change in labor productivity would invalidate the results of\nthe model because the level of change is not known.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 14,
+    "page": 1331,
+    "topicId": "su20-data-analytics",
+    "stem": "Business intelligence (BI) has all of the following\ncharacteristics except",
+    "choices": [
+      "Focusing on strategic objectives.",
+      "Giving immediate information about an organization’s critical\nsuccess factors.",
+      "Displaying information in graphical format.",
+      "Providing advice and answers to top management from a\nknowledge-based system."
+    ],
+    "answerIndex": 3,
+    "explanation": "BI serves the needs of top management for managerial control\nand strategic planning. BI focuses on strategic (long-range)\nobjectives and gives immediate information about a firm’s\ncritical success factors. BI is not a program for providing top\nmanagement with advice and answers from a knowledge-\nbased (expert) system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 15,
+    "page": 1332,
+    "topicId": "su20-data-analytics",
+    "stem": "Box Co. uses regression analysis to estimate the functional\nrelationship between an independent variable (cost driver) and\noverhead cost. Assume that the following equation is being\nused:\ny = a + bx\nWhat is the symbol for the independent variable?",
+    "choices": [
+      "y.",
+      "x.",
+      "bx.",
+      "a."
+    ],
+    "answerIndex": 1,
+    "explanation": "The simple regression equation is y = a + bx. The symbol y is\nthe dependent variable (overhead costs), a is the y-axis\nintercept (fixed costs), b is the slope of the regression line\n(cost driver), and x is the independent variable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 16,
+    "page": 1333,
+    "topicId": "su20-data-analytics",
+    "stem": "A regression equation",
+    "choices": [
+      "Estimates the dependent variable(s).",
+      "Encompasses factors outside the relevant range.",
+      "Is based on objective and constraint functions.",
+      "Estimates the independent variable."
+    ],
+    "answerIndex": 0,
+    "explanation": "Regression analysis is used to find an equation for the linear\nrelationship among variables. The behavior of the dependent\nvariable is explained in terms of one or more independent\nvariables. Regression analysis often is used to estimate a\ndependent variable (such as cost) given a known independent\nvariable (such as production).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 17,
+    "page": 1334,
+    "topicId": "su20-data-analytics",
+    "stem": "Multiple regression differs from simple regression in that it",
+    "choices": [
+      "Provides an estimated constant term.",
+      "Has more dependent variables.",
+      "Allows the computation of the coefficient of determination.",
+      "Has more independent variables."
+    ],
+    "answerIndex": 3,
+    "explanation": "Improved accuracy of forecasts may often be achieved by\nregressing the dependent variable on more than one\nindependent variable. The usual multiple regression equation\nis linear and is in the following form when y is the dependent\nvariable; a is the y-axis intercept; x1, x2, etc., are the\nindependent variables; b1, b2, etc., are the coefficients of the\nindependent variables; and e is the error term:\ny = a + b1x1 + b2x2 + ... + e",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 18,
+    "page": 1334,
+    "topicId": "su20-data-analytics",
+    "stem": "Multiple regression analysis involves the use of\nDependent Variables         Independent Variables",
+    "choices": [
+      "One                           More than one",
+      "More than one                More than one",
+      "More than one                One",
+      "One                          One"
+    ],
+    "answerIndex": 0,
+    "explanation": "Improved accuracy of forecasts may often be achieved by\nregressing the dependent variable on more than one\nindependent variable. The usual multiple regression equation\nis linear and is in the following form:\ny = a + bx1 + bx2 + ... + e",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 19,
+    "page": 1335,
+    "topicId": "su20-data-analytics",
+    "stem": "For cost estimation, simple regression differs from multiple\nregression in that simple regression uses only",
+    "choices": [
+      "One dependent variable, while multiple regression uses all\navailable data to estimate the cost function.",
+      "Dependent variables, while multiple regression can use both\ndependent and independent variables.",
+      "One independent variable, while multiple regression uses\nmore than one independent variable.",
+      "One dependent variable, while multiple regression uses more\nthan one dependent variable."
+    ],
+    "answerIndex": 2,
+    "explanation": "Simple regression uses the algebraic formula for a straight\nline, y = a + bx, where x is the independent variable. Multiple\nregression is used when there is more than one independent\nvariable. Multiple regression allows a firm to identify many\nfactors (independent variables) and to weight each one\naccording to its influences on the overall outcome (y = a +\nb1x1 + b2x2 + b3x3 + etc.).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 20,
+    "page": 1336,
+    "topicId": "su20-data-analytics",
+    "stem": "In preparing the annual profit plan for the coming year, Fine\nCompany wants to determine the cost behavior pattern of the\nmaintenance costs. Fine has decided to use linear regression\nby employing the equation y = a + bx for maintenance costs.\nThe results of the regression analysis are given below.\na 684.65\nb 7.2884\nBased upon the data derived from the regression analysis,\n420 maintenance hours in a month would mean that Fine Co.’s\nmaintenance costs (rounded to the nearest dollar) would be\nbudgeted at",
+    "choices": [
+      "$3,780",
+      "$3,600",
+      "$3,790",
+      "$3,746"
+    ],
+    "answerIndex": 3,
+    "explanation": "Substituting the given data into the regression equation results\nin a budgeted cost of $3,746 (rounded to the nearest dollar).\ny = a + bx\ny = 684.65 + 7.2884(420)\ny = $3,746",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 21,
+    "page": 1337,
+    "topicId": "su20-data-analytics",
+    "stem": "The letter x in the standard regression equation\nis best described as a(n)",
+    "choices": [
+      "Independent variable.",
+      "Dependent variable.",
+      "Constant coefficient.",
+      "Coefficient of determination."
+    ],
+    "answerIndex": 0,
+    "explanation": "The letter x in the standard regression equation is the\nindependent variable. For example, in a regression to\ndetermine the total cost of production, x equals units\nproduced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 22,
+    "page": 1338,
+    "topicId": "su20-data-analytics",
+    "stem": "In the standard regression equation y = a + bx, the letter b\nis best described as a(n)",
+    "choices": [
+      "Independent variable.",
+      "Dependent variable.",
+      "Y intercept.",
+      "Slope of the regression line."
+    ],
+    "answerIndex": 3,
+    "explanation": "In the standard regression equation, b represents the slope of\nthe regression line. For example, in a cost determination\nregression, y equals total costs, b is the variable cost per unit,\nx is the number of units produced, and a is fixed cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 23,
+    "page": 1338,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following best describes unstructured data?",
+    "choices": [
+      "Data with a high level of organization.",
+      "Data systematically stored with markers to enforce hierarchies\nof records and fields within the data.",
+      "Information that is not organized in a pre-defined manner (e.g.,\ntext-heavy facts, dates, numbers, and images).",
+      "Conforms with the organization of data models associated with\nrelational databases."
+    ],
+    "answerIndex": 2,
+    "explanation": "Unstructured data refers to information that is not organized in\na pre-defined manner (e.g., text-heavy facts, dates, numbers,\nand images).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 24,
+    "page": 1339,
+    "topicId": "su20-data-analytics",
+    "stem": "Each of the following represents a characteristic of big\ndata except",
+    "choices": [
+      "Size.",
+      "Mixture.",
+      "Speed.",
+      "Uniformity."
+    ],
+    "answerIndex": 3,
+    "explanation": "Big data is often characterized by the “4 Vs” - volume, variety,\nvelocity, and veracity. Thus, uniformity is not a characteristic of\nbig data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 25,
+    "page": 1339,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following is a correct statement regarding\nvolume-based value?",
+    "choices": [
+      "The faster businesses can inject data into their data and\nanalytics platform, the more time they will have to ask the right\nquestions and seek answers.",
+      "Rapid analysis capabilities provide businesses with the right\ndecision in time to achieve their customer relationship\nmanagement objectives.",
+      "The more data businesses have on the customers, both recent\nand historical, the greater the insights.",
+      "In the digital era, capability to acquire and analyze varied data\nis extremely valuable."
+    ],
+    "answerIndex": 2,
+    "explanation": "The more data businesses have on the customers, both\nrecent and historical, the greater the insights is a correct\nstatement regarding volume-based value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 26,
+    "page": 1340,
+    "topicId": "su20-data-analytics",
+    "stem": "All of the following are correct statements regarding velocity-\nbased value except",
+    "choices": [
+      "The faster businesses can inject data into their data and\nanalytics platform, the more time they will have to ask the right\nquestions and seek answers.",
+      "Rapid analysis capabilities provide businesses with the right\ndecision in time to achieve their customer relationship\nmanagement objectives.",
+      "The computing power required to quickly process huge\nvolumes and varieties of data can overwhelm a single server\nor multiple servers. Organizations must apply adequate\ncomputer power to big data tasks to achieve the desired\nvelocity.",
+      "The more data businesses have on the customers, both recent\nand historical, the greater the insights."
+    ],
+    "answerIndex": 3,
+    "explanation": "The amount and history of customer data concerns volume and variety, not velocity.",
+    "answerStatus": "inferred"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 27,
+    "page": 1341,
+    "topicId": "su20-data-analytics",
+    "stem": "An automobile parts manufacturer has received complaints\nfrom customers about declining quality. After a quick review,\nmanagement realizes the problem has no single source. To\nperform a thorough process of problem identification, the most\nappropriate tool is a(n)",
+    "choices": [
+      "Fishbone diagram.",
+      "Histogram.",
+      "Pareto diagram.",
+      "Statistical control charts."
+    ],
+    "answerIndex": 0,
+    "explanation": "A fishbone diagram (also called a cause-and-effect diagram or\nan Ishikawa diagram) is used in total quality management for\nprocess improvement. It is useful in studying causation (why\nthe actual and desired situations differ). This format organizes\nthe analysis of causation and helps to identify possible\ninteractions among causes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 28,
+    "page": 1342,
+    "topicId": "su20-data-analytics",
+    "stem": "The new purchasing director is analyzing purchase orders for\nthe organization. Which of the following analyses\nwould best be displayed on a histogram?",
+    "choices": [
+      "In the past year the organization placed 10,000 purchase\norders. Organize the number of orders placed with each\nsupplier, sorted in descending order.",
+      "The average turnaround time from issuing a purchase order to\nreceiving the merchandise is 7 days. Review the last 2,000\npurchase orders, and using 10 days as the upper control limit\nand 4 days as the lower control limit, graph the turnaround\ntime for each order.",
+      "The organization purchased US $27 million worth of inventory\nin the past year. Distribute by value, using US $500\nincrements, the quantity of purchase orders that fall within\neach range.",
+      "Identify and organize the reasons the average turnaround time\nfor purchase orders falls outside the control parameters of 4-\n10 days."
+    ],
+    "answerIndex": 2,
+    "explanation": "The histogram displays a continuous frequency distribution of\nthe independent variable in the form of a bar graph. The y axis\nis the quantity of purchase orders and the x axis is the\npurchase order amount. The histogram would best display the\nquantity of purchase orders by dollar value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 29,
+    "page": 1343,
+    "topicId": "su20-data-analytics",
+    "stem": "The director of sales asks for a count of customers grouped in\ndescending numerical rank by (1) the number of orders they\nplace during a single year and (2) the dollar amounts of the\naverage order. The visual format of these two pieces of\ninformation is most likely to be a",
+    "choices": [
+      "Fishbone diagram.",
+      "Cost of quality report.",
+      "Kaizen diagram.",
+      "Pareto diagram."
+    ],
+    "answerIndex": 3,
+    "explanation": "A Pareto diagram displays the values of an independent\nvariable such that managers can quickly identify the areas\nmost in need of attention. The variables involved must be\nquantifiable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 30,
+    "page": 1344,
+    "topicId": "su20-data-analytics",
+    "stem": "A health insurer uses a computer application to monitor\nphysician bill amounts for various surgical procedures. This\nprogram allows the organization to better control\nreimbursement rates. The X-bar chart below is an example of\nthe output from this application.\nSelect the interpretation that best explains the data plotted on\nthe chart.",
+    "choices": [
+      "Positive correlation.",
+      "Abnormal variation.",
+      "Normal variation.",
+      "Cyclic variation."
+    ],
+    "answerIndex": 1,
+    "explanation": "Statistical quality control charts are graphic aids for monitoring\nthe status of any process subject to random variations. The X-\nbar chart presented here depicts the sample means for a\nvariable. If the values fall within the upper and lower control\nlimits, no action is taken. Accordingly, values outside these\nlimits are abnormal and should be investigated for possible\ncorrective action.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 31,
+    "page": 1345,
+    "topicId": "su20-data-analytics",
+    "stem": "Statistical quality control often involves the use of control\ncharts whose basic purpose is to",
+    "choices": [
+      "Determine when accounting control procedures are not\nworking.",
+      "Control labor costs in production operations.",
+      "Detect performance trends away from normal operations.",
+      "Monitor internal control applications of information technology."
+    ],
+    "answerIndex": 2,
+    "explanation": "Statistical control charts are graphic aids for monitoring the\nstatus of any process subject to acceptable and unacceptable\nvariations during repeated operations. The chart consists of\nthree horizontal lines plotted on a horizontal time scale. The\nvertical scale represents the appropriate quantitative measure.\nThe center line represents the average range or overall mean\nfor the process being controlled. The other two lines are the\nupper control limit and the lower control limit. The processes\nare measured periodically, and the values are plotted on the\nchart. If the value falls within the control limits, no action is\ntaken. If the value falls outside the limits, the process is\nconsidered out of control, and an investigation is made for\npossible corrective action. Another advantage of the chart is\nthat it makes trends visible.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 32,
+    "page": 1346,
+    "topicId": "su20-data-analytics",
+    "stem": "A manufacturer mass produces nuts and bolts on its assembly\nline. The line supervisors sample every nth unit for\nconformance with specifications. Once a nonconforming part is\ndetected, the machinery is shut down and adjusted.\nThe most appropriate tool for this process is a",
+    "choices": [
+      "Fishbone diagram.",
+      "Cost of quality report.",
+      "Regression analysis.",
+      "Statistical quality control chart."
+    ],
+    "answerIndex": 3,
+    "explanation": "Statistical quality control is a method of determining whether\nthe shipment or production run of units lies within acceptable\nlimits. It is also used to determine whether production\nprocesses are out of control. Statistical control charts are\ngraphic aids for monitoring the status of any process subject\nto random variations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 33,
+    "page": 1347,
+    "topicId": "su20-data-analytics",
+    "stem": "A cost-volume-profit model developed in a dynamic\nenvironment determined that the estimated parameters used\nmay vary between limits. Subsequent testing of the model with\nrespect to all possible values of the estimated parameters is\ntermed",
+    "choices": [
+      "A sensitivity analysis.",
+      "Learning curve analysis.",
+      "Expected value analysis.",
+      "A time-series study."
+    ],
+    "answerIndex": 0,
+    "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis. Sensitivity\nanalysis examines how the model’s outcomes change as the\nparameters change.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 34,
+    "page": 1348,
+    "topicId": "su20-data-analytics",
+    "stem": "A cereal producer often receives complaints that boxes are\nunderweight. To gather data on the extent of this problem, the\nproducer should develop which of the following?",
+    "choices": [
+      "Fishbone diagram.",
+      "Statistical control chart.",
+      "Cost-of-quality analysis.",
+      "Pareto chart."
+    ],
+    "answerIndex": 1,
+    "explanation": "A statistical control chart is used to monitor the extent of\nvariances between actual and expected results. The chart has\nthree horizontal lines. The midline is the target value, and the\nother lines are the upper and lower control limits. Results are\nplotted on the chart. Accordingly, the cereal producer should\ndevelop a control chart to gather data on the extent of the\nvariances between the actual and expected (midline) weight(s)\nof the cereal boxes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 35,
+    "page": 1348,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following can be discovered using a data-mining\nprocess?",
+    "choices": [
+      "Data structure.",
+      "Previously unknown information.",
+      "Artificial intelligence.",
+      "Standard query reporting."
+    ],
+    "answerIndex": 1,
+    "explanation": "Data mining examines large amounts of data to discover\npatterns in the data (i.e., unexpected relationships among\ndata). A classic example of the use of data mining is the\ndiscovery by convenience stores that diapers and beer often\nappear on the same sales transaction in the late evening.\nThus, previously unknown information can be discovered\nusing a data-mining process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 36,
+    "page": 1349,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following is a critical success factor in data mining\na large data store?",
+    "choices": [
+      "Pattern recognition.",
+      "Effective search engines.",
+      "Image processing systems.",
+      "Accurate universal resource locator (URL)."
+    ],
+    "answerIndex": 0,
+    "explanation": "Data mining allows a user to discover hidden relationships,\nsuch as associations, sequences of events, classifications\n(descriptions of the groups to which the item belongs), or\nclusters (new groupings previously not known). Typical\napplications of data mining are identification of potential\ncustomers and purchasing power.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 37,
+    "page": 1350,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following best describes a characteristic of big\ndata?",
+    "choices": [
+      "Collected data often provides straightforward answers to\nusers.",
+      "Data collected are free from useless information or incorrect\nvariables.",
+      "Big data is in a visual context, such as a graph or chart, rather\nthan a text format.",
+      "Data of untapped markets is often not collected."
+    ],
+    "answerIndex": 3,
+    "explanation": "One limitation of big data is that user-level data results are\nincomplete. Generally, the data available to an organization\nare restricted to data of persons who have had some contact\nwith the organization (e.g., visited the organization’s website\nor called the organization). The data are only representative of\nthe target market; thus, untapped markets could potentially\nexist, the data of which are not being captured.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 38,
+    "page": 1351,
+    "topicId": "su20-data-analytics",
+    "stem": "A company uses big data analytics in marketing. Which of the\nfollowing is a limitation of using big data?",
+    "choices": [
+      "The company can use big data to predict customer behaviors.",
+      "Data results cannot be visualized to identify and forecast\ncustomer trends.",
+      "Big data cannot explain why customers behave in certain\nways.",
+      "Data collected only represent untapped customers but not\ntapped customers."
+    ],
+    "answerIndex": 2,
+    "explanation": "One limitation of big data is that determining why the analysis\nresults are what they are is difficult. While big data analysis\ncan show that there is a certain pattern in monthly sales, it\nfails to show what causes the pattern. Further and more\ncomplicated analyses are needed, the results of which tend to\nbe more difficult for non-technical people to understand.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 39,
+    "page": 1351,
+    "topicId": "su20-data-analytics",
+    "stem": "Data visualization",
+    "choices": [
+      "Includes visualization tools such as bubble charts, pareto\ndiagrams, boxplots, and what-if analyses.",
+      "Ensures the presentation of trends and correlations are\nunderstood by a wider audience without bias.",
+      "Assists with big data analytics to display data results in a\nvisual context.",
+      "Is most useful to an audience when visualization tools present\nvarious items in different scales and skip values to highlight\nitems emphasized by the presenter."
+    ],
+    "answerIndex": 2,
+    "explanation": "One limitation of big data is that user-level data results require\ninterpretation prior to use. Data visualizations assist big data\nin identifying trends and correlations that run the risk of going\nundetected in text-based data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 40,
+    "page": 1352,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following is a best practice for visualization tools\nto avoid distortion in the communication of complex\ninformation?",
+    "choices": [
+      "Exclude calculations from the design to ensure the user can\ninterpret data in their own way.",
+      "Present various items in different scales and skip values to\nhighlight items emphasized by the presenter.",
+      "Use variant shades of the same color to present subgroups\nclassified under one group.",
+      "Ask others for feedback before finalizing the design to ensure\nunderstandability."
+    ],
+    "answerIndex": 3,
+    "explanation": "The presenter can ask others for feedback on the design\nbefore finalizing the presentation. Asking others for opinions\non whether too much information causes confusion or whether\nthe presentation is understandable are good approaches.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 41,
+    "page": 1353,
+    "topicId": "su20-data-analytics",
+    "stem": "Corporation B recently hired a financial analyst to improve its\nfinancial results. The analyst is interested in implementing a\nnew type of project analysis that will help evaluate the effects\nof small changes in advertising expenses on sales. The\nanalyst believes that this form of analysis will be useful in\nforecasting the impacts of resource allocation decisions. What\ntype of analysis is the analyst attempting to implement?",
+    "choices": [
+      "Delphi approach.",
+      "What-if analysis.",
+      "The goodness-of-fit test.",
+      "Fishbone diagrams."
+    ],
+    "answerIndex": 1,
+    "explanation": "What-if analysis is a process of determining the effects on\noutcomes in a model through changes in scenarios. The\nanalyst is performing a what-if analysis by evaluating the\neffects of small changes in advertising expenses on sales to\nobtain better forecasts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 42,
+    "page": 1354,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following is a primary advantage of a what-if\nanalysis?",
+    "choices": [
+      "It allows users to determine the effects of outcomes in all\nscenarios.",
+      "It summarizes opinions from many experts and feeds the\nsummaries back to the experts without revealing participants\nto each other.",
+      "It enables users to evaluate their outcomes by applying a goal\nseeking approach.",
+      "It results in a reduction of data and strengthened data integrity."
+    ],
+    "answerIndex": 2,
+    "explanation": "What-if analysis is a process of determining the effects on\noutcomes in a model through changes in scenarios. Goal\nseeking occurs when the decision maker has a specific\noutcome in mind and needs to determine how it can be\nachieved. Thus, a what-if analysis enables users to evaluate\ntheir outcomes by applying a goal seeking approach.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 43,
+    "page": 1355,
+    "topicId": "su20-data-analytics",
+    "stem": "A cost accountant is updating its fourth quarter budget. The\nannual goal of cost savings is $56,000. The cost savings for\nthe first, second, and third quarters are $12,000, $6,700, and\n$9,200. The accountant performed an analysis to determine\nthe cost savings required for the fourth quarter to achieve the\nannual goal. This is an example of",
+    "choices": [
+      "Monte Carlo simulation.",
+      "What-if analysis.",
+      "Predictive analytics.",
+      "Time series analysis."
+    ],
+    "answerIndex": 1,
+    "explanation": "What-if analysis is a process of determining the effects on\noutcomes in a model through changes in scenarios. Goal\nseeking occurs when the decision maker has a specific\noutcome in mind and needs to determine how it can be\nachieved. The accountant performs the analysis to determine\nfourth quarter cost savings so that the annual goal of $56,000\ncost savings will be achieved. This is an example of what-if\nanalysis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 44,
+    "page": 1356,
+    "topicId": "su20-data-analytics",
+    "stem": "What-if analysis is also known as",
+    "choices": [
+      "Goal seeking analysis.",
+      "Trend analysis.",
+      "Regression analysis.",
+      "Horizontal analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "What-if analysis is a process of determining the effects on\noutcomes in a model through changes in scenarios. What-if\nanalysis is also known as goal seeking analysis. Goal seeking\noccurs when the decision maker has a specific outcome in\nmind and needs to determine how it can be achieved.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 45,
+    "page": 1356,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following best represents the application of\npredictive analytics?",
+    "choices": [
+      "The human resource manager prepares an analysis to show\nwhich departments have the highest employee turnover.",
+      "The website recommends pet toys and bedding after the\ncustomer purchases pet food.",
+      "A consultant organizes an analysis of causation for dissatisfied\nworkers and possible interactions among causes.",
+      "A cost accountant monitors whether direct materials used are\nwithin the acceptable variations for the last 6 months."
+    ],
+    "answerIndex": 1,
+    "explanation": "A common use of predictive analytics in the retail sector\noccurs when a customer selects an item to purchase online\nand prepares to finalize the transaction; the web page then\ndisplays additional products other customers purchased in\nconjunction with the initial item.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 46,
+    "page": 1357,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following techniques are most effective in\nidentifying trends and patterns?",
+    "choices": [
+      "Time series analysis, exploratory data analysis, predictive\nanalytics.",
+      "Fishbone diagrams, time series analysis, predictive analytics.",
+      "Exploratory data analysis, Pareto diagrams, scatter plots.",
+      "Line charts, scatter plots, Delphi approach."
+    ],
+    "answerIndex": 0,
+    "explanation": "Time series analysis is the process of projecting future trends\nbased on past experiences. Exploratory data analysis is an\napproach to data analysis that seeks to open-mindedly\nobserve the data in order to gain some new, often\nunexpected, insight into the data. Predictive analytics uses\ndata, statistical algorithms, and machine learning techniques\nto draw insights on such trends as consumer or industry\nbehavior patterns. All three of these techniques are effective in\nidentifying trends and patterns.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 47,
+    "page": 1358,
+    "topicId": "su20-data-analytics",
+    "stem": "Exploratory data analysis",
+    "choices": [
+      "Rarely uses graphical tools in order to avoid bias generated\nfrom manipulating visualization tools.",
+      "Aims to reveal patterns and discover insights by uncovering\nthe underlying structure of data.",
+      "Is often used as the last step of the data analysis process to\ngain new insight into the data.",
+      "Often develops assumptions at an early stage so that\nanomalies can be identified sooner than traditional techniques."
+    ],
+    "answerIndex": 1,
+    "explanation": "Exploratory data analysis seeks to maximize insight into a\ndata set, uncover an underlying structure, and check for\noutliers and anomalies. The main role of exploratory data\nanalysis is to open-mindedly explore in order to gain some\nnew, often unexpected, insight into the data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 48,
+    "page": 1359,
+    "topicId": "su20-data-analytics",
+    "stem": "A consultant is analyzing Company A’s sales report on pants.\nThe consultant has found that there are several unique\npatterns in the data. He noticed that there is a set of customers\nwho purchased mainly one to two different types of pants in a\nyear. This customer segment is the largest and is constantly\ngrowing. After further analyses he found that the pants\npurchased by each of these customers have different sizes.\nMore analyses revealed that these customers are small\nclothing retail stores. The consultant then started to analyze\nhow the company can improve supply chain management and\nbusiness relationships with this specific customer segment to\nimprove profitability. The method used in analyzing the\nproblem is best described as a(n)",
+    "choices": [
+      "Monte Carlo simulation.",
+      "Regression analysis.",
+      "Sensitivity analysis.",
+      "Exploratory data analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Exploratory data analysis is an approach to data analysis that\ndiffers from traditional modeling and analytic techniques by\nencouraging the data itself to reveal its underlying structure\nrather than prematurely applying a hypothesis or statistical\nmethod. It seeks to maximize insight into a data set, uncover\nan underlying structure, identify important variables, check for\noutliers and anomalies, test underlying assumptions, develop\nparsimonious models, and determine optimal factors. This is\nan example of exploratory data analysis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 49,
+    "page": 1360,
+    "topicId": "su20-data-analytics",
+    "stem": "An analyst is preparing a time series analysis for the sales of\nswimwear. He notices that, for the last 3 years, the swimwear\nsales rise during May and August and fall during November\nand February. Which of the following patterns best describes\nthis scenario?",
+    "choices": [
+      "Irregular pattern.",
+      "Cyclical pattern.",
+      "Chronological pattern.",
+      "Seasonal pattern."
+    ],
+    "answerIndex": 3,
+    "explanation": "A seasonal pattern often exists when a time series is\ninfluenced by seasonal factors (e.g., the quarter of the year,\nthe month, or the day of the week). The swimwear sales rise\nduring May and August (summer months) and fall during\nNovember and February (winter months). Thus, this scenario\nis best described as a seasonal pattern.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 50,
+    "page": 1361,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following most likely shows a cyclical pattern?",
+    "choices": [
+      "Traffic peaks in the morning and evening hours.",
+      "An increase in sales of gloves in the winter.",
+      "Economic data affected by recession.",
+      "An increase in oil prices due to an oil workers’ strike."
+    ],
+    "answerIndex": 2,
+    "explanation": "A cyclical pattern exists when data points show rises and falls\nthat are not of a fixed or seasonal pattern. The duration of\nthese cyclical fluctuations is usually at least a couple of years.\nAn example is business cycles (i.e., expansion, peak,\nrecession, depression), which typically last several years, but\nthe length of the current cycle is never known in advance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 51,
+    "page": 1361,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following most likely shows an irregular pattern?",
+    "choices": [
+      "Increase in GDP during expansion.",
+      "Decrease in the number of tourists due to an earthquake.",
+      "Decrease in the sales of ice cream during winter.",
+      "Increase in the number of tourists during weekends and\nholidays."
+    ],
+    "answerIndex": 1,
+    "explanation": "An irregular pattern exists when random or unplanned factors\noccur. An earthquake is an unplanned factor. Thus, a\ndecrease in the number of tourists due to an earthquake is an\nexample of an irregular pattern.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 52,
+    "page": 1362,
+    "topicId": "su20-data-analytics",
+    "stem": "Time series analysis",
+    "choices": [
+      "Uses trial and error to determine the effects of changes in\nassumptions on outcome.",
+      "Analyzes current results against past activity to determine\nshifts in trends.",
+      "Solicits opinions from experts, summarizes the opinions, and\nfeeds the summaries back to the experts without revealing\nparticipants to each other.",
+      "Assists with determining whether a sample is representative of\nthe population."
+    ],
+    "answerIndex": 1,
+    "explanation": "Time series analysis is the process of projecting future trends\nbased on past experience. Benefits of time series analysis\ninclude analyzing current results against activity in the past to\ndetermine trend shifts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 53,
+    "page": 1363,
+    "topicId": "su20-data-analytics",
+    "stem": "Which is the correct order of the steps in the data mining\nprocess?\nI.   Perform regression analysis to generate an equation\nthat models the data.\nII.   Identify anomalies and unusual data records.\nIII.    Prepare visual presentations and reports.\nIV.     Generalize the relationships among data.\nV.     Find relationships between variables and group the\nrelationships.",
+    "choices": [
+      "I, V, IV, II, III.",
+      "II, V, IV, I, III.",
+      "II, I, IV, V, III.",
+      "II, IV, V, III, I."
+    ],
+    "answerIndex": 1,
+    "explanation": "The steps for the data mining process are\n1. Identify anomalies and unusual data records.\n2. Find relationships between variables and group the\nrelationships.\n3. Generalize the relationships among data.\n4. Perform regression analysis to generate an equation\nthat models the data.\n5. Prepare visual presentations and reports.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 54,
+    "page": 1364,
+    "topicId": "su20-data-analytics",
+    "stem": "The goal of structured query language (SQL) is to",
+    "choices": [
+      "Evaluate and document the structure of the database.",
+      "Clean up incorrect, incomplete, or duplicated data before\nuploading it into the database.",
+      "Create, update, retrieve, and manage data within a database.",
+      "Provide detailed information about the size, format, usage,\nmeaning, and ownership of every data element."
+    ],
+    "answerIndex": 2,
+    "explanation": "SQL is a language used to access and manipulate data within\nrelational database management systems. Queries are\nconstructed and executed using a set of commands to create,\nupdate, and retrieve information.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 55,
+    "page": 1365,
+    "topicId": "su20-data-analytics",
+    "stem": "An analyst is performing a sensitivity analysis on how changes\nin the inflation rate and the interest rate can affect bond prices.\nWhich of the following most likely causes the sensitivity\nanalysis to be inaccurate?",
+    "choices": [
+      "The interest rate changes affect bond prices to a greater\nextent than the inflation rate.",
+      "Inflation is expected to increase in the next year.",
+      "Bond prices are extremely volatile to both changes in inflation\nand interest rates.",
+      "Interest rates are affected by changes in the inflation rate."
+    ],
+    "answerIndex": 3,
+    "explanation": "Sensitivity analysis is limited due to the consideration of\nvariables individually as opposed to all together. If both bond\nprices and interest rates are affected by changes in the\ninflation rates, the results of the sensitivity analysis may be\ndistorted.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 56,
+    "page": 1365,
+    "topicId": "su20-data-analytics",
+    "stem": "An analyst completed a sensitivity analysis for sales and\nprepared the following graph:\nBased on the graph, which of the following is\nthe most appropriate conclusion?",
+    "choices": [
+      "If the company has less than $2,000 to spend, advertising\nexpenses has the lowest impact on sales compared to\npackaging expenses and R&D expenses.",
+      "If the company has $2,000 to spend on one of the listed cost\ncategories it should spend it on packaging to maximize sales.",
+      "R&D expenses has the highest impact on sales compared to\npackaging expenses and advertising expenses.",
+      "If the company has $6,500 to spend on one of the listed cost\ncategories it should spend it on R&D to maximize sales."
+    ],
+    "answerIndex": 3,
+    "explanation": "Sensitivity analysis uses trial and error to determine the effects\nof changes in variables or assumptions on final results. It is\nuseful in deciding whether expending additional resources to\nobtain better forecasts is justified. According to the graph, if\nthe company has more than $5,000 to spend on one of the\nlisted cost categories, it should spend it on R&D to maximize\nsales.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 57,
+    "page": 1367,
+    "topicId": "su20-data-analytics",
+    "stem": "A local insurance company has observed a dramatic increase\nin claims in recent years that the actuarial and risk control\ndepartments failed to explain. To identify the reason, the\ncompany gathered demographic and customer information and\nidentified that married women aged 50 or older, who were\npresumed to be low-risk customers, have been filing more\nclaims than expected. This is an example of",
+    "choices": [
+      "Predictive analysis.",
+      "Data mining analysis.",
+      "What-if analysis.",
+      "Sensitivity analysis."
+    ],
+    "answerIndex": 1,
+    "explanation": "Data mining is the search for unexpected relationships among\ndata. The classic example of the use of data mining was the\ndiscovery by convenience stores that diapers and beer often\nappeared on the same sales transaction in the late evening.\nThus, identifying a previously unknown pattern (i.e., the\nunexpected higher claims by customers presumed to be low-\nrisk) is an example of data mining.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 58,
+    "page": 1368,
+    "topicId": "su20-data-analytics",
+    "stem": "Which of the following is not an activity or analysis typically\nperformed during the data mining process?",
+    "choices": [
+      "Prescriptive analysis.",
+      "Anomaly detection.",
+      "Regression analysis.",
+      "Data visualization."
+    ],
+    "answerIndex": 0,
+    "explanation": "Prescriptive analysis concentrates on what an organization\nneeds to do in order for the predicted future results to actually\noccur. The data mining process involves (1) finding anomalies,\n(2) finding relationships between variables and clustering, (3)\ngeneralizing the relationships, (4) performing regression\nanalysis to quantify the relationships, and (5) data\nvisualization. The data mining process does not include\nidentifying and suggesting what should be done.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 20,
+    "section": 2,
+    "number": 59,
+    "page": 1369,
+    "topicId": "su20-data-analytics",
+    "stem": "A company has three production departments – A, B, and C.\nBased on production data, the production manager of\nproduction department A found that the defective rate for the\ncurrent month is 6% greater than expected. To identify the\nreason for the deviation, the production manager asked for\nhelp from the management accountant, who then gathered\nproduction-related information, developed a model, and found\nthe relationships among the defective rates and various\nvariables. Seeing that production departments B and C are\nalso experiencing a higher-than-expected defective rate, the\naccountant applied the model to production departments B and\nC to see if the relationships can be generalized. Results of the\nanalyses were summarized and presented to senior\nmanagement, who then developed plans to mitigate the\nproblem.\nWhich of the following phases from the above scenario\nis not part of the data mining process?",
+    "choices": [
+      "Finding that the defective rate is 6% greater than expected.",
+      "Applying the model to other production departments.",
+      "Presenting the results to senior management.",
+      "Developing plans to mitigate the problem."
+    ],
+    "answerIndex": 3,
+    "explanation": "The data mining process includes the tasks from anomaly\ndetection to the presentation of data. Activities after the\npresentation of data, such as developing plans based on the\npresented data, are not part of in the data mining process.",
+    "answerStatus": "source"
+  }
+]

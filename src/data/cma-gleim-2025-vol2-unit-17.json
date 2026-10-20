@@ -1,0 +1,1585 @@
+[
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 1,
+    "page": 1008,
+    "topicId": "su17-governance",
+    "stem": "A major impact of the Foreign Corrupt Practices Act of 1977 is\nthat registrants subject to the Securities Exchange Act of 1934\nare now required to",
+    "choices": [
+      "Keep records that reflect the transactions and dispositions of\nassets and to maintain a system of internal accounting\ncontrols.",
+      "Provide access to records by authorized agencies of the\nfederal government.",
+      "Prepare financial statements in accord with international\naccounting standards.",
+      "Produce full, fair, and accurate periodic reports on foreign\ncommerce and/or foreign political party affiliations."
+    ],
+    "answerIndex": 0,
+    "explanation": "The main purpose of the Foreign Corrupt Practices Act of\n1977 is to prevent bribery by firms that do business in foreign\ncountries. A major ramification is that it requires all companies\nthat must register with the SEC under the Securities Exchange\nAct of 1934 to maintain adequate accounting records and a\nsystem of internal accounting control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 2,
+    "page": 1009,
+    "topicId": "su17-governance",
+    "stem": "Section 201 of the Sarbanes-Oxley Act of 2002 prohibits audit\nfirms from performing certain engagements for audit clients.\nWhich of the following services is permitted under\nSection 201?",
+    "choices": [
+      "Preparation of tax returns.",
+      "Bookkeeping services.",
+      "Internal auditing outsourcing.",
+      "Actuarial services."
+    ],
+    "answerIndex": 0,
+    "explanation": "Tax services are not prohibited by Section 201.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 3,
+    "page": 1010,
+    "topicId": "su17-governance",
+    "stem": "Which of the following corporations are subject to the\naccounting requirements of the Foreign Corrupt Practices Act\n(FCPA)?",
+    "choices": [
+      "All corporations engaged in interstate commerce.",
+      "All domestic corporations engaged in international trade.",
+      "All corporations that have made a public offering under the\nSecurities Act of 1933.",
+      "All corporations whose securities are registered pursuant to\nthe Securities Exchange Act of 1934."
+    ],
+    "answerIndex": 3,
+    "explanation": "The accounting requirements of the FCPA apply to all\ncompanies required to register and report under the Securities\nExchange Act of 1934. These companies must maintain\nbooks, records, and accounts in reasonable detail that\naccurately and fairly reflect transactions. The FCPA also\nrequires these companies to maintain a system of internal\naccounting control that provides certain reasonable\nassurances, including that corporate assets are not used for\nbribes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 4,
+    "page": 1010,
+    "topicId": "su17-governance",
+    "stem": "Which one of the following is not a requirement of Section 404\nof the Sarbanes-Oxley Act?",
+    "choices": [
+      "Management is required to issue an internal control report that\nexplicitly accepts responsibility for establishing and\nmaintaining adequate internal control over financial reporting.",
+      "Management is required to issue an assertion as to whether\ninternal control over financial reporting is effective as of the\nend of the fiscal year.",
+      "An entity’s auditor is required to audit management’s assertion\nabout the effectiveness of internal control over financial\nreporting and express an opinion on its effectiveness.",
+      "An entity’s auditor is required to perform a completely separate\naudit of internal control not related to the audit of the entity’s\nfinancial statements in order to achieve objectivity."
+    ],
+    "answerIndex": 3,
+    "explanation": "Section 404 of the Sarbanes-Oxley Act does not require an\nentity’s auditor to perform a completely separate audit of\ninternal control not related to the audit of the entity’s financial\nstatements in order to achieve objectivity. The review of\ninternal control can be conducted during the audit of the\nfinancial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 5,
+    "page": 1012,
+    "topicId": "su17-governance",
+    "stem": "The requirement of the Foreign Corrupt Practices Act of 1977\nto devise and maintain adequate internal control is assigned in\nthe act to the",
+    "choices": [
+      "Chief financial officer.",
+      "Board of directors.",
+      "Director of internal auditing.",
+      "Company as a whole with no designation of specific persons\nor positions."
+    ],
+    "answerIndex": 3,
+    "explanation": "The accounting requirements apply to all public companies\nthat must register under the Securities Exchange Act of 1934.\nThe responsibility is thus placed on companies, not\nindividuals.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 6,
+    "page": 1012,
+    "topicId": "su17-governance",
+    "stem": "Under the Foreign Corrupt Practices Act (FCPA), an action\nmay be brought that seeks",
+    "choices": [
+      "Treble damages by a private party.",
+      "Injunctive relief by a private party.",
+      "Criminal sanctions against both the corporation and its officers\nby the Department of Justice.",
+      "Damages and injunctive relief by the Securities and Exchange\nCommission."
+    ],
+    "answerIndex": 2,
+    "explanation": "The SEC may investigate violations of the FCPA, bring civil\nactions for its enforcement, and recommend that the Justice\nDepartment prosecute criminal violations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 7,
+    "page": 1013,
+    "topicId": "su17-governance",
+    "stem": "Audit committees have been identified as a major factor in\npromoting the independence of both internal and external\nauditors. Which of the following is the most important limitation\non the effectiveness of audit committees?",
+    "choices": [
+      "Audit committees may be composed of independent directors.\nHowever, those directors may have close personal and\nprofessional friendships with management.",
+      "Audit committee members are compensated by the\norganization and thus favor an owner’s view.",
+      "Audit committees devote most of their efforts to external audit\nconcerns and do not pay much attention to the internal audit\nactivity and the overall control environment.",
+      "Audit committee members do not normally have degrees in the\naccounting or auditing fields."
+    ],
+    "answerIndex": 0,
+    "explanation": "The audit committee is a subcommittee made up of outside\ndirectors who are independent of management. Its purpose is\nto help keep external and internal auditors independent of\nmanagement and to ensure that the directors are exercising\ndue care. However, if independence is impaired by personal\nand professional friendships, the effectiveness of the audit\ncommittee may be limited.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 8,
+    "page": 1014,
+    "topicId": "su17-governance",
+    "stem": "The audit committee may serve several important purposes,\nsome of which directly benefit the internal audit activity.\nThe most significant benefit provided by the audit committee\nto the internal audit activity is",
+    "choices": [
+      "Protecting the independence of the internal audit activity from\nundue management influence.",
+      "Reviewing annual engagement work schedules and monitoring\nengagement results.",
+      "Approving engagement work schedules, scheduling, staffing,\nand meeting with the internal auditors as needed.",
+      "Reviewing copies of the procedures manuals for selected\norganizational operations and meeting with organizational\nofficials to discuss them."
+    ],
+    "answerIndex": 0,
+    "explanation": "The audit committee is a subcommittee of outside directors\nwho are independent of corporate management. Its purpose is\nto help keep external and internal auditors independent of\nmanagement and to ensure that the directors are exercising\ndue care. This committee often selects the external auditors,\nreviews their overall audit plan, and examines the results of\nexternal and internal audits.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 9,
+    "page": 1015,
+    "topicId": "su17-governance",
+    "stem": "Which of the following is an appropriate responsibility of an\naudit committee?",
+    "choices": [
+      "Performing a review of the procurement function of the\norganization.",
+      "Reviewing the internal audit activity’s engagement work\nschedule submitted by the chief audit executive (CAE).",
+      "Reviewing the engagement records of the public accounting\nfirm to determine the firm’s competence.",
+      "Recommending the assignment of specific internal auditing\nstaff members for specific engagements."
+    ],
+    "answerIndex": 1,
+    "explanation": "The audit committee consists of outside members of the board\nof directors (who should be independent of management).\nRegular communication with this committee helps assure\nindependence and provides a means for the directors and the\ninternal audit activity to keep each other informed. The CAE\nshould communicate the internal audit activity’s plans and\nresource requirements to senior management and the board\nfor review and approval. Moreover, the CAE should submit to\nsenior management for approval, and to the board for its\ninformation, a summary of the internal audit activity’s work\nschedule, staffing plan, and financial budget.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 10,
+    "page": 1016,
+    "topicId": "su17-governance",
+    "stem": "Which of the following actions is an appropriate response by\norganizations wishing to improve the public’s perception of\ntheir financial reporting?",
+    "choices": [
+      "Increased adoption of audit committees composed of outside\ndirectors.",
+      "Viewing internal auditing as a transient profession -- a stepping\nstone to managerial positions.",
+      "Requiring internal auditors to report all significant observations\nof illegal activity to the chief executive officer.",
+      "Keeping external and internal auditing work separated to\nmaintain independence."
+    ],
+    "answerIndex": 0,
+    "explanation": "The audit committee of an issuer must consist of at least three\noutside directors who are independent of management. Its\npurpose is to help keep external and internal auditors\nindependent of management and to assure that the directors\nare exercising due care. This committee selects the external\nauditors, reviews their overall audit plan, examines the results\nof external and internal auditing engagements, meets regularly\nwith the chief audit executive, and reviews the internal audit\nactivity’s engagement work schedule, staffing plan, and\nfinancial budget. These functions should increase public\nconfidence that financial statements are fairly presented.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 11,
+    "page": 1017,
+    "topicId": "su17-governance",
+    "stem": "Which of the following is not an appropriate member of an\naudit committee?",
+    "choices": [
+      "The vice president of the local bank used by the organization.",
+      "An academic specializing in business administration.",
+      "A retired executive of a firm that had been associated with the\norganization.",
+      "The organization’s vice president of operations."
+    ],
+    "answerIndex": 3,
+    "explanation": "The audit committee of an issuer must consist of at least three\noutside directors who are independent of management. Its\npurpose is to help keep external and internal auditors\nindependent of management and to assure that the directors\nare exercising due care. This committee selects the external\nauditors, reviews their overall audit plan, examines the results\nof external and internal auditing engagements, meets regularly\nwith the chief audit executive, and reviews the internal audit\nactivity’s engagement work schedule, staffing plan, and\nfinancial budget. Engagements may be performed in the vice\npresident’s area of responsibility. Thus, (s)he is not\nindependent of the internal audit activity. The vice president is\nalso not an outside director.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 12,
+    "page": 1018,
+    "topicId": "su17-governance",
+    "stem": "All of the following are typically responsibilities of the board of\ndirectors except",
+    "choices": [
+      "Setting corporate strategy, overall direction, and vision.",
+      "Hiring and evaluating the performance of the CEO.",
+      "Ensuring that the corporation is managed in accordance with\napplicable laws.",
+      "Attesting to the effectiveness of the controls over financial\nreporting."
+    ],
+    "answerIndex": 3,
+    "explanation": "The board of directors does not attest to the effectiveness of\ncontrols; under the Sarbanes-Oxley Act, this is the\nresponsibility of the chief executive officer and the chief\nfinancial officer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 13,
+    "page": 1019,
+    "topicId": "su17-governance",
+    "stem": "Internal control can provide only reasonable assurance of\nachieving entity control objectives because",
+    "choices": [
+      "Management monitors internal control.",
+      "The cost of internal control should not exceed its benefits.",
+      "The board of directors is active and independent.",
+      "The auditor’s primary responsibility is the detection of fraud."
+    ],
+    "answerIndex": 1,
+    "explanation": "Internal controls can provide only reasonable assurance of\nachieving control objectives because the cost of an internal\ncontrol should not exceed its benefits. Thus, in some cases,\nsuch as with petty cash and office supplies, the cost of the\ncontrol is not worth what the savings would be if there was\nperfect control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 14,
+    "page": 1020,
+    "topicId": "su17-governance",
+    "stem": "All of the following are internal control provisions under the\nU.S. Foreign Corrupt Practices Act except a requirement that",
+    "choices": [
+      "Transactions be recorded in a manner that permitted the\nfinancial statements to be prepared in conformity with\ngenerally accepted accounting principles.",
+      "Transactions be recorded in such a way that the accountability\nof assets is maintained.",
+      "Management does not allow the same accounting firm to\ncomplete its audit and tax compliance services.",
+      "Access to assets is permitted only in accordance with\nmanagement’s general or specific authorization."
+    ],
+    "answerIndex": 2,
+    "explanation": "Prohibiting the same accounting firm from completing its audit\nand tax compliance services is not mentioned in the Foreign\nCorrupt Practices Act (FCPA).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 15,
+    "page": 1020,
+    "topicId": "su17-governance",
+    "stem": "A reason to establish internal control is to",
+    "choices": [
+      "Safeguard the resources of the organization.",
+      "Provide reasonable assurance that the objectives of the\norganization are achieved.",
+      "Encourage compliance with organizational objectives.",
+      "Ensure the accuracy, reliability, and timeliness of information."
+    ],
+    "answerIndex": 1,
+    "explanation": "“Internal control is a process, effected by those charged with\ngovernance, management, and other personnel, designed to\nprovide reasonable assurance about the achievement of\nobjectives with regard to the reliability of financial reporting,\neffectiveness and efficiency of operations, and compliance\nwith applicable laws and regulations” (AU-C 315).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 16,
+    "page": 1021,
+    "topicId": "su17-governance",
+    "stem": "When an organization has strong internal control,\nmanagement can expect various benefits. The\nbenefit least likely to occur is",
+    "choices": [
+      "Reduced cost of an external audit.",
+      "Elimination of employee fraud.",
+      "Availability of reliable data for decision-making purposes.",
+      "Some assurance of compliance with the Foreign Corrupt\nPractices Act of 1977."
+    ],
+    "answerIndex": 1,
+    "explanation": "Internal controls are designed to provide reasonable (not\nabsolute) assurance that objectives will be achieved.\nTherefore, even the best internal control cannot guarantee the\ncomplete elimination of employee fraud. However, effective\ninternal control will reduce the amount of employee fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 17,
+    "page": 1022,
+    "topicId": "su17-governance",
+    "stem": "The fundamental mandate of Section 302 of the Sarbanes-\nOxley Act is the requirement that senior management of public\ncompanies must",
+    "choices": [
+      "Establish and maintain adequate internal controls.",
+      "Attest to the fair and appropriate presentation of financial\nstatements.",
+      "Maintain a code of ethics for all senior financial officers.",
+      "Provide real time disclosure of material changes in operational\nconditions."
+    ],
+    "answerIndex": 1,
+    "explanation": "Section 302 of the Sarbanes-Oxley Act requires periodic\nstatutory financial reports to include certain certifications. The\nsigning officer must review the report. Based on the officer’s\nknowledge, the report should not contain any untrue statement\nof a material fact or omit a material fact that is necessary to\nmake the statements not misleading.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 18,
+    "page": 1023,
+    "topicId": "su17-governance",
+    "stem": "The U.S. Public Company Accounting Oversight Board\n(PCAOB) seeks to protect investors by requiring public\ncompanies to",
+    "choices": [
+      "Integrate an internal control audit with the financial statement\naudit.",
+      "Disclose the identity of owners with more than 5% ownership\ninterest.",
+      "Disclose executive compensation and bonuses.",
+      "Have an independent audit committee within the board of\ndirectors."
+    ],
+    "answerIndex": 0,
+    "explanation": "According to the PCAOB, the external auditor must attest to\nand report on management’s assessment of internal controls.\nThe auditor also must evaluate whether the structure and\nprocedures (1) include records accurately and fairly reflecting\nthe firm’s transactions and (2) provide reasonable assurance\nthat transactions are recorded so as to permit statements to\nbe prepared in accordance with GAAP. The auditor’s report\nalso must describe any material weaknesses in internal\ncontrols.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 19,
+    "page": 1024,
+    "topicId": "su17-governance",
+    "stem": "The Sarbanes-Oxley Act has strengthened auditor\nindependence by requiring that management",
+    "choices": [
+      "Engage auditors to report in accordance with the Foreign\nCorrupt Practices Act.",
+      "Report the nature of disagreements with former auditors.",
+      "Select auditors through audit committees.",
+      "Hire a different CPA firm from the one that performs the audit\nto perform the company’s tax work."
+    ],
+    "answerIndex": 2,
+    "explanation": "The Sarbanes-Oxley Act requires that the audit committee of a\npublic company hire and pay the external auditors. Such\naffiliation inhibits management from changing auditors to gain\nacceptance of a questionable accounting method. Also, a\npotential successor auditor must inquire of the predecessor\nauditor before accepting an engagement.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 20,
+    "page": 1024,
+    "topicId": "su17-governance",
+    "stem": "Section 404 of the Sarbanes-Oxley Act of 2002 requires\nmanagement of publicly traded corporations to do all of the\nfollowing except",
+    "choices": [
+      "Establish and document internal control procedures and to\ninclude in their annual reports a report on the company’s\ninternal control over financial reporting.",
+      "Provide a report to include a statement of management’s\nresponsibility for internal control and of management’s\nassessment of the effectiveness of internal control as of the\nend of the company’s most recent fiscal year.",
+      "Provide an identification of the framework used to evaluate the\neffectiveness of internal control and a statement that the\nexternal auditor has issued an attestation report on\nmanagement’s assessment.",
+      "Provide a statement that the audit committee approves the\nchoice of accounting policies and practices."
+    ],
+    "answerIndex": 3,
+    "explanation": "The Sarbanes-Oxley Act of 2002 imposes many requirements\non management, boards of directors, and auditors. Section\n404 deals with internal controls and reports thereon. It\nrequires management to establish and document internal\ncontrol procedures and to include in their annual reports a\nreport on the company’s internal control over financial\nreporting. The report is to include a statement of\nmanagement’s responsibility for internal control,\nmanagement’s assessment of the effectiveness of internal\ncontrol as of the end of the most recent fiscal year,\nidentification of the framework used to evaluate the\neffectiveness of internal control (such as the COSO report),\nand a statement that the external auditor has issued an\nattestation report on management’s assessment. Because of\nthis requirement, there are two audit opinions: one on internal\ncontrol and one on the financial statements. Section 301 does\naddress activities of the audit committee, but it contains no\nrequirement that the audit committee approve the choice of\naccounting policies and practices. Section 204 states that the\nauditor must report to the audit committee all critical\naccounting policies and practices, alternative treatments of\ninformation discussed with management, implications of the\nalternatives, and the treatment preferred by the auditor.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 21,
+    "page": 1026,
+    "topicId": "su17-governance",
+    "stem": "What law prohibits U.S. companies from paying bribes to\nforeign officials for the purpose of obtaining or retaining\nbusiness?",
+    "choices": [
+      "Federal Ethical Standards Act.",
+      "Robinson-Patman Act.",
+      "Foreign Corrupt Practices Act.",
+      "North American Free Trade Agreement."
+    ],
+    "answerIndex": 2,
+    "explanation": "The Foreign Corrupt Practices Act of 1977 prohibits bribes to\nforeign officials for purposes of obtaining or retaining\nbusiness. The Act also requires companies to maintain\neffective systems of internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 22,
+    "page": 1027,
+    "topicId": "su17-governance",
+    "stem": "Which of the following provisions are covered in the U.S\nForeign Corrupt Practices Act?\nI.     Illegal payments to foreign officials to assist in\nobtaining business.\nII.     Transparency of accounting records reflecting all\ntransactions.\nIII.      Payments to agents for the purpose of influencing\nforeign officials.\nIV.       Maintenance of an adequate system of internal\ncontrols.",
+    "choices": [
+      "I only.",
+      "I and III only.",
+      "II, III, and IV only.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 3,
+    "explanation": "The U.S. Foreign Corrupt Practices Act covers illegal\npayments to foreign officials to assist in obtaining business,\ntransparency of accounting records reflecting all transactions,\npayments to agents for the purpose of influencing foreign\nofficials, and maintenance of an adequate system of internal\ncontrols.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 23,
+    "page": 1028,
+    "topicId": "su17-governance",
+    "stem": "The Foreign Corrupt Practices Act of 1977 prohibits bribery of\nforeign officials. Which of the following statements correctly\ndescribes the act’s application to corporations engaging in\nsuch practices?",
+    "choices": [
+      "It applies only to multinational corporations.",
+      "It applies to all domestic corporations engaged in interstate\ncommerce.",
+      "It applies only to corporations whose securities are registered\nunder the Securities Exchange Act of 1934.",
+      "It applies only to corporations engaged in foreign commerce."
+    ],
+    "answerIndex": 1,
+    "explanation": "Although the requirements of the FCPA relating to the\nmaintenance of accounting records and systems of internal\naccounting control apply only to companies required to\nregister under the Securities Exchange Act of 1934, the\nantibribery provisions apply to all domestic business concerns\nengaged in interstate commerce.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 24,
+    "page": 1029,
+    "topicId": "su17-governance",
+    "stem": "Which of the following is not an aspect of the Foreign Corrupt\nPractices Act of 1977?",
+    "choices": [
+      "It subjects management to fines and imprisonment.",
+      "It prohibits bribes to foreign officials.",
+      "It requires the establishment of independent audit committees.",
+      "It requires an internal control system to be developed and\nmaintained."
+    ],
+    "answerIndex": 2,
+    "explanation": "The Foreign Corrupt Practices Act of 1977 prohibits bribes to\nforeign officials and requires firms to have adequate systems\nof internal control. Violation of the act subjects individual\nmanagers to fines and/or imprisonment. The act does not\nspecifically require the establishment of audit committees, but\nmany firms have established audit committees as one means\nof dealing with the internal control provisions of the act.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 25,
+    "page": 1030,
+    "topicId": "su17-governance",
+    "stem": "The Foreign Corrupt Practices Act imposes which of the\nfollowing requirements on companies whose securities are\npublicly traded in the U.S.?",
+    "choices": [
+      "Devising and maintaining a system of internal accounting\ncontrols sufficient to provide reasonable assurance that\ntransactions are executed in accordance with management’s\nauthorization.",
+      "Disclosure of information needed for informed investment\ndecisions to potential investors of an initial public offering of\nthe company’s securities.",
+      "Periodic filing of SEC Form 8K whenever a significant event\ntakes place affecting the company’s internal controls.",
+      "Issuance of an assertion as to whether the company’s system\nof internal controls over financial reporting is effective as of the\nend of the fiscal year."
+    ],
+    "answerIndex": 0,
+    "explanation": "The Foreign Corrupt Practices Act requires publicly traded\ncompanies to devise and maintain a system of internal\naccounting controls sufficient to provide reasonable assurance\nthat transactions are executed in accordance with\nmanagement’s authorization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 26,
+    "page": 1031,
+    "topicId": "su17-governance",
+    "stem": "All of the following statements in regard to management’s\nreport on internal controls over financial reporting in\naccordance with the Sarbanes-Oxley Act are true except that\nthe report must",
+    "choices": [
+      "Include a statement of management’s responsibility for\nestablishing effective internal controls over financial reporting.",
+      "Include a statement that the design of the internal controls is\nthe responsibility of the company’s audit committee.",
+      "Assess the effectiveness of the company’s internal controls\nover financial reporting, as of the end of the period.",
+      "Be attested to by an independent auditor."
+    ],
+    "answerIndex": 1,
+    "explanation": "The report does not include a statement that the design of the\ninternal controls is the responsibility of the company’s audit\ncommittee.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 27,
+    "page": 1031,
+    "topicId": "su17-governance",
+    "stem": "An auditing firm is concluding its audit of a publicly-traded\ncompany in the U.S. After obtaining sufficient audit evidence,\nan external auditor concludes that misstatements in the\naggregate are material but not pervasive to the financial\nstatements. What type of opinion should the external auditor\nissue on the company’s financial statements?",
+    "choices": [
+      "Unmodified opinion.",
+      "Qualified opinion.",
+      "Adverse opinion.",
+      "Disclaimer of opinion."
+    ],
+    "answerIndex": 1,
+    "explanation": "A qualified opinion is issued when the auditor concludes that\nmisstatements, individually or in aggregate, are material but\nnot pervasive to the financial statements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 1,
+    "number": 28,
+    "page": 1032,
+    "topicId": "su17-governance",
+    "stem": "Which of the following features of a large manufacturer’s\norganizational structure is a control weakness?",
+    "choices": [
+      "The information systems department is headed by a vice\npresident who reports directly to the president.",
+      "The chief financial officer is a vice president who reports to the\nchief executive officer.",
+      "The audit committee of the board consists of the chief\nexecutive officer, the chief financial officer, and a major\nshareholder.",
+      "The controller and treasurer report to the chief financial officer."
+    ],
+    "answerIndex": 2,
+    "explanation": "The audit committee has a control function because of its\noversight of internal as well as external auditing. It should be\nmade up of directors who are independent of management.\nThe authority and independence of the audit committee\nstrengthen the position of the internal audit activity. The board\nshould concur in the appointment or removal of the chief audit\nexecutive, who should have direct, regular communication\nwith the board.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 1,
+    "page": 1034,
+    "topicId": "su17-risk-controls",
+    "stem": "Risk assessment is a process",
+    "choices": [
+      "Designed to identify potential events that may affect the entity.",
+      "That establishes policies and procedures to accomplish\ninternal control objectives.",
+      "Of identifying and capturing information in a timely fashion.",
+      "That assesses the quality of internal control throughout the\nyear."
+    ],
+    "answerIndex": 0,
+    "explanation": "Every organization faces risks, that is, unforeseen obstacles to\nthe pursuit of its objectives. Risks take many forms and can\noriginate from within or from outside the organization. Risk\nassessment is the process whereby management identifies\nthe organization’s vulnerabilities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 2,
+    "page": 1034,
+    "topicId": "su17-risk-controls",
+    "stem": "There are three components of audit risk: inherent risk, control\nrisk, and detection risk. Inherent risk is",
+    "choices": [
+      "The susceptibility of an assertion to a material misstatement,\nassuming that there are no related internal control structure\npolicies or procedures.",
+      "The risk that the auditor may unknowingly fail to appropriately\nmodify his or her opinion on financial statements that are\nmaterially misstated.",
+      "The risk that a material misstatement that could occur in an\nassertion will not be prevented or detected on a timely basis by\nthe entity’s internal control structure policies or procedures.",
+      "The risk that the auditor will not detect a material misstatement\nthat exists in an assertion."
+    ],
+    "answerIndex": 0,
+    "explanation": "According to AU 312, “Inherent risk is the susceptibility of an\nassertion to a material misstatement, assuming that there are\nno related internal control structure policies or procedures.\nThe risk of such misstatement is greater for some assertions\nand related balances or classes than for others.” Unlike\ndetection risk, inherent risk and control risk “are independent\nof the audit.” Furthermore, inherent risk and control risk are\ninversely related to detection risk. Thus, the lower the inherent\nrisk, the higher the acceptable detection risk.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 3,
+    "page": 1036,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following is not a component of internal control?",
+    "choices": [
+      "Control risk.",
+      "Monitoring.",
+      "Information and communication.",
+      "The control environment."
+    ],
+    "answerIndex": 0,
+    "explanation": "The five components of internal control described in\nCOSO’s Internal Control -- Integrated Framework are control\nenvironment, risk assessment, control activities, information\nand communication, and monitoring.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 4,
+    "page": 1036,
+    "topicId": "su17-risk-controls",
+    "stem": "The primary responsibility for establishing and maintaining\ninternal control rests with",
+    "choices": [
+      "The external auditor.",
+      "Management.",
+      "The controller.",
+      "The treasurer."
+    ],
+    "answerIndex": 1,
+    "explanation": "Establishing and maintaining internal control is the\nresponsibility of management. Internal control is intended to\nprovide reasonable assurance that the entity’s objectives are\nachieved. Achievement of these objectives is the basic\nfunction of management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 5,
+    "page": 1037,
+    "topicId": "su17-risk-controls",
+    "stem": "Some account balances, such as those for pensions or leases,\nare the results of complex calculations. The susceptibility to\nmaterial misstatements in these types of accounts is defined\nas",
+    "choices": [
+      "Audit risk.",
+      "Detection risk.",
+      "Sampling risk.",
+      "Inherent risk."
+    ],
+    "answerIndex": 3,
+    "explanation": "Inherent risk is the susceptibility of an assertion to a material\nmisstatement in the absence of related controls. This risk is\ngreater for some assertions and related balances or classes\nthan others. For example, complex calculations are more likely\nto be misstated than simple ones, and cash is more likely to\nbe stolen than an inventory of coal. Inherent risk exists\nindependently of the audit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 6,
+    "page": 1038,
+    "topicId": "su17-risk-controls",
+    "stem": "Basic to a proper control environment are the quality and\nintegrity of personnel who must perform the prescribed\nprocedures. Which is not a factor in providing for competent\npersonnel?",
+    "choices": [
+      "Segregation of duties.",
+      "Hiring practices.",
+      "Training programs.",
+      "Performance evaluations."
+    ],
+    "answerIndex": 0,
+    "explanation": "Human resource policies and practices are a factor in the\ncontrol environment component of internal control. They affect\nthe entity’s ability to employ sufficient competent personnel to\naccomplish its objectives. Policies and practices include those\nfor hiring, orientation, training, evaluating, promoting,\ncompensating, and remedial actions. Although control\nactivities based on the segregation of duties are important to\ninternal control, they do not in themselves promote employee\ncompetence.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 7,
+    "page": 1038,
+    "topicId": "su17-risk-controls",
+    "stem": "When management of the sales department has the\nopportunity to override the system of internal controls of the\naccounting department, a weakness exists in",
+    "choices": [
+      "Risk management.",
+      "Information and communication.",
+      "Monitoring.",
+      "The control environment."
+    ],
+    "answerIndex": 3,
+    "explanation": "An organization’s control environment encompasses the\nattitudes and actions of the board of directors and upper\nmanagement regarding the significance of control, i.e., the\n“tone at the top.” One of the components of the control\nenvironment is the assignment of authority and responsibility.\nFor example, management defines key areas of authority and\nresponsibility by placing the information technology, financial\naccounting, and treasury functions under separate officers.\nWhen the management of one department can override the\ninternal controls of another, authority and responsibility have\nnot been properly assigned.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 8,
+    "page": 1039,
+    "topicId": "su17-risk-controls",
+    "stem": "One of the financial statement auditor’s major concerns is to\nascertain whether internal control is designed to provide\nreasonable assurance that",
+    "choices": [
+      "Profit margins are maximized, and operational efficiency is\noptimized.",
+      "The chief accounting officer reviews all accounting\ntransactions.",
+      "Corporate morale problems are addressed immediately and\neffectively.",
+      "Financial reporting is reliable."
+    ],
+    "answerIndex": 3,
+    "explanation": "Internal control is designed to provide reasonable assurance\nof the achievement of objectives in the categories of (1)\nreliability of financial reporting, (2) effectiveness and efficiency\nof operations, and (3) compliance with laws and regulations.\nControls relevant to a financial statement audit ordinarily\npertain to the objective of preparing external financial\nstatements that are fairly presented in conformity with GAAP\nor another comprehensive basis of accounting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 9,
+    "page": 1040,
+    "topicId": "su17-risk-controls",
+    "stem": "Directors, management, external auditors, and internal\nauditors all play important roles in creating proper control\nprocesses. Senior management is primarily responsible for",
+    "choices": [
+      "Overseeing the establishment, administration, and assessment\nof control processes.",
+      "Reviewing the reliability and integrity of financial and\noperational information.",
+      "Ensuring that external and internal auditors oversee the\nadministration of the system of risk management and control\nprocesses.",
+      "Implementing and monitoring controls designed by the board\nof directors."
+    ],
+    "answerIndex": 0,
+    "explanation": "Senior management’s role is to oversee the establishment,\nadministration, and assessment of the system of risk\nmanagement and control processes. Among the\nresponsibilities of the organization’s line managers is the\nassessment of the control processes in their respective areas.\nInternal auditors provide varying degrees of assurance about\nthe effectiveness of the risk management and control\nprocesses in select activities and functions of the organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 10,
+    "page": 1041,
+    "topicId": "su17-risk-controls",
+    "stem": "The graphic portrayal of the flow of data and the information\nprocessing of a system, including computer hardware,\nis best displayed in a",
+    "choices": [
+      "Data-flow diagram.",
+      "System flowchart.",
+      "Gantt chart.",
+      "Program flowchart."
+    ],
+    "answerIndex": 1,
+    "explanation": "A system flowchart is a graphic analysis of a data processing\napplication, usually prepared by a systems analyst. It is\ngeneral and stresses flows of data, not computer program\nlogic. A program flowchart is a graphic representation of the\ndetailed steps and logic of an individual computer program.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 11,
+    "page": 1042,
+    "topicId": "su17-risk-controls",
+    "stem": "A director of a corporation is best characterized as a(n)",
+    "choices": [
+      "Agent.",
+      "Trustee.",
+      "Fiduciary.",
+      "Principal."
+    ],
+    "answerIndex": 2,
+    "explanation": "Officers and employees as well as directors are fiduciaries\nwith regard to the corporation. They owe a duty of loyalty,\ngood faith, and fair dealing when transacting business with or\non behalf of the company. This duty requires full disclosure of\nany personal interest in transactions with the corporation,\navoidance of conflicts of interest and the making of secret\nprofits, and placing the corporate interest ahead of personal\ngain.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 12,
+    "page": 1043,
+    "topicId": "su17-risk-controls",
+    "stem": "Internal control is a process designed to provide reasonable\nassurance regarding the achievement of objectives related to",
+    "choices": [
+      "Reporting.",
+      "Operations.",
+      "Compliance.",
+      "All of the answers are correct."
+    ],
+    "answerIndex": 3,
+    "explanation": "The COSO model for internal control establishes control\nobjectives for operations, reporting, and compliance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 13,
+    "page": 1043,
+    "topicId": "su17-risk-controls",
+    "stem": "The top-down approach to the audit of internal control over\nfinancial reporting can best be described as beginning",
+    "choices": [
+      "At the financial statement level, focusing on entity-level\ncontrols, and working down to significant accounts and\ndisclosures and their relevant assertions.",
+      "With interviewing top management and observing the actions\nof top management with respect to the entity’s control\nenvironment.",
+      "With considerations of the controls over assets and their\nrelated transactions, progressing to controls over liabilities and\nto controls over equities.",
+      "By identifying significant accounts and disclosures for each\nassertion that has a reasonable possibility of containing a\nmaterial misstatement."
+    ],
+    "answerIndex": 0,
+    "explanation": "The top-down approach to the audit of internal controls over\nfinancial reporting is best described as beginning at the\nfinancial statement level, focusing on entity-level controls (the\n“top”), and working down to significant accounts and\ndisclosures and their relevant assertions (the “bottom”). The\ntop-down approach is also known as the risk-based approach.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 14,
+    "page": 1044,
+    "topicId": "su17-risk-controls",
+    "stem": "The external auditor has been examining the operation for\nefficiency and control. The auditor has asked the accounting\nmanager that oversees the payment process to provide\ndocumentation of the process to see how the payments move\nthrough the process. Which of the following statements\nrepresents the best documentation that the accounting\nmanager could provide?",
+    "choices": [
+      "A matrix analysis because it allows the auditor to see the\noperation and identify missing steps.",
+      "A flowchart because it allows the auditor to see the operation\nand identify missing steps.",
+      "A matrix analysis because it shows risks and controls to\nensure that all risks are covered.",
+      "A flowchart because it shows risks and controls to ensure that\nall risks are covered."
+    ],
+    "answerIndex": 1,
+    "explanation": "A flowchart can represent a process using symbols. It is a\nuseful tool for auditors who want to gain an understanding of\ninternal control. The auditors can become familiar with\npayments processing by following the steps in a flowchart,\nwhich enables them to identify missing steps.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 15,
+    "page": 1045,
+    "topicId": "su17-risk-controls",
+    "stem": "Of the techniques available to an auditor, which is\nthe most valuable in providing a summary outline and overall\ndescription of the process of transactions in an information\nsystem?",
+    "choices": [
+      "Transaction retrievals.",
+      "Narrative descriptions.",
+      "Software code comparisons.",
+      "Flowcharts."
+    ],
+    "answerIndex": 3,
+    "explanation": "Flowcharting is a useful tool for systems development as well\nas understanding the internal control structure. A flowchart is a\npictorial diagram of the definition, analysis, or solution of a\nproblem in which symbols are used to represent operations,\ndata flow, transactions, equipment, etc. The processing is\npresented as sequential from the point of origin to final output\ndistribution. Processing usually flows from top to bottom and\nleft to right in the flowchart. Areas of responsibility (e.g., data\nprocessing or purchasing) are usually depicted in vertical\ncolumns or areas.",
+    "answerStatus": "source",
+    "sourceTextStatus": "reconstructed"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 16,
+    "page": 1046,
+    "topicId": "su17-risk-controls",
+    "stem": "When documenting the understanding of a client’s internal\ncontrol, the independent auditor sometimes uses a systems\nflowchart, which can best be described as a",
+    "choices": [
+      "Pictorial presentation of the flow of instructions in a client’s\ninternal computer system.",
+      "Diagram that clearly indicates an organization’s internal\nreporting structure.",
+      "Graphic illustration of the flow of operations that is used to\nreplace the auditor’s internal control questionnaire.",
+      "Symbolic representation of a system or series of sequential\nprocesses."
+    ],
+    "answerIndex": 3,
+    "explanation": "A systems flowchart is a symbolic representation of the flow of\ndocuments and procedures through a series of steps in the\naccounting process of the client’s organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 17,
+    "page": 1047,
+    "topicId": "su17-risk-controls",
+    "stem": "An advantage of using systems flowcharts to document\ninformation about internal control instead of using internal\ncontrol questionnaires is that systems flowcharts",
+    "choices": [
+      "Identify internal control weaknesses more prominently.",
+      "Provide a visual depiction of clients’ activities.",
+      "Indicate whether control procedures are operating effectively.",
+      "Reduce the need to observe clients’ employees performing\nroutine tasks."
+    ],
+    "answerIndex": 1,
+    "explanation": "Systems flowcharts provide a visual representation of a series\nof sequential processes, that is, of a flow of documents, data,\nand operations. In many instances a flowchart is preferable to\na questionnaire because a picture is usually more easily\ncomprehended.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 18,
+    "page": 1048,
+    "topicId": "su17-risk-controls",
+    "stem": "Internal controls are designed to provide reasonable\nassurance that",
+    "choices": [
+      "Material errors or fraud will be prevented or detected and\ncorrected within a timely period by employees in the course of\nperforming their assigned duties.",
+      "Management’s plans have not been circumvented by worker\ncollusion.",
+      "The internal auditing department’s guidance and oversight of\nmanagement’s performance is accomplished economically and\nefficiently.",
+      "Management’s planning, organizing, and directing processes\nare properly evaluated."
+    ],
+    "answerIndex": 0,
+    "explanation": "Reasonable assurance is provided when cost-effective actions\nare taken to restrict deviations to a tolerable level. This\nimplies, for example, that material errors and improper or\nillegal acts will be prevented or detected and corrected within\na timely period by employees in the normal course of\nperforming their assigned duties. The cost-benefit relationship\nis considered by management during the design of systems.\nThe potential loss associated with any exposure or risk is\nweighed against the cost to control it.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 19,
+    "page": 1049,
+    "topicId": "su17-risk-controls",
+    "stem": "An auditor reviews and adapts a systems flowchart to\nunderstand the flow of information in the processing of cash\nreceipts. The flowchart",
+    "choices": [
+      "Depicts specific control procedures used, such as edit tests\nand batch control reconciliations.",
+      "Is a good guide to potential segregation of duties.",
+      "Is generally kept up to date for systems changes.",
+      "Depicts only computer processing, not manual processing."
+    ],
+    "answerIndex": 1,
+    "explanation": "Systems flowcharts are overall graphic analyses of the flow of\ndata and the processing steps in an information system.\nAccordingly, they can be used to represent segregation of\nduties and the transfer of data between different segments in\nthe organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 20,
+    "page": 1050,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following are considered control environment\nfactors?\nPersonnel Policies\nDetection Risk and Practices",
+    "choices": [
+      "Yes         Yes",
+      "Yes         No",
+      "No          Yes",
+      "No         No"
+    ],
+    "answerIndex": 2,
+    "explanation": "Human resource policies and practices are part of the control\nenvironment. They relate to hiring, orientation, training,\nevaluating, counseling, promoting, compensating, and\nremedial actions. The control environment is the component\nthat sets the tone of an organization, influencing the control\nconsciousness of its people. It is the foundation for the other\ncomponents. Detection risk is not part of the control\nenvironment. It is the risk that the audit procedures will fail to\ndetect material misstatements. Thus, detection risk is a\nfunction of the effectiveness of the procedures used by the\nauditor.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 21,
+    "page": 1051,
+    "topicId": "su17-risk-controls",
+    "stem": "Corporate directors, management, external auditors, and\ninternal auditors all play important roles in creating a proper\ncontrol environment. Top management is primarily responsible\nfor",
+    "choices": [
+      "Establishing a proper environment and specifying an overall\ninternal control structure.",
+      "Reviewing the reliability and integrity of financial information\nand the means used to collect and report such information.",
+      "Ensuring that external and internal auditors adequately monitor\nthe control environment.",
+      "Implementing and monitoring controls designed by the board\nof directors."
+    ],
+    "answerIndex": 0,
+    "explanation": "According to SIAS 1, “Management plans, organizes, and\ndirects in such a fashion as to provide reasonable assurance\nthat established goals and objectives will be achieved.” Also,\n“Management establishes and maintains an environment that\nfosters control.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 22,
+    "page": 1051,
+    "topicId": "su17-risk-controls",
+    "stem": "Certain management characteristics may heighten the\nauditor’s concern about the risk of material misstatements. The\ncharacteristic that is least likely to cause concern is that\nmanagement",
+    "choices": [
+      "Operating and financing decisions are made by numerous\nindividuals.",
+      "Commits to unduly aggressive forecasts.",
+      "Has an excessive interest in increasing the entity’s stock price\nthrough use of unduly aggressive accounting practices.",
+      "Is interested in inappropriate methods of minimizing earnings\nfor tax purposes."
+    ],
+    "answerIndex": 0,
+    "explanation": "The auditor would be concerned if the decision process were\ndominated by one individual or a small group. In that case,\ncompensating controls, e.g., effective oversight by the audit\ncommittee, reduce risk.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 23,
+    "page": 1052,
+    "topicId": "su17-risk-controls",
+    "stem": "A restaurant food chain has over 680 restaurants. All food\norders for each restaurant are required to be input into an\nelectronic device which records all food orders by food servers\nand transmits the order to the kitchen for preparation. All food\nservers are responsible for collecting cash for all their orders\nand must turn in cash at the end of their shift equal to the sales\nvalue of food ordered for their I.D. number. The manager then\nreconciles the cash received for the day with the computerized\nrecord of food orders generated. All differences are\ninvestigated immediately by the restaurant. Corporate\nheadquarters has established monitoring controls to determine\nwhen an individual restaurant might not be recording all its\nrevenue and transmitting the applicable cash to the corporate\nheadquarters. Which one of the following would be\nthe best example of a monitoring control?",
+    "choices": [
+      "The restaurant manager reconciles the cash received with the\nfood orders recorded on the computer.",
+      "All food orders must be entered on the computer, and\nsegregation of duties is maintained between the food servers\nand the cooks.",
+      "Management prepares a detailed analysis of gross margin per\nstore and investigates any store that shows a significantly\nlower gross margin.",
+      "Cash is transmitted to corporate headquarters on a daily basis."
+    ],
+    "answerIndex": 2,
+    "explanation": "Monitoring is a process that assesses the quality of internal\ncontrol over time. It involves assessment by appropriate\npersonnel of the design and operation of controls and the\ntaking of corrective action. Monitoring can be done through\nongoing activities or separate evaluations. Ongoing monitoring\nprocedures are built into the normal recurring activities of an\nentity and include regular management and supervisory\nactivities. Thus, analysis of gross margin data and\ninvestigation of significant deviations is a monitoring process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 24,
+    "page": 1054,
+    "topicId": "su17-risk-controls",
+    "stem": "Audit risk consists of inherent risk, control risk, and detection\nrisk. Which of the following statements is true?",
+    "choices": [
+      "Cash is more susceptible to theft than an inventory of coal\nbecause it has a greater inherent risk.",
+      "The risk that material misstatement will not be prevented or\ndetected on a timely basis by internal control can be reduced\nto zero by effective controls.",
+      "Detection risk is a function of the efficiency of an auditing\nprocedure.",
+      "The existing levels of inherent risk, control risk, and detection\nrisk can be changed at the discretion of the auditor."
+    ],
+    "answerIndex": 0,
+    "explanation": "Inherent risk is the susceptibility of an assertion to material\nmisstatement in the absence of related controls. Some\nassertions and related balances or classes of transactions\nhave greater inherent risk. Thus, cash has a greater inherent\nrisk than less liquid assets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 25,
+    "page": 1055,
+    "topicId": "su17-risk-controls",
+    "stem": "Audit risk is a combination of three separate risks at the\naccount-balance or class-of-transactions level. The first risk is\ninherent risk. The second risk is that material misstatements\nwill not be prevented or detected by internal control. The third\nrisk is that",
+    "choices": [
+      "Management will make a material accounting estimate.",
+      "Material misstatements that occur will not be detected by the\naudit.",
+      "The auditor will apply an inappropriate audit procedure.",
+      "The auditor will apply an inappropriate measure of audit\nmateriality."
+    ],
+    "answerIndex": 1,
+    "explanation": "One component of audit risk is detection risk, which is the risk\nthat the auditor will not detect a material misstatement that\nexists in an assertion. Detection risk for a substantive test of\ndetails has two elements: (1) the risk that analytical\nprocedures and other relevant substantive tests will fail to\ndetect misstatements at least equal to tolerable misstatement\nand (2) the allowable risk of incorrect acceptance for the\nsubstantive test of details. The auditor assesses control risk\n(the second component) when considering the client’s internal\ncontrol. This assessment, the assessment of inherent risk, and\nthe level to which the auditor wishes to restrict overall audit\nrisk are the factors that the auditor uses to determine the\nacceptable level of detection risk.",
+    "answerStatus": "source",
+    "sourceTextStatus": "reconstructed"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 26,
+    "page": 1056,
+    "topicId": "su17-risk-controls",
+    "stem": "The basic concepts implicit in internal accounting controls\ninclude the following:\n• The cost of the system should not exceed benefits\nexpected to be attained.\n• The overall impact of the control procedure should not\nhinder operating efficiency.\nWhich one of the following internal accounting controls\nrecognizes these two factors?",
+    "choices": [
+      "Limitations.",
+      "Management responsibility.",
+      "Methods of data processing.",
+      "Reasonable assurance."
+    ],
+    "answerIndex": 3,
+    "explanation": "The benefits of internal controls must always exceed the costs\nof implementing them. A system of absolute assurance could\nonly be implemented at prohibitively great expense.\nReasonable assurance is a cost beneficial solution.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 27,
+    "page": 1057,
+    "topicId": "su17-risk-controls",
+    "stem": "The COSO model component of Risk Assessment focuses on",
+    "choices": [
+      "Identifying the risks in all areas and establishing the\nvulnerability of the organization.",
+      "The attitude of management at all levels toward operations\nand the concept of risk.",
+      "The controls such as approvals and documentation that\naddresses an organization’s risk.",
+      "The timely communication of information relative to identified\nrisks to management."
+    ],
+    "answerIndex": 0,
+    "explanation": "Risk Assessment in the COSO model is the identification and\nanalysis of relevant risks to achievement of the objectives. It\nforms a basis for determining how the risks should be\nmanaged.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 28,
+    "page": 1057,
+    "topicId": "su17-risk-controls",
+    "stem": "The statement below that best illustrates the importance of\npersonnel policies and procedures is that personnel policies\nand procedures",
+    "choices": [
+      "Are integral to an efficient control environment.",
+      "Should be implemented where it is cost beneficial.",
+      "Should be evaluated for compliance by an external firm.",
+      "Should be implemented where risks have been identified."
+    ],
+    "answerIndex": 0,
+    "explanation": "In the COSO framework, the personnel policies and\nprocedures influence the control consciousness of personnel,\nso they are an integral part of an efficient control environment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 29,
+    "page": 1058,
+    "topicId": "su17-risk-controls",
+    "stem": "Which one of the following statements about internal control\nrisk is correct?",
+    "choices": [
+      "The establishment and maintenance of an internal control\nsystem within a company can effectively eliminate internal\ncontrol risk.",
+      "The internal audit function is responsible for the establishment\nand maintenance of a company’s internal control system.",
+      "Management has the responsibility to maintain controls that\nprovide reasonable assurance that adequate control exists\nover the entity’s assets and records.",
+      "Management’s responsibility regarding internal control risk is\nlimited to controls that provide assurance regarding the\nreliability of financial reporting."
+    ],
+    "answerIndex": 2,
+    "explanation": "COSO broadly defines internal control as a process, effected\nby an entity’s board of directors, management, and other\npersonnel, designed to provide reasonable assurance\nregarding the achievement of objectives in effectiveness and\nefficiency of operations, reliability of financial reporting, and\ncompliance with applicable laws and regulations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 30,
+    "page": 1059,
+    "topicId": "su17-risk-controls",
+    "stem": "Which one of the following statements is the best example of\ninherent risk?",
+    "choices": [
+      "The risk that the auditor did not detect a material misstatement\nin the financial statements.",
+      "The risk that a material misstatement could occur and will not\nbe prevented.",
+      "The risk that the auditor failed to modify his or her opinion on\nmaterially misstated information.",
+      "The risk that there will be a material misstatement, assuming\nno related internal control strategy."
+    ],
+    "answerIndex": 3,
+    "explanation": "The risk that there will be a material misstatement, assuming\nno related internal control strategy, is the best example of\ninherent risk. Inherent risk is the susceptibility of one of the\ncompany’s objectives to obstacles arising from the nature of\nthe objective. Inherent risk does not take internal controls into\nconsideration.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 31,
+    "page": 1060,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following characteristics related to an entity’s\ncontrol environment best indicates a commitment to strong\ninternal controls?",
+    "choices": [
+      "A small group of top-level executives controls decisions.",
+      "Management demonstrates independence from the board and\nexercises oversight of internal control.",
+      "The performance of individuals and teams is evaluated based\non the established standards of conduct.",
+      "The board consists of competent, experienced former senior\nmanagers of the entity."
+    ],
+    "answerIndex": 2,
+    "explanation": "The control environment is a set of standards, processes, and\nstructures that pervasively affects the system of internal\ncontrol. A principle that relates to the control environment is an\norganizational commitment to integrity and ethical values by\n(1) setting the tone at the top, (2) establishing standards of\nconduct, (3) evaluating the performance of individuals and\nteams based on the established standards of conduct, and (4)\ncorrecting deviations in a timely and consistent manner.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 32,
+    "page": 1061,
+    "topicId": "su17-risk-controls",
+    "stem": "Which method of evaluating internal controls during the\npreliminary review provides the auditor with the best visual\ngrasp of a system and a means for analyzing complex\noperations?",
+    "choices": [
+      "A flowcharting approach.",
+      "A questionnaire approach.",
+      "A matrix approach.",
+      "A detailed narrative approach."
+    ],
+    "answerIndex": 0,
+    "explanation": "Flowcharts are graphical representations of the step-by-step\nprogression of transactions, including document (information)\npreparation, authorization, flow, storage, etc. Flowcharting\nallows the internal auditor to analyze a system and to identify\nthe strengths and weaknesses of the purported internal\ncontrols and the appropriate areas of audit emphasis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 33,
+    "page": 1062,
+    "topicId": "su17-risk-controls",
+    "stem": "The data entry staff has responsibility for converting all of a\nplant’s shipping information to computerized records. The\ninformation flow begins when the shipping department sends a\ncopy of a shipping order to the data entry staff. A data entry\noperator scans the shipping order information onto a hand-\nheld data storage device. Verification clerks then check the\ncomputerized record with the original shipping orders. When a\ngiven batch of files has been reviewed and corrected, as\nnecessary, the information is uploaded to the company’s\nmainframe system at the home office. The most effective way\nto visualize and understand this set of activities would be\nthrough the use of a",
+    "choices": [
+      "Program flowchart.",
+      "Decision table.",
+      "Document flowchart.",
+      "Gantt chart."
+    ],
+    "answerIndex": 2,
+    "explanation": "Flowcharting is the representation of a process using pictorial\nsymbols. A document flowchart would be an effective way to\nvisualize how the document (a copy of a shipping order) flows\nthrough various departments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 34,
+    "page": 1063,
+    "topicId": "su17-risk-controls",
+    "stem": "An external auditor’s primary consideration when assessing a\ncompany’s internal control structure policies and procedures is\nwhether they",
+    "choices": [
+      "Prevent management override.",
+      "Relate to the control environment.",
+      "Reflect management’s philosophy and operating style.",
+      "Affect the financial statement assertions."
+    ],
+    "answerIndex": 3,
+    "explanation": "Management makes certain assertions about the financial\nstatements (existence, rights and obligations, etc.). The goal\nof an audit is to assess the fair presentation of the financial\nstatements. The auditor’s consideration of the client’s system\nof internal control is a means to that end.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 35,
+    "page": 1063,
+    "topicId": "su17-risk-controls",
+    "stem": "All of the following statements regarding the top-down or risk-\nbased approach to the audit of internal control over financial\nreporting are true except that",
+    "choices": [
+      "It describes the order in which the audit procedures will be\nperformed.",
+      "The approach begins at the financial statement level.",
+      "The approach focuses on entity-level controls before moving\non to significant accounts and disclosures.",
+      "The auditor should focus on accounts and disclosures that\npresent a reasonable possibility of misstatement."
+    ],
+    "answerIndex": 0,
+    "explanation": "The top-down or risk-based approach to the audit of internal\ncontrol over financial reporting directs audit resources toward\nthose areas of the financial statements where misstatements\nare more apt to occur. This approach requires auditors to\nidentify the key day-to-day risks faced by a business, consider\nthe impact these risks could have on the financial statements,\nand plan their audit procedures accordingly. The order in\nwhich such procedures take place is not prescribed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 36,
+    "page": 1064,
+    "topicId": "su17-risk-controls",
+    "stem": "A company has established policies that emphasize hiring\ncompetent people and providing them with professional\ntraining. This aligns most closely with which one of the five\nmajor components of COSO’s internal control framework?",
+    "choices": [
+      "Risk assessment.",
+      "Control environment.",
+      "Monitoring.",
+      "Information and communication."
+    ],
+    "answerIndex": 1,
+    "explanation": "The COSO control environment is a set of standards,\nprocesses, and structures that pervasively affects the system\nof internal control. This includes five principles: (1)\ncommitment to integrity and ethical values; (2) a board\nindependent from management that exercises oversight for\ninternal control; (3) management establishes, with board\noversight, structures, reporting lines, and appropriate\nauthorities and responsibilities; (4) a commitment to attract,\ndevelop, and retain competent individuals in alignment with\nobjectives; and (5) the organization holds individuals\naccountable for their internal control responsibilities. Thus,\nhiring competent people and providing them with training falls\nunder the control environment component of COSO’s internal\ncontrol framework.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 37,
+    "page": 1065,
+    "topicId": "su17-risk-controls",
+    "stem": "Accounting control should provide reasonable assurance\nabout the achievement of management’s objectives. The\nconcept of internal controls providing “reasonable assurance”\nrecognizes that",
+    "choices": [
+      "The auditor’s primary responsibility is the detection of fraud.",
+      "Employee carelessness can weaken an internal accounting\ncontrol system.",
+      "Control procedures should not have an adverse effect on\nefficiency or profitability.",
+      "Judgmentally selected samples do not meet the criteria for\nstatistical validity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Accounting control should provide reasonable assurance\nabout the achievement of management’s objectives. For\nexample, internal control objectives include improving financial\nperformance and avoiding inefficiency. Accordingly, internal\ncontrol that provides reasonable assurance of the\nachievement of the entity’s objectives should not adversely\naffect efficiency or profitability.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 38,
+    "page": 1066,
+    "topicId": "su17-risk-controls",
+    "stem": "In the performance of an internal audit, audit risk\nis best defined as the risk that an auditor",
+    "choices": [
+      "Might not select documents that are in error as part of the\nexamination.",
+      "May not be able to properly evaluate an activity because of its\npoor internal accounting controls.",
+      "May fail to detect a significant error or weakness during an\nexamination.",
+      "May not have the expertise to adequately audit a specific\nactivity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Audit risk is the risk that the external auditor may unknowingly\nfail to modify his or her opinion on financial statements that\nare materially misstated. Its elements are control risk, inherent\nrisk, and detection risk. For internal auditing, the overall audit\nrisk extends not only to financial statements but also to\nunwitting failure to uncover material errors or weaknesses in\nthe operations audited. There may be several different\nreasons for the failure, and these may be in risk categories\nsuch as sampling risk, detection risk, or control risk.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 39,
+    "page": 1067,
+    "topicId": "su17-risk-controls",
+    "stem": "The reliability and integrity of all critical information of an\norganization, regardless of the media in which the information\nis stored, is the responsibility of",
+    "choices": [
+      "Shareholders.",
+      "IT department.",
+      "Management.",
+      "All employees."
+    ],
+    "answerIndex": 2,
+    "explanation": "Internal auditors determine whether senior management and\nthe board have a clear understanding that information\nreliability and integrity is a management responsibility.\nInformation reliability and integrity includes accuracy,\ncompleteness, and security.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 40,
+    "page": 1068,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following factors are included in an entity’s control\nenvironment?",
+    "choices": [
+      "Organizational structure, management philosophy, and\nmonitoring.",
+      "Integrity and ethical values, assignment of authority, and\nhuman resource practices.",
+      "Competence of personnel, segregation of duties, and fraud\nrisk assessment.",
+      "Risk assessment, assignment of responsibility, and human\nresource practices."
+    ],
+    "answerIndex": 1,
+    "explanation": "Five principles relate to the control environment. The\nprinciples are as follows: (1) the organization demonstrates a\ncommitment to integrity and ethical values; (2) the board\ndemonstrates independence from management and exercises\noversight of internal control; (3) management establishes\nstructures, reporting lines, and authorities and responsibilities;\n(4) the organization demonstrates a commitment to attract,\ndevelop, and retain competent individuals in alignment with\nobjectives; and (5) the organization holds individuals\naccountable for their internal control responsibilities.\nTherefore, integrity and ethical values, assignment of\nauthority, and human resource practices are factors\nconsidered in the control environment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 41,
+    "page": 1069,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following is the control component that reflects\nthe attitude and actions of the board and management\nregarding the significance of control within the organization?",
+    "choices": [
+      "Risk assessment.",
+      "Control activities.",
+      "Control environment.",
+      "Monitoring."
+    ],
+    "answerIndex": 2,
+    "explanation": "According to the COSO model for internal control, the control\nenvironment reflects the attitude and actions of the board and\nmanagement regarding the significance of control within the\norganization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 42,
+    "page": 1070,
+    "topicId": "su17-risk-controls",
+    "stem": "The policies and procedures helping to ensure that\nmanagement directives are executed and actions are taken to\naddress risks to achievement of objectives are best described\nas",
+    "choices": [
+      "Risk assessments.",
+      "Control environments.",
+      "Control activities.",
+      "Monitoring activities."
+    ],
+    "answerIndex": 2,
+    "explanation": "The COSO model for internal control describes control\nactivities as the policies and procedures helping to ensure that\nmanagement directives are executed and actions are taken to\naddress risks to achievement of objectives.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 43,
+    "page": 1070,
+    "topicId": "su17-risk-controls",
+    "stem": "An organization’s directors, management, and internal auditors\nall have important roles in creating a proper control\nenvironment. Senior management is primarily responsible for",
+    "choices": [
+      "Establishing a proper ethical culture.",
+      "Designing and operating a control system that provides\nreasonable assurance that established objectives and goals\nwill be achieved.",
+      "Ensuring that external and internal auditors adequately monitor\nthe control environment.",
+      "Implementing and monitoring controls designed by the board\nof directors."
+    ],
+    "answerIndex": 0,
+    "explanation": "The COSO model treats internal control as a process, effected\nby an entity’s board of directors, management, and other\npersonnel, designed to provide reasonable assurance\nregarding the achievement of entity objectives. The control\nenvironment component of internal control reflects the attitude\nand actions of the board and management regarding the\nsignificance of control within the organization. It sets the\norganization’s tone and influences the control consciousness\nof personnel. Moreover, the control environment provides\ndiscipline and structure for the achievement of the primary\nobjectives of internal control. The control environment\nincludes, among other elements, integrity and ethical values.\nThus, standards should be effectively communicated, e.g., by\nmanagement example. Management also should remove\nincentives and temptations for dishonest or unethical acts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 44,
+    "page": 1072,
+    "topicId": "su17-risk-controls",
+    "stem": "Which one of the following statements in regard to internal\ncontrols is not true?",
+    "choices": [
+      "Control environment is the foundation for all other components\nof internal control, providing discipline and structure.",
+      "Control activities are the policies and procedures that help\nensure that management directives are carried out.",
+      "Monitoring is a process that penalizes managers for\nbreakdowns in internal control.",
+      "Risk assessment is the entity’s identification and analysis of\nrelevant risks to achievement of its objectives."
+    ],
+    "answerIndex": 2,
+    "explanation": "Monitoring is a process that assesses the quality of internal\ncontrol performance over time to ensure that controls continue\nto meet the needs of the organization. The organization\nevaluates and communicates control deficiencies based on\nwhat is found when monitoring. Monitoring should be used to\nensure internal controls are designed and operating\neffectively, not as a tool to assign blame to management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 45,
+    "page": 1073,
+    "topicId": "su17-risk-controls",
+    "stem": "Which one of the following auditor findings would most likely\nraise a red flag about a company’s internal control\nenvironment?",
+    "choices": [
+      "The company has an established independent audit\ncommittee.",
+      "Only select committees of the board have access to outside\nattorneys.",
+      "The role of the company’s CEO and board chairman are\nseparate.",
+      "The board nominations committee selects only independent\ndirectors."
+    ],
+    "answerIndex": 1,
+    "explanation": "Although the need for attorneys itself does not raise any red\nflags, the fact that not all committees have access to attorneys\nmay indicate a reason for concern. Such a policy may grant\nthose committees with access an unintended amount of\nauthority or power, which may lead to fraudulent acts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 46,
+    "page": 1073,
+    "topicId": "su17-risk-controls",
+    "stem": "The risk associated with auditors failing to identify material\nmisstatements in a financial statement is referred to as",
+    "choices": [
+      "Control risk.",
+      "Inherent risk.",
+      "Unsystematic risk.",
+      "Detection risk."
+    ],
+    "answerIndex": 3,
+    "explanation": "Detection risk is the risk that an obstacle to an objective will\nnot be detected before a loss has occurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 47,
+    "page": 1074,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following statements regarding the\nCOSO Internal Control – Integrated Framework is correct?",
+    "choices": [
+      "The framework was published by ISACA.",
+      "The COSO Enterprise Risk Management framework was\nupdated to become the COSO Internal Control – Integrated\nFramework.",
+      "Publicly-listed companies are required by regulation to apply\nthe framework in designing their internal control systems.",
+      "The framework includes objectives, components, and related\nprinciples."
+    ],
+    "answerIndex": 3,
+    "explanation": "The COSO Internal Control – Integrated Framework consists\nprimarily of a definition of internal control, categories of\nobjectives, components and related principles, and\nrequirements of an effective system of internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 48,
+    "page": 1075,
+    "topicId": "su17-risk-controls",
+    "stem": "The COSO Internal Control – Integrated Framework includes a\ndefinition of",
+    "choices": [
+      "Internal control and requirements of an efficient internal control\nsystem.",
+      "Data governance and requirements of an effective IT control\nsystem.",
+      "Internal auditing and requirements of an effective internal\ncontrol system.",
+      "Internal control and requirements of an effective internal\ncontrol system."
+    ],
+    "answerIndex": 3,
+    "explanation": "The COSO Internal Control – Integrated Framework consists\nprimarily of a definition of internal control, categories of\nobjectives, components and related principles, and\nrequirements of an effective system of internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 49,
+    "page": 1075,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following is a component of internal control\naccording to the COSO Internal Control – Integrated\nFramework?",
+    "choices": [
+      "Performance.",
+      "Review and revision.",
+      "Information and communication.",
+      "Governance and culture."
+    ],
+    "answerIndex": 2,
+    "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 50,
+    "page": 1076,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following are components of internal control\naccording to the COSO Internal Control – Integrated\nFramework?",
+    "choices": [
+      "Compliance, operations, and reporting.",
+      "Principles, framework, and process.",
+      "Monitoring, control activities, and risk assessment.",
+      "Function, division, and operating unit."
+    ],
+    "answerIndex": 2,
+    "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 51,
+    "page": 1077,
+    "topicId": "su17-risk-controls",
+    "stem": "A system of internal control is effective if it provides\nreasonable assurance of achieving an entity’s objectives.\nWhich of the following is an objective specified in the\nCOSO Internal Control – Integrated Framework?",
+    "choices": [
+      "Innovation.",
+      "Operations.",
+      "Risk assessment.",
+      "Productivity."
+    ],
+    "answerIndex": 1,
+    "explanation": "According to the COSO Internal Control – Integrated\nFramework, a system of internal control is effective if it\nprovides reasonable assurance of achieving an entity’s\nobjectives relating to operations, reporting, and compliance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 52,
+    "page": 1077,
+    "topicId": "su17-risk-controls",
+    "stem": "A system of internal control is effective if it provides\nreasonable assurance of achieving an entity’s objectives.\nWhich of the following are objectives specified in the\nCOSO Internal Control – Integrated Framework?",
+    "choices": [
+      "Internal, external, and overall.",
+      "Specific, measurable, and obtainable.",
+      "Compliance, operations, and reporting.",
+      "Strategic, compliance, and operations."
+    ],
+    "answerIndex": 2,
+    "explanation": "Internal Control – Integrated Framework, a system of internal\ncontrol is effective if it provides reasonable assurance of\nachieving an entity’s objectives relating to operations,\nreporting, and compliance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 53,
+    "page": 1078,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following are included in an entity’s organizational\nstructure according to the COSO Internal Control – Integrated\nFramework cube?",
+    "choices": [
+      "Operations, reporting, and compliance.",
+      "Compliance, risk management, and internal audit.",
+      "Entity level, division, and operating unit.",
+      "Function, department, and subsidiary."
+    ],
+    "answerIndex": 2,
+    "explanation": "The COSO Internal Control – Integrated Framework can be\nrepresented by a cube with rows, slices, and columns. The\nrows are the five components, the slices are the three\nobjectives, and the columns are an entity’s organizational\nstructure, which includes entity level, division, operating unit,\nand function.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 54,
+    "page": 1079,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following is part of an entity’s organizational\nstructure according to the COSO Internal Control – Integrated\nFramework cube?",
+    "choices": [
+      "Process.",
+      "Function.",
+      "Activity.",
+      "Transaction."
+    ],
+    "answerIndex": 1,
+    "explanation": "The COSO Internal Control – Integrated Framework can be\nrepresented by a cube with rows, slices, and columns. The\nrows are the five components, the slices are the three\nobjectives, and the columns are an entity’s organizational\nstructure, which includes entity level, division, operating unit,\nand function.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 55,
+    "page": 1079,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following is part of an entity’s organizational\nstructure according to the COSO Internal Control – Integrated\nFramework cube?",
+    "choices": [
+      "Process.",
+      "Function.",
+      "Activity.",
+      "Transaction."
+    ],
+    "answerIndex": 1,
+    "explanation": "The COSO Internal Control – Integrated Framework can be\nrepresented by a cube with rows, slices, and columns. The\nrows are the five components, the slices are the three\nobjectives, and the columns are an entity’s organizational\nstructure, which includes entity level, division, operating unit,\nand function.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 56,
+    "page": 1080,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, which of the following lists an example of a\ncomponent, entity structure, and objective, respectively?",
+    "choices": [
+      "Risk assessment, operations, and reporting.",
+      "Monitoring, entity level, and compliance.",
+      "Capability, operating unit, and control.",
+      "Control environment, function, and learning."
+    ],
+    "answerIndex": 1,
+    "explanation": "Within the COSO Internal Control – Integrated Framework, the\ncomponents are control environment, risk assessment, control\nactivities, information and communication, and monitoring;\nentity structure includes entity level, division, operating unit,\nand function; and objectives include operations, reporting, and\ncompliance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 57,
+    "page": 1081,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, compliance, information and communication, and\nfunction, respectively, are examples of what aspects of the\nCOSO cube?",
+    "choices": [
+      "Objective, component, and entity structure.",
+      "Entity structure, component, and division.",
+      "Component, principle, and entity structure.",
+      "Objective, objective, and entity structure."
+    ],
+    "answerIndex": 0,
+    "explanation": "Within the COSO Internal Control – Integrated Framework,\ncomponents include control environment, risk assessment,\ncontrol activities, information and communication, and\nmonitoring; entity structure includes entity level, division,\noperating unit, and function; and objectives include operations,\nreporting, and compliance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 58,
+    "page": 1082,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, which of the following terms refers to the\ndetermination that internal control components and relevant\nprinciples exist in the design and implementation of the internal\ncontrol system?",
+    "choices": [
+      "Present.",
+      "Efficient.",
+      "Functioning.",
+      "Operating together."
+    ],
+    "answerIndex": 0,
+    "explanation": "An effective system of internal control requires that each of the\nfive components of internal control and the relevant principles\nis present and functioning. “Present” refers to whether the\ncomponents and relevant principles exist in the design and\nimplementation of an internal control system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 59,
+    "page": 1082,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, which of the following terms refers to the\ndetermination that internal control components and relevant\nprinciples continue to exist in the operation of an internal\ncontrol system?",
+    "choices": [
+      "Effective.",
+      "Functioning.",
+      "Operating together.",
+      "Present."
+    ],
+    "answerIndex": 1,
+    "explanation": "An effective system of internal control requires that each of the\nfive components of internal control and the relevant principles\nis present and functioning. “Functioning” refers to whether the\ncomponents and relevant principles continue to exist in the\noperation of an internal control system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 60,
+    "page": 1083,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, which of the following terms refers to the\ndetermination that all internal control components collectively\nreduce the risk of not achieving an objective to an acceptable\nlevel?",
+    "choices": [
+      "Present.",
+      "Operating together.",
+      "Adequate.",
+      "Functioning."
+    ],
+    "answerIndex": 1,
+    "explanation": "An effective system of internal control requires that each of the\nfive components of internal control and the relevant principles\nis present and functioning. The five components should\noperate together in an integrated manner. “Operating\ntogether” refers to whether all five components collectively\nreduce the risk of not achieving an objective to an acceptable\nlevel.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 61,
+    "page": 1084,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, an effective internal control system requires that",
+    "choices": [
+      "Internal control components collectively eliminate the risk of\nnot achieving an objective.",
+      "Each of the internal control components and corresponding\nobjectives is present and functioning.",
+      "Each of the internal control components is operating\nindependently.",
+      "Each of the internal control components and relevant\nprinciples is present and functioning."
+    ],
+    "answerIndex": 3,
+    "explanation": "According to the COSO Internal Control – Integrated\nFramework, an effective internal control system requires that\neach of the five components of internal control and the\nrelevant principles is present and functioning. The five\ncomponents should operate together in an integrated manner.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 62,
+    "page": 1085,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, which of the following statements is correct?",
+    "choices": [
+      "The principles in the framework change with the application of\nemerging technology.",
+      "The use of outsourced service providers relieves the\norganization’s responsibility for its internal control.",
+      "The framework requires judgment in designing and conducting\ninternal control.",
+      "The framework is designed for larger, not smaller,\norganizations."
+    ],
+    "answerIndex": 2,
+    "explanation": "The use of judgment is required when designing,\nimplementing, and conducting internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 63,
+    "page": 1085,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following is a component of internal control\ndefined by the COSO Internal Control – Integrated\nFramework?",
+    "choices": [
+      "Internal environment.",
+      "Control environment.",
+      "Objective setting.",
+      "Strategy."
+    ],
+    "answerIndex": 1,
+    "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 64,
+    "page": 1086,
+    "topicId": "su17-risk-controls",
+    "stem": "Which of the following are components of internal control\ndefined by the COSO Internal Control – Integrated\nFramework?",
+    "choices": [
+      "Event identification, information and communication, and risk\nassessment.",
+      "Internal environment, control activities, and monitoring.",
+      "Information and communication, control environment, and\ncontrol activities.",
+      "Governance, risk appetite, and control environment."
+    ],
+    "answerIndex": 2,
+    "explanation": "According to the COSO Internal Control – Integrated\nFramework, the components of internal control consist of the\ncontrol environment, risk assessment, control activities,\ninformation and communication, and monitoring.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 17,
+    "section": 2,
+    "number": 65,
+    "page": 1087,
+    "topicId": "su17-risk-controls",
+    "stem": "According to the COSO Internal Control – Integrated\nFramework, which of the following lists provides an example of\nan objective, component, and entity structure?\nObjectives      Components        Entity structure",
+    "choices": [
+      "Customization      Risk assessment              Entity level",
+      "Operations         Monitoring and review       Function",
+      "Reporting          Control activities          Division",
+      "Compliance         Value creation              Division"
+    ],
+    "answerIndex": 2,
+    "explanation": "Within the COSO Internal Control – Integrated Framework,\nobjectives include operations, reporting, and compliance;\ncomponents include the control environment, risk assessment,\ncontrol activities, information and communication, and\nmonitoring; and entity structure includes the entity level,\ndivision, operating unit, and function.",
+    "answerStatus": "source"
+  }
+]

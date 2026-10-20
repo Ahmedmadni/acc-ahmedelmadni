@@ -1,0 +1,988 @@
+[
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 1,
+    "page": 5,
+    "topicId": "su11-value-chain",
+    "stem": "A systematic approach to reaching targeted cost levels during\nvalue chain analysis is known as",
+    "choices": [
+      "Value engineering.",
+      "Life-cycle costing.",
+      "Process value analysis.",
+      "Activity analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "Value engineering is a means of reaching targeted cost levels.\nIt is a systematic approach to assessing all aspects of the\nvalue chain cost buildup for a product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 2,
+    "page": 6,
+    "topicId": "su11-value-chain",
+    "stem": "A company develops computer programs to meet customers’\ncustomized needs. How should it classify payments to\nemployees who develop the programs?",
+    "choices": [
+      "As direct costs and value-adding costs.",
+      "As direct costs, but not as value-adding costs.",
+      "As neither direct costs nor value-adding costs.",
+      "As value-adding costs, but not as direct costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Direct costs can be specifically associated with a single cost\nobject and assigned to it in an economically feasible way, i.e.,\ntraced to the object. Wages paid to employees that can be\nidentified with a specific finished project are direct costs.\nValue-adding costs are costs of activities that cannot be\neliminated without reducing the value of the product or service\nrequired by the customer. The amounts paid to the computer\nprogrammers add value to the computer programs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 3,
+    "page": 6,
+    "topicId": "su11-value-chain",
+    "stem": "Which of the following is not a component of the value chain?",
+    "choices": [
+      "Primary activities.",
+      "Secondary activities.",
+      "Support activities.",
+      "The product."
+    ],
+    "answerIndex": 1,
+    "explanation": "The value chain is a model for depicting the way in which\nevery function in a company adds value to the final product.\nPrimary activities deal with the product directly. Support\nactivities lend aid to the primary activity functions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 4,
+    "page": 7,
+    "topicId": "su11-value-chain",
+    "stem": "A company has the following manufacturing-related activities:\n• Setting up a machine for a new production run\n• Assembling the final product\n• Moving completed product to the warehouse\n• Painting the assembled product\n• Reworking defective parts\nWhich of these are value-added activities?",
+    "choices": [
+      "Setting up a machine for new production run and assembling\nthe final product only.",
+      "Assembling the final product and painting the assembled\nproduct only.",
+      "Assembling the final product, painting the assembled product,\nand moving the completed product to the warehouse only.",
+      "Setting up a machine for a new production run, assembling the\nfinal product, painting the assembled product, and reworking\ndefective parts."
+    ],
+    "answerIndex": 1,
+    "explanation": "A value chain depicts how costs and customer value\naccumulate along a sequence of activities leading to an end\nproduct or service. Assembling the final product and painting\nthe assembled product are the only activities that add value\nfor the customer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 5,
+    "page": 8,
+    "topicId": "su11-value-chain",
+    "stem": "The flow of materials and services from their original sources\nto final consumers is the",
+    "choices": [
+      "Value chain.",
+      "Product chain.",
+      "Supply chain.",
+      "Value process."
+    ],
+    "answerIndex": 2,
+    "explanation": "The supply chain usually encompasses more than one firm.\nFirms seeking to improve performance and reduce costs must\nanalyze all phases of the supply chain as well as the value\nchain.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 6,
+    "page": 9,
+    "topicId": "su11-value-chain",
+    "stem": "Which of the following is not a phase in a value-chain\nanalysis?",
+    "choices": [
+      "Identify activities that are candidates for cost reduction.",
+      "Identify ways to generate additional customer value.",
+      "Identify means for improving product cost efficiency.",
+      "Identify the firm’s competitive advantage."
+    ],
+    "answerIndex": 2,
+    "explanation": "The second step in a value-chain analysis is to determine how\neach value-creating activity can produce a competitive\nadvantage for the firm. This step has multiple substeps:\n1. Identify the firm’s competitive advantage (e.g., cost\nreduction, product differentiation) so that the firm’s\nposition in the industry’s value chain can be clarified.\n2. Identify the ways in which the firm’s value-creating\nactivities can generate additional customer value.\n3. Identify activities that are candidates for cost reduction\nor, in the case of non-core competencies, outsourcing.\n4. Identify value-adding ways in which the firm’s\nremaining activities can be linked.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 7,
+    "page": 10,
+    "topicId": "su11-value-chain",
+    "stem": "An outside consultant has been hired by a manufacturing firm\nto evaluate each of the firm’s major products, beginning with\nthe design of the products and continuing through the\nmanufacture, warehousing, distribution, sale, and service. The\nconsultant has also been requested to compare the\nmanufacturer’s major products with firms that are\nmanufacturing and marketing the same or similar products.\nThe consultant is to identify where customer value can be\nincreased; identify where costs can be reduced; and provide a\nbetter understanding of the linkages with customers, suppliers,\nand other firms in the industry. The type of analysis that the\nconsultant most likely has been asked to perform for the\nmanufacturing firm is called a",
+    "choices": [
+      "Balanced scorecard study.",
+      "Benchmarking analysis.",
+      "SWOT (strengths, weakness, opportunities, threats) analysis.",
+      "Value-chain analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Value-chain analysis for assessing competitive advantage is\nan integral part of the strategic planning process. Value-chain\nanalysis is a continuous process of gathering, evaluating, and\ncommunicating information for business decision making. A\nvalue chain depicts how customer value accumulates along a\nchain of activities that lead to an end product or service. A\nvalue chain consists of the activities required to research and\ndevelop, design, produce, market, deliver, and support its\nproduct. Extended value-chain analysis expands the view of\nthe parties involved to include those upstream (e.g., suppliers)\nand downstream (e.g., customers).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 8,
+    "page": 11,
+    "topicId": "su11-value-chain",
+    "stem": "In the value creation chain model, the primary activities include",
+    "choices": [
+      "Logistics, operations, marketing and sales, and service.",
+      "Procurement, infrastructure, operations, and service.",
+      "Procurement, infrastructure, operations, and technology\ndevelopment.",
+      "Procurement, infrastructure, human resources, and technology\ndevelopment."
+    ],
+    "answerIndex": 0,
+    "explanation": "The model consists of primary and supporting activities. The\nprimary activities are inbound logistics, operations, outbound\nlogistics, marketing and sales, and service. Inbound logistics\nactivities involve the firms’ capture of materials to be\nprocessed. Operations activities are conversion processes.\nOutbound logistics activities include shipment of products.\nMarketing and sales activities are the promotion and sale of\nfinal products. Service activities provide customer service. The\nfour support activities are infrastructure (e.g., administration,\nfinance, and planning), procurement, human resources, and\ntechnology development.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 9,
+    "page": 12,
+    "topicId": "su11-value-chain",
+    "stem": "Customer relationship management is best defined as",
+    "choices": [
+      "Coordination with members of the firm’s supply chain.",
+      "Maximizing short-term sales to customers.",
+      "Market sensing.",
+      "Maximizing customer loyalty by managing customer\n“touchpoints.”"
+    ],
+    "answerIndex": 3,
+    "explanation": "Customer relationship management can be defined as “the\nprocess of managing detailed information about individual\ncustomers and carefully managing all the customer\n‘touchpoints’ with the aim of maximizing customer loyalty.” Its\npurpose is to create optimal customer equity. Thus, the\nprocess involves more than merely attracting customers\n(through media advertising, direct mail, etc.) and satisfying\nthem (something competitors also may do).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 10,
+    "page": 13,
+    "topicId": "su11-value-chain",
+    "stem": "Customer satisfaction is related to the degree of customer\nloyalty. High customer loyalty",
+    "choices": [
+      "Requires a high degree of satisfaction of other stakeholders.",
+      "Results when quality, service, and price increase.",
+      "Depends on the effectiveness of the firm’s core business\nprocesses.",
+      "Is directly proportional to customer expectations."
+    ],
+    "answerIndex": 2,
+    "explanation": "High customer loyalty is an emotional as well as a rational\nbond that develops when a firm provides high customer value.\nTo obtain such loyalty, the firm needs to develop a value\nproposition that has superior competitiveness in the target\nmarket segment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 11,
+    "page": 13,
+    "topicId": "su11-value-chain",
+    "stem": "The firm should emphasize customer retention",
+    "choices": [
+      "By creating low switching costs.",
+      "By maximizing customer churn.",
+      "Although new customers are less costly than old customers.",
+      "Because the customer base is an intangible asset."
+    ],
+    "answerIndex": 3,
+    "explanation": "Customer retention through customer satisfaction is a key to\nprofitability. The firm should emphasize customer retention\nbecause the customer base is an important intangible asset.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 12,
+    "page": 14,
+    "topicId": "su11-value-chain",
+    "stem": "Which one of the following best shows the sequence of\nbusiness functions in the value chain?",
+    "choices": [
+      "Research and Development, Design of Products and\nProcesses, Production, Marketing, Distribution, Customer\nService.",
+      "Design of Products and Processes, Research and\nDevelopment, Finance, Production, Distribution, Customer\nService.",
+      "Design of Products and Processes, Finance, Research and\nDevelopment, Production, Distribution, Customer Service.",
+      "Research and Development, Finance, Design of Products and\nProcesses, Production, Distribution, Customer Service."
+    ],
+    "answerIndex": 0,
+    "explanation": "The correct sequence of business functions in the value chain\nis Research and Development, Design of Products and\nProcesses, Production, Marketing, Distribution, and Customer\nService.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 13,
+    "page": 15,
+    "topicId": "su11-value-chain",
+    "stem": "A company desires to prepare two sets of financial statements.\nConventional financial statements would be prepared along\nwith a set that is totally consistent with value-chain analysis.\nHow would customer service costs be treated in the two\nstatements?\nConventional Financial             Value-Chain Financial\nStatements                        Statements",
+    "choices": [
+      "Inventoriable cost                Product cost",
+      "Inventoriable cost               Non-product cost",
+      "Noninventoriable cost             Product cost",
+      "Noninventoriable cost            Non-product cost"
+    ],
+    "answerIndex": 2,
+    "explanation": "In conventional financial statements, customer service costs\nare generally part of sales and administrative costs and not\nassociated with a product. In value-chain statements,\ncustomer service is treated as part of the value chain and\ntherefore associated with product cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 14,
+    "page": 16,
+    "topicId": "su11-value-chain",
+    "stem": "Which one of the following lists of functions is in proper value-\nchain order?",
+    "choices": [
+      "Research and development, marketing, and customer\nservices.",
+      "Production, marketing, and product design.",
+      "Production design, distribution, and marketing.",
+      "Research and development, customer service, and\ndistribution."
+    ],
+    "answerIndex": 0,
+    "explanation": "These functions are in the proper order while in the other\noptions the functions are out of order. Costs and customer\nvalue are added along the value-chain to provide an end\nproduct or service.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 15,
+    "page": 16,
+    "topicId": "su11-value-chain",
+    "stem": "A small computer manufacturer employs 25 plant workers in its\nmain manufacturing facility. The performance improvement\nteam has identified the following activities and relative time\ndemanded by each activity.\nPercentage of\nworkers’\nActivities                                               time\nA. Assembly of the computer components                   25%\nB. Installing software                                40%\nC. Inspecting and testing the assembled units         25%\nD. Moving the finished units into the storage\narea                                               10%\nClassify the four activities as value-added and nonvalue-\nadded.\nValue-added Nonvalue-added",
+    "choices": [
+      "A, B, and C        D",
+      "A and B            C and D",
+      "A, B, and D       C",
+      "B and C           A and D"
+    ],
+    "answerIndex": 1,
+    "explanation": "A value-added activity increases the value of a product or\nservice to the customer, while a nonvalue-added activity does\nnot. Activities A and B add value to the customer, while\nactivities C and D do not.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 16,
+    "page": 17,
+    "topicId": "su11-value-chain",
+    "stem": "Which one of the following is a value-added activity for a\ncompany that manufactures bicycles?",
+    "choices": [
+      "Moving a tire to the rework area.",
+      "Placing a reworked brake on a bicycle.",
+      "Reworking a bicycle for the second time.",
+      "Inspecting a reworked bicycle."
+    ],
+    "answerIndex": 1,
+    "explanation": "A value-added activity contributes to customer satisfaction or\nmeets a need of the entity. A nonvalue-added activity does not\nmake such a contribution. It can be eliminated, reduced, or\nredesigned without impairing the quantity, quality, or\nresponsiveness of the product or service desired by\ncustomers or the entity. It is necessary to place a brake on a\nbicycle, whether the brake is reworked or new. The addition of\nthe brake is required before the bicycle can be sold, which\ncontributes to the customer’s satisfaction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 17,
+    "page": 18,
+    "topicId": "su11-value-chain",
+    "stem": "A manufacturing company incurred the following costs during\nthe last quarter related to product development and\nproduction.\nMaterials storage                $ 50,000\nProduct design                    180,000\nMaterials handling and moving 41,000\nDirect materials                  400,000\nQuality inspections             62,000\nWhat amount of costs should be classified as value-added?",
+    "choices": [
+      "$491,000",
+      "$553,000",
+      "$580,000",
+      "$642,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Value-added activities increase the value of a product or\nservice to the customer. Examples include assembling the\nproduct and shipping it to the customer. Product design and\ndirect materials both qualify as value-added activities\n($180,000 + $400,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 18,
+    "page": 19,
+    "topicId": "su11-value-chain",
+    "stem": "Which of the following is a primary activity on the value chain?",
+    "choices": [
+      "Research and development (R&D).",
+      "Inventory management.",
+      "Information technology.",
+      "Human resources."
+    ],
+    "answerIndex": 0,
+    "explanation": "A value chain depicts how costs and customer value\naccumulate along a sequence of activities leading to an end\nproduct or service. The primary activities on the value chain\nare (1) R&D, (2) product design, (3) manufacturing, (4)\nmarketing and distribution, and (5) customer service.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 19,
+    "page": 20,
+    "topicId": "su11-value-chain",
+    "stem": "A company’s value chain can best be described as",
+    "choices": [
+      "An accumulation of costs and customer value.",
+      "A supply chain.",
+      "Value engineering.",
+      "Process analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "The value chain depicts how costs and customer value\naccumulate along a sequence of activities that lead to an end\nproduct or service. The primary activities on the value chain\nare (1) R&D, (2) product design, (3) manufacturing, (4)\nmarketing and distribution, and (5) customer service.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 20,
+    "page": 20,
+    "topicId": "su11-value-chain",
+    "stem": "A company’s new CEO has asked the CFO to work with the\nCOO to do a systematic assessment of all aspects of the\ncompany’s value chain for its major products. The purpose is\nto determine whether costs can be reduced without decreasing\ncustomer satisfaction. This type of analysis is",
+    "choices": [
+      "An activity-based cost audit.",
+      "A continuous improvement process (CIP).",
+      "Value engineering.",
+      "Business process reengineering (BPR)."
+    ],
+    "answerIndex": 2,
+    "explanation": "Value engineering is the systematic assessment of all aspects\nof cost buildup along the value chain. The goal is to minimize\ncosts without negatively affecting customer satisfaction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 21,
+    "page": 21,
+    "topicId": "su11-value-chain",
+    "stem": "The nonvalue-added activity for a manufacturing company is",
+    "choices": [
+      "Assembling a product.",
+      "Adding new features to a product.",
+      "Shipping a product to a customer.",
+      "Inspection of a final product."
+    ],
+    "answerIndex": 3,
+    "explanation": "Nonvalue-added activities do not increase the value of the\nproduct or service even if they are necessary. For example,\ninspection, although important, does not increase the value of\nthe product.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 22,
+    "page": 22,
+    "topicId": "su11-value-chain",
+    "stem": "A value chain is",
+    "choices": [
+      "The allocation of overhead to products based on the activities\nthat drive the costs.",
+      "A method used to evaluate all aspects of performance,\nincluding financial and nonfinancial measures.",
+      "A group of activities connected with the production of a product\nor the performance of a service.",
+      "The approach used to decrease inventory costs by reducing\nthe amount of inventory on hand."
+    ],
+    "answerIndex": 2,
+    "explanation": "A value chain consists of all the value-added activities that\nlead to an end product or service. The primary activities on the\nvalue chain are (1) R&D, (2) product design, (3)\nmanufacturing, (4) marketing and distribution, and (5)\ncustomer service. Support activities include (1) human\nresources, (2) information technology, (3) contract\nmanagement, (4) inventory management, and (5) plant\nmaintenance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 23,
+    "page": 22,
+    "topicId": "su11-value-chain",
+    "stem": "Which one of the following is a support activity on the value\nchain?",
+    "choices": [
+      "Research and development (R&D).",
+      "Human resources.",
+      "Customer service.",
+      "Marketing and distribution."
+    ],
+    "answerIndex": 1,
+    "explanation": "The primary activities on the value chain are (1) R&D, (2)\nproduct design, (3) manufacturing, (4) marketing and\ndistribution, and (5) customer service. Support activities\ninclude (1) human resources, (2) information technology, (3)\ncontract management, (4) inventory management, and (5)\nplant maintenance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 24,
+    "page": 23,
+    "topicId": "su11-value-chain",
+    "stem": "An accountant is working on classifying product costs as\nvalue-added and nonvalue-added. The chart below\nsummarizes the product costs.\nCost Type            Cost Amount\nInventory storage               $12,500\nManufacturing                    44,675\nQuality control                  12,350\nInspection of final product        7,260\nProduct assembly                 16,450\nProduct shipment                   8,575\nWhat is the total nonvalue-added activities cost?",
+    "choices": [
+      "$12,500",
+      "$19,760",
+      "$24,850",
+      "$32,110"
+    ],
+    "answerIndex": 1,
+    "explanation": "Nonvalue-added activities do not increase the value of the\nproduct or service even if the activities are necessary.\nExamples include inspection of the final product and inventory\nstorage cost. The total nonvalue-added costs are $19,760\n($12,500 inventory storage cost + $7,260 inspection of final\nproduct cost).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 25,
+    "page": 24,
+    "topicId": "su11-value-chain",
+    "stem": "Which of the following is a step in value-chain analysis?",
+    "choices": [
+      "Identifying predetermined expectations of how much a unit of\ninput should cost.",
+      "Evaluating cost drivers.",
+      "Identifying the firm’s competitive advantage.",
+      "Evaluating progress toward objectives."
+    ],
+    "answerIndex": 2,
+    "explanation": "The steps in value-chain analysis are to (1) identify value-\ncreating activities and (2) determine how these activities can\ncreate competitive advantage. The second step involves (1)\nidentifying the firm’s competitive advantage, (2) determining\nhow the value-creating activities generate additional customer\nvalue, (3) identifying activities that reduce costs or can be\noutsourced, and (4) determining value-adding ways for the\nfirm’s remaining activities to be linked.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 1,
+    "number": 26,
+    "page": 25,
+    "topicId": "su11-value-chain",
+    "stem": "Which one of the following is the best description of a supply\nchain?",
+    "choices": [
+      "The materials suppliers.",
+      "The flow of materials on a production run from inventory to\nfinal product.",
+      "The flow of materials from their original sources to final\nconsumers.",
+      "The internal processes performed to create customer value."
+    ],
+    "answerIndex": 2,
+    "explanation": "A supply chain is the movement of materials from the original\nsupplier source, through product production, to the retailers\nwho sell to the final customers. It generally consists of several\ncompanies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 1,
+    "page": 26,
+    "topicId": "su11-process-improvement",
+    "stem": "Which of the following is not a type of process?",
+    "choices": [
+      "Make-to-stock.",
+      "Make-to-order.",
+      "Buffer.",
+      "Hybrid."
+    ],
+    "answerIndex": 2,
+    "explanation": "A buffer in the context of process analysis is a quantity of\nwork-in-process inventory that allows some stage(s) of the\noverall process to continue operating when an earlier stage\nbreaks down.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 2,
+    "page": 26,
+    "topicId": "su11-process-improvement",
+    "stem": "The cost of scrap, rework, and tooling changes in a product\nquality cost system is categorized as a(n)",
+    "choices": [
+      "Training cost.",
+      "External failure cost.",
+      "Internal failure cost.",
+      "Prevention cost."
+    ],
+    "answerIndex": 2,
+    "explanation": "According to the IMA’s Management Accounting Glossary,\ninternal failure costs are incurred when detection of defective\nproducts occurs before shipment. Examples of internal failure\ncosts are scrap, rework, tooling changes, and downtime.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 3,
+    "page": 27,
+    "topicId": "su11-process-improvement",
+    "stem": "Which of the following statements regarding benchmarking\nis false?",
+    "choices": [
+      "Benchmarking involves continuously evaluating the practices\nof best-in-class organization and adapting company processes\nto incorporate the best of these practices.",
+      "Benchmarking, in practice, usually involves a company forming\nbenchmarking teams.",
+      "Benchmarking is an ongoing process that entails quantitative\nand qualitative measurement of the difference between the\ncompany’s performance of an activity and the performance by\nthe best in the world or the best in the industry.",
+      "The benchmarking organization against which a firm is\ncomparing itself must be a direct competitor."
+    ],
+    "answerIndex": 3,
+    "explanation": "Benchmarking is an ongoing process that involves quantitative\nand qualitative measurement of the difference between the\norganization’s performance of an activity and the performance\nby a best-in-class organization. The benchmarked\norganization need not be a direct competitor. The important\nconsideration is that it be an outstanding performer in its\nindustry.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 4,
+    "page": 28,
+    "topicId": "su11-process-improvement",
+    "stem": "The four categories of costs associated with product quality\ncosts are",
+    "choices": [
+      "External failure, internal failure, prevention, and carrying.",
+      "External failure, internal failure, prevention, and appraisal.",
+      "Warranty, product liability, training, and appraisal.",
+      "Warranty, product liability, prevention, and appraisal."
+    ],
+    "answerIndex": 1,
+    "explanation": "The four categories of quality costs are (1) prevention,\n(2) appraisal, (3) internal failure, and (4) external failure. Costs\nof prevention include attempts to avoid defective output, such\nas (1) employee training, (2) review of equipment design,\n(3) preventive maintenance, and (4) evaluation of suppliers.\nAppraisal includes quality control programs, inspection, and\ntesting. Internal failure costs are incurred when detection of\ndefective products occurs before shipment. They include costs\nof (1) scrap, (2) rework, (3) tooling changes, and (4) downtime.\nExternal failure costs are incurred after the product has been\nshipped. They include the costs associated with warranties,\nproduct liability, and loss of customer goodwill.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 5,
+    "page": 29,
+    "topicId": "su11-process-improvement",
+    "stem": "The cost of statistical quality control in a product quality cost\nsystem is categorized as a(n)",
+    "choices": [
+      "Internal failure cost.",
+      "Training cost.",
+      "External failure cost.",
+      "Appraisal cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "The following are the four categories of quality costs:\nprevention, appraisal, internal failure, and external failure (lost\nopportunity). Appraisal costs include quality control programs,\ninspection, and testing. However, some authorities regard\nstatistical quality and process control as preventive activities\nbecause they not only detect faulty work but also allow for\nadjustment of processes to avoid future defects.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 6,
+    "page": 30,
+    "topicId": "su11-process-improvement",
+    "stem": "Listed below are selected line items from a cost of quality\nreport for last month.\nCategory           Amount\nRework                      $ 725\nEquipment maintenance         1,154\nProduct testing                 786\nProduct repair                  695\nWhat is the total prevention and appraisal cost for last month?",
+    "choices": [
+      "$786",
+      "$1,154",
+      "$1,940",
+      "$2,665"
+    ],
+    "answerIndex": 2,
+    "explanation": "The costs of prevention and appraisal are conformance costs\nthat serve as financial measures of internal performance.\nPrevention costs are incurred to prevent defective output.\nThese costs include (1) preventive maintenance, (2) employee\ntraining, (3) review of equipment design, and (4) evaluation of\nsuppliers. Appraisal costs are incurred to detect\nnonconforming output. They include such activities as\n(1) statistical quality control programs, (2) inspection, and\n(3) testing. The equipment maintenance cost of $1,154 is a\nprevention cost. The product testing cost of $786 is an\nappraisal cost. Their sum is $1,940.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 7,
+    "page": 31,
+    "topicId": "su11-process-improvement",
+    "stem": "Which of the following quality costs are nonconformance\ncosts?",
+    "choices": [
+      "Systems development costs.",
+      "Costs of inspecting in-process items.",
+      "Environmental costs.",
+      "Costs of quality circles."
+    ],
+    "answerIndex": 2,
+    "explanation": "Nonconformance costs include internal and external failure\ncosts. External failure costs include environmental costs, e.g.,\nfines for violations of environmental laws and loss of customer\ngoodwill.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 8,
+    "page": 31,
+    "topicId": "su11-process-improvement",
+    "stem": "An example of an internal nonfinancial benchmark is the",
+    "choices": [
+      "Labor rate of comparably skilled employees at a major\ncompetitor’s plant.",
+      "Average actual cost per pound of a specific product at the\ncompany’s most efficient plant becoming the benchmark for\nthe company’s other plants.",
+      "Company setting a benchmark of $50,000 for employee\ntraining programs at each of the company’s plants.",
+      "Percentage of customer orders delivered on time at the\ncompany’s most efficient plant becoming the benchmark for\nthe company’s other plants."
+    ],
+    "answerIndex": 3,
+    "explanation": "Benchmarking involves continuously evaluating the principles\nof best-in-class organizations and adapting company\nprocesses to incorporate the best of these practices. It\nanalyzes and measures the key outputs of a business process\nor function against the best and also identifies the underlying\nkey actions and root causes that contribute to the performance\ndifference. The percentage of orders delivered on time at the\ncompany’s most efficient plant is an example of an internal\nnonfinancial benchmark.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 9,
+    "page": 32,
+    "topicId": "su11-process-improvement",
+    "stem": "A retailer, which operates eight discount store chains, is\nseeking to reduce the costs of its purchasing activities through\nreengineering and heavier use of electronic data interchange\n(EDI). Which of the following benchmarks techniques would be\nappropriate in this situation?\nI.     A comparison of the purchasing costs and practices of\neach of the store chains to identify their internal “best\nin class.”\nII.     A comparison of the practices of the retailer to those of\nanother retailer whose practices are often considered\n“best in class.”\nIII.      A comparison of the best practices of the retailer to\nthose of an international airline whose practices are\noften considered “best in class.”\nIV.       An in-depth review of a retail trade association\npublication on successful EDI applications.",
+    "choices": [
+      "II and IV only.",
+      "I and II only.",
+      "I and IV only.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 3,
+    "explanation": "The retailer would benefit from all of these benchmark\ntechniques as all would identify best practices. The IMA’s\nStatement on Management Accounting (SMA) Effective\nBenchmarking states, “Benchmarking involves continuously\nevaluating the practices of best-in-class organizations and\nadapting company processes to incorporate the best of these\npractices.” It “analyzes and measures the key outputs of a\nbusiness process or function against the best and also\nidentifies the underlying key actions and root causes that\ncontribute to the performance difference.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 10,
+    "page": 34,
+    "topicId": "su11-process-improvement",
+    "stem": "A firm manufactures dishwashers and incurs the following\nselected costs.\nMonthly equipment maintenance                          $5,000\nLabor to ensure the closed dishwasher doors form a\ntight seal                                            8,000\nUnplanned manufacturing machinery repairs               9,000\nLabor to reattach doors due to misalignment found\nduring inspection                                     1,500\nLabor to reattach doors due to misalignment found by\ncustomers                                             1,200\nWhen preparing a cost of quality report, the amount spent in\nthe internal failure category would total",
+    "choices": [
+      "$1,500",
+      "$10,500",
+      "$11,700",
+      "$23,500"
+    ],
+    "answerIndex": 1,
+    "explanation": "The only two internal failure costs incurred are the unplanned\nmanufacturing machinery repairs and the labor to reattach\ndoors due to misalignment found by inspection, which result in\n$10,500 for internal failure ($9,000 + $1,500).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 11,
+    "page": 35,
+    "topicId": "su11-process-improvement",
+    "stem": "A quality cost report reveals the following information.\nPrevention costs        10%\nAppraisal costs         15%\nInternal failure costs 20%\nExternal failure costs 55%\nTotal quality costs 100%\nWhich one of the following should be emphasized in order\nto most effectively improve overall cost of quality\nperformance?",
+    "choices": [
+      "Quality training.",
+      "Inspections.",
+      "Rework.",
+      "Customer support."
+    ],
+    "answerIndex": 0,
+    "explanation": "The largest portion of total cost of quality is external failure.\nQuality training, which will result in higher quality awareness\non the part of all employees, is the appropriate corrective\naction. Quality training is a prevention cost, and an increase in\nprevention should reduce all other cost categories.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 12,
+    "page": 38,
+    "topicId": "su11-process-improvement",
+    "stem": "Listed below are costs of quality that a manufacturing\ncompany has incurred throughout its operations. The company plans\nto prepare a report that classifies these costs into the following four\ncategories: preventive costs, appraisal costs, internal failure costs,\nand external failure costs.\nCost Items                     Amou\nnt\nDesign reviews                       $275,0\n00\nFinished goods returned due to       55,000\nfailure\nFreight on replacement finished      27,000\ngoods\nLabor inspection during           75,000\nmanufacturing\nLabor inspection of raw materials 32,000\nManufacturing product-testing     63,000\nlabor\nManufacturing rework labor and 150,00\noverhead                               0\nMaterials used in warranty        68,000\nrepairs\nProcess engineering               180,00\n0\nProduct-liability claims          145,00\n0\nProduct-testing equipment         35,000\nRepairs to equipment due to brea\nkdowns                            22,000\nScheduled equipment               90,000\nmaintenance\nScrap material                    125,00\n0\nTraining of manufacturing         156,00\nworkers                                0\nThe dollar amount of the costs of quality classified as\npreventive costs for the manufacturing firm would be",
+    "choices": [
+      "$643,000",
+      "$701,000",
+      "$736,000",
+      "$768,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Prevention attempts to avoid defective output, e.g., by\nemployee training, review of equipment design, preventive\nmaintenance, and evaluation of suppliers. Accordingly, the\npreventive costs equal $701,000 ($275,000 design reviews +\n$180,000 process engineering + $90,000 scheduled\nmaintenance + $156,000 training).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 13,
+    "page": 38,
+    "topicId": "su11-process-improvement",
+    "stem": "Listed below are costs of quality that a manufacturing\ncompany has incurred throughout its operations. The company plans\nto prepare a report that classifies these costs into the following four\ncategories: preventive costs, appraisal costs, internal failure costs,\nand external failure costs.\nCost Items                     Amou\nnt\nDesign reviews                       $275,0\n00\nFinished goods returned due to       55,000\nfailure\nFreight on replacement finished      27,000\ngoods\nLabor inspection during           75,000\nmanufacturing\nLabor inspection of raw materials 32,000\nManufacturing product-testing     63,000\nlabor\nManufacturing rework labor and 150,00\noverhead                               0\nMaterials used in warranty        68,000\nrepairs\nProcess engineering               180,00\n0\nProduct-liability claims          145,00\n0\nProduct-testing equipment         35,000\nRepairs to equipment due to brea\nkdowns                            22,000\nScheduled equipment               90,000\nmaintenance\nScrap material                    125,00\n0\nTraining of manufacturing         156,00\nworkers                                0\nThe costs of quality that are incurred in detecting units of\nproduct that do not conform to product specifications are\nreferred to as",
+    "choices": [
+      "Preventive costs.",
+      "Appraisal costs.",
+      "Internal failure costs.",
+      "External failure costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "The categories of quality costs include conformance costs\n(prevention and appraisal) and nonconformance costs\n(internal failure and external failure). Appraisal costs embrace\nsuch activities as statistical quality control programs,\ninspection, and testing. Thus, the cost of detecting\nnonconforming products is an appraisal cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 14,
+    "page": 39,
+    "topicId": "su11-process-improvement",
+    "stem": "All of the following are examples of benchmarking\nstandards except",
+    "choices": [
+      "The performance of the unit during the previous year.",
+      "The best performance of the unit in comparable past periods.",
+      "A comparison with a similar unit within the same company.",
+      "The best performance of a competitor with a similar operation."
+    ],
+    "answerIndex": 0,
+    "explanation": "Benchmarking involves continuously evaluating the practices\nof best-in-class organizations and adapting company\nprocesses to incorporate the best of these practices. Thus,\nbenchmarking involves setting standards high. Arbitrarily using\nthe unit’s prior period performance runs counter to the goal of\nbenchmarking.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 15,
+    "page": 40,
+    "topicId": "su11-process-improvement",
+    "stem": "A company implemented a benchmarking program to compare\nitself to others in the industry. Through this program, the\ncompany management team discovered that a larger\ncompetitor has a lower overhead per unit sold. Based on this\ninformation, management concluded that steps must be taken\nto reduce overhead to remain competitive. Which one of the\nfollowing is the best critique of this conclusion?",
+    "choices": [
+      "Benchmarking should be performed with companies of similar\nsize and sales.",
+      "Fixed overhead is difficult to control and should not be\nbenchmarked.",
+      "Cost per unit is just one area of competitiveness; others should\nbe looked at.",
+      "Companies operate very differently, and comparisons should\nnot be made."
+    ],
+    "answerIndex": 0,
+    "explanation": "The ideal benchmarking partner should be similar in size and\nstructure. A larger competitor may be benefiting from\neconomies of scale, which a smaller company cannot match.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 16,
+    "page": 41,
+    "topicId": "su11-process-improvement",
+    "stem": "A manufacturer of high-technology consumer goods incurred\nthe following quality-related expenses last year.\nEquipment maintenance $ 5,000\nSpoilage                    10,000\nLiability claims            50,000\nSupplier evaluations         5,000\nScrap                       20,000\nCustomer support            50,000\nFinished product testing 25,000\nWhat is the total cost related to prevention?",
+    "choices": [
+      "$165,000",
+      "$35,000",
+      "$10,000",
+      "$5,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Equipment maintenance and supplier evaluations are both\nprevention costs, as both are proactive measures to ensure\nthe ability of the production facility to continue to operate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 17,
+    "page": 42,
+    "topicId": "su11-process-improvement",
+    "stem": "A manufacturer that wants to improve its staging process\ncompares its procedures against the check-in process for a\nmajor airline. Which of the following tools is the manufacturer\nusing?",
+    "choices": [
+      "Total quality management.",
+      "Statistical process control.",
+      "Economic value added.",
+      "Benchmarking."
+    ],
+    "answerIndex": 3,
+    "explanation": "Benchmarking is a primary tool used in quality management. It\nis a means of helping organizations with productivity\nmanagement and business process analysis. Benchmarking\ninvolves analysis and measurement of key outputs against\nthose of the best organizations. This procedure also involves\nidentifying the underlying key actions and causes that\ncontribute to the performance difference. The benchmark\nneed not be a competitor or even a similar entity. Process\n(function) benchmarking studies operations of organizations\nwith similar processes regardless of industry. Thus, a\ncomparison to procedures against the check-in process for a\nmajor airline is an example of benchmarking.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 18,
+    "page": 43,
+    "topicId": "su11-process-improvement",
+    "stem": "Which one of the following would be classified as an internal\nfailure cost on a quality cost report?",
+    "choices": [
+      "Depreciation of inspection equipment.",
+      "Returns and allowances.",
+      "Net cost of scrap.",
+      "Final product testing and inspection."
+    ],
+    "answerIndex": 2,
+    "explanation": "Internal failure costs occur when defective products are\ndetected before shipment. Examples are scrap, rework,\ntooling charges, downtime, redesign of products or processes,\nlost output, and lost learning opportunities. Thus, the net cost\nof scrap would be classified as an internal failure cost on the\nquality report.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 19,
+    "page": 43,
+    "topicId": "su11-process-improvement",
+    "stem": "Which of the following statements are true with respect to\ncontinuous improvement?\nI.   Improvements should be made continuously until the\ngoal is reached.\nII.   The continuous improvement should involve\nmanagement and workers.\nIII.   Standards should be evaluated regularly, and\nimprovements should be ongoing.\nIV.      Continuous improvement initiatives should involve\nprimarily the workers.",
+    "choices": [
+      "I and II only.",
+      "I and IV only.",
+      "II and III only.",
+      "III and IV only."
+    ],
+    "answerIndex": 2,
+    "explanation": "Improvements should be ongoing, with involvement by\nmanagement and workers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 20,
+    "page": 44,
+    "topicId": "su11-process-improvement",
+    "stem": "Which one of the following statements about benchmarking\nis not correct?",
+    "choices": [
+      "A budget may provide a benchmark that motivates employees\nto meet a company’s goals.",
+      "A company may appropriately use benchmarks to evaluate\nemployee or unit performance.",
+      "Benchmarking may include comparing a unit’s achievements\nagainst other units within the company.",
+      "Comparing a unit’s results against industry benchmarks is not\nusually considered as useful as comparing results to the\nbudget."
+    ],
+    "answerIndex": 3,
+    "explanation": "Comparing a unit’s results against industry benchmarks is\nusually considered as useful as comparing results to the\nbudget. The budget helps in comparing actual results to the\nexpectations of the company. Industry benchmarks help in\ncomparing actual results to industry performance. Comparison\nto industry is just as important as company expectations in\nevaluating a unit’s results.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 21,
+    "page": 45,
+    "topicId": "su11-process-improvement",
+    "stem": "A company is currently performing a cost of quality analysis of\none of its facilities. The following are costs compiled by the\nfacility accountant:\nInspection                              $1,500\nWarranty repair                          2,800\nTesting of new materials                   400\nProduct testing                            950\nSpoilage                                   645\nScrap                                      150\nPreventive equipment maintenance           590\nLiability claims                         1,870\nRework                                   1,285\nTotal internal failure cost is",
+    "choices": [
+      "$2,080",
+      "$2,785",
+      "$4,945",
+      "$5,955"
+    ],
+    "answerIndex": 0,
+    "explanation": "Internal failure costs occur when defective products are\ndetected before shipment. The internal failure costs include\nthe cost of abnormal spoilage, scrap, and rework. Thus, the\ntotal internal failure cost is $2,080 ($645 + $150 + $1,285).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 22,
+    "page": 46,
+    "topicId": "su11-process-improvement",
+    "stem": "For purposes of cost control, process reengineering\nis most similar to",
+    "choices": [
+      "Activity-based costing.",
+      "Kaizen budgeting.",
+      "Variance analysis.",
+      "Value-chain analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Process reengineering and value chain analysis are similar\ndue to their focus on inherent features in an organization’s\nbusiness processes. Both rework an organization’s design to\neither improve customer service, reduce costs, or become\nmore competitive.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 23,
+    "page": 47,
+    "topicId": "su11-process-improvement",
+    "stem": "The process improvement tool that compares company\npractices with those of best-in-class organizations is",
+    "choices": [
+      "Value chain analysis.",
+      "Enterprise performance management.",
+      "The balanced scorecard.",
+      "Benchmarking."
+    ],
+    "answerIndex": 3,
+    "explanation": "According to the IMA, “benchmarking involves continuously\nevaluating the practices of best-in-class organizations and\nadapting company processes to incorporate the best of these\npractices.” It “analyzes and measures the key outputs of a\nbusiness process or function against the best and also\nidentifies underlying key actions and root causes that\ncontribute to the performance difference.” Benchmarking is an\nongoing process that entails quantitative and qualitative\nmeasurement of the difference between the company’s\nperformance of an activity and the performance by the best in\nthe world. The benchmark organization need not be a\ncompetitor.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 24,
+    "page": 48,
+    "topicId": "su11-process-improvement",
+    "stem": "A manufacturer experiences significant downtime on its\nassembly line. This delay is an example of what type of quality\ncost?",
+    "choices": [
+      "Prevention.",
+      "Internal failure.",
+      "Appraisal.",
+      "External failure."
+    ],
+    "answerIndex": 1,
+    "explanation": "Nonconformance costs include costs of internal failure and\nexternal failure. Internal failure costs occur when defective\nproducts are detected before shipment. Examples include\nscrap, rework, tooling changes, downtime, and correcting\nproblems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 25,
+    "page": 48,
+    "topicId": "su11-process-improvement",
+    "stem": "An accountant prepared the following cost of quality report\nsummary for the most recent month of operations for his\ncompany.\nCategory            Amount\nMaterials waste               $1,750\nProduct testing                 1,235\nProduct returns                 2,050\nMachine breakdowns              3,416\nWhat is the total internal failure cost for the month?",
+    "choices": [
+      "$1,235",
+      "$1,750",
+      "$3,285",
+      "$5,166"
+    ],
+    "answerIndex": 3,
+    "explanation": "Internal failure costs of quality occur when defective products\nare detected before shipment. Examples include scrap,\nrework, tooling changes, downtime, and correcting problems.\nMaterials waste and machine breakdowns result in internal\nfailure costs. The total is $5,166 ($1,750 materials waste +\n$3,416 machine breakdowns).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 26,
+    "page": 49,
+    "topicId": "su11-process-improvement",
+    "stem": "The CEO of a company has initiated a project that will involve\ncompletely rethinking how business functions are performed to\ndeliver value to customers. It will likely involve a radical\nrestructuring of the business. This type of analysis is",
+    "choices": [
+      "An activity-based cost audit.",
+      "Continuous improvement.",
+      "Value engineering.",
+      "Business process reengineering (BPR)."
+    ],
+    "answerIndex": 3,
+    "explanation": "BPR involves process innovation and core process redesign.\nThus, it requires a complete rethinking of how business\nfunctions are performed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 27,
+    "page": 50,
+    "topicId": "su11-process-improvement",
+    "stem": "A controller prepared the following cost of quality report\nsummary for the most recent month of operations for her\ncompany.\nCategory                   Amount\nEmployee quality training              $ 2,750\nEquipment downtime                       1,500\nWarranty obligations                     9,050\nEnvironmental law violation fine        10,000\nWhat is the total external failure cost for the month?",
+    "choices": [
+      "$9,050",
+      "$10,000",
+      "$10,550",
+      "$19,050"
+    ],
+    "answerIndex": 3,
+    "explanation": "Nonconformance costs include internal and external failure\ncosts. Examples of external failure costs are those incurred for\ncustomer service complaints, product return, warranty\nobligations, and environmental law violations. The total for the\nmonth is $19,050 ($9,050 warranty obligations + $10,000\nenvironmental law violation fine).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 28,
+    "page": 51,
+    "topicId": "su11-process-improvement",
+    "stem": "Which one of the following statements correctly describes\nprocess analysis?",
+    "choices": [
+      "A method of radically innovating how business functions are\nperformed and how a company is organized.",
+      "A continuous effort to incrementally improve processes to\nmake them more effective and more efficient.",
+      "A method of analyzing the operational steps taken to complete\nwork with the goal of identifying what is working well and what\nneeds improvement.",
+      "A systematic assessment of all aspects of the value chain with\nthe goal of minimizing costs without negatively affecting\ncustomer satisfaction."
+    ],
+    "answerIndex": 2,
+    "explanation": "Process analysis is a means of linking an entity’s internal\nprocesses with its overall strategies. It is a method of\nreviewing the procedures in place to achieve business goals.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 29,
+    "page": 52,
+    "topicId": "su11-process-improvement",
+    "stem": "The CEO of a company formed a team to perform a process\nanalysis. Team members include employees from the\naccounting department and the operations department. In their\nanalysis, they found that the slowest process was the entire\nproduction process. As part of their report to the CEO, they\nplan to recommend adding additional capacity for this process.\nWhat is the correct term for the process slowing the production\nprocess?",
+    "choices": [
+      "Loose.",
+      "Tight.",
+      "Batch.",
+      "Bottleneck."
+    ],
+    "answerIndex": 3,
+    "explanation": "A bottleneck is the process that slows the entire production\nprocess. It often has limited capacity. After additional capacity\nis added, the bottleneck shifts to the next slowest process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 30,
+    "page": 53,
+    "topicId": "su11-process-improvement",
+    "stem": "Which one of the following statements correctly describes\nbenchmarking?",
+    "choices": [
+      "Identifying activities that add customer value and help create\ncompetitive advantage.",
+      "Reimagining how business functions are performed with the\ngoal of radically reorganizing the organization.",
+      "Evaluating processes with an organization to determine which\nones are slowing down production.",
+      "Identifying strategies, tactics, methods, and processes of the\nmost successful companies in an industry."
+    ],
+    "answerIndex": 3,
+    "explanation": "“Benchmarking involves continuously evaluating the practices\nof best-in-class organizations and adapting company\nprocesses to incorporate the best of these practices.” It\n“analyzes and measures the key outputs of a business\nprocess or function against the best and also identifies\nunderlying key actions and root causes that contribute to the\nperformance difference.” Benchmarking is an ongoing process\nthat entails quantitative and qualitative measurement of the\ndifference between the company’s performance of an activity\nand the performance by the best in the world. The benchmark\norganization need not be a competitor.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 31,
+    "page": 54,
+    "topicId": "su11-process-improvement",
+    "stem": "The new CEO of a multinational consumer goods company\nformed a benchmarking team with the goal of improving the\neffectiveness of its key business processes. The company is\nmarginally profitable, and the CEO believes it could be much\nmore efficient and effective in meeting customer needs. The\ncompany is based in the U.S. and has operations in Europe,\nthe Middle East, Africa, and Asia. The Asia market is its\nbiggest market. Which is most likely the best benchmark\norganization?",
+    "choices": [
+      "The leader in the telecommunications industry.",
+      "A competitor of the same size and same level of success.",
+      "The leader in the consumer goods industry.",
+      "The Asia division operations."
+    ],
+    "answerIndex": 2,
+    "explanation": "Benchmarking involves evaluating the practices of best-in-\nclass organizations and adapting company processes to\ninclude the best of those practices. The benchmark\norganization need not be a competitor. It may be a different\nindustry or segment of the same company. The best\ncomparison is often with the leader in the same industry,\npreferably one of a comparable size.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 11,
+    "section": 2,
+    "number": 32,
+    "page": 55,
+    "topicId": "su11-process-improvement",
+    "stem": "The controller is reviewing a summary cost of quality report\nwith the chief operating officer. The controller states that the\nnonconformance costs greatly exceed the conformance costs.\nWhich costs are nonconformance costs?",
+    "choices": [
+      "Prevention costs and internal failure costs.",
+      "Internal failure costs and external failure costs.",
+      "Appraisal costs and external failure costs.",
+      "Prevention costs and appraisal costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Nonconformance costs are costs of internal failure costs (a\nfinancial measure of internal performance) and external failure\ncosts (a financial measure of customer satisfaction).\nConformance costs are prevention and appraisal costs\n(financial measures of internal performance).",
+    "answerStatus": "source"
+  }
+]

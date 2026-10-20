@@ -34,7 +34,7 @@ export const Route = createFileRoute("/library/cma")({
         {
           name: "description",
           content:
-            "دليل CMA عربي وإنجليزي للوحدات 1–6 مع 308 أسئلة تدريب أصلية ثنائية اللغة و1,060 سؤالًا من بنك Gleim 2025 باللغة الإنجليزية.",
+            "دليل CMA للوحدات 1–6 مع 308 أسئلة ثنائية اللغة و2,443 سؤالًا من كتابي Gleim 2025 للوحدات 1–20 بالإنجليزية.",
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
@@ -109,7 +109,7 @@ function CmaPage() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-8">
         <header className="rounded-[2rem] border border-[#A88765]/25 bg-[#1C1B19] p-6 sm:p-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/30 bg-[#A88765]/10 px-3 py-1.5 text-xs font-bold text-[#c9a986]">
-            <GraduationCap className="size-4" /> CMA · Part 1 · A / D
+            <GraduationCap className="size-4" /> CMA · Part 1 · A–F
           </span>
           <h2 className="mt-5 font-display text-3xl font-black leading-tight text-[#FCFBF9] sm:text-5xl">
             {lang === "ar"
@@ -118,8 +118,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "أدلة وحالات للوحدات 1–6، و308 أسئلة أصلية ثنائية اللغة، وأسئلة كتاب 2025 للوحدات 1–10 باللغة الإنجليزية مع رقم صفحة المصدر. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 7–10 مع كتب الشرح."
-              : "Guides and cases for Units 1–6, 308 original bilingual questions, and the 2025 book's English questions for Units 1–10 with source pages. Arabic translation and table review are in progress; guides for Units 7–10 will follow their textbooks."}
+              ? "أدلة وحالات للوحدات 1–6، و308 أسئلة أصلية ثنائية اللغة، و2,443 سؤالًا من كتابي 2025 للوحدات 1–20 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 7–20 مع كتب الشرح."
+              : "Guides and cases for Units 1–6, 308 original bilingual questions, and 2,443 English questions from both 2025 volumes for Units 1–20 with source pages. Arabic translation and table review are in progress; guides for Units 7–20 will follow their textbooks."}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -134,9 +134,7 @@ function CmaPage() {
                 ? "سؤالًا من كتاب 2025 بالإنجليزية"
                 : "English questions from the 2025 book"}
             </span>
-            <span>
-              {lang === "ar" ? "المجالان A وD: ‎15% لكل منهما" : "Domains A and D: 15% each"}
-            </span>
+            <span>{lang === "ar" ? "مجالات الجزء الأول A–F" : "Part 1 domains A–F"}</span>
           </div>
         </header>
 
@@ -194,7 +192,31 @@ function CmaPage() {
               className="mt-4 flex flex-wrap gap-2"
               aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
             >
-              {(["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const).map((value) => (
+              {(
+                [
+                  "all",
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                ] as const
+              ).map((value) => (
                 <button
                   key={value}
                   type="button"
@@ -471,8 +493,8 @@ function CmaPage() {
                   {q.sourceTextStatus === "reconstructed" && (
                     <p className="mt-2 text-xs text-[#76543F]">
                       {lang === "ar"
-                        ? "عمود من جدول الاختيارات مقطوع في ملف المصدر؛ أُعيد تكوين الاختيار المتأثر وفق الرسم والشرح."
-                        : "The source PDF clips one answer-table column; the affected choice was reconstructed from the chart and explanation."}
+                        ? "يوجد خيار ناقص في ملف المصدر؛ أضيف بديل تدريبي مع تمييزه للمراجعة."
+                        : "The source PDF omits a choice; an independently written practice distractor has been marked for review."}
                     </p>
                   )}
                   <p
@@ -627,8 +649,8 @@ function CmaPage() {
         <footer className="mt-8 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5 text-xs leading-6 text-[#BDB4AA]">
           <p>
             {lang === "ar"
-              ? "هذه مادة تدريبية أصلية مستقلة، مستندة إلى مخطط IMA وأهداف التعلم المنشورة، وليست أسئلة اختبار رسمية أو نصًا من كتاب تجاري."
-              : "Independent original study material aligned with the published IMA outline and learning outcomes; these are not official exam questions or excerpts from a commercial textbook."}
+              ? "تشمل هذه الصفحة أسئلة تدريب أصلية وأسئلة من نسختي بنك Gleim 2025 المرفقتين، مع بيانات المصدر وحالة مراجعة النص. ليست أسئلة اختبار IMA الرسمية."
+              : "This page includes original practice and questions from the supplied Gleim 2025 bank volumes, with source details and transcription status. These are not official IMA exam questions."}
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-[#c9a986]">
             <a
