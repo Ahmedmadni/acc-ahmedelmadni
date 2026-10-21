@@ -44,7 +44,7 @@ const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025
 const { CMA_GLEIM_2025_VOL2_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol2");
 const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
   (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
-);
+).concat(readDataFile("cma-questions-units-15-20").CMA_QUESTIONS_UNITS_15_20);
 const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
@@ -52,8 +52,8 @@ const questionTexts = new Set();
 check(CMA_TOPICS.length === 80 && ids.size === 80, "Expected 80 unique sections for units 1–20");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 2875, "Expected 432 original plus 2,443 source questions");
-check(newOutlineQuestions.length === 124, "Expected 124 original SU 7–14 example questions");
+check(CMA_LOCAL_QUESTIONS.length === 2967, "Expected 524 original plus 2,443 source questions");
+check(newOutlineQuestions.length === 216, "Expected 216 original SU 7–20 example questions");
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
   [20, 18, 37, 32],
@@ -228,8 +228,8 @@ for (const [key, unrelated] of [
   check(!sourceRecords.get(key)?.stem.includes(unrelated), `Leaked fact pattern: ${key}`);
 }
 check(
-  Object.keys(CMA_TOPIC_GUIDES).length === 57,
-  "Expected guides for published study units 1–14",
+  Object.keys(CMA_TOPIC_GUIDES).length === 80,
+  "Expected guides for all study units 1–20",
 );
 for (const [unit, expected] of [
   [1, 6],
@@ -252,7 +252,7 @@ for (const [unit, expected] of [
 for (const topic of CMA_TOPICS) {
   const guide = CMA_TOPIC_GUIDES[topic.id];
   check(
-    topic.studyUnit <= 14 ? guide?.topicId === topic.id : !guide,
+    guide?.topicId === topic.id,
     `Unexpected guide state for ${topic.id}`,
   );
   check(
@@ -279,7 +279,7 @@ for (const topic of CMA_TOPICS) {
       `Incomplete guide: ${topic.id}`,
     );
   }
-  if (topic.studyUnit >= 7 && topic.studyUnit <= 14) {
+  if (topic.studyUnit >= 7) {
     check(topic.guidePages, `Missing supplied outline page range: ${topic.id}`);
     check(guide.lessonSections?.length >= 2, `Missing detailed lessons: ${topic.id}`);
     check(
@@ -297,7 +297,7 @@ for (const topic of CMA_TOPICS) {
     check(new Set(headings).size === headings.length, `Duplicate lesson heading: ${topic.id}`);
     check(
       newOutlineQuestions.filter((question) => question.topicId === topic.id).length === 4,
-      `Expected four new bilingual example questions: ${topic.id}`,
+      `Expected four new bilingual application questions: ${topic.id}`,
     );
   }
   check(
@@ -359,9 +359,9 @@ for (const q of CMA_LOCAL_QUESTIONS) {
   check(q.choices.ar.every(Boolean) && q.choices.en.every(Boolean), `Empty choice: ${q.id}`);
 }
 for (const q of newOutlineQuestions) {
-  check(CMA_LOCAL_QUESTIONS.includes(q), `Unregistered SU 7–14 question: ${q.id}`);
-  check(q.question.ar !== q.question.en, `Untranslated SU 7–14 question: ${q.id}`);
-  check(q.explanation.ar !== q.explanation.en, `Untranslated SU 7–14 solution: ${q.id}`);
+  check(CMA_LOCAL_QUESTIONS.includes(q), `Unregistered SU 7–20 question: ${q.id}`);
+  check(q.question.ar !== q.question.en, `Untranslated SU 7–20 question: ${q.id}`);
+  check(q.explanation.ar !== q.explanation.en, `Untranslated SU 7–20 solution: ${q.id}`);
 }
 // Recompute numerical answers from the scenario inputs, independently of answerIndex.
 // This catches a wrong keyed option and arithmetic drift in the new static question data.
@@ -424,6 +424,45 @@ const calculatedAnswers = [
   [14, "gross-margin-change", [500000 * 0.34 - 80000]],
   [14, "retained-earnings-roll", [90000 + 40000 - 10000]],
   [14, "cash-flow-projection", [30000 + 120000 - 90000 - 20000 + 15000 - 5000]],
+  [15, "cost-gap", [13000 - 12000]],
+  [15, "flex-cost", [6 * 800 + 5000]],
+  [15, "volume-income", [(1000 - 900) * 20]],
+  [15, "material-price-used", [1080 * (6 - 5.5)]],
+  [15, "material-usage", [(1080 - 500 * 2) * 6]],
+  [15, "material-cost-bridge", [1000 * 6 - 1080 * 5.5]],
+  [15, "labor-rate", [13230 - 630 * 20]],
+  [15, "labor-efficiency", [(630 - 400 * 1.5) * 20]],
+  [15, "labor-total", [630 * 21 - 600 * 20]],
+  [15, "sms-price", [0.6 * 10 + 0.4 * 5]],
+  [15, "actual-mix-standard-price", [50 * 10 + 50 * 5]],
+  [15, "mix-component", [100 * (8 - 7.5)]],
+  [15, "yield-component", [(100 - 90) * 8]],
+  [15, "voh-spending", [13200 - 2200 * 5]],
+  [15, "voh-efficiency", [(2200 - 2000) * 5]],
+  [15, "foh-spending", [24000 - 23500]],
+  [15, "foh-volume", [24000 - (24000 / 3000) * 2800]],
+  [15, "complete-total", [480 + 1230 + 350 + 500]],
+  [15, "complete-allowed", [45560 - 2560]],
+  [15, "sales-price", [1100 * (30 - 29)]],
+  [15, "sales-volume", [(1100 - 1000) * 12]],
+  [15, "sales-mix", [(520 * 0.6 - 260) * 3]],
+  [15, "market-size", [0.2 * (1100 - 1000) * 10]],
+  [16, "contribution", [180000 - 100000]],
+  [16, "segment-margin", [180000 - 100000 - 25000]],
+  [16, "reported-after-common", [55000 - 15000]],
+  [16, "roi-basic", [90000 / 600000 * 100]],
+  [16, "roi-dupont", [100000 / 1000000 * 100, 1000000 / 500000, 100000 / 500000 * 100]],
+  [16, "residual-income", [90000 - 600000 * 0.1]],
+  [16, "ri-new-project", [12000 - 100000 * 0.1]],
+  [16, "transfer-full-min", [12 + 25 - 12]],
+  [16, "transfer-range", [12, 20]],
+  [16, "transfer-corporate", [20 - 12]],
+  [18, "batch-reject", [80000 - 78000]],
+  [19, "warehouse-gap", [1000 - 990, 500000 - 496000]],
+  [20, "rpa-hours", [6000 * (4 - 1) / 60]],
+  [20, "rpa-net", [300 * 30 - 5000]],
+  [20, "pareto-70", [(40 + 30) / (40 + 30 + 20 + 10) * 100]],
+  [20, "simple-rsquared", [(-0.6) ** 2 * 100]],
 ];
 for (const [unit, slug, expected] of calculatedAnswers) {
   const id = `cma-su${unit}-${slug}`;
@@ -441,9 +480,9 @@ for (const [unit, slug, expected] of calculatedAnswers) {
   }
 }
 console.log(`Recomputed ${calculatedAnswers.length} numerical exercises in Arabic and English`);
-check(CMA_STUDY_UNIT_CASES.length === 14, "Expected a linked practice case for every guided unit");
+check(CMA_STUDY_UNIT_CASES.length === 20, "Expected a linked practice case for every guided unit");
 check(
-  new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 14,
+  new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 20,
   "Expected one distinct case per guided unit",
 );
 for (const item of CMA_STUDY_UNIT_CASES) {
@@ -463,5 +502,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (432 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (524 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );
