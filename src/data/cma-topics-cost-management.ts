@@ -289,6 +289,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 10,
     section: "10.1",
     sourcePages: "1041–1059",
+    guidePages: "2–4",
     losRef: "D.4.a–c,e,j",
     part: "part-1",
     domain: "cost-mgmt",
@@ -296,6 +297,13 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     titleEn: "Just-in-Time and Lean Resource Management",
     summaryAr: "خفض الهدر والمخزون وزمن الدورة مع تقدير مخاطر انقطاع الإمداد.",
     summaryEn: "Reduce waste, inventory and cycle time while assessing supply disruption risk.",
+    keyFormulas: [
+      {
+        nameAr: "زمن الإيقاع",
+        nameEn: "Takt time",
+        formula: "Available production time ÷ Customer demand units",
+      },
+    ],
     searchTerms: ["JIT", "kanban", "lean", "throughput", "الهدر"],
   },
   {
@@ -304,6 +312,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 10,
     section: "10.2",
     sourcePages: "1060–1077",
+    guidePages: "5–11",
     losRef: "D.4.d,f–g,j",
     part: "part-1",
     domain: "cost-mgmt",
@@ -311,6 +320,13 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     titleEn: "ERP and Outsourcing",
     summaryAr: "تدفق المعلومات في ERP وMRP وتقييم تكلفة الشراء مقابل التصنيع ومخاطر المورد.",
     summaryEn: "Use ERP and MRP information and evaluate make-or-buy costs and supplier risk.",
+    keyFormulas: [
+      {
+        nameAr: "صافي احتياج المواد",
+        nameEn: "Net material requirement",
+        formula: "max(0, Gross need + Safety stock − On-hand inventory − Scheduled receipts)",
+      },
+    ],
     searchTerms: ["ERP", "MRP", "outsourcing", "make or buy", "مصادر خارجية"],
   },
   {
@@ -319,6 +335,7 @@ export const CMA_COST_MANAGEMENT_TOPICS: CmaTopic[] = [
     studyUnit: 10,
     section: "10.3",
     sourcePages: "1078–1087",
+    guidePages: "12–13",
     losRef: "D.4.h–j",
     part: "part-1",
     domain: "cost-mgmt",
