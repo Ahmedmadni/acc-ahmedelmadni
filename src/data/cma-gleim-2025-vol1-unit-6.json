@@ -1,0 +1,1040 @@
+[
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 1,
+    "page": 630,
+    "topicId": "su6-ir-foundations",
+    "stem": "The primary purpose of integrated reporting (IR) is to",
+    "choices": [
+      "Explain to providers of financial capital how value is created by\nthe company over time.",
+      "Give customers holistic information about the company and its\nvalues.",
+      "Report about nonfinancial aspects of the company.",
+      "Meet the requirements of regulators."
+    ],
+    "answerIndex": 0,
+    "explanation": "IR is defined as “a process founded on integrated thinking,\nwhich results in a periodic integrated report by an organization\nabout value creation and preservation in the short, medium,\nand long term.” It is primarily focused on giving holistic\ninformation to the providers of financial capital about how the\nentity creates value over time.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 2,
+    "page": 631,
+    "topicId": "su6-ir-foundations",
+    "stem": "The primary purpose of integrated reporting is to",
+    "choices": [
+      "Be able to tell customers holistically about the organization\nand its values.",
+      "Report about mainly nonfinancial aspects of the organization.",
+      "Explain to providers of financial capital how value is created by\nthe organization over time.",
+      "Fulfill the requirements of regulatory institutions."
+    ],
+    "answerIndex": 2,
+    "explanation": "Integrated reporting <IR> primarily focuses on giving holistic\ninformation to the providers of financial capital, including the\norganization’s value-creation process in the short, medium,\nand long term.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 3,
+    "page": 632,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated thinking is not",
+    "choices": [
+      "The final step in the integrated reporting process.",
+      "The basis for integrated reporting and the integrated report.",
+      "A means of providing insight into the interdependencies\nbetween financial and nonfinancial aspects of the organization.",
+      "A process of decision making, management, and reporting."
+    ],
+    "answerIndex": 0,
+    "explanation": "The integrated report and the integrated reporting process are\nbased on integrated thinking. However, these processes are\nnot static and will always influence each other.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 4,
+    "page": 632,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated reporting (IR) is best defined as",
+    "choices": [
+      "A concise communication about how strategy, governance,\nperformance, and prospects lead to value creation over time.",
+      "The process of defining and measuring nonfinancial aspects of\na company.",
+      "Combining the annual report with the sustainability or\ncorporate sustainability reports from a company.",
+      "A process founded on integrated thinking, resulting in a\nperiodic integrated report by an organization about value\ncreation and preservation."
+    ],
+    "answerIndex": 3,
+    "explanation": "As defined by the International Integrated Reporting Council\n(IIRC), IR is “a process founded on integrated thinking, which\nresults in a periodic integrated report by an organization about\nvalue creation and preservation in the short, medium, and long\nterm.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 5,
+    "page": 633,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated reports",
+    "choices": [
+      "Must be prepared in conformity with accounting principles that\nare generally accepted in the United States (U.S. GAAP).",
+      "Are the foundation for integrated thinking.",
+      "Depict how costs and customer value accumulate along a\nchain of activities that lead to a product or service.",
+      "Include financial and nonfinancial information."
+    ],
+    "answerIndex": 3,
+    "explanation": "An integrated report is designed to provide a holistic view of a\ncompany by connecting financial and nonfinancial information\nwith the long-term value-creation possibilities of the\norganization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 6,
+    "page": 634,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated thinking is",
+    "choices": [
+      "The final step in the integrated reporting process.",
+      "The basis for integrated reporting and the integrated report.",
+      "Most often undertaken by a specialized department.",
+      "Primarily a management and governance process."
+    ],
+    "answerIndex": 1,
+    "explanation": "Integrated thinking is a prerequisite to integrated reporting.\nUnderstanding the mutual influences of financial and\nnonfinancial factors is necessary for integrated reporting about\nthe performance of a company and for making well-informed\ndecisions to create value in the long term. Through integrated\nthinking, a company gains insight into how interdependencies\nbetween financial and nonfinancial factors interact and affect\nvalue creation. Thus, integrated thinking is the basis for the\nexternally communicated integrated report.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 7,
+    "page": 634,
+    "topicId": "su6-ir-foundations",
+    "stem": "Which statement about integrated reporting is true?",
+    "choices": [
+      "Integrated reporting communicates a company’s strategy\nthroughout the organization and connects critical success\nfactors with performance measures.",
+      "A principles-based framework for integrated reporting has\nbeen issued by a major standard setter.",
+      "The ultimate goal of the proponents of integrated reporting is\nfor it to become the reporting standard for public companies in\nthe U.S.",
+      "Integrated reporting is the basis for the externally\ncommunicated integrated report."
+    ],
+    "answerIndex": 1,
+    "explanation": "Integrated reporting is a relatively new concept. The IIRC,\nwhich was established in 2010, issued a principles-based\nframework for integrated reporting in 2013. This framework\nguides companies preparing an integrated report. The\nobjective is to align capital allocation and corporate activity to\ncreate financial well being and sustainable expansion through\nintegrated thinking and integrated reporting. Those earlier\nintegrated reporting standards are now a subset under the\nIFRS Foundation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 8,
+    "page": 636,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated reporting is a process founded on <List A>, which\nresults in <List B> about value creation and preservation in the\n<List C>.\nList A                 List B                List C\nIntegrated                     Integrated               Long",
+    "choices": [
+      "List A: Integrated reports. List B: Integrated thinking. List C: Long term.",
+      "List A: Integrated thinking. List B: Integrated reports. List C: Short, medium, and long term.",
+      "List A: Corporate social responsibility. List B: Integrated reports. List C: Short, medium, and long term.",
+      "List A: Integrated thinking. List B: Integrated reports. List C: Short term."
+    ],
+    "answerIndex": 1,
+    "explanation": "As defined by the IIRC, integrated reporting is a process\nfounded on integrated thinking, which results in a periodic\nintegrated report by an organization about value creation and\npreservation in the short, medium, and long term.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 9,
+    "page": 637,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated reporting, integrated thinking, and the integrated\nreport are",
+    "choices": [
+      "Sequential phases of the <IR> Framework.",
+      "Used interchangeably.",
+      "Distinct but interconnected.",
+      "Distinct and static."
+    ],
+    "answerIndex": 2,
+    "explanation": "Integrated reporting, integrated thinking, and the integrated\nreport are three distinct concepts. Integrated reporting is a\nprocess founded on integrated thinking, which results in a\nperiodic integrated report by an organization about value\ncreation and preservation. Integrated thinking is a process of\ndecision making, management, and reporting. Integrated\nreports concisely communicate how strategy, governance,\nperformance, and prospects lead to value creation over time.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 10,
+    "page": 637,
+    "topicId": "su6-ir-foundations",
+    "stem": "Which of the following is the main goal of the integrated\nreport?",
+    "choices": [
+      "Compliance with the framework issued by the International\nIntegrated Reporting Council.",
+      "Communication to customers of the financial and nonfinancial\naspects of the company.",
+      "Disclosure of more information about how the entity creates\nvalue over time to providers of financial capital.",
+      "Full disclosure of information about financial matters in the\ninterests of improving transparency and accountability."
+    ],
+    "answerIndex": 2,
+    "explanation": "The integrated report primarily gives holistic information to the\nproviders of financial capital about the value-creation process\nof the company in the short, medium and long term.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 11,
+    "page": 638,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated thinking is",
+    "choices": [
+      "The final step in the integrated reporting process.",
+      "A process that communicates how various factors lead to\nvalue creation.",
+      "Focused on determining how an annual report is combined\nwith a sustainability report.",
+      "A process of decision making, management, and reporting."
+    ],
+    "answerIndex": 3,
+    "explanation": "Integrated thinking is a process of decision making,\nmanagement, and reporting. It is based on the connectivity\nand interdependencies among several company-specific\nfactors that affect an organization’s ability to create value over\ntime.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 12,
+    "page": 639,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated thinking is",
+    "choices": [
+      "Done in stand-alone departments.",
+      "A prerequisite to integrated reporting about performance.",
+      "The basis for financial statements and separately published\ncorporate social responsibility reports.",
+      "A concise communication about how strategy, governance,\nperformance, and prospects lead to value creation."
+    ],
+    "answerIndex": 1,
+    "explanation": "Integrated thinking is a prerequisite to IR. Understanding the\ninfluences of financial and nonfinancial factors on each other\nis necessary to (1) report in an integrated manner about\nperformance and (2) make well-informed decisions for long-\nterm value creation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 13,
+    "page": 639,
+    "topicId": "su6-ir-foundations",
+    "stem": "Through integrated reporting, a company",
+    "choices": [
+      "May disclose the effects of externalities on capitals owned by\nthe company.",
+      "Is limited to including only material value created for itself.",
+      "Communicates implementation of strategies, corporate\ngovernance, performance, and prospects leading to value\ncreation.",
+      "Combines the sustainability report with the corporate social\nresponsibility report."
+    ],
+    "answerIndex": 2,
+    "explanation": "Through IR, a company communicates implementation of\nstrategies, corporate governance, employee and management\nperformance, and prospects that lead to value creation over\ntime. In the context of the entity’s external environment, IR\ncommunicates how value is created by providing a\ncombination of financial and nonfinancial information. Thus, IR\nenables a company to tell its own unique story of value\ncreation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 14,
+    "page": 640,
+    "topicId": "su6-ir-foundations",
+    "stem": "Integrated reporting is a new reporting concept. Integrated\nreporting was introduced because",
+    "choices": [
+      "Traditional financial reporting increasingly did not provide\nadequate nonfinancial information about value creation.",
+      "Regulators issued new standards that required reporting of\nnonfinancial as well as financial information.",
+      "The financial crisis of 2008 resulted in a lack of trust in\ncompanies.",
+      "Stakeholders were critical of traditional sustainability reports."
+    ],
+    "answerIndex": 0,
+    "explanation": "As the proportion of total assets consisting of intangible assets\nhas increased, corporate reporting of this true value has\nbegun to change. Accordingly, integrated thinking and\nreporting have emerged to give providers of financial capital\nintegrated financial and nonfinancial information about how an\nentity creates value over a period of time. Such reporting also\nbenefits other stakeholders (interested parties), e.g.,\nemployees, customers, suppliers, and regulators.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 15,
+    "page": 641,
+    "topicId": "su6-ir-foundations",
+    "stem": "Which of the following statements about the background of the\nIntegrated Reporting Framework is true?",
+    "choices": [
+      "The objective is to achieve financial well being and sustainable\nexpansion through integrated thinking.",
+      "The Institute of Management Accountants (IMA) issued the\n<IR> Framework in 2013.",
+      "Integrated reporting primarily is intended to guide disclosures\nby public companies.",
+      "Integrated reporting includes financial information in the same\ndocument as the sustainability or corporate social\nresponsibility report."
+    ],
+    "answerIndex": 0,
+    "explanation": "The International Integrated Reporting Council (IIRC) was\nestablished in 2010 after the peak of the financial crisis. It\nissued the <IR> Framework in 2013. This principles-based\nframework guides companies preparing an integrated report.\nThe objective is to align capital allocation and corporate\nactivity to create financial well being and sustainable\nexpansion through integrated thinking and integrated\nreporting. Although the IIRC primarily focuses on providers of\nfinancial capital in the private sector, its mission is for IR to\nbecome the corporate reporting standard worldwide for private\nand public companies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 16,
+    "page": 642,
+    "topicId": "su6-ir-foundations",
+    "stem": "The integrated report",
+    "choices": [
+      "Must be prepared in conformity with accounting principles\ngenerally accepted in the United States (GAAP).",
+      "Is a sustainability report for certain stakeholders.",
+      "Benefits parties, including employees, customers, suppliers,\nand regulators, interested in value creation.",
+      "Is issued only by private companies in the U.S."
+    ],
+    "answerIndex": 2,
+    "explanation": "An integrated report gives providers of financial capital more\ninformation about how the entity creates value over time. An\nintegrated report also benefits other stakeholders who are\ninterested in the entity’s effectiveness in creating value. They\ninclude employees, customers, suppliers, communities in\nwhich the entity is located, and regulators.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 17,
+    "page": 643,
+    "topicId": "su6-ir-foundations",
+    "stem": "The <IR> Framework",
+    "choices": [
+      "Must be adopted by private companies.",
+      "Is principles-based.",
+      "Primarily addresses the needs of providers of financial capital\nin the public sector.",
+      "May be used as guidance for external reporting of financial\nstatements."
+    ],
+    "answerIndex": 1,
+    "explanation": "The framework is principles-based. The integrated report must\nbe adaptable by different companies in different situations.\nAccordingly, the framework contains Guiding Principles that\nare guidelines and cannot always be strictly applied.\nMoreover, the Content Elements are in question form.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 1,
+    "number": 18,
+    "page": 644,
+    "topicId": "su6-ir-foundations",
+    "stem": "Which of the following is a true statement about value creation\nfor integrated reporting (IR) purposes?",
+    "choices": [
+      "Value creation is a process based on integrated thinking\nresulting in an integrated report.",
+      "Understanding how financial and nonfinancial factors interact\naffects decisions about value creation.",
+      "An integrated report explains how the interdependent financial\naspects of a company interact in the value-creation process.",
+      "The main goal of IR is to disclose financial information to\nimprove accountability."
+    ],
+    "answerIndex": 1,
+    "explanation": "Integrated thinking is a prerequisite to IR. Understanding the\ninfluences of financial and nonfinancial factors on each other\nis necessary to (1) report in an integrated manner about\nperformance and (2) make well-informed decisions for long-\nterm value creation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 1,
+    "page": 646,
+    "topicId": "su6-ir-capitals",
+    "stem": "The fundamental concepts defined in the <IR> Framework are",
+    "choices": [
+      "Value creation, the value-creation process, and the six\ncapitals.",
+      "Business activities, the value-creation process, and materiality.",
+      "The six capitals, the business model, and the external\nenvironment.",
+      "External environment, the business model, and materiality."
+    ],
+    "answerIndex": 0,
+    "explanation": "The value-creation process is the core of the integrated report.\nIt shows how companies create financial and nonfinancial\nvalue over time. This value is created not only for the\ncompany itself but also for others. It is influenced by the\nexternal environment, relations with stakeholders, and various\nresources (e.g., the six capitals).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 2,
+    "page": 646,
+    "topicId": "su6-ir-capitals",
+    "stem": "The fundamental concepts of integrated reporting, as defined\nby the IIRC, are",
+    "choices": [
+      "The six capitals, the value-creation process, and materiality.",
+      "Value creation, the value-creation process, and the six\ncapitals.",
+      "The six capitals, the value-creation process, and the business\nmodel.",
+      "External environment, the business model, and materiality."
+    ],
+    "answerIndex": 1,
+    "explanation": "The value-creation process is the core of the integrated report,\nshowing how organizations create both financial and\nnonfinancial value over time. This value is created not only for\nthe organization itself, but also for others, and is influenced by\nthe capitals used and affected by the organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 3,
+    "page": 647,
+    "topicId": "su6-ir-capitals",
+    "stem": "Which statement about value creation is false?",
+    "choices": [
+      "Value creation is one of the three fundamental concepts of\nintegrated reporting.",
+      "Because externalities of value creation do not affect the\norganization, they should not be included in the integrated\nreport.",
+      "Value created for others that is considered material should be\nincluded in the integrated report.",
+      "Value is created both for the organization as well as for its\nexternal environment."
+    ],
+    "answerIndex": 1,
+    "explanation": "Value is created for the organization and for others.\nExternalities, which are effects on the capitals not owned by\nthe organization, may occur when value is created. However,\nexternalities influence nonfinancial value created by the\norganization and should therefore be included in the\nintegrated report.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 4,
+    "page": 648,
+    "topicId": "su6-ir-capitals",
+    "stem": "What is not one of the six capitals defined in the <IR>\nFramework?",
+    "choices": [
+      "Environmental capital.",
+      "Manufactured capital.",
+      "Social and relationship capital.",
+      "Intellectual capital."
+    ],
+    "answerIndex": 0,
+    "explanation": "Environmental capital is not defined in the <IR> Framework.\nThe correct terminology is natural capital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 5,
+    "page": 648,
+    "topicId": "su6-ir-capitals",
+    "stem": "Which of the following is included in the integrated report?",
+    "choices": [
+      "Social and relationship capital but not negative externalities.",
+      "Only financial, manufactured, and intellectual capital.",
+      "Material value created for others and externalities.",
+      "Value created for the company but not for the external\nenvironment."
+    ],
+    "answerIndex": 2,
+    "explanation": "The forms of value created (for the company and for others)\nare closely related. For example, sale of a product results in\nrevenue for the company and some form of value for the\ncustomer, depending on the nature of what was sold. The sale\naffects not only financial capital but also social and\nrelationship capital. Externalities, whether positive or negative,\nalso should be addressed. They are effects on the capitals not\nowned by the company. Accordingly, if the value created is\nmaterial, it should be included in the integrated report,\nregardless of whether it has been created for the company\nitself or for others.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 6,
+    "page": 649,
+    "topicId": "su6-ir-capitals",
+    "stem": "Which statement about the capitals is false?",
+    "choices": [
+      "The capitals can decrease, increase, or be transformed due to\nthe regular course of business.",
+      "Value can be created in any of the six capitals and is not\nnecessarily measured in financial capital.",
+      "An integrated report does not have to be structured along the\nsix capitals.",
+      "Every organization should address the six capitals in its\nintegrated report."
+    ],
+    "answerIndex": 3,
+    "explanation": "Not all capitals are equally important for every organization.\nSome may be irrelevant to a given company. Moreover, the\nnames of capitals are not standardized, and the integrated\nreport need not be structured based on the capitals.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 7,
+    "page": 650,
+    "topicId": "su6-ir-capitals",
+    "stem": "According to the <IR> Framework, value creation depends on\nsources known as capitals. Which of the following is\na true statement about the capitals?",
+    "choices": [
+      "Every company should address the six capitals in its integrated\nreport.",
+      "The capitals are affected by the regular course of business.",
+      "Value is necessarily measured in financial capital.",
+      "Value creation occurs only when the total of the capitals\nincreases."
+    ],
+    "answerIndex": 1,
+    "explanation": "The value of the capitals may change in form, increase, or\ndecrease as a result of the activities and outputs of the\ncompany in the regular course of business. For example, one\ncapital may need to decrease for another to increase.\nFurthermore, value may be created over different capitals and\nis not necessarily measured in financial terms. Also, value\ncreation is viewed not only as an increase in the total of the\ncapitals but also as preservation of their aggregate value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 8,
+    "page": 651,
+    "topicId": "su6-ir-capitals",
+    "stem": "In an integrated report, what is the difference between outputs\nof business activities and outcomes?",
+    "choices": [
+      "Outputs are results in the form of physical products, by-\nproducts, and waste. Outcomes are the intangible results.",
+      "Outputs are results in the form of products and services.\nOutcomes are these results measured in financial capital\nterms.",
+      "Outputs are results in the form of all products created.\nOutcomes are unwanted externalities such as by-products and\nwaste.",
+      "Outputs are results in the form of products, services, by-\nproducts, and waste. Outcomes are the effects of outputs on\ncapitals."
+    ],
+    "answerIndex": 3,
+    "explanation": "Outputs are the results of business activities in the form of\nproducts, services, by-products, and waste. Outcomes are the\neffects of outputs on the six capitals. These outcomes relate\ndirectly to the external environment and are not necessarily\ncontrolled by the company.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 9,
+    "page": 652,
+    "topicId": "su6-ir-capitals",
+    "stem": "The six capitals defined in the <IR> Framework include",
+    "choices": [
+      "Environmental capital and political capital.",
+      "Manufactured capital and environmental capital.",
+      "Financial capital and nonfinancial capital.",
+      "Intellectual capital and human capital."
+    ],
+    "answerIndex": 3,
+    "explanation": "Intellectual capital is one of the capitals as defined in the\n<IR> Framework. It is the intangible knowledge of the\ncompany, e.g., intellectual property, licenses, software, and\norganizational structure. Human capital also is defined. It\nconsists of employees’ capacities and mindsets, e.g., training\nand loyalty to the company.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 10,
+    "page": 653,
+    "topicId": "su6-ir-capitals",
+    "stem": "According to the <IR> Framework, manufactured capital is a\nsource of value creation for a company. Manufactured capital",
+    "choices": [
+      "Consists of the environmental resources used.",
+      "Is obtained through financing.",
+      "Need not be owned.",
+      "Must be presented in an integrated report."
+    ],
+    "answerIndex": 2,
+    "explanation": "Manufactured capital is every tangible object possessed by\n(available to) a company, whether or not owned. Examples\nare roads and ports.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 11,
+    "page": 653,
+    "topicId": "su6-ir-capitals",
+    "stem": "An economic condition may affect a company’s ability to create\nvalue. It is an example of which influencing factor?",
+    "choices": [
+      "Governance.",
+      "External environment.",
+      "Strategy and resource allocation.",
+      "Performance."
+    ],
+    "answerIndex": 1,
+    "explanation": "The ever-changing external environment in which a company\noperates includes political conditions, economic conditions,\ntechnological change, societal issues, and environmental\nchallenges.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 12,
+    "page": 654,
+    "topicId": "su6-ir-capitals",
+    "stem": "The fundamental concepts defined in the <IR> Framework\ninclude",
+    "choices": [
+      "Governance.",
+      "Value creation.",
+      "Guiding principles.",
+      "Content elements."
+    ],
+    "answerIndex": 1,
+    "explanation": "Value may be created for the organization itself. For example,\nvalue in this context includes financial returns to the providers\nof financial capital. Value also may be created for others. For\nexample, value for others includes goods or services provided\nto individuals. The two forms of value creation are closely\nrelated. When a company sells a product, it creates value for\nitself in the form of revenues and indirectly for the customer.\n(The form of value for the customer depends on the nature of\nthe good or service sold.) This process affects not only the\nfinancial aspect of the company but also its reputation and its\nrelationship with its stakeholders.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 13,
+    "page": 655,
+    "topicId": "su6-ir-capitals",
+    "stem": "Value creation",
+    "choices": [
+      "Is unaffected by externalities because they are not included in\nthe integrated report.",
+      "Is always measured in financial terms.",
+      "For others is not included in the integrated report.",
+      "Depends on sources affected by the regular course of\nbusiness."
+    ],
+    "answerIndex": 3,
+    "explanation": "Value creation depends on different sources. They are defined\nin the <IR> Framework as the six capitals: financial,\nmanufactured, intellectual, human, social and relationship, and\nnatural. These sources of capital are affected by the regular\ncourse of business. They are increased, decreased, or\ntransformed by the entity’s activities and outputs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 14,
+    "page": 656,
+    "topicId": "su6-ir-capitals",
+    "stem": "One of the six capitals defined in the Integrated Reporting\nFramework is",
+    "choices": [
+      "Product capital.",
+      "Natural capital.",
+      "Owned capital.",
+      "Equity capital."
+    ],
+    "answerIndex": 1,
+    "explanation": "Natural capital is defined in the IIRC Framework. Natural\ncapital includes the renewable and nonrenewable\nenvironmental resources and processes that are used,\nproduced, or affected by the company. These include land,\nwater, air, minerals, flora, fauna, biodiversity, and ecosystem\nhealth.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 15,
+    "page": 656,
+    "topicId": "su6-ir-capitals",
+    "stem": "Which statement about the capitals in an integrated report\nis true?",
+    "choices": [
+      "The change in value of the capitals must be disclosed in a\nsupplement to the integrated report.",
+      "The capitals are not affected by the regular course of\nbusiness.",
+      "Value can be created in any of the six capitals and is always\nmeasured in dollars.",
+      "An integrated report does not have to be structured based on\nthe six capitals."
+    ],
+    "answerIndex": 3,
+    "explanation": "The six capitals provide guidance and exist to assure\nconsideration of the different forms of capital affected by\noperations. Furthermore, all six capitals need not be present in\nevery integrated report, capitals need not be identified by the\nsame names in every integrated report, and an integrated\nreport need not be structured based on the six capitals.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 16,
+    "page": 657,
+    "topicId": "su6-ir-capitals",
+    "stem": "Outcomes are an element of the value-creation process. They\nare",
+    "choices": [
+      "The results of business activities.",
+      "Controlled by the organization.",
+      "The effects of outputs on the six capitals.",
+      "Products or services."
+    ],
+    "answerIndex": 2,
+    "explanation": "The elements of the value-creation process are (1) inputs, (2)\nthe business model, (3) business activities, (4) outputs, and\n(5) outcomes. Outcomes are the effects of outputs on the six\ncapitals. The outcomes determine the state for the new inputs.\nIn this sense, the value-creation process is circular.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 17,
+    "page": 658,
+    "topicId": "su6-ir-capitals",
+    "stem": "According to the Integrated Reporting Framework, the six\ncapitals are affected by the",
+    "choices": [
+      "Outcomes of interactions with customers.",
+      "Financial returns to the providers.",
+      "Regular course of business.",
+      "Relations with stakeholders."
+    ],
+    "answerIndex": 2,
+    "explanation": "The six capitals are affected by the regular course of\nbusiness. They are increased, decreased, or transformed by\nthe activities and outputs of the organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 18,
+    "page": 658,
+    "topicId": "su6-ir-capitals",
+    "stem": "According to the IIRC, natural capital is a source of value\ncreation. Natural capital",
+    "choices": [
+      "Is nonrenewable.",
+      "Is obtained through financing.",
+      "Consists of the environmental resources used.",
+      "Must be present in an integrated report."
+    ],
+    "answerIndex": 2,
+    "explanation": "Natural capital consists of the renewable and nonrenewable\nenvironmental resources and processes that are used,\nproduced, or affected by the company. These resources\ninclude land, air, water, minerals, flora, fauna, biodiversity, and\necosystem health.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 19,
+    "page": 659,
+    "topicId": "su6-ir-capitals",
+    "stem": "A proper oversight structure may affect a company’s ability to\ncreate value. Which of the following is the relevant Content\nElement?",
+    "choices": [
+      "External environment.",
+      "Governance.",
+      "Strategy and resource allocation.",
+      "Performance."
+    ],
+    "answerIndex": 1,
+    "explanation": "A company should create a proper oversight structure to\nensure the ability of the company to create value. Important\naspects are leadership structure, diversity, strategic decision\nmaking processes, values, ethics, and linkage between\nremuneration and value creation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 2,
+    "number": 20,
+    "page": 660,
+    "topicId": "su6-ir-capitals",
+    "stem": "A leading manufacturer of electric vehicles has accumulated\ncustomer driving interaction data through its unique pilot\ndriver-assist program. This data will be used to further develop\nmore advanced autonomous features that the company plans\nto implement in the near future on its most popular model. In\nintegrated reporting, the system used to accumulate and\nanalyze the driving data is best categorized as",
+    "choices": [
+      "Human capital.",
+      "Intellectual capital.",
+      "Natural capital.",
+      "Manufactured capital."
+    ],
+    "answerIndex": 1,
+    "explanation": "Intellectual capital is the intangible knowledge of the\norganization. It includes intellectual property (e.g., patents,\ncopyrights, and software) and organizational capital (e.g.,\nsystems, procedures, and protocols).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 1,
+    "page": 661,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "Which of the following is not an element of the value-creation\nprocess?",
+    "choices": [
+      "Governance.",
+      "The integrated report.",
+      "Strategy and resource allocation.",
+      "Future outlook."
+    ],
+    "answerIndex": 1,
+    "explanation": "The integrated report is merely a vehicle to show the value-\ncreation process. Publishing the integrated report and the\ndocument itself are not part of the value-creation process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 2,
+    "page": 661,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "Which question posed in the <IR> Framework relates to\nstrategy and resource allocation?",
+    "choices": [
+      "What challenges and uncertainties is the organization likely to\nencounter in pursuing its strategy?",
+      "To what extent has the organization achieved its strategic\nobjectives for the period?",
+      "How does the organization determine what matters to include\nin the integrated report?",
+      "Where does the organization want to go and how does it\nintend to get there?"
+    ],
+    "answerIndex": 3,
+    "explanation": "An integrated report should answer the question about the\nstrategy and resource allocation Content Element as follows:\n“Where does the organization want to go and how does it\nintend to get there?”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 3,
+    "page": 662,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "Preparing an integrated report involves certain challenges.\nWhat part of the <IR> Framework provides information on how\nto present the content of the integrated report?",
+    "choices": [
+      "The Content Elements.",
+      "The capitals.",
+      "The Guiding Principles.",
+      "The fundamental concepts."
+    ],
+    "answerIndex": 2,
+    "explanation": "The Guiding Principles provide guidance for preparers of\nintegrated reports on how information should be presented.\nThese principles can sometimes conflict (e.g., an integrated\nreport should be both concise and complete). But the\nconcepts discussed, such as materiality, may help preparers\nmake professional judgments while preparing the integrated\nreport.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 4,
+    "page": 663,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "Questions that should be answered in the integrated report are\nposed in the",
+    "choices": [
+      "Content Elements.",
+      "Capitals as defined by the IIRC.",
+      "External environment of integrated reporting.",
+      "Stakeholder needs and interest as part of the IIRC Guiding\nPrinciples."
+    ],
+    "answerIndex": 0,
+    "explanation": "Each integrated report should contain the nine Content\nElements defined by the <IR> Framework. Each Content\nElement (except general reporting guidance) includes one\nquestion that should be answered in the integrated report.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 5,
+    "page": 664,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "The question posed for the Content Element, Basis of\nPreparation and Presentation, in the <IR> Framework is",
+    "choices": [
+      "To what extent has the organization achieved its strategic\nobjectives for the period, and what are its outcomes in terms of\neffects on the capitals?",
+      "Where does the organization want to go, and how does it\nintend to get there?",
+      "What does the organization do, and what are the\ncircumstances under which it operates?",
+      "How does the organization determine what matters to include\nin the integrated report, and how are such matters quantified\nor evaluated?"
+    ],
+    "answerIndex": 3,
+    "explanation": "The question posed about the Content Element of Basis of\nPreparation and Presentation is, “How does the organization\ndetermine what matters to include in the integrated report, and\nhow are such matters quantified or evaluated?” The\norganization should determine what to include in the report\nand the means of measurement or evaluation. The report\nshould summarize (1) the materiality definition process and (2)\nsignificant frameworks and methods used for quantification\nand evaluation. It also should describe the boundary within\nwhich matters are relevant for inclusion. This boundary is\ntwofold: (1) the financial reporting entity and (2) risks,\nopportunities, and outcomes associated with other entities or\nstakeholders that significantly affect value creation by the\nentity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 6,
+    "page": 665,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "Of the Content Element questions posed in the Integrated\nReporting Framework, which relates to Outlook?",
+    "choices": [
+      "Where does the organization want to go and how does it\nintend to get there?",
+      "What challenges and uncertainties is the organization likely to\nencounter in pursuing its strategy?",
+      "To what extent has the organization achieved its strategic\nobjectives for the period?",
+      "How does the organization determine what matters to include\nin the integrated report?"
+    ],
+    "answerIndex": 1,
+    "explanation": "The following is the question posed for the Outlook element:\n“What challenges and uncertainties is the organization likely to\nencounter in pursuing its strategy, and what are the potential\nimplications for its business model and future performance?”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 7,
+    "page": 666,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "The <IR> Framework includes Content Elements. The\norganization’s business model is one such element. A\ndescription of the business model in the integrated report\nincludes",
+    "choices": [
+      "Identification of dependencies.",
+      "Outputs such as brand loyalty.",
+      "Sources of specific risks.",
+      "Measurement of achievements."
+    ],
+    "answerIndex": 0,
+    "explanation": "The integrated report describes the key inputs, business\nactivities, outputs, and outcomes of the business model. Other\nmatters described usually include (1) a diagram or flowchart\nthat emphasizes and explains key elements, (2) a logical\nnarrative of the circumstances of the organization, and (3)\nidentification of stakeholder and other (e.g., materials)\ndependencies and factors in the external environment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 8,
+    "page": 666,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "Which of the following is a Content Element defined in the\nIntegrated Reporting Framework?",
+    "choices": [
+      "The integrated report.",
+      "Governance.",
+      "The six capitals.",
+      "Integrated thinking."
+    ],
+    "answerIndex": 1,
+    "explanation": "Certain aspects of governance connect with the organization’s\nability to create value: (1) leadership structure, including skills\nand diversity of individuals; (2) specific strategic decision-\nmaking processes; (3) effects of culture, ethics, and value on\nthe capitals; and (4) the linkage of compensation, including\nincentives, with value creation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 3,
+    "number": 9,
+    "page": 667,
+    "topicId": "su6-ir-principles-elements",
+    "stem": "One of the questions posed in the Integrated Reporting\nFramework is, “What does the organization do, and what are\nthe circumstances under which it operates?” An aspect of the\nrelated Content Element includes",
+    "choices": [
+      "Leadership structure.",
+      "Mission and vision.",
+      "Business model.",
+      "Risks and opportunities."
+    ],
+    "answerIndex": 1,
+    "explanation": "The aspects of the Content Element of organizational\noverview and external environment include (1) the market in\nwhich the company operates, (2) its mission and vision, (3) its\ncompetitive landscape, (4) key quantitative information, (5)\nneeds of stakeholders, (6) changes in the external\nenvironment, and (7) how the company deals with these\nexternal changes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 1,
+    "page": 669,
+    "topicId": "su6-ir-adoption",
+    "stem": "Which of the following is not a challenge for an organization\nthat adopts integrated reporting (IR)?",
+    "choices": [
+      "Materiality definitions.",
+      "The unwillingness of stakeholders to accept the new reporting\nform.",
+      "Support from senior management.",
+      "Data quality of nonfinancial information."
+    ],
+    "answerIndex": 1,
+    "explanation": "An integrated report typically is beneficial for stakeholders. It\nshould improve stakeholder relations by providing a holistic\nview of the entity that connects nonfinancial and financial\ninformation with its value-creating potential. Thus, stakeholder\nacceptance is not perceived as a challenge.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 2,
+    "page": 669,
+    "topicId": "su6-ir-adoption",
+    "stem": "The challenges of adopting integrated reporting (IR) include",
+    "choices": [
+      "Defining materiality when using a multi-capital approach.",
+      "The resulting linkage of financial and nonfinancial information.",
+      "More employee engagement.",
+      "Forcing departments to work together."
+    ],
+    "answerIndex": 0,
+    "explanation": "IR uses a six-capital approach to value creation.\nConsequently, IR must filter the increased information\navailable through a properly defined level of materiality. For\nexample, a definition of materiality may be based on what\nproviders of financial capital need to know.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 3,
+    "page": 670,
+    "topicId": "su6-ir-adoption",
+    "stem": "The business case for adoption of integrated reporting\n(IR) most likely includes",
+    "choices": [
+      "Universally accepted standards for value creation.",
+      "Linkage of financial and nonfinancial information.",
+      "Use of a single-capital approach.",
+      "Less emphasis on the importance of the tone at the top."
+    ],
+    "answerIndex": 1,
+    "explanation": "An integrated report is intended to provide a holistic view of an\nentity. It connects financial and nonfinancial information with\nthe long-term value-creation potential of the entity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 4,
+    "page": 671,
+    "topicId": "su6-ir-adoption",
+    "stem": "What benefits are attributable to integrated reporting (IR)?",
+    "choices": [
+      "Better stakeholder relations, lower reputational risk, and better\ndecision making.",
+      "Better stakeholder relations, more providers of financial\ncapital, and better decision making.",
+      "Better stakeholder relations, more providers of financial\ncapital, and higher assurance for the integrated report.",
+      "Lower reputational risk, better decision making, and higher\nassurance for the integrated report."
+    ],
+    "answerIndex": 0,
+    "explanation": "Better relations with employees and suppliers and more\ncommitted customers, reduced risk to reputation, and better\ndecision making and resource allocation are benefits of IR.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 5,
+    "page": 671,
+    "topicId": "su6-ir-adoption",
+    "stem": "Which of the following is a potential advantage of integrated\nreporting (IR)?",
+    "choices": [
+      "Reduction of costs by establishing new control systems.",
+      "Better control systems for financial information.",
+      "Less emphasis on the materiality of nonfinancial information.",
+      "Providing assurances on nonfinancial information."
+    ],
+    "answerIndex": 3,
+    "explanation": "Providing assurance on nonfinancial information, the amount\nof which is unlimited, is difficult. However, validating the\nintegrated presentation of financial and nonfinancial\ninformation is important. Assurance on IR enhances the\nquality of the reports and their comparability among\norganizations. A similar benefit results from an auditor’s\nopinion on financial information.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 6,
+    "page": 672,
+    "topicId": "su6-ir-adoption",
+    "stem": "Which of the following is a benefit to an entity that adopts\nintegrated reporting (IR)?",
+    "choices": [
+      "Better measurement of financial information.",
+      "Providing greater assurance on financial information.",
+      "Breaking down silos within the organization.",
+      "Separating financial and nonfinancial information."
+    ],
+    "answerIndex": 2,
+    "explanation": "Silos are organizational groups that rarely interact. IR compels\nthe groups (e.g., departments) to collaborate to produce the\nintegrated report.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 7,
+    "page": 673,
+    "topicId": "su6-ir-adoption",
+    "stem": "The greatest challenge for an organization that adopts\nintegrated reporting (IR) is",
+    "choices": [
+      "Defining materiality for providers of financial capital.",
+      "The unwillingness of stakeholders to accept the new reporting\nform.",
+      "Full involvement of the CEO and the board.",
+      "Data quality of financial information."
+    ],
+    "answerIndex": 0,
+    "explanation": "Management needs to decide what information the providers\nof financial capital and other users want. Because IR uses a\nmulti-capital approach, a user needs information that has\npassed through a materiality filter. This material information\nshould be useful to providers of financial capital and other\nusers. However, defining materiality for often voluminous\nnonfinancial information is difficult but still essential. Thus,\neach organization needs to develop an effective materiality\ndefinition process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 8,
+    "page": 673,
+    "topicId": "su6-ir-adoption",
+    "stem": "The business case for integrated reporting (IR) most likely\nincludes",
+    "choices": [
+      "More reliable assurance on decision making and financial and\nnonfinancial information.",
+      "Better stakeholder relations, better resource allocation, and\ngreater assurance provided by the integrated report.",
+      "More committed customers and more engaged employees.",
+      "Lower costs, more providers of financial capital, and better\ndecision making."
+    ],
+    "answerIndex": 2,
+    "explanation": "IR is a process of combining the interactive concepts of\nintegrated thinking, integrated reporting, and value creation. It\nenables a company to demonstrate implementation of\nstrategies, governance, employee and management\nperformance, and prospects leading to value creation. Value\ncreation benefits not only the organization but also improves\nrelations with stakeholders (interested parties), such as\ncustomers, employees, regulators, suppliers, and providers of\nfinancial capital. Accordingly, customers will be more\ncommitted and employees more engaged if a company can\ndemonstrate its effectiveness in creating value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 9,
+    "page": 674,
+    "topicId": "su6-ir-adoption",
+    "stem": "The challenge for adopters of integrated reporting (IR) is",
+    "choices": [
+      "Less emphasis on the materiality of nonfinancial information.",
+      "Enhancing the quality of integrated reports by providing\nassurance on nonfinancial information.",
+      "Reduction of costs by establishing new control systems and\ndata sets.",
+      "Better control systems for financial information and\nnonfinancial information."
+    ],
+    "answerIndex": 1,
+    "explanation": "Providing assurance on nonfinancial information, the amount\nof which is unlimited, is difficult. However, validating the\nintegrated presentation of financial and nonfinancial\ninformation is important. Assurance on IR enhances the\nquality of the reports and their comparability among\norganizations. A similar benefit results from an auditor’s\nopinion on financial information.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 10,
+    "page": 675,
+    "topicId": "su6-ir-adoption",
+    "stem": "What is the most likely benefit of adopting integrated reporting\n(IR)?",
+    "choices": [
+      "Better measurement of financial and nonfinancial information.",
+      "Greater departmentation to better define silos in the\norganization.",
+      "Disconnecting financial and nonfinancial information.",
+      "Lower long-term costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "A benefit of IR is lower long-term costs. For example, the\nvalue created by IR should reduce costs of debt (interest\ncharges) and equity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 11,
+    "page": 676,
+    "topicId": "su6-ir-adoption",
+    "stem": "Which of the following is a challenge of adopting integrated\nreporting (IR)?",
+    "choices": [
+      "Connectivity of financial and nonfinancial information.",
+      "Better resource allocation.",
+      "Lower reputational risk.",
+      "Filtering the increased information available to users."
+    ],
+    "answerIndex": 3,
+    "explanation": "IR uses a six-capital approach to value creation.\nConsequently, IR must filter the increased information\navailable through a properly defined level of materiality. For\nexample, a definition of materiality may be based on what\nproviders of financial capital need to know.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 12,
+    "page": 676,
+    "topicId": "su6-ir-adoption",
+    "stem": "Which of the following most likely helps to build the business\ncase for adoption of integrated reporting (IR)?",
+    "choices": [
+      "Support from the directors.",
+      "Use of a single-capital approach.",
+      "Separation of financial and nonfinancial information.",
+      "Generally accepted standards for measuring value creation."
+    ],
+    "answerIndex": 0,
+    "explanation": "The most important requirement for the success of IR is the\ntone at the top. Consequently, the support of the CEO and the\nboard of directors is necessary.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 13,
+    "page": 677,
+    "topicId": "su6-ir-adoption",
+    "stem": "The most persuasive argument for adoption of integrated\nreporting (IR) is that",
+    "choices": [
+      "Disclosure of accurate but sometimes negative information will\nhave negligible costs.",
+      "Investments in systems, data collection, and analysis will yield\npositive long-term results.",
+      "Worldwide adoption is likely because the percentage of\ncompanies using integrated reporting is already high.",
+      "A global institute exists that issues universally accepted\nstandards for integrated reporting."
+    ],
+    "answerIndex": 1,
+    "explanation": "Although the implementation of IR may incur additional costs\nin the short term, they ordinarily are recoverable. Initial\ninvestments are made in new systems, data collection, and\nanalysis in the first few years. However, the benefits of IR\nshould eventually yield net positive results. Once the systems\nand metrics are established, a company should benefit for a\nlong time.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 6,
+    "section": 4,
+    "number": 14,
+    "page": 678,
+    "topicId": "su6-ir-adoption",
+    "stem": "Worldwide adoption of integrated reporting (IR) is most likely if",
+    "choices": [
+      "Regulators do not become involved in standard setting.",
+      "Accounting firms defer to other parties for developing metrics.",
+      "Institutional investors pressure companies to report\nnonfinancial information.",
+      "Legislators repeal laws requiring reports based only on\nfinancial capital."
+    ],
+    "answerIndex": 2,
+    "explanation": "Institutional investors may use their influence to pressure\ncompanies to report about nonfinancial information and value\ncreation. They may be a strong driver for adoption of\nintegrated reporting.",
+    "answerStatus": "source"
+  }
+]

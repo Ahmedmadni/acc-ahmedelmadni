@@ -1,11 +1,20 @@
 import { CMA_STUDY_UNIT_CASES_3_4, CMA_TOPIC_GUIDES_3_4 } from "@/data/cma-guides-units-3-4";
 import { CMA_STUDY_UNIT_CASES_5_6, CMA_TOPIC_GUIDES_5_6 } from "@/data/cma-guides-units-5-6";
+import { CMA_STUDY_UNIT_CASES_7_9, CMA_TOPIC_GUIDES_7_9 } from "@/data/cma-guides-units-7-9";
+import { CMA_GUIDE_DETAILS_10_14 } from "@/data/cma-guide-details-10-14";
+import { CMA_GUIDE_DETAILS_7_9 } from "@/data/cma-guide-details-7-9";
+import { CMA_STUDY_UNIT_CASES_10_11, CMA_TOPIC_GUIDES_10_11 } from "@/data/cma-guides-units-10-11";
+import { CMA_STUDY_UNIT_CASES_12, CMA_TOPIC_GUIDES_12 } from "@/data/cma-guides-unit-12";
+import { CMA_STUDY_UNIT_CASES_13, CMA_TOPIC_GUIDES_13 } from "@/data/cma-guides-unit-13";
+import { CMA_STUDY_UNIT_CASES_14, CMA_TOPIC_GUIDES_14 } from "@/data/cma-guides-unit-14";
 
-/** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–6. */
+/** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–14. */
 export interface CmaTopicGuide {
   topicId: string;
   scope: { ar: string; en: string };
   concepts: { ar: string; en: string };
+  /** Optional, separately titled lessons for subjects needing more than a concise overview. */
+  lessonSections?: { heading: { ar: string; en: string }; body: { ar: string; en: string } }[];
   workflow: { ar: string; en: string };
   pitfalls: { ar: string; en: string };
   practicalCase: {
@@ -330,11 +339,30 @@ export const CMA_TOPIC_GUIDES: Record<string, CmaTopicGuide> = {
   },
   ...CMA_TOPIC_GUIDES_3_4,
   ...CMA_TOPIC_GUIDES_5_6,
+  ...Object.fromEntries(
+    Object.entries({
+      ...CMA_TOPIC_GUIDES_7_9,
+      ...CMA_TOPIC_GUIDES_10_11,
+      ...CMA_TOPIC_GUIDES_12,
+      ...CMA_TOPIC_GUIDES_13,
+      ...CMA_TOPIC_GUIDES_14,
+    }).map(([id, guide]) => [
+      id,
+      {
+        ...guide,
+        lessonSections: [
+          ...(guide.lessonSections ?? []),
+          ...(CMA_GUIDE_DETAILS_7_9[id] ?? []),
+          ...(CMA_GUIDE_DETAILS_10_14[id] ?? []),
+        ],
+      },
+    ]),
+  ),
 };
 
 /** Original linked practice cases for the 2026 case-based assessment style. */
 export interface CmaStudyUnitCase {
-  studyUnit: 1 | 2 | 3 | 4 | 5 | 6;
+  studyUnit: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14;
   title: { ar: string; en: string };
   scenario: { ar: string; en: string };
   tasks: { prompt: { ar: string; en: string }; solution: { ar: string; en: string } }[];
@@ -423,4 +451,9 @@ export const CMA_STUDY_UNIT_CASES: CmaStudyUnitCase[] = [
   },
   ...CMA_STUDY_UNIT_CASES_3_4,
   ...CMA_STUDY_UNIT_CASES_5_6,
+  ...CMA_STUDY_UNIT_CASES_7_9,
+  ...CMA_STUDY_UNIT_CASES_10_11,
+  ...CMA_STUDY_UNIT_CASES_12,
+  ...CMA_STUDY_UNIT_CASES_13,
+  ...CMA_STUDY_UNIT_CASES_14,
 ];

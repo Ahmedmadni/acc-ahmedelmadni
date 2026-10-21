@@ -1,0 +1,2535 @@
+[
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 1,
+    "page": 1088,
+    "topicId": "su18-control-procedures",
+    "stem": "Internal controls may be preventive, detective, corrective, or\ndirective. Which of the following is preventive?",
+    "choices": [
+      "Requiring two persons to open mail.",
+      "Reconciling the accounts receivable subsidiary file with the\ncontrol account.",
+      "Using batch totals.",
+      "Preparing bank reconciliations."
+    ],
+    "answerIndex": 0,
+    "explanation": "Preventive controls are designed to prevent an error or an\nirregularity. Detective and corrective controls attempt to\nidentify and correct errors or irregularities that have already\noccurred. Preventive controls are usually more cost beneficial\nthan detective or corrective controls. Assigning two individuals\nto open mail is an attempt to prevent misstatement of cash\nreceipts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 2,
+    "page": 1089,
+    "topicId": "su18-control-procedures",
+    "stem": "The procedure requiring preparation of a prelisting of incoming\ncash receipts, with copies of the prelist going to the cashier\nand to accounting, is an example of which type of control?",
+    "choices": [
+      "Preventive.",
+      "Corrective.",
+      "Detective.",
+      "Directive."
+    ],
+    "answerIndex": 0,
+    "explanation": "A prelisting of cash receipts in the form of checks is a\npreventive control. It is intended to deter undesirable events\nfrom occurring. Because fraud involving cash is most likely to\noccur before receipts are recorded, either remittance advices\nor a prelisting of checks should be prepared in the mail room\nso as to establish recorded accountability for cash as soon as\npossible. A cash register tape is a form of prelisting for cash\nreceived over the counter. One copy of a prelisting will go to\naccounting for posting to the cash receipts journal, and\nanother is sent to the cashier for reconciliation with checks\nand currency received.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 3,
+    "page": 1090,
+    "topicId": "su18-control-procedures",
+    "stem": "A proper segregation of duties requires that an individual",
+    "choices": [
+      "Authorizing a transaction records it.",
+      "Authorizing a transaction maintain custody of the asset that\nresulted from the transaction.",
+      "Maintaining custody of an asset be entitled to access the\naccounting records for the asset.",
+      "Recording a transaction not compare the accounting record of\nthe asset with the asset itself."
+    ],
+    "answerIndex": 3,
+    "explanation": "One person should not be responsible for all phases of a\ntransaction, i.e., for authorization, recording, and\ncustodianship of the related assets. These duties should be\nperformed by separate individuals to reduce the opportunities\nfor any person to be in a position of both perpetrating and\nconcealing errors or fraud in the normal course of his or her\nduties. For instance, an employee who receives and lists cash\nreceipts should not be responsible for comparing the recorded\naccountability for cash with existing amounts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 4,
+    "page": 1091,
+    "topicId": "su18-control-procedures",
+    "stem": "In a well-designed internal control structure in which the\ncashier receives remittances from the mail room, the cashier\nshould not",
+    "choices": [
+      "Endorse the checks.",
+      "Prepare the bank deposit slip.",
+      "Deposit remittances daily at a local bank.",
+      "Post the receipts to the accounts receivable subsidiary ledger\ncards."
+    ],
+    "answerIndex": 3,
+    "explanation": "The cashier is an assistant to the treasurer and thus performs\nan asset custody function. Individuals with custodial functions\nshould not have access to the accounting records. If the\ncashier were allowed to post the receipts to the accounts\nreceivable subsidiary ledger, an opportunity for embezzlement\nwould arise that could be concealed by falsifying the books.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 5,
+    "page": 1092,
+    "topicId": "su18-control-procedures",
+    "stem": "Accounting controls are concerned with the safeguarding of\nassets and the reliability of financial records. Consequently,\nthese controls are designed to provide reasonable assurance\nthat all of the following take place except",
+    "choices": [
+      "Permitting access to assets in accordance with management’s\nauthorization.",
+      "Executing transactions in accordance with management’s\ngeneral or specific authorization.",
+      "Compliance with methods and procedures ensuring\noperational efficiency and adherence to managerial policies.",
+      "Comparing recorded assets with existing assets at periodic\nintervals and taking appropriate action with respect to\ndifferences."
+    ],
+    "answerIndex": 2,
+    "explanation": "An accounting control is concerned with the safeguarding of\nassets and the reliability of financial records, whereas an\noperational or administrative control is concerned with\noperational efficiency and effectiveness. Thus, compliance\nwith methods and procedures ensuring operational efficiency\nand adherence to managerial policies is an objective of an\noperational control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 6,
+    "page": 1093,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following situations represents an internal\ncontrol weakness in the payroll department?",
+    "choices": [
+      "Payroll department personnel are rotated in their duties.",
+      "Paychecks are distributed by the employees’ immediate\nsupervisor.",
+      "Payroll records are reconciled with quarterly tax reports.",
+      "The timekeeping function is independent of the payroll\ndepartment."
+    ],
+    "answerIndex": 1,
+    "explanation": "Paychecks should not be distributed by supervisors because\nan unscrupulous person could terminate an employee and fail\nto report the termination. The supervisor could then clock in\nand out for the employee and keep the paycheck. A person\nunrelated to either payroll recordkeeping or the operating\ndepartment should distribute checks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 7,
+    "page": 1093,
+    "topicId": "su18-control-procedures",
+    "stem": "Auditors document their understanding of internal control with\nquestionnaires, flowcharts, and narrative descriptions. A\nquestionnaire consists of a series of questions concerning\ncontrols that auditors consider necessary to prevent or detect\nerrors and fraud. The most appropriate question designed to\ncontribute to the auditors’ understanding of the completeness\nof the expenditure (purchases-payables) cycle concerns the",
+    "choices": [
+      "Internal verification of quantities, prices, and mathematical\naccuracy of sales invoices.",
+      "Use and accountability of prenumbered checks.",
+      "Disposition of cash receipts.",
+      "Qualifications of accounting personnel."
+    ],
+    "answerIndex": 1,
+    "explanation": "A completeness assertion concerns whether all transactions\nand accounts that should be presented in the financial\nstatements are so presented. The exclusive use of\nsequentially numbered documents facilitates control over\nexpenditures. An unexplained gap in the sequence alerts the\nauditor to the possibility that not all transactions have been\nrecorded. A failure to use prenumbered checks would\ntherefore suggest a higher assessment of control risk. If a\ncompany uses prenumbered checks, it should be easy to\ndetermine exactly which checks were used during a period.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 8,
+    "page": 1094,
+    "topicId": "su18-control-procedures",
+    "stem": "Organizational independence is required in the processing of\ncustomers’ orders in order to maintain an internal control\nstructure. Which one of the following situations is not a proper\nseparation of duties in the processing of orders from\ncustomers?",
+    "choices": [
+      "Approval by Credit Department of a sales order prepared by\nthe Sales Department.",
+      "Shipping of goods by the Shipping Department that have been\nretrieved from stock by the Finished Goods Storeroom\nDepartment.",
+      "Invoice preparation by the Billing Department and posting to\ncustomers’ accounts by the Accounts Receivable Department.",
+      "Approval of a sales credit memo because of a product return\nby the Sales Department with subsequent posting to the\ncustomer’s account by the Accounts Receivable Department."
+    ],
+    "answerIndex": 3,
+    "explanation": "Allowing a sales department to approve a credit memo without\na receiving report would be dangerous. Sales personnel could\noverstate sales in one period and then reverse them in\nsubsequent periods. Thus, a copy of the receiving report for\nreturned goods should be sent to the billing department for\npreparation of a credit memo after approval by a responsible\nsupervisor who is independent of the Sales Department.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 9,
+    "page": 1096,
+    "topicId": "su18-control-procedures",
+    "stem": "Proper segregation of duties reduces the opportunities for\npersons to be in positions to both",
+    "choices": [
+      "Journalize entries and prepare financial statements.",
+      "Record cash receipts and cash disbursements.",
+      "Establish internal control and authorize transactions.",
+      "Perpetrate and conceal errors or fraud."
+    ],
+    "answerIndex": 3,
+    "explanation": "Proper segregation of duties and responsibilities reduces the\nopportunity for an individual to both perpetrate and conceal an\nerror or fraud in the normal course of his or her duties. Hence,\ndifferent people should be assigned the responsibilities for\nauthorizing transactions, recordkeeping, and asset custody.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 10,
+    "page": 1096,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following situations represents a strength of\ninternal control for purchasing and accounts payable?",
+    "choices": [
+      "Prenumbered receiving reports are issued randomly.",
+      "Invoices are approved for payment by the purchasing\ndepartment.",
+      "Unmatched receiving reports are reviewed on an annual basis.",
+      "Vendors’ invoices are matched against purchase orders and\nreceiving reports before a liability is recorded."
+    ],
+    "answerIndex": 3,
+    "explanation": "A voucher should not be prepared for payment until the\nvendor’s invoice has been matched against the corresponding\npurchase order and receiving report. This procedure provides\nassurance that a valid transaction has occurred and that the\nparties have agreed on the terms, such as price and quantity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 11,
+    "page": 1097,
+    "topicId": "su18-control-procedures",
+    "stem": "The frequency of the comparison of recorded accountability\nwith assets (for the purpose of safeguarding assets) should be\ndetermined by",
+    "choices": [
+      "The amount of assets independent of the cost of the\ncomparison.",
+      "The nature and amount of the asset and the cost of making the\ncomparison.",
+      "The cost of the comparison and whether the susceptibility to\nloss results from errors or fraud.",
+      "The auditor in consultation with client management."
+    ],
+    "answerIndex": 1,
+    "explanation": "Assets should be compared with the recorded accountability\nas frequently as the nature and amount of the assets require,\nwithin the limits of acceptable costs of comparison. The costs\nof safeguarding assets should not exceed the expected\nbenefits.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 12,
+    "page": 1098,
+    "topicId": "su18-control-procedures",
+    "stem": "When considering internal control over securities, the auditor is\nespecially concerned about",
+    "choices": [
+      "Access to stock certificates by the corporate controller.",
+      "Access to stock certificates by the corporate treasurer.",
+      "Preparation of accrual adjustments on bonds by the corporate\ncontroller.",
+      "Approval of temporary stock investment purchases by the\ncorporate treasurer or company president."
+    ],
+    "answerIndex": 0,
+    "explanation": "Access to stock certificates by the controller is a breakdown of\nthe fundamental segregation of duties needed for effective\ninternal control. The controller, who performs the accounting\nfunction, should not have access to the assets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 13,
+    "page": 1098,
+    "topicId": "su18-control-procedures",
+    "stem": "In a retail cash sales environment, which of the following\ncontrols is often absent?",
+    "choices": [
+      "Competent personnel.",
+      "Segregation of functions.",
+      "Supervision.",
+      "Asset access limited to authorized personnel."
+    ],
+    "answerIndex": 1,
+    "explanation": "In the usual retail cash sales situation, the sales clerk\nauthorizes and records the transactions and takes custody of\nassets. However, management ordinarily employs other\ncompensating controls to minimize the effects of the failure to\nsegregate functions. The cash receipts function is closely\nsupervised, cash registers provide limited access to assets,\nand an internal recording function maintains control over cash\nreceipts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 14,
+    "page": 1099,
+    "topicId": "su18-control-procedures",
+    "stem": "The procedure that would best discourage the resubmission of\nvendor invoices after they have been paid is",
+    "choices": [
+      "A requirement for double endorsement of checks.",
+      "The cancellation of vouchers by accounting personnel.",
+      "The cancellation of vouchers by treasurer personnel.",
+      "The mailing of payments directly to payees by accounting\npersonnel."
+    ],
+    "answerIndex": 2,
+    "explanation": "Canceling vouchers and supporting papers (with perforations,\nink, etc.) upon payment prevents the payment of a duplicate\nvoucher. If the person signing the check does the canceling,\nthe documents cannot be recycled for duplicate payments.\nSecuring the paid-voucher file from access by the accounts\npayable clerk is another effective control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 15,
+    "page": 1100,
+    "topicId": "su18-control-procedures",
+    "stem": "Organizational independence in the processing of payroll is\nachieved by functional separations that are built into the\nsystem. Which one of the following functional separations\nis not required for internal control purposes?",
+    "choices": [
+      "Separation of timekeeping from payroll preparation.",
+      "Separation of personnel function from payroll preparation.",
+      "Separation of payroll preparation and paycheck distribution.",
+      "Separation of payroll preparation and maintenance of year-to-\ndate records."
+    ],
+    "answerIndex": 3,
+    "explanation": "Most companies have their payrolls prepared by the same\nindividuals who maintain the year-to-date records. There is no\nneed for this functional separation because both duties involve\nrecordkeeping.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 16,
+    "page": 1101,
+    "topicId": "su18-control-procedures",
+    "stem": "Which control is not appropriate for property, plant, and\nequipment?",
+    "choices": [
+      "Disposal of fully depreciated assets.",
+      "Proper authority for acquisition and retirement of assets.",
+      "Detailed property records and physical controls over assets.",
+      "Written policies for capitalization and expenditure and review\nof application of depreciation methods."
+    ],
+    "answerIndex": 0,
+    "explanation": "No control should require disposal of fully depreciated assets.\nThey may still be productive and used in the business and\nshould remain on the books until disposal",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 17,
+    "page": 1101,
+    "topicId": "su18-control-procedures",
+    "stem": "Internal control should follow certain basic principles to\nachieve its objectives. One of these principles is the\nsegregation of functions. Which one of the following examples\ndoes not violate the principle of segregation of functions?",
+    "choices": [
+      "The treasurer has the authority to sign checks but gives the\nsignature block to the assistant treasurer to run the check-\nsigning machine.",
+      "The warehouse clerk, who has the custodial responsibility over\ninventory in the warehouse, may authorize disposal of\ndamaged goods.",
+      "The sales manager has the responsibility to approve credit and\nthe authority to write off accounts.",
+      "The department time clerk is given the undistributed payroll\nchecks to mail to absent employees."
+    ],
+    "answerIndex": 0,
+    "explanation": "Control procedures include segregation of duties to reduce the\nrisk that any person may be able to perpetrate and conceal\nerrors or fraud in the normal course of his or her duties.\nDifferent persons should authorize transactions, record\ntransactions, and maintain custody of assets. The treasurer’s\ndepartment should have custody of assets but should not\nauthorize or record transactions. Because the assistant\ntreasurer reports to the treasurer, the treasurer is merely\ndelegating an assigned duty related to asset custody. The use\nof the check-signing machine does not conflict with any other\nduty of the assistant treasurer and does not involve\nauthorization or recording of transactions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 18,
+    "page": 1103,
+    "topicId": "su18-control-procedures",
+    "stem": "If internal control is well designed, two tasks that should be\nperformed by different persons are",
+    "choices": [
+      "Approval of bad debt write-offs, and reconciliation of the\naccounts payable subsidiary ledger and controlling account.",
+      "Distribution of payroll checks and approval of sales returns for\ncredit.",
+      "Posting of amounts from both the cash receipts journal and\ncash payments journal to the general ledger.",
+      "Recording of cash receipts and preparation of bank\nreconciliations."
+    ],
+    "answerIndex": 3,
+    "explanation": "Recording of cash establishes accountability for assets. The\nbank reconciliation compares that recorded accountability with\nactual assets. The recording of cash receipts and preparation\nof bank reconciliations should therefore be performed by\ndifferent individuals since the preparer of a reconciliation could\nconceal a cash shortage. For example, if a cashier both\nprepares the bank deposit and performs the reconciliation,\n(s)he could embezzle cash and conceal the theft by falsifying\nthe reconciliation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 19,
+    "page": 1104,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following activities represents both an appropriate\npersonnel department function and a deterrent to payroll\nfraud?",
+    "choices": [
+      "Distribution of paychecks.",
+      "Authorization of overtime.",
+      "Authorization of additions and deletions from the payroll.",
+      "Collection and retention of unclaimed paychecks."
+    ],
+    "answerIndex": 2,
+    "explanation": "The payroll department is responsible for assembling payroll\ninformation (recordkeeping). The personnel department is\nresponsible for authorizing employee transactions such as\nhiring, firing, and changes in pay rates and deductions.\nSegregating the recording and authorization functions helps\nprevent fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 20,
+    "page": 1104,
+    "topicId": "su18-control-procedures",
+    "stem": "A utility company with a large investment in repair vehicles\nwould most likely implement which internal control to reduce\nthe risk of vehicle theft or loss?",
+    "choices": [
+      "Review insurance coverage for adequacy.",
+      "Systematically account for all repair work orders.",
+      "Physically inventory vehicles and reconcile the results with the\naccounting records.",
+      "Maintain vehicles in a secured location with release and return\nsubject to approval by a custodian."
+    ],
+    "answerIndex": 3,
+    "explanation": "Physical control of assets is a preventive control that reduces\nthe likelihood of theft or other loss. Keeping the vehicles at a\nsecure location and restricting access establishes\naccountability by the custodian and allows for proper\nauthorization of their use.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 21,
+    "page": 1105,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following would not be considered an\ninternal control structure policy or procedure relevant to a\nfinancial statement audit?",
+    "choices": [
+      "Maintenance of control over unused checks.",
+      "Periodic reconciliation of perpetual inventory records to the\ngeneral ledger control account.",
+      "Comparison of physical inventory counts to perpetual inventory\nrecords.",
+      "Timely reporting and review of quality control results."
+    ],
+    "answerIndex": 3,
+    "explanation": "Policies and procedures relevant to a financial statement audit\npertain to the entity’s ability to record, process, summarize,\nand report financial data consistent with the assertions in the\nfinancial statements. Other policies and procedures may not\nbe relevant to a financial statement audit, e.g., those\nconcerning the effectiveness, economy, and efficiency of\ncertain management decision-making processes (AU 319).\nProduction controls, such as quality control reports, may fall in\nthe latter category.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 22,
+    "page": 1106,
+    "topicId": "su18-control-procedures",
+    "stem": "To minimize the risk that agents in the purchasing department\nwill use their positions for personal gain, the organization\nshould",
+    "choices": [
+      "Rotate purchasing agent assignments periodically.",
+      "Request internal auditors to confirm selected purchases and\naccounts payable.",
+      "Specify that all items purchased must pass value-per-unit-of-\ncost reviews.",
+      "Direct the purchasing department to maintain records on\npurchase prices paid, with review of such being required each\n6 months."
+    ],
+    "answerIndex": 0,
+    "explanation": "The risk of favoritism is increased when buyers have long-term\nrelationships with specific vendors. Periodic rotation of buyer\nassignments will limit the opportunity to show favoritism. This\nrisk is also reduced if buyers are required to take vacations.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 23,
+    "page": 1107,
+    "topicId": "su18-control-procedures",
+    "stem": "Management can best strengthen internal control over the\ncustody of inventory stored in an off-site warehouse by\nimplementing",
+    "choices": [
+      "Reconciliations of transfer slips to/from the warehouse with\ninventory records.",
+      "Increases in insurance coverage.",
+      "Regular reconciliation of physical inventories to accounting\nrecords.",
+      "Regular confirmation of the amount on hand with the custodian\nof the warehouse."
+    ],
+    "answerIndex": 2,
+    "explanation": "The most effective control over off-site inventory is the periodic\ncomparison of the recorded accountability with the actual\nphysical inventory.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 24,
+    "page": 1108,
+    "topicId": "su18-control-procedures",
+    "stem": "Control procedures include physical controls over access to\nand use of assets and records. A departure from the purpose\nof such procedures is that",
+    "choices": [
+      "Access to the safe-deposit box requires two officers.",
+      "Only storeroom personnel and line supervisors have access to\nthe raw materials storeroom.",
+      "The mail clerk compiles a list of the checks received in the\nincoming mail.",
+      "Only salespersons and sales supervisors use sales\ndepartment vehicles."
+    ],
+    "answerIndex": 1,
+    "explanation": "Storeroom personnel have custody of assets, while\nsupervisors are in charge of execution functions. To give\nsupervisors access to the raw materials storeroom is a\nviolation of the essential internal control principle of\nsegregation of duties.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 25,
+    "page": 1108,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following controls could be used to detect bank\ndeposits that are recorded but never made?",
+    "choices": [
+      "Establishing accountability for receipts at the earliest possible\ntime.",
+      "Linking receipts to other internal accountabilities (i.e.,\ncollections to either accounts receivable or sales).",
+      "Consolidating cash receiving points.",
+      "Having bank reconciliations performed by a third party."
+    ],
+    "answerIndex": 3,
+    "explanation": "Having an independent third party prepare the bank\nreconciliations would reveal any discrepancies between\nrecorded deposits and the bank statements. A bank\nreconciliation compares the bank statement with company\nrecords and resolves differences caused by deposits in transit,\noutstanding checks, NSF checks, bank charges, errors, etc.\nThe other answer choices are controls implemented before\ndeposits are prepared and recorded in the company’s books.\nThe problem here is the detection of the diversion of funds\nthat have been properly recorded upon receipt.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 26,
+    "page": 1109,
+    "topicId": "su18-control-procedures",
+    "stem": "An adequate system of internal controls is most likely to detect\na fraud perpetrated by a",
+    "choices": [
+      "Group of employees in collusion.",
+      "Single employee.",
+      "Group of managers in collusion.",
+      "Single manager."
+    ],
+    "answerIndex": 1,
+    "explanation": "Segregation of duties and other control procedures serve to\nprevent or detect a fraud committed by an employee acting\nalone. One employee may not have the ability to engage in\nwrongdoing or may be subject to detection by other\nemployees in the course of performing their assigned duties.\nHowever, collusion may circumvent controls. For example,\ncomparison of recorded accountability with assets may fail to\ndetect fraud if persons having custody of assets collude with\nrecord keepers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 27,
+    "page": 1110,
+    "topicId": "su18-control-procedures",
+    "stem": "One payroll audit objective is to determine if there is proper\nsegregation of duties. Which of the following activities is\nincompatible?",
+    "choices": [
+      "Hiring employees and authorizing changes to pay rates.",
+      "Preparing the payroll and filing payroll tax forms.",
+      "Signing and distributing payroll checks.",
+      "Preparing attendance data and preparing the payroll."
+    ],
+    "answerIndex": 3,
+    "explanation": "Attendance data are accumulated by the timekeeping function.\nPreparing the payroll is a payroll department function. For\ncontrol purposes, these two functions should be separated to\navoid the perpetration and concealment of fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 28,
+    "page": 1111,
+    "topicId": "su18-control-procedures",
+    "stem": "Appropriate control over obsolete materials requires that they\nbe",
+    "choices": [
+      "Carried at cost in the accounting records until the actual\ndisposition takes place.",
+      "Sorted, treated, and packaged before disposition takes place,\nin order to obtain the best selling price.",
+      "Determined by an approved authority to be lacking in regular\nusability.",
+      "Retained within the regular storage area."
+    ],
+    "answerIndex": 2,
+    "explanation": "Since auditors, storekeepers, etc., may not have the requisite\nexpertise to determine whether materials are usable, that\ndecision must often be made by a designated independent\nauthority. To provide effective control of materials, this\ndetermination, asset custody, and authorization for disposal\nare functions that should be segregated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 29,
+    "page": 1112,
+    "topicId": "su18-control-procedures",
+    "stem": "An auditor noted that the accounts receivable department is\nseparate from other accounting activities. Credit is approved\nby a separate credit department. Control accounts and\nsubsidiary ledgers are balanced monthly. Similarly, accounts\nare aged monthly. The accounts receivable manager writes off\ndelinquent accounts after 1 year, or sooner if a bankruptcy or\nother unusual circumstances are involved. Credit memoranda\nare prenumbered and must correlate with receiving reports.\nWhich of the following areas could be viewed as an internal\ncontrol weakness of the above organization?",
+    "choices": [
+      "Write-offs of delinquent accounts.",
+      "Credit approvals.",
+      "Monthly aging of receivables.",
+      "Handling of credit memos."
+    ],
+    "answerIndex": 0,
+    "explanation": "The accounts receivable manager has the ability to perpetrate\nirregularities because (s)he performs incompatible functions.\nAuthorization and recording of transactions should be\nseparate. Thus, someone outside the accounts receivable\ndepartment should authorize write-offs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 30,
+    "page": 1113,
+    "topicId": "su18-control-procedures",
+    "stem": "One control objective of the financing/treasury cycle is the\nproper authorization of company transactions dealing with debt\nand equity instruments. Which of the following controls\nwould best meet this objective?",
+    "choices": [
+      "Separation of responsibility for custody of funds from recording\nof the transaction.",
+      "Written company policies requiring review of major\nfunding/repayment proposals by the board of directors.",
+      "Use of an underwriter in all cases of new issue of debt or\nequity instruments.",
+      "The company serves as its own registrar and transfer agent."
+    ],
+    "answerIndex": 1,
+    "explanation": "The control objective of authorization concerns the proper\nexecution of transactions in accordance with management’s\nwishes. One means of achieving this control objective is the\nestablishment of policies as guides to action. When a decision\naffects the capitalization of the entity, a policy should be in\nforce requiring review at the highest level.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 31,
+    "page": 1113,
+    "topicId": "su18-control-procedures",
+    "stem": "The cash receipts function should be separated from the\nrelated recordkeeping in an organization to",
+    "choices": [
+      "Physically safeguard the cash receipts.",
+      "Establish accountability when the cash is first received.",
+      "Prevent paying cash disbursements from cash receipts.",
+      "Minimize undetected misappropriations of cash receipts."
+    ],
+    "answerIndex": 3,
+    "explanation": "Separating cash receipts and recordkeeping prevents an\nemployee from misappropriating cash and altering the records\nto conceal the irregularity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 32,
+    "page": 1114,
+    "topicId": "su18-control-procedures",
+    "stem": "In an audit of a purchasing department, which of the following\nordinarily would be considered a risk factor?",
+    "choices": [
+      "Purchase specifications are developed by the department\nrequesting the material.",
+      "Purchases are made against blanket or open purchase orders\nfor certain types of items.",
+      "Purchases are made from parties related to buyers or other\ncompany officials.",
+      "There is a failure to rotate purchases among suppliers\nincluded on an approved vendor list."
+    ],
+    "answerIndex": 2,
+    "explanation": "Purchasing from parties related to buyers or other company\nofficials is a risk factor because it suggests the possibility of\nfraud. Such conflicts of interest may result in transactions\nunfavorable to the company.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 33,
+    "page": 1115,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following credit approval procedures would be the\nbasis for developing a deficiency finding for a wholesaler?",
+    "choices": [
+      "Trade-credit standards are reviewed and approved by the\nfinance committee of the board of directors.",
+      "Customers not meeting trade-credit standards are shipped\nmerchandise on a cash-on-delivery (C.O.D.) basis only.",
+      "Salespeople are responsible for evaluating and monitoring the\nfinancial condition of prospective and continuing customers.",
+      "An authorized signature from the credit department, denoting\napproval of the customer’s credit, is to appear on all credit-\nsales orders."
+    ],
+    "answerIndex": 2,
+    "explanation": "Salespeople should be responsible for generating sales and\nproviding service to customers. For effective control purposes,\nthe finance department should be responsible for monitoring\nthe financial condition of prospective and continuing\ncustomers in the credit approval process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 34,
+    "page": 1116,
+    "topicId": "su18-control-procedures",
+    "stem": "A means of ensuring that payroll checks are drawn for properly\nauthorized amounts is to",
+    "choices": [
+      "Conduct periodic floor verification of employees on the payroll.",
+      "Require that undelivered checks be returned to the cashier.",
+      "Require supervisory approval of employee time cards.",
+      "Witness the distribution of payroll checks."
+    ],
+    "answerIndex": 2,
+    "explanation": "Review and approval of time cards by line supervisors is\nappropriate because they should know whether work has\nbeen performed. Also, because they do not distribute\npaychecks, they are not in a position to divert falsely\nauthorized checks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 35,
+    "page": 1116,
+    "topicId": "su18-control-procedures",
+    "stem": "An internal auditor noted that several shipments were not\nbilled. To prevent recurrence of such nonbilling, the\norganization should",
+    "choices": [
+      "Numerically sequence and independently account for all\ncontrolling documents (such as packing slips and shipping\norders) when sales journal entries are recorded.",
+      "Undertake a validity check with customers as to orders placed.",
+      "Release product for shipment only on the basis of credit\napproval by the credit manager or other authorized person.",
+      "Undertake periodic tests of gross margin rates by product line\nand obtain explanations of significant departures from planned\nrates."
+    ],
+    "answerIndex": 0,
+    "explanation": "The sequential numbering of documents provides a standard\ncontrol over transactions. The numerical sequence should be\naccounted for by an independent party. A major objective is to\ndetect unrecorded and unauthorized transactions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 36,
+    "page": 1117,
+    "topicId": "su18-control-procedures",
+    "stem": "Controls can be classified according to the function they are\nintended to perform; for example, to discover the occurrence of\nan unwanted event (detective), to avoid the occurrence of an\nunwanted event (preventive), or to ensure the occurrence of a\ndesirable event (directive). Which of the following is a directive\ncontrol?",
+    "choices": [
+      "Monthly bank statement reconciliations.",
+      "Dual signatures on all disbursements over a specific dollar\namount.",
+      "Recording every transaction on the day it occurs.",
+      "Requiring all members of the internal auditing department to\nbe Certified Internal Auditors (CIAs)."
+    ],
+    "answerIndex": 3,
+    "explanation": "Requiring all members of the internal auditing department to\nbe CIAs is a directive control. The control is designed to\nencourage a desirable event to occur, i.e., to enhance the\nprofessionalism and level of expertise of the internal auditing\ndepartment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 37,
+    "page": 1118,
+    "topicId": "su18-control-procedures",
+    "stem": "An audit of the payroll function revealed several instances in\nwhich a payroll clerk had added fictitious employees to the\npayroll and deposited the checks in accounts of close\nrelatives. What control should have prevented such actions?",
+    "choices": [
+      "Using time cards and attendance records in the computation of\nemployee gross earnings.",
+      "Establishing a policy to deal with close relatives working in the\nsame department.",
+      "Having the treasurer’s office sign payroll checks.",
+      "Allowing changes to the payroll to be authorized only by the\npersonnel department."
+    ],
+    "answerIndex": 3,
+    "explanation": "The payroll department is responsible for assembling payroll\ninformation (recordkeeping). The personnel department is\nresponsible for authorizing and executing employee\ntransactions such as hiring, firing, and changes in pay rates\nand deductions. Segregating these functions helps prevent\nfraud. Thus, the payroll for each period should be compared\nwith the active employment files of the personnel department.\nAuthorization by the personnel department is the only control\nplaced in the transaction flow early enough to prevent the\naddition of bogus employees to the payroll.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 38,
+    "page": 1119,
+    "topicId": "su18-control-procedures",
+    "stem": "An audit of the receiving function at the company’s distribution\ncenter revealed inadequate control over receipts. Which of the\nfollowing controls would be appropriate for the receiving\nfunction?",
+    "choices": [
+      "To ensure adequate separation of duties, the warehouse\nreceiving clerk should work independently from the warehouse\nmanager.",
+      "Ensure that the warehouse receiving department has a\npurchase order copy with the units described, but both prices\nand quantities omitted.",
+      "Require that all receipts receive the approval of the warehouse\nmanager.",
+      "Ensure that the warehouse receiving department has a true\ncopy of the original purchase order."
+    ],
+    "answerIndex": 1,
+    "explanation": "The receiving department should maintain a file of properly\nauthorized purchase orders so that unauthorized shipments\nare not accepted. However, prices and quantities should be\nomitted from these copies of the orders. If the receiving clerk\ndoes not know the quantity ordered, an independent count can\nbe ensured.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 39,
+    "page": 1120,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following situations represents an internal\ncontrol weakness in accounts receivable?",
+    "choices": [
+      "Internal auditors confirm customer accounts periodically.",
+      "Delinquent accounts are reviewed only by the sales manager.",
+      "The cashier is denied access to customers’ records and\nmonthly statements.",
+      "Customers’ statements are mailed monthly by the accounts\nreceivable department."
+    ],
+    "answerIndex": 1,
+    "explanation": "Internal control over accounts receivable begins with a proper\nseparation of duties. Hence, the cashier, who performs an\nasset custody function, should not be involved in\nrecordkeeping. Accounts should be periodically confirmed by\nan auditor, and delinquent accounts should be reviewed by\nthe head of accounts receivable and the credit manager.\nCustomer statements should be mailed monthly by the\naccounts receivable department without allowing access to the\nstatements by employees of the cashier’s department. The\nsales manager should not be the only person to review\ndelinquent accounts because (s)he may have an interest in\nnot declaring an account uncollectible.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 40,
+    "page": 1121,
+    "topicId": "su18-control-procedures",
+    "stem": "Control risk is the risk that a material misstatement in an\naccount will not be prevented or detected on a timely basis by\nthe client’s internal control structure policies or procedures.\nThe best control procedure to prevent or detect fictitious\npayroll transactions is",
+    "choices": [
+      "To use and account for prenumbered payroll checks.",
+      "Personnel department authorization for hiring, pay rate, job\nstatus, and termination.",
+      "Internal verification of authorized pay rates, computations, and\nagreement with the payroll register.",
+      "Periodic independent bank reconciliations of the payroll bank\naccount."
+    ],
+    "answerIndex": 1,
+    "explanation": "The payroll department is responsible for assembling payroll\ninformation (recordkeeping). The personnel department is\nresponsible for authorizing employee transactions such as\nhiring, firing, and changes in pay rates and deductions.\nSegregating the recording and authorization functions helps\nprevent fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 41,
+    "page": 1122,
+    "topicId": "su18-control-procedures",
+    "stem": "An entity’s internal control structure (ICS) consists of the\npolicies and procedures established to provide reasonable\nassurance that specific entity objectives will be achieved. Only\nsome of these objectives, policies, and procedures are\nrelevant to a financial statement audit. Which one of the\nfollowing would most likely be considered in such an audit?",
+    "choices": [
+      "Timely reporting and review of quality control results.",
+      "Maintenance of control over unused checks.",
+      "Marketing analysis of sales generated by advertising projects.",
+      "Maintenance of statistical production analyses."
+    ],
+    "answerIndex": 1,
+    "explanation": "The policies and procedures most likely to be relevant to a\nfinancial statement audit pertain to the entity’s ability to record,\nprocess, summarize, and report financial data consistent with\nthe assertions embodied in the financial statements.\nMaintenance of control over unused checks is an example of a\nrelevant procedure because the objective is to safeguard\ncash. The auditor must understand the ICS policies and\nprocedures relevant to the assertions about cash in the\nfinancial statements. (S)he must then assess control risk for\nthose assertions; that is, (s)he must evaluate the effectiveness\nof the ICS in preventing or detecting material misstatements in\nthe assertions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 42,
+    "page": 1123,
+    "topicId": "su18-control-procedures",
+    "stem": "Auditors regularly evaluate controls. Which of the\nfollowing best describes the concept of control as recognized\nby internal auditors?",
+    "choices": [
+      "Management regularly discharges personnel who do not\nperform up to expectations.",
+      "Management takes action to enhance the likelihood that\nestablished goals and objectives will be achieved.",
+      "Control represents specific procedures that accountants and\nauditors design to ensure the correctness of processing.",
+      "Control procedures should be designed from the “bottom up”\nto ensure attention to detail."
+    ],
+    "answerIndex": 1,
+    "explanation": "“A control is any action taken by management to enhance the\nlikelihood that established goals and objectives will be\nachieved. Management plans, organizes, and directs the\nperformance of sufficient actions to provide reasonable\nassurance that objectives and goals will be achieved. Thus,\ncontrol is the result of proper planning, organizing, and\ndirecting by management.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 43,
+    "page": 1124,
+    "topicId": "su18-control-procedures",
+    "stem": "The reporting of accounting information plays a central role in\nthe regulation of business operations. The importance of\nsound internal control practices is underscored by the Foreign\nCorrupt Practices Act of 1977, which requires publicly owned\nU.S. corporations to maintain systems of internal control that\nmeet certain minimum standards. Preventive controls are an\nintegral part of virtually all accounting processing systems, and\nmuch of the information generated by the accounting system is\nused for preventive control purposes. Which one of the\nfollowing is not an essential element of a sound preventive\ncontrol system?",
+    "choices": [
+      "Separation of responsibilities for the recording, custodial, and\nauthorization functions.",
+      "Sound personnel practices.",
+      "Documentation of policies and procedures.",
+      "Implementation of state-of-the-art software and hardware."
+    ],
+    "answerIndex": 3,
+    "explanation": "Preventive controls are designed to prevent an error or\nirregularity from occurring. State-of-the-art hardware and\nsoftware would presumably incorporate the latest control\nfeatures, but a less advanced system could very well contain a\nsound preventive control structure. Hence, state-of-the-art\ncomponents are not essential for effective control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 44,
+    "page": 1125,
+    "topicId": "su18-control-procedures",
+    "stem": "If employee paychecks are distributed by hand to employees,\nwhich one of the following departments should be responsible\nfor the safekeeping of unclaimed paychecks?",
+    "choices": [
+      "Payroll Department.",
+      "Timekeeping Department.",
+      "Production Department in which the employee works or\nworked.",
+      "Cashier or Treasurer’s Department."
+    ],
+    "answerIndex": 3,
+    "explanation": "The responsibility for unclaimed paychecks should be given to\na department that has no opportunity to authorize or write\nthose checks. Because the treasury function serves only an\nasset custody function and thus has had no input into the\npaycheck process, it is the logical repository of unclaimed\nchecks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 45,
+    "page": 1126,
+    "topicId": "su18-control-procedures",
+    "stem": "Internal control cannot be designed to provide reasonable\nassurance regarding the achievement of objectives related to",
+    "choices": [
+      "Reliability of financial reporting.",
+      "Elimination of all fraud.",
+      "Compliance with applicable laws and regulations.",
+      "Effectiveness and efficiency of operations."
+    ],
+    "answerIndex": 1,
+    "explanation": "Internal control is a process designed to provide reasonable\nassurance regarding the achievement of organizational\nobjectives. Because of inherent limitations, however, no\nsystem can be designed to eliminate all fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 46,
+    "page": 1127,
+    "topicId": "su18-control-procedures",
+    "stem": "Effective internal control",
+    "choices": [
+      "Reduces the need for management to review exception\nreports on a day-to-day basis.",
+      "Eliminates risk and potential loss to the organization.",
+      "Cannot be circumvented by management.",
+      "Is unaffected by changing circumstances and conditions\nencountered by the organization."
+    ],
+    "answerIndex": 0,
+    "explanation": "The need for management to spend time on a day-to-day\nbasis reviewing exception reports is reduced when internal\ncontrol is working effectively. An effective internal control\nshould prevent as well as detect exceptions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 47,
+    "page": 1127,
+    "topicId": "su18-control-procedures",
+    "stem": "The internal auditor recognizes that certain limitations are\ninherent in any internal control system. Which one of the\nfollowing scenarios is the result of an inherent limitation of\ninternal control?",
+    "choices": [
+      "The comptroller both makes and records cash deposits.",
+      "A security guard allows one of the warehouse employees to\nremove company assets from the premises without\nauthorization.",
+      "The firm sells to customers on account, without credit\napproval.",
+      "An employee, who is unable to read, is assigned custody of\nthe firm’s computer tape library and run manuals that are used\nduring the third shift."
+    ],
+    "answerIndex": 1,
+    "explanation": "Inherent limitations of internal control arise from faulty\njudgment in decision making, simple error or mistake, and the\npossibility of collusion and management override. Thus, a\ncontrol (use of security guards) based on segregation of\nfunctions may be overcome by collusion among two or more\nemployees.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 48,
+    "page": 1128,
+    "topicId": "su18-control-procedures",
+    "stem": "The treasurer makes disbursements by check and reconciles\nthe monthly bank statements to accounting records. Which of\nthe following best describes the control impact of this\narrangement?",
+    "choices": [
+      "Internal control will be enhanced because these are duties that\nthe treasurer should perform.",
+      "The treasurer will be in a position to make and conceal\nunauthorized payments.",
+      "The treasurer will be able to make unauthorized adjustments\nto the cash account.",
+      "Controls will be enhanced because the treasurer will have two\nopportunities to discover inappropriate disbursements."
+    ],
+    "answerIndex": 1,
+    "explanation": "Independent reconciliation of bank accounts is necessary for\neffective internal control. Persons involved in making\ndisbursements or receiving payments should not reconcile the\nbank statement with the accounting records. Segregating\nthese functions reduces the opportunity for perpetrating and\nconcealing fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 49,
+    "page": 1129,
+    "topicId": "su18-control-procedures",
+    "stem": "A multinational corporation has an office in a foreign branch\nwith a monetary transfer facility. Effective internal control\nrequires that",
+    "choices": [
+      "The person making wire transfers not reconcile the bank\nstatement.",
+      "The branch manager not deliver payroll checks to employees.",
+      "Foreign currency translation rates be computed separately by\ntwo branch employees in the same department.",
+      "The hiring of individual branch employees be approved by the\nheadquarters office."
+    ],
+    "answerIndex": 0,
+    "explanation": "Independent reconciliation of bank accounts is necessary for\neffective internal control. Persons involved in making\ndisbursements or receiving payments should not reconcile the\nbank statement with the accounting records. Segregating\nthese functions reduces the opportunity for perpetrating and\nconcealing fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 50,
+    "page": 1130,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following controls would be the most appropriate\nmeans to ensure that terminated employees had been\nremoved from the payroll?",
+    "choices": [
+      "Mailing checks to employees’ residences.",
+      "Establishing direct-deposit procedures with employees’ banks.",
+      "Reconciling payroll and time-keeping records.",
+      "Establishing computerized limit checks on payroll rates."
+    ],
+    "answerIndex": 2,
+    "explanation": "A common form of payroll fraud involves failure to remove\nterminated employees from the payroll and the diversion of the\npayments intended to be made to them. Reconciling time\ncards, job time tickets, and the payroll may detect this fraud.\nHowever, the perpetrator, who may be a supervisor, may be\nable to falsify the time-keeping records. In that case, a\nsurprise observation of the distribution of payroll may be\nnecessary to detect the fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 51,
+    "page": 1131,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following observations, made during the\npreliminary survey of a local department store’s disbursement\ncycle, reflects a control strength?",
+    "choices": [
+      "Individual department managers use prenumbered forms to\norder merchandise from vendors.",
+      "The receiving department is given a copy of the purchase\norder complete with a description of goods, quantity ordered,\nand extended price for all merchandise ordered.",
+      "The treasurer’s office prepares checks for suppliers based on\nvouchers prepared by the accounts payable department.",
+      "Individual department managers are responsible for the\nmovement of merchandise from the receiving dock to storage\nor sales areas as appropriate."
+    ],
+    "answerIndex": 2,
+    "explanation": "Accounting for payables is a recording function. The matching\nof the supplier’s invoice, the purchase order, and the receiving\nreport (and usually the purchase requisition) should be the\nresponsibility of the accounting department. These are the\nprimary supporting documents for the payment voucher\nprepared by the accounts payable section that will be relied\nupon by the treasurer in making payment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 52,
+    "page": 1132,
+    "topicId": "su18-control-procedures",
+    "stem": "An internal auditor found that employee time cards in one\ndepartment are not properly approved by the supervisor.\nWhich of the following could result?",
+    "choices": [
+      "Duplicate paychecks might be issued.",
+      "The wrong hourly rate could be used to calculate gross pay.",
+      "Employees might be paid for hours they did not work.",
+      "Payroll checks might not be distributed to the appropriate\npayees."
+    ],
+    "answerIndex": 2,
+    "explanation": "First-line supervisors are in a position to determine whether\nemployees have actually worked the hours indicated on their\ntime cards. Accordingly, the supervisor’s approval is a\nnecessary control to prevent unearned payments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 53,
+    "page": 1133,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following controls would most likely minimize\ndefects in finished goods because of poor quality raw\nmaterials?",
+    "choices": [
+      "Proper handling of work-in-process inventory to prevent\ndamage.",
+      "Implementation of specifications for purchases.",
+      "Timely follow-up on unfavorable usage variances.",
+      "Determination of spoilage at the end of the manufacturing\nprocess."
+    ],
+    "answerIndex": 1,
+    "explanation": "Specifications for materials purchased provide an objective\nmeans of determining that the materials meet the minimum\nquality level required for production. Deviations should be\nauthorized at higher levels of management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 54,
+    "page": 1133,
+    "topicId": "su18-control-procedures",
+    "stem": "Segregation of duties is a fundamental concept in an effective\nsystem of internal control. Nevertheless, the internal auditor\nmust be aware that this safeguard can be compromised\nthrough",
+    "choices": [
+      "Lack of training of employees.",
+      "Collusion among employees.",
+      "Irregular employee reviews.",
+      "Absence of internal auditing."
+    ],
+    "answerIndex": 1,
+    "explanation": "By segregating duties, organizations make it more difficult for\none person to perpetrate a fraud. When custody of the asset\nand recordkeeping for the asset are invested in different\npersons, a fraud generally cannot be executed by one of the\ntwo parties. However, if they collude, the internal control\naspect of the segregation is nullified.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 55,
+    "page": 1135,
+    "topicId": "su18-control-procedures",
+    "stem": "The initiation of the purchase of materials and supplies would\nbe the responsibility of the",
+    "choices": [
+      "Purchasing Department.",
+      "Stores Control Department.",
+      "Inventory Control Department.",
+      "Production Department."
+    ],
+    "answerIndex": 2,
+    "explanation": "The Inventory Control Department would be responsible for\ninitiating a purchase. It has access to the inventory records\nand would therefore know when stocks were getting low.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 56,
+    "page": 1135,
+    "topicId": "su18-control-procedures",
+    "stem": "Multiple copies of the purchase order are prepared for\nrecordkeeping and distribution with a copy of the purchase\norder sent to the vendor and one retained by the Purchasing\nDepartment. In addition, for proper informational flow and\ninternal control purposes, a version of the purchase order\nwould be distributed to the",
+    "choices": [
+      "Accounts Payable, Receiving, and Stores Control\nDepartments.",
+      "Accounts Payable, Receiving, and Inventory Control\nDepartments.",
+      "Accounts Payable, Accounts Receivable, and Receiving\nDepartments.",
+      "Accounts Payable, Receiving, and Production Planning\nDepartments."
+    ],
+    "answerIndex": 1,
+    "explanation": "The Accounts Payable Department should receive a copy of\nthe purchase order for internal control purposes to ensure that\nall invoices paid are for properly authorized items. The\nReceiving Department should receive a copy (with the quantity\nomitted to encourage an honest count) so that its employees\nwill know that incoming shipments were authorized and should\nbe accepted. In addition, the department issuing the\npurchasing requisition (the Inventory Control Department)\nshould receive a copy as a notification that the order has been\nplaced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 57,
+    "page": 1136,
+    "topicId": "su18-control-procedures",
+    "stem": "Responsibility for following up on any problems regarding\norders of production materials and supplies, such as orders for\nwhich no acknowledgment has been received, orders overdue,\npartial orders, damaged or substandard merchandise received\non an order, etc., would be entrusted to the",
+    "choices": [
+      "Inventory Control Department.",
+      "Stores Control Department.",
+      "Production Planning Department.",
+      "Purchasing Department."
+    ],
+    "answerIndex": 3,
+    "explanation": "The Purchasing Department is in the best position to follow up\non purchase orders because it is the department closest to the\nvendors. In effect, the Purchasing Department is fully\nresponsible for all communications with the vendor from the\ntime a purchase order is issued until the goods are received.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 58,
+    "page": 1137,
+    "topicId": "su18-control-procedures",
+    "stem": "The documents that the Accounts Payable Department must\nreview before it can properly authorize payment for the\npurchase of materials and supplies are",
+    "choices": [
+      "Vendor’s invoice, purchase requisition, and acknowledgment\npurchase order.",
+      "Vendor’s invoice, acknowledgment purchase order, and\nreceiving report.",
+      "Vendor’s monthly statement, purchase order, and voucher.",
+      "Vendor’s invoice, purchase order, and receiving report."
+    ],
+    "answerIndex": 3,
+    "explanation": "The Accounts Payable Department prepares a voucher from a\nvendor’s invoice only after examining supporting documents.\nThese include a properly authorized purchase order and a\nreceiving report stating quantities received and their condition.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 59,
+    "page": 1138,
+    "topicId": "su18-control-procedures",
+    "stem": "To control purchasing and accounts payable, an information\nsystem must include certain source documents. For a\nmanufacturing organization, these documents should include",
+    "choices": [
+      "Purchase orders, receiving reports, and vendor invoices.",
+      "Receiving reports and vendor invoices.",
+      "Purchase requisitions, purchase orders, receiving reports, and\nvendor invoices.",
+      "Purchase requisitions, purchase orders, inventory reports of\ngoods needed, and vendor invoices."
+    ],
+    "answerIndex": 2,
+    "explanation": "Before ordering an item, the purchasing department should\nhave on hand a purchase requisition reflecting an authorized\nrequest by inventory control. Before a voucher is prepared for\npaying an invoice, the accounts payable department should\nhave the purchase requisition, a purchase order (to be certain\nthe items were indeed ordered), the vendor’s invoice, and a\nreceiving report (to be certain the items were received).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 60,
+    "page": 1139,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following functions performed in an\norganization is a violation of sound principles of internal\ncontrol?",
+    "choices": [
+      "A mail clerk opening the mail compares the check received\nwith the source document accompanying the payment, either\nconfirming or noting the amount paid, then forwards the\nchecks daily (along with a listing of the cash receipts) to the\ncashier for deposit.",
+      "A mail clerk opening the mail compares the check received\nwith the source document accompanying the payment, either\nconfirming or noting the amount paid, then forwards the source\ndocuments that accompany the payments (along with a listing\nof the cash receipts) to Accounts Receivable, on a daily basis,\nfor posting to the Subsidiary Ledger.",
+      "At the end of the week, the cashier prepares a deposit slip for\nall of the cash receipts received during the week.",
+      "The General Ledger Department compares the summary\njournal entry, received from the cashier for cash receipts\napplicable to outstanding accounts, with the batch total for the\nposting to the Subsidiary Ledger by the Accounts Receivable\nDepartment."
+    ],
+    "answerIndex": 2,
+    "explanation": "Sound internal control requires that cash be deposited every\nday.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 61,
+    "page": 1140,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following methods for the distribution of\nemployees’ pay would provide the best internal control for the\norganization?",
+    "choices": [
+      "Delivery of paychecks to each department supervisor, who in\nturn would distribute paychecks directly to the employees in\nhis or her department.",
+      "Direct deposit in each employee’s personal bank account.",
+      "Delivery of paychecks directly to each employee by a\nrepresentative of the Human Resource Department.",
+      "Delivery of paychecks directly to each employee by the payroll\nmanager."
+    ],
+    "answerIndex": 1,
+    "explanation": "With direct deposit, the possibility of diversion of physical\nchecks, either accidentally or fraudulently, is eliminated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 62,
+    "page": 1140,
+    "topicId": "su18-control-procedures",
+    "stem": "The new controller of a company is evaluating her department\nfor proper segregation of duties. Evaluate the following\nstatements and determine which set of duties is acceptable to\nbe performed by the same employee while still maintaining\nproper segregation of duties.",
+    "choices": [
+      "Receive the company’s deposits and record the transaction.",
+      "Collect the cash and checks and take the deposit to the bank.",
+      "Enter expenses into the general ledger and pay the credit card\nbills.",
+      "Authorize cash disbursements and deliver the payments."
+    ],
+    "answerIndex": 1,
+    "explanation": "In this arrangement, there is no issue with segregation of\nduties, as the employee is simply taking custody of the asset\nand does not authorize or record anything related to the\nsituation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 63,
+    "page": 1141,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following represents a technique that\nis most appropriate for an internal auditor to use to test the\neffectiveness of accounting recordkeeping controls?",
+    "choices": [
+      "Verify a receivable by comparing it to the accounting\ndocumentation.",
+      "Test a loan amount by sending a confirmation to the bank.",
+      "Perform an inquiry as to the timeliness of reconciliation\ncompletion.",
+      "Analyze the actual results to the budget and identify variances."
+    ],
+    "answerIndex": 1,
+    "explanation": "Comparing an internally created transaction with an external\nsource will test the effectiveness of accounting recordkeeping\ncontrols. Checking with external sources to determine the\ntransaction records’ accuracy aids in testing the effectiveness\nof accounting recordkeeping controls.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 64,
+    "page": 1142,
+    "topicId": "su18-control-procedures",
+    "stem": "An Internet gaming company uses many laptops in its office\nand needs to ensure that they are adequately safeguarded.\nWhich one of the following best represents a control that the\ncompany should use for its laptops?",
+    "choices": [
+      "Bolt the laptops in place or attach them with strong adhesives.",
+      "Keep a copy of all relevant details on the hard drives of the\nlaptops.",
+      "Be able to identify the model and serial number for the laptops.",
+      "Ensure that any virus programs have been identified on the\nlaptops."
+    ],
+    "answerIndex": 2,
+    "explanation": "Being able to identify the model and serial number for the\nlaptops represents the best control in order to safeguard the\nlaptops. This would provide protection against unauthorized\naccess and use. In addition, each laptop computer could be\neasily identified by its unique serial number.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 65,
+    "page": 1143,
+    "topicId": "su18-control-procedures",
+    "stem": "Proper segregation of functional responsibilities to achieve\neffective internal control calls for separation of the functions of",
+    "choices": [
+      "Authorization, execution, and payment.",
+      "Authorization, recording, and custody.",
+      "Custody, execution, and reporting.",
+      "Authorization, payment, and recording."
+    ],
+    "answerIndex": 1,
+    "explanation": "One person should not be responsible for all phases of a\ntransaction, i.e., for authorization of transactions, recording of\ntransactions, and custodianship of the related assets. These\nduties should be performed by separate individuals to reduce\nthe opportunities to allow any person to be in a position both\nto perpetrate and conceal errors or fraud in the normal course\nof his or her duties (AU 314).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 66,
+    "page": 1144,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following actions would most effectively\naddress the issue of internal control risk related to the custody\nof cash receipts?",
+    "choices": [
+      "Establishing a lockbox deposit system at a regional bank.",
+      "Assigning a single employee to be responsible for the receipt\nand posting of cash receipts to customer accounts.",
+      "Preparing a control total of cash receipts immediately upon\nopening incoming payments.",
+      "Installing a surveillance system to monitor the processing of\ncash receipts and custody of cash."
+    ],
+    "answerIndex": 0,
+    "explanation": "A lockbox system for collecting cash receipts from a customer\nis a safeguarding control that limits access to an\norganization’s assets to authorized personnel.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 67,
+    "page": 1144,
+    "topicId": "su18-control-procedures",
+    "stem": "The accounting controls surrounding the revenue cycle should\nprovide assurances of all of the following except the",
+    "choices": [
+      "Accurate recording, shipping, and billing of all valid sales\ntransactions.",
+      "Approval of all credit sales transactions after they are\nprocessed.",
+      "Proper authorization of all sales return and allowance\ntransactions.",
+      "Accurate recording of customer accounts and finished goods\ninventories."
+    ],
+    "answerIndex": 1,
+    "explanation": "Approval of credit sales transactions should be performed\nbefore they are processed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 68,
+    "page": 1145,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following describes the most effective\npreventive control to ensure proper handling of cash\ntransactions?",
+    "choices": [
+      "The employee who receives deposits from customers via the\nmail prepares the daily bank deposit, which is deposited by\nanother employee.",
+      "Predetermined totals (hash totals) of cash receipts are used to\ncontrol posting routines.",
+      "Bank reconciliations are performed by employees not involved\nwith cash collections and then are reviewed by a supervisor.",
+      "One employee issues prenumbered receipts for all cash\ncollections while another employee reconciles the daily total of\nthe prenumbered receipts to the bank deposits."
+    ],
+    "answerIndex": 3,
+    "explanation": "This is an effective preventive control because the person who\nreconciles the daily total can double-check the work of the\nperson issuing the receipts. The employee issuing the\nprenumbered receipts is prevented from stealing because the\ntotal of the receipts must equal the amount deposited.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 69,
+    "page": 1146,
+    "topicId": "su18-control-procedures",
+    "stem": "A company’s accounts payable supervisor assigned a vendor\ncode to a storage facility owned by the supervisor, then\ninstructed the company’s accounting system to pay monthly\nrent for a storage unit allegedly leased from the storage facility.\nThis situation is an example of a failure of controls due to the\nlack of",
+    "choices": [
+      "Commitment to competence in job skills and knowledge.",
+      "An effective internal audit function.",
+      "Appropriate segregation of duties.",
+      "Appropriate physical controls."
+    ],
+    "answerIndex": 2,
+    "explanation": "When a supervisor can both approve a vendor as well as\ninitiate a transaction, segregation of duties is not properly\nenforced. The two functions must either be separated or\nmonitored.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 70,
+    "page": 1147,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following fraudulent activities most likely could be\nperpetrated due to the lack of effective internal controls in the\nrevenue cycle?",
+    "choices": [
+      "Merchandise received is not promptly reconciled to the\noutstanding purchase order file.",
+      "Obsolete items included in inventory balances are rarely\nreduced to the lower of cost or market value.",
+      "The write-off of receivables by personnel who receive cash\npermits the misappropriation of cash.",
+      "Fictitious transactions are recorded that cause an\nunderstatement of revenue and overstatement of receivables."
+    ],
+    "answerIndex": 2,
+    "explanation": "Authorization of transactions (write-offs of receivables) and\ncustody of assets (cash) are incompatible duties.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 71,
+    "page": 1147,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following controls most likely would help ensure\nthat all credit sales transactions of an entity are recorded?",
+    "choices": [
+      "The billing department supervisor sends copies of approved\nsales orders to the credit department for comparison to\nauthorized credit limits and current customer account\nbalances.",
+      "The accounting department supervisor independently\nreconciles the accounts receivable subsidiary ledger to the\naccounts receivable control account monthly.",
+      "The accounting department supervisor controls the mailing of\nmonthly statements to customers and investigates any\ndifferences they report.",
+      "The billing department supervisor matches prenumbered\nshipping documents with entries in the sales journal."
+    ],
+    "answerIndex": 3,
+    "explanation": "The sequential numbering of documents provides a standard\ncontrol over transactions. The numerical sequence should be\naccounted for by an independent party. A major objective is to\ndetect unrecorded and unauthorized transactions. Moreover,\ncomparing shipments with the sales journal also will detect\nunrecorded transactions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 72,
+    "page": 1148,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following duties assigned to the cashier\nexposes the organization to a control risk in terms of\nsegregation of duties?",
+    "choices": [
+      "Entering information in the accounts receivable subsidiary\nledger.",
+      "Signing the deposit slips.",
+      "Depositing cash at the bank.",
+      "Comparing the check register with the bank statement."
+    ],
+    "answerIndex": 0,
+    "explanation": "Segregation of duties involves the separation of the functions\nof authorization, recordkeeping, and asset custody to minimize\nthe opportunities for a person to be able to perpetrate and\nconceal errors or fraud in the normal course of his or her\nduties. A cashier who records information in the accounts\nreceivable subsidiary ledger has both custody and\nrecordkeeping duties, which violates segregation of duties.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 73,
+    "page": 1149,
+    "topicId": "su18-control-procedures",
+    "stem": "One characteristic of an effective internal control structure is\nthe proper segregation of duties. Which of the following is a\nviolation of segregation of functional responsibilities?",
+    "choices": [
+      "Hiring employees and authorizing changes in pay rates.",
+      "Approval of clock cards and job time tickets by a production\nsupervisor.",
+      "Signing and distributing payroll checks.",
+      "Preparation of paychecks and check distribution."
+    ],
+    "answerIndex": 3,
+    "explanation": "Payroll preparation and payment to employees should be\nsegregated because they are incompatible recordkeeping and\ncustodianship functions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 74,
+    "page": 1150,
+    "topicId": "su18-control-procedures",
+    "stem": "Organizational independence in the processing of payroll is\nachieved by segregating functions that are built into the\nsystem. Which one of the following functional segregations\nis not required for internal control purposes?",
+    "choices": [
+      "Segregation of timekeeping and payroll preparation.",
+      "Segregation of payroll preparation and paycheck distribution.",
+      "Segregation of payment voucher preparation and cash\ndisbursement.",
+      "Segregation of initiation and execution of bank transfers for\npayroll."
+    ],
+    "answerIndex": 3,
+    "explanation": "Bank transfers can be both initiated and executed by cash\npayments. These are both custody functions and do not\nrequire segregation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 75,
+    "page": 1151,
+    "topicId": "su18-control-procedures",
+    "stem": "A retail company is required to perform a stock count to\nidentify shortages at least once per month. What type of\ncontrol is this?",
+    "choices": [
+      "Preventive Control",
+      "Detective Control",
+      "Corrective Control",
+      "Directive Control"
+    ],
+    "answerIndex": 1,
+    "explanation": "Detective controls alert the proper people after an unwanted\nevent. They are known as “after-the-fact” controls. A stock\ncount is a detective control because it can identify inventory\nshortages after inventory shrinkage has occurred.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 76,
+    "page": 1151,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following is the best way to compensate for the\nlack of adequate segregation of duties in a small organization?",
+    "choices": [
+      "Disclosing lack of segregation of duties to the external auditors\nduring the annual review.",
+      "Replacing personnel every 3 or 4 years.",
+      "Requiring accountants to pass a yearly background check.",
+      "Allowing for greater management oversight of incompatible\nactivities."
+    ],
+    "answerIndex": 3,
+    "explanation": "Complete segregation may not be feasible due to cost-benefit\nrestraints. Compensating controls most likely are established\nwhen segregation of duties is not feasible. Typical\ncompensating controls may include more management\noversight.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 77,
+    "page": 1152,
+    "topicId": "su18-control-procedures",
+    "stem": "An organization relied heavily on e-commerce for its\ntransactions. Evidence of the organization’s security\nawareness manual would be an example of which of the\nfollowing types of controls?",
+    "choices": [
+      "Preventive.",
+      "Detective.",
+      "Corrective.",
+      "Compliance."
+    ],
+    "answerIndex": 0,
+    "explanation": "Preventive controls are measures taken in advance so that\nanticipated problems associated with performance of an\nactivity will not occur. Creating a security awareness manual\ninvolves anticipating problems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 78,
+    "page": 1153,
+    "topicId": "su18-control-procedures",
+    "stem": "Which one of the following is a method of testing the adequacy\nof internal controls?",
+    "choices": [
+      "Robotic processing automation.",
+      "Re-performance.",
+      "Exploratory data analysis.",
+      "Documentation."
+    ],
+    "answerIndex": 1,
+    "explanation": "Four common methods of testing are inquiry, observation,\ninspection, and re-performance. Re-performance involves\nperforming the internal control again to assess its accuracy\nand effectiveness.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 79,
+    "page": 1153,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following statements is false in regard to\nremediation of internal control deficiencies?",
+    "choices": [
+      "The first step is to identify the root cause of the deficiency.",
+      "It is not necessary to assess the severity of the deficiency.",
+      "A plan of action to address deficiencies could include\nadditional staff training.",
+      "An investment in new technology could help remediate\ndeficiencies."
+    ],
+    "answerIndex": 1,
+    "explanation": "The severity of the deficiency must be assessed to determine\nits possible effects. The severity and magnitude of the\npossible effects indicate the urgency of the response.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 80,
+    "page": 1154,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following ordinarily provides the least assurance\nabout the operating effectiveness of an internal control\nactivity?",
+    "choices": [
+      "Inquiry of client personnel.",
+      "Inspection of documents and reports.",
+      "Observation of client personnel.",
+      "Preparation of system flowcharts."
+    ],
+    "answerIndex": 3,
+    "explanation": "System flowcharts provide an overall view of the inputs,\nprocesses, and outputs of a system. If internal control is\ncomplex, the auditor may use flowcharts, questionnaires, or\ndecision tables to document the understanding of internal\ncontrol. However, tests of controls (tests of operating\neffectiveness) are concerned with (1) the manner in which\ncontrols were applied, (2) the consistency of application, (3) by\nwhom or by what means they were applied, (4) whether the\ncontrols depend on other controls (indirect controls), and\n(5) the time or period for which the auditor intends to rely on\nthe controls.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 81,
+    "page": 1155,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following methods of testing most likely will\ndetermine whether an entity’s controls are properly designed\nand followed to prevent, or detect and correct, unwanted\nevents?",
+    "choices": [
+      "Inquiring of entity personnel about the controls.",
+      "Performing analytical procedures using data aggregated at a\nhigh level.",
+      "Vouching a sample of transactions.",
+      "Observing the entity’s personnel applying the controls."
+    ],
+    "answerIndex": 3,
+    "explanation": "Observation is looking at a process or procedure (control\nactivities) being performed to identify weaknesses, if any. One\npossible weakness may be a simple failure to apply a properly\ndesigned control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 82,
+    "page": 1155,
+    "topicId": "su18-control-procedures",
+    "stem": "To test the adequacy of controls, a variety of methods may be\nused, including",
+    "choices": [
+      "Inquiry and analytical procedures.",
+      "Reperformance and observation.",
+      "Comparison and confirmation.",
+      "Inspection and verification."
+    ],
+    "answerIndex": 1,
+    "explanation": "Inquiry should be done but is not sufficient by itself to test the\nadequacy of controls. A system of controls is only effective\nwhen properly designed and followed. Other testing methods\nperformed in combination with inquiry may include inspection,\nrecalculation, and reperformance of a relevant control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 83,
+    "page": 1156,
+    "topicId": "su18-control-procedures",
+    "stem": "To test the operating effectiveness of controls, various\nmethods may be used, including",
+    "choices": [
+      "Inquiries.",
+      "Analytical procedures.",
+      "Calculations.",
+      "External confirmations."
+    ],
+    "answerIndex": 0,
+    "explanation": "Other tests should be used in combination with inquiry to\ndetermine the operating effectiveness of controls. Thus,\ninquiry by itself is not sufficient. Accordingly, inquiry combined\nwith inspection, observation, or reperformance may be\npreferable to inquiry and observation. An observation is\nrelevant only at a moment in time. Inquiries may be formal or\ninformal (oral). They seek information from knowledgeable\npeople that may be financial or nonfinancial and internal or\nexternal to the entity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 84,
+    "page": 1157,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following tests of accounts receivable\nis most likely to determine the effectiveness of related\ncontrols?",
+    "choices": [
+      "Observing an entity’s employee prepare the schedule of past\ndue accounts receivable.",
+      "Sending requests to an entity’s principal customers to confirm\nthe existence of accounts receivable.",
+      "Inspecting an entity’s analysis of accounts receivable for\nunusual balances.",
+      "Comparing an entity’s uncollectible accounts expense with\nactual uncollectible accounts receivable."
+    ],
+    "answerIndex": 0,
+    "explanation": "To test the effectiveness of controls, common methods are\ninquiry, observation, inspection, recalculation, and\nreperformance of a control. Thus, observing an entity’s\nemployee prepare the schedule of past due accounts\nreceivable provides evidence of the effectiveness of certain\ncontrols over accounts receivable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 85,
+    "page": 1158,
+    "topicId": "su18-control-procedures",
+    "stem": "Tests of the effectiveness of controls may include",
+    "choices": [
+      "Analysis.",
+      "External confirmations.",
+      "Reperformance.",
+      "Comparison."
+    ],
+    "answerIndex": 2,
+    "explanation": "Other tests should be used in combination with inquiry to\ndetermine the operating effectiveness of controls. Thus,\ninquiry by itself is not sufficient. Accordingly, inquiry combined\nwith inspection, recalculation, or reperformance may be\npreferable to inquiry and observation. An observation is\nrelevant only at a moment in time. Reperformance is\nperforming a control again to assess its accuracy and\neffectiveness.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 86,
+    "page": 1159,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following is most likely considered to determine\nwhether internal controls are operating effectively?",
+    "choices": [
+      "A management representation letter corroborating inventory\npricing.",
+      "A questionnaire completed by an employee in the receiving\ndepartment about her duties and responsibilities.",
+      "Attorneys’ responses to an auditor’s inquiries.",
+      "Confirmations of receivables verifying account balances."
+    ],
+    "answerIndex": 1,
+    "explanation": "Tests of controls are directed toward operating effectiveness.\nThey include (1) inquiries of entity personnel (e.g., a\nquestionnaire completed by an employee in the receiving\ndepartment); (2) inspection of documents, reports, and\nelectronic files indicating performance of the controls;\n(3) observation of the application of the controls; and\n(4) reperformance of the controls.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 87,
+    "page": 1159,
+    "topicId": "su18-control-procedures",
+    "stem": "For certain controls, such as assignment of authority and\nresponsibility, documentary evidence may not exist. An auditor\nwould most likely test the controls by",
+    "choices": [
+      "Computer-assisted methods and corroboration.",
+      "Observation and inquiry.",
+      "Inspection and vouching.",
+      "Confirmation and recomputation."
+    ],
+    "answerIndex": 1,
+    "explanation": "When documentary evidence does not exist, tests of the\neffectiveness of the operation of controls may involve such\nmethods as observation, inquiry, or computer-assisted\ntechniques. Inquiry alone, however, does not ordinarily\nprovide sufficient appropriate evidence to support the\nconclusion that the control is operating effectively.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 88,
+    "page": 1160,
+    "topicId": "su18-control-procedures",
+    "stem": "An entity wishes to evaluate the design and perform tests of\ncontrols over its cash disbursements procedures. If the\ncontrols leave no trail of documentary evidence,\nthe most likely testing methods are",
+    "choices": [
+      "Confirmation and observation.",
+      "Observation and inquiry.",
+      "Analytical procedures and confirmation.",
+      "Inquiry and analytical procedures."
+    ],
+    "answerIndex": 1,
+    "explanation": "When documentary evidence does not exist, tests of the\neffectiveness of the operation of controls may involve such\nmethods as observation, inquiry, or computer-assisted\ntechniques. Inquiry alone, however, does not ordinarily\nprovide sufficient appropriate evidence to support the\nconclusion that the control is operating effectively.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 1,
+    "number": 89,
+    "page": 1161,
+    "topicId": "su18-control-procedures",
+    "stem": "Which of the following audit procedures, if used, should be\ncombined with other audit procedures when testing the\noperating effectiveness of controls?",
+    "choices": [
+      "Observation.",
+      "Inspection.",
+      "Inquiry.",
+      "Reperformance."
+    ],
+    "answerIndex": 2,
+    "explanation": "The following tests of control activities are presented in the\norder of their efficacy in determining effectiveness (least to\nmost): (1) inquiry, (2) observation, (3) inspection of relevant\ndocumentation, and (4) reperformance of a control. Inquiry\nalone cannot provide sufficient support for a conclusion about\nthe effectiveness of a control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 1,
+    "page": 1162,
+    "topicId": "su18-systems-security",
+    "stem": "In an automated payroll processing environment, a department\nmanager substituted the time card for a terminated employee\nwith a time card for a fictitious employee. The fictitious\nemployee had the same pay rate and hours worked as the\nterminated employee. The best control technique to detect this\naction using employee identification numbers would be a",
+    "choices": [
+      "Batch total.",
+      "Record count.",
+      "Hash total.",
+      "Subsequent check."
+    ],
+    "answerIndex": 2,
+    "explanation": "A hash total of employee numbers would detect such a\nsubstitution although the termination had not yet been\nrecorded. A hash total is an otherwise meaningless control\ntotal, such as the total of employee numbers or invoice\nnumbers, that is used to verify data. Thus, the hash total for\nthe employee listing by the personnel department could be\ncompared with the total generated during the payroll run.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 2,
+    "page": 1163,
+    "topicId": "su18-systems-security",
+    "stem": "One of the steps in assessing control risk in a computerized\ninformation control system is identifying necessary controls to\nprevent data from being lost, added, duplicated, or altered\nduring processing. An example of this type of control is the",
+    "choices": [
+      "Authorization and approval of data in user departments and\nscreening of data by data control groups.",
+      "Review of data output by data control groups.",
+      "Use of external and internal file labels.",
+      "Use of control totals, limit and reasonableness checks, and\nsequence tests."
+    ],
+    "answerIndex": 3,
+    "explanation": "A control total is an application control that may consist of a\ncount of the number of records processed at different stages\nof the operation. Comparison of the counts indicates whether\nall records have been processed or some have been added. A\ncontrol total might also consist of a total of one information\nfield for all records processed, such as the total sales dollars\nfor a batch of sales invoices. A limit or reasonableness check\ntests whether the value of a field falls outside a prescribed\nrange. The range may be stated in terms of an upper limit,\nlower limit, or both. The loss, addition, etc., of data may result\nin an unreasonable value. A sequence test verifies the\nordering of records and may therefore detect various\nanomalies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 3,
+    "page": 1164,
+    "topicId": "su18-systems-security",
+    "stem": "Which of the following is not a threat to information systems?",
+    "choices": [
+      "Trojan horses.",
+      "Worms.",
+      "Data theft.",
+      "Serendipity."
+    ],
+    "answerIndex": 3,
+    "explanation": "Trojan horses and worms are threats to computerized\nsystems. Data theft is a threat to any system. Serendipity is\nessentially a nonsense answer in that the word means the\nfortunate discovery of something good.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 4,
+    "page": 1164,
+    "topicId": "su18-systems-security",
+    "stem": "Data processed by a computer system are usually transferred\nto some form of output medium for storage. However, the\npresence of computerized output does not, in and of itself,\nensure the output’s accuracy, completeness, or authenticity.\nFor this assurance, various controls are needed. The major\ntypes of controls for this area include",
+    "choices": [
+      "Physical controls, documentation controls, and print-out\ncontrols.",
+      "Activity listings, echo checks, and pre-numbered forms.",
+      "Disk output controls and printed output controls.",
+      "Input controls and output controls."
+    ],
+    "answerIndex": 2,
+    "explanation": "The question concerns controls specifically over disk and printed output.",
+    "answerStatus": "inferred"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 5,
+    "page": 1165,
+    "topicId": "su18-systems-security",
+    "stem": "To properly control access to accounting database files, the\ndatabase administrator should ensure that database system\nfeatures are in place to permit",
+    "choices": [
+      "Read-only access to the database files.",
+      "Updating from privileged utilities.",
+      "Access only to authorized logical views.",
+      "User updates of their access profiles."
+    ],
+    "answerIndex": 2,
+    "explanation": "A database management system’s software includes security\nfeatures. Thus, a specified user’s access may be limited to\ncertain data fields or logical views depending on the\nindividual’s assigned duties. A logical view consists of the\nfields available to a given user, function, or application. It may\ninclude all or part of a physical data file or a combination of\nfields from multiple physical data files.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 6,
+    "page": 1166,
+    "topicId": "su18-systems-security",
+    "stem": "Data input validation routines for batch processing include",
+    "choices": [
+      "Terminal logs.",
+      "Passwords.",
+      "Hash totals.",
+      "Backup controls."
+    ],
+    "answerIndex": 2,
+    "explanation": "Input controls provide assurance that data submitted for\nprocessing are authorized, complete, and accurate. A hash\ntotal is an example of a data input validation routine for batch\nprocessing. A hash total is a control total without a defined\nmeaning, such as the total of employee numbers or invoice\nnumbers, that is used to verify the completeness of data.\nThus, the hash total for the employee listing by the personnel\ndepartment could be compared with the total generated during\nthe processing run.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 7,
+    "page": 1167,
+    "topicId": "su18-systems-security",
+    "stem": "An employee in the receiving department keyed in a shipment\nfrom a remote terminal and inadvertently omitted the purchase\norder number. The best systems control to detect this error\nwould be",
+    "choices": [
+      "Batch total.",
+      "Completeness test.",
+      "Sequence check.",
+      "Reasonableness test."
+    ],
+    "answerIndex": 1,
+    "explanation": "A completeness test checks that all data elements are entered\nbefore processing. An interactive system can be programmed\nto notify the user to enter the number before accepting the\nreceiving report.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 8,
+    "page": 1167,
+    "topicId": "su18-systems-security",
+    "stem": "Which of the following is an example of an input control in a\nbatch processing application?",
+    "choices": [
+      "Run-to-run control totals.",
+      "Error listings.",
+      "Dual write routines.",
+      "Hash totals."
+    ],
+    "answerIndex": 3,
+    "explanation": "Input controls provide reasonable assurance that processing\nhas been performed as intended for the particular application.\nA hash total is an input control. A hash total is a control total\nwithout a defined meaning, such as the total of employee\nnumbers or invoice numbers, that is used to verify the\ncompleteness of data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 9,
+    "page": 1168,
+    "topicId": "su18-systems-security",
+    "stem": "Which one of the following represents a lack of internal control\nin a computer-based system?",
+    "choices": [
+      "Any and all changes in applications programs have the\nauthorization and approval of management.",
+      "Provisions exist to ensure the accuracy and integrity of\ncomputer processing of all files and reports.",
+      "Provisions exist to protect data files from unauthorized access,\nmodification, or destruction.",
+      "Programmers have access to change programs and data files\nwhen an error is detected."
+    ],
+    "answerIndex": 3,
+    "explanation": "A functional separation of EDP activities is necessary. A\nprogrammer designs program flowcharts and writes the\ncomputer programs as required by the system. Once the\nprogram has been debugged and the documentation\nprepared, the programmer should have no further access to it\nor to data files. A librarian is responsible for permitting only\ncomputer operators, not programmers, to have access to\nprograms.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 10,
+    "page": 1169,
+    "topicId": "su18-systems-security",
+    "stem": "Field checks in a computerized accounting system",
+    "choices": [
+      "Are preventive controls.",
+      "Should be performed on transactions prior to updating a\nmaster file.",
+      "Must be installed for the system to be operational.",
+      "Should be performed immediately prior to output distribution."
+    ],
+    "answerIndex": 1,
+    "explanation": "Field checks prevent entry of certain incorrect data. For\nexample, a system prevents entry of numerals in the Name\nfield.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 11,
+    "page": 1169,
+    "topicId": "su18-systems-security",
+    "stem": "Which one of the following is the best reason for developing a\ncomputer security plan?",
+    "choices": [
+      "All possible threats associated with the data processing\nequipment are identified.",
+      "Recovery from the damage associated with any identified\nthreats can be assured.",
+      "A company can select the set of control policies and\nprocedures that optimize computer security relative to cost.",
+      "The user departments can be assured that control policies are\nin place and their data files are secure."
+    ],
+    "answerIndex": 2,
+    "explanation": "A comprehensive computer security plan should be developed\nto safeguard physical facilities and hardware and provide for\nthe privacy and integrity of data. Such a plan assists\nmanagement in ensuring that benefits exceed costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 12,
+    "page": 1170,
+    "topicId": "su18-systems-security",
+    "stem": "An example of an internal validation check is",
+    "choices": [
+      "Making sure that output is distributed to the proper people.",
+      "Monitoring the work of programmers.",
+      "Collecting accurate statistics of historical transactions while\ngathering data.",
+      "Recalculating an amount to ensure its accuracy."
+    ],
+    "answerIndex": 3,
+    "explanation": "Arithmetic proof checks (recalculations) are performed by edit\nroutines before data are processed. A simple example is\ncomparing total debits and total credits or the vendor number\nwith the number for an accounts payable payment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 13,
+    "page": 1171,
+    "topicId": "su18-systems-security",
+    "stem": "A control designed to catch errors at the point of data entry is",
+    "choices": [
+      "A batch total.",
+      "A record count.",
+      "A self-checking digit.",
+      "Checkpoints."
+    ],
+    "answerIndex": 2,
+    "explanation": "A check digit, or self-checking number, is an input control to\ndetermine if an error might have been made on an\nidentification number. The digit is an extra number on the end\nof the identification number (creating a new ID number) that is\ncalculated by an algorithm on the original part of the ID\nnumber. If the ID is miskeyed, the algorithm will produce a\nnumber different from the check digit and an error will be\ndetected and reported.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 14,
+    "page": 1172,
+    "topicId": "su18-systems-security",
+    "stem": "Program documentation is a control designed primarily to\nensure that",
+    "choices": [
+      "Programmers have access to the tape library or information on\ndisk files.",
+      "Programs do not make mathematical errors.",
+      "Programs are kept up to date and perform as intended.",
+      "Data have been entered and processed."
+    ],
+    "answerIndex": 2,
+    "explanation": "Complete, up-to-date documentation of all programs and\nassociated operating procedures is necessary for efficient\noperation of a computer installation. Maintenance of programs\nis important to provide for continuity and consistency of data\nprocessing services to users. Program documentation (the\nprogram run manual) consists of problem statements, systems\nflowcharts, operating instructions, record lay-outs, program\nflowcharts, program listings, test data, and approval and\nchange sheets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 15,
+    "page": 1172,
+    "topicId": "su18-systems-security",
+    "stem": "Logical computer controls are needed to determine whether an\nacceptable user is allowed to proceed. The one item that\nis not part of this control process is a",
+    "choices": [
+      "List of all authorized user code numbers and passwords.",
+      "List of all files maintained on the system.",
+      "List of all programs maintained on the system.",
+      "Limit on the number of transaction inquiries that can be made\nby each user in a specified time period."
+    ],
+    "answerIndex": 3,
+    "explanation": "Restricting access to the computer system requires\ndetermining whether access by a given user (or device) is\ncompatible with the nature of the attempted use. A series of\npasswords or identification numbers may be required to gain\naccess to the system, to examine data files, and to perform\nprocessing using particular programs. Thus, a clerk might be\nauthorized only to read the data in a given file while using a\nspecified terminal, but his or her superior might be able to\nupdate the file. Logical controls require online storage of\nauthorization tables or matrices that specify the access\npermitted to specified codes and devices. The number of\nauthorized inquiries per user is not included in such a table.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 16,
+    "page": 1173,
+    "topicId": "su18-systems-security",
+    "stem": "The most critical aspect of the separation of duties within a\nmainframe information systems environment is between",
+    "choices": [
+      "Programmers and project leaders.",
+      "Programmers and systems analysts.",
+      "Programmers and users.",
+      "Programmers and computer operators."
+    ],
+    "answerIndex": 3,
+    "explanation": "Segregation of duties is important in any environment in which\ncontrol is a concern. In particular, programmers and computer\noperators should be kept separate because programmers\nhave the ability to modify programs, files, and controls. Thus,\nthey should not be allowed to also operate the computer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 17,
+    "page": 1174,
+    "topicId": "su18-systems-security",
+    "stem": "A company employing an online computer system has\nterminals located in all operating departments for inquiry and\nupdating purposes. Many of the company’s employees have\naccess to and are required to use the terminals. A control the\ncompany should incorporate to prevent an employee from\nmaking an unauthorized change in computer records unrelated\nto that employee’s job is to",
+    "choices": [
+      "Restrict the physical access to terminals.",
+      "Establish user codes and passwords.",
+      "Use validity checks.",
+      "Apply logical controls to transactions or inquiries entered by\nthe user."
+    ],
+    "answerIndex": 3,
+    "explanation": "Logical controls are used to determine whether a code\nnumber is compatible with the use to be made of the\ninformation requested. For example, a user may be authorized\nto enter only certain kinds of transaction data, to gain access\nonly to certain information, to have access to but not update\nfiles, or to use the system only during certain hours.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 18,
+    "page": 1175,
+    "topicId": "su18-systems-security",
+    "stem": "In entering the billing address for a new client in a company’s\ncomputerized database, a clerk erroneously entered a\nnonexistent zip code. As a result, the first month’s bill mailed to\nthe new client was returned to the company. Which one of the\nfollowing would most likely have led to discovery of the error\nat the time of entry into the company’s computerized\ndatabase?",
+    "choices": [
+      "Limit test.",
+      "Validity test.",
+      "Parity test.",
+      "Record count test."
+    ],
+    "answerIndex": 1,
+    "explanation": "In validity tests, values entered into the system are compared\nagainst master files of valid data. In this case, a master file of\nall zip codes recognized in the U.S. is held in memory and\neach time a clerk enters data in the zip code field, the clerk’s\nentry is compared to the list of valid values. If the zip code\nentered does not match any entry in the master file, data entry\nis halted and the clerk is advised to reenter the data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 19,
+    "page": 1176,
+    "topicId": "su18-systems-security",
+    "stem": "In the organization of the information systems function,\nthe most important segregation of duties is",
+    "choices": [
+      "Not allowing the data librarian to assist in data processing\noperations.",
+      "Assuring that those responsible for programming the system\ndo not have access to data processing operations.",
+      "Having a separate information officer at the top level of the\norganization outside of the accounting function.",
+      "Using different programming personnel to maintain utility\nprograms from those who maintain the application programs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Segregation of duties is a general control that is vital in a\ncomputerized environment. Some segregation of duties\ncommon in noncomputerized environments may not be\nfeasible in a computer environment. However, certain tasks\nshould not be combined. Systems analysts, for example,\nshould be separate from programmers and computer\noperators. Programmers design, write, test, and document\nspecific programs required by the system developed by the\nanalysts. Both programmers and analysts may be able to\nmodify programs, data files, and controls and should therefore\nhave no access to computer equipment and files or to copies\nof programs used in production. Operators should not be\nassigned programming duties or responsibility for systems\ndesign and should have no opportunity to make changes in\nprograms and systems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 20,
+    "page": 1177,
+    "topicId": "su18-systems-security",
+    "stem": "Some of the more important controls that relate to automated\naccounting information systems are check digits, limit checks,\nfield checks, and sign tests. These are classified as",
+    "choices": [
+      "Control total validation controls.",
+      "Hash totaling.",
+      "Data access validation controls.",
+      "Input controls."
+    ],
+    "answerIndex": 3,
+    "explanation": "Check digits, limit checks, field checks, and sign tests are all\nexamples of input controls.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 21,
+    "page": 1178,
+    "topicId": "su18-systems-security",
+    "stem": "A computer virus is different from a “Trojan horse” because the\nvirus can",
+    "choices": [
+      "Corrupt data.",
+      "Alter programming instructions.",
+      "Replicate itself.",
+      "Erase executable files."
+    ],
+    "answerIndex": 2,
+    "explanation": "Viruses are computer programs that propagate themselves\nfrom one computer to another without the user’s knowledge.\nTrojan horses are voluntarily installed on a computer by the\nuser because they are masquerading as programs the user\nwants. The Trojan horse contains codes that allow a hacker to\nlater take over the computer or retrieve sensitive data from the\ncomputer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 22,
+    "page": 1178,
+    "topicId": "su18-systems-security",
+    "stem": "Which one of the following procedures functions primarily as\nan output control over a company’s payroll processing?",
+    "choices": [
+      "The payroll process assigns each batch of timesheets a\nunique number recorded in a batch register.",
+      "The payroll application program performs a limit test that\nsubjects any transaction involving more than 80 hours worked\nto review before processing.",
+      "The payroll files are assigned internal and external file labels\nthat are checked by the application program before\nprocessing.",
+      "The payroll distribution log contains a schedule of when\nchecks and reports are prepared with the names of individuals\nwho are to receive the report."
+    ],
+    "answerIndex": 3,
+    "explanation": "The payroll distribution log containing a schedule of when\nchecks and reports are prepared with the names of individuals\nwho are to receive the report is an output control. Receiving\nchecks and reports are outputs, so the schedule of the\nreceipts of the reports is an output control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 23,
+    "page": 1179,
+    "topicId": "su18-systems-security",
+    "stem": "The director in charge of a company’s data center is reviewing\nthe controls surrounding the access to the hardware in the\ndata center, which is located offsite. The control below\nthat best identifies what the director should consider in order\nto protect access to the hardware is",
+    "choices": [
+      "Limitation of physical access.",
+      "Logical access controls.",
+      "Application controls.",
+      "Authentication controls."
+    ],
+    "answerIndex": 0,
+    "explanation": "Physical controls limit physical access and environmental\ndamage to computer equipment and important documents. In\norder to protect access to hardware, the director should\nconsider limitation of physical access, since hardware is a\ntangible object.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 24,
+    "page": 1180,
+    "topicId": "su18-systems-security",
+    "stem": "A payroll accountant for a company checked the most recent\npayroll records and discovered that the company had\naccidentally paid an employee for 400 hours instead of 40\nhours. Which one of the controls below would be\nthe best control to prevent an error such as this one?",
+    "choices": [
+      "A processing control that highlighted the unusually high\namount.",
+      "A transaction control that would create an error report.",
+      "An input control that looked for unreasonable amounts.",
+      "An output control that would not print a check over a certain\namount."
+    ],
+    "answerIndex": 2,
+    "explanation": "Input controls provide reasonable assurance that data\nsubmitted for processing are (1) authorized, (2) complete, and\n(3) accurate. If the company had an input control that looked\nfor unreasonable amounts, it would have flagged the 400 as\nan unreasonable number before the data were processed into\nthe system. The input control would not have allowed this\namount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 25,
+    "page": 1181,
+    "topicId": "su18-systems-security",
+    "stem": "Which of the following represents a weakness in the internal\ncontrol system of an electronic data processing system?",
+    "choices": [
+      "The data control group reviews and tests procedures and\nhandles the reprocessing of errors detected by the computer.",
+      "The accounts receivable clerk prepares and enters data into\nthe computer system and reviews the output for errors.",
+      "The systems analyst designs new systems and supervises\ntesting of the system.",
+      "The computer operator executes programs according to\noperating instructions and maintains custody of programs and\ndata files."
+    ],
+    "answerIndex": 3,
+    "explanation": "The computer operator executes programs and maintains\ncustody of programs and files. This action involves two\nfunctions that are not segregated: recording of transactions\nand custody of assets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 26,
+    "page": 1182,
+    "topicId": "su18-systems-security",
+    "stem": "A company has designed its accounting system to have an\nautomated reconciliation between its payroll and general\nledger systems. Which type of control has the company\nimplemented?",
+    "choices": [
+      "Output control.",
+      "Input control.",
+      "Processing control.",
+      "Transaction control."
+    ],
+    "answerIndex": 2,
+    "explanation": "Processing controls provide reasonable assurance that all\ndata submitted for processing are processed and only\napproved data are processed. These controls are built into\napplication code by programmers during the systems\ndevelopment process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 27,
+    "page": 1183,
+    "topicId": "su18-systems-security",
+    "stem": "A company has just completed construction of a new computer\nfacility. To limit unauthorized access to this facility, which one\nof the following is the most effective procedure that the\ncompany can implement?",
+    "choices": [
+      "Data encryption.",
+      "Access control software.",
+      "Input controls.",
+      "Biometric identification system."
+    ],
+    "answerIndex": 3,
+    "explanation": "Physical controls limit physical access and environmental\ndamage to computer equipment and important documents.\nPhysical access can be accomplished through the use of a\nbiometric identification system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 28,
+    "page": 1183,
+    "topicId": "su18-systems-security",
+    "stem": "A processing control helps to provide reasonable assurance\nthat",
+    "choices": [
+      "Data is entered properly into a computer system.",
+      "Only authorized users have access to completed data projects.",
+      "Proper computer programs are used to make data\ncalculations.",
+      "Finished data products are available on schedule."
+    ],
+    "answerIndex": 0,
+    "explanation": "Processing controls provide reasonable assurance that (1) all\ndata submitted for processing are processed and (2) only\napproved data are processed. These controls are built into the\napplication code by programmers during the systems\ndevelopment process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 29,
+    "page": 1184,
+    "topicId": "su18-systems-security",
+    "stem": "In an attempt to remain competitive and be more responsive to\ncustomers, a company has connected its internal computer\nnetworks to outside networks via a host computer. One\nsignificant risk of this practice is that",
+    "choices": [
+      "Uploaded files may not be properly edited.",
+      "Data downloaded to the personal computers may not be\nsufficiently timely.",
+      "Viruses may gain entry to one or more of the company’s\nsystems.",
+      "Software maintenance on the personal computers may\nbecome more costly."
+    ],
+    "answerIndex": 2,
+    "explanation": "A virus is a computer program that propagates itself from one\ncomputer to another without the user’s knowledge. Many\ntypes of viruses are malicious and can cause great\ninconvenience and even loss of data to the user. A common\nway of spreading a virus is by email attachments or\ndownloads from other networks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 30,
+    "page": 1185,
+    "topicId": "su18-systems-security",
+    "stem": "Which of the following is an indication that a computer virus is\npresent?",
+    "choices": [
+      "Frequent power surges that harm computer equipment.",
+      "Unexplainable losses of or changes to data.",
+      "Inadequate backup, recovery, and contingency plans.",
+      "Numerous copyright violations due to unauthorized use of\npurchased software."
+    ],
+    "answerIndex": 1,
+    "explanation": "The effects of computer viruses range from harmless\nmessages to complete destruction of all data within the\nsystem. A symptom of a virus would be the unexplained loss\nof or change to data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 31,
+    "page": 1186,
+    "topicId": "su18-systems-security",
+    "stem": "The internal auditors of a company are assessing controls over\nnetwork access. The best source of evidence to determine that\nterminated employees do not continue to have access to the\ncompany’s network is to",
+    "choices": [
+      "Discuss password removal procedures with the database\nadministrator.",
+      "Review access control software to determine whether the most\ncurrent version is implemented.",
+      "Review computer logs for access attempts.",
+      "Reconcile current payroll lists with database access lists."
+    ],
+    "answerIndex": 3,
+    "explanation": "The internal auditor can examine whether terminated\nemployees continue to access the network by finding\nemployees who are listed on the database access lists but\nhave been removed from current payroll lists.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 32,
+    "page": 1186,
+    "topicId": "su18-systems-security",
+    "stem": "The best preventive measure against a computer virus is to",
+    "choices": [
+      "Compare software in use with authorized versions of the\nsoftware.",
+      "Execute virus exterminator programs periodically on the\nsystem.",
+      "Allow only authorized software from known sources to be used\non the system.",
+      "Prepare and test a plan for recovering from the incidence of a\nvirus."
+    ],
+    "answerIndex": 2,
+    "explanation": "Preventive controls are designed to prevent errors before they\noccur. Detective and corrective controls attempt to identify and\ncorrect errors. Preventive controls are usually more cost\nbeneficial than detective or corrective controls. Allowing only\nauthorized software from known sources to be used on the\nsystem is a preventive measure. The authorized software from\nknown sources is expected to be free of viruses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 33,
+    "page": 1187,
+    "topicId": "su18-systems-security",
+    "stem": "Which of the following operating procedures increases an\norganization’s exposure to computer viruses?",
+    "choices": [
+      "Encryption of data files.",
+      "Frequent backup of files.",
+      "Downloading public-domain software from websites.",
+      "Installing original copies of purchased software on hard disk\ndrives."
+    ],
+    "answerIndex": 2,
+    "explanation": "Viruses are spread through shared data. Downloading public-\ndomain software carries a risk that contaminated data may\nenter the computer.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 34,
+    "page": 1188,
+    "topicId": "su18-systems-security",
+    "stem": "An organization installed antivirus software on all its personal\ncomputers. The software was designed to prevent initial\ninfections, stop replication attempts, detect infections after\ntheir occurrence, mark affected system components, and\nremove viruses from infected components. The major risk in\nrelying on antivirus software is that antivirus software may",
+    "choices": [
+      "Not detect certain viruses.",
+      "Make software installation overly complex.",
+      "Interfere with system operations.",
+      "Consume too many system resources."
+    ],
+    "answerIndex": 0,
+    "explanation": "Antivirus software designed to identify and remove known\nviruses is sometimes known as a vaccine. A vaccine works\nonly for known viruses and may not be effective for variants of\nthose viruses or new viruses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 35,
+    "page": 1189,
+    "topicId": "su18-systems-security",
+    "stem": "What is the best course of action to take if a program takes\nlonger than usual to load or execute?",
+    "choices": [
+      "Test the system by running a different application program.",
+      "Reboot the system.",
+      "Run antivirus software.",
+      "Back up the hard disk files."
+    ],
+    "answerIndex": 2,
+    "explanation": "The described condition is a symptom of a virus. Many viruses\nwill spread and cause additional damage. Use of an\nappropriate antivirus program may identify and even eliminate\na viral infection. Ways to minimize computer virus risk in a\nnetworked system include restricted access, regularly updated\npasswords, periodic testing of systems with virus detection\nsoftware, and the use of anti-virus software on all shareware\nprior to introducing it into the network.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 36,
+    "page": 1189,
+    "topicId": "su18-systems-security",
+    "stem": "Six months after a disgruntled systems programmer was fired\nand passwords disabled, the company’s largest server was\nbrought to a halt when it suddenly erased all of its own files\nand software. The most likely way the programmer\naccomplished this was by",
+    "choices": [
+      "Returning to the computer center after 6 months.",
+      "Planting a computer virus through the use of telephone\naccess.",
+      "Having an accomplice in the computer center.",
+      "Implanting a virus in the operating system and executing it via\na back door."
+    ],
+    "answerIndex": 3,
+    "explanation": "Viruses are a form of computer sabotage. They are programs\nhidden within other programs that have the capacity to\nduplicate themselves and infect other systems. Sharing of\nstorage media or participation in computer networks creates\nexposure to viruses. Viruses may result in actions ranging\nfrom harmless pranks to erasure of files and programs. A back\ndoor is a shortcut created in an operating system that permits\na programmer simple access to the system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 37,
+    "page": 1190,
+    "topicId": "su18-systems-security",
+    "stem": "Select the cyberattack which is best associated with extorting\nan individual or an organization.",
+    "choices": [
+      "Ransomware.",
+      "Phishing.",
+      "Software piracy.",
+      "Hacking."
+    ],
+    "answerIndex": 0,
+    "explanation": "Ransomware is a type of malware that threatens to publish the\nvictim’s data or prevents users from accessing their system or\npersonal files and demands ransom payment in order to\nregain access.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 38,
+    "page": 1191,
+    "topicId": "su18-systems-security",
+    "stem": "Which one of the following is most likely considered a\nprocessing control for an entity’s accounting application\nsystem?",
+    "choices": [
+      "Validity check.",
+      "Transaction log.",
+      "Spooling.",
+      "Check digit."
+    ],
+    "answerIndex": 1,
+    "explanation": "Processing controls provide reasonable assurance that (1) all\ndata submitted for processing are processed and (2) only\napproved data are processed. These controls are built into the\napplication code by programmers during the systems\ndevelopment process. A transaction log would keep track of all\ntransactions that occurred and make sure that they were\nproperly processed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 2,
+    "number": 39,
+    "page": 1192,
+    "topicId": "su18-systems-security",
+    "stem": "Which one of the following is the most appropriate technique\nto restrict access to computer programs and databases to\nauthorized personnel?",
+    "choices": [
+      "Conduct intrusion-prevention training.",
+      "Provide color-coded employee identification badges.",
+      "Deploy electronic detectors.",
+      "Develop unique account numbers for each user."
+    ],
+    "answerIndex": 3,
+    "explanation": "Developing unique account numbers for each user will allow\nmanagement to restrict specific users to specific types of\naccess. Only authorized personnel will be able to view certain\ndata.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 1,
+    "page": 1193,
+    "topicId": "su18-continuity",
+    "stem": "Which of the following is a computer program that appears to\nbe legitimate but performs some illicit activity when it is run?",
+    "choices": [
+      "Hoax virus.",
+      "Web crawler.",
+      "Trojan horse.",
+      "Killer application."
+    ],
+    "answerIndex": 2,
+    "explanation": "A Trojan horse is a computer program that appears friendly,\nfor example, a game, but that actually contains an application\ndestructive to the computer system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 2,
+    "page": 1193,
+    "topicId": "su18-continuity",
+    "stem": "Which of the following is used for Internet security as opposed\nto data transmissions over secured transmission lines?",
+    "choices": [
+      "Firewalls.",
+      "Mapping.",
+      "Parallel simulation.",
+      "Concurrency controls."
+    ],
+    "answerIndex": 0,
+    "explanation": "Firewalls separate an internal network from an external\nnetwork (such as the Internet) and prevent passage of specific\ntypes of traffic.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 3,
+    "page": 1194,
+    "topicId": "su18-continuity",
+    "stem": "A company’s management is concerned about computer data\neavesdropping and wants to maintain the confidentiality of its\ninformation as it is transmitted. The company should utilize",
+    "choices": [
+      "Data encryption.",
+      "Dial back systems.",
+      "Message acknowledgment procedures.",
+      "Password codes."
+    ],
+    "answerIndex": 0,
+    "explanation": "The most effective preventive measure against unauthorized\ninterception of data is encryption. Encryption technology\nconverts data into a code. Unauthorized users may still be\nable to access the data, but without the encryption key, they\nwill be unable to decode the information. Encryption\ntechnology may be either hardware or software based.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 4,
+    "page": 1195,
+    "topicId": "su18-continuity",
+    "stem": "Which one of the following most compromises file retention as\nprotection against loss or damage of master files?",
+    "choices": [
+      "Use of magnetic tape.",
+      "Inadequate ventilation.",
+      "Storing of all files in one location.",
+      "Failure to encrypt data."
+    ],
+    "answerIndex": 2,
+    "explanation": "The offsite location where an organization’s computer backup\nfiles are kept must be temperature and humidity controlled and\nguarded against intrusion just as the main processing center\nis. Just as important, it must be geographically remote enough\nfrom the site of the organization’s main operations that it\nwould not be affected by the same natural disaster. It does an\norganization no good to have sound backup procedures if the\nfiles are not accessible or have been destroyed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 5,
+    "page": 1195,
+    "topicId": "su18-continuity",
+    "stem": "A critical aspect of a disaster recovery plan is to be able to\nregain operational capability as soon as possible. In order to\naccomplish this, an organization can have an arrangement\nwith its computer hardware vendor to have a fully operational\nfacility available that is configured to the user’s specific needs.\nThis is best known as a(n)",
+    "choices": [
+      "Uninterruptible power system.",
+      "Parallel system.",
+      "Cold site.",
+      "Hot site."
+    ],
+    "answerIndex": 3,
+    "explanation": "A hot site is preconfigured and available for immediate recovery.",
+    "answerStatus": "inferred"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 6,
+    "page": 1196,
+    "topicId": "su18-continuity",
+    "stem": "Confidential data can be securely transmitted over the Internet\nby using",
+    "choices": [
+      "Single-use passwords.",
+      "Firewalls.",
+      "Encryption.",
+      "Digital signatures."
+    ],
+    "answerIndex": 2,
+    "explanation": "Encryption technology converts data into code. Unauthorized\nusers may still be able to access the data but, without the\nencryption key, they will be unable to decode the information.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 7,
+    "page": 1196,
+    "topicId": "su18-continuity",
+    "stem": "Managers at a consumer products company purchased\npersonal computer software from only recognized vendors,\nand prohibited employees from installing nonauthorized\nsoftware on their personal computers. To minimize the\nlikelihood of computer viruses infecting any of its systems, the\ncompany should also",
+    "choices": [
+      "Restore infected systems with authorized versions.",
+      "Recompile infected programs from source code backups.",
+      "Institute program change control procedures.",
+      "Test all new software on a stand-alone personal computer."
+    ],
+    "answerIndex": 3,
+    "explanation": "Software from recognized sources should be tested in\nquarantine (for example, in a test/development machine or a\nstand-alone personal computer) because even vendor-\nsupplied software may be infected with viruses. The software\nshould be run with a vaccine program and tested for the\nexistence of logic bombs, etc.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 8,
+    "page": 1197,
+    "topicId": "su18-continuity",
+    "stem": "An Internet firewall is designed to provide adequate protection\nagainst which of the following?",
+    "choices": [
+      "A computer virus.",
+      "Unauthenticated logins from outside users.",
+      "Insider leaking of confidential information.",
+      "A Trojan horse application."
+    ],
+    "answerIndex": 1,
+    "explanation": "A firewall is a device that separates two networks and\nprevents passage of specific types of network traffic while\nmaintaining a connection between the networks. Generally, an\nInternet firewall is designed to protect a system from\nunauthenticated logins from outside users, although it may\nprovide several other features as well.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 9,
+    "page": 1198,
+    "topicId": "su18-continuity",
+    "stem": "Spoofing is one type of online activity used to launch malicious\nattacks. Spoofing is",
+    "choices": [
+      "Trying large numbers of letter and number combinations to\naccess a network.",
+      "Eavesdropping on information sent by a user to the host\ncomputer of a website.",
+      "Accessing packets flowing through a network.",
+      "Identity misrepresentation in cyberspace."
+    ],
+    "answerIndex": 3,
+    "explanation": "Passwords, user account numbers, and other information may\nbe stolen using techniques such as Trojan horses, IP\nspoofing, and packet sniffers. Spoofing is identity\nmisrepresentation in cyberspace, for example, by using a false\nwebsite to obtain information about visitors.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 10,
+    "page": 1199,
+    "topicId": "su18-continuity",
+    "stem": "Attacks on computer networks may take many forms. Which of\nthe following uses the computers of innocent parties infected\nwith Trojan horse programs?",
+    "choices": [
+      "A distributed denial-of-service attack.",
+      "A man-in-the-middle attack.",
+      "A brute-force attack.",
+      "A password-cracking attack."
+    ],
+    "answerIndex": 0,
+    "explanation": "A denial-of-service (DoS) attack is an attempt to overload a\nsystem (e.g., a network or web server) with false messages so\nthat it cannot function (a system crash). A distributed DoS\nattack comes from multiple sources, for example, the\nmachines of innocent parties infected by Trojan horses. When\nactivated, these programs send messages to the target and\nleave the connection open. A DoS may establish as many\nnetwork connections as possible to exclude other users,\noverload primary memory, or corrupt file systems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 11,
+    "page": 1200,
+    "topicId": "su18-continuity",
+    "stem": "Which of the following is not an important aspect of a disaster\nrecovery plan?",
+    "choices": [
+      "A hot-site recovery system.",
+      "Automatic failover.",
+      "Focus on disaster prevention.",
+      "Data conversion operators."
+    ],
+    "answerIndex": 3,
+    "explanation": "A hot site is a service bureau that is immediately available for\npurposes of disaster recovery. Failover is a backup\noperational mode used to make systems more fault-tolerant.\nThe functions of a system component (such as a processor,\nserver, network, or database) are assumed by secondary\nsystem components when the primary component becomes\nunavailable through either failure or scheduled down time.\nFailover is typically an integral part of mission-critical systems\nthat must be constantly available. It involves automatically\noffloading tasks to a standby system component so that the\nprocedure is as seamless as possible to the end user.\nDisaster prevention is also an important aspect of most\ndisaster recovery plans. However, data conversion operators\nare not part of a disaster recovery plan. They perform the\ntasks of data preparation and transmission, for example,\nconversion of source data to magnetic disk or tape and entry\nof transactions from remote terminals.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 12,
+    "page": 1201,
+    "topicId": "su18-continuity",
+    "stem": "All of the following are examples of encryption techniques\nused for computer security except",
+    "choices": [
+      "Public key.",
+      "Private key.",
+      "Primary key.",
+      "Authentication key."
+    ],
+    "answerIndex": 2,
+    "explanation": "A primary key is a unique identifier for a data record. Primary\nkeys are used extensively in database processing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 13,
+    "page": 1201,
+    "topicId": "su18-continuity",
+    "stem": "When attempting to restore computing facilities at an alternate\nsite following a disaster, which one of the following should be\nrestored first?",
+    "choices": [
+      "Online system.",
+      "Batch system.",
+      "Operating system.",
+      "Decision support system."
+    ],
+    "answerIndex": 2,
+    "explanation": "The operating system is the “mind” of the computer. It\nmanages the communications between the different hardware\ncomponents making up the system and manages the flow of\ndata into and out of the system. Before any processing can be\ndone, it must be up and running.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 14,
+    "page": 1202,
+    "topicId": "su18-continuity",
+    "stem": "The IT team of a company created a disaster recovery plan for\ntheir employer. The plan includes several versions of backups\nof data and systems, including at least one copy kept off site.\nThe plan also includes an off-site location selected for its\nreduced chance of natural disasters like floods and hurricanes.\nThis location is guarded by a security service. The IT manager\nhas a copy of the plan at home, and the plan is regularly\ntested. Select the statement below that best describes the\nplan.",
+    "choices": [
+      "The disaster recovery plan has everything required because\nthe company can access the data backups and continue\nprocessing.",
+      "The disaster plan needs to ensure that there are copies of the\ndisaster recovery plan accessible on the computer system.",
+      "The disaster recovery plan needs to include a disaster\nrecovery site that is a hot or cold site with necessary\ncapabilities.",
+      "The disaster recovery plan needs to include instructions for\nappointing a recovery team when a disaster occurs."
+    ],
+    "answerIndex": 3,
+    "explanation": "A disaster recovery plan should include instructions for\nappointing a recovery team. Especially in larger disasters,\npersonnel may be indefinitely unavailable, rendering\npreconceived recovery team structures useless if no other\nauthority exists for determining the makeup of the disaster\nrecovery team.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 15,
+    "page": 1203,
+    "topicId": "su18-continuity",
+    "stem": "A company’s IT manager has been asked to ensure that the\ncompany’s data are protected in the event they are intercepted\nduring transmission. Which one of the following is\nthe best control to implement from the selection below?",
+    "choices": [
+      "Sequencing of messages.",
+      "Encryption.",
+      "Self-checking algorithms.",
+      "Dedicated lines."
+    ],
+    "answerIndex": 1,
+    "explanation": "Encryption technology converts data into a code.\nUnauthorized users may still be able to access the data;\nhowever, without the encryption key, they cannot decode the\ndata. Encryption would thus be the best control in order to\nensure that the company’s data are protected in the event\nthey are intercepted.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 16,
+    "page": 1204,
+    "topicId": "su18-continuity",
+    "stem": "An airline is about to create an Internet site to capture the flight\nreservations and ticket payments. Which one of the\nfollowing best demonstrates the inherent risks of the Internet?",
+    "choices": [
+      "Dependency on Internet service providers.",
+      "Confidential information can be intercepted.",
+      "Data formats are not typically standardized.",
+      "The limited controls available to mitigate risks."
+    ],
+    "answerIndex": 1,
+    "explanation": "The theft of confidential information is one of the biggest risks\nthat comes along with using the Internet. Therefore, many\ncontrols have been created to mitigate this risk, such as\npasswords and encryption.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 17,
+    "page": 1205,
+    "topicId": "su18-continuity",
+    "stem": "A company has in its disaster recovery plan a process to store\nin a secure, offsite warehouse building a back-up of its current\nfinancial operating systems. What type of back-up location is\nthe company most likely using?",
+    "choices": [
+      "A hot site.",
+      "A cold site.",
+      "A mirrored data center.",
+      "A recovery operations center."
+    ],
+    "answerIndex": 1,
+    "explanation": "A cold site is a shell facility suitable for the quick installation of\ncomputer equipment. It provides a prebuilt, environmentally\ncontrolled area with raised flooring, electrical power, and\nappropriate plumbing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 18,
+    "page": 1205,
+    "topicId": "su18-continuity",
+    "stem": "Encoding electronic data through the use of an algorithm to\nmake information unreadable to unauthorized individuals is\nidentified as",
+    "choices": [
+      "A firewall.",
+      "A worm.",
+      "A virus.",
+      "Encryption."
+    ],
+    "answerIndex": 3,
+    "explanation": "Encryption converts data into code so that unauthorized users\ncannot read the data without using an encryption key.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 19,
+    "page": 1206,
+    "topicId": "su18-continuity",
+    "stem": "A company is following a plan to continue operations if a place\nof business is affected by disasters. The plan is most likely\ncalled",
+    "choices": [
+      "Crisis communication planning.",
+      "Continuous availability planning.",
+      "Business continuity planning.",
+      "Strategic planning."
+    ],
+    "answerIndex": 2,
+    "explanation": "Business continuity planning is the continuation of business by\nother means during the period in which computer processing\nis unavailable or less than normal. A company creates a\nbusiness continuity plan to prepare for disasters.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 20,
+    "page": 1206,
+    "topicId": "su18-continuity",
+    "stem": "The chief information technology officer introduced a\ntechnology to prevent unauthorized external access to its\nclient’s network. The technology described by the chief\ninformation officer is most likely",
+    "choices": [
+      "Data encryption.",
+      "Firewall.",
+      "Public-key.",
+      "Private-key."
+    ],
+    "answerIndex": 1,
+    "explanation": "A firewall is a combination of hardware and software that\nseparates an internal network from an external network, such\nas the Internet, and prevents passage of specific types of\ntraffic. The chief information technology officer set up a control\nto prevent unauthorized external access to its client’s network,\nwhich is indicative of a firewall.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 18,
+    "section": 3,
+    "number": 21,
+    "page": 1207,
+    "topicId": "su18-continuity",
+    "stem": "An owner of a company has entered into a contract with a\nhardware vendor ensuring that in the event of a disaster, the\nvendor would provide the company with computer equipment.\nThe owner has also entered into a lease contract with a\nbuilding owner ensuring that in the event of a disaster, the\ncompany will be provided with an empty floor in the building to\nallow for the continuation of its business. Which one of the\nfollowing best describes this disaster recovery plan?",
+    "choices": [
+      "Mirrored data center.",
+      "Hot site.",
+      "Recovery operations center.",
+      "Cold site."
+    ],
+    "answerIndex": 3,
+    "explanation": "A cold site is a shell facility lacking most infrastructure but\nreadily available for the quick installation of hardware.\nBecause the site in this case is empty but is prepared for the\ninstallation of new equipment, it is a cold site.",
+    "answerStatus": "source"
+  }
+]

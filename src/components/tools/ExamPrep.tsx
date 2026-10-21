@@ -23,6 +23,7 @@ import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib
 import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
+import type { CmaStudyUnit } from "@/data/cma-topics";
 
 const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
   const m = new Map<string, ExamQuestion>();
@@ -66,7 +67,7 @@ function saveLocal(qs: ExamQuestion[]) {
 
 export function ExamPrep({ lang }: { lang: Lang }) {
   const [track, setTrack] = useState<ExamTrack>("IFRS");
-  const [cmaUnit, setCmaUnit] = useState<"all" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10>("all");
+  const [cmaUnit, setCmaUnit] = useState<"all" | CmaStudyUnit>("all");
   const [local, setLocal] = useState<ExamQuestion[]>([]);
   const [mode, setMode] = useState<"quiz" | "upload">("quiz");
   const [current, setCurrent] = useState(0);
@@ -392,7 +393,9 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           className="flex flex-wrap gap-2"
           aria-label={lang === "ar" ? "اختيار وحدة CMA" : "Select CMA study unit"}
         >
-          {(["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const).map((unit) => (
+          {(
+            ["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] as const
+          ).map((unit) => (
             <button
               key={unit}
               type="button"
@@ -492,7 +495,22 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 <span>·</span>
                 <span>{q.topic}</span>
               </div>
-              <h3 className="mb-4 text-base font-extrabold text-[var(--fg)] md:text-lg">
+              {q.sourceLanguage === "en" && lang === "ar" && (
+                <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
+                  هذا السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
+                </p>
+              )}
+              {q.sourceTextStatus === "reconstructed" && (
+                <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
+                  {lang === "ar"
+                    ? "يوجد خيار ناقص في ملف المصدر؛ أضيف بديل تدريبي مع تمييزه للمراجعة."
+                    : "The source PDF omits a choice; an independently written practice distractor has been marked for review."}
+                </p>
+              )}
+              <h3
+                dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                className="mb-4 whitespace-pre-wrap text-base font-extrabold text-[var(--fg)] md:text-lg"
+              >
                 {q.question[lang]}
               </h3>
               <div className="space-y-2">
@@ -514,7 +532,12 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       <span className="mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full border border-current text-[10px] font-bold">
                         {String.fromCharCode(65 + i)}
                       </span>
-                      <span className="flex-1">{c}</span>
+                      <span
+                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        className="flex-1 whitespace-pre-wrap"
+                      >
+                        {c}
+                      </span>
                       {revealed && isCorrect && (
                         <CheckCircle2 className="size-4 shrink-0 text-emerald-300" />
                       )}
@@ -538,9 +561,19 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-[#f3d28a]">
                         {lang === "ar" ? "الشرح" : "Explanation"}
                       </div>
-                      <p className="text-sm leading-relaxed text-[var(--fg-soft)]">
+                      <p
+                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]"
+                      >
                         {q.explanation[lang]}
                       </p>
+                      {q.answerStatus === "inferred" && (
+                        <p className="mt-2 text-xs text-amber-200">
+                          {lang === "ar"
+                            ? "هذه الإجابة مستنتجة؛ لم يُذكر حلها في الملف المرفق."
+                            : "This answer was inferred; the supplied PDF does not state it."}
+                        </p>
+                      )}
                       <div className="mt-2 text-[11px] text-[#f3d28a]/70">
                         {lang === "ar" ? "المرجع:" : "Reference:"} {q.reference}
                       </div>

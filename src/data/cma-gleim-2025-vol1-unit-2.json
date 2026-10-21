@@ -1,0 +1,1821 @@
+[
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 1,
+    "page": 219,
+    "topicId": "su2-receivables",
+    "stem": "The following information applies to a manufacturing company,\nwhich has a 6-month operating cycle:\nCash sales                                            $100,000\nCredit sales during the sixth month with net 30 days\nterms                                                 150,000\nCredit sale during the fifth month with special terms\nof net 9 months                                       10,000\nInterest earned and accrued on an investment that\nmatures during month 3 of the next cycle               2,000\nThe total of the company’s trade accounts receivable at the\nend of the current cycle is",
+    "choices": [
+      "$152,000",
+      "$160,000",
+      "$260,000",
+      "$262,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "A receivable classified as current on the statement of financial\nposition is expected to be collected within the current\noperating cycle or 1 year, whichever is longer. The total of the\ntrade accounts receivable at the end of the current cycle is\ntherefore $160,000 ($150,000 + $10,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 2,
+    "page": 220,
+    "topicId": "su2-receivables",
+    "stem": "A company uses the allowance method to account for\nuncollectible accounts receivable. After recording the estimate\nof credit loss expense for the current year, the company\ndecided to write off in the current year the $10,000 account of\na customer who had filed for bankruptcy. What effect does this\nwrite-off have on the company’s current net income and total\ncurrent assets, respectively?\nNet Income        Total Current Assets",
+    "choices": [
+      "Decrease                Decrease",
+      "No effect              Decrease",
+      "Decrease                No effect",
+      "No effect              No effect"
+    ],
+    "answerIndex": 3,
+    "explanation": "The company uses the allowance method. Thus, when a\nspecific amount is written off, the entry reduces the allowance\nfor credit losses and reduces accounts receivable. The net\neffect is no change to total current assets. The write-off of a\nparticular account has no effect on expenses, net income, and\ntotal current assets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 3,
+    "page": 221,
+    "topicId": "su2-receivables",
+    "stem": "A company had the following account balances at\nDecember 31:\nAccounts receivable                                   $ 900,000\nAllowance for credit losses (before any provision for\nthe year credit loss expense)                           16,000\nCredit sales for the year                             1,750,000\nThe company is considering the following methods of\nestimating credit loss expense for the year:\n• Based on credit sales at 2%\n• Based on accounts receivable at 5%\nWhat amount should the company charge to credit loss\nexpense under each method?\nPercentage of               Percentage of\nCredit Sales            Accounts Receivable",
+    "choices": [
+      "$51,000                     $45,000",
+      "$51,000                     $29,000",
+      "$35,000                     $45,000",
+      "$35,000                     $29,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Credit loss expense is estimated in two ways. One\nemphasizes asset valuation, while the other emphasizes\nincome measurement. The first is based on an aging of the\nreceivables to determine the balance in the allowance for\ncredit losses. Credit loss expense is the amount necessary to\nadjust the allowance account to this estimated balance. The\nsecond recognizes credit loss expense as a percentage of\nsales. Under the first method, if credit losses are estimated to\nbe 5% of gross accounts receivable, the allowance account\nshould have a balance of $45,000 ($900,000 × 5%), and the\nentry is to credit loss expense and the allowance for $29,000\n($45,000 – $16,000 existing balance). Under the second\nmethod, credit loss expense is $35,000 ($1,750,000 × 2%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 4,
+    "page": 223,
+    "topicId": "su2-receivables",
+    "stem": "Based on the industry average, a corporation estimates that its\ncredit losses should average 3% of credit sales. The balance\nin the allowance for credit losses at the beginning of Year 3\nwas $140,000. During Year 3, credit sales totaled\n$10,000,000, accounts of $100,000 were deemed to be\nuncollectible, and payment was received on a $20,000 account\nthat had previously been written off as uncollectible. The entry\nto record credit loss expense at the end of Year 3 would\ninclude an increase to the allowance for credit losses of",
+    "choices": [
+      "$300,000",
+      "$260,000",
+      "$240,000",
+      "$160,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Credit loss expense is based on the income statement\napproach. It treats credit loss expense as a function of sales\non account. Thus, it is projected to be $300,000 ($10,000,000\n× 3%). The entry to record credit loss increases the balance of\nthe allowance for credit losses. Total assets decrease by\n$300,000 because the allowance for credit loss account is a\ncontra asset. On the other side of the entry, stockholders’\nequity decreases by the amount of the credit loss expense.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 5,
+    "page": 224,
+    "topicId": "su2-receivables",
+    "stem": "The following information has been compiled by a\nmanufacturing company:\n• Sale of company products for the period to customers\nwith net 30-day terms amounting to $150,000.\n• Sale of company products for the period to a\ncustomer, supported by a note for $25,000, with\nspecial terms of net 180 days.\n• Balance of trade receivables at the end of the last\nperiod was $300,000.\n• Collections of open trade receivables during the period\nwas $200,000.\n• Rental income for the period, both earned and accrued\nbut not yet collected, from the manufacturing\ncompany’s credit union for use of company facilities\nwas $2,000.\nThe open trade receivables balance to be shown on the\nstatement of financial position for the period is",
+    "choices": [
+      "$250,000",
+      "$252,000",
+      "$275,000",
+      "$277,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The open trade receivables balance is calculated as follows:\nPrevious ending balance                $300,000\nAdd: Sales to customers (terms net 30) 150,000\nMinus: Collections during period       (200,000)\nOpen trade receivables reported          $250,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 6,
+    "page": 225,
+    "topicId": "su2-receivables",
+    "stem": "The following information relates to accounts receivable for the\nyear just ended:\nAccounts receivable, 1/1                     $ 650,000\nCredit sales for the year                      2,700,000\nSales returns for the year                        75,000\nAccounts written off during the year              40,000\nCollections from customers during the year 2,150,000\nEstimated future sales returns at 12/31           50,000\nEstimated credit losses at 12/31                 110,000\nWhat amount should be reported for accounts receivable,\nbefore allowances for sales returns and credit losses, at\nDecember 31?",
+    "choices": [
+      "$1,200,000",
+      "$1,125,000",
+      "$1,085,000",
+      "$925,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The ending balance in accounts receivable consists of the\n$650,000 beginning balance, plus $2,700,000 of credit sales,\nminus $2,150,000 of collections, $40,000 of accounts written\noff, and $75,000 of sales returns. The ending balance is\n$1,085,000 ($650,000 + 2,700,000 – 2,150,000 – 40,000 –\n75,000). The $110,000 of estimated uncollectible receivables\nand the $50,000 of estimated sales returns are not relevant\nbecause they affect the allowance accounts but not gross\naccounts receivable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 7,
+    "page": 226,
+    "topicId": "su2-receivables",
+    "stem": "An entity had the following sales and accounts receivable\nbalances, prior to any adjustments at year end:\nCredit sales                  $10,000,000\nAccounts receivable              3,000,000\nAllowance for credit losses         50,000\nThe entity uses 3% of accounts receivable to determine its\nallowance for credit losses at year end. By what amount\nshould the entity adjust its allowance for credit losses at year\nend?",
+    "choices": [
+      "$0",
+      "$40,000",
+      "$90,000",
+      "$140,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The entity uses the percentage of accounts receivable method\nto estimate the allowance. The year-end balance should be\n$90,000 ($3,000,000 A/R × 3%). Hence, the year-end\nadjustment is $40,000 ($90,000 – $50,000) unadjusted\nbalance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 8,
+    "page": 227,
+    "topicId": "su2-receivables",
+    "stem": "When the allowance method of recognizing credit losses is\nused, the entry to record the write-off of a specific account",
+    "choices": [
+      "Decreases both accounts receivable and the allowance for\ncredit losses.",
+      "Decreases accounts receivable and increases the allowance\nfor credit losses.",
+      "Increases the allowance for credit losses and decreases net\nincome.",
+      "Decreases both accounts receivable and net income."
+    ],
+    "answerIndex": 0,
+    "explanation": "When an account receivable is written off, both accounts\nreceivable and the allowance for credit losses are decreased.\nIf an account previously written off is collected, the account\nmust be reinstated by increasing both accounts receivable and\nthe allowance. The account receivable is then decreased by\nthe amount of cash collected.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 9,
+    "page": 228,
+    "topicId": "su2-receivables",
+    "stem": "On March 31, there was an unadjusted credit balance of\n$1,000 in the allowance for credit losses. An analysis of trade\naccounts receivable at that date revealed the following:\nEstimated\nAge        Amount Uncollectible\n0-30 days $60,000 5%\n31-60 days     4,000 10%\nOver 60 days     2,000 70%\nWhat amount should be reported as allowance for credit\nlosses in the March 31 balance sheet?",
+    "choices": [
+      "$4,800",
+      "$4,000",
+      "$3,800",
+      "$3,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The aging schedule determines the balance in the allowance\nfor credit losses. Of the accounts that are no more than 30\ndays old, the amount uncollectible is $3,000 ($60,000 × 5%).\nAccounts that are 31-60 days old and over 60 days old have\nestimated uncollectible balances of $400 ($4,000 × 10%) and\n$1,400 ($2,000 × 70%), respectively. Hence, the amount\nrecorded in the allowance for credit losses is $4,800 ($3,000 +\n$400 + $1,400). The $1,000 balance already in the account is\ndisregarded because the aging schedule determines the\nbalance that should be in the account.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 10,
+    "page": 229,
+    "topicId": "su2-receivables",
+    "stem": "Under the allowance method of recognizing credit losses, the\nentry to write-off an uncollectible account",
+    "choices": [
+      "Increases the allowance for credit losses.",
+      "Has no effect on the allowance for credit losses.",
+      "Has no effect on net income.",
+      "Decreases net income."
+    ],
+    "answerIndex": 2,
+    "explanation": "The entry to record credit loss expense under the allowance\nmethod is to record credit loss expense and increase the\nallowance account. When a specific account is then written\noff, both the allowance and accounts receivable are reduced.\nNet income is affected when credit loss expense is\nrecognized, not at the time of the write-off. Because accounts\nreceivable and the allowance account are decreased by the\nsame amount, a write-off of an account also has no effect on\nthe net amount of accounts receivable.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 11,
+    "page": 230,
+    "topicId": "su2-receivables",
+    "stem": "An entity’s allowance for credit loss was $100,000 at the end\nof Year 2 and $90,000 at the end of Year 1. For the year\nended December 31, Year 2, the entity reported credit loss\nexpense of $16,000 in its income statement. What amount did\nthe entity record in Year 2 to write off actual credit losses?",
+    "choices": [
+      "$6,000",
+      "$10,000",
+      "$16,000",
+      "$26,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "When credit losses are written off, an entry is made to\ndecrease both the allowance and accounts receivable. The\nbeginning balance in the allowance account is $90,000, the\nending balance is $100,000, and the credit loss expense is\n$16,000. Because write-offs equal the beginning balance, plus\nthe credit loss expense, minus the ending balance, $6,000 of\naccounts must have been written off.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 12,
+    "page": 231,
+    "topicId": "su2-receivables",
+    "stem": "William Co. determined that the net realizable value (NRV) of\nits accounts receivable at December 31, based on an aging of\nthe receivables, was $650,000. Additional information is as\nfollows:\nAllowance for credit losses -- 1/1                    $ 60,000\nCredit losses on accounts written off during the year   36,000\nCredit losses on accounts recovered during the year       4,000\nAccounts receivable at 12/31                           700,000\nWhat is William’s credit loss expense for the year?",
+    "choices": [
+      "$10,000",
+      "$22,000",
+      "$30,000",
+      "$42,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The allowance for credit losses before year-end adjustment is\n$28,000 ($60,000 beginning balance – $36,000 write-offs +\n$4,000 recovered). The balance should be $50,000 ($700,000\nyear-end A/R – $650,000 NRV based on aging). Thus, the\nallowance account and credit loss expense should be adjusted\n$22,000 ($50,000 desired balance – $28,000), which is the\nbalance of the credit loss expense reported on the income\nstatement.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 13,
+    "page": 232,
+    "topicId": "su2-receivables",
+    "stem": "Ward Co. estimates its credit loss expense to be 2% of credit\nsales. Ward’s credit sales for the current year were $1 million.\nDuring the year, Ward wrote off $18,000 of credit losses.\nWard’s allowance for credit losses had a $15,000 balance on\nJanuary 1. In its December 31 income statement, what amount\nshould Ward report as credit loss expense?",
+    "choices": [
+      "$23,000",
+      "$20,000",
+      "$18,000",
+      "$17,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "When credit loss expense is estimated on the basis of net\ncredit sales, credit loss expense is directly associated with a\nrevenue of the period (net credit sales). Thus, credit loss\nexpense is $20,000 ($1,000,000 credit sales × 2%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 14,
+    "page": 233,
+    "topicId": "su2-receivables",
+    "stem": "The following information pertains to Eire Co.’s accounts\nreceivable at December 31, Year 2:\nDays                      Estimated\nOutstanding Amount % Uncollectible\n0 - 60       $240,000         1%\n61 - 120       180,000         2%\nOver 120       200,000         6%\n$620,000\nDuring Year 2, Eire wrote off $14,000 in receivables and\nrecovered $8,000 that was written off in prior years. Its\nDecember 31, Year 1, allowance for credit losses was\n$44,000. Under the aging method, what amount of allowance\nfor credit losses should Eire report at December 31, Year 2?",
+    "choices": [
+      "$18,000",
+      "$20,000",
+      "$26,000",
+      "$38,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The aging schedule determines the allowance for credit losses\nbased on year-end accounts receivable, their age, and their\nestimated collectibility. This year-end amount is $18,000\n[($240,000 × 1%) + ($180,000 × 2%) + ($200,000 × 6%)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 15,
+    "page": 234,
+    "topicId": "su2-receivables",
+    "stem": "The following account balances were abstracted from Pika\nCo.’s records at December 31:\nAccounts receivable          $2,000,000\nAllowance for credit losses 16,000\nNet credit sales             $6,000,000\nPika estimates that 3% of the gross accounts receivable will\nbecome uncollectible. After adjustment at December 31, the\nallowance for credit losses should have a balance of",
+    "choices": [
+      "$180,000",
+      "$164,000",
+      "$44,000",
+      "$60,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The allowance for credit losses at year end should have a\nbalance of $60,000. This amount is equal to the $2,000,000 of\naccounts receivable multiplied by the 3% that is estimated to\nbecome uncollectible.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 16,
+    "page": 235,
+    "topicId": "su2-receivables",
+    "stem": "An analysis and aging of Hom Company’s accounts receivable\nat December 31 disclosed the following:\nAccounts receivable                    $850,000\nAllowance for credit losses per books 50,000\nAmounts deemed uncollectible           64,000\nThe net realizable value (NRV) of the accounts receivable at\nDecember 31 should be",
+    "choices": [
+      "$836,000",
+      "$800,000",
+      "$786,000",
+      "$736,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The NRV of accounts receivable is equal to the $850,000\ngross accounts receivable minus the $64,000 estimate of\ncredit losses. The $50,000 balance in the allowance is not\nused because it is an unadjusted balance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 17,
+    "page": 236,
+    "topicId": "su2-receivables",
+    "stem": "Rue Co.’s allowance for credit losses had a balance of\n$12,000 at December 31, Year 1. During Year 2, Rue wrote off\nuncollectible accounts of $48,000. The aging of accounts\nreceivable indicated that a $50,000 allowance for credit losses\nwas required at December 31, Year 2. What amount of credit\nloss expense should Rue report for Year 2?",
+    "choices": [
+      "$48,000",
+      "$50,000",
+      "$60,000",
+      "$86,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The beginning balance of the allowance for credit losses was\n$12,000. The account was decreased $48,000 when the\nuncollectible accounts were written off. Thus, the entry for\ncredit loss expense must be $86,000 if the ending balance is\n$50,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 18,
+    "page": 237,
+    "topicId": "su2-receivables",
+    "stem": "At December 31, Year 1, Gasp Co.’s allowance for credit\nlosses had a balance of $30,000. During Year 2, Gasp wrote\noff uncollectible accounts of $45,000. At December 31, Year 2,\nan aging of the accounts receivable indicated that $50,000 of\nthe December 31, Year 2, receivables may be uncollectible.\nWhat amount of allowance for credit losses should Gasp report\nin its December 31, Year 2, balance sheet?",
+    "choices": [
+      "$20,000",
+      "$25,000",
+      "$35,000",
+      "$50,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under the balance sheet approach, the ending balance of the\nallowance for credit losses is a percentage of the ending\nbalance of accounts receivable. The uncollectible accounts\nidentified by the aging schedule at year end reflect the total\nrequired ending balance of the allowance. Since the company\ndetermined that $50,000 of the December 31, Year 2,\nreceivables may be uncollectible, this is the ending balance of\nthe allowance for credit losses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 19,
+    "page": 238,
+    "topicId": "su2-receivables",
+    "stem": "At the end of Year 1, Boller Co. had an ending balance in\nallowance for credit losses of $30,000. During Year 2, Boller\nwrote off $40,000 of accounts receivable. At the end of Year 2,\nBoller had $300,000 in accounts receivable and determined\nthat 8% of these would be uncollectible. What amount should\nbe reported as credit loss expense on Boller’s Year 2 income\nstatement?",
+    "choices": [
+      "$64,000",
+      "$34,000",
+      "$24,000",
+      "$14,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The Year 2 ending balance for allowance for credit losses is\n$24,000 ($300,000 × 8%). The write-off of a particular bad\ndebt has no effect on credit loss expense. It is recognized as a\ndecrease in the balance of allowance for credit losses.\nTherefore, the credit loss expense in Year 2 of $34,000 can be\ncalculated as follows:\n1/1/Year 2 allowance for credit losses    $30,000\nAccounts written off                        (40,000)\nCredit loss expense                         34,000\n12/31/Year 2 allowance for credit losses $24,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 1,
+    "number": 20,
+    "page": 239,
+    "topicId": "su2-receivables",
+    "stem": "On April 1, Aloe, Inc., factored $80,000 of its accounts\nreceivable without recourse. The factor retained 10% of the\naccounts receivable as an allowance for sales returns and\ncharged a 5% commission on the gross amount of the factored\nreceivables. What amount of cash did Aloe receive from the\nfactored receivables?",
+    "choices": [
+      "$68,000",
+      "$68,400",
+      "$72,000",
+      "$76,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Factoring is a transfer of receivables to a third party (a factor)\nwho assumes the responsibility of collection. Factoring\ndiscounts receivables on a nonrecourse, notification basis. If a\nsale is without recourse, the transferee (the factor) assumes\nthe risks and rewards of collection. The factor retained 10% of\nthe receivables ($80,000 × 10% = $8,000) as a reserve (an\nallowance for returns) and charged a 5% commission on the\ngross receivables ($80,000 × 5% = $4,000). Accordingly, the\ntransferor received $68,000 ($80,000 – $8,000 – $4,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 1,
+    "page": 241,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "A physical inventory count showed an entity had inventory\ncosting $1,000,000 on hand at December 31, Year 1.\nExcluded from this amount were the following:\n• Goods costing $82,000, shipped to a customer free on\nboard (FOB) shipping point on December 28, Year 1.\nThey were expected to be received by the customer\non January 4, Year 2.\n• Goods costing $122,000, shipped to a customer free\non board (FOB) destination December 30, Year 1.\nThey were expected to be received by the customer\non January 5, Year 2.\nCompute the correct ending inventory to be reported on the\nshipper’s statement of financial position at December 31,\nYear 1.",
+    "choices": [
+      "$1,000,000",
+      "$1,082,000",
+      "$1,122,000",
+      "$1,204,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The goods shipped FOB shipping point should be counted in\nthe buyer’s, not the seller’s, inventory because title and risk of\nloss pass at the time and place of shipment. These goods\nwere properly excluded from ending inventory. The goods\nshipped FOB destination were improperly excluded from the\nseller’s ending inventory. The title and risk of loss did not pass\nuntil the time and place where the goods reached their\ndestination and were duly tendered. Thus, the correct ending\ninventory is $1,122,000 ($1,000,000 beginning balance +\n$122,000 goods shipped FOB destination).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 2,
+    "page": 242,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "The following selected data from statements of financial\nposition on December 31, Year 1, and December 31, Year 2,\nare presented below:\n12/31/Year 1 12/31/Year 2\nInventory                  $120,000    $140,000\nTrade accounts payable       62,000       49,000\nAdditional information for Year 2:\n1. Cash payments to suppliers of merchandise were\n$180,000.\nCost of goods sold in Year 2 was",
+    "choices": [
+      "$147,000",
+      "$160,000",
+      "$167,000",
+      "$180,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cost of goods sold equals beginning inventory, plus\npurchases, minus ending inventory. To determine cost of\ngoods sold, purchases must be calculated. Purchases equal\n$167,000 ($49,000 ending accounts payable + $180,000\npayments to suppliers – $62,000 beginning accounts\npayable). Thus, cost of goods sold equals $147,000 ($120,000\nbeginning inventory + $167,000 purchases – $140,000 ending\ninventory).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 3,
+    "page": 243,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "An entity with a December 31 year end purchased $2,000 of\ninventory on account. The seller was responsible for delivery\nto the shipping point, with freight of $50 paid at destination by\nthe buyer. The invoice date was December 27, Year 1, and the\ngoods arrived on January 3, Year 2.\nNow assume the terms required the seller to deliver to the\ndestination instead of the shipping point. What is the correct\namount of inventory and freight-in relating to this purchase on\nthe Year 1 financial statements?\nInventory         Freight-In",
+    "choices": [
+      "$0              $0",
+      "$2,050          $0",
+      "$0              $50",
+      "$2,000          $50"
+    ],
+    "answerIndex": 0,
+    "explanation": "Title and risk of loss passed to the buyer at the destination,\nand the seller incurred the expense of delivery to that point.\nThe goods did not arrive until after year end, so they should\nnot be included in Year 1 inventory. Freight-in should also not\nbe recorded until Year 2.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 4,
+    "page": 244,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "If certain goods owned by an entity were not recorded as a\npurchase and were not counted in ending inventory, in error,\nthen",
+    "choices": [
+      "Cost of goods sold for the period will be understated.",
+      "Cost of goods sold for the period will be overstated.",
+      "Net income for the period will be understated.",
+      "There will be no effect on cost of goods sold or profit for the\nperiod."
+    ],
+    "answerIndex": 3,
+    "explanation": "The effects of the errors on cost of goods sold are offsetting.\nPurchases, which increase cost of goods sold, and ending\ninventory, which decreases cost of goods sold, are\nunderstated by the same amount. Neither cost of goods sold\nnor net income is affected.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 5,
+    "page": 245,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "What is the cost of ending inventory given the following\nfactors?\nBeginning inventory $ 5,000\nTotal production costs 60,000\nCost of goods sold     55,000\nDirect labor           40,000",
+    "choices": [
+      "$5,000",
+      "$10,000",
+      "$45,000",
+      "$50,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Beginning inventory, plus purchases (or other inventory\nadditions), minus cost of goods sold, equals ending inventory.\nThus, ending inventory equals $10,000 ($5,000 + $60,000 –\n$55,000). Direct labor is included in total production costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 6,
+    "page": 246,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "The following information applies to the income statement of a\ncompany:\nGross sales         $1,000,000\nNet sales           900,000\nFreight-in          10,000\nEnding inventory 200,000\nGross profit margin 40%\nThe company’s cost of goods available for sale is",
+    "choices": [
+      "$550,000",
+      "$560,000",
+      "$740,000",
+      "$800,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The gross profit (gross margin) method calculates ending\ninventory at a given time by subtracting an estimated cost of\ngoods sold from the sum of beginning inventory and\npurchases (or cost of goods manufactured). The estimated\ncost of goods sold equals sales minus the gross profit. The\ngross profit equals sales multiplied by the gross profit\npercentage, an amount ordinarily determined on a historical\nbasis. Given that the gross margin percentage is 40% of net\nsales, cost of goods sold must be 60% of net sales, or\n$540,000 ($900,000 × 60%). Goods available for sale equals\ncost of goods sold plus ending inventory ($540,000 +\n$200,000 = $740,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 7,
+    "page": 247,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "A company’s inventory is overstated at December 31 of this\nyear. The result will be",
+    "choices": [
+      "Understated income this year.",
+      "Understated retained earnings this year.",
+      "Understated retained earnings next year.",
+      "Understated income next year."
+    ],
+    "answerIndex": 3,
+    "explanation": "Cost of goods sold equals beginning finished goods, plus cost\nof goods manufactured for a manufacturer or purchases for a\nretailer, minus ending finished goods. Overstated ending\ninventory therefore results in understated cost of goods sold,\noverstated net income, and overstated retained earnings in\nthe period of the error. When these errors reverse in the\nfollowing period, beginning inventory and cost of goods sold\nwill be overstated, and net income will be understated.\nRetained earnings will be correct.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 8,
+    "page": 248,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "Which one of the following errors will result in the\noverstatement of net income?",
+    "choices": [
+      "Overstatement of beginning inventory.",
+      "Overstatement of ending inventory.",
+      "Overstatement of goodwill amortization.",
+      "Overstatement of allowance for credit losses."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost of goods sold equals beginning finished goods, plus cost\nof goods manufactured for a manufacturer or purchases for a\nretailer, minus ending finished goods. Overstated ending\ninventory therefore results in understated cost of goods sold,\noverstated net income, and overstated retained earnings in\nthe period of the error.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 9,
+    "page": 249,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "If ending inventory is underestimated due to an error in the\nphysical count of items on hand, cost of goods sold for the\nperiod will be <List A> and net earnings will be <List B>.\nList A List B",
+    "choices": [
+      "Underestimated Underestimated",
+      "Underestimated Overestimated",
+      "Overestimated Underestimated",
+      "Overestimated Overestimated"
+    ],
+    "answerIndex": 2,
+    "explanation": "Cost of goods sold equals beginning inventory, plus\npurchases, minus ending inventory. If the ending inventory is\nunderestimated, the cost of goods sold will be overestimated.\nIf cost of goods sold is overestimated, net earnings will be\nunderestimated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 10,
+    "page": 249,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "Heidelberg Co.’s beginning inventory at January 1 was\nunderstated by $52,000, and its ending inventory was\noverstated by $104,000. As a result, Heidelberg’s cost of\ngoods sold for the year was",
+    "choices": [
+      "Understated by $52,000.",
+      "Overstated by $52,000.",
+      "Understated by $156,000.",
+      "Overstated by $156,000."
+    ],
+    "answerIndex": 2,
+    "explanation": "When beginning inventory is understated, cost of goods sold\nwill be understated. When ending inventory is overstated, cost\nof goods sold will be understated. Thus, Heidelberg Co.’s\ninventory is understated by $156,000 ($52,000 + $104,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 11,
+    "page": 250,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "The following inventory errors have been discovered for\nLithuania Corporation:\n• The Year 1 year-end inventory was overstated by\n$23,000.\n• The Year 2 year-end inventory was understated by\n$61,000.\n• The Year 3 year-end inventory was understated by\n$17,000.\nThe reported income before taxes for Lithuania was\nYear Income before Taxes\nYear 1        $138,000\nYear 2         254,000\nYear 3         168,000\nReported income before taxes for Year 1, Year 2, and Year 3,\nrespectively, should have been",
+    "choices": [
+      "$161,000, $170,000, and $212,000.",
+      "$115,000, $338,000, and $124,000.",
+      "$161,000, $338,000, and $90,000.",
+      "$115,000, $338,000, and $212,000."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost of sales equals beginning inventory, plus purchases or\ncost of goods manufactured, minus ending inventory. Hence,\nover (under) statement of inventory affects cost of sales and\nincome. The Year 1 pretax income was affected by the\n$23,000 Year 1 overstatement of year-end inventory. This\nerror understated Year 1 cost of sales and overstated pretax\nincome. The corrected income is $115,000 ($138,000 –\n$23,000). The same $23,000 error caused Year 2 income to\nbe understated by overstating beginning inventory. In addition,\nthe $61,000 understatement of Year 2 year-end inventory also\ncaused Year 2 income to be understated. Thus, the corrected\nYear 2 pretax income is $338,000 ($254,000 + $23,000 +\n$61,000). The $61,000 understatement at the end of Year 2\ncaused Year 3 income to be overstated by understating\nbeginning inventory. Income for Year 3 is understated by the\n$17,000 of year-end inventory understatement. Accordingly,\nthe corrected income is $124,000 ($168,000 – $61,000 +\n$17,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 12,
+    "page": 252,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "On December 28, Kerr Manufacturing Co. purchased goods\ncosting $50,000. The terms were FOB destination. Some of\nthe costs incurred in connection with the sale and delivery of\nthe goods were as follows:\nPackaging for shipment $1,000\nShipping                  1,500\nSpecial handling charges 2,000\nThese goods were received on December 31. In Kerr’s\nDecember 31 balance sheet, what amount of cost for these\ngoods should be included in inventory?",
+    "choices": [
+      "$54,500",
+      "$53,500",
+      "$52,000",
+      "$50,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "FOB destination means that title passes upon delivery at the\ndestination, the seller bears the risk of loss during transit, and\nthe seller is responsible for the expense of delivering the\ngoods to the designated point. Consequently, the packaging,\nshipping, and handling costs are not included in the buyer’s\ninventory. The amount that Kerr should include is therefore the\npurchase price of $50,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 13,
+    "page": 253,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "A material overstatement in ending inventory was discovered\nafter the year-end financial statements of a company were\nissued to the public. What effect did this error have on the\nyear-end financial statements?\nCurrent assets Gross profit",
+    "choices": [
+      "Understated      Overstated",
+      "Overstated       Overstated",
+      "Understated     Understated",
+      "Overstated      Understated"
+    ],
+    "answerIndex": 1,
+    "explanation": "Inventory is a current asset. Thus, overstating the ending\nbalance overstates current assets. Gross profit equals net\nsales minus cost of goods sold. Cost of goods sold is\ndecreased by ending inventory. Overstating the ending\ninventory understates cost of goods sold and overstates gross\nprofit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 14,
+    "page": 254,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "A firm’s ending inventory balance was overstated by $1,000.\nWhich of the following statements is correct according to a\nperiodic inventory system?",
+    "choices": [
+      "The retained earnings were overstated by $1,000.",
+      "The cost of goods sold was overstated by $1,000.",
+      "The cost of goods available for sale was overstated by $1,000.",
+      "The gross margin was understated by $1,000."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cost of goods sold (COGS) equals beginning inventory, plus\npurchases during the period, minus ending inventory. Thus, a\n$1,000 overstatement of the ending inventory results in a\n$1,000 understatement of cost of goods sold. The $1,000\nunderstatement of COGS results in a $1,000 overstatement of\ngross profit, and $1,000 overstatement of retained earnings.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 15,
+    "page": 254,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "A company uses a periodic inventory system and has its cost\nof ending inventory understated by $4,000. Which of the\nfollowing describes the effects of this error on the company’s\ncurrent-year’s cost of goods sold and net income,\nrespectively?\nCost of goods sold           Net income",
+    "choices": [
+      "Understated                   Understated",
+      "Understated                   Overstated",
+      "Overstated                    Understated",
+      "Overstated                    Overstated"
+    ],
+    "answerIndex": 2,
+    "explanation": "Cost of goods sold equals beginning inventory, plus cost of\ngoods manufactured for a manufacturer or purchased by a\nretailer, minus ending inventory. An understated ending\ninventory will result in an overstated cost of goods sold and an\nunderstated net income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 16,
+    "page": 255,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "Herc Co.’s inventory at December 31, Year 1, was $1.5 million\nbased on a physical count priced at cost, and before any\nnecessary adjustment for the following:\n• Merchandise costing $90,000 was shipped FOB\nshipping point from a vendor on December 30, Year 1,\nand was received and recorded on January 5, Year 2.\n•  Goods in the shipping area were excluded from\ninventory although shipment was not made until\nJanuary 4, Year 2. The goods, billed to the customer\nFOB shipping point on December 30, Year 1, had a\ncost of $120,000.\nWhat amount should Herc report as inventory in its\nDecember 31, Year 1, balance sheet?",
+    "choices": [
+      "$1,500,000",
+      "$1,590,000",
+      "$1,620,000",
+      "$1,710,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "The inventory balance prior to adjustments was $1.5 million.\nThe merchandise shipped FOB shipping point to Herc should\nbe included because title passed when the goods were\nshipped. The goods in the shipping area should be included\nbecause title did not pass until the goods were shipped in\nYear 2. Thus, inventory reported at December 31, Year 1,\nshould be $1,710,000 ($1,500,000 + $90,000 + $120,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 17,
+    "page": 256,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "What is the appropriate treatment for goods held on\nconsignment?",
+    "choices": [
+      "The goods should be included in ending inventory of the\nconsignor.",
+      "The goods should be included in ending inventory of the\nconsignee.",
+      "The goods should be included in cost of goods sold of the\nconsignee only when sold.",
+      "The goods should be included in cost of goods sold of the\nconsignor when transferred to the consignee."
+    ],
+    "answerIndex": 0,
+    "explanation": "A consignment sale is an arrangement between the owner of\ngoods and a sales agent. Consigned goods are not sold but\nrather transferred to the agent (consignee) for possible sale.\nThe consignor records sales only when the goods are sold to\nthird parties by the consignee. Thus, unsold consigned goods\nare included in inventory at cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 2,
+    "number": 18,
+    "page": 257,
+    "topicId": "su2-inventory-fundamentals",
+    "stem": "The Super Toy Store inventory records at December 31\nrevealed the following:\nInventory on hand, December 31                    $350,000\nMerchandise purchased F.O.B. shipping point,\nshipped by vendor on December 31, expected\ndelivery date–January 4                          118,000\nMerchandise shipped to customers on\nDecember 28 F.O.B. destination, expected delivery\ndate–January 3                                    75,000\nGoods held on consignment by Super Toy Store,\nnot included in inventory on hand                 38,000\nWhat was Super Toy Store’s ending inventory at December\n31?",
+    "choices": [
+      "$350,000",
+      "$393,000",
+      "$468,000",
+      "$543,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Items should be included in inventory when Super Toy Store\nhas control over the items. For the goods purchased under\nFOB shipping point, control of the goods passes to Super Toy\nStore when the seller makes a proper tender of delivery of the\ngoods to the carrier (i.e., on December 31). For the goods sold\nunder FOB destination, Super Toy Store has control until the\ngoods arrive at the destination (i.e., on January 3). Goods held\non consignment are never recorded as inventory by the\nconsignee (i.e., Super Toy Store). Thus, Super Toy Store’s\nending inventory on December 31 includes the inventory on\nhand, the purchased merchandise, and the merchandise\nshipped but not yet delivered, for a total of $543,000\n($350,000 + $118,000 + $75,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 1,
+    "page": 260,
+    "topicId": "su2-cost-flow",
+    "stem": "The inventory method yielding the same inventory\nmeasurement and cost of goods sold whether a perpetual or\nperiodic system is used is",
+    "choices": [
+      "Average cost.",
+      "First-in, first-out.",
+      "Last-in, first-out.",
+      "Either first-in, first-out or last-in, first-out."
+    ],
+    "answerIndex": 1,
+    "explanation": "A perpetual inventory system will result in the same dollar\namount of ending inventory as a periodic inventory system\nassuming a FIFO cost flow. Under both perpetual and periodic\nsystems, the same units are deemed to be in ending\ninventory.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 2,
+    "page": 260,
+    "topicId": "su2-cost-flow",
+    "stem": "An entity started in Year 1 with 200 scented candles on hand\nat a cost of $3.50 each. These candles sell for $7.00 each.\nThe following schedule represents the purchases and sales of\ncandles during Year 1:\nTransaction      Quantity       Unit    Quantity\nNumber        Purchased      Cost       Sold\n1              ---         ---      150\n2             250        $3.30       ---\n3              ---         ---      100\n4             200         3.10       ---\n5              ---         ---      200\n6             350         3.00       ---\n7              ---         ---      300\nIf the entity uses periodic FIFO inventory pricing, the gross\nprofit for Year 1 would be",
+    "choices": [
+      "$2,755",
+      "$2,805",
+      "$2,854",
+      "$2,920"
+    ],
+    "answerIndex": 1,
+    "explanation": "The FIFO method assumes that the first goods purchased are\nthe first goods sold and that ending inventory consists of the\nlatest purchases. Moreover, whether the inventory system is\nperiodic or perpetual does not affect FIFO measurement. The\ncost of goods sold is $2,445 {beginning inventory (200 units ×\n$3.50) + purchases [(250 units × $3.30) + (200 units × $3.10)\n+ (350 units × $3.00)] – ending inventory (250 units × $3.00)}.\nThus, the gross profit for Year 1 using FIFO is $2,805 [sales\n(750 units × $7.00) – cost of goods sold of $2,445].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 3,
+    "page": 262,
+    "topicId": "su2-cost-flow",
+    "stem": "The cost of materials has risen steadily over the year. Which of\nthe following methods of estimating the ending balance of the\nmaterials inventory account will result in the highest profit,\nassuming all other variables remain constant?",
+    "choices": [
+      "Last-in, first-out (LIFO).",
+      "First-in, first-out (FIFO).",
+      "Weighted average.",
+      "Specific identification."
+    ],
+    "answerIndex": 1,
+    "explanation": "Profit will be higher when cost of goods sold is lower, other\nfactors held constant. Cost of goods sold equals beginning\ninventory, plus purchases, minus ending inventory.\nAccordingly, cost of goods sold will be lowest when the ending\ninventory is highest. In an inflationary environment, ending\ninventory is highest under FIFO because the older, less\nexpensive items are deemed to have been sold, leaving the\nmore expensive items in the ending inventory.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 4,
+    "page": 263,
+    "topicId": "su2-cost-flow",
+    "stem": "When a right of return exists, an entity may recognize revenue\nfrom a sale of goods at the time of sale only if",
+    "choices": [
+      "The amount of future returns can be reliably estimated.",
+      "The seller retains the risks and rewards of ownership.",
+      "The buyer resells the goods.",
+      "The seller believes returns will not be material."
+    ],
+    "answerIndex": 0,
+    "explanation": "One condition for recognition of revenue from the sale of\ngoods is the transfer of the significant risks and rewards of\nownership. Retention of significant risk may occur when, for\nexample, the buyer may rescind the purchase for a reason\nstipulated in the contract, and the buyer is uncertain about the\nprobability of return. However, if the entity can reliably\nestimate future returns and recognizes a liability for returns\nbased on experience and other pertinent information, revenue\nmay be recognized at the time of sale if the other conditions\nfor revenue recognition also are met.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 5,
+    "page": 264,
+    "topicId": "su2-cost-flow",
+    "stem": "Illustrated below is a perpetual inventory card for the\ncurrent year.\nDate       Units Purchased Units Sold Units Balance\nJanuary 1                                            0\nJanuary 12 1,000 @ $2.00                         1,000\nMarch 15                             300           700\nMay 5            500 @ $2.20                     1,200\nJuly 8                               500           700\nNovember 24 1,000 @ $1.65                        1,700\nAdditional information:\n• The entity had no opening inventory.\n• The items sold on March 15 were purchased on January 12.\n• The items sold on July 8 were purchased on May 5.\nThe ending inventory balance under the first-in, first-out (FIFO)\nmethod of inventory valuation is",
+    "choices": [
+      "$3,050",
+      "$3,150",
+      "$3,230",
+      "$3,430"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the FIFO method, the 1,700 units of ending inventory\nare valued at the most recent prices. Ending inventory is\nassumed to include 1,000 units purchased November 24, 500\nunits purchased May 5, and 200 units purchased January 12.\nHence, the ending inventory is $3,150 [(1,000 × $1.65) + (500\n× $2.20) + (200 × $2.00)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 6,
+    "page": 265,
+    "topicId": "su2-cost-flow",
+    "stem": "Illustrated below is a perpetual inventory card for the\ncurrent year.\nDate       Units Purchased Units Sold Units Balance\nJanuary 1                                            0\nJanuary 12 1,000 @ $2.00                         1,000\nMarch 15                             300           700\nMay 5            500 @ $2.20                     1,200\nJuly 8                               500           700\nNovember 24 1,000 @ $1.65                        1,700\nAdditional information:\n• The entity had no opening inventory.\n• The items sold on March 15 were purchased on January 12.\n• The items sold on July 8 were purchased on May 5.\nThe cost of goods sold under the specific identification method\nof inventory valuation is",
+    "choices": [
+      "$1,320",
+      "$1,520",
+      "$1,600",
+      "$1,700"
+    ],
+    "answerIndex": 3,
+    "explanation": "Of the 800 units sold during the period, the 300 units sold on\nMarch 15 were purchased on January 12 at a cost of $2.00\nper unit. The remaining 500 units were purchased on May 5 at\na cost of $2.20 per unit. The cost of goods sold under the\nspecific identification method is therefore $1,700 [(300 units ×\n$2.00) + (500 units × $2.20)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 7,
+    "page": 266,
+    "topicId": "su2-cost-flow",
+    "stem": "A merchandising company had the following inventory related\ntransactions in its first year of operations:\nPurchases               Sales      Balance\nDate              in Units            in Units     in Units\nJan. 1        10,000 @ $5                          10,000\nMarch 1        6,000 @ $6                           16,000\nMay 1                                 3,000        13,000\nJuly 1      8,000 @ $6.25                          21,000\nSept. 1                                12,000       9,000\nNov. 1        5,000 @ $7                           14,000\nDec. 1                                2,000        12,000\nIf the company uses the first-in-first-out (FIFO) method of\ninventory valuation, its ending inventory balance (rounded) will\nbe",
+    "choices": [
+      "$62,000",
+      "$70,759",
+      "$78,750",
+      "$84,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The first-in-first-out (FIFO) method treats the oldest units as\nbeing sold first and the newest units remain in inventory.\nBecause the company has 12,000 units remaining, ending\ninventory equals $78,750 [(5,000 × $7) + (7,000 × $6.25)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 8,
+    "page": 267,
+    "topicId": "su2-cost-flow",
+    "stem": "Which of the following changes in accounting policies resulting\nfrom a significant change in the expected pattern of economic\nbenefit will increase profit?",
+    "choices": [
+      "A change from FIFO to LIFO inventory valuation when costs\nare rising.",
+      "A change from FIFO to weighted-average inventory valuation\nwhen costs are falling.",
+      "A change from accelerated to straight-line depreciation in the\nlater years of the depreciable lives of the assets.",
+      "A change from straight-line to accelerated depreciation in the\nearly years of the depreciable lives of the assets."
+    ],
+    "answerIndex": 1,
+    "explanation": "In a period of falling costs, FIFO results in higher cost of\ngoods sold than the weighted-average method. FIFO includes\nthe higher, earlier costs in cost of goods sold, and the\nweighted-average method averages the later, lower costs with\nthe higher, earlier costs. Thus, a change from FIFO to\nweighted-average costing reduces cost of goods sold and\nincreases reported profit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 9,
+    "page": 268,
+    "topicId": "su2-cost-flow",
+    "stem": "On January 1, a company has no opening inventory balance.\nThe following purchases are made during the year:\nUnits         Unit\nPurchased       Cost\nJanuary 1       5,000          $10.00\nApril 1      5,000           9.00\nJuly 1       5,000           8.00\nOctober 1       5,000           7.50\nThere are 10,000 units in inventory on December 31.\nIf the company uses the last-in, first-out (LIFO) method of\ninventory valuation, cost of goods sold for the year will be:",
+    "choices": [
+      "$77,500",
+      "$86,250",
+      "$87,500",
+      "$95,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "A total of 20,000 units was available for sale (0 beginning\ninventory + 20,000 purchased during year). Because 10,000\nremain in ending inventory, 10,000 were sold\n(20,000 available – 10,000 remaining). Under the LIFO\nmethod, the units sold were those purchased in July and\nOctober. Cost of goods sold for the year thus equaled $77,500\n[(5,000 units × $8.00 July) + (5,000 units × $7.50 October)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 10,
+    "page": 269,
+    "topicId": "su2-cost-flow",
+    "stem": "The advantage of the last-in, first-out inventory method is\nbased on the assumption that",
+    "choices": [
+      "The most recently incurred costs should be allocated to the\ncost of goods sold.",
+      "Costs should be charged to revenue in the order in which they\nare incurred.",
+      "Costs should be charged to cost of goods sold at average\ncost.",
+      "Current costs should be based on representative or normal\nconditions of efficiency and volume of operations."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the LIFO method, the most recent costs of acquiring or\nproducing inventory are expensed as part of cost of goods\nsold. Given inflation, this method results in the highest cost of\ngoods.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 11,
+    "page": 270,
+    "topicId": "su2-cost-flow",
+    "stem": "Which inventory cost flow method is prohibited according to\nIFRS?",
+    "choices": [
+      "First-in, first-out (FIFO) method.",
+      "Specific identification method.",
+      "Weighted average cost method.",
+      "Last-in, first-out (LIFO) method."
+    ],
+    "answerIndex": 3,
+    "explanation": "The last-in, first-out (LIFO) method is prohibited by IFRS. This\nmethod is based on the assumption that the newest items are\nsold first. Its effect is to include current prices in cost of goods\nsold. But the LIFO assumption ordinarily does not match\nactual inventory use.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 12,
+    "page": 270,
+    "topicId": "su2-cost-flow",
+    "stem": "In a period of rising prices, which one of the following inventory\nmethods usually provides the best matching of expenses\nagainst revenues?",
+    "choices": [
+      "Weighted average.",
+      "First-in, first-out.",
+      "Last-in, first-out.",
+      "Specific identification."
+    ],
+    "answerIndex": 2,
+    "explanation": "A significant advantage of the LIFO method is its matching of\ncurrent revenues with the most recent product costs. When\nprices are rising (which is most of the time), the most recent\ncosts are the highest costs, resulting in higher cost of goods\nsold and lower net income. The lower net income means lower\ntaxes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 13,
+    "page": 271,
+    "topicId": "su2-cost-flow",
+    "stem": "In periods of rising costs, which one of the following inventory\ncost flow assumptions will result in higher cost of sales?",
+    "choices": [
+      "First-in, first-out.",
+      "Last-in, first-out.",
+      "Weighted average.",
+      "Moving average."
+    ],
+    "answerIndex": 1,
+    "explanation": "A significant advantage of the LIFO method is its matching of\ncurrent revenues with the most recent product costs. When\nprices are rising (which is most of the time), the most recent\ncosts are the highest costs, resulting in higher cost of goods\nsold and lower net income. The lower net income means lower\ntaxes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 14,
+    "page": 272,
+    "topicId": "su2-cost-flow",
+    "stem": "An entity has 8,000 units in inventory on January 1, valued at\n$10 per unit. During the year, the entity sold 25,000 units and\npurchased inventory as follows:\nQuantity\nDate          Purchased       Unit Price\nApril 1      15,000 units        $8\nJuly 1      10,000 units          9\nOctober 1      12,500 units         10\nIf the entity uses the weighted-average method of inventory\nvaluation, cost of goods sold for the period will be",
+    "choices": [
+      "$186,978",
+      "$197,000",
+      "$228,023",
+      "$235,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the weighted-average method, the weighted-average\ncost per unit is multiplied by the number of units sold to\ndetermine the cost of goods sold for the period. The total units\navailable for sale equaled 45,500 (8,000 + 15,000 + 10,000 +\n12,500). The total cost of all units available for sale was\n$415,000 [(8,000 × $10) + (15,000 × $8) + (10,000 × $9) +\n(12,500 × $10)]. Thus, the weighted-average cost per unit of\ninventory was $9.1209 ($415,000 ÷ 45,500), and cost of goods\nsold was $228,023 (25,000 × $9.1209).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 15,
+    "page": 273,
+    "topicId": "su2-cost-flow",
+    "stem": "Which inventory pricing method generally approximates\ncurrent cost for each of the following?\nEnding           Cost of\nInventory       Goods Sold",
+    "choices": [
+      "FIFO FIFO",
+      "LIFO FIFO",
+      "FIFO LIFO",
+      "LIFO LIFO"
+    ],
+    "answerIndex": 2,
+    "explanation": "FIFO assigns the most recent acquisition costs to ending\ninventory and the earliest acquisition costs to cost of goods\nsold. LIFO assigns the earliest acquisition costs to ending\ninventory (it is permitted by U.S. GAAP but not by IFRS).\nThus, FIFO approximates current cost for ending inventory,\nand LIFO approximates current cost of goods sold.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 16,
+    "page": 274,
+    "topicId": "su2-cost-flow",
+    "stem": "Which one of the following actions would result in a decrease\nin income?",
+    "choices": [
+      "Liquidating last-in, first-out layers of inventory when prices\nhave been increasing.",
+      "Changing from first-in, first-out to last-in, first-out inventory\nmethod when prices are decreasing.",
+      "Accelerating purchases at the end of the year when using last-\nin, first-out inventory method in times of rising prices.",
+      "Changing the number of last-in, first-out pools."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the LIFO method, the most recent costs of acquiring or\nproducing inventory are expensed as part of cost of goods\nsold. In a time of rising prices, charging newer, higher-priced\ngoods against current revenues decreases income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 17,
+    "page": 274,
+    "topicId": "su2-cost-flow",
+    "stem": "A retailer sells antique replica trunks to customers all over the\nworld. The retailer’s inventory records show the following:\nQuantity      Cost\n(units)     (each)\nBeginning inventory         200        $1,055\nPurchases:\nJune 3                   170          1,062\nSeptember 18             190          1,070\nDecember 10              160          1,076\nThe retailer sells 470 units this year. Management is\nresearching whether the company should use last in, first out\n(LIFO) or first in, first out (FIFO). If the retailer’s management\nwants to lower the company’s income taxes, which inventory\ncost flow assumption should it select?",
+    "choices": [
+      "FIFO, because the cost of goods sold will be $9,870 higher\nthan LIFO.",
+      "FIFO, because the operating income will be $840 lower than\nLIFO.",
+      "LIFO, because the operating income will be $4,360 lower than\nFIFO.",
+      "LIFO, because the cost of goods sold will be $5,250 higher\nthan FIFO."
+    ],
+    "answerIndex": 2,
+    "explanation": "The FIFO method assumes that the first goods purchased are\nthe first goods sold and that ending inventory consists of the\nlatest purchases. Thus, the cost of goods sold under FIFO is\n$498,540 [(200 units × $1,055) + (170 units × $1,062) +\n(100 units × $1,070)]. Under the LIFO method, the most recent\ncosts of acquiring or producing inventory are expensed as part\nof cost of goods sold. Thus, the cost of goods sold under LIFO\nis $502,900 [(160 units × $1,076) + (190 units × $1,070) +\n(120 units × $1,062)]. In order to lower tax income, the\ncompany should use the LIFO method because the cost of\ngoods sold under LIFO is more than the cost of goods sold\nunder FIFO. Therefore, the operating income under LIFO is\n$4,360 ($502,900 – $498,540) lower than the operating\nincome under FIFO.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 18,
+    "page": 276,
+    "topicId": "su2-cost-flow",
+    "stem": "Flex Co. uses a periodic inventory system. The following are\ninventory transactions for the month of January:\n1/1 Beginning inventory 10,000 units at $3\n1/5 Purchase               5,000 units at $4\n1/15 Purchase              5,000 units at $5\n1/20 Sales at $10 per unit 10,000 units\nFlex uses the average pricing method to determine the value\nof its inventory. What amount should Flex report as cost of\ngoods sold on its income statement for the month of January?",
+    "choices": [
+      "$30,000",
+      "$37,500",
+      "$40,000",
+      "$100,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The total cost of beginning inventory and purchases is\n$75,000 ($30,000 + $20,000 + $25,000), and the total number\nunits of beginning inventory and purchases is 20,000. The\naverage price of the beginning inventory and purchases is\n$3.75 ($75,000 cost ÷ 20,000 units). The total cost of goods\nsold equals $37,500 (10,000 units sold × $3.75).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 19,
+    "page": 278,
+    "topicId": "su2-cost-flow",
+    "stem": "During January, Metro Co., which maintains a\nperpetual inventory system, recorded the following information\npertaining to its inventory:\nUnit       Total           Units On\nUnits         Cost       Cost             Hand\nBalance       1,000       $1          $1,000           1,000\non 1/1\nPurchase        600        3           1,800           1,600\nd on 1/7\nSold on         900                                      700\n1/20\nPurchase        400        5           2,000           1,100\nd on 1/25\nUnder the moving-average method, what amount should Metro\nreport as inventory at January 31?",
+    "choices": [
+      "$2,640",
+      "$3,225",
+      "$3,300",
+      "$3,900"
+    ],
+    "answerIndex": 1,
+    "explanation": "The moving-average system is only applicable to perpetual\ninventories. It requires that a new weighted average be\ncomputed after every purchase. This moving average is based\non remaining inventory held and the new inventory purchased.\nBased on the calculations below, the moving-average cost per\nunit for the 1/20 sale is $1.75, and the cost of goods sold\n(COGS) for January is $1,575 (900 units sold × $1.75). Thus,\nending inventory is $3,225 ($1,000 beginning balance +\n$1,800 purchase on 1/7 – $1,575 COGS on 1/20 + $2,000\npurchase on 1/25).\nMoving-Average\nUnits        Cost/Unit     Total Cost\nBalance 1/1 1,000           $1.00          $1,000\nPurchase 1/7    600           3.00          1,800\n1,600           $1.75            $2,800",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 20,
+    "page": 279,
+    "topicId": "su2-cost-flow",
+    "stem": "The weighted average for the year inventory cost flow method\nis applicable to which of the following inventory systems?\nPeriodic Perpetual",
+    "choices": [
+      "Yes Yes",
+      "Yes No",
+      "No Yes",
+      "No No"
+    ],
+    "answerIndex": 1,
+    "explanation": "The weighted-average method determines an average cost\nonly once (at the end of the period) and is therefore applicable\nonly to a periodic system. In contrast, the moving-average\nmethod requires determination of a new weighted-average\ncost after each purchase and thus applies only to a perpetual\nsystem.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 21,
+    "page": 280,
+    "topicId": "su2-cost-flow",
+    "stem": "On December 1, a company had 1,000 units in inventory\nvalued at $787,500. On December 12, the company\npurchased 2,000 units for $1,562,400. Sales of 2,400 units\nwere made on December 23, and on December 30, the\ncompany purchased another 2,000 units for $1,537,200. If the\ncompany uses a periodic system and the weighted-average\ninventory valuation method, the company’s December 31\nbalance sheet would report inventory of",
+    "choices": [
+      "$2,025,660",
+      "$2,021,292",
+      "$2,014,740",
+      "$2,007,180"
+    ],
+    "answerIndex": 1,
+    "explanation": "Using a periodic inventory system, the ending value is not\naffected by when the sales and purchases of units occurred.\nThe company had 5,000 units available during the period\n(1,000 on December 1, 2,000 on December 12, and 2,000 on\nDecember 30). The total cost of these 5,000 units was\n$3,887,100 ($787,500 + $1,562,400 + 1,537,200), or $777.42\nper unit ($3,887,100 ÷ 5,000 units). Since 2,400 units were\nsold, the ending inventory would be $2,021,292 (2,600 units ×\n$777.42 per unit).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 22,
+    "page": 281,
+    "topicId": "su2-cost-flow",
+    "stem": "During inflationary periods, last-in, first-out inventory\naccounting will generally have a",
+    "choices": [
+      "Lower cost of goods sold and lower inventory value.",
+      "Lower cost of goods sold and higher inventory value.",
+      "Higher cost of goods sold and higher inventory value.",
+      "Higher cost of goods sold and lower inventory value."
+    ],
+    "answerIndex": 3,
+    "explanation": "During periods of inflation, the cost of inventory\npurchased/produced throughout the period increases.\nBecause last-in, first-out (LIFO) inventory accounting uses the\nmost recent inventory costs for cost of goods sold, the cost of\ngoods sold reported is generally higher than cost of goods\nsold under a different inventory accounting method. Because\nthe higher inventory costs are assigned to cost of goods sold,\nthe cheaper inventory costs from the beginning of the period\nare assigned to ending inventory. This results in a lower\nending inventory valuation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 23,
+    "page": 283,
+    "topicId": "su2-cost-flow",
+    "stem": "Toulouse Co. began the month of November with\n150 baubles on hand at a cost of $4.00 each. These baubles sell for\n$7.00 each. The following schedule presents the sales and purchases\nof this item during the month of November.\nPurchases\nDate of          Quantity      Unit   Units\nTransaction         Received     Cost     Sold\nNovember 5                                100\nNovember 7            200        $4.20\nNovember 9                                150\nNovember 11           200         4.40\nNovember 17                               220\nNovember 22           250         4.80\nNovember 29                               100\nIf Toulouse uses perpetual LIFO inventory pricing, the\ninventory at November 30 will be",
+    "choices": [
+      "$936",
+      "$1,012",
+      "$1,046",
+      "$1,076"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under perpetual LIFO, the inventory valuation is recalculated\nas follows after every purchase and sale. The 230 units in\nending inventory consist of 150 units at $4.80 each, 30 units at\n$4.20 each, and 50 units from the beginning inventory at\n$4.00 each.\nEnding\nDate          Receipts               Sales          Inventory\n11-1     150 × $4.00 = $600                        $ 600.00\n11-5                          100 × $4.00 =          200.00\n$400\n11-7     200 × $4.20 = $840                         1,040.00\n11-9                          150 × $4.20 =           410.00\n$630\n11-11 200 × $4.40 = $880                            1,290.00\n11-17                         200 × $4.40 =\n$880\n20 × $4.20 = $84      326.00\n11-22 250 × $4.80 =                                1,526.00\n$1,200\n11-29                         100 × $4.80 =        1,046.00\n$480",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 24,
+    "page": 284,
+    "topicId": "su2-cost-flow",
+    "stem": "Toulouse Co. began the month of November with\n150 baubles on hand at a cost of $4.00 each. These baubles sell for\n$7.00 each. The following schedule presents the sales and purchases\nof this item during the month of November.\nPurchases\nDate of          Quantity      Unit   Units\nTransaction         Received     Cost     Sold\nNovember 5                                100\nNovember 7            200        $4.20\nNovember 9                                150\nNovember 11           200         4.40\nNovember 17                               220\nNovember 22           250         4.80\nNovember 29                               100\nIf Toulouse uses FIFO inventory pricing, the inventory on\nNovember 30 will be",
+    "choices": [
+      "$936",
+      "$1,012",
+      "$1,046",
+      "$1,104"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under FIFO, the ending inventory consists of the most recent\ninventory purchased. The beginning inventory included 150\nunits and purchases totaled 650 units, a total of 800 units.\nSales equaled 570 units (100 + 150 + 220 + 100). Thus,\nending inventory was 230 units (800 – 570). Under FIFO,\nthese units are valued at the cost of the most recent 230 units\npurchased, or $4.80. Ending inventory is therefore $1,104\n(230 × $4.80).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 25,
+    "page": 285,
+    "topicId": "su2-cost-flow",
+    "stem": "Toulouse Co. began the month of November with\n150 baubles on hand at a cost of $4.00 each. These baubles sell for\n$7.00 each. The following schedule presents the sales and purchases\nof this item during the month of November.\nPurchases\nDate of          Quantity      Unit   Units\nTransaction         Received     Cost     Sold\nNovember 5                                100\nNovember 7            200        $4.20\nNovember 9                                150\nNovember 11           200         4.40\nNovember 17                               220\nNovember 22           250         4.80\nNovember 29                               100\nIf Toulouse uses perpetual moving-average inventory pricing,\nthe sale of 220 items on November 17 will be recorded at a\nunit cost of",
+    "choices": [
+      "$4.00",
+      "$4.16",
+      "$4.20",
+      "$4.32"
+    ],
+    "answerIndex": 3,
+    "explanation": "The beginning inventory consisted of 150 units at $4.00 each.\nFollowing the November 5 sale, the inventory valuation was\n$200 (50 units × $4). The November 7 purchase added\n200 units at $4.20, after which the moving average unit cost\nwas $4.16 {[$200 + (200 units × $4.20)] ÷ (50 units +\n200 units)}. The November 9 sale of 150 units left 100 units at\n$4.16. Adding $416 (100 units × $4.16) to the $880 purchase\non November 11 brought the total inventory to 300 units with a\ntotal cost of $1,296, or $4.32 each. Thus, $4.32 was the unit\ncost of items sold on November 17.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 26,
+    "page": 286,
+    "topicId": "su2-cost-flow",
+    "stem": "Toulouse Co. began the month of November with\n150 baubles on hand at a cost of $4.00 each. These baubles sell for\n$7.00 each. The following schedule presents the sales and purchases\nof this item during the month of November.\nPurchases\nDate of          Quantity      Unit   Units\nTransaction         Received     Cost     Sold\nNovember 5                                100\nNovember 7            200        $4.20\nNovember 9                                150\nNovember 11           200         4.40\nNovember 17                               220\nNovember 22           250         4.80\nNovember 29                               100\nIf Toulouse uses weighted-average inventory pricing, the gross\nprofit for November will be",
+    "choices": [
+      "$1,046",
+      "$1,482",
+      "$1,516",
+      "$1,528"
+    ],
+    "answerIndex": 1,
+    "explanation": "The total goods available for sale is determined as follows:\nBeginning inventory 150 × $4.00 = $ 600.00\nNov. 7 purchase      200 × $4.20 =        840.00\nNov. 11 purchase 200 × $4.40 =            880.00\nNov. 22 purchase 250 × $4.80 = 1,200.00\nTotal available    800             $3,520.00\nThe weighted-average unit cost is $4.40 ($3,520 ÷ 800 units\navailable). The cost of goods sold and total sales are therefore\n$2,508 (570 units sold × $4.40) and $3,990 (570 units × $7),\nrespectively. Consequently, gross profit is $1,482 ($3,990 –\n$2,508).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 27,
+    "page": 287,
+    "topicId": "su2-cost-flow",
+    "stem": "Toulouse Co. began the month of November with\n150 baubles on hand at a cost of $4.00 each. These baubles sell for\n$7.00 each. The following schedule presents the sales and purchases\nof this item during the month of November.\nPurchases\nDate of          Quantity      Unit   Units\nTransaction         Received     Cost     Sold\nNovember 5                                100\nNovember 7            200        $4.20\nNovember 9                                150\nNovember 11           200         4.40\nNovember 17                               220\nNovember 22           250         4.80\nNovember 29                               100\nIf Toulouse uses periodic LIFO inventory pricing, the cost of\ngoods sold for November will be",
+    "choices": [
+      "$2,416",
+      "$2,444",
+      "$2,474",
+      "$2,584"
+    ],
+    "answerIndex": 3,
+    "explanation": "The goods available for sale are as follows:\nBeginning inventory 150 × $4.00 = $ 600.00\nNov. 7 purchase      200 × $4.20 =        840.00\nNov. 11 purchase     200 × $4.40 =        880.00\nNov. 22 purchase     250 × $4.80 = 1,200.00\nTotal available     800             $3,520.00\nThe ending inventory consists of 230 units. Under periodic\nLIFO, these are costed at the prices paid for the earliest\n230 units purchased, or 150 units at $4.00 and 80 units at\n$4.20, a total of $936. Accordingly, cost of goods sold is\n$2,584 ($3,520 goods available – $936 EI).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 28,
+    "page": 288,
+    "topicId": "su2-cost-flow",
+    "stem": "Sackett Corporation had a beginning inventory of 10,000 units,\nwhich were purchased in the prior year as follows:\nUnits Unit Price\nSeptember 4,000 $2.00\nOctober     4,000 $2.10\nDecember 2,000 $2.30\nIn the current year, Sackett purchases an additional 12,000\nunits (7,000 in June at $2.50 and 5,000 in November at $2.70)\nand sells 16,000 units. Using the FIFO method, what is\nSackett’s ending inventory?",
+    "choices": [
+      "$12,200 (4,000 @ $2.00 and 2,000 @ $2.10)",
+      "$13,000 (4,000 @ $2.10 and 2,000 @ $2.30)",
+      "$15,600 (6,000 @ $2.60 – average of $2.50 and $2.70)",
+      "$16,000 (5,000 @ $2.70 and 1,000 @ $2.50)"
+    ],
+    "answerIndex": 3,
+    "explanation": "Under FIFO, the first goods purchased are assumed to be the\nfirst sold. Using FIFO, all of the 10,000 units of inventory in\nbeginning inventory were sold and 6,000 (16,000 sold –\n10,000 beginning inventory) of the units purchased in June for\n$2.50 each were sold. This leaves in ending inventory 1,000\nunits purchased in June for $2.50 each and all 5,000 units\npurchased in November for $2.70 each.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 29,
+    "page": 289,
+    "topicId": "su2-cost-flow",
+    "stem": "The LIFO inventory cost flow method may be applied to which\nof the following inventory systems?\nPeriodic      Perpetual",
+    "choices": [
+      "No         No",
+      "No         Yes",
+      "Yes         Yes",
+      "Yes        No"
+    ],
+    "answerIndex": 2,
+    "explanation": "In a periodic system, a purchases account is used, and the\nbeginning inventory remains unchanged during the accounting\nperiod. Cost of goods sold is determined at year-end. It is the\ndifference between the goods available for sale (Beginning\ninventory + Purchases) and ending inventory.\nIn a perpetual system, purchases are directly recorded in the\ninventory account. Cost of goods sold is determined as the\ngoods are sold. LIFO may be applied to both a periodic and a\nperpetual system, but the amount of cost of goods sold may\nvary with the system chosen.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 30,
+    "page": 290,
+    "topicId": "su2-cost-flow",
+    "stem": "During periods of rising prices, a perpetual inventory system\nwould result in the same dollar amount of ending inventory as\na periodic inventory system under which of the following\ninventory cost flow methods?\nFIFO        LIFO",
+    "choices": [
+      "Yes      No",
+      "Yes      Yes",
+      "No       Yes",
+      "No       No"
+    ],
+    "answerIndex": 0,
+    "explanation": "Under a FIFO cost flow, ending inventory and cost of goods\nsold are the same regardless of whether a perpetual or\nperiodic system is used. Under a LIFO cost flow, on the other\nhand, a perpetual inventory system will generate dollar\namounts different from those of a periodic inventory system.\nDuring a time of rising prices, goods sold and ending inventory\nwill consist of units bearing different costs. The periodic\nsystem determines the cost of sales only at year end. The\nperpetual system determines cost of sales as the sale takes\nplace. Thus, the perpetual system assumes that layers of\ninventory may be liquidated during a year even though\ninventory quantities are restored by later purchases. The\nperiodic system does not make this assumption.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 31,
+    "page": 291,
+    "topicId": "su2-cost-flow",
+    "stem": "A company had 2,000 units of opening inventory that cost $20\nper unit. On May 1, 2,000 units were purchased at a cost of\n$22 each, and on September 1, another 2,000 units were\npurchased at a cost of $24 each. If 4,000 units were sold\nduring the year, the company will report cost of goods sold of\n<List A> if the <List B> method of inventory valuation is used.\nList A              List B",
+    "choices": [
+      "$88,000              LIFO",
+      "$92,000         Weighted-average",
+      "$84,000              FIFO",
+      "$88,000              FIFO"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under FIFO, the first items purchased are presumed to be the\nfirst sold. Furthermore, under FIFO, perpetual and periodic\nsystems produce the same ending inventory and cost of\ngoods sold. If 6,000 units were available and 4,000 units were\nsold, FIFO cost of goods sold equals $84,000 [(2,000 × $20)\nBI + (2,000 × $22) May 1 purchase].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 32,
+    "page": 292,
+    "topicId": "su2-cost-flow",
+    "stem": "Generally, which inventory costing method most closely\napproximates the current cost for each of the following?\nCost of Goods Sold Ending Inventory",
+    "choices": [
+      "LIFO               FIFO",
+      "LIFO               LIFO",
+      "FIFO               FIFO",
+      "FIFO               LIFO"
+    ],
+    "answerIndex": 0,
+    "explanation": "The LIFO basis assumes that the most recently purchased\nitems are the first to be sold. Thus, LIFO is a better\napproximation of current cost of goods sold than FIFO.\nAssuming that turnover is rapid and material amounts of\ndepreciation are not allocated to inventory, LIFO cost of goods\nsold may be an acceptable alternative to cost of goods sold\nmeasured at current cost. However, the effect of any LIFO\ninventory liquidations (decreases in earlier years’ LIFO layers)\nmust be excluded. Nevertheless, the FIFO basis more closely\napproximates the current cost of ending inventory because it\nassumes the most recent purchases are the last to be sold.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 33,
+    "page": 293,
+    "topicId": "su2-cost-flow",
+    "stem": "The Hastings Company began operations on January 1, Year\n1, and uses the FIFO method in costing its raw material\ninventory. Management is contemplating a change to the LIFO\nmethod and is interested in determining what effect such a\nchange will have on net income. Accordingly, the following\ninformation has been developed:\nFinal Inventory         Year 1       Year 2\nFIFO               $240,000 $270,000\nLIFO                 200,000      210,000\nNet income per FIFO $120,000 $170,000\nBased upon the above information, a change to the LIFO\nmethod in Year 2 results in net income for Year 2 of",
+    "choices": [
+      "$110,000",
+      "$150,000",
+      "$170,000",
+      "$230,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "A change in accounting principle requires retrospective\napplication. All periods reported must be individually adjusted\nfor the period-specific effects of applying the new principle.\nThe difference in income in the second year is equal to the\n$20,000 difference between the FIFO inventory change and\nthe LIFO inventory change (FIFO: $270,000 – $240,000 =\n$30,000 change; LIFO: $210,000 – $200,000 =\n$10,000 change; $30,000 – $10,000 = $20,000 difference).\nThe $170,000 FIFO net income will decrease by $20,000. Net\nLIFO income will therefore be $150,000 ($170,000 – $20,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 34,
+    "page": 294,
+    "topicId": "su2-cost-flow",
+    "stem": "Beck Co.’s inventory is as follows:\nBeginning inventory 10 trees at $ 50\nMarch 4 purchased 6 trees at 55\nMarch 12 sold         8 trees at 100\nMarch 20 purchased 9 trees at 60\nMarch 27 sold         7 trees at 105\nMarch 30 purchased 4 trees at 65\nWhat was Beck’s cost of goods sold using the last-in, first-out\n(LIFO) perpetual method?",
+    "choices": [
+      "$910",
+      "$850",
+      "$808",
+      "$775"
+    ],
+    "answerIndex": 1,
+    "explanation": "LIFO assumes that the newest items of inventory are sold first.\nThus, the items remaining in inventory are recognized as if\nthey were the oldest. In a perpetual system, purchases are\ndirectly recorded in inventory. Cost of goods sold is calculated\nwhen a sale occurs and consists of the latest purchases. The\ncost of goods sold on the sale on (1) March 12 is $430 [(6 ×\n$55) + (2 × $50)] and (2) March 27 is $420 (7 × $60). The total\ncost of goods sold is $850 ($430 + $420).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 35,
+    "page": 295,
+    "topicId": "su2-cost-flow",
+    "stem": "Cobb, Inc.’s inventory at May 1 consisted of 200 units at a total\ncost of $1,250. Cobb uses the periodic inventory method.\nPurchases for the month were as follows:\nDate No. of Units Unit cost Total Cost\nMay 4       20        $5.80 $116.00\nMay 17      80        $5.50 $440.00\nCobb sold 10 units on May 14 for $120. What is Cobb’s\nweighted average cost of goods sold for May?",
+    "choices": [
+      "$60.20",
+      "$62.10",
+      "$62.50",
+      "$65.00"
+    ],
+    "answerIndex": 0,
+    "explanation": "The weighted-average method is used under the periodic\ninventory method. The average cost is determined only at the\nend of the period. The weighted-average cost per unit is used\nto determine the ending inventory and the cost of goods sold\nfor the period. It is calculated as follows: [(Cost of beginning\ninventory + Cost of purchases during the period) ÷ (Units in\nbeginning inventory + Units purchased during the period)].\nTherefore, the weighted-average cost per unit for May is $6.02\n[($1,250 + $116 + $440) ÷ (200 + 20 + 80)]. Cobb’s weighted-\naverage cost of goods sold for May is $60.20 ($6.02 per unit ×\n10 units sold).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 36,
+    "page": 296,
+    "topicId": "su2-cost-flow",
+    "stem": "Ultra Co. uses a periodic inventory system. The following are\ninventory transactions for the month of January:\n1/1 Beginning inventory 20,000 units at $13\n1/20 Purchase              30,000 units at $15\n1/23 Purchase              40,000 units at $17\n1/31 Sales at $20 per unit 50,000 units\nUltra uses the LIFO method to determine the value of its\ninventory. What amount should Ultra report as cost of goods\nsold on its income statement for the month of January?",
+    "choices": [
+      "$710,000",
+      "$750,000",
+      "$830,000",
+      "$1,000,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "In a periodic system, cost of goods sold and ending inventory\nare determined only at the end of the period. Under last-in,\nfirst-out (LIFO) in a periodic system, the 50,000 units sold\nconsists of the 40,000 units purchased on 1/23 at $17 per unit\nand the 10,000 units purchased on 1/20 at $15 per unit. The\ncost of goods sold on the company’s income statement for the\nmonth of January is $830,000 [(40,000 × $17) + (10,000 ×\n$15)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 3,
+    "number": 37,
+    "page": 297,
+    "topicId": "su2-cost-flow",
+    "stem": "Carver Co., a retailer, uses the perpetual inventory method.\nCarver uses the moving-average method to determine the\nvalue of its inventory. The following information relates to\ninventory transactions that took place during the month of\nMarch:\n3/1 Beginning inventory 30,000 units at $10\n3/5 Purchase               10,000 units at $12\n3/10 Sales at $20 per unit 20,000 units\n3/20 Purchase            20,000 units at $13\nWhat amount should Carver report as cost of goods sold on its\nincome statement at the end of March?",
+    "choices": [
+      "$200,000",
+      "$210,000",
+      "$240,000",
+      "$260,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The moving-average method requires the determination of a\nnew weighted-average cost after each purchase and thus is\nused only in a perpetual system. Since the only sale in March\nwas on 3/10, the cost of goods sold is $210,000 (20,000 units\nsold × $10.50).\nCost per           Inventory Total\nUnits           Unit              Balance\nBeg. balance 30,000           $10.00            $300,000\n3/1\nPurchase 3/5 10,000           12.00              120,000\n40,000       $10.50            $420,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 1,
+    "page": 299,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "In accounting for inventories, generally accepted accounting\nprinciples require departure from the historical cost principle\nwhen the utility of inventory has fallen below cost. Under the\n“lower-of-cost-or-market” rule, the term “market” means",
+    "choices": [
+      "Original cost minus allowance for obsolescence.",
+      "Original cost plus normal profit margin.",
+      "Replacement cost of the inventory.",
+      "Original cost minus cost to dispose."
+    ],
+    "answerIndex": 2,
+    "explanation": "Market is the replacement cost of the inventory as determined\nin the market in which the entity buys its inventory, not the\nmarket in which it sells to customers. It is limited to a ceiling\namount equal to net realizable value and a floor amount equal\nto net realizable value minus a normal profit margin.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 2,
+    "page": 300,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "The following data apply to a unit of inventory:\nSelling price         $22\nSelling cost            2\nNormal profit margin 5\nReplacement cost       10\nUsing the lower-of-cost-or-market (LCM) method of measuring\ninventory, what is the market amount for this unit of inventory?",
+    "choices": [
+      "$10.00",
+      "$15.00",
+      "$17.50",
+      "$20.00"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the LCM method, market is current replacement cost\nsubject to a maximum (ceiling) equal to net realizable value\nand a minimum (floor) equal to net realizable value minus a\nnormal profit margin. NRV equals selling price minus costs of\ncompletion and disposal. Thus, the maximum market amount\nis the $20 NRV ($22 selling price – $2 selling cost), and the\nminimum is $15 ($20 NRV – $5 normal profit margin).\nBecause the minimum exceeds the $10 replacement cost, it is\nthe market amount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 3,
+    "page": 301,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A distribution company has determined its December 31\ninventory on a LIFO basis at $200,000. Information pertaining\nto that inventory follows:\nEstimated selling price           $204,000\nEstimated cost of disposal        10,000\nNormal profit margin              30,000\nCurrent replacement cost          180,000\nThe company records losses that result from applying the\nlower-of-cost-or-market rule. At December 31, the loss that the\ncompany should recognize is",
+    "choices": [
+      "$0",
+      "$6,000",
+      "$14,000",
+      "$20,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM). As\nindicated below, the $180,000 replacement cost falls between\nthe $194,000 ceiling and the $164,000 floor. Thus, it will be\nused as market in the LCM determination. Because the\n$180,000 market value is $20,000 lower than the $200,000\nhistorical cost, the inventory should be valued at $180,000 and\na $20,000 loss recognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 4,
+    "page": 303,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Stockholm Co. accounts for its inventory using the first\nin, first out (FIFO) method. The data below concern items in\nStockholm Co.’s inventory.\nPer Unit       Gear Stuff Wicket\ns\nHistorical cost       $190.0 $106.0 $53.00\n0       0\nSelling price         217.00 145.00 73.75\nCost to complete and 19.00 8.00 2.50\nsell\nCurrent replacement      203.00 105.00 51.00\ncost\nNormal profit margin     32.00 29.00 21.25\nUnder IFRS, what amount should Stockholm Co. compare with\nhistorical cost to measure the amount at which the wickets\nshould be measured?",
+    "choices": [
+      "$51.00",
+      "$50.00",
+      "$71.25",
+      "$73.75"
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory is recorded at cost. However, inventory must be\nwritten down if its utility is no longer as great as its cost. To\nmake this determination under IFRS, historical cost is\ncompared with the inventory’s net realizable value (NRV).\nNRV is the estimated selling price in the ordinary course of\nbusiness minus estimated costs of completion and sale. NRV\nfor the wickets is $71.25 ($73.75 selling price – $2.50\nestimated costs of completion and sale).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 5,
+    "page": 304,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "An entity that prepares its financial statements using IFRS\nreported the following selected per-unit data relating to work-\nin-process:\nSelling price        $100\nCompletion costs        10\nHistorical cost         91\nReplacement cost 108\nNormal gross profit 20\nSelling cost              5\nIn comparison with historical cost, what will be the per-unit\neffect on gross profit of measuring ending inventory?",
+    "choices": [
+      "No effect.",
+      "Reduction of $6.",
+      "Reduction of $26.",
+      "Increase of $5."
+    ],
+    "answerIndex": 1,
+    "explanation": "Under IFRS, inventories are measured subsequent to\nacquisition at the lower of cost or net realizable value (NRV).\nNRV equals selling price minus estimated completion and\nselling costs. Given that historical cost is $91 and NRV is $85\n($100 selling price – $10 completion cost – $5 selling cost),\nthe effect on per-unit gross profit is a reduction of $6. This\namount is expensed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 6,
+    "page": 305,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Based on a physical inventory taken on December 31, a\ncompany determined its chocolate inventory on a LIFO basis\nat $26,000 with a replacement cost of $20,000. The company\nestimated that, after further processing costs of $12,000, the\nchocolate could be sold as finished candy bars for $40,000.\nThe company’s normal profit margin is 10% of sales. Under\nthe lower-of-cost-or-market rule, what amount should the\ncompany report as chocolate inventory in its December 31\nbalance sheet?",
+    "choices": [
+      "$28,000",
+      "$26,000",
+      "$24,000",
+      "$20,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Market equals current replacement cost subject to maximum\nand minimum values. The maximum is NRV, and the minimum\nis NRV minus normal profit. When replacement cost is within\nthis range, it is used as market. Cost is given as $26,000.\nNRV is $28,000 ($40,000 selling price – $12,000 additional\nprocessing costs), and NRV minus a normal profit equals\n$24,000 [$28,000 – ($40,000 × 10%)]. Because the lowest\namount in the range ($24,000) exceeds replacement cost\n($20,000), it is used as market. Because market value\n($24,000) is less than cost ($26,000), it is also the inventory\namount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 7,
+    "page": 306,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Under the lower-of-cost-or-market method, the replacement\ncost of an inventory item would be used as the designated\nmarket value",
+    "choices": [
+      "When it is below the net realizable value less the normal profit\nmargin.",
+      "When it is below the net realizable value and above the net\nrealizable value less the normal profit margin.",
+      "When it is above the net realizable value.",
+      "Regardless of net realizable value."
+    ],
+    "answerIndex": 1,
+    "explanation": "Market is current replacement cost subject to maximum and\nminimum values. The maximum is net realizable value, and\nthe minimum is net realizable value less normal profit. When\nreplacement cost is within this range, it is used as the market\namount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 8,
+    "page": 307,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "The replacement cost of an inventory item is below the net\nrealizable value and above the net realizable value less the\nnormal profit margin. The original cost of the inventory item is\nbelow the net realizable value less the normal profit margin.\nUnder the lower-of-cost-or-market (LCM) method, the\ninventory item should be valued at",
+    "choices": [
+      "Net realizable value.",
+      "Net realizable value less the normal profit margin.",
+      "Original cost.",
+      "Replacement cost."
+    ],
+    "answerIndex": 2,
+    "explanation": "When replacement cost is below the NRV and above the NRV\nless the normal profit margin, market equals replacement cost.\nGiven that the original cost of the inventory item is below\nmarket, the original cost should be used to measure the\ninventory item under the LCM method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 9,
+    "page": 308,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A firm has determined its fiscal year-end inventory on a LIFO\nbasis to be $400,000. Information pertaining to that inventory\nfollows:\nEstimated selling price              $408,000\nEstimated cost of disposal             20,000\nNormal profit margin                   60,000\nCurrent replacement cost              360,000\nThe firm records losses that result from applying the lower-of-\ncost-or-market (LCM) rule. At its year end, what should be the\nnet carrying value of the firm’s inventory?",
+    "choices": [
+      "$400,000",
+      "$388,000",
+      "$360,000",
+      "$328,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nUnder the LCM method, market is current replacement cost\nsubject to a maximum (ceiling) equal to net realizable value\nand a minimum (floor) equal to net realizable value minus a\nnormal profit. NRV equals selling price minus costs of\ncompletion and disposal. Here, original cost is $400,000 and\nreplacement cost is $360,000. The LCM method uses the\nlower of the two, $360,000, to measure inventory. However,\nthe inventory measure cannot exceed the NRV of $388,000\n($408,000 selling price – $20,000 cost of disposal).\nFurthermore, the inventory carrying amount cannot be lower\nthan NRV minus normal profit, or $328,000 ($388,000 NRV –\n$60,000 normal profit). Because the lower of cost or market\n($360,000) is between $388,000 (ceiling) and $328,000 (floor),\nthe net carrying amount is $360,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 10,
+    "page": 309,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Which of the following is true regarding inventory adjustments\nunder IFRS?",
+    "choices": [
+      "IFRS do not require inventory adjustments.",
+      "Reversals of adjustments are allowed in a subsequent period.",
+      "A reversal of a previous write-down may be higher than the\nprevious write-down.",
+      "Adjustments may not be reversed in a subsequent period."
+    ],
+    "answerIndex": 1,
+    "explanation": "Both IFRS and U.S. GAAP require the cost of inventory to be\nwritten down if the utility of the goods is impaired. Under IFRS,\ninventories are measured subsequent to initial recognition at\nthe lower of cost and net realizable value (NRV), with NRV\nassessed each period. Moreover, unlike U.S. GAAP, IFRS\npermit inventory to be written up to the lower of cost and NRV\nif previously written down. The reversal is permissible only to\nthe extent of the prior write-down.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 11,
+    "page": 310,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A multinational company maintains its financial records under\nboth IFRS and U.S. GAAP. Last year, the company\ndetermined its inventory was impaired because demand for its\nproduct collapsed when a competitor launched a new product\nwith innovative features. As a result, the company wrote down\nits inventory to $0 with a carrying amount of $500,000. This\nyear, however, government authorities unexpectedly\nannounced that the competitor’s product was defective and the\nproduct was removed from the market. As a result, the\ncompany’s products were again in demand and the company\nestimated their net realizable value to be $750,000 at the end\nof the current quarter. How should the company record this\nnew development in the current quarter?",
+    "choices": [
+      "Under IFRS, $0 write-up of the inventory; under U.S. GAAP,\n$0 write-up of the inventory.",
+      "Under IFRS, $500,000 write-up of the inventory; under U.S.\nGAAP, $0 write-up of the inventory.",
+      "Under IFRS, $750,000 write-up of the inventory; under U.S.\nGAAP, $0 write-up of the inventory.",
+      "Under IFRS, $750,000 write-up of the inventory; under U.S.\nGAAP, $750,000 write-up of the inventory."
+    ],
+    "answerIndex": 1,
+    "explanation": "Under U.S. GAAP, write-downs taken to reduce inventories\ncan not be reversed for subsequent increases in value. Under\nIFRS, write-downs taken to reduce inventories can be\nreversed for subsequent increases in value, but the reversal is\nlimited to the amount of the original write-down.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 12,
+    "page": 312,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A company uses IFRS to value its inventory of frozen foods.\nThe company applies IFRS on a total inventory basis, not\ndirectly to each item of frozen food. Information on the frozen\nfood inventory at December 31 of the year just ended is\nprovided below.\nReplacement cost                         $ 80,000\nNet realizable value less profit margin 85,000\nWeighted-average cost                      90,000\nNet realizable value                      100,000\nThe company should value its inventory at",
+    "choices": [
+      "$80,000",
+      "$85,000",
+      "$90,000",
+      "$100,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under IFRS, inventories are measured at the lower of cost or\nnet realizable value (NRV). Thus, the company should value\nits inventory at $90,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 13,
+    "page": 313,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A fundamental difference between U.S. GAAP and IFRS is\nthat",
+    "choices": [
+      "Reversal of inventory write-downs is permitted under IFRS;\nhowever, reversal of inventory write-downs is prohibited under\nU.S. GAAP.",
+      "Distribution costs are included in cost of sales under U.S.\nGAAP; however, distribution costs are excluded from cost of\nsales under IFRS.",
+      "Inventory is generally valued at the lower of cost or market\nunder IFRS; however, inventory is generally valued at the\nlower of cost or net realizable value under U.S. GAAP.",
+      "Marketing costs are included in cost of sales under U.S.\nGAAP; however, marketing costs are excluded from cost of\nsales under IFRS."
+    ],
+    "answerIndex": 0,
+    "explanation": "A reversal of inventory write-downs is permitted under IFRS\nbut is prohibited under U.S. GAAP.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 14,
+    "page": 313,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "The replacement cost of a LIFO basis inventory item is below\nthe net realizable value and above the net realizable value\nminus the normal profit margin. The original cost of the\ninventory item is below the net realizable value minus the\nnormal profit margin. Under the lower-of-cost-or-market (LCM)\nmethod, the inventory item should be measured at",
+    "choices": [
+      "Net realizable value.",
+      "Net realizable value minus the normal profit margin.",
+      "Original cost.",
+      "Replacement cost."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. When\nreplacement cost is below the NRV and above the NRV minus\nthe normal profit margin, market equals replacement cost.\nGiven that the original cost of the inventory item is below\nmarket, the original cost should be used to measure the\ninventory item under the LCM method.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 15,
+    "page": 314,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "The original cost of an inventory item is both below\nreplacement cost and net realizable value. The net realizable\nvalue minus normal profit margin is below the original cost.\nUnder the lower-of-cost-or-market (LCM) method, the\ninventory item that is accounted for using the LIFO method\nshould be measured at",
+    "choices": [
+      "Replacement cost.",
+      "Net realizable value.",
+      "Net realizable value minus normal profit margin.",
+      "Original cost."
+    ],
+    "answerIndex": 3,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. Market is\ncurrent replacement cost subject to a ceiling and a floor. The\nmaximum is net realizable value, and the minimum is net\nrealizable value minus normal profit. When replacement cost\nis within this range, it is used as market. The original cost is\nabove the NRV minus normal profit margin but below the NRV\nand the replacement cost. Thus, market must be the NRV (if it\nis less than replacement cost) or the replacement cost (which\nis greater than NRV minus normal profit), and LCM is equal to\noriginal cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 16,
+    "page": 316,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Stockholm Co. accounts for its inventory using the last-\nin, first-out (LIFO) method. The data below concern items in\nStockholm Co.’s inventory.\nPer Unit           Gear      Stuff    Wickets\nHistorical cost      $190.00   $106.00   $53.00\nSelling price         217.00    145.00    73.75\nCost to                19.00      8.00     2.50\ncomplete and\nsell\nCurrent               203.00    105.00    51.00\nreplacement\ncost\nNormal profit          32.00     29.00    21.25\nmargin\nThe limits to the market measurement (i.e., the ceiling and the\nfloor) that Stockholm Co. should use in the lower-of-cost-or-\nmarket (LCM) comparison of gear are",
+    "choices": [
+      "$217 and $198.",
+      "$217 and $185.",
+      "$198 and $166.",
+      "$185 and $166."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is current replacement cost subject to a ceiling equal to\nnet realizable value and a floor equal to net realizable value\nminus a normal profit. Net realizable value is the estimated\nselling price minus costs of completion and disposal. For gear,\nthe net realizable value is $198 ($217 selling price –\n$19 completion and disposal costs). Net realizable value\nminus normal profit is $166 ($198 net realizable value –\n$32 normal profit).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 17,
+    "page": 317,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Stockholm Co. accounts for its inventory using the last-\nin, first-out (LIFO) method. The data below concern items in\nStockholm Co.’s inventory.\nPer Unit           Gear      Stuff    Wickets\nHistorical cost      $190.00   $106.00   $53.00\nSelling price         217.00    145.00    73.75\nCost to                19.00      8.00     2.50\ncomplete and\nsell\nCurrent               203.00    105.00    51.00\nreplacement\ncost\nNormal profit          32.00     29.00    21.25\nmargin\nThe cost amount that Stockholm Co. should use in the lower-\nof-cost-or-market (LCM) comparison of stuff is",
+    "choices": [
+      "$105",
+      "$106",
+      "$108",
+      "$137"
+    ],
+    "answerIndex": 1,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the LCM. Market is the current cost to\nreplace the inventory, subject to certain limitations. Market\nshould not exceed a ceiling equal to net realizable value\n(NRV) or be less than a floor equal to NRV minus normal profit\nmargin. NRV for stuff is $137 ($145 – $8). NRV minus normal\nprofit margin is $108 ($137 – $29). The current replacement\ncost is below the floor of $108; therefore, the market is $108.\nBecause the historical cost of $106 is lower than the market of\n$108, historical cost should be the basis of valuation for stuff.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 18,
+    "page": 318,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Stockholm Co. accounts for its inventory using the last-\nin, first-out (LIFO) method. The data below concern items in\nStockholm Co.’s inventory.\nPer Unit           Gear      Stuff    Wickets\nHistorical cost      $190.00   $106.00   $53.00\nSelling price         217.00    145.00    73.75\nCost to                19.00      8.00     2.50\ncomplete and\nsell\nCurrent               203.00    105.00    51.00\nreplacement\ncost\nNormal profit          32.00     29.00    21.25\nmargin\nThe market amount that Stockholm Co. should use to measure\nthe wickets on the basis of the lower-of-cost-or-market (LCM)\nrule is",
+    "choices": [
+      "$51.00",
+      "$53.00",
+      "$50.00",
+      "$71.25"
+    ],
+    "answerIndex": 0,
+    "explanation": "Inventory accounted for using LIFO or retail inventory method\nis measured at the lower of cost or market (LCM). Market is\nthe current cost to replace the inventory, subject to certain\nlimitations. Market should not exceed a ceiling equal to net\nrealizable value (NRV) or be less than a floor equal to NRV\nminus normal profit margin. Net realizable value for wickets is\n$71.25 ($73.75 selling price – $2.50 completion and disposal\ncosts). The net realizable value minus normal profit is $50\n($71.25 net realizable value – $21.25 normal profit margin).\nThe $51 replacement cost falls between the $71.25 ceiling\nand the $50 floor and is the appropriate market value.\nBecause the $51 market value is lower than the $53 historical\ncost, it should be the basis of valuation for the wickets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 19,
+    "page": 319,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "The original cost of an inventory item is above the replacement\ncost. The inventory item’s replacement cost is above the net\nrealizable value. Under the lower-of-cost-or-market method,\nthe inventory item accounted for using the retail inventory\nmethod should be valued at",
+    "choices": [
+      "Original cost.",
+      "Replacement cost.",
+      "Net realizable value.",
+      "Net realizable value less normal profit margin."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market. Market is\nthe current cost to replace inventory, subject to certain\nlimitations. Market should not exceed a ceiling equal to net\nrealizable value (NRV) or be less than a floor equal to NRV\nminus a normal profit margin. Because replacement cost\nexceeds NRV, the ceiling is NRV.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 20,
+    "page": 320,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Inventory accounted for under which of the following cost flow\nmethods is not measured at the lower of cost or net realizable\nvalue?",
+    "choices": [
+      "First-in, first-out (FIFO).",
+      "Moving average.",
+      "Last-in, first-out (LIFO).",
+      "Specific identification."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nInventory accounted for using any other cost method (e.g.,\nFIFO or average cost) is measured at the lower of cost or net\nrealizable value (NRV).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 21,
+    "page": 321,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A company accounts for its inventory using the first-in, first-out\n(FIFO) method. The following information pertains to the\ninventory at the end of the fiscal year:\nHistorical cost              $150,000\nCurrent replacement cost 120,000\nNet realizable value (NRV) 125,000\nNormal profit margin            15,000\nFair value                     140,000\nWhat amount should the company report as inventory on its\nyear-end balance sheet?",
+    "choices": [
+      "$150,000",
+      "$125,000",
+      "$120,000",
+      "$140,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Inventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). Because the NRV\n($125,000) is lower than the historical cost ($150,000), the\ninventory is reported on the year-end balance sheet at its NRV\nof $125,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 22,
+    "page": 322,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Lialia Co. has determined the cost of its fiscal year-end\nunfinished FIFO inventory to be $300,000. Information\npertaining to that inventory at year-end is as follows:\nEstimated selling price       $330,000\nEstimated cost of disposal       20,000\nNormal profit margin               15%\nCurrent replacement cost       280,000\nEstimated completion costs 15,000\nWhat amount should Lialia report as inventory on its year-end\nbalance sheet?",
+    "choices": [
+      "$295,000",
+      "$280,000",
+      "$300,000",
+      "$330,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Inventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). NRV is the estimated\nselling price in the ordinary course of business, minus\nreasonably predictable costs of completion, disposal, and\ntransportation. At year-end, the NRV of the inventory of\n$295,000 ($330,000 estimated selling price – $15,000\nestimated completion costs – $20,000 estimated costs of\ndisposal) is lower than its cost of $300,000. Thus, the\ninventory is reported at its NRV of $295,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 23,
+    "page": 323,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Gail Co. has determined the cost of its 12/31/Year 1 inventory\non a moving-average basis to be $200,000. Information\npertaining to that inventory at year-end is as follows:\nEstimated selling price               $215,000\nEstimated cost of disposal               10,000\nNormal profit margin                     20,000\nCurrent replacement cost               190,000\nWhat loss on inventory write-down, if any, should be\nrecognized in Gail’s Year 1 income statement?",
+    "choices": [
+      "$10,000",
+      "$15,000",
+      "$20,000",
+      "$0"
+    ],
+    "answerIndex": 3,
+    "explanation": "Inventory accounted for using the average method (or any\ncost method other than LIFO or retail) is measured at the\nlower of cost or net realizable value (NRV). NRV is the\nestimated selling price in the ordinary course of business,\nminus reasonably predictable costs of completion, disposal,\nand transportation. The cost of the inventory of $200,000 is\nlower than its NRV of $205,000 ($215,000 selling price –\n$10,000 estimated cost of disposal). Thus, the inventory is\nreported at its cost and no loss on write-down of inventory is\nrecognized.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 24,
+    "page": 324,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "How should inventory that is accounted for under the average-\ncost method be measured in the financial statements?",
+    "choices": [
+      "Lower of cost or market (LCM).",
+      "Lower of cost or fair value minus cost to sell.",
+      "Lower of cost or net realizable value (NRV).",
+      "Fair value."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using the average-cost method (or\nany cost method other than LIFO or retail) is measured at the\nlower of cost or NRV. NRV is the estimated selling price in the\nordinary course of business, minus reasonably predictable\ncosts of completion, disposal, and transportation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 25,
+    "page": 325,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A company determined the following values for its inventory as\nof the end of the fiscal year:\nHistorical cost                       $300,000\nCurrent replacement cost                280,000\nSelling price                           308,000\nNormal profit margin                     13,000\nCost to sell                             10,000\nWhat amount should the company report as inventory on its\nyear-end balance sheet under the following cost methods?\nLast-in, first-out (LIFO) First-in, first-out (FIFO)",
+    "choices": [
+      "$280,000                       $298,000",
+      "$285,000                       $298,000",
+      "$298,000                         $300,000",
+      "$285,000                         $285,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is the current cost to replace inventory, subject to\ncertain limitations. Market cannot be greater than a ceiling\nequal to net realizable value (NRV) of $298,000\n($308,000 estimated selling price – $10,000 cost of disposal).\nIt cannot be less than a floor equal to NRV reduced by a\nnormal profit margin of $285,000 ($298,000 NRV – $13,000\nnormal profit margin). Because the current replacement cost\n($280,000) is lower than the floor ($285,000), market is\n$285,000. Thus, under the LIFO method, the inventory is\nreported at $285,000, which is lower than the $300,000 cost.\nInventory accounted for using the FIFO method (or any cost\nmethod other than LIFO or retail) is measured at the lower of\ncost or net realizable value (NRV). Thus, under FIFO method,\nthe inventory is reported at its NRV of $298,000, which is\nlower than the $300,000 cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 26,
+    "page": 327,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "In accounting for inventories, GAAP require departure from the\nhistorical cost principle when the utility of inventory has fallen\nbelow cost. Inventory accounted for under certain cost flow\nmethods can be measured at the lower of cost or net\nrealizable value (NRV). The term “net realizable value (NRV)”\nas defined here means",
+    "choices": [
+      "Fair value minus cost to sell.",
+      "Original cost minus normal profit margin.",
+      "Estimated selling price minus estimated costs of completion\nand disposal.",
+      "Fair value minus normal profit margin."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory measured using any cost method other than LIFO or\nretail (e.g., FIFO or average cost) must be measured at the\nlower of cost or NRV. NRV is the estimated selling price in the\nordinary course of business, minus reasonably predictable\ncosts of completion, disposal, and transportation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 27,
+    "page": 328,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Inventory accounted for under which cost flow methods is\nmeasured subsequent to acquisition at lower of cost or market\n(LCM)?\nLIFO FIFO Retail Weighted-Average",
+    "choices": [
+      "Yes     No     Yes         No",
+      "Yes     Yes    No          No",
+      "No      Yes    No          Yes",
+      "No     No     Yes         Yes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nInventory accounted for using any other cost method (e.g.,\nFIFO, average cost, or specific identification) is measured at\nthe lower of cost or net realizable value (NRV).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 28,
+    "page": 328,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Kusta Company measures its year-end inventory using the\nweighted-average method. The following is relevant\ninformation:\nCosts of completion, disposal, and transportation $ 25,000\nEstimated selling price                            450,000\nCurrent replacement cost                           420,000\nNormal profit margin                                40,000\nCost                                               400,000\nThe amount of ending inventory reported in the statement of\nfinancial position is",
+    "choices": [
+      "$400,000",
+      "$420,000",
+      "$425,000",
+      "$450,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Inventory accounted for using a method other than LIFO or\nretail (e.g., FIFO, average cost, or specific identification) is\nmeasured subsequent to acquisition at lower of cost or net\nrealizable value (NRV). NRV equals (1) the estimated selling\nprice in the ordinary course of business minus (2) reasonably\npredictable costs of completion, disposal, and transportation.\nAccordingly, the year-end weighted-average inventory is\nmeasured at the lower of cost ($400,000) or NRV [($450,000\nsales price – $25,000 costs to complete, etc.) = $425,000],\nthat is, the $400,000 historical cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 29,
+    "page": 330,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A company determined the following values for its inventory as\nof the end of the fiscal year:\nHistorical cost                                     $100,000\nCurrent replacement cost                               70,000\nNet realizable value                                   90,000\nNet realizable value minus a normal profit margin      85,000\nFair value                                             95,000\nIf the company accounts for its inventories using the first-in\nfirst-out (FIFO) cost method, what amount should the company\nreport as inventory on its balance sheet?",
+    "choices": [
+      "$70,000",
+      "$85,000",
+      "$90,000",
+      "$95,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under FIFO, inventory is measured at the lower of cost or\nNRV (Estimated selling price in the ordinary course of\nbusiness – Estimated costs of completion and sale). Given\ncost of $100,000 and NRV of $90,000, inventory should be\nreported at $90,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 30,
+    "page": 331,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "Garcel, Inc., held unfinished LIFO inventory at a cost of\n$85,000 with a sales value of $125,000. The inventory will cost\n$10,500 to complete. The normal profit margin is 30% of sales.\nThe replacement cost of the inventory was $75,000. What\namount should Garcel report as inventory on the balance\nsheet?",
+    "choices": [
+      "$114,500",
+      "$85,000",
+      "$77,000",
+      "$75,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory accounted for using LIFO or the retail inventory\nmethod is measured at the lower of cost or market (LCM).\nMarket is the current cost to replace inventory, subject to\ncertain limitations. Market should not (1) exceed a ceiling\nequal to net realizable value (NRV) or (2) be less than a floor\nequal to NRV reduced by an allowance for an approximately\nnormal profit margin. NRV is the estimated selling price in the\nordinary course of business minus reasonably predictable\ncosts of completion and disposal. Thus, NRV (ceiling) equals\n$114,500 ($125,000 selling price – $10,500 cost of\ncompletion). If the normal profit margin equals $37,500\n($125,000 selling price × 30% normal profit margin), the floor\nequals $77,000 ($114,500 NRV – $37,500 normal profit\nmargin). Because the replacement cost of inventory ($75,000)\nis lower than the floor ($77,000), market is $77,000.\nAccordingly, the LIFO inventory must be written down to\nmarket and reported at $77,000 because market is lower than\ncost ($85,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 31,
+    "page": 332,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "The following information relates to a company’s year-end\ninventory:\nInventory cost                   $910\nSelling price of inventory       $1,000\nNormal profit margin             10% of selling price\nCurrent replacement cost         $740\nCost of completion and disposal $100\nUnder the first-in first-out (FIFO) cost method, what is the\ncompany’s year-end inventory balance?",
+    "choices": [
+      "$740",
+      "$800",
+      "$900",
+      "$910"
+    ],
+    "answerIndex": 2,
+    "explanation": "Under FIFO, inventories are measured at the lower of cost or\nnet realizable value (NRV). NRV is the estimated selling price\nless the estimated costs of completion and disposal. The\ninventory cost is $910. The NRV is $900 ($1,000 – $100). The\nlower of the two is $900. Therefore, the company’s year-end\ninventory balance is $900.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 2,
+    "section": 4,
+    "number": 32,
+    "page": 333,
+    "topicId": "su2-subsequent-measurement",
+    "stem": "A company manufactures and distributes replacement parts for various industries. As of December 31, Year 1, the following\namounts pertain to the company’s inventory:\nNet\nReplace             Cost to        Normal\nIte                  ment      Sale        Sell       Profit Ma\nm       Cost        Cost      Price        or          rgin\nDispos\ne\nBlades $41,000 $ 38,000 $ 50,000 $ 2,000               $15,000\nTowers 52,000          40,000      54,000    4,000      14,000\nGener 20,000           24,000      30,000    2,000        6,000\nators\nGearb 80,000          105,000    120,000 12,000           8,000\noxes\nWhat is the total carrying value of the company’s inventory as of\nDecember 31, Year 1, under the weighted-average cost\nmethod?",
+    "choices": [
+      "$178,000",
+      "$191,000",
+      "$193,000",
+      "$207,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the weighted-average cost method, inventories are\nmeasured at the lower of cost or net realizable value (NRV).\nNRV is the estimated selling price minus reasonably predictable\ncosts of completion and disposal. Blades, generators, and\ngearboxes are measured at their costs of $41,000, $20,000, and\n$80,000, respectively, because these amounts are lower than\ntheir NRVs of $48,000 ($50,000 – $2,000), $28,000 ($30,000 –\n$2,000), and $108,000 ($120,000 – $12,000). Towers are\nmeasured at their NRV of $50,000 ($54,000 – $4,000) because\nthis amount is lower than cost ($52,000). Thus, the total carrying\nvalue of the company’s inventory is equal to $191,000\n($41,000 + $20,000 + $80,000 + $50,000).",
+    "answerStatus": "source"
+  }
+]

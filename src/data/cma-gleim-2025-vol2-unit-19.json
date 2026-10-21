@@ -1,0 +1,1873 @@
+[
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 1,
+    "page": 1209,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which one of the following statements about an accounting\ninformation system (AIS) is false?",
+    "choices": [
+      "An AIS supports day-to-day operations by collecting and\nsorting data about an organization’s transactions.",
+      "The information produced by an AIS is made available to all\nlevels of management for use in planning and controlling an\norganization’s activities.",
+      "An AIS is best suited to solve problems when there is great\nuncertainty and ill-defined reporting requirements.",
+      "An AIS is often referred to as a transaction processing system."
+    ],
+    "answerIndex": 2,
+    "explanation": "An AIS is a subsystem of a management information system\nthat processes routine financial and transactional data\nrelevant to managerial and financial accounting. The AIS\nsupports operations by collecting and sorting data about\ntransactions. An AIS is concerned not only with external\nparties, but also with the internal activities needed for\nmanagement decision making at all levels. An AIS is best\nsuited to solve problems when reporting requirements are\nwell-defined. A decision support system is a better choice for\nproblems in which decision making is less structured.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 2,
+    "page": 1210,
+    "topicId": "su19-accounting-systems",
+    "stem": "In an inventory system on a database management system\n(DBMS), one stored record contains part number, part name,\npart color, and part weight. These individual items are called",
+    "choices": [
+      "Fields.",
+      "Stored files.",
+      "Bytes.",
+      "Occurrences."
+    ],
+    "answerIndex": 0,
+    "explanation": "A record is a collection of related data items (fields). A field\n(data item) is a group of characters representing one unit of\ninformation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 3,
+    "page": 1211,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following is a primary function of a database\nmanagement system (DBMS)?",
+    "choices": [
+      "Report customization.",
+      "Capability to create and modify the database.",
+      "Financial transactions input.",
+      "Database access authorizations."
+    ],
+    "answerIndex": 1,
+    "explanation": "A database management system (DBMS) is an integrated set\nof software tools superimposed on the data files that helps\nmaintain the integrity of the underlying database. It allows\nprogrammers and designers to work independently of the\nphysical and logical structure of the database. With a DBMS,\nthe physical structure of the database can be completely\naltered without having to change any of the programs using\nthe data items.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 4,
+    "page": 1212,
+    "topicId": "su19-accounting-systems",
+    "stem": "How is an accounting information system (AIS) distinguished\nfrom a management information system (MIS)?",
+    "choices": [
+      "An AIS deals with financial information; a MIS handles all other\ninformation.",
+      "An AIS may be either manual or computer based; a MIS is\ncomputer based.",
+      "An AIS is a subsystem within a MIS.",
+      "An AIS is control oriented; a MIS is used exclusively for\nplanning."
+    ],
+    "answerIndex": 2,
+    "explanation": "An information system transforms raw data into knowledge\nuseful for decision making. A MIS provides information for\nmanagement decisions. An AIS is a subsystem of a MIS and\nprocesses financial and transactional data relevant to\nmanagerial decisions as well as financial accounting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 5,
+    "page": 1212,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following terms best describes a payroll system?",
+    "choices": [
+      "Database management system (DBMS).",
+      "Transaction processing system (TPS).",
+      "Decision support system (DSS).",
+      "Enterprise resource planning (ERP) system."
+    ],
+    "answerIndex": 1,
+    "explanation": "Information systems that support routine processes in an\norganization include, among others, the transaction\nprocessing system (TPS). A transaction is a single, discrete\nevent that can be captured by an information system. A TPS\ntherefore captures the fundamental data that reflect the\neconomic life of an organization. A payroll system is one of the\nmost routine processes necessary to conduct the\norganization’s business.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 6,
+    "page": 1213,
+    "topicId": "su19-accounting-systems",
+    "stem": "The primary purpose of a database system is to have a single\nstorage location for each",
+    "choices": [
+      "File.",
+      "Record.",
+      "Database.",
+      "Item of data."
+    ],
+    "answerIndex": 3,
+    "explanation": "Databases allow companies to save data (information) in one\nplace instead of having hundreds of specific files with similar\ndata.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 7,
+    "page": 1214,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which one of the following features is least likely to apply to\nthe transaction processing cycle of an accounting information\nsystem?",
+    "choices": [
+      "Data records are chiefly historical in nature.",
+      "Most of the sources of data are an organization’s recurring\ntransactions.",
+      "Data are usually financial in nature.",
+      "Data records are the basis of predictive systems."
+    ],
+    "answerIndex": 3,
+    "explanation": "An AIS is a subsystem of a management information system\nthat processes financial and transactional data relevant to\nmanagerial and financial accounting. The AIS supports\noperations by collecting and sorting historical data about an\norganization’s transactions. An AIS is concerned not only with\nexternal parties but also with the internal activities needed for\nmanagement decision making at all levels. An AIS is best\nsuited to solve problems when reporting requirements are well\ndefined. An AIS does not typically use records based on\npredictive systems, which would be a feature of a decision\nsupport system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 8,
+    "page": 1215,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which one of the following distinguishes a management\ninformation system from a transaction processing system?",
+    "choices": [
+      "Maintenance of a structured database.",
+      "Capability to provide data for decision-making support.",
+      "Automation of routine transaction processing.",
+      "Production of reports to support operations."
+    ],
+    "answerIndex": 1,
+    "explanation": "A management information system (MIS) provides managers\nwith the information they need for analysis, planning, control,\nand decision making. A transaction processing system (TPS)\nsupports the ongoing routine operations of an organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 9,
+    "page": 1215,
+    "topicId": "su19-accounting-systems",
+    "stem": "One advantage of a database management system (DBMS) is",
+    "choices": [
+      "Each organizational unit takes responsibility and control for its\nown data.",
+      "The cost of the data processing department decreases as\nusers are now responsible for establishing their own data\nhandling techniques.",
+      "A decreased vulnerability as the database management\nsystem has numerous security controls to prevent disasters.",
+      "The independence of the data from the application programs,\nwhich allows the programs to be developed for the user’s\nspecific needs without concern for data capture problems."
+    ],
+    "answerIndex": 3,
+    "explanation": "A fundamental characteristic of databases is that applications\nare independent of the database structure; when writing\nprograms or designing applications to use the database, only\nthe name of the desired item is necessary. Programs can be\ndeveloped for the user’s specific needs without concern for\ndata capture problems. Reference can be made to the items\nusing the data manipulation language, after which the DBMS\ntakes care of locating and retrieving the desired items. The\nphysical or logical structure of the database can be completely\naltered without having to change any of the programs using\nthe data items. Only the schema requires alteration.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 10,
+    "page": 1216,
+    "topicId": "su19-accounting-systems",
+    "stem": "Management information systems represent a significant\ninvestment by most businesses. A primary concern of\nmanagement is that the system",
+    "choices": [
+      "Meet the business needs of the organization.",
+      "Employ the latest technology.",
+      "Might consume too much time and money during testing.",
+      "Was designed using CASE (Computer-Aided Software\nEngineering) tools rather than traditional methods."
+    ],
+    "answerIndex": 0,
+    "explanation": "A management information system (MIS) provides information\nfor management decisions. The MIS must meet the needs of\nthe organization or the cost will exceed any benefit to a\nbusiness.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 11,
+    "page": 1217,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which one of the following statements about a management\ninformation system (MIS) is false?",
+    "choices": [
+      "A MIS supports day-to-day operations by aggregating and\nformatting data about an organization’s transactions.",
+      "The information produced by a MIS is made available to\nmiddle management for use in controlling an organization’s\nactivities.",
+      "A MIS is best suited to solve problems when uncertainty is\ngreat and reporting requirements are ill-defined.",
+      "A MIS is often fed with input by a transaction processing\nsystem."
+    ],
+    "answerIndex": 2,
+    "explanation": "A MIS is a system that supports routine processes. It typically\nreceives input from a transaction processing system,\naggregates it, then reports it in a format useful to middle\nmanagement in running the business. A MIS is concerned not\nonly with reporting to external parties, but also with the internal\nactivities needed for management decision making. A MIS is\nbest suited to solve problems when reporting requirements are\nwell defined. A decision support system is a better choice for\nproblems in which decision making is less structured.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 12,
+    "page": 1218,
+    "topicId": "su19-accounting-systems",
+    "stem": "A database is",
+    "choices": [
+      "Essential for the storage of large data sets.",
+      "A collection of related files.",
+      "A real-time system.",
+      "A network of computer terminals."
+    ],
+    "answerIndex": 1,
+    "explanation": "The use of a database system significantly reduces\nredundancy of stored data in a system. Data in a standardized\nform are ideally entered once into integrated files and then\nused for any and all related applications. The database is\nusually built to serve multiple applications. Consequently, the\ndata are independent of particular applications and greater\nflexibility in meeting unanticipated demands is possible. The\ndatabase approach also allows for better access by users and\nfor more rapid updating of information.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 13,
+    "page": 1219,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following factors has the greatest impact on the\ndesign of an effective management reporting system?",
+    "choices": [
+      "Number of transactions to be processed.",
+      "Types of decisions to be made.",
+      "Number of authorized users.",
+      "Number of regulatory agencies to be satisfied."
+    ],
+    "answerIndex": 1,
+    "explanation": "The management reporting system (MRS) is a subsystem of\nthe accounting information system. The MRS provides\ninformation useful to decision making and internal\nmanagement, including the internal activities recorded in the\ncost accounting system and the preparation of related reports\nand analysis. The MRS typically produces production reports,\npro forma financial statements, budgets, cost-volume-profit\nanalysis, and other internal reports. Therefore, the types of\ndecisions to be made have the greatest impact on the design\nof an effective management reporting system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 14,
+    "page": 1220,
+    "topicId": "su19-accounting-systems",
+    "stem": "One of the principal objectives of a database system is to",
+    "choices": [
+      "Reduce the overall complexity of data processing and data\nstorage.",
+      "Provide application programs with their own separate data\nfiles.",
+      "Employ physical rather than logical data organization\nconcepts.",
+      "Improve data consistency by reducing data redundancy."
+    ],
+    "answerIndex": 3,
+    "explanation": "In a database, storage structures are created that render the\napplications programs independent of the physical or logical\narrangement of the data. Each data item has a standard\ndefinition, name, and format, and related items are linked by a\nsystem of pointers. The programs therefore only need to\nspecify data items by name, not by location. A database\nmanagement system handles retrieval and storage. Because\nseparate files for different applications programs are\nunnecessary, data redundancy and inconsistency can be\nsubstantially reduced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 15,
+    "page": 1221,
+    "topicId": "su19-accounting-systems",
+    "stem": "Enabling users to have different views of the same data is a\nfunction of",
+    "choices": [
+      "The operating system.",
+      "A program library management system.",
+      "The database management system.",
+      "A utility program."
+    ],
+    "answerIndex": 2,
+    "explanation": "A database is characterized by the independence of\napplications from the physical arrangement of the data.\nApplication programmers define a user view (external schema)\nof the data and write program instructions using a\nprogramming language interface with the DBMS.\nConsequently, programs need not specify the location of a\ndata item. Only the name of the item is necessary. The DBMS\nmediates between user view and the actual physical\narrangement of the data. Hence, different users (applications)\nmay create different views of the data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 16,
+    "page": 1221,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following structures refers to the collection of data\nfor all vendors in a relational database?",
+    "choices": [
+      "Record.",
+      "Field.",
+      "File.",
+      "Byte."
+    ],
+    "answerIndex": 2,
+    "explanation": "A file is a group of records. Each record refers to the collection\nof data for a specific vendor in the data base.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 17,
+    "page": 1222,
+    "topicId": "su19-accounting-systems",
+    "stem": "What is the correct ascending hierarchy of data in a system?",
+    "choices": [
+      "Character, record, file, field.",
+      "Field, character, file, record.",
+      "Character, field, record, file.",
+      "Field, record, file, character."
+    ],
+    "answerIndex": 2,
+    "explanation": "A character (byte) is composed of a group of bits, a field is a\ngroup of bytes, a record is a group of fields, and a file is a\ngroup of records.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 18,
+    "page": 1222,
+    "topicId": "su19-accounting-systems",
+    "stem": "An inventory clerk, using a computer terminal, views the\nfollowing on screen: part number, part description, quantity on\nhand, quantity on order, order quantity, and reorder point for a\nparticular inventory item. Collectively, these data make up a",
+    "choices": [
+      "Field.",
+      "File.",
+      "Database.",
+      "Record."
+    ],
+    "answerIndex": 3,
+    "explanation": "A record is a collection of related data items (fields). A field\n(data item) is a group of characters representing one unit of\ninformation. The part number, part description, etc., are\nrepresented by fields.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 19,
+    "page": 1223,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following is the elementary unit of data storage\nused to represent individual attributes of an entity?",
+    "choices": [
+      "Database.",
+      "Data field.",
+      "File.",
+      "Record."
+    ],
+    "answerIndex": 1,
+    "explanation": "A data item (or field) is a group of characters. It is used to\nrepresent individual attributes of an entity, such as an\nemployee’s address. A field is an item in a record.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 20,
+    "page": 1223,
+    "topicId": "su19-accounting-systems",
+    "stem": "The function of a data dictionary is to",
+    "choices": [
+      "Mark the boundary between two consecutive transactions.",
+      "Describe and share information about objects and resources.",
+      "Specify systems users.",
+      "Specify privileges and security rules for objects and resources."
+    ],
+    "answerIndex": 1,
+    "explanation": "A data dictionary is an organized and shared collection of\ninformation about the objects and resources used by the IS\norganization to deliver or exchange information internally and\nexternally.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 21,
+    "page": 1224,
+    "topicId": "su19-accounting-systems",
+    "stem": "Upon receipt of customers’ checks in the mail room, a\nresponsible employee prepares a remittance listing of all\nchecks received and forwards it with the checks to cash\nreceipts. The remittance listing and remittance advices should\nthen be sent to the",
+    "choices": [
+      "Internal auditor to investigate the listing for unusual\ntransactions.",
+      "CFO to compare the listing with the monthly bank statement.",
+      "Accounts receivable department for updating customer\naccounts.",
+      "Entity’s bank to compare the listing with the cashier’s deposit\nslip."
+    ],
+    "answerIndex": 2,
+    "explanation": "The individuals with custodial responsibility should send the\nremittance advices or a list of the remittances to those with\nrecordkeeping responsibility to update customer accounts and\naccounts receivable records.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 22,
+    "page": 1225,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following describes the most effective control to\nensure proper handling of cash receipt transactions?",
+    "choices": [
+      "Checks received are forwarded to accounts receivable for\ndeposit daily.",
+      "A remittance listing of all checks received during the day is\nprepared by the mail room and forwarded with the checks to\ncash receipts.",
+      "Remittance advices are separated from the checks and sent to\nthe general ledger for posting to the customer accounts.",
+      "The employees who receive the customer mail prepare the\ndaily bank deposit."
+    ],
+    "answerIndex": 1,
+    "explanation": "A remittance listing provides a control total for later\nreconciliation. The mail room prepares a remittance listing of\nall checks received during the day and forwards it with the\nchecks to cash receipts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 23,
+    "page": 1226,
+    "topicId": "su19-accounting-systems",
+    "stem": "Checks from customers are received in the organization’s mail\nroom each day. What controls should be in place to safeguard\nthe checks?",
+    "choices": [
+      "Checks should be taken by the mail clerk to the bank for\ndeposit daily.",
+      "Checks should be forwarded intact to the controller for\nprocessing.",
+      "A mail clerk should restrictively endorse each check and\nprepare a remittance listing of all checks received.",
+      "Bond protection should be provided for mail clerks."
+    ],
+    "answerIndex": 2,
+    "explanation": "An employee who does not have access to other records\nshould open the mail and prepare a remittance listing of\nchecks received. A restrictive endorsement “for deposit only”\nshould be added to each check, which puts transferees on\nnotice to act accordingly (that is, to deposit the check in the\norganization’s account).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 24,
+    "page": 1227,
+    "topicId": "su19-accounting-systems",
+    "stem": "In a well-designed internal control structure in which cash\nreceipts receives custody of checks from the mail room, the\ncustodial function should not include",
+    "choices": [
+      "Endorsement of the checks.",
+      "Preparation of the bank deposit slip.",
+      "Deposit of checks daily at a local bank.",
+      "Posting the receipts to the accounts receivable subsidiary\nledger."
+    ],
+    "answerIndex": 3,
+    "explanation": "The mail room and cash receipts perform custodial functions.\nIndividuals with custodial functions should not have access to\nthe accounting records. For example, if the cashier were\nallowed to post the receipts to the accounts receivable\nsubsidiary ledger, an opportunity for embezzlement would\narise that could be concealed by falsifying the books.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 25,
+    "page": 1227,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following observations made during the\npreliminary survey of a local department store’s cash\ndisbursement cycle reflects a control strength?",
+    "choices": [
+      "The treasurer prepares checks for vendors based on payment\nvouchers prepared by accounts payable.",
+      "Individual department managers use prenumbered forms to\norder merchandise from vendors.",
+      "A liability is recorded by accounts payable once a purchase\norder has been sent.",
+      "Payments for capital expenditures are handled by the\ncontroller."
+    ],
+    "answerIndex": 0,
+    "explanation": "Accounts payable is a recording function. Matching the\nvendors’ invoices against purchase orders and receiving\nreports should be the responsibility of accounts payable.\nThese are the primary supporting documents for the payment\nvoucher (prepared by accounts payable) that will be relied\nupon by the treasurer while making payments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 26,
+    "page": 1228,
+    "topicId": "su19-accounting-systems",
+    "stem": "To ensure the cash payments journal is updated for the total of\nchecks requested,",
+    "choices": [
+      "Cash payments prepares a check register of all checks issued\nduring the day.",
+      "Accounts payable posts a journal entry to the cash payments\njournal from the remittance listing.",
+      "The check register is forwarded to general ledger for posting of\nthe total to the cash payments journal.",
+      "Once purchasing approves the liability with the vendor, a\ncheck is prepared, and the check is sent to cash payments for\nsigning and mailing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cash payments prepares a check register of all checks issued\nduring the day and posts a journal entry to the cash payments\njournal to ensure that the cash payments journal is updated for\nthe total of checks requested.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 27,
+    "page": 1229,
+    "topicId": "su19-accounting-systems",
+    "stem": "Terry processes cash payments at a car dealership. Which of\nthe following operations should be included in Terry’s job\nresponsibilities?",
+    "choices": [
+      "Forwarding the check register to accounts payable for posting.",
+      "Ensuring the cash payments journal is updated for the total of\nchecks requested.",
+      "Preparing account statements to send to vendors to show all\npurchase and payment activity.",
+      "Reconciling the bank statement to confirm all cash\ndisbursements have been processed."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cash payments prepares a check register of all checks issued\nduring the day and posts a journal entry to the cash payments\njournal. The check register is also forwarded to general ledger\nfor posting of the total to the general ledger file.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 28,
+    "page": 1230,
+    "topicId": "su19-accounting-systems",
+    "stem": "An employee in payroll is contemplating a fraud involving the\naddition of a fictitious employee and an entry of fictitious hours\nworked. The paycheck of this fictitious employee would then\nbe sent to the payroll employee’s home address. The most\neffective control procedure to prevent this type of fraud is to\nrequire that",
+    "choices": [
+      "All new employees added are approved by someone outside\nof payroll.",
+      "All new employees and their hours worked are entered by\nhuman resources.",
+      "All changes to employee records are approved by supervisors\noutside of payroll.",
+      "Employees use direct deposit for paychecks."
+    ],
+    "answerIndex": 0,
+    "explanation": "Payroll has a recording function. It should not authorize pay\nrate changes or the addition or deletion of employees from the\npayroll. Accordingly, authorization of such changes should be\nmade by an individual outside the department, such as human\nresources.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 29,
+    "page": 1231,
+    "topicId": "su19-accounting-systems",
+    "stem": "Human resources and payroll are separate departments.\nWhich of the following combinations provides\nthe best segregation of duties?",
+    "choices": [
+      "Human resources reviews and submits payroll hours to payroll\nfor processing. Payroll updates the payroll records.",
+      "Human resources adds employees. Payroll processes hours\nand enters employee bank account numbers. Paychecks are\nautomatically deposited in employees’ bank accounts.",
+      "Human resources is responsible for hiring, firing, and changing\npay rates and deductions. Payroll approves hours worked and\nauthorizes overtime.",
+      "Payroll adds employees and enters employees’ bank account\nnumbers, but processes hours only as approved by human\nresources. Paychecks are automatically deposited in\nemployees’ bank accounts."
+    ],
+    "answerIndex": 1,
+    "explanation": "The functions of transaction authorization (human resources)\nand recording (payroll) should be segregated to minimize\nopportunities for fraud. Furthermore, automatic check deposit\nreduces asset custody risk.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 30,
+    "page": 1232,
+    "topicId": "su19-accounting-systems",
+    "stem": "Management is concerned about the potential for unauthorized\nchanges in the payroll. Which of the following is the proper\norganizational procedure to prevent such unauthorized\nchanges?",
+    "choices": [
+      "Payroll reconciles clock cards and job time tickets.",
+      "Paychecks are distributed by human resources.",
+      "Human resources authorizes the hiring and pay rates of all\nemployees.",
+      "Bank transfers for payroll and payroll taxes are executed by\naccounts payable."
+    ],
+    "answerIndex": 2,
+    "explanation": "Human resources is responsible for authorizing and executing\nemployee transactions, such as hiring, firing, and changing\npay rates and deductions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 31,
+    "page": 1233,
+    "topicId": "su19-accounting-systems",
+    "stem": "Clock cards and job time tickets are reconciled before a\nsummary of hours worked by job and hours worked by\nemployees are forwarded to payroll. What control is embedded\nin the reconciliation process?",
+    "choices": [
+      "The process ensures that employees are paid only for actual\nhours worked.",
+      "The process ensures that employees are paid the proper\namount.",
+      "The process ensures that employees worked only authorized\nhours.",
+      "The process ensures that employees are authorized to work."
+    ],
+    "answerIndex": 0,
+    "explanation": "To ensure that employees are paid only for actual hours\nworked, timekeeping reconciles the clock cards and job time\ntickets after they are approved by production supervisors.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 32,
+    "page": 1233,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following controls is most effective in providing\nassurance that recorded purchases are free of material errors?",
+    "choices": [
+      "Receiving compares the quantity ordered on purchase orders\nwith the quantity received on the packing slip.",
+      "Purchases are approved before ordering from the vendor.",
+      "Receiving reports require the signature of the individual who\nauthorized the purchase.",
+      "Accounts payable compares the receiving report to the\npurchase order."
+    ],
+    "answerIndex": 3,
+    "explanation": "Accounts payable matches the purchase requisition, purchase\norder, and receiving report and determines their accuracy.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 33,
+    "page": 1234,
+    "topicId": "su19-accounting-systems",
+    "stem": "In a well-designed internal control system, the same employee\nmay be permitted to",
+    "choices": [
+      "Locate authorized vendors and prepare purchase orders.",
+      "Prepare receiving reports and approve purchase orders.",
+      "Approve vouchers for payment and access unused purchase\norders.",
+      "Prepare purchase requisitions and update general ledger."
+    ],
+    "answerIndex": 0,
+    "explanation": "Purchasing locates an authorized vendor in the vendor file,\nprepares a purchase order, and updates the purchase order\nfile.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 34,
+    "page": 1235,
+    "topicId": "su19-accounting-systems",
+    "stem": "The manager of a production line has the authority to order\nand receive replacement parts for all machinery that requires\nperiodic maintenance. The internal auditor received an\nanonymous tip that the manager ordered substantially more\nparts than were necessary from a family member in the parts\nsupply business. The unneeded parts were never delivered.\nInstead, the manager processed receiving documents and\ncharged the parts to machinery maintenance accounts. The\npayments for the undelivered parts were sent to the supplier\nand then divided between the manager and the family\nmember. Which of the following internal controls would\nhave most likely prevented this fraud from occurring?",
+    "choices": [
+      "Establishing predefined spending levels for all vendors during\nthe bidding process.",
+      "Segregating the receiving function from the authorization of\nparts purchases.",
+      "Internal verification of quantities, prices, and the mathematical\naccuracy of vendor invoices.",
+      "Receiving reports are forwarded to purchasing, where they are\nmatched with purchase orders, and then sent to accounts\npayable."
+    ],
+    "answerIndex": 1,
+    "explanation": "Segregating the order authorization and receiving functions\nwould help improve internal control. Discrepancies in the\nnumber of parts received will be discovered if a receiving\nreport had been prepared by an employee other than the one\nordering the goods.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 35,
+    "page": 1236,
+    "topicId": "su19-accounting-systems",
+    "stem": "The initiation of the purchase of materials and supplies is the\nresponsibility of",
+    "choices": [
+      "Purchasing.",
+      "Accounts payable.",
+      "Inventory control.",
+      "Warehouse."
+    ],
+    "answerIndex": 2,
+    "explanation": "Inventory control is responsible for initiating a purchase. It\nprepares a purchase requisition when inventory approaches\nthe reorder point.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 36,
+    "page": 1236,
+    "topicId": "su19-accounting-systems",
+    "stem": "Multiple copies of the purchase order are prepared for\nrecordkeeping and distribution with a copy of the purchase\norder sent to the vendor and one retained by purchasing. In\naddition, for proper informational flow and internal control\npurposes, a version of the purchase order would be distributed\nto all of the following except",
+    "choices": [
+      "Accounts payable.",
+      "Receiving.",
+      "Inventory control.",
+      "Warehouse."
+    ],
+    "answerIndex": 3,
+    "explanation": "Warehouse does not need to receive a copy of the purchase\norder; it receives a copy of the receiving report with the goods.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 37,
+    "page": 1237,
+    "topicId": "su19-accounting-systems",
+    "stem": "A preliminary survey of the purchasing function for an entity\nindicates that\n• Department managers initiate purchase requests that\nmust be approved by the plant superintendent,\n• Purchase orders are typed by the purchasing\ndepartment using prenumbered and controlled forms,\n• Buyers regularly update the official vendor listing as\nnew sources of supply become known,\n•    Rush orders can be placed with a vendor by telephone\nbut must be followed by a written purchase order\nbefore delivery can be accepted, and\n• Receiving sends the receiving report and packing slip\nto inventory control before updating inventory records.\nOne possible fault of this system is that",
+    "choices": [
+      "Purchases could be made from a vendor controlled by a buyer\nat prices higher than normal.",
+      "Unauthorized purchases can be made by department\nmanagers.",
+      "Inventory may be updated before goods are actually received.",
+      "Goods may be received before a purchase order is prepared."
+    ],
+    "answerIndex": 0,
+    "explanation": "A risk exposure typical of the purchasing function is that\npurchases may be made from vendors with respect to whom\nbuyers or other employees have a conflict of interest. The\nresult may be excessive prices or amounts, or poor quality of\ngoods and services acquired. Accordingly, additions to the\nvendor file should be authorized at an appropriate level and\nnot by the buyers. Similarly, bidders’ lists should be approved\nby supervisory personnel.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 38,
+    "page": 1239,
+    "topicId": "su19-accounting-systems",
+    "stem": "Before goods can be shipped, which of the following steps in\nthe sales-receivables process must occur?",
+    "choices": [
+      "Billing completes an invoice for the goods and mails it to the\ncustomer.",
+      "Accounts receivable posts the transaction to the accounts\nreceivable subsidiary ledger.",
+      "Inventory control updates inventory records for the goods to be\nshipped.",
+      "The shipping copy of the sales order is matched to the packing\nslip."
+    ],
+    "answerIndex": 3,
+    "explanation": "Shipping must verify that the packing slip and goods received\nfrom warehouse match the approved sales order before goods\nare shipped.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 39,
+    "page": 1239,
+    "topicId": "su19-accounting-systems",
+    "stem": "An auditor wants to confirm that every item shipped has an\nassociated sales order. From what source will the auditor take\nhis or her sample?",
+    "choices": [
+      "Packing slips.",
+      "Accounts receivable subsidiary ledger.",
+      "Invoices.",
+      "Sales orders."
+    ],
+    "answerIndex": 0,
+    "explanation": "The auditor should select the sample from all goods that have\nbeen shipped. A packing slip and a bill of lading are created\nfor every good that has been shipped. Thus, the auditor\nshould sample, from shipping, copies of packing slips to trace\nthe existence of associated sales orders.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 40,
+    "page": 1240,
+    "topicId": "su19-accounting-systems",
+    "stem": "Billing matches the sales order to the shipping copy it holds.\nThis procedure ensures that all",
+    "choices": [
+      "Goods shipped are charged to the proper customer account.",
+      "Goods shipped are invoiced to customers.",
+      "Shipments are made only to customers with sufficient credit.",
+      "Shipments contain the correct goods."
+    ],
+    "answerIndex": 1,
+    "explanation": "Billing should receive a copy of the sales order from shipping\nand compare that to the invoice copy to ensure that the\ninvoice has the correct information and that all goods shipped\nare billed to customers appropriately.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 41,
+    "page": 1241,
+    "topicId": "su19-accounting-systems",
+    "stem": "Organizational independence is required in the processing of\ncustomers’ orders in order to maintain an internal control\nstructure. Which one of the following situations is not a proper\nsegregation of duties in the processing of orders from\ncustomers?",
+    "choices": [
+      "Approval by credit of a sales order prepared by sales.",
+      "Shipping of goods by shipping that have been retrieved from\nstock by the warehouse.",
+      "Approval of a sales credit memo because of a product return\nby sales and with subsequent posting to the customer’s\naccount by accounts receivable.",
+      "Invoice preparation by billing and posting to customers’\naccounts by accounts receivable."
+    ],
+    "answerIndex": 2,
+    "explanation": "Allowing a sales employee to approve a credit memo without a\nreceiving report would be unacceptably risky. Sales personnel\ncould overstate sales in one period and then reverse them in\nsubsequent periods. Thus, a copy of the receiving report for\nreturned goods should be sent to billing for the preparation of\na credit memo after approved by a responsible supervisor who\nis independent of sales.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 42,
+    "page": 1242,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following procedures ensures that all inventory\nshipments are billed to customers?",
+    "choices": [
+      "Duties for recording sales transactions and maintaining\ncustomer account balances are separated.",
+      "Sales invoices are prenumbered and are independently\naccounted for and traced to the sales journal.",
+      "An acknowledgment is matched against the packing slip\nbefore the merchandise is pulled by the warehouse.",
+      "Shipping documents are prenumbered and are independently\naccounted for and matched with sales invoices."
+    ],
+    "answerIndex": 3,
+    "explanation": "Shipping documents are prepared at the time of shipment.\nThey are prenumbered to facilitate detection of unrecorded\nshipments. A gap in the sequence of the documents may\nindicate an irregularity. An employee outside of shipping\nshould account for these documents. Sales invoices are\ngenerated by the organization’s computer system at the same\ntime as the shipping documents and should have the same\nnumbers. Thus, every shipping document should be matched\nwith a sales invoice to ensure proper billing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 43,
+    "page": 1243,
+    "topicId": "su19-accounting-systems",
+    "stem": "Upon the receipt of the packing slip from <List A>, inventory\ncontrol should match it with the approved sales order and <List\nB>.\nList A            List B",
+    "choices": [
+      "Shipping          Update the inventory records",
+      "Sales             Prepare the acknowledgment",
+      "Billing          Forward it to billing",
+      "Warehouse         Send the invoice to the customer"
+    ],
+    "answerIndex": 0,
+    "explanation": "Upon the receipt of the packing slip and bill of lading from\nshipping, inventory control matches them with the approved\nsales order and updates the inventory records.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 44,
+    "page": 1243,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following departments most likely would approve\nchanges in pay rates and deductions from employee salaries?",
+    "choices": [
+      "Human resources.",
+      "CFO.",
+      "Controller.",
+      "Payroll."
+    ],
+    "answerIndex": 0,
+    "explanation": "The human resources department provides the authorization\nfor payroll-related transactions, e.g., hiring, termination, and\nchanges in pay rates and deductions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 45,
+    "page": 1244,
+    "topicId": "su19-accounting-systems",
+    "stem": "Of the following, the greatest advantage of a database (server)\narchitecture is",
+    "choices": [
+      "Data redundancy can be reduced.",
+      "Conversion to a database system is inexpensive and can be\naccomplished quickly.",
+      "Multiple occurrences of data items are useful for consistency\nchecking.",
+      "Data security procedures are minimized."
+    ],
+    "answerIndex": 0,
+    "explanation": "In a database system, storage structures are created that\nrender the applications programs independent of the physical\nor logical arrangement of the data. Because separate files for\ndifferent applications programs are unnecessary, data\nredundancy can be substantially reduced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 1,
+    "number": 46,
+    "page": 1244,
+    "topicId": "su19-accounting-systems",
+    "stem": "Which of the following outcomes is a likely benefit of\ninformation technology used for internal control?",
+    "choices": [
+      "Processing of unusual or nonrecurring transactions.",
+      "Enhanced timeliness of information.",
+      "Potential loss of data.",
+      "Recording of unauthorized transactions."
+    ],
+    "answerIndex": 1,
+    "explanation": "The use of information technology typically increases the\ntimeliness of information. Transactions are often recorded in\nreal time, and information is available almost instantaneously.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 1,
+    "page": 1246,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following best characterizes data maintenance in\nthe data life cycle?",
+    "choices": [
+      "The cleansing and enrichment of the data.",
+      "Actually processing all data submitted for processing.",
+      "Keeping data away from unauthorized access.",
+      "Keeping old data in a storage location."
+    ],
+    "answerIndex": 0,
+    "explanation": "Data maintenance often involves cleansing and enrichment of\nthe data.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 2,
+    "page": 1246,
+    "topicId": "su19-data-governance",
+    "stem": "Risk modeling, actuarial modeling, and modeling for\ninvestment decisions are all examples of",
+    "choices": [
+      "Data usage.",
+      "Parallel simulation.",
+      "Data analytics.",
+      "Enrichment of the data."
+    ],
+    "answerIndex": 2,
+    "explanation": "Data analytics can be defined as the creation of data values\nby using inductive logic. It uses modeling, such as risk\nmodeling, actuarial modeling, and modeling for investment\ndecisions, and typically involves using other data as inputs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 3,
+    "page": 1247,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following control activities should be taken to\nreduce the risk of incorrect processing in a newly installed\ncomputerized accounting system?",
+    "choices": [
+      "Segregation of duties.",
+      "Ensure proper authorization of transactions.",
+      "Adequately safeguard assets.",
+      "Independently verify the transactions."
+    ],
+    "answerIndex": 3,
+    "explanation": "Independent verification is an important compensating control\nin the absence of segregation of duties and reduced individual\nauthorization of transactions. A third party performs the\nverification to ensure that the transactions were appropriately\nprocessed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 4,
+    "page": 1248,
+    "topicId": "su19-data-governance",
+    "stem": "Matthews Corp. has changed from a system of recording time\nworked on clock cards to a computerized payroll system in\nwhich employees record time in and out with magnetic cards.\nThe computer system automatically updates all payroll\nrecords. Because of this change,",
+    "choices": [
+      "A generalized computer audit program must be used.",
+      "Part of the audit trail is altered.",
+      "The potential for payroll-related fraud is diminished.",
+      "Transactions must be processed in batches."
+    ],
+    "answerIndex": 1,
+    "explanation": "In a manual payroll system, a paper trail of documents is\ncreated to provide audit evidence that controls over each step\nin processing are in place and functioning. One element of a\ncomputer system that differentiates it from a manual system is\nthat a transaction trail useful for auditing purposes might exist\nonly for a brief time or only in computer-readable form.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 5,
+    "page": 1248,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is an advantage of a computer-based\nsystem for transaction processing over a manual system? A\ncomputer-based system",
+    "choices": [
+      "Does not require as stringent a set of internal controls.",
+      "Will produce a more accurate set of financial statements.",
+      "Will be more efficient at producing financial statements.",
+      "Eliminates the need to reconcile control accounts and\nsubsidiary ledgers."
+    ],
+    "answerIndex": 2,
+    "explanation": "Computer processing permits consistent application of\npredefined business rules and the performance of complex\ncalculations in high volume. Hence, computer processing of\nthe accounting transactions reported in financial statements is\nmore efficient than in a manual system.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 6,
+    "page": 1249,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is most likely a disadvantage for an\nentity that keeps data files prepared by personal computers\nrather than manually prepared files?",
+    "choices": [
+      "Attention is focused on the accuracy of the programming\nprocess rather than errors in individual transactions.",
+      "It is usually easier for unauthorized persons to access and\nalter the files.",
+      "Random error associated with processing similar transactions\nin different ways is usually greater.",
+      "It is usually more difficult to compare recorded accountability\nwith physical count of assets."
+    ],
+    "answerIndex": 1,
+    "explanation": "In a manual system, one individual is assigned responsibility\nfor maintaining and safeguarding the records. However, in a\npersonal computer environment, the data files may be subject\nto change by others without documentation or indication of\nwho made the changes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 7,
+    "page": 1250,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following risks are greater in computerized\nsystems than in manual systems?\nI.   Erroneous data conversion\nII.   Erroneous source document preparation\nIII.    Repetition of errors\nIV.     Concentration of data",
+    "choices": [
+      "I and II.",
+      "II and III.",
+      "I, III, and IV.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 2,
+    "explanation": "Unlike a manual system, a computer system converts data to\nmachine-readable form so that transactions can be processed.\nThis additional step increases the risk of input error. Moreover,\nif an error exists in the program, systematic, repetitive errors\nwill occur in processing transactions. Finally, data are typically\nstored magnetically or optically on disks. This concentration of\ndata increases the risk of loss from natural and other\ndisasters. Source document preparation either precedes\nprocessing or is eliminated altogether in a computerized\nsystem. Thus, the risk of erroneous source document\npreparation in computerized systems is the same as or less\nthan the equivalent risk in manual systems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 8,
+    "page": 1251,
+    "topicId": "su19-data-governance",
+    "stem": "Your firm has recently converted its purchasing cycle from a\nmanual process to an online computer system. Which of the\nfollowing is a probable result associated with conversion to the\nnew automatic system?",
+    "choices": [
+      "Processing errors are increased.",
+      "The firm’s risk exposures are reduced.",
+      "Processing time is increased.",
+      "Traditional duties are less segregated."
+    ],
+    "answerIndex": 3,
+    "explanation": "In a manual system with appropriate internal control, separate\nindividuals are responsible for authorizing transactions,\nrecording transactions, and having custody of assets. These\nchecks and balances prevent fraud and detect inaccurate or\nincomplete transactions. In a computerized environment,\nhowever, this segregation of duties is not always feasible. For\nexample, a computer may print checks, record disbursements,\nand generate information for reconciling the account balance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 9,
+    "page": 1252,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is a key difference in controls when\nchanging from a manual system to a computer system?",
+    "choices": [
+      "Internal control principles change.",
+      "Internal control objectives differ.",
+      "Control objectives are more difficult to achieve.",
+      "Methodologies for implementing controls change."
+    ],
+    "answerIndex": 3,
+    "explanation": "The controls in a manual and in a computerized system are\ngeared toward the same control objectives. Only the design\nand implementation are different.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 10,
+    "page": 1252,
+    "topicId": "su19-data-governance",
+    "stem": "Innovations in IT increase the importance of risk management\nbecause",
+    "choices": [
+      "The objective of complete security is becoming more\nattainable.",
+      "Information system security is continually subject to new\nthreats.",
+      "Closed private systems have proliferated.",
+      "Privacy is a concern for only a very few users."
+    ],
+    "answerIndex": 1,
+    "explanation": "Advances in technology bring new capabilities and, along with\nthem, new vulnerabilities. Because information system\nsecurity is continually subject to new threats, that is, to new\nrisks and exposures, risk assessment and management must\nbe a continual process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 11,
+    "page": 1253,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following characteristics distinguishes computer\nprocessing from manual processing?",
+    "choices": [
+      "Computer processing virtually eliminates the occurrence of\ncomputational error normally associated with manual\nprocessing.",
+      "Errors or fraud in computer processing will be detected soon\nafter their occurrence.",
+      "The potential for systematic error is ordinarily greater in\nmanual processing than in computerized processing.",
+      "Most computer systems are designed so that transaction trails\nuseful for audit purposes do not exist."
+    ],
+    "answerIndex": 0,
+    "explanation": "Computer processing uniformly subjects like transactions to\nthe same processing instructions. Once the program is written\nand tested appropriately, it will perform the task repetitively\nand without error. However, if the program contains an error,\nall transactions will be processed incorrectly.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 12,
+    "page": 1254,
+    "topicId": "su19-data-governance",
+    "stem": "As a result of technological developments facing businesses,",
+    "choices": [
+      "System boundaries are becoming less distinct.",
+      "Internet transactions eliminate the need to monitor data privacy.",
+      "Internet use has spread, and e-business control over user\ninteraction has been simplified.",
+      "Better controls have resulted in a reduction in threats."
+    ],
+    "answerIndex": 0,
+    "explanation": "Organizational system boundaries are becoming indistinct as\nelectronic interactions with suppliers, customers, partners, and\nassociates increase. Thus, CPAs have more difficulty in giving\nassurance about security, control, and privacy.",
+    "answerStatus": "source",
+    "sourceTextStatus": "reconstructed"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 13,
+    "page": 1255,
+    "topicId": "su19-data-governance",
+    "stem": "A company permits employees to work from home using\ncompany-owned laptops. Which of the following competitive\nadvantages does the company most likely obtain as a result of\nthis decision?",
+    "choices": [
+      "Integrity.",
+      "Reliability.",
+      "Availability.",
+      "Confidentiality."
+    ],
+    "answerIndex": 2,
+    "explanation": "Availability is ensuring that the organization’s information\nsystems are up and running so that employees and customers\nare able to access the data they need.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 14,
+    "page": 1255,
+    "topicId": "su19-data-governance",
+    "stem": "What is the first phase of the data life cycle?",
+    "choices": [
+      "Data publication.",
+      "Data maintenance.",
+      "Data capture.",
+      "Data synthesis."
+    ],
+    "answerIndex": 2,
+    "explanation": "The first phase of the data life cycle is to obtain data. It is the\nact of creating information that does not yet exist within the\norganization. Data can be captured by acquiring data from\noutside the organization, through values created within the\norganization, or through the acquisition of data that has\nalready been created by control systems within the\norganization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 15,
+    "page": 1256,
+    "topicId": "su19-data-governance",
+    "stem": "Which one of the following data life cycle phases is defined as\nthe act of creating information that does not yet exist in the\norganization?",
+    "choices": [
+      "Data analytics.",
+      "Data synthesis.",
+      "Data usage.",
+      "Data capture."
+    ],
+    "answerIndex": 3,
+    "explanation": "Data capture is defined as the act of creating information that\ndoes not yet exist within the organization. The primary ways in\nwhich data can be captured include utilizing data, data entry,\nand signal reception.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 16,
+    "page": 1256,
+    "topicId": "su19-data-governance",
+    "stem": "A company obtained property tax reports from the county\nassessor’s office to prepare survey reports for a developer.\nAcquisition of data from outside the organization is included in\nwhich phase of the data life cycle?",
+    "choices": [
+      "Data capture.",
+      "Data set.",
+      "Data publication.",
+      "Data synthesis."
+    ],
+    "answerIndex": 0,
+    "explanation": "One of the primary ways data can be captured is by obtaining\nalready existing data from outside the organization; for\nexample, an organization may buy or otherwise acquire data\nfrom an outside entity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 17,
+    "page": 1257,
+    "topicId": "su19-data-governance",
+    "stem": "The data maintenance phase of the data life cycle can be\ndefined as the",
+    "choices": [
+      "Periodic destruction of documents and other records.",
+      "Inclusion of activities outside the regular data life cycle.",
+      "Supplying of data to the points at which data synthesis and\ndata usage occur.",
+      "Optimization of resource allocations."
+    ],
+    "answerIndex": 2,
+    "explanation": "Data maintenance is the second stage of the data life cycle.\nAfter the data have been captured, data maintenance can be\ndefined as the supplying of data to the points at which data\nsynthesis and data usage occur.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 18,
+    "page": 1258,
+    "topicId": "su19-data-governance",
+    "stem": "What term is defined as the processing of data for the\nenterprise without deriving any value from it?",
+    "choices": [
+      "Data functioning.",
+      "Data capture.",
+      "Data entry.",
+      "Data maintenance."
+    ],
+    "answerIndex": 3,
+    "explanation": "Data maintenance involves processing data without yet\nderiving any value from it for the enterprise.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 19,
+    "page": 1258,
+    "topicId": "su19-data-governance",
+    "stem": "Data synthesis can best be defined as the",
+    "choices": [
+      "Evolution of data under both internal and external factors.",
+      "Creation of data values using inductive logic.",
+      "Process of analyzing data from different perspectives and\nsummarizing it into useful information.",
+      "Application of data to tasks of the enterprise."
+    ],
+    "answerIndex": 1,
+    "explanation": "Data synthesis can be defined as the creation of data values\nby using inductive logic. It typically involves using other data\nas inputs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 20,
+    "page": 1259,
+    "topicId": "su19-data-governance",
+    "stem": "The data usage phase of the data life cycle can be\ncharacterized as the",
+    "choices": [
+      "Inclusion of data in monthly statements to customers.",
+      "Processing of data in a logical order.",
+      "Process of supplying the data to the points where they are\nanalyzed.",
+      "Application of data to tasks the enterprise needs to run and\nmanage itself."
+    ],
+    "answerIndex": 3,
+    "explanation": "The data usage phase uses data in support of the enterprise.\nThis stage can be defined as the application of data to tasks\nthe enterprise needs to run and manage itself.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 21,
+    "page": 1259,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is a data governance challenge?",
+    "choices": [
+      "Regulatory or contractual constraints.",
+      "Overseeing the system of internal control.",
+      "Achieving an entity’s objectives relating to operations,\nreporting, and compliance.",
+      "Preparing an integrated report."
+    ],
+    "answerIndex": 0,
+    "explanation": "Data usage may have regulatory or contractual constraints on\nhow the data is used. The role of data governance may be\nchallenged to ensure that legalities are observed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 22,
+    "page": 1260,
+    "topicId": "su19-data-governance",
+    "stem": "A new contract was signed between ABC Corporation and\nXYZ Software. The contract had several contractual\nconstraints regarding how data are used. Ensuring legalities\nare observed in this contract is the role of",
+    "choices": [
+      "Senior management.",
+      "Data governance.",
+      "Outsourced service providers.",
+      "Resource management."
+    ],
+    "answerIndex": 1,
+    "explanation": "The role of data governance is to ensure that legalities are\nobserved; for example, there may be regulatory or contractual\nconstraints on how data may be used.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 23,
+    "page": 1261,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is the best example of data publication?",
+    "choices": [
+      "Releasing the cost report to employees.",
+      "Preparing financial statements for the use of senior\nmanagement.",
+      "Making the research data available on a company website for\nuse by others.",
+      "Making the data available on the intranet to the actuarial\ndepartment to process."
+    ],
+    "answerIndex": 2,
+    "explanation": "Data publication refers to the sending of data to a location\noutside the organization. For example, making them available\nto customers through a company website.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 24,
+    "page": 1261,
+    "topicId": "su19-data-governance",
+    "stem": "The issuance of monthly statements to customers is an\nexample of which phase of the data life cycle?",
+    "choices": [
+      "Formal contract.",
+      "Data activity.",
+      "Value delivery.",
+      "Data publication."
+    ],
+    "answerIndex": 3,
+    "explanation": "Data publication refers to the sending of data to a location\noutside the organization, for example, in monthly statements\nto customers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 25,
+    "page": 1262,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following best underlines the need for data\narchival?",
+    "choices": [
+      "Eventually, the end of lifetime usefulness for the data will be\nencountered.",
+      "Keeping and maintaining records for a long time is costly.",
+      "Constant changes in technology require constant\nreplenishment.",
+      "Data factors affect the ability of the organization to create\nvalue over time."
+    ],
+    "answerIndex": 0,
+    "explanation": "A single data value may be used for quite some time, but the\nend of its lifetime usefulness will be encountered eventually.\nAt that point, the organization should archive the data value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 26,
+    "page": 1263,
+    "topicId": "su19-data-governance",
+    "stem": "The stage of copying data to a location where they are stored\nin case they are ever needed again in the data life cycle is\ncalled",
+    "choices": [
+      "Data maintenance.",
+      "Data archival.",
+      "Data storage.",
+      "Data purging."
+    ],
+    "answerIndex": 1,
+    "explanation": "Data archival involves copying data to a location where they\nare stored in case they are ever needed again. At the same\ntime, the data are removed from all active environments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 27,
+    "page": 1263,
+    "topicId": "su19-data-governance",
+    "stem": "Storing a data item in a location where there is no regular\nmaintenance or usage indicates that the",
+    "choices": [
+      "Data is at the end of its data life cycle.",
+      "Data has been purged from the enterprise.",
+      "Data has been removed from all active environments.",
+      "Data is at the beginning of its data life cycle."
+    ],
+    "answerIndex": 2,
+    "explanation": "Data archival involves copying the data to a location where it\nis stored in case it is ever needed again. A data archive is a\nlocation where data are stored, but there is no regular\nmaintenance and probably little usage.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 28,
+    "page": 1264,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following phases refers to the end of the data life\ncycle, when data copies are entirely removed from an\nenterprise?",
+    "choices": [
+      "Data archival.",
+      "Data deletion.",
+      "Data elimination.",
+      "Data purging."
+    ],
+    "answerIndex": 3,
+    "explanation": "Purging data removes its copies at the end of the life cycle.",
+    "answerStatus": "inferred"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 29,
+    "page": 1264,
+    "topicId": "su19-data-governance",
+    "stem": "Disposing of all copies of data is difficult and results in a\nchallenge for",
+    "choices": [
+      "Data governance.",
+      "Data publication.",
+      "Data archival.",
+      "Data maintenance."
+    ],
+    "answerIndex": 0,
+    "explanation": "It may be difficult to prove that a full purge of data has actually\noccurred, which poses a challenge in satisfying data\ngovernance requirements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 30,
+    "page": 1265,
+    "topicId": "su19-data-governance",
+    "stem": "Twice a year, a company holds “office cleaning” days;\nemployees use the time to purge old and unneeded files and\nto archive records and send them to storage. This is an\nexample of the organization’s",
+    "choices": [
+      "Data maintenance.",
+      "Internal control environment.",
+      "Database management system.",
+      "Record retention policy."
+    ],
+    "answerIndex": 3,
+    "explanation": "It is important for every organization to have a formal record\nretention policy (sometimes referred to as a records\nmanagement policy), which provides for the retention and\nperiodic destruction of documents and other records.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 31,
+    "page": 1265,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is the least likely explanation for having\na formal record retention policy?",
+    "choices": [
+      "To control costs of storing records.",
+      "To comply with minimum retention periods imposed by law.",
+      "To destroy evidence of noncompliance and fraud.",
+      "To periodically destroy documents."
+    ],
+    "answerIndex": 2,
+    "explanation": "Illegal activities, such as noncompliance and fraud, are the\nleast likely explanation for having a formal record retention\npolicy. Once litigation is likely, it is too late to establish a\nrecords retention policy or to begin complying with a policy\nthat was not followed in the past.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 32,
+    "page": 1266,
+    "topicId": "su19-data-governance",
+    "stem": "An organization’s policy regarding the retention and periodic\ndestruction of documents and other records is the definition of",
+    "choices": [
+      "Records compliance.",
+      "Cleansing of records.",
+      "Record archival.",
+      "Records management."
+    ],
+    "answerIndex": 3,
+    "explanation": "A policy that provides for the retention and periodic destruction\nof documents and other records is known as a formal record\nretention policy or a records management policy.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 33,
+    "page": 1267,
+    "topicId": "su19-data-governance",
+    "stem": "All of the following are correct statements associated with\nkeeping and maintaining records for an organization except",
+    "choices": [
+      "Tax records are available to prove lack of fraud.",
+      "Unneeded record retention costs are created.",
+      "Records that may be needed for a future legal case are\nretained.",
+      "It complies with data purging requirements."
+    ],
+    "answerIndex": 1,
+    "explanation": "Keeping and maintaining adequate records and storing them\nfor agreed-upon lengths of time should lead to lower record\nretention costs for an organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 34,
+    "page": 1267,
+    "topicId": "su19-data-governance",
+    "stem": "Storing records longer than needed can create an enormous\nchallenge when a company",
+    "choices": [
+      "Is suspected of having filed a fraudulent tax return.",
+      "Needs to find relevant records for a legal dispute.",
+      "Is not part of a regulated industry.",
+      "Periodically destroys old documents."
+    ],
+    "answerIndex": 1,
+    "explanation": "If a company becomes involved in a legal dispute, the task of\ngoing through a voluminous amount of records to produce\nrelevant material can become an enormous and costly\nchallenge. Additionally, keeping and maintaining too many\nrecords, or storing them longer than needed, can create\nunneeded costs for an organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 35,
+    "page": 1268,
+    "topicId": "su19-data-governance",
+    "stem": "An employee was in her third week of searching through 10\nyears of records to find supporting documents for meal\nexpenses deducted on last year’s tax return. Which of the\nfollowing policies would most likely have prevented this\nsituation from occurring?",
+    "choices": [
+      "Database management policy.",
+      "Data maintenance policy.",
+      "Formal record retention policy.",
+      "Information security policy."
+    ],
+    "answerIndex": 2,
+    "explanation": "A formal record retention policy provides for the retention and\nperiodic destruction of documents and other records. The task\nof going through a voluminous amount of records to produce\nrelevant material can become an enormous and costly\nchallenge. Keeping and maintaining too many records, or\nstoring them longer than needed, can create unneeded costs\nfor an organization. Additionally, the inability to produce\ncertain documents can lead to severe penalties and fines.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 36,
+    "page": 1269,
+    "topicId": "su19-data-governance",
+    "stem": "Which of the following is not a reason to have a formal record\nretention policy?",
+    "choices": [
+      "To meet minimum holding periods imposed by law.",
+      "To protect sensitive information from unauthorized disclosure.",
+      "To lower costs for an organization.",
+      "To enhance the usefulness of records."
+    ],
+    "answerIndex": 3,
+    "explanation": "A formal record retention policy only facilitates the\nmanagement of the records. It does not enhance the\nusefulness of records. An organization’s formal policy would\ninclude record categorization, record location, and a retention\nschedule with guidelines for the length of time to keep records\nbefore they are destroyed.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 37,
+    "page": 1269,
+    "topicId": "su19-data-governance",
+    "stem": "It is too late for an organization to establish a records retention\npolicy",
+    "choices": [
+      "Once litigation is likely.",
+      "When a new regulation is enacted.",
+      "Upon relocation to a new building.",
+      "When minimum retention periods are imposed by law."
+    ],
+    "answerIndex": 0,
+    "explanation": "Once litigation is likely, it is too late to establish a records\nretention policy or to begin complying with a policy that was\nnot followed in the past. Records of an organization become a\nfocal point when the organization becomes the subject of\nlitigation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 38,
+    "page": 1270,
+    "topicId": "su19-data-governance",
+    "stem": "When company documents are destroyed after a legal case\npursuant to a well-established records retention policy, that is\nthe best defense for the",
+    "choices": [
+      "Keeping and maintaining of too many records.",
+      "Assumption the organization complied with its duty.",
+      "Unauthorized access by parties both internal and external to\nthe organization.",
+      "Return of client files."
+    ],
+    "answerIndex": 1,
+    "explanation": "A written records retention policy that the organization\nadheres to is the best defense for documents destroyed.\nWithout a policy, a company could be accused of destroying\nevidence.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 2,
+    "number": 39,
+    "page": 1271,
+    "topicId": "su19-data-governance",
+    "stem": "A corporation recently destroyed thousands of documents after\nreceiving an email from headquarters reminding the\norganization of the document disposal policy. Yesterday, the\ncorporation received a subpoena issued by the SEC for\ndocuments that had been destroyed. A court may assume the\ncorporation complied with its duty in destroying the documents\nunder which of the following circumstances?",
+    "choices": [
+      "Every year in May, the corporation destroys documents\npursuant to the document disposal policy after receiving an\nemail from headquarters.",
+      "Receiving a reminder email to destroy documents from\nheadquarters was unprecedented.",
+      "Operations were shut down while documents were destroyed.\nAfter 20 years, the corporation had never done anything like\nthis.",
+      "Headquarters regularly destroys documents every 3 years\nduring the slow season. However, the recent destruction of\ndocuments occurred during peak season and was out of the\nordinary."
+    ],
+    "answerIndex": 0,
+    "explanation": "If the records needed for a particular legal case have been\ndestroyed pursuant to a well-established records retention\npolicy that is routinely complied with, often the courts may\nassume the organization complied with its duty.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 1,
+    "page": 1273,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following considerations is least likely to affect\nhow an organization implements a system of internal control?",
+    "choices": [
+      "The ratio of full-time employees to part-time employees.",
+      "The size of the organization.",
+      "Technology innovation.",
+      "The use of outsourced service providers."
+    ],
+    "answerIndex": 0,
+    "explanation": "The ratio of full-time employees to part-time employees will not\naffect the organizational goals of the entity, nor is it likely to\nchange how procedures and processes are performed\nthroughout the business. As a result, the ratio is not likely to\naffect the implementation of a system of internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 2,
+    "page": 1273,
+    "topicId": "su19-coso-data",
+    "stem": "An internal auditor is evaluating the internal control system in\nplace for an organization’s cash-receipts cycle. According to\nthe existing controls in place, the credit manager is responsible\nfor authorizing the write-off of any debt that is deemed to be\nuncollectible. However, the auditor notices that two of the\ncredit manager’s assistants have been authorizing the write-off\nof bad debt without the credit manager’s knowledge. Upon\nfurther investigation, the auditor discovers that the assistants\nhave been authorizing the write-off of bad debt in a manner\nthat benefits them personally. The inherent limitation of internal\ncontrol best illustrated by this scenario is",
+    "choices": [
+      "Human error.",
+      "Collusion.",
+      "Management override.",
+      "External events."
+    ],
+    "answerIndex": 1,
+    "explanation": "Collusion is when two or more individuals conspire to commit\nan act that violates a set of standards, usually for the personal\nbenefit of the perpetrators. In this scenario, two assistants\nviolated the existing set of controls by authorizing debt write-\noffs for their own personal benefit. Therefore, the limitation\nbest illustrated by the scenario is collusion.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 3,
+    "page": 1274,
+    "topicId": "su19-coso-data",
+    "stem": "An entity requires all employees to submit expense reports\nbefore reimbursement of their expenses. The CEO submits\nreceipts to the accounts payable clerk who prepares a\npayment voucher and a check. This clerk uses the CEO’s\ncheck-signing machine to sign the check. The voucher and the\ncheck are then sent to the CFO’s office. The CEO and CFO\ncan post adjusting entries to the accounts payable, cash\npayments, and general journals. Which of the following is\nthe most likely inherent limitation of the company’s internal\ncontrols?",
+    "choices": [
+      "Collusion.",
+      "Management override.",
+      "Unsuitable objectives for internal control.",
+      "External events beyond the organization’s control."
+    ],
+    "answerIndex": 1,
+    "explanation": "Even if the controls are effective (accounts payable and cash\npayments appropriately checked and determined the validity\nof the expense), the CEO may override the control by having\nthe ability to manipulate the accounting records.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 4,
+    "page": 1275,
+    "topicId": "su19-coso-data",
+    "stem": "Jim opens the mail in the mailroom and records all checks\nreceived on the daily remittance list. He then gives the list and\nthe checks to Sally, the accounts receivable clerk, so she can\nrecord the payments in the accounts receivable subsidiary\nledger. Jim and Sally agreed to follow this procedure to\nstreamline the controls over cash receipts. Which of the\nfollowing is the most likely inherent limitation of the company’s\ninternal controls?",
+    "choices": [
+      "External events beyond the organization’s control.",
+      "Management override.",
+      "Collusion.",
+      "Unsuitable objectives for internal control."
+    ],
+    "answerIndex": 2,
+    "explanation": "The mailroom employee and the accounts receivable clerk\nagreed to circumvent the controls over cash receipts. This\nmay create opportunities to embezzle cash by not recording\nthe receipts. The mailroom should (1) separate checks from\nremittance advices (documents that identify customers,\ninvoice numbers, and amounts), (2) prepare the daily list of\nchecks received, and (3) send the receipts and a copy of the\nlist to the cash receipts function for deposit. The accounts\nreceivable function should receive only the remittance advices\nfor posting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 5,
+    "page": 1276,
+    "topicId": "su19-coso-data",
+    "stem": "A computer system’s encryption protocol requires staff\nmembers to enter a different random set of letters, numbers,\nand other symbols every morning. Employees often use easily\nmemorable sets of symbols, such as their birth dates and\nphone numbers. Which of the following is the most likely\ninherent limitation of the company’s internal controls?",
+    "choices": [
+      "Management override.",
+      "Breakdowns.",
+      "External events beyond an organization’s control.",
+      "Unsuitable objectives for internal control."
+    ],
+    "answerIndex": 1,
+    "explanation": "Controls may fail due to breakdowns (e.g., employee\nmisunderstanding, carelessness, or fatigue). Employees\nfailing to follow the company’s control policies (i.e., using\nphone numbers or birth dates as passwords) due to\ncarelessness or misunderstanding is an example of\nbreakdowns.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 6,
+    "page": 1277,
+    "topicId": "su19-coso-data",
+    "stem": "The COO negotiated a significant sales transaction outside the\nordinary course of the entity’s business with a corporation in a\ndifferent industry. The COO is a director of the other entity.\nThe terms and conditions of the undisclosed agreement\ndiffered from the entity’s standard sales contracts. Which of\nthe following is the most likely inherent limitation of the\ncompany’s internal controls?",
+    "choices": [
+      "Breakdowns.",
+      "Management override.",
+      "External events beyond the organization’s control.",
+      "Unsuitable objectives for internal control."
+    ],
+    "answerIndex": 1,
+    "explanation": "The COO’s ability to negotiate an undisclosed agreement\noutside the ordinary course of business with a related party is\nan example of management override.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 7,
+    "page": 1278,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following parties have roles or responsibilities in\nthe internal control of an organization?\nI.   Compensation committee\nII.   Customers and suppliers\nIII.    Employees\nIV.     Regulators\nV.     Senior management\nVI.     Outsourced IT functions",
+    "choices": [
+      "I and V.",
+      "II, IV, and VI.",
+      "I, III, V, and VI.",
+      "I, II, III, IV, V, and VI."
+    ],
+    "answerIndex": 3,
+    "explanation": "Both internal parties (including the compensation committee,\nemployees, and senior management) and external parties\n(including customers, suppliers, regulators, and outsourced IT\nfunctions) have roles or responsibilities in the internal control\nof an organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 8,
+    "page": 1279,
+    "topicId": "su19-coso-data",
+    "stem": "Senior management is primarily responsible for",
+    "choices": [
+      "Ensuring that the internal and external auditors oversee the\ninternal control system.",
+      "Implementing and monitoring controls designed by the internal\nauditors.",
+      "Designing and operating a control system that provides\nreasonable assurance that established objectives and goals\nwill be achieved.",
+      "Establishing a proper ethical culture."
+    ],
+    "answerIndex": 3,
+    "explanation": "Senior management sets the tone at the top and is primarily\nresponsible for establishing a proper ethical culture.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 9,
+    "page": 1280,
+    "topicId": "su19-coso-data",
+    "stem": "The board of directors is responsible for",
+    "choices": [
+      "Providing the first line of defense for effective risk\nmanagement.",
+      "Defining expectations about transparency and accountability.",
+      "Evaluating the adequacy and effectiveness of controls.",
+      "Examining and reporting on internal control."
+    ],
+    "answerIndex": 1,
+    "explanation": "The board of directors defines expectations about integrity,\nethical values, transparency, and accountability through its\nauthority.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 10,
+    "page": 1280,
+    "topicId": "su19-coso-data",
+    "stem": "Internal auditors are responsible for",
+    "choices": [
+      "Safeguarding assets.",
+      "Designing or drafting procedures for information systems.",
+      "Assessing the risk exposures in relation to the organization’s\noperations regarding the safeguarding of assets.",
+      "Operating a control system that provides reasonable\nassurance that objectives will be achieved."
+    ],
+    "answerIndex": 2,
+    "explanation": "Internal auditors are responsible for evaluating the adequacy\nand effectiveness of controls in responding to risks in the\nentity’s oversight, operations, and information systems.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 11,
+    "page": 1281,
+    "topicId": "su19-coso-data",
+    "stem": "In a small public company that has few levels of management\nwith wide spans of control, each of the following mitigates\nmanagement override of controls, except",
+    "choices": [
+      "Establishing an effective and anonymous whistleblower\nprogram with which employees can feel comfortable reporting\nany irregularities.",
+      "Establishing a corporate culture in which integrity and ethical\nvalues are highly appreciated.",
+      "Having two officers who significantly influence management\nand operations.",
+      "Having an effective internal auditor function."
+    ],
+    "answerIndex": 2,
+    "explanation": "Management override of controls occurs when the actions of\nmanagement (e.g., officers) are not consistent with\nestablished control activities. Officers are expected to\ninfluence management and operations. However, when such\ninfluence is significant and concentrated in the hands of few,\nthere is an increased risk of management override of controls.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 12,
+    "page": 1282,
+    "topicId": "su19-coso-data",
+    "stem": "Of the following reasons to establish internal control, which\nis the most comprehensive?",
+    "choices": [
+      "Safeguard the resources of the organization.",
+      "Provide reasonable assurance that the objectives of the\norganization are achieved.",
+      "Encourage compliance with organizational objectives.",
+      "Ensure the accuracy, reliability, and timeliness of information."
+    ],
+    "answerIndex": 1,
+    "explanation": "The COSO model broadly defines internal control as a\n“process, effected by an entity’s board of directors,\nmanagement, and other personnel, designed to provide\nreasonable assurance regarding the achievement of\nobjectives in the following categories: (1) effectiveness and\nefficiency of operations, (2) reliability of financial reporting, and\n(3) compliance with applicable laws and regulations.”",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 13,
+    "page": 1282,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following represents an example of an inherent\nlimitation of internal controls?",
+    "choices": [
+      "Bank reconciliations are not performed on a timely basis.",
+      "The CEO can override a control and request a check with no\npurchase order.",
+      "Customer credit checks are not performed.",
+      "Shipping documents are not matched to sales invoices."
+    ],
+    "answerIndex": 1,
+    "explanation": "Inherent limitations may exist and should be considered by the\nauditor. Human judgment can be faulty, controls can be\ncircumvented by collusion, and management may\ninappropriately override controls. Thus, the CEO’s ability to\nrequest a check with no purchase order is possible because of\nan inherent limitation. It is an override of the internal control by\nmanagement.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 14,
+    "page": 1283,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following is an inherent limitation in internal\ncontrol?",
+    "choices": [
+      "Incompatible duties.",
+      "Lack of segregation of duties.",
+      "Faulty human judgment.",
+      "Lack of an audit committee."
+    ],
+    "answerIndex": 2,
+    "explanation": "Human judgment is faulty, and controls may fail because of\nhuman error.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 15,
+    "page": 1284,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following is an inherent limitation of internal\ncontrol?",
+    "choices": [
+      "Judgmental sampling.",
+      "Collusion.",
+      "Segregation of duties.",
+      "Employee peer review."
+    ],
+    "answerIndex": 1,
+    "explanation": "Two or more people may collude, or management may\noverride internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 16,
+    "page": 1284,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following would not be considered an inherent\nlimitation of the potential effectiveness of an entity’s internal\ncontrol?",
+    "choices": [
+      "Incompatible duties.",
+      "Management override.",
+      "Faulty judgment.",
+      "Collusion among employees."
+    ],
+    "answerIndex": 0,
+    "explanation": "Internal control has inherent limitations. The performance of\nincompatible duties, however, is a failure to assign different\npeople the functions of authorization, recording, and asset\ncustody, not an inherent limitation of internal control.\nSegregation of duties is a category of control activities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 17,
+    "page": 1285,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following best describes an inherent limitation\nthat should be recognized by an auditor when considering the\npotential effectiveness of internal control?",
+    "choices": [
+      "Controls, whether manual or automated, whose effectiveness\ndepends on segregation of duties can be circumvented by\ncollusion.",
+      "The competence and integrity of client personnel provides an\nenvironment conducive to control and provides assurance that\neffective control will be achieved.",
+      "Procedures designed to assure the execution and recording of\ntransactions in accordance with proper authorizations are\neffective against fraud perpetrated by management.",
+      "The benefits expected to be derived from effective internal\ncontrol usually do not exceed the costs of such control."
+    ],
+    "answerIndex": 0,
+    "explanation": "One of the inherent limitations of internal control is that it can\nbe circumvented by collusion among persons both within and\noutside the entity. Thus, a control based on segregation of\nduties will be ineffective if a person in a position to commit\nfraud colludes with a person who can conceal it.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 18,
+    "page": 1286,
+    "topicId": "su19-coso-data",
+    "stem": "Management’s aggressive attitude toward financial reporting\nand its emphasis on meeting projected profit goals most likely\nwould significantly influence an entity’s control environment\nwhen",
+    "choices": [
+      "The audit committee is active in overseeing the entity’s\nfinancial reporting policies.",
+      "External policies established by parties outside the entity affect\nits accounting practices.",
+      "Management is dominated by one individual who is also a\nshareholder.",
+      "Internal auditors have direct access to the board of directors\nand entity management."
+    ],
+    "answerIndex": 2,
+    "explanation": "Management’s philosophy and operating style is one factor\naffecting the control environment as described in the COSO\nmodel for internal control. Such characteristics as\nmanagement’s attitudes and actions toward financial reporting\nand its emphasis on meeting budget, profit, and other goals\nhave a significant influence on the control environment,\nespecially when management is dominated by one or a few\nindividuals. When incentives or pressures are present to\nachieve certain performance goals, the auditor should\nheighten his or her concern about the possibility of fraud.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 19,
+    "page": 1287,
+    "topicId": "su19-coso-data",
+    "stem": "According to COSO, which of the following is\nthe most effective method to transmit a message of ethical\nbehavior throughout an organization?",
+    "choices": [
+      "Demonstrating appropriate behavior by example.",
+      "Strengthening internal audit’s ability to deter and report\nimproper behavior.",
+      "Removing pressures to meet unrealistic targets, particularly for\nshort-term results.",
+      "Specifying the competence levels for every job in an\norganization and translating those levels to requisite\nknowledge and skills."
+    ],
+    "answerIndex": 0,
+    "explanation": "Through words and actions, management communicates its\nattitude toward integrity and ethical values. In this way,\nmanagement sets the tone at the top. Demonstrating\nappropriate behavior by example is the most effective method\nto transmit a message of ethical behavior throughout an\norganization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 20,
+    "page": 1288,
+    "topicId": "su19-coso-data",
+    "stem": "A senior executive of an international organization who wishes\nto demonstrate the importance of the security of company\ninformation to all team members should",
+    "choices": [
+      "Visibly participate in a global information security campaign.",
+      "Allocate additional budget resources for external audit\nservices.",
+      "Review and accept the information security risk assessments\nin a staff meeting.",
+      "Refer to the organization’s U.S. human resources policies on\nprivacy in a company newsletter."
+    ],
+    "answerIndex": 0,
+    "explanation": "Through words and actions, management communicates its\nattitude toward integrity and ethical values. In this way,\nmanagement sets the tone at the top. By visibly participating\nin a global information security campaign, management’s\ncommitment to the security of company information is evident\nto all team members.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 21,
+    "page": 1289,
+    "topicId": "su19-coso-data",
+    "stem": "Internal controls are likely to fail for any of the following\nreasons, except",
+    "choices": [
+      "They are not designed and implemented properly at the outset.",
+      "They are designed and implemented properly as static\ncontrols, but the environment in which they operate changes.",
+      "They are designed and implemented properly, but their\noperation changes in some way.",
+      "They are designed and implemented properly, and their design\nchanges as processes change."
+    ],
+    "answerIndex": 3,
+    "explanation": "After the internal control is designed and implemented, the\ninherent design of the control will not change. Therefore,\ninternal controls are not likely to fail because their design\nchanges. However, internal controls may fail due to\n(1) established objectives not suitable for internal control,\n(2) failures due to human judgment and errors,\n(3) breakdowns and employee misunderstanding,\n(4) management override, (5) collusion, and (6) external\nevents.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 22,
+    "page": 1290,
+    "topicId": "su19-coso-data",
+    "stem": "The primary responsibility for establishing and maintaining\ninternal control rests with",
+    "choices": [
+      "The external auditor.",
+      "Management.",
+      "The controller.",
+      "The treasurer."
+    ],
+    "answerIndex": 1,
+    "explanation": "Establishing and maintaining internal control is the\nresponsibility of management. Internal control is intended to\nprovide reasonable assurance that the entity’s objectives are\nachieved. Achievement of these objectives is the basic\nfunction of management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 23,
+    "page": 1290,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following factors would most likely be considered\nan inherent limitation to an entity’s internal control?",
+    "choices": [
+      "The complexity of the information processing system.",
+      "Human judgment in the decision making process.",
+      "The ineffectiveness of the board of directors.",
+      "The lack of management incentives to improve the control\nenvironment."
+    ],
+    "answerIndex": 1,
+    "explanation": "Human judgment is faulty, and controls may fail because of\nsimple error or mistake. For example, design changes for an\nautomated order entry system may be faulty because the\ndesigners did not understand the system or because\nprogrammers did not correctly code the design changes.\nErrors also may arise when automated reports are\nmisinterpreted by users. Furthermore, manual or automated\ncontrols can be circumvented by collusion, and management\nmay inappropriately override internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 24,
+    "page": 1291,
+    "topicId": "su19-coso-data",
+    "stem": "Which of the following items is an example of an inherent\nlimitation in an internal control system?",
+    "choices": [
+      "Segregation of employee duties.",
+      "Human error in decision making.",
+      "Ineffective board of directors.",
+      "Understaffed internal audit functions."
+    ],
+    "answerIndex": 1,
+    "explanation": "Because of its inherent limitations, internal control can be\ndesigned and operated to provide only reasonable assurance\nthat the entity’s objectives are met. Examples of inherent\nlimitations include (1) human judgment is faulty, (2) controls\nmay fail because of human error, (3) manual or automated\ncontrols can be circumvented by collusion, and\n(4) management may inappropriately override internal control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 19,
+    "section": 3,
+    "number": 25,
+    "page": 1292,
+    "topicId": "su19-coso-data",
+    "stem": "According to COSO, the proper tone at the top helps a\ncompany to do each of the following, except",
+    "choices": [
+      "Create a compliance-supporting culture that is committed to\nenterprise risk management.",
+      "Navigate gray areas where no specific compliance rules or\nguidelines exist.",
+      "Adhere to fiscal budgets and goals as outlined by the internal\naudit committee and board of directors.",
+      "Promote a willingness to seek assistance and report problems\nbefore it is too late for corrective action."
+    ],
+    "answerIndex": 2,
+    "explanation": "Through words and actions, those at the top (the board of\ndirectors and management) communicate their attitudes\ntoward integrity and ethical values. Tone at the top does not\nhelp a company adhere to fiscal budgets and goals as outlined\nby the internal audit committee and board of directors.\nAdherence to the budget is more closely linked to control\nactivities.",
+    "answerStatus": "source"
+  }
+]

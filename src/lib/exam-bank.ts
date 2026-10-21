@@ -11,6 +11,13 @@ export interface ExamQuestion {
   reference: string;
   difficulty?: "easy" | "intermediate" | "hard";
   examDomain?: string;
+  /** Original language when no independently reviewed Arabic translation is available. */
+  sourceLanguage?: "en";
+  sourcePage?: number;
+  /** A missing answer in the supplied source was independently reconstructed. */
+  answerStatus?: "source" | "inferred";
+  /** A source table was reflowed, or a clipped source cell was reconstructed. */
+  sourceTextStatus?: "reconstructed" | "table-reflowed";
 }
 
 export const TRACKS: ExamTrack[] = ["IFRS", "CMA", "CPA", "FMAA", "ACCA", "CFA"];
@@ -342,5 +349,5 @@ export const SEED_QUESTIONS: ExamQuestion[] = [
       en: "Fixed production overhead is allocated based on normal capacity. Using abnormally low actual production can over-allocate fixed overhead per unit and overstate inventory.",
     },
     reference: "IAS 2.13 — allocation of fixed production overhead",
-  }
+  },
 ];

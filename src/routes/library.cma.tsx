@@ -25,21 +25,22 @@ import {
 } from "@/data/cma-topics";
 import { useSiteLang } from "@/lib/use-site-lang";
 
+const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage !== "en").length;
+
 export const Route = createFileRoute("/library/cma")({
   head: () => {
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | أسئلة الوحدات 1–10 من الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | بنك أسئلة الجزء الأول — أحمد المدني" },
         {
           name: "description",
-          content:
-            "دليل CMA عربي وإنجليزي للوحدات 1–6 وبنك أسئلة للوحدات 1–10 في التقارير المالية وإدارة التكاليف.",
+          content: `دليل CMA للوحدات 1–14 مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 للوحدات 1–20 بالإنجليزية.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة للوحدات الست في مجال التقارير المالية الخارجية من CMA.",
+          content: "دليل عملي ثنائي اللغة لوحدات CMA 1–14 مع أمثلة تطبيقية وحالات وأسئلة تدريب.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -51,7 +52,7 @@ export const Route = createFileRoute("/library/cma")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LearningResource",
-            name: "CMA Part 1 — External Financial Reporting Decisions",
+            name: "CMA Part 1 — Study Units 1–14",
             url,
             inLanguage: ["ar-SA", "en"],
             educationalLevel: "Professional",
@@ -73,6 +74,7 @@ function CmaPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [revealedTasks, setRevealedTasks] = useState<Record<string, boolean>>({});
+  const [visibleQuestions, setVisibleQuestions] = useState(12);
 
   const domains = CMA_DOMAINS.filter((item) => item.part === part);
   const filtered = useMemo(() => {
@@ -108,7 +110,7 @@ function CmaPage() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-8">
         <header className="rounded-[2rem] border border-[#A88765]/25 bg-[#1C1B19] p-6 sm:p-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/30 bg-[#A88765]/10 px-3 py-1.5 text-xs font-bold text-[#c9a986]">
-            <GraduationCap className="size-4" /> CMA · Part 1 · A / D
+            <GraduationCap className="size-4" /> CMA · Part 1 · A–F
           </span>
           <h2 className="mt-5 font-display text-3xl font-black leading-tight text-[#FCFBF9] sm:text-5xl">
             {lang === "ar"
@@ -117,20 +119,23 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? "أدلة وحالات للوحدات 1–6 في التقارير المالية، وأسئلة ثنائية اللغة للوحدات 1–10 تشمل إدارة التكاليف. ستضاف أدلة الوحدات 7–10 مع كتب الشرح."
-              : "Bilingual guides and cases for reporting Units 1–6, and practice for Units 1–10 including cost management. Guides for Units 7–10 will follow their textbooks."}
+              ? `أدلة مفصلة وحالات للوحدات 1–14، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي 2025 للوحدات 1–20 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 15–20 مع كتب الشرح.`
+              : `Detailed guides and cases for Units 1–14, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from both 2025 volumes for Units 1–20 with source pages. Arabic translation and table review are in progress; guides for Units 15–20 will follow their textbooks.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
               {CMA_TOPICS.length} {lang === "ar" ? "موضوعات منشورة" : "published topics"}
             </span>
             <span>
-              {CMA_LOCAL_QUESTIONS.length}{" "}
-              {lang === "ar" ? "أسئلة تدريب أصلية" : "original practice questions"}
+              {CMA_LOCAL_QUESTIONS.length} {lang === "ar" ? "سؤالًا بالمجموع" : "questions total"}
             </span>
             <span>
-              {lang === "ar" ? "المجالان A وD: ‎15% لكل منهما" : "Domains A and D: 15% each"}
+              {CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage === "en").length}{" "}
+              {lang === "ar"
+                ? "سؤالًا من كتاب 2025 بالإنجليزية"
+                : "English questions from the 2025 book"}
             </span>
+            <span>{lang === "ar" ? "مجالات الجزء الأول A–F" : "Part 1 domains A–F"}</span>
           </div>
         </header>
 
@@ -140,8 +145,8 @@ function CmaPage() {
           </p>
           <p className="mt-2">
             {lang === "ar"
-              ? "من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة أسئلة اختيار متعدد وست حالات مترابطة للتطبيق؛ هذه الحالات تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية."
-              : "From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and six linked original practice cases, not an official simulation of the interactive item types."}
+              ? `من نافذة سبتمبر/أكتوبر 2026، يتضمن كل جزء 100 سؤال اختيار متعدد ومجموعتي حالات في معظم المناطق بدل المقالات؛ تستمر المقالات في الصين وتايوان واليابان وفق توجيه IMA. لم يتغير مخطط المحتوى أو أهداف التعلم. تتضمن الصفحة أسئلة اختيار متعدد و${CMA_STUDY_UNIT_CASES.length} حالات مترابطة للتطبيق؛ هذه الحالات تدريب أصلي وليست محاكاة رسمية لأنواع الأسئلة التفاعلية.`
+              : `From the September/October 2026 window, each part has 100 MCQs and two case-based sets in most regions instead of essays; IMA retains essays in China, Taiwan and Japan. The content outline and learning outcomes are unchanged. This page offers MCQs and ${CMA_STUDY_UNIT_CASES.length} linked original practice cases, not an official simulation of the interactive item types.`}
           </p>
           <a
             className="mt-2 inline-flex items-center gap-1 font-bold text-[#76543F] underline"
@@ -188,7 +193,31 @@ function CmaPage() {
               className="mt-4 flex flex-wrap gap-2"
               aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
             >
-              {(["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const).map((value) => (
+              {(
+                [
+                  "all",
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                ] as const
+              ).map((value) => (
                 <button
                   key={value}
                   type="button"
@@ -307,7 +336,7 @@ function CmaPage() {
                     <p className="mt-3 flex-1 text-sm leading-7 text-[#6B6259]">
                       {lang === "ar" ? item.summaryAr : item.summaryEn}
                     </p>
-                    {item.studyUnit >= 7 && (
+                    {!CMA_TOPIC_GUIDES[item.id] && (
                       <span className="mt-3 text-xs font-bold text-[#76543F]">
                         {lang === "ar" ? "بنك أسئلة · الشرح قادم" : "Question bank · guide pending"}
                       </span>
@@ -333,6 +362,7 @@ function CmaPage() {
                       onClick={() => {
                         setSelectedId(selectedId === item.id ? null : item.id);
                         setAnswers({});
+                        setVisibleQuestions(12);
                       }}
                       aria-expanded={selectedId === item.id}
                       className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#1C1B19] px-5 py-2 text-xs font-bold text-[#F5F1EB] hover:bg-[#3A332D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A88765]"
@@ -373,8 +403,8 @@ function CmaPage() {
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#76543F]">
               {lang === "ar"
-                ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}، ${guide ? "صفحات الدليل" : "صفحات بنك الأسئلة 2025"} ${selected.sourcePages} · ${selected.losRef}`
-                : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}, ${guide ? "guide" : "2025 MCQ bank"} pp. ${selected.sourcePages} · ${selected.losRef}`}
+                ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}${guide ? `، شرح 2024${selected.guidePages ? ` ص ${selected.guidePages}` : ""}` : ""}، بنك الأسئلة 2025 ص ${selected.sourcePages} · ${selected.losRef}`
+                : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}${guide ? `, 2024 outline${selected.guidePages ? ` pp. ${selected.guidePages}` : ""}` : ""}, 2025 MCQ bank pp. ${selected.sourcePages} · ${selected.losRef}`}
             </p>
             {guide ? (
               <>
@@ -385,6 +415,30 @@ function CmaPage() {
                       guide.scope[lang],
                     ],
                     [lang === "ar" ? "المفاهيم الأساسية" : "Core concepts", guide.concepts[lang]],
+                  ] as const
+                ).map(([title, content]) => (
+                  <div key={title} className="mt-6 border-t border-[#A88765]/25 pt-5">
+                    <h4 className="font-display text-lg font-black">{title}</h4>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                      {content}
+                    </p>
+                  </div>
+                ))}
+                {guide.lessonSections?.map((section) => (
+                  <div
+                    key={section.heading.en}
+                    className="mt-6 rounded-2xl border border-[#A88765]/25 bg-white/70 p-5"
+                  >
+                    <h4 className="font-display text-lg font-black text-[#76543F]">
+                      {section.heading[lang]}
+                    </h4>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                      {section.body[lang]}
+                    </p>
+                  </div>
+                ))}
+                {(
+                  [
                     [
                       lang === "ar" ? "خطوات التطبيق" : "Application workflow",
                       guide.workflow[lang],
@@ -441,7 +495,7 @@ function CmaPage() {
               {lang === "ar" ? "تدرب على هذا الموضوع" : "Practice this topic"}
             </h4>
             <div className="mt-4 space-y-4">
-              {questions.map((q, index) => (
+              {questions.slice(0, visibleQuestions).map((q, index) => (
                 <article key={q.id} className="rounded-2xl border border-[#A88765]/25 bg-white p-5">
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs font-bold text-[#76543F]">
@@ -449,7 +503,31 @@ function CmaPage() {
                     </span>
                     <span className="text-xs text-[#82766B]">{q.difficulty}</span>
                   </div>
-                  <p className="mt-3 text-sm font-bold leading-7">{q.question[lang]}</p>
+                  {q.sourceLanguage === "en" && lang === "ar" && (
+                    <p className="mt-2 text-xs leading-6 text-[#76543F]">
+                      السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
+                    </p>
+                  )}
+                  {q.sourceLanguage === "en" && (
+                    <p className="mt-2 text-xs text-[#76543F]">
+                      {lang === "ar"
+                        ? `جليم 2025 · الصفحة ${q.sourcePage}`
+                        : `Gleim 2025 · p. ${q.sourcePage}`}
+                    </p>
+                  )}
+                  {q.sourceTextStatus === "reconstructed" && (
+                    <p className="mt-2 text-xs text-[#76543F]">
+                      {lang === "ar"
+                        ? "يوجد خيار ناقص في ملف المصدر؛ أضيف بديل تدريبي مع تمييزه للمراجعة."
+                        : "The source PDF omits a choice; an independently written practice distractor has been marked for review."}
+                    </p>
+                  )}
+                  <p
+                    dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                    className="mt-3 whitespace-pre-wrap text-sm font-bold leading-7"
+                  >
+                    {q.question[lang]}
+                  </p>
                   <div className="mt-4 grid gap-2 sm:grid-cols-2">
                     {q.choices[lang].map((choice, choiceIndex) => {
                       const revealed = answers[q.id] !== undefined;
@@ -465,7 +543,12 @@ function CmaPage() {
                           }
                           className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 transition focus-visible:outline-2 focus-visible:outline-[#A88765] ${correct ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : "border-[#A88765]/25 hover:border-[#A88765] disabled:opacity-70"}`}
                         >
-                          {choice}
+                          <span
+                            dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                            className="whitespace-pre-wrap"
+                          >
+                            {choice}
+                          </span>
                         </button>
                       );
                     })}
@@ -489,7 +572,19 @@ function CmaPage() {
                             ? "Correct"
                             : "Incorrect"}
                       </span>
-                      <p className="mt-2">{q.explanation[lang]}</p>
+                      <p
+                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        className="mt-2 whitespace-pre-wrap"
+                      >
+                        {q.explanation[lang]}
+                      </p>
+                      {q.answerStatus === "inferred" && (
+                        <p className="mt-2 text-xs text-[#76543F]">
+                          {lang === "ar"
+                            ? "الإجابة مستنتجة؛ لا يذكر الملف المرفق حل هذا السؤال."
+                            : "Answer inferred: the supplied PDF does not give a solution."}
+                        </p>
+                      )}
                       <button
                         type="button"
                         onClick={() =>
@@ -508,6 +603,17 @@ function CmaPage() {
                 </article>
               ))}
             </div>
+            {visibleQuestions < questions.length && (
+              <button
+                type="button"
+                onClick={() => setVisibleQuestions((count) => count + 12)}
+                className="mt-5 rounded-full border border-[#A88765] px-5 py-2 text-sm font-bold text-[#76543F]"
+              >
+                {lang === "ar"
+                  ? `عرض 12 سؤالًا إضافيًا (${questions.length - visibleQuestions} متبقٍ)`
+                  : `Show 12 more (${questions.length - visibleQuestions} remaining)`}
+              </button>
+            )}
           </section>
         )}
 
@@ -568,8 +674,8 @@ function CmaPage() {
         <footer className="mt-8 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5 text-xs leading-6 text-[#BDB4AA]">
           <p>
             {lang === "ar"
-              ? "هذه مادة تدريبية أصلية مستقلة، مستندة إلى مخطط IMA وأهداف التعلم المنشورة، وليست أسئلة اختبار رسمية أو نصًا من كتاب تجاري."
-              : "Independent original study material aligned with the published IMA outline and learning outcomes; these are not official exam questions or excerpts from a commercial textbook."}
+              ? "تشمل هذه الصفحة أسئلة تدريب أصلية وأسئلة من نسختي بنك Gleim 2025 المرفقتين، مع بيانات المصدر وحالة مراجعة النص. ليست أسئلة اختبار IMA الرسمية."
+              : "This page includes original practice and questions from the supplied Gleim 2025 bank volumes, with source details and transcription status. These are not official IMA exam questions."}
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-[#c9a986]">
             <a
