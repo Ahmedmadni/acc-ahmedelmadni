@@ -35,12 +35,12 @@ export const Route = createFileRoute("/library/cma")({
         { title: "منهج CMA الأمريكي | بنك أسئلة الجزء الأول — أحمد المدني" },
         {
           name: "description",
-          content: `دليل CMA للوحدات 1–14 مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 للوحدات 1–20 بالإنجليزية.`,
+          content: `دليل CMA للوحدات 1–20 مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 بالإنجليزية.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة لوحدات CMA 1–14 مع أمثلة تطبيقية وحالات وأسئلة تدريب.",
+          content: "دليل عملي ثنائي اللغة لوحدات CMA 1–20 مع أمثلة تطبيقية وحالات وأسئلة تدريب.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/library/cma")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LearningResource",
-            name: "CMA Part 1 — Study Units 1–14",
+            name: "CMA Part 1 — Study Units 1–20",
             url,
             inLanguage: ["ar-SA", "en"],
             educationalLevel: "Professional",
@@ -119,8 +119,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للوحدات 1–14، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي 2025 للوحدات 1–20 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 15–20 مع كتب الشرح.`
-              : `Detailed guides and cases for Units 1–14, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from both 2025 volumes for Units 1–20 with source pages. Arabic translation and table review are in progress; guides for Units 15–20 will follow their textbooks.`}
+              ? `أدلة مفصلة وحالات للوحدات 1–20، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي 2025 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل.`
+              : `Detailed guides and cases for Units 1–20, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from both 2025 volumes with source pages. Arabic translation and table review of the source bank are in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>

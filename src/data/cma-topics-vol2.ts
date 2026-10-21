@@ -553,15 +553,32 @@ const formulas: Record<string, NonNullable<CmaTopic["keyFormulas"]>> = {
   ],
   "su15-materials-variance": [
     { nameAr: "انحراف سعر المواد", nameEn: "Materials price variance", formula: "AQ × (AP − SP)" },
+    { nameAr: "انحراف كمية المواد", nameEn: "Materials usage variance", formula: "SP × (AQ − SQ allowed for actual output)" },
   ],
   "su15-labor-variance": [
+    { nameAr: "انحراف معدل العمل", nameEn: "Labor rate variance", formula: "AH × (AR − SR)" },
     {
       nameAr: "انحراف كفاءة العمل",
       nameEn: "Labor efficiency variance",
       formula: "SR × (AH − SH)",
     },
   ],
+  "su15-flexible-variance": [
+    { nameAr: "التكلفة المرنة", nameEn: "Flexible cost", formula: "Fixed cost + (Actual activity × Standard variable rate)" },
+  ],
+  "su15-mix-yield": [
+    { nameAr: "انحراف المزيج", nameEn: "Mix variance", formula: "Σ [(Actual input − Revised standard mix at actual total input) × Standard input price]" },
+    { nameAr: "انحراف المردود", nameEn: "Yield variance", formula: "(Actual total input − Standard total input allowed) × Weighted standard input price" },
+  ],
+  "su15-overhead-variance": [
+    { nameAr: "إنفاق الصناعي المتغير", nameEn: "Variable overhead spending", formula: "Actual VOH − (Actual hours × Standard VOH rate)" },
+    { nameAr: "حجم الصناعي الثابت", nameEn: "Fixed overhead volume", formula: "Budgeted fixed overhead − Fixed overhead applied" },
+  ],
+  "su15-sales-variance": [
+    { nameAr: "انحراف سعر المبيعات", nameEn: "Sales price variance", formula: "Actual units sold × (Actual price − Budgeted price)" },
+  ],
   "su16-investment-centers": [
+    { nameAr: "عائد الاستثمار", nameEn: "Return on investment", formula: "Operating profit ÷ Average invested capital" },
     {
       nameAr: "الدخل المتبقي",
       nameEn: "Residual income",
@@ -596,6 +613,29 @@ const guidePages: Record<string, string> = {
   "su14-capital-cash-collections": "12–13",
   "su14-cash-budget": "14–16",
   "su14-pro-forma": "17–20",
+  "su15-variance-overview": "2–6",
+  "su15-flexible-variance": "7–10",
+  "su15-materials-variance": "11–14",
+  "su15-labor-variance": "15–16",
+  "su15-mix-yield": "17–19",
+  "su15-overhead-variance": "20–25",
+  "su15-comprehensive": "26–28",
+  "su15-sales-variance": "29–32",
+  "su16-responsibility-centers": "2–4",
+  "su16-cost-revenue-profit": "5–7",
+  "su16-investment-centers": "8–11",
+  "su16-balanced-scorecard": "12–18",
+  "su16-transfer-pricing": "19–23",
+  "su17-governance": "2–10",
+  "su17-risk-controls": "11–22",
+  "su18-control-procedures": "2–11",
+  "su18-systems-security": "12–21",
+  "su18-continuity": "22–27",
+  "su19-accounting-systems": "2–6",
+  "su19-data-governance": "7–11",
+  "su19-coso-data": "12–14",
+  "su20-finance-transformation": "2–10",
+  "su20-data-analytics": "11–34",
 };
 
 export const CMA_VOL2_TOPICS: CmaTopic[] = sections.map((item, index) => {
