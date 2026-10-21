@@ -160,7 +160,9 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           q.track === track &&
           (track !== "CMA" ||
             cmaUnit === "all" ||
-            q.examDomain === `Part 1 — Study Unit ${cmaUnit}`),
+            q.examDomain === (typeof cmaUnit === "string" && cmaUnit.startsWith("p2-")
+              ? `Part 2 — Study Unit ${cmaUnit.slice(3)}`
+              : `Part 1 — Study Unit ${cmaUnit}`)),
       ),
     [allQuestions, track, cmaUnit],
   );
@@ -394,7 +396,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           aria-label={lang === "ar" ? "اختيار وحدة CMA" : "Select CMA study unit"}
         >
           {(
-            ["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] as const
+            ["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "p2-1", "p2-2", "p2-3", "p2-4", "p2-5", "p2-6", "p2-7"] as const
           ).map((unit) => (
             <button
               key={unit}
@@ -411,8 +413,8 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                   ? "كل وحدات CMA"
                   : "All CMA units"
                 : lang === "ar"
-                  ? `الوحدة ${unit}`
-                  : `Unit ${unit}`}
+                  ? `${typeof unit === "string" ? "الجزء 2 · " : ""}الوحدة ${String(unit).replace("p2-", "")}`
+                  : `${typeof unit === "string" ? "Part 2 · " : ""}Unit ${String(unit).replace("p2-", "")}`}
             </button>
           ))}
         </div>
