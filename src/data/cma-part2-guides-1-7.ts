@@ -1,5 +1,6 @@
 import { CMA_PART2_TOPICS } from "@/data/cma-part2-topics-1-7";
 import type { CmaTopicGuide, CmaStudyUnitCase } from "@/data/cma-guides";
+import { CMA_PART2_DEEP_DIVE_1_7 } from "@/data/cma-part2-deep-dive-1-7";
 
 type Row = readonly [id: string, conceptAr: string, conceptEn: string, detailAr: string, detailEn: string, interpretationAr: string, interpretationEn: string, pitfallAr: string, pitfallEn: string, caseAr: string, caseEn: string, answerAr: string, answerEn: string];
 /** Original bilingual instructional adaptations of the supplied Gleim 2024 Part 2 outlines. */
@@ -43,6 +44,7 @@ export const CMA_PART2_GUIDES_1_7: Record<string, CmaTopicGuide> = Object.fromEn
       lessonSections: [
         { heading: { ar: "خطوات التحليل والاحتساب", en: "Analysis and calculation" }, body: { ar: arDetail, en: enDetail } },
         { heading: { ar: "تفسير النتيجة والقرار", en: "Interpretation and decision" }, body: { ar: arInterpret, en: enInterpret } },
+        ...(CMA_PART2_DEEP_DIVE_1_7[id] ?? []),
       ],
       workflow: { ar: `حدد معطيات ${topic.titleAr} وتعريف المقام والفترة؛ طبق العلاقة؛ راجع الوحدات والتوقيت ثم اختبر النتيجة بسيناريو آخر.`, en: `Define ${topic.titleEn} inputs, denominator and period; apply the relationship, reconcile units and timing, and test an alternative scenario.` },
       pitfalls: { ar: arPit, en: enPit },

@@ -43,6 +43,8 @@ const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
 const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
 const { CMA_GLEIM_2025_VOL2_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol2");
 const { CMA_PART2_QUESTIONS_1_7 } = readDataFile("cma-part2-questions-1-7");
+const { CMA_PART2_PRACTICE_1_7 } = readDataFile("cma-part2-practice-1-7");
+const { CMA_PART2_DEEP_DIVE_1_7 } = readDataFile("cma-part2-deep-dive-1-7");
 const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
   (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
 ).concat(readDataFile("cma-questions-units-15-20").CMA_QUESTIONS_UNITS_15_20);
@@ -53,9 +55,11 @@ const questionTexts = new Set();
 check(CMA_TOPICS.length === 106 && ids.size === 106, "Expected 80 Part 1 and 26 Part 2 unique sections");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 3071, "Expected 628 original plus 2,443 source questions");
+check(CMA_LOCAL_QUESTIONS.length === 3123, "Expected 680 original plus 2,443 source questions");
 check(newOutlineQuestions.length === 216, "Expected 216 original SU 7–20 example questions");
 check(CMA_PART2_QUESTIONS_1_7.length === 104, "Expected four original Part 2 questions in each of 26 sections");
+check(CMA_PART2_PRACTICE_1_7.length === 52, "Expected two advanced questions in each Part 2 section");
+check(Object.keys(CMA_PART2_DEEP_DIVE_1_7).length === 26, "Expected one deep dive for every Part 2 section");
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
   [20, 18, 37, 32],
@@ -304,7 +308,7 @@ for (const topic of CMA_TOPICS) {
   }
   check(
     CMA_LOCAL_QUESTIONS.filter((question) => question.topicId === topic.id).length >=
-      (topic.part === "part-2" ? 4 : topic.studyUnit >= 5 && topic.studyUnit <= 6 ? 12 : 6),
+      (topic.part === "part-2" ? 6 : topic.studyUnit >= 5 && topic.studyUnit <= 6 ? 12 : 6),
     `Too few questions: ${topic.id}`,
   );
 }
@@ -313,9 +317,11 @@ for (const [unit, expected] of [4, 3, 2, 3, 5, 4, 5].entries()) {
   check(topics.length === expected, `Part 2 Unit ${unit + 1} section count`);
   for (const topic of topics) {
     const guide = CMA_TOPIC_GUIDES[topic.id];
-    check(topic.guidePages && guide.lessonSections?.length >= 2, `Part 2 guide incomplete: ${topic.id}`);
+    check(topic.guidePages && guide.lessonSections?.length >= 3, `Part 2 guide incomplete: ${topic.id}`);
     check(guide.lessonSections.every((lesson) => lesson.body.ar && lesson.body.en), `Part 2 bilingual lesson incomplete: ${topic.id}`);
     check(CMA_PART2_QUESTIONS_1_7.filter((q) => q.topicId === topic.id).length === 4, `Part 2 questions missing: ${topic.id}`);
+    check(CMA_PART2_PRACTICE_1_7.filter((q) => q.topicId === topic.id).length === 2, `Part 2 advanced questions missing: ${topic.id}`);
+    check(CMA_PART2_DEEP_DIVE_1_7[topic.id]?.length === 1, `Part 2 deep dive missing: ${topic.id}`);
   }
 }
 for (const q of CMA_LOCAL_QUESTIONS) {
@@ -518,6 +524,17 @@ for (const [topicId, expected] of part2Numeric) {
   }
 }
 console.log(`Recomputed ${part2Numeric.length} Part 2 numerical answers in Arabic and English`);
+const advancedExpected = [125, 2.25, 60, 8, 24, 120000, 2, 60, 60, 964.33, 15, 70, 1880000, 11.2, 9.6, 24.83, 150, 30, 10.8, 200000, 7, 60000, 90000, 1.01, 30000, 1414];
+for (const [index, expected] of advancedExpected.entries()) {
+  const question = CMA_PART2_PRACTICE_1_7[index * 2];
+  check(question?.id.endsWith("-q5"), `Missing advanced calculation ${index + 1}`);
+  for (const lang of ["ar", "en"]) {
+    const answer = question.choices[lang][question.answerIndex];
+    const actual = Number(answer.match(/\d+(?:,\d{3})*(?:\.\d+)?/)?.[0].replaceAll(",", ""));
+    check(Math.abs(actual - expected) < 0.005, `Incorrect advanced answer (${lang}): ${question.id}`);
+  }
+}
+console.log(`Recomputed ${advancedExpected.length} advanced numerical answers in Arabic and English`);
 check(CMA_STUDY_UNIT_CASES.length === 27, "Expected 20 Part 1 and seven Part 2 linked cases");
 check(
   new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 27,
@@ -540,5 +557,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (628 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (680 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );
