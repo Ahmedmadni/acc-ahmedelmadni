@@ -6,6 +6,11 @@ import { CMA_MORE_QUESTIONS_5_6 } from "@/data/cma-questions-units-5-6";
 import { CMA_QUESTIONS_UNIT_7 } from "@/data/cma-questions-unit-7";
 import { CMA_QUESTIONS_UNIT_8 } from "@/data/cma-questions-unit-8";
 import { CMA_QUESTIONS_UNIT_9 } from "@/data/cma-questions-unit-9";
+import { CMA_QUESTIONS_UNIT_10 } from "@/data/cma-questions-unit-10";
+import { CMA_QUESTIONS_UNIT_11 } from "@/data/cma-questions-unit-11";
+import { CMA_QUESTIONS_UNIT_12 } from "@/data/cma-questions-unit-12";
+import { CMA_QUESTIONS_UNIT_13 } from "@/data/cma-questions-unit-13";
+import { CMA_QUESTIONS_UNIT_14 } from "@/data/cma-questions-unit-14";
 import { CMA_QUESTIONS_MCQ_VOL_1 } from "@/data/cma-questions-mcq-vol-1";
 import { CMA_GLEIM_2025_VOL1_QUESTIONS } from "@/data/cma-questions-gleim-2025-vol1";
 import { CMA_GLEIM_2025_VOL2_QUESTIONS } from "@/data/cma-questions-gleim-2025-vol2";
@@ -619,6 +624,11 @@ export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
   ...CMA_QUESTIONS_UNIT_7,
   ...CMA_QUESTIONS_UNIT_8,
   ...CMA_QUESTIONS_UNIT_9,
+  ...CMA_QUESTIONS_UNIT_10,
+  ...CMA_QUESTIONS_UNIT_11,
+  ...CMA_QUESTIONS_UNIT_12,
+  ...CMA_QUESTIONS_UNIT_13,
+  ...CMA_QUESTIONS_UNIT_14,
   ...CMA_QUESTIONS_MCQ_VOL_1,
   ...CMA_GLEIM_2025_VOL1_QUESTIONS,
   ...CMA_GLEIM_2025_VOL2_QUESTIONS,

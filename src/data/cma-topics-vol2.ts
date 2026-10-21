@@ -448,10 +448,30 @@ const domainCode: Record<CmaDomain, string> = {
 };
 
 const formulas: Record<string, NonNullable<CmaTopic["keyFormulas"]>> = {
+  "su11-value-chain": [
+    { nameAr: "التكلفة المستهدفة", nameEn: "Target cost", formula: "Market price − Target profit" },
+  ],
+  "su11-process-improvement": [
+    {
+      nameAr: "كفاءة دورة العملية",
+      nameEn: "Process cycle efficiency",
+      formula: "Value-added time ÷ Total throughput time",
+    },
+  ],
   "su12-regression": [
     { nameAr: "خط الانحدار", nameEn: "Regression equation", formula: "Predicted Y = a + bX" },
+    {
+      nameAr: "التحديد في الانحدار البسيط مع ثابت",
+      nameEn: "Simple regression with intercept: determination",
+      formula: "R² = r²",
+    },
   ],
   "su12-learning-curve": [
+    {
+      nameAr: "المتوسط التراكمي",
+      nameEn: "Cumulative-average model",
+      formula: "Y = aX^b; b = ln(Learning rate) ÷ ln(2); Total time = XY",
+    },
     {
       nameAr: "التعلم لكل تضاعف",
       nameEn: "Learning rate",
@@ -460,9 +480,35 @@ const formulas: Record<string, NonNullable<CmaTopic["keyFormulas"]>> = {
   ],
   "su12-expected-value": [
     {
+      nameAr: "قيمة المعلومات الكاملة",
+      nameEn: "Expected value of perfect information",
+      formula: "EVPI = EV with perfect information − Best EV without it",
+    },
+    {
       nameAr: "القيمة المتوقعة",
       nameEn: "Expected value",
       formula: "EV = Σ (Probability × Outcome)",
+    },
+  ],
+  "su13-standards": [
+    {
+      nameAr: "المدخل المسموح",
+      nameEn: "Standard input allowed",
+      formula: "Actual output × Standard input per unit",
+    },
+  ],
+  "su13-budget-methods": [
+    {
+      nameAr: "الموازنة المرنة",
+      nameEn: "Flexible budget",
+      formula: "Fixed cost + Variable rate × Actual activity",
+    },
+  ],
+  "su14-sales-budget": [
+    {
+      nameAr: "إيراد المبيعات",
+      nameEn: "Sales revenue",
+      formula: "Σ (Product units × Product price)",
     },
   ],
   "su14-production-materials": [
@@ -470,6 +516,39 @@ const formulas: Record<string, NonNullable<CmaTopic["keyFormulas"]>> = {
       nameAr: "الإنتاج المطلوب",
       nameEn: "Required production",
       formula: "Sales + Target ending inventory − Beginning inventory",
+    },
+    {
+      nameAr: "مشتريات المواد",
+      nameEn: "Material purchases",
+      formula: "Production needs + Ending raw stock − Beginning raw stock",
+    },
+  ],
+  "su14-other-operating-budgets": [
+    {
+      nameAr: "تكلفة المبيعات",
+      nameEn: "Cost of goods sold",
+      formula: "Beginning finished goods + Cost of goods manufactured − Ending finished goods",
+    },
+  ],
+  "su14-capital-cash-collections": [
+    {
+      nameAr: "التحصيلات",
+      nameEn: "Cash collections",
+      formula: "Σ (Sales by cohort × Collection fraction due this period)",
+    },
+  ],
+  "su14-cash-budget": [
+    {
+      nameAr: "النقد قبل التمويل",
+      nameEn: "Cash before financing",
+      formula: "Beginning cash + Collections − Cash payments",
+    },
+  ],
+  "su14-pro-forma": [
+    {
+      nameAr: "الأرباح المبقاة",
+      nameEn: "Retained earnings",
+      formula: "Beginning retained earnings + Net income − Declared dividends",
     },
   ],
   "su15-materials-variance": [
@@ -498,6 +577,27 @@ const formulas: Record<string, NonNullable<CmaTopic["keyFormulas"]>> = {
   ],
 };
 
+/** Printed pages in the supplied 2024 teaching outlines, not the separate 2025 MCQ bank. */
+const guidePages: Record<string, string> = {
+  "su11-value-chain": "2–5",
+  "su11-process-improvement": "6–12",
+  "su12-regression": "2–5",
+  "su12-learning-curve": "6–7",
+  "su12-expected-value": "8–12",
+  "su12-strategic-management": "13–21",
+  "su12-strategic-planning": "22–24",
+  "su13-budget-roles": "2–9",
+  "su13-standards": "10–11",
+  "su13-master-budget": "12–13",
+  "su13-budget-methods": "14–18",
+  "su14-sales-budget": "3",
+  "su14-production-materials": "4–5",
+  "su14-other-operating-budgets": "6–11",
+  "su14-capital-cash-collections": "12–13",
+  "su14-cash-budget": "14–16",
+  "su14-pro-forma": "17–20",
+};
+
 export const CMA_VOL2_TOPICS: CmaTopic[] = sections.map((item, index) => {
   const subject = domain(item.unit);
   return {
@@ -506,6 +606,7 @@ export const CMA_VOL2_TOPICS: CmaTopic[] = sections.map((item, index) => {
     studyUnit: item.unit,
     section: `${item.unit}.${item.section}`,
     sourcePages: `${item.page}–${index + 1 < sections.length ? sections[index + 1].page - 1 : 1370}`,
+    ...(guidePages[item.id] ? { guidePages: guidePages[item.id] } : {}),
     losRef: `IMA Part 1, Domain ${domainCode[subject]}`,
     part: "part-1",
     domain: subject,

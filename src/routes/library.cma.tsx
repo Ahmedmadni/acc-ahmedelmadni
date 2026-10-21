@@ -35,12 +35,12 @@ export const Route = createFileRoute("/library/cma")({
         { title: "منهج CMA الأمريكي | بنك أسئلة الجزء الأول — أحمد المدني" },
         {
           name: "description",
-          content: `دليل CMA للوحدات 1–9 مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 للوحدات 1–20 بالإنجليزية.`,
+          content: `دليل CMA للوحدات 1–14 مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 للوحدات 1–20 بالإنجليزية.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة لوحدات CMA 1–9 مع أمثلة تطبيقية وحالات وأسئلة تدريب.",
+          content: "دليل عملي ثنائي اللغة لوحدات CMA 1–14 مع أمثلة تطبيقية وحالات وأسئلة تدريب.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/library/cma")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LearningResource",
-            name: "CMA Part 1 — Study Units 1–9",
+            name: "CMA Part 1 — Study Units 1–14",
             url,
             inLanguage: ["ar-SA", "en"],
             educationalLevel: "Professional",
@@ -119,8 +119,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة وحالات للوحدات 1–9، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي 2025 للوحدات 1–20 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 10–20 مع كتب الشرح.`
-              : `Guides and cases for Units 1–9, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from both 2025 volumes for Units 1–20 with source pages. Arabic translation and table review are in progress; guides for Units 10–20 will follow their textbooks.`}
+              ? `أدلة مفصلة وحالات للوحدات 1–14، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي 2025 للوحدات 1–20 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل؛ ستضاف أدلة الوحدات 15–20 مع كتب الشرح.`
+              : `Detailed guides and cases for Units 1–14, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from both 2025 volumes for Units 1–20 with source pages. Arabic translation and table review are in progress; guides for Units 15–20 will follow their textbooks.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -415,6 +415,30 @@ function CmaPage() {
                       guide.scope[lang],
                     ],
                     [lang === "ar" ? "المفاهيم الأساسية" : "Core concepts", guide.concepts[lang]],
+                  ] as const
+                ).map(([title, content]) => (
+                  <div key={title} className="mt-6 border-t border-[#A88765]/25 pt-5">
+                    <h4 className="font-display text-lg font-black">{title}</h4>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                      {content}
+                    </p>
+                  </div>
+                ))}
+                {guide.lessonSections?.map((section) => (
+                  <div
+                    key={section.heading.en}
+                    className="mt-6 rounded-2xl border border-[#A88765]/25 bg-white/70 p-5"
+                  >
+                    <h4 className="font-display text-lg font-black text-[#76543F]">
+                      {section.heading[lang]}
+                    </h4>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                      {section.body[lang]}
+                    </p>
+                  </div>
+                ))}
+                {(
+                  [
                     [
                       lang === "ar" ? "خطوات التطبيق" : "Application workflow",
                       guide.workflow[lang],
