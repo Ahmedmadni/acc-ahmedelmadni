@@ -1,0 +1,18 @@
+# CMA Part 2: supplied Study Units 1–7
+
+Seven Gleim 2024 teaching outlines were integrated into the Part 2 curriculum. Their 26 sections have Arabic and English instructional guides, two titled lessons per section, worked calculations, formulas, common errors, four original bilingual practice questions per section and one linked case per unit. Part 1 and Part 2 use separate unit identifiers, so the same unit number cannot mix questions in the library or exam tool.
+
+| Unit | Subject | Sections | Original bilingual MCQs | Linked cases | Outline pages |
+| --- | --- | ---: | ---: | ---: | --- |
+| 1 | Liquidity, Solvency, and Leverage Ratios | 4 | 16 | 1 | 2–18 |
+| 2 | Profitability and Per-Share Ratios | 3 | 12 | 1 | 2–17 |
+| 3 | Activity Ratios and Earnings Quality | 2 | 8 | 1 | 2–12 |
+| 4 | Types of Securities | 3 | 12 | 1 | 2–16 |
+| 5 | Financial Markets and Financing | 5 | 20 | 1 | 2–27 |
+| 6 | Valuation Methods and Cost of Capital | 4 | 16 | 1 | 2–23 |
+| 7 | Working Capital Management | 5 | 20 | 1 | 2–16 |
+| **Added** | | **26** | **104** | **7** | |
+
+After integration the CMA site contains 106 guided sections, 27 linked cases and 3,071 questions. These comprise 628 original bilingual practice questions and the existing 2,443 English Gleim 2025 Part 1 question-bank records. No Part 2 textbook MCQ bank was supplied; the 104 questions are newly authored practice, not transcribed textbook questions. Part 2 Units 8 onward await their teaching outlines.
+
+The content check validates section/question/case mapping and recalculates 26 new numerical answers in both languages. The previously documented Part 1 source-bank Arabic translation and table review remain separate work.

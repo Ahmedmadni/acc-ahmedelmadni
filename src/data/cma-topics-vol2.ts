@@ -2,7 +2,7 @@ import type { CmaDomain, CmaStudyUnit, CmaTopic } from "@/data/cma-topics";
 
 /** Sections and printed PDF starting pages from the supplied 2025 MCQ Bank, Volume 2. */
 const sections: {
-  unit: CmaStudyUnit;
+  unit: Extract<CmaStudyUnit, number>;
   section: number;
   page: number;
   id: string;

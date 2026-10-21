@@ -32,15 +32,15 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | بنك أسئلة الجزء الأول — أحمد المدني" },
+        { title: "منهج CMA الأمريكي | الجزء الأول والثاني — أحمد المدني" },
         {
           name: "description",
-          content: `دليل CMA للوحدات 1–20 مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 بالإنجليزية.`,
+          content: `دليل CMA للجزء الأول ووحدات 1–7 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 بالإنجليزية.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة لوحدات CMA 1–20 مع أمثلة تطبيقية وحالات وأسئلة تدريب.",
+          content: "دليل عملي ثنائي اللغة للجزء الأول ووحدات 1–7 من الجزء الثاني مع حالات وأسئلة تدريب.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/library/cma")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LearningResource",
-            name: "CMA Part 1 — Study Units 1–20",
+            name: "CMA Part 1 and Part 2 Study Units 1–7",
             url,
             inLanguage: ["ar-SA", "en"],
             educationalLevel: "Professional",
@@ -110,7 +110,7 @@ function CmaPage() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-8">
         <header className="rounded-[2rem] border border-[#A88765]/25 bg-[#1C1B19] p-6 sm:p-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/30 bg-[#A88765]/10 px-3 py-1.5 text-xs font-bold text-[#c9a986]">
-            <GraduationCap className="size-4" /> CMA · Part 1 · A–F
+            <GraduationCap className="size-4" /> CMA · Parts 1 &amp; 2 · A–F
           </span>
           <h2 className="mt-5 font-display text-3xl font-black leading-tight text-[#FCFBF9] sm:text-5xl">
             {lang === "ar"
@@ -119,8 +119,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للوحدات 1–20، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي 2025 بالإنجليزية مع رقم الصفحة. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل.`
-              : `Detailed guides and cases for Units 1–20, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from both 2025 volumes with source pages. Arabic translation and table review of the source bank are in progress.`}
+              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–7 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي أسئلة الجزء الأول 2025 بالإنجليزية. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل.`
+              : `Detailed guides and cases for Part 1 and Part 2 Units 1–7, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from the Part 1 2025 banks. Arabic source-bank translation and table review remain in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -132,10 +132,10 @@ function CmaPage() {
             <span>
               {CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage === "en").length}{" "}
               {lang === "ar"
-                ? "سؤالًا من كتاب 2025 بالإنجليزية"
-                : "English questions from the 2025 book"}
+                ? "سؤالًا من بنك الجزء الأول 2025 بالإنجليزية"
+                : "English Part 1 source-bank questions"}
             </span>
-            <span>{lang === "ar" ? "مجالات الجزء الأول A–F" : "Part 1 domains A–F"}</span>
+            <span>{lang === "ar" ? "مجالات CMA من A إلى F" : "CMA domains A–F"}</span>
           </div>
         </header>
 
@@ -188,13 +188,12 @@ function CmaPage() {
               </button>
             ))}
           </div>
-          {part === "part-1" && (
-            <div
+          <div
               className="mt-4 flex flex-wrap gap-2"
               aria-label={lang === "ar" ? "الوحدات الدراسية" : "Study units"}
             >
-              {(
-                [
+              {(part === "part-1"
+                ? [
                   "all",
                   1,
                   2,
@@ -217,6 +216,7 @@ function CmaPage() {
                   19,
                   20,
                 ] as const
+                : ["all", "p2-1", "p2-2", "p2-3", "p2-4", "p2-5", "p2-6", "p2-7"] as const
               ).map((value) => (
                 <button
                   key={value}
@@ -234,12 +234,11 @@ function CmaPage() {
                       ? "كل الوحدات المنشورة"
                       : "All published units"
                     : lang === "ar"
-                      ? `الوحدة ${value}`
-                      : `Study Unit ${value}`}
+                      ? `الوحدة ${String(value).replace("p2-", "")}`
+                      : `Study Unit ${String(value).replace("p2-", "")}`}
                 </button>
               ))}
-            </div>
-          )}
+          </div>
           <label className="relative mt-5 block">
             <Search
               aria-hidden="true"
@@ -298,12 +297,8 @@ function CmaPage() {
           {filtered.length === 0 ? (
             <div className="rounded-3xl border border-[#A88765]/20 bg-[#F5F1EB] p-8 text-center text-sm leading-7 text-[#6B6259]">
               {lang === "ar"
-                ? part === "part-2"
-                  ? "موضوعات الجزء الثاني مدرجة في المخطط، ولم تُنشر أدلتها وأسئلتها بعد."
-                  : "لا توجد موضوعات مطابقة؛ جرّب بحثًا أو مجالًا آخر."
-                : part === "part-2"
-                  ? "Part 2 domains are outlined; guides and questions have not been published yet."
-                  : "No matching topics. Try another search or domain."}
+                ? "لا توجد موضوعات مطابقة؛ جرّب بحثًا أو مجالًا آخر."
+                : "No matching topics. Try another search or domain."}
             </div>
           ) : (
             <div className="grid gap-4 md:grid-cols-2">
@@ -326,8 +321,8 @@ function CmaPage() {
                       </span>
                       <span className="rounded-full bg-[#A88765]/15 px-3 py-1.5 text-[#76543F]">
                         {lang === "ar"
-                          ? `الوحدة ${item.studyUnit} · القسم ${item.section}`
-                          : `Unit ${item.studyUnit} · §${item.section}`}
+                          ? `الوحدة ${String(item.studyUnit).replace("p2-", "")} · القسم ${item.section}`
+                          : `Unit ${String(item.studyUnit).replace("p2-", "")} · §${item.section}`}
                       </span>
                     </div>
                     <h3 className="mt-5 font-display text-xl font-black leading-snug">
@@ -371,14 +366,10 @@ function CmaPage() {
                       {lang === "ar"
                         ? selectedId === item.id
                           ? "إغلاق التدريب"
-                          : item.studyUnit >= 7
-                            ? "افتح الأسئلة"
-                            : "افتح الدليل والأسئلة"
+                          : "افتح الدليل والأسئلة"
                         : selectedId === item.id
                           ? "Close practice"
-                          : item.studyUnit >= 7
-                            ? "Open questions"
-                            : "Open guide and questions"}
+                          : "Open guide and questions"}
                     </button>
                   </article>
                 );
@@ -402,9 +393,13 @@ function CmaPage() {
               {lang === "ar" ? selected.titleAr : selected.titleEn}
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#76543F]">
-              {lang === "ar"
-                ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}${guide ? `، شرح 2024${selected.guidePages ? ` ص ${selected.guidePages}` : ""}` : ""}، بنك الأسئلة 2025 ص ${selected.sourcePages} · ${selected.losRef}`
-                : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}${guide ? `, 2024 outline${selected.guidePages ? ` pp. ${selected.guidePages}` : ""}` : ""}, 2025 MCQ bank pp. ${selected.sourcePages} · ${selected.losRef}`}
+              {selected.part === "part-2"
+                ? lang === "ar"
+                  ? `جليم، الجزء الثاني، الوحدة ${String(selected.studyUnit).replace("p2-", "")}، القسم ${selected.section}، شرح 2024 ص ${selected.guidePages} · ${selected.losRef}`
+                  : `Gleim Part 2, Study Unit ${String(selected.studyUnit).replace("p2-", "")}, §${selected.section}, 2024 outline pp. ${selected.guidePages} · ${selected.losRef}`
+                : lang === "ar"
+                  ? `جليم، الجزء الأول، الوحدة ${selected.studyUnit}، القسم ${selected.section}${guide ? `، شرح 2024${selected.guidePages ? ` ص ${selected.guidePages}` : ""}` : ""}، بنك الأسئلة 2025 ص ${selected.sourcePages} · ${selected.losRef}`
+                  : `Gleim Part 1, Study Unit ${selected.studyUnit}, §${selected.section}${guide ? `, 2024 outline${selected.guidePages ? ` pp. ${selected.guidePages}` : ""}` : ""}, 2025 MCQ bank pp. ${selected.sourcePages} · ${selected.losRef}`}
             </p>
             {guide ? (
               <>
@@ -617,9 +612,8 @@ function CmaPage() {
           </section>
         )}
 
-        {part === "part-1" &&
-          CMA_STUDY_UNIT_CASES.filter(
-            (item) => studyUnit === "all" || item.studyUnit === studyUnit,
+        {CMA_STUDY_UNIT_CASES.filter(
+            (item) => (part === "part-1" ? typeof item.studyUnit === "number" : typeof item.studyUnit === "string") && (studyUnit === "all" || item.studyUnit === studyUnit),
           ).map((item) => (
             <section
               key={item.studyUnit}
@@ -628,8 +622,8 @@ function CmaPage() {
             >
               <span className="text-xs font-bold text-[#c9a986]">
                 {lang === "ar"
-                  ? `تدريب حالات · الوحدة ${item.studyUnit}`
-                  : `Case practice · Unit ${item.studyUnit}`}
+                  ? `تدريب حالات · الوحدة ${String(item.studyUnit).replace("p2-", "")}`
+                  : `Case practice · Unit ${String(item.studyUnit).replace("p2-", "")}`}
               </span>
               <h3 className="mt-2 font-display text-2xl font-black">{item.title[lang]}</h3>
               <p className="mt-4 whitespace-pre-line text-sm leading-8 text-[#d8c9b8]">

@@ -8,6 +8,7 @@ import { CMA_STUDY_UNIT_CASES_12, CMA_TOPIC_GUIDES_12 } from "@/data/cma-guides-
 import { CMA_STUDY_UNIT_CASES_13, CMA_TOPIC_GUIDES_13 } from "@/data/cma-guides-unit-13";
 import { CMA_STUDY_UNIT_CASES_14, CMA_TOPIC_GUIDES_14 } from "@/data/cma-guides-unit-14";
 import { CMA_STUDY_UNIT_CASES_15_20, CMA_TOPIC_GUIDES_15_20 } from "@/data/cma-guides-units-15-20";
+import { CMA_PART2_GUIDES_1_7, CMA_PART2_CASES_1_7 } from "@/data/cma-part2-guides-1-7";
 
 /** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–20. */
 export interface CmaTopicGuide {
@@ -360,11 +361,12 @@ export const CMA_TOPIC_GUIDES: Record<string, CmaTopicGuide> = {
     ]),
   ),
   ...CMA_TOPIC_GUIDES_15_20,
+  ...CMA_PART2_GUIDES_1_7,
 };
 
 /** Original linked practice cases for the 2026 case-based assessment style. */
 export interface CmaStudyUnitCase {
-  studyUnit: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20;
+  studyUnit: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | "p2-1" | "p2-2" | "p2-3" | "p2-4" | "p2-5" | "p2-6" | "p2-7";
   title: { ar: string; en: string };
   scenario: { ar: string; en: string };
   tasks: { prompt: { ar: string; en: string }; solution: { ar: string; en: string } }[];
@@ -459,4 +461,5 @@ export const CMA_STUDY_UNIT_CASES: CmaStudyUnitCase[] = [
   ...CMA_STUDY_UNIT_CASES_13,
   ...CMA_STUDY_UNIT_CASES_14,
   ...CMA_STUDY_UNIT_CASES_15_20,
+  ...CMA_PART2_CASES_1_7,
 ];
