@@ -62,9 +62,13 @@ const applications: Spec[] = [
   ["p2-su7-inventory","طلب يومي 20 وحدة ومهلة توريد 5 أيام ومخزون أمان 30. متى إعادة الطلب؟","Daily demand 20, lead time 5 days and safety stock 30. Reorder point?",["130","100","50","707"],["130","100","50","707"],0,"20×5+30=130؛ 100 بدون أمان، و707 قد يكون EOQ لكنه ليس نقطة إعادة الطلب.","ROP=20×5+30=130; 100 omits safety, 707 might be EOQ, a different measure."],
 ];
 function makeQuestion(topicId: string, number: number, spec: Spec): CmaLocalQuestion {
-  const topic = CMA_PART2_TOPICS.find((item) => item.id === topicId);
+  const topicIndex = CMA_PART2_TOPICS.findIndex((item) => item.id === topicId);
+  const topic = CMA_PART2_TOPICS[topicIndex];
   if (!topic || typeof topic.studyUnit !== "string") throw new Error(`Unknown Part 2 topic: ${topicId}`);
   const unit = topic.studyUnit.slice(3);
+  const shift = (topicIndex * 2 + Math.floor(topicIndex / 2) + number) % 4;
+  const rotate = (choices: Spec[3] | Spec[4]) =>
+    choices.map((_, index) => choices[(index - shift + 4) % 4]);
   return {
     id: `cma-p2-su${unit}-${topicId.slice(`p2-su${unit}-`.length)}-q${number}`,
     track: "CMA", topicId, studyUnit: topic.studyUnit,
@@ -72,7 +76,8 @@ function makeQuestion(topicId: string, number: number, spec: Spec): CmaLocalQues
     difficulty: number === 1 ? "hard" : "intermediate",
     reference: `Gleim CMA Part 2 (2024), SU ${unit} §${topic.section}, pp. ${topic.guidePages}; ${topic.losRef}`,
     question: { ar: spec[1], en: spec[2] },
-    choices: { ar: [...spec[3]], en: [...spec[4]] }, answerIndex: spec[5],
+    choices: { ar: rotate(spec[3]), en: rotate(spec[4]) },
+    answerIndex: ((spec[5] + shift) % 4) as 0 | 1 | 2 | 3,
     explanation: { ar: spec[6], en: spec[7] },
   };
 }
