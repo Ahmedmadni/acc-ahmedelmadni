@@ -1,0 +1,2638 @@
+[
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 1,
+    "page": 56,
+    "topicId": "su12-regression",
+    "stem": "A company is an automobile replacement parts dealer in a\nlarge metropolitan community. The company is preparing its\nsales forecast for the coming year. Data regarding both the\ncompany’s and industry sales of replacement parts as well as\nboth the used and new automobile sales in the community for\nthe last 10 years have been accumulated. If the company\nwants to determine whether its sales of replacement parts are\ndependent upon the industry sales of replacement parts or\nupon the sales of used and new automobiles, the company\nshould employ",
+    "choices": [
+      "Simulation techniques.",
+      "Correlation and regression analysis.",
+      "Statistical sampling.",
+      "Time series analysis."
+    ],
+    "answerIndex": 1,
+    "explanation": "Correlation and regression analysis can be used to determine\nwhether a relationship exists among two or more variables.\nThe degree of that relationship is assessed by means of\ncorrelation analysis. Thus, regressing sales (the dependent\nvariable) on both sales of replacement parts and sales of\nautomobiles (independent variables) determines the extent of\nthe dependence.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 2,
+    "page": 57,
+    "topicId": "su12-regression",
+    "stem": "A company has accumulated data for the last 24 months in\norder to determine if there is an independent variable that\ncould be used to estimate shipping costs. Three possible\nindependent variables being considered are packages\nshipped, miles shipped, and pounds shipped. The quantitative\ntechnique that should be used to determine whether any of\nthese independent variables might provide a good estimate for\nshipping costs is",
+    "choices": [
+      "Flexible budgeting.",
+      "Linear programming.",
+      "Linear regression.",
+      "Variable costing."
+    ],
+    "answerIndex": 2,
+    "explanation": "Regression analysis, also called least-squares analysis, is the\nprocess of deriving the linear equation that describes the\nrelationship between two (or more) variables with a nonzero\ncoefficient of correlation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 3,
+    "page": 58,
+    "topicId": "su12-regression",
+    "stem": "In the standard regression equation y = a + bx, the letter b\nis best described as a(n)",
+    "choices": [
+      "Independent variable.",
+      "Dependent variable.",
+      "Constant coefficient.",
+      "Variable coefficient."
+    ],
+    "answerIndex": 3,
+    "explanation": "In the standard regression equation, b represents the variable\ncoefficient. For example, in a cost determination regression, y\nequals total costs, b is the variable cost per unit, x is the\nnumber of units produced, and a is fixed cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 4,
+    "page": 59,
+    "topicId": "su12-regression",
+    "stem": "The correlation coefficient that indicates the weakest linear\nassociation between two variables is",
+    "choices": [
+      "–0.73",
+      "–0.11",
+      "0.12",
+      "0.35"
+    ],
+    "answerIndex": 1,
+    "explanation": "The correlation coefficient can vary from –1 to +1. A –1\nrelationship indicates a perfect negative correlation, and a +1\nrelationship indicates a perfect positive correlation. A zero\ncorrelation coefficient indicates no linear association between\nthe variables. Thus, the correlation coefficient that is nearest\nto zero indicates the weakest linear association. Of the options\ngiven in the question, the correlation coefficient that is nearest\nto zero is –0.11.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 5,
+    "page": 59,
+    "topicId": "su12-regression",
+    "stem": "Correlation is a term frequently used in conjunction with\nregression analysis and is measured by the value of the\ncoefficient of correlation, r. The best explanation of the\nvalue r is that it",
+    "choices": [
+      "Is always positive.",
+      "Interprets variances in terms of the independent variable.",
+      "Ranges in size from negative infinity to positive infinity.",
+      "Is a measure of the relative relationship between two\nvariables."
+    ],
+    "answerIndex": 3,
+    "explanation": "The coefficient of correlation (r) measures the strength of the\nlinear relationship between the dependent and independent\nvariables. The magnitude of r is independent of the scales of\nmeasurement of x and y. The coefficient lies between –1.0\nand +1.0. A value of zero indicates no linear relationship\nbetween the x and y variables. A value of +1.0 indicates a\nperfectly direct relationship, and a value of –1.0 indicates a\nperfectly inverse relationship.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 6,
+    "page": 60,
+    "topicId": "su12-regression",
+    "stem": "A regression equation",
+    "choices": [
+      "Estimates the dependent variable(s).",
+      "Encompasses factors outside the relevant range.",
+      "Is based on objective and constraint functions.",
+      "Estimates the independent variable."
+    ],
+    "answerIndex": 0,
+    "explanation": "Regression analysis is used to find an equation for the linear\nrelationship among variables. The behavior of the dependent\nvariable is explained in terms of one or more independent\nvariables. Regression analysis often is used to estimate a\ndependent variable (such as cost) given a known independent\nvariable (such as production).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 7,
+    "page": 61,
+    "topicId": "su12-regression",
+    "stem": "All of the following are assumptions underlying the validity of\nlinear regression output except",
+    "choices": [
+      "The values of y for a given value of x are normally distributed.",
+      "The mean of the subpopulations of y around the regression\nline is zero.",
+      "Certainty.",
+      "The variance of the subpopulations of y is constant."
+    ],
+    "answerIndex": 2,
+    "explanation": "Linear regression is based on various assumptions. For\nexample, (1) the linear relationship of x and y only applies\nwithin a relevant range, (2) the value of y for a given value of x\ndoes not depend on (is statistically independent of) any other\nvalue of y, (3) the values of the subpopulations of y are\nnormally distributed with a mean of zero, (4) the variance of\nthe subpopulations of y is constant, (5) the values of y are\nstatistically independent, and (6) the independent variables\nare not correlated with each other. However, regression is\nonly a means of predicting the future; it cannot provide\ncertainty.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 8,
+    "page": 63,
+    "topicId": "su12-regression",
+    "stem": "In preparing the annual                 Hours of        Maintenance\nprofit plan for the coming              Activity           Costs\nyear, Wilkens Company         January    480            $ 4,200\nwants to determine the cost February     320              3,000\nbehavior pattern of the\nMarch      400              3,600\nmaintenance costs. Wilkens\nhas decided to use linear     April      300              2,820\nregression by employing the   May        500              4,350\nequation y = a + bx for       June       310              2,960\nmaintenance costs. The        July       320              3,030\nprior year’s data regarding August       520              4,470\nmaintenance hours and         September 490               4,260\ncosts, and the results of the\nOctober    470              4,050\nregression analysis, are     November   350               3,300\ngiven below and in the       December   340               3,160\nopposite column.               Sum    4,800             $43,200\nAverage cost per       $9.00\nhour                         Average    400             $ 3,600\na                     684.65\nb                     7.2884\nStandard error of a 49.515\nStandard error of b .12126\nStandard error of     34.469\nthe estimate\nr2                    .99724\nBased upon the data derived from the regression analysis, 420\nmaintenance hours in a month would mean that Wilkens Co.’s\nmaintenance costs (rounded to the nearest dollar) would be\nbudgeted at",
+    "choices": [
+      "$3,780",
+      "$3,600",
+      "$3,790",
+      "$3,746"
+    ],
+    "answerIndex": 3,
+    "explanation": "Substituting the given data into the regression equation results\nin a budgeted cost of $3,746 (rounded to the nearest dollar).\ny = a + bx\ny = 684.65 + 7.2884(420)\ny = $3,746",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 9,
+    "page": 64,
+    "topicId": "su12-regression",
+    "stem": "In preparing the annual                 Hours of        Maintenance\nprofit plan for the coming              Activity           Costs\nyear, Wilkens Company         January    480            $ 4,200\nwants to determine the cost February     320              3,000\nbehavior pattern of the\nMarch      400              3,600\nmaintenance costs. Wilkens\nhas decided to use linear     April      300              2,820\nregression by employing the   May        500              4,350\nequation y = a + bx for       June       310              2,960\nmaintenance costs. The        July       320              3,030\nprior year’s data regarding August       520              4,470\nmaintenance hours and         September 490               4,260\ncosts, and the results of the\nOctober    470              4,050\nregression analysis, are     November   350               3,300\ngiven below and in the       December   340               3,160\nopposite column.               Sum    4,800             $43,200\nAverage cost per       $9.00\nhour                         Average    400             $ 3,600\na                     684.65\nb                     7.2884\nStandard error of a 49.515\nStandard error of b .12126\nStandard error of     34.469\nthe estimate\nr2                    .99724\nThe percentage of Wilkens Co.’s total variance that can be\nexplained by the regression equation is",
+    "choices": [
+      "99.724%",
+      "69.613%",
+      "80.982%",
+      "99.862%"
+    ],
+    "answerIndex": 0,
+    "explanation": "The coefficient of determination (r2) measures the percentage\nof the total variance in cost that can be explained by the\nregression equation. If the coefficient of determination is\n.99724, 99.724% of the variance is explained by the\nregression equation. Thus, the values in the regression\nequation explain virtually the entire amount of total cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 10,
+    "page": 65,
+    "topicId": "su12-regression",
+    "stem": "The letter x in the standard regression equation\nis best described as a(n)",
+    "choices": [
+      "Independent variable.",
+      "Dependent variable.",
+      "Constant coefficient.",
+      "Coefficient of determination."
+    ],
+    "answerIndex": 0,
+    "explanation": "The letter x in the standard regression equation is the\nindependent variable. For example, in a regression to\ndetermine the total cost of production, x equals units\nproduced.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 11,
+    "page": 65,
+    "topicId": "su12-regression",
+    "stem": "In regression analysis, which of the following coefficients of\ncorrelation represents the strongest linear relationship\nbetween the independent and dependent variables?",
+    "choices": [
+      "1.03",
+      "–.02",
+      "–.89",
+      ".75"
+    ],
+    "answerIndex": 2,
+    "explanation": "A coefficient of –1.0 signifies a perfect inverse relationship,\nand a coefficient of 1.0 signifies a perfect direct relationship.\nThus, the higher the absolute value of the coefficient of\ncorrelation, the stronger the linear relationship. A coefficient\nof –.89 suggests a very strong inverse relationship between\nthe independent and dependent variables.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 12,
+    "page": 66,
+    "topicId": "su12-regression",
+    "stem": "The internal auditor of a bank has developed a multiple\nregression model that has been used for a number of years to\nestimate the amount of interest income from commercial loans.\nDuring the current year, the auditor applies the model and\ndiscovers that the r 2 value has decreased dramatically, but the\nmodel otherwise seems to be working well. Which of the\nfollowing conclusions are justified by the change?",
+    "choices": [
+      "The auditor should calculate the coefficient of correlation.",
+      "Regression analysis is no longer an appropriate technique to\nestimate interest income.",
+      "Some new factors, not included in the model, are causing\ninterest income to change.",
+      "A linear regression analysis would increase the model’s\nreliability."
+    ],
+    "answerIndex": 2,
+    "explanation": "The coefficient of determination (r 2) is the amount of variation\nin the dependent variable (interest income) that is explained\nby the independent variables. In this case, less of the change\nin interest income is explained by the model. Thus, some\nother factor must be causing interest income to change. This\nchange merits audit investigation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 13,
+    "page": 68,
+    "topicId": "su12-regression",
+    "stem": "Alpha Company produces several different products\nand is making plans for the introduction of a new product, which it will\nsell for $6 a unit. The following estimates have been made for\nmanufacturing costs on 100,000 units to be produced the first year:\nDirect materials $500,000\nDirect labor      $40,000 (the labor rate is $4/hour)\nOverhead costs have not been established for the new product, but\nmonthly data on total production and overhead cost for the past 24\nmonths have been analyzed using simple linear regression. The\nresults below were derived from the simple regression and provide\nthe basis for overhead cost estimates for the new product.\nDependent variable (y) -- Factory overhead costs\nIndependent variable (x) -- Direct labor hours\nComputed values:\ny intercept                                $40,000\nCoefficient of independent variable        $2.10\nCoefficient of correlation                 0.953\nStandard error of estimate                 $2,840\nStandard error of regression coefficient   0.42\nMean value of independent variable         $18,000\nCoefficient of determination               0.908\nWhat percentage of the variation in Alpha’s overhead costs is\nexplained by the independent variable?",
+    "choices": [
+      "90.8%",
+      "42%",
+      "48.8%",
+      "95.3%"
+    ],
+    "answerIndex": 0,
+    "explanation": "The coefficient of determination (r2) is the square of the\ncoefficient of correlation (r). The coefficient of determination,\nmay be interpreted as the percentage of variation in the\ndependent variable explained by the variation in the\nindependent variable. The coefficient of correlation is an index\nof the association between the two variables. It also is known\nas the covariance. For Alpha, r = 0.953, and r2 = 0.908.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 14,
+    "page": 69,
+    "topicId": "su12-regression",
+    "stem": "Alpha Company produces several different products\nand is making plans for the introduction of a new product, which it will\nsell for $6 a unit. The following estimates have been made for\nmanufacturing costs on 100,000 units to be produced the first year:\nDirect materials $500,000\nDirect labor      $40,000 (the labor rate is $4/hour)\nOverhead costs have not been established for the new product, but\nmonthly data on total production and overhead cost for the past 24\nmonths have been analyzed using simple linear regression. The\nresults below were derived from the simple regression and provide\nthe basis for overhead cost estimates for the new product.\nDependent variable (y) -- Factory overhead costs\nIndependent variable (x) -- Direct labor hours\nComputed values:\ny intercept                                $40,000\nCoefficient of independent variable        $2.10\nCoefficient of correlation                 0.953\nStandard error of estimate                 $2,840\nStandard error of regression coefficient   0.42\nMean value of independent variable         $18,000\nCoefficient of determination               0.908\nAlpha’s total overhead cost for an estimated activity level of\n20,000 direct labor hours would be",
+    "choices": [
+      "$42,000",
+      "$82,000",
+      "$122,000",
+      "$222,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The total overhead may be estimated using the regression\nequation as y = a + bx.\nTotal overhead = $40,000 + [($2.10) × (20,000)]\n= $82,000\nFixed costs are $40,000 and variable costs are $2.10 per\ndirect labor hour.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 15,
+    "page": 69,
+    "topicId": "su12-regression",
+    "stem": "The manager of the assembly department of a company would\nlike to estimate the fixed and variable components of the\ndepartment’s cost. To do so, the manager has collected\ninformation on total cost and output for the past 24 months. To\nestimate the fixed and variable components of total cost, the\nmanager should use",
+    "choices": [
+      "Regression analysis.",
+      "Game theory.",
+      "Sensitivity analysis.",
+      "Queuing theory."
+    ],
+    "answerIndex": 0,
+    "explanation": "Regression analysis is a statistical method that measures the\nrelationship between variables. It estimates the component of\nthe dependent variable that varies with changes in the\nindependent variable and the component that does not vary.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 16,
+    "page": 70,
+    "topicId": "su12-regression",
+    "stem": "For cost estimation, simple regression differs from multiple\nregression in that simple regression uses only",
+    "choices": [
+      "One dependent variable, while multiple regression uses all\navailable data to estimate the cost function.",
+      "Dependent variables, while multiple regression can use both\ndependent and independent variables.",
+      "One independent variable, while multiple regression uses\nmore than one independent variable.",
+      "One dependent variable, while multiple regression uses more\nthan one dependent variable."
+    ],
+    "answerIndex": 2,
+    "explanation": "Simple regression uses the algebraic formula for a straight\nline, y = a + bx, where x is the independent variable. Multiple\nregression is used when there is more than one independent\nvariable. Multiple regression allows a firm to identify many\nfactors (independent variables) and to weight each one\naccording to its influences on the overall outcome (y = a +\nb1x1 + b2x2 + b3x3 + etc.).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 17,
+    "page": 71,
+    "topicId": "su12-regression",
+    "stem": "A manufacturer developed the following multiple regression\nequation, utilizing many years of data, and uses it to model, or\nestimate, the cost of its product.\nCost = FC + (a × L) + (b × M)\nWhere: FC = fixed costs\nL = labor rate per hour\nM = material cost per pound\nWhich one of the following changes would have the greatest\nimpact on invalidating the results of this model?",
+    "choices": [
+      "A significant reduction in factory overheads, which are a\ncomponent of fixed costs.",
+      "Renegotiation of the union contract calling for much higher\nwage rates.",
+      "A large drop in material costs, as a result of purchasing the\nmaterial from a foreign source.",
+      "A significant change in labor productivity."
+    ],
+    "answerIndex": 3,
+    "explanation": "In multiple regression, a large difference between the\nexpected value and the actual value of one of the coefficients\nhas the most impact in rendering the model invalid. A change\nin costs would be incorporated into the equation automatically,\nbut a change in productivity per hour would not.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 18,
+    "page": 72,
+    "topicId": "su12-regression",
+    "stem": "In order to analyze sales as a function of advertising\nexpenses, the sales manager developed a simple regression\nmodel. The model included the following equation, which was\nbased on 32 monthly observations of sales and advertising\nexpenses with a related coefficient of determination of .90.\nSales = $10,000 + (2.5 × Advertising expenses)\nIf the advertising expenses in 1 month amounted to $1,000,\nthe related point estimate of sales would be",
+    "choices": [
+      "$2,500",
+      "$11,250",
+      "$12,250",
+      "$12,500"
+    ],
+    "answerIndex": 3,
+    "explanation": "The simple regression equation can be solved as follows:\nSales = $10,000 + (2.5 × Advertising expenses)\n= $10,000 + (2.5 × $1,000)\n= $10,000 + $2,500\n= $12,500",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 19,
+    "page": 73,
+    "topicId": "su12-regression",
+    "stem": "The results of regressing y against x are as follows:\nCoefficient\nIntercept     5.23\nSlope         1.54\nWhen the value of x is 10, the estimated value of y is",
+    "choices": [
+      "6.77",
+      "8.05",
+      "20.63",
+      "53.84"
+    ],
+    "answerIndex": 2,
+    "explanation": "A simple regression can be calculated using the formula for a\nstraight line:\ny = a + bx\nWhere: y = the dependent variable\na = the y-axis intercept\nb = the slope of the regression line\nx = the independent variable\nSolving with the information given yields the following results:\ny = a + bx\n= 5.23 + (1.54 × 10)\n= 5.23 + 15.4\n= 20.63",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 20,
+    "page": 74,
+    "topicId": "su12-regression",
+    "stem": "While gathering information to use in preparing the annual\nbudget, a company identifies cost drivers associated with\nmanufacturing costs. Which one of the following is a\nquantitative analysis method the company can use to measure\nthe average change in the manufacturing costs associated\nwith a change in a cost driver?",
+    "choices": [
+      "Time series analysis.",
+      "Exponential smoothing.",
+      "Regression analysis.",
+      "Learning curve analysis."
+    ],
+    "answerIndex": 2,
+    "explanation": "Regression analysis is the process of deriving a linear\nequation to describe the relationship between two variables.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 21,
+    "page": 75,
+    "topicId": "su12-regression",
+    "stem": "A company uses simple regression to predict one of its semi-\nvariable costs. The computed equation of y = –25,000 + 2.5x\nappears to have a good visual fit. The cause of the negative\nterm in this equation could be that",
+    "choices": [
+      "The zero level of output is outside of the relevant range.",
+      "Too many outliers were included in the data.",
+      "An inappropriate cost driver was used as the independent\nvariable.",
+      "The cost does not exhibit semi-variable behavior."
+    ],
+    "answerIndex": 0,
+    "explanation": "The linear relationship established for x and y is only valid\nacross the relevant range. The company must identify the\nrelevant range and ensure that it does not project the\nrelationship beyond the relevant range. A negative y intercept\nin the simple regression equation usually indicates that it is\noutside the relevant range.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 22,
+    "page": 76,
+    "topicId": "su12-regression",
+    "stem": "A single-product company uses regression to predict one of its\nfactory overhead costs with materials used as the independent\nvariable. The regression equation is as follows: Y = 542,000 +\n0.0000253X. Based on R², management has determined that\nthis model captures a significant portion of the relationship.\nThe behavior of this company’s factory overhead cost with\nrespect to units of finished goods produced is",
+    "choices": [
+      "Fixed.",
+      "Semivariable.",
+      "Variable.",
+      "Not determinable from the provided information."
+    ],
+    "answerIndex": 0,
+    "explanation": "The behavior of the factory overhead cost with respect to units\nof finished goods produced for this company represents a\nfixed cost pattern. Fixed costs in total remain unchanged in\nthe short run regardless of production level. The Y-axis\nintercept, or $542,000 in this case, represents the fixed\nportion. This number is not affected by the number of finished\ngoods produced in the short run. For example, if 1 unit is\nproduced, the cost would equal $542,000 (rounded to the\nnearest whole number). If 10,000 units are produced, the cost\nwould still equal $542,000 (rounded to the nearest whole\nnumber). Even though the cost equation makes it seem that\nfactory overhead is variable or semivariable, because the\nvariable aspect (i.e., the slope of .0000253) is essentially zero\n(0), factory overhead is considered a fixed cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 23,
+    "page": 77,
+    "topicId": "su12-regression",
+    "stem": "A nationwide retail mattress firm will begin selling high-end crib\nmattresses next year. Management believes sales for this\nproduct will be driven primarily by birth rates but will be\ninfluenced to a lesser extent by income levels.\nThe best method to use to predict next year’s sales is",
+    "choices": [
+      "Simple regression.",
+      "Time-series regression.",
+      "Multiple regression.",
+      "Maximum likelihood regression."
+    ],
+    "answerIndex": 2,
+    "explanation": "Management believes sales will be driven by birthrates and, to\na lesser extent, income levels, which matches the multiple\nregression method. Multiple regression is used when there is\nmore than one independent variable. The two independent\nvariables are (1) birthrates and (2) income levels.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 24,
+    "page": 78,
+    "topicId": "su12-regression",
+    "stem": "A cleaning company is evaluating the costs to clean a\nstandard office. The controller has done a linear regression of\nthe hours spent cleaning various offices and the total costs\n(labor, supplies, transportation) for each office cleaned. The\nregression analysis yielded the following information.\ny = $25x + $75\ny = the total cost to clean an office\nx = the hours spent cleaning an office\nWhat is the best description of the costs of cleaning an office\nbased on this regression analysis?",
+    "choices": [
+      "The cost is $100 per hour to clean an office.",
+      "There is $25 of fixed costs and $75 of variable costs per hour\nto clean an office.",
+      "There is $25 of variable costs per hour and $75 of fixed costs\nto clean an office.",
+      "The cost is $25 per hour to clean an office."
+    ],
+    "answerIndex": 2,
+    "explanation": "In the standard regression equation y = a + bx, b represents\nthe variable coefficient. In a cost determination regression, y\nequals total costs, b is the variable cost per unit, x is the\nnumber of units produced, and a is the fixed cost. Thus, $25 is\nthe variable cost per hour, and $75 is the fixed cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 25,
+    "page": 79,
+    "topicId": "su12-regression",
+    "stem": "A company uses regression analysis in which monthly\nadvertising expenses are used to predict monthly product\nsales, both in millions of dollars. The results show a regression\ncoefficient for the independent variable equal to 0.8. This\ncoefficient value indicates that",
+    "choices": [
+      "On average, every additional dollar of advertising results in\n$0.8 of additional sales.",
+      "Advertising is not a good predictor of sales because the\ncoefficient is so small.",
+      "When monthly advertising is at its average level, product sales\nwill be $800,000.",
+      "The average monthly advertising expenditure in the sample is\n$800,000."
+    ],
+    "answerIndex": 0,
+    "explanation": "In the standard regression equation y = a + bx, b represents\nthe change in the dependent variable corresponding to a unit\nchange in the independent variable. Thus, it is the slope of the\nregression line.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 26,
+    "page": 80,
+    "topicId": "su12-regression",
+    "stem": "An accountant for a biotechnology company is working on a\nprojection of next year’s maintenance expenditures for the\ncompany’s laboratory equipment used in research and\ndevelopment. By analyzing past maintenance expenditures,\nthe accountant was able to determine that future maintenance\nexpenditures can be expressed by the following simple\nregression equation: Y = $20,000 + ($50 × X). The variable X\nis the number of hours the laboratory equipment has been in\nservice. For the previous year, the variable X was determined\nto be 4,500 hours. If the accountant is projecting that X will be\n5,000 hours next year, how much should the accountant\nproject for next year’s maintenance expenditures?",
+    "choices": [
+      "$225,000",
+      "$245,000",
+      "$250,000",
+      "$270,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Substituting 5,000 hours into the regression equation\nproduces the following: Y = $20,000 + ($50 × 5,000); or Y =\n$270,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 27,
+    "page": 81,
+    "topicId": "su12-regression",
+    "stem": "An electronics company has developed a regression model to\nforecast quarterly sales. The model explains the relationship\nbetween the company’s sales and the amount it spends on\nmarketing activities. The regression equation for the model is\nexpressed below.\ns = $3(m) + $150,000\ns = sales per quarter\nm = dollars spent on marketing activities per quarter\nIf the company has forecasted sales of $189,000 for the next\nquarter, what amount is it planning to spend on marketing\nactivities in the next quarter?",
+    "choices": [
+      "$13,000",
+      "$39,000",
+      "$63,000",
+      "$113,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Substituting the $189,000 of forecasted sales into the\nregression equation will allow for the calculation of the amount\nthat should be budgeted for market costs, i.e., $189,000 =\n$3(m) + $150,000. Therefore, marketing costs are $13,000.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 1,
+    "number": 28,
+    "page": 82,
+    "topicId": "su12-regression",
+    "stem": "An international nonprofit organization finances medical\nresearch. The majority of its revenue and support comes from\nfund-raising activities, investments, and specific grants from an\ninitial sponsoring corporation. The organization has been in\noperation for over 15 years and has just finished a major fund-\nraising event that raised $500 million for the current fiscal\nperiod. The following are selected data from recent financial\nstatements (in millions of dollars).\nCurrent Year Past Year\nRevenue                                $500         $425\nInvestments (average balances)           210         185\nInvestment income                          16          20\nAdministrative expense                     10           8\nA financial analyst wants to determine if the change in\ninvestment income during the current year was due to changes\nin investment strategy, changes in portfolio mix, or other\nfactors. Which one of the following techniques should be\nused?",
+    "choices": [
+      "Ratio analysis that compares changes in the investment\nportfolio on a monthly basis.",
+      "Multiple regression analysis that includes independent\nvariables associated with the nature of the investment portfolio\nand market conditions.",
+      "Best practice analysis that compares the investment income\nas a percentage of total assets to a competitor’s investment\nincome as a percentage of total assets.",
+      "Simple linear regression that compares investment income\nchanges over the past 5 years to determine the nature of the\nchanges."
+    ],
+    "answerIndex": 1,
+    "explanation": "A regression analysis is used to investigate relationships\nbetween variables. Multiple regression allows the firm to\nanalyze the factors (independent variables) that influence the\ninvestment income (dependent variable).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 1,
+    "page": 84,
+    "topicId": "su12-learning-curve",
+    "stem": "An entity is preparing a bid for a special project requiring the\nproduction of 35,000 units. The engineering personnel have\nadvised that the units can be produced in groups with the first\ngroup consisting of 1,000 units. A review of prior experience\nindicates that the direct labor time needed per unit will be\nprogressively smaller by a constant percentage rate as\nexperience is gained in the production process. The\nquantitative method that would best estimate the entity’s total\ncost for the project is",
+    "choices": [
+      "Linear programming.",
+      "Dynamic programming.",
+      "Learning curve analysis.",
+      "Time series analysis."
+    ],
+    "answerIndex": 2,
+    "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. Thus, the time\nrequired to perform a given task becomes progressively\nshorter. Ordinarily, the learning curve is expressed as a\npercentage of reduced time to complete a task for each\ndoubling of cumulative production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 2,
+    "page": 85,
+    "topicId": "su12-learning-curve",
+    "stem": "The average labor cost per unit for the first batch produced by\na new process is $120. The cumulative average labor cost\nafter the second batch is $72 per product. Using a batch size\nof 100 and assuming the learning curve continues, the total\nlabor cost of four batches will be",
+    "choices": [
+      "$4,320",
+      "$10,368",
+      "$2,592",
+      "$17,280"
+    ],
+    "answerIndex": 3,
+    "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed as a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Given a $120 cost per unit for the first 100 units and\na $72 cost per unit when cumulative production doubled to\n200 units, the learning curve percentage must be 60% ($72 ÷\n$120). If production is again doubled to 400 units (four\nbatches), the average unit labor cost should be $43.20 ($72 ×\n60%). Hence, total labor cost for 400 units is estimated to be\n$17,280 (400 units × $43.20).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 3,
+    "page": 87,
+    "topicId": "su12-learning-curve",
+    "stem": "Moss Point       Direct materials                             $ 1,500\nManufacturing Direct labor ($8.50 × 1,000 hours)                8,500\nrecently         Variable overhead (1,000 hours × $4.00)*       4,000\ncompleted and Fixed overhead**                                  1,400\nsold an order of                                              $15,400\n50 units that    *Applied on the basis of direct labor hours.\nhad costs as **Applied at the rate of 10% of variable cost.\nshown in\nthe next\ncolumn.\nThe company\nhas now been\nrequested to\nprepare a bid\nfor 150 units of\nthe same\nproduct.\nIf an 80% learning curve is applicable, Moss Point’s total cost\non this order would be estimated at",
+    "choices": [
+      "$26,400",
+      "$32,000",
+      "$38,000",
+      "$41,800"
+    ],
+    "answerIndex": 0,
+    "explanation": "Assuming that the cumulative average time model applies, an\n80% learning curve means that the cumulative average time\nper unit (and labor cost, given a constant labor rate) declines\nby 20% each time unit output doubles in the early stages of\nproduction.\nThe first lot size was 50 units, which was produced at a total\ncost of $15,400 ($1,500 for materials and $13,900 for labor\nand overhead). Materials costs are strictly variable and should\nremain proportional to production. The labor ($8,500) and\nvariable overhead ($4,000) costs (labor-related), however, will\nbe affected by the learning curve. The average cost per lot for\nlabor and variable overhead after 100 units have been\nproduced should be 80% of the costs of the first lot of 50 units.\nThus, the average labor and variable overhead cost per 50-\nunit lot will be $10,000 ($12,500 × 80%).\nIf production doubles again (to a total production of 200 units\nor four lots of 50 each), the cumulative average cost for labor\nand variable overhead will be $8,000 per lot ($10,000 × 80%).\nGiven four lots of 50 each, at an average cost of $8,000 per\nlot, the total cost for labor and variable overhead must be\n$32,000. Adding $6,000 for raw materials ($1,500 per 50-unit\nlot) gives a total variable cost of $38,000 for 200 units. Fixed\noverhead is 10% of total variable cost, so total cost is $41,800.\nThe total cost for the last 150 units is $26,400 ($41,800 –\n$15,400).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 4,
+    "page": 88,
+    "topicId": "su12-learning-curve",
+    "stem": "Moss Point       Direct materials                             $ 1,500\nManufacturing Direct labor ($8.50 × 1,000 hours)                8,500\nrecently         Variable overhead (1,000 hours × $4.00)*       4,000\ncompleted and Fixed overhead**                                  1,400\nsold an order of                                              $15,400\n50 units that    *Applied on the basis of direct labor hours.\nhad costs as **Applied at the rate of 10% of variable cost.\nshown in\nthe next\ncolumn.\nThe company\nhas now been\nrequested to\nprepare a bid\nfor 150 units of\nthe same\nproduct.\nIf Moss Point had experienced a 70% learning curve, the bid\nfor the 150 units would",
+    "choices": [
+      "Show a 30% reduction in the total direct labor hours required\nwith no learning curve.",
+      "Include increased fixed overhead costs.",
+      "Be 10% lower than the total bid at an 80% learning curve.",
+      "Include 6.40 direct labor hours per unit at $8.50 per hour."
+    ],
+    "answerIndex": 3,
+    "explanation": "The sum of the direct labor hours for the initial lot of 50 units\nwas 1,000. A second lot of 50 would reduce the cumulative\nhours per lot to 700 (70% × 1,000 hours). A doubling to four\nlots would reduce the cumulative hours per lot to 490 (70% ×\n700 hours). Thus, for an output of 200 units, the total hours\nworked would be 1,960 (4 lots × 490 hours). Subtracting the\n1,000 hours required for the first 50 units from the 1,960-hour\ntotal gives 960 hours for the last 150 units. Dividing 960 hours\nby 150 units produces a per-unit time of 6.4 hours.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 5,
+    "page": 89,
+    "topicId": "su12-learning-curve",
+    "stem": "A corporation manufactures specialty components for the\nelectronics industry in a highly labor intensive environment. A\nmanufacturer has asked the corporation to bid on a component\nthat the corporation made for the manufacturer last month. The\nprevious order was for 80 units and required 120 hours of\ndirect labor to manufacture. The manufacturer would now like\n240 additional components. The corporation experiences an\n80% learning curve on all of its jobs. The number of direct\nlabor hours needed for the corporation to complete the 240\nadditional components is",
+    "choices": [
+      "360.0",
+      "187.2",
+      "307.2",
+      "256.0"
+    ],
+    "answerIndex": 1,
+    "explanation": "One common assumption made in a learning curve model is\nthat the cumulative average time per unit is reduced by a\ncertain percentage each time production doubles. An 80%\nlearning curve results in the following performance for the lots\nshown:\nUnits Cumulative Average Hours\n80       1.5 hours (120 ÷ 80)\n160         1.2 hours (1.5 × .8)\n320         .96 hours (1.2 × .8)\nThus, to produce 320 units, total production time will be\n307.2 hours (320 × .96). The total time for the last 240 units\nwill be 187.2 hours (307.2 – 120).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 6,
+    "page": 91,
+    "topicId": "su12-learning-curve",
+    "stem": "A particular manufacturing job is subject to an estimated 90%\nlearning curve. The first unit required 50 labor hours to\ncomplete. What is the cumulative average time per unit after\nfour units are completed?",
+    "choices": [
+      "50.0 hours.",
+      "45.0 hours.",
+      "40.5 hours.",
+      "40.0 hours."
+    ],
+    "answerIndex": 2,
+    "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed in a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Thus, a 90% learning curve indicates that a doubling\nof production will reduce the cumulative average unit\ncompletion time by 10%. For example, if the first unit required\n50 hours to complete, the average completion time after two\nunits will be 45 hours (90% × 50 hours). If production is again\ndoubled (to four units), the cumulative average completion\ntime will be 40.5 hours (90% × 45 hours).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 7,
+    "page": 92,
+    "topicId": "su12-learning-curve",
+    "stem": "A particular manufacturing job is subject to an estimated 80%\nlearning curve. The first unit required 50 labor hours to\ncomplete. What is the cumulative average time per unit after\neight units are completed?",
+    "choices": [
+      "20.0 hours.",
+      "25.6 hours.",
+      "32.0 hours.",
+      "40.0 hours."
+    ],
+    "answerIndex": 1,
+    "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed in a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Thus, an 80% learning curve indicates that a\ndoubling of production will reduce the cumulative average unit\ncompletion time by 20%. For example, if the first unit required\n50 hours to complete, the average completion time after two\nunits will be 40 hours (50 hours × 80%). If production is again\ndoubled (to four units), the average completion time will be 32\nhours (40 hours × 80%). When production is doubled again to\neight units, the cumulative average completion time will be\n25.6 hours (32 hours × 80%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 8,
+    "page": 93,
+    "topicId": "su12-learning-curve",
+    "stem": "A particular manufacturing job is subject to an estimated 80%\nlearning curve. The first unit required 50 labor hours to\ncomplete. If the learning curve is based on a cumulative\naverage time per unit assumption, what is the time required to\ncomplete the second unit?",
+    "choices": [
+      "30.0 hours.",
+      "40.0 hours.",
+      "45.0 hours.",
+      "50.0 hours."
+    ],
+    "answerIndex": 0,
+    "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed in a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Thus, an 80% learning curve indicates that a\ndoubling of production reduces the cumulative average unit\ncompletion time by 20%. For example, if the first unit required\n50 hours to complete, the average completion time after two\nunits would be 40 hours (50 hours × 80%). If total production\ntime is 80 hours (2 × 40 cumulative average time), and the first\nunit required 50 hours, the time to produce the second unit\nmust be 30 hours.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 9,
+    "page": 94,
+    "topicId": "su12-learning-curve",
+    "stem": "A new manufacturer in the production of airplane propellers\nhas to train its employees in the process of making propellers.\nTo increase the speed of learning, the manufacturer will give a\nbonus to the employee with the lowest cumulative average\ntime per unit after eight units are completed. L took 50 hours to\ncomplete the first unit, and she is subject to an 80% learning\ncurve. S took 60 hours to complete the first unit, and she is\nsubject to a 70% learning curve. M took 40 hours to complete\nthe first unit, and she is subject to a 90% learning curve. P\ntook 55 hours to complete the first unit, and she is subject to a\n75% learning curve. Which employee will receive the bonus?",
+    "choices": [
+      "L.",
+      "S.",
+      "M.",
+      "P."
+    ],
+    "answerIndex": 1,
+    "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter. One\ncommon assumption in a learning curve model is that the\ncumulative average time per unit is reduced by a certain\npercentage each time production doubles. Therefore, for S, if\nthe first unit required 60 hours to complete, her average\ncompletion time after two units will be 42 hours (70% × 60\nhours). If production is doubled to 4 units, her average\ncompletion time will be 29.4 hours (70% × 42 hours). When\nproduction is then doubled to 8 units, her average completion\ntime will be 20.6 hours (70% × 29.4 hours). This is the best\namong the four workers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 10,
+    "page": 96,
+    "topicId": "su12-learning-curve",
+    "stem": "It is estimated that a particular manufacturing job is subject to\nan 80% learning curve. The first unit required 50 labor hours to\ncomplete. What is the cumulative average time per unit after\ncompleting four units?",
+    "choices": [
+      "50.0 hours.",
+      "40.0 hours.",
+      "32.0 hours.",
+      "30.0 hours."
+    ],
+    "answerIndex": 2,
+    "explanation": "Learning curve models reflect the increased rate at which\npeople perform tasks as they gain experience. One common\nassumption is that the cumulative average time per unit is\nreduced by a certain percentage when production doubles\nduring its early stages. An 80% learning curve indicates that a\ndoubling of production reduces the time required by 20%. For\nexample, if the first unit requires 50 hours, the cumulative\naverage completion time is 40 hours (80% × 50 hours) for two\nunits and 32 hours (80% × 40 hours) for four units.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 11,
+    "page": 97,
+    "topicId": "su12-learning-curve",
+    "stem": "A company plans to bid on a special project that calls for a\ntotal of 24,000 units. The units will be produced in lots, with the\nfirst lot consisting of 750 units. Based on prior experience, the\ndirect labor time needed per unit of product will be\nprogressively smaller by a constant percentage rate as\nexperience is gained in the manufacturing process. The\nquantitative method that would best estimate the company’s\ntotal cost for the project is",
+    "choices": [
+      "Learning curve techniques.",
+      "Differential calculus.",
+      "Discounted cash flow techniques.",
+      "Linear programming."
+    ],
+    "answerIndex": 0,
+    "explanation": "Learning curves reflect the increased rate at which people\nperform as they gain experience at a new task. Because the\ntime to perform the task becomes progressively shorter in the\nearly stages of a new activity, the direct labor costs involved\ndecline. The curve is often expressed as a percentage\nreduction in time for each doubling of cumulative production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 12,
+    "page": 97,
+    "topicId": "su12-learning-curve",
+    "stem": "An entity received a request for a competitive bid for the sale\nof one of its unique boating products with a desired\nmodification. The entity is now in the process of manufacturing\nthis product but with a slightly different modification for another\ncustomer. These unique products are labor intensive and both\nwill have long production runs. Which one of the following\nmethods should be used to estimate the cost of the new\ncompetitive bid?",
+    "choices": [
+      "Expected value analysis.",
+      "Learning curve analysis.",
+      "Regression analysis.",
+      "Continuous probability simulation."
+    ],
+    "answerIndex": 1,
+    "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter as the\nworkers better learn their jobs. Ordinarily, the curve is\nexpressed as a percentage of reduced time to complete a task\nfor each doubling of cumulative production. This methodology\nis appropriate when submitting a bid for a product for which\nthe firm already has experience. The experience should lead\nto shorter production time and lower costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 13,
+    "page": 99,
+    "topicId": "su12-learning-curve",
+    "stem": "The technique used to predict the change in direct labor hours\nas a new process stabilizes is",
+    "choices": [
+      "Simple regression.",
+      "Multiple regression.",
+      "Time series analysis.",
+      "Learning curve analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. The time to perform a\ngiven task becomes progressively shorter during the early\nstages of production. The curve is expressed as a percentage\nreduction in time to complete a task for each doubling of\ncumulative production. A learning curve percentage of 80% is\ncommon.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 14,
+    "page": 99,
+    "topicId": "su12-learning-curve",
+    "stem": "Management of a bookkeeping company observed that the\naverage time spent to perform identical tasks using a new\nsoftware package decreases as the number of tasks\nperformed increases. The following information on the use of\nthe new software was collected.\nNumber of Total Time to Average Time\nTasks Perform All       to Perform\nPerformed Tasks             Each Task\n1       10 minutes 10 minutes\n2       18 minutes       9 minutes\n4      32.4 minutes 8.1 minutes\nIf this learning effect continues, what is the average time to\nperform each of the first eight tasks?",
+    "choices": [
+      "7.29 minutes.",
+      "8.1 minutes.",
+      "6.56 minutes.",
+      "5.90 minutes."
+    ],
+    "answerIndex": 0,
+    "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter. This\ntechnique is applicable only to the early stages of production\nor to any new task. One common assumption is that the\ncumulative average time per unit is reduced by a fixed\npercentage each time cumulative production is doubled.\nBased on the given data, this company has a 90% learning\ncurve (90% × 10 minutes = 9 minutes, and 90% × 9 minutes =\n8.1 minutes). Accordingly, the cumulative average time to\nperform eight tasks is 7.29 minutes (90% × 8.1 minutes).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 15,
+    "page": 101,
+    "topicId": "su12-learning-curve",
+    "stem": "Learning curves are most often used to predict",
+    "choices": [
+      "Unit material costs.",
+      "Overhead variances.",
+      "Total unit costs.",
+      "Unit direct labor costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. Thus, they are useful\nin predicting unit direct labor costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 16,
+    "page": 102,
+    "topicId": "su12-learning-curve",
+    "stem": "Aerosub, Inc., has developed a new product for\nspacecraft that includes the production of a complex part. The\nmanufacture of this part requires a high degree of technical skill.\nManagement believes there is a good opportunity for its technical\nforce to learn and improve as they become accustomed to the\nproduction process. The production of the first unit requires 10,000\ndirect labor hours. Management projects an 80% learning curve and\nwants to produce a total of eight units.\nUpon completion of the eighth unit, Aerosub’s cumulative\naverage direct labor hours required per unit of the product will\nbe",
+    "choices": [
+      "5,120 hours.",
+      "6,400 hours.",
+      "8,000 hours.",
+      "10,000 hours."
+    ],
+    "answerIndex": 0,
+    "explanation": "The underlying assumption of learning curve analysis is that\nworkers gain productivity at a predictable rate as they gain\nexperience with a new process. A common assumption is that\nthe number of hours required for each doubling of output is\n80% of the hours required for the previous doubling. The\neffects of Aerosub’s projected learning curve on this product\ncan be calculated as follows:\nCumulative           Cumulative\nUnits               Average\nBatch      Produced            Labor Hours\n1            1         10,000\n2            2          8,000 (10,000 × 80%)\n3            4          6,400 (8,000 × 80%)\n4            8          5,120 (6,400 × 80%)",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 17,
+    "page": 103,
+    "topicId": "su12-learning-curve",
+    "stem": "Aerosub, Inc., has developed a new product for\nspacecraft that includes the production of a complex part. The\nmanufacture of this part requires a high degree of technical skill.\nManagement believes there is a good opportunity for its technical\nforce to learn and improve as they become accustomed to the\nproduction process. The production of the first unit requires 10,000\ndirect labor hours. Management projects an 80% learning curve and\nwants to produce a total of eight units.\nUpon completion of the eighth unit, Aerosub’s cumulative\ndirect labor hours will be",
+    "choices": [
+      "29,520 hours.",
+      "40,960 hours.",
+      "64,000 hours.",
+      "80,000 hours."
+    ],
+    "answerIndex": 1,
+    "explanation": "The underlying assumption of learning curve analysis is that\nworkers gain productivity at a predictable rate as they gain\nexperience with a new process. A common assumption is that\nthe number of hours required for each doubling of output will\nbe 80% of the hours required for the previous doubling. The\neffects of Aerosub’s projected learning curve on this product\ncan be calculated as follows:\nCumulative      Cumulative            Cumulative\nUnits         Average                Total\nBatch Produced         Labor Hours          Labor Hours\n1         1      10,000                      10,000\n2         2       8,000 (10,000 × 80%)       16,000\n3         4       6,400 (8,000 × 80%)        25,600\n4         8       5,120 (6,400 × 80%)        40,960",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 18,
+    "page": 104,
+    "topicId": "su12-learning-curve",
+    "stem": "Aerosub, Inc., has developed a new product for\nspacecraft that includes the production of a complex part. The\nmanufacture of this part requires a high degree of technical skill.\nManagement believes there is a good opportunity for its technical\nforce to learn and improve as they become accustomed to the\nproduction process. The production of the first unit requires 10,000\ndirect labor hours. Management projects an 80% learning curve and\nwants to produce a total of eight units.\nAfter completing the first unit, the estimated total direct labor\nhours Aerosub will require to produce the seven additional\nunits will be",
+    "choices": [
+      "30,960 hours.",
+      "40,960 hours.",
+      "56,000 hours.",
+      "70,000 hours."
+    ],
+    "answerIndex": 0,
+    "explanation": "The cumulative total hours spent on the units can be\ncalculated as follows:\nCumulative        Cumulative         Cumulative\nUnits           Average              Total\nBatch Produced           Labor Hours        Labor Hours\n1         1       10,000                     10,000\n2         2         8,000 (10,000 × 80%)     16,000\n3         4         6,400 (8,000 × 80%)      25,600\n4         8         5,120 (6,400 × 80%)      40,960\nSince it took a total of 40,960 hours to complete all eight units\nand 10,000 to complete the first one, units 2 through 8 took\n30,960 hours (40,960 – 10,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 19,
+    "page": 105,
+    "topicId": "su12-learning-curve",
+    "stem": "A manufacturing company has the opportunity to submit a bid\nfor 20 units of a product on which it has already produced two\n10-unit lots. The production manager believes that the learning\nexperience observed on the first two lots will continue for at\nleast the next two lots. The direct labor required on the first two\nlots was as follows:\n• 5,000 direct labor hours for the first lot of 10 units\n• 3,000 additional direct labor hours for the second lot of\n10 units\nThe learning rate experienced by the company on the first two\nlots of this product is",
+    "choices": [
+      "40.0%",
+      "60.0%",
+      "62.5%",
+      "80.0%"
+    ],
+    "answerIndex": 3,
+    "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nFor this company, a total of 8,000 hours was spent to\ncomplete two lots of product. The cumulative average spent\non the two lots was therefore 4,000 hours per lot (8,000 ÷ 2).\nThis cumulative average of 4,000 is 80% of the 5,000 hours\nthat were spent on the first lot. The learning curve is therefore\n80%.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 20,
+    "page": 106,
+    "topicId": "su12-learning-curve",
+    "stem": "Proper Propeller, Inc., plans to manufacture a newly\ndesigned high-technology propeller for airplanes. Proper Propeller\nforecasts that as workers gain experience, they will need less time to\ncomplete the job. Based on prior experience, Proper Propeller\nestimates a 70% cumulative learning curve and has projected the\nfollowing costs:\nCumulative Number       Manufacturing Projections\nof Units Produced Average Cost per Unit Total Costs\n1               $20,000            $20,000\n2                 14,000            28,000\nIf Proper Propeller produces eight units, the average\nmanufacturing cost per unit will be",
+    "choices": [
+      "$1,647",
+      "$6,860",
+      "$9,800",
+      "$14,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nIn this situation, the company is assuming that the total costs\nrequired for each doubling of output will be 70% of the costs\nrequired for the previous doubling. The effects of Proper\nPropeller’s projected learning curve can be calculated as\nfollows:\nCumulative         Cumulative\nUnits            Average\nBatch Produced                Cost\n1          1       $20,000\n2          2       $14,000 ($20,000 × 70%)\n3          4       $ 9,800 ($14,000 × 70%)\n4          8       $ 6,860 ($9,800 × 70%)",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 21,
+    "page": 108,
+    "topicId": "su12-learning-curve",
+    "stem": "Proper Propeller, Inc., plans to manufacture a newly\ndesigned high-technology propeller for airplanes. Proper Propeller\nforecasts that as workers gain experience, they will need less time to\ncomplete the job. Based on prior experience, Proper Propeller\nestimates a 70% cumulative learning curve and has projected the\nfollowing costs:\nCumulative Number       Manufacturing Projections\nof Units Produced Average Cost per Unit Total Costs\n1               $20,000            $20,000\n2                 14,000            28,000\nIf Proper Propeller produces eight units, the total\nmanufacturing cost will be",
+    "choices": [
+      "$50,660",
+      "$54,880",
+      "$62,643",
+      "$112,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nIn this situation, the company is assuming that the total costs\nrequired for each doubling of output will be 70% of the costs\nrequired for the previous doubling. The effects of Proper\nPropeller’s projected learning curve can be calculated as\nfollows:\nCumulative        Cumulative          Cumulative\nUnits           Average               Total\nBatch Produced               Cost                Cost\n1          1      $20,000                  $20,000\n2           2   $14,000 ($20,000 × 70%)      28,000\n3           4    $9,800 ($14,000 × 70%)      39,200\n4           8    $6,860 ($9,800 × 70%)       54,880",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 22,
+    "page": 109,
+    "topicId": "su12-learning-curve",
+    "stem": "Proper Propeller, Inc., plans to manufacture a newly\ndesigned high-technology propeller for airplanes. Proper Propeller\nforecasts that as workers gain experience, they will need less time to\ncomplete the job. Based on prior experience, Proper Propeller\nestimates a 70% cumulative learning curve and has projected the\nfollowing costs:\nCumulative Number       Manufacturing Projections\nof Units Produced Average Cost per Unit Total Costs\n1               $20,000            $20,000\n2                 14,000            28,000\nAfter completing production of the first propeller, the estimated\ncost for Proper Propeller to fill an order for seven additional\npropellers is",
+    "choices": [
+      "$34,880",
+      "$54,880",
+      "$92,000",
+      "$98,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The effects of Proper Propeller’s projected learning curve can\nbe calculated as follows:\nCumulative         Cumulative          Cumulative\nUnits           Average                Total\nBatch Produced              Cost                 Cost\n1         1      $20,000                    $20,000\n2         2      $14,000 ($20,000 × 70%) 28,000\n3         4       $9,800 ($14,000 × 70%) 39,200\n4         8       $6,860 ($9,800 × 70%) 54,880\nSince eight propellers require $54,880 and the first one off the\nassembly line cost $20,000, the cost of units 2 through 8 will\nbe $34,880 ($54,880 – $20,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 23,
+    "page": 110,
+    "topicId": "su12-learning-curve",
+    "stem": "Proper Propeller, Inc., plans to manufacture a newly\ndesigned high-technology propeller for airplanes. Proper Propeller\nforecasts that as workers gain experience, they will need less time to\ncomplete the job. Based on prior experience, Proper Propeller\nestimates a 70% cumulative learning curve and has projected the\nfollowing costs:\nCumulative Number       Manufacturing Projections\nof Units Produced Average Cost per Unit Total Costs\n1               $20,000            $20,000\n2                 14,000            28,000\nA manufacturer uses a cumulative average-time learning curve\nmodel to monitor labor costs. Data regarding two recently\ncompleted batches of a part that is used in tractor-trailer rigs is\nas follows:\nBatch Number Cumulative Average\nNumber of Units      Hours Per Unit\n1       50             20\n2       50             16\nIf the same rate of learning continues for the next several\nbatches produced, which of the following best describes (1) the\ntype (i.e., degree) of learning curve that the firm is experiencing\nand (2) the average hours per unit for units included in the 201-\n400 range of units produced (i.e., the last 200 units)?\nType (Degree) of        Average Hours Per\nLearning Curve    Unit for Units 201-400",
+    "choices": [
+      "20%           10.24",
+      "80%           10.24",
+      "80%           7.68",
+      "20%        3.84"
+    ],
+    "answerIndex": 2,
+    "explanation": "The learning curve percentage is determined by noting the\nhours used in producing the first doubling of output as a\npercentage of the hours used in the original batch. Since 16 is\n80% of 20, the manufacturer is experiencing an 80% learning\ncurve. The average hours used to produce the 4th batch of\noutput (units 201 – 400) can be calculated as follows:\nUnits Cumulati Cumulativ Cumulati Time              Time\nve         e         ve        Spent     Spent\nin     Units   Average      Total       on      on Units\nBatc Batc Produced Labor           Time       Batch in Batch\nh      h               Hours\n1      50      50      20        1,000     1,000         20\n2      50     100      16        1,600       600         12\n3     100     200      12.8      2,560       960          9.6\n4     200     400      10.24     4,096     1,536          7.68",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 24,
+    "page": 112,
+    "topicId": "su12-learning-curve",
+    "stem": "A manufacturing company required 800 direct labor hours to\nproduce the first lot of four units of a new motor. Management\nbelieves that a 90% learning curve will be experienced over\nfour lots of production. How many direct labor hours will be\nrequired to manufacture the next 12 units?",
+    "choices": [
+      "1,792",
+      "1,944",
+      "2,016",
+      "2,160"
+    ],
+    "answerIndex": 0,
+    "explanation": "With a 90% learning curve, the cumulative production times\nwould be as follows:\nBatch Units     Average Time      Cumulative Time\n1       1-4 800                     800\n2       5-8 720 (800 × 90%) 1,440\n3      9-16 648 (720 × 90%) 2,592\nSubtracting the 800 hours spent on the first batch from the\ncumulative time for three batches leaves 1,792 hours for the\nlast three groups of units (12 units).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 25,
+    "page": 113,
+    "topicId": "su12-learning-curve",
+    "stem": "Which one of the following will allow a better use of standard\ncosts and variance analysis to help improve managerial\ndecision-making?",
+    "choices": [
+      "Company A does not differentiate between variable and fixed\noverhead in calculating its overhead variances.",
+      "Company B uses the prior year’s average actual cost as the\ncurrent year’s standard.",
+      "Company C investigates only negative variances.",
+      "Company D constantly revises standards to reflect learning\ncurves."
+    ],
+    "answerIndex": 3,
+    "explanation": "Learning curves are an established phenomenon. Workers\nlearn a new task at a predictable rate and the resulting\nimprovements in productivity should be factored into standard\nsetting and variance analysis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 26,
+    "page": 113,
+    "topicId": "su12-learning-curve",
+    "stem": "Which one of the following techniques would most likely be\nused to analyze reductions in the time required to perform a\ntask as experience with that task increases?",
+    "choices": [
+      "Regression analysis.",
+      "Learning curve analysis.",
+      "Sensitivity analysis.",
+      "Normal probability analysis."
+    ],
+    "answerIndex": 1,
+    "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 27,
+    "page": 114,
+    "topicId": "su12-learning-curve",
+    "stem": "A manufacturing firm plans to bid on a special order of 80 units\nthat will be manufactured in lots of 10 units each. The\nproduction manager estimates that the direct labor hours per\nunit will decline by a constant percentage each time the\ncumulative quantity of units produced doubles. The\nquantitative technique used to capture this phenomenon and\nestimate the direct labor hours required for the special order is",
+    "choices": [
+      "Cost-profit-volume analysis.",
+      "The Markov process.",
+      "Linear programming analysis.",
+      "Learning curve analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 28,
+    "page": 115,
+    "topicId": "su12-learning-curve",
+    "stem": "Which one of the following statements best demonstrates the\nconcept of the learning curve?",
+    "choices": [
+      "A learning curve is a linear cost behavior influenced by\nlearning.",
+      "A learning curve is a judgmental method of estimating costs\nwhen learning is present.",
+      "A learning curve is a percentage by which average time per\nunit produced decreases as output doubles.",
+      "A learning curve is a percentage by which average time falls\nas output increases by 1."
+    ],
+    "answerIndex": 2,
+    "explanation": "A learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. The curve is\nusually expressed as a percentage of reduced time to\ncomplete a task for each doubling of cumulative production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 29,
+    "page": 115,
+    "topicId": "su12-learning-curve",
+    "stem": "A corporation is developing a new product that will be\nmanufactured in pairs. The company recently produced the\nfirst two units of this product using 200 hours of direct labor\ntime. If the corporation has a 90% learning curve and uses the\ncumulative average-time learning model, the total direct labor\ntime to manufacture the first four units of this new product is",
+    "choices": [
+      "400 hours.",
+      "380 hours.",
+      "360 hours.",
+      "324 hours."
+    ],
+    "answerIndex": 2,
+    "explanation": "With the cumulative average-time learning model, the\ncumulative average time for production will be a certain\npercentage of what it previously was every time production\ndoubled. The first batch has an average time of 100 hours per\nunit. Therefore, after four units, the cumulative average time\nfor all units will be 90 hours per unit, as production has\ndoubled from the first point. As four units have been made, the\ncumulative time will be 360 hours.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 30,
+    "page": 116,
+    "topicId": "su12-learning-curve",
+    "stem": "The quantitative technique used to project the direct labor\ncosts for full-scale production of a product from the initial run of\nthe product is",
+    "choices": [
+      "Learning curve analysis.",
+      "Linear programming.",
+      "Monte Carlo simulation.",
+      "Expected value analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "Learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. It is a\nquantitative technique used to project the direct labor costs for\nfull-scale production of a product from the initial run of the\nproject.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 31,
+    "page": 117,
+    "topicId": "su12-learning-curve",
+    "stem": "A company experiences a cumulative learning curve of 75%\non the manufacturing of a particular electrical product. It takes\n100 hours to make the first 500 units. How many hours will it\ntake to make 2,000 units in total?",
+    "choices": [
+      "225.00",
+      "231.25",
+      "250.00",
+      "300.00"
+    ],
+    "answerIndex": 0,
+    "explanation": "The effects of the company’s projected learning curve of 75%\ncan be calculated as follows:\nCumulative        Cumulative         Cumulative\nBatches Units Produced Average Batch Time Total Time\n1          500         100                    100 (1 × 100)\n2          1,000       75 (100 × 75%)         150 (2 × 75)\n4          2,000       56.25 (75 × 75%)       225 (4 ×\n56.25)\nIt will take 225 hours to produce 2,000 units in total.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 32,
+    "page": 118,
+    "topicId": "su12-learning-curve",
+    "stem": "A software company recently established a customer service\ndepartment. After the first week, the average time required to\nhandle one customer call was 15 minutes. The manager of the\ncustomer service department estimates an 80% learning\ncurve. Under the cumulative average-time learning model, the\ncumulative average time required to handle one customer call\nby the fourth week will be",
+    "choices": [
+      "7.7 minutes.",
+      "9.6 minutes.",
+      "12.0 minutes.",
+      "15.0 minutes."
+    ],
+    "answerIndex": 1,
+    "explanation": "The learning curve is based on a doubling of production.\nGiven an 80% learning curve and a 15-minute production time\nduring the first week, production during the second week is\nestimated to be 12 minutes per call (80% × 15 minutes). When\nproduction doubles again in the fourth week, the cumulative\naverage time for each call is 9.6 minutes (80% × 12 minutes).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 33,
+    "page": 119,
+    "topicId": "su12-learning-curve",
+    "stem": "A manufacturing company notices that when its cumulative\nproduction doubles, it observes a 10% decrease in the time it\ntakes to produce one unit of product. Based on a cumulative\naverage-time learning model, this decrease in unit production\ntime implies a learning curve of",
+    "choices": [
+      "5%",
+      "10%",
+      "90%",
+      "110%"
+    ],
+    "answerIndex": 2,
+    "explanation": "Learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. A 10%\ndecrease in the time to produce one unit of product implies a\n90% learning curve. After the first doubling of production, the\ncumulative average production time is 90% of what it was\nbefore doubling.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 2,
+    "number": 34,
+    "page": 120,
+    "topicId": "su12-learning-curve",
+    "stem": "A corporation has determined that when the quantity produced\nin units doubles from x to 2x, the average time per unit for 2x\nunits is 90% of the average time per unit for x units. The\ndecline in time per unit as production doubles is an example of",
+    "choices": [
+      "Incremental unit-time learning model.",
+      "Cumulative average-time learning model.",
+      "High-low cost estimation model.",
+      "Simple regression cost estimation model."
+    ],
+    "answerIndex": 1,
+    "explanation": "The cumulative average-time learning model projects the\nreduction in the cumulative average time it takes to complete a\ncertain number of tasks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 1,
+    "page": 121,
+    "topicId": "su12-expected-value",
+    "stem": "The expected monetary value of an act is the",
+    "choices": [
+      "Sum of the conditional profit (loss) for each event.",
+      "Sum of the conditional profit (loss) for each event times the\nprobability of each event’s occurrence.",
+      "Conditional profit (loss) for the best event times the probability\nof each event’s occurrence.",
+      "Revenue minus the costs for the act."
+    ],
+    "answerIndex": 1,
+    "explanation": "Expected value analysis estimates future monetary value\nbased on forecasts and their related probabilities of\noccurrence. The expected value under uncertainty is found by\nmultiplying the probability of each outcome (event) by its\npayoff (conditional profit or loss) and summing the products.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 2,
+    "page": 121,
+    "topicId": "su12-expected-value",
+    "stem": "A widely used approach that managers use to recognize\nuncertainty about individual items and to obtain an immediate\nfinancial estimate of the consequences of possible prediction\nerrors is",
+    "choices": [
+      "Expected value analysis.",
+      "Learning curve analysis.",
+      "Sensitivity analysis.",
+      "Regression analysis."
+    ],
+    "answerIndex": 2,
+    "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis, which\nexamines how the model’s outcomes change as the\nparameters change.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 3,
+    "page": 122,
+    "topicId": "su12-expected-value",
+    "stem": "A distributor of batteries for security cameras is developing its\nbudgeted cost of goods sold for next year. The distributor has\ndeveloped the following range of sales estimates and\nassociated probabilities for the year:\nSales Estimate Probability\n$ 60,000          25%\n85,000         40%\n100,000          35%\nThe distributor’s cost of goods sold averages 80% of sales.\nWhat is the expected value of the distributor’s budgeted cost of\ngoods sold?",
+    "choices": [
+      "$85,000",
+      "$84,000",
+      "$68,000",
+      "$67,200"
+    ],
+    "answerIndex": 3,
+    "explanation": "The expected value is calculated by weighting each sales\nestimate by the probability of its occurrence. Consequently,\nthe expected value of sales is $84,000 [($60,000 × .25) +\n($85,000 × .40) + ($100,000 × .35)]. Cost of goods sold is\ntherefore $67,200 ($84,000 × .80).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 4,
+    "page": 123,
+    "topicId": "su12-expected-value",
+    "stem": "Through the use of decision models, managers thoroughly\nanalyze many alternatives and decide on the best alternative\nfor the company. Often the actual results achieved from a\nparticular decision are not what was expected when the\ndecision was made. In addition, an alternative that was not\nselected would have actually been the best decision for the\ncompany. The appropriate technique to analyze the\nalternatives by using expected inputs and altering them before\na decision is made is",
+    "choices": [
+      "Expected value analysis.",
+      "Linear programming.",
+      "Program evaluation review technique (PERT).",
+      "Sensitivity analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis. Sensitivity\nanalysis examines how the model’s outcomes change as the\nparameters change.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 5,
+    "page": 125,
+    "topicId": "su12-expected-value",
+    "stem": "The probabilities shown in the table below represent\nthe estimate of sales for a new product.\nSales (Units) Probability\n0-200          15%\n201-400         45%\n401-600         25%\n601-800         15%\nWhat is the probability of selling between 201 and 600 units of\nthe product?",
+    "choices": [
+      "0%",
+      "11.25%",
+      "70%",
+      "25%"
+    ],
+    "answerIndex": 2,
+    "explanation": "The probability of selling between 201 and 400 units is 45%,\nand the probability of selling between 401 and 600 units is\n25%. Thus, the probability of selling between 201 and 600\nunits is the sum of these probabilities, or 70%.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 6,
+    "page": 125,
+    "topicId": "su12-expected-value",
+    "stem": "The probabilities shown in the table below represent\nthe estimate of sales for a new product.\nSales (Units) Probability\n0-200          15%\n201-400         45%\n401-600         25%\n601-800         15%\nUsing the midpoint of each range as the best estimate for that\nrange, what is the best estimate of the expected sales of the\nnew product?",
+    "choices": [
+      "480",
+      "380",
+      "400",
+      "800"
+    ],
+    "answerIndex": 1,
+    "explanation": "The expected sales levels should be weighted by\nthe individual probabilities of their occurrence. The\nmidpoint of each sales level is used as the estimate\nfor that level. Thus, sales are expected to be 380\nunits.\n100 × 15% = 15\n300 × 45% = 135\n500 × 25% = 125\n700 × 15% = 105\n380",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 7,
+    "page": 126,
+    "topicId": "su12-expected-value",
+    "stem": "In decision making under conditions of uncertainty, expected\nvalue refers to the",
+    "choices": [
+      "Likely outcome of a proposed action.",
+      "Present value of alternative actions.",
+      "Probability of a given outcome from a proposed action.",
+      "Weighted average of probable outcomes of an action."
+    ],
+    "answerIndex": 3,
+    "explanation": "The expected value of an action is found by multiplying the\nprobability of each possible outcome by its payoff and\nsumming the products. It represents the long-term average\npayoff for repeated trials. In other words, expected value is the\nweighted average of probable outcomes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 8,
+    "page": 127,
+    "topicId": "su12-expected-value",
+    "stem": "Butler and Burnside are projecting market conditions\nfor the upcoming month. They have prepared the following payoff\ntable:\nDemand in Units\n0       2        4    6\nProbability of Demand\nSupply\nin Units    0.1      0.3      0.4   0.2\n0      $ 0       $ 0       $ 0 $ 0\n2        (80)       40       40    40\n4       (160)      (40)      80    80\n6       (240)    (120)        0   120\nButler and Burnside’s expected profit when supply equals 4\nunits is",
+    "choices": [
+      "$(40)",
+      "$80",
+      "$20",
+      "$120"
+    ],
+    "answerIndex": 2,
+    "explanation": "The approach to the solution is to weight (multiply) the\nprobabilities for each level of demand by the payoff for that\nlevel of demand.\nDemand Payoff            Probability  Weighted Payoffs\n0           $(160) × .1                =     $(16)\n2           (40)   × .3                =     (12)\n4           80     × .4                =      32\n6           80     × .2                =      16\nExpected Profit          $ 20",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 9,
+    "page": 128,
+    "topicId": "su12-expected-value",
+    "stem": "A company’s managers are attempting to value a piece of land\nthey own. One potential occurrence is that the old road\nbordering the land gets paved. Another possibility is that the\nroad does not get paved. A third outcome is that the road\nmight be destroyed and completely replaced by a new road.\nBased on the following future states of nature, their\nprobabilities, and subsequent values of the land, what is the\nexpected value of the land?\nFuture States of Nature (SN)     Probability\nSN 1: Current road gets paved         .5\nSN 2: Road does not get paved         .4\nSN 3: Current road destroyed and\nreplaced with new road          .1\nEstimates of land value under each possible future state of\nnature:\nValue if SN 1: $200,000\nValue if SN 2: $100,000\nValue if SN 3: $550,000",
+    "choices": [
+      "$133,333",
+      "$195,000",
+      "$225,000",
+      "$283,333"
+    ],
+    "answerIndex": 1,
+    "explanation": "The expected value of the land is determined by multiplying\nthe probability of each state of nature by the value under that\nparticular state of nature and adding all of the products. Thus,\nthe land’s expected value is $195,000 [(0.5)($200,000) +\n(0.4)($100,000) + (0.1)($550,000)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 10,
+    "page": 130,
+    "topicId": "su12-expected-value",
+    "stem": "Under favorable weather conditions, the management of a\nfarm expects its raspberry crop to have a $120,000 market\nvalue. An unprotected crop subject to frost has an expected\nmarket value of $80,000. If the farm protects the raspberries\nagainst frost, the market value of the crop is still expected to\nbe $120,000 under frost-free conditions and $180,000 if a frost\noccurs. What must be the probability of a frost for the farm to\nbe indifferent to spending $20,000 for tents to provide frost\nprotection?",
+    "choices": [
+      ".167",
+      ".200",
+      ".250",
+      ".333"
+    ],
+    "answerIndex": 1,
+    "explanation": "Without protection, the company will have sales of either\n$80,000 or $120,000. With protection, the company will have\nsales of either $120,000 or $180,000. The $20,000 cost of\ntents must be subtracted from these amounts to compute the\nnet contribution. Thus, the contribution if the berries are\nprotected will be either $100,000 or $160,000. The problem\ncan be solved algebraically with the following formula (X = the\nprobability of frost):\nX($80,000) + (1 – = X($160,000) + (1 – X)\nX)($120,000) ($100,000)\n$80,000X + $120,000 – = $160,000X + $100,000 –\n$120,000X $100,000X\n$120,000 – $40,000X = $100,000 + $60,000X\n$120,000 = $100,000 + $100,000X\n$20,000 = $100,000X\nX = .200\nIn other words, if the probability of frost is 20%, management\nwill be indifferent between providing and not providing\nprotection. At a frost expectancy of greater than 20%,\nmanagement should provide protection.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 11,
+    "page": 131,
+    "topicId": "su12-expected-value",
+    "stem": "During the past few years, a company has experienced the\nfollowing average number of power outages:\nNumber per Month Number of Months\n0                 3\n1                 2\n2                 4\n3                3\n12\nEach power outage results in out-of-pocket costs of $800. For\n$1,000 per month, the company can lease a generator to\nprovide power during outages. If the company leases a\ngenerator in the coming year, the estimated savings (or\nadditional expense) for the year will be",
+    "choices": [
+      "$(15,200)",
+      "$(1,267)",
+      "$3,200",
+      "$7,200"
+    ],
+    "answerIndex": 2,
+    "explanation": "Each outage costs $800, but this expense can be avoided by\npaying $1,000 per month ($12,000 for the year). The\nexpected-value approach uses the probability distribution\nderived from past experience to determine the average\nexpected outages per month.\n3 ÷ 12 × 0 = 0.0\n2 ÷ 12 × 1 = 0.16667\n4 ÷ 12 × 2 = 0.66667\n3 ÷ 12 × 3 = 0.75000\n1.58334\nThe company can expect to have, on average, 1.58334\noutages per month. At $800 per outage, the expected cost is\n$1,266.67. Thus, paying $1,000 to avoid an expense of\n$1,266.67 saves $266.67 per month, or $3,200 per year.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 12,
+    "page": 134,
+    "topicId": "su12-expected-value",
+    "stem": "The College Honor Society sells hot pretzels at the\nhome football games. The pretzels are sold for $1.00 each, and the\ncost per pretzel is $.30. Any unsold pretzels are discarded because\nthey will be stale before the next home game.\nThe frequency distribution of the demand for pretzels per game is\npresented as follows:\nUnit Sales Volume Probability\n2,000 pretzels     .10\n3,000 pretzels     .15\n4,000 pretzels     .20\n5,000 pretzels     .35\n6,000 pretzels     .20\nThe estimated demand for pretzels at the next home football\ngame using an expected value approach is",
+    "choices": [
+      "4,000 pretzels.",
+      "4,400 pretzels.",
+      "5,000 pretzels.",
+      "Some amount other than those given."
+    ],
+    "answerIndex": 1,
+    "explanation": "The calculation using an expected value approach weights\neach possible sales volume by its probability. Thus, the\nestimated demand is 4,400 pretzels.\nVolume Probability Result\n2,000 ×      .10     =    200\n3,000 ×      .15     =    450\n4,000 ×      .20     =    800\n5,000 ×      .35     = 1,750\n6,000 ×      .20     = 1,200\nExpected value       4,400",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 13,
+    "page": 135,
+    "topicId": "su12-expected-value",
+    "stem": "The College Honor Society sells hot pretzels at the\nhome football games. The pretzels are sold for $1.00 each, and the\ncost per pretzel is $.30. Any unsold pretzels are discarded because\nthey will be stale before the next home game.\nThe frequency distribution of the demand for pretzels per game is\npresented as follows:\nUnit Sales Volume Probability\n2,000 pretzels     .10\n3,000 pretzels     .15\n4,000 pretzels     .20\n5,000 pretzels     .35\n6,000 pretzels     .20\nThe estimated demand for pretzels at the next home football\ngame using a deterministic approach based on the most likely\noutcome is",
+    "choices": [
+      "4,000 pretzels.",
+      "4,400 pretzels.",
+      "5,000 pretzels.",
+      "6,000 pretzels."
+    ],
+    "answerIndex": 2,
+    "explanation": "A deterministic approach assumes that a value is known with\ncertainty. If that value is deemed to be the most likely\noutcome, assumed demand will be 5,000 pretzels, the volume\nwith the highest probability (35%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 14,
+    "page": 135,
+    "topicId": "su12-expected-value",
+    "stem": "The College Honor Society sells hot pretzels at the\nhome football games. The pretzels are sold for $1.00 each, and the\ncost per pretzel is $.30. Any unsold pretzels are discarded because\nthey will be stale before the next home game.\nThe frequency distribution of the demand for pretzels per game is\npresented as follows:\nUnit Sales Volume Probability\n2,000 pretzels     .10\n3,000 pretzels     .15\n4,000 pretzels     .20\n5,000 pretzels     .35\n6,000 pretzels     .20\nThe conditional profit per game of having 4,000 pretzels\navailable but only selling 3,000 pretzels is",
+    "choices": [
+      "$1,800",
+      "$2,100",
+      "$2,800",
+      "Some amount other than those given."
+    ],
+    "answerIndex": 0,
+    "explanation": "Each pretzel costs $.30. Thus, the cost of 4,000 pretzels is\n$1,200 (4,000 × $.30). Selling 3,000 pretzels at $1 each\nproduces revenue of $3,000. Subtracting the $1,200 of costs\nfrom the $3,000 of revenue results in a conditional profit of\n$1,800.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 15,
+    "page": 136,
+    "topicId": "su12-expected-value",
+    "stem": "The College Honor Society sells hot pretzels at the\nhome football games. The pretzels are sold for $1.00 each, and the\ncost per pretzel is $.30. Any unsold pretzels are discarded because\nthey will be stale before the next home game.\nThe frequency distribution of the demand for pretzels per game is\npresented as follows:\nUnit Sales Volume Probability\n2,000 pretzels     .10\n3,000 pretzels     .15\n4,000 pretzels     .20\n5,000 pretzels     .35\n6,000 pretzels     .20\nThe conditional profit per game of having 4,000 pretzels\navailable and selling all 4,000 pretzels is",
+    "choices": [
+      "$1,200",
+      "$2,100",
+      "$2,800",
+      "$800"
+    ],
+    "answerIndex": 2,
+    "explanation": "Each pretzel costs $.30. Thus, the cost of 4,000 pretzels is\n$1,200 (4,000 × $.30). Selling 4,000 pretzels at $1 each\nproduces revenue of $4,000. Subtracting the $1,200 of costs\nfrom the $4,000 of revenue results in a conditional profit of\n$2,800.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 16,
+    "page": 136,
+    "topicId": "su12-expected-value",
+    "stem": "A company is in the process of preparing its budget. As part of\nthe process, the company has prepared sales estimates and\nestimated the probability associated with each sales estimate.\nWhich one of the following techniques should be used by the\ncompany to determine sales for budgeting purposes?",
+    "choices": [
+      "Linear programming.",
+      "Minimax regret criteria.",
+      "Expected value analysis.",
+      "Monte Carlo simulation."
+    ],
+    "answerIndex": 2,
+    "explanation": "The expected value of an action is found by multiplying the\nprobability of each possible outcome by its payoff and\nsumming the products. It represents the long-term average\npayoff for repeated trials. If estimates of sales and\nprobabilities are known, expected value analysis can be used\nto determine budgeted sales.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 17,
+    "page": 137,
+    "topicId": "su12-expected-value",
+    "stem": "The expected monetary value of an event",
+    "choices": [
+      "Is equal to the conditional value or profit of the event.",
+      "Is equal to the payoff of the event times the probability the\nevent will occur.",
+      "Is the profit forgone by not choosing the best alternative.",
+      "Is the absolute profit from a particular event."
+    ],
+    "answerIndex": 1,
+    "explanation": "For decisions involving risk, the concept of expected value\nprovides a rational means for selecting the best alternative.\nThe expected value of a decision is found by multiplying the\nprobability of each outcome by its payoff, and summing the\nproducts. The result is the long-term average payoff for\nrepeated trials.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 18,
+    "page": 138,
+    "topicId": "su12-expected-value",
+    "stem": "Expected value in decision analysis is",
+    "choices": [
+      "A standard deviation using the probabilities as weights.",
+      "An arithmetic mean using the probabilities as weights.",
+      "The square root of the squared deviations.",
+      "A measure of the difference between the best possible\noutcome and the outcome of the original decision."
+    ],
+    "answerIndex": 1,
+    "explanation": "Expected value analysis is an estimate of future monetary\nvalue based on forecasts and their related probabilities of\noccurrence. The expected value is found by multiplying the\nprobability of each outcome by its payoff and summing the\nproducts. Expected value is therefore an arithmetic mean\nusing probabilities as weights.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 19,
+    "page": 139,
+    "topicId": "su12-expected-value",
+    "stem": "The expected value of perfect information is the",
+    "choices": [
+      "Same as the expected profit under certainty.",
+      "Sum of the conditional profit (loss) for the best event of each\nact times the probability of each event occurring.",
+      "Difference between the expected profit under certainty and the\nexpected opportunity loss.",
+      "Difference between the expected profit under certainty and the\nexpected monetary value of the best act under uncertainty."
+    ],
+    "answerIndex": 3,
+    "explanation": "Perfect information permits certainty that a future state of\nnature will occur. The expected value of perfect information\ndetermines the maximum amount a decision maker is willing\nto pay for information. It is the difference between the\nexpected value without perfect information, that is, the\nexpected value of the best action under uncertainty and the\nexpected value under certainty. Under certainty, a decision\nmaker knows in each case which state of nature will occur and\ncan act accordingly.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 20,
+    "page": 140,
+    "topicId": "su12-expected-value",
+    "stem": "The Booster Club at Blair College sells hot dogs at\nhome basketball games. The group has a frequency distribution of the\ndemand for hot dogs per game and plans to apply the expected value\ndecision rule to determine the number of hot dogs to stock.\nThe Booster Club should select the demand level that",
+    "choices": [
+      "Is closest to the expected demand.",
+      "Has the greatest probability of occurring.",
+      "Has the greatest expected opportunity cost.",
+      "Has the greatest expected monetary value."
+    ],
+    "answerIndex": 3,
+    "explanation": "The Booster Club should select the demand level that\nmaximizes profits, that is, the level with the greatest expected\nmonetary value. This level may not include the event with the\nhighest conditional profit because this profit may be\naccompanied by a low probability of occurrence. Alternatively,\nthe event with the highest probability of occurrence may not\nbe selected because it does not offer a high conditional profit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 21,
+    "page": 141,
+    "topicId": "su12-expected-value",
+    "stem": "A company is considering three alternative machines to\nproduce a new product. The cost structures (unit variable costs plus\navoidable fixed costs) for the three machines are shown as follows.\nThe selling price is unaffected by the machine used.\nSingle purpose machine $.60x + $20,000\nSemiautomatic machine $.40x + $50,000\nAutomatic machine       $.20x + $120,000\nThe demand for units of the new product is described by the following\nprobability distribution.\nDemand Probability\n200,000       0.4\n300,000       0.3\n400,000       0.2\n500,000       0.1\nIgnoring the time value of money, the expected cost of using\nthe semiautomatic machine is",
+    "choices": [
+      "$170,000",
+      "$130,000",
+      "$210,000",
+      "$250,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "The expected demand is 300,000 units [(.4 × 200,000) + (.3 ×\n300,000) + (.2 × 400,000) + (.1 × 500,000)]. Total expected\ncost is therefore $170,000 [$50,000 fixed cost + ($.40 ×\n300,000) variable cost].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 22,
+    "page": 142,
+    "topicId": "su12-expected-value",
+    "stem": "A company is considering three alternative machines to\nproduce a new product. The cost structures (unit variable costs plus\navoidable fixed costs) for the three machines are shown as follows.\nThe selling price is unaffected by the machine used.\nSingle purpose machine $.60x + $20,000\nSemiautomatic machine $.40x + $50,000\nAutomatic machine       $.20x + $120,000\nThe demand for units of the new product is described by the following\nprobability distribution.\nDemand Probability\n200,000       0.4\n300,000       0.3\n400,000       0.2\n500,000       0.1\nUsing the expected value criterion,",
+    "choices": [
+      "The single purpose machine should be used because of the\nlow expected demand.",
+      "The automatic machine should be used because of the high\nexpected demand.",
+      "The semiautomatic machine should be used because it has\nthe lowest expected cost.",
+      "The automatic machine has the lowest expected cost."
+    ],
+    "answerIndex": 2,
+    "explanation": "The semiautomatic machine has an expected cost of\n$170,000 based on an expected demand of 300,000 units [(.4\n× 200,000) + (.3 × 300,000) + (.2 × 400,000) + (.1 × 500,000)].\nThe single purpose machine has an expected cost of\n$200,000 [($.60 × 300,000) + $20,000]. The automatic\nmachine has an expected cost of $180,000 [($.20 × 300,000)\n+ $120,000)]. Hence, the semiautomatic machine has the\nlowest expected cost at the expected level of demand.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 23,
+    "page": 143,
+    "topicId": "su12-expected-value",
+    "stem": "Stan Berry is considering selling peanuts at the Keefer\nHigh School football games. The peanuts would cost $.50 per bag and\ncould be sold for $1.50 per bag. No other costs would be incurred to\nsell the peanuts. All unsold bags can be returned to the supplier for\n$.30 each. Berry estimated the demand for peanuts at each football\ngame and constructed the payoff table that follows.\nDemand Probability Action (Bags to Stock)\n(Bags) of Demand 20        30   40    50\n20        .2      $20 $18 $16 $14\n30        .4      $20 $30 $28 $26\n40        .3      $20 $30 $40 $38\n50        .1      $20 $30 $40 $50\nThe optimum number of bags of peanuts for Stan Berry to\nstock is",
+    "choices": [
+      "20",
+      "30",
+      "40",
+      "50"
+    ],
+    "answerIndex": 2,
+    "explanation": "The expected value without perfect information is found by\ncalculating the expected value of each potential decision and\nselecting the highest result. Stan Berry can calculate the\nexpected value of each of his four possible actions as follows:\nBags                                              Expected\nStocked                                               Value\n20     .2($20) + .4($20) + .3($20) + .1($20) = $20.00\n30     .2($18) + .4($30) + .3($30) + .1($30) = 27.60\n40     .2($16) + .4($28) + .3($40) + .1($40) = 30.40\n50     .2($14) + .4($26) + .3($38) + .1($50) = 29.60\nThe action with the highest expected payoff is to stock 40\nbags.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 24,
+    "page": 144,
+    "topicId": "su12-expected-value",
+    "stem": "An entity sells sweatshirts and is preparing for a World Cup\nSoccer match. The cost per sweatshirt varies with the quantity\npurchased as follows:\nQuantity Unit Cost\n4,000 $14.00\n5,000      13.50\n6,000      13.00\n7,000      12.50\nThe entity must purchase the sweatshirts one month before the\ngame and has analyzed the market and estimated sales levels\nas follows:\nUnit sales 4,000 5,000 6,000 7,000\nProbability 15% 20% 35% 30%\nThe estimated selling price is $25 for sales made before and\nduring game day. Any sweatshirts remaining after game day\ncan be sold at wholesale to a local discount store for $10.\nThe expected profit if the entity purchased 6,000 shirts is",
+    "choices": [
+      "$64,500",
+      "$66,000",
+      "$69,000",
+      "$72,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "An expected value for each level of demand is derived by\nweighting the profit for that level by the probability of its\noccurrence. The cost of goods is the same in every case\nbecause 6,000 sweatshirts are being purchased without\ncertain knowledge of what demand will be. The entity can sell\nany sweatshirts remaining after game day at wholesale for\n$10. So, if demand is 4,000, then the entity will have 2,000\nunsold sweatshirts after game day (6,000 – 4,000). These\nshirts will be sold for $20,000 (2,000 shirts × $10). Likewise, if\ndemand is 5,000, then the entity will have 1,000 shirts leftover\n(6,000 – 5,000). These will be sold for $10,000 (1,000 shirts ×\n$10). If demand is 6,000 or 7,000, there will be no shirts\nremaining after game day. The expected profit if the entity\npurchased 6,000 shirts is calculated as follows:\nDemand Level\n4,000      5,000      6,000     7,000     Total\nGame day $100,00 $125,00 $150,00 $150,00\nrevenue          0        0        0        0\nat $25 ea.\nCost of    (78,000) (78,000) (78,000) (78,000)\ngoods\n(6,000 at\n$13 ea.)\nRemainde\nr revenue\n(2,000 at  20,000\n$10 ea.)\n(1,000 at           10,000\n$10 ea.)\n(0 at $10                          0        0\nea.)\nTotal        $ 42,00 $ 57,00 $ 72,00 $ 72,00\nprofit             0       0       0       0\nProbability × 15% × 20% × 35% × 30%\nExpected        $   6,30   $ 11,40    $ 25,20   $ 21,60   $64,50\nvalue                  0         0          0         0        0",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 25,
+    "page": 147,
+    "topicId": "su12-expected-value",
+    "stem": "A software company has developed a new software package.\nThe sales manager has prepared the following probability\ndistribution describing the relative likelihood of monthly sales\nlevels and relative income (loss) for the company’s new\nsoftware package.\nMonthly Sales\nIn Units   Probability Income(Loss)\n10,000         .2        $(4,000)\n20,000         .3         10,000\n30,000         .3         30,000\n40,000         .2         60,000\nIf the software company decides to market its new software\npackage, the expected value of additional monthly income will\nbe",
+    "choices": [
+      "$23,200",
+      "$24,000",
+      "$24,800",
+      "$25,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "Expected value is a means of associating a dollar amount\nwith each of the possible outcomes of a probability\ndistribution. The outcome yielding the highest expected value\n(which may or may not be the most likely one) is the optimal\nalternative. The expected value of each outcome, and of the\nproject as a whole, can be determined through the\npreparation of a payoff table, as follows:\nMonthly\nSales                  Income Expected\nIn Units Probability     (Loss)     Value\n10,000        .2   × $(4,000) = $ (800)\n20,000        .3   × 10,000 =    3,000\n30,000        .3   × 30,000 =    9,000\n40,000        .2   × 60,000 = 12,000\n$23,200",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 26,
+    "page": 149,
+    "topicId": "su12-expected-value",
+    "stem": "According to recent focus sessions, a corporation has a “can’t\nmiss” consumer product on its hands. Sales forecasts indicate\neither excellent or good results, with the sales manager\nassigning a probability of .6 to a good results outcome. The\ncompany is now studying various sales compensation plans\nfor the product and has determined the following contribution\nmargin data:\nContribution\nMargin\nIf sales are excellent and\nPlan 1 is adopted       $300,000\nPlan 2 is adopted        370,000\nIf sales are good and\nPlan 1 is adopted        240,000\nPlan 2 is adopted        180,000\nOn the basis of this information, which of the following\nstatements is correct?",
+    "choices": [
+      "Plan 2 should be adopted because it is $10,000 more\nattractive than Plan 1.",
+      "Plan 1 should be adopted because it is $8,000 more attractive\nthan Plan 2.",
+      "Plan 1 should be adopted because of the sales manager’s\nhigher confidence in good results.",
+      "Either Plan should be adopted, the decision being dependent\non the probability of excellent sales results."
+    ],
+    "answerIndex": 1,
+    "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action:\nDecision     State of Contribution                  Expected\nAlternative Nature          Margin      Probability Value\nPlan 1       Excellent $300,000    ×     0.4     = $120,000\nGood      240,000    ×     0.6     = 144,000\n$264,000\nPlan 2       Excellent $370,000    ×     0.4     = $148,000\nGood      180,000    ×     0.6     = 108,000\n$256,000\nAfter weighting the possible monetary outcomes by their\nrespective probabilities, the expected value of Plan 1 is $8,000\nhigher than the expected value of Plan 2.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 27,
+    "page": 151,
+    "topicId": "su12-expected-value",
+    "stem": "An entity manufactures industrial machinery and requires\n100,000 switches per year in its assembly process. When\nswitches are received from a vendor they are installed in the\nspecific machine and tested. If the switches fail, they are\nscrapped and the associated labor cost of $25 is considered\nlost productivity. The entity purchases “off the shelf” switches\nas opposed to custom-made switches and experiences quality\nproblems with some vendors’ products. A decision must be\nmade as to which vendor to buy from during the next year\nbased on the following information.\nPercentage Expected\nVendor Price per Switch to Pass the Test\nP        $35                  90%\nQ          37                 94%\nR          39                 97%\nS          40                 99%\nWhich vendor should the controller recommend to\nmanagement?",
+    "choices": [
+      "Vendor P.",
+      "Vendor Q.",
+      "Vendor R.",
+      "Vendor S."
+    ],
+    "answerIndex": 3,
+    "explanation": "The total cost of buying from each vendor consists of two\ncomponents: purchase price and cost of scrapping.\nThe total number of units to purchase is calculated as follows:\nAnnual\nQuantity     Passing       Total\nVendor Needed           Rate        Needed\nP      100,000 ÷ 90% = 111,111.111\nQ      100,000 ÷ 94% = 106,382.979\nR      100,000 ÷ 97% = 103,092.784\nS      100,000 ÷ 99% = 101,010.101\nTotal purchase price is calculated as follows:\nAnnual\nQuantity          Unit        Purchase\nVendor Purchased            Price          Price\nP     111,111.111   × $35        = $3,888,889\nQ     106,382.979   × 37         = 3,936,170\nR     103,092.784   × 39         = 4,020,619\nS     101,010.101   × 40         = 4,040,404\nThe cost of scrapping is determined as follows:\nQuantity          Unit      Total Cost\nVendor     Unusable          Price     of Scrapping\nP    11,111        ×     $25     = $277,778\nQ     6,383        ×      25     = 159,574\nR     3,093        ×      25     = 77,320\nS     1,010        ×      25     = 25,253\nThese costs are combined to arrive at the total cost for each\nvendor:\nPurchase     Total Cost           Total\nVendor      Price     of Scrapping          Cost\nP    $3,888,889 + $277,778          = $4,166,667\nQ      3,936,170 + 159,574          = 4,095,745\nR      4,020,619 + 77,320           = 4,097,938\nS      4,040,404 + 25,253           = 4,065,657\nVendor S has the lowest total cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 28,
+    "page": 153,
+    "topicId": "su12-expected-value",
+    "stem": "A controller has decided to use a decision model to cope with\nuncertainty. With a particular proposal, currently under\nconsideration, the controller has two possible actions, invest or\nnot invest in a joint venture with an international firm. The\ncontroller has determined the following:\nAction: Invest in the Joint Venture\nEvents and Probabilities:\nProbability of success                     = 60%\nCost of investment                         = $9.5 million\nCash flow if investment is successful = $15.0 million\nCash flow if investment is unsuccessful = $2.0 million\nAdditional costs to be paid                = $0\nCosts incurred up to this point            = $650,000\nAction: Do Not Invest in the Joint Venture\nEvents:\nCosts incurred up to this point = $650,000\nAdditional costs to be paid      = $100,000\nWhich one of the following alternatives correctly reflects the\nrespective expected values of investing versus not investing?",
+    "choices": [
+      "$300,000 and $(750,000).",
+      "$(350,000) and $(100,000).",
+      "$300,000 and $(100,000).",
+      "$(350,000) and $(750,000)."
+    ],
+    "answerIndex": 2,
+    "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action:\nDecision     State of                             Expecte\nd\nAlternative    Nature Cash Inflow Probabilit Value\ny\nInvest      Success $15,000,00 ×    0.6    = $ 9,000,00\n0                        0\nNo     2,000,000 ×    0.4    = 800,000\nsuccess\nCost of investment (9,500,000)\nAdditional costs          0\nNet expected value $    300,00\n0\nDo Not       Success $         0×      0.6   =$\nInvest                                                  0\nNo              0×      0.4   =          0\nsuccess\nCost of investment            0\nAdditional costs     (100,000)\nNet expected value $ (100,000\n)",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 29,
+    "page": 156,
+    "topicId": "su12-expected-value",
+    "stem": "A company has three possible investment opportunities. The\ncontroller calculated the payoffs and probabilities as follows:\nProbabilities\nPayoffs Investment A Investment B Investment C\n$(20,000)      .3            .2             .3\n(10,000)      .1            .2             .1\n30,000        .3            .2             .2\n70,000        .2            .2             .3\n100,000        .1            .2             .1\nThe cost of investments A, B, and C are the same. Using the\nexpected-value criterion, which one of the following rankings of\nthese investments, from highest payoff to lowest payoff, is\ncorrect?",
+    "choices": [
+      "A, B, C.",
+      "B, A, C.",
+      "C, A, B.",
+      "B, C, A."
+    ],
+    "answerIndex": 3,
+    "explanation": "When monetary outcomes and probabilities can be\nreasonably estimated, a payoff table can be\nconstructed to determine the best course of action:\nInvestment A                      Investment B\nExpected                       Expected\nPayoffs        Probabilit Valu    Payoffs     Probabilit Valu\ny         e                    y         e\n$(20,000)         0.3    $ (6,000) $(20,000      0.2    $ (4,000)\n)\n(10,000)         0.1      (1,000) (10,000)      0.2         (2,000)\n30,000           0.3      9,000 30,000          0.2         6,000\n70,000           0.2     14,000 70,000          0.2        14,000\n100,000           0.1     10,000 100,000         0.2        20,000\nTotal               $26,00      Total             $34,000\n0\nInvestment C\nExpected\nPayoffs     Probability Value\n$(20,000)       0.3       $ (6,000)\n(10,000)       0.1         (1,000)\n30,000         0.2         6,000\n70,000         0.3        21,000\n100,000         0.1        10,000\nTotal              $30,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 30,
+    "page": 158,
+    "topicId": "su12-expected-value",
+    "stem": "The sales manager has suggested that an expanded\nadvertising campaign costing $40,000 would increase the\nsales and profits of the company. He has developed the\nfollowing probability distribution for the effect of the advertising\ncampaign on company sales:\nSales Increase\n(Units)    Probability\n15,000         .10\n30,000         .35\n45,000         .10\n60,000         .25\n75,000         .20\nThe company sells the dolls at $5.20 each. The cost of each\ndoll is $3.20. The expected incremental profit, if the advertising\ncampaign is adopted, is",
+    "choices": [
+      "$6,500",
+      "$46,500",
+      "$53,000",
+      "$93,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action [incremental profit on each doll sold is\n$2.00 ($5.20 – $3.20)]:\nUnit                    Expected\nSales                       Unit         Incr.   Expected\nIncrease Probability        Increase      Profit    Profit\n15,000 ×       0.10   = 1,500         ×    $2     = $ 3,000\n30,000 ×       0.35   = 10,500        ×    $2     = 21,000\n45,000 ×       0.10   = 4,500         ×    $2     = 9,000\n60,000 ×       0.25   = 15,000        ×    $2     = 30,000\n75,000 ×       0.20   = 15,000        ×    $2     = 30,000\nExpected gross profit      $93,000\nCost of advertising       (40,000)\nExpected net profit     $53,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 31,
+    "page": 160,
+    "topicId": "su12-expected-value",
+    "stem": "Stock X has the following probability distribution of expected\nfuture returns:\nExpected\nProbability Return\n.1    –20%\n.2      5%\n.4     15%\n.2     20%\n.1     30%\nThe expected rate of return on Stock X is",
+    "choices": [
+      "10%",
+      "12%",
+      "16%",
+      "19%"
+    ],
+    "answerIndex": 1,
+    "explanation": "Expected value computation can be applied to rates of return\nas well as to dollar amounts.\nWeighted\nExpected Expected\nProbability      Return     Return\n0.1               –20%    –2%\n0.2                 5%     1%\n0.4                15%     6%\n0.2                20%     4%\n0.1                30%     3%\n12%",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 32,
+    "page": 161,
+    "topicId": "su12-expected-value",
+    "stem": "Which one of the following four probability distributions\nprovides the highest expected monetary value?\nAlternative #1     Alternative #2\nCash              Cash\nProb       Inflows    Prob   Inflows\n10% $ 50,000        10% $ 50,000\n20%        75,000   20%        75,000\n40%      100,000    45%      100,000\n30%      150,000    25%      150,000\nAlternative #3      Alternative #4\nCash              Cash\nProb       Inflows   Prob    Inflows\n10%      $ 50,000   10%    $150,000\n20%        75,000   20%     100,000\n40%       100,000   40%      75,000\n30%       125,000   30%      50,000",
+    "choices": [
+      "Alternative #1.",
+      "Alternative #2.",
+      "Alternative #3.",
+      "Alternative #4."
+    ],
+    "answerIndex": 0,
+    "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action:\nAlternative #1                 Alternative #2\nExpected                       Expecte\nd\nProbabilit      Payoffs    Value      Probabilit Payoffs Value\ny                                      y\n10%          $ 50,000 $ 5,000        10%      $ 50,000 $ 5,000\n20%            75,000 15,000         20%        75,000 15,000\n40%           100,000 40,000         45%       100,000 45,000\n30%           150,000 45,000         25%       150,000 37,500\nTotal             $105,00            Total            $102,50\n0                                   0\nAlternative #3                      Alternative #4\nExpected                       Expecte\nd\nProbabilit      Payoffs    Value      Probabilit Payoffs Value\ny                                      y\n10%          $ 50,000    $ 5,000     10%      $150,000 $15,000\n20%            75,000    15,000      20%       100,000 20,000\n40%           100,000    40,000      40%        75,000 30,000\n30%           125,000    37,500      30%        50,000 15,000\nTotal              $97,500           Total            $80,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 33,
+    "page": 164,
+    "topicId": "su12-expected-value",
+    "stem": "A company is preparing its budget and, taking into\nconsideration the recent pace of economic recovery, has\ndeveloped several sales forecasts and the estimated\nprobability associated with each sales forecast. To determine\nthe sales forecast to be used for budgeting purposes, which\none of the following techniques should be used?",
+    "choices": [
+      "Expected value analysis.",
+      "Continuous probability simulation.",
+      "Exponential distribution analysis.",
+      "Sensitivity analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "Expected value analysis provides a rational means for\nselecting the best alternative in decisions involving risk. The\nexpected value of an alternative is found by multiplying the\nprobability of each outcome by its payoff and summing the\nproducts. It represents the long-term average payoff for\nrepeated trials.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 34,
+    "page": 167,
+    "topicId": "su12-expected-value",
+    "stem": "Gleason Co. has\ntwo products, a\nfrozen dessert\nand ready-to-\nbake breakfast\nrolls, ready for\nintroduction.\nHowever, plant\ncapacity is\nlimited, and only\none product can\nbe introduced at\npresent.\nTherefore,\nGleason has\nconducted a\nmarket study at a\ncost of $26,000,\nto determine\nwhich product will\nbe more\nprofitable. The\nresults of the\nstudy follow.\nSales of Desserts at        Sales of Rolls at\n$1.80/unit                $1.20/unit\nVolume     Probability    Volume      Probability\n250,000        .30        200,000         .20\n300,000        .40        250,000         .50\n350,000        .20        300,000         .20\n400,000        .10        350,000         .10\nThe costs\nassociated with the\ntwo products have\nbeen estimated by\nGleason’s cost\naccounting\ndepartment and\nare as follows.\nDessert Rolls\nIngredients per unit       $ .40 $ .25\nDirect labor per unit           .35    .30\nVariable overhead per unit      .40    .20\nProduction tooling*         48,000 25,000\nAdvertising                     30,000 20,000\n*Gleason treats production tooling as a current operating expense\nrather than capitalizing it as a fixed asset.\nAccording to Gleason’s market study, the expected value of\nthe sales volume of the breakfast rolls is",
+    "choices": [
+      "125,000 units.",
+      "260,000 units.",
+      "275,000 units.",
+      "Some amount other than those given."
+    ],
+    "answerIndex": 1,
+    "explanation": "The expected value is found by multiplying the probability of\neach possibility by the potential volumes:\n200,000 × .20 = 40,000\n250,000 × .50 = 125,000\n300,000 × .20 = 60,000\n350,000 × .10 = 35,000\nTotal units 260,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 35,
+    "page": 167,
+    "topicId": "su12-expected-value",
+    "stem": "Gleason Co. has\ntwo products, a\nfrozen dessert\nand ready-to-\nbake breakfast\nrolls, ready for\nintroduction.\nHowever, plant\ncapacity is\nlimited, and only\none product can\nbe introduced at\npresent.\nTherefore,\nGleason has\nconducted a\nmarket study at a\ncost of $26,000,\nto determine\nwhich product will\nbe more\nprofitable. The\nresults of the\nstudy follow.\nSales of Desserts at        Sales of Rolls at\n$1.80/unit                $1.20/unit\nVolume     Probability    Volume      Probability\n250,000        .30        200,000         .20\n300,000        .40        250,000         .50\n350,000        .20        300,000         .20\n400,000        .10        350,000         .10\nThe costs\nassociated with the\ntwo products have\nbeen estimated by\nGleason’s cost\naccounting\ndepartment and\nare as follows.\nDessert Rolls\nIngredients per unit       $ .40 $ .25\nDirect labor per unit           .35    .30\nVariable overhead per unit      .40    .20\nProduction tooling*         48,000 25,000\nAdvertising                     30,000 20,000\n*Gleason treats production tooling as a current operating expense\nrather than capitalizing it as a fixed asset.\nThe expected value of Gleason’s operating profit directly\ntraceable to the sale of frozen desserts is",
+    "choices": [
+      "$198,250",
+      "$150,250",
+      "$120,250",
+      "Some amount other than those given."
+    ],
+    "answerIndex": 2,
+    "explanation": "The expected volume for sales of frozen desserts is 305,000\n[(250,000 × .30) + (300,000 × .40) + (350,000 × .20) +\n(400,000 × .10)]. At $1.80 each, the total revenue from\n305,000 units would be $549,000. Variable costs would total\n$1.15 each ($.40 + $.35 + $.40), or $350,750 for 305,000\nunits. Fixed costs total $78,000 ($48,000 + $30,000). Thus,\noperating profit would be $120,250 ($549,000 – $350,750 –\n$78,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 36,
+    "page": 168,
+    "topicId": "su12-expected-value",
+    "stem": "Ryotel is conducting market research to determine whether or\nnot to launch a new product. Management believes there is a\n60% probability the research will yield favorable results and a\n40% probability the results will be unfavorable. If the results\nare favorable, there is a 70% probability the product will be\nsuccessful; if the results are unfavorable, the probability the\nproduct will be unsuccessful is 75%. If the product is\nsuccessful, Ryotel anticipates annual profits of $10,000,000,\nbut if the product is unsuccessful, Ryotel will lose $4,000,000\neach year. The expected value of the new product’s annual\nprofit is",
+    "choices": [
+      "$3,000,000",
+      "$3,280,000",
+      "$4,000,000",
+      "$5,300,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "There is a 42% chance (60% × 70%) that the results will be\nfavorable and the product will be successful, and there is an\n18% chance (60% × 30%) that the results will be favorable but\nthe product will be unsuccessful. There is a 10% chance (40%\n× 25%) that the results will be unfavorable but the product will\nbe successful, and there is a 30% chance that the results will\nbe unfavorable and the product will be unsuccessful.\nTherefore, the total probability of success is 52% (42% +\n10%), and the probability that the product will be unsuccessful\nis 48% (18% + 30%). The expected value is then calculated as\nfollows:\n52% × $10,000,000 + 48% × – = $5,200,000 – $1,920,000\n$4,000,000\n= $3,280,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 37,
+    "page": 170,
+    "topicId": "su12-expected-value",
+    "stem": "Last year, a corporation’s sales totaled $200 million. In the\ncurrent year, the corporation believes there is a 10% chance\nsales will decrease to $180 million due to the loss of a major\ncustomer. The corporation also estimates there is a 40%\nprobability sales will remain constant, a 30% chance sales will\nincrease to $240 million, and a 20% probability sales will\nincrease to $250 million. The expected value of the\ncorporation’s sales in millions for the current year is",
+    "choices": [
+      "$160",
+      "$184",
+      "$202",
+      "$220"
+    ],
+    "answerIndex": 3,
+    "explanation": "The expected value is calculated by multiplying the probability\nof each outcome by the results of the outcome, which is done\nas follows:\nExpected value = (10% × 180) + (40% × 200) + (30% × 240)\n+ (20% × 250)\n= 18 + 80 + 72 + 50\n= $220",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 38,
+    "page": 171,
+    "topicId": "su12-expected-value",
+    "stem": "An entity sells its product for $100 per unit while incurring\nvariable operating costs of $60 per unit and $25,000,000 of\nfixed operating costs. The management team believes there is\na 20% probability sales for the upcoming period will be\n600,000 units, a 50% probability sales will be 800,000 units,\nand a 30% probability sales will be 1,000,000 units. The\nexpected value of the entity’s operating profit for the upcoming\nperiod is",
+    "choices": [
+      "$32,800,000",
+      "$8,200,000",
+      "$7,800,000",
+      "$7,000,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The expected value of an event is calculated by multiplying\nthe probability of each outcome by its payoff and summing the\nproducts. The expected value of $7,800,000 is calculated as\nfollows:\n1. 0.20 [($100 × 600,000) – ($60 × 600,000)] =\n4,800,000\n2. 0.50 [($100 × 800,000) – ($60 × 800,000)] =\n16,000,000\n3. 0.30 [($100 × 1,000,000) – ($60 × 1,000,000)] =\n12,000,000\n4. (4,800,000 + 16,000,000 + 12,000,000) – 25,000,000\nfixed cost = 7,800,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 39,
+    "page": 172,
+    "topicId": "su12-expected-value",
+    "stem": "A veterinary clinic schedules weekend staff based on the\nnumber of animals being boarded. The clinic has a total of four\nstaff members available to work on weekends. Based on state\nregulations, the clinic is required to have one staff member on\nsite for up to 10 animals. Two staff members are required for\n11-23 animals, three staff for 24-36 animals and all four staff\nmembers must work if there are 37-45 animals being boarded.\nThe clinic has experienced the following average number of\nanimals in the past 12 weekends.\nAverage Number\nof Animals     Number of Weekends\n12                  1\n20                  4\n25                  3\n35                  2\n40                    2\nUsing expected value analysis, how many staff members\nshould the clinic schedule for each weekend during the\nupcoming month?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answerIndex": 2,
+    "explanation": "Using expected value analysis, the average number of\nanimals is weighted based on the probability of that number of\nanimals occurring in the following month. The expected value\nfor the following month is 26.42 animals {[(12 animals ×\n1 weekend) + (20 animals × 4 weekends) + (25 animals ×\n3 weekends) + (35 animals × 2 weekends) + (40 animals ×\n2 weekends)] ÷ 12 total weekends}. Assuming 26.42 animals,\nthree members of staff should be scheduled for the clinic over\nthe weekend in the upcoming month.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 40,
+    "page": 173,
+    "topicId": "su12-expected-value",
+    "stem": "An entrepreneur has four booth rental options at the county fair\nwhere he plans to sell his new product for $37.50 per unit with\na cost of $12.50. The booth rental options are shown below.\nOption $1,000 fixed fee\n1:\nOption $750 fixed fee + 5% of all revenues generated at the\n2: fair\nOption 20% of all revenues generated at the fair\n3:\nOption $200 fixed fee + 16% of all revenues generated at\n4: the fair\nAssuming there is a 40% probability that 70 units will be sold\nand a 60% probability that 40 units will be sold, which option\nmaximizes income?",
+    "choices": [
+      "Option 1.",
+      "Option 2.",
+      "Option 3.",
+      "Option 4."
+    ],
+    "answerIndex": 2,
+    "explanation": "The option with the lowest rental expense will maximize the\nentrepreneur’s income. Option 3 has the lowest expected\nvalue. The expected value of rental expense is calculated as\nfollows:\nExpected     = 40% × [($37.50 × 70 units) × 20%] + 60% ×\nvalue          [($37.50 × 40 units) × 20%]\n= 40% × $525 + 60% × $300\n= $210 + $180\n= $390",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 41,
+    "page": 175,
+    "topicId": "su12-expected-value",
+    "stem": "A manager is reviewing a potential investment, which has\nsignificant uncertainty related to its ultimate financial outcome.\nThe manager has estimated the following probabilities for the\nvarious levels of net cash flows that may result from the\ninvestment.\nLikelihood of Outcome Net Cash Flows\n10%           $(300,000)\n20%                    0\n50%              100,000\n20%              600,000\nWhat is the expected value of net cash flows that the manager\nshould use in evaluating the investment?",
+    "choices": [
+      "$100,000",
+      "$137,000",
+      "$140,000",
+      "$400,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The expected value is calculated by multiplying the probability\nof each outcome by its payoff and summing the products.\nThus, the expected value of net cash flows is $140,000 (10%\n× –$300,000 + 20% × $0 + 50% × $100,000 + 20% ×\n$600,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 42,
+    "page": 176,
+    "topicId": "su12-expected-value",
+    "stem": "A quantitative technique useful in projecting a firm’s sales and\nprofits is",
+    "choices": [
+      "Probability distribution theory.",
+      "Gantt charting.",
+      "Learning curves.",
+      "Queuing theory."
+    ],
+    "answerIndex": 0,
+    "explanation": "Expected value is a means of associating an amount with\neach of the possible outcomes of a probability distribution. A\nprobability distribution can be used to project sales. It is a\nmathematical method for making decisions about the\nlikelihood of future events (such as sales) in the face of\nuncertainty. Various estimates of sales (generated from the\nsales force) can be weighted with different probabilities to\ndetermine expected value",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 43,
+    "page": 177,
+    "topicId": "su12-expected-value",
+    "stem": "A toy company is in the process of forecasting sales for a new\ntoy. The company has the following estimates of unit sales\nwith a corresponding probability distribution:\nUnit Sales Probability\n550,000   20%\n475,000   35%\n350,000   45%\nHow many units should the company forecast for sales of the\nnew toys?",
+    "choices": [
+      "350,000",
+      "433,750",
+      "458,288",
+      "1,375,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "The forecasted sale of 433,750 units is found by weighting the\nvarious possible levels of sales by the probability of each level\noccurring.\n550,000 × 20% = 110,000\n475,000 × 35% = 166,250\n350,000 × 45% = 157,500\nTotal = 433,750",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 44,
+    "page": 178,
+    "topicId": "su12-expected-value",
+    "stem": "A clothing company is evaluating two possible locations for a\nnew retail store. The company’s research indicates that Location\nA has a 45% probability of generating $400,000 in cash flow and\na 55% probability of generating $325,000 in cash flow. Location\nB has a 25% probability of generating $600,000 in cash flow and\na 75% probability of generating $250,000 in cash flow. Based on\nthe expected value for each location, the company should\nchoose Location",
+    "choices": [
+      "A because its expected value is $21,250 higher than Location B.",
+      "A because its expected value is $75,000 higher than Location B.",
+      "B because its expected value is $125,000 higher than Location A.",
+      "B because its expected value is $146,250 higher than Location A."
+    ],
+    "answerIndex": 0,
+    "explanation": "The expected value for Location A can be derived by calculating\nthe 45% probability of generating $400,000 and adding that\namount to the 55% probability of generating $325,000, i.e.,\n(45% × $400,000) + (55% × $325,000) = $358,750 of expected\ncash flow. The expected value for Location B can be derived by\ncalculating the 25% probability of generating $600,000 and\nadding that amount to the 75% probability of generating\n$250,000, i.e., (25% × $600,000) + (75% × $250,000) =\n$337,500 of expected cash flow. Thus, Location A’s cash flow\nof $358,750 is $21,250 greater than Location B’s cash flow of\n$337,500.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 45,
+    "page": 179,
+    "topicId": "su12-expected-value",
+    "stem": "An accountant estimated the repair costs for the company’s\nplant facilities for next year’s operating budget. The accountant\nhas determined the following probability distribution after\nanalyzing historical repair costs:\nProbability Repair Costs\n15%          $2,000,000\n45%           2,500,000\n30%           3,500,000\n10%           5,000,000\nWhat is the estimated repair cost that the accountant should\nproject for next year’s operating budget?",
+    "choices": [
+      "$1,850,000",
+      "$1,925,000",
+      "$2,975,000",
+      "$3,250,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The calculation of the $2,975,000 expected cost is as follows:\n.15 × $2,000,000 = $ 300,000\n.45 × $2,500,000 = 1,125,000\n.30 × $3,500,000 = 1,050,000\n.10 × $5,000,000 =     500,000\nTotal $2,975,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 46,
+    "page": 180,
+    "topicId": "su12-expected-value",
+    "stem": "The CEO of Marx is analyzing a $100,000 investment\nopportunity. The investment promises a return of $10,000 per\nyear and a rate of return of 5%. The $100,000 is based on an\nestimate. The CEO wants to know how acceptable the\ninvestment would be if the return was only $60,000 per year.\nWhat type of analysis should the CEO perform?",
+    "choices": [
+      "Sensitivity analysis.",
+      "Cumulative average-time learning analysis.",
+      "Learning curve analysis.",
+      "PEST analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution. This type of\nanalysis helps management analyze alternatives and estimate\nthe consequences of possible prediction errors.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 47,
+    "page": 181,
+    "topicId": "su12-expected-value",
+    "stem": "Corporation A recently hired a CFO to improve its project\nmanagement function. The CFO is interested in implementing\na new type of project analysis that will help evaluate the effects\nof small changes in variables on the overall solution. The CFO\nbelieves that this form of analysis will be useful in determining\nwhether further resources should be expended to obtain better\nforecasts. What type of analysis best describes the method\nthat the CFO is attempting to implement?",
+    "choices": [
+      "Simple regression analysis.",
+      "Learning curve analysis.",
+      "Sensitivity analysis.",
+      "SWOT analysis."
+    ],
+    "answerIndex": 2,
+    "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution. Sensitivity\nanalysis reveals how sensitive expected value calculations are\nto the accuracy of the initial estimates. As a result, it is useful\nin determining whether expending additional resources to\nobtain better forecasts is justified.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 48,
+    "page": 182,
+    "topicId": "su12-expected-value",
+    "stem": "Which of the following statements regarding sensitivity\nanalysis is false?",
+    "choices": [
+      "Sensitivity analysis is used to evaluate the effect of changes in\nvariables on the least optimal solution.",
+      "Sensitivity analysis is useful in determining whether additional\nexpenditures to obtain a better forecast are justified.",
+      "Sensitivity analysis inherently contains a trial-and-error\nmethod.",
+      "Sensitivity analysis is useful in capital budgeting."
+    ],
+    "answerIndex": 0,
+    "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 49,
+    "page": 183,
+    "topicId": "su12-expected-value",
+    "stem": "Which of the following statements regarding sensitivity\nanalysis is true?",
+    "choices": [
+      "Sensitivity analysis does not help to estimate the\nconsequences of possible prediction errors.",
+      "Sensitivity analysis is useful in justifying the additional\nexpenditure of resources in order to obtain better forecasts.",
+      "A limitation of sensitivity analysis is that managers cannot see\nthe effect of changed assumptions on the final objective.",
+      "Sensitivity analysis cannot be used in the capital budgeting\nprocess."
+    ],
+    "answerIndex": 1,
+    "explanation": "Sensitivity analysis reveals how sensitive expected value\ncalculations are to the accuracy of initial estimates. As such,\nsensitivity analysis is useful in determining whether expending\nadditional resources to obtain better forecasts is justified.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 50,
+    "page": 183,
+    "topicId": "su12-expected-value",
+    "stem": "A company is deciding whether to purchase an automated\nmachine to manufacture one of its products. Expected net\ncash flows from this decision depend on several factors,\ninteractions among those factors, and the probabilities\nassociated with different levels of those factors. The method\nthat the company should use to evaluate the distribution of net\ncash flows from this decision and changes in net cash flows\nresulting from changes in levels of various factors is",
+    "choices": [
+      "Simulation and sensitivity analysis.",
+      "Linear programming.",
+      "Correlation analysis.",
+      "Differential analysis."
+    ],
+    "answerIndex": 0,
+    "explanation": "Simulation describes the behavior of a real-world system over\ntime. It ordinarily uses a computer program to perform the\nsimulation computations. Sensitivity analysis examines how\noutcomes change as the model parameters change.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 3,
+    "number": 51,
+    "page": 184,
+    "topicId": "su12-expected-value",
+    "stem": "A company is developing its budget for the upcoming month.\nThe financial planning department has developed the following\nrange of sales activity and the associated probabilities for each\nlevel of budgeted sales.\nSales Estimate Probability\n$120,000          25%\n170,000          40%\n200,000         35%\nThe company’s cost of goods sold averages 80% of sales, and\nthe relationship is expected to remain consistent in the next\nfiscal year. What is the expected value of the company’s\nbudgeted cost of goods sold?",
+    "choices": [
+      "$134,400",
+      "$136,000",
+      "$168,000",
+      "$170,000"
+    ],
+    "answerIndex": 0,
+    "explanation": "To calculate the expected value of the budgeted cost of goods\nsold (COGS), first find the COGS amount associated with\neach sales estimate by multiplying each estimate by 80%:\n$120,000 × 80% = $96,000\n$170,000 × 80% = $136,000\n$200,000 × 80% = $160,000\nNext, find the weighted COGS for each estimate by multiplying\nthe estimated COGS by its probability:\n$96,000 × 25% = $24,000\n$136,000 × 40% = $54,400\n$160,000 × 35% = $56,000\nFinally, find the total expected value of the company’s\nbudgeted COGS by adding each of the expected values\ntogether:\n$24,000 + $54,400 + $56,000 = $134,400",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 1,
+    "page": 187,
+    "topicId": "su12-strategic-management",
+    "stem": "Michael E. Porter’s competitive strategies model includes an\nanalysis of the competitive forces that determine the\nattractiveness of an industry. These forces include\nI.    The stage of the industry life cycle\nII.    Threats of, and barriers to, entry\nIII.     Threat of substitutes\nIV.      The threat of suppliers’ bargaining power",
+    "choices": [
+      "I and II only.",
+      "I and III only.",
+      "II, III, and IV only.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 2,
+    "explanation": "Michael E. Porter has developed a model of the structure of\nindustries and competition. It includes an analysis of the five\ncompetitive forces that determine long-term profitability\nmeasured by long-term return on investment. This analysis\nresults in an evaluation of the attractiveness of an industry.\nThe five forces are (1) the degree of rivalry among existing\nfirms; (2) threats of, and barriers to, entry; (3) the threat of\nsubstitute products or services; (4) the threat of buyers’\nbargaining power; and (5) the threat of suppliers’ bargaining\npower.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 2,
+    "page": 188,
+    "topicId": "su12-strategic-management",
+    "stem": "A firm’s statement of broad objectives or mission statement\nshould accomplish all of the following except",
+    "choices": [
+      "Outlining strategies for technological development, market\nexpansion, and product differentiation.",
+      "Defining the purpose of the company.",
+      "Providing an overall guide to those in high-level, decision-\nmaking positions.",
+      "Stating the moral and ethical principles that guide the actions\nof the firm."
+    ],
+    "answerIndex": 0,
+    "explanation": "The determination of organizational objectives is the first step\nin the planning process. A mission statement is a formal,\nwritten document that defines the organization’s purpose in\nsociety, for example, to produce and distribute certain goods\nof high quality in a manner beneficial to the public, employees,\nshareholders, and other constituencies. Thus, a mission\nstatement does not announce specific operating plans. It does\nnot describe strategies for technological development, market\nexpansion, or product differentiation because these are tasks\nfor operating management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 3,
+    "page": 189,
+    "topicId": "su12-strategic-management",
+    "stem": "Intensity of rivalry among existing firms in an industry\nincreases when\nI.   Products are relatively undifferentiated\nII.   Consumer switching costs are low",
+    "choices": [
+      "I only.",
+      "II only.",
+      "Both I and II.",
+      "Neither I nor II."
+    ],
+    "answerIndex": 2,
+    "explanation": "The degree of product differentiation and the costs of\nswitching from one competitor’s product to another increase\nthe intensity of rivalry and competition in an industry. Less\ndifferentiation tends to heighten competition based on price,\nwith price cutting leading to lower profits. Low costs of\nswitching products also increase competition.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 4,
+    "page": 190,
+    "topicId": "su12-strategic-management",
+    "stem": "Which of the following steps in the strategic management\nprocess should be completed first?",
+    "choices": [
+      "Translate objectives into goals.",
+      "Determine actions to achieve goals.",
+      "Develop performance measures.",
+      "Create a mission statement."
+    ],
+    "answerIndex": 3,
+    "explanation": "A mission statement is a formal, written document that defines\nan organization’s ultimate purposes in society in general\nterms. After a situational analysis is performed, the entity\ndevelops a group of strategies for achieving the mission.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 5,
+    "page": 190,
+    "topicId": "su12-strategic-management",
+    "stem": "Structural considerations affecting the threat of substitutes\ninclude all of the following except",
+    "choices": [
+      "Relative prices.",
+      "Brand identity.",
+      "Cost of switching to substitutes.",
+      "Customers’ inclination to use a substitute."
+    ],
+    "answerIndex": 1,
+    "explanation": "Substitutes are types of goods and services that serve the\nsame purpose. All products that can replace a good or service\nshould be considered substitutes. For example, bicycles and\ncars are substitutes for public transportation. Structural\nconsiderations determine the effect substitutes have on one\nanother. However, because substitutes are types (not brands)\nof goods and services that have the same purposes, brand\nidentity is not a structural consideration affecting the threat of\nsubstitutes.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 6,
+    "page": 191,
+    "topicId": "su12-strategic-management",
+    "stem": "A corporation is performing research to determine the\nfeasibility of entering the truck rental industry. The decision to\nenter the market is most likely to be deterred if",
+    "choices": [
+      "The fixed costs are high in relation to variable costs in the\ntruck rental industry.",
+      "Buyers view the product as differentiated.",
+      "The market is dominated by a small consortium of buyers.",
+      "Buying firms enjoy large profit margins on their end products."
+    ],
+    "answerIndex": 2,
+    "explanation": "When purchasing power is concentrated in a few buyers or\nwhen buyers are well organized, their bargaining power is\ngreater. This effect is reinforced when sellers are in a capital-\nintensive industry, such as trucking.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 7,
+    "page": 192,
+    "topicId": "su12-strategic-management",
+    "stem": "Which industry factor does not contribute to competitive\nrivalry?",
+    "choices": [
+      "Price-cutting, large advertising budgets, and frequent\nintroduction of new products.",
+      "A firm’s growth must come from winning other firms’\ncustomers.",
+      "High costs of customers switching suppliers.",
+      "High fixed costs relative to variable costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "If it is expensive to switch suppliers, customers will be less\nmotivated to respond to competitor advances.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 8,
+    "page": 192,
+    "topicId": "su12-strategic-management",
+    "stem": "Which condition does not increase the threat of new\ncompetitor entry into the industry?",
+    "choices": [
+      "Strong brand identity.",
+      "Existing firms do not enjoy the cost advantages of vertical\nintegration.",
+      "Few proprietary product differences.",
+      "Low capital requirements."
+    ],
+    "answerIndex": 0,
+    "explanation": "Strong brand identity decreases the threat that new\ncompetitors will enter an industry. New competitors have\ndifficulty because potential customers are loyal to established\nfirms in the industry.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 9,
+    "page": 193,
+    "topicId": "su12-strategic-management",
+    "stem": "The concurrent action of basic competitive forces as defined\nby Porter’s model determines the",
+    "choices": [
+      "Long-term profitability and the competitive intensity of the\nindustry.",
+      "Entrance barriers that potential players must face to get into\nthe industry.",
+      "Rivalry inside the industry.",
+      "Nonvalue-adding activities that should be eliminated."
+    ],
+    "answerIndex": 0,
+    "explanation": "Porter developed a model of the structure of industries and\ncompetition. It includes an analysis of the five competitive\nforces that determine long-term profitability measured by long-\nterm return on investment. This analysis results in an\nevaluation of the attractiveness of an industry.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 10,
+    "page": 194,
+    "topicId": "su12-strategic-management",
+    "stem": "Which factor most likely encourages entry into an existing\nmarket?",
+    "choices": [
+      "Governmental subsidies for new investors.",
+      "High product differentiation, principally produced by\ntrademarks.",
+      "Knowledge of the industry, with high investments in\ndevelopment.",
+      "Low fixed exit costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Subsidies for new firms lower entry barriers. Thus, new firms\nmay enter the industry and intensify competition. Government\npolicy also may affect competition by means of regulations\nthat encourage or discourage substitutes or affect costs, that\ngovern competitive behavior, or that limit growth. Government\nalso may be a buyer or supplier.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 11,
+    "page": 194,
+    "topicId": "su12-strategic-management",
+    "stem": "Which of the following is a favorable condition for a firm\ncompeting in a profitable, expanding industry?",
+    "choices": [
+      "The firm does not have a strong customer base.",
+      "A few suppliers who can restrict supply.",
+      "Competitors find it difficult to acquire the firm’s customers.",
+      "The firm has high costs relative to other firms in the industry."
+    ],
+    "answerIndex": 2,
+    "explanation": "A firm that has successfully differentiated its products through\ndeveloping a desirable image, better services, cost leadership,\nthe features of the product, or other means is in a favorable\ncompetitive position. Competitors find it difficult to acquire the\nfirm’s customers, for example, by price cutting. The reason is\nthat the firm’s products are perceived to have few substitutes,\nand brand loyalty is high. Furthermore, barriers to entry are\nfavorable to the firm. These barriers deter competitors from\nentering the market. Existing firms can increase market share\nand emphasize cutting costs and increasing value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 12,
+    "page": 195,
+    "topicId": "su12-strategic-management",
+    "stem": "Which factor increases the threat of entry into an industry?",
+    "choices": [
+      "Economies of scale are significant.",
+      "Capital requirements are high.",
+      "An industry leader may retaliate against a new entrant.",
+      "Exit barriers are low."
+    ],
+    "answerIndex": 3,
+    "explanation": "The most favorable condition for the attractiveness of an\nindustry is the existence of high entry barriers and low exit\nbarriers. When the threat of new entrants is minimal and exit is\nnot difficult, returns are high, and risk is reduced in the event\nof poor performance. Low entry barriers keep long-term\nprofitability low because new firms can enter the industry,\nincreasing competition and lowering prices and the market\nshares of existing firms. Exit barriers are reasons for a firm to\nremain in an industry despite poor (or negative) profits.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 13,
+    "page": 196,
+    "topicId": "su12-strategic-management",
+    "stem": "A manufacturing company produces plastic utensils for a\nparticular segment at the lowest possible cost. The company is\npursuing a cost",
+    "choices": [
+      "Leadership strategy.",
+      "Focus strategy.",
+      "Differentiation strategy.",
+      "Containment strategy."
+    ],
+    "answerIndex": 1,
+    "explanation": "Cost focus is the generic strategy that seeks competitive\nadvantage through lower costs but with a narrow competitive\nscope (e.g., a regional market or a specialized product line).\nThe reason for a cost-focus strategy is that the narrower\nmarket can be better served because the firm knows it well.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 14,
+    "page": 197,
+    "topicId": "su12-strategic-management",
+    "stem": "A company is trying to decide which competitive strategy it\nshould try to implement. Since the company has recently\nstarted producing Halloween products and selling them in its\nHalloween stores a few months prior, it is trying to focus on\nlow costs. The company believes that this will give it a\ncompetitive advantage since much of the competition across\nthe nation is selling more expensive Halloween products.\nWhich competitive strategy should the company most likely try\nto implement?",
+    "choices": [
+      "Cost leadership.",
+      "Differentiation.",
+      "Cost focus.",
+      "Focused differentiation."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cost leadership seeks a competitive advantage through lower\ncosts that have a broad competitive scope. Since the\ncompany is selling its products at low costs and it has many\ncompetitors across the nation, it has a broad competitive\nscope.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 15,
+    "page": 198,
+    "topicId": "su12-strategic-management",
+    "stem": "A strategic business unit (SBU) has a high relative market\nshare (RMS) and a low market growth rate (MGR). According\nto the growth-share matrix for competitive analysis created by\nthe Boston Consulting Group, such an SBU is considered a",
+    "choices": [
+      "Star.",
+      "Question mark.",
+      "Cash cow.",
+      "Dog."
+    ],
+    "answerIndex": 2,
+    "explanation": "The annual MGR reflects the maturity and attractiveness of\nthe market and the relative need for cash to finance\nexpansion. The RMS reflects an SBU’s competitive position in\nthe market segment. A high RMS signifies that the SBU has a\nstrong competitive position. Cash cows have high RMS and\nlow MGR. They are strong competitors and cash generators in\nlow-growth markets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 16,
+    "page": 198,
+    "topicId": "su12-strategic-management",
+    "stem": "In the Boston Consulting Group (BCG) growth-share matrix,\nwhich strategic business units are strong competitors in high\ngrowth markets but usually have modest net cash flow?",
+    "choices": [
+      "Cash cows.",
+      "Question marks.",
+      "Dogs.",
+      "Stars."
+    ],
+    "answerIndex": 3,
+    "explanation": "A star is a strong competitor in a high growth industry. It is\nprofitable but needs large amounts of cash for expansion,\nR&D, and meeting competitors’ attacks.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 17,
+    "page": 199,
+    "topicId": "su12-strategic-management",
+    "stem": "A strategic business unit (SBU) has a low relative market\nshare (RMS) and a high market growth rate (MGR). According\nto the portfolio model for competitive analysis (the growth-\nshare matrix) created by the Boston Consulting Group, the\nSBU is considered a",
+    "choices": [
+      "Star.",
+      "Question mark.",
+      "Cash cow.",
+      "Dog."
+    ],
+    "answerIndex": 1,
+    "explanation": "Question marks (low RMS, high MGR) are weak competitors\nand poor cash generators in high-growth markets. They need\nlarge amounts of cash not only to finance growth and compete\nin the market but also to increase RMS. If RMS increases\nsignificantly, a question mark may become a star. If not, it\nbecomes a dog.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 18,
+    "page": 200,
+    "topicId": "su12-strategic-management",
+    "stem": "According to the growth-share matrix approach developed by\nthe Boston Consulting Group, a harvest strategy is most likely\nto be used for SBUs that are",
+    "choices": [
+      "Question marks that may become stars.",
+      "Strong cash cows.",
+      "Weak cash cows.",
+      "Dogs that reduce the firm’s profits."
+    ],
+    "answerIndex": 2,
+    "explanation": "Each SBU should have objectives, a strategy should be\nformulated to achieve those objectives, and a budget should\nbe allocated. A harvest strategy maximizes short-term net\ncash inflow. Harvesting means zero-budgeting R&D, reducing\nmarketing costs, not replacing facilities, etc. This strategy is\nused for weak cash cows and possibly question marks and\ndogs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 19,
+    "page": 201,
+    "topicId": "su12-strategic-management",
+    "stem": "According to the Boston Consulting Group’s portfolio model for\ncompetitive analysis, the strategy for a strong cash cow should\nbe",
+    "choices": [
+      "Harvest.",
+      "Divest.",
+      "Hold.",
+      "Build."
+    ],
+    "answerIndex": 2,
+    "explanation": "A hold strategy is used for strong cash cows. It is necessary if\nthe business is to continue to generate large net cash inflows.\nHarvesting might impair a strong cash cow’s ability to generate\nlong-term positive net cash inflows.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 20,
+    "page": 201,
+    "topicId": "su12-strategic-management",
+    "stem": "A typical life cycle progression for a successful firm within the\nBoston Consulting Group’s growth-share matrix is",
+    "choices": [
+      "Star, question mark, cash cow, dog.",
+      "Question mark, star, cash cow, dog.",
+      "Star, cash cow, question mark, dog.",
+      "Question mark, cash cow, star, dog."
+    ],
+    "answerIndex": 1,
+    "explanation": "The progression is from question mark to star, cash cow, and\ndog. Accordingly, a firm should consider a SBU’s current\nstatus and its probable progression when formulating a\nstrategy.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 21,
+    "page": 202,
+    "topicId": "su12-strategic-management",
+    "stem": "A company has developed and implemented a wireless\ncharging feature into one of their flashlights. No other\ncompetitor in the marketplace currently offers this feature. In a\nmarketing research study, the vast majority of consumers\nindicated that they would pay a premium for this feature.\nWhich one of the following is the best strategy to bring this\nproduct to the market?",
+    "choices": [
+      "Porter’s cost strategy.",
+      "Porter’s focus strategy.",
+      "Porter’s differentiation strategy.",
+      "Porter’s segmentation strategy."
+    ],
+    "answerIndex": 2,
+    "explanation": "Differentiation is the generic strategy of entities that seek\ncompetitive advantage through providing a unique product.\nThe company uses the focused differentiation strategy by\nintroducing a wireless charging feature that no other\ncompetitor offers in the marketplace.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 22,
+    "page": 203,
+    "topicId": "su12-strategic-management",
+    "stem": "Products identified in the BCG growth-share matrix as cash\ncows possess relatively",
+    "choices": [
+      "High market share in a low growth market.",
+      "Low market share in a high growth market.",
+      "High market share in a high growth market.",
+      "Low market share in a low growth market."
+    ],
+    "answerIndex": 0,
+    "explanation": "The growth-share matrix has four quadrants. A cash cow is a\nbusiness unit that has a large market share in a mature, slow-\ngrowing industry.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 23,
+    "page": 203,
+    "topicId": "su12-strategic-management",
+    "stem": "A company is the leading company in the premium bottled\nwater industry. Its growth is mainly driven by the negative\nhealth publicity on carbonated soft drinks and other sweetened\nbeverages. Extensive inventory and distribution infrastructure\nis needed to compete in this industry. Its main packaging\nmaterials can be sourced either locally or easily imported from\noverseas. With its 60% market share, the company is able to\ninfluence prices and competitive activity. The second biggest\ncompetitor holds 20% market share, while the remaining 20%\nis shared by many small companies. Supermarkets and other\ngrocery retailers are the largest customer segment, accounting\nfor approximately 45% of sales. The supermarkets and grocery\nretailers are driving volume growth and are undergoing\nconsolidation into larger supermarket conglomerates. Using\nPorter’s 5 Forces, which one of the following\nstatements best reflects the industry environment?",
+    "choices": [
+      "Low profitability but can increase due to increasing power of\nbuyers.",
+      "Low profitability due to low threat of substitutes and new\nentrants.",
+      "High profitability but can decrease due to increasing power of\nbuyers.",
+      "High profitability due to high power of buyers and sellers."
+    ],
+    "answerIndex": 2,
+    "explanation": "The company is able to achieve high profitability in the\ngrowing premium bottled water industry. However, the\nsupermarkets and grocery retailers are undergoing\nconsolidation into larger supermarket conglomerates, which\nwill result in stronger buyer bargaining power and puts\ncollective pressure on the company.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 24,
+    "page": 205,
+    "topicId": "su12-strategic-management",
+    "stem": "Analyzing a company’s technological capabilities, employee\nskills, and sales team performance will provide",
+    "choices": [
+      "External factors that identify the company’s strengths and\nthreats.",
+      "Internal factors that identify the company’s strengths and\nopportunities.",
+      "External factors that identify the company’s strengths and\nweaknesses.",
+      "Internal factors that identify the company’s strengths and\nweaknesses."
+    ],
+    "answerIndex": 3,
+    "explanation": "Strengths and weaknesses are usually identified by\nconsidering the entity’s capabilities and resources (its internal\nenvironment).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 25,
+    "page": 205,
+    "topicId": "su12-strategic-management",
+    "stem": "Which one of the following describes what an organization\nwants to accomplish and leads to the formulation of long-term\nbusiness objectives?",
+    "choices": [
+      "Values.",
+      "Strategy.",
+      "Competency.",
+      "Mission statement."
+    ],
+    "answerIndex": 3,
+    "explanation": "The mission statement summarizes the entity’s reason for\nexisting and provides the framework for formulating the\ncompany’s strategies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 26,
+    "page": 206,
+    "topicId": "su12-strategic-management",
+    "stem": "A company is in the process of developing its mission\nstatement. Which one of the following is least appropriate for a\ncompany’s mission statement?",
+    "choices": [
+      "Defining the purpose of the company.",
+      "Identifying what product or service the company is providing.",
+      "Promoting a common shared goal on the part of employees.",
+      "Explaining the tactics for increasing market share in a specific\nregion."
+    ],
+    "answerIndex": 3,
+    "explanation": "The mission statement summarizes the company’s reason for\nexisting and provides the framework for formulation of the\ncompany’s strategies. The tactics used in increasing the\nmarket share of a firm are too specific for a company’s mission\nstatement and would make the statement too long. Mission\nstatements are typically most effective when they are one\nsentence long.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 27,
+    "page": 207,
+    "topicId": "su12-strategic-management",
+    "stem": "A company sells a product that is aimed at the broad mass\nmarket but is perceived as unique throughout its industry. The\ncompany is earning above average returns on the product.\nWhich one of the following is the most appropriate term for the\ncompetitive strategy followed by the company?",
+    "choices": [
+      "Market focus.",
+      "Financial leadership.",
+      "Cost focus.",
+      "Differentiation."
+    ],
+    "answerIndex": 3,
+    "explanation": "Differentiation is the generic strategy of entities that seek\ncompetitive advantage through providing a unique product and\nthat have a broad competitive scope. A product deemed\nunique throughout its industry is differentiated from the\nproducts of competitors.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 4,
+    "number": 28,
+    "page": 207,
+    "topicId": "su12-strategic-management",
+    "stem": "After leading the market for the past decade, the growth of\nproduct ABC is slowing down. In this stage of its life cycle, the\nproduct is still generating significant amounts of cash flows\nthat cover the company’s investment into new product\ninnovations. According to the BCG Growth-Share Matrix,\nproduct ABC is most likely an example of a",
+    "choices": [
+      "Star.",
+      "Cash cow.",
+      "Question mark.",
+      "Dog."
+    ],
+    "answerIndex": 1,
+    "explanation": "A cash cow ordinarily enjoys high profit margins and\neconomies of scale. Financing for expansion is not needed, so\nthe strategic business unit’s excess cash can be used for\ninvestments in other strategic business units. Product ABC is\nin the cash cow stage of its life cycle.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 1,
+    "page": 209,
+    "topicId": "su12-strategic-planning",
+    "stem": "During the strategic planning process, which one of the\nfollowing is an external factor to be analyzed?",
+    "choices": [
+      "Organizational culture.",
+      "Societal culture.",
+      "Employee morale.",
+      "Organizational structure."
+    ],
+    "answerIndex": 1,
+    "explanation": "During the strategic planning process, an organization should\nanalyze the external environment, such as social, cultural,\neconomic, and political factors.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 2,
+    "page": 209,
+    "topicId": "su12-strategic-planning",
+    "stem": "What is strategic planning?",
+    "choices": [
+      "It establishes the general direction of the organization.",
+      "It establishes the resources that the plan will require.",
+      "It establishes the budget for the organization.",
+      "It consists of decisions to use parts of the organization’s\nresources in specified ways."
+    ],
+    "answerIndex": 0,
+    "explanation": "Strategic planning establishes the general direction of an\norganization. It embodies the concerns of senior management\nand is based specifically on (1) identifying and specifying\norganizational objectives; (2) evaluating the organization’s\nstrengths and weaknesses; (3) assessing risk levels;\n(4) identifying and forecasting the effect of external\n(environmental) factors relevant to the organization;\n(5) deriving the best strategy for reaching the objectives, given\nthe organization’s strengths and weaknesses and the relevant\nfuture trends; and (6) analyzing and reviewing the capital\nbudgeting process and capacity planning.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 3,
+    "page": 210,
+    "topicId": "su12-strategic-planning",
+    "stem": "Strategic planning, as practiced by most modern\norganizations, includes all of the following except",
+    "choices": [
+      "Top-level management participation.",
+      "A long-term focus.",
+      "Strategies that will help in achieving long-range goals.",
+      "Analysis of the current month’s actual variances from budget."
+    ],
+    "answerIndex": 3,
+    "explanation": "Strategic planning is the process of setting overall\norganizational objectives. It is a long-term process aimed at\ndetermining the future course of the organization. Analysis of\nthe current month’s budget variances is a short-term activity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 4,
+    "page": 211,
+    "topicId": "su12-strategic-planning",
+    "stem": "A distinction between forecasting and planning",
+    "choices": [
+      "Is not valid because they are synonyms.",
+      "Arises because forecasting covers the short-term and planning\ndoes not.",
+      "Is that forecasts are used in planning.",
+      "Is that forecasting is a management activity whereas planning\nis a technical activity."
+    ],
+    "answerIndex": 2,
+    "explanation": "Planning is the determination of what is to be done, and of\nhow, when, where, and by whom it is to be done. Plans serve\nto direct the activities that all organizational members must\nundertake to move the organization from where it is to where it\nwants to be. Forecasting is the basis of planning because it\nprojects the future. A variety of quantitative methods are used\nin forecasting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 5,
+    "page": 212,
+    "topicId": "su12-strategic-planning",
+    "stem": "Which of the following is an example of an outcome of\nstrategic planning?",
+    "choices": [
+      "A formal statement of the organization’s definition of the\nfundamental truths that guide its actions.",
+      "A broad statement of concepts that emphasizes the\nimplementation of organizational objectives over the long term.",
+      "A set of general guides for action that channel thinking and\nallow a certain amount of discretion in execution.",
+      "A document specifying a sequence of steps detailing the exact\nmanner in which a certain activity must be accomplished."
+    ],
+    "answerIndex": 1,
+    "explanation": "The strategic plan states the means by which an entity\nexpects to achieve its stated mission. Achieving the mission is\npredicated on implementing long-term objectives.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 6,
+    "page": 212,
+    "topicId": "su12-strategic-planning",
+    "stem": "Which one of the following management considerations is\nusually addressed first in strategic planning?",
+    "choices": [
+      "Outsourcing.",
+      "Overall objectives of the firm.",
+      "Organizational structure.",
+      "Recent annual budgets."
+    ],
+    "answerIndex": 1,
+    "explanation": "Strategic planning is the process of setting overall\norganizational objectives and drafting strategic plans. Setting\nultimate objectives for the firm is a necessary prelude to\ndeveloping strategies for achieving those objectives. Plans\nand budgets are then needed to implement those strategies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 7,
+    "page": 213,
+    "topicId": "su12-strategic-planning",
+    "stem": "Strategy is a broad term that usually means the selection of\noverall objectives. Strategic analysis ordinarily excludes the",
+    "choices": [
+      "Trends that will affect the entity’s markets.",
+      "Target product mix and production schedule to be maintained\nduring the year.",
+      "Forms of organizational structure that would best serve the\nentity.",
+      "Best ways to invest in research, design, production,\ndistribution, marketing, and administrative activities."
+    ],
+    "answerIndex": 1,
+    "explanation": "Strategic analysis is the process of long-range planning. Such\ntasks as setting the target product mix and production\nschedule for the current year are short-term activities.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 8,
+    "page": 214,
+    "topicId": "su12-strategic-planning",
+    "stem": "All of the following are characteristics of the strategic planning\nprocess except the",
+    "choices": [
+      "Emphasis on long run.",
+      "Analysis of external economic factors.",
+      "Review of the attributes and behavior of the organization’s\ncompetition.",
+      "Analysis and review of departmental budgets."
+    ],
+    "answerIndex": 3,
+    "explanation": "Strategic planning is the process of setting the overall\norganizational objectives and involves the drafting of strategic\nplans. Analysis and review of departmental budgets is an\naspect of operational management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 9,
+    "page": 214,
+    "topicId": "su12-strategic-planning",
+    "stem": "The management of an organization has stated that two\nmembers of the same family may not be employed in the same\ndepartment. Identify the component of organizational planning\nthat is being demonstrated by management’s action.",
+    "choices": [
+      "A strategy.",
+      "A policy.",
+      "An objective.",
+      "A mission statement."
+    ],
+    "answerIndex": 1,
+    "explanation": "Top management establishes policies as guides to middle-\nand lower-management decision making. Policies are\nrelatively broad guidelines for making routine decisions\nconsistent with overall objectives. They channel thinking in a\ncertain direction but allow for some managerial discretion.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 10,
+    "page": 215,
+    "topicId": "su12-strategic-planning",
+    "stem": "Formal written policies are normally recommended. However,\nthe presence of certain conditions in an organization minimizes\nthe need for written policies. One condition that minimizes the\nneed for written policies is a",
+    "choices": [
+      "High division of labor.",
+      "Strong organizational culture.",
+      "Large span of control.",
+      "Strict unity of command."
+    ],
+    "answerIndex": 1,
+    "explanation": "If the culture is strong, the organization’s key values are\nintensely held and widely shared. Substantial training has\nbeen expended to achieve this high degree of acceptance,\nminimizing the need for formal, written policies.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 11,
+    "page": 216,
+    "topicId": "su12-strategic-planning",
+    "stem": "A company has established a strategic initiative to increase\noperating income by increasing market share through being\nthe lower-cost provider. Assuming the total market size\nremains the same, and based on the information provided\nbelow, has the company achieved the stated objectives?\nCurrent Year Next Year\nRevenues          $325,000      $325,000\nCost of goods sold 152,000       146,000\nGross margin     $173,000     $179,000\nOperating costs\nMarketing         100,000       100,000\nAdministrative     50,000        50,000\nOperating income $ 23,000       $ 29,000\nUnits sold             1,000     1,000",
+    "choices": [
+      "Yes, because the company was able to lower costs and\nincrease operating income.",
+      "No, because the company did not reduce marketing and\nadministrative costs.",
+      "Yes, because the statements show a reduced cost of goods\nsold.",
+      "No, because it does not appear that the company has\nincreased market share."
+    ],
+    "answerIndex": 3,
+    "explanation": "The company did not meet its goal of increasing operating\nincome by increasing market share through being the lower-\ncost provider. This is apparent by observing that the units sold\nfor the current year equal the units sold for the next year.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 12,
+    "page": 217,
+    "topicId": "su12-strategic-planning",
+    "stem": "A company is anticipating that a major supplier might\nexperience a strike this year. Because of the nature of the\nproduct and emphasis on quality, extra production cannot be\nstored as finished goods inventory. When developing a\ncontingency budget that would anticipate a direct materials\nbuildup, the two most significant items that will be affected are",
+    "choices": [
+      "Production volume and direct material.",
+      "Sales and ending inventory.",
+      "Production and cash flow.",
+      "Direct materials and cash flow."
+    ],
+    "answerIndex": 3,
+    "explanation": "The most significant items are those that will vary between the\ncontingency budget (a contingency plan) and the regular\nbudget. The company cannot increase its finished goods\ninventory, but it can increase its inventory of the direct\nmaterials provided by the supplier. Thus, the items most\naffected will be direct materials and cash. The cash budget will\nbe affected because of the need to pay for direct materials\nprior to their usage.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 13,
+    "page": 218,
+    "topicId": "su12-strategic-planning",
+    "stem": "The management of a food-processing company is analyzing\nits internal strengths and weaknesses as part of its strategic\nplanning process. Which one of the following is most likely\nconsidered a strategic internal variable for the company?",
+    "choices": [
+      "Changes in the legal code for food processors.",
+      "The economic forces that regulate the local labor supply.",
+      "Technological changes in food-processing methods.",
+      "The culture at the company’s food-processing plant."
+    ],
+    "answerIndex": 3,
+    "explanation": "The organizational culture sets values, objectives, and\nstrategies; defines roles and behaviors; measures\nperformance; and specifies accountability. Culture is strictly\ninternal to an organization.",
+    "answerStatus": "source",
+    "sourceTextStatus": "table-reflowed"
+  },
+  {
+    "unit": 12,
+    "section": 5,
+    "number": 14,
+    "page": 219,
+    "topicId": "su12-strategic-planning",
+    "stem": "What type of plan is formulated at the highest levels of\nmanagement; takes the broadest view of the company and its\nenvironment; is the least quantifiable; and determines the\nfuture nature of the firm, its products, and its customers?",
+    "choices": [
+      "Short-range plan.",
+      "Long-range plan.",
+      "Strategic plan.",
+      "Future plan."
+    ],
+    "answerIndex": 2,
+    "explanation": "A strategic plan sets the overall objectives for an entity and\nguides the process of reaching those objectives. It has a long-\nterm planning horizon. Strategic planning begins with the\nmission statement and focuses on such concerns as which\nproducts the company will produce and what customers are to\nbe served. It is the least quantifiable of the planning\ntechniques.",
+    "answerStatus": "source"
+  }
+]

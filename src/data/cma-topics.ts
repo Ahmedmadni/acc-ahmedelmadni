@@ -1,4 +1,5 @@
 import { CMA_COST_MANAGEMENT_TOPICS } from "@/data/cma-topics-cost-management";
+import { CMA_VOL2_TOPICS } from "@/data/cma-topics-vol2";
 
 /** IMA Content Specification Outline, effective September 2024. Content is original. */
 export const CMA_OUTLINE_URL =
@@ -11,7 +12,8 @@ export const CMA_IR_FRAMEWORK_URL =
   "https://integratedreporting.ifrs.org/wp-content/uploads/2024/08/IntegratedReporting_Framework_061024.pdf";
 
 export type CmaPart = "part-1" | "part-2";
-export type CmaStudyUnit = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+export type CmaStudyUnit =
+  1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20;
 
 export type CmaDomain =
   | "external-reporting"
@@ -33,6 +35,8 @@ export interface CmaTopic {
   studyUnit: CmaStudyUnit;
   section: string;
   sourcePages: string;
+  /** Printed page range in a supplied study-unit outline, distinct from the MCQ-bank pages. */
+  guidePages?: string;
   losRef: string;
   part: CmaPart;
   domain: CmaDomain;
@@ -816,4 +820,5 @@ export const CMA_TOPICS: CmaTopic[] = [
     ],
   },
   ...CMA_COST_MANAGEMENT_TOPICS,
+  ...CMA_VOL2_TOPICS,
 ];

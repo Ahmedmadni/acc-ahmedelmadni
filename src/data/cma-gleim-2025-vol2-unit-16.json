@@ -1,0 +1,2824 @@
+[
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 1,
+    "page": 846,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Ordinarily, the most appropriate basis on which to evaluate the\nperformance of a division manager is the division’s",
+    "choices": [
+      "Contribution margin.",
+      "Net revenue minus controllable division costs.",
+      "Gross profit.",
+      "Net income minus the division’s fixed costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Managerial performance should be evaluated on the basis of\nthose factors controllable by the manager. Managers may\ncontrol revenues, costs, and/or investment in resources. A well-\ndesigned responsibility accounting system establishes\nresponsibility centers within the organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 2,
+    "page": 847,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A large corporation allocates the costs of its headquarters staff\nto its decentralized divisions. The best reason for this\nallocation is to",
+    "choices": [
+      "More accurately measure divisional operating results.",
+      "Improve divisional management’s morale.",
+      "Remind divisional managers that common costs exist.",
+      "Discourage any use of central support services."
+    ],
+    "answerIndex": 2,
+    "explanation": "The allocation reminds managers that support costs exist and\nthat the managers would incur these costs if their operations\nwere independent. The allocation also reminds managers that\nprofit center earnings must cover some amount of support\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 3,
+    "page": 848,
+    "topicId": "su16-responsibility-centers",
+    "stem": "In responsibility accounting, a center’s performance is\nmeasured by controllable costs. Controllable costs\nare best described as including",
+    "choices": [
+      "Direct material and direct labor only.",
+      "Only those costs that the manager can influence in the current\ntime period.",
+      "Only discretionary costs.",
+      "Those costs about which the manager is knowledgeable and\ninformed."
+    ],
+    "answerIndex": 1,
+    "explanation": "Control is the process of making certain that plans are\nachieving the desired objectives. A controllable cost is one\nthat is directly regulated by a specific manager at a given level\nof production within a given time span or that the manager can\nsignificantly influence",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 4,
+    "page": 849,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A successful responsibility accounting reporting system is\ndependent upon",
+    "choices": [
+      "The correct allocation of controllable variable costs.",
+      "Identification of the management level at which all costs are\ncontrollable.",
+      "The proper delegation of responsibility and authority.",
+      "components since fixed costs are not controllable and must be\neliminated from the responsibility report."
+    ],
+    "answerIndex": 2,
+    "explanation": "Managerial performance ideally should be evaluated only on\nthe basis of those factors controllable by the manager.\nManagers may control revenues, costs, and/or investments in\nresources. However, controllability is not an absolute. More\nthan one manager may be able to influence a cost, and\nmanagers may be accountable for some costs they do not\ncontrol. In practice, given the difficulties of determining the\nlocus of controllability, responsibility may be assigned on the\nbasis of knowledge about the incurrence of a cost rather than\nthe ability to control it. Accordingly, a successful system is\ndependent upon the proper delegation of responsibility and\nthe commensurate authority.\nA reasonable separation of costs into their fixed and variable",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 5,
+    "page": 850,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Which one of the following companies is likely to experience\ndysfunctional motivation on the part of its managers due to its\nallocation methods?",
+    "choices": [
+      "To allocate depreciation of forklifts used by workers at its\ncentral warehouse, Company A uses predetermined amounts\ncalculated on the basis of the long-term average use of the\nservices provided.",
+      "Company B uses the sales revenue of its various divisions to\nallocate costs connected with the upkeep of its headquarters\nbuilding. It also uses return on investment to evaluate the\ndivisional performances.",
+      "Company C does not allow its service departments to pass on\ntheir cost overruns to the production departments.",
+      "Company D’s management information system is operated out\nof headquarters and serves its various divisions. The allocation\nof the management information system-related costs to its\ndivisions is limited to costs the divisions will incur if they were\nto outsource their management information system needs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Managerial performance ordinarily should be evaluated only\non the basis of those factors controllable by the manager. If a\nmanager is allocated costs that (s)he cannot control,\ndysfunctional motivation can result. In the case of allocations,\na cause-and-effect basis should be used. Allocating the costs\nof upkeep on a headquarters building on the basis of sales\nrevenue is arbitrary because cost may have no relationship to\ndivisional sales revenues. Consequently, divisional return on\ninvestment is reduced by a cost over which a division\nmanager has no control. Furthermore, the divisions with the\ngreatest sales are penalized by receiving the greatest\nallocation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 6,
+    "page": 851,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A segment of an organization is referred to as a service center\nif it has",
+    "choices": [
+      "Responsibility for developing markets and selling the output of\nthe organization.",
+      "Responsibility for combining the raw materials, direct labor,\nand other factors of production into a final output.",
+      "Authority to make decisions affecting the major determinants\nof profit including the power to choose its markets and sources\nof supply.",
+      "Authority to provide specialized support to other units within\nthe organization."
+    ],
+    "answerIndex": 3,
+    "explanation": "A service center exists primarily and sometimes solely to\nprovide specialized support to other units within the\norganization. Service centers are usually operated as cost\ncenters.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 7,
+    "page": 852,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A corporation uses an accounting system that charges costs to\nthe manager who has been delegated the authority to make\nthe decisions incurring the costs. For example, if the sales\nmanager accepts a rush order that will result in higher-than-\nnormal manufacturing costs, these additional costs are\ncharged to the sales manager because the authority to accept\nor decline the rush order was given to the sales manager. This\ntype of accounting system is known as",
+    "choices": [
+      "Responsibility accounting.",
+      "Functional accounting.",
+      "Reciprocal allocation.",
+      "Transfer price accounting."
+    ],
+    "answerIndex": 0,
+    "explanation": "In a responsibility accounting system, managerial performance\nshould be evaluated only on the basis of those factors directly\nregulated (or at least capable of being significantly influenced)\nby the manager. For this purpose, operations are organized\ninto responsibility centers. Costs are classified as controllable\nand noncontrollable, which implies that some revenues and\ncosts can be changed through effective management. If a\nmanager has authority to incur costs, a responsibility\naccounting system will charge them to the manager’s\nresponsibility center. However, controllability is not an\nabsolute basis for establishment of responsibility. More than\none manager may be able to influence a cost, and\nresponsibility may be assigned on the basis of knowledge\nabout the incurrence of a cost rather than the ability to control\nit.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 8,
+    "page": 853,
+    "topicId": "su16-responsibility-centers",
+    "stem": "The basic purpose of a responsibility accounting system is",
+    "choices": [
+      "Budgeting.",
+      "Motivation.",
+      "Authority.",
+      "Variance analysis."
+    ],
+    "answerIndex": 1,
+    "explanation": "The basic purpose of a responsibility accounting system is to\nmotivate management to perform in a manner consistent with\noverall company objectives. The assignment of responsibility\nimplies that some revenues and costs can be changed\nthrough effective management. The system should have\ncertain controls that provide for feedback reports indicating\ndeviations from expectations. Higher-level management may\nfocus on those deviations for either reinforcement or\ncorrection.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 9,
+    "page": 854,
+    "topicId": "su16-responsibility-centers",
+    "stem": "The least complex segment or area of responsibility for which\ncosts are allocated is a(n)",
+    "choices": [
+      "Profit center.",
+      "Investment center.",
+      "Contribution center.",
+      "Cost center."
+    ],
+    "answerIndex": 3,
+    "explanation": "A cost center is a responsibility center that is accountable only\nfor costs. The cost center is the least complex type of segment\nbecause it has no responsibility for revenues or investments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 10,
+    "page": 855,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Responsibility accounting defines an operating center that is\nresponsible for revenue and costs as a(n)",
+    "choices": [
+      "Profit center.",
+      "Revenue center.",
+      "Division.",
+      "Operating unit."
+    ],
+    "answerIndex": 0,
+    "explanation": "A profit center is responsible for both revenues and costs,\nwhereas a cost center is responsible only for costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 11,
+    "page": 855,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Decentralized firms can delegate authority and yet retain\ncontrol and monitor managers’ performance by structuring the\norganization into responsibility centers. Which one of the\nfollowing organizational segments is most like an independent\nbusiness?",
+    "choices": [
+      "Revenue center.",
+      "Profit center.",
+      "Cost center.",
+      "Investment center."
+    ],
+    "answerIndex": 3,
+    "explanation": "An investment center is the organizational type most like an\nindependent business because it is responsible for its own\nrevenues, costs incurred, and capital invested. The other\ntypes of centers do not incorporate all three elements.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 12,
+    "page": 856,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A corporation uses a responsibility accounting system in its\noperations. Which one of the following items is least likely to\nappear in a performance report for a manager of one of the\nassembly lines?",
+    "choices": [
+      "Direct labor.",
+      "Materials.",
+      "Repairs and maintenance.",
+      "Depreciation on the manufacturing facility."
+    ],
+    "answerIndex": 3,
+    "explanation": "A well-designed responsibility accounting system establishes\nresponsibility centers within an organization. In a responsibility\naccounting system, managerial performance should be\nevaluated only on the basis of those factors directly regulated\n(or at least capable of being significantly influenced) by the\nmanager. Thus, a manager of an assembly line is responsible\nfor direct labor, materials, repairs and maintenance, and\nsupervisory salaries. The manager is not responsible for\ndepreciation on the manufacturing facility. (S)he is not in a\nposition to control or influence capital budgeting decisions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 13,
+    "page": 857,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A company uses a performance reporting system that reflects\nthe company’s decentralization of decision making. The\ndepartmental performance report shows one line of data for\neach subordinate who reports to the group vice president. The\ndata presented show the actual costs incurred during the\nperiod, the budgeted costs, and all variances from budget for\nthat subordinate’s department. Which type of system is being\nused?",
+    "choices": [
+      "Contribution accounting.",
+      "Cost-benefit accounting.",
+      "Flexible budgeting.",
+      "Responsibility accounting."
+    ],
+    "answerIndex": 3,
+    "explanation": "In a responsibility accounting system, managerial performance\nshould be evaluated only on the basis of those factors directly\nregulated (or at least capable of being significantly influenced)\nby the manager. For this purpose, operations are organized\ninto responsibility centers. Costs are classified as controllable\nand noncontrollable, which implies that some revenues and\ncosts can be changed through effective management. If a\nmanager has authority to incur costs, a responsibility\naccounting system will charge those costs to the manager’s\nresponsibility center.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 14,
+    "page": 858,
+    "topicId": "su16-responsibility-centers",
+    "stem": "In a highly decentralized organization, the best option for\nmeasuring the performance of manufacturing subunits is the\nestablishment of",
+    "choices": [
+      "Marketing centers.",
+      "Product centers.",
+      "Revenue centers.",
+      "Cost centers."
+    ],
+    "answerIndex": 3,
+    "explanation": "Manufacturing subunits have costs but not revenues. Also,\nthey do not make marketing or product decisions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 15,
+    "page": 858,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A segment of an organization is referred to as a profit center if\nit has",
+    "choices": [
+      "Authority to make decisions affecting the major determinants\nof profit, including the power to choose its markets and\nsources of supply.",
+      "Authority to make decisions affecting the major determinants\nof profit, including the power to choose its markets and\nsources of supply and significant control over the amount of\ninvested capital.",
+      "Authority to make decisions over the most significant costs of\noperations, including the power to choose the sources of\nsupply.",
+      "Authority to provide specialized support to other units within\nthe organization."
+    ],
+    "answerIndex": 0,
+    "explanation": "A profit center is responsible for both revenues and expenses.\nFor example, the perfume department in a department store is\na profit center. The manager of a profit center usually has the\nauthority to make decisions affecting the major determinants\nof profit, including the power to choose markets (revenue\nsources) and suppliers (costs).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 16,
+    "page": 859,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A segment of an organization is referred to as an investment\ncenter if it has",
+    "choices": [
+      "Authority to make decisions affecting the major determinants\nof profit, including the power to choose its markets and\nsources of supply.",
+      "Authority to make decisions affecting the major determinants\nof profit, including the power to choose its markets and\nsources of supply and significant control over the amount of\ninvested capital.",
+      "Authority to make decisions over the most significant costs of\noperations, including the power to choose the sources of\nsupply.",
+      "Authority to provide specialized support to other units within\nthe organization."
+    ],
+    "answerIndex": 1,
+    "explanation": "An investment center is responsible for revenues, expenses,\nand invested capital. Return on investment is usually the key\nperformance measure of an investment center.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 17,
+    "page": 860,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A company uses a performance reporting system that reflects\nthe company’s decentralization of decision making. The\ndepartmental performance reports show actual costs incurred\nduring the period against budgeted costs. Any variances from\nthe budget are assigned to the individual department manager\nwho controls the costs. The company is using a type of system\ncalled",
+    "choices": [
+      "Transfer-pricing accounting.",
+      "Flexible budgeting.",
+      "Responsibility accounting.",
+      "Activity-based budgeting."
+    ],
+    "answerIndex": 2,
+    "explanation": "A well-designed responsibility accounting system establishes\nresponsibility centers within an organization. Managerial\nperformance should be evaluated only on the basis of those\nfactors controllable by the manager. Managers may control\nrevenues, costs, and/or investment activities. A departmental\nperformance report showing actual costs incurred against\nbudgeted costs permits evaluation of a manager and the area\nfor which (s)he is responsible.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 18,
+    "page": 861,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A tech firm uses an accounting system that charges costs to\nthe manager who has the authority to make decisions incurring\nthe costs. For example, if a sales manager authorizes a rush\norder that results in additional manufacturing costs, these\nadditional costs are charged to the sales manager. This type of\naccounting system is known as",
+    "choices": [
+      "Responsibility accounting.",
+      "Functional accounting.",
+      "Transfer-pricing accounting.",
+      "Contribution accounting."
+    ],
+    "answerIndex": 0,
+    "explanation": "A well-designed responsibility accounting system establishes\nresponsibility centers within an organization. Managerial\nperformance should be evaluated only on the basis of those\nfactors controllable by the manager. Managers may control\nrevenues, costs, and/or investment activities. The\nresponsibility system should induce management performance\nthat adheres to overall company objectives. Charging the\ncosts of a rush order to the sales manager who authorized the\njob creates an incentive for that individual to minimize such\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 19,
+    "page": 862,
+    "topicId": "su16-responsibility-centers",
+    "stem": "If a manufacturing company uses responsibility accounting,\nwhich one of the following items is least likely to appear in a\nperformance report for a manager of an assembly line?",
+    "choices": [
+      "Supervisory salaries.",
+      "Materials.",
+      "Repairs and maintenance.",
+      "Equipment depreciation."
+    ],
+    "answerIndex": 3,
+    "explanation": "Equipment depreciation is not controlled by an assembly-line manager.",
+    "answerStatus": "inferred"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 20,
+    "page": 863,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Which of the following is not true of responsibility accounting?",
+    "choices": [
+      "Managers should only be held accountable for factors over\nwhich they have significant influence.",
+      "The focus of cost center managers will normally be more\nnarrow than that of profit center managers.",
+      "Every factor that affects a firm’s financial performance\nultimately is controllable by someone, even if that someone is\nthe person at the top of the firm.",
+      "When a responsibility account system exists, operations of the\nbusiness are organized into separate areas controlled by\nindividual managers."
+    ],
+    "answerIndex": 2,
+    "explanation": "Responsibility accounting stresses that managers are\nresponsible only for factors under their control. For this\npurpose, the operations of the business are organized into\nresponsibility centers. Costs are classified as controllable and\nuncontrollable. This implies that some revenues and costs can\nbe changed through effective management. Management may\nthen focus on deviations for either reinforcement or correction.\nThus, the statement that every factor is ultimately controllable\nby someone is not a premise of responsibility accounting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 21,
+    "page": 864,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A company plans to implement a bonus plan based on\nsegment performance. In addition, it plans to convert to a\nresponsibility accounting system for segment reporting. The\nfollowing costs are included in the segment performance\nreports prepared under the current system. They are being\nreviewed to determine whether they should be included in the\nresponsibility accounting segment reports:\nI.  Corporate administrative costs allocated on the basis\nof net segment sales.\nII.  Personnel costs assigned on the basis of the number\nof employees in each segment.\nIII.  Fixed computer facility costs divided equally among\neach segment.\nIV.   Variable computer operational costs charged to each\nsegment based on actual hours used times a\npredetermined standard rate; any variable cost\nefficiency or inefficiency remains in the computer\ndepartment.\nThe only item that logically could be included in the segment\nperformance reports prepared on a responsibility accounting\nbasis is the",
+    "choices": [
+      "Corporate administrative costs.",
+      "Personnel costs.",
+      "Fixed computer facility costs.",
+      "Variable computer operational costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "The variable computer cost can be included. The segments\nare charged for actual usage, which is under each segment’s\ncontrol. The predetermined standard rate is set at the\nbeginning of the year and is known by the segment managers.\nMoreover, the efficiencies and inefficiencies of the computer\ndepartment are not passed on to the segments. Both\nprocedures promote a degree of control by the segments.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 22,
+    "page": 865,
+    "topicId": "su16-responsibility-centers",
+    "stem": "In a responsibility accounting system, managers are\naccountable for",
+    "choices": [
+      "Variable costs but not for fixed costs.",
+      "Product costs but not for period costs.",
+      "Incremental costs.",
+      "Costs over which they have significant influence."
+    ],
+    "answerIndex": 3,
+    "explanation": "The most desirable measure for evaluating a departmental\nmanager is one that holds the manager responsible for the\nrevenues and expenses (s)he can control. Controllability is the\nbasic concept of responsibility accounting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 23,
+    "page": 866,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Which of the following types of responsibility centers include\ncontrollable revenues in their performance reports?\nCost      Investment Profit\nCenters      Centers    Centers",
+    "choices": [
+      "Yes            Yes        Yes",
+      "Yes            No          No",
+      "No             Yes        Yes",
+      "No            No         No"
+    ],
+    "answerIndex": 2,
+    "explanation": "In investment centers, managers are responsible for all\nactivities, including costs, revenues, and investments. An\ninvestment center is a profit center with significant control over\nthe amount of capital invested. This control extends to\ninvestments such as receivables and property, plant, and\nequipment, as well as entry into new markets. A cost center,\nfor example, a production department, is responsible for costs\nonly. A profit center, for example, the appliance department in\na retail store, is responsible for both revenues and expenses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 24,
+    "page": 867,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Periodic internal reports used for performance evaluation\npurposes and based on a responsibility accounting system\nshould not include",
+    "choices": [
+      "Allocated fixed overhead.",
+      "A distinction between controllable and noncontrollable costs.",
+      "An organization chart.",
+      "Variances between actual and budgeted controllable costs."
+    ],
+    "answerIndex": 0,
+    "explanation": "Allocated fixed overhead should not be included in internal\nreports based on a responsibility accounting system because\nit cannot be controlled by a manager of a responsibility center.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 25,
+    "page": 867,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Which one of the following best identifies a profit center",
+    "choices": [
+      "The Information Technology Department of a large consumer\nproducts company.",
+      "A large toy company.",
+      "The Production Operations Department of a small job-order\nmachine shop company.",
+      "A new car sales division for a large local auto agency."
+    ],
+    "answerIndex": 3,
+    "explanation": "Management of a profit center is responsible for revenues and\nexpenses but not invested capital. Of the four responsibility\ncenters listed, a new car sales division for a large local auto\nagency is the only one that fits this description.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 26,
+    "page": 868,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Characteristics of a responsibility accounting system include\nall of the following except that",
+    "choices": [
+      "Responsibility for performance according to budget must be\nlinked to the appropriate authority.",
+      "The system should encourage employee involvement and\nparticipation.",
+      "Cost centers are responsible for revenues as well as common\ncosts.",
+      "Each level of management is responsible for its department’s\noperations and employees."
+    ],
+    "answerIndex": 2,
+    "explanation": "Management of a cost center is, by definition, only responsible\nfor costs. To make management answerable for revenues as\nwell undercuts the purpose of sound responsibility accounting.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 27,
+    "page": 869,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Responsibility costs motivate managers of responsibility\ncenters to act in the organization’s interest. The attribute that\nwould be least persuasive in deciding to allocate costs to\nresponsibility centers is that they",
+    "choices": [
+      "Are limited to staff services, such as consulting or internal\naudit.",
+      "Can be influenced by actions of the center’s manager.",
+      "Are helpful in measuring support used by the responsibility\ncenter.",
+      "Are used in product pricing."
+    ],
+    "answerIndex": 0,
+    "explanation": "Responsibility costs are designed to motivate managers of a\nresponsibility center to act in the best interest of the\norganization. Therefore, the costs should be allocated only if\nthey (1) can be influenced by the actions of the center’s\nmanagement, (2) are helpful in measuring support given to the\nresponsibility center, (3) improve comparability, or (4) are used\nin product pricing. Whether the costs are from staff, line, or\nother services has no bearing on whether they should be\nallocated. Furthermore, some organizations encourage the\nuse of services such as consulting or internal audit by not\ncharging their costs to responsibility centers. See SMA 4B,\nAllocation of Service and Administrative Cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 28,
+    "page": 870,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A manager of the telecommunication sales team has the\nfollowing department budget:\nBillings -- long distance                    $350,000\nBillings -- phone card                         75,000\nBillings -- toll free                         265,000\nThe responsibility center is best described as a",
+    "choices": [
+      "Cost center.",
+      "Revenue center.",
+      "Profit center.",
+      "Investment center."
+    ],
+    "answerIndex": 1,
+    "explanation": "The departmental budget contains only revenue amounts, no\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 29,
+    "page": 870,
+    "topicId": "su16-responsibility-centers",
+    "stem": "An organization employs a system of internal reporting that\nfurnishes departmental managers with revenue and cost\ninformation on only those items that are subject to their control.\nItems not subject to the manager’s control are not included in\nthe performance reports. This method of accounting is known\nas",
+    "choices": [
+      "Contribution margin reporting.",
+      "Segment reporting.",
+      "Absorption cost accounting.",
+      "Responsibility accounting."
+    ],
+    "answerIndex": 3,
+    "explanation": "Responsibility accounting stresses that managers should only\nbe held responsible for factors under their control. To achieve\nthis objective, the operations of the business are broken down\ninto responsibility centers. Costs are classified as controllable\nand noncontrollable to assign responsibility. The assignment\nof responsibility implies that some revenues and costs can be\nchanged through effective management. A responsibility\naccounting system should have certain controls that provide\nfor feedback reports indicating deviations from expectations.\nManagement may then focus on those deviations for either\nreinforcement or correction.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 30,
+    "page": 872,
+    "topicId": "su16-responsibility-centers",
+    "stem": "The role of a marketing manager for a local recreational sports\ncomplex in the marketing department is to advertise events,\nmeet potential clients, and plan future events. The marketing\nmanager is responsible for the revenues and costs of each\nevent and reports to the sports complex manager. The\nmarketing department is an example of which type of\nresponsibility center?",
+    "choices": [
+      "Investment center.",
+      "Cost center.",
+      "Profit center.",
+      "Revenue center."
+    ],
+    "answerIndex": 2,
+    "explanation": "A profit center is responsible for revenues and expenses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 31,
+    "page": 872,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A manager who is accountable for both income statement and\nbalance sheet items is responsible for a(n)",
+    "choices": [
+      "Cost center.",
+      "Investment center.",
+      "Profit center.",
+      "Revenue center."
+    ],
+    "answerIndex": 1,
+    "explanation": "An investment center is responsible for revenues, expenses,\nand invested capital. Thus, a manager accountable for both\nincome statement and balance sheet items is responsible for\nan investment center since his or her responsibilities include\nrevenues, expenses, and invested capital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 32,
+    "page": 873,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A cosmetics company is expanding its marketing presence by\nplacing stores within a national department store chain. The\ncosmetics company hires its own store managers who are\nresponsible for generating sales. The company pays rent per\nsquare foot to the department store. For the purpose of\nassessing the managers’ performance, each cosmetics store\nwould most appropriately be considered a(n)",
+    "choices": [
+      "Cost center.",
+      "Revenue center.",
+      "Profit center.",
+      "Investment center."
+    ],
+    "answerIndex": 1,
+    "explanation": "A revenue center is responsible for revenues only. Since the\nstore managers are only responsible for generating sales,\nassessing based on revenues is appropriate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 33,
+    "page": 874,
+    "topicId": "su16-responsibility-centers",
+    "stem": "The maintenance department of a hotel would be considered\na(n)",
+    "choices": [
+      "Cost center.",
+      "Revenue center.",
+      "Profit center.",
+      "Investment center."
+    ],
+    "answerIndex": 0,
+    "explanation": "A cost center is only responsible for costs. The maintenance\ndepartment of a hotel typically only incurs costs and therefore\nwould likely be considered a cost center.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 34,
+    "page": 874,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A company expects its plant manager to control manufacturing\ncosts and to set prices for the products manufactured. The\ncompany’s plant manager is evaluated as directing which type\nof responsibility center?",
+    "choices": [
+      "Profit center.",
+      "Cost center.",
+      "Revenue center.",
+      "Investment center."
+    ],
+    "answerIndex": 0,
+    "explanation": "A profit center is responsible for both revenues and expenses\nbut not for the amount of capital invested. The plant manager\nhas control over manufacturing costs (an expense) and prices\nfor products manufactured (a source of revenue). Accordingly,\n(s)he is directing a profit center.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 35,
+    "page": 875,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Accountants for Hire is a firm that specializes in providing\naccounting-related services to a wide range of clients across\nseveral geographical areas. The accounting-related services\nvary and the unique qualifications required in each local\nmarket may differ significantly. Each geographical office has a\nmanager who controls the type of accounting services offered\nto clients as well as the hiring of necessary staff to provide\nthose services. The CEO is in the process of determining the\nappropriate responsibility centers to use for performance\nmanagement in the organization. Based on this business\nscenario, which one of the following is the best type of\nresponsibility center for each geographical area’s office?",
+    "choices": [
+      "Cost center.",
+      "Investment center.",
+      "Profit center.",
+      "Revenue center."
+    ],
+    "answerIndex": 2,
+    "explanation": "A profit center is responsible for revenues and expenses but\nnot for the amount of capital invested. The managers control\nservices offered and hiring. Each office therefore is a profit\ncenter because its manager is responsible for revenues and\nexpenses.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 36,
+    "page": 876,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Common costs are",
+    "choices": [
+      "Direct costs.",
+      "Current costs.",
+      "Controllable costs.",
+      "Indirect costs."
+    ],
+    "answerIndex": 3,
+    "explanation": "Common costs are the cost of products, activities, facilities,\nservices, or operations shared by two or more cost objects.\nThey are indirect costs because they cannot be traced to a\nparticular cost object in an economically feasible manner.\nHence, they must be allocated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 37,
+    "page": 877,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Controllable revenue would be included in a performance\nreport for a\nProfit Center Cost Center",
+    "choices": [
+      "No              No",
+      "No              Yes",
+      "Yes             No",
+      "Yes             Yes"
+    ],
+    "answerIndex": 2,
+    "explanation": "A profit center is a segment of a company responsible for both\nrevenues and expenses. A profit center has the authority to\nmake decisions concerning markets (revenues) and sources\nof supply (costs).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 38,
+    "page": 877,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Which of the following is not a potential disadvantage of a cost\ncenter?",
+    "choices": [
+      "Increased monitoring of costs.",
+      "The potential for cost shifting.",
+      "Long-term issues may be disregarded.",
+      "The complexity of allocating service department costs to cost\ncenters."
+    ],
+    "answerIndex": 0,
+    "explanation": "A cost center is a responsibility center that is responsible for\ncosts only. This allows the management of the cost center to\nscrutinize costs more closely than if they were responsible for\nmore than just costs. As such, this represents an advantage of\na cost center rather than a disadvantage.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 39,
+    "page": 878,
+    "topicId": "su16-responsibility-centers",
+    "stem": "An investment center is responsible for each of the\nfollowing except:",
+    "choices": [
+      "Revenues.",
+      "Earnings per share.",
+      "Expenses.",
+      "Invested capital."
+    ],
+    "answerIndex": 1,
+    "explanation": "Investment centers are responsible for revenues, expenses,\nand invested capital. However, due to the fact that they\nusually represent only a subsidiary or division of a company,\nthey are not responsible for the overall firm’s earnings per\nshare.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 40,
+    "page": 879,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A company’s production manager is accountable for controlling\ncosts while manufacturing quality products. The manager also\nprovides recommendations for equipment improvements and\nreplacements. In this market, customers are very sensitive to\nthe product’s quality. What type of responsibility center is the\nproduction manager in charge of?",
+    "choices": [
+      "Cost center.",
+      "Investment center.",
+      "Profit center.",
+      "Revenue center."
+    ],
+    "answerIndex": 0,
+    "explanation": "A cost center is responsible for costs only. In this case, cost\ndrivers are the relevant performance measure and the\nmanager is not evaluated on revenue, profit, or invested\ncapital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 41,
+    "page": 879,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Managers are most likely to accept allocations of common\ncosts based on",
+    "choices": [
+      "Cause and effect.",
+      "Ability to bear.",
+      "Fairness.",
+      "Benefits received."
+    ],
+    "answerIndex": 0,
+    "explanation": "The difficulty with common costs is that they are indirect costs\nwhose allocation may be arbitrary. A direct cause-and-effect\nrelationship between a common cost and the actions of the\ncost object to which it is allocated is desirable. Such a\nrelationship promotes acceptance of the allocation by\nmanagers who perceive the fairness of the procedure, but\nidentification of cause and effect may not be feasible.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 42,
+    "page": 880,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Most firms allocate corporate and other support costs to\ndivisions and departments for all of the following\nreasons except to",
+    "choices": [
+      "Remind profit-center managers that earnings must be\nadequate to cover some share of the indirect costs.",
+      "Stimulate profit-center managers to put pressure on central\nmanagers to control service costs.",
+      "Create competition between divisions and departments, and\ntheir managers.",
+      "Fix accountability and evaluate profit centers."
+    ],
+    "answerIndex": 1,
+    "explanation": "Profit-center managers pressuring central managers to control\ncosts is not a healthy organizational dynamic.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 43,
+    "page": 881,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Which one of the following allocation approaches will ensure\nthat the production departments do not underestimate their\nplanned usage of service at the start of the budget period as\nwell as make the service departments cost efficient?",
+    "choices": [
+      "The use of actual rates and actual hours for both fixed and\nvariable costs.",
+      "Budgeted rates and standard hours allowed for output attained\nfor variable costs and budgeted rates and capacity available\nfor fixed costs.",
+      "The use of rates and quantities based on long-term historical\naverages for both variable and fixed costs.",
+      "The use of a budgeted lump-sum amount based on estimates\nprovided by the production departments for both variable and\nfixed costs."
+    ],
+    "answerIndex": 1,
+    "explanation": "Budgeted rates and standard hours allowed for output attained\n(i.e., flexible budgeting) for variable costs, and budgeted rates\nand capacity available for fixed costs, are the soundest bases\nfor allocating service department costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 44,
+    "page": 882,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A hospital has installed a new computer system. The system\nwas designed and constructed based on the anticipated\nnumber of hours of usage required by the various hospital\ndepartments according to projections made by the\ndepartmental managers. Virtually all of the operating costs of\nthe system are fixed. What would be the most systematic and\nrational manner in which to allocate the new computer system\ncosts to the various hospital departments?",
+    "choices": [
+      "To each department equally.",
+      "By the anticipated number of hours of usage.",
+      "By actual usage by each department.",
+      "By the revenue generated in each department."
+    ],
+    "answerIndex": 1,
+    "explanation": "Basing the allocation of service department cost on\nanticipated usage forces using department managers to\nrealistically assess their projected needs. Waiting until actual\nusage levels are known unfairly penalizes departments that\nhad unforeseen emergency needs arise.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 45,
+    "page": 883,
+    "topicId": "su16-responsibility-centers",
+    "stem": "The Finance Department has purchased a new color copier\nsystem for $10,000 that will help with required reporting. The\nIT Department was planning to purchase a similar system for\nan additional $10,000 but has realized that there are enough\nsystem resources from the Finance Department’s purchase\nthat both groups can share the new equipment equally. In\norder to fairly allocate the common cost of the equipment, the\ncontroller should use the",
+    "choices": [
+      "Incremental cost method and allocate $10,000 to the Finance\nDepartment.",
+      "Stand-alone cost method and allocate $5,000 to each\ndepartment.",
+      "Constant gross profit method and allocate $5,000 to each\ndepartment.",
+      "Net realizable value method and allocate $10,000 to the\nFinance Department."
+    ],
+    "answerIndex": 1,
+    "explanation": "Under the stand-alone method, the common cost is allocated\nto each cost object on a proportionate basis. Because each\ndepartment is going to share the new equipment equally, each\ndepartment should be allocated 50% of the cost.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 46,
+    "page": 884,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A finance group purchased a new project management software package costing $100,000. For an additional $10,000, the tax\nreporting team purchased a smaller application that would have\ncost $40,000 to buy separately. The controller will allocate the\ncosts mainly to the finance group, the primary users, and should\nuse the",
+    "choices": [
+      "Incremental cost allocation method, allocating $10,000 to the\ntax reporting team and $100,000 to the finance group.",
+      "Stand-alone cost allocation method, allocating $40,000 to the\ntax reporting team and $70,000 to the finance group.",
+      "Dual costing method and allocate $55,000 to both user groups.",
+      "Method which best reflects the usage of the software package."
+    ],
+    "answerIndex": 0,
+    "explanation": "Under the incremental method, the cost objects are sorted in\ndescending order by total traceable cost, and the common cost\nis allocated up to the amount of each. Using the incremental\nmethod, costs are calculated as follows:\nTraceable        Allocated     Remainin\nCost             Cost       Unallocat\nTo be allocated                                                  $110,0\nFinance group                 $100,000         $100,000          10,0\nTax reporting group              10,000           10,000\nTotal                            $110,000         $110,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 47,
+    "page": 885,
+    "topicId": "su16-responsibility-centers",
+    "stem": "If a company allocates common costs by weighting the costs\nof each user as a separate entity, it is using which one of the\nfollowing cost allocation methods?",
+    "choices": [
+      "Incremental.",
+      "Reciprocal.",
+      "Stand-alone.",
+      "Step-down."
+    ],
+    "answerIndex": 2,
+    "explanation": "Under the stand-alone method, the common costs are\nallocated by weighting the costs of each user as a separate\nentity. The common cost is allocated to each cost object on a\nproportionate basis.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 48,
+    "page": 885,
+    "topicId": "su16-responsibility-centers",
+    "stem": "All of the following are issues that should be considered in\nevaluating performance when common costs are allocated to\nbusiness segments except that",
+    "choices": [
+      "Cost allocations are not included in the calculation of long-term\ncost per unit.",
+      "Common costs are not controllable by segment managers.",
+      "The allocation can be affected by the cost drivers used by\nother segments.",
+      "There may be no cause-and-effect relationship between an\nallocated cost and the segment’s operations."
+    ],
+    "answerIndex": 0,
+    "explanation": "Long-term cost per unit is a business metric that represents\nthe average cost per unit of output over the long run. Whether\ncost allocations are included in the calculation of long-term\ncost per unit or not will not affect the fairness of the common\ncost allocation. Therefore, it will not affect the performance\nevaluation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 49,
+    "page": 886,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A corporation operates three distinct profit centers, each of\nwhich sells a unique product. Each division currently rents its\nown warehouse with the following characteristics.\nAnnual Cost Square Footage Required\nDivision 1 $325,000                   65,000\nDivision 2     145,000                30,000\nDivision 3        30,000                 5,000\nThe corporation has the opportunity to rent a warehouse\ncontaining 110,000 square feet for $480,700 per year. This\nfacility would be shared by all three divisions with the\nadditional unused space reserved for the anticipated growth of\nDivision 3. If the corporation uses the incremental cost\nallocation method to assign the $480,700 cost of the large\nwarehouse, the amount allocated to Division 3 would be",
+    "choices": [
+      "$10,700",
+      "$24,035",
+      "$28,842",
+      "$65,550"
+    ],
+    "answerIndex": 0,
+    "explanation": "Using the incremental cost allocation method, the amount\nallocated to Division 3 would be the costs of Divisions 1 and 2\nsubtracted from the total cost. Therefore, the amount allocated\nto Division 3 would be $10,700 ($480,700 – $325,000 –\n$145,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 50,
+    "page": 887,
+    "topicId": "su16-responsibility-centers",
+    "stem": "Controllable costs are costs that",
+    "choices": [
+      "Management decides to incur in the current period to enable\nthe company to achieve objectives other than the filling of\norders placed by customers.",
+      "Are likely to respond to the amount of attention devoted to\nthem by a specified manager.",
+      "Fluctuate in total in response to small changes in the rate of\nutilization of capacity.",
+      "Will be unaffected by current managerial decisions."
+    ],
+    "answerIndex": 1,
+    "explanation": "Controllable costs can be affected by the efforts of a manager.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 51,
+    "page": 888,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A controllable expense",
+    "choices": [
+      "Is an expected future expense that will be different under\nvarious alternatives.",
+      "Is an expense whose actual amount will not normally differ\nfrom the standard (budget) amount.",
+      "Is one that is directly influenced at a given level of managerial\nauthority within a given time period.",
+      "Is an expense that will remain semivariable in total over the\nrelevant range in a given time period."
+    ],
+    "answerIndex": 2,
+    "explanation": "Controllable expenses are directly regulated by a manager of\na responsibility center at a given level of production within a\ngiven time span.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 52,
+    "page": 889,
+    "topicId": "su16-responsibility-centers",
+    "stem": "The management of a company wishes to encourage all other\ndepartments to use the legal department, as circumstances\nwarrant. To accomplish this, legal department costs should be",
+    "choices": [
+      "Allocated to users on the basis of the actual cost of hours\nused.",
+      "Allocated to users on the basis of the budgeted cost of actual\nhours used.",
+      "Allocated to users on the basis of standard cost for the type of\nservice provided.",
+      "Absorbed as a corporate expense."
+    ],
+    "answerIndex": 3,
+    "explanation": "The most effective way to encourage more use of a service is\nto keep the user from having to bear the cost of the service.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 1,
+    "number": 53,
+    "page": 889,
+    "topicId": "su16-responsibility-centers",
+    "stem": "A tax firm has three divisions – Compliance, Tax Planning, and\nFinancial Consulting. Based on the divisional data presented\nbelow, which one of the allocation bases for common company\nexpenses would likely have the least negative behavioral\nimpact on the Financial Consulting Division manager?\nTax        Financial\nCompliance         Planning     Consulting\nRevenues                  $4,500,000         $6,000,000   $4,500,000\nVariable expenses           1,500,000         3,750,000     2,250,000\nNo. of employees                   68                76             56",
+    "choices": [
+      "Revenues.",
+      "Contribution margin.",
+      "Equal sharing.",
+      "Number of employees."
+    ],
+    "answerIndex": 3,
+    "explanation": "The Financial Consulting Division has the fewest employees.\nUsing that as the basis for allocation would therefore be the\nmost advantageous.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 1,
+    "page": 891,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "The segment margin of the Wire Division of a manufacturer\nshould not include",
+    "choices": [
+      "Net sales of the Wire Division.",
+      "Fixed selling expenses of the Wire Division.",
+      "Variable selling expenses of the Wire Division.",
+      "The Wire Division’s fair share of the salary of the\nmanufacturer’s president."
+    ],
+    "answerIndex": 3,
+    "explanation": "Segment margin is the contribution margin for a segment of a\nbusiness minus fixed costs. It is a measure of long-run\nprofitability. Thus, an allocation of the corporate officers’\nsalaries should not be included in segment margin because\nthey are neither variable costs nor fixed costs that can be\nrationally allocated to the segment. Other items that are often\nnot allocated include corporate income taxes, interest,\ncompany-wide R&D expenses, and central administration\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 2,
+    "page": 892,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "When using a contribution margin format for internal reporting\npurposes, the major distinction between segment manager\nperformance and segment performance is",
+    "choices": [
+      "Unallocated fixed costs.",
+      "Direct variable costs of producing the product.",
+      "Direct fixed costs controllable by the segment manager.",
+      "Direct fixed costs controllable by others."
+    ],
+    "answerIndex": 3,
+    "explanation": "The performance of the segment is judged on all costs\nassigned to it, but the segment manager is only judged on\ncosts that (s)he can control. Some fixed costs are imposed on\nsegments by the organization’s upper management, and they\nare thus beyond the segment manager’s control. These direct\ncosts controllable by others make up the difference between\nsegment manager performance and segment performance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 3,
+    "page": 893,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "An entity’s income statement for profit center No. 12 for August\nincludes\nContribution margin                               $84,000\nManager’s salary                                   24,000\nDepreciation on accommodations                      9,600\nAllocated corporate expenses                        6,000\nThe profit center’s manager is most likely able to control which\nof the following?",
+    "choices": [
+      "$84,000",
+      "$68,400",
+      "$60,000",
+      "$44,400"
+    ],
+    "answerIndex": 0,
+    "explanation": "A profit center is a segment of a company responsible for both\nrevenues and expenses. A profit center has the authority to\nmake decisions concerning markets (revenues) and sources\nof supplies (costs). However, the profit center’s manager does\nnot control his or her salary, investment and the resulting\ncosts (e.g., depreciation of plant assets), or expenses incurred\nat the corporate level. Consequently, profit center No. 12 is\nmost likely to control the $84,000 contribution margin (Sales –\nVariable costs) but not the other items in the summarized\nincome statement.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 4,
+    "page": 894,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "Which of the following techniques would be best for evaluating\nthe management performance of a department that is operated\nas a cost center?",
+    "choices": [
+      "Return on assets ratio.",
+      "Return on investment ratio.",
+      "Payback method.",
+      "Variance analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "A cost center is a responsibility center that is responsible for\ncosts only. Of the alternatives given, variance analysis is the\nonly one that can be used in a cost center. Variance analysis\ninvolves comparing actual costs with predicted or standard\ncosts.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 5,
+    "page": 894,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "The performance of a supervisor of claims processing for a\nhealth care system is evaluated using various measures\nagreed upon in advance with the general manager. The\ngeneral manager asked the supervisor to recommend several\nmeasures to evaluate the performance of his unit next year.\nWhich one of the following performance measures would likely\nhave the least positive effect on the supervisor’s motivation\nand performance?",
+    "choices": [
+      "Processing cost per claim.",
+      "Average processing time per claim.",
+      "Percentage of claims processed accurately the first time.",
+      "Total dollar amount of claims processed per month."
+    ],
+    "answerIndex": 3,
+    "explanation": "To be effective, a performance measure should be based on a\ncause-and-effect relationship between the outcome being\nmeasured and a driver that is under the supervisor’s control.\nThe supervisor has no control over the number or amount of\nclaims submitted by customers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 6,
+    "page": 895,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "The shipping manager for a distributor is responsible for\nmanaging the staff and all related transportation equipment to\nfill orders for bakery products from local retailers and deliver\nthe products to those retailers. Wage rates are established by\nunion contract. Which one of the following groups of three\nperformance measures most likely would result in the highest\nlevel of goal congruence?",
+    "choices": [
+      "Labor cost per order; transportation cost per order; number of\norders completed per day.",
+      "The percentage of orders filled on time; the percentage of\norders filled accurately; average cost to fill and deliver an\norder.",
+      "Customer satisfaction; elapsed time to complete an order;\npercentage of orders filled accurately.",
+      "Orders completed per employee per day; employee injuries\nper hour worked; number of vehicle accidents per year."
+    ],
+    "answerIndex": 1,
+    "explanation": "Unlike the other choices, the drivers of all three measures are\nunder the control of the shipping manager. Also, each\nmeasure is linked directly to an operational goal of the\nshipping department.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 7,
+    "page": 896,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "A software firm produces software for individual users and\nsmall businesses.The manager for the customer hotline\ndepartment is responsible for answering customer questions\nrelated to software products produced by all divisions of the\nfirm. For purposes of promoting goal congruence, which one of\nthe following would be the least appropriate measure of the\nmanager’s performance?",
+    "choices": [
+      "Average time to provide an answer or solution to a customer.",
+      "Number of calls to the hotline for each new release of\nsoftware.",
+      "Average time a customer is on hold.",
+      "Number of customer complaints due to incorrect responses\ngiven to customers."
+    ],
+    "answerIndex": 1,
+    "explanation": "The level of difficulty experienced by users with a new\nsoftware release is not under the control of the hotline\nmanager.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 8,
+    "page": 897,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "Which one of the following should be used for evaluating the\nperformance of the Repair and Maintenance Department that\nrepairs production equipment in a firm devoted to making\nkeyboards for computers?",
+    "choices": [
+      "The variance between the firm’s budgeted and actual net\nincome.",
+      "The total factory overhead variances.",
+      "The fixed overhead volume variances.",
+      "The response time and degree of satisfaction among the\nproduction departments."
+    ],
+    "answerIndex": 3,
+    "explanation": "A repair and maintenance function is a service department,\ni.e., a cost center. A nonfinancial measure of performance is\nappropriate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 9,
+    "page": 898,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "The chief information officer of a university Computing\nServices Department is assigned to help reduce the recurrent\nproblem of cost overruns due to uncontrolled computer usage\nby the user community, while at the same time, not curtailing\nthe use of information technology for research and teaching.\nTo ensure goal congruence, which one of the following\nalgorithms should be used to allocate the cost of the university\nComputing Services Department to other departments within\nthe university?",
+    "choices": [
+      "Actual rate times actual hours of computer usage.",
+      "Actual rate times budgeted hours of computer usage.",
+      "Budgeted rate times actual hours of computer usage.",
+      "Budgeted rate times budgeted hours of computer usage."
+    ],
+    "answerIndex": 2,
+    "explanation": "Using the budgeted rate times actual hours of usage would\nreward those departments who budgeted their computer\nusage carefully while appropriately charging those who\nexceeded their budgets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 10,
+    "page": 899,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "A company has four customers. Details on revenues and expenses are presented below.\nCustomer A Customer B Customer C Customer D\nUnits sold 10,000       20,000       35,000       50,000\nSales      $100,00      $150,0       $200,0       $250,0\n0          00            00          00\nCost of\ngoods\nsold       50,000      60,000       70,000       75,000\nDelivery    10,000      25,000       30,000       50,000\ncosts\nAdministra 30,000         30,000        30,000        30,000\ntion\nDepreciati 20,000         20,000        20,000        20,000\non\nUtilities   10,00           10,0          10,0          10,0\n0             00            00            00\nProfit       $(20,          $ 5           $ 40          $ 65\n000)          ,000          ,000          ,000\nWhich customer has the lowest customer level operating profit\nper unit sold?",
+    "choices": [
+      "Customer A.",
+      "Customer B.",
+      "Customer C.",
+      "Customer D."
+    ],
+    "answerIndex": 3,
+    "explanation": "To find whether a customer is profitable, only sales, cost of\ngoods sold, and other relevant costs should be used in the\ncalculation. The costs of administration, depreciation, and\nutilities are allocated to the customers.\nCustomer A        Customer B      Customer\nSales                   $100,000.00        $150,000.00         $200,000.0\nCost of goods sold      $ (50,000.00)      $ (60,000.00)       $ (70,000.0\nDelivery costs          $ (10,000.00)      $ (25,000.00)       $ (30,000.0\nCustomer Profit         $ 40,000.00        $ 65,000.00         $100,000.0\nUnits                         10,000             20,000              35,00\nProfit/Unit             $       4.00       $       3.25        $       2.8",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 11,
+    "page": 901,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "Details on revenues and expenses for four customers are\npresented below.\nCustomer Customer Customer Customer\nA          B            C          D\nUnits sold       10,000     20,000       35,000      50,000\nSales          $100,000 $150,000 $200,000 $250,000\nCost of goods\nsold            50,000     60,000       70,000      75,000\nDelivery cost    10,000     25,000       30,000      50,000\nOrder taking     15,000     20,000       25,000      30,000\nAdministrativ\ne                30,000     30,000       30,000      30,000\nDepreciation     20,000     20,000       20,000      20,000\nUtilities       10,000      10,000       10,000      10,000\nProfit/Loss    (35,000)    (15,000)      15,000      35,000\nWhich customer has the largest customer level operating profit\nper unit sold?",
+    "choices": [
+      "Customer A.",
+      "Customer B.",
+      "Customer C.",
+      "Customer D."
+    ],
+    "answerIndex": 0,
+    "explanation": "Customer A has a customer level operating profit of $2.50/unit\n[($100,000 sales – $50,000 cost of goods sold – $10,000\ndelivery cost – $15,000 order taking) ÷ 10,000 units], which is\nthe highest. Customer level operating profit only includes\ndirect customer costs, such as cost of goods sold, order\ntaking, and delivery costs. Allocated costs, such as\ndepreciation, utilities, and administrative costs, are not\nincluded.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 2,
+    "number": 12,
+    "page": 902,
+    "topicId": "su16-cost-revenue-profit",
+    "stem": "A company has divided its customers into two groups. Group 1\nconsists of 20% of the company’s most loyal and reliable\ncustomers. Group 2 consists of 80% of the company’s\ncustomers who are either small customers or larger customers\nwho order small quantities to test the product before placing\nlarger orders. The most recent results are shown below.\nGroup 1      Group 2\nSales             $7,500,000 $2,000,000\nSales discounts      375,000              0\nCost of sales      5,250,000 1,400,000\nOrder processing      40,000       150,000\nDelivery             120,000       500,000\nIncome (loss)     $1,715,000 $ (50,000)\nThe best way for the company to improve profitability is to",
+    "choices": [
+      "Charge a separate fee for the delivery of small quantities.",
+      "Discontinue sales to Group 2 customers.",
+      "Eliminate discounts for Group 1 customers.",
+      "Raise the selling price of the product."
+    ],
+    "answerIndex": 0,
+    "explanation": "Gross profit of Group 2 is $600,000. Operating loss results\nfrom deducting order processing costs and delivery costs. If\nthe company charges a separate fee for delivery of small\nquantities, delivery costs of Group 2 can be reduced or\neliminated.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 1,
+    "page": 905,
+    "topicId": "su16-investment-centers",
+    "stem": "The imputed interest rate used in the residual income\napproach to performance evaluation can best be described as\nthe",
+    "choices": [
+      "Average lending rate for the year being evaluated.",
+      "Historical weighted-average cost of capital for the company.",
+      "Target return on investment set by the company’s\nmanagement.",
+      "Average return on investments for the company over the last\nseveral years."
+    ],
+    "answerIndex": 2,
+    "explanation": "Residual income is the excess of operating income over a\ntargeted amount equal to an imputed interest charge on\ninvested capital. The rate used ordinarily is set as a target\nreturn by management but is often equal to the weighted\naverage cost of capital. Some entities prefer to measure\nmanagerial performance in terms of the amount of residual\nincome rather than the percentage ROI because the firm will\nbenefit from expansion as long as residual income is earned.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 2,
+    "page": 906,
+    "topicId": "su16-investment-centers",
+    "stem": "A computer service center had the following operating\nstatistics for the month:\nSales                                  $450,000\nOperating income                          25,000\nNet profit after taxes                     8,000\nTotal assets                            500,000\nShareholders’ equity                    200,000\nCost of capital                              6%\nBased on the above information, which one of the following\nstatements is true? The computer service center has a",
+    "choices": [
+      "Return on investment of 4%.",
+      "Residual income of $(5,000).",
+      "Return on investment of 1.6%.",
+      "Residual income of $(22,000)."
+    ],
+    "answerIndex": 1,
+    "explanation": "Residual income is the excess of operating income (a pretax\namount) over a targeted amount equal to an imputed interest\ncharge on invested capital. Using assets of $500,000 as the\ninvestment base and a cost of capital of 6%, the computer\nservice center must earn $30,000 on those assets to cover the\ncost of capital. Given that operating income was only $25,000,\nresidual income is $(5,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 3,
+    "page": 907,
+    "topicId": "su16-investment-centers",
+    "stem": "A firm earning a profit can increase its return on investment\n(ROI) by",
+    "choices": [
+      "Increasing sales revenue and operating expenses by the same\ndollar amount.",
+      "Decreasing sales revenues and operating expenses by the\nsame percentage.",
+      "Increasing investment and operating expenses by the same\ndollar amount.",
+      "Increasing sales revenues and operating expenses by the\nsame percentage."
+    ],
+    "answerIndex": 3,
+    "explanation": "ROI equals income divided by invested capital. If a company\nis already profitable, increasing sales and expenses by the\nsame percentage will increase ROI. For example, if a\ncompany has sales of $100 and expenses of $80, its net\nincome is $20. Given invested capital of $100, ROI is 20%\n($20 ÷ $100). If sales and expenses both increase 10% to\n$110 and $88, respectively, net income increases to $22. ROI\nwill then be 22% ($22 ÷ $100).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 4,
+    "page": 908,
+    "topicId": "su16-investment-centers",
+    "stem": "Listed below is selected financial information for the Western\nDivision of a corporation for last year.\nAmount\nAccount                     (thousands)\nAverage working capital                     $ 625\nGeneral and administrative expenses             75\nNet sales                                    4,000\nAverage plant and equipment                  1,775\nCost of goods sold                           3,525\nIf the corporation treats the Western Division as an investment\ncenter for performance measurement purposes, what is the\nbefore-tax return on investment (ROI) for last year?",
+    "choices": [
+      "34.78%",
+      "22.54%",
+      "19.79%",
+      "16.67%"
+    ],
+    "answerIndex": 3,
+    "explanation": "An investment center’s ROI is its operating income divided by\nits average invested capital. The Western Division’s operating\nincome is $400 ($4,000 sales – $3,525 cost of goods sold –\n$75 general expenses). Given average plant and equipment of\n$1,775 and average working capital of $625, the total average\ninvested capital is $2,400. ROI is thus 16.67% ($400 ÷\n$2,400).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 5,
+    "page": 909,
+    "topicId": "su16-investment-centers",
+    "stem": "Which one of the following items would most likely not be\nincorporated into the calculation of a division’s investment\nbase when using the residual income approach for\nperformance measurement and evaluation?",
+    "choices": [
+      "Fixed assets employed in division operations.",
+      "Land being held by the division as a site for a new plant.",
+      "Division inventories when division management exercises\ncontrol over the inventory levels.",
+      "Division accounts payable when division management\nexercises control over the amount of short-term credit used."
+    ],
+    "answerIndex": 1,
+    "explanation": "An evaluation of an investment center is based upon the\nreturn on the investment base. These assets include plant and\nequipment, inventories, and receivables. However, land not in\nuse will most likely not be included in the investment base.\nTotal assets in use rather than total assets available is\npreferable when the investment center has been forced to\ncarry idle assets.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 6,
+    "page": 910,
+    "topicId": "su16-investment-centers",
+    "stem": "Residual income is a better measure for performance\nevaluation of an investment center manager than return on\ninvestment (ROI) because",
+    "choices": [
+      "The problems associated with measuring the asset base are\neliminated.",
+      "Desirable investment decisions will not be neglected by high-\nreturn divisions.",
+      "Only the gross book value of assets needs to be calculated.",
+      "The arguments about the implicit cost of interest are\neliminated."
+    ],
+    "answerIndex": 1,
+    "explanation": "Residual income is the excess of the amount of the ROI over\na targeted amount equal to an imputed interest charge on\ninvested capital. The advantage of using residual income\nrather than percentage ROI is that the former emphasizes\nmaximizing a dollar amount instead of a percentage.\nManagers of divisions with a high ROI are encouraged to\naccept projects with returns exceeding the cost of capital even\nif those projects reduce the department’s ROI.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 7,
+    "page": 911,
+    "topicId": "su16-investment-centers",
+    "stem": "Which one of the following statements pertaining to the return\non investment (ROI) as a performance measurement is false?",
+    "choices": [
+      "When the average age of assets differs substantially across\nsegments of a business, the use of ROI may not be\nappropriate.",
+      "ROI relies on financial measures that are capable of being\nindependently verified, while other forms of performance\nmeasures are subject to manipulation.",
+      "The use of ROI may lead managers to reject capital\ninvestment projects that can be justified by using discounted\ncash flow models.",
+      "The use of ROI can make it undesirable for a skillful manager\nto take on troubleshooting assignments such as those\ninvolving turning around unprofitable divisions."
+    ],
+    "answerIndex": 1,
+    "explanation": "ROI is calculated by dividing a segment’s income by the\ninvested capital. Thus, ROI can be manipulated by falsifying\nincome or invested capital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 8,
+    "page": 912,
+    "topicId": "su16-investment-centers",
+    "stem": "One approach to measuring divisional performance is return\non investment (ROI). ROI is expressed as operating income",
+    "choices": [
+      "Divided by the current year’s capital expenditures plus cost of\ncapital.",
+      "Minus imputed interest charged for invested capital.",
+      "Divided by average fixed assets.",
+      "Divided by average total assets."
+    ],
+    "answerIndex": 3,
+    "explanation": "ROI is calculated by dividing income by average invested\ncapital. It is a key performance measure of an investment\ncenter. Invested capital may be defined in various ways, such\nas shareholders’ equity, total assets available, or total assets\nemployed (which excludes idle assets). Total assets available\nis the measure that assumes the manager uses all assets\nwithout regard to financing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 9,
+    "page": 913,
+    "topicId": "su16-investment-centers",
+    "stem": "Return on investment (ROI) is a very popular measure\nemployed to evaluate the performance of corporate segments\nbecause it incorporates all of the major ingredients of\nprofitability (revenue, cost, investment) into a single measure.\nUnder which one of the following combinations of actions\nregarding a segment’s revenues, costs, and investment would\na segment’s ROI always increase?\nRevenues Costs          Investments",
+    "choices": [
+      "Increase       Decrease   Increase",
+      "Decrease       Decrease    Decrease",
+      "Increase       Increase   Increase",
+      "Increase       Decrease   Decrease"
+    ],
+    "answerIndex": 3,
+    "explanation": "An increase in revenue and a decrease in costs will increase\nthe ROI numerator. A decrease in investment will decrease\nthe denominator. The ROI must increase in this situation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 10,
+    "page": 914,
+    "topicId": "su16-investment-centers",
+    "stem": "When evaluating a profit center or an investment center, top\nmanagement should concentrate on",
+    "choices": [
+      "Dollar sales.",
+      "Net income.",
+      "Profit percentages.",
+      "Return on investment."
+    ],
+    "answerIndex": 3,
+    "explanation": "Each investment center of a business should be evaluated\nbased upon return on investment. ROI is comparable to\ncalculations made both within and outside a particular\norganization. Management may review all investment\nopportunities available. In essence, net income is stated as a\nproportion of investment capital (resources required).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 11,
+    "page": 915,
+    "topicId": "su16-investment-centers",
+    "stem": "Which one of the following will not improve return on\ninvestment if other factors are constant?",
+    "choices": [
+      "Decreasing expenses or assets.",
+      "Increasing selling prices.",
+      "Increasing sales volume while holding fixed expenses\nconstant.",
+      "None of the answers is correct."
+    ],
+    "answerIndex": 3,
+    "explanation": "ROI equals net income divided by investment. Increasing net\nincome (e.g., by decreasing expenses or by increasing prices\nor sales volume) or decreasing the investment base improves\nROI. Hence, any of the actions listed increases the return on\ninvestment. Management and the accounting profession are\nvery concerned with classification of expenses and assets and\nother decisions involving the accounting for these items to\nachieve a proper calculation of return on investment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 12,
+    "page": 915,
+    "topicId": "su16-investment-centers",
+    "stem": "The segment margin of an investment center after deducting\nthe imputed interest on the assets used by the investment\ncenter is known as",
+    "choices": [
+      "Return on investment.",
+      "Residual income.",
+      "Operating income.",
+      "Return on assets."
+    ],
+    "answerIndex": 1,
+    "explanation": "Residual income is the excess of the amount of return on\ninvestment (ROI) over a targeted amount equal to an imputed\ninterest charge on invested capital. The rate used to impute\nthe interest is usually the weighted-average cost of capital.\nThe advantage of using residual income rather than\npercentage ROI is that the former emphasizes maximizing an\namount instead of a percentage. Managers are encouraged to\naccept projects with returns exceeding the cost of capital even\nif the investments reduce the percentage ROI.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 13,
+    "page": 916,
+    "topicId": "su16-investment-centers",
+    "stem": "The imputed interest rate used in the residual income\napproach for performance measurement and evaluation\ncan best be characterized as the",
+    "choices": [
+      "Historical weighted average cost of capital for the company.",
+      "Marginal after-tax cost of new equity capital.",
+      "Average return on investment that has been earned by the\ncompany over a particular period.",
+      "Target return on investment set by management."
+    ],
+    "answerIndex": 3,
+    "explanation": "Normally, management sets a target rate that all managers\nare expected to achieve. Anything above or below this normal\nreturn will catch the attention of higher management.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 14,
+    "page": 917,
+    "topicId": "su16-investment-centers",
+    "stem": "Performance of the general manager of the Industrial Product\nDivision is measured using the residual income method. The\ngeneral manager is reviewing the following forecasted\ninformation for the division for next year:\nAmount\nCategory                     (thousands)\nWorking capital                      $ 1,800\nRevenue                                30,000\nPlant and equipment                    17,200\nIf the imputed interest charge is 15% and the general manager\nwants to achieve a residual income target of $2,000,000, what\nwill costs (cost of goods sold and other operating expenses)\nhave to be in order to achieve the target?",
+    "choices": [
+      "$9,000,000",
+      "$10,800,000",
+      "$25,150,000",
+      "$25,690,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Residual income is the excess of the amount of the ROI over\na targeted amount equal to an imputed interest charge on\ninvested capital. If a manager has $19,000,000 of invested\ncapital ($17,200,000 of plant and equipment + $1,800,000 of\nworking capital), a 15% imputed interest charge equals\n$2,850,000. Adding $2,000,000 of residual income to the\nimputed interest results in a target profit of $4,850,000. This\nprofit can be achieved if costs are $25,150,000 ($30,000,000\nrevenue – $4,850,000 profit).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 15,
+    "page": 918,
+    "topicId": "su16-investment-centers",
+    "stem": "The basic objective of the residual income approach to\nperformance measurement and evaluation is to have a division\nmaximize its",
+    "choices": [
+      "Return on investment rate.",
+      "Imputed interest rate charge.",
+      "Cash flows.",
+      "Income in excess of a desired minimum return."
+    ],
+    "answerIndex": 3,
+    "explanation": "Residual income is the excess of the return on an investment\nover the targeted amount. This amount may be defined as the\nimputed interest on invested capital. Some firms prefer to\nmeasure managerial performance in terms of the amount of\nresidual income rather than the percentage ROI. The principle\nis that the firm is expected to benefit from expansion if residual\nincome is earned. Using a percentage ROI approach,\nexpansion might be rejected if it lowered ROI even though\nresidual income increases.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 16,
+    "page": 919,
+    "topicId": "su16-investment-centers",
+    "stem": "After investing in a new project, a company discovered that its\nresidual income remained unchanged. Which one of the\nfollowing must be true about the new project?",
+    "choices": [
+      "The net present value of the new project must have been\nnegative.",
+      "The return on investment of the new project must have been\nless than the firm’s cost of capital.",
+      "The return on investment of the new project must have been\nequal to the firm’s cost of capital.",
+      "The net present value of the new project must have been\npositive."
+    ],
+    "answerIndex": 2,
+    "explanation": "Residual income is the excess of the return on an investment\nover the firm’s cost of capital. If residual income is unchanged,\nthe return on the project must have been the same as the\nfirm’s cost of capital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 17,
+    "page": 920,
+    "topicId": "su16-investment-centers",
+    "stem": "The following information relates to the Northeast Division:\nSales                                        $600,000\nVariable costs                                360,000\nTraceable fixed costs                          60,000\nAverage invested capital                      120,000\nImputed interest rate                              8%\nResidual income was",
+    "choices": [
+      "$170,400",
+      "$180,000",
+      "$189,600",
+      "$230,400"
+    ],
+    "answerIndex": 0,
+    "explanation": "Residual income is income of an investment center minus an\nimputed interest charge for invested capital. Accordingly,\nresidual income is $170,400 [($600,000 sales – $360,000\nvariable costs – $60,000 traceable fixed costs) net income –\n($120,000 average invested capital × 8%) imputed interest].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 18,
+    "page": 921,
+    "topicId": "su16-investment-centers",
+    "stem": "Performance results for four geographic divisions of a\nmanufacturing company are shown below.\nTarget Return          Actual Return         Return\nDivision        on Investment         on Investment         on Sales\nA                 18%                   18.1%              8%\nB                 16                    20.0                8\nC                 14                    15.8                6\nD                 12                    11.0                9\nThe division with the best performance is",
+    "choices": [
+      "Division A.",
+      "Division B.",
+      "Division C.",
+      "Division D."
+    ],
+    "answerIndex": 1,
+    "explanation": "Return on investment, that is, the amount of return generated\nfor the parent firm per dollar of capital invested, is the simplest\nand generally the soundest measure of divisional performance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 19,
+    "page": 922,
+    "topicId": "su16-investment-centers",
+    "stem": "A multidivisional firm evaluates its managers based on the\nreturn on investment (ROI) earned by their divisions. The\nevaluation and compensation plans use a targeted ROI of 15%\n(equal to the cost of capital), and managers receive a bonus of\n5% of basic compensation for every one-percentage point that\nthe division’s ROI exceeds 15%. The manager of the\nConsumer Products Division has made a forecast of the\ndivision’s operations and finances for next year that indicates\nthe ROI would be 24%. In addition, new short-term programs\nwere identified by the Consumer Products Division and\nevaluated by the finance staff as follows:\nProgram       Projected ROI\nA              13%\nB              19%\nC              22%\nD            31%\nAssuming no restrictions on expenditures, what is the optimal\nmix of new programs that would add value to the firm?",
+    "choices": [
+      "A, B, C, and D.",
+      "B, C, and D only.",
+      "C and D only.",
+      "D only."
+    ],
+    "answerIndex": 1,
+    "explanation": "Return on investment (ROI) is one of the two most commonly\nused performance measures for investment centers. If\nsufficient capital is available, as it is in the firm’s case, a firm\nshould invest in any project whose return is expected to\nexceed the cost of capital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 20,
+    "page": 923,
+    "topicId": "su16-investment-centers",
+    "stem": "A company has four regional divisions. A summary of financial\nresults for the company is shown below.\nNorth        East         South               West\nOperating income          $1,000       $ 5,000      $4,000              $ 7,500\nAssets                      2,500       15,000        8,000              25,000\nLiabilities                   500        7,000        1,000               5,000\nTotal equity               2,000          8,000         7,000    20,000\nWhich division has the highest return on investment?",
+    "choices": [
+      "North.",
+      "East.",
+      "South.",
+      "West."
+    ],
+    "answerIndex": 2,
+    "explanation": "South has an ROI of 50% (Operating income ÷ Assets), which\nis the highest",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 21,
+    "page": 924,
+    "topicId": "su16-investment-centers",
+    "stem": "The following is an excerpt from a corporation’s most recent\nfinancial statements.\nCurrent assets                             $ 120,000\nTotal operating assets                     1,750,000\nCurrent liabilities                            85,000\nTotal liabilities                             985,000\nSales                                      1,240,000\nOperating income                              365,000\nThe corporation’s required rate of return is 12%. What is its\nresidual income?",
+    "choices": [
+      "$155,000",
+      "$126,800",
+      "$123,600",
+      "$113,800"
+    ],
+    "answerIndex": 0,
+    "explanation": "Residual income is equal to [Business unit profit – (Assets of\nbusiness unit × Required rate of return)]. Therefore, residual\nincome is equal to $155,000 [$365,000 – ($1,750,000 × .12)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 22,
+    "page": 925,
+    "topicId": "su16-investment-centers",
+    "stem": "A company is considering the addition of a new product line.\nThe new product line is expected to generate a return higher\nthan the cost of capital but lower than the current overall return\non investment (ROI). If the company decides to add the\npotential new product line, residual income will",
+    "choices": [
+      "Increase.",
+      "Remain unchanged.",
+      "Decrease.",
+      "Become higher than the firm’s return on investment."
+    ],
+    "answerIndex": 0,
+    "explanation": "Residual income is equal to operating income, minus\ninvestment, multiplied by the cost of capital. As the return will\nbe higher than the cost of capital, residual income will\nincrease. This problem highlights the usefulness of residual\nincome, as if the company simply evaluated projects on return\non investment, this project would be passed up, even if it\nproduces more income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 23,
+    "page": 926,
+    "topicId": "su16-investment-centers",
+    "stem": "A firm opens a new retail store every 2 years and currently\noperates in 24 different locations. The firm uses return on\ninvestment (ROI) to evaluate store performance.\nThe best comparison among stores will be achieved if the firm\nvalues long-term assets by",
+    "choices": [
+      "Book value.",
+      "Current value.",
+      "Historical cost.",
+      "Historical cost adjusted for inflation."
+    ],
+    "answerIndex": 1,
+    "explanation": "Since the firm opens stores every 2 years, and not all in the\nsame year, the best method of comparing the stores is to\nvalue long-term assets at current values. This will make the\nROIs comparable between the stores at any given moment in\ntime.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 24,
+    "page": 927,
+    "topicId": "su16-investment-centers",
+    "stem": "The headquarters of a national restaurant chain is trying to\nbetter understand the profitability of the Savannah location.\nSavannah’s total assets are $3,500,000, consisting of\n$1,000,000 land, $2,000,000 buildings and equipment, and\n$500,000 intangibles. The net profit is $475,000, and the\nrequired rate of return is 12%. Savannah’s return on\ninvestment (ROI) is",
+    "choices": [
+      "23.7%",
+      "19.0%",
+      "15.8%",
+      "13.6%"
+    ],
+    "answerIndex": 3,
+    "explanation": "ROI is equal to business unit profit over average total assets.\nSavannah has a net profit of $475,000 and total assets of\n$3,500,000. Therefore, ROI is equal to 13.6% ($475,000 ÷\n$3,500,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 25,
+    "page": 928,
+    "topicId": "su16-investment-centers",
+    "stem": "A company uses return on investment (ROI) to evaluate year-\nend divisional performance. Which one of the following\ninventory practices would most reduce comparability among\ntwo similar divisions?",
+    "choices": [
+      "One division uses a perpetual inventory system, and the other\ndivision uses a periodic inventory system.",
+      "One division uses the net method to record purchases, and the\nother division uses the gross method to record purchases.",
+      "One division uses LIFO, and the other division uses FIFO.",
+      "One division places goods for sale on consignment, and the\nother division does not."
+    ],
+    "answerIndex": 2,
+    "explanation": "If two divisions use different inventory flow assumptions,\ncomparability of ROI is significantly reduced, since these two\nmethods will affect both net income (through cost of goods\nsold) and the value of assets on the balance sheet. Although it\nis possible to recalculate amounts to increase comparability,\nthis could be difficult and time-consuming.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 26,
+    "page": 928,
+    "topicId": "su16-investment-centers",
+    "stem": "A company uses return on investment (ROI) to measure the\nperformance of its business units. The company manufactures\nand distributes consumer goods. Last year, management\nidentified a possible shortage of raw materials. To mitigate this\nrisk, a large amount of raw material was bought in advance\nand stored in the manufacturing plant inventory. As a result of\nthis decision, ROI will",
+    "choices": [
+      "Increase.",
+      "Decrease.",
+      "Not change.",
+      "Have an unpredictable change."
+    ],
+    "answerIndex": 1,
+    "explanation": "Return on investment (ROI) is calculated by dividing business\nunit profits over average total assets. The raw materials\nbought in advance and stored in the manufacturing plant\ninventory will increase the denominator of the fraction. The\nnumerator remains unchanged since the facts do not indicate\nany excess profit after the materials were bought in advance.\nIf the numerator is unchanged and the denominator increases,\nthe total fraction will decrease.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 27,
+    "page": 929,
+    "topicId": "su16-investment-centers",
+    "stem": "A merchandising company is considering a $1,000,000\nupgrade to its retail and warehousing facilities that will allow\nthe company to handle more products and attract more\ncustomers. The company anticipates that sales will increase\nby $500,000 and operating income will increase by $200,000\nper year. If the company has a minimum required return on\ninvestment of 15%, what would be the residual income\nresulting from the upgrade?",
+    "choices": [
+      "$800,000",
+      "$500,000",
+      "$75,000",
+      "$50,000"
+    ],
+    "answerIndex": 3,
+    "explanation": "Residual income measures performance in dollar terms rather\nthan as a percentage return. It is calculated using the following\nformula: Business unit profit – (Assets of business unit ×\nRequired rate of return). Thus, the company’s residual income\nresulting from the upgrade will equal $50,000 [$200,000 –\n($1,000,000 × 15%)]. The $500,000 sales figure is a distractor\nand should not be used in the calculation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 28,
+    "page": 930,
+    "topicId": "su16-investment-centers",
+    "stem": "A corporation has set a goal to increase its return on\ninvestment (ROI). To facilitate this goal, the corporation has\nset up an incentive program that rewards each division for\nincreasing its ROI. One possible downfall of this incentive\nprogram is that it will",
+    "choices": [
+      "Cause division managers to compete for the corporation’s\ninvestment funds.",
+      "Cause the corporation to select high-risk investments.",
+      "Cause the corporation to pay out incentives if goals are\nachieved.",
+      "Result in managers rejecting profitable projects."
+    ],
+    "answerIndex": 3,
+    "explanation": "A major problem with using ROI is that an investment center\nwith a high ROI may not accept a profitable investment even\nthough the investment’s return is higher than the center’s\ntarget ROI. For example, an investment center has a 7% ROI,\nand its investors expect 3% (the target return). The decision\nmaker may reject a project earning 5% even though the\nproject exceeds the target.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 29,
+    "page": 931,
+    "topicId": "su16-investment-centers",
+    "stem": "Which statement below best represents a benefit of residual\nincome (RI) as a performance measure?",
+    "choices": [
+      "RI blends all ingredients of profitability into one percentage\nthat is easily comparable.",
+      "RI is more likely to promote goal congruence in a low-profit\nlocation versus return on investment.",
+      "Managers can increase their RI by decreasing the internal rate\nof return.",
+      "Managers maximize an absolute amount and invest as long as\nthe required return is earned."
+    ],
+    "answerIndex": 3,
+    "explanation": "Residual income measures performance in dollar terms and is\ncalculated as follows: Business unit profit – (Assets of\nbusiness unit × Required rate of return). By using the residual\nincome method, managers maximize an absolute amount and\ninvest as long as the required return is earned because\nmanagers make their decisions on whether the residual\nincome is positive or negative. If it is positive, it means that the\nrequired return is being earned.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 30,
+    "page": 932,
+    "topicId": "su16-investment-centers",
+    "stem": "Based on the following information and a required rate of return\nof 12%, which location has the best residual income?\nOperating\nIncome           Investment        Intangibles      Depreciatio\nMadison      $300,000          $1,000,000         $200,000         $120,000\nDenver       $490,000          $2,750,000         $600,000         $270,000",
+    "choices": [
+      "Denver at $160,000.",
+      "Madison at $180,000.",
+      "Madison at $204,000.",
+      "Denver at $232,000."
+    ],
+    "answerIndex": 1,
+    "explanation": "Residual income is calculated by the following formula:\nBusiness unit profit – (Assets of business unit × Required rate\nof return). Madison’s residual income is $180,000 [$300,000\noperating income – ($1,000,000 investment × 12% required\nrate of return)].",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 31,
+    "page": 933,
+    "topicId": "su16-investment-centers",
+    "stem": "Business unit A has a return on investment of 10%, with a net\nprofit for the year of $40,000. The opportunity cost for the\nbusiness unit investments has been calculated at 8%. The\ncompany plans to purchase a new machine worth $100,000 and\nexpects the net profit to rise by an additional $15,000. The new\npurchase decision will increase the return on investment",
+    "choices": [
+      "By 1% and increase the residual income by $8,000.",
+      "By 1% and increase the residual income by $15,000.",
+      "To 11% and increase the residual income by $7,000.",
+      "To 11% and increase the residual income by $15,000."
+    ],
+    "answerIndex": 2,
+    "explanation": "The new return on investment is calculated as:\nROI = Business unit profit ÷ Assets of business\nunit\n= ($40,000 + $15,000) ÷ ($400,000 +\n$100,000)\n= 11%\nIncrease in\nresidual = $15,000 additional profit – ($100,000 new\nincome      asset × 8% required rate of return)\n= $15,000 – $8,000\n= $7,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 32,
+    "page": 935,
+    "topicId": "su16-investment-centers",
+    "stem": "A company’s management is planning on making an\ninvestment of $800,000 to launch a new product. In the first\nyear, the new product is expected to generate sales of\n$200,000 and a contribution margin of $175,000. Incremental\nfixed costs are $50,000. The company’s expected return on\ninvestment in the first year is closest to",
+    "choices": [
+      "6%.",
+      "16%.",
+      "22%.",
+      "25%."
+    ],
+    "answerIndex": 1,
+    "explanation": "ROI is calculated by dividing business unit profit by invested\ncapital. The new investment will make a profit of $125,000\n($175,000 contribution margin – $50,000 incremental fixed\ncosts). Hence, ROI = $125,000 ÷ $800,000 = 16%.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 33,
+    "page": 935,
+    "topicId": "su16-investment-centers",
+    "stem": "A company has an 8% required rate of return. It is evaluating\nthe following four mutually exclusive projects as possible\ninvestments.\nEstimated\nOperating Income         Assets\nProject A      $1,250,000      $ 5,000,000\nProject B        1,500,000        7,500,000\nProject C          850,000        1,500,000\nProject D          750,000      10,000,000\nUsing the residual income method, which one of the four\nprojects should the company accept?",
+    "choices": [
+      "Project A.",
+      "Project B.",
+      "Project C.",
+      "Project D."
+    ],
+    "answerIndex": 1,
+    "explanation": "The residual income method measures performance in dollar\nterms rather than as a percentage return. The required return\non assets is deducted from the actual income from the asset.\nThus, the calculations for projects A, B, C, and D are as\nfollows:\nRequired Inco\nProje                                     me         Residual\nct     Income       Assets           (at 8%)       Income\nA   $1,250,000 $ 5,000,000         $400,000      $850,000\nB     1,500,000     7,500,000        600,000       900,000\nC       850,000     1,500,000        120,000       730,000\nD         750,000 10,000,000       800,000         (50,000)\nProject B is the best investment because it has the highest\nresidual income.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 34,
+    "page": 937,
+    "topicId": "su16-investment-centers",
+    "stem": "A company is considering three independent projects.\nProjected financial information is shown below.\nProject A      Project B     Project C\nSales                 $5,000,000 $ 7,000,000 $10,000,000\nContribution           1,440,000      1,700,000      3,500,000\nmargin\nOperating income       1,000,000      1,650,000      2,520,000\nInvestment             9,000,000     10,000,000    14,000,000\nThe company’s minimum rate of return for accepting projects\nis 15% and the total investment for new projects is a maximum\nof $20,000,000. The company’s goal is to maximize its return\non investment. Which project(s) should be accepted if the\ncompany uses return on investment to measure investment\nprojects?",
+    "choices": [
+      "Project A only.",
+      "Project B only.",
+      "Projects B and C only.",
+      "Project C only."
+    ],
+    "answerIndex": 3,
+    "explanation": "The investment in Project C has the highest ROI at 18%\n($2,520,000 ÷ $14,000,000), and thus should be accepted.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 35,
+    "page": 938,
+    "topicId": "su16-investment-centers",
+    "stem": "A company’s recent operating results are shown below.\nSales              $4,370,000\nExpenses             2,728,000\nOperating income 1,642,000\nTotal assets         9,818,000\nTotal liabilities    7,663,000\nThe company has set a target return on investment (ROI) of\n18%. Assume the only change for the next period is the\nselection of one of the following two plans.\nPlan 1: Invest $1,200,000 in a new location that will produce\n$3,000,000 in sales each year. Operating expenses will\nincrease $2,781,600 each year.\nPlan 2: Reduce company costs by improving technology in the\nmanufacturing process. An equipment investment of $730,000\nwill reduce annual operating costs by $315,000.\nWhich plan, if implemented, would result in the company\nhaving an ROI at or above the targeted ROI?",
+    "choices": [
+      "Plan 1, since it will increase the company’s ROI to 18.2%.",
+      "Plan 1, since it will increase the company’s ROI to 42.1%.",
+      "Plan 2, since it will increase the company’s ROI to 18.6%.",
+      "Plan 2, since it will increase the company’s ROI to 43.2%."
+    ],
+    "answerIndex": 2,
+    "explanation": "Before the investment, the company’s ROI was 16.72%,\ncalculated by dividing $1,642,000 of operating income by\n$9,818,000 of total assets. Plan 1 will produce a return of\n$218,400 ($3,000,000 in revenue minus expenses of\n$2,781,600). Dividing $218,400 by the additional investment of\n$1,200,000 results in an ROI of 18.2% for Plan 1 by itself.\nAdding the additional Plan 1 asset to the company’s previous\ntotal assets of $9,818,000 results in revised total assets of\n$11,018,000. The new operating income will be $1,860,400\n($218,400 + $1,642,000). Dividing $1,860,400 by the revised\ntotal assets of $11,018,000 results in an ROI of 16.885%.\nAlternatively, Plan 2 has a return of $315,000 on an\ninvestment of $730,000, resulting in a Plan 2 ROI of 43.15%.\nAdding this additional income and assets to the original figures\nproduces a new income of $1,957,000 ($1,642,000 +\n$315,000). The new total for assets is $10,548,000\n($9,818,000 + $730,000). Therefore, the new ROI is 18.6%\n($1,957,000 ÷ $10,548,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 36,
+    "page": 940,
+    "topicId": "su16-investment-centers",
+    "stem": "The management team of a company is evaluating the use of\neither return on investment or residual income as a measure of\nthe performance of the company’s lines of business. In a\npresentation about the two measures, which of the following\nstatements are correct?\nI.   Both measures include key elements such as\nrevenues, costs, and level of investments, which are\ncritical for top management decision making.\nII.   Both measures avoid all potential goal-congruency\nproblems within the organization.\nIII.   The only disadvantage of the measures is that they\nboth have a long-term focus rather than a short-term\nfocus.\nIV.      Both measures can be manipulated to suit the user’s\npurposes as the calculation is based on accounting\nnumbers.",
+    "choices": [
+      "I and II only.",
+      "II and III only.",
+      "III and IV only.",
+      "I and IV only."
+    ],
+    "answerIndex": 3,
+    "explanation": "Both return on investment (ROI) and residual income use\nrevenues and costs to derive the net income and investigate\nthe relationship between net income and the investment in\nassets to generate such income. However, accounting\nelements used in the calculation, such as revenues and\nexpenses, may be subject to manipulation. Potential goal-\ncongruency problems within the organization may arise if ROI\nis used. Decision makers may tend to avoid choosing projects\nwith ROIs lower than the current ROI to avoid reducing future\nROI. Also, both measures have a short-term focus rather than\na long-term focus.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 37,
+    "page": 942,
+    "topicId": "su16-investment-centers",
+    "stem": "A company has recently implemented responsibility accounting\nin all 7 segments of the company. The following information is\navailable for Segment W for the last quarter.\nNet working capital                    $1,200,000\nProperty, plant, and equipment, net     3,175,000\nRevenues                                8,000,000\nCost of sales                           6,350,000\nGeneral and administrative expenses       180,000\nBased on the information provided, if the company treats\nSegment W as an investment center, what is the return on\ninvestment for the last quarter?",
+    "choices": [
+      "33.6%",
+      "37.7%",
+      "46.3%",
+      "74.4%"
+    ],
+    "answerIndex": 0,
+    "explanation": "Return on investment is equal to the income of the business\nunit divided by the assets of the business unit. Income of\nSegment W is $1,470,000 ($8,000,000 revenue –\n$6,350,000 cost of sales – $180,000 general and\nadministrative expenses). Assets of Segment W equal\n$4,375,000 ($1,200,000 net working capital +\n$3,175,000 PPE). Thus, return on investment is 33.6%\n($1,470,000 ÷ $4,375,000).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 38,
+    "page": 943,
+    "topicId": "su16-investment-centers",
+    "stem": "A company’s management is planning on making an\ninvestment of UAE Dirham (AED) 1,000,000 to establish a new\ndivision in the United Arab Emirates. The new division is\nexpected to generate sales of AED 720,000 and net income of\nAED 250,000 in Year 1. If the company’s required rate of\nreturn is 10%, what is the division’s residual income in Year 1?",
+    "choices": [
+      "AED 100,000",
+      "AED 150,000",
+      "AED 225,000",
+      "AED 620,000"
+    ],
+    "answerIndex": 1,
+    "explanation": "Expected net income of the business unit is AED 250,000,\nassets of the business unit equal AED 1,000,000, and the\nrequired rate of return is 10%. Residual income is calculated\nas follows:\nIncome of business unit – (Assets of business unit × Required\nrate of return) = Residual income\n250,000 – (1,000,000 × 0.10) = 150,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 39,
+    "page": 944,
+    "topicId": "su16-investment-centers",
+    "stem": "A company uses return on investment (ROI) to compare its\ndivisions, using this evaluation to determine division manager\nbonuses. Which method of asset measurement would provide\nthe best method of comparison?",
+    "choices": [
+      "Book value.",
+      "Current cost.",
+      "Historical cost.",
+      "Depreciated cost."
+    ],
+    "answerIndex": 1,
+    "explanation": "Current cost reflects the current expected economic benefit\nthat may arise from the asset. An ROI based on the current\ncost of assets can best match the income generated and the\nincome-generating ability of the asset.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 40,
+    "page": 945,
+    "topicId": "su16-investment-centers",
+    "stem": "For the year just ended, a service center had the following\noperating statistics:\nSales                                       $750,000\nOperating income                               25,000\nNet profit after taxes                          8,000\nTotal assets available                       500,000\nShareholders’ equity                         200,000\nCost of capital                                    6%\nThe service center has a",
+    "choices": [
+      "Return on investment of 3.33%.",
+      "Residual income of $(5,000).",
+      "Return on investment of 6%.",
+      "Residual income of $(20,000)."
+    ],
+    "answerIndex": 1,
+    "explanation": "Residual income is the excess of the actual ROI in dollars\nover a targeted amount equal to an imputed interest charge on\ninvested capital. The rate used is ordinarily the weighted-\naverage cost of capital. Some entities measure managerial\nperformance in terms of the amount of residual income rather\nthan the percentage ROI. Assuming the investment base is\ndefined as total assets available, the service center’s targeted\namount is $30,000 ($500,000 total assets × 6% cost of\ncapital). Assuming that operating income of $25,000 is the\nROI in dollars, residual income was $(5,000). This result is\nconsistent with defining the numerator of the ROI calculation\n(Income ÷ Investment) as operating income. However, it might\nalso be defined as net profit after taxes (net income).\nMoreover, the ROI denominator may be defined variously,\ne.g., total assets available, total assets employed, working\ncapital plus other assets, or shareholders’ equity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 41,
+    "page": 946,
+    "topicId": "su16-investment-centers",
+    "stem": "Managerial performance can be measured in many different\nways, including return on investment (ROI) and residual\nincome. A good reason for using residual income instead of\nROI is that",
+    "choices": [
+      "Residual income can be computed without regard to identifying\nan investment base.",
+      "Goal congruence is more likely to be promoted by using\nresidual income.",
+      "Residual income is well understood and often used in the\nfinancial press.",
+      "ROI does not take into consideration both the investment\nturnover ratio and return-on-sales percentage."
+    ],
+    "answerIndex": 1,
+    "explanation": "Residual income is the excess of operating income over a\ntargeted amount equal to an imputed interest charge on\ninvested capital. Residual income may be preferable to ROI\nbecause a firm benefits from expansion if residual income is\nearned. Using an ROI criterion, expansion might be rejected if\nit lowered ROI even though residual income increases. Thus,\nthe residual income method promotes the congruence of a\nmanager’s goal with those of the firm. Actions that tend to\nbenefit the firm also tend to improve the measure of the\nmanager’s performance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 42,
+    "page": 948,
+    "topicId": "su16-investment-centers",
+    "stem": "Edith Carolina, president of the Deed Corporation,\nrequires a minimum return on investment of 8% for any project to be\nundertaken by her company. The company is decentralized, and\nleaves investment decisions up to the discretion of the division\nmanagers as long as the 8% return is expected to be realized. Michael\nSanders, manager of the Cosmetics Division, has had a return on\ninvestment of 14% for his division for the past 3 years and expects the\ndivision to have the same return in the coming year. Sanders has the\nopportunity to invest in a new line of cosmetics that is expected to\nhave a return on investment of 12%.\nIf the Deed Corporation evaluates managerial performance\nusing residual income based on the corporate minimum\nrequired rate of return, what will be the preference for taking\non the proposed cosmetics line by Edith Carolina and Michael\nSanders?\nCarolina      Sanders",
+    "choices": [
+      "Accept          Reject",
+      "Reject          Accept",
+      "Accept          Accept",
+      "Reject          Reject"
+    ],
+    "answerIndex": 2,
+    "explanation": "Residual income is the excess of the return on an investment\nover a targeted amount, which is equal to an imputed interest\ncharge on invested capital (in this case, 8%). The rate is\nusually the weighted-average cost of capital. Some\nenterprises prefer to measure managerial performance in\nterms of the amount of residual income rather than the\npercentage ROI. The principle is that the enterprise is\nexpected to benefit from expansion as long as residual income\nis earned. Using a percentage ROI approach, expansion might\nbe rejected if it lowered ROI, even though residual income\nwould increase. Using residual income, both Carolina and\nSanders would accept the new project because residual\nincome will increase if a 12% return is earned when the target\nROI is only 8%.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 43,
+    "page": 949,
+    "topicId": "su16-investment-centers",
+    "stem": "Edith Carolina, president of the Deed Corporation,\nrequires a minimum return on investment of 8% for any project to be\nundertaken by her company. The company is decentralized, and\nleaves investment decisions up to the discretion of the division\nmanagers as long as the 8% return is expected to be realized. Michael\nSanders, manager of the Cosmetics Division, has had a return on\ninvestment of 14% for his division for the past 3 years and expects the\ndivision to have the same return in the coming year. Sanders has the\nopportunity to invest in a new line of cosmetics that is expected to\nhave a return on investment of 12%.\nIf the Deed Corporation evaluates managerial performance\nusing return on investment, what will be the preference for\ntaking on the proposed cosmetics line by Edith Carolina and\nMichael Sanders?\nCarolina     Sanders",
+    "choices": [
+      "Accept          Reject",
+      "Reject          Accept",
+      "Accept          Accept",
+      "Reject          Reject"
+    ],
+    "answerIndex": 0,
+    "explanation": "A company with an 8% ROI threshold should obviously accept\na project yielding 12% because the company’s overall ROI\nwould increase. The manager being evaluated on the basis of\nROI who is already earning 14% will be unwilling to accept a\n12% return on a new project because the overall ROI for the\ndivision would decline slightly. This absence of goal\ncongruence suggests a weakness in ROI-based performance\nevaluation.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 44,
+    "page": 950,
+    "topicId": "su16-investment-centers",
+    "stem": "To ensure that a divisional vice president places appropriate\nfocus on both the short-term and the long-term objectives of\nthe division, the best approach would be to evaluate the vice\npresident’s performance by using",
+    "choices": [
+      "Return on investment (ROI), which permits easy and quick\ncomparisons to other similar divisions.",
+      "Residual income since it will eliminate the rejection of capital\ninvestments that have a return less than ROI but greater than\nthe cost of capital.",
+      "Division segment margin or profit margin.",
+      "Financial and nonfinancial measures, including the evaluation\nof quality, customer satisfaction, and market performance."
+    ],
+    "answerIndex": 3,
+    "explanation": "The most effective way to measure performance is to include\nboth financial and nonfinancial measures and to focus on\nmultiple dimensions of the business, such as quality, customer\nsatisfaction, and market performance.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 45,
+    "page": 951,
+    "topicId": "su16-investment-centers",
+    "stem": "A company evaluates its managers using management by\nobjectives (MBO). All of the following are considered\nappropriate goals for measuring a division manager’s\nefficiency for a budgeting period except",
+    "choices": [
+      "Budgeted operating income.",
+      "A targeted share of the market.",
+      "Earnings per share projections.",
+      "A reduction in the organizational structure (fewer employees\ndoing a given amount of work)."
+    ],
+    "answerIndex": 2,
+    "explanation": "Any measure involving the firm’s stock is inappropriate for\nmeasuring segment manager performance. The stock price\nreflects the performance of the company as a whole.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 46,
+    "page": 952,
+    "topicId": "su16-investment-centers",
+    "stem": "For several years, Northern Division of a company has\nmaintained a positive residual income. Northern is currently\nconsidering investing in a new project that will lower the\ndivision’s overall return on investment (ROI) but increase its\nresidual income. What is the relationship between the\nexpected rate of return on the new project, the firm’s cost of\ncapital, and the division’s current ROI?",
+    "choices": [
+      "The expected rate of return on the new project is higher than\nthe division’s current return on investment, but lower than the\nfirm’s cost of capital.",
+      "The firm’s cost of capital is higher than the expected rate of\nreturn on the new project, but lower than the division’s current\nreturn on investment.",
+      "The division’s current return on investment is higher than the\nexpected rate of return on the new project, but lower than the\nfirm’s cost of capital.",
+      "The expected rate of return on the new project is higher than\nthe firm’s cost of capital, but lower than the division’s current\nreturn on investment."
+    ],
+    "answerIndex": 3,
+    "explanation": "Since the project will increase residual income, its rate of\nreturn must be higher than the firm’s cost of capital (residual\nincome is the excess of ROI on a project over a targeted\namount equal to an imputed interest charge on invested\ncapital). And, since the project will lower the division’s overall\nrate of return, its own rate of return must be lower than the\ndivision’s current rate.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 47,
+    "page": 953,
+    "topicId": "su16-investment-centers",
+    "stem": "A company has two divisions, Household Appliances and\nConstruction Equipment. The manager of the Household\nAppliances Division is evaluated on the basis of return on\ninvestment (ROI). The manager of the Construction Equipment\nDivision is evaluated on the basis of residual income. The cost\nof capital has been 12%, and the return on investment has\nbeen 16% for the two divisions. Each manager is currently\nconsidering a project with a 14% rate of return. According to\nthe current evaluation system for managers, which manager(s)\nwould have incentive to undertake the project?",
+    "choices": [
+      "Both managers would have incentive to undertake the project.",
+      "Neither manager would have incentive to undertake the\nproject.",
+      "The manager of the Household Appliances Division would\nhave incentive to undertake the project, while the manager of\nthe Construction Equipment Division would not have incentive\nto undertake the project.",
+      "The manager of the Construction Equipment Division would\nhave incentive to undertake the project, while the manager of\nthe Household Appliances Division would not have incentive to\nundertake the project."
+    ],
+    "answerIndex": 3,
+    "explanation": "A manager who is evaluated on the basis of ROI will tend to\nreject any capital project with an expected rate of return lower\nthan the division’s current ROI. Thus, the Household\nAppliances Division manager will reject his or her project (14%\n< 16%). However, the manager of the Construction Equipment\nDivision will accept the project for his or her division. Residual\nincome is the excess of ROI on a project over a targeted\namount equal to an imputed interest charge on invested\ncapital. Thus, anytime the expected return on a project\nexceeds the cost of capital, a manager judged on residual\nincome will tend to accept it (14% > 12%).",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 48,
+    "page": 955,
+    "topicId": "su16-investment-centers",
+    "stem": "A company is concerned that its divisional managers are not\nmaking decisions that are in the best interests of the overall\ncorporation. In order to prevent this, the company should use a\nperformance evaluation system that focuses on",
+    "choices": [
+      "Flexible budget variances.",
+      "Operating income.",
+      "Controllable costs.",
+      "Residual income."
+    ],
+    "answerIndex": 3,
+    "explanation": "Residual income is the excess of the return on investment\nover a targeted amount equal to an imputed interest charge on\ninvested capital. Of the choices presented, this one is the\nmost likely to present the divisional managers with an\nincentive to focus on increasing profitability for the firm as a\nwhole.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 49,
+    "page": 956,
+    "topicId": "su16-investment-centers",
+    "stem": "The following selected information is from the financial statements for the last fiscal year.\nCurrent assets                         $ 500,000\nFixed assets                               250,000\nCurrent liabilities                        100,000\nLong-term debt                             300,000\nStockholders’ equity                       350,000\nOperating profit                         1,000,000\nIncome taxes                               400,000\nNet income                                 600,000\nThe company has a cost of capital of 10%. Balance sheet\namounts remained constant throughout the year. The company’s\nresidual income for last year was",
+    "choices": [
+      "$525,000",
+      "$575,000",
+      "$925,000",
+      "$975,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Residual income can be calculated as follows:\nResidual income = Operating profit – (Assets of business unit × Required ra\n= $1,000,000 – ($750,000 × 10%)\n= $1,000,000 – $75,000\n= $925,000",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 50,
+    "page": 957,
+    "topicId": "su16-investment-centers",
+    "stem": "The financial results for the four regional divisions are shown\nbelow.\nNorth          South          East         West\nNet profit            $1,000        $ 5,000        $4,000       $ 7,500\nAssets                 2,500         15,000         8,000        25,000\nLiabilities              500           7,000        1,000         5,000\nTotal equity           2,000           8,000        7,000        20,000\nWhich division has the lowest return on investment?",
+    "choices": [
+      "North.",
+      "South.",
+      "East.",
+      "West."
+    ],
+    "answerIndex": 3,
+    "explanation": "ROI is calculated by dividing the business unit profit by the\naverage total assets. The ROI for West is 30%, the lowest of\nthe four divisions.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 51,
+    "page": 958,
+    "topicId": "su16-investment-centers",
+    "stem": "A manufacturer of value-priced clothing measures the\nperformance of its divisions based upon return on investment.\nIf investment is defined as the book value of all assets\nrecorded on a division’s balance sheet, the manufacturer will\nhave the most difficulty in comparing divisions that vary\nsignificantly in",
+    "choices": [
+      "Age.",
+      "Geographic location.",
+      "Managerial style.",
+      "Sales volume."
+    ],
+    "answerIndex": 0,
+    "explanation": "The manufacturer will have the most difficulty in comparing\ndivisions that vary significantly in age because depreciation\nwill already have been deducted on older assets for older\ndivisions, so the comparison is not equitable compared to\nnewer divisions that have new investments. The assets of the\nolder divisions will have a lower book value.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 52,
+    "page": 959,
+    "topicId": "su16-investment-centers",
+    "stem": "A firm has four branch offices throughout the state. Following\nare the operating results from last year.\nK City       G City       W City        S City\nBranch          $300,000 $420,000 $ 540,000 $606,000\noffice sales\nBranch           120,000      294,000       318,000     104,000\noffice profit\nAverage          805,000      914,000     1,650,000     745,000\ntotal assets\nWhich branch had the highest return on investment?",
+    "choices": [
+      "K City.",
+      "G City.",
+      "W City.",
+      "S City."
+    ],
+    "answerIndex": 1,
+    "explanation": "Return on investment can be calculated by dividing net\nincome (or profit) by net assets. G City has a return on\ninvestment of 32.2% ($294,000 ÷ $914,000), which is the\nhighest return on investment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 53,
+    "page": 960,
+    "topicId": "su16-investment-centers",
+    "stem": "When using return on investment (ROI) in local currency to\nevaluate divisional performance, valuing assets at net book\nvalue would result in the highest ROI for",
+    "choices": [
+      "International divisions in countries with high inflation.",
+      "International divisions in countries with high deflation.",
+      "Retail divisions purchasing goods from manufacturing divisions\nat fixed prices.",
+      "Retail divisions purchasing goods from manufacturing divisions\nat negotiated prices."
+    ],
+    "answerIndex": 0,
+    "explanation": "Divisions in areas of high inflation when valuing assets at net\nbook value will result in the highest ROI since the ROI is\ncalculated using local currency. The local currency will\ndepreciate due to the inflation, which in turn inflates the ROI.\nHigh inflation would result in higher ROI.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 54,
+    "page": 961,
+    "topicId": "su16-investment-centers",
+    "stem": "Residual income is often preferred over return on investment\n(ROI) as a performance evaluation measure because",
+    "choices": [
+      "The imputed interest rate used in calculating residual income\nis more easily derived than the target rate that is compared to\nthe calculated ROI.",
+      "Average investment is employed with residual income while\nyear-end investment is employed with ROI.",
+      "Residual income concentrates on maximizing the amount of\nincome rather than a percentage return as with ROI.",
+      "Residual income is a measure over time while ROI represents\nthe results for a single time period."
+    ],
+    "answerIndex": 2,
+    "explanation": "The residual income method is a variation of ROI that\nmeasures performance in dollar terms rather than as a\npercentage return. Thus, a company will often prefer the\nresidual income method so that it can concentrate on\nmaximizing the amount of income rather than a percentage\nROI.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 3,
+    "number": 55,
+    "page": 961,
+    "topicId": "su16-investment-centers",
+    "stem": "Return on investment focuses on income as a percentage of\ninvestment, while residual income focuses on",
+    "choices": [
+      "The capital charge.",
+      "Operating income less a capital charge.",
+      "Management decisions.",
+      "Cost of capital times the amount of investment."
+    ],
+    "answerIndex": 1,
+    "explanation": "The residual income method is a variation of ROI that\nmeasures performance in dollar terms, rather than as a\npercentage return. Thus, a company will sometimes use the\nresidual income method so that it can concentrate on\nmaximizing the amount of income rather than a percentage\nROI. The residual income is calculated by deducting the cost\nof capital (Assets × Required rate of return) from the operating\nincome.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 1,
+    "page": 963,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "The balanced scorecard provides an action plan for achieving\ncompetitive success by focusing management attention on\ncritical success factors. Which one of the following is not one\nof the perspectives on the business into which critical success\nfactors are commonly grouped in the balanced scorecard?",
+    "choices": [
+      "Competitor business strategies.",
+      "Financial performance.",
+      "Internal business processes.",
+      "Employee innovation and learning."
+    ],
+    "answerIndex": 0,
+    "explanation": "A typical balanced scorecard classifies critical success factors\nand measures into one of four perspectives on the business:\nfinancial, customer satisfaction, internal business processes,\nand learning and growth.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 2,
+    "page": 964,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "Using the balanced scorecard approach, an organization\nevaluates managerial performance based on",
+    "choices": [
+      "A single ultimate measure of operating results, such as\nresidual income.",
+      "Multiple financial and nonfinancial measures.",
+      "Multiple nonfinancial measures only.",
+      "Multiple financial measures only."
+    ],
+    "answerIndex": 1,
+    "explanation": "The trend in managerial performance evaluation is the\nbalanced scorecard approach. Multiple measures of\nperformance permit a determination as to whether a manager\nis achieving certain objectives at the expense of others that\nmay be equally or more important. These measures may be\nfinancial or nonfinancial and usually include items with four\nperspectives: (1) financial; (2) customer satisfaction;\n(3) internal business processes; and (4) learning and growth.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 3,
+    "page": 964,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "On a balanced scorecard, which is more of an internal process\nmeasure than an external-based measure?",
+    "choices": [
+      "Cycle time.",
+      "Profitability.",
+      "Customer satisfaction.",
+      "Market share."
+    ],
+    "answerIndex": 0,
+    "explanation": "Cycle time is the manufacturing time to complete an order.\nThus, cycle time is strictly related to internal processes.\nProfitability is a combination of internal and external\nconsiderations. Customer satisfaction and market share are\nrelated to how customers perceive a product and how\ncompetitors react.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 4,
+    "page": 965,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "Consider the following categories of performance measures.\nI.    Profitability measures.\nII.    Customer-satisfaction measures.\nIII.    Efficiency, quality, and time measures.\nIV.     Innovation measures.\nA cruise line operates on a national scale in a very competitive\nmarketplace. In view of this information, which measures\nshould the company use in the evaluation of its managers?",
+    "choices": [
+      "I only.",
+      "I and II.",
+      "II and III.",
+      "I, II, III, and IV."
+    ],
+    "answerIndex": 3,
+    "explanation": "The four categories of performance measures listed embody\nthe four perspectives on the business contained in the classic\nbalanced scorecard. Any company can benefit from\ngenerating performance measures in all four perspectives.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 5,
+    "page": 966,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "Which one of the following statements about a balanced\nscorecard is incorrect?",
+    "choices": [
+      "It seeks to address the problems associated with traditional\nfinancial measures used to assess performance.",
+      "The notion of value chain analysis plays a major role in the\ndrawing up of a balanced scorecard.",
+      "It relies on the perception of the users with regard to service\nprovided.",
+      "It is directly derived from the scientific management theories."
+    ],
+    "answerIndex": 3,
+    "explanation": "Subjective measures, such as customer satisfaction, are\nimprecise. A high level of management judgment and intuition\nare required to successfully implement a balanced scorecard.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 6,
+    "page": 967,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "Two examples of the learning and innovation measures of a\nbalanced scorecard are",
+    "choices": [
+      "Employee promotion rate and number of environmental\nincidents.",
+      "Employee training hours and product defect rates.",
+      "Number of employee suggestions and finished products per\nday per employee.",
+      "Employee turnover rate and number of internal process\nimprovements."
+    ],
+    "answerIndex": 3,
+    "explanation": "Learning and growth (innovation) critical success factors may\ninclude the development of new products, promptness of their\nintroduction, human resource development, morale, and the\ncompetence of the work force. Both employee turnover rates\nand the number of internal process improvements are\nappropriate measures.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 7,
+    "page": 967,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "Which one of the following statements best describes the\ndefinition of critical success factors?",
+    "choices": [
+      "Financial measures that track a company’s competitive\nperformance.",
+      "Financial and nonfinancial aspects of performance that are\nessential to have a competitive advantage.",
+      "The key nonfinancial performance indicators on a balanced\nscorecard.",
+      "The aspects of a business that are focused on measuring key\ncosts."
+    ],
+    "answerIndex": 1,
+    "explanation": "Critical success factors are specific, measurable financial and\nnonfinancial elements of a firm’s performance that are vital to\nits competitive advantage.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 8,
+    "page": 968,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "A sign of the successful implementation of a balanced\nscorecard is the presence of cause-and-effect relationship. An\nexample of this success for a hotel is meeting the target of",
+    "choices": [
+      "Decreasing a customer’s check-in time, which causes an\nincrease in the number of implemented employee suggestions.",
+      "Increasing employee training hours, which causes employee\ncompensation to increase.",
+      "Increasing profit, which causes an increase in employee job\nsatisfaction ratings.",
+      "Receiving more 5-star ratings from customers, which causes\nan increase in profit."
+    ],
+    "answerIndex": 3,
+    "explanation": "The balanced scorecard is an accounting report that connects\nthe firm’s critical success factors to measurements of its\nperformance. Key performance indicators are specific,\nmeasurable financial and nonfinancial elements of a firm’s\nperformance that are vital to its competitive advantage. A\ntypical balanced scorecard has four perspectives: financial,\ncustomer satisfaction, internal business processes, and\nlearning and growth.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 9,
+    "page": 969,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "An example of an item that would fall under the customer\nperspective on the balanced scorecard of an airline is",
+    "choices": [
+      "Customer complaints will decrease by 10%.",
+      "Customers will have to wait no longer than 15 minutes to\ncheck their bags.",
+      "90% of the flights will arrive on time.",
+      "Three new in-flight meals will replace existing offerings that are\nunpopular with customers."
+    ],
+    "answerIndex": 0,
+    "explanation": "The customer perspective defines the value proposition that\nthe organization will use in order to satisfy customers and\ngenerate more sales to the targeted customer segments. The\nmeasures that are selected for the customer perspective\nshould measure customer satisfaction. A decrease in\ncustomer complaints indicates that customer satisfaction is\nincreasing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 10,
+    "page": 970,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "Which of the following statements is false with respect to best\npractices analysis?",
+    "choices": [
+      "The balanced scorecard facilitates best practice analysis.",
+      "Best practice analysis is a way or method of accomplishing a\nbusiness function or process that is considered to be superior\nto all other known methods.",
+      "Best practices analysis assumes that a lesson learned from\none area of a business can be passed on to another area of\nthe business or between businesses.",
+      "The concept of benchmarking is incompatible with best\npractices analysis."
+    ],
+    "answerIndex": 3,
+    "explanation": "Best practice analysis is a method of accomplishing a\nbusiness function or process that is considered to be superior\nto all other known methods. The balanced scorecard facilitates\nbest practice analysis. A lesson learned from one area of a\nbusiness can be passed on to another area of the business or\nbetween businesses. The whole concept of benchmarking is\naimed at identifying best practices.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 11,
+    "page": 971,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "In strategic planning, PEST analysis is best described as\nevaluating which of the following factors?",
+    "choices": [
+      "Political, economic, social, and technological.",
+      "People, environment, sustainability, and tactics.",
+      "Process, efficiency, scale, and timing.",
+      "Products, employees, strengths, and threats."
+    ],
+    "answerIndex": 0,
+    "explanation": "PEST analysis is used to consider external environmental\nfactors, such as political, economic, social, and technological\nfactors, during the strategic planning process.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 4,
+    "number": 12,
+    "page": 971,
+    "topicId": "su16-balanced-scorecard",
+    "stem": "On a balanced scorecard, each of the following is an example\nof the customer perspective measure except",
+    "choices": [
+      "Economic value-added.",
+      "Customer retention.",
+      "Time taken to fulfill orders.",
+      "Number of customer complaints."
+    ],
+    "answerIndex": 0,
+    "explanation": "Economic value-added is an example of a financial measure,\nnot a customer perspective. The customer perspective\nincludes such things as market share, lead time, market\nresearch results, customer retention, and number of customer\ncomplaints.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 1,
+    "page": 974,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Parkside, Inc., has         The actual costs per unit used by the\nseveral divisions that      Entertainment Division are\noperate as decentralized presented below.\nprofit centers. Parkside’s                           Plastic     Video\nEntertainment Division                            Components Cards\nmanufactures video          Direct material         $1.25        $2.40\narcade equipment using Direct labor                  2.35         3.00\nthe products of two of\nVariable overhead        1.00         1.50\nParkside’s other\ndivisions. The Plastics     Fixed overhead             .40        2.25\nDivision manufactures          Total cost           $5.00        $9.15\nplastic components, one The Plastics Division sells its commercial\ntype that is made           products at full cost plus a 25% markup\nexclusively for the         and believes the proprietary plastic\nEntertainment Division,     component made for the Entertainment\nwhile other less complex Division would sell for $6.25 per unit on\n\n\ncomponents are sold to     the open market. The market price of the\noutside markets. The       video card used by the Entertainment\nproducts of the Video      Division is $10.98 per unit.\nCards Division are sold in\na competitive market;\nhowever, one video card\nmodel is also used by the\nEntertainment Division.\nA per-unit transfer price from the Video Cards Division to the\nEntertainment Division at full cost, $9.15, would",
+    "choices": [
+      "Allow evaluation of both divisions on a competitive basis.",
+      "Satisfy the Video Cards Division’s profit desire by allowing\nrecovery of opportunity costs.",
+      "Provide no profit incentive for the Video Cards Division to\ncontrol or reduce costs.",
+      "Encourage the Entertainment Division to purchase video cards\nfrom an outside source."
+    ],
+    "answerIndex": 2,
+    "explanation": "The use of full (absorption) cost ensures that the selling\ndivision will not incur a loss and provides more incentive to the\nbuying division to buy internally than does use of market price.\nHowever, there is no motivation for the seller to control\nproduction cost since all costs can be passed along to the\nbuying division.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 2,
+    "page": 975,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Parkside, Inc., has         The actual costs per unit used by the\nseveral divisions that      Entertainment Division are\noperate as decentralized presented below.\nprofit centers. Parkside’s                           Plastic     Video\nEntertainment Division                            Components Cards\nmanufactures video          Direct material         $1.25        $2.40\narcade equipment using Direct labor                  2.35         3.00\nthe products of two of\nVariable overhead        1.00         1.50\nParkside’s other\ndivisions. The Plastics     Fixed overhead             .40        2.25\nDivision manufactures          Total cost           $5.00        $9.15\nplastic components, one The Plastics Division sells its commercial\ntype that is made           products at full cost plus a 25% markup\nexclusively for the         and believes the proprietary plastic\nEntertainment Division,     component made for the Entertainment\nwhile other less complex Division would sell for $6.25 per unit on\n\n\ncomponents are sold to     the open market. The market price of the\noutside markets. The       video card used by the Entertainment\nproducts of the Video      Division is $10.98 per unit.\nCards Division are sold in\na competitive market;\nhowever, one video card\nmodel is also used by the\nEntertainment Division.\nAssume that the Entertainment Division is able to purchase a\nlarge quantity of video cards from an outside source at $8.70\nper unit. The Video Cards Division, having excess capacity,\nagrees to lower its transfer price to $8.70 per unit. This action\nwould",
+    "choices": [
+      "Optimize the profit goals of the Entertainment Division while\nsubverting the profit goals of Parkside, Inc.",
+      "Allow evaluation of both divisions on the same basis.",
+      "Subvert the profit goals of the Video Cards Division while\noptimizing the profit goals of the Entertainment Division.",
+      "Optimize the overall profit goals of Parkside, Inc."
+    ],
+    "answerIndex": 3,
+    "explanation": "If the selling division has excess capacity, it should lower its\ntransfer price to match the outside offer. This decision\noptimizes the profits of the company as a whole by allowing\nfor use of capacity that would otherwise be idle.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 3,
+    "page": 976,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Parkside, Inc., has         The actual costs per unit used by the\nseveral divisions that      Entertainment Division are\noperate as decentralized presented below.\nprofit centers. Parkside’s                           Plastic     Video\nEntertainment Division                            Components Cards\nmanufactures video          Direct material         $1.25        $2.40\narcade equipment using Direct labor                  2.35         3.00\nthe products of two of\nVariable overhead        1.00         1.50\nParkside’s other\ndivisions. The Plastics     Fixed overhead             .40        2.25\nDivision manufactures          Total cost           $5.00        $9.15\nplastic components, one The Plastics Division sells its commercial\ntype that is made           products at full cost plus a 25% markup\nexclusively for the         and believes the proprietary plastic\nEntertainment Division,     component made for the Entertainment\nwhile other less complex Division would sell for $6.25 per unit on\n\n\ncomponents are sold to     the open market. The market price of the\noutside markets. The       video card used by the Entertainment\nproducts of the Video      Division is $10.98 per unit.\nCards Division are sold in\na competitive market;\nhowever, one video card\nmodel is also used by the\nEntertainment Division.\nAssume that the Plastics Division has excess capacity and it\nhas negotiated a transfer price of $5.60 per plastic component\nwith the Entertainment Division. This price will",
+    "choices": [
+      "Cause the Plastics Division to reduce the number of\ncommercial plastic components it manufactures.",
+      "Motivate both divisions as estimated profits are shared.",
+      "Encourage the Entertainment Division to seek an outside\nsource for plastic components.",
+      "Demotivate the Plastics Division causing mediocre\nperformance."
+    ],
+    "answerIndex": 1,
+    "explanation": "Given that the seller has excess capacity, transfers within the\ncompany entail no opportunity cost. Accordingly, the transfer\nat the negotiated price will improve the performance measures\nof the selling division. Purchasing internally at below the\nmarket price also benefits the buying division, so the\nmotivational purpose of transfer pricing is achieved. The goal\ncongruence purpose is also achieved because the internal\ntransaction benefits the company.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 4,
+    "page": 976,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A limitation of transfer prices based on actual cost is that they",
+    "choices": [
+      "Charge inefficiencies to the department that is transferring the\ngoods.",
+      "Can lead to suboptimal decisions for the company as a whole.",
+      "Must be adjusted by some markup.",
+      "Lack clarity and administrative convenience."
+    ],
+    "answerIndex": 1,
+    "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. Setting the transfer price based on actual costs\nrather than standard costs would give the selling division little\nincentive to control costs.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 5,
+    "page": 977,
+    "topicId": "su16-transfer-pricing",
+    "stem": "The most fundamental responsibility center affected by the\nuse of market-based transfer prices is a(n)",
+    "choices": [
+      "Production center.",
+      "Investment center.",
+      "Cost center.",
+      "Profit center."
+    ],
+    "answerIndex": 3,
+    "explanation": "Transfer prices are often used by profit centers and\ninvestment centers. Profit centers are the more fundamental of\nthese two centers because investment centers are responsible\nnot only for revenues and costs but also for invested capital.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 6,
+    "page": 978,
+    "topicId": "su16-transfer-pricing",
+    "stem": "An appropriate transfer price between two divisions of a\nmanufacturer can be determined from the following data:\nFabricating Division:\nMarket price of subassembly                       $50\nVariable cost of subassembly                      $20\nExcess capacity (in units)                      1,000\nAssembling Division:\nNumber of units needed                            900\nWhat is the natural bargaining range for the two divisions?",
+    "choices": [
+      "Between $20 and $50.",
+      "Between $50 and $70.",
+      "Any amount less than $50.",
+      "$50 is the only acceptable price."
+    ],
+    "answerIndex": 0,
+    "explanation": "An ideal transfer price should permit each division to operate\nindependently and achieve its goals while functioning in the\noverall best interest of the firm. The production capacity of the\nselling division is always a consideration in setting transfer\nprice. If Fabricating had no excess capacity, it would charge\nAssembling the regular market price. However, since\nFabricating has excess capacity of 1,000 units, negotiation is\npossible because any transfer price greater than the variable\ncost of $20 would absorb some of the fixed costs and result in\nincreased divisional profits. Thus, any price between $20 and\n$50 is acceptable to Fabricating. Any price under $50 is\nacceptable to Assembling because that is the price that would\nbe paid to an outside supplier.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 7,
+    "page": 979,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A proposed transfer price may be based upon the full-cost\nprice. Full-cost price is the price",
+    "choices": [
+      "On the open market.",
+      "Representing the cash outflows of the supplying division plus\nthe contribution to the supplying division from an outside sale.",
+      "Usually set by an absorption-costing calculation.",
+      "Set by charging for variable costs plus a lump sum or an\nadditional markup, but less than full markup."
+    ],
+    "answerIndex": 2,
+    "explanation": "Full-cost price is the price usually set by an absorption-costing\ncalculation and includes materials, labor, and a full allocation\nof manufacturing O/H. This full-cost price may lead to\ndysfunctional behavior by the supplying and receiving\ndivisions, e.g., purchasing from outside sources at a slightly\nlower price that is substantially above the variable costs of\ninternal production.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 8,
+    "page": 980,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Division A of a company is currently operating at 50%\ncapacity. It produces a single product and sells all its\nproduction to outside customers for $13 per unit. Variable\ncosts are $7 per unit, and fixed costs are $6 per unit at the\ncurrent production level. Division B, which currently purchases\nthis product from an outside supplier for $12 per unit, would\nlike to purchase the product from Division A. Division A will\noperate at 80% capacity to meet outside customers’ and\nDivision B’s demand. What is the minimum price that Division\nA should charge Division B for this product?",
+    "choices": [
+      "$7.00 per unit.",
+      "$9.60 per unit.",
+      "$12.00 per unit.",
+      "$13.00 per unit."
+    ],
+    "answerIndex": 0,
+    "explanation": "From the seller’s perspective, the price should reflect at least\nits incremental cash outflow (outlay cost) plus the contribution\nfrom an outside sale (opportunity cost). Because A has idle\ncapacity, the opportunity cost is $0. Thus, the minimum price\nDivision A should charge Division B is $7.00.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 9,
+    "page": 981,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Which of the following is not true about international transfer\nprices for a multinational firm?",
+    "choices": [
+      "Allows firms to attempt to minimize worldwide taxes.",
+      "Allows the firm to evaluate each division.",
+      "Provides each division with a profit-making orientation.",
+      "Allows firms to correctly price products in each country in\nwhich it operates."
+    ],
+    "answerIndex": 3,
+    "explanation": "The calculation of transfer prices in the international arena\nmust be systematic. A scheme for calculating transfer prices\nfor a firm may correctly price the firm’s product in Country A\nbut not in Country B. The product may be overpriced in\nCountry B, causing sales to be lower than anticipated; or, the\nproduct may be underpriced in Country B, and the authorities\nmay allege that the firm is dumping its product there.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 10,
+    "page": 982,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Which one of the following is an incorrect description of\ntransfer pricing?",
+    "choices": [
+      "It measures the value of goods or services furnished by a profit\ncenter to other responsibility centers within a company.",
+      "If a market price exists, this price may be used as a transfer\nprice.",
+      "It measures exchanges between a company and external\ncustomers.",
+      "If no market price exists, the transfer price may be based on\ncost."
+    ],
+    "answerIndex": 2,
+    "explanation": "Transfer prices are the amounts charged by one segment of\nan organization for goods and services it provides to another\nsegment of the same organization. They are not for\nexchanges with external customers.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 11,
+    "page": 983,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Manhattan Corporation has several divisions that\noperate as decentralized profit centers. At the present time, the\nFabrication Division has excess capacity of 5,000 units with respect to\nthe UT-371 circuit board, a popular item in many digital applications.\nInformation about the circuit board follows.\nMarket price                                          $48\nVariable selling/distribution costs on external sales 5\nVariable manufacturing cost                            21\nFixed manufacturing cost                               10\nManhattan’s Electronic Assembly Division wants to purchase 4,500\ncircuit boards either internally, or else use a similar board in the\nmarketplace that sells for $46. The Electronic Assembly Division’s\nmanagement feels that if the first alternative is pursued, a price\nconcession is justified, given that both divisions are part of the same\nfirm.\nTo optimize the overall goals of Manhattan, the minimum price\nto be charged for the board from the Fabrication Division to the\nElectronic Assembly Division should be",
+    "choices": [
+      "$21",
+      "$26",
+      "$31",
+      "$46"
+    ],
+    "answerIndex": 0,
+    "explanation": "For a manufacturing division with excess capacity, variable\ncosts are the only costs that the division can demand be\ncovered by the purchasing division.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 12,
+    "page": 984,
+    "topicId": "su16-transfer-pricing",
+    "stem": "With respect to a firm’s transfer pricing policy, an advantage of\nusing a dual pricing arrangement is that it",
+    "choices": [
+      "Provides an incentive for the supplying subunit to control\ncosts.",
+      "Exposes the supplying subunit to the discipline of market\nprices.",
+      "Promotes goal congruence between the supplying and buying\nsubunits of the firm.",
+      "Simplifies tax calculations when the buying and supplying\nsubunits are taxed in different jurisdictions."
+    ],
+    "answerIndex": 2,
+    "explanation": "Dual pricing promotes goal congruence because both units\ninvolved in the transfer get the price they find most\nadvantageous.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 13,
+    "page": 984,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Multinational transfer prices are sometimes influenced by\nrestrictions that some countries place on the repatriation of\nprofits to the parent firm. Companies can minimize the effect of\nsuch restrictions by",
+    "choices": [
+      "Decreasing the prices of goods transferred into divisions in\nthese countries.",
+      "Increasing the prices of goods transferred into divisions in\nthese countries.",
+      "Charging less than the price that would be charged by an\nunrelated third party for goods transferred into divisions in\nthese countries.",
+      "Keeping prices uniform throughout all domestic and foreign\nunits within the company."
+    ],
+    "answerIndex": 1,
+    "explanation": "By increasing the prices of goods transferred into divisions in\nthese countries, their profits are decreased. As a result, there\nare lower profits in this country, which would be subject to\nrepatriation issues.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 14,
+    "page": 985,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Division A produces a product that can be sold to outside\ncustomers or sold to Division B for further processing. If the\nperformance of managers is evaluated based on division\nprofitability, what transfer pricing method will the manager of\nDivision A request?",
+    "choices": [
+      "Hybrid transfer pricing.",
+      "Cost-based transfer pricing.",
+      "Market-based transfer pricing.",
+      "Standard transfer pricing."
+    ],
+    "answerIndex": 2,
+    "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. The principal challenge is to determine a price that\nmotivates both the selling and the buying manager to pursue\norganizational goal congruence. In the case of a selling\ndivision, selecting a transfer price based on the quoted\nexternal price (market) would be preferred by Division A.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 15,
+    "page": 986,
+    "topicId": "su16-transfer-pricing",
+    "stem": "The price that one division of a company charges another\ndivision for goods or services provided is called the",
+    "choices": [
+      "Market price.",
+      "Transfer price.",
+      "Outlay price.",
+      "Distress price."
+    ],
+    "answerIndex": 1,
+    "explanation": "A transfer price is the price charged by one segment of an\norganization for a product or service supplied to another\nsegment of the same organization.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 16,
+    "page": 987,
+    "topicId": "su16-transfer-pricing",
+    "stem": "In theory, the optimal method for establishing a transfer price\nis",
+    "choices": [
+      "Flexible budget cost.",
+      "Incremental cost.",
+      "Budgeted cost with or without a markup.",
+      "Market price."
+    ],
+    "answerIndex": 3,
+    "explanation": "Transfer prices should promote congruence of subunit goals\nwith those of the organization, subunit autonomy, and\nmanagerial effort. Although no rule exists for determining the\ntransfer price that meets these criteria in all situations, a\nstarting point is to calculate the sum of the additional outlay\ncosts and the opportunity cost to the supplier. Given no idle\ncapacity and a competitive external market (all goods\ntransferred internally can be sold externally), the sum of the\noutlay and opportunity costs will be the market price.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 17,
+    "page": 988,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A carpet manufacturer maintains a retail division consisting of\nstores stocking its brand and other brands and a\nmanufacturing division that makes carpets and pads. An\noutside market exists for carpet padding material in which all\npadding produced can be sold. The proper transfer price for\npadding transferred from the manufacturing division to the\nretail division is",
+    "choices": [
+      "Variable manufacturing division production cost.",
+      "Variable manufacturing division production cost plus allocated\nfixed factory overhead.",
+      "Variable manufacturing division production cost plus variable\nselling and administrative cost.",
+      "The market price at which the retail division could purchase\npadding."
+    ],
+    "answerIndex": 3,
+    "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. The market price should be used as the transfer\nprice to avoid waste and maximize efficiency in a competitive\neconomy (an outside market in which all padding produced\ncan be sold). This price also measures the product’s\nprofitability and the division managers’ performance in a\ncompetitive environment.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 18,
+    "page": 989,
+    "topicId": "su16-transfer-pricing",
+    "stem": "One department of an organization, Final Assembly, is\npurchasing subcomponents from another department,\nMaterials Fabrication. The price that will be charged to Final\nAssembly by Materials Fabrication is to be determined.\nOutside market prices for the subcomponents are available.\nWhich of the following is the most correct statement regarding\na market-based transfer price?",
+    "choices": [
+      "Marginal production cost transfer prices provide incentives to\nuse otherwise idle capacity.",
+      "Market transfer prices provide an incentive to use otherwise\nidle capacity.",
+      "Overall long term competitiveness is enhanced with a market-\nbased transfer price.",
+      "Corporate politics is more of a factor in a market-based\ntransfer price than with other methods."
+    ],
+    "answerIndex": 2,
+    "explanation": "A transfer price is the price charged in an intercompany\ntransaction. Market-based prices provide market discipline\nbecause efficient internal suppliers will tend to prosper,\nthereby enhancing the overall long-term competitiveness of\nthe firm.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 19,
+    "page": 990,
+    "topicId": "su16-transfer-pricing",
+    "stem": "The Eastern division sells goods internally to the Western\ndivision of the same company. The quoted external price in\nindustry publications from a supplier near Eastern is $200 per\nton plus transportation. It costs $20 per ton to transport the\ngoods to Western. Eastern’s actual market cost per ton to buy\nthe direct materials to make the transferred product is $100.\nActual per ton direct labor is $50. Other actual costs of storage\nand handling are $40. The company president selects a $220\ntransfer price. This is an example of",
+    "choices": [
+      "Market-based transfer pricing.",
+      "Cost-based transfer pricing.",
+      "Negotiated transfer pricing.",
+      "Cost plus 20% transfer pricing."
+    ],
+    "answerIndex": 0,
+    "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. Because the $220 transfer price selected is based\non the quoted external price (market), it is an example of\nmarket-based transfer pricing.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 20,
+    "page": 991,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Companies with decentralized, autonomous divisions that sell\ntheir goods and services internally to other divisions of the\ncompany as well as externally in competitive markets have to\nestablish transfer prices for the goods and services transferred\ninternally among divisions. Generally, upper management has\nestablished such operating criteria for managing the divisions\nas goal congruence, subunit autonomy, and a sustained high\nlevel of management effort. An approach consistent with the\nabove criteria would be to set the transfer price equal to the",
+    "choices": [
+      "Additional outlay cost per unit incurred to the point of transfer\nplus the opportunity cost per unit to the supplying division.",
+      "Additional outlay cost per unit incurred to the point of transfer\nplus the opportunity cost per unit to the buying division.",
+      "Full cost per unit incurred to the point of transfer plus a\npercentage markup on the full cost per unit.",
+      "Variable cost per unit incurred to the point of transfer."
+    ],
+    "answerIndex": 0,
+    "explanation": "The outlay costs represent cash outflows related to the\nproduction and transfer of goods/services. The opportunity\ncosts are the maximum contribution forgone by the supplying\ndivision if the goods/services are sold internally. An\nopportunity cost will exist if the supplier has no idle capacity\nand an external market exists. Thus, this guideline should\npromote goal congruence (actions of the divisional manager\nbenefit the company and the division), a sustained high level\nof managerial effort (exertion toward a goal), and subunit\nautonomy (freedom in decision making). The guideline will\nvary depending on whether an external market exists and\nwhether the supplier has idle capacity.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 21,
+    "page": 993,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Manhattan Corporation has several divisions that\noperate as decentralized profit centers. At the present time, the\nFabrication Division has excess capacity of 5,000 units with respect to\nthe UT-371 circuit board, a popular item in many digital applications.\nInformation about the circuit board follows.\nMarket price                                         $48\nVariable selling/distribution costs on external sales 5\nVariable manufacturing cost                            21\nFixed manufacturing cost                               10\nManhattan’s Electronic Assembly Division wants to purchase 4,500\ncircuit boards either internally, or else use a similar board in the\nmarketplace that sells for $46. The Electronic Assembly Division’s\nmanagement feels that if the first alternative is pursued, a price\nconcession is justified, given that both divisions are part of the same\nfirm.\nThe best process for Manhattan to determine the price\nultimately charged by the Fabrication Division to the Assembly\nDivision for the circuit board is to",
+    "choices": [
+      "Establish the price by top management.",
+      "Establish the price by an arbitration committee.",
+      "Establish the price through negotiations between the\nFabrication’s and Electronic Assembly’s division management.",
+      "Set the price equal to the price that would be charged if the\nFabrication Department had no excess capacity."
+    ],
+    "answerIndex": 2,
+    "explanation": "The divisions involved in the transfer are the most motivated\nand informed parties for determining a fair transfer price. The\noutcome of this negotiation process will necessarily be the\noptimum for the organization as a whole.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 22,
+    "page": 994,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A manufacturer has several divisions and evaluates\nperformance using segment income. Since sales include\ntransfers to other divisions, the manufacturer has established a\nprice for internal sales as cost plus 10%. Red Division has\nrequested 10,000 units of Green Division’s product. Green\nDivision is selling its product externally at a 60% markup over\ncost. The corporate policy will encourage the Green Division to",
+    "choices": [
+      "Transfer the product to the Red Division because all costs are\nbeing covered and the division will earn a 10% profit.",
+      "Reject the sale to the Red Division because it does not provide\nthe same markup as external sales.",
+      "Accept the sale to the Red Division if it is operating at full\ncapacity and the sale will contribute to fixed costs.",
+      "Transfer the product to the Red Division if it does not require\nthe Green Division to give up any external sales."
+    ],
+    "answerIndex": 3,
+    "explanation": "External sales are clearly more profitable to the company\nbecause of the large markup the Green Division charges\noutside customers. Thus, the modest profit made on product\ntransferred to the Red Division is acceptable only if no outside\n(i.e., more profitable) sales are given up.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 23,
+    "page": 995,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A company uses segment reporting for all of its decentralized\ndivisions. It has several products that are transferred from one\ndivision to other divisions. The company wants to motivate the\nmanager of the selling division to produce efficiently. Assuming\nthe following methods are available, the optimal transfer\npricing method should be a",
+    "choices": [
+      "Cost-based transfer price that uses actual amounts.",
+      "Cost-based transfer price that uses budgeted amounts.",
+      "Variable cost-based transfer price that uses actual amounts.",
+      "Market-based transfer price."
+    ],
+    "answerIndex": 3,
+    "explanation": "Requiring the manufacturing division to charge a market-\nbased transfer price forces the division to think competitively\nand keep costs under control.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 24,
+    "page": 995,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A Plastics Division, a profit center, sells its products to external\ncustomers as well as to other internal profit centers. Which one\nof the following circumstances would justify the Plastics\nDivision selling a product internally to another profit center at a\nprice that is below the market-based transfer price?",
+    "choices": [
+      "The buying unit has excess capacity.",
+      "The selling unit is operating at full capacity.",
+      "Routine sales commissions and collection costs would be\navoided.",
+      "The profit centers’ managers are evaluated on the basis of unit\noperating income."
+    ],
+    "answerIndex": 2,
+    "explanation": "Sales commissions and collection costs on accounts\nreceivable are inevitable results of selling to outside\ncustomers. Without having to factor in these costs, a selling\ndivision has the ability to charge a lower price to an internal\ndivision.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 25,
+    "page": 996,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Advantages of the full-cost method for determining transfer\nprices include all of the following except that it",
+    "choices": [
+      "Leads to goal congruence among departments.",
+      "Leads to better external pricing based on cost behaviors.",
+      "Is the least costly method to administer.",
+      "Represents relevant costs for long-run decisions."
+    ],
+    "answerIndex": 0,
+    "explanation": "The full-cost method does not lead to goal congruence among\ndepartments. The full-cost method does benefit both\ndepartments but does not align their goals. The selling\ndepartment would have no special incentive to sell in-house.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 26,
+    "page": 997,
+    "topicId": "su16-transfer-pricing",
+    "stem": "An advantage of using a cost-based transfer price is that it",
+    "choices": [
+      "Is useful for evaluating subunit performance.",
+      "Preserves subunit autonomy.",
+      "Achieves goal congruence.",
+      "Is easy to implement."
+    ],
+    "answerIndex": 3,
+    "explanation": "A cost-based transfer price is easy to implement since the\ncosts are already calculated for in the accounting records.\nThis method would not need negotiations or compromises on\nwhat the price should be set at since it is already determined\nby the full cost of materials, labor, and manufacturing\noverhead.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 27,
+    "page": 997,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A company operates under a decentralized structure. The\ncompany’s Western Division plans to purchase a needed\ncomponent from the Eastern Division that is operating at\ncapacity. Eastern incurs relevant costs of $4 to manufacture\nthe component and $1 to ship each unit, and it can sell the unit\nexternally at a price of $8 per unit. The Western Division incurs\ncosts of $9 per unit and sells the finished goods for $18 each.\nAccording to the general guideline for transfer-pricing\nsituations, the minimum transfer price per unit should be",
+    "choices": [
+      "The Eastern Division’s manufacturing cost of $4.",
+      "The Eastern Division’s manufacturing and shipping costs of\n$5.",
+      "$7 to equally divide profits between the two divisions.",
+      "The external selling price of $8."
+    ],
+    "answerIndex": 3,
+    "explanation": "Eastern Division is operating at capacity and selling its\nproducts at the full market price to outsiders. Eastern\nDivision’s profitable work should not be abandoned to produce\nfor Western Division. The minimum price that a selling division\nis willing to accept is the sum of the incremental cost of\nproducing the unit so far plus the opportunity cost of selling\nthe unit internally.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 28,
+    "page": 999,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A company’s senior management has determined that the\nactual full cost will be used to determine the transfer price for\ngoods sold from one division to another division. The selling\ndivision has excess capacity and can sell goods to other\ndivisions or to outside customers at a higher price. An\nadvantage of this transfer pricing model is that it",
+    "choices": [
+      "Achieves goal congruence within the company.",
+      "Is effective for performance evaluation.",
+      "Motivates management to achieve cost-effectiveness.",
+      "Preserves each division’s autonomy."
+    ],
+    "answerIndex": 0,
+    "explanation": "Transfer prices are the amounts charged by one segment of\nan organization for goods and services it provides to another\nsegment of the same organization. The principal challenge is\ndetermining a price that motivates both the selling and the\nbuying manager to pursue organizational goal congruence.\nThe seller is motivated to sell internally because some of the\nfixed costs will be covered. The buyer is motivated to buy\ninternally because the price is lower than buying from an\noutsider.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 29,
+    "page": 1000,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A corporation maintains a manufacturing division that\nmanufactures printed circuit boards and an assembly division\nthat produces final products. Currently, the manufacturing\ndivision has sufficient capacity to manufacture an additional\n5,000 circuit boards. An external market exists for circuit\nboards. The market price for one circuit board is $80 and the\ncost to sell is $10. The fixed manufacturing cost per circuit\nboard is $15 and the unit variable cost is $50. The assembly\ndivision plans to purchase 4,500 circuit boards. Management\nof the assembly division thinks that it can purchase from the\nmanufacturing division at a lower price since both divisions are\nunder common control of the corporation. What is the\nminimum transfer price between the manufacturing division\nand the assembly division?",
+    "choices": [
+      "$50",
+      "$65",
+      "$70",
+      "$80"
+    ],
+    "answerIndex": 0,
+    "explanation": "By allowing the buyer to purchase at the selling division’s\nvariable cost, unused production capacity will be utilized. This\nmethod should only be used when the selling division has\nexcess capacity. The minimum transfer price between the\nmanufacturing division and the assembly division is the unit\nvariable cost of $50.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 30,
+    "page": 1001,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A company has two operating segments. Segment A of the\ncompany has been operating at 70% capacity for the last two\nyears. It produces a single product, which it sells to external\ncustomers for $17 per unit. Variable costs to produce one unit\nare $11 and the allocated fixed overhead costs are $3 per unit.\nSegment B purchases the same product produced by\nSegment A from an outside vendor for $15. Management is\nconsidering obtaining the product from Segment A. If Segment\nA begins to manufacture enough product to sell to its external\ncustomers, as well as to Segment B, Segment A will be\noperating at 94% capacity. What is the minimum price that\nSegment A should charge Segment B?",
+    "choices": [
+      "$11 per unit.",
+      "$14 per unit.",
+      "$15 per unit.",
+      "$17 per unit."
+    ],
+    "answerIndex": 0,
+    "explanation": "To ensure overall goal congruence and maximize company\nprofitability, the transfer price should be at least equal to the\nvariable cost of production. This assumes that Segment A has\nexcess capacity, which it does.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 31,
+    "page": 1002,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A proposed transfer price may be a cost-plus price. Variable-\ncost-plus price is the price",
+    "choices": [
+      "On the open market.",
+      "Representing the cash outflows of the supplying division plus\nthe contribution to the supplying division from an outside sale.",
+      "Usually set by an absorption-costing calculation.",
+      "Set by charging for variable costs plus a lump sum or an\nadditional markup, but less than full markup."
+    ],
+    "answerIndex": 3,
+    "explanation": "The variable-cost-plus price is the price set by charging for\nvariable cost plus either a lump sum or an additional markup\nbut less than the full markup price. This permits top\nmanagement to enter the decision process and dictate that a\ndivision transfer at variable cost plus some appropriate\namount.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 32,
+    "page": 1003,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A company uses negotiated transfer prices between divisions.\nAll of the following are advantages for this type of transfer\npricing model except that negotiated transfer prices",
+    "choices": [
+      "Achieve goal congruence.",
+      "Are simple and quick to implement.",
+      "Are useful for evaluating individual division performance.",
+      "Allow divisions to make their own decisions."
+    ],
+    "answerIndex": 1,
+    "explanation": "Due to the nature of negotiations, both parties involved in the\ntransfer must discuss options and come to an agreement\nabout the appropriate transfer price. Thus, negotiated transfer\nprices take longer to implement than most other transfer\nprices.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 33,
+    "page": 1003,
+    "topicId": "su16-transfer-pricing",
+    "stem": "Natural Lumber Company has two divisions. The Forestry\nDivision cuts down trees and sells them to the Sawing\nDivision. The Sawing Division cuts the lumber into boards that\nare sold to external customers for further manufacturing into\nbuilding products. The costs and market prices for the two\ndivisions are listed below. Each tree on average can be made\ninto 25 boards.\nDivision                                              Amounts\nForestry Division\nVariable cost per tree                                $400\nFixed cost per tree                                   $800\nDesirable full cost markup %                           8%\nSawing Division\nVariable cost per board                                $10\nFixed cost per board                                   $30\nMarket price per tree supplied (external supplier) $1,300\nMarket price per board sold (external customer) $100\nMarket prices can fluctuate slightly and the market is\nmoderately competitive. All of the trees harvested by the\nForestry Division can be sold to an external customer by at\nleast the full cost. What is the best range of negotiated\ntransfer prices for each tree from the Forestry Division to the\nSawing Division assuming each division has the incentive to\nimprove its own profitability?",
+    "choices": [
+      "$1,296 to $1,300.",
+      "$1,200 to $1,300.",
+      "$432 to $1,296.",
+      "$400 to $1,200."
+    ],
+    "answerIndex": 1,
+    "explanation": "The total cost per tree to the Forestry Division is $1,200\n($400 variable cost per tree + $800 fixed cost per tree). Thus,\nthe absolute minimum amount that the Forestry Division\nshould accept per tree is $1,200 because any price below that\nwill result in a loss on the sale. The maximum of the\nnegotiable range should be $1,300 because that is the price\nthe Sawing Division would pay for a tree from an external\nprovider. The Sawing Division will not pay more than that to\npurchase trees from the Forestry Division because it would\nhurt the Sawing Division’s profits.",
+    "answerStatus": "source"
+  },
+  {
+    "unit": 16,
+    "section": 5,
+    "number": 34,
+    "page": 1005,
+    "topicId": "su16-transfer-pricing",
+    "stem": "A company sells refrigeration components both in the U.S. and\nto a subsidiary located in France. One of the components, Part\nNo. 456, has a variable manufacturing cost of $30. The part\ncan be sold domestically or shipped to the French subsidiary\nfor use in the manufacture of a residential subassembly.\nRelevant data with regard to Part No. 456 are shown below.\nPart No. 456\nDomestic selling price                                 $65\nShipping charges to France                              15\nCost of acquiring Part No. 456 in France                75\nFrench residential subassembly:\nSales price                                               170\nOther additional manufacturing costs                       55\nUnits shipped to France                                150,000*\n*If deemed preferable, these units could be sold in the U.S.\nThe company’s applicable income tax rates are 40% in the\nU.S. and 70% in France.\nThe company will transfer Part No. 456 to the French\nsubsidiary at either variable manufacturing cost or the\ndomestic market price. On the basis of this information, which\none of the following strategies should be recommended to the\ncompany’s management?",
+    "choices": [
+      "Transfer 150,000 units at $30 and the French subsidiary pays\nthe shipping costs.",
+      "Transfer 150,000 units at $65 and the French subsidiary pays\nthe shipping costs.",
+      "Sell 150,000 units in the U.S. and the French subsidiary\nobtains Part No. 456 in France.",
+      "Transfer 150,000 units at $65 and have the U.S. company\nabsorb the shipping costs."
+    ],
+    "answerIndex": 2,
+    "explanation": "If the 150,000 components are sold separately in the U.S., the\nafter-tax profit per unit will be $21 [($65 – $30) × .6]. The\nFrench subsidiary will then purchase 150,000 components\ndomestically to include in the subassembly. The per-unit profit\non sales of the subassembly will be $12 [($170 – $75 – $55) ×\n.3]. The total per-unit profit for the consolidated entity from\nthese transactions will therefore be $33 ($21 + $12).",
+    "answerStatus": "source"
+  }
+]

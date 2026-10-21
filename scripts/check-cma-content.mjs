@@ -41,13 +41,19 @@ const { CMA_TOPICS } = readDataFile("cma-topics");
 const { CMA_TOPIC_GUIDES, CMA_STUDY_UNIT_CASES } = readDataFile("cma-guides");
 const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
 const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
+const { CMA_GLEIM_2025_VOL2_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol2");
+const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
+  (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
+);
 const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
 
-check(CMA_TOPICS.length === 40 && ids.size === 40, "Expected 40 unique sections for units 1–10");
+check(CMA_TOPICS.length === 80 && ids.size === 80, "Expected 80 unique sections for units 1–20");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
-check(CMA_LOCAL_QUESTIONS.length === 1368, "Expected 308 original plus 1,060 source questions");
+check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
+check(CMA_LOCAL_QUESTIONS.length === 2875, "Expected 432 original plus 2,443 source questions");
+check(newOutlineQuestions.length === 124, "Expected 124 original SU 7–14 example questions");
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
   [20, 18, 37, 32],
@@ -96,6 +102,85 @@ for (const [unitIndex, sectionCounts] of bookCounts.entries()) {
   }
 }
 check(sourceRecords.size === 1060, "Source records must cover each book question exactly once");
+const vol2Counts = [
+  [26, 32],
+  [28, 34, 51, 28, 14],
+  [44, 14, 34, 31],
+  [8, 43, 19, 40, 34, 31],
+  [16, 39, 46, 35, 12, 67, 18, 31],
+  [53, 12, 55, 12, 34],
+  [28, 65],
+  [89, 39, 21],
+  [46, 39, 25],
+  [31, 59],
+];
+const vol2Records = new Map();
+for (const [index, sectionCounts] of vol2Counts.entries()) {
+  const unit = index + 11;
+  const records = readDataFile(`cma-gleim-2025-vol2-unit-${unit}.json`).default;
+  for (const record of records) {
+    const key = `${unit}.${record.section}.${record.number}`;
+    check(!vol2Records.has(key), `Duplicate Volume 2 record: ${key}`);
+    vol2Records.set(key, record);
+    check(
+      record.stem.length >= 10 &&
+        record.choices.length === 4 &&
+        record.choices.every(Boolean) &&
+        record.explanation.length >= 10 &&
+        !record.choices.some((choice) => /Answer \([A-D]\) is correct/.test(choice)),
+      `Incomplete Volume 2 record: ${key}`,
+    );
+  }
+  for (const [sectionIndex, expected] of sectionCounts.entries()) {
+    const section = sectionIndex + 1;
+    const prefix = `cma-gleim-2025-vol2-su${unit}-s${section}-q`;
+    const source = CMA_GLEIM_2025_VOL2_QUESTIONS.filter((q) => q.id.startsWith(prefix));
+    check(source.length === expected, `SU ${unit}.${section}: expected ${expected} questions`);
+    for (let n = 1; n <= expected; n++)
+      check(
+        source.some((q) => q.id === `${prefix}${String(n).padStart(3, "0")}`),
+        `Missing SU ${unit}.${section} question ${n}`,
+      );
+  }
+}
+check(vol2Records.size === 1383, "Volume 2 records must cover each question exactly once");
+const inferredVol2 = new Set(["16.1.19", "18.2.4", "18.3.5", "19.2.28", "20.2.26"]);
+const reconstructedVol2 = new Set(["14.4.2", "15.8.23", "17.2.15", "17.2.25", "19.2.12"]);
+const reflowedVol2 = new Set([
+  "12.5.13",
+  "13.1.34",
+  "13.3.23",
+  "14.4.31",
+  "14.4.32",
+  "14.5.3",
+  "14.5.4",
+  "14.6.5",
+  "14.6.6",
+  "14.6.7",
+  "14.6.12",
+  "15.7.10",
+  "15.7.11",
+  "15.7.12",
+  "15.7.13",
+  "15.8.9",
+  "15.8.10",
+  "15.8.11",
+]);
+for (const [key, item] of vol2Records) {
+  check(
+    item.answerStatus === (inferredVol2.has(key) ? "inferred" : "source"),
+    `Volume 2 inferred answer status mismatch: ${key}`,
+  );
+  check(
+    item.sourceTextStatus ===
+      (reconstructedVol2.has(key)
+        ? "reconstructed"
+        : reflowedVol2.has(key)
+          ? "table-reflowed"
+          : undefined),
+    `Volume 2 source text status mismatch: ${key}`,
+  );
+}
 check(
   [...sourceRecords.values()].filter((record) => record.answerStatus === "inferred").length === 1 &&
     sourceRecords.get("9.3.1")?.answerStatus === "inferred",
@@ -142,7 +227,10 @@ for (const [key, unrelated] of [
 ]) {
   check(!sourceRecords.get(key)?.stem.includes(unrelated), `Leaked fact pattern: ${key}`);
 }
-check(Object.keys(CMA_TOPIC_GUIDES).length === 26, "Expected guides for published study units 1–6");
+check(
+  Object.keys(CMA_TOPIC_GUIDES).length === 57,
+  "Expected guides for published study units 1–14",
+);
 for (const [unit, expected] of [
   [1, 6],
   [2, 4],
@@ -154,6 +242,7 @@ for (const [unit, expected] of [
   [8, 4],
   [9, 3],
   [10, 3],
+  ...vol2Counts.map((counts, index) => [index + 11, counts.length]),
 ]) {
   check(
     CMA_TOPICS.filter((topic) => topic.studyUnit === unit).length === expected,
@@ -163,7 +252,7 @@ for (const [unit, expected] of [
 for (const topic of CMA_TOPICS) {
   const guide = CMA_TOPIC_GUIDES[topic.id];
   check(
-    topic.studyUnit <= 6 ? guide?.topicId === topic.id : !guide,
+    topic.studyUnit <= 14 ? guide?.topicId === topic.id : !guide,
     `Unexpected guide state for ${topic.id}`,
   );
   check(
@@ -188,6 +277,27 @@ for (const topic of CMA_TOPICS) {
         guide.practicalCase.solutionAr &&
         guide.practicalCase.solutionEn,
       `Incomplete guide: ${topic.id}`,
+    );
+  }
+  if (topic.studyUnit >= 7 && topic.studyUnit <= 14) {
+    check(topic.guidePages, `Missing supplied outline page range: ${topic.id}`);
+    check(guide.lessonSections?.length >= 2, `Missing detailed lessons: ${topic.id}`);
+    check(
+      guide.lessonSections.every(
+        (lesson) =>
+          lesson.heading.ar &&
+          lesson.heading.en &&
+          lesson.body.ar &&
+          lesson.body.en &&
+          lesson.body.ar !== lesson.body.en,
+      ),
+      `Incomplete bilingual lesson: ${topic.id}`,
+    );
+    const headings = guide.lessonSections.map((lesson) => lesson.heading.en);
+    check(new Set(headings).size === headings.length, `Duplicate lesson heading: ${topic.id}`);
+    check(
+      newOutlineQuestions.filter((question) => question.topicId === topic.id).length === 4,
+      `Expected four new bilingual example questions: ${topic.id}`,
     );
   }
   check(
@@ -221,24 +331,121 @@ for (const q of CMA_LOCAL_QUESTIONS) {
     `Incomplete question: ${q.id}`,
   );
   if (q.sourceLanguage === "en") {
-    check(q.sourcePage >= 5 && q.sourcePage <= 1087, `Missing source page: ${q.id}`);
+    check(
+      q.sourcePage >= 5 && (q.id.includes("-vol2-") ? q.sourcePage <= 1370 : q.sourcePage <= 1087),
+      `Missing source page: ${q.id}`,
+    );
     check(
       q.question.ar === q.question.en && q.explanation.ar === q.explanation.en,
       `Unreviewed source translation must be explicitly marked: ${q.id}`,
     );
     check(
       q.sourceTextStatus ===
-        (q.id === "cma-gleim-2025-vol1-su7-s2-q020"
-          ? "reconstructed"
-          : reflowedQuestionIds.has(q.id)
-            ? "table-reflowed"
-            : undefined),
+        (q.id.includes("-vol2-")
+          ? vol2Records.get(
+              q.id
+                .match(/su(\d+)-s(\d+)-q0*(\d+)/)
+                ?.slice(1)
+                .join("."),
+            )?.sourceTextStatus
+          : q.id === "cma-gleim-2025-vol1-su7-s2-q020"
+            ? "reconstructed"
+            : reflowedQuestionIds.has(q.id)
+              ? "table-reflowed"
+              : undefined),
       `Source transcription status was lost: ${q.id}`,
     );
   }
   check(q.choices.ar.every(Boolean) && q.choices.en.every(Boolean), `Empty choice: ${q.id}`);
 }
-check(CMA_STUDY_UNIT_CASES.length === 6, "Expected a linked practice case for every unit");
+for (const q of newOutlineQuestions) {
+  check(CMA_LOCAL_QUESTIONS.includes(q), `Unregistered SU 7–14 question: ${q.id}`);
+  check(q.question.ar !== q.question.en, `Untranslated SU 7–14 question: ${q.id}`);
+  check(q.explanation.ar !== q.explanation.en, `Untranslated SU 7–14 solution: ${q.id}`);
+}
+// Recompute numerical answers from the scenario inputs, independently of answerIndex.
+// This catches a wrong keyed option and arithmetic drift in the new static question data.
+const calculatedAnswers = [
+  [10, "jit-net-benefit", [60000 * 0.12 - 4500]],
+  [10, "lean-takt", [420 / 140]],
+  [10, "mrp-net-requirement", [120 * 2 + 20 - 70 - 30]],
+  [10, "mrp-timing", [8 - 2]],
+  [10, "outsourcing-opportunity", [18 + 4 + 3 - 24]],
+  [10, "practical-capacity-unused", [(1000 - 800) * (120000 / 1000)]],
+  [10, "denominator-rate", [80000 / 1000, 80000 / 800]],
+  [10, "bottleneck-choice", [40 / 4]],
+  [11, "target-costing", [120 * (1 - 0.25), 95 - 120 * (1 - 0.25)]],
+  [11, "life-cycle-cost", [40000 + 12 * 10000 + 20000 - (55000 + 10 * 10000 + 10000)]],
+  [11, "process-efficiency", [(12 / 48) * 100]],
+  [11, "quality-costs", [9000 + 11000]],
+  [11, "warranty-expected", [5000 * 0.02 * 100]],
+  [12, "regression-prediction", [8000 + 12 * 750]],
+  [12, "negative-correlation", [(-0.8) ** 2 * 100]],
+  [12, "multiple-regression", [5000 + 6 * 1000 + 200 * 8]],
+  [12, "learning-eight-total", [8 * 100 * 0.8 ** 3]],
+  [12, "learning-incremental-block", [8 * 100 * 0.8 ** 3 - 4 * 100 * 0.8 ** 2]],
+  [12, "learning-rate", [(136 / 2 / 80) * 100]],
+  [12, "ev-with-salvage", [0.6 * (100 * 10 - 100 * 6) + 0.4 * (60 * 10 + 40 * 2 - 100 * 6)]],
+  [
+    12,
+    "ev-perfect-information",
+    [0.4 * 80000 + 0.6 * 35000 - Math.max(0.4 * 80000 + 0.6 * 20000, 0.4 * 55000 + 0.6 * 35000)],
+  ],
+  [12, "joint-probability", [0.3 * 0.2 * 100]],
+  [12, "sensitivity-threshold", [((35000 - 20000) / (80000 - 20000 - (55000 - 35000))) * 100]],
+  [13, "standard-material-allowed", [1200 * 2.5, 1200 * 2.5 * 8]],
+  [13, "standard-yield", [4 / (1 - 0.2)]],
+  [13, "standard-labor-cost", [800 * 1.5 * 20]],
+  [13, "production-link", [4000 + 700 - 500]],
+  [13, "activity-budget", [30 * 400 + 80 * 50]],
+  [13, "rolling-horizon", [12 - 1 + 1]],
+  [13, "flex-budget-spending", [29000 - (18000 + 4 * 2500)]],
+  [14, "sales-mix", [800 * 50 + 300 * 80]],
+  [14, "price-volume-growth", [(1.2 * 0.95 - 1) * 100]],
+  [14, "quarter-sales", [1000 * 40 + 1200 * 40 + 1500 * 38]],
+  [14, "credit-sales-budget", [100000]],
+  [14, "next-month-inventory", [1000 + 1300 * 0.2 - 150]],
+  [14, "material-purchase-budget", [(1110 * 3 + 600 - 400) * 9]],
+  [14, "raw-target-next-use", [2000 * 3 * 0.1]],
+  [14, "efficiency-and-price", [1800 * (3 * 12 + 2 * 8)]],
+  [14, "labor-with-benefits", [2000 * 1.5 * 20 * 1.15]],
+  [14, "overhead-budget", [3000 * 4 + 30000, 3000 * 4 + 30000 - 6000]],
+  [14, "cogs-bridge", [25000 + 140000 - 35000, 220000 - (25000 + 140000 - 35000)]],
+  [14, "contribution-and-sga", [200000 - 90000 - 10000, 200000 - 90000 - 10000 - 40000 - 20000]],
+  [14, "three-cohort-collections", [60000 * 0.1 + 90000 * 0.7 + 120000 * 0.2]],
+  [14, "collections-discount", [50000 * 0.4 * 0.98]],
+  [14, "capital-payment-timing", [120000 * 0.25, 120000 * 0.75]],
+  [14, "ending-receivables", [80000 * 0.7]],
+  [14, "supplier-payments", [40000 * 0.4 + 50000 * 0.6]],
+  [14, "minimum-cash-borrowing", [Math.max(0, 12000 - (10000 + 43000 - 47000))]],
+  [14, "repayment-with-interest", [25000 - 1000 - 12000]],
+  [14, "noncash-depreciation", [30000 - 5000]],
+  [14, "percentage-sales-income", [200000 * 1.2 * (1 - 0.6 - 0.1) - 30000]],
+  [14, "gross-margin-change", [500000 * 0.34 - 80000]],
+  [14, "retained-earnings-roll", [90000 + 40000 - 10000]],
+  [14, "cash-flow-projection", [30000 + 120000 - 90000 - 20000 + 15000 - 5000]],
+];
+for (const [unit, slug, expected] of calculatedAnswers) {
+  const id = `cma-su${unit}-${slug}`;
+  const q = CMA_LOCAL_QUESTIONS.find((question) => question.id === id);
+  check(q, `Missing numerical exercise: ${id}`);
+  for (const lang of ["ar", "en"]) {
+    const values = [...q.choices[lang][q.answerIndex].matchAll(/\d+(?:,\d{3})*(?:\.\d+)?/g)].map(
+      ([value]) => Number(value.replaceAll(",", "")),
+    );
+    check(
+      values.length === expected.length &&
+        values.every((value, index) => Math.abs(value - expected[index]) < 0.000001),
+      `Incorrect numerical answer in ${lang}: ${id}`,
+    );
+  }
+}
+console.log(`Recomputed ${calculatedAnswers.length} numerical exercises in Arabic and English`);
+check(CMA_STUDY_UNIT_CASES.length === 14, "Expected a linked practice case for every guided unit");
+check(
+  new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 14,
+  "Expected one distinct case per guided unit",
+);
 for (const item of CMA_STUDY_UNIT_CASES) {
   check(
     item.title.ar &&
@@ -256,5 +463,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${CMA_LOCAL_QUESTIONS.length} MCQs (308 bilingual originals + 1,060 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (432 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );

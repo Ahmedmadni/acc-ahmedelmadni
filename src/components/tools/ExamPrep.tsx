@@ -23,6 +23,7 @@ import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib
 import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
+import type { CmaStudyUnit } from "@/data/cma-topics";
 
 const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
   const m = new Map<string, ExamQuestion>();
@@ -66,7 +67,7 @@ function saveLocal(qs: ExamQuestion[]) {
 
 export function ExamPrep({ lang }: { lang: Lang }) {
   const [track, setTrack] = useState<ExamTrack>("IFRS");
-  const [cmaUnit, setCmaUnit] = useState<"all" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10>("all");
+  const [cmaUnit, setCmaUnit] = useState<"all" | CmaStudyUnit>("all");
   const [local, setLocal] = useState<ExamQuestion[]>([]);
   const [mode, setMode] = useState<"quiz" | "upload">("quiz");
   const [current, setCurrent] = useState(0);
@@ -392,7 +393,9 @@ export function ExamPrep({ lang }: { lang: Lang }) {
           className="flex flex-wrap gap-2"
           aria-label={lang === "ar" ? "اختيار وحدة CMA" : "Select CMA study unit"}
         >
-          {(["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as const).map((unit) => (
+          {(
+            ["all", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] as const
+          ).map((unit) => (
             <button
               key={unit}
               type="button"
@@ -500,8 +503,8 @@ export function ExamPrep({ lang }: { lang: Lang }) {
               {q.sourceTextStatus === "reconstructed" && (
                 <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
                   {lang === "ar"
-                    ? "عمود من جدول الاختيارات مقطوع في ملف المصدر؛ أُعيد تكوين الاختيار المتأثر وفق الرسم والشرح."
-                    : "The source PDF clips one answer-table column; the affected choice was reconstructed from the chart and explanation."}
+                    ? "يوجد خيار ناقص في ملف المصدر؛ أضيف بديل تدريبي مع تمييزه للمراجعة."
+                    : "The source PDF omits a choice; an independently written practice distractor has been marked for review."}
                 </p>
               )}
               <h3
