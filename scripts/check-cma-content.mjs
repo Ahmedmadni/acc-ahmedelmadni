@@ -45,6 +45,8 @@ const { CMA_GLEIM_2025_VOL2_QUESTIONS } = readDataFile("cma-questions-gleim-2025
 const { CMA_PART2_QUESTIONS_1_7 } = readDataFile("cma-part2-questions-1-7");
 const { CMA_PART2_PRACTICE_1_7 } = readDataFile("cma-part2-practice-1-7");
 const { CMA_PART2_DEEP_DIVE_1_7 } = readDataFile("cma-part2-deep-dive-1-7");
+const { CMA_PART2_QUESTIONS_8_15 } = readDataFile("cma-part2-questions-8-15");
+const { CMA_PART2_PRACTICE_8_15 } = readDataFile("cma-part2-practice-8-15");
 const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
   (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
 ).concat(readDataFile("cma-questions-units-15-20").CMA_QUESTIONS_UNITS_15_20);
@@ -52,13 +54,15 @@ const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
 const questionIds = new Set();
 const questionTexts = new Set();
 
-check(CMA_TOPICS.length === 106 && ids.size === 106, "Expected 80 Part 1 and 26 Part 2 unique sections");
+check(CMA_TOPICS.length === 136 && ids.size === 136, "Expected 80 Part 1 and 56 Part 2 unique sections");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 3123, "Expected 680 original plus 2,443 source questions");
+check(CMA_LOCAL_QUESTIONS.length === 3303, "Expected 860 original plus 2,443 source questions");
 check(newOutlineQuestions.length === 216, "Expected 216 original SU 7–20 example questions");
 check(CMA_PART2_QUESTIONS_1_7.length === 104, "Expected four original Part 2 questions in each of 26 sections");
 check(CMA_PART2_PRACTICE_1_7.length === 52, "Expected two advanced questions in each Part 2 section");
+check(CMA_PART2_QUESTIONS_8_15.length === 120, "Expected four original questions in each of 30 new sections");
+check(CMA_PART2_PRACTICE_8_15.length === 60, "Expected two further questions in each of 30 new sections");
 check(Object.keys(CMA_PART2_DEEP_DIVE_1_7).length === 26, "Expected one deep dive for every Part 2 section");
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
@@ -234,8 +238,8 @@ for (const [key, unrelated] of [
   check(!sourceRecords.get(key)?.stem.includes(unrelated), `Leaked fact pattern: ${key}`);
 }
 check(
-  Object.keys(CMA_TOPIC_GUIDES).length === 106,
-  "Expected 80 Part 1 and 26 Part 2 guides",
+  Object.keys(CMA_TOPIC_GUIDES).length === 136,
+  "Expected 80 Part 1 and 56 Part 2 guides",
 );
 for (const [unit, expected] of [
   [1, 6],
@@ -322,6 +326,19 @@ for (const [unit, expected] of [4, 3, 2, 3, 5, 4, 5].entries()) {
     check(CMA_PART2_QUESTIONS_1_7.filter((q) => q.topicId === topic.id).length === 4, `Part 2 questions missing: ${topic.id}`);
     check(CMA_PART2_PRACTICE_1_7.filter((q) => q.topicId === topic.id).length === 2, `Part 2 advanced questions missing: ${topic.id}`);
     check(CMA_PART2_DEEP_DIVE_1_7[topic.id]?.length === 1, `Part 2 deep dive missing: ${topic.id}`);
+  }
+}
+for (const [offset, expected] of [5, 3, 6, 3, 2, 6, 3, 2].entries()) {
+  const unit = offset + 8;
+  const topics = CMA_TOPICS.filter((topic) => topic.studyUnit === `p2-${unit}`);
+  check(topics.length === expected, `Part 2 Unit ${unit}: missing sections`);
+  for (const topic of topics) {
+    const guide = CMA_TOPIC_GUIDES[topic.id];
+    check(topic.guidePages && guide?.lessonSections?.length === 3, `Missing three lessons: ${topic.id}`);
+    check(guide.lessonSections.every((lesson) => lesson.heading.ar && lesson.heading.en && lesson.body.ar && lesson.body.en), `Incomplete lessons: ${topic.id}`);
+    check(guide.practicalCase.scenarioAr && guide.practicalCase.scenarioEn && guide.practicalCase.solutionAr && guide.practicalCase.solutionEn, `Incomplete example: ${topic.id}`);
+    check(CMA_PART2_QUESTIONS_8_15.filter((question) => question.topicId === topic.id).length === 4, `Missing questions: ${topic.id}`);
+    check(CMA_PART2_PRACTICE_8_15.filter((question) => question.topicId === topic.id).length === 2, `Missing advanced practice: ${topic.id}`);
   }
 }
 for (const q of CMA_LOCAL_QUESTIONS) {
@@ -535,9 +552,67 @@ for (const [index, expected] of advancedExpected.entries()) {
   }
 }
 console.log(`Recomputed ${advancedExpected.length} advanced numerical answers in Arabic and English`);
-check(CMA_STUDY_UNIT_CASES.length === 27, "Expected 20 Part 1 and seven Part 2 linked cases");
+const newPart2Expected = [
+  "930,000", "95,500", "4.125", "210,000", "SAR 1,000 gain",
+  "2,000", "3,000", "1,000", "Increase 15", "12,000",
+  "Increase 20,000", "3,000", "Increase 7,000", "Profit falls 30,000",
+  "1.8", "25", "120", "10,000", "30,000",
+  "47,000", "52,000", "10", "2.5 years", "B: 50", "35",
+  "Conflict of interest", "Credibility", "Opportunity", "15,000", "2,000",
+];
+for (const [index, expected] of newPart2Expected.entries()) {
+  const question = CMA_PART2_QUESTIONS_8_15[index * 4];
+  check(question?.id.endsWith("-q1"), `Missing Part 2 worked question ${index + 1}`);
+  check(question.choices.en[question.answerIndex] === expected, `Incorrect new Part 2 answer: ${question.id}`);
+  check(question.choices.ar[question.answerIndex], `Missing Arabic answer: ${question.id}`);
+}
+console.log(`Checked ${newPart2Expected.length} new Part 2 worked-question keys`);
+const independentlyRecomputed = [
+  800000 + 180000 - 50000, 100000 - 1500 - 3000, 1.1 * 3.75,
+  50000 * 4.2, 10000 * (3.8 - 3.7), 80000 / (100 - 60),
+  (80000 + 30000 / .75) / 40, 110000 / (2 * 30 + 50),
+  75 - 60, 12000, 1000 * (75 - 50) - 5000,
+  28000 + 5000 - 30000, 85000 - 60000 - 18000, 80000 - 50000,
+  (50 / 125) / (2 / 9), 25, 150 - 30,
+  .05 * 200000, 100000 - 70000, 50000 - .3 * (50000 - 40000),
+  .6 * 100000 - .4 * 20000, 121 / 1.1 ** 2 - 90,
+  2 + (100 - 2 * 40) / 40, 50, (100 - 60) * .75 + 20 * .25,
+  null, null, null, 15000, 2000,
+];
+for (const [index, expected] of independentlyRecomputed.entries()) {
+  if (expected === null) continue;
+  const question = CMA_PART2_QUESTIONS_8_15[index * 4];
+  for (const lang of ["ar", "en"]) {
+    const label = question.choices[lang][question.answerIndex];
+    const number = Number(label.match(/\d+(?:,\d{3})*(?:\.\d+)?/)?.[0].replaceAll(",", ""));
+    check(Math.abs(number - expected) < .01, `Incorrect recalculated Part 2 answer (${lang}): ${question.id}`);
+  }
+}
+const part2Answers = [...CMA_PART2_QUESTIONS_8_15, ...CMA_PART2_PRACTICE_8_15]
+  .reduce((totals, question) => {
+    totals[question.answerIndex]++;
+    return totals;
+  }, [0, 0, 0, 0]);
+check(part2Answers.every((count) => count > 20), "New Part 2 correct answers must use every option position");
+console.log(`Recalculated ${independentlyRecomputed.filter((value) => value !== null).length} new numerical answer pairs; choice positions ${part2Answers.join("/")}`);
+const extraKeys = [
+  "30,000", "2,000", "1.00", "SAR 4,000", "SAR 500 gain",
+  "2.5", "200,000", "1,000", "−20", "15,000", "Increase 1,000",
+  "3", "5,000", "Profit decrease 23,000", "1.22", "Monopolistic competition",
+  "150", "2,000", "Impact or severity", "32,500", "5,000", "4.13",
+  "2.4 years", "1.30", "7.27", "Conflict of interest", "Credibility",
+  "Test documentation, timing and authorization without presuming guilt",
+  "20,000", "10%",
+];
+for (const [index, expected] of extraKeys.entries()) {
+  const question = CMA_PART2_PRACTICE_8_15[index * 2];
+  check(question?.id.endsWith("-q5") && question.choices.en[question.answerIndex] === expected,
+    `Incorrect extra Part 2 key: ${question?.id ?? index}`);
+}
+console.log(`Checked ${extraKeys.length} advanced Part 2 answer keys`);
+check(CMA_STUDY_UNIT_CASES.length === 35, "Expected 20 Part 1 and 15 Part 2 linked cases");
 check(
-  new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 27,
+  new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 35,
   "Expected one distinct case per guided unit",
 );
 for (const item of CMA_STUDY_UNIT_CASES) {
@@ -557,5 +632,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (680 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );

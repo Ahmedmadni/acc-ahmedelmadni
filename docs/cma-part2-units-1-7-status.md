@@ -13,6 +13,6 @@ Seven Gleim 2024 teaching outlines were integrated into the Part 2 curriculum. T
 | 7 | Working Capital Management | 5 | 30 | 1 | 2–16 |
 | **Added** | | **26** | **156** | **7** | |
 
-After integration the CMA site contains 106 guided sections, 27 linked cases and 3,123 questions. These comprise 680 original bilingual practice questions and the existing 2,443 English Gleim 2025 Part 1 question-bank records. No Part 2 textbook MCQ bank was supplied; the 156 Part 2 questions are newly authored practice, not transcribed textbook questions. Part 2 Units 8 onward await their teaching outlines.
+This document records the first phase (Units 1–7), with 106 guided sections, 27 linked cases and 3,123 questions at that point. Units 8–15 have since been integrated; see [the second-phase status](cma-part2-units-8-15-status.md) for current totals. No Part 2 textbook MCQ bank was supplied; the 156 questions in this first phase are newly authored practice, not transcribed textbook questions.
 
 The content check validates section/question/case mapping and recalculates 52 Part 2 numerical answers in both languages. The previously documented Part 1 source-bank Arabic translation and table review remain separate work.
