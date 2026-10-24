@@ -5,7 +5,7 @@ import { Link as RouterLink } from "@tanstack/react-router";
 import { t, type Lang } from "@/lib/i18n";
 import { EASE, springSoft, useMotionSafe } from "@/lib/motion";
 import { playClick, playHover } from "@/lib/sound";
-import portraitImg from "@/assets/ahmed-portrait-charcoal-balanced.webp";
+import portraitImg from "@/assets/ahmed-portrait-charcoal-final.webp";
 
 /** Native aspect ratio of the cropped portrait asset (w/h) — the frame below
  * is positioned as a percentage of this exact box, so it lines up with the
