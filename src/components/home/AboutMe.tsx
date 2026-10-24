@@ -5,12 +5,12 @@ import { Link as RouterLink } from "@tanstack/react-router";
 import { t, type Lang } from "@/lib/i18n";
 import { EASE, springSoft, useMotionSafe } from "@/lib/motion";
 import { playClick, playHover } from "@/lib/sound";
-import portraitImg from "@/assets/ahmed-portrait-charcoal-balanced.webp";
+import portraitImg from "@/assets/ahmed-portrait-charcoal-final.webp";
 
 /** Native aspect ratio of the cropped portrait asset (w/h) — the frame below
  * is positioned as a percentage of this exact box, so it lines up with the
  * figure's shoulders at every breakpoint. */
-const PORTRAIT_RATIO = 768 / 1376;
+const PORTRAIT_RATIO = 320 / 573;
 
 /** An elongated, chamfered-corner octagon — the "specific geometric shape"
  * standing in for a plain rectangle. Drawn once and reused for both the
@@ -359,8 +359,8 @@ function PortraitTilt({
         <img
           src={portraitImg}
           alt={ar ? "أحمد المدني" : "Ahmed Elmadani"}
-          width={768}
-          height={1376}
+          width={320}
+          height={573}
           loading="eager"
           decoding="async"
           className="absolute inset-0 z-10 h-full w-full object-contain drop-shadow-[0_26px_34px_rgba(28,27,25,0.25)]"
