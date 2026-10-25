@@ -1489,7 +1489,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all changes in the equity (net\nassets) of a business during a period, except those from\ninvestments by and distributions to owners. In this case,\ncomprehensive income is $1,020,000 ($950,000 net income +\n$90,000 unrealized gain on available-for-sale securities –\n$20,000 foreign currency translation loss). The depreciation\namount given in the question should be ignored because\ndepreciation is already included in net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعدّ إحدى الشركات قوائمها المالية وفقًا لمبادئ المحاسبة المقبولة عمومًا في الولايات المتحدة (U.S. GAAP). وفيما يلي بعض البيانات المالية المختارة للشركة:\nصافي الدخل: 950,000 دولار\nالإهلاك: 40,000 دولار\nاستثمارات المُلّاك: 60,000 دولار\nمكسب غير محقق من أوراق مالية متاحة للبيع: 90,000 دولار\nخسارة ترجمة العملات الأجنبية: 20,000 دولار\nما مبلغ الدخل الشامل الذي ينبغي الإبلاغ عنه؟",
+    "choicesAr": [
+      "970,000 دولار",
+      "1,020,000 دولار",
+      "1,060,000 دولار",
+      "1,120,000 دولار"
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق الملكية (صافي الأصول) للمنشأة خلال الفترة، باستثناء التغيرات الناتجة عن استثمارات المُلّاك وتوزيعات الأرباح عليهم. في هذه الحالة، يبلغ الدخل الشامل 1,020,000 دولار: صافي الدخل 950,000 دولار + المكسب غير المحقق من الأوراق المالية المتاحة للبيع 90,000 دولار − خسارة ترجمة العملات الأجنبية 20,000 دولار. ويُستبعد مبلغ الإهلاك الوارد في السؤال لأنه مُدرج بالفعل ضمن صافي الدخل."
   },
   {
     "unit": 1,
@@ -1506,7 +1514,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Direct materials costs are the costs of new materials included\nin finished goods that can be feasibly traced to those goods.\nTotal purchases can be found based on the beginning and\nending inventory, as well as products used. The following\nformula describes their relationship:\nPurchases = Materials used + Ending inventory – Beginning\ninventory\nThe question states that the company used $200,000 of direct\nmaterials. Beginning inventory can be set as x, and since the\nbalance of direct materials at the end of the the month was\n$30,000 more than at the beginning of the month, ending\ninventory can be set as [x + $30,000]. Thus the formula can be\nused to solve for purchases as follows:\nPurchases = $200,000 + ($x + $30,000) – $x\nPurchases = $200,000 + $30,000 + $x – $x\nPurchases = $230,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استخدمت شركة مواد مباشرة بقيمة 200,000 دولار خلال شهر يونيو. وفي 30 يونيو، كان رصيد مخزون المواد المباشرة أكبر بمقدار 30,000 دولار من رصيده في 1 يونيو. فما قيمة مشتريات المواد المباشرة خلال يونيو؟",
+    "choicesAr": [
+      "30,000 دولار",
+      "170,000 دولار",
+      "200,000 دولار",
+      "230,000 دولار"
+    ],
+    "explanationAr": "يمكن تحديد إجمالي المشتريات بالاستناد إلى مخزون أول المدة ومخزون آخر المدة والمواد المستخدمة. وتوضح المعادلة العلاقة بينها:\nالمشتريات = المواد المستخدمة + مخزون آخر المدة − مخزون أول المدة.\nتذكر المسألة أن المواد المباشرة المستخدمة بلغت 200,000 دولار. لنفترض أن مخزون أول المدة يساوي س؛ وبما أن مخزون آخر المدة يزيد عليه بمقدار 30,000 دولار، فإن مخزون آخر المدة يساوي (س + 30,000 دولار). بالتعويض:\nالمشتريات = 200,000 + (س + 30,000) − س\nالمشتريات = 230,000 دولار."
   },
   {
     "unit": 1,
@@ -1523,7 +1539,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The operating section of a retailer’s income statement\nincludes all revenues and costs necessary for the operation of\nthe retail establishment, e.g., sales, cost of goods sold,\nadministrative expenses, and selling expenses. Dividend\nrevenue, however, is classified under other revenues. In a\nstatement of cash flows, cash dividends received are\nconsidered an operating cash flow.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في قائمة الدخل متعددة الخطوات لشركة بيع بالتجزئة، تندرج جميع البنود التالية ضمن قسم الأنشطة التشغيلية، باستثناء:",
+    "choicesAr": [
+      "المبيعات.",
+      "تكلفة البضاعة المباعة.",
+      "إيرادات توزيعات الأرباح.",
+      "المصروفات الإدارية ومصروفات البيع."
+    ],
+    "explanationAr": "يتضمن قسم الأنشطة التشغيلية في قائمة دخل شركة البيع بالتجزئة الإيرادات والتكاليف اللازمة لتشغيل المنشأة، مثل المبيعات وتكلفة البضاعة المباعة والمصروفات الإدارية ومصروفات البيع. أما إيرادات توزيعات الأرباح فتُصنّف ضمن الإيرادات الأخرى. وفي قائمة التدفقات النقدية، تُعدّ توزيعات الأرباح النقدية المقبوضة تدفقًا نقديًا تشغيليًا."
   },
   {
     "unit": 1,
@@ -1540,7 +1564,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Within the income from continuing operations classification,\nthe single-step income statement provides one grouping for\nrevenue items and one for expense items. The single-step is\nthe one subtraction necessary to arrive at income from\ncontinuing operations prior to the effect of income taxes. In\ncontrast, the multiple-step income statement matches\noperating revenues and expenses separately from\nnonoperating items. This format emphasizes subtotals, such\nas gross profit or loss and operating income or loss, within the\npresentation of income from continuing operations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتمثل الفرق الأساسي بين شكل قائمة الدخل متعددة الخطوات وشكل قائمة الدخل ذات الخطوة الواحدة في الفصل بين:",
+    "choicesAr": [
+      "البنود التشغيلية وغير التشغيلية.",
+      "مصروف ضريبة الدخل والمصروفات الإدارية.",
+      "مصروف تكلفة البضاعة المباعة والمصروفات الإدارية.",
+      "أثر ضريبة الدخل الناتج عن البنود الاستثنائية وأثر ضريبة الدخل الناتج عن الدخل قبل البنود الاستثنائية."
+    ],
+    "explanationAr": "ضمن تصنيف الدخل من العمليات المستمرة، تجمع قائمة الدخل ذات الخطوة الواحدة الإيرادات في مجموعة واحدة والمصروفات في مجموعة أخرى، ثم تُجرى عملية طرح واحدة للوصول إلى الدخل من العمليات المستمرة قبل أثر ضريبة الدخل. أما قائمة الدخل متعددة الخطوات فتفصل الإيرادات والمصروفات التشغيلية عن البنود غير التشغيلية. كما تُبرز مجاميع فرعية، مثل مجمل الربح أو الخسارة والدخل أو الخسارة التشغيلية، ضمن عرض الدخل من العمليات المستمرة."
   },
   {
     "unit": 1,
@@ -1557,7 +1589,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The company should report net income of $20,000 ($80,000 –\n$50,000 – $10,000). Foreign currency translation adjustment\ngain, net of tax, is an item of other comprehensive income and\nnot net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي قائمة جزئية بحسابات إحدى الشركات:\nالإيرادات: 80,000 دولار\nالمصروفات التشغيلية: 50,000 دولار\nمكسب تعديل ترجمة العملات الأجنبية، بالصافي بعد الضريبة: 4,000 دولار\nمصروف ضريبة الدخل: 10,000 دولار\nما مبلغ صافي الدخل الذي ينبغي أن تُبلّغ عنه الشركة؟",
+    "choicesAr": [
+      "20,000 دولار",
+      "24,000 دولار",
+      "30,000 دولار",
+      "34,000 دولار"
+    ],
+    "explanationAr": "ينبغي أن تُبلّغ الشركة عن صافي دخل قدره 20,000 دولار (80,000 − 50,000 − 10,000). فمكسب تعديل ترجمة العملات الأجنبية، بالصافي بعد الضريبة، يُعدّ بندًا من بنود الدخل الشامل الآخر، وليس جزءًا من صافي الدخل."
   },
   {
     "unit": 1,
