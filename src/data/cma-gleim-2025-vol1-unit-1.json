@@ -1239,7 +1239,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Net income for the year is calculated as follows:\nIncome        Times:\nStatement     Tax           As\nItem          Effect        Reported\nIncome from\ncontinuing\noperations (net of\ntax)                                               $ 72,000\nDiscontinued          $(70,000)      (1.0 – .40)   (42,000)\noperations\nNet income                                          $ 30,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق المعلومات التالية بقائمة دخل شركة عن الاثني عشر شهرًا المنتهية للتو. يبلغ معدل ضريبة الدخل الفعلي للشركة 40%.\nالعمليات المتوقفة: (70,000) دولار\nالدخل من العمليات المستمرة (بعد الضريبة): 72,000 دولار\nالأثر التراكمي للتغيير في مبدأ محاسبي: 60,000 دولار\nما صافي الدخل للسنة؟",
+    "choicesAr": [
+      "36,000 دولار",
+      "12,000 دولار",
+      "8,000 دولار",
+      "30,000 دولار"
+    ],
+    "explanationAr": "يُحسب صافي الدخل للسنة كما يلي:\nالدخل من العمليات المستمرة بعد الضريبة: 72,000 دولار\nخسارة العمليات المتوقفة قبل الضريبة: (70,000) دولار\nالأثر بعد الضريبة = (70,000 × (1 − 0.40)) = (42,000) دولار\nصافي الدخل = 72,000 − 42,000 = 30,000 دولار.\nلا يُضاف الأثر التراكمي للتغيير في المبدأ المحاسبي إلى صافي الدخل وفق العرض المستخدم في هذا السؤال."
   },
   {
     "unit": 1,
@@ -1256,7 +1264,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If an entity that presents a full set of financial statements has\nitems of other comprehensive income (OCI), it must present\ncomprehensive income either (1) in a single continuous\nstatement of comprehensive income or (2) in two separate but\nconsecutive statements (an income statement and a\nstatement of OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الصيغ التالية مقبولة لعرض الدخل الشامل؟\nI. في قائمة مالية واحدة متصلة.\nII. في قائمة التغيرات في حقوق الملكية.\nIII. في قائمة مستقلة لصافي الدخل.\nIV. في قائمتين ماليتين منفصلتين ومتتاليتين.",
+    "choicesAr": [
+      "I وII فقط.",
+      "I وII وIII فقط.",
+      "III وIV فقط.",
+      "I وIV فقط."
+    ],
+    "explanationAr": "إذا كان لدى المنشأة التي تعرض مجموعة كاملة من القوائم المالية بنود دخل شامل آخر، فيجب عرض الدخل الشامل إما في قائمة واحدة متصلة للدخل الشامل، أو في قائمتين منفصلتين ومتتاليتين: قائمة الدخل ثم قائمة الدخل الشامل الآخر."
   },
   {
     "unit": 1,
@@ -1273,7 +1289,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Comprehensive income includes net income and other\ncomprehensive income. Net income equals $110,000\n($800,000 sales revenue – $600,000 COGS – $90,000\noperating expenses). Unrealized holding gains on available-\nfor-sale debt securities ($30,000) are included in other\ncomprehensive income. Thus, comprehensive income is\n$140,000 ($110,000 + $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض شركة المعلومات التالية في 31 ديسمبر:\nإيرادات المبيعات: 800,000 دولار\nتكلفة البضاعة المباعة: 600,000 دولار\nالمصروفات التشغيلية: 90,000 دولار\nمكسب حيازة غير محقق على أوراق دين متاحة للبيع، بعد الضريبة: 30,000 دولار\nما مبلغ الدخل الشامل الذي ينبغي للشركة الإبلاغ عنه في 31 ديسمبر؟",
+    "choicesAr": [
+      "30,000 دولار",
+      "110,000 دولار",
+      "140,000 دولار",
+      "200,000 دولار"
+    ],
+    "explanationAr": "يشمل الدخل الشامل صافي الدخل والدخل الشامل الآخر. صافي الدخل = 800,000 إيرادات المبيعات − 600,000 تكلفة البضاعة المباعة − 90,000 مصروفات تشغيلية = 110,000 دولار. ويُدرج مكسب الحيازة غير المحقق على أوراق الدين المتاحة للبيع، البالغ 30,000 دولار، ضمن الدخل الشامل الآخر. لذلك يبلغ الدخل الشامل 140,000 دولار (110,000 + 30,000)."
   },
   {
     "unit": 1,
@@ -1290,7 +1314,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Equity of a business entity (or the net assets of a nonbusiness\norganization) is a residual amount that reflects the basic\naccounting equation: assets minus liabilities equals equity (or\nnet assets). It is reported on the statement of financial\nposition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع البنود التالية تُعرّف باعتبارها عناصر في قائمة الدخل، باستثناء:",
+    "choicesAr": [
+      "المصروفات.",
+      "حقوق المساهمين.",
+      "المكاسب والخسائر.",
+      "الإيرادات."
+    ],
+    "explanationAr": "تمثل حقوق ملكية منشأة الأعمال (أو صافي أصول المنظمة غير الهادفة للربح) قيمة متبقية وفق المعادلة المحاسبية الأساسية: الأصول ناقص الالتزامات يساوي حقوق الملكية (أو صافي الأصول). وتُعرض حقوق الملكية في قائمة المركز المالي."
   },
   {
     "unit": 1,
@@ -1307,7 +1339,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Gain or loss on the disposal of a major operating unit is\nreported net of tax in discontinued operations. Discontinued\noperations are reported between income from continuing\noperations and net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفقًا لمبادئ المحاسبة المقبولة عمومًا في الولايات المتحدة (US GAAP)، أين ينبغي لشركة متعددة الجنسيات عرض الخسارة الناتجة عن بيع والتخلص من وحدة تشغيلية رئيسية في قائمة الدخل؟",
+    "choicesAr": [
+      "عرض الخسارة قبل الضريبة في قسم مستقل بين الدخل من العمليات المستمرة وصافي الدخل.",
+      "عرض الخسارة بعد الضريبة في قسم مستقل بين الدخل من العمليات المستمرة وصافي الدخل.",
+      "عرض الخسارة قبل الضريبة في قسم مستقل بين الدخل من العمليات والدخل قبل ضريبة الدخل.",
+      "عرض الخسارة بعد الضريبة في قسم مستقل بين الدخل قبل الضريبة وصافي الدخل."
+    ],
+    "explanationAr": "يُعرض المكسب أو الخسارة الناتجة عن التخلص من وحدة تشغيلية رئيسية، بعد الضريبة، ضمن العمليات المتوقفة. وتُعرض العمليات المتوقفة بين الدخل من العمليات المستمرة وصافي الدخل."
   },
   {
     "unit": 1,
