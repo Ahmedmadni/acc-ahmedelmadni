@@ -989,7 +989,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The entity’s cost of goods manufactured can be calculated as\nfollows:\nSales                          $160,000\nLess: Gross profit               (48,000)\nCost of goods sold               $112,000\nAdd: Ending finished goods         58,300\nGoods available for sale      $170,300\nLess: Beginning finished goods (60,190)\nCost of goods manufactured        $110,110",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن بيان الأرباح والخسائر لمنشأة المعلومات التالية عن السنة المالية الحالية:\nالمبيعات: 160,000 دولار\nمجمل الربح: 48,000 دولار\nمخزون الإنتاج التام في نهاية السنة: 58,300 دولار\nمخزون الإنتاج التام في بداية السنة: 60,190 دولار\nما تكلفة الإنتاج التام الذي صنعته المنشأة خلال السنة المالية الحالية؟",
+    "choicesAr": [
+      "46,110 دولارًا",
+      "49,890 دولارًا",
+      "110,110 دولارات",
+      "113,890 دولارًا"
+    ],
+    "explanationAr": "يمكن حساب تكلفة الإنتاج التام المصنّع كما يلي:\nالمبيعات: 160,000 دولار\nيُطرح: مجمل الربح: (48,000)\nتكلفة البضاعة المباعة: 112,000 دولار\nيُضاف: مخزون الإنتاج التام في نهاية السنة: 58,300\nالبضاعة المتاحة للبيع: 170,300 دولار\nيُطرح: مخزون الإنتاج التام في بداية السنة: (60,190)\nتكلفة الإنتاج التام المصنّع: 110,110 دولارات."
   },
   {
     "unit": 1,
@@ -1006,7 +1014,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A single-step income statement combines all revenues and\ngains, combines all expenses and losses, and subtracts the\nlatter from the former in a “single step” to arrive at net income.\nGross profit, being the difference between sales revenue and\ncost of goods sold, does not appear on a single-step income\nstatement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية يظهر في قائمة الدخل متعددة الخطوات، ولا يظهر في قائمة الدخل ذات الخطوة الواحدة؟",
+    "choicesAr": [
+      "الخسارة من العمليات المتوقفة.",
+      "مجمل الربح.",
+      "تكلفة البضاعة المباعة.",
+      "صافي الدخل من العمليات المستمرة."
+    ],
+    "explanationAr": "تجمع قائمة الدخل ذات الخطوة الواحدة جميع الإيرادات والمكاسب في مجموعة واحدة، وجميع المصروفات والخسائر في مجموعة أخرى، ثم تطرح المجموعة الثانية من الأولى للوصول إلى صافي الدخل في خطوة واحدة. ولا يظهر مجمل الربح في هذه القائمة، لأنه يمثل الفرق بين إيرادات المبيعات وتكلفة البضاعة المباعة."
   },
   {
     "unit": 1,
@@ -1023,7 +1039,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The company’s cost of goods sold can be calculated as\nfollows:\nBeginning inventory of finished goods   $ 100,000\nAdd: Cost of goods manufactured           700,000\nLess: Ending inventory of finished goods (200,000)\nCost of goods sold                        $ 600,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالاستناد إلى البيانات التالية لشركة، ما تكلفة البضاعة المباعة؟\nمخزون الإنتاج التام في بداية الفترة: 100,000 دولار\nتكلفة الإنتاج التام المصنّع: 700,000 دولار\nمخزون الإنتاج التام في نهاية الفترة: 200,000 دولار\nمخزون الإنتاج تحت التشغيل في بداية الفترة: 300,000 دولار\nمخزون الإنتاج تحت التشغيل في نهاية الفترة: 50,000 دولار",
+    "choicesAr": [
+      "500,000 دولار",
+      "600,000 دولار",
+      "800,000 دولار",
+      "950,000 دولار"
+    ],
+    "explanationAr": "يمكن حساب تكلفة البضاعة المباعة كما يلي:\nمخزون الإنتاج التام في بداية الفترة: 100,000 دولار\nيُضاف: تكلفة الإنتاج التام المصنّع: 700,000\nيُطرح: مخزون الإنتاج التام في نهاية الفترة: (200,000)\nتكلفة البضاعة المباعة: 600,000 دولار."
   },
   {
     "unit": 1,
@@ -1040,7 +1064,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The results of operations for a period of time are reported in\nthe income statement (statement of earnings) on the accrual\nbasis using an approach oriented to historical transactions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القائمة المالية التي تقدم ملخصًا لعمليات المنشأة خلال فترة زمنية هي:",
+    "choicesAr": [
+      "قائمة الدخل.",
+      "قائمة المركز المالي.",
+      "قائمة حقوق المساهمين.",
+      "قائمة الأرباح المحتجزة."
+    ],
+    "explanationAr": "تُعرض نتائج العمليات خلال فترة زمنية في قائمة الدخل (قائمة الأرباح)، وفقًا لأساس الاستحقاق وبمنهج يركز على المعاملات التاريخية."
   },
   {
     "unit": 1,
@@ -1057,7 +1089,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness entity except those changes resulting from\ninvestments by owners and distributions to owners.\nComprehensive income includes two major categories: net\nincome and other comprehensive income (OCI). Net income\nincludes the results of operations classified as income from\ncontinuing operations and discontinued operations.\nComponents of comprehensive income not included in the\ndetermination of net income are included in OCI, for example,\nunrealized gains and losses on available-for-sale debt\nsecurities (except those that are hedged items in a fair value\nhedge).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أفضل تعريف للدخل الشامل هو:",
+    "choicesAr": [
+      "صافي الدخل باستبعاد المكاسب والخسائر الاستثنائية.",
+      "التغير في صافي الأصول خلال الفترة، بما في ذلك مساهمات الملاك والتوزيعات عليهم.",
+      "إجمالي الإيرادات مطروحًا منه إجمالي المصروفات.",
+      "التغير في صافي الأصول خلال الفترة، باستثناء معاملات الملاك."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق الملكية لدى منشأة الأعمال، باستثناء التغيرات الناتجة عن استثمارات الملاك وتوزيعات الأرباح أو الأصول عليهم. ويتكون الدخل الشامل من فئتين رئيسيتين: صافي الدخل والدخل الشامل الآخر. ويشمل صافي الدخل نتائج العمليات المستمرة والمتوقفة، أما مكونات الدخل الشامل التي لا تدخل في حساب صافي الدخل فتُدرج ضمن الدخل الشامل الآخر، مثل المكاسب والخسائر غير المحققة على استثمارات الدين المتاحة للبيع، باستثناء البنود التي تُعامل كبنود تحوط في تحوط القيمة العادلة."
   },
   {
     "unit": 1,
