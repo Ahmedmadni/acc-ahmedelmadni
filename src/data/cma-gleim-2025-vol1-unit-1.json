@@ -389,7 +389,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Assets are usually measured at original historical cost in a\nstatement of financial position, although some exceptions\nexist. For example, some short-term receivables are reported\nat their net realizable value. Thus, the statement of financial\nposition cannot be relied upon to assess NRV.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتيح قائمة المركز المالي للمستثمرين تقييم جميع الأمور التالية، باستثناء:",
+    "choicesAr": [
+      "كفاءة استخدام أصول المنشأة.",
+      "سيولة المنشأة ومرونتها المالية.",
+      "هيكل رأس مال المنشأة.",
+      "صافي القيمة القابلة للتحقق لأصول المنشأة."
+    ],
+    "explanationAr": "تُقاس الأصول عادةً بالتكلفة التاريخية الأصلية في قائمة المركز المالي، مع وجود بعض الاستثناءات. فعلى سبيل المثال، تُعرض بعض الذمم المدينة قصيرة الأجل بصافي قيمتها القابلة للتحقق. لذلك لا يمكن الاعتماد على قائمة المركز المالي لتقييم صافي القيمة القابلة للتحقق للأصول."
   },
   {
     "unit": 1,
@@ -406,7 +414,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The equation is based on the proprietary theory. Equity in an\nenterprise is what remains after the economic obligations of\nthe enterprise are deducted from its economic resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعكس المعادلة المحاسبية (الأصول − الالتزامات = حقوق الملكية) وجهة نظر:",
+    "choicesAr": [
+      "المنشأة.",
+      "نظرية الصناديق.",
+      "الملكية.",
+      "نظرية المنشأة."
+    ],
+    "explanationAr": "تستند المعادلة إلى نظرية الملكية. وتمثل حقوق الملكية في المنشأة ما يتبقى بعد طرح الالتزامات الاقتصادية للمنشأة من مواردها الاقتصادية."
   },
   {
     "unit": 1,
@@ -423,7 +439,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Long-term obligations that are or will become callable by the\ncreditor because of the debtor’s violation of a provision of the\ndebt agreement at the balance sheet date normally are\nclassified as current liabilities. However, the debt need not be\nreclassified if the violation will be cured within a specified\ngrace period or if the creditor formally waives or subsequently\nloses the right to demand repayment for a period of more than\na year from the balance sheet date (also, reclassification is not\nrequired if the debtor expects and has the ability to refinance\nthe obligation on a long-term basis).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب تصنيف الالتزامات طويلة الأجل التي يحق للدائن المطالبة بسدادها، أو التي ستصبح مستحقة عند الطلب، بسبب مخالفة المدين لأحد شروط اتفاقية الدين في تاريخ الميزانية، على أنها:",
+    "choicesAr": [
+      "التزامات طويلة الأجل.",
+      "التزامات متداولة ما لم يُعلن إفلاس المدين.",
+      "التزامات متداولة، ما لم يتنازل الدائن عن حقه في المطالبة بالسداد لمدة تزيد على سنة من تاريخ الميزانية.",
+      "التزامات محتملة إلى أن تُصحح المخالفة."
+    ],
+    "explanationAr": "تُصنَّف الالتزامات طويلة الأجل التي يحق للدائن المطالبة بسدادها بسبب مخالفة أحد شروط اتفاقية الدين في تاريخ الميزانية عادةً ضمن الالتزامات المتداولة. ومع ذلك، لا يلزم إعادة تصنيف الدين إذا كان من المتوقع معالجة المخالفة خلال فترة سماح محددة، أو إذا تنازل الدائن رسميًا عن حق المطالبة بالسداد لمدة تزيد على سنة من تاريخ الميزانية أو فقد هذا الحق لاحقًا. كما لا يلزم إعادة التصنيف إذا توقّع المدين إعادة التمويل على أساس طويل الأجل وكانت لديه القدرة على ذلك."
   },
   {
     "unit": 1,
@@ -440,7 +464,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The entity has not substantially completed what it must do to\nbe entitled to the benefits of the advance payment, and the\nreceipt of future economic benefits is not sufficiently certain to\njustify income recognition. Accordingly, the receipt of cash in\nanticipation of goods to be delivered or services to be\nperformed must be recognized as a liability, usually called\ndeferred (or unearned) revenue or deferred (or unearned)\nincome. Because the manufacturer must deliver the goods\nwithin the next year, this liability is current.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتلقى شركة تصنيع دفعة مقدمة مقابل طلبية خاصة من السلع، ومن المقرر تصنيعها وتسليمها خلال السنة التالية. كيف ينبغي عرض الدفعة المقدمة في قائمة المركز المالي للشركة عن السنة الحالية؟",
+    "choicesAr": [
+      "التزام متداول.",
+      "التزام غير متداول.",
+      "مبلغ مخفِّض للأصول.",
+      "إيراد مستحق."
+    ],
+    "explanationAr": "لم تُنجز المنشأة بعد بصورة جوهرية ما يلزم لاستحقاقها منافع الدفعة المقدمة، كما أن تحقق المنافع الاقتصادية المستقبلية ليس مؤكدًا بدرجة تكفي للاعتراف بالإيراد. لذلك، يجب إثبات النقد المقبوض مقدمًا مقابل سلع ستُسلَّم أو خدمات ستُقدَّم لاحقًا كالتزام، يُسمّى عادةً إيرادًا مؤجلًا أو غير مكتسب. وبما أن على الشركة تسليم السلع خلال السنة التالية، فإن الالتزام يُصنّف متداولًا."
   },
   {
     "unit": 1,
@@ -457,7 +489,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Accounts payable are properly classified as current liabilities\nbecause they are for items entering into the operating cycle.\nShort-term debt that is refinanced by a post-balance-sheet-\ndate issuance of long-term debt should be classified as\nnoncurrent. (The ability to refinance on a long-term basis has\nbeen demonstrated.) Thus, the short-term construction loan is\nclassified as noncurrent. Accordingly, the entity records\ncurrent liabilities of $30,000 and noncurrent liabilities of\n$100,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة حسابات دائنة مستحقة بقيمة 30,000 دولار وقرض إنشاء قصير الأجل بقيمة 100,000 دولار في نهاية السنة. وأُعيد تمويل القرض بإصدار سندات طويلة الأجل بعد نهاية السنة وقبل إصدار القوائم المالية. كيف ينبغي تسجيل هذه الالتزامات في الميزانية؟",
+    "choicesAr": [
+      "التزامات غير متداولة بقيمة 130,000 دولار.",
+      "التزامات متداولة بقيمة 130,000 دولار.",
+      "التزامات متداولة بقيمة 30,000 دولار والتزامات غير متداولة بقيمة 100,000 دولار.",
+      "التزامات متداولة بقيمة 130,000 دولار، مع الإفصاح المطلوب في الإيضاحات عن إعادة تمويل القرض."
+    ],
+    "explanationAr": "يُصنّف الحساب الدائن ضمن الالتزامات المتداولة لأنه يتعلق ببنود تدخل في دورة التشغيل. أما الدين قصير الأجل الذي يُعاد تمويله بإصدار دين طويل الأجل بعد تاريخ الميزانية، فيُصنّف ضمن الالتزامات غير المتداولة، لأن القدرة على إعادة التمويل طويل الأجل قد ثبتت. لذلك تُسجّل الشركة التزامات متداولة بقيمة 30,000 دولار والتزامات غير متداولة بقيمة 100,000 دولار."
   },
   {
     "unit": 1,
