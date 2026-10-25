@@ -14,7 +14,15 @@
     ],
     "answerIndex": 1,
     "explanation": "According to the FASB’s Conceptual Framework, the\nobjectives of external financial reporting are to provide\ninformation that (1) is useful to present and potential investors,\ncreditors, and others in making rational financial decisions\nregarding the enterprise; (2) helps those parties in assessing\nthe amounts, timing, and uncertainty of prospective cash\nreceipts from dividends or interest and the proceeds from sale,\nredemption, or maturity of securities or loans; and\n(3) concerns the economic resources of an enterprise, the\nclaims thereto, and the effects of transactions, events, and\ncircumstances that change its resources and claims thereto.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أحد الأهداف الأساسية للتقارير المالية الخارجية هو:",
+    "choicesAr": [
+      "القياس المباشر لقيمة منشأة تجارية.",
+      "توفير معلومات مفيدة للمستثمرين الحاليين والمحتملين والدائنين وغيرهم عند اتخاذ قرارات مالية رشيدة بشأن المنشأة.",
+      "وضع قواعد لاستحقاق الالتزامات.",
+      "القياس المباشر لسعر سهم المنشأة."
+    ],
+    "explanationAr": "وفقًا للإطار المفاهيمي لمجلس معايير المحاسبة المالية (FASB)، تتمثل أهداف التقارير المالية الخارجية في توفير معلومات: (1) مفيدة للمستثمرين الحاليين والمحتملين والدائنين وغيرهم عند اتخاذ قرارات مالية رشيدة بشأن المنشأة؛ (2) تساعد هذه الأطراف على تقييم مبالغ المقبوضات النقدية المستقبلية المتوقعة من توزيعات الأرباح أو الفوائد، وتوقيتها، ومدى عدم التأكد بشأنها، وكذلك المتحصلات من بيع الأوراق المالية أو استردادها أو استحقاقها، أو من القروض؛ و(3) تتعلق بالموارد الاقتصادية للمنشأة والمطالبات عليها، وبآثار المعاملات والأحداث والظروف التي تغيّر تلك الموارد والمطالبات."
   },
   {
     "unit": 1,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Financial accounting principles assume that a business entity\nis a going concern in the absence of evidence to the contrary.\nThe concept justifies the use of depreciation and amortization\nschedules, and the recording of assets and liabilities using\nattributes other than liquidation value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من أسس القياس المحاسبي التالية لا يتفق مع فرض الاستمرارية؟",
+    "choicesAr": [
+      "التكلفة التاريخية.",
+      "التحقق.",
+      "مدخل المعاملات.",
+      "قيمة التصفية."
+    ],
+    "explanationAr": "تفترض المبادئ المحاسبية أن المنشأة كيان مستمر ما لم يوجد دليل على خلاف ذلك. ويبرر هذا المفهوم استخدام جداول الإهلاك والإطفاء، وتسجيل الأصول والالتزامات باستخدام أسس قياس غير قيمة التصفية."
   },
   {
     "unit": 1,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The objective is to report financial information that is useful in\nmaking decisions about providing resources to the reporting\nentity. Primary users of financial information are current or\nprospective investors and creditors who cannot obtain it\ndirectly. Their decisions depend on expected returns.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أحد أهداف التقارير المالية هو:",
+    "choicesAr": [
+      "توفير معلومات مفيدة للمستثمرين والدائنين والمانحين وغيرهم من المستخدمين عند اتخاذ القرارات.",
+      "تقييم مدى كفاية الرقابة الداخلية.",
+      "تقييم نتائج الإدارة مقارنةً بالمعايير.",
+      "توفير معلومات عن الالتزام بالإجراءات المعتمدة."
+    ],
+    "explanationAr": "الهدف هو إعداد تقارير عن معلومات مالية مفيدة عند اتخاذ قرارات بشأن تقديم الموارد إلى المنشأة المُعدّة للتقرير. والمستخدمون الأساسيون للمعلومات المالية هم المستثمرون والدائنون الحاليون أو المحتملون الذين لا يستطيعون الحصول على هذه المعلومات مباشرةً. وتعتمد قراراتهم على العوائد المتوقعة."
   },
   {
     "unit": 1,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Accrual-basis amounts used in financial reporting are not\nuseful to managers making day-to-day operating decisions.\nThe practice of management accounting fulfills the needs of\nthese users.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكون القوائم المالية الواردة في التقرير السنوي المقدم إلى المساهمين أقل فائدة لأيٍّ من الفئات التالية؟",
+    "choicesAr": [
+      "سماسرة الأوراق المالية.",
+      "المصرفيون الذين يستعدون لمنح قرض.",
+      "المنشآت المنافسة.",
+      "المديرون المسؤولون عن الأنشطة التشغيلية."
+    ],
+    "explanationAr": "لا تكون المبالغ المعدّة على أساس الاستحقاق والمستخدمة في التقارير المالية مفيدة بالقدر نفسه للمديرين الذين يتخذون قرارات التشغيل اليومية. ويُلبّي نظام المحاسبة الإدارية احتياجات هؤلاء المستخدمين."
   },
   {
     "unit": 1,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The information reported relates to the entity’s economic\nresources and claims to them (financial position) and to\nchanges in those resources and claims.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من العبارات التالية صحيحة بشأن هدف التقارير المالية ذات الغرض العام؟",
+    "choicesAr": [
+      "تركّز التقارير المالية عادةً على القطاعات الصناعية بدلًا من المنشآت الفردية.",
+      "ينطبق الهدف فقط على المعلومات المفيدة للمتخصصين في الاستثمار.",
+      "تقيس التقارير المالية أداء الإدارة قياسًا مباشرًا.",
+      "تتعلق المعلومات المقدمة بالموارد الاقتصادية للمنشأة والمطالبات عليها."
+    ],
+    "explanationAr": "تتعلق المعلومات المُبلّغ عنها بالموارد الاقتصادية للمنشأة والمطالبات عليها (أي المركز المالي)، وكذلك بالتغيرات التي تطرأ على تلك الموارد والمطالبات."
   },
   {
     "unit": 1,
