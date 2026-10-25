@@ -889,7 +889,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A noncurrent note receivable is not expected to be converted\ninto cash within 1 year or one operating cycle, whichever is\nlonger. Because the principal is due more than 1 year from the\nbalance sheet date, it must be regarded as noncurrent.\nHowever, the accrued interest is a current asset because it is\ndue in 2 months.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في ميزانية Geo بتاريخ 30 أبريل من السنة 3، أُدرجت ورقة قبض كأصل غير متداول، بينما أُدرجت الفائدة المستحقة عنها لمدة 10 أشهر كأصل متداول. أي الشروط التالية يتوافق مع ورقة القبض؟",
+    "choicesAr": [
+      "يُستحق كل من أصل المبلغ والفائدة في 30 يونيو من السنتين 3 و4.",
+      "يستحق أصل المبلغ والفائدة في 31 ديسمبر من السنة 3.",
+      "يُستحق كل من أصل المبلغ والفائدة في 31 ديسمبر من السنتين 3 و4.",
+      "يستحق أصل المبلغ في 30 يونيو من السنة 4، وتستحق الفائدة في 30 يونيو من السنتين 3 و4."
+    ],
+    "explanationAr": "لا يُتوقع تحويل ورقة القبض غير المتداولة إلى نقد خلال سنة واحدة أو دورة تشغيل واحدة، أيهما أطول. ولأن أصل المبلغ يستحق بعد أكثر من سنة من تاريخ الميزانية، فيجب تصنيفه غير متداول. أما الفائدة المستحقة فهي أصل متداول لأنها تستحق بعد شهرين."
   },
   {
     "unit": 1,
@@ -906,7 +914,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An asset is classified as current on the statement of financial\nposition if it is expected to be realized within the entity’s\noperating cycle or 1 year, whichever is longer. Current assets\ninclude (1) cash and cash equivalents; (2) certain individual\ntrading, available-for-sale, and held-to-maturity debt securities;\n(3) receivables; (4) inventories; (5) prepaid expenses; and (6)\ncertain individual investments in equity securities. Funds\nrestricted as to withdrawal or use for other than current\noperations are classified as noncurrent assets. Thus, the\n$10,000 in a sinking fund for a long-term bond payable is\nclassified as a noncurrent asset. Current receivables are\nmeasured at net amount expected to be collected (i.e., net of\nallowance for credit losses). Trading debt securities are\nclassified as current assets because they are bought and held\nprimarily for sale in the near term. Accordingly, the total of\ncurrent assets is $64,000 ($40,000 unrestricted cash +\n$15,000 current receivables carrying amount + $7,000\nmerchandise inventory + $2,000 investment in trading debt\nsecurities).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة Clear الأرصدة المختارة التالية:\nالنقد (يشمل 10,000 دولار في صندوق مخصص لسداد سندات طويلة الأجل): 50,000 دولار\nالحسابات المدينة: 20,000 دولار\nمخصص خسائر الائتمان: 5,000 دولار\nودائع مستلمة من العملاء: 3,000 دولار\nمخزون البضائع: 7,000 دولار\nإيجار غير مكتسب: 1,000 دولار\nاستثمار في أوراق دين محتفظ بها للمتاجرة: 2,000 دولار\nما إجمالي الأصول المتداولة الذي ينبغي أن تعرضه شركة Clear في ميزانيتها؟",
+    "choicesAr": [
+      "64,000 دولار",
+      "67,000 دولار",
+      "72,000 دولار",
+      "74,000 دولار"
+    ],
+    "explanationAr": "يُصنّف الأصل متداولًا في قائمة المركز المالي إذا كان متوقعًا تحققه خلال دورة تشغيل المنشأة أو سنة واحدة، أيهما أطول. تشمل الأصول المتداولة النقد وما يعادله، وبعض أوراق الدين المحتفظ بها للمتاجرة أو المتاحة للبيع أو المحتفظ بها حتى الاستحقاق، والذمم المدينة، والمخزون، والمصروفات المدفوعة مقدمًا، وبعض الاستثمارات في أدوات حقوق الملكية. وتُصنّف الأموال المقيدة الاستخدام لأغراض غير العمليات الجارية كأصول غير متداولة؛ لذلك يُستبعد مبلغ 10,000 دولار المخصص لسداد سند طويل الأجل. وتُعرض الذمم المدينة المتداولة بصافي المبلغ المتوقع تحصيله بعد خصم مخصص خسائر الائتمان، كما تُصنّف أوراق الدين المحتفظ بها للمتاجرة أصولًا متداولة. وبذلك يبلغ الإجمالي 64,000 دولار (40,000 نقد غير مقيد + 15,000 صافي الذمم المدينة + 7,000 مخزون + 2,000 استثمار في أوراق دين للمتاجرة)."
   },
   {
     "unit": 1,
@@ -923,7 +939,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Current assets are reasonably expected to be realized in cash\nor to be sold or consumed within 12 months or the operating\ncycle of the business, whichever is longer. If the ordinary trade\nreceivables of the business fall due more than 12 months from\nthe balance sheet date, then the operating cycle is clearly\nlonger than 12 months and the receivables should be included\nin current assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية غير صحيحة بشأن الإفصاح عن الحسابات المدينة في الميزانية؟",
+    "choicesAr": [
+      "يجب تحديد الحسابات المدينة في الميزانية على أنها مرهونة إذا استُخدمت ضمانًا لقرض، حتى لو عُرض القرض نفسه كالتزام في الميزانية ذاتها.",
+      "عادةً ما يُستبعد الجزء من حسابات الأقساط المستحقة من العملاء بعد أكثر من 12 شهرًا من تاريخ الميزانية من الأصول المتداولة.",
+      "يجوز خصم مخصصات خسائر الائتمان والتعديلات المستقبلية من إجمالي الحسابات المدينة المعروضة في الميزانية الحالية.",
+      "من الأفضل عرض الذمم التجارية منفصلة عن الذمم غير التجارية عندما تكون مبالغ كل منها جوهرية."
+    ],
+    "explanationAr": "يُتوقع بصورة معقولة تحويل الأصول المتداولة إلى نقد أو بيعها أو استهلاكها خلال 12 شهرًا أو دورة تشغيل المنشأة، أيهما أطول. فإذا كانت الذمم التجارية العادية للمنشأة تستحق بعد أكثر من 12 شهرًا من تاريخ الميزانية، فهذا يعني أن دورة التشغيل تتجاوز 12 شهرًا بوضوح، ولذلك ينبغي إدراج هذه الذمم ضمن الأصول المتداولة."
   },
   {
     "unit": 1,
@@ -940,7 +964,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Current liabilities are obligations the liquidation of which is\nreasonably expected to require the use of existing resources\nproperly classifiable as current assets or the creation of other\ncurrent liabilities during the next operating cycle or year,\nwhichever is longer. Current liabilities also include\n(1) obligations that by their terms are or will be due on\ndemand within 1 year (or the operating cycle, if longer) and\n(2) obligations that are or will be callable by the creditor\nbecause of a violation of a debt covenant at the balance sheet\ndate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أفضل تعريف للالتزامات المتداولة هو أنها الالتزامات التي:",
+    "choicesAr": [
+      "يتطلب سدادها استخدام موارد يمكن تصنيفها على نحو صحيح كأصول متداولة خلال دورة التشغيل التالية أو سنة واحدة، أيهما أطول.",
+      "يتطلب سدادها استخدام النقد أو زيادة الالتزامات المتداولة خلال دورة التشغيل التالية أو سنة واحدة، أيهما أطول.",
+      "يُتوقع بصورة معقولة أن يتطلب سدادها استخدام الأصول المتداولة أو إنشاء التزامات متداولة أخرى خلال دورة التشغيل التالية أو سنة واحدة، أيهما أطول.",
+      "تتعلق بتعهدات تُبرم خلال دورة التشغيل التالية أو سنة واحدة، أيهما أطول."
+    ],
+    "explanationAr": "الالتزامات المتداولة هي الالتزامات التي يُتوقع بصورة معقولة أن يتطلب سدادها استخدام موارد قائمة يمكن تصنيفها أصولًا متداولة، أو إنشاء التزامات متداولة أخرى، خلال دورة التشغيل التالية أو سنة واحدة، أيهما أطول. وتشمل أيضًا الالتزامات التي تستحق أو قد تصبح مستحقة عند الطلب وفق شروطها خلال سنة واحدة (أو دورة التشغيل إذا كانت أطول)، والالتزامات التي يحق للدائن المطالبة بسدادها بسبب مخالفة شرط من شروط الدين في تاريخ الميزانية."
   },
   {
     "unit": 1,
