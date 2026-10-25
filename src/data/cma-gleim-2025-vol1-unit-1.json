@@ -514,7 +514,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Current liabilities include those obligations that are expected\nto be satisfied by the (1) payment of cash, (2) use of current\nassets other than cash, or (3) creation of new current liabilities\nwithin 1 year from the balance sheet date (or operating cycle,\nif longer).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب إدراج الدين غير المتداول ضمن القسم المتداول من قائمة المركز المالي إذا:",
+    "choicesAr": [
+      "كان من المقرر تحويله إلى أسهم عادية قبل تاريخ الاستحقاق.",
+      "كان يستحق خلال السنة وسيُسدد باستخدام الأصول المتداولة.",
+      "كانت الإدارة تخطط لإعادة تمويله خلال السنة.",
+      "أُنشئ صندوق لسداد السندات لاستخدامه في موعد السداد المحدد خلال السنة التالية."
+    ],
+    "explanationAr": "تشمل الالتزامات المتداولة الالتزامات المتوقع تسويتها من خلال: (1) دفع النقد، أو (2) استخدام أصول متداولة غير نقدية، أو (3) إنشاء التزامات متداولة جديدة، وذلك خلال سنة من تاريخ الميزانية أو خلال دورة التشغيل إذا كانت أطول."
   },
   {
     "unit": 1,
@@ -531,7 +539,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Available-for-sale debt securities (an investment) and prepaid\nexpenses are assets, but treasury stock is an equity item. The\ntotal of the assets reported is therefore $600,000 ($200,000 +\n$400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى إحدى الشركات البنود التالية مسجلة في دفاترها المالية:\nأوراق مالية دين متاحة للبيع: 200,000 دولار\nمصروفات مدفوعة مقدمًا: 400,000 دولار\nأسهم خزينة: 100,000 دولار\nما إجمالي هذه البنود الذي ينبغي عرضه كأصول في قائمة المركز المالي؟",
+    "choicesAr": [
+      "400,000 دولار",
+      "500,000 دولار",
+      "600,000 دولار",
+      "700,000 دولار"
+    ],
+    "explanationAr": "تُعد أوراق الدين المتاحة للبيع (وهي استثمار) والمصروفات المدفوعة مقدمًا أصولًا، بينما تُعد أسهم الخزينة بندًا ضمن حقوق الملكية. لذلك يبلغ إجمالي الأصول المعروضة 600,000 دولار (200,000 + 400,000)."
   },
   {
     "unit": 1,
@@ -548,7 +564,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Current assets are reasonably expected to be realized in\ncash, sold, or consumed during the normal operating cycle of\nthe business or within 1 year, whichever is longer. The\noperating cycle is the time between the acquisition of\nmaterials or services and the final cash realization from the\nearning process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من المتوقع تحصيل الذمم المدينة المصنفة متداولة في قائمة المركز المالي خلال:",
+    "choicesAr": [
+      "دورة التشغيل الحالية.",
+      "سنة واحدة.",
+      "دورة التشغيل الحالية أو سنة واحدة، أيهما أطول.",
+      "دورة التشغيل الحالية أو سنة واحدة، أيهما أقصر."
+    ],
+    "explanationAr": "يُتوقع بصورة معقولة تحويل الأصول المتداولة إلى نقد أو بيعها أو استهلاكها خلال دورة التشغيل العادية للمنشأة أو خلال سنة واحدة، أيهما أطول. ودورة التشغيل هي الفترة بين اقتناء المواد أو الخدمات والتحصيل النقدي النهائي الناتج عن عملية تحقيق الإيراد."
   },
   {
     "unit": 1,
@@ -565,7 +589,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Current assets include, in descending order of liquidity, cash\nand cash equivalents; certain individual trading, available-for-\nsale, and held-to-maturity debt securities; receivables;\ninventories; and prepaid expenses. Trading securities are\nexpected to be sold in the near term, so they are likely to be\nclassified as current.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُتوقع بصورة معقولة تحويل الأصول المتداولة إلى نقد أو بيعها أو استهلاكها خلال دورة التشغيل العادية للمنشأة. ومن المرجح أن تشمل الأصول المتداولة:",
+    "choicesAr": [
+      "الأصول غير الملموسة.",
+      "الشهرة المشتراة.",
+      "تكاليف التأسيس.",
+      "الأوراق المالية المحتفظ بها بغرض المتاجرة."
+    ],
+    "explanationAr": "تشمل الأصول المتداولة، بترتيب تنازلي حسب السيولة، النقد وما يعادله؛ وبعض أوراق الدين المحتفظ بها للمتاجرة أو المتاحة للبيع أو المحتفظ بها حتى الاستحقاق؛ والذمم المدينة؛ والمخزون؛ والمصروفات المدفوعة مقدمًا. ومن المتوقع بيع الأوراق المالية المحتفظ بها بغرض المتاجرة في الأجل القريب، لذا يُرجح تصنيفها كأصول متداولة."
   },
   {
     "unit": 1,
@@ -582,7 +614,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total assets equal the sum of total liabilities and equity. Total\nliabilities were $94,000 at year end, and equity amounted to\n$523,000 ($500,000 from issuance of stock + $25,000 net\nincome – $2,000 cash dividend). Total assets are therefore\n$617,000 ($523,000 + $94,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تأسست شركة مساهمة في 1 يناير من السنة 6، بتمويل قدره 500,000 دولار من إصدار الأسهم، واقترضت 75,000 دولار. وخلال سنة التشغيل الأولى، حققت صافي دخل قدره 25,000 دولار. وفي 15 ديسمبر، دفعت الشركة توزيعات نقدية قدرها 2,000 دولار. ولم تؤثر أي أنشطة أخرى في حقوق الملكية خلال السنة 6. وفي 31 ديسمبر من السنة 6، ارتفعت التزامات الشركة إلى 94,000 دولار. ما إجمالي الأصول الذي ينبغي إظهاره في ميزانية الشركة في 31 ديسمبر من السنة 6؟",
+    "choicesAr": [
+      "598,000 دولار",
+      "600,000 دولار",
+      "617,000 دولار",
+      "692,000 دولار"
+    ],
+    "explanationAr": "يساوي إجمالي الأصول مجموع الالتزامات وحقوق الملكية. بلغت الالتزامات في نهاية السنة 94,000 دولار، وبلغت حقوق الملكية 523,000 دولار (500,000 من إصدار الأسهم + 25,000 صافي الدخل − 2,000 توزيعات نقدية). لذلك يبلغ إجمالي الأصول 617,000 دولار (523,000 + 94,000)."
   },
   {
     "unit": 1,
