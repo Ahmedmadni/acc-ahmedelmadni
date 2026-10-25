@@ -503,7 +503,7 @@ function CmaPage() {
                       السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
                     </p>
                   )}
-                  {q.sourceLanguage === "en" && (
+                  {q.sourcePage !== undefined && (
                     <p className="mt-2 text-xs text-[#76543F]">
                       {lang === "ar"
                         ? `جليم 2025 · الصفحة ${q.sourcePage}`
@@ -518,7 +518,7 @@ function CmaPage() {
                     </p>
                   )}
                   <p
-                    dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                    dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
                     className="mt-3 whitespace-pre-wrap text-sm font-bold leading-7"
                   >
                     {q.question[lang]}
@@ -539,7 +539,7 @@ function CmaPage() {
                           className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 transition focus-visible:outline-2 focus-visible:outline-[#A88765] ${correct ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : "border-[#A88765]/25 hover:border-[#A88765] disabled:opacity-70"}`}
                         >
                           <span
-                            dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                            dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
                             className="whitespace-pre-wrap"
                           >
                             {choice}
@@ -568,7 +568,7 @@ function CmaPage() {
                             : "Incorrect"}
                       </span>
                       <p
-                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
                         className="mt-2 whitespace-pre-wrap"
                       >
                         {q.explanation[lang]}
