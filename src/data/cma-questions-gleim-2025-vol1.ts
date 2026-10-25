@@ -18,9 +18,12 @@ interface SourceRecord {
   page: number;
   topicId: string;
   stem: string;
+  stemAr?: string;
   choices: string[];
+  choicesAr?: string[];
   answerIndex: number;
   explanation: string;
+  explanationAr?: string;
   answerStatus: string;
   sourceTextStatus?: "reconstructed" | "table-reflowed";
 }
@@ -39,7 +42,7 @@ const records: SourceRecord[] = [
 ];
 const topics = new Map(CMA_TOPICS.map((topic) => [topic.id, topic]));
 
-/** Source-language items retain their English text while Arabic translation is reviewed. */
+/** Source-language items retain English text; Arabic fields are used when editorially translated. */
 export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
   const topic = topics.get(item.topicId);
   if (!topic || topic.studyUnit !== item.unit)
@@ -53,10 +56,10 @@ export const CMA_GLEIM_2025_VOL1_QUESTIONS: CmaLocalQuestion[] = records.map((it
     examDomain: `Part 1 — Study Unit ${item.unit}`,
     difficulty: "intermediate",
     reference: `Gleim CMA Part 1, 2025 MCQ Bank Vol. 1, SU ${item.unit} §${item.section}, Q${item.number}, p. ${item.page}`,
-    question: { ar: item.stem, en: item.stem },
-    choices: { ar: item.choices, en: item.choices },
+    question: { ar: item.stemAr ?? item.stem, en: item.stem },
+    choices: { ar: item.choicesAr ?? item.choices, en: item.choices },
     answerIndex: item.answerIndex,
-    explanation: { ar: item.explanation, en: item.explanation },
+    explanation: { ar: item.explanationAr ?? item.explanation, en: item.explanation },
     sourceLanguage: "en",
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
