@@ -264,7 +264,15 @@
     ],
     "answerIndex": 3,
     "explanation": "For financial reporting purposes, current assets consist of\ncash and other assets or resources expected to be realized in\ncash, sold, or consumed during the longer of 1 year or the\nnormal operating cycle of the business.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تصنيف الأصول إلى متداولة وغير متداولة لأغراض إعداد التقارير، فإن:",
+    "choicesAr": [
+      "المبالغ التي تُثبت بها الأصول المتداولة وتُعرض يجب أن تعكس قيمتها النقدية القابلة للتحقق.",
+      "تُدرج المدفوعات المقدمة، مثل التأمين أو الإيجار، ضمن مجموعة «أصول أخرى» بدلًا من الأصول المتداولة لأنها ستُحمّل على المصروفات في نهاية المطاف.",
+      "تتحدد الفترة الزمنية المستخدمة للتمييز بين الأصول المتداولة وغير المتداولة وفقًا للطبيعة الموسمية للنشاط.",
+      "تُصنَّف الأصول على أنها متداولة إذا كان من المتوقع بصورة معقولة تحويلها إلى نقد أو استهلاكها خلال دورة التشغيل العادية."
+    ],
+    "explanationAr": "لأغراض التقارير المالية، تشمل الأصول المتداولة النقد والأصول أو الموارد الأخرى المتوقع تحويلها إلى نقد أو بيعها أو استهلاكها خلال الفترة الأطول من سنة واحدة أو دورة التشغيل العادية للمنشأة."
   },
   {
     "unit": 1,
@@ -281,7 +289,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The statement of financial position, also known as the balance\nsheet, reports an entity’s financial position at a moment in\ntime. It is therefore not useful for assessing past performance\nfor a period of time. A balance sheet can be used to help\nusers assess liquidity, financial flexibility, and risk.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توفر قائمة المركز المالي أساسًا لجميع الاستخدامات التالية، باستثناء:",
+    "choicesAr": [
+      "حساب معدلات العائد.",
+      "تقييم هيكل رأس المال.",
+      "تقييم السيولة والمرونة المالية.",
+      "تحديد الربحية وتقييم الأداء السابق."
+    ],
+    "explanationAr": "تعرض قائمة المركز المالي، المعروفة أيضًا بالميزانية العمومية، المركز المالي للمنشأة في لحظة زمنية محددة. لذلك فهي لا تصلح لتقييم الأداء خلال فترة زمنية. ويمكن استخدام الميزانية لمساعدة المستخدمين على تقييم السيولة والمرونة المالية والمخاطر."
   },
   {
     "unit": 1,
@@ -298,7 +314,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The statement of financial position, or balance sheet, provides\ninformation about an entity’s resource structure (assets) and\nfinancing structure (liabilities and equity) at a moment in time.\nAccording to the FASB’s Conceptual Framework, the\nstatement of financial position does not purport to show the\nvalue of a business, but it enables investors, creditors, and\nother users to make their own estimates of value. It helps\nusers assess liquidity, financial flexibility, profitability, and risk.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تهدف قائمة المركز المالي إلى مساعدة المستثمرين والدائنين على:",
+    "choicesAr": [
+      "تقييم مقدار التدفقات النقدية الصافية الداخلة المتوقعة للمنشأة وتوقيتها ومدى عدم التأكد بشأنها.",
+      "تقييم الموارد الاقتصادية للمنشأة والتزاماتها.",
+      "تقييم الأداء الاقتصادي للمنشأة.",
+      "تقييم التغيرات في حقوق ملكية المنشأة."
+    ],
+    "explanationAr": "توفر قائمة المركز المالي معلومات عن هيكل موارد المنشأة (الأصول) وهيكل تمويلها (الالتزامات وحقوق الملكية) في لحظة زمنية محددة. ووفقًا للإطار المفاهيمي لمجلس معايير المحاسبة المالية (FASB)، لا تهدف القائمة إلى إظهار قيمة المنشأة، لكنها تمكّن المستثمرين والدائنين وغيرهم من المستخدمين من وضع تقديراتهم الخاصة للقيمة. كما تساعدهم على تقييم السيولة والمرونة المالية والربحية والمخاطر."
   },
   {
     "unit": 1,
@@ -315,7 +339,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Short-term obligations expected to be refinanced should be\nreported as current liabilities unless the firm both plans to\nrefinance and has the ability to refinance the debt on a long-\nterm basis. The ability to refinance on a long-term basis is\nevidenced by a post-balance-sheet date issuance of long-term\ndebt or a financing arrangement that will clearly permit long-\nterm refinancing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة سنة تقويمية لأغراض التقارير المالية والضريبية، ولديها سندات رهن عقاري بقيمة 100 مليون دولار تستحق في 15 يناير من السنة الثانية. وبحلول 10 يناير من السنة الثانية، تعتزم الشركة إعادة تمويل الدين بسندات رهن عقاري جديدة طويلة الأجل، وقد أبرمت اتفاقية تمويل تثبت بوضوح قدرتها على إتمام إعادة التمويل. كيف يجب تصنيف هذا الدين؟",
+    "choicesAr": [
+      "التزام متداول في قائمة المركز المالي بتاريخ 31 ديسمبر من السنة الأولى.",
+      "التزام طويل الأجل في قائمة المركز المالي بتاريخ 31 ديسمبر من السنة الأولى.",
+      "اعتباره مسددًا في 31 ديسمبر من السنة الأولى.",
+      "اعتباره دينًا خارج الميزانية العمومية."
+    ],
+    "explanationAr": "ينبغي عرض الالتزامات قصيرة الأجل المتوقع إعادة تمويلها ضمن الالتزامات المتداولة، ما لم تكن المنشأة تخطط لإعادة التمويل وتملك القدرة على إعادة تمويل الدين على أساس طويل الأجل معًا. ويُثبت توافر هذه القدرة إما بإصدار دين طويل الأجل بعد تاريخ قائمة المركز المالي أو بوجود ترتيب تمويلي يسمح بوضوح بإعادة التمويل طويل الأجل."
   },
   {
     "unit": 1,
@@ -332,7 +364,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The balance sheet presents three major financial accounting\nelements: assets (items of value), liabilities (debts), and equity\n(net worth). According to the FASB’s Conceptual Framework,\nassets are probable future economic benefits resulting from\npast transactions or events. Liabilities are probable future\nsacrifices of economic benefits arising from present\nobligations as a result of past transactions or events. Equity is\nthe residual interest in the assets after deduction of liabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الغرض الأساسي من قائمة المركز المالي هو عرض:",
+    "choicesAr": [
+      "القيمة العادلة لأصول المنشأة في لحظة زمنية معينة.",
+      "حالة أصول المنشأة في حال تصفيتها قسرًا.",
+      "نجاح عمليات الشركة خلال فترة زمنية محددة.",
+      "بنود القيمة والديون وصافي حقوق الملكية."
+    ],
+    "explanationAr": "تعرض الميزانية العمومية ثلاثة عناصر رئيسية للمحاسبة المالية: الأصول (البنود ذات القيمة)، والالتزامات (الديون)، وحقوق الملكية (صافي الثروة). ووفقًا للإطار المفاهيمي لمجلس معايير المحاسبة المالية (FASB)، تمثل الأصول منافع اقتصادية مستقبلية محتملة ناتجة عن معاملات أو أحداث سابقة. وتمثل الالتزامات تنازلات محتملة مستقبلًا عن منافع اقتصادية تنشأ عن التزامات حالية نتيجة معاملات أو أحداث سابقة. أما حقوق الملكية فهي الحصة المتبقية في الأصول بعد خصم الالتزامات."
   },
   {
     "unit": 1,
