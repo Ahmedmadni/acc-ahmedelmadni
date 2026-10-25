@@ -139,7 +139,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Accrual accounting reports the effects of transactions and\nother events and circumstances even if the resulting cash\nflows occur in a different period. The advantage of accrual\naccounting is that information about an entity’s economic\nresources and claims and changes in them during a period\nprovides a better basis for assessing past and future\nperformance than information solely about cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيُّ أساس محاسبي يُرجَّح أن يوفّر أفضل تقييم لقدرة المنشأة السابقة والمستقبلية على توليد صافي تدفقات نقدية داخلة؟",
+    "choicesAr": [
+      "الأساس النقدي للمحاسبة.",
+      "الأساس النقدي المعدّل للمحاسبة.",
+      "أساس الاستحقاق في المحاسبة.",
+      "الأساس الضريبي للمحاسبة."
+    ],
+    "explanationAr": "يعرض أساس الاستحقاق آثار المعاملات والأحداث والظروف الأخرى حتى إذا حدثت التدفقات النقدية الناتجة عنها في فترة مختلفة. وتتمثل ميزة أساس الاستحقاق في أن المعلومات المتعلقة بالموارد الاقتصادية للمنشأة والمطالبات عليها والتغيرات التي تطرأ عليها خلال فترة ما توفر أساسًا أفضل لتقييم الأداء السابق والمستقبلي من المعلومات التي تقتصر على التدفقات النقدية."
   },
   {
     "unit": 1,
@@ -156,7 +164,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The role of general purpose external financial reporting is to\nprovide information that is useful to current and potential\ninvestors and creditors, not merely to management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدعم جميع العبارات التالية هدف التقارير المالية، باستثناء توفير معلومات:",
+    "choicesAr": [
+      "مفيدة لاتخاذ قرارات الاستثمار والائتمان.",
+      "تساعد الإدارة على تقييم المشروعات البديلة.",
+      "تتعلق بموارد المنشأة والمطالبات على تلك الموارد.",
+      "تساعد المستثمرين والدائنين على التنبؤ بالتدفقات النقدية المستقبلية."
+    ],
+    "explanationAr": "يتمثل دور التقارير المالية الخارجية ذات الغرض العام في توفير معلومات مفيدة للمستثمرين والدائنين الحاليين والمحتملين، وليس للإدارة وحدها."
   },
   {
     "unit": 1,
@@ -173,7 +189,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The objective is to report financial information that is useful in\nmaking decisions about providing resources to the reporting\nentity. Primary users of financial information are current and\npotential investors and creditors who cannot obtain it directly.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تركّز التقارير المالية الخارجية ذات الغرض العام للشركة أساسًا على احتياجات أيٍّ من المستخدمين التاليين؟",
+    "choicesAr": [
+      "الجهات التنظيمية والضريبية.",
+      "المستثمرون والدائنون ومستشاروهم.",
+      "مجلس إدارة الشركة.",
+      "إدارة الشركة."
+    ],
+    "explanationAr": "الهدف هو إعداد تقارير عن معلومات مالية مفيدة عند اتخاذ قرارات بشأن تقديم الموارد إلى المنشأة المُعدّة للتقرير. والمستخدمون الأساسيون للمعلومات المالية هم المستثمرون والدائنون الحاليون والمحتملون الذين لا يستطيعون الحصول على المعلومات مباشرةً."
   },
   {
     "unit": 1,
@@ -190,7 +214,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The objective of general-purpose financial reporting is to\nreport financial information that is useful in making decisions\nabout providing resources to the reporting entity. This\ninformation must have the fundamental qualitative\ncharacteristics of relevance and faithful representation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لكي تكون التقارير المالية مفيدة، يجب أن:",
+    "choicesAr": [
+      "تتوافق مع مبادئ المحاسبة المقبولة عمومًا.",
+      "تقدم معلومات مفيدة لاتخاذ قرارات الأعمال والاستثمار.",
+      "تكون مفهومة لمن لديهم معرفة محدودة بالأنشطة التجارية.",
+      "تقيس مباشرةً قيمة المنشأة التي يجري إعداد التقارير عنها."
+    ],
+    "explanationAr": "الهدف من التقارير المالية ذات الغرض العام هو عرض معلومات مالية مفيدة عند اتخاذ قرارات بشأن تقديم الموارد إلى المنشأة المُعدّة للتقرير. ويجب أن تتسم هذه المعلومات بالخاصيتين النوعيتين الأساسيتين: الملاءمة والتمثيل الصادق."
   },
   {
     "unit": 1,
@@ -207,7 +239,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The overall objective is to report financial information that is\nuseful to current and potential investors and creditors in\nmaking decisions about providing resources to an individual\nreporting entity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الهدف الأساسي للتقارير المالية؟",
+    "choicesAr": [
+      "توفير معلومات اقتصادية يمكن لجميع المستخدمين فهمها.",
+      "تزويد الإدارة بتقييم دقيق لأدائها المالي.",
+      "تقديم توقعات للتدفقات النقدية والأداء المالي في المستقبل.",
+      "توفير معلومات مفيدة لاتخاذ القرارات الاقتصادية."
+    ],
+    "explanationAr": "يتمثل الهدف العام في عرض معلومات مالية مفيدة للمستثمرين والدائنين الحاليين والمحتملين عند اتخاذ قرارات بشأن تقديم الموارد إلى منشأة مُعدّة للتقرير بعينها."
   },
   {
     "unit": 1,
