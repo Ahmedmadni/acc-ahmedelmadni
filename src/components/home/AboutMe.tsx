@@ -10,7 +10,7 @@ import portraitImg from "@/assets/ahmed-portrait-charcoal-likeness.webp";
 /** Native aspect ratio of the cropped portrait asset (w/h) — the frame below
  * is positioned as a percentage of this exact box, so it lines up with the
  * figure's shoulders at every breakpoint. */
-const PORTRAIT_RATIO = 320 / 573;
+const PORTRAIT_RATIO = 608 / 1088;
 
 /** An elongated, chamfered-corner octagon — the "specific geometric shape"
  * standing in for a plain rectangle. Drawn once and reused for both the
@@ -359,8 +359,8 @@ function PortraitTilt({
         <img
           src={portraitImg}
           alt={ar ? "أحمد المدني" : "Ahmed Elmadani"}
-          width={320}
-          height={573}
+          width={608}
+          height={1088}
           loading="eager"
           decoding="async"
           className="absolute inset-0 z-10 h-full w-full object-contain drop-shadow-[0_26px_34px_rgba(28,27,25,0.25)]"
