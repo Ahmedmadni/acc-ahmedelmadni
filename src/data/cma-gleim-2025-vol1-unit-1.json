@@ -1814,7 +1814,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Common stock does not have the right to accumulate unpaid\ndividends. This right is often attached to preferred stock.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما لم تكن الأسهم خاضعة لقيود محددة، يجوز لحامل الأسهم العادية الذي يتمتع بحق الأولوية أن يشارك بنسبة تتناسب مع ملكيته في جميع ما يلي، باستثناء:",
+    "choicesAr": [
+      "التصويت لانتخاب أعضاء مجلس الإدارة.",
+      "أصول الشركة عند التصفية.",
+      "توزيعات الأرباح التراكمية.",
+      "الإصدارات الجديدة من الأسهم من الفئة نفسها."
+    ],
+    "explanationAr": "لا تمنح الأسهم العادية حق تراكم توزيعات الأرباح غير المدفوعة؛ فهذا الحق يرتبط غالبًا بالأسهم الممتازة."
   },
   {
     "unit": 1,
@@ -1831,7 +1839,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When a property dividend is declared, the property is\nremeasured at its fair value as of the declaration date. This\namount is then reclassified from retained earnings to property\ndividends payable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في الأول من ديسمبر، أعلن مجلس إدارة شركة توزيعات أرباح عينية تُدفع بأوراق مالية تملكها الشركة. وكان موعد دفع التوزيعات في الخامس من يناير. بلغت التكلفة الأصلية للاستثمار عند شرائه قبل عامين 100,000 دولار. وكانت القيمة السوقية للاستثمار 150,000 دولار في الأول من ديسمبر، و175,000 دولار في 31 ديسمبر، و160,000 دولار في الخامس من يناير. ما المبلغ الذي ينبغي إظهاره في قائمة المركز المالي للشركة في 31 ديسمبر باعتباره توزيعات أرباح عينية مستحقة الدفع؟",
+    "choicesAr": [
+      "100,000 دولار",
+      "150,000 دولار",
+      "160,000 دولار",
+      "175,000 دولار"
+    ],
+    "explanationAr": "عند إعلان توزيعات أرباح عينية، يُعاد قياس الأصل بالقيمة العادلة في تاريخ الإعلان. ثم يُعاد تصنيف هذا المبلغ من الأرباح المحتجزة إلى حساب توزيعات الأرباح العينية المستحقة الدفع."
   },
   {
     "unit": 1,
@@ -1848,7 +1864,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The purchase of treasury stock is recorded on the statement\nof financial position as a decrease in shareholders’ equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُسجَّل شراء أسهم الخزينة في قائمة المركز المالي باعتباره:",
+    "choicesAr": [
+      "زيادة في الأصول.",
+      "انخفاضًا في الالتزامات.",
+      "زيادة في حقوق ملكية المساهمين.",
+      "انخفاضًا في حقوق ملكية المساهمين."
+    ],
+    "explanationAr": "يُسجَّل شراء أسهم الخزينة في قائمة المركز المالي على أنه انخفاض في حقوق ملكية المساهمين."
   },
   {
     "unit": 1,
@@ -1865,7 +1889,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The statement of shareholders’ equity (changes in equity)\npresents a reconciliation in columnar format of the beginning\nand ending balances in the various shareholders’ equity\naccounts. A statement of changes in equity may include, for\nexample, columns for (1) totals, (2) comprehensive income,\n(3) retained earnings, (4) accumulated OCI (but the\ncomponents of OCI are presented in another statement), (5)\ncommon stock, and (6) additional paid-in capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض قائمة حقوق ملكية المساهمين ما يلي:",
+    "choicesAr": [
+      "تسوية بين الأرصدة الافتتاحية والختامية لحسابات حقوق ملكية المساهمين.",
+      "قائمة بجميع حسابات حقوق ملكية المساهمين والمبالغ المقابلة لكل منها.",
+      "حساب عدد الأسهم القائمة المستخدم في حسابات ربحية السهم.",
+      "تسوية صافي الدخل للوصول إلى صافي التدفقات النقدية التشغيلية."
+    ],
+    "explanationAr": "تعرض قائمة حقوق ملكية المساهمين (التغيرات في حقوق الملكية) تسويةً في شكل أعمدة بين الأرصدة الافتتاحية والختامية لمختلف حسابات حقوق الملكية. وقد تتضمن القائمة أعمدة للإجمالي، والدخل الشامل، والأرباح المحتجزة، والدخل الشامل الآخر المتراكم (مع عرض مكونات OCI في قائمة أخرى)، والأسهم العادية، ورأس المال المدفوع الإضافي."
   },
   {
     "unit": 1,
@@ -1882,7 +1914,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When a small stock dividend is declared (less than 20% to\n25% of the previously outstanding common shares), retained\nearnings is debited for the fair value of the stock.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية المتعلقة بتوزيعات الأرباح صحيحة؟",
+    "choicesAr": [
+      "يؤدي توزيع أسهم بنسبة 15% من الأسهم العادية القائمة إلى خصم من الأرباح المحتجزة بالقيمة الاسمية للأسهم الموزعة.",
+      "في تاريخ إعلان توزيع أسهم بنسبة 30%، تنخفض القيمة الدفترية للأرباح المحتجزة بالقيمة السوقية العادلة للأسهم الموزعة.",
+      "لا يؤثر إعلان توزيعات أرباح نقدية في القيمة الدفترية للسهم.",
+      "يؤدي إعلان توزيع أسهم بنسبة 10% ودفعه إلى تخفيض الأرباح المحتجزة بالقيمة السوقية العادلة للأسهم."
+    ],
+    "explanationAr": "عند إعلان توزيعات أسهم صغيرة (أقل من 20% إلى 25% من الأسهم العادية القائمة سابقًا)، تُحمَّل الأرباح المحتجزة بالقيمة العادلة للأسهم."
   },
   {
     "unit": 1,
