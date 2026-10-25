@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { CMA_GLEIM_2025_VOL1_QUESTIONS, hasCompleteArabic } from "./cma-questions-gleim-2025-vol1";
-import unit1 from "./cma-gleim-2025-vol1-unit-1.json";
+import { CMA_GLEIM_2025_VOL1_QUESTIONS, hasCompleteArabic } from "../../src/data/cma-questions-gleim-2025-vol1";
+import unit1 from "../../src/data/cma-gleim-2025-vol1-unit-1.json";
 
 const base = { choices: ["a", "b", "c", "d"] };
 
