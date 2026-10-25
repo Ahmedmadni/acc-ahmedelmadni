@@ -1614,7 +1614,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness during a period except those from investments by\nand distributions to owners. It includes all components of (1)\nnet income and (2) other comprehensive income (OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض من الإبلاغ عن الدخل الشامل؟",
+    "choicesAr": [
+      "تلخيص جميع التغيرات في حقوق الملكية الناتجة عن مصادر غير المُلّاك.",
+      "تسوية الفرق بين صافي الدخل والتدفقات النقدية الناتجة عن الأنشطة التشغيلية.",
+      "توحيد دخل القطاعات المختلفة للمنشأة.",
+      "تقديم معلومات عن كل قطاع من قطاعات المنشأة."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة خلال الفترة، باستثناء التغيرات الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتضمن مكونات صافي الدخل والدخل الشامل الآخر (OCI)."
   },
   {
     "unit": 1,
@@ -1631,7 +1639,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Foreign currency translation adjustments for a foreign\noperation that is relatively self-contained and integrated within\nits environment do not affect cash flows of the reporting entity.\nThey should be excluded from earnings. Accordingly,\ntranslation adjustments are reported in other comprehensive\nincome (OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعدّ أحد مكونات الدخل الشامل الآخر؟",
+    "choicesAr": [
+      "إثبات الحد الأدنى المستحق من إجازات الموظفين.",
+      "تعديلات ترجمة العملات الأجنبية المتراكمة.",
+      "التغيرات في القيمة السوقية للمخزون.",
+      "المكاسب أو الخسائر غير المحققة على أدوات الدين المحتفظ بها للمتاجرة."
+    ],
+    "explanationAr": "لا تؤثر تعديلات ترجمة العملات الأجنبية لعملية أجنبية مستقلة نسبيًا ومتكاملة في بيئتها على التدفقات النقدية للمنشأة المُعدّة للتقرير، ولذلك تُستبعد من الأرباح أو الخسائر. وبناءً عليه، تُعرض تعديلات الترجمة ضمن الدخل الشامل الآخر (OCI)."
   },
   {
     "unit": 1,
@@ -1648,7 +1664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness entity except those changes resulting from\ninvestments by owners and distributions to owners.\nComprehensive income includes two major categories: net\nincome and other comprehensive income (OCI). Net income\nincludes the results of continuing and discontinued operations.\nComponents of comprehensive income not included in the\ndetermination of net income are included in OCI. These\ninclude unrealized holding gains and losses on available-for-\nsale debt securities and certain foreign currency items, such\nas a translation adjustment. The infrequently occurring gain of\n$50,000 has already been included in the determination of net\nincome. Thus, comprehensive income equals $520,000\n($400,000 net income + $100,000 translation gain + $20,000\nunrealized holding gain on available-for-sale securities).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تضمنت القوائم المالية لشركة Rock الأرصدة التالية في 31 ديسمبر:\nمكسب غير متكرر: 50,000 دولار\nمكسب ترجمة عملات أجنبية: 100,000 دولار\nصافي الدخل: 400,000 دولار\nمكسب حيازة غير محقق على أوراق دين متاحة للبيع: 20,000 دولار\nما مبلغ الدخل الشامل الذي ينبغي أن تُبلّغ عنه شركة Rock عن السنة المنتهية في 31 ديسمبر؟",
+    "choicesAr": [
+      "400,000 دولار",
+      "420,000 دولار",
+      "520,000 دولار",
+      "570,000 دولار"
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة باستثناء التغيرات الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتكون من فئتين رئيسيتين: صافي الدخل والدخل الشامل الآخر (OCI). تُدرج في OCI البنود التي لا تدخل في تحديد صافي الدخل، ومنها مكاسب وخسائر الحيازة غير المحققة على أوراق الدين المتاحة للبيع وبعض بنود العملات الأجنبية، مثل تعديلات الترجمة. أما المكسب غير المتكرر البالغ 50,000 دولار فقد أُدرج بالفعل في صافي الدخل. لذلك، يبلغ الدخل الشامل 520,000 دولار (400,000 صافي الدخل + 100,000 مكسب ترجمة العملات الأجنبية + 20,000 مكسب حيازة غير محقق على الأوراق المالية المتاحة للبيع)."
   },
   {
     "unit": 1,
@@ -1665,7 +1689,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness during a period except those from investments by\nand distributions to owners. It includes all elements of (1) net\nincome and (2) other comprehensive income (OCI).\nComprehensive income thus includes net income of $11,000,\nthe unrealized holding loss on available-for-sale debt\nsecurities of $3,000 (component of OCI), and the $2,000\nforeign currency translation adjustment (component of OCI).\nThus, total comprehensive income is $10,000 ($11,000 –\n$3,000 + $2,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حققت شركة Palmyra صافي دخل قدره 11,000 دولار، وأثرًا تراكميًا موجبًا قدره 1,000 دولار ناتجًا عن تغيير في مبدأ محاسبي، وخسارة حيازة غير محققة قدرها 3,000 دولار على أوراق دين متاحة للبيع، وتعديلًا موجبًا لترجمة العملات الأجنبية قدره 2,000 دولار، وزيادة قدرها 6,000 دولار في أسهمها العادية. فما مبلغ الدخل الشامل لشركة Palmyra؟",
+    "choicesAr": [
+      "4,000 دولار",
+      "10,000 دولار",
+      "11,000 دولار",
+      "17,000 دولار"
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة خلال الفترة، باستثناء التغيرات الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتضمن صافي الدخل والدخل الشامل الآخر (OCI). لذلك يشمل الدخل الشامل صافي الدخل البالغ 11,000 دولار، وخسارة الحيازة غير المحققة على أوراق الدين المتاحة للبيع البالغة 3,000 دولار (من مكونات OCI)، وتعديل ترجمة العملات الأجنبية البالغ 2,000 دولار (من مكونات OCI). وعليه، يبلغ الدخل الشامل 10,000 دولار (11,000 − 3,000 + 2,000)."
   },
   {
     "unit": 1,
@@ -1682,7 +1714,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The components of comprehensive income are net income\nand other comprehensive income (OCI). Under existing\naccounting standards, OCI includes, among others, (1)\nunrealized holding gains and losses on investments in debt\nsecurities; (2) gains and losses on derivatives designated and\nqualifying as cash flow hedges; (3) certain foreign currency\nitems, including foreign currency translation adjustments; and\n(4) changes in fair value attributable to instrument-specific\ncredit risk of liabilities for which the fair value option is elected.\nGains from extinguishment of debt are included in earnings.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية لا يُصنّف ضمن الدخل الشامل الآخر (OCI)؟",
+    "choicesAr": [
+      "المكاسب الناتجة عن إطفاء الديون التي تحدث على نحو غير متكرر.",
+      "تعديلات ترجمة العملات الأجنبية.",
+      "المكاسب على المشتقات المصنّفة والمؤهلة للتحوط من التدفقات النقدية.",
+      "مكاسب الحيازة غير المحققة خلال السنة على أوراق الدين القابلة للتداول والمتاحة للبيع."
+    ],
+    "explanationAr": "يتكون الدخل الشامل من صافي الدخل والدخل الشامل الآخر (OCI). ووفقًا للمعايير المحاسبية السارية، يشمل OCI، من بين أمور أخرى: (1) مكاسب وخسائر الحيازة غير المحققة على استثمارات أوراق الدين، (2) المكاسب والخسائر على المشتقات المصنّفة والمؤهلة للتحوط من التدفقات النقدية، (3) بعض بنود العملات الأجنبية، بما فيها تعديلات ترجمة العملات الأجنبية، و(4) التغيرات في القيمة العادلة المنسوبة إلى مخاطر الائتمان الخاصة بالأداة للالتزامات التي اختير لها خيار القيمة العادلة. أما المكاسب الناتجة عن إطفاء الديون فتُدرج ضمن الأرباح أو الخسائر."
   },
   {
     "unit": 1,
