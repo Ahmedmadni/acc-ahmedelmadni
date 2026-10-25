@@ -1364,7 +1364,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Revenues            $10,000,000\nCOGS                  (7,500,000) *\nGross profit        2,500,000 ($10,000,000 × 25%)\nOperating expenses (1,000,000) **\nOperating income    $ 1,500,000     ($10,000,000 × 15%)\n* COGS = Revenues – Gross profit\n** Operating expenses = Gross profit – Operating income\nIf operating expenses are reduced by 20%:\nGross profit        $2,500,000     ($10,000,000 × 25%)\nOperating expenses (800,000) ($1,000,000 × 80%)\nOperating income      1,700,000\nAccordingly, a 20% reduction in operating expenses results in\na $200,000 ($1,700,000 – $1,500,00) increase in operating\nincome.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت شركة عن إيرادات الربع الأول البالغة 10,000,000 دولار، وهامش مجمل ربح قدره 25%، ودخل تشغيلي يعادل 15% من الإيرادات. ولخفض المصروفات العامة، أوصى مستشار بأن تستعين الشركة بمصادر خارجية لبعض أنشطتها التشغيلية ابتداءً من الربع الثاني. ومن المتوقع أن تخفض التوصية المصروفات التشغيلية بنسبة 20% دون التأثير في حجم المبيعات. يبلغ معدل ضريبة الدخل 35%.\nبافتراض بقاء تكلفة المبيعات عند 75% من الإيرادات، ما أثر تنفيذ التوصية على قائمة الدخل؟",
+    "choicesAr": [
+      "سيزداد مجمل الربح بنسبة 8.0%.",
+      "سيزداد الدخل التشغيلي بنسبة 8.7%.",
+      "سيزداد الدخل التشغيلي بمقدار 200,000 دولار.",
+      "ستنخفض المصروفات التشغيلية بمقدار 300,000 دولار."
+    ],
+    "explanationAr": "الإيرادات: 10,000,000 دولار\nتكلفة البضاعة المباعة: (7,500,000)\nمجمل الربح: 2,500,000 دولار (10,000,000 × 25%)\nالمصروفات التشغيلية: (1,000,000)\nالدخل التشغيلي: 1,500,000 دولار (10,000,000 × 15%).\nتُحسب المصروفات التشغيلية بطرح الدخل التشغيلي من مجمل الربح. وعند خفضها بنسبة 20%، تصبح 800,000 دولار (1,000,000 × 80%)، ويبقى مجمل الربح 2,500,000 دولار. وبذلك يصبح الدخل التشغيلي 1,700,000 دولار، أي بزيادة قدرها 200,000 دولار."
   },
   {
     "unit": 1,
@@ -1381,7 +1389,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods sold = Beginning inventory + Cost of goods\nmanufactured – Ending inventory\nThus, cost of goods sold = $20,000 + $200,000 – $15,000 =\n$205,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبدت شركة تكاليف تصنيع بقيمة 200,000 دولار خلال الشهر، وكان مخزون الإنتاج التام أول المدة 20,000 دولار وآخر المدة 15,000 دولار. وبافتراض عدم وجود مخزون إنتاج تحت التشغيل، فما تكلفة البضاعة المباعة؟",
+    "choicesAr": [
+      "220,000 دولار",
+      "205,000 دولار",
+      "200,000 دولار",
+      "105,000 دولار"
+    ],
+    "explanationAr": "تكلفة البضاعة المباعة = مخزون أول المدة + تكلفة الإنتاج المصنّع − مخزون آخر المدة.\nإذًا: 20,000 + 200,000 − 15,000 = 205,000 دولار."
   },
   {
     "unit": 1,
@@ -1398,7 +1414,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The matching principle states that expenses should be\nrecognized in the same period as the revenues that those\nexpenses helped produce. Revenues related to the\nemployee’s labor are not recognized until the goods are sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "امتثالًا لمبدأ المقابلة، ينبغي عادةً تحميل تكلفة خدمات العمل التي يقدمها موظف يشارك في تصنيع منتج على قائمة الدخل في الفترة التي:",
+    "choicesAr": [
+      "يؤدى فيها العمل.",
+      "يُدفع فيها أجر الموظف.",
+      "يكتمل فيها تصنيع المنتج.",
+      "يُباع فيها المنتج."
+    ],
+    "explanationAr": "ينص مبدأ المقابلة على الاعتراف بالمصروفات في الفترة نفسها التي يُعترف فيها بالإيرادات التي ساهمت تلك المصروفات في تحقيقها. ولا يُعترف بالإيرادات المرتبطة بعمل الموظف إلا عند بيع البضائع."
   },
   {
     "unit": 1,
@@ -1415,7 +1439,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The budget is an internal document that is only available to\nthose within the company. Therefore, an external investor has\nno access to the information in the budget and thus no way to\ncompare budgeted amounts to income statement amounts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن للمستثمر الخارجي استخدام قائمة الدخل لجميع الأغراض التالية، باستثناء:",
+    "choicesAr": [
+      "تحليل أداء الشركة مقارنة بالموازنة.",
+      "مقارنة نتائج الشركة بنتائج منافسيها.",
+      "تقييم مخاطر عدم تمكن الشركة من تحقيق الربحية مستقبلًا.",
+      "التنبؤ بإيرادات الشركة المستقبلية."
+    ],
+    "explanationAr": "الموازنة مستند داخلي لا يتاح عادةً إلا للأشخاص داخل الشركة. لذلك لا يستطيع المستثمر الخارجي الوصول إلى معلومات الموازنة، ومن ثم لا يمكنه مقارنة المبالغ المدرجة فيها بالمبالغ الواردة في قائمة الدخل."
   },
   {
     "unit": 1,
@@ -1432,7 +1464,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the matching principle, the recognition of expense and\nrecognition of related revenue occur in the same accounting\nperiod. Cost of goods sold, a product cost, is recognized in the\nperiod during which the product is sold. Administrative costs,\nwhich are period costs, are recognized in the period in which\nthey were incurred. Thus, the total expense in the month of\nOctober must include the cost of goods sold of $450,000 (900\nunits sold × $500 per unit) and the administrative costs of\n$300,000, which results in $750,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال شهر أكتوبر، اشترت شركة 1,000 وحدة من المخزون بتكلفة 500 دولار للوحدة، وباعت 900 وحدة، تمثل 10% من المبيعات السنوية المقدرة من حيث عدد الوحدات. كما تكبدت الشركة تكاليف إدارية بقيمة 300,000 دولار خلال أكتوبر. عند تطبيق مبدأ المقابلة، ما إجمالي المصروفات التي ينبغي أن تظهر في قائمة دخل أكتوبر؟",
+    "choicesAr": [
+      "750,000 دولار",
+      "800,000 دولار",
+      "810,000 دولار",
+      "860,000 دولار"
+    ],
+    "explanationAr": "وفقًا لمبدأ المقابلة، يُعترف بالمصروفات والإيرادات المرتبطة بها في الفترة المحاسبية نفسها. ويُعترف بتكلفة البضاعة المباعة، وهي تكلفة منتج، في الفترة التي تُباع فيها البضاعة. أما التكاليف الإدارية فهي تكاليف فترة ويُعترف بها عند تكبدها. لذلك تشمل مصروفات أكتوبر تكلفة بضاعة مباعة قدرها 450,000 دولار (900 وحدة × 500 دولار للوحدة)، إضافةً إلى المصروفات الإدارية البالغة 300,000 دولار، ليكون الإجمالي 750,000 دولار."
   },
   {
     "unit": 1,
