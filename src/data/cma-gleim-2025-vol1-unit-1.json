@@ -639,7 +639,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The major categories of current assets are cash and cash\nequivalents, certain investments, receivables, inventories, and\nprepaid expenses. The entity’s total current assets are\n$35,000 ($23,400 cash + $9,400 accounts receivable +\n$2,200 inventories).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى إحدى المنشآت أرصدة الحسابات التالية في نهاية السنة:\nالمبيعات: 452,000 دولار\nالنقد: 23,400 دولار\nالحسابات الدائنة: 14,300 دولار\nمصروف الإيجار: 3,700 دولار\nالحسابات المدينة: 9,400 دولار\nتكلفة البضاعة المباعة: 214,000 دولار\nالأراضي: 104,000 دولار\nإيراد غير مكتسب: 6,800 دولار\nربح من البيع: 17,500 دولار\nالمعدات: 28,800 دولار\nالمخزون: 2,200 دولار\nأوراق الدفع: 67,000 دولار\nما إجمالي الأصول المتداولة الذي ينبغي عرضه في الميزانية؟",
+    "choicesAr": [
+      "35,000 دولار",
+      "39,900 دولار",
+      "59,300 دولار",
+      "63,800 دولار"
+    ],
+    "explanationAr": "تشمل الفئات الرئيسية للأصول المتداولة النقد وما يعادله، وبعض الاستثمارات، والذمم المدينة، والمخزون، والمصروفات المدفوعة مقدمًا. يبلغ إجمالي الأصول المتداولة للمنشأة 35,000 دولار (23,400 نقدًا + 9,400 حسابات مدينة + 2,200 مخزون)."
   },
   {
     "unit": 1,
@@ -656,7 +664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The balance sheet provides information about economic\nresources and claims, which helps to evaluate liquidity,\nsolvency, financing needs, and the probability of obtaining\nfinancing. This is an advantage of the balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كل ما يلي يُعد من قيود الميزانية، باستثناء أن:",
+    "choicesAr": [
+      "إعداد الميزانية يعتمد على أحكام وتقديرات الإدارة.",
+      "تُسجَّل الأصول والالتزامات عادةً بالتكلفة التاريخية، التي قد تختلف كثيرًا عن القيمة السوقية الحالية.",
+      "توفر الميزانية معلومات عن سيولة الشركة وقدرتها على الوفاء بالتزاماتها.",
+      "تغفل الميزانية بنودًا عديدة لا يمكن تسجيلها بموضوعية رغم أن لها قيمة مالية للشركة."
+    ],
+    "explanationAr": "توفر الميزانية معلومات عن الموارد الاقتصادية والمطالبات عليها، مما يساعد على تقييم السيولة والملاءة والاحتياجات التمويلية واحتمال الحصول على التمويل. وهذا يُعد ميزة للميزانية."
   },
   {
     "unit": 1,
@@ -673,7 +689,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Current liabilities are those debts that must be paid during the\nupcoming year or current operating cycle, whichever period is\nlonger. Examples include accounts payable, wages payable,\nprepaid rents received from tenants, security deposits from\ntenants, and the current portion of long-term debt.\nUndistributed stock dividends are not liabilities because they\nare not to be paid in cash but are distributed as shares of\nstock. Undistributed stock dividends are merely\nreclassifications of different equity accounts and are not\nliabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ مما يلي لا يُصنَّف ضمن الالتزامات المتداولة؟",
+    "choicesAr": [
+      "تأمينات ضمان مستلمة من مستأجرين لعقد إيجار مدته سنة واحدة.",
+      "إيجار السنة الحالية تم تحصيله في 2 يناير من السنة الحالية.",
+      "توزيعات أسهم لم تُوزَّع بعد.",
+      "سندات مدتها عشر سنوات بيعت قبل 110 أشهر."
+    ],
+    "explanationAr": "الالتزامات المتداولة هي الديون التي يجب سدادها خلال السنة المقبلة أو دورة التشغيل الحالية، أيهما أطول. ومن أمثلتها الحسابات الدائنة، والأجور المستحقة، والإيجارات المحصلة مقدمًا من المستأجرين، والتأمينات المستلمة منهم، والجزء المتداول من الدين طويل الأجل. أما توزيعات الأسهم التي لم تُوزَّع بعد فليست التزامات، لأنها لا تُدفع نقدًا بل تُوزَّع في صورة أسهم. وهي مجرد إعادة تصنيف بين حسابات مختلفة ضمن حقوق الملكية."
   },
   {
     "unit": 1,
@@ -690,7 +714,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Failure to record an expense in December will result in current\nliabilities being understated. Also, retained earnings will be\noverstated due to the failure to record the expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلقت شركة في يناير فاتورة الكهرباء المستخدمة في مستودعها خلال ديسمبر، وسجّلت المصروف في يناير. وتستخدم الشركة أساس الاستحقاق المحاسبي. ما أثر ذلك على قوائمها المالية لشهر ديسمبر؟",
+    "choicesAr": [
+      "تكون الالتزامات المتداولة أقل من قيمتها الصحيحة، وتكون الأرباح المحتجزة أعلى من قيمتها الصحيحة.",
+      "تكون المصروفات التشغيلية أعلى من قيمتها الصحيحة، وتكون الأرباح المحتجزة أعلى من قيمتها الصحيحة.",
+      "يكون النقد وما يعادله أعلى من قيمته الصحيحة، وتكون الأرباح المحتجزة أقل من قيمتها الصحيحة.",
+      "تكون المصروفات المستحقة أعلى من قيمتها الصحيحة، وتكون الأرباح المحتجزة أقل من قيمتها الصحيحة."
+    ],
+    "explanationAr": "إن عدم تسجيل المصروف في ديسمبر يؤدي إلى إظهار الالتزامات المتداولة بأقل من قيمتها الصحيحة. كما يؤدي عدم تسجيل المصروف إلى إظهار الأرباح المحتجزة بأعلى من قيمتها الصحيحة."
   },
   {
     "unit": 1,
@@ -707,7 +739,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Long-term liabilities are liabilities that are due in more than\n12 months. After refinancing, the debt is due more than\n12 months from December Year 2. Thus, the debt is classified\nas a long-term liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على شركة دين بقيمة 100 مليون دولار يستحق في مارس من السنة 3. وفي ديسمبر من السنة 2، أبرمت الشركة اتفاقية غير قابلة للإلغاء مع المُقرض لإعادة تمويل الدين بسعر الفائدة نفسه، على أن يُسدَّد أصل الدين بالكامل في ديسمبر من السنة 5. كيف ينبغي تصنيف الدين في ميزانية الشركة لشهر ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "يُصنّف التزامًا متداولًا.",
+      "يُصنّف التزامًا طويل الأجل.",
+      "يُعد التزامًا خارج الميزانية.",
+      "يُصنّف التزامًا محتملًا."
+    ],
+    "explanationAr": "الالتزامات طويلة الأجل هي الالتزامات التي يحين موعد سدادها بعد أكثر من 12 شهرًا. وبعد إعادة التمويل، يصبح موعد استحقاق الدين بعد أكثر من 12 شهرًا من ديسمبر في السنة 2؛ لذلك يُصنّف الدين التزامًا طويل الأجل."
   },
   {
     "unit": 1,
