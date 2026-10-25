@@ -764,7 +764,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the proprietary theory, assets equal liabilities plus\nstockholders’ equity. Based on the given information,\nCompany A’s total assets are $349,500 ($20,000 + $45,000 +\n$10,250 + $300,000 – $25,750). Additionally, total liabilities\nare $177,500 ($22,500 + $125,000 + $30,000). Using the\nformula above, stockholders’ equity is $172,000 ($349,500 –\n$177,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت قائمة المركز المالي للشركة A في 31 ديسمبر من السنة 1 البنود التالية:\nالنقد: 20,000 دولار\nالحسابات المدينة: 45,000 دولار\nالأصول المدفوعة مقدمًا: 10,250 دولارًا\nإجمالي الممتلكات والآلات والمعدات: 300,000 دولار\nمجمع إهلاك الممتلكات والآلات والمعدات: 25,750 دولارًا\nالحسابات الدائنة: 22,500 دولار\nأوراق الدفع: 125,000 دولار\nإيراد غير مكتسب: 30,000 دولار\nوبافتراض أن الحسابات المتبقية الوحيدة هي حسابات حقوق الملكية، فما إجمالي حقوق المساهمين في الشركة A في 31 ديسمبر من السنة 1؟",
+    "choicesAr": [
+      "197,750 دولارًا",
+      "202,000 دولار",
+      "172,000 دولار",
+      "223,500 دولار"
+    ],
+    "explanationAr": "وفقًا لنظرية الملكية، تساوي الأصول الالتزامات مضافًا إليها حقوق المساهمين. وبناءً على المعلومات المعطاة، يبلغ إجمالي الأصول 349,500 دولار (20,000 + 45,000 + 10,250 + 300,000 − 25,750). ويبلغ إجمالي الالتزامات 177,500 دولار (22,500 + 125,000 + 30,000). وعليه، تبلغ حقوق المساهمين 172,000 دولار (349,500 − 177,500)."
   },
   {
     "unit": 1,
@@ -781,7 +789,15 @@
     ],
     "answerIndex": 3,
     "explanation": "According to the basic accounting equation, assets equal\nliabilities plus equity. Thus, equity of a business entity equals\ntotal assets less total liabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ مما يلي يعرّف حقوق الملكية فيما يتعلق بمنشأة تجارية؟",
+    "choicesAr": [
+      "صافي الإيرادات.",
+      "إجمالي الإيرادات مطروحًا منه إجمالي المصروفات.",
+      "إجمالي الأصول والالتزامات.",
+      "إجمالي الأصول مطروحًا منه إجمالي الالتزامات."
+    ],
+    "explanationAr": "وفقًا للمعادلة المحاسبية الأساسية، الأصول = الالتزامات + حقوق الملكية. لذلك تساوي حقوق الملكية في المنشأة إجمالي الأصول مطروحًا منه إجمالي الالتزامات."
   },
   {
     "unit": 1,
@@ -798,7 +814,15 @@
     ],
     "answerIndex": 3,
     "explanation": "According to the basic accounting equation, assets equals\nliabilities plus equity. Thus, stockholders’ equity equals total\nassets minus total liabilities. Total assets decreased by\n$25,000 ($40,000 – $65,000) while total liabilities increased by\n$32,000. Thus, the total change in stockholders’ equity is a\ndecrease of $57,000 ($25,000 + $32,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض قائمة المركز المالي المقارنة في نهاية السنة للشركة التغيرات التالية مقارنة بالسنة السابقة: زيادة النقد بمقدار 40,000 دولار، وزيادة إجمالي الالتزامات بمقدار 32,000 دولار، وانخفاض جميع الأصول الأخرى بمقدار 65,000 دولار. أي العبارات التالية صحيحة بشأن التغير في حقوق المساهمين خلال السنة الحالية؟",
+    "choicesAr": [
+      "زادت بمقدار 25,000 دولار.",
+      "زادت بمقدار 105,000 دولار.",
+      "انخفضت بمقدار 32,000 دولار.",
+      "انخفضت بمقدار 57,000 دولار."
+    ],
+    "explanationAr": "وفقًا للمعادلة المحاسبية الأساسية، تساوي الأصول الالتزامات مضافًا إليها حقوق الملكية؛ وبالتالي تساوي حقوق المساهمين إجمالي الأصول مطروحًا منه إجمالي الالتزامات. انخفض إجمالي الأصول بمقدار 25,000 دولار (زيادة نقد 40,000 − انخفاض الأصول الأخرى 65,000)، بينما زادت الالتزامات بمقدار 32,000 دولار. لذلك انخفضت حقوق المساهمين إجمالًا بمقدار 57,000 دولار (25,000 + 32,000)."
   },
   {
     "unit": 1,
@@ -815,7 +839,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Revenue is recognized when (or as) the entity satisfies a\nperformance obligation by transferring a promised good or\nservice to a customer. The good or service is transferred when\nthe customer obtains control of that good or service. The\nentire proceeds therefore should be credited to a contract\nliability (deferred or unearned revenue) because the\nperformance obligation will not be satisfied until the\nperformance has been given even though the tickets are not\nrefundable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تُعرض المتحصلات من البيع المسبق لتذاكر غير قابلة للاسترداد لحضور عرض مسرحي في القوائم المالية للبائع قبل إقامة العرض؟",
+    "choicesAr": [
+      "إيراد بكامل المتحصلات.",
+      "إيراد بقدر التكاليف ذات الصلة التي تم إنفاقها.",
+      "إيراد غير مكتسب بقدر التكاليف ذات الصلة التي تم إنفاقها.",
+      "إيراد غير مكتسب بكامل المتحصلات."
+    ],
+    "explanationAr": "يُعترف بالإيراد عندما تفي المنشأة بالتزام الأداء عن طريق نقل سلعة أو خدمة موعودة إلى العميل، أو أثناء الوفاء به. ويحدث النقل عندما يحصل العميل على السيطرة على السلعة أو الخدمة. لذلك يجب إثبات كامل المتحصلات في الجانب الدائن لالتزام تعاقدي (إيراد مؤجل أو غير مكتسب)، لأن التزام الأداء لن يُستوفى إلا عند تقديم العرض، حتى لو كانت التذاكر غير قابلة للاسترداد."
   },
   {
     "unit": 1,
@@ -832,7 +864,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A deposit or other advance (a deferred revenue) is a contract\nliability. It does not qualify for revenue recognition until the\nperformance obligation is satisfied by transfer of the promised\ngood or service to a customer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن الإيرادات المؤجلة التي تسجلها شركة تقدم خدمات للعملاء؟",
+    "choicesAr": [
+      "تظل الإيرادات المؤجلة التزامًا إلى أن تُقدَّم الخدمة.",
+      "تمثل الإيرادات المؤجلة إيرادات تم الاعتراف بها ولم تُحصّل نقدًا بعد.",
+      "تنشأ الإيرادات المؤجلة من خدمات قُدّمت ولكن لم تصدر فواتيرها بعد.",
+      "يُعد الإيراد المؤجل في دفاتر شركة ما مصروفًا مستحقًا في دفاتر شركة أخرى."
+    ],
+    "explanationAr": "يُعد العربون أو أي مبلغ آخر يُحصّل مقدمًا (إيرادًا مؤجلًا) التزامًا تعاقديًا. ولا يجوز الاعتراف به إيرادًا إلا عند الوفاء بالتزام الأداء من خلال نقل السلعة أو الخدمة الموعودة إلى العميل."
   },
   {
     "unit": 1,
