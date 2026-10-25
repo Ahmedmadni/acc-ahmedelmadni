@@ -510,7 +510,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 </p>
               )}
               <h3
-                dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
                 className="mb-4 whitespace-pre-wrap text-base font-extrabold text-[var(--fg)] md:text-lg"
               >
                 {q.question[lang]}
@@ -535,7 +535,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                         {String.fromCharCode(65 + i)}
                       </span>
                       <span
-                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
                         className="flex-1 whitespace-pre-wrap"
                       >
                         {c}
@@ -564,7 +564,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                         {lang === "ar" ? "الشرح" : "Explanation"}
                       </div>
                       <p
-                        dir={q.sourceLanguage === "en" ? "ltr" : undefined}
+                        dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
                         className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]"
                       >
                         {q.explanation[lang]}
