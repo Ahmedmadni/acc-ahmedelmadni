@@ -1739,7 +1739,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all components of net\nincome and other comprehensive income. Sales revenue is a\ncomponent of net income and thus is considered a component\nof comprehensive income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من الأصول أو المعاملات التالية يُعدّ عنصرًا من عناصر الدخل الشامل؟",
+    "choicesAr": [
+      "استثمارات المُلّاك.",
+      "إيرادات المبيعات.",
+      "التوزيعات على المُلّاك.",
+      "الإيرادات المؤجلة."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع مكونات صافي الدخل والدخل الشامل الآخر. وتُعدّ إيرادات المبيعات أحد مكونات صافي الدخل، ولذلك فهي تُعدّ أيضًا مكونًا من مكونات الدخل الشامل."
   },
   {
     "unit": 1,
@@ -1756,7 +1764,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness except those from investments by and distributions\nto owners. Comprehensive income includes all the\ncomponents of net income and other comprehensive income\n(OCI). OCI includes, among other things, (1) unrealized\nholding gains and losses on available-for-sale debt securities;\n(2) gains and losses on derivatives designated and qualifying\nas cash flow hedges; and (3) foreign-currency translation\nadjustments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من البنود التالية ينبغي عرضه بوصفه مكونًا من مكونات الدخل الشامل؟",
+    "choicesAr": [
+      "توزيعات أرباح مدفوعة إلى أحد المساهمين.",
+      "تعديل ترجمة العملات الأجنبية.",
+      "مساهمة إضافية في رأس المال.",
+      "الإيرادات المؤجلة."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة، باستثناء التغيرات الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويشمل جميع مكونات صافي الدخل والدخل الشامل الآخر (OCI). ويتضمن OCI، من بين أمور أخرى: (1) مكاسب وخسائر الحيازة غير المحققة على أوراق الدين المتاحة للبيع، (2) المكاسب والخسائر على المشتقات المصنّفة والمؤهلة للتحوط من التدفقات النقدية، و(3) تعديلات ترجمة العملات الأجنبية."
   },
   {
     "unit": 1,
@@ -1773,7 +1789,15 @@
     ],
     "answerIndex": 0,
     "explanation": "For a manufacturer, cost of goods sold equals beginning\nfinished goods inventory, plus the cost of goods\nmanufactured, minus ending finished goods inventory. Cost of\ngoods manufactured equals beginning work-in-process, plus\ncurrent manufacturing costs (direct materials + direct labor +\nproduction overhead), minus ending work-in-process.\nBecause there is no beginning inventory and no information\nabout ending work-in-process was provided, the cost of goods\nmanufactured was $155,000 ($50,000 raw materials +\n$75,000 direct labor + $30,000 factory overhead). Because all\ngoods manufactured during the period were sold, there is no\nending inventory, and the cost of goods sold is $155,000 ($0\nbeginning inventory + $155,000 cost of goods manufactured –\n$0 ending inventory).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترة التقرير، استخدمت شركة لتصنيع أجهزة الكمبيوتر مواد خام بقيمة 50,000 دولار، وتكبدت تكاليف عمالة مباشرة قدرها 75,000 دولار، وتكاليف صناعية غير مباشرة قدرها 30,000 دولار. كما تكبدت مصروفات أخرى تمثلت في إعلانات بقيمة 5,000 دولار، ورواتب موظفين بقيمة 10,000 دولار، وخسائر ائتمانية على الحسابات المدينة بقيمة 3,000 دولار. لم يكن لدى الشركة رصيد أول مدة في أي حساب من حسابات المخزون، وقد بيعت جميع السلع المصنعة خلال الفترة نفسها. فما تكلفة البضاعة المباعة خلال فترة التقرير؟",
+    "choicesAr": [
+      "155,000 دولار",
+      "160,000 دولار",
+      "170,000 دولار",
+      "173,000 دولار"
+    ],
+    "explanationAr": "بالنسبة إلى الشركة الصناعية، تُحسب تكلفة البضاعة المباعة بإضافة مخزون المنتجات التامة أول المدة إلى تكلفة الإنتاج التام، ثم طرح مخزون المنتجات التامة آخر المدة. وتُحسب تكلفة الإنتاج التام بإضافة مخزون الإنتاج تحت التشغيل أول المدة إلى تكاليف التصنيع خلال الفترة (المواد المباشرة + العمالة المباشرة + التكاليف الصناعية غير المباشرة)، ثم طرح مخزون الإنتاج تحت التشغيل آخر المدة.\nوبما أنه لا يوجد مخزون أول مدة، ولم تُذكر معلومات عن مخزون الإنتاج تحت التشغيل آخر المدة، فإن تكلفة الإنتاج التام تبلغ 155,000 دولار (50,000 مواد خام + 75,000 عمالة مباشرة + 30,000 تكاليف صناعية غير مباشرة). ولأن جميع السلع المصنعة بيعت خلال الفترة، فلا يوجد مخزون آخر مدة من المنتجات التامة؛ لذا تبلغ تكلفة البضاعة المباعة 155,000 دولار (صفر مخزون أول المدة + 155,000 تكلفة الإنتاج التام − صفر مخزون آخر المدة)."
   },
   {
     "unit": 1,
