@@ -3,7 +3,6 @@
 Usage: python3 scripts/translate-cma-unit1.py
 Requires requests and a server-held LOVABLE_API_KEY. AI output needs human review.
 """
-import concurrent.futures
 import json
 import os
 from pathlib import Path
@@ -78,8 +77,17 @@ def translate(batch):
             with requests.post('https://ai.gateway.lovable.dev/v1/responses',
                                headers={'Lovable-API-Key': os.environ['LOVABLE_API_KEY'],
                                         'X-Lovable-AIG-SDK': 'fetch'}, json=payload, stream=True) as response:
-                if response.status_code in (401, 402, 403):
-                    raise RuntimeError(f'Terminal gateway status {response.status_code}')
+                if response.status_code >= 400:
+                    try:
+                        error = response.json()
+                        detail = error.get('message') or error.get('error', {}).get('message') or 'Request failed'
+                    except (ValueError, AttributeError):
+                        detail = 'Request failed'
+                    if response.status_code == 429 or response.status_code >= 500:
+                        if attempt < 3:
+                            time.sleep(max(float(response.headers.get('Retry-After', 0)), 2 ** (attempt + 1)))
+                            continue
+                    raise RuntimeError(f'Gateway status {response.status_code}: {detail}')
                 response.raise_for_status()
                 output = ''
                 completed = False
@@ -106,23 +114,26 @@ def translate(batch):
         except RuntimeError:
             raise
         except (requests.RequestException, ValueError, KeyError):
-            if attempt == 3:
-                raise
-            time.sleep(2 ** attempt)
+            # Transport uncertainty or invalid output must not replay billed work.
+            raise
 
 def main():
     records = json.loads(TARGET.read_text())
     original = [{k: v for k, v in q.items() if k not in FIELDS} for q in records]
     batches = [records[i:i+4] for i in range(0, len(records), 4)]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        translations = [t for batch in pool.map(translate, batches) for t in batch]
-    for q, t in zip(records, translations):
-        validate(q, t)
-        q.update({field: t[field] for field in FIELDS})
-    if [{k: v for k, v in q.items() if k not in FIELDS} for q in records] != original:
-        raise ValueError('English source changed')
-    TARGET.write_text(json.dumps(records, ensure_ascii=False, indent=2) + '\n')
-    print(f'Saved {len(records)} complete Arabic translations; source unchanged.', flush=True)
+    for batch in batches:
+        if all(all(q.get(field) for field in FIELDS) for q in batch):
+            continue
+        translations = translate(batch)
+        for q, t in zip(batch, translations):
+            validate(q, t)
+            q.update({field: t[field] for field in FIELDS})
+        if [{k: v for k, v in q.items() if k not in FIELDS} for q in records] != original:
+            raise ValueError('English source changed')
+        temporary = TARGET.with_suffix('.json.tmp')
+        temporary.write_text(json.dumps(records, ensure_ascii=False, indent=2) + '\n')
+        temporary.replace(TARGET)
+        print(f'Saved {sum(bool(q.get("stemAr")) for q in records)} / {len(records)} translations; source unchanged.', flush=True)
 
 if __name__ == '__main__':
     main()
