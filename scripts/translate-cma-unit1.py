@@ -56,7 +56,8 @@ def validate(q, t):
             raise ValueError('Untranslated choice')
         # Concrete numeric answers must not change or move between choices.
         numbers = lambda s: re.findall(r'\d+(?:,\d{3})*(?:\.\d+)?', s)
-        if numbers(en) != numbers(ar):
+        english_numeric = re.sub(r'\b(one|two|ten)\b', lambda m: {'one': '1', 'two': '2', 'ten': '10'}[m[0].lower()], en, flags=re.IGNORECASE)
+        if numbers(en) != numbers(ar) and numbers(english_numeric) != numbers(ar):
             raise ValueError(f'Choice numbers changed for {key(q)}: {en!r} -> {ar!r}')
 
 def translate(batch):
