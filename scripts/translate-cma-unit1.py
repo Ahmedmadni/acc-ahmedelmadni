@@ -55,12 +55,18 @@ def validate(q, t):
         if re.search('[A-Za-z]{2}', en) and not re.search('[\u0600-\u06ff]', ar):
             raise ValueError('Untranslated choice')
         # Concrete numeric answers must not change or move between choices.
-        numbers = lambda s: re.findall(r'\d[\d,]*(?:\.\d+)?', s)
+        numbers = lambda s: re.findall(r'\d+(?:,\d{3})*(?:\.\d+)?', s)
         if numbers(en) != numbers(ar):
             raise ValueError(f'Choice numbers changed for {key(q)}: {en!r} -> {ar!r}')
 
 def translate(batch):
     cache = CACHE / (key(batch[0]) + '.json')
+    if not cache.exists() and cache.with_suffix('.pending.json').exists():
+        pending = json.loads(cache.with_suffix('.pending.json').read_text())
+        if len(pending) == len(batch):
+            for q, t in zip(batch, pending):
+                validate(q, t)
+            cache.write_text(json.dumps(pending, ensure_ascii=False, indent=2) + '\n')
     if cache.exists():
         items = json.loads(cache.read_text())
         for q, t in zip(batch, items):
