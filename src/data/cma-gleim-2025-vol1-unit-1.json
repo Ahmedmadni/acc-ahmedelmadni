@@ -614,7 +614,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Total assets equal the sum of total liabilities and equity. Total\nliabilities were $94,000 at year end, and equity amounted to\n$523,000 ($500,000 from issuance of stock + $25,000 net\nincome – $2,000 cash dividend). Total assets are therefore\n$617,000 ($523,000 + $94,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تأسست شركة مساهمة في 1 يناير، السنة 6، بمبلغ\n$500,000 من إصدار الأسهم وأموال مقترضة قدرها\n$75,000. خلال السنة الأولى من العمليات، بلغ صافي الدخل\n$25,000. في 15 ديسمبر، دفعت الشركة توزيعات أرباح نقدية قدرها $2,000.\nلم تؤثر أي أنشطة إضافية في حقوق الملكية في السنة 6. في\n31 ديسمبر، السنة 6، كانت التزامات الشركة قد\nارتفعت إلى $94,000. في الميزانية العمومية للشركة بتاريخ 31 ديسمبر، السنة\n6، ينبغي عرض إجمالي الأصول بمبلغ",
+    "choicesAr": [
+      "$598,000",
+      "$600,000",
+      "$617,000",
+      "$692,000"
+    ],
+    "explanationAr": "يساوي إجمالي الأصول مجموع إجمالي الالتزامات وحقوق الملكية. بلغ إجمالي\nالالتزامات $94,000 في نهاية السنة، وبلغت حقوق الملكية\n$523,000 ($500,000 من إصدار الأسهم + $25,000 صافي\nالدخل – $2,000 توزيعات أرباح نقدية). ولذلك، يبلغ إجمالي الأصول\n$617,000 ($523,000 + $94,000)."
   },
   {
     "unit": 1,
@@ -631,7 +639,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The major categories of current assets are cash and cash\nequivalents, certain investments, receivables, inventories, and\nprepaid expenses. The entity’s total current assets are\n$35,000 ($23,400 cash + $9,400 accounts receivable +\n$2,200 inventories).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت لدى منشأة أرصدة الحسابات التالية في نهاية السنة.\nالمبيعات: $452,000\nالنقدية: 23,400\nالحسابات الدائنة: 14,300\nمصروف الإيجار: 3,700\nالحسابات المدينة: 9,400\nتكلفة البضاعة المبيعة: 214,000\nالأراضي: 104,000\nالإيرادات غير المكتسبة: 6,800\nمكسب البيع: 17,500\nالمعدات: 28,800\nالمخزون: 2,200\nأوراق الدفع: 67,000\nما مبلغ إجمالي الأصول المتداولة المعروض في\nالميزانية العمومية؟",
+    "choicesAr": [
+      "$35,000",
+      "$39,900",
+      "$59,300",
+      "$63,800"
+    ],
+    "explanationAr": "الفئات الرئيسية للأصول المتداولة هي النقدية وما في حكم النقدية،\nوبعض الاستثمارات، والذمم المدينة، والمخزون،\nوالمصروفات المدفوعة مقدمًا. يبلغ إجمالي الأصول المتداولة للمنشأة\n$35,000 ($23,400 نقدية + $9,400 حسابات مدينة +\n$2,200 مخزون)."
   },
   {
     "unit": 1,
@@ -648,7 +664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The balance sheet provides information about economic\nresources and claims, which helps to evaluate liquidity,\nsolvency, financing needs, and the probability of obtaining\nfinancing. This is an advantage of the balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد جميع العبارات التالية من قيود الميزانية\nالعمومية باستثناء أنها",
+    "choicesAr": [
+      "تُعد الميزانية العمومية باستخدام أحكام الإدارة\nوتقديراتها.",
+      "تُسجل الأصول والالتزامات عادةً بالتكلفة التاريخية،\nالتي قد تختلف اختلافًا كبيرًا عن القيمة السوقية الحالية.",
+      "توفر الميزانية العمومية معلومات عن سيولة\nالشركة وملاءتها المالية.",
+      "تُغفل الميزانية العمومية العديد من البنود التي لا يمكن تسجيلها\nبموضوعية، ولكن لها قيمة مالية للشركة."
+    ],
+    "explanationAr": "توفر الميزانية العمومية معلومات عن الموارد الاقتصادية\nوالمطالبات، مما يساعد على تقييم السيولة،\nوالملاءة المالية، واحتياجات التمويل، واحتمال الحصول على\nالتمويل. وهذه إحدى مزايا الميزانية العمومية."
   },
   {
     "unit": 1,
@@ -665,7 +689,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Current liabilities are those debts that must be paid during the\nupcoming year or current operating cycle, whichever period is\nlonger. Examples include accounts payable, wages payable,\nprepaid rents received from tenants, security deposits from\ntenants, and the current portion of long-term debt.\nUndistributed stock dividends are not liabilities because they\nare not to be paid in cash but are distributed as shares of\nstock. Undistributed stock dividends are merely\nreclassifications of different equity accounts and are not\nliabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُصنف ضمن الالتزامات\nالمتداولة؟",
+    "choicesAr": [
+      "ودائع ضمان مستلمة من مستأجرين بموجب عقد إيجار مدته 1 سنة.",
+      "إيجار السنة الحالية المستلم في 2 يناير من السنة\nالحالية.",
+      "توزيعات أرباح في صورة أسهم لم تُوزع بعد.",
+      "سندات مدتها 10 سنوات بيعت قبل 110 شهر."
+    ],
+    "explanationAr": "الالتزامات المتداولة هي تلك الديون التي يجب سدادها خلال\nالسنة القادمة أو دورة التشغيل الحالية، أيهما\nأطول. وتشمل أمثلتها الحسابات الدائنة، والأجور المستحقة الدفع،\nوالإيجارات المستلمة مقدمًا من المستأجرين، وودائع الضمان المستلمة من\nالمستأجرين، والجزء المتداول من الديون طويلة الأجل.\nلا تُعد توزيعات الأرباح في صورة أسهم التي لم تُوزع بعد التزامات، لأنها\nلن تُدفع نقدًا، بل تُوزع في صورة أسهم.\nإن توزيعات الأرباح في صورة أسهم التي لم تُوزع بعد ليست سوى\nإعادة تصنيف لحسابات حقوق الملكية المختلفة، وليست\nالتزامات."
   },
   {
     "unit": 1,
@@ -682,7 +714,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Failure to record an expense in December will result in current\nliabilities being understated. Also, retained earnings will be\noverstated due to the failure to record the expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلقت شركة في يناير فاتورة عن الكهرباء التي استخدمها مستودعها في ديسمبر، وسجلت المصروف في يناير. تستخدم الشركة أساس الاستحقاق في المحاسبة. ما أثر ذلك على القوائم المالية للشركة لشهر ديسمبر؟",
+    "choicesAr": [
+      "ظهرت الالتزامات المتداولة بأقل من قيمتها، وظهرت الأرباح المحتجزة بأكثر من قيمتها.",
+      "ظهرت المصروفات التشغيلية بأكثر من قيمتها، وظهرت الأرباح المحتجزة بأكثر من قيمتها.",
+      "ظهر النقد وما في حكمه بأكثر من قيمته، وظهرت الأرباح المحتجزة بأقل من قيمتها.",
+      "ظهرت المصروفات المستحقة بأكثر من قيمتها، وظهرت الأرباح المحتجزة بأقل من قيمتها."
+    ],
+    "explanationAr": "سيؤدي عدم تسجيل مصروف في ديسمبر إلى إظهار الالتزامات المتداولة بأقل من قيمتها. كذلك، ستظهر الأرباح المحتجزة بأكثر من قيمتها بسبب عدم تسجيل المصروف."
   },
   {
     "unit": 1,
@@ -699,7 +739,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Long-term liabilities are liabilities that are due in more than\n12 months. After refinancing, the debt is due more than\n12 months from December Year 2. Thus, the debt is classified\nas a long-term liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة دين بقيمة $100 مليون يستحق في مارس من السنة 3. في ديسمبر من السنة 2، أبرمت الشركة اتفاقًا غير قابل للإلغاء مع مُقرضها لإعادة تمويل الدين بنفس معدل الفائدة، ويستحق أصل الدين بالكامل في ديسمبر من السنة 5. كيف ينبغي تصنيف الدين في الميزانية العمومية للشركة في ديسمبر من السنة 2؟",
+    "choicesAr": [
+      "يُصنف بوصفه التزامًا متداولًا.",
+      "يُصنف بوصفه التزامًا طويل الأجل.",
+      "يُعد التزامًا خارج الميزانية العمومية.",
+      "يُصنف بوصفه التزامًا محتملًا."
+    ],
+    "explanationAr": "الالتزامات طويلة الأجل هي الالتزامات التي تستحق بعد أكثر من 12 شهر. بعد إعادة التمويل، يستحق الدين بعد أكثر من 12 شهر من ديسمبر من السنة 2. وبالتالي، يُصنف الدين بوصفه التزامًا طويل الأجل."
   },
   {
     "unit": 1,
@@ -716,7 +764,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the proprietary theory, assets equal liabilities plus\nstockholders’ equity. Based on the given information,\nCompany A’s total assets are $349,500 ($20,000 + $45,000 +\n$10,250 + $300,000 – $25,750). Additionally, total liabilities\nare $177,500 ($22,500 + $125,000 + $30,000). Using the\nformula above, stockholders’ equity is $172,000 ($349,500 –\n$177,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت البنود المالية التالية مدرجة في قائمة المركز المالي لشركة Company A كما في ديسمبر 31، السنة 1:\nالنقد: $ 20,000\nالحسابات المدينة: 45,000\nالأصول المدفوعة مقدمًا: 10,250\nإجمالي الممتلكات والآلات والمعدات (PPE): 300,000\nمجمع الإهلاك على الممتلكات والآلات والمعدات: 25,750\nالحسابات الدائنة: 22,500\nأوراق الدفع: 125,000\nالإيرادات غير المكتسبة: 30,000\nبافتراض أن الحسابات المتبقية الوحيدة هي حسابات حقوق الملكية، ما إجمالي حقوق المساهمين لشركة Company A في ديسمبر 31، السنة 1؟",
+    "choicesAr": [
+      "$197,750",
+      "$202,000",
+      "$172,000",
+      "$223,500"
+    ],
+    "explanationAr": "وفقًا لنظرية الملكية، تساوي الأصول الالتزامات مضافًا إليها حقوق المساهمين. بناءً على المعلومات المعطاة، يبلغ إجمالي أصول شركة Company A مبلغ $349,500 ($20,000 + $45,000 + $10,250 + $300,000 – $25,750). بالإضافة إلى ذلك، يبلغ إجمالي الالتزامات $177,500 ($22,500 + $125,000 + $30,000). باستخدام المعادلة أعلاه، تبلغ حقوق المساهمين $172,000 ($349,500 – $177,500)."
   },
   {
     "unit": 1,
@@ -733,7 +789,15 @@
     ],
     "answerIndex": 3,
     "explanation": "According to the basic accounting equation, assets equal\nliabilities plus equity. Thus, equity of a business entity equals\ntotal assets less total liabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعرّف حقوق الملكية فيما يتعلق بمنشأة أعمال؟",
+    "choicesAr": [
+      "صافي الإيرادات.",
+      "إجمالي الإيرادات ناقصًا إجمالي المصروفات.",
+      "إجمالي الأصول والالتزامات.",
+      "إجمالي الأصول ناقصًا إجمالي الالتزامات."
+    ],
+    "explanationAr": "وفقًا للمعادلة المحاسبية الأساسية، تساوي الأصول الالتزامات مضافًا إليها حقوق الملكية. وبالتالي، تساوي حقوق الملكية لمنشأة أعمال إجمالي الأصول ناقصًا إجمالي الالتزامات."
   },
   {
     "unit": 1,
@@ -750,7 +814,15 @@
     ],
     "answerIndex": 3,
     "explanation": "According to the basic accounting equation, assets equals\nliabilities plus equity. Thus, stockholders’ equity equals total\nassets minus total liabilities. Total assets decreased by\n$25,000 ($40,000 – $65,000) while total liabilities increased by\n$32,000. Thus, the total change in stockholders’ equity is a\ndecrease of $57,000 ($25,000 + $32,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعكس قائمة المركز المالي المقارنة لشركة في نهاية السنة التغيرات التالية مقارنة بالسنة السابقة:\nزادت النقدية بمقدار $40,000، وزاد إجمالي الالتزامات بمقدار $32,000، وانخفضت جميع الأصول الأخرى بمقدار $65,000. أي العبارات التالية صحيحة بشأن التغير في حقوق ملكية المساهمين في الشركة خلال السنة الحالية؟",
+    "choicesAr": [
+      "زادت بمقدار $25,000.",
+      "زادت بمقدار $105,000.",
+      "انخفضت بمقدار $32,000.",
+      "انخفضت بمقدار $57,000."
+    ],
+    "explanationAr": "وفقًا للمعادلة المحاسبية الأساسية، تساوي الأصول الالتزامات مضافًا إليها حقوق الملكية. وبالتالي، تساوي حقوق ملكية المساهمين إجمالي الأصول ناقص إجمالي الالتزامات. انخفض إجمالي الأصول بمقدار $25,000 ($40,000 – $65,000)، بينما زاد إجمالي الالتزامات بمقدار $32,000. وبالتالي، فإن إجمالي التغير في حقوق ملكية المساهمين هو انخفاض بمقدار $57,000 ($25,000 + $32,000)."
   },
   {
     "unit": 1,
@@ -767,7 +839,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Revenue is recognized when (or as) the entity satisfies a\nperformance obligation by transferring a promised good or\nservice to a customer. The good or service is transferred when\nthe customer obtains control of that good or service. The\nentire proceeds therefore should be credited to a contract\nliability (deferred or unearned revenue) because the\nperformance obligation will not be satisfied until the\nperformance has been given even though the tickets are not\nrefundable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف يُفصح عن المتحصلات المستلمة من البيع المسبق لتذاكر غير قابلة للاسترداد لعرض مسرحي في القوائم المالية للبائع قبل تقديم العرض؟",
+    "choicesAr": [
+      "إيراد بكامل المتحصلات.",
+      "إيراد بقدر التكاليف ذات الصلة التي تم إنفاقها.",
+      "إيراد غير مكتسب بقدر التكاليف ذات الصلة التي تم إنفاقها.",
+      "إيراد غير مكتسب بكامل المتحصلات."
+    ],
+    "explanationAr": "يُعترف بالإيراد عندما تفي المنشأة بالتزام أداء، أو أثناء وفائها به، من خلال نقل سلعة أو خدمة موعودة إلى العميل. وتُنقل السلعة أو الخدمة عندما يحصل العميل على السيطرة على تلك السلعة أو الخدمة. ولذلك، ينبغي قيد كامل المتحصلات في الجانب الدائن لالتزام عقد (إيراد مؤجل أو غير مكتسب)، لأن التزام الأداء لن يُستوفى حتى يُقدَّم العرض، على الرغم من أن التذاكر غير قابلة للاسترداد."
   },
   {
     "unit": 1,
@@ -784,7 +864,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A deposit or other advance (a deferred revenue) is a contract\nliability. It does not qualify for revenue recognition until the\nperformance obligation is satisfied by transfer of the promised\ngood or service to a customer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بشأن الإيرادات المؤجلة المسجلة لدى شركة تقدم خدمات للعملاء؟",
+    "choicesAr": [
+      "يُعد الإيراد المؤجل التزامًا إلى أن تُقدَّم الخدمة.",
+      "تمثل الإيرادات المؤجلة إيرادات تم الاعتراف بها ولكن لم تُستلم نقدًا بعد.",
+      "تنشأ الإيرادات المؤجلة عن خدمات تم تقديمها ولكن لم تُصدر فواتير بها.",
+      "يُعد الإيراد المؤجل في دفاتر شركة ما مصروفًا مستحقًا في دفاتر شركة أخرى."
+    ],
+    "explanationAr": "تُعد الوديعة أو أي دفعة مقدمة أخرى (إيراد مؤجل) التزام عقد. وهي لا تستوفي شروط الاعتراف بالإيراد حتى يُستوفى التزام الأداء من خلال نقل السلعة أو الخدمة الموعودة إلى العميل."
   },
   {
     "unit": 1,
@@ -801,7 +889,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A noncurrent note receivable is not expected to be converted\ninto cash within 1 year or one operating cycle, whichever is\nlonger. Because the principal is due more than 1 year from the\nbalance sheet date, it must be regarded as noncurrent.\nHowever, the accrued interest is a current asset because it is\ndue in 2 months.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في الميزانية العمومية لشركة Geo بتاريخ 30 أبريل، السنة 3، أُفصح عن ورقة قبض بوصفها أصلًا غير متداول، وأُفصح عن فائدتها المستحقة عن 10 أشهر بوصفها أصلًا متداولًا. أي الشروط التالية يتوافق مع ورقة القبض لدى Geo؟",
+    "choicesAr": [
+      "يستحق سداد كل من مبالغ أصل الدين والفائدة في 30 يونيو، السنة 3 والسنة 4.",
+      "يستحق سداد أصل الدين والفائدة في 31 ديسمبر، السنة 3.",
+      "يستحق سداد كل من مبالغ أصل الدين والفائدة في 31 ديسمبر، السنة 3 والسنة 4.",
+      "يستحق سداد أصل الدين في 30 يونيو، السنة 4، وتستحق الفائدة في 30 يونيو، السنة 3 والسنة 4."
+    ],
+    "explanationAr": "لا يُتوقع تحويل ورقة القبض غير المتداولة إلى نقدية خلال 1 سنة أو 1 دورة تشغيلية، أيهما أطول. ونظرًا لأن أصل الدين يستحق بعد أكثر من 1 سنة من تاريخ الميزانية العمومية، فيجب اعتباره غير متداول. ومع ذلك، تُعد الفائدة المستحقة أصلًا متداولًا لأنها تستحق خلال 2 شهر."
   },
   {
     "unit": 1,
@@ -818,7 +914,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An asset is classified as current on the statement of financial\nposition if it is expected to be realized within the entity’s\noperating cycle or 1 year, whichever is longer. Current assets\ninclude (1) cash and cash equivalents; (2) certain individual\ntrading, available-for-sale, and held-to-maturity debt securities;\n(3) receivables; (4) inventories; (5) prepaid expenses; and (6)\ncertain individual investments in equity securities. Funds\nrestricted as to withdrawal or use for other than current\noperations are classified as noncurrent assets. Thus, the\n$10,000 in a sinking fund for a long-term bond payable is\nclassified as a noncurrent asset. Current receivables are\nmeasured at net amount expected to be collected (i.e., net of\nallowance for credit losses). Trading debt securities are\nclassified as current assets because they are bought and held\nprimarily for sale in the near term. Accordingly, the total of\ncurrent assets is $64,000 ($40,000 unrestricted cash +\n$15,000 current receivables carrying amount + $7,000\nmerchandise inventory + $2,000 investment in trading debt\nsecurities).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى Clear Co. أرصدة الحسابات المختارة التالية:\nالنقد (يشمل $10,000 في صندوق استهلاك سندات لسندات طويلة الأجل مستحقة الدفع): $50,000\nالحسابات المدينة: 20,000\nمخصص خسائر الائتمان: 5,000\nودائع مستلمة من العملاء: 3,000\nمخزون البضاعة: 7,000\nإيراد إيجار غير مكتسب: 1,000\nاستثمار في أوراق مالية للدين بغرض المتاجرة: 2,000\nما المبلغ الذي ينبغي أن تفصح عنه Clear بوصفه إجمالي الأصول المتداولة في ميزانيتها العمومية؟",
+    "choicesAr": [
+      "$64,000",
+      "$67,000",
+      "$72,000",
+      "$74,000"
+    ],
+    "explanationAr": "يُصنَّف الأصل ضمن الأصول المتداولة في قائمة المركز المالي إذا كان من المتوقع تحققه خلال دورة تشغيل المنشأة أو 1 سنة، أيهما أطول. تشمل الأصول المتداولة (1) النقد وما في حكمه؛ و(2) بعض الأوراق المالية الفردية للدين المحتفظ بها للمتاجرة، والمتاحة للبيع، والمحتفظ بها حتى الاستحقاق؛ و(3) الذمم المدينة؛ و(4) المخزون؛ و(5) المصروفات المدفوعة مقدمًا؛ و(6) بعض الاستثمارات الفردية في الأوراق المالية لحقوق الملكية. تُصنَّف الأموال المقيدة من حيث السحب أو الاستخدام لأغراض غير العمليات الجارية ضمن الأصول غير المتداولة. ومن ثم، يُصنَّف مبلغ $10,000 الموجود في صندوق استهلاك سندات لسندات طويلة الأجل مستحقة الدفع ضمن الأصول غير المتداولة. تُقاس الذمم المدينة المتداولة بصافي المبلغ المتوقع تحصيله (أي بعد خصم مخصص خسائر الائتمان). وتُصنَّف الأوراق المالية للدين المحتفظ بها للمتاجرة ضمن الأصول المتداولة لأنها تُشترى ويُحتفظ بها أساسًا لبيعها في الأجل القريب. وبناءً عليه، يبلغ إجمالي الأصول المتداولة $64,000 ($40,000 نقد غير مقيد + $15,000 القيمة الدفترية للذمم المدينة المتداولة + $7,000 مخزون البضاعة + $2,000 استثمار في أوراق مالية للدين بغرض المتاجرة)."
   },
   {
     "unit": 1,
@@ -835,7 +939,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Current assets are reasonably expected to be realized in cash\nor to be sold or consumed within 12 months or the operating\ncycle of the business, whichever is longer. If the ordinary trade\nreceivables of the business fall due more than 12 months from\nthe balance sheet date, then the operating cycle is clearly\nlonger than 12 months and the receivables should be included\nin current assets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ مما يلي عبارة غير صحيحة بشأن الإفصاح عن الحسابات المدينة في الميزانية العمومية؟",
+    "choicesAr": [
+      "ينبغي تحديد الحسابات المدينة في الميزانية العمومية باعتبارها مرهونة إذا استُخدمت ضمانًا لقرض، حتى لو كان القرض ظاهرًا في الميزانية العمومية نفسها باعتباره التزامًا.",
+      "عادةً ما يُستبعد من الأصول المتداولة ذلك الجزء من الحسابات المدينة للعملاء المستحقة على أقساط الذي يحل أجله بعد أكثر من 12 شهر من تاريخ الميزانية العمومية.",
+      "يجوز خصم مخصصات من إجمالي مبلغ الحسابات المدينة مقابل خسائر الائتمان والتعديلات التي ستُجرى مستقبلًا على الحسابات الظاهرة في الميزانية العمومية الحالية.",
+      "من الأفضل عرض الذمم المدينة التجارية بصورة منفصلة عن الذمم المدينة غير التجارية عندما تكون مبالغ كل منها جوهرية."
+    ],
+    "explanationAr": "الأصول المتداولة هي الأصول التي يُتوقع بصورة معقولة تحويلها إلى نقد أو بيعها أو استهلاكها خلال 12 شهر أو دورة تشغيل المنشأة، أيهما أطول. وإذا كانت الذمم المدينة التجارية العادية للمنشأة تستحق بعد أكثر من 12 شهر من تاريخ الميزانية العمومية، فإن دورة التشغيل تكون بوضوح أطول من 12 شهر، وينبغي إدراج الذمم المدينة ضمن الأصول المتداولة."
   },
   {
     "unit": 1,
@@ -852,7 +964,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Current liabilities are obligations the liquidation of which is\nreasonably expected to require the use of existing resources\nproperly classifiable as current assets or the creation of other\ncurrent liabilities during the next operating cycle or year,\nwhichever is longer. Current liabilities also include\n(1) obligations that by their terms are or will be due on\ndemand within 1 year (or the operating cycle, if longer) and\n(2) obligations that are or will be callable by the creditor\nbecause of a violation of a debt covenant at the balance sheet\ndate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أفضل تعريف للالتزامات المتداولة هو أنها تلك الالتزامات",
+    "choicesAr": [
+      "التي تتطلب تسويتها استخدام موارد يصح تصنيفها ضمن الأصول المتداولة خلال دورة التشغيل التالية أو 1 سنة، أيهما أطول.",
+      "التي تتطلب تسويتها استخدام النقد أو زيادة الالتزامات المتداولة خلال دورة التشغيل التالية أو 1 سنة، أيهما أطول.",
+      "التي يُتوقع بصورة معقولة أن تتطلب تسويتها استخدام الأصول المتداولة أو إنشاء التزامات متداولة أخرى خلال دورة التشغيل التالية أو 1 سنة، أيهما أطول.",
+      "التي تنطوي على تعهدات تُبرم خلال دورة التشغيل التالية أو 1 سنة، أيهما أطول."
+    ],
+    "explanationAr": "الالتزامات المتداولة هي التزامات يُتوقع بصورة معقولة أن تتطلب تسويتها استخدام موارد قائمة يصح تصنيفها ضمن الأصول المتداولة أو إنشاء التزامات متداولة أخرى خلال دورة التشغيل التالية أو السنة التالية، أيهما أطول. وتشمل الالتزامات المتداولة أيضًا (1) الالتزامات التي تكون أو ستصبح، وفقًا لشروطها، مستحقة عند الطلب خلال 1 سنة (أو دورة التشغيل، إذا كانت أطول)، و(2) الالتزامات التي يحق أو سيحق للدائن المطالبة بسدادها بسبب مخالفة أحد تعهدات الدين في تاريخ الميزانية العمومية."
   },
   {
     "unit": 1,
@@ -869,7 +989,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The entity’s cost of goods manufactured can be calculated as\nfollows:\nSales                          $160,000\nLess: Gross profit               (48,000)\nCost of goods sold               $112,000\nAdd: Ending finished goods         58,300\nGoods available for sale      $170,300\nLess: Beginning finished goods (60,190)\nCost of goods manufactured        $110,110",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن قائمة الأرباح والخسائر لمنشأة المعلومات التالية للسنة المالية الحالية:\nالمبيعات: $160,000\nمجمل الربح: 48,000\nمخزون المنتجات التامة في نهاية السنة: 58,300\nمخزون المنتجات التامة أول المدة: 60,190\nتبلغ تكلفة البضاعة المصنَّعة بواسطة المنشأة للسنة المالية الحالية",
+    "choicesAr": [
+      "$46,110",
+      "$49,890",
+      "$110,110",
+      "$113,890"
+    ],
+    "explanationAr": "يمكن حساب تكلفة البضاعة المصنَّعة للمنشأة كما يلي:\nالمبيعات: $160,000\nيُطرح: مجمل الربح: (48,000)\nتكلفة البضاعة المباعة: $112,000\nيُضاف: المنتجات التامة آخر المدة: 58,300\nالبضاعة المتاحة للبيع: $170,300\nيُطرح: المنتجات التامة أول المدة: (60,190)\nتكلفة البضاعة المصنَّعة: $110,110"
   },
   {
     "unit": 1,
@@ -886,7 +1014,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A single-step income statement combines all revenues and\ngains, combines all expenses and losses, and subtracts the\nlatter from the former in a “single step” to arrive at net income.\nGross profit, being the difference between sales revenue and\ncost of goods sold, does not appear on a single-step income\nstatement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ مما يلي يظهر في قائمة الدخل متعددة الخطوات، ولكنه لا يظهر في قائمة الدخل ذات الخطوة الواحدة؟",
+    "choicesAr": [
+      "خسارة من العمليات المتوقفة.",
+      "مجمل الربح.",
+      "تكلفة البضاعة المباعة.",
+      "صافي الدخل من العمليات المستمرة."
+    ],
+    "explanationAr": "تجمع قائمة الدخل ذات الخطوة الواحدة جميع الإيرادات والمكاسب، وتجمع جميع المصروفات والخسائر، وتطرح المجموعة الأخيرة من المجموعة الأولى في «خطوة واحدة» للوصول إلى صافي الدخل. ولا يظهر مجمل الربح، الذي يمثل الفرق بين إيرادات المبيعات وتكلفة البضاعة المباعة، في قائمة الدخل ذات الخطوة الواحدة."
   },
   {
     "unit": 1,
@@ -903,7 +1039,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The company’s cost of goods sold can be calculated as\nfollows:\nBeginning inventory of finished goods   $ 100,000\nAdd: Cost of goods manufactured           700,000\nLess: Ending inventory of finished goods (200,000)\nCost of goods sold                        $ 600,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالنظر إلى البيانات التالية لشركة، ما تكلفة البضاعة المباعة؟\nمخزون أول المدة من المنتجات التامة الصنع: $100,000\nتكلفة البضاعة المصنعة: 700,000\nمخزون آخر المدة من المنتجات التامة الصنع: 200,000\nمخزون أول المدة من الإنتاج تحت التشغيل: 300,000\nمخزون آخر المدة من الإنتاج تحت التشغيل: 50,000",
+    "choicesAr": [
+      "$500,000",
+      "$600,000",
+      "$800,000",
+      "$950,000"
+    ],
+    "explanationAr": "يمكن حساب تكلفة البضاعة المباعة للشركة كما يلي:\nمخزون أول المدة من المنتجات التامة الصنع: $ 100,000\nيضاف: تكلفة البضاعة المصنعة: 700,000\nيطرح: مخزون آخر المدة من المنتجات التامة الصنع: (200,000)\nتكلفة البضاعة المباعة: $ 600,000"
   },
   {
     "unit": 1,
@@ -920,7 +1064,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The results of operations for a period of time are reported in\nthe income statement (statement of earnings) on the accrual\nbasis using an approach oriented to historical transactions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القائمة المالية التي تقدم ملخصًا لعمليات المنشأة خلال فترة زمنية هي",
+    "choicesAr": [
+      "قائمة الدخل.",
+      "قائمة المركز المالي.",
+      "قائمة حقوق المساهمين.",
+      "قائمة الأرباح المحتجزة."
+    ],
+    "explanationAr": "يُفصح عن نتائج العمليات خلال فترة زمنية في قائمة الدخل (قائمة الأرباح) وفق أساس الاستحقاق، باستخدام منهج يرتكز على المعاملات التاريخية."
   },
   {
     "unit": 1,
@@ -937,7 +1089,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness entity except those changes resulting from\ninvestments by owners and distributions to owners.\nComprehensive income includes two major categories: net\nincome and other comprehensive income (OCI). Net income\nincludes the results of operations classified as income from\ncontinuing operations and discontinued operations.\nComponents of comprehensive income not included in the\ndetermination of net income are included in OCI, for example,\nunrealized gains and losses on available-for-sale debt\nsecurities (except those that are hedged items in a fair value\nhedge).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أفضل تعريف للدخل الشامل هو",
+    "choicesAr": [
+      "صافي الدخل باستثناء المكاسب والخسائر غير العادية.",
+      "التغير في صافي الأصول خلال الفترة، بما في ذلك مساهمات المُلّاك والتوزيعات على المُلّاك.",
+      "إجمالي الإيرادات مطروحًا منه إجمالي المصروفات.",
+      "التغير في صافي الأصول خلال الفترة، باستثناء المعاملات مع المُلّاك."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق الملكية لمنشأة أعمال، باستثناء التغيرات الناتجة عن استثمارات المُلّاك والتوزيعات على المُلّاك. ويشمل الدخل الشامل فئتين رئيسيتين: صافي الدخل والدخل الشامل الآخر (OCI). ويشمل صافي الدخل نتائج العمليات المصنفة ضمن الدخل من العمليات المستمرة والعمليات المتوقفة. وتُدرج مكونات الدخل الشامل التي لا تدخل في تحديد صافي الدخل ضمن الدخل الشامل الآخر، مثل المكاسب والخسائر غير المحققة من الأوراق المالية للدين المتاحة للبيع (باستثناء تلك التي تمثل بنودًا متحوطًا لها في تحوط القيمة العادلة)."
   },
   {
     "unit": 1,
@@ -954,7 +1114,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Revenues occur in the course of ordinary activities. Gains may\nor may not occur in the course of ordinary activities. For\nexample, gains may occur from the sale of noncurrent assets.\nThus, the gain on the sale of a plant asset is not an operating\nitem and should be classified in an income statement with\nseparate operating and nonoperating sections in the other\nrevenues and gains section.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بسبب تقديرات غير دقيقة للعمر الخدمي والقيمة المتبقية لأصل من أصول المنشأة، تم بيع أصل مهلك بالكامل في السنة الحالية بمكسب جوهري. من المرجح أن يُعرض هذا المكسب",
+    "choicesAr": [
+      "في قسم الإيرادات والمكاسب الأخرى في قائمة الدخل الحالية.",
+      "كجزء من إيرادات المبيعات في قائمة الدخل الحالية.",
+      "في قسم البنود الاستثنائية في قائمة الدخل الحالية.",
+      "كتعديل لإهلاك الفترات السابقة في قائمة التغيرات في حقوق الملكية."
+    ],
+    "explanationAr": "تنشأ الإيرادات في سياق الأنشطة العادية. أما المكاسب فقد تنشأ أو لا تنشأ في سياق الأنشطة العادية. فعلى سبيل المثال، قد تنشأ المكاسب من بيع الأصول غير المتداولة. وبالتالي، فإن المكسب الناتج عن بيع أصل من أصول المنشأة ليس بندًا تشغيليًا، وينبغي تصنيفه ضمن قسم الإيرادات والمكاسب الأخرى في قائمة دخل تتضمن قسمين منفصلين للبنود التشغيلية وغير التشغيلية."
   },
   {
     "unit": 1,
@@ -971,7 +1139,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Losses may or may not occur in the course of ordinary\nactivities. For example, they may result from nonreciprocal\ntransactions (e.g., theft), reciprocal transactions (e.g., a sale of\nplant assets), or from holding assets or liabilities. Losses are\ntypically displayed separately.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "افترض أن موظفين اعترفوا بسرقة مخزون بقيمة $500,000، ولكنهم غير قادرين على رد قيمته. كيف ينبغي إظهار هذا الاحتيال الجوهري في القوائم المالية للشركة؟",
+    "choicesAr": [
+      "يُصنف كخسارة ويُعرض كبند مستقل في قائمة الدخل.",
+      "يُصنف مبدئيًا كحسابات مدينة لأن الموظفين مسؤولون عن البضاعة. ولأنهم غير قادرين على السداد، يُعترف بالخسارة باعتبارها شطبًا للحسابات المدينة.",
+      "يُدرج ضمن تكلفة البضاعة المباعة لأن البضاعة غير موجودة فعليًا، ولأن خسائر عجز المخزون عادية، ولأن ذلك سيلفت أقل قدر من الانتباه.",
+      "يُسجل مباشرة ضمن الأرباح المحتجزة لأنه ليس بندًا مولدًا للدخل."
+    ],
+    "explanationAr": "قد تنشأ الخسائر أو لا تنشأ في سياق الأنشطة العادية. فعلى سبيل المثال، قد تنتج عن معاملات غير تبادلية (مثل السرقة)، أو معاملات تبادلية (مثل بيع أصول المنشأة)، أو عن الاحتفاظ بأصول أو التزامات. وتُعرض الخسائر عادةً بصورة منفصلة."
   },
   {
     "unit": 1,
@@ -988,7 +1164,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost of goods sold equals cost of goods manufactured\n(COGM) adjusted for the change in finished goods. COGM\nequals the sum of raw materials used, direct labor costs, and\nproduction overhead, adjusted for the change in work-in-\nprogress. Raw materials used equals $255,000 ($105,000 BI\n+ $300,000 purchases – $20,000 returns – $130,000 EI).\nThus, COGM equals $1,650,000 ($255,000 RM + $600,000\nDL + $750,000 OH + $220,000 BWIP – $175,000 EWIP), and\nCOGS equals $1,480,000 ($1,650,000 COGM + $90,000 BFG\n– $260,000 EFG).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت لدى منشأة أرصدة المخزون الافتتاحية والختامية التالية خلال السنة الحالية:\nالبند | 1/1 | 12/31\nالبضاعة تامة الصنع | $90,000 | $260,000\nالمواد الخام | 105,000 | 130,000\nالإنتاج تحت التشغيل | 220,000 | 175,000\nوقعت المعاملات والأحداث التالية خلال السنة الحالية:\n• تم شراء مواد خام بقيمة $300,000، أُعيد منها ما قيمته $20,000 بسبب عيوب.\n• تم تكبد تكاليف عمل مباشر قدرها $600,000.\n• تم تكبد تكاليف إنتاج غير مباشرة قدرها $750,000.\nتكون تكلفة البضاعة المباعة للسنة الحالية المنتهية في ديسمبر 31",
+    "choicesAr": [
+      "$1,480,000",
+      "$1,500,000",
+      "$1,610,000",
+      "$1,650,000"
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المباعة تكلفة البضاعة المصنعة بعد تعديلها بالتغير في البضاعة تامة الصنع. وتساوي تكلفة البضاعة المصنعة مجموع المواد الخام المستخدمة وتكاليف العمل المباشر وتكاليف الإنتاج غير المباشرة، بعد تعديله بالتغير في الإنتاج تحت التشغيل. وتساوي المواد الخام المستخدمة $255,000 ($105,000 مخزون أول المدة + $300,000 مشتريات – $20,000 مردودات – $130,000 مخزون آخر المدة). وبالتالي، تساوي تكلفة البضاعة المصنعة $1,650,000 ($255,000 مواد خام + $600,000 عمل مباشر + $750,000 تكاليف غير مباشرة + $220,000 إنتاج تحت التشغيل أول المدة – $175,000 إنتاج تحت التشغيل آخر المدة)، وتساوي تكلفة البضاعة المباعة $1,480,000 ($1,650,000 تكلفة البضاعة المصنعة + $90,000 بضاعة تامة الصنع أول المدة – $260,000 بضاعة تامة الصنع آخر المدة)."
   },
   {
     "unit": 1,
@@ -1005,7 +1189,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Purchases equals usage adjusted for the inventory change.\nHence, purchases equals $130,150 ($128,900 used – $27,500\nBI + $28,750 EI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كان الرصيد الافتتاحي لحساب مخزون المواد لشهر مايو $27,500، وكان الرصيد الختامي لشهر مايو $28,750، واستُخدمت مواد بقيمة $128,900 خلال الشهر، فإن تكلفة المواد المشتراة خلال الشهر تبلغ",
+    "choicesAr": [
+      "$101,400",
+      "$127,650",
+      "$130,150",
+      "$157,650"
+    ],
+    "explanationAr": "تساوي المشتريات الاستخدام بعد تعديله بالتغير في المخزون. ومن ثم، تساوي المشتريات $130,150 ($128,900 مواد مستخدمة – $27,500 مخزون أول المدة + $28,750 مخزون آخر المدة)."
   },
   {
     "unit": 1,
@@ -1022,7 +1214,15 @@
     ],
     "answerIndex": 1,
     "explanation": "This solution requires a series of computations.\nBeginning raw materials                      $ 38,000\nAdd: Net purchases raw materials             $115,000\nMaterials available                           $153,000\nLess: Ending materials                         (45,000)\nMaterials used in production                  $108,000\nDirect labor                                   236,000\nManufacturing overhead\nFactory rent                   $59,000\nFactory depreciation            18,700\nMaterial handling costs         35,800\nTotal Manufacturing overhead                    113,500\nTotal manufacturing costs                      $457,500\nAdd: Beginning work-in-process                   21,000\nLess: Ending work-in-process                    (10,000)\nCosts of goods manufactured                    $468,500\nAdd: Beginning finished goods                    78,000\nLess: Ending finished goods                    (107,000)\nCost of goods sold                             $439,500",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أُخذت المعلومات التالية من السجلات المحاسبية للسنة الماضية لشركة صناعية.\nالمخزون | يناير 1 | ديسمبر 31\nالمواد الخام | $38,000 | $ 45,000\nالإنتاج تحت التشغيل | 21,000 | 10,000\nالمنتجات التامة | 78,000 | 107,000\nمعلومات أخرى\nالعمل المباشر: $236,000\nتكاليف شحن الطلبات الصادرة: 6,500\nإيجار المصنع: 59,000\nإهلاك المصنع: 18,700\nمصروف الإعلان: 24,900\nصافي مشتريات المواد الخام: 115,000\nرواتب الإدارة العامة للشركة: 178,000\nتكاليف مناولة المواد: 35,800\nبناءً على هذه المعلومات، فإن تكلفة البضاعة المصنعة وتكلفة البضاعة المباعة للشركة هما",
+    "choicesAr": [
+      "$460,500 و$489,500، على التوالي.",
+      "$468,500 و$439,500، على التوالي.",
+      "$468,500 و$470,900، على التوالي.",
+      "$646,500 و$617,500، على التوالي."
+    ],
+    "explanationAr": "يتطلب هذا الحل سلسلة من العمليات الحسابية.\nالمواد الخام أول المدة: $ 38,000\nيضاف: صافي مشتريات المواد الخام: $115,000\nالمواد المتاحة: $153,000\nيطرح: المواد آخر المدة: (45,000)\nالمواد المستخدمة في الإنتاج: $108,000\nالعمل المباشر: 236,000\nالتكاليف الصناعية غير المباشرة\nإيجار المصنع: $59,000\nإهلاك المصنع: 18,700\nتكاليف مناولة المواد: 35,800\nإجمالي التكاليف الصناعية غير المباشرة: 113,500\nإجمالي تكاليف التصنيع: $457,500\nيضاف: الإنتاج تحت التشغيل أول المدة: 21,000\nيطرح: الإنتاج تحت التشغيل آخر المدة: (10,000)\nتكلفة البضاعة المصنعة: $468,500\nيضاف: المنتجات التامة أول المدة: 78,000\nيطرح: المنتجات التامة آخر المدة: (107,000)\nتكلفة البضاعة المباعة: $439,500"
   },
   {
     "unit": 1,
@@ -1039,7 +1239,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Net income for the year is calculated as follows:\nIncome        Times:\nStatement     Tax           As\nItem          Effect        Reported\nIncome from\ncontinuing\noperations (net of\ntax)                                               $ 72,000\nDiscontinued          $(70,000)      (1.0 – .40)   (42,000)\noperations\nNet income                                          $ 30,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق المعلومات التالية بقائمة الدخل لشركة مساهمة عن فترة 12 شهر المنتهية للتو. يبلغ معدل ضريبة الدخل الفعلي للشركة 40%.\nالعمليات المتوقفة: $(70,000)\nالدخل من العمليات المستمرة (بالصافي بعد الضريبة): 72,000\nالأثر التراكمي للتغيير في مبدأ محاسبي: 60,000\nصافي الدخل للسنة هو",
+    "choicesAr": [
+      "$36,000",
+      "$12,000",
+      "$8,000",
+      "$30,000"
+    ],
+    "explanationAr": "يُحسب صافي الدخل للسنة كما يلي:\nبند قائمة الدخل | المبلغ | مضروبًا في: الأثر الضريبي | كما تم التقرير عنه\nالدخل من العمليات المستمرة (بالصافي بعد الضريبة) | | | $ 72,000\nالعمليات المتوقفة | $(70,000) | (1.0 – .40) | (42,000)\nصافي الدخل | | | $ 30,000"
   },
   {
     "unit": 1,
@@ -1056,7 +1264,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If an entity that presents a full set of financial statements has\nitems of other comprehensive income (OCI), it must present\ncomprehensive income either (1) in a single continuous\nstatement of comprehensive income or (2) in two separate but\nconsecutive statements (an income statement and a\nstatement of OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعد من الأشكال المقبولة للتقرير عن الدخل الشامل؟\nI. في قائمة مالية متصلة واحدة\nII. في قائمة التغيرات في حقوق الملكية\nIII. في قائمة منفصلة لصافي الدخل\nIV. في قائمتين ماليتين منفصلتين لكن متتاليتين",
+    "choicesAr": [
+      "I وII فقط.",
+      "I وII وIII فقط.",
+      "III وIV فقط.",
+      "I وIV فقط."
+    ],
+    "explanationAr": "إذا كانت المنشأة التي تعرض مجموعة كاملة من القوائم المالية لديها بنود من الدخل الشامل الآخر، فيجب عليها عرض الدخل الشامل إما (1) في قائمة دخل شامل واحدة متصلة أو (2) في قائمتين منفصلتين لكن متتاليتين (قائمة دخل وقائمة للدخل الشامل الآخر)."
   },
   {
     "unit": 1,
@@ -1073,7 +1289,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Comprehensive income includes net income and other\ncomprehensive income. Net income equals $110,000\n($800,000 sales revenue – $600,000 COGS – $90,000\noperating expenses). Unrealized holding gains on available-\nfor-sale debt securities ($30,000) are included in other\ncomprehensive income. Thus, comprehensive income is\n$140,000 ($110,000 + $30,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُقرر شركة عن المعلومات التالية كما في ديسمبر 31:\nإيرادات المبيعات: $800,000\nتكلفة البضاعة المباعة: 600,000\nالمصروفات التشغيلية: 90,000\nمكسب حيازة غير محقق من أوراق مالية تمثل أدوات دين متاحة للبيع، بالصافي بعد الضريبة: 30,000\nما المبلغ الذي ينبغي للشركة التقرير عنه بوصفه الدخل الشامل كما في ديسمبر 31؟",
+    "choicesAr": [
+      "$30,000",
+      "$110,000",
+      "$140,000",
+      "$200,000"
+    ],
+    "explanationAr": "يشمل الدخل الشامل صافي الدخل والدخل الشامل الآخر. يساوي صافي الدخل $110,000 (إيرادات المبيعات $800,000 – تكلفة البضاعة المباعة $600,000 – المصروفات التشغيلية $90,000). تُدرج مكاسب الحيازة غير المحققة من أوراق مالية تمثل أدوات دين متاحة للبيع ($30,000) ضمن الدخل الشامل الآخر. وبالتالي، يبلغ الدخل الشامل $140,000 ($110,000 + $30,000)."
   },
   {
     "unit": 1,
@@ -1090,7 +1314,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Equity of a business entity (or the net assets of a nonbusiness\norganization) is a residual amount that reflects the basic\naccounting equation: assets minus liabilities equals equity (or\nnet assets). It is reported on the statement of financial\nposition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعرَّف جميع البنود التالية بأنها عناصر في قائمة الدخل باستثناء",
+    "choicesAr": [
+      "المصروفات.",
+      "حقوق ملكية المساهمين.",
+      "المكاسب والخسائر.",
+      "الإيرادات."
+    ],
+    "explanationAr": "حقوق الملكية لمنشأة تجارية (أو صافي الأصول لمنظمة غير تجارية) هي مبلغ متبقٍ يعكس المعادلة المحاسبية الأساسية: الأصول ناقص الالتزامات تساوي حقوق الملكية (أو صافي الأصول). ويُعرض هذا المبلغ في قائمة المركز المالي."
   },
   {
     "unit": 1,
@@ -1107,7 +1339,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Gain or loss on the disposal of a major operating unit is\nreported net of tax in discontinued operations. Discontinued\noperations are reported between income from continuing\noperations and net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفقًا للمبادئ المحاسبية المقبولة عمومًا في الولايات المتحدة، أين ينبغي لشركة متعددة الجنسيات أن تعرض في قائمة الدخل الخسارة الناتجة عن التخلص من وحدة تشغيلية رئيسية ببيعها؟",
+    "choicesAr": [
+      "عرض الخسارة، قبل الضريبة، في قسم منفصل بين الدخل من العمليات المستمرة وصافي الدخل.",
+      "عرض الخسارة، بعد خصم أثر الضريبة، في قسم منفصل بين الدخل من العمليات المستمرة وصافي الدخل.",
+      "عرض الخسارة، قبل الضريبة، في قسم منفصل بين الدخل من العمليات والدخل قبل ضريبة الدخل.",
+      "عرض الخسارة، بعد خصم أثر الضريبة، في قسم منفصل بين الدخل قبل الضريبة وصافي الدخل."
+    ],
+    "explanationAr": "يُعرض المكسب أو الخسارة الناتج عن التخلص من وحدة تشغيلية رئيسية بعد خصم أثر الضريبة ضمن العمليات المتوقفة. وتُعرض العمليات المتوقفة بين الدخل من العمليات المستمرة وصافي الدخل."
   },
   {
     "unit": 1,
@@ -1124,7 +1364,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Revenues            $10,000,000\nCOGS                  (7,500,000) *\nGross profit        2,500,000 ($10,000,000 × 25%)\nOperating expenses (1,000,000) **\nOperating income    $ 1,500,000     ($10,000,000 × 15%)\n* COGS = Revenues – Gross profit\n** Operating expenses = Gross profit – Operating income\nIf operating expenses are reduced by 20%:\nGross profit        $2,500,000     ($10,000,000 × 25%)\nOperating expenses (800,000) ($1,000,000 × 80%)\nOperating income      1,700,000\nAccordingly, a 20% reduction in operating expenses results in\na $200,000 ($1,700,000 – $1,500,00) increase in operating\nincome.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت شركة عن إيرادات للربع الأول قدرها $10,000,000، وهامش ربح إجمالي قدره 25%، ودخل تشغيلي بنسبة 15%. ولخفض المصروفات غير المباشرة، أوصى مستشار بأن تُسند الشركة بعض أنشطتها التشغيلية إلى جهات خارجية بدءًا من الربع الثاني. ومن المتوقع أن تؤدي هذه التوصية إلى خفض المصروفات التشغيلية بنسبة 20% دون التأثير في حجم المبيعات. ويبلغ معدل ضريبة الدخل للشركة 35%. بافتراض بقاء تكلفة المبيعات عند 75%، ما الأثر على قائمة الدخل إذا نفذت الشركة التوصية؟",
+    "choicesAr": [
+      "سيزيد إجمالي الربح بنسبة 8.0%.",
+      "سيزيد الدخل التشغيلي بنسبة 8.7%.",
+      "سيزيد الدخل التشغيلي بمقدار $200,000.",
+      "ستنخفض المصروفات التشغيلية بمقدار $300,000."
+    ],
+    "explanationAr": "الإيرادات: $10,000,000\nتكلفة البضاعة المباعة: (7,500,000) *\nإجمالي الربح: 2,500,000 ($10,000,000 × 25%)\nالمصروفات التشغيلية: (1,000,000) **\nالدخل التشغيلي: $ 1,500,000 ($10,000,000 × 15%)\n* تكلفة البضاعة المباعة = الإيرادات – إجمالي الربح\n** المصروفات التشغيلية = إجمالي الربح – الدخل التشغيلي\nإذا خُفضت المصروفات التشغيلية بنسبة 20%:\nإجمالي الربح: $2,500,000 ($10,000,000 × 25%)\nالمصروفات التشغيلية: (800,000) ($1,000,000 × 80%)\nالدخل التشغيلي: 1,700,000\nوبناءً عليه، يؤدي خفض المصروفات التشغيلية بنسبة 20% إلى زيادة في الدخل التشغيلي بمقدار $200,000 ($1,700,000 – $1,500,00)."
   },
   {
     "unit": 1,
@@ -1141,7 +1389,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods sold = Beginning inventory + Cost of goods\nmanufactured – Ending inventory\nThus, cost of goods sold = $20,000 + $200,000 – $15,000 =\n$205,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبدت شركة تكلفة تصنيع قدرها $200,000 خلال الشهر، وكان مخزون الإنتاج التام أول المدة $20,000 ومخزون الإنتاج التام آخر المدة $15,000. بافتراض عدم وجود مخزون إنتاج تحت التشغيل، بلغت تكلفة البضاعة المباعة للشركة",
+    "choicesAr": [
+      "$220,000",
+      "$205,000",
+      "$200,000",
+      "$105,000"
+    ],
+    "explanationAr": "تكلفة البضاعة المباعة = مخزون أول المدة + تكلفة البضاعة المصنعة – مخزون آخر المدة\nوعليه، فإن تكلفة البضاعة المباعة = $20,000 + $200,000 – $15,000 = $205,000."
   },
   {
     "unit": 1,
@@ -1158,7 +1414,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The matching principle states that expenses should be\nrecognized in the same period as the revenues that those\nexpenses helped produce. Revenues related to the\nemployee’s labor are not recognized until the goods are sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "للامتثال لمبدأ المقابلة، ينبغي عادةً تحميل تكلفة خدمات العمل التي يقدمها موظف يشارك في تصنيع منتج على قائمة الدخل في الفترة التي يتم فيها",
+    "choicesAr": [
+      "أداء العمل.",
+      "دفع الأجر للموظف.",
+      "إكمال المنتج.",
+      "بيع المنتج."
+    ],
+    "explanationAr": "ينص مبدأ المقابلة على وجوب الاعتراف بالمصروفات في الفترة نفسها التي يُعترف فيها بالإيرادات التي ساعدت تلك المصروفات على تحقيقها. ولا يُعترف بالإيرادات المرتبطة بعمل الموظف إلا عند بيع السلع."
   },
   {
     "unit": 1,
@@ -1175,7 +1439,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The budget is an internal document that is only available to\nthose within the company. Therefore, an external investor has\nno access to the information in the budget and thus no way to\ncompare budgeted amounts to income statement amounts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن لمستثمر خارجي استخدام قائمة الدخل لجميع الأغراض التالية باستثناء",
+    "choicesAr": [
+      "تحليل أداء الشركة مقارنةً بالموازنة.",
+      "مقارنة نتائج الشركة بنتائج منافسيها.",
+      "تقييم مخاطر تحقيق الشركة للربحية المستقبلية.",
+      "التنبؤ بإيرادات الشركة المستقبلية."
+    ],
+    "explanationAr": "الموازنة وثيقة داخلية متاحة فقط لمن هم داخل الشركة. ولذلك، لا يستطيع المستثمر الخارجي الوصول إلى المعلومات الواردة في الموازنة، وبالتالي لا توجد لديه وسيلة لمقارنة المبالغ المدرجة في الموازنة بالمبالغ الواردة في قائمة الدخل."
   },
   {
     "unit": 1,
@@ -1192,7 +1464,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the matching principle, the recognition of expense and\nrecognition of related revenue occur in the same accounting\nperiod. Cost of goods sold, a product cost, is recognized in the\nperiod during which the product is sold. Administrative costs,\nwhich are period costs, are recognized in the period in which\nthey were incurred. Thus, the total expense in the month of\nOctober must include the cost of goods sold of $450,000 (900\nunits sold × $500 per unit) and the administrative costs of\n$300,000, which results in $750,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال شهر أكتوبر، اشترت شركة 1,000 وحدة من المخزون بسعر $500 للوحدة وباعت 900 من هذه الوحدات، وهو ما يمثل 10% من موازنة المبيعات السنوية للشركة بالوحدات. كما تكبدت الشركة تكاليف إدارية قدرها $300,000 خلال أكتوبر. بتطبيق مبدأ المقابلة، فإن إجمالي مصروفات الشركة في قائمة الدخل لشهر أكتوبر هو",
+    "choicesAr": [
+      "$750,000",
+      "$800,000",
+      "$810,000",
+      "$860,000"
+    ],
+    "explanationAr": "بموجب مبدأ المقابلة، يحدث الاعتراف بالمصروف والاعتراف بالإيراد المرتبط به في الفترة المحاسبية نفسها. ويُعترف بتكلفة البضاعة المباعة، وهي تكلفة منتج، في الفترة التي يُباع فيها المنتج. أما التكاليف الإدارية، وهي تكاليف فترة، فيُعترف بها في الفترة التي تم تكبدها فيها. وبالتالي، يجب أن يشمل إجمالي المصروفات في شهر أكتوبر تكلفة البضاعة المباعة البالغة $450,000 (900 وحدة مباعة × $500 للوحدة) والتكاليف الإدارية البالغة $300,000، مما ينتج عنه $750,000."
   },
   {
     "unit": 1,
@@ -1209,7 +1489,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all changes in the equity (net\nassets) of a business during a period, except those from\ninvestments by and distributions to owners. In this case,\ncomprehensive income is $1,020,000 ($950,000 net income +\n$90,000 unrealized gain on available-for-sale securities –\n$20,000 foreign currency translation loss). The depreciation\namount given in the question should be ignored because\ndepreciation is already included in net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد شركة قوائمها المالية وفقًا للمبادئ المحاسبية المقبولة عمومًا في الولايات المتحدة. فيما يلي بيانات مالية مختارة للشركة.\nصافي الدخل: $950,000\nالإهلاك: 40,000\nاستثمارات الملاك: 60,000\nمكسب غير محقق من أوراق مالية متاحة للبيع: 90,000\nخسارة ترجمة العملات الأجنبية: 20,000\nما المبلغ الذي سيُفصح عنه بوصفه الدخل الشامل؟",
+    "choicesAr": [
+      "$970,000",
+      "$1,020,000",
+      "$1,060,000",
+      "$1,120,000"
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق الملكية (صافي الأصول) لمنشأة خلال فترة، باستثناء تلك الناتجة عن استثمارات الملاك والتوزيعات عليهم. في هذه الحالة، يبلغ الدخل الشامل $1,020,000 ($950,000 صافي الدخل + $90,000 مكسب غير محقق من أوراق مالية متاحة للبيع – $20,000 خسارة ترجمة العملات الأجنبية). وينبغي تجاهل مبلغ الإهلاك الوارد في السؤال لأن الإهلاك مُدرج بالفعل في صافي الدخل."
   },
   {
     "unit": 1,
@@ -1226,7 +1514,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Direct materials costs are the costs of new materials included\nin finished goods that can be feasibly traced to those goods.\nTotal purchases can be found based on the beginning and\nending inventory, as well as products used. The following\nformula describes their relationship:\nPurchases = Materials used + Ending inventory – Beginning\ninventory\nThe question states that the company used $200,000 of direct\nmaterials. Beginning inventory can be set as x, and since the\nbalance of direct materials at the end of the the month was\n$30,000 more than at the beginning of the month, ending\ninventory can be set as [x + $30,000]. Thus the formula can be\nused to solve for purchases as follows:\nPurchases = $200,000 + ($x + $30,000) – $x\nPurchases = $200,000 + $30,000 + $x – $x\nPurchases = $230,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استخدمت شركة مواد مباشرة بقيمة $200,000 خلال يونيو. وفي 30 يونيو، كان مخزون المواد المباشرة يزيد بمقدار $30,000 عما كان عليه في 1 يونيو. كم بلغت مشتريات المواد المباشرة خلال يونيو؟",
+    "choicesAr": [
+      "$30,000",
+      "$170,000",
+      "$200,000",
+      "$230,000"
+    ],
+    "explanationAr": "تكاليف المواد المباشرة هي تكاليف المواد الجديدة الداخلة في السلع التامة الصنع التي يمكن تتبعها إلى تلك السلع بصورة عملية. ويمكن تحديد إجمالي المشتريات بناءً على مخزون أول المدة ومخزون آخر المدة، وكذلك المنتجات المستخدمة. وتصف المعادلة التالية العلاقة بينها:\nالمشتريات = المواد المستخدمة + مخزون آخر المدة – مخزون أول المدة\nينص السؤال على أن الشركة استخدمت مواد مباشرة بقيمة $200,000. ويمكن افتراض أن مخزون أول المدة هو x، وبما أن رصيد المواد المباشرة في نهاية الشهر كان يزيد بمقدار $30,000 عن رصيد بداية الشهر، فيمكن افتراض أن مخزون آخر المدة هو [x + $30,000]. وبالتالي يمكن استخدام المعادلة لحساب المشتريات كما يلي:\nالمشتريات = $200,000 + ($x + $30,000) – $x\nالمشتريات = $200,000 + $30,000 + $x – $x\nالمشتريات = $230,000"
   },
   {
     "unit": 1,
@@ -1243,7 +1539,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The operating section of a retailer’s income statement\nincludes all revenues and costs necessary for the operation of\nthe retail establishment, e.g., sales, cost of goods sold,\nadministrative expenses, and selling expenses. Dividend\nrevenue, however, is classified under other revenues. In a\nstatement of cash flows, cash dividends received are\nconsidered an operating cash flow.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في قائمة الدخل متعددة الخطوات لشركة بيع بالتجزئة، يُدرج كل ما يلي في قسم التشغيل باستثناء",
+    "choicesAr": [
+      "المبيعات.",
+      "تكلفة البضاعة المباعة.",
+      "إيرادات توزيعات الأرباح.",
+      "المصروفات الإدارية ومصروفات البيع."
+    ],
+    "explanationAr": "يتضمن قسم التشغيل في قائمة الدخل لمنشأة بيع بالتجزئة جميع الإيرادات والتكاليف اللازمة لتشغيل منشأة البيع بالتجزئة، مثل المبيعات وتكلفة البضاعة المباعة والمصروفات الإدارية ومصروفات البيع. أما إيرادات توزيعات الأرباح فتُصنف ضمن الإيرادات الأخرى. وفي قائمة التدفقات النقدية، تُعد توزيعات الأرباح النقدية المستلمة تدفقًا نقديًا تشغيليًا."
   },
   {
     "unit": 1,
@@ -1260,7 +1564,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Within the income from continuing operations classification,\nthe single-step income statement provides one grouping for\nrevenue items and one for expense items. The single-step is\nthe one subtraction necessary to arrive at income from\ncontinuing operations prior to the effect of income taxes. In\ncontrast, the multiple-step income statement matches\noperating revenues and expenses separately from\nnonoperating items. This format emphasizes subtotals, such\nas gross profit or loss and operating income or loss, within the\npresentation of income from continuing operations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتمثل التمييز الرئيسي بين صيغتي قائمة الدخل متعددة الخطوات وقائمة الدخل ذات الخطوة الواحدة في الفصل بين",
+    "choicesAr": [
+      "البيانات التشغيلية وغير التشغيلية.",
+      "مصروف ضريبة الدخل والمصروفات الإدارية.",
+      "مصروف تكلفة البضاعة المباعة والمصروفات الإدارية.",
+      "الأثر على ضرائب الدخل الناتج عن البنود الاستثنائية والأثر على ضرائب الدخل الناتج عن الدخل قبل البنود الاستثنائية."
+    ],
+    "explanationAr": "ضمن تصنيف الدخل من العمليات المستمرة، تعرض قائمة الدخل ذات الخطوة الواحدة مجموعة لبنود الإيرادات ومجموعة لبنود المصروفات. وتتمثل الخطوة الواحدة في عملية الطرح الوحيدة اللازمة للوصول إلى الدخل من العمليات المستمرة قبل أثر ضرائب الدخل. وفي المقابل، تقابل قائمة الدخل متعددة الخطوات الإيرادات التشغيلية بالمصروفات التشغيلية بشكل منفصل عن البنود غير التشغيلية. وتُبرز هذه الصيغة المجاميع الفرعية، مثل مجمل الربح أو الخسارة والدخل التشغيلي أو الخسارة التشغيلية، ضمن عرض الدخل من العمليات المستمرة."
   },
   {
     "unit": 1,
@@ -1277,7 +1589,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The company should report net income of $20,000 ($80,000 –\n$50,000 – $10,000). Foreign currency translation adjustment\ngain, net of tax, is an item of other comprehensive income and\nnot net income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي قائمة جزئية بحسابات شركة:\nالإيرادات: $80,000\nالمصروفات التشغيلية: 50,000\nمكسب تعديل ترجمة العملات الأجنبية، بعد خصم الضريبة: 4,000\nمصروف ضريبة الدخل: 10,000\nما المبلغ الذي ينبغي أن تُفصح عنه الشركة بوصفه صافي الدخل؟",
+    "choicesAr": [
+      "$20,000",
+      "$24,000",
+      "$30,000",
+      "$34,000"
+    ],
+    "explanationAr": "ينبغي أن تُفصح الشركة عن صافي دخل قدره $20,000 ($80,000 – $50,000 – $10,000). ويُعد مكسب تعديل ترجمة العملات الأجنبية، بعد خصم الضريبة، بندًا من بنود الدخل الشامل الآخر وليس من صافي الدخل."
   },
   {
     "unit": 1,
