@@ -57,7 +57,7 @@ def validate(q, t):
         # Concrete numeric answers must not change or move between choices.
         numbers = lambda s: re.findall(r'\d[\d,]*(?:\.\d+)?', s)
         if numbers(en) != numbers(ar):
-            raise ValueError('Choice numbers changed')
+            raise ValueError(f'Choice numbers changed for {key(q)}: {en!r} -> {ar!r}')
 
 def translate(batch):
     cache = CACHE / (key(batch[0]) + '.json')
@@ -108,6 +108,7 @@ def translate(batch):
                 items = json.loads(output)['items']
                 if len(items) != len(batch):
                     raise ValueError('Missing questions')
+                cache.with_suffix('.pending.json').write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n')
                 for q, t in zip(batch, items):
                     validate(q, t)
                 cache.write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n')
