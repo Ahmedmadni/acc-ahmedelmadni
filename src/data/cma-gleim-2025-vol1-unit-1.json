@@ -314,7 +314,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The statement of financial position, or balance sheet, provides\ninformation about an entity’s resource structure (assets) and\nfinancing structure (liabilities and equity) at a moment in time.\nAccording to the FASB’s Conceptual Framework, the\nstatement of financial position does not purport to show the\nvalue of a business, but it enables investors, creditors, and\nother users to make their own estimates of value. It helps\nusers assess liquidity, financial flexibility, profitability, and risk.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تهدف قائمة المركز المالي إلى مساعدة المستثمرين والدائنين على",
+    "choicesAr": [
+      "تقييم مبلغ صافي التدفقات النقدية الداخلة المستقبلية المتوقعة للمنشأة وتوقيتها وعدم التأكد المحيط بها.",
+      "تقييم الموارد الاقتصادية للمنشأة والتزاماتها.",
+      "تقييم الأداء الاقتصادي للمنشأة.",
+      "تقييم التغيرات في حقوق ملكية المنشأة."
+    ],
+    "explanationAr": "توفر قائمة المركز المالي، أو الميزانية العمومية، معلومات عن هيكل موارد المنشأة (الأصول) وهيكل تمويلها (الالتزامات وحقوق الملكية) في لحظة زمنية معينة. ووفقًا للإطار المفاهيمي لمجلس معايير المحاسبة المالية (FASB)، لا تدّعي قائمة المركز المالي أنها تعرض قيمة المنشأة، لكنها تمكّن المستثمرين والدائنين والمستخدمين الآخرين من إجراء تقديراتهم الخاصة للقيمة. وهي تساعد المستخدمين على تقييم السيولة والمرونة المالية والربحية والمخاطر."
   },
   {
     "unit": 1,
@@ -331,7 +339,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Short-term obligations expected to be refinanced should be\nreported as current liabilities unless the firm both plans to\nrefinance and has the ability to refinance the debt on a long-\nterm basis. The ability to refinance on a long-term basis is\nevidenced by a post-balance-sheet date issuance of long-term\ndebt or a financing arrangement that will clearly permit long-\nterm refinancing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة السنة التقويمية لأغراض إعداد التقارير المالية والضريبية، ولديها سندات مضمونة برهن عقاري بقيمة $100 مليون تستحق في 15 يناير من السنة 2. وبحلول 10 يناير من السنة 2، تعتزم الشركة إعادة تمويل هذا الدين بسندات جديدة طويلة الأجل مضمونة برهن عقاري، وقد أبرمت اتفاقية تمويل تثبت بوضوح قدرتها على إتمام إعادة التمويل. يجب أن يُعامل هذا الدين على النحو التالي",
+    "choicesAr": [
+      "يُصنَّف التزامًا متداولًا في قائمة المركز المالي في 31 ديسمبر من السنة 1.",
+      "يُصنَّف التزامًا طويل الأجل في قائمة المركز المالي في 31 ديسمبر من السنة 1.",
+      "يُسدَّد اعتبارًا من 31 ديسمبر من السنة 1.",
+      "يُعتبر دينًا خارج الميزانية العمومية."
+    ],
+    "explanationAr": "يجب عرض الالتزامات قصيرة الأجل المتوقع إعادة تمويلها بوصفها التزامات متداولة، ما لم تكن المنشأة تخطط لإعادة تمويل الدين ولديها القدرة على إعادة تمويله على أساس طويل الأجل. ويُستدل على القدرة على إعادة التمويل على أساس طويل الأجل بإصدار دين طويل الأجل بعد تاريخ الميزانية العمومية، أو بترتيب تمويلي يسمح بوضوح بإعادة التمويل طويل الأجل."
   },
   {
     "unit": 1,
@@ -348,7 +364,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The balance sheet presents three major financial accounting\nelements: assets (items of value), liabilities (debts), and equity\n(net worth). According to the FASB’s Conceptual Framework,\nassets are probable future economic benefits resulting from\npast transactions or events. Liabilities are probable future\nsacrifices of economic benefits arising from present\nobligations as a result of past transactions or events. Equity is\nthe residual interest in the assets after deduction of liabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الغرض الأساسي من قائمة المركز المالي هو إظهار",
+    "choicesAr": [
+      "القيمة العادلة لأصول المنشأة في لحظة زمنية معينة.",
+      "وضع أصول المنشأة في حالة التصفية الإجبارية للمنشأة.",
+      "نجاح عمليات الشركة خلال فترة زمنية محددة.",
+      "البنود ذات القيمة والديون وصافي الثروة."
+    ],
+    "explanationAr": "تعرض الميزانية العمومية 3 عناصر رئيسية للمحاسبة المالية: الأصول (البنود ذات القيمة)، والالتزامات (الديون)، وحقوق الملكية (صافي الثروة). ووفقًا للإطار المفاهيمي لمجلس معايير المحاسبة المالية (FASB)، فإن الأصول هي منافع اقتصادية مستقبلية محتملة ناتجة عن معاملات أو أحداث سابقة. والالتزامات هي تضحيات مستقبلية محتملة بمنافع اقتصادية ناشئة عن التزامات حالية نتيجة معاملات أو أحداث سابقة. وحقوق الملكية هي الحصة المتبقية في الأصول بعد خصم الالتزامات."
   },
   {
     "unit": 1,
@@ -365,7 +389,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Assets are usually measured at original historical cost in a\nstatement of financial position, although some exceptions\nexist. For example, some short-term receivables are reported\nat their net realizable value. Thus, the statement of financial\nposition cannot be relied upon to assess NRV.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتيح قائمة المركز المالي للمستثمرين تقييم جميع ما يلي باستثناء",
+    "choicesAr": [
+      "الكفاءة التي تُستخدم بها أصول المنشأة.",
+      "السيولة والمرونة المالية للمنشأة.",
+      "هيكل رأس مال المنشأة.",
+      "صافي القيمة القابلة للتحقق لأصول المنشأة."
+    ],
+    "explanationAr": "تُقاس الأصول عادةً بالتكلفة التاريخية الأصلية في قائمة المركز المالي، رغم وجود بعض الاستثناءات. فعلى سبيل المثال، تُعرض بعض الذمم المدينة قصيرة الأجل بصافي قيمتها القابلة للتحقق. ولذلك، لا يمكن الاعتماد على قائمة المركز المالي لتقييم صافي القيمة القابلة للتحقق (NRV)."
   },
   {
     "unit": 1,
@@ -382,7 +414,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The equation is based on the proprietary theory. Equity in an\nenterprise is what remains after the economic obligations of\nthe enterprise are deducted from its economic resources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعكس المعادلة المحاسبية (الأصول – الالتزامات = حقوق الملكية)",
+    "choicesAr": [
+      "وجهة نظر الوحدة المحاسبية.",
+      "نظرية الأموال.",
+      "وجهة نظر الملكية.",
+      "نظرية المنشأة."
+    ],
+    "explanationAr": "تستند المعادلة إلى نظرية الملكية. وتمثل حقوق الملكية في المنشأة ما يتبقى بعد خصم الالتزامات الاقتصادية للمنشأة من مواردها الاقتصادية."
   },
   {
     "unit": 1,
@@ -399,7 +439,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Long-term obligations that are or will become callable by the\ncreditor because of the debtor’s violation of a provision of the\ndebt agreement at the balance sheet date normally are\nclassified as current liabilities. However, the debt need not be\nreclassified if the violation will be cured within a specified\ngrace period or if the creditor formally waives or subsequently\nloses the right to demand repayment for a period of more than\na year from the balance sheet date (also, reclassification is not\nrequired if the debtor expects and has the ability to refinance\nthe obligation on a long-term basis).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الالتزامات طويلة الأجل التي يحق أو سيحق للدائن المطالبة بسدادها بسبب مخالفة المدين لأحد أحكام اتفاقية الدين في تاريخ الميزانية العمومية ينبغي تصنيفها على أنها",
+    "choicesAr": [
+      "التزامات طويلة الأجل.",
+      "التزامات متداولة ما لم يُفلس المدين.",
+      "التزامات متداولة ما لم يتنازل الدائن عن حق المطالبة بالسداد لمدة تزيد على 1 سنة من تاريخ الميزانية العمومية.",
+      "التزامات محتملة إلى حين تصحيح المخالفة."
+    ],
+    "explanationAr": "تُصنَّف عادةً الالتزامات طويلة الأجل التي يحق أو سيحق للدائن المطالبة بسدادها بسبب مخالفة المدين لأحد أحكام اتفاقية الدين في تاريخ الميزانية العمومية على أنها التزامات متداولة. ومع ذلك، لا يلزم إعادة تصنيف الدين إذا كانت المخالفة ستُصحَّح خلال فترة سماح محددة، أو إذا تنازل الدائن رسميًا عن حق المطالبة بالسداد أو فقد هذا الحق لاحقًا لمدة تزيد على سنة من تاريخ الميزانية العمومية (كذلك لا تُشترط إعادة التصنيف إذا كان المدين يتوقع إعادة تمويل الالتزام على أساس طويل الأجل ولديه القدرة على ذلك)."
   },
   {
     "unit": 1,
@@ -416,7 +464,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The entity has not substantially completed what it must do to\nbe entitled to the benefits of the advance payment, and the\nreceipt of future economic benefits is not sufficiently certain to\njustify income recognition. Accordingly, the receipt of cash in\nanticipation of goods to be delivered or services to be\nperformed must be recognized as a liability, usually called\ndeferred (or unearned) revenue or deferred (or unearned)\nincome. Because the manufacturer must deliver the goods\nwithin the next year, this liability is current.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتلقى شركة مصنِّعة دفعة مقدمة مقابل بضائع تُصنَّع حسب طلب خاص، ومن المقرر تصنيعها وتسليمها خلال السنة التالية. ينبغي عرض الدفعة المقدمة في قائمة المركز المالي للشركة المصنِّعة للسنة الحالية بوصفها",
+    "choicesAr": [
+      "التزامًا متداولًا.",
+      "التزامًا غير متداول.",
+      "مبلغًا مقابلًا للأصول.",
+      "إيرادًا مستحقًا."
+    ],
+    "explanationAr": "لم تُنجز المنشأة بصورة جوهرية ما يجب عليها القيام به حتى تستحق منافع الدفعة المقدمة، كما أن الحصول على منافع اقتصادية مستقبلية ليس مؤكدًا بما يكفي لتبرير الاعتراف بالدخل. وبناءً عليه، يجب الاعتراف بالنقد المستلم مقدمًا مقابل بضائع ستُسلَّم أو خدمات ستُؤدَّى باعتباره التزامًا، يُسمَّى عادةً إيرادًا مؤجلًا (أو غير مكتسب) أو دخلًا مؤجلًا (أو غير مكتسب). ولأن الشركة المصنِّعة يجب أن تُسلِّم البضائع خلال السنة التالية، فإن هذا الالتزام متداول."
   },
   {
     "unit": 1,
@@ -433,7 +489,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Accounts payable are properly classified as current liabilities\nbecause they are for items entering into the operating cycle.\nShort-term debt that is refinanced by a post-balance-sheet-\ndate issuance of long-term debt should be classified as\nnoncurrent. (The ability to refinance on a long-term basis has\nbeen demonstrated.) Thus, the short-term construction loan is\nclassified as noncurrent. Accordingly, the entity records\ncurrent liabilities of $30,000 and noncurrent liabilities of\n$100,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة حسابات دائنة قائمة بمبلغ $30,000 وقرض إنشاء قصير الأجل بمبلغ $100,000 في نهاية السنة. وقد أُعيد تمويل القرض من خلال إصدار سندات طويلة الأجل بعد نهاية السنة ولكن قبل إصدار القوائم المالية. كيف ينبغي تسجيل هذه الالتزامات في الميزانية العمومية؟",
+    "choicesAr": [
+      "التزامات غير متداولة بمبلغ $130,000.",
+      "التزامات متداولة بمبلغ $130,000.",
+      "التزامات متداولة بمبلغ $30,000، والتزامات غير متداولة بمبلغ $100,000.",
+      "التزامات متداولة بمبلغ $130,000، مع الإفصاح المطلوب في الإيضاحات عن إعادة تمويل القرض."
+    ],
+    "explanationAr": "تُصنَّف الحسابات الدائنة تصنيفًا صحيحًا على أنها التزامات متداولة لأنها تتعلق ببنود تدخل ضمن دورة التشغيل. وينبغي تصنيف الدين قصير الأجل الذي يُعاد تمويله من خلال إصدار دين طويل الأجل بعد تاريخ الميزانية العمومية على أنه غير متداول. (فقد ثبتت القدرة على إعادة التمويل على أساس طويل الأجل.) ومن ثم، يُصنَّف قرض الإنشاء قصير الأجل على أنه غير متداول. وبناءً عليه، تُسجِّل المنشأة التزامات متداولة بمبلغ $30,000 والتزامات غير متداولة بمبلغ $100,000."
   },
   {
     "unit": 1,
@@ -450,7 +514,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Current liabilities include those obligations that are expected\nto be satisfied by the (1) payment of cash, (2) use of current\nassets other than cash, or (3) creation of new current liabilities\nwithin 1 year from the balance sheet date (or operating cycle,\nif longer).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب إدراج الدين غير المتداول ضمن القسم المتداول من قائمة المركز المالي إذا",
+    "choicesAr": [
+      "كان سيُحوَّل إلى أسهم عادية قبل الاستحقاق.",
+      "كان يستحق خلال السنة وسيُسدَّد باستخدام الأصول المتداولة.",
+      "كانت الإدارة تخطط لإعادة تمويله خلال السنة.",
+      "كان قد أُنشئ صندوق لسداد السندات لاستخدامه في سدادها المقرر خلال السنة التالية."
+    ],
+    "explanationAr": "تشمل الالتزامات المتداولة تلك الالتزامات التي يُتوقع تسويتها عن طريق (1) دفع النقد، أو (2) استخدام أصول متداولة غير النقد، أو (3) إنشاء التزامات متداولة جديدة خلال 1 سنة من تاريخ الميزانية العمومية (أو دورة التشغيل، إذا كانت أطول)."
   },
   {
     "unit": 1,
@@ -467,7 +539,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Available-for-sale debt securities (an investment) and prepaid\nexpenses are assets, but treasury stock is an equity item. The\ntotal of the assets reported is therefore $600,000 ($200,000 +\n$400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة البنود التالية المسجلة في سجلاتها المالية:\nأوراق مالية للدين متاحة للبيع: $200,000\nمصروفات مدفوعة مقدمًا: 400,000\nأسهم الخزينة: 100,000\nإجمالي مبلغ البنود أعلاه الذي سيُعرض ضمن الأصول في قائمة المركز المالي هو",
+    "choicesAr": [
+      "$400,000",
+      "$500,000",
+      "$600,000",
+      "$700,000"
+    ],
+    "explanationAr": "تُعد الأوراق المالية للدين المتاحة للبيع (استثمار) والمصروفات المدفوعة مقدمًا أصولًا، أما أسهم الخزينة فهي بند من بنود حقوق الملكية. وبالتالي فإن إجمالي الأصول المعروضة هو $600,000 ($200,000 + $400,000)."
   },
   {
     "unit": 1,
@@ -484,7 +564,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Current assets are reasonably expected to be realized in\ncash, sold, or consumed during the normal operating cycle of\nthe business or within 1 year, whichever is longer. The\noperating cycle is the time between the acquisition of\nmaterials or services and the final cash realization from the\nearning process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُتوقع تحصيل الذمة المدينة المصنفة ضمن الأصول المتداولة في قائمة المركز المالي خلال",
+    "choicesAr": [
+      "دورة التشغيل الحالية.",
+      "1 سنة.",
+      "دورة التشغيل الحالية أو 1 سنة، أيهما أطول.",
+      "دورة التشغيل الحالية أو 1 سنة، أيهما أقصر."
+    ],
+    "explanationAr": "يُتوقع بصورة معقولة تحويل الأصول المتداولة إلى نقد أو بيعها أو استهلاكها خلال دورة التشغيل العادية للمنشأة أو خلال 1 سنة، أيهما أطول. ودورة التشغيل هي الفترة بين اقتناء المواد أو الخدمات والتحقق النقدي النهائي من عملية تحقيق الأرباح."
   },
   {
     "unit": 1,
@@ -501,7 +589,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Current assets include, in descending order of liquidity, cash\nand cash equivalents; certain individual trading, available-for-\nsale, and held-to-maturity debt securities; receivables;\ninventories; and prepaid expenses. Trading securities are\nexpected to be sold in the near term, so they are likely to be\nclassified as current.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُتوقع بصورة معقولة تحويل الأصول المتداولة إلى نقد أو بيعها أو استهلاكها خلال دورة التشغيل العادية للمنشأة. ومن المرجح أن تشمل الأصول المتداولة",
+    "choicesAr": [
+      "الأصول غير الملموسة.",
+      "الشهرة المشتراة.",
+      "تكاليف التأسيس.",
+      "الأوراق المالية المحتفظ بها للمتاجرة."
+    ],
+    "explanationAr": "تشمل الأصول المتداولة، بترتيب تنازلي حسب السيولة، النقد وما في حكمه؛ وبعض الأوراق المالية الفردية للدين المحتفظ بها للمتاجرة والمتاحة للبيع والمحتفظ بها حتى الاستحقاق؛ والذمم المدينة؛ والمخزون؛ والمصروفات المدفوعة مقدمًا. ويُتوقع بيع الأوراق المالية المحتفظ بها للمتاجرة في الأجل القريب، لذا يُرجح تصنيفها ضمن الأصول المتداولة."
   },
   {
     "unit": 1,
