@@ -1,4 +1,4 @@
 # CMA Arabic translation
 
-- [ ] Translate all 217 Unit 1 source questions, choices and explanations without changing English or answer indices.
-- [ ] Validate complete translations and verify library and exam-training display.
+- [ ] Translate remaining 153 of 217 Unit 1 questions; blocked by AI credit exhaustion. 64 complete translations are saved in source records.
+- [ ] Validate saved translations and verify library and exam-training display.
