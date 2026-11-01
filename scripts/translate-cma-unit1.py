@@ -22,6 +22,8 @@ Do not solve, summarize, omit, repair or change the supplied question. Preserve 
 number in Western digits, currency symbol, percentage, equation, company name and
 choice order, including any source inconsistencies. Translate all prose; numeric-only
 choices may remain unchanged. Preserve tables as readable labeled rows and line breaks.
+Every numeral must remain explicit and in the same order, even 1 and 2: translate
+"1 year" as "1 سنة", never "سنة واحدة"; "2 months" as "2 شهر", never "شهرين".
 Use consistent terms: assets الأصول; liabilities الالتزامات; equity حقوق الملكية;
 retained earnings الأرباح المحتجزة; additional paid-in capital رأس المال الإضافي المدفوع;
 treasury stock أسهم الخزينة; comprehensive income الدخل الشامل; OCI الدخل الشامل الآخر;
