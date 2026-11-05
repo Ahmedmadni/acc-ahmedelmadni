@@ -1,0 +1,795 @@
+[
+  {
+    "id": "cma-ima-2020-feb-p1-q1",
+    "part": 1,
+    "number": 1,
+    "source": "feb",
+    "question": {
+      "en": "When a fixed asset is sold for less than book value, which one of the following will decrease?",
+      "ar": "عند بيع أصل ثابت بأقل من قيمته الدفترية، أي مما يلي ينخفض؟"
+    },
+    "choices": {
+      "en": [
+        "Total current assets.",
+        "Current ratio.",
+        "Net profit.",
+        "Net working capital."
+      ],
+      "ar": [
+        "إجمالي الأصول المتداولة.",
+        "نسبة التداول.",
+        "صافي الربح.",
+        "صافي رأس المال العامل."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "The sale of a fixed asset for less that book value will decrease net profit as the loss on the sale will be\nrecognized on the Income Statement.",
+      "ar": "تنخفض الأرباح لأن خسارة بيع الأصل تُعترف بها في قائمة الدخل."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q2",
+    "part": 1,
+    "number": 2,
+    "source": "feb",
+    "question": {
+      "en": "For the fiscal year just ended, Doran Electronics had the following results.\nNet income | $920,000\nDepreciation expense | 110,000\nIncrease in accounts payable | 45,000\nIncrease in accounts receivable | 73,000\nIncrease in deferred income tax liability | 16,000\nDoran’s net cash flow from operating activities is"
+    },
+    "choices": {
+      "en": [
+        "$928,000.",
+        "$986,000.",
+        "$1,018,000.",
+        "$1,074,000."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Doran’s net cash flow from operating activities is $1,018,000 as shown below.\nNet income | $920,000\nDepreciation expense | +110,000\nIncrease in payables | +45,000\nIncrease in receivables | -73,000\nIncrease in tax liability | +16,000\nCash flow | $1,018,000"
+    },
+    "existingQuestionId": "cma-gleim-2025-vol1-su1-s5-q036"
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q3",
+    "part": 1,
+    "number": 3,
+    "source": "feb",
+    "question": {
+      "en": "Which one of the following techniques would most likely be used to analyze reductions in the time required to perform a task\nas experience with that task increases?"
+    },
+    "choices": {
+      "en": [
+        "Regression analysis.",
+        "Learning curve analysis.",
+        "Sensitivity analysis.",
+        "Normal probability analysis."
+      ]
+    },
+    "answerIndex": 1,
+    "explanation": {
+      "en": "Learning curve analysis is a function that shows how labor hours per unit decline as units of production\nincrease due to workers learning and becoming better at their jobs."
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su12-s2-q026"
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q4",
+    "part": 1,
+    "number": 4,
+    "source": "feb",
+    "question": {
+      "en": "The sales manager of Serito Doll Company has suggested that an expanded advertising campaign costing $40,000 would\nincrease the sales and profits of the company. He has developed the following probability distribution for the effect of the\nadvertising campaign on company sales.\nSales increase\n(units) | Probability\n15,000 | .10\n30,000 | .35\n45,000 | .10\n60,000 | .25\n75,000 | .20\nThe company sells the dolls at $5.20 each. The cost of each doll is $3.20. Serito’s expected incremental profit, if the advertising\ncampaign is adopted, would be"
+    },
+    "choices": {
+      "en": [
+        "$6,500.",
+        "$46,500.",
+        "$53,000.",
+        "$93,000."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Increased units sold | = | .1 (15,000) + .35 (30,000) + .1 (45,000) + .25 (60,000) + .2 (75,000)\n= | 1,500 + 10,500 + 4,500 + 15,000 + 15,000\n= | 46,500 units\nIncreased profit | = | [46,500 x ($5.20 - $3.20)] - $40,000\n= | $93,000 - $40,000\n=\n$53,000"
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su12-s3-q030"
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q5",
+    "part": 1,
+    "number": 5,
+    "source": "feb",
+    "question": {
+      "en": "Ming Company has budgeted sales at 6,300 units for the next fiscal year, and desires to have 590 good units on hand at the\nend of that year. Beginning inventory is 470 units. Ming has found from past experience that 10% of all units produced do not\npass final inspection, and must therefore be destroyed. How many units should Ming plan to produce in the next fiscal year?"
+    },
+    "choices": {
+      "en": [
+        "6,890.",
+        "7,062.",
+        "7,133.",
+        "7,186."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Ming should plan to produce 7,133 units next fiscal year.\nSales – Beg. Inventory + Ending Inventory\n6,300 – 470 + 590 | = | 6,420 units\nTo cover 10% scrap | = | 6,420 ÷ .9 = 7,133 units"
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su14-s2-q023"
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q6",
+    "part": 1,
+    "number": 6,
+    "source": "feb",
+    "question": {
+      "en": "Randall Company uses standard costing and flexible budgeting and is evaluating its direct labor. The total budget variance can\nusually be broken down into two other variances identified as the"
+    },
+    "choices": {
+      "en": [
+        "direct labor rate variance and direct labor efficiency variance.",
+        "direct labor cost variance and the direct labor volume variance.",
+        "direct labor rate variance and direct labor volume variance.",
+        "direct labor cost variance and direct labor efficiency variance."
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "en": "The rate variance will show how the price paid for direct labor varies from the standard price. The efficiency\nvariance shows how the number of direct labor hours used varies from the standard number of direct labor hours."
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su15-s4-q026"
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q7",
+    "part": 1,
+    "number": 7,
+    "source": "feb",
+    "question": {
+      "en": "Sara Bellows, manager of the telecommunication sales team, has the following department budget.\nBillings - long distance | $350,000\nBillings - phone card | 75,000\nBillings - toll free | 265,000\nHer responsibility center is best described as a"
+    },
+    "choices": {
+      "en": [
+        "cost center.",
+        "revenue center.",
+        "profit center.",
+        "investment center."
+      ]
+    },
+    "answerIndex": 1,
+    "explanation": {
+      "en": "A sales team is generally only accountable for sales dollars; this type of responsibility center is, therefore, a\nrevenue center."
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su16-s1-q028"
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q8",
+    "part": 1,
+    "number": 8,
+    "source": "feb",
+    "question": {
+      "en": "Kimber Company has the following unit cost for the current year.\nRaw material | $20.00\nDirect labor | 25.00\nVariable manufacturing overhead | 10.00\nFixed manufacturing overhead | 15.00\nTotal unit cost | $70.00\nFixed manufacturing cost is based on an annual activity level of 8,000 units. Based on these data, the total manufacturing cost\nexpected to be incurred to manufacture 9,000 units in the current year is",
+      "ar": "لدى شركة Kimber تكاليف الوحدة التالية للسنة الحالية (بالدولار):\nالمواد الخام: 20.00\nالعمل المباشر: 25.00\nالتكاليف الصناعية غير المباشرة المتغيرة: 10.00\nالتكاليف الصناعية غير المباشرة الثابتة: 15.00\nإجمالي تكلفة الوحدة: 70.00\nحُسبت التكلفة الصناعية الثابتة على أساس نشاط سنوي قدره 8,000 وحدة. ما إجمالي تكلفة تصنيع 9,000 وحدة؟"
+    },
+    "choices": {
+      "en": [
+        "$560,000.",
+        "$575,000.",
+        "$615,000.",
+        "$630,000."
+      ],
+      "ar": [
+        "$560,000.",
+        "$575,000.",
+        "$615,000.",
+        "$630,000."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Kimber’s total manufacturing cost will be $615,000 as shown below.\nVariable cost: | 9,000 units x ($20 + $25 + $10) | = | $495,000\nFixed cost: | 8,000 units x $15 | = | 120,000\nTotal manufacturing cost | $615,000",
+      "ar": "التكلفة المتغيرة = 9,000 × (20 + 25 + 10) = 495,000 دولار. التكلفة الثابتة = 8,000 × 15 = 120,000 دولار. الإجمالي = 615,000 دولار."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q9",
+    "part": 1,
+    "number": 9,
+    "source": "feb",
+    "question": {
+      "en": "Which one of the following options would allow multiple employees to use a browser to remotely access and\nuse application software?",
+      "ar": "أي خيار يتيح لعدة موظفين استخدام المتصفح للوصول عن بُعد إلى البرامج التطبيقية واستخدامها؟"
+    },
+    "choices": {
+      "en": [
+        "Virtualization.",
+        "Cloud computing.",
+        "Distributed ledger.",
+        "Blockchain."
+      ],
+      "ar": [
+        "المحاكاة الافتراضية.",
+        "الحوسبة السحابية.",
+        "السجل الموزع.",
+        "سلسلة الكتل."
+      ]
+    },
+    "answerIndex": 1,
+    "explanation": {
+      "en": "Cloud computing is the process of using a browser to remotely access software, data storage, hardware\nand applications.",
+      "ar": "الحوسبة السحابية تتيح استخدام المتصفح للوصول عن بُعد إلى البرامج وتخزين البيانات والأجهزة والتطبيقات."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p1-q10",
+    "part": 1,
+    "number": 10,
+    "source": "feb",
+    "question": {
+      "en": "Confidential data can be securely transmitted over the internet by using"
+    },
+    "choices": {
+      "en": [
+        "single-use passwords.",
+        "firewalls.",
+        "encryption.",
+        "digital signatures."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Encryption technology converts data into a code. Unauthorized users may still be able to access the data, but\nwithout the encryption key, they will be unable to decode the information; thus encrypting confidential data is a secure way of\ntransmitting it over the Internet."
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su18-s3-q006"
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q1",
+    "part": 2,
+    "number": 1,
+    "source": "feb",
+    "question": {
+      "en": "Shown below are components of a company’s financial statements.\nSales revenue | $600,000\nCost of goods sold | 300,000\nTotal assets | 2,400,000\nTotal equity | 1,500,000\nNet income | 120,000\nWhat percentage value would net income be on a common size financial statement?",
+      "ar": "فيما يلي بنود القوائم المالية لشركة (بالدولار):\nإيرادات المبيعات: 600,000\nتكلفة المبيعات: 300,000\nإجمالي الأصول: 2,400,000\nإجمالي حقوق الملكية: 1,500,000\nصافي الربح: 120,000\nما النسبة المئوية لصافي الربح في قائمة ذات حجم مشترك؟"
+    },
+    "choices": {
+      "en": [
+        "5%.",
+        "8%.",
+        "20%.",
+        "40%."
+      ],
+      "ar": [
+        "5%.",
+        "8%.",
+        "20%.",
+        "40%."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "120,000/600,000 = 0.20 or 20%",
+      "ar": "120,000 ÷ 600,000 = 0.20، أي 20%."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q2",
+    "part": 2,
+    "number": 2,
+    "source": "feb",
+    "question": {
+      "en": "In analyzing the short-term liquidity of a firm, many analysts prefer to use the quick (or acid test) ratio rather than the current\nratio. The primary reason for this preference is that the",
+      "ar": "عند تحليل السيولة قصيرة الأجل، يفضل كثير من المحللين النسبة السريعة على نسبة التداول. ما السبب الرئيسي؟"
+    },
+    "choices": {
+      "en": [
+        "quick ratio excludes account receivables.",
+        "current ratio includes marketable securities which may be mispriced.",
+        "pro-forma cash flow statements focus on cash only.",
+        "Conversion of inventory into cash is less reliable."
+      ],
+      "ar": [
+        "النسبة السريعة تستبعد الذمم المدينة.",
+        "نسبة التداول تشمل أوراقًا مالية قابلة للتداول قد تُسعّر بصورة غير صحيحة.",
+        "قوائم التدفقات النقدية التقديرية تركز على النقد وحده.",
+        "تحويل المخزون إلى نقد أقل موثوقية."
+      ]
+    },
+    "answerIndex": 3,
+    "explanation": {
+      "en": "Both the current ratio and the quick ratio include cash, accounts receivable, and marketable securities;\ntherefore a, b, and c are incorrect. Choice d is correct because the quick ratio does not include inventory, which is considered\nless liquid than the other current assets.",
+      "ar": "تشمل النسبتان النقد والذمم المدينة والأوراق المالية القابلة للتداول. لكن النسبة السريعة تستبعد المخزون لأنه أقل سيولة من بقية الأصول المتداولة."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q3",
+    "part": 2,
+    "number": 3,
+    "source": "feb",
+    "question": {
+      "en": "Frasier Products has been growing at a rate of 10% per year and expects this growth to continue and produce earnings per\nshare of $4.00 next year. The firm has a dividend payout ratio of 35% and a beta value of 1.25. If the risk-free rate is 7% and the\nreturn on the market is 15%, what is the expected current market value of Frasier’s common stock?",
+      "ar": "تنمو شركة Frasier Products بمعدل 10% سنويًا وتتوقع استمرار النمو وربحية سهم 4.00 دولارات في السنة المقبلة. نسبة توزيع الأرباح 35% ومعامل بيتا 1.25. إذا كان المعدل الخالي من المخاطر 7% وعائد السوق 15%، فما القيمة السوقية الحالية المتوقعة للسهم العادي؟"
+    },
+    "choices": {
+      "en": [
+        "$14.00.",
+        "$16.00.",
+        "$20.00.",
+        "$28.00."
+      ],
+      "ar": [
+        "$14.00.",
+        "$16.00.",
+        "$20.00.",
+        "$28.00."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "The expected current value of Frasier’s common stock in $20 as shown below.\nDividend | = | Payout ratio x Earnings per share\n= | .35 x $4.00\n= | $1.40\nRequired return | = | Risk-free rate + Beta (Market rate – Risk-free rate)\n= | .07 + 1.25 (.15 - .07)\n= | .17\nValue of stock | = | Dividend ÷ (Required return – Dividend growth rate)\n= | $1.40 ÷ (.17 - .10)\n= $20.00",
+      "ar": "التوزيع المتوقع = 35% × 4 = 1.40 دولار. العائد المطلوب = 7% + 1.25 × (15% − 7%) = 17%. قيمة السهم = 1.40 ÷ (17% − 10%) = 20.00 دولارًا."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q4",
+    "part": 2,
+    "number": 4,
+    "source": "feb",
+    "question": {
+      "en": "Powell Industries deals with customers throughout the country and is attempting to more efficiently collect its accounts\nreceivable. A major bank has offered to develop and operate a lock-box system for Powell at a cost of $90,000 per year. Powell\naverages 300 receipts per day at an average of $2,500 each. Its short-term interest cost is 8% per year. Using a 360-day year,\nwhat reduction in average collection time would be needed in order to justify the lock-box system?",
+      "ar": "تتعامل Powell Industries مع عملاء في أنحاء البلاد وتريد تحسين تحصيل الذمم. عرض بنك نظام صندوق تحصيل بتكلفة 90,000 دولار سنويًا. متوسط المقبوضات 300 يوميًا بقيمة 2,500 دولار لكل منها، وتكلفة الفائدة قصيرة الأجل 8% سنويًا. باستخدام سنة من 360 يومًا، كم يومًا يجب تقليل متوسط مدة التحصيل لتبرير النظام؟"
+    },
+    "choices": {
+      "en": [
+        "0.67 days.",
+        "1.20 days.",
+        "1.25 days.",
+        "1.50 days."
+      ],
+      "ar": [
+        "0.67 يوم.",
+        "1.20 يوم.",
+        "1.25 يوم.",
+        "1.50 يوم."
+      ]
+    },
+    "answerIndex": 3,
+    "explanation": {
+      "en": "Powell would need to reduce its average collection time by 1.5 days in order to justify the use of the lockbox\nas shown below.\nDaily collections: | 300 x $2,500 | = | $750,000\nDaily interest: | $750,000 x .08 | = | $60,000\nReduction in days: | $90,000 ÷ $60,000 | = | 1.5 days",
+      "ar": "المقبوضات اليومية = 300 × 2,500 = 750,000 دولار. الوفر السنوي عن كل يوم يتم تقليله = 750,000 × 8% = 60,000 دولار. التخفيض المطلوب = 90,000 ÷ 60,000 = 1.5 يوم."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q5",
+    "part": 2,
+    "number": 5,
+    "source": "feb",
+    "question": {
+      "en": "Breakeven quantity is defined as the volume of output at which revenues are equal to",
+      "ar": "كمية التعادل هي حجم الإنتاج الذي تتساوى عنده الإيرادات مع:"
+    },
+    "choices": {
+      "en": [
+        "marginal costs.",
+        "total costs.",
+        "variable costs.",
+        "fixed costs."
+      ],
+      "ar": [
+        "التكاليف الحدية.",
+        "إجمالي التكاليف.",
+        "التكاليف المتغيرة.",
+        "التكاليف الثابتة."
+      ]
+    },
+    "answerIndex": 1,
+    "explanation": {
+      "en": "Breakeven quantity can be defined as the point where operating income is equal to zero. Therefore, revenue\nmust equal total costs.",
+      "ar": "عند التعادل يكون الربح التشغيلي صفرًا؛ لذلك تتساوى الإيرادات مع إجمالي التكاليف."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q6",
+    "part": 2,
+    "number": 6,
+    "source": "feb",
+    "question": {
+      "en": "In a management decision process, the cost measurement of the benefits sacrificed due to selecting an alternative\nuse of resources is most often referred to as a(n)",
+      "ar": "في اتخاذ القرارات الإدارية، ما المصطلح الذي يقيس تكلفة المنافع المتنازل عنها نتيجة اختيار استخدام بديل للموارد؟"
+    },
+    "choices": {
+      "en": [
+        "relevant cost.",
+        "sunk cost.",
+        "opportunity cost.",
+        "differential cost."
+      ],
+      "ar": [
+        "التكلفة الملائمة.",
+        "التكلفة الغارقة.",
+        "تكلفة الفرصة البديلة.",
+        "التكلفة التفاضلية."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "The benefits sacrificed by selecting an alternative use of resources is opportunity cost. Opportunity cost is the\ncontribution foregone by not using a limited resource in its next best alternative use.",
+      "ar": "تكلفة الفرصة البديلة هي المنافع المتنازل عنها نتيجة عدم استخدام المورد المحدود في أفضل بديل تالٍ."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q7",
+    "part": 2,
+    "number": 7,
+    "source": "feb",
+    "question": {
+      "en": "Allstar Company invests in a project with expected cash inflows of $9,000 per year for four years. All cash flows occur at year-\nend. The required return on investment is 9%. If the project generates a net present value (NPV) of $3,000, what is the amount\nof the initial investment in the project?",
+      "ar": "تستثمر Allstar Company في مشروع بتدفقات نقدية داخلة متوقعة 9,000 دولار سنويًا لأربع سنوات في نهاية كل سنة. العائد المطلوب 9%. إذا كان صافي القيمة الحالية 3,000 دولار، فما الاستثمار الأولي؟"
+    },
+    "choices": {
+      "en": [
+        "$11,253.",
+        "$13,236.",
+        "$26,160.",
+        "$29,160."
+      ],
+      "ar": [
+        "$11,253.",
+        "$13,236.",
+        "$26,160.",
+        "$29,160."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Allstar’s initial investment is $26,160 as shown below.\nPresent value of cash inflows | $9,000 x 3.24 = $29,160\nInitial investment | $29,160 - $3,000 = $26,160",
+      "ar": "باستخدام معامل القيمة الحالية المدوّر 3.24 في المصدر: القيمة الحالية للتدفقات = 9,000 × 3.24 = 29,160 دولارًا. الاستثمار الأولي = 29,160 − 3,000 = 26,160 دولارًا."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q8",
+    "part": 2,
+    "number": 8,
+    "source": "feb",
+    "question": {
+      "en": "Diane Harper, Vice President of Finance for BGN Industries, is reviewing material prepared by her staff prior to the\nboard of directors meeting at which she must recommend one of four mutually exclusive options for a new\nproduct line. The summary information below indicates the initial investment required, the present value of cash\ninflows (excluding the initial investment) at BGN’s hurdle rate of 16%, and the internal rate of return (IRR) for each\nof the four options.\nPresent Value of\nOption | Investment | Cash Inflows at 16% | IRR\nX | $3,950,000 | $3,800,000 | 15.5%\nY | 3,000,000 | 3,750,000 | 19.0%\nZ | 2,000,000 | 2,825,000 | 17.5%\nW | 800,000 | 1,100,000 | 18.0%\nIf there are no capital rationing constraints, which option should Harper recommend?",
+      "ar": "تراجع Diane Harper، نائبة رئيس الشؤون المالية في BGN Industries، أربعة بدائل متنافية لخط إنتاج جديد. البيانات التالية توضح الاستثمار الأولي والقيمة الحالية للتدفقات الداخلة (دون الاستثمار الأولي) عند معدل عائد مطلوب 16% ومعدل العائد الداخلي:\nالبديل | الاستثمار | القيمة الحالية | العائد الداخلي\nX | 3,950,000 | 3,800,000 | 15.5%\nY | 3,000,000 | 3,750,000 | 19.0%\nZ | 2,000,000 | 2,825,000 | 17.5%\nW | 800,000 | 1,100,000 | 18.0%\nجميع المبالغ بالدولار. إذا لم توجد قيود رأسمالية، فما البديل الذي ينبغي التوصية به؟"
+    },
+    "choices": {
+      "en": [
+        "Option X.",
+        "Option Y.",
+        "Option Z.",
+        "Option W."
+      ],
+      "ar": [
+        "البديل X.",
+        "البديل Y.",
+        "البديل Z.",
+        "البديل W."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "BGN Industries should select Option Z as it has the highest net present value ($2,825,000 - $2,000,000) and\nthe internal rate of return is greater than the hurdle rate.",
+      "ar": "البديل Z يحقق أعلى صافي قيمة حالية: 2,825,000 − 2,000,000 = 825,000 دولار. ومعدل عائده الداخلي أعلى من المعدل المطلوب."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q9",
+    "part": 2,
+    "number": 9,
+    "source": "feb",
+    "question": {
+      "en": "Even though a company implements an enterprise risk management program, it still is likely to have risk.\nThis risk is considered",
+      "ar": "حتى بعد تطبيق برنامج لإدارة المخاطر المؤسسية، يُرجح بقاء بعض المخاطر. ماذا تسمى؟"
+    },
+    "choices": {
+      "en": [
+        "tolerable risks.",
+        "inherent risks.",
+        "residual risks.",
+        "uninsurable risks."
+      ],
+      "ar": [
+        "المخاطر المقبولة.",
+        "المخاطر الملازمة.",
+        "المخاطر المتبقية.",
+        "المخاطر غير القابلة للتأمين."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Residual risk is the risk remaining after controls have been put in place to mitigate the inherent risk.",
+      "ar": "المخاطر المتبقية هي ما يبقى بعد تطبيق ضوابط لتخفيف المخاطر الملازمة."
+    }
+  },
+  {
+    "id": "cma-ima-2020-feb-p2-q10",
+    "part": 2,
+    "number": 10,
+    "source": "feb",
+    "question": {
+      "en": "Quint Company uses the payback method as part of its analysis of capital investments. One of its projects requires a $140,000\ninvestment and has the following projected before-tax cash flows.\nYear 1 | $60,000\nYear 2 | 60,000\nYear 3 | 60,000\nYear 4 | 80,000\nYear 5 | 80,000\nQuint has an effective tax rate of 40%. Based on these data, the after-tax payback period is",
+      "ar": "تستخدم Quint Company فترة الاسترداد لتحليل الاستثمارات. يتطلب مشروع استثمارًا قدره 140,000 دولار، وتدفقاته قبل الضريبة:\nالسنة 1: 60,000\nالسنة 2: 60,000\nالسنة 3: 60,000\nالسنة 4: 80,000\nالسنة 5: 80,000\nمعدل الضريبة الفعلي 40%. ما فترة الاسترداد بعد الضريبة؟"
+    },
+    "choices": {
+      "en": [
+        "1.5.",
+        "2.3.",
+        "3.4.",
+        "3.7."
+      ],
+      "ar": [
+        "1.5.",
+        "2.3.",
+        "3.4.",
+        "3.7."
+      ]
+    },
+    "answerIndex": 3,
+    "explanation": {
+      "en": "Quint’s payback period is 3.7 years as shown below.\nAfter-tax cash flow | Investment less cash flow\nYear 1 | $60,000 x .6 = $36,000 | $104,000\nYear 2 | $60,000 x .6 = $36,000 | 68,000\nYear 3 | $60,000 x .6 = $36,000 | 32,000\nYear 4 | $80,000 x .6 = $48,000 | $32,000 ÷ $48,000 = .667\nPayback period = 3.7 years",
+      "ar": "التدفقات بعد الضريبة في السنوات الثلاث الأولى = 60,000 × 60% = 36,000 دولار سنويًا. المتبقي بعد ثلاث سنوات = 140,000 − 108,000 = 32,000. تدفق السنة الرابعة = 80,000 × 60% = 48,000. فترة الاسترداد = 3 + 32,000 ÷ 48,000 = 3.667، أي 3.7 سنة."
+    }
+  },
+  {
+    "id": "cma-ima-2020-apr-p1-q1",
+    "part": 1,
+    "number": 1,
+    "source": "apr",
+    "question": {
+      "en": "The statement of shareholders’ equity shows a"
+    },
+    "choices": {
+      "en": [
+        "reconciliation of the beginning and ending balances in shareholders’ equity accounts.",
+        "listing of all shareholders’ equity accounts and their corresponding dollar amounts.",
+        "computation of the number of shares outstanding used for earnings per share calculations.",
+        "reconciliation of the beginning and ending balances in the Retained Earnings account."
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "en": "Firms are required to present reconciliations of the beginning and ending balances of their shareholder\naccounts; this is accomplished by presenting a Statement of Shareholders’ Equity"
+    },
+    "existingQuestionId": "cma-gleim-2025-vol1-su1-s4-q004"
+  },
+  {
+    "id": "cma-ima-2020-apr-p1-q2",
+    "part": 1,
+    "number": 2,
+    "source": "apr",
+    "question": {
+      "en": "Three years ago, James Company purchased stock in Zebra Inc. at a cost of $100,000. This stock was sold for $150,000 during\nthe current fiscal year. The result of this transaction should be shown in the Investing Activities Section of James’ Statement of\nCash Flows as"
+    },
+    "choices": {
+      "en": [
+        "Zero.",
+        "$50,000.",
+        "$100,000.",
+        "$150,000."
+      ]
+    },
+    "answerIndex": 3,
+    "explanation": {
+      "en": "James should include the total value of the sale ($150,000) in the Investing Activities Section of the Cash\nFlow Statement."
+    },
+    "existingQuestionId": "cma-gleim-2025-vol1-su1-s5-q037"
+  },
+  {
+    "id": "cma-ima-2020-apr-p1-q3",
+    "part": 1,
+    "number": 3,
+    "source": "apr",
+    "question": {
+      "en": "Which one of the following items would most likely cause the planning and budgeting system to fail? The lack of"
+    },
+    "choices": {
+      "en": [
+        "historical financial data.",
+        "input from several levels of management.",
+        "top management support.",
+        "adherence to rigid budgets during the year"
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "A budget that is not supported by top management has very little chance of success as subordinates will\nattach little importance to the budget and will focus on what management considers to be important."
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su13-s1-q027"
+  },
+  {
+    "id": "cma-ima-2020-apr-p1-q4",
+    "part": 1,
+    "number": 4,
+    "source": "apr",
+    "question": {
+      "en": "In order to analyze sales as a function of advertising expenses, the sales manager of Smith Company developed a simple\nregression model. The model included the following equation, which was based on 32 monthly observations of sales and\nadvertising expenses with a related coefficient of determination of .90.\nS = $10,000 + $2.50A\nS = sales\nA = advertising expenses\nIf Smith Company’s advertising expenses in one month amounted to $1,000, the related point estimate of sales would be"
+    },
+    "choices": {
+      "en": [
+        "$2,500.",
+        "$11,250.",
+        "$12,250.",
+        "$12,500."
+      ]
+    },
+    "answerIndex": 3,
+    "explanation": {
+      "en": "Sales (S) | = | $10,000 + $2.50A (A = $1,000)\n=$10,000 + $2.50 ($1,000)\n= | $10,000 + $2,500\n= | $12,500"
+    },
+    "existingQuestionId": "cma-gleim-2025-vol2-su12-s1-q018"
+  },
+  {
+    "id": "cma-ima-2020-apr-p1-q5",
+    "part": 1,
+    "number": 5,
+    "source": "apr",
+    "question": {
+      "en": "The following performance report was prepared for Dale Manufacturing for the month of April.\nActual Results\nStatic Budget | Variance\nSales units | 100,000 | 80,000 | 20,000F\nSales dollars | $190,000 | $160,000 | $30,000F\nVariable costs | 125,000 | 96,000 | 29,000U\nFixed costs | 45,000 | 40,000 | 5,000U\nOperating income | $ 20,000 | $ 24,000 | $ 4,000U\nUsing a flexible budget, Dale’s total sales-volume variance is",
+      "ar": "أعدت Dale Manufacturing تقرير الأداء التالي لشهر أبريل:\nالبند | الفعلي | الموازنة الثابتة | الانحراف\nوحدات المبيعات | 100,000 | 80,000 | 20,000 ملائم\nالمبيعات بالدولار | 190,000 | 160,000 | 30,000 ملائم\nالتكاليف المتغيرة | 125,000 | 96,000 | 29,000 غير ملائم\nالتكاليف الثابتة | 45,000 | 40,000 | 5,000 غير ملائم\nالربح التشغيلي | 20,000 | 24,000 | 4,000 غير ملائم\nباستخدام موازنة مرنة، ما إجمالي انحراف حجم المبيعات؟"
+    },
+    "choices": {
+      "en": [
+        "$4,000 unfavorable.",
+        "$6,000 favorable.",
+        "$16,000 favorable.",
+        "$20,000 unfavorable."
+      ],
+      "ar": [
+        "4,000 دولار غير ملائم.",
+        "6,000 دولار ملائم.",
+        "16,000 دولار ملائم.",
+        "20,000 دولار غير ملائم."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "The sales-volume variance is $16,000 favorable as shown below.\nFlexible Budget | Static Budget\nUnits | 100,000 | 80,000\nSales dollars | $200,000 | $160,000\nVariable costs | 120,000 | 96,000\nFixed costs | 40,000 | 40,000\nOperating income | $40,000 | $24,000\nSales volume variance = $40,000 - $24,000 = $16,000 F",
+      "ar": "الموازنة المرنة عند 100,000 وحدة: مبيعات 200,000، تكاليف متغيرة 120,000، تكاليف ثابتة 40,000، وربح تشغيلي 40,000 دولار. الربح في الموازنة الثابتة 24,000؛ انحراف حجم المبيعات = 40,000 − 24,000 = 16,000 دولار ملائم. هذا ليس انحراف حجم الإنتاج للتكاليف الصناعية الثابتة."
+    }
+  },
+  {
+    "id": "cma-ima-2020-apr-p2-q1",
+    "part": 2,
+    "number": 1,
+    "source": "apr",
+    "question": {
+      "en": "Gordon has had the following financial results for the last four years.\nYear 1 | Year 2 | Year 3 | Year 4\nSales | $1,250,000 | $1,300,000 | $1,359,000 | $1,400,000\nCost of goods sold | 750,000 | 785,000 | 825,000 | 850,000\nGross profit | 500,000 | 515,000 | 534,000 | 550,000\nInflation factor | 1.00 | 1.03 | 1.07 | 1.10\nGordon has analyzed these results using vertical common-size analysis to determine trends. The performance of\nGordon can best be characterized by which one of the following statements?",
+      "ar": "كانت نتائج Gordon خلال أربع سنوات كما يلي:\nالبند | السنة 1 | السنة 2 | السنة 3 | السنة 4\nالمبيعات | 1,250,000 | 1,300,000 | 1,359,000 | 1,400,000\nتكلفة المبيعات | 750,000 | 785,000 | 825,000 | 850,000\nمجمل الربح | 500,000 | 515,000 | 534,000 | 550,000\nمعامل التضخم | 1.00 | 1.03 | 1.07 | 1.10\nالمبالغ بالدولار. بعد التحليل الرأسي ذي الحجم المشترك، أي وصف هو الأدق للأداء؟"
+    },
+    "choices": {
+      "en": [
+        "The common-size gross profit percentage has decreased as a result of an increasing common-size trend in\ncost of goods sold.",
+        "The common-size trend in sales is increasing and is resulting in an increasing trend in the common-size\ngross profit margin.",
+        "The common-size trend in cost of goods sold is decreasing which is resulting in an increasing trend in the\ncommon-size gross profit margin.",
+        "The increased trend in the common-size gross profit percentage is the result of both the increasing trend in\nsales and the decreasing trend in cost of goods sold."
+      ],
+      "ar": [
+        "انخفضت نسبة مجمل الربح نتيجة ارتفاع نسبة تكلفة المبيعات.",
+        "ارتفعت نسبة المبيعات مما رفع نسبة هامش مجمل الربح.",
+        "انخفضت نسبة تكلفة المبيعات مما رفع نسبة هامش مجمل الربح.",
+        "ارتفعت نسبة مجمل الربح نتيجة ارتفاع نسبة المبيعات وانخفاض نسبة تكلفة المبيعات."
+      ]
+    },
+    "answerIndex": 0,
+    "explanation": {
+      "en": "Gordon’s common-size gross profit percentage has decreased as a result of an increasing common-size trend\nin cost of goods sold as shown below.\nYear 1 | Year 2 | Year 3 | Year 4\nSales | 100% | 100% | 100% | 100%\nCost of goods sold (÷ Sales) | 60.0% | 60.3% | 60.7% | 60.7%\nGross profit (÷ Sales) | 40.0% | 39.6% | 39.2% | 39.2%",
+      "ar": "تنخفض نسبة مجمل الربح لأن نسبة تكلفة المبيعات ترتفع من 60.0% إلى نحو 60.7%. المبيعات هي أساس التحليل وتساوي 100% في كل سنة. تتضمن النسب المنشورة في مفتاح المصدر تقريبًا غير دقيق، لكن اتجاه الانخفاض والإجابة لا يتغيران."
+    }
+  },
+  {
+    "id": "cma-ima-2020-apr-p2-q2",
+    "part": 2,
+    "number": 2,
+    "source": "apr",
+    "question": {
+      "en": "The functional currency of an entity is defined as the currency",
+      "ar": "تُعرّف العملة الوظيفية للمنشأة بأنها عملة:"
+    },
+    "choices": {
+      "en": [
+        "of the entity’s parent company.",
+        "of the primary country in which the entity is physically located.",
+        "in which the books of record are maintained for all entity operations.",
+        "of the primary economic environment in which the entity operates."
+      ],
+      "ar": [
+        "الشركة الأم.",
+        "الدولة الرئيسية التي تقع فيها المنشأة فعليًا.",
+        "العملة التي تُمسك بها السجلات لجميع العمليات.",
+        "البيئة الاقتصادية الرئيسية التي تعمل فيها المنشأة."
+      ]
+    },
+    "answerIndex": 3,
+    "explanation": {
+      "en": "A firm’s functional should be the currency of the primary economic environment in which the firm operates\nand should be selected on the basis of several economic factors including cash flow, sales price, and financing indicators.",
+      "ar": "العملة الوظيفية هي عملة البيئة الاقتصادية الرئيسية التي تعمل فيها المنشأة، وتُحدد وفق مؤشرات اقتصادية منها التدفقات وأسعار البيع والتمويل."
+    }
+  },
+  {
+    "id": "cma-ima-2020-apr-p2-q3",
+    "part": 2,
+    "number": 3,
+    "source": "apr",
+    "question": {
+      "en": "James Hemming, the chief financial officer of a mid-western machine parts manufacturer, is considering splitting the company’s\nstock, which is currently selling at $80.00 per share. The stock currently pays a $1.00 per share dividend. If the split is two-for-\none, Mr. Hemming may expect the post split price to be",
+      "ar": "يدرس James Hemming، المدير المالي لشركة تصنيع أجزاء آلات، تجزئة السهم الذي يباع حاليًا بـ80.00 دولارًا ويوزع 1.00 دولار لكل سهم. إذا كانت التجزئة سهمين مقابل سهم، فما السعر المتوقع بعد التجزئة؟"
+    },
+    "choices": {
+      "en": [
+        "exactly $40.00, regardless of dividend policy.",
+        "greater than $40.00, if the dividend is changed to $0.45 per new share.",
+        "greater than $40.00, if the dividend is changed to $0.55 per new share.",
+        "less than $40.00, regardless of dividend policy."
+      ],
+      "ar": [
+        "40.00 دولارًا بالضبط بغض النظر عن سياسة التوزيع.",
+        "أكثر من 40.00 دولارًا إذا أصبح التوزيع 0.45 دولار لكل سهم جديد.",
+        "أكثر من 40.00 دولارًا إذا أصبح التوزيع 0.55 دولار لكل سهم جديد.",
+        "أقل من 40.00 دولارًا بغض النظر عن سياسة التوزيع."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "The post-split price of the stock should be greater that $40.00 if the dividend changed to $.55 as the\ndividend yield will have increased.",
+      "ar": "وفق تفسير المصدر، قد يتجاوز السعر 40.00 دولارًا إذا ارتفع التوزيع إلى 0.55 دولار للسهم الجديد؛ فهذا يزيد التوزيع الإجمالي مقارنة بما قبل التجزئة. ليست التجزئة وحدها ضمانًا لسعر معين."
+    }
+  },
+  {
+    "id": "cma-ima-2020-apr-p2-q4",
+    "part": 2,
+    "number": 4,
+    "source": "apr",
+    "question": {
+      "en": "After a competitive bidding process, a company’s purchasing director awarded a contract to the lowest bidder, an organization\nin which she had a personal interest. Since the winning bidder had the lowest price, she did not disclose her relationship with\nthe entity. In fact, she frequently highlighted the fact that the winning bidder had the most experience servicing contracts of this\nnature. Which one of the values of ethical decision making did the purchasing director violate?",
+      "ar": "بعد مناقصة تنافسية، منحت مديرة المشتريات العقد لأقل العارضين سعرًا، وهي جهة لها فيها مصلحة شخصية. لم تفصح عن علاقتها لأن العرض الأقل سعرًا، وكانت تؤكد أن الجهة الأكثر خبرة. أي قيمة أخلاقية انتهكت؟"
+    },
+    "choices": {
+      "en": [
+        "None, because a competitive bidding process was utilized.",
+        "Fairness, because she did not tell the truth about her relationship with the vendor.",
+        "Integrity, because her relationship with the bidder could have impaired her judgment.",
+        "Honesty, because she was not being truthful about the experience of the bidder."
+      ],
+      "ar": [
+        "لا شيء لأن مناقصة تنافسية أُجريت.",
+        "العدالة لأنها لم تصدق بشأن علاقتها بالمورد.",
+        "النزاهة لأن علاقتها بالعارض قد تؤثر في حكمها.",
+        "الأمانة لأنها لم تصدق بشأن خبرة العارض."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Integrity refers to being whole, sound and in an unimpaired condition. It relates to open communication,\ntransparency and relationships. The Director of Purchasing’s relationship with the winning bidder could have impaired her\njudgment and her lack of transparency implies that she knew such behavior was inappropriate.",
+      "ar": "النزاهة تستلزم التواصل المفتوح والشفافية. المصلحة الشخصية قد تضعف الحكم المهني، وعدم الإفصاح عن العلاقة يخل بالنزاهة."
+    }
+  },
+  {
+    "id": "cma-ima-2020-apr-p2-q5",
+    "part": 2,
+    "number": 5,
+    "source": "apr",
+    "question": {
+      "en": "Garner Products is considering a new accounts payable and cash disbursement process which is projected to add 3 days\nto the disbursement schedule without having significant negative effects on supplier relations. Daily cash outflows average\n$1,500,000. Garner is in a short-term borrowing position for 8 months of the year and in an investment position for 4 months.\nOn an annual basis, bank lending rates are expected to average 7% and marketable securities yields are expected to average\n4%. What is the maximum annual expense that Garner could incur for this new process and still break even?",
+      "ar": "تدرس Garner Products إجراءً جديدًا للذمم الدائنة والمدفوعات يؤخر الصرف 3 أيام دون أثر سلبي مهم على الموردين. متوسط المدفوعات اليومية 1,500,000 دولار. تقترض الشركة قصيرة الأجل 8 أشهر وتستثمر فائضها 4 أشهر. متوسط الفائدة السنوية على الاقتراض 7% وعائد الأوراق المالية 4%. ما أكبر تكلفة سنوية للإجراء تسمح بالتعادل؟"
+    },
+    "choices": {
+      "en": [
+        "$90,000.",
+        "$180,000.",
+        "$270,000.",
+        "$315,000."
+      ],
+      "ar": [
+        "$90,000.",
+        "$180,000.",
+        "$270,000.",
+        "$315,000."
+      ]
+    },
+    "answerIndex": 2,
+    "explanation": {
+      "en": "Garner could incur up to $270,000 of expense and still break even due to savings of\n$270,000 as shown below.\nInterest expense avoided | = | (3 x $1,500,000) x [(.07 ÷ 12) x 8]\n= | $4,500,000 x .046666\n= | $210,000\nAdditional income earned | = | (3 x $1,500,000) x [(.04 ÷ 12) x 4]\n= | $4,500,000 x .013333\n= | $60,000\nTotal savings | = | $210,000 + $60,000\n= | $270,000",
+      "ar": "النقد المحرر = 3 × 1,500,000 = 4,500,000 دولار. الفائدة المتجنبة = 4,500,000 × 7% × 8/12 = 210,000. عائد الاستثمار الإضافي = 4,500,000 × 4% × 4/12 = 60,000. الإجمالي = 270,000 دولار."
+    }
+  }
+]
