@@ -88,7 +88,21 @@ function useClearOfText(ref: React.RefObject<HTMLElement | null>) {
 export function AIAssistant({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
-  const { messages, sendMessage, loading, scrollRef } = useChatWidget(transport);
+  const { messages, sendMessage, loading, scrollRef, error, regenerate, clearError } =
+    useChatWidget(transport);
+  const errorText = error
+    ? /payment|402|credit/i.test(error.message)
+      ? lang === "ar"
+        ? "المساعد متوقف مؤقتاً. تقدر تتواصل مع أحمد مباشرة على واتساب 0560409811."
+        : "The assistant is temporarily unavailable. You can reach Ahmed directly on WhatsApp: 0560409811."
+      : /429|rate/i.test(error.message)
+        ? lang === "ar"
+          ? "فيه ضغط كبير على المساعد الحين، جرّب بعد لحظات."
+          : "The assistant is busy right now, please try again in a moment."
+        : lang === "ar"
+          ? "صار خطأ في الاتصال بالمساعد. جرّب مرة ثانية."
+          : "Couldn't reach the assistant. Please try again."
+    : null;
   const inputRef = useRef<HTMLInputElement>(null);
   const runnerRef = useRef<HTMLDivElement>(null);
   const clearOfText = useClearOfText(runnerRef);
@@ -102,6 +116,7 @@ export function AIAssistant({ lang }: { lang: Lang }) {
     e.preventDefault();
     const text = input.trim();
     if (!text || loading) return;
+    if (error) clearError();
     sendMessage({ text });
     setInput("");
   };
@@ -293,6 +308,34 @@ export function AIAssistant({ lang }: { lang: Lang }) {
                         className="size-1.5 animate-bounce rounded-full bg-[#A88765]"
                         style={{ animationDelay: "300ms" }}
                       />
+                    </div>
+                  </div>
+                )}
+                {errorText && !loading && (
+                  <div
+                    role="alert"
+                    className="rounded-2xl border border-red-400/30 bg-red-500/10 p-3 text-sm leading-relaxed text-red-100"
+                  >
+                    <p>{errorText}</p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          clearError();
+                          void regenerate();
+                        }}
+                        className="rounded-full border border-red-300/40 px-3 py-1 text-[11px] font-semibold hover:bg-red-400/10"
+                      >
+                        {lang === "ar" ? "إعادة المحاولة" : "Try again"}
+                      </button>
+                      <a
+                        href="https://wa.me/966560409811"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-emerald-300/40 px-3 py-1 text-[11px] font-semibold text-emerald-100 hover:bg-emerald-400/10"
+                      >
+                        {lang === "ar" ? "واتساب أحمد" : "WhatsApp Ahmed"}
+                      </a>
                     </div>
                   </div>
                 )}
