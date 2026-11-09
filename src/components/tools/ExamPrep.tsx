@@ -486,7 +486,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 : "No questions for this track yet. Upload a bank."}
             </div>
           ) : (
-            <CmaTranslatedQuestion key={q.id} question={q} lang={lang}>
+            <CmaTranslatedQuestion key={q.id} question={q} lang={lang} tone="dark">
               {(view) => (
                 <motion.div
               key={q.id}
