@@ -1,0 +1,32 @@
+# Temporary workflow; removed after the generated route manifest is committed.
+name: Regenerate CMA route manifest once
+on:
+  push:
+    branches:
+      - feat/cma-translation-cache-and-part2-prep
+    paths:
+      - ".github/workflows/generate-cma-routes-once.yml"
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - name: Commit only the auto-generated TanStack route manifest
+        shell: bash
+        run: |
+          git add -- src/routeTree.gen.ts
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore(router): regenerate route manifest for CMA translation endpoint"
+            git push origin HEAD:feat/cma-translation-cache-and-part2-prep
+          fi
