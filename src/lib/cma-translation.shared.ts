@@ -30,7 +30,7 @@ export function cmaSourceHash(source: CmaSourceText): string {
 
 /** Exactly preserve the source's ASCII numbers, decimal points and percent signs. */
 export function cmaNumericTokens(text: string): string[] {
-  return text.match(/\d[\d,.]*(?:%|‰)?/g) ?? [];
+  return text.match(/\d+(?:,\d{3})*(?:\.\d+)?(?:%|‰)?/g) ?? [];
 }
 
 export function validateCmaTranslation(
