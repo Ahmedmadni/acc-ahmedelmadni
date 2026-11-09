@@ -159,7 +159,6 @@ export function CmaTranslatedQuestion({
 }) {
   const eligible =
     question.track === "CMA" &&
-    question.id.startsWith("cma-gleim-2025-") &&
     question.sourceLanguage === "en" &&
     lang === "ar";
 
