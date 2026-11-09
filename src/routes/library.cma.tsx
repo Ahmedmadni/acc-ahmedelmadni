@@ -27,6 +27,12 @@ import {
 import { useSiteLang } from "@/lib/use-site-lang";
 
 const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage !== "en").length;
+const original2019Part2Count = CMA_LOCAL_QUESTIONS.filter((q) =>
+  q.id.startsWith("cma-p2-2019-concept-"),
+).length;
+const englishPart1SourceCount = CMA_LOCAL_QUESTIONS.filter((q) =>
+  q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage === "en",
+).length;
 
 export const Route = createFileRoute("/library/cma")({
   head: () => {
@@ -36,7 +42,7 @@ export const Route = createFileRoute("/library/cma")({
         { title: "منهج CMA الأمريكي | الجزء الأول والثاني — أحمد المدني" },
         {
           name: "description",
-          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و2,443 سؤالًا من كتابي Gleim 2025 بالإنجليزية.`,
+          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و${original2019Part2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني و2,443 سؤالًا من بنوك الجزء الأول 2025.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
@@ -120,8 +126,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي أسئلة الجزء الأول 2025 بالإنجليزية. ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
-              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from the Part 1 2025 banks. Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
+              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025، و${original2019Part2Count} سؤالًا جديدًا أصليًا بالإنجليزية للجزء الثاني مستندًا إلى مفاهيم مذكرة 2019 (وليس من أسئلة الناشر). ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
+              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions, plus ${original2019Part2Count} independently written English-first Part 2 questions based on 2019 outline topics (not publisher MCQs). Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -131,10 +137,16 @@ function CmaPage() {
               {CMA_LOCAL_QUESTIONS.length} {lang === "ar" ? "سؤالًا بالمجموع" : "questions total"}
             </span>
             <span>
-              {CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage === "en").length}{" "}
+              {englishPart1SourceCount}{" "}
               {lang === "ar"
-                ? "سؤالًا من بنك الجزء الأول 2025 بالإنجليزية"
-                : "English Part 1 source-bank questions"}
+                ? "سؤالًا إنجليزيًا من بنك الجزء الأول (غير مترجم)"
+                : "Untranslated Part 1 source questions"}
+            </span>
+            <span>
+              {original2019Part2Count}{" "}
+              {lang === "ar"
+                ? "سؤالًا تدريبيًا جديدًا وأصليًا بالإنجليزية للجزء الثاني"
+                : "New independently authored English Part 2 questions"}
             </span>
             <span>{lang === "ar" ? "مجالات CMA من A إلى F" : "CMA domains A–F"}</span>
           </div>
