@@ -16,6 +16,7 @@ import { CMA_PART2_QUESTIONS_1_7 } from "@/data/cma-part2-questions-1-7";
 import { CMA_PART2_PRACTICE_1_7 } from "@/data/cma-part2-practice-1-7";
 import { CMA_PART2_QUESTIONS_8_15 } from "@/data/cma-part2-questions-8-15";
 import { CMA_PART2_PRACTICE_8_15 } from "@/data/cma-part2-practice-8-15";
+import { CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS } from "@/data/cma-part2-2019-outline-original";
 import { CMA_QUESTIONS_MCQ_VOL_1 } from "@/data/cma-questions-mcq-vol-1";
 import { CMA_GLEIM_2025_VOL1_QUESTIONS } from "@/data/cma-questions-gleim-2025-vol1";
 import { CMA_GLEIM_2025_VOL2_QUESTIONS } from "@/data/cma-questions-gleim-2025-vol2";
@@ -639,6 +640,7 @@ export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
   ...CMA_PART2_PRACTICE_1_7,
   ...CMA_PART2_QUESTIONS_8_15,
   ...CMA_PART2_PRACTICE_8_15,
+  ...CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS,
   ...CMA_QUESTIONS_MCQ_VOL_1,
   ...CMA_GLEIM_2025_VOL1_QUESTIONS,
   ...CMA_GLEIM_2025_VOL2_QUESTIONS,
