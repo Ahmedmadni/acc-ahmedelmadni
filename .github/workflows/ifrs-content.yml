@@ -46,10 +46,10 @@ jobs:
         run: npm run cma:check-content
       - name: CMA translation validation
         run: node --test scripts/tests/cma-translation.test.mjs
+      - name: Production build (also regenerates TanStack routes)
+        run: npm run build
       - name: TypeScript type checking
         run: npx tsc --noEmit
-      - name: Production build
-        run: npm run build
       # Pre-existing repository-wide formatting debt is tracked separately. Keep
       # all non-format ESLint rules blocking while avoiding a mass reformat diff.
       - name: ESLint code-quality rules
