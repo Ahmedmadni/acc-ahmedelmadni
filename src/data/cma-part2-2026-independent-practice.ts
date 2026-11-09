@@ -490,7 +490,13 @@ export const CMA_PART2_2026_INDEPENDENT_QUESTIONS: CmaLocalQuestion[] = specs.ma
       item.answerIndex < 0 || item.answerIndex > 3) {
     throw new Error(`Invalid independent CMA Part 2 question ${index + 1}`);
   }
+  // Balanced, deterministic answer-key positions: 9 correct answers in each A-D
+  // position across 36 questions. Reordering only affects independently written choices.
+  const keyPositions = [2, 0, 3, 1, 3, 1, 0, 2, 1, 3, 2, 0];
+  const targetAnswerIndex = keyPositions[index % keyPositions.length];
   const choices = [...item.choices];
+  [choices[item.answerIndex], choices[targetAnswerIndex]] =
+    [choices[targetAnswerIndex], choices[item.answerIndex]];
   return {
     id: `cma-p2-2026-independent-q${String(index + 1).padStart(3, "0")}`,
     track: "CMA", topicId: item.topic, studyUnit: topic.studyUnit,
@@ -499,7 +505,7 @@ export const CMA_PART2_2026_INDEPENDENT_QUESTIONS: CmaLocalQuestion[] = specs.ma
     reference: "Original CMA Part 2 practice based on the IMA 2024 content specification, not an official or publisher exam question",
     question: { en: item.question, ar: item.question },
     choices: { en: choices, ar: [...choices] },
-    answerIndex: item.answerIndex,
+    answerIndex: targetAnswerIndex,
     explanation: { en: item.explanation, ar: item.explanation },
     sourceLanguage: "en",
   };
