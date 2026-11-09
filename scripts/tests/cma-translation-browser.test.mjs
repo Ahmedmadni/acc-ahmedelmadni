@@ -112,5 +112,5 @@ test("long questions use safe copy-and-paste fallback without truncating content
 
 test("the CMA translation UI does not call the paid API or require Supabase", () => {
   const component = fs.readFileSync(path.resolve(root, "src/components/library/CmaTranslatedQuestion.tsx"), "utf8");
-  assert.doesNotMatch(component, /from\\s*["\x27]@\\/integrations\\/supabase|\\bsupabase\\s*\\.|\\/api\\/cma-translate|LOVABLE_API_KEY|fetch\\s*\\(/i);
+  assert.doesNotMatch(component, /from\s*["']@\/integrations\/supabase|\bsupabase\s*\.|\/api\/cma-translate|LOVABLE_API_KEY|fetch\s*\(/i);
 });
