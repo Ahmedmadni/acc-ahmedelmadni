@@ -11,6 +11,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
+import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import {
@@ -30,6 +31,10 @@ const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguag
 const original2019Part2Count = CMA_LOCAL_QUESTIONS.filter((q) =>
   q.id.startsWith("cma-p2-2019-concept-"),
 ).length;
+const original2026Part2Count = CMA_LOCAL_QUESTIONS.filter((q) =>
+  q.id.startsWith("cma-p2-2026-independent-"),
+).length;
+const newEnglishPart2Count = original2019Part2Count + original2026Part2Count;
 const englishPart1SourceCount = CMA_LOCAL_QUESTIONS.filter((q) =>
   q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage === "en",
 ).length;
@@ -42,7 +47,7 @@ export const Route = createFileRoute("/library/cma")({
         { title: "منهج CMA الأمريكي | الجزء الأول والثاني — أحمد المدني" },
         {
           name: "description",
-          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و${original2019Part2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني و2,443 سؤالًا من بنوك الجزء الأول 2025.`,
+          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني و2,443 سؤالًا من بنوك الجزء الأول 2025.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
@@ -126,8 +131,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025، و${original2019Part2Count} سؤالًا جديدًا أصليًا بالإنجليزية للجزء الثاني مستندًا إلى مفاهيم مذكرة 2019 (وليس من أسئلة الناشر). ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
-              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions, plus ${original2019Part2Count} independently written English-first Part 2 questions based on 2019 outline topics (not publisher MCQs). Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
+              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025، و${newEnglishPart2Count} سؤالًا أصليًا بالإنجليزية للجزء الثاني (44 مستندًا إلى مفاهيم مذكرة 2019 و${original2026Part2Count} وفق مجالات IMA لعام 2024، وليست من أسئلة الناشرين). ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
+              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions, plus ${newEnglishPart2Count} independently authored English-first Part 2 questions (44 based on the 2019 outline and ${original2026Part2Count} based on IMA 2024 content domains, not reproduced publisher MCQs). Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -143,10 +148,10 @@ function CmaPage() {
                 : "Untranslated Part 1 source questions"}
             </span>
             <span>
-              {original2019Part2Count}{" "}
+              {newEnglishPart2Count}{" "}
               {lang === "ar"
-                ? "سؤالًا تدريبيًا جديدًا وأصليًا بالإنجليزية للجزء الثاني"
-                : "New independently authored English Part 2 questions"}
+                ? "سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني"
+                : "Independently authored English Part 2 questions"}
             </span>
             <span>{lang === "ar" ? "مجالات CMA من A إلى F" : "CMA domains A–F"}</span>
           </div>
@@ -300,6 +305,58 @@ function CmaPage() {
             ))}
           </div>
         </section>
+
+        {part === "part-2" && (
+          <section
+            className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-5 text-[#1C1B19] sm:p-7"
+            aria-label={lang === "ar" ? "مصادر أسئلة CMA الجزء الثاني" : "CMA Part 2 practice sources"}
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h3 className="font-display text-xl font-black">
+                  {lang === "ar" ? "مصادر اختبارات الجزء الثاني" : "Part 2 external practice sources"}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#6B6259]">
+                  {lang === "ar"
+                    ? "مصادر تمت مراجعة روابطها. يمكن فتحها في مواقع أصحابها؛ الأسئلة الموجودة في هذه الروابط ليست منسوخة داخل منصتنا."
+                    : "Curated external links. Questions remain on their publishers' sites and are not copied into this platform."}
+                </p>
+              </div>
+              <span className="rounded-full bg-[#A88765]/15 px-3 py-1 text-xs font-bold text-[#76543F]">
+                {CMA_PART2_PRACTICE_SOURCES.length} {lang === "ar" ? "مصادر" : "sources"}
+              </span>
+            </div>
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              {CMA_PART2_PRACTICE_SOURCES.map((source) => (
+                <a
+                  key={source.id}
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col rounded-2xl border border-[#A88765]/25 bg-white p-4 transition hover:border-[#A88765]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#76543F]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <strong className="text-sm leading-6">
+                      {lang === "ar" ? source.titleAr : source.titleEn}
+                    </strong>
+                    <ExternalLink className="mt-1 size-4 shrink-0 text-[#76543F] transition group-hover:translate-x-0.5" />
+                  </div>
+                  <p className="mt-2 text-xs leading-6 text-[#6B6259]">
+                    {lang === "ar" ? source.accessAr : source.accessEn}
+                  </p>
+                  <p className="mt-2 text-xs font-semibold leading-5 text-[#76543F]">
+                    {lang === "ar" ? source.rightsAr : source.rightsEn}
+                  </p>
+                </a>
+              ))}
+            </div>
+            <p className="mt-4 text-xs leading-6 text-[#6B6259]">
+              {lang === "ar"
+                ? "الأسئلة التدريبية الجديدة داخل المنصة مؤلفة بصورة مستقلة ومصنفة وفق المجالات الستة وأوزانها الرسمية؛ وليست أسئلة امتحانات IMA الرسمية."
+                : "New internal practice questions are independently authored and classified by the six official domain weights; they are not official IMA exam items."}
+            </p>
+          </section>
+        )}
 
         <section className="mt-7" aria-label={lang === "ar" ? "موضوعات CMA" : "CMA topics"}>
           <p className="mb-4 text-xs font-semibold text-[#AFA69D]">
