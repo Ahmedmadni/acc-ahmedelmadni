@@ -87,6 +87,39 @@ for (const q of CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS) {
 }
 check(original2019Units.size === 11, "Expected coverage of all 11 concepts in PDF outline");
 
+const normalizedStem = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const existingStemFingerprints = new Set(
+  CMA_LOCAL_QUESTIONS
+    .filter((q) => !q.id.startsWith("cma-p2-2019-concept-"))
+    .map((q) => normalizedStem(q.question.en)),
+);
+const answerPositions = [0, 0, 0, 0];
+for (const q of CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS) {
+  check(q.question.en.length >= 35 && q.explanation.en.length >= 40, `Original question needs a meaningful explanation: ${q.id}`);
+  check(new Set(q.choices.en).size === 4, `Repeated choice in original question: ${q.id}`);
+  check(!existingStemFingerprints.has(normalizedStem(q.question.en)), `Original question duplicates existing bank: ${q.id}`);
+  answerPositions[q.answerIndex]++;
+}
+check(answerPositions.every((count) => count === 11), "Original question answer positions must be balanced");
+
+const independentlyVerifiedOriginalAnswers = [
+  ["q007", "24,000"], ["q013", "50.00"], ["q014", "2"], ["q015", "10.8%"],
+  ["q017", "50 days"], ["q018", "5,000"], ["q020", "1,265 units"],
+  ["q021", "35 million"], ["q022", "24,000"],
+  ["q023", "Receipts are SAR 20,000 higher before transaction costs"],
+  ["q024", "SAR 1,500 loss"], ["q025", "40%"], ["q027", "36%"],
+  ["q029", "10 times"], ["q031", "24.8%"], ["q033", "105,000"],
+  ["q035", "Positive 6,777"], ["q036", "2.5 years"], ["q037", "4,000"],
+  ["q038", "2,000 units"], ["q039", "5,000"], ["q040", "1,500 bundles"],
+  ["q042", "5,500"], ["q043", "9"], ["q044", "1.11"],
+];
+for (const [suffix, expected] of independentlyVerifiedOriginalAnswers) {
+  const question = CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS.find((q) => q.id.endsWith(suffix));
+  check(question?.choices.en[question.answerIndex] === expected, `Recheck original MCQ calculation/answer: ${suffix}`);
+}
+console.log(`Validated 44 original English-first Part 2 questions from 11 outline units, with 25 reviewed quantitative keys and balanced answers`);
+
+
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
   [20, 18, 37, 32],
