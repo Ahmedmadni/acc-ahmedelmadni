@@ -46,6 +46,8 @@ jobs:
         run: npm run cma:check-content
       - name: CMA translation validation
         run: node --test scripts/tests/cma-translation.test.mjs
+      - name: Part 2 intake audit self-test
+        run: node scripts/audit-cma-part2-intake.mjs --self-test
       - name: Production build (also regenerates TanStack routes)
         run: npm run build
       - name: TypeScript type checking
