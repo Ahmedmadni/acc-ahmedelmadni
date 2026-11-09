@@ -388,7 +388,9 @@ for (const q of CMA_LOCAL_QUESTIONS) {
     q.question.ar && q.question.en && q.explanation.ar && q.explanation.en && q.reference,
     `Incomplete question: ${q.id}`,
   );
-  if (q.sourceLanguage === "en") {
+  // Publisher-transcription page/status requirements do not apply to independently
+  // authored English-first questions with concept references rather than source question pages.
+  if (q.sourceLanguage === "en" && q.id.startsWith("cma-gleim-2025-")) {
     check(
       q.sourcePage >= 5 && (q.id.includes("-vol2-") ? q.sourcePage <= 1370 : q.sourcePage <= 1087),
       `Missing source page: ${q.id}`,
