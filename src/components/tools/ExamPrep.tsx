@@ -23,6 +23,7 @@ import { SEED_QUESTIONS, TRACKS, type ExamQuestion, type ExamTrack } from "@/lib
 import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
+import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import type { CmaStudyUnit } from "@/data/cma-topics";
 
 const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
@@ -485,7 +486,9 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 : "No questions for this track yet. Upload a bank."}
             </div>
           ) : (
-            <motion.div
+            <CmaTranslatedQuestion key={q.id} question={q} lang={lang}>
+              {(view) => (
+                <motion.div
               key={q.id}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -497,7 +500,8 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 <span>·</span>
                 <span>{q.topic}</span>
               </div>
-              {q.sourceLanguage === "en" && lang === "ar" && (
+              {view.control}
+              {q.sourceLanguage === "en" && lang === "ar" && !view.translated && (
                 <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
                   هذا السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
                 </p>
@@ -510,13 +514,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 </p>
               )}
               <h3
-                dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
+                dir={view.direction}
                 className="mb-4 whitespace-pre-wrap text-base font-extrabold text-[var(--fg)] md:text-lg"
               >
-                {q.question[lang]}
+                {view.question}
               </h3>
               <div className="space-y-2">
-                {q.choices[lang].map((c, i) => {
+                {view.choices.map((c, i) => {
                   const isCorrect = i === q.answerIndex;
                   const isPicked = i === selected;
                   let cls = "border-[#d7aa52]/20 bg-white/[0.03] hover:border-[#d7aa52]/50";
@@ -535,7 +539,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                         {String.fromCharCode(65 + i)}
                       </span>
                       <span
-                        dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
+                        dir={view.direction}
                         className="flex-1 whitespace-pre-wrap"
                       >
                         {c}
@@ -564,10 +568,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                         {lang === "ar" ? "الشرح" : "Explanation"}
                       </div>
                       <p
-                        dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
+                        dir={view.direction}
                         className="whitespace-pre-wrap text-sm leading-relaxed text-[var(--fg-soft)]"
                       >
-                        {q.explanation[lang]}
+                        {view.explanation}
                       </p>
                       {q.answerStatus === "inferred" && (
                         <p className="mt-2 text-xs text-amber-200">
@@ -610,6 +614,8 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                 </button>
               </div>
             </motion.div>
+              )}
+            </CmaTranslatedQuestion>
           )}
 
           {score.total >= 5 && (
