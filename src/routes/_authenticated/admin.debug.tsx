@@ -43,10 +43,10 @@ function AdminDebugPage() {
           setError(roleErr.message || String(roleErr));
           setRoles(null);
         } else {
-          setRoles((data ?? []).map((r: any) => r.role));
+          setRoles((data ?? []).map((r: { role: string }) => r.role));
         }
-      } catch (e: any) {
-        setError(e?.message ?? String(e));
+      } catch (e: unknown) {
+        setError(e instanceof Error ? e.message : String(e));
       } finally {
         if (active) setLoading(false);
       }
@@ -101,7 +101,7 @@ function AdminDebugPage() {
 
                   <pre className="mt-2 rounded bg-[#0f1720] p-3 text-xs overflow-x-auto">
 {`-- اعثر على المستخدم
-SELECT id, email FROM auth.users WHERE email = 'elmadnim@gmail.com';
+SELECT id, email FROM auth.users WHERE email = '<admin-email>';
 
 -- أضف دور admin (استبدل <user_id>)
 INSERT INTO user_roles (user_id, role) VALUES ('<user_id>', 'admin');`}

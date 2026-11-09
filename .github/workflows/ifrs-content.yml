@@ -1,21 +1,35 @@
-name: IFRS content validation
+name: Accounting content and build validation
 
 on:
   pull_request:
     paths:
-      - "src/data/ifrs-*"
-      - "src/components/library/Ifrs*"
-      - "src/routes/library.standards*"
+      - "src/**"
+      - "scripts/**"
       - "docs/ifrs-book2-audit-progress.md"
-      - "scripts/check-ifrs-*"
       - "package.json"
       - "package-lock.json"
+      - "vite.config.ts"
+      - "tsconfig.json"
       - ".github/workflows/ifrs-content.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "vite.config.ts"
+      - "tsconfig.json"
+      - ".github/workflows/ifrs-content.yml"
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     env:
       NODE_OPTIONS: --max-old-space-size=4096
     steps:
@@ -24,7 +38,18 @@ jobs:
         with:
           node-version: "24"
           cache: npm
-      - run: npm ci
-      - run: npm run ifrs:check-content
-      - run: npx tsc --noEmit
-      - run: npm run build
+      - name: Clean npm install from committed lockfile
+        run: npm ci --no-audit --no-fund
+      - name: IFRS content integrity
+        run: npm run ifrs:check-content
+      - name: CMA content integrity
+        run: npm run cma:check-content
+      - name: TypeScript type checking
+        run: npx tsc --noEmit
+      - name: Production build
+        run: npm run build
+      # Pre-existing repository-wide formatting debt is tracked separately. Keep
+      # all non-format ESLint rules blocking while avoiding a mass reformat diff.
+      - name: ESLint code-quality rules
+        run: |
+          npx eslint . --rule 'prettier/prettier: off'
