@@ -28,5 +28,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "chore(router): regenerate route manifest for CMA translation endpoint"
+            git fetch origin feat/cma-translation-cache-and-part2-prep
+            git rebase origin/feat/cma-translation-cache-and-part2-prep
             git push origin HEAD:feat/cma-translation-cache-and-part2-prep
           fi
