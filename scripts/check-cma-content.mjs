@@ -37,7 +37,7 @@ function readDataFile(name) {
 function check(condition, message) {
   if (!condition) throw new Error(message);
 }
-const { CMA_TOPICS } = readDataFile("cma-topics");
+const { CMA_TOPICS, CMA_DOMAINS } = readDataFile("cma-topics");
 const { CMA_TOPIC_GUIDES, CMA_STUDY_UNIT_CASES } = readDataFile("cma-guides");
 const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
 const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
