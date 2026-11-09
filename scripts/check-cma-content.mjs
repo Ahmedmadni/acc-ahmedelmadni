@@ -47,6 +47,7 @@ const { CMA_PART2_PRACTICE_1_7 } = readDataFile("cma-part2-practice-1-7");
 const { CMA_PART2_DEEP_DIVE_1_7 } = readDataFile("cma-part2-deep-dive-1-7");
 const { CMA_PART2_QUESTIONS_8_15 } = readDataFile("cma-part2-questions-8-15");
 const { CMA_PART2_PRACTICE_8_15 } = readDataFile("cma-part2-practice-8-15");
+const { CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS } = readDataFile("cma-part2-2019-outline-original");
 const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
   (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
 ).concat(readDataFile("cma-questions-units-15-20").CMA_QUESTIONS_UNITS_15_20);
@@ -57,13 +58,35 @@ const questionTexts = new Set();
 check(CMA_TOPICS.length === 136 && ids.size === 136, "Expected 80 Part 1 and 56 Part 2 unique sections");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 3303, "Expected 860 original plus 2,443 source questions");
+check(CMA_LOCAL_QUESTIONS.length === 3347, "Expected 860 bilingual originals + 44 new English originals + 2,443 source questions");
+check(CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS.length === 44, "Expected 44 original questions from the 11 study-unit concepts");
 check(newOutlineQuestions.length === 216, "Expected 216 original SU 7–20 example questions");
 check(CMA_PART2_QUESTIONS_1_7.length === 104, "Expected four original Part 2 questions in each of 26 sections");
 check(CMA_PART2_PRACTICE_1_7.length === 52, "Expected two advanced questions in each Part 2 section");
 check(CMA_PART2_QUESTIONS_8_15.length === 120, "Expected four original questions in each of 30 new sections");
 check(CMA_PART2_PRACTICE_8_15.length === 60, "Expected two further questions in each of 30 new sections");
 check(Object.keys(CMA_PART2_DEEP_DIVE_1_7).length === 26, "Expected one deep dive for every Part 2 section");
+const original2019Ids = new Set();
+const original2019Stems = new Set();
+const original2019Units = new Set();
+for (const q of CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS) {
+  const correspondingTopic = CMA_TOPICS.find((topic) => topic.id === q.topicId);
+  check(correspondingTopic?.part === "part-2", `Original 2019 concept is not mapped to Part 2: ${q.id}`);
+  check(q.studyUnit === correspondingTopic.studyUnit, `Original 2019 topic/unit mismatch: ${q.id}`);
+  check(q.sourceLanguage === "en" && q.question.en === q.question.ar, `Not English-first: ${q.id}`);
+  check(q.choices.en.length === 4 && q.choices.ar.join("|") === q.choices.en.join("|"), `Original choices incorrectly translated: ${q.id}`);
+  check(q.explanation.ar === q.explanation.en && q.explanation.en.length > 20, `Not source-first English explanation: ${q.id}`);
+  check(q.answerIndex >= 0 && q.answerIndex <= 3, `Invalid answer for ${q.id}`);
+  check(q.reference.includes("not a Gleim question"), `Original practice attribution missing: ${q.id}`);
+  check(!original2019Ids.has(q.id), `Duplicate original question id: ${q.id}`);
+  const fingerprint = q.question.en.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  check(!original2019Stems.has(fingerprint), `Duplicate original question stem: ${q.id}`);
+  original2019Ids.add(q.id);
+  original2019Stems.add(fingerprint);
+  original2019Units.add(q.reference.match(/SU (\d+)/)?.[1]);
+}
+check(original2019Units.size === 11, "Expected coverage of all 11 concepts in PDF outline");
+
 const bookCounts = [
   [10, 29, 33, 46, 69, 30],
   [20, 18, 37, 32],
@@ -632,5 +655,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 2,443 English source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 44 English original Part 2 + 2,443 English Part 1 source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );
