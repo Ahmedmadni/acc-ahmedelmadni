@@ -24,6 +24,7 @@ import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as AuthenticatedCrmRouteImport } from './routes/_authenticated/crm'
 import { Route as AuthenticatedDeclarationsRouteImport } from './routes/_authenticated/declarations'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as ApiCmaTranslateRouteImport } from './routes/api/cma-translate'
 import { Route as ApiCvEnhanceRouteImport } from './routes/api/cv-enhance'
 import { Route as ApiCvTranslateRouteImport } from './routes/api/cv-translate'
 import { Route as ApiOfficeAiRouteImport } from './routes/api/office-ai'
@@ -122,6 +123,11 @@ const AuthenticatedDeclarationsRoute =
 const ApiChatRoute = ApiChatRouteImport.update({
   id: '/api/chat',
   path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCmaTranslateRoute = ApiCmaTranslateRouteImport.update({
+  id: '/api/cma-translate',
+  path: '/api/cma-translate',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiCvEnhanceRoute = ApiCvEnhanceRouteImport.update({
@@ -268,6 +274,7 @@ export interface FileRoutesByFullPath {
   '/crm': typeof AuthenticatedCrmRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
+  '/api/cma-translate': typeof ApiCmaTranslateRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
@@ -307,6 +314,7 @@ export interface FileRoutesByTo {
   '/crm': typeof AuthenticatedCrmRoute
   '/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
+  '/api/cma-translate': typeof ApiCmaTranslateRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
@@ -349,6 +357,7 @@ export interface FileRoutesById {
   '/_authenticated/crm': typeof AuthenticatedCrmRoute
   '/_authenticated/declarations': typeof AuthenticatedDeclarationsRoute
   '/api/chat': typeof ApiChatRoute
+  '/api/cma-translate': typeof ApiCmaTranslateRoute
   '/api/cv-enhance': typeof ApiCvEnhanceRoute
   '/api/cv-translate': typeof ApiCvTranslateRoute
   '/api/office-ai': typeof ApiOfficeAiRoute
@@ -391,6 +400,7 @@ export interface FileRouteTypes {
     | '/crm'
     | '/declarations'
     | '/api/chat'
+    | '/api/cma-translate'
     | '/api/cv-enhance'
     | '/api/cv-translate'
     | '/api/office-ai'
@@ -430,6 +440,7 @@ export interface FileRouteTypes {
     | '/crm'
     | '/declarations'
     | '/api/chat'
+    | '/api/cma-translate'
     | '/api/cv-enhance'
     | '/api/cv-translate'
     | '/api/office-ai'
@@ -471,6 +482,7 @@ export interface FileRouteTypes {
     | '/_authenticated/crm'
     | '/_authenticated/declarations'
     | '/api/chat'
+    | '/api/cma-translate'
     | '/api/cv-enhance'
     | '/api/cv-translate'
     | '/api/office-ai'
@@ -511,6 +523,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SkillsRoute: typeof SkillsRoute
   ApiChatRoute: typeof ApiChatRoute
+  ApiCmaTranslateRoute: typeof ApiCmaTranslateRoute
   ApiCvEnhanceRoute: typeof ApiCvEnhanceRoute
   ApiCvTranslateRoute: typeof ApiCvTranslateRoute
   ApiOfficeAiRoute: typeof ApiOfficeAiRoute
@@ -629,6 +642,13 @@ declare module '@tanstack/react-router' {
       path: '/api/chat'
       fullPath: '/api/chat'
       preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/cma-translate': {
+      id: '/api/cma-translate'
+      path: '/api/cma-translate'
+      fullPath: '/api/cma-translate'
+      preLoaderRoute: typeof ApiCmaTranslateRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/cv-enhance': {
@@ -864,6 +884,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SkillsRoute: SkillsRoute,
   ApiChatRoute: ApiChatRoute,
+  ApiCmaTranslateRoute: ApiCmaTranslateRoute,
   ApiCvEnhanceRoute: ApiCvEnhanceRoute,
   ApiCvTranslateRoute: ApiCvTranslateRoute,
   ApiOfficeAiRoute: ApiOfficeAiRoute,
