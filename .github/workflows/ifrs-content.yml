@@ -44,6 +44,8 @@ jobs:
         run: npm run ifrs:check-content
       - name: CMA content integrity
         run: npm run cma:check-content
+      - name: CMA translation validation
+        run: node --test scripts/tests/cma-translation.test.mjs
       - name: TypeScript type checking
         run: npx tsc --noEmit
       - name: Production build
