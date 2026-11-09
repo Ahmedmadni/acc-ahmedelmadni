@@ -492,7 +492,7 @@ function CmaPage() {
             </h4>
             <div className="mt-4 space-y-4">
               {questions.slice(0, visibleQuestions).map((q, index) => (
-                <CmaTranslatedQuestion key={q.id} question={q} lang={lang}>
+                <CmaTranslatedQuestion key={q.id} question={q} lang={lang} revealExplanation={answers[q.id] !== undefined}>
                   {(view) => (
                     <article className="rounded-2xl border border-[#A88765]/25 bg-white p-5">
                   <div className="flex items-center justify-between gap-3">
