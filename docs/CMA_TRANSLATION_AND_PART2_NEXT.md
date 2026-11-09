@@ -9,8 +9,8 @@
 - New generation requires login, usage quotas and the server-side Lovable AI gateway. Cache reads are public.
 
 ## Production activation checklist
-1. Merge the dependency/build fix [PR #296](https://github.com/Ahmedmadni/acc-ahmedelmadni/pull/296) before merging this stacked feature.
-2. Apply `supabase/migrations/20261109103000_cma_translation_cache.sql` to the production Supabase project.
+1. **Completed 9 Nov 2026:** dependency/build fix [PR #296](https://github.com/Ahmedmadni/acc-ahmedelmadni/pull/296) was merged into `main`; [PR #297](https://github.com/Ahmedmadni/acc-ahmedelmadni/pull/297) now directly targets `main`.
+2. **Before enabling new translations**, apply `supabase/migrations/20261109103000_cma_translation_cache.sql` to the production Supabase project.
 3. In the secure **server-side** deployment secrets, configure `SUPABASE_SERVICE_ROLE_KEY` (or supported `SUPABASE_SECRET_KEY`). **Never place a service secret in the repo, `.env` commit or a `VITE_` variable.**
 4. Confirm existing server-side `LOVABLE_API_KEY` and public `SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`.
 5. Smoke-test: logged-out learner reads English, a signed-in learner translates one uncached item, a second learner reuses the cached translation, toggling English restores original options, the answer key and score remain identical, invalid/expired sessions cannot trigger a paid translation.
