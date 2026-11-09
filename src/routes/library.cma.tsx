@@ -120,7 +120,7 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي أسئلة الجزء الأول 2025 بالإنجليزية. ترجمة أسئلة الكتاب ومراجعة الجداول قيد العمل.`
+              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من كتابي أسئلة الجزء الأول 2025 بالإنجليزية. ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
               : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, and 2,443 English questions from the Part 1 2025 banks. Arabic source-bank translation and table review remain in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
