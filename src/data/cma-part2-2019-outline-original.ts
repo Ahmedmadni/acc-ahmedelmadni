@@ -139,7 +139,7 @@ const specs: Spec[] = [
   [7, 158, "p2-su2-profitability",
     "A company has a 12% net profit margin, total asset turnover of 2.0, and an equity multiplier of 1.5. Under the DuPont identity, what is ROE?",
     ["36%", "16%", "24%", "30%"],
-    0, "DuPont ROE = 12% × 2.0 × 1.5 = 36%."],
+    0, "DuPont ROE multiplies net profit margin, asset turnover and the equity multiplier: 12% × 2.0 × 1.5 = 36%."],
   [7, 161, "p2-su2-reported-profit",
     "A company reports strong net income partly because it sold land at a large one-time gain. What is the best initial adjustment when evaluating recurring profitability?",
     ["Treat the gain as recurring cash from customers", "Exclude all depreciation from future profits", "Separate the nonrecurring gain from core operating results", "Replace the gain with forecasted land sales"],
