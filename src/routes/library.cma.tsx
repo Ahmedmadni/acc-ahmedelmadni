@@ -11,6 +11,7 @@ import {
   XCircle,
 } from "lucide-react";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
+import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import {
   CMA_DOMAINS,
@@ -491,14 +492,17 @@ function CmaPage() {
             </h4>
             <div className="mt-4 space-y-4">
               {questions.slice(0, visibleQuestions).map((q, index) => (
-                <article key={q.id} className="rounded-2xl border border-[#A88765]/25 bg-white p-5">
+                <CmaTranslatedQuestion key={q.id} question={q} lang={lang}>
+                  {(view) => (
+                    <article className="rounded-2xl border border-[#A88765]/25 bg-white p-5">
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-xs font-bold text-[#76543F]">
                       {lang === "ar" ? `السؤال ${index + 1}` : `Question ${index + 1}`}
                     </span>
                     <span className="text-xs text-[#82766B]">{q.difficulty}</span>
                   </div>
-                  {q.sourceLanguage === "en" && lang === "ar" && (
+                  {view.control}
+                  {q.sourceLanguage === "en" && lang === "ar" && !view.translated && (
                     <p className="mt-2 text-xs leading-6 text-[#76543F]">
                       السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
                     </p>
@@ -518,13 +522,13 @@ function CmaPage() {
                     </p>
                   )}
                   <p
-                    dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
+                    dir={view.direction}
                     className="mt-3 whitespace-pre-wrap text-sm font-bold leading-7"
                   >
-                    {q.question[lang]}
+                    {view.question}
                   </p>
                   <div className="mt-4 grid gap-2 sm:grid-cols-2">
-                    {q.choices[lang].map((choice, choiceIndex) => {
+                    {view.choices.map((choice, choiceIndex) => {
                       const revealed = answers[q.id] !== undefined;
                       const correct = revealed && choiceIndex === q.answerIndex;
                       const wrong = revealed && choiceIndex === answers[q.id] && !correct;
@@ -539,7 +543,7 @@ function CmaPage() {
                           className={`min-h-11 rounded-xl border px-4 py-3 text-start text-sm leading-6 transition focus-visible:outline-2 focus-visible:outline-[#A88765] ${correct ? "border-emerald-600 bg-emerald-50 text-emerald-900" : wrong ? "border-red-500 bg-red-50 text-red-900" : "border-[#A88765]/25 hover:border-[#A88765] disabled:opacity-70"}`}
                         >
                           <span
-                            dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
+                            dir={view.direction}
                             className="whitespace-pre-wrap"
                           >
                             {choice}
@@ -568,10 +572,10 @@ function CmaPage() {
                             : "Incorrect"}
                       </span>
                       <p
-                        dir={q.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl"}
+                        dir={view.direction}
                         className="mt-2 whitespace-pre-wrap"
                       >
-                        {q.explanation[lang]}
+                        {view.explanation}
                       </p>
                       {q.answerStatus === "inferred" && (
                         <p className="mt-2 text-xs text-[#76543F]">
@@ -596,6 +600,8 @@ function CmaPage() {
                     </div>
                   )}
                 </article>
+                  )}
+                </CmaTranslatedQuestion>
               ))}
             </div>
             {visibleQuestions < questions.length && (
