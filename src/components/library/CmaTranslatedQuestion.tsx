@@ -66,7 +66,8 @@ export function useCmaTranslation(question: ExamQuestion | null) {
   const [showOriginal, setShowOriginal] = useState(false);
 
   useEffect(() => {
-    setEntry(question ? (getLocal(question) ? { id, value: getLocal(question)! } : null) : null);
+    const cached = question ? getLocal(question) : null;
+    setEntry(cached ? { id, value: cached } : null);
     setError(null);
     setLoading(false);
     setShowOriginal(false);
@@ -146,14 +147,16 @@ function resultMessage(status: number) {
 export function CmaTranslatedQuestion({
   question,
   lang,
+  tone = "light",
   children,
 }: {
   question: ExamQuestion;
   lang: Language;
+  tone?: "light" | "dark";
   children: (view: View) => ReactNode;
 }) {
   const state = useCmaTranslation(question);
-  const eligible = question.sourceLanguage === "en" && lang === "ar";
+  const eligible = question.track === "CMA" && question.id.startsWith("cma-gleim-2025-") && question.sourceLanguage === "en" && lang === "ar";
   const translated = Boolean(eligible && state.translation && !state.showOriginal);
   const source = translated ? state.translation : null;
   const view: View = {
@@ -168,7 +171,7 @@ export function CmaTranslatedQuestion({
           type="button"
           onClick={() => void state.requestTranslation()}
           disabled={state.loading}
-          className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#A88765]/40 px-3 py-1.5 font-semibold text-[#A88765] disabled:opacity-60"
+          className={`inline-flex min-h-9 items-center gap-2 rounded-lg border px-3 py-1.5 font-semibold disabled:opacity-60 ${tone === "dark" ? "border-[#f3d28a]/40 text-[#f3d28a]" : "border-[#A88765]/40 text-[#76543F]"}`}
         >
           {state.loading ? <Loader2 className="size-4 animate-spin" /> : <Languages className="size-4" />}
           {state.loading ? "جار الترجمة..." :
@@ -176,11 +179,11 @@ export function CmaTranslatedQuestion({
             "ترجمة إلى العربية"}
         </button>
         {translated && (
-          <span className="text-amber-700">
+          <span className={tone === "dark" ? "text-amber-200" : "text-amber-800"}>
             {state.translation?.status === "reviewed" ? "ترجمة تمت مراجعتها" : "ترجمة آلية للمساعدة على الدراسة · غير معتمدة علميًا"}
           </span>
         )}
-        {state.error && <span role="alert" className="text-red-600">{state.error}</span>}
+        {state.error && <span role="alert" className={tone === "dark" ? "text-red-200" : "text-red-700"}>{state.error}</span>}
       </div>
     ) : null,
   };
