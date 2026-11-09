@@ -37,7 +37,7 @@ function readDataFile(name) {
 function check(condition, message) {
   if (!condition) throw new Error(message);
 }
-const { CMA_TOPICS } = readDataFile("cma-topics");
+const { CMA_TOPICS, CMA_DOMAINS } = readDataFile("cma-topics");
 const { CMA_TOPIC_GUIDES, CMA_STUDY_UNIT_CASES } = readDataFile("cma-guides");
 const { CMA_LOCAL_QUESTIONS } = readDataFile("cma-question-bank");
 const { CMA_GLEIM_2025_VOL1_QUESTIONS } = readDataFile("cma-questions-gleim-2025-vol1");
@@ -48,6 +48,9 @@ const { CMA_PART2_DEEP_DIVE_1_7 } = readDataFile("cma-part2-deep-dive-1-7");
 const { CMA_PART2_QUESTIONS_8_15 } = readDataFile("cma-part2-questions-8-15");
 const { CMA_PART2_PRACTICE_8_15 } = readDataFile("cma-part2-practice-8-15");
 const { CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS } = readDataFile("cma-part2-2019-outline-original");
+const { CMA_PART2_2026_INDEPENDENT_QUESTIONS } = readDataFile("cma-part2-2026-independent-practice");
+const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
+
 const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
   (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
 ).concat(readDataFile("cma-questions-units-15-20").CMA_QUESTIONS_UNITS_15_20);
@@ -58,7 +61,8 @@ const questionTexts = new Set();
 check(CMA_TOPICS.length === 136 && ids.size === 136, "Expected 80 Part 1 and 56 Part 2 unique sections");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 3347, "Expected 860 bilingual originals + 44 new English originals + 2,443 source questions");
+check(CMA_LOCAL_QUESTIONS.length === 3383, "Expected 860 bilingual originals + 44 concept originals + 36 2026 English originals + 2,443 source questions");
+check(CMA_PART2_2026_INDEPENDENT_QUESTIONS.length === 36, "Expected 36 independent CMA Part 2 questions");
 check(CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS.length === 44, "Expected 44 original questions from the 11 study-unit concepts");
 check(newOutlineQuestions.length === 216, "Expected 216 original SU 7–20 example questions");
 check(CMA_PART2_QUESTIONS_1_7.length === 104, "Expected four original Part 2 questions in each of 26 sections");
@@ -118,6 +122,63 @@ for (const [suffix, expected] of independentlyVerifiedOriginalAnswers) {
   check(question?.choices.en[question.answerIndex] === expected, `Recheck original MCQ calculation/answer: ${suffix}`);
 }
 console.log(`Validated 44 original English-first Part 2 questions from 11 outline units, with 25 reviewed quantitative keys and balanced answers`);
+
+const original2026Ids = new Set();
+const priorEnglish = new Set(
+  CMA_LOCAL_QUESTIONS.filter((q) => !q.id.startsWith("cma-p2-2026-independent-"))
+    .map((q) => q.question.en.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()),
+);
+const domainWeights = new Map(CMA_DOMAINS.filter((d) => d.part === "part-2").map((d) => [d.id, d.weight]));
+const domainCounts = new Map();
+const answerCounts = [0, 0, 0, 0];
+for (const q of CMA_PART2_2026_INDEPENDENT_QUESTIONS) {
+  const topic = CMA_TOPICS.find((t) => t.id === q.topicId);
+  check(topic?.part === "part-2", `Unmapped independent Part 2 question: ${q.id}`);
+  check(q.studyUnit === topic.studyUnit && topic.domain, `Invalid Part 2 category: ${q.id}`);
+  check(q.sourceLanguage === "en" && q.question.ar === q.question.en, `Not English-first: ${q.id}`);
+  check(q.choices.en.length === 4 && new Set(q.choices.en).size === 4 &&
+    q.choices.en.join("|") === q.choices.ar.join("|"), `Invalid original answers: ${q.id}`);
+  check(q.explanation.ar === q.explanation.en &&
+    q.explanation.en.length >= 25, `Missing original English explanation: ${q.id}`);
+  check(!original2026Ids.has(q.id), `Duplicate original ID: ${q.id}`);
+  const fingerprint = q.question.en.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  check(!priorEnglish.has(fingerprint), `Duplicate original stem: ${q.id}`);
+  priorEnglish.add(fingerprint);
+  original2026Ids.add(q.id);
+  answerCounts[q.answerIndex]++;
+  domainCounts.set(topic.domain, (domainCounts.get(topic.domain) ?? 0) + 1);
+}
+check(answerCounts.every((count) => count === 9), "2026 original answer positions must be balanced (9 per choice)");
+const expectedCounts = {
+  "financial-statement-analysis": 7, "corporate-finance": 7, "decision-analysis": 9,
+  "risk-mgmt": 4, "investment-decisions": 4, "professional-ethics": 5,
+};
+for (const [domain, expected] of Object.entries(expectedCounts)) {
+  check(domainWeights.has(domain), `Missing IMA Part 2 domain: ${domain}`);
+  check(domainCounts.get(domain) === expected, `Unbalanced original question coverage in ${domain}`);
+}
+const numericallyReviewedAnswers = [
+  "14%", "2.00", "6 times", "1.33", "32.0%", "3.00", "6 times",
+  "11.2%", "1.15", "10.66%", "50.00", "1,000", "103,000", "1 million",
+  "5,000", "6,000", "3,000", null, "6,000", "9", "Increases it by 15,000",
+  "Decrease by 40,000", "175", "80,000", null, null, "7,000",
+  "Positive 1,488", "2.5 years", "155,000", null, null, null, null, null, null,
+];
+check(numericallyReviewedAnswers.length === 36, "Numerical answer-audit length");
+for (const [index, expected] of numericallyReviewedAnswers.entries()) {
+  if (expected === null) continue;
+  const q = CMA_PART2_2026_INDEPENDENT_QUESTIONS[index];
+  check(q.choices.en[q.answerIndex] === expected,
+    `Original CMA calculation key did not match independent review: ${q.id}`);
+}
+check(CMA_PART2_PRACTICE_SOURCES.length === 4, "Expected four curated external practice resources");
+for (const resource of CMA_PART2_PRACTICE_SOURCES) {
+  const url = new URL(resource.url);
+  check(url.protocol === "https:" && resource.rightsAr && resource.rightsEn,
+    `Invalid or unlicensed source link metadata: ${resource.id}`);
+}
+console.log("Verified 36 English-first original Part 2 MCQs, six weighted domains, non-duplicate stems, 9/9/9/9 answers, 4 link-only sources");
+
 
 
 const bookCounts = [
@@ -690,5 +751,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 44 English original Part 2 + 2,443 English Part 1 source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 80 English original Part 2 + 2,443 English Part 1 source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );
