@@ -516,7 +516,9 @@ function CmaPage() {
                   {view.control}
                   {q.sourceLanguage === "en" && lang === "ar" && !view.translated && (
                     <p className="mt-2 text-xs leading-6 text-[#76543F]">
-                      السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة.
+                      {q.id.startsWith("cma-p2-2019-concept-")
+                        ? "سؤال تدريبي أصلي بالإنجليزية مستند إلى مفاهيم مذكرة 2019، وليس من أسئلة Gleim. العربية متاحة عبر الترجمة."
+                        : "السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة."}
                     </p>
                   )}
                   {q.sourcePage !== undefined && (
