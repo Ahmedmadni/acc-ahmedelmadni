@@ -76,7 +76,7 @@ if (!batch.source || !String(batch.source.title ?? "").trim() ||
 if (!Array.isArray(batch.questions) || !batch.questions.length) {
   errors.push("Missing nonempty questions array");
 }
-for (const [index, q] of (batch.questions ?? []).entries()) {
+for (const [index, q] of (Array.isArray(batch.questions) ? batch.questions : []).entries()) {
   const tag = `question #${index + 1} (${q.sourceId ?? "no source ID"})`;
   if (!q.sourceId || typeof q.sourceId !== "string") errors.push(`${tag}: missing source ID`);
   if (!unitId(q.studyUnit)) errors.push(`${tag}: invalid Part 2 unit`);
