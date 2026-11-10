@@ -130,6 +130,7 @@ export const CMA_ICMA_2024_PART2_QUESTIONS: CmaLocalQuestion[] =
       sourceLanguage: "en",
       sourcePage: raw.pdfPage,
       sourceLayoutReview: raw.layoutCheckRecommended,
+      sourceOptionDuplicate: new Set(raw.choices).size !== 4,
       answerStatus: "source",
     };
   });
