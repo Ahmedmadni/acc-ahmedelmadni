@@ -13,7 +13,7 @@ import {
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
-import { CmaPrivateBank } from "@/components/library/CmaPrivateBank";
+import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import {
   CMA_DOMAINS,
@@ -359,7 +359,7 @@ function CmaPage() {
           </section>
         )}
 
-        {part === "part-2" && <CmaPrivateBank lang={lang} />}
+        {part === "part-2" && <CmaPart2OnlineBank lang={lang} />}
 
         <section className="mt-7" aria-label={lang === "ar" ? "موضوعات CMA" : "CMA topics"}>
           <p className="mb-4 text-xs font-semibold text-[#AFA69D]">
