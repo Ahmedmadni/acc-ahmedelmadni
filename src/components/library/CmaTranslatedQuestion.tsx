@@ -52,7 +52,7 @@ function saveLocal(question: ExamQuestion, translation: CmaTranslation): void {
 }
 
 /** Client-side translation; no Supabase, Lovable AI gateway, or paid server call. */
-function useCmaTranslation(question: ExamQuestion, eligible: boolean) {
+function useCmaTranslation(question: ExamQuestion, eligible: boolean, cacheLocally: boolean) {
   const id = question.id;
   const sourceHash = cmaSourceHash(question);
   const activeId = useRef(id);
@@ -66,13 +66,13 @@ function useCmaTranslation(question: ExamQuestion, eligible: boolean) {
   const [showOriginal, setShowOriginal] = useState(false);
 
   useEffect(() => {
-    const saved = getLocal(question);
+    const saved = cacheLocally ? getLocal(question) : null;
     setEntry(saved ? { id, value: saved } : null);
     setLoading(false);
     setProgress("");
     setError(null);
     setShowOriginal(false);
-  }, [id, sourceHash]);
+  }, [id, sourceHash, cacheLocally]);
 
   useEffect(() => {
     if (!eligible) return;
@@ -117,7 +117,7 @@ function useCmaTranslation(question: ExamQuestion, eligible: boolean) {
         if (activeId.current === id) setProgress(message);
       });
       if (activeId.current === id) {
-        saveLocal(question, result);
+        if (cacheLocally) saveLocal(question, result);
         setEntry({ id, value: result });
         setShowOriginal(false);
       }
@@ -149,12 +149,18 @@ export function CmaTranslatedQuestion({
   lang,
   tone = "light",
   revealExplanation = false,
+  allowExternalTranslation = true,
+  cacheLocally = true,
   children,
 }: {
   question: ExamQuestion;
   lang: Language;
   tone?: "light" | "dark";
   revealExplanation?: boolean;
+  /** False for protected private banks: do not disclose content to Google. */
+  allowExternalTranslation?: boolean;
+  /** False keeps protected text and translations in volatile memory only. */
+  cacheLocally?: boolean;
   children: (view: View) => ReactNode;
 }) {
   const eligible =
@@ -162,11 +168,11 @@ export function CmaTranslatedQuestion({
     question.sourceLanguage === "en" &&
     lang === "ar";
 
-  const state = useCmaTranslation(question, eligible);
+  const state = useCmaTranslation(question, eligible, cacheLocally);
   const [copyNotice, setCopyNotice] = useState("");
   const translated = Boolean(eligible && state.translation && !state.showOriginal);
   const source = translated ? state.translation : null;
-  const external = getCmaExternalTranslation(question, revealExplanation);
+  const external = allowExternalTranslation ? getCmaExternalTranslation(question, revealExplanation) : null;
   const supportsDevice =
     state.availability === "available" ||
     state.availability === "downloadable" ||
@@ -175,6 +181,7 @@ export function CmaTranslatedQuestion({
 
   async function copyForExternalTranslation() {
     try {
+      if (!external) return;
       await navigator.clipboard.writeText(external.copyText);
       setCopyNotice("تم نسخ النص. الصقه في صفحة الترجمة الخارجية.");
     } catch {
@@ -216,11 +223,11 @@ export function CmaTranslatedQuestion({
           <span className={dark ? "text-amber-200" : "text-amber-800"}>
             {state.translation?.status === "reviewed"
               ? "ترجمة تمت مراجعتها"
-              : "ترجمة آلية محفوظة على جهازك · غير معتمدة محاسبيًا"}
+              : cacheLocally ? "ترجمة آلية محفوظة على جهازك · غير معتمدة محاسبيًا" : "ترجمة آلية مؤقتة على جهازك · غير معتمدة محاسبيًا"}
           </span>
         )}
 
-        {!state.translation && !state.loading && (
+        {!state.translation && !state.loading && external && (
           <a
             href={external.url}
             target="_blank"
@@ -233,7 +240,7 @@ export function CmaTranslatedQuestion({
           </a>
         )}
 
-        {!state.translation && external.needsPaste && (
+        {!state.translation && external?.needsPaste && (
           <button
             type="button"
             onClick={() => void copyForExternalTranslation()}
@@ -245,7 +252,9 @@ export function CmaTranslatedQuestion({
 
         {!state.translation && (
           <span className={dark ? "text-[#d6c9b6]" : "text-[#776c60]"}>
-            الرابط الخارجي يرسل النص لخدمة مستقلة عند فتحه، دون استخدام رصيد Lovable.
+            {allowExternalTranslation
+              ? "الرابط الخارجي يرسل النص لخدمة مستقلة عند فتحه، دون استخدام رصيد Lovable."
+              : "هذا المصدر خاص: الترجمة على الجهاز فقط، دون مشاركة النص مع أي خدمة خارجية."}
           </span>
         )}
         {copyNotice && <span role="status">{copyNotice}</span>}
