@@ -13,12 +13,14 @@ const bank = CMA_LOCAL_QUESTIONS.filter((question) => {
   return typeof topicId === "string" && topicById.has(topicId);
 });
 const domains = CMA_DOMAINS.filter((item) => item.part === "part-2");
+const icmaCount = bank.filter((question) => question.id.startsWith("IMA2024-P2-")).length;
+const independentlyAuthoredCount = bank.length - icmaCount;
 const PAGE_SIZE = 12;
 
 /**
- * All independently authored CMA Part 2 questions are bundled with the website.
+ * Independently authored practice and attributed ICMA 2024 retired questions are bundled with the site.
  * No local JSON file, account, database, uploads or server AI calls are required.
- * No copyright-restricted ICMA 2024 question text is published here.
+ * The site owner confirms that republication permission for ICMA question text was obtained.
  */
 export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
@@ -69,8 +71,8 @@ export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
           </p>
           <p className="mt-1 text-xs leading-6 text-[#76543F]">
             {lang === "ar"
-              ? "أسئلة تدريبية أصلية مستقلة، وليست الأسئلة الـ369 المحمية من حزمة ICMA 2024."
-              : "These are independently authored practice questions, not the 369 copyright-restricted ICMA 2024 questions."}
+              ? `${independentlyAuthoredCount} سؤالًا تدريبيًا أصليًا + ${icmaCount} سؤالًا رسميًا سابقًا من حزمة ICMA 2024. حقوق النشر محفوظة لـ ICMA؛ أكد مالك الموقع حصوله على إذن إعادة النشر. هذه منصة مستقلة.`
+              : `${independentlyAuthoredCount} independently authored practice questions + ${icmaCount} ICMA © 2024 official retired questions (the site owner confirms republication permission). This is an independent study website.`}
           </p>
         </div>
         <div className="rounded-xl bg-[#1C1B19] px-4 py-3 text-center text-[#F5F1EB]">
@@ -152,6 +154,19 @@ export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
                       {view.question}
                     </p>
                     {view.control}
+                    {question.id.startsWith("IMA2024-P2-") && (
+                      <p className="mt-2 text-xs leading-6 text-[#76543F]">
+                        {lang === "ar" ? "المصدر: ICMA 2024، أسئلة CMA الرسمية السابقة" : "Source: ICMA © 2024, retired official CMA practice"}
+                        {question.sourcePage ? ` · PDF p. ${question.sourcePage}` : ""}
+                      </p>
+                    )}
+                    {question.sourceLayoutReview && (
+                      <p className="mt-2 rounded-xl border border-amber-500/40 bg-amber-50 p-3 text-xs leading-6 text-amber-900">
+                        {lang === "ar"
+                          ? "مهم: هذا السؤال يتضمن تنسيقًا أو جدولًا معقدًا؛ راجع ترتيب الأرقام والجدول مقابل PDF الأصلي قبل الاعتماد على الحل."
+                          : "Layout review: this item contains complex text or tables; verify figures against the source PDF before relying on the result."}
+                      </p>
+                    )}
                     <div className="mt-4 grid gap-2 sm:grid-cols-2">
                       {view.choices.map((choice, option) => {
                         const revealed = chosen !== undefined;
