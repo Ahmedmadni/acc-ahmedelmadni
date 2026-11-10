@@ -48,8 +48,8 @@ jobs:
         run: node --test scripts/tests/cma-translation.test.mjs
       - name: CMA browser-only translation and external fallback tests
         run: node --test scripts/tests/cma-translation-browser.test.mjs
-      - name: Private CMA source bank local-only regression tests
-        run: node --test scripts/tests/cma-private-bank.test.mjs
+      - name: CMA on-site Part 2 bank regression tests
+        run: node --test scripts/tests/cma-online-bank.test.mjs
       - name: Part 2 intake audit self-test
         run: node scripts/audit-cma-part2-intake.mjs --self-test
       - name: Production build (also regenerates TanStack routes)
