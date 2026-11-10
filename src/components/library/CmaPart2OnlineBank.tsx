@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { BookOpenText, CheckCircle2, Search, XCircle } from "lucide-react";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
-import { CMA_DOMAINS, CMA_TOPICS, type CmaDomain } from "@/data/cma-topics";
+import { CMA_DOMAINS, CMA_TOPICS, type CmaDomain, type CmaStudyUnit } from "@/data/cma-topics";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 
 type Language = "ar" | "en";
@@ -13,8 +13,6 @@ const bank = CMA_LOCAL_QUESTIONS.filter((question) => {
   return typeof topicId === "string" && topicById.has(topicId);
 });
 const domains = CMA_DOMAINS.filter((item) => item.part === "part-2");
-const icmaCount = bank.filter((question) => question.id.startsWith("IMA2024-P2-")).length;
-const independentlyAuthoredCount = bank.length - icmaCount;
 const PAGE_SIZE = 12;
 
 /**
@@ -22,20 +20,25 @@ const PAGE_SIZE = 12;
  * No local JSON file, account, database, uploads or server AI calls are required.
  * The site owner confirms that republication permission for ICMA question text was obtained.
  */
-export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
+export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyUnit: CmaStudyUnit }) {
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
   const [topicId, setTopicId] = useState("all");
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [answers, setAnswers] = useState<Record<string, number>>({});
+  const unitTopics = useMemo(() => part2Topics.filter((topic) => topic.studyUnit === studyUnit), [studyUnit]);
+  const unitBank = useMemo(() => bank.filter((question) => question.studyUnit === studyUnit), [studyUnit]);
+  const unitDomains = domains.filter((item) => unitTopics.some((topic) => topic.domain === item.id));
+  const unitIcmaCount = unitBank.filter((question) => question.id.startsWith("IMA2024-P2-")).length;
+  const unitOriginalCount = unitBank.length - unitIcmaCount;
 
   const availableTopics = useMemo(
-    () => part2Topics.filter((topic) => domain === "all" || topic.domain === domain),
-    [domain],
+    () => unitTopics.filter((topic) => domain === "all" || topic.domain === domain),
+    [domain, unitTopics],
   );
   const filtered = useMemo(() => {
     const term = query.trim().toLocaleLowerCase();
-    return bank.filter((question) => {
+    return unitBank.filter((question) => {
       const topic = topicById.get(question.topicId);
       return topic &&
         (domain === "all" || topic.domain === domain) &&
@@ -43,7 +46,7 @@ export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
         (!term || [question.question.en, question.question.ar, topic.titleEn, topic.titleAr]
           .some((value) => value.toLocaleLowerCase().includes(term)));
     });
-  }, [domain, topicId, query]);
+  }, [unitBank, domain, topicId, query]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const actualPage = Math.min(page, pageCount);
@@ -56,27 +59,27 @@ export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
     <section
       id="cma-part2-all-questions"
       className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-5 text-[#1C1B19] sm:p-7"
-      aria-label={lang === "ar" ? "بنك أسئلة CMA الجزء الثاني على الموقع" : "CMA Part 2 questions available on the website"}
+      aria-label={lang === "ar" ? "مراجعة أسئلة الوحدة المختارة" : "Selected study unit question review"}
     >
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <h3 className="flex items-center gap-2 font-display text-xl font-black sm:text-2xl">
             <BookOpenText className="size-5 text-[#76543F]" />
-            {lang === "ar" ? "كل أسئلة الجزء الثاني المتاحة على الموقع" : "All Part 2 questions — online"}
+            {lang === "ar" ? `مراجعة أسئلة الوحدة ${String(studyUnit).replace("p2-", "")}` : `Study Unit ${String(studyUnit).replace("p2-", "")} — question review`}
           </h3>
           <p className="mt-2 max-w-3xl text-sm leading-7 text-[#6B6259]">
             {lang === "ar"
-              ? "تصفح وحل الأسئلة الموجودة بالفعل على الموقع دون رفع ملفات أو تسجيل دخول أو قاعدة بيانات. اختر المجال أو الموضوع، واعرض الإجابة وتفسيرها بعد الاختيار."
-              : "Browse and answer every question already included on this website. No file upload, sign-in or database. Filter by domain or topic, then check the explanation after choosing."}
+              ? "بعد دراسة الشرح والأمثلة، تدرب على الأسئلة التابعة لهذه الوحدة فقط. يمكنك تضييق النتائج حسب المجال أو الموضوع، دون رفع ملفات أو استخدام قاعدة بيانات."
+              : "After the lesson and worked examples, review only this study unit’s questions. Filter by domain or topic without uploads, sign-in or a database."}
           </p>
           <p className="mt-1 text-xs leading-6 text-[#76543F]">
             {lang === "ar"
-              ? `${independentlyAuthoredCount} سؤالًا تدريبيًا أصليًا + ${icmaCount} سؤالًا رسميًا سابقًا من حزمة ICMA 2024. حقوق النشر محفوظة لـ ICMA؛ أكد مالك الموقع حصوله على إذن إعادة النشر. هذه منصة مستقلة.`
-              : `${independentlyAuthoredCount} independently authored practice questions + ${icmaCount} ICMA © 2024 official retired questions (the site owner confirms republication permission). This is an independent study website.`}
+              ? `${unitOriginalCount} سؤالًا تدريبيًا أصليًا + ${unitIcmaCount} سؤالًا من حزمة ICMA © 2024 للوحدة المختارة. حقوق المصدر محفوظة لـ ICMA؛ أكد مالك الموقع حصوله على إذن إعادة النشر. هذه منصة مستقلة.`
+              : `${unitOriginalCount} independent practice questions + ${unitIcmaCount} ICMA © 2024 retired questions for this unit (the owner confirms republication permission). This is an independent study site.`}
           </p>
         </div>
         <div className="rounded-xl bg-[#1C1B19] px-4 py-3 text-center text-[#F5F1EB]">
-          <strong className="block text-2xl tabular-nums">{bank.length}</strong>
+          <strong className="block text-2xl tabular-nums">{unitBank.length}</strong>
           <span className="text-xs">{lang === "ar" ? "سؤالًا منشورًا" : "published questions"}</span>
         </div>
       </div>
@@ -94,7 +97,7 @@ export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
             }}
           >
             <option value="all">{lang === "ar" ? "جميع المجالات" : "All domains"}</option>
-            {domains.map((item) => (
+            {unitDomains.map((item) => (
               <option key={item.id} value={item.id}>{item.code} · {item[lang]} ({item.weight}%)</option>
             ))}
           </select>
