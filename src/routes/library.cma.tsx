@@ -405,6 +405,14 @@ function CmaPage() {
           )}
         </section>
 
+        {filtered.length > 0 && !selected && (
+          <p className="mt-5 rounded-2xl border border-[#A88765]/25 bg-[#1C1B19] p-4 text-sm leading-7 text-[#d8c9b8]">
+            {lang === "ar"
+              ? "اختر موضوعًا من الوحدة لقراءة الشرح والأمثلة التطبيقية أولًا، ثم حل أسئلة الموضوع. وفي الجزء الثاني ستجد مراجعة أسئلة الوحدة كاملة بعد الدرس."
+              : "Choose a topic to read the explanation and worked examples first, then answer its questions. Part 2 also offers a full unit review after the lesson."}
+          </p>
+        )}
+
         {selected && (
           <section
             id="cma-study-guide"
@@ -761,8 +769,8 @@ function CmaPage() {
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-[#6B6259]">
                   {lang === "ar"
-                    ? "مصادر تمت مراجعة روابطها. يمكن فتحها في مواقع أصحابها؛ الأسئلة الموجودة في هذه الروابط ليست منسوخة داخل منصتنا."
-                    : "Curated external links. Questions remain on their publishers' sites and are not copied into this platform."}
+                    ? "روابط لمصادر إضافية خارج المنصة، وتظهر بعد الدروس والتدريبات حتى لا تقاطع تسلسل الشرح."
+                    : "Extra external resources, placed after the lessons and unit questions so they do not interrupt the learning sequence."}
                 </p>
               </div>
               <span className="rounded-full bg-[#A88765]/15 px-3 py-1 text-xs font-bold text-[#76543F]">
@@ -795,8 +803,8 @@ function CmaPage() {
             </div>
             <p className="mt-4 text-xs leading-6 text-[#6B6259]">
               {lang === "ar"
-                ? "الأسئلة التدريبية الجديدة داخل المنصة مؤلفة بصورة مستقلة ومصنفة وفق المجالات الستة وأوزانها الرسمية؛ وليست أسئلة امتحانات IMA الرسمية."
-                : "New internal practice questions are independently authored and classified by the six official domain weights; they are not official IMA exam items."}
+                ? "بنك المنصة يجمع أسئلة تدريبية من تأليف مستقل وأسئلة ICMA الرسمية السابقة لعام 2024 مع بيان المصدر. الروابط أعلاه لمصادر إضافية."
+                : "The site includes independently authored practice and credited retired ICMA 2024 questions. The links above provide additional external resources."}
             </p>
           </section>
         )}
