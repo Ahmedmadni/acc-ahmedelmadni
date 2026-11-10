@@ -160,6 +160,13 @@ export function CmaPart2OnlineBank({ lang }: { lang: Language }) {
                         {question.sourcePage ? ` · PDF p. ${question.sourcePage}` : ""}
                       </p>
                     )}
+                    {question.sourceOptionDuplicate && (
+                      <p className="mt-2 rounded-xl border border-amber-500/40 bg-amber-50 p-3 text-xs leading-6 text-amber-900">
+                        {lang === "ar"
+                          ? "ملاحظة من المصدر: يتكرر نص اختيارين في السؤال الأصلي المنشور بواسطة ICMA. أبقينا الاختيارات دون تعديل، وراجع الصفحة الأصلية إذا لزم."
+                          : "Source issue: two answer choices are identical in the original ICMA PDF. The text is preserved without alteration."}
+                      </p>
+                    )}
                     {question.sourceLayoutReview && (
                       <p className="mt-2 rounded-xl border border-amber-500/40 bg-amber-50 p-3 text-xs leading-6 text-amber-900">
                         {lang === "ar"
