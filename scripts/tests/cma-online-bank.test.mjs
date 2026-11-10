@@ -61,7 +61,7 @@ test("online bank filters per domain/topic and keeps answer keys sourced from th
   assert.match(component, /answers\[question\.id\]/);
   assert.match(component, /PAGE_SIZE = 12/);
   assert.match(component, /Math\.ceil\(filtered\.length \/ PAGE_SIZE\)/);
-  assert.match(component, /independently authored practice questions/);
+  assert.match(component, /independent practice questions/);
   assert.match(component, /ICMA © 2024/);
   assert.doesNotMatch(component, /https?:\/\//);
 });
