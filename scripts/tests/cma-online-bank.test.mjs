@@ -82,7 +82,7 @@ test("ICMA 2024 Part 2 official retired bank is published and credited, without 
     assert.match(file, /Copyright © 2024 Institute of Certified Management Accountants/);
   }
   const onlineUI = read("src/components/library/CmaPart2OnlineBank.tsx");
-  assert.match(onlineUI, /icmaCount/);
+  assert.match(onlineUI, /unitIcmaCount/);
   assert.match(onlineUI, /sourceLayoutReview/);
   assert.match(onlineUI, /ICMA © 2024/);
 });
