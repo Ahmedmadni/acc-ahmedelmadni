@@ -91,8 +91,11 @@ for (const [index, original] of CMA_ICMA_2024_PART2_RAW.entries()) {
     `ICMA source CSO/LOS mismatch: ${q.id}`);
   check(original.pdfPage >= 185 && original.pdfPage <= 376 &&
     q.sourcePage === original.pdfPage, `ICMA PDF provenance missing: ${q.id}`);
-  check(original.choices.length === 4 && new Set(original.choices).size === 4 &&
-    original.choices.every((v) => v.trim().length > 0), `Bad source choices: ${q.id}`);
+  const hasDuplicateOptions = new Set(original.choices).size !== 4;
+  check(original.choices.length === 4 && original.choices.every((v) => v.trim().length > 0) &&
+    (!hasDuplicateOptions || original.id === "IMA2024-P2-E-029"),
+    `Bad source choices: ${q.id}`);
+  check(q.sourceOptionDuplicate === hasDuplicateOptions, `Original source choice duplication was not flagged: ${q.id}`);
   check(Number.isInteger(original.answerIndex) && original.answerIndex >= 0 &&
     original.answerIndex < 4 && q.answerIndex === original.answerIndex,
     `Incorrect original answer index: ${q.id}`);
