@@ -27,6 +27,7 @@ export type PrivateCmaQuestion = {
   choices: [string, string, string, string];
   correctIndex: number;
   explanation: string;
+  layoutCheckRecommended?: boolean;
 };
 export type PrivateCmaBank = { title: string; questions: PrivateCmaQuestion[] };
 const letters = Object.keys(PRIVATE_CMA_DOMAINS) as PrivateCmaSection[];
@@ -82,6 +83,7 @@ export function parseCmaPrivateBank(value: unknown): PrivateCmaBank {
       choices: raw.choices as [string, string, string, string],
       correctIndex: raw.correctIndex as number,
       explanation: raw.explanation as string,
+      layoutCheckRecommended: raw.layoutCheckRecommended === true,
     });
   }
   return { title: value.title, questions };
