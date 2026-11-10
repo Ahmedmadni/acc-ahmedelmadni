@@ -30,6 +30,7 @@ The **369 ICMA questions** are additional to **416 independently authored Part 2
 - Correct answer and full explanation are shown after choosing an option; 12 questions per page.
 - An attribution label `ICMA © 2024`, domain, item number, CSO, LOS and source PDF page are attached to each source question. The website is independently operated.
 - English is canonical. The previously deployed on-device browser Arabic translation feature remains optional on supported desktop Chrome/Edge, with an explicit user-initiated external service fallback on unsupported devices. No server-side translation API or Supabase database is required for these questions.
+- **Question E-029 on PDF page 340 has identical choices B and C in the original ICMA publication**, verified against the source PDF page. The site intentionally preserves both rather than silently changing the publisher source. A source-issue warning is shown to learners.
 - 71 table-heavy / complex source text items are specifically flagged to ask the learner to cross-check the numerical table layout with the original PDF. Automated answer-matching **does not establish that every extracted table is visually equivalent** to the source; these items need editorial PDF-page verification.
 - This update concerns only the **primary 2024 Part 2 369-question section**. Historic 2022 and 2016 supplemental question sets and practice essays were **not imported**, and must not be counted in this release.
 
