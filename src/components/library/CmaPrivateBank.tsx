@@ -157,6 +157,13 @@ export function CmaPrivateBank({ lang }: { lang: Language }) {
                 <span>{lang === "ar" ? "سؤال" : "Question"} {position + 1} / {visible.length}</span>
                 <span dir="ltr">{current.section} · #{current.questionNumber} · CSO {current.cso} · LOS {current.los} · PDF p. {current.pdfPage}</span>
               </div>
+              {current.layoutCheckRecommended && (
+                <p className="mt-3 rounded-lg border border-amber-500/35 bg-amber-50 px-3 py-2 text-xs leading-5 text-amber-900">
+                  {lang === "ar"
+                    ? "تحتاج بيانات السؤال والجداول إلى مراجعة التنسيق مع الصفحة الأصلية في PDF؛ عرض النص هنا لا يضمن الحفاظ على صفوف الجدول."
+                    : "This text-heavy question may include a table. Verify figures and formatting against its original PDF page."}
+                </p>
+              )}
               <CmaTranslatedQuestion
                 key={current.id}
                 question={question}
