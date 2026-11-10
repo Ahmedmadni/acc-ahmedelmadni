@@ -62,7 +62,7 @@ test("validates source section and domain together", () => {
 });
 test("private interface never fetches, uploads, stores or externally translates protected questions", () => {
   const ui = fs.readFileSync(path.join(root,"src/components/library/CmaPrivateBank.tsx"),"utf8");
-  assert.doesNotMatch(ui, /\bfetch\s*\(|\.from\s*\(|localStorage\\s*\\.|sessionStorage\\s*\\.|\.post\s*\(|XMLHttpRequest|https:\/\//);
+  assert.doesNotMatch(ui, /\bfetch\s*\(|\.from\s*\(|localStorage\s*\.|sessionStorage\s*\.|\.post\s*\(|XMLHttpRequest|https:\/\//);
   assert.match(ui, /allowExternalTranslation=\{false\}/);
   assert.match(ui, /cacheLocally=\{false\}/);
   assert.match(ui, /file\.text\(\)/);
