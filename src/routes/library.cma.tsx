@@ -89,6 +89,7 @@ function CmaPage() {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [revealedTasks, setRevealedTasks] = useState<Record<string, boolean>>({});
   const [visibleQuestions, setVisibleQuestions] = useState(12);
+  const [showUnitReview, setShowUnitReview] = useState(false);
 
   const domains = CMA_DOMAINS.filter((item) => item.part === part);
   const filtered = useMemo(() => {
@@ -196,6 +197,7 @@ function CmaPage() {
                   setDomain("all");
                   setSelectedId(null);
                   setAnswers({});
+                  setShowUnitReview(false);
                 }}
                 className={`rounded-full px-5 py-2.5 text-sm font-bold transition ${part === value ? "bg-[#F5F1EB] text-[#1C1B19]" : "border border-[#A88765]/25 text-[#c9a986] hover:bg-white/[0.05]"}`}
               >
@@ -247,6 +249,7 @@ function CmaPage() {
                     setStudyUnit(value);
                     setSelectedId(null);
                     setAnswers({});
+                    setShowUnitReview(false);
                   }}
                   className={`rounded-full border px-4 py-2 text-xs font-bold transition ${studyUnit === value ? "border-[#A88765] bg-[#A88765]/20 text-[#F5F1EB]" : "border-[#A88765]/20 text-[#BDB4AA] hover:text-[#c9a986]"}`}
                 >
@@ -287,6 +290,7 @@ function CmaPage() {
               onClick={() => {
                 setDomain("all");
                 setSelectedId(null);
+                setShowUnitReview(false);
               }}
               className={`rounded-full border px-3 py-2 text-xs font-bold ${domain === "all" ? "border-[#A88765] bg-[#A88765]/20 text-[#F5F1EB]" : "border-[#A88765]/20 text-[#BDB4AA]"}`}
             >
@@ -300,6 +304,7 @@ function CmaPage() {
                 onClick={() => {
                   setDomain(item.id);
                   setSelectedId(null);
+                  setShowUnitReview(false);
                 }}
                 className={`rounded-full border px-3 py-2 text-xs font-bold transition ${domain === item.id ? "border-[#A88765] bg-[#A88765]/20 text-[#F5F1EB]" : "border-[#A88765]/20 text-[#BDB4AA] hover:text-[#c9a986]"}`}
               >
@@ -308,60 +313,6 @@ function CmaPage() {
             ))}
           </div>
         </section>
-
-        {part === "part-2" && <CmaPart2OnlineBank lang={lang} />}
-
-        {part === "part-2" && (
-          <section
-            className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-5 text-[#1C1B19] sm:p-7"
-            aria-label={lang === "ar" ? "مصادر أسئلة CMA الجزء الثاني" : "CMA Part 2 practice sources"}
-          >
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div>
-                <h3 className="font-display text-xl font-black">
-                  {lang === "ar" ? "مصادر اختبارات الجزء الثاني" : "Part 2 external practice sources"}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-[#6B6259]">
-                  {lang === "ar"
-                    ? "مصادر تمت مراجعة روابطها. يمكن فتحها في مواقع أصحابها؛ الأسئلة الموجودة في هذه الروابط ليست منسوخة داخل منصتنا."
-                    : "Curated external links. Questions remain on their publishers' sites and are not copied into this platform."}
-                </p>
-              </div>
-              <span className="rounded-full bg-[#A88765]/15 px-3 py-1 text-xs font-bold text-[#76543F]">
-                {CMA_PART2_PRACTICE_SOURCES.length} {lang === "ar" ? "مصادر" : "sources"}
-              </span>
-            </div>
-            <div className="mt-5 grid gap-3 md:grid-cols-2">
-              {CMA_PART2_PRACTICE_SOURCES.map((source) => (
-                <a
-                  key={source.id}
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col rounded-2xl border border-[#A88765]/25 bg-white p-4 transition hover:border-[#A88765]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#76543F]"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <strong className="text-sm leading-6">
-                      {lang === "ar" ? source.titleAr : source.titleEn}
-                    </strong>
-                    <ExternalLink className="mt-1 size-4 shrink-0 text-[#76543F] transition group-hover:translate-x-0.5" />
-                  </div>
-                  <p className="mt-2 text-xs leading-6 text-[#6B6259]">
-                    {lang === "ar" ? source.accessAr : source.accessEn}
-                  </p>
-                  <p className="mt-2 text-xs font-semibold leading-5 text-[#76543F]">
-                    {lang === "ar" ? source.rightsAr : source.rightsEn}
-                  </p>
-                </a>
-              ))}
-            </div>
-            <p className="mt-4 text-xs leading-6 text-[#6B6259]">
-              {lang === "ar"
-                ? "الأسئلة التدريبية الجديدة داخل المنصة مؤلفة بصورة مستقلة ومصنفة وفق المجالات الستة وأوزانها الرسمية؛ وليست أسئلة امتحانات IMA الرسمية."
-                : "New internal practice questions are independently authored and classified by the six official domain weights; they are not official IMA exam items."}
-            </p>
-          </section>
-        )}
 
         <section className="mt-7" aria-label={lang === "ar" ? "موضوعات CMA" : "CMA topics"}>
           <p className="mb-4 text-xs font-semibold text-[#AFA69D]">
@@ -433,6 +384,7 @@ function CmaPage() {
                         setSelectedId(selectedId === item.id ? null : item.id);
                         setAnswers({});
                         setVisibleQuestions(12);
+                        setShowUnitReview(false);
                       }}
                       aria-expanded={selectedId === item.id}
                       className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#1C1B19] px-5 py-2 text-xs font-bold text-[#F5F1EB] hover:bg-[#3A332D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A88765]"
@@ -711,7 +663,7 @@ function CmaPage() {
         )}
 
         {CMA_STUDY_UNIT_CASES.filter(
-            (item) => (part === "part-1" ? typeof item.studyUnit === "number" : typeof item.studyUnit === "string") && (studyUnit === "all" || item.studyUnit === studyUnit),
+            (item) => selected !== null && item.studyUnit === selected.studyUnit,
           ).map((item) => (
             <section
               key={item.studyUnit}
@@ -762,6 +714,92 @@ function CmaPage() {
               </div>
             </section>
           ))}
+
+        {part === "part-2" && selected?.part === "part-2" && (
+          <section className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-5 text-[#FCFBF9] sm:p-7">
+            <h3 className="font-display text-xl font-black text-[#d2b390]">
+              {lang === "ar"
+                ? `مراجعة أسئلة الوحدة ${String(selected.studyUnit).replace("p2-", "")}`
+                : `Study Unit ${String(selected.studyUnit).replace("p2-", "")} — comprehensive review`}
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-[#D4C9BB]">
+              {lang === "ar"
+                ? "بعد شرح الموضوع والمثال التطبيقي وأسئلته، يمكنك فتح مراجعة اختيارية تجمع أسئلة الوحدة المحددة فقط، بما فيها أسئلة ICMA المصنفة تحتها."
+                : "After the lesson, worked example and topic questions, optionally open the full question review for this study unit only, including its classified ICMA questions."}
+            </p>
+            <button
+              type="button"
+              aria-expanded={showUnitReview}
+              aria-controls="cma-part2-all-questions"
+              onClick={() => setShowUnitReview((open) => !open)}
+              className="mt-4 min-h-11 rounded-full border border-[#A88765] bg-[#F5F1EB] px-5 py-2 text-sm font-bold text-[#1C1B19] transition hover:bg-[#e7dccd] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A88765]"
+            >
+              {lang === "ar"
+                ? showUnitReview ? "إخفاء مراجعة الوحدة" : "عرض كل أسئلة هذه الوحدة"
+                : showUnitReview ? "Hide unit review" : "Show all questions for this unit"}
+            </button>
+          </section>
+        )}
+
+        {part === "part-2" && selected?.part === "part-2" && showUnitReview && (
+          <CmaPart2OnlineBank
+            key={selected.studyUnit}
+            lang={lang}
+            studyUnit={selected.studyUnit}
+          />
+        )}
+
+        {part === "part-2" && (
+          <section
+            className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#FCFBF9] p-5 text-[#1C1B19] sm:p-7"
+            aria-label={lang === "ar" ? "مصادر أسئلة CMA الجزء الثاني" : "CMA Part 2 practice sources"}
+          >
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h3 className="font-display text-xl font-black">
+                  {lang === "ar" ? "مصادر اختبارات الجزء الثاني" : "Part 2 external practice sources"}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#6B6259]">
+                  {lang === "ar"
+                    ? "مصادر تمت مراجعة روابطها. يمكن فتحها في مواقع أصحابها؛ الأسئلة الموجودة في هذه الروابط ليست منسوخة داخل منصتنا."
+                    : "Curated external links. Questions remain on their publishers' sites and are not copied into this platform."}
+                </p>
+              </div>
+              <span className="rounded-full bg-[#A88765]/15 px-3 py-1 text-xs font-bold text-[#76543F]">
+                {CMA_PART2_PRACTICE_SOURCES.length} {lang === "ar" ? "مصادر" : "sources"}
+              </span>
+            </div>
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              {CMA_PART2_PRACTICE_SOURCES.map((source) => (
+                <a
+                  key={source.id}
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col rounded-2xl border border-[#A88765]/25 bg-white p-4 transition hover:border-[#A88765]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#76543F]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <strong className="text-sm leading-6">
+                      {lang === "ar" ? source.titleAr : source.titleEn}
+                    </strong>
+                    <ExternalLink className="mt-1 size-4 shrink-0 text-[#76543F] transition group-hover:translate-x-0.5" />
+                  </div>
+                  <p className="mt-2 text-xs leading-6 text-[#6B6259]">
+                    {lang === "ar" ? source.accessAr : source.accessEn}
+                  </p>
+                  <p className="mt-2 text-xs font-semibold leading-5 text-[#76543F]">
+                    {lang === "ar" ? source.rightsAr : source.rightsEn}
+                  </p>
+                </a>
+              ))}
+            </div>
+            <p className="mt-4 text-xs leading-6 text-[#6B6259]">
+              {lang === "ar"
+                ? "الأسئلة التدريبية الجديدة داخل المنصة مؤلفة بصورة مستقلة ومصنفة وفق المجالات الستة وأوزانها الرسمية؛ وليست أسئلة امتحانات IMA الرسمية."
+                : "New internal practice questions are independently authored and classified by the six official domain weights; they are not official IMA exam items."}
+            </p>
+          </section>
+        )}
 
         <footer className="mt-8 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5 text-xs leading-6 text-[#BDB4AA]">
           <p>
