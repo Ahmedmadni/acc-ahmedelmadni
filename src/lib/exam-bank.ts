@@ -14,6 +14,10 @@ export interface ExamQuestion {
   /** Original language when no independently reviewed Arabic translation is available. */
   sourceLanguage?: "en";
   sourcePage?: number;
+  /** Source PDF table/diagram formatting still needs human layout verification. */
+  sourceLayoutReview?: boolean;
+  /** Publisher's original page contains duplicated lettered choices. */
+  sourceOptionDuplicate?: boolean;
   /** A missing answer in the supplied source was independently reconstructed. */
   answerStatus?: "source" | "inferred";
   /** A source table was reflowed, or a clipped source cell was reconstructed. */

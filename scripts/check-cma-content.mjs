@@ -49,6 +49,7 @@ const { CMA_PART2_QUESTIONS_8_15 } = readDataFile("cma-part2-questions-8-15");
 const { CMA_PART2_PRACTICE_8_15 } = readDataFile("cma-part2-practice-8-15");
 const { CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS } = readDataFile("cma-part2-2019-outline-original");
 const { CMA_PART2_2026_INDEPENDENT_QUESTIONS } = readDataFile("cma-part2-2026-independent-practice");
+const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
 const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
@@ -61,8 +62,67 @@ const questionTexts = new Set();
 check(CMA_TOPICS.length === 136 && ids.size === 136, "Expected 80 Part 1 and 56 Part 2 unique sections");
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 3383, "Expected 860 bilingual originals + 44 concept originals + 36 2026 English originals + 2,443 source questions");
+check(CMA_LOCAL_QUESTIONS.length === 3752, "Expected 860 bilingual originals + 80 Part 2 English independent + 2,443 Part 1 publisher + 369 ICMA 2024 Part 2 publisher questions");
 check(CMA_PART2_2026_INDEPENDENT_QUESTIONS.length === 36, "Expected 36 independent CMA Part 2 questions");
+
+check(CMA_ICMA_2024_PART2_RAW.length === 369, "Expected 369 extracted ICMA 2024 source questions");
+check(CMA_ICMA_2024_PART2_QUESTIONS.length === 369, "Expected 369 topic-mapped official ICMA 2024 questions");
+const officialSectionCounts = { A: 91, B: 93, C: 98, D: 6, E: 71, F: 10 };
+const officialSectionDomains = {
+  A: "financial-statement-analysis", B: "corporate-finance",
+  C: "decision-analysis", D: "risk-mgmt",
+  E: "investment-decisions", F: "professional-ethics",
+};
+const officialQuestionIds = new Set();
+const officialSourceFingerprints = new Set();
+const officialSourceCounts = {};
+let officialLayoutReviewCount = 0;
+for (const [index, original] of CMA_ICMA_2024_PART2_RAW.entries()) {
+  const q = CMA_ICMA_2024_PART2_QUESTIONS[index];
+  const topic = CMA_TOPICS.find((t) => t.id === q.topicId);
+  check(q.id === original.id && /^IMA2024-P2-[A-F]-\d{3}$/.test(q.id), `Unmatched official question: ${index}`);
+  check(topic?.part === "part-2" && topic.domain === officialSectionDomains[original.section],
+    `Incorrect ICMA topic/domain mapping for ${q.id}`);
+  check(!officialQuestionIds.has(q.id), `Duplicate ICMA source ID: ${q.id}`);
+  check(original.questionNumber >= 1 && original.questionNumber <= officialSectionCounts[original.section],
+    `ICMA source question number out of range: ${q.id}`);
+  check(original.cso.toUpperCase().startsWith(`2${original.section}`) &&
+    original.los.toUpperCase().startsWith(`2${original.section}`),
+    `ICMA source CSO/LOS mismatch: ${q.id}`);
+  check(original.pdfPage >= 185 && original.pdfPage <= 376 &&
+    q.sourcePage === original.pdfPage, `ICMA PDF provenance missing: ${q.id}`);
+  const hasDuplicateOptions = new Set(original.choices).size !== 4;
+  check(original.choices.length === 4 && original.choices.every((v) => v.trim().length > 0) &&
+    (!hasDuplicateOptions || original.id === "IMA2024-P2-E-029"),
+    `Bad source choices: ${q.id}`);
+  check(q.sourceOptionDuplicate === hasDuplicateOptions, `Original source choice duplication was not flagged: ${q.id}`);
+  check(Number.isInteger(original.answerIndex) && original.answerIndex >= 0 &&
+    original.answerIndex < 4 && q.answerIndex === original.answerIndex,
+    `Incorrect original answer index: ${q.id}`);
+  check(q.question.en === original.question &&
+    q.question.ar === original.question &&
+    q.choices.en.join("|") === original.choices.join("|") &&
+    q.choices.ar.join("|") === original.choices.join("|") &&
+    q.explanation.en === original.explanation &&
+    q.explanation.ar === original.explanation,
+    `ICMA source content changed during import: ${q.id}`);
+  check(q.sourceLanguage === "en" && q.reference.includes("ICMA") &&
+    q.reference.includes("2024"), `ICMA credit or original language missing: ${q.id}`);
+  const sourceFingerprint = original.question.replace(/\s+/g, " ").trim().toLowerCase();
+  check(!officialSourceFingerprints.has(sourceFingerprint), `Duplicate ICMA text: ${q.id}`);
+  officialSourceFingerprints.add(sourceFingerprint);
+  officialQuestionIds.add(q.id);
+  officialSourceCounts[original.section] = (officialSourceCounts[original.section] ?? 0) + 1;
+  if (original.layoutCheckRecommended) officialLayoutReviewCount++;
+  check(q.sourceLayoutReview === original.layoutCheckRecommended,
+    `Lost PDF table-layout warning: ${q.id}`);
+}
+for (const [section, count] of Object.entries(officialSectionCounts)) {
+  check(officialSourceCounts[section] === count, `Wrong ICMA 2024 section count: ${section}`);
+}
+check(officialLayoutReviewCount === 71, "Expected 71 ICMA PDF questions flagged for table/layout verification");
+console.log("Validated 369 official retired ICMA 2024 Part 2 MCQs across six source domains; 71 layout-review warnings");
+
 check(CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS.length === 44, "Expected 44 original questions from the 11 study-unit concepts");
 check(newOutlineQuestions.length === 216, "Expected 216 original SU 7–20 example questions");
 check(CMA_PART2_QUESTIONS_1_7.length === 104, "Expected four original Part 2 questions in each of 26 sections");
@@ -751,5 +811,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 80 English original Part 2 + 2,443 English Part 1 source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 80 English original Part 2 + 369 ICMA 2024 Part 2 + 2,443 English Part 1 source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );

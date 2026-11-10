@@ -36,6 +36,7 @@ const original2026Part2Count = CMA_LOCAL_QUESTIONS.filter((q) =>
   q.id.startsWith("cma-p2-2026-independent-"),
 ).length;
 const newEnglishPart2Count = original2019Part2Count + original2026Part2Count;
+const icma2024Part2Count = CMA_LOCAL_QUESTIONS.filter((q) => q.id.startsWith("IMA2024-P2-")).length;
 const englishPart1SourceCount = CMA_LOCAL_QUESTIONS.filter((q) =>
   q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage === "en",
 ).length;
@@ -48,7 +49,7 @@ export const Route = createFileRoute("/library/cma")({
         { title: "منهج CMA الأمريكي | الجزء الأول والثاني — أحمد المدني" },
         {
           name: "description",
-          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني و2,443 سؤالًا من بنوك الجزء الأول 2025.`,
+          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية و${icma2024Part2Count} سؤالًا رسميًا سابقًا من ICMA 2024 للجزء الثاني، و2,443 سؤالًا من بنوك الجزء الأول.`,
         },
         { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
         {
@@ -132,8 +133,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025، و${newEnglishPart2Count} سؤالًا أصليًا بالإنجليزية للجزء الثاني (44 مستندًا إلى مفاهيم مذكرة 2019 و${original2026Part2Count} وفق مجالات IMA لعام 2024، وليست من أسئلة الناشرين). ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
-              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions, plus ${newEnglishPart2Count} independently authored English-first Part 2 questions (44 based on the 2019 outline and ${original2026Part2Count} based on IMA 2024 content domains, not reproduced publisher MCQs). Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
+              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025، و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني، بالإضافة إلى ${icma2024Part2Count} سؤالًا رسميًا سابقًا من حزمة ICMA لعام 2024 مع نسبتها إلى المعهد. ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
+              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions, plus ${newEnglishPart2Count} independently authored Part 2 English questions and ${icma2024Part2Count} credited official retired questions from the ICMA 2024 support package. Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -154,6 +155,7 @@ function CmaPage() {
                 ? "سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني"
                 : "Independently authored English Part 2 questions"}
             </span>
+            <span>{icma2024Part2Count} {lang === "ar" ? "سؤالًا رسميًا سابقًا من ICMA 2024" : "ICMA 2024 retired official questions"}</span>
             <span>{lang === "ar" ? "مجالات CMA من A إلى F" : "CMA domains A–F"}</span>
           </div>
         </header>
@@ -578,14 +580,30 @@ function CmaPage() {
                     <p className="mt-2 text-xs leading-6 text-[#76543F]">
                       {q.id.startsWith("cma-p2-2019-concept-")
                         ? "سؤال تدريبي أصلي بالإنجليزية مستند إلى مفاهيم مذكرة 2019، وليس من أسئلة Gleim. العربية متاحة عبر الترجمة."
-                        : "السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة."}
+                        : q.id.startsWith("IMA2024-P2-")
+                          ? "سؤال رسمي سابق صادر عن ICMA 2024 بالإنجليزية، والترجمة العربية متاحة عند الطلب."
+                          : "السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة."}
                     </p>
                   )}
                   {q.sourcePage !== undefined && (
                     <p className="mt-2 text-xs text-[#76543F]">
                       {lang === "ar"
-                        ? `جليم 2025 · الصفحة ${q.sourcePage}`
-                        : `Gleim 2025 · p. ${q.sourcePage}`}
+                        ? q.id.startsWith("IMA2024-P2-") ? `ICMA 2024 · الصفحة ${q.sourcePage}` : `جليم 2025 · الصفحة ${q.sourcePage}`
+                        : q.id.startsWith("IMA2024-P2-") ? `ICMA © 2024 · PDF p. ${q.sourcePage}` : `Gleim 2025 · p. ${q.sourcePage}`}
+                    </p>
+                  )}
+                  {q.sourceOptionDuplicate && (
+                    <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
+                      {lang === "ar"
+                        ? "يحتوي المصدر الأصلي من ICMA على اختيارين متطابقين لهذا السؤال؛ لم نغيّر نصهما."
+                        : "ICMA source has two identical choices for this item; they are preserved verbatim."}
+                    </p>
+                  )}
+                  {q.sourceLayoutReview && (
+                    <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
+                      {lang === "ar"
+                        ? "مراجعة تنسيق مطلوبة: يحتوي هذا السؤال على جدول أو أرقام معقدة؛ طابقها مع صفحة PDF الأصلية."
+                        : "Verify complex table and numerical layout against the original PDF page before relying on the answer."}
                     </p>
                   )}
                   {q.sourceTextStatus === "reconstructed" && (
@@ -748,8 +766,8 @@ function CmaPage() {
         <footer className="mt-8 rounded-2xl border border-[#A88765]/20 bg-[#1C1B19] p-5 text-xs leading-6 text-[#BDB4AA]">
           <p>
             {lang === "ar"
-              ? "تشمل هذه الصفحة أسئلة تدريب أصلية وأسئلة من نسختي بنك Gleim 2025 المرفقتين، مع بيانات المصدر وحالة مراجعة النص. ليست أسئلة اختبار IMA الرسمية."
-              : "This page includes original practice and questions from the supplied Gleim 2025 bank volumes, with source details and transcription status. These are not official IMA exam questions."}
+              ? "تتضمن المنصة أسئلة تدريبية من تأليف مستقل، وأسئلة من Gleim 2025 للجزء الأول، إضافة إلى أسئلة CMA الرسمية السابقة من حزمة ICMA © 2024 للجزء الثاني. نسب المحتوى إلى الناشر لا يعني ارتباط الموقع رسميًا بالمعهد؛ أكد مالك الموقع حصوله على إذن إعادة النشر."
+              : "The site contains independently authored practice, Gleim 2025 Part 1 questions, and ICMA © 2024 retired official Part 2 practice questions, credited to their publisher. The site is not affiliated with or endorsed by IMA; the site owner confirms permission to republish."}
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-[#c9a986]">
             <a
