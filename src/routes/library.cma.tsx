@@ -592,6 +592,13 @@ function CmaPage() {
                         : q.id.startsWith("IMA2024-P2-") ? `ICMA © 2024 · PDF p. ${q.sourcePage}` : `Gleim 2025 · p. ${q.sourcePage}`}
                     </p>
                   )}
+                  {q.sourceOptionDuplicate && (
+                    <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
+                      {lang === "ar"
+                        ? "يحتوي المصدر الأصلي من ICMA على اختيارين متطابقين لهذا السؤال؛ لم نغيّر نصهما."
+                        : "ICMA source has two identical choices for this item; they are preserved verbatim."}
+                    </p>
+                  )}
                   {q.sourceLayoutReview && (
                     <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
                       {lang === "ar"
