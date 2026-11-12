@@ -118,7 +118,7 @@ const examples: Record<string, NonNullable<CmaBeginnerNote["example"]>> = {
  takeaway:{ar:"الدفعات المؤجلة تُخصم إلى قيمتها اليوم؛ ثم تطبق شروط معيار الإيجار المختص.",en:"Future payments are discounted to today's value; apply the relevant lease standard separately."}
 },
 "su5-revenue-contracts": {
- scenario:{ar:"باعت شركة جهازًا بـ12,000 مع خدمة دعم مستقلة قيمتها 3,000، وسعر الجهاز مستقلًا 9,000. ثمن العقد الإجمالي 10,000. كيف توزع السعر؟",en:"A contract includes equipment with standalone price 9,000 and separate support priced 3,000. Total contract price is 10,000. Allocate it."},
+ scenario:{ar:"تبيع شركة جهازًا وخدمة دعم منفصلين؛ سعر الجهاز المستقل 9,000 وسعر الدعم المستقل 3,000. السعر الإجمالي للباقة 10,000. كيف توزع سعر العقد؟",en:"A customer buys equipment and a distinct support service; their standalone prices are 9,000 and 3,000. The combined contract price is 10,000. Allocate it."},
  steps:{ar:["إجمالي أسعار البيع المستقلة = 9,000 + 3,000 = 12,000.","حصة الجهاز = 10,000 × 9,000 ÷ 12,000 = 7,500.","حصة الدعم = 10,000 × 3,000 ÷ 12,000 = 2,500؛ يحدد توقيت كل إيراد عند الوفاء بالتزامه."],en:["Total standalone prices = 9,000 + 3,000 = 12,000.","Equipment allocation = 10,000 × 9,000 ÷ 12,000 = 7,500.","Support allocation = 10,000 × 3,000 ÷ 12,000 = 2,500; timing follows each fulfilled obligation."]},
  takeaway:{ar:"السعر المحصل عن العقد يُوزع بحسب القيمة النسبية للوعود المستقلة عند انطباق الشروط.",en:"Transaction price is allocated across distinct obligations by relative standalone prices where appropriate."}
 },
