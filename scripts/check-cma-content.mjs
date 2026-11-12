@@ -56,6 +56,7 @@ const { CMA_PART1_FURTHER_WORKED } = readDataFile("cma-part1-further-worked");
 const { CMA_PART1_FINAL_WORKED } = readDataFile("cma-part1-final-worked");
 const { CMA_PART2_FINAL_WORKED } = readDataFile("cma-part2-final-worked");
 const { CMA_DOMAIN_GLOSSARY } = readDataFile("cma-learning-glossary");
+const { CMA_EDITORIAL_CLARIFICATIONS } = readDataFile("cma-editorial-clarifications");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
@@ -79,6 +80,49 @@ for (const domainId of domainSet) {
   }
 }
 console.log("Validated 48 bilingual glossary terms across all 12 CMA domains");
+
+const editorialEntries = Object.entries(CMA_EDITORIAL_CLARIFICATIONS);
+check(editorialEntries.length === 18, "Expected 18 targeted editorial clarifications");
+check(new Set(editorialEntries.map(([id]) => id)).size === 18, "Duplicate advanced editorial notes");
+for (const [id, note] of editorialEntries) {
+  check(ids.has(id) && note.topicId === id, `Editorial note has invalid topic ID: ${id}`);
+  for (const part of ["title", "explanation", "trap", "check", "answer"]) {
+    const ar = note[part]?.ar;
+    const en = note[part]?.en;
+    const minimum = part === "explanation" ? 180 : part === "title" ? 8 : 40;
+    check(typeof ar === "string" && typeof en === "string" &&
+      ar.length >= minimum && en.length >= minimum,
+      `Incomplete bilingual ${part} in editorial note ${id}`);
+  }
+}
+check(editorialEntries.filter(([id]) => !id.startsWith("p2-")).length === 9 &&
+  editorialEntries.filter(([id]) => id.startsWith("p2-")).length === 9,
+  "Expected nine editorial notes per CMA exam part");
+
+// Formula fixtures independently verify the numerical logic behind corrected examples.
+const near = (actual, expected, tolerance = 0.001) => Math.abs(actual - expected) <= tolerance;
+const learningRate = 0.8;
+const firstUnitHours = 10;
+const averageFirst2 = firstUnitHours * learningRate;
+const averageFirst4 = averageFirst2 * learningRate;
+const totalFirst2 = 2 * averageFirst2;
+const totalFirst4 = 4 * averageFirst4;
+check(near(averageFirst2, 8) && near(averageFirst4, 6.4) &&
+  near(totalFirst2, 16) && near(totalFirst4, 25.6) &&
+  near(totalFirst4 - totalFirst2, 9.6),
+  "Cumulative-average learning-curve fixture has wrong mathematics");
+const cost = 100, annual = 40;
+const yearEndPayback = [annual, annual * 2, annual * 3].findIndex((cash) => cash >= cost) + 1;
+const interpolatedPayback = 2 + (cost - annual * 2) / annual;
+const discounted3Years = [1, 2, 3].reduce((sum, year) => sum + annual / 1.1 ** year, 0);
+check(yearEndPayback === 3 && near(interpolatedPayback, 2.5) &&
+  discounted3Years < cost && near(discounted3Years, 99.474, 0.01),
+  "Payback timing or discounted-payback assumption is inconsistent");
+check(CMA_PART1_BEGINNER_NOTES["su12-learning-curve"]?.example?.scenario?.en?.includes("cumulative-average") &&
+  CMA_PART2_BEGINNER_NOTES["p2-su13-payback"]?.example?.steps?.en?.join(" ").includes("3 years"),
+  "Clarified beginner lessons must use cumulative-average learning and year-end payback");
+console.log("Validated 18 editorial clarifications and deterministic learning/payback fixtures");
+
 const questionIds = new Set();
 const questionTexts = new Set();
 

@@ -18,6 +18,7 @@ import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
 import { CMA_PART1_BEGINNER_NOTES } from "@/data/cma-part1-beginner-notes";
 import { CMA_DOMAIN_GLOSSARY } from "@/data/cma-learning-glossary";
+import { CMA_EDITORIAL_CLARIFICATIONS } from "@/data/cma-editorial-clarifications";
 import {
   CMA_DOMAINS,
   CMA_EXAM_FORMAT_URL,
@@ -118,6 +119,7 @@ function CmaPage() {
   }, [part, studyUnit, domain, query]);
   const selected = filtered.find((item) => item.id === selectedId) ?? null;
   const guide = selected ? CMA_TOPIC_GUIDES[selected.id] : null;
+  const editorial = selected ? CMA_EDITORIAL_CLARIFICATIONS[selected.id] : null;
   const beginnerNote = selected
     ? selected.part === "part-2"
       ? CMA_PART2_BEGINNER_NOTES[selected.id]
@@ -592,6 +594,43 @@ function CmaPage() {
                       : guide.practicalCase.solutionEn}
                   </p>
                 </div>
+                {editorial && (
+                  <aside
+                    className="mt-7 rounded-2xl border border-[#A88765]/35 bg-white p-5 sm:p-6"
+                    aria-label={lang === "ar" ? "تنبيه علمي وفحص الفهم" : "Editorial precision and understanding check"}
+                    dir={lang === "ar" ? "rtl" : "ltr"}
+                  >
+                    <p className="text-xs font-black text-[#76543F]">
+                      {lang === "ar" ? "مراجعة علمية · متى تتغير الإجابة؟" : "Editorial review · When does the answer change?"}
+                    </p>
+                    <h4 className="mt-2 font-display text-lg font-black text-[#40382F]">
+                      {editorial.title[lang]}
+                    </h4>
+                    <p className="mt-3 whitespace-pre-line text-base leading-9 text-[#554C44]">
+                      {editorial.explanation[lang]}
+                    </p>
+                    <p className="mt-4 rounded-xl bg-[#F5F1EB] p-4 text-sm leading-8 text-[#554C44]">
+                      <strong className="text-[#76543F]">
+                        {lang === "ar" ? "انتبه للخطأ الشائع: " : "Common pitfall: "}
+                      </strong>
+                      {editorial.trap[lang]}
+                    </p>
+                    <div className="mt-5 border-t border-[#A88765]/25 pt-4">
+                      <p className="text-sm font-black text-[#40382F]">
+                        {lang === "ar" ? "اختبر فهمك قبل الأسئلة" : "Check your understanding before the questions"}
+                      </p>
+                      <p className="mt-2 text-sm leading-8 text-[#554C44]">{editorial.check[lang]}</p>
+                      <details className="mt-3 rounded-xl border border-[#A88765]/25 bg-[#F5F1EB] p-4">
+                        <summary className="cursor-pointer text-sm font-bold text-[#76543F]">
+                          {lang === "ar" ? "اعرض الإجابة المفسرة" : "Show the explained answer"}
+                        </summary>
+                        <p className="mt-3 text-sm leading-8 text-[#40382F]">
+                          {editorial.answer[lang]}
+                        </p>
+                      </details>
+                    </div>
+                  </aside>
+                )}
               </>
             ) : (
               <p className="mt-6 rounded-2xl border border-[#A88765]/30 bg-white p-4 text-sm leading-7 text-[#554C44]">
