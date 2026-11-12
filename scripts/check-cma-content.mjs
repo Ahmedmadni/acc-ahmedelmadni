@@ -49,6 +49,7 @@ const { CMA_PART2_QUESTIONS_8_15 } = readDataFile("cma-part2-questions-8-15");
 const { CMA_PART2_PRACTICE_8_15 } = readDataFile("cma-part2-practice-8-15");
 const { CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS } = readDataFile("cma-part2-2019-outline-original");
 const { CMA_PART2_2026_INDEPENDENT_QUESTIONS } = readDataFile("cma-part2-2026-independent-practice");
+const { CMA_PART2_BEGINNER_NOTES } = readDataFile("cma-part2-beginner-notes");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
@@ -60,6 +61,28 @@ const questionIds = new Set();
 const questionTexts = new Set();
 
 check(CMA_TOPICS.length === 136 && ids.size === 136, "Expected 80 Part 1 and 56 Part 2 unique sections");
+const part2GuideTopics = CMA_TOPICS.filter((topic) => topic.part === "part-2");
+check(part2GuideTopics.length === 56, "Expected 56 CMA Part 2 topic sections");
+check(Object.keys(CMA_PART2_BEGINNER_NOTES).length === part2GuideTopics.length,
+  "All 56 CMA Part 2 topics need a beginner explanation");
+for (const topic of part2GuideTopics) {
+  const note = CMA_PART2_BEGINNER_NOTES[topic.id];
+  check(note?.idea?.ar?.length >= 70 && note?.idea?.en?.length >= 70,
+    `Missing plain-language bilingual explanation: ${topic.id}`);
+  if (note.example) {
+    const example = note.example;
+    check(example.scenario.ar.length > 35 && example.scenario.en.length > 35 &&
+      example.steps.ar.length >= 3 && example.steps.en.length === example.steps.ar.length &&
+      example.steps.ar.every((step) => step.length > 20) &&
+      example.steps.en.every((step) => step.length > 20) &&
+      example.takeaway.ar.length > 25 && example.takeaway.en.length > 25,
+    `Incomplete bilingual worked example: ${topic.id}`);
+  }
+}
+check(Object.values(CMA_PART2_BEGINNER_NOTES).filter((note) => note.example).length >= 12,
+  "Expected at least 12 step-by-step examples for core CMA Part 2 topics");
+console.log("Validated beginner-first bilingual introductions for all 56 CMA Part 2 topics and guided examples");
+
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
 check(CMA_LOCAL_QUESTIONS.length === 3752, "Expected 860 bilingual originals + 80 Part 2 English independent + 2,443 Part 1 publisher + 369 ICMA 2024 Part 2 publisher questions");

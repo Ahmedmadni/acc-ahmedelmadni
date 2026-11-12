@@ -15,6 +15,7 @@ import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
 import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
+import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
 import {
   CMA_DOMAINS,
   CMA_EXAM_FORMAT_URL,
@@ -115,6 +116,7 @@ function CmaPage() {
   }, [part, studyUnit, domain, query]);
   const selected = filtered.find((item) => item.id === selectedId) ?? null;
   const guide = selected ? CMA_TOPIC_GUIDES[selected.id] : null;
+  const beginnerNote = selected?.part === "part-2" ? CMA_PART2_BEGINNER_NOTES[selected.id] : null;
   const questions = selected
     ? CMA_LOCAL_QUESTIONS.filter((item) => item.topicId === selected.id)
     : [];
@@ -438,6 +440,48 @@ function CmaPage() {
             </p>
             {guide ? (
               <>
+                {beginnerNote && (
+                  <div className="mt-6 rounded-2xl border border-[#A88765]/30 bg-white p-5 sm:p-6" dir={lang === "ar" ? "rtl" : "ltr"}>
+                    <p className="text-xs font-black tracking-wide text-[#76543F]">
+                      {lang === "ar" ? "المرحلة 1 · افهم الفكرة أولًا" : "Step 1 · Understand the idea first"}
+                    </p>
+                    <h4 className="mt-2 font-display text-xl font-black">
+                      {lang === "ar" ? "الشرح ببساطة" : "In plain language"}
+                    </h4>
+                    <p className="mt-3 text-base leading-9 text-[#40382F]">
+                      {beginnerNote.idea[lang]}
+                    </p>
+                    {beginnerNote.example && (
+                      <div className="mt-5 rounded-xl border border-[#A88765]/25 bg-[#F5F1EB] p-4 sm:p-5">
+                        <h5 className="font-display text-base font-black text-[#76543F]">
+                          {lang === "ar" ? "مثال سهل — الحل خطوة بخطوة" : "Simple example — step by step"}
+                        </h5>
+                        <p className="mt-3 text-sm leading-8 text-[#40382F]">
+                          {beginnerNote.example.scenario[lang]}
+                        </p>
+                        <ol className="mt-4 list-decimal space-y-2 ps-6 text-sm leading-8 text-[#40382F]">
+                          {beginnerNote.example.steps[lang].map((step, index) => (
+                            <li key={index}>{step}</li>
+                          ))}
+                        </ol>
+                        <p className="mt-4 border-t border-[#A88765]/25 pt-3 text-sm font-semibold leading-8 text-[#604831]">
+                          {lang === "ar" ? "ماذا تعلمنا؟ " : "Takeaway: "}
+                          {beginnerNote.example.takeaway[lang]}
+                        </p>
+                      </div>
+                    )}
+                    <p className="mt-4 text-xs leading-6 text-[#76543F]">
+                      {lang === "ar"
+                        ? "بعد فهم المثال، انتقل إلى المفاهيم التفصيلية والقوانين والحالة التطبيقية ثم أسئلة الموضوع."
+                        : "Once the idea is clear, continue to the detailed guide, formulas, worked case and topic questions."}
+                    </p>
+                  </div>
+                )}
+                {beginnerNote && (
+                  <h4 className="mt-8 font-display text-lg font-black text-[#76543F]">
+                    {lang === "ar" ? "المرحلة 2 · التفسير التفصيلي والتطبيقات" : "Step 2 · Detailed explanations and applications"}
+                  </h4>
+                )}
                 {(
                   [
                     [
