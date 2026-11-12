@@ -10,7 +10,7 @@ export interface CmaEditorialClarification {
  check: { ar: string; en: string };
  answer: { ar: string; en: string };
 }
-export const CMA_EDITORIAL_CLARIFICATIONS: Record<string, CmaEditorialClarification> = {
+export const CMA_EDITORIAL_CLARIFICATIONS: Record<string, CmaEditorialClarification> =  {
   "su12-learning-curve": {
     "topicId": "su12-learning-curve",
     "title": {
@@ -214,8 +214,8 @@ export const CMA_EDITORIAL_CLARIFICATIONS: Record<string, CmaEditorialClarificat
       "en": "A division earns 120,000 on 1,000,000 invested capital with 10% required return. What is residual income?"
     },
     "answer": {
-      "ar": "120,000 − (1,000,000 × 10%) = 20,000.",
-      "en": "120,000 − (1,000,000 × 10%) = 20,000."
+      "ar": "120,000 − (1,000,000 × 10%) = 20,000، وهو الربح فوق العائد المطلوب على رأس المال.",
+      "en": "120,000 − (1,000,000 × 10%) = 20,000, which is the earnings exceeding the required capital charge."
     }
   },
   "p2-su13-payback": {
@@ -306,8 +306,8 @@ export const CMA_EDITORIAL_CLARIFICATIONS: Record<string, CmaEditorialClarificat
       "en": "Debt 40% costs 8% and equity 60% costs 12%, with no interest tax shield. Find WACC."
     },
     "answer": {
-      "ar": "40%×8% + 60%×12% = 3.2% + 7.2% = 10.4%.",
-      "en": "40%×8% + 60%×12% = 3.2% + 7.2% = 10.4%."
+      "ar": "40% × 8% + 60% × 12% = 3.2% + 7.2% = 10.4% بدون أثر خصم ضريبي.",
+      "en": "40% × 8% + 60% × 12% = 3.2% + 7.2% = 10.4% without an interest tax shield."
     }
   },
   "p2-su10-relevant-costs": {
