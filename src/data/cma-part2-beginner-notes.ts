@@ -132,8 +132,8 @@ const worked: Record<string, NonNullable<CmaBeginnerNote["example"]>> = {
   },
   "p2-su13-payback": {
     scenario: { ar: "تكلفة مشروع 100، ويدخل 40 في نهاية كل سنة. ما فترة الاسترداد البسيطة؟", en: "A project costs 100 and returns 40 at each year end. Find simple payback." },
-    steps: { ar: ["بعد السنة الأولى تسترد 40، وبعد الثانية 80.", "المتبقي بعد سنتين = 100 − 80 = 20.", "إذا كان تدفق السنة الثالثة منتظمًا خلال العام، فالفترة التقريبية = 2 + 20 ÷ 40 = 2.5 سنة."], en: ["Recover 40 after year 1 and 80 after year 2.", "Remaining amount = 100 − 80 = 20.", "If year-3 cash arrives uniformly during the year, estimated payback = 2 + 20 ÷ 40 = 2.5 years."] },
-    takeaway: { ar: "إذا لم تتوزع التدفقات بانتظام، فقد يكون الاسترداد الفعلي في نهاية السنة الثالثة؛ وانتبه أن هذا ليس الاسترداد المخصوم.", en: "If inflows are not uniform, actual recovery may occur only at year 3 end; this is not discounted payback." }
+    steps: { ar: ["بعد السنة الأولى تسترد 40، وبعد الثانية 80.", "المتبقي بعد سنتين = 100 − 80 = 20.", "وفق افتراض الدفع في نهاية السنة فقط، لا تصل الدفعة الثالثة إلا بنهاية السنة الثالثة؛ الاسترداد الفعلي = 3 سنوات."], en: ["Recover 40 after year 1 and 80 after year 2.", "Remaining amount = 100 − 80 = 20.", "With receipts arriving only at each year-end, the third receipt arrives at the end of year three; actual payback = 3 years."] },
+    takeaway: { ar: "لو افترض السؤال أن تدفق 40 يتوزع بانتظام خلال السنة الثالثة، فإن الاسترداد المستوفى بالتوزيع الخطي يصبح 2.5 سنة. اذكر افتراض التوقيت أولًا.", en: "If instead the 40 arrives uniformly during year three, linear interpolation gives 2.5 years. Always state the timing assumption." }
   },
   "p2-su14-fraud": {
     scenario: { ar: "موظف عليه التزامات شخصية، يستطيع إضافة مورد وصرف مستحقاته بنفسه، ويبرر ذلك بأنه سيعيد المبلغ لاحقًا. ما عناصر مثلث الاحتيال؟", en: "An employee under personal financial pressure can create vendors and pay them, claiming any taken funds will be returned later. Identify fraud-triangle elements." },
