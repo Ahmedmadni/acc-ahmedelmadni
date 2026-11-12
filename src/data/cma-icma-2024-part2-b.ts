@@ -1507,7 +1507,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     "pdfPage": 255,
     "cso": "2B4F",
     "los": "2B4c",
-    "question": "c\n    Frame Industries has arranged a revolving line of credit for the upcoming year with a commercial\n     bank. The arrangement is for $20 million, with interest payable monthly on the amount utilized at\n      the bank’s prime rate and an annual commitment fee of one-half of 1%, computed and payable\n     monthly on the unused portion of the line. Frame estimates that the prime rate for the upcoming\n     year will be 8%, and expects the following average amount to be borrowed by quarter.\n\n                   Quarter    Amount Borrowed\n                      First          $10,000,000\n                 Second        20,000,000\n                   Third          20,000,000\n                   Fourth          5,000,000\n\n   How much will Frame pay to the bank next year in interest and fees?",
+    "question": "Frame Industries has arranged a revolving line of credit for the upcoming year with a commercial\n     bank. The arrangement is for $20 million, with interest payable monthly on the amount utilized at\n      the bank’s prime rate and an annual commitment fee of one-half of 1%, computed and payable\n     monthly on the unused portion of the line. Frame estimates that the prime rate for the upcoming\n     year will be 8%, and expects the following average amount to be borrowed by quarter.\n\n                   Quarter    Amount Borrowed\n                      First          $10,000,000\n                 Second        20,000,000\n                   Third          20,000,000\n                   Fourth          5,000,000\n\n   How much will Frame pay to the bank next year in interest and fees?",
     "choices": [
       "$1,118,750.",
       "$1,131,250.",
@@ -1516,7 +1516,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 1,
     "explanation": "Frame will pay $1,131,250 as shown below.\n\n      Interest =    ($10,000,000 x .02) + ($20,000,000 x .04) + ($5,000,000 x .02)\n           =    $1,100,000\n     Fees   =    [$10,000,000 x (.005 ÷ 12 x 3)] + [$15,000,000 x (.005 ÷ 12 x 3)]\n           =    $31,250\n     Total   =    $1,100,000 + $31,250\n           =    $1,131,250",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-B-085",
