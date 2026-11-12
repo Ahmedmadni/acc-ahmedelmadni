@@ -58,7 +58,7 @@ export const ICMA_2024_PART2_A: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 3,
     "explanation": "14% increase in selling expenses=£40,000/£35,000-1.",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-A-004",
@@ -184,7 +184,7 @@ export const ICMA_2024_PART2_A: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 3,
     "explanation": "The company’s quick ratio at the end of the year is 1.52 as shown below.\n\n           (Current assets – Inventory) ÷ Current liabilities      = Quick ratio\n          ($62,000 + $35,000 + $47,000) ÷ ($84,000 + $11,000)  =     1.52",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-A-011",
