@@ -114,7 +114,7 @@ const worked: Record<string, NonNullable<CmaBeginnerNote["example"]>> = {
   },
   "p2-su10-make-buy": {
     scenario: { ar: "تصنيع 100 قطعة يتطلب تكاليف متغيرة 3,000 وتكاليف ثابتة يمكن تجنبها 1,000. مورد يعرض القطع نفسها بـ3,600. لا يوجد استخدام بديل للطاقة؛ ماذا تختار؟", en: "Making 100 parts incurs 3,000 variable cost and 1,000 avoidable fixed cost. A supplier offers them for 3,600. No alternative use exists for capacity. Choose?" },
-    steps: { ar: ["التكلفة التي ستتجنبها إذا اشتريت = 3,000 + 1,000 = 4,000.", "تكلفة الشراء = 3,600.", "الشراء أوفر بـ400، إذا كانت الجودة والمواعيد متماثلة."], en: ["Avoidable make cost = 3,000 + 1,000 = 4,000.", "Buying costs 3,600.", "Buy saves 400 if quality and delivery are equivalent."] },
+    steps: { ar: ["التكلفة التي ستتجنبها إذا اشتريت = 3,000 + 1,000 = 4,000.", "تكلفة الشراء = 3,600.", "الشراء أوفر بـ400، إذا كانت الجودة والمواعيد متماثلة."], en: ["Avoidable make cost = 3,000 + 1,000 = 4,000.", "The supplier charge for buying all 100 parts is 3,600.", "Buy saves 400 if quality and delivery are equivalent."] },
     takeaway: { ar: "لا تدخل في المقارنة المصروفات الثابتة التي ستبقى حتى بعد التوقف عن التصنيع.", en: "Exclude fixed costs that remain even if internal production stops." }
   },
   "p2-su11-elasticity": {
