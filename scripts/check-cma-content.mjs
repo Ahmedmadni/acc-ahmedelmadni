@@ -55,6 +55,7 @@ const { CMA_PART2_EXTENDED_WORKED } = readDataFile("cma-part2-extended-worked");
 const { CMA_PART1_FURTHER_WORKED } = readDataFile("cma-part1-further-worked");
 const { CMA_PART1_FINAL_WORKED } = readDataFile("cma-part1-final-worked");
 const { CMA_PART2_FINAL_WORKED } = readDataFile("cma-part2-final-worked");
+const { CMA_DOMAIN_GLOSSARY } = readDataFile("cma-learning-glossary");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
@@ -62,6 +63,22 @@ const newOutlineQuestions = [7, 8, 9, 10, 11, 12, 13, 14].flatMap(
   (unit) => readDataFile(`cma-questions-unit-${unit}`)[`CMA_QUESTIONS_UNIT_${unit}`],
 ).concat(readDataFile("cma-questions-units-15-20").CMA_QUESTIONS_UNITS_15_20);
 const ids = new Set(CMA_TOPICS.map((topic) => topic.id));
+const domainSet = new Set(CMA_DOMAINS.map((domain) => domain.id));
+check(domainSet.size === 12, "Expected 12 unique CMA domains");
+check(Object.keys(CMA_DOMAIN_GLOSSARY).length === domainSet.size,
+  "Expected bilingual terminology for all 12 CMA exam domains");
+for (const domainId of domainSet) {
+  const terms = CMA_DOMAIN_GLOSSARY[domainId];
+  check(terms?.length === 4, `Expected four key terms for domain ${domainId}`);
+  check(new Set(terms.map((t) => t.en.toLowerCase())).size === 4,
+    `Duplicate glossary terms in domain ${domainId}`);
+  for (const term of terms) {
+    check(term.ar.length > 3 && term.en.length > 3 &&
+      term.meaningAr.length > 35 && term.meaningEn.length > 35,
+    `Unclear bilingual glossary entry in ${domainId}`);
+  }
+}
+console.log("Validated 48 bilingual glossary terms across all 12 CMA domains");
 const questionIds = new Set();
 const questionTexts = new Set();
 
