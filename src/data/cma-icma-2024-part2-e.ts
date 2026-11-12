@@ -220,7 +220,7 @@ export const ICMA_2024_PART2_E: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 1,
     "explanation": "AGC’s initial investment is $92,800 as shown below.\n\n            Sale of old equipment              $  3,000\n        New equipment                       -95,000\n             Increase in accounts receivable            - 2,000\n             Increase in accounts payable        +  400\n          Tax shield/Loss on sale            +   800     ($50,000 - $45,000 - $3,000) x .4\n              Cash outflow                    $92,800",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-E-013",
@@ -238,7 +238,7 @@ export const ICMA_2024_PART2_E: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "Calvin’s initial cash outflow is $79,000 as shown below.\n\n            Sale of old equipment              $ 25,000\n            Purchase new equipment             -100,000\n          Tax on gain from sale                     -  4,000     ($25,000 - $15,000*) x .4\n             Cash outflow                  $ 79,000\n\n      *Accumulated depreciation ($50,000 ÷ 10) x 7 = $35,000\n      Book value $50,000 - $35,000 = $15,000",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-E-014",
@@ -616,7 +616,7 @@ export const ICMA_2024_PART2_E: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 0,
     "explanation": "Smithco’s project has a net present value of $(1,780) as shown below.\n\n           Year 0                                        $(550,000)\n           Year 1       $(500,000) x .877                  (438,500)\n           Year 2       $450,000 x .769                   346,050\n           Year 3       $350,000 x .675                   236,250\n           Year 4       $350,000 x .592                   207,200\n           Year 5       $380,000* x .519                  197,220\n                         Net present value             $  (1,780)\n\n      *Includes $30,000 from sale of old equipment\n       $50,000 – ($50,000 x .4) = $30,000",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-E-035",
@@ -1282,6 +1282,6 @@ export const ICMA_2024_PART2_E: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 3,
     "explanation": "Smithco’s payback period is 4.0 years ($550,000 + $500,000 - $450,000 - $350,000 -\n     $250,000 = 0).",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   }
 ];
