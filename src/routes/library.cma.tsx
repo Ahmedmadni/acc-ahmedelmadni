@@ -13,6 +13,7 @@ import {
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { CmaAnswerSupport } from "@/components/library/CmaAnswerSupport";
 import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
@@ -748,6 +749,7 @@ function CmaPage() {
                       >
                         {view.explanation}
                       </p>
+                      <CmaAnswerSupport question={q} lang={lang} isCorrect={answers[q.id] === q.answerIndex} />
                       {q.answerStatus === "inferred" && (
                         <p className="mt-2 text-xs text-[#76543F]">
                           {lang === "ar"
