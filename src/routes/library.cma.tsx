@@ -17,6 +17,7 @@ import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
 import { CMA_PART1_BEGINNER_NOTES } from "@/data/cma-part1-beginner-notes";
+import { CMA_DOMAIN_GLOSSARY } from "@/data/cma-learning-glossary";
 import {
   CMA_DOMAINS,
   CMA_EXAM_FORMAT_URL,
@@ -487,6 +488,31 @@ function CmaPage() {
                     </p>
                   </div>
                 )}
+                <details className="mt-5 rounded-2xl border border-[#A88765]/25 bg-white/80 p-4 sm:p-5" dir={lang === "ar" ? "rtl" : "ltr"}>
+                  <summary className="cursor-pointer text-sm font-bold leading-7 text-[#76543F]">
+                    {lang === "ar"
+                      ? "مصطلحات تساعدك في فهم الموضوع (اضغط للعرض)"
+                      : "Key terms for understanding this topic (expand)"}
+                  </summary>
+                  <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {CMA_DOMAIN_GLOSSARY[selected.domain].map((term) => (
+                      <div key={term.en} className="rounded-xl border border-[#A88765]/15 bg-[#F5F1EB] p-4">
+                        <dt className="text-sm font-black leading-7 text-[#40382F]">
+                          {lang === "ar" ? term.ar : term.en}
+                        </dt>
+                        {lang === "ar" && <p className="mt-1 text-xs text-[#76543F]" dir="ltr">{term.en}</p>}
+                        <dd className="mt-2 text-sm leading-7 text-[#554C44]">
+                          {lang === "ar" ? term.meaningAr : term.meaningEn}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                  <p className="mt-3 text-xs leading-6 text-[#76543F]">
+                    {lang === "ar"
+                      ? "هذه مصطلحات أساسية في المجال وليست تعريفات لجميع كلمات هذا الدرس."
+                      : "These are key terms for the broader domain, not a definition of every term in this lesson."}
+                  </p>
+                </details>
                 {beginnerNote && (
                   <h4 className="mt-8 font-display text-lg font-black text-[#76543F]">
                     {lang === "ar" ? "المرحلة 2 · الشرح المتعمق والتطبيقات" : "Step 2 · Detailed explanation and applications"}
@@ -503,7 +529,7 @@ function CmaPage() {
                 ).map(([title, content]) => (
                   <div key={title} className="mt-6 border-t border-[#A88765]/25 pt-5">
                     <h4 className="font-display text-lg font-black">{title}</h4>
-                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                    <p className="mt-3 whitespace-pre-line text-base leading-9 text-[#554C44]">
                       {content}
                     </p>
                   </div>
@@ -516,7 +542,7 @@ function CmaPage() {
                     <h4 className="font-display text-lg font-black text-[#76543F]">
                       {section.heading[lang]}
                     </h4>
-                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                    <p className="mt-3 whitespace-pre-line text-base leading-9 text-[#554C44]">
                       {section.body[lang]}
                     </p>
                   </div>
@@ -532,7 +558,7 @@ function CmaPage() {
                 ).map(([title, content]) => (
                   <div key={title} className="mt-6 border-t border-[#A88765]/25 pt-5">
                     <h4 className="font-display text-lg font-black">{title}</h4>
-                    <p className="mt-3 whitespace-pre-line text-sm leading-8 text-[#554C44]">
+                    <p className="mt-3 whitespace-pre-line text-base leading-9 text-[#554C44]">
                       {content}
                     </p>
                   </div>
