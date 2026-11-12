@@ -1,3 +1,5 @@
+import { CMA_PART1_FURTHER_WORKED } from "@/data/cma-part1-further-worked";
+import { CMA_PART1_FINAL_WORKED } from "@/data/cma-part1-final-worked";
 import type { CmaBeginnerNote } from "@/data/cma-part2-beginner-notes";
 
 /** Beginner-first explanations for the 80 CMA Part 1 study sections.
@@ -171,5 +173,8 @@ const examples: Record<string, NonNullable<CmaBeginnerNote["example"]>> = {
 
 export const CMA_PART1_BEGINNER_NOTES: Record<string, CmaBeginnerNote> =
   Object.fromEntries(introductions.map(([id, ar, en]) => [
-    id, { idea: { ar, en }, ...(examples[id] ? { example: examples[id] } : {}) },
+    id, {
+      idea: { ar, en },
+      example: examples[id] ?? CMA_PART1_FURTHER_WORKED[id] ?? CMA_PART1_FINAL_WORKED[id],
+    },
   ]));
