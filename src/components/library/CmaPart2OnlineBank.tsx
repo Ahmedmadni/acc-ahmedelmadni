@@ -3,6 +3,7 @@ import { BookOpenText, CheckCircle2, Search, XCircle } from "lucide-react";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CMA_DOMAINS, CMA_TOPICS, type CmaDomain, type CmaStudyUnit } from "@/data/cma-topics";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { CmaAnswerSupport } from "@/components/library/CmaAnswerSupport";
 
 type Language = "ar" | "en";
 
@@ -209,6 +210,7 @@ export function CmaPart2OnlineBank({ lang, studyUnit }: { lang: Language; studyU
                             : `Correct answer: ${String.fromCharCode(65 + question.answerIndex)}`}
                         </div>
                         <p className="mt-2 whitespace-pre-wrap" dir={view.direction}>{view.explanation}</p>
+                        <CmaAnswerSupport question={question} lang={lang} isCorrect={chosen === question.answerIndex} />
                         <button
                           type="button"
                           onClick={() => setAnswers((previous) => {
