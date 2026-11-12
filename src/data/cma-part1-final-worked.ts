@@ -268,24 +268,24 @@ export const CMA_PART1_FINAL_WORKED: Record<string, NonNullable<CmaBeginnerNote[
   },
   "su12-learning-curve": {
     "scenario": {
-      "ar": "في نموذج تعلم زمني للوحدة بمعدل 80% لكل تضاعف في الإنتاج التراكمي، استغرق إنتاج الوحدة الأولى 10 ساعات. كم يستغرق إنتاج الوحدة الثانية والرابعة في نموذج الوحدة الفردية المبسط؟",
-      "en": "Under a unit-time learning model with 80% time at each cumulative-output doubling, the first unit takes 10 hours. What are the modeled times for units 2 and 4?"
+      "ar": "في نموذج المتوسط الزمني التراكمي بمنحنى تعلم 80%، استغرق إنتاج أول وحدة 10 ساعات. احسب متوسط الساعات لكل وحدة بعد إنتاج أول وحدتين وأول أربع وحدات، ثم مجموع ساعات أول أربع وحدات.",
+      "en": "Under an 80% cumulative-average learning curve, the first unit takes 10 hours. Find the average time per unit for the first two and first four units, then total time for four units."
     },
     "steps": {
       "ar": [
-        "عند مضاعفة رقم الوحدة من 1 إلى 2: الزمن = 10 × 80% = 8 ساعات.",
-        "عند مضاعفة رقم الوحدة من 2 إلى 4: الزمن = 8 × 80% = 6.4 ساعات.",
-        "هذا نموذج وقت الوحدة؛ لا تخلطه بنموذج متوسط الزمن التراكمي."
+        "عند مضاعفة الإنتاج التراكمي من وحدة إلى وحدتين: متوسط الوقت لكل وحدة = 10 × 80% = 8 ساعات، والإجمالي = 16 ساعة.",
+        "عند مضاعفة الإنتاج التراكمي من وحدتين إلى أربع وحدات: المتوسط الجديد = 8 × 80% = 6.4 ساعات للوحدة.",
+        "إجمالي وقت أول أربع وحدات = 4 × 6.4 = 25.6 ساعة؛ وقت الوحدتين الثالثة والرابعة معًا = 25.6 − 16 = 9.6 ساعة."
       ],
       "en": [
-        "Doubling unit number from 1 to 2 gives 10 × 80% = 8 hours.",
-        "Doubling unit number from 2 to 4 gives 8 × 80% = 6.4 hours.",
-        "This is a unit-time model; do not confuse it with cumulative-average learning."
+        "When cumulative production doubles from one unit to two, average time per unit = 10 × 80% = 8 hours, totaling 16 hours.",
+        "When cumulative production doubles from two to four, new average time per unit = 8 × 80% = 6.4 hours.",
+        "Total time for the first four units = 4 × 6.4 = 25.6 hours; combined time for units three and four = 25.6 − 16 = 9.6 hours."
       ]
     },
     "takeaway": {
-      "ar": "حدد نوع منحنى التعلم في السؤال لأن الصيغ تختلف.",
-      "en": "Identify the learning-curve model before applying its formula."
+      "ar": "هذا نموذج المتوسط التراكمي المطلوب دراسته في مخرجات CMA؛ متوسط 6.4 ساعات لا يعني أن الوحدة الرابعة وحدها تستغرق 6.4 ساعات.",
+      "en": "This is the CMA cumulative-average model: the 6.4-hour figure is the average across four units, not necessarily the time for unit four alone."
     }
   },
   "su12-strategic-management": {
