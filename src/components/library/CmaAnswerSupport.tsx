@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { CmaLocalQuestion } from "@/data/cma-question-bank";
 import { CMA_ANSWER_WALKTHROUGHS } from "@/data/cma-answer-walkthroughs";
 import { CMA_PART1_BEGINNER_NOTES } from "@/data/cma-part1-beginner-notes";
@@ -24,13 +25,16 @@ export function CmaAnswerSupport({
     ? CMA_PART2_BEGINNER_NOTES[question.topicId]
     : CMA_PART1_BEGINNER_NOTES[question.topicId];
 
+  const [expanded, setExpanded] = useState(!isCorrect && Boolean(verifiedWalkthrough));
+
   if (!verifiedWalkthrough && !note) return null;
 
   return (
     <details
       className="mt-4 rounded-xl border border-[#A88765]/30 bg-white p-4 text-[#40382F]"
       dir={lang === "ar" ? "rtl" : "ltr"}
-      defaultOpen={!isCorrect && Boolean(verifiedWalkthrough)}
+      open={expanded}
+      onToggle={(event) => setExpanded(event.currentTarget.open)}
     >
       <summary className="cursor-pointer text-sm font-black leading-7 text-[#76543F]">
         {verifiedWalkthrough
