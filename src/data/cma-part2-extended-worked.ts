@@ -44,7 +44,7 @@ export const CMA_PART2_EXTENDED_WORKED: Record<string, NonNullable<CmaBeginnerNo
 },
 "p2-su6-stock-value": {
  scenario:{ar:"التوزيع المتوقع السنة المقبلة 4 لكل سهم، والعائد المطلوب 12%، والنمو المستدام 4%. احسب قيمة السهم بنموذج جوردون.",en:"Next-year dividend is 4 per share, required return 12% and sustainable growth 4%. Find Gordon-model value."},
- steps:{ar:["الفرق بين العائد المطلوب والنمو = 12% − 4% = 8%.","قيمة السهم = التوزيع المتوقع D1 ÷ الفرق.","P0 = 4 ÷ 0.08 = 50."],en:["Required return less growth = 12% − 4% = 8%.","Value = next expected dividend D1 ÷ this spread.","P0 = 4 ÷ 0.08 = 50."]},
+ steps:{ar:["الفرق بين العائد المطلوب والنمو = 12% − 4% = 8%.","قيمة السهم = التوزيع المتوقع D1 ÷ الفرق.","إذًا القيمة النظرية للسهم Therefore, estimated stock value P0 = 4 ÷ 0.08 = 50."],en:["Required return less growth = 12% − 4% = 8%.","Value = next expected dividend D1 ÷ this spread.","P0 = 4 ÷ 0.08 = 50."]},
  takeaway:{ar:"النموذج لا يصلح إذا لم يكن النمو المستدام أقل من العائد المطلوب.",en:"The constant-growth model requires sustainable growth below the required return."}
 },
 "p2-su7-receivables": {
