@@ -1444,7 +1444,7 @@ export const ICMA_2024_PART2_C: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 0,
     "explanation": "Lark should make 30,000 units of Product A, 14,000 units of Product B (utilizing the\n     remaining machine hours), and outsource 6,000 units of Product B because this alternative makes the\n      greatest contribution as shown below.\n\n     Hours:         (30,000 A units x 3 hours) = 90,000 hours\n                   160,000 hours – 90,000 hours = 70,000 hours remaining\n                    70,000 ÷ 5 hours for B unit = 14,000 units of Product B\n\n     Contribution:  =  [($75 - $30) x 30,000] + [($125 - $48) x 14,000] + [($125 - $60) x 6,000]\n                =  $1,350,000 + $1,078,000 + $390,000\n                =  $2,818,000",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-C-081",

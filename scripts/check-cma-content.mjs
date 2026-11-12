@@ -58,6 +58,7 @@ const { CMA_PART2_FINAL_WORKED } = readDataFile("cma-part2-final-worked");
 const { CMA_DOMAIN_GLOSSARY } = readDataFile("cma-learning-glossary");
 const { CMA_EDITORIAL_CLARIFICATIONS } = readDataFile("cma-editorial-clarifications");
 const { CMA_ANSWER_WALKTHROUGHS } = readDataFile("cma-answer-walkthroughs");
+const { CMA_VERIFIED_ICMA_LAYOUTS } = readDataFile("cma-icma-verified-layouts");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
@@ -259,13 +260,34 @@ for (const [index, original] of CMA_ICMA_2024_PART2_RAW.entries()) {
 for (const [section, count] of Object.entries(officialSectionCounts)) {
   check(officialSourceCounts[section] === count, `Wrong ICMA 2024 section count: ${section}`);
 }
-check(officialLayoutReviewCount === 71, "Expected 71 ICMA PDF questions flagged for table/layout verification");
-console.log("Validated 369 official retired ICMA 2024 Part 2 MCQs across six source domains; 71 layout-review warnings");
+// Each clearance requires a visually inspected source PDF page, its printed
+// question/choice table and the official answer key. A mere text match is insufficient.
+check(CMA_VERIFIED_ICMA_LAYOUTS.length === 8,
+  "Expected eight visually reviewed, source-key-verified retired questions");
+const auditedIds = new Set();
+for (const audit of CMA_VERIFIED_ICMA_LAYOUTS) {
+  check(!auditedIds.has(audit.id), `Duplicate source review: ${audit.id}`);
+  auditedIds.add(audit.id);
+  const raw = CMA_ICMA_2024_PART2_RAW.find((q) => q.id === audit.id);
+  const site = CMA_LOCAL_QUESTIONS.find((q) => q.id === audit.id);
+  check(raw && site && raw.pdfPage === audit.pdfPage &&
+    audit.printedPage === audit.pdfPage - 1 &&
+    audit.answerPdfPage > audit.pdfPage &&
+    audit.answerIndex === raw.answerIndex &&
+    site.answerIndex === raw.answerIndex &&
+    audit.method === "source-PDF-visual-question-choices-answer-key" &&
+    raw.layoutCheckRecommended === false && site.sourceLayoutReview === false,
+    `Source page verification/key does not match: ${audit.id}`);
+}
+check(CMA_ICMA_2024_PART2_RAW.find((q) => q.id === "IMA2024-P2-B-084")?.question.startsWith("Frame Industries"),
+  "Original B-084 stray OCR character should not reappear");
+check(officialLayoutReviewCount === 63, "Expected 63 outstanding table/layout reviews after eight verified clearances");
+console.log("Validated 369 retired ICMA 2024 Part 2 MCQs: 8 visually verified table/layout cases, 63 still flagged");
 
 // The independently authored walkthroughs are supplements; original source keys
 // and source explanations are verified unchanged above and must stay preserved.
 const reviewedWalkthroughs = Object.entries(CMA_ANSWER_WALKTHROUGHS);
-check(reviewedWalkthroughs.length === 20, "Expected 20 question-specific teaching walkthroughs");
+check(reviewedWalkthroughs.length === 27, "Expected 27 question-specific teaching walkthroughs");
 for (const [id, note] of reviewedWalkthroughs) {
   check(officialQuestionIds.has(id), `Answer walkthrough must link to an existing ICMA question: ${id}`);
   const original = CMA_ICMA_2024_PART2_RAW.find((item) => item.id === id);
@@ -290,6 +312,13 @@ const answerFixtures = [
   ["IMA2024-P2-E-020", 500 - (500 - 400) * 0.35, 465],
   ["IMA2024-P2-E-070", 2 + (50 - 15 - 18) / 25, 2.68],
   ["IMA2024-P2-E-071", 550 + 500 - 450 - 350 - 250, 0],
+  ["IMA2024-P2-A-003", Math.round(((40 / 35) - 1) * 100), 14],
+  ["IMA2024-P2-A-010", Math.round(((62 + 35 + 47) / (84 + 11)) * 100) / 100, 1.52],
+  ["IMA2024-P2-B-084", 10000000 * 0.08 * 3 / 12 + 20000000 * 0.08 * 6 / 12 + 5000000 * 0.08 * 3 / 12 + (10000000 + 15000000) * 0.005 * 3 / 12, 1131250],
+  ["IMA2024-P2-C-080", 30000 * (75-30) + 14000 * (125-48) + 6000 * (125-60), 2818000],
+  ["IMA2024-P2-E-012", 95000 - 3000 + 2000 - 400 - (5000-3000) * 0.4, 92800],
+  ["IMA2024-P2-E-013", (90000 + 4000 + 6000) - (25000 - (25000 - (50000 - 7 * 5000)) * 0.4), 79000],
+  ["IMA2024-P2-E-034", -550 -500 * .877 + 450 * .769 + 350 * .675 + 350 * .592 + 380 * .519, -1.78],
 ];
 for (const [id, actual, expected] of answerFixtures) {
   check(Math.abs(actual - expected) < 0.0001,
@@ -297,7 +326,7 @@ for (const [id, actual, expected] of answerFixtures) {
   check(CMA_ANSWER_WALKTHROUGHS[id],
     `Numeric audit fixture without an explanatory walkthrough: ${id}`);
 }
-console.log("Validated 20 independent bilingual answer walkthroughs and 10 numerical answer fixtures");
+console.log("Validated 27 independent bilingual answer walkthroughs and 17 numerical answer fixtures");
 
 
 check(CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS.length === 44, "Expected 44 original questions from the 11 study-unit concepts");

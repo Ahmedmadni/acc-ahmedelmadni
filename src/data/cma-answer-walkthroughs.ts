@@ -6,7 +6,7 @@ export interface CmaAnswerWalkthrough {
   expectedAnswerIndex: number;
   steps: { ar: string[]; en: string[] };
 }
-export const CMA_ANSWER_WALKTHROUGHS: Record<string, CmaAnswerWalkthrough> = {
+export const CMA_ANSWER_WALKTHROUGHS: Record<string, CmaAnswerWalkthrough> =  {
   "IMA2024-P2-A-002": {
     "expectedAnswerIndex": 2,
     "steps": {
@@ -304,6 +304,111 @@ export const CMA_ANSWER_WALKTHROUGHS: Record<string, CmaAnswerWalkthrough> = {
         "Total outflows are 550,000 at time zero plus 500,000 in year one = 1,050,000.",
         "Recover 450,000 in year two, 350,000 in year three and 250,000 in year four; total = 1,050,000.",
         "Simple cash payback reaches cumulative zero at the end of year four: 4 years. Do not substitute accounting profit or discount rate into ordinary payback."
+      ]
+    }
+  },
+  "IMA2024-P2-A-003": {
+    "expectedAnswerIndex": 3,
+    "steps": {
+      "ar": [
+        "استخدم التحليل الأفقي للمقارنة بين السنة الأولى والثانية: نسبة التغير = (القيمة الجديدة − القديمة) ÷ القيمة القديمة.",
+        "مصروف البيع ارتفع من 35,000 إلى 40,000، أي زيادة 5,000؛ النسبة = 5,000 ÷ 35,000 ≈ 14.29%، فتُقرب إلى 14%.",
+        "لا تخلط التحليل الأفقي بالتحليل الرأسي: 40,000 ÷ 275,000 يحسب نسبة مصروف البيع من مبيعات السنة الثانية، وليس معدل نمو المصروف."
+      ],
+      "en": [
+        "Use horizontal analysis for change between Year 1 and Year 2: growth rate = (new amount − prior amount) / prior amount.",
+        "Selling expenses rose from 35,000 to 40,000, an increase of 5,000; 5,000 / 35,000 ≈ 14.29%, rounded to 14%.",
+        "Do not confuse horizontal growth with vertical common-size analysis: 40,000 / 275,000 is selling expense as a share of Year 2 sales, not its annual growth."
+      ]
+    }
+  },
+  "IMA2024-P2-A-010": {
+    "expectedAnswerIndex": 3,
+    "steps": {
+      "ar": [
+        "السؤال يطلب النسبة السريعة في 31 ديسمبر فقط؛ لذلك استخدم عمود نهاية السنة ولا تُدخل المخزون أو الأصول الثابتة في البسط.",
+        "الأصول السريعة = نقد 62,000 + أوراق مالية 35,000 + عملاء 47,000 = 144,000، والخصوم المتداولة = دائنون 84,000 + مستحقات 11,000 = 95,000.",
+        "النسبة = 144,000 ÷ 95,000 ≈ 1.516، أي 1.52 مرة. سندات الدين طويلة الأجل لا تدخل ضمن الخصوم المتداولة وفق البيانات المعطاة."
+      ],
+      "en": [
+        "The question asks for December 31 quick ratio only: use the year-end column and exclude inventory and plant assets from quick assets.",
+        "Quick assets = cash 62,000 + marketable securities 35,000 + receivables 47,000 = 144,000. Current liabilities = payables 84,000 + accrued liabilities 11,000 = 95,000.",
+        "Quick ratio = 144,000 / 95,000 ≈ 1.516, or 1.52. Long-term bonds are not included in current liabilities under the given data."
+      ]
+    }
+  },
+  "IMA2024-P2-B-084": {
+    "expectedAnswerIndex": 1,
+    "steps": {
+      "ar": [
+        "قسّم السنة إلى أربعة أرباع بواقع ثلاثة أشهر لكل ربع. الفائدة 8% سنويًا على المسحوب: 10 ملايين للربع الأول، و20 مليونًا للثاني والثالث، و5 ملايين للرابع.",
+        "إجمالي الفائدة = 10,000,000×8%×3/12 + 20,000,000×8%×6/12 + 5,000,000×8%×3/12 = 1,100,000.",
+        "رسم الالتزام 0.5% سنويًا على غير المستخدم: 10 ملايين للربع الأول و15 مليونًا للرابع؛ الرسوم = 12,500 + 18,750 = 31,250؛ الإجمالي = 1,131,250."
+      ],
+      "en": [
+        "Split the year into four three-month quarters. Charge annual 8% interest on amounts borrowed: 10 million in Q1, 20 million in Q2–Q3, and 5 million in Q4.",
+        "Interest = 10,000,000×8%×3/12 + 20,000,000×8%×6/12 + 5,000,000×8%×3/12 = 1,100,000.",
+        "Annual 0.5% commitment fee is charged on unused balances: 10 million in Q1 and 15 million in Q4. Fees = 12,500 + 18,750 = 31,250; interest plus fees = 1,131,250."
+      ]
+    }
+  },
+  "IMA2024-P2-C-080": {
+    "expectedAnswerIndex": 0,
+    "steps": {
+      "ar": [
+        "الطاقة المتاحة 160,000 ساعة. إنتاج 30,000 وحدة أ يحتاج 30,000×3=90,000 ساعة؛ المتبقي 70,000 ساعة يصنع 70,000÷5=14,000 وحدة ب.",
+        "يجب إسناد الـ6,000 وحدة المتبقية من ب إلى مورد خارجي. مساهمة أ الداخلية للوحدة =75−30=45؛ ب الداخلية =125−48=77؛ ب الخارجية =125−60=65.",
+        "المساهمة = 30,000×45 + 14,000×77 + 6,000×65 = 2,818,000 قبل الثابت المشترك. مقارنة استئجار 30,000 ساعة بتكلفة ثابتة إضافية 150,000 تعطي مساهمة صافية أقل."
+      ],
+      "en": [
+        "Machine capacity is 160,000 hours. Producing 30,000 A units takes 30,000×3=90,000 hours; remaining 70,000 hours can make 70,000/5=14,000 B units.",
+        "Outsource the remaining 6,000 B units. Unit contribution is 75−30=45 for internal A, 125−48=77 for internal B, and 125−60=65 for outsourced B.",
+        "Total contribution = 30,000×45 + 14,000×77 + 6,000×65 = 2,818,000 before common fixed overhead. Renting an additional 30,000 hours for 150,000 extra fixed cost leaves a lower incremental benefit."
+      ]
+    }
+  },
+  "IMA2024-P2-E-012": {
+    "expectedAnswerIndex": 1,
+    "steps": {
+      "ar": [
+        "تكلفة المعدة الجديدة 95,000؛ بيع المعدة القديمة يحصّل 3,000. تزداد الذمم المدينة بمقدار 8,000−6,000=2,000، ويزداد الدائنون 2,500−2,100=400، فينخفض احتياج النقد بهذا المقدار.",
+        "القيمة الدفترية للقديمة = 50,000−45,000=5,000؛ سعر البيع 3,000 يخلق خسارة ضريبية 2,000، ووفرة ضريبة = 2,000×40%=800.",
+        "التدفق الابتدائي الخارج =95,000−3,000+2,000−400−800=92,800؛ لا تعامل قيمة الأصل القديمة الدفترية كمدفوع نقدي جديد."
+      ],
+      "en": [
+        "New equipment costs 95,000; sale of old equipment brings 3,000. Receivables rise 8,000−6,000=2,000 while payables rise 2,500−2,100=400, which partly finances working capital.",
+        "Old asset carrying amount = 50,000−45,000=5,000; sale at 3,000 creates a tax loss of 2,000 and tax saving of 2,000×40%=800.",
+        "Initial net outflow = 95,000−3,000+2,000−400−800=92,800. Do not treat the old asset's carrying amount as a new cash payment."
+      ]
+    }
+  },
+  "IMA2024-P2-E-013": {
+    "expectedAnswerIndex": 2,
+    "steps": {
+      "ar": [
+        "ثمن المعدة الجديدة 90,000، ويضاف التركيب 4,000 والشحن والتأمين 6,000؛ التكلفة النقدية عند البداية = 100,000.",
+        "المعدة القديمة تكلفتها 50,000 وتُهلك بالقسط الثابت خلال 10 سنوات، وبعد 7 سنوات يكون مجمع الإهلاك 35,000، والقيمة الدفترية 15,000. بيعها 25,000 يحقق ربحًا خاضعًا للضريبة 10,000 وضريبته 4,000.",
+        "صافي متحصل بيع القديمة =25,000−4,000=21,000؛ الاستثمار النقدي الابتدائي الصافي = 100,000−21,000=79,000."
+      ],
+      "en": [
+        "New equipment purchase is 90,000, plus installation 4,000 and freight/insurance 6,000, for 100,000 initial cash cost.",
+        "The old machine originally cost 50,000; 7 of 10 straight-line years yield 35,000 depreciation and carrying amount 15,000. A sale for 25,000 creates a 10,000 taxable gain and 4,000 tax.",
+        "After-tax proceeds from the old machine =25,000−4,000=21,000; net initial cash outflow =100,000−21,000=79,000."
+      ]
+    }
+  },
+  "IMA2024-P2-E-034": {
+    "expectedAnswerIndex": 0,
+    "steps": {
+      "ar": [
+        "التدفقات مبنية على سنوات مختلفة؛ لا تجمعها دون خصم. الخارجة = 550,000 اليوم و500,000 بنهاية السنة الأولى، والداخلة =450,000 و350,000 و350,000 و350,000 في السنوات 2 إلى 5.",
+        "البيع النهائي 50,000 مع قيمة دفترية صفر يولد ضريبة 40%×50,000=20,000؛ صافي المتحصل =30,000 يضاف لتدفق السنة الخامسة ليصبح 380,000.",
+        "باستخدام عوامل خصم 14% المقربة التي استخدمها المصدر: NPV بالألوف = −550 −500×0.877 +450×0.769 +350×0.675 +350×0.592 +380×0.519 ≈ −1.78؛ أي خسارة قيمة حالية تقارب 1,780."
+      ],
+      "en": [
+        "Cash flows occur in different years and must be discounted separately: outflows are 550,000 now and 500,000 at year 1; inflows are 450,000, 350,000, 350,000 and 350,000 in years 2–5.",
+        "Terminal sale of 50,000 with zero tax basis incurs 40%×50,000=20,000 tax; after-tax proceeds of 30,000 raise year-5 inflow to 380,000.",
+        "Using the source's rounded 14% PV factors, NPV in thousands = −550 −500×0.877 +450×0.769 +350×0.675 +350×0.592 +380×0.519 ≈ −1.78, about a 1,780 negative NPV."
       ]
     }
   }
