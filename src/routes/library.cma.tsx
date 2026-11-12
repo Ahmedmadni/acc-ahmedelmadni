@@ -16,6 +16,7 @@ import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestio
 import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
 import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
+import { CMA_PART1_BEGINNER_NOTES } from "@/data/cma-part1-beginner-notes";
 import {
   CMA_DOMAINS,
   CMA_EXAM_FORMAT_URL,
@@ -116,7 +117,11 @@ function CmaPage() {
   }, [part, studyUnit, domain, query]);
   const selected = filtered.find((item) => item.id === selectedId) ?? null;
   const guide = selected ? CMA_TOPIC_GUIDES[selected.id] : null;
-  const beginnerNote = selected?.part === "part-2" ? CMA_PART2_BEGINNER_NOTES[selected.id] : null;
+  const beginnerNote = selected
+    ? selected.part === "part-2"
+      ? CMA_PART2_BEGINNER_NOTES[selected.id]
+      : CMA_PART1_BEGINNER_NOTES[selected.id]
+    : null;
   const questions = selected
     ? CMA_LOCAL_QUESTIONS.filter((item) => item.topicId === selected.id)
     : [];
@@ -429,6 +434,11 @@ function CmaPage() {
             <h3 className="mt-2 font-display text-2xl font-black">
               {lang === "ar" ? selected.titleAr : selected.titleEn}
             </h3>
+            {lang === "ar" && (
+              <p className="mt-1 text-sm font-medium text-[#76543F]" dir="ltr">
+                {selected.titleEn}
+              </p>
+            )}
             <p className="mt-2 text-xs leading-6 text-[#76543F]">
               {selected.part === "part-2"
                 ? lang === "ar"
@@ -443,7 +453,7 @@ function CmaPage() {
                 {beginnerNote && (
                   <div className="mt-6 rounded-2xl border border-[#A88765]/30 bg-white p-5 sm:p-6" dir={lang === "ar" ? "rtl" : "ltr"}>
                     <p className="text-xs font-black tracking-wide text-[#76543F]">
-                      {lang === "ar" ? "المرحلة 1 · افهم الفكرة أولًا" : "Step 1 · Understand the idea first"}
+                      {lang === "ar" ? "المرحلة 1 · الفكرة ببساطة" : "Step 1 · Get the idea"}
                     </p>
                     <h4 className="mt-2 font-display text-xl font-black">
                       {lang === "ar" ? "الشرح ببساطة" : "In plain language"}
@@ -472,14 +482,14 @@ function CmaPage() {
                     )}
                     <p className="mt-4 text-xs leading-6 text-[#76543F]">
                       {lang === "ar"
-                        ? "بعد فهم المثال، انتقل إلى المفاهيم التفصيلية والقوانين والحالة التطبيقية ثم أسئلة الموضوع."
-                        : "Once the idea is clear, continue to the detailed guide, formulas, worked case and topic questions."}
+                        ? "بعد فهم الفكرة أو حل المثال، أكمل الشرح التفصيلي والقوانين والحالة التطبيقية، ثم أسئلة هذا الموضوع فقط."
+                        : "After the introductory idea or example, continue to the detailed lesson, formulas, worked case and this topic’s questions."}
                     </p>
                   </div>
                 )}
                 {beginnerNote && (
                   <h4 className="mt-8 font-display text-lg font-black text-[#76543F]">
-                    {lang === "ar" ? "المرحلة 2 · التفسير التفصيلي والتطبيقات" : "Step 2 · Detailed explanations and applications"}
+                    {lang === "ar" ? "المرحلة 2 · الشرح المتعمق والتطبيقات" : "Step 2 · Detailed explanation and applications"}
                   </h4>
                 )}
                 {(
@@ -566,7 +576,7 @@ function CmaPage() {
             )}
             <h4 className="mt-8 flex items-center gap-2 font-display text-lg font-black">
               <CircleHelp className="size-5 text-[#76543F]" />
-              {lang === "ar" ? "تدرب على هذا الموضوع" : "Practice this topic"}
+              {lang === "ar" ? "المرحلة 3 · تدرب على أسئلة هذا الموضوع" : "Step 3 · Practice this topic"}
             </h4>
             <div className="mt-4 space-y-4">
               {questions.slice(0, visibleQuestions).map((q, index) => (

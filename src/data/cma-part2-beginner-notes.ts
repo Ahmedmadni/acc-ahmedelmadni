@@ -1,3 +1,5 @@
+import { CMA_PART2_EXTENDED_WORKED } from "@/data/cma-part2-extended-worked";
+
 /**
  * Human-authored, beginner-first explanations for all 56 CMA Part 2 topics.
  * These are learning bridges, not replacements for the full technical guide.
@@ -140,4 +142,7 @@ const worked: Record<string, NonNullable<CmaBeginnerNote["example"]>> = {
 };
 
 export const CMA_PART2_BEGINNER_NOTES: Record<string, CmaBeginnerNote> =
-  Object.fromEntries(ideas.map(([id, ar, en]) => [id, { idea: { ar, en }, ...(worked[id] ? { example: worked[id] } : {}) }]));
+  Object.fromEntries(ideas.map(([id, ar, en]) => [id, {
+    idea: { ar, en },
+    ...((worked[id] ?? CMA_PART2_EXTENDED_WORKED[id]) ? { example: worked[id] ?? CMA_PART2_EXTENDED_WORKED[id] } : {}),
+  }]));

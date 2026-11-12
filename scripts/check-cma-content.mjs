@@ -50,6 +50,8 @@ const { CMA_PART2_PRACTICE_8_15 } = readDataFile("cma-part2-practice-8-15");
 const { CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS } = readDataFile("cma-part2-2019-outline-original");
 const { CMA_PART2_2026_INDEPENDENT_QUESTIONS } = readDataFile("cma-part2-2026-independent-practice");
 const { CMA_PART2_BEGINNER_NOTES } = readDataFile("cma-part2-beginner-notes");
+const { CMA_PART1_BEGINNER_NOTES } = readDataFile("cma-part1-beginner-notes");
+const { CMA_PART2_EXTENDED_WORKED } = readDataFile("cma-part2-extended-worked");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
@@ -61,6 +63,29 @@ const questionIds = new Set();
 const questionTexts = new Set();
 
 check(CMA_TOPICS.length === 136 && ids.size === 136, "Expected 80 Part 1 and 56 Part 2 unique sections");
+const part1GuideTopics = CMA_TOPICS.filter((topic) => topic.part === "part-1");
+check(part1GuideTopics.length === 80, "Expected 80 CMA Part 1 study topics");
+check(Object.keys(CMA_PART1_BEGINNER_NOTES).length === 80,
+  "All 80 CMA Part 1 topics require original plain-language explanations");
+let part1WorkedCount = 0;
+for (const topic of part1GuideTopics) {
+  const note = CMA_PART1_BEGINNER_NOTES[topic.id];
+  check(note?.idea?.ar?.length >= 70 && note?.idea?.en?.length >= 70,
+    `Incomplete plain-language Part 1 introduction: ${topic.id}`);
+  if (note.example) {
+    part1WorkedCount++;
+    check(note.example.scenario.ar.length > 35 && note.example.scenario.en.length > 35 &&
+      note.example.steps.ar.length >= 3 &&
+      note.example.steps.en.length === note.example.steps.ar.length &&
+      note.example.steps.ar.every((step) => step.length > 15) &&
+      note.example.steps.en.every((step) => step.length > 15) &&
+      note.example.takeaway.ar.length > 25 && note.example.takeaway.en.length > 25,
+      `Missing Part 1 worked steps: ${topic.id}`);
+  }
+}
+check(part1WorkedCount >= 16, "Expected at least 16 CMA Part 1 solved examples");
+check(Object.keys(CMA_PART2_EXTENDED_WORKED).length === 20,
+  "Expected 20 additional topic-specific Part 2 worked examples");
 const part2GuideTopics = CMA_TOPICS.filter((topic) => topic.part === "part-2");
 check(part2GuideTopics.length === 56, "Expected 56 CMA Part 2 topic sections");
 check(Object.keys(CMA_PART2_BEGINNER_NOTES).length === part2GuideTopics.length,
@@ -79,9 +104,15 @@ for (const topic of part2GuideTopics) {
     `Incomplete bilingual worked example: ${topic.id}`);
   }
 }
-check(Object.values(CMA_PART2_BEGINNER_NOTES).filter((note) => note.example).length >= 12,
-  "Expected at least 12 step-by-step examples for core CMA Part 2 topics");
-console.log("Validated beginner-first bilingual introductions for all 56 CMA Part 2 topics and guided examples");
+check(Object.values(CMA_PART2_BEGINNER_NOTES).filter((note) => note.example).length >= 33,
+  "Expected at least 33 guided worked examples for CMA Part 2");
+for (const [id, extra] of Object.entries(CMA_PART2_EXTENDED_WORKED)) {
+  check(CMA_TOPICS.some((topic) => topic.part === "part-2" && topic.id === id),
+    `Invalid additional worked example topic: ${id}`);
+  check(CMA_PART2_BEGINNER_NOTES[id]?.example === extra,
+    `Part 2 extra worked example did not appear in lesson: ${id}`);
+}
+console.log(`Validated 80 plain-language CMA Part 1 intros with ${part1WorkedCount} worked examples; 56 Part 2 intros with at least 33 examples`);
 
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
