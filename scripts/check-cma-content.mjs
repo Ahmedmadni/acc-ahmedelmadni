@@ -52,6 +52,9 @@ const { CMA_PART2_2026_INDEPENDENT_QUESTIONS } = readDataFile("cma-part2-2026-in
 const { CMA_PART2_BEGINNER_NOTES } = readDataFile("cma-part2-beginner-notes");
 const { CMA_PART1_BEGINNER_NOTES } = readDataFile("cma-part1-beginner-notes");
 const { CMA_PART2_EXTENDED_WORKED } = readDataFile("cma-part2-extended-worked");
+const { CMA_PART1_FURTHER_WORKED } = readDataFile("cma-part1-further-worked");
+const { CMA_PART1_FINAL_WORKED } = readDataFile("cma-part1-final-worked");
+const { CMA_PART2_FINAL_WORKED } = readDataFile("cma-part2-final-worked");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
 
@@ -83,7 +86,18 @@ for (const topic of part1GuideTopics) {
       `Missing Part 1 worked steps: ${topic.id}`);
   }
 }
-check(part1WorkedCount >= 16, "Expected at least 16 CMA Part 1 solved examples");
+check(part1WorkedCount === 80, "Every one of the 80 Part 1 topics must have a worked example");
+const part1FurtherIds = Object.keys(CMA_PART1_FURTHER_WORKED);
+const part1FinalIds = Object.keys(CMA_PART1_FINAL_WORKED);
+check(part1FurtherIds.length === 33 && part1FinalIds.length === 31,
+  "Expected 33 Part 1 supplementary cases and 31 final cases");
+for (const [id, example] of [...Object.entries(CMA_PART1_FURTHER_WORKED), ...Object.entries(CMA_PART1_FINAL_WORKED)]) {
+  check(part1GuideTopics.some((topic) => topic.id === id), `Unknown Part 1 case topic: ${id}`);
+  check(CMA_PART1_BEGINNER_NOTES[id]?.example === example,
+    `Part 1 supplementary case was not connected to the correct lesson: ${id}`);
+}
+check(new Set([...part1FurtherIds, ...part1FinalIds]).size === 64,
+  "Part 1 additional worked examples must cover separate topics");
 check(Object.keys(CMA_PART2_EXTENDED_WORKED).length === 20,
   "Expected 20 additional topic-specific Part 2 worked examples");
 const part2GuideTopics = CMA_TOPICS.filter((topic) => topic.part === "part-2");
@@ -104,15 +118,24 @@ for (const topic of part2GuideTopics) {
     `Incomplete bilingual worked example: ${topic.id}`);
   }
 }
-check(Object.values(CMA_PART2_BEGINNER_NOTES).filter((note) => note.example).length >= 33,
-  "Expected at least 33 guided worked examples for CMA Part 2");
+check(Object.values(CMA_PART2_BEGINNER_NOTES).filter((note) => note.example).length === 56,
+  "Every one of the 56 Part 2 topics must have a worked example");
+check(Object.keys(CMA_PART2_FINAL_WORKED).length === 23,
+  "Expected 23 additional Part 2 topics with worked examples");
 for (const [id, extra] of Object.entries(CMA_PART2_EXTENDED_WORKED)) {
   check(CMA_TOPICS.some((topic) => topic.part === "part-2" && topic.id === id),
     `Invalid additional worked example topic: ${id}`);
   check(CMA_PART2_BEGINNER_NOTES[id]?.example === extra,
     `Part 2 extra worked example did not appear in lesson: ${id}`);
 }
-console.log(`Validated 80 plain-language CMA Part 1 intros with ${part1WorkedCount} worked examples; 56 Part 2 intros with at least 33 examples`);
+for (const [id, example] of Object.entries(CMA_PART2_FINAL_WORKED)) {
+  check(part2GuideTopics.some((topic) => topic.id === id), `Unknown Part 2 worked example topic: ${id}`);
+  check(CMA_PART2_BEGINNER_NOTES[id]?.example === example,
+    `Part 2 final example was not connected to the correct lesson: ${id}`);
+}
+check(new Set([...Object.keys(CMA_PART2_EXTENDED_WORKED), ...Object.keys(CMA_PART2_FINAL_WORKED)]).size === 43,
+  "Part 2 supplementary examples must cover separate topics");
+console.log(`Validated ${part1WorkedCount} CMA Part 1 and 56 Part 2 fully illustrated lessons, one bilingual case per topic`);
 
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
