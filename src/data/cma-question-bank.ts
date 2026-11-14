@@ -22,6 +22,7 @@ import { CMA_ICMA_2024_PART2_QUESTIONS } from "@/data/cma-icma-2024-part2";
 import { CMA_QUESTIONS_MCQ_VOL_1 } from "@/data/cma-questions-mcq-vol-1";
 import { CMA_GLEIM_2025_VOL1_QUESTIONS } from "@/data/cma-questions-gleim-2025-vol1";
 import { CMA_GLEIM_2025_VOL2_QUESTIONS } from "@/data/cma-questions-gleim-2025-vol2";
+import { CMA_IMA_2020_SAMPLE_QUESTIONS } from "@/data/cma-ima-2020-sample-questions";
 
 /** Original bilingual practice plus the supplied 2025 English source bank. */
 export type CmaLocalQuestion = ExamQuestion & { topicId: string; studyUnit: CmaStudyUnit };
@@ -648,4 +649,5 @@ export const CMA_LOCAL_QUESTIONS: CmaLocalQuestion[] = [
   ...CMA_QUESTIONS_MCQ_VOL_1,
   ...CMA_GLEIM_2025_VOL1_QUESTIONS,
   ...CMA_GLEIM_2025_VOL2_QUESTIONS,
+  ...CMA_IMA_2020_SAMPLE_QUESTIONS,
 ];

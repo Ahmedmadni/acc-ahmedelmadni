@@ -202,7 +202,8 @@ console.log(`Validated ${part1WorkedCount} CMA Part 1 and 56 Part 2 fully illust
 
 check(CMA_GLEIM_2025_VOL1_QUESTIONS.length === 1060, "Expected all 1,060 questions from Volume 1");
 check(CMA_GLEIM_2025_VOL2_QUESTIONS.length === 1383, "Expected all 1,383 questions from Volume 2");
-check(CMA_LOCAL_QUESTIONS.length === 3752, "Expected 860 bilingual originals + 80 Part 2 English independent + 2,443 Part 1 publisher + 369 ICMA 2024 Part 2 publisher questions");
+check(CMA_LOCAL_QUESTIONS.length === 3771, "Expected 860 bilingual originals + 80 Part 2 English independent + 2,443 Part 1 publisher + 369 ICMA 2024 Part 2 publisher + 19 IMA 2020 sample questions");
+check(new Set(CMA_LOCAL_QUESTIONS.map((q) => q.id)).size === CMA_LOCAL_QUESTIONS.length, "CMA question IDs must be unique");
 check(CMA_PART2_2026_INDEPENDENT_QUESTIONS.length === 36, "Expected 36 independent CMA Part 2 questions");
 
 check(CMA_ICMA_2024_PART2_RAW.length === 369, "Expected 369 extracted ICMA 2024 source questions");
@@ -995,10 +996,10 @@ for (const [index, expected] of extraKeys.entries()) {
     `Incorrect extra Part 2 key: ${question?.id ?? index}`);
 }
 console.log(`Checked ${extraKeys.length} advanced Part 2 answer keys`);
-check(CMA_STUDY_UNIT_CASES.length === 35, "Expected 20 Part 1 and 15 Part 2 linked cases");
+check(CMA_STUDY_UNIT_CASES.length === 37, "Expected 20 Part 1 and 15 Part 2 linked cases + 2 IMA 2020 sample essays");
 check(
   new Set(CMA_STUDY_UNIT_CASES.map((item) => item.studyUnit)).size === 35,
-  "Expected one distinct case per guided unit",
+  "Expected a linked case for every guided unit",
 );
 for (const item of CMA_STUDY_UNIT_CASES) {
   check(
@@ -1017,5 +1018,5 @@ for (const item of CMA_STUDY_UNIT_CASES) {
   );
 }
 console.log(
-  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 80 English original Part 2 + 369 ICMA 2024 Part 2 + 2,443 English Part 1 source), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
+  `CMA content valid: ${CMA_TOPICS.length} sections, ${Object.keys(CMA_TOPIC_GUIDES).length} guides, ${CMA_LOCAL_QUESTIONS.length} MCQs (860 bilingual originals + 80 English original Part 2 + 369 ICMA 2024 Part 2 + 2,443 English Part 1 source + 19 IMA 2020 samples), ${CMA_STUDY_UNIT_CASES.length} linked cases`,
 );
