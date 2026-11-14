@@ -795,7 +795,7 @@ function CmaPage() {
             (item) => selected !== null && item.studyUnit === selected.studyUnit,
           ).map((item) => (
             <section
-              key={item.studyUnit}
+              key={`${item.studyUnit}-${item.title.en}`}
               className="mt-7 rounded-3xl border border-[#A88765]/25 bg-[#1C1B19] p-6 text-[#FCFBF9] sm:p-9"
               aria-label={item.title[lang]}
             >
@@ -810,7 +810,7 @@ function CmaPage() {
               </p>
               <div className="mt-6 space-y-3">
                 {item.tasks.map((task, index) => {
-                  const key = `${item.studyUnit}-${index}`;
+                  const key = `${item.studyUnit}-${item.title.en}-${index}`;
                   return (
                     <div key={key} className="rounded-2xl border border-[#A88765]/30 p-4">
                       <p className="text-sm font-bold leading-7">

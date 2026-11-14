@@ -11,6 +11,7 @@ import { CMA_STUDY_UNIT_CASES_15_20, CMA_TOPIC_GUIDES_15_20 } from "@/data/cma-g
 import { CMA_PART2_GUIDES_1_7, CMA_PART2_CASES_1_7 } from "@/data/cma-part2-guides-1-7";
 import { CMA_PART2_GUIDES_8_15, CMA_PART2_CASES_8_15 } from "@/data/cma-part2-guides-8-15";
 import type { CmaStudyUnit } from "@/data/cma-topics";
+import { CMA_IMA_2020_ESSAY_CASES } from "@/data/cma-ima-2020-sample-questions";
 
 /** Original bilingual explanations derived from the user's Gleim 2024 Study Units 1–20. */
 export interface CmaTopicGuide {
@@ -466,4 +467,5 @@ export const CMA_STUDY_UNIT_CASES: CmaStudyUnitCase[] = [
   ...CMA_STUDY_UNIT_CASES_15_20,
   ...CMA_PART2_CASES_1_7,
   ...CMA_PART2_CASES_8_15,
+  ...CMA_IMA_2020_ESSAY_CASES,
 ];
