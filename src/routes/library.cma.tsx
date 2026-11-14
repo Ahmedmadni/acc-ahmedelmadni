@@ -833,7 +833,7 @@ function CmaPage() {
                             : "Show solution"}
                       </button>
                       {revealedTasks[key] && (
-                        <p className="mt-3 border-t border-[#A88765]/25 pt-3 text-sm leading-8 text-[#d8c9b8]">
+                        <p className="mt-3 whitespace-pre-line border-t border-[#A88765]/25 pt-3 text-sm leading-8 text-[#d8c9b8]">
                           {task.solution[lang]}
                         </p>
                       )}
