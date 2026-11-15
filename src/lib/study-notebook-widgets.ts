@@ -24,18 +24,18 @@ export function createStudyWidget(template: StudyWidgetTemplate, id: string, lan
   const ar = language === "ar";
   const base: NotebookObject = {
     id, kind: template === "journal" || template === "taccount" || template === "comparison" ? "table" : template,
-    x: 100, y: 145, width: 320, height: 225,
+    x: 45, y: 130, width: 650, height: 330,
     tone: "yellow",
   };
   switch (template) {
     case "sticky":
       return { ...base, label: ar ? "اكتب ملحوظتك المهمة هنا" : "Write your key takeaway here" };
     case "formula":
-      return { ...base, tone: "blue", height: 170,
+      return { ...base, tone: "blue", height: 230,
         label: "PV = FV / (1 + r)ⁿ" };
     case "checklist":
       return { ...base, tone: "mint", label: ar ? "خطوات المذاكرة" : "Study checklist",
-        height: 275,
+        height: 450,
         items: [
           { text: ar ? "راجع الشرح" : "Read the lesson", checked: false },
           { text: ar ? "حل 5 أسئلة" : "Solve 5 questions", checked: false },
@@ -43,18 +43,18 @@ export function createStudyWidget(template: StudyWidgetTemplate, id: string, lan
         ] };
     case "journal":
       return { ...base, kind: "table", tone: "blue", label: ar ? "قيد اليومية" : "Journal entry",
-        width: 410, height: 255,
+        width: 680, height: 440,
         cells: [
           ar ? ["الحساب", "مدين", "دائن"] : ["Account", "Debit", "Credit"],
           ["", "", ""], ["", "", ""], ["", "", ""],
         ] };
     case "taccount":
       return { ...base, kind: "table", tone: "mint", label: ar ? "حساب T" : "T-account",
-        width: 380, height: 250,
+        width: 670, height: 425,
         cells: [ar ? ["مدين", "دائن"] : ["Debit", "Credit"], ["", ""], ["", ""], ["", ""]] };
     case "comparison":
       return { ...base, kind: "table", tone: "rose", label: ar ? "جدول مقارنة" : "Comparison",
-        width: 410, height: 255,
+        width: 680, height: 440,
         cells: [ar ? ["البند", "الحالي", "السابق"] : ["Item", "Current", "Prior"],
           ["", "", ""], ["", "", ""], ["", "", ""]] };
   }
