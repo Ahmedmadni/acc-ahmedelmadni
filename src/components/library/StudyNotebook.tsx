@@ -466,7 +466,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [pageSearch, setPageSearch] = useState("");
   const [showPageManager, setShowPageManager] = useState(false);
   const [exportingPdf, setExportingPdf] = useState(false);
-  const [historyTick, setHistoryTick] = useState(0);
+  const [, setHistoryTick] = useState(0);
   const inkHistory = useRef<Record<string, { past: NotebookStroke[][]; future: NotebookStroke[][] }>>({});
   const [restoreMessage, setRestoreMessage] = useState("");
   const backupInput = useRef<HTMLInputElement | null>(null);
@@ -799,12 +799,15 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             className="mt-2 w-full border-b border-[#c9bba8] bg-transparent px-1 py-2 text-sm font-bold outline-none focus:border-[#76543F]"
           />
 
-          <div className="mt-3 grid grid-cols-3 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أداة التدوين" : "Notebook input tool"}>
-            {(["type", "pen", "eraser"] as NotebookTool[]).map((mode) => {
-              const Icon = mode === "type" ? Type : mode === "pen" ? PenLine : Eraser;
+          <div className="mt-3 grid grid-cols-4 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أدوات التدوين والرسم" : "Notebook writing and drawing tools"}>
+            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"] as NotebookTool[]).map((mode) => {
+              const Icon = mode === "type" ? Type : mode === "pen" ? PenLine
+                : mode === "highlighter" ? Highlighter : mode === "line" ? Minus
+                  : mode === "rectangle" ? Square : mode === "ellipse" ? Circle : Eraser;
               return (
                 <button key={mode} type="button" aria-pressed={tool === mode} onClick={() => setTool(mode)}
-                  className={`inline-flex items-center justify-center gap-1 rounded-lg px-2 py-2 text-xs font-bold transition ${tool === mode ? "bg-white text-[#253a4b] shadow-sm" : "text-[#7c705f]"}`}>
+                  title={LABELS[mode][lang]}
+                  className={`inline-flex min-h-10 flex-col items-center justify-center gap-0.5 rounded-lg px-1 py-1.5 text-[10px] font-bold transition ${tool === mode ? "bg-white text-[#253a4b] shadow-sm" : "text-[#7c705f]"}`}>
                   <Icon className="size-4" /> {LABELS[mode][lang]}
                 </button>
               );
@@ -853,27 +856,35 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             </div>
           )}
 
-          {tool === "pen" && (
+          {["pen", "line", "rectangle", "ellipse", "highlighter"].includes(tool) && (
             <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/85 px-3 py-2">
               <span className="text-xs font-bold">{LABELS.ink[lang]}</span>
-              {INK_COLORS.map(color => (
-                <button key={color} type="button" onClick={() => setInkColor(color)}
-                  aria-label={`Ink ${color}`} aria-pressed={inkColor === color}
-                  className={`size-6 rounded-full border-2 ${inkColor === color ? "border-amber-600" : "border-white"}`}
+              {(tool === "highlighter" ? ["#f6d94e", "#99e4aa", "#ffb4d3", "#a8d5ff"] : INK_COLORS).map(color => (
+                <button key={color} type="button"
+                  onClick={() => tool === "highlighter" ? setHighlighterColor(color) : setInkColor(color)}
+                  aria-label={`Ink ${color}`}
+                  aria-pressed={(tool === "highlighter" ? highlighterColor : inkColor) === color}
+                  className={`size-6 rounded-full border-2 ${(tool === "highlighter" ? highlighterColor : inkColor) === color ? "border-amber-600" : "border-white"}`}
                   style={{ backgroundColor: color }} />
               ))}
-              <label className="ms-auto flex items-center gap-1 text-xs">
-                {LABELS.width[lang]}
-                <input type="range" min={1} max={7} step={.5} value={inkWidth} onChange={e => setInkWidth(Number(e.target.value))}
-                  aria-label={LABELS.width[lang]} className="w-16 accent-[#76543F]" />
-              </label>
+              {tool !== "highlighter" && (
+                <label className="ms-auto flex items-center gap-1 text-xs">
+                  {LABELS.width[lang]}
+                  <input type="range" min={1} max={7} step={.5} value={inkWidth} onChange={e => setInkWidth(Number(e.target.value))}
+                    aria-label={LABELS.width[lang]} className="w-16 accent-[#76543F]" />
+                </label>
+              )}
             </div>
           )}
 
           <div className="mt-3">
-            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor} inkWidth={inkWidth}
+            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor}
+              highlighterColor={highlighterColor} inkWidth={inkWidth}
               lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
-              canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES} />
+              canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
+              undoInk={undoInk} redoInk={redoInk}
+              canUndoInk={Boolean(inkHistory.current[current.id]?.past.length)}
+              canRedoInk={Boolean(inkHistory.current[current.id]?.future.length)} />
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">
