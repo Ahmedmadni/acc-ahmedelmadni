@@ -9,7 +9,7 @@ import type { StudySection } from "@/lib/library-study-language";
 import {
   createNotebookPage, emptyNotebook, MAX_INK_POINTS, MAX_INK_STROKES,
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
-  NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY, normalizeNotebook,
+  NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
   notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
@@ -380,7 +380,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(NOTEBOOK_STORAGE_KEY);
-      if (saved) setStore(normalizeNotebook(JSON.parse(saved)));
+      if (saved) setStore(validateNotebookBackup(JSON.parse(saved)));
     } catch {
       // Never overwrite unreadable saved notes with an empty default notebook.
       // Only a deliberate user restore or reset may resume persistence.
