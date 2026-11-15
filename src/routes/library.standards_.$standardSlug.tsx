@@ -26,7 +26,7 @@ import { IfrsStandardStudyExpansion } from "@/components/library/IfrsStandardStu
 import { getIfrsPracticeCases } from "@/data/ifrs-book2-practice-cases";
 import { getStandardLearningPage } from "@/data/ifrs-standard-pages";
 import { IFRS_NAVIGATOR_URL } from "@/data/ifrs-standards";
-import { useSiteLang } from "@/lib/use-site-lang";
+import { useLibLang } from "@/routes/library";
 
 export const Route = createFileRoute("/library/standards_/$standardSlug")({
   loader: ({ params }) => {
@@ -39,14 +39,14 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
     if (!page) return { meta: [{ title: "معيار IFRS / IAS — أحمد المدني" }] };
     const { standard } = page;
     const url = `https://ahmedelmadni.com${page.href}`;
-    const title = `${standard.code}: ${standard.titleAr} | شرح عملي — أحمد المدني`;
+    const title = `${standard.code}: ${standard.titleEn} | IFRS Study Guide — Ahmed Elmadani`;
 
     return {
       meta: [
         { title },
-        { name: "description", content: standard.summaryAr },
+        { name: "description", content: standard.summaryEn },
         { property: "og:title", content: title },
-        { property: "og:description", content: standard.summaryAr },
+        { property: "og:description", content: standard.summaryEn },
         { property: "og:url", content: url },
         { property: "og:type", content: "article" },
         { name: "twitter:card", content: "summary_large_image" },
@@ -62,11 +62,11 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
                 "@type": ["Article", "LearningResource"],
                 "@id": `${url}#guide`,
                 headline: title,
-                name: `${standard.code} — ${standard.titleAr}`,
-                description: standard.summaryAr,
+                name: `${standard.code} — ${standard.titleEn}`,
+                description: standard.summaryEn,
                 url,
                 inLanguage: ["ar-SA", "en"],
-                learningResourceType: "دليل محاسبي تطبيقي",
+                learningResourceType: "Applied accounting study guide",
                 educationalLevel: "Professional",
                 citation: [
                   standard.officialUrl ?? IFRS_NAVIGATOR_URL,
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/library/standards_/$standardSlug")({
                 },
                 isPartOf: {
                   "@type": "CollectionPage",
-                  name: "دليل معايير IFRS وIAS",
+                  name: "IFRS & IAS Standards Study Library",
                   url: "https://ahmedelmadni.com/library/standards",
                 },
               },
@@ -184,7 +184,7 @@ function ContentSection({
 
 function StandardLearningPage() {
   const { page } = Route.useLoaderData();
-  const [lang] = useSiteLang();
+  const lang = useLibLang();
   const { standard, guide, deepDive, referenceNotes } = page;
   const practiceCases = getIfrsPracticeCases(standard.code);
   const sectionLinks = practiceCases.length
