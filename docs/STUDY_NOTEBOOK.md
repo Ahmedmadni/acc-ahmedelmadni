@@ -138,6 +138,29 @@ A user identified that **Study Elements looked like stickers, not editable learn
 
 New tests execute pure caret insertion for English and Arabic, splitting text around tables without losing characters, independent CMA/IFRS state, safe flow storage limits, table language, editable paragraph and journal-cell input events, flow-aware PDF output, and the unchanged lesson-side split view.
 
+## Streamlined side-notebook controls — 15 November 2026
+
+The notebook UI has been reorganized without changing its **in-lesson CMA/IFRS side panel**, local file format, or the available writing/financial tools.
+
+The upper notebook bar always shows the current page selector, next/previous page buttons, a new-page action, and the editable page title. A single **six-section navigation bar** replaces the long continuous strip of unrelated controls:
+
+| Section | Visible actions |
+| --- | --- |
+| **Write / كتابة** | Keyboard writing and selecting/moving existing objects; notebook typing guidance |
+| **Draw / رسم** | Pen, highlighter, eraser, straight line, rectangle, ellipse and Select; contextual ink colour/width; ink Undo/Redo |
+| **Insert / إدراج** | One expandable insertion palette at a time: in-text formulas and real accounting tables; study elements; offline stickers; compressed local images |
+| **Paper / الورق** | Ruled/graph/dotted/plain background, paper shade, A4/A5/Letter, Arabic/English direction, matched writing spacing, handwritten/regular typeface, and dock-width control on wide screens |
+| **Pages / الصفحات** | Search in page titles/content, duplicate, reorder earlier/later, and delete selected page (confirmation remains); navigation is accessible above the section bar |
+| **Export / الحفظ** | Local PDF exports (selected page or all notebook pages), JSON backup and restoration, and plain-text TXT export |
+
+Opening one section hides the others' auxiliary controls, not the actual paper. The real study page and notebook remain visible as adjacent CSS-grid siblings from 900 px onward; on narrower screens the notebook is a temporary drawer attached to the lesson, not a separate route.
+
+The new navigation uses semantic buttons, visible bilingual labels, pressed states and keyboard-focus outlines. All previously existing controls retain their original handlers and persistence. Opening **Insert** defaults to in-text insertion when no other insertion palette is expanded. The three insertion submenus are mutually exclusive. Inserting a formula, accounting table, local photo, sticker or study object returns the learner to the **Write** section so the content is immediately visible. Page navigation and adding/duplicating a page similarly return to writing.
+
+Ink Undo/Redo was moved to the **Draw** section directly above the sheet instead of duplicating it below the paper; browser text editing retains native keyboard undo. Handwriting recognition is still offered after the paper when supported; it depends on the browser, not this navigation refactor.
+
+This is a **presentation and interaction refactor** rather than a rewrite of the accounting notebook data model. Long flow pages and device-specific pen precision limitations stated earlier continue to apply.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.
