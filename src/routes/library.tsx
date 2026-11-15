@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { type Lang } from "@/lib/i18n";
 import { studySectionForPath, useLibraryStudyLanguage } from "@/lib/library-study-language";
+import { StudyNotebook } from "@/components/library/StudyNotebook";
 
 export const Route = createFileRoute("/library")({
   head: () => {
@@ -75,6 +76,7 @@ function LibraryLayout() {
   const [siteLang, setSiteLang] = useSiteLang();
   const [studyLanguages, setStudyLanguage] = useLibraryStudyLanguage();
   const [focus, setFocus] = useState(false);
+  const [notebookOpen, setNotebookOpen] = useState(true);
   const matches = useChildMatches();
   const path = matches[matches.length - 1]?.pathname ?? "/library";
   const studySection = studySectionForPath(path);
@@ -230,7 +232,17 @@ function LibraryLayout() {
             )}
           </AnimatePresence>
 
-          <Outlet />
+          <div className={studySection && notebookOpen ? "xl:pe-[416px] xl:transition-[padding] xl:duration-200" : "xl:transition-[padding] xl:duration-200"}>
+            <Outlet />
+          </div>
+          {studySection && (
+            <StudyNotebook
+              section={studySection}
+              lang={lang}
+              desktopOpen={notebookOpen}
+              onDesktopOpenChange={setNotebookOpen}
+            />
+          )}
 
           {focus && studySection && (
             <button
