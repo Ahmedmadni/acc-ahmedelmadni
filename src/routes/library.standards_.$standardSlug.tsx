@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IfrsOpenPracticeCases } from "@/components/library/IfrsOpenPracticeCases";
+import { IfrsExternalStudySources } from "@/components/library/IfrsExternalStudySources";
 import { IfrsStandardCase } from "@/components/library/IfrsStandardCase";
 import { IfrsStandardStudyExpansion } from "@/components/library/IfrsStandardStudyExpansion";
 import { getIfrsPracticeCases } from "@/data/ifrs-book2-practice-cases";
@@ -433,6 +434,8 @@ function StandardLearningPage() {
             <IfrsStandardCase deepDive={deepDive} lang={lang} />
 
             <IfrsOpenPracticeCases cases={practiceCases} lang={lang} />
+
+            <IfrsExternalStudySources standardCode={standard.code} lang={lang} />
 
             <section
               id="checklist"
