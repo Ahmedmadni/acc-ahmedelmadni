@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
   BookOpenText, Check, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Copy, Download, Eraser, FilePlus2, Upload, FileDown, Highlighter, Minus, Square, Circle, Search, Redo2,
-  NotebookPen, PenLine, RotateCcw, ScanText,
+  NotebookPen, PenLine, RotateCcw, ScanText, MousePointer2, ImagePlus, Sticker, CopyPlus,
   Settings2, Trash2, Type, X,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
@@ -11,11 +11,14 @@ import {
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
-  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
+  strokeBounds, transformNotebookStroke, clampNotebookObject,
+  MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
+  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
+import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -24,6 +27,7 @@ const LABELS = {
   type: { ar: "كتابة", en: "Type" },
   pen: { ar: "قلم", en: "Pen" },
   highlighter: { ar: "تظليل", en: "Highlight" },
+  select: { ar: "تحديد", en: "Select" },
   line: { ar: "خط", en: "Line" },
   rectangle: { ar: "مربع", en: "Box" },
   ellipse: { ar: "بيضاوي", en: "Oval" },
@@ -146,6 +150,15 @@ function NotebookPaper({
   const [textOverflows, setTextOverflows] = useState(false);
   const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
+  const [selectedStrokeId, setSelectedStrokeId] = useState<string | null>(null);
+  const [selectedObjectId, setSelectedObjectId] = useState<string | null>(null);
+  const [objectPreview, setObjectPreview] = useState<NotebookObject | null>(null);
+  const selectionDrag = useRef<{
+    pointerId: number; kind: "stroke" | "object"; id: string;
+    mode: "move" | "resize"; startX: number; startY: number;
+    bounds: { x: number; y: number; width: number; height: number };
+    originalStroke?: NotebookStroke; originalObject?: NotebookObject;
+  } | null>(null);
   const [width, setWidth] = useState(330);
   const [recognizing, setRecognizing] = useState(false);
   const [recognized, setRecognized] = useState<string[] | null>(null);
@@ -156,6 +169,10 @@ function NotebookPaper({
 
   useEffect(() => {
     setPreview(null);
+    setSelectedStrokeId(null);
+    setSelectedObjectId(null);
+    setObjectPreview(null);
+    selectionDrag.current = null;
     drawing.current = null;
     activeEraser.current = null;
     startTime.current = 0;
@@ -211,11 +228,82 @@ function NotebookPaper({
     };
   }
 
+  function startObjectSelection(e: PointerEvent<HTMLDivElement>, object: NotebookObject) {
+    if (tool !== "select" || (e.pointerType === "mouse" && e.button !== 0)) return;
+    const rect = sheet.current?.getBoundingClientRect();
+    if (!rect) return;
+    e.stopPropagation();
+    e.preventDefault();
+    const localX = (e.clientX - rect.left) / rect.width * NOTEBOOK_DESIGN_WIDTH;
+    const localY = (e.clientY - rect.top) / rect.height * height;
+    const handle = (e.target as HTMLElement).dataset.handle === "resize";
+    setSelectedObjectId(object.id);
+    setSelectedStrokeId(null);
+    selectionDrag.current = {
+      pointerId: e.pointerId, kind: "object", id: object.id,
+      mode: handle ? "resize" : "move",
+      startX: localX, startY: localY,
+      bounds: { x: object.x, y: object.y, width: object.width, height: object.height },
+      originalObject: object,
+    };
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }
+
+  function moveObjectSelection(e: PointerEvent<HTMLDivElement>) {
+    const active = selectionDrag.current;
+    if (!active || active.kind !== "object" || active.pointerId !== e.pointerId) return;
+    const rect = sheet.current?.getBoundingClientRect();
+    if (!rect) return;
+    const dx = (e.clientX - rect.left) / rect.width * NOTEBOOK_DESIGN_WIDTH - active.startX;
+    const dy = (e.clientY - rect.top) / rect.height * height - active.startY;
+    const source = active.originalObject!;
+    const resized = active.mode === "resize";
+    const next = clampNotebookObject({
+      ...source,
+      x: resized ? source.x : source.x + dx,
+      y: resized ? source.y : source.y + dy,
+      width: resized ? Math.max(32, source.width + dx) : source.width,
+      height: resized ? Math.max(32, source.height + dy) : source.height,
+    }, height);
+    setObjectPreview(next);
+    e.preventDefault();
+  }
+
+  function endObjectSelection(e: PointerEvent<HTMLDivElement>) {
+    const active = selectionDrag.current;
+    if (!active || active.kind !== "object" || active.pointerId !== e.pointerId) return;
+    if (objectPreview && active.originalObject && (
+      objectPreview.x !== active.originalObject.x || objectPreview.y !== active.originalObject.y ||
+      objectPreview.width !== active.originalObject.width || objectPreview.height !== active.originalObject.height
+    )) onChange({ objects: page.objects.map(obj => obj.id === active.id ? objectPreview : obj) });
+    selectionDrag.current = null;
+    setObjectPreview(null);
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
+  }
+
   function pointerDown(e: PointerEvent<SVGSVGElement>) {
     if (tool === "type" || (e.pointerType === "mouse" && e.button !== 0)) return;
-    if (tool !== "eraser" && page.strokes.length >= MAX_INK_STROKES) return;
+    if (tool !== "eraser" && tool !== "select" && page.strokes.length >= MAX_INK_STROKES) return;
     if (!startTime.current) startTime.current = e.timeStamp;
     const point = toPoint(e);
+    if (tool === "select") {
+      const index = nearestInkStrokeIndex(page.strokes, point.x, point.y, 20);
+      setSelectedObjectId(null);
+      if (index < 0) { setSelectedStrokeId(null); return; }
+      const stroke = page.strokes[index], bounds = strokeBounds(stroke);
+      const nearHandle = stroke.id === selectedStrokeId &&
+        Math.abs(point.x - bounds.x - bounds.width) < 24 &&
+        Math.abs(point.y - bounds.y - bounds.height) < 24;
+      setSelectedStrokeId(stroke.id);
+      selectionDrag.current = {
+        pointerId: e.pointerId, kind: "stroke", id: stroke.id,
+        mode: nearHandle ? "resize" : "move", startX: point.x, startY: point.y,
+        bounds, originalStroke: stroke,
+      };
+      e.currentTarget.setPointerCapture(e.pointerId);
+      e.preventDefault();
+      return;
+    }
     if (tool === "eraser") {
       activeEraser.current = e.pointerId;
       e.currentTarget.setPointerCapture(e.pointerId);
@@ -243,6 +331,19 @@ function NotebookPaper({
   }
 
   function pointerMove(e: PointerEvent<SVGSVGElement>) {
+    const selection = selectionDrag.current;
+    if (tool === "select" && selection?.kind === "stroke" && selection.pointerId === e.pointerId) {
+      const point = toPoint(e);
+      const dx = point.x - selection.startX;
+      const dy = point.y - selection.startY;
+      const old = selection.bounds;
+      const target = selection.mode === "resize" ? {
+        x: old.x, y: old.y, width: Math.max(1, old.width + dx), height: Math.max(1, old.height + dy),
+      } : { x: old.x + dx, y: old.y + dy, width: old.width, height: old.height };
+      setPreview(transformNotebookStroke(selection.originalStroke!, target, height));
+      e.preventDefault();
+      return;
+    }
     if (tool === "eraser" && activeEraser.current === e.pointerId) {
       eraseAt(toPoint(e));
       e.preventDefault();
@@ -272,6 +373,17 @@ function NotebookPaper({
   }
 
   function pointerEnd(e: PointerEvent<SVGSVGElement>) {
+    const selection = selectionDrag.current;
+    if (selection?.kind === "stroke" && selection.pointerId === e.pointerId) {
+      if (preview && preview.id === selection.id &&
+        JSON.stringify(preview.points) !== JSON.stringify(selection.originalStroke?.points)) {
+        onChange({ strokes: page.strokes.map(stroke => stroke.id === selection.id ? preview : stroke) });
+      }
+      selectionDrag.current = null;
+      setPreview(null);
+      if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
+      return;
+    }
     if (activeEraser.current === e.pointerId) {
       activeEraser.current = null;
       if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
