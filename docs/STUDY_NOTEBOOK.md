@@ -182,3 +182,13 @@ This is a **presentation and interaction refactor** rather than a rewrite of the
 - Inline table cell inputs are at least 40px high with 16px text to improve on-screen keyboard behavior and tap accuracy on tablets. Debit/credit cells request the numeric/decimal keyboard and render left-to-right, while account titles continue to respect page writing direction.
 - No additional account, backend, database or network dependency is introduced; existing v1 notebook storage, data format and JSON recovery are unchanged.
 - **Release gate:** automated source regression coverage was added, but actual CI execution, desktop/tablet visual QA, and confirmation of production publication are still required.
+
+
+## PDF journal summaries and efficient table navigation — 15 November 2026
+
+- Inline journal tables now show the **same bilingual debit/credit totals, status and validation warnings** in locally exported PDF snapshots as in the live editor. The PDF uses a shared display formatter rather than duplicating balance formulas.
+- The PDF surface is generated from editable note data without modifying saved rows, and each table's status is printed after its table. The JSON backup stays the canonical editable format; PDFs are rasterized print copies.
+- On desktop/tablet keyboards, **Enter** and **ArrowDown** move to the same column in the next available row; **Shift+Enter** and **ArrowUp** move to the previous row. The target cell is focused and its text selected for replacement. The default **Tab/Shift+Tab** browser traversal stays available. IME composition, Cmd/Ctrl and Alt key combinations do not override text entry.
+- The new behavior is limited to in-page editable tables; it introduces neither an external accounting service nor a database.
+- **Known limitation:** if a large inline table plus totals exceeds the fixed page height, the existing page clipping/overflow limitation still applies. Verify exported pages visually on small-tablet devices.
+- CI regression tests cover computed PDFs in English and Arabic, invalid/unbalanced states, data immutability, keyboard focus, and IME/Tab behavior. Physical tablet stylus tests remain necessary.
