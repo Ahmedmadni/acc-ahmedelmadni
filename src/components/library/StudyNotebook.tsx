@@ -439,6 +439,12 @@ function NotebookPaper({
   if (preview && !drawnStrokes.some(stroke => stroke.id === preview.id)) drawnStrokes.push(preview);
   const chosenStroke = drawnStrokes.find(stroke => stroke.id === selectedStrokeId);
   const chosenStrokeBounds = chosenStroke ? strokeBounds(chosenStroke) : null;
+  const selectedObject = page.objects.find(item => item.id === selectedObjectId);
+  function editSelectedObject(patch: Partial<NotebookObject>) {
+    if (!selectedObjectId) return;
+    onChange({ objects: page.objects.map(item =>
+      item.id === selectedObjectId ? { ...item, ...patch } : item) });
+  }
 
   return (
     <div className="space-y-2">
@@ -531,10 +537,55 @@ function NotebookPaper({
                 {object.kind === "image" && object.src
                   ? <img src={object.src} alt={lang === "ar" ? "صورة مضافة إلى المذكرة" : "Notebook image"}
                       draggable={false} className="pointer-events-none h-full w-full object-contain" />
-                  : <span className="pointer-events-none flex h-full w-full items-center justify-center leading-none"
-                      style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
-                      {object.label}
-                    </span>}
+                  : object.kind === "sticker"
+                    ? <span className="pointer-events-none flex h-full w-full items-center justify-center leading-none"
+                        style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
+                        {object.label}
+                      </span>
+                    : <div data-study-widget={object.kind} dir={page.direction}
+                        className="pointer-events-none flex h-full w-full flex-col gap-1 overflow-hidden rounded-lg border text-start shadow-sm"
+                        style={{
+                          backgroundColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].background,
+                          color: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].text,
+                          borderColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].border,
+                          padding: `${10 * scale}px`,
+                        }}>
+                        <span className="shrink-0 font-bold uppercase tracking-wide opacity-70"
+                          style={{ fontSize: `${15 * scale}px` }}>
+                          {studyWidgetDefaultTitle(object.kind)}
+                        </span>
+                        {object.kind === "sticky" || object.kind === "formula"
+                          ? <div className="min-h-0 flex-1 overflow-hidden whitespace-pre-wrap break-words font-semibold"
+                              style={{ fontSize: `${(object.kind === "formula" ? 26 : 23) * scale}px`, lineHeight: 1.3 }}>
+                              {object.label}
+                            </div>
+                          : <div className="shrink-0 truncate font-bold"
+                              style={{ fontSize: `${22 * scale}px` }}>{object.label}</div>}
+                        {object.kind === "checklist" && (
+                          <div className="min-h-0 flex-1 space-y-1 overflow-hidden" style={{ fontSize: `${20 * scale}px` }}>
+                            {(object.items ?? []).map((item, i) => (
+                              <div key={i} className="flex items-start gap-1">
+                                <span>{item.checked ? "☑" : "☐"}</span>
+                                <span className={item.checked ? "line-through opacity-65" : ""}>{item.text}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {object.kind === "table" && (
+                          <div className="min-h-0 flex-1 overflow-hidden" style={{ display: "grid",
+                            gridTemplateColumns: `repeat(${object.cells?.[0]?.length || 2}, minmax(0, 1fr))`,
+                            alignContent: "start" }}>
+                            {(object.cells ?? []).flatMap((row, ri) => row.map((cell, ci) => (
+                              <div key={`${ri}-${ci}`} className="truncate border p-1"
+                                style={{ borderColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].border,
+                                  fontWeight: ri === 0 ? 700 : 400, fontSize: `${17 * scale}px`,
+                                  background: ri === 0 ? "rgba(255,255,255,.42)" : "transparent" }}>
+                                {cell || " "}
+                              </div>
+                            )))}
+                          </div>
+                        )}
+                      </div>
                 {selected && (
                   <div data-handle="resize"
                     aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
