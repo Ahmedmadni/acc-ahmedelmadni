@@ -182,3 +182,31 @@ export function reviewNotebookJournal(cells: readonly (readonly string[])[]): No
     debitMinor, creditMinor, differenceMinor, invalidRows,
   };
 }
+
+
+/** Shared, localized presentation for the study editor and its PDF snapshots.
+ * An unbalanced or incomplete journal is a warning, never a posted transaction. */
+export function formatNotebookJournalReview(
+  review: NotebookJournalReview, direction: NotebookDirection,
+): { debitLabel: string; creditLabel: string; debit: string; credit: string; difference: string; message: string } {
+  const ar = direction === "rtl";
+  const money = (minor: number) => (minor / 100).toLocaleString(ar ? "ar-SA" : "en-US", {
+    minimumFractionDigits: 2, maximumFractionDigits: 2,
+  });
+  const difference = money(review.differenceMinor);
+  const message = review.status === "empty"
+    ? (ar ? "أدخل الحسابات والمبالغ لمراجعة توازن القيد." : "Enter accounts and amounts to check the entry.")
+    : review.status === "invalid"
+      ? (ar ? "راجع الصفوف: " : "Check rows: ") + review.invalidRows.join(", ")
+      : review.status === "balanced"
+        ? (ar ? "القيد متوازن." : "The entry is balanced.")
+        : (ar ? "القيد غير متوازن. الفرق: " : "Out of balance. Difference: ") + difference;
+  return {
+    debitLabel: ar ? "إجمالي المدين" : "Total debit",
+    creditLabel: ar ? "إجمالي الدائن" : "Total credit",
+    debit: money(review.debitMinor),
+    credit: money(review.creditMinor),
+    difference,
+    message,
+  };
+}
