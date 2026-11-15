@@ -165,6 +165,7 @@ function NotebookPaper({
   const flowCursor = useRef<NotebookFlowCursor | null>(null);
   const lastInsertId = useRef(-1);
   const [textOverflows, setTextOverflows] = useState(false);
+  const [flowLimitWarning, setFlowLimitWarning] = useState(false);
   const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
   const [selectedStrokeId, setSelectedStrokeId] = useState<string | null>(null);
@@ -220,7 +221,13 @@ function NotebookPaper({
   const paper = notebookPaperBackground(page.pattern, page.shade, lineGap);
 
   function updateFlow(blocks: NotebookFlowBlock[]) {
-    onChange({ flow: blocks, text: notebookFlowPlainText(blocks).slice(0, MAX_NOTE_TEXT_LENGTH) });
+    const combinedText = notebookFlowPlainText(blocks);
+    if (combinedText.length > MAX_NOTE_TEXT_LENGTH || blocks.length > MAX_NOTEBOOK_FLOW_BLOCKS) {
+      setFlowLimitWarning(true);
+      return;
+    }
+    setFlowLimitWarning(false);
+    onChange({ flow: blocks, text: combinedText });
   }
 
   useEffect(() => {
@@ -811,6 +818,13 @@ function NotebookPaper({
           )}
         </section>
       )}
+      {flowLimitWarning && (
+        <p role="alert" className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-5 text-amber-950">
+          {lang === "ar"
+            ? "وصلت هذه الصفحة للحد المسموح للنص والجداول؛ أضف صفحة جديدة قبل متابعة الكتابة."
+            : "This sheet has reached its saved text/table limit. Add another page before continuing."}
+        </p>
+      )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
           <p>{page.flow?.length
@@ -1086,6 +1100,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
 
   function insertInlineTable(template: NotebookFlowTableTemplate) {
     if (!storageWritable) return;
+    if (current.text.length > MAX_NOTE_TEXT_LENGTH - 300) {
+      setRestoreMessage(lang === "ar" ? "أنشئ صفحة جديدة قبل إدراج الجدول." : "Create another page before inserting a table.");
+      return;
+    }
     if ((current.flow?.length ?? 1) + 2 > MAX_NOTEBOOK_FLOW_BLOCKS) {
       setRestoreMessage(lang === "ar" ? "وصلت لعدد العناصر المسموح في الصفحة." : "This sheet has reached its structured block limit.");
       return;
