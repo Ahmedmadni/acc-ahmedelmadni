@@ -1,4 +1,5 @@
 import type { NotebookPage, NotebookStroke } from "@/lib/study-notebook";
+import { STUDY_WIDGET_PALETTE, studyWidgetDefaultTitle } from "@/lib/study-notebook-widgets";
 import {
   NOTEBOOK_DESIGN_WIDTH, NOTEBOOK_SIZES, notebookPaperBackground,
   notebookStrokePath,
@@ -100,6 +101,58 @@ function buildPageDom(page: NotebookPage) {
         `font-size:${Math.min(object.width, object.height) * .8}px`,
       ].join(";");
       holder.appendChild(sticker);
+    } else if (["sticky", "formula", "checklist", "table"].includes(object.kind)) {
+      const palette = STUDY_WIDGET_PALETTE[object.tone ?? "yellow"];
+      holder.dir = page.direction;
+      holder.style.cssText += [
+        "box-sizing:border-box", "display:flex", "flex-direction:column",
+        "align-items:stretch", "justify-content:flex-start", "gap:5px",
+        "padding:10px", "border-radius:12px", "overflow:hidden",
+        `background:${palette.background}`, `color:${palette.text}`,
+        `border:1px solid ${palette.border}`,
+      ].join(";");
+      const heading = document.createElement("strong");
+      heading.textContent = studyWidgetDefaultTitle(object.kind);
+      heading.style.cssText = "flex-shrink:0;font-size:15px;letter-spacing:1px;opacity:.7;";
+      holder.appendChild(heading);
+      const title = document.createElement("div");
+      title.textContent = object.label ?? "";
+      title.style.cssText = [
+        "overflow:hidden", "overflow-wrap:anywhere", "white-space:pre-wrap",
+        "font-weight:700", "line-height:1.3",
+        `font-size:${object.kind === "formula" ? 26 : object.kind === "sticky" ? 23 : 22}px`,
+      ].join(";");
+      holder.appendChild(title);
+      if (object.kind === "checklist") {
+        for (const item of object.items ?? []) {
+          const entry = document.createElement("div");
+          entry.textContent = `${item.checked ? "☑" : "☐"} ${item.text}`;
+          entry.style.cssText = [
+            "font-size:20px", "overflow-wrap:anywhere", "line-height:1.2",
+            item.checked ? "text-decoration:line-through;opacity:.65" : "",
+          ].join(";");
+          holder.appendChild(entry);
+        }
+      }
+      if (object.kind === "table") {
+        const grid = document.createElement("div");
+        const columns = object.cells?.[0]?.length || 2;
+        grid.style.cssText = [
+          "display:grid", `grid-template-columns:repeat(${columns},minmax(0,1fr))`,
+          "width:100%", "overflow:hidden", "align-content:start",
+        ].join(";");
+        (object.cells ?? []).forEach((row, ri) => row.forEach(cell => {
+          const entry = document.createElement("div");
+          entry.textContent = cell || "\u00a0";
+          entry.style.cssText = [
+            "overflow:hidden", "text-overflow:ellipsis", "white-space:nowrap",
+            "padding:5px", "font-size:17px", `border:1px solid ${palette.border}`,
+            ri === 0 ? "font-weight:700;background:rgba(255,255,255,.42)" : "",
+          ].join(";");
+          grid.appendChild(entry);
+        }));
+        holder.appendChild(grid);
+      }
     }
     root.appendChild(holder);
   }
