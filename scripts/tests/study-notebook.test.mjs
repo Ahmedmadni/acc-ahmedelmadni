@@ -352,7 +352,103 @@ test("Page management, in-panel search, PDF buttons, undo/redo and color tools h
   assert.match(component,/onClick=\{redoInk\}/);
   assert.match(component,/setPageSearch\(event\.target\.value\)/);
   assert.match(component,/page\.title \+ " " \+ page\.text/);
-  assert.match(component,/\["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"\]/);
+  assert.match(component,/\["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse", "select"\]/);
   assert.match(component,/kind: tool,/);
   assert.match(component,/opacity=\{stroke\.kind === "highlighter"/);
+});
+
+test("Older handwritten notes hydrate with empty movable objects, preserving all original ink", () => {
+  const store = notebook.emptyNotebook();
+  const ink = {
+    id: "legacy-pen", color: "#24334a", width: 3,
+    points: [{x: 21, y: 33, pressure: .6, t: 0}],
+  };
+  store.pages.cma[0].strokes = [ink];
+  delete store.pages.cma[0].objects;
+  const hydrated = notebook.normalizeNotebook(store);
+  assert.equal(hydrated.pages.cma[0].strokes.length, 1);
+  assert.equal(hydrated.pages.cma[0].strokes[0].id, ink.id);
+  assert.equal(hydrated.pages.cma[0].objects.length, 0);
+});
+
+test("Local image source validator rejects remote addresses, SVG, scripts and oversize data", () => {
+  assert.equal(notebook.validNotebookImageSrc("https://example.com/x.png"), false);
+  assert.equal(notebook.validNotebookImageSrc("data:image/svg+xml;base64,PHN2Zz4="), false);
+  assert.equal(notebook.validNotebookImageSrc("data:text/html;base64,PHA+"), false);
+  assert.equal(notebook.validNotebookImageSrc("data:image/webp;base64,AA=="), true);
+  assert.equal(notebook.validNotebookImageSrc("data:image/png;base64,AAAA".repeat(100000)), false);
+});
+
+test("Notebook image/sticker persistence clamps geometry and rejects dangerous inputs", () => {
+  const original=notebook.emptyNotebook();
+  original.pages.cma[0].objects=[
+    { id:"safe-sticker", kind:"sticker", label:"🧮", x:900, y:-20, width:200, height:120 },
+    { id:"safe-image", kind:"image", src:"data:image/png;base64,AA==", x:60, y:90, width:200, height:150 },
+    { id:"external", kind:"image", src:"https://example.com/image.png", x:0, y:0, width:50, height:50 },
+    { id:"svg", kind:"image", src:"data:image/svg+xml;base64,AA==", x:0, y:0, width:50, height:50 },
+    { id:"safe-sticker", kind:"sticker", label:"duplicate", x:0, y:0, width:50, height:50 },
+  ];
+  const normalized=notebook.normalizeNotebook(original).pages.cma[0].objects;
+  assert.equal(normalized.length,2);
+  assert.equal(normalized[0].x,560);
+  assert.equal(normalized[0].y,0);
+  assert.equal(normalized[1].src,"data:image/png;base64,AA==");
+  assert.equal(normalized[1].kind,"image");
+  const copy=notebook.validateNotebookBackup(JSON.parse(JSON.stringify(notebook.normalizeNotebook(original))));
+  assert.equal(copy.pages.cma[0].objects.length,2);
+});
+
+test("Moving and resizing freehand ink maintains point shape and stays within sheet coordinates", () => {
+  const stroke={id:"draw1",kind:"pen",color:"#24334a",width:3,points:[
+    {x:100,y:200,pressure:.6,t:0},
+    {x:140,y:220,pressure:.8,t:20},
+    {x:180,y:260,pressure:.5,t:40},
+  ]};
+  const original=JSON.stringify(stroke);
+  const moved=notebook.transformNotebookStroke(stroke,{x:130,y:240,width:80,height:60},1075);
+  assert.equal(moved.points[0].x,130);
+  assert.equal(moved.points[0].y,240);
+  assert.equal(moved.points[2].x,210);
+  assert.equal(moved.points[2].y,300);
+  const resized=notebook.transformNotebookStroke(stroke,{x:100,y:200,width:160,height:120},1075);
+  assert.equal(resized.points[2].x,260);
+  assert.equal(resized.points[2].y,320);
+  const bounded=notebook.transformNotebookStroke(stroke,{x:750,y:1000,width:160,height:120},1075);
+  assert.ok(bounded.points.every(p=>p.x>=0&&p.x<=760&&p.y>=0&&p.y<=1075));
+  assert.equal(JSON.stringify(stroke),original,"Editing a selection does not mutate the source stroke");
+});
+
+test("Sticker collections and image import run locally with a restricted raster pipeline", async () => {
+  const content=await readFile("src/lib/study-notebook-stickers.ts","utf8");
+  assert.match(content,/NOTEBOOK_STICKER_GROUPS/);
+  for(const category of ["accounting","study","medical","markers"]) assert.match(content,new RegExp('id: "'+category+'"'));
+  assert.match(content,/image\/png/);
+  assert.match(content,/image\/jpeg/);
+  assert.match(content,/image\/webp/);
+  assert.match(content,/file\.size > 8_000_000/);
+  assert.match(content,/canvas\.toDataURL\("image\/webp"/);
+  assert.match(content,/URL\.revokeObjectURL\(url\)/);
+});
+
+test("Paper controls expose select, image upload and stickers without a standalone notebook page", async () => {
+  const [component,layout,pdf] = await Promise.all([
+    readFile("src/components/library/StudyNotebook.tsx","utf8"),
+    readFile("src/routes/library.tsx","utf8"),
+    readFile("src/lib/study-notebook-pdf.ts","utf8"),
+  ]);
+  assert.match(layout,/data-study-split/);
+  assert.match(layout,/data-study-main/);
+  assert.match(component,/\["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse", "select"\]/);
+  assert.match(component,/function addSticker\(label: string\)/);
+  assert.match(component,/function importImage\(file: File\)/);
+  assert.match(component,/onPointerDown=\{\(event\) => startObjectSelection\(event, object\)\}/);
+  assert.match(component,/selectionDrag\.current/);
+  assert.match(component,/transformNotebookStroke/);
+  assert.match(component,/selectedStrokeId/);
+  assert.match(component,/onChange\(\{ objects: page\.objects\.map/);
+  assert.match(component,/setTool\("select"\)/);
+  assert.match(pdf,/for \(const object of page\.objects \?\? \[\]\)/);
+  assert.match(pdf,/img\.src = object\.src/);
+  assert.match(pdf,/sticker\.textContent = object\.label/);
+  assert.match(pdf,/node\.querySelectorAll\("img"\)/);
 });

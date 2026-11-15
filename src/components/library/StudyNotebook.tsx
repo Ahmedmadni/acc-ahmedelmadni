@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
   BookOpenText, Check, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Copy, Download, Eraser, FilePlus2, Upload, FileDown, Highlighter, Minus, Square, Circle, Search, Redo2,
-  NotebookPen, PenLine, RotateCcw, ScanText,
+  NotebookPen, PenLine, RotateCcw, ScanText, MousePointer2, ImagePlus, Sticker, CopyPlus,
   Settings2, Trash2, Type, X,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
@@ -11,11 +11,14 @@ import {
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
-  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
+  strokeBounds, transformNotebookStroke, clampNotebookObject,
+  MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
+  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
+import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -24,6 +27,7 @@ const LABELS = {
   type: { ar: "كتابة", en: "Type" },
   pen: { ar: "قلم", en: "Pen" },
   highlighter: { ar: "تظليل", en: "Highlight" },
+  select: { ar: "تحديد", en: "Select" },
   line: { ar: "خط", en: "Line" },
   rectangle: { ar: "مربع", en: "Box" },
   ellipse: { ar: "بيضاوي", en: "Oval" },
@@ -146,6 +150,15 @@ function NotebookPaper({
   const [textOverflows, setTextOverflows] = useState(false);
   const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
+  const [selectedStrokeId, setSelectedStrokeId] = useState<string | null>(null);
+  const [selectedObjectId, setSelectedObjectId] = useState<string | null>(null);
+  const [objectPreview, setObjectPreview] = useState<NotebookObject | null>(null);
+  const selectionDrag = useRef<{
+    pointerId: number; kind: "stroke" | "object"; id: string;
+    mode: "move" | "resize"; startX: number; startY: number;
+    bounds: { x: number; y: number; width: number; height: number };
+    originalStroke?: NotebookStroke; originalObject?: NotebookObject;
+  } | null>(null);
   const [width, setWidth] = useState(330);
   const [recognizing, setRecognizing] = useState(false);
   const [recognized, setRecognized] = useState<string[] | null>(null);
@@ -156,6 +169,10 @@ function NotebookPaper({
 
   useEffect(() => {
     setPreview(null);
+    setSelectedStrokeId(null);
+    setSelectedObjectId(null);
+    setObjectPreview(null);
+    selectionDrag.current = null;
     drawing.current = null;
     activeEraser.current = null;
     startTime.current = 0;
@@ -211,11 +228,88 @@ function NotebookPaper({
     };
   }
 
+  function startObjectSelection(e: PointerEvent<HTMLDivElement>, object: NotebookObject) {
+    if (tool !== "select" || (e.pointerType === "mouse" && e.button !== 0)) return;
+    const rect = sheet.current?.getBoundingClientRect();
+    if (!rect) return;
+    e.stopPropagation();
+    e.preventDefault();
+    const localX = (e.clientX - rect.left) / rect.width * NOTEBOOK_DESIGN_WIDTH;
+    const localY = (e.clientY - rect.top) / rect.height * height;
+    const handle = (e.target as HTMLElement).dataset.handle === "resize";
+    setSelectedObjectId(object.id);
+    setSelectedStrokeId(null);
+    selectionDrag.current = {
+      pointerId: e.pointerId, kind: "object", id: object.id,
+      mode: handle ? "resize" : "move",
+      startX: localX, startY: localY,
+      bounds: { x: object.x, y: object.y, width: object.width, height: object.height },
+      originalObject: object,
+    };
+    e.currentTarget.setPointerCapture(e.pointerId);
+  }
+
+  function moveObjectSelection(e: PointerEvent<HTMLDivElement>) {
+    const active = selectionDrag.current;
+    if (!active || active.kind !== "object" || active.pointerId !== e.pointerId) return;
+    const rect = sheet.current?.getBoundingClientRect();
+    if (!rect) return;
+    const dx = (e.clientX - rect.left) / rect.width * NOTEBOOK_DESIGN_WIDTH - active.startX;
+    const dy = (e.clientY - rect.top) / rect.height * height - active.startY;
+    const source = active.originalObject!;
+    const resized = active.mode === "resize";
+    const next = clampNotebookObject({
+      ...source,
+      x: resized ? source.x : source.x + dx,
+      y: resized ? source.y : source.y + dy,
+      width: resized ? Math.max(32, source.width + dx) : source.width,
+      height: resized ? Math.max(32, source.height + dy) : source.height,
+    }, height);
+    setObjectPreview(next);
+    e.preventDefault();
+  }
+
+  function endObjectSelection(e: PointerEvent<HTMLDivElement>) {
+    const active = selectionDrag.current;
+    if (!active || active.kind !== "object" || active.pointerId !== e.pointerId) return;
+    if (objectPreview && active.originalObject && (
+      objectPreview.x !== active.originalObject.x || objectPreview.y !== active.originalObject.y ||
+      objectPreview.width !== active.originalObject.width || objectPreview.height !== active.originalObject.height
+    )) onChange({ objects: page.objects.map(obj => obj.id === active.id ? objectPreview : obj) });
+    selectionDrag.current = null;
+    setObjectPreview(null);
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
+  }
+
   function pointerDown(e: PointerEvent<SVGSVGElement>) {
     if (tool === "type" || (e.pointerType === "mouse" && e.button !== 0)) return;
-    if (tool !== "eraser" && page.strokes.length >= MAX_INK_STROKES) return;
+    if (tool !== "eraser" && tool !== "select" && page.strokes.length >= MAX_INK_STROKES) return;
     if (!startTime.current) startTime.current = e.timeStamp;
     const point = toPoint(e);
+    if (tool === "select") {
+      const previouslyChosen = page.strokes.find(stroke => stroke.id === selectedStrokeId);
+      const handleBounds = previouslyChosen ? strokeBounds(previouslyChosen) : null;
+      const draggingHandle = !!handleBounds &&
+        Math.abs(point.x - handleBounds.x - handleBounds.width) < 24 &&
+        Math.abs(point.y - handleBounds.y - handleBounds.height) < 24;
+      const index = draggingHandle
+        ? page.strokes.findIndex(stroke => stroke.id === selectedStrokeId)
+        : nearestInkStrokeIndex(page.strokes, point.x, point.y, 20);
+      setSelectedObjectId(null);
+      setPreview(null);
+      if (index < 0) { setSelectedStrokeId(null); return; }
+      const stroke = page.strokes[index], bounds = strokeBounds(stroke);
+      const nearHandle = draggingHandle && stroke.id === selectedStrokeId;
+      setSelectedStrokeId(stroke.id);
+      selectionDrag.current = {
+        pointerId: e.pointerId, kind: "stroke", id: stroke.id,
+        mode: nearHandle ? "resize" : "move", startX: point.x, startY: point.y,
+        bounds, originalStroke: stroke,
+      };
+      e.currentTarget.setPointerCapture(e.pointerId);
+      e.preventDefault();
+      return;
+    }
     if (tool === "eraser") {
       activeEraser.current = e.pointerId;
       e.currentTarget.setPointerCapture(e.pointerId);
@@ -243,6 +337,19 @@ function NotebookPaper({
   }
 
   function pointerMove(e: PointerEvent<SVGSVGElement>) {
+    const selection = selectionDrag.current;
+    if (tool === "select" && selection?.kind === "stroke" && selection.pointerId === e.pointerId) {
+      const point = toPoint(e);
+      const dx = point.x - selection.startX;
+      const dy = point.y - selection.startY;
+      const old = selection.bounds;
+      const target = selection.mode === "resize" ? {
+        x: old.x, y: old.y, width: Math.max(1, old.width + dx), height: Math.max(1, old.height + dy),
+      } : { x: old.x + dx, y: old.y + dy, width: old.width, height: old.height };
+      setPreview(transformNotebookStroke(selection.originalStroke!, target, height));
+      e.preventDefault();
+      return;
+    }
     if (tool === "eraser" && activeEraser.current === e.pointerId) {
       eraseAt(toPoint(e));
       e.preventDefault();
@@ -272,6 +379,17 @@ function NotebookPaper({
   }
 
   function pointerEnd(e: PointerEvent<SVGSVGElement>) {
+    const selection = selectionDrag.current;
+    if (selection?.kind === "stroke" && selection.pointerId === e.pointerId) {
+      if (preview && preview.id === selection.id &&
+        JSON.stringify(preview.points) !== JSON.stringify(selection.originalStroke?.points)) {
+        onChange({ strokes: page.strokes.map(stroke => stroke.id === selection.id ? preview : stroke) });
+      }
+      selectionDrag.current = null;
+      setPreview(null);
+      if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
+      return;
+    }
     if (activeEraser.current === e.pointerId) {
       activeEraser.current = null;
       if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
@@ -312,6 +430,12 @@ function NotebookPaper({
     setRecognized(null);
     setRecognizedText("");
   }
+
+  const drawnStrokes = page.strokes.map(stroke =>
+    preview?.id === stroke.id ? preview : stroke);
+  if (preview && !drawnStrokes.some(stroke => stroke.id === preview.id)) drawnStrokes.push(preview);
+  const chosenStroke = drawnStrokes.find(stroke => stroke.id === selectedStrokeId);
+  const chosenStrokeBounds = chosenStroke ? strokeBounds(chosenStroke) : null;
 
   return (
     <div className="space-y-2">
@@ -357,7 +481,7 @@ function NotebookPaper({
           onPointerUp={pointerEnd}
           onPointerCancel={pointerEnd}
         >
-          {[...page.strokes, ...(preview ? [preview] : [])].map((stroke) => (
+          {drawnStrokes.map((stroke) => (
             <path
               key={stroke.id}
               d={notebookStrokePath(stroke)}
@@ -369,8 +493,87 @@ function NotebookPaper({
               opacity={stroke.kind === "highlighter" ? ".32" : ".95"}
             />
           ))}
+          {tool === "select" && chosenStrokeBounds && (
+            <g pointerEvents="none">
+              <rect x={chosenStrokeBounds.x - 5} y={chosenStrokeBounds.y - 5}
+                width={chosenStrokeBounds.width + 10} height={chosenStrokeBounds.height + 10}
+                fill="none" stroke="#188a8a" strokeWidth="2.5" strokeDasharray="7 5" />
+              <circle cx={chosenStrokeBounds.x + chosenStrokeBounds.width}
+                cy={chosenStrokeBounds.y + chosenStrokeBounds.height}
+                r={12} fill="#ffffff" stroke="#188a8a" strokeWidth="3" />
+            </g>
+          )}
         </svg>
+        <div className="pointer-events-none absolute inset-0 z-[4]">
+          {page.objects.map((stored) => {
+            const object = objectPreview?.id === stored.id ? objectPreview : stored;
+            const selected = tool === "select" && selectedObjectId === object.id;
+            return (
+              <div key={object.id}
+                aria-label={object.kind === "image" ? (lang === "ar" ? "صورة قابلة للتحريك" : "Movable image") : (lang === "ar" ? "ملصق قابل للتحريك" : "Movable sticker")}
+                onPointerDown={(event) => startObjectSelection(event, object)}
+                onPointerMove={moveObjectSelection}
+                onPointerUp={endObjectSelection}
+                onPointerCancel={endObjectSelection}
+                style={{
+                  left: `${object.x / NOTEBOOK_DESIGN_WIDTH * 100}%`,
+                  top: `${object.y / height * 100}%`,
+                  width: `${object.width / NOTEBOOK_DESIGN_WIDTH * 100}%`,
+                  height: `${object.height / height * 100}%`,
+                  pointerEvents: tool === "select" ? "auto" : "none",
+                  touchAction: tool === "select" ? "none" : "auto",
+                }}
+                className={`absolute flex select-none items-center justify-center ${tool === "select" ? "cursor-move" : ""} ${selected ? "outline outline-2 outline-dashed outline-teal-600" : ""}`}
+              >
+                {object.kind === "image" && object.src
+                  ? <img src={object.src} alt={lang === "ar" ? "صورة مضافة إلى المذكرة" : "Notebook image"}
+                      draggable={false} className="pointer-events-none h-full w-full object-contain" />
+                  : <span className="pointer-events-none flex h-full w-full items-center justify-center leading-none"
+                      style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
+                      {object.label}
+                    </span>}
+                {selected && (
+                  <div data-handle="resize"
+                    aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
+                    className="pointer-events-auto absolute -bottom-2 -right-2 size-5 cursor-nwse-resize rounded-full border-2 border-teal-600 bg-white shadow" />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
+      {tool === "select" && (selectedObjectId || selectedStrokeId) && (
+        <div className="flex flex-wrap gap-2 rounded-lg border border-teal-200 bg-teal-50 p-2">
+          <span className="flex-1 text-xs leading-6 text-teal-900">
+            {lang === "ar" ? "اسحب العنصر لتحريكه، أو اسحب المقبض لتغيير حجمه." : "Drag to move; use the corner handle to resize."}
+          </span>
+          <button type="button" className="rounded-lg bg-white px-3 py-2 text-xs text-red-700"
+            onClick={() => {
+              if (selectedObjectId) onChange({ objects: page.objects.filter(object => object.id !== selectedObjectId) });
+              if (selectedStrokeId) onChange({ strokes: page.strokes.filter(stroke => stroke.id !== selectedStrokeId) });
+              setSelectedObjectId(null); setSelectedStrokeId(null);
+            }}>
+            <Trash2 className="inline size-3.5" /> {lang === "ar" ? "حذف العنصر" : "Delete selected"}
+          </button>
+          <button type="button" className="rounded-lg bg-white px-3 py-2 text-xs"
+            onClick={() => {
+              if (selectedObjectId && page.objects.length < MAX_NOTEBOOK_OBJECTS) {
+                const original = page.objects.find(object => object.id === selectedObjectId);
+                if (original) onChange({ objects: [...page.objects, clampNotebookObject({ ...original,
+                  id: newId(), x: original.x + 20, y: original.y + 20 }, height)] });
+              } else if (selectedStrokeId && page.strokes.length < MAX_INK_STROKES) {
+                const original = page.strokes.find(stroke => stroke.id === selectedStrokeId);
+                if (original) {
+                  const bounds = strokeBounds(original);
+                  onChange({ strokes: [...page.strokes,
+                    { ...transformNotebookStroke(original, { ...bounds, x: bounds.x + 20, y: bounds.y + 20 }, height), id: newId() }] });
+                }
+              }
+            }}>
+            <CopyPlus className="inline size-3.5" /> {lang === "ar" ? "تكرار" : "Duplicate"}
+          </button>
+        </div>
+      )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
           <p>{lang === "ar"
@@ -463,6 +666,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [highlighterColor, setHighlighterColor] = useState("#f6d94e");
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [showStickerPalette, setShowStickerPalette] = useState(false);
+  const [stickerGroup, setStickerGroup] = useState("accounting");
+  const imageInput = useRef<HTMLInputElement | null>(null);
+  const [importingImage, setImportingImage] = useState(false);
   const [pageSearch, setPageSearch] = useState("");
   const [showPageManager, setShowPageManager] = useState(false);
   const [exportingPdf, setExportingPdf] = useState(false);
@@ -569,6 +776,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     const id = newId();
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
+      objects: current.objects.map((object) => ({ ...object, id: newId() })),
       updatedAt: Date.now() };
     setStore((prior) => {
       const original = prior.pages[section];
@@ -605,6 +813,45 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
         : error instanceof Error ? error.message : "PDF export failed.");
     } finally { setExportingPdf(false); }
+  }
+
+  function addSticker(label: string) {
+    if (!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS) return;
+    const object: NotebookObject = {
+      id: newId(), kind: "sticker", label,
+      x: 100, y: 120, width: 110, height: 110,
+    };
+    updatePage({ objects: [...current.objects, object] });
+    setTool("select");
+    setRestoreMessage(lang === "ar" ? "تمت إضافة الملصق. اختر أداة التحديد لتحريكه." : "Sticker added. Drag it with Select.");
+  }
+
+  async function importImage(file: File) {
+    if (!storageWritable) throw new Error("Notebook storage requires recovery first.");
+    const pageId = current.id;
+    if (current.objects.length >= MAX_NOTEBOOK_OBJECTS ||
+      current.objects.filter(o => o.kind === "image").length >= MAX_IMAGES_PER_PAGE)
+      throw new Error("This page has reached its image or object limit.");
+    setImportingImage(true);
+    try {
+      const { src, ratio } = await notebookImageToDataUrl(file);
+      let imageWidth = 285;
+      let imageHeight = imageWidth / ratio;
+      if (imageHeight > 460) { imageHeight = 460; imageWidth = imageHeight * ratio; }
+      const object: NotebookObject = clampNotebookObject({
+        id: newId(), kind: "image", src, x: 75, y: 115,
+        width: Math.max(32, imageWidth), height: Math.max(32, imageHeight),
+      }, NOTEBOOK_SIZES[current.size].height);
+      setStore(prior => ({
+        ...prior,
+        pages: { ...prior.pages, [section]: prior.pages[section].map(page =>
+          page.id === pageId && page.objects.length < MAX_NOTEBOOK_OBJECTS &&
+          page.objects.filter(o => o.kind === "image").length < MAX_IMAGES_PER_PAGE
+            ? { ...page, objects: [...page.objects, object], updatedAt: Date.now() } : page) },
+      }));
+      setTool("select");
+      setRestoreMessage(lang === "ar" ? "أُدرجت الصورة داخل الورقة. استخدم التحديد للتحريك والتكبير." : "Image placed on the paper. Use Select to move or resize.");
+    } finally { setImportingImage(false); }
   }
 
   function addPage() {
@@ -844,8 +1091,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           />
 
           <div className="mt-3 grid grid-cols-4 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أدوات التدوين والرسم" : "Notebook writing and drawing tools"}>
-            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"] as NotebookTool[]).map((mode) => {
-              const Icon = mode === "type" ? Type : mode === "pen" ? PenLine
+            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse", "select"] as NotebookTool[]).map((mode) => {
+              const Icon = mode === "select" ? MousePointer2 : mode === "type" ? Type : mode === "pen" ? PenLine
                 : mode === "highlighter" ? Highlighter : mode === "line" ? Minus
                   : mode === "rectangle" ? Square : mode === "ellipse" ? Circle : Eraser;
               return (
@@ -857,6 +1104,56 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               );
             })}
           </div>
+          <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
+            <button type="button" onClick={() => setShowStickerPalette(open => !open)}
+              disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
+              aria-expanded={showStickerPalette}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
+              <Sticker className="size-4" /> {lang === "ar" ? "ملصقات" : "Stickers"}
+            </button>
+            <input ref={imageInput} type="file" accept="image/png,image/jpeg,image/webp"
+              className="sr-only" aria-label={lang === "ar" ? "اختيار صورة" : "Choose a local image"}
+              onChange={event => {
+                const file = event.target.files?.[0];
+                event.target.value = "";
+                if (!file) return;
+                setRestoreMessage("");
+                void importImage(file).catch(error => setRestoreMessage(error instanceof Error ? error.message : String(error)));
+              }} />
+            <button type="button" onClick={() => imageInput.current?.click()}
+              disabled={!storageWritable || importingImage || current.objects.length >= MAX_NOTEBOOK_OBJECTS ||
+                current.objects.filter(o => o.kind === "image").length >= MAX_IMAGES_PER_PAGE}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
+              <ImagePlus className="size-4" /> {importingImage ? "…" : lang === "ar" ? "إدراج صورة" : "Insert image"}
+            </button>
+            <p className="w-full text-[11px] text-[#806f60]">
+              {lang === "ar" ? "يمكن تحريك العناصر وتكبيرها بأداة التحديد. الصور محفوظة على جهازك فقط." :
+                "Use Select to move and resize. Images stay on this device."}
+            </p>
+          </div>
+          {showStickerPalette && (
+            <section aria-label={lang === "ar" ? "مجموعات الملصقات" : "Sticker collections"}
+              className="mt-2 space-y-3 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
+              <div className="flex flex-wrap gap-1">
+                {NOTEBOOK_STICKER_GROUPS.map(group => (
+                  <button key={group.id} type="button" aria-pressed={stickerGroup === group.id}
+                    onClick={() => setStickerGroup(group.id)}
+                    className={`rounded-lg px-2 py-1.5 text-xs font-bold ${stickerGroup === group.id ? "bg-[#283b4d] text-white" : "bg-[#eee3d1] text-[#4a3b2c]"}`}>
+                    {group[lang]}
+                  </button>
+                ))}
+              </div>
+              <div className="grid grid-cols-6 gap-1.5">
+                {NOTEBOOK_STICKER_GROUPS.filter(group => group.id === stickerGroup).flatMap(group => [...group.stickers]).map(emoji => (
+                  <button key={emoji} type="button" onClick={() => addSticker(emoji)}
+                    title={lang === "ar" ? "إضافة الملصق إلى الورقة" : "Add sticker to paper"}
+                    className="grid aspect-square place-items-center rounded-lg border border-[#e0d4c2] bg-white text-2xl transition hover:scale-105 hover:border-[#806049]">
+                    {emoji}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
           <button type="button" onClick={() => setSettingsOpen(!settingsOpen)}
             aria-expanded={settingsOpen}
             className="mt-3 flex w-full items-center justify-between rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-xs font-bold">

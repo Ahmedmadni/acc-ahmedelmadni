@@ -61,6 +61,21 @@ The notebook remains **a split-screen sibling of the active CMA or IFRS lesson**
 - Undo/redo targets ink only. Native browser text editing undo/redo remains separate; a fully unified editor history would require redesigning the page editor.
 - Per-page search searches typed text and page names, not pen ink, and there is no multi-device sync. JSON backup remains important for recovery.
 
+## Movable images, stickers and ink selection — 15 November 2026
+
+- The notebook **remains embedded directly beside the active CMA or IFRS lesson** at widths ≥900 px; on smaller screens it opens as the lesson's drawer, **never as a standalone page**.
+- Four built-in, completely offline sticker packs: **Accounting, Study, Medical and Markers**. Tap a sticker to insert it on the current sheet, choose **Select**, drag its body to move it and drag the corner handle to resize it. Selected items can be duplicated or deleted.
+- Add a locally chosen **PNG/JPEG/WebP image** through the notebook controls. The browser decodes and compresses it to bounded WebP/raster data and embeds it in the existing local notebook JSON. Only supported raster file types are accepted; SVGs, external URLs and scripts are rejected. The image can be moved/resized with the same touch/pen/mouse gestures.
+- The new **Select** tool also selects existing pen strokes, straight lines, rectangles, ovals and highlights via geometric hit testing. Drag to relocate the selected stroke; use the corner handle to resize, or duplicate/delete from the inline selection controls. Changes preserve vector stroke data. Stroke edits participate in the existing ink undo/redo history.
+- All placed images/stickers are exported with the paper and ink to the **local multi-page PDF**, and preserved in JSON backup, restore, page duplicate and cross-session local storage. Older version-1 notebooks without `objects` hydrate with empty objects while leaving their typed notes and ink untouched.
+- The app enforces per-page caps (24 objects, up to five raster images), checks file types and size (up to 8 MB before compression) and bounds embedded image data to avoid uncontrolled browser storage consumption. Storage is still browser-local; a full device quota may prevent saving and is surfaced to the learner.
+
+### Limitations and follow-up testing
+- Image and sticker data are **part of the notebook backup**. They are not uploaded to servers, searchable from the site, or automatically synced between devices.
+- Canvas compression quality varies with the browser and artwork. Complex photographs might need a smaller source image. Rasterizing multi-page PDFs with many images can consume memory.
+- Unit/integrity and production checks verify geometry/storage interfaces; hands-on S Pen, Apple Pencil, mobile Safari and Chrome QA remain important for actual gesture precision, emoji rendering and PDF fidelity.
+- The handwritten text recognition service still depends on native browser support; adding stickers/images does not provide a paid AI handwriting service.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.

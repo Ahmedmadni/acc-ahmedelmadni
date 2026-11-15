@@ -3,7 +3,7 @@ import type { StudySection } from "@/lib/library-study-language";
 export type PaperPattern = "ruled" | "grid" | "dots" | "blank";
 export type PaperShade = "white" | "ivory" | "cream" | "blue";
 export type PaperSize = "A4" | "A5" | "Letter";
-export type NotebookTool = "type" | "pen" | "highlighter" | "line" | "rectangle" | "ellipse" | "eraser";
+export type NotebookTool = "type" | "pen" | "highlighter" | "line" | "rectangle" | "ellipse" | "eraser" | "select";
 export type NotebookStrokeKind = "pen" | "highlighter" | "line" | "rectangle" | "ellipse";
 export type NotebookTypeface = "handwritten" | "regular";
 export type NotebookDirection = "ltr" | "rtl";
@@ -24,6 +24,19 @@ export interface NotebookStroke {
   points: InkPoint[];
 }
 
+export interface NotebookObject {
+  id: string;
+  kind: "sticker" | "image";
+  /** Unscaled notebook coordinates shared with pen strokes. */
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  label?: string;
+  /** Local bounded raster data URL, never SVG or an external URL. */
+  src?: string;
+}
+
 export interface NotebookPage {
   id: string;
   title: string;
@@ -35,6 +48,7 @@ export interface NotebookPage {
   typeface: NotebookTypeface;
   direction: NotebookDirection;
   strokes: NotebookStroke[];
+  objects: NotebookObject[];
   updatedAt: number;
 }
 
@@ -49,6 +63,9 @@ export const MAX_NOTEBOOK_PAGES = 40;
 export const MAX_NOTE_TEXT_LENGTH = 18000;
 export const MAX_INK_STROKES = 1500;
 export const MAX_INK_POINTS = 800;
+export const MAX_NOTEBOOK_OBJECTS = 24;
+export const MAX_IMAGES_PER_PAGE = 5;
+export const MAX_NOTEBOOK_IMAGE_URL_LENGTH = 140000;
 export const NOTEBOOK_DESIGN_WIDTH = 760;
 
 export const NOTEBOOK_SIZES: Record<PaperSize, { height: number; maxWidth: string }> = {
@@ -61,7 +78,7 @@ export function createNotebookPage(id: string, direction: NotebookDirection = "l
   return {
     id, title: "", text: "", pattern: "ruled", shade: "ivory",
     size: "A4", spacing: 43, typeface: "handwritten",
-    direction, strokes: [], updatedAt: 0,
+    direction, strokes: [], objects: [], updatedAt: 0,
   };
 }
 
@@ -87,6 +104,60 @@ function numberBetween(value: unknown, min: number, max: number, fallback: numbe
   return typeof value === "number" && Number.isFinite(value)
     ? Math.max(min, Math.min(max, value))
     : fallback;
+}
+
+export function validNotebookImageSrc(value: unknown): value is string {
+  return typeof value === "string" && value.length <= MAX_NOTEBOOK_IMAGE_URL_LENGTH &&
+    /^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(value);
+}
+
+export function clampNotebookObject(
+  object: NotebookObject,
+  pageHeight: number,
+): NotebookObject {
+  const width = numberBetween(object.width, 32, NOTEBOOK_DESIGN_WIDTH, 120);
+  const height = numberBetween(object.height, 32, pageHeight, 110);
+  return {
+    ...object,
+    width, height,
+    x: numberBetween(object.x, 0, NOTEBOOK_DESIGN_WIDTH - width, 0),
+    y: numberBetween(object.y, 0, pageHeight - height, 0),
+  };
+}
+
+export function strokeBounds(stroke: NotebookStroke) {
+  if (!stroke.points.length) return { x: 0, y: 0, width: 1, height: 1 };
+  const xs = stroke.points.map(p => p.x), ys = stroke.points.map(p => p.y);
+  const x = Math.min(...xs), y = Math.min(...ys);
+  return {
+    x, y, width: Math.max(1, Math.max(...xs) - x),
+    height: Math.max(1, Math.max(...ys) - y),
+  };
+}
+
+export function transformNotebookStroke(
+  stroke: NotebookStroke,
+  target: { x: number; y: number; width: number; height: number },
+  pageHeight: number,
+): NotebookStroke {
+  const from = strokeBounds(stroke);
+  const width = Math.max(1, Math.min(NOTEBOOK_DESIGN_WIDTH, target.width));
+  const height = Math.max(1, Math.min(pageHeight, target.height));
+  const bounded = {
+    width, height,
+    x: Math.max(0, Math.min(NOTEBOOK_DESIGN_WIDTH - width, target.x)),
+    y: Math.max(0, Math.min(pageHeight - height, target.y)),
+  };
+  return {
+    ...stroke,
+    points: stroke.points.map(point => ({
+      ...point,
+      x: Math.min(NOTEBOOK_DESIGN_WIDTH, Math.max(0,
+        bounded.x + (point.x - from.x) / from.width * bounded.width)),
+      y: Math.min(pageHeight, Math.max(0,
+        bounded.y + (point.y - from.y) / from.height * bounded.height)),
+    })),
+  };
 }
 
 export function normalizeNotebook(value: unknown): NotebookStore {
@@ -122,6 +193,29 @@ export function normalizeNotebook(value: unknown): NotebookStore {
           });
         }
       }
+      const objects: NotebookObject[] = [];
+      const rawObjects = Array.isArray(raw.objects) ? raw.objects : [];
+      let imageCount = 0;
+      const objectIds = new Set<string>();
+      for (const item of rawObjects.slice(0, MAX_NOTEBOOK_OBJECTS)) {
+        if (!validRecord(item) || typeof item.id !== "string" || !item.id ||
+            objectIds.has(item.id) || !["image", "sticker"].includes(String(item.kind))) continue;
+        const kind = item.kind as NotebookObject["kind"];
+        const data = kind === "image" ? item.src : item.label;
+        if (kind === "image" && (!validNotebookImageSrc(data) || imageCount >= MAX_IMAGES_PER_PAGE)) continue;
+        if (kind === "sticker" && (typeof data !== "string" || !data.trim())) continue;
+        objectIds.add(item.id);
+        if (kind === "image") imageCount++;
+        const size = oneOf(raw.size, ["A4", "A5", "Letter"], "A4");
+        objects.push(clampNotebookObject({
+          id: item.id, kind,
+          x: numberBetween(item.x, 0, NOTEBOOK_DESIGN_WIDTH, 80),
+          y: numberBetween(item.y, 0, NOTEBOOK_SIZES[size].height, 90),
+          width: numberBetween(item.width, 32, NOTEBOOK_DESIGN_WIDTH, 140),
+          height: numberBetween(item.height, 32, NOTEBOOK_SIZES[size].height, 130),
+          ...(kind === "image" ? { src: data as string } : { label: (data as string).slice(0, 16) }),
+        }, NOTEBOOK_SIZES[size].height));
+      }
       pages.push({
         id: raw.id,
         title: typeof raw.title === "string" ? raw.title.slice(0, 90) : "",
@@ -132,7 +226,7 @@ export function normalizeNotebook(value: unknown): NotebookStore {
         spacing: numberBetween(raw.spacing, 30, 65, 43),
         typeface: oneOf(raw.typeface, ["handwritten", "regular"], "handwritten"),
         direction: oneOf(raw.direction, ["ltr", "rtl"], "ltr"),
-        strokes,
+        strokes, objects,
         updatedAt: numberBetween(raw.updatedAt, 0, 9999999999999, 0),
       });
     }
