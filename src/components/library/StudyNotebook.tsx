@@ -250,7 +250,7 @@ function NotebookPaper({
     e.preventDefault();
     const localX = (e.clientX - rect.left) / rect.width * NOTEBOOK_DESIGN_WIDTH;
     const localY = (e.clientY - rect.top) / rect.height * height;
-    const handle = (e.target as HTMLElement).dataset.handle === "resize";
+    const handle = Boolean((e.target as HTMLElement).closest('[data-handle="resize"]'));
     setSelectedObjectId(object.id);
     setSelectedStrokeId(null);
     selectionDrag.current = {
@@ -567,7 +567,7 @@ function NotebookPaper({
                         scale={scale}
                         editable={tool === "select" || tool === "type"}
                         onChange={patch => editObjectOnPage(object.id, patch)}
-                      />
+                      />}
                 {selected && (
                   <div data-handle="resize"
                     aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
