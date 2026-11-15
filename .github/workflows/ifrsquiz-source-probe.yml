@@ -1,0 +1,25 @@
+name: Inspect IFRSQuiz public question delivery
+
+on:
+  push:
+    branches:
+      - feat/ifrsquiz-complete-bank-import-20261115
+    paths:
+      - '.github/workflows/ifrsquiz-source-probe.yml'
+      - 'scripts/ifrsquiz-source-probe.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Inspect reachable public site and assets
+        run: node scripts/ifrsquiz-source-probe.mjs
