@@ -97,6 +97,7 @@ export async function exportStudyNotebookPdf(
     orientation: "portrait", compress: true,
   });
   const printRoot = document.createElement("div");
+  printRoot.setAttribute("data-study-notebook-export-root", "");
   printRoot.style.cssText = [
     "position:fixed", "left:-99999px", "top:0",
     "width:760px", "z-index:-1", "pointer-events:none",
@@ -118,6 +119,12 @@ export async function exportStudyNotebookPdf(
           height: NOTEBOOK_SIZES[page.size].height,
           logging: false,
           useCORS: false,
+          // Keep the original print surface outside the visible viewport,
+          // but relocate its cloned copy so offscreen bounds cannot clip PDF pages.
+          onclone: (clonedDoc) => {
+            const clonedRoot = clonedDoc.querySelector("[data-study-notebook-export-root]") as HTMLElement | null;
+            if (clonedRoot) clonedRoot.style.left = "0px";
+          },
         });
         if (index > 0) pdf.addPage([width, height], "portrait");
         pdf.addImage(canvas.toDataURL("image/jpeg", .92), "JPEG", 0, 0, width, height);
