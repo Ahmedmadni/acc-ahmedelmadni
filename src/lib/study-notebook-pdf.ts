@@ -1,5 +1,6 @@
 import type { NotebookPage, NotebookStroke } from "@/lib/study-notebook";
 import { STUDY_WIDGET_PALETTE, studyWidgetDefaultTitle } from "@/lib/study-notebook-widgets";
+import { formatNotebookJournalReview, reviewNotebookJournal } from "@/lib/study-notebook-flow";
 import {
   NOTEBOOK_DESIGN_WIDTH, NOTEBOOK_SIZES, notebookPaperBackground,
   notebookStrokePath,
@@ -19,7 +20,8 @@ export function printableInkStyle(stroke: NotebookStroke) {
   };
 }
 
-function buildPageDom(page: NotebookPage) {
+/** Build the exact local print surface for a notebook page (also testable without canvas). */
+export function buildNotebookPrintablePageDom(page: NotebookPage) {
   const width = NOTEBOOK_DESIGN_WIDTH;
   const height = NOTEBOOK_SIZES[page.size].height;
   const root = document.createElement("article");
@@ -109,6 +111,36 @@ function buildPageDom(page: NotebookPage) {
         });
         table.appendChild(body);
         frame.appendChild(table);
+        if (block.template === "journal") {
+          // The exported snapshot must include exactly the same computed
+          // balance information seen in the editable study notebook.
+          const review = reviewNotebookJournal(block.cells);
+          const display = formatNotebookJournalReview(review, page.direction);
+          const summary = document.createElement("div");
+          summary.setAttribute("data-pdf-journal-review", review.status);
+          summary.dir = page.direction;
+          summary.style.cssText = [
+            "border-top:1px solid #b5c4d3", "padding:7px 8px",
+            "font-family:Arial,sans-serif", "font-size:13px",
+            "line-height:1.5", "overflow-wrap:anywhere",
+            review.status === "balanced" ? "background:#ecfdf5;color:#065f46"
+              : review.status === "empty" ? "background:#f8fafc;color:#334155"
+                : "background:#fffbeb;color:#92400e",
+          ].join(";");
+          const totals = document.createElement("div");
+          totals.style.cssText = "display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:700;";
+          const debit = document.createElement("span");
+          debit.textContent = display.debitLabel + ": " + display.debit;
+          const credit = document.createElement("span");
+          credit.textContent = display.creditLabel + ": " + display.credit;
+          totals.appendChild(debit);
+          totals.appendChild(credit);
+          summary.appendChild(totals);
+          const result = document.createElement("div");
+          result.textContent = display.message;
+          summary.appendChild(result);
+          frame.appendChild(summary);
+        }
         text.appendChild(frame);
       }
     }
@@ -248,7 +280,7 @@ export async function exportStudyNotebookPdf(
     for (let index = 0; index < pages.length; index++) {
       const page = pages[index];
       const [width, height] = STUDY_NOTEBOOK_PDF_MM[page.size];
-      const node = buildPageDom(page);
+      const node = buildNotebookPrintablePageDom(page);
       printRoot.appendChild(node);
       try {
         // Local raster assets must finish loading before the snapshot.
