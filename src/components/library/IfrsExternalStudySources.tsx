@@ -1,6 +1,7 @@
 import { BookOpenText, ExternalLink, Calculator, CircleHelp, Info } from "lucide-react";
 import { IFRSQUIZ_CATALOGUE_SOURCE, IFRSQUIZ_EXTERNAL_COUNTS, IFRSQUIZ_OBSERVED_AT } from "@/data/ifrsquiz-public-catalogue";
 import { IFRS_SUPPLEMENTARY_WORKED_CASES } from "@/data/ifrs-supplementary-worked-cases";
+import { IFRS_SKILL_COMMON_PITFALLS } from "@/data/ifrs-skill-common-pitfalls";
 import type { Lang } from "@/lib/i18n";
 
 const IFRS_SKILL_REPO = "https://github.com/ramyatrouny/ifrs-skill";
@@ -13,6 +14,7 @@ const IFRS17_ENGINE_REPO = "https://github.com/Systemorph/IFRS17CalculationEngin
 export function IfrsExternalStudySources({ standardCode, lang }: { standardCode: string; lang: Lang }) {
   const sourceQuestionCount = IFRSQUIZ_EXTERNAL_COUNTS[standardCode];
   const exercise = IFRS_SUPPLEMENTARY_WORKED_CASES[standardCode];
+  const commonPitfalls = IFRS_SKILL_COMMON_PITFALLS[standardCode] ?? [];
   const isArabic = lang === "ar";
 
   return (
@@ -62,6 +64,26 @@ export function IfrsExternalStudySources({ standardCode, lang }: { standardCode:
           </a>
         )}
       </div>
+      {commonPitfalls.length > 0 && (
+        <details className="mt-5 rounded-2xl border border-[#A88765]/20 bg-[#FCFBF9] p-4 sm:p-5">
+          <summary className="cursor-pointer text-sm font-bold leading-7 text-[#76543F]">
+            {isArabic
+              ? "٣ أخطاء تطبيقية شائعة من IFRS Skill — النص الأصلي بالإنجليزية"
+              : "Three common application pitfalls from the MIT-licensed IFRS Skill"}
+          </summary>
+          <ul className="mt-4 list-disc space-y-3 ps-5 text-sm leading-7 text-[#40382F]" dir="ltr" lang="en">
+            {commonPitfalls.map((item, i) => <li key={i}>{item}</li>)}
+          </ul>
+          <p className="mt-4 text-xs leading-6 text-[#76543F]">
+            {isArabic
+              ? "مقتطفات من مرجع خارجي مرخص MIT (أغسطس 2026)، لا تمثل مراجعة معيارية مستقلة ولا تحل محل النص الرسمي. حقوق المؤلف محفوظة للمصدر."
+              : "MIT-licensed excerpts (August 2026), not independently certified against the latest Standard. Attribution and licence are preserved."}
+          </p>
+          <a href={IFRS_SKILL_REPO} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-2 text-xs font-bold text-[#285C44]">
+            <ExternalLink className="size-3.5" /> {isArabic ? "قراءة المرجع الأصلي" : "View original source"}
+          </a>
+        </details>
+      )}
       {exercise && (
         <details className="mt-5 rounded-2xl border border-emerald-700/20 bg-[#F0F8F4] p-4 sm:p-5" dir={isArabic ? "rtl" : "ltr"}>
           <summary className="cursor-pointer text-sm font-black leading-7 text-[#285C44]">
