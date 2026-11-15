@@ -938,7 +938,11 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     const id = newId();
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
-      objects: current.objects.map((object) => ({ ...object, id: newId() })),
+      objects: current.objects.map((object) => ({
+        ...object, id: newId(),
+        ...(object.items ? { items: object.items.map(item => ({ ...item })) } : {}),
+        ...(object.cells ? { cells: object.cells.map(row => [...row]) } : {}),
+      })),
       updatedAt: Date.now() };
     setStore((prior) => {
       const original = prior.pages[section];
@@ -975,6 +979,17 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
         : error instanceof Error ? error.message : "PDF export failed.");
     } finally { setExportingPdf(false); }
+  }
+
+  function addStudyElement(template: StudyWidgetTemplate) {
+    if (!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS) return;
+    const widget = createStudyWidget(template, newId(), current.direction === "rtl" ? "ar" : "en");
+    updatePage({ objects: [...current.objects, widget] });
+    setTool("select");
+    setShowStudyWidgets(false);
+    setRestoreMessage(lang === "ar"
+      ? "تمت إضافة العنصر. انقر عليه بأداة التحديد لتحرير المحتوى وتحريكه."
+      : "Study element added. Tap it with Select to edit and position it.");
   }
 
   function addSticker(label: string) {
@@ -1231,7 +1246,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               <div className="max-h-52 space-y-1.5 overflow-y-auto">
                 {sectionPages.map((page, index) => ({ page, index }))
                   .filter(({ page }) => !pageSearch.trim() ||
-                    (page.title + " " + page.text).toLocaleLowerCase().includes(pageSearch.trim().toLocaleLowerCase()))
+                    (page.title + " " + page.text + " " + page.objects.map(studyWidgetSearchText).join(" ")).toLocaleLowerCase().includes(pageSearch.trim().toLocaleLowerCase()))
                   .map(({ page, index }) => (
                     <button key={page.id} type="button" onClick={() => { navigate(index); setShowPageManager(false); }}
                       aria-current={page.id === current.id ? "page" : undefined}
@@ -1267,6 +1282,12 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             })}
           </div>
           <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
+            <button type="button" onClick={() => setShowStudyWidgets(open => !open)}
+              disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
+              aria-expanded={showStudyWidgets}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
+              <BookOpenText className="size-4" /> {lang === "ar" ? "عناصر الدراسة" : "Study elements"}
+            </button>
             <button type="button" onClick={() => setShowStickerPalette(open => !open)}
               disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
               aria-expanded={showStickerPalette}
@@ -1293,6 +1314,18 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                 "Use Select to move and resize. Images stay on this device."}
             </p>
           </div>
+          {showStudyWidgets && (
+            <section aria-label={lang === "ar" ? "عناصر المذاكرة والمحاسبة" : "Study and accounting widgets"}
+              className="mt-2 grid grid-cols-2 gap-2 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
+              {STUDY_WIDGET_TEMPLATES.map(template => (
+                <button key={template.id} type="button" onClick={() => addStudyElement(template.id)}
+                  className="flex min-h-11 items-center gap-2 rounded-lg border border-[#e0d4c2] bg-white px-3 py-2 text-start text-xs font-bold text-[#443a2d] hover:border-[#806049]">
+                  <span className="text-lg" aria-hidden>{template.icon}</span>
+                  <span>{template[lang]}</span>
+                </button>
+              ))}
+            </section>
+          )}
           {showStickerPalette && (
             <section aria-label={lang === "ar" ? "مجموعات الملصقات" : "Sticker collections"}
               className="mt-2 space-y-3 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
