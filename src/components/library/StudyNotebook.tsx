@@ -456,6 +456,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
 
   return (
     <>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Caveat:wght@400;600;700&display=swap" precedence="default" />
       {!mobileOpen && (
         <button
           type="button"
