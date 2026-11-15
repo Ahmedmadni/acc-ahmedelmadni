@@ -206,6 +206,33 @@ test("Restoring backup rejects unrelated JSON and preserves section pages and ac
   assert.equal(restored.pages.standards[0].text, "IFRS 17 note");
 });
 
+test("Handwriting timestamps stay monotonic across multiple legacy strokes, without changing ink", async () => {
+  const received = [];
+  let cleared = 0, finished = 0;
+  class Stroke {
+    addPoint(point) { received.push(point); }
+  }
+  const nav = { async createHandwritingRecognizer() { return {
+    startDrawing() { return {
+      addStroke() {},
+      getPrediction: async () => [{ text: "hello" }],
+      clear() { cleared++; },
+    }; },
+    finish() { finished++; },
+  }; } };
+  const strokes = [
+    { id: "old1", points: [{ x: 1, y: 2, t: 0 }, { x: 2, y: 2, t: 30 }] },
+    { id: "old2", points: [{ x: 9, y: 2, t: 0 }, { x: 11, y: 2, t: 10 }] },
+  ];
+  const before=JSON.stringify(strokes);
+  const predicted=await recognizer.recognizeNotebookInk(strokes, "ltr", nav, { HandwritingStroke: Stroke });
+  assert.equal(predicted[0], "hello");
+  assert.deepEqual(received.map(point => point.t), [0,30,50,60]);
+  assert.equal(JSON.stringify(strokes), before);
+  assert.equal(cleared,1);
+  assert.equal(finished,1);
+});
+
 test("Regression against basic press-and-release eraser and desktop modal-open mismatch", async () => {
   const component=await readFile("src/components/library/StudyNotebook.tsx","utf8");
   assert.match(component,/activeEraser\.current = e\.pointerId/);
