@@ -141,9 +141,13 @@ export function transformNotebookStroke(
   pageHeight: number,
 ): NotebookStroke {
   const from = strokeBounds(stroke);
-  const bounded = clampNotebookObject({
-    id: stroke.id, kind: "sticker", ...target, label: "",
-  }, pageHeight);
+  const width = Math.max(1, Math.min(NOTEBOOK_DESIGN_WIDTH, target.width));
+  const height = Math.max(1, Math.min(pageHeight, target.height));
+  const bounded = {
+    width, height,
+    x: Math.max(0, Math.min(NOTEBOOK_DESIGN_WIDTH - width, target.x)),
+    y: Math.max(0, Math.min(pageHeight - height, target.y)),
+  };
   return {
     ...stroke,
     points: stroke.points.map(point => ({
