@@ -634,7 +634,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         role={mobileOpen ? "dialog" : "complementary"}
         aria-modal={mobileOpen ? true : undefined}
         dir={lang === "ar" ? "rtl" : "ltr"}
-        className={`fixed inset-y-0 end-0 z-[70] w-[min(95vw,430px)] flex-col overflow-hidden border-s border-[#b6a58e] bg-[#f8f5ee] text-[#302e2b] shadow-2xl min-[900px]:sticky min-[900px]:end-auto min-[900px]:z-30 min-[900px]:w-full min-[900px]:shadow-none ${focus ? "min-[900px]:top-0 min-[900px]:h-dvh" : "min-[900px]:top-16 min-[900px]:h-[calc(100dvh-4rem)]"} ${mobileOpen ? "flex" : "hidden"} ${desktopOpen ? "min-[900px]:flex" : "min-[900px]:hidden"}`}
+        className={`fixed inset-y-0 end-0 z-[70] w-[min(95vw,430px)] flex-col overflow-hidden border-s border-[#b6a58e] bg-[#f8f5ee] text-[#302e2b] shadow-2xl min-[900px]:sticky min-[900px]:end-auto min-[900px]:bottom-auto min-[900px]:z-30 min-[900px]:w-full min-[900px]:shadow-none ${focus ? "min-[900px]:top-0 min-[900px]:h-dvh" : "min-[900px]:top-16 min-[900px]:h-[calc(100dvh-4rem)]"} ${mobileOpen ? "flex" : "hidden"} ${desktopOpen ? "min-[900px]:flex" : "min-[900px]:hidden"}`}
       >
         <header className="flex shrink-0 items-center justify-between border-b border-[#cdbfae] bg-[#f1eae0] p-3">
           <div className="min-w-0">
