@@ -20,8 +20,9 @@ import {
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
-import { createStudyWidget, STUDY_WIDGET_PALETTE, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
-  studyWidgetDefaultTitle, type StudyWidgetTemplate } from "@/lib/study-notebook-widgets";
+import { createStudyWidget, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
+  type StudyWidgetTemplate } from "@/lib/study-notebook-widgets";
+import { isEditableStudyWidget, StudyNotebookEditableWidget } from "@/components/library/StudyNotebookEditableWidget";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -232,7 +233,17 @@ function NotebookPaper({
   }
 
   function startObjectSelection(e: PointerEvent<HTMLDivElement>, object: NotebookObject) {
-    if (tool !== "select" || (e.pointerType === "mouse" && e.button !== 0)) return;
+    if (!["select", "type"].includes(tool) || (e.pointerType === "mouse" && e.button !== 0)) return;
+    if (isEditableStudyWidget(object)) {
+      // A study card is a live form. Tapping its body must focus its fields.
+      // Only the separate drag header or corner handle may capture a gesture.
+      setSelectedObjectId(object.id);
+      setSelectedStrokeId(null);
+      const hitHandle = (e.target as HTMLElement).closest('[data-widget-drag], [data-handle="resize"]');
+      if (tool !== "select" || !hitHandle) return;
+    } else if (tool !== "select") {
+      return;
+    }
     const rect = sheet.current?.getBoundingClientRect();
     if (!rect) return;
     e.stopPropagation();
@@ -440,10 +451,13 @@ function NotebookPaper({
   const chosenStroke = drawnStrokes.find(stroke => stroke.id === selectedStrokeId);
   const chosenStrokeBounds = chosenStroke ? strokeBounds(chosenStroke) : null;
   const selectedObject = page.objects.find(item => item.id === selectedObjectId);
+  function editObjectOnPage(id: string, patch: Partial<NotebookObject>) {
+    onChange({ objects: page.objects.map(item =>
+      item.id === id ? { ...item, ...patch } : item) });
+  }
   function editSelectedObject(patch: Partial<NotebookObject>) {
     if (!selectedObjectId) return;
-    onChange({ objects: page.objects.map(item =>
-      item.id === selectedObjectId ? { ...item, ...patch } : item) });
+    editObjectOnPage(selectedObjectId, patch);
   }
 
   return (
@@ -519,7 +533,11 @@ function NotebookPaper({
             const selected = tool === "select" && selectedObjectId === object.id;
             return (
               <div key={object.id}
-                aria-label={object.kind === "image" ? (lang === "ar" ? "صورة قابلة للتحريك" : "Movable image") : (lang === "ar" ? "ملصق قابل للتحريك" : "Movable sticker")}
+                aria-label={isEditableStudyWidget(object)
+                  ? (lang === "ar" ? "بطاقة دراسية قابلة للتحرير مباشرة" : "Directly editable study card")
+                  : object.kind === "image"
+                    ? (lang === "ar" ? "صورة قابلة للتحريك" : "Movable image")
+                    : (lang === "ar" ? "ملصق قابل للتحريك" : "Movable sticker")}
                 onPointerDown={(event) => startObjectSelection(event, object)}
                 onPointerMove={moveObjectSelection}
                 onPointerUp={endObjectSelection}
@@ -529,10 +547,10 @@ function NotebookPaper({
                   top: `${object.y / height * 100}%`,
                   width: `${object.width / NOTEBOOK_DESIGN_WIDTH * 100}%`,
                   height: `${object.height / height * 100}%`,
-                  pointerEvents: tool === "select" ? "auto" : "none",
-                  touchAction: tool === "select" ? "none" : "auto",
+                  pointerEvents: tool === "select" || (tool === "type" && isEditableStudyWidget(object)) ? "auto" : "none",
+                  touchAction: isEditableStudyWidget(object) ? "auto" : tool === "select" ? "none" : "auto",
                 }}
-                className={`absolute flex select-none items-center justify-center ${tool === "select" ? "cursor-move" : ""} ${selected ? "outline outline-2 outline-dashed outline-teal-600" : ""}`}
+                className={`absolute flex items-center justify-center ${isEditableStudyWidget(object) ? "cursor-text" : "select-none"} ${tool === "select" && !isEditableStudyWidget(object) ? "cursor-move" : ""} ${selected ? "outline outline-2 outline-dashed outline-teal-600" : ""}`}
               >
                 {object.kind === "image" && object.src
                   ? <img src={object.src} alt={lang === "ar" ? "صورة مضافة إلى المذكرة" : "Notebook image"}
@@ -542,54 +560,18 @@ function NotebookPaper({
                         style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
                         {object.label}
                       </span>
-                    : <div data-study-widget={object.kind} dir={page.direction}
-                        className="pointer-events-none flex h-full w-full flex-col gap-1 overflow-hidden rounded-lg border text-start shadow-sm"
-                        style={{
-                          backgroundColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].background,
-                          color: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].text,
-                          borderColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].border,
-                          padding: `${10 * scale}px`,
-                        }}>
-                        <span className="shrink-0 font-bold uppercase tracking-wide opacity-70"
-                          style={{ fontSize: `${15 * scale}px` }}>
-                          {studyWidgetDefaultTitle(object.kind)}
-                        </span>
-                        {object.kind === "sticky" || object.kind === "formula"
-                          ? <div className="min-h-0 flex-1 overflow-hidden whitespace-pre-wrap break-words font-semibold"
-                              style={{ fontSize: `${(object.kind === "formula" ? 26 : 23) * scale}px`, lineHeight: 1.3 }}>
-                              {object.label}
-                            </div>
-                          : <div className="shrink-0 truncate font-bold"
-                              style={{ fontSize: `${22 * scale}px` }}>{object.label}</div>}
-                        {object.kind === "checklist" && (
-                          <div className="min-h-0 flex-1 space-y-1 overflow-hidden" style={{ fontSize: `${20 * scale}px` }}>
-                            {(object.items ?? []).map((item, i) => (
-                              <div key={i} className="flex items-start gap-1">
-                                <span>{item.checked ? "☑" : "☐"}</span>
-                                <span className={item.checked ? "line-through opacity-65" : ""}>{item.text}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                        {object.kind === "table" && (
-                          <div className="min-h-0 flex-1 overflow-hidden" style={{ display: "grid",
-                            gridTemplateColumns: `repeat(${object.cells?.[0]?.length || 2}, minmax(0, 1fr))`,
-                            alignContent: "start" }}>
-                            {(object.cells ?? []).flatMap((row, ri) => row.map((cell, ci) => (
-                              <div key={`${ri}-${ci}`} className="truncate border p-1"
-                                style={{ borderColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].border,
-                                  fontWeight: ri === 0 ? 700 : 400, fontSize: `${17 * scale}px`,
-                                  background: ri === 0 ? "rgba(255,255,255,.42)" : "transparent" }}>
-                                {cell || " "}
-                              </div>
-                            )))}
-                          </div>
-                        )}
-                      </div>}
+                    : <StudyNotebookEditableWidget
+                        object={object}
+                        lang={lang}
+                        direction={page.direction}
+                        scale={scale}
+                        editable={tool === "select" || tool === "type"}
+                        onChange={patch => editObjectOnPage(object.id, patch)}
+                      />
                 {selected && (
                   <div data-handle="resize"
                     aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
-                    className="pointer-events-auto absolute -bottom-2 -right-2 size-5 cursor-nwse-resize rounded-full border-2 border-teal-600 bg-white shadow" />
+                    className="pointer-events-auto absolute -bottom-2 -right-2 size-5 touch-none cursor-nwse-resize rounded-full border-2 border-teal-600 bg-white shadow" />
                 )}
               </div>
             );
