@@ -16,6 +16,7 @@ import { IFRS_PHASE9_APPLIED_QUESTIONS } from "@/data/ifrs-quiz-phase9-applied";
 import { IFRS_REVIEWED_EXTRACT_QUESTIONS } from "@/data/ifrs-quiz-reviewed-extracts";
 import { IFRS_REVIEWED_EXTENSION_QUESTIONS } from "@/data/ifrs-quiz-reviewed-extensions";
 import { IFRSQUIZ_IMPORTED_QUESTIONS } from "@/data/ifrsquiz-imported-questions";
+import { IFRS_ORIGINAL_ADDITIONAL_QUESTIONS } from "@/data/ifrs-original-practice-20261115";
 
 export function detectIfrsStandardCode(question: ExamQuestion): string | null {
   const haystack = `${question.topic} ${question.reference}`;
@@ -42,6 +43,7 @@ const layers: ExamQuestion[][] = [
   IFRS_REVIEWED_EXTRACT_QUESTIONS,
   IFRS_REVIEWED_EXTENSION_QUESTIONS,
   IFRSQUIZ_IMPORTED_QUESTIONS,
+  IFRS_ORIGINAL_ADDITIONAL_QUESTIONS,
 ];
 
 /** Unmerged local items, retained so audits can detect IDs hidden by Map replacement. */
