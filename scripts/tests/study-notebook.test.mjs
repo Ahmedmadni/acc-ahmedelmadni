@@ -353,6 +353,6 @@ test("Page management, in-panel search, PDF buttons, undo/redo and color tools h
   assert.match(component,/setPageSearch\(event\.target\.value\)/);
   assert.match(component,/page\.title \+ " " \+ page\.text/);
   assert.match(component,/\["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"\]/);
-  assert.match(component,/kind: tool === "type" \|\| tool === "eraser" \? "pen" : tool/);
+  assert.match(component,/kind: tool,/);
   assert.match(component,/opacity=\{stroke\.kind === "highlighter"/);
 });
