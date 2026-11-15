@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import vm from "node:vm";
 import ts from "typescript";
 
-async function loadTypeScript(path) {
+async function loadTypeScript(path, dependencies = {}) {
   const text = await readFile(path, "utf8");
   const compiled = ts.transpileModule(text, {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
@@ -12,7 +12,7 @@ async function loadTypeScript(path) {
   const module = { exports: {} };
   vm.runInNewContext(compiled, {
     module, exports: module.exports,
-    require: (id) => { throw Error("Unexpected runtime dependency " + id); },
+    require: (id) => { if (Object.prototype.hasOwnProperty.call(dependencies, id)) return dependencies[id]; throw Error("Unexpected runtime dependency " + id); },
   }, { filename: path });
   return module.exports;
 }
@@ -84,7 +84,7 @@ test("Bad/legacy notebook storage is safely ignored; oversized and malformed inp
   assert.equal(safe.pages.cma[0].shade, "ivory");
   assert.equal(safe.pages.cma[0].spacing, 30);
   assert.equal(safe.pages.cma[0].strokes[0].color, "#24334a");
-  assert.equal(safe.pages.cma[0].strokes[0].width, 9);
+  assert.equal(safe.pages.cma[0].strokes[0].width, 26);
   assert.equal(safe.pages.cma[0].strokes[0].points[0].x, notebook.NOTEBOOK_DESIGN_WIDTH);
 });
 
@@ -181,7 +181,7 @@ test("Sidebar exists only for CMA and IFRS, leaves mobile lessons unobstructed a
   assert.match(component, /localStorage\.setItem/);
   assert.match(component, /onPointerDown=\{pointerDown\}/);
   assert.match(component, /onPointerMove=\{pointerMove\}/);
-  assert.match(component, /recognizeNotebookInk\(page\.strokes, page\.direction\)/);
+  assert.match(component, /recognizeNotebookInk\(page\.strokes\.filter/);
   assert.match(component, /keepOriginalInk \? \{\} : \{ strokes: \[\] \}/,
     "Recognized text should not delete diagrams or writing by default");
   assert.match(component, /onSplit=\{splitCurrentPage\}/);
@@ -295,4 +295,64 @@ test("Notebook continues excess text to a following page, preserving existing in
   assert.match(component,/min-\[900px\]:sticky/);
   assert.match(component,/min-\[900px\]:top-16/);
   assert.match(component,/dockWidth\}/);
+});
+
+test("Stylus shape tools are vector paths and eraser can hit drawn shape outlines", () => {
+  const one={ x:10,y:10,pressure:.5,t:0 };
+  const two={ x:110,y:90,pressure:.5,t:50 };
+  const base={ id:"shape",color:"#24334a",width:2,points:[one,two] };
+  assert.match(notebook.notebookStrokePath({ ...base, kind:"line" }), /L 110 90/);
+  const box=notebook.notebookStrokePath({ ...base, kind:"rectangle" });
+  assert.match(box, /L 110 10 L 110 90 L 10 90 Z/);
+  assert.match(notebook.notebookStrokePath({ ...base, kind:"ellipse" }), / a /);
+  const rectStroke={...base,kind:"rectangle"};
+  const ellipseStroke={...base,kind:"ellipse"};
+  assert.equal(notebook.nearestInkStrokeIndex([rectStroke], 55, 10, 8), 0,
+    "Eraser hits middle of rectangle top edge rather than only stored endpoints");
+  assert.equal(notebook.nearestInkStrokeIndex([ellipseStroke], 110, 50, 8), 0,
+    "Eraser hits ellipse right-hand outline");
+  const page=notebook.emptyNotebook();
+  page.pages.cma[0].strokes=[{...base,kind:"highlighter",width:18,color:"#f6d94e"}];
+  const normalized=notebook.normalizeNotebook(page);
+  assert.equal(normalized.pages.cma[0].strokes[0].kind,"highlighter");
+  assert.equal(normalized.pages.cma[0].strokes[0].width,18);
+});
+
+test("PDF exporter uses existing local dependencies and renders full page size with notes and ink", async () => {
+  const lib=await loadTypeScript("src/lib/study-notebook-pdf.ts",
+    { "@/lib/study-notebook": notebook });
+  const dim=JSON.parse(JSON.stringify(lib.STUDY_NOTEBOOK_PDF_MM));
+  assert.deepEqual(dim,{A4:[210,297],A5:[148,210],Letter:[215.9,279.4]});
+  assert.equal(lib.printableInkStyle({kind:"highlighter",color:"#f6d94e",width:18}).opacity,"0.32");
+  assert.equal(lib.printableInkStyle({kind:"pen",color:"#222222",width:2}).opacity,"0.95");
+  const source=await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  assert.match(source,/import\("html2canvas-pro"\)/);
+  assert.match(source,/import\("jspdf"\)/);
+  assert.match(source,/text\.textContent = page\.text/);
+  assert.match(source,/notebookStrokePath\(stroke\)/);
+  assert.match(source,/pdf\.addImage\(/);
+  assert.match(source,/pdf\.save\(filename\)/);
+  assert.match(source,/for \(let index = 0; index < pages\.length; index\+\+\)/);
+  assert.match(source,/node\.remove\(\)/);
+  assert.match(source,/printRoot\.remove\(\)/);
+});
+
+test("Page management, in-panel search, PDF buttons, undo/redo and color tools have working handlers", async () => {
+  const component=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(component,/function duplicatePage\(\)/);
+  assert.match(component,/function movePage\(step: -1 \| 1\)/);
+  assert.match(component,/function undoInk\(\)/);
+  assert.match(component,/function redoInk\(\)/);
+  assert.match(component,/function savePdf\(allPages: boolean\)/);
+  assert.match(component,/exportStudyNotebookPdf\(allPages \? sectionPages : \[current\]/);
+  assert.match(component,/onClick=\{duplicatePage\}/);
+  assert.match(component,/onClick=\{\(\) => movePage\(-1\)\}/);
+  assert.match(component,/onClick=\{\(\) => movePage\(1\)\}/);
+  assert.match(component,/onClick=\{undoInk\}/);
+  assert.match(component,/onClick=\{redoInk\}/);
+  assert.match(component,/setPageSearch\(event\.target\.value\)/);
+  assert.match(component,/page\.title \+ " " \+ page\.text/);
+  assert.match(component,/\["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"\]/);
+  assert.match(component,/kind: tool,/);
+  assert.match(component,/opacity=\{stroke\.kind === "highlighter"/);
 });

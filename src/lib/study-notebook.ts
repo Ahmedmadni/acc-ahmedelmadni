@@ -3,7 +3,8 @@ import type { StudySection } from "@/lib/library-study-language";
 export type PaperPattern = "ruled" | "grid" | "dots" | "blank";
 export type PaperShade = "white" | "ivory" | "cream" | "blue";
 export type PaperSize = "A4" | "A5" | "Letter";
-export type NotebookTool = "type" | "pen" | "eraser";
+export type NotebookTool = "type" | "pen" | "highlighter" | "line" | "rectangle" | "ellipse" | "eraser";
+export type NotebookStrokeKind = "pen" | "highlighter" | "line" | "rectangle" | "ellipse";
 export type NotebookTypeface = "handwritten" | "regular";
 export type NotebookDirection = "ltr" | "rtl";
 
@@ -16,6 +17,8 @@ export interface InkPoint {
 
 export interface NotebookStroke {
   id: string;
+  /** Missing kind in older backups represents ordinary pen ink. */
+  kind?: NotebookStrokeKind;
   color: string;
   width: number;
   points: InkPoint[];
@@ -113,7 +116,8 @@ export function normalizeNotebook(value: unknown): NotebookStore {
           strokes.push({
             id: s.id,
             color: typeof s.color === "string" && /^#[0-9a-fA-F]{6}$/.test(s.color) ? s.color : "#24334a",
-            width: numberBetween(s.width, 1, 9, 2.5),
+            width: numberBetween(s.width, 1, 26, 2.5),
+            kind: oneOf(s.kind, ["pen", "highlighter", "line", "rectangle", "ellipse"] as const, "pen"),
             points,
           });
         }
@@ -162,6 +166,51 @@ export function pageStrokePath(points: readonly InkPoint[]): string {
 /** Eraser tests the whole polyline segment, not merely recorded samples.
  * This prevents a visually continuous stroke from being "uneraseable" between points.
  */
+/** Render ordinary ink plus editable highlighters and geometric annotations.
+ * All geometry remains vector-based inside notebook storage and PDF output.
+ */
+export function notebookStrokePath(stroke: NotebookStroke): string {
+  const points = stroke.points;
+  if (!points.length) return "";
+  const first = points[0];
+  const last = points[points.length - 1];
+  const fmt = (v: number) => Math.round(v * 10) / 10;
+  if (stroke.kind === "line") {
+    return `M ${fmt(first.x)} ${fmt(first.y)} L ${fmt(last.x)} ${fmt(last.y)}`;
+  }
+  if (stroke.kind === "rectangle") {
+    return `M ${fmt(first.x)} ${fmt(first.y)} L ${fmt(last.x)} ${fmt(first.y)} L ${fmt(last.x)} ${fmt(last.y)} L ${fmt(first.x)} ${fmt(last.y)} Z`;
+  }
+  if (stroke.kind === "ellipse") {
+    const cx = fmt((first.x + last.x) / 2);
+    const cy = fmt((first.y + last.y) / 2);
+    const rx = fmt(Math.abs(last.x - first.x) / 2);
+    const ry = fmt(Math.abs(last.y - first.y) / 2);
+    if (rx < .1 || ry < .1) return pageStrokePath(points);
+    return `M ${fmt(cx - rx)} ${cy} a ${rx} ${ry} 0 1 0 ${fmt(rx * 2)} 0 a ${rx} ${ry} 0 1 0 ${fmt(-rx * 2)} 0`;
+  }
+  return pageStrokePath(points);
+}
+
+function outlinePoints(stroke: NotebookStroke): InkPoint[] {
+  const points = stroke.points;
+  if (points.length < 2 || !["rectangle", "ellipse"].includes(stroke.kind ?? "")) return points;
+  const a = points[0], b = points[points.length - 1];
+  if (stroke.kind === "rectangle") {
+    return [
+      a, { ...a, x: b.x }, b, { ...a, y: b.y }, a,
+    ];
+  }
+  return Array.from({ length: 33 }, (_, i) => {
+    const theta = i * Math.PI * 2 / 32;
+    return {
+      x: (a.x + b.x) / 2 + Math.abs(b.x - a.x) / 2 * Math.cos(theta),
+      y: (a.y + b.y) / 2 + Math.abs(b.y - a.y) / 2 * Math.sin(theta),
+      pressure: a.pressure, t: a.t,
+    };
+  });
+}
+
 export function nearestInkStrokeIndex(
   strokes: readonly NotebookStroke[],
   x: number,
@@ -171,7 +220,7 @@ export function nearestInkStrokeIndex(
   let match = -1;
   let bestDistance = radius;
   for (let i = 0; i < strokes.length; i++) {
-    const points = strokes[i].points;
+    const points = outlinePoints(strokes[i]);
     for (let j = 0; j < points.length; j++) {
       const a = points[j];
       const b = points[Math.min(j + 1, points.length - 1)];

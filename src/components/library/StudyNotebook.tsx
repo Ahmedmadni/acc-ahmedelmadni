@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
-  BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2, Upload,
+  BookOpenText, Check, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Copy, Download, Eraser, FilePlus2, Upload, FileDown, Highlighter, Minus, Square, Circle, Search, Redo2,
   NotebookPen, PenLine, RotateCcw, ScanText,
   Settings2, Trash2, Type, X,
 } from "lucide-react";
@@ -10,11 +10,12 @@ import {
   createNotebookPage, emptyNotebook, MAX_INK_POINTS, MAX_INK_STROKES,
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
-  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
+  notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
+import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -22,6 +23,10 @@ const LABELS = {
   subtitle: { ar: "ملاحظات محفوظة على جهازك", en: "Private notes on this device" },
   type: { ar: "كتابة", en: "Type" },
   pen: { ar: "قلم", en: "Pen" },
+  highlighter: { ar: "تظليل", en: "Highlight" },
+  line: { ar: "خط", en: "Line" },
+  rectangle: { ar: "مربع", en: "Box" },
+  ellipse: { ar: "بيضاوي", en: "Oval" },
   eraser: { ar: "ممحاة", en: "Eraser" },
   page: { ar: "صفحة", en: "Page" },
   add: { ar: "صفحة جديدة", en: "New page" },
@@ -45,7 +50,11 @@ const LABELS = {
   },
   apply: { ar: "اعتماد النص واستبدال الحبر", en: "Use text and replace ink" },
   cancel: { ar: "إلغاء", en: "Cancel" },
-  undo: { ar: "تراجع عن آخر خط", en: "Undo last stroke" },
+  undo: { ar: "تراجع", en: "Undo" },
+  redo: { ar: "إعادة", en: "Redo" },
+  pdf: { ar: "تصدير PDF", en: "Export PDF" },
+  duplicate: { ar: "نسخ الصفحة", en: "Duplicate page" },
+  allPages: { ar: "إدارة الصفحات", en: "Manage pages" },
   delete: { ar: "حذف الصفحة", en: "Delete page" },
   export: { ar: "نسخة احتياطية JSON", en: "Backup JSON" },
   textExport: { ar: "تصدير نص الصفحة", en: "Export page text" },
@@ -111,15 +120,20 @@ function lastFittingTextIndex(editor: HTMLTextAreaElement, text: string) {
 }
 
 function NotebookPaper({
-  page, tool, inkColor, inkWidth, onChange, onSplit, canAddPage, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
   inkColor: string;
+  highlighterColor: string;
   inkWidth: number;
   onChange: (change: Partial<NotebookPage>) => void;
   onSplit: (fittingIndex: number) => void;
   canAddPage: boolean;
+  undoInk: () => void;
+  redoInk: () => void;
+  canUndoInk: boolean;
+  canRedoInk: boolean;
   lang: Lang;
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
@@ -199,7 +213,7 @@ function NotebookPaper({
 
   function pointerDown(e: PointerEvent<SVGSVGElement>) {
     if (tool === "type" || (e.pointerType === "mouse" && e.button !== 0)) return;
-    if (tool === "pen" && page.strokes.length >= MAX_INK_STROKES) return;
+    if (tool !== "eraser" && page.strokes.length >= MAX_INK_STROKES) return;
     if (!startTime.current) startTime.current = e.timeStamp;
     const point = toPoint(e);
     if (tool === "eraser") {
@@ -210,7 +224,9 @@ function NotebookPaper({
       return;
     }
     const stroke: NotebookStroke = {
-      id: newId(), color: inkColor, width: inkWidth, points: [point],
+      id: newId(), kind: tool,
+      color: tool === "highlighter" ? highlighterColor : inkColor,
+      width: tool === "highlighter" ? 18 : inkWidth, points: [point],
     };
     drawing.current = stroke;
     setPreview({ ...stroke, points: [...stroke.points] });
@@ -233,7 +249,13 @@ function NotebookPaper({
       return;
     }
     const active = drawing.current;
-    if (!active || tool !== "pen" || !e.currentTarget.hasPointerCapture(e.pointerId)) return;
+    if (!active || !e.currentTarget.hasPointerCapture(e.pointerId)) return;
+    if (["line", "rectangle", "ellipse"].includes(tool)) {
+      active.points = [active.points[0], toPoint(e)];
+      setPreview({ ...active, points: [...active.points] });
+      e.preventDefault();
+      return;
+    }
     const samples = e.nativeEvent.getCoalescedEvents?.() ?? [e.nativeEvent];
     const rect = e.currentTarget.getBoundingClientRect();
     for (const sample of samples) {
@@ -257,7 +279,8 @@ function NotebookPaper({
     }
     const active = drawing.current;
     if (!active) return;
-    if (active.points.length < MAX_INK_POINTS) active.points.push(toPoint(e));
+    if (["line", "rectangle", "ellipse"].includes(tool)) active.points = [active.points[0], toPoint(e)];
+    else if (active.points.length < MAX_INK_POINTS) active.points.push(toPoint(e));
     onChange({ strokes: [...page.strokes, { ...active, points: [...active.points] }] });
     drawing.current = null;
     setPreview(null);
@@ -265,11 +288,11 @@ function NotebookPaper({
   }
 
   async function recognize() {
-    if (!recognitionReady || !page.strokes.length || recognizing) return;
+    if (!recognitionReady || !page.strokes.some((stroke) => !stroke.kind || stroke.kind === "pen") || recognizing) return;
     setRecognitionError("");
     setRecognizing(true);
     try {
-      const choices = await recognizeNotebookInk(page.strokes, page.direction);
+      const choices = await recognizeNotebookInk(page.strokes.filter((stroke) => !stroke.kind || stroke.kind === "pen"), page.direction);
       if (!choices.length) throw new Error(lang === "ar" ? "لم يتم التعرف على أي كلمات." : "No words could be recognized.");
       setRecognized(choices);
       setRecognizedText(choices[0]);
@@ -337,13 +360,13 @@ function NotebookPaper({
           {[...page.strokes, ...(preview ? [preview] : [])].map((stroke) => (
             <path
               key={stroke.id}
-              d={pageStrokePath(stroke.points)}
+              d={notebookStrokePath(stroke)}
               fill="none"
               stroke={stroke.color}
-              strokeWidth={stroke.width * (0.8 + .4 * (stroke.points.reduce((sum, p) => sum + p.pressure, 0) / stroke.points.length))}
+              strokeWidth={stroke.kind === "highlighter" ? Math.max(12, stroke.width) : stroke.width * (0.8 + .4 * (stroke.points.reduce((sum, p) => sum + p.pressure, 0) / stroke.points.length))}
               strokeLinecap="round"
               strokeLinejoin="round"
-              opacity=".95"
+              opacity={stroke.kind === "highlighter" ? ".32" : ".95"}
             />
           ))}
         </svg>
@@ -368,16 +391,20 @@ function NotebookPaper({
       <div className="flex flex-wrap items-center justify-between gap-2">
         <button
           type="button"
-          onClick={() => onChange({ strokes: page.strokes.slice(0, -1) })}
-          disabled={!page.strokes.length}
+          onClick={undoInk}
+          disabled={!canUndoInk}
           className="inline-flex items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40"
         >
           <RotateCcw className="size-3.5" /> {LABELS.undo[lang]}
         </button>
+        <button type="button" onClick={redoInk} disabled={!canRedoInk}
+          className="inline-flex items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40">
+          <Redo2 className="size-3.5" /> {LABELS.redo[lang]}
+        </button>
         <button
           type="button"
           onClick={() => void recognize()}
-          disabled={!recognitionReady || !page.strokes.length || recognizing}
+          disabled={!recognitionReady || !page.strokes.some((stroke) => !stroke.kind || stroke.kind === "pen") || recognizing}
           title={!recognitionReady ? LABELS.recognizeOff[lang] : undefined}
           className="inline-flex items-center gap-1 rounded-lg bg-[#283b4d] px-3 py-2 text-xs font-semibold text-white disabled:opacity-45"
         >
@@ -433,8 +460,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [mobileOpen, setMobileOpen] = useState(false);
   const [tool, setTool] = useState<NotebookTool>("type");
   const [inkColor, setInkColor] = useState("#24334a");
+  const [highlighterColor, setHighlighterColor] = useState("#f6d94e");
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [pageSearch, setPageSearch] = useState("");
+  const [showPageManager, setShowPageManager] = useState(false);
+  const [exportingPdf, setExportingPdf] = useState(false);
+  const [, setHistoryTick] = useState(0);
+  const inkHistory = useRef<Record<string, { past: NotebookStroke[][]; future: NotebookStroke[][] }>>({});
   const [restoreMessage, setRestoreMessage] = useState("");
   const backupInput = useRef<HTMLInputElement | null>(null);
   latest.current = store;
@@ -490,6 +523,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   }, [mobileOpen]);
 
   function updatePage(change: Partial<NotebookPage>) {
+    if (change.strokes !== undefined) {
+      const state = inkHistory.current[current.id] ?? { past: [], future: [] };
+      state.past.push(current.strokes);
+      if (state.past.length > 40) state.past.shift();
+      state.future = [];
+      inkHistory.current[current.id] = state;
+      setHistoryTick((n) => n + 1);
+    }
     const updatedAt = Date.now();
     setStore((prior) => ({
       ...prior,
@@ -497,6 +538,73 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         page.id === (prior.activePage[section] || current.id)
           ? { ...page, ...change, updatedAt } : page) },
     }));
+  }
+
+  function undoInk() {
+    const history = inkHistory.current[current.id];
+    if (!history?.past.length) return;
+    const previous = history.past.pop()!;
+    history.future.push(current.strokes);
+    setStore((prior) => ({
+      ...prior, pages: { ...prior.pages, [section]: prior.pages[section].map((page) =>
+        page.id === current.id ? { ...page, strokes: previous, updatedAt: Date.now() } : page) },
+    }));
+    setHistoryTick((n) => n + 1);
+  }
+
+  function redoInk() {
+    const history = inkHistory.current[current.id];
+    if (!history?.future.length) return;
+    const next = history.future.pop()!;
+    history.past.push(current.strokes);
+    setStore((prior) => ({
+      ...prior, pages: { ...prior.pages, [section]: prior.pages[section].map((page) =>
+        page.id === current.id ? { ...page, strokes: next, updatedAt: Date.now() } : page) },
+    }));
+    setHistoryTick((n) => n + 1);
+  }
+
+  function duplicatePage() {
+    if (sectionPages.length >= MAX_NOTEBOOK_PAGES) return;
+    const id = newId();
+    const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
+      strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
+      updatedAt: Date.now() };
+    setStore((prior) => {
+      const original = prior.pages[section];
+      const at = original.findIndex((page) => page.id === current.id);
+      const pages = [...original];
+      pages.splice(at + 1, 0, copy);
+      return { ...prior, pages: { ...prior.pages, [section]: pages },
+        activePage: { ...prior.activePage, [section]: id } };
+    });
+  }
+
+  function movePage(step: -1 | 1) {
+    const target = sectionPages.findIndex(page => page.id === current.id) + step;
+    if (target < 0 || target >= sectionPages.length) return;
+    setStore(prior => {
+      const pages = [...prior.pages[section]];
+      const index = pages.findIndex(page => page.id === current.id);
+      if (index < 0 || index + step < 0 || index + step >= pages.length) return prior;
+      [pages[index], pages[index + step]] = [pages[index + step], pages[index]];
+      return { ...prior, pages: { ...prior.pages, [section]: pages } };
+    });
+  }
+
+  async function savePdf(allPages: boolean) {
+    if (exportingPdf) return;
+    setExportingPdf(true);
+    setRestoreMessage("");
+    try {
+      await exportStudyNotebookPdf(allPages ? sectionPages : [current],
+        `${section}-study-notebook-${allPages ? "all" : "page-" + (currentIndex + 1)}.pdf`);
+      setRestoreMessage(lang === "ar" ? "تم تصدير ملف PDF إلى جهازك." : "PDF saved to your device.");
+    } catch (error) {
+      setRestoreMessage(lang === "ar"
+        ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
+        : error instanceof Error ? error.message : "PDF export failed.");
+    } finally { setExportingPdf(false); }
   }
 
   function addPage() {
@@ -581,6 +689,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
       ? "سيتم استبدال جميع صفحات CMA وIFRS الحالية بمحتوى النسخة الاحتياطية. هل تريد المتابعة؟"
       : "This replaces every current CMA and IFRS notebook page with the backup. Continue?");
     if (!approved) return;
+    inkHistory.current = {};
+    setHistoryTick((n) => n + 1);
     setStore(restored);
     setStorageWritable(true);
     setRestoreMessage(lang === "ar" ? "استُعيدت الصفحات بنجاح." : "Notebook backup restored.");
@@ -682,6 +792,48 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               className="grid size-9 place-items-center rounded-lg bg-[#253a4b] text-white disabled:opacity-35"
               onClick={addPage}><FilePlus2 className="size-4" /></button>
           </div>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <button type="button" onClick={() => setShowPageManager((open) => !open)}
+              aria-expanded={showPageManager} className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-bold">
+              <Search className="size-3.5" /> {LABELS.allPages[lang]} ({sectionPages.length})
+            </button>
+            <button type="button" onClick={duplicatePage} disabled={sectionPages.length >= MAX_NOTEBOOK_PAGES}
+              title={LABELS.duplicate[lang]} className="grid size-9 place-items-center rounded-lg border border-[#c9bba8] bg-white disabled:opacity-40">
+              <Copy className="size-4" />
+            </button>
+            <button type="button" onClick={() => movePage(-1)} disabled={currentIndex < 1}
+              title={lang === "ar" ? "تحريك الصفحة لأعلى" : "Move page earlier"}
+              className="grid size-9 place-items-center rounded-lg border border-[#c9bba8] bg-white disabled:opacity-40">
+              <ChevronUp className="size-4" />
+            </button>
+            <button type="button" onClick={() => movePage(1)} disabled={currentIndex >= sectionPages.length - 1}
+              title={lang === "ar" ? "تحريك الصفحة لأسفل" : "Move page later"}
+              className="grid size-9 place-items-center rounded-lg border border-[#c9bba8] bg-white disabled:opacity-40">
+              <ChevronDown className="size-4" />
+            </button>
+          </div>
+          {showPageManager && (
+            <section aria-label={lang === "ar" ? "صفحات الدفتر والبحث" : "Notebook page search"}
+              className="mt-2 space-y-2 rounded-xl border border-[#d5c8b6] bg-white/75 p-3">
+              <input type="search" value={pageSearch} onChange={(event) => setPageSearch(event.target.value)}
+                aria-label={lang === "ar" ? "ابحث في عناوين ومحتوى الصفحات" : "Search page titles and content"}
+                placeholder={lang === "ar" ? "ابحث عن كلمة داخل صفحاتك…" : "Find a word in your notes…"}
+                className={narrowControl} />
+              <div className="max-h-52 space-y-1.5 overflow-y-auto">
+                {sectionPages.map((page, index) => ({ page, index }))
+                  .filter(({ page }) => !pageSearch.trim() ||
+                    (page.title + " " + page.text).toLocaleLowerCase().includes(pageSearch.trim().toLocaleLowerCase()))
+                  .map(({ page, index }) => (
+                    <button key={page.id} type="button" onClick={() => { navigate(index); setShowPageManager(false); }}
+                      aria-current={page.id === current.id ? "page" : undefined}
+                      className={`block w-full rounded-lg border px-3 py-2 text-start text-xs ${page.id === current.id ? "border-[#76543F] bg-[#f5ebdd]" : "border-[#e2d8ca] bg-white"}`}>
+                      <span className="block font-bold">{index + 1}. {page.title || (lang === "ar" ? "صفحة بدون عنوان" : "Untitled page")}</span>
+                      <span className="mt-1 block truncate text-[#756b5e]">{page.text.slice(0, 95) || (lang === "ar" ? "رسومات وملاحظات" : "Ink / blank page")}</span>
+                    </button>
+                  ))}
+              </div>
+            </section>
+          )}
           <input
             value={current.title}
             onChange={(e) => updatePage({ title: e.target.value.slice(0, 90) })}
@@ -691,12 +843,15 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             className="mt-2 w-full border-b border-[#c9bba8] bg-transparent px-1 py-2 text-sm font-bold outline-none focus:border-[#76543F]"
           />
 
-          <div className="mt-3 grid grid-cols-3 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أداة التدوين" : "Notebook input tool"}>
-            {(["type", "pen", "eraser"] as NotebookTool[]).map((mode) => {
-              const Icon = mode === "type" ? Type : mode === "pen" ? PenLine : Eraser;
+          <div className="mt-3 grid grid-cols-4 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أدوات التدوين والرسم" : "Notebook writing and drawing tools"}>
+            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"] as NotebookTool[]).map((mode) => {
+              const Icon = mode === "type" ? Type : mode === "pen" ? PenLine
+                : mode === "highlighter" ? Highlighter : mode === "line" ? Minus
+                  : mode === "rectangle" ? Square : mode === "ellipse" ? Circle : Eraser;
               return (
                 <button key={mode} type="button" aria-pressed={tool === mode} onClick={() => setTool(mode)}
-                  className={`inline-flex items-center justify-center gap-1 rounded-lg px-2 py-2 text-xs font-bold transition ${tool === mode ? "bg-white text-[#253a4b] shadow-sm" : "text-[#7c705f]"}`}>
+                  title={LABELS[mode][lang]}
+                  className={`inline-flex min-h-10 flex-col items-center justify-center gap-0.5 rounded-lg px-1 py-1.5 text-[10px] font-bold transition ${tool === mode ? "bg-white text-[#253a4b] shadow-sm" : "text-[#7c705f]"}`}>
                   <Icon className="size-4" /> {LABELS[mode][lang]}
                 </button>
               );
@@ -745,30 +900,48 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             </div>
           )}
 
-          {tool === "pen" && (
+          {["pen", "line", "rectangle", "ellipse", "highlighter"].includes(tool) && (
             <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/85 px-3 py-2">
               <span className="text-xs font-bold">{LABELS.ink[lang]}</span>
-              {INK_COLORS.map(color => (
-                <button key={color} type="button" onClick={() => setInkColor(color)}
-                  aria-label={`Ink ${color}`} aria-pressed={inkColor === color}
-                  className={`size-6 rounded-full border-2 ${inkColor === color ? "border-amber-600" : "border-white"}`}
+              {(tool === "highlighter" ? ["#f6d94e", "#99e4aa", "#ffb4d3", "#a8d5ff"] : INK_COLORS).map(color => (
+                <button key={color} type="button"
+                  onClick={() => tool === "highlighter" ? setHighlighterColor(color) : setInkColor(color)}
+                  aria-label={`Ink ${color}`}
+                  aria-pressed={(tool === "highlighter" ? highlighterColor : inkColor) === color}
+                  className={`size-6 rounded-full border-2 ${(tool === "highlighter" ? highlighterColor : inkColor) === color ? "border-amber-600" : "border-white"}`}
                   style={{ backgroundColor: color }} />
               ))}
-              <label className="ms-auto flex items-center gap-1 text-xs">
-                {LABELS.width[lang]}
-                <input type="range" min={1} max={7} step={.5} value={inkWidth} onChange={e => setInkWidth(Number(e.target.value))}
-                  aria-label={LABELS.width[lang]} className="w-16 accent-[#76543F]" />
-              </label>
+              {tool !== "highlighter" && (
+                <label className="ms-auto flex items-center gap-1 text-xs">
+                  {LABELS.width[lang]}
+                  <input type="range" min={1} max={7} step={.5} value={inkWidth} onChange={e => setInkWidth(Number(e.target.value))}
+                    aria-label={LABELS.width[lang]} className="w-16 accent-[#76543F]" />
+                </label>
+              )}
             </div>
           )}
 
           <div className="mt-3">
-            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor} inkWidth={inkWidth}
+            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor}
+              highlighterColor={highlighterColor} inkWidth={inkWidth}
               lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
-              canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES} />
+              canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
+              undoInk={undoInk} redoInk={redoInk}
+              canUndoInk={Boolean(inkHistory.current[current.id]?.past.length)}
+              canRedoInk={Boolean(inkHistory.current[current.id]?.future.length)} />
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">
+            <button type="button" disabled={exportingPdf || !storageWritable}
+              onClick={() => void savePdf(true)}
+              className="inline-flex min-h-9 items-center gap-1 rounded-lg bg-[#283b4d] px-3 py-2 text-xs font-bold text-white disabled:opacity-50">
+              <FileDown className="size-3.5" /> {exportingPdf ? "…" : LABELS.pdf[lang]}
+            </button>
+            <button type="button" disabled={exportingPdf || !storageWritable}
+              onClick={() => void savePdf(false)}
+              className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-50">
+              {lang === "ar" ? "PDF للصفحة الحالية" : "Current page PDF"}
+            </button>
             <input ref={backupInput} type="file" accept="application/json,.json" className="sr-only"
               aria-label={lang === "ar" ? "اختيار نسخة احتياطية" : "Choose a notebook backup"}
               onChange={(event) => {
@@ -807,6 +980,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                   ? "البيانات السابقة غير قابلة للقراءة. بدء دفتر جديد سيستبدلها نهائيا. هل تريد المتابعة؟"
                   : "Previous saved data could not be read. Starting a new notebook will permanently replace it. Continue?");
                 if (!accepted) return;
+                inkHistory.current = {};
+                setHistoryTick((n) => n + 1);
                 setStore(emptyNotebook());
                 setStorageWritable(true);
                 setSaveError(false);
