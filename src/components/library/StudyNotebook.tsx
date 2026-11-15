@@ -1419,6 +1419,12 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               </div>
             </section>
           )}
+              <div className="mt-2 border-t border-red-100 pt-2">
+            <button type="button" onClick={removePage}
+              className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
+              <Trash2 className="size-3.5" /> {LABELS.delete[lang]}
+            </button>
+              </div>
             </section>
           )}
           {(activeSection === "write" || activeSection === "draw") && (
@@ -1598,14 +1604,21 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           )}
             </section>
           )}
-          <button type="button" onClick={() => setSettingsOpen(!settingsOpen)}
-            aria-expanded={settingsOpen}
-            className="mt-3 flex w-full items-center justify-between rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-xs font-bold">
-            <span className="flex items-center gap-2"><Settings2 className="size-4" /> {LABELS.menu[lang]}</span>
-            <span className="text-[#806f60]">{current.size} · {PAPER_STYLES[current.pattern][lang]} · {current.spacing}</span>
-          </button>
-
-          {settingsOpen && (
+          {activeSection === "paper" && (
+            <section id="notebook-section-paper" aria-label={lang === "ar" ? "تنسيق الورق والكتابة" : "Paper and text settings"}
+              className="mt-2 space-y-2 rounded-xl border border-[#d5c8b6] bg-white/60 p-2">
+              <div className="flex items-center gap-2 px-1 text-xs font-bold text-[#64513d]">
+                <Settings2 className="size-4" /> {LABELS.menu[lang]}
+                <span className="ms-auto text-[10px] font-normal">{current.size} · {PAPER_STYLES[current.pattern][lang]}</span>
+              </div>
+              <label className="mb-3 hidden items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-[11px] font-semibold text-[#6c5b48] min-[900px]:flex">
+                <span className="shrink-0">{lang === "ar" ? "عرض الدفتر" : "Notebook width"}</span>
+                <input type="range" min={320} max={470} step={10} value={dockWidth}
+                  onChange={event => onDockWidthChange(Number(event.target.value))}
+                  aria-label={lang === "ar" ? "تعديل عرض الدفتر الجانبي" : "Resize the adjacent notebook panel"}
+                  className="min-w-0 flex-1 accent-[#76543F]" />
+                <span className="w-10 text-end tabular-nums">{dockWidth}px</span>
+              </label>
             <div className="mt-2 grid grid-cols-2 gap-3 rounded-xl border border-[#d5c8b6] bg-white/70 p-3">
               <label className="text-xs font-bold">{LABELS.paper[lang]}
                 <select value={current.pattern} onChange={(e) => updatePage({ pattern: e.target.value as PaperPattern })} className={narrowControl}>
@@ -1639,9 +1652,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                 </select>
               </label>
             </div>
+            </section>
           )}
 
-          {["pen", "line", "rectangle", "ellipse", "highlighter"].includes(tool) && (
+          {activeSection === "draw" && ["pen", "line", "rectangle", "ellipse", "highlighter"].includes(tool) && (
             <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/85 px-3 py-2">
               <span className="text-xs font-bold">{LABELS.ink[lang]}</span>
               {(tool === "highlighter" ? ["#f6d94e", "#99e4aa", "#ffb4d3", "#a8d5ff"] : INK_COLORS).map(color => (
@@ -1672,6 +1686,13 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               canRedoInk={Boolean(inkHistory.current[current.id]?.future.length)} />
           </div>
 
+          {activeSection === "export" && (
+            <section id="notebook-section-export" aria-label={lang === "ar" ? "التصدير والنسخ الاحتياطي" : "Export and backups"}
+              className="mt-2 rounded-xl border border-[#d5c8b6] bg-white/65 px-2 pb-2">
+              <p className="mt-2 text-xs leading-5 text-[#685b4d]">
+                {lang === "ar" ? "PDF للقراءة والطباعة، وJSON لحفظ الصفحات والرسومات واستعادتها."
+                  : "Use PDF for reading and printing, and JSON to back up or restore editable pages and ink."}
+              </p>
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">
             <button type="button" disabled={exportingPdf || !storageWritable}
               onClick={() => void savePdf(true)}
@@ -1708,11 +1729,11 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold">
               <BookOpenText className="size-3.5" /> {LABELS.textExport[lang]}
             </button>
-            <button type="button" onClick={removePage}
-              className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
-              <Trash2 className="size-3.5" /> {LABELS.delete[lang]}
-            </button>
+
           </div>
+
+            </section>
+          )}
           {restoreMessage && <p role="status" className="mt-2 text-xs leading-6 text-[#6b5236]">{restoreMessage}</p>}
           {hydrated && !storageWritable && (
             <button type="button"
