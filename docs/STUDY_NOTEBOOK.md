@@ -42,6 +42,25 @@ A source audit identified and corrected these interaction defects:
 - Very long typed passages can scroll inside a single paper view while ink is anchored to the physical sheet. Use separate notebook pages for lengthy content and do not treat this as infinite canvas pagination.
 - Local storage has device/browser quota and offers no multi-device sync. Save JSON backups before clearing browser data.
 
+## Added study notebook tools — 15 November 2026
+
+The notebook remains **a split-screen sibling of the active CMA or IFRS lesson**. This update does not add a notebook route, navigation page, cloud service, account or database.
+
+- **Seven drawing/writing tools:** keyboard, smooth ink pen, translucent highlighting, straight-line diagrams, rectangle outlines, ellipse outlines, and continuous stroke eraser. Pen colour and width are adjustable; highlighter offers four distinct colours. Shape dimensions remain vector geometry so backing up/restoring notes does not convert ink into screenshots.
+- **Ink undo and redo:** up to 40 in-memory stroke/erase snapshots per active notebook page. Browser-native `Ctrl+Z`/`Cmd+Z` remains available in the typed text editor; these controls are specifically for the ink layer, not a combined text/ink document history.
+- **Page management:** page list with title and text previews, search across titles and keyboard text, duplicate the selected sheet (text, paper format, strokes), move it earlier/later and preserve navigation by its stable ID. Freehand drawn words are not searched unless explicitly recognized and inserted as text.
+- **Real PDF exports:** export all CMA or all IFRS pages from the current library, or just the selected page, directly in the browser using the project's existing `jspdf` and `html2canvas-pro` dependencies. Each exported page uses its selected A4/A5/Letter physical proportions, paper texture, text typeface, ink, highlighter and geometry. PDF exports are page images to preserve Arabic handwriting appearance, rather than selectable/searchable PDFs; JSON backup is the editable archival format. Nothing is uploaded to a server.
+- **Per-page persistence:** new highlighter/shape types use an optional backward-compatible `kind` field on each ink stroke. Older backups with no kind continue rendering as ordinary pen ink. Page count, text and stroke caps and source validation remain enforced.
+- **Handwriting recognition scope:** only pen strokes are passed to experimental device recognizers; highlighter strokes and geometric shapes are excluded from OCR.
+- **Existing split view and pagination:** the adjacent panel continues to display beside the study material on screens ≥900 px and as a lesson-attached drawer on narrower screens. Typed overflow still moves to a following page without disturbing drawings.
+
+### Known limits and recommended QA
+
+- Device specific stylus latency, pen pressure, Arabic local handwriting recognition and exact baseline alignment need real-device inspection; passing unit tests does not certify an S Pen/Apple Pencil experience.
+- PDF snapshots are rasterized to faithfully preserve page paper and visible typography. They are intended for viewing/printing, not copying text or editing. Large 40-page notebooks can take longer to capture locally or exhaust low-memory devices. Export fewer pages when needed.
+- Undo/redo targets ink only. Native browser text editing undo/redo remains separate; a fully unified editor history would require redesigning the page editor.
+- Per-page search searches typed text and page names, not pen ink, and there is no multi-device sync. JSON backup remains important for recovery.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.
