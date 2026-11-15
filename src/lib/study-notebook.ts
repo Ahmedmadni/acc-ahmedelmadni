@@ -44,10 +44,16 @@ export interface NotebookObject {
   src?: string;
 }
 
+export type NotebookFlowBlock =
+  | { id: string; kind: "paragraph"; text: string }
+  | { id: string; kind: "table"; title: string; cells: string[][]; template: "journal" | "taccount" | "comparison" | "custom" };
+
 export interface NotebookPage {
   id: string;
   title: string;
   text: string;
+  /** Structured, flowing note body. Absent on legacy plain-text pages. */
+  flow?: NotebookFlowBlock[];
   pattern: PaperPattern;
   shade: PaperShade;
   size: PaperSize;
@@ -68,6 +74,10 @@ export interface NotebookStore {
 export const NOTEBOOK_STORAGE_KEY = "study-notebook-pages-v1";
 export const MAX_NOTEBOOK_PAGES = 40;
 export const MAX_NOTE_TEXT_LENGTH = 18000;
+export const MAX_NOTEBOOK_FLOW_BLOCKS = 48;
+export const MAX_NOTEBOOK_FLOW_ROWS = 10;
+export const MAX_NOTEBOOK_FLOW_COLS = 4;
+export const MAX_NOTEBOOK_FLOW_CELL_LENGTH = 100;
 export const MAX_INK_STROKES = 1500;
 export const MAX_INK_POINTS = 800;
 export const MAX_NOTEBOOK_OBJECTS = 24;
@@ -173,6 +183,57 @@ export function transformNotebookStroke(
   };
 }
 
+/** Lossless, text-only serialization for search, backup previews and TXT export.
+ * The structured flow remains the canonical editable source on rich pages. */
+export function notebookFlowPlainText(blocks: readonly NotebookFlowBlock[]): string {
+  return blocks.map(block =>
+    block.kind === "paragraph" ? block.text :
+      [block.title, ...block.cells.map(row => row.join("\t"))].join("\n"),
+  ).join("\n");
+}
+
+export function normalizeNotebookFlow(value: unknown): NotebookFlowBlock[] | undefined {
+  if (!Array.isArray(value) || value.length === 0) return undefined;
+  const blocks: NotebookFlowBlock[] = [];
+  const ids = new Set<string>();
+  let remaining = MAX_NOTE_TEXT_LENGTH;
+  for (const raw of value.slice(0, MAX_NOTEBOOK_FLOW_BLOCKS)) {
+    if (!validRecord(raw) || typeof raw.id !== "string" || !raw.id ||
+      ids.has(raw.id)) continue;
+    if (raw.kind === "paragraph") {
+      const text = typeof raw.text === "string" ? raw.text.slice(0, remaining) : "";
+      remaining -= text.length;
+      ids.add(raw.id);
+      blocks.push({ id: raw.id, kind: "paragraph", text });
+    } else if (raw.kind === "table") {
+      if (remaining <= 1) break;
+      const title = typeof raw.title === "string" ? raw.title.slice(0, Math.min(80, remaining)) : "";
+      remaining -= title.length;
+      const cells: string[][] = [];
+      if (Array.isArray(raw.cells)) {
+        for (const row of raw.cells.slice(0, MAX_NOTEBOOK_FLOW_ROWS)) {
+          if (!Array.isArray(row)) continue;
+          const values = row.slice(0, MAX_NOTEBOOK_FLOW_COLS).map(cell => {
+            const text = typeof cell === "string"
+              ? cell.slice(0, Math.min(MAX_NOTEBOOK_FLOW_CELL_LENGTH, remaining)) : "";
+            remaining -= text.length;
+            return text;
+          });
+          if (values.length) cells.push(values);
+        }
+      }
+      if (!cells.length) cells.push(["", ""]);
+      const template = oneOf(raw.template,
+        ["journal", "taccount", "comparison", "custom"] as const, "custom");
+      ids.add(raw.id);
+      blocks.push({ id: raw.id, kind: "table", title, cells, template });
+    }
+    // Allow only a bounded number of characters across all block types.
+    if (remaining <= 0) break;
+  }
+  return blocks.length ? blocks : undefined;
+}
+
 export function normalizeNotebook(value: unknown): NotebookStore {
   if (!validRecord(value) || value.version !== 1 || !validRecord(value.pages)) return emptyNotebook();
   const defaults = emptyNotebook();
@@ -248,10 +309,13 @@ export function normalizeNotebook(value: unknown): NotebookStore {
           ...(kind === "table" ? { cells } : {}),
         }, NOTEBOOK_SIZES[size].height));
       }
+      const flow = normalizeNotebookFlow(raw.flow);
       pages.push({
         id: raw.id,
         title: typeof raw.title === "string" ? raw.title.slice(0, 90) : "",
-        text: typeof raw.text === "string" ? raw.text.slice(0, MAX_NOTE_TEXT_LENGTH) : "",
+        text: flow ? notebookFlowPlainText(flow).slice(0, MAX_NOTE_TEXT_LENGTH)
+          : typeof raw.text === "string" ? raw.text.slice(0, MAX_NOTE_TEXT_LENGTH) : "",
+        ...(flow ? { flow } : {}),
         pattern: oneOf(raw.pattern, ["ruled", "grid", "dots", "blank"], "ruled"),
         shade: oneOf(raw.shade, ["white", "ivory", "cream", "blue"], "ivory"),
         size: oneOf(raw.size, ["A4", "A5", "Letter"], "A4"),
