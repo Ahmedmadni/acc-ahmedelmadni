@@ -628,6 +628,113 @@ function NotebookPaper({
           </button>
         </div>
       )}
+      {tool === "select" && selectedObject &&
+        ["sticky", "formula", "checklist", "table"].includes(selectedObject.kind) && (
+        <section className="space-y-3 rounded-xl border border-[#b5c9d4] bg-[#f1f6f9] p-3"
+          aria-label={lang === "ar" ? "تعديل العنصر المحدد" : "Edit selected study element"}
+          dir={page.direction}>
+          <div className="flex items-center justify-between gap-2">
+            <strong className="text-xs text-[#253a4b]">
+              {lang === "ar" ? "تحرير البطاقة المحددة" : "Edit selected card"}
+            </strong>
+            <select aria-label={lang === "ar" ? "لون البطاقة" : "Card color"}
+              value={selectedObject.tone ?? "yellow"}
+              onChange={event => editSelectedObject({ tone: event.target.value as NotebookObject["tone"] })}
+              className="rounded-lg border border-[#bbcad5] bg-white px-2 py-1 text-xs text-[#253a4b]">
+              <option value="yellow">{lang === "ar" ? "أصفر" : "Yellow"}</option>
+              <option value="mint">{lang === "ar" ? "أخضر" : "Mint"}</option>
+              <option value="rose">{lang === "ar" ? "وردي" : "Rose"}</option>
+              <option value="blue">{lang === "ar" ? "أزرق" : "Blue"}</option>
+            </select>
+          </div>
+          <label className="block text-xs font-semibold text-[#344657]">
+            {selectedObject.kind === "sticky" ? (lang === "ar" ? "نص الملاحظة" : "Note body")
+              : selectedObject.kind === "formula" ? (lang === "ar" ? "نص المعادلة" : "Formula text")
+                : lang === "ar" ? "عنوان العنصر" : "Widget title"}
+            {selectedObject.kind === "sticky" || selectedObject.kind === "formula"
+              ? <textarea rows={3} spellCheck value={selectedObject.label ?? ""}
+                  maxLength={MAX_WIDGET_TEXT_LENGTH}
+                  onChange={event => editSelectedObject({ label: event.target.value.slice(0, MAX_WIDGET_TEXT_LENGTH) })}
+                  className="mt-1 block w-full resize-y rounded-lg border border-[#bbcad5] bg-white p-2 text-sm text-[#253a4b]" />
+              : <input type="text" value={selectedObject.label ?? ""}
+                  maxLength={MAX_WIDGET_TITLE_LENGTH}
+                  onChange={event => editSelectedObject({ label: event.target.value.slice(0, MAX_WIDGET_TITLE_LENGTH) })}
+                  className="mt-1 block w-full rounded-lg border border-[#bbcad5] bg-white p-2 text-sm text-[#253a4b]" />}
+          </label>
+          {selectedObject.kind === "checklist" && (
+            <div className="space-y-2">
+              {(selectedObject.items ?? []).map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <input type="checkbox" checked={item.checked}
+                    aria-label={lang === "ar" ? `إنجاز بند ${index + 1}` : `Complete item ${index + 1}`}
+                    onChange={event => editSelectedObject({ items: (selectedObject.items ?? []).map((other, i) =>
+                      i === index ? { ...other, checked: event.target.checked } : other) })}
+                    className="size-4 accent-teal-700" />
+                  <input type="text" value={item.text} maxLength={MAX_WIDGET_CELL_LENGTH}
+                    aria-label={lang === "ar" ? `البند ${index + 1}` : `Item ${index + 1}`}
+                    onChange={event => editSelectedObject({ items: (selectedObject.items ?? []).map((other, i) =>
+                      i === index ? { ...other, text: event.target.value.slice(0, MAX_WIDGET_CELL_LENGTH) } : other) })}
+                    className="min-w-0 flex-1 rounded-lg border border-[#bbcad5] bg-white p-2 text-xs" />
+                  <button type="button"
+                    title={lang === "ar" ? "حذف البند" : "Delete item"}
+                    onClick={() => editSelectedObject({ items: (selectedObject.items ?? []).filter((_, i) => i !== index) })}
+                    className="grid size-8 place-items-center rounded-lg border border-red-200 bg-white text-red-700">
+                    <Trash2 className="size-3.5" />
+                  </button>
+                </div>
+              ))}
+              <button type="button" disabled={(selectedObject.items?.length ?? 0) >= MAX_WIDGET_ITEMS}
+                onClick={() => editSelectedObject({ items: [...(selectedObject.items ?? []),
+                  { text: "", checked: false }] })}
+                className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs font-bold disabled:opacity-40">
+                {lang === "ar" ? "إضافة بند" : "Add checklist item"}
+              </button>
+            </div>
+          )}
+          {selectedObject.kind === "table" && (
+            <div className="space-y-2">
+              <div className="grid gap-1" style={{ gridTemplateColumns:
+                `repeat(${selectedObject.cells?.[0]?.length || 2}, minmax(0, 1fr))` }}>
+                {(selectedObject.cells ?? []).flatMap((row, rowIndex) =>
+                  row.map((cell, colIndex) => (
+                    <input key={`${rowIndex}-${colIndex}`} type="text"
+                      value={cell} maxLength={MAX_WIDGET_CELL_LENGTH}
+                      aria-label={`Row ${rowIndex + 1} column ${colIndex + 1}`}
+                      onChange={event => editSelectedObject({
+                        cells: (selectedObject.cells ?? []).map((oldRow, i) =>
+                          i === rowIndex ? oldRow.map((oldCell, j) =>
+                            j === colIndex ? event.target.value.slice(0, MAX_WIDGET_CELL_LENGTH) : oldCell) : oldRow),
+                      })}
+                      className="min-w-0 rounded-lg border border-[#bbcad5] bg-white p-1.5 text-xs" />
+                  )))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <button type="button" disabled={(selectedObject.cells?.length ?? 0) >= MAX_WIDGET_ROWS}
+                  onClick={() => editSelectedObject({ cells: [...(selectedObject.cells ?? []),
+                    Array.from({ length: selectedObject.cells?.[0]?.length || 2 }, () => "")] })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "إضافة صف" : "Add row"}
+                </button>
+                <button type="button" disabled={(selectedObject.cells?.length ?? 0) <= 2}
+                  onClick={() => editSelectedObject({ cells: (selectedObject.cells ?? []).slice(0, -1) })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "حذف آخر صف" : "Remove last row"}
+                </button>
+                <button type="button" disabled={(selectedObject.cells?.[0]?.length ?? 0) >= 3}
+                  onClick={() => editSelectedObject({ cells: (selectedObject.cells ?? []).map(row => [...row, ""]) })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "إضافة عمود" : "Add column"}
+                </button>
+                <button type="button" disabled={(selectedObject.cells?.[0]?.length ?? 0) <= 2}
+                  onClick={() => editSelectedObject({ cells: (selectedObject.cells ?? []).map(row => row.slice(0, -1)) })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "حذف آخر عمود" : "Remove last column"}
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
+      )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
           <p>{lang === "ar"
