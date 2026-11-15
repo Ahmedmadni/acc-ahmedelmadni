@@ -7,6 +7,12 @@ on:
     paths:
       - '.github/workflows/ifrsquiz-source-probe.yml'
       - 'scripts/ifrsquiz-source-probe.mjs'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/ifrsquiz-source-probe.yml'
+      - 'scripts/ifrsquiz-source-probe.mjs'
   workflow_dispatch:
 
 permissions:
