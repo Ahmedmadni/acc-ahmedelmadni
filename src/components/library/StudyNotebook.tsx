@@ -585,7 +585,7 @@ function NotebookPaper({
                             )))}
                           </div>
                         )}
-                      </div>
+                      </div>}
                 {selected && (
                   <div data-handle="resize"
                     aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
