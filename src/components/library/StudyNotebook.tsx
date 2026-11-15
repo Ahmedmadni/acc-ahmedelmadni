@@ -689,6 +689,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
       ? "سيتم استبدال جميع صفحات CMA وIFRS الحالية بمحتوى النسخة الاحتياطية. هل تريد المتابعة؟"
       : "This replaces every current CMA and IFRS notebook page with the backup. Continue?");
     if (!approved) return;
+    inkHistory.current = {};
+    setHistoryTick((n) => n + 1);
     setStore(restored);
     setStorageWritable(true);
     setRestoreMessage(lang === "ar" ? "استُعيدت الصفحات بنجاح." : "Notebook backup restored.");
@@ -790,6 +792,48 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               className="grid size-9 place-items-center rounded-lg bg-[#253a4b] text-white disabled:opacity-35"
               onClick={addPage}><FilePlus2 className="size-4" /></button>
           </div>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <button type="button" onClick={() => setShowPageManager((open) => !open)}
+              aria-expanded={showPageManager} className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-bold">
+              <Search className="size-3.5" /> {LABELS.allPages[lang]} ({sectionPages.length})
+            </button>
+            <button type="button" onClick={duplicatePage} disabled={sectionPages.length >= MAX_NOTEBOOK_PAGES}
+              title={LABELS.duplicate[lang]} className="grid size-9 place-items-center rounded-lg border border-[#c9bba8] bg-white disabled:opacity-40">
+              <Copy className="size-4" />
+            </button>
+            <button type="button" onClick={() => movePage(-1)} disabled={currentIndex < 1}
+              title={lang === "ar" ? "تحريك الصفحة لأعلى" : "Move page earlier"}
+              className="grid size-9 place-items-center rounded-lg border border-[#c9bba8] bg-white disabled:opacity-40">
+              <ChevronUp className="size-4" />
+            </button>
+            <button type="button" onClick={() => movePage(1)} disabled={currentIndex >= sectionPages.length - 1}
+              title={lang === "ar" ? "تحريك الصفحة لأسفل" : "Move page later"}
+              className="grid size-9 place-items-center rounded-lg border border-[#c9bba8] bg-white disabled:opacity-40">
+              <ChevronDown className="size-4" />
+            </button>
+          </div>
+          {showPageManager && (
+            <section aria-label={lang === "ar" ? "صفحات الدفتر والبحث" : "Notebook page search"}
+              className="mt-2 space-y-2 rounded-xl border border-[#d5c8b6] bg-white/75 p-3">
+              <input type="search" value={pageSearch} onChange={(event) => setPageSearch(event.target.value)}
+                aria-label={lang === "ar" ? "ابحث في عناوين ومحتوى الصفحات" : "Search page titles and content"}
+                placeholder={lang === "ar" ? "ابحث عن كلمة داخل صفحاتك…" : "Find a word in your notes…"}
+                className={narrowControl} />
+              <div className="max-h-52 space-y-1.5 overflow-y-auto">
+                {sectionPages.map((page, index) => ({ page, index }))
+                  .filter(({ page }) => !pageSearch.trim() ||
+                    (page.title + " " + page.text).toLocaleLowerCase().includes(pageSearch.trim().toLocaleLowerCase()))
+                  .map(({ page, index }) => (
+                    <button key={page.id} type="button" onClick={() => { navigate(index); setShowPageManager(false); }}
+                      aria-current={page.id === current.id ? "page" : undefined}
+                      className={`block w-full rounded-lg border px-3 py-2 text-start text-xs ${page.id === current.id ? "border-[#76543F] bg-[#f5ebdd]" : "border-[#e2d8ca] bg-white"}`}>
+                      <span className="block font-bold">{index + 1}. {page.title || (lang === "ar" ? "صفحة بدون عنوان" : "Untitled page")}</span>
+                      <span className="mt-1 block truncate text-[#756b5e]">{page.text.slice(0, 95) || (lang === "ar" ? "رسومات وملاحظات" : "Ink / blank page")}</span>
+                    </button>
+                  ))}
+              </div>
+            </section>
+          )}
           <input
             value={current.title}
             onChange={(e) => updatePage({ title: e.target.value.slice(0, 90) })}
@@ -888,6 +932,16 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">
+            <button type="button" disabled={exportingPdf || !storageWritable}
+              onClick={() => void savePdf(true)}
+              className="inline-flex min-h-9 items-center gap-1 rounded-lg bg-[#283b4d] px-3 py-2 text-xs font-bold text-white disabled:opacity-50">
+              <FileDown className="size-3.5" /> {exportingPdf ? "…" : LABELS.pdf[lang]}
+            </button>
+            <button type="button" disabled={exportingPdf || !storageWritable}
+              onClick={() => void savePdf(false)}
+              className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-50">
+              {lang === "ar" ? "PDF للصفحة الحالية" : "Current page PDF"}
+            </button>
             <input ref={backupInput} type="file" accept="application/json,.json" className="sr-only"
               aria-label={lang === "ar" ? "اختيار نسخة احتياطية" : "Choose a notebook backup"}
               onChange={(event) => {
@@ -926,6 +980,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                   ? "البيانات السابقة غير قابلة للقراءة. بدء دفتر جديد سيستبدلها نهائيا. هل تريد المتابعة؟"
                   : "Previous saved data could not be read. Starting a new notebook will permanently replace it. Continue?");
                 if (!accepted) return;
+                inkHistory.current = {};
+                setHistoryTick((n) => n + 1);
                 setStore(emptyNotebook());
                 setStorageWritable(true);
                 setSaveError(false);
