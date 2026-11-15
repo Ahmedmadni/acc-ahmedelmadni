@@ -425,6 +425,12 @@ function NotebookPaper({
     setRecognizedText("");
   }
 
+  const drawnStrokes = page.strokes.map(stroke =>
+    preview?.id === stroke.id ? preview : stroke);
+  if (preview && !drawnStrokes.some(stroke => stroke.id === preview.id)) drawnStrokes.push(preview);
+  const chosenStroke = drawnStrokes.find(stroke => stroke.id === selectedStrokeId);
+  const chosenStrokeBounds = chosenStroke ? strokeBounds(chosenStroke) : null;
+
   return (
     <div className="space-y-2">
       <div
@@ -469,7 +475,7 @@ function NotebookPaper({
           onPointerUp={pointerEnd}
           onPointerCancel={pointerEnd}
         >
-          {[...page.strokes, ...(preview ? [preview] : [])].map((stroke) => (
+          {drawnStrokes.map((stroke) => (
             <path
               key={stroke.id}
               d={notebookStrokePath(stroke)}
@@ -481,8 +487,87 @@ function NotebookPaper({
               opacity={stroke.kind === "highlighter" ? ".32" : ".95"}
             />
           ))}
+          {tool === "select" && chosenStrokeBounds && (
+            <g pointerEvents="none">
+              <rect x={chosenStrokeBounds.x - 5} y={chosenStrokeBounds.y - 5}
+                width={chosenStrokeBounds.width + 10} height={chosenStrokeBounds.height + 10}
+                fill="none" stroke="#188a8a" strokeWidth="2.5" strokeDasharray="7 5" />
+              <circle cx={chosenStrokeBounds.x + chosenStrokeBounds.width}
+                cy={chosenStrokeBounds.y + chosenStrokeBounds.height}
+                r={12} fill="#ffffff" stroke="#188a8a" strokeWidth="3" />
+            </g>
+          )}
         </svg>
+        <div className="pointer-events-none absolute inset-0 z-[4]">
+          {page.objects.map((stored) => {
+            const object = objectPreview?.id === stored.id ? objectPreview : stored;
+            const selected = tool === "select" && selectedObjectId === object.id;
+            return (
+              <div key={object.id}
+                aria-label={object.kind === "image" ? (lang === "ar" ? "صورة قابلة للتحريك" : "Movable image") : (lang === "ar" ? "ملصق قابل للتحريك" : "Movable sticker")}
+                onPointerDown={(event) => startObjectSelection(event, object)}
+                onPointerMove={moveObjectSelection}
+                onPointerUp={endObjectSelection}
+                onPointerCancel={endObjectSelection}
+                style={{
+                  left: `${object.x / NOTEBOOK_DESIGN_WIDTH * 100}%`,
+                  top: `${object.y / height * 100}%`,
+                  width: `${object.width / NOTEBOOK_DESIGN_WIDTH * 100}%`,
+                  height: `${object.height / height * 100}%`,
+                  pointerEvents: tool === "select" ? "auto" : "none",
+                  touchAction: tool === "select" ? "none" : "auto",
+                }}
+                className={`absolute flex select-none items-center justify-center ${tool === "select" ? "cursor-move" : ""} ${selected ? "outline outline-2 outline-dashed outline-teal-600" : ""}`}
+              >
+                {object.kind === "image" && object.src
+                  ? <img src={object.src} alt={lang === "ar" ? "صورة مضافة إلى المذكرة" : "Notebook image"}
+                      draggable={false} className="pointer-events-none h-full w-full object-contain" />
+                  : <span className="pointer-events-none flex h-full w-full items-center justify-center leading-none"
+                      style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
+                      {object.label}
+                    </span>}
+                {selected && (
+                  <div data-handle="resize"
+                    aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
+                    className="pointer-events-auto absolute -bottom-2 -right-2 size-5 cursor-nwse-resize rounded-full border-2 border-teal-600 bg-white shadow" />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
+      {tool === "select" && (selectedObjectId || selectedStrokeId) && (
+        <div className="flex flex-wrap gap-2 rounded-lg border border-teal-200 bg-teal-50 p-2">
+          <span className="flex-1 text-xs leading-6 text-teal-900">
+            {lang === "ar" ? "اسحب العنصر لتحريكه، أو اسحب المقبض لتغيير حجمه." : "Drag to move; use the corner handle to resize."}
+          </span>
+          <button type="button" className="rounded-lg bg-white px-3 py-2 text-xs text-red-700"
+            onClick={() => {
+              if (selectedObjectId) onChange({ objects: page.objects.filter(object => object.id !== selectedObjectId) });
+              if (selectedStrokeId) onChange({ strokes: page.strokes.filter(stroke => stroke.id !== selectedStrokeId) });
+              setSelectedObjectId(null); setSelectedStrokeId(null);
+            }}>
+            <Trash2 className="inline size-3.5" /> {lang === "ar" ? "حذف العنصر" : "Delete selected"}
+          </button>
+          <button type="button" className="rounded-lg bg-white px-3 py-2 text-xs"
+            onClick={() => {
+              if (selectedObjectId && page.objects.length < MAX_NOTEBOOK_OBJECTS) {
+                const original = page.objects.find(object => object.id === selectedObjectId);
+                if (original) onChange({ objects: [...page.objects, clampNotebookObject({ ...original,
+                  id: newId(), x: original.x + 20, y: original.y + 20 }, height)] });
+              } else if (selectedStrokeId && page.strokes.length < MAX_INK_STROKES) {
+                const original = page.strokes.find(stroke => stroke.id === selectedStrokeId);
+                if (original) {
+                  const bounds = strokeBounds(original);
+                  onChange({ strokes: [...page.strokes,
+                    { ...transformNotebookStroke(original, { ...bounds, x: bounds.x + 20, y: bounds.y + 20 }, height), id: newId() }] });
+                }
+              }
+            }}>
+            <CopyPlus className="inline size-3.5" /> {lang === "ar" ? "تكرار" : "Duplicate"}
+          </button>
+        </div>
+      )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
           <p>{lang === "ar"
