@@ -181,3 +181,39 @@ test("Sidebar exists only for CMA and IFRS, leaves mobile lessons unobstructed a
   assert.match(component, /onChange\(\{\s*text:[^}]+strokes: \[\]/);
   assert.match(component, /application\/json/);
 });
+
+test("Eraser hits line segments between sampled stylus points and ignores distant ink", () => {
+  const strokes = [
+    { id:"horizontal", width:3, points:[{x:10,y:20},{x:110,y:20}] },
+    { id:"vertical", width:3, points:[{x:300,y:300},{x:300,y:420}] },
+  ];
+  assert.equal(notebook.nearestInkStrokeIndex(strokes, 63, 22, 15), 0);
+  assert.equal(notebook.nearestInkStrokeIndex(strokes, 303, 370, 15), 1);
+  assert.equal(notebook.nearestInkStrokeIndex(strokes, 200, 200, 15), -1);
+  assert.equal(notebook.nearestInkStrokeIndex([], 40, 20), -1);
+});
+
+test("Restoring backup rejects unrelated JSON and preserves section pages and active selection", () => {
+  assert.throws(() => notebook.validateNotebookBackup(null), /Invalid study notebook backup/);
+  assert.throws(() => notebook.validateNotebookBackup({ version:1, pages: { cma:[] } }), /Invalid study notebook backup/);
+  const original=notebook.emptyNotebook();
+  original.pages.cma.push(notebook.createNotebookPage("another", "rtl"));
+  original.activePage.cma="another";
+  original.pages.standards[0].text="IFRS 17 note";
+  const restored=notebook.validateNotebookBackup(JSON.parse(JSON.stringify(original)));
+  assert.equal(restored.pages.cma.length, 2);
+  assert.equal(restored.activePage.cma, "another");
+  assert.equal(restored.pages.standards[0].text, "IFRS 17 note");
+});
+
+test("Regression against basic press-and-release eraser and desktop modal-open mismatch", async () => {
+  const component=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(component,/activeEraser\.current = e\.pointerId/);
+  assert.match(component,/nearestInkStrokeIndex\(strokeBuffer\.current/);
+  assert.match(component,/if \(tool === "eraser" && activeEraser\.current === e\.pointerId\)/);
+  assert.match(component,/startTime\.current = e\.timeStamp/);
+  assert.doesNotMatch(component,/startTime\.current = e\.timeStamp;\s*const point/);
+  assert.match(component,/window\.matchMedia\("\(min-width: 1280px\)"\)\.matches/);
+  assert.match(component,/validateNotebookBackup\(JSON\.parse\(await file\.text\(\)\)\)/);
+  assert.match(component,/window\.confirm/);
+});
