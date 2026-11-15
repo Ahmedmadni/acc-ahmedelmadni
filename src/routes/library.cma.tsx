@@ -31,7 +31,7 @@ import {
   type CmaPart,
   type CmaStudyUnit,
 } from "@/data/cma-topics";
-import { useSiteLang } from "@/lib/use-site-lang";
+import { useLibLang } from "@/routes/library";
 
 const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage !== "en").length;
 const original2019Part2Count = CMA_LOCAL_QUESTIONS.filter((q) =>
@@ -51,15 +51,15 @@ export const Route = createFileRoute("/library/cma")({
     const url = "https://ahmedelmadni.com/library/cma";
     return {
       meta: [
-        { title: "منهج CMA الأمريكي | الجزء الأول والثاني — أحمد المدني" },
+        { title: "CMA Exam Study — Parts 1 & 2 | Ahmed Elmadani" },
         {
           name: "description",
-          content: `دليل CMA للجزء الأول ووحدات 1–15 من الجزء الثاني، مع ${bilingualQuestionCount} سؤالًا ثنائي اللغة و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية و${icma2024Part2Count} سؤالًا رسميًا سابقًا من ICMA 2024 للجزء الثاني، و2,443 سؤالًا من بنوك الجزء الأول.`,
+          content: `English-first CMA study guides for Parts 1 and 2, with original bilingual practice and ${icma2024Part2Count} retired ICMA 2024 Part 2 questions, plus curated worked examples. Switch to Arabic whenever needed.`,
         },
-        { property: "og:title", content: "منهج CMA الأمريكي | أحمد المدني" },
+        { property: "og:title", content: "CMA Exam Study — Parts 1 & 2 | Ahmed Elmadani" },
         {
           property: "og:description",
-          content: "دليل عملي ثنائي اللغة للجزء الأول ووحدات 1–15 من الجزء الثاني مع حالات وأسئلة تدريب.",
+          content: "English-first CMA curriculum with worked examples, bilingual guides and question banks for Parts 1 and 2.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/library/cma")({
 });
 
 function CmaPage() {
-  const [lang] = useSiteLang();
+  const lang = useLibLang();
   const [part, setPart] = useState<CmaPart>("part-1");
   const [studyUnit, setStudyUnit] = useState<"all" | CmaStudyUnit>("all");
   const [domain, setDomain] = useState<"all" | CmaDomain>("all");
