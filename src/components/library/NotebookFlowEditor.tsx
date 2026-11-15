@@ -3,6 +3,38 @@ import type { NotebookDirection, NotebookFlowBlock, NotebookTypeface } from "@/l
 import { MAX_NOTEBOOK_FLOW_ROWS, MAX_NOTEBOOK_FLOW_COLS, MAX_NOTEBOOK_FLOW_CELL_LENGTH,
   MAX_NOTE_TEXT_LENGTH } from "@/lib/study-notebook";
 import type { NotebookFlowCursor } from "@/lib/study-notebook-flow";
+import { reviewNotebookJournal } from "@/lib/study-notebook-flow";
+
+function JournalBalanceStatus({ cells, direction }: {
+  cells: string[][]; direction: NotebookDirection;
+}) {
+  const review = reviewNotebookJournal(cells);
+  const ar = direction === "rtl";
+  const money = (minor: number) => (minor / 100).toLocaleString(ar ? "ar-SA" : "en-US", {
+    minimumFractionDigits: 2, maximumFractionDigits: 2,
+  });
+  const message = review.status === "empty"
+    ? (ar ? "أدخل الحسابات والمبالغ لمراجعة توازن القيد." : "Enter accounts and amounts to check the entry.")
+    : review.status === "invalid"
+      ? (ar ? "راجع الصفوف: " : "Check rows: ") + review.invalidRows.join(", ")
+      : review.status === "balanced"
+        ? (ar ? "القيد متوازن." : "The entry is balanced.")
+        : (ar ? "القيد غير متوازن. الفرق: " : "Out of balance. Difference: ") + money(review.differenceMinor);
+  return (
+    <div data-notebook-journal-balance={review.status} aria-live="polite"
+      className={`border-t px-2 py-2 text-xs leading-relaxed ${review.status === "balanced"
+        ? "border-emerald-200 bg-emerald-50/90 text-emerald-900"
+        : review.status === "empty" ? "border-slate-200 bg-slate-50 text-slate-700"
+          : "border-amber-200 bg-amber-50 text-amber-900"}`}>
+      <div className="grid grid-cols-2 gap-2 font-semibold">
+        <span>{ar ? "إجمالي المدين" : "Total debit"}: <b dir="ltr">{money(review.debitMinor)}</b></span>
+        <span>{ar ? "إجمالي الدائن" : "Total credit"}: <b dir="ltr">{money(review.creditMinor)}</b></span>
+      </div>
+      <p className="mt-1">{message}</p>
+    </div>
+  );
+}
+
 
 export function NotebookFlowEditor({
   blocks, direction, typeface, lineGap, margin, tool, onChange, onCursor, onOverflow,
@@ -93,7 +125,7 @@ export function NotebookFlowEditor({
               maxLength={80}
               aria-label={direction === "rtl" ? "عنوان الجدول" : "Table title"}
               onChange={e => patchBlock(block.id, { title: e.target.value })}
-              className="min-w-0 flex-1 border-0 bg-transparent text-xs font-bold text-[#293947] outline-none"
+              className="min-h-10 min-w-0 flex-1 border-0 bg-transparent text-base font-bold text-[#293947] outline-none"
             />
             {editable && (
               <button type="button" onClick={() => {
@@ -101,7 +133,7 @@ export function NotebookFlowEditor({
                   !window.confirm(direction === "rtl" ? "حذف الجدول ومحتوياته نهائيا؟" : "Delete this table and all its contents?")) return;
                 onChange(blocks.filter(item => item.id !== block.id));
               }}
-                className="rounded border border-red-200 bg-white px-1.5 py-1 text-[10px] font-semibold text-red-700"
+                className="min-h-9 rounded border border-red-200 bg-white px-2 py-1 text-xs font-semibold text-red-700 touch-manipulation"
                 aria-label={direction === "rtl" ? "حذف الجدول من المذكرة" : "Remove inline table"}>×</button>
             )}
           </div>
@@ -112,18 +144,21 @@ export function NotebookFlowEditor({
                   <tr key={ri}>
                     {row.map((cell, ci) => (
                       <td key={ci} className="border border-[#bac9d4] p-0"
-                        style={{ height: Math.max(24, lineGap) }}>
+                        style={{ height: Math.max(40, lineGap) }}>
                         <input
                           value={cell}
                           type="text"
+                          inputMode={block.template === "journal" && ci > 0 ? "decimal" : "text"}
+                          dir={block.template === "journal" && ci > 0 ? "ltr" : direction}
+                          autoComplete="off"
                           readOnly={!editable}
                           maxLength={MAX_NOTEBOOK_FLOW_CELL_LENGTH}
                           aria-label={(direction === "rtl" ? "الصف " : "Row ") + (ri + 1) +
                             (direction === "rtl" ? " العمود " : " column ") + (ci + 1)}
                           onChange={e => patchBlock(block.id, { cells: block.cells.map((r, i) =>
                             i === ri ? r.map((value, j) => j === ci ? e.target.value : value) : r) })}
-                          className={`w-full min-w-0 border-0 bg-transparent px-1 text-[#283646] outline-none focus:bg-teal-50 ${ri === 0 ? "font-bold" : ""}`}
-                          style={{ fontSize: Math.max(11, lineGap * .36), height: Math.max(24, lineGap) }}
+                          className={`w-full min-w-0 border-0 bg-transparent px-1 text-[#283646] outline-none focus:bg-teal-50 focus-visible:ring-2 focus-visible:ring-teal-500 ${ri === 0 ? "font-bold" : ""}`}
+                          style={{ fontSize: Math.max(16, lineGap * .4), height: Math.max(40, lineGap) }}
                         />
                       </td>
                     ))}
@@ -132,32 +167,35 @@ export function NotebookFlowEditor({
               </tbody>
             </table>
           </div>
+          {block.template === "journal" && (
+            <JournalBalanceStatus cells={block.cells} direction={direction} />
+          )}
           {editable && (
             <div className="flex flex-wrap gap-1 border-t border-[#b5c4d3] bg-white/65 p-1">
               <button type="button" disabled={block.cells.length >= MAX_NOTEBOOK_FLOW_ROWS}
                 onClick={() => patchBlock(block.id, { cells: [
                   ...block.cells, Array.from({ length: block.cells[0]?.length || 2 }, () => ""),
                 ] })}
-                className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
+                className="min-h-9 rounded border border-[#bac9d4] px-2 py-1 text-xs touch-manipulation disabled:opacity-40"
                 aria-label={direction === "rtl" ? "إضافة صف للجدول" : "Add journal row"}>
                 {direction === "rtl" ? "+ صف" : "+ Row"}
               </button>
               <button type="button" disabled={block.cells.length <= 2 || block.cells[block.cells.length - 1].some(cell => cell.trim().length > 0)}
                 onClick={() => patchBlock(block.id, { cells: block.cells.slice(0, -1) })}
-                className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
+                className="min-h-9 rounded border border-[#bac9d4] px-2 py-1 text-xs touch-manipulation disabled:opacity-40"
                 aria-label={direction === "rtl" ? "حذف آخر صف" : "Remove last row"}>
                 {direction === "rtl" ? "− صف" : "− Row"}
               </button>
               <button type="button" disabled={(block.cells[0]?.length || 0) >= MAX_NOTEBOOK_FLOW_COLS}
                 onClick={() => patchBlock(block.id, { cells: block.cells.map(row => [...row, ""]) })}
-                className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
+                className="min-h-9 rounded border border-[#bac9d4] px-2 py-1 text-xs touch-manipulation disabled:opacity-40"
                 aria-label={direction === "rtl" ? "إضافة عمود للجدول" : "Add table column"}>
                 {direction === "rtl" ? "+ عمود" : "+ Column"}
               </button>
               <button type="button"
                 disabled={(block.cells[0]?.length || 0) <= 2 || block.cells.some(row => row[row.length - 1]?.trim())}
                 onClick={() => patchBlock(block.id, { cells: block.cells.map(row => row.slice(0, -1)) })}
-                className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
+                className="min-h-9 rounded border border-[#bac9d4] px-2 py-1 text-xs touch-manipulation disabled:opacity-40"
                 aria-label={direction === "rtl" ? "حذف آخر عمود فارغ" : "Remove last empty column"}
                 title={direction === "rtl" ? "لا يمكن حذف عمود يحتوي على بيانات" : "Only empty columns can be removed"}>
                 {direction === "rtl" ? "− عمود" : "− Column"}
