@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
-  BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2, Upload,
+  BookOpenText, Check, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Copy, Download, Eraser, FilePlus2, Upload, FileDown, Highlighter, Minus, Square, Circle, Search, Redo2,
   NotebookPen, PenLine, RotateCcw, ScanText,
   Settings2, Trash2, Type, X,
 } from "lucide-react";
@@ -10,11 +10,12 @@ import {
   createNotebookPage, emptyNotebook, MAX_INK_POINTS, MAX_INK_STROKES,
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
-  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
+  notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
+import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -22,6 +23,10 @@ const LABELS = {
   subtitle: { ar: "ملاحظات محفوظة على جهازك", en: "Private notes on this device" },
   type: { ar: "كتابة", en: "Type" },
   pen: { ar: "قلم", en: "Pen" },
+  highlighter: { ar: "تظليل", en: "Highlight" },
+  line: { ar: "خط", en: "Line" },
+  rectangle: { ar: "مربع", en: "Box" },
+  ellipse: { ar: "بيضاوي", en: "Oval" },
   eraser: { ar: "ممحاة", en: "Eraser" },
   page: { ar: "صفحة", en: "Page" },
   add: { ar: "صفحة جديدة", en: "New page" },
@@ -45,7 +50,11 @@ const LABELS = {
   },
   apply: { ar: "اعتماد النص واستبدال الحبر", en: "Use text and replace ink" },
   cancel: { ar: "إلغاء", en: "Cancel" },
-  undo: { ar: "تراجع عن آخر خط", en: "Undo last stroke" },
+  undo: { ar: "تراجع", en: "Undo" },
+  redo: { ar: "إعادة", en: "Redo" },
+  pdf: { ar: "تصدير PDF", en: "Export PDF" },
+  duplicate: { ar: "نسخ الصفحة", en: "Duplicate page" },
+  allPages: { ar: "إدارة الصفحات", en: "Manage pages" },
   delete: { ar: "حذف الصفحة", en: "Delete page" },
   export: { ar: "نسخة احتياطية JSON", en: "Backup JSON" },
   textExport: { ar: "تصدير نص الصفحة", en: "Export page text" },
@@ -111,15 +120,20 @@ function lastFittingTextIndex(editor: HTMLTextAreaElement, text: string) {
 }
 
 function NotebookPaper({
-  page, tool, inkColor, inkWidth, onChange, onSplit, canAddPage, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
   inkColor: string;
+  highlighterColor: string;
   inkWidth: number;
   onChange: (change: Partial<NotebookPage>) => void;
   onSplit: (fittingIndex: number) => void;
   canAddPage: boolean;
+  undoInk: () => void;
+  redoInk: () => void;
+  canUndoInk: boolean;
+  canRedoInk: boolean;
   lang: Lang;
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
@@ -199,7 +213,7 @@ function NotebookPaper({
 
   function pointerDown(e: PointerEvent<SVGSVGElement>) {
     if (tool === "type" || (e.pointerType === "mouse" && e.button !== 0)) return;
-    if (tool === "pen" && page.strokes.length >= MAX_INK_STROKES) return;
+    if (tool !== "eraser" && page.strokes.length >= MAX_INK_STROKES) return;
     if (!startTime.current) startTime.current = e.timeStamp;
     const point = toPoint(e);
     if (tool === "eraser") {
@@ -210,7 +224,9 @@ function NotebookPaper({
       return;
     }
     const stroke: NotebookStroke = {
-      id: newId(), color: inkColor, width: inkWidth, points: [point],
+      id: newId(), kind: tool === "type" || tool === "eraser" ? "pen" : tool,
+      color: tool === "highlighter" ? highlighterColor : inkColor,
+      width: tool === "highlighter" ? 18 : inkWidth, points: [point],
     };
     drawing.current = stroke;
     setPreview({ ...stroke, points: [...stroke.points] });
@@ -233,7 +249,13 @@ function NotebookPaper({
       return;
     }
     const active = drawing.current;
-    if (!active || tool !== "pen" || !e.currentTarget.hasPointerCapture(e.pointerId)) return;
+    if (!active || !e.currentTarget.hasPointerCapture(e.pointerId)) return;
+    if (["line", "rectangle", "ellipse"].includes(tool)) {
+      active.points = [active.points[0], toPoint(e)];
+      setPreview({ ...active, points: [...active.points] });
+      e.preventDefault();
+      return;
+    }
     const samples = e.nativeEvent.getCoalescedEvents?.() ?? [e.nativeEvent];
     const rect = e.currentTarget.getBoundingClientRect();
     for (const sample of samples) {
@@ -257,7 +279,8 @@ function NotebookPaper({
     }
     const active = drawing.current;
     if (!active) return;
-    if (active.points.length < MAX_INK_POINTS) active.points.push(toPoint(e));
+    if (["line", "rectangle", "ellipse"].includes(tool)) active.points = [active.points[0], toPoint(e)];
+    else if (active.points.length < MAX_INK_POINTS) active.points.push(toPoint(e));
     onChange({ strokes: [...page.strokes, { ...active, points: [...active.points] }] });
     drawing.current = null;
     setPreview(null);
@@ -269,7 +292,7 @@ function NotebookPaper({
     setRecognitionError("");
     setRecognizing(true);
     try {
-      const choices = await recognizeNotebookInk(page.strokes, page.direction);
+      const choices = await recognizeNotebookInk(page.strokes.filter((stroke) => !stroke.kind || stroke.kind === "pen"), page.direction);
       if (!choices.length) throw new Error(lang === "ar" ? "لم يتم التعرف على أي كلمات." : "No words could be recognized.");
       setRecognized(choices);
       setRecognizedText(choices[0]);
@@ -337,13 +360,13 @@ function NotebookPaper({
           {[...page.strokes, ...(preview ? [preview] : [])].map((stroke) => (
             <path
               key={stroke.id}
-              d={pageStrokePath(stroke.points)}
+              d={notebookStrokePath(stroke)}
               fill="none"
               stroke={stroke.color}
-              strokeWidth={stroke.width * (0.8 + .4 * (stroke.points.reduce((sum, p) => sum + p.pressure, 0) / stroke.points.length))}
+              strokeWidth={stroke.kind === "highlighter" ? Math.max(12, stroke.width) : stroke.width * (0.8 + .4 * (stroke.points.reduce((sum, p) => sum + p.pressure, 0) / stroke.points.length))}
               strokeLinecap="round"
               strokeLinejoin="round"
-              opacity=".95"
+              opacity={stroke.kind === "highlighter" ? ".32" : ".95"}
             />
           ))}
         </svg>
@@ -368,11 +391,15 @@ function NotebookPaper({
       <div className="flex flex-wrap items-center justify-between gap-2">
         <button
           type="button"
-          onClick={() => onChange({ strokes: page.strokes.slice(0, -1) })}
-          disabled={!page.strokes.length}
+          onClick={undoInk}
+          disabled={!canUndoInk}
           className="inline-flex items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40"
         >
           <RotateCcw className="size-3.5" /> {LABELS.undo[lang]}
+        </button>
+        <button type="button" onClick={redoInk} disabled={!canRedoInk}
+          className="inline-flex items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40">
+          <Redo2 className="size-3.5" /> {LABELS.redo[lang]}
         </button>
         <button
           type="button"
@@ -433,8 +460,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [mobileOpen, setMobileOpen] = useState(false);
   const [tool, setTool] = useState<NotebookTool>("type");
   const [inkColor, setInkColor] = useState("#24334a");
+  const [highlighterColor, setHighlighterColor] = useState("#f6d94e");
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [pageSearch, setPageSearch] = useState("");
+  const [showPageManager, setShowPageManager] = useState(false);
+  const [exportingPdf, setExportingPdf] = useState(false);
+  const [historyTick, setHistoryTick] = useState(0);
+  const inkHistory = useRef<Record<string, { past: NotebookStroke[][]; future: NotebookStroke[][] }>>({});
   const [restoreMessage, setRestoreMessage] = useState("");
   const backupInput = useRef<HTMLInputElement | null>(null);
   latest.current = store;
@@ -490,6 +523,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   }, [mobileOpen]);
 
   function updatePage(change: Partial<NotebookPage>) {
+    if (change.strokes !== undefined) {
+      const state = inkHistory.current[current.id] ?? { past: [], future: [] };
+      state.past.push(current.strokes);
+      if (state.past.length > 40) state.past.shift();
+      state.future = [];
+      inkHistory.current[current.id] = state;
+      setHistoryTick((n) => n + 1);
+    }
     const updatedAt = Date.now();
     setStore((prior) => ({
       ...prior,
@@ -497,6 +538,73 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         page.id === (prior.activePage[section] || current.id)
           ? { ...page, ...change, updatedAt } : page) },
     }));
+  }
+
+  function undoInk() {
+    const history = inkHistory.current[current.id];
+    if (!history?.past.length) return;
+    const previous = history.past.pop()!;
+    history.future.push(current.strokes);
+    setStore((prior) => ({
+      ...prior, pages: { ...prior.pages, [section]: prior.pages[section].map((page) =>
+        page.id === current.id ? { ...page, strokes: previous, updatedAt: Date.now() } : page) },
+    }));
+    setHistoryTick((n) => n + 1);
+  }
+
+  function redoInk() {
+    const history = inkHistory.current[current.id];
+    if (!history?.future.length) return;
+    const next = history.future.pop()!;
+    history.past.push(current.strokes);
+    setStore((prior) => ({
+      ...prior, pages: { ...prior.pages, [section]: prior.pages[section].map((page) =>
+        page.id === current.id ? { ...page, strokes: next, updatedAt: Date.now() } : page) },
+    }));
+    setHistoryTick((n) => n + 1);
+  }
+
+  function duplicatePage() {
+    if (sectionPages.length >= MAX_NOTEBOOK_PAGES) return;
+    const id = newId();
+    const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
+      strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
+      updatedAt: Date.now() };
+    setStore((prior) => {
+      const original = prior.pages[section];
+      const at = original.findIndex((page) => page.id === current.id);
+      const pages = [...original];
+      pages.splice(at + 1, 0, copy);
+      return { ...prior, pages: { ...prior.pages, [section]: pages },
+        activePage: { ...prior.activePage, [section]: id } };
+    });
+  }
+
+  function movePage(step: -1 | 1) {
+    const target = sectionPages.findIndex(page => page.id === current.id) + step;
+    if (target < 0 || target >= sectionPages.length) return;
+    setStore(prior => {
+      const pages = [...prior.pages[section]];
+      const index = pages.findIndex(page => page.id === current.id);
+      if (index < 0 || index + step < 0 || index + step >= pages.length) return prior;
+      [pages[index], pages[index + step]] = [pages[index + step], pages[index]];
+      return { ...prior, pages: { ...prior.pages, [section]: pages } };
+    });
+  }
+
+  async function savePdf(allPages: boolean) {
+    if (exportingPdf) return;
+    setExportingPdf(true);
+    setRestoreMessage("");
+    try {
+      await exportStudyNotebookPdf(allPages ? sectionPages : [current],
+        `${section}-study-notebook-${allPages ? "all" : "page-" + (currentIndex + 1)}.pdf`);
+      setRestoreMessage(lang === "ar" ? "تم تصدير ملف PDF إلى جهازك." : "PDF saved to your device.");
+    } catch (error) {
+      setRestoreMessage(lang === "ar"
+        ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
+        : error instanceof Error ? error.message : "PDF export failed.");
+    } finally { setExportingPdf(false); }
   }
 
   function addPage() {
