@@ -288,7 +288,7 @@ function NotebookPaper({
   }
 
   async function recognize() {
-    if (!recognitionReady || !page.strokes.length || recognizing) return;
+    if (!recognitionReady || !page.strokes.some((stroke) => !stroke.kind || stroke.kind === "pen") || recognizing) return;
     setRecognitionError("");
     setRecognizing(true);
     try {
@@ -404,7 +404,7 @@ function NotebookPaper({
         <button
           type="button"
           onClick={() => void recognize()}
-          disabled={!recognitionReady || !page.strokes.length || recognizing}
+          disabled={!recognitionReady || !page.strokes.some((stroke) => !stroke.kind || stroke.kind === "pen") || recognizing}
           title={!recognitionReady ? LABELS.recognizeOff[lang] : undefined}
           className="inline-flex items-center gap-1 rounded-lg bg-[#283b4d] px-3 py-2 text-xs font-semibold text-white disabled:opacity-45"
         >
