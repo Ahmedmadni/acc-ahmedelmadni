@@ -784,3 +784,12 @@ test("Real flowing notebook editor provides editable paragraphs and table cells 
   const layout=await readFile("src/routes/library.tsx","utf8");
   assert.match(layout,/data-study-split/);
 });
+
+test("Flowing note editor warns before edits exceed durable storage limits", async () => {
+  const source=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(source,/combinedText\.length > MAX_NOTE_TEXT_LENGTH/);
+  assert.match(source,/blocks\.length > MAX_NOTEBOOK_FLOW_BLOCKS/);
+  assert.match(source,/setFlowLimitWarning\(true\)/);
+  assert.match(source,/current\.text\.length > MAX_NOTE_TEXT_LENGTH - 300/);
+  assert.match(source,/flowLimitWarning && \(/);
+});
