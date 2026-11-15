@@ -28,6 +28,7 @@ import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-not
 import { createStudyWidget, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
   type StudyWidgetTemplate } from "@/lib/study-notebook-widgets";
 import { isEditableStudyWidget, StudyNotebookEditableWidget } from "@/components/library/StudyNotebookEditableWidget";
+import { NotebookSectionTabs, type NotebookSection } from "@/components/library/NotebookSectionTabs";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -917,10 +918,11 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [saveError, setSaveError] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [tool, setTool] = useState<NotebookTool>("type");
+  const [activeSection, setActiveSection] = useState<NotebookSection>("write");
   const [inkColor, setInkColor] = useState("#24334a");
   const [highlighterColor, setHighlighterColor] = useState("#f6d94e");
   const [inkWidth, setInkWidth] = useState(2.9);
-  const [settingsOpen, setSettingsOpen] = useState(false);
+
   const [showStickerPalette, setShowStickerPalette] = useState(false);
   const [showStudyWidgets, setShowStudyWidgets] = useState(false);
   const [showInlineTools, setShowInlineTools] = useState(false);
@@ -1332,14 +1334,6 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         </header>
 
         <div className="flex-1 overflow-y-auto overscroll-contain px-3 pb-10 pt-3">
-          <label className="mb-3 hidden items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-[11px] font-semibold text-[#6c5b48] min-[900px]:flex">
-            <span className="shrink-0">{lang === "ar" ? "عرض الدفتر" : "Notebook width"}</span>
-            <input type="range" min={320} max={470} step={10} value={dockWidth}
-              onChange={(event) => onDockWidthChange(Number(event.target.value))}
-              aria-label={lang === "ar" ? "تعديل عرض الدفتر الجانبي" : "Resize the adjacent notebook panel"}
-              className="min-w-0 flex-1 accent-[#76543F]" />
-            <span className="w-10 text-end tabular-nums">{dockWidth}px</span>
-          </label>
           <div className="flex items-center gap-2">
             <button type="button" title={lang === "ar" ? "الصفحة السابقة" : "Previous page"} disabled={currentIndex < 1}
               className="grid size-9 place-items-center rounded-lg border border-[#cdbfae] bg-white disabled:opacity-35"
@@ -1361,6 +1355,28 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               className="grid size-9 place-items-center rounded-lg bg-[#253a4b] text-white disabled:opacity-35"
               onClick={addPage}><FilePlus2 className="size-4" /></button>
           </div>
+          <input
+            value={current.title}
+            onChange={(e) => updatePage({ title: e.target.value.slice(0, 90) })}
+            maxLength={90}
+            placeholder={LABELS.title[lang]}
+            aria-label={LABELS.title[lang]}
+            className="mt-2 w-full border-b border-[#c9bba8] bg-transparent px-1 py-2 text-sm font-bold outline-none focus:border-[#76543F]"
+          />
+
+          <NotebookSectionTabs section={activeSection} lang={lang}
+            onChange={next => {
+              setActiveSection(next);
+              // Tool selection is consistent with the active workflow.
+              if (next === "write" || next === "insert") setTool("type");
+              else if (next === "draw" && tool === "type") setTool("pen");
+              if (next === "insert" && !showInlineTools && !showStudyWidgets && !showStickerPalette)
+                setShowInlineTools(true);
+              if (next === "pages") setShowPageManager(true);
+            }} />
+          {activeSection === "pages" && (
+            <section id="notebook-section-pages" aria-label={lang === "ar" ? "إدارة الصفحات" : "Page management"}
+              className="mt-2 rounded-xl border border-[#d5c8b6] bg-white/70 p-2">
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <button type="button" onClick={() => setShowPageManager((open) => !open)}
               aria-expanded={showPageManager} className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-bold">
@@ -1403,17 +1419,17 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               </div>
             </section>
           )}
-          <input
-            value={current.title}
-            onChange={(e) => updatePage({ title: e.target.value.slice(0, 90) })}
-            maxLength={90}
-            placeholder={LABELS.title[lang]}
-            aria-label={LABELS.title[lang]}
-            className="mt-2 w-full border-b border-[#c9bba8] bg-transparent px-1 py-2 text-sm font-bold outline-none focus:border-[#76543F]"
-          />
-
+            </section>
+          )}
+          {(activeSection === "write" || activeSection === "draw") && (
+            <section id={`notebook-section-${activeSection}`}
+              aria-label={activeSection === "write"
+                ? lang === "ar" ? "أدوات الكتابة والتحديد" : "Writing and selection"
+                : lang === "ar" ? "أدوات الرسم" : "Drawing tools"}>
           <div className="mt-3 grid grid-cols-4 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أدوات التدوين والرسم" : "Notebook writing and drawing tools"}>
-            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse", "select"] as NotebookTool[]).map((mode) => {
+            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse", "select"] as NotebookTool[])
+              .filter(mode => activeSection === "write" ? mode === "type" || mode === "select" : mode !== "type")
+              .map((mode) => {
               const Icon = mode === "select" ? MousePointer2 : mode === "type" ? Type : mode === "pen" ? PenLine
                 : mode === "highlighter" ? Highlighter : mode === "line" ? Minus
                   : mode === "rectangle" ? Square : mode === "ellipse" ? Circle : Eraser;
@@ -1426,6 +1442,32 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               );
             })}
           </div>
+
+              {activeSection === "write" && (
+                <p className="mt-2 text-xs leading-5 text-[#756758]">
+                  {lang === "ar"
+                    ? "اكتب مباشرة في الورقة، أو اختر «تحديد» لتحريك العناصر. لإضافة قيد أو معادلة انتقل إلى «إدراج»."
+                    : "Type directly on the sheet, or select objects to move them. Open Insert for formulas and journal tables."}
+                </p>
+              )}
+              {activeSection === "draw" && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <button type="button" onClick={undoInk}
+                    disabled={!inkHistory.current[current.id]?.past.length}
+                    className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40">
+                    <RotateCcw className="size-3.5" /> {LABELS.undo[lang]}
+                  </button>
+                  <button type="button" onClick={redoInk}
+                    disabled={!inkHistory.current[current.id]?.future.length}
+                    className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40">
+                    <Redo2 className="size-3.5" /> {LABELS.redo[lang]}
+                  </button>
+                </div>
+              )}
+            </section>
+          )}
+          {activeSection === "insert" && (
+            <section id="notebook-section-insert" aria-label={lang === "ar" ? "إدراج العناصر" : "Insert content"}>
           <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
             <button type="button" onClick={() => { setTool("type"); setShowInlineTools(open => !open); }}
               aria-expanded={showInlineTools}
@@ -1552,6 +1594,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                   </button>
                 ))}
               </div>
+            </section>
+          )}
             </section>
           )}
           <button type="button" onClick={() => setSettingsOpen(!settingsOpen)}
