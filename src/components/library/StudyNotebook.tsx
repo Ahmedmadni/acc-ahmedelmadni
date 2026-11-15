@@ -355,11 +355,14 @@ function NotebookPaper({
   );
 }
 
-export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange }: {
+export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange, dockWidth, onDockWidthChange, focus }: {
   section: StudySection;
   lang: Lang;
   desktopOpen: boolean;
   onDesktopOpenChange: (open: boolean) => void;
+  dockWidth: number;
+  onDockWidthChange: (width: number) => void;
+  focus: boolean;
 }) {
   const [store, setStore] = useState<NotebookStore>(emptyNotebook);
   const [hydrated, setHydrated] = useState(false);
@@ -492,12 +495,27 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
   }
 
   function openNotebook() {
-    if (window.matchMedia("(min-width: 1280px)").matches) {
+    if (window.matchMedia("(min-width: 900px)").matches) {
       onDesktopOpenChange(true);
     } else {
       setMobileOpen(true);
     }
   }
+
+  function closeNotebook() {
+    if (window.matchMedia("(min-width: 900px)").matches) {
+      onDesktopOpenChange(false);
+    } else {
+      setMobileOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 900px)");
+    const onChange = () => { if (media.matches) setMobileOpen(false); };
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
 
   const currentIndex = sectionPages.findIndex((p) => p.id === current.id);
   
@@ -509,23 +527,23 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
         <button
           type="button"
           onClick={openNotebook}
-          className={`fixed bottom-5 right-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
+          className={`fixed bottom-5 right-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "min-[900px]:hidden" : "min-[900px]:inline-flex"}`}
           aria-label={LABELS.open[lang]}
           title={LABELS.open[lang]}
         >
           <NotebookPen className="size-5" /> {LABELS.open[lang]}
         </button>
       )}
-      {mobileOpen && <button type="button" onClick={() => setMobileOpen(false)} className="fixed inset-0 z-[69] bg-black/60 xl:hidden" aria-label={LABELS.close[lang]} />}
+      {mobileOpen && <button type="button" onClick={() => setMobileOpen(false)} className="fixed inset-0 z-[69] bg-black/60 min-[900px]:hidden" aria-label={LABELS.close[lang]} />}
       <aside
         aria-label={LABELS.name[lang]}
         role={mobileOpen ? "dialog" : "complementary"}
         aria-modal={mobileOpen ? true : undefined}
         dir={lang === "ar" ? "rtl" : "ltr"}
-        className={`fixed inset-y-0 end-0 z-[70] w-[min(95vw,430px)] flex-col overflow-hidden border-s border-[#b6a58e] bg-[#f8f5ee] text-[#302e2b] shadow-2xl xl:top-16 xl:w-[416px] ${mobileOpen ? "flex" : "hidden"} ${desktopOpen ? "xl:flex" : "xl:hidden"}`}
+        className={`fixed inset-y-0 end-0 z-[70] w-[min(95vw,430px)] flex-col overflow-hidden border-s border-[#b6a58e] bg-[#f8f5ee] text-[#302e2b] shadow-2xl min-[900px]:sticky min-[900px]:end-auto min-[900px]:z-30 min-[900px]:w-full min-[900px]:shadow-none ${focus ? "min-[900px]:top-0 min-[900px]:h-dvh" : "min-[900px]:top-16 min-[900px]:h-[calc(100dvh-4rem)]"} ${mobileOpen ? "flex" : "hidden"} ${desktopOpen ? "min-[900px]:flex" : "min-[900px]:hidden"}`}
       >
         <header className="flex shrink-0 items-center justify-between border-b border-[#cdbfae] bg-[#f1eae0] p-3">
-          <div>
+          <div className="min-w-0">
             <p className="flex items-center gap-2 text-sm font-black">
               <NotebookPen className="size-4 text-[#73563c]" /> {LABELS.name[lang]}
               <span className="rounded-md bg-[#dfd2c2] px-1.5 py-0.5 text-[10px]">{section === "cma" ? "CMA" : "IFRS"}</span>
@@ -534,13 +552,21 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
           </div>
           <button
             type="button"
-            onClick={() => { setMobileOpen(false); onDesktopOpenChange(false); }}
+            onClick={closeNotebook}
             className="grid size-9 place-items-center rounded-lg border border-[#cdbfae] bg-white"
             aria-label={LABELS.close[lang]}
           ><X className="size-4" /></button>
         </header>
 
         <div className="flex-1 overflow-y-auto overscroll-contain px-3 pb-10 pt-3">
+          <label className="mb-3 hidden items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-[11px] font-semibold text-[#6c5b48] min-[900px]:flex">
+            <span className="shrink-0">{lang === "ar" ? "عرض الدفتر" : "Notebook width"}</span>
+            <input type="range" min={320} max={470} step={10} value={dockWidth}
+              onChange={(event) => onDockWidthChange(Number(event.target.value))}
+              aria-label={lang === "ar" ? "تعديل عرض الدفتر الجانبي" : "Resize the adjacent notebook panel"}
+              className="min-w-0 flex-1 accent-[#76543F]" />
+            <span className="w-10 text-end tabular-nums">{dockWidth}px</span>
+          </label>
           <div className="flex items-center gap-2">
             <button type="button" title={lang === "ar" ? "الصفحة السابقة" : "Previous page"} disabled={currentIndex < 1}
               className="grid size-9 place-items-center rounded-lg border border-[#cdbfae] bg-white disabled:opacity-35"
