@@ -62,6 +62,21 @@ export function StudyNotebookEditableWidget({
         <span data-widget-drag="true" className="truncate">{studyWidgetDefaultTitle(object.kind)}</span>
         <span data-widget-drag="true" aria-hidden="true">⠿</span>
       </div>
+      {editable && (
+        <div className="flex shrink-0 items-center gap-1" role="group"
+          aria-label={lang === "ar" ? "لون العنصر" : "Card color"}>
+          {(["yellow", "mint", "rose", "blue"] as const).map(tone => (
+            <button key={tone} type="button"
+              aria-label={lang === "ar" ? "لون " + tone : "Set " + tone + " card color"}
+              aria-pressed={(object.tone ?? "yellow") === tone}
+              onClick={() => update({ tone })}
+              className="rounded-full border-2 border-white shadow-sm focus:outline-2 focus:outline-teal-600"
+              style={{ width: 13, height: 13, background: STUDY_WIDGET_PALETTE[tone].background,
+                boxShadow: (object.tone ?? "yellow") === tone ? "0 0 0 2px #177e7c" : "none" }}
+            />
+          ))}
+        </div>
+      )}
 
       {object.kind === "sticky" || object.kind === "formula" ? (
         <textarea
