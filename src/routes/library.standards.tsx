@@ -23,23 +23,23 @@ import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IFRS_LOCAL_QUESTION_COUNTS, IFRS_LOCAL_QUESTION_TOTAL } from "@/data/ifrs-question-bank";
 import { IFRSQUIZ_EXTERNAL_TOTAL, IFRSQUIZ_EXTERNAL_STANDARDS } from "@/data/ifrsquiz-public-catalogue";
 import { IFRS_COMPANION_MODULES } from "@/data/ifrs-companion-foundations";
-import { useSiteLang } from "@/lib/use-site-lang";
+import { useLibLang } from "@/routes/library";
 
 export const Route = createFileRoute("/library/standards")({
   head: () => {
     const url = "https://ahmedelmadni.com/library/standards";
     return {
       meta: [
-        { title: "معايير IFRS وIAS | دليل محاسبي عربي — Ahmed Elmadani" },
+        { title: "IFRS & IAS Standards — English-first Study Library | Ahmed Elmadani" },
         {
           name: "description",
           content:
-            "دليل عربي تفصيلي لكل معايير IFRS وIAS مع شرح عملي منظم وبنك أسئلة تفاعلي يضم مئات الأسئلة والحاسبات والمصادر الرسمية.",
+            "Study IFRS and IAS standards in English by default, with optional Arabic explanations, worked examples and a bilingual exam question bank.",
         },
-        { property: "og:title", content: "معايير IFRS وIAS | الدليل المحاسبي" },
+        { property: "og:title", content: "IFRS & IAS Standards — Study Library" },
         {
           property: "og:description",
-          content: "مرجع عملي مختصر لمعايير التقارير المالية الدولية مع أدوات ومقالات تطبيقية.",
+          content: "English-first IFRS and IAS learning guides with practical cases, reference materials and exam practice.",
         },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
@@ -52,11 +52,11 @@ export const Route = createFileRoute("/library/standards")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "دليل معايير IFRS وIAS",
+            name: "IFRS & IAS Standards Study Library",
             url,
             inLanguage: ["ar-SA", "en"],
             description:
-              "دليل عملي تفصيلي أصلي بقلم المحاسب أحمد المدني للمعايير الدولية للتقرير المالي ومعايير المحاسبة الدولية، مع بنك أسئلة تفاعلي.",
+              "English-first IFRS and IAS guides, interactive questions and applied examples with Arabic available on demand.",
             author: {
               "@type": "Person",
               name: "Ahmed Elmadani",
@@ -130,7 +130,7 @@ const RESEARCH_SOURCES = [
 type FamilyFilter = "all" | StandardFamily;
 
 function StandardsPage() {
-  const [lang] = useSiteLang();
+  const lang = useLibLang();
   const [section, setSection] = useState<"articles" | "questions">("articles");
   const [questionStandardCode, setQuestionStandardCode] = useState("IAS 2");
   const [family, setFamily] = useState<FamilyFilter>("all");
