@@ -793,3 +793,69 @@ test("Flowing note editor warns before edits exceed durable storage limits", asy
   assert.match(source,/current\.text\.length > MAX_NOTE_TEXT_LENGTH - 300/);
   assert.match(source,/flowLimitWarning && \(/);
 });
+
+test("Notebook top-level sections organize all tools and have clickable bilingual navigation", async () => {
+  const source = await readFile("src/components/library/NotebookSectionTabs.tsx","utf8");
+  const compiled = ts.transpileModule(source,{compilerOptions:{
+    module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX
+  }}).outputText;
+  const jsx=(type,props,key)=>({type,props,key});
+  const icons = Object.fromEntries(["BookOpenText","PenLine","Shapes","FileText","Files","FileDown"]
+    .map(name=>[name,name]));
+  const mod={exports:{}};
+  vm.runInNewContext(compiled,{module:mod,exports:mod.exports,require:id=>{
+    if(id==="react/jsx-runtime")return {jsx,jsxs:jsx};
+    if(id==="lucide-react")return icons;
+    throw Error("Unexpected tool-navigation dependency "+id);
+  }});
+  const sections=mod.exports.NOTEBOOK_SECTIONS;
+  assert.deepEqual(Array.from(sections.map(x=>x.id)),["write","draw","insert","paper","pages","export"]);
+  assert.equal(new Set(sections.map(x=>x.id)).size,6);
+  const changed=[];
+  const arabic=mod.exports.NotebookSectionTabs({section:"draw",lang:"ar",onChange:x=>changed.push(x)});
+  const entries=arabic.props.children.map(item=>item);
+  assert.equal(entries.length,6);
+  const write=entries.find(x=>x.props["aria-controls"]==="notebook-section-write");
+  const draw=entries.find(x=>x.props["aria-controls"]==="notebook-section-draw");
+  const paper=entries.find(x=>x.props["aria-controls"]==="notebook-section-paper");
+  assert.equal(draw.props["aria-pressed"],true);
+  assert.equal(write.props["aria-pressed"],false);
+  assert.equal(draw.props.children[1].props.children,"رسم");
+  assert.equal(paper.props.children[1].props.children,"الورق");
+  paper.props.onClick();
+  assert.deepEqual(changed,["paper"]);
+  const english=mod.exports.NotebookSectionTabs({section:"write",lang:"en",onChange:()=>{}});
+  assert.equal(english.props.children[0].props.children[1].props.children,"Write");
+});
+
+test("Notebook keeps visible page navigation but isolates drawing, paper, insertion, management and export controls", async () => {
+  const content=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  const layout=await readFile("src/routes/library.tsx","utf8");
+  assert.match(layout,/data-study-split/);
+  assert.match(layout,/data-study-main/);
+  assert.match(content,/const \[activeSection, setActiveSection\] = useState<NotebookSection>\("write"\)/);
+  assert.match(content,/<NotebookSectionTabs section=\{activeSection\}/);
+  assert.match(content,/activeSection === "pages" && \(/);
+  assert.match(content,/activeSection === "insert" && \(/);
+  assert.match(content,/activeSection === "paper" && \(/);
+  assert.match(content,/activeSection === "export" && \(/);
+  assert.match(content,/activeSection === "draw" && \["pen", "line"/);
+  assert.match(content,/activeSection === "write" \|\| activeSection === "draw"/);
+  assert.match(content,/onClick=\{undoInk\}/);
+  assert.match(content,/onClick=\{redoInk\}/);
+  assert.match(content,/function insertInlineFormula\(formula: string\)/);
+  assert.match(content,/function insertInlineTable\(template: NotebookFlowTableTemplate\)/);
+  assert.match(content,/function importImage\(file: File\)/);
+  assert.match(content,/function backup\(\)/);
+  assert.match(content,/function restoreBackup\(file: File\)/);
+  assert.match(content,/function savePdf\(allPages: boolean\)/);
+  assert.match(content,/onClick=\{removePage\}/);
+  assert.doesNotMatch(content,/setSettingsOpen\(/);
+  assert.match(content,/setShowInlineTools\(false\); setShowStudyWidgets\(false\)/);
+  assert.match(content,/setShowStudyWidgets\(open => !open\); setShowInlineTools\(false\)/);
+  assert.match(content,/setShowStickerPalette\(open => !open\); setShowInlineTools\(false\)/);
+  assert.match(content,/setActiveSection\("write"\)/);
+  // A section switch must not change the notebook route or storage schema.
+  assert.match(content,/NOTEBOOK_STORAGE_KEY/);
+  assert.match(content,/NotebookPaper key=\{current.id\}/);
+});
