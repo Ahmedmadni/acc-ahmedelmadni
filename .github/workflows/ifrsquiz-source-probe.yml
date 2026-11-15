@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/ifrsquiz-source-probe.yml'
       - 'scripts/ifrsquiz-source-probe.mjs'
+      - 'scripts/ifrsquiz-browser-probe.mjs'
   pull_request:
     branches:
       - main
@@ -29,3 +30,5 @@ jobs:
           node-version: '24'
       - name: Inspect reachable public site and assets
         run: node scripts/ifrsquiz-source-probe.mjs
+      - name: Check normal headless browser access without bypassing protection
+        run: node scripts/ifrsquiz-browser-probe.mjs
