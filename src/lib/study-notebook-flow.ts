@@ -106,3 +106,79 @@ export function insertFlowTable(
     cursor: { blockId: after.id, start: 0, end: 0 },
   };
 }
+
+
+/** Money values are parsed in minor units (halalas/cents), avoiding floating-point
+ * rounding errors in study journal checks. This does not post accounting entries.
+ * Arabic/Persian digits, Arabic decimal/thousands marks, comma-separated thousands,
+ * and comma decimals are accepted; ambiguous/unsupported formats are rejected.
+ */
+export function parseNotebookJournalAmount(value: string): number | null {
+  const localized = value.trim().replace(/[٠-٩۰-۹]/g, digit => {
+    const code = digit.charCodeAt(0);
+    return String(code >= 0x6F0 ? code - 0x6F0 : code - 0x660);
+  }).replace(/\u066B/g, ".").replace(/\u066C/g, ",")
+    .replace(/[\s\u00A0\u202F]/g, "");
+  if (!localized) return null;
+  let integer = "";
+  let fraction = "";
+  // A dot is the decimal mark with at most two digits; commas group thousands.
+  const dotDecimal = /^((?:\d{1,3}(?:,\d{3})+)|\d+)(?:\.(\d{1,2}))?$/u.exec(localized);
+  // A comma can instead be the decimal mark; dots may group thousands.
+  const commaDecimal = /^((?:\d{1,3}(?:\.\d{3})+)|\d+),(\d{1,2})$/u.exec(localized);
+  if (dotDecimal) {
+    integer = dotDecimal[1].replace(/,/g, "");
+    fraction = dotDecimal[2] ?? "";
+  } else if (commaDecimal) {
+    integer = commaDecimal[1].replace(/\./g, "");
+    fraction = commaDecimal[2];
+  } else {
+    return null;
+  }
+  const whole = Number(integer);
+  if (!Number.isSafeInteger(whole) || whole > Math.floor(Number.MAX_SAFE_INTEGER / 100)) return null;
+  const amount = whole * 100 + Number(fraction.padEnd(2, "0") || "0");
+  return Number.isSafeInteger(amount) ? amount : null;
+}
+
+export interface NotebookJournalReview {
+  status: "empty" | "balanced" | "unbalanced" | "invalid";
+  debitMinor: number;
+  creditMinor: number;
+  differenceMinor: number;
+  /** 1-based numbers of data rows, excluding the header row. */
+  invalidRows: number[];
+}
+
+export function reviewNotebookJournal(cells: readonly (readonly string[])[]): NotebookJournalReview {
+  let debitMinor = 0;
+  let creditMinor = 0;
+  let anyEntry = false;
+  const invalidRows: number[] = [];
+  // First row is always the debit/credit header, never a monetary journal line.
+  cells.slice(1).forEach((row, index) => {
+    const [account = "", debit = "", credit = ""] = row;
+    const hasDebit = debit.trim() !== "";
+    const hasCredit = credit.trim() !== "";
+    const hasAccount = account.trim() !== "";
+    if (!hasAccount && !hasDebit && !hasCredit) return;
+    anyEntry = true;
+    const debitAmount = hasDebit ? parseNotebookJournalAmount(debit) : 0;
+    const creditAmount = hasCredit ? parseNotebookJournalAmount(credit) : 0;
+    if (!hasAccount || (hasDebit && hasCredit) || (!hasDebit && !hasCredit) ||
+      debitAmount === null || creditAmount === null ||
+      (hasDebit && debitAmount === 0) || (hasCredit && creditAmount === 0)) {
+      invalidRows.push(index + 1);
+      return;
+    }
+    debitMinor += debitAmount;
+    creditMinor += creditAmount;
+  });
+  const differenceMinor = Math.abs(debitMinor - creditMinor);
+  return {
+    status: invalidRows.length ? "invalid" :
+      !anyEntry ? "empty" :
+        debitMinor > 0 && creditMinor > 0 && differenceMinor === 0 ? "balanced" : "unbalanced",
+    debitMinor, creditMinor, differenceMinor, invalidRows,
+  };
+}
