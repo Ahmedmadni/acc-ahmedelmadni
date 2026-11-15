@@ -18,7 +18,17 @@ const callbacks=new Map();
 async function probe(){
 let page;
 for(let k=0;k<25;k++){try{let data=await (await fetch(host+"/json/list")).json();page=data.find(x=>x.type==="page");if(page)break}catch{}await sleep(500)}
-if(!page){console.log("BROWSER_START_FAILED",debug.slice(-300));return}
+if(!page){
+  console.log("BROWSER_START_FAILED",debug.slice(-500));
+  const cp=spawn(bin,["--headless=new","--no-sandbox","--disable-dev-shm-usage","--disable-gpu","--dump-dom",url],{stdio:["ignore","pipe","pipe"]});
+  let output="",error="";
+  cp.stdout.on("data",s=>output+=s.toString().slice(0,200000));
+  cp.stderr.on("data",s=>error+=s.toString().slice(0,3000));
+  await Promise.race([new Promise(resolve=>cp.once("exit",resolve)),sleep(16000)]);
+  if(cp.exitCode===null)cp.kill("SIGKILL");
+  console.log("BROWSER_DUMP",JSON.stringify({exit:cp.exitCode,length:output.length,title:output.match(/<title>([^<]+)</)?.[1],hasQuiz:output.includes("Begin Quiz"),hasChallenge:output.includes("Just a moment"),htmlHead:output.slice(0,250),errorTail:error.slice(-200)}));
+  return;
+}
 console.log("BROWSER_TARGET",JSON.stringify({title:page.title,url:page.url}));
 ws=new WebSocket(page.webSocketDebuggerUrl);
 await new Promise((resolve,reject)=>{ws.addEventListener("open",resolve,{once:true});ws.addEventListener("error",reject,{once:true})});
