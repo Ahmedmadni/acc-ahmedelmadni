@@ -75,6 +75,34 @@ function buildPageDom(page: NotebookPage) {
     svg.appendChild(p);
   }
   root.appendChild(svg);
+
+  // Images and stickers are rendered above ink, just as on the editable sheet.
+  for (const object of page.objects ?? []) {
+    const holder = document.createElement("div");
+    holder.style.cssText = [
+      "position:absolute", "display:flex", "align-items:center", "justify-content:center",
+      `left:${object.x}px`, `top:${object.y}px`,
+      `width:${object.width}px`, `height:${object.height}px`,
+      "overflow:hidden",
+    ].join(";");
+    if (object.kind === "image" && object.src?.startsWith("data:image/")) {
+      const img = document.createElement("img");
+      img.src = object.src;
+      img.alt = "Study notebook image";
+      img.style.cssText = "width:100%;height:100%;object-fit:contain;";
+      holder.appendChild(img);
+    } else if (object.kind === "sticker") {
+      const sticker = document.createElement("span");
+      sticker.textContent = object.label ?? "";
+      sticker.style.cssText = [
+        "display:flex", "width:100%", "height:100%", "align-items:center",
+        "justify-content:center", "line-height:1",
+        `font-size:${Math.min(object.width, object.height) * .8}px`,
+      ].join(";");
+      holder.appendChild(sticker);
+    }
+    root.appendChild(holder);
+  }
   return root;
 }
 
@@ -112,6 +140,10 @@ export async function exportStudyNotebookPdf(
       const node = buildPageDom(page);
       printRoot.appendChild(node);
       try {
+        // Local raster assets must finish loading before the snapshot.
+        await Promise.all(Array.from(node.querySelectorAll("img")).map(async img => {
+          if (typeof img.decode === "function") await img.decode();
+        }));
         const canvas = await html2canvas(node, {
           backgroundColor: null,
           scale: 1.6,
