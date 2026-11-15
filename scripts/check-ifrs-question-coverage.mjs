@@ -25,6 +25,7 @@ const files = [
   "src/data/ifrs-quiz-phase9-applied.ts",
   "src/data/ifrs-quiz-reviewed-extracts.ts",
   "src/data/ifrs-quiz-reviewed-extensions.ts",
+  "src/data/ifrsquiz-imported-questions.ts",
 ];
 
 const priority = [
