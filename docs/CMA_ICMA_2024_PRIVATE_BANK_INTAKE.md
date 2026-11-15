@@ -1,6 +1,6 @@
 # ICMA CMA Exam Support Package 2024 — Part 2 Publication Record
 
-## Status (12 November 2026)
+## Status (15 November 2026)
 
 The website owner confirmed in this conversation that they **obtained permission to republish** the question material on their public education website. The existence and precise contractual scope of that permission have **not been independently verified in the repository**. ICMA retains copyright in the underlying questions. No claim of ICMA/IMA endorsement or website affiliation is made.
 
@@ -31,11 +31,23 @@ The **369 ICMA questions** are additional to **416 independently authored Part 2
 - An attribution label `ICMA © 2024`, domain, item number, CSO, LOS and source PDF page are attached to each source question. The website is independently operated.
 - English is canonical. The previously deployed on-device browser Arabic translation feature remains optional on supported desktop Chrome/Edge, with an explicit user-initiated external service fallback on unsupported devices. No server-side translation API or Supabase database is required for these questions.
 - **Question E-029 on PDF page 340 has identical choices B and C in the original ICMA publication**, verified against the source PDF page. The site intentionally preserves both rather than silently changing the publisher source. A source-issue warning is shown to learners.
-- The original 71 table-heavy / complex-layout items have **8 completed source-PDF visual and answer-key reviews** and **63 still requiring visual inspection**. Clearances are recorded with physical source page, printed page, answer page and answer letter in `src/data/cma-icma-verified-layouts.ts`.
+- The original 71 table-heavy / complex-layout items have **20 completed source-PDF visual and answer-key reviews** and **51 still requiring visual inspection**. Clearances are recorded with physical source page, printed page, answer page and answer letter in `src/data/cma-icma-verified-layouts.ts`.
 - The completed visual reviews cover A-003, A-010, B-084, C-080, E-012, E-013, E-034 and E-071. During the B-084 review, a stray `c` before the question stem was corrected to match the source. No official answer key or published explanation was changed.
-- The 63 remaining layout warnings stay visible to learners. A string match or a working answer-index test **is not proof of table visual accuracy**.
-- The site now provides **27 independently authored bilingual answer walkthroughs**, including seven added alongside this source review. These walkthroughs are separate from ICMA-published explanations.
+- The second source-PDF audit (15 November 2026) verified A-007, A-030, A-032, A-036, B-023, B-046, B-061, B-076, C-006, C-010, E-014 and E-056. The extra stray `g` preceding B-076 was removed after checking the printed original.
+- The 51 remaining layout warnings stay visible to learners. A string match or a working answer-index test **is not proof of table visual accuracy**.
+- The site now provides **39 independently authored bilingual answer walkthroughs**, including twelve added in the second PDF review. These walkthroughs are separate from ICMA-published explanations.
 - This update concerns only the **primary 2024 Part 2 369-question section**. Historic 2022 and 2016 supplemental question sets and practice essays were **not imported**, and must not be counted in this release.
+
+
+### Source-answer precision findings (15 November 2026)
+
+The source answer indices and printed explanations are preserved. Our separate teaching commentary flags three points that learners should not mistake for new ICMA-published explanations:
+
+- **A-036** (PDF question p. 200; source answer p. 223): the compact receivables-turnover formula can be misread without parentheses. Correct average accounts receivable: `(24,000+20,000)/2 = 22,000`, turnover 10, DSO 36.5 days.
+- **B-076** (PDF question p. 253; source answer p. 266): a source answer line prints September credit-line interest as **78,833**, although `10,000,000 × 8.5% ÷ 12 ≈ 70,833`. The printed total of about 204,166 was calculated with the correct September value. Our additional walkthrough discloses the original typo; the source explanation itself is unchanged.
+- **C-006** (PDF question p. 271; source answer p. 312): theoretical break-even `1,295,000 / 16.2 ≈ 79,938.27`. The published choice **79,938** is the closest option; a strict whole-person count meeting or exceeding break-even would be **79,939**. We retain the publisher key and make the rounding nuance visible only after answering.
+
+The provenance ledger tracks visual fidelity and answer-page locations. Independently checking solution mathematics remains a separate editorial task, not a guarantee that all 369 publisher solutions are error-free.
 
 ## Integrity checks
 
@@ -44,7 +56,7 @@ The CI `scripts/check-cma-content.mjs` requires:
 2. Unique question IDs and text, valid 4-option answer keys and non-empty English explanations.
 3. Full preservation of original English stem, choices, correct answer and explanation after topic mapping.
 4. Source PDF page, CSO/LOS, curriculum domain/unit and publisher credit.
-5. Exactly 63 outstanding layout-review warnings, with eight individually documented source-PDF visual and key clearances.
-6. All previous CMA questions retained and correct total 3,752, plus 27 bilingual walkthroughs and 17 deterministic answer fixtures.
+5. Exactly 51 outstanding layout-review warnings, with 20 individually documented source-PDF visual and key clearances.
+6. All previous CMA questions retained and correct total 3,752, plus 39 bilingual walkthroughs and 33 deterministic answer fixtures.
 
 **Copyright © 2024 Institute of Certified Management Accountants. All source content credited to ICMA.**
