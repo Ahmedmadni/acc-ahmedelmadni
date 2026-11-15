@@ -5,7 +5,7 @@
 - **Source:** https://ifrsquiz.com/
 - **Publicly advertised catalogue:** **665 interactive questions across 39 named IAS/IFRS Standards**, counted directly from the site's published selection list on 15 November 2026.
 - **Question bodies copied into this project:** **zero**. The public HTML catalogue does not expose question text or answer keys in static markup. Direct HTTP requests, source JSON path checks and normal headless Chrome all encountered an interactive Cloudflare security challenge (HTTP 403 / `Just a moment` / Turnstile); we did not circumvent it or infer answers.
-- **Actual local IFRS bank:** remains at the previously validated **1,158 questions**. The 665 source questions must **not** be added to the local count until each original record is available, permission-backed, translated and reviewed.
+- **Actual local IFRS bank:** **1,178 locally integrated questions** after the 15 November original-practice batch (1,160 previously validated plus 18 newly authored bilingual practice questions). **Zero** of the 665 source questions has been imported. External catalogue numbers must not inflate the local count.
 
 The public catalogue is held in `src/data/ifrsquiz-public-catalogue.ts`. Each standard page links directly to the corresponding external website and clearly marks its source-only count as *not imported*. There is no login or paid API requirement for this implementation.
 
@@ -25,6 +25,31 @@ The public catalogue is held in `src/data/ifrsquiz-public-catalogue.ts`. Each st
 - **Nature:** source notebooks, calculation imports, present-value and analysis-of-change workflows. This is **not** a ready-made multiple-choice question bank.
 - **Use on the website:** a separately authored bilingual discounting example on the IFRS 17 learning page and a link to the engine and its original notebooks.
 - **Licence boundary:** no repository-root `LICENSE` file was found in the material inspected. We therefore did **not** copy the implementation code or proprietary example tables into this website, and we do not claim it runs on our infrastructure.
+
+
+## User handoff — quickest way to obtain actual IFRSQuiz question data
+
+The site's public interface offers **Easy / Hard**, a per-standard picker, 10/20/30-question sessions, and **Begin Quiz**. No download/export button was identified in the public interface during our inspection. The source site is protected by Cloudflare for automated access; the steps below use only the ordinary website in the authorized user's own browser.
+
+**Preferred route — one archive may capture the complete original question dataset if it is bundled with the page:**
+
+1. On a computer, open `https://ifrsquiz.com/` in Chrome and complete any regular verification challenge that the site presents.
+2. Choose **IAS 2**, choose **10** questions, and select **Begin Quiz** to ensure the interactive app and its assets have loaded.
+3. Press `Ctrl+S` and choose **Webpage, Complete** / **صفحة ويب، كاملة**. Save the `.html` file **together with** its companion `_files` folder, then zip both and send the archive in the ChatGPT conversation.
+4. A normal page save may miss dynamically requested data. If the archive does not include it, open Chrome developer tools (`F12`), select **Network**, and click the **JS** and **Fetch/XHR** filters. Reload the quiz page and begin one quiz. Save the response bodies of first-party JavaScript bundles or the JSON response containing question entries and keys. Upload only the source `.js` / `.json` files (or a zip of them). If the question data is compiled into one script, that script may already contain the full 665-item bank.
+5. If no downloadable payload contains a complete item bank, a per-question capture is possible as a fallback using the visible **question, four choices, selected correct answer and explanation**. Each record must retain its standard, source identity and the text exactly as displayed; do not infer missing answers.
+
+**Safety:** Never share an account password, Cloudflare challenge token, session cookie, local browser profile, `Authorization` headers, `Copy as cURL` commands or an unredacted HAR archive. Only the question-data file or public application bundle is needed. Remove personal information from any exports.
+
+**Source permission:** The site owner has said they have reuse rights. For publication provenance, record the name or reference of the authorization, the licensed scope and the edition/date. That metadata is stored per imported item.
+
+After the source files are provided, verify and deduplicate them, translate and check bilingual choices, verify original answer keys, and publish them through `normalize-ifrs-questions.mjs` and `publish-ifrsquiz-questions.mjs`. Do not claim that simply saving a web page guarantees every question is present; compare item IDs and per-standard totals before declaring the import complete.
+
+## Independently authored practice additions (15 November 2026)
+
+- Added **18** original bilingual multiple-choice questions: three each for IAS 2, IAS 36, IFRS 9, IFRS 15, IFRS 16 and IFRS 17. Each has four choices and a substantial explanation in Arabic and English.
+- These questions are marked `Original bilingual practice (not IFRSQuiz)`. They do **not** reproduce or purport to be questions from IFRSQuiz.
+- A separate CI test validates the six standard mappings, all eighteen answer keys and representative arithmetic, in addition to the existing question-bank integrity checks.
 
 ## Ready-to-publish source import
 
