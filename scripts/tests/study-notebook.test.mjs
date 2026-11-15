@@ -19,6 +19,7 @@ async function loadTypeScript(path, dependencies = {}) {
 
 const notebook = await loadTypeScript("src/lib/study-notebook.ts");
 const recognizer = await loadTypeScript("src/lib/study-notebook-recognition.ts");
+const notebookWidgets = await loadTypeScript("src/lib/study-notebook-widgets.ts");
 
 test("CMA and IFRS notebooks start with separate blank pages and a local-only storage key", () => {
   const state = notebook.emptyNotebook();
@@ -320,7 +321,7 @@ test("Stylus shape tools are vector paths and eraser can hit drawn shape outline
 
 test("PDF exporter uses existing local dependencies and renders full page size with notes and ink", async () => {
   const lib=await loadTypeScript("src/lib/study-notebook-pdf.ts",
-    { "@/lib/study-notebook": notebook });
+    { "@/lib/study-notebook": notebook, "@/lib/study-notebook-widgets": notebookWidgets });
   const dim=JSON.parse(JSON.stringify(lib.STUDY_NOTEBOOK_PDF_MM));
   assert.deepEqual(dim,{A4:[210,297],A5:[148,210],Letter:[215.9,279.4]});
   assert.equal(lib.printableInkStyle({kind:"highlighter",color:"#f6d94e",width:18}).opacity,"0.32");
