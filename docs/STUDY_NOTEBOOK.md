@@ -95,6 +95,23 @@ Structured contents are saved locally with existing page objects; they are inclu
 
 **Important limitations:** the formula card is an editable *text* card, not a symbolic mathematics engine or an IFRS/CMA answer checker. Journal/T-account templates provide study grids, not double-entry validation or posting to an actual general ledger. The on-device handwriting recognizer still depends on browser/OS support. Lists and tables on the paper are visual references; detailed editing is kept in the side panel to prevent accidental pen gestures from changing values. This update requires real-device visual review for exact font spacing and PDF pagination of dense tables.
 
+## Study Elements direct editing fix — 15 November 2026
+
+A user identified that **Study Elements looked like stickers, not editable learning tools**. The source audit confirmed the old paper layer was a pointer-disabled visual representation, while the only real editors were buried in an inspector below the paper. In Select mode, the whole card's pointer handler also interpreted touches as drag gestures, which interfered with editing.
+
+**Fixed interaction (inside the existing CMA/IFRS side notebook, NOT a separate screen):**
+
+- **Sticky notes and formulas:** tap directly inside the card to enter/change multiline text using the keyboard or tablet touch keyboard.
+- **Checklists:** tick/untick items and edit descriptions **within the card**; the + / − buttons add/remove items. An advanced inspector below the paper remains available as an alternative.
+- **Journal entry, T-account and comparison tables:** edit debit/credit/accounts and other cells **in place**; add rows and columns directly within the card using bounded controls.
+- **Card colours:** choose from yellow, mint, rose and blue via the small visible colour dots inside the card.
+- **Move and resize:** the **⠿ header strip is a dedicated drag handle**. Touching a text box is no longer a drag; the existing bottom-right corner handle resizes the selected item.
+- **Usability:** newly inserted templates are wider so table cells can be edited without being microscopic in the docked notebook. Existing saved items keep their earlier positions and sizes. Keyboard notes, vector pen, sketches, paper textures, separate CMA/IFRS collections, export PDF and JSON backup stay unchanged.
+
+**Technical details:** real input controls are rendered in `StudyNotebookEditableWidget.tsx`, passed a bounded `NotebookObject` and writing direction, and update the same stored source values via React's controlled `onChange`. There is no `contenteditable` HTML injection, server dependency or copy of an image standing in for editable data. If the tool is Pen/Highlighter, the card becomes an uninteractive display so drawing on top is still possible. Switch to Type or Select to edit the paper card.
+
+**Verification:** executable regression checks simulate controlled text, formula, checklist, table and color events, plus explicit no-drag-on-input guards. Device-level touch and PDF visual checks remain necessary for narrow tablets and actual OS keyboards.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.
