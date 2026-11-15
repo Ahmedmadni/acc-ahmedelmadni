@@ -172,13 +172,21 @@ test("Sidebar exists only for CMA and IFRS, leaves mobile lessons unobstructed a
   ]);
   assert.match(route, /\{studySection && \(/);
   assert.match(route, /<StudyNotebook/);
-  assert.match(route, /xl:pe-\[416px\]/);
+  assert.match(route, /data-study-split/);
+  assert.match(route, /min-\[900px\]:grid/);
+  assert.match(route, /gridTemplateColumns:/);
+  assert.match(route, /<Outlet \/>/);
+  assert.doesNotMatch(route, /xl:pe-\[416px\]/, "Notebook must not be a fixed overlay with artificial article padding");
   assert.match(component, /NOTEBOOK_STORAGE_KEY/);
   assert.match(component, /localStorage\.setItem/);
   assert.match(component, /onPointerDown=\{pointerDown\}/);
   assert.match(component, /onPointerMove=\{pointerMove\}/);
   assert.match(component, /recognizeNotebookInk\(page\.strokes, page\.direction\)/);
-  assert.match(component, /onChange\(\{\s*text:[^}]+strokes: \[\]/);
+  assert.match(component, /keepOriginalInk \? \{\} : \{ strokes: \[\] \}/,
+    "Recognized text should not delete diagrams or writing by default");
+  assert.match(component, /onSplit=\{splitCurrentPage\}/);
+  assert.match(component, /min-\[900px\]:sticky/);
+  assert.match(component, /overflow-y-auto/);
   assert.match(component, /application\/json/);
 });
 
@@ -240,7 +248,7 @@ test("Regression against basic press-and-release eraser and desktop modal-open m
   assert.match(component,/if \(tool === "eraser" && activeEraser\.current === e\.pointerId\)/);
   assert.match(component,/startTime\.current = e\.timeStamp/);
   assert.match(component,/if \(!startTime\.current\) startTime\.current = e\.timeStamp;/);
-  assert.match(component,/window\.matchMedia\("\(min-width: 1280px\)"\)\.matches/);
+  assert.match(component,/window\.matchMedia\("\(min-width: 900px\)"\)\.matches/);
   assert.match(component,/validateNotebookBackup\(JSON\.parse\(await file\.text\(\)\)\)/);
   assert.match(component,/if \(saved\) setStore\(validateNotebookBackup\(JSON\.parse\(saved\)\)\)/,
     "Unrecognized stored data must not be silently replaced with the empty template");
@@ -251,4 +259,40 @@ test("Regression against basic press-and-release eraser and desktop modal-open m
   assert.match(component,/bottom-5 right-5/,
     "Open notebook control must not collide with bottom-left Focus Mode in RTL");
   assert.match(component,/window\.confirm/);
+});
+
+test("Overflow split retains every bilingual character, whitespace and original paper notes", () => {
+  const original="IAS 2 — inventory measurement\nتُقاس بالتكلفة\nMore English notes after a paragraph.";
+  for (const requested of [4, 20, 30, 45, 58, original.length - 1]) {
+    const pages=notebook.splitNotebookText(original,requested);
+    assert.ok(pages && pages.first.length >= 1 && pages.continuation.length >= 1);
+    assert.equal(pages.first+pages.continuation,original,
+      "Page continuation must not drop a single space, newline or Arabic character");
+  }
+  assert.equal(notebook.splitNotebookText("",12),null);
+  assert.equal(notebook.splitNotebookText("a",1),null);
+  assert.equal(notebook.splitNotebookText("hello",NaN),null);
+  const continuous="X".repeat(120);
+  const split=notebook.splitNotebookText(continuous,90);
+  assert.equal(split.first.length,90);
+  assert.equal(split.continuation.length,30);
+});
+
+test("Notebook continues excess text to a following page, preserving existing ink and all lesson content", async () => {
+  const [layout,component] = await Promise.all([
+    readFile("src/routes/library.tsx","utf8"),
+    readFile("src/components/library/StudyNotebook.tsx","utf8"),
+  ]);
+  assert.match(layout,/data-study-main/);
+  assert.match(layout,/data-study-split/);
+  assert.match(layout,/dockWidth=\{notebookWidth\}/);
+  assert.match(component,/lastFittingTextIndex\(editor, page\.text\)/);
+  assert.match(component,/editor\.scrollHeight <= editor\.clientHeight \+ 2/);
+  assert.match(component,/updated\[index\] = \{ \.\.\.updated\[index\], text: split\.first/);
+  assert.match(component,/updated\.splice\(index \+ 1, 0, continuationPage\)/);
+  assert.match(component,/text: split\.continuation/);
+  assert.match(component,/canAddPage=\{sectionPages\.length < MAX_NOTEBOOK_PAGES\}/);
+  assert.match(component,/min-\[900px\]:sticky/);
+  assert.match(component,/min-\[900px\]:top-16/);
+  assert.match(component,/dockWidth\}/);
 });

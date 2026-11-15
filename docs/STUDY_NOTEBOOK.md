@@ -4,12 +4,12 @@ This component is part of the accounting library. It is intentionally **not** a 
 
 ## What is implemented
 
-- Shared sidebar UI on desktop when visiting `/library/cma`, `/library/standards` or any nested IFRS standard lesson. A closeable drawer is used on smaller screens and tablets. Other library sections keep their original layout.
+- **A real split-view within the study page:** when visiting `/library/cma`, `/library/standards` or a nested IFRS study lesson at widths **900 px and wider**, the lesson and notebook are sibling columns in one CSS grid. The notebook is sticky and independently scrollable, with adjustable **320–470 px** width. There is **no separate notebook route or standalone screen**. On narrower screens, the same notebook remains attached to the current lesson as a temporary side drawer; closing it resumes the identical lesson and scroll position. Other library sections keep their original layout.
 - Separate collections for **CMA** and **IFRS**, each with up to 40 selectable pages, titles and protected delete confirmation.
 - Keyboard notes and SVG pen/eraser input via Pointer Events; accepts mouse, touch and pressure-capable styluses. Bézier smoothing is used for the vector ink. Stroke colors and widths can be customized, and the latest stroke can be undone.
 - Four paper patterns (ruled, graph, dotted, blank), four textured colors (white, ivory, warm cream, pale blue), A4/A5/US Letter, adjustable ruler pitch and left/right writing direction.
 - Typed notes use the **same computed spacing** as the ruled/grid background. The line-height and page background interval use the shared `page.spacing * renderedWidth / 760` formula; resizing a sheet retains the intended pitch. English handwriting uses `Caveat`; Arabic uses `Aref Ruqaa Ink`. Both are optional webfonts with installed/system fallbacks when offline.
-- Browser-only handwriting recognition when both `navigator.createHandwritingRecognizer()` and `HandwritingStroke` are supported. The recognition feature requires explicit user activation; supported languages depend on the OS/browser. Text candidates remain **editable** and the ink is replaced **only** after the learner explicitly approves. If a recognizer is absent, the button is disabled and pen writing/smoothing remain available without network connectivity.
+- Browser-only handwriting recognition when both `navigator.createHandwritingRecognizer()` and `HandwritingStroke` are supported. The recognition feature requires explicit user activation; supported languages depend on the OS/browser. Text candidates remain **editable**. The original ink **stays on the sheet by default** when the learner inserts a recognized text preview; discarding original ink requires an explicit unchecked option. If a recognizer is absent, the button is disabled and pen writing/smoothing remain available without network connectivity.
 - Local storage key `study-notebook-pages-v1`; separate page sets per curriculum. JSON backup of both curricula plus plain-text export for the current page. User drawings are not submitted to the accounting site backend, translation providers or AI APIs.
 - Data schema validates imported/restored storage records on load: caps text/pages/ink, rejects unsafe colors, clamps sizes, ignores malformed records.
 
@@ -17,7 +17,7 @@ This component is part of the accounting library. It is intentionally **not** a 
 
 - Handwriting recognition is **not universal**: on some ChromeOS installations only English recognition is available. The web platform does not guarantee Arabic recognition. We do not promise semantic/grammar correction or a complete handwritten-text engine where the API is absent.
 - The professional typeface applies to **typed or accepted recognized text**, while smoothing improves the **drawn stroke contours**. Arbitrary drawings are not silently changed into letters.
-- A notebook page has a fixed visual boundary. If typed content extends past the available paper height, the editor scrolls. For the most consistent ruled-paper layout and pen alignment, use additional pages instead of typing many screen heights into one page.
+- Each page has a fixed visual boundary. When keyboard text exceeds that height, a **Continue overflow on next page** control appears: it measures the exact font/layout of the actual textarea, splits at the last fitting point (preferring a nearby word/paragraph break), copies remaining text to a new sheet while preserving every character, and leaves **all ink on the original page**. The operation requires a click; it does not silently rearrange handwritten drawings or automatically move strokes between sheets. Text can still scroll when the learner declines to paginate.
 - Notebook data is local to **the current browser/device**. Private browsing, clearing site storage or browser quotas may remove it. Download the JSON backup to retain important work. There is no account-based synchronization.
 - Optional Google Fonts depend on a network connection for their initial load; offline fallback typefaces are provided.
 - This notebook does not copy pages or ink from other projects such as MemoFlow.
@@ -45,3 +45,11 @@ A source audit identified and corrected these interaction defects:
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.
+
+## Split-view and mixed-input review — 15 November 2026
+
+- Replaced fixed desktop notes and article padding with a **two-column sibling grid** within the existing lesson. The IFRS or CMA route remains the same, not a notebook page. Study content grows and shrinks alongside a continuously visible sticky notebook at ≥900 px.
+- Added a desktop/tablet-landscape pane-width slider (320–470 px). Tablets below 900 px and phones retain a closable side drawer attached to the current lesson; resizing across 900 px closes the mobile overlay safely.
+- On overflow, the typed-text continuation command measures the real styled text editor before splitting. It preserves Unicode and whitespace, and moves **only text**. Pen strokes, stickers/diagrams already drawn and the original page identity remain intact. The maximum 40 pages per curriculum still applies.
+- On-device recognition previews no longer clear diagrams/ink by default. Keeping ink is checked initially; the learner may explicitly choose to remove the strokes after accepting recognized words.
+- Remaining limitations: exact pen/typed baselines can differ by font on real tablet devices, and extremely long typed notes require one click to continue to the next page (no automatic ink pagination). Device-level tests are still needed to confirm stylus latency and Arabic on-device recognition.

@@ -201,6 +201,31 @@ export function validateNotebookBackup(source: unknown): NotebookStore {
   return normalizeNotebook(source);
 }
 
+/** Split overflowing keyboard text without dropping characters or disturbing ink.
+ * Soft-split near a nearby word/line boundary, otherwise split at the measured
+ * last fitting character. This never edits existing strokes on the original page.
+ */
+export function splitNotebookText(
+  text: string,
+  measuredFitIndex: number,
+): { first: string; continuation: string } | null {
+  if (!text || text.length < 2 || !Number.isFinite(measuredFitIndex)) return null;
+  const measured = Math.max(1, Math.min(text.length - 1, Math.floor(measuredFitIndex)));
+  const searchFrom = Math.max(0, measured - 48);
+  const before = text.slice(searchFrom, measured);
+  const newline = before.lastIndexOf("\n");
+  const space = before.lastIndexOf(" ");
+  const best = Math.max(newline, space);
+  // A paragraph boundary is preferred, but avoid leaving an almost empty sheet.
+  const index = best >= 0 && (searchFrom + best + 1) > Math.floor(measured * .65)
+    ? searchFrom + best + 1
+    : measured;
+  return {
+    first: text.slice(0, index),
+    continuation: text.slice(index),
+  };
+}
+
 export function notebookPaperBackground(pattern: PaperPattern, shade: PaperShade, gap: number) {
   const colors: Record<PaperShade, string> = {
     white: "#fdfefe", ivory: "#fcfaf3", cream: "#f4ead4", blue: "#eaf4f8",

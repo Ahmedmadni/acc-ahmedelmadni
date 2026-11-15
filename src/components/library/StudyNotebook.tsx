@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
   BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2, Upload,
   NotebookPen, PenLine, RotateCcw, ScanText,
@@ -10,7 +10,7 @@ import {
   createNotebookPage, emptyNotebook, MAX_INK_POINTS, MAX_INK_STROKES,
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
-  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup,
+  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
@@ -85,14 +85,41 @@ function download(name: string, text: string, mime = "application/json") {
   anchor.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
+/** Measure text against the actual styled editor instead of estimating line
+ * wrapping by character count. The exact original value/selection are restored
+ * synchronously before React sees any change.
+ */
+function lastFittingTextIndex(editor: HTMLTextAreaElement, text: string) {
+  const value = editor.value;
+  const start = editor.selectionStart;
+  const end = editor.selectionEnd;
+  const scroll = editor.scrollTop;
+  let low = 0, high = text.length;
+  try {
+    while (low < high) {
+      const mid = Math.ceil((low + high) / 2);
+      editor.value = text.slice(0, mid);
+      if (editor.scrollHeight <= editor.clientHeight + 2) low = mid;
+      else high = mid - 1;
+    }
+    return low;
+  } finally {
+    editor.value = value;
+    editor.setSelectionRange(start, end);
+    editor.scrollTop = scroll;
+  }
+}
+
 function NotebookPaper({
-  page, tool, inkColor, inkWidth, onChange, lang,
+  page, tool, inkColor, inkWidth, onChange, onSplit, canAddPage, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
   inkColor: string;
   inkWidth: number;
   onChange: (change: Partial<NotebookPage>) => void;
+  onSplit: (fittingIndex: number) => void;
+  canAddPage: boolean;
   lang: Lang;
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
@@ -101,6 +128,9 @@ function NotebookPaper({
   const strokeBuffer = useRef<NotebookStroke[]>(page.strokes);
   strokeBuffer.current = page.strokes;
   const sheet = useRef<HTMLDivElement | null>(null);
+  const textEditor = useRef<HTMLTextAreaElement | null>(null);
+  const [textOverflows, setTextOverflows] = useState(false);
+  const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
   const [width, setWidth] = useState(330);
   const [recognizing, setRecognizing] = useState(false);
@@ -138,6 +168,19 @@ function NotebookPaper({
   const lineGap = page.spacing * scale;
   const margin = 43 * scale;
   const paper = notebookPaperBackground(page.pattern, page.shade, lineGap);
+
+  useLayoutEffect(() => {
+    const editor = textEditor.current;
+    if (!editor) return;
+    setTextOverflows(editor.scrollHeight > editor.clientHeight + 2);
+  }, [page.id, page.text, page.spacing, page.direction, page.typeface, page.size, width]);
+
+  function continueOnNewPage() {
+    const editor = textEditor.current;
+    if (!editor || !canAddPage) return;
+    const fitting = lastFittingTextIndex(editor, page.text);
+    if (fitting > 0 && fitting < page.text.length) onSplit(fitting);
+  }
   const bgStyle: CSSProperties = {
     ...paper,
     aspectRatio: `${NOTEBOOK_DESIGN_WIDTH} / ${height}`,
@@ -241,7 +284,7 @@ function NotebookPaper({
     if (!recognizedText.trim()) return;
     onChange({
       text: [page.text.trimEnd(), recognizedText.trim()].filter(Boolean).join("\n"),
-      strokes: [],
+      ...(keepOriginalInk ? {} : { strokes: [] }),
     });
     setRecognized(null);
     setRecognizedText("");
@@ -258,6 +301,7 @@ function NotebookPaper({
           <div className="pointer-events-none absolute inset-y-0 z-[1] w-px bg-rose-400/30" style={{ insetInlineStart: margin }} />
         )}
         <textarea
+          ref={textEditor}
           aria-label={lang === "ar" ? "كتابة الملاحظات" : "Notebook typing area"}
           spellCheck
           dir={page.direction}
@@ -304,6 +348,18 @@ function NotebookPaper({
           ))}
         </svg>
       </div>
+      {textOverflows && (
+        <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
+          <p>{lang === "ar"
+            ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
+            : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
+          <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
+            className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
+            {lang === "ar" ? "نقل النص الزائد لصفحة تالية" : "Continue overflow on next page"}
+          </button>
+          {!canAddPage && <p>{lang === "ar" ? "وصلت للحد الأقصى للصفحات؛ صدّر نسخة احتياطية." : "Page limit reached; export a backup."}</p>}
+        </div>
+      )}
       <p className="text-center text-[11px] leading-5 text-[#786f63]">
         {lang === "ar"
           ? `المسافات بين سطور الورقة والكتابة: ${page.spacing} وحدة متطابقة · تنعيم تلقائي لخطوط القلم`
@@ -343,6 +399,11 @@ function NotebookPaper({
             onChange={(e) => setRecognizedText(e.target.value)}
             aria-label={lang === "ar" ? "راجع الكتابة التي تم التعرف عليها" : "Review recognized text"}
             className="w-full rounded-lg border border-emerald-200 bg-white p-2 text-sm text-[#212c25]" />
+          <label className="flex items-center gap-2 text-xs leading-6 text-[#285C44]">
+            <input type="checkbox" checked={keepOriginalInk} onChange={(event) => setKeepOriginalInk(event.target.checked)}
+              className="size-4 accent-emerald-800" />
+            {lang === "ar" ? "الاحتفاظ برسومات القلم الأصلية عند إدراج النص" : "Keep original pen strokes when adding recognized text"}
+          </label>
           <div className="flex flex-wrap gap-2">
             <button type="button" onClick={acceptRecognition} disabled={!recognizedText.trim()} className="inline-flex items-center gap-1 rounded-lg bg-emerald-800 px-3 py-2 text-xs font-semibold text-white disabled:opacity-50">
               <Check className="size-3.5" /> {LABELS.apply[lang]}
@@ -355,11 +416,14 @@ function NotebookPaper({
   );
 }
 
-export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange }: {
+export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange, dockWidth, onDockWidthChange, focus }: {
   section: StudySection;
   lang: Lang;
   desktopOpen: boolean;
   onDesktopOpenChange: (open: boolean) => void;
+  dockWidth: number;
+  onDockWidthChange: (width: number) => void;
+  focus: boolean;
 }) {
   const [store, setStore] = useState<NotebookStore>(emptyNotebook);
   const [hydrated, setHydrated] = useState(false);
@@ -451,6 +515,39 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
     setTool("type");
   }
 
+  function splitCurrentPage(fittingIndex: number) {
+    if (sectionPages.length >= MAX_NOTEBOOK_PAGES) return;
+    const split = splitNotebookText(current.text, fittingIndex);
+    if (!split || !split.continuation) return;
+    const newPageId = newId();
+    const continuationPage = {
+      ...createNotebookPage(newPageId, current.direction),
+      pattern: current.pattern,
+      shade: current.shade,
+      size: current.size,
+      spacing: current.spacing,
+      typeface: current.typeface,
+      text: split.continuation,
+      updatedAt: Date.now(),
+    };
+    setStore((prior) => {
+      const pages = prior.pages[section];
+      const index = pages.findIndex((page) => page.id === current.id);
+      if (index < 0 || pages.length >= MAX_NOTEBOOK_PAGES) return prior;
+      const updated = [...pages];
+      // The drawing overlay belongs to the original page; only typed overflow
+      // moves to the continuation, so mixed pen/keyboard work is never deleted.
+      updated[index] = { ...updated[index], text: split.first, updatedAt: Date.now() };
+      updated.splice(index + 1, 0, continuationPage);
+      return {
+        ...prior,
+        pages: { ...prior.pages, [section]: updated },
+        activePage: { ...prior.activePage, [section]: newPageId },
+      };
+    });
+    setTool("type");
+  }
+
   function removePage() {
     if (!window.confirm(lang === "ar" ? "هل تريد حذف هذه الصفحة ورسوماتها نهائيًا؟" : "Permanently delete this page and its ink?")) return;
     setStore((prior) => {
@@ -492,12 +589,27 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
   }
 
   function openNotebook() {
-    if (window.matchMedia("(min-width: 1280px)").matches) {
+    if (window.matchMedia("(min-width: 900px)").matches) {
       onDesktopOpenChange(true);
     } else {
       setMobileOpen(true);
     }
   }
+
+  function closeNotebook() {
+    if (window.matchMedia("(min-width: 900px)").matches) {
+      onDesktopOpenChange(false);
+    } else {
+      setMobileOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 900px)");
+    const onChange = () => { if (media.matches) setMobileOpen(false); };
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
 
   const currentIndex = sectionPages.findIndex((p) => p.id === current.id);
   
@@ -509,23 +621,23 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
         <button
           type="button"
           onClick={openNotebook}
-          className={`fixed bottom-5 right-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
+          className={`fixed bottom-5 right-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "min-[900px]:hidden" : "min-[900px]:inline-flex"}`}
           aria-label={LABELS.open[lang]}
           title={LABELS.open[lang]}
         >
           <NotebookPen className="size-5" /> {LABELS.open[lang]}
         </button>
       )}
-      {mobileOpen && <button type="button" onClick={() => setMobileOpen(false)} className="fixed inset-0 z-[69] bg-black/60 xl:hidden" aria-label={LABELS.close[lang]} />}
+      {mobileOpen && <button type="button" onClick={() => setMobileOpen(false)} className="fixed inset-0 z-[69] bg-black/60 min-[900px]:hidden" aria-label={LABELS.close[lang]} />}
       <aside
         aria-label={LABELS.name[lang]}
         role={mobileOpen ? "dialog" : "complementary"}
         aria-modal={mobileOpen ? true : undefined}
         dir={lang === "ar" ? "rtl" : "ltr"}
-        className={`fixed inset-y-0 end-0 z-[70] w-[min(95vw,430px)] flex-col overflow-hidden border-s border-[#b6a58e] bg-[#f8f5ee] text-[#302e2b] shadow-2xl xl:top-16 xl:w-[416px] ${mobileOpen ? "flex" : "hidden"} ${desktopOpen ? "xl:flex" : "xl:hidden"}`}
+        className={`fixed inset-y-0 end-0 z-[70] w-[min(95vw,430px)] flex-col overflow-hidden border-s border-[#b6a58e] bg-[#f8f5ee] text-[#302e2b] shadow-2xl min-[900px]:sticky min-[900px]:end-auto min-[900px]:bottom-auto min-[900px]:z-30 min-[900px]:w-full min-[900px]:shadow-none ${focus ? "min-[900px]:top-0 min-[900px]:h-dvh" : "min-[900px]:top-16 min-[900px]:h-[calc(100dvh-4rem)]"} ${mobileOpen ? "flex" : "hidden"} ${desktopOpen ? "min-[900px]:flex" : "min-[900px]:hidden"}`}
       >
         <header className="flex shrink-0 items-center justify-between border-b border-[#cdbfae] bg-[#f1eae0] p-3">
-          <div>
+          <div className="min-w-0">
             <p className="flex items-center gap-2 text-sm font-black">
               <NotebookPen className="size-4 text-[#73563c]" /> {LABELS.name[lang]}
               <span className="rounded-md bg-[#dfd2c2] px-1.5 py-0.5 text-[10px]">{section === "cma" ? "CMA" : "IFRS"}</span>
@@ -534,13 +646,21 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
           </div>
           <button
             type="button"
-            onClick={() => { setMobileOpen(false); onDesktopOpenChange(false); }}
+            onClick={closeNotebook}
             className="grid size-9 place-items-center rounded-lg border border-[#cdbfae] bg-white"
             aria-label={LABELS.close[lang]}
           ><X className="size-4" /></button>
         </header>
 
         <div className="flex-1 overflow-y-auto overscroll-contain px-3 pb-10 pt-3">
+          <label className="mb-3 hidden items-center gap-2 rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-[11px] font-semibold text-[#6c5b48] min-[900px]:flex">
+            <span className="shrink-0">{lang === "ar" ? "عرض الدفتر" : "Notebook width"}</span>
+            <input type="range" min={320} max={470} step={10} value={dockWidth}
+              onChange={(event) => onDockWidthChange(Number(event.target.value))}
+              aria-label={lang === "ar" ? "تعديل عرض الدفتر الجانبي" : "Resize the adjacent notebook panel"}
+              className="min-w-0 flex-1 accent-[#76543F]" />
+            <span className="w-10 text-end tabular-nums">{dockWidth}px</span>
+          </label>
           <div className="flex items-center gap-2">
             <button type="button" title={lang === "ar" ? "الصفحة السابقة" : "Previous page"} disabled={currentIndex < 1}
               className="grid size-9 place-items-center rounded-lg border border-[#cdbfae] bg-white disabled:opacity-35"
@@ -643,7 +763,9 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
           )}
 
           <div className="mt-3">
-            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor} inkWidth={inkWidth} lang={lang} onChange={updatePage} />
+            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor} inkWidth={inkWidth}
+              lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
+              canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES} />
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">

@@ -77,6 +77,7 @@ function LibraryLayout() {
   const [studyLanguages, setStudyLanguage] = useLibraryStudyLanguage();
   const [focus, setFocus] = useState(false);
   const [notebookOpen, setNotebookOpen] = useState(true);
+  const [notebookWidth, setNotebookWidth] = useState(370);
   const matches = useChildMatches();
   const path = matches[matches.length - 1]?.pathname ?? "/library";
   const studySection = studySectionForPath(path);
@@ -232,17 +233,32 @@ function LibraryLayout() {
             )}
           </AnimatePresence>
 
-          <div className={studySection && notebookOpen ? "xl:pe-[416px] xl:transition-[padding] xl:duration-200" : "xl:transition-[padding] xl:duration-200"}>
-            <Outlet />
+          {/* Study content and notebook share one responsive split view.
+              This is a sibling panel inside the lesson, never another route/page. */}
+          <div
+            data-study-split={studySection ? "lesson-and-notebook" : undefined}
+            className={studySection ? "min-[900px]:grid min-[900px]:items-start" : ""}
+            style={studySection ? {
+              gridTemplateColumns: notebookOpen
+                ? `minmax(0, 1fr) ${notebookWidth}px`
+                : "minmax(0, 1fr)",
+            } : undefined}
+          >
+            <div className="min-w-0" data-study-main>
+              <Outlet />
+            </div>
+            {studySection && (
+              <StudyNotebook
+                section={studySection}
+                lang={lang}
+                desktopOpen={notebookOpen}
+                onDesktopOpenChange={setNotebookOpen}
+                dockWidth={notebookWidth}
+                onDockWidthChange={setNotebookWidth}
+                focus={focus}
+              />
+            )}
           </div>
-          {studySection && (
-            <StudyNotebook
-              section={studySection}
-              lang={lang}
-              desktopOpen={notebookOpen}
-              onDesktopOpenChange={setNotebookOpen}
-            />
-          )}
 
           {focus && studySection && (
             <button
