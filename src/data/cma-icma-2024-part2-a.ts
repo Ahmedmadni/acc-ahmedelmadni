@@ -130,7 +130,7 @@ export const ICMA_2024_PART2_A: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 0,
     "explanation": "Broomall’s working capital is $40,000 calculated as follows.\n\n               Current assets – Current liabilities     =  Net working capital\n          $10,000 + $20,000 + $8,000 + $42,000      =  $80,000 current assets\n                           $15,000 + $25,000      =  $40,000 current liabilities\n                            $80,000 - $40,000     =  $40,000 net working capital",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-A-008",
@@ -544,7 +544,7 @@ export const ICMA_2024_PART2_A: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "Since Easton Bank is seeking the company that is most likely to meet its loan\n      obligations, the bank should select Astor. Both the degree of financial leverage and the debt/equity ratio\n      are measures of debt-paying ability; Astor is below the industry average for both measures, indicating a\n    low level of financial risk.",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-A-031",
@@ -580,7 +580,7 @@ export const ICMA_2024_PART2_A: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "As shown by the data, Strickland’s competitor has a greater degree of financial leverage\n     and a higher debt/equity ratio. The two measures indicate that the competitor makes greater use of outside\n     financing than Strickland. Strickland should, therefore, consider increased outside borrowing to increase\n      flexibility and fund research and development.",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-A-033",
@@ -652,7 +652,7 @@ export const ICMA_2024_PART2_A: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "Lowell’s accounts receivable turnover in days is 36.5 as shown below.\n\n     Accts receivable turnover (days) =   365 ÷ (Credit sales ÷ Average accounts receivable)\n                            =   365 ÷ [$220,000 ÷ ($20,000 + $24,000) ÷ 2]\n                            =   365 ÷ ($220,000 ÷ $22,000)\n                            =   365 ÷ 10\n                            =   36.5 days",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-A-037",
