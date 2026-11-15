@@ -46,6 +46,8 @@ jobs:
         run: |
           node scripts/check-ifrs-external-resources.mjs
           node --test scripts/tests/ifrsquiz-import.test.mjs
+      - name: Original IFRS bilingual exam-practice batch
+        run: node scripts/check-ifrs-original-practice.mjs
       - name: CMA content integrity
         run: npm run cma:check-content
       - name: CMA translation validation
