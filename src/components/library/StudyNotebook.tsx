@@ -1091,7 +1091,20 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   }
 
   function addStudyElement(template: StudyWidgetTemplate) {
-    if (!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS) return;
+    if (!storageWritable) return;
+    // Core educational elements belong to the document flow, not floating stickers.
+    if (template === "formula") {
+      insertInlineFormula("PV = FV / (1 + r)ⁿ");
+      return;
+    }
+    if (template === "journal" || template === "taccount" || template === "comparison") {
+      insertInlineTable(template);
+      return;
+    }
+    if (current.objects.length >= MAX_NOTEBOOK_OBJECTS) {
+      setRestoreMessage(lang === "ar" ? "امتلأت الورقة بالعناصر العائمة." : "Floating-item limit reached.");
+      return;
+    }
     const widget = createStudyWidget(template, newId(), current.direction === "rtl" ? "ar" : "en");
     updatePage({ objects: [...current.objects, widget] });
     setTool("select");
@@ -1397,7 +1410,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               <Type className="size-4" /> {lang === "ar" ? "إدراج داخل النص" : "Insert into text"}
             </button>
             <button type="button" onClick={() => setShowStudyWidgets(open => !open)}
-              disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
+              disabled={!storageWritable}
               aria-expanded={showStudyWidgets}
               className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
               <BookOpenText className="size-4" /> {lang === "ar" ? "عناصر الدراسة" : "Study elements"}
@@ -1479,8 +1492,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           {showStudyWidgets && (
             <p className="mt-2 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-xs leading-5 text-teal-950">
               {lang === "ar"
-                ? "عناصر قابلة للتحرير: اضغط داخل البطاقة للكتابة، وحدد ✓ للقوائم، وعدل خلايا الجداول. استخدم المقبض ⠿ للتحريك فقط."
-                : "Editable elements: type inside cards, tick checklist items and edit table cells. The ⠿ handle moves the card."}
+                ? "قيود اليومية وحساب T والمقارنات تُدرج الآن كجداول داخل النص، والمعادلات تُدرج عند المؤشر. البطاقات اللاصقة والقوائم العائمة ما زالت قابلة للتحريك."
+                : "Journal, T-account and comparisons insert as flowing tables; formulas insert at the cursor. Floating sticky notes and checklists remain movable."}
             </p>
           )}
           {showStudyWidgets && (
