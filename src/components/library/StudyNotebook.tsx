@@ -363,6 +363,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
 }) {
   const [store, setStore] = useState<NotebookStore>(emptyNotebook);
   const [hydrated, setHydrated] = useState(false);
+  const [storageWritable, setStorageWritable] = useState(true);
   const latest = useRef(store);
   const [saveError, setSaveError] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -381,14 +382,16 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
       const saved = localStorage.getItem(NOTEBOOK_STORAGE_KEY);
       if (saved) setStore(normalizeNotebook(JSON.parse(saved)));
     } catch {
-      // Bad or unavailable saved data must not crash lessons.
+      // Never overwrite unreadable saved notes with an empty default notebook.
+      // Only a deliberate user restore or reset may resume persistence.
+      setStorageWritable(false);
       setSaveError(true);
     }
     setHydrated(true);
   }, []);
 
   useEffect(() => {
-    if (!hydrated) return;
+    if (!hydrated || !storageWritable) return;
     const handle = window.setTimeout(() => {
       try {
         localStorage.setItem(NOTEBOOK_STORAGE_KEY, JSON.stringify(store));
@@ -396,14 +399,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
       } catch { setSaveError(true); }
     }, 350);
     return () => window.clearTimeout(handle);
-  }, [hydrated, store]);
+  }, [hydrated, store, storageWritable]);
 
   useEffect(() => {
     return () => {
-      if (!hydrated) return;
+      if (!hydrated || !storageWritable) return;
       try { localStorage.setItem(NOTEBOOK_STORAGE_KEY, JSON.stringify(latest.current)); } catch { /* export remains available */ }
     };
-  }, [hydrated]);
+  }, [hydrated, storageWritable]);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -482,6 +485,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
       : "This replaces every current CMA and IFRS notebook page with the backup. Continue?");
     if (!approved) return;
     setStore(restored);
+    setStorageWritable(true);
     setRestoreMessage(lang === "ar" ? "استُعيدت الصفحات بنجاح." : "Notebook backup restored.");
     setSaveError(false);
     setMobileOpen(false);
@@ -674,6 +678,21 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
             </button>
           </div>
           {restoreMessage && <p role="status" className="mt-2 text-xs leading-6 text-[#6b5236]">{restoreMessage}</p>}
+          {hydrated && !storageWritable && (
+            <button type="button"
+              onClick={() => {
+                const accepted = window.confirm(lang === "ar"
+                  ? "البيانات السابقة غير قابلة للقراءة. بدء دفتر جديد سيستبدلها نهائيا. هل تريد المتابعة؟"
+                  : "Previous saved data could not be read. Starting a new notebook will permanently replace it. Continue?");
+                if (!accepted) return;
+                setStore(emptyNotebook());
+                setStorageWritable(true);
+                setSaveError(false);
+              }}
+              className="mt-2 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
+              {lang === "ar" ? "بدء دفتر جديد بعد التأكيد" : "Start a new notebook after confirmation"}
+            </button>
+          )}
           <p aria-live="polite" className={`mt-3 text-xs ${saveError ? "text-red-700" : "text-[#827466]"}`}>
             {saveError ? LABELS.unsaved[lang] : hydrated ? LABELS.saved[lang] : "…"}
           </p>
