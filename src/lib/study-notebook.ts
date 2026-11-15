@@ -117,7 +117,7 @@ export function normalizeNotebook(value: unknown): NotebookStore {
             id: s.id,
             color: typeof s.color === "string" && /^#[0-9a-fA-F]{6}$/.test(s.color) ? s.color : "#24334a",
             width: numberBetween(s.width, 1, 26, 2.5),
-            kind: oneOf(s.kind, ["pen", "highlighter", "line", "rectangle", "ellipse"], "pen"),
+            kind: oneOf(s.kind, ["pen", "highlighter", "line", "rectangle", "ellipse"] as const, "pen"),
             points,
           });
         }
