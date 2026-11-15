@@ -13,12 +13,15 @@ import {
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
   strokeBounds, transformNotebookStroke, clampNotebookObject,
   MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
+  MAX_WIDGET_TITLE_LENGTH, MAX_WIDGET_TEXT_LENGTH, MAX_WIDGET_CELL_LENGTH, MAX_WIDGET_ITEMS, MAX_WIDGET_ROWS,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
+import { createStudyWidget, STUDY_WIDGET_PALETTE, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
+  studyWidgetDefaultTitle, type StudyWidgetTemplate } from "@/lib/study-notebook-widgets";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -667,6 +670,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [showStickerPalette, setShowStickerPalette] = useState(false);
+  const [showStudyWidgets, setShowStudyWidgets] = useState(false);
   const [stickerGroup, setStickerGroup] = useState("accounting");
   const imageInput = useRef<HTMLInputElement | null>(null);
   const [importingImage, setImportingImage] = useState(false);
