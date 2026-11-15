@@ -743,6 +743,7 @@ test("Real flowing notebook editor provides editable paragraphs and table cells 
     if(id==="react/jsx-runtime")return {jsx,jsxs:jsx};
     if(id==="react")return {useRef:()=>({current:{}}),useLayoutEffect:()=>{}};
     if(id==="@/lib/study-notebook")return notebook;
+    if(id==="@/lib/study-notebook-flow")return flowTools;
     throw Error("Unexpected module "+id);
   }});
   const nodes=[];
