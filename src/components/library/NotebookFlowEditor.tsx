@@ -3,23 +3,13 @@ import type { NotebookDirection, NotebookFlowBlock, NotebookTypeface } from "@/l
 import { MAX_NOTEBOOK_FLOW_ROWS, MAX_NOTEBOOK_FLOW_COLS, MAX_NOTEBOOK_FLOW_CELL_LENGTH,
   MAX_NOTE_TEXT_LENGTH } from "@/lib/study-notebook";
 import type { NotebookFlowCursor } from "@/lib/study-notebook-flow";
-import { reviewNotebookJournal } from "@/lib/study-notebook-flow";
+import { formatNotebookJournalReview, reviewNotebookJournal } from "@/lib/study-notebook-flow";
 
 function JournalBalanceStatus({ cells, direction }: {
   cells: string[][]; direction: NotebookDirection;
 }) {
   const review = reviewNotebookJournal(cells);
-  const ar = direction === "rtl";
-  const money = (minor: number) => (minor / 100).toLocaleString(ar ? "ar-SA" : "en-US", {
-    minimumFractionDigits: 2, maximumFractionDigits: 2,
-  });
-  const message = review.status === "empty"
-    ? (ar ? "أدخل الحسابات والمبالغ لمراجعة توازن القيد." : "Enter accounts and amounts to check the entry.")
-    : review.status === "invalid"
-      ? (ar ? "راجع الصفوف: " : "Check rows: ") + review.invalidRows.join(", ")
-      : review.status === "balanced"
-        ? (ar ? "القيد متوازن." : "The entry is balanced.")
-        : (ar ? "القيد غير متوازن. الفرق: " : "Out of balance. Difference: ") + money(review.differenceMinor);
+  const display = formatNotebookJournalReview(review, direction);
   return (
     <div data-notebook-journal-balance={review.status} aria-live="polite"
       className={`border-t px-2 py-2 text-xs leading-relaxed ${review.status === "balanced"
@@ -27,10 +17,10 @@ function JournalBalanceStatus({ cells, direction }: {
         : review.status === "empty" ? "border-slate-200 bg-slate-50 text-slate-700"
           : "border-amber-200 bg-amber-50 text-amber-900"}`}>
       <div className="grid grid-cols-2 gap-2 font-semibold">
-        <span>{ar ? "إجمالي المدين" : "Total debit"}: <b dir="ltr">{money(review.debitMinor)}</b></span>
-        <span>{ar ? "إجمالي الدائن" : "Total credit"}: <b dir="ltr">{money(review.creditMinor)}</b></span>
+        <span>{display.debitLabel}: <b dir="ltr">{display.debit}</b></span>
+        <span>{display.creditLabel}: <b dir="ltr">{display.credit}</b></span>
       </div>
-      <p className="mt-1">{message}</p>
+      <p className="mt-1">{display.message}</p>
     </div>
   );
 }
@@ -50,6 +40,7 @@ export function NotebookFlowEditor({
   onOverflow: (overflows: boolean) => void;
 }) {
   const paragraphs = useRef<Record<string, HTMLTextAreaElement | null>>({});
+  const cellInputs = useRef<Record<string, HTMLInputElement | null>>({});
   const flowRoot = useRef<HTMLDivElement | null>(null);
   const editable = tool === "type";
   const fontFamily = typeface === "handwritten"
@@ -147,6 +138,7 @@ export function NotebookFlowEditor({
                         style={{ height: Math.max(40, lineGap) }}>
                         <input
                           value={cell}
+                          ref={node => { cellInputs.current[`${block.id}:${ri}:${ci}`] = node; }}
                           type="text"
                           inputMode={block.template === "journal" && ci > 0 ? "decimal" : "text"}
                           dir={block.template === "journal" && ci > 0 ? "ltr" : direction}
@@ -157,6 +149,21 @@ export function NotebookFlowEditor({
                             (direction === "rtl" ? " العمود " : " column ") + (ci + 1)}
                           onChange={e => patchBlock(block.id, { cells: block.cells.map((r, i) =>
                             i === ri ? r.map((value, j) => j === ci ? e.target.value : value) : r) })}
+                          onKeyDown={e => {
+                            if (!editable || e.nativeEvent.isComposing || e.altKey || e.ctrlKey || e.metaKey) return;
+                            const step = e.key === "ArrowDown" ? 1
+                              : e.key === "ArrowUp" ? -1
+                                : e.key === "Enter" ? (e.shiftKey ? -1 : 1) : 0;
+                            if (!step) return;
+                            // Tab/Shift+Tab keep the browser's accessible column navigation.
+                            const nextRow = ri + step;
+                            if (nextRow < 0 || nextRow >= block.cells.length) return;
+                            const next = cellInputs.current[`${block.id}:${nextRow}:${ci}`];
+                            if (!next) return;
+                            e.preventDefault();
+                            next.focus();
+                            next.select();
+                          }}
                           className={`w-full min-w-0 border-0 bg-transparent px-1 text-[#283646] outline-none focus:bg-teal-50 focus-visible:ring-2 focus-visible:ring-teal-500 ${ri === 0 ? "font-bold" : ""}`}
                           style={{ fontSize: Math.max(16, lineGap * .4), height: Math.max(40, lineGap) }}
                         />
@@ -169,6 +176,13 @@ export function NotebookFlowEditor({
           </div>
           {block.template === "journal" && (
             <JournalBalanceStatus cells={block.cells} direction={direction} />
+          )}
+          {editable && (
+            <p className="border-t border-[#d7e1e8] px-2 py-1 text-[11px] text-[#536476]">
+              {direction === "rtl"
+                ? "Tab بين الخلايا، Enter للصف التالي، وShift+Enter للصف السابق."
+                : "Tab moves between cells; Enter moves down, Shift+Enter moves up."}
+            </p>
           )}
           {editable && (
             <div className="flex flex-wrap gap-1 border-t border-[#b5c4d3] bg-white/65 p-1">
