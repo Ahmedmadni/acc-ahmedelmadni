@@ -743,6 +743,7 @@ test("Real flowing notebook editor provides editable paragraphs and table cells 
     if(id==="react/jsx-runtime")return {jsx,jsxs:jsx};
     if(id==="react")return {useRef:()=>({current:{}}),useLayoutEffect:()=>{}};
     if(id==="@/lib/study-notebook")return notebook;
+    if(id==="@/lib/study-notebook-flow")return flowTools;
     throw Error("Unexpected module "+id);
   }});
   const nodes=[];
@@ -858,4 +859,53 @@ test("Notebook keeps visible page navigation but isolates drawing, paper, insert
   // A section switch must not change the notebook route or storage schema.
   assert.match(content,/NOTEBOOK_STORAGE_KEY/);
   assert.match(content,/NotebookPaper key=\{current.id\}/);
+});
+
+
+test("Journal amounts accept Arabic and English notation without floating-point rounding", () => {
+  assert.equal(flowTools.parseNotebookJournalAmount("1,250.50"), 125050);
+  assert.equal(flowTools.parseNotebookJournalAmount("١٬٢٥٠٫٥٠"), 125050);
+  assert.equal(flowTools.parseNotebookJournalAmount("۱۲۵۰٫۵"), 125050);
+  assert.equal(flowTools.parseNotebookJournalAmount("1250,50"), 125050);
+  assert.equal(flowTools.parseNotebookJournalAmount("0.10"), 10);
+  assert.equal(flowTools.parseNotebookJournalAmount("0.20"), 20);
+  for (const value of ["", "-10", "12.345", "1,23,4", "SAR 100", "NaN", "9e4"]) {
+    assert.equal(flowTools.parseNotebookJournalAmount(value), null, "Reject invalid amount: " + value);
+  }
+});
+
+test("Inline journal validation checks balance, account names and impossible debit-credit rows", () => {
+  const template = flowTools.notebookTableTemplate("journal", "rtl", "journal-1");
+  const rows = [
+    template.cells[0],
+    ["النقدية", "١٬٢٥٠٫٥٠", ""],
+    ["المبيعات", "", "1250.50"],
+    ["", "", ""],
+  ];
+  const good = flowTools.reviewNotebookJournal(rows);
+  assert.equal(good.status, "balanced");
+  assert.equal(good.debitMinor, 125050);
+  assert.equal(good.creditMinor, 125050);
+  assert.equal(good.differenceMinor, 0);
+  assert.equal(good.invalidRows.length, 0);
+  assert.equal(flowTools.reviewNotebookJournal([template.cells[0], ["", "", ""]]).status, "empty");
+  assert.equal(flowTools.reviewNotebookJournal([template.cells[0],
+    ["Cash", "250", ""], ["Sales", "", "249"]]).status, "unbalanced");
+  const invalid = flowTools.reviewNotebookJournal([template.cells[0],
+    ["Cash", "100", "100"], ["", "20", ""], ["Revenue", "", "abc"]]);
+  assert.equal(invalid.status, "invalid");
+  assert.deepEqual(Array.from(invalid.invalidRows), [1, 2, 3]);
+  // Journal checks must never mutate the user's editable cells.
+  assert.equal(rows[1][1], "١٬٢٥٠٫٥٠");
+});
+
+test("Journal tablet editor exposes balance feedback, numeric keyboard and touch-sized cells", async () => {
+  const source = await readFile("src/components/library/NotebookFlowEditor.tsx", "utf8");
+  assert.match(source, /reviewNotebookJournal\(cells\)/);
+  assert.match(source, /data-notebook-journal-balance/);
+  assert.match(source, /aria-live="polite"/);
+  assert.match(source, /inputMode=\{block\.template === "journal" && ci > 0 \? "decimal"/);
+  assert.match(source, /fontSize: Math\.max\(16, lineGap \* \.4\)/);
+  assert.match(source, /height: Math\.max\(40, lineGap\)/);
+  assert.match(source, /JournalBalanceStatus cells=\{block\.cells\}/);
 });
