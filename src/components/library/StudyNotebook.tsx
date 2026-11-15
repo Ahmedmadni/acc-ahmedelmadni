@@ -224,7 +224,7 @@ function NotebookPaper({
       return;
     }
     const stroke: NotebookStroke = {
-      id: newId(), kind: tool === "type" || tool === "eraser" ? "pen" : tool,
+      id: newId(), kind: tool,
       color: tool === "highlighter" ? highlighterColor : inkColor,
       width: tool === "highlighter" ? 18 : inkWidth, points: [point],
     };
