@@ -11,11 +11,11 @@ import {
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
-  notebookFlowPlainText, MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_FLOW_BLOCKS,
+  notebookFlowPlainText, MAX_NOTEBOOK_FLOW_BLOCKS,
   strokeBounds, transformNotebookStroke, clampNotebookObject,
   MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
   MAX_WIDGET_TITLE_LENGTH, MAX_WIDGET_TEXT_LENGTH, MAX_WIDGET_CELL_LENGTH, MAX_WIDGET_ITEMS, MAX_WIDGET_ROWS,
-  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject,
+  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject, type NotebookFlowBlock,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
@@ -904,6 +904,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [showStickerPalette, setShowStickerPalette] = useState(false);
   const [showStudyWidgets, setShowStudyWidgets] = useState(false);
+  const [showInlineTools, setShowInlineTools] = useState(false);
+  const [customFormula, setCustomFormula] = useState("");
+  const [insertRequest, setInsertRequest] = useState<NotebookInsertRequest | null>(null);
+  const insertSequence = useRef(0);
   const [stickerGroup, setStickerGroup] = useState("accounting");
   const imageInput = useRef<HTMLInputElement | null>(null);
   const [importingImage, setImportingImage] = useState(false);
@@ -1054,6 +1058,33 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
         : error instanceof Error ? error.message : "PDF export failed.");
     } finally { setExportingPdf(false); }
+  }
+
+  function insertInlineFormula(formula: string) {
+    if (!storageWritable || !formula.trim()) return;
+    if (formula.length > 300) {
+      setRestoreMessage(lang === "ar" ? "المعادلة طويلة جدا؛ استخدم نصا أقصر." : "Formula is too long.");
+      return;
+    }
+    const currentTextLength = current.text.length;
+    if (currentTextLength + formula.length > MAX_NOTE_TEXT_LENGTH) {
+      setRestoreMessage(lang === "ar" ? "وصلت الورقة إلى الحد المسموح للنص." : "This sheet has reached its text limit.");
+      return;
+    }
+    setTool("type");
+    setInsertRequest({ id: ++insertSequence.current, kind: "formula", formula });
+    setShowInlineTools(false);
+  }
+
+  function insertInlineTable(template: NotebookFlowTableTemplate) {
+    if (!storageWritable) return;
+    if ((current.flow?.length ?? 1) + 2 > MAX_NOTEBOOK_FLOW_BLOCKS) {
+      setRestoreMessage(lang === "ar" ? "وصلت لعدد العناصر المسموح في الصفحة." : "This sheet has reached its structured block limit.");
+      return;
+    }
+    setTool("type");
+    setInsertRequest({ id: ++insertSequence.current, kind: "table", template });
+    setShowInlineTools(false);
   }
 
   function addStudyElement(template: StudyWidgetTemplate) {
@@ -1357,6 +1388,11 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             })}
           </div>
           <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
+            <button type="button" onClick={() => { setTool("type"); setShowInlineTools(open => !open); }}
+              aria-expanded={showInlineTools}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-teal-300 bg-teal-50 px-3 py-2 text-xs font-bold text-teal-900">
+              <Type className="size-4" /> {lang === "ar" ? "إدراج داخل النص" : "Insert into text"}
+            </button>
             <button type="button" onClick={() => setShowStudyWidgets(open => !open)}
               disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
               aria-expanded={showStudyWidgets}
@@ -1389,6 +1425,54 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                 "Use Select to move and resize. Images stay on this device."}
             </p>
           </div>
+          {showInlineTools && (
+            <section className="mt-2 space-y-3 rounded-xl border border-teal-200 bg-white p-3"
+              aria-label={lang === "ar" ? "إدراج معادلات وجداول في النص" : "Insert equations and tables into text"}>
+              <p className="text-xs leading-5 text-[#4b5a65]">
+                {lang === "ar"
+                  ? "ضع المؤشر داخل الفقرة أولاً؛ المعادلة تظهر في السطر نفسه، والجدول يدخل بين النص قبل المؤشر وبعده."
+                  : "Place the text cursor first. Equations remain inline; tables split the paragraph without deleting its text."}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {NOTEBOOK_FORMULA_PRESETS.map(option => (
+                  <button key={option.id} type="button"
+                    onClick={() => insertInlineFormula(option.formula)}
+                    className="rounded-lg border border-[#c5d5df] bg-[#f6fafb] p-2 text-start text-xs text-[#253a4b]">
+                    <span className="block font-bold">{option.label}</span>
+                    <code className="mt-1 block break-words text-[10px]">{option.formula}</code>
+                  </button>
+                ))}
+              </div>
+              <label className="block text-xs font-semibold text-[#253a4b]">
+                {lang === "ar" ? "معادلة مخصصة" : "Custom equation"}
+                <div className="mt-1 flex gap-1">
+                  <input type="text" value={customFormula} maxLength={300}
+                    onChange={e => setCustomFormula(e.target.value)}
+                    placeholder="e.g. EBIT = Revenue - Operating Expenses"
+                    className="min-w-0 flex-1 rounded-lg border border-[#c5d5df] bg-white px-2 py-2 text-xs" />
+                  <button type="button" disabled={!customFormula.trim()}
+                    onClick={() => insertInlineFormula(customFormula)}
+                    className="rounded-lg bg-[#283b4d] px-3 py-2 text-xs font-bold text-white disabled:opacity-40">
+                    {lang === "ar" ? "إدراج" : "Insert"}
+                  </button>
+                </div>
+              </label>
+              <p className="text-xs font-bold text-[#253a4b]">
+                {lang === "ar" ? "جداول داخل الملاحظة" : "Editable tables in the note"}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {(["journal", "taccount", "comparison", "custom"] as NotebookFlowTableTemplate[]).map(template => (
+                  <button key={template} type="button" onClick={() => insertInlineTable(template)}
+                    className="rounded-lg border border-[#c5d5df] bg-white px-3 py-2 text-xs font-semibold text-[#253a4b]">
+                    {template === "journal" ? lang === "ar" ? "قيد يومية" : "Journal entry"
+                      : template === "taccount" ? lang === "ar" ? "حساب T" : "T-account"
+                      : template === "comparison" ? lang === "ar" ? "جدول مقارنة" : "Comparison"
+                      : lang === "ar" ? "جدول فارغ" : "Blank table"}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
           {showStudyWidgets && (
             <p className="mt-2 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-xs leading-5 text-teal-950">
               {lang === "ar"
@@ -1497,7 +1581,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
 
           <div className="mt-3">
             <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor}
-              highlighterColor={highlighterColor} inkWidth={inkWidth}
+              highlighterColor={highlighterColor} inkWidth={inkWidth} insertRequest={insertRequest}
               lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
               canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
               undoInk={undoInk} redoInk={redoInk}
