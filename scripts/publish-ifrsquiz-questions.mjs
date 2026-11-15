@@ -107,7 +107,14 @@ async function main(){
  if(path.isAbsolute(output)&&!path.resolve(output).startsWith(process.cwd()+path.sep))
    throw Error("Output must stay within the repository");
  const code=`import type { ExamQuestion } from "@/lib/exam-bank";
-import type { IfrsQuizQuestionProvenance } from "@/data/ifrsquiz-provenance";
+export interface IfrsQuizQuestionProvenance {
+  sourceUrl: string;
+  sourceRevision: string;
+  sourceLicense: string;
+  sourceItemId: string;
+  sourceFingerprint: string;
+  sourceAnswerKey: string | number;
+}
 
 /** GENERATED from verified, permission-backed source records.
  * Do not modify individual answers without reviewing the original source.
