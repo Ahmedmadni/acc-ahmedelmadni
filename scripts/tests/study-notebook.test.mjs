@@ -321,7 +321,7 @@ test("Stylus shape tools are vector paths and eraser can hit drawn shape outline
 
 test("PDF exporter uses existing local dependencies and renders full page size with notes and ink", async () => {
   const lib=await loadTypeScript("src/lib/study-notebook-pdf.ts",
-    { "@/lib/study-notebook": notebook, "@/lib/study-notebook-widgets": notebookWidgets });
+    { "@/lib/study-notebook": notebook, "@/lib/study-notebook-widgets": notebookWidgets, "@/lib/study-notebook-flow": flowTools });
   const dim=JSON.parse(JSON.stringify(lib.STUDY_NOTEBOOK_PDF_MM));
   assert.deepEqual(dim,{A4:[210,297],A5:[148,210],Letter:[215.9,279.4]});
   assert.equal(lib.printableInkStyle({kind:"highlighter",color:"#f6d94e",width:18}).opacity,"0.32");
@@ -908,4 +908,114 @@ test("Journal tablet editor exposes balance feedback, numeric keyboard and touch
   assert.match(source, /fontSize: Math\.max\(16, lineGap \* \.4\)/);
   assert.match(source, /height: Math\.max\(40, lineGap\)/);
   assert.match(source, /JournalBalanceStatus cells=\{block\.cells\}/);
+});
+
+
+test("Notebook PDF journal review renders computed totals and warnings without mutating entries", async () => {
+  class MockElement {
+    constructor(name) { this.name=name; this.children=[]; this.attributes={}; this.style={}; this.textContent=""; }
+    setAttribute(name,value) { this.attributes[name]=value; }
+    appendChild(child) { this.children.push(child); return child; }
+  }
+  const doc={ createElement:name=>new MockElement(name),
+    createElementNS:(_namespace,name)=>new MockElement(name) };
+  const source=await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  const compiled=ts.transpileModule(source,{compilerOptions:{
+    module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,
+  }}).outputText;
+  const mod={exports:{}};
+  vm.runInNewContext(compiled,{module:mod,exports:mod.exports,document:doc,require:id=>{
+    if(id==="@/lib/study-notebook")return notebook;
+    if(id==="@/lib/study-notebook-widgets")return notebookWidgets;
+    if(id==="@/lib/study-notebook-flow")return flowTools;
+    throw Error("Unexpected PDF dependency "+id);
+  }});
+  const nodes=root=>{const out=[root];for(let i=0;i<out.length;i++)out.push(...out[i].children);return out;};
+  const journal=flowTools.notebookTableTemplate("journal","ltr","j");
+  journal.cells[1]=["Cash","125.50",""];
+  journal.cells[2]=["Revenue","","125.50"];
+  const page=notebook.emptyNotebook().pages.cma[0];
+  page.flow=[flowTools.notebookFlowParagraph("p","Example"),journal];
+  const original=JSON.stringify(page.flow);
+  const printed=mod.exports.buildNotebookPrintablePageDom(page);
+  assert.equal(JSON.stringify(page.flow),original);
+  let review=nodes(printed).find(n=>n.attributes["data-pdf-journal-review"]==="balanced");
+  assert.ok(review,"PDF must contain a balanced status");
+  assert.ok(nodes(review).some(n=>n.textContent.includes("Total debit: 125.50")));
+  assert.ok(nodes(review).some(n=>n.textContent.includes("Total credit: 125.50")));
+  assert.ok(nodes(review).some(n=>n.textContent.includes("The entry is balanced.")));
+  page.direction="rtl";
+  journal.cells[1]=["النقدية","١٢٥٫٥٠",""];
+  journal.cells[2]=["المبيعات","","١٢٠٫٥٠"];
+  review=nodes(mod.exports.buildNotebookPrintablePageDom(page))
+    .find(n=>n.attributes["data-pdf-journal-review"]==="unbalanced");
+  assert.ok(review);
+  assert.ok(nodes(review).some(n=>n.textContent.includes("القيد غير متوازن")));
+  journal.cells[2]=["","100","100"];
+  review=nodes(mod.exports.buildNotebookPrintablePageDom(page))
+    .find(n=>n.attributes["data-pdf-journal-review"]==="invalid");
+  assert.ok(review);
+  assert.ok(nodes(review).some(n=>n.textContent.includes("راجع الصفوف")));
+});
+
+test("Journal summaries share bilingual labels across editor and PDF", () => {
+  const rows=[["Account","Debit","Credit"],["Cash","100.20",""],["Revenue","","100.20"]];
+  const review=flowTools.reviewNotebookJournal(rows);
+  const english=flowTools.formatNotebookJournalReview(review,"ltr");
+  const arabic=flowTools.formatNotebookJournalReview(review,"rtl");
+  assert.equal(english.message,"The entry is balanced.");
+  assert.equal(english.debit,"100.20");
+  assert.equal(english.creditLabel,"Total credit");
+  assert.equal(arabic.debitLabel,"إجمالي المدين");
+  assert.equal(arabic.message,"القيد متوازن.");
+});
+
+test("Inline table Enter and arrow keys navigate rows while Tab and IME keep native behavior", async () => {
+  const code=await readFile("src/components/library/NotebookFlowEditor.tsx","utf8");
+  const compiled=ts.transpileModule(code,{compilerOptions:{
+    module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX,
+  }}).outputText;
+  const jsx=(type,props,key)=>({type,props,key});
+  const mod={exports:{}};
+  vm.runInNewContext(compiled,{module:mod,exports:mod.exports,require:id=>{
+    if(id==="react/jsx-runtime")return {jsx,jsxs:jsx};
+    if(id==="react")return {useRef:()=>({current:{}}),useLayoutEffect:()=>{}};
+    if(id==="@/lib/study-notebook-flow")return flowTools;
+    if(id==="@/lib/study-notebook")return notebook;
+    throw Error("Unexpected editor dependency "+id);
+  }});
+  const table=flowTools.notebookTableTemplate("journal","ltr","j");
+  const tree=mod.exports.NotebookFlowEditor({blocks:[table],direction:"ltr",
+    typeface:"regular",lineGap:22,margin:20,tool:"type",
+    onChange:()=>{},onCursor:()=>{},onOverflow:()=>{}});
+  const flat=[tree];
+  for(let i=0;i<flat.length;i++){
+    const children=flat[i]?.props?.children;
+    if(Array.isArray(children))flat.push(...children.filter(Boolean));
+    else if(children)flat.push(children);
+  }
+  const inputs=flat.filter(n=>n?.type==="input"&&n.props?.type==="text");
+  const current=inputs.find(n=>n.props["aria-label"]==="Row 2 column 2");
+  const below=inputs.find(n=>n.props["aria-label"]==="Row 3 column 2");
+  const above=inputs.find(n=>n.props["aria-label"]==="Row 1 column 2");
+  assert.ok(current&&below&&above);
+  let focused="",selected="",prevented=0;
+  above.props.ref({focus(){focused="above";},select(){selected="above";}});
+  below.props.ref({focus(){focused="below";},select(){selected="below";}});
+  const key=(name,shiftKey=false,isComposing=false)=>({
+    key:name,shiftKey,nativeEvent:{isComposing},ctrlKey:false,altKey:false,metaKey:false,
+    preventDefault(){prevented++;},
+  });
+  current.props.onKeyDown(key("Enter"));
+  assert.equal(focused,"below");
+  assert.equal(selected,"below");
+  assert.equal(prevented,1);
+  current.props.onKeyDown(key("ArrowUp"));
+  assert.equal(focused,"above");
+  current.props.onKeyDown(key("Tab"));
+  assert.equal(prevented,2);
+  current.props.onKeyDown(key("Enter",false,true));
+  assert.equal(prevented,2);
+  current.props.onKeyDown(key("Enter",true));
+  assert.equal(focused,"above");
 });
