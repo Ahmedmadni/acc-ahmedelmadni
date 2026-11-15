@@ -138,7 +138,7 @@ type NotebookInsertRequest =
   | { id: number; kind: "table"; template: NotebookFlowTableTemplate };
 
 function NotebookPaper({
-  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, canAddPage, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
@@ -149,10 +149,6 @@ function NotebookPaper({
   onChange: (change: Partial<NotebookPage>) => void;
   onSplit: (fittingIndex: number) => void;
   canAddPage: boolean;
-  undoInk: () => void;
-  redoInk: () => void;
-  canUndoInk: boolean;
-  canRedoInk: boolean;
   lang: Lang;
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
@@ -847,19 +843,7 @@ function NotebookPaper({
           ? `المسافات بين سطور الورقة والكتابة: ${page.spacing} وحدة متطابقة · تنعيم تلقائي لخطوط القلم`
           : `Matching text / paper line spacing: ${page.spacing} units · strokes automatically smoothed`}
       </p>
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <button
-          type="button"
-          onClick={undoInk}
-          disabled={!canUndoInk}
-          className="inline-flex items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40"
-        >
-          <RotateCcw className="size-3.5" /> {LABELS.undo[lang]}
-        </button>
-        <button type="button" onClick={redoInk} disabled={!canRedoInk}
-          className="inline-flex items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold disabled:opacity-40">
-          <Redo2 className="size-3.5" /> {LABELS.redo[lang]}
-        </button>
+      <div className="flex flex-wrap items-center justify-end gap-2">
         <button
           type="button"
           onClick={() => void recognize()}
@@ -1689,9 +1673,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               highlighterColor={highlighterColor} inkWidth={inkWidth} insertRequest={insertRequest}
               lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
               canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
-              undoInk={undoInk} redoInk={redoInk}
-              canUndoInk={Boolean(inkHistory.current[current.id]?.past.length)}
-              canRedoInk={Boolean(inkHistory.current[current.id]?.future.length)} />
+              />
           </div>
 
           {activeSection === "export" && (
