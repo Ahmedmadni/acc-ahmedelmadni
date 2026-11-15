@@ -260,7 +260,7 @@ function NotebookPaper({
 
   useLayoutEffect(() => {
     const editor = textEditor.current;
-    if (page.flow?.length) { setTextOverflows(false); return; }
+    if (page.flow?.length) return;
     if (!editor) return;
     setTextOverflows(editor.scrollHeight > editor.clientHeight + 2);
   }, [page.id, page.text, page.flow, page.spacing, page.direction, page.typeface, page.size, width]);
@@ -538,6 +538,7 @@ function NotebookPaper({
             lineGap={lineGap} margin={margin} tool={tool}
             onChange={updateFlow}
             onCursor={cursor => { flowCursor.current = cursor; }}
+            onOverflow={setTextOverflows}
           />
         ) : (
         <textarea
@@ -812,13 +813,17 @@ function NotebookPaper({
       )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
-          <p>{lang === "ar"
-            ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
-            : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
-          <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
+          <p>{page.flow?.length
+            ? lang === "ar"
+              ? "المحتوى المنسق تجاوز حدود الورقة. سيقتطع تصدير PDF ما يظهر خارج الورقة؛ انقل جزءا من النص أو الجدول إلى ورقة جديدة قبل التصدير."
+              : "The formatted content exceeds this sheet. PDF captures only the paper bounds; move a paragraph or table to another sheet before exporting."
+            : lang === "ar"
+              ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
+              : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
+          {!page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
             className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
             {lang === "ar" ? "نقل النص الزائد لصفحة تالية" : "Continue overflow on next page"}
-          </button>
+          </button>}
           {!canAddPage && <p>{lang === "ar" ? "وصلت للحد الأقصى للصفحات؛ صدّر نسخة احتياطية." : "Page limit reached; export a backup."}</p>}
         </div>
       )}
