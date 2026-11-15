@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
   BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2, Upload,
   NotebookPen, PenLine, RotateCcw, ScanText,
@@ -10,7 +10,7 @@ import {
   createNotebookPage, emptyNotebook, MAX_INK_POINTS, MAX_INK_STROKES,
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
-  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup,
+  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
@@ -85,14 +85,41 @@ function download(name: string, text: string, mime = "application/json") {
   anchor.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
+/** Measure text against the actual styled editor instead of estimating line
+ * wrapping by character count. The exact original value/selection are restored
+ * synchronously before React sees any change.
+ */
+function lastFittingTextIndex(editor: HTMLTextAreaElement, text: string) {
+  const value = editor.value;
+  const start = editor.selectionStart;
+  const end = editor.selectionEnd;
+  const scroll = editor.scrollTop;
+  let low = 0, high = text.length;
+  try {
+    while (low < high) {
+      const mid = Math.ceil((low + high) / 2);
+      editor.value = text.slice(0, mid);
+      if (editor.scrollHeight <= editor.clientHeight + 2) low = mid;
+      else high = mid - 1;
+    }
+    return low;
+  } finally {
+    editor.value = value;
+    editor.setSelectionRange(start, end);
+    editor.scrollTop = scroll;
+  }
+}
+
 function NotebookPaper({
-  page, tool, inkColor, inkWidth, onChange, lang,
+  page, tool, inkColor, inkWidth, onChange, onSplit, canAddPage, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
   inkColor: string;
   inkWidth: number;
   onChange: (change: Partial<NotebookPage>) => void;
+  onSplit: (fittingIndex: number) => void;
+  canAddPage: boolean;
   lang: Lang;
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
@@ -101,6 +128,9 @@ function NotebookPaper({
   const strokeBuffer = useRef<NotebookStroke[]>(page.strokes);
   strokeBuffer.current = page.strokes;
   const sheet = useRef<HTMLDivElement | null>(null);
+  const textEditor = useRef<HTMLTextAreaElement | null>(null);
+  const [textOverflows, setTextOverflows] = useState(false);
+  const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
   const [width, setWidth] = useState(330);
   const [recognizing, setRecognizing] = useState(false);
@@ -138,6 +168,19 @@ function NotebookPaper({
   const lineGap = page.spacing * scale;
   const margin = 43 * scale;
   const paper = notebookPaperBackground(page.pattern, page.shade, lineGap);
+
+  useLayoutEffect(() => {
+    const editor = textEditor.current;
+    if (!editor) return;
+    setTextOverflows(editor.scrollHeight > editor.clientHeight + 2);
+  }, [page.id, page.text, page.spacing, page.direction, page.typeface, page.size, width]);
+
+  function continueOnNewPage() {
+    const editor = textEditor.current;
+    if (!editor || !canAddPage) return;
+    const fitting = lastFittingTextIndex(editor, page.text);
+    if (fitting > 0 && fitting < page.text.length) onSplit(fitting);
+  }
   const bgStyle: CSSProperties = {
     ...paper,
     aspectRatio: `${NOTEBOOK_DESIGN_WIDTH} / ${height}`,
@@ -241,7 +284,7 @@ function NotebookPaper({
     if (!recognizedText.trim()) return;
     onChange({
       text: [page.text.trimEnd(), recognizedText.trim()].filter(Boolean).join("\n"),
-      strokes: [],
+      ...(keepOriginalInk ? {} : { strokes: [] }),
     });
     setRecognized(null);
     setRecognizedText("");
@@ -258,6 +301,7 @@ function NotebookPaper({
           <div className="pointer-events-none absolute inset-y-0 z-[1] w-px bg-rose-400/30" style={{ insetInlineStart: margin }} />
         )}
         <textarea
+          ref={textEditor}
           aria-label={lang === "ar" ? "كتابة الملاحظات" : "Notebook typing area"}
           spellCheck
           dir={page.direction}
@@ -304,6 +348,18 @@ function NotebookPaper({
           ))}
         </svg>
       </div>
+      {textOverflows && (
+        <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
+          <p>{lang === "ar"
+            ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
+            : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
+          <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
+            className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
+            {lang === "ar" ? "نقل النص الزائد لصفحة تالية" : "Continue overflow on next page"}
+          </button>
+          {!canAddPage && <p>{lang === "ar" ? "وصلت للحد الأقصى للصفحات؛ صدّر نسخة احتياطية." : "Page limit reached; export a backup."}</p>}
+        </div>
+      )}
       <p className="text-center text-[11px] leading-5 text-[#786f63]">
         {lang === "ar"
           ? `المسافات بين سطور الورقة والكتابة: ${page.spacing} وحدة متطابقة · تنعيم تلقائي لخطوط القلم`
@@ -343,6 +399,11 @@ function NotebookPaper({
             onChange={(e) => setRecognizedText(e.target.value)}
             aria-label={lang === "ar" ? "راجع الكتابة التي تم التعرف عليها" : "Review recognized text"}
             className="w-full rounded-lg border border-emerald-200 bg-white p-2 text-sm text-[#212c25]" />
+          <label className="flex items-center gap-2 text-xs leading-6 text-[#285C44]">
+            <input type="checkbox" checked={keepOriginalInk} onChange={(event) => setKeepOriginalInk(event.target.checked)}
+              className="size-4 accent-emerald-800" />
+            {lang === "ar" ? "الاحتفاظ برسومات القلم الأصلية عند إدراج النص" : "Keep original pen strokes when adding recognized text"}
+          </label>
           <div className="flex flex-wrap gap-2">
             <button type="button" onClick={acceptRecognition} disabled={!recognizedText.trim()} className="inline-flex items-center gap-1 rounded-lg bg-emerald-800 px-3 py-2 text-xs font-semibold text-white disabled:opacity-50">
               <Check className="size-3.5" /> {LABELS.apply[lang]}
@@ -451,6 +512,39 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
       pages: { ...prior.pages, [section]: [...prior.pages[section], fresh] },
       activePage: { ...prior.activePage, [section]: id },
     }));
+    setTool("type");
+  }
+
+  function splitCurrentPage(fittingIndex: number) {
+    if (sectionPages.length >= MAX_NOTEBOOK_PAGES) return;
+    const split = splitNotebookText(current.text, fittingIndex);
+    if (!split || !split.continuation) return;
+    const newPageId = newId();
+    const continuationPage = {
+      ...createNotebookPage(newPageId, current.direction),
+      pattern: current.pattern,
+      shade: current.shade,
+      size: current.size,
+      spacing: current.spacing,
+      typeface: current.typeface,
+      text: split.continuation,
+      updatedAt: Date.now(),
+    };
+    setStore((prior) => {
+      const pages = prior.pages[section];
+      const index = pages.findIndex((page) => page.id === current.id);
+      if (index < 0 || pages.length >= MAX_NOTEBOOK_PAGES) return prior;
+      const updated = [...pages];
+      // The drawing overlay belongs to the original page; only typed overflow
+      // moves to the continuation, so mixed pen/keyboard work is never deleted.
+      updated[index] = { ...updated[index], text: split.first, updatedAt: Date.now() };
+      updated.splice(index + 1, 0, continuationPage);
+      return {
+        ...prior,
+        pages: { ...prior.pages, [section]: updated },
+        activePage: { ...prior.activePage, [section]: newPageId },
+      };
+    });
     setTool("type");
   }
 
@@ -669,7 +763,9 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           )}
 
           <div className="mt-3">
-            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor} inkWidth={inkWidth} lang={lang} onChange={updatePage} />
+            <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor} inkWidth={inkWidth}
+              lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
+              canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES} />
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">
