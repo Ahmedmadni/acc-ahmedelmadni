@@ -232,6 +232,18 @@ function LibraryLayout() {
 
           <Outlet />
 
+          {focus && studySection && (
+            <button
+              type="button"
+              onClick={toggleLibraryLanguage}
+              aria-label={lang === "ar" ? "Switch study language to English" : "تبديل لغة الدراسة إلى العربية"}
+              className="fixed bottom-20 left-6 z-[60] inline-flex min-h-10 items-center gap-2 rounded-full border border-[#A88765]/45 bg-[#1C1B19]/90 px-4 py-2 text-xs font-bold text-[#c9a986] shadow-xl shadow-black/40 backdrop-blur-xl transition hover:bg-[#A88765]/15"
+            >
+              <Languages className="size-3.5" />
+              {lang === "ar" ? "English" : "العربية"}
+            </button>
+          )}
+
           <button
             type="button"
             onClick={() => setFocus((f) => !f)}
