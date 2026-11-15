@@ -412,9 +412,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
 
   useEffect(() => {
     if (!mobileOpen) return;
+    const priorOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const listener = (e: KeyboardEvent) => { if (e.key === "Escape") setMobileOpen(false); };
     window.addEventListener("keydown", listener);
-    return () => window.removeEventListener("keydown", listener);
+    return () => {
+      window.removeEventListener("keydown", listener);
+      document.body.style.overflow = priorOverflow;
+    };
   }, [mobileOpen]);
 
   function updatePage(change: Partial<NotebookPage>) {
