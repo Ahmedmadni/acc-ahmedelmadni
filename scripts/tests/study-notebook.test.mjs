@@ -321,7 +321,7 @@ test("Stylus shape tools are vector paths and eraser can hit drawn shape outline
 
 test("PDF exporter uses existing local dependencies and renders full page size with notes and ink", async () => {
   const lib=await loadTypeScript("src/lib/study-notebook-pdf.ts",
-    { "@/lib/study-notebook": notebook, "@/lib/study-notebook-widgets": notebookWidgets });
+    { "@/lib/study-notebook": notebook, "@/lib/study-notebook-widgets": notebookWidgets, "@/lib/study-notebook-flow": flowTools });
   const dim=JSON.parse(JSON.stringify(lib.STUDY_NOTEBOOK_PDF_MM));
   assert.deepEqual(dim,{A4:[210,297],A5:[148,210],Letter:[215.9,279.4]});
   assert.equal(lib.printableInkStyle({kind:"highlighter",color:"#f6d94e",width:18}).opacity,"0.32");
@@ -981,6 +981,7 @@ test("Inline table Enter and arrow keys navigate rows while Tab and IME keep nat
     if(id==="react/jsx-runtime")return {jsx,jsxs:jsx};
     if(id==="react")return {useRef:()=>({current:{}}),useLayoutEffect:()=>{}};
     if(id==="@/lib/study-notebook-flow")return flowTools;
+    if(id==="@/lib/study-notebook")return notebook;
     throw Error("Unexpected editor dependency "+id);
   }});
   const table=flowTools.notebookTableTemplate("journal","ltr","j");
