@@ -1016,6 +1016,9 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     if (sectionPages.length >= MAX_NOTEBOOK_PAGES) return;
     const id = newId();
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
+      flow: current.flow?.map(block => block.kind === "paragraph"
+        ? { ...block, id: newId() }
+        : { ...block, id: newId(), cells: block.cells.map(row => [...row]) }),
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
       objects: current.objects.map((object) => ({
         ...object, id: newId(),
