@@ -640,3 +640,156 @@ test("Touch typing cannot accidentally trigger a card drag and new cards fill th
   const layout=await readFile("src/routes/library.tsx","utf8");
   assert.match(layout,/data-study-split/);
 });
+
+const flowTools = await loadTypeScript("src/lib/study-notebook-flow.ts");
+
+test("CMA journal entries become structured tables between paragraphs, not movable stickers", () => {
+  const intro = "The inventory policy requires this adjustment.\nKeep reviewing.";
+  const id="para-original";
+  const first={id,kind:"paragraph",text:intro};
+  const table=flowTools.notebookTableTemplate("journal","ltr","table-1");
+  assert.equal(table.kind,"table");
+  assert.deepEqual(JSON.parse(JSON.stringify(table.cells[0])),["Account","Debit","Credit"]);
+  const inserted=flowTools.insertFlowTable([first],{blockId:id,start:20,end:20},table,()=> "after-para");
+  assert.deepEqual(Array.from(inserted.blocks.map(b=>b.kind)),["paragraph","table","paragraph"]);
+  assert.equal(inserted.blocks[0].text + inserted.blocks[2].text,intro);
+  assert.equal(inserted.blocks[1].title,"Journal Entry");
+  assert.equal(inserted.cursor.blockId,"after-para");
+  assert.equal(inserted.cursor.start,0);
+  const text=notebook.notebookFlowPlainText(inserted.blocks);
+  assert.match(text,/Debit\tCredit/);
+  const store=notebook.emptyNotebook();
+  store.pages.cma[0].flow=inserted.blocks;
+  store.pages.cma[0].text=text;
+  const normalized=notebook.normalizeNotebook(store);
+  assert.equal(normalized.pages.cma[0].flow[1].kind,"table");
+  assert.equal(normalized.pages.cma[0].flow[2].text,intro.slice(20));
+  assert.equal(normalized.pages.cma[0].text,text);
+  assert.equal(normalized.pages.standards[0].flow,undefined);
+});
+
+test("In-line formulas insert precisely at the remembered caret and remain editable text", () => {
+  const p={id:"paragraph",kind:"paragraph",text:"For the result, use this calculation."};
+  const formula="PV = FV / (1 + r)ⁿ";
+  const at=flowTools.insertFlowFormula([p],{blockId:"paragraph",start:20,end:20},formula);
+  assert.equal(at.blocks.length,1);
+  assert.equal(at.blocks[0].kind,"paragraph");
+  assert.equal(at.blocks[0].text,p.text.slice(0,20)+formula+p.text.slice(20));
+  assert.equal(at.cursor.start,20+formula.length);
+  const updated=flowTools.insertFlowFormula(at.blocks,at.cursor," and more");
+  assert.match(updated.blocks[0].text,/PV = FV \/ \(1 \+ r\)ⁿ and more/);
+  const ar="نحسب هنا ثم نكمل الشرح";
+  const arabic=flowTools.insertFlowFormula([{id:"ar",kind:"paragraph",text:ar}],
+    {blockId:"ar",start:8,end:8},"صافي الربح = الإيراد - المصروف");
+  assert.equal(arabic.blocks[0].text,ar.slice(0,8)+"صافي الربح = الإيراد - المصروف"+ar.slice(8));
+  assert.equal(arabic.blocks[0].id,"ar");
+  // A formula is NOT an image, HTML fragment or read-only card.
+  assert.equal(arabic.blocks[0].kind,"paragraph");
+});
+
+test("Accounting templates support Arabic debit-credit and custom in-flow tables", () => {
+  for (const kind of ["journal","taccount","comparison","custom"]) {
+    const table=flowTools.notebookTableTemplate(kind,"rtl","table-"+kind);
+    assert.equal(table.kind,"table");
+    assert.ok(table.cells.length>=3);
+    assert.ok(table.cells[0].length>=2);
+    assert.equal(table.template,kind);
+  }
+  assert.deepEqual(JSON.parse(JSON.stringify(flowTools.notebookTableTemplate("journal","rtl","ar").cells[0])),
+    ["الحساب","مدين","دائن"]);
+  assert.deepEqual(JSON.parse(JSON.stringify(flowTools.notebookTableTemplate("taccount","rtl","ar").cells[0])),
+    ["مدين","دائن"]);
+  const table=flowTools.notebookTableTemplate("comparison","ltr","t");
+  const p=flowTools.notebookFlowParagraph("p","Hello");
+  const between=flowTools.insertFlowTable([p],{blockId:"p",start:0,end:0},table,()=> "tail");
+  assert.equal(between.blocks[0].text,"");
+  assert.equal(between.blocks[2].text,"Hello");
+  assert.equal(between.blocks[1].kind,"table");
+});
+
+test("Notebook structured backup clamps rich text, unknown types, rows and cells safely", () => {
+  const store=notebook.emptyNotebook();
+  store.pages.cma[0].flow=[
+    {id:"a",kind:"paragraph",text:"مقدمة فيها معادلة"},
+    {id:"t",kind:"table",title:"A".repeat(200),template:"invalid",cells:Array.from({length:22},
+      ()=>Array.from({length:10},()=> "B".repeat(210)))},
+    {id:"bad",kind:"script",html:"<img src=x onerror=alert(1)>"},
+  ];
+  const clean=notebook.normalizeNotebook(store).pages.cma[0];
+  assert.equal(clean.flow.length,2);
+  assert.equal(clean.flow[1].kind,"table");
+  assert.equal(clean.flow[1].title.length,80);
+  assert.equal(clean.flow[1].template,"custom");
+  assert.equal(clean.flow[1].cells.length,notebook.MAX_NOTEBOOK_FLOW_ROWS);
+  assert.equal(clean.flow[1].cells[0].length,notebook.MAX_NOTEBOOK_FLOW_COLS);
+  assert.equal(clean.flow[1].cells[0][0].length,notebook.MAX_NOTEBOOK_FLOW_CELL_LENGTH);
+  assert.equal(clean.text,notebook.notebookFlowPlainText(clean.flow));
+  assert.equal(JSON.stringify(clean).includes("onerror="),false);
+  const json=JSON.stringify(store);
+  assert.ok(json.length>1000);
+  const recovered=notebook.validateNotebookBackup(JSON.parse(JSON.stringify(clean
+    ? {...store,pages:{...store.pages,cma:[clean]}}:store)));
+  assert.equal(recovered.pages.cma[0].flow[1].template,"custom");
+});
+
+test("Real flowing notebook editor provides editable paragraphs and table cells in the paper", async () => {
+  const code=await readFile("src/components/library/NotebookFlowEditor.tsx","utf8");
+  const compiled=ts.transpileModule(code,{compilerOptions:{
+    module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX
+  }}).outputText;
+  const jsx=(type,props,key)=>({type,props,key});
+  const mod={exports:{}};
+  vm.runInNewContext(compiled,{module:mod,exports:mod.exports,require:id=>{
+    if(id==="react/jsx-runtime")return {jsx,jsxs:jsx};
+    if(id==="react")return {useRef:()=>({current:{}}),useLayoutEffect:()=>{}};
+    if(id==="@/lib/study-notebook")return notebook;
+    throw Error("Unexpected module "+id);
+  }});
+  const nodes=[];
+  const visit=v=>{if(Array.isArray(v)){v.forEach(visit);return;}
+    if(v&&typeof v==="object"&&"type"in v){nodes.push(v);visit(v.props?.children);}};
+  const table=flowTools.notebookTableTemplate("journal","ltr","t");
+  const paragraph=flowTools.notebookFlowParagraph("p","Cost of inventory: ");
+  const writes=[];
+  const tree=mod.exports.NotebookFlowEditor({blocks:[paragraph,table],direction:"ltr",
+    typeface:"regular",lineGap:22,margin:20,tool:"type",
+    onChange:blocks=>writes.push(blocks),onCursor:()=>{}});
+  visit(tree);
+  const text=nodes.find(v=>v.type==="textarea");
+  assert.ok(text);
+  assert.equal(text.props.value,"Cost of inventory: ");
+  text.props.onChange({currentTarget:{selectionStart:2,selectionEnd:2},target:{value:"Cost of inventory: 100"}});
+  assert.equal(writes.at(-1)[0].text,"Cost of inventory: 100");
+  const journalInputs=nodes.filter(v=>v.type==="input"&&v.props.type==="text");
+  assert.ok(journalInputs.some(v=>v.props.value==="Debit"));
+  const debit=journalInputs.find(v=>v.props["aria-label"]==="Row 2 column 2");
+  assert.ok(debit);
+  debit.props.onChange({target:{value:"125.00"}});
+  assert.equal(writes.at(-1)[1].cells[1][1],"125.00");
+  assert.equal(writes.at(-1)[1].cells[0][1],"Debit");
+  const source=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(source,/NotebookFlowEditor/);
+  assert.match(source,/insertFlowFormula\(initial, selection, insertRequest\.formula\)/);
+  assert.match(source,/insertFlowTable\(initial, selection, table, newId\)/);
+  assert.match(await readFile("src/lib/study-notebook-flow.ts","utf8"),/kind: "table", title: titles\[template\], template/);
+  assert.match(source,/insertRequest=\{insertRequest\}/);
+  assert.match(source,/function addStudyElement\(template: StudyWidgetTemplate\)/);
+  assert.match(source,/template === "journal" \|\| template === "taccount" \|\| template === "comparison"/);
+  const pdf=await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  assert.match(pdf,/page\.flow\?\.length/);
+  assert.match(pdf,/data-pdf-inline-table/);
+  assert.match(pdf,/cell\.textContent = value/);
+  assert.match(pdf,/text\.textContent = ""/);
+  assert.doesNotMatch(pdf,/innerHTML/);
+  const layout=await readFile("src/routes/library.tsx","utf8");
+  assert.match(layout,/data-study-split/);
+});
+
+test("Flowing note editor warns before edits exceed durable storage limits", async () => {
+  const source=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(source,/combinedText\.length > MAX_NOTE_TEXT_LENGTH/);
+  assert.match(source,/blocks\.length > MAX_NOTEBOOK_FLOW_BLOCKS/);
+  assert.match(source,/setFlowLimitWarning\(true\)/);
+  assert.match(source,/current\.text\.length > MAX_NOTE_TEXT_LENGTH - 300/);
+  assert.match(source,/flowLimitWarning && \(/);
+});

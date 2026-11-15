@@ -11,13 +11,18 @@ import {
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
+  notebookFlowPlainText, MAX_NOTEBOOK_FLOW_BLOCKS,
   strokeBounds, transformNotebookStroke, clampNotebookObject,
   MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
   MAX_WIDGET_TITLE_LENGTH, MAX_WIDGET_TEXT_LENGTH, MAX_WIDGET_CELL_LENGTH, MAX_WIDGET_ITEMS, MAX_WIDGET_ROWS,
-  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject,
+  type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject, type NotebookFlowBlock,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
+import { NotebookFlowEditor } from "@/components/library/NotebookFlowEditor";
+import { NOTEBOOK_FORMULA_PRESETS, insertFlowFormula, insertFlowTable,
+  notebookFlowParagraph, notebookTableTemplate,
+  type NotebookFlowCursor, type NotebookFlowTableTemplate } from "@/lib/study-notebook-flow";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
 import { createStudyWidget, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
@@ -127,14 +132,19 @@ function lastFittingTextIndex(editor: HTMLTextAreaElement, text: string) {
   }
 }
 
+type NotebookInsertRequest =
+  | { id: number; kind: "formula"; formula: string }
+  | { id: number; kind: "table"; template: NotebookFlowTableTemplate };
+
 function NotebookPaper({
-  page, tool, inkColor, highlighterColor, inkWidth, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
   inkColor: string;
   highlighterColor: string;
   inkWidth: number;
+  insertRequest: NotebookInsertRequest | null;
   onChange: (change: Partial<NotebookPage>) => void;
   onSplit: (fittingIndex: number) => void;
   canAddPage: boolean;
@@ -151,7 +161,11 @@ function NotebookPaper({
   strokeBuffer.current = page.strokes;
   const sheet = useRef<HTMLDivElement | null>(null);
   const textEditor = useRef<HTMLTextAreaElement | null>(null);
+  const plainCursor = useRef<{ start: number; end: number } | null>(null);
+  const flowCursor = useRef<NotebookFlowCursor | null>(null);
+  const lastInsertId = useRef(-1);
   const [textOverflows, setTextOverflows] = useState(false);
+  const [flowLimitWarning, setFlowLimitWarning] = useState(false);
   const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
   const [selectedStrokeId, setSelectedStrokeId] = useState<string | null>(null);
@@ -181,6 +195,8 @@ function NotebookPaper({
     activeEraser.current = null;
     startTime.current = 0;
     strokeBuffer.current = page.strokes;
+    plainCursor.current = null;
+    flowCursor.current = null;
     setRecognized(null);
     setRecognizedText("");
     setRecognitionError("");
@@ -204,11 +220,57 @@ function NotebookPaper({
   const margin = 43 * scale;
   const paper = notebookPaperBackground(page.pattern, page.shade, lineGap);
 
+  function updateFlow(blocks: NotebookFlowBlock[]) {
+    const combinedText = notebookFlowPlainText(blocks);
+    if (combinedText.length > MAX_NOTE_TEXT_LENGTH || blocks.length > MAX_NOTEBOOK_FLOW_BLOCKS) {
+      setFlowLimitWarning(true);
+      return;
+    }
+    setFlowLimitWarning(false);
+    onChange({ flow: blocks, text: combinedText });
+  }
+
+  useEffect(() => {
+    if (!insertRequest || lastInsertId.current === insertRequest.id) return;
+    lastInsertId.current = insertRequest.id;
+    const initial = page.flow?.length
+      ? page.flow : [notebookFlowParagraph(newId(), page.text)];
+    const textNode = textEditor.current;
+    const selection = page.flow?.length
+      ? flowCursor.current
+      : { blockId: initial[0].id,
+          start: plainCursor.current?.start ?? textNode?.selectionStart ?? page.text.length,
+          end: plainCursor.current?.end ?? textNode?.selectionEnd ?? page.text.length };
+    if (insertRequest.kind === "formula") {
+      const result = insertFlowFormula(initial, selection, insertRequest.formula);
+      updateFlow(result.blocks);
+      flowCursor.current = result.cursor;
+    } else {
+      const table = notebookTableTemplate(insertRequest.template, page.direction, newId());
+      const result = insertFlowTable(initial, selection, table, newId);
+      updateFlow(result.blocks);
+      flowCursor.current = result.cursor;
+    }
+    window.requestAnimationFrame(() => {
+      const next = flowCursor.current;
+      if (!next) return;
+      const selector = `[data-notebook-flow-paragraph="${CSS.escape(next.blockId)}"]`;
+      const element = sheet.current?.querySelector<HTMLTextAreaElement>(selector);
+      if (element) {
+        element.focus();
+        element.setSelectionRange(next.start, next.end);
+      }
+    });
+  // A request is a one-time user gesture; page content changes are not new insertions.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [insertRequest?.id]);
+
   useLayoutEffect(() => {
     const editor = textEditor.current;
+    if (page.flow?.length) return;
     if (!editor) return;
     setTextOverflows(editor.scrollHeight > editor.clientHeight + 2);
-  }, [page.id, page.text, page.spacing, page.direction, page.typeface, page.size, width]);
+  }, [page.id, page.text, page.flow, page.spacing, page.direction, page.typeface, page.size, width]);
 
   function continueOnNewPage() {
     const editor = textEditor.current;
@@ -437,10 +499,17 @@ function NotebookPaper({
 
   function acceptRecognition() {
     if (!recognizedText.trim()) return;
-    onChange({
-      text: [page.text.trimEnd(), recognizedText.trim()].filter(Boolean).join("\n"),
-      ...(keepOriginalInk ? {} : { strokes: [] }),
-    });
+    if (page.flow?.length) {
+      const continuation = notebookFlowParagraph(newId(), recognizedText.trim());
+      const blocks = [...page.flow, continuation];
+      onChange({ flow: blocks, text: notebookFlowPlainText(blocks),
+        ...(keepOriginalInk ? {} : { strokes: [] }) });
+    } else {
+      onChange({
+        text: [page.text.trimEnd(), recognizedText.trim()].filter(Boolean).join("\n"),
+        ...(keepOriginalInk ? {} : { strokes: [] }),
+      });
+    }
     setRecognized(null);
     setRecognizedText("");
   }
@@ -470,6 +539,15 @@ function NotebookPaper({
         {page.pattern !== "blank" && (
           <div className="pointer-events-none absolute inset-y-0 z-[1] w-px bg-rose-400/30" style={{ insetInlineStart: margin }} />
         )}
+        {page.flow?.length ? (
+          <NotebookFlowEditor
+            blocks={page.flow} direction={page.direction} typeface={page.typeface}
+            lineGap={lineGap} margin={margin} tool={tool}
+            onChange={updateFlow}
+            onCursor={cursor => { flowCursor.current = cursor; }}
+            onOverflow={setTextOverflows}
+          />
+        ) : (
         <textarea
           ref={textEditor}
           aria-label={lang === "ar" ? "كتابة الملاحظات" : "Notebook typing area"}
@@ -479,6 +557,15 @@ function NotebookPaper({
           maxLength={MAX_NOTE_TEXT_LENGTH}
           value={page.text}
           onChange={(e) => onChange({ text: e.target.value })}
+          onSelect={e => { plainCursor.current = {
+            start: e.currentTarget.selectionStart, end: e.currentTarget.selectionEnd,
+          }; }}
+          onClick={e => { plainCursor.current = {
+            start: e.currentTarget.selectionStart, end: e.currentTarget.selectionEnd,
+          }; }}
+          onKeyUp={e => { plainCursor.current = {
+            start: e.currentTarget.selectionStart, end: e.currentTarget.selectionEnd,
+          }; }}
           placeholder={tool === "type" ? (lang === "ar" ? "اكتب ملاحظاتك هنا..." : "Start writing notes here...") : undefined}
           className="absolute inset-0 z-[2] h-full w-full resize-none border-0 bg-transparent text-[#25272c] outline-none placeholder:opacity-40"
           style={{
@@ -493,6 +580,7 @@ function NotebookPaper({
             backgroundAttachment: "local",
           }}
         />
+        )}
         <svg
           className="absolute inset-0 z-[3] h-full w-full"
           viewBox={`0 0 ${NOTEBOOK_DESIGN_WIDTH} ${height}`}
@@ -730,15 +818,26 @@ function NotebookPaper({
           )}
         </section>
       )}
+      {flowLimitWarning && (
+        <p role="alert" className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-5 text-amber-950">
+          {lang === "ar"
+            ? "وصلت هذه الصفحة للحد المسموح للنص والجداول؛ أضف صفحة جديدة قبل متابعة الكتابة."
+            : "This sheet has reached its saved text/table limit. Add another page before continuing."}
+        </p>
+      )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
-          <p>{lang === "ar"
-            ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
-            : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
-          <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
+          <p>{page.flow?.length
+            ? lang === "ar"
+              ? "المحتوى المنسق تجاوز حدود الورقة. سيقتطع تصدير PDF ما يظهر خارج الورقة؛ انقل جزءا من النص أو الجدول إلى ورقة جديدة قبل التصدير."
+              : "The formatted content exceeds this sheet. PDF captures only the paper bounds; move a paragraph or table to another sheet before exporting."
+            : lang === "ar"
+              ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
+              : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
+          {!page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
             className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
             {lang === "ar" ? "نقل النص الزائد لصفحة تالية" : "Continue overflow on next page"}
-          </button>
+          </button>}
           {!canAddPage && <p>{lang === "ar" ? "وصلت للحد الأقصى للصفحات؛ صدّر نسخة احتياطية." : "Page limit reached; export a backup."}</p>}
         </div>
       )}
@@ -824,6 +923,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [showStickerPalette, setShowStickerPalette] = useState(false);
   const [showStudyWidgets, setShowStudyWidgets] = useState(false);
+  const [showInlineTools, setShowInlineTools] = useState(false);
+  const [customFormula, setCustomFormula] = useState("");
+  const [insertRequest, setInsertRequest] = useState<NotebookInsertRequest | null>(null);
+  const insertSequence = useRef(0);
   const [stickerGroup, setStickerGroup] = useState("accounting");
   const imageInput = useRef<HTMLInputElement | null>(null);
   const [importingImage, setImportingImage] = useState(false);
@@ -932,6 +1035,9 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     if (sectionPages.length >= MAX_NOTEBOOK_PAGES) return;
     const id = newId();
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
+      flow: current.flow?.map(block => block.kind === "paragraph"
+        ? { ...block, id: newId() }
+        : { ...block, id: newId(), cells: block.cells.map(row => [...row]) }),
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
       objects: current.objects.map((object) => ({
         ...object, id: newId(),
@@ -976,8 +1082,52 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     } finally { setExportingPdf(false); }
   }
 
+  function insertInlineFormula(formula: string) {
+    if (!storageWritable || !formula.trim()) return;
+    if (formula.length > 300) {
+      setRestoreMessage(lang === "ar" ? "المعادلة طويلة جدا؛ استخدم نصا أقصر." : "Formula is too long.");
+      return;
+    }
+    const currentTextLength = current.text.length;
+    if (currentTextLength + formula.length > MAX_NOTE_TEXT_LENGTH) {
+      setRestoreMessage(lang === "ar" ? "وصلت الورقة إلى الحد المسموح للنص." : "This sheet has reached its text limit.");
+      return;
+    }
+    setTool("type");
+    setInsertRequest({ id: ++insertSequence.current, kind: "formula", formula });
+    setShowInlineTools(false);
+  }
+
+  function insertInlineTable(template: NotebookFlowTableTemplate) {
+    if (!storageWritable) return;
+    if (current.text.length > MAX_NOTE_TEXT_LENGTH - 300) {
+      setRestoreMessage(lang === "ar" ? "أنشئ صفحة جديدة قبل إدراج الجدول." : "Create another page before inserting a table.");
+      return;
+    }
+    if ((current.flow?.length ?? 1) + 2 > MAX_NOTEBOOK_FLOW_BLOCKS) {
+      setRestoreMessage(lang === "ar" ? "وصلت لعدد العناصر المسموح في الصفحة." : "This sheet has reached its structured block limit.");
+      return;
+    }
+    setTool("type");
+    setInsertRequest({ id: ++insertSequence.current, kind: "table", template });
+    setShowInlineTools(false);
+  }
+
   function addStudyElement(template: StudyWidgetTemplate) {
-    if (!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS) return;
+    if (!storageWritable) return;
+    // Core educational elements belong to the document flow, not floating stickers.
+    if (template === "formula") {
+      insertInlineFormula("PV = FV / (1 + r)ⁿ");
+      return;
+    }
+    if (template === "journal" || template === "taccount" || template === "comparison") {
+      insertInlineTable(template);
+      return;
+    }
+    if (current.objects.length >= MAX_NOTEBOOK_OBJECTS) {
+      setRestoreMessage(lang === "ar" ? "امتلأت الورقة بالعناصر العائمة." : "Floating-item limit reached.");
+      return;
+    }
     const widget = createStudyWidget(template, newId(), current.direction === "rtl" ? "ar" : "en");
     updatePage({ objects: [...current.objects, widget] });
     setTool("select");
@@ -1277,8 +1427,13 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             })}
           </div>
           <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
+            <button type="button" onClick={() => { setTool("type"); setShowInlineTools(open => !open); }}
+              aria-expanded={showInlineTools}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-teal-300 bg-teal-50 px-3 py-2 text-xs font-bold text-teal-900">
+              <Type className="size-4" /> {lang === "ar" ? "إدراج داخل النص" : "Insert into text"}
+            </button>
             <button type="button" onClick={() => setShowStudyWidgets(open => !open)}
-              disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
+              disabled={!storageWritable}
               aria-expanded={showStudyWidgets}
               className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
               <BookOpenText className="size-4" /> {lang === "ar" ? "عناصر الدراسة" : "Study elements"}
@@ -1309,11 +1464,59 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                 "Use Select to move and resize. Images stay on this device."}
             </p>
           </div>
+          {showInlineTools && (
+            <section className="mt-2 space-y-3 rounded-xl border border-teal-200 bg-white p-3"
+              aria-label={lang === "ar" ? "إدراج معادلات وجداول في النص" : "Insert equations and tables into text"}>
+              <p className="text-xs leading-5 text-[#4b5a65]">
+                {lang === "ar"
+                  ? "ضع المؤشر داخل الفقرة أولاً؛ المعادلة تظهر في السطر نفسه، والجدول يدخل بين النص قبل المؤشر وبعده."
+                  : "Place the text cursor first. Equations remain inline; tables split the paragraph without deleting its text."}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {NOTEBOOK_FORMULA_PRESETS.map(option => (
+                  <button key={option.id} type="button"
+                    onClick={() => insertInlineFormula(option.formula)}
+                    className="rounded-lg border border-[#c5d5df] bg-[#f6fafb] p-2 text-start text-xs text-[#253a4b]">
+                    <span className="block font-bold">{option.label}</span>
+                    <code className="mt-1 block break-words text-[10px]">{option.formula}</code>
+                  </button>
+                ))}
+              </div>
+              <label className="block text-xs font-semibold text-[#253a4b]">
+                {lang === "ar" ? "معادلة مخصصة" : "Custom equation"}
+                <div className="mt-1 flex gap-1">
+                  <input type="text" value={customFormula} maxLength={300}
+                    onChange={e => setCustomFormula(e.target.value)}
+                    placeholder="e.g. EBIT = Revenue - Operating Expenses"
+                    className="min-w-0 flex-1 rounded-lg border border-[#c5d5df] bg-white px-2 py-2 text-xs" />
+                  <button type="button" disabled={!customFormula.trim()}
+                    onClick={() => insertInlineFormula(customFormula)}
+                    className="rounded-lg bg-[#283b4d] px-3 py-2 text-xs font-bold text-white disabled:opacity-40">
+                    {lang === "ar" ? "إدراج" : "Insert"}
+                  </button>
+                </div>
+              </label>
+              <p className="text-xs font-bold text-[#253a4b]">
+                {lang === "ar" ? "جداول داخل الملاحظة" : "Editable tables in the note"}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {(["journal", "taccount", "comparison", "custom"] as NotebookFlowTableTemplate[]).map(template => (
+                  <button key={template} type="button" onClick={() => insertInlineTable(template)}
+                    className="rounded-lg border border-[#c5d5df] bg-white px-3 py-2 text-xs font-semibold text-[#253a4b]">
+                    {template === "journal" ? lang === "ar" ? "قيد يومية" : "Journal entry"
+                      : template === "taccount" ? lang === "ar" ? "حساب T" : "T-account"
+                      : template === "comparison" ? lang === "ar" ? "جدول مقارنة" : "Comparison"
+                      : lang === "ar" ? "جدول فارغ" : "Blank table"}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
           {showStudyWidgets && (
             <p className="mt-2 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-xs leading-5 text-teal-950">
               {lang === "ar"
-                ? "عناصر قابلة للتحرير: اضغط داخل البطاقة للكتابة، وحدد ✓ للقوائم، وعدل خلايا الجداول. استخدم المقبض ⠿ للتحريك فقط."
-                : "Editable elements: type inside cards, tick checklist items and edit table cells. The ⠿ handle moves the card."}
+                ? "قيود اليومية وحساب T والمقارنات تُدرج الآن كجداول داخل النص، والمعادلات تُدرج عند المؤشر. البطاقات اللاصقة والقوائم العائمة ما زالت قابلة للتحريك."
+                : "Journal, T-account and comparisons insert as flowing tables; formulas insert at the cursor. Floating sticky notes and checklists remain movable."}
             </p>
           )}
           {showStudyWidgets && (
@@ -1417,7 +1620,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
 
           <div className="mt-3">
             <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor}
-              highlighterColor={highlighterColor} inkWidth={inkWidth}
+              highlighterColor={highlighterColor} inkWidth={inkWidth} insertRequest={insertRequest}
               lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
               canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
               undoInk={undoInk} redoInk={redoInk}

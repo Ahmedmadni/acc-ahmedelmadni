@@ -55,6 +55,64 @@ function buildPageDom(page: NotebookPage) {
       ? page.direction === "rtl" ? '"Aref Ruqaa Ink","Aref Ruqaa",serif' : '"Caveat","Comic Sans MS",cursive'
       : page.direction === "rtl" ? '"Cairo",sans-serif' : 'Georgia,serif'}`,
   ].join(";");
+  if (page.flow?.length) {
+    // Render structured notes in normal document flow: paragraphs, then
+    // editable-table snapshots, then the following paragraphs. Never
+    // rasterize a table as a floating sticker or duplicate fallback text.
+    text.textContent = "";
+    text.style.overflowY = "hidden";
+    for (const block of page.flow) {
+      if (block.kind === "paragraph") {
+        const paragraph = document.createElement("div");
+        paragraph.textContent = block.text || "\u00a0";
+        paragraph.style.cssText = [
+          "display:block", "box-sizing:border-box", "white-space:pre-wrap",
+          "overflow-wrap:anywhere", "min-height:" + page.spacing + "px",
+          "line-height:" + page.spacing + "px",
+        ].join(";");
+        text.appendChild(paragraph);
+      } else {
+        const frame = document.createElement("section");
+        frame.setAttribute("data-pdf-inline-table", block.template);
+        frame.style.cssText = [
+          "box-sizing:border-box", "margin:" + (page.spacing * .32) + "px 0",
+          "border:1px solid #a2b4c3", "border-radius:6px",
+          "background:rgba(255,255,255,.78)", "overflow:hidden",
+        ].join(";");
+        const heading = document.createElement("div");
+        heading.textContent = block.title;
+        heading.style.cssText = [
+          "background:rgba(228,235,242,.85)", "padding:5px",
+          "font-family:Arial,sans-serif", "font-size:16px", "font-weight:700",
+        ].join(";");
+        frame.appendChild(heading);
+        const table = document.createElement("table");
+        table.dir = page.direction;
+        table.style.cssText = "width:100%;border-collapse:collapse;table-layout:fixed;";
+        const body = document.createElement("tbody");
+        block.cells.forEach((cells, rowNumber) => {
+          const row = document.createElement("tr");
+          cells.forEach(value => {
+            const cell = document.createElement(rowNumber === 0 ? "th" : "td");
+            cell.textContent = value || "\u00a0";
+            cell.style.cssText = [
+              "border:1px solid #bac9d4", "padding:2px 5px",
+              "height:" + Math.max(24, page.spacing) + "px",
+              "font-family:Arial,sans-serif",
+              "font-size:" + Math.max(11, page.spacing * .36) + "px",
+              "text-align:start", "vertical-align:middle",
+              "overflow-wrap:anywhere",
+            ].join(";");
+            row.appendChild(cell);
+          });
+          body.appendChild(row);
+        });
+        table.appendChild(body);
+        frame.appendChild(table);
+        text.appendChild(frame);
+      }
+    }
+  }
   root.appendChild(text);
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");

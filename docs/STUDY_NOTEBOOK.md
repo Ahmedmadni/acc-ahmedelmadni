@@ -112,6 +112,32 @@ A user identified that **Study Elements looked like stickers, not editable learn
 
 **Verification:** executable regression checks simulate controlled text, formula, checklist, table and color events, plus explicit no-drag-on-input guards. Device-level touch and PDF visual checks remain necessary for narrow tablets and actual OS keyboards.
 
+## Flowing journal tables and inline formulas — 15 November 2026
+
+**Reason for the change:** An editable floating accounting *card* is still not a proper study-document element. Journal entries, T-accounts and financial tables must flow between written paragraphs; a formula should appear as editable text at the learner's caret, followed by continuing prose.
+
+### New study workflow
+
+1. Open the **same CMA or IFRS lesson** and its **adjacent side notebook**. Choose the Type tool, place the cursor in the existing note.
+2. Choose **Insert into text** (separate from movable **Study elements**).
+3. A formula preset (PV, NPV, accounting equation or current ratio) or user-written formula is inserted **in the paragraph at the cursor**. It remains ordinary, editable Unicode text and is not a static image or chip. Subsequent keyboard typing continues immediately afterwards.
+4. **Journal entry / T-account / comparison / blank table** inserts an **actual editable HTML table between paragraphs**. If the cursor is in the middle of a paragraph, text before remains before the table and the remainder stays in an editable paragraph after it. Table cells, headers, title and row/column controls can be edited directly inside the sheet.
+5. Selecting the corresponding option from the older **Study elements** palette now also inserts **formulas into text and accounting tables into document flow** (rather than creating a floating card). Floating sticky notes, checklists, stickers and images remain available for annotations.
+
+### Preservation and integration
+
+- The page model has an optional, typed `flow` list of paragraphs and tables. Existing plain-text pages are **not rewritten until the learner intentionally inserts a structured item**. Conversion keeps existing text and inserts the new item at the remembered selection.
+- Each flow edit synchronizes the `page.text` fallback so **page search, plain-text download and legacy previews remain useful**. Structured `flow` data is the editable source and is serialized in normal local JSON backups; restoration validates the block type, IDs, maximum size, table columns, rows and cell text.
+- Page duplication makes deep copies of table rows and gives fresh paragraph/table IDs. Existing pen ink, paper backgrounds, photos, stickers, and split-view layout are unaffected.
+- Local PDF export now prints the paragraphs and real tables **in flow order**, followed by paper ink and artwork in the same coordinate layers. Typed content uses the existing paper line-height and optional Arabic or English fonts.
+- No new login, backend, network, rich-editor dependency or AI API is required.
+
+**Explicit limitations:** Inline formula presets are Unicode mathematical text, not a computer-algebra engine or financial answer checker. Complex superscript layouts/MathML and spreadsheet formulas are not computed. Structured tables are editable learning aids; they do not validate balanced journal entries. Very long mixed text-and-table pages may scroll inside the fixed-size sheet, and PDF is a visual page capture bounded by its selected page size rather than automatically paginated multi-page typesetting. Use a new notebook page when the layout becomes dense.
+
+### Regression tests
+
+New tests execute pure caret insertion for English and Arabic, splitting text around tables without losing characters, independent CMA/IFRS state, safe flow storage limits, table language, editable paragraph and journal-cell input events, flow-aware PDF output, and the unchanged lesson-side split view.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.
