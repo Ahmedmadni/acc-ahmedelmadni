@@ -660,6 +660,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [highlighterColor, setHighlighterColor] = useState("#f6d94e");
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [showStickerPalette, setShowStickerPalette] = useState(false);
+  const [stickerGroup, setStickerGroup] = useState("accounting");
+  const imageInput = useRef<HTMLInputElement | null>(null);
+  const [importingImage, setImportingImage] = useState(false);
   const [pageSearch, setPageSearch] = useState("");
   const [showPageManager, setShowPageManager] = useState(false);
   const [exportingPdf, setExportingPdf] = useState(false);
@@ -766,6 +770,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     const id = newId();
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
+      objects: current.objects.map((object) => ({ ...object, id: newId() })),
       updatedAt: Date.now() };
     setStore((prior) => {
       const original = prior.pages[section];
@@ -802,6 +807,45 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
         : error instanceof Error ? error.message : "PDF export failed.");
     } finally { setExportingPdf(false); }
+  }
+
+  function addSticker(label: string) {
+    if (!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS) return;
+    const object: NotebookObject = {
+      id: newId(), kind: "sticker", label,
+      x: 100, y: 120, width: 110, height: 110,
+    };
+    updatePage({ objects: [...current.objects, object] });
+    setTool("select");
+    setRestoreMessage(lang === "ar" ? "تمت إضافة الملصق. اختر أداة التحديد لتحريكه." : "Sticker added. Drag it with Select.");
+  }
+
+  async function importImage(file: File) {
+    if (!storageWritable) throw new Error("Notebook storage requires recovery first.");
+    const pageId = current.id;
+    if (current.objects.length >= MAX_NOTEBOOK_OBJECTS ||
+      current.objects.filter(o => o.kind === "image").length >= MAX_IMAGES_PER_PAGE)
+      throw new Error("This page has reached its image or object limit.");
+    setImportingImage(true);
+    try {
+      const { src, ratio } = await notebookImageToDataUrl(file);
+      let imageWidth = 285;
+      let imageHeight = imageWidth / ratio;
+      if (imageHeight > 460) { imageHeight = 460; imageWidth = imageHeight * ratio; }
+      const object: NotebookObject = clampNotebookObject({
+        id: newId(), kind: "image", src, x: 75, y: 115,
+        width: Math.max(32, imageWidth), height: Math.max(32, imageHeight),
+      }, NOTEBOOK_SIZES[current.size].height);
+      setStore(prior => ({
+        ...prior,
+        pages: { ...prior.pages, [section]: prior.pages[section].map(page =>
+          page.id === pageId && page.objects.length < MAX_NOTEBOOK_OBJECTS &&
+          page.objects.filter(o => o.kind === "image").length < MAX_IMAGES_PER_PAGE
+            ? { ...page, objects: [...page.objects, object], updatedAt: Date.now() } : page) },
+      }));
+      setTool("select");
+      setRestoreMessage(lang === "ar" ? "أُدرجت الصورة داخل الورقة. استخدم التحديد للتحريك والتكبير." : "Image placed on the paper. Use Select to move or resize.");
+    } finally { setImportingImage(false); }
   }
 
   function addPage() {
@@ -1041,8 +1085,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           />
 
           <div className="mt-3 grid grid-cols-4 gap-1 rounded-xl bg-[#e8ded0] p-1" role="group" aria-label={lang === "ar" ? "أدوات التدوين والرسم" : "Notebook writing and drawing tools"}>
-            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse"] as NotebookTool[]).map((mode) => {
-              const Icon = mode === "type" ? Type : mode === "pen" ? PenLine
+            {(["type", "pen", "highlighter", "eraser", "line", "rectangle", "ellipse", "select"] as NotebookTool[]).map((mode) => {
+              const Icon = mode === "select" ? MousePointer2 : mode === "type" ? Type : mode === "pen" ? PenLine
                 : mode === "highlighter" ? Highlighter : mode === "line" ? Minus
                   : mode === "rectangle" ? Square : mode === "ellipse" ? Circle : Eraser;
               return (
@@ -1054,6 +1098,56 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               );
             })}
           </div>
+          <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
+            <button type="button" onClick={() => setShowStickerPalette(open => !open)}
+              disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
+              aria-expanded={showStickerPalette}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
+              <Sticker className="size-4" /> {lang === "ar" ? "ملصقات" : "Stickers"}
+            </button>
+            <input ref={imageInput} type="file" accept="image/png,image/jpeg,image/webp"
+              className="sr-only" aria-label={lang === "ar" ? "اختيار صورة" : "Choose a local image"}
+              onChange={event => {
+                const file = event.target.files?.[0];
+                event.target.value = "";
+                if (!file) return;
+                setRestoreMessage("");
+                void importImage(file).catch(error => setRestoreMessage(error instanceof Error ? error.message : String(error)));
+              }} />
+            <button type="button" onClick={() => imageInput.current?.click()}
+              disabled={!storageWritable || importingImage || current.objects.length >= MAX_NOTEBOOK_OBJECTS ||
+                current.objects.filter(o => o.kind === "image").length >= MAX_IMAGES_PER_PAGE}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
+              <ImagePlus className="size-4" /> {importingImage ? "…" : lang === "ar" ? "إدراج صورة" : "Insert image"}
+            </button>
+            <p className="w-full text-[11px] text-[#806f60]">
+              {lang === "ar" ? "يمكن تحريك العناصر وتكبيرها بأداة التحديد. الصور محفوظة على جهازك فقط." :
+                "Use Select to move and resize. Images stay on this device."}
+            </p>
+          </div>
+          {showStickerPalette && (
+            <section aria-label={lang === "ar" ? "مجموعات الملصقات" : "Sticker collections"}
+              className="mt-2 space-y-3 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
+              <div className="flex flex-wrap gap-1">
+                {NOTEBOOK_STICKER_GROUPS.map(group => (
+                  <button key={group.id} type="button" aria-pressed={stickerGroup === group.id}
+                    onClick={() => setStickerGroup(group.id)}
+                    className={`rounded-lg px-2 py-1.5 text-xs font-bold ${stickerGroup === group.id ? "bg-[#283b4d] text-white" : "bg-[#eee3d1] text-[#4a3b2c]"}`}>
+                    {group[lang]}
+                  </button>
+                ))}
+              </div>
+              <div className="grid grid-cols-6 gap-1.5">
+                {NOTEBOOK_STICKER_GROUPS.filter(group => group.id === stickerGroup).flatMap(group => [...group.stickers]).map(emoji => (
+                  <button key={emoji} type="button" onClick={() => addSticker(emoji)}
+                    title={lang === "ar" ? "إضافة الملصق إلى الورقة" : "Add sticker to paper"}
+                    className="grid aspect-square place-items-center rounded-lg border border-[#e0d4c2] bg-white text-2xl transition hover:scale-105 hover:border-[#806049]">
+                    {emoji}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
           <button type="button" onClick={() => setSettingsOpen(!settingsOpen)}
             aria-expanded={settingsOpen}
             className="mt-3 flex w-full items-center justify-between rounded-lg border border-[#d5c8b6] bg-white/80 px-3 py-2 text-xs font-bold">
