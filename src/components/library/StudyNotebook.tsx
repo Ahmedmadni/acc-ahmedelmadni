@@ -339,7 +339,7 @@ function NotebookPaper({
               {recognized.map((item, i) => <option key={i} value={item}>{item.slice(0, 70)}</option>)}
             </select>
           )}
-          <textarea rows={3} value={recognizedText} dir={page.direction}
+          <textarea rows={3} spellCheck value={recognizedText} dir={page.direction}
             onChange={(e) => setRecognizedText(e.target.value)}
             aria-label={lang === "ar" ? "راجع الكتابة التي تم التعرف عليها" : "Review recognized text"}
             className="w-full rounded-lg border border-emerald-200 bg-white p-2 text-sm text-[#212c25]" />
@@ -505,7 +505,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
         <button
           type="button"
           onClick={openNotebook}
-          className={`fixed bottom-5 end-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
+          className={`fixed bottom-5 right-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
           aria-label={LABELS.open[lang]}
           title={LABELS.open[lang]}
         >
