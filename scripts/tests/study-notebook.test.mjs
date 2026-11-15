@@ -771,7 +771,7 @@ test("Real flowing notebook editor provides editable paragraphs and table cells 
   assert.match(source,/NotebookFlowEditor/);
   assert.match(source,/insertFlowFormula\(initial, selection, insertRequest\.formula\)/);
   assert.match(source,/insertFlowTable\(initial, selection, table, newId\)/);
-  assert.match(await readFile("src/lib/study-notebook-flow.ts","utf8"),/kind: "table", template/);
+  assert.match(await readFile("src/lib/study-notebook-flow.ts","utf8"),/kind: "table", title: titles\[template\], template/);
   assert.match(source,/insertRequest=\{insertRequest\}/);
   assert.match(source,/function addStudyElement\(template: StudyWidgetTemplate\)/);
   assert.match(source,/template === "journal" \|\| template === "taccount" \|\| template === "comparison"/);
