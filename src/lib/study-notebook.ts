@@ -240,7 +240,7 @@ export function normalizeNotebook(value: unknown): NotebookStore {
           height: numberBetween(item.height, 32, NOTEBOOK_SIZES[size].height, 130),
           ...(kind === "image" ? { src: data as string }
              : { label: (typeof data === "string" ? data : "").slice(
-                  0, kind === "sticker" ? 16 : kind === "formula" ? MAX_WIDGET_TEXT_LENGTH : MAX_WIDGET_TITLE_LENGTH) }),
+                  0, kind === "sticker" ? 16 : kind === "formula" || kind === "sticky" ? MAX_WIDGET_TEXT_LENGTH : MAX_WIDGET_TITLE_LENGTH) }),
           ...(["sticky", "formula", "checklist", "table"].includes(kind) ? {
             tone: oneOf(item.tone, ["yellow", "mint", "rose", "blue"] as const, "yellow"),
           } : {}),
