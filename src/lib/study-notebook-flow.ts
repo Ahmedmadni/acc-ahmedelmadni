@@ -136,7 +136,7 @@ export function parseNotebookJournalAmount(value: string): number | null {
     return null;
   }
   const whole = Number(integer);
-  if (!Number.isSafeInteger(whole) || whole > Math.floor(Number.MAX_SAFE_INTEGER / 100)) return null;
+  if (!Number.isSafeInteger(whole) || whole > Math.floor(Number.MAX_SAFE_INTEGER / 1000)) return null;
   const amount = whole * 100 + Number(fraction.padEnd(2, "0") || "0");
   return Number.isSafeInteger(amount) ? amount : null;
 }
