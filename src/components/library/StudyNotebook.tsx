@@ -970,8 +970,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     setTool("select");
     setShowStudyWidgets(false);
     setRestoreMessage(lang === "ar"
-      ? "تمت إضافة العنصر. انقر عليه بأداة التحديد لتحرير المحتوى وتحريكه."
-      : "Study element added. Tap it with Select to edit and position it.");
+      ? "العنصر جاهز: اضغط داخل النص أو خلية الجدول للتعديل مباشرة، واسحب من مقبض ⠿ لتحريكه."
+      : "Ready: type directly inside the card or table cells. Drag only the ⠿ header to move it.");
   }
 
   function addSticker(label: string) {
@@ -1296,6 +1296,13 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                 "Use Select to move and resize. Images stay on this device."}
             </p>
           </div>
+          {showStudyWidgets && (
+            <p className="mt-2 rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-xs leading-5 text-teal-950">
+              {lang === "ar"
+                ? "عناصر قابلة للتحرير: اضغط داخل البطاقة للكتابة، وحدد ✓ للقوائم، وعدل خلايا الجداول. استخدم المقبض ⠿ للتحريك فقط."
+                : "Editable elements: type inside cards, tick checklist items and edit table cells. The ⠿ handle moves the card."}
+            </p>
+          )}
           {showStudyWidgets && (
             <section aria-label={lang === "ar" ? "عناصر المذاكرة والمحاسبة" : "Study and accounting widgets"}
               className="mt-2 grid grid-cols-2 gap-2 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
