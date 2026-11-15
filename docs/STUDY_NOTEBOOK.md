@@ -76,6 +76,25 @@ The notebook remains **a split-screen sibling of the active CMA or IFRS lesson**
 - Unit/integrity and production checks verify geometry/storage interfaces; hands-on S Pen, Apple Pencil, mobile Safari and Chrome QA remain important for actual gesture precision, emoji rendering and PDF fidelity.
 - The handwritten text recognition service still depends on native browser support; adding stickers/images does not provide a paid AI handwriting service.
 
+## Editable accounting study widgets — 15 November 2026
+
+The side notebook now offers **six selectable learning-card templates** in addition to all drawing tools, stickers and images. The experience remains **inside the same CMA/IFRS lesson**, with a wide-screen split view and a temporary drawer on narrow screens.
+
+| Template | Example and behavior |
+| --- | --- |
+| Sticky note | Editable multi-line takeaway card, with four color options |
+| Formula | Editable plain-text formula card for calculations, discount rates or definitions |
+| Checklist | Editable and tickable revision items, with add/remove controls |
+| Journal entry | Accounting table with Account, Debit and Credit columns |
+| T-account | Two-column Debit/Credit ledger-style table |
+| Comparison | Three-column comparison table for standards or reporting periods |
+
+**To use:** select **Study elements** in the notebook tools and insert the template. Switch to **Select** (usually active automatically), tap the inserted card, then edit text or cells in the inspector **under the paper**. Cards can be moved, resized, duplicated and deleted like images and stickers. The color dropdown selects yellow, mint, rose or blue. Checklist items can be checked and changed; table rows/columns can be added/removed up to bounded limits.
+
+Structured contents are saved locally with existing page objects; they are included in the same JSON backups/restores and in local print/PDF snapshots. Page search now includes card titles, checklist items and all table cells. The data schema remains version 1 and still accepts older notebooks without these objects. A malformed or oversized widget cannot inject HTML: all content is text-only and bounded during hydration.
+
+**Important limitations:** the formula card is an editable *text* card, not a symbolic mathematics engine or an IFRS/CMA answer checker. Journal/T-account templates provide study grids, not double-entry validation or posting to an actual general ledger. The on-device handwriting recognizer still depends on browser/OS support. Lists and tables on the paper are visual references; detailed editing is kept in the side panel to prevent accidental pen gestures from changing values. This update requires real-device visual review for exact font spacing and PDF pagination of dense tables.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.

@@ -19,6 +19,7 @@ async function loadTypeScript(path, dependencies = {}) {
 
 const notebook = await loadTypeScript("src/lib/study-notebook.ts");
 const recognizer = await loadTypeScript("src/lib/study-notebook-recognition.ts");
+const notebookWidgets = await loadTypeScript("src/lib/study-notebook-widgets.ts");
 
 test("CMA and IFRS notebooks start with separate blank pages and a local-only storage key", () => {
   const state = notebook.emptyNotebook();
@@ -320,7 +321,7 @@ test("Stylus shape tools are vector paths and eraser can hit drawn shape outline
 
 test("PDF exporter uses existing local dependencies and renders full page size with notes and ink", async () => {
   const lib=await loadTypeScript("src/lib/study-notebook-pdf.ts",
-    { "@/lib/study-notebook": notebook });
+    { "@/lib/study-notebook": notebook, "@/lib/study-notebook-widgets": notebookWidgets });
   const dim=JSON.parse(JSON.stringify(lib.STUDY_NOTEBOOK_PDF_MM));
   assert.deepEqual(dim,{A4:[210,297],A5:[148,210],Letter:[215.9,279.4]});
   assert.equal(lib.printableInkStyle({kind:"highlighter",color:"#f6d94e",width:18}).opacity,"0.32");
@@ -451,4 +452,93 @@ test("Paper controls expose select, image upload and stickers without a standalo
   assert.match(pdf,/img\.src = object\.src/);
   assert.match(pdf,/sticker\.textContent = object\.label/);
   assert.match(pdf,/node\.querySelectorAll\("img"\)/);
+});
+
+test("Six accounting study-widget templates are truly editable bilingual paper objects", async () => {
+  const widgets = await loadTypeScript("src/lib/study-notebook-widgets.ts");
+  const ids = widgets.STUDY_WIDGET_TEMPLATES.map(t => t.id);
+  assert.deepEqual(Array.from(ids), ["sticky","formula","checklist","journal","taccount","comparison"]);
+  assert.equal(new Set(ids).size, 6);
+  for (const template of widgets.STUDY_WIDGET_TEMPLATES) {
+    const widget = widgets.createStudyWidget(template.id, "widget-"+template.id, "en");
+    assert.ok(["sticky","formula","checklist","table"].includes(widget.kind));
+    assert.ok(widget.width >= 250 && widget.height >= 150);
+    assert.ok(widget.label.length >= 1);
+    const result = notebook.validateNotebookBackup({
+      version: 1,
+      pages: { cma: [{...notebook.createNotebookPage("test"),objects:[widget]}],
+        standards: [notebook.createNotebookPage("ifrs")] },
+      activePage: {cma:"test",standards:"ifrs"},
+    });
+    assert.equal(result.pages.cma[0].objects.length, 1, "Persist " + template.id);
+    assert.equal(result.pages.cma[0].objects[0].kind, widget.kind);
+  }
+  const journal = widgets.createStudyWidget("journal", "j", "en");
+  assert.deepEqual(Array.from(journal.cells[0]), ["Account", "Debit", "Credit"]);
+  const account = widgets.createStudyWidget("taccount","t","ar");
+  assert.deepEqual(Array.from(account.cells[0]), ["مدين","دائن"]);
+  const checklist = widgets.createStudyWidget("checklist", "cl", "en");
+  assert.equal(checklist.items.length, 3);
+  assert.equal(checklist.items.every(i=>i.checked===false), true);
+  assert.match(widgets.studyWidgetSearchText(journal), /Debit/);
+  assert.match(widgets.studyWidgetSearchText(checklist), /questions/);
+  const formula = widgets.createStudyWidget("formula", "f", "en");
+  assert.match(formula.label, /^PV = FV/);
+});
+
+test("Persisted widget content limits text, rows, columns and checkbox count", () => {
+  const stored=notebook.emptyNotebook();
+  const long="A".repeat(700);
+  stored.pages.cma[0].objects=[
+    {id:"sticky",kind:"sticky",x:10,y:15,width:280,height:220,tone:"nonsense",label:long},
+    {id:"formula",kind:"formula",x:10,y:15,width:280,height:220,label:long},
+    {id:"checklist",kind:"checklist",x:10,y:15,width:290,height:280,label:long,
+     items:Array.from({length:25},(_,i)=>({text:long,checked:i%2===0}))},
+    {id:"table",kind:"table",x:10,y:15,width:300,height:280,label:long,
+     cells:Array.from({length:16},()=>Array.from({length:8},()=>long))},
+    {id:"unknown",kind:"script",x:10,y:15,width:300,height:200,label:"unsafe"},
+  ];
+  const safe=notebook.normalizeNotebook(stored).pages.cma[0].objects;
+  assert.equal(safe.length, 4);
+  assert.equal(safe[0].tone,"yellow");
+  assert.equal(safe[0].label.length,notebook.MAX_WIDGET_TEXT_LENGTH);
+  assert.equal(safe[1].label.length,notebook.MAX_WIDGET_TEXT_LENGTH);
+  assert.equal(safe[2].items.length,notebook.MAX_WIDGET_ITEMS);
+  assert.equal(safe[2].items[0].text.length,notebook.MAX_WIDGET_CELL_LENGTH);
+  assert.equal(safe[2].items[0].checked,true);
+  assert.equal(safe[3].cells.length,notebook.MAX_WIDGET_ROWS);
+  assert.equal(safe[3].cells[0].length,notebook.MAX_WIDGET_COLS);
+  assert.equal(safe[3].cells[0][0].length,notebook.MAX_WIDGET_CELL_LENGTH);
+  const json=JSON.stringify(safe);
+  assert.ok(json.length < 14000,"Large or malicious text is bounded");
+});
+
+test("Study cards are editable in the side panel and reproduced as text in PDF", async () => {
+  const [component,pdf] = await Promise.all([
+    readFile("src/components/library/StudyNotebook.tsx","utf8"),
+    readFile("src/lib/study-notebook-pdf.ts","utf8"),
+  ]);
+  for(const phrase of [
+    "function addStudyElement(template: StudyWidgetTemplate)",
+    "STUDY_WIDGET_TEMPLATES.map(template",
+    "function editSelectedObject(patch: Partial<NotebookObject>)",
+    "selectedObject.kind === \"checklist\"",
+    "selectedObject.kind === \"table\"",
+    "selectedObject.items ?? []",
+    "selectedObject.cells ?? []",
+    "MAX_WIDGET_ROWS",
+    "MAX_WIDGET_ITEMS",
+    "setShowStudyWidgets(false)",
+    "studyWidgetSearchText",
+    "data-study-widget={object.kind}",
+  ]) assert.ok(component.includes(phrase),"Missing functional widget UI: "+phrase);
+  for(const phrase of [
+    '["sticky", "formula", "checklist", "table"].includes(object.kind)',
+    'entry.textContent = cell',
+    'title.textContent = object.label',
+    'item.checked ? "☑" : "☐"',
+  ]) assert.ok(pdf.includes(phrase),"Missing printable editable widget: "+phrase);
+  assert.ok(!pdf.includes("innerHTML"), "Study content must not be interpreted as HTML");
+  const layout=await readFile("src/routes/library.tsx","utf8");
+  assert.match(layout,/data-study-split/,"Study notes remain adjacent to CMA/IFRS lesson route");
 });

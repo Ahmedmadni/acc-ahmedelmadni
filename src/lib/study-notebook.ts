@@ -24,15 +24,22 @@ export interface NotebookStroke {
   points: InkPoint[];
 }
 
+export type NotebookObjectKind = "sticker" | "image" | "sticky" | "formula" | "checklist" | "table";
+export type NotebookObjectTone = "yellow" | "mint" | "rose" | "blue";
+export interface NotebookCheckItem { text: string; checked: boolean; }
 export interface NotebookObject {
   id: string;
-  kind: "sticker" | "image";
+  kind: NotebookObjectKind;
   /** Unscaled notebook coordinates shared with pen strokes. */
   x: number;
   y: number;
   width: number;
   height: number;
   label?: string;
+  /** Editable structured-study widget contents, safely text-only. */
+  tone?: NotebookObjectTone;
+  items?: NotebookCheckItem[];
+  cells?: string[][];
   /** Local bounded raster data URL, never SVG or an external URL. */
   src?: string;
 }
@@ -64,6 +71,12 @@ export const MAX_NOTE_TEXT_LENGTH = 18000;
 export const MAX_INK_STROKES = 1500;
 export const MAX_INK_POINTS = 800;
 export const MAX_NOTEBOOK_OBJECTS = 24;
+export const MAX_WIDGET_TITLE_LENGTH = 90;
+export const MAX_WIDGET_TEXT_LENGTH = 400;
+export const MAX_WIDGET_ITEMS = 8;
+export const MAX_WIDGET_ROWS = 6;
+export const MAX_WIDGET_COLS = 3;
+export const MAX_WIDGET_CELL_LENGTH = 90;
 export const MAX_IMAGES_PER_PAGE = 5;
 export const MAX_NOTEBOOK_IMAGE_URL_LENGTH = 140000;
 export const NOTEBOOK_DESIGN_WIDTH = 760;
@@ -199,21 +212,40 @@ export function normalizeNotebook(value: unknown): NotebookStore {
       const objectIds = new Set<string>();
       for (const item of rawObjects.slice(0, MAX_NOTEBOOK_OBJECTS)) {
         if (!validRecord(item) || typeof item.id !== "string" || !item.id ||
-            objectIds.has(item.id) || !["image", "sticker"].includes(String(item.kind))) continue;
-        const kind = item.kind as NotebookObject["kind"];
+            objectIds.has(item.id) ||
+            !["image", "sticker", "sticky", "formula", "checklist", "table"].includes(String(item.kind))) continue;
+        const kind = item.kind as NotebookObjectKind;
         const data = kind === "image" ? item.src : item.label;
         if (kind === "image" && (!validNotebookImageSrc(data) || imageCount >= MAX_IMAGES_PER_PAGE)) continue;
         if (kind === "sticker" && (typeof data !== "string" || !data.trim())) continue;
         objectIds.add(item.id);
         if (kind === "image") imageCount++;
         const size = oneOf(raw.size, ["A4", "A5", "Letter"], "A4");
+        const items: NotebookCheckItem[] = kind === "checklist" && Array.isArray(item.items)
+          ? item.items.slice(0, MAX_WIDGET_ITEMS).filter(validRecord).map(entry => ({
+              text: typeof entry.text === "string" ? entry.text.slice(0, MAX_WIDGET_CELL_LENGTH) : "",
+              checked: entry.checked === true,
+            }))
+          : [];
+        const cells = kind === "table" && Array.isArray(item.cells)
+          ? item.cells.slice(0, MAX_WIDGET_ROWS).filter(Array.isArray).map(row =>
+              row.slice(0, MAX_WIDGET_COLS).map(cell =>
+                typeof cell === "string" ? cell.slice(0, MAX_WIDGET_CELL_LENGTH) : ""))
+          : [];
         objects.push(clampNotebookObject({
           id: item.id, kind,
           x: numberBetween(item.x, 0, NOTEBOOK_DESIGN_WIDTH, 80),
           y: numberBetween(item.y, 0, NOTEBOOK_SIZES[size].height, 90),
           width: numberBetween(item.width, 32, NOTEBOOK_DESIGN_WIDTH, 140),
           height: numberBetween(item.height, 32, NOTEBOOK_SIZES[size].height, 130),
-          ...(kind === "image" ? { src: data as string } : { label: (data as string).slice(0, 16) }),
+          ...(kind === "image" ? { src: data as string }
+             : { label: (typeof data === "string" ? data : "").slice(
+                  0, kind === "sticker" ? 16 : kind === "formula" || kind === "sticky" ? MAX_WIDGET_TEXT_LENGTH : MAX_WIDGET_TITLE_LENGTH) }),
+          ...(["sticky", "formula", "checklist", "table"].includes(kind) ? {
+            tone: oneOf(item.tone, ["yellow", "mint", "rose", "blue"] as const, "yellow"),
+          } : {}),
+          ...(kind === "checklist" ? { items } : {}),
+          ...(kind === "table" ? { cells } : {}),
         }, NOTEBOOK_SIZES[size].height));
       }
       pages.push({

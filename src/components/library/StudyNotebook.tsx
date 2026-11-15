@@ -13,12 +13,15 @@ import {
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
   strokeBounds, transformNotebookStroke, clampNotebookObject,
   MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
+  MAX_WIDGET_TITLE_LENGTH, MAX_WIDGET_TEXT_LENGTH, MAX_WIDGET_CELL_LENGTH, MAX_WIDGET_ITEMS, MAX_WIDGET_ROWS,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke, type NotebookObject,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
+import { createStudyWidget, STUDY_WIDGET_PALETTE, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
+  studyWidgetDefaultTitle, type StudyWidgetTemplate } from "@/lib/study-notebook-widgets";
 
 type NotebookStrings = { ar: string; en: string };
 const LABELS = {
@@ -436,6 +439,12 @@ function NotebookPaper({
   if (preview && !drawnStrokes.some(stroke => stroke.id === preview.id)) drawnStrokes.push(preview);
   const chosenStroke = drawnStrokes.find(stroke => stroke.id === selectedStrokeId);
   const chosenStrokeBounds = chosenStroke ? strokeBounds(chosenStroke) : null;
+  const selectedObject = page.objects.find(item => item.id === selectedObjectId);
+  function editSelectedObject(patch: Partial<NotebookObject>) {
+    if (!selectedObjectId) return;
+    onChange({ objects: page.objects.map(item =>
+      item.id === selectedObjectId ? { ...item, ...patch } : item) });
+  }
 
   return (
     <div className="space-y-2">
@@ -528,10 +537,55 @@ function NotebookPaper({
                 {object.kind === "image" && object.src
                   ? <img src={object.src} alt={lang === "ar" ? "صورة مضافة إلى المذكرة" : "Notebook image"}
                       draggable={false} className="pointer-events-none h-full w-full object-contain" />
-                  : <span className="pointer-events-none flex h-full w-full items-center justify-center leading-none"
-                      style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
-                      {object.label}
-                    </span>}
+                  : object.kind === "sticker"
+                    ? <span className="pointer-events-none flex h-full w-full items-center justify-center leading-none"
+                        style={{ fontSize: `${Math.min(object.width / NOTEBOOK_DESIGN_WIDTH * width, object.height / height * (width * height / NOTEBOOK_DESIGN_WIDTH)) * .82}px` }}>
+                        {object.label}
+                      </span>
+                    : <div data-study-widget={object.kind} dir={page.direction}
+                        className="pointer-events-none flex h-full w-full flex-col gap-1 overflow-hidden rounded-lg border text-start shadow-sm"
+                        style={{
+                          backgroundColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].background,
+                          color: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].text,
+                          borderColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].border,
+                          padding: `${10 * scale}px`,
+                        }}>
+                        <span className="shrink-0 font-bold uppercase tracking-wide opacity-70"
+                          style={{ fontSize: `${15 * scale}px` }}>
+                          {studyWidgetDefaultTitle(object.kind)}
+                        </span>
+                        {object.kind === "sticky" || object.kind === "formula"
+                          ? <div className="min-h-0 flex-1 overflow-hidden whitespace-pre-wrap break-words font-semibold"
+                              style={{ fontSize: `${(object.kind === "formula" ? 26 : 23) * scale}px`, lineHeight: 1.3 }}>
+                              {object.label}
+                            </div>
+                          : <div className="shrink-0 truncate font-bold"
+                              style={{ fontSize: `${22 * scale}px` }}>{object.label}</div>}
+                        {object.kind === "checklist" && (
+                          <div className="min-h-0 flex-1 space-y-1 overflow-hidden" style={{ fontSize: `${20 * scale}px` }}>
+                            {(object.items ?? []).map((item, i) => (
+                              <div key={i} className="flex items-start gap-1">
+                                <span>{item.checked ? "☑" : "☐"}</span>
+                                <span className={item.checked ? "line-through opacity-65" : ""}>{item.text}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                        {object.kind === "table" && (
+                          <div className="min-h-0 flex-1 overflow-hidden" style={{ display: "grid",
+                            gridTemplateColumns: `repeat(${object.cells?.[0]?.length || 2}, minmax(0, 1fr))`,
+                            alignContent: "start" }}>
+                            {(object.cells ?? []).flatMap((row, ri) => row.map((cell, ci) => (
+                              <div key={`${ri}-${ci}`} className="truncate border p-1"
+                                style={{ borderColor: STUDY_WIDGET_PALETTE[object.tone ?? "yellow"].border,
+                                  fontWeight: ri === 0 ? 700 : 400, fontSize: `${17 * scale}px`,
+                                  background: ri === 0 ? "rgba(255,255,255,.42)" : "transparent" }}>
+                                {cell || " "}
+                              </div>
+                            )))}
+                          </div>
+                        )}
+                      </div>}
                 {selected && (
                   <div data-handle="resize"
                     aria-label={lang === "ar" ? "مقبض تغيير حجم العنصر" : "Resize selected object"}
@@ -573,6 +627,113 @@ function NotebookPaper({
             <CopyPlus className="inline size-3.5" /> {lang === "ar" ? "تكرار" : "Duplicate"}
           </button>
         </div>
+      )}
+      {tool === "select" && selectedObject &&
+        ["sticky", "formula", "checklist", "table"].includes(selectedObject.kind) && (
+        <section className="space-y-3 rounded-xl border border-[#b5c9d4] bg-[#f1f6f9] p-3"
+          aria-label={lang === "ar" ? "تعديل العنصر المحدد" : "Edit selected study element"}
+          dir={page.direction}>
+          <div className="flex items-center justify-between gap-2">
+            <strong className="text-xs text-[#253a4b]">
+              {lang === "ar" ? "تحرير البطاقة المحددة" : "Edit selected card"}
+            </strong>
+            <select aria-label={lang === "ar" ? "لون البطاقة" : "Card color"}
+              value={selectedObject.tone ?? "yellow"}
+              onChange={event => editSelectedObject({ tone: event.target.value as NotebookObject["tone"] })}
+              className="rounded-lg border border-[#bbcad5] bg-white px-2 py-1 text-xs text-[#253a4b]">
+              <option value="yellow">{lang === "ar" ? "أصفر" : "Yellow"}</option>
+              <option value="mint">{lang === "ar" ? "أخضر" : "Mint"}</option>
+              <option value="rose">{lang === "ar" ? "وردي" : "Rose"}</option>
+              <option value="blue">{lang === "ar" ? "أزرق" : "Blue"}</option>
+            </select>
+          </div>
+          <label className="block text-xs font-semibold text-[#344657]">
+            {selectedObject.kind === "sticky" ? (lang === "ar" ? "نص الملاحظة" : "Note body")
+              : selectedObject.kind === "formula" ? (lang === "ar" ? "نص المعادلة" : "Formula text")
+                : lang === "ar" ? "عنوان العنصر" : "Widget title"}
+            {selectedObject.kind === "sticky" || selectedObject.kind === "formula"
+              ? <textarea rows={3} spellCheck value={selectedObject.label ?? ""}
+                  maxLength={MAX_WIDGET_TEXT_LENGTH}
+                  onChange={event => editSelectedObject({ label: event.target.value.slice(0, MAX_WIDGET_TEXT_LENGTH) })}
+                  className="mt-1 block w-full resize-y rounded-lg border border-[#bbcad5] bg-white p-2 text-sm text-[#253a4b]" />
+              : <input type="text" value={selectedObject.label ?? ""}
+                  maxLength={MAX_WIDGET_TITLE_LENGTH}
+                  onChange={event => editSelectedObject({ label: event.target.value.slice(0, MAX_WIDGET_TITLE_LENGTH) })}
+                  className="mt-1 block w-full rounded-lg border border-[#bbcad5] bg-white p-2 text-sm text-[#253a4b]" />}
+          </label>
+          {selectedObject.kind === "checklist" && (
+            <div className="space-y-2">
+              {(selectedObject.items ?? []).map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <input type="checkbox" checked={item.checked}
+                    aria-label={lang === "ar" ? `إنجاز بند ${index + 1}` : `Complete item ${index + 1}`}
+                    onChange={event => editSelectedObject({ items: (selectedObject.items ?? []).map((other, i) =>
+                      i === index ? { ...other, checked: event.target.checked } : other) })}
+                    className="size-4 accent-teal-700" />
+                  <input type="text" value={item.text} maxLength={MAX_WIDGET_CELL_LENGTH}
+                    aria-label={lang === "ar" ? `البند ${index + 1}` : `Item ${index + 1}`}
+                    onChange={event => editSelectedObject({ items: (selectedObject.items ?? []).map((other, i) =>
+                      i === index ? { ...other, text: event.target.value.slice(0, MAX_WIDGET_CELL_LENGTH) } : other) })}
+                    className="min-w-0 flex-1 rounded-lg border border-[#bbcad5] bg-white p-2 text-xs" />
+                  <button type="button"
+                    title={lang === "ar" ? "حذف البند" : "Delete item"}
+                    onClick={() => editSelectedObject({ items: (selectedObject.items ?? []).filter((_, i) => i !== index) })}
+                    className="grid size-8 place-items-center rounded-lg border border-red-200 bg-white text-red-700">
+                    <Trash2 className="size-3.5" />
+                  </button>
+                </div>
+              ))}
+              <button type="button" disabled={(selectedObject.items?.length ?? 0) >= MAX_WIDGET_ITEMS}
+                onClick={() => editSelectedObject({ items: [...(selectedObject.items ?? []),
+                  { text: "", checked: false }] })}
+                className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs font-bold disabled:opacity-40">
+                {lang === "ar" ? "إضافة بند" : "Add checklist item"}
+              </button>
+            </div>
+          )}
+          {selectedObject.kind === "table" && (
+            <div className="space-y-2">
+              <div className="grid gap-1" style={{ gridTemplateColumns:
+                `repeat(${selectedObject.cells?.[0]?.length || 2}, minmax(0, 1fr))` }}>
+                {(selectedObject.cells ?? []).flatMap((row, rowIndex) =>
+                  row.map((cell, colIndex) => (
+                    <input key={`${rowIndex}-${colIndex}`} type="text"
+                      value={cell} maxLength={MAX_WIDGET_CELL_LENGTH}
+                      aria-label={`Row ${rowIndex + 1} column ${colIndex + 1}`}
+                      onChange={event => editSelectedObject({
+                        cells: (selectedObject.cells ?? []).map((oldRow, i) =>
+                          i === rowIndex ? oldRow.map((oldCell, j) =>
+                            j === colIndex ? event.target.value.slice(0, MAX_WIDGET_CELL_LENGTH) : oldCell) : oldRow),
+                      })}
+                      className="min-w-0 rounded-lg border border-[#bbcad5] bg-white p-1.5 text-xs" />
+                  )))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <button type="button" disabled={(selectedObject.cells?.length ?? 0) >= MAX_WIDGET_ROWS}
+                  onClick={() => editSelectedObject({ cells: [...(selectedObject.cells ?? []),
+                    Array.from({ length: selectedObject.cells?.[0]?.length || 2 }, () => "")] })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "إضافة صف" : "Add row"}
+                </button>
+                <button type="button" disabled={(selectedObject.cells?.length ?? 0) <= 2}
+                  onClick={() => editSelectedObject({ cells: (selectedObject.cells ?? []).slice(0, -1) })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "حذف آخر صف" : "Remove last row"}
+                </button>
+                <button type="button" disabled={(selectedObject.cells?.[0]?.length ?? 0) >= 3}
+                  onClick={() => editSelectedObject({ cells: (selectedObject.cells ?? []).map(row => [...row, ""]) })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "إضافة عمود" : "Add column"}
+                </button>
+                <button type="button" disabled={(selectedObject.cells?.[0]?.length ?? 0) <= 2}
+                  onClick={() => editSelectedObject({ cells: (selectedObject.cells ?? []).map(row => row.slice(0, -1)) })}
+                  className="rounded-lg border border-[#bbcad5] bg-white px-3 py-2 text-xs disabled:opacity-40">
+                  {lang === "ar" ? "حذف آخر عمود" : "Remove last column"}
+                </button>
+              </div>
+            </div>
+          )}
+        </section>
       )}
       {textOverflows && (
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
@@ -667,6 +828,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [showStickerPalette, setShowStickerPalette] = useState(false);
+  const [showStudyWidgets, setShowStudyWidgets] = useState(false);
   const [stickerGroup, setStickerGroup] = useState("accounting");
   const imageInput = useRef<HTMLInputElement | null>(null);
   const [importingImage, setImportingImage] = useState(false);
@@ -776,7 +938,11 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     const id = newId();
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
-      objects: current.objects.map((object) => ({ ...object, id: newId() })),
+      objects: current.objects.map((object) => ({
+        ...object, id: newId(),
+        ...(object.items ? { items: object.items.map(item => ({ ...item })) } : {}),
+        ...(object.cells ? { cells: object.cells.map(row => [...row]) } : {}),
+      })),
       updatedAt: Date.now() };
     setStore((prior) => {
       const original = prior.pages[section];
@@ -813,6 +979,17 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
         : error instanceof Error ? error.message : "PDF export failed.");
     } finally { setExportingPdf(false); }
+  }
+
+  function addStudyElement(template: StudyWidgetTemplate) {
+    if (!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS) return;
+    const widget = createStudyWidget(template, newId(), current.direction === "rtl" ? "ar" : "en");
+    updatePage({ objects: [...current.objects, widget] });
+    setTool("select");
+    setShowStudyWidgets(false);
+    setRestoreMessage(lang === "ar"
+      ? "تمت إضافة العنصر. انقر عليه بأداة التحديد لتحرير المحتوى وتحريكه."
+      : "Study element added. Tap it with Select to edit and position it.");
   }
 
   function addSticker(label: string) {
@@ -1069,7 +1246,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               <div className="max-h-52 space-y-1.5 overflow-y-auto">
                 {sectionPages.map((page, index) => ({ page, index }))
                   .filter(({ page }) => !pageSearch.trim() ||
-                    (page.title + " " + page.text).toLocaleLowerCase().includes(pageSearch.trim().toLocaleLowerCase()))
+                    (page.title + " " + page.text + " " + page.objects.map(studyWidgetSearchText).join(" ")).toLocaleLowerCase().includes(pageSearch.trim().toLocaleLowerCase()))
                   .map(({ page, index }) => (
                     <button key={page.id} type="button" onClick={() => { navigate(index); setShowPageManager(false); }}
                       aria-current={page.id === current.id ? "page" : undefined}
@@ -1105,6 +1282,12 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             })}
           </div>
           <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
+            <button type="button" onClick={() => setShowStudyWidgets(open => !open)}
+              disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
+              aria-expanded={showStudyWidgets}
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
+              <BookOpenText className="size-4" /> {lang === "ar" ? "عناصر الدراسة" : "Study elements"}
+            </button>
             <button type="button" onClick={() => setShowStickerPalette(open => !open)}
               disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
               aria-expanded={showStickerPalette}
@@ -1131,6 +1314,18 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
                 "Use Select to move and resize. Images stay on this device."}
             </p>
           </div>
+          {showStudyWidgets && (
+            <section aria-label={lang === "ar" ? "عناصر المذاكرة والمحاسبة" : "Study and accounting widgets"}
+              className="mt-2 grid grid-cols-2 gap-2 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
+              {STUDY_WIDGET_TEMPLATES.map(template => (
+                <button key={template.id} type="button" onClick={() => addStudyElement(template.id)}
+                  className="flex min-h-11 items-center gap-2 rounded-lg border border-[#e0d4c2] bg-white px-3 py-2 text-start text-xs font-bold text-[#443a2d] hover:border-[#806049]">
+                  <span className="text-lg" aria-hidden>{template.icon}</span>
+                  <span>{template[lang]}</span>
+                </button>
+              ))}
+            </section>
+          )}
           {showStickerPalette && (
             <section aria-label={lang === "ar" ? "مجموعات الملصقات" : "Sticker collections"}
               className="mt-2 space-y-3 rounded-xl border border-[#d5c8b6] bg-[#fffcf5] p-3">
