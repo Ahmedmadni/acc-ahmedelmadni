@@ -1,0 +1,183 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFile } from "node:fs/promises";
+import vm from "node:vm";
+import ts from "typescript";
+
+async function loadTypeScript(path) {
+  const text = await readFile(path, "utf8");
+  const compiled = ts.transpileModule(text, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
+  }).outputText;
+  const module = { exports: {} };
+  vm.runInNewContext(compiled, {
+    module, exports: module.exports,
+    require: (id) => { throw Error("Unexpected runtime dependency " + id); },
+  }, { filename: path });
+  return module.exports;
+}
+
+const notebook = await loadTypeScript("src/lib/study-notebook.ts");
+const recognizer = await loadTypeScript("src/lib/study-notebook-recognition.ts");
+
+test("CMA and IFRS notebooks start with separate blank pages and a local-only storage key", () => {
+  const state = notebook.emptyNotebook();
+  assert.equal(state.version, 1);
+  assert.equal(state.pages.cma.length, 1);
+  assert.equal(state.pages.standards.length, 1);
+  assert.notEqual(state.pages.cma[0].id, state.pages.standards[0].id);
+  assert.notEqual(state.activePage.cma, state.activePage.standards);
+  assert.match(notebook.NOTEBOOK_STORAGE_KEY, /notebook/);
+  assert.deepEqual(JSON.parse(JSON.stringify(notebook.normalizeNotebook(state))), JSON.parse(JSON.stringify(state)));
+});
+
+test("Local pages round-trip text, two writing directions, paper types and strokes without altering ink", () => {
+  const store = notebook.emptyNotebook();
+  const cma = store.pages.cma[0];
+  Object.assign(cma, {
+    text: "FV = 100 / 1.05\nصافي القيمة الحالية",
+    title: "NPV  — الفصل الثالث",
+    size: "A5", pattern: "dots", shade: "blue", spacing: 54,
+    typeface: "handwritten", direction: "rtl",
+    strokes: [{
+      id: "ink-test", color: "#24334a", width: 2.9,
+      points: [{ x: 10, y: 20, pressure: .75, t: 1 },
+        { x: 21, y: 33, pressure: .4, t: 15 }],
+    }],
+  });
+  const parsed = notebook.normalizeNotebook(JSON.parse(JSON.stringify(store)));
+  assert.equal(parsed.pages.cma[0].text, cma.text);
+  assert.equal(parsed.pages.cma[0].direction, "rtl");
+  assert.equal(parsed.pages.cma[0].size, "A5");
+  assert.equal(parsed.pages.cma[0].pattern, "dots");
+  assert.equal(parsed.pages.cma[0].shade, "blue");
+  assert.equal(parsed.pages.cma[0].spacing, 54);
+  assert.equal(parsed.pages.cma[0].strokes[0].points[1].pressure, .4);
+  assert.equal(parsed.pages.standards[0].text, "");
+});
+
+test("Bad/legacy notebook storage is safely ignored; oversized and malformed input is bounded", () => {
+  assert.equal(notebook.normalizeNotebook(null).pages.cma.length, 1);
+  assert.equal(notebook.normalizeNotebook({ version: 9 }).pages.standards.length, 1);
+  const malformed = {
+    version: 1,
+    activePage: { cma: "missing" },
+    pages: { cma: [{
+      id: "good",
+      title: "A".repeat(300),
+      text: "x".repeat(20000),
+      size: "invalid",
+      shade: "invalid",
+      spacing: -100,
+      strokes: [{
+        id: "drawing", color: "javascript:alert(1)", width: 500,
+        points: [{ x: 999999, y: -100, pressure: 900, t: 0 }],
+      }],
+    }], standards: [] },
+  };
+  const safe = notebook.normalizeNotebook(malformed);
+  assert.equal(safe.pages.cma[0].id, "good");
+  assert.equal(safe.activePage.cma, "good");
+  assert.equal(safe.pages.cma[0].title.length, 90);
+  assert.equal(safe.pages.cma[0].text.length, notebook.MAX_NOTE_TEXT_LENGTH);
+  assert.equal(safe.pages.cma[0].size, "A4");
+  assert.equal(safe.pages.cma[0].shade, "ivory");
+  assert.equal(safe.pages.cma[0].spacing, 30);
+  assert.equal(safe.pages.cma[0].strokes[0].color, "#24334a");
+  assert.equal(safe.pages.cma[0].strokes[0].width, 9);
+  assert.equal(safe.pages.cma[0].strokes[0].points[0].x, notebook.NOTEBOOK_DESIGN_WIDTH);
+});
+
+test("Ruled, graph, dotted and blank paper have distinct patterns and customizable gap", () => {
+  for (const size of ["A4", "A5", "Letter"]) {
+    assert.ok(notebook.NOTEBOOK_SIZES[size].height > 900);
+    assert.ok(notebook.NOTEBOOK_SIZES[size].maxWidth.endsWith("%"));
+  }
+  const ruled = notebook.notebookPaperBackground("ruled", "ivory", 21);
+  const grid = notebook.notebookPaperBackground("grid", "cream", 25);
+  const dots = notebook.notebookPaperBackground("dots", "blue", 36);
+  const blank = notebook.notebookPaperBackground("blank", "white", 20);
+  assert.match(ruled.backgroundSize, /21px/);
+  assert.match(grid.backgroundSize, /25px/);
+  assert.match(dots.backgroundSize, /36px/);
+  assert.match(grid.backgroundImage, /linear-gradient/);
+  assert.match(dots.backgroundImage, /radial-gradient/);
+  assert.doesNotMatch(blank.backgroundImage, /linear-gradient/);
+});
+
+test("Smooth path retains original points and avoids jagged corner-to-corner-only rendering", () => {
+  const points = [
+    { x: 0, y: 0, pressure: .5, t: 0 },
+    { x: 20, y: 25, pressure: .9, t: 50 },
+    { x: 50, y: 30, pressure: .6, t: 90 },
+    { x: 60, y: 45, pressure: .5, t: 120 },
+  ];
+  const snapshot = JSON.stringify(points);
+  assert.match(notebook.pageStrokePath(points), /^M 0 0 Q/);
+  assert.match(notebook.pageStrokePath(points), /L 60 45$/);
+  assert.match(notebook.pageStrokePath([points[0]]), /^M/);
+  assert.equal(notebook.pageStrokePath([]), "");
+  assert.equal(JSON.stringify(points), snapshot);
+});
+
+test("Device-only recognition reports unsupported devices instead of silently inventing a transcription", async () => {
+  assert.equal(recognizer.supportsLocalHandwritingRecognition({}, {}), false);
+  await assert.rejects(
+    recognizer.recognizeNotebookInk([{
+      id: "a", color: "#000000", width: 2,
+      points: [{ x: 12, y: 50, pressure: .5, t: 0 }],
+    }], "ltr", {}, {}),
+    /unavailable/,
+  );
+});
+
+test("Supported browser receives the original ink points and only previews its prediction", async () => {
+  const received = [];
+  let finished = 0, cleared = 0, requested = null;
+  class MockStroke { addPoint(point) { received.push(point); } }
+  const nav = {
+    async createHandwritingRecognizer(settings) {
+      requested = settings.languages[0];
+      return {
+        startDrawing() {
+          return {
+            addStroke() {},
+            async getPrediction() { return [{ text: "  Accrual income " }, { text: "Accrual incomes" }]; },
+            clear() { cleared++; },
+          };
+        },
+        finish() { finished++; },
+      };
+    },
+  };
+  const strokes = [{
+    id: "a", color: "#000000", width: 2,
+    points: [{ x: 12, y: 50, pressure: .5, t: 0 }, { x: 35, y: 52, pressure: .9, t: 12 }],
+  }];
+  const result = await recognizer.recognizeNotebookInk(strokes, "ltr", nav, { HandwritingStroke: MockStroke });
+  assert.equal(requested, "en");
+  assert.equal(result[0], "Accrual income");
+  assert.equal(result[1], "Accrual incomes");
+  assert.equal(received.length, 2);
+  assert.equal(received[1].t, 12);
+  assert.equal(finished, 1);
+  assert.equal(cleared, 1);
+  assert.equal(strokes[0].points.length, 2, "Recognition does not erase any original ink");
+});
+
+test("Sidebar exists only for CMA and IFRS, leaves mobile lessons unobstructed and offers backups", async () => {
+  const [route, component] = await Promise.all([
+    readFile("src/routes/library.tsx", "utf8"),
+    readFile("src/components/library/StudyNotebook.tsx", "utf8"),
+  ]);
+  assert.match(route, /\{studySection && \(/);
+  assert.match(route, /<StudyNotebook/);
+  assert.match(route, /xl:pe-\[416px\]/);
+  assert.match(component, /NOTEBOOK_STORAGE_KEY/);
+  assert.match(component, /localStorage\.setItem/);
+  assert.match(component, /onPointerDown=\{pointerDown\}/);
+  assert.match(component, /onPointerMove=\{pointerMove\}/);
+  assert.match(component, /recognizeNotebookInk\(page\.strokes, page\.direction\)/);
+  assert.match(component, /onChange\(\{\s*text:[^}]+strokes: \[\]/);
+  assert.match(component, /application\/json/);
+});

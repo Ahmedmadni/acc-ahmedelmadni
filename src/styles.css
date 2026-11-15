@@ -1321,3 +1321,22 @@ img {
   background-size: 220% 100%;
   animation: search-ring-sweep 9s ease-in-out infinite;
 }
+
+/* Notebook inks use handwritten display faces when available, with offline fallbacks.
+ * All styles are scoped; study notes never change the surrounding library layout. */
+.study-notebook-paper textarea::placeholder {
+  font-family: system-ui, sans-serif;
+  font-size: .72em;
+  letter-spacing: normal;
+}
+.study-notebook-paper {
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+}
+.study-notebook-paper svg {
+  -webkit-user-select: none;
+  user-select: none;
+}
+@media print {
+  .study-notebook-paper { box-shadow: none !important; }
+}
