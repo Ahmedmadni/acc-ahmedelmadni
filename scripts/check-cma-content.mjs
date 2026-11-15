@@ -58,6 +58,7 @@ const { CMA_PART2_FINAL_WORKED } = readDataFile("cma-part2-final-worked");
 const { CMA_DOMAIN_GLOSSARY } = readDataFile("cma-learning-glossary");
 const { CMA_EDITORIAL_CLARIFICATIONS } = readDataFile("cma-editorial-clarifications");
 const { CMA_ANSWER_WALKTHROUGHS } = readDataFile("cma-answer-walkthroughs");
+const { CMA_PDF_AUDIT_WALKTHROUGHS } = readDataFile("cma-pdf-audit-walkthroughs");
 const { CMA_VERIFIED_ICMA_LAYOUTS } = readDataFile("cma-icma-verified-layouts");
 const { CMA_ICMA_2024_PART2_QUESTIONS, CMA_ICMA_2024_PART2_RAW } = readDataFile("cma-icma-2024-part2");
 const { CMA_PART2_PRACTICE_SOURCES } = readDataFile("cma-part2-practice-sources");
@@ -263,8 +264,8 @@ for (const [section, count] of Object.entries(officialSectionCounts)) {
 }
 // Each clearance requires a visually inspected source PDF page, its printed
 // question/choice table and the official answer key. A mere text match is insufficient.
-check(CMA_VERIFIED_ICMA_LAYOUTS.length === 8,
-  "Expected eight visually reviewed, source-key-verified retired questions");
+check(CMA_VERIFIED_ICMA_LAYOUTS.length === 20,
+  "Expected 20 visually reviewed, source-key-verified retired questions");
 const auditedIds = new Set();
 for (const audit of CMA_VERIFIED_ICMA_LAYOUTS) {
   check(!auditedIds.has(audit.id), `Duplicate source review: ${audit.id}`);
@@ -282,13 +283,32 @@ for (const audit of CMA_VERIFIED_ICMA_LAYOUTS) {
 }
 check(CMA_ICMA_2024_PART2_RAW.find((q) => q.id === "IMA2024-P2-B-084")?.question.startsWith("Frame Industries"),
   "Original B-084 stray OCR character should not reappear");
-check(officialLayoutReviewCount === 63, "Expected 63 outstanding table/layout reviews after eight verified clearances");
-console.log("Validated 369 retired ICMA 2024 Part 2 MCQs: 8 visually verified table/layout cases, 63 still flagged");
+check(CMA_ICMA_2024_PART2_RAW.find((q) => q.id === "IMA2024-P2-B-076")?.question.startsWith("Megatech Inc."),
+  "Original B-076 stray OCR character should not reappear");
+const secondAudit = CMA_VERIFIED_ICMA_LAYOUTS.filter((a) => a.auditedDate === "2026-11-15");
+check(secondAudit.length === 12, "Expected exactly 12 second-batch visual reviews");
+check(new Set(secondAudit.map((a) => a.id)).size === 12, "Duplicate new visual reviews");
+check(secondAudit.every((a) => a.pdfPage >= 185 && a.answerPdfPage >= 219),
+  "PDF source and answer page provenance missing");
+check(officialLayoutReviewCount === 51, "Expected 51 outstanding table/layout reviews after 20 verified clearances");
+console.log("Validated 369 retired ICMA 2024 Part 2 MCQs: 20 visually verified complex cases, 51 still flagged");
 
 // The independently authored walkthroughs are supplements; original source keys
 // and source explanations are verified unchanged above and must stay preserved.
 const reviewedWalkthroughs = Object.entries(CMA_ANSWER_WALKTHROUGHS);
-check(reviewedWalkthroughs.length === 27, "Expected 27 question-specific teaching walkthroughs");
+check(reviewedWalkthroughs.length === 39, "Expected 39 question-specific teaching walkthroughs");
+check(Object.keys(CMA_PDF_AUDIT_WALKTHROUGHS).length === 12, "Expected 12 PDF-audited walkthroughs");
+for (const [id, steps] of Object.entries(CMA_PDF_AUDIT_WALKTHROUGHS)) {
+  check(CMA_VERIFIED_ICMA_LAYOUTS.some((q) => q.id === id && q.auditedDate === "2026-11-15"),
+    `New explanation has no matching verified source page: ${id}`);
+  check(CMA_ANSWER_WALKTHROUGHS[id] === steps,
+    `New explanation is not included in the learning panel: ${id}`);
+}
+check(CMA_ANSWER_WALKTHROUGHS["IMA2024-P2-C-006"].steps.en.join(" ").includes("79,939"),
+  "Break-even strict whole-person rounding note missing");
+check(CMA_ICMA_2024_PART2_RAW.find((q) => q.id === "IMA2024-P2-B-076")?.explanation.includes("78,833") &&
+  CMA_ANSWER_WALKTHROUGHS["IMA2024-P2-B-076"].steps.en.join(" ").includes("70,833"),
+  "Source September-interest typo must be disclosed without editing the original explanation");
 for (const [id, note] of reviewedWalkthroughs) {
   check(officialQuestionIds.has(id), `Answer walkthrough must link to an existing ICMA question: ${id}`);
   const original = CMA_ICMA_2024_PART2_RAW.find((item) => item.id === id);
@@ -320,6 +340,22 @@ const answerFixtures = [
   ["IMA2024-P2-E-012", 95000 - 3000 + 2000 - 400 - (5000-3000) * 0.4, 92800],
   ["IMA2024-P2-E-013", (90000 + 4000 + 6000) - (25000 - (25000 - (50000 - 7 * 5000)) * 0.4), 79000],
   ["IMA2024-P2-E-034", -550 -500 * .877 + 450 * .769 + 350 * .675 + 350 * .592 + 380 * .519, -1.78],
+  ["IMA2024-P2-A-007", (10000+20000+8000+42000)-(15000+25000), 40000],
+  ["IMA2024-P2-A-036", 365/(220000/((24000+20000)/2)), 36.5],
+  ["IMA2024-P2-B-023", .30*11*(1-.4)+.24*12+.46*16, 12.22],
+  ["IMA2024-P2-B-046", 5240-170*25, 990],
+  ["IMA2024-P2-B-046", 6500-4000*2, -1500],
+  ["IMA2024-P2-B-046", 22000-1000000*.02, 2000],
+  ["IMA2024-P2-B-046", 14000-700*18, 1400],
+  ["IMA2024-P2-B-061", Math.round((185000/150000)*1000)/1000, 1.233],
+  ["IMA2024-P2-B-076", Math.round(10000000*.085/12), 70833],
+  ["IMA2024-P2-B-076", Math.round(8000000*.08/12 +12000000*.08/12 +10000000*.085/12 -190000), 14167],
+  ["IMA2024-P2-C-006", Math.round(1295000/16.2), 79938],
+  ["IMA2024-P2-C-006", Math.ceil(1295000/16.2), 79939],
+  ["IMA2024-P2-C-010", Math.ceil(74720/(45-129900/6000-45*.20)), 5207],
+  ["IMA2024-P2-E-014", 1040000+(700000-80000)+(800000+80000)+(200000-80000-48000), 2612000],
+  ["IMA2024-P2-E-056", Math.round((18 + 2*77/(77+26))*10)/10, 19.5],
+  ["IMA2024-P2-E-056", Math.round((24 + 2*30/(30+11))*10)/10, 25.5],
 ];
 for (const [id, actual, expected] of answerFixtures) {
   check(Math.abs(actual - expected) < 0.0001,
@@ -327,7 +363,7 @@ for (const [id, actual, expected] of answerFixtures) {
   check(CMA_ANSWER_WALKTHROUGHS[id],
     `Numeric audit fixture without an explanatory walkthrough: ${id}`);
 }
-console.log("Validated 27 independent bilingual answer walkthroughs and 17 numerical answer fixtures");
+console.log("Validated 39 independent bilingual answer walkthroughs and 33 numerical fixtures");
 
 
 check(CMA_PART2_2019_OUTLINE_ORIGINAL_QUESTIONS.length === 44, "Expected 44 original questions from the 11 study-unit concepts");
