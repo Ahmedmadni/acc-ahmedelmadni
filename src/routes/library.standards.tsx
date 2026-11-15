@@ -21,6 +21,7 @@ import {
 } from "@/data/ifrs-standards";
 import { IfrsQuestionBank } from "@/components/library/IfrsQuestionBank";
 import { IFRS_LOCAL_QUESTION_COUNTS, IFRS_LOCAL_QUESTION_TOTAL } from "@/data/ifrs-question-bank";
+import { IFRSQUIZ_EXTERNAL_TOTAL, IFRSQUIZ_EXTERNAL_STANDARDS } from "@/data/ifrsquiz-public-catalogue";
 import { IFRS_COMPANION_MODULES } from "@/data/ifrs-companion-foundations";
 import { useSiteLang } from "@/lib/use-site-lang";
 
@@ -105,6 +106,24 @@ const RESEARCH_SOURCES = [
     url: IFRS_NAVIGATOR_URL,
     ar: "المصدر الرسمي للمعايير. نربط إليه للتحقق من النصوص والتحديثات ولا نعيد نشر النص الكامل للمعايير.",
     en: "Official standards source. We link to it for authoritative wording and updates rather than republishing full standard text.",
+  },
+  {
+    name: "IFRSQuiz — بنك خارجي",
+    url: "https://ifrsquiz.com/",
+    ar: `${IFRSQUIZ_EXTERNAL_TOTAL} سؤالًا معلنًا في ${IFRSQUIZ_EXTERNAL_STANDARDS} معيارًا في الموقع الأصلي. هذه الأسئلة ليست مضافة إلى بنك موقعنا بعد؛ زر المصدر للتدرب عليها خارجيًا.`,
+    en: `${IFRSQUIZ_EXTERNAL_TOTAL} publicly listed questions across ${IFRSQUIZ_EXTERNAL_STANDARDS} standards. These questions are NOT yet imported into our local bank. Open the external source to practice.`,
+  },
+  {
+    name: "IFRS Skill — MIT",
+    url: "https://github.com/ramyatrouny/ifrs-skill",
+    ar: "مرجع مفتوح المصدر للشروح والإجراءات والأمثلة؛ أضفنا روابط ومراجعات مفاهيمية وتمارين مستقلة إلى صفحات المعايير، مع الحفاظ على نسب المحتوى إلى مصدره.",
+    en: "Open-source guidance and workflows. Standard pages include cited resources and separately authored study demonstrations.",
+  },
+  {
+    name: "Systemorph IFRS 17 Calculation Engine",
+    url: "https://github.com/Systemorph/IFRS17CalculationEngine",
+    ar: "مستودع متخصص لحسابات عقود التأمين والقيمة الحالية؛ أضفنا مثالًا حسابيًا مستقلًا في صفحة IFRS 17 دون نسخ محركه أو افتراض تشغيله محليًا.",
+    en: "Insurance valuation and present-value repository. Our IFRS 17 page includes an independent teaching example; the external engine is not run here.",
   },
 ];
 
@@ -551,8 +570,8 @@ function StandardsPage() {
                 </h3>
                 <p className="mt-2 max-w-3xl text-sm leading-7 text-[#AFA69D]">
                   {lang === "ar"
-                    ? "الشرح المنشور هنا محتوى تحريري أصلي مخصص للموقع بقلم المحاسب أحمد المدني. تُستخدم المراجع التالية للتحقق من نطاق المعيار والمصطلحات والتحديثات فقط، ولا يتم نسخ نصوصها أو إعادة إنتاج المحتوى الرسمي."
-                    : "The explanations published here are original editorial content authored for this site by accountant Ahmed Elmadani. The references below are used only to verify scope, terminology and updates; their text is not copied or republished."}
+                    ? "الشرح والتمارين الموجودة داخل موقعنا مُعدّة بصورة مستقلة، وتُذكر المصادر الخارجية للتوثيق والتوسع. أعداد أسئلة IFRSQuiz خارجية ولم نضمها إلى بنكنا المحلي بعد."
+                    : "The lessons and examples on this website are independently prepared and external sources are linked for verification or further study. IFRSQuiz counts describe third-party questions, not imported local items."}
                 </p>
               </div>
             </div>
