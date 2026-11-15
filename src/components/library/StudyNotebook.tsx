@@ -1047,6 +1047,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         ...(object.cells ? { cells: object.cells.map(row => [...row]) } : {}),
       })),
       updatedAt: Date.now() };
+    setActiveSection("write");
     setStore((prior) => {
       const original = prior.pages[section];
       const at = original.findIndex((page) => page.id === current.id);
@@ -1098,6 +1099,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     setTool("type");
     setInsertRequest({ id: ++insertSequence.current, kind: "formula", formula });
     setShowInlineTools(false);
+    setActiveSection("write");
   }
 
   function insertInlineTable(template: NotebookFlowTableTemplate) {
@@ -1113,6 +1115,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     setTool("type");
     setInsertRequest({ id: ++insertSequence.current, kind: "table", template });
     setShowInlineTools(false);
+    setActiveSection("write");
   }
 
   function addStudyElement(template: StudyWidgetTemplate) {
@@ -1134,6 +1137,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     updatePage({ objects: [...current.objects, widget] });
     setTool("select");
     setShowStudyWidgets(false);
+    setActiveSection("write");
     setRestoreMessage(lang === "ar"
       ? "العنصر جاهز: اضغط داخل النص أو خلية الجدول للتعديل مباشرة، واسحب من مقبض ⠿ لتحريكه."
       : "Ready: type directly inside the card or table cells. Drag only the ⠿ header to move it.");
@@ -1147,6 +1151,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     };
     updatePage({ objects: [...current.objects, object] });
     setTool("select");
+    setActiveSection("write");
     setRestoreMessage(lang === "ar" ? "تمت إضافة الملصق. اختر أداة التحديد لتحريكه." : "Sticker added. Drag it with Select.");
   }
 
@@ -1174,6 +1179,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
             ? { ...page, objects: [...page.objects, object], updatedAt: Date.now() } : page) },
       }));
       setTool("select");
+      setActiveSection("write");
       setRestoreMessage(lang === "ar" ? "أُدرجت الصورة داخل الورقة. استخدم التحديد للتحريك والتكبير." : "Image placed on the paper. Use Select to move or resize.");
     } finally { setImportingImage(false); }
   }
@@ -1192,6 +1198,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
       activePage: { ...prior.activePage, [section]: id },
     }));
     setTool("type");
+    setActiveSection("write");
   }
 
   function splitCurrentPage(fittingIndex: number) {
@@ -1246,6 +1253,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
       ...prior, activePage: { ...prior.activePage, [section]: page.id },
     }));
     setTool("type");
+    setActiveSection("write");
   }
 
   function backup() {
@@ -1475,18 +1483,18 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           {activeSection === "insert" && (
             <section id="notebook-section-insert" aria-label={lang === "ar" ? "إدراج العناصر" : "Insert content"}>
           <div className="mt-2 flex flex-wrap gap-2 rounded-xl border border-[#d5c8b6] bg-white/85 p-2">
-            <button type="button" onClick={() => { setTool("type"); setShowInlineTools(open => !open); }}
+            <button type="button" onClick={() => { setTool("type"); setShowInlineTools(open => !open); setShowStudyWidgets(false); setShowStickerPalette(false); }}
               aria-expanded={showInlineTools}
               className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-teal-300 bg-teal-50 px-3 py-2 text-xs font-bold text-teal-900">
               <Type className="size-4" /> {lang === "ar" ? "إدراج داخل النص" : "Insert into text"}
             </button>
-            <button type="button" onClick={() => setShowStudyWidgets(open => !open)}
+            <button type="button" onClick={() => { setShowStudyWidgets(open => !open); setShowInlineTools(false); setShowStickerPalette(false); }}
               disabled={!storageWritable}
               aria-expanded={showStudyWidgets}
               className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
               <BookOpenText className="size-4" /> {lang === "ar" ? "عناصر الدراسة" : "Study elements"}
             </button>
-            <button type="button" onClick={() => setShowStickerPalette(open => !open)}
+            <button type="button" onClick={() => { setShowStickerPalette(open => !open); setShowInlineTools(false); setShowStudyWidgets(false); }}
               disabled={!storageWritable || current.objects.length >= MAX_NOTEBOOK_OBJECTS}
               aria-expanded={showStickerPalette}
               className="inline-flex min-h-9 items-center gap-2 rounded-lg border border-[#c9bba8] px-3 py-2 text-xs font-bold text-[#40382F] disabled:opacity-40">
