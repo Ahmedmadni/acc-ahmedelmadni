@@ -287,13 +287,19 @@ function NotebookPaper({
     if (!startTime.current) startTime.current = e.timeStamp;
     const point = toPoint(e);
     if (tool === "select") {
-      const index = nearestInkStrokeIndex(page.strokes, point.x, point.y, 20);
+      const previouslyChosen = page.strokes.find(stroke => stroke.id === selectedStrokeId);
+      const handleBounds = previouslyChosen ? strokeBounds(previouslyChosen) : null;
+      const draggingHandle = !!handleBounds &&
+        Math.abs(point.x - handleBounds.x - handleBounds.width) < 24 &&
+        Math.abs(point.y - handleBounds.y - handleBounds.height) < 24;
+      const index = draggingHandle
+        ? page.strokes.findIndex(stroke => stroke.id === selectedStrokeId)
+        : nearestInkStrokeIndex(page.strokes, point.x, point.y, 20);
       setSelectedObjectId(null);
+      setPreview(null);
       if (index < 0) { setSelectedStrokeId(null); return; }
       const stroke = page.strokes[index], bounds = strokeBounds(stroke);
-      const nearHandle = stroke.id === selectedStrokeId &&
-        Math.abs(point.x - bounds.x - bounds.width) < 24 &&
-        Math.abs(point.y - bounds.y - bounds.height) < 24;
+      const nearHandle = draggingHandle && stroke.id === selectedStrokeId;
       setSelectedStrokeId(stroke.id);
       selectionDrag.current = {
         pointerId: e.pointerId, kind: "stroke", id: stroke.id,
