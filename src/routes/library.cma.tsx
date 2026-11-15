@@ -206,6 +206,7 @@ function CmaPage() {
                   setPart(value);
                   setStudyUnit("all");
                   setDomain("all");
+                  setQuery("");
                   setSelectedId(null);
                   setAnswers({});
                   setShowUnitReview(false);
@@ -258,6 +259,8 @@ function CmaPage() {
                   aria-pressed={studyUnit === value}
                   onClick={() => {
                     setStudyUnit(value);
+                    setDomain("all");
+                    setQuery("");
                     setSelectedId(null);
                     setAnswers({});
                     setShowUnitReview(false);
