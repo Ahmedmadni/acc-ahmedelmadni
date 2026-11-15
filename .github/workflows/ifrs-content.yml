@@ -48,6 +48,8 @@ jobs:
           node --test scripts/tests/ifrsquiz-import.test.mjs
       - name: Original IFRS bilingual exam-practice batch
         run: node scripts/check-ifrs-original-practice.mjs
+      - name: English-first CMA and IFRS library language regression
+        run: node --test scripts/tests/library-study-language.test.mjs
       - name: CMA content integrity
         run: npm run cma:check-content
       - name: CMA translation validation

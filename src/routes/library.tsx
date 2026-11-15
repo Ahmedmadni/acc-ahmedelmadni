@@ -1,6 +1,6 @@
 import { useSiteLang } from "@/lib/use-site-lang";
 import { createFileRoute, Link, Outlet, useChildMatches } from "@tanstack/react-router";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowLeft,
@@ -16,6 +16,7 @@ import {
   Minimize2,
 } from "lucide-react";
 import { type Lang } from "@/lib/i18n";
+import { studySectionForPath, useLibraryStudyLanguage } from "@/lib/library-study-language";
 
 export const Route = createFileRoute("/library")({
   head: () => {
@@ -60,7 +61,7 @@ export const Route = createFileRoute("/library")({
   component: LibraryLayout,
 });
 
-const LibLangCtx = createContext<Lang>("ar");
+const LibLangCtx = createContext<Lang>("en");
 export function useLibLang(): Lang {
   return useContext(LibLangCtx);
 }
@@ -71,11 +72,33 @@ export function useLibFocus(): boolean {
 }
 
 function LibraryLayout() {
-  const [lang, setLang] = useSiteLang();
+  const [siteLang, setSiteLang] = useSiteLang();
+  const [studyLanguages, setStudyLanguage] = useLibraryStudyLanguage();
   const [focus, setFocus] = useState(false);
-  const isRTL = lang === "ar";
   const matches = useChildMatches();
   const path = matches[matches.length - 1]?.pathname ?? "/library";
+  const studySection = studySectionForPath(path);
+  const lang = studySection ? studyLanguages[studySection] : siteLang;
+  const isRTL = lang === "ar";
+
+  // Scoped study-language changes also update accessibility metadata, without
+  // changing the language selection of the rest of the portfolio.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+    return () => {
+      document.documentElement.lang = siteLang;
+      document.documentElement.dir = siteLang === "ar" ? "rtl" : "ltr";
+    };
+  }, [lang, isRTL, siteLang]);
+
+  function toggleLibraryLanguage() {
+    if (studySection) {
+      setStudyLanguage(studySection, lang === "en" ? "ar" : "en");
+    } else {
+      setSiteLang(lang === "en" ? "ar" : "en");
+    }
+  }
   const current: "standards" | "cma" | "courses" | "books" | "articles" | "templates" =
     path.includes("/library/standards")
       ? "standards"
@@ -161,12 +184,13 @@ function LibraryLayout() {
                     {lang === "ar" ? "المكتبة المحاسبية" : "Accounting Library"}
                   </h1>
                   <button
-                    onClick={() => setLang((l) => (l === "ar" ? "en" : "ar"))}
+                    onClick={toggleLibraryLanguage}
                     className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.04] px-3 py-1.5 text-xs font-bold text-[#c9a986] transition-all hover:bg-[#A88765]/15"
-                    aria-label="Toggle language"
+                    aria-label={lang === "ar" ? "Switch to English" : "التبديل إلى العربية"}
+                    title={lang === "ar" ? "Switch to English" : "التبديل إلى العربية"}
                   >
                     <Languages className="size-3.5" />
-                    {lang === "ar" ? "EN" : "AR"}
+                    {lang === "ar" ? "English" : "العربية"}
                   </button>
                 </div>
               </motion.header>
@@ -207,6 +231,18 @@ function LibraryLayout() {
           </AnimatePresence>
 
           <Outlet />
+
+          {focus && studySection && (
+            <button
+              type="button"
+              onClick={toggleLibraryLanguage}
+              aria-label={lang === "ar" ? "Switch study language to English" : "تبديل لغة الدراسة إلى العربية"}
+              className="fixed bottom-20 left-6 z-[60] inline-flex min-h-10 items-center gap-2 rounded-full border border-[#A88765]/45 bg-[#1C1B19]/90 px-4 py-2 text-xs font-bold text-[#c9a986] shadow-xl shadow-black/40 backdrop-blur-xl transition hover:bg-[#A88765]/15"
+            >
+              <Languages className="size-3.5" />
+              {lang === "ar" ? "English" : "العربية"}
+            </button>
+          )}
 
           <button
             type="button"
