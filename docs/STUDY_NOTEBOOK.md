@@ -33,6 +33,7 @@ A source audit identified and corrected these interaction defects:
 4. **JSON backup recovery:** exporting a JSON backup previously had no matching importer. An import control now accepts a validated version-1 backup, imposes a file-size limit, requires confirmation before overwriting both sections, and restores each page, ink and selected page.
 5. **Regression checks:** new automated cases verify eraser hits between two pen samples, complete backup restore, existing-section isolation and nonmutating recognition after multiple old strokes.
 6. **Right-to-left controls:** the floating notebook opener now stays on the right so it cannot overlap the existing left-positioned Focus Mode control when the study interface switches to Arabic. Editable handwriting recognition results explicitly use native browser spellchecking when available.
+7. **Protect unreadable saved notes:** invalid or incompatible data in localStorage no longer gets silently replaced with the default blank notebook. The writer suspends saving until the learner intentionally restores a compatible JSON backup or explicitly confirms starting a new notebook. This prevents the hydration race from destroying a damaged but potentially recoverable local record.
 
 ### Still dependent on real-device testing
 
