@@ -239,7 +239,7 @@ test("Regression against basic press-and-release eraser and desktop modal-open m
   assert.match(component,/nearestInkStrokeIndex\(strokeBuffer\.current/);
   assert.match(component,/if \(tool === "eraser" && activeEraser\.current === e\.pointerId\)/);
   assert.match(component,/startTime\.current = e\.timeStamp/);
-  assert.doesNotMatch(component,/startTime\.current = e\.timeStamp;\s*const point/);
+  assert.match(component,/if \(!startTime\.current\) startTime\.current = e\.timeStamp;/);
   assert.match(component,/window\.matchMedia\("\(min-width: 1280px\)"\)\.matches/);
   assert.match(component,/validateNotebookBackup\(JSON\.parse\(await file\.text\(\)\)\)/);
   assert.match(component,/window\.confirm/);
