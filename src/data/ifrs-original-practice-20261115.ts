@@ -122,7 +122,7 @@ export const IFRS_ORIGINAL_ADDITIONAL_QUESTIONS: ExamQuestion[] = [
     "answerIndex": 3,
     "explanation": {
       "en": "Recoverable amount is the higher of 210 and 222 = 222. Impairment equals 250 − 222 = 28, assuming the single-asset impairment test applies.",
-      "ar": "القيمة القابلة للاسترداد هي الأكبر من 210 و222، أي 222. خسارة الانخفاض = 250 − 222 = 28."
+      "ar": "القيمة القابلة للاسترداد هي الأكبر من القيمة في الاستخدام 210 والقيمة العادلة بعد تكاليف الاستبعاد 222، أي 222. خسارة انخفاض القيمة = القيمة الدفترية 250 − القيمة القابلة للاسترداد 222 = 28."
     },
     "reference": "IAS 36.18, 59 — original study question",
     "difficulty": "easy",
