@@ -11,6 +11,7 @@ import {
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
   NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
   notebookPaperBackground, notebookStrokePath, nearestInkStrokeIndex, validateNotebookBackup, splitNotebookText,
+  notebookFlowPlainText, MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_FLOW_BLOCKS,
   strokeBounds, transformNotebookStroke, clampNotebookObject,
   MAX_NOTEBOOK_OBJECTS, MAX_IMAGES_PER_PAGE,
   MAX_WIDGET_TITLE_LENGTH, MAX_WIDGET_TEXT_LENGTH, MAX_WIDGET_CELL_LENGTH, MAX_WIDGET_ITEMS, MAX_WIDGET_ROWS,
@@ -18,6 +19,10 @@ import {
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
+import { NotebookFlowEditor } from "@/components/library/NotebookFlowEditor";
+import { NOTEBOOK_FORMULA_PRESETS, insertFlowFormula, insertFlowTable,
+  notebookFlowParagraph, notebookTableTemplate,
+  type NotebookFlowCursor, type NotebookFlowTableTemplate } from "@/lib/study-notebook-flow";
 import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
 import { createStudyWidget, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
@@ -127,14 +132,19 @@ function lastFittingTextIndex(editor: HTMLTextAreaElement, text: string) {
   }
 }
 
+type NotebookInsertRequest =
+  | { id: number; kind: "formula"; formula: string }
+  | { id: number; kind: "table"; template: NotebookFlowTableTemplate };
+
 function NotebookPaper({
-  page, tool, inkColor, highlighterColor, inkWidth, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, canAddPage, undoInk, redoInk, canUndoInk, canRedoInk, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
   inkColor: string;
   highlighterColor: string;
   inkWidth: number;
+  insertRequest: NotebookInsertRequest | null;
   onChange: (change: Partial<NotebookPage>) => void;
   onSplit: (fittingIndex: number) => void;
   canAddPage: boolean;
@@ -151,6 +161,9 @@ function NotebookPaper({
   strokeBuffer.current = page.strokes;
   const sheet = useRef<HTMLDivElement | null>(null);
   const textEditor = useRef<HTMLTextAreaElement | null>(null);
+  const plainCursor = useRef<{ start: number; end: number } | null>(null);
+  const flowCursor = useRef<NotebookFlowCursor | null>(null);
+  const lastInsertId = useRef(-1);
   const [textOverflows, setTextOverflows] = useState(false);
   const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
@@ -181,6 +194,8 @@ function NotebookPaper({
     activeEraser.current = null;
     startTime.current = 0;
     strokeBuffer.current = page.strokes;
+    plainCursor.current = null;
+    flowCursor.current = null;
     setRecognized(null);
     setRecognizedText("");
     setRecognitionError("");
@@ -204,11 +219,51 @@ function NotebookPaper({
   const margin = 43 * scale;
   const paper = notebookPaperBackground(page.pattern, page.shade, lineGap);
 
+  function updateFlow(blocks: NotebookFlowBlock[]) {
+    onChange({ flow: blocks, text: notebookFlowPlainText(blocks).slice(0, MAX_NOTE_TEXT_LENGTH) });
+  }
+
+  useEffect(() => {
+    if (!insertRequest || lastInsertId.current === insertRequest.id) return;
+    lastInsertId.current = insertRequest.id;
+    const initial = page.flow?.length
+      ? page.flow : [notebookFlowParagraph(newId(), page.text)];
+    const textNode = textEditor.current;
+    const selection = page.flow?.length
+      ? flowCursor.current
+      : { blockId: initial[0].id,
+          start: plainCursor.current?.start ?? textNode?.selectionStart ?? page.text.length,
+          end: plainCursor.current?.end ?? textNode?.selectionEnd ?? page.text.length };
+    if (insertRequest.kind === "formula") {
+      const result = insertFlowFormula(initial, selection, insertRequest.formula);
+      updateFlow(result.blocks);
+      flowCursor.current = result.cursor;
+    } else {
+      const table = notebookTableTemplate(insertRequest.template, page.direction, newId());
+      const result = insertFlowTable(initial, selection, table, newId);
+      updateFlow(result.blocks);
+      flowCursor.current = result.cursor;
+    }
+    window.requestAnimationFrame(() => {
+      const next = flowCursor.current;
+      if (!next) return;
+      const selector = `[data-notebook-flow-paragraph="${CSS.escape(next.blockId)}"]`;
+      const element = sheet.current?.querySelector<HTMLTextAreaElement>(selector);
+      if (element) {
+        element.focus();
+        element.setSelectionRange(next.start, next.end);
+      }
+    });
+  // A request is a one-time user gesture; page content changes are not new insertions.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [insertRequest?.id]);
+
   useLayoutEffect(() => {
     const editor = textEditor.current;
+    if (page.flow?.length) { setTextOverflows(false); return; }
     if (!editor) return;
     setTextOverflows(editor.scrollHeight > editor.clientHeight + 2);
-  }, [page.id, page.text, page.spacing, page.direction, page.typeface, page.size, width]);
+  }, [page.id, page.text, page.flow, page.spacing, page.direction, page.typeface, page.size, width]);
 
   function continueOnNewPage() {
     const editor = textEditor.current;
@@ -437,10 +492,17 @@ function NotebookPaper({
 
   function acceptRecognition() {
     if (!recognizedText.trim()) return;
-    onChange({
-      text: [page.text.trimEnd(), recognizedText.trim()].filter(Boolean).join("\n"),
-      ...(keepOriginalInk ? {} : { strokes: [] }),
-    });
+    if (page.flow?.length) {
+      const continuation = notebookFlowParagraph(newId(), recognizedText.trim());
+      const blocks = [...page.flow, continuation];
+      onChange({ flow: blocks, text: notebookFlowPlainText(blocks),
+        ...(keepOriginalInk ? {} : { strokes: [] }) });
+    } else {
+      onChange({
+        text: [page.text.trimEnd(), recognizedText.trim()].filter(Boolean).join("\n"),
+        ...(keepOriginalInk ? {} : { strokes: [] }),
+      });
+    }
     setRecognized(null);
     setRecognizedText("");
   }
@@ -470,6 +532,14 @@ function NotebookPaper({
         {page.pattern !== "blank" && (
           <div className="pointer-events-none absolute inset-y-0 z-[1] w-px bg-rose-400/30" style={{ insetInlineStart: margin }} />
         )}
+        {page.flow?.length ? (
+          <NotebookFlowEditor
+            blocks={page.flow} direction={page.direction} typeface={page.typeface}
+            lineGap={lineGap} margin={margin} tool={tool}
+            onChange={updateFlow}
+            onCursor={cursor => { flowCursor.current = cursor; }}
+          />
+        ) : (
         <textarea
           ref={textEditor}
           aria-label={lang === "ar" ? "كتابة الملاحظات" : "Notebook typing area"}
@@ -479,6 +549,15 @@ function NotebookPaper({
           maxLength={MAX_NOTE_TEXT_LENGTH}
           value={page.text}
           onChange={(e) => onChange({ text: e.target.value })}
+          onSelect={e => { plainCursor.current = {
+            start: e.currentTarget.selectionStart, end: e.currentTarget.selectionEnd,
+          }; }}
+          onClick={e => { plainCursor.current = {
+            start: e.currentTarget.selectionStart, end: e.currentTarget.selectionEnd,
+          }; }}
+          onKeyUp={e => { plainCursor.current = {
+            start: e.currentTarget.selectionStart, end: e.currentTarget.selectionEnd,
+          }; }}
           placeholder={tool === "type" ? (lang === "ar" ? "اكتب ملاحظاتك هنا..." : "Start writing notes here...") : undefined}
           className="absolute inset-0 z-[2] h-full w-full resize-none border-0 bg-transparent text-[#25272c] outline-none placeholder:opacity-40"
           style={{
@@ -493,6 +572,7 @@ function NotebookPaper({
             backgroundAttachment: "local",
           }}
         />
+        )}
         <svg
           className="absolute inset-0 z-[3] h-full w-full"
           viewBox={`0 0 ${NOTEBOOK_DESIGN_WIDTH} ${height}`}
