@@ -159,6 +159,48 @@ export function pageStrokePath(points: readonly InkPoint[]): string {
   return path;
 }
 
+/** Eraser tests the whole polyline segment, not merely recorded samples.
+ * This prevents a visually continuous stroke from being "uneraseable" between points.
+ */
+export function nearestInkStrokeIndex(
+  strokes: readonly NotebookStroke[],
+  x: number,
+  y: number,
+  radius = 18,
+): number {
+  let match = -1;
+  let bestDistance = radius;
+  for (let i = 0; i < strokes.length; i++) {
+    const points = strokes[i].points;
+    for (let j = 0; j < points.length; j++) {
+      const a = points[j];
+      const b = points[Math.min(j + 1, points.length - 1)];
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const lengthSq = dx * dx + dy * dy;
+      const t = lengthSq > 0 ? Math.max(0, Math.min(1,
+        ((x - a.x) * dx + (y - a.y) * dy) / lengthSq)) : 0;
+      const distance = Math.hypot(x - (a.x + dx * t), y - (a.y + dy * t));
+      if (distance <= bestDistance) {
+        bestDistance = distance;
+        match = i;
+      }
+    }
+  }
+  return match;
+}
+
+/** Prevent accidental restoration from arbitrary JSON that resembles a notebook.
+ * Data is validated/clamped again by normalizeNotebook.
+ */
+export function validateNotebookBackup(source: unknown): NotebookStore {
+  if (!validRecord(source) || source.version !== 1 || !validRecord(source.pages) ||
+    !Array.isArray(source.pages.cma) || !Array.isArray(source.pages.standards)) {
+    throw new Error("Invalid study notebook backup: expected a version-1 notebook with both study sections.");
+  }
+  return normalizeNotebook(source);
+}
+
 export function notebookPaperBackground(pattern: PaperPattern, shade: PaperShade, gap: number) {
   const colors: Record<PaperShade, string> = {
     white: "#fdfefe", ivory: "#fcfaf3", cream: "#f4ead4", blue: "#eaf4f8",

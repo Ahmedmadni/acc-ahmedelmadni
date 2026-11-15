@@ -42,12 +42,20 @@ export async function recognizeNotebookInk(
   let drawing: HandwritingDrawingLike | null = null;
   try {
     drawing = recognizer.startDrawing({ recognitionType: "text", alternatives: 2 });
+    // All strokes must share one monotonically increasing drawing clock.
+    // Older saved pages may have timestamps resetting to zero for each stroke.
+    let drawingTime = 0;
     for (const stroke of strokes) {
       if (!stroke.points.length) continue;
       const ink = new win.HandwritingStroke!();
+      const start = stroke.points[0].t;
+      let lastTime = drawingTime;
       for (const point of stroke.points) {
-        ink.addPoint({ x: point.x, y: point.y, t: point.t });
+        const t = Math.max(lastTime, drawingTime + Math.max(0, point.t - start));
+        ink.addPoint({ x: point.x, y: point.y, t });
+        lastTime = t;
       }
+      drawingTime = lastTime + 20;
       drawing.addStroke(ink);
     }
     const predictions = await drawing.getPrediction();

@@ -22,6 +22,26 @@ This component is part of the accounting library. It is intentionally **not** a 
 - Optional Google Fonts depend on a network connection for their initial load; offline fallback typefaces are provided.
 - This notebook does not copy pages or ink from other projects such as MemoFlow.
 
+
+## Functional review — 15 November 2026 (second pass)
+
+A source audit identified and corrected these interaction defects:
+
+1. **Pen eraser:** previously erased only at the initial press and only when the press was near a sampled vertex. The revised eraser captures the pointer for the whole drag and tests proximity against each complete polyline segment, so fast, sparse pen strokes can be erased consistently.
+2. **Desktop/mobile opening:** previously the floating opener set mobile-dialog state unconditionally, even on a desktop. Desktop now opens the dock directly, while tablet/phone opens the modal drawer. The mobile drawer also suppresses background document scrolling while active.
+3. **Handwriting timing:** old captured strokes restarted timestamps at zero independently. New input uses a common drawing start and, critically, transcription normalizes even older ink to an increasing timeline before handing it to the browser recognition API. Original stored ink point coordinates and times remain unchanged.
+4. **JSON backup recovery:** exporting a JSON backup previously had no matching importer. An import control now accepts a validated version-1 backup, imposes a file-size limit, requires confirmation before overwriting both sections, and restores each page, ink and selected page.
+5. **Regression checks:** new automated cases verify eraser hits between two pen samples, complete backup restore, existing-section isolation and nonmutating recognition after multiple old strokes.
+6. **Right-to-left controls:** the floating notebook opener now stays on the right so it cannot overlap the existing left-positioned Focus Mode control when the study interface switches to Arabic. Editable handwriting recognition results explicitly use native browser spellchecking when available.
+7. **Protect unreadable saved notes:** invalid or incompatible data in localStorage no longer gets silently replaced with the default blank notebook. The writer suspends saving until the learner intentionally restores a compatible JSON backup or explicitly confirms starting a new notebook. This prevents the hydration race from destroying a damaged but potentially recoverable local record.
+
+### Still dependent on real-device testing
+
+- Browser/OS handwriting recognition support varies. A mocked recognizer demonstrates correct API data handling; it cannot validate recognition accuracy on an actual Apple Pencil/S Pen tablet, nor guarantee Arabic recognition.
+- Browser-font rendering/baselines may differ between installed fonts. Paper row pitch and keyboard line-height share a formula, but a real-device visual baseline inspection is recommended.
+- Very long typed passages can scroll inside a single paper view while ink is anchored to the physical sheet. Use separate notebook pages for lengthy content and do not treat this as infinite canvas pagination.
+- Local storage has device/browser quota and offers no multi-device sync. Save JSON backups before clearing browser data.
+
 ## Validation
 
 `node --test scripts/tests/study-notebook.test.mjs` covers page isolation, JSON round-trip, malformed data handling, paper backgrounds, curve geometry, unsupported browser behavior, mocked successful device recognition, and layout integration. The accounting GitHub Actions workflow also checks IFRS/CMA content, the production build, TypeScript and ESLint.

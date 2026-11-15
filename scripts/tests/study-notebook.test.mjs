@@ -181,3 +181,74 @@ test("Sidebar exists only for CMA and IFRS, leaves mobile lessons unobstructed a
   assert.match(component, /onChange\(\{\s*text:[^}]+strokes: \[\]/);
   assert.match(component, /application\/json/);
 });
+
+test("Eraser hits line segments between sampled stylus points and ignores distant ink", () => {
+  const strokes = [
+    { id:"horizontal", width:3, points:[{x:10,y:20},{x:110,y:20}] },
+    { id:"vertical", width:3, points:[{x:300,y:300},{x:300,y:420}] },
+  ];
+  assert.equal(notebook.nearestInkStrokeIndex(strokes, 63, 22, 15), 0);
+  assert.equal(notebook.nearestInkStrokeIndex(strokes, 303, 370, 15), 1);
+  assert.equal(notebook.nearestInkStrokeIndex(strokes, 200, 200, 15), -1);
+  assert.equal(notebook.nearestInkStrokeIndex([], 40, 20), -1);
+});
+
+test("Restoring backup rejects unrelated JSON and preserves section pages and active selection", () => {
+  assert.throws(() => notebook.validateNotebookBackup(null), /Invalid study notebook backup/);
+  assert.throws(() => notebook.validateNotebookBackup({ version:1, pages: { cma:[] } }), /Invalid study notebook backup/);
+  const original=notebook.emptyNotebook();
+  original.pages.cma.push(notebook.createNotebookPage("another", "rtl"));
+  original.activePage.cma="another";
+  original.pages.standards[0].text="IFRS 17 note";
+  const restored=notebook.validateNotebookBackup(JSON.parse(JSON.stringify(original)));
+  assert.equal(restored.pages.cma.length, 2);
+  assert.equal(restored.activePage.cma, "another");
+  assert.equal(restored.pages.standards[0].text, "IFRS 17 note");
+});
+
+test("Handwriting timestamps stay monotonic across multiple legacy strokes, without changing ink", async () => {
+  const received = [];
+  let cleared = 0, finished = 0;
+  class Stroke {
+    addPoint(point) { received.push(point); }
+  }
+  const nav = { async createHandwritingRecognizer() { return {
+    startDrawing() { return {
+      addStroke() {},
+      getPrediction: async () => [{ text: "hello" }],
+      clear() { cleared++; },
+    }; },
+    finish() { finished++; },
+  }; } };
+  const strokes = [
+    { id: "old1", points: [{ x: 1, y: 2, t: 0 }, { x: 2, y: 2, t: 30 }] },
+    { id: "old2", points: [{ x: 9, y: 2, t: 0 }, { x: 11, y: 2, t: 10 }] },
+  ];
+  const before=JSON.stringify(strokes);
+  const predicted=await recognizer.recognizeNotebookInk(strokes, "ltr", nav, { HandwritingStroke: Stroke });
+  assert.equal(predicted[0], "hello");
+  assert.deepEqual(received.map(point => point.t), [0,30,50,60]);
+  assert.equal(JSON.stringify(strokes), before);
+  assert.equal(cleared,1);
+  assert.equal(finished,1);
+});
+
+test("Regression against basic press-and-release eraser and desktop modal-open mismatch", async () => {
+  const component=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(component,/activeEraser\.current = e\.pointerId/);
+  assert.match(component,/nearestInkStrokeIndex\(strokeBuffer\.current/);
+  assert.match(component,/if \(tool === "eraser" && activeEraser\.current === e\.pointerId\)/);
+  assert.match(component,/startTime\.current = e\.timeStamp/);
+  assert.match(component,/if \(!startTime\.current\) startTime\.current = e\.timeStamp;/);
+  assert.match(component,/window\.matchMedia\("\(min-width: 1280px\)"\)\.matches/);
+  assert.match(component,/validateNotebookBackup\(JSON\.parse\(await file\.text\(\)\)\)/);
+  assert.match(component,/if \(saved\) setStore\(validateNotebookBackup\(JSON\.parse\(saved\)\)\)/,
+    "Unrecognized stored data must not be silently replaced with the empty template");
+  assert.match(component,/if \(!hydrated \|\| !storageWritable\) return;/,
+    "Storage writes must not destroy an unreadable prior notebook");
+  assert.match(component,/setStorageWritable\(true\)/,
+    "Users can restore a valid backup and resume saving");
+  assert.match(component,/bottom-5 right-5/,
+    "Open notebook control must not collide with bottom-left Focus Mode in RTL");
+  assert.match(component,/window\.confirm/);
+});

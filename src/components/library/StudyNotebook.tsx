@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
-  BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2,
+  BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2, Upload,
   NotebookPen, PenLine, RotateCcw, ScanText,
   Settings2, Trash2, Type, X,
 } from "lucide-react";
@@ -9,8 +9,8 @@ import type { StudySection } from "@/lib/library-study-language";
 import {
   createNotebookPage, emptyNotebook, MAX_INK_POINTS, MAX_INK_STROKES,
   MAX_NOTE_TEXT_LENGTH, MAX_NOTEBOOK_PAGES, NOTEBOOK_DESIGN_WIDTH,
-  NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY, normalizeNotebook,
-  notebookPaperBackground, pageStrokePath,
+  NOTEBOOK_SIZES, NOTEBOOK_STORAGE_KEY,
+  notebookPaperBackground, pageStrokePath, nearestInkStrokeIndex, validateNotebookBackup,
   type InkPoint, type NotebookPage, type NotebookStore, type NotebookStroke,
   type NotebookTool, type PaperPattern, type PaperShade, type PaperSize,
 } from "@/lib/study-notebook";
@@ -85,17 +85,6 @@ function download(name: string, text: string, mime = "application/json") {
   anchor.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-function nearestStroke(strokes: NotebookStroke[], point: InkPoint) {
-  let best = -1, distance = Infinity;
-  strokes.forEach((stroke, index) => {
-    for (const p of stroke.points) {
-      const d = Math.hypot(p.x - point.x, p.y - point.y);
-      if (d < distance) { best = index; distance = d; }
-    }
-  });
-  return distance <= 25 ? best : -1;
-}
-
 function NotebookPaper({
   page, tool, inkColor, inkWidth, onChange, lang,
 }: {
@@ -108,6 +97,9 @@ function NotebookPaper({
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
   const startTime = useRef(0);
+  const activeEraser = useRef<number | null>(null);
+  const strokeBuffer = useRef<NotebookStroke[]>(page.strokes);
+  strokeBuffer.current = page.strokes;
   const sheet = useRef<HTMLDivElement | null>(null);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
   const [width, setWidth] = useState(330);
@@ -121,6 +113,9 @@ function NotebookPaper({
   useEffect(() => {
     setPreview(null);
     drawing.current = null;
+    activeEraser.current = null;
+    startTime.current = 0;
+    strokeBuffer.current = page.strokes;
     setRecognized(null);
     setRecognizedText("");
     setRecognitionError("");
@@ -162,11 +157,13 @@ function NotebookPaper({
   function pointerDown(e: PointerEvent<SVGSVGElement>) {
     if (tool === "type" || (e.pointerType === "mouse" && e.button !== 0)) return;
     if (tool === "pen" && page.strokes.length >= MAX_INK_STROKES) return;
-    startTime.current = e.timeStamp;
+    if (!startTime.current) startTime.current = e.timeStamp;
     const point = toPoint(e);
     if (tool === "eraser") {
-      const index = nearestStroke(page.strokes, point);
-      if (index >= 0) onChange({ strokes: page.strokes.filter((_, i) => i !== index) });
+      activeEraser.current = e.pointerId;
+      e.currentTarget.setPointerCapture(e.pointerId);
+      eraseAt(point);
+      e.preventDefault();
       return;
     }
     const stroke: NotebookStroke = {
@@ -178,7 +175,20 @@ function NotebookPaper({
     e.preventDefault();
   }
 
+  function eraseAt(point: InkPoint) {
+    const index = nearestInkStrokeIndex(strokeBuffer.current, point.x, point.y, 25);
+    if (index < 0) return;
+    const next = strokeBuffer.current.filter((_, i) => i !== index);
+    strokeBuffer.current = next;
+    onChange({ strokes: next });
+  }
+
   function pointerMove(e: PointerEvent<SVGSVGElement>) {
+    if (tool === "eraser" && activeEraser.current === e.pointerId) {
+      eraseAt(toPoint(e));
+      e.preventDefault();
+      return;
+    }
     const active = drawing.current;
     if (!active || tool !== "pen" || !e.currentTarget.hasPointerCapture(e.pointerId)) return;
     const samples = e.nativeEvent.getCoalescedEvents?.() ?? [e.nativeEvent];
@@ -197,6 +207,11 @@ function NotebookPaper({
   }
 
   function pointerEnd(e: PointerEvent<SVGSVGElement>) {
+    if (activeEraser.current === e.pointerId) {
+      activeEraser.current = null;
+      if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId);
+      return;
+    }
     const active = drawing.current;
     if (!active) return;
     if (active.points.length < MAX_INK_POINTS) active.points.push(toPoint(e));
@@ -324,7 +339,7 @@ function NotebookPaper({
               {recognized.map((item, i) => <option key={i} value={item}>{item.slice(0, 70)}</option>)}
             </select>
           )}
-          <textarea rows={3} value={recognizedText} dir={page.direction}
+          <textarea rows={3} spellCheck value={recognizedText} dir={page.direction}
             onChange={(e) => setRecognizedText(e.target.value)}
             aria-label={lang === "ar" ? "راجع الكتابة التي تم التعرف عليها" : "Review recognized text"}
             className="w-full rounded-lg border border-emerald-200 bg-white p-2 text-sm text-[#212c25]" />
@@ -348,6 +363,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
 }) {
   const [store, setStore] = useState<NotebookStore>(emptyNotebook);
   const [hydrated, setHydrated] = useState(false);
+  const [storageWritable, setStorageWritable] = useState(true);
   const latest = useRef(store);
   const [saveError, setSaveError] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -355,6 +371,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
   const [inkColor, setInkColor] = useState("#24334a");
   const [inkWidth, setInkWidth] = useState(2.9);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [restoreMessage, setRestoreMessage] = useState("");
+  const backupInput = useRef<HTMLInputElement | null>(null);
   latest.current = store;
   const sectionPages = store.pages[section];
   const current = sectionPages.find((p) => p.id === store.activePage[section]) ?? sectionPages[0];
@@ -362,16 +380,18 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(NOTEBOOK_STORAGE_KEY);
-      if (saved) setStore(normalizeNotebook(JSON.parse(saved)));
+      if (saved) setStore(validateNotebookBackup(JSON.parse(saved)));
     } catch {
-      // Bad or unavailable saved data must not crash lessons.
+      // Never overwrite unreadable saved notes with an empty default notebook.
+      // Only a deliberate user restore or reset may resume persistence.
+      setStorageWritable(false);
       setSaveError(true);
     }
     setHydrated(true);
   }, []);
 
   useEffect(() => {
-    if (!hydrated) return;
+    if (!hydrated || !storageWritable) return;
     const handle = window.setTimeout(() => {
       try {
         localStorage.setItem(NOTEBOOK_STORAGE_KEY, JSON.stringify(store));
@@ -379,14 +399,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
       } catch { setSaveError(true); }
     }, 350);
     return () => window.clearTimeout(handle);
-  }, [hydrated, store]);
+  }, [hydrated, store, storageWritable]);
 
   useEffect(() => {
     return () => {
-      if (!hydrated) return;
+      if (!hydrated || !storageWritable) return;
       try { localStorage.setItem(NOTEBOOK_STORAGE_KEY, JSON.stringify(latest.current)); } catch { /* export remains available */ }
     };
-  }, [hydrated]);
+  }, [hydrated, storageWritable]);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -395,9 +415,14 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
 
   useEffect(() => {
     if (!mobileOpen) return;
+    const priorOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     const listener = (e: KeyboardEvent) => { if (e.key === "Escape") setMobileOpen(false); };
     window.addEventListener("keydown", listener);
-    return () => window.removeEventListener("keydown", listener);
+    return () => {
+      window.removeEventListener("keydown", listener);
+      document.body.style.overflow = priorOverflow;
+    };
   }, [mobileOpen]);
 
   function updatePage(change: Partial<NotebookPage>) {
@@ -449,6 +474,29 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
 
   function backup() {
     download("accounting-study-notebook-backup.json", JSON.stringify(store, null, 2));
+    setRestoreMessage("");
+  }
+
+  async function restoreBackup(file: File) {
+    if (file.size > 6_000_000) throw new Error("Backup too large (maximum 6 MB).");
+    const restored = validateNotebookBackup(JSON.parse(await file.text()));
+    const approved = window.confirm(lang === "ar"
+      ? "سيتم استبدال جميع صفحات CMA وIFRS الحالية بمحتوى النسخة الاحتياطية. هل تريد المتابعة؟"
+      : "This replaces every current CMA and IFRS notebook page with the backup. Continue?");
+    if (!approved) return;
+    setStore(restored);
+    setStorageWritable(true);
+    setRestoreMessage(lang === "ar" ? "استُعيدت الصفحات بنجاح." : "Notebook backup restored.");
+    setSaveError(false);
+    setMobileOpen(false);
+  }
+
+  function openNotebook() {
+    if (window.matchMedia("(min-width: 1280px)").matches) {
+      onDesktopOpenChange(true);
+    } else {
+      setMobileOpen(true);
+    }
   }
 
   const currentIndex = sectionPages.findIndex((p) => p.id === current.id);
@@ -460,8 +508,8 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
       {!mobileOpen && (
         <button
           type="button"
-          onClick={() => { setMobileOpen(true); onDesktopOpenChange(true); }}
-          className={`fixed bottom-5 end-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
+          onClick={openNotebook}
+          className={`fixed bottom-5 right-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
           aria-label={LABELS.open[lang]}
           title={LABELS.open[lang]}
         >
@@ -599,6 +647,23 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
           </div>
 
           <div className="mt-5 flex flex-wrap gap-2 border-t border-[#d5c8b6] pt-4">
+            <input ref={backupInput} type="file" accept="application/json,.json" className="sr-only"
+              aria-label={lang === "ar" ? "اختيار نسخة احتياطية" : "Choose a notebook backup"}
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                event.target.value = "";
+                if (!file) return;
+                setRestoreMessage("");
+                void restoreBackup(file).catch((error: unknown) => {
+                  setRestoreMessage(lang === "ar"
+                    ? "تعذرت استعادة الملف. تأكد أنه نسخة احتياطية صحيحة من دفتر المذاكرة."
+                    : error instanceof Error ? error.message : "Could not import the backup.");
+                });
+              }} />
+            <button type="button" onClick={() => backupInput.current?.click()}
+              className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold">
+              <Upload className="size-3.5" /> {lang === "ar" ? "استعادة JSON" : "Restore JSON"}
+            </button>
             <button type="button" onClick={backup} title={LABELS.export[lang]}
               className="inline-flex min-h-9 items-center gap-1 rounded-lg border border-[#c9bba8] bg-white px-3 py-2 text-xs font-semibold">
               <Download className="size-3.5" /> {LABELS.export[lang]}
@@ -612,6 +677,22 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
               <Trash2 className="size-3.5" /> {LABELS.delete[lang]}
             </button>
           </div>
+          {restoreMessage && <p role="status" className="mt-2 text-xs leading-6 text-[#6b5236]">{restoreMessage}</p>}
+          {hydrated && !storageWritable && (
+            <button type="button"
+              onClick={() => {
+                const accepted = window.confirm(lang === "ar"
+                  ? "البيانات السابقة غير قابلة للقراءة. بدء دفتر جديد سيستبدلها نهائيا. هل تريد المتابعة؟"
+                  : "Previous saved data could not be read. Starting a new notebook will permanently replace it. Continue?");
+                if (!accepted) return;
+                setStore(emptyNotebook());
+                setStorageWritable(true);
+                setSaveError(false);
+              }}
+              className="mt-2 rounded-lg border border-red-300 bg-red-50 px-3 py-2 text-xs font-semibold text-red-700">
+              {lang === "ar" ? "بدء دفتر جديد بعد التأكيد" : "Start a new notebook after confirmation"}
+            </button>
+          )}
           <p aria-live="polite" className={`mt-3 text-xs ${saveError ? "text-red-700" : "text-[#827466]"}`}>
             {saveError ? LABELS.unsaved[lang] : hydrated ? LABELS.saved[lang] : "…"}
           </p>
