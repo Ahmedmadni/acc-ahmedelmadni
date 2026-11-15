@@ -256,7 +256,7 @@ export const ICMA_2024_PART2_E: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "Revenue                      $ 1,500,000\n           Cash exp.                           -300,000\n            Depreciation                                - 800,000\n                Pretax Income                $ 400,000\n          Tax at 40%                         -160,000\n         Add back depreciation               800,000\n                                               1,040,000\n\n             Sell land                           700,000\n          Tax on gain /land                     -80,000\n              Sell building                        800,000\n          Tax on loss/building                   80,000\n              Sell equipment                      120,000\n          Tax on on gain /equipment             -48,000\n                                               2,612,000",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-E-015",
@@ -1012,7 +1012,7 @@ export const ICMA_2024_PART2_E: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "The approximate internal rates of return are 19.5% and 25.5% as shown.\n\n      Project A: 77 + 26 = 103; 77 ÷ 103 = .75%; .75% x 2 = 1.5%; 18% + 1.5% = 19.5%\n      Project B: 30 + 11 = 41; 30 ÷ 41 - .73%: .73% x 2 = 1.5%; 24% + 1.5% = 25.5%",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-E-057",

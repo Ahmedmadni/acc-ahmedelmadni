@@ -418,7 +418,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 0,
     "explanation": "Kielly’s cost of capital is 12.22% as shown below.\n\n         Debt            30% x [11% (1 - .4)]           1.98%\n           Preferred stock           24% x 12%           2.88%\n          Equity                46% x 16%           7.36%\n                                                    12.22%",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-B-024",
@@ -832,7 +832,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 3,
     "explanation": "Rolling Stone should use of the methods presented except the use of drafts as shown\n     below.\n\n    Lockbox cost:     $25 x 170         =  $4,250\n          Savings      $5,240 - $4,250     =  $990\n     Drafts cost:        4,000 x $2        =  $8,000\n          Loss         $6,500 - $8,000     =  $(1,500)\n    Bank Float:        $1,000,000 x .02    =  $20,000\n          Savings      $22,000 - $20,000   =  $2,000\n     Electronic Trans.   700 x $18         =  $12,600\n          Savings      $14,000 - $12,600   =  $1,400",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-B-047",
@@ -1102,7 +1102,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 3,
     "explanation": "Atlantic should collect $25,000 of receivables, purchase $10,000 of inventory and\n     reduce current liabilities by $15,000. This is the only option that reduces short-term debt and thus lowers\n      the cost of debt while satisfying the loan covenant.",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-B-062",
@@ -1363,7 +1363,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     "pdfPage": 253,
     "cso": "2B4F",
     "los": "2B4g",
-    "question": "g\n     Megatech Inc. is a large publicly-held company. The treasurer is making an analysis of the short-\n     term financing options available for the third quarter, as the company will need an average of $8\n     million for the month of July, $12 million for August, and $10 million for September. The following\n     options are available.\n\n             I.      Issue commercial paper on July 1 in an amount sufficient to net Megatech $12 million at\n              an effective rate of 7% per year. Any temporarily excess funds will be deposited in\n              Megatech’s investment account at First City Bank and earn interest at an annual rate of\n             4%.\n\n            II.     Utilize a line of credit from First City Bank with interest accruing monthly on the amount\n                  utilized at the prime rate, which is estimated to be 8% in July and August and 8.5% in\n               September.\n\n     Based on this information, which one of the following actions should the treasurer take?",
+    "question": "Megatech Inc. is a large publicly-held company. The treasurer is making an analysis of the short-\n     term financing options available for the third quarter, as the company will need an average of $8\n     million for the month of July, $12 million for August, and $10 million for September. The following\n     options are available.\n\n             I.      Issue commercial paper on July 1 in an amount sufficient to net Megatech $12 million at\n              an effective rate of 7% per year. Any temporarily excess funds will be deposited in\n              Megatech’s investment account at First City Bank and earn interest at an annual rate of\n             4%.\n\n            II.     Utilize a line of credit from First City Bank with interest accruing monthly on the amount\n                  utilized at the prime rate, which is estimated to be 8% in July and August and 8.5% in\n               September.\n\n     Based on this information, which one of the following actions should the treasurer take?",
     "choices": [
       "Issue commercial paper, since it is approximately $35,000 less expensive than the line of credit.",
       "Issue commercial paper, since it is approximately $14,200 less expensive than the line of credit.",
@@ -1372,7 +1372,7 @@ export const ICMA_2024_PART2_B: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 1,
     "explanation": "Cost of commercial paper financing: $12,000,000 x 3/12 x 7% = $210,000 expense\n     July investment: $4,000,000 x 4% / 12 = $13,333 income\n    No investment in August\n     September: $2,000,000 x 4% / 12 = $6,667 income. Net cost: $210,000 - $13,333 - $6.667 = $190,000\n\n     Line of credit financing: July $8,000,000 x 8% / 12      =$ 53,333\n                      Aug 12,000,000 x 8% / 12      =  80,000\n                         Sep 10,000,000 x 8.5% / 12    =  78,833\n                                   Total                     $204,166\n\n     $204,166 - $190,000 = $14,166 advantage to commercial paper",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-B-077",

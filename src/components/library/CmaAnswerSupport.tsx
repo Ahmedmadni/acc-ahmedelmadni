@@ -6,6 +6,22 @@ import { CMA_PART2_BEGINNER_NOTES } from "@/data/cma-part2-beginner-notes";
 
 type Language = "ar" | "en";
 
+/** Source-publication quirks are disclosed separately from ICMA's own explanation. */
+const SOURCE_PRECISION_NOTES: Record<string, { ar: string; en: string }> = {
+  "IMA2024-P2-B-076": {
+    ar: "تنبيه توثيقي: في حل المصدر رقم فائدة سبتمبر مطبوع خطأ (78,833 بدل 70,833). إجمالي المقارنة المنشور يعتمد على الحساب الصحيح؛ راجع الشرح الإضافي أدناه.",
+    en: "Source correction note: September interest is printed as 78,833 instead of 70,833. The published comparison total uses the correct calculation; see the independent walkthrough.",
+  },
+  "IMA2024-P2-C-006": {
+    ar: "تنبيه التقريب: أقرب اختيار منشور 79,938، لكن نقطة التعادل النظرية ≈79,938.27، مما يعني الحاجة إلى 79,939 شخصًا إذا اشترطنا التعادل بعدد صحيح.",
+    en: "Rounding note: the nearest published choice is 79,938, but theoretical break-even is about 79,938.27; strict whole-person break-even requires 79,939.",
+  },
+  "IMA2024-P2-A-036": {
+    ar: "تنبيه حسابي: يجب حساب متوسط العملاء (رصيد البداية + النهاية) ÷ 2 داخل مقام الدوران. قد توحي أقواس صيغة المصدر بترتيب عمليات مختلف؛ المثال المفسر أدناه يوضح الصيغة.",
+    en: "Calculation note: average receivables must be computed as (opening + closing)/2 inside the turnover denominator. The source's compressed brackets can be misread.",
+  },
+};
+
 /**
  * Separate original publisher explanations from independently authored teaching support.
  * The review cards appear only after the learner has answered, so they do not leak the key.
@@ -26,11 +42,18 @@ export function CmaAnswerSupport({
     : CMA_PART1_BEGINNER_NOTES[question.topicId];
 
   const [expanded, setExpanded] = useState(!isCorrect && Boolean(verifiedWalkthrough));
+  const precisionNote = SOURCE_PRECISION_NOTES[question.id];
 
   if (!verifiedWalkthrough && !note) return null;
 
   return (
-    <details
+    <>
+      {precisionNote && (
+        <p role="note" className="mt-4 rounded-lg border border-amber-600/40 bg-amber-50 p-3 text-sm leading-7 text-amber-950" dir={lang === "ar" ? "rtl" : "ltr"}>
+          {precisionNote[lang]}
+        </p>
+      )}
+      <details
       className="mt-4 rounded-xl border border-[#A88765]/30 bg-white p-4 text-[#40382F]"
       dir={lang === "ar" ? "rtl" : "ltr"}
       open={expanded}
@@ -77,6 +100,7 @@ export function CmaAnswerSupport({
           )}
         </>
       )}
-    </details>
+      </details>
+    </>
   );
 }

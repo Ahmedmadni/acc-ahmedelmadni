@@ -1,3 +1,4 @@
+import { CMA_PDF_AUDIT_WALKTHROUGHS } from "@/data/cma-pdf-audit-walkthroughs";
 /** Independently authored Arabic-English answer walkthroughs for selected retired ICMA items.
  * Never alter the copyrighted original question, choices, published key, or source explanation.
  * Added notes are educational commentary, NOT ICMA-published answer explanations.
@@ -411,5 +412,6 @@ export const CMA_ANSWER_WALKTHROUGHS: Record<string, CmaAnswerWalkthrough> =  {
         "Using the source's rounded 14% PV factors, NPV in thousands = −550 −500×0.877 +450×0.769 +350×0.675 +350×0.592 +380×0.519 ≈ −1.78, about a 1,780 negative NPV."
       ]
     }
-  }
+  },
+  ...CMA_PDF_AUDIT_WALKTHROUGHS,
 };
