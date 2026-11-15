@@ -172,3 +172,13 @@ This is a **presentation and interaction refactor** rather than a rewrite of the
 - On overflow, the typed-text continuation command measures the real styled text editor before splitting. It preserves Unicode and whitespace, and moves **only text**. Pen strokes, stickers/diagrams already drawn and the original page identity remain intact. The maximum 40 pages per curriculum still applies.
 - On-device recognition previews no longer clear diagrams/ink by default. Keeping ink is checked initially; the learner may explicitly choose to remove the strokes after accepting recognized words.
 - Remaining limitations: exact pen/typed baselines can differ by font on real tablet devices, and extremely long typed notes require one click to continue to the next page (no automatic ink pagination). Device-level tests are still needed to confirm stylus latency and Arabic on-device recognition.
+
+
+## Accounting journal check and tablet edit improvements — 15 November 2026
+
+- Inline **journal entry** tables display live debit and credit totals in the learner's current language, with a balanced/out-of-balance status and the absolute difference. Empty journals remain in a neutral state.
+- The checker identifies invalid rows (missing account name, both debit and credit entered on one row, missing amount, invalid numbers or zero amounts). It does **not** change accounting entries, auto-post to a ledger, or imply a formally audited journal.
+- Amounts support Western digits, Arabic-Indic and Persian digits, Arabic decimal/thousands separators, regular comma-grouped thousands, and two-place comma decimals. Computations use integer minor units to avoid floating-point rounding mistakes. Unrecognized and ambiguous formats are rejected instead of guessed.
+- Inline table cell inputs are at least 40px high with 16px text to improve on-screen keyboard behavior and tap accuracy on tablets. Debit/credit cells request the numeric/decimal keyboard and render left-to-right, while account titles continue to respect page writing direction.
+- No additional account, backend, database or network dependency is introduced; existing v1 notebook storage, data format and JSON recovery are unchanged.
+- **Release gate:** automated source regression coverage was added, but actual CI execution, desktop/tablet visual QA, and confirmation of production publication are still required.
