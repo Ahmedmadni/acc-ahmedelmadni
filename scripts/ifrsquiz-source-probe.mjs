@@ -21,6 +21,6 @@ try{
   }catch(e){console.log("ASSET_ERROR",String(u),String(e))}
  }
  for (const p of ["/robots.txt","/sitemap.xml","/data/questions.json","/questions.json","/api/questions"]){
-  try{const u=new URL(p,origin);const{resp:r,body:t}=await req(u);console.log("CHECK",JSON.stringify({path:p,status:r.status,bytes:t.length,contentType:r.headers.get("content-type"),preview:t.slice(0,100)}))}catch(e){console.log("CHECK_ERROR",p,String(e))}
+  try{const u=new URL(p,origin);const{resp:r,body:t}=await req(u);console.log("CHECK",JSON.stringify({path:p,status:r.status,bytes:t.length,contentType:r.headers.get("content-type"),preview:p==="/robots.txt"?t:t.slice(0,100)}))}catch(e){console.log("CHECK_ERROR",p,String(e))}
  }
 }catch(e){console.log("PROBE_ERROR",String(e));process.exitCode=1}
