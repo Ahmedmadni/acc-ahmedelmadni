@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 import {
   BookOpenText, Check, ChevronLeft, ChevronRight, Download, Eraser, FilePlus2,
-  Languages, Minus, NotebookPen, PenLine, Plus, RotateCcw, ScanText,
+  NotebookPen, PenLine, RotateCcw, ScanText,
   Settings2, Trash2, Type, X,
 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
@@ -452,7 +452,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
   }
 
   const currentIndex = sectionPages.findIndex((p) => p.id === current.id);
-  const visible = mobileOpen || desktopOpen;
+  
 
   return (
     <>
@@ -460,7 +460,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
         <button
           type="button"
           onClick={() => { setMobileOpen(true); onDesktopOpenChange(true); }}
-          className={`fixed bottom-5 end-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl xl:${desktopOpen ? "hidden" : "flex"}`}
+          className={`fixed bottom-5 end-5 z-[65] inline-flex items-center gap-2 rounded-full bg-[#c9a986] px-4 py-3 text-sm font-bold text-[#211c18] shadow-2xl ${desktopOpen ? "xl:hidden" : "xl:flex"}`}
           aria-label={LABELS.open[lang]}
           title={LABELS.open[lang]}
         >
@@ -616,7 +616,6 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange 
           </p>
         </div>
       </aside>
-      {!visible && <span className="sr-only">{LABELS.open[lang]}</span>}
     </>
   );
 }
