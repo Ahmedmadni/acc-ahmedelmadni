@@ -530,7 +530,7 @@ test("Study cards are editable in the side panel and reproduced as text in PDF",
     "MAX_WIDGET_ITEMS",
     "setShowStudyWidgets(false)",
     "studyWidgetSearchText",
-    "data-study-widget={object.kind}",
+    "StudyNotebookEditableWidget",
   ]) assert.ok(component.includes(phrase),"Missing functional widget UI: "+phrase);
   for(const phrase of [
     '["sticky", "formula", "checklist", "table"].includes(object.kind)',
@@ -541,4 +541,102 @@ test("Study cards are editable in the side panel and reproduced as text in PDF",
   assert.ok(!pdf.includes("innerHTML"), "Study content must not be interpreted as HTML");
   const layout=await readFile("src/routes/library.tsx","utf8");
   assert.match(layout,/data-study-split/,"Study notes remain adjacent to CMA/IFRS lesson route");
+});
+
+test("Study elements render actual editable textareas, checkboxes and table-cell inputs on the paper", async () => {
+  const source = await readFile("src/components/library/StudyNotebookEditableWidget.tsx","utf8");
+  const js = ts.transpileModule(source, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022,
+      jsx: ts.JsxEmit.ReactJSX },
+  }).outputText;
+  const jsx = (type,props,key) => ({type,props,key});
+  const widgetModule = await loadTypeScript("src/lib/study-notebook-widgets.ts");
+  const module = {exports:{}};
+  vm.runInNewContext(js, {
+    module, exports:module.exports,
+    require: id => {
+      if (id === "react/jsx-runtime") return {jsx,jsxs:jsx};
+      if (id === "@/lib/study-notebook") return notebook;
+      if (id === "@/lib/study-notebook-widgets") return widgetModule;
+      throw Error("Unexpected JSX dependency "+id);
+    },
+  });
+  const {StudyNotebookEditableWidget, isEditableStudyWidget} = module.exports;
+  assert.equal(isEditableStudyWidget({kind:"sticker"}),false);
+  assert.equal(isEditableStudyWidget({kind:"formula"}),true);
+  const nodes=(root) => {
+    const result=[];
+    function visit(node) {
+      if (Array.isArray(node)) { node.forEach(visit); return; }
+      if (node && typeof node==="object" && "type" in node) {
+        result.push(node);
+        visit(node.props?.children);
+      }
+    }
+    visit(root);
+    return result;
+  };
+  let change;
+  const patch=(partial)=>{change=partial;};
+  const settings={lang:"en",direction:"ltr",scale:0.5,editable:true,onChange:patch};
+  const note=widgetModule.createStudyWidget("sticky","n1","en");
+  const noteUI=nodes(StudyNotebookEditableWidget({...settings,object:note}));
+  const noteArea=noteUI.find(node=>node.type==="textarea");
+  assert.ok(noteArea,"Sticky note must have an editable textarea INSIDE the paper");
+  assert.equal(noteArea.props.readOnly,false);
+  assert.equal(noteArea.props.maxLength,notebook.MAX_WIDGET_TEXT_LENGTH);
+  noteArea.props.onChange({target:{value:"Update NPV assumptions"}});
+  assert.equal(change.label,"Update NPV assumptions");
+
+  const formula=widgetModule.createStudyWidget("formula","f1","en");
+  const formulaUI=nodes(StudyNotebookEditableWidget({...settings,object:formula}));
+  const formulaArea=formulaUI.find(node=>node.type==="textarea");
+  assert.ok(formulaArea,"Formula must not be a sticker or image");
+  formulaArea.props.onChange({target:{value:"NPV = Σ CFt/(1+r)^t"}});
+  assert.match(change.label,/NPV/);
+
+  const checklist=widgetModule.createStudyWidget("checklist","c1","en");
+  const listNodes=nodes(StudyNotebookEditableWidget({...settings,object:checklist}));
+  const checkbox=listNodes.find(node=>node.type==="input" && node.props.type==="checkbox");
+  assert.ok(checkbox);
+  assert.equal(checkbox.props.disabled,false);
+  checkbox.props.onChange({target:{checked:true}});
+  assert.equal(change.items[0].checked,true);
+  const listText=listNodes.find(node=>node.type==="input" && node.props["aria-label"]==="Edit item 1");
+  assert.ok(listText);
+  listText.props.onChange({target:{value:"Complete unit 3"}});
+  assert.equal(change.items[0].text,"Complete unit 3");
+
+  const journal=widgetModule.createStudyWidget("journal","j1","en");
+  const tableNodes=nodes(StudyNotebookEditableWidget({...settings,object:journal}));
+  const debitCell=tableNodes.find(node=>node.type==="input" && node.props["aria-label"]==="Row 2 column 2");
+  assert.ok(debitCell);
+  debitCell.props.onChange({target:{value:"125.50"}});
+  assert.equal(change.cells[1][1],"125.50");
+  assert.equal(change.cells[0][1],"Debit");
+  const colors=tableNodes.filter(node=>node.type==="button" && node.props["aria-label"]==="Set mint card color");
+  assert.equal(colors.length,1);
+  colors[0].props.onClick();
+  assert.equal(change.tone,"mint");
+
+  const readonlyNodes=nodes(StudyNotebookEditableWidget({...settings,object:journal,editable:false}));
+  const readOnlyCell=readonlyNodes.find(node=>node.type==="input" && node.props["aria-label"]==="Row 2 column 2");
+  assert.equal(readOnlyCell.props.readOnly,true);
+  const handle=tableNodes.find(node=>node.props?.["data-widget-drag"]==="true");
+  assert.ok(handle,"Drag must have its own dedicated non-input handle");
+});
+
+test("Touch typing cannot accidentally trigger a card drag and new cards fill the side paper", async () => {
+  const [paper,templates] = await Promise.all([
+    readFile("src/components/library/StudyNotebook.tsx","utf8"),
+    readFile("src/lib/study-notebook-widgets.ts","utf8"),
+  ]);
+  assert.match(paper,/closest\('\[data-widget-drag\], \[data-handle="resize"\]'\)/);
+  assert.match(paper,/if \(tool !== "select" \|\| !hitHandle\) return;/);
+  assert.match(paper,/pointerEvents: tool === "select" \|\| \(tool === "type" && isEditableStudyWidget\(object\)\)/);
+  assert.match(paper,/onChange=\{patch => editObjectOnPage\(object.id, patch\)\}/);
+  assert.match(paper,/setTool\("select"\);/);
+  assert.match(templates,/width: 650/);
+  const layout=await readFile("src/routes/library.tsx","utf8");
+  assert.match(layout,/data-study-split/);
 });
