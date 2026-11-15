@@ -96,7 +96,11 @@ export function NotebookFlowEditor({
               className="min-w-0 flex-1 border-0 bg-transparent text-xs font-bold text-[#293947] outline-none"
             />
             {editable && (
-              <button type="button" onClick={() => onChange(blocks.filter(item => item.id !== block.id))}
+              <button type="button" onClick={() => {
+                if (block.cells.some(row => row.some(cell => cell.trim())) &&
+                  !window.confirm(direction === "rtl" ? "حذف الجدول ومحتوياته نهائيا؟" : "Delete this table and all its contents?")) return;
+                onChange(blocks.filter(item => item.id !== block.id));
+              }}
                 className="rounded border border-red-200 bg-white px-1.5 py-1 text-[10px] font-semibold text-red-700"
                 aria-label={direction === "rtl" ? "حذف الجدول من المذكرة" : "Remove inline table"}>×</button>
             )}
@@ -138,7 +142,7 @@ export function NotebookFlowEditor({
                 aria-label={direction === "rtl" ? "إضافة صف للجدول" : "Add journal row"}>
                 {direction === "rtl" ? "+ صف" : "+ Row"}
               </button>
-              <button type="button" disabled={block.cells.length <= 2}
+              <button type="button" disabled={block.cells.length <= 2 || block.cells[block.cells.length - 1].some(cell => cell.trim().length > 0)}
                 onClick={() => patchBlock(block.id, { cells: block.cells.slice(0, -1) })}
                 className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
                 aria-label={direction === "rtl" ? "حذف آخر صف" : "Remove last row"}>
@@ -149,6 +153,14 @@ export function NotebookFlowEditor({
                 className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
                 aria-label={direction === "rtl" ? "إضافة عمود للجدول" : "Add table column"}>
                 {direction === "rtl" ? "+ عمود" : "+ Column"}
+              </button>
+              <button type="button"
+                disabled={(block.cells[0]?.length || 0) <= 2 || block.cells.some(row => row[row.length - 1]?.trim())}
+                onClick={() => patchBlock(block.id, { cells: block.cells.map(row => row.slice(0, -1)) })}
+                className="rounded border border-[#bac9d4] px-1.5 py-1 text-[10px] disabled:opacity-40"
+                aria-label={direction === "rtl" ? "حذف آخر عمود فارغ" : "Remove last empty column"}
+                title={direction === "rtl" ? "لا يمكن حذف عمود يحتوي على بيانات" : "Only empty columns can be removed"}>
+                {direction === "rtl" ? "− عمود" : "− Column"}
               </button>
             </div>
           )}
