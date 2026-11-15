@@ -5,7 +5,7 @@ import { MAX_NOTEBOOK_FLOW_ROWS, MAX_NOTEBOOK_FLOW_COLS, MAX_NOTEBOOK_FLOW_CELL_
 import type { NotebookFlowCursor } from "@/lib/study-notebook-flow";
 
 export function NotebookFlowEditor({
-  blocks, direction, typeface, lineGap, margin, tool, onChange, onCursor,
+  blocks, direction, typeface, lineGap, margin, tool, onChange, onCursor, onOverflow,
 }: {
   blocks: NotebookFlowBlock[];
   direction: NotebookDirection;
@@ -15,8 +15,10 @@ export function NotebookFlowEditor({
   tool: string;
   onChange: (blocks: NotebookFlowBlock[]) => void;
   onCursor: (cursor: NotebookFlowCursor) => void;
+  onOverflow: (overflows: boolean) => void;
 }) {
   const paragraphs = useRef<Record<string, HTMLTextAreaElement | null>>({});
+  const flowRoot = useRef<HTMLDivElement | null>(null);
   const editable = tool === "type";
   const fontFamily = typeface === "handwritten"
     ? direction === "rtl" ? '"Aref Ruqaa Ink","Aref Ruqaa",serif' : '"Caveat","Comic Sans MS",cursive'
@@ -30,7 +32,9 @@ export function NotebookFlowEditor({
       node.style.height = "0px";
       node.style.height = Math.max(lineGap, Math.ceil(node.scrollHeight / lineGap) * lineGap) + "px";
     }
-  }, [blocks, lineGap, margin, fontSize]);
+    const root = flowRoot.current;
+    if (root) onOverflow(root.scrollHeight > root.clientHeight + 2);
+  }, [blocks, lineGap, margin, fontSize, onOverflow]);
 
   function patchBlock(id: string, change: Partial<NotebookFlowBlock>) {
     onChange(blocks.map(block => block.id === id
@@ -43,6 +47,7 @@ export function NotebookFlowEditor({
   return (
     <div
       data-notebook-flow-editor
+      ref={flowRoot}
       dir={direction}
       className="absolute inset-0 z-[2] overflow-y-auto overscroll-contain bg-transparent text-[#25272c]"
       aria-label={direction === "rtl" ? "محتوى المذكرة المنسق: فقرات وجداول قابلة للتحرير" : "Editable note with flowing paragraphs and tables"}
