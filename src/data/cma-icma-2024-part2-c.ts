@@ -112,7 +112,7 @@ export const ICMA_2024_PART2_C: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 2,
     "explanation": "12 x 3,500 = 42,000        .28\n                          20 x 3,000 = 60,000        .40\n                          12 x 4,000 = 48,000        .32\n                                      150,000\n\n                               .28 x (18-3) = 4.2\n                               .40 x (15-1) = 5.6\n                               .32 x (20-0) = 6.4\n                                         16.2 weighted CM\n\n     Fixed: 165,000 + 249,000 + 316,000 + 565,000 = 1,295,000 / 16.2 = 79,938",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-C-007",
@@ -184,7 +184,7 @@ export const ICMA_2024_PART2_C: IcmaPart2RawQuestion[] = [
     ],
     "answerIndex": 1,
     "explanation": "Fixed costs = 35,000 + 18,500 + 9,320 + 7,500 + 4,400 = 74,720\n     Variable costs = 30,000 +5,400 + 67,500 + 27,000 = $129,900\n     Variable cost per copy = $129,900/6,000 = $ 21.65\n     Contribution margin = 45 - 21.65 = 23.35\n\n     23.35X – 74,720 = .2 x 45X\n     23.35X = 9X + 74,720\n     14.35X = 74,720\n   X = 5,207 copies",
-    "layoutCheckRecommended": true
+    "layoutCheckRecommended": false
   },
   {
     "id": "IMA2024-P2-C-011",
