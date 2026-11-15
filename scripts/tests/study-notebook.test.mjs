@@ -500,7 +500,7 @@ test("Persisted widget content limits text, rows, columns and checkbox count", (
   const safe=notebook.normalizeNotebook(stored).pages.cma[0].objects;
   assert.equal(safe.length, 4);
   assert.equal(safe[0].tone,"yellow");
-  assert.equal(safe[0].label.length,notebook.MAX_WIDGET_TITLE_LENGTH);
+  assert.equal(safe[0].label.length,notebook.MAX_WIDGET_TEXT_LENGTH);
   assert.equal(safe[1].label.length,notebook.MAX_WIDGET_TEXT_LENGTH);
   assert.equal(safe[2].items.length,notebook.MAX_WIDGET_ITEMS);
   assert.equal(safe[2].items[0].text.length,notebook.MAX_WIDGET_CELL_LENGTH);
