@@ -583,6 +583,19 @@ function NotebookPaper({
           <span className="flex-1 text-xs leading-6 text-teal-900">
             {lang === "ar" ? "اسحب العنصر لتحريكه، أو اسحب المقبض لتغيير حجمه." : "Drag to move; use the corner handle to resize."}
           </span>
+          {selectedObject && isEditableStudyWidget(selectedObject) && (
+            <button type="button" className="rounded-lg border border-teal-200 bg-white px-3 py-2 text-xs font-bold text-teal-900"
+              onClick={() => {
+                const resized = clampNotebookObject({
+                  ...selectedObject,
+                  width: Math.max(650, selectedObject.width),
+                  height: Math.max(selectedObject.kind === "formula" ? 230 : 430, selectedObject.height),
+                }, height);
+                editSelectedObject({ x: resized.x, y: resized.y, width: resized.width, height: resized.height });
+              }}>
+              {lang === "ar" ? "توسيع البطاقة للكتابة" : "Expand card for editing"}
+            </button>
+          )}
           <button type="button" className="rounded-lg bg-white px-3 py-2 text-xs text-red-700"
             onClick={() => {
               if (selectedObjectId) onChange({ objects: page.objects.filter(object => object.id !== selectedObjectId) });
