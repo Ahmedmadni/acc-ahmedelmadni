@@ -242,5 +242,13 @@ test("Regression against basic press-and-release eraser and desktop modal-open m
   assert.match(component,/if \(!startTime\.current\) startTime\.current = e\.timeStamp;/);
   assert.match(component,/window\.matchMedia\("\(min-width: 1280px\)"\)\.matches/);
   assert.match(component,/validateNotebookBackup\(JSON\.parse\(await file\.text\(\)\)\)/);
+  assert.match(component,/if \(saved\) setStore\(validateNotebookBackup\(JSON\.parse\(saved\)\)\)/,
+    "Unrecognized stored data must not be silently replaced with the empty template");
+  assert.match(component,/if \(!hydrated \|\| !storageWritable\) return;/,
+    "Storage writes must not destroy an unreadable prior notebook");
+  assert.match(component,/setStorageWritable\(true\)/,
+    "Users can restore a valid backup and resume saving");
+  assert.match(component,/bottom-5 right-5/,
+    "Open notebook control must not collide with bottom-left Focus Mode in RTL");
   assert.match(component,/window\.confirm/);
 });
