@@ -43,6 +43,13 @@ function safeSelection(text: string, start: number, end: number) {
   return { start: a, end: b };
 }
 
+function lastParagraphIndex(blocks: readonly NotebookFlowBlock[]): number {
+  for (let index = blocks.length - 1; index >= 0; index--) {
+    if (blocks[index].kind === "paragraph") return index;
+  }
+  return -1;
+}
+
 /** Insert plain editable equation text exactly where the learner had the caret. */
 export function insertFlowFormula(
   blocks: readonly NotebookFlowBlock[],
@@ -51,7 +58,7 @@ export function insertFlowFormula(
 ): { blocks: NotebookFlowBlock[]; cursor: NotebookFlowCursor } {
   const out = [...blocks];
   let index = out.findIndex(b => b.kind === "paragraph" && b.id === cursor?.blockId);
-  if (index < 0) index = out.findLastIndex(b => b.kind === "paragraph");
+  if (index < 0) index = lastParagraphIndex(out);
   if (index < 0) {
     const empty = notebookFlowParagraph("inline-paragraph", "");
     out.push(empty);
@@ -78,7 +85,7 @@ export function insertFlowTable(
 ): { blocks: NotebookFlowBlock[]; cursor: NotebookFlowCursor } {
   const result = [...blocks];
   let index = result.findIndex(b => b.kind === "paragraph" && b.id === cursor?.blockId);
-  if (index < 0) index = result.findLastIndex(b => b.kind === "paragraph");
+  if (index < 0) index = lastParagraphIndex(result);
   if (index < 0) {
     const after = notebookFlowParagraph(nextId(), "");
     return { blocks: [...result, table, after], cursor: { blockId: after.id, start: 0, end: 0 } };
