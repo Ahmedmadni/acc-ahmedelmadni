@@ -35,7 +35,8 @@ export function normalizeCmaNumericNotation(text: string): string {
   return text.replace(/[٠-٩۰-۹]/g, digit => {
     const code = digit.charCodeAt(0);
     return String(code >= 0x6f0 ? code - 0x6f0 : code - 0x660);
-  }).replace(/\u066C/g, ",").replace(/\u066B/g, ".");
+  }).replace(/\u066C/g, ",").replace(/\u066B/g, ".")
+    .replace(/\u066A/g, "%").replace(/\u0609/g, "‰");
 }
 
 /** Compare numbers in source order while allowing Arabic digit glyphs and
