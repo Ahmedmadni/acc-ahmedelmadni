@@ -164,7 +164,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Value-chain analysis for assessing competitive advantage is\nan integral part of the strategic planning process. Value-chain\nanalysis is a continuous process of gathering, evaluating, and\ncommunicating information for business decision making. A\nvalue chain depicts how customer value accumulates along a\nchain of activities that lead to an end product or service. A\nvalue chain consists of the activities required to research and\ndevelop, design, produce, market, deliver, and support its\nproduct. Extended value-chain analysis expands the view of\nthe parties involved to include those upstream (e.g., suppliers)\nand downstream (e.g., customers).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استعانت منشأة صناعية بمستشار خارجي لتقييم كل منتج من منتجاتها الرئيسية، بدءًا من التصميم ومرورًا بالتصنيع والتخزين والتوزيع والبيع وخدمات ما بعد البيع. وطُلب منه أيضًا مقارنة هذه المنتجات بمنتجات منشآت أخرى تصنع وتسوق منتجات مماثلة أو مشابهة. وسيحدد المستشار مجالات زيادة القيمة المقدمة للعملاء وخفض التكاليف، ويوضح الروابط مع العملاء والموردين والمنشآت الأخرى في القطاع. ما اسم التحليل الذي طُلب منه على الأرجح؟",
+    "choicesAr": [
+      "دراسة بطاقة الأداء المتوازن.",
+      "تحليل المقارنة المرجعية.",
+      "تحليل SWOT (نقاط القوة والضعف والفرص والتهديدات).",
+      "تحليل سلسلة القيمة."
+    ],
+    "explanationAr": "يُعد تحليل سلسلة القيمة لتقييم الميزة التنافسية جزءًا أساسيًا من التخطيط الاستراتيجي. وهو عملية مستمرة لجمع معلومات الأعمال وتقييمها وإيصالها لدعم اتخاذ القرارات. وتوضح سلسلة القيمة كيفية تراكم القيمة المقدمة للعميل عبر سلسلة من الأنشطة التي تنتهي بمنتج أو خدمة. وتشمل أنشطة البحث والتطوير والتصميم والإنتاج والتسويق والتسليم ودعم المنتج. ويمتد تحليل سلسلة القيمة الموسع ليشمل الأطراف السابقة في سلسلة الأنشطة، مثل الموردين، واللاحقة لها، مثل العملاء."
   },
   {
     "unit": 11,
@@ -181,7 +189,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The model consists of primary and supporting activities. The\nprimary activities are inbound logistics, operations, outbound\nlogistics, marketing and sales, and service. Inbound logistics\nactivities involve the firms’ capture of materials to be\nprocessed. Operations activities are conversion processes.\nOutbound logistics activities include shipment of products.\nMarketing and sales activities are the promotion and sale of\nfinal products. Service activities provide customer service. The\nfour support activities are infrastructure (e.g., administration,\nfinance, and planning), procurement, human resources, and\ntechnology development.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نموذج سلسلة تكوين القيمة، تشمل الأنشطة الرئيسية:",
+    "choicesAr": [
+      "الخدمات اللوجستية والعمليات والتسويق والمبيعات والخدمات.",
+      "المشتريات والبنية التحتية والعمليات والخدمات.",
+      "المشتريات والبنية التحتية والعمليات وتطوير التقنية.",
+      "المشتريات والبنية التحتية والموارد البشرية وتطوير التقنية."
+    ],
+    "explanationAr": "يتكون النموذج من أنشطة رئيسية وأنشطة داعمة. والأنشطة الرئيسية هي الخدمات اللوجستية الواردة، والعمليات، والخدمات اللوجستية الصادرة، والتسويق والمبيعات، والخدمات. وتشمل الخدمات اللوجستية الواردة حصول المنشأة على المواد التي ستعالجها، بينما تشمل العمليات تحويل تلك المواد. أما الخدمات اللوجستية الصادرة فتشمل شحن المنتجات. وتشمل أنشطة التسويق والمبيعات الترويج للمنتجات النهائية وبيعها، وتقدم أنشطة الخدمات الدعم للعملاء. والأنشطة الداعمة الأربعة هي البنية التحتية، مثل الإدارة والتمويل والتخطيط، والمشتريات، والموارد البشرية، وتطوير التقنية."
   },
   {
     "unit": 11,
@@ -198,7 +214,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Customer relationship management can be defined as “the\nprocess of managing detailed information about individual\ncustomers and carefully managing all the customer\n‘touchpoints’ with the aim of maximizing customer loyalty.” Its\npurpose is to create optimal customer equity. Thus, the\nprocess involves more than merely attracting customers\n(through media advertising, direct mail, etc.) and satisfying\nthem (something competitors also may do).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل تعريف لإدارة علاقات العملاء؟",
+    "choicesAr": [
+      "التنسيق مع أطراف سلسلة إمداد المنشأة.",
+      "تعظيم المبيعات للعملاء على المدى القصير.",
+      "استشعار السوق.",
+      "تعظيم ولاء العملاء عبر إدارة نقاط اتصالهم بالمنشأة."
+    ],
+    "explanationAr": "يمكن تعريف إدارة علاقات العملاء بأنها عملية إدارة المعلومات التفصيلية عن العملاء الأفراد، وإدارة جميع نقاط اتصال العميل بالمنشأة بعناية بهدف تعظيم ولائه. وغايتها إيجاد أفضل قيمة لقاعدة العملاء. ولذلك تتجاوز مجرد جذب العملاء، مثل الإعلان والمراسلات المباشرة، وإرضائهم، وهو أمر قد يفعله المنافسون أيضًا."
   },
   {
     "unit": 11,
@@ -215,7 +239,15 @@
     ],
     "answerIndex": 2,
     "explanation": "High customer loyalty is an emotional as well as a rational\nbond that develops when a firm provides high customer value.\nTo obtain such loyalty, the firm needs to develop a value\nproposition that has superior competitiveness in the target\nmarket segment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يرتبط رضا العميل بدرجة ولائه. ويتميز الولاء المرتفع للعملاء بأنه:",
+    "choicesAr": [
+      "يتطلب درجة عالية من رضا أصحاب المصلحة الآخرين.",
+      "ينشأ عندما ترتفع الجودة والخدمة والأسعار.",
+      "يعتمد على فعالية عمليات الأعمال الأساسية في المنشأة.",
+      "يتناسب طرديًا مع توقعات العملاء."
+    ],
+    "explanationAr": "ينشأ الولاء المرتفع للعملاء من رابطة عاطفية وعقلانية تتطور عندما تقدم المنشأة قيمة عالية للعميل. ولتحقيق هذا الولاء، تحتاج المنشأة إلى تطوير عرض قيمة يتمتع بقدرة تنافسية متفوقة في الشريحة السوقية المستهدفة."
   },
   {
     "unit": 11,
@@ -232,7 +264,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Customer retention through customer satisfaction is a key to\nprofitability. The firm should emphasize customer retention\nbecause the customer base is an important intangible asset.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينبغي للمنشأة التركيز على الاحتفاظ بالعملاء:",
+    "choicesAr": [
+      "من خلال جعل تكاليف انتقال العميل إلى المنافسين منخفضة.",
+      "عبر تعظيم معدل فقد العملاء.",
+      "مع أن اكتساب العملاء الجدد أقل تكلفة من الاحتفاظ بالعملاء الحاليين.",
+      "لأن قاعدة العملاء تُعد أصلًا غير ملموس."
+    ],
+    "explanationAr": "يُعد الاحتفاظ بالعملاء من خلال تحقيق رضاهم عاملًا رئيسيًا للربحية. لذلك ينبغي للمنشأة التركيز على الاحتفاظ بالعملاء؛ لأن قاعدة العملاء تمثل أصلًا غير ملموس مهمًا."
   },
   {
     "unit": 11,
@@ -249,7 +289,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The correct sequence of business functions in the value chain\nis Research and Development, Design of Products and\nProcesses, Production, Marketing, Distribution, and Customer\nService.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخيارات التالية يعرض ترتيب وظائف الأعمال في سلسلة القيمة على النحو الأفضل؟",
+    "choicesAr": [
+      "البحث والتطوير، وتصميم المنتجات والعمليات، والإنتاج، والتسويق، والتوزيع، وخدمة العملاء.",
+      "تصميم المنتجات والعمليات، والبحث والتطوير، والتمويل، والإنتاج، والتوزيع، وخدمة العملاء.",
+      "تصميم المنتجات والعمليات، والتمويل، والبحث والتطوير، والإنتاج، والتوزيع، وخدمة العملاء.",
+      "البحث والتطوير، والتمويل، وتصميم المنتجات والعمليات، والإنتاج، والتوزيع، وخدمة العملاء."
+    ],
+    "explanationAr": "الترتيب الصحيح لوظائف الأعمال في سلسلة القيمة هو: البحث والتطوير، ثم تصميم المنتجات والعمليات، ثم الإنتاج، ثم التسويق، ثم التوزيع، ثم خدمة العملاء."
   },
   {
     "unit": 11,
