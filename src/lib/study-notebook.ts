@@ -233,7 +233,7 @@ export function normalizeNotebookFlow(value: unknown): NotebookFlowBlock[] | und
       const group = template === "journal" && typeof raw.journalGroupId === "string" &&
         /^[A-Za-z0-9_-]{1,128}$/.test(raw.journalGroupId) &&
         (raw.journalPart === "start" || raw.journalPart === "end")
-        ? { journalGroupId: raw.journalGroupId, journalPart: raw.journalPart } : {};
+        ? { journalGroupId: raw.journalGroupId, journalPart: raw.journalPart as "start" | "end" } : {};
       blocks.push({ id: raw.id, kind: "table", title, cells, template, ...group });
     }
     // Allow only a bounded number of characters across all block types.
