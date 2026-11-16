@@ -134,6 +134,6 @@ test("Arabic presentation uses RTL when source has Arabic text, without changing
   assert.match(component, /const visibleArabic = lang === "ar"/);
   assert.match(component, /direction: visibleArabic \? "rtl" : "ltr"/);
   const page = fs.readFileSync(path.resolve(root, "src/routes/library.cma.tsx"), "utf8");
-  assert.match(page, /q\.answerIndex === choiceIndex/);
+  assert.match(page, /choiceIndex === q\.answerIndex/);
   assert.match(page, /<CmaTranslatedQuestion/);
 });
