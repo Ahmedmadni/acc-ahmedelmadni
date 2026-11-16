@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Value engineering is a means of reaching targeted cost levels.\nIt is a systematic approach to assessing all aspects of the\nvalue chain cost buildup for a product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المصطلح الذي يشير إلى منهج منظم للوصول إلى مستويات التكلفة المستهدفة أثناء تحليل سلسلة القيمة؟",
+    "choicesAr": [
+      "هندسة القيمة.",
+      "احتساب تكاليف دورة حياة المنتج.",
+      "تحليل قيمة العمليات.",
+      "تحليل الأنشطة."
+    ],
+    "explanationAr": "هندسة القيمة وسيلة للوصول إلى مستويات التكلفة المستهدفة. وهي منهج منظم لتقييم جميع جوانب تراكم التكاليف عبر سلسلة القيمة الخاصة بالمنتج."
   },
   {
     "unit": 11,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Direct costs can be specifically associated with a single cost\nobject and assigned to it in an economically feasible way, i.e.,\ntraced to the object. Wages paid to employees that can be\nidentified with a specific finished project are direct costs.\nValue-adding costs are costs of activities that cannot be\neliminated without reducing the value of the product or service\nrequired by the customer. The amounts paid to the computer\nprogrammers add value to the computer programs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطوّر شركة برامج حاسوبية لتلبية احتياجات عملائها المخصصة. كيف ينبغي تصنيف المدفوعات للموظفين الذين يطوّرون هذه البرامج؟",
+    "choicesAr": [
+      "تكاليف مباشرة وتكاليف مضيفة للقيمة.",
+      "تكاليف مباشرة، لكنها ليست تكاليف مضيفة للقيمة.",
+      "ليست تكاليف مباشرة ولا تكاليف مضيفة للقيمة.",
+      "تكاليف مضيفة للقيمة، لكنها ليست تكاليف مباشرة."
+    ],
+    "explanationAr": "يمكن ربط التكاليف المباشرة بموضوع تكلفة محدد وإسنادها إليه بطريقة اقتصادية ممكنة، أي تتبعها إليه. وتُعد أجور الموظفين الذين يمكن ربط عملهم بمشروع مكتمل بعينه تكاليف مباشرة. أما التكاليف المضيفة للقيمة فهي تكاليف أنشطة لا يمكن استبعادها دون تقليل قيمة المنتج أو الخدمة التي يحتاجها العميل. وبذلك تضيف المدفوعات للمبرمجين قيمة إلى البرامج الحاسوبية."
   },
   {
     "unit": 11,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The value chain is a model for depicting the way in which\nevery function in a company adds value to the final product.\nPrimary activities deal with the product directly. Support\nactivities lend aid to the primary activity functions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُعد أحد مكونات سلسلة القيمة؟",
+    "choicesAr": [
+      "الأنشطة الرئيسية.",
+      "الأنشطة الثانوية.",
+      "الأنشطة الداعمة.",
+      "المنتج."
+    ],
+    "explanationAr": "سلسلة القيمة نموذج يوضح الطريقة التي تضيف بها كل وظيفة داخل المنشأة قيمة إلى المنتج النهائي. وترتبط الأنشطة الرئيسية بالمنتج مباشرة، بينما تقدم الأنشطة الداعمة المساندة لوظائف الأنشطة الرئيسية."
   },
   {
     "unit": 11,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A value chain depicts how costs and customer value\naccumulate along a sequence of activities leading to an end\nproduct or service. Assembling the final product and painting\nthe assembled product are the only activities that add value\nfor the customer.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة أنشطة التصنيع الآتية:\n• تجهيز آلة لدفعة إنتاج جديدة\n• تجميع المنتج النهائي\n• نقل المنتج المكتمل إلى المستودع\n• طلاء المنتج بعد تجميعه\n• إعادة تشغيل الأجزاء المعيبة\nأي من هذه الأنشطة يُضيف قيمة للعميل؟",
+    "choicesAr": [
+      "تجهيز آلة لدفعة إنتاج جديدة وتجميع المنتج النهائي فقط.",
+      "تجميع المنتج النهائي وطلاؤه بعد التجميع فقط.",
+      "تجميع المنتج النهائي وطلاؤه ونقله إلى المستودع فقط.",
+      "تجهيز الآلة لدفعة إنتاج جديدة وتجميع المنتج النهائي وطلاؤه وإعادة تشغيل الأجزاء المعيبة."
+    ],
+    "explanationAr": "توضح سلسلة القيمة كيفية تراكم التكاليف والقيمة المقدمة للعميل عبر سلسلة من الأنشطة التي تنتهي بمنتج أو خدمة. وفي هذه الحالة، فإن تجميع المنتج النهائي وطلاءه هما النشاطان الوحيدان اللذان يضيفان قيمة للعميل."
   },
   {
     "unit": 11,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The supply chain usually encompasses more than one firm.\nFirms seeking to improve performance and reduce costs must\nanalyze all phases of the supply chain as well as the value\nchain.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُسمّى تدفق المواد والخدمات من مصادرها الأصلية إلى المستهلكين النهائيين:",
+    "choicesAr": [
+      "سلسلة القيمة.",
+      "سلسلة المنتج.",
+      "سلسلة الإمداد.",
+      "عملية القيمة."
+    ],
+    "explanationAr": "غالبًا ما تشمل سلسلة الإمداد أكثر من منشأة واحدة. ولتحسين الأداء وخفض التكاليف، ينبغي للمنشآت تحليل جميع مراحل سلسلة الإمداد وكذلك سلسلة القيمة."
   },
   {
     "unit": 11,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The second step in a value-chain analysis is to determine how\neach value-creating activity can produce a competitive\nadvantage for the firm. This step has multiple substeps:\n1. Identify the firm’s competitive advantage (e.g., cost\nreduction, product differentiation) so that the firm’s\nposition in the industry’s value chain can be clarified.\n2. Identify the ways in which the firm’s value-creating\nactivities can generate additional customer value.\n3. Identify activities that are candidates for cost reduction\nor, in the case of non-core competencies, outsourcing.\n4. Identify value-adding ways in which the firm’s\nremaining activities can be linked.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُعد مرحلة ضمن تحليل سلسلة القيمة؟",
+    "choicesAr": [
+      "تحديد الأنشطة المرشحة لخفض التكلفة.",
+      "تحديد سبل توليد قيمة إضافية للعميل.",
+      "تحديد وسائل تحسين كفاءة تكلفة المنتج.",
+      "تحديد الميزة التنافسية للمنشأة."
+    ],
+    "explanationAr": "الخطوة الثانية في تحليل سلسلة القيمة هي تحديد الكيفية التي يمكن بها لكل نشاط مضيف للقيمة أن يحقق ميزة تنافسية للمنشأة. وتتضمن هذه الخطوة إجراءات فرعية متعددة:\n1. تحديد الميزة التنافسية للمنشأة، مثل خفض التكلفة أو تمييز المنتج، لتوضيح موقعها في سلسلة القيمة ضمن القطاع.\n2. تحديد كيفية توليد أنشطة المنشأة المضيفة للقيمة قيمة إضافية للعميل.\n3. تحديد الأنشطة المرشحة لخفض التكلفة، أو للاستعانة بمصادر خارجية عندما لا تمثل كفاءات أساسية.\n4. تحديد أساليب مضيفة للقيمة لربط الأنشطة المتبقية بعضها ببعض."
   },
   {
     "unit": 11,
