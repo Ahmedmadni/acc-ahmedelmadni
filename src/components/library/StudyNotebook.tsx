@@ -21,9 +21,9 @@ import {
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { NotebookFlowEditor } from "@/components/library/NotebookFlowEditor";
 import { NOTEBOOK_FORMULA_PRESETS, insertFlowFormula, insertFlowTable,
-  notebookFlowParagraph, notebookTableTemplate,
+  notebookFlowParagraph, notebookTableTemplate, splitNotebookFlowForNextPage,
   type NotebookFlowCursor, type NotebookFlowTableTemplate } from "@/lib/study-notebook-flow";
-import { exportStudyNotebookPdf } from "@/lib/study-notebook-pdf";
+import { exportStudyNotebookPdf, NotebookPdfOverflowError } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
 import { createStudyWidget, STUDY_WIDGET_TEMPLATES, studyWidgetSearchText,
   type StudyWidgetTemplate } from "@/lib/study-notebook-widgets";
@@ -138,7 +138,7 @@ type NotebookInsertRequest =
   | { id: number; kind: "table"; template: NotebookFlowTableTemplate };
 
 function NotebookPaper({
-  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, canAddPage, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, onFlowSplit, canAddPage, lang,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
@@ -148,6 +148,7 @@ function NotebookPaper({
   insertRequest: NotebookInsertRequest | null;
   onChange: (change: Partial<NotebookPage>) => void;
   onSplit: (fittingIndex: number) => void;
+  onFlowSplit: (current: NotebookFlowBlock[], continuation: NotebookFlowBlock[]) => void;
   canAddPage: boolean;
   lang: Lang;
 }) {
@@ -163,6 +164,7 @@ function NotebookPaper({
   const lastInsertId = useRef(-1);
   const [textOverflows, setTextOverflows] = useState(false);
   const [flowLimitWarning, setFlowLimitWarning] = useState(false);
+  const [flowSplitWarning, setFlowSplitWarning] = useState(false);
   const [keepOriginalInk, setKeepOriginalInk] = useState(true);
   const [preview, setPreview] = useState<NotebookStroke | null>(null);
   const [selectedStrokeId, setSelectedStrokeId] = useState<string | null>(null);
@@ -274,6 +276,50 @@ function NotebookPaper({
     if (!editor || !canAddPage) return;
     const fitting = lastFittingTextIndex(editor, page.text);
     if (fitting > 0 && fitting < page.text.length) onSplit(fitting);
+  }
+
+  function continueFlowOnNewPage() {
+    if (!canAddPage || !page.flow?.length || !sheet.current) return;
+    const root = sheet.current.querySelector<HTMLElement>("[data-notebook-flow-editor]");
+    if (!root) return;
+    const nodes = Array.from(root.querySelectorAll<HTMLElement>("[data-notebook-flow-block]"));
+    const frame = root.getBoundingClientRect();
+    const pageBottom = root.clientHeight - 6;
+    let firstOverflow = -1;
+    let available = 0;
+    for (let index = 0; index < nodes.length; index++) {
+      const item = nodes[index];
+      // Account for a scrolled editor; never make the break depend on the
+      // learner's current scroll position.
+      const top = item.getBoundingClientRect().top - frame.top + root.scrollTop;
+      const bottom = top + item.getBoundingClientRect().height;
+      if (bottom > pageBottom) {
+        firstOverflow = index;
+        available = Math.max(0, Math.floor(pageBottom - top));
+        break;
+      }
+    }
+    if (firstOverflow < 0) return;
+    const overflowing = page.flow[firstOverflow];
+    let fitting: number | undefined;
+    if (overflowing?.kind === "paragraph" && available >= Math.max(14, lineGap)) {
+      const node = nodes[firstOverflow] as HTMLTextAreaElement;
+      const originalHeight = node.style.height;
+      try {
+        node.style.height = available + "px";
+        const measured = lastFittingTextIndex(node, overflowing.text);
+        if (measured > 0 && measured < overflowing.text.length) fitting = measured;
+      } finally {
+        node.style.height = originalHeight;
+      }
+    }
+    const split = splitNotebookFlowForNextPage(page.flow, firstOverflow, newId(), fitting);
+    if (!split) {
+      setFlowSplitWarning(true);
+      return;
+    }
+    setFlowSplitWarning(false);
+    onFlowSplit(split.current, split.continuation);
   }
   const bgStyle: CSSProperties = {
     ...paper,
@@ -831,6 +877,15 @@ function NotebookPaper({
             : lang === "ar"
               ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
               : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
+          {page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueFlowOnNewPage}
+            className="min-h-10 rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
+            {lang === "ar" ? "نقل المحتوى المنسق الزائد إلى صفحة جديدة" : "Move overflowing rich notes to next page"}
+          </button>}
+          {flowSplitWarning && <p role="alert">
+            {lang === "ar"
+              ? "أول عنصر كبير جدا لنقله دون فقد بيانات. قسم الفقرة أو اختصر الجدول يدويًا قبل التصدير."
+              : "The first block is too tall to move safely. Split the paragraph or shorten the table before exporting."}
+          </p>}
           {!page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
             className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
             {lang === "ar" ? "نقل النص الزائد لصفحة تالية" : "Continue overflow on next page"}
@@ -1063,9 +1118,11 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
         `${section}-study-notebook-${allPages ? "all" : "page-" + (currentIndex + 1)}.pdf`);
       setRestoreMessage(lang === "ar" ? "تم تصدير ملف PDF إلى جهازك." : "PDF saved to your device.");
     } catch (error) {
-      setRestoreMessage(lang === "ar"
-        ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
-        : error instanceof Error ? error.message : "PDF export failed.");
+      setRestoreMessage(error instanceof NotebookPdfOverflowError
+        ? error.message
+        : lang === "ar"
+          ? "تعذر إنشاء PDF. جرّب عدد صفحات أقل أو تأكد من توفر مساحة كافية."
+          : error instanceof Error ? error.message : "PDF export failed.");
     } finally { setExportingPdf(false); }
   }
 
@@ -1181,6 +1238,37 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
       pages: { ...prior.pages, [section]: [...prior.pages[section], fresh] },
       activePage: { ...prior.activePage, [section]: id },
     }));
+    setTool("type");
+    setActiveSection("write");
+  }
+
+  function splitCurrentFlowPage(leading: NotebookFlowBlock[], trailing: NotebookFlowBlock[]) {
+    if (sectionPages.length >= MAX_NOTEBOOK_PAGES || !leading.length || !trailing.length) return;
+    const pageId = current.id;
+    const nextId = newId();
+    const nextPage: NotebookPage = {
+      ...createNotebookPage(nextId, current.direction),
+      pattern: current.pattern, shade: current.shade, size: current.size,
+      spacing: current.spacing, typeface: current.typeface,
+      flow: trailing, text: notebookFlowPlainText(trailing), updatedAt: Date.now(),
+    };
+    setStore(prior => {
+      const pages = prior.pages[section];
+      const index = pages.findIndex(page => page.id === pageId);
+      if (index < 0 || pages.length >= MAX_NOTEBOOK_PAGES || !pages[index].flow?.length) return prior;
+      const updated = [...pages];
+      // Only structured paragraphs/tables move. Pen strokes, photos, stickers
+      // and other floating objects remain on their original sheet.
+      updated[index] = {
+        ...updated[index], flow: leading, text: notebookFlowPlainText(leading),
+        updatedAt: Date.now(),
+      };
+      updated.splice(index + 1, 0, nextPage);
+      return {
+        ...prior, pages: { ...prior.pages, [section]: updated },
+        activePage: { ...prior.activePage, [section]: nextId },
+      };
+    });
     setTool("type");
     setActiveSection("write");
   }
@@ -1671,7 +1759,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
           <div className="mt-3">
             <NotebookPaper key={current.id} page={current} tool={tool} inkColor={inkColor}
               highlighterColor={highlighterColor} inkWidth={inkWidth} insertRequest={insertRequest}
-              lang={lang} onChange={updatePage} onSplit={splitCurrentPage}
+              lang={lang} onChange={updatePage} onSplit={splitCurrentPage} onFlowSplit={splitCurrentFlowPage}
               canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
               />
           </div>
