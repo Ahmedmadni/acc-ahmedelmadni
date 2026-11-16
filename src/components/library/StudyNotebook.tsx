@@ -21,7 +21,7 @@ import {
 import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib/study-notebook-recognition";
 import { NotebookFlowEditor } from "@/components/library/NotebookFlowEditor";
 import { NOTEBOOK_FORMULA_PRESETS, insertFlowFormula, insertFlowTable,
-  notebookFlowParagraph, notebookTableTemplate, splitNotebookFlowForNextPage,
+  notebookFlowParagraph, notebookTableTemplate, splitNotebookFlowForNextPage, splitNotebookFlowTableRows,
   type NotebookFlowCursor, type NotebookFlowTableTemplate } from "@/lib/study-notebook-flow";
 import { exportStudyNotebookPdf, NotebookPdfOverflowError } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
@@ -313,7 +313,27 @@ function NotebookPaper({
         node.style.height = originalHeight;
       }
     }
-    const split = splitNotebookFlowForNextPage(page.flow, firstOverflow, newId(), fitting);
+    // A long comparison/custom/T-account table may be divided at whole-row
+    // boundaries. The original heading stays on this page, and the next
+    // sheet repeats the header but never duplicates a data row.
+    let split: { current: NotebookFlowBlock[]; continuation: NotebookFlowBlock[] } | null = null;
+    if (overflowing?.kind === "table" && overflowing.template !== "journal") {
+      const tableNode = nodes[firstOverflow];
+      const rows = Array.from(tableNode.querySelectorAll<HTMLTableRowElement>("tbody tr"));
+      const rowHeights = rows.map(row => row.getBoundingClientRect().height);
+      const frameHeight = tableNode.getBoundingClientRect().height;
+      // Reserve the real title, margins and edit controls before deciding
+      // how many rows fit. Keep one full data row on both pages.
+      let used = Math.max(0, frameHeight - rowHeights.reduce((sum, h) => sum + h, 0));
+      let fittingRows = 0;
+      for (const rowHeight of rowHeights) {
+        if (used + rowHeight > available - 4) break;
+        used += rowHeight;
+        fittingRows++;
+      }
+      split = splitNotebookFlowTableRows(page.flow, firstOverflow, newId(), fittingRows, page.direction);
+    }
+    if (!split) split = splitNotebookFlowForNextPage(page.flow, firstOverflow, newId(), fitting);
     if (!split) {
       setFlowSplitWarning(true);
       return;
@@ -883,8 +903,8 @@ function NotebookPaper({
           </button>}
           {flowSplitWarning && <p role="alert">
             {lang === "ar"
-              ? "أول عنصر كبير جدا لنقله دون فقد بيانات. قسم الفقرة أو اختصر الجدول يدويًا قبل التصدير."
-              : "The first block is too tall to move safely. Split the paragraph or shorten the table before exporting."}
+              ? "أول عنصر كبير جدا لنقله بأمان. إذا كان قيد يومية، احتفظ به كاملًا؛ اختصر القيد أو قلل عدد الصفوف قبل التصدير."
+              : "The first block is too tall to move safely. Keep journal entries intact; shorten the entry or reduce the rows before exporting."}
           </p>}
           {!page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
             className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">

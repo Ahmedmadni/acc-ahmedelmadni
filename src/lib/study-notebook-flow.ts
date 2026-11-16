@@ -244,3 +244,39 @@ export function splitNotebookFlowForNextPage(
   if (firstOverflowIndex === 0) return null;
   return { current: [...before], continuation: blocks.slice(firstOverflowIndex) };
 }
+
+
+/** Safely continue a *non-journal* inline table at an actual measured row
+ * boundary. Its header row is repeated on the next sheet for readability,
+ * but each data row exists exactly once across the two editable pages.
+ * A journal cannot be split this way: separate balancing indicators would
+ * misrepresent one accounting entry as two independent entries.
+ */
+export function splitNotebookFlowTableRows(
+  blocks: readonly NotebookFlowBlock[],
+  tableIndex: number,
+  nextTableId: string,
+  fittingRows: number,
+  direction: NotebookDirection,
+): { current: NotebookFlowBlock[]; continuation: NotebookFlowBlock[] } | null {
+  if (!Number.isInteger(tableIndex) || tableIndex < 0 || tableIndex >= blocks.length ||
+      !Number.isInteger(fittingRows) || !nextTableId.trim() ||
+      blocks.some(block => block.id === nextTableId)) return null;
+  const table = blocks[tableIndex];
+  if (table.kind !== "table" || table.template === "journal" ||
+      fittingRows < 2 || fittingRows >= table.cells.length) return null;
+  const continuedLabel = direction === "rtl" ? " (تابع)" : " (continued)";
+  const title = table.title.endsWith(continuedLabel) ? table.title
+    : table.title.slice(0, 80 - continuedLabel.length) + continuedLabel;
+  return {
+    current: [
+      ...blocks.slice(0, tableIndex),
+      { ...table, cells: table.cells.slice(0, fittingRows).map(row => [...row]) },
+    ],
+    continuation: [
+      { ...table, id: nextTableId, title,
+        cells: [ [...table.cells[0]], ...table.cells.slice(fittingRows).map(row => [...row]) ] },
+      ...blocks.slice(tableIndex + 1),
+    ],
+  };
+}
