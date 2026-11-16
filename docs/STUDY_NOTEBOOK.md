@@ -203,3 +203,12 @@ This is a **presentation and interaction refactor** rather than a rewrite of the
 - If the first block itself cannot fit (or the 40-page cap is reached), a visible warning instructs the user to reduce it manually rather than creating an endless chain of empty pages.
 - PDF export now checks measured document content against each print sheet before rasterizing; if the content overflows, it refuses to produce an incomplete PDF and identifies the offending page in the page's writing language. The original editable notes and local JSON backup remain unchanged.
 - This is **deliberate continuation, not automatic layout reflow**. Browser font metrics, oversized freehand notes, ink overlays and actual stylus support still require on-device QA. The PDF exporter is intentionally conservative rather than hiding content beyond the page border.
+
+
+## Oversized editable tables: safe row-level continuation — 16 November 2026
+
+- In the existing side notebook, a table that straddles the visible sheet boundary can now move its **overflowing whole rows** to a continuation page while keeping at least one data row on each sheet. The original heading remains with the first segment; the next segment is labelled **continued / تابع**, repeats the table's header row and retains fully editable cells.
+- The break is based on the actual rendered row heights plus title/footer/control height, rather than an assumed fixed number of rows. If there is not enough space to retain a header and data row, the existing full-block move is attempted instead.
+- **Accounting safety:** journal-entry tables are **not** split into separate fragments. A debit/credit balance check on each fragment would misleadingly treat a single accounting transaction as multiple entries. The learner is asked to shorten/reorganize an oversized journal instead. Non-journal comparison, custom and T-account tables support the new row-level continuation.
+- This is a **manual** action; it preserves each original data row exactly once and does not silently post or recalculate accounting entries. Drawings and images remain on their original pages. The v1 notebook backup format and local browser storage key are unchanged.
+- PDF export continues refusing truncated content. Extra-long continuation pages may require repeating the same action; automatic multipage journal balancing and physical tablet stylus acceptance remain outside this change.
