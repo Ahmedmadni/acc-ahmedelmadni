@@ -1019,3 +1019,66 @@ test("Inline table Enter and arrow keys navigate rows while Tab and IME keep nat
   current.props.onKeyDown(key("Enter",true));
   assert.equal(focused,"above");
 });
+
+
+test("Formatted notebook continuation keeps journals intact and every note character", () => {
+  const journal=flowTools.notebookTableTemplate("journal","rtl","journal-original");
+  journal.cells[1]=["النقدية","١٠٠٫٥٠",""];
+  journal.cells[2]=["المبيعات","","100.50"];
+  const paragraph={kind:"paragraph",id:"intro",text:"First paragraph\nفقرة قبل الجدول"};
+  const last={kind:"paragraph",id:"end",text:"Next paragraph after the journal."};
+  const blocks=[paragraph,journal,last];
+  const before=JSON.stringify(blocks);
+  const result=flowTools.splitNotebookFlowForNextPage(blocks,1,"unused");
+  assert.ok(result);
+  assert.deepEqual(Array.from(result.current.map(b=>b.id)),["intro"]);
+  assert.deepEqual(Array.from(result.continuation.map(b=>b.id)),["journal-original","end"]);
+  assert.deepEqual(JSON.parse(JSON.stringify(result.continuation[0])),JSON.parse(JSON.stringify(journal)));
+  assert.equal(JSON.stringify(blocks),before,"The original editable page must not be mutated");
+  assert.equal(flowTools.splitNotebookFlowForNextPage(blocks,0,"unused"),null,
+    "Do not create empty pages or loop forever when the first table cannot fit");
+  assert.equal(flowTools.splitNotebookFlowForNextPage(blocks,-1,"unused"),null);
+});
+
+test("Formatted paragraph splits precisely at measured character index without losing Arabic or whitespace", () => {
+  const note="IFRS 15 summary and journal.\nالاعتراف بالإيرادات  مع مسافتين\nKeep these notes.";
+  const blocks=[{kind:"paragraph",id:"long",text:note},
+    flowTools.notebookTableTemplate("journal","ltr","table2")];
+  const before=JSON.stringify(blocks);
+  const result=flowTools.splitNotebookFlowForNextPage(blocks,0,"continuation",36);
+  assert.ok(result);
+  assert.equal(result.current[0].id,"long");
+  assert.equal(result.continuation[0].id,"continuation");
+  assert.equal(result.current[0].text + result.continuation[0].text,note);
+  assert.equal(result.continuation[1].id,"table2");
+  assert.equal(JSON.stringify(blocks),before);
+  assert.equal(flowTools.splitNotebookFlowForNextPage(blocks,0,"continuation",0),null);
+  assert.equal(flowTools.splitNotebookFlowForNextPage(blocks,0,"long",9),null,
+    "Existing block IDs must never be reused across the two pages");
+});
+
+test("Rich-note overflow UI offers deliberate continuation without moving ink and PDF refuses silent clipping", async () => {
+  const paper=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  const editor=await readFile("src/components/library/NotebookFlowEditor.tsx","utf8");
+  const pdf=await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  assert.match(editor,/data-notebook-flow-block=\{block\.id\}/);
+  assert.match(paper,/function continueFlowOnNewPage\(\)/);
+  assert.match(paper,/splitNotebookFlowForNextPage\(page\.flow, firstOverflow, newId\(\), fitting\)/);
+  assert.match(paper,/onFlowSplit\(split\.current, split\.continuation\)/);
+  assert.match(paper,/function splitCurrentFlowPage\(leading: NotebookFlowBlock\[\], trailing: NotebookFlowBlock\[\]\)/);
+  assert.match(paper,/flow: trailing, text: notebookFlowPlainText\(trailing\)/);
+  assert.match(paper,/flow: leading, text: notebookFlowPlainText\(leading\)/);
+  assert.match(paper,/onFlowSplit=\{splitCurrentFlowPage\}/);
+  assert.match(paper,/onClick=\{continueFlowOnNewPage\}/);
+  assert.match(pdf,/data-notebook-print-text/);
+  assert.match(pdf,/content\.scrollHeight > content\.clientHeight \+ 2/);
+  assert.match(pdf,/throw new NotebookPdfOverflowError\(index \+ 1, page\.direction\)/);
+  assert.match(paper,/error instanceof NotebookPdfOverflowError/);
+  const exporter=await loadTypeScript("src/lib/study-notebook-pdf.ts", {
+    "@/lib/study-notebook":notebook,
+    "@/lib/study-notebook-widgets":notebookWidgets,
+    "@/lib/study-notebook-flow":flowTools,
+  });
+  assert.match(new exporter.NotebookPdfOverflowError(3,"rtl").message,/الصفحة 3/);
+  assert.match(new exporter.NotebookPdfOverflowError(2,"ltr").message,/page 2/);
+});

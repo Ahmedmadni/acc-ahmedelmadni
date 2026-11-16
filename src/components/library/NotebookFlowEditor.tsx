@@ -83,6 +83,7 @@ export function NotebookFlowEditor({
         <textarea
           key={block.id}
           data-notebook-flow-paragraph={block.id}
+          data-notebook-flow-block={block.id}
           ref={node => { paragraphs.current[block.id] = node; }}
           value={block.text}
           rows={1}
@@ -108,6 +109,7 @@ export function NotebookFlowEditor({
       ) : (
         <div key={block.id}
           data-notebook-flow-table={block.template}
+          data-notebook-flow-block={block.id}
           className="my-2 overflow-hidden rounded-md border border-[#a2b4c3] bg-white/75"
           style={{ marginBlock: `${lineGap * .32}px` }}>
           <div className="flex items-center justify-between gap-1 bg-[#e4ebf2]/80 px-1 py-1">

@@ -12,6 +12,16 @@ export const STUDY_NOTEBOOK_PDF_MM = {
   Letter: [215.9, 279.4],
 } as const;
 
+/** Export must never silently cut off journal rows or paragraphs. */
+export class NotebookPdfOverflowError extends Error {
+  constructor(pageNumber: number, direction: "ltr" | "rtl") {
+    super(direction === "rtl"
+      ? `تعذر تصدير الصفحة ${pageNumber}: المحتوى أطول من الورقة. انقل الجزء الزائد لصفحة جديدة ثم أعد التصدير.`
+      : `Cannot export page ${pageNumber}: the content exceeds its paper boundary. Continue the overflow on a new page first.`);
+    this.name = "NotebookPdfOverflowError";
+  }
+}
+
 export function printableInkStyle(stroke: NotebookStroke) {
   return {
     stroke: stroke.color,
@@ -46,6 +56,7 @@ export function buildNotebookPrintablePageDom(page: NotebookPage) {
   const text = document.createElement("div");
   text.setAttribute("lang", page.direction === "rtl" ? "ar" : "en");
   text.dir = page.direction;
+  text.setAttribute("data-notebook-print-text", "");
   text.textContent = page.text;
   text.style.cssText = [
     "position:absolute", "inset:0", "box-sizing:border-box",
@@ -283,6 +294,13 @@ export async function exportStudyNotebookPdf(
       const node = buildNotebookPrintablePageDom(page);
       printRoot.appendChild(node);
       try {
+        // We cannot trust bitmap clipping to preserve the learner's notes.
+        // Refuse a PDF with hidden paragraphs or table rows. The on-page
+        // continuation action moves only overflowing rich text to a new sheet.
+        const content = node.querySelector<HTMLElement>("[data-notebook-print-text]");
+        if (content && content.scrollHeight > content.clientHeight + 2) {
+          throw new NotebookPdfOverflowError(index + 1, page.direction);
+        }
         // Local raster assets must finish loading before the snapshot.
         await Promise.all(Array.from(node.querySelectorAll("img")).map(async img => {
           if (typeof img.decode === "function") await img.decode();

@@ -210,3 +210,37 @@ export function formatNotebookJournalReview(
     message,
   };
 }
+
+
+/** Split a formatted notebook at a measured block boundary without flattening
+ * tables or discarding a single character. Only a paragraph may split inside
+ * its text; each accounting table always travels intact to the next page.
+ * Callers measure the actual DOM before choosing the overflow block/index.
+ */
+export function splitNotebookFlowForNextPage(
+  blocks: readonly NotebookFlowBlock[],
+  firstOverflowIndex: number,
+  nextParagraphId: string,
+  fittingTextIndex?: number,
+): { current: NotebookFlowBlock[]; continuation: NotebookFlowBlock[] } | null {
+  if (!Number.isInteger(firstOverflowIndex) ||
+      firstOverflowIndex < 0 || firstOverflowIndex >= blocks.length) return null;
+  const block = blocks[firstOverflowIndex];
+  const before = blocks.slice(0, firstOverflowIndex);
+  const after = blocks.slice(firstOverflowIndex + 1);
+  if (block.kind === "paragraph" && typeof fittingTextIndex === "number" &&
+      Number.isInteger(fittingTextIndex) && fittingTextIndex > 0 &&
+      fittingTextIndex < block.text.length && nextParagraphId.trim() &&
+      !blocks.some(item => item.id === nextParagraphId)) {
+    const current = [...before, { ...block, text: block.text.slice(0, fittingTextIndex) }];
+    const continuation = [
+      { ...block, id: nextParagraphId, text: block.text.slice(fittingTextIndex) },
+      ...after,
+    ];
+    return { current, continuation };
+  }
+  // Moving the first block alone would create a blank page and could loop
+  // forever if the block itself is taller than an entire sheet.
+  if (firstOverflowIndex === 0) return null;
+  return { current: [...before], continuation: blocks.slice(firstOverflowIndex) };
+}
