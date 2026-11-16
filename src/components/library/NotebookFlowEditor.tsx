@@ -3,12 +3,15 @@ import type { NotebookDirection, NotebookFlowBlock, NotebookTypeface } from "@/l
 import { MAX_NOTEBOOK_FLOW_ROWS, MAX_NOTEBOOK_FLOW_COLS, MAX_NOTEBOOK_FLOW_CELL_LENGTH,
   MAX_NOTE_TEXT_LENGTH } from "@/lib/study-notebook";
 import type { NotebookFlowCursor } from "@/lib/study-notebook-flow";
-import { formatNotebookJournalReview, reviewNotebookJournal } from "@/lib/study-notebook-flow";
+import { formatNotebookJournalReview, reviewNotebookJournal, type NotebookJournalReviewByBlock } from "@/lib/study-notebook-flow";
 
-function JournalBalanceStatus({ cells, direction }: {
+function JournalBalanceStatus({ cells, direction, linkedReview, linked }: {
   cells: string[][]; direction: NotebookDirection;
+  linkedReview?: NotebookJournalReviewByBlock[string]; linked: boolean;
 }) {
-  const review = reviewNotebookJournal(cells);
+  const review = linked ? (linkedReview ?? {
+    ...reviewNotebookJournal(cells), status: "incomplete" as const,
+  }) : reviewNotebookJournal(cells);
   const display = formatNotebookJournalReview(review, direction);
   return (
     <div data-notebook-journal-balance={review.status} aria-live="polite"
@@ -20,6 +23,9 @@ function JournalBalanceStatus({ cells, direction }: {
         <span>{display.debitLabel}: <b dir="ltr">{display.debit}</b></span>
         <span>{display.creditLabel}: <b dir="ltr">{display.credit}</b></span>
       </div>
+      {linked && <p className="mb-1 font-semibold">
+        {direction === "rtl" ? "إجمالي قيد واحد موزع على صفحتين" : "Totals for one entry spanning two pages"}
+      </p>}
       <p className="mt-1">{display.message}</p>
     </div>
   );
@@ -27,7 +33,7 @@ function JournalBalanceStatus({ cells, direction }: {
 
 
 export function NotebookFlowEditor({
-  blocks, direction, typeface, lineGap, margin, tool, onChange, onCursor, onOverflow,
+  blocks, direction, typeface, lineGap, margin, tool, onChange, onCursor, onOverflow, journalReviews,
 }: {
   blocks: NotebookFlowBlock[];
   direction: NotebookDirection;
@@ -38,6 +44,7 @@ export function NotebookFlowEditor({
   onChange: (blocks: NotebookFlowBlock[]) => void;
   onCursor: (cursor: NotebookFlowCursor) => void;
   onOverflow: (overflows: boolean) => void;
+  journalReviews?: NotebookJournalReviewByBlock;
 }) {
   const paragraphs = useRef<Record<string, HTMLTextAreaElement | null>>({});
   const cellInputs = useRef<Record<string, HTMLInputElement | null>>({});
@@ -177,7 +184,9 @@ export function NotebookFlowEditor({
             </table>
           </div>
           {block.template === "journal" && (
-            <JournalBalanceStatus cells={block.cells} direction={direction} />
+            <JournalBalanceStatus cells={block.cells} direction={direction}
+              linked={Boolean(block.journalGroupId)}
+              linkedReview={journalReviews?.[block.id]} />
           )}
           {editable && (
             <p className="border-t border-[#d7e1e8] px-2 py-1 text-[11px] text-[#536476]">
