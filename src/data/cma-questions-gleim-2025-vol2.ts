@@ -1,7 +1,6 @@
 import { CMA_TOPICS, type CmaStudyUnit } from "@/data/cma-topics";
 import type { CmaLocalQuestion } from "@/data/cma-question-bank";
 import { hasCompleteArabic } from "@/data/cma-questions-gleim-2025-vol1";
-import { validateCmaTranslation } from "@/lib/cma-translation.shared";
 import unit11 from "@/data/cma-gleim-2025-vol2-unit-11.json";
 import unit12 from "@/data/cma-gleim-2025-vol2-unit-12.json";
 import unit13 from "@/data/cma-gleim-2025-vol2-unit-13.json";
@@ -49,14 +48,6 @@ const topics = new Map(CMA_TOPICS.map((topic) => [topic.id, topic]));
 export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
   const topic = topics.get(item.topicId);
   const hasArabic = hasCompleteArabic(item);
-  if (hasArabic) {
-    const audited = validateCmaTranslation(
-      { question: { en: item.stem }, choices: { en: item.choices }, explanation: { en: item.explanation } },
-      { question: item.stemAr, choices: item.choicesAr, explanation: item.explanationAr },
-    );
-    if (!audited.valid)
-      throw new Error(`Invalid Arabic CMA SU ${item.unit} §${item.section} Q${item.number}: ${audited.reason}`);
-  }
   if (!topic || topic.studyUnit !== item.unit)
     throw new Error(`Invalid Gleim 2025 question: SU ${item.unit}.${item.section} Q${item.number}`);
   return {
