@@ -76,14 +76,14 @@ test("Numerical answer options need no translation but written choices do", () =
 });
 
 
-test("CMA Unit 11 static Arabic cohort has six complete, numerically faithful translations", () => {
+test("CMA Unit 11 static Arabic cohort has twelve complete, numerically faithful translations", () => {
   const records = JSON.parse(readFileSync(
     new URL("../../src/data/cma-gleim-2025-vol2-unit-11.json", import.meta.url), "utf8",
   ));
   const localized = records.filter(item => item.stemAr !== undefined ||
     item.choicesAr !== undefined || item.explanationAr !== undefined);
   assert.deepEqual(localized.map(row => [row.section, row.number]),
-    Array.from({length:6}, (_,i)=>[1,i+1]));
+    Array.from({length:12}, (_,i)=>[1,i+1]));
   for(const row of localized){
     assert.equal(row.choices.length,4);
     assert.ok(Number.isInteger(row.answerIndex) && row.answerIndex>=0 && row.answerIndex<4);
