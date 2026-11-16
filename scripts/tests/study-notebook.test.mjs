@@ -1082,3 +1082,66 @@ test("Rich-note overflow UI offers deliberate continuation without moving ink an
   assert.match(new exporter.NotebookPdfOverflowError(3,"rtl").message,/الصفحة 3/);
   assert.match(new exporter.NotebookPdfOverflowError(2,"ltr").message,/page 2/);
 });
+
+
+test("Long comparison tables split by measured rows, keep headers and every data row", () => {
+  const table=flowTools.notebookTableTemplate("comparison","ltr","comparisons");
+  table.cells.push(["Inventory","20","19"],["Cash","50","30"],["Receivables","10","8"]);
+  const after=flowTools.notebookFlowParagraph("after","This note follows the table.");
+  const before=JSON.stringify([table,after]);
+  const parts=flowTools.splitNotebookFlowTableRows([table,after],0,"comparisons-next",3,"ltr");
+  assert.ok(parts);
+  assert.deepEqual(Array.from(parts.current.map(b=>b.id)),["comparisons"]);
+  assert.deepEqual(Array.from(parts.continuation.map(b=>b.id)),["comparisons-next","after"]);
+  assert.equal(parts.current[0].cells.length,3);
+  assert.equal(parts.continuation[0].cells.length,table.cells.length-3+1);
+  assert.deepEqual(JSON.parse(JSON.stringify(parts.continuation[0].cells[0])),
+    JSON.parse(JSON.stringify(table.cells[0])),"Only the header is repeated");
+  const combined=[...parts.current[0].cells.slice(1),...parts.continuation[0].cells.slice(1)];
+  assert.deepEqual(JSON.parse(JSON.stringify(combined)),
+    JSON.parse(JSON.stringify(table.cells.slice(1))),"No journal or comparison data row may be lost/duplicated");
+  assert.equal(parts.continuation[0].title,table.title+" (continued)");
+  assert.equal(JSON.stringify([table,after]),before,"Original table must remain untouched");
+  const store=notebook.emptyNotebook();
+  store.pages.cma[0].flow=parts.current;
+  store.pages.cma[0].text=notebook.notebookFlowPlainText(parts.current);
+  const nextPage=notebook.createNotebookPage("continuation");
+  nextPage.flow=parts.continuation;
+  nextPage.text=notebook.notebookFlowPlainText(parts.continuation);
+  store.pages.cma.push(nextPage);
+  const roundTrip=notebook.validateNotebookBackup(JSON.parse(JSON.stringify(store)));
+  assert.equal(roundTrip.pages.cma[0].flow[0].cells.length,3);
+  assert.equal(roundTrip.pages.cma[1].flow[0].cells.length,parts.continuation[0].cells.length);
+});
+
+test("Arabic table continuation and accounting journal safeguards", () => {
+  const custom=flowTools.notebookTableTemplate("custom","rtl","t");
+  custom.cells.push(["مخزون", "١٢٥"],["نقدية", "٢٠٠"]);
+  const result=flowTools.splitNotebookFlowTableRows([custom],0,"new",2,"rtl");
+  assert.ok(result);
+  assert.match(result.continuation[0].title,/تابع/);
+  assert.equal(result.continuation[0].cells[0][0],custom.cells[0][0]);
+  assert.equal(result.continuation[0].cells[1][0],custom.cells[2][0]);
+  assert.equal(result.continuation[0].cells.length,custom.cells.length-1);
+  const journal=flowTools.notebookTableTemplate("journal","rtl","journal");
+  journal.cells[1]=["النقدية","100",""];
+  journal.cells[2]=["الإيراد","","100"];
+  assert.equal(flowTools.reviewNotebookJournal(journal.cells).status,"balanced");
+  assert.equal(flowTools.splitNotebookFlowTableRows([journal],0,"part2",2,"rtl"),null,
+    "Do not imply a single accounting journal is two individually balanced entries");
+  assert.equal(flowTools.splitNotebookFlowTableRows([custom],0,"t",2,"rtl"),null,
+    "A repeated ID would corrupt the editable notebook schema");
+  assert.equal(flowTools.splitNotebookFlowTableRows([custom],0,"new",1,"rtl"),null,
+    "At least one data row must remain on each physical sheet");
+  assert.equal(flowTools.splitNotebookFlowTableRows([custom],0,"new",custom.cells.length,"rtl"),null);
+});
+
+test("Long-table UI measures rendered row geometry and retains PDF clipping safeguards", async () => {
+  const paper=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  const pdf=await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  assert.match(paper,/splitNotebookFlowTableRows\(page\.flow, firstOverflow, newId\(\), fittingRows, page\.direction\)/);
+  assert.match(paper,/rowHeights = rows\.map\(row => row\.getBoundingClientRect\(\)\.height\)/);
+  assert.match(paper,/overflowing\.template !== "journal"/);
+  assert.match(paper,/used \+ rowHeight > available - 4/);
+  assert.match(pdf,/throw new NotebookPdfOverflowError\(index \+ 1, page\.direction\)/);
+});
