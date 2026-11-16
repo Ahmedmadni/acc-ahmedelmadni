@@ -326,6 +326,10 @@ function NotebookPaper({
       // Reserve the real title, margins and edit controls before deciding
       // how many rows fit. Keep one full data row on both pages.
       let used = Math.max(0, frameHeight - rowHeights.reduce((sum, h) => sum + h, 0));
+      // Linked journal summaries add a two-page context line after splitting.
+      // Reserve its height *before* fitting rows, otherwise a seemingly safe
+      // first fragment could still clip its full-entry balance footer.
+      if (overflowing.template === "journal") used += 36;
       let fittingRows = 0;
       for (const rowHeight of rowHeights) {
         if (used + rowHeight > available - 4) break;
