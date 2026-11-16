@@ -4,7 +4,7 @@ export interface CmaTranslation {
   choices: string[];
   explanation: string;
   sourceHash: string;
-  status: "machine" | "reviewed";
+  status: "machine" | "reviewed" | "pasted";
 }
 
 export interface CmaSourceText {
@@ -28,9 +28,20 @@ export function cmaSourceHash(source: CmaSourceText): string {
   return `v1-${text.length}-${(hash >>> 0).toString(16).padStart(8, "0")}`;
 }
 
-/** Exactly preserve the source's ASCII numbers, decimal points and percent signs. */
+/** Normalize Arabic-Indic and Eastern Arabic-Indic digits only for numerical
+ * integrity checks. Original question values are never modified.
+ */
+export function normalizeCmaNumericNotation(text: string): string {
+  return text.replace(/[٠-٩۰-۹]/g, digit => {
+    const code = digit.charCodeAt(0);
+    return String(code >= 0x6f0 ? code - 0x6f0 : code - 0x660);
+  }).replace(/\u066C/g, ",").replace(/\u066B/g, ".");
+}
+
+/** Compare numbers in source order while allowing Arabic digit glyphs and
+ * standard Arabic thousands/decimal separators. */
 export function cmaNumericTokens(text: string): string[] {
-  return text.match(/\d+(?:,\d{3})*(?:\.\d+)?(?:%|‰)?/g) ?? [];
+  return normalizeCmaNumericNotation(text).match(/\d+(?:,\d{3})*(?:\.\d+)?(?:%|‰)?/g) ?? [];
 }
 
 export function validateCmaTranslation(
@@ -72,4 +83,24 @@ export function validateCmaTranslation(
     ) return { valid: false, reason: "numeric-mismatch" };
   }
   return { valid: true, data };
+}
+
+
+/** Accept pasted Arabic text on browsers without local Translator API.
+ * This is an unreviewed presentation annotation, never a new answer key.
+ */
+export function createPastedCmaTranslation(
+  source: CmaSourceText,
+  fields: { question: string; choices: string[]; explanation: string },
+): { valid: true; data: CmaTranslation } | { valid: false; reason: string } {
+  const checked = validateCmaTranslation(source, fields);
+  if (!checked.valid) return checked;
+  return {
+    valid: true,
+    data: {
+      ...checked.data,
+      sourceHash: cmaSourceHash(source),
+      status: "pasted",
+    },
+  };
 }
