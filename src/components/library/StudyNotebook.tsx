@@ -907,8 +907,8 @@ function NotebookPaper({
           </button>}
           {flowSplitWarning && <p role="alert">
             {lang === "ar"
-              ? "أول عنصر كبير جدا لنقله بأمان. إذا كان قيد يومية، احتفظ به كاملًا؛ اختصر القيد أو قلل عدد الصفوف قبل التصدير."
-              : "The first block is too tall to move safely. Keep journal entries intact; shorten the entry or reduce the rows before exporting."}
+              ? "لا توجد مساحة كافية لتقسيم العنصر بأمان. يمكن تقسيم قيد اليومية إلى جزأين مرتبطين فقط؛ اختصر الجزء الكبير أو عدل تنسيق الصفحة قبل التصدير."
+              : "This block is too tall to continue safely. Journal entries support two linked parts only; shorten a large fragment or adjust the page before exporting."}
           </p>}
           {!page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
             className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
