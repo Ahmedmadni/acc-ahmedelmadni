@@ -579,7 +579,7 @@ check(vol2Records.size === 1383, "Volume 2 records must cover each question exac
  * Published Arabic copy may not alter the source answer index or imply the
  * remaining English-only questions are already translated.
  */
-const staticArabicVol2 = new Set(["11.1.1","11.1.2","11.1.3","11.1.4","11.1.5","11.1.6"]);
+const staticArabicVol2 = new Set(Array.from({length:12},(_,i)=>"11.1."+(i+1)));
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
   const [unit,section,number] = key.split(".");
@@ -612,7 +612,7 @@ for (const [key, original] of vol2Records) {
       "Untranslated source improperly marked as Arabic: "+key);
   }
 }
-console.log("Verified 6 static Arabic translations in CMA Volume 2 Unit 11; English-only items remain flagged.");
+console.log("Verified 12 static Arabic translations in CMA Volume 2 Unit 11; English-only items remain flagged.");
 
 const inferredVol2 = new Set(["16.1.19", "18.2.4", "18.3.5", "19.2.28", "20.2.26"]);
 const reconstructedVol2 = new Set(["14.4.2", "15.8.23", "17.2.15", "17.2.25", "19.2.12"]);
