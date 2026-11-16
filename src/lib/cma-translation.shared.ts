@@ -86,6 +86,11 @@ export function validateCmaTranslation(
 }
 
 
+/** Identical numeric-only options can be shown without running any translator. */
+export function isCmaNumericOnlyChoice(choice: string): boolean {
+  return /^[\s\d,.%‰()+\-−×÷/$€£¥]*$/.test(choice);
+}
+
 /** Accept pasted Arabic text on browsers without local Translator API.
  * This is an unreviewed presentation annotation, never a new answer key.
  */
