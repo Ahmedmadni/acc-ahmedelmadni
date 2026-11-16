@@ -22,6 +22,7 @@ import { recognizeNotebookInk, supportsLocalHandwritingRecognition } from "@/lib
 import { NotebookFlowEditor } from "@/components/library/NotebookFlowEditor";
 import { NOTEBOOK_FORMULA_PRESETS, insertFlowFormula, insertFlowTable,
   notebookFlowParagraph, notebookTableTemplate, splitNotebookFlowForNextPage, splitNotebookFlowTableRows,
+  splitNotebookJournalRows, reviewNotebookJournalsAcrossPages, type NotebookJournalReviewByBlock,
   type NotebookFlowCursor, type NotebookFlowTableTemplate } from "@/lib/study-notebook-flow";
 import { exportStudyNotebookPdf, NotebookPdfOverflowError } from "@/lib/study-notebook-pdf";
 import { NOTEBOOK_STICKER_GROUPS, notebookImageToDataUrl } from "@/lib/study-notebook-stickers";
@@ -138,7 +139,7 @@ type NotebookInsertRequest =
   | { id: number; kind: "table"; template: NotebookFlowTableTemplate };
 
 function NotebookPaper({
-  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, onFlowSplit, canAddPage, lang,
+  page, tool, inkColor, highlighterColor, inkWidth, insertRequest, onChange, onSplit, onFlowSplit, canAddPage, lang, journalReviews,
 }: {
   page: NotebookPage;
   tool: NotebookTool;
@@ -151,6 +152,7 @@ function NotebookPaper({
   onFlowSplit: (current: NotebookFlowBlock[], continuation: NotebookFlowBlock[]) => void;
   canAddPage: boolean;
   lang: Lang;
+  journalReviews: NotebookJournalReviewByBlock;
 }) {
   const drawing = useRef<NotebookStroke | null>(null);
   const startTime = useRef(0);
@@ -313,11 +315,10 @@ function NotebookPaper({
         node.style.height = originalHeight;
       }
     }
-    // A long comparison/custom/T-account table may be divided at whole-row
-    // boundaries. The original heading stays on this page, and the next
-    // sheet repeats the header but never duplicates a data row.
+    // Whole-row continuation preserves each entry line exactly once. Linked
+    // journal fragments keep a shared whole-entry balance across pages.
     let split: { current: NotebookFlowBlock[]; continuation: NotebookFlowBlock[] } | null = null;
-    if (overflowing?.kind === "table" && overflowing.template !== "journal") {
+    if (overflowing?.kind === "table") {
       const tableNode = nodes[firstOverflow];
       const rows = Array.from(tableNode.querySelectorAll<HTMLTableRowElement>("tbody tr"));
       const rowHeights = rows.map(row => row.getBoundingClientRect().height);
@@ -325,13 +326,19 @@ function NotebookPaper({
       // Reserve the real title, margins and edit controls before deciding
       // how many rows fit. Keep one full data row on both pages.
       let used = Math.max(0, frameHeight - rowHeights.reduce((sum, h) => sum + h, 0));
+      // Linked journal summaries add a two-page context line after splitting.
+      // Reserve its height *before* fitting rows, otherwise a seemingly safe
+      // first fragment could still clip its full-entry balance footer.
+      if (overflowing.template === "journal") used += 36;
       let fittingRows = 0;
       for (const rowHeight of rowHeights) {
         if (used + rowHeight > available - 4) break;
         used += rowHeight;
         fittingRows++;
       }
-      split = splitNotebookFlowTableRows(page.flow, firstOverflow, newId(), fittingRows, page.direction);
+      split = overflowing.template === "journal"
+        ? splitNotebookJournalRows(page.flow, firstOverflow, newId(), fittingRows, page.direction)
+        : splitNotebookFlowTableRows(page.flow, firstOverflow, newId(), fittingRows, page.direction);
     }
     if (!split) split = splitNotebookFlowForNextPage(page.flow, firstOverflow, newId(), fitting);
     if (!split) {
@@ -609,6 +616,7 @@ function NotebookPaper({
             onChange={updateFlow}
             onCursor={cursor => { flowCursor.current = cursor; }}
             onOverflow={setTextOverflows}
+            journalReviews={journalReviews}
           />
         ) : (
         <textarea
@@ -903,8 +911,8 @@ function NotebookPaper({
           </button>}
           {flowSplitWarning && <p role="alert">
             {lang === "ar"
-              ? "أول عنصر كبير جدا لنقله بأمان. إذا كان قيد يومية، احتفظ به كاملًا؛ اختصر القيد أو قلل عدد الصفوف قبل التصدير."
-              : "The first block is too tall to move safely. Keep journal entries intact; shorten the entry or reduce the rows before exporting."}
+              ? "لا توجد مساحة كافية لتقسيم العنصر بأمان. يمكن تقسيم قيد اليومية إلى جزأين مرتبطين فقط؛ اختصر الجزء الكبير أو عدل تنسيق الصفحة قبل التصدير."
+              : "This block is too tall to continue safely. Journal entries support two linked parts only; shorten a large fragment or adjust the page before exporting."}
           </p>}
           {!page.flow?.length && <button type="button" disabled={!canAddPage} onClick={continueOnNewPage}
             className="rounded-lg bg-[#283b4d] px-3 py-2 font-bold text-white disabled:opacity-40">
@@ -1000,6 +1008,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
   const backupInput = useRef<HTMLInputElement | null>(null);
   latest.current = store;
   const sectionPages = store.pages[section];
+  const journalReviews = reviewNotebookJournalsAcrossPages(sectionPages);
   const current = sectionPages.find((p) => p.id === store.activePage[section]) ?? sectionPages[0];
 
   useEffect(() => {
@@ -1098,7 +1107,10 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     const copy: NotebookPage = { ...current, id, title: current.title ? current.title + " (copy)" : "",
       flow: current.flow?.map(block => block.kind === "paragraph"
         ? { ...block, id: newId() }
-        : { ...block, id: newId(), cells: block.cells.map(row => [...row]) }),
+        : { ...block, id: newId(), cells: block.cells.map(row => [...row]),
+          // A duplicated segment is independent; otherwise it could poison
+          // the original two-part entry's complete balance validation.
+          journalGroupId: undefined, journalPart: undefined }),
       strokes: current.strokes.map((stroke) => ({ ...stroke, id: newId(), points: stroke.points.map(p => ({ ...p })) })),
       objects: current.objects.map((object) => ({
         ...object, id: newId(),
@@ -1135,7 +1147,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
     setRestoreMessage("");
     try {
       await exportStudyNotebookPdf(allPages ? sectionPages : [current],
-        `${section}-study-notebook-${allPages ? "all" : "page-" + (currentIndex + 1)}.pdf`);
+        `${section}-study-notebook-${allPages ? "all" : "page-" + (currentIndex + 1)}.pdf`, sectionPages);
       setRestoreMessage(lang === "ar" ? "تم تصدير ملف PDF إلى جهازك." : "PDF saved to your device.");
     } catch (error) {
       setRestoreMessage(error instanceof NotebookPdfOverflowError
@@ -1781,6 +1793,7 @@ export function StudyNotebook({ section, lang, desktopOpen, onDesktopOpenChange,
               highlighterColor={highlighterColor} inkWidth={inkWidth} insertRequest={insertRequest}
               lang={lang} onChange={updatePage} onSplit={splitCurrentPage} onFlowSplit={splitCurrentFlowPage}
               canAddPage={sectionPages.length < MAX_NOTEBOOK_PAGES}
+              journalReviews={journalReviews}
               />
           </div>
 

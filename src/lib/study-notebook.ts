@@ -46,7 +46,9 @@ export interface NotebookObject {
 
 export type NotebookFlowBlock =
   | { id: string; kind: "paragraph"; text: string }
-  | { id: string; kind: "table"; title: string; cells: string[][]; template: "journal" | "taccount" | "comparison" | "custom" };
+  | { id: string; kind: "table"; title: string; cells: string[][]; template: "journal" | "taccount" | "comparison" | "custom";
+    /** Optional linkage for a single entry divided over two paper pages. */
+    journalGroupId?: string; journalPart?: "start" | "end" };
 
 export interface NotebookPage {
   id: string;
@@ -226,7 +228,13 @@ export function normalizeNotebookFlow(value: unknown): NotebookFlowBlock[] | und
       const template = oneOf(raw.template,
         ["journal", "taccount", "comparison", "custom"] as const, "custom");
       ids.add(raw.id);
-      blocks.push({ id: raw.id, kind: "table", title, cells, template });
+      // Old journals remain standalone. Only accept a linked ID and role
+      // together on journal tables; malformed metadata never creates groups.
+      const group = template === "journal" && typeof raw.journalGroupId === "string" &&
+        /^[A-Za-z0-9_-]{1,128}$/.test(raw.journalGroupId) &&
+        (raw.journalPart === "start" || raw.journalPart === "end")
+        ? { journalGroupId: raw.journalGroupId, journalPart: raw.journalPart as "start" | "end" } : {};
+      blocks.push({ id: raw.id, kind: "table", title, cells, template, ...group });
     }
     // Allow only a bounded number of characters across all block types.
     if (remaining <= 0) break;

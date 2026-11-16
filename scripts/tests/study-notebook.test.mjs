@@ -1141,7 +1141,107 @@ test("Long-table UI measures rendered row geometry and retains PDF clipping safe
   const pdf=await readFile("src/lib/study-notebook-pdf.ts","utf8");
   assert.match(paper,/splitNotebookFlowTableRows\(page\.flow, firstOverflow, newId\(\), fittingRows, page\.direction\)/);
   assert.match(paper,/rowHeights = rows\.map\(row => row\.getBoundingClientRect\(\)\.height\)/);
-  assert.match(paper,/overflowing\.template !== "journal"/);
+  assert.match(paper,/splitNotebookJournalRows\(page\.flow, firstOverflow, newId\(\), fittingRows, page\.direction\)/);
   assert.match(paper,/used \+ rowHeight > available - 4/);
   assert.match(pdf,/throw new NotebookPdfOverflowError\(index \+ 1, page\.direction\)/);
+});
+
+
+test("Linked journal continuation preserves every row and balances one whole entry", () => {
+  const entry=flowTools.notebookTableTemplate("journal","rtl","journal-a");
+  entry.cells[1]=["النقدية","١٠٠٫٥٠",""];
+  entry.cells[2]=["المبيعات","","100.50"];
+  const before=JSON.stringify(entry);
+  const split=flowTools.splitNotebookJournalRows([entry],0,"journal-b",2,"rtl");
+  assert.ok(split);
+  const start=split.current[0],end=split.continuation[0];
+  assert.equal(start.journalGroupId,"journal-a");
+  assert.equal(start.journalPart,"start");
+  assert.equal(end.journalPart,"end");
+  assert.equal(end.journalGroupId,"journal-a");
+  assert.match(end.title,/تابع القيد/);
+  assert.deepEqual(JSON.parse(JSON.stringify([...start.cells.slice(1),...end.cells.slice(1)])),
+    JSON.parse(JSON.stringify(entry.cells.slice(1))));
+  assert.equal(JSON.stringify(entry),before);
+  const pageA=notebook.createNotebookPage("page-a");
+  const pageB=notebook.createNotebookPage("page-b");
+  pageA.flow=split.current; pageB.flow=split.continuation;
+  pageA.text=notebook.notebookFlowPlainText(pageA.flow);
+  pageB.text=notebook.notebookFlowPlainText(pageB.flow);
+  const totals=flowTools.reviewNotebookJournalsAcrossPages([pageA,pageB]);
+  assert.equal(totals["journal-a"].status,"balanced");
+  assert.equal(totals["journal-b"].status,"balanced");
+  assert.equal(totals["journal-a"].debitMinor,10050);
+  assert.equal(totals["journal-b"].creditMinor,10050);
+  const store=notebook.emptyNotebook();
+  store.pages.cma=[pageA,pageB];
+  store.activePage.cma="page-a";
+  const hydrated=notebook.validateNotebookBackup(JSON.parse(JSON.stringify(store)));
+  assert.equal(hydrated.pages.cma[0].flow[0].journalGroupId,"journal-a");
+  assert.equal(hydrated.pages.cma[1].flow[0].journalPart,"end");
+  assert.equal(flowTools.reviewNotebookJournalsAcrossPages(hydrated.pages.cma)["journal-b"].status,"balanced");
+});
+
+test("Journal page deletion, duplicate links and malformed metadata never certify a partial entry", () => {
+  const entry=flowTools.notebookTableTemplate("journal","ltr","j1");
+  entry.cells[1]=["Cash","25",""];
+  entry.cells[2]=["Sales","","25"];
+  const split=flowTools.splitNotebookJournalRows([entry],0,"j2",2,"ltr");
+  const one=notebook.createNotebookPage("one"),two=notebook.createNotebookPage("two");
+  one.flow=split.current; two.flow=split.continuation;
+  assert.equal(flowTools.reviewNotebookJournalsAcrossPages([one])["j1"].status,"incomplete");
+  const duplicate=notebook.createNotebookPage("duplicate");
+  duplicate.flow=[{...split.continuation[0],id:"j3"}];
+  const review=flowTools.reviewNotebookJournalsAcrossPages([one,two,duplicate]);
+  assert.equal(review["j1"].status,"incomplete");
+  assert.equal(review["j2"].status,"incomplete");
+  assert.match(flowTools.formatNotebookJournalReview(review["j1"],"ltr").message,/Incomplete linked entry/);
+  assert.equal(flowTools.splitNotebookJournalRows(split.current,0,"j4",2,"ltr"),null);
+  assert.equal(flowTools.splitNotebookJournalRows([entry],0,"j1",2,"ltr"),null);
+  assert.equal(flowTools.splitNotebookJournalRows([entry],0,"j2",1,"ltr"),null);
+  const unsafe=notebook.normalizeNotebookFlow([{
+    ...split.current[0],journalGroupId:"<script>",journalPart:"start",
+  }]);
+  assert.equal(unsafe[0].journalGroupId,undefined);
+  assert.equal(unsafe[0].journalPart,undefined);
+});
+
+test("Linked journal PDF snapshots show whole-entry totals and fail safely without context", async () => {
+  class Node {
+    constructor(kind){this.kind=kind;this.children=[];this.attrs={};this.style={};this.textContent="";}
+    setAttribute(key,value){this.attrs[key]=value;}
+    appendChild(value){this.children.push(value);return value;}
+  }
+  const source=await readFile("src/lib/study-notebook-pdf.ts","utf8");
+  const compiled=ts.transpileModule(source,{compilerOptions:{
+    module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,
+  }}).outputText;
+  const module={exports:{}};
+  const dom={createElement:name=>new Node(name),createElementNS:(_,name)=>new Node(name)};
+  vm.runInNewContext(compiled,{module,exports:module.exports,document:dom,require:id=>{
+    if(id==="@/lib/study-notebook")return notebook;
+    if(id==="@/lib/study-notebook-widgets")return notebookWidgets;
+    if(id==="@/lib/study-notebook-flow")return flowTools;
+    throw Error("Unexpected PDF dependency "+id);
+  }});
+  const entry=flowTools.notebookTableTemplate("journal","ltr","a");
+  entry.cells[1]=["Cash","75",""];
+  entry.cells[2]=["Sales","","75"];
+  const split=flowTools.splitNotebookJournalRows([entry],0,"b",2,"ltr");
+  const one=notebook.createNotebookPage("one"),two=notebook.createNotebookPage("two");
+  one.flow=split.current;two.flow=split.continuation;
+  const map=flowTools.reviewNotebookJournalsAcrossPages([one,two]);
+  const walk=root=>{const list=[root];for(let i=0;i<list.length;i++)list.push(...list[i].children);return list;};
+  const rendered=module.exports.buildNotebookPrintablePageDom(one,map);
+  const status=walk(rendered).find(n=>n.attrs["data-pdf-journal-review"]==="balanced");
+  assert.ok(status);
+  assert.ok(walk(status).some(n=>n.textContent.includes("Total debit: 75.00")));
+  assert.ok(walk(status).some(n=>n.textContent.includes("Total credit: 75.00")));
+  assert.ok(walk(status).some(n=>n.textContent.includes("spanning two pages")));
+  const missing=module.exports.buildNotebookPrintablePageDom(one);
+  assert.ok(walk(missing).find(n=>n.attrs["data-pdf-journal-review"]==="incomplete"));
+  const app=await readFile("src/components/library/StudyNotebook.tsx","utf8");
+  assert.match(app,/journalReviews=\{journalReviews\}/);
+  assert.match(app,/journalGroupId: undefined, journalPart: undefined/);
+  assert.match(source,/journalContextPages: readonly NotebookPage\[\] = pages/);
 });

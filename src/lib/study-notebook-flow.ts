@@ -1,4 +1,4 @@
-import type { NotebookFlowBlock, NotebookDirection } from "@/lib/study-notebook";
+import type { NotebookFlowBlock, NotebookDirection, NotebookPage } from "@/lib/study-notebook";
 
 export type NotebookFlowTableTemplate = "journal" | "taccount" | "comparison" | "custom";
 export interface NotebookFlowCursor { blockId: string; start: number; end: number; }
@@ -142,7 +142,7 @@ export function parseNotebookJournalAmount(value: string): number | null {
 }
 
 export interface NotebookJournalReview {
-  status: "empty" | "balanced" | "unbalanced" | "invalid";
+  status: "empty" | "balanced" | "unbalanced" | "invalid" | "incomplete";
   debitMinor: number;
   creditMinor: number;
   differenceMinor: number;
@@ -194,8 +194,10 @@ export function formatNotebookJournalReview(
     minimumFractionDigits: 2, maximumFractionDigits: 2,
   });
   const difference = money(review.differenceMinor);
-  const message = review.status === "empty"
-    ? (ar ? "أدخل الحسابات والمبالغ لمراجعة توازن القيد." : "Enter accounts and amounts to check the entry.")
+  const message = review.status === "incomplete"
+    ? (ar ? "قيد موزع غير مكتمل: الإجماليات للأجزاء المتاحة فقط ولا يجوز اعتماد توازنه." : "Incomplete linked entry: totals cover available parts only; balance cannot be certified.")
+    : review.status === "empty"
+      ? (ar ? "أدخل الحسابات والمبالغ لمراجعة توازن القيد." : "Enter accounts and amounts to check the entry.")
     : review.status === "invalid"
       ? (ar ? "راجع الصفوف: " : "Check rows: ") + review.invalidRows.join(", ")
       : review.status === "balanced"
@@ -277,6 +279,82 @@ export function splitNotebookFlowTableRows(
       { ...table, id: nextTableId, title,
         cells: [ [...table.cells[0]], ...table.cells.slice(fittingRows).map(row => [...row]) ] },
       ...blocks.slice(tableIndex + 1),
+    ],
+  };
+}
+
+
+export type NotebookJournalReviewByBlock = Record<string, NotebookJournalReview>;
+
+/** Resolve a whole journal transaction from its two explicit page fragments.
+ * Broken, duplicated or missing links never receive a "balanced" status.
+ */
+export function reviewNotebookJournalsAcrossPages(
+  pages: readonly NotebookPage[],
+): NotebookJournalReviewByBlock {
+  const results: NotebookJournalReviewByBlock = {};
+  const grouped = new Map<string, Extract<NotebookFlowBlock, {kind:"table"}>[]>();
+  for (const page of pages) {
+    for (const block of page.flow ?? []) {
+      if (block.kind !== "table" || block.template !== "journal") continue;
+      if (!block.journalGroupId || !block.journalPart) {
+        results[block.id] = reviewNotebookJournal(block.cells);
+        continue;
+      }
+      const list = grouped.get(block.journalGroupId) ?? [];
+      list.push(block);
+      grouped.set(block.journalGroupId,list);
+    }
+  }
+  for (const fragments of grouped.values()) {
+    const first = fragments.find(part => part.journalPart === "start");
+    const last = fragments.find(part => part.journalPart === "end");
+    const valid = fragments.length === 2 && !!first && !!last &&
+      first.id !== last.id && first.journalGroupId === first.id;
+    const rows = valid ? [
+      first!.cells[0], ...first!.cells.slice(1), ...last!.cells.slice(1),
+    ] : [
+      fragments[0].cells[0], ...fragments.flatMap(part => part.cells.slice(1)),
+    ];
+    const checked = reviewNotebookJournal(rows);
+    const result = valid ? checked : { ...checked, status:"incomplete" as const };
+    for (const part of fragments) results[part.id] = result;
+  }
+  return results;
+}
+
+/** A journal is never treated as two unrelated entries. The link metadata
+ * causes both pages to show the same whole-entry debit/credit result.
+ * The header is repeated, but every data row is retained exactly once.
+ */
+export function splitNotebookJournalRows(
+  blocks: readonly NotebookFlowBlock[],
+  tableIndex: number,
+  nextTableId: string,
+  fittingRows: number,
+  direction: NotebookDirection,
+): { current: NotebookFlowBlock[]; continuation: NotebookFlowBlock[] } | null {
+  if (!Number.isInteger(tableIndex) || tableIndex < 0 || tableIndex >= blocks.length ||
+      !Number.isInteger(fittingRows) || !/^[A-Za-z0-9_-]{1,128}$/.test(nextTableId) ||
+      blocks.some(item => item.id === nextTableId)) return null;
+  const table = blocks[tableIndex];
+  if (table.kind !== "table" || table.template !== "journal" ||
+      table.journalGroupId || table.journalPart ||
+      !/^[A-Za-z0-9_-]{1,128}$/.test(table.id) ||
+      fittingRows < 2 || fittingRows >= table.cells.length) return null;
+  const label = direction === "rtl" ? " (تابع القيد)" : " (entry continued)";
+  const title = table.title.slice(0,80-label.length) + label;
+  return {
+    current: [
+      ...blocks.slice(0,tableIndex),
+      {...table, journalGroupId:table.id, journalPart:"start" as const,
+        cells:table.cells.slice(0,fittingRows).map(row=>[...row])},
+    ],
+    continuation: [
+      {...table, id:nextTableId, title, journalGroupId:table.id,
+        journalPart:"end" as const,
+        cells:[[...table.cells[0]], ...table.cells.slice(fittingRows).map(row=>[...row])]},
+      ...blocks.slice(tableIndex+1),
     ],
   };
 }

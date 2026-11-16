@@ -1,6 +1,7 @@
 import type { NotebookPage, NotebookStroke } from "@/lib/study-notebook";
 import { STUDY_WIDGET_PALETTE, studyWidgetDefaultTitle } from "@/lib/study-notebook-widgets";
-import { formatNotebookJournalReview, reviewNotebookJournal } from "@/lib/study-notebook-flow";
+import { formatNotebookJournalReview, reviewNotebookJournal,
+  reviewNotebookJournalsAcrossPages, type NotebookJournalReviewByBlock } from "@/lib/study-notebook-flow";
 import {
   NOTEBOOK_DESIGN_WIDTH, NOTEBOOK_SIZES, notebookPaperBackground,
   notebookStrokePath,
@@ -31,7 +32,7 @@ export function printableInkStyle(stroke: NotebookStroke) {
 }
 
 /** Build the exact local print surface for a notebook page (also testable without canvas). */
-export function buildNotebookPrintablePageDom(page: NotebookPage) {
+export function buildNotebookPrintablePageDom(page: NotebookPage, journalReviews?: NotebookJournalReviewByBlock) {
   const width = NOTEBOOK_DESIGN_WIDTH;
   const height = NOTEBOOK_SIZES[page.size].height;
   const root = document.createElement("article");
@@ -125,7 +126,11 @@ export function buildNotebookPrintablePageDom(page: NotebookPage) {
         if (block.template === "journal") {
           // The exported snapshot must include exactly the same computed
           // balance information seen in the editable study notebook.
-          const review = reviewNotebookJournal(block.cells);
+          const review = block.journalGroupId
+            ? (journalReviews?.[block.id] ?? {
+              ...reviewNotebookJournal(block.cells), status: "incomplete" as const,
+            })
+            : reviewNotebookJournal(block.cells);
           const display = formatNotebookJournalReview(review, page.direction);
           const summary = document.createElement("div");
           summary.setAttribute("data-pdf-journal-review", review.status);
@@ -147,6 +152,14 @@ export function buildNotebookPrintablePageDom(page: NotebookPage) {
           totals.appendChild(debit);
           totals.appendChild(credit);
           summary.appendChild(totals);
+          if (block.journalGroupId) {
+            const linked = document.createElement("div");
+            linked.textContent = page.direction === "rtl"
+              ? "إجمالي قيد واحد موزع على صفحتين"
+              : "Totals for one entry spanning two pages";
+            linked.style.cssText = "font-weight:700;";
+            summary.appendChild(linked);
+          }
           const result = document.createElement("div");
           result.textContent = display.message;
           summary.appendChild(result);
@@ -267,8 +280,11 @@ export function buildNotebookPrintablePageDom(page: NotebookPage) {
 export async function exportStudyNotebookPdf(
   pages: readonly NotebookPage[],
   filename: string,
+  /** All curriculum pages, including pages outside the selected export. */
+  journalContextPages: readonly NotebookPage[] = pages,
 ): Promise<void> {
   if (!pages.length) throw new Error("There are no notebook pages to export.");
+  const journalReviews = reviewNotebookJournalsAcrossPages(journalContextPages);
   const [{ default: html2canvas }, { default: jsPDF }] = await Promise.all([
     import("html2canvas-pro"),
     import("jspdf"),
@@ -291,7 +307,7 @@ export async function exportStudyNotebookPdf(
     for (let index = 0; index < pages.length; index++) {
       const page = pages[index];
       const [width, height] = STUDY_NOTEBOOK_PDF_MM[page.size];
-      const node = buildNotebookPrintablePageDom(page);
+      const node = buildNotebookPrintablePageDom(page, journalReviews);
       printRoot.appendChild(node);
       try {
         // We cannot trust bitmap clipping to preserve the learner's notes.
