@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import {
   cmaNumericTokens,
   cmaSourceHash,
@@ -72,4 +73,43 @@ test("Numerical answer options need no translation but written choices do", () =
   assert.equal(isCmaNumericOnlyChoice("75%"), true);
   assert.equal(isCmaNumericOnlyChoice("SAR 100"), false);
   assert.equal(isCmaNumericOnlyChoice("Ignore costs"), false);
+});
+
+
+test("CMA Unit 11 static Arabic cohort has twelve complete, numerically faithful translations", () => {
+  const records = JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-11.json", import.meta.url), "utf8",
+  ));
+  const localized = records.filter(item => item.stemAr !== undefined ||
+    item.choicesAr !== undefined || item.explanationAr !== undefined);
+  assert.deepEqual(localized.map(row => [row.section, row.number]),
+    Array.from({length:12}, (_,i)=>[1,i+1]));
+  for(const row of localized){
+    assert.equal(row.choices.length,4);
+    assert.ok(Number.isInteger(row.answerIndex) && row.answerIndex>=0 && row.answerIndex<4);
+    const check = validateCmaTranslation(
+      { question: { en:row.stem }, choices:{ en:row.choices }, explanation:{ en:row.explanation } },
+      { question:row.stemAr, choices:row.choicesAr, explanation:row.explanationAr },
+    );
+    assert.equal(check.valid,true,"Invalid numeric/text presentation in SU 11 Q"+row.number+": "+check.reason);
+    assert.equal(row.choicesAr.length,row.choices.length);
+    assert.match(row.stemAr, /[\u0600-\u06ff]/);
+    assert.match(row.explanationAr, /[\u0600-\u06ff]/);
+    // The answer key remains a positional reference to the original English choices.
+    assert.equal(row.choices[row.answerIndex], records[row.number-1].choices[records[row.number-1].answerIndex]);
+  }
+  assert.equal(records.length,58);
+});
+
+test("a partial or altered Arabic question cannot pass the static-source translation gate", () => {
+  const row = JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-11.json", import.meta.url), "utf8",
+  ))[5];
+  const source={question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}};
+  assert.equal(validateCmaTranslation(source,{
+    question:row.stemAr, choices:row.choicesAr.slice(0,3), explanation:row.explanationAr,
+  }).valid,false);
+  assert.equal(validateCmaTranslation(source,{
+    question:row.stemAr, choices:row.choicesAr, explanation:row.explanationAr.replace("1.", "8."),
+  }).valid,false);
 });

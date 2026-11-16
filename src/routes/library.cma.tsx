@@ -33,7 +33,12 @@ import {
 } from "@/data/cma-topics";
 import { useLibLang } from "@/routes/library";
 
-const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) => q.sourceLanguage !== "en").length;
+const bilingualQuestionCount = CMA_LOCAL_QUESTIONS.filter((q) =>
+  !q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage !== "en",
+).length;
+const staticSourceArabicCount = CMA_LOCAL_QUESTIONS.filter((q) =>
+  q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage !== "en",
+).length;
 const original2019Part2Count = CMA_LOCAL_QUESTIONS.filter((q) =>
   q.id.startsWith("cma-p2-2019-concept-"),
 ).length;
@@ -145,8 +150,8 @@ function CmaPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#BDB4AA] sm:text-base">
             {lang === "ar"
-              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025، و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني، بالإضافة إلى ${icma2024Part2Count} سؤالًا رسميًا سابقًا من حزمة ICMA لعام 2024 مع نسبتها إلى المعهد. ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
-              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions, plus ${newEnglishPart2Count} independently authored Part 2 English questions and ${icma2024Part2Count} credited official retired questions from the ICMA 2024 support package. Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
+              ? `أدلة مفصلة وحالات للجزء الأول ووحدات 1–15 من الجزء الثاني، و${bilingualQuestionCount} سؤالًا أصليًا ثنائي اللغة، و2,443 سؤالًا من بنوك الجزء الأول 2025 (منها ${staticSourceArabicCount} مترجمًا إلى العربية داخل الموقع)، و${newEnglishPart2Count} سؤالًا تدريبيًا أصليًا بالإنجليزية للجزء الثاني، بالإضافة إلى ${icma2024Part2Count} سؤالًا رسميًا سابقًا من حزمة ICMA لعام 2024 مع نسبتها إلى المعهد. ترجمة الأسئلة على الأجهزة المدعومة مع خيار خارجي دون استدعاءات ذكاء اصطناعي مدفوعة؛ ومراجعة جداول المصدر مستمرة.`
+              : `Detailed guides and cases for Part 1 and Part 2 Units 1–15, ${bilingualQuestionCount} original bilingual questions, 2,443 Part 1 2025 source-bank questions (${staticSourceArabicCount} with Arabic text built into the site), plus ${newEnglishPart2Count} independently authored Part 2 English questions and ${icma2024Part2Count} credited official retired questions from the ICMA 2024 support package. Supported desktop browsers can translate locally with an external fallback; table review remains in progress.`}
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold text-[#c9a986]">
             <span>
@@ -154,6 +159,12 @@ function CmaPage() {
             </span>
             <span>
               {CMA_LOCAL_QUESTIONS.length} {lang === "ar" ? "سؤالًا بالمجموع" : "questions total"}
+            </span>
+            <span>
+              {staticSourceArabicCount}{" "}
+              {lang === "ar"
+                ? "سؤالًا مصدرًا مترجمًا للعربية دون الحاجة لأداة ترجمة"
+                : "Part 1 source questions with built-in Arabic text"}
             </span>
             <span>
               {englishPart1SourceCount}{" "}
