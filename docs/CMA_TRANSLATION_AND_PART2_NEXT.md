@@ -13,7 +13,7 @@ The site owner requested an alternative that **does not rely on Supabase databas
 - A translation is created by the browser itself after user action. The client translates the question, four choices and explanation separately; all numeric tokens and choice counts are checked. Rejected translations never replace the original.
 - Successful translations are kept **in this browser's localStorage**, scoped by question ID and source-content hash, so they are reused on this device. Clearing site data, using another device or private browsing may remove the cache. **There is no shared database cache.**
 - All learners have a **user-initiated** external Google Translate link. It opens an external website, and the question/choices may be sent to that provider if the learner chooses to open the link. Explanations are not included until the answer has been revealed. Long text offers a copy/paste fallback instead of truncating the question.
-- The external translator does **not** return translated text to the question UI; answers and scoring stay anchored to the original. It is outside the site and subject to that provider's availability and policies.
+- The external translator does not automatically return translated text to the question UI. A learner may now paste the translated prompt, choices and explanation in the on-page editor; the app validates and keeps this translation locally. Answers and scoring stay anchored to the original. It is outside the site and subject to that provider's availability and policies.
 - Translators are not accounting auditors. A successful numeric check does not guarantee correct financial terminology or interpretation, and the UI labels machine results accordingly.
 
 ### Costs / dependencies
@@ -56,3 +56,19 @@ Use the read-only `scripts/audit-cma-part2-intake.mjs` when a **rights-cleared**
 ### Publishing rights
 
 Before further verbatim import or public redistribution of Gleim or IMA question text, verify that permission covers that use. Independent original practice questions and publisher/official questions must remain distinct.
+
+
+## Arabic translation troubleshooting and on-page fallback — 16 November 2026
+
+The issue was that the Arabic study-language toggle could not automatically translate English-only source questions on browsers without the experimental Translator API. This is a content-coverage and device-compatibility limitation, not a simple CSS localization bug. The existing no-server/no-paid-API design cannot guarantee one-tap translation on every mobile browser.
+
+The following no-backend improvements were implemented:
+
+- Browser-generated Arabic-Indic and Persian digit shapes (٠–٩ / ۰–۹), plus Arabic thousands, decimal, percent and per-mille symbols, are normalized **for integrity checks only**. English source figures, answer order and the original answer index are never changed. Numeric value changes still fail validation.
+- English-only CMA question cards now offer **"Enter Arabic translation inside the site"**, even on unsupported browsers. Users can open a voluntary external translator, then enter the Arabic question, all answer choices and explanation into labeled fields. The app checks Arabic content, all choices and the figures before displaying it in-place. The external provider never automatically writes into the website.
+- User-entered translations are tagged **pasted / not editorially reviewed**. They are saved in the same source-hash-keyed browser cache when local storage is allowed, or remain temporary for sources that prohibit such caching. Users can correct their saved Arabic copy. There is no translation-specific server, login, database or use of Lovable AI credits.
+- Actual Arabic content displays RTL; English source stays LTR even if the rest of the curriculum is Arabic. The translated presentation does not change answer correctness or reveal the correct answer before submission.
+- Pre-authored editorially reviewed Arabic translations remain in the original content. The fallback editor is for English-only questions, not a replacement for professionally reviewed bilingual content.
+- **Remaining limitation:** neither the new editor nor the language toggle translates the entire source bank automatically. Mobile browsers without the Translator API need manual copy/paste or a browser/external translation service. Zero-click translation for all devices requires approved backend/provider access or a reviewed Arabic source corpus, which would entail separate cost/privacy/licensing review.
+
+Regression tests cover localized number equivalence, rejection of changed financial values, source hashes, fallback UI, the original answer index and no accidental backend calls.

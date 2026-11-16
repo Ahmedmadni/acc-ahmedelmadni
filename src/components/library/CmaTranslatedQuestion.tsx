@@ -3,6 +3,8 @@ import { Copy, ExternalLink, Languages, Loader2 } from "lucide-react";
 import type { ExamQuestion } from "@/lib/exam-bank";
 import {
   cmaSourceHash,
+  isCmaNumericOnlyChoice,
+  createPastedCmaTranslation,
   validateCmaTranslation,
   type CmaTranslation,
 } from "@/lib/cma-translation.shared";
@@ -37,6 +39,7 @@ function getLocal(question: ExamQuestion): CmaTranslation | null {
     const candidate = JSON.parse(text) as CmaTranslation;
     const parsed = validateCmaTranslation(question, candidate);
     if (!parsed.valid || candidate.sourceHash !== cmaSourceHash(question)) return null;
+    if (!["reviewed", "machine", "pasted"].includes(candidate.status)) return null;
     return { ...parsed.data, sourceHash: candidate.sourceHash, status: candidate.status };
   } catch {
     return null;
@@ -98,6 +101,24 @@ function useCmaTranslation(question: ExamQuestion, eligible: boolean, cacheLocal
   const translation =
     entry?.id === id && entry.value.sourceHash === sourceHash ? entry.value : null;
 
+  function savePastedTranslation(fields: {
+    question: string; choices: string[]; explanation: string;
+  }): boolean {
+    if (!eligible) return false;
+    const checked = createPastedCmaTranslation(question, fields);
+    if (!checked.valid) {
+      setError(checked.reason === "numeric-mismatch"
+        ? "الأرقام أو النسب لا تطابق السؤال الإنجليزي. صحح الترجمة دون تغيير الأرقام أو ترتيب الخيارات."
+        : "أكمل السؤال والخيارات الأربعة والشرح بالعربية قبل الحفظ.");
+      return false;
+    }
+    if (cacheLocally) saveLocal(question, checked.data);
+    setEntry({ id, value: checked.data });
+    setShowOriginal(false);
+    setError(null);
+    return true;
+  }
+
   async function requestTranslation() {
     if (!eligible || loading) return;
     if (translation) {
@@ -141,6 +162,7 @@ function useCmaTranslation(question: ExamQuestion, eligible: boolean, cacheLocal
     error,
     showOriginal,
     requestTranslation,
+    savePastedTranslation,
   };
 }
 
@@ -170,6 +192,21 @@ export function CmaTranslatedQuestion({
 
   const state = useCmaTranslation(question, eligible, cacheLocally);
   const [copyNotice, setCopyNotice] = useState("");
+  const [pasteOpen, setPasteOpen] = useState(false);
+  const [pasteFields, setPasteFields] = useState({
+    question: "", choices: [...question.choices.en.map(choice =>
+      isCmaNumericOnlyChoice(choice) ? choice : "")],
+    explanation: "",
+  });
+  useEffect(() => {
+    setPasteOpen(false);
+    setCopyNotice("");
+    setPasteFields({
+      question: "", choices: question.choices.en.map(choice =>
+        isCmaNumericOnlyChoice(choice) ? choice : ""),
+      explanation: "",
+    });
+  }, [question.id]);
   const translated = Boolean(eligible && state.translation && !state.showOriginal);
   const source = translated ? state.translation : null;
   const external = allowExternalTranslation ? getCmaExternalTranslation(question, revealExplanation) : null;
@@ -189,11 +226,14 @@ export function CmaTranslatedQuestion({
     }
   }
 
+  const visibleArabic = lang === "ar" &&
+    (translated || /[\u0600-\u06ff]/.test(question.question.ar));
+
   const view: View = {
     question: source?.question ?? question.question[lang],
     choices: source?.choices ?? question.choices[lang],
     explanation: source?.explanation ?? question.explanation[lang],
-    direction: translated ? "rtl" : question.sourceLanguage === "en" || lang === "en" ? "ltr" : "rtl",
+    direction: visibleArabic ? "rtl" : "ltr",
     translated,
     control: eligible ? (
       <div className={`mt-3 flex flex-wrap items-center gap-2 text-xs ${dark ? "text-[#f3d28a]" : "text-[#76543F]"}`}>
@@ -212,7 +252,7 @@ export function CmaTranslatedQuestion({
         ) : state.availability === "checking" ? (
           <span role="status">جار التحقق من دعم الترجمة على الجهاز...</span>
         ) : (
-          <span>الترجمة على الجهاز غير متاحة في هذا المتصفح.</span>
+          <span role="status">الترجمة التلقائية غير مدعومة هنا. يمكنك استخدام رابط الترجمة وإدخال النص العربي داخل الموقع.</span>
         )}
 
         {state.availability === "downloadable" || state.availability === "downloading" ? (
@@ -223,7 +263,9 @@ export function CmaTranslatedQuestion({
           <span className={dark ? "text-amber-200" : "text-amber-800"}>
             {state.translation?.status === "reviewed"
               ? "ترجمة تمت مراجعتها"
-              : cacheLocally ? "ترجمة آلية محفوظة على جهازك · غير معتمدة محاسبيًا" : "ترجمة آلية مؤقتة على جهازك · غير معتمدة محاسبيًا"}
+              : state.translation?.status === "pasted"
+                ? "ترجمة أدخلها المستخدم · غير معتمدة محاسبيًا"
+                : cacheLocally ? "ترجمة آلية محفوظة على جهازك · غير معتمدة محاسبيًا" : "ترجمة آلية مؤقتة على جهازك · غير معتمدة محاسبيًا"}
           </span>
         )}
 
@@ -240,7 +282,7 @@ export function CmaTranslatedQuestion({
           </a>
         )}
 
-        {!state.translation && external?.needsPaste && (
+        {!state.translation && external && (
           <button
             type="button"
             onClick={() => void copyForExternalTranslation()}
@@ -248,6 +290,73 @@ export function CmaTranslatedQuestion({
           >
             <Copy className="size-3.5" /> نسخ النص للترجمة
           </button>
+        )}
+
+
+        {(!state.translation || state.translation.status === "pasted") && (
+          <button type="button"
+            onClick={() => {
+              if (state.translation?.status === "pasted") {
+                setPasteFields({
+                  question: state.translation.question,
+                  choices: [...state.translation.choices],
+                  explanation: state.translation.explanation,
+                });
+              }
+              setPasteOpen(open => !open);
+            }}
+            aria-expanded={pasteOpen}
+            className={`inline-flex min-h-9 items-center gap-1 rounded-lg border px-3 py-1.5 font-semibold ${dark ? "border-[#f3d28a]/30" : "border-[#A88765]/30"}`}>
+            {pasteOpen ? "إغلاق محرر الترجمة" : state.translation ? "تعديل الترجمة المحفوظة" : "إدخال ترجمة عربية داخل الموقع"}
+          </button>
+        )}
+        {pasteOpen && (
+          <div role="group" aria-label="محرر الترجمة العربية للسؤال" dir="rtl"
+            className={`w-full space-y-3 rounded-xl border p-3 ${dark ? "border-[#f3d28a]/30 bg-white/[0.05]" : "border-[#A88765]/30 bg-white"}`}>
+            <p className="text-xs leading-6">
+              الصق النص المترجم من مصدر تختاره. حافظ على ترتيب الإجابات الأربعة والأرقام كما في الأصل.
+              لا تتغير الإجابة الصحيحة أو درجات الاختبار.
+            </p>
+            <label className="block space-y-1">
+              <span>السؤال بالعربية</span>
+              <textarea rows={3} dir="rtl" value={pasteFields.question}
+                onChange={event => setPasteFields(prev => ({ ...prev, question: event.target.value }))}
+                className="w-full rounded-lg border border-[#A88765]/40 bg-transparent p-2 text-sm"
+                placeholder="الصق ترجمة السؤال هنا" />
+            </label>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {pasteFields.choices.map((choice, index) => (
+                <label key={index} className="block space-y-1">
+                  <span>الاختيار {String.fromCharCode(65 + index)}</span>
+                  <textarea rows={2} dir="rtl" value={choice}
+                    onChange={event => setPasteFields(prev => ({
+                      ...prev, choices: prev.choices.map((text, i) => i === index ? event.target.value : text),
+                    }))}
+                    className="w-full rounded-lg border border-[#A88765]/40 bg-transparent p-2 text-sm"
+                    placeholder="ترجمة الاختيار" />
+                </label>
+              ))}
+            </div>
+            <label className="block space-y-1">
+              <span>شرح الإجابة بالعربية</span>
+              <textarea rows={3} dir="rtl" value={pasteFields.explanation}
+                onChange={event => setPasteFields(prev => ({ ...prev, explanation: event.target.value }))}
+                className="w-full rounded-lg border border-[#A88765]/40 bg-transparent p-2 text-sm"
+                placeholder="الصق شرح الإجابة هنا" />
+            </label>
+            <button type="button"
+              onClick={() => {
+                if (state.savePastedTranslation(pasteFields)) setPasteOpen(false);
+              }}
+              className={`min-h-10 rounded-lg px-4 py-2 font-bold ${dark ? "bg-[#f3d28a] text-[#151412]" : "bg-[#76543F] text-white"}`}>
+              حفظ الترجمة وعرضها
+            </button>
+            <p className="text-xs leading-5">
+              {cacheLocally
+                ? "تُحفظ الترجمة محليًا على هذا الجهاز فقط، ولا تُرفع إلى قاعدة بيانات أو خادم."
+                : "الترجمة مؤقتة لهذه الجلسة فقط؛ هذا المصدر لا يسمح بالتخزين المحلي."}
+            </p>
+          </div>
         )}
 
         {!state.translation && (

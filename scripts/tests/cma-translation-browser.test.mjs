@@ -114,3 +114,26 @@ test("the CMA translation UI does not call the paid API or require Supabase", ()
   const component = fs.readFileSync(path.resolve(root, "src/components/library/CmaTranslatedQuestion.tsx"), "utf8");
   assert.doesNotMatch(component, /from\s*["']@\/integrations\/supabase|\bsupabase\s*\.|\/api\/cma-translate|LOVABLE_API_KEY|fetch\s*\(/i);
 });
+
+
+test("unsupported-device CMA translation stays editable in-page without a paid or server fallback", () => {
+  const component = fs.readFileSync(path.resolve(root, "src/components/library/CmaTranslatedQuestion.tsx"), "utf8");
+  assert.match(component, /createPastedCmaTranslation\(/);
+  assert.match(component, /savePastedTranslation\(pasteFields\)/);
+  assert.match(component, /aria-expanded=\{pasteOpen\}/);
+  assert.match(component, /إدخال ترجمة عربية داخل الموقع/);
+  assert.match(component, /state\.translation\?\.status === "pasted"/);
+  assert.match(component, /isCmaNumericOnlyChoice\(choice\)/);
+  assert.match(component, /allowExternalTranslation \? getCmaExternalTranslation/);
+  assert.match(component, /if \(cacheLocally\) saveLocal\(question, checked\.data\)/);
+  assert.doesNotMatch(component, /\/api\/cma-translate|fetch\s*\(|LOVABLE_API_KEY|supabase\./i);
+});
+
+test("Arabic presentation uses RTL when source has Arabic text, without changing the original scoring", () => {
+  const component = fs.readFileSync(path.resolve(root, "src/components/library/CmaTranslatedQuestion.tsx"), "utf8");
+  assert.match(component, /const visibleArabic = lang === "ar"/);
+  assert.match(component, /direction: visibleArabic \? "rtl" : "ltr"/);
+  const page = fs.readFileSync(path.resolve(root, "src/routes/library.cma.tsx"), "utf8");
+  assert.match(page, /choiceIndex === q\.answerIndex/);
+  assert.match(page, /<CmaTranslatedQuestion/);
+});
