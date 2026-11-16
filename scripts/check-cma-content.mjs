@@ -574,6 +574,46 @@ for (const [index, sectionCounts] of vol2Counts.entries()) {
   }
 }
 check(vol2Records.size === 1383, "Volume 2 records must cover each question exactly once");
+
+/** Every newly localized source record needs a complete four-option translation.
+ * Published Arabic copy may not alter the source answer index or imply the
+ * remaining English-only questions are already translated.
+ */
+const staticArabicVol2 = new Set(["11.1.1","11.1.2","11.1.3","11.1.4","11.1.5","11.1.6"]);
+const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
+for (const [key, original] of vol2Records) {
+  const [unit,section,number] = key.split(".");
+  const id = "cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0");
+  const displayed = vol2QuestionById.get(id);
+  check(!!displayed, "Volume 2 record missing in question library: "+key);
+  const anyAr = original.stemAr !== undefined ||
+    original.choicesAr !== undefined || original.explanationAr !== undefined;
+  const allAr = typeof original.stemAr === "string" && original.stemAr.trim() !== "" &&
+    typeof original.explanationAr === "string" && original.explanationAr.trim() !== "" &&
+    Array.isArray(original.choicesAr) && original.choicesAr.length === original.choices.length &&
+    original.choicesAr.every(text=>typeof text==="string"&&text.trim()!=="");
+  check(!anyAr || allAr,"Partial Arabic translation in Volume 2: "+key);
+  check(anyAr === staticArabicVol2.has(key),"Unexpected source-translation coverage change: "+key);
+  check(displayed.question.en === original.stem &&
+    displayed.explanation.en === original.explanation &&
+    displayed.choices.en.join("|") === original.choices.join("|") &&
+    displayed.answerIndex === original.answerIndex,
+    "English source or original answer changed: "+key);
+  if (allAr) {
+    check(displayed.question.ar === original.stemAr &&
+      displayed.explanation.ar === original.explanationAr &&
+      displayed.choices.ar.join("|") === original.choicesAr.join("|") &&
+      displayed.sourceLanguage !== "en",
+      "Arabic source question not available directly on all devices: "+key);
+  } else {
+    check(displayed.sourceLanguage === "en" &&
+      displayed.question.ar === original.stem &&
+      displayed.explanation.ar === original.explanation,
+      "Untranslated source improperly marked as Arabic: "+key);
+  }
+}
+console.log("Verified 6 static Arabic translations in CMA Volume 2 Unit 11; English-only items remain flagged.");
+
 const inferredVol2 = new Set(["16.1.19", "18.2.4", "18.3.5", "19.2.28", "20.2.26"]);
 const reconstructedVol2 = new Set(["14.4.2", "15.8.23", "17.2.15", "17.2.25", "19.2.12"]);
 const reflowedVol2 = new Set([
