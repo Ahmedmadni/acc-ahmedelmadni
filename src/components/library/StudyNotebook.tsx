@@ -872,8 +872,8 @@ function NotebookPaper({
         <div role="status" className="space-y-2 rounded-lg border border-amber-300 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
           <p>{page.flow?.length
             ? lang === "ar"
-              ? "المحتوى المنسق تجاوز حدود الورقة. سيقتطع تصدير PDF ما يظهر خارج الورقة؛ انقل جزءا من النص أو الجدول إلى ورقة جديدة قبل التصدير."
-              : "The formatted content exceeds this sheet. PDF captures only the paper bounds; move a paragraph or table to another sheet before exporting."
+              ? "المحتوى المنسق تجاوز حدود الورقة. استخدم نقل المحتوى الزائد إلى صفحة تالية قبل تصدير PDF لحماية النص والجداول."
+              : "The formatted content exceeds this sheet. Move the overflowing content to another page before exporting to protect every paragraph and table."
             : lang === "ar"
               ? "وصل النص إلى نهاية الورقة. يمكنك متابعة بقية الكتابة في الصفحة التالية دون تغيير الرسومات الموجودة هنا."
               : "Your typed notes extend beyond this sheet. Continue the overflowing text on another page; existing pen drawings stay on this sheet."}</p>
