@@ -1,5 +1,6 @@
 import {
   cmaSourceHash,
+  isCmaNumericOnlyChoice,
   validateCmaTranslation,
   type CmaSourceText,
   type CmaTranslation,
@@ -72,7 +73,7 @@ export async function translateCmaOnDevice(
     for (const [index, source] of values.entries()) {
       onProgress?.(`ترجمة النصوص ${index + 1}/${values.length}`);
       // Numeric-only options should remain identical; do not need machine translation.
-      rendered.push(/^[\s\d,.%‰()+\-−×÷/$€£¥]*$/.test(source) ? source : await translator.translate(source));
+      rendered.push(isCmaNumericOnlyChoice(source) ? source : await translator.translate(source));
     }
     const candidate = {
       question: rendered[0],
