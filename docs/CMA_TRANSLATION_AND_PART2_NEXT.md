@@ -72,3 +72,14 @@ The following no-backend improvements were implemented:
 - **Remaining limitation:** neither the new editor nor the language toggle translates the entire source bank automatically. Mobile browsers without the Translator API need manual copy/paste or a browser/external translation service. Zero-click translation for all devices requires approved backend/provider access or a reviewed Arabic source corpus, which would entail separate cost/privacy/licensing review.
 
 Regression tests cover localized number equivalence, rejection of changed financial values, source hashes, fallback UI, the original answer index and no accidental backend calls.
+
+
+## First static Arabic CMA source-bank cohort — 16 November 2026
+
+Arabic is no longer dependent on the browser Translator API for the **first twelve questions of Volume 2, Study Unit 11, Section 1 (Q001–Q012)**. The original English stem, all four choices, explanation, answer index, source page and transcription status remain intact in src/data/cma-gleim-2025-vol2-unit-11.json; new fields stemAr, choicesAr, and explanationAr supply the Arabic presentation. The existing Volume 2 mapper reads these fields only when the entire translation is present, and leaves the other 1,371 Volume 2 records English-first. Previously integrated Volume 1 translations are unaffected.
+
+**Coverage for this increment:** 12 of the 58 questions in Unit 11; 12 of 1,383 in Volume 2. This is a **small initial content batch**, not full automatic translation of the 2,443 imported Part 1 source questions. The CMA library hero now states the number of publisher-source questions with built-in Arabic independently from the number of original bilingual practice questions; untranslated source items remain clearly counted.
+
+A CI audit requires exactly these twelve source IDs to have complete Arabic stem, choices and explanation. Numeric integrity tests compare translated and English figures in every field and reject altered figures, numeric sequences or missing choices. The content audit also confirms the canonical English records and original answer indices never change and all other Volume 2 items retain their untranslated flag. The Arabic wording is an **initial educational translation**; specialist editorial review of terminology, applicability and source tables is still needed before calling it professionally certified.
+
+The translations ship with the site's static content bundle. They require no login, database reads, Lovable AI credits, local browser translation support or manual copy/paste on the learner's device. Later batches must extend the source-ID coverage list and tests rather than silently marking untranslated records as translated.
