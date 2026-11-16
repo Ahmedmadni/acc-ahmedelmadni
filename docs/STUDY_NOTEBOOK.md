@@ -192,3 +192,14 @@ This is a **presentation and interaction refactor** rather than a rewrite of the
 - The new behavior is limited to in-page editable tables; it introduces neither an external accounting service nor a database.
 - **Known limitation:** if a large inline table plus totals exceeds the fixed page height, the existing page clipping/overflow limitation still applies. Verify exported pages visually on small-tablet devices.
 - CI regression tests cover computed PDFs in English and Arabic, invalid/unbalanced states, data immutability, keyboard focus, and IME/Tab behavior. Physical tablet stylus tests remain necessary.
+
+
+## Lossless continuation of rich study notes — 16 November 2026
+
+- When a formatted note with inline tables exceeds its physical paper height, an **explicit "Move overflowing rich notes to next page"** action measures each rendered paragraph/table relative to the current sheet. It leaves the fitting blocks in place and moves all subsequent blocks to a newly inserted page with matching paper, direction and typeface.
+- For a partially fitting **paragraph**, the existing browser textarea measurement is reused to find the last fitting character, preserving all remaining Unicode text (including Arabic, whitespace and punctuation) in a new paragraph block with a fresh ID.
+- For a partially fitting **table**, the entire table moves to the continuation page. An existing journal table and its editability remain intact; it is never flattened into a screenshot or silently truncated.
+- Pen strokes, images, stickers and other floating objects are **not** transferred automatically. They remain on the original sheet so existing drawings cannot be lost. The selected page changes to the new continuation after the user invokes the action.
+- If the first block itself cannot fit (or the 40-page cap is reached), a visible warning instructs the user to reduce it manually rather than creating an endless chain of empty pages.
+- PDF export now checks measured document content against each print sheet before rasterizing; if the content overflows, it refuses to produce an incomplete PDF and identifies the offending page in the page's writing language. The original editable notes and local JSON backup remain unchanged.
+- This is **deliberate continuation, not automatic layout reflow**. Browser font metrics, oversized freehand notes, ink overlays and actual stylus support still require on-device QA. The PDF exporter is intentionally conservative rather than hiding content beyond the page border.
