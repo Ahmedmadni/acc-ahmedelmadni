@@ -3,6 +3,7 @@ import { Copy, ExternalLink, Languages, Loader2 } from "lucide-react";
 import type { ExamQuestion } from "@/lib/exam-bank";
 import {
   cmaSourceHash,
+  isCmaNumericOnlyChoice,
   createPastedCmaTranslation,
   validateCmaTranslation,
   type CmaTranslation,
@@ -194,7 +195,7 @@ export function CmaTranslatedQuestion({
   const [pasteOpen, setPasteOpen] = useState(false);
   const [pasteFields, setPasteFields] = useState({
     question: "", choices: [...question.choices.en.map(choice =>
-      /^[\\s\\d,.%‰()+\\-−×÷/$€£¥]*$/.test(choice) ? choice : "")],
+      isCmaNumericOnlyChoice(choice) ? choice : "")],
     explanation: "",
   });
   useEffect(() => {
@@ -202,7 +203,7 @@ export function CmaTranslatedQuestion({
     setCopyNotice("");
     setPasteFields({
       question: "", choices: question.choices.en.map(choice =>
-        /^[\\s\\d,.%‰()+\\-−×÷/$€£¥]*$/.test(choice) ? choice : ""),
+        isCmaNumericOnlyChoice(choice) ? choice : ""),
       explanation: "",
     });
   }, [question.id]);
