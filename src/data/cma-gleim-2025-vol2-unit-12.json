@@ -3387,7 +3387,15 @@
     ],
     "answerIndex": 1,
     "explanation": "During the strategic planning process, an organization should\nanalyze the external environment, such as social, cultural,\neconomic, and political factors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية من البيئة الخارجية ينبغي تحليلها خلال عملية التخطيط الاستراتيجي؟",
+    "choicesAr": [
+      "الثقافة التنظيمية.",
+      "الثقافة المجتمعية.",
+      "الروح المعنوية للموظفين.",
+      "الهيكل التنظيمي."
+    ],
+    "explanationAr": "خلال التخطيط الاستراتيجي، ينبغي للمنشأة تحليل بيئتها الخارجية، مثل العوامل الاجتماعية والثقافية والاقتصادية والسياسية."
   },
   {
     "unit": 12,
@@ -3404,7 +3412,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Strategic planning establishes the general direction of an\norganization. It embodies the concerns of senior management\nand is based specifically on (1) identifying and specifying\norganizational objectives; (2) evaluating the organization’s\nstrengths and weaknesses; (3) assessing risk levels;\n(4) identifying and forecasting the effect of external\n(environmental) factors relevant to the organization;\n(5) deriving the best strategy for reaching the objectives, given\nthe organization’s strengths and weaknesses and the relevant\nfuture trends; and (6) analyzing and reviewing the capital\nbudgeting process and capacity planning.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المقصود بالتخطيط الاستراتيجي؟",
+    "choicesAr": [
+      "يحدد الاتجاه العام للمنشأة.",
+      "يحدد الموارد التي ستتطلبها الخطة.",
+      "يحدد موازنة المنشأة.",
+      "يتضمن اتخاذ قرارات باستخدام أجزاء من موارد المنشأة بطرق محددة."
+    ],
+    "explanationAr": "يحدد التخطيط الاستراتيجي الاتجاه العام للمنشأة، ويجسد اهتمامات الإدارة العليا. ويستند بصفة خاصة إلى: (1) تحديد أهداف المنشأة وصياغتها بوضوح؛ (2) تقييم نقاط قوتها وضعفها؛ (3) تقييم مستويات المخاطر؛ (4) تحديد العوامل الخارجية (البيئية) ذات الصلة بالمنشأة والتنبؤ بتأثيرها؛ (5) اشتقاق أفضل استراتيجية لتحقيق الأهداف في ضوء نقاط القوة والضعف والاتجاهات المستقبلية ذات الصلة؛ (6) تحليل عملية إعداد الموازنة الرأسمالية وتخطيط الطاقة الإنتاجية ومراجعتهما."
   },
   {
     "unit": 12,
@@ -3421,7 +3437,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Strategic planning is the process of setting overall\norganizational objectives. It is a long-term process aimed at\ndetermining the future course of the organization. Analysis of\nthe current month’s budget variances is a short-term activity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يشمل التخطيط الاستراتيجي، كما تمارسه معظم المنشآت الحديثة، جميع ما يلي باستثناء:",
+    "choicesAr": [
+      "مشاركة الإدارة العليا.",
+      "التركيز على المدى الطويل.",
+      "وضع استراتيجيات تساعد على تحقيق الأهداف طويلة الأجل.",
+      "تحليل الانحرافات الفعلية عن موازنة الشهر الحالي."
+    ],
+    "explanationAr": "التخطيط الاستراتيجي عملية تحديد الأهداف العامة للمنشأة، وهي عملية طويلة الأجل تهدف إلى تحديد مسارها المستقبلي. أما تحليل انحرافات موازنة الشهر الحالي فهو نشاط قصير الأجل."
   },
   {
     "unit": 12,
@@ -3438,7 +3462,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Planning is the determination of what is to be done, and of\nhow, when, where, and by whom it is to be done. Plans serve\nto direct the activities that all organizational members must\nundertake to move the organization from where it is to where it\nwants to be. Forecasting is the basis of planning because it\nprojects the future. A variety of quantitative methods are used\nin forecasting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الفرق بين التنبؤ والتخطيط؟",
+    "choicesAr": [
+      "لا يوجد فرق صحيح لأنهما مترادفان.",
+      "التنبؤ يتعلق بالمدى القصير، بينما التخطيط لا يتعلق به.",
+      "تُستخدم التنبؤات في عملية التخطيط.",
+      "التنبؤ نشاط إداري، بينما التخطيط نشاط فني."
+    ],
+    "explanationAr": "التخطيط هو تحديد ما ينبغي فعله وكيف ومتى وأين ومن المسؤول عن تنفيذه. وتوجه الخطط أنشطة جميع أعضاء المنشأة لنقلها من وضعها الحالي إلى الوضع المستهدف. ويشكل التنبؤ أساسًا للتخطيط لأنه يستشرف المستقبل، وتُستخدم فيه أساليب كمية متعددة."
   },
   {
     "unit": 12,
@@ -3455,7 +3487,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The strategic plan states the means by which an entity\nexpects to achieve its stated mission. Achieving the mission is\npredicated on implementing long-term objectives.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي مثال على أحد مخرجات التخطيط الاستراتيجي؟",
+    "choicesAr": [
+      "بيان رسمي لتعريف المنشأة بالحقائق والمبادئ الأساسية التي توجه تصرفاتها.",
+      "بيان عام للمفاهيم يركز على تنفيذ أهداف المنشأة على المدى الطويل.",
+      "مجموعة توجيهات عامة تضبط التفكير وتسمح بقدر من السلطة التقديرية أثناء التنفيذ.",
+      "وثيقة تحدد تسلسل خطوات تفصيليًا لكيفية إنجاز نشاط معين على وجه الدقة."
+    ],
+    "explanationAr": "توضح الخطة الاستراتيجية الوسائل التي تتوقع المنشأة اتباعها لتحقيق رسالتها المعلنة. ويعتمد تحقيق الرسالة على تنفيذ الأهداف طويلة الأجل."
   },
   {
     "unit": 12,
@@ -3472,7 +3512,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Strategic planning is the process of setting overall\norganizational objectives and drafting strategic plans. Setting\nultimate objectives for the firm is a necessary prelude to\ndeveloping strategies for achieving those objectives. Plans\nand budgets are then needed to implement those strategies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الاعتبارات الإدارية التالية يُعالج عادة أولًا في التخطيط الاستراتيجي؟",
+    "choicesAr": [
+      "الاستعانة بمصادر خارجية.",
+      "الأهداف العامة للمنشأة.",
+      "الهيكل التنظيمي.",
+      "الموازنات السنوية الأخيرة."
+    ],
+    "explanationAr": "التخطيط الاستراتيجي هو تحديد الأهداف العامة للمنشأة وإعداد الخطط الاستراتيجية. ويُعد تحديد الأهداف النهائية للشركة خطوة أساسية تسبق وضع الاستراتيجيات اللازمة لتحقيقها. وبعد ذلك توضع الخطط والموازنات لتنفيذ تلك الاستراتيجيات."
   },
   {
     "unit": 12,
@@ -3489,7 +3537,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Strategic analysis is the process of long-range planning. Such\ntasks as setting the target product mix and production\nschedule for the current year are short-term activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الاستراتيجية مفهوم واسع يشير عادة إلى اختيار الأهداف العامة. أي مما يلي يُستبعد عادة من التحليل الاستراتيجي؟",
+    "choicesAr": [
+      "الاتجاهات التي ستؤثر في أسواق المنشأة.",
+      "تشكيلة المنتجات المستهدفة وجدول الإنتاج المقرر خلال السنة.",
+      "أشكال الهيكل التنظيمي التي تخدم المنشأة بصورة أفضل.",
+      "أفضل طرق الاستثمار في البحث والتصميم والإنتاج والتوزيع والتسويق والأنشطة الإدارية."
+    ],
+    "explanationAr": "التحليل الاستراتيجي هو عملية التخطيط طويل الأجل. أما تحديد تشكيلة المنتجات المستهدفة وجدول الإنتاج للسنة الحالية فهما من الأنشطة قصيرة الأجل."
   },
   {
     "unit": 12,
@@ -3506,7 +3562,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Strategic planning is the process of setting the overall\norganizational objectives and involves the drafting of strategic\nplans. Analysis and review of departmental budgets is an\naspect of operational management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتسم عملية التخطيط الاستراتيجي بجميع الخصائص التالية باستثناء:",
+    "choicesAr": [
+      "التأكيد على المدى الطويل.",
+      "تحليل العوامل الاقتصادية الخارجية.",
+      "دراسة خصائص المنافسين وسلوكهم.",
+      "تحليل موازنات الإدارات ومراجعتها."
+    ],
+    "explanationAr": "يتضمن التخطيط الاستراتيجي تحديد الأهداف العامة للمنشأة وصياغة الخطط الاستراتيجية. أما تحليل موازنات الإدارات ومراجعتها فيندرج ضمن الإدارة التشغيلية."
   },
   {
     "unit": 12,
@@ -3523,7 +3587,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Top management establishes policies as guides to middle-\nand lower-management decision making. Policies are\nrelatively broad guidelines for making routine decisions\nconsistent with overall objectives. They channel thinking in a\ncertain direction but allow for some managerial discretion.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت إدارة منشأة أنه لا يجوز توظيف فردين من العائلة نفسها في الإدارة ذاتها. ما عنصر التخطيط التنظيمي الذي يمثله هذا القرار؟",
+    "choicesAr": [
+      "استراتيجية.",
+      "سياسة.",
+      "هدف.",
+      "بيان رسالة."
+    ],
+    "explanationAr": "تضع الإدارة العليا السياسات لتوجيه قرارات الإدارتين الوسطى والدنيا. والسياسات إرشادات عامة نسبيًا لاتخاذ القرارات الروتينية بما ينسجم مع الأهداف العامة؛ فهي توجه التفكير في اتجاه معين مع ترك مساحة من التقدير الإداري."
   },
   {
     "unit": 12,
@@ -3540,7 +3612,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If the culture is strong, the organization’s key values are\nintensely held and widely shared. Substantial training has\nbeen expended to achieve this high degree of acceptance,\nminimizing the need for formal, written policies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يوصى عادة بوضع سياسات رسمية مكتوبة، لكن بعض ظروف المنشأة تقلل الحاجة إليها. أي الظروف التالية يقلل الحاجة إلى السياسات المكتوبة؟",
+    "choicesAr": [
+      "ارتفاع درجة تقسيم العمل.",
+      "قوة الثقافة التنظيمية.",
+      "اتساع نطاق الإشراف.",
+      "التطبيق الصارم لوحدة الأمر."
+    ],
+    "explanationAr": "عندما تكون الثقافة التنظيمية قوية، تكون القيم الأساسية للمنشأة راسخة ومشتركة على نطاق واسع. وقد بُذل تدريب كبير لتحقيق هذا المستوى من تبني القيم، مما يقلل الحاجة إلى سياسات رسمية مكتوبة."
   },
   {
     "unit": 12,
@@ -3557,7 +3637,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The company did not meet its goal of increasing operating\nincome by increasing market share through being the lower-\ncost provider. This is apparent by observing that the units sold\nfor the current year equal the units sold for the next year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وضعت شركة مبادرة استراتيجية لزيادة الدخل التشغيلي عبر توسيع حصتها السوقية من خلال أن تصبح مزودًا أقل تكلفة. إذا بقي إجمالي حجم السوق دون تغيير، فهل حققت الأهداف المعلنة استنادًا إلى المعلومات التالية؟\nالسنة الحالية — السنة القادمة\nالإيرادات — $325,000 — $325,000\nتكلفة البضاعة المباعة — 152,000 — 146,000\nمجمل الربح — $173,000 — $179,000\nالمصروفات التشغيلية\nالتسويق — 100,000 — 100,000\nالإدارية — 50,000 — 50,000\nالدخل التشغيلي — $ 23,000 — $ 29,000\nالوحدات المباعة — 1,000 — 1,000",
+    "choicesAr": [
+      "نعم، لأنها خفضت التكاليف وزادت الدخل التشغيلي.",
+      "لا، لأنها لم تخفض مصروفات التسويق والمصروفات الإدارية.",
+      "نعم، لأن القوائم تبين انخفاض تكلفة البضاعة المباعة.",
+      "لا، لأنه لا يبدو أن حصتها السوقية قد زادت."
+    ],
+    "explanationAr": "لم تحقق الشركة هدف زيادة الدخل التشغيلي من خلال توسيع الحصة السوقية بالاعتماد على كونها الأقل تكلفة. ويتضح ذلك من تساوي عدد الوحدات المباعة في السنة الحالية والسنة التالية؛ فمع ثبات حجم السوق لم تزد حصتها السوقية، رغم تحسن الدخل التشغيلي."
   },
   {
     "unit": 12,
@@ -3574,7 +3662,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most significant items are those that will vary between the\ncontingency budget (a contingency plan) and the regular\nbudget. The company cannot increase its finished goods\ninventory, but it can increase its inventory of the direct\nmaterials provided by the supplier. Thus, the items most\naffected will be direct materials and cash. The cash budget will\nbe affected because of the need to pay for direct materials\nprior to their usage.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع شركة احتمال تعرض أحد مورديها الرئيسيين لإضراب خلال السنة. وبسبب طبيعة المنتج والتركيز على الجودة، لا يمكن تخزين إنتاج إضافي على هيئة مخزون منتجات تامة. عند إعداد موازنة طوارئ تتضمن زيادة مخزون المواد المباشرة، ما البندان الأكثر تأثرًا؟",
+    "choicesAr": [
+      "حجم الإنتاج والمواد المباشرة.",
+      "المبيعات والمخزون النهائي.",
+      "الإنتاج والتدفق النقدي.",
+      "المواد المباشرة والتدفق النقدي."
+    ],
+    "explanationAr": "البنود الأكثر تأثرًا هي التي تختلف بين موازنة الطوارئ والموازنة العادية. ولا يمكن للشركة زيادة مخزون المنتجات التامة، لكنها تستطيع زيادة مخزون المواد المباشرة المقدمة من المورد. لذلك تتأثر المواد المباشرة والنقدية بصورة أكبر؛ إذ ستتأثر الموازنة النقدية بضرورة دفع قيمة المواد المباشرة قبل استخدامها."
   },
   {
     "unit": 12,
@@ -3592,7 +3688,15 @@
     "answerIndex": 3,
     "explanation": "The organizational culture sets values, objectives, and\nstrategies; defines roles and behaviors; measures\nperformance; and specifies accountability. Culture is strictly\ninternal to an organization.",
     "answerStatus": "source",
-    "sourceTextStatus": "table-reflowed"
+    "sourceTextStatus": "table-reflowed",
+    "stemAr": "تحلل إدارة شركة لتصنيع الأغذية نقاط القوة والضعف الداخلية ضمن التخطيط الاستراتيجي. أي مما يلي يُعد على الأرجح متغيرًا استراتيجيًا داخليًا للشركة؟",
+    "choicesAr": [
+      "تغير الأنظمة القانونية للشركات العاملة في تصنيع الأغذية.",
+      "القوى الاقتصادية المؤثرة في المعروض من العمالة المحلية.",
+      "التغيرات التقنية في أساليب تصنيع الأغذية.",
+      "الثقافة السائدة في مصنع الشركة لتصنيع الأغذية."
+    ],
+    "explanationAr": "تحدد الثقافة التنظيمية القيم والأهداف والاستراتيجيات، وتوضح الأدوار والسلوكيات، وتقيس الأداء وتحدد المساءلة. وتُعد الثقافة عنصرًا داخليًا خالصًا في المنشأة."
   },
   {
     "unit": 12,
@@ -3609,6 +3713,14 @@
     ],
     "answerIndex": 2,
     "explanation": "A strategic plan sets the overall objectives for an entity and\nguides the process of reaching those objectives. It has a long-\nterm planning horizon. Strategic planning begins with the\nmission statement and focuses on such concerns as which\nproducts the company will produce and what customers are to\nbe served. It is the least quantifiable of the planning\ntechniques.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي نوع من الخطط تصوغه أعلى المستويات الإدارية، ويتخذ أوسع نظرة للمنشأة وبيئتها، ويكون الأقل قابلية للقياس الكمي، ويحدد الطبيعة المستقبلية للشركة ومنتجاتها وعملائها؟",
+    "choicesAr": [
+      "خطة قصيرة الأجل.",
+      "خطة طويلة الأجل.",
+      "خطة استراتيجية.",
+      "خطة مستقبلية."
+    ],
+    "explanationAr": "تحدد الخطة الاستراتيجية الأهداف العامة للمنشأة وترشد عملية تحقيقها، وتتمتع بأفق تخطيطي طويل الأجل. ويبدأ التخطيط الاستراتيجي ببيان الرسالة ويركز على قضايا مثل المنتجات التي ستصنعها الشركة والعملاء الذين ستخدمهم. وهو أقل أساليب التخطيط قابلية للقياس الكمي."
   }
 ]
