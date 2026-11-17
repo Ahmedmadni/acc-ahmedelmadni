@@ -167,7 +167,9 @@ test("CMA Unit 12 regression source translations keep all 23 original answer ind
   // as fully translated before layout and numeric context review.
   assert.deepEqual(records.filter(row=>row.section===1&&!row.stemAr)
     .map(row=>row.number),[8,9,13,14,28]);
-  assert.ok(records.filter(row=>row.section>=3).every(
+  // Sections 4 and 5 are still English-only; Section 3 has its own
+  // separate, explicit allowlist and answer-key integrity tests below.
+  assert.ok(records.filter(row=>row.section>=4).every(
     row=>row.stemAr===undefined && row.choicesAr===undefined &&
       row.explanationAr===undefined));
 });
