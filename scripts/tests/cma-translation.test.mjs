@@ -446,3 +446,56 @@ test("The 19 unresolved Unit 12 PDF layouts remain English-only, with stable sou
     assert.equal(q.explanationAr,undefined,"Unverified source math must not be published as Arabic");
   }
 });
+
+
+test("Independent arithmetic audits are not mistaken for publisher PDF verification",()=>{
+  // These checks only reproduce numbers as imported, NOT the source-page layout.
+  assert.equal(Math.round(684.65+7.2884*420),3746);
+  assert.equal(Math.round((0.953**2)*1000)/1000,0.908);
+  assert.equal(40000+2.1*20000,82000);
+  const fourLotCost=(4*12500*0.8**2+4*1500)*1.1;
+  assert.equal(Math.round(fourLotCost)-15400,26400);
+  assert.equal((4*1000*0.7**2-1000)/150,6.4);
+  assert.equal((4096-2560)/200,7.68);
+
+  assert.equal(-160*.1-40*.3+80*.4+80*.2,20);
+  const frostProbability=(120000-100000)/(60000+40000);
+  assert.equal(frostProbability,0.2);
+  const peanutExpected=[20,27.6,30.4,29.6];
+  assert.equal(Math.max(...peanutExpected),30.4);
+  assert.equal(
+    Math.round(42000*.15+57000*.20+72000*.35+72000*.30),64500);
+  const vendorTotal=(unitPrice,passingRate)=>{
+    const purchased=100000/passingRate;
+    return purchased*unitPrice+(purchased-100000)*25;
+  };
+  const costTotals=[
+    vendorTotal(35,.9),vendorTotal(37,.94),
+    vendorTotal(39,.97),vendorTotal(40,.99),
+  ];
+  assert.equal(costTotals.indexOf(Math.min(...costTotals)),3);
+  assert.equal(Math.round(costTotals[3]),4065657);
+  assert.equal(.6*15000000+.4*2000000-9500000,300000);
+  assert.equal(-100000,-100000);
+  const payoffs=[-20000,-10000,30000,70000,100000];
+  const weighted=(probs)=>probs.reduce((sum,p,i)=>sum+p*payoffs[i],0);
+  assert.deepEqual([
+    weighted([.3,.1,.3,.2,.1]),
+    weighted([.2,.2,.2,.2,.2]),
+    weighted([.3,.1,.2,.3,.1]),
+  ],[26000,34000,30000]);
+  const outcomes=[50000,75000,100000,150000];
+  const ev=(items)=>items.reduce((sum,[v,p])=>sum+v*p,0);
+  const alternatives=[
+    ev(outcomes.map((v,i)=>[v,[.10,.20,.40,.30][i]])),
+    ev(outcomes.map((v,i)=>[v,[.10,.20,.45,.25][i]])),
+    ev([ [50000,.10],[75000,.20],[100000,.40],[125000,.30] ]),
+    ev([ [150000,.10],[100000,.20],[75000,.40],[50000,.30] ]),
+  ];
+  assert.deepEqual(alternatives,[105000,102500,97500,80000]);
+  assert.equal(ev([[200000,.2],[250000,.5],[300000,.2],[350000,.1]]),260000);
+  assert.equal(305000*(1.80-1.15)-78000,120250);
+  const success=.6*.7+.4*.25;
+  assert.equal(success,.52);
+  assert.equal(Math.round(success*10000000-(1-success)*4000000),3280000);
+});
