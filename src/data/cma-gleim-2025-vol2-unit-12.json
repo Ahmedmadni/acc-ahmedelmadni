@@ -674,7 +674,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. Thus, the time\nrequired to perform a given task becomes progressively\nshorter. Ordinarily, the learning curve is expressed as a\npercentage of reduced time to complete a task for each\ndoubling of cumulative production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجهز منشأة عرض سعر لمشروع خاص لإنتاج 35,000 وحدة. ويمكن إنتاج الوحدات على دفعات، أولها 1,000 وحدة. تشير الخبرة السابقة إلى أن زمن العمل المباشر اللازم للوحدة سينخفض تدريجيًا بنسبة ثابتة مع اكتساب الخبرة. ما الأسلوب الكمي الأنسب لتقدير تكلفة المشروع؟",
+    "choicesAr": [
+      "البرمجة الخطية.",
+      "البرمجة الديناميكية.",
+      "تحليل منحنى التعلم.",
+      "تحليل السلاسل الزمنية."
+    ],
+    "explanationAr": "تعكس منحنيات التعلم زيادة سرعة أداء المهام مع اكتساب الخبرة؛ ولذلك ينخفض زمن إنجاز المهمة تدريجيًا. ويُعبّر عن المنحنى عادة بنسبة انخفاض الوقت عند كل تضاعف للإنتاج التراكمي."
   },
   {
     "unit": 12,
@@ -691,7 +699,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed as a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Given a $120 cost per unit for the first 100 units and\na $72 cost per unit when cumulative production doubled to\n200 units, the learning curve percentage must be 60% ($72 ÷\n$120). If production is again doubled to 400 units (four\nbatches), the average unit labor cost should be $43.20 ($72 ×\n60%). Hence, total labor cost for 400 units is estimated to be\n$17,280 (400 units × $43.20).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغ متوسط تكلفة العمل للوحدة بالدفعة الأولى باستخدام عملية إنتاج جديدة $120. وبعد الدفعة الثانية أصبح متوسط تكلفة العمل التراكمية $72 للوحدة. إذا كان حجم كل دفعة 100 وحدة واستمر منحنى التعلم، فما إجمالي تكلفة العمل لأربع دفعات؟",
+    "choicesAr": [
+      "$4,320",
+      "$10,368",
+      "$2,592",
+      "$17,280"
+    ],
+    "explanationAr": "يعكس منحنى التعلم ارتفاع سرعة أداء المهام مع الخبرة وانخفاض الزمن اللازم لها، ويُعبّر عنه عادة بنسبة انخفاض الوقت عند تضاعف الإنتاج التراكمي. ومن افتراضاته انخفاض متوسط الوقت التراكمي للوحدة وتكلفته بنسبة محددة عند كل تضاعف. إذا بلغت تكلفة الوحدة $120 لأول 100 وحدة، وانخفض المتوسط إلى $72 عند بلوغ الإنتاج 200 وحدة، فإن معدل التعلم 60% ($72 ÷ $120). وعند تضاعف الإنتاج إلى 400 وحدة (أربع دفعات)، يصبح المتوسط $43.20 ($72 × 60%). لذلك يقدَّر إجمالي عمل 400 وحدة بنحو $17,280 (400 وحدة × $43.20)."
   },
   {
     "unit": 12,
@@ -742,7 +758,15 @@
     ],
     "answerIndex": 1,
     "explanation": "One common assumption made in a learning curve model is\nthat the cumulative average time per unit is reduced by a\ncertain percentage each time production doubles. An 80%\nlearning curve results in the following performance for the lots\nshown:\nUnits Cumulative Average Hours\n80       1.5 hours (120 ÷ 80)\n160         1.2 hours (1.5 × .8)\n320         .96 hours (1.2 × .8)\nThus, to produce 320 units, total production time will be\n307.2 hours (320 × .96). The total time for the last 240 units\nwill be 187.2 hours (307.2 – 120).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة مكونات متخصصة للإلكترونيات في بيئة كثيفة العمل. وقد طُلب منها تسعير مكون أنتجته الشهر الماضي. شمل الطلب السابق 80 وحدة تطلبت 120 ساعة عمل مباشر. ويريد العميل الآن 240 مكونًا إضافيًا. لدى الشركة منحنى تعلم بنسبة 80%. كم ساعة عمل مباشر تلزم لإنتاج 240 مكونًا إضافيًا؟",
+    "choicesAr": [
+      "360.0",
+      "187.2",
+      "307.2",
+      "256.0"
+    ],
+    "explanationAr": "يفترض نموذج منحنى التعلم عادة انخفاض متوسط زمن الوحدة التراكمي بنسبة معينة عند كل تضاعف للإنتاج. وتؤدي نسبة تعلم 80% إلى النتائج التالية:\nالوحدات — متوسط ساعات الوحدة التراكمي\n80 — 1.5 ساعة (120 ÷ 80)\n160 — 1.2 ساعة (1.5 × .8)\n320 — .96 ساعة (1.2 × .8)\nولإنتاج 320 وحدة يصبح الإجمالي 307.2 ساعة (320 × .96). ويبلغ زمن إنتاج آخر 240 وحدة 187.2 ساعة (307.2 – 120)."
   },
   {
     "unit": 12,
@@ -759,7 +783,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed in a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Thus, a 90% learning curve indicates that a doubling\nof production will reduce the cumulative average unit\ncompletion time by 10%. For example, if the first unit required\n50 hours to complete, the average completion time after two\nunits will be 45 hours (90% × 50 hours). If production is again\ndoubled (to four units), the cumulative average completion\ntime will be 40.5 hours (90% × 45 hours).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخضع مهمة صناعية لمنحنى تعلم بنسبة 90%، واستغرق إنتاج الوحدة الأولى 50 ساعة عمل. ما متوسط الوقت التراكمي للوحدة بعد إنتاج أربع وحدات؟",
+    "choicesAr": [
+      "50.0 ساعة.",
+      "45.0 ساعة.",
+      "40.5 ساعة.",
+      "40.0 ساعة."
+    ],
+    "explanationAr": "يعكس منحنى التعلم زيادة سرعة إنجاز المهام مع الخبرة، فيتناقص الزمن اللازم تدريجيًا. ويُعبر عنه عادة بنسبة انخفاض الوقت عند كل تضاعف في الإنتاج التراكمي. ومن افتراضاته الشائعة انخفاض متوسط الزمن التراكمي للوحدة وتكلفة العمل بنسبة معينة كلما تضاعف الإنتاج. ويعني منحنى تعلم 90% انخفاض المتوسط بنسبة 10%. فإذا تطلبت الوحدة الأولى 50 ساعة، يصبح متوسط الوحدتين 45 ساعة (90% × 50 ساعة). وعند تضاعف الإنتاج إلى أربع وحدات يصبح المتوسط 40.5 ساعة (90% × 45 ساعة)."
   },
   {
     "unit": 12,
@@ -776,7 +808,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed in a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Thus, an 80% learning curve indicates that a\ndoubling of production will reduce the cumulative average unit\ncompletion time by 20%. For example, if the first unit required\n50 hours to complete, the average completion time after two\nunits will be 40 hours (50 hours × 80%). If production is again\ndoubled (to four units), the average completion time will be 32\nhours (40 hours × 80%). When production is doubled again to\neight units, the cumulative average completion time will be\n25.6 hours (32 hours × 80%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخضع مهمة صناعية لمنحنى تعلم بنسبة 80%، واستغرق إنتاج الوحدة الأولى 50 ساعة عمل. ما متوسط الوقت التراكمي للوحدة بعد إنتاج ثماني وحدات؟",
+    "choicesAr": [
+      "20.0 ساعة.",
+      "25.6 ساعة.",
+      "32.0 ساعة.",
+      "40.0 ساعة."
+    ],
+    "explanationAr": "يوضح منحنى التعلم تحسن سرعة أداء العاملين مع الخبرة وانخفاض الزمن اللازم تدريجيًا، ويُعبر عنه بنسبة انخفاض الوقت عند كل تضاعف للإنتاج التراكمي. ومن افتراضاته الشائعة انخفاض متوسط الزمن التراكمي للوحدة وتكلفتها بنسبة ثابتة مع كل تضاعف للإنتاج. ويعني منحنى تعلم 80% انخفاض المتوسط بنسبة 20%. إذا تطلبت الوحدة الأولى 50 ساعة، يصبح متوسط الوحدتين 40 ساعة (50 ساعة × 80%). وعند أربع وحدات يصبح 32 ساعة (40 ساعة × 80%). وعند ثماني وحدات يصبح المتوسط 25.6 ساعة (32 ساعة × 80%)."
   },
   {
     "unit": 12,
@@ -793,7 +833,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter.\nOrdinarily, the curve is expressed in a percentage of reduced\ntime to complete a task for each doubling of cumulative\nproduction. One common assumption in a learning curve\nmodel is that the cumulative average time (and labor cost) per\nunit is reduced by a certain percentage each time production\ndoubles. Thus, an 80% learning curve indicates that a\ndoubling of production reduces the cumulative average unit\ncompletion time by 20%. For example, if the first unit required\n50 hours to complete, the average completion time after two\nunits would be 40 hours (50 hours × 80%). If total production\ntime is 80 hours (2 × 40 cumulative average time), and the first\nunit required 50 hours, the time to produce the second unit\nmust be 30 hours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخضع مهمة صناعية لمنحنى تعلم بنسبة 80%، واستغرق إنتاج الوحدة الأولى 50 ساعة عمل. وفق افتراض متوسط الزمن التراكمي للوحدة، ما الوقت اللازم لإنتاج الوحدة الثانية وحدها؟",
+    "choicesAr": [
+      "30.0 ساعة.",
+      "40.0 ساعة.",
+      "45.0 ساعة.",
+      "50.0 ساعة."
+    ],
+    "explanationAr": "يعكس منحنى التعلم ارتفاع كفاءة العاملين وانخفاض الزمن اللازم للمهام مع الخبرة. ويُعبر عنه عادة بنسبة انخفاض الوقت عند كل تضاعف للإنتاج التراكمي. ومن الافتراضات الشائعة انخفاض متوسط الزمن التراكمي للوحدة وتكلفتها بنسبة ثابتة مع كل تضاعف. ويعني منحنى تعلم 80% انخفاض المتوسط بنسبة 20%. فإذا احتاجت الأولى إلى 50 ساعة، يصبح متوسط الوحدتين 40 ساعة (50 ساعة × 80%). ويبلغ الوقت الإجمالي 80 ساعة (2 × 40 متوسطًا تراكميًا)، وبعد طرح 50 ساعة للوحدة الأولى يتبقى 30 ساعة للوحدة الثانية."
   },
   {
     "unit": 12,
