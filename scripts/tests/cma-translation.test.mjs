@@ -499,3 +499,37 @@ test("Independent arithmetic audits are not mistaken for publisher PDF verificat
   assert.equal(success,.52);
   assert.equal(Math.round(success*10000000-(1-success)*4000000),3280000);
 });
+
+
+test("CMA Unit 13 Section 1 first 24 budget foundations questions have complete Arabic source drafts",()=>{
+  const unit13=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8",
+  ));
+  const section=unit13.filter(row=>row.section===1);
+  const answers=[3,3,3,3,2,1,3,3,3,3,1,1,1,3,3,3,3,3,3,3,0,1,1,2];
+  assert.equal(unit13.length,123);
+  assert.equal(section.length,44);
+  assert.deepEqual(section.map(q=>q.number),Array.from({length:44},(_,i)=>i+1));
+  assert.deepEqual(unit13.filter(q=>q.section===1&&q.stemAr).map(q=>q.number),
+    Array.from({length:24},(_,i)=>i+1));
+  for(const row of section.slice(0,24)){
+    assert.equal(row.answerIndex,answers[row.number-1],
+      "Canonical source answer index changed for Unit 13 §1 Q"+row.number);
+    assert.equal(row.choicesAr?.length,4,
+      "Arabic choice count changed for Unit 13 §1 Q"+row.number);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+    );
+    assert.equal(checked.valid,true,
+      "Source-field numeric/choice integrity broken: Unit 13 §1 Q"+row.number+" "+checked.reason);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+    assert.ok(row.choicesAr.every(choice=>typeof choice==="string"&&choice.trim()!==""));
+    assert.equal(row.sourceTextStatus,undefined);
+  }
+  assert.ok(section.slice(24).every(q=>q.stemAr===undefined &&
+    q.choicesAr===undefined && q.explanationAr===undefined));
+  assert.ok(unit13.filter(q=>q.section!==1).every(q=>
+    q.stemAr===undefined && q.choicesAr===undefined && q.explanationAr===undefined));
+});
