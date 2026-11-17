@@ -1,3 +1,4 @@
+import { isCmaScorableQuestion, splitCmaQuizSourceReview } from "../../src/lib/cma-source-review.shared.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -391,4 +392,57 @@ test("CMA Section 5 strategic market-share goal is not replaced with earnings gr
   assert.equal(nextYear.units,thisYear.units);
   // The question explicitly assumes unchanged total market size.
   assert.equal(nextYear.units>thisYear.units,false);
+});
+
+
+test("Source-layout review questions cannot enter scored CMA practice by default",()=>{
+  const original=[
+    {id:"verified",sourceLayoutReview:false,answerIndex:1},
+    {id:"imported-table",sourceLayoutReview:true,answerIndex:3},
+    {id:"inferred-layout",sourceLayoutReview:true,answerIndex:0},
+    {id:"unspecified",answerIndex:2},
+  ];
+  const guarded=splitCmaQuizSourceReview(original,false);
+  assert.deepEqual(guarded.eligible.map(q=>q.id),["verified","unspecified"]);
+  assert.deepEqual(guarded.excluded.map(q=>q.id),["imported-table","inferred-layout"]);
+  assert.equal(isCmaScorableQuestion(original[0]),true);
+  assert.equal(isCmaScorableQuestion(original[1]),false);
+  assert.equal(isCmaScorableQuestion(original[2]),false);
+  assert.equal(isCmaScorableQuestion(original[3]),true);
+  assert.deepEqual(original.map(q=>q.answerIndex),[1,3,0,2],
+    "Filtering must not mutate the source bank or answer keys");
+
+  // An explicit learner opt-in displays all source questions, but does
+  // not make the original unreviewed questions count toward any score.
+  const optedIn=splitCmaQuizSourceReview(original,true);
+  assert.deepEqual(optedIn.eligible.map(q=>q.id),
+    ["verified","imported-table","inferred-layout","unspecified"]);
+  assert.deepEqual(optedIn.excluded,[]);
+  assert.equal(isCmaScorableQuestion(optedIn.eligible[1]),false);
+  assert.equal(isCmaScorableQuestion(optedIn.eligible[2]),false);
+  assert.deepEqual(splitCmaQuizSourceReview([],false),{eligible:[],excluded:[]});
+  assert.deepEqual(splitCmaQuizSourceReview([],true),{eligible:[],excluded:[]});
+});
+
+test("The 19 unresolved Unit 12 PDF layouts remain English-only, with stable source pages",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
+  ));
+  const pages={
+    "1.8":63,"1.9":64,"1.13":68,"1.14":69,"1.28":82,
+    "2.3":87,"2.4":88,"2.23":110,
+    "3.8":127,"3.10":130,"3.23":143,"3.24":144,
+    "3.27":151,"3.28":153,"3.29":156,"3.32":161,
+    "3.34":167,"3.35":167,"3.36":168,
+  };
+  const pending=records.filter(row=>!row.stemAr);
+  assert.equal(pending.length,19);
+  assert.deepEqual(pending.map(row=>row.section+"."+row.number),Object.keys(pages));
+  for(const q of pending){
+    const id=q.section+"."+q.number;
+    assert.equal(q.page,pages[id],"Source PDF page locator changed: "+id);
+    assert.equal(q.choices.length,4);
+    assert.equal(q.choicesAr,undefined,"Unverified source options must not be published as Arabic");
+    assert.equal(q.explanationAr,undefined,"Unverified source math must not be published as Arabic");
+  }
 });
