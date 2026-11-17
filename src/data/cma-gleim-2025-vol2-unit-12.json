@@ -1133,7 +1133,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nIn this situation, the company is assuming that the total costs\nrequired for each doubling of output will be 70% of the costs\nrequired for the previous doubling. The effects of Proper\nPropeller’s projected learning curve can be calculated as\nfollows:\nCumulative         Cumulative\nUnits            Average\nBatch Produced                Cost\n1          1       $20,000\n2          2       $14,000 ($20,000 × 70%)\n3          4       $ 9,800 ($14,000 × 70%)\n4          8       $ 6,860 ($9,800 × 70%)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط Proper Propeller, Inc. لصنع مروحة جديدة عالية التقنية للطائرات، وتتوقع انخفاض وقت العمل مع زيادة الخبرة. وتفترض منحنى تعلم تراكميًا بنسبة 70%، وقدرت تكاليف التصنيع:\nالوحدات التراكمية — متوسط تكلفة الوحدة — إجمالي التكلفة\n1 — $20,000 — $20,000\n2 — 14,000 — 28,000\nإذا أنتجت الشركة ثماني وحدات، فما متوسط تكلفة التصنيع للوحدة؟",
+    "choicesAr": [
+      "$1,647",
+      "$6,860",
+      "$9,800",
+      "$14,000"
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم للتنبؤ بمكاسب الإنتاجية مع ازدياد خبرة العاملين. ويفترض أن التكاليف المطلوبة عند كل تضاعف للإنتاج تصبح 70% من تكاليف التضاعف السابق. ويكون حساب منحنى التعلم كما يلي:\nالدفعة — الوحدات التراكمية — متوسط التكلفة\n1 — 1 — $20,000\n2 — 2 — $14,000 ($20,000 × 70%)\n3 — 4 — $ 9,800 ($14,000 × 70%)\n4 — 8 — $ 6,860 ($9,800 × 70%)"
   },
   {
     "unit": 12,
@@ -1150,7 +1158,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nIn this situation, the company is assuming that the total costs\nrequired for each doubling of output will be 70% of the costs\nrequired for the previous doubling. The effects of Proper\nPropeller’s projected learning curve can be calculated as\nfollows:\nCumulative        Cumulative          Cumulative\nUnits           Average               Total\nBatch Produced               Cost                Cost\n1          1      $20,000                  $20,000\n2           2   $14,000 ($20,000 × 70%)      28,000\n3           4    $9,800 ($14,000 × 70%)      39,200\n4           8    $6,860 ($9,800 × 70%)       54,880",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط Proper Propeller, Inc. لصنع مروحة جديدة عالية التقنية للطائرات، وتتوقع انخفاض وقت العمل مع زيادة الخبرة. وتفترض منحنى تعلم تراكميًا بنسبة 70%، وقدرت تكاليف التصنيع:\nالوحدات التراكمية — متوسط تكلفة الوحدة — إجمالي التكلفة\n1 — $20,000 — $20,000\n2 — 14,000 — 28,000\nإذا أنتجت الشركة ثماني وحدات، فما إجمالي تكلفة التصنيع؟",
+    "choicesAr": [
+      "$50,660",
+      "$54,880",
+      "$62,643",
+      "$112,000"
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم لتوقع مكاسب الإنتاجية مع الخبرة، ويفترض تحسن الأداء بمعدل يمكن تقديره. وتفترض الشركة أن التكاليف عند كل تضاعف للإنتاج تصبح 70% من تكاليف المرحلة السابقة. ويمكن حسابها:\nالدفعة — الوحدات التراكمية — متوسط التكلفة — مجموع التكلفة التراكمي\n1 — 1 — $20,000 — $20,000\n2 — 2 — $14,000 ($20,000 × 70%) — 28,000\n3 — 4 — $9,800 ($14,000 × 70%) — 39,200\n4 — 8 — $6,860 ($9,800 × 70%) — 54,880"
   },
   {
     "unit": 12,
@@ -1167,7 +1183,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The effects of Proper Propeller’s projected learning curve can\nbe calculated as follows:\nCumulative         Cumulative          Cumulative\nUnits           Average                Total\nBatch Produced              Cost                 Cost\n1         1      $20,000                    $20,000\n2         2      $14,000 ($20,000 × 70%) 28,000\n3         4       $9,800 ($14,000 × 70%) 39,200\n4         8       $6,860 ($9,800 × 70%) 54,880\nSince eight propellers require $54,880 and the first one off the\nassembly line cost $20,000, the cost of units 2 through 8 will\nbe $34,880 ($54,880 – $20,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط Proper Propeller, Inc. لصنع مروحة جديدة عالية التقنية للطائرات، وتتوقع انخفاض وقت العمل مع زيادة الخبرة. وتفترض منحنى تعلم تراكميًا بنسبة 70%، وقدرت تكاليف التصنيع:\nالوحدات التراكمية — متوسط تكلفة الوحدة — إجمالي التكلفة\n1 — $20,000 — $20,000\n2 — 14,000 — 28,000\nبعد إنتاج المروحة الأولى، ما التكلفة المقدرة لطلب سبع مراوح إضافية؟",
+    "choicesAr": [
+      "$34,880",
+      "$54,880",
+      "$92,000",
+      "$98,000"
+    ],
+    "explanationAr": "يُحسب أثر منحنى التعلم المتوقع للشركة كما يلي:\nالدفعة — الوحدات التراكمية — متوسط التكلفة — مجموع التكلفة التراكمي\n1 — 1 — $20,000 — $20,000\n2 — 2 — $14,000 ($20,000 × 70%) — 28,000\n3 — 4 — $9,800 ($14,000 × 70%) — 39,200\n4 — 8 — $6,860 ($9,800 × 70%) — 54,880\nولأن تكلفة الثماني مراوح $54,880 وتكلفة الأولى $20,000، فإن تكلفة الوحدات من 2 إلى 8 تبلغ $34,880 ($54,880 – $20,000)."
   },
   {
     "unit": 12,
