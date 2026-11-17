@@ -16,6 +16,8 @@ export interface ExamQuestion {
   sourcePage?: number;
   /** Source PDF table/diagram formatting still needs human layout verification. */
   sourceLayoutReview?: boolean;
+  /** Static Arabic copy still awaiting a separate specialist editorial review. */
+  sourceArabicStatus?: "draft" | "reviewed";
   /** Publisher's original page contains duplicated lettered choices. */
   sourceOptionDuplicate?: boolean;
   /** A missing answer in the supplied source was independently reconstructed. */
