@@ -664,7 +664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A buffer in the context of process analysis is a quantity of\nwork-in-process inventory that allows some stage(s) of the\noverall process to continue operating when an earlier stage\nbreaks down.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي ليس نوعًا من أنواع العمليات؟",
+    "choicesAr": [
+      "الإنتاج بغرض التخزين.",
+      "الإنتاج حسب الطلب.",
+      "المخزون الاحتياطي بين مراحل العملية.",
+      "العملية الهجينة."
+    ],
+    "explanationAr": "في سياق تحليل العمليات، يمثّل المخزون الاحتياطي كمية من المخزون تحت التشغيل تتيح استمرار مرحلة أو أكثر من مراحل العملية الكلية حتى إذا تعطلت إحدى المراحل السابقة."
   },
   {
     "unit": 11,
@@ -681,7 +689,15 @@
     ],
     "answerIndex": 2,
     "explanation": "According to the IMA’s Management Accounting Glossary,\ninternal failure costs are incurred when detection of defective\nproducts occurs before shipment. Examples of internal failure\ncosts are scrap, rework, tooling changes, and downtime.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تُصنّف تكاليف الخردة وإعادة التشغيل وتغييرات العدد والأدوات في نظام تكاليف جودة المنتج؟",
+    "choicesAr": [
+      "تكلفة تدريب.",
+      "تكلفة فشل خارجي.",
+      "تكلفة فشل داخلي.",
+      "تكلفة وقاية."
+    ],
+    "explanationAr": "وفقًا لمعجم المحاسبة الإدارية الصادر عن معهد المحاسبين الإداريين (IMA)، تنشأ تكاليف الفشل الداخلي عند اكتشاف المنتجات المعيبة قبل شحنها. ومن أمثلتها تكاليف الخردة وإعادة التشغيل وتغيير العدد والأدوات والتوقف عن العمل."
   },
   {
     "unit": 11,
@@ -698,7 +714,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Benchmarking is an ongoing process that involves quantitative\nand qualitative measurement of the difference between the\norganization’s performance of an activity and the performance\nby a best-in-class organization. The benchmarked\norganization need not be a direct competitor. The important\nconsideration is that it be an outstanding performer in its\nindustry.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن المقارنة المرجعية للأداء غير صحيحة؟",
+    "choicesAr": [
+      "تتضمن المقارنة المرجعية التقييم المستمر لممارسات أفضل المنشآت في فئتها، وتكييف عمليات المنشأة لتبني أفضل تلك الممارسات.",
+      "عادةً ما تطبق المنشآت المقارنة المرجعية عبر تشكيل فرق مخصصة لها.",
+      "المقارنة المرجعية عملية مستمرة تتضمن قياس الفروق الكمية والنوعية بين أداء المنشأة لنشاط معين وأفضل أداء عالميًا أو في القطاع.",
+      "يجب أن تكون المنشأة المرجعية التي تُقارن بها الشركة منافسًا مباشرًا لها."
+    ],
+    "explanationAr": "المقارنة المرجعية عملية مستمرة تقيس فروق الأداء الكمية والنوعية بين نشاط المنشأة ونشاط منشأة رائدة في فئتها. ولا يشترط أن تكون المنشأة المرجعية منافسًا مباشرًا؛ وإنما الأهم أن تكون ذات أداء متميز في قطاعها."
   },
   {
     "unit": 11,
@@ -715,7 +739,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The four categories of quality costs are (1) prevention,\n(2) appraisal, (3) internal failure, and (4) external failure. Costs\nof prevention include attempts to avoid defective output, such\nas (1) employee training, (2) review of equipment design,\n(3) preventive maintenance, and (4) evaluation of suppliers.\nAppraisal includes quality control programs, inspection, and\ntesting. Internal failure costs are incurred when detection of\ndefective products occurs before shipment. They include costs\nof (1) scrap, (2) rework, (3) tooling changes, and (4) downtime.\nExternal failure costs are incurred after the product has been\nshipped. They include the costs associated with warranties,\nproduct liability, and loss of customer goodwill.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الفئات الأربع للتكاليف المرتبطة بجودة المنتج؟",
+    "choicesAr": [
+      "الفشل الخارجي والفشل الداخلي والوقاية وتكاليف الاحتفاظ بالمخزون.",
+      "الفشل الخارجي والفشل الداخلي والوقاية والتقييم.",
+      "الضمان والمسؤولية عن المنتج والتدريب والتقييم.",
+      "الضمان والمسؤولية عن المنتج والوقاية والتقييم."
+    ],
+    "explanationAr": "تتكون تكاليف الجودة من أربع فئات: (1) الوقاية، (2) التقييم، (3) الفشل الداخلي، (4) الفشل الخارجي. تشمل الوقاية محاولات تجنب المخرجات المعيبة، مثل (1) تدريب الموظفين، (2) مراجعة تصميم المعدات، (3) الصيانة الوقائية، (4) تقييم الموردين. ويشمل التقييم برامج مراقبة الجودة والفحص والاختبارات. تنشأ تكاليف الفشل الداخلي إذا اكتُشفت المنتجات المعيبة قبل شحنها، وتشمل (1) الخردة، (2) إعادة التشغيل، (3) تغيير العدد والأدوات، (4) التوقف. أما تكاليف الفشل الخارجي فتنشأ بعد شحن المنتج، وتشمل الضمان والمسؤولية عن المنتج وفقدان حسن نية العملاء."
   },
   {
     "unit": 11,
@@ -732,7 +764,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The following are the four categories of quality costs:\nprevention, appraisal, internal failure, and external failure (lost\nopportunity). Appraisal costs include quality control programs,\ninspection, and testing. However, some authorities regard\nstatistical quality and process control as preventive activities\nbecause they not only detect faulty work but also allow for\nadjustment of processes to avoid future defects.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تُصنّف تكلفة الرقابة الإحصائية على الجودة في نظام تكاليف جودة المنتج؟",
+    "choicesAr": [
+      "تكلفة فشل داخلي.",
+      "تكلفة تدريب.",
+      "تكلفة فشل خارجي.",
+      "تكلفة تقييم."
+    ],
+    "explanationAr": "الفئات الأربع لتكاليف الجودة هي الوقاية والتقييم والفشل الداخلي والفشل الخارجي (الفرص الضائعة). وتشمل تكاليف التقييم برامج مراقبة الجودة والفحص والاختبار. ومع ذلك، يعد بعض المختصين الرقابة الإحصائية على الجودة والعمليات نشاطًا وقائيًا؛ لأنها لا تكتفي باكتشاف العمل المعيب، بل تتيح تعديل العمليات لمنع العيوب مستقبلًا."
   },
   {
     "unit": 11,
@@ -749,7 +789,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The costs of prevention and appraisal are conformance costs\nthat serve as financial measures of internal performance.\nPrevention costs are incurred to prevent defective output.\nThese costs include (1) preventive maintenance, (2) employee\ntraining, (3) review of equipment design, and (4) evaluation of\nsuppliers. Appraisal costs are incurred to detect\nnonconforming output. They include such activities as\n(1) statistical quality control programs, (2) inspection, and\n(3) testing. The equipment maintenance cost of $1,154 is a\nprevention cost. The product testing cost of $786 is an\nappraisal cost. Their sum is $1,940.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بنود مختارة من تقرير تكاليف الجودة عن الشهر الماضي:\nالفئة — المبلغ\nإعادة التشغيل: $ 725\nصيانة المعدات: 1,154\nاختبار المنتج: 786\nإصلاح المنتج: 695\nما إجمالي تكاليف الوقاية والتقييم عن الشهر الماضي؟",
+    "choicesAr": [
+      "$786",
+      "$1,154",
+      "$1,940",
+      "$2,665"
+    ],
+    "explanationAr": "تكاليف الوقاية والتقييم هي تكاليف المطابقة التي تُستخدم كمؤشرات مالية للأداء الداخلي. وتنشأ تكاليف الوقاية لمنع المخرجات المعيبة، مثل (1) الصيانة الوقائية، (2) تدريب الموظفين، (3) مراجعة تصميم المعدات، (4) تقييم الموردين. وتنشأ تكاليف التقييم لاكتشاف المخرجات غير المطابقة، ومنها (1) برامج الرقابة الإحصائية على الجودة، (2) الفحص، (3) الاختبارات. وتُعد صيانة المعدات البالغة $1,154 تكلفة وقاية، واختبار المنتج البالغ $786 تكلفة تقييم. ومجموعهما $1,940."
   },
   {
     "unit": 11,
@@ -766,7 +814,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Nonconformance costs include internal and external failure\ncosts. External failure costs include environmental costs, e.g.,\nfines for violations of environmental laws and loss of customer\ngoodwill.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي التكاليف التالية المتعلقة بالجودة تُعد من تكاليف عدم المطابقة؟",
+    "choicesAr": [
+      "تكاليف تطوير الأنظمة.",
+      "تكاليف فحص الوحدات أثناء التشغيل.",
+      "التكاليف البيئية.",
+      "تكاليف حلقات الجودة."
+    ],
+    "explanationAr": "تشمل تكاليف عدم المطابقة الفشل الداخلي والفشل الخارجي. وقد تشمل تكاليف الفشل الخارجي تكاليف بيئية، مثل الغرامات الناجمة عن مخالفة الأنظمة البيئية وفقدان حسن نية العملاء."
   },
   {
     "unit": 11,
@@ -783,7 +839,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Benchmarking involves continuously evaluating the principles\nof best-in-class organizations and adapting company\nprocesses to incorporate the best of these practices. It\nanalyzes and measures the key outputs of a business process\nor function against the best and also identifies the underlying\nkey actions and root causes that contribute to the performance\ndifference. The percentage of orders delivered on time at the\ncompany’s most efficient plant is an example of an internal\nnonfinancial benchmark.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي مثال على معيار مرجعي داخلي غير مالي؟",
+    "choicesAr": [
+      "معدل أجر العاملين ذوي المهارات المماثلة في مصنع أحد المنافسين الرئيسيين.",
+      "اعتماد متوسط التكلفة الفعلية للرطل من منتج معين في أكثر مصانع الشركة كفاءة معيارًا لبقية مصانعها.",
+      "تحديد الشركة مبلغ $50,000 معيارًا لبرامج تدريب العاملين في كل مصنع.",
+      "اعتماد نسبة طلبات العملاء التي تُسلَّم في موعدها في أكثر مصانع الشركة كفاءة معيارًا لبقية مصانعها."
+    ],
+    "explanationAr": "تتضمن المقارنة المرجعية التقييم المستمر لمبادئ وممارسات المنشآت الرائدة وتكييف عمليات الشركة لتبني أفضل تلك الممارسات. وتقيس المخرجات الرئيسية لعملية أو وظيفة مقارنة بأفضل أداء، مع تحديد الإجراءات الأساسية والأسباب الجذرية لفروق الأداء. وتُعد نسبة الطلبات المسلَّمة في موعدها لدى أكثر مصانع الشركة كفاءة مثالًا على معيار داخلي غير مالي."
   },
   {
     "unit": 11,
@@ -800,7 +864,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The retailer would benefit from all of these benchmark\ntechniques as all would identify best practices. The IMA’s\nStatement on Management Accounting (SMA) Effective\nBenchmarking states, “Benchmarking involves continuously\nevaluating the practices of best-in-class organizations and\nadapting company processes to incorporate the best of these\npractices.” It “analyzes and measures the key outputs of a\nbusiness process or function against the best and also\nidentifies the underlying key actions and root causes that\ncontribute to the performance difference.”",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدير شركة تجزئة ثماني سلاسل لمتاجر الخصومات، وتسعى إلى خفض تكاليف الشراء بإعادة هندسة العمليات والتوسع في استخدام التبادل الإلكتروني للبيانات (EDI). أي أساليب المقارنة المرجعية التالية مناسبة؟\nI. مقارنة تكاليف وممارسات الشراء بين سلاسل المتاجر لتحديد أفضل أداء داخلي.\nII. مقارنة ممارسات الشركة بممارسات شركة تجزئة أخرى تُعد من الأفضل في فئتها.\nIII. مقارنة أفضل ممارسات الشركة بممارسات شركة طيران دولية تُعد من الأفضل في فئتها.\nIV. مراجعة متعمقة لمنشور جمعية مهنية لتجارة التجزئة بشأن تطبيقات EDI الناجحة.",
+    "choicesAr": [
+      "II وIV فقط.",
+      "I وII فقط.",
+      "I وIV فقط.",
+      "I وII وIII وIV."
+    ],
+    "explanationAr": "تستفيد شركة التجزئة من جميع هذه الأساليب، إذ يساعد كل منها في تحديد أفضل الممارسات. وتنص إرشادات المحاسبة الإدارية الصادرة عن IMA بشأن المقارنة المرجعية الفعالة على أن المقارنة المرجعية تتضمن التقييم المستمر لممارسات المنشآت الرائدة وتكييف عمليات الشركة لدمج أفضلها. كما تقيس المخرجات الرئيسية للعملية أو الوظيفة مقابل الأفضل وتحدد الإجراءات الأساسية والأسباب الجذرية التي تفسر فروق الأداء."
   },
   {
     "unit": 11,
@@ -817,7 +889,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The only two internal failure costs incurred are the unplanned\nmanufacturing machinery repairs and the labor to reattach\ndoors due to misalignment found by inspection, which result in\n$10,500 for internal failure ($9,000 + $1,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنّع شركة غسالات أطباق وتتكبد التكاليف المختارة التالية:\nصيانة المعدات شهريًا: $5,000\nأجور العمل للتأكد من إحكام إغلاق أبواب الغسالات: 8,000\nإصلاحات غير مخططة لآلات التصنيع: 9,000\nأجور إعادة تثبيت الأبواب بسبب عدم المحاذاة الذي اكتُشف أثناء الفحص: 1,500\nأجور إعادة تثبيت الأبواب بسبب عدم المحاذاة الذي اكتشفه العملاء: 1,200\nعند إعداد تقرير تكاليف الجودة، ما إجمالي المبالغ التي تُدرج ضمن الفشل الداخلي؟",
+    "choicesAr": [
+      "$1,500",
+      "$10,500",
+      "$11,700",
+      "$23,500"
+    ],
+    "explanationAr": "هناك تكلفتان فقط تندرجان ضمن الفشل الداخلي: إصلاحات آلات التصنيع غير المخططة، وأجور إعادة تثبيت الأبواب بسبب عيوب المحاذاة التي اكتُشفت أثناء الفحص. ولذلك يبلغ إجمالي الفشل الداخلي $10,500، أي ($9,000 + $1,500)."
   },
   {
     "unit": 11,
@@ -834,7 +914,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The largest portion of total cost of quality is external failure.\nQuality training, which will result in higher quality awareness\non the part of all employees, is the appropriate corrective\naction. Quality training is a prevention cost, and an increase in\nprevention should reduce all other cost categories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يوضح تقرير تكاليف الجودة البيانات الآتية:\nتكاليف الوقاية: 10%\nتكاليف التقييم: 15%\nتكاليف الفشل الداخلي: 20%\nتكاليف الفشل الخارجي: 55%\nإجمالي تكاليف الجودة: 100%\nأي مما يلي ينبغي التركيز عليه لتحقيق أفضل تحسين في أداء تكاليف الجودة الإجمالية؟",
+    "choicesAr": [
+      "التدريب على الجودة.",
+      "عمليات الفحص.",
+      "إعادة التشغيل.",
+      "دعم العملاء."
+    ],
+    "explanationAr": "تمثل تكاليف الفشل الخارجي أكبر حصة من إجمالي تكاليف الجودة. ويُعد التدريب على الجودة إجراءً تصحيحيًا مناسبًا لأنه يزيد وعي جميع العاملين بالجودة. والتدريب من تكاليف الوقاية، ومن المتوقع أن يؤدي تعزيز الوقاية إلى خفض الفئات الأخرى من تكاليف الجودة."
   },
   {
     "unit": 11,
