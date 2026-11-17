@@ -1084,7 +1084,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nFor this company, a total of 8,000 hours was spent to\ncomplete two lots of product. The cumulative average spent\non the two lots was therefore 4,000 hours per lot (8,000 ÷ 2).\nThis cumulative average of 4,000 is 80% of the 5,000 hours\nthat were spent on the first lot. The learning curve is therefore\n80%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تسعى شركة صناعية لتقديم عرض سعر لإنتاج 20 وحدة من منتج سبق أن أنتجت منه دفعتين من 10 وحدات لكل منهما. ويرى مدير الإنتاج أن التعلم الذي ظهر في الدفعتين سيستمر خلال الدفعتين التاليتين على الأقل. احتاجت الدفعة الأولى إلى:\n• 5,000 ساعة عمل مباشر لأول 10 وحدات\n• 3,000 ساعة عمل مباشر إضافية للدفعة الثانية من 10 وحدات\nما معدل منحنى التعلم الذي حققته الشركة في الدفعتين؟",
+    "choicesAr": [
+      "40.0%",
+      "60.0%",
+      "62.5%",
+      "80.0%"
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم لتقدير التحسن في الإنتاجية الناتج عن اكتساب العاملين الخبرة، ويفترض إمكانية توقع هذا التحسن بمعدل محدد. استغرق إنتاج الدفعتين 8,000 ساعة إجمالًا، أي بمتوسط تراكمي قدره 4,000 ساعة لكل دفعة (8,000 ÷ 2). ويشكل هذا المتوسط البالغ 4,000 نسبة 80% من 5,000 ساعة استغرقتها الدفعة الأولى؛ ولذلك يبلغ منحنى التعلم 80%."
   },
   {
     "unit": 12,
@@ -1336,7 +1344,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The effects of the company’s projected learning curve of 75%\ncan be calculated as follows:\nCumulative        Cumulative         Cumulative\nBatches Units Produced Average Batch Time Total Time\n1          500         100                    100 (1 × 100)\n2          1,000       75 (100 × 75%)         150 (2 × 75)\n4          2,000       56.25 (75 × 75%)       225 (4 ×\n56.25)\nIt will take 225 hours to produce 2,000 units in total.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحقق إحدى الشركات منحنى تعلم تراكميًا بنسبة 75% عند تصنيع منتج كهربائي. وتحتاج إلى 100 ساعة لإنتاج أول 500 وحدة. كم ساعة تحتاج لإنتاج 2,000 وحدة إجمالًا؟",
+    "choicesAr": [
+      "225.00",
+      "231.25",
+      "250.00",
+      "300.00"
+    ],
+    "explanationAr": "يمكن حساب آثار منحنى التعلم المتوقع للشركة البالغ 75% كما يلي:\nالدفعات — الوحدات المنتجة تراكميًا — متوسط وقت الدفعة — الوقت التراكمي\n1 — 500 — 100 — 100 (1 × 100)\n2 — 1,000 — 75 (100 × 75%) — 150 (2 × 75)\n4 — 2,000 — 56.25 (75 × 75%) — 225 (4 × 56.25)\nيستغرق إنتاج 225 ساعة لإتمام 2,000 وحدة إجمالًا."
   },
   {
     "unit": 12,
