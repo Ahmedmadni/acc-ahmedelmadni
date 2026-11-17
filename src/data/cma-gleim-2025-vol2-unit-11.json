@@ -930,7 +930,7 @@
     "number": 12,
     "page": 38,
     "topicId": "su11-process-improvement",
-    "stem": "Listed below are costs of quality that a manufacturing\ncompany has incurred throughout its operations. The company plans\nto prepare a report that classifies these costs into the following four\ncategories: preventive costs, appraisal costs, internal failure costs,\nand external failure costs.\nCost Items                     Amou\nnt\nDesign reviews                       $275,0\n00\nFinished goods returned due to       55,000\nfailure\nFreight on replacement finished      27,000\ngoods\nLabor inspection during           75,000\nmanufacturing\nLabor inspection of raw materials 32,000\nManufacturing product-testing     63,000\nlabor\nManufacturing rework labor and 150,00\noverhead                               0\nMaterials used in warranty        68,000\nrepairs\nProcess engineering               180,00\n0\nProduct-liability claims          145,00\n0\nProduct-testing equipment         35,000\nRepairs to equipment due to brea\nkdowns                            22,000\nScheduled equipment               90,000\nmaintenance\nScrap material                    125,00\n0\nTraining of manufacturing         156,00\nworkers                                0\nThe dollar amount of the costs of quality classified as\npreventive costs for the manufacturing firm would be",
+    "stem": "Listed below are costs of quality that a manufacturing company has incurred throughout its operations. The company plans to prepare a report that classifies these costs into the following four categories: preventive costs, appraisal costs, internal failure costs, and external failure costs.\nCost items — Amount\nDesign reviews — $275,000\nFinished goods returned due to failure — 55,000\nFreight on replacement finished goods — 27,000\nLabor inspection during manufacturing — 75,000\nLabor inspection of raw materials — 32,000\nManufacturing product-testing labor — 63,000\nManufacturing rework labor and overhead — 150,000\nMaterials used in warranty repairs — 68,000\nProcess engineering — 180,000\nProduct-liability claims — 145,000\nProduct-testing equipment — 35,000\nRepairs to equipment due to breakdowns — 22,000\nScheduled equipment maintenance — 90,000\nScrap material — 125,000\nTraining of manufacturing workers — 156,000\nWhat is the amount of quality costs classified as preventive costs for the manufacturing firm?",
     "choices": [
       "$643,000",
       "$701,000",
@@ -939,7 +939,16 @@
     ],
     "answerIndex": 1,
     "explanation": "Prevention attempts to avoid defective output, e.g., by\nemployee training, review of equipment design, preventive\nmaintenance, and evaluation of suppliers. Accordingly, the\npreventive costs equal $701,000 ($275,000 design reviews +\n$180,000 process engineering + $90,000 scheduled\nmaintenance + $156,000 training).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تكاليف جودة تكبدتها شركة صناعية في عملياتها، وتخطط لإعداد تقرير يصنف هذه التكاليف إلى أربع فئات: تكاليف الوقاية، وتكاليف التقييم، وتكاليف الفشل الداخلي، وتكاليف الفشل الخارجي.\nبند التكلفة — المبلغ\nمراجعة التصميم — $275,000\nمرتجعات المنتجات النهائية نتيجة الأعطال — 55,000\nشحن المنتجات البديلة — 27,000\nفحص العمالة أثناء التصنيع — 75,000\nفحص المواد الخام — 32,000\nأجور اختبار المنتجات أثناء التصنيع — 63,000\nأجور وتكاليف غير مباشرة لإعادة التشغيل — 150,000\nمواد مستخدمة في إصلاحات الضمان — 68,000\nهندسة العمليات — 180,000\nمطالبات المسؤولية عن المنتج — 145,000\nمعدات اختبار المنتجات — 35,000\nإصلاح المعدات بسبب الأعطال — 22,000\nالصيانة الدورية المجدولة للمعدات — 90,000\nمواد الخردة — 125,000\nتدريب عمال التصنيع — 156,000\nما المبلغ الذي ينبغي تصنيفه ضمن تكاليف الوقاية في الشركة الصناعية؟",
+    "choicesAr": [
+      "$643,000",
+      "$701,000",
+      "$736,000",
+      "$768,000"
+    ],
+    "explanationAr": "تهدف الوقاية إلى تجنب المخرجات المعيبة، مثل تدريب الموظفين ومراجعة تصميم المعدات والصيانة الوقائية وتقييم الموردين. وعليه تساوي تكاليف الوقاية $701,000، أي ($275,000 مراجعة التصميم + $180,000 هندسة العمليات + $90,000 الصيانة المجدولة + $156,000 تدريب العاملين).",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 11,
@@ -947,7 +956,7 @@
     "number": 13,
     "page": 38,
     "topicId": "su11-process-improvement",
-    "stem": "Listed below are costs of quality that a manufacturing\ncompany has incurred throughout its operations. The company plans\nto prepare a report that classifies these costs into the following four\ncategories: preventive costs, appraisal costs, internal failure costs,\nand external failure costs.\nCost Items                     Amou\nnt\nDesign reviews                       $275,0\n00\nFinished goods returned due to       55,000\nfailure\nFreight on replacement finished      27,000\ngoods\nLabor inspection during           75,000\nmanufacturing\nLabor inspection of raw materials 32,000\nManufacturing product-testing     63,000\nlabor\nManufacturing rework labor and 150,00\noverhead                               0\nMaterials used in warranty        68,000\nrepairs\nProcess engineering               180,00\n0\nProduct-liability claims          145,00\n0\nProduct-testing equipment         35,000\nRepairs to equipment due to brea\nkdowns                            22,000\nScheduled equipment               90,000\nmaintenance\nScrap material                    125,00\n0\nTraining of manufacturing         156,00\nworkers                                0\nThe costs of quality that are incurred in detecting units of\nproduct that do not conform to product specifications are\nreferred to as",
+    "stem": "Listed below are costs of quality that a manufacturing company has incurred throughout its operations. The company plans to prepare a report that classifies these costs into the following four categories: preventive costs, appraisal costs, internal failure costs, and external failure costs.\nCost items — Amount\nDesign reviews — $275,000\nFinished goods returned due to failure — 55,000\nFreight on replacement finished goods — 27,000\nLabor inspection during manufacturing — 75,000\nLabor inspection of raw materials — 32,000\nManufacturing product-testing labor — 63,000\nManufacturing rework labor and overhead — 150,000\nMaterials used in warranty repairs — 68,000\nProcess engineering — 180,000\nProduct-liability claims — 145,000\nProduct-testing equipment — 35,000\nRepairs to equipment due to breakdowns — 22,000\nScheduled equipment maintenance — 90,000\nScrap material — 125,000\nTraining of manufacturing workers — 156,000\nThe quality costs incurred in detecting units of product that do not conform to product specifications are referred to as",
     "choices": [
       "Preventive costs.",
       "Appraisal costs.",
@@ -956,7 +965,16 @@
     ],
     "answerIndex": 1,
     "explanation": "The categories of quality costs include conformance costs\n(prevention and appraisal) and nonconformance costs\n(internal failure and external failure). Appraisal costs embrace\nsuch activities as statistical quality control programs,\ninspection, and testing. Thus, the cost of detecting\nnonconforming products is an appraisal cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي تكاليف جودة تكبدتها شركة صناعية في عملياتها، وتخطط لإعداد تقرير يصنف هذه التكاليف إلى أربع فئات: تكاليف الوقاية، وتكاليف التقييم، وتكاليف الفشل الداخلي، وتكاليف الفشل الخارجي.\nبند التكلفة — المبلغ\nمراجعة التصميم — $275,000\nمرتجعات المنتجات النهائية نتيجة الأعطال — 55,000\nشحن المنتجات البديلة — 27,000\nفحص العمالة أثناء التصنيع — 75,000\nفحص المواد الخام — 32,000\nأجور اختبار المنتجات أثناء التصنيع — 63,000\nأجور وتكاليف غير مباشرة لإعادة التشغيل — 150,000\nمواد مستخدمة في إصلاحات الضمان — 68,000\nهندسة العمليات — 180,000\nمطالبات المسؤولية عن المنتج — 145,000\nمعدات اختبار المنتجات — 35,000\nإصلاح المعدات بسبب الأعطال — 22,000\nالصيانة الدورية المجدولة للمعدات — 90,000\nمواد الخردة — 125,000\nتدريب عمال التصنيع — 156,000\nما تسمية تكاليف الجودة التي تُتكبد للكشف عن وحدات المنتج غير المطابقة لمواصفاته؟",
+    "choicesAr": [
+      "تكاليف الوقاية.",
+      "تكاليف التقييم.",
+      "تكاليف الفشل الداخلي.",
+      "تكاليف الفشل الخارجي."
+    ],
+    "explanationAr": "تشمل فئات تكاليف الجودة تكاليف المطابقة (الوقاية والتقييم) وتكاليف عدم المطابقة (الفشل الداخلي والفشل الخارجي). وتشمل تكاليف التقييم برامج الرقابة الإحصائية على الجودة والفحص والاختبارات؛ ومن ثم فإن تكلفة اكتشاف المنتجات غير المطابقة تُعد تكلفة تقييم.",
+    "sourceTextStatus": "table-reflowed"
   },
   {
     "unit": 11,
