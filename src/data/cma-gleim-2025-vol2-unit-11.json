@@ -973,7 +973,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Benchmarking involves continuously evaluating the practices\nof best-in-class organizations and adapting company\nprocesses to incorporate the best of these practices. Thus,\nbenchmarking involves setting standards high. Arbitrarily using\nthe unit’s prior period performance runs counter to the goal of\nbenchmarking.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي أمثلة على معايير المقارنة المرجعية، باستثناء:",
+    "choicesAr": [
+      "أداء الوحدة خلال السنة السابقة.",
+      "أفضل أداء للوحدة في فترات سابقة قابلة للمقارنة.",
+      "مقارنة الوحدة بوحدة مماثلة في الشركة نفسها.",
+      "أفضل أداء لمنافس لديه عمليات مماثلة."
+    ],
+    "explanationAr": "تتضمن المقارنة المرجعية التقييم المستمر لممارسات المنشآت الرائدة وتكييف عمليات الشركة لتبني أفضلها؛ ومن ثم تتطلب وضع معايير أداء مرتفعة. أما الاعتماد العشوائي على أداء الوحدة في الفترة السابقة فيتعارض مع هدف المقارنة المرجعية."
   },
   {
     "unit": 11,
@@ -990,7 +998,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The ideal benchmarking partner should be similar in size and\nstructure. A larger competitor may be benefiting from\neconomies of scale, which a smaller company cannot match.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طبّقت شركة برنامجًا للمقارنة المرجعية مع منشآت أخرى في القطاع. واكتشف فريق الإدارة أن منافسًا أكبر حجمًا يتحمل تكاليف غير مباشرة أقل لكل وحدة مباعة. وخلصت الإدارة إلى ضرورة خفض تكاليفها غير المباشرة للحفاظ على التنافسية. أي النقد التالي لهذا الاستنتاج هو الأفضل؟",
+    "choicesAr": [
+      "ينبغي إجراء المقارنة المرجعية مع شركات مماثلة في الحجم والمبيعات.",
+      "يصعب التحكم في التكاليف الثابتة غير المباشرة، لذا لا ينبغي إخضاعها للمقارنة المرجعية.",
+      "التكلفة لكل وحدة ليست سوى أحد مجالات التنافسية، وينبغي النظر إلى مجالات أخرى.",
+      "تختلف عمليات الشركات اختلافًا كبيرًا، ولذلك لا ينبغي إجراء مقارنات بينها."
+    ],
+    "explanationAr": "يفضل اختيار شريك للمقارنة المرجعية مماثل في الحجم والهيكل. فقد يستفيد المنافس الأكبر من وفورات الحجم التي لا تستطيع الشركة الأصغر تحقيقها."
   },
   {
     "unit": 11,
@@ -1007,7 +1023,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Equipment maintenance and supplier evaluations are both\nprevention costs, as both are proactive measures to ensure\nthe ability of the production facility to continue to operate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبد مصنع لسلع استهلاكية عالية التقنية المصروفات المرتبطة بالجودة التالية خلال السنة الماضية:\nصيانة المعدات: $ 5,000\nتلف المنتجات: 10,000\nمطالبات المسؤولية القانونية: 50,000\nتقييم الموردين: 5,000\nالخردة: 20,000\nدعم العملاء: 50,000\nاختبار المنتجات النهائية: 25,000\nما إجمالي التكاليف المرتبطة بالوقاية؟",
+    "choicesAr": [
+      "$165,000",
+      "$35,000",
+      "$10,000",
+      "$5,000"
+    ],
+    "explanationAr": "تُعد صيانة المعدات وتقييم الموردين من تكاليف الوقاية؛ فكلاهما تدبير استباقي للمساعدة على ضمان استمرار قدرة المنشأة الإنتاجية على العمل."
   },
   {
     "unit": 11,
@@ -1024,7 +1048,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Benchmarking is a primary tool used in quality management. It\nis a means of helping organizations with productivity\nmanagement and business process analysis. Benchmarking\ninvolves analysis and measurement of key outputs against\nthose of the best organizations. This procedure also involves\nidentifying the underlying key actions and causes that\ncontribute to the performance difference. The benchmark\nneed not be a competitor or even a similar entity. Process\n(function) benchmarking studies operations of organizations\nwith similar processes regardless of industry. Thus, a\ncomparison to procedures against the check-in process for a\nmajor airline is an example of benchmarking.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقارن مصنع يسعى إلى تحسين عملية تجهيز المنتجات لإرسالها إجراءاته بإجراءات تسجيل المسافرين لدى شركة طيران كبرى. أي الأدوات التالية يستخدم؟",
+    "choicesAr": [
+      "إدارة الجودة الشاملة.",
+      "الرقابة الإحصائية على العمليات.",
+      "القيمة الاقتصادية المضافة.",
+      "المقارنة المرجعية."
+    ],
+    "explanationAr": "المقارنة المرجعية أداة رئيسية في إدارة الجودة تساعد المنشآت على إدارة الإنتاجية وتحليل عمليات الأعمال. وتتضمن مقارنة المخرجات الرئيسية بأداء المنشآت الأفضل، وتحديد الإجراءات والأسباب الأساسية لفروق الأداء. ولا يشترط أن تكون الجهة المرجعية منافسًا أو حتى منشأة مماثلة؛ إذ تدرس المقارنة المرجعية الوظيفية العمليات المتشابهة عبر قطاعات مختلفة. لذا فإن مقارنة إجراءات المصنع بإجراءات تسجيل المسافرين لدى شركة طيران مثال على المقارنة المرجعية."
   },
   {
     "unit": 11,
@@ -1041,7 +1073,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Internal failure costs occur when defective products are\ndetected before shipment. Examples are scrap, rework,\ntooling charges, downtime, redesign of products or processes,\nlost output, and lost learning opportunities. Thus, the net cost\nof scrap would be classified as an internal failure cost on the\nquality report.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُصنّف ضمن تكاليف الفشل الداخلي في تقرير تكاليف الجودة؟",
+    "choicesAr": [
+      "إهلاك معدات الفحص.",
+      "مرتجعات المبيعات والتخفيضات الممنوحة.",
+      "صافي تكلفة الخردة.",
+      "اختبار المنتج النهائي وفحصه."
+    ],
+    "explanationAr": "تنشأ تكاليف الفشل الداخلي عند اكتشاف المنتجات المعيبة قبل شحنها. ومن أمثلتها الخردة وإعادة التشغيل وتغيير العدد والأدوات والتوقف عن العمل وإعادة تصميم المنتجات أو العمليات وفقد الإنتاج وفرص التعلم. ومن ثم يُصنف صافي تكلفة الخردة ضمن تكاليف الفشل الداخلي في تقرير الجودة."
   },
   {
     "unit": 11,
@@ -1058,7 +1098,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Improvements should be ongoing, with involvement by\nmanagement and workers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة فيما يتعلق بالتحسين المستمر؟\nI. ينبغي تنفيذ التحسينات باستمرار حتى الوصول إلى الهدف.\nII. ينبغي أن يشارك كل من الإدارة والعاملين في التحسين المستمر.\nIII. ينبغي تقييم المعايير بانتظام مع استمرار التحسين دون توقف.\nIV. ينبغي أن تقتصر مبادرات التحسين المستمر أساسًا على العاملين.",
+    "choicesAr": [
+      "I وII فقط.",
+      "I وIV فقط.",
+      "II وIII فقط.",
+      "III وIV فقط."
+    ],
+    "explanationAr": "ينبغي أن تكون التحسينات مستمرة وأن يشارك فيها كل من الإدارة والعاملين."
   },
   {
     "unit": 11,
@@ -1075,7 +1123,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Comparing a unit’s results against industry benchmarks is\nusually considered as useful as comparing results to the\nbudget. The budget helps in comparing actual results to the\nexpectations of the company. Industry benchmarks help in\ncomparing actual results to industry performance. Comparison\nto industry is just as important as company expectations in\nevaluating a unit’s results.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن المقارنة المرجعية غير صحيحة؟",
+    "choicesAr": [
+      "قد توفر الموازنة معيارًا مرجعيًا يحفز الموظفين على تحقيق أهداف الشركة.",
+      "يمكن للشركة استخدام المعايير المرجعية لتقييم أداء الموظفين أو الوحدات بصورة مناسبة.",
+      "قد تشمل المقارنة المرجعية مقارنة إنجازات إحدى الوحدات بوحدات أخرى داخل الشركة.",
+      "عادةً ما تكون مقارنة نتائج الوحدة بمعايير القطاع أقل فائدة من مقارنتها بالموازنة."
+    ],
+    "explanationAr": "تُعد مقارنة نتائج الوحدة بمعايير القطاع مفيدة عادة بقدر مقارنتها بالموازنة. فالموازنة تساعد على مقارنة النتائج الفعلية بتوقعات الشركة، بينما تُظهر معايير القطاع أداءها بالمقارنة مع القطاع. ولكلا المقارنتين أهمية في تقييم أداء الوحدة."
   },
   {
     "unit": 11,
@@ -1092,7 +1148,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Internal failure costs occur when defective products are\ndetected before shipment. The internal failure costs include\nthe cost of abnormal spoilage, scrap, and rework. Thus, the\ntotal internal failure cost is $2,080 ($645 + $150 + $1,285).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجري شركة تحليلًا لتكاليف الجودة في إحدى منشآتها. وفيما يلي التكاليف التي جمعها محاسب المنشأة:\nالفحص: $1,500\nإصلاحات الضمان: 2,800\nاختبار المواد الجديدة: 400\nاختبار المنتج: 950\nالتلف: 645\nالخردة: 150\nالصيانة الوقائية للمعدات: 590\nمطالبات المسؤولية القانونية: 1,870\nإعادة التشغيل: 1,285\nما إجمالي تكاليف الفشل الداخلي؟",
+    "choicesAr": [
+      "$2,080",
+      "$2,785",
+      "$4,945",
+      "$5,955"
+    ],
+    "explanationAr": "تنشأ تكاليف الفشل الداخلي عندما تُكتشف المنتجات المعيبة قبل شحنها. وتشمل تكاليف التلف غير العادي والخردة وإعادة التشغيل. وعليه يكون إجمالي الفشل الداخلي $2,080، أي ($645 + $150 + $1,285)."
   },
   {
     "unit": 11,
@@ -1109,7 +1173,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Process reengineering and value chain analysis are similar\ndue to their focus on inherent features in an organization’s\nbusiness processes. Both rework an organization’s design to\neither improve customer service, reduce costs, or become\nmore competitive.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من منظور الرقابة على التكاليف، ما النهج الأكثر شبهًا بإعادة هندسة العمليات؟",
+    "choicesAr": [
+      "احتساب التكاليف على أساس الأنشطة.",
+      "موازنات كايزن.",
+      "تحليل الانحرافات.",
+      "تحليل سلسلة القيمة."
+    ],
+    "explanationAr": "تتشابه إعادة هندسة العمليات وتحليل سلسلة القيمة في التركيز على الخصائص المتأصلة في عمليات أعمال المنشأة. ويهدف كلاهما إلى إعادة تصميم العمل لتحسين خدمة العملاء أو خفض التكاليف أو تعزيز القدرة التنافسية."
   },
   {
     "unit": 11,
@@ -1126,7 +1198,15 @@
     ],
     "answerIndex": 3,
     "explanation": "According to the IMA, “benchmarking involves continuously\nevaluating the practices of best-in-class organizations and\nadapting company processes to incorporate the best of these\npractices.” It “analyzes and measures the key outputs of a\nbusiness process or function against the best and also\nidentifies underlying key actions and root causes that\ncontribute to the performance difference.” Benchmarking is an\nongoing process that entails quantitative and qualitative\nmeasurement of the difference between the company’s\nperformance of an activity and the performance by the best in\nthe world. The benchmark organization need not be a\ncompetitor.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أداة تحسين العمليات التي تقارن ممارسات الشركة بممارسات المنشآت الرائدة في فئتها؟",
+    "choicesAr": [
+      "تحليل سلسلة القيمة.",
+      "إدارة أداء المنشأة.",
+      "بطاقة الأداء المتوازن.",
+      "المقارنة المرجعية."
+    ],
+    "explanationAr": "وفقًا لمعهد المحاسبين الإداريين (IMA)، تتضمن المقارنة المرجعية التقييم المستمر لممارسات المنشآت الأفضل في فئتها وتكييف عمليات الشركة لتبني أفضل تلك الممارسات. وتقيس المخرجات الرئيسية لعملية أو وظيفة مقارنة بأفضل أداء، وتحدد الإجراءات الرئيسية والأسباب الجذرية لفروق الأداء. وهي عملية مستمرة لقياس الفروق الكمية والنوعية بين أداء نشاط الشركة وأفضل أداء في العالم. ولا يشترط أن تكون المنشأة المرجعية منافسًا."
   },
   {
     "unit": 11,
@@ -1143,7 +1223,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Nonconformance costs include costs of internal failure and\nexternal failure. Internal failure costs occur when defective\nproducts are detected before shipment. Examples include\nscrap, rework, tooling changes, downtime, and correcting\nproblems.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتعرض مصنع لتوقفات كبيرة في خط التجميع. ما نوع تكلفة الجودة التي تمثلها هذه التوقفات؟",
+    "choicesAr": [
+      "الوقاية.",
+      "الفشل الداخلي.",
+      "التقييم.",
+      "الفشل الخارجي."
+    ],
+    "explanationAr": "تشمل تكاليف عدم المطابقة تكاليف الفشل الداخلي والخارجي. وتنشأ تكاليف الفشل الداخلي عند اكتشاف المنتجات المعيبة قبل شحنها. ومن أمثلتها الخردة وإعادة التشغيل وتغيير العدد والأدوات والتوقف عن العمل وتصحيح المشكلات."
   },
   {
     "unit": 11,
@@ -1160,7 +1248,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Internal failure costs of quality occur when defective products\nare detected before shipment. Examples include scrap,\nrework, tooling changes, downtime, and correcting problems.\nMaterials waste and machine breakdowns result in internal\nfailure costs. The total is $5,166 ($1,750 materials waste +\n$3,416 machine breakdowns).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعد محاسب ملخص تقرير تكاليف الجودة عن آخر شهر تشغيل في الشركة:\nالفئة — المبلغ\nفاقد المواد: $1,750\nاختبار المنتج: 1,235\nمرتجعات المنتج: 2,050\nتعطل الآلات: 3,416\nما إجمالي تكاليف الفشل الداخلي للشهر؟",
+    "choicesAr": [
+      "$1,235",
+      "$1,750",
+      "$3,285",
+      "$5,166"
+    ],
+    "explanationAr": "تنشأ تكاليف الفشل الداخلي للجودة عند اكتشاف المنتجات المعيبة قبل شحنها، وتشمل الخردة وإعادة التشغيل وتغيير العدد والأدوات والتوقف وإصلاح المشكلات. ويمثل فاقد المواد وتعطل الآلات تكاليف فشل داخلي؛ لذا يكون الإجمالي $5,166، أي ($1,750 فاقد المواد + $3,416 تعطل الآلات)."
   },
   {
     "unit": 11,
@@ -1177,7 +1273,15 @@
     ],
     "answerIndex": 3,
     "explanation": "BPR involves process innovation and core process redesign.\nThus, it requires a complete rethinking of how business\nfunctions are performed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أطلق الرئيس التنفيذي مشروعًا لإعادة التفكير من جذوره في كيفية تنفيذ وظائف الأعمال لتقديم القيمة للعملاء. ومن المرجح أن يتضمن المشروع إعادة هيكلة جذرية للأعمال. ما نوع هذا التحليل؟",
+    "choicesAr": [
+      "مراجعة التكاليف على أساس الأنشطة.",
+      "التحسين المستمر.",
+      "هندسة القيمة.",
+      "إعادة هندسة عمليات الأعمال (BPR)."
+    ],
+    "explanationAr": "تنطوي إعادة هندسة عمليات الأعمال (BPR) على الابتكار في العمليات وإعادة تصميم العمليات الأساسية؛ لذلك تتطلب إعادة تفكير شاملة في كيفية تنفيذ وظائف الأعمال."
   },
   {
     "unit": 11,
@@ -1194,7 +1298,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Nonconformance costs include internal and external failure\ncosts. Examples of external failure costs are those incurred for\ncustomer service complaints, product return, warranty\nobligations, and environmental law violations. The total for the\nmonth is $19,050 ($9,050 warranty obligations + $10,000\nenvironmental law violation fine).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت المراقبة المالية ملخص تقرير تكاليف الجودة عن آخر شهر تشغيل في الشركة:\nالفئة — المبلغ\nتدريب الموظفين على الجودة: $ 2,750\nتوقف المعدات عن العمل: 1,500\nالتزامات الضمان: 9,050\nغرامة مخالفة الأنظمة البيئية: 10,000\nما إجمالي تكاليف الفشل الخارجي للشهر؟",
+    "choicesAr": [
+      "$9,050",
+      "$10,000",
+      "$10,550",
+      "$19,050"
+    ],
+    "explanationAr": "تشمل تكاليف عدم المطابقة الفشل الداخلي والخارجي. ومن أمثلة الفشل الخارجي تكاليف شكاوى خدمة العملاء ومرتجعات المنتجات والتزامات الضمان ومخالفات الأنظمة البيئية. ويبلغ الإجمالي للشهر $19,050، أي ($9,050 التزامات الضمان + $10,000 غرامة مخالفة الأنظمة البيئية)."
   },
   {
     "unit": 11,
@@ -1211,7 +1323,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Process analysis is a means of linking an entity’s internal\nprocesses with its overall strategies. It is a method of\nreviewing the procedures in place to achieve business goals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية تصف تحليل العمليات وصفًا صحيحًا؟",
+    "choicesAr": [
+      "طريقة لإحداث ابتكار جذري في كيفية أداء وظائف الأعمال وطريقة تنظيم الشركة.",
+      "جهد مستمر لتحسين العمليات تدريجيًا وجعلها أكثر فعالية وكفاءة.",
+      "طريقة لتحليل الخطوات التشغيلية اللازمة لإتمام العمل بهدف تحديد ما يؤدي أداء جيدًا وما يحتاج إلى تحسين.",
+      "تقييم منهجي لجميع جوانب سلسلة القيمة بهدف خفض التكاليف إلى أدنى حد دون التأثير سلبًا في رضا العملاء."
+    ],
+    "explanationAr": "تحليل العمليات وسيلة لربط العمليات الداخلية للمنشأة باستراتيجياتها العامة. وهو طريقة لمراجعة الإجراءات القائمة لتحقيق أهداف الأعمال."
   },
   {
     "unit": 11,
@@ -1228,7 +1348,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A bottleneck is the process that slows the entire production\nprocess. It often has limited capacity. After additional capacity\nis added, the bottleneck shifts to the next slowest process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شكّل الرئيس التنفيذي فريقًا لتحليل العمليات ضم موظفين من قسم المحاسبة وقسم العمليات. ووجد الفريق أن أبطأ عملية تُبطئ الإنتاج كله. ويعتزم التوصية بزيادة الطاقة الاستيعابية لهذه العملية. ما المصطلح الصحيح للعملية التي تُبطئ الإنتاج؟",
+    "choicesAr": [
+      "عملية غير مقيدة (Loose).",
+      "عملية مقيدة (Tight).",
+      "عملية دفعية (Batch).",
+      "عنق الزجاجة (Bottleneck)."
+    ],
+    "explanationAr": "عنق الزجاجة هو العملية التي تُبطئ عملية الإنتاج كلها، وغالبًا ما تكون طاقتها الاستيعابية محدودة. وبعد زيادة الطاقة في هذه المرحلة، ينتقل عنق الزجاجة إلى العملية التالية الأبطأ."
   },
   {
     "unit": 11,
@@ -1245,7 +1373,15 @@
     ],
     "answerIndex": 3,
     "explanation": "“Benchmarking involves continuously evaluating the practices\nof best-in-class organizations and adapting company\nprocesses to incorporate the best of these practices.” It\n“analyzes and measures the key outputs of a business\nprocess or function against the best and also identifies\nunderlying key actions and root causes that contribute to the\nperformance difference.” Benchmarking is an ongoing process\nthat entails quantitative and qualitative measurement of the\ndifference between the company’s performance of an activity\nand the performance by the best in the world. The benchmark\norganization need not be a competitor.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف المقارنة المرجعية وصفًا صحيحًا؟",
+    "choicesAr": [
+      "تحديد الأنشطة التي تضيف قيمة للعميل وتسهم في تكوين ميزة تنافسية.",
+      "إعادة تصور كيفية أداء وظائف الأعمال بهدف إعادة تنظيم المنشأة بصورة جذرية.",
+      "تقييم العمليات داخل المنشأة لتحديد ما يُبطئ الإنتاج منها.",
+      "تحديد استراتيجيات وتكتيكات وأساليب وعمليات الشركات الأكثر نجاحًا في القطاع."
+    ],
+    "explanationAr": "تتضمن المقارنة المرجعية التقييم المستمر لممارسات المنشآت الرائدة وتكييف عمليات الشركة لتبني أفضلها. وتقيس المخرجات الرئيسية للعملية أو الوظيفة مقابل الأفضل، وتحدد الإجراءات الأساسية والأسباب الجذرية لفروق الأداء. وهي عملية مستمرة لقياس الفروق الكمية والنوعية بين أداء نشاط الشركة وأفضل أداء عالميًا. ولا يشترط أن تكون المنشأة المرجعية منافسًا."
   },
   {
     "unit": 11,
@@ -1262,7 +1398,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Benchmarking involves evaluating the practices of best-in-\nclass organizations and adapting company processes to\ninclude the best of those practices. The benchmark\norganization need not be a competitor. It may be a different\nindustry or segment of the same company. The best\ncomparison is often with the leader in the same industry,\npreferably one of a comparable size.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شكّل الرئيس التنفيذي الجديد لشركة متعددة الجنسيات للسلع الاستهلاكية فريقًا للمقارنة المرجعية بهدف تحسين فعالية عمليات الأعمال الرئيسية. وتحقق الشركة ربحية محدودة، ويرى الرئيس التنفيذي أنها تستطيع تحسين كفاءتها وفعاليتها في تلبية احتياجات العملاء. يقع مقر الشركة في الولايات المتحدة ولها عمليات في أوروبا والشرق الأوسط وأفريقيا وآسيا، وتمثل آسيا أكبر أسواقها. أي جهة يُرجح أن تكون أفضل معيار للمقارنة؟",
+    "choicesAr": [
+      "الشركة الرائدة في قطاع الاتصالات.",
+      "منافس مماثل في الحجم ومستوى النجاح.",
+      "الشركة الرائدة في قطاع السلع الاستهلاكية.",
+      "عمليات قسم آسيا في الشركة."
+    ],
+    "explanationAr": "تتضمن المقارنة المرجعية تقييم ممارسات المنشآت الرائدة وتكييف عمليات الشركة لتبني أفضلها. ولا يشترط أن تكون الجهة المرجعية منافسًا؛ فقد تكون في قطاع مختلف أو قسمًا داخل الشركة نفسها. ومع ذلك، غالبًا ما تكون أفضل مقارنة مع الشركة الرائدة في القطاع نفسه، ويفضل أن تكون مماثلة في الحجم."
   },
   {
     "unit": 11,
@@ -1279,6 +1423,14 @@
     ],
     "answerIndex": 1,
     "explanation": "Nonconformance costs are costs of internal failure costs (a\nfinancial measure of internal performance) and external failure\ncosts (a financial measure of customer satisfaction).\nConformance costs are prevention and appraisal costs\n(financial measures of internal performance).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع المراقب المالي ملخص تقرير تكاليف الجودة مع مدير العمليات، ويشير إلى أن تكاليف عدم المطابقة تفوق تكاليف المطابقة بدرجة كبيرة. أي التكاليف التالية تُعد تكاليف عدم مطابقة؟",
+    "choicesAr": [
+      "تكاليف الوقاية وتكاليف الفشل الداخلي.",
+      "تكاليف الفشل الداخلي وتكاليف الفشل الخارجي.",
+      "تكاليف التقييم وتكاليف الفشل الخارجي.",
+      "تكاليف الوقاية وتكاليف التقييم."
+    ],
+    "explanationAr": "تتكون تكاليف عدم المطابقة من تكاليف الفشل الداخلي، وهي مقياس مالي للأداء الداخلي، وتكاليف الفشل الخارجي، وهي مقياس مالي لرضا العملاء. أما تكاليف المطابقة فهي تكاليف الوقاية والتقييم، وتمثل مؤشرات مالية للأداء الداخلي."
   }
 ]
