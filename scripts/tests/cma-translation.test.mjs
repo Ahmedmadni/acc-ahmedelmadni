@@ -167,9 +167,9 @@ test("CMA Unit 12 regression source translations keep all 23 original answer ind
   // as fully translated before layout and numeric context review.
   assert.deepEqual(records.filter(row=>row.section===1&&!row.stemAr)
     .map(row=>row.number),[8,9,13,14,28]);
-  // Sections 4 and 5 are still English-only; Section 3 has its own
-  // separate, explicit allowlist and answer-key integrity tests below.
-  assert.ok(records.filter(row=>row.section>=4).every(
+  // Section 5 remains English-only; Sections 3 and 4 have their own
+  // separate, explicit allowlists and answer-key integrity tests below.
+  assert.ok(records.filter(row=>row.section===5).every(
     row=>row.stemAr===undefined && row.choicesAr===undefined &&
       row.explanationAr===undefined));
 });
@@ -242,14 +242,15 @@ test("Learning-curve solved examples follow independently recomputed arithmetic"
 });
 
 
-test("CMA Unit 12 Section 3 has exactly 31 complete Arabic expected-value and sensitivity questions",()=>{
+test("CMA Unit 12 Section 3 has exactly 40 complete Arabic expected-value and sensitivity questions",()=>{
   const records=JSON.parse(readFileSync(
     new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
   ));
   const expected=new Map([
     [1,1],[2,2],[3,3],[4,3],[5,2],[6,1],[7,3],[9,1],
     [11,2],[12,1],[13,2],[14,0],[15,2],[16,2],[17,1],[18,1],
-    [19,3],[20,3],[21,0],[22,2],[33,0],[37,3],[42,0],[43,1],
+    [19,3],[20,3],[21,0],[22,2],[25,0],[26,1],[30,2],[31,1],
+    [33,0],[37,3],[38,2],[39,2],[40,2],[41,2],[42,0],[43,1],[44,0],
     [45,2],[46,0],[47,2],[48,0],[49,1],[50,0],[51,0],
   ]);
   const localized=records.filter(r=>r.section===3 &&
@@ -275,7 +276,7 @@ test("CMA Unit 12 Section 3 has exactly 31 complete Arabic expected-value and se
     assert.equal(row.stemAr,undefined,
       "An unverified source layout must remain English-first: Q"+n);
   }
-  assert.ok(records.filter(r=>r.section>=4).every(r=>
+  assert.ok(records.filter(r=>r.section===5).every(r=>
     r.stemAr===undefined&&r.choicesAr===undefined&&r.explanationAr===undefined));
 });
 
@@ -298,4 +299,59 @@ test("CMA Unit 12 expected-value examples are independently recalculated",()=>{
   assert.equal(weighted([[550000,.20],[475000,.35],[350000,.45]]),433750);
   assert.equal(weighted([[2000000,.15],[2500000,.45],[3500000,.30],[5000000,.10]]),2975000);
   assert.equal(weighted([[120000,.25],[170000,.4],[200000,.35]])*.8,134400);
+});
+
+
+test("CMA Unit 12 Section 4 strategy and BCG questions are 28/28 complete with unchanged keys",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
+  ));
+  const keys=[2,0,2,3,1,2,2,0,0,0,2,3,1,0,2,3,1,2,2,1,2,0,2,3,3,3,3,1];
+  const rows=records.filter(q=>q.section===4);
+  assert.equal(rows.length,28);
+  for(const row of rows){
+    assert.equal(row.answerIndex,keys[row.number-1],"Source answer changed Q"+row.number);
+    assert.equal(row.choices.length,4);
+    assert.equal(row.choicesAr?.length,4,"Incomplete Arabic choices Q"+row.number);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+    );
+    assert.equal(checked.valid,true,
+      "Numerical or structural translation mismatch §4 Q"+row.number+": "+checked.reason);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+  }
+  assert.deepEqual(rows.map(q=>q.number),Array.from({length:28},(_,i)=>i+1));
+  assert.ok(records.filter(q=>q.section===5).every(q=>
+    q.stemAr===undefined&&q.choicesAr===undefined&&q.explanationAr===undefined));
+});
+
+test("New CMA expected-value and operating profit calculations recompute independently",()=>{
+  const weighted=(items)=>items.reduce((sum,[value,prob])=>sum+value*prob,0);
+  assert.equal(weighted([[-4000,.2],[10000,.3],[30000,.3],[60000,.2]]),23200);
+  const planOne=weighted([[300000,.4],[240000,.6]]);
+  const planTwo=weighted([[370000,.4],[180000,.6]]);
+  assert.equal(planOne,264000);
+  assert.equal(planTwo,256000);
+  assert.equal(planOne-planTwo,8000);
+  const expectedUnits=weighted([[15000,.10],[30000,.35],[45000,.10],
+    [60000,.25],[75000,.20]]);
+  assert.equal(expectedUnits,46500);
+  assert.equal(expectedUnits*(5.20-3.20)-40000,53000);
+  assert.equal(Math.round(weighted([[-20,.1],[5,.2],[15,.4],[20,.2],[30,.1]])),12);
+  const weightedContribution=weighted([[600000,.2],[800000,.5],[1000000,.3]])*(100-60);
+  assert.equal(weightedContribution-25000000,7800000);
+  const avgAnimals=weighted([[12,1/12],[20,4/12],[25,3/12],[35,2/12],[40,2/12]]);
+  assert.equal(Math.round(avgAnimals*100)/100,26.42);
+  const staffNeeded=avgAnimals<=10?1:avgAnimals<=23?2:avgAnimals<=36?3:4;
+  assert.equal(staffNeeded,3);
+  const expectedBoothRent=weighted([[37.5*70*.2,.4],[37.5*40*.2,.6]]);
+  assert.equal(expectedBoothRent,390);
+  assert.equal(weighted([[-300000,.1],[0,.2],[100000,.5],[600000,.2]]),140000);
+  const locationA=weighted([[400000,.45],[325000,.55]]);
+  const locationB=weighted([[600000,.25],[250000,.75]]);
+  assert.equal(locationA,358750);
+  assert.equal(locationB,337500);
+  assert.equal(locationA-locationB,21250);
 });
