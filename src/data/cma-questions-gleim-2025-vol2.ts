@@ -44,6 +44,14 @@ const records: SourceRecord[] = [
 ];
 const topics = new Map(CMA_TOPICS.map((topic) => [topic.id, topic]));
 
+/** Source PDF page layout must be reviewed before trusting flattened tables.
+ * These records remain English-first and are not automatically translated.
+ */
+const pendingSourceLayouts = new Set([
+  "12.1.8", "12.1.9", "12.1.13", "12.1.14", "12.1.28",
+  "12.2.3", "12.2.4", "12.2.23",
+]);
+
 /** Source-language items retain their English text while Arabic translation is reviewed. */
 export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
   const topic = topics.get(item.topicId);
@@ -67,7 +75,7 @@ export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,
-    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed",
+    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`),
     sourceArabicStatus: hasArabic ? "draft" : undefined,
   };
 });
