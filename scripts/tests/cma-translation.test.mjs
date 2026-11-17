@@ -238,3 +238,62 @@ test("Learning-curve solved examples follow independently recomputed arithmetic"
   assert.equal(Math.round(4*(800*0.9**2)-800),1792);
   assert.equal(Math.round(4*((200/2)*0.9)),360);
 });
+
+
+test("CMA Unit 12 Section 3 has exactly 31 complete Arabic expected-value and sensitivity questions",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
+  ));
+  const expected=new Map([
+    [1,1],[2,2],[3,3],[4,3],[5,2],[6,1],[7,3],[9,1],
+    [11,2],[12,1],[13,2],[14,0],[15,2],[16,2],[17,1],[18,1],
+    [19,3],[20,3],[21,0],[22,2],[33,0],[37,3],[42,0],[43,1],
+    [45,2],[46,0],[47,2],[48,0],[49,1],[50,0],[51,0],
+  ]);
+  const localized=records.filter(r=>r.section===3 &&
+    (r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
+  assert.equal(localized.length,expected.size);
+  assert.deepEqual(localized.map(r=>r.number),[...expected.keys()]);
+  for(const row of localized){
+    assert.equal(row.answerIndex,expected.get(row.number),
+      "Original CMA source answer key changed: section 3 Q"+row.number);
+    assert.equal(row.choicesAr.length,4);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+    );
+    assert.equal(checked.valid,true,
+      "Invalid source numbers/choices in Arabic Unit 12 §3 Q"+row.number+": "+checked.reason);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+  }
+  assert.equal(records.filter(r=>r.section===3).length,51);
+  for(const n of [8,10,23,24,27,28,29,32,34,35,36]){
+    const row=records.find(r=>r.section===3&&r.number===n);
+    assert.equal(row.stemAr,undefined,
+      "An unverified source layout must remain English-first: Q"+n);
+  }
+  assert.ok(records.filter(r=>r.section>=4).every(r=>
+    r.stemAr===undefined&&r.choicesAr===undefined&&r.explanationAr===undefined));
+});
+
+test("CMA Unit 12 expected-value examples are independently recalculated",()=>{
+  const weighted=(items)=>items.reduce((sum,[payoff,p])=>sum+payoff*p,0);
+  assert.equal(weighted([[60000,.25],[85000,.40],[100000,.35]])*.8,67200);
+  assert.equal(Math.round((.45+.25)*100),70);
+  assert.equal(weighted([[100,.15],[300,.45],[500,.25],[700,.15]]),380);
+  assert.equal(weighted([[200000,.5],[100000,.4],[550000,.1]]),195000);
+  assert.equal(Math.round(12*((19/12)*800-1000)),3200);
+  assert.equal(weighted([[2000,.10],[3000,.15],[4000,.20],[5000,.35],[6000,.20]]),4400);
+  assert.equal(3000-4000*.3,1800);
+  assert.equal(4000-4000*.3,2800);
+  const demand=weighted([[200000,.4],[300000,.3],[400000,.2],[500000,.1]]);
+  assert.equal(demand,300000);
+  assert.equal(demand*.4+50000,170000);
+  assert.equal(demand*.6+20000,200000);
+  assert.equal(demand*.2+120000,180000);
+  assert.equal(weighted([[180,.1],[200,.4],[240,.3],[250,.2]]),220);
+  assert.equal(weighted([[550000,.20],[475000,.35],[350000,.45]]),433750);
+  assert.equal(weighted([[2000000,.15],[2500000,.45],[3500000,.30],[5000000,.10]]),2975000);
+  assert.equal(weighted([[120000,.25],[170000,.4],[200000,.35]])*.8,134400);
+});
