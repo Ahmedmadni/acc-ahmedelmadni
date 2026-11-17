@@ -585,7 +585,8 @@ const staticArabicVol2 = new Set([
   ...[1,2,3,4,5,6,7,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27]
     .map(n=>"12.1."+n),
   ...[1,2,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,33,34].map(n=>"12.2."+n),
-  ...[1,2,3,4,5,6,7,9,11,12,13,14,15,16,17,18,19,20,21,22,33,37,42,43,45,46,47,48,49,50,51].map(n=>"12.3."+n),
+  ...[1,2,3,4,5,6,7,9,11,12,13,14,15,16,17,18,19,20,21,22,25,26,30,31,33,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51].map(n=>"12.3."+n),
+  ...Array.from({length:28},(_,i)=>"12.4."+(i+1)),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -621,7 +622,7 @@ for (const [key, original] of vol2Records) {
   }
 }
 console.log("Verified all 58 Unit 11 questions have built-in Arabic, with the remaining Volume 2 items marked as English-first.");
-console.log("Verified 23 Arabic Unit 12 §1, 31 Arabic §2, and 31 Arabic §3 source drafts; complex source layouts flagged for PDF review.");
+console.log("Verified Unit 12 Arabic source drafts: 23/28 in §1, 31/34 in §2, 40/51 in §3, and 28/28 in §4; flagged layouts remain English-first.");
 for (const key of [
   "12.1.8", "12.1.9", "12.1.13", "12.1.14", "12.1.28",
   "12.2.3", "12.2.4", "12.2.23",
