@@ -2170,7 +2170,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected value computation can be applied to rates of return\nas well as to dollar amounts.\nWeighted\nExpected Expected\nProbability      Return     Return\n0.1               –20%    –2%\n0.2                 5%     1%\n0.4                15%     6%\n0.2                20%     4%\n0.1                30%     3%\n12%",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "للسهم X التوزيع الاحتمالي التالي لعوائده المستقبلية المتوقعة:\nالاحتمال — العائد المتوقع\n.1 — –20%\n.2 — 5%\n.4 — 15%\n.2 — 20%\n.1 — 30%\nما معدل العائد المتوقع للسهم X؟",
+    "choicesAr": [
+      "10%",
+      "12%",
+      "16%",
+      "19%"
+    ],
+    "explanationAr": "يمكن تطبيق حساب القيمة المتوقعة على معدلات العائد كما على المبالغ النقدية:\nالاحتمال — العائد المتوقع — العائد المرجح\n0.1 — –20% — –2%\n0.2 — 5% — 1%\n0.4 — 15% — 6%\n0.2 — 20% — 4%\n0.1 — 30% — 3%\n12%"
   },
   {
     "unit": 12,
@@ -2322,7 +2330,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Using expected value analysis, the average number of\nanimals is weighted based on the probability of that number of\nanimals occurring in the following month. The expected value\nfor the following month is 26.42 animals {[(12 animals ×\n1 weekend) + (20 animals × 4 weekends) + (25 animals ×\n3 weekends) + (35 animals × 2 weekends) + (40 animals ×\n2 weekends)] ÷ 12 total weekends}. Assuming 26.42 animals,\nthree members of staff should be scheduled for the clinic over\nthe weekend in the upcoming month.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحدد عيادة بيطرية عدد موظفي عطلات نهاية الأسبوع وفق عدد الحيوانات المقيمة لديها. ويتوفر لديها أربعة موظفين للعمل في تلك العطلات. وبحسب الأنظمة المحلية، يلزم موظف واحد حتى 10 حيوانات، وموظفان عند 11-23 حيوانًا، وثلاثة موظفين عند 24-36 حيوانًا، وجميع الموظفين الأربعة عند 37-45 حيوانًا. وسجلت خلال عطلات نهاية الأسبوع الـ12 الماضية:\nمتوسط الحيوانات — عدد عطلات نهاية الأسبوع\n12 — 1\n20 — 4\n25 — 3\n35 — 2\n40 — 2\nباستخدام تحليل القيمة المتوقعة، كم موظفًا ينبغي جدولته في كل عطلة نهاية أسبوع خلال الشهر المقبل؟",
+    "choicesAr": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "explanationAr": "يُرجح متوسط عدد الحيوانات باحتمال تكراره في الشهر المقبل. وتبلغ القيمة المتوقعة 26.42 حيوانًا وفق {[(12 حيوانًا × 1 عطلة) + (20 حيوانًا × 4 عطلات) + (25 حيوانًا × 3 عطلات) + (35 حيوانًا × 2 عطلتين) + (40 حيوانًا × 2 عطلتين)] ÷ 12 عطلة إجمالًا}. ولخدمة 26.42 حيوانًا ينبغي جدولة ثلاثة موظفين خلال عطلات نهاية الأسبوع بالشهر المقبل."
   },
   {
     "unit": 12,
@@ -2356,7 +2372,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The expected value is calculated by multiplying the probability\nof each outcome by its payoff and summing the products.\nThus, the expected value of net cash flows is $140,000 (10%\n× –$300,000 + 20% × $0 + 50% × $100,000 + 20% ×\n$600,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع مدير استثمارًا محتملًا تحيط بنتيجته المالية النهائية درجة كبيرة من عدم التأكد. وقدّر الاحتمالات التالية لمستويات صافي التدفقات النقدية:\nاحتمال النتيجة — صافي التدفقات النقدية\n10% — $(300,000)\n20% — 0\n50% — 100,000\n20% — 600,000\nما القيمة المتوقعة لصافي التدفقات النقدية المناسبة لتقييم الاستثمار؟",
+    "choicesAr": [
+      "$100,000",
+      "$137,000",
+      "$140,000",
+      "$400,000"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة بضرب احتمال كل نتيجة في عائدها ثم جمع النواتج؛ ولذلك تبلغ القيمة المتوقعة لصافي التدفقات النقدية $140,000 (10% × –$300,000 + 20% × $0 + 50% × $100,000 + 20% × $600,000)."
   },
   {
     "unit": 12,
@@ -2423,7 +2447,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The expected value for Location A can be derived by calculating\nthe 45% probability of generating $400,000 and adding that\namount to the 55% probability of generating $325,000, i.e.,\n(45% × $400,000) + (55% × $325,000) = $358,750 of expected\ncash flow. The expected value for Location B can be derived by\ncalculating the 25% probability of generating $600,000 and\nadding that amount to the 75% probability of generating\n$250,000, i.e., (25% × $600,000) + (75% × $250,000) =\n$337,500 of expected cash flow. Thus, Location A’s cash flow\nof $358,750 is $21,250 greater than Location B’s cash flow of\n$337,500.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة ملابس موقعين لافتتاح متجر جديد. وتشير أبحاثها إلى أن الموقع A لديه احتمال 45% لتحقيق تدفقات نقدية قدرها $400,000 واحتمال 55% لتحقيق $325,000، بينما لدى الموقع B احتمال 25% لتحقيق $600,000 واحتمال 75% لتحقيق $250,000. بناءً على القيمة المتوقعة لكل موقع، ينبغي اختيار:",
+    "choicesAr": [
+      "الموقع A لأن قيمته المتوقعة أعلى من B بمقدار $21,250.",
+      "الموقع A لأن قيمته المتوقعة أعلى من B بمقدار $75,000.",
+      "الموقع B لأن قيمته المتوقعة أعلى من A بمقدار $125,000.",
+      "الموقع B لأن قيمته المتوقعة أعلى من A بمقدار $146,250."
+    ],
+    "explanationAr": "يمكن حساب القيمة المتوقعة للموقع A بضرب احتمال 45% في $400,000 وإضافة احتمال 55% مضروبًا في $325,000: (45% × $400,000) + (55% × $325,000) = $358,750 تدفقات نقدية متوقعة. وبالنسبة للموقع B، يُضرب احتمال 25% في $600,000 ويضاف احتمال 75% مضروبًا في $250,000: (25% × $600,000) + (75% × $250,000) = $337,500 تدفقات نقدية متوقعة. وبالتالي فإن قيمة الموقع A البالغة $358,750 أعلى بمقدار $21,250 من قيمة الموقع B البالغة $337,500."
   },
   {
     "unit": 12,
