@@ -1033,7 +1033,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The underlying assumption of learning curve analysis is that\nworkers gain productivity at a predictable rate as they gain\nexperience with a new process. A common assumption is that\nthe number of hours required for each doubling of output is\n80% of the hours required for the previous doubling. The\neffects of Aerosub’s projected learning curve on this product\ncan be calculated as follows:\nCumulative           Cumulative\nUnits               Average\nBatch      Produced            Labor Hours\n1            1         10,000\n2            2          8,000 (10,000 × 80%)\n3            4          6,400 (8,000 × 80%)\n4            8          5,120 (6,400 × 80%)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة Aerosub, Inc. منتجًا جديدًا لمركبات الفضاء يتطلب إنتاج جزء معقد يحتاج إلى مستوى عالٍ من المهارة التقنية. وترى الإدارة أن فريقها الفني يمكنه التعلم وتحسين الأداء مع الاعتياد على العملية الإنتاجية. تتطلب الوحدة الأولى 10,000 ساعة عمل مباشر، وتتوقع الإدارة منحنى تعلم بنسبة 80% وإنتاج ثماني وحدات إجمالًا. ما متوسط ساعات العمل المباشر التراكمي للوحدة بعد إكمال الوحدة الثامنة؟",
+    "choicesAr": [
+      "5,120 ساعة.",
+      "6,400 ساعة.",
+      "8,000 ساعة.",
+      "10,000 ساعة."
+    ],
+    "explanationAr": "يفترض تحليل منحنى التعلم زيادة إنتاجية العاملين بمعدل يمكن توقعه كلما اكتسبوا الخبرة بعملية جديدة. ومن الافتراضات الشائعة أن ساعات العمل اللازمة مع كل تضاعف للإنتاج تصبح 80% من ساعات المرحلة السابقة. ويمكن حساب أثر منحنى التعلم المتوقع لمنتج Aerosub كما يلي:\nالوحدات التراكمية — متوسط ساعات العمل التراكمي\nالدفعة 1 — 1 — 10,000\nالدفعة 2 — 2 — 8,000 (10,000 × 80%)\nالدفعة 3 — 4 — 6,400 (8,000 × 80%)\nالدفعة 4 — 8 — 5,120 (6,400 × 80%)"
   },
   {
     "unit": 12,
@@ -1050,7 +1058,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The underlying assumption of learning curve analysis is that\nworkers gain productivity at a predictable rate as they gain\nexperience with a new process. A common assumption is that\nthe number of hours required for each doubling of output will\nbe 80% of the hours required for the previous doubling. The\neffects of Aerosub’s projected learning curve on this product\ncan be calculated as follows:\nCumulative      Cumulative            Cumulative\nUnits         Average                Total\nBatch Produced         Labor Hours          Labor Hours\n1         1      10,000                      10,000\n2         2       8,000 (10,000 × 80%)       16,000\n3         4       6,400 (8,000 × 80%)        25,600\n4         8       5,120 (6,400 × 80%)        40,960",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة Aerosub, Inc. منتجًا جديدًا لمركبات الفضاء يتضمن جزءًا معقدًا يحتاج إلى مستوى عالٍ من المهارة التقنية. وتعتقد الإدارة أن فريقها الفني قادر على التحسن مع اكتساب الخبرة بعملية الإنتاج. تتطلب الوحدة الأولى 10,000 ساعة عمل مباشر، وتتوقع الإدارة منحنى تعلم بنسبة 80%، وتريد إنتاج ثماني وحدات. بعد إنتاج الوحدة الثامنة، كم يبلغ إجمالي ساعات العمل المباشر التراكمي؟",
+    "choicesAr": [
+      "29,520 ساعة.",
+      "40,960 ساعة.",
+      "64,000 ساعة.",
+      "80,000 ساعة."
+    ],
+    "explanationAr": "يفترض تحليل منحنى التعلم ارتفاع الإنتاجية بمعدل يمكن توقعه مع اكتساب الخبرة بعملية جديدة. ومن افتراضاته أن ساعات العمل اللازمة مع كل تضاعف في الإنتاج تبلغ 80% من ساعات المرحلة السابقة. ويُحسب أثر منحنى التعلم لمنتج Aerosub كما يلي:\nالدفعة — الوحدات التراكمية — متوسط ساعات العمل — مجموع ساعات العمل التراكمية\n1 — 1 — 10,000 — 10,000\n2 — 2 — 8,000 (10,000 × 80%) — 16,000\n3 — 4 — 6,400 (8,000 × 80%) — 25,600\n4 — 8 — 5,120 (6,400 × 80%) — 40,960"
   },
   {
     "unit": 12,
@@ -1067,7 +1083,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cumulative total hours spent on the units can be\ncalculated as follows:\nCumulative        Cumulative         Cumulative\nUnits           Average              Total\nBatch Produced           Labor Hours        Labor Hours\n1         1       10,000                     10,000\n2         2         8,000 (10,000 × 80%)     16,000\n3         4         6,400 (8,000 × 80%)      25,600\n4         8         5,120 (6,400 × 80%)      40,960\nSince it took a total of 40,960 hours to complete all eight units\nand 10,000 to complete the first one, units 2 through 8 took\n30,960 hours (40,960 – 10,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة Aerosub, Inc. منتجًا جديدًا لمركبات الفضاء يتضمن جزءًا معقدًا يتطلب مهارات تقنية عالية. وترى الإدارة أن الفريق الفني سيطور أداءه مع الاعتياد على عملية الإنتاج. تحتاج الوحدة الأولى إلى 10,000 ساعة عمل مباشر، وتفترض الشركة منحنى تعلم بنسبة 80% وتستهدف إنتاج ثماني وحدات. بعد إنتاج الوحدة الأولى، ما إجمالي ساعات العمل المباشر المتوقع لإنتاج الوحدات السبع الإضافية؟",
+    "choicesAr": [
+      "30,960 ساعة.",
+      "40,960 ساعة.",
+      "56,000 ساعة.",
+      "70,000 ساعة."
+    ],
+    "explanationAr": "يمكن حساب إجمالي ساعات العمل التراكمية للوحدات كما يلي:\nالدفعة — الوحدات التراكمية — متوسط ساعات العمل — مجموع ساعات العمل التراكمية\n1 — 1 — 10,000 — 10,000\n2 — 2 — 8,000 (10,000 × 80%) — 16,000\n3 — 4 — 6,400 (8,000 × 80%) — 25,600\n4 — 8 — 5,120 (6,400 × 80%) — 40,960\nإذا بلغ الوقت لإنتاج الوحدات الثماني 40,960 ساعة، بينما تطلبت الوحدة الأولى 10,000 ساعة، فإن إنتاج الوحدات من 2 إلى 8 يستغرق 30,960 ساعة (40,960 – 10,000)."
   },
   {
     "unit": 12,
