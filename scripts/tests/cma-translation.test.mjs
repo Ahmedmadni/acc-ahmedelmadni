@@ -229,12 +229,12 @@ test("Learning-curve solved examples follow independently recomputed arithmetic"
   assert.equal(Math.round(400*72*0.6),17280);
   assert.equal(Math.round(320*cumulative(120/80,0.8,2)*10)/10-120,187.2);
   assert.equal(Math.round(cumulative(10,0.9,3)*100)/100,7.29);
-  assert.equal(cumulative(10000,0.8,3),5120);
-  assert.equal(8*cumulative(10000,0.8,3),40960);
-  assert.equal(8*cumulative(10000,0.8,3)-10000,30960);
+  assert.equal(Math.round(cumulative(10000,0.8,3)),5120);
+  assert.equal(Math.round(8*cumulative(10000,0.8,3)),40960);
+  assert.equal(Math.round(8*cumulative(10000,0.8,3)-10000),30960);
   assert.equal(Math.round(cumulative(20000,0.7,3)),6860);
   assert.equal(8*Math.round(cumulative(20000,0.7,3)),54880);
   assert.equal(8*Math.round(cumulative(20000,0.7,3))-20000,34880);
-  assert.equal(4*(800*0.9**2)-800,1792);
-  assert.equal(4*((200/2)*0.9),360);
+  assert.equal(Math.round(4*(800*0.9**2)-800),1792);
+  assert.equal(Math.round(4*((200/2)*0.9)),360);
 });
