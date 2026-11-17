@@ -1033,7 +1033,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The underlying assumption of learning curve analysis is that\nworkers gain productivity at a predictable rate as they gain\nexperience with a new process. A common assumption is that\nthe number of hours required for each doubling of output is\n80% of the hours required for the previous doubling. The\neffects of Aerosub’s projected learning curve on this product\ncan be calculated as follows:\nCumulative           Cumulative\nUnits               Average\nBatch      Produced            Labor Hours\n1            1         10,000\n2            2          8,000 (10,000 × 80%)\n3            4          6,400 (8,000 × 80%)\n4            8          5,120 (6,400 × 80%)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة Aerosub, Inc. منتجًا جديدًا لمركبات الفضاء يتطلب إنتاج جزء معقد يحتاج إلى مستوى عالٍ من المهارة التقنية. وترى الإدارة أن فريقها الفني يمكنه التعلم وتحسين الأداء مع الاعتياد على العملية الإنتاجية. تتطلب الوحدة الأولى 10,000 ساعة عمل مباشر، وتتوقع الإدارة منحنى تعلم بنسبة 80% وإنتاج ثماني وحدات إجمالًا. ما متوسط ساعات العمل المباشر التراكمي للوحدة بعد إكمال الوحدة الثامنة؟",
+    "choicesAr": [
+      "5,120 ساعة.",
+      "6,400 ساعة.",
+      "8,000 ساعة.",
+      "10,000 ساعة."
+    ],
+    "explanationAr": "يفترض تحليل منحنى التعلم زيادة إنتاجية العاملين بمعدل يمكن توقعه كلما اكتسبوا الخبرة بعملية جديدة. ومن الافتراضات الشائعة أن ساعات العمل اللازمة مع كل تضاعف للإنتاج تصبح 80% من ساعات المرحلة السابقة. ويمكن حساب أثر منحنى التعلم المتوقع لمنتج Aerosub كما يلي:\nالوحدات التراكمية — متوسط ساعات العمل التراكمي\nالدفعة 1 — 1 — 10,000\nالدفعة 2 — 2 — 8,000 (10,000 × 80%)\nالدفعة 3 — 4 — 6,400 (8,000 × 80%)\nالدفعة 4 — 8 — 5,120 (6,400 × 80%)"
   },
   {
     "unit": 12,
@@ -1050,7 +1058,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The underlying assumption of learning curve analysis is that\nworkers gain productivity at a predictable rate as they gain\nexperience with a new process. A common assumption is that\nthe number of hours required for each doubling of output will\nbe 80% of the hours required for the previous doubling. The\neffects of Aerosub’s projected learning curve on this product\ncan be calculated as follows:\nCumulative      Cumulative            Cumulative\nUnits         Average                Total\nBatch Produced         Labor Hours          Labor Hours\n1         1      10,000                      10,000\n2         2       8,000 (10,000 × 80%)       16,000\n3         4       6,400 (8,000 × 80%)        25,600\n4         8       5,120 (6,400 × 80%)        40,960",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة Aerosub, Inc. منتجًا جديدًا لمركبات الفضاء يتضمن جزءًا معقدًا يحتاج إلى مستوى عالٍ من المهارة التقنية. وتعتقد الإدارة أن فريقها الفني قادر على التحسن مع اكتساب الخبرة بعملية الإنتاج. تتطلب الوحدة الأولى 10,000 ساعة عمل مباشر، وتتوقع الإدارة منحنى تعلم بنسبة 80%، وتريد إنتاج ثماني وحدات. بعد إنتاج الوحدة الثامنة، كم يبلغ إجمالي ساعات العمل المباشر التراكمي؟",
+    "choicesAr": [
+      "29,520 ساعة.",
+      "40,960 ساعة.",
+      "64,000 ساعة.",
+      "80,000 ساعة."
+    ],
+    "explanationAr": "يفترض تحليل منحنى التعلم ارتفاع الإنتاجية بمعدل يمكن توقعه مع اكتساب الخبرة بعملية جديدة. ومن افتراضاته أن ساعات العمل اللازمة مع كل تضاعف في الإنتاج تبلغ 80% من ساعات المرحلة السابقة. ويُحسب أثر منحنى التعلم لمنتج Aerosub كما يلي:\nالدفعة — الوحدات التراكمية — متوسط ساعات العمل — مجموع ساعات العمل التراكمية\n1 — 1 — 10,000 — 10,000\n2 — 2 — 8,000 (10,000 × 80%) — 16,000\n3 — 4 — 6,400 (8,000 × 80%) — 25,600\n4 — 8 — 5,120 (6,400 × 80%) — 40,960"
   },
   {
     "unit": 12,
@@ -1067,7 +1083,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cumulative total hours spent on the units can be\ncalculated as follows:\nCumulative        Cumulative         Cumulative\nUnits           Average              Total\nBatch Produced           Labor Hours        Labor Hours\n1         1       10,000                     10,000\n2         2         8,000 (10,000 × 80%)     16,000\n3         4         6,400 (8,000 × 80%)      25,600\n4         8         5,120 (6,400 × 80%)      40,960\nSince it took a total of 40,960 hours to complete all eight units\nand 10,000 to complete the first one, units 2 through 8 took\n30,960 hours (40,960 – 10,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة Aerosub, Inc. منتجًا جديدًا لمركبات الفضاء يتضمن جزءًا معقدًا يتطلب مهارات تقنية عالية. وترى الإدارة أن الفريق الفني سيطور أداءه مع الاعتياد على عملية الإنتاج. تحتاج الوحدة الأولى إلى 10,000 ساعة عمل مباشر، وتفترض الشركة منحنى تعلم بنسبة 80% وتستهدف إنتاج ثماني وحدات. بعد إنتاج الوحدة الأولى، ما إجمالي ساعات العمل المباشر المتوقع لإنتاج الوحدات السبع الإضافية؟",
+    "choicesAr": [
+      "30,960 ساعة.",
+      "40,960 ساعة.",
+      "56,000 ساعة.",
+      "70,000 ساعة."
+    ],
+    "explanationAr": "يمكن حساب إجمالي ساعات العمل التراكمية للوحدات كما يلي:\nالدفعة — الوحدات التراكمية — متوسط ساعات العمل — مجموع ساعات العمل التراكمية\n1 — 1 — 10,000 — 10,000\n2 — 2 — 8,000 (10,000 × 80%) — 16,000\n3 — 4 — 6,400 (8,000 × 80%) — 25,600\n4 — 8 — 5,120 (6,400 × 80%) — 40,960\nإذا بلغ الوقت لإنتاج الوحدات الثماني 40,960 ساعة، بينما تطلبت الوحدة الأولى 10,000 ساعة، فإن إنتاج الوحدات من 2 إلى 8 يستغرق 30,960 ساعة (40,960 – 10,000)."
   },
   {
     "unit": 12,
@@ -1084,7 +1108,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nFor this company, a total of 8,000 hours was spent to\ncomplete two lots of product. The cumulative average spent\non the two lots was therefore 4,000 hours per lot (8,000 ÷ 2).\nThis cumulative average of 4,000 is 80% of the 5,000 hours\nthat were spent on the first lot. The learning curve is therefore\n80%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تسعى شركة صناعية لتقديم عرض سعر لإنتاج 20 وحدة من منتج سبق أن أنتجت منه دفعتين من 10 وحدات لكل منهما. ويرى مدير الإنتاج أن التعلم الذي ظهر في الدفعتين سيستمر خلال الدفعتين التاليتين على الأقل. احتاجت الدفعة الأولى إلى:\n• 5,000 ساعة عمل مباشر لأول 10 وحدات\n• 3,000 ساعة عمل مباشر إضافية للدفعة الثانية من 10 وحدات\nما معدل منحنى التعلم الذي حققته الشركة في الدفعتين؟",
+    "choicesAr": [
+      "40.0%",
+      "60.0%",
+      "62.5%",
+      "80.0%"
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم لتقدير التحسن في الإنتاجية الناتج عن اكتساب العاملين الخبرة، ويفترض إمكانية توقع هذا التحسن بمعدل محدد. استغرق إنتاج الدفعتين 8,000 ساعة إجمالًا، أي بمتوسط تراكمي قدره 4,000 ساعة لكل دفعة (8,000 ÷ 2). ويشكل هذا المتوسط البالغ 4,000 نسبة 80% من 5,000 ساعة استغرقتها الدفعة الأولى؛ ولذلك يبلغ منحنى التعلم 80%."
   },
   {
     "unit": 12,
@@ -1101,7 +1133,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nIn this situation, the company is assuming that the total costs\nrequired for each doubling of output will be 70% of the costs\nrequired for the previous doubling. The effects of Proper\nPropeller’s projected learning curve can be calculated as\nfollows:\nCumulative         Cumulative\nUnits            Average\nBatch Produced                Cost\n1          1       $20,000\n2          2       $14,000 ($20,000 × 70%)\n3          4       $ 9,800 ($14,000 × 70%)\n4          8       $ 6,860 ($9,800 × 70%)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط Proper Propeller, Inc. لصنع مروحة جديدة عالية التقنية للطائرات، وتتوقع انخفاض وقت العمل مع زيادة الخبرة. وتفترض منحنى تعلم تراكميًا بنسبة 70%، وقدرت تكاليف التصنيع:\nالوحدات التراكمية — متوسط تكلفة الوحدة — إجمالي التكلفة\n1 — $20,000 — $20,000\n2 — 14,000 — 28,000\nإذا أنتجت الشركة ثماني وحدات، فما متوسط تكلفة التصنيع للوحدة؟",
+    "choicesAr": [
+      "$1,647",
+      "$6,860",
+      "$9,800",
+      "$14,000"
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم للتنبؤ بمكاسب الإنتاجية مع ازدياد خبرة العاملين. ويفترض أن التكاليف المطلوبة عند كل تضاعف للإنتاج تصبح 70% من تكاليف التضاعف السابق. ويكون حساب منحنى التعلم كما يلي:\nالدفعة — الوحدات التراكمية — متوسط التكلفة\n1 — 1 — $20,000\n2 — 2 — $14,000 ($20,000 × 70%)\n3 — 4 — $ 9,800 ($14,000 × 70%)\n4 — 8 — $ 6,860 ($9,800 × 70%)"
   },
   {
     "unit": 12,
@@ -1118,7 +1158,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience. The underlying assumption of\nlearning curve analysis is that workers gain productivity at a\npredictable rate as they gain experience with a new process.\nIn this situation, the company is assuming that the total costs\nrequired for each doubling of output will be 70% of the costs\nrequired for the previous doubling. The effects of Proper\nPropeller’s projected learning curve can be calculated as\nfollows:\nCumulative        Cumulative          Cumulative\nUnits           Average               Total\nBatch Produced               Cost                Cost\n1          1      $20,000                  $20,000\n2           2   $14,000 ($20,000 × 70%)      28,000\n3           4    $9,800 ($14,000 × 70%)      39,200\n4           8    $6,860 ($9,800 × 70%)       54,880",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط Proper Propeller, Inc. لصنع مروحة جديدة عالية التقنية للطائرات، وتتوقع انخفاض وقت العمل مع زيادة الخبرة. وتفترض منحنى تعلم تراكميًا بنسبة 70%، وقدرت تكاليف التصنيع:\nالوحدات التراكمية — متوسط تكلفة الوحدة — إجمالي التكلفة\n1 — $20,000 — $20,000\n2 — 14,000 — 28,000\nإذا أنتجت الشركة ثماني وحدات، فما إجمالي تكلفة التصنيع؟",
+    "choicesAr": [
+      "$50,660",
+      "$54,880",
+      "$62,643",
+      "$112,000"
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم لتوقع مكاسب الإنتاجية مع الخبرة، ويفترض تحسن الأداء بمعدل يمكن تقديره. وتفترض الشركة أن التكاليف عند كل تضاعف للإنتاج تصبح 70% من تكاليف المرحلة السابقة. ويمكن حسابها:\nالدفعة — الوحدات التراكمية — متوسط التكلفة — مجموع التكلفة التراكمي\n1 — 1 — $20,000 — $20,000\n2 — 2 — $14,000 ($20,000 × 70%) — 28,000\n3 — 4 — $9,800 ($14,000 × 70%) — 39,200\n4 — 8 — $6,860 ($9,800 × 70%) — 54,880"
   },
   {
     "unit": 12,
@@ -1135,7 +1183,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The effects of Proper Propeller’s projected learning curve can\nbe calculated as follows:\nCumulative         Cumulative          Cumulative\nUnits           Average                Total\nBatch Produced              Cost                 Cost\n1         1      $20,000                    $20,000\n2         2      $14,000 ($20,000 × 70%) 28,000\n3         4       $9,800 ($14,000 × 70%) 39,200\n4         8       $6,860 ($9,800 × 70%) 54,880\nSince eight propellers require $54,880 and the first one off the\nassembly line cost $20,000, the cost of units 2 through 8 will\nbe $34,880 ($54,880 – $20,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط Proper Propeller, Inc. لصنع مروحة جديدة عالية التقنية للطائرات، وتتوقع انخفاض وقت العمل مع زيادة الخبرة. وتفترض منحنى تعلم تراكميًا بنسبة 70%، وقدرت تكاليف التصنيع:\nالوحدات التراكمية — متوسط تكلفة الوحدة — إجمالي التكلفة\n1 — $20,000 — $20,000\n2 — 14,000 — 28,000\nبعد إنتاج المروحة الأولى، ما التكلفة المقدرة لطلب سبع مراوح إضافية؟",
+    "choicesAr": [
+      "$34,880",
+      "$54,880",
+      "$92,000",
+      "$98,000"
+    ],
+    "explanationAr": "يُحسب أثر منحنى التعلم المتوقع للشركة كما يلي:\nالدفعة — الوحدات التراكمية — متوسط التكلفة — مجموع التكلفة التراكمي\n1 — 1 — $20,000 — $20,000\n2 — 2 — $14,000 ($20,000 × 70%) — 28,000\n3 — 4 — $9,800 ($14,000 × 70%) — 39,200\n4 — 8 — $6,860 ($9,800 × 70%) — 54,880\nولأن تكلفة الثماني مراوح $54,880 وتكلفة الأولى $20,000، فإن تكلفة الوحدات من 2 إلى 8 تبلغ $34,880 ($54,880 – $20,000)."
   },
   {
     "unit": 12,
@@ -1169,7 +1225,15 @@
     ],
     "answerIndex": 0,
     "explanation": "With a 90% learning curve, the cumulative production times\nwould be as follows:\nBatch Units     Average Time      Cumulative Time\n1       1-4 800                     800\n2       5-8 720 (800 × 90%) 1,440\n3      9-16 648 (720 × 90%) 2,592\nSubtracting the 800 hours spent on the first batch from the\ncumulative time for three batches leaves 1,792 hours for the\nlast three groups of units (12 units).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استغرقت شركة صناعية 800 ساعة عمل مباشر لإنتاج الدفعة الأولى المكونة من أربع وحدات من محرك جديد. وترى الإدارة أن منحنى التعلم البالغ 90% سيستمر خلال أربع دفعات إنتاج. كم ساعة عمل مباشر ستلزم لتصنيع الوحدات الـ12 التالية؟",
+    "choicesAr": [
+      "1,792",
+      "1,944",
+      "2,016",
+      "2,160"
+    ],
+    "explanationAr": "مع منحنى تعلم قدره 90%، تُحسب أوقات الإنتاج التراكمية كما يلي:\nالدفعة — الوحدات — متوسط الزمن — الزمن التراكمي\n1 — 1-4 — 800 — 800\n2 — 5-8 — 720 (800 × 90%) — 1,440\n3 — 9-16 — 648 (720 × 90%) — 2,592\nبطرح 800 ساعة مستهلكة في الدفعة الأولى من الزمن التراكمي لثلاث دفعات نحصل على 1,792 ساعة للدفعات الثلاث التالية (12 وحدة)."
   },
   {
     "unit": 12,
@@ -1186,7 +1250,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curves are an established phenomenon. Workers\nlearn a new task at a predictable rate and the resulting\nimprovements in productivity should be factored into standard\nsetting and variance analysis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من الممارسات التالية يسمح باستخدام أفضل للتكاليف المعيارية وتحليل الانحرافات لتحسين القرارات الإدارية؟",
+    "choicesAr": [
+      "لا تفرق الشركة A بين التكاليف الصناعية غير المباشرة المتغيرة والثابتة عند احتساب الانحرافات.",
+      "تستخدم الشركة B متوسط تكلفة العام الماضي الفعلية معيارًا للعام الحالي.",
+      "تبحث الشركة C في الانحرافات غير المواتية فقط.",
+      "تراجع الشركة D المعايير باستمرار لتعكس منحنيات التعلم."
+    ],
+    "explanationAr": "منحنيات التعلم ظاهرة مثبتة؛ إذ يكتسب العاملون الخبرة في مهمة جديدة بمعدل يمكن توقعه. ومن الضروري مراعاة التحسن الناتج في الإنتاجية عند وضع معايير التكلفة وتحليل الانحرافات."
   },
   {
     "unit": 12,
@@ -1203,7 +1275,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأساليب التالية أنسب لتحليل انخفاض الوقت اللازم لإنجاز مهمة كلما ازدادت الخبرة بها؟",
+    "choicesAr": [
+      "تحليل الانحدار.",
+      "تحليل منحنى التعلم.",
+      "تحليل الحساسية.",
+      "تحليل الاحتمال الطبيعي."
+    ],
+    "explanationAr": "يستخدم تحليل منحنى التعلم لتوقع التحسن في الإنتاجية الناتج عن سرعة أداء المهام المتزايدة مع اكتساب الخبرة."
   },
   {
     "unit": 12,
@@ -1220,7 +1300,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتزم شركة صناعية التقدم بعرض سعر لطلب خاص يشمل 80 وحدة ستنتج في دفعات تضم كل واحدة 10 وحدات. ويقدر مدير الإنتاج أن ساعات العمل المباشر للوحدة ستتناقص بنسبة ثابتة مع كل تضاعف في الوحدات المنتجة تراكميًا. ما الأسلوب الكمي المناسب لتقدير ساعات العمل للطلب؟",
+    "choicesAr": [
+      "تحليل التكلفة والحجم والربح.",
+      "عملية ماركوف.",
+      "تحليل البرمجة الخطية.",
+      "تحليل منحنى التعلم."
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم لتقدير مكاسب الإنتاجية الناتجة عن أداء العاملين للمهام بسرعة أكبر مع تراكم الخبرة."
   },
   {
     "unit": 12,
@@ -1237,7 +1325,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. The curve is\nusually expressed as a percentage of reduced time to\ncomplete a task for each doubling of cumulative production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية تعبر بصورة أفضل عن مفهوم منحنى التعلم؟",
+    "choicesAr": [
+      "منحنى التعلم سلوك خطي للتكلفة يتأثر بالتعلم.",
+      "منحنى التعلم أسلوب تقدير تكاليف يعتمد على الحكم الشخصي عند وجود التعلم.",
+      "منحنى التعلم نسبة ينخفض بها متوسط وقت إنتاج الوحدة مع كل تضاعف للإنتاج.",
+      "منحنى التعلم نسبة ينخفض بها متوسط الوقت إذا زاد الإنتاج بمقدار 1."
+    ],
+    "explanationAr": "يعكس منحنى التعلم زيادة سرعة أداء العاملين للمهام مع اكتسابهم الخبرة، ويعبر عنه عادة بنسبة انخفاض الوقت اللازم لإنجاز المهمة عند كل تضاعف للإنتاج التراكمي."
   },
   {
     "unit": 12,
@@ -1254,7 +1350,15 @@
     ],
     "answerIndex": 2,
     "explanation": "With the cumulative average-time learning model, the\ncumulative average time for production will be a certain\npercentage of what it previously was every time production\ndoubled. The first batch has an average time of 100 hours per\nunit. Therefore, after four units, the cumulative average time\nfor all units will be 90 hours per unit, as production has\ndoubled from the first point. As four units have been made, the\ncumulative time will be 360 hours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطور شركة منتجًا جديدًا يُصنع في أزواج. واستغرق إنتاج أول وحدتين 200 ساعة عمل مباشر. إذا كان منحنى التعلم 90% ويُستخدم نموذج متوسط الوقت التراكمي، فما إجمالي ساعات العمل المباشر اللازمة لإنتاج أول أربع وحدات؟",
+    "choicesAr": [
+      "400 ساعة.",
+      "380 ساعة.",
+      "360 ساعة.",
+      "324 ساعة."
+    ],
+    "explanationAr": "في نموذج متوسط الوقت التراكمي، ينخفض متوسط الوقت التراكمي للوحدة إلى نسبة معينة من قيمته السابقة كلما تضاعف الإنتاج. بلغ متوسط الدفعة الأولى 100 ساعة للوحدة؛ لذا يصبح المتوسط بعد أربع وحدات 90 ساعة للوحدة مع تضاعف الإنتاج من نقطة البداية. وبذلك يبلغ الوقت التراكمي لإنتاج أربع وحدات 360 ساعة."
   },
   {
     "unit": 12,
@@ -1271,7 +1375,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. It is a\nquantitative technique used to project the direct labor costs for\nfull-scale production of a product from the initial run of the\nproject.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب الكمي المستخدم لتقدير تكاليف العمل المباشر للإنتاج على نطاق كامل استنادًا إلى أول دفعة من المنتج؟",
+    "choicesAr": [
+      "تحليل منحنى التعلم.",
+      "البرمجة الخطية.",
+      "محاكاة مونت كارلو.",
+      "تحليل القيمة المتوقعة."
+    ],
+    "explanationAr": "يعكس منحنى التعلم ارتفاع سرعة أداء العاملين للمهام مع اكتساب الخبرة، وهو أسلوب كمي يُستخدم لتوقع تكاليف العمل المباشر للإنتاج الكامل استنادًا إلى التشغيل الأولي."
   },
   {
     "unit": 12,
@@ -1288,7 +1400,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The effects of the company’s projected learning curve of 75%\ncan be calculated as follows:\nCumulative        Cumulative         Cumulative\nBatches Units Produced Average Batch Time Total Time\n1          500         100                    100 (1 × 100)\n2          1,000       75 (100 × 75%)         150 (2 × 75)\n4          2,000       56.25 (75 × 75%)       225 (4 ×\n56.25)\nIt will take 225 hours to produce 2,000 units in total.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحقق إحدى الشركات منحنى تعلم تراكميًا بنسبة 75% عند تصنيع منتج كهربائي. وتحتاج إلى 100 ساعة لإنتاج أول 500 وحدة. كم ساعة تحتاج لإنتاج 2,000 وحدة إجمالًا؟",
+    "choicesAr": [
+      "225.00",
+      "231.25",
+      "250.00",
+      "300.00"
+    ],
+    "explanationAr": "يمكن حساب آثار منحنى التعلم المتوقع للشركة البالغ 75% كما يلي:\nالدفعات — الوحدات المنتجة تراكميًا — متوسط وقت الدفعة — الوقت التراكمي\n1 — 500 — 100 — 100 (1 × 100)\n2 — 1,000 — 75 (100 × 75%) — 150 (2 × 75)\n4 — 2,000 — 56.25 (75 × 75%) — 225 (4 × 56.25)\nيستغرق إنتاج 225 ساعة لإتمام 2,000 وحدة إجمالًا."
   },
   {
     "unit": 12,
@@ -1305,7 +1425,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The learning curve is based on a doubling of production.\nGiven an 80% learning curve and a 15-minute production time\nduring the first week, production during the second week is\nestimated to be 12 minutes per call (80% × 15 minutes). When\nproduction doubles again in the fourth week, the cumulative\naverage time for each call is 9.6 minutes (80% × 12 minutes).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أنشأت شركة برمجيات قسمًا لخدمة العملاء. وبعد الأسبوع الأول كان متوسط زمن مكالمة العميل 15 دقيقة، ويُقدر مدير القسم منحنى تعلم بنسبة 80%. وفق نموذج متوسط الوقت التراكمي، ما متوسط زمن المكالمة بحلول الأسبوع الرابع؟",
+    "choicesAr": [
+      "7.7 دقائق.",
+      "9.6 دقائق.",
+      "12.0 دقيقة.",
+      "15.0 دقيقة."
+    ],
+    "explanationAr": "يعتمد منحنى التعلم على تضاعف الإنتاج. ومع معدل تعلم 80% وزمن أولي قدره 15 دقيقة في الأسبوع الأول، يُتوقع أن يبلغ متوسط المكالمة في الأسبوع الثاني 12 دقيقة (80% × 15 دقيقة). وعندما يتضاعف الإنتاج مرة أخرى في الأسبوع الرابع، يصبح المتوسط التراكمي 9.6 دقيقة (80% × 12 دقيقة)."
   },
   {
     "unit": 12,
@@ -1322,7 +1450,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. A 10%\ndecrease in the time to produce one unit of product implies a\n90% learning curve. After the first doubling of production, the\ncumulative average production time is 90% of what it was\nbefore doubling.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلاحظ شركة صناعية انخفاض وقت إنتاج الوحدة بنسبة 10% كلما تضاعف إنتاجها التراكمي. في نموذج متوسط الوقت التراكمي، ما منحنى التعلم المقابل لهذا الانخفاض؟",
+    "choicesAr": [
+      "5%",
+      "10%",
+      "90%",
+      "110%"
+    ],
+    "explanationAr": "يعكس منحنى التعلم زيادة سرعة أداء المهام مع تراكم الخبرة. ويشير انخفاض الوقت بنسبة 10% إلى منحنى تعلم قدره 90%؛ إذ يصبح المتوسط التراكمي بعد أول تضاعف للإنتاج 90% من قيمته السابقة."
   },
   {
     "unit": 12,
@@ -1339,7 +1475,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cumulative average-time learning model projects the\nreduction in the cumulative average time it takes to complete a\ncertain number of tasks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظت شركة أنه عند تضاعف الإنتاج من x إلى 2x يصبح متوسط الوقت لكل وحدة ضمن 2x وحدة مساويًا لـ90% من متوسط الوقت لكل وحدة ضمن x وحدة. ما النموذج الذي يفسر انخفاض وقت الوحدة مع تضاعف الإنتاج؟",
+    "choicesAr": [
+      "نموذج التعلم وفق زمن الوحدة الإضافية.",
+      "نموذج التعلم وفق متوسط الوقت التراكمي.",
+      "نموذج تقدير التكلفة بالأعلى والأدنى.",
+      "نموذج تقدير التكلفة بالانحدار البسيط."
+    ],
+    "explanationAr": "يتوقع نموذج متوسط الوقت التراكمي انخفاض المتوسط التراكمي للوقت المطلوب لإكمال عدد معين من المهام."
   },
   {
     "unit": 12,
