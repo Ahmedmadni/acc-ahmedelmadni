@@ -164,3 +164,14 @@ All **14 of 14 source MCQs** in Volume 2 Study Unit 12 §5 now have complete Ara
 **Publisher provenance — §5 Q13.** The original question record includes the sourceTextStatus value table-reflowed. Translation does not certify the fidelity of source extraction or printed-page layout. Keep its source-layout review warning. All 14 Arabic drafts and source-ordered numbers have been checked in automation, but specialist editorial review, visual original-PDF checking, source-use permissions and real tablet/browser checks remain outside the automated test claims.
 
 Next priorities: source-verify the 19 blocked questions, review technical Arabic terminology including §4 Q21 and §3 Q19, and check long Arabic questions and tables on actual mobile/tablet breakpoints. No new user login, cloud database or paid Lovable translation infrastructure was introduced.
+
+
+## Unverified PDF source safety in quizzes — 18 November 2026
+
+The 19 remaining Unit 12 questions could **not** be compared against the matching 2025 Part 1 Volume 2 publisher PDF in this iteration. The available Library document, `CMA P2 GLIME.pdf`, is a 2019 Part 2 study outline, not that question-bank volume. Therefore the exact original source layout remains **unverified**. No English-to-Arabic conversion, answer-key mutation or removal of warning flags has been made for these 19 questions. Unit 12 Arabic draft coverage remains **136/155 (87.7%)**.
+
+A new [page-specific source review checklist](CMA_UNIT12_PDF_SOURCE_REVIEW_2026-11-18.md) records each of the 19 original source-page locators (pages 63–168), which tables/equations are interleaved, and independent arithmetic plausibility checks (which **do not** certify transcription). The CMA content gate now pins exact page numbers and English-only status for every unresolved source question.
+
+The **ExamPrep scored quiz now excludes all `sourceLayoutReview` questions by default**. An explicit opt-in displays those questions for practice or original PDF comparison, but no correct/total score is assigned for them. A prominent warning appears before the question and again after the source explanation. The CMA study library continues to allow reading them and now labels any chosen-answer comparison as **provisional**, rather than implying source-certified correctness. No server calls, user accounts, cloud databases or Lovable AI credits are needed for this safeguard.
+
+Automated QA tests the opt-in control's eligibility model, verifies unscorable questions cannot be counted, locks the exact 19 source page references and preserves the canonical source answer indexes. A separate numerical check recomputes selected values from imported data while explicitly disavowing PDF source verification. This release addresses the *trustworthiness of presented quiz results*; it does not claim that a missing original PDF has been inspected, that any additional 19 questions were translated, or that mobile browser QA has been completed.
