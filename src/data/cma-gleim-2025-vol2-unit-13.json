@@ -514,7 +514,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Budgets provide a means for coordinating the plans of all\norganizational subunits. Thus, budgets are a way to promote\ngoal congruence. Although budgets should be consistent with\nthe strategic plans of top management, they should also be\nbased on input from lower-level managers since the latter\nhave detailed knowledge of operating activities. Successful\nbudgets are therefore a compromise. In a top-down process,\nhowever, budgets are imposed on subordinates without their\nparticipation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما العيب الرئيسي للموازنة التي تُعد وفق منهج من أعلى إلى أسفل؟",
+    "choicesAr": [
+      "إضعاف توافق الأهداف.",
+      "عدم مشاركة الإدارة العليا.",
+      "عدم اتساقها مع الخطط الاستراتيجية.",
+      "إحداث أثر تحفيزي إيجابي."
+    ],
+    "explanationAr": "الموازنة وسيلة لتنسيق خطط وحدات المنشأة وتحقيق توافق الأهداف. ورغم ضرورة اتساقها مع الخطة الاستراتيجية للإدارة العليا، يجب أيضًا أن تستند إلى مدخلات المديرين في المستويات الأدنى لما لديهم من معرفة تفصيلية بالعمليات. لذلك تكون الموازنة الناجحة نتيجة موازنة بين التوجيه العلوي والمشاركة، بينما يفرض منهج من أعلى إلى أسفل الموازنة على العاملين دون مشاركتهم، مما قد يضعف توافق الأهداف."
   },
   {
     "unit": 13,
@@ -531,7 +539,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Traditional budgeting focuses strictly on financial measures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من الانتقادات الموجهة إلى الأسلوب التقليدي في إعداد الموازنات، باستثناء أنه:",
+    "choicesAr": [
+      "يلجأ إلى خفض المصروفات على جميع الإدارات بالنسب نفسها عندما تظهر المسودات الأولى ارتفاعًا مفرطًا للتكاليف.",
+      "يُدرج مقاييس غير مالية إلى جانب المقاييس المالية في مخرجات الموازنة.",
+      "يركز بصورة مفرطة على أفق زمني ثابت، مثل سنة واحدة.",
+      "لا يُستخدم لتقييم الأداء إلا عند نهاية فترة الموازنة."
+    ],
+    "explanationAr": "يركز إعداد الموازنات التقليدي على المقاييس المالية فقط."
   },
   {
     "unit": 13,
@@ -548,7 +564,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A bottom-up approach is characterized by general guidance\nfrom the highest levels of management, followed by extensive\ninput from middle and lower management. This sequence of\nsteps aptly describes this process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتبع شركة الخطوات التالية لإعداد خطة أرباحها السنوية:\n• توزع الإدارة العليا إرشادات التخطيط على المستويات الأدنى بعد تلقي مدخلات من مستويات الإدارة كلها.\n• تُعد وحدات المبيعات موازنات المبيعات وفق أهداف قطاعاتها؛ وتستخدمها الوحدات التشغيلية لإعداد موازنات الإنتاج وغيرها من الموازنات ذات الصلة. ويكون الاتصال أفقيًا بصورة أساسية، مع وجود اتصال صاعد أحيانًا.\n• تُرفع خطة الأرباح إلى الإدارة العليا للتنسيق والمراجعة، ثم تنفذ الإدارة الوسطى توصيات وتعديلات الإدارة العليا وترفع نسخة منقحة لمراجعة إضافية.\n• تمنح الإدارة العليا الموافقة النهائية وتوزع الخطة الرسمية على الوحدات التشغيلية.\nأي مناهج إعداد الموازنات التالية يصف هذه العملية على أفضل وجه؟",
+    "choicesAr": [
+      "موازنة تفرضها الإدارة العليا.",
+      "منهج من أسفل إلى أعلى.",
+      "منهج من أعلى إلى أسفل.",
+      "التبرير الكامل لجميع الأنشطة من جانب الوحدات التشغيلية."
+    ],
+    "explanationAr": "يتميز منهج إعداد الموازنة من أسفل إلى أعلى بتقديم الإدارة العليا توجيهات عامة، ثم الاعتماد على مشاركات واسعة من الإدارة الوسطى والإدارة التشغيلية. ويصف تسلسل الخطوات المذكور هذا المنهج."
   },
   {
     "unit": 13,
@@ -565,7 +589,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since a top-down budget is imposed by upper management, it\nhas less chance of acceptance (also called buy-in) by those\non whom the budget is imposed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من مزايا إعداد الموازنة من أعلى إلى أسفل مقارنة بالموازنة التشاركية، باستثناء أنه:",
+    "choicesAr": [
+      "يزيد التنسيق بين أهداف القطاعات.",
+      "يقلل الوقت اللازم لإعداد الموازنة.",
+      "قد يحد من تقبل الأهداف والغايات المقترحة.",
+      "يسهل تنفيذ الخطط الاستراتيجية."
+    ],
+    "explanationAr": "لأن الإدارة العليا تفرض الموازنة التي تُعد من أعلى إلى أسفل، فمن المرجح أن تقل درجة تقبل الأهداف لدى الموظفين الذين تُفرض عليهم، وهو ما يُسمى ضعف القبول أو التأييد للموازنة."
   },
   {
     "unit": 13,
