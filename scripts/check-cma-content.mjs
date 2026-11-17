@@ -606,8 +606,9 @@ for (const [key, original] of vol2Records) {
     check(displayed.question.ar === original.stemAr &&
       displayed.explanation.ar === original.explanationAr &&
       displayed.choices.ar.join("|") === original.choicesAr.join("|") &&
-      displayed.sourceLanguage !== "en",
-      "Arabic source question not available directly on all devices: "+key);
+      displayed.sourceLanguage !== "en" &&
+      displayed.sourceArabicStatus === "draft",
+      "Arabic source question missing or misleading review status: "+key);
   } else {
     check(displayed.sourceLanguage === "en" &&
       displayed.question.ar === original.stem &&
@@ -616,6 +617,14 @@ for (const [key, original] of vol2Records) {
   }
 }
 console.log("Verified all 58 Unit 11 questions have built-in Arabic, with the remaining Volume 2 items marked as English-first.");
+for (const key of ["11.2.12", "11.2.13"]) {
+  const item=vol2Records.get(key);
+  const [unit,section,number]=key.split(".");
+  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
+  check(item?.sourceTextStatus === "table-reflowed" && mapped?.sourceLayoutReview === true,
+    "The reflowed original cost-of-quality table must require source-PDF review: "+key);
+}
+
 
 const inferredVol2 = new Set(["16.1.19", "18.2.4", "18.3.5", "19.2.28", "20.2.26"]);
 const reconstructedVol2 = new Set(["14.4.2", "15.8.23", "17.2.15", "17.2.25", "19.2.12"]);
