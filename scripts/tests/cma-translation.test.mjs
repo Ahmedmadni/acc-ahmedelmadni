@@ -455,7 +455,7 @@ test("Independent arithmetic audits are not mistaken for publisher PDF verificat
   assert.equal(40000+2.1*20000,82000);
   const fourLotCost=(4*12500*0.8**2+4*1500)*1.1;
   assert.equal(Math.round(fourLotCost)-15400,26400);
-  assert.equal((4*1000*0.7**2-1000)/150,6.4);
+  assert.equal(Math.round(((4*1000*0.7**2-1000)/150)*10)/10,6.4);
   assert.equal((4096-2560)/200,7.68);
 
   assert.equal(-160*.1-40*.3+80*.4+80*.2,20);
@@ -494,7 +494,7 @@ test("Independent arithmetic audits are not mistaken for publisher PDF verificat
   ];
   assert.deepEqual(alternatives,[105000,102500,97500,80000]);
   assert.equal(ev([[200000,.2],[250000,.5],[300000,.2],[350000,.1]]),260000);
-  assert.equal(305000*(1.80-1.15)-78000,120250);
+  assert.equal(Math.round(305000*(1.80-1.15)-78000),120250);
   const success=.6*.7+.4*.25;
   assert.equal(success,.52);
   assert.equal(Math.round(success*10000000-(1-success)*4000000),3280000);
