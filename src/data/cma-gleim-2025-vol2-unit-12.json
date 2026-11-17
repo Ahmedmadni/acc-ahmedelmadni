@@ -1186,7 +1186,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curves are an established phenomenon. Workers\nlearn a new task at a predictable rate and the resulting\nimprovements in productivity should be factored into standard\nsetting and variance analysis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي من الممارسات التالية يسمح باستخدام أفضل للتكاليف المعيارية وتحليل الانحرافات لتحسين القرارات الإدارية؟",
+    "choicesAr": [
+      "لا تفرق الشركة A بين التكاليف الصناعية غير المباشرة المتغيرة والثابتة عند احتساب الانحرافات.",
+      "تستخدم الشركة B متوسط تكلفة العام الماضي الفعلية معيارًا للعام الحالي.",
+      "تبحث الشركة C في الانحرافات غير المواتية فقط.",
+      "تراجع الشركة D المعايير باستمرار لتعكس منحنيات التعلم."
+    ],
+    "explanationAr": "منحنيات التعلم ظاهرة مثبتة؛ إذ يكتسب العاملون الخبرة في مهمة جديدة بمعدل يمكن توقعه. ومن الضروري مراعاة التحسن الناتج في الإنتاجية عند وضع معايير التكلفة وتحليل الانحرافات."
   },
   {
     "unit": 12,
@@ -1203,7 +1211,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأساليب التالية أنسب لتحليل انخفاض الوقت اللازم لإنجاز مهمة كلما ازدادت الخبرة بها؟",
+    "choicesAr": [
+      "تحليل الانحدار.",
+      "تحليل منحنى التعلم.",
+      "تحليل الحساسية.",
+      "تحليل الاحتمال الطبيعي."
+    ],
+    "explanationAr": "يستخدم تحليل منحنى التعلم لتوقع التحسن في الإنتاجية الناتج عن سرعة أداء المهام المتزايدة مع اكتساب الخبرة."
   },
   {
     "unit": 12,
@@ -1220,7 +1236,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curve analysis is used to project productivity gains\nresulting from the increased rate at which people perform\ntasks as they gain experience.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتزم شركة صناعية التقدم بعرض سعر لطلب خاص يشمل 80 وحدة ستنتج في دفعات تضم كل واحدة 10 وحدات. ويقدر مدير الإنتاج أن ساعات العمل المباشر للوحدة ستتناقص بنسبة ثابتة مع كل تضاعف في الوحدات المنتجة تراكميًا. ما الأسلوب الكمي المناسب لتقدير ساعات العمل للطلب؟",
+    "choicesAr": [
+      "تحليل التكلفة والحجم والربح.",
+      "عملية ماركوف.",
+      "تحليل البرمجة الخطية.",
+      "تحليل منحنى التعلم."
+    ],
+    "explanationAr": "يُستخدم تحليل منحنى التعلم لتقدير مكاسب الإنتاجية الناتجة عن أداء العاملين للمهام بسرعة أكبر مع تراكم الخبرة."
   },
   {
     "unit": 12,
@@ -1237,7 +1261,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. The curve is\nusually expressed as a percentage of reduced time to\ncomplete a task for each doubling of cumulative production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات الآتية تعبر بصورة أفضل عن مفهوم منحنى التعلم؟",
+    "choicesAr": [
+      "منحنى التعلم سلوك خطي للتكلفة يتأثر بالتعلم.",
+      "منحنى التعلم أسلوب تقدير تكاليف يعتمد على الحكم الشخصي عند وجود التعلم.",
+      "منحنى التعلم نسبة ينخفض بها متوسط وقت إنتاج الوحدة مع كل تضاعف للإنتاج.",
+      "منحنى التعلم نسبة ينخفض بها متوسط الوقت إذا زاد الإنتاج بمقدار 1."
+    ],
+    "explanationAr": "يعكس منحنى التعلم زيادة سرعة أداء العاملين للمهام مع اكتسابهم الخبرة، ويعبر عنه عادة بنسبة انخفاض الوقت اللازم لإنجاز المهمة عند كل تضاعف للإنتاج التراكمي."
   },
   {
     "unit": 12,
@@ -1254,7 +1286,15 @@
     ],
     "answerIndex": 2,
     "explanation": "With the cumulative average-time learning model, the\ncumulative average time for production will be a certain\npercentage of what it previously was every time production\ndoubled. The first batch has an average time of 100 hours per\nunit. Therefore, after four units, the cumulative average time\nfor all units will be 90 hours per unit, as production has\ndoubled from the first point. As four units have been made, the\ncumulative time will be 360 hours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطور شركة منتجًا جديدًا يُصنع في أزواج. واستغرق إنتاج أول وحدتين 200 ساعة عمل مباشر. إذا كان منحنى التعلم 90% ويُستخدم نموذج متوسط الوقت التراكمي، فما إجمالي ساعات العمل المباشر اللازمة لإنتاج أول أربع وحدات؟",
+    "choicesAr": [
+      "400 ساعة.",
+      "380 ساعة.",
+      "360 ساعة.",
+      "324 ساعة."
+    ],
+    "explanationAr": "في نموذج متوسط الوقت التراكمي، ينخفض متوسط الوقت التراكمي للوحدة إلى نسبة معينة من قيمته السابقة كلما تضاعف الإنتاج. بلغ متوسط الدفعة الأولى 100 ساعة للوحدة؛ لذا يصبح المتوسط بعد أربع وحدات 90 ساعة للوحدة مع تضاعف الإنتاج من نقطة البداية. وبذلك يبلغ الوقت التراكمي لإنتاج أربع وحدات 360 ساعة."
   },
   {
     "unit": 12,
@@ -1271,7 +1311,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. It is a\nquantitative technique used to project the direct labor costs for\nfull-scale production of a product from the initial run of the\nproject.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب الكمي المستخدم لتقدير تكاليف العمل المباشر للإنتاج على نطاق كامل استنادًا إلى أول دفعة من المنتج؟",
+    "choicesAr": [
+      "تحليل منحنى التعلم.",
+      "البرمجة الخطية.",
+      "محاكاة مونت كارلو.",
+      "تحليل القيمة المتوقعة."
+    ],
+    "explanationAr": "يعكس منحنى التعلم ارتفاع سرعة أداء العاملين للمهام مع اكتساب الخبرة، وهو أسلوب كمي يُستخدم لتوقع تكاليف العمل المباشر للإنتاج الكامل استنادًا إلى التشغيل الأولي."
   },
   {
     "unit": 12,
@@ -1305,7 +1353,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The learning curve is based on a doubling of production.\nGiven an 80% learning curve and a 15-minute production time\nduring the first week, production during the second week is\nestimated to be 12 minutes per call (80% × 15 minutes). When\nproduction doubles again in the fourth week, the cumulative\naverage time for each call is 9.6 minutes (80% × 12 minutes).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أنشأت شركة برمجيات قسمًا لخدمة العملاء. وبعد الأسبوع الأول كان متوسط زمن مكالمة العميل 15 دقيقة، ويُقدر مدير القسم منحنى تعلم بنسبة 80%. وفق نموذج متوسط الوقت التراكمي، ما متوسط زمن المكالمة بحلول الأسبوع الرابع؟",
+    "choicesAr": [
+      "7.7 دقائق.",
+      "9.6 دقائق.",
+      "12.0 دقيقة.",
+      "15.0 دقيقة."
+    ],
+    "explanationAr": "يعتمد منحنى التعلم على تضاعف الإنتاج. ومع معدل تعلم 80% وزمن أولي قدره 15 دقيقة في الأسبوع الأول، يُتوقع أن يبلغ متوسط المكالمة في الأسبوع الثاني 12 دقيقة (80% × 15 دقيقة). وعندما يتضاعف الإنتاج مرة أخرى في الأسبوع الرابع، يصبح المتوسط التراكمي 9.6 دقيقة (80% × 12 دقيقة)."
   },
   {
     "unit": 12,
@@ -1322,7 +1378,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Learning curve analysis reflects the increased rate at which\npeople perform tasks as they gain experience. A 10%\ndecrease in the time to produce one unit of product implies a\n90% learning curve. After the first doubling of production, the\ncumulative average production time is 90% of what it was\nbefore doubling.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلاحظ شركة صناعية انخفاض وقت إنتاج الوحدة بنسبة 10% كلما تضاعف إنتاجها التراكمي. في نموذج متوسط الوقت التراكمي، ما منحنى التعلم المقابل لهذا الانخفاض؟",
+    "choicesAr": [
+      "5%",
+      "10%",
+      "90%",
+      "110%"
+    ],
+    "explanationAr": "يعكس منحنى التعلم زيادة سرعة أداء المهام مع تراكم الخبرة. ويشير انخفاض الوقت بنسبة 10% إلى منحنى تعلم قدره 90%؛ إذ يصبح المتوسط التراكمي بعد أول تضاعف للإنتاج 90% من قيمته السابقة."
   },
   {
     "unit": 12,
@@ -1339,7 +1403,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cumulative average-time learning model projects the\nreduction in the cumulative average time it takes to complete a\ncertain number of tasks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظت شركة أنه عند تضاعف الإنتاج من x إلى 2x يصبح متوسط الوقت لكل وحدة ضمن 2x وحدة مساويًا لـ90% من متوسط الوقت لكل وحدة ضمن x وحدة. ما النموذج الذي يفسر انخفاض وقت الوحدة مع تضاعف الإنتاج؟",
+    "choicesAr": [
+      "نموذج التعلم وفق زمن الوحدة الإضافية.",
+      "نموذج التعلم وفق متوسط الوقت التراكمي.",
+      "نموذج تقدير التكلفة بالأعلى والأدنى.",
+      "نموذج تقدير التكلفة بالانحدار البسيط."
+    ],
+    "explanationAr": "يتوقع نموذج متوسط الوقت التراكمي انخفاض المتوسط التراكمي للوقت المطلوب لإكمال عدد معين من المهام."
   },
   {
     "unit": 12,
