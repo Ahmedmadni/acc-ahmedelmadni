@@ -83,3 +83,18 @@ Arabic is no longer dependent on the browser Translator API for the **first twel
 A CI audit requires exactly these twelve source IDs to have complete Arabic stem, choices and explanation. Numeric integrity tests compare translated and English figures in every field and reject altered figures, numeric sequences or missing choices. The content audit also confirms the canonical English records and original answer indices never change and all other Volume 2 items retain their untranslated flag. The Arabic wording is an **initial educational translation**; specialist editorial review of terminology, applicability and source tables is still needed before calling it professionally certified.
 
 The translations ship with the site's static content bundle. They require no login, database reads, Lovable AI credits, local browser translation support or manual copy/paste on the learner's device. Later batches must extend the source-ID coverage list and tests rather than silently marking untranslated records as translated.
+
+
+## Unit 11 full bilingual draft — 17 November 2026
+
+The **entire Volume 2 Unit 11 question set is now available as static bilingual educational content**:
+
+- Section 1 (value-chain analysis): **26/26** source MCQs have Arabic stems, four choices, and explanations. The previous twelve translations remain unchanged.
+- Section 2 (process analysis, quality costs and benchmarking): **32/32** source MCQs now have Arabic stems, four choices, and explanations.
+- Total: **58/58 Unit 11 questions**. This adds 46 translations in the present increment; all are shipped in the versioned source JSON and displayed by the existing CMA library and exam preparation routes. The English original remains the primary, unchanged answer key for all questions. Other Units 12–20 and their untranslated source banks have not been marked as bilingual.
+
+**Source-table caveat:** Questions **Unit 11 §2 Q12 and Q13** were imported with the *same* line-wrapped and broken cost table (e.g., split figure "275,0 / 00" and broken words). The table is now **reflowed** in both English and Arabic with internally consistent amounts. Source text status is set to table-reflowed, and the question UI shows a source PDF layout warning. The preventive-cost calculation in Q12 uses 275,000 + 180,000 + 90,000 + 156,000 = 701,000, consistent with its unchanged explanation and keyed answer. **The original publisher PDF has not been visually re-verified in this release**; both questions require page-level source comparison and specialist review before their reconstructed table can be treated as definitive.
+
+**Quality gates:** The translation tests check all 58 records for complete Arabic text, four ordered options, a hardcoded fingerprint of original answer indices by section and preservation of every numeric token in each stem, option and explanation. The content checker refuses partial/undeclared translations, proves each complete question is mapped to Arabic on every browser, and requires an explicit draft review status. The sourceLayoutReview flag identifies the two reconstructed tables and other similarly reflowed source items for visual checking.
+
+The site labels these static Arabic translations as **educational drafts pending specialist accounting/editorial verification**. Numerical invariance does not itself establish that every conceptual translation is correct, and a source answer can also be questionable. The translation layer does not post results or change scoring. No additional database, login, Lovable translation credits or remote language model is required to read this Unit 11 Arabic content. Continue with Unit 12 after the specialist/rights review for Unit 11 is arranged.
