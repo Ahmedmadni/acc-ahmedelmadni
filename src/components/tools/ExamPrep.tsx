@@ -24,6 +24,7 @@ import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { isCmaScorableQuestion, splitCmaQuizSourceReview } from "@/lib/cma-source-review.shared";
 import type { CmaStudyUnit } from "@/data/cma-topics";
 
 const BUILT_IN_QUESTIONS: ExamQuestion[] = (() => {
@@ -75,6 +76,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [includeSourceReview, setIncludeSourceReview] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -154,7 +156,7 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     return c;
   }, [allQuestions]);
 
-  const pool = useMemo(
+  const matchingPool = useMemo(
     () =>
       allQuestions.filter(
         (q) =>
@@ -166,6 +168,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
               : `Part 1 — Study Unit ${cmaUnit}`)),
       ),
     [allQuestions, track, cmaUnit],
+  );
+  // Source-layout issues are excluded from graded CMA sessions unless opted into for review.
+  const { eligible: pool, excluded: sourceReviewExcluded } = useMemo(
+    () => track === "CMA"
+      ? splitCmaQuizSourceReview(matchingPool, includeSourceReview)
+      : { eligible: matchingPool, excluded: [] as ExamQuestion[] },
+    [matchingPool, includeSourceReview, track],
   );
   const q = pool[current];
 
@@ -189,7 +198,8 @@ export function ExamPrep({ lang }: { lang: Lang }) {
     setSelected(i);
     setRevealed(true);
     const correct = i === q.answerIndex;
-    setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+    if (isCmaScorableQuestion(q))
+      setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
   }
   function resetScore() {
     setScore({ correct: 0, total: 0 });
@@ -421,6 +431,29 @@ export function ExamPrep({ lang }: { lang: Lang }) {
         </div>
       )}
 
+      {track === "CMA" && mode === "quiz" && (sourceReviewExcluded.length > 0 || includeSourceReview) && (
+        <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-amber-400/35 bg-amber-500/10 px-3 py-3 text-xs leading-6 text-[#f3d28a]">
+          <input
+            type="checkbox"
+            checked={includeSourceReview}
+            onChange={(event) => {
+              setIncludeSourceReview(event.target.checked);
+              resetScore();
+            }}
+            className="mt-1 size-4 shrink-0 accent-amber-400"
+          />
+          <span>
+            {lang === "ar"
+              ? includeSourceReview
+                ? "عرض الأسئلة التي تحتاج مراجعة المصدر مفعل. هذه الأسئلة للتدريب والمقارنة فقط ولا تدخل في الدرجة."
+                : `تم استبعاد ${sourceReviewExcluded.length} من الأسئلة التي لم تُطابق جداولها أو معادلاتها مع المصدر من الاختبار المُقيّم. فعّل الخيار لعرضها دون احتساب درجات.`
+              : includeSourceReview
+                ? "Source-layout review questions are visible for practice only and do not count toward your score."
+                : `${sourceReviewExcluded.length} questions with unchecked source tables or formulas are excluded from scored practice. Opt in to inspect them without grading.`}
+          </span>
+        </label>
+      )}
+
       {/* Source bar */}
       <div className="flex flex-wrap items-center gap-2 rounded-lg border border-[#d7aa52]/20 bg-white/[0.02] px-3 py-2 text-[11px] text-[var(--fg-soft)]">
         <span className="inline-flex items-center gap-1">
@@ -510,6 +543,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                           : "هذا السؤال من الكتاب باللغة الإنجليزية؛ الترجمة العربية قيد المراجعة."}
                 </p>
               )}
+              {q.sourceLayoutReview && (
+                <div role="alert" className="mb-3 rounded-lg border border-amber-400/45 bg-amber-500/10 p-3 text-xs leading-6 text-[#f3d28a]">
+                  {lang === "ar"
+                    ? "هذا السؤال للتدريب ومراجعة المصدر فقط، ولا يُحتسب ضمن درجتك. لم يُطابق الجدول أو المعادلة بعد مع صفحة PDF الأصلية؛ مفتاح الإجابة الظاهر ليس اعتمادًا نهائيًا لصحة المصدر."
+                    : "Source review required. This practice-only question is not scored. Its table or formula has not been matched to the original PDF; the displayed answer key is not independently certified."}
+                </div>
+              )}
               {q.sourceTextStatus === "reconstructed" && (
                 <p className="mb-3 text-xs leading-6 text-[#f3d28a]">
                   {lang === "ar"
@@ -577,6 +617,13 @@ export function ExamPrep({ lang }: { lang: Lang }) {
                       >
                         {view.explanation}
                       </p>
+                      {q.sourceLayoutReview && (
+                        <p role="status" className="mt-3 text-xs font-bold text-amber-200">
+                          {lang === "ar"
+                            ? "النتيجة هنا مستبعدة من درجتك إلى حين مراجعة ملف المصدر الأصلي."
+                            : "This question is excluded from your score until source-PDF review."}
+                        </p>
+                      )}
                       {q.answerStatus === "inferred" && (
                         <p className="mt-2 text-xs text-amber-200">
                           {lang === "ar"
