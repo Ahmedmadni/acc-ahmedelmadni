@@ -983,7 +983,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter. This\ntechnique is applicable only to the early stages of production\nor to any new task. One common assumption is that the\ncumulative average time per unit is reduced by a fixed\npercentage each time cumulative production is doubled.\nBased on the given data, this company has a 90% learning\ncurve (90% × 10 minutes = 9 minutes, and 90% × 9 minutes =\n8.1 minutes). Accordingly, the cumulative average time to\nperform eight tasks is 7.29 minutes (90% × 8.1 minutes).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظت إدارة شركة متخصصة في خدمات مسك الدفاتر أن متوسط الزمن اللازم لتنفيذ مهام متطابقة باستخدام برنامج جديد ينخفض مع زيادة عدد المهام المنفذة. وجُمعت البيانات التالية:\nعدد المهام — إجمالي الزمن — متوسط الزمن لكل مهمة\n1 — 10 دقائق — 10 دقائق\n2 — 18 دقيقة — 9 دقائق\n4 — 32.4 دقيقة — 8.1 دقيقة\nإذا استمر أثر التعلم، ما متوسط الزمن اللازم لأداء كل مهمة من أول ثماني مهام؟",
+    "choicesAr": [
+      "7.29 دقيقة.",
+      "8.1 دقيقة.",
+      "6.56 دقيقة.",
+      "5.90 دقيقة."
+    ],
+    "explanationAr": "تعكس منحنيات التعلم ارتفاع سرعة إنجاز المهام مع الخبرة، فيتناقص زمن المهمة تدريجيًا. وتناسب هذه الطريقة المراحل الأولى للإنتاج أو أداء المهام الجديدة، وتفترض غالبًا أن متوسط الوقت التراكمي للوحدة ينخفض بنسبة ثابتة مع كل تضاعف للإنتاج. ويتضح من البيانات أن منحنى التعلم 90% (90% × 10 دقائق = 9 دقائق، و90% × 9 دقائق = 8.1 دقائق). ولذلك يصبح متوسط زمن إنجاز كل مهمة من أول ثماني مهام 7.29 دقيقة (90% × 8.1 دقيقة)."
   },
   {
     "unit": 12,
