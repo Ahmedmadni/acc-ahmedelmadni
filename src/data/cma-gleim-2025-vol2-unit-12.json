@@ -2068,7 +2068,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Expected value is a means of associating a dollar amount\nwith each of the possible outcomes of a probability\ndistribution. The outcome yielding the highest expected value\n(which may or may not be the most likely one) is the optimal\nalternative. The expected value of each outcome, and of the\nproject as a whole, can be determined through the\npreparation of a payoff table, as follows:\nMonthly\nSales                  Income Expected\nIn Units Probability     (Loss)     Value\n10,000        .2   × $(4,000) = $ (800)\n20,000        .3   × 10,000 =    3,000\n30,000        .3   × 30,000 =    9,000\n40,000        .2   × 60,000 = 12,000\n$23,200",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة برمجيات حزمة جديدة، وأعد مدير المبيعات التوزيع الاحتمالي التالي لمبيعاتها الشهرية والدخل أو الخسارة المرتبطة بها:\nالمبيعات الشهرية بالوحدات — الاحتمال — الدخل (الخسارة)\n10,000 — .2 — $(4,000)\n20,000 — .3 — 10,000\n30,000 — .3 — 30,000\n40,000 — .2 — 60,000\nإذا قررت الشركة تسويق المنتج الجديد، فما القيمة المتوقعة للدخل الشهري الإضافي؟",
+    "choicesAr": [
+      "$23,200",
+      "$24,000",
+      "$24,800",
+      "$25,000"
+    ],
+    "explanationAr": "تربط القيمة المتوقعة مبلغًا نقديًا بكل نتيجة محتملة في توزيع احتمالي. ويُعد البديل صاحب أعلى قيمة متوقعة، وقد لا يكون الأكثر احتمالًا، الخيار الأمثل. ويمكن إعداد جدول للعوائد لحساب كل نتيجة والقيمة المتوقعة للمشروع:\nالمبيعات الشهرية — الاحتمال — الدخل (الخسارة) — القيمة المتوقعة\n10,000 — .2 × $(4,000) = $ (800)\n20,000 — .3 × 10,000 = 3,000\n30,000 — .3 × 30,000 = 9,000\n40,000 — .2 × 60,000 = 12,000\n$23,200"
   },
   {
     "unit": 12,
@@ -2085,7 +2093,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action:\nDecision     State of Contribution                  Expected\nAlternative Nature          Margin      Probability Value\nPlan 1       Excellent $300,000    ×     0.4     = $120,000\nGood      240,000    ×     0.6     = 144,000\n$264,000\nPlan 2       Excellent $370,000    ×     0.4     = $148,000\nGood      180,000    ×     0.6     = 108,000\n$256,000\nAfter weighting the possible monetary outcomes by their\nrespective probabilities, the expected value of Plan 1 is $8,000\nhigher than the expected value of Plan 2.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشير دراسات السوق الأخيرة إلى أن الشركة تملك منتجًا استهلاكيًا يُرجح نجاحه. وتتنبأ المبيعات بنتائج ممتازة أو جيدة، ويحدد مدير المبيعات احتمالًا قدره .6 للنتائج الجيدة. وتدرس الشركة خطط تعويض موظفي المبيعات، وحددت هوامش المساهمة التالية:\nعند المبيعات الممتازة:\nالخطة 1 — $300,000\nالخطة 2 — 370,000\nعند المبيعات الجيدة:\nالخطة 1 — 240,000\nالخطة 2 — 180,000\nأي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "الخطة 2 أفضل بمقدار $10,000 مقارنة بالخطة 1.",
+      "الخطة 1 أفضل بمقدار $8,000 مقارنة بالخطة 2.",
+      "ينبغي اختيار الخطة 1 بسبب ثقة مدير المبيعات الأكبر في النتائج الجيدة.",
+      "يمكن اختيار أي من الخطتين، ويتوقف القرار على احتمال تحقق مبيعات ممتازة."
+    ],
+    "explanationAr": "عندما يمكن تقدير النتائج النقدية والاحتمالات بدرجة معقولة، يمكن إعداد جدول للعوائد لتحديد القرار الأفضل:\nالبديل — الحالة — هامش المساهمة — الاحتمال — القيمة المتوقعة\nالخطة 1 — ممتازة — $300,000 × 0.4 = $120,000\nجيدة — 240,000 × 0.6 = 144,000\n$264,000\nالخطة 2 — ممتازة — $370,000 × 0.4 = $148,000\nجيدة — 180,000 × 0.6 = 108,000\n$256,000\nبعد ترجيح النتائج النقدية باحتمالاتها، تكون القيمة المتوقعة للخطة 1 أعلى بمقدار $8,000 من القيمة المتوقعة للخطة 2."
   },
   {
     "unit": 12,
@@ -2153,7 +2169,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action [incremental profit on each doll sold is\n$2.00 ($5.20 – $3.20)]:\nUnit                    Expected\nSales                       Unit         Incr.   Expected\nIncrease Probability        Increase      Profit    Profit\n15,000 ×       0.10   = 1,500         ×    $2     = $ 3,000\n30,000 ×       0.35   = 10,500        ×    $2     = 21,000\n45,000 ×       0.10   = 4,500         ×    $2     = 9,000\n60,000 ×       0.25   = 15,000        ×    $2     = 30,000\n75,000 ×       0.20   = 15,000        ×    $2     = 30,000\nExpected gross profit      $93,000\nCost of advertising       (40,000)\nExpected net profit     $53,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقترح مدير المبيعات حملة إعلانية موسعة تكلفتها $40,000 لزيادة مبيعات الشركة وأرباحها. وأعد التوزيع الاحتمالي التالي لتأثير الحملة في المبيعات:\nالزيادة في المبيعات (وحدات) — الاحتمال\n15,000 — .10\n30,000 — .35\n45,000 — .10\n60,000 — .25\n75,000 — .20\nتبيع الشركة كل دمية بسعر $5.20 وتبلغ تكلفة الدمية $3.20. إذا نُفذت الحملة، فما الربح الإضافي المتوقع؟",
+    "choicesAr": [
+      "$6,500",
+      "$46,500",
+      "$53,000",
+      "$93,000"
+    ],
+    "explanationAr": "عندما يمكن تقدير النتائج النقدية واحتمالاتها، يمكن إعداد جدول عوائد لتحديد أفضل قرار. ويبلغ الربح الإضافي لكل دمية $2.00 ($5.20 – $3.20):\nالزيادة في الوحدات — الاحتمال — الزيادة المرجحة — الربح للوحدة — الربح المتوقع\n15,000 × 0.10 = 1,500 × $2 = $ 3,000\n30,000 × 0.35 = 10,500 × $2 = 21,000\n45,000 × 0.10 = 4,500 × $2 = 9,000\n60,000 × 0.25 = 15,000 × $2 = 30,000\n75,000 × 0.20 = 15,000 × $2 = 30,000\nإجمالي الربح المتوقع قبل الإعلان $93,000\nتكلفة الإعلان (40,000)\nصافي الربح المتوقع $53,000"
   },
   {
     "unit": 12,
@@ -2170,7 +2194,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected value computation can be applied to rates of return\nas well as to dollar amounts.\nWeighted\nExpected Expected\nProbability      Return     Return\n0.1               –20%    –2%\n0.2                 5%     1%\n0.4                15%     6%\n0.2                20%     4%\n0.1                30%     3%\n12%",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "للسهم X التوزيع الاحتمالي التالي لعوائده المستقبلية المتوقعة:\nالاحتمال — العائد المتوقع\n.1 — –20%\n.2 — 5%\n.4 — 15%\n.2 — 20%\n.1 — 30%\nما معدل العائد المتوقع للسهم X؟",
+    "choicesAr": [
+      "10%",
+      "12%",
+      "16%",
+      "19%"
+    ],
+    "explanationAr": "يمكن تطبيق حساب القيمة المتوقعة على معدلات العائد كما على المبالغ النقدية:\nالاحتمال — العائد المتوقع — العائد المرجح\n0.1 — –20% — –2%\n0.2 — 5% — 1%\n0.4 — 15% — 6%\n0.2 — 20% — 4%\n0.1 — 30% — 3%\n12%"
   },
   {
     "unit": 12,
@@ -2305,7 +2337,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The expected value of an event is calculated by multiplying\nthe probability of each outcome by its payoff and summing the\nproducts. The expected value of $7,800,000 is calculated as\nfollows:\n1. 0.20 [($100 × 600,000) – ($60 × 600,000)] =\n4,800,000\n2. 0.50 [($100 × 800,000) – ($60 × 800,000)] =\n16,000,000\n3. 0.30 [($100 × 1,000,000) – ($60 × 1,000,000)] =\n12,000,000\n4. (4,800,000 + 16,000,000 + 12,000,000) – 25,000,000\nfixed cost = 7,800,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع منشأة منتجها بسعر $100 للوحدة وتتحمل تكاليف تشغيل متغيرة قدرها $60 للوحدة، وتكاليف تشغيل ثابتة تبلغ $25,000,000. وتتوقع الإدارة احتمالًا قدره 20% لبيع 600,000 وحدة في الفترة المقبلة، واحتمالًا 50% لبيع 800,000 وحدة، واحتمالًا 30% لبيع 1,000,000 وحدة. ما القيمة المتوقعة للربح التشغيلي للفترة؟",
+    "choicesAr": [
+      "$32,800,000",
+      "$8,200,000",
+      "$7,800,000",
+      "$7,000,000"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للحدث بضرب احتمال كل نتيجة في عائدها ثم جمع النواتج. وتبلغ القيمة المتوقعة $7,800,000 كما يلي:\n1. 0.20 [($100 × 600,000) – ($60 × 600,000)] =\n4,800,000\n2. 0.50 [($100 × 800,000) – ($60 × 800,000)] =\n16,000,000\n3. 0.30 [($100 × 1,000,000) – ($60 × 1,000,000)] =\n12,000,000\n4. (4,800,000 + 16,000,000 + 12,000,000) – 25,000,000 تكاليف ثابتة = 7,800,000"
   },
   {
     "unit": 12,
@@ -2322,7 +2362,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Using expected value analysis, the average number of\nanimals is weighted based on the probability of that number of\nanimals occurring in the following month. The expected value\nfor the following month is 26.42 animals {[(12 animals ×\n1 weekend) + (20 animals × 4 weekends) + (25 animals ×\n3 weekends) + (35 animals × 2 weekends) + (40 animals ×\n2 weekends)] ÷ 12 total weekends}. Assuming 26.42 animals,\nthree members of staff should be scheduled for the clinic over\nthe weekend in the upcoming month.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحدد عيادة بيطرية عدد موظفي عطلات نهاية الأسبوع وفق عدد الحيوانات المقيمة لديها. ويتوفر لديها أربعة موظفين للعمل في تلك العطلات. وبحسب الأنظمة المحلية، يلزم موظف واحد حتى 10 حيوانات، وموظفان عند 11-23 حيوانًا، وثلاثة موظفين عند 24-36 حيوانًا، وجميع الموظفين الأربعة عند 37-45 حيوانًا. وسجلت خلال عطلات نهاية الأسبوع الـ12 الماضية:\nمتوسط الحيوانات — عدد عطلات نهاية الأسبوع\n12 — 1\n20 — 4\n25 — 3\n35 — 2\n40 — 2\nباستخدام تحليل القيمة المتوقعة، كم موظفًا ينبغي جدولته في كل عطلة نهاية أسبوع خلال الشهر المقبل؟",
+    "choicesAr": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "explanationAr": "يُرجح متوسط عدد الحيوانات باحتمال تكراره في الشهر المقبل. وتبلغ القيمة المتوقعة 26.42 حيوانًا وفق {[(12 حيوانًا × 1 عطلة) + (20 حيوانًا × 4 عطلات) + (25 حيوانًا × 3 عطلات) + (35 حيوانًا × 2 عطلتين) + (40 حيوانًا × 2 عطلتين)] ÷ 12 عطلة إجمالًا}. ولخدمة 26.42 حيوانًا ينبغي جدولة ثلاثة موظفين خلال عطلات نهاية الأسبوع بالشهر المقبل."
   },
   {
     "unit": 12,
@@ -2339,7 +2387,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The option with the lowest rental expense will maximize the\nentrepreneur’s income. Option 3 has the lowest expected\nvalue. The expected value of rental expense is calculated as\nfollows:\nExpected     = 40% × [($37.50 × 70 units) × 20%] + 60% ×\nvalue          [($37.50 × 40 units) × 20%]\n= 40% × $525 + 60% × $300\n= $210 + $180\n= $390",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يملك رائد أعمال أربعة خيارات لاستئجار جناح في معرض محلي حيث يخطط لبيع منتجه الجديد بسعر $37.50 للوحدة وبتكلفة $12.50 للوحدة. وخيارات الإيجار كما يلي:\nرسوم ثابتة $1,000 — الخيار 1:\nرسوم ثابتة $750 إضافة إلى 5% من جميع إيرادات المعرض — الخيار 2:\nنسبة 20% من إيرادات المعرض — الخيار 3:\nرسوم ثابتة $200 إضافة إلى 16% من إيرادات المعرض — الخيار 4:\nوبافتراض وجود احتمال 40% لبيع 70 وحدة واحتمال 60% لبيع 40 وحدة، أي خيار يحقق أعلى دخل؟",
+    "choicesAr": [
+      "الخيار 1.",
+      "الخيار 2.",
+      "الخيار 3.",
+      "الخيار 4."
+    ],
+    "explanationAr": "الخيار صاحب مصروف الإيجار الأقل سيعظم دخل رائد الأعمال. ويتميز الخيار 3 بأقل قيمة متوقعة للمصروف. ويُحسب مصروف الإيجار المتوقع كالآتي:\nالقيمة المتوقعة = 40% × [($37.50 × 70 وحدة) × 20%] + 60% ×\n[($37.50 × 40 وحدة) × 20%]\n= 40% × $525 + 60% × $300\n= $210 + $180\n= $390"
   },
   {
     "unit": 12,
@@ -2356,7 +2412,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The expected value is calculated by multiplying the probability\nof each outcome by its payoff and summing the products.\nThus, the expected value of net cash flows is $140,000 (10%\n× –$300,000 + 20% × $0 + 50% × $100,000 + 20% ×\n$600,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع مدير استثمارًا محتملًا تحيط بنتيجته المالية النهائية درجة كبيرة من عدم التأكد. وقدّر الاحتمالات التالية لمستويات صافي التدفقات النقدية:\nاحتمال النتيجة — صافي التدفقات النقدية\n10% — $(300,000)\n20% — 0\n50% — 100,000\n20% — 600,000\nما القيمة المتوقعة لصافي التدفقات النقدية المناسبة لتقييم الاستثمار؟",
+    "choicesAr": [
+      "$100,000",
+      "$137,000",
+      "$140,000",
+      "$400,000"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة بضرب احتمال كل نتيجة في عائدها ثم جمع النواتج؛ ولذلك تبلغ القيمة المتوقعة لصافي التدفقات النقدية $140,000 (10% × –$300,000 + 20% × $0 + 50% × $100,000 + 20% × $600,000)."
   },
   {
     "unit": 12,
@@ -2423,7 +2487,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The expected value for Location A can be derived by calculating\nthe 45% probability of generating $400,000 and adding that\namount to the 55% probability of generating $325,000, i.e.,\n(45% × $400,000) + (55% × $325,000) = $358,750 of expected\ncash flow. The expected value for Location B can be derived by\ncalculating the 25% probability of generating $600,000 and\nadding that amount to the 75% probability of generating\n$250,000, i.e., (25% × $600,000) + (75% × $250,000) =\n$337,500 of expected cash flow. Thus, Location A’s cash flow\nof $358,750 is $21,250 greater than Location B’s cash flow of\n$337,500.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة ملابس موقعين لافتتاح متجر جديد. وتشير أبحاثها إلى أن الموقع A لديه احتمال 45% لتحقيق تدفقات نقدية قدرها $400,000 واحتمال 55% لتحقيق $325,000، بينما لدى الموقع B احتمال 25% لتحقيق $600,000 واحتمال 75% لتحقيق $250,000. بناءً على القيمة المتوقعة لكل موقع، ينبغي اختيار:",
+    "choicesAr": [
+      "الموقع A لأن قيمته المتوقعة أعلى من B بمقدار $21,250.",
+      "الموقع A لأن قيمته المتوقعة أعلى من B بمقدار $75,000.",
+      "الموقع B لأن قيمته المتوقعة أعلى من A بمقدار $125,000.",
+      "الموقع B لأن قيمته المتوقعة أعلى من A بمقدار $146,250."
+    ],
+    "explanationAr": "يمكن حساب القيمة المتوقعة للموقع A بضرب احتمال 45% في $400,000 وإضافة احتمال 55% مضروبًا في $325,000: (45% × $400,000) + (55% × $325,000) = $358,750 تدفقات نقدية متوقعة. وبالنسبة للموقع B، يُضرب احتمال 25% في $600,000 ويضاف احتمال 75% مضروبًا في $250,000: (25% × $600,000) + (75% × $250,000) = $337,500 تدفقات نقدية متوقعة. وبالتالي فإن قيمة الموقع A البالغة $358,750 أعلى بمقدار $21,250 من قيمة الموقع B البالغة $337,500."
   },
   {
     "unit": 12,
@@ -2615,7 +2687,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Michael E. Porter has developed a model of the structure of\nindustries and competition. It includes an analysis of the five\ncompetitive forces that determine long-term profitability\nmeasured by long-term return on investment. This analysis\nresults in an evaluation of the attractiveness of an industry.\nThe five forces are (1) the degree of rivalry among existing\nfirms; (2) threats of, and barriers to, entry; (3) the threat of\nsubstitute products or services; (4) the threat of buyers’\nbargaining power; and (5) the threat of suppliers’ bargaining\npower.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن نموذج مايكل إي. بورتر للاستراتيجيات التنافسية تحليل القوى التنافسية التي تحدد مدى جاذبية القطاع. وتشمل هذه القوى:\nI. مرحلة دورة حياة القطاع\nII. تهديد دخول منافسين جدد والحواجز أمام الدخول\nIII. تهديد المنتجات البديلة\nIV. تهديد القوة التفاوضية للموردين",
+    "choicesAr": [
+      "I وII فقط.",
+      "I وIII فقط.",
+      "II وIII وIV فقط.",
+      "I وII وIII وIV."
+    ],
+    "explanationAr": "طوّر مايكل إي. بورتر نموذجًا لتحليل بنية القطاعات والمنافسة، ويتضمن تحليل القوى التنافسية الخمس المؤثرة في الربحية طويلة الأجل، المقاسة بالعائد طويل الأجل على الاستثمار. وتساعد نتائج التحليل في تقييم جاذبية القطاع. وهذه القوى هي: (1) شدة المنافسة بين المنشآت القائمة؛ (2) التهديد بالدخول والحواجز أمامه؛ (3) تهديد المنتجات أو الخدمات البديلة؛ (4) القوة التفاوضية للمشترين؛ (5) القوة التفاوضية للموردين."
   },
   {
     "unit": 12,
@@ -2632,7 +2712,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The determination of organizational objectives is the first step\nin the planning process. A mission statement is a formal,\nwritten document that defines the organization’s purpose in\nsociety, for example, to produce and distribute certain goods\nof high quality in a manner beneficial to the public, employees,\nshareholders, and other constituencies. Thus, a mission\nstatement does not announce specific operating plans. It does\nnot describe strategies for technological development, market\nexpansion, or product differentiation because these are tasks\nfor operating management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينبغي أن يحقق بيان الأهداف العامة للمنشأة، أو بيان رسالتها، جميع الأمور التالية باستثناء:",
+    "choicesAr": [
+      "تحديد استراتيجيات التطوير التقني والتوسع في الأسواق وتمييز المنتجات.",
+      "تحديد الغرض الذي أُنشئت الشركة من أجله.",
+      "توفير دليل عام لأصحاب المناصب العليا المسؤولة عن اتخاذ القرار.",
+      "توضيح المبادئ الأخلاقية والقيم التي توجه تصرفات الشركة."
+    ],
+    "explanationAr": "يمثل تحديد أهداف المنشأة الخطوة الأولى في التخطيط. وبيان الرسالة وثيقة رسمية مكتوبة تحدد غرض المنشأة في المجتمع، مثل إنتاج وتوزيع سلع عالية الجودة بما يعود بالنفع على الجمهور والعاملين والمساهمين وأصحاب المصلحة الآخرين. لذا لا يعلن بيان الرسالة خطط التشغيل التفصيلية؛ ولا يشرح استراتيجيات التطوير التقني أو توسع الأسواق أو تمييز المنتجات، لأنها من مهام إدارة التشغيل."
   },
   {
     "unit": 12,
@@ -2649,7 +2737,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The degree of product differentiation and the costs of\nswitching from one competitor’s product to another increase\nthe intensity of rivalry and competition in an industry. Less\ndifferentiation tends to heighten competition based on price,\nwith price cutting leading to lower profits. Low costs of\nswitching products also increase competition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تزداد حدة المنافسة بين المنشآت القائمة في قطاع معين عندما:\nI. تكون المنتجات قليلة التمايز نسبيًا\nII. تكون تكاليف انتقال العملاء إلى مورد بديل منخفضة",
+    "choicesAr": [
+      "I فقط.",
+      "II فقط.",
+      "كل من I وII.",
+      "لا I ولا II."
+    ],
+    "explanationAr": "تؤثر درجة التمايز بين المنتجات وتكاليف انتقال العميل من منتج منافس إلى آخر في شدة المنافسة داخل القطاع. ويؤدي ضعف التمايز إلى زيادة المنافسة السعرية، وقد يؤدي خفض الأسعار إلى تراجع الأرباح. كما تزيد تكاليف الانتقال المنخفضة من حدة المنافسة."
   },
   {
     "unit": 12,
@@ -2666,7 +2762,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A mission statement is a formal, written document that defines\nan organization’s ultimate purposes in society in general\nterms. After a situational analysis is performed, the entity\ndevelops a group of strategies for achieving the mission.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخطوات التالية في عملية الإدارة الاستراتيجية ينبغي إتمامها أولًا؟",
+    "choicesAr": [
+      "ترجمة الأهداف العامة إلى أهداف محددة.",
+      "تحديد الإجراءات اللازمة لتحقيق الأهداف.",
+      "تطوير مقاييس الأداء.",
+      "صياغة بيان الرسالة."
+    ],
+    "explanationAr": "بيان الرسالة وثيقة رسمية مكتوبة تحدد الأغراض النهائية للمنشأة في المجتمع بعبارات عامة. وبعد إجراء تحليل الموقف، تطور المنشأة مجموعة من الاستراتيجيات لتحقيق رسالتها."
   },
   {
     "unit": 12,
@@ -2683,7 +2787,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Substitutes are types of goods and services that serve the\nsame purpose. All products that can replace a good or service\nshould be considered substitutes. For example, bicycles and\ncars are substitutes for public transportation. Structural\nconsiderations determine the effect substitutes have on one\nanother. However, because substitutes are types (not brands)\nof goods and services that have the same purposes, brand\nidentity is not a structural consideration affecting the threat of\nsubstitutes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشمل الاعتبارات الهيكلية المؤثرة في تهديد المنتجات البديلة جميع ما يلي باستثناء:",
+    "choicesAr": [
+      "الأسعار النسبية.",
+      "هوية العلامة التجارية.",
+      "تكلفة الانتقال إلى المنتجات البديلة.",
+      "ميل العملاء إلى استخدام منتج بديل."
+    ],
+    "explanationAr": "المنتجات البديلة سلع أو خدمات تحقق الغرض نفسه، ولذلك ينبغي النظر إلى جميع المنتجات التي يمكن أن تحل محل سلعة أو خدمة معينة. فالدراجات والسيارات مثلًا بدائل لوسائل النقل العام. وتحدد العوامل الهيكلية مدى تأثير هذه البدائل. لكن البدائل تمثل أنواعًا من السلع والخدمات تؤدي الوظيفة نفسها، لا مجرد علامات تجارية؛ لذا لا تُعد هوية العلامة التجارية في هذا السياق اعتبارًا هيكليًا يؤثر في تهديد البدائل."
   },
   {
     "unit": 12,
@@ -2700,7 +2812,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When purchasing power is concentrated in a few buyers or\nwhen buyers are well organized, their bargaining power is\ngreater. This effect is reinforced when sellers are in a capital-\nintensive industry, such as trucking.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجري شركة دراسة لتقييم جدوى دخول قطاع تأجير الشاحنات. أي الظروف التالية يُرجح أن تثنيها عن دخول هذا السوق؟",
+    "choicesAr": [
+      "ارتفاع التكاليف الثابتة مقارنة بالتكاليف المتغيرة في قطاع تأجير الشاحنات.",
+      "نظر المشترين إلى المنتج على أنه متميز.",
+      "سيطرة مجموعة صغيرة من المشترين المتحالفين على السوق.",
+      "تمتع الشركات المشترية بهوامش ربح مرتفعة من منتجاتها النهائية."
+    ],
+    "explanationAr": "عندما تتركز القوة الشرائية لدى عدد محدود من المشترين، أو يكون المشترون منظمين جيدًا، تزداد قوتهم التفاوضية. ويتعزز هذا التأثير عندما يعمل البائعون في قطاع كثيف رأس المال، مثل قطاع الشاحنات."
   },
   {
     "unit": 12,
@@ -2717,7 +2837,15 @@
     ],
     "answerIndex": 2,
     "explanation": "If it is expensive to switch suppliers, customers will be less\nmotivated to respond to competitor advances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل القطاعية التالية لا يسهم في زيادة شدة المنافسة؟",
+    "choicesAr": [
+      "خفض الأسعار وكبر موازنات الإعلان وكثرة تقديم منتجات جديدة.",
+      "اعتماد نمو الشركة على اجتذاب عملاء المنشآت المنافسة.",
+      "ارتفاع تكاليف انتقال العملاء من مورد إلى آخر.",
+      "ارتفاع التكاليف الثابتة مقارنة بالتكاليف المتغيرة."
+    ],
+    "explanationAr": "عندما تكون تكلفة تغيير المورد مرتفعة، تقل حوافز العملاء للاستجابة إلى العروض التي يقدمها المنافسون."
   },
   {
     "unit": 12,
@@ -2734,7 +2862,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Strong brand identity decreases the threat that new\ncompetitors will enter an industry. New competitors have\ndifficulty because potential customers are loyal to established\nfirms in the industry.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الظروف التالية لا تزيد من تهديد دخول منافسين جدد إلى القطاع؟",
+    "choicesAr": [
+      "قوة هوية العلامة التجارية.",
+      "عدم استفادة الشركات القائمة من مزايا تكلفة التكامل الرأسي.",
+      "قلة الاختلافات المملوكة أو المحمية بين المنتجات.",
+      "انخفاض متطلبات رأس المال."
+    ],
+    "explanationAr": "تقلل قوة هوية العلامة التجارية من خطر دخول منافسين جدد؛ إذ يواجه الداخلون الجدد صعوبة بسبب ولاء العملاء المحتملين للمنشآت القائمة في القطاع."
   },
   {
     "unit": 12,
@@ -2751,7 +2887,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Porter developed a model of the structure of industries and\ncompetition. It includes an analysis of the five competitive\nforces that determine long-term profitability measured by long-\nterm return on investment. This analysis results in an\nevaluation of the attractiveness of an industry.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إن التفاعل المتزامن للقوى التنافسية الأساسية في نموذج بورتر يحدد:",
+    "choicesAr": [
+      "الربحية طويلة الأجل وشدة المنافسة داخل القطاع.",
+      "حواجز الدخول التي يواجهها المشاركون المحتملون في السوق.",
+      "المنافسة بين المنشآت داخل القطاع فقط.",
+      "الأنشطة غير المضيفة للقيمة التي ينبغي إلغاؤها."
+    ],
+    "explanationAr": "طوّر بورتر نموذجًا لبنية القطاعات والمنافسة يقوم على تحليل القوى التنافسية الخمس التي تحدد الربحية طويلة الأجل، المقاسة بالعائد على الاستثمار على المدى الطويل. ويتيح هذا التحليل تقييم جاذبية القطاع."
   },
   {
     "unit": 12,
@@ -2768,7 +2912,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Subsidies for new firms lower entry barriers. Thus, new firms\nmay enter the industry and intensify competition. Government\npolicy also may affect competition by means of regulations\nthat encourage or discourage substitutes or affect costs, that\ngovern competitive behavior, or that limit growth. Government\nalso may be a buyer or supplier.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يُرجح أن يشجع منشآت جديدة على دخول سوق قائم؟",
+    "choicesAr": [
+      "الإعانات الحكومية المقدمة للمستثمرين الجدد.",
+      "التمييز المرتفع بين المنتجات الناتج أساسًا عن العلامات التجارية.",
+      "الحاجة إلى معرفة واسعة بالقطاع واستثمارات كبيرة في التطوير.",
+      "انخفاض التكاليف الثابتة للخروج من السوق."
+    ],
+    "explanationAr": "تؤدي الإعانات المقدمة للمنشآت الجديدة إلى خفض حواجز الدخول، وبذلك قد تدخل منشآت جديدة القطاع وتزيد حدة المنافسة. ويمكن أن تؤثر السياسات الحكومية أيضًا في المنافسة عبر قواعد تشجع البدائل أو تحد منها، وتؤثر في التكاليف والسلوك التنافسي والنمو. وقد تكون الحكومة نفسها مشتريًا أو موردًا."
   },
   {
     "unit": 12,
@@ -2785,7 +2937,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A firm that has successfully differentiated its products through\ndeveloping a desirable image, better services, cost leadership,\nthe features of the product, or other means is in a favorable\ncompetitive position. Competitors find it difficult to acquire the\nfirm’s customers, for example, by price cutting. The reason is\nthat the firm’s products are perceived to have few substitutes,\nand brand loyalty is high. Furthermore, barriers to entry are\nfavorable to the firm. These barriers deter competitors from\nentering the market. Existing firms can increase market share\nand emphasize cutting costs and increasing value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الظروف التالية مواتية لشركة تنافس في قطاع مربح وآخذ في التوسع؟",
+    "choicesAr": [
+      "افتقار الشركة إلى قاعدة عملاء قوية.",
+      "وجود عدد قليل من الموردين يستطيعون تقييد المعروض.",
+      "صعوبة اجتذاب المنافسين لعملاء الشركة.",
+      "ارتفاع تكاليف الشركة مقارنة بالمنشآت الأخرى في القطاع."
+    ],
+    "explanationAr": "تكون الشركة في وضع تنافسي ملائم عندما تنجح في تمييز منتجاتها بتطوير صورة مرغوبة أو خدمات أفضل أو قيادة التكلفة أو خصائص المنتج أو غير ذلك. ويصعب على المنافسين اجتذاب عملائها، مثلًا عبر خفض الأسعار، لأن منتجات الشركة يُنظر إليها على أن لها بدائل قليلة ويكون ولاء العلامة التجارية مرتفعًا. كما تُعد حواجز الدخول في صالح الشركة لأنها تحد من دخول منافسين جدد، وتستطيع المنشآت القائمة زيادة حصتها السوقية والتركيز على خفض التكاليف وزيادة القيمة."
   },
   {
     "unit": 12,
@@ -2802,7 +2962,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most favorable condition for the attractiveness of an\nindustry is the existence of high entry barriers and low exit\nbarriers. When the threat of new entrants is minimal and exit is\nnot difficult, returns are high, and risk is reduced in the event\nof poor performance. Low entry barriers keep long-term\nprofitability low because new firms can enter the industry,\nincreasing competition and lowering prices and the market\nshares of existing firms. Exit barriers are reasons for a firm to\nremain in an industry despite poor (or negative) profits.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يزيد من تهديد دخول منشآت جديدة إلى القطاع؟",
+    "choicesAr": [
+      "كبر وفورات الحجم.",
+      "ارتفاع متطلبات رأس المال.",
+      "احتمال رد فعل انتقامي من قائد القطاع تجاه الداخل الجديد.",
+      "انخفاض حواجز الخروج."
+    ],
+    "explanationAr": "تكون جاذبية القطاع أعلى عادة عندما تكون حواجز الدخول مرتفعة وحواجز الخروج منخفضة. فإذا كان تهديد الداخلين الجدد محدودًا وكان الخروج غير صعب، ترتفع العوائد وتقل المخاطر عند ضعف الأداء. أما انخفاض حواجز الدخول فيحد من الربحية طويلة الأجل لأن المنشآت الجديدة تستطيع الدخول وزيادة المنافسة وخفض الأسعار والحصص السوقية للمنشآت القائمة. وحواجز الخروج هي أسباب تدفع الشركة إلى البقاء في القطاع رغم ضعف الأرباح أو سلبيتها."
   },
   {
     "unit": 12,
@@ -2819,7 +2987,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost focus is the generic strategy that seeks competitive\nadvantage through lower costs but with a narrow competitive\nscope (e.g., a regional market or a specialized product line).\nThe reason for a cost-focus strategy is that the narrower\nmarket can be better served because the firm knows it well.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة صناعية أدوات مائدة بلاستيكية لشريحة سوقية معينة بأقل تكلفة ممكنة. وتطبق الشركة استراتيجية:",
+    "choicesAr": [
+      "قيادة التكلفة.",
+      "التركيز.",
+      "التمييز.",
+      "احتواء التكاليف."
+    ],
+    "explanationAr": "التركيز على التكلفة استراتيجية تنافسية عامة تستهدف تحقيق ميزة من انخفاض التكلفة في نطاق تنافسي ضيق، مثل سوق إقليمية أو خط منتجات متخصص. وتقوم على إمكان خدمة السوق الضيقة بصورة أفضل بفضل معرفة المنشأة الجيدة بها."
   },
   {
     "unit": 12,
@@ -2836,7 +3012,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost leadership seeks a competitive advantage through lower\ncosts that have a broad competitive scope. Since the\ncompany is selling its products at low costs and it has many\ncompetitors across the nation, it has a broad competitive\nscope.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحاول شركة اختيار الاستراتيجية التنافسية التي ينبغي تنفيذها. وقد بدأت مؤخرًا إنتاج مستلزمات الهالوين وبيعها في متاجرها خلال الأشهر السابقة للمناسبة، وتركز على انخفاض التكلفة. وترى أن ذلك يمنحها ميزة تنافسية لأن كثيرًا من المنافسين في أنحاء البلاد يبيعون هذه المنتجات بأسعار أعلى. ما الاستراتيجية الأنسب؟",
+    "choicesAr": [
+      "قيادة التكلفة.",
+      "التمييز.",
+      "التركيز على التكلفة.",
+      "التمييز المركز."
+    ],
+    "explanationAr": "تهدف قيادة التكلفة إلى تحقيق ميزة تنافسية عبر تكاليف أقل مع نطاق تنافسي واسع. وبما أن الشركة تبيع منتجاتها بتكاليف منخفضة وتواجه منافسين كثيرين في أنحاء البلاد، فإن نطاقها التنافسي واسع."
   },
   {
     "unit": 12,
@@ -2853,7 +3037,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The annual MGR reflects the maturity and attractiveness of\nthe market and the relative need for cash to finance\nexpansion. The RMS reflects an SBU’s competitive position in\nthe market segment. A high RMS signifies that the SBU has a\nstrong competitive position. Cash cows have high RMS and\nlow MGR. They are strong competitors and cash generators in\nlow-growth markets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتمتع وحدة أعمال استراتيجية (SBU) بحصة سوقية نسبية مرتفعة (RMS) ومعدل نمو سوق منخفض (MGR). وفق مصفوفة النمو والحصة لمجموعة بوسطن الاستشارية، تُصنّف الوحدة بوصفها:",
+    "choicesAr": [
+      "نجمة.",
+      "علامة استفهام.",
+      "بقرة نقدية.",
+      "كلبًا."
+    ],
+    "explanationAr": "يعكس معدل نمو السوق السنوي (MGR) درجة نضج السوق وجاذبيته والحاجة النسبية للنقد لتمويل التوسع. أما الحصة السوقية النسبية (RMS) فتعكس المركز التنافسي لوحدة الأعمال في شريحتها السوقية. وتشير الحصة النسبية المرتفعة إلى مركز تنافسي قوي. وتتميز الأبقار النقدية بحصة سوقية نسبية مرتفعة ومعدل نمو منخفض، فهي منافسون أقوياء ومولدون للنقد في الأسواق بطيئة النمو."
   },
   {
     "unit": 12,
@@ -2870,7 +3062,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A star is a strong competitor in a high growth industry. It is\nprofitable but needs large amounts of cash for expansion,\nR&D, and meeting competitors’ attacks.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في مصفوفة النمو والحصة لمجموعة بوسطن الاستشارية (BCG)، أي وحدات الأعمال الاستراتيجية تكون منافسًا قويًا في الأسواق مرتفعة النمو، لكن تدفقاتها النقدية الصافية تكون عادة محدودة؟",
+    "choicesAr": [
+      "الأبقار النقدية.",
+      "علامات الاستفهام.",
+      "الكلاب.",
+      "النجوم."
+    ],
+    "explanationAr": "تُعد النجمة منافسًا قويًا في قطاع مرتفع النمو. وهي مربحة لكنها تحتاج كميات كبيرة من النقد لتمويل التوسع والبحث والتطوير ومواجهة تحركات المنافسين."
   },
   {
     "unit": 12,
@@ -2887,7 +3087,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Question marks (low RMS, high MGR) are weak competitors\nand poor cash generators in high-growth markets. They need\nlarge amounts of cash not only to finance growth and compete\nin the market but also to increase RMS. If RMS increases\nsignificantly, a question mark may become a star. If not, it\nbecomes a dog.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تملك وحدة أعمال استراتيجية (SBU) حصة سوقية نسبية منخفضة (RMS) ومعدل نمو سوق مرتفعًا (MGR). وفق نموذج المحافظ التنافسية، أي مصفوفة النمو والحصة التي طورتها مجموعة بوسطن الاستشارية، كيف تصنف هذه الوحدة؟",
+    "choicesAr": [
+      "نجمة.",
+      "علامة استفهام.",
+      "بقرة نقدية.",
+      "كلبًا."
+    ],
+    "explanationAr": "علامات الاستفهام (حصة سوقية نسبية منخفضة ومعدل نمو سوق مرتفع) منافسون ضعفاء ومولدون محدودون للنقد في أسواق سريعة النمو. وتحتاج مبالغ كبيرة لتمويل النمو والتنافس وزيادة الحصة السوقية النسبية. وإذا ارتفعت هذه الحصة كثيرًا، فقد تتحول علامة الاستفهام إلى نجمة، وإلا فقد تصبح كلبًا."
   },
   {
     "unit": 12,
@@ -2904,7 +3112,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Each SBU should have objectives, a strategy should be\nformulated to achieve those objectives, and a budget should\nbe allocated. A harvest strategy maximizes short-term net\ncash inflow. Harvesting means zero-budgeting R&D, reducing\nmarketing costs, not replacing facilities, etc. This strategy is\nused for weak cash cows and possibly question marks and\ndogs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق منهج مصفوفة النمو والحصة لمجموعة بوسطن الاستشارية، يُرجح استخدام استراتيجية الحصاد لوحدات الأعمال الاستراتيجية التي تكون:",
+    "choicesAr": [
+      "علامات استفهام قد تتحول إلى نجوم.",
+      "أبقارًا نقدية قوية.",
+      "أبقارًا نقدية ضعيفة.",
+      "كلابًا تخفض أرباح المنشأة."
+    ],
+    "explanationAr": "يُفترض تحديد أهداف لكل وحدة أعمال استراتيجية، ووضع استراتيجية لتحقيقها وتخصيص موازنة لها. وتهدف استراتيجية الحصاد إلى تعظيم صافي التدفق النقدي قصير الأجل؛ وتشمل تقليل موازنات البحث والتطوير إلى الصفر، وخفض مصروفات التسويق، وعدم إحلال المرافق، ونحو ذلك. وتُستخدم مع الأبقار النقدية الضعيفة وربما بعض علامات الاستفهام والكلاب."
   },
   {
     "unit": 12,
@@ -2921,7 +3137,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A hold strategy is used for strong cash cows. It is necessary if\nthe business is to continue to generate large net cash inflows.\nHarvesting might impair a strong cash cow’s ability to generate\nlong-term positive net cash inflows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وفق نموذج المحافظ الذي طورته مجموعة بوسطن الاستشارية للتحليل التنافسي، ما الاستراتيجية المناسبة للبقرة النقدية القوية؟",
+    "choicesAr": [
+      "الحصاد.",
+      "التخارج.",
+      "المحافظة على الوضع.",
+      "البناء والتوسع."
+    ],
+    "explanationAr": "تُستخدم استراتيجية المحافظة على الوضع مع الأبقار النقدية القوية، وهي ضرورية لاستمرار توليد صافي تدفقات نقدية كبيرة. وقد تؤدي استراتيجية الحصاد إلى إضعاف قدرة البقرة النقدية القوية على توليد صافي تدفقات نقدية إيجابية على المدى الطويل."
   },
   {
     "unit": 12,
@@ -2938,7 +3162,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The progression is from question mark to star, cash cow, and\ndog. Accordingly, a firm should consider a SBU’s current\nstatus and its probable progression when formulating a\nstrategy.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما التسلسل المعتاد لدورة حياة وحدة أعمال ناجحة في مصفوفة النمو والحصة لمجموعة بوسطن الاستشارية؟",
+    "choicesAr": [
+      "نجمة، ثم علامة استفهام، ثم بقرة نقدية، ثم كلب.",
+      "علامة استفهام، ثم نجمة، ثم بقرة نقدية، ثم كلب.",
+      "نجمة، ثم بقرة نقدية، ثم علامة استفهام، ثم كلب.",
+      "علامة استفهام، ثم بقرة نقدية، ثم نجمة، ثم كلب."
+    ],
+    "explanationAr": "يتدرج المسار من علامة الاستفهام إلى النجمة ثم البقرة النقدية فالكلب. ولهذا ينبغي أن تراعي الشركة الوضع الحالي لوحدة الأعمال الاستراتيجية ومسار تطورها المرجح عند صياغة الاستراتيجية."
   },
   {
     "unit": 12,
@@ -2955,7 +3187,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Differentiation is the generic strategy of entities that seek\ncompetitive advantage through providing a unique product.\nThe company uses the focused differentiation strategy by\nintroducing a wireless charging feature that no other\ncompetitor offers in the marketplace.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة ميزة للشحن اللاسلكي وأدخلتها في أحد مصابيحها اليدوية، ولا يقدم أي منافس آخر في السوق هذه الميزة حاليًا. وفي دراسة تسويقية، أفادت الأغلبية الساحقة من المستهلكين باستعدادها لدفع سعر أعلى مقابلها. ما أفضل استراتيجية لطرح المنتج في السوق؟",
+    "choicesAr": [
+      "استراتيجية التكلفة وفق بورتر.",
+      "استراتيجية التركيز وفق بورتر.",
+      "استراتيجية التمييز وفق بورتر.",
+      "استراتيجية تجزئة السوق وفق بورتر."
+    ],
+    "explanationAr": "التمييز استراتيجية عامة تسعى فيها المنشأة إلى تحقيق ميزة تنافسية بتقديم منتج فريد. وتستخدم الشركة استراتيجية التمييز المركز عبر طرح ميزة الشحن اللاسلكي غير المتاحة لدى أي منافس في السوق."
   },
   {
     "unit": 12,
@@ -2972,7 +3212,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The growth-share matrix has four quadrants. A cash cow is a\nbusiness unit that has a large market share in a mature, slow-\ngrowing industry.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتميز المنتجات المصنفة أبقارًا نقدية في مصفوفة النمو والحصة لمجموعة بوسطن الاستشارية عادة بأنها تتمتع بـ:",
+    "choicesAr": [
+      "حصة سوقية مرتفعة في سوق منخفض النمو.",
+      "حصة سوقية منخفضة في سوق مرتفع النمو.",
+      "حصة سوقية مرتفعة في سوق مرتفع النمو.",
+      "حصة سوقية منخفضة في سوق منخفض النمو."
+    ],
+    "explanationAr": "تتكون مصفوفة النمو والحصة من أربعة أرباع. والبقرة النقدية وحدة أعمال ذات حصة سوقية كبيرة في قطاع ناضج وبطيء النمو."
   },
   {
     "unit": 12,
@@ -2989,7 +3237,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The company is able to achieve high profitability in the\ngrowing premium bottled water industry. However, the\nsupermarkets and grocery retailers are undergoing\nconsolidation into larger supermarket conglomerates, which\nwill result in stronger buyer bargaining power and puts\ncollective pressure on the company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد إحدى الشركات الرائدة في قطاع المياه المعبأة الفاخرة، ويرجع نموها أساسًا إلى الدعاية الصحية السلبية للمشروبات الغازية والمحلاة. ويتطلب التنافس بنية واسعة للمخزون والتوزيع، ويمكن شراء مواد التغليف الرئيسية محليًا أو استيرادها بسهولة. وبحصة سوقية تبلغ 60%، تستطيع الشركة التأثير في الأسعار والنشاط التنافسي. ويملك ثاني أكبر منافس حصة 20%، بينما تتوزع نسبة 20% الباقية بين شركات صغيرة كثيرة. وتمثل المتاجر الكبرى ومحال البقالة أكبر شريحة من العملاء، بنحو 45% من المبيعات. وتقود هذه المتاجر نمو حجم المبيعات، كما تشهد اندماجات في مجموعات أكبر. باستخدام قوى بورتر الـ5، أي العبارات التالية أدق وصفًا لبيئة القطاع؟",
+    "choicesAr": [
+      "الربحية منخفضة لكنها قد ترتفع بسبب زيادة قوة المشترين.",
+      "الربحية منخفضة بسبب ضعف تهديد البدائل والداخلين الجدد.",
+      "الربحية مرتفعة لكنها قد تنخفض بسبب زيادة قوة المشترين.",
+      "الربحية مرتفعة بسبب ارتفاع قوة المشترين والموردين."
+    ],
+    "explanationAr": "تستطيع الشركة تحقيق ربحية مرتفعة في سوق المياه المعبأة الفاخرة الآخذة في النمو. لكن اندماج المتاجر الكبرى ومحال البقالة في مجموعات أكبر سيزيد قوتها التفاوضية بوصفها مشتريًا، بما يفرض ضغوطًا جماعية على الشركة."
   },
   {
     "unit": 12,
@@ -3006,7 +3262,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Strengths and weaknesses are usually identified by\nconsidering the entity’s capabilities and resources (its internal\nenvironment).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يوفر تحليل القدرات التقنية للشركة ومهارات العاملين وأداء فريق المبيعات معلومات عن:",
+    "choicesAr": [
+      "عوامل خارجية تحدد نقاط القوة والتهديدات.",
+      "عوامل داخلية تحدد نقاط القوة والفرص.",
+      "عوامل خارجية تحدد نقاط القوة والضعف.",
+      "عوامل داخلية تحدد نقاط القوة والضعف."
+    ],
+    "explanationAr": "تُحدد نقاط القوة والضعف عادة من خلال النظر إلى قدرات المنشأة ومواردها، أي بيئتها الداخلية."
   },
   {
     "unit": 12,
@@ -3023,7 +3287,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The mission statement summarizes the entity’s reason for\nexisting and provides the framework for formulating the\ncompany’s strategies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العناصر التالية يصف ما تريد المنشأة تحقيقه ويمهد لصياغة أهداف أعمال طويلة الأجل؟",
+    "choicesAr": [
+      "القيم.",
+      "الاستراتيجية.",
+      "الجدارة.",
+      "بيان الرسالة."
+    ],
+    "explanationAr": "يلخص بيان الرسالة سبب وجود المنشأة ويوفر إطارًا لصياغة استراتيجياتها."
   },
   {
     "unit": 12,
@@ -3040,7 +3312,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The mission statement summarizes the company’s reason for\nexisting and provides the framework for formulation of the\ncompany’s strategies. The tactics used in increasing the\nmarket share of a firm are too specific for a company’s mission\nstatement and would make the statement too long. Mission\nstatements are typically most effective when they are one\nsentence long.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعمل شركة على تطوير بيان رسالتها. أي العناصر التالية أقل ملاءمة لإدراجه في بيان الرسالة؟",
+    "choicesAr": [
+      "تعريف الغرض من وجود الشركة.",
+      "تحديد المنتجات أو الخدمات التي تقدمها الشركة.",
+      "تعزيز هدف مشترك بين العاملين.",
+      "شرح الأساليب التفصيلية لزيادة الحصة السوقية في منطقة معينة."
+    ],
+    "explanationAr": "يلخص بيان الرسالة سبب وجود الشركة ويوفر إطارًا لصياغة استراتيجياتها. أما أساليب زيادة الحصة السوقية المحددة فتفصيلية جدًا على بيان الرسالة، وقد تجعله مطولًا. وتكون بيانات الرسالة عادة أكثر فاعلية عندما تصاغ في جملة واحدة."
   },
   {
     "unit": 12,
@@ -3057,7 +3337,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Differentiation is the generic strategy of entities that seek\ncompetitive advantage through providing a unique product and\nthat have a broad competitive scope. A product deemed\nunique throughout its industry is differentiated from the\nproducts of competitors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع شركة منتجًا موجهًا إلى السوق الجماهيري الواسع، لكن السوق ينظر إليه على أنه فريد في قطاعه. وتحقق الشركة عوائد أعلى من المتوسط من هذا المنتج. ما المصطلح الأنسب للاستراتيجية التنافسية المتبعة؟",
+    "choicesAr": [
+      "التركيز على السوق.",
+      "القيادة المالية.",
+      "التركيز على التكلفة.",
+      "التمييز."
+    ],
+    "explanationAr": "التمييز استراتيجية تنافسية عامة تستهدف ميزة تنافسية بتقديم منتج فريد ضمن نطاق تنافسي واسع. فالمنتج الذي يُنظر إليه على أنه فريد في قطاعه يتميز عن منتجات المنافسين."
   },
   {
     "unit": 12,
@@ -3074,7 +3362,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A cash cow ordinarily enjoys high profit margins and\neconomies of scale. Financing for expansion is not needed, so\nthe strategic business unit’s excess cash can be used for\ninvestments in other strategic business units. Product ABC is\nin the cash cow stage of its life cycle.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بعد أن تصدر المنتج ABC السوق خلال العقد الماضي، بدأ معدل نموه يتباطأ. وفي هذه المرحلة من دورة حياته، ما زال يولد تدفقات نقدية كبيرة تمول استثمار الشركة في ابتكارات منتجات جديدة. وفق مصفوفة النمو والحصة لمجموعة بوسطن الاستشارية، يُرجح تصنيف المنتج ABC بوصفه:",
+    "choicesAr": [
+      "نجمة.",
+      "بقرة نقدية.",
+      "علامة استفهام.",
+      "كلبًا."
+    ],
+    "explanationAr": "تتمتع البقرة النقدية عادة بهوامش ربح مرتفعة ووفورات الحجم. ولا تحتاج إلى تمويل كبير للتوسع، ولذلك يمكن استخدام النقد الفائض لوحدة الأعمال الاستراتيجية للاستثمار في وحدات أخرى. والمنتج ABC في مرحلة البقرة النقدية من دورة حياته."
   },
   {
     "unit": 12,
