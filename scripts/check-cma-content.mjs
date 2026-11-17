@@ -585,6 +585,7 @@ const staticArabicVol2 = new Set([
   ...[1,2,3,4,5,6,7,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27]
     .map(n=>"12.1."+n),
   ...[1,2,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,33,34].map(n=>"12.2."+n),
+  ...[1,2,3,4,5,6,7,9,11,12,13,14,15,16,17,18,19,20,21,22,33,37,42,43,45,46,47,48,49,50,51].map(n=>"12.3."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -620,10 +621,13 @@ for (const [key, original] of vol2Records) {
   }
 }
 console.log("Verified all 58 Unit 11 questions have built-in Arabic, with the remaining Volume 2 items marked as English-first.");
-console.log("Verified 23 static Arabic CMA Unit 12 §1 questions and 31 learning-curve questions in §2; 8 complex source layouts remain English-first and flagged.");
+console.log("Verified 23 Arabic Unit 12 §1, 31 Arabic §2, and 31 Arabic §3 source drafts; complex source layouts flagged for PDF review.");
 for (const key of [
   "12.1.8", "12.1.9", "12.1.13", "12.1.14", "12.1.28",
   "12.2.3", "12.2.4", "12.2.23",
+  "12.3.8", "12.3.10", "12.3.23", "12.3.24",
+  "12.3.27", "12.3.28", "12.3.29", "12.3.32",
+  "12.3.34", "12.3.35", "12.3.36",
 ]) {
   const [unit,section,number] = key.split(".");
   const record = vol2Records.get(key);

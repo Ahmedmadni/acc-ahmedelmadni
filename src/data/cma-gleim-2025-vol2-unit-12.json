@@ -1500,7 +1500,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected value analysis estimates future monetary value\nbased on forecasts and their related probabilities of\noccurrence. The expected value under uncertainty is found by\nmultiplying the probability of each outcome (event) by its\npayoff (conditional profit or loss) and summing the products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة النقدية المتوقعة لأحد الأفعال هي:",
+    "choicesAr": [
+      "مجموع الأرباح أو الخسائر المشروطة لكل حدث.",
+      "مجموع ناتج ضرب الربح أو الخسارة المشروطة لكل حدث في احتمال حدوثه.",
+      "الربح أو الخسارة المشروطة لأفضل حدث مضروبًا في احتمال حدوث كل حدث.",
+      "إيرادات الفعل مطروحًا منها تكاليفه."
+    ],
+    "explanationAr": "يقدّر تحليل القيمة المتوقعة القيمة النقدية المستقبلية اعتمادًا على التوقعات والاحتمالات المصاحبة لها. وتُحسب القيمة المتوقعة في ظروف عدم التأكد بضرب احتمال كل نتيجة (حدث) في عائدها (الربح أو الخسارة المشروطة)، ثم جمع هذه النواتج."
   },
   {
     "unit": 12,
@@ -1517,7 +1525,15 @@
     ],
     "answerIndex": 2,
     "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis, which\nexamines how the model’s outcomes change as the\nparameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب الشائع الذي يستخدمه المديرون لإدراك عدم التأكد المرتبط بالعناصر الفردية والحصول سريعًا على تقدير مالي لتبعات الأخطاء المحتملة في التنبؤ؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "تحليل منحنى التعلم.",
+      "تحليل الحساسية.",
+      "تحليل الانحدار."
+    ],
+    "explanationAr": "بعد صياغة المشكلة في صورة نموذج رياضي، يمكن تطبيق تحليل الحساسية عليه؛ إذ يدرس كيفية تغير نتائج النموذج مع تغير معلماته ومدخلاته."
   },
   {
     "unit": 12,
@@ -1534,7 +1550,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected value is calculated by weighting each sales\nestimate by the probability of its occurrence. Consequently,\nthe expected value of sales is $84,000 [($60,000 × .25) +\n($85,000 × .40) + ($100,000 × .35)]. Cost of goods sold is\ntherefore $67,200 ($84,000 × .80).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعد موزع بطاريات كاميرات المراقبة موازنة تكلفة البضاعة المباعة للعام المقبل. وقد قدّر المبيعات السنوية والاحتمالات المرتبطة بها كما يلي:\nالمبيعات المقدرة — الاحتمال\n$ 60,000 — 25%\n85,000 — 40%\n100,000 — 35%\nوتبلغ تكلفة البضاعة المباعة في المتوسط 80% من المبيعات.\nما القيمة المتوقعة لتكلفة البضاعة المباعة المدرجة في الموازنة؟",
+    "choicesAr": [
+      "$85,000",
+      "$84,000",
+      "$68,000",
+      "$67,200"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة من خلال ترجيح كل تقدير للمبيعات باحتمال تحققه. ولذلك تبلغ المبيعات المتوقعة $84,000، وفق المعادلة [($60,000 × .25) + ($85,000 × .40) + ($100,000 × .35)]. وبناء عليه تبلغ تكلفة البضاعة المباعة $67,200 ($84,000 × .80)."
   },
   {
     "unit": 12,
@@ -1551,7 +1575,15 @@
     ],
     "answerIndex": 3,
     "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis. Sensitivity\nanalysis examines how the model’s outcomes change as the\nparameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم المديرون نماذج القرار لتحليل بدائل كثيرة واختيار الأفضل للشركة. لكن النتائج الفعلية قد تختلف عما كان متوقعًا وقت اتخاذ القرار، وقد يتضح لاحقًا أن بديلًا لم يُختر كان أفضل. ما الأسلوب المناسب لتحليل البدائل من خلال تغيير المدخلات المتوقعة قبل اتخاذ القرار؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "البرمجة الخطية.",
+      "أسلوب مراجعة وتقييم البرامج (PERT).",
+      "تحليل الحساسية."
+    ],
+    "explanationAr": "بعد تمثيل المشكلة بنموذج رياضي، يمكن إخضاعه لتحليل الحساسية. ويفحص تحليل الحساسية كيفية تغير مخرجات النموذج عندما تتغير معلماته."
   },
   {
     "unit": 12,
@@ -1568,7 +1600,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The probability of selling between 201 and 400 units is 45%,\nand the probability of selling between 401 and 600 units is\n25%. Thus, the probability of selling between 201 and 600\nunits is the sum of these probabilities, or 70%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمثل الاحتمالات في الجدول التالي تقديرات مبيعات منتج جديد:\nالمبيعات (وحدة) — الاحتمال\n0-200 — 15%\n201-400 — 45%\n401-600 — 25%\n601-800 — 15%\nما احتمال بيع عدد وحدات يتراوح بين 201 و600 وحدة من هذا المنتج؟",
+    "choicesAr": [
+      "0%",
+      "11.25%",
+      "70%",
+      "25%"
+    ],
+    "explanationAr": "احتمال بيع ما بين 201 و400 وحدة هو 45%، واحتمال بيع ما بين 401 و600 وحدة هو 25%. ومن ثم فإن احتمال البيع بين 201 و600 وحدة هو مجموع الاحتمالين، أي 70%."
   },
   {
     "unit": 12,
@@ -1585,7 +1625,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The expected sales levels should be weighted by\nthe individual probabilities of their occurrence. The\nmidpoint of each sales level is used as the estimate\nfor that level. Thus, sales are expected to be 380\nunits.\n100 × 15% = 15\n300 × 45% = 135\n500 × 25% = 125\n700 × 15% = 105\n380",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمثل الاحتمالات في الجدول التالي تقديرات مبيعات منتج جديد:\nالمبيعات (وحدة) — الاحتمال\n0-200 — 15%\n201-400 — 45%\n401-600 — 25%\n601-800 — 15%\nإذا استُخدمت نقطة المنتصف لكل نطاق بوصفها أفضل تقدير له، فما أفضل تقدير للمبيعات المتوقعة للمنتج؟",
+    "choicesAr": [
+      "480",
+      "380",
+      "400",
+      "800"
+    ],
+    "explanationAr": "ينبغي ترجيح مستويات المبيعات المتوقعة باحتمالات تحققها، مع استخدام نقطة منتصف كل نطاق بوصفها تقديرًا لذلك المستوى. وعليه تُقدّر المبيعات بـ380 وحدة:\n100 × 15% = 15\n300 × 45% = 135\n500 × 25% = 125\n700 × 15% = 105\n380"
   },
   {
     "unit": 12,
@@ -1602,7 +1650,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected value of an action is found by multiplying the\nprobability of each possible outcome by its payoff and\nsumming the products. It represents the long-term average\npayoff for repeated trials. In other words, expected value is the\nweighted average of probable outcomes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في اتخاذ القرارات في ظل عدم التأكد، تشير القيمة المتوقعة إلى:",
+    "choicesAr": [
+      "النتيجة المرجح حدوثها لفعل مقترح.",
+      "القيمة الحالية للإجراءات البديلة.",
+      "احتمال تحقق نتيجة معينة لفعل مقترح.",
+      "المتوسط المرجح لنتائج الفعل المحتملة."
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للفعل بضرب احتمال كل نتيجة محتملة في عائدها، ثم جمع النواتج. وتمثل متوسط العائد على المدى الطويل عند تكرار التجارب؛ أي إنها المتوسط المرجح للنتائج المحتملة."
   },
   {
     "unit": 12,
@@ -1636,7 +1692,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The expected value of the land is determined by multiplying\nthe probability of each state of nature by the value under that\nparticular state of nature and adding all of the products. Thus,\nthe land’s expected value is $195,000 [(0.5)($200,000) +\n(0.4)($100,000) + (0.1)($550,000)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحاول مديرو شركة تحديد قيمة قطعة أرض تمتلكها. من الحالات المستقبلية المحتملة رصف الطريق القديم المحاذي للأرض، أو عدم رصفه، أو إزالته بالكامل واستبداله بطريق جديد. في ضوء الحالات المستقبلية واحتمالاتها وقيم الأرض التالية، ما القيمة المتوقعة للأرض؟\nالحالة المستقبلية — الاحتمال\nSN 1: رصف الطريق الحالي — .5\nSN 2: عدم رصف الطريق — .4\nSN 3: إزالة الطريق الحالي واستبداله — .1\nالقيمة المقدرة للأرض في كل حالة:\nقيمة الأرض عند SN 1: $200,000\nقيمة الأرض عند SN 2: $100,000\nقيمة الأرض عند SN 3: $550,000",
+    "choicesAr": [
+      "$133,333",
+      "$195,000",
+      "$225,000",
+      "$283,333"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للأرض بضرب احتمال كل حالة مستقبلية في قيمة الأرض عند تحققها، ثم جمع النواتج. وبالتالي تبلغ القيمة المتوقعة $195,000 [(0.5)($200,000) + (0.4)($100,000) + (0.1)($550,000)]."
   },
   {
     "unit": 12,
@@ -1670,7 +1734,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Each outage costs $800, but this expense can be avoided by\npaying $1,000 per month ($12,000 for the year). The\nexpected-value approach uses the probability distribution\nderived from past experience to determine the average\nexpected outages per month.\n3 ÷ 12 × 0 = 0.0\n2 ÷ 12 × 1 = 0.16667\n4 ÷ 12 × 2 = 0.66667\n3 ÷ 12 × 3 = 0.75000\n1.58334\nThe company can expect to have, on average, 1.58334\noutages per month. At $800 per outage, the expected cost is\n$1,266.67. Thus, paying $1,000 to avoid an expense of\n$1,266.67 saves $266.67 per month, or $3,200 per year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنوات الأخيرة، سجّلت إحدى الشركات متوسط عدد انقطاعات الكهرباء التالي:\nعدد الانقطاعات شهريًا — عدد الأشهر\n0 — 3\n1 — 2\n2 — 4\n3 — 3\n12\nيتسبب كل انقطاع في تكاليف نقدية تبلغ $800. ويمكن للشركة استئجار مولد كهرباء مقابل $1,000 شهريًا لتوفير الكهرباء أثناء الانقطاع. إذا استأجرت الشركة المولد في السنة القادمة، فما التوفير المتوقع (أو المصروف الإضافي) خلال السنة؟",
+    "choicesAr": [
+      "$(15,200)",
+      "$(1,267)",
+      "$3,200",
+      "$7,200"
+    ],
+    "explanationAr": "تبلغ تكلفة كل انقطاع $800، ويمكن تجنبها بدفع $1,000 شهريًا ($12,000 سنويًا). ويستخدم أسلوب القيمة المتوقعة توزيع الاحتمالات المستمد من الخبرة السابقة لتقدير متوسط عدد الانقطاعات الشهرية:\n3 ÷ 12 × 0 = 0.0\n2 ÷ 12 × 1 = 0.16667\n4 ÷ 12 × 2 = 0.66667\n3 ÷ 12 × 3 = 0.75000\n1.58334\nوبذلك تتوقع الشركة متوسطًا قدره 1.58334 انقطاع شهريًا. وعند تكلفة $800 للانقطاع الواحد، تبلغ التكلفة المتوقعة $1,266.67. وعليه فإن دفع $1,000 لتجنب مصروف قدره $1,266.67 يحقق توفيرًا شهريًا $266.67، أو $3,200 سنويًا."
   },
   {
     "unit": 12,
@@ -1687,7 +1759,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The calculation using an expected value approach weights\neach possible sales volume by its probability. Thus, the\nestimated demand is 4,400 pretzels.\nVolume Probability Result\n2,000 ×      .10     =    200\n3,000 ×      .15     =    450\n4,000 ×      .20     =    800\n5,000 ×      .35     = 1,750\n6,000 ×      .20     = 1,200\nExpected value       4,400",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع جمعية الشرف الطلابية في كلية ما المخبوزات المالحة الساخنة خلال مباريات كرة القدم المقامة على ملعب الكلية. ويُباع كل صنف بسعر $1.00 وتبلغ تكلفته $.30. وتُتلف الكميات غير المباعة لأنها ستصبح قديمة قبل المباراة التالية.\nوفيما يلي التوزيع الاحتمالي للطلب خلال المباراة:\nحجم المبيعات — الاحتمال\n2,000 قطعة — .10\n3,000 قطعة — .15\n4,000 قطعة — .20\n5,000 قطعة — .35\n6,000 قطعة — .20\nما الطلب المتوقع على المخبوزات في المباراة المقبلة باستخدام أسلوب القيمة المتوقعة؟",
+    "choicesAr": [
+      "4,000 قطعة.",
+      "4,400 قطعة.",
+      "5,000 قطعة.",
+      "كمية أخرى غير الكميات الواردة."
+    ],
+    "explanationAr": "في أسلوب القيمة المتوقعة، يُرجح كل حجم مبيعات محتمل باحتمال حدوثه. لذا يكون الطلب المتوقع 4,400 قطعة:\nالحجم — الاحتمال — الناتج\n2,000 × .10 = 200\n3,000 × .15 = 450\n4,000 × .20 = 800\n5,000 × .35 = 1,750\n6,000 × .20 = 1,200\nالقيمة المتوقعة = 4,400"
   },
   {
     "unit": 12,
@@ -1704,7 +1784,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A deterministic approach assumes that a value is known with\ncertainty. If that value is deemed to be the most likely\noutcome, assumed demand will be 5,000 pretzels, the volume\nwith the highest probability (35%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع جمعية الشرف الطلابية في كلية ما المخبوزات المالحة الساخنة خلال مباريات كرة القدم المقامة على ملعب الكلية. ويُباع كل صنف بسعر $1.00 وتبلغ تكلفته $.30. وتُتلف الكميات غير المباعة لأنها ستصبح قديمة قبل المباراة التالية.\nوفيما يلي التوزيع الاحتمالي للطلب خلال المباراة:\nحجم المبيعات — الاحتمال\n2,000 قطعة — .10\n3,000 قطعة — .15\n4,000 قطعة — .20\n5,000 قطعة — .35\n6,000 قطعة — .20\nما الطلب المقدر في المباراة التالية باستخدام أسلوب حتمي يعتمد على النتيجة الأكثر احتمالًا؟",
+    "choicesAr": [
+      "4,000 قطعة.",
+      "4,400 قطعة.",
+      "5,000 قطعة.",
+      "6,000 قطعة."
+    ],
+    "explanationAr": "يفترض الأسلوب الحتمي أن قيمة معينة معلومة على وجه اليقين. وإذا كانت هذه القيمة هي النتيجة الأكثر احتمالًا، فسيكون الطلب المفترض 5,000 قطعة، لأنها الكمية ذات الاحتمال الأكبر (35%)."
   },
   {
     "unit": 12,
@@ -1721,7 +1809,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Each pretzel costs $.30. Thus, the cost of 4,000 pretzels is\n$1,200 (4,000 × $.30). Selling 3,000 pretzels at $1 each\nproduces revenue of $3,000. Subtracting the $1,200 of costs\nfrom the $3,000 of revenue results in a conditional profit of\n$1,800.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع جمعية الشرف الطلابية في كلية ما المخبوزات المالحة الساخنة خلال مباريات كرة القدم المقامة على ملعب الكلية. ويُباع كل صنف بسعر $1.00 وتبلغ تكلفته $.30. وتُتلف الكميات غير المباعة لأنها ستصبح قديمة قبل المباراة التالية.\nوفيما يلي التوزيع الاحتمالي للطلب خلال المباراة:\nحجم المبيعات — الاحتمال\n2,000 قطعة — .10\n3,000 قطعة — .15\n4,000 قطعة — .20\n5,000 قطعة — .35\n6,000 قطعة — .20\nما الربح المشروط في المباراة إذا وفّرت الجمعية 4,000 قطعة، لكنها باعت 3,000 قطعة فقط؟",
+    "choicesAr": [
+      "$1,800",
+      "$2,100",
+      "$2,800",
+      "مبلغ آخر غير المبالغ الواردة."
+    ],
+    "explanationAr": "تبلغ تكلفة القطعة $.30؛ ولذلك تكون تكلفة 4,000 قطعة $1,200 (4,000 × $.30). وتحقق مبيعات 3,000 قطعة بسعر $1 للقطعة إيرادًا قدره $3,000. وبطرح تكلفة $1,200 من إيرادات $3,000 ينتج ربح مشروط قدره $1,800."
   },
   {
     "unit": 12,
@@ -1738,7 +1834,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Each pretzel costs $.30. Thus, the cost of 4,000 pretzels is\n$1,200 (4,000 × $.30). Selling 4,000 pretzels at $1 each\nproduces revenue of $4,000. Subtracting the $1,200 of costs\nfrom the $4,000 of revenue results in a conditional profit of\n$2,800.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع جمعية الشرف الطلابية في كلية ما المخبوزات المالحة الساخنة خلال مباريات كرة القدم المقامة على ملعب الكلية. ويُباع كل صنف بسعر $1.00 وتبلغ تكلفته $.30. وتُتلف الكميات غير المباعة لأنها ستصبح قديمة قبل المباراة التالية.\nوفيما يلي التوزيع الاحتمالي للطلب خلال المباراة:\nحجم المبيعات — الاحتمال\n2,000 قطعة — .10\n3,000 قطعة — .15\n4,000 قطعة — .20\n5,000 قطعة — .35\n6,000 قطعة — .20\nما الربح المشروط في المباراة إذا وفرت الجمعية 4,000 قطعة وباعت جميع الـ4,000 قطعة؟",
+    "choicesAr": [
+      "$1,200",
+      "$2,100",
+      "$2,800",
+      "$800"
+    ],
+    "explanationAr": "تبلغ تكلفة القطعة $.30، لذلك فإن تكلفة 4,000 قطعة هي $1,200 (4,000 × $.30). وتحقق مبيعات 4,000 قطعة بسعر $1 للقطعة إيرادًا قدره $4,000. وبطرح تكلفة $1,200 من إيرادات $4,000 يتحقق ربح مشروط قدره $2,800."
   },
   {
     "unit": 12,
@@ -1755,7 +1859,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The expected value of an action is found by multiplying the\nprobability of each possible outcome by its payoff and\nsumming the products. It represents the long-term average\npayoff for repeated trials. If estimates of sales and\nprobabilities are known, expected value analysis can be used\nto determine budgeted sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة موازنتها، وقد أعدت ضمن هذه العملية تقديرات للمبيعات وحددت احتمال تحقق كل تقدير. أي الأساليب التالية ينبغي أن تستخدمه لتحديد المبيعات لأغراض الموازنة؟",
+    "choicesAr": [
+      "البرمجة الخطية.",
+      "معيار تقليل أكبر ندم (Minimax regret).",
+      "تحليل القيمة المتوقعة.",
+      "محاكاة مونت كارلو."
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للفعل بضرب احتمال كل نتيجة محتملة في عائدها وجمع النواتج. وتمثل متوسط العائد على المدى الطويل عند تكرار التجربة. وإذا كانت تقديرات المبيعات واحتمالات تحققها معلومة، فيمكن استخدام تحليل القيمة المتوقعة لتحديد مبيعات الموازنة."
   },
   {
     "unit": 12,
@@ -1772,7 +1884,15 @@
     ],
     "answerIndex": 1,
     "explanation": "For decisions involving risk, the concept of expected value\nprovides a rational means for selecting the best alternative.\nThe expected value of a decision is found by multiplying the\nprobability of each outcome by its payoff, and summing the\nproducts. The result is the long-term average payoff for\nrepeated trials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة النقدية المتوقعة لحدث ما:",
+    "choicesAr": [
+      "تساوي القيمة أو الربح المشروط للحدث.",
+      "تساوي عائد الحدث مضروبًا في احتمال وقوعه.",
+      "تمثل الربح الذي فُوّت نتيجة عدم اختيار البديل الأفضل.",
+      "تمثل الربح المطلق الناتج عن حدث معين."
+    ],
+    "explanationAr": "عند اتخاذ قرارات تنطوي على مخاطر، توفر القيمة المتوقعة أساسًا عقلانيًا لاختيار البديل الأفضل. وتُحسب القيمة المتوقعة للقرار بضرب احتمال كل نتيجة في عائدها، ثم جمع النواتج؛ وتمثل النتيجة متوسط العائد طويل الأجل عبر التجارب المتكررة."
   },
   {
     "unit": 12,
@@ -1789,7 +1909,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected value analysis is an estimate of future monetary\nvalue based on forecasts and their related probabilities of\noccurrence. The expected value is found by multiplying the\nprobability of each outcome by its payoff and summing the\nproducts. Expected value is therefore an arithmetic mean\nusing probabilities as weights.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة المتوقعة في تحليل القرارات هي:",
+    "choicesAr": [
+      "انحراف معياري تُستخدم فيه الاحتمالات بوصفها أوزانًا.",
+      "متوسط حسابي تُستخدم فيه الاحتمالات بوصفها أوزانًا.",
+      "الجذر التربيعي لمربعات الانحرافات.",
+      "مقياس الفرق بين أفضل نتيجة ممكنة ونتيجة القرار الأصلي."
+    ],
+    "explanationAr": "تحليل القيمة المتوقعة هو تقدير للقيمة النقدية المستقبلية يعتمد على التوقعات واحتمالات تحققها. وتُحسب القيمة المتوقعة بضرب احتمال كل نتيجة في عائدها وجمع النواتج؛ ومن ثم فهي متوسط حسابي موزون بالاحتمالات."
   },
   {
     "unit": 12,
@@ -1806,7 +1934,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Perfect information permits certainty that a future state of\nnature will occur. The expected value of perfect information\ndetermines the maximum amount a decision maker is willing\nto pay for information. It is the difference between the\nexpected value without perfect information, that is, the\nexpected value of the best action under uncertainty and the\nexpected value under certainty. Under certainty, a decision\nmaker knows in each case which state of nature will occur and\ncan act accordingly.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة المتوقعة للمعلومات الكاملة تساوي:",
+    "choicesAr": [
+      "الربح المتوقع في حالة اليقين.",
+      "مجموع الأرباح أو الخسائر المشروطة لأفضل حدث من كل فعل مضروبًا في احتمال حدوث كل حدث.",
+      "الفرق بين الربح المتوقع في حالة اليقين وخسارة الفرصة المتوقعة.",
+      "الفرق بين الربح المتوقع في حالة اليقين والقيمة النقدية المتوقعة لأفضل فعل في ظل عدم التأكد."
+    ],
+    "explanationAr": "تتيح المعلومات الكاملة معرفة الحالة المستقبلية التي ستقع على وجه اليقين. وتحدد القيمة المتوقعة للمعلومات الكاملة الحد الأقصى الذي يكون متخذ القرار مستعدًا لدفعه للحصول عليها. وتحسب بطرح القيمة المتوقعة لأفضل قرار في ظل عدم التأكد من القيمة المتوقعة عند معرفة الحالة المستقبلية يقينًا. وفي حالة اليقين يعرف متخذ القرار أي حالة ستحدث ويمكنه اختيار القرار الأمثل لها."
   },
   {
     "unit": 12,
@@ -1823,7 +1959,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The Booster Club should select the demand level that\nmaximizes profits, that is, the level with the greatest expected\nmonetary value. This level may not include the event with the\nhighest conditional profit because this profit may be\naccompanied by a low probability of occurrence. Alternatively,\nthe event with the highest probability of occurrence may not\nbe selected because it does not offer a high conditional profit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبيع نادي المشجعين في كلية Blair شطائر النقانق خلال مباريات كرة السلة على ملعب الكلية. ولدى النادي توزيع تكراري للطلب في كل مباراة، ويرغب في استخدام قاعدة قرار القيمة المتوقعة لتحديد عدد الشطائر التي ينبغي تخزينها. يجب أن يختار النادي مستوى الطلب الذي:",
+    "choicesAr": [
+      "يكون الأقرب إلى الطلب المتوقع.",
+      "يكون احتمال حدوثه هو الأعلى.",
+      "تكون تكلفة الفرصة المتوقعة فيه هي الأعلى.",
+      "يحقق أعلى قيمة نقدية متوقعة."
+    ],
+    "explanationAr": "ينبغي أن يختار النادي مستوى الطلب الذي يعظم الأرباح، أي المستوى الذي يحقق أعلى قيمة نقدية متوقعة. وقد لا يكون هذا المستوى هو صاحب أعلى ربح مشروط إذا كان احتمال تحققه ضعيفًا. وبالمثل، قد لا يكون المستوى الأكثر احتمالًا هو الأفضل لأنه قد لا يحقق ربحًا مشروطًا مرتفعًا."
   },
   {
     "unit": 12,
@@ -1840,7 +1984,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The expected demand is 300,000 units [(.4 × 200,000) + (.3 ×\n300,000) + (.2 × 400,000) + (.1 × 500,000)]. Total expected\ncost is therefore $170,000 [$50,000 fixed cost + ($.40 ×\n300,000) variable cost].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة ثلاث آلات بديلة لإنتاج منتج جديد. وتتمثل هياكل التكلفة (التكلفة المتغيرة للوحدة مضافًا إليها التكاليف الثابتة الممكن تجنبها) فيما يلي، مع ثبات سعر البيع بغض النظر عن الآلة:\nآلة مخصصة لغرض واحد: $.60x + $20,000\nآلة شبه آلية: $.40x + $50,000\nآلة آلية بالكامل: $.20x + $120,000\nويتوزع الطلب المتوقع على المنتج كما يلي:\nالطلب — الاحتمال\n200,000 — 0.4\n300,000 — 0.3\n400,000 — 0.2\n500,000 — 0.1\nمع تجاهل القيمة الزمنية للنقود، ما التكلفة المتوقعة لاستخدام الآلة شبه الآلية؟",
+    "choicesAr": [
+      "$170,000",
+      "$130,000",
+      "$210,000",
+      "$250,000"
+    ],
+    "explanationAr": "يبلغ الطلب المتوقع 300,000 وحدة وفق الحساب [(.4 × 200,000) + (.3 × 300,000) + (.2 × 400,000) + (.1 × 500,000)]. ولذلك تكون التكلفة المتوقعة الإجمالية $170,000، أي [$50,000 تكاليف ثابتة + ($.40 × 300,000) تكاليف متغيرة]."
   },
   {
     "unit": 12,
@@ -1857,7 +2009,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The semiautomatic machine has an expected cost of\n$170,000 based on an expected demand of 300,000 units [(.4\n× 200,000) + (.3 × 300,000) + (.2 × 400,000) + (.1 × 500,000)].\nThe single purpose machine has an expected cost of\n$200,000 [($.60 × 300,000) + $20,000]. The automatic\nmachine has an expected cost of $180,000 [($.20 × 300,000)\n+ $120,000)]. Hence, the semiautomatic machine has the\nlowest expected cost at the expected level of demand.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة ثلاث آلات بديلة لإنتاج منتج جديد. وتتمثل هياكل التكلفة (التكلفة المتغيرة للوحدة مضافًا إليها التكاليف الثابتة الممكن تجنبها) فيما يلي، مع ثبات سعر البيع بغض النظر عن الآلة:\nآلة مخصصة لغرض واحد: $.60x + $20,000\nآلة شبه آلية: $.40x + $50,000\nآلة آلية بالكامل: $.20x + $120,000\nويتوزع الطلب المتوقع على المنتج كما يلي:\nالطلب — الاحتمال\n200,000 — 0.4\n300,000 — 0.3\n400,000 — 0.2\n500,000 — 0.1\nباستخدام معيار القيمة المتوقعة، ما الخيار الأفضل؟",
+    "choicesAr": [
+      "استخدام الآلة ذات الغرض الواحد نظرًا لانخفاض الطلب المتوقع.",
+      "استخدام الآلة الآلية بالكامل نظرًا لارتفاع الطلب المتوقع.",
+      "استخدام الآلة شبه الآلية لأنها تحقق أقل تكلفة متوقعة.",
+      "الآلة الآلية بالكامل هي صاحبة أقل تكلفة متوقعة."
+    ],
+    "explanationAr": "تبلغ التكلفة المتوقعة للآلة شبه الآلية $170,000 استنادًا إلى طلب متوقع قدره 300,000 وحدة [(.4 × 200,000) + (.3 × 300,000) + (.2 × 400,000) + (.1 × 500,000)]. وتبلغ التكلفة المتوقعة للآلة ذات الغرض الواحد $200,000، أي [($.60 × 300,000) + $20,000]. أما الآلة الآلية بالكامل فتبلغ تكلفتها المتوقعة $180,000، أي [($.20 × 300,000) + $120,000)]. وبذلك تكون الآلة شبه الآلية الأقل تكلفة عند مستوى الطلب المتوقع."
   },
   {
     "unit": 12,
@@ -2044,7 +2204,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Expected value analysis provides a rational means for\nselecting the best alternative in decisions involving risk. The\nexpected value of an alternative is found by multiplying the\nprobability of each outcome by its payoff and summing the\nproducts. It represents the long-term average payoff for\nrepeated trials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد شركة موازنتها. وبالنظر إلى وتيرة التعافي الاقتصادي الأخيرة، طورت عدة توقعات للمبيعات مع احتمال تحقق كل توقع. ما الأسلوب الذي ينبغي استخدامه لتحديد توقع المبيعات الذي ستعتمد عليه الموازنة؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "المحاكاة الاحتمالية المستمرة.",
+      "تحليل التوزيع الأسي.",
+      "تحليل الحساسية."
+    ],
+    "explanationAr": "يوفر تحليل القيمة المتوقعة أساسًا عقلانيًا لاختيار أفضل البدائل عندما تنطوي القرارات على مخاطر. وتُحسب قيمة البديل المتوقعة بضرب احتمال كل نتيجة في عائدها وجمع النواتج، وتمثل متوسط العائد على المدى الطويل عند تكرار التجربة."
   },
   {
     "unit": 12,
@@ -2112,7 +2280,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected value is calculated by multiplying the probability\nof each outcome by the results of the outcome, which is done\nas follows:\nExpected value = (10% × 180) + (40% × 200) + (30% × 240)\n+ (20% × 250)\n= 18 + 80 + 72 + 50\n= $220",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حققت الشركة مبيعات بقيمة $200 مليون في السنة الماضية. وترى وجود احتمال بنسبة 10% لانخفاض مبيعات السنة الحالية إلى $180 مليون بسبب فقدان عميل رئيسي. كما تتوقع احتمال 40% لبقاء المبيعات ثابتة، واحتمال 30% لارتفاعها إلى $240 مليون، واحتمال 20% لارتفاعها إلى $250 مليون. ما القيمة المتوقعة لمبيعات السنة الحالية بالملايين؟",
+    "choicesAr": [
+      "$160",
+      "$184",
+      "$202",
+      "$220"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة بضرب احتمال كل نتيجة في قيمتها وجمع النواتج:\nالقيمة المتوقعة = (10% × 180) + (40% × 200) + (30% × 240)\n+ (20% × 250)\n= 18 + 80 + 72 + 50\n= $220"
   },
   {
     "unit": 12,
@@ -2197,7 +2373,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Expected value is a means of associating an amount with\neach of the possible outcomes of a probability distribution. A\nprobability distribution can be used to project sales. It is a\nmathematical method for making decisions about the\nlikelihood of future events (such as sales) in the face of\nuncertainty. Various estimates of sales (generated from the\nsales force) can be weighted with different probabilities to\ndetermine expected value",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب الكمي الذي يساعد على التنبؤ بمبيعات المنشأة وأرباحها؟",
+    "choicesAr": [
+      "نظرية التوزيعات الاحتمالية.",
+      "مخططات جانت.",
+      "منحنيات التعلم.",
+      "نظرية صفوف الانتظار."
+    ],
+    "explanationAr": "تربط القيمة المتوقعة مبلغًا بكل نتيجة ممكنة في توزيع احتمالي. ويمكن استخدام التوزيع الاحتمالي للتنبؤ بالمبيعات، وهو طريقة رياضية لاتخاذ قرارات بشأن احتمالات الأحداث المستقبلية مثل المبيعات في ظل عدم التأكد. ويمكن ترجيح تقديرات المبيعات المختلفة، التي يجمعها فريق المبيعات، باحتمالات متنوعة لحساب القيمة المتوقعة."
   },
   {
     "unit": 12,
@@ -2214,7 +2398,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The forecasted sale of 433,750 units is found by weighting the\nvarious possible levels of sales by the probability of each level\noccurring.\n550,000 × 20% = 110,000\n475,000 × 35% = 166,250\n350,000 × 45% = 157,500\nTotal = 433,750",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتنبأ شركة ألعاب بمبيعات لعبة جديدة، وقد حددت تقديرات الوحدات المباعة والاحتمالات:\nالوحدات المباعة — الاحتمال\n550,000 — 20%\n475,000 — 35%\n350,000 — 45%\nكم وحدة ينبغي أن تتوقع الشركة بيعها؟",
+    "choicesAr": [
+      "350,000",
+      "433,750",
+      "458,288",
+      "1,375,000"
+    ],
+    "explanationAr": "يُحسب توقع المبيعات البالغ 433,750 وحدة بضرب كل مستوى محتمل في احتمال تحققه وجمع النواتج:\n550,000 × 20% = 110,000\n475,000 × 35% = 166,250\n350,000 × 45% = 157,500\nالإجمالي = 433,750"
   },
   {
     "unit": 12,
@@ -2248,7 +2440,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The calculation of the $2,975,000 expected cost is as follows:\n.15 × $2,000,000 = $ 300,000\n.45 × $2,500,000 = 1,125,000\n.30 × $3,500,000 = 1,050,000\n.10 × $5,000,000 =     500,000\nTotal $2,975,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قدّر المحاسب تكاليف إصلاح مرافق المصنع للموازنة التشغيلية للسنة المقبلة، وحدد التوزيع الاحتمالي بعد مراجعة تكاليف الإصلاح السابقة:\nالاحتمال — تكلفة الإصلاح\n15% — $2,000,000\n45% — 2,500,000\n30% — 3,500,000\n10% — 5,000,000\nما قيمة تكلفة الإصلاح التي ينبغي توقعها في الموازنة التشغيلية القادمة؟",
+    "choicesAr": [
+      "$1,850,000",
+      "$1,925,000",
+      "$2,975,000",
+      "$3,250,000"
+    ],
+    "explanationAr": "تُحسب تكلفة الإصلاح المتوقعة $2,975,000 كما يلي:\n.15 × $2,000,000 = $ 300,000\n.45 × $2,500,000 = 1,125,000\n.30 × $3,500,000 = 1,050,000\n.10 × $5,000,000 = 500,000\nالإجمالي $2,975,000"
   },
   {
     "unit": 12,
@@ -2265,7 +2465,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution. This type of\nanalysis helps management analyze alternatives and estimate\nthe consequences of possible prediction errors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحلل الرئيس التنفيذي لشركة Marx فرصة استثمارية تبلغ $100,000. ويَعِد الاستثمار بعائد قدره $10,000 سنويًا وبمعدل عائد 5%. ويستند مبلغ $100,000 إلى تقدير. ويريد الرئيس التنفيذي معرفة مدى قبول الاستثمار إذا انخفض العائد إلى $60,000 سنويًا فقط. ما نوع التحليل الواجب إجراؤه؟",
+    "choicesAr": [
+      "تحليل الحساسية.",
+      "تحليل التعلم بمتوسط الزمن التراكمي.",
+      "تحليل منحنى التعلم.",
+      "تحليل PEST."
+    ],
+    "explanationAr": "تحليل الحساسية هو تقييم أثر تغير المتغيرات على الحل الأمثل. ويساعد الإدارة على تحليل البدائل وتقدير آثار أخطاء التنبؤ المحتملة."
   },
   {
     "unit": 12,
@@ -2282,7 +2490,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution. Sensitivity\nanalysis reveals how sensitive expected value calculations are\nto the accuracy of the initial estimates. As a result, it is useful\nin determining whether expending additional resources to\nobtain better forecasts is justified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عيّنت الشركة A مؤخرًا مديرًا ماليًا لتحسين إدارة المشاريع. ويرغب المدير في تطبيق نوع جديد من تحليل المشاريع يتيح تقييم آثار التغيرات الصغيرة في المتغيرات على الحل الإجمالي. ويعتقد أن هذا النوع سيساعد في تحديد ما إذا كانت هناك جدوى من إنفاق موارد إضافية للحصول على توقعات أفضل. ما التحليل الذي يصف هذه الطريقة؟",
+    "choicesAr": [
+      "الانحدار البسيط.",
+      "تحليل منحنى التعلم.",
+      "تحليل الحساسية.",
+      "تحليل SWOT."
+    ],
+    "explanationAr": "تحليل الحساسية هو عملية تقييم تأثير التغيرات في المتغيرات على الحل الأمثل، ويوضح مدى حساسية حسابات القيمة المتوقعة لدقة التقديرات الأولية. ولذلك يفيد في تحديد ما إذا كان إنفاق موارد إضافية للحصول على توقعات أكثر دقة مبررًا."
   },
   {
     "unit": 12,
@@ -2299,7 +2515,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن تحليل الحساسية غير صحيحة؟",
+    "choicesAr": [
+      "يُستخدم تحليل الحساسية لتقييم أثر تغير المتغيرات على الحل الأقل مثالية.",
+      "يفيد تحليل الحساسية في تحديد ما إذا كانت نفقات إضافية للحصول على توقعات أفضل مبررة.",
+      "ينطوي تحليل الحساسية بطبيعته على أسلوب التجربة والخطأ.",
+      "يفيد تحليل الحساسية في إعداد الموازنات الرأسمالية."
+    ],
+    "explanationAr": "تحليل الحساسية هو عملية تقييم أثر تغير المتغيرات على الحل الأمثل."
   },
   {
     "unit": 12,
@@ -2316,7 +2540,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Sensitivity analysis reveals how sensitive expected value\ncalculations are to the accuracy of initial estimates. As such,\nsensitivity analysis is useful in determining whether expending\nadditional resources to obtain better forecasts is justified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن تحليل الحساسية صحيحة؟",
+    "choicesAr": [
+      "لا يساعد تحليل الحساسية في تقدير عواقب أخطاء التنبؤ المحتملة.",
+      "يفيد تحليل الحساسية في تبرير إنفاق موارد إضافية للحصول على توقعات أفضل.",
+      "من قيود تحليل الحساسية أن المديرين لا يستطيعون رؤية أثر تغيير الافتراضات على الهدف النهائي.",
+      "لا يمكن استخدام تحليل الحساسية في الموازنات الرأسمالية."
+    ],
+    "explanationAr": "يوضح تحليل الحساسية مدى حساسية حسابات القيمة المتوقعة لدقة التقديرات الأولية؛ ومن ثم يفيد في تحديد ما إذا كان إنفاق موارد إضافية للحصول على توقعات أكثر دقة مبررًا."
   },
   {
     "unit": 12,
@@ -2333,7 +2565,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Simulation describes the behavior of a real-world system over\ntime. It ordinarily uses a computer program to perform the\nsimulation computations. Sensitivity analysis examines how\noutcomes change as the model parameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقرر شركة ما إذا كانت ستشتري آلة آلية لتصنيع أحد منتجاتها. وتعتمد التدفقات النقدية الصافية المتوقعة على عدة عوامل وتفاعلات فيما بينها واحتمالات مستوياتها المختلفة. ما الأسلوب المناسب لتقييم توزيع التدفقات النقدية الصافية وتغيرها عند تغير مستويات تلك العوامل؟",
+    "choicesAr": [
+      "المحاكاة وتحليل الحساسية.",
+      "البرمجة الخطية.",
+      "تحليل الارتباط.",
+      "التحليل التفاضلي."
+    ],
+    "explanationAr": "تصف المحاكاة سلوك نظام واقعي على مدار الزمن، وتستخدم عادة برنامجًا حاسوبيًا لإجراء الحسابات. ويفحص تحليل الحساسية كيفية تغير النتائج عندما تتغير معاملات النموذج."
   },
   {
     "unit": 12,
@@ -2350,7 +2590,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To calculate the expected value of the budgeted cost of goods\nsold (COGS), first find the COGS amount associated with\neach sales estimate by multiplying each estimate by 80%:\n$120,000 × 80% = $96,000\n$170,000 × 80% = $136,000\n$200,000 × 80% = $160,000\nNext, find the weighted COGS for each estimate by multiplying\nthe estimated COGS by its probability:\n$96,000 × 25% = $24,000\n$136,000 × 40% = $54,400\n$160,000 × 35% = $56,000\nFinally, find the total expected value of the company’s\nbudgeted COGS by adding each of the expected values\ntogether:\n$24,000 + $54,400 + $56,000 = $134,400",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة موازنتها للشهر المقبل، وحدد قسم التخطيط المالي مستويات المبيعات والاحتمالات المصاحبة:\nتقدير المبيعات — الاحتمال\n$120,000 — 25%\n170,000 — 40%\n200,000 — 35%\nوتبلغ تكلفة البضاعة المباعة في المتوسط 80% من المبيعات، ويتوقع استمرار العلاقة خلال السنة المالية المقبلة. ما القيمة المتوقعة لتكلفة البضاعة المباعة في الموازنة؟",
+    "choicesAr": [
+      "$134,400",
+      "$136,000",
+      "$168,000",
+      "$170,000"
+    ],
+    "explanationAr": "لحساب القيمة المتوقعة لتكلفة البضاعة المباعة (COGS)، نحسب أولًا التكلفة المرتبطة بكل توقع للمبيعات بضرب التقدير في 80%:\n$120,000 × 80% = $96,000\n$170,000 × 80% = $136,000\n$200,000 × 80% = $160,000\nثم نضرب تكلفة كل مستوى في احتمال تحققه:\n$96,000 × 25% = $24,000\n$136,000 × 40% = $54,400\n$160,000 × 35% = $56,000\nوأخيرًا نجمع القيم المتوقعة لتكلفة البضاعة المباعة:\n$24,000 + $54,400 + $56,000 = $134,400"
   },
   {
     "unit": 12,

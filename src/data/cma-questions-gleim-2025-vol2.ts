@@ -50,6 +50,9 @@ const topics = new Map(CMA_TOPICS.map((topic) => [topic.id, topic]));
 const pendingSourceLayouts = new Set([
   "12.1.8", "12.1.9", "12.1.13", "12.1.14", "12.1.28",
   "12.2.3", "12.2.4", "12.2.23",
+  "12.3.8", "12.3.10", "12.3.23", "12.3.24",
+  "12.3.27", "12.3.28", "12.3.29", "12.3.32",
+  "12.3.34", "12.3.35", "12.3.36",
 ]);
 
 /** Source-language items retain their English text while Arabic translation is reviewed. */
