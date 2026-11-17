@@ -314,7 +314,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In conventional financial statements, customer service costs\nare generally part of sales and administrative costs and not\nassociated with a product. In value-chain statements,\ncustomer service is treated as part of the value chain and\ntherefore associated with product cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترغب شركة في إعداد مجموعتين من القوائم المالية: قوائم مالية تقليدية وأخرى متوافقة تمامًا مع تحليل سلسلة القيمة. كيف تُعامل تكاليف خدمة العملاء في كلتا المجموعتين؟\nالقوائم المالية التقليدية       قوائم سلسلة القيمة",
+    "choicesAr": [
+      "تكلفة قابلة للتخزين — تكلفة منتج.",
+      "تكلفة قابلة للتخزين — تكلفة غير مرتبطة بالمنتج.",
+      "تكلفة غير قابلة للتخزين — تكلفة منتج.",
+      "تكلفة غير قابلة للتخزين — تكلفة غير مرتبطة بالمنتج."
+    ],
+    "explanationAr": "في القوائم المالية التقليدية، تُدرج تكاليف خدمة العملاء عادة ضمن تكاليف البيع والإدارة ولا تُنسب إلى منتج بعينه. أما في القوائم المعدة وفق سلسلة القيمة، فتُعامل خدمة العملاء بوصفها جزءًا من سلسلة القيمة، وبالتالي تُنسب إلى تكلفة المنتج."
   },
   {
     "unit": 11,
@@ -331,7 +339,15 @@
     ],
     "answerIndex": 0,
     "explanation": "These functions are in the proper order while in the other\noptions the functions are out of order. Costs and customer\nvalue are added along the value-chain to provide an end\nproduct or service.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي القوائم الآتية تعرض وظائف سلسلة القيمة بترتيب صحيح؟",
+    "choicesAr": [
+      "البحث والتطوير، ثم التسويق، ثم خدمات العملاء.",
+      "الإنتاج، ثم التسويق، ثم تصميم المنتج.",
+      "تصميم الإنتاج، ثم التوزيع، ثم التسويق.",
+      "البحث والتطوير، ثم خدمة العملاء، ثم التوزيع."
+    ],
+    "explanationAr": "الوظائف الواردة في الاختيار الصحيح مرتبة ترتيبًا سليمًا، أما الاختيارات الأخرى فتضعها بترتيب غير صحيح. وتتراكم التكاليف والقيمة المقدمة للعملاء عبر سلسلة القيمة وصولًا إلى منتج أو خدمة نهائية."
   },
   {
     "unit": 11,
@@ -348,7 +364,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A value-added activity increases the value of a product or\nservice to the customer, while a nonvalue-added activity does\nnot. Activities A and B add value to the customer, while\nactivities C and D do not.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توظّف شركة صغيرة لتصنيع الحواسيب 25 عاملًا في منشأتها الصناعية الرئيسية. وحدد فريق تحسين الأداء الأنشطة التالية ونسبة وقت العمال التي يستغرقها كل نشاط:\nA. تجميع مكونات الحاسوب: 25%\nB. تثبيت البرامج: 40%\nC. فحص الوحدات المجمعة واختبارها: 25%\nD. نقل الوحدات المنجزة إلى منطقة التخزين: 10%\nصنّف الأنشطة الأربعة إلى أنشطة مضيفة للقيمة وأخرى غير مضيفة للقيمة.\nمضيفة للقيمة — غير مضيفة للقيمة",
+    "choicesAr": [
+      "A وB وC — D.",
+      "A وB — C وD.",
+      "A وB وD — C.",
+      "B وC — A وD."
+    ],
+    "explanationAr": "يزيد النشاط المضيف للقيمة قيمة المنتج أو الخدمة للعميل، بينما لا يحقق النشاط غير المضيف للقيمة هذه الزيادة. يضيف النشاطان A وB قيمة للعميل؛ أما النشاطان C وD فلا يضيفان قيمة."
   },
   {
     "unit": 11,
@@ -365,7 +389,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A value-added activity contributes to customer satisfaction or\nmeets a need of the entity. A nonvalue-added activity does not\nmake such a contribution. It can be eliminated, reduced, or\nredesigned without impairing the quantity, quality, or\nresponsiveness of the product or service desired by\ncustomers or the entity. It is necessary to place a brake on a\nbicycle, whether the brake is reworked or new. The addition of\nthe brake is required before the bicycle can be sold, which\ncontributes to the customer’s satisfaction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعد نشاطًا مضيفًا للقيمة لدى شركة تُصنّع الدراجات الهوائية؟",
+    "choicesAr": [
+      "نقل إطار إلى منطقة إعادة التشغيل.",
+      "تركيب مكبح أُعيد تشغيله على دراجة.",
+      "إعادة تشغيل دراجة للمرة الثانية.",
+      "فحص دراجة أُعيد تشغيلها."
+    ],
+    "explanationAr": "يسهم النشاط المضيف للقيمة في رضا العميل أو تلبية حاجة للمنشأة، بينما لا يقدم النشاط غير المضيف للقيمة مثل هذه المساهمة، ويمكن إلغاؤه أو تقليصه أو إعادة تصميمه دون التأثير في الكمية أو الجودة أو سرعة الاستجابة المطلوبة. ويُعد تركيب المكبح على الدراجة ضروريًا سواء كان المكبح جديدًا أو أُعيد تشغيله. ولا يمكن بيع الدراجة قبل تركيب المكبح، ومن ثم يسهم هذا النشاط في رضا العميل."
   },
   {
     "unit": 11,
@@ -382,7 +414,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Value-added activities increase the value of a product or\nservice to the customer. Examples include assembling the\nproduct and shipping it to the customer. Product design and\ndirect materials both qualify as value-added activities\n($180,000 + $400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكبدت شركة صناعية التكاليف التالية خلال الربع الماضي فيما يتعلق بتطوير المنتجات وإنتاجها:\nتخزين المواد: $ 50,000\nتصميم المنتج: 180,000\nمناولة المواد ونقلها: 41,000\nالمواد المباشرة: 400,000\nفحوص الجودة: 62,000\nما مبلغ التكاليف الذي ينبغي تصنيفه ضمن الأنشطة المضيفة للقيمة؟",
+    "choicesAr": [
+      "$491,000",
+      "$553,000",
+      "$580,000",
+      "$642,000"
+    ],
+    "explanationAr": "تزيد الأنشطة المضيفة للقيمة قيمة المنتج أو الخدمة للعميل، ومن أمثلتها تجميع المنتج وشحنه للعميل. ويُعد تصميم المنتج والمواد المباشرة من الأنشطة المضيفة للقيمة؛ لذا يكون المجموع ($180,000 + $400,000)."
   },
   {
     "unit": 11,
@@ -399,7 +439,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A value chain depicts how costs and customer value\naccumulate along a sequence of activities leading to an end\nproduct or service. The primary activities on the value chain\nare (1) R&D, (2) product design, (3) manufacturing, (4)\nmarketing and distribution, and (5) customer service.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعد نشاطًا رئيسيًا في سلسلة القيمة؟",
+    "choicesAr": [
+      "البحث والتطوير (R&D).",
+      "إدارة المخزون.",
+      "تقنية المعلومات.",
+      "الموارد البشرية."
+    ],
+    "explanationAr": "توضح سلسلة القيمة كيفية تراكم التكاليف وقيمة العميل عبر أنشطة متتابعة وصولًا إلى منتج أو خدمة نهائية. وتشمل أنشطتها الرئيسية: (1) البحث والتطوير، (2) تصميم المنتج، (3) التصنيع، (4) التسويق والتوزيع، (5) خدمة العملاء."
   },
   {
     "unit": 11,
@@ -416,7 +464,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The value chain depicts how costs and customer value\naccumulate along a sequence of activities that lead to an end\nproduct or service. The primary activities on the value chain\nare (1) R&D, (2) product design, (3) manufacturing, (4)\nmarketing and distribution, and (5) customer service.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل وصف لسلسلة القيمة الخاصة بالشركة؟",
+    "choicesAr": [
+      "تراكم التكاليف والقيمة المقدمة للعميل.",
+      "سلسلة إمداد.",
+      "هندسة القيمة.",
+      "تحليل العمليات."
+    ],
+    "explanationAr": "توضح سلسلة القيمة كيفية تراكم التكاليف وقيمة العميل عبر سلسلة أنشطة تؤدي إلى منتج أو خدمة نهائية. وتشمل أنشطتها الرئيسية: (1) البحث والتطوير، (2) تصميم المنتج، (3) التصنيع، (4) التسويق والتوزيع، (5) خدمة العملاء."
   },
   {
     "unit": 11,
@@ -433,7 +489,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Value engineering is the systematic assessment of all aspects\nof cost buildup along the value chain. The goal is to minimize\ncosts without negatively affecting customer satisfaction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طلب الرئيس التنفيذي الجديد لشركة من المدير المالي التعاون مع مدير العمليات لإجراء تقييم منهجي لجميع جوانب سلسلة القيمة لمنتجاتها الرئيسية، بهدف تحديد فرص خفض التكاليف دون تقليل رضا العملاء. ما نوع هذا التحليل؟",
+    "choicesAr": [
+      "مراجعة التكاليف على أساس الأنشطة.",
+      "عملية التحسين المستمر (CIP).",
+      "هندسة القيمة.",
+      "إعادة هندسة عمليات الأعمال (BPR)."
+    ],
+    "explanationAr": "هندسة القيمة هي التقييم المنهجي لجميع جوانب تراكم التكاليف عبر سلسلة القيمة. وتهدف إلى خفض التكاليف إلى أدنى مستوى ممكن دون التأثير سلبًا في رضا العملاء."
   },
   {
     "unit": 11,
@@ -450,7 +514,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Nonvalue-added activities do not increase the value of the\nproduct or service even if they are necessary. For example,\ninspection, although important, does not increase the value of\nthe product.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما النشاط غير المضيف للقيمة لدى شركة صناعية؟",
+    "choicesAr": [
+      "تجميع المنتج.",
+      "إضافة خصائص جديدة للمنتج.",
+      "شحن المنتج إلى العميل.",
+      "فحص المنتج النهائي."
+    ],
+    "explanationAr": "لا تزيد الأنشطة غير المضيفة للقيمة قيمة المنتج أو الخدمة، حتى إن كانت ضرورية. فعلى سبيل المثال، يُعد الفحص مهمًا، لكنه لا يزيد في ذاته قيمة المنتج."
   },
   {
     "unit": 11,
@@ -467,7 +539,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A value chain consists of all the value-added activities that\nlead to an end product or service. The primary activities on the\nvalue chain are (1) R&D, (2) product design, (3)\nmanufacturing, (4) marketing and distribution, and (5)\ncustomer service. Support activities include (1) human\nresources, (2) information technology, (3) contract\nmanagement, (4) inventory management, and (5) plant\nmaintenance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سلسلة القيمة هي:",
+    "choicesAr": [
+      "توزيع التكاليف الصناعية غير المباشرة على المنتجات استنادًا إلى الأنشطة المسببة للتكلفة.",
+      "طريقة لتقييم جميع جوانب الأداء، بما فيها المقاييس المالية وغير المالية.",
+      "مجموعة أنشطة مترابطة بإنتاج منتج أو تقديم خدمة.",
+      "مدخل لخفض تكاليف المخزون عن طريق تقليل الكمية المحتفظ بها منه."
+    ],
+    "explanationAr": "تشمل سلسلة القيمة جميع الأنشطة المضيفة للقيمة التي تؤدي إلى منتج أو خدمة نهائية. وتشمل الأنشطة الرئيسية: (1) البحث والتطوير، (2) تصميم المنتج، (3) التصنيع، (4) التسويق والتوزيع، (5) خدمة العملاء. وتشمل الأنشطة الداعمة: (1) الموارد البشرية، (2) تقنية المعلومات، (3) إدارة العقود، (4) إدارة المخزون، (5) صيانة المصنع."
   },
   {
     "unit": 11,
@@ -484,7 +564,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The primary activities on the value chain are (1) R&D, (2)\nproduct design, (3) manufacturing, (4) marketing and\ndistribution, and (5) customer service. Support activities\ninclude (1) human resources, (2) information technology, (3)\ncontract management, (4) inventory management, and (5)\nplant maintenance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعد نشاطًا داعمًا في سلسلة القيمة؟",
+    "choicesAr": [
+      "البحث والتطوير (R&D).",
+      "الموارد البشرية.",
+      "خدمة العملاء.",
+      "التسويق والتوزيع."
+    ],
+    "explanationAr": "تشمل الأنشطة الرئيسية لسلسلة القيمة: (1) البحث والتطوير، (2) تصميم المنتج، (3) التصنيع، (4) التسويق والتوزيع، (5) خدمة العملاء. وتشمل الأنشطة الداعمة: (1) الموارد البشرية، (2) تقنية المعلومات، (3) إدارة العقود، (4) إدارة المخزون، (5) صيانة المصنع."
   },
   {
     "unit": 11,
@@ -501,7 +589,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Nonvalue-added activities do not increase the value of the\nproduct or service even if the activities are necessary.\nExamples include inspection of the final product and inventory\nstorage cost. The total nonvalue-added costs are $19,760\n($12,500 inventory storage cost + $7,260 inspection of final\nproduct cost).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعمل محاسب على تصنيف تكاليف المنتج إلى تكاليف مضيفة للقيمة وأخرى غير مضيفة للقيمة. وفيما يلي ملخص التكاليف:\nنوع التكلفة — المبلغ\nتخزين المخزون: $12,500\nالتصنيع: 44,675\nمراقبة الجودة: 12,350\nفحص المنتج النهائي: 7,260\nتجميع المنتج: 16,450\nشحن المنتج: 8,575\nما إجمالي تكاليف الأنشطة غير المضيفة للقيمة؟",
+    "choicesAr": [
+      "$12,500",
+      "$19,760",
+      "$24,850",
+      "$32,110"
+    ],
+    "explanationAr": "لا تزيد الأنشطة غير المضيفة للقيمة قيمة المنتج أو الخدمة حتى عندما تكون ضرورية. ومن أمثلتها فحص المنتج النهائي وتخزين المخزون. وعليه يبلغ مجموع التكاليف غير المضيفة للقيمة $19,760، أي ($12,500 تكلفة تخزين المخزون + $7,260 تكلفة فحص المنتج النهائي)."
   },
   {
     "unit": 11,
@@ -518,7 +614,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The steps in value-chain analysis are to (1) identify value-\ncreating activities and (2) determine how these activities can\ncreate competitive advantage. The second step involves (1)\nidentifying the firm’s competitive advantage, (2) determining\nhow the value-creating activities generate additional customer\nvalue, (3) identifying activities that reduce costs or can be\noutsourced, and (4) determining value-adding ways for the\nfirm’s remaining activities to be linked.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعد خطوة في تحليل سلسلة القيمة؟",
+    "choicesAr": [
+      "تحديد التكلفة المتوقعة مسبقًا لوحدة المدخلات.",
+      "تقييم مسببات التكلفة.",
+      "تحديد الميزة التنافسية للمنشأة.",
+      "تقييم التقدم نحو تحقيق الأهداف."
+    ],
+    "explanationAr": "تتمثل خطوات تحليل سلسلة القيمة في: (1) تحديد الأنشطة المولدة للقيمة، و(2) تحديد كيفية إسهام تلك الأنشطة في تكوين ميزة تنافسية. وتتضمن الخطوة الثانية: (1) تحديد الميزة التنافسية للمنشأة، (2) تحديد كيفية توليد الأنشطة قيمة إضافية للعميل، (3) تحديد الأنشطة التي تخفض التكاليف أو يمكن إسنادها لجهة خارجية، (4) تحديد طرق مضيفة للقيمة للربط بين الأنشطة المتبقية بالمنشأة."
   },
   {
     "unit": 11,
@@ -535,7 +639,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A supply chain is the movement of materials from the original\nsupplier source, through product production, to the retailers\nwho sell to the final customers. It generally consists of several\ncompanies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يُعد أفضل وصف لسلسلة الإمداد؟",
+    "choicesAr": [
+      "موردو المواد.",
+      "تدفق المواد خلال دفعة إنتاج واحدة من المخزون إلى المنتج النهائي.",
+      "تدفق المواد من مصادرها الأصلية إلى المستهلكين النهائيين.",
+      "العمليات الداخلية التي تُنفذ لخلق قيمة للعميل."
+    ],
+    "explanationAr": "سلسلة الإمداد هي حركة المواد من المورد الأصلي، مرورًا بإنتاج المنتج، ثم إلى تجار التجزئة الذين يبيعونه للمستهلك النهائي. وهي تتكون عادة من عدة شركات."
   },
   {
     "unit": 11,
