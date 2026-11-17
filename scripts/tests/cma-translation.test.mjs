@@ -167,11 +167,7 @@ test("CMA Unit 12 regression source translations keep all 23 original answer ind
   // as fully translated before layout and numeric context review.
   assert.deepEqual(records.filter(row=>row.section===1&&!row.stemAr)
     .map(row=>row.number),[8,9,13,14,28]);
-  // Section 5 remains English-only; Sections 3 and 4 have their own
-  // separate, explicit allowlists and answer-key integrity tests below.
-  assert.ok(records.filter(row=>row.section===5).every(
-    row=>row.stemAr===undefined && row.choicesAr===undefined &&
-      row.explanationAr===undefined));
+  // Each other section has its dedicated answer-key and Arabic translation test.
 });
 
 test("an incomplete or numerically changed Unit 12 translation never passes validation",()=>{
@@ -276,8 +272,7 @@ test("CMA Unit 12 Section 3 has exactly 40 complete Arabic expected-value and se
     assert.equal(row.stemAr,undefined,
       "An unverified source layout must remain English-first: Q"+n);
   }
-  assert.ok(records.filter(r=>r.section===5).every(r=>
-    r.stemAr===undefined&&r.choicesAr===undefined&&r.explanationAr===undefined));
+  // The Section 5 corpus is validated in its dedicated complete-coverage test.
 });
 
 test("CMA Unit 12 expected-value examples are independently recalculated",()=>{
@@ -323,8 +318,7 @@ test("CMA Unit 12 Section 4 strategy and BCG questions are 28/28 complete with u
     assert.match(row.explanationAr,/[\u0600-\u06ff]/);
   }
   assert.deepEqual(rows.map(q=>q.number),Array.from({length:28},(_,i)=>i+1));
-  assert.ok(records.filter(q=>q.section===5).every(q=>
-    q.stemAr===undefined&&q.choicesAr===undefined&&q.explanationAr===undefined));
+  // See Section 5 exact source-key and numeric-integrity test below.
 });
 
 test("New CMA expected-value and operating profit calculations recompute independently",()=>{
@@ -354,4 +348,47 @@ test("New CMA expected-value and operating profit calculations recompute indepen
   assert.equal(locationA,358750);
   assert.equal(locationB,337500);
   assert.equal(locationA-locationB,21250);
+});
+
+
+test("CMA Unit 12 Section 5: all 14 strategic-planning questions are faithful Arabic drafts",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
+  ));
+  const section=records.filter(row=>row.section===5);
+  const keys=[1,0,3,2,1,1,1,3,1,1,3,3,3,2];
+  assert.equal(section.length,14);
+  assert.deepEqual(section.map(row=>row.number),Array.from({length:14},(_,i)=>i+1));
+  for(const row of section){
+    assert.equal(row.answerIndex,keys[row.number-1],
+      "Unit 12 Section 5 original answer index changed: Q"+row.number);
+    assert.equal(row.choices.length,4);
+    assert.equal(row.choicesAr?.length,4);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+    );
+    assert.equal(checked.valid,true,
+      "Arabic Section 5 original numeric fields/options mismatch Q"+row.number+": "+checked.reason);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+  }
+  // Section 5 Q13 carries the original publisher extraction provenance;
+  // Arabic completion does not remove the source-layout-review warning.
+  assert.equal(section.find(row=>row.number===13).sourceTextStatus,"table-reflowed");
+  assert.equal(records.filter(row=>row.stemAr!==undefined).length,136);
+  assert.deepEqual(records.filter(row=>!row.stemAr).reduce((acc,row)=>{
+    acc[row.section]=(acc[row.section]??0)+1;return acc;
+  },{}),{1:5,2:3,3:11});
+});
+
+test("CMA Section 5 strategic market-share goal is not replaced with earnings growth",()=>{
+  const thisYear={sales:325000,cogs:152000,marketing:100000,admin:50000,units:1000};
+  const nextYear={sales:325000,cogs:146000,marketing:100000,admin:50000,units:1000};
+  const operatingProfit=year=>year.sales-year.cogs-year.marketing-year.admin;
+  assert.equal(operatingProfit(thisYear),23000);
+  assert.equal(operatingProfit(nextYear),29000);
+  assert.equal(nextYear.units,thisYear.units);
+  // The question explicitly assumes unchanged total market size.
+  assert.equal(nextYear.units>thisYear.units,false);
 });
