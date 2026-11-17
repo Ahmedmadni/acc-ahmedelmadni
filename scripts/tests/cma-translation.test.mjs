@@ -187,13 +187,16 @@ test("an incomplete or numerically changed Unit 12 translation never passes vali
 });
 
 
-test("Unit 12 learning-curve Section 2 has exactly 13 complete Arabic translations",()=>{
+test("Unit 12 learning-curve Section 2 has exactly 31 numerically faithful Arabic translations",()=>{
   const records=JSON.parse(readFileSync(
     new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
   ));
   const expected=new Map([
     [1,2],[2,3],[5,1],[6,2],[7,1],[8,0],[9,1],
     [10,2],[11,0],[12,1],[13,3],[14,0],[15,3],
+    [16,0],[17,1],[18,0],[19,3],[20,1],[21,1],[22,0],
+    [24,0],[25,3],[26,1],[27,3],[28,2],[29,2],[30,0],
+    [31,0],[32,1],[33,2],[34,1],
   ]);
   const translated=records.filter(q=>q.section===2 &&
     (q.stemAr!==undefined||q.choicesAr!==undefined||q.explanationAr!==undefined));
@@ -213,7 +216,7 @@ test("Unit 12 learning-curve Section 2 has exactly 13 complete Arabic translatio
     assert.match(row.explanationAr,/[\u0600-\u06ff]/);
   }
   assert.deepEqual(records.filter(q=>q.section===2&&!q.stemAr).map(q=>q.number),
-    [3,4,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]);
+    [3,4,23]);
 });
 
 test("Learning-curve solved examples follow independently recomputed arithmetic",()=>{
@@ -226,4 +229,12 @@ test("Learning-curve solved examples follow independently recomputed arithmetic"
   assert.equal(Math.round(400*72*0.6),17280);
   assert.equal(Math.round(320*cumulative(120/80,0.8,2)*10)/10-120,187.2);
   assert.equal(Math.round(cumulative(10,0.9,3)*100)/100,7.29);
+  assert.equal(cumulative(10000,0.8,3),5120);
+  assert.equal(8*cumulative(10000,0.8,3),40960);
+  assert.equal(8*cumulative(10000,0.8,3)-10000,30960);
+  assert.equal(Math.round(cumulative(20000,0.7,3)),6860);
+  assert.equal(8*Math.round(cumulative(20000,0.7,3)),54880);
+  assert.equal(8*Math.round(cumulative(20000,0.7,3))-20000,34880);
+  assert.equal(4*(800*0.9**2)-800,1792);
+  assert.equal(4*((200/2)*0.9),360);
 });
