@@ -382,7 +382,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In multiple regression, a large difference between the\nexpected value and the actual value of one of the coefficients\nhas the most impact in rendering the model invalid. A change\nin costs would be incorporated into the equation automatically,\nbut a change in productivity per hour would not.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طوّر مصنع معادلة انحدار متعدد اعتمادًا على بيانات سنوات عديدة لتقدير تكلفة منتجه:\nCost = FC + (a × L) + (b × M)\nحيث: FC = التكاليف الثابتة، وL = معدل أجر العمل في الساعة، وM = تكلفة المواد لكل رطل.\nأي التغيرات التالية يُرجح أن يكون له أكبر أثر في إبطال نتائج هذا النموذج؟",
+    "choicesAr": [
+      "انخفاض كبير في المصروفات الصناعية غير المباشرة، وهي أحد مكونات التكاليف الثابتة.",
+      "إعادة التفاوض على العقد النقابي بما يرفع معدلات الأجور كثيرًا.",
+      "انخفاض كبير في تكاليف المواد نتيجة شرائها من مصدر أجنبي.",
+      "تغير كبير في إنتاجية العمل."
+    ],
+    "explanationAr": "في الانحدار المتعدد، يكون لاختلاف كبير بين القيمة المتوقعة والقيمة الفعلية لأحد المعاملات أكبر أثر في فقدان النموذج صلاحيته. فتغير معدلات التكاليف ينعكس في المعادلة، بينما لا ينعكس تغير الإنتاجية لكل ساعة تلقائيًا."
   },
   {
     "unit": 12,
@@ -399,7 +407,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The simple regression equation can be solved as follows:\nSales = $10,000 + (2.5 × Advertising expenses)\n= $10,000 + (2.5 × $1,000)\n= $10,000 + $2,500\n= $12,500",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعد مدير المبيعات نموذج انحدار بسيط لتحليل المبيعات بدلالة مصروفات الإعلان. واعتمد النموذج على 32 مشاهدة شهرية للمبيعات ومصروفات الإعلان، وكان معامل التحديد المرتبط بها .90. ومعادلة الانحدار هي:\nSales = $10,000 + (2.5 × Advertising expenses)\nإذا بلغت مصروفات الإعلان في 1 شهر $1,000، فما التقدير النقطي للمبيعات؟",
+    "choicesAr": [
+      "$2,500",
+      "$11,250",
+      "$12,250",
+      "$12,500"
+    ],
+    "explanationAr": "يمكن حل معادلة الانحدار البسيط كما يأتي:\nSales = $10,000 + (2.5 × Advertising expenses)\n= $10,000 + (2.5 × $1,000)\n= $10,000 + $2,500\n= $12,500"
   },
   {
     "unit": 12,
@@ -416,7 +432,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A simple regression can be calculated using the formula for a\nstraight line:\ny = a + bx\nWhere: y = the dependent variable\na = the y-axis intercept\nb = the slope of the regression line\nx = the independent variable\nSolving with the information given yields the following results:\ny = a + bx\n= 5.23 + (1.54 × 10)\n= 5.23 + 15.4\n= 20.63",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "نتج عن انحدار y على x ما يلي:\nالمعامل\nالجزء المقطوع: 5.23\nالميل: 1.54\nعندما تكون قيمة x تساوي 10، فما القيمة المقدرة لـ y؟",
+    "choicesAr": [
+      "6.77",
+      "8.05",
+      "20.63",
+      "53.84"
+    ],
+    "explanationAr": "يُحسب الانحدار البسيط باستخدام معادلة الخط المستقيم:\ny = a + bx\nحيث y هو المتغير التابع، وa الجزء المقطوع من محور y، وb ميل خط الانحدار، وx المتغير المستقل.\nوبالتعويض:\ny = a + bx\n= 5.23 + (1.54 × 10)\n= 5.23 + 15.4\n= 20.63"
   },
   {
     "unit": 12,
@@ -433,7 +457,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Regression analysis is the process of deriving a linear\nequation to describe the relationship between two variables.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أثناء جمع المعلومات لإعداد الموازنة السنوية، حددت إحدى الشركات مسببات تكلفة مرتبطة بالتكاليف الصناعية. أي طرق التحليل الكمي الآتية يمكن استخدامها لقياس متوسط التغير في التكاليف الصناعية المصاحب لتغير أحد مسببات التكلفة؟",
+    "choicesAr": [
+      "تحليل السلاسل الزمنية.",
+      "التمهيد الأسي.",
+      "تحليل الانحدار.",
+      "تحليل منحنى التعلم."
+    ],
+    "explanationAr": "تحليل الانحدار هو عملية اشتقاق معادلة خطية تصف العلاقة بين متغيرين."
   },
   {
     "unit": 12,
@@ -450,7 +482,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The linear relationship established for x and y is only valid\nacross the relevant range. The company must identify the\nrelevant range and ensure that it does not project the\nrelationship beyond the relevant range. A negative y intercept\nin the simple regression equation usually indicates that it is\noutside the relevant range.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة الانحدار البسيط للتنبؤ بإحدى تكاليفها شبه المتغيرة. ويبدو أن المعادلة المحسوبة y = –25,000 + 2.5x تحقق ملاءمة جيدة بصريًا. ما السبب المحتمل لظهور حد سالب في المعادلة؟",
+    "choicesAr": [
+      "أن مستوى الإنتاج الصفري يقع خارج النطاق الملائم.",
+      "تضمين عدد كبير جدًا من القيم الشاذة في البيانات.",
+      "استخدام مسبب تكلفة غير مناسب بوصفه المتغير المستقل.",
+      "أن التكلفة لا تتبع سلوك التكلفة شبه المتغيرة."
+    ],
+    "explanationAr": "العلاقة الخطية بين x وy صالحة فقط داخل النطاق الملائم. وعلى الشركة تحديد هذا النطاق وعدم إسقاط العلاقة على قيم تقع خارجه. ويشير وجود جزء مقطوع سالب من محور y في معادلة الانحدار البسيط عادة إلى أن نقطة الصفر تقع خارج النطاق الملائم."
   },
   {
     "unit": 12,
@@ -467,7 +507,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The behavior of the factory overhead cost with respect to units\nof finished goods produced for this company represents a\nfixed cost pattern. Fixed costs in total remain unchanged in\nthe short run regardless of production level. The Y-axis\nintercept, or $542,000 in this case, represents the fixed\nportion. This number is not affected by the number of finished\ngoods produced in the short run. For example, if 1 unit is\nproduced, the cost would equal $542,000 (rounded to the\nnearest whole number). If 10,000 units are produced, the cost\nwould still equal $542,000 (rounded to the nearest whole\nnumber). Even though the cost equation makes it seem that\nfactory overhead is variable or semivariable, because the\nvariable aspect (i.e., the slope of .0000253) is essentially zero\n(0), factory overhead is considered a fixed cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة ذات منتج واحد الانحدار للتنبؤ بإحدى تكاليفها الصناعية غير المباشرة، مع اعتبار كمية المواد المستخدمة المتغير المستقل. ومعادلة الانحدار هي:\nY = 542,000 + 0.0000253X\nواستنادًا إلى R²، ترى الإدارة أن النموذج يفسر جزءًا مهمًا من العلاقة. ما سلوك تلك التكلفة الصناعية غير المباشرة بالنسبة إلى عدد وحدات المنتج النهائي؟",
+    "choicesAr": [
+      "ثابت.",
+      "شبه متغير.",
+      "متغير.",
+      "لا يمكن تحديده من المعلومات المتاحة."
+    ],
+    "explanationAr": "تمثل هذه التكلفة نمط التكلفة الثابتة بالنسبة إلى عدد وحدات الإنتاج النهائي، لأن إجمالي التكاليف الثابتة لا يتغير على المدى القصير بتغير مستوى الإنتاج. ويمثل الجزء المقطوع من محور Y البالغ $542,000 الجزء الثابت. فإذا أُنتجت 1 وحدة، تكون التكلفة نحو $542,000 بعد التقريب لأقرب عدد صحيح. وإذا أُنتجت 10,000 وحدة، تبقى نحو $542,000 بعد التقريب نفسه. ورغم أن المعادلة توحي بمكون متغير أو شبه متغير، فإن ميلها البالغ .0000253 قريب جدًا من الصفر (0)، ولذلك تُعامل التكلفة هنا بوصفها ثابتة."
   },
   {
     "unit": 12,
@@ -484,7 +532,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Management believes sales will be driven by birthrates and, to\na lesser extent, income levels, which matches the multiple\nregression method. Multiple regression is used when there is\nmore than one independent variable. The two independent\nvariables are (1) birthrates and (2) income levels.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ستبدأ شركة وطنية لتجارة المراتب بالتجزئة بيع مراتب فاخرة لأسرة الأطفال خلال العام القادم. وترى الإدارة أن المبيعات ستتأثر أساسًا بمعدلات المواليد، وبدرجة أقل بمستويات الدخل. ما أفضل طريقة للتنبؤ بمبيعات العام المقبل؟",
+    "choicesAr": [
+      "الانحدار البسيط.",
+      "انحدار السلاسل الزمنية.",
+      "الانحدار المتعدد.",
+      "انحدار الاحتمال الأقصى."
+    ],
+    "explanationAr": "تعتقد الإدارة أن المبيعات ستتأثر بمعدلات المواليد وبمستويات الدخل بدرجة أقل، وهو ما يناسب الانحدار المتعدد؛ إذ يُستخدم عند وجود أكثر من متغير مستقل. وهنا المتغيران المستقلان هما (1) معدلات المواليد و(2) مستويات الدخل."
   },
   {
     "unit": 12,
@@ -501,7 +557,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In the standard regression equation y = a + bx, b represents\nthe variable coefficient. In a cost determination regression, y\nequals total costs, b is the variable cost per unit, x is the\nnumber of units produced, and a is the fixed cost. Thus, $25 is\nthe variable cost per hour, and $75 is the fixed cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقيّم شركة تنظيف تكاليف تنظيف مكتب عادي. وأجرى المراقب المالي انحدارًا خطيًا بين ساعات العمل المستخدمة في تنظيف مكاتب مختلفة وإجمالي تكلفة كل مكتب (الأجور والمواد والنقل)، فكانت النتيجة:\ny = $25x + $75\nحيث y = إجمالي تكلفة تنظيف مكتب، وx = عدد ساعات تنظيف المكتب.\nما أفضل تفسير لتكلفة التنظيف استنادًا إلى هذه المعادلة؟",
+    "choicesAr": [
+      "تبلغ تكلفة تنظيف المكتب $100 لكل ساعة.",
+      "توجد تكاليف ثابتة بقيمة $25 وتكاليف متغيرة بقيمة $75 لكل ساعة تنظيف.",
+      "توجد تكاليف متغيرة بقيمة $25 لكل ساعة وتكاليف ثابتة بقيمة $75 لتنظيف المكتب.",
+      "تبلغ تكلفة تنظيف المكتب $25 لكل ساعة."
+    ],
+    "explanationAr": "في المعادلة القياسية y = a + bx يمثّل b المعامل المتغير. ولأغراض تقدير التكلفة، تمثل y التكاليف الإجمالية، وb التكلفة المتغيرة لكل وحدة، وx عدد الوحدات، وa التكلفة الثابتة. وعليه فإن $25 هي التكلفة المتغيرة لكل ساعة، و$75 هي التكلفة الثابتة."
   },
   {
     "unit": 12,
@@ -518,7 +582,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In the standard regression equation y = a + bx, b represents\nthe change in the dependent variable corresponding to a unit\nchange in the independent variable. Thus, it is the slope of the\nregression line.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة تحليل الانحدار مع اتخاذ مصروفات الإعلان الشهرية متغيرًا مستقلًا للتنبؤ بالمبيعات الشهرية للمنتج، وكلاهما بالملايين من الدولارات. وأظهرت النتائج أن معامل الانحدار الخاص بالمتغير المستقل يساوي 0.8. ماذا تعني هذه القيمة؟",
+    "choicesAr": [
+      "في المتوسط، تؤدي كل زيادة قدرها دولار واحد في الإعلان إلى زيادة المبيعات بمقدار $0.8.",
+      "الإعلان ليس متنبئًا جيدًا بالمبيعات لأن المعامل صغير للغاية.",
+      "عندما يكون الإعلان الشهري عند مستواه المتوسط، تكون المبيعات $800,000.",
+      "متوسط مصروفات الإعلان الشهرية في العينة هو $800,000."
+    ],
+    "explanationAr": "في معادلة الانحدار القياسية y = a + bx يمثل b التغير في المتغير التابع الذي يقابل تغيرًا مقداره وحدة واحدة في المتغير المستقل. ولذلك فهو ميل خط الانحدار."
   },
   {
     "unit": 12,
@@ -535,7 +607,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Substituting 5,000 hours into the regression equation\nproduces the following: Y = $20,000 + ($50 × 5,000); or Y =\n$270,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعمل محاسب في شركة تقنية حيوية على توقع مصروفات صيانة المعدات المختبرية المستخدمة في البحث والتطوير للسنة القادمة. وبالاعتماد على المصروفات السابقة، توصل إلى معادلة الانحدار البسيط:\nY = $20,000 + ($50 × X)\nوتمثل X ساعات تشغيل المعدات المختبرية. بلغت X في السنة الماضية 4,500 ساعة، ويتوقع المحاسب أن تبلغ في السنة القادمة 5,000 ساعة. ما مصروف الصيانة المتوقع للسنة القادمة؟",
+    "choicesAr": [
+      "$225,000",
+      "$245,000",
+      "$250,000",
+      "$270,000"
+    ],
+    "explanationAr": "بالتعويض بـ 5,000 ساعة في معادلة الانحدار نحصل على:\nY = $20,000 + ($50 × 5,000)\nأي أن Y = $270,000."
   },
   {
     "unit": 12,
@@ -552,7 +632,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Substituting the $189,000 of forecasted sales into the\nregression equation will allow for the calculation of the amount\nthat should be budgeted for market costs, i.e., $189,000 =\n$3(m) + $150,000. Therefore, marketing costs are $13,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة إلكترونيات نموذج انحدار للتنبؤ بالمبيعات ربع السنوية يوضح العلاقة بين المبيعات ومصروفات التسويق، وفق المعادلة:\ns = $3(m) + $150,000\nحيث s = المبيعات لكل ربع سنة، وm = الدولارات المنفقة على أنشطة التسويق في الربع.\nإذا توقعت الشركة مبيعات قدرها $189,000 للربع القادم، فما مصروفات التسويق المخطط لها خلاله؟",
+    "choicesAr": [
+      "$13,000",
+      "$39,000",
+      "$63,000",
+      "$113,000"
+    ],
+    "explanationAr": "يُعوّض بالمبيعات المتوقعة البالغة $189,000 في معادلة الانحدار لحساب موازنة التسويق، كما يلي:\n$189,000 = $3(m) + $150,000\nوعليه تبلغ تكاليف التسويق $13,000."
   },
   {
     "unit": 12,
