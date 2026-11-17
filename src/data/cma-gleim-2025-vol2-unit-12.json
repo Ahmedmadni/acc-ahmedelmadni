@@ -1625,7 +1625,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The expected sales levels should be weighted by\nthe individual probabilities of their occurrence. The\nmidpoint of each sales level is used as the estimate\nfor that level. Thus, sales are expected to be 380\nunits.\n100 × 15% = 15\n300 × 45% = 135\n500 × 25% = 125\n700 × 15% = 105\n380",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمثل الاحتمالات في الجدول التالي تقديرات مبيعات منتج جديد:\nالمبيعات (وحدة) — الاحتمال\n0-200 — 15%\n201-400 — 45%\n401-600 — 25%\n601-800 — 15%\nإذا استُخدمت نقطة المنتصف لكل نطاق بوصفها أفضل تقدير له، فما أفضل تقدير للمبيعات المتوقعة للمنتج؟",
+    "choicesAr": [
+      "480",
+      "380",
+      "400",
+      "800"
+    ],
+    "explanationAr": "ينبغي ترجيح مستويات المبيعات المتوقعة باحتمالات تحققها، مع استخدام نقطة منتصف كل نطاق بوصفها تقديرًا لذلك المستوى. وعليه تُقدّر المبيعات بـ380 وحدة:\n100 × 15% = 15\n300 × 45% = 135\n500 × 25% = 125\n700 × 15% = 105\n380"
   },
   {
     "unit": 12,
@@ -1726,7 +1734,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Each outage costs $800, but this expense can be avoided by\npaying $1,000 per month ($12,000 for the year). The\nexpected-value approach uses the probability distribution\nderived from past experience to determine the average\nexpected outages per month.\n3 ÷ 12 × 0 = 0.0\n2 ÷ 12 × 1 = 0.16667\n4 ÷ 12 × 2 = 0.66667\n3 ÷ 12 × 3 = 0.75000\n1.58334\nThe company can expect to have, on average, 1.58334\noutages per month. At $800 per outage, the expected cost is\n$1,266.67. Thus, paying $1,000 to avoid an expense of\n$1,266.67 saves $266.67 per month, or $3,200 per year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنوات الأخيرة، سجّلت إحدى الشركات متوسط عدد انقطاعات الكهرباء التالي:\nعدد الانقطاعات شهريًا — عدد الأشهر\n0 — 3\n1 — 2\n2 — 4\n3 — 3\n12\nيتسبب كل انقطاع في تكاليف نقدية تبلغ $800. ويمكن للشركة استئجار مولد كهرباء مقابل $1,000 شهريًا لتوفير الكهرباء أثناء الانقطاع. إذا استأجرت الشركة المولد في السنة القادمة، فما التوفير المتوقع (أو المصروف الإضافي) خلال السنة؟",
+    "choicesAr": [
+      "$(15,200)",
+      "$(1,267)",
+      "$3,200",
+      "$7,200"
+    ],
+    "explanationAr": "تبلغ تكلفة كل انقطاع $800، ويمكن تجنبها بدفع $1,000 شهريًا ($12,000 سنويًا). ويستخدم أسلوب القيمة المتوقعة توزيع الاحتمالات المستمد من الخبرة السابقة لتقدير متوسط عدد الانقطاعات الشهرية:\n3 ÷ 12 × 0 = 0.0\n2 ÷ 12 × 1 = 0.16667\n4 ÷ 12 × 2 = 0.66667\n3 ÷ 12 × 3 = 0.75000\n1.58334\nوبذلك تتوقع الشركة متوسطًا قدره 1.58334 انقطاع شهريًا. وعند تكلفة $800 للانقطاع الواحد، تبلغ التكلفة المتوقعة $1,266.67. وعليه فإن دفع $1,000 لتجنب مصروف قدره $1,266.67 يحقق توفيرًا شهريًا $266.67، أو $3,200 سنويًا."
   },
   {
     "unit": 12,
