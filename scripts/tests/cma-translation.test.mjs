@@ -76,29 +76,47 @@ test("Numerical answer options need no translation but written choices do", () =
 });
 
 
-test("CMA Unit 11 static Arabic cohort has twelve complete, numerically faithful translations", () => {
+test("CMA Unit 11 has all 58 complete numerically faithful Arabic question translations", () => {
   const records = JSON.parse(readFileSync(
     new URL("../../src/data/cma-gleim-2025-vol2-unit-11.json", import.meta.url), "utf8",
   ));
   const localized = records.filter(item => item.stemAr !== undefined ||
     item.choicesAr !== undefined || item.explanationAr !== undefined);
-  assert.deepEqual(localized.map(row => [row.section, row.number]),
-    Array.from({length:12}, (_,i)=>[1,i+1]));
+  assert.equal(records.length,58);
+  assert.equal(localized.length,58,"No source question can be advertised as Arabic without translation");
+  assert.deepEqual(records.filter(row => row.section===1).map(row => row.number),
+    Array.from({length:26},(_,i)=>i+1));
+  assert.deepEqual(records.filter(row => row.section===2).map(row => row.number),
+    Array.from({length:32},(_,i)=>i+1));
+  const expectedKeys = {
+    1: [0,0,1,1,2,2,3,0,3,2,3,0,2,0,1,1,2,0,0,2,3,2,1,1,2,2],
+    2: [2,2,3,1,3,2,2,3,3,1,0,1,1,0,0,2,3,2,2,3,0,3,3,1,3,3,3,2,3,3,2,1],
+  };
   for(const row of localized){
     assert.equal(row.choices.length,4);
-    assert.ok(Number.isInteger(row.answerIndex) && row.answerIndex>=0 && row.answerIndex<4);
-    const check = validateCmaTranslation(
-      { question: { en:row.stem }, choices:{ en:row.choices }, explanation:{ en:row.explanation } },
-      { question:row.stemAr, choices:row.choicesAr, explanation:row.explanationAr },
+    assert.equal(row.answerIndex,expectedKeys[row.section][row.number-1],
+      "The original source answer index must never change: "+row.section+"."+row.number);
+    const checked = validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
     );
-    assert.equal(check.valid,true,"Invalid numeric/text presentation in SU 11 Q"+row.number+": "+check.reason);
+    assert.equal(checked.valid,true,
+      "Invalid translated question or changed figures in Unit 11 "+row.section+"."+row.number+
+      ": "+checked.reason);
     assert.equal(row.choicesAr.length,row.choices.length);
-    assert.match(row.stemAr, /[\u0600-\u06ff]/);
-    assert.match(row.explanationAr, /[\u0600-\u06ff]/);
-    // The answer key remains a positional reference to the original English choices.
-    assert.equal(row.choices[row.answerIndex], records[row.number-1].choices[records[row.number-1].answerIndex]);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
   }
-  assert.equal(records.length,58);
+  const repaired=records.filter(row=>row.sourceTextStatus==="table-reflowed");
+  assert.deepEqual(repaired.map(row=>[row.section,row.number]),[[2,12],[2,13]]);
+  assert.equal(repaired[0].stem,repaired[1].stem.slice(0,repaired[1].stem.lastIndexOf("\n"))+
+    "\nWhat is the amount of quality costs classified as preventive costs for the manufacturing firm?",
+    "The two separate questions must contain the same repaired original cost table");
+  for(const row of repaired){
+    assert.ok(row.stem.includes("Design reviews — $275,000"));
+    assert.ok(row.stem.includes("Manufacturing rework labor and overhead — 150,000"));
+    assert.ok(row.stem.includes("Training of manufacturing workers — 156,000"));
+  }
 });
 
 test("a partial or altered Arabic question cannot pass the static-source translation gate", () => {
