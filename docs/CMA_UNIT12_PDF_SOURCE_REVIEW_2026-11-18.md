@@ -41,7 +41,7 @@ The following calculations can be independently reproduced **using the numbers a
 | §3 Q8 | –160 × .1 – 40 × .3 + 80 × .4 + 80 × .2 = **$20** | Verify matrix row headings |
 | §3 Q10 | Solve (120,000 – 40,000p) = (100,000 + 60,000p) → **p = 0.20** | Publisher explanation equation is text-corrupted |
 | §3 Q23 | Expected peanut stock 40 bags: **$30.40** | Check original full payoff matrix |
-| §3 Q24 | Weighted profits $42,000/.15 + $57,000/.20 + $72,000/.35 + $72,000/.30 → **$64,500** (weights multiply profits, not divide) | Split source amounts in scenario table |
+| §3 Q24 | Weighted profits $42,000 × .15 + $57,000 × .20 + $72,000 × .35 + $72,000 × .30 = **$64,500** | Split source amounts in scenario table |
 | §3 Q27 | Approx. vendor S total = **$4,065,657**, the lowest of listed suppliers | Verify printed rounding and scrap costs |
 | §3 Q28 | Invest: .6 × $15m + .4 × $2m – $9.5m = **$300k**; no-invest = **–$100k** | Split table and treatment of sunk $650k |
 | §3 Q29 | Expected payoffs: B **$34k**, C **$30k**, A **$26k** | Original side-by-side probabilities need comparison |
@@ -49,8 +49,6 @@ The following calculations can be independently reproduced **using the numbers a
 | §3 Q34 | Expected roll sales = **260,000 units** | Gleason two-product table |
 | §3 Q35 | Frozen dessert: 305,000 × ($1.80 – $1.15) – $78,000 = **$120,250** | Cost categories and publisher text extraction |
 | §3 Q36 | Success probability 52%; .52 × $10m – .48 × $4m = **$3.28m** | Probability tree and original equation are broken |
-
-*Editorial note:* In the §3 Q24 line, the notation “$42,000/.15” means scenario profit / associated probability as a pairing in this table, **not mathematical division**; expected value always multiplies each profit by its probability. The computed result is $42,000 × .15 + $57,000 × .20 + $72,000 × .35 + $72,000 × .30 = $64,500.
 
 ## Completion criteria
 
