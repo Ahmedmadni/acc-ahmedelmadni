@@ -1225,7 +1225,15 @@
     ],
     "answerIndex": 0,
     "explanation": "With a 90% learning curve, the cumulative production times\nwould be as follows:\nBatch Units     Average Time      Cumulative Time\n1       1-4 800                     800\n2       5-8 720 (800 × 90%) 1,440\n3      9-16 648 (720 × 90%) 2,592\nSubtracting the 800 hours spent on the first batch from the\ncumulative time for three batches leaves 1,792 hours for the\nlast three groups of units (12 units).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استغرقت شركة صناعية 800 ساعة عمل مباشر لإنتاج الدفعة الأولى المكونة من أربع وحدات من محرك جديد. وترى الإدارة أن منحنى التعلم البالغ 90% سيستمر خلال أربع دفعات إنتاج. كم ساعة عمل مباشر ستلزم لتصنيع الوحدات الـ12 التالية؟",
+    "choicesAr": [
+      "1,792",
+      "1,944",
+      "2,016",
+      "2,160"
+    ],
+    "explanationAr": "مع منحنى تعلم قدره 90%، تُحسب أوقات الإنتاج التراكمية كما يلي:\nالدفعة — الوحدات — متوسط الزمن — الزمن التراكمي\n1 — 1-4 — 800 — 800\n2 — 5-8 — 720 (800 × 90%) — 1,440\n3 — 9-16 — 648 (720 × 90%) — 2,592\nبطرح 800 ساعة مستهلكة في الدفعة الأولى من الزمن التراكمي لثلاث دفعات نحصل على 1,792 ساعة للدفعات الثلاث التالية (12 وحدة)."
   },
   {
     "unit": 12,
