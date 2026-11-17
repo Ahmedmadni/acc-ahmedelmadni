@@ -2204,7 +2204,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Expected value analysis provides a rational means for\nselecting the best alternative in decisions involving risk. The\nexpected value of an alternative is found by multiplying the\nprobability of each outcome by its payoff and summing the\nproducts. It represents the long-term average payoff for\nrepeated trials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد شركة موازنتها. وبالنظر إلى وتيرة التعافي الاقتصادي الأخيرة، طورت عدة توقعات للمبيعات مع احتمال تحقق كل توقع. ما الأسلوب الذي ينبغي استخدامه لتحديد توقع المبيعات الذي ستعتمد عليه الموازنة؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "المحاكاة الاحتمالية المستمرة.",
+      "تحليل التوزيع الأسي.",
+      "تحليل الحساسية."
+    ],
+    "explanationAr": "يوفر تحليل القيمة المتوقعة أساسًا عقلانيًا لاختيار أفضل البدائل عندما تنطوي القرارات على مخاطر. وتُحسب قيمة البديل المتوقعة بضرب احتمال كل نتيجة في عائدها وجمع النواتج، وتمثل متوسط العائد على المدى الطويل عند تكرار التجربة."
   },
   {
     "unit": 12,
@@ -2357,7 +2365,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Expected value is a means of associating an amount with\neach of the possible outcomes of a probability distribution. A\nprobability distribution can be used to project sales. It is a\nmathematical method for making decisions about the\nlikelihood of future events (such as sales) in the face of\nuncertainty. Various estimates of sales (generated from the\nsales force) can be weighted with different probabilities to\ndetermine expected value",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب الكمي الذي يساعد على التنبؤ بمبيعات المنشأة وأرباحها؟",
+    "choicesAr": [
+      "نظرية التوزيعات الاحتمالية.",
+      "مخططات جانت.",
+      "منحنيات التعلم.",
+      "نظرية صفوف الانتظار."
+    ],
+    "explanationAr": "تربط القيمة المتوقعة مبلغًا بكل نتيجة ممكنة في توزيع احتمالي. ويمكن استخدام التوزيع الاحتمالي للتنبؤ بالمبيعات، وهو طريقة رياضية لاتخاذ قرارات بشأن احتمالات الأحداث المستقبلية مثل المبيعات في ظل عدم التأكد. ويمكن ترجيح تقديرات المبيعات المختلفة، التي يجمعها فريق المبيعات، باحتمالات متنوعة لحساب القيمة المتوقعة."
   },
   {
     "unit": 12,
@@ -2425,7 +2441,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution. This type of\nanalysis helps management analyze alternatives and estimate\nthe consequences of possible prediction errors.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحلل الرئيس التنفيذي لشركة Marx فرصة استثمارية تبلغ $100,000. ويَعِد الاستثمار بعائد قدره $10,000 سنويًا وبمعدل عائد 5%. ويستند مبلغ $100,000 إلى تقدير. ويريد الرئيس التنفيذي معرفة مدى قبول الاستثمار إذا انخفض العائد إلى $60,000 سنويًا فقط. ما نوع التحليل الواجب إجراؤه؟",
+    "choicesAr": [
+      "تحليل الحساسية.",
+      "تحليل التعلم بمتوسط الزمن التراكمي.",
+      "تحليل منحنى التعلم.",
+      "تحليل PEST."
+    ],
+    "explanationAr": "تحليل الحساسية هو تقييم أثر تغير المتغيرات على الحل الأمثل. ويساعد الإدارة على تحليل البدائل وتقدير آثار أخطاء التنبؤ المحتملة."
   },
   {
     "unit": 12,
@@ -2442,7 +2466,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution. Sensitivity\nanalysis reveals how sensitive expected value calculations are\nto the accuracy of the initial estimates. As a result, it is useful\nin determining whether expending additional resources to\nobtain better forecasts is justified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عيّنت الشركة A مؤخرًا مديرًا ماليًا لتحسين إدارة المشاريع. ويرغب المدير في تطبيق نوع جديد من تحليل المشاريع يتيح تقييم آثار التغيرات الصغيرة في المتغيرات على الحل الإجمالي. ويعتقد أن هذا النوع سيساعد في تحديد ما إذا كانت هناك جدوى من إنفاق موارد إضافية للحصول على توقعات أفضل. ما التحليل الذي يصف هذه الطريقة؟",
+    "choicesAr": [
+      "الانحدار البسيط.",
+      "تحليل منحنى التعلم.",
+      "تحليل الحساسية.",
+      "تحليل SWOT."
+    ],
+    "explanationAr": "تحليل الحساسية هو عملية تقييم تأثير التغيرات في المتغيرات على الحل الأمثل، ويوضح مدى حساسية حسابات القيمة المتوقعة لدقة التقديرات الأولية. ولذلك يفيد في تحديد ما إذا كان إنفاق موارد إضافية للحصول على توقعات أكثر دقة مبررًا."
   },
   {
     "unit": 12,
@@ -2459,7 +2491,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Sensitivity analysis is the process of evaluating the effect of\nchanges in variables on the optimum solution.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن تحليل الحساسية غير صحيحة؟",
+    "choicesAr": [
+      "يُستخدم تحليل الحساسية لتقييم أثر تغير المتغيرات على الحل الأقل مثالية.",
+      "يفيد تحليل الحساسية في تحديد ما إذا كانت نفقات إضافية للحصول على توقعات أفضل مبررة.",
+      "ينطوي تحليل الحساسية بطبيعته على أسلوب التجربة والخطأ.",
+      "يفيد تحليل الحساسية في إعداد الموازنات الرأسمالية."
+    ],
+    "explanationAr": "تحليل الحساسية هو عملية تقييم أثر تغير المتغيرات على الحل الأمثل."
   },
   {
     "unit": 12,
@@ -2476,7 +2516,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Sensitivity analysis reveals how sensitive expected value\ncalculations are to the accuracy of initial estimates. As such,\nsensitivity analysis is useful in determining whether expending\nadditional resources to obtain better forecasts is justified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن تحليل الحساسية صحيحة؟",
+    "choicesAr": [
+      "لا يساعد تحليل الحساسية في تقدير عواقب أخطاء التنبؤ المحتملة.",
+      "يفيد تحليل الحساسية في تبرير إنفاق موارد إضافية للحصول على توقعات أفضل.",
+      "من قيود تحليل الحساسية أن المديرين لا يستطيعون رؤية أثر تغيير الافتراضات على الهدف النهائي.",
+      "لا يمكن استخدام تحليل الحساسية في الموازنات الرأسمالية."
+    ],
+    "explanationAr": "يوضح تحليل الحساسية مدى حساسية حسابات القيمة المتوقعة لدقة التقديرات الأولية؛ ومن ثم يفيد في تحديد ما إذا كان إنفاق موارد إضافية للحصول على توقعات أكثر دقة مبررًا."
   },
   {
     "unit": 12,
@@ -2493,7 +2541,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Simulation describes the behavior of a real-world system over\ntime. It ordinarily uses a computer program to perform the\nsimulation computations. Sensitivity analysis examines how\noutcomes change as the model parameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقرر شركة ما إذا كانت ستشتري آلة آلية لتصنيع أحد منتجاتها. وتعتمد التدفقات النقدية الصافية المتوقعة على عدة عوامل وتفاعلات فيما بينها واحتمالات مستوياتها المختلفة. ما الأسلوب المناسب لتقييم توزيع التدفقات النقدية الصافية وتغيرها عند تغير مستويات تلك العوامل؟",
+    "choicesAr": [
+      "المحاكاة وتحليل الحساسية.",
+      "البرمجة الخطية.",
+      "تحليل الارتباط.",
+      "التحليل التفاضلي."
+    ],
+    "explanationAr": "تصف المحاكاة سلوك نظام واقعي على مدار الزمن، وتستخدم عادة برنامجًا حاسوبيًا لإجراء الحسابات. ويفحص تحليل الحساسية كيفية تغير النتائج عندما تتغير معاملات النموذج."
   },
   {
     "unit": 12,
