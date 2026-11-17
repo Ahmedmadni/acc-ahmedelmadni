@@ -696,8 +696,8 @@ function CmaPage() {
                   {q.sourceLayoutReview && (
                     <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
                       {lang === "ar"
-                        ? "مراجعة تنسيق مطلوبة: يحتوي هذا السؤال على جدول أو أرقام معقدة؛ طابقها مع صفحة PDF الأصلية."
-                        : "Verify complex table and numerical layout against the original PDF page before relying on the answer."}
+                        ? "مراجعة مصدر مطلوبة: لم يتم التحقق من ترتيب الجدول أو المعادلة في PDF الأصلي. مفتاح الإجابة المعروض مبدئي ولا ينبغي الاعتماد عليه حتى مطابقة الصفحة."
+                        : "Source review required: the original PDF table or formula has not been checked. Treat its answer key as provisional until the source page is verified."}
                     </p>
                   )}
                   {q.sourceTextStatus === "reconstructed" && (
@@ -749,13 +749,11 @@ function CmaPage() {
                         ) : (
                           <XCircle className="size-4 text-red-700" />
                         )}
-                        {lang === "ar"
-                          ? answers[q.id] === q.answerIndex
-                            ? "إجابة صحيحة"
-                            : "إجابة غير صحيحة"
-                          : answers[q.id] === q.answerIndex
-                            ? "Correct"
-                            : "Incorrect"}
+                        {q.sourceLayoutReview
+                          ? lang === "ar" ? "مقارنة بمفتاح مصدر قيد المراجعة" : "Compared with provisional source key"
+                          : lang === "ar"
+                            ? answers[q.id] === q.answerIndex ? "إجابة صحيحة" : "إجابة غير صحيحة"
+                            : answers[q.id] === q.answerIndex ? "Correct" : "Incorrect"}
                       </span>
                       <p
                         dir={view.direction}
@@ -763,6 +761,13 @@ function CmaPage() {
                       >
                         {view.explanation}
                       </p>
+                      {q.sourceLayoutReview && (
+                        <p role="status" className="mt-2 text-xs font-bold text-amber-900">
+                          {lang === "ar"
+                            ? "هذه المقارنة مبدئية لأن الجدول أو المعادلة لم يُطابق مع PDF الأصلي؛ لا تعتبرها نتيجة اختبار معتمدة."
+                            : "Provisional source-key comparison only: PDF tables or formulas are not visually verified."}
+                        </p>
+                      )}
                       <CmaAnswerSupport question={q} lang={lang} isCorrect={answers[q.id] === q.answerIndex} />
                       {q.answerStatus === "inferred" && (
                         <p className="mt-2 text-xs text-[#76543F]">

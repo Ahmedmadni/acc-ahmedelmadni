@@ -1,3 +1,4 @@
+import { isCmaScorableQuestion, splitCmaQuizSourceReview } from "../../src/lib/cma-source-review.shared.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -391,4 +392,110 @@ test("CMA Section 5 strategic market-share goal is not replaced with earnings gr
   assert.equal(nextYear.units,thisYear.units);
   // The question explicitly assumes unchanged total market size.
   assert.equal(nextYear.units>thisYear.units,false);
+});
+
+
+test("Source-layout review questions cannot enter scored CMA practice by default",()=>{
+  const original=[
+    {id:"verified",sourceLayoutReview:false,answerIndex:1},
+    {id:"imported-table",sourceLayoutReview:true,answerIndex:3},
+    {id:"inferred-layout",sourceLayoutReview:true,answerIndex:0},
+    {id:"unspecified",answerIndex:2},
+  ];
+  const guarded=splitCmaQuizSourceReview(original,false);
+  assert.deepEqual(guarded.eligible.map(q=>q.id),["verified","unspecified"]);
+  assert.deepEqual(guarded.excluded.map(q=>q.id),["imported-table","inferred-layout"]);
+  assert.equal(isCmaScorableQuestion(original[0]),true);
+  assert.equal(isCmaScorableQuestion(original[1]),false);
+  assert.equal(isCmaScorableQuestion(original[2]),false);
+  assert.equal(isCmaScorableQuestion(original[3]),true);
+  assert.deepEqual(original.map(q=>q.answerIndex),[1,3,0,2],
+    "Filtering must not mutate the source bank or answer keys");
+
+  // An explicit learner opt-in displays all source questions, but does
+  // not make the original unreviewed questions count toward any score.
+  const optedIn=splitCmaQuizSourceReview(original,true);
+  assert.deepEqual(optedIn.eligible.map(q=>q.id),
+    ["verified","imported-table","inferred-layout","unspecified"]);
+  assert.deepEqual(optedIn.excluded,[]);
+  assert.equal(isCmaScorableQuestion(optedIn.eligible[1]),false);
+  assert.equal(isCmaScorableQuestion(optedIn.eligible[2]),false);
+  assert.deepEqual(splitCmaQuizSourceReview([],false),{eligible:[],excluded:[]});
+  assert.deepEqual(splitCmaQuizSourceReview([],true),{eligible:[],excluded:[]});
+});
+
+test("The 19 unresolved Unit 12 PDF layouts remain English-only, with stable source pages",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
+  ));
+  const pages={
+    "1.8":63,"1.9":64,"1.13":68,"1.14":69,"1.28":82,
+    "2.3":87,"2.4":88,"2.23":110,
+    "3.8":127,"3.10":130,"3.23":143,"3.24":144,
+    "3.27":151,"3.28":153,"3.29":156,"3.32":161,
+    "3.34":167,"3.35":167,"3.36":168,
+  };
+  const pending=records.filter(row=>!row.stemAr);
+  assert.equal(pending.length,19);
+  assert.deepEqual(pending.map(row=>row.section+"."+row.number),Object.keys(pages));
+  for(const q of pending){
+    const id=q.section+"."+q.number;
+    assert.equal(q.page,pages[id],"Source PDF page locator changed: "+id);
+    assert.equal(q.choices.length,4);
+    assert.equal(q.choicesAr,undefined,"Unverified source options must not be published as Arabic");
+    assert.equal(q.explanationAr,undefined,"Unverified source math must not be published as Arabic");
+  }
+});
+
+
+test("Independent arithmetic audits are not mistaken for publisher PDF verification",()=>{
+  // These checks only reproduce numbers as imported, NOT the source-page layout.
+  assert.equal(Math.round(684.65+7.2884*420),3746);
+  assert.equal(Math.round((0.953**2)*1000)/1000,0.908);
+  assert.equal(40000+2.1*20000,82000);
+  const fourLotCost=(4*12500*0.8**2+4*1500)*1.1;
+  assert.equal(Math.round(fourLotCost)-15400,26400);
+  assert.equal(Math.round(((4*1000*0.7**2-1000)/150)*10)/10,6.4);
+  assert.equal((4096-2560)/200,7.68);
+
+  assert.equal(-160*.1-40*.3+80*.4+80*.2,20);
+  const frostProbability=(120000-100000)/(60000+40000);
+  assert.equal(frostProbability,0.2);
+  const peanutExpected=[20,27.6,30.4,29.6];
+  assert.equal(Math.max(...peanutExpected),30.4);
+  assert.equal(
+    Math.round(42000*.15+57000*.20+72000*.35+72000*.30),64500);
+  const vendorTotal=(unitPrice,passingRate)=>{
+    const purchased=100000/passingRate;
+    return purchased*unitPrice+(purchased-100000)*25;
+  };
+  const costTotals=[
+    vendorTotal(35,.9),vendorTotal(37,.94),
+    vendorTotal(39,.97),vendorTotal(40,.99),
+  ];
+  assert.equal(costTotals.indexOf(Math.min(...costTotals)),3);
+  assert.equal(Math.round(costTotals[3]),4065657);
+  assert.equal(.6*15000000+.4*2000000-9500000,300000);
+  assert.equal(-100000,-100000);
+  const payoffs=[-20000,-10000,30000,70000,100000];
+  const weighted=(probs)=>probs.reduce((sum,p,i)=>sum+p*payoffs[i],0);
+  assert.deepEqual([
+    weighted([.3,.1,.3,.2,.1]),
+    weighted([.2,.2,.2,.2,.2]),
+    weighted([.3,.1,.2,.3,.1]),
+  ],[26000,34000,30000]);
+  const outcomes=[50000,75000,100000,150000];
+  const ev=(items)=>items.reduce((sum,[v,p])=>sum+v*p,0);
+  const alternatives=[
+    ev(outcomes.map((v,i)=>[v,[.10,.20,.40,.30][i]])),
+    ev(outcomes.map((v,i)=>[v,[.10,.20,.45,.25][i]])),
+    ev([ [50000,.10],[75000,.20],[100000,.40],[125000,.30] ]),
+    ev([ [150000,.10],[100000,.20],[75000,.40],[50000,.30] ]),
+  ];
+  assert.deepEqual(alternatives,[105000,102500,97500,80000]);
+  assert.equal(ev([[200000,.2],[250000,.5],[300000,.2],[350000,.1]]),260000);
+  assert.equal(Math.round(305000*(1.80-1.15)-78000),120250);
+  const success=.6*.7+.4*.25;
+  assert.equal(success,.52);
+  assert.equal(Math.round(success*10000000-(1-success)*4000000),3280000);
 });

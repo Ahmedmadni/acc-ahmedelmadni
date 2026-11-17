@@ -624,20 +624,29 @@ for (const [key, original] of vol2Records) {
 }
 console.log("Verified all 58 Unit 11 questions have built-in Arabic, with the remaining Volume 2 items marked as English-first.");
 console.log("Verified Unit 12 Arabic source drafts: 23/28 §1, 31/34 §2, 40/51 §3, 28/28 §4, 14/14 §5; 19 review-blocked source layouts remain English-first.");
-for (const key of [
-  "12.1.8", "12.1.9", "12.1.13", "12.1.14", "12.1.28",
-  "12.2.3", "12.2.4", "12.2.23",
-  "12.3.8", "12.3.10", "12.3.23", "12.3.24",
-  "12.3.27", "12.3.28", "12.3.29", "12.3.32",
-  "12.3.34", "12.3.35", "12.3.36",
-]) {
+// Review-needed MCQs are excluded from scored CMA practice until their
+// original printed pages can be visually inspected. Keep page locators stable.
+const pendingOriginalSourcePages = new Map([
+  ["12.1.8",63],["12.1.9",64],["12.1.13",68],
+  ["12.1.14",69],["12.1.28",82],
+  ["12.2.3",87],["12.2.4",88],["12.2.23",110],
+  ["12.3.8",127],["12.3.10",130],["12.3.23",143],
+  ["12.3.24",144],["12.3.27",151],["12.3.28",153],
+  ["12.3.29",156],["12.3.32",161],["12.3.34",167],
+  ["12.3.35",167],["12.3.36",168],
+]);
+check(pendingOriginalSourcePages.size === 19, "Unit 12 source-layout review must track exactly 19 questions");
+for (const [key, expectedPage] of pendingOriginalSourcePages) {
   const [unit,section,number] = key.split(".");
   const record = vol2Records.get(key);
   const mapped = vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
-  check(!!record && mapped?.sourceLayoutReview === true &&
-    mapped?.sourceLanguage === "en" && !record.stemAr,
+  check(!!record && record.page === expectedPage &&
+    mapped?.sourcePage === expectedPage && mapped?.sourceLayoutReview === true &&
+    mapped?.sourceLanguage === "en" && mapped?.sourceArabicStatus === undefined &&
+    !record.stemAr && !record.choicesAr && !record.explanationAr,
     "Do not certify or translate incomplete source-table layout: "+key);
 }
+console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 for (const key of ["11.2.12", "11.2.13"]) {
   const item=vol2Records.get(key);
   const [unit,section,number]=key.split(".");
