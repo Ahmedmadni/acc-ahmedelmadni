@@ -14,7 +14,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Budgets serve many roles. They force management to plan\nahead, communicate organizational goals throughout the\norganization, and provide criteria for future performance\nevaluations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كل ما يلي من مزايا استخدام الموازنات في نظام الرقابة الإدارية، باستثناء أن الموازنات:",
+    "choicesAr": [
+      "تلزم الإدارة بالتخطيط.",
+      "توفر معايير لتقييم الأداء.",
+      "تعزز الاتصال والتنسيق بين أقسام المنشأة.",
+      "تحد من المصروفات غير المصرح بها."
+    ],
+    "explanationAr": "تؤدي الموازنات أدوارًا متعددة؛ فهي تدفع الإدارة إلى التخطيط للمستقبل، وتنقل أهداف المنشأة إلى مختلف مستوياتها، وتوفر معايير لتقييم الأداء لاحقًا."
   },
   {
     "unit": 13,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An organization must complete its strategic plan before any\nspecific budgeting can begin. The strategic plan lays out the\nmeans by which a firm expects to fulfill its stated mission.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في عملية إعداد الموازنات والتخطيط للمنشأة، أي الأعمال التالية يجب إكماله أولًا؟",
+    "choicesAr": [
+      "موازنة المبيعات.",
+      "الموازنة المالية.",
+      "خطة إدارة التكاليف.",
+      "الخطة الاستراتيجية."
+    ],
+    "explanationAr": "يجب أن تنتهي المنشأة من إعداد خطتها الاستراتيجية قبل البدء في إعداد الموازنات التفصيلية؛ إذ تحدد هذه الخطة الوسائل التي تتوقع المنشأة استخدامها لتحقيق رسالتها."
   },
   {
     "unit": 13,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Uncertainties can be prepared for, but they cannot be\nsubjected to human control through any budget process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُعد من مزايا إعداد الموازنات بالمشاركة؟",
+    "choicesAr": [
+      "التنسيق بين الإدارات.",
+      "الاتصال بين الإدارات.",
+      "توافق الأهداف.",
+      "السيطرة على حالات عدم التأكد."
+    ],
+    "explanationAr": "يمكن الاستعداد لحالات عدم التأكد ووضع خطط للتعامل معها، لكن لا يمكن التحكم في حدوثها من خلال أي عملية لإعداد الموازنات."
   },
   {
     "unit": 13,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Apparent lack of management support is not a potential\nconsequence of having an outside consultant set standards.\nManagement did the hiring, so the consultant’s work product\nnaturally appears to have management support.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فقدت مديرة مصنع صبرها؛ فمنذ ستة أشهر شكلت فريقًا من إدارتي الإنتاج والخدمات للاتفاق على تخصيص التكاليف ووضع التكاليف المعيارية، لكن الخلافات استمرت. فاستعانت بشركة استشارات كبيرة لحسم المسألة. جميع ما يلي من النتائج المحتملة لوضع الاستشاريين للمعايير، باستثناء:",
+    "choicesAr": [
+      "قد لا يفهم الاستشاريون عملية التصنيع فهمًا كاملًا، مما يؤدي إلى أداء أقل من المستوى الأمثل.",
+      "قد يتفاعل الموظفون بصورة سلبية لأنهم لم يشاركوا في وضع المعايير.",
+      "قد ينشأ عدم رضا إذا تضمنت المعايير تكاليف لا تستطيع الوحدة المسؤولة التحكم فيها.",
+      "قد تبدو المعايير وكأنها لا تحظى بتأييد الإدارة."
+    ],
+    "explanationAr": "لا يُعد الافتقار الظاهري إلى تأييد الإدارة نتيجة محتملة للاستعانة باستشاري خارجي لوضع المعايير؛ فالإدارة هي التي تعاقدت معه، ومن الطبيعي أن يُنظر إلى عمله على أنه يحظى بدعمها."
   },
   {
     "unit": 13,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Among other things, the budget is a tool by which\nmanagement can communicate goals to lower-level\nemployees. It is also a tool for motivating employees to reach\nthose goals. For the budget to function in these\ncommunication and motivating roles, top management must\nbe involved in the process. This involvement does not extend\nto dictating the exact numerical contents of the budget since\ntop management lacks a detailed knowledge of daily\noperations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف على أفضل وجه دور الإدارة العليا في عملية إعداد الموازنات؟ ينبغي للإدارة العليا:",
+    "choicesAr": [
+      "المشاركة فقط في مرحلة الموافقة النهائية.",
+      "الحد من مشاركتها لافتقارها إلى المعرفة التفصيلية بالعمليات اليومية.",
+      "المشاركة، بما في ذلك استخدام إعداد الموازنة لإبلاغ الأهداف.",
+      "الفصل التام بين عملية إعداد الموازنة وعملية التخطيط للأعمال."
+    ],
+    "explanationAr": "الموازنة وسيلة تستخدمها الإدارة لنقل الأهداف إلى العاملين في المستويات الأدنى وتحفيزهم على تحقيقها؛ ولذلك لا بد من مشاركة الإدارة العليا. ومع ذلك، لا تعني هذه المشاركة أن تفرض الإدارة العليا جميع المبالغ التفصيلية للموازنة، لأنها لا تملك دائمًا المعرفة الدقيقة بالعمليات اليومية."
   },
   {
     "unit": 13,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A budget is a realistic plan for the future expressed in\nquantitative terms. It is useful for planning, control, motivation,\ncommunication, and achieving goal congruence. As a\nplanning tool, a budget forces management to evaluate the\nreasonableness of assumptions used and goals identified in\nthe budgetary process. As a control tool, the budget provides\na formal benchmark to be used for feedback and performance\nevaluation. As a communication tool, a budget serves to\ncoordinate activities between management and subordinates\nand provides management with a means of dealing with\nuncertainty. Despite its advantages, a budget neither ensures\nimproved cost control nor prevents inefficiencies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُذكر عادة باعتباره ميزة لعملية إعداد الموازنات الرسمية؟",
+    "choicesAr": [
+      "دفع الإدارة إلى تقييم مدى معقولية الافتراضات والأهداف التي تستند إليها الموازنة.",
+      "ضمان تحسين الرقابة على التكاليف ومنع أوجه عدم الكفاءة داخل المنشأة.",
+      "توفير معيار رسمي للتغذية الراجعة وتقييم الأداء.",
+      "العمل وسيلة للتنسيق والاتصال بين الإدارة والمرؤوسين."
+    ],
+    "explanationAr": "الموازنة خطة واقعية للمستقبل تُعبر عنها بمقاييس كمية، وتفيد في التخطيط والرقابة والتحفيز والاتصال وتوافق الأهداف. فهي تلزم الإدارة بمراجعة الافتراضات والأهداف، وتضع معيارًا لمقارنة الأداء الفعلي بالمخطط، وتساعد على تنسيق الأنشطة. لكن مجرد إعداد الموازنة لا يضمن تحسين الرقابة على التكاليف أو منع أوجه عدم الكفاءة."
   },
   {
     "unit": 13,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A budget promotes goal congruence within a company.\nDepartments must coordinate their activities with other\ninterdependent departments in planning and developing the\nbudget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إحدى المزايا الأساسية لإعداد الموازنات هي أنها:",
+    "choicesAr": [
+      "لا تحل محل الإدارة والإشراف.",
+      "تعتمد في خطة الأرباح على التقديرات.",
+      "تُعدل باستمرار لتناسب الظروف المتغيرة.",
+      "تُلزم مديري الإدارات بوضع خطط متناسقة مع خطط الإدارات الأخرى المترابطة معها."
+    ],
+    "explanationAr": "تعزز الموازنة توافق أهداف المنشأة؛ إذ يجب أن تنسق الإدارات أنشطتها مع الإدارات الأخرى التي تعتمد عليها عند التخطيط وإعداد الموازنة."
   },
   {
     "unit": 13,
@@ -133,7 +189,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A budget is a realistic plan for the future expressed in\nquantitative terms. It is a planning tool that establishes goals\nand permits a company to anticipate problems and to plan for\ndecisions. A budget can be a motivator, especially if it sets\nreasonable standards, has some flexibility, and was prepared\nwith the participation of those affected. A budget is a\ncommunication tool because it informs employees about the\ngoals the company is striving to attain and thus enhances goal\ncongruence. A budget is also a means of coordinating the\ncompany’s various activities. The company’s overall budget\nconsists of many smaller budgets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تساعد الموازنة المنشأة على الرقابة على التكاليف من خلال وضع إرشادات لها. ومع ذلك، تؤدي الموازنة أيضًا وظائف:",
+    "choicesAr": [
+      "التخطيط.",
+      "التحفيز.",
+      "الاتصال.",
+      "جميع الإجابات صحيحة."
+    ],
+    "explanationAr": "الموازنة خطة كمية واقعية للمستقبل تحدد الأهداف، وتساعد على توقع المشكلات والقرارات. ويمكن أن تحفز العاملين إذا تضمنت معايير معقولة وقدرًا مناسبًا من المرونة وأُعدت بمشاركتهم. كما تنقل أهداف المنشأة إلى العاملين وتساعد على توافق الأهداف وتنسيق أنشطة الإدارات المختلفة."
   },
   {
     "unit": 13,
@@ -150,7 +214,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Lack of goal congruence can result when attaining a subunit’s\nbudgetary goal results in disregard of overall company goals.\nSubunit managers may inflate their budget requests to provide\noperating leeway and then engage in unnecessary spending\nto avoid future budget cuts. A budget may encourage\nexclusive concentration on meeting short-term standards at\nthe expense of long-term considerations. A manager fearful of\nnot meeting the budget targets may improperly manipulate\nallocation of expenses. The manager seeking to stay within\nthe budget may disregard employee morale and poor working\nconditions. Interunit resentment may develop as a result of\ncompetition for scarce funds.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تؤدي عملية إعداد موازنة نُفذت بصورة غير صحيحة إلى:",
+    "choicesAr": [
+      "إهمال الأهداف العامة للمنشأة.",
+      "المبالغة في طلب اعتمادات الموازنة.",
+      "تحقيق أهداف قصيرة الأجل على حساب الأهداف طويلة الأجل.",
+      "جميع الإجابات صحيحة."
+    ],
+    "explanationAr": "قد يؤدي ضعف توافق الأهداف إلى سعي الإدارات لتحقيق أهدافها الخاصة على حساب المنشأة. وقد يبالغ المديرون في طلب الاعتمادات لتوفير هامش تشغيلي، أو ينفقون بلا حاجة تجنبًا لتخفيض موازناتهم مستقبلًا. وقد يؤدي التركيز على المعايير قصيرة الأجل إلى إهمال الاعتبارات طويلة الأجل، أو التلاعب بتوزيع المصروفات، أو تجاهل معنويات الموظفين وظروف العمل، أو نشوء تنافس سلبي بين الوحدات على الموارد المحدودة."
   },
   {
     "unit": 13,
@@ -167,7 +239,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Ineffective budget control systems are characterized by each\nof the items noted. The use of budgets for planning only is a\nproblem that must be resolved through the education process.\nManagement must be educated to use the budget documents\nfor control, not just planning. Management must learn that\nbudgets can motivate and help individuals achieve\nprofessional growth as well as the goals of the firm. Ignoring\nbudgets obviously contributes to the ineffectiveness of the\nbudget system. Finally, feedback must be timely or lower\nmanagement and employees will soon recognize that budget\nfeedback is so late it provides no information, making the\nbudget a worthless device.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتميز نظم الرقابة على الموازنات غير الفعالة بأنها:",
+    "choicesAr": [
+      "تستخدم الموازنات للتخطيط دون الرقابة.",
+      "تستخدم الموازنات لمضايقة الأفراد بدلًا من تحفيزهم.",
+      "لا تقدم تغذية راجعة في الوقت المناسب عن الموازنة.",
+      "جميع الإجابات صحيحة."
+    ],
+    "explanationAr": "كل الممارسات المذكورة من سمات الرقابة غير الفعالة. ويجب توعية الإدارة بأن الموازنة أداة للرقابة أيضًا، وليس للتخطيط فقط، وأنها وسيلة لتحفيز العاملين ومساعدتهم على النمو المهني وتحقيق أهداف المنشأة. كما أن التأخر في التغذية الراجعة يقلل فائدتها إلى درجة قد تفقد معها الموازنة قيمتها الرقابية."
   },
   {
     "unit": 13,
@@ -184,7 +264,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Budget formulation is a planning function; however, budgets\nare also useful control devices. Budgets provide a basis for\ncontrol of performance through comparisons of actual with\nbudgeted data. They permit analysis of variations from plans\nand signal the need for corrective managerial action.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن الموازنات غير صحيحة؟",
+    "choicesAr": [
+      "تعرض الموازنات خطط المنشأة بصورة رسمية ومنطقية ومتكاملة.",
+      "تُستخدم الموازنات لأغراض التخطيط فقط.",
+      "يمكن إعداد موازنات للتدفقات النقدية أو استخدام ساعات العمل.",
+      "الموازنة خطة تتضمن بيانًا كميًا بالنتائج المتوقعة."
+    ],
+    "explanationAr": "تُعد صياغة الموازنة نشاطًا تخطيطيًا، لكنها تُستخدم كذلك أداة للرقابة. فهي تتيح مقارنة الأداء الفعلي بالمعتمد، وتحليل الانحرافات عن الخطة، وتحديد الحاجة إلى الإجراءات الإدارية التصحيحية."
   },
   {
     "unit": 13,
@@ -201,7 +289,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The budget planning calendar is the schedule of activities for\nthe development and adoption of the budget. It should include\na list of dates indicating when specific information is to be\nprovided by each information source to others. The\npreparation of a master budget usually takes several months.\nFor instance, many firms start the budget for the next calendar\nyear some time in September in hopes of having it completed\nby December 1. Because all of the individual departmental\nbudgets are based on forecasts prepared by others and the\nbudgets of other departments, it is essential to have a\nplanning calendar to ensure the proper integration of the entire\nprocess.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقويم التخطيط المستخدم في إعداد الموازنات هو:",
+    "choicesAr": [
+      "الفترة الزمنية التي تغطيها الموازنة.",
+      "الجدول الزمني للأنشطة اللازمة لإعداد الموازنة واعتمادها.",
+      "الفترة التي تغطيها الموازنة السنوية والخطة طويلة الأجل.",
+      "توقع المبيعات شهريًا خلال فترة الموازنة السنوية."
+    ],
+    "explanationAr": "تقويم تخطيط الموازنة هو الجدول الزمني للأنشطة اللازمة لإعداد الموازنة واعتمادها. ويجب أن يحدد المواعيد التي توفر فيها كل جهة معلوماتها للجهات الأخرى. وقد يستغرق إعداد الموازنة الشاملة عدة أشهر؛ فمثلًا قد تبدأ بعض الشركات إعداد موازنة السنة التقويمية المقبلة في سبتمبر حتى تكتمل بحلول 1 ديسمبر. ولأن موازنات الإدارات تعتمد على توقعات وموازنات جهات أخرى، فإن التقويم يساعد على تكامل العملية."
   },
   {
     "unit": 13,
@@ -218,7 +314,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A budget manual describes how a budget is to be prepared.\nItems usually included in a budget manual are a planning\ncalendar and distribution instructions for all budget schedules.\nDistribution instructions are important because, once a\nschedule is prepared, other departments within the\norganization will use the schedule to prepare their own\nbudgets. Without distribution instructions, someone who\nneeds a particular schedule may be overlooked.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الذي يُرجح تضمينه في دليل الموازنة الذي يساعد على حسن تشغيل نظام الموازنات؟",
+    "choicesAr": [
+      "دليل الحسابات.",
+      "تعليمات توزيع جداول الموازنة.",
+      "سياسات توظيف العاملين.",
+      "توثيق برنامج النظام المحاسبي."
+    ],
+    "explanationAr": "يشرح دليل الموازنة كيفية إعدادها. ويشمل عادة تقويم التخطيط وتعليمات توزيع جميع جداول الموازنة؛ فبعد إعداد أي جدول تستخدمه الإدارات الأخرى لإعداد موازناتها. وبدون تعليمات التوزيع قد لا يصل جدول مهم إلى الجهة التي تحتاجه."
   },
   {
     "unit": 13,
@@ -235,7 +339,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Joint development of goals is more conducive to motivation,\nas is allowing divisional managers to develop the\nimplementation plan. Goal congruence is enhanced when\nsenior management is involved in the budgeting process along\nwith division managers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تطوير موازنة السنة التالية، أي المناهج التالية يُرجح أن يحقق أكبر قدر من التحفيز الإيجابي وتوافق الأهداف؟",
+    "choicesAr": [
+      "السماح لمدير القسم بتحديد الهدف الذي يرى أنه يحقق أكبر قدر من الربح للقسم.",
+      "تحديد الإدارة العليا الأهداف العامة، ثم ترك مدير القسم يقرر كيفية تحقيقها.",
+      "اشتراك مدير القسم والإدارة العليا في وضع الأهداف والغايات أثناء إعداد الخطة التشغيلية العامة للمنشأة.",
+      "اشتراك مدير القسم والإدارة العليا في وضع الأهداف، ثم إعداد مدير القسم خطة التنفيذ."
+    ],
+    "explanationAr": "تعزز المشاركة المشتركة في وضع الأهداف التحفيز، كما أن إتاحة وضع خطة التنفيذ لمدير القسم تزيد الدافعية. ويساعد اشتراك الإدارة العليا ومديري الأقسام في إعداد الموازنة على توافق أهداف الأقسام مع أهداف المنشأة."
   },
   {
     "unit": 13,
@@ -252,7 +364,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since department managers have the most detailed\nknowledge about organizational operations, they should use\nthis information as the building blocks of the operating budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة فيما يتعلق بمناهج إعداد الموازنات؟",
+    "choicesAr": [
+      "يضمن منهج إعداد الموازنة من أعلى إلى أسفل الالتزام بالأهداف الاستراتيجية للمنشأة.",
+      "لمنع الغموض، يجب أن تظل أهداف موازنات الإدارات ثابتة حتى لو تبين خطأ توقع المبيعات الذي بُنيت عليه في منتصف السنة.",
+      "أدى تطور تقنية المعلومات إلى تراجع دور الموازنات وسيلةً للاتصال التنظيمي.",
+      "لأن مديري الإدارات لديهم المعرفة الأكثر تفصيلًا بعمليات المنشأة، ينبغي استخدام هذه المعرفة أساسًا لبناء الموازنة التشغيلية."
+    ],
+    "explanationAr": "لدى مديري الإدارات معرفة تفصيلية مباشرة بأنشطة المنشأة؛ لذلك ينبغي الاستفادة من هذه المعرفة باعتبارها حجر الأساس في إعداد الموازنات التشغيلية."
   },
   {
     "unit": 13,
@@ -269,7 +389,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Several planning assumptions should be made at the\nbeginning of the budget process. Some of these assumptions\nare internal factors; others are external to the company.\nExternal factors include general economic conditions and their\nexpected trend, governmental regulatory measures, the labor\nmarket in the locale of the company’s facilities, and activities\nof competitors, including the effects of mergers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يُعد عاملًا خارجيًا يجب مراعاته عند التخطيط لإعداد الموازنة؟",
+    "choicesAr": [
+      "الانتقال إلى نظام إدارة لامركزي.",
+      "تطبيق برنامج حوافز جديد.",
+      "تطوير منتج جديد.",
+      "اندماج منشأتين منافستين."
+    ],
+    "explanationAr": "تُحدد في بداية عملية إعداد الموازنة افتراضات تخطيطية بعضها داخلي وبعضها خارجي. وتشمل العوامل الخارجية الأوضاع الاقتصادية واتجاهاتها المتوقعة، والأنظمة الحكومية، وسوق العمل المحلي، وأنشطة المنافسين ومنها آثار الاندماجات."
   },
   {
     "unit": 13,
@@ -286,7 +414,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The budgeting department is responsible for compiling the\nbudget and managing the budget process. The budget director\nand department are not responsible for actually developing the\nestimates on which the budget is based. This role is\nperformed by those to whom the resulting budget will be\napplicable. The budget director has staff, not line, authority.\n(S)he has a technical and advisory role. The final decision-\nmaking responsibility rests with line management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الدور الأساسي لمدير الموازنات والإدارة المختصة بها؟",
+    "choicesAr": [
+      "الفصل في الخلافات بين المديرين التنفيذيين أثناء إعداد الخطة التشغيلية السنوية.",
+      "إعداد خطة الأرباح السنوية باختيار البدائل المقترحة من الوحدات التشغيلية.",
+      "الدفاع عن الموازنة أمام اللجنة التنفيذية لمجلس الإدارة.",
+      "تجميع الموازنة وإدارة عملية إعدادها."
+    ],
+    "explanationAr": "تتولى إدارة الموازنات تجميع الموازنة وإدارة عملية إعدادها، لكنها لا تتحمل وحدها مسؤولية وضع تقديراتها؛ فتلك مهمة المسؤولين الذين ستطبق عليهم الموازنة. ويتمتع مدير الموازنات بسلطة استشارية وفنية، وليس بسلطة تنفيذية مباشرة، بينما تبقى القرارات النهائية من مسؤولية الإدارة التنفيذية."
   },
   {
     "unit": 13,
@@ -303,7 +439,15 @@
     ],
     "answerIndex": 3,
     "explanation": "One of the behavioral considerations of budgeting is the\nextent of participation in the process by managers at all levels\nwithin the organization. Managers are more motivated to\nachieve budgeted goals when they are involved in budget\npreparation. A broad level of participation usually leads to\ngreater support for the budget and the entity as a whole, as\nwell as a greater understanding of what is to be accomplished.\nAdvantages of a participative budget include greater accuracy\nof budget estimates. Managers with immediate operational\nresponsibility for activities have a better understanding of what\nresults can be achieved and at what costs. Also, managers\ncannot blame unrealistic objectives as an excuse for not\nachieving budget expectations when they have helped to\nestablish those objectives. Despite the involvement of lower\nlevel managers, senior management must still participate in\nthe budget process to ensure that the combined objectives of\nthe various departments are consistent with profitability\nobjectives of the company.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُعد ميزة للموازنات المعدة بالمشاركة؟",
+    "choicesAr": [
+      "يشعر الأفراد في جميع المستويات بأنهم جزء من الفريق، مما يزيد دعمهم للمنشأة.",
+      "يضع التقديرات الأشخاص الأقرب إلى الأنشطة المعنية.",
+      "يصبح المديرون أكثر تحفيزًا لتحقيق أهداف الموازنة لأنهم شاركوا في تحديدها.",
+      "عندما يحدد المديرون الأهداف النهائية للموازنة، لا يعود على الإدارة العليا الاهتمام بربحية العمليات الجارية إجمالًا."
+    ],
+    "explanationAr": "تزداد دافعية المديرين لتحقيق الأهداف إذا شاركوا في إعدادها، وغالبًا ما تزيد المشاركة الواسعة دعم الموازنة ودقة تقديراتها بسبب معرفة المديرين المباشرة بالعمليات والتكاليف. كما يقل احتمال تبرير الإخفاق بعدم واقعية الأهداف إذا شاركوا في تحديدها. لكن يجب أن تظل الإدارة العليا مشاركة للتأكد من اتساق أهداف الإدارات مع أهداف ربحية المنشأة ككل."
   },
   {
     "unit": 13,
@@ -320,7 +464,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Bottom-up budgeting is the best way of motivating managers\nto meet budget estimates because it permits participation in\nthe budget process. Lower level managers who take part in\nbudgeting decisions are more likely to support the result and\nless likely to feel that the budget has been imposed from\nabove.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي أساليب إعداد الموازنات يُرجح أن يكون الأكثر قدرة على تحفيز المديرين؟",
+    "choicesAr": [
+      "الموازنة من أعلى إلى أسفل.",
+      "الموازنة على الأساس الصفري.",
+      "أسلوب موازنة البرامج ومراجعتها.",
+      "الموازنة من أسفل إلى أعلى."
+    ],
+    "explanationAr": "يُعد منهج إعداد الموازنة من أسفل إلى أعلى أكثر قدرة على تحفيز المديرين لأنه يتيح لهم المشاركة في عملية إعدادها. ومن يشارك في اتخاذ القرارات يكون غالبًا أكثر دعمًا للنتائج وأقل شعورًا بأن الموازنة فُرضت عليه من المستوى الأعلى."
   },
   {
     "unit": 13,
@@ -337,7 +489,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An organizational budget requires a significant commitment of\ninternal resources. The single most important factor in\nassuring its success is for upper management to demonstrate\nthat they take the project seriously and consider it vital to the\norganization’s future.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما العامل الأكثر أهمية لنجاح عملية إعداد الموازنة؟",
+    "choicesAr": [
+      "الاستعانة بمحللين ذوي خبرة.",
+      "استخدام برنامج موازنات متكامل.",
+      "موثوقية التنبؤات وتحليلات الاتجاهات.",
+      "دعم الإدارة العليا."
+    ],
+    "explanationAr": "تتطلب الموازنة تخصيص موارد داخلية كبيرة. ويعد العامل الأهم لنجاحها أن تُظهر الإدارة العليا جديتها في التعامل مع المشروع واعتبارها الموازنة أمرًا أساسيًا لمستقبل المنشأة."
   },
   {
     "unit": 13,
