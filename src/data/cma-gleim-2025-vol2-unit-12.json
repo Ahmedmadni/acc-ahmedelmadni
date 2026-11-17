@@ -2068,7 +2068,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Expected value is a means of associating a dollar amount\nwith each of the possible outcomes of a probability\ndistribution. The outcome yielding the highest expected value\n(which may or may not be the most likely one) is the optimal\nalternative. The expected value of each outcome, and of the\nproject as a whole, can be determined through the\npreparation of a payoff table, as follows:\nMonthly\nSales                  Income Expected\nIn Units Probability     (Loss)     Value\n10,000        .2   × $(4,000) = $ (800)\n20,000        .3   × 10,000 =    3,000\n30,000        .3   × 30,000 =    9,000\n40,000        .2   × 60,000 = 12,000\n$23,200",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طورت شركة برمجيات حزمة جديدة، وأعد مدير المبيعات التوزيع الاحتمالي التالي لمبيعاتها الشهرية والدخل أو الخسارة المرتبطة بها:\nالمبيعات الشهرية بالوحدات — الاحتمال — الدخل (الخسارة)\n10,000 — .2 — $(4,000)\n20,000 — .3 — 10,000\n30,000 — .3 — 30,000\n40,000 — .2 — 60,000\nإذا قررت الشركة تسويق المنتج الجديد، فما القيمة المتوقعة للدخل الشهري الإضافي؟",
+    "choicesAr": [
+      "$23,200",
+      "$24,000",
+      "$24,800",
+      "$25,000"
+    ],
+    "explanationAr": "تربط القيمة المتوقعة مبلغًا نقديًا بكل نتيجة محتملة في توزيع احتمالي. ويُعد البديل صاحب أعلى قيمة متوقعة، وقد لا يكون الأكثر احتمالًا، الخيار الأمثل. ويمكن إعداد جدول للعوائد لحساب كل نتيجة والقيمة المتوقعة للمشروع:\nالمبيعات الشهرية — الاحتمال — الدخل (الخسارة) — القيمة المتوقعة\n10,000 — .2 × $(4,000) = $ (800)\n20,000 — .3 × 10,000 = 3,000\n30,000 — .3 × 30,000 = 9,000\n40,000 — .2 × 60,000 = 12,000\n$23,200"
   },
   {
     "unit": 12,
@@ -2085,7 +2093,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When monetary outcomes and probabilities can be reasonably\nestimated, a payoff table can be constructed to determine the\nbest course of action:\nDecision     State of Contribution                  Expected\nAlternative Nature          Margin      Probability Value\nPlan 1       Excellent $300,000    ×     0.4     = $120,000\nGood      240,000    ×     0.6     = 144,000\n$264,000\nPlan 2       Excellent $370,000    ×     0.4     = $148,000\nGood      180,000    ×     0.6     = 108,000\n$256,000\nAfter weighting the possible monetary outcomes by their\nrespective probabilities, the expected value of Plan 1 is $8,000\nhigher than the expected value of Plan 2.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشير دراسات السوق الأخيرة إلى أن الشركة تملك منتجًا استهلاكيًا يُرجح نجاحه. وتتنبأ المبيعات بنتائج ممتازة أو جيدة، ويحدد مدير المبيعات احتمالًا قدره .6 للنتائج الجيدة. وتدرس الشركة خطط تعويض موظفي المبيعات، وحددت هوامش المساهمة التالية:\nعند المبيعات الممتازة:\nالخطة 1 — $300,000\nالخطة 2 — 370,000\nعند المبيعات الجيدة:\nالخطة 1 — 240,000\nالخطة 2 — 180,000\nأي العبارات التالية صحيحة؟",
+    "choicesAr": [
+      "الخطة 2 أفضل بمقدار $10,000 مقارنة بالخطة 1.",
+      "الخطة 1 أفضل بمقدار $8,000 مقارنة بالخطة 2.",
+      "ينبغي اختيار الخطة 1 بسبب ثقة مدير المبيعات الأكبر في النتائج الجيدة.",
+      "يمكن اختيار أي من الخطتين، ويتوقف القرار على احتمال تحقق مبيعات ممتازة."
+    ],
+    "explanationAr": "عندما يمكن تقدير النتائج النقدية والاحتمالات بدرجة معقولة، يمكن إعداد جدول للعوائد لتحديد القرار الأفضل:\nالبديل — الحالة — هامش المساهمة — الاحتمال — القيمة المتوقعة\nالخطة 1 — ممتازة — $300,000 × 0.4 = $120,000\nجيدة — 240,000 × 0.6 = 144,000\n$264,000\nالخطة 2 — ممتازة — $370,000 × 0.4 = $148,000\nجيدة — 180,000 × 0.6 = 108,000\n$256,000\nبعد ترجيح النتائج النقدية باحتمالاتها، تكون القيمة المتوقعة للخطة 1 أعلى بمقدار $8,000 من القيمة المتوقعة للخطة 2."
   },
   {
     "unit": 12,
