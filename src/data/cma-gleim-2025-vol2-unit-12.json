@@ -14,7 +14,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Correlation and regression analysis can be used to determine\nwhether a relationship exists among two or more variables.\nThe degree of that relationship is assessed by means of\ncorrelation analysis. Thus, regressing sales (the dependent\nvariable) on both sales of replacement parts and sales of\nautomobiles (independent variables) determines the extent of\nthe dependence.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعمل شركة في بيع قطع غيار السيارات البديلة في مدينة كبيرة، وتعد توقعات مبيعاتها للسنة القادمة. وقد جُمعت بيانات مبيعات الشركة والقطاع لقطع الغيار، إلى جانب مبيعات السيارات الجديدة والمستعملة في المدينة خلال آخر 10 سنوات. إذا أرادت الشركة معرفة ما إذا كانت مبيعات قطع الغيار لديها تعتمد على مبيعات القطاع لقطع الغيار أو على مبيعات السيارات الجديدة والمستعملة، فينبغي استخدام:",
+    "choicesAr": [
+      "أساليب المحاكاة.",
+      "تحليل الارتباط والانحدار.",
+      "المعاينة الإحصائية.",
+      "تحليل السلاسل الزمنية."
+    ],
+    "explanationAr": "يمكن استخدام تحليل الارتباط والانحدار لمعرفة وجود علاقة بين متغيرين أو أكثر، ويقيس تحليل الارتباط درجة هذه العلاقة. ولذلك يساعد انحدار مبيعات الشركة (المتغير التابع) على مبيعات قطاع قطع الغيار ومبيعات السيارات (المتغيرات المستقلة) في تحديد مدى اعتماد مبيعاتها على تلك العوامل."
   },
   {
     "unit": 12,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Regression analysis, also called least-squares analysis, is the\nprocess of deriving the linear equation that describes the\nrelationship between two (or more) variables with a nonzero\ncoefficient of correlation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جمعت شركة بيانات آخر 24 شهرًا لمعرفة ما إذا كان يمكن استخدام متغير مستقل لتقدير تكاليف الشحن. وتشمل المتغيرات المستقلة المرشحة عدد الطرود المشحونة، والأميال المقطوعة في الشحن، وأوزان الشحنات بالأرطال. ما الأسلوب الكمي المناسب لاختبار ما إذا كان أي من هذه المتغيرات يقدم تقديرًا جيدًا لتكاليف الشحن؟",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "البرمجة الخطية.",
+      "الانحدار الخطي.",
+      "التكلفة المتغيرة."
+    ],
+    "explanationAr": "تحليل الانحدار، المعروف أيضًا بتحليل المربعات الصغرى، هو عملية اشتقاق معادلة خطية تصف العلاقة بين متغيرين أو أكثر عندما يكون معامل الارتباط بينهما غير صفري."
   },
   {
     "unit": 12,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In the standard regression equation, b represents the variable\ncoefficient. For example, in a cost determination regression, y\nequals total costs, b is the variable cost per unit, x is the\nnumber of units produced, and a is fixed cost.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في معادلة الانحدار القياسية y = a + bx، ما أفضل وصف للرمز b؟",
+    "choicesAr": [
+      "متغير مستقل.",
+      "متغير تابع.",
+      "معامل ثابت.",
+      "معامل متغير."
+    ],
+    "explanationAr": "يمثل b المعامل المتغير في معادلة الانحدار القياسية. فعند استخدام الانحدار لتحديد التكلفة، يمثل y إجمالي التكاليف، ويمثل b التكلفة المتغيرة لكل وحدة، ويمثل x عدد الوحدات المنتجة، بينما يمثل a التكلفة الثابتة."
   },
   {
     "unit": 12,
@@ -65,7 +89,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The correlation coefficient can vary from –1 to +1. A –1\nrelationship indicates a perfect negative correlation, and a +1\nrelationship indicates a perfect positive correlation. A zero\ncorrelation coefficient indicates no linear association between\nthe variables. Thus, the correlation coefficient that is nearest\nto zero indicates the weakest linear association. Of the options\ngiven in the question, the correlation coefficient that is nearest\nto zero is –0.11.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي معامل ارتباط مما يلي يدل على أضعف علاقة خطية بين متغيرين؟",
+    "choicesAr": [
+      "–0.73",
+      "–0.11",
+      "0.12",
+      "0.35"
+    ],
+    "explanationAr": "يتراوح معامل الارتباط بين –1 و+1. وتشير القيمة –1 إلى ارتباط سلبي تام، وتشير +1 إلى ارتباط إيجابي تام، بينما تدل القيمة صفر على عدم وجود علاقة خطية. ولذلك فإن أقرب معامل إلى الصفر هو الأضعف ارتباطًا خطيًا، ومن الخيارات المعطاة فإن القيمة الأقرب إلى الصفر هي –0.11."
   },
   {
     "unit": 12,
@@ -82,7 +114,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The coefficient of correlation (r) measures the strength of the\nlinear relationship between the dependent and independent\nvariables. The magnitude of r is independent of the scales of\nmeasurement of x and y. The coefficient lies between –1.0\nand +1.0. A value of zero indicates no linear relationship\nbetween the x and y variables. A value of +1.0 indicates a\nperfectly direct relationship, and a value of –1.0 indicates a\nperfectly inverse relationship.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُستخدم مفهوم الارتباط كثيرًا إلى جانب تحليل الانحدار، ويُقاس بمعامل الارتباط r. ما التفسير الأفضل لقيمة r؟",
+    "choicesAr": [
+      "تكون دائمًا موجبة.",
+      "تفسر الانحرافات بدلالة المتغير المستقل.",
+      "تتراوح من سالب ما لا نهاية إلى موجب ما لا نهاية.",
+      "تقيس قوة العلاقة النسبية بين متغيرين."
+    ],
+    "explanationAr": "يقيس معامل الارتباط (r) قوة العلاقة الخطية بين المتغير التابع والمتغير المستقل. ولا تتأثر القيمة المطلقة للمعامل بمقاييس قياس x وy، ويتراوح بين –1.0 و+1.0. وتشير القيمة صفر إلى عدم وجود علاقة خطية بين المتغيرين x وy، وتشير +1.0 إلى علاقة طردية تامة، بينما تشير –1.0 إلى علاقة عكسية تامة."
   },
   {
     "unit": 12,
@@ -99,7 +139,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Regression analysis is used to find an equation for the linear\nrelationship among variables. The behavior of the dependent\nvariable is explained in terms of one or more independent\nvariables. Regression analysis often is used to estimate a\ndependent variable (such as cost) given a known independent\nvariable (such as production).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُستخدم معادلة الانحدار من أجل:",
+    "choicesAr": [
+      "تقدير المتغير أو المتغيرات التابعة.",
+      "تضمين عوامل تقع خارج النطاق الملائم.",
+      "الاعتماد على دالتي الهدف والقيود.",
+      "تقدير المتغير المستقل."
+    ],
+    "explanationAr": "يُستخدم تحليل الانحدار لإيجاد معادلة تصف العلاقة الخطية بين المتغيرات، بحيث يُفسر سلوك المتغير التابع بواسطة متغير مستقل واحد أو أكثر. ويُستخدم كثيرًا لتقدير متغير تابع مثل التكلفة عند معرفة قيمة متغير مستقل مثل حجم الإنتاج."
   },
   {
     "unit": 12,
@@ -116,7 +164,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Linear regression is based on various assumptions. For\nexample, (1) the linear relationship of x and y only applies\nwithin a relevant range, (2) the value of y for a given value of x\ndoes not depend on (is statistically independent of) any other\nvalue of y, (3) the values of the subpopulations of y are\nnormally distributed with a mean of zero, (4) the variance of\nthe subpopulations of y is constant, (5) the values of y are\nstatistically independent, and (6) the independent variables\nare not correlated with each other. However, regression is\nonly a means of predicting the future; it cannot provide\ncertainty.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتمد صحة نتائج الانحدار الخطي على جميع الافتراضات التالية، باستثناء:",
+    "choicesAr": [
+      "تتبع قيم y عند قيمة معينة من x توزيعًا طبيعيًا.",
+      "يكون متوسط المجتمعات الفرعية لقيم y حول خط الانحدار مساويًا للصفر.",
+      "اليقين التام.",
+      "يكون تباين المجتمعات الفرعية لقيم y ثابتًا."
+    ],
+    "explanationAr": "يقوم الانحدار الخطي على افتراضات عديدة، ومنها: (1) انطباق العلاقة الخطية بين x وy داخل النطاق الملائم فقط، (2) استقلال قيمة y عند قيمة محددة من x إحصائيًا عن قيم y الأخرى، (3) اتباع المجتمعات الفرعية لقيم y توزيعًا طبيعيًا بمتوسط صفر، (4) ثبات تباين المجتمعات الفرعية لقيم y، (5) الاستقلال الإحصائي لقيم y، (6) عدم ارتباط المتغيرات المستقلة ببعضها. لكن الانحدار أداة للتنبؤ بالمستقبل ولا يوفر اليقين التام."
   },
   {
     "unit": 12,
@@ -167,7 +223,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The letter x in the standard regression equation is the\nindependent variable. For example, in a regression to\ndetermine the total cost of production, x equals units\nproduced.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الوصف الأفضل للرمز x في معادلة الانحدار القياسية؟",
+    "choicesAr": [
+      "المتغير المستقل.",
+      "المتغير التابع.",
+      "معامل ثابت.",
+      "معامل التحديد."
+    ],
+    "explanationAr": "يمثل الرمز x في معادلة الانحدار القياسية المتغير المستقل. فعلى سبيل المثال، عند استخدام الانحدار لتحديد إجمالي تكلفة الإنتاج، تمثل x الوحدات المنتجة."
   },
   {
     "unit": 12,
@@ -184,7 +248,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A coefficient of –1.0 signifies a perfect inverse relationship,\nand a coefficient of 1.0 signifies a perfect direct relationship.\nThus, the higher the absolute value of the coefficient of\ncorrelation, the stronger the linear relationship. A coefficient\nof –.89 suggests a very strong inverse relationship between\nthe independent and dependent variables.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في تحليل الانحدار، أي معاملات الارتباط التالية يدل على أقوى علاقة خطية بين المتغير المستقل والمتغير التابع؟",
+    "choicesAr": [
+      "1.03",
+      "–.02",
+      "–.89",
+      ".75"
+    ],
+    "explanationAr": "يدل معامل الارتباط –1.0 على علاقة عكسية تامة، ويدل 1.0 على علاقة طردية تامة. وكلما زادت القيمة المطلقة لمعامل الارتباط زادت قوة العلاقة الخطية. ولذلك تشير القيمة –.89 إلى علاقة عكسية قوية جدًا بين المتغير المستقل والمتغير التابع."
   },
   {
     "unit": 12,
@@ -201,7 +273,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The coefficient of determination (r 2) is the amount of variation\nin the dependent variable (interest income) that is explained\nby the independent variables. In this case, less of the change\nin interest income is explained by the model. Thus, some\nother factor must be causing interest income to change. This\nchange merits audit investigation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طوّر المراجع الداخلي في أحد البنوك نموذج انحدار متعددًا يُستخدم منذ عدة سنوات لتقدير إيرادات الفوائد من القروض التجارية. وعند تطبيق النموذج خلال السنة الحالية، اكتشف أن قيمة r 2 انخفضت بصورة كبيرة، مع أن النموذج يبدو من جوانب أخرى جيد الأداء. ما الاستنتاج المبرر لهذا التغير؟",
+    "choicesAr": [
+      "ينبغي للمراجع حساب معامل الارتباط.",
+      "لم يعد تحليل الانحدار أسلوبًا مناسبًا لتقدير إيرادات الفوائد.",
+      "توجد عوامل جديدة لم يتضمنها النموذج تؤثر في إيرادات الفوائد.",
+      "سيزيد استخدام الانحدار الخطي من موثوقية النموذج."
+    ],
+    "explanationAr": "معامل التحديد (r 2) هو مقدار التغير في المتغير التابع (إيرادات الفوائد) الذي تفسره المتغيرات المستقلة. وفي هذه الحالة، أصبح النموذج يفسر قدرًا أقل من تغير إيرادات الفوائد، ما يشير إلى تأثير عامل آخر ويستدعي تحقيقًا من المراجع."
   },
   {
     "unit": 12,
@@ -252,7 +332,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Regression analysis is a statistical method that measures the\nrelationship between variables. It estimates the component of\nthe dependent variable that varies with changes in the\nindependent variable and the component that does not vary.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يرغب مدير قسم التجميع في إحدى الشركات في تقدير المكونات الثابتة والمتغيرة لتكلفة القسم. ولهذا الغرض جمع بيانات إجمالي التكاليف وحجم الإنتاج خلال آخر 24 شهرًا. ما الأسلوب الذي ينبغي استخدامه لتقدير المكونين الثابت والمتغير لإجمالي التكلفة؟",
+    "choicesAr": [
+      "تحليل الانحدار.",
+      "نظرية الألعاب.",
+      "تحليل الحساسية.",
+      "نظرية صفوف الانتظار."
+    ],
+    "explanationAr": "تحليل الانحدار أسلوب إحصائي يقيس العلاقة بين المتغيرات، ويقدّر الجزء من المتغير التابع الذي يتغير بتغير المتغير المستقل والجزء الذي لا يتغير."
   },
   {
     "unit": 12,
@@ -269,7 +357,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Simple regression uses the algebraic formula for a straight\nline, y = a + bx, where x is the independent variable. Multiple\nregression is used when there is more than one independent\nvariable. Multiple regression allows a firm to identify many\nfactors (independent variables) and to weight each one\naccording to its influences on the overall outcome (y = a +\nb1x1 + b2x2 + b3x3 + etc.).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في تقدير التكاليف، يختلف الانحدار البسيط عن الانحدار المتعدد في أن الانحدار البسيط يستخدم فقط:",
+    "choicesAr": [
+      "متغيرًا تابعًا واحدًا، بينما يستخدم الانحدار المتعدد جميع البيانات المتاحة لتقدير دالة التكلفة.",
+      "متغيرات تابعة، بينما يمكن للانحدار المتعدد استخدام المتغيرات التابعة والمستقلة.",
+      "متغيرًا مستقلًا واحدًا، بينما يستخدم الانحدار المتعدد أكثر من متغير مستقل.",
+      "متغيرًا تابعًا واحدًا، بينما يستخدم الانحدار المتعدد أكثر من متغير تابع."
+    ],
+    "explanationAr": "يستخدم الانحدار البسيط صيغة الخط المستقيم y = a + bx، حيث x هو المتغير المستقل. أما الانحدار المتعدد فيُستخدم عندما يوجد أكثر من متغير مستقل، ويسمح بتحديد عوامل متعددة وإعطاء وزن لكل منها بحسب تأثيره على النتيجة الكلية، كما في المعادلة (y = a + b1x1 + b2x2 + b3x3 + etc.)."
   },
   {
     "unit": 12,
