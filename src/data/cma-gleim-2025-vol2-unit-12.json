@@ -2615,7 +2615,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Michael E. Porter has developed a model of the structure of\nindustries and competition. It includes an analysis of the five\ncompetitive forces that determine long-term profitability\nmeasured by long-term return on investment. This analysis\nresults in an evaluation of the attractiveness of an industry.\nThe five forces are (1) the degree of rivalry among existing\nfirms; (2) threats of, and barriers to, entry; (3) the threat of\nsubstitute products or services; (4) the threat of buyers’\nbargaining power; and (5) the threat of suppliers’ bargaining\npower.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن نموذج مايكل إي. بورتر للاستراتيجيات التنافسية تحليل القوى التنافسية التي تحدد مدى جاذبية القطاع. وتشمل هذه القوى:\nI. مرحلة دورة حياة القطاع\nII. تهديد دخول منافسين جدد والحواجز أمام الدخول\nIII. تهديد المنتجات البديلة\nIV. تهديد القوة التفاوضية للموردين",
+    "choicesAr": [
+      "I وII فقط.",
+      "I وIII فقط.",
+      "II وIII وIV فقط.",
+      "I وII وIII وIV."
+    ],
+    "explanationAr": "طوّر مايكل إي. بورتر نموذجًا لتحليل بنية القطاعات والمنافسة، ويتضمن تحليل القوى التنافسية الخمس المؤثرة في الربحية طويلة الأجل، المقاسة بالعائد طويل الأجل على الاستثمار. وتساعد نتائج التحليل في تقييم جاذبية القطاع. وهذه القوى هي: (1) شدة المنافسة بين المنشآت القائمة؛ (2) التهديد بالدخول والحواجز أمامه؛ (3) تهديد المنتجات أو الخدمات البديلة؛ (4) القوة التفاوضية للمشترين؛ (5) القوة التفاوضية للموردين."
   },
   {
     "unit": 12,
@@ -2632,7 +2640,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The determination of organizational objectives is the first step\nin the planning process. A mission statement is a formal,\nwritten document that defines the organization’s purpose in\nsociety, for example, to produce and distribute certain goods\nof high quality in a manner beneficial to the public, employees,\nshareholders, and other constituencies. Thus, a mission\nstatement does not announce specific operating plans. It does\nnot describe strategies for technological development, market\nexpansion, or product differentiation because these are tasks\nfor operating management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينبغي أن يحقق بيان الأهداف العامة للمنشأة، أو بيان رسالتها، جميع الأمور التالية باستثناء:",
+    "choicesAr": [
+      "تحديد استراتيجيات التطوير التقني والتوسع في الأسواق وتمييز المنتجات.",
+      "تحديد الغرض الذي أُنشئت الشركة من أجله.",
+      "توفير دليل عام لأصحاب المناصب العليا المسؤولة عن اتخاذ القرار.",
+      "توضيح المبادئ الأخلاقية والقيم التي توجه تصرفات الشركة."
+    ],
+    "explanationAr": "يمثل تحديد أهداف المنشأة الخطوة الأولى في التخطيط. وبيان الرسالة وثيقة رسمية مكتوبة تحدد غرض المنشأة في المجتمع، مثل إنتاج وتوزيع سلع عالية الجودة بما يعود بالنفع على الجمهور والعاملين والمساهمين وأصحاب المصلحة الآخرين. لذا لا يعلن بيان الرسالة خطط التشغيل التفصيلية؛ ولا يشرح استراتيجيات التطوير التقني أو توسع الأسواق أو تمييز المنتجات، لأنها من مهام إدارة التشغيل."
   },
   {
     "unit": 12,
@@ -2649,7 +2665,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The degree of product differentiation and the costs of\nswitching from one competitor’s product to another increase\nthe intensity of rivalry and competition in an industry. Less\ndifferentiation tends to heighten competition based on price,\nwith price cutting leading to lower profits. Low costs of\nswitching products also increase competition.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تزداد حدة المنافسة بين المنشآت القائمة في قطاع معين عندما:\nI. تكون المنتجات قليلة التمايز نسبيًا\nII. تكون تكاليف انتقال العملاء إلى مورد بديل منخفضة",
+    "choicesAr": [
+      "I فقط.",
+      "II فقط.",
+      "كل من I وII.",
+      "لا I ولا II."
+    ],
+    "explanationAr": "تؤثر درجة التمايز بين المنتجات وتكاليف انتقال العميل من منتج منافس إلى آخر في شدة المنافسة داخل القطاع. ويؤدي ضعف التمايز إلى زيادة المنافسة السعرية، وقد يؤدي خفض الأسعار إلى تراجع الأرباح. كما تزيد تكاليف الانتقال المنخفضة من حدة المنافسة."
   },
   {
     "unit": 12,
@@ -2666,7 +2690,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A mission statement is a formal, written document that defines\nan organization’s ultimate purposes in society in general\nterms. After a situational analysis is performed, the entity\ndevelops a group of strategies for achieving the mission.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخطوات التالية في عملية الإدارة الاستراتيجية ينبغي إتمامها أولًا؟",
+    "choicesAr": [
+      "ترجمة الأهداف العامة إلى أهداف محددة.",
+      "تحديد الإجراءات اللازمة لتحقيق الأهداف.",
+      "تطوير مقاييس الأداء.",
+      "صياغة بيان الرسالة."
+    ],
+    "explanationAr": "بيان الرسالة وثيقة رسمية مكتوبة تحدد الأغراض النهائية للمنشأة في المجتمع بعبارات عامة. وبعد إجراء تحليل الموقف، تطور المنشأة مجموعة من الاستراتيجيات لتحقيق رسالتها."
   },
   {
     "unit": 12,
@@ -2683,7 +2715,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Substitutes are types of goods and services that serve the\nsame purpose. All products that can replace a good or service\nshould be considered substitutes. For example, bicycles and\ncars are substitutes for public transportation. Structural\nconsiderations determine the effect substitutes have on one\nanother. However, because substitutes are types (not brands)\nof goods and services that have the same purposes, brand\nidentity is not a structural consideration affecting the threat of\nsubstitutes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشمل الاعتبارات الهيكلية المؤثرة في تهديد المنتجات البديلة جميع ما يلي باستثناء:",
+    "choicesAr": [
+      "الأسعار النسبية.",
+      "هوية العلامة التجارية.",
+      "تكلفة الانتقال إلى المنتجات البديلة.",
+      "ميل العملاء إلى استخدام منتج بديل."
+    ],
+    "explanationAr": "المنتجات البديلة سلع أو خدمات تحقق الغرض نفسه، ولذلك ينبغي النظر إلى جميع المنتجات التي يمكن أن تحل محل سلعة أو خدمة معينة. فالدراجات والسيارات مثلًا بدائل لوسائل النقل العام. وتحدد العوامل الهيكلية مدى تأثير هذه البدائل. لكن البدائل تمثل أنواعًا من السلع والخدمات تؤدي الوظيفة نفسها، لا مجرد علامات تجارية؛ لذا لا تُعد هوية العلامة التجارية في هذا السياق اعتبارًا هيكليًا يؤثر في تهديد البدائل."
   },
   {
     "unit": 12,
@@ -2700,7 +2740,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When purchasing power is concentrated in a few buyers or\nwhen buyers are well organized, their bargaining power is\ngreater. This effect is reinforced when sellers are in a capital-\nintensive industry, such as trucking.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجري شركة دراسة لتقييم جدوى دخول قطاع تأجير الشاحنات. أي الظروف التالية يُرجح أن تثنيها عن دخول هذا السوق؟",
+    "choicesAr": [
+      "ارتفاع التكاليف الثابتة مقارنة بالتكاليف المتغيرة في قطاع تأجير الشاحنات.",
+      "نظر المشترين إلى المنتج على أنه متميز.",
+      "سيطرة مجموعة صغيرة من المشترين المتحالفين على السوق.",
+      "تمتع الشركات المشترية بهوامش ربح مرتفعة من منتجاتها النهائية."
+    ],
+    "explanationAr": "عندما تتركز القوة الشرائية لدى عدد محدود من المشترين، أو يكون المشترون منظمين جيدًا، تزداد قوتهم التفاوضية. ويتعزز هذا التأثير عندما يعمل البائعون في قطاع كثيف رأس المال، مثل قطاع الشاحنات."
   },
   {
     "unit": 12,
@@ -2717,7 +2765,15 @@
     ],
     "answerIndex": 2,
     "explanation": "If it is expensive to switch suppliers, customers will be less\nmotivated to respond to competitor advances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل القطاعية التالية لا يسهم في زيادة شدة المنافسة؟",
+    "choicesAr": [
+      "خفض الأسعار وكبر موازنات الإعلان وكثرة تقديم منتجات جديدة.",
+      "اعتماد نمو الشركة على اجتذاب عملاء المنشآت المنافسة.",
+      "ارتفاع تكاليف انتقال العملاء من مورد إلى آخر.",
+      "ارتفاع التكاليف الثابتة مقارنة بالتكاليف المتغيرة."
+    ],
+    "explanationAr": "عندما تكون تكلفة تغيير المورد مرتفعة، تقل حوافز العملاء للاستجابة إلى العروض التي يقدمها المنافسون."
   },
   {
     "unit": 12,
@@ -2734,7 +2790,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Strong brand identity decreases the threat that new\ncompetitors will enter an industry. New competitors have\ndifficulty because potential customers are loyal to established\nfirms in the industry.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الظروف التالية لا تزيد من تهديد دخول منافسين جدد إلى القطاع؟",
+    "choicesAr": [
+      "قوة هوية العلامة التجارية.",
+      "عدم استفادة الشركات القائمة من مزايا تكلفة التكامل الرأسي.",
+      "قلة الاختلافات المملوكة أو المحمية بين المنتجات.",
+      "انخفاض متطلبات رأس المال."
+    ],
+    "explanationAr": "تقلل قوة هوية العلامة التجارية من خطر دخول منافسين جدد؛ إذ يواجه الداخلون الجدد صعوبة بسبب ولاء العملاء المحتملين للمنشآت القائمة في القطاع."
   },
   {
     "unit": 12,
@@ -2751,7 +2815,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Porter developed a model of the structure of industries and\ncompetition. It includes an analysis of the five competitive\nforces that determine long-term profitability measured by long-\nterm return on investment. This analysis results in an\nevaluation of the attractiveness of an industry.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إن التفاعل المتزامن للقوى التنافسية الأساسية في نموذج بورتر يحدد:",
+    "choicesAr": [
+      "الربحية طويلة الأجل وشدة المنافسة داخل القطاع.",
+      "حواجز الدخول التي يواجهها المشاركون المحتملون في السوق.",
+      "المنافسة بين المنشآت داخل القطاع فقط.",
+      "الأنشطة غير المضيفة للقيمة التي ينبغي إلغاؤها."
+    ],
+    "explanationAr": "طوّر بورتر نموذجًا لبنية القطاعات والمنافسة يقوم على تحليل القوى التنافسية الخمس التي تحدد الربحية طويلة الأجل، المقاسة بالعائد على الاستثمار على المدى الطويل. ويتيح هذا التحليل تقييم جاذبية القطاع."
   },
   {
     "unit": 12,
@@ -2768,7 +2840,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Subsidies for new firms lower entry barriers. Thus, new firms\nmay enter the industry and intensify competition. Government\npolicy also may affect competition by means of regulations\nthat encourage or discourage substitutes or affect costs, that\ngovern competitive behavior, or that limit growth. Government\nalso may be a buyer or supplier.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يُرجح أن يشجع منشآت جديدة على دخول سوق قائم؟",
+    "choicesAr": [
+      "الإعانات الحكومية المقدمة للمستثمرين الجدد.",
+      "التمييز المرتفع بين المنتجات الناتج أساسًا عن العلامات التجارية.",
+      "الحاجة إلى معرفة واسعة بالقطاع واستثمارات كبيرة في التطوير.",
+      "انخفاض التكاليف الثابتة للخروج من السوق."
+    ],
+    "explanationAr": "تؤدي الإعانات المقدمة للمنشآت الجديدة إلى خفض حواجز الدخول، وبذلك قد تدخل منشآت جديدة القطاع وتزيد حدة المنافسة. ويمكن أن تؤثر السياسات الحكومية أيضًا في المنافسة عبر قواعد تشجع البدائل أو تحد منها، وتؤثر في التكاليف والسلوك التنافسي والنمو. وقد تكون الحكومة نفسها مشتريًا أو موردًا."
   },
   {
     "unit": 12,
@@ -2785,7 +2865,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A firm that has successfully differentiated its products through\ndeveloping a desirable image, better services, cost leadership,\nthe features of the product, or other means is in a favorable\ncompetitive position. Competitors find it difficult to acquire the\nfirm’s customers, for example, by price cutting. The reason is\nthat the firm’s products are perceived to have few substitutes,\nand brand loyalty is high. Furthermore, barriers to entry are\nfavorable to the firm. These barriers deter competitors from\nentering the market. Existing firms can increase market share\nand emphasize cutting costs and increasing value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الظروف التالية مواتية لشركة تنافس في قطاع مربح وآخذ في التوسع؟",
+    "choicesAr": [
+      "افتقار الشركة إلى قاعدة عملاء قوية.",
+      "وجود عدد قليل من الموردين يستطيعون تقييد المعروض.",
+      "صعوبة اجتذاب المنافسين لعملاء الشركة.",
+      "ارتفاع تكاليف الشركة مقارنة بالمنشآت الأخرى في القطاع."
+    ],
+    "explanationAr": "تكون الشركة في وضع تنافسي ملائم عندما تنجح في تمييز منتجاتها بتطوير صورة مرغوبة أو خدمات أفضل أو قيادة التكلفة أو خصائص المنتج أو غير ذلك. ويصعب على المنافسين اجتذاب عملائها، مثلًا عبر خفض الأسعار، لأن منتجات الشركة يُنظر إليها على أن لها بدائل قليلة ويكون ولاء العلامة التجارية مرتفعًا. كما تُعد حواجز الدخول في صالح الشركة لأنها تحد من دخول منافسين جدد، وتستطيع المنشآت القائمة زيادة حصتها السوقية والتركيز على خفض التكاليف وزيادة القيمة."
   },
   {
     "unit": 12,
@@ -2802,7 +2890,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most favorable condition for the attractiveness of an\nindustry is the existence of high entry barriers and low exit\nbarriers. When the threat of new entrants is minimal and exit is\nnot difficult, returns are high, and risk is reduced in the event\nof poor performance. Low entry barriers keep long-term\nprofitability low because new firms can enter the industry,\nincreasing competition and lowering prices and the market\nshares of existing firms. Exit barriers are reasons for a firm to\nremain in an industry despite poor (or negative) profits.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يزيد من تهديد دخول منشآت جديدة إلى القطاع؟",
+    "choicesAr": [
+      "كبر وفورات الحجم.",
+      "ارتفاع متطلبات رأس المال.",
+      "احتمال رد فعل انتقامي من قائد القطاع تجاه الداخل الجديد.",
+      "انخفاض حواجز الخروج."
+    ],
+    "explanationAr": "تكون جاذبية القطاع أعلى عادة عندما تكون حواجز الدخول مرتفعة وحواجز الخروج منخفضة. فإذا كان تهديد الداخلين الجدد محدودًا وكان الخروج غير صعب، ترتفع العوائد وتقل المخاطر عند ضعف الأداء. أما انخفاض حواجز الدخول فيحد من الربحية طويلة الأجل لأن المنشآت الجديدة تستطيع الدخول وزيادة المنافسة وخفض الأسعار والحصص السوقية للمنشآت القائمة. وحواجز الخروج هي أسباب تدفع الشركة إلى البقاء في القطاع رغم ضعف الأرباح أو سلبيتها."
   },
   {
     "unit": 12,
@@ -2819,7 +2915,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost focus is the generic strategy that seeks competitive\nadvantage through lower costs but with a narrow competitive\nscope (e.g., a regional market or a specialized product line).\nThe reason for a cost-focus strategy is that the narrower\nmarket can be better served because the firm knows it well.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة صناعية أدوات مائدة بلاستيكية لشريحة سوقية معينة بأقل تكلفة ممكنة. وتطبق الشركة استراتيجية:",
+    "choicesAr": [
+      "قيادة التكلفة.",
+      "التركيز.",
+      "التمييز.",
+      "احتواء التكاليف."
+    ],
+    "explanationAr": "التركيز على التكلفة استراتيجية تنافسية عامة تستهدف تحقيق ميزة من انخفاض التكلفة في نطاق تنافسي ضيق، مثل سوق إقليمية أو خط منتجات متخصص. وتقوم على إمكان خدمة السوق الضيقة بصورة أفضل بفضل معرفة المنشأة الجيدة بها."
   },
   {
     "unit": 12,
@@ -2836,7 +2940,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cost leadership seeks a competitive advantage through lower\ncosts that have a broad competitive scope. Since the\ncompany is selling its products at low costs and it has many\ncompetitors across the nation, it has a broad competitive\nscope.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحاول شركة اختيار الاستراتيجية التنافسية التي ينبغي تنفيذها. وقد بدأت مؤخرًا إنتاج مستلزمات الهالوين وبيعها في متاجرها خلال الأشهر السابقة للمناسبة، وتركز على انخفاض التكلفة. وترى أن ذلك يمنحها ميزة تنافسية لأن كثيرًا من المنافسين في أنحاء البلاد يبيعون هذه المنتجات بأسعار أعلى. ما الاستراتيجية الأنسب؟",
+    "choicesAr": [
+      "قيادة التكلفة.",
+      "التمييز.",
+      "التركيز على التكلفة.",
+      "التمييز المركز."
+    ],
+    "explanationAr": "تهدف قيادة التكلفة إلى تحقيق ميزة تنافسية عبر تكاليف أقل مع نطاق تنافسي واسع. وبما أن الشركة تبيع منتجاتها بتكاليف منخفضة وتواجه منافسين كثيرين في أنحاء البلاد، فإن نطاقها التنافسي واسع."
   },
   {
     "unit": 12,
