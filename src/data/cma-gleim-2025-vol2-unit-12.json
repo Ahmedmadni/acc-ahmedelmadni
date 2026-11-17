@@ -1500,7 +1500,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected value analysis estimates future monetary value\nbased on forecasts and their related probabilities of\noccurrence. The expected value under uncertainty is found by\nmultiplying the probability of each outcome (event) by its\npayoff (conditional profit or loss) and summing the products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة النقدية المتوقعة لأحد الأفعال هي:",
+    "choicesAr": [
+      "مجموع الأرباح أو الخسائر المشروطة لكل حدث.",
+      "مجموع ناتج ضرب الربح أو الخسارة المشروطة لكل حدث في احتمال حدوثه.",
+      "الربح أو الخسارة المشروطة لأفضل حدث مضروبًا في احتمال حدوث كل حدث.",
+      "إيرادات الفعل مطروحًا منها تكاليفه."
+    ],
+    "explanationAr": "يقدّر تحليل القيمة المتوقعة القيمة النقدية المستقبلية اعتمادًا على التوقعات والاحتمالات المصاحبة لها. وتُحسب القيمة المتوقعة في ظروف عدم التأكد بضرب احتمال كل نتيجة (حدث) في عائدها (الربح أو الخسارة المشروطة)، ثم جمع هذه النواتج."
   },
   {
     "unit": 12,
@@ -1517,7 +1525,15 @@
     ],
     "answerIndex": 2,
     "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis, which\nexamines how the model’s outcomes change as the\nparameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب الشائع الذي يستخدمه المديرون لإدراك عدم التأكد المرتبط بالعناصر الفردية والحصول سريعًا على تقدير مالي لتبعات الأخطاء المحتملة في التنبؤ؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "تحليل منحنى التعلم.",
+      "تحليل الحساسية.",
+      "تحليل الانحدار."
+    ],
+    "explanationAr": "بعد صياغة المشكلة في صورة نموذج رياضي، يمكن تطبيق تحليل الحساسية عليه؛ إذ يدرس كيفية تغير نتائج النموذج مع تغير معلماته ومدخلاته."
   },
   {
     "unit": 12,
@@ -1534,7 +1550,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected value is calculated by weighting each sales\nestimate by the probability of its occurrence. Consequently,\nthe expected value of sales is $84,000 [($60,000 × .25) +\n($85,000 × .40) + ($100,000 × .35)]. Cost of goods sold is\ntherefore $67,200 ($84,000 × .80).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعد موزع بطاريات كاميرات المراقبة موازنة تكلفة البضاعة المباعة للعام المقبل. وقد قدّر المبيعات السنوية والاحتمالات المرتبطة بها كما يلي:\nالمبيعات المقدرة — الاحتمال\n$ 60,000 — 25%\n85,000 — 40%\n100,000 — 35%\nوتبلغ تكلفة البضاعة المباعة في المتوسط 80% من المبيعات.\nما القيمة المتوقعة لتكلفة البضاعة المباعة المدرجة في الموازنة؟",
+    "choicesAr": [
+      "$85,000",
+      "$84,000",
+      "$68,000",
+      "$67,200"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة من خلال ترجيح كل تقدير للمبيعات باحتمال تحققه. ولذلك تبلغ المبيعات المتوقعة $84,000، وفق المعادلة [($60,000 × .25) + ($85,000 × .40) + ($100,000 × .35)]. وبناء عليه تبلغ تكلفة البضاعة المباعة $67,200 ($84,000 × .80)."
   },
   {
     "unit": 12,
@@ -1551,7 +1575,15 @@
     ],
     "answerIndex": 3,
     "explanation": "After a problem has been formulated into any mathematical\nmodel, it may be subjected to sensitivity analysis. Sensitivity\nanalysis examines how the model’s outcomes change as the\nparameters change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم المديرون نماذج القرار لتحليل بدائل كثيرة واختيار الأفضل للشركة. لكن النتائج الفعلية قد تختلف عما كان متوقعًا وقت اتخاذ القرار، وقد يتضح لاحقًا أن بديلًا لم يُختر كان أفضل. ما الأسلوب المناسب لتحليل البدائل من خلال تغيير المدخلات المتوقعة قبل اتخاذ القرار؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "البرمجة الخطية.",
+      "أسلوب مراجعة وتقييم البرامج (PERT).",
+      "تحليل الحساسية."
+    ],
+    "explanationAr": "بعد تمثيل المشكلة بنموذج رياضي، يمكن إخضاعه لتحليل الحساسية. ويفحص تحليل الحساسية كيفية تغير مخرجات النموذج عندما تتغير معلماته."
   },
   {
     "unit": 12,
@@ -1568,7 +1600,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The probability of selling between 201 and 400 units is 45%,\nand the probability of selling between 401 and 600 units is\n25%. Thus, the probability of selling between 201 and 600\nunits is the sum of these probabilities, or 70%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمثل الاحتمالات في الجدول التالي تقديرات مبيعات منتج جديد:\nالمبيعات (وحدة) — الاحتمال\n0-200 — 15%\n201-400 — 45%\n401-600 — 25%\n601-800 — 15%\nما احتمال بيع عدد وحدات يتراوح بين 201 و600 وحدة من هذا المنتج؟",
+    "choicesAr": [
+      "0%",
+      "11.25%",
+      "70%",
+      "25%"
+    ],
+    "explanationAr": "احتمال بيع ما بين 201 و400 وحدة هو 45%، واحتمال بيع ما بين 401 و600 وحدة هو 25%. ومن ثم فإن احتمال البيع بين 201 و600 وحدة هو مجموع الاحتمالين، أي 70%."
   },
   {
     "unit": 12,
@@ -1602,7 +1642,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected value of an action is found by multiplying the\nprobability of each possible outcome by its payoff and\nsumming the products. It represents the long-term average\npayoff for repeated trials. In other words, expected value is the\nweighted average of probable outcomes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في اتخاذ القرارات في ظل عدم التأكد، تشير القيمة المتوقعة إلى:",
+    "choicesAr": [
+      "النتيجة المرجح حدوثها لفعل مقترح.",
+      "القيمة الحالية للإجراءات البديلة.",
+      "احتمال تحقق نتيجة معينة لفعل مقترح.",
+      "المتوسط المرجح لنتائج الفعل المحتملة."
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للفعل بضرب احتمال كل نتيجة محتملة في عائدها، ثم جمع النواتج. وتمثل متوسط العائد على المدى الطويل عند تكرار التجارب؛ أي إنها المتوسط المرجح للنتائج المحتملة."
   },
   {
     "unit": 12,
@@ -1636,7 +1684,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The expected value of the land is determined by multiplying\nthe probability of each state of nature by the value under that\nparticular state of nature and adding all of the products. Thus,\nthe land’s expected value is $195,000 [(0.5)($200,000) +\n(0.4)($100,000) + (0.1)($550,000)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحاول مديرو شركة تحديد قيمة قطعة أرض تمتلكها. من الحالات المستقبلية المحتملة رصف الطريق القديم المحاذي للأرض، أو عدم رصفه، أو إزالته بالكامل واستبداله بطريق جديد. في ضوء الحالات المستقبلية واحتمالاتها وقيم الأرض التالية، ما القيمة المتوقعة للأرض؟\nالحالة المستقبلية — الاحتمال\nSN 1: رصف الطريق الحالي — .5\nSN 2: عدم رصف الطريق — .4\nSN 3: إزالة الطريق الحالي واستبداله — .1\nالقيمة المقدرة للأرض في كل حالة:\nقيمة الأرض عند SN 1: $200,000\nقيمة الأرض عند SN 2: $100,000\nقيمة الأرض عند SN 3: $550,000",
+    "choicesAr": [
+      "$133,333",
+      "$195,000",
+      "$225,000",
+      "$283,333"
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للأرض بضرب احتمال كل حالة مستقبلية في قيمة الأرض عند تحققها، ثم جمع النواتج. وبالتالي تبلغ القيمة المتوقعة $195,000 [(0.5)($200,000) + (0.4)($100,000) + (0.1)($550,000)]."
   },
   {
     "unit": 12,
@@ -1755,7 +1811,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The expected value of an action is found by multiplying the\nprobability of each possible outcome by its payoff and\nsumming the products. It represents the long-term average\npayoff for repeated trials. If estimates of sales and\nprobabilities are known, expected value analysis can be used\nto determine budgeted sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة موازنتها، وقد أعدت ضمن هذه العملية تقديرات للمبيعات وحددت احتمال تحقق كل تقدير. أي الأساليب التالية ينبغي أن تستخدمه لتحديد المبيعات لأغراض الموازنة؟",
+    "choicesAr": [
+      "البرمجة الخطية.",
+      "معيار تقليل أكبر ندم (Minimax regret).",
+      "تحليل القيمة المتوقعة.",
+      "محاكاة مونت كارلو."
+    ],
+    "explanationAr": "تُحسب القيمة المتوقعة للفعل بضرب احتمال كل نتيجة محتملة في عائدها وجمع النواتج. وتمثل متوسط العائد على المدى الطويل عند تكرار التجربة. وإذا كانت تقديرات المبيعات واحتمالات تحققها معلومة، فيمكن استخدام تحليل القيمة المتوقعة لتحديد مبيعات الموازنة."
   },
   {
     "unit": 12,
@@ -1772,7 +1836,15 @@
     ],
     "answerIndex": 1,
     "explanation": "For decisions involving risk, the concept of expected value\nprovides a rational means for selecting the best alternative.\nThe expected value of a decision is found by multiplying the\nprobability of each outcome by its payoff, and summing the\nproducts. The result is the long-term average payoff for\nrepeated trials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة النقدية المتوقعة لحدث ما:",
+    "choicesAr": [
+      "تساوي القيمة أو الربح المشروط للحدث.",
+      "تساوي عائد الحدث مضروبًا في احتمال وقوعه.",
+      "تمثل الربح الذي فُوّت نتيجة عدم اختيار البديل الأفضل.",
+      "تمثل الربح المطلق الناتج عن حدث معين."
+    ],
+    "explanationAr": "عند اتخاذ قرارات تنطوي على مخاطر، توفر القيمة المتوقعة أساسًا عقلانيًا لاختيار البديل الأفضل. وتُحسب القيمة المتوقعة للقرار بضرب احتمال كل نتيجة في عائدها، ثم جمع النواتج؛ وتمثل النتيجة متوسط العائد طويل الأجل عبر التجارب المتكررة."
   },
   {
     "unit": 12,
@@ -1789,7 +1861,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected value analysis is an estimate of future monetary\nvalue based on forecasts and their related probabilities of\noccurrence. The expected value is found by multiplying the\nprobability of each outcome by its payoff and summing the\nproducts. Expected value is therefore an arithmetic mean\nusing probabilities as weights.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة المتوقعة في تحليل القرارات هي:",
+    "choicesAr": [
+      "انحراف معياري تُستخدم فيه الاحتمالات بوصفها أوزانًا.",
+      "متوسط حسابي تُستخدم فيه الاحتمالات بوصفها أوزانًا.",
+      "الجذر التربيعي لمربعات الانحرافات.",
+      "مقياس الفرق بين أفضل نتيجة ممكنة ونتيجة القرار الأصلي."
+    ],
+    "explanationAr": "تحليل القيمة المتوقعة هو تقدير للقيمة النقدية المستقبلية يعتمد على التوقعات واحتمالات تحققها. وتُحسب القيمة المتوقعة بضرب احتمال كل نتيجة في عائدها وجمع النواتج؛ ومن ثم فهي متوسط حسابي موزون بالاحتمالات."
   },
   {
     "unit": 12,
@@ -1806,7 +1886,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Perfect information permits certainty that a future state of\nnature will occur. The expected value of perfect information\ndetermines the maximum amount a decision maker is willing\nto pay for information. It is the difference between the\nexpected value without perfect information, that is, the\nexpected value of the best action under uncertainty and the\nexpected value under certainty. Under certainty, a decision\nmaker knows in each case which state of nature will occur and\ncan act accordingly.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "القيمة المتوقعة للمعلومات الكاملة تساوي:",
+    "choicesAr": [
+      "الربح المتوقع في حالة اليقين.",
+      "مجموع الأرباح أو الخسائر المشروطة لأفضل حدث من كل فعل مضروبًا في احتمال حدوث كل حدث.",
+      "الفرق بين الربح المتوقع في حالة اليقين وخسارة الفرصة المتوقعة.",
+      "الفرق بين الربح المتوقع في حالة اليقين والقيمة النقدية المتوقعة لأفضل فعل في ظل عدم التأكد."
+    ],
+    "explanationAr": "تتيح المعلومات الكاملة معرفة الحالة المستقبلية التي ستقع على وجه اليقين. وتحدد القيمة المتوقعة للمعلومات الكاملة الحد الأقصى الذي يكون متخذ القرار مستعدًا لدفعه للحصول على تلك المعلومات. وهي الفرق بين القيمة المتوقعة في حالة عدم وجود معلومات كاملة، أي قيمة أفضل تصرف في ظل عدم التأكد، والقيمة المتوقعة في حالة اليقين. وفي حالة اليقين يعرف متخذ القرار الحالة التي ستحدث ويمكنه التصرف وفقًا لها."
   },
   {
     "unit": 12,
@@ -1823,7 +1911,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The Booster Club should select the demand level that\nmaximizes profits, that is, the level with the greatest expected\nmonetary value. This level may not include the event with the\nhighest conditional profit because this profit may be\naccompanied by a low probability of occurrence. Alternatively,\nthe event with the highest probability of occurrence may not\nbe selected because it does not offer a high conditional profit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبيع نادي المشجعين في كلية Blair شطائر النقانق خلال مباريات كرة السلة على ملعب الكلية. ولدى النادي توزيع تكراري للطلب في كل مباراة، ويرغب في استخدام قاعدة قرار القيمة المتوقعة لتحديد عدد الشطائر التي ينبغي تخزينها. يجب أن يختار النادي مستوى الطلب الذي:",
+    "choicesAr": [
+      "يكون الأقرب إلى الطلب المتوقع.",
+      "يكون احتمال حدوثه هو الأعلى.",
+      "تكون تكلفة الفرصة المتوقعة فيه هي الأعلى.",
+      "يحقق أعلى قيمة نقدية متوقعة."
+    ],
+    "explanationAr": "ينبغي أن يختار النادي مستوى الطلب الذي يعظم الأرباح، أي المستوى الذي يحقق أعلى قيمة نقدية متوقعة. وقد لا يكون هذا المستوى هو صاحب أعلى ربح مشروط إذا كان احتمال تحققه ضعيفًا. وبالمثل، قد لا يكون المستوى الأكثر احتمالًا هو الأفضل لأنه قد لا يحقق ربحًا مشروطًا مرتفعًا."
   },
   {
     "unit": 12,
