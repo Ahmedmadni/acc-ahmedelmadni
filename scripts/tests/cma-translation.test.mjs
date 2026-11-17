@@ -131,3 +131,57 @@ test("a partial or altered Arabic question cannot pass the static-source transla
     question:row.stemAr, choices:row.choicesAr, explanation:row.explanationAr.replace("1.", "8."),
   }).valid,false);
 });
+
+
+test("CMA Unit 12 regression source translations keep all 23 original answer indexes and numeric tokens", () => {
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json", import.meta.url), "utf8",
+  ));
+  assert.equal(records.length,155);
+  const expected=new Map([
+    [1,1],[2,2],[3,3],[4,1],[5,3],[6,0],[7,2],
+    [10,0],[11,2],[12,2],[15,0],[16,2],[17,3],[18,3],
+    [19,2],[20,2],[21,0],[22,0],[23,2],[24,2],[25,0],[26,3],[27,0],
+  ]);
+  const translated=records.filter(q=>q.stemAr!==undefined ||
+    q.choicesAr!==undefined || q.explanationAr!==undefined);
+  assert.equal(translated.length,expected.size);
+  assert.deepEqual(translated.map(q=>[q.section,q.number]),
+    [...expected.keys()].map(n=>[1,n]));
+  for(const row of translated){
+    assert.equal(row.section,1);
+    assert.equal(row.answerIndex,expected.get(row.number),
+      "Unit 12 source answer index changed: "+row.number);
+    assert.equal(row.choicesAr.length,4);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+    );
+    assert.equal(checked.valid,true,
+      "Arabic numerical/text validation failed for Unit 12 Q"+row.number+
+      ": "+checked.reason);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+  }
+  // Complex publisher source tables are intentionally not misrepresented
+  // as fully translated before layout and numeric context review.
+  assert.deepEqual(records.filter(row=>row.section===1&&!row.stemAr)
+    .map(row=>row.number),[8,9,13,14,28]);
+  assert.ok(records.filter(row=>row.section!==1).every(
+    row=>row.stemAr===undefined && row.choicesAr===undefined &&
+      row.explanationAr===undefined));
+});
+
+test("an incomplete or numerically changed Unit 12 translation never passes validation",()=>{
+  const row=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json", import.meta.url), "utf8",
+  )).find(q=>q.section===1&&q.number===26);
+  const source={question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}};
+  assert.equal(validateCmaTranslation(source,{
+    question:row.stemAr,choices:row.choicesAr.slice(1),explanation:row.explanationAr,
+  }).valid,false);
+  assert.equal(validateCmaTranslation(source,{
+    question:row.stemAr.replace("5,000 ساعة","5,100 ساعة"),
+    choices:row.choicesAr,explanation:row.explanationAr,
+  }).valid,false);
+});

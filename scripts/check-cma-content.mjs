@@ -582,6 +582,8 @@ check(vol2Records.size === 1383, "Volume 2 records must cover each question exac
 const staticArabicVol2 = new Set([
   ...Array.from({length:26},(_,i)=>"11.1."+(i+1)),
   ...Array.from({length:32},(_,i)=>"11.2."+(i+1)),
+  ...[1,2,3,4,5,6,7,10,11,12,15,16,17,18,19,20,21,22,23,24,25,26,27]
+    .map(n=>"12.1."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -617,6 +619,7 @@ for (const [key, original] of vol2Records) {
   }
 }
 console.log("Verified all 58 Unit 11 questions have built-in Arabic, with the remaining Volume 2 items marked as English-first.");
+console.log("Verified 23 static Arabic CMA Unit 12 §1 drafts; long-source-table cases retain explicit English-first status.");
 for (const key of ["11.2.12", "11.2.13"]) {
   const item=vol2Records.get(key);
   const [unit,section,number]=key.split(".");
