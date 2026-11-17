@@ -373,6 +373,10 @@ export function CmaTranslatedQuestion({
           </span>
         )}
       </div>
+    ) : question.sourceArabicStatus === "draft" && lang === "ar" ? (
+      <p role="note" className={`mt-2 text-xs leading-6 ${dark ? "text-amber-200" : "text-amber-900"}`}>
+        ترجمة عربية تعليمية أولية من ملفات الموقع؛ يلزم مراجعة المصطلحات والجدول مقابل المصدر الأصلي قبل الاعتماد المهني.
+      </p>
     ) : null,
   };
 
