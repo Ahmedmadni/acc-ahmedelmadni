@@ -143,8 +143,8 @@ test("CMA Unit 12 regression source translations keep all 23 original answer ind
     [10,0],[11,2],[12,2],[15,0],[16,2],[17,3],[18,3],
     [19,2],[20,2],[21,0],[22,0],[23,2],[24,2],[25,0],[26,3],[27,0],
   ]);
-  const translated=records.filter(q=>q.stemAr!==undefined ||
-    q.choicesAr!==undefined || q.explanationAr!==undefined);
+  const translated=records.filter(q=>q.section===1 && (q.stemAr!==undefined ||
+    q.choicesAr!==undefined || q.explanationAr!==undefined));
   assert.equal(translated.length,expected.size);
   assert.deepEqual(translated.map(q=>[q.section,q.number]),
     [...expected.keys()].map(n=>[1,n]));
@@ -167,7 +167,7 @@ test("CMA Unit 12 regression source translations keep all 23 original answer ind
   // as fully translated before layout and numeric context review.
   assert.deepEqual(records.filter(row=>row.section===1&&!row.stemAr)
     .map(row=>row.number),[8,9,13,14,28]);
-  assert.ok(records.filter(row=>row.section!==1).every(
+  assert.ok(records.filter(row=>row.section>=3).every(
     row=>row.stemAr===undefined && row.choicesAr===undefined &&
       row.explanationAr===undefined));
 });
@@ -184,4 +184,46 @@ test("an incomplete or numerically changed Unit 12 translation never passes vali
     question:row.stemAr.replace("5,000 ساعة","5,100 ساعة"),
     choices:row.choicesAr,explanation:row.explanationAr,
   }).valid,false);
+});
+
+
+test("Unit 12 learning-curve Section 2 has exactly 13 complete Arabic translations",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-12.json",import.meta.url),"utf8",
+  ));
+  const expected=new Map([
+    [1,2],[2,3],[5,1],[6,2],[7,1],[8,0],[9,1],
+    [10,2],[11,0],[12,1],[13,3],[14,0],[15,3],
+  ]);
+  const translated=records.filter(q=>q.section===2 &&
+    (q.stemAr!==undefined||q.choicesAr!==undefined||q.explanationAr!==undefined));
+  assert.equal(translated.length,expected.size);
+  assert.deepEqual(translated.map(q=>q.number),[...expected.keys()]);
+  for(const row of translated){
+    assert.equal(row.answerIndex,expected.get(row.number),
+      "Learning-curve answer index changed: "+row.number);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+    );
+    assert.equal(checked.valid,true,
+      "Arabic learning-curve figures/choices mismatch Q"+row.number+": "+checked.reason);
+    assert.equal(row.choicesAr.length,4);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+  }
+  assert.deepEqual(records.filter(q=>q.section===2&&!q.stemAr).map(q=>q.number),
+    [3,4,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]);
+});
+
+test("Learning-curve solved examples follow independently recomputed arithmetic",()=>{
+  // Cumulative-average learning model: average time per unit after each
+  // doubling is the previous average multiplied by the learning factor.
+  const cumulative=(first,rate,doublings)=>first*rate**doublings;
+  assert.equal(cumulative(50,0.9,2),40.5);
+  assert.equal(cumulative(50,0.8,3),25.600000000000005);
+  assert.equal(2*cumulative(50,0.8,1)-50,30);
+  assert.equal(Math.round(400*72*0.6),17280);
+  assert.equal(Math.round(320*cumulative(120/80,0.8,2)*10)/10-120,187.2);
+  assert.equal(Math.round(cumulative(10,0.9,3)*100)/100,7.29);
 });
