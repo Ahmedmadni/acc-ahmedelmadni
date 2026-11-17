@@ -109,3 +109,12 @@ Section 1 contains 28 items; the following **five are intentionally still Englis
 The content checker requires exactly these 23 additional source IDs to have complete Arabic fields. Regression tests assert all 23 original answer indexes, same ordered numerical tokens in each stem, each option and explanation, and no partial translations on the five skipped source-table cases. Numeric checks cannot verify nuanced terminology or interpretive correctness; the interface continues to show the clear educational-draft / pending-specialist-review label.
 
 Next: verify the five complex English tables against the publisher source before translating them, then continue with Unit 12 Section 2 and beyond. Do not assert that all CMA source questions are translated or professionally certified, and confirm publication and device rendering separately from CI.
+
+
+## Unit 12 learning-curve translation cohort — 17 November 2026
+
+A second batch translates **13 of the 34 questions** in Volume 2 Unit 12 §2, covering learning-curve concepts, cumulative-average labor time, production-lot bidding and related calculations. All Arabic stems, four original-choice positions and explanations are stored directly in the versioned JSON; original English is retained and canonical answer indexes are unchanged.
+
+Newly translated Section 2 question numbers are **1, 2, 5–15**. Questions **3–4, 16–34** are deliberately still English-first, including multi-column source tables, and require separate source-layout/editorial review before Arabic publication. This batch brings Unit 12 built-in Arabic coverage to **36/155**, with **23/28 in §1** and **13/34 in §2**. Along with the 58 questions in Unit 11, Volume 2 now has **94** static Arabic source-question drafts. The rest of the bank has not been represented as translated.
+
+Automated checks validate Arabic text and source-ordered numeric tokens in every part of each translated question and assert all 13 original correct-answer indexes. Independently recomputed examples verify cumulative-average curves at 80% and 90%, the time required for the second unit, and four-batch labor costs. These checks do **not** certify terminology or copyright rights, nor replace visual comparison with the publisher PDF for dense source tables. The on-site UI continues to mark source translations as educational drafts awaiting specialist review; no database, paid translation API or Lovable AI credit is used.
