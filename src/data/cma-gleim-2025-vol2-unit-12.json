@@ -858,7 +858,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The learning curve reflects the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter. One\ncommon assumption in a learning curve model is that the\ncumulative average time per unit is reduced by a certain\npercentage each time production doubles. Therefore, for S, if\nthe first unit required 60 hours to complete, her average\ncompletion time after two units will be 42 hours (70% × 60\nhours). If production is doubled to 4 units, her average\ncompletion time will be 29.4 hours (70% × 42 hours). When\nproduction is then doubled to 8 units, her average completion\ntime will be 20.6 hours (70% × 29.4 hours). This is the best\namong the four workers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "على مصنع جديد لمراوح الطائرات تدريب العاملين على إنتاجها. ولتشجيع سرعة التعلم، سيمنح مكافأة لصاحب أقل متوسط وقت تراكمي للوحدة بعد إنتاج ثماني وحدات. استغرقت العاملة L في الوحدة الأولى 50 ساعة وتعمل بمنحنى تعلم 80%. واستغرقت S مدة 60 ساعة بمنحنى 70%. واستغرقت M مدة 40 ساعة بمنحنى 90%. واستغرقت P مدة 55 ساعة بمنحنى 75%. من التي تحصل على المكافأة؟",
+    "choicesAr": [
+      "L.",
+      "S.",
+      "M.",
+      "P."
+    ],
+    "explanationAr": "يعكس منحنى التعلم ازدياد سرعة أداء المهام مع الخبرة وتناقص الزمن المطلوب تدريجيًا. ومن افتراضاته انخفاض متوسط الزمن التراكمي للوحدة بنسبة ثابتة مع كل تضاعف للإنتاج. وبالنسبة للعاملة S، إذا استغرقت الوحدة الأولى 60 ساعة، يصبح المتوسط بعد وحدتين 42 ساعة (70% × 60 ساعة). وعند إنتاج 4 وحدات يصبح المتوسط 29.4 ساعة (70% × 42 ساعة). وبعد إنتاج 8 وحدات ينخفض إلى 20.6 ساعة (70% × 29.4 ساعة)، وهو أفضل متوسط بين العاملات الأربع."
   },
   {
     "unit": 12,
@@ -875,7 +883,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Learning curve models reflect the increased rate at which\npeople perform tasks as they gain experience. One common\nassumption is that the cumulative average time per unit is\nreduced by a certain percentage when production doubles\nduring its early stages. An 80% learning curve indicates that a\ndoubling of production reduces the time required by 20%. For\nexample, if the first unit requires 50 hours, the cumulative\naverage completion time is 40 hours (80% × 50 hours) for two\nunits and 32 hours (80% × 40 hours) for four units.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشير التقديرات إلى خضوع مهمة صناعية لمنحنى تعلم بنسبة 80%. واستغرق إنتاج الوحدة الأولى 50 ساعة عمل. ما متوسط الوقت التراكمي للوحدة بعد إتمام أربع وحدات؟",
+    "choicesAr": [
+      "50.0 ساعة.",
+      "40.0 ساعة.",
+      "32.0 ساعة.",
+      "30.0 ساعة."
+    ],
+    "explanationAr": "توضح نماذج منحنى التعلم زيادة سرعة أداء المهام مع الخبرة. ومن افتراضاتها انخفاض متوسط الوقت التراكمي للوحدة بنسبة معينة عند كل تضاعف للإنتاج في مراحله الأولى. ويعني منحنى تعلم 80% انخفاض الوقت المطلوب بنسبة 20% مع تضاعف الإنتاج. فإذا تطلبت الوحدة الأولى 50 ساعة، يصبح المتوسط بعد وحدتين 40 ساعة (80% × 50 ساعة)، وبعد أربع وحدات 32 ساعة (80% × 40 ساعة)."
   },
   {
     "unit": 12,
@@ -892,7 +908,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Learning curves reflect the increased rate at which people\nperform as they gain experience at a new task. Because the\ntime to perform the task becomes progressively shorter in the\nearly stages of a new activity, the direct labor costs involved\ndecline. The curve is often expressed as a percentage\nreduction in time for each doubling of cumulative production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتزم شركة تقديم عرض سعر لمشروع خاص يتطلب إجمالًا 24,000 وحدة. وستُنتج الوحدات على دفعات تبدأ بدفعة من 750 وحدة. وتشير الخبرة السابقة إلى أن الوقت المباشر للعمل لكل وحدة سينخفض تدريجيًا بنسبة ثابتة مع اكتساب الخبرة في العملية الصناعية. ما الأسلوب الكمي الأنسب لتقدير إجمالي تكلفة المشروع؟",
+    "choicesAr": [
+      "أساليب منحنى التعلم.",
+      "حساب التفاضل.",
+      "أساليب التدفقات النقدية المخصومة.",
+      "البرمجة الخطية."
+    ],
+    "explanationAr": "تعكس منحنيات التعلم زيادة سرعة أداء العاملين للمهام الجديدة مع الخبرة. ونظرًا إلى أن وقت إنجاز المهمة يتناقص تدريجيًا في المراحل الأولى من النشاط الجديد، تنخفض تكلفة العمل المباشر. ويُعبَّر عن المنحنى غالبًا بنسبة انخفاض الوقت عند كل تضاعف للإنتاج التراكمي."
   },
   {
     "unit": 12,
@@ -909,7 +933,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. The time required to\nperform a given task becomes progressively shorter as the\nworkers better learn their jobs. Ordinarily, the curve is\nexpressed as a percentage of reduced time to complete a task\nfor each doubling of cumulative production. This methodology\nis appropriate when submitting a bid for a product for which\nthe firm already has experience. The experience should lead\nto shorter production time and lower costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلقت منشأة طلب عرض سعر تنافسي لبيع أحد منتجاتها الفريدة المخصصة للقوارب مع تعديل مطلوب. وهي تصنع حاليًا منتجًا مشابهًا مع تعديل مختلف قليلًا لعميل آخر. وتتميز هذه المنتجات باعتماد كبير على العمل المباشر وبفترات إنتاج طويلة. ما الطريقة الأنسب لتقدير تكلفة العرض الجديد؟",
+    "choicesAr": [
+      "تحليل القيمة المتوقعة.",
+      "تحليل منحنى التعلم.",
+      "تحليل الانحدار.",
+      "المحاكاة الاحتمالية المستمرة."
+    ],
+    "explanationAr": "تعكس منحنيات التعلم زيادة سرعة أداء العاملين للمهام مع اكتساب الخبرة. ويتناقص الوقت اللازم لإنجاز المهمة عندما يتقن العاملون أعمالهم. ويُعبر عن المنحنى عادة بنسبة انخفاض زمن المهمة عند كل تضاعف للإنتاج التراكمي. وتناسب هذه الطريقة تسعير منتج تمتلك المنشأة خبرة سابقة بإنتاجه؛ إذ ينبغي أن تقلل الخبرة زمن الإنتاج والتكاليف."
   },
   {
     "unit": 12,
@@ -926,7 +958,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. The time to perform a\ngiven task becomes progressively shorter during the early\nstages of production. The curve is expressed as a percentage\nreduction in time to complete a task for each doubling of\ncumulative production. A learning curve percentage of 80% is\ncommon.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأسلوب المستخدم للتنبؤ بتغير ساعات العمل المباشر مع استقرار عملية جديدة؟",
+    "choicesAr": [
+      "الانحدار البسيط.",
+      "الانحدار المتعدد.",
+      "تحليل السلاسل الزمنية.",
+      "تحليل منحنى التعلم."
+    ],
+    "explanationAr": "تعكس منحنيات التعلم سرعة الأداء المتزايدة مع اكتساب الخبرة. ويصبح زمن إنجاز المهمة أقصر تدريجيًا خلال المراحل الأولى للإنتاج. ويُعبَّر عنها بنسبة انخفاض الوقت عند كل تضاعف للإنتاج التراكمي، وتشيع نسبة منحنى تعلم 80%."
   },
   {
     "unit": 12,
@@ -960,7 +1000,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning curves reflect the increased rate at which people\nperform tasks as they gain experience. Thus, they are useful\nin predicting unit direct labor costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُستخدم منحنيات التعلم غالبًا للتنبؤ بـ:",
+    "choicesAr": [
+      "تكلفة المواد لكل وحدة.",
+      "انحرافات التكاليف غير المباشرة.",
+      "التكلفة الكلية لكل وحدة.",
+      "تكلفة العمل المباشر لكل وحدة."
+    ],
+    "explanationAr": "تعكس منحنيات التعلم زيادة سرعة أداء المهام مع الخبرة المكتسبة، ولذلك تفيد في التنبؤ بتكلفة العمل المباشر لكل وحدة."
   },
   {
     "unit": 12,
