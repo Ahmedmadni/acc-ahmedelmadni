@@ -595,11 +595,11 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:11},(_,i)=>"13.3."+(i+24)),
   ...Array.from({length:31},(_,i)=>"13.4."+(i+1)),
   ...[1,3,7,8].map(n=>"14.1."+n),
-  ...[6,7,10,19,20,21,24,25,29,30,31,32,36,39,41,42,43].map(n=>"14.2."+n),
-  ...[4,6,7,8,11,12,14,16,17,18,19].map(n=>"14.3."+n),
+  ...[6,7,10,19,20,21,24,25,29,30,31,32,33,36,39,41,42,43].map(n=>"14.2."+n),
+  ...[4,6,7,8,11,12,13,14,15,16,17,18,19].map(n=>"14.3."+n),
   ...[1,4,9,11,12,21,23,28,33,34,35,36,40].map(n=>"14.4."+n),
-  ...[5,8,16,18,19,21,26,27,28,29,30,33,34].map(n=>"14.5."+n),
-  ...[11,13,14,17,19,20,22,23,24,26,27,28,29].map(n=>"14.6."+n),
+  ...[1,5,6,8,16,18,19,21,22,26,27,28,29,30,33,34].map(n=>"14.5."+n),
+  ...[9,11,13,14,17,19,20,22,23,24,25,26,27,28,29].map(n=>"14.6."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -660,7 +660,20 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 controlled Arabic drafts: §1 4/8, §2 17/43, §3 11/19, §4 13/40, §5 13/34, §6 13/31; 71/175 complete source drafts. Nine flagged layouts and one answer-rounding ambiguity remain English-first and unscored pending publisher review.");
+console.log("Unit 14 controlled Arabic drafts: §1 4/8, §2 18/43, §3 13/19, §4 13/40, §5 16/34, §6 15/31; 79/175 source draft translations. Nine source-flagged layouts, one answer-rounding ambiguity and one extra PDF-option boundary defect remain unscored.");
+// The OCR/PDF-flattened §6 Q31 options contain text fragments from
+// neighboring answers. This is an extraction/layout defect and remains
+// English-first and unscored until original page 561 is visually checked.
+const brokenUnit14Options = vol2Records.get("14.6.31");
+const brokenUnit14Mapped = vol2QuestionById.get("cma-gleim-2025-vol2-su14-s6-q031");
+check(brokenUnit14Options?.page===561 &&
+  brokenUnit14Options.choices[1].includes("Cash Either") &&
+  brokenUnit14Options.choices[2].startsWith("budget payments") &&
+  brokenUnit14Options.choices[3].startsWith("cash ") &&
+  brokenUnit14Mapped?.sourceLayoutReview === true &&
+  brokenUnit14Mapped?.sourceLanguage === "en" &&
+  !brokenUnit14Options.stemAr && !brokenUnit14Options.choicesAr && !brokenUnit14Options.explanationAr,
+  "Do not score Unit 14 §6 Q31 before source option boundary repair.");
 // A source-supplied nearest-integer answer is not necessarily sufficient when
 // defective production must yield a minimum count of whole good units.
 // Until the publisher/rounding convention is confirmed, block scored use.
