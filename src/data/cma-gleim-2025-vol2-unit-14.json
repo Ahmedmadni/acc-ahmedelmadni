@@ -2456,7 +2456,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The company’s records show that the costs and expenses are\nrecorded using the accrual basis, not that all the expenses are\naccrued expenses.\nThe change in the company’s cash balance can be calculated\nas follows:\nBeginning cash balance                   $      36,000\nAdd: Cash collections                       1,300,000\nLess: Net change in accounts payable            (25,000)\nLess: Accrual-basis costs and expenses (1,200,000)\nAdd: Depreciation expense (noncash)             60,000\nLess: Payment for equipment                     (50,000)\nAdd: Net cash received from asset sale          40,000\nLess: Retirement of notes payable               (66,000)\nEnding cash balance                     $   95,000\nNote that cash is generally paid for expenses even in accrual-\nbasis accounting. The company’s records state that\ndepreciation is included in the $1,200,000 of accrual basis\ncosts and expenses. Thus, it is safe to assume that this is the\nonly noncash expense. Since it is a noncash expense,\ndepreciation will be added back in when calculating the ending\ncash balance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة توقع رصيد النقدية في نهاية الربع الثاني، وتتوافر البيانات التالية من سجلاتها:\nرصيد النقدية في نهاية الربع 1: $36,000\nالتحصيلات النقدية من العملاء خلال الربع 2: 1,300,000\nالحسابات الدائنة في نهاية الربع 1: 100,000\nالحسابات الدائنة في نهاية الربع 2: 75,000\nكل تكاليف ومصروفات الربع 2 على أساس الاستحقاق: 1,200,000\nالإهلاك ضمن المصروفات المستحقة أعلاه: 60,000\nشراء معدات نقدا: 50,000\nربح بيع أصل نقدا: 5,000\nصافي القيمة الدفترية للأصل المباع: 35,000\nسداد أوراق الدفع: 66,000\nباستخدام البيانات السابقة، حدد رصيد النقدية المتوقع للشركة في نهاية الربع الثاني.",
+    "choicesAr": [
+      "$0",
+      "$25,000",
+      "$60,000",
+      "$95,000"
+    ],
+    "explanationAr": "توضح سجلات الشركة أن التكاليف والمصروفات مسجلة على أساس الاستحقاق، وليس أن جميع المصروفات مستحقة وغير مدفوعة. ويمكن حساب التغير في النقدية كما يلي:\nرصيد النقدية أول الفترة: $36,000\nيضاف: التحصيلات النقدية: 1,300,000\nيطرح: صافي تغير الحسابات الدائنة: (25,000)\nيطرح: المصروفات والتكاليف على أساس الاستحقاق: (1,200,000)\nيضاف: الإهلاك غير النقدي: 60,000\nيطرح: سداد شراء المعدات: (50,000)\nيضاف: المقبوضات النقدية من بيع الأصل: 40,000\nيطرح: سداد أوراق الدفع: (66,000)\nرصيد النقدية آخر الفترة: $95,000\nعادة تُدفع المصروفات نقدا حتى عند استخدام المحاسبة على أساس الاستحقاق. وتفيد السجلات بأن الإهلاك يدخل ضمن مصروفات الاستحقاق البالغة $1,200,000؛ لذلك يفترض أنه المصروف غير النقدي الوحيد، ويعاد إضافته عند حساب النقدية النهائية."
   },
   {
     "unit": 14,
@@ -2609,7 +2617,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The expected cash disbursements for any month equal the\nprevious month’s purchases minus the 2% discount, plus any\ncash disbursements for expenses in the current period.\nApril purchases                 $54,000\nLess: 2% cash discount             (1,080)\nNet purchases                   $52,920\nCash expenses                    14,400\nTotal cash disbursements for May $67,320",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات تخص شركة مونتيرو:\nالشهر | المشتريات | المبيعات\nيناير: $42,000 | $72,000\nفبراير: 48,000 | 66,000\nمارس: 36,000 | 60,000\nأبريل: 54,000 | 78,000\nتُحصل من العملاء عادة 70% في شهر البيع، ثم 20% و9% على الترتيب خلال الشهرين 2 التاليين، ويتعذر تحصيل الباقي. وتستفيد الشركة بالكامل من خصم 2% على المشتريات إذا سددتها بحلول اليوم 10 من الشهر التالي. وتقدر مشتريات مايو بمبلغ $60,000 ومبيعاته بمبلغ $66,000، والمدفوعات النقدية للمصروفات خلال مايو بمبلغ $14,400. وكان رصيد النقدية في 1 مايو $22,000.\nما المدفوعات النقدية المتوقعة لشركة مونتيرو خلال مايو؟",
+    "choicesAr": [
+      "$14,400",
+      "$52,920",
+      "$67,320",
+      "$68,400"
+    ],
+    "explanationAr": "تساوي المدفوعات النقدية المتوقعة لأي شهر مشتريات الشهر السابق بعد خصم السداد النقدي 2%، مضافا إليها مدفوعات المصروفات خلال الشهر الحالي.\nمشتريات أبريل: $54,000\nيطرح: خصم السداد النقدي 2%: (1,080)\nصافي المشتريات: $52,920\nالمصروفات النقدية: 14,400\nإجمالي المدفوعات النقدية في مايو: $67,320"
   },
   {
     "unit": 14,
@@ -2844,7 +2860,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Tidwell’s ending cash balance for January is calculated as\nfollows:\nBeginning balance of cash     $ 24,900\nAdd: cash receipts            86,000\nCash available                $110,900\nLess: payments                (106,500)\nEnding cash before borrowing $    4,400\nTo reach the minimum acceptable cash balance of $15,000,\nthe company will need to borrow at least $10,600. Since loans\nare in multiples of $1,000, the borrowing must be rounded up\nto $11,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع شركة تيدويل منتجا واحدا بسعر $20 للوحدة. وجميع المبيعات آجلة، يُحصل منها 60% في شهر البيع و40% في الشهر التالي. ويظهر الجدول الجزئي للمقبوضات النقدية للأشهر يناير إلى مارس من السنة المقبلة ما يلي:\nالبند | يناير | فبراير | مارس\nتحصيلات حسابات ديسمبر المدينة: $32,000\nتحصيلات مبيعات يناير: 54,000 | $36,000\nتحصيلات مبيعات فبراير: 66,000 | $44,000\nمعلومات إضافية:\n• تحافظ الشركة على مخزون يعادل 30% من مبيعات الشهر التالي.\n• ترغب تيدويل في الاحتفاظ بحد أدنى للنقدية $15,000. وتبلغ مدفوعات يناير المتوقعة $106,500، دون مصروف الإهلاك $12,000. وأي اقتراض مطلوب يجب أن يكون بمضاعفات $1,000.\n• أظهرت قائمة المركز المالي في 31 ديسمبر من السنة السابقة رصيد نقدية $24,900.\nبإهمال ضرائب الدخل، ما التمويل المطلوب في يناير للمحافظة على الحد الأدنى للنقدية؟",
+    "choicesAr": [
+      "$8,000",
+      "$10,600",
+      "$11,000",
+      "$23,000"
+    ],
+    "explanationAr": "يُحسب رصيد النقدية النهائي لشركة تيدويل في يناير كما يلي:\nرصيد النقدية أول الفترة: $24,900\nيضاف: المقبوضات النقدية: 86,000\nالنقدية المتاحة: $110,900\nيطرح: المدفوعات: (106,500)\nالنقدية النهائية قبل الاقتراض: $4,400\nللوصول إلى الحد الأدنى المقبول للنقدية البالغ $15,000، تحتاج الشركة إلى اقتراض لا يقل عن $10,600. ولأن القروض تمنح بمضاعفات $1,000، يجب تقريب الاقتراض إلى الأعلى ليبلغ $11,000."
   },
   {
     "unit": 14,
