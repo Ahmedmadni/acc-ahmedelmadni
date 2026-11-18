@@ -672,8 +672,8 @@ test("CMA Unit 14 wave 1: ten initial source-ordered Arabic drafts retain keys a
   ];
   const expected=new Map(reviewed.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,31);
-  assert.deepEqual(rows.filter(q=>q.stemAr).map(q=>q.section+"."+q.number).slice(0,10),[...expected.keys()]);
+  assert.equal(rows.filter(q=>q.stemAr).length,53);
+  assert.deepEqual(rows.filter(q=>expected.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...expected.keys()]);
   for(const q of rows){
     const id=q.section+"."+q.number;
     if(!expected.has(id)) continue;
@@ -747,20 +747,13 @@ test("CMA Unit 14 wave 2: 21 concept translations preserve canonical keys, numer
   const newKeys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(added.length,21);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,31);
-  assert.deepEqual(rows.filter(q=>q.stemAr).map(q=>q.section+"."+q.number),[...first,...newKeys.keys()]);
-  const perSection=[0,4,3,3,3,8,10];
+  assert.equal(rows.filter(q=>q.stemAr).length,53);
+  assert.deepEqual(rows.filter(q=>newKeys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newKeys.keys()]);
+  const perSection=[0,4,17,11,3,8,10];
   for(let s=1;s<=6;s++)assert.equal(rows.filter(q=>q.section===s&&q.stemAr).length,perSection[s]);
   for(const q of rows){
     const id=q.section+"."+q.number;
-    if(!newKeys.has(id)){
-      if(!first.has(id)){
-        assert.equal(q.stemAr,undefined,"Unexpected translation "+id);
-        assert.equal(q.choicesAr,undefined);
-        assert.equal(q.explanationAr,undefined);
-      }
-      continue;
-    }
+    if(!newKeys.has(id)) continue;
     assert.equal(q.answerIndex,newKeys.get(id),"Canonical answer changed "+id);
     assert.equal(q.answerStatus,"source");
     assert.equal(q.sourceTextStatus,undefined);
@@ -779,4 +772,92 @@ test("CMA Unit 14 wave 2: 21 concept translations preserve canonical keys, numer
   assert.equal(get(5,29).choicesAr[1],"قائمة التدفقات النقدية التقديرية.");
   assert.equal(get(6,23).choicesAr[1],"مخزون المنتجات التامة في أول الفترة.");
   assert.equal(get(6,26).choicesAr[0],"قائمة الدخل التقديرية.");
+});
+
+
+test("CMA Unit 14 wave 3: 22 production and cost translations preserve original keys and independent arithmetic",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const expected=[
+    [2,6,0,114600],[2,7,2,8800],[2,10,2,1010000],[2,19,1,540000],
+    [2,20,2,78000],[2,21,3,86000],[2,24,1,71700],[2,25,0,3700],
+    [2,29,0,85000],[2,30,0,40820],[2,31,2,8700],[2,32,3,404000],
+    [2,36,3,84000],[2,39,2,3700],
+    [3,6,2,84736],[3,7,1,26.25],[3,8,1,84480],[3,11,0,54],
+    [3,12,3,105000],[3,14,0,950000],[3,16,2,21450],[3,17,0,5500000],
+  ];
+  const by=(section,number)=>rows.find(q=>q.section===section&&q.number===number);
+  const keyed=new Map(expected.map(([s,n,key,value])=>[s+"."+n,{key,value}]));
+  assert.equal(expected.length,22);
+  assert.equal(rows.length,175);
+  assert.equal(rows.filter(q=>q.stemAr).length,53);
+  assert.deepEqual(rows.filter(q=>q.stemAr&&keyed.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
+    [...keyed.keys()]);
+  const answerNumber=q=>{
+    const m=q.choices[q.answerIndex].match(/\d[\d,]*(?:\.\d+)?/);
+    assert.ok(m,"Answer option must contain a number");
+    return Number(m[0].replaceAll(",",""));
+  };
+  for(const [id,{key,value}] of keyed){
+    const [s,n]=id.split(".").map(Number);
+    const q=by(s,n);
+    assert.ok(q,"Missing source "+id);
+    assert.equal(q.answerIndex,key,"Canonical key mismatch "+id);
+    assert.equal(q.answerStatus,"source");
+    assert.equal(q.sourceTextStatus,undefined);
+    assert.equal(answerNumber(q),value,"Source numeric answer mismatch "+id);
+    const check=validateCmaTranslation(
+      {question:{en:q.stem},choices:{en:q.choices},explanation:{en:q.explanation}},
+      {question:q.stemAr,choices:q.choicesAr,explanation:q.explanationAr});
+    assert.equal(check.valid,true,"Question "+id+": "+check.reason);
+    assert.equal(q.choicesAr.length,4);
+    assert.match(q.stemAr,/[\u0600-\u06ff]/);
+    assert.match(q.explanationAr,/[\u0600-\u06ff]/);
+  }
+  const arithmetics=new Map([
+    ["2.6",34000*3+(48000*3*.3)-(34000*3*.3)],
+    ["2.7",8000+12000*.2-8000*.2],
+    ["2.10",500000*2+50000-40000],
+    ["2.19",728000/1.3+(624000/1.3)*.25-(728000/1.3)*.25],
+    ["2.20",72000+84000*.5-72000*.5],
+    ["2.21",72000+84000*.5-(72000*.5-8000)],
+    ["2.24",67500+(67500/90)*10-(3500-200)],
+    ["2.25",4000+600-900],
+    ["2.29",90000+20000-25000],
+    ["2.30",58000*.65+(74000*.65)*.30-(58000*.65)*.30],
+    ["2.31",(2000+325-250)*4+800-400],
+    ["2.32",(200000+15000-12000)*2+18000-20000],
+    ["2.36",(10000+12000*.25-2500)*2*4],
+    ["2.39",2500+8500*.2-2500*.2],
+    ["3.6",33100*32*.08],
+    ["3.7",245/35*1.25*3],
+    ["3.8",33000*32*.08],
+    ["3.11",600/40*1.2*3],
+    ["3.12",(400000+25000-10000-100000)/3],
+    ["3.14",125000*40-(125000*10+100*10000+200*4000+125000*8)],
+    ["3.16",(2000+2300+2500-300)*1.10*3],
+    ["3.17",10000000-4000000-500000],
+  ]);
+  assert.equal(arithmetics.size,expected.length);
+  for(const [id,result] of arithmetics){
+    assert.ok(Math.abs(result-keyed.get(id).value)<0.00001,
+      "Independent calculation discrepancy "+id+": "+result);
+  }
+  assert.ok(12500*24.80<500000,"Water quota should not trigger commission");
+  assert.ok(12500*25<500000,"Small cherries quota should not trigger commission");
+  assert.ok(33100*32>=1000000 && 33000*32>=1000000);
+});
+
+test("CMA Unit 14 §2 Q23 has a rounding ambiguity and must remain unscored until source review",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const q=rows.find(q=>q.section===2&&q.number===23);
+  assert.equal(q.page,369);
+  assert.equal(q.answerIndex,2);
+  assert.equal(q.choices[2],"7,133");
+  assert.equal(q.stemAr,undefined);
+  assert.equal(q.choicesAr,undefined);
+  assert.equal(q.explanationAr,undefined);
+  assert.equal((6300+590-470),6420);
+  assert.ok(7133*.90<6420);
+  assert.equal(Math.ceil(6420/.9),7134);
+  assert.equal(isCmaScorableQuestion({sourceLayoutReview:true}),false);
 });
