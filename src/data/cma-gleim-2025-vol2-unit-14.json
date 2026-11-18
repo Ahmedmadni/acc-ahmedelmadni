@@ -1883,7 +1883,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The amount collected in January on January sales will be\n$40,000 ($100,000 × 40%). The $72,000 balance in\nreceivables from December sales represents 60% (50% +\n10%) of that month’s total. Since the total December sales\nwere $120,000 ($72,000 ÷ 60%), the amount expected to be\ncollected in January is $60,000 ($120,000 × 50%). The $8,000\nbalance from November represents all the remaining expected\ncollections from that month’s sales. Thus, total January\ncollections on receivables are expected to be $108,000\n($40,000 + $60,000 + $8,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "المبيعات الشهرية المقدرة:\nيناير $100,000\nفبراير 150,000\nمارس 180,000\nتُحصل 40% من المبيعات في شهر البيع، و50% في الشهر التالي، و10% بعد شهرين. وبلغ رصيد الحسابات المدينة في 31 ديسمبر $80,000، منه $72,000 من مبيعات ديسمبر و$8,000 من مبيعات نوفمبر. ما النقدية المتوقع تحصيلها خلال يناير؟",
+    "choicesAr": [
+      "$76,800",
+      "$84,000",
+      "$108,000",
+      "$133,000"
+    ],
+    "explanationAr": "يُحصل من مبيعات يناير مبلغ $40,000 ($100,000 × 40%). ويمثل رصيد مبيعات ديسمبر البالغ $72,000 نسبة 60% (50% + 10%) من مبيعات الشهر. وعليه بلغت مبيعات ديسمبر $120,000 ($72,000 ÷ 60%)، ويُحصل منها في يناير $60,000 ($120,000 × 50%). أما رصيد نوفمبر البالغ $8,000 فيمثل كامل المبالغ المتبقية للتحصيل. ويبلغ إجمالي تحصيلات يناير $108,000 ($40,000 + $60,000 + $8,000)."
   },
   {
     "unit": 14,
@@ -3070,7 +3078,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The budgeted balance sheet, the income statement, and the\nstatement of cash flows would all change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نوفمبر، أنهت شركة موازنتها للسنة التقويمية القادمة. وفي ديسمبر تقرر اقتناء معدات جديدة في يناير مقابل معدات قديمة وتمويل المبلغ المستحق بقرض يحل أصلُه وفوائدُه بعد 3 سنوات. ولن تتغير تكاليف تشغيل المعدات النقدية. أي القوائم المالية المقدرة للسنة التالية ستتأثر بهذا القرار؟",
+    "choicesAr": [
+      "قائمة المركز المالي المقدرة فقط.",
+      "قائمتا المركز المالي والدخل المقدرتان.",
+      "قوائم المركز المالي والدخل والتدفقات النقدية المقدرة.",
+      "قائمتا الدخل والتدفقات النقدية المقدرتان."
+    ],
+    "explanationAr": "ستتغير كل من قائمة المركز المالي وقائمة الدخل وقائمة التدفقات النقدية المقدرة، نتيجة تغير الأصول والالتزامات ومصروفات الإهلاك والتمويل والتدفقات المتعلقة بالاستثمار."
   },
   {
     "unit": 14,
@@ -3231,7 +3247,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The entire October sales account will be collected by the end\nof the year; however, 10% of November sales will be collected\nin January in the following year, and a total of 50% of\nDecember sales will be collected in the following year (40% in\nJanuary and 10% in February). The budgeted year-end\naccounts receivable balance is $260,000 [($350,000 × 10%) +\n($450,000 × 40%) + ($450,000 × 10%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة قائمة مركز مالي تقديرية للسنة المقبلة. وتتوقع تحصيل 50% من المبيعات في شهر البيع، و40% في الشهر التالي، و10% بعد 2 شهر. وإذا بلغت المبيعات المقدرة لأكتوبر ونوفمبر وديسمبر $200,000 و$350,000 و$450,000 على الترتيب، فكم يبلغ رصيد الحسابات المدينة المقدر بنهاية السنة؟",
+    "choicesAr": [
+      "$260,000",
+      "$285,000",
+      "$299,000",
+      "$385,000"
+    ],
+    "explanationAr": "ستُحصل مبيعات أكتوبر بالكامل بنهاية السنة، أما 10% من مبيعات نوفمبر فستُحصل في يناير التالي. وكذلك يتبقى 50% من مبيعات ديسمبر للتحصيل في السنة التالية (40% في يناير و10% في فبراير). لذا يبلغ رصيد الحسابات المدينة بنهاية السنة $260,000 [($350,000 × 10%) + ($450,000 × 40%) + ($450,000 × 10%)]."
   },
   {
     "unit": 14,
@@ -3265,7 +3289,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since there is no increase in fixed costs, the change in income\nis equal to the increase in contribution margin. The increase in\nsales is €250,000 (2,000 extra units at €125 each). Multiplying\nthe 35% contribution margin by the €250,000 of incremental\nsales results in an €87,500 increase in contribution and an\nincrease in operating income of the same amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة منتجًا واحدًا بسعر بيع €125 للوحدة، ويبلغ هامش المساهمة 35% من المبيعات. وتشكل المواد المباشرة 10% من المبيعات والتكاليف الصناعية غير المباشرة المتغيرة 5%. أما التكاليف الثابتة فتبلغ €200,000 سنويًا. ويرغب المراقب المالي في إعداد قائمة دخل تقديرية ترتفع فيها المبيعات من 10,000 إلى 12,000 وحدة. ويبلغ متوسط معدل ضريبة الدخل 25.71%. ما التغير في الربح التشغيلي نتيجة زيادة الوحدات المباعة؟",
+    "choicesAr": [
+      "€50,000",
+      "€65,000",
+      "€75,000",
+      "€87,500"
+    ],
+    "explanationAr": "لعدم وجود زيادة في التكاليف الثابتة، فإن التغير في الربح يساوي الزيادة في هامش المساهمة. تبلغ زيادة المبيعات €250,000 نتيجة بيع 2,000 وحدة إضافية بسعر €125 للوحدة. وبضرب هامش المساهمة 35% في المبيعات الإضافية €250,000، نحصل على زيادة قدرها €87,500 في هامش المساهمة والربح التشغيلي."
   },
   {
     "unit": 14,
@@ -3399,7 +3431,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cost of fringe benefits must be derived once the cost of\nwages has been determined. The fringe benefits are then\nincluded in direct labor or allocated as manufacturing\noverhead, and the effect on cost of goods sold is the same.\nThus, out of all the answer choices, 100% allocation to\nmanufacturing overhead is the most accurate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد الموازنة السنوية، أي الطرق التالية مقبولة لتوزيع تكلفة المزايا الإضافية لعمال خطوط الإنتاج؟",
+    "choicesAr": [
+      "تخصيص 100% للتكاليف الصناعية غير المباشرة.",
+      "تخصيص 100% للمصروفات الإدارية.",
+      "التوزيع النسبي بين التكاليف الصناعية غير المباشرة والمصروفات الإدارية.",
+      "التوزيع النسبي بين المصروفات غير التشغيلية والمصروفات الإدارية."
+    ],
+    "explanationAr": "تُحدد تكلفة المزايا الإضافية بعد تحديد الأجور، وتُدرج بعد ذلك في العمل المباشر أو تحمل ضمن التكاليف الصناعية غير المباشرة، ويكون أثر ذلك في تكلفة البضاعة المباعة متماثلًا. ولذلك فإن تخصيص 100% للتكاليف الصناعية غير المباشرة هو الأدق بين الخيارات."
   },
   {
     "unit": 14,
