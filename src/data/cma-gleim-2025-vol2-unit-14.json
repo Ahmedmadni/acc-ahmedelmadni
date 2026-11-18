@@ -2317,7 +2317,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of goods sold was $3,000,000 [$4,000,000 sales ×\n(1.0 – 25% gross margin)]. Purchases equal cost of goods\nsold adjusted for the change in inventories. A decrease in\ninventories signifies that purchases were less than cost of\ngoods sold. Thus, purchases for April were $2,840,000\n($3,000,000 COGS – $160,000 decrease in inventories). A\ndecrease in payables related to inventories indicates that cash\ndisbursements exceeded purchases. Accordingly, the cash\noutflow for inventories was $3,115,000 ($2,840,000 +\n$275,000 decrease in accounts payable).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد الموازنة النقدية لشهر أبريل، وُضعت التقديرات التالية:\nالمبيعات: $4,000,000\nنسبة مجمل الربح إلى المبيعات: 25%\nانخفاض المخزون: 160,000\nانخفاض الحسابات الدائنة المتعلقة بالمخزون: 275,000\nما المدفوعات النقدية المقدرة للمخزون خلال أبريل؟",
+    "choicesAr": [
+      "$3,275,000",
+      "$3,115,000",
+      "$2,840,000",
+      "$2,565,000"
+    ],
+    "explanationAr": "تبلغ تكلفة البضاعة المباعة $3,000,000 [المبيعات $4,000,000 × (1.0 − هامش مجمل الربح 25%)]. وتساوي المشتريات تكلفة البضاعة المباعة بعد تعديلها بتغير المخزون. ويعني انخفاض المخزون أن المشتريات تقل عن تكلفة المبيعات، فتبلغ مشتريات أبريل $2,840,000 (تكلفة المبيعات $3,000,000 − انخفاض المخزون $160,000). كما يدل انخفاض الدائنين على أن المدفوعات تزيد عن المشتريات؛ وعليه تبلغ المدفوعات النقدية للمخزون $3,115,000 ($2,840,000 + انخفاض الدائنين $275,000)."
   },
   {
     "unit": 14,
@@ -2368,7 +2376,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Projected cost of sales is 60% of $2,400,000 of sales, or\n$1,440,000. Projected purchases is the $1,440,000 cost of\nsales less $60,000 projected decrease in inventory which is\n$1,380,000. Projected cash payments is the projected\npurchases of $1,380,000 plus the $100,000 projected\ndecrease in accounts payable, which is $1,480,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أُعدت موازنة شاملة بناءً على التوقعات التالية:\nالمبيعات: $2,400,000\nانخفاض المخزون: 60,000\nانخفاض الحسابات الدائنة: 100,000\nهامش مجمل الربح: 40%\nما المدفوعات النقدية المقدرة للمخزون؟",
+    "choicesAr": [
+      "$920,000",
+      "$1,000,000",
+      "$1,400,000",
+      "$1,480,000"
+    ],
+    "explanationAr": "تبلغ تكلفة المبيعات المقدرة 60% من المبيعات البالغة $2,400,000، أي $1,440,000. وتساوي المشتريات المقدرة تكلفة المبيعات البالغة $1,440,000 ناقص انخفاض المخزون المتوقع $60,000؛ أي $1,380,000. وتساوي المدفوعات النقدية المشتريات المقدرة $1,380,000 مضافًا إليها انخفاض الحسابات الدائنة المتوقع $100,000، أي $1,480,000."
   },
   {
     "unit": 14,
@@ -2571,7 +2587,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Collections on account equal beginning accounts receivable of\n$180,000, plus sales on account of $800,000, minus budgeted\nending accounts receivable of $210,000, or $770,000. The\nbeginning cash balance of $50,000, plus cash collections on\naccount of $770,000, minus budgeted cash disbursements of\n$780,000 equals $40,000. Depreciation of $25,000 is\nexcluded because it is a noncash expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة موازنتها النقدية للشهر القادم، وجميع مبيعاتها آجلة. المعطيات:\nرصيد النقدية أول الفترة: $50,000\nرصيد الحسابات المدينة أول الفترة: 180,000\nالمبيعات المقدرة: $800,000\nالمدفوعات النقدية: 780,000\nالإهلاك: 25,000\nرصيد الحسابات المدينة آخر الفترة: 210,000\nما رصيد النقدية المتوقع للشركة في نهاية الشهر القادم؟",
+    "choicesAr": [
+      "$15,000",
+      "$40,000",
+      "$45,000",
+      "$70,000"
+    ],
+    "explanationAr": "تساوي تحصيلات الحسابات المدينة رصيد أول الفترة البالغ $180,000 + المبيعات الآجلة البالغة $800,000 − رصيد آخر الفترة المقدر $210,000، أي $770,000. ويضاف إلى رصيد النقدية أول الفترة البالغ $50,000 تحصيلات قدرها $770,000 وتطرح مدفوعات نقدية مقدرة بمبلغ $780,000؛ فينتج رصيد نقدي قدره $40,000. ولا يدخل الإهلاك البالغ $25,000 في الحساب لأنه مصروف غير نقدي."
   },
   {
     "unit": 14,
@@ -2857,7 +2881,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The cash disbursements for inventory during the period can\nbe calculated as follows:\nCost of goods sold + Decrease in accounts payable for\ninventories – Decrease in inventories\n($4,000,000 × 0.75) + $275,000 – $160,000 = $3,115,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تأمل البيانات التالية لشركة عن الشهر المنتهي:\nالمبيعات: $4,000,000\nمجمل الربح كنسبة من المبيعات: 25%\nالانخفاض في المخزون: $160,000\nالانخفاض في الحسابات الدائنة الخاصة بالمخزون: $275,000\nما المدفوعات النقدية المقدرة للمخزون؟",
+    "choicesAr": [
+      "$2,565,000",
+      "$2,840,000",
+      "$3,115,000",
+      "$3,275,000"
+    ],
+    "explanationAr": "تُحسب المدفوعات النقدية للمخزون خلال الفترة بإضافة انخفاض الحسابات الدائنة إلى تكلفة البضاعة المباعة، ثم طرح انخفاض المخزون:\n($4,000,000 × 0.75) + $275,000 − $160,000 = $3,115,000"
   },
   {
     "unit": 14,
@@ -2874,7 +2906,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cash paid to suppliers is calculated as follows: purchases –\nincrease in accounts payable. The corporation will have\n$54,000,000 ($55,000,000 purchases – $1,000,000 increase\nin accounts payable) as cash paid to suppliers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تظهر الموازنة السنوية لشركة مشتريات مخزون متوقعة من الموردين بقيمة $55,000,000. وفيما يلي معلومات مختارة من قائمتَي المركز المالي التقديريتين أول الفترة وآخرها:\nالبند | 1 يناير | 31 ديسمبر\nالمخزون | $6,000,000 | $7,500,000\nالحسابات الدائنة | $4,000,000 | $5,000,000\nما إجمالي النقدية المدفوعة للموردين؟",
+    "choicesAr": [
+      "$56,000,000",
+      "$55,500,000",
+      "$54,500,000",
+      "$54,000,000"
+    ],
+    "explanationAr": "تُحسب المدفوعات النقدية للموردين بطرح الزيادة في الحسابات الدائنة من المشتريات. لذلك تبلغ المدفوعات النقدية $54,000,000 (المشتريات $55,000,000 − زيادة الدائنين $1,000,000)."
   },
   {
     "unit": 14,
@@ -3191,7 +3231,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The entire October sales account will be collected by the end\nof the year; however, 10% of November sales will be collected\nin January in the following year, and a total of 50% of\nDecember sales will be collected in the following year (40% in\nJanuary and 10% in February). The budgeted year-end\naccounts receivable balance is $260,000 [($350,000 × 10%) +\n($450,000 × 40%) + ($450,000 × 10%)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة قائمة مركز مالي تقديرية للسنة المقبلة. وتتوقع تحصيل 50% من المبيعات في شهر البيع، و40% في الشهر التالي، و10% بعد 2 شهر من البيع. إذا بلغت المبيعات المقدرة لأكتوبر ونوفمبر وديسمبر من السنة المقبلة على الترتيب $200,000 و$350,000 و$450,000، فما رصيد الحسابات المدينة المقدر في نهاية السنة؟",
+    "choicesAr": [
+      "$260,000",
+      "$285,000",
+      "$299,000",
+      "$385,000"
+    ],
+    "explanationAr": "ستُحصّل جميع مبيعات أكتوبر بنهاية السنة، لكن 10% من مبيعات نوفمبر سيُحصّل في يناير من السنة التالية، وكذلك سيُحصّل في السنة التالية 50% من مبيعات ديسمبر (40% في يناير و10% في فبراير). وعليه يبلغ رصيد الحسابات المدينة في نهاية السنة $260,000 [(مبيعات نوفمبر $350,000 × 10%) + (مبيعات ديسمبر $450,000 × 40%) + (مبيعات ديسمبر $450,000 × 10%)]."
   },
   {
     "unit": 14,
@@ -3225,7 +3273,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since there is no increase in fixed costs, the change in income\nis equal to the increase in contribution margin. The increase in\nsales is €250,000 (2,000 extra units at €125 each). Multiplying\nthe 35% contribution margin by the €250,000 of incremental\nsales results in an €87,500 increase in contribution and an\nincrease in operating income of the same amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة منتجًا واحدًا وتبيعه بسعر €125 للوحدة. ويبلغ هامش مساهمته 35% من المبيعات، وتمثل المواد المباشرة 10% من المبيعات، والتكاليف الصناعية غير المباشرة المتغيرة 5% منها. وتبلغ التكاليف الثابتة €200,000 سنويًا. ويريد المراقب المالي إعداد قائمة دخل تقديرية ترتفع فيها المبيعات من 10,000 إلى 12,000 وحدة. ومتوسط معدل ضريبة الدخل 25.71%. ما التغير في الدخل التشغيلي نتيجة زيادة الوحدات المبيعة؟",
+    "choicesAr": [
+      "€50,000",
+      "€65,000",
+      "€75,000",
+      "€87,500"
+    ],
+    "explanationAr": "لعدم وجود زيادة في التكاليف الثابتة، فإن التغير في الدخل التشغيلي يعادل الزيادة في هامش المساهمة. وتبلغ زيادة المبيعات €250,000 (عدد 2,000 وحدة إضافية × سعر €125). وبضرب نسبة هامش المساهمة 35% في المبيعات الإضافية €250,000 تنتج زيادة قدرها €87,500 في هامش المساهمة والدخل التشغيلي."
   },
   {
     "unit": 14,
@@ -3451,7 +3507,15 @@
     ],
     "answerIndex": 1,
     "explanation": "To find the after-tax profit for next year, the amounts given must\nbe adjusted based on the projections for next year:\nSales            = $110,000 ($100,000 × 1.1)\nVariable cost = $66,000 ($60,000 × 1.1)\nSalaries         = $15,750 ($15,000 × 1.05)\nOther expenses = $6,000 ($5,000 × 1.2)\nThe sales projection minus the other projected amounts\nmultiplied by 1 minus the tax rate equals an after-tax profit of\n$15,575 [($110,000 – $66,000 – $15,750 – $6,000) × (1 – 0.3)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "احسب الربح التقديري بعد الضريبة للسنة المقبلة اعتمادًا على بيانات السنة الماضية والتوقعات التالية:\nالمبيعات السنة الماضية: $100,000؛ نمو متوقع 10%\nالتكاليف المتغيرة: $60,000؛ زيادة متوقعة 10%\nالرواتب: $15,000؛ زيادة متوقعة 5%\nالمصروفات الأخرى: $5,000؛ زيادة متوقعة 20%\nمعدل ضريبة الدخل: 30%؛ دون تغيير",
+    "choicesAr": [
+      "$15,000",
+      "$15,575",
+      "$16,100",
+      "$18,200"
+    ],
+    "explanationAr": "لإيجاد ربح السنة المقبلة بعد الضريبة تُعدل المبالغ وفق التوقعات:\nالمبيعات = $110,000 ($100,000 × 1.1)\nالتكاليف المتغيرة = $66,000 ($60,000 × 1.1)\nالرواتب = $15,750 ($15,000 × 1.05)\nالمصروفات الأخرى = $6,000 ($5,000 × 1.2)\nيُضرب صافي المبيعات بعد طرح التكاليف المقدرة في (1 − معدل الضريبة)، ليكون الربح بعد الضريبة $15,575 [($110,000 − $66,000 − $15,750 − $6,000) × (1 − 0.3)]."
   },
   {
     "unit": 14,
