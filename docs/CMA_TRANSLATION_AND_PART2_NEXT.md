@@ -210,3 +210,8 @@ The next increment adds **31 complete Arabic educational drafts**, Q1–Q31 in U
 **Unit 13 is now 121/123 (98.4%)**: 43/44 §1, 14/14 §2, 33/34 §3, and **31/31 §4**. Source-layout-blocked §1 Q34 (p.248) and §3 Q23 (p.287) remain untranslated and excluded from scored practice pending original PDF visual reconciliation. Unit 11 remains 58/58 and Unit 12 136/155 (19 source-layout blockers), giving **315/336** Arabic source drafts across Units 11–13.
 
 Strict coverage and numeric/answer-key regression tests have been extended to all Section 4 questions. This remains a draft translation milestone, not a publisher PDF or specialist accounting certification. See [the delivery/roadmap report](./CMA_UNIT13_HANDOFF_2026-11-18.md) for release gates and remaining risks. GitHub CI, merge, Lovable publish and real-device checks should be tracked as separate milestones.
+
+
+## Unit 14 selective source-conservative Arabic wave 1 — 18 November 2026
+
+Added **10 complete Arabic educational draft translations** to original Gleim 2025 Part 1 Volume 2 Unit 14 source records without modifying any English/source/key field. Unit 14 coverage: **10/175** (§1 4/8, §2 3/43, §3 3/19, §4 0/40, §5 0/34, §6 0/31). The library now has **325 Arabic-source question drafts across units 11–14** (58+136+121+10). Nine previously source-flagged Unit 14 table/reconstruction records remain untranslated; source table-heavy unflagged items are also held back pending original PDF/number audits. See [Unit 14 handoff and source-review ledger](./CMA_UNIT14_ARABIC_WAVE1_2026-11-18.md). Translation drafts are not publisher- or accountant-certified; publishing/real-device QA remain separate.
