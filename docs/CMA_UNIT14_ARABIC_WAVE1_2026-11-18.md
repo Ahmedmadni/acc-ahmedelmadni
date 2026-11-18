@@ -26,6 +26,19 @@ Unit 14 includes many multi-row numeric schedules and imported PDF tables. Sever
 
 Extra visually complex but **unflagged** Unit 14 §1 Q2, Q4, Q5 and Q6 (pages 324, 328, 330, 333) are deliberately **not localized in this wave** pending source row/column alignment and recalculation. These have no stored source-review flag in the current baseline; do not claim existing quiz scoring safeguards protect them. Add explicit source-review flags only after a controlled source audit confirms transcription risk.
 
+## Independent arithmetic checks before translating tabular questions
+
+The regression suite recomputes source §1 Q2 and Q4–Q6 independently of the imported, line-wrapped explanation text:
+
+| Record | Recomputed sales effect | Source answer option | Status |
+|---|---:|---|---|
+| §1 Q2 | Revenue decrease $1,050,000 | A | Numeric check only |
+| §1 Q4 | Revenue decrease $122,250 | C | Numeric check only |
+| §1 Q5 | Revenue decrease $136,500 | B | Numeric check only |
+| §1 Q6 | Revenue increase $310,500 | C | Numeric check only |
+
+These independent calculations verify arithmetic and recorded answer keys, **not** the fidelity of PDF table rows or column headings. The four questions remain English-first until the original source layouts are checked.
+
 ## Quality gates
 1. Complete Arabic question, four translated choices and explanation, with the same ordered numeric tokens as the source in every corresponding field.
 2. Source answer indexes pinned to independent expected values for ten items.
