@@ -667,7 +667,8 @@ console.log("Unit 14 controlled Arabic drafts: §1 4/8, §2 18/43, §3 13/19, §
 const brokenUnit14Options = vol2Records.get("14.6.31");
 const brokenUnit14Mapped = vol2QuestionById.get("cma-gleim-2025-vol2-su14-s6-q031");
 check(brokenUnit14Options?.page===561 &&
-  brokenUnit14Options.choices[2].startsWith("Cash Either") &&
+  brokenUnit14Options.choices[1].includes("Cash Either") &&
+  brokenUnit14Options.choices[2].startsWith("budget payments") &&
   brokenUnit14Options.choices[3].startsWith("cash ") &&
   brokenUnit14Mapped?.sourceLayoutReview === true &&
   brokenUnit14Mapped?.sourceLanguage === "en" &&
