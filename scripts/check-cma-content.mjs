@@ -595,8 +595,8 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:11},(_,i)=>"13.3."+(i+24)),
   ...Array.from({length:31},(_,i)=>"13.4."+(i+1)),
   ...[1,3,7,8].map(n=>"14.1."+n),
-  ...[41,42,43].map(n=>"14.2."+n),
-  ...[4,18,19].map(n=>"14.3."+n),
+  ...[6,7,10,19,20,21,24,25,29,30,31,32,36,39,41,42,43].map(n=>"14.2."+n),
+  ...[4,6,7,8,11,12,14,16,17,18,19].map(n=>"14.3."+n),
   ...[1,33,34].map(n=>"14.4."+n),
   ...[16,18,21,26,27,28,29,30].map(n=>"14.5."+n),
   ...[11,13,14,20,22,23,24,26,27,28].map(n=>"14.6."+n),
@@ -660,7 +660,19 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 controlled Arabic drafts: §1 4/8, §2 3/43, §3 3/19, §4 3/40, §5 8/34, §6 10/31; 31/175 complete source drafts. Table-heavy questions remain English-first pending visual source QA.");
+console.log("Unit 14 controlled Arabic drafts: §1 4/8, §2 17/43, §3 11/19, §4 3/40, §5 8/34, §6 10/31; 53/175 complete source drafts. Nine flagged layouts and one answer-rounding ambiguity remain English-first and unscored pending publisher review.");
+// A source-supplied nearest-integer answer is not necessarily sufficient when
+// defective production must yield a minimum count of whole good units.
+// Until the publisher/rounding convention is confirmed, block scored use.
+const unit14Rounding=vol2Records.get("14.2.23");
+const unit14RoundingMapped=vol2QuestionById.get("cma-gleim-2025-vol2-su14-s2-q023");
+check(unit14Rounding?.page===369 && unit14Rounding.answerIndex===2 &&
+  unit14Rounding.choices[2]==="7,133" && !unit14Rounding.stemAr &&
+  unit14RoundingMapped?.sourceLayoutReview===true &&
+  unit14RoundingMapped?.sourceLanguage==="en" &&
+  unit14RoundingMapped?.sourceArabicStatus===undefined &&
+  Math.ceil((6300+590-470)/0.9)===7134 && 7133*0.9<6420,
+  "Do not score Unit 14 §2 Q23 before checking whole-unit defect rounding.");
 for (const key of ["11.2.12", "11.2.13"]) {
   const item=vol2Records.get(key);
   const [unit,section,number]=key.split(".");
