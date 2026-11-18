@@ -267,7 +267,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Beginning inventory should be 30,600 pounds (34,000 units of\nbudgeted sales × 3 pounds × 30%). Ending inventory should\nbe 43,200 pounds (48,000 units of budgeted sales for Quarter\n4 × 3 pounds × 30%). Because BI plus purchases minus EI\nequals Quarter 3 budgeted sales, purchases must be 114,600.\n30,600 + X – 43,200 = 3 × 34,000\nX – 12,600 = 102,000\nX = 114,600",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن موازنة الشركة الإنتاج التالي:\nالربع 1 — 45,000 وحدة\nالربع 2 — 38,000 وحدة\nالربع 3 — 34,000 وحدة\nالربع 4 — 48,000 وحدة\nتتطلب كل وحدة منتج ثلاثة أرطال من المواد المباشرة. وتنص سياسة الشركة على بدء كل ربع بمخزون مواد مباشرة يعادل 30% من احتياجات ذلك الربع من المواد. كم تبلغ مشتريات المواد المباشرة المقدرة للربع الثالث؟",
+    "choicesAr": [
+      "114,600 رطل.",
+      "43,200 رطل.",
+      "38,200 رطل.",
+      "30,600 رطل."
+    ],
+    "explanationAr": "ينبغي أن يبلغ مخزون أول الربع 30,600 رطل (34,000 وحدة إنتاج مقدرة × 3 أرطال × 30%). ويبلغ مخزون آخر الربع المطلوب 43,200 رطل (48,000 وحدة إنتاج مقدرة للربع 4 × 3 أرطال × 30%). وبما أن مخزون أول الفترة + المشتريات − مخزون آخر الفترة = مواد إنتاج الربع 3، فإن المشتريات تساوي 114,600 رطل.\n30,600 + X − 43,200 = 3 × 34,000\nX − 12,600 = 102,000\nX = 114,600"
   },
   {
     "unit": 14,
@@ -284,7 +292,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The finished units needed for sales (8,000), plus the units\ndesired for ending inventory (12,000 units to be sold in the\nthird quarter × 20% = 2,400), minus the units in beginning\ninventory (8,000 units to be sold in the second quarter × 20%\n= 1,600) equals budgeted production for the second quarter of\n8,800 units.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تظهر موازنة المبيعات المبيعات الفصلية للسنة المقبلة كما يلي:\nالربع | الوحدات\n1 | 10,000\n2 | 8,000\n3 | 12,000\n4 | 14,000\nتقتضي سياسة الشركة أن يعادل مخزون المنتجات التامة بنهاية كل ربع 20% من مبيعات الربع التالي. فكم يبلغ الإنتاج المقدر للربع الثاني من السنة المقبلة؟",
+    "choicesAr": [
+      "7,200 وحدة.",
+      "8,000 وحدة.",
+      "8,800 وحدة.",
+      "8,400 وحدة."
+    ],
+    "explanationAr": "الإنتاج المقدر للربع الثاني = الوحدات اللازمة للمبيعات (8,000) + المخزون النهائي المطلوب (12,000 وحدة متوقعة للبيع في الربع الثالث × 20% = 2,400) − المخزون الأولي (8,000 وحدة متوقعة للبيع في الربع الثاني × 20% = 1,600). إذًا يبلغ الإنتاج المقدر 8,800 وحدة."
   },
   {
     "unit": 14,
@@ -505,7 +521,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Streeter’s required production for the second quarter can be\ncalculated as follows:\nSales for quarter                                   72,000\nAdd: Buffer for next quarter (84,000 × 50%)         42,000\nLess: Buffer from previous quarter (72,000 × 50%) (36,000)\nRequired production                                 78,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة ستريتر أطباق تدوير بلاستيكية لأفران الميكروويف. وتتوقع بيع 65,000 وحدة في الربع الأول، و72,000 في الربع الثاني، و84,000 في الربع الثالث، و66,000 في الربع الرابع من السنة المقبلة. وتحتفظ عادة بمخزون منتجات تامة في نهاية كل ربع يعادل نصف مبيعات الربع التالي المتوقعة. كم وحدة ينبغي إنتاجها في الربع الثاني؟",
+    "choicesAr": [
+      "72,000",
+      "75,000",
+      "78,000",
+      "84,000"
+    ],
+    "explanationAr": "يُحسب الإنتاج المطلوب للربع الثاني كما يلي:\nمبيعات الربع: 72,000\nيضاف: مخزون احتياطي للربع التالي (84,000 × 50%): 42,000\nيطرح: مخزون احتياطي من الربع السابق (72,000 × 50%): (36,000)\nالإنتاج المطلوب: 78,000"
   },
   {
     "unit": 14,
@@ -522,7 +546,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Streeter’s required production for the second quarter can be\ncalculated as follows:\nSales for quarter                                   72,000\nAdd: Buffer for next quarter (84,000 × 50%)         42,000\nLess: Buffer from previous quarter (72,000 × 50%) (36,000)\nProjected production                              78,000\nAdd: Shortfall from previous month buffer           8,000\nRevised required production                      86,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة ستريتر أطباق تدوير بلاستيكية لأفران الميكروويف. وتتوقع بيع 65,000 وحدة في الربع الأول، و72,000 في الربع الثاني، و84,000 في الربع الثالث، و66,000 في الربع الرابع من السنة المقبلة. وتحتفظ عادة بمخزون منتجات تامة في نهاية كل ربع يعادل نصف مبيعات الربع التالي. وبسبب توقف العمل كان مخزون المنتجات التامة بنهاية الربع الأول أقل من المستوى المطلوب بمقدار 8,000 وحدة. كم وحدة يجب إنتاجها في الربع الثاني؟",
+    "choicesAr": [
+      "75,000",
+      "78,000",
+      "80,000",
+      "86,000"
+    ],
+    "explanationAr": "يُحسب الإنتاج المطلوب للربع الثاني كما يلي:\nالمبيعات المقررة للربع: 72,000\nيضاف: مخزون احتياطي للربع التالي (84,000 × 50%): 42,000\nيطرح: مخزون احتياطي من الربع السابق (72,000 × 50%): (36,000)\nالإنتاج المبدئي: 78,000\nيضاف: عجز مخزون الربع السابق: 8,000\nالإنتاج المطلوب المعدل: 86,000"
   },
   {
     "unit": 14,
@@ -573,7 +605,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The 67,500 of sales for the quarter average 750 per day for 90\ndays. Thus, production for the quarter can be calculated as\nfollows:\nBudgeted sales                                    67,500\nAdd: Required ending inventory (750 × 10 days) 7,500\nTotal units needed                                75,000\nLess: Beginning inventory (3,500 – 200)          (3,300)\nBudgeted production                              71,700",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجمع شركة أنظمة محركات أشرطة النسخ الاحتياطي للحواسيب المنزلية. تبلغ المبيعات المقدرة للربع الأول 67,500 وحدة. وستنهي الشركة الربع الرابع من السنة السابقة بمخزون قدره 3,500 وحدة، منها 200 وحدة متقادمة. والمخزون النهائي المستهدف يعادل مبيعات 10 أيام، بافتراض سنة من 360 يومًا. ما كمية الإنتاج المقدرة للربع الأول؟",
+    "choicesAr": [
+      "75,000",
+      "71,700",
+      "71,500",
+      "64,350"
+    ],
+    "explanationAr": "تبلغ المبيعات الفصلية 67,500 وحدة، أي بمتوسط 750 وحدة يوميًا خلال 90 يومًا. وتحسب الكمية المطلوب إنتاجها كما يلي:\nالمبيعات المقدرة: 67,500\nيضاف: المخزون النهائي المطلوب (750 × 10 أيام): 7,500\nإجمالي الاحتياج: 75,000\nيطرح: المخزون الأولي الصالح (3,500 − 200): (3,300)\nالإنتاج المقدر: 71,700"
   },
   {
     "unit": 14,
@@ -658,7 +698,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The company’s fabric purchase requirements can be\ncalculated as follows:\nNeeded for sales          90,000\nAdd: Ending inventory     20,000\nLess: Beginning inventory (25,000)\nTotal purchases          85,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُصنع شركة سراويل رجالية، وترغب في الاحتفاظ بمخزون نهائي قدره 20,000 ياردة من القماش. ومن المتوقع أن يبلغ مخزون أول الفترة 25,000 ياردة، وأن تحتاج المبيعات المتوقعة إلى 90,000 ياردة من القماش. احسب كمية القماش التي يجب على الشركة شراؤها بالياردة.",
+    "choicesAr": [
+      "85,000",
+      "90,000",
+      "95,000",
+      "135,000"
+    ],
+    "explanationAr": "تُحسب مشتريات القماش المطلوبة كما يلي:\nالقماش اللازم للمبيعات: 90,000\nيضاف: المخزون النهائي: 20,000\nيطرح: مخزون أول الفترة: (25,000)\nإجمالي المشتريات المطلوبة: 85,000"
   },
   {
     "unit": 14,
@@ -709,7 +757,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The calculation of the number of shoes that must be\npurchased is as follows:\nShoes needed for dolls to be sold             400,000\nLess: Beginning inventory of shoes on dolls    (24,000)\nAdd: Target ending inventory of shoes on dolls 30,000\nLess: Beginning inventory of shoes              (20,000)\nAdd: Target ending inventory of shoes           18,000\nShoes to be purchased                        404,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع منشأة بيع 200,000 دمية خلال السنة المقبلة. يبلغ مخزون الدمى أول الفترة 12,000 دمية والمخزون النهائي المستهدف 15,000 دمية. وتحتاج كل دمية إلى حذاءين يُشترَيان من مورد خارجي. يبلغ مخزون الأحذية أول الفترة 20,000 حذاء، والمخزون النهائي المستهدف 18,000 حذاء. كم حذاءً ينبغي شراؤه خلال السنة؟",
+    "choicesAr": [
+      "396,000",
+      "398,000",
+      "402,000",
+      "404,000"
+    ],
+    "explanationAr": "تُحسب الأحذية المطلوب شراؤها كما يلي:\nالأحذية اللازمة للدمى المباعة: 400,000\nيطرح: الأحذية الموجودة على دمى أول الفترة: (24,000)\nيضاف: الأحذية على الدمى المطلوبة في آخر الفترة: 30,000\nيطرح: مخزون الأحذية أول الفترة: (20,000)\nيضاف: مخزون الأحذية النهائي المستهدف: 18,000\nالأحذية المطلوب شراؤها: 404,000"
   },
   {
     "unit": 14,
@@ -828,7 +884,15 @@
     ],
     "answerIndex": 2,
     "explanation": "November truck production can be calculated using the\nfollowing formula: Beginning inventory + Production – Sales =\nEnding inventory. Beginning inventory can be determined by\nfinding the last month’s ending inventory. October ending\ninventory is equal to 20% of November sales, which is 500\n(2,500 × 20%). November ending inventory is equal to 20% of\nDecember sales, which is 1,700 (8,500 × 20%). Using the\nabove formula, we can determine that November truck\nproduction is 3,700 (1,700 + 2,500 – 500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد منشأة تصنع شاحنات ألعاب خشبية موازناتها للفترة المقبلة. وتتذبذب المبيعات بقوة وتبلغ ذروتها خلال موسم العطلات. وترغب الإدارة في الاحتفاظ بمخزون نهائي يعادل 20% من مبيعات الشهر التالي. المبيعات المتوقعة هي:\nأكتوبر: 2,000 شاحنة لعبة\nنوفمبر: 2,500 شاحنة لعبة\nديسمبر: 8,500 شاحنة لعبة\nيناير: 1,200 شاحنة لعبة\nفبراير: 850 شاحنة لعبة\nكم شاحنة يجب تصنيعها في نوفمبر؟",
+    "choicesAr": [
+      "1,300",
+      "1,700",
+      "3,700",
+      "4,200"
+    ],
+    "explanationAr": "يحسب إنتاج نوفمبر من العلاقة: مخزون أول الفترة + الإنتاج − المبيعات = مخزون آخر الفترة. ويُستخرج مخزون أول نوفمبر من مخزون آخر أكتوبر، الذي يعادل 20% من مبيعات نوفمبر أي 500 شاحنة (2,500 × 20%). أما مخزون آخر نوفمبر فيعادل 20% من مبيعات ديسمبر، أي 1,700 شاحنة (8,500 × 20%). وعليه يبلغ إنتاج نوفمبر 3,700 شاحنة (1,700 + 2,500 − 500)."
   },
   {
     "unit": 14,
