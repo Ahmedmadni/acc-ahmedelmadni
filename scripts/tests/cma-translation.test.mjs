@@ -662,3 +662,80 @@ test("CMA Unit 13 Section 4: all 31 methods questions have complete Arabic draft
   assert.equal(pending.length,2);
   assert.ok(pending.every(q=>q.sourceTextStatus==="table-reflowed"&&!q.stemAr&&!q.choicesAr&&!q.explanationAr));
 });
+
+
+test("CMA Unit 14 wave 1: ten source-ordered Arabic drafts retain keys and numeric values",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const reviewed=[
+    [1,1,0],[1,3,3],[1,7,2],[1,8,1],
+    [2,41,3],[2,42,3],[2,43,2],[3,4,3],[3,18,3],[3,19,3],
+  ];
+  const expected=new Map(reviewed.map(([s,n,key])=>[s+"."+n,key]));
+  assert.equal(rows.length,175);
+  assert.equal(rows.filter(q=>q.stemAr).length,10);
+  assert.deepEqual(rows.filter(q=>q.stemAr).map(q=>q.section+"."+q.number),[...expected.keys()]);
+  for(const q of rows){
+    const id=q.section+"."+q.number;
+    if(!expected.has(id)){
+      assert.equal(q.stemAr,undefined,"Unexpected translation "+id);
+      assert.equal(q.choicesAr,undefined);
+      assert.equal(q.explanationAr,undefined);
+      continue;
+    }
+    assert.equal(q.answerIndex,expected.get(id),"Original key changed "+id);
+    assert.equal(q.answerStatus,"source");
+    assert.equal(q.sourceTextStatus,undefined);
+    assert.equal(q.choices.length,4);
+    assert.equal(q.choicesAr.length,4);
+    const integrity=validateCmaTranslation(
+      {question:{en:q.stem},choices:{en:q.choices},explanation:{en:q.explanation}},
+      {question:q.stemAr,choices:q.choicesAr,explanation:q.explanationAr});
+    assert.equal(integrity.valid,true,id+": "+integrity.reason);
+    assert.match(q.stemAr,/[\u0600-\u06ff]/);
+    assert.match(q.explanationAr,/[\u0600-\u06ff]/);
+    assert.ok(q.choicesAr.every(x=>typeof x==="string"&&x.trim()));
+  }
+  const by=(s,n)=>rows.find(q=>q.section===s&&q.number===n);
+  assert.equal(by(1,7).choicesAr[2],"موازنة المبيعات.");
+  assert.match(by(2,42).choicesAr[3],/إنتاج الحواسيب المقدر/);
+  assert.equal(by(2,43).choicesAr[2],"انخفاض المخزون النهائي المطلوب.");
+  assert.match(by(3,19).choicesAr[3],/الخصومات التجارية/);
+  assert.equal(rows.filter(q=>q.sourceTextStatus!==undefined&&q.stemAr).length,0);
+});
+
+test("CMA Unit 14 Section 1: independently recompute source-keyed multi-product sales-budget scenarios",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const q=n=>rows.find(x=>x.section===1&&x.number===n);
+  // §1 Q2 source page 324: price effect and complementary-item sales.
+  const originalQ2=200000*50+150000*10+300000*30;
+  const revisedQ2=(200000*.80)*55+(150000*.80)*10+(300000*1.05)*30;
+  assert.equal(originalQ2,20500000);
+  assert.equal(revisedQ2,19450000);
+  assert.equal(originalQ2-revisedQ2,1050000);
+  assert.equal(q(2).answerIndex,0);
+  assert.equal(q(2).choices[0],"$1,050,000");
+  // §1 Q4–Q6: Niro printers/cartridges, substitution and complementarity.
+  const originalNiro=5000*120+12000*100+3000*300;
+  assert.equal(originalNiro,2700000);
+  const afterInkjet=(5000*.925)*(120*1.05)+(12000*.875)*100+(3000*1.05)*300;
+  const afterCartridge=(5000*.95)*120+(12000*.85)*(100*1.05)+(3000*1.025)*300;
+  const afterLaser=(5000*1.20)*120+(12000*1.20)*100+(3000*.90)*(300*1.05);
+  assert.equal(Math.round(afterInkjet),2577750);
+  assert.equal(Math.round(afterCartridge),2563500);
+  assert.equal(Math.round(afterLaser),3010500);
+  const checks=[
+    [4,2,originalNiro-afterInkjet,"Decrease by $122,250."],
+    [5,1,originalNiro-afterCartridge,"Decrease by $136,500."],
+    [6,2,afterLaser-originalNiro,"Increase by $310,500."],
+  ];
+  for(const [number,key,delta,option] of checks){
+    const item=q(number);
+    assert.equal(Math.round(delta),Number(option.match(/\$([\d,]+)/)[1].replace(/,/g,"")));
+    assert.equal(item.answerIndex,key);
+    assert.equal(item.choices[key],option);
+    assert.equal(item.stemAr,undefined,"Keep table-heavy source question English-first until visual PDF layout QA");
+    assert.equal(item.choicesAr,undefined);
+    assert.equal(item.explanationAr,undefined);
+  }
+  assert.equal(q(2).stemAr,undefined);
+});

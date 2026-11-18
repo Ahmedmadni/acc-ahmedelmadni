@@ -14,7 +14,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A large manufacturing firm will be well familiar with the\nseasonal patterns to which demand for its products is subject.\nThe forecast is being prepared for an entire year, so the\ncyclical effects of varying demand will be taken into account.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يُرجح أن يكون الأقل تأثيرًا في توقعات إيرادات المبيعات السنوية الإجمالية لشركة صناعية كبيرة؟",
+    "choicesAr": [
+      "النمط الموسمي لإيرادات المبيعات على مدار السنة.",
+      "معدلات الفائدة والبطالة المتوقعة.",
+      "النقص المتوقع في المواد الخام الأساسية.",
+      "آراء موظفي المبيعات."
+    ],
+    "explanationAr": "تكون الشركة الصناعية الكبيرة على دراية جيدة بالأنماط الموسمية للطلب على منتجاتها. ولأن التوقع يغطي سنة كاملة، فإن آثار تغير الطلب الموسمي تؤخذ في الحسبان ضمن التقدير السنوي، فتكون أقل تأثيرًا من العوامل الأخرى المذكورة."
   },
   {
     "unit": 14,
@@ -48,7 +56,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The cost structure of products has a direct impact on the\nforecast of costs, not sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يُرجح أن يكون الأقل تأثيرًا في توقع مبيعات الشركة؟",
+    "choicesAr": [
+      "مرونة الطلب على المنتج.",
+      "السياسة النقدية الحكومية.",
+      "استراتيجيات التسعير لدى المنافسين.",
+      "هيكل تكلفة المنتج."
+    ],
+    "explanationAr": "يؤثر هيكل تكلفة المنتجات مباشرة في توقع التكاليف، وليس في توقع المبيعات بصورة مباشرة. أما مرونة الطلب والسياسة النقدية وأسعار المنافسين فقد تؤثر في حجم الطلب والمبيعات."
   },
   {
     "unit": 14,
@@ -116,7 +132,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Following the preparation of the sales budget, all other\nbudgets are prepared based on the assumptions used in the\nsales budget. For this reason, the sales budget is the most\ndifficult to prepare because there are no internal figures to use\nas a guide. Sales are based on the desires of consumers and\nthe current business climate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الموازنات التالية تكون عادة الأصعب من حيث التنبؤ؟",
+    "choicesAr": [
+      "موازنة الإنتاج.",
+      "موازنة المصروفات.",
+      "موازنة المبيعات.",
+      "موازنة التكاليف الصناعية غير المباشرة."
+    ],
+    "explanationAr": "تُعد الموازنات الأخرى بعد إعداد موازنة المبيعات وتعتمد على افتراضاتها. لذلك تكون موازنة المبيعات عادة الأصعب، لعدم وجود أرقام داخلية مؤكدة تكفي لتحديد طلب العملاء، الذي يتأثر بتفضيلات المستهلكين وظروف النشاط الاقتصادي."
   },
   {
     "unit": 14,
@@ -133,7 +157,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The most important items that need to be coordinated in a\nseasonal business are sales volume and production. The\nsales budget is the basis for other budgets. The sales\nprojection determines how much needs to be purchased and\nproduced. In turn, projected sales and production (or\npurchases) must be coordinated with existing quantities on\nhand (inventory) and with amounts to be held in the future. If a\nmanufacturer faces sharp variations in demand, this\ncoordination becomes especially crucial.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا كان حجم المبيعات موسميًا، فما أهم ثلاثة عناصر ينبغي التنسيق بينها عند إعداد الموازنة؟",
+    "choicesAr": [
+      "ساعات العمل المباشر، ومخزون الإنتاج تحت التشغيل، وحجم المبيعات.",
+      "حجم الإنتاج، ومخزون المنتجات التامة، وحجم المبيعات.",
+      "مخزون المواد الخام، وساعات العمل المباشر، والتكاليف الصناعية غير المباشرة.",
+      "مخزون المواد الخام، ومخزون الإنتاج تحت التشغيل، وحجم الإنتاج."
+    ],
+    "explanationAr": "في النشاط الموسمي يجب تنسيق المبيعات مع الإنتاج؛ فموازنة المبيعات هي أساس الموازنات الأخرى، وتحدد الكميات المطلوب شراؤها وإنتاجها. كما ينبغي مواءمة المبيعات والإنتاج مع كميات المخزون المتاحة والمستهدفة مستقبلًا، ولا سيما عند وجود تذبذب حاد في الطلب."
   },
   {
     "unit": 14,
@@ -830,7 +862,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A production budget is based on sales forecasts, in units, with\nadjustments for beginning and ending inventories. It is used to\nplan when items will be produced. After the production budget\nhas been completed, it is used to prepare materials\npurchases, direct labor, and factory overhead budgets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تضم دورة الموازنة الشاملة موازنات مختلفة، ومنها موازنة الإنتاج. أي الأوصاف التالية هو الأدق لموازنة الإنتاج؟",
+    "choicesAr": [
+      "تلخص جميع التكاليف الاختيارية.",
+      "تتضمن ساعات العمل المباشر المطلوبة.",
+      "تتضمن مشتريات المواد المطلوبة.",
+      "تُحسب انطلاقًا من المخزون النهائي المستهدف وتوقعات المبيعات."
+    ],
+    "explanationAr": "تعتمد موازنة الإنتاج على توقعات المبيعات بالوحدات بعد تعديلها بمخزون أول الفترة وآخرها، وتساعد على تخطيط مواعيد الإنتاج. وبعد إعدادها تُستخدم في وضع موازنات مشتريات المواد والعمل المباشر والتكاليف الصناعية غير المباشرة."
   },
   {
     "unit": 14,
@@ -847,7 +887,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since each laptop requires exactly one circuit board, the\nbeginning figure of the calculation equals the number of\nfinished products to be produced:\nUnits needed for production          X,XXX\nAdd: Desired ending inventory          XXX\nLess: Beginning inventory              (XXX)\nRaw materials to be purchased       X,XXX\nTimes: Per-unit purchase price × $ X.XX\nTotal raw materials cost          $X,XXX",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة نظام موازنات شاملًا لتخطيط عملياتها السنوية. ما البيانات اللازمة لتحديد التكلفة المقدرة للوحات الدوائر التي ستُشترى لتصنيع الحواسيب المحمولة؟ افترض استخدام لوحة دوائر واحدة في كل حاسوب.",
+    "choicesAr": [
+      "نبدأ بالمبيعات المقدرة للحواسيب بالوحدات، ونضيف المخزون النهائي المستهدف من لوحات الدوائر، ثم نطرح المخزون الأولي المتوقع منها، ونضرب الناتج في تكلفة الشراء المقدرة للوحة الواحدة.",
+      "نبدأ بالمبيعات المقدرة للحواسيب بالوحدات، ونطرح المخزون النهائي المستهدف من لوحات الدوائر، ثم نضيف المخزون الأولي المتوقع منها، ونضرب الناتج في تكلفة شراء اللوحة الواحدة.",
+      "نبدأ بإنتاج الحواسيب المقدر بالوحدات، ونطرح المخزون النهائي المستهدف من لوحات الدوائر، ثم نضيف المخزون الأولي المتوقع منها، ونضرب الناتج في تكلفة شراء اللوحة الواحدة.",
+      "نبدأ بإنتاج الحواسيب المقدر بالوحدات، ونضيف المخزون النهائي المستهدف من لوحات الدوائر، ثم نطرح المخزون الأولي المتوقع منها، ونضرب الناتج في تكلفة الشراء المقدرة للوحة الواحدة."
+    ],
+    "explanationAr": "لأن كل حاسوب يحتاج إلى لوحة دوائر واحدة، تبدأ العملية بعدد الحواسيب المطلوب إنتاجها. ويكون حساب الكميات والتكلفة كما يلي:\nاللوحات المطلوبة للإنتاج: X,XXX\nيضاف: المخزون النهائي المستهدف: XXX\nيطرح: المخزون الأولي: (XXX)\nاللوحات المطلوب شراؤها: X,XXX\nيضرب في: سعر شراء اللوحة الواحدة × $ X.XX\nإجمالي تكلفة المواد المشتراة: $X,XXX"
   },
   {
     "unit": 14,
@@ -864,7 +912,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Production budgets are based on sales in units plus or minus\ndesired inventory buildup or reduction. Products to be\nmanufactured = desired ending inventory + budgeted sales\nunits – beginning inventory. Therefore, a decrease in required\nending inventory will cause the production budget to decrease.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يؤدي إلى انخفاض موازنة الإنتاج لدى الشركة؟",
+    "choicesAr": [
+      "ارتفاع تكلفة العمل المباشر لكل وحدة.",
+      "انخفاض عدد الوحدات المنتجة لكل ساعة عمل مباشر.",
+      "انخفاض المخزون النهائي المطلوب.",
+      "ارتفاع المخزون الأولي من العمل المباشر."
+    ],
+    "explanationAr": "تعتمد موازنة الإنتاج على المبيعات المقدرة بالوحدات مع مراعاة تغيرات المخزون المستهدفة. وتحسب الوحدات المطلوب إنتاجها وفق المعادلة: مخزون آخر الفترة المستهدف + المبيعات المقدرة بالوحدات − مخزون أول الفترة. لذا فإن انخفاض المخزون النهائي المطلوب يؤدي إلى انخفاض الإنتاج المطلوب."
   },
   {
     "unit": 14,
@@ -932,7 +988,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Sales and administrative budgets are prepared after the sales\nbudget. Like the other budgets, they constitute prospective\ninformation based on the preparer’s assumptions about\nconditions expected to exist and actions expected to be taken.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية المتعلقة بموازنات مصروفات البيع والمصروفات الإدارية هي الأدق؟",
+    "choicesAr": [
+      "تكون موازنات البيع والإدارة عادة اختيارية.",
+      "تكون موازنات البيع والإدارة ثابتة بطبيعتها.",
+      "يصعب توزيع موازنات البيع والإدارة على أشهر السنة، والأفضل عرضها رقمًا إجماليًا واحدًا للسنة.",
+      "ينبغي تفصيل موازنات البيع والإدارة حتى يمكن فهم الافتراضات الأساسية بوضوح."
+    ],
+    "explanationAr": "تُعد موازنات البيع والإدارة بعد إعداد موازنة المبيعات. وهي، شأن الموازنات الأخرى، تتضمن معلومات مستقبلية مبنية على افتراضات معد الموازنة بشأن الظروف المتوقعة والإجراءات التي سيجري اتخاذها؛ ولذلك يساعد التفصيل على توضيح تلك الافتراضات."
   },
   {
     "unit": 14,
@@ -1170,7 +1234,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Freight charges for raw materials delivery are included in the\ncosts of direct materials.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تضع شركة مصنعة للأثاث موازنة للسنة المقبلة. أي البنود التالية لا يدخل ضمن موازنة التكاليف الصناعية غير المباشرة؟",
+    "choicesAr": [
+      "أجور العمل الإضافي للعاملين في جدولة الإنتاج.",
+      "تكلفة الغراء المستخدم في تثبيت أرجل الطاولات.",
+      "المزايا الإضافية المدفوعة لمشرف الإنتاج.",
+      "تكاليف نقل المواد الخام إلى الشركة."
+    ],
+    "explanationAr": "تُدرج تكاليف نقل المواد الخام إلى المنشأة ضمن تكلفة المواد المباشرة المستلمة، ولا تُعد جزءًا من موازنة التكاليف الصناعية غير المباشرة في هذه الحالة."
   },
   {
     "unit": 14,
@@ -1187,7 +1259,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The cost of goods sold budget shows all of the manufacturing\ncosts of producing the company’s product, including raw\nmaterials, direct labor, and factory overhead (including factory\nindirect labor). These are all costs incurred in the factory\nduring the production process. Cost of goods sold does not\ninclude advertising, research and development costs, trade\ndiscounts, or other types of selling costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تضع منشأة موازنتها السنوية، وتُصنع منتجاتها حسب الطلب وتُشحن فورًا. تتوافر لدى المراقب المالي بيانات الحسابات التالية:\nالمواد الخام\nالعمل المباشر\nالإعلان\nالبحث والتطوير (R&D)\nالخصومات التجارية\nالعمل الصناعي غير المباشر\nالتكاليف الصناعية غير المباشرة\nتكاليف البيع\nأي البنود السابقة لا ينبغي إدراجه في موازنة تكلفة البضاعة المباعة؟",
+    "choicesAr": [
+      "الإعلان والبحث والتطوير وتكاليف البيع فقط.",
+      "البحث والتطوير والخصومات التجارية فقط.",
+      "الإعلان وتكاليف البيع فقط.",
+      "الإعلان والبحث والتطوير والخصومات التجارية وتكاليف البيع فقط."
+    ],
+    "explanationAr": "تشمل موازنة تكلفة البضاعة المباعة تكاليف التصنيع الخاصة بالمنتج، ومنها المواد الخام والعمل المباشر والتكاليف الصناعية غير المباشرة بما في ذلك العمل الصناعي غير المباشر. ولا تشمل تكاليف الإعلان أو البحث والتطوير أو الخصومات التجارية أو تكاليف البيع الأخرى."
   },
   {
     "unit": 14,

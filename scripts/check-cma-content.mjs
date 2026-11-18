@@ -594,6 +594,9 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:22},(_,i)=>"13.3."+(i+1)),
   ...Array.from({length:11},(_,i)=>"13.3."+(i+24)),
   ...Array.from({length:31},(_,i)=>"13.4."+(i+1)),
+  ...[1,3,7,8].map(n=>"14.1."+n),
+  ...[41,42,43].map(n=>"14.2."+n),
+  ...[4,18,19].map(n=>"14.3."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -654,6 +657,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
+console.log("Unit 14 controlled Arabic wave 1: §1 4/8, §2 3/43, §3 3/19, §§4–6 0; 10/175 complete draft records. Table-heavy questions remain English-first pending visual source QA.");
 for (const key of ["11.2.12", "11.2.13"]) {
   const item=vol2Records.get(key);
   const [unit,section,number]=key.split(".");
