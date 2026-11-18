@@ -542,9 +542,9 @@ test("CMA Unit 13 sections 1 and 2: exactly 57 complete Arabic drafts preserve s
   assert.equal(q34?.stemAr,undefined);
   assert.equal(q34?.choicesAr,undefined);
   assert.equal(q34?.explanationAr,undefined);
-  assert.deepEqual(unit13.filter(q=>q.stemAr).map(q=>q.section+"."+q.number),
+  assert.deepEqual(unit13.filter(q=>q.section<=2&&q.stemAr).map(q=>q.section+"."+q.number),
     localized.map(q=>q.section+"."+q.number));
-  assert.ok(unit13.filter(q=>q.section>=3).every(q=>q.stemAr===undefined &&
+  assert.ok(unit13.filter(q=>q.section>=4).every(q=>q.stemAr===undefined &&
     q.choicesAr===undefined&&q.explanationAr===undefined));
 });
 
@@ -564,4 +564,71 @@ test("CMA Unit 13 standard oak and screw price change produces the keyed $44.20"
   const glass=unit13.find(q=>q.section===2&&q.number===2);
   assert.equal(glass.answerIndex,2);
   assert.match(glass.choicesAr[glass.answerIndex],/معيار نظري/);
+});
+
+
+test("CMA Unit 13 Section 3: 33 complete Arabic master-budget source drafts preserve original keys",()=>{
+  const unit13=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8"
+  ));
+  const questions=unit13.filter(q=>q.section===3);
+  const canonicalKeys=[
+    3,0,1,1,1,1,3,3,0,3,2,1,2,1,2,3,3,
+    1,0,1,3,3,3,1,3,2,3,2,3,1,3,2,0,2
+  ];
+  assert.equal(unit13.length,123);
+  assert.equal(questions.length,34);
+  assert.equal(canonicalKeys.length,34);
+  assert.deepEqual(questions.map(q=>q.number),Array.from({length:34},(_,i)=>i+1));
+  const localized=questions.filter(q=>q.stemAr!==undefined);
+  assert.equal(localized.length,33);
+  assert.deepEqual(localized.map(q=>q.number),
+    [...Array.from({length:22},(_,i)=>i+1),...Array.from({length:11},(_,i)=>i+24)]);
+  for(const row of localized){
+    assert.equal(row.answerIndex,canonicalKeys[row.number-1],
+      "Changed canonical answer in Unit 13 §3 Q"+row.number);
+    assert.equal(row.choicesAr?.length,4);
+    const checked=validateCmaTranslation(
+      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
+      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr}
+    );
+    assert.equal(checked.valid,true,
+      "Source ordered numeric fields/choices mismatch Unit 13 §3 Q"+row.number+" "+checked.reason);
+    assert.match(row.stemAr,/[\u0600-\u06ff]/);
+    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
+    assert.ok(row.choicesAr.every(choice=>typeof choice==="string"&&choice.trim()!==""));
+    assert.equal(row.sourceTextStatus,undefined);
+  }
+  const pending=questions.find(q=>q.number===23);
+  assert.equal(pending?.page,287);
+  assert.equal(pending?.sourceTextStatus,"table-reflowed");
+  assert.equal(pending?.answerIndex,canonicalKeys[22]);
+  assert.equal(pending?.stemAr,undefined);
+  assert.equal(pending?.choicesAr,undefined);
+  assert.equal(pending?.explanationAr,undefined);
+  assert.equal(unit13.filter(q=>q.stemAr).length,90);
+  assert.ok(unit13.filter(q=>q.section===4).every(q=>
+    q.stemAr===undefined&&q.choicesAr===undefined&&q.explanationAr===undefined));
+});
+
+test("CMA Unit 13 master-budget sequence does not confuse operating, financial and cash stages",()=>{
+  const records=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8"
+  ));
+  const q=(n)=>records.find(row=>row.section===3&&row.number===n);
+  // Source Q1 orders dependent schedules before the cash flow statement.
+  assert.equal(q(1).answerIndex,3);
+  assert.equal(q(1).choicesAr[3],
+    "تكلفة البضاعة المباعة، ثم قائمة الدخل، ثم قائمة المركز المالي، ثم قائمة التدفقات النقدية.");
+  // Source Q13 requires the financial budget to include ALL three schedules.
+  assert.equal(q(13).answerIndex,2);
+  assert.equal(q(13).choicesAr[2],"نعم — نعم — نعم.");
+  // Cash budget is a financial budget, selling expenses an operating one.
+  assert.equal(q(16).answerIndex,3);
+  assert.equal(q(28).answerIndex,2);
+  assert.equal(q(28).choicesAr[2],"موازنة مصروفات البيع.");
+  assert.equal(q(29).answerIndex,3);
+  // Production budget draws on sales budget, never precedes it.
+  assert.equal(q(22).answerIndex,3);
+  assert.equal(q(33).answerIndex,0);
 });
