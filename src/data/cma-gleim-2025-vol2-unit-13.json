@@ -614,7 +614,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Steps 2, 4, and 5 are appropriate for alleviating the\ncorporation’s budget problems. Step 1 should not be\nperformed because a budget imposed from the top is more\nlikely to encounter resistance. Step 3 should not be performed\nbecause operating units will tend to consider only their own\ninterests when preparing budgets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لاحظت نائبة رئيس التخطيط في شركة وجود مبالغة متكررة في الهوامش الاحتياطية التي يضيفها المديرون ذوو الخبرة إلى موازناتهم. وتدرس الشركة الإجراءات التالية لمعالجة المشكلة:\n1. إعداد الإدارة العليا الموازنات وفرضها على الوحدات التشغيلية الأدنى.\n2. دراسة الإيرادات والمصروفات الفعلية للفترات السابقة بالتفصيل.\n3. إعداد الوحدات التشغيلية موازناتها ثم قبولها كما هي من لجنة موازنات تضم ممثلين عن الشركة كلها.\n4. مشاركة الموازنات مع جميع الموظفين وسيلةً لتحقيق أهداف المنشأة.\n5. تطبيق عملية إعداد موازنات تكرارية تتضمن جولات متعددة من التعديلات تقترحها الوحدات التشغيلية و/أو الإدارة العليا.\nأي الإجراءات التالية يُفضل تطبيقه للحد من المشكلة وتحفيز الموظفين؟",
+    "choicesAr": [
+      "1 فقط.",
+      "2 و3.",
+      "2 و4.",
+      "2 و4 و5."
+    ],
+    "explanationAr": "الإجراءات 2 و4 و5 مناسبة للتخفيف من مشكلات الموازنة. أما الإجراء 1 فغير مناسب لأن الموازنة المفروضة من الإدارة العليا تواجه مقاومة أكبر. كما لا يناسب الإجراء 3 لأن الوحدات التشغيلية قد تركز على مصالحها الخاصة عند إعداد الموازنات دون مراجعة أو تنسيق."
   },
   {
     "unit": 13,
@@ -631,7 +639,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Participative budgeting is a practical means of setting realistic,\nachievable budget goals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن الحد من المشكلات الناتجة عن تحقيق مديري الإدارات لأهداف موازنة سهلة باستمرار أو إخفاقهم في تحقيق أهداف شديدة الصعوبة من خلال:",
+    "choicesAr": [
+      "إنشاء ضوابط وقائية.",
+      "تبني سياسة تسمح للمديرين بإضافة هوامش احتياطية إلى الموازنة.",
+      "تطبيق الموازنات التشاركية التي يسعى فيها المديرون لتحقيق أهداف تتوافق مع أهداف الإدارة العليا.",
+      "تحسين الاتصال عبر مناقشة المديرين أمور الموازنة مع رؤسائهم يوميًا."
+    ],
+    "explanationAr": "الموازنات التشاركية وسيلة عملية لوضع أهداف واقعية قابلة للتحقيق."
   },
   {
     "unit": 13,
@@ -648,7 +664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Top management’s belief in and support of the planning and\nbudgeting process is the single most important element in its\nsuccess.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية يُرجح أن يؤدي غيابها إلى فشل نظام التخطيط وإعداد الموازنات؟",
+    "choicesAr": [
+      "البيانات المالية التاريخية.",
+      "مشاركة مستويات إدارية متعددة.",
+      "دعم الإدارة العليا.",
+      "الالتزام بموازنات جامدة طوال السنة."
+    ],
+    "explanationAr": "إن اقتناع الإدارة العليا بأهمية التخطيط وإعداد الموازنات ودعمها لهذه العملية هو العامل الأهم لنجاحها."
   },
   {
     "unit": 13,
@@ -665,7 +689,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since a top-down budget is coordinated from above, it is less\ntime-consuming than obtaining lower-level input.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من عيوب إعداد الموازنة من أعلى إلى أسفل مقارنة بإعداد الموازنة بالمشاركة، باستثناء أنه:",
+    "choicesAr": [
+      "قد ينتج موازنة يتعذر تحقيق أهدافها.",
+      "قد يحد من تقبل الأهداف المقترحة.",
+      "يقلل الاتصال بين الموظفين والإدارة.",
+      "يخفض الوقت اللازم لإعداد الموازنة."
+    ],
+    "explanationAr": "لأن الإدارة العليا تتولى تنسيق الموازنة من أعلى، تستغرق هذه العملية وقتًا أقل من جمع مدخلات جميع المستويات الإدارية الأدنى."
   },
   {
     "unit": 13,
@@ -682,7 +714,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Suboptimal decision making is not likely to occur when\nguidance is given to subunit managers about how standards\nand goals affect them.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقل احتمال اتخاذ قرارات دون المستوى الأمثل عندما:",
+    "choicesAr": [
+      "يكون التوافق ضعيفًا بين الأهداف العامة للمنشأة وأهداف الوحدات الفرعية وأهداف متخذي القرارات الأفراد.",
+      "تضع الإدارة العليا أهداف الأداء ومعاييره بمفردها.",
+      "يُوضح لمديري الوحدات الفرعية كيف تؤثر المعايير والأهداف فيهم.",
+      "تتنافس الوحدات الفرعية على عوامل الإنتاج نفسها أو العملاء أنفسهم."
+    ],
+    "explanationAr": "يقل احتمال اتخاذ قرارات دون المستوى الأمثل عندما يتلقى مديرو الوحدات الفرعية توجيهًا يوضح كيف تؤثر فيهم المعايير والأهداف."
   },
   {
     "unit": 13,
@@ -699,7 +739,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A budget is potentially a good motivational tool. If lower-level\nmanagers have participated in preparing the budget, instead\nof simply receiving a budget imposed by top management,\nthey are more likely to understand and share the goals of top\nmanagement and to work to keep costs within the budget.\nParticipation and understanding are also likely to result in\nbudgets that are reasonably attainable and viewed as realistic.\nHowever, a budget is also a motivator in the sense that\nmanagers are accountable for variances in controllable costs\nbut are rewarded for good performance. Moreover, budgeting\ncoupled with analysis of variances tends to improve motivation\nby allowing upper-level managers to concentrate on problems\n(exceptions) rather than engaging in routine supervision of\nsubordinates, which may be viewed as unnecessarily intrusive\nand unwelcome.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينبغي أن تحفز عملية إعداد الموازنة المديرين والموظفين على العمل لتحقيق أهداف المنشأة. أي الإجراءات التالية هو الأقل احتمالًا لتحفيز المديرين؟",
+    "choicesAr": [
+      "تحديد أهداف موازنة قابلة للتحقيق.",
+      "إشراك المرؤوسين في إعداد الموازنة.",
+      "استخدام الإدارة بالاستثناء.",
+      "فرض الإدارة العليا مستويات الموازنة."
+    ],
+    "explanationAr": "يمكن أن تكون الموازنة أداة تحفيزية فعالة. فإذا شارك مديرو المستويات الأدنى في إعدادها بدلًا من مجرد تلقي موازنة مفروضة، أصبحوا أكثر فهمًا لأهداف الإدارة العليا ودعمًا لها ورغبة في ضبط التكاليف ضمن حدود الموازنة. وتساعد المشاركة على وضع أهداف واقعية يمكن تحقيقها. كما تعزز الموازنة التحفيز حين يكون المديرون مسؤولين عن انحرافات التكاليف القابلة للرقابة ويُكافأ الأداء الجيد. وتساعد الإدارة بالاستثناء، مع تحليل الانحرافات، المديرين الأعلى على التركيز على المشكلات بدل التدخل اليومي المفرط في عمل المرؤوسين."
   },
   {
     "unit": 13,
@@ -716,7 +764,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A budget lays out in specific terms an organization’s\nexpectations about the consumption of resources and the\nresulting outcomes. Therefore, it identifies the resources and\ncommitments required to fulfill the organization’s goals for the\nperiod identified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أفضل تفسير لكيفية التخطيط للتخصيص الكفء لموارد المنشأة خلال إعداد الموازنة؟ الموازنة:",
+    "choicesAr": [
+      "توضح أهمية الاحتفاظ بموارد احتياطية إضافية إذا اختلفت النتائج الفعلية عن المخططة.",
+      "توضح كيفية سحب الموارد من مناطق الاختناق وتوجيهها إلى مناطق أخرى لتحقيق الأهداف.",
+      "تحدد الموارد والالتزامات المطلوبة لتحقيق أهداف المنشأة خلال الفترة المعينة.",
+      "تمثل عملية لتقييم المشروعات اللازمة والتمويل الخارجي المرتبط بها لتغطية الاحتياجات من الموارد."
+    ],
+    "explanationAr": "توضح الموازنة بالتفصيل توقعات المنشأة بشأن استهلاك الموارد والنتائج المقابلة. ولذلك فهي تحدد الموارد والالتزامات اللازمة لتحقيق الأهداف خلال الفترة التي تغطيها."
   },
   {
     "unit": 13,
@@ -733,7 +789,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Budgeting plays a role in the overall planning and evaluation\nprocess of the company. It includes information that can\nimpact the company’s long-term planning, operational\nbudgets, and strategy. The strategic plan is made up of long-\nterm objectives that make clear the priorities of the\norganization. Awareness of priorities is crucial for the\nallocation of resources because it affects the operational and\nfinancial budgets.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توفر الموازنة السنوية معلومات قد تؤثر في:",
+    "choicesAr": [
+      "التخطيط طويل الأجل فقط.",
+      "التخطيط طويل الأجل والموازنات التشغيلية فقط.",
+      "الموازنات التشغيلية والاستراتيجية فقط.",
+      "التخطيط طويل الأجل والموازنات التشغيلية والاستراتيجية."
+    ],
+    "explanationAr": "تدخل الموازنة ضمن عمليات التخطيط والتقييم الشاملة في المنشأة، وتوفر معلومات تؤثر في التخطيط طويل الأجل والموازنات التشغيلية والاستراتيجية. وتحدد الخطة الاستراتيجية الأهداف طويلة الأجل والأولويات، ومعرفة هذه الأولويات مهمة لتخصيص الموارد لأنها تؤثر في الموازنات التشغيلية والمالية."
   },
   {
     "unit": 13,
@@ -750,7 +814,15 @@
     ],
     "answerIndex": 0,
     "explanation": "This is an advantage of using the budgeting process to judge\nperformance. Comparing actual results to the budget allows\nthe organization as a whole to evaluate performance and\nallows managers to do the same on an individual level.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخيارات التالية يمثل ميزة لاستخدام عملية إعداد الموازنة في تقييم الأداء؟",
+    "choicesAr": [
+      "تستطيع الإدارة قياس الأداء الفعلي بالمقارنة مع الأداء المتوقع.",
+      "يمكن الاعتماد على الأداء السابق لقياس التحسن في الأداء.",
+      "تفترض الإدارة أن الظروف السابقة مؤشر على الظروف المستقبلية.",
+      "يمكن قياس أداء الشركة مقارنةً بأداء منشآت القطاع نفسه."
+    ],
+    "explanationAr": "من مزايا استخدام الموازنة لتقييم الأداء المقارنة بين النتائج الفعلية والموازنة، بما يسمح للمنشأة ككل بتقييم أدائها، ويسمح أيضًا بتقييم أداء المديرين على المستوى الفردي."
   },
   {
     "unit": 13,
@@ -785,7 +857,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Budgetary slack is the practice of understating budgeted\nrevenues or overestimating budgeted costs to make budgeted\ntargets more achievable. The natural tendency of a manager\nis to negotiate for a less stringent measure of performance to\navoid unfavorable variances from expectations.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف على أفضل وجه الهامش الاحتياطي في الموازنة (Budgetary Slack)؟",
+    "choicesAr": [
+      "قيام الإدارة بتخفيف أهداف الموازنة بعد تحقيق النتائج المستهدفة في الأشهر الأولى من السنة.",
+      "إجمالي انخفاض المصروفات الفعلية عن الموازنة وزيادة الإيرادات الفعلية عن الموازنة.",
+      "ممارسة تخفيض الإيرادات المقدرة أو المبالغة في التكاليف المقدرة لجعل أهداف الموازنة أسهل تحقيقًا.",
+      "هامش خطأ يُمنح لكل مركز تكلفة لتشجيع المدير على وضع موازنة دقيقة ومتسقة."
+    ],
+    "explanationAr": "الهامش الاحتياطي في الموازنة هو تعمد تقدير إيرادات أقل أو تكاليف أعلى لتسهيل تحقيق الأهداف المخططة. وقد يميل المدير إلى التفاوض بشأن معيار أداء أقل تشددًا تجنبًا لظهور انحرافات غير مواتية."
   },
   {
     "unit": 13,
@@ -802,7 +882,15 @@
     ],
     "answerIndex": 3,
     "explanation": "This budget process represents a top-down budgeting\napproach. It is imposed by upper management and therefore\nhas less of a chance of acceptance by those on whom the\nbudget is imposed. It is not a successful budgeting process\nsince there is not a buy-in at all levels. Participative budgeting\nhas a much greater chance of acceptance by those affected\nand thus of achieving ultimate success than does a budget\nthat is imposed from above.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت الإدارة المالية في شركة كبيرة موازنة شاملة خصصت لكل إدارة اعتمادات مصروفات محدودة جدًا. ويخشى مديرو الإدارات مساءلتهم عن هذه الأهداف، بينما تريد الإدارة العليا تقييد الإنفاق للاحتفاظ بمرونة مواجهة الطوارئ وإجراء تعديلات استراتيجية على الموازنة الشاملة. بناءً على ذلك، فإن عملية إعداد الموازنة:",
+    "choicesAr": [
+      "ناجحة لأنها أداة فعالة لمحاسبة المسؤولين عن تجاوز المصروفات.",
+      "ناجحة لأنها ستدفع الموظفين إلى بذل أقصى جهد لتحقيق الأهداف.",
+      "غير ناجحة لأن الإدارة أبقت هامشًا كبيرًا جدًا للمجهولات الاستراتيجية.",
+      "غير ناجحة لأنها لم تحظ بقبول واسع من الموظفين."
+    ],
+    "explanationAr": "تمثل هذه العملية إعداد موازنة من أعلى إلى أسفل، حيث تفرض الإدارة العليا الموازنة، مما يضعف فرصة تقبلها لدى الأشخاص الملزمين بها. ولا تُعد العملية ناجحة إذا لم تحصل على التأييد في جميع المستويات. أما الموازنة التشاركية ففرص قبولها وتحقيق نتائجها أعلى من الموازنة المفروضة."
   },
   {
     "unit": 13,
@@ -819,7 +907,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The company has no control over the actions of its\ncompetitors; it can only respond to these actions, e.g.,\nincrease the company’s research and development efforts.\nThe company has some control over the other alternatives\npresented.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تواجه شركة لصناعة الخزف تحديات تشغيلية بسبب الأوضاع الاقتصادية وظروف القطاع، وتعد حاليًا خطتها وموازنتها السنوية. أي العوامل التالية هو الأقل خضوعًا لسيطرة الإدارة في السنة المالية الحالية؟",
+    "choicesAr": [
+      "لم تساعد آلة جديدة اشترتها الشركة هذا العام على تقليص انحرافات كفاءة العمل غير المواتية.",
+      "حقق أحد المنافسين اختراقًا تقنيًا غير متوقع منحه ميزة كبيرة في الجودة، مما أدى إلى خسارة الشركة حصة سوقية.",
+      "طلب الموردون إعادة التفاوض بشأن الأسعار التعاقدية للسلع التي يقدمونها وتعديلها لمراعاة التضخم.",
+      "قرر موظفون ذوو خبرة ترك الشركة للعمل لدى المنافس."
+    ],
+    "explanationAr": "لا تتحكم الشركة في تصرفات المنافسين، وإنما تستطيع الاستجابة لها، مثل زيادة الإنفاق على البحث والتطوير. أما الخيارات الأخرى فتملك الشركة قدرًا من التأثير أو السيطرة عليها."
   },
   {
     "unit": 13,
@@ -836,7 +932,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Budgetary slack is the excess of resources budgeted over the\nresources necessary to achieve organizational goals.\nManagement may create slack by overestimating costs and\nunderestimating revenues.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة الموازنات التشاركية. ولتسهيل تحقيق أهداف الموازنة، يتعمد المراقب المالي تخفيض الإيرادات المقدرة والمبالغة في المصروفات البيعية والإدارية الثابتة. يمثل ذلك مثالًا على:",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الهامش الاحتياطي في الموازنة.",
+      "الموازنة على الأساس الصفري.",
+      "انحراف الموازنة."
+    ],
+    "explanationAr": "الهامش الاحتياطي في الموازنة هو زيادة الموارد المرصودة على ما يلزم لتحقيق أهداف المنشأة. وقد ينشئه المديرون عبر المبالغة في تقدير التكاليف وتقليل تقدير الإيرادات."
   },
   {
     "unit": 13,
@@ -853,7 +957,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Allocating resources on an as-needed basis is not an\nadvantage of the budgeting process. The budget is usually\ndetermined before the period begins, and an as-needed basis\nwould be decided during the period, not before.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع ما يلي من مزايا إعداد الموازنات، باستثناء أن الموازنة:",
+    "choicesAr": [
+      "تلزم الإدارة بتقييم الأهداف المستقبلية للمنشأة.",
+      "تحدد معايير مرجعية لكشف الأداء غير المرضي.",
+      "تسهل الاتصال بين الوحدات التنظيمية.",
+      "تخصص الموارد عند الحاجة إليها أثناء الفترة."
+    ],
+    "explanationAr": "التخصيص الفوري للموارد كلما ظهرت الحاجة ليس ميزة معتادة لعملية إعداد الموازنة. فالموازنة تُحدد عادة قبل بداية الفترة، بينما يُتخذ قرار تخصيص الموارد عند الحاجة خلال الفترة نفسها."
   },
   {
     "unit": 13,
@@ -870,7 +982,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The strategic plan is the basis for everything else a company\ndoes. The budget identifies the resources needed to achieve\nstrategic goals.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الخيارات التالية يصف على أفضل وجه سبب ضرورة استناد موازنة الشركة إلى خططها الاستراتيجية؟",
+    "choicesAr": [
+      "المساعدة على ضبط التكاليف لتباع المنتجات بربحية.",
+      "تحديد الموارد اللازمة للوصول إلى الأهداف الاستراتيجية.",
+      "تحديد العوامل الخارجية التي تغيرت عن السنة السابقة وتلك التي لم تتغير.",
+      "وضع معايير لقياس أداء الموظفين."
+    ],
+    "explanationAr": "الخطة الاستراتيجية هي الأساس الذي تُبنى عليه بقية أنشطة الشركة. وتحدد الموازنة الموارد المطلوبة لتحقيق الأهداف الاستراتيجية."
   },
   {
     "unit": 13,
@@ -887,7 +1007,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Participatory budgeting is considered motivational because it\ninvolves the individuals who are responsible for meeting the\nbudget. Since employees are involved in preparing the\nbudget, they are more encouraged to accept the budget than if\nit were simply handed down to them by top management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إحدى مزايا الموازنات التشاركية أنها:",
+    "choicesAr": [
+      "تقلل تكلفة إعداد الموازنات.",
+      "تنتج معلومات تعرفها الإدارة ولا يعرفها العاملون.",
+      "تشجع الموظفين على تقبل الموازنة.",
+      "تقلل أثر تحيزات الموظفين في عملية إعداد الموازنة."
+    ],
+    "explanationAr": "تُعد الموازنات التشاركية محفزة لأنها تشرك الأفراد المسؤولين عن تحقيق أهدافها. ومشاركة الموظفين في إعداد الموازنة تزيد استعدادهم لتقبلها مقارنةً بموازنة تفرضها الإدارة العليا عليهم دون مشاركة."
   },
   {
     "unit": 13,
@@ -904,7 +1032,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The natural tendency of a manager is to negotiate for a less\nstringent measure of performance so as to avoid unfavorable\nvariances from expectations. Budgetary slack is the excess of\nresources budgeted over the resources necessary to achieve\norganizational goals. This practice results in the\nunderestimation of revenues and overestimation of expenses.\nIt must be avoided for a budget to have its desired effects.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تمنح شركة مدير الإنتاج مكافأة سنوية تعتمد على أدائه مقارنة بموازنات قسم الإنتاج السنوية. وقد بالغ المدير في تقدير التكاليف بالموازنة خلال السنوات الأخيرة لزيادة مكافأته. ما الوصف الأنسب لتصرفاته؟",
+    "choicesAr": [
+      "تحفيز جهد الموظفين.",
+      "تكوين هامش احتياطي في الموازنة.",
+      "موازنة تكاليف الإنتاج على فترات زمنية طويلة.",
+      "وضع أداء مخطط للموازنة."
+    ],
+    "explanationAr": "قد يميل المدير إلى التفاوض بشأن معايير أداء أقل صرامة لتجنب الانحرافات غير المواتية. ويشير الهامش الاحتياطي في الموازنة إلى زيادة الموارد المقدرة على ما يلزم فعليًا لتحقيق أهداف المنشأة. وينشأ من تخفيض الإيرادات المتوقعة أو المبالغة في المصروفات، وينبغي تجنبه حتى تحقق الموازنة الغرض منها."
   },
   {
     "unit": 13,
@@ -921,7 +1057,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A budget is a realistic plan for the future expressed in\nquantitative terms. The process of budgeting forces a\ncompany to establish goals, determine the resources\nnecessary to achieve those goals, and anticipate future\ndifficulties in their achievement. A budget is also a control tool\nbecause it establishes standards and facilitates comparison of\nactual and budgeted performance. Because a budget\nestablishes standards and accountability, it motivates good\nperformance by highlighting the work of effective managers.\nMoreover, the nature of the budgeting process fosters\ncommunication of goals to company subunits and coordination\nof their efforts. Budgeting activities by entities within the\ncompany must be coordinated because they are\ninterdependent. Thus, the sales budget is a necessary input to\nthe formulation of the production budget. In turn, production\nrequirements must be known before purchases and expense\nbudgets can be developed, and all other budgets must be\ncompleted before preparation of the cash budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأهداف الرئيسية لإعداد الموازنات؟",
+    "choicesAr": [
+      "تعزيز تخطيط العمليات وتوفير إطار لتقييم الأداء وتشجيع الاتصال والتنسيق بين وحدات المنشأة.",
+      "تعزيز تخطيط العمليات وتيسير تحديد المسؤول عن عدم تحقق التوقعات وضمان توافق أهداف الرؤساء والمرؤوسين.",
+      "تحديد مراكز المسؤولية وتوفير إطار لتقييم الأداء وتعزيز الاتصال والتنسيق بين وحدات المنشأة.",
+      "تحديد مراكز المسؤولية وتسهيل إلقاء اللوم عند عدم تحقق التوقعات وضمان توافق أهداف الرؤساء والمرؤوسين."
+    ],
+    "explanationAr": "الموازنة خطة واقعية للمستقبل معبَّر عنها كميًا. وتجبر عملية إعدادها المنشأة على تحديد الأهداف والموارد اللازمة لتحقيقها وتوقع الصعوبات المستقبلية. وهي أيضًا أداة رقابية لأنها تحدد المعايير وتساعد على مقارنة الأداء الفعلي بالمخطط. ويساعد تحديد المعايير والمسؤوليات على تحفيز الأداء الجيد وإبراز جهود المديرين الأكفاء. كما تعزز الموازنة اتصال الأهداف بوحدات المنشأة وتنسيق الجهود المتبادلة الاعتماد. فموازنة المبيعات مدخل أساسي لموازنة الإنتاج، وتُحدد متطلبات الإنتاج قبل إعداد موازنات المشتريات والمصروفات، كما يجب الانتهاء من الموازنات الأخرى قبل إعداد الموازنة النقدية."
   },
   {
     "unit": 13,
@@ -938,7 +1082,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Though budgets may be designed to produce a profit for an\norganization, they cannot ensure that an organization makes a\nprofit. There are many reasons an organization may stray from\na profitable budget, such as errors, inefficiencies, or\nunforeseen events (e.g., a fire at a warehouse). Thus, budgets\ncannot guarantee that a company will turn a profit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عندما تُعد الموازنات وتُدار بصورة صحيحة، فإنها تحقق للمنشأة جميع المزايا التالية باستثناء:",
+    "choicesAr": [
+      "توفير هيكل لقياس الأداء.",
+      "تحفيز المديرين والعاملين الآخرين.",
+      "ضمان تحقيق المنشأة أرباحًا.",
+      "تعزيز التخصيص الكفء للموارد."
+    ],
+    "explanationAr": "رغم أن الموازنة قد تُصمم بهدف تحقيق الربح، فإنها لا تضمن ربحية المنشأة؛ إذ قد تبعدها الأخطاء وأوجه عدم الكفاءة والأحداث غير المتوقعة، مثل حريق مستودع، عن نتائج الموازنة المربحة. لذلك لا تستطيع الموازنات ضمان تحقيق الربح."
   },
   {
     "unit": 13,
