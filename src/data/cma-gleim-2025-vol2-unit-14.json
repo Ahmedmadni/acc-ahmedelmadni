@@ -1142,7 +1142,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sale of 12,500 cases of water at $24.80 per case\nproduces revenue of $310,000, an amount that does not\nqualify for commissions. The sale of 33,100 cases of cola at\n$32 per case produces revenue of $1,059,200. This amount is\ngreater than the minimum and therefore qualifies for a\ncommission of $84,736 ($1,059,200 × 8%). This calculation\nassumes that commissions are paid on all sales if the revenue\nquota is met.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع شركة تعبئة مشروبات بيع 12,500 صندوق مياه في ديسمبر بسعر $24.80 للصندوق، و33,100 صندوق كولا بسعر $32.00 للصندوق. يحصل موظفو المبيعات على عمولة 6% عن المياه و8% عن الكولا، شريطة تحقيق حصة إيرادات كل منتج على حدة. حصة مبيعات المياه المستهدفة هي $500,000، والكولا $1,000,000. ما عمولة المبيعات الواجب إدراجها في موازنة ديسمبر؟",
+    "choicesAr": [
+      "$4,736",
+      "$82,152",
+      "$84,736",
+      "$103,336"
+    ],
+    "explanationAr": "ينتج عن بيع 12,500 صندوق مياه بسعر $24.80 للصندوق إيراد قدره $310,000، وهو أقل من الحصة المستهدفة فلا تُستحق عنه عمولة. أما بيع 33,100 صندوق كولا بسعر $32 فيحقق إيرادًا قدره $1,059,200، ويتجاوز الحد الأدنى المطلوب، فتكون العمولة $84,736 ($1,059,200 × 8%). يفترض هذا الحساب دفع العمولة على كامل المبيعات بعد تحقيق الحصة المستهدفة."
   },
   {
     "unit": 14,
@@ -1159,7 +1167,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The standard direct labor unit cost equals 3 hours times the\ncost per DLH. This amount is determined by adding employee\nbenefits to weekly wages and dividing by hours per week.\nWeekly wages                  $245.00\nAdd: Benefits ($245 × .25)     61.25\nWeekly total compensation    $306.25\nDivided by: Hours/week       ÷   35\nCost per DL hour             $ 8.75\nTimes: DL hours per unit    ×    3\nUnit DL cost                 $ 26.25",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتاج كل وحدة من المنتج XK-46 إلى ثلاث ساعات عمل مباشر. وتُعامل مزايا العاملين ضمن تكاليف العمل المباشر. بيانات العمل المباشر:\nعدد العاملين المباشرين: 25\nساعات العمل الأسبوعية الإنتاجية للعامل: 35\nالأجر الأسبوعي المقدر للعامل: $245\nمزايا الموظفين: 25% من الأجر الأسبوعي\nما التكلفة المعيارية للعمل المباشر لكل وحدة من المنتج XK-46؟",
+    "choicesAr": [
+      "$21.00",
+      "$26.25",
+      "$29.40",
+      "$36.75"
+    ],
+    "explanationAr": "التكلفة المعيارية للوحدة = 3 ساعات × تكلفة ساعة العمل المباشر. وتُحسب التكلفة بإضافة مزايا الموظفين إلى الأجور الأسبوعية ثم القسمة على ساعات العمل:\nالأجور الأسبوعية: $245.00\nيضاف: المزايا ($245 × .25): 61.25\nإجمالي التعويضات الأسبوعية: $306.25\nيقسم على: ساعات الأسبوع ÷ 35\nتكلفة ساعة العمل المباشر: $8.75\nيضرب في: ساعات العمل للوحدة × 3\nتكلفة العمل المباشر للوحدة: $26.25"
   },
   {
     "unit": 14,
@@ -1176,7 +1192,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sale of 12,500 cases of small cherries at $25 per case\nproduces revenue of $312,500. Because this amount is below\nthe $500,000 minimum, no commissions should be budgeted\nfor small cherries. The sale of 33,000 cases of large cherries\nat $32 per case produces revenue of $1,056,000. This amount\nis greater than the $1 million minimum and therefore qualifies\nfor a commission of $84,480 ($1,056,000 × 8%). The problem\ndid not state that a commission would be paid only on\namounts exceeding the minimum. Hence, all sales qualify\nonce the minimum is reached.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع شركة بيع 12,500 صندوق من الكرز الصغير خلال يونيو بسعر $25 للصندوق، و33,000 صندوق من الكرز الكبير بسعر $32 للصندوق. يتقاضى موظفو المبيعات عمولة 6% عن الكرز الصغير و8% عن الكبير إذا حققوا حصة إيرادات كل منتج. الحصتان المستهدفتان هما $500,000 للكرز الصغير و$1 مليون للكرز الكبير. ما عمولات المبيعات المقدرة لشهر يونيو؟",
+    "choicesAr": [
+      "$109,440",
+      "$84,480",
+      "$82,110",
+      "$4,480"
+    ],
+    "explanationAr": "ينتج عن بيع 12,500 صندوق من الكرز الصغير بسعر $25 إيراد قدره $312,500، وهو أقل من الحد الأدنى $500,000، فلا تُحتسب عمولة له. أما بيع 33,000 صندوق من الكرز الكبير بسعر $32 فيحقق $1,056,000، متجاوزًا الحد الأدنى $1 مليون، ولذلك تستحق عمولة $84,480 ($1,056,000 × 8%). ولم يذكر السؤال أن العمولة تُدفع فقط على الإيرادات الزائدة على الحد الأدنى، فتُطبق على جميع مبيعات المنتج المؤهل."
   },
   {
     "unit": 14,
@@ -1227,7 +1251,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The hourly wage per worker is $15.00 ($600 ÷ 40 hours). The\ndirect labor cost per hour is $18.00 [$15.00 × (1.0 + benefits\nequal to 20% of wages)]. Consequently, the standard direct\nlabor cost per unit is $54 ($18 × 3 hours).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق بيانات العمل المباشر التالية بتصنيع أجهزة التلفزيون:\nعدد العمال: 60\nساعات العمل الإنتاجية لكل عامل أسبوعيًا: 40\nالساعات اللازمة لتصنيع 1 وحدة: 3\nالأجر الأسبوعي لكل عامل: $600\nمزايا الموظفين المحتسبة ضمن تكلفة العمل المباشر: 20% من الأجور\nما التكلفة المعيارية للعمل المباشر لكل وحدة؟",
+    "choicesAr": [
+      "$54",
+      "$36",
+      "$45",
+      "$18"
+    ],
+    "explanationAr": "يبلغ أجر الساعة لكل عامل $15.00 ($600 ÷ 40 ساعة). وتبلغ تكلفة ساعة العمل المباشر بعد المزايا $18.00 [$15.00 × (1.0 + مزايا تعادل 20% من الأجور)]. وبالتالي تكون تكلفة العمل المباشر المعيارية للوحدة $54 ($18 × 3 ساعات)."
   },
   {
     "unit": 14,
@@ -1244,7 +1276,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The firm’s cost of goods manufactured can be calculated as\nfollows:\nCost of goods sold                     $400,000\nAdd: Ending finished goods inventory 25,000\nGoods available for sale             $425,000\nLess: Beg. finished goods inventory   (10,000)\nCost of goods manufactured               $415,000\nThe $415,000 is composed of materials ($100,000), direct\nlabor, and overhead. Therefore, labor plus overhead equals\n$315,000. Since overhead is two times labor, the calculation\nwould be DL + 2DL = $315,000, or DL = $105,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خصصت منشأة المبالغ التالية في موازنة السنة المقبلة:\nمخزون المنتجات التامة أول الفترة: $10,000\nتكلفة البضاعة المباعة: $400,000\nالمواد المباشرة المستخدمة في الإنتاج: $100,000\nمخزون المنتجات التامة آخر الفترة: $25,000\nمخزون الإنتاج تحت التشغيل أول الفترة وآخرها: 0\nتُقدر التكاليف الصناعية غير المباشرة بمثلي تكلفة العمل المباشر. ما المبلغ الواجب تخصيصه للعمل المباشر في الموازنة السنوية؟",
+    "choicesAr": [
+      "$315,000",
+      "$210,000",
+      "$157,500",
+      "$105,000"
+    ],
+    "explanationAr": "تُحسب تكلفة البضاعة المصنعة كما يلي:\nتكلفة البضاعة المباعة: $400,000\nيضاف: مخزون المنتجات التامة آخر الفترة: 25,000\nالبضاعة المتاحة للبيع: $425,000\nيطرح: مخزون المنتجات التامة أول الفترة: (10,000)\nتكلفة البضاعة المصنعة: $415,000\nتتكون تكلفة البضاعة المصنعة البالغة $415,000 من المواد ($100,000) والعمل المباشر والتكاليف الصناعية غير المباشرة. لذا يكون مجموع العمل المباشر والتكاليف غير المباشرة $315,000. وبما أن التكاليف غير المباشرة تساوي 2 × العمل المباشر، تكون المعادلة: العمل المباشر + ضعفه = $315,000؛ ومن ثم تكلفة العمل المباشر = $105,000."
   },
   {
     "unit": 14,
@@ -1278,7 +1318,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Total income is $5,000,000. Total expenses are $4,050,000\n[($10 × 125,000) + ($100 × 10,000) + ($200 × 4,000) + ($8 ×\n125,000)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توفرت المعلومات التالية عن مصنع قمصان رجالية للسنة الماضية:\nعدد القمصان المبيعة والمنتجة: 125,000\nسعر بيع القميص: $40\nالتكلفة الصناعية المباشرة: $10 للقميص\nتكلفة الإعداد: $100 لكل ساعة إعداد\nساعات الإعداد: 10,000\nتكاليف الشحن: $200 لكل شحنة\nعدد الشحنات: 4,000\nالتكلفة الإدارية: $8 للقميص\nما الربح التشغيلي للشركة في السنة الماضية؟",
+    "choicesAr": [
+      "$950,000",
+      "$1,950,000",
+      "$2,750,000",
+      "$3,750,000"
+    ],
+    "explanationAr": "تبلغ الإيرادات الإجمالية $5,000,000، والمصروفات الإجمالية $4,050,000، وتُحسب كالتالي: [($10 × 125,000) + ($100 × 10,000) + ($200 × 4,000) + ($8 × 125,000)]. ومن ثم يكون الربح التشغيلي هو الفرق بين الإيرادات والمصروفات."
   },
   {
     "unit": 14,
@@ -1312,7 +1360,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The demand for the first quarter is 6,800 units (2,000 + 2,300\n+ 2,500), but since there are 300 units in beginning inventory,\nonly 6,500 will need to be produced. However, since an\nadditional 10% must be manufactured to allow for product\ndefects, 650 units must be added to the production schedule,\nfor a total of 7,150 units. At 3 hours of direct labor per unit,\nbudgeted direct labor hours will equal 21,450.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتلقى شركة طلبية من عميل رئيسي في اليوم الأول من كل ربع، ويتعين عليها إنتاج كمية إضافية بنسبة 10% لتغطية عيوب المنتجات. يحتاج كل منتج تام إلى رطلين من المواد المباشرة وثلاث ساعات عمل مباشر. يبلغ مخزون المنتجات التامة في 1 يناير 300 وحدة، ويمكن استخدامه لتلبية الطلب. طلبيات الربع الأول:\nيناير: 2,000 وحدة\nفبراير: 2,300 وحدة\nمارس: 2,500 وحدة\nما ساعات العمل المباشر المقدرة للربع الأول؟",
+    "choicesAr": [
+      "19,500",
+      "20,400",
+      "21,450",
+      "22,440"
+    ],
+    "explanationAr": "يبلغ إجمالي الطلب في الربع الأول 6,800 وحدة (2,000 + 2,300 + 2,500)، لكن وجود 300 وحدة في مخزون أول الفترة يخفض الإنتاج المطلوب إلى 6,500 وحدة. ولأن الشركة تنتج كمية إضافية بنسبة 10% لتعويض العيوب، تضاف 650 وحدة ليصبح مجموع الإنتاج 7,150 وحدة. وبمعدل 3 ساعات عمل مباشر للوحدة، تبلغ الساعات المقدرة 21,450."
   },
   {
     "unit": 14,
@@ -1329,7 +1385,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Contribution margin is the net sales revenue minus all variable\ncosts (both manufacturing and S&A). Materials and labor and\nsales commissions are the only variable costs listed in the\nbudget. Thus, the contribution margin is equal to $5,500,000\n($10,000,000 Sales – 4,000,000 Materials and labor –\n500,000 Sales commissions).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "موازنة أحد المنتجات هي كما يلي:\nالمبيعات: $10,000,000\nالمواد والعمل: 4,000,000\nالتكاليف الصناعية غير المباشرة الثابتة: 1,500,000\nعمولات المبيعات: 500,000\nالإعلان (ثابت): 200,000\nتكاليف التسويق الأخرى (ثابتة): 800,000\nالتكاليف الإدارية الموزعة: 2,000,000\nالدخل: $1,000,000\nما هامش المساهمة المقدر لهذا المنتج؟",
+    "choicesAr": [
+      "$5,500,000",
+      "$5,300,000",
+      "$4,500,000",
+      "$3,000,000"
+    ],
+    "explanationAr": "هامش المساهمة = صافي إيراد المبيعات − جميع التكاليف المتغيرة، الصناعية والبيعية والإدارية. والبندان المتغيران الوحيدان هنا هما المواد والعمل وعمولات المبيعات. لذا يكون هامش المساهمة $5,500,000 ($10,000,000 مبيعات − 4,000,000 مواد وعمل − 500,000 عمولات)."
   },
   {
     "unit": 14,
