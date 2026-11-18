@@ -1457,7 +1457,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The pro forma cost of goods sold must be prepared before the\npro forma income statement because it is a component of the\nincome statement. Also, the income statement must be\nprepared before the pro forma balance sheet because net\nincome is a necessary part of preparing the stockholders’\nequity section of the balance sheet. In turn, the income\nstatement and the balance sheet are necessary for estimating\ncash flows. If the statement of cash flows is prepared using\nthe indirect method, balance sheet data, e.g., the changes in\naccounts receivable, inventory, and accounts payable, must\nbe available to determine the adjustments needed to reconcile\nnet income to net cash flow.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم إحدى الشركات نظامًا شاملًا للتخطيط وإعداد الموازنات. ما الترتيب الصحيح لإعداد الجداول التالية؟",
+    "choicesAr": [
+      "تكلفة البضاعة المباعة، ثم قائمة المركز المالي، ثم قائمة الدخل، ثم قائمة التدفقات النقدية.",
+      "قائمة الدخل، ثم قائمة المركز المالي، ثم قائمة التدفقات النقدية، ثم تكلفة البضاعة المباعة.",
+      "قائمة التدفقات النقدية، ثم تكلفة البضاعة المباعة، ثم قائمة الدخل، ثم قائمة المركز المالي.",
+      "تكلفة البضاعة المباعة، ثم قائمة الدخل، ثم قائمة المركز المالي، ثم قائمة التدفقات النقدية."
+    ],
+    "explanationAr": "يجب إعداد تكلفة البضاعة المباعة التقديرية قبل قائمة الدخل التقديرية لأنها أحد عناصرها. كما تُعد قائمة الدخل قبل قائمة المركز المالي التقديرية لأن صافي الدخل يدخل في تحديد حقوق المساهمين. وتلزم قائمتا الدخل والمركز المالي لتقدير التدفقات النقدية؛ وعند استخدام الطريقة غير المباشرة تُستخدم تغيرات حسابات العملاء والمخزون والموردين من قائمة المركز المالي لتسوية صافي الدخل مع صافي التدفق النقدي."
   },
   {
     "unit": 13,
@@ -1474,7 +1482,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The overall budget, often called the master or comprehensive\nbudget, encompasses the organization’s operating and\nfinancial plans for a specified period (ordinarily a year). Thus,\nall other budgets are subsets of the master budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في المنشأة التي تستخدم الموازنات الشاملة للتخطيط، ما المقصود بالموازنة الشاملة (Master Budget)؟",
+    "choicesAr": [
+      "مجموعة جداول الموازنات التشغيلية والمالية المنفصلة لجميع أنشطة المنشأة.",
+      "الكتيب الذي يضم إرشادات وسياسات الموازنة والنماذج المستخدمة لإعدادها.",
+      "الموازنة الحالية بعد تحديثها لجزء من أنشطة السنة الجارية.",
+      "موازنة منظمة غير هادفة للربح بعد اعتمادها من الجهة المختصة."
+    ],
+    "explanationAr": "تضم الموازنة الشاملة الخطط التشغيلية والمالية للمنشأة خلال فترة محددة، تكون عادة سنة. ولذلك تُعد الموازنات الأخرى كلها مكونات ضمن الموازنة الشاملة."
   },
   {
     "unit": 13,
@@ -1491,7 +1507,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Operating budgets seldom set out long-range strategic\nconcepts because they usually deal with the quantitative\nallocation of people and resources. Strategic concepts are\noverall goals for the organization and are almost always stated\nin words.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "رغم أن الموازنة التشغيلية عنصر أساسي في التخطيط والرقابة، فمن غير المرجح أن:",
+    "choicesAr": [
+      "تحدد التزامًا باستخدام موارد المنشأة.",
+      "تعرض مفاهيم استراتيجية طويلة الأجل.",
+      "تدمج أنشطة المنشأة المختلفة.",
+      "توفر معلومات تخطيطية تفصيلية مساندة."
+    ],
+    "explanationAr": "نادرًا ما تعرض الموازنات التشغيلية المفاهيم الاستراتيجية طويلة الأجل؛ فهي تعالج عادة التخصيص الكمي للموارد والأفراد، بينما تتناول المفاهيم الاستراتيجية الأهداف العامة للمنشأة وتُعبَّر عنها غالبًا بصورة وصفية."
   },
   {
     "unit": 13,
@@ -1508,7 +1532,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cash budget combines the results of the operating budget\nwith the cash collection and disbursement schedules to\nproduce a comprehensive picture of the sources and uses of\ncash. All the other budgets listed feed the cash budget in one\nway or another.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد الموازنة الشاملة لشركة، أي الموازنات التالية يُرجح إعدادها في المرحلة الأخيرة؟",
+    "choicesAr": [
+      "موازنة المبيعات.",
+      "الموازنة النقدية.",
+      "موازنة الإنتاج.",
+      "موازنة تكلفة البضاعة المباعة."
+    ],
+    "explanationAr": "تجمع الموازنة النقدية نتائج الموازنات التشغيلية مع جداول التحصيلات والمدفوعات النقدية، لتقديم صورة شاملة لمصادر النقد واستخداماته. وتسهم الموازنات الأخرى المذكورة في إعداد الموازنة النقدية بصورة مباشرة أو غير مباشرة."
   },
   {
     "unit": 13,
@@ -1525,7 +1557,15 @@
     ],
     "answerIndex": 1,
     "explanation": "For most companies, the starting point for the annual budget\nis the sales forecast. All other aspects of the budget, including\nproduction, costs, and inventory levels, rely on projected sales\nfigures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الأساس الذي تُبنى عليه خطة الأرباح؟",
+    "choicesAr": [
+      "الموازنة الرأسمالية.",
+      "توقع المبيعات.",
+      "موازنة التكاليف والمصروفات.",
+      "خطة الإنتاج."
+    ],
+    "explanationAr": "تبدأ الموازنة السنوية في معظم المنشآت بتوقع المبيعات؛ إذ تعتمد عليه بقية عناصر الموازنة، ومنها الإنتاج والتكاليف ومستويات المخزون."
   },
   {
     "unit": 13,
@@ -1542,7 +1582,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The budget process begins with the sales budget, proceeds to\nthe production and expense budgets, and eventually the cash\nbudget. The cash budget cannot be prepared until the end of\nthe process because all other budgets provide inputs to the\ncash budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الجداول التالية يُعد عادة في آخر مراحل عملية إعداد الموازنات المعتادة؟",
+    "choicesAr": [
+      "موازنة العمل المباشر.",
+      "الموازنة النقدية.",
+      "موازنة تكلفة البضاعة المباعة.",
+      "موازنة التكاليف الصناعية غير المباشرة."
+    ],
+    "explanationAr": "تبدأ عملية إعداد الموازنات بموازنة المبيعات، ثم تنتقل إلى موازنات الإنتاج والمصروفات، وتصل في النهاية إلى الموازنة النقدية؛ إذ لا يمكن إعدادها قبل توفر مدخلات الموازنات الأخرى."
   },
   {
     "unit": 13,
@@ -1559,7 +1607,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The starting point for the annual budget is the sales forecast.\nAll other aspects of the budget, including production, costs,\nand inventory levels, rely on projected sales figures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبدأ عملية إعداد الموازنة الشاملة عادة بـ:",
+    "choicesAr": [
+      "موازنة الإنتاج.",
+      "الموازنة التشغيلية.",
+      "الموازنة المالية.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "يُعد توقع المبيعات نقطة البداية للموازنة السنوية، وتعتمد عليه بقية الجوانب مثل الإنتاج والتكاليف والمخزون."
   },
   {
     "unit": 13,
@@ -1576,7 +1632,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The operating budget consists of all budgets that concern\nnormal operating activities, including the sales budget,\nproduction budget, materials budget, direct labor budget, and\nfactory overhead budget. The capital expenditures budget,\nwhich outlines needs for new capital investment, is not a part\nof normal operations. The capital expenditures budget is\nsometimes prepared more than a year in advance to allow\nsufficient time to secure financing for these major\nexpenditures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد جميع الموازنات التالية موازنات تشغيلية، باستثناء:",
+    "choicesAr": [
+      "موازنة المبيعات.",
+      "موازنة المواد.",
+      "موازنة الإنتاج.",
+      "الموازنة الرأسمالية."
+    ],
+    "explanationAr": "تتكون الموازنة التشغيلية من الموازنات المرتبطة بالنشاط المعتاد، ومنها المبيعات والإنتاج والمواد والعمل المباشر والتكاليف الصناعية غير المباشرة. أما موازنة الإنفاق الرأسمالي فتتناول الاستثمارات الرأسمالية الجديدة، وقد تُعد قبل سنة أو أكثر لتوفير التمويل اللازم لهذه النفقات الكبيرة."
   },
   {
     "unit": 13,
@@ -1593,7 +1657,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The last schedule prepared before the financial statements is\nthe cash budget. The cash budget is a schedule of estimated\ncash collections and payments. The various operating budgets\nand the capital budget are inputs to the cash budgeting\nprocess.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الجداول التالية يُعد آخرًا في عملية إعداد الموازنات العادية؟",
+    "choicesAr": [
+      "الموازنة النقدية.",
+      "موازنة تكلفة البضاعة المباعة.",
+      "موازنة التكاليف الصناعية غير المباشرة.",
+      "موازنة مصروفات البيع."
+    ],
+    "explanationAr": "الموازنة النقدية هي آخر الجداول التي تُعد قبل القوائم المالية التقديرية. وهي تعرض التحصيلات والمدفوعات النقدية المتوقعة، وتستند إلى الموازنات التشغيلية والموازنة الرأسمالية."
   },
   {
     "unit": 13,
@@ -1610,7 +1682,15 @@
     ],
     "answerIndex": 3,
     "explanation": "All other budgets are subsets of the master budget. Thus,\nquantified estimates by management from all functional areas\nare contained in the master budget. These results are then\ncombined in a formal quantitative model recognizing the\norganization’s objectives, inputs, and outputs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنة الشاملة:",
+    "choicesAr": [
+      "تعرض النتائج المتوقعة والفعلية معًا.",
+      "تعكس التكاليف القابلة للرقابة فقط.",
+      "تُستخدم لتحديد انحرافات تكاليف التصنيع.",
+      "تتضمن الموازنة التشغيلية."
+    ],
+    "explanationAr": "تندرج جميع الموازنات الأخرى ضمن الموازنة الشاملة، وتجمع تقديرات الإدارة الكمية من مختلف الأنشطة في نموذج موحد يراعي أهداف المنشأة ومدخلاتها ومخرجاتها."
   },
   {
     "unit": 13,
@@ -1627,7 +1707,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The creation of a comprehensive master budget begins with\nthe preparation of the sales budget and ends with the\npreparation of the cash management and working capital\nbudget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما المرحلة التي يبلغ عندها إعداد الموازنة الشاملة نهايته؟",
+    "choicesAr": [
+      "إعداد موازنة الإنتاج.",
+      "إعداد موازنة الاستثمارات الرأسمالية.",
+      "إعداد موازنة إدارة النقد ورأس المال العامل.",
+      "إعداد الموازنة الاستراتيجية."
+    ],
+    "explanationAr": "تبدأ الموازنة الشاملة بإعداد موازنة المبيعات وتنتهي بإعداد موازنة إدارة النقد ورأس المال العامل."
   },
   {
     "unit": 13,
@@ -1644,7 +1732,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The capital investment budget may be prepared more than a\nyear in advance, unlike the other elements of the master\nbudget. Because of the long-term commitments that must be\nmade for some types of capital investments, planning must be\ndone far in advance and is based on needs in future years as\nopposed to the current year’s needs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمكن اعتباره بندًا مستقلًا نسبيًا عند إعداد الموازنة الشاملة؟",
+    "choicesAr": [
+      "موازنة المخزون النهائي.",
+      "موازنة الاستثمارات الرأسمالية.",
+      "قائمة الدخل التقديرية.",
+      "قائمة المركز المالي التقديرية."
+    ],
+    "explanationAr": "قد تُعد موازنة الاستثمارات الرأسمالية قبل أكثر من سنة بخلاف بقية أجزاء الموازنة الشاملة. فبعض الاستثمارات يتطلب التزامات طويلة الأجل وتخطيطًا مبكرًا يستند إلى احتياجات السنوات المستقبلية لا السنة الحالية وحدها."
   },
   {
     "unit": 13,
