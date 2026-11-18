@@ -2247,7 +2247,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A schedule of cash receipts and disbursements (cash budget)\nshould include all cash inflows and outflows during the period\nwithout regard to the accrual accounting treatment of the\ntransactions. Thus, it should include all checks written and all\nsources of cash, including borrowings. A borrowing from a\nbank in June Year 1 should appear as a cash receipt for\nYear 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية يجب إدراجه عند إعداد جدول المقبوضات والمدفوعات النقدية لشركة عن السنة التقويمية 1؟",
+    "choicesAr": [
+      "أمر شراء صدر في ديسمبر من السنة 1 لبضائع يُتوقع توريدها في فبراير من السنة 2.",
+      "توزيعات أرباح أُعلنت في نوفمبر من السنة 1 ويُقرر سدادها في يناير من السنة 2 للمساهمين المسجلين في ديسمبر من السنة 1.",
+      "مبلغ الحسابات المدينة غير القابلة للتحصيل من العملاء في السنة 1.",
+      "اقتراض أموال من بنك بموجب سند دفع تم الحصول عليه في يونيو من السنة 1، مع الاتفاق على سداد أصل القرض والفائدة في يونيو من السنة 2."
+    ],
+    "explanationAr": "يجب أن يشمل جدول المقبوضات والمدفوعات النقدية (الموازنة النقدية) جميع التدفقات النقدية الداخلة والخارجة خلال الفترة بغض النظر عن المعالجة المحاسبية على أساس الاستحقاق. وهذا يشمل الشيكات الصادرة ومصادر النقدية مثل القروض. وعليه يُدرج الاقتراض البنكي في يونيو من السنة 1 باعتباره مقبوضًا نقديًا للسنة 1."
   },
   {
     "unit": 14,
@@ -2342,7 +2350,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The change in cash can be calculated as follows:\nAccrual-basis net income             $100,000\nLess: Capital outlays                  (50,000)\nLess: Increase in working capital      (25,000)\nAdd: Depreciation expense (noncash) 15,000\nIncrease in cash                      $ 40,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أكملت شركة إعداد قوائمها المالية المستقبلية للسنة القادمة، وتتوافر المعلومات التالية:\nصافي الربح المتوقع: $100,000\nالإنفاق الرأسمالي المتوقع: 50,000\nالزيادة في رأس المال العامل: 25,000\nمصروف الإهلاك: 15,000\nما مقدار الزيادة المتوقعة في حساب النقدية خلال السنة القادمة؟",
+    "choicesAr": [
+      "$25,000",
+      "$40,000",
+      "$90,000",
+      "$160,000"
+    ],
+    "explanationAr": "تُحسب الزيادة في النقدية كالتالي:\nصافي الربح على أساس الاستحقاق: $100,000\nيطرح: الإنفاق الرأسمالي: (50,000)\nيطرح: الزيادة في رأس المال العامل: (25,000)\nيضاف: مصروف الإهلاك غير النقدي: 15,000\nالزيادة في النقدية: $40,000"
   },
   {
     "unit": 14,
@@ -3070,7 +3086,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The budgeted balance sheet, the income statement, and the\nstatement of cash flows would all change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نوفمبر، أنهت شركة موازنتها للسنة التقويمية القادمة. وفي ديسمبر تقرر اقتناء معدات جديدة في يناير مقابل معدات قديمة وتمويل المبلغ المستحق بقرض يحل أصلُه وفوائدُه بعد 3 سنوات. ولن تتغير تكاليف تشغيل المعدات النقدية. أي القوائم المالية المقدرة للسنة التالية ستتأثر بهذا القرار؟",
+    "choicesAr": [
+      "قائمة المركز المالي المقدرة فقط.",
+      "قائمتا المركز المالي والدخل المقدرتان.",
+      "قوائم المركز المالي والدخل والتدفقات النقدية المقدرة.",
+      "قائمتا الدخل والتدفقات النقدية المقدرتان."
+    ],
+    "explanationAr": "ستتغير كل من قائمة المركز المالي وقائمة الدخل وقائمة التدفقات النقدية المقدرة، نتيجة تغير الأصول والالتزامات ومصروفات الإهلاك والتمويل والتدفقات المتعلقة بالاستثمار."
   },
   {
     "unit": 14,
@@ -3415,7 +3439,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cost of fringe benefits must be derived once the cost of\nwages has been determined. The fringe benefits are then\nincluded in direct labor or allocated as manufacturing\noverhead, and the effect on cost of goods sold is the same.\nThus, out of all the answer choices, 100% allocation to\nmanufacturing overhead is the most accurate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد الموازنة السنوية، أي الطرق التالية مقبولة لتوزيع تكلفة المزايا الإضافية لعمال خطوط الإنتاج؟",
+    "choicesAr": [
+      "تخصيص 100% للتكاليف الصناعية غير المباشرة.",
+      "تخصيص 100% للمصروفات الإدارية.",
+      "التوزيع النسبي بين التكاليف الصناعية غير المباشرة والمصروفات الإدارية.",
+      "التوزيع النسبي بين المصروفات غير التشغيلية والمصروفات الإدارية."
+    ],
+    "explanationAr": "تُحدد تكلفة المزايا الإضافية بعد تحديد الأجور، وتُدرج بعد ذلك في العمل المباشر أو تحمل ضمن التكاليف الصناعية غير المباشرة، ويكون أثر ذلك في تكلفة البضاعة المباعة متماثلًا. ولذلك فإن تخصيص 100% للتكاليف الصناعية غير المباشرة هو الأدق بين الخيارات."
   },
   {
     "unit": 14,
