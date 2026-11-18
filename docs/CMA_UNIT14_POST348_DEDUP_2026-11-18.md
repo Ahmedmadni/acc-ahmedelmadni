@@ -37,7 +37,7 @@ Units 11–13 still have 315 complete Arabic drafts; Units 11–14 cumulative = 
 
 ## Newly isolated PDF source issue: `14.6.31`, printed page 561
 
-The imported English multiple-choice array has four elements but choices C/D have visibly broken boundaries: C starts `Cash Either` and D starts `cash `. This is a **source extraction/layout defect**, not a translation issue. To avoid invalid graded answers, the existing mapped `sourceLayoutReview` flag now includes this ID via `pendingSourceLayouts`. The question remains in the English source bank for comparison but is **excluded from scored CMA practice** by the shared source-review filter until the exact authorized publisher source page is visually checked and its option columns are repaired.
+The imported English multiple-choice array has four elements but choices C/D have visibly broken boundaries: B contains `Cash Either`, C starts `budget payments` and D starts `cash `. This is a **source extraction/layout defect**, not a translation issue. To avoid invalid graded answers, the existing mapped `sourceLayoutReview` flag now includes this ID via `pendingSourceLayouts`. The question remains in the English source bank for comparison but is **excluded from scored CMA practice** by the shared source-review filter until the exact authorized publisher source page is visually checked and its option columns are repaired.
 
 This is in addition to:
 - 9 original Unit 14 `sourceTextStatus` warnings;
