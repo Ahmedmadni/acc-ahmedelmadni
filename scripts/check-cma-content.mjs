@@ -597,8 +597,8 @@ const staticArabicVol2 = new Set([
   ...[1,3,7,8].map(n=>"14.1."+n),
   ...[6,7,10,11,12,16,17,18,19,20,21,24,25,28,29,30,31,32,33,36,39,41,42,43].map(n=>"14.2."+n),
   ...[1,4,6,7,8,11,12,13,14,15,16,17,18,19].map(n=>"14.3."+n),
-  ...[1,3,4,7,9,11,12,17,21,22,23,25,27,28,29,33,34,35,36,37,38,40].map(n=>"14.4."+n),
-  ...[1,5,6,7,8,14,15,16,17,18,19,21,22,23,24,26,27,28,29,30,33,34].map(n=>"14.5."+n),
+  ...[1,3,4,7,8,9,11,12,13,17,18,21,22,23,25,26,27,28,29,33,34,35,36,37,38,39,40].map(n=>"14.4."+n),
+  ...[1,2,5,6,7,8,9,14,15,16,17,18,19,20,21,22,23,24,26,27,28,29,30,31,32,33,34].map(n=>"14.5."+n),
   ...[9,11,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30].map(n=>"14.6."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
@@ -660,7 +660,21 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 source Arabic drafts: §1 4/8, §2 24/43, §3 14/19, §4 22/40, §5 22/34, §6 19/31; 105/175 Arabic educational drafts. Nine source-layout flags and three extra known rounding/option defects remain blocked for graded exams.");
+console.log("Unit 14 source Arabic drafts: §1 4/8, §2 24/43, §3 14/19, §4 27/40, §5 27/34, §6 19/31; 115/175 Arabic educational drafts. Nine source-layout flags, three numerical/option source defects, and one orphaned-context question remain excluded from graded practice.");
+// Source §5 Q10 has a dependent, isolated stem and relies on the prior
+// Montero case (§5 Q9): the March/April sales and May expense data do not
+// appear in the isolated question, so prevent it being scored standalone.
+const dependentCase=vol2Records.get("14.5.10");
+const dependentCaseMapped=vol2QuestionById.get("cma-gleim-2025-vol2-su14-s5-q010");
+check(dependentCase?.page===492 && dependentCase.answerIndex===2 &&
+  dependentCase.stem.includes("What was Montero") &&
+  dependentCase.stem.length<150 &&
+  dependentCase.choices[2]==="$(3,260)" &&
+  dependentCaseMapped?.sourceLayoutReview===true &&
+  dependentCaseMapped?.sourceLanguage==="en" &&
+  dependentCaseMapped?.sourceArabicStatus===undefined &&
+  !dependentCase.stemAr && !dependentCase.choicesAr && !dependentCase.explanationAr,
+  "Unit 14 §5 Q10 cannot be scored without the linked Montero case data.");
 // Source question §6 Q21 asks for EBIT rounded to the nearest thousand,
 // yet the original answer options select the unrounded $461,800 rather than
 // the solution's $462,000. Preserve the source and exclude from scored use.
