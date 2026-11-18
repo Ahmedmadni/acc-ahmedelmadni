@@ -672,7 +672,7 @@ test("CMA Unit 14 wave 1: ten initial source-ordered Arabic drafts retain keys a
   ];
   const expected=new Map(reviewed.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,79);
+  assert.equal(rows.filter(q=>q.stemAr).length,95);
   assert.deepEqual(rows.filter(q=>expected.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...expected.keys()]);
   for(const q of rows){
     const id=q.section+"."+q.number;
@@ -747,9 +747,9 @@ test("CMA Unit 14 wave 2: 21 concept translations preserve canonical keys, numer
   const newKeys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(added.length,21);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,79);
+  assert.equal(rows.filter(q=>q.stemAr).length,95);
   assert.deepEqual(rows.filter(q=>newKeys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newKeys.keys()]);
-  const perSection=[0,4,18,13,13,16,15];
+  const perSection=[0,4,21,14,18,20,18];
   for(let s=1;s<=6;s++)assert.equal(rows.filter(q=>q.section===s&&q.stemAr).length,perSection[s]);
   for(const q of rows){
     const id=q.section+"."+q.number;
@@ -789,7 +789,7 @@ test("CMA Unit 14 wave 3: 22 production and cost translations preserve original 
   const keyed=new Map(expected.map(([s,n,key,value])=>[s+"."+n,{key,value}]));
   assert.equal(expected.length,22);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,79);
+  assert.equal(rows.filter(q=>q.stemAr).length,95);
   assert.deepEqual(rows.filter(q=>q.stemAr&&keyed.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
     [...keyed.keys()]);
   const answerNumber=q=>{
@@ -876,7 +876,7 @@ test("CMA Unit 14 wave 4: 18 cash and forecast-profit translations preserve keys
   const keys=new Map(expected.map(([section,number,key,value])=>[section+"."+number,{key,value}]));
   assert.equal(expected.length,18);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,79);
+  assert.equal(rows.filter(q=>q.stemAr).length,95);
   assert.deepEqual(rows.filter(q=>keys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...keys.keys()]);
   for(const [id,{key,value}] of keys){
     const [section,number]=id.split(".").map(Number);
@@ -947,7 +947,7 @@ test("CMA Unit 14 post-#348: 8 non-overlapping Arabic drafts preserve canonical 
   ];
   const newSet=new Map(newRecords.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,79);
+  assert.equal(rows.filter(q=>q.stemAr).length,95);
   assert.deepEqual(rows.filter(q=>newSet.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newSet.keys()]);
   for(const q of rows.filter(x=>newSet.has(x.section+"."+x.number))){
     const id=q.section+"."+q.number;
@@ -1003,4 +1003,101 @@ test("CMA Unit 14 §6 Q31 broken PDF-derived options remain unscored and unmodif
     [{id:"14.6.31",sourceLayoutReview:true},{id:"14.6.25",sourceLayoutReview:false}],false);
   assert.deepEqual(eligible.map(q=>q.id),["14.6.25"]);
   assert.deepEqual(excluded.map(q=>q.id),["14.6.31"]);
+});
+
+
+test("CMA Unit 14 numerical wave 6: 16 newly localized MCQs preserve source fields, key positions and independent arithmetic",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const added=[
+    [2,11,3],[2,12,2],[2,16,3],
+    [3,1,1],
+    [4,3,2],[4,7,1],[4,17,1],[4,25,0],[4,27,2],
+    [5,7,3],[5,17,1],[5,23,3],[5,24,0],
+    [6,15,2],[6,16,1],[6,18,0],
+  ];
+  const keys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
+  assert.equal(added.length,16);
+  assert.equal(rows.length,175);
+  assert.equal(rows.filter(q=>q.stemAr).length,95);
+  assert.deepEqual(rows.filter(q=>keys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
+    [...keys.keys()]);
+  for(const q of rows.filter(q=>keys.has(q.section+"."+q.number))){
+    const id=q.section+"."+q.number;
+    assert.equal(q.answerIndex,keys.get(id),"Source answer key shifted "+id);
+    assert.equal(q.answerStatus,"source");
+    assert.equal(q.sourceTextStatus,undefined);
+    assert.equal(q.choicesAr?.length,4);
+    assert.match(q.stemAr,/[\u0600-\u06ff]/);
+    assert.match(q.explanationAr,/[\u0600-\u06ff]/);
+    const result=validateCmaTranslation(
+      {question:{en:q.stem},choices:{en:q.choices},explanation:{en:q.explanation}},
+      {question:q.stemAr,choices:q.choicesAr,explanation:q.explanationAr});
+    assert.equal(result.valid,true,id+": "+result.reason);
+  }
+  const calc=[
+    ["2.11",480000+50000-80000,450000],
+    ["2.12",500000*2+50000-40000,1010000],
+    ["2.16",200000+200000*1.05+200000*1.05**2+200000*1.05**3*.80-150000,665720],
+    ["3.1",(200000*.5+300000*.5*.20+400000*.5*.70)*.05,13500],
+    ["4.3",120000*.45+140000*.95+160000*.95+150000*.50,414000],
+    ["4.7",120000*.7+100000*.15+90000*.10+70000*.04,110800],
+    ["4.17",90000*.7+80000*.15+70000*.10+60000*.04,84400],
+    ["4.25",340000*.15+370000*.50*.98+370000*.30,343300],
+    ["4.27",700000*.80*.25+750000*.80*.70+750000*.20+25000,735000],
+    ["5.7",-120000+48000+42000+72000+12000,54000],
+    ["5.17",10000000-(20000000+260000000*.90+240000000*.10-240000000-30000000),2000000],
+    ["5.23",75000-(-25000),100000],
+    ["5.24",-(10000+40000-20000-40000),10000],
+    ["6.15",2445790+12600-18900,2439490],
+    ["6.16",4000000+15000000*.05-3000000*.05,4600000],
+    ["6.18",120000*(100-60-(3000000*(1-.55)/100000))-3000000*.55,1530000],
+  ];
+  for(const [id,actual,expected] of calc)
+    assert.ok(Math.abs(actual-expected)<.000001,"Independent calculation mismatch "+id+": "+actual);
+  const q=(s,n)=>rows.find(x=>x.section===s&&x.number===n);
+  assert.equal(q(2,11).choices[3],"450,000 units.");
+  assert.equal(q(2,12).choices[2],"1,010,000 units.");
+  assert.equal(q(2,16).choices[3],"665,720 units.");
+  assert.equal(q(3,1).choices[1],"$13,500");
+  assert.equal(q(4,3).choices[2],"$414,000");
+  assert.equal(q(4,7).choices[1],"$110,800");
+  assert.equal(q(4,17).choices[1],"$84,400");
+  assert.equal(q(4,25).choices[0],"$343,300");
+  assert.equal(q(4,27).choices[2],"$735,000");
+  assert.equal(q(5,7).choices[3],"$54,000 increase.");
+  assert.equal(q(5,17).choices[1],"$2 million");
+  assert.equal(q(5,23).choices[3],"Arrange for $100,000 of short-term borrowing.");
+  assert.equal(q(6,16).choices[1],"$4,600,000");
+  assert.equal(q(6,18).choices[0],"€1,530,000");
+  const grossMargin=(4678500-2439490)/4678500;
+  assert.ok(grossMargin<.5 && grossMargin>.4785 && grossMargin<.4787);
+  assert.match(q(6,15).choices[2],/decrease manufacturing/);
+  assert.equal(q(5,24).answerIndex,0);
+  assert.equal(rows.filter(x=>x.sourceTextStatus).length,9);
+  assert.ok(rows.filter(x=>x.sourceTextStatus).every(x=>!x.stemAr));
+});
+
+test("CMA Unit 14 section 6 question 21: rounded EBIT/source key conflict is not eligible for scored practice",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const q=rows.find(x=>x.section===6&&x.number===21);
+  assert.equal(q.page,551);
+  assert.equal(q.answerIndex,1);
+  assert.equal(q.choices[1],"$461,800");
+  assert.match(q.stem,/nearest\s+thousand/);
+  assert.match(q.explanation,/\$462,000/);
+  const beforeRounding=(2000000*1.05*1.03)-(1200000*1.05*1.02)-(400000*1.04);
+  assert.ok(Math.abs(beforeRounding-461800)<.000001);
+  assert.equal(Math.round(beforeRounding/1000)*1000,462000);
+  assert.equal(q.stemAr,undefined);
+  assert.equal(q.choicesAr,undefined);
+  assert.equal(q.explanationAr,undefined);
+  const mapping=readFileSync(new URL("../../src/data/cma-questions-gleim-2025-vol2.ts",import.meta.url),"utf8");
+  assert.match(mapping,/pendingAnswerConsistencyReviews\s*=\s*new Set\(\["14\.6\.21"\]\)/);
+  const {eligible,excluded}=splitCmaQuizSourceReview([
+    {id:"14.6.21",sourceLayoutReview:true},
+    {id:"14.6.18",sourceLayoutReview:false},
+  ],false);
+  assert.deepEqual(eligible.map(x=>x.id),["14.6.18"]);
+  assert.deepEqual(excluded.map(x=>x.id),["14.6.21"]);
+  assert.equal(isCmaScorableQuestion({sourceLayoutReview:true}),false);
 });

@@ -64,6 +64,13 @@ const pendingSourceLayouts = new Set([
  */
 const pendingAnswerRoundingReviews = new Set(["14.2.23"]);
 
+/** Source §6 Q21 requests rounded Year 2 EBIT, but the source solution
+ * reports $462,000 after rounding while the keyed option is $461,800.
+ * Keep the exact original publisher record and block graded use until checked.
+ * The sourceLayoutReview flag is the shared compatibility safety gate.
+ */
+const pendingAnswerConsistencyReviews = new Set(["14.6.21"]);
+
 /** Source-language items retain their English text while Arabic translation is reviewed. */
 export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
   const topic = topics.get(item.topicId);
@@ -87,7 +94,7 @@ export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,
-    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerRoundingReviews.has(`${item.unit}.${item.section}.${item.number}`),
+    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerRoundingReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerConsistencyReviews.has(`${item.unit}.${item.section}.${item.number}`),
     sourceArabicStatus: hasArabic ? "draft" : undefined,
   };
 });
