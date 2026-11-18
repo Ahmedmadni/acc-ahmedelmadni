@@ -2231,7 +2231,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A schedule of cash receipts and disbursements (cash budget)\nshould include all cash inflows and outflows during the period\nwithout regard to the accrual accounting treatment of the\ntransactions. Thus, it should include all checks written and all\nsources of cash, including borrowings. A borrowing from a\nbank in June Year 1 should appear as a cash receipt for\nYear 1.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية يجب إدراجه عند إعداد جدول المقبوضات والمدفوعات النقدية لشركة عن السنة التقويمية 1؟",
+    "choicesAr": [
+      "أمر شراء صدر في ديسمبر من السنة 1 لبضائع يُتوقع توريدها في فبراير من السنة 2.",
+      "توزيعات أرباح أُعلنت في نوفمبر من السنة 1 ويُقرر سدادها في يناير من السنة 2 للمساهمين المسجلين في ديسمبر من السنة 1.",
+      "مبلغ الحسابات المدينة غير القابلة للتحصيل من العملاء في السنة 1.",
+      "اقتراض أموال من بنك بموجب سند دفع تم الحصول عليه في يونيو من السنة 1، مع الاتفاق على سداد أصل القرض والفائدة في يونيو من السنة 2."
+    ],
+    "explanationAr": "يجب أن يشمل جدول المقبوضات والمدفوعات النقدية (الموازنة النقدية) جميع التدفقات النقدية الداخلة والخارجة خلال الفترة بغض النظر عن المعالجة المحاسبية على أساس الاستحقاق. وهذا يشمل الشيكات الصادرة ومصادر النقدية مثل القروض. وعليه يُدرج الاقتراض البنكي في يونيو من السنة 1 باعتباره مقبوضًا نقديًا للسنة 1."
   },
   {
     "unit": 14,
@@ -2301,7 +2309,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of goods sold was $3,000,000 [$4,000,000 sales ×\n(1.0 – 25% gross margin)]. Purchases equal cost of goods\nsold adjusted for the change in inventories. A decrease in\ninventories signifies that purchases were less than cost of\ngoods sold. Thus, purchases for April were $2,840,000\n($3,000,000 COGS – $160,000 decrease in inventories). A\ndecrease in payables related to inventories indicates that cash\ndisbursements exceeded purchases. Accordingly, the cash\noutflow for inventories was $3,115,000 ($2,840,000 +\n$275,000 decrease in accounts payable).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد الموازنة النقدية لأبريل، وُضعت التوقعات التالية:\nالمبيعات: $4,000,000\nنسبة مجمل الربح إلى المبيعات: 25%\nانخفاض المخزون: 160,000\nانخفاض الحسابات الدائنة المتعلقة بالمخزون: 275,000\nما المدفوعات النقدية المقدرة للمخزون خلال أبريل؟",
+    "choicesAr": [
+      "$3,275,000",
+      "$3,115,000",
+      "$2,840,000",
+      "$2,565,000"
+    ],
+    "explanationAr": "بلغت تكلفة البضاعة المباعة $3,000,000 [مبيعات قدرها $4,000,000 × (1.0 − نسبة مجمل الربح 25%)]. وتساوي المشتريات تكلفة المبيعات بعد تعديلها بالتغير في المخزون. فانخفاض المخزون يعني أن المشتريات أقل من تكلفة المبيعات. لذلك بلغت مشتريات أبريل $2,840,000 ($3,000,000 تكلفة مبيعات − انخفاض المخزون $160,000). ويعني انخفاض الحسابات الدائنة للمخزون أن المدفوعات النقدية تفوق المشتريات. وعليه بلغ التدفق النقدي الخارج للمخزون $3,115,000 ($2,840,000 + انخفاض الحسابات الدائنة $275,000)."
   },
   {
     "unit": 14,
@@ -2318,7 +2334,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The change in cash can be calculated as follows:\nAccrual-basis net income             $100,000\nLess: Capital outlays                  (50,000)\nLess: Increase in working capital      (25,000)\nAdd: Depreciation expense (noncash) 15,000\nIncrease in cash                      $ 40,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أكملت شركة إعداد قوائمها المالية المستقبلية للسنة القادمة، وتتوافر المعلومات التالية:\nصافي الربح المتوقع: $100,000\nالإنفاق الرأسمالي المتوقع: 50,000\nالزيادة في رأس المال العامل: 25,000\nمصروف الإهلاك: 15,000\nما مقدار الزيادة المتوقعة في حساب النقدية خلال السنة القادمة؟",
+    "choicesAr": [
+      "$25,000",
+      "$40,000",
+      "$90,000",
+      "$160,000"
+    ],
+    "explanationAr": "تُحسب الزيادة في النقدية كالتالي:\nصافي الربح على أساس الاستحقاق: $100,000\nيطرح: الإنفاق الرأسمالي: (50,000)\nيطرح: الزيادة في رأس المال العامل: (25,000)\nيضاف: مصروف الإهلاك غير النقدي: 15,000\nالزيادة في النقدية: $40,000"
   },
   {
     "unit": 14,
@@ -2352,7 +2376,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Projected cost of sales is 60% of $2,400,000 of sales, or\n$1,440,000. Projected purchases is the $1,440,000 cost of\nsales less $60,000 projected decrease in inventory which is\n$1,380,000. Projected cash payments is the projected\npurchases of $1,380,000 plus the $100,000 projected\ndecrease in accounts payable, which is $1,480,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أُعدت موازنة شاملة بناء على التوقعات التالية:\nالمبيعات: $2,400,000\nانخفاض المخزون: 60,000\nانخفاض الحسابات الدائنة: 100,000\nهامش مجمل الربح: 40%\nما المدفوعات النقدية المقدرة للمخزون؟",
+    "choicesAr": [
+      "$920,000",
+      "$1,000,000",
+      "$1,400,000",
+      "$1,480,000"
+    ],
+    "explanationAr": "تبلغ تكلفة المبيعات المتوقعة 60% من إجمالي المبيعات البالغ $2,400,000، أي $1,440,000. وتبلغ المشتريات المتوقعة تكلفة المبيعات $1,440,000 ناقص انخفاض المخزون المتوقع $60,000، أي $1,380,000. وتبلغ المدفوعات النقدية المشتريات المتوقعة $1,380,000 مضافًا إليها الانخفاض المتوقع في الحسابات الدائنة بمبلغ $100,000، أي $1,480,000."
   },
   {
     "unit": 14,
@@ -2555,7 +2587,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Collections on account equal beginning accounts receivable of\n$180,000, plus sales on account of $800,000, minus budgeted\nending accounts receivable of $210,000, or $770,000. The\nbeginning cash balance of $50,000, plus cash collections on\naccount of $770,000, minus budgeted cash disbursements of\n$780,000 equals $40,000. Depreciation of $25,000 is\nexcluded because it is a noncash expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة موازنتها النقدية للشهر المقبل. جميع المبيعات آجلة، وتتوفر المعلومات التالية:\nأرصدة أول الفترة:\nالنقدية: $50,000\nالحسابات المدينة: 180,000\nالمبالغ المقدرة:\nالمبيعات: $800,000\nالمدفوعات النقدية: 780,000\nالإهلاك: 25,000\nرصيد الحسابات المدينة آخر الفترة: 210,000\nما رصيد النقدية المتوقع للشركة في نهاية الشهر المقبل؟",
+    "choicesAr": [
+      "$15,000",
+      "$40,000",
+      "$45,000",
+      "$70,000"
+    ],
+    "explanationAr": "التحصيلات الآجلة = الحسابات المدينة أول الفترة $180,000 + المبيعات الآجلة $800,000 − الحسابات المدينة المقدرة آخر الفترة $210,000، وتساوي $770,000. ويبلغ رصيد النقدية أول الفترة $50,000، تضاف إليه التحصيلات الآجلة $770,000 وتطرح المدفوعات النقدية المقدرة $780,000، فيكون رصيد النقدية $40,000. ويُستبعد الإهلاك البالغ $25,000 لأنه مصروف غير نقدي."
   },
   {
     "unit": 14,
@@ -2841,7 +2881,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The cash disbursements for inventory during the period can\nbe calculated as follows:\nCost of goods sold + Decrease in accounts payable for\ninventories – Decrease in inventories\n($4,000,000 × 0.75) + $275,000 – $160,000 = $3,115,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات شركة عن الشهر المنتهي:\nالمبيعات: $4,000,000\nهامش مجمل الربح إلى المبيعات: 25%\nانخفاض المخزون: $160,000\nانخفاض الحسابات الدائنة المتعلقة بالمخزون: $275,000\nما المدفوعات النقدية المقدرة للمخزون؟",
+    "choicesAr": [
+      "$2,565,000",
+      "$2,840,000",
+      "$3,115,000",
+      "$3,275,000"
+    ],
+    "explanationAr": "تُحسب المدفوعات النقدية للمخزون خلال الفترة وفقًا للعلاقة:\nتكلفة البضاعة المباعة + انخفاض الحسابات الدائنة المتعلقة بالمخزون − انخفاض المخزون.\n($4,000,000 × 0.75) + $275,000 − $160,000 = $3,115,000"
   },
   {
     "unit": 14,
@@ -2858,7 +2906,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Cash paid to suppliers is calculated as follows: purchases –\nincrease in accounts payable. The corporation will have\n$54,000,000 ($55,000,000 purchases – $1,000,000 increase\nin accounts payable) as cash paid to suppliers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُظهر الموازنة السنوية لشركة مشتريات مخزون متوقعة بقيمة $55,000,000 من الموردين. وفيما يلي بيانات مختارة من قائمة المركز المالي التقديرية أول الفترة وآخرها:\nالبند | 1 يناير | 31 ديسمبر\nالمخزون: $6,000,000 | $7,500,000\nالحسابات الدائنة: $4,000,000 | $5,000,000\nكم تبلغ النقدية المدفوعة للموردين؟",
+    "choicesAr": [
+      "$56,000,000",
+      "$55,500,000",
+      "$54,500,000",
+      "$54,000,000"
+    ],
+    "explanationAr": "تحسب النقدية المدفوعة للموردين بطرح الزيادة في الحسابات الدائنة من المشتريات. وبذلك تبلغ المدفوعات النقدية $54,000,000 (مشتريات $55,000,000 − زيادة الحسابات الدائنة $1,000,000)."
   },
   {
     "unit": 14,
