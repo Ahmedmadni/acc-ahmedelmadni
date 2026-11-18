@@ -1757,7 +1757,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In the financial budget, the emphasis is on obtaining the funds\nneeded to purchase operating assets. It contains the capital\nbudget, projected cash disbursement schedule, projected\ncash collection schedule, cash budget, pro forma balance\nsheet, and pro forma statement of cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد موازنة تشغيلية وموازنة مالية ضمن نظام الموازنات الشاملة، ما العناصر التي تُدرج في الموازنة المالية؟\nالبنود بالترتيب: الموازنة الرأسمالية — قائمة المركز المالي التقديرية — الموازنة النقدية",
+    "choicesAr": [
+      "نعم — لا — نعم.",
+      "لا — نعم — لا.",
+      "نعم — نعم — نعم.",
+      "لا — لا — لا."
+    ],
+    "explanationAr": "تركز الموازنة المالية على الحصول على الأموال اللازمة لاقتناء الأصول التشغيلية. وتشمل الموازنة الرأسمالية، وجداول المدفوعات والتحصيلات النقدية المقدرة، والموازنة النقدية، وقائمة المركز المالي التقديرية، وقائمة التدفقات النقدية التقديرية."
   },
   {
     "unit": 13,
@@ -1774,7 +1782,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sales forecast drives all the other components of the\noperating budget. How much revenue the firm expects to bring\nin affects every other decision.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما نقطة البداية لإعداد الموازنة الشاملة لمعهد سكرتارية خاص يهدف إلى تحقيق الربح؟",
+    "choicesAr": [
+      "تقدير رواتب المدرسين.",
+      "توقع أعداد الطلاب المسجلين.",
+      "إعداد موازنة الإنفاق الرأسمالي.",
+      "إعداد موازنة استقطاب الطلاب."
+    ],
+    "explanationAr": "تحرك توقعات الإيرادات بقية عناصر الموازنة التشغيلية. ويؤثر الإيراد المتوقع في القرارات الأخرى، لذا يبدأ المعهد بالتنبؤ بأعداد الطلاب الملتحقين."
   },
   {
     "unit": 13,
@@ -1791,7 +1807,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The financial budget normally includes (1) the capital budget,\n(2) the cash budget, (3) the budgeted balance sheet, and\n(4) the budgeted statement of cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية تُدرج عادة ضمن الموازنة المالية للمنشأة؟",
+    "choicesAr": [
+      "موازنة المواد المباشرة.",
+      "موازنة مصروفات البيع.",
+      "قائمة المركز المالي التقديرية.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "تشمل الموازنة المالية عادة: (1) الموازنة الرأسمالية، (2) الموازنة النقدية، (3) قائمة المركز المالي التقديرية، و(4) قائمة التدفقات النقدية التقديرية."
   },
   {
     "unit": 13,
@@ -1808,7 +1832,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The financial budget normally includes the capital budget, the\ncash budget, the budgeted balance sheet, and the budgeted\nstatement of cash flows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن عملية إعداد الموازنة المالية:",
+    "choicesAr": [
+      "الموازنة النقدية.",
+      "الموازنة الرأسمالية.",
+      "قائمة التدفقات النقدية التقديرية.",
+      "جميع الإجابات صحيحة."
+    ],
+    "explanationAr": "تشمل الموازنة المالية عادة الموازنة الرأسمالية والموازنة النقدية وقائمة المركز المالي التقديرية وقائمة التدفقات النقدية التقديرية."
   },
   {
     "unit": 13,
@@ -1825,7 +1857,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The starting point for the annual budget is the sales forecast.\nAll other aspects of the budget, including production, costs,\nand inventory levels, rely on projected sales figures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبدأ عملية إعداد الموازنة التشغيلية عادة بـ:",
+    "choicesAr": [
+      "الموازنة المالية.",
+      "قائمة المركز المالي.",
+      "قائمة الدخل.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "تُعد توقعات المبيعات نقطة البداية للموازنة السنوية؛ إذ تعتمد عليها بقية عناصر الموازنة، ومنها الإنتاج والتكاليف ومستويات المخزون."
   },
   {
     "unit": 13,
@@ -1842,7 +1882,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods manufactured equals all manufacturing costs\nincurred during the period, plus beginning work-in-process\ninventory, minus ending work-in-process inventory. The cost of\ngoods manufactured schedule therefore includes direct\nmaterials, direct labor, factory overhead, and changes in work-\nin-process inventories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة جرارات زراعية. من أي الجداول التالية يجب استخلاص تفاصيل تكلفة البضاعة المصنعة المخططة؟",
+    "choicesAr": [
+      "تكلفة البضاعة المباعة بعد تعديلها بالتغير المخطط في مخزون المنتجات التامة.",
+      "المواد المباشرة المستخدمة، والعمل المباشر، والتكاليف الصناعية غير المباشرة، والإنتاج تحت التشغيل.",
+      "المشتريات، والعمل المباشر، والتكاليف الصناعية غير المباشرة، والمنتجات التامة، والإنتاج تحت التشغيل.",
+      "المشتريات، والمواد الخام، والإنتاج تحت التشغيل، والمنتجات التامة."
+    ],
+    "explanationAr": "تساوي تكلفة البضاعة المصنعة تكاليف التصنيع المتكبدة خلال الفترة مضافًا إليها مخزون الإنتاج تحت التشغيل أول المدة ومطروحًا منها مخزونه آخر المدة. لذلك يضم جدولها المواد المباشرة والعمل المباشر والتكاليف الصناعية غير المباشرة والتغير في مخزون الإنتاج تحت التشغيل."
   },
   {
     "unit": 13,
@@ -1859,7 +1907,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The starting point for the annual budget is the sales forecast.\nAll other aspects of the budget, including production, costs,\nand inventory levels, rely on projected sales figures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد الموازنة الشاملة لشركة صناعية، ما الخطوة التي ينبغي تنفيذها أولًا؟",
+    "choicesAr": [
+      "إعداد خطة المبيعات.",
+      "تحديد الطاقة الإنتاجية للمصنع.",
+      "إعداد الموازنة الرأسمالية.",
+      "تحديد موازنة الإعلان."
+    ],
+    "explanationAr": "تُعد توقعات المبيعات نقطة البداية للموازنة السنوية؛ إذ تعتمد عليها موازنات الإنتاج والتكاليف والمخزون."
   },
   {
     "unit": 13,
@@ -1876,7 +1932,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Production quantities are not identical to sales because of\nchanges in inventory levels. Both finished goods and work-in-\nprocess inventories may change during a period, thus\nnecessitating an analysis of both inventory levels before the\nproduction budget can be set.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند الانتقال من موازنة كميات المبيعات إلى موازنة الإنتاج في منشأة صناعية، ما الذي يجب مراعاته؟",
+    "choicesAr": [
+      "التغير المتوقع في مخزون الإنتاج تحت التشغيل فقط.",
+      "التغير المتوقع في كميات مخزون المنتجات التامة والإنتاج تحت التشغيل.",
+      "التغير المتوقع في كميات مخزون المنتجات التامة والمواد الخام.",
+      "التغير المتوقع في توفر المواد الخام دون مراعاة المخزون."
+    ],
+    "explanationAr": "لا تتساوى كميات الإنتاج دائمًا مع المبيعات نتيجة تغير مستويات المخزون. وقد يتغير مخزون المنتجات التامة ومخزون الإنتاج تحت التشغيل خلال الفترة؛ ولذلك يتطلب إعداد موازنة الإنتاج تحليلًا لهذين المخزونين."
   },
   {
     "unit": 13,
@@ -1893,7 +1957,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The sales budget is the first step in the operating budget\nprocess because it is needed to prepare all of the other\nbudgets. For example, the production budget cannot be\nprepared until the sales department has determined how\nmany units are needed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بعد تحديد أهداف المنشأة وإبلاغها، ما الخطوة التالية في عملية التخطيط؟",
+    "choicesAr": [
+      "موازنة الإنتاج.",
+      "موازنة المواد المباشرة.",
+      "موازنة المصروفات البيعية والإدارية.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "موازنة المبيعات أولى خطوات إعداد الموازنة التشغيلية، لأنها مدخل ضروري لإعداد بقية الموازنات. ولا يمكن وضع موازنة الإنتاج قبل معرفة عدد الوحدات المطلوب بيعها."
   },
   {
     "unit": 13,
@@ -1910,7 +1982,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Neither a master budget nor a production budget can be\nprepared until after the sales budget has been completed.\nOnce a firm knows its expected sales, production can be\nestimated. The production budget is based on assumptions\nappearing in the sales budget; thus, the sales budget is the\nfirst step in the preparation of a production budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبدأ عملية إعداد موازنة الإنتاج عادة بـ:",
+    "choicesAr": [
+      "موازنة العمل المباشر.",
+      "موازنة المواد المباشرة.",
+      "موازنة التكاليف الصناعية غير المباشرة.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "لا يمكن إعداد الموازنة الشاملة أو موازنة الإنتاج قبل إكمال موازنة المبيعات. وعند معرفة المبيعات المتوقعة يمكن تقدير الإنتاج اللازم، وتستند موازنة الإنتاج إلى افتراضات موازنة المبيعات."
   },
   {
     "unit": 13,
