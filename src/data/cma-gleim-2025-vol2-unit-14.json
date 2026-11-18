@@ -2455,7 +2455,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The net change in expected cash receipts and disbursements\nis determined by adjusting the net loss. The purchase of\nequipment on credit does not affect cash or the net loss.\nDepreciation expense and the accrual of an estimated\nwarranty liability are noncash expenses that are added back to\nthe net loss. The net loss should also be adjusted for the\ndifference between cost of sales (included in the determination\nof the net loss) and cash paid to suppliers. This adjustment\nhas two parts: (1) The difference between cost of sales and\npurchases equals the change in inventory, and (2) purchases\nmust have exceeded cash paid to suppliers because accounts\npayable increased. Given that inventory is not expected to\nchange, cost of sales exceeds the cash to be paid to suppliers\nby the amount of the increase in accounts payable. The\nincrease must be added back to the net loss. A decrease in\naccounts receivable means that cash collections exceeded\nsales. Accordingly, this decrease is also added back to the net\nloss. The expected increase in cash position is $54,000\n[$(120,000) net loss + $42,000 depreciation + $12,000\nwarranty liability + $48,000 increase in accounts payable +\n$72,000 decrease in accounts receivable].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وضعت شركة موازنتها التشغيلية لشهر أغسطس دون توقع أي تغير في مستوى المخزون. وفيما يلي بيانات مختارة بالقيم المقدرة:\nصافي الخسارة $(120,000)\nزيادة الحسابات الدائنة 48,000\nمصروف الإهلاك 42,000\nانخفاض إجمالي أرصدة الحسابات المدينة التجارية 72,000\nشراء معدات بشروط ائتمان 90 يوما 18,000\nمخصص التزام ضمان مقدر 12,000\nما التغير المتوقع في المركز النقدي خلال أغسطس؟",
+    "choicesAr": [
+      "انخفاض بمقدار $18,000.",
+      "انخفاض بمقدار $30,000.",
+      "زيادة بمقدار $36,000.",
+      "زيادة بمقدار $54,000."
+    ],
+    "explanationAr": "يحدد صافي التغير في المقبوضات والمدفوعات النقدية بتعديل صافي الخسارة. ولا يؤثر شراء المعدات بالآجل على النقدية أو صافي الخسارة. ويضاف الإهلاك والمصروف المستحق المتعلق بالضمان إلى صافي الخسارة لكونهما غير نقديين. كذلك يجب تعديل الفرق بين تكلفة المبيعات والمدفوع للموردين، ويتكون هذا التعديل من جزأين: (1) الفرق بين تكلفة المبيعات والمشتريات يساوي تغير المخزون، و(2) زيادة الحسابات الدائنة تعني أن المشتريات تجاوزت المدفوع للموردين. وبما أن المخزون لا يتغير، تضاف زيادة الحسابات الدائنة إلى صافي الخسارة. كما يعني انخفاض الحسابات المدينة أن التحصيلات تفوق المبيعات، ويضاف هذا الانخفاض أيضا. وبذلك تكون الزيادة المتوقعة في النقدية $54,000 [خسارة صافية $(120,000) + إهلاك $42,000 + مخصص ضمان $12,000 + زيادة الحسابات الدائنة $48,000 + انخفاض الحسابات المدينة $72,000]."
   },
   {
     "unit": 14,
@@ -2641,7 +2649,15 @@
     ],
     "answerIndex": 1,
     "explanation": "During the coming year, the corporation will have a beginning\nbalance of $20,000,000, along with cash inflows from current-\nyear sales of $234,000,000 (90% × $260,000,000) and cash\ninflow from previous-year sales of $24,000,000\n(10% × $240,000,000). There will be total cash outflow of\n$270,000,000 ($240,000,000 expenses + $30,000,000 capital\nimprovements). Therefore, at the end of the year, the cash\nbalance will be $8,000,000, requiring $2,000,000 of cash\nfinancing to stay above $10,000,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بلغت مبيعات شركة في نهاية السنة الحالية $240 مليون، وبلغ رصيد النقدية النهائي $20 مليون. وتتوقع أن تبلغ المبيعات في السنة المقبلة $260 مليون. وفي المتوسط يجري تحصيل 10% من مبيعات كل سنة خلال السنة التالية. افترض عدم وجود حسابات غير قابلة للتحصيل. وتتوقع الشركة مصروفات نقدية بقيمة $240 مليون وإهلاكا بمبلغ $5 مليون. وتخطط لإنفاق $30 مليون نقدا على تحسينات رأسمالية خلال السنة التالية. وإذا كانت سياستها الاحتفاظ بحد أدنى قدره $10 مليون من النقدية في بداية كل سنة، فكم تمويلا خارجيا تشير توقعات التدفقات النقدية إلى أنها ستحتاج؟",
+    "choicesAr": [
+      "$0",
+      "$2 مليون",
+      "$7 مليون",
+      "$26 مليون"
+    ],
+    "explanationAr": "خلال السنة القادمة، يتوافر للشركة رصيد نقدي أولي $20,000,000، إضافة إلى تدفقات نقدية داخلة من مبيعات السنة الحالية قدرها $234,000,000 (90% × $260,000,000)، وتحصيلات من مبيعات السنة الماضية قدرها $24,000,000 (10% × $240,000,000). وتبلغ التدفقات النقدية الخارجة $270,000,000 ($240,000,000 مصروفات نقدية + $30,000,000 تحسينات رأسمالية). لذلك يكون رصيد النقدية في نهاية السنة $8,000,000، مما يستلزم تمويلا بقيمة $2,000,000 حتى يبقى الرصيد عند حد $10,000,000 على الأقل."
   },
   {
     "unit": 14,
