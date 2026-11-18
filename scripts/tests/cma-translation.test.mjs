@@ -1114,7 +1114,7 @@ test("CMA Unit 14 wave 7: ten audited material, cash and cost translations prese
   const q=(s,n)=>rows.find(x=>x.section===s&&x.number===n);
   assert.equal(cohort.length,10);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(x=>x.stemAr).length,105);
+  assert.equal(rows.filter(x=>x.stemAr).length,115);
   assert.deepEqual(rows.filter(x=>keys.has(x.section+"."+x.number)).map(x=>x.section+"."+x.number),
     [...keys.keys()]);
   for(const item of rows.filter(x=>keys.has(x.section+"."+x.number))){
