@@ -2662,7 +2662,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Short-term cash requirements at the end of February can be\ncalculated as follows:\nBeginning cash balance                         $ 30,000\nCollections on December sales (in January)       200,000\nCollections on January sales (in February)       200,000\nDisbursements for inventory (in January)        (210,000)\nDisbursements for inventory (in February)       (240,000)\nDisbursements for other expenses (in January)     (20,000)\nDisbursements for other expenses (in February) (20,000)\nMinimum balance requirement                       (10,000)\nShortfall                                     $ (70,000)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد منشأة توقعا نقديا بناء على المعلومات التالية:\n• المبيعات الشهرية: ديسمبر $200,000؛ يناير $200,000؛ فبراير $350,000؛ مارس $400,000.\n• جميع المبيعات آجلة وتُحصل في الشهر التالي للبيع.\n• تبلغ المشتريات 60% من مبيعات الشهر التالي وتُسدد خلال شهر الشراء.\n• المصروفات الشهرية الأخرى $25,000، منها إهلاك قدره $5,000.\nإذا كان رصيد النقدية في بداية يناير $30,000، ويجب الاحتفاظ بحد أدنى قدره $10,000، فما الاقتراض قصير الأجل المطلوب في نهاية فبراير؟ وتسدد القروض خلال الشهر التالي، حتى لو تطلب ذلك اقتراضا إضافيا في نهاية الشهر.",
+    "choicesAr": [
+      "$60,000",
+      "$70,000",
+      "$75,000",
+      "$80,000"
+    ],
+    "explanationAr": "يمكن حساب الاحتياج النقدي قصير الأجل في نهاية فبراير كما يلي:\nرصيد النقدية أول الفترة: $30,000\nتحصيل مبيعات ديسمبر خلال يناير: 200,000\nتحصيل مبيعات يناير خلال فبراير: 200,000\nمدفوعات المخزون في يناير: (210,000)\nمدفوعات المخزون في فبراير: (240,000)\nمدفوعات المصروفات الأخرى في يناير: (20,000)\nمدفوعات المصروفات الأخرى في فبراير: (20,000)\nالحد الأدنى المطلوب للنقدية: (10,000)\nالعجز النقدي: $(70,000)"
   },
   {
     "unit": 14,
@@ -2679,7 +2687,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Short-term borrowing needs can be calculated as follows:\nBeginning cash balance                           $ 85,000\nCollections on January sales (in March)              60,000\nDisbursements for January inventory (in February) (35,000)\nDisbursements for February inventory (in March)      (40,000)\nDisbursements for other expenses ($25,000 × 3)       (75,000)\nMinimum balance requirement                           (5,000)\nShortfall                                          $ (10,000)",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة نشاطها في السنة الأولى، وكان رصيد النقدية أول الربع $85,000. ولديها تسهيل ائتماني قصير الأجل بقيمة $50,000. وفيما يلي موازنة الربع الأول:\nالبند | يناير | فبراير | مارس\nالمبيعات: $60,000 | $40,000 | $50,000\nالمشتريات: 35,000 | 40,000 | 75,000\nالتكاليف التشغيلية: 25,000 | 25,000 | 25,000\nجميع المبيعات آجلة وتحصل في الشهر الثاني بعد البيع. وتسدد المشتريات في الشهر التالي لشرائها، بينما تسدد التكاليف التشغيلية خلال الشهر الذي تنشأ فيه. كم يجب أن تقترض الشركة في نهاية الربع إذا لزم الحفاظ على حد أدنى للنقدية قدره $5,000 بموجب تعهد القرض؟",
+    "choicesAr": [
+      "$0",
+      "$5,000",
+      "$10,000",
+      "$45,000"
+    ],
+    "explanationAr": "يمكن حساب الاحتياج إلى اقتراض قصير الأجل كما يلي:\nرصيد النقدية أول الفترة: $85,000\nتحصيل مبيعات يناير في مارس: 60,000\nمدفوعات مخزون يناير في فبراير: (35,000)\nمدفوعات مخزون فبراير في مارس: (40,000)\nمدفوعات المصروفات الأخرى ($25,000 × 3): (75,000)\nالحد الأدنى المطلوب للنقدية: (5,000)\nالعجز النقدي: $(10,000)"
   },
   {
     "unit": 14,
@@ -3780,7 +3796,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The incremental effects of all three of the potential events must\nbe considered.\n• Of the $6,000,000 cost of goods sold, 30% is direct\nlabor. Thus, direct labor costs are currently $1,800,000.\nAn increase by 3.5% will result in direct labor costs of\n$1,863,000 ($1,800,000 × 1.035).\n• Fifty percent of cost of goods sold relates to direct\nmaterials. Thus, direct materials costs are currently\n$3,000,000. If 20% of those costs increases by 5%,\ntotal direct materials cost will be $3,030,000\n[$3,000,000 × (0.8 + 0.2 × 1.05)].\n• The elimination of sales commissions with an equal\nincrease of sales salaries will have no change on\noperating income because it will lead to the same\namount of money paid to salespeople.\nWith these new values for direct materials and direct labor, the\nincremental change in cost of goods sold and thus the\nincremental change in operating income can be calculated.\nDirect materials costs increased by $30,000 ($3,030,000 –\n$3,000,000), and direct labor costs increased by $63,000\n($1,863,000 – $1,800,000). The total increase in cost of goods\nsold is $93,000. An increase in expenses causes a decrease in\noperating income. Thus, operating income will decrease by\n$93,000 if the events listed occur.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة ستوني بروك معدات زخرفية تستخدمها شركات تشييد المنازل وتباع في متاجر التجزئة. وتتميز السوق بمنافسة شديدة تجعل رفع الأسعار صعبا. وتظهر الموازنة الشاملة للسنة المقبلة:\nالمبيعات: $8,400,000\nتكلفة البضاعة المباعة*: 6,000,000\nالإعلان: 500,000\nرواتب البيع: 400,000\nعمولات البيع: 168,000\nالمصروفات الإدارية: 350,000\nالربح التشغيلي: $982,000\n* تتكون تكلفة البضاعة المباعة من 50% مواد مباشرة، و30% عمل مباشر، و20% تكاليف صناعية غير مباشرة ثابتة.\nوقد تؤثر الأحداث التالية في الموازنة:\n• إعادة التفاوض على عقد نقابي ينتج عنها زيادة أجور عمال المصنع بنسبة 3.5%.\n• ارتفاع تكلفة المواد بنسبة 5% على شريحة تمثل 20% من المواد.\n• إلغاء عمولات البيع مع زيادة رواتب البيع بالقيمة نفسها.\nإذا حدثت جميع هذه الأحداث، فما التغير الإضافي في الربح التشغيلي للشركة؟",
+    "choicesAr": [
+      "انخفاض بمقدار $123,000.",
+      "انخفاض بمقدار $93,000.",
+      "زيادة بمقدار $45,000.",
+      "زيادة بمقدار $75,000."
+    ],
+    "explanationAr": "يجب احتساب الآثار الإضافية للأحداث الثلاثة جميعا.\n• من تكلفة البضاعة المباعة البالغة $6,000,000، يمثل العمل المباشر 30%، أي أن تكلفته الحالية $1,800,000. وتؤدي زيادة 3.5% إلى تكلفة عمل مباشر جديدة $1,863,000 ($1,800,000 × 1.035).\n• تمثل المواد المباشرة نصف تكلفة البضاعة المباعة، أي أن تكلفتها الحالية $3,000,000. وإذا زادت تكلفة 20% منها بنسبة 5%، فتصبح تكلفة المواد المباشرة $3,030,000 [$3,000,000 × (0.8 + 0.2 × 1.05)].\n• إلغاء عمولات البيع مقابل زيادة مساوية في رواتب البيع لا يغير الربح التشغيلي لأن المدفوعات للبائعين لا تتغير.\nبناء على القيم الجديدة للمواد والعمل المباشر، يمكن حساب التغير الإضافي في تكلفة البضاعة المباعة والربح التشغيلي. زادت تكلفة المواد المباشرة $30,000 ($3,030,000 − $3,000,000)، وزادت تكلفة العمل المباشر $63,000 ($1,863,000 − $1,800,000). ويبلغ إجمالي زيادة تكلفة البضاعة المباعة $93,000، ما يؤدي إلى انخفاض الربح التشغيلي بمقدار $93,000 عند وقوع هذه الأحداث."
   },
   {
     "unit": 14,
