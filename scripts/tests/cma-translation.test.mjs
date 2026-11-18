@@ -501,35 +501,67 @@ test("Independent arithmetic audits are not mistaken for publisher PDF verificat
 });
 
 
-test("CMA Unit 13 Section 1 first 24 budget foundations questions have complete Arabic source drafts",()=>{
+
+test("CMA Unit 13 sections 1 and 2: exactly 57 complete Arabic drafts preserve source keys",()=>{
   const unit13=JSON.parse(readFileSync(
-    new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8",
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8"
   ));
-  const section=unit13.filter(row=>row.section===1);
-  const answers=[3,3,3,3,2,1,3,3,3,3,1,1,1,3,3,3,3,3,3,3,0,1,1,2];
+  const s1=unit13.filter(q=>q.section===1);
+  const s2=unit13.filter(q=>q.section===2);
+  const keys1=[
+    3,3,3,3,2,1,3,3,3,3,1,1,1,3,3,3,3,3,3,3,0,1,1,2,
+    3,2,2,3,2,3,2,3,0,3,2,3,1,1,3,1,2,1,0,2
+  ];
+  const keys2=[3,2,1,3,3,3,3,2,2,0,2,3,2,1];
   assert.equal(unit13.length,123);
-  assert.equal(section.length,44);
-  assert.deepEqual(section.map(q=>q.number),Array.from({length:44},(_,i)=>i+1));
-  assert.deepEqual(unit13.filter(q=>q.section===1&&q.stemAr).map(q=>q.number),
-    Array.from({length:24},(_,i)=>i+1));
-  for(const row of section.slice(0,24)){
-    assert.equal(row.answerIndex,answers[row.number-1],
-      "Canonical source answer index changed for Unit 13 §1 Q"+row.number);
-    assert.equal(row.choicesAr?.length,4,
-      "Arabic choice count changed for Unit 13 §1 Q"+row.number);
+  assert.equal(s1.length,44);
+  assert.equal(s2.length,14);
+  assert.deepEqual(s1.map(q=>q.number),Array.from({length:44},(_,i)=>i+1));
+  assert.deepEqual(s2.map(q=>q.number),Array.from({length:14},(_,i)=>i+1));
+  const localized=[...s1.filter(q=>q.number!==34),...s2];
+  assert.equal(localized.length,57);
+  for(const q of localized){
+    assert.equal(q.answerIndex,q.section===1?keys1[q.number-1]:keys2[q.number-1],
+      "Source answer changed Unit 13 §"+q.section+" Q"+q.number);
+    assert.equal(q.choicesAr?.length,4);
     const checked=validateCmaTranslation(
-      {question:{en:row.stem},choices:{en:row.choices},explanation:{en:row.explanation}},
-      {question:row.stemAr,choices:row.choicesAr,explanation:row.explanationAr},
+      {question:{en:q.stem},choices:{en:q.choices},explanation:{en:q.explanation}},
+      {question:q.stemAr,choices:q.choicesAr,explanation:q.explanationAr}
     );
     assert.equal(checked.valid,true,
-      "Source-field numeric/choice integrity broken: Unit 13 §1 Q"+row.number+" "+checked.reason);
-    assert.match(row.stemAr,/[\u0600-\u06ff]/);
-    assert.match(row.explanationAr,/[\u0600-\u06ff]/);
-    assert.ok(row.choicesAr.every(choice=>typeof choice==="string"&&choice.trim()!==""));
-    assert.equal(row.sourceTextStatus,undefined);
+      "Arabic numeric/choice mismatch Unit 13 §"+q.section+" Q"+q.number+": "+checked.reason);
+    assert.match(q.stemAr,/[\u0600-\u06ff]/);
+    assert.match(q.explanationAr,/[\u0600-\u06ff]/);
+    assert.ok(q.choicesAr.every(c=>typeof c==="string"&&c.trim()!==""));
+    assert.equal(q.sourceTextStatus,undefined);
   }
-  assert.ok(section.slice(24).every(q=>q.stemAr===undefined &&
-    q.choicesAr===undefined && q.explanationAr===undefined));
-  assert.ok(unit13.filter(q=>q.section!==1).every(q=>
-    q.stemAr===undefined && q.choicesAr===undefined && q.explanationAr===undefined));
+  const q34=s1.find(q=>q.number===34);
+  assert.equal(q34?.page,248);
+  assert.equal(q34?.sourceTextStatus,"table-reflowed");
+  assert.equal(q34?.answerIndex,keys1[33]);
+  assert.equal(q34?.stemAr,undefined);
+  assert.equal(q34?.choicesAr,undefined);
+  assert.equal(q34?.explanationAr,undefined);
+  assert.deepEqual(unit13.filter(q=>q.stemAr).map(q=>q.section+"."+q.number),
+    localized.map(q=>q.section+"."+q.number));
+  assert.ok(unit13.filter(q=>q.section>=3).every(q=>q.stemAr===undefined &&
+    q.choicesAr===undefined&&q.explanationAr===undefined));
+});
+
+test("CMA Unit 13 standard oak and screw price change produces the keyed $44.20",()=>{
+  const oldOak=10*3.50;
+  const oldScrews=12*.50;
+  assert.equal(oldOak+oldScrews,41);
+  const expected=Math.round((oldOak*1.10+oldScrews*.95)*100)/100;
+  assert.equal(expected,44.20);
+  const unit13=JSON.parse(readFileSync(
+    new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8"
+  ));
+  const q=unit13.find(q=>q.section===2&&q.number===11);
+  assert.equal(q.answerIndex,2);
+  assert.equal(q.choices[q.answerIndex],"$44.20");
+  assert.equal(q.choicesAr[q.answerIndex],"$44.20");
+  const glass=unit13.find(q=>q.section===2&&q.number===2);
+  assert.equal(glass.answerIndex,2);
+  assert.match(glass.choicesAr[glass.answerIndex],/معيار نظري/);
 });
