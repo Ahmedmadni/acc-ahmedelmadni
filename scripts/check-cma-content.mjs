@@ -595,11 +595,11 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:11},(_,i)=>"13.3."+(i+24)),
   ...Array.from({length:31},(_,i)=>"13.4."+(i+1)),
   ...[1,3,7,8].map(n=>"14.1."+n),
-  ...[6,7,10,11,12,16,19,20,21,24,25,29,30,31,32,33,36,39,41,42,43].map(n=>"14.2."+n),
+  ...[6,7,10,11,12,16,17,18,19,20,21,24,25,28,29,30,31,32,33,36,39,41,42,43].map(n=>"14.2."+n),
   ...[1,4,6,7,8,11,12,13,14,15,16,17,18,19].map(n=>"14.3."+n),
-  ...[1,3,4,7,9,11,12,17,21,23,25,27,28,33,34,35,36,40].map(n=>"14.4."+n),
-  ...[1,5,6,7,8,16,17,18,19,21,22,23,24,26,27,28,29,30,33,34].map(n=>"14.5."+n),
-  ...[9,11,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29].map(n=>"14.6."+n),
+  ...[1,3,4,7,9,11,12,17,21,22,23,25,27,28,29,33,34,35,36,37,38,40].map(n=>"14.4."+n),
+  ...[1,5,6,7,8,14,15,16,17,18,19,21,22,23,24,26,27,28,29,30,33,34].map(n=>"14.5."+n),
+  ...[9,11,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30].map(n=>"14.6."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -660,7 +660,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 source Arabic drafts: §1 4/8, §2 21/43, §3 14/19, §4 18/40, §5 20/34, §6 18/31; 95/175 source drafts. Nine original layout flags, Q14.2.23 whole-unit rounding, Q14.6.21 rounded EBIT contradiction, and Q14.6.31 broken option boundaries remain under review.");
+console.log("Unit 14 source Arabic drafts: §1 4/8, §2 24/43, §3 14/19, §4 22/40, §5 22/34, §6 19/31; 105/175 Arabic educational drafts. Nine source-layout flags and three extra known rounding/option defects remain blocked for graded exams.");
 // Source question §6 Q21 asks for EBIT rounded to the nearest thousand,
 // yet the original answer options select the unrounded $461,800 rather than
 // the solution's $462,000. Preserve the source and exclude from scored use.
