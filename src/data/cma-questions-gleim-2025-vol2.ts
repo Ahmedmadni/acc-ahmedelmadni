@@ -55,7 +55,14 @@ const pendingSourceLayouts = new Set([
   "12.3.34", "12.3.35", "12.3.36",
 ]);
 
-/** An ambiguous required-whole-unit rounding outcome should not earn a score\n * until the source answer rationale and rounding convention are verified.\n * This uses the existing source-review exclusion flag for compatibility with\n * all scored quiz entry points; the original imported record is unchanged.\n */\nconst pendingAnswerRoundingReviews = new Set(["14.2.23"]);\n\n/** Source-language items retain their English text while Arabic translation is reviewed. */
+/** An ambiguous required-whole-unit rounding outcome should not earn a score
+ * until the source answer rationale and rounding convention are verified.
+ * This uses the existing source-review exclusion flag for compatibility with
+ * all scored quiz entry points; the original imported record is unchanged.
+ */
+const pendingAnswerRoundingReviews = new Set(["14.2.23"]);
+
+/** Source-language items retain their English text while Arabic translation is reviewed. */
 export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
   const topic = topics.get(item.topicId);
   const hasArabic = hasCompleteArabic(item);
