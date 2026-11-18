@@ -1284,7 +1284,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Capital budgeting is the process of planning expenditures for\nlong-lived assets. It involves choosing among investment\nproposals using a ranking procedure. Evaluations are based\non various measures involving the IRR.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي وصف مما يلي يُعد الأدق للموازنة الرأسمالية؟ فالموازنة الرأسمالية هي:",
+    "choicesAr": [
+      "خطة لضمان توافر أموال كافية لتغطية الاحتياجات التشغيلية للشركة.",
+      "عملية لتحديد الأهداف بعيدة المدى للشركة، مع مراعاة التأثيرات الخارجية الناجمة عن أطراف السوق.",
+      "خطة لتحديد الاحتياجات النقدية خلال دورة التشغيل.",
+      "خطة لتقييم احتياجات الشركة طويلة الأجل لشراء المباني والآلات والمعدات."
+    ],
+    "explanationAr": "إعداد الموازنة الرأسمالية هو عملية تخطيط النفقات المتعلقة بالأصول طويلة العمر. وتتضمن المفاضلة بين مقترحات الاستثمار وترتيبها وفق معايير للتقييم، منها معدل العائد الداخلي (IRR)."
   },
   {
     "unit": 14,
@@ -1831,7 +1839,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The capital budget concerns financing of major expenditures\nfor long-term assets. Management can use a capital budget to\nrank projects according to their risk and return characteristics,\nwhich is necessary because every organization has finite\nresources.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحدد شركة مشروعات تتطلب تخصيص مبالغ كبيرة، وتقيمها وتختار من بينها، وتُتوقع لهذه المشروعات منافع تمتد إلى المستقبل البعيد. وستراجع الشركة موازنة كل مشروع طوال دورة حياته وتفاضل بين بدائل عديدة. هذا مثال على:",
+    "choicesAr": [
+      "موازنة متجددة لأنها تحتاج معلومات لفترات متعددة.",
+      "موازنة مرنة لأنها تستطيع إعداد الموازنة وفق عدة بدائل.",
+      "موازنة رأسمالية للمساعدة على تقييم المشروعات وتحديدها.",
+      "موازنة على أساس الأنشطة لتقييم جميع أنشطة كل مشروع."
+    ],
+    "explanationAr": "تختص الموازنة الرأسمالية بتمويل الإنفاق الكبير على الأصول طويلة الأجل. وتساعد الإدارة على ترتيب المشروعات وفق المخاطر والعوائد المتوقعة، لأن الموارد المالية المتاحة لأي منشأة محدودة."
   },
   {
     "unit": 14,
@@ -1848,7 +1864,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The capital budget assesses the long-term needs of the\ncompany for plant and equipment purchases to plan financing\nof major expenditures for such plant and equipment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأوصاف التالية هو الأدق للموازنة الرأسمالية؟",
+    "choicesAr": [
+      "تضمن توافر الأموال الكافية لتلبية الاحتياجات التشغيلية للشركة.",
+      "تحدد أهداف الشركة طويلة الأجل مع مراعاة جميع الموارد المتاحة.",
+      "تحدد الاحتياجات النقدية خلال دورة التشغيل.",
+      "تقيّم احتياجات الشركة طويلة الأجل لشراء المباني والآلات والمعدات."
+    ],
+    "explanationAr": "تقيّم الموازنة الرأسمالية الاحتياجات طويلة الأجل لشراء المباني والآلات والمعدات من أجل التخطيط لتمويل النفقات الكبيرة المرتبطة بها."
   },
   {
     "unit": 14,
@@ -2224,7 +2248,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Non-routine property sales could result in large fluctuations of\ncash and should be considered for medium- and long-term\nforecasting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية ينبغي مراعاته بصورة خاصة عند إعداد توقعات النقدية متوسطة وطويلة الأجل؟",
+    "choicesAr": [
+      "تكلفة المشروعات الرأسمالية قبل الضريبة.",
+      "الإهلاك الشهري الحالي.",
+      "أثر تجزئة الأسهم.",
+      "مبيعات العقارات غير المتكررة."
+    ],
+    "explanationAr": "قد تؤدي مبيعات العقارات غير المتكررة إلى تقلبات كبيرة في التدفقات النقدية؛ لذلك يجب مراعاتها عند وضع التوقعات النقدية متوسطة وطويلة الأجل."
   },
   {
     "unit": 14,
@@ -2258,7 +2290,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cash budget is a schedule showing the expected cash\nreceipts and disbursements. Thus, knowing the timing of cash\nreceipts and disbursements is essential in preparing this\nbudget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبدأ شركة تجارية إعداد الموازنة النقدية للفترة نفسها ضمن عملية إعداد الموازنة الشاملة. أي المعلومات الإضافية التالية ستكون الأكثر فائدة للإدارة عند إعداد الموازنة النقدية؟",
+    "choicesAr": [
+      "سياسات البيع الآجل وشروط الشراء والاستحواذات الرأسمالية المخطط لها.",
+      "الإيرادات المتوقعة والمصروفات المتوقعة وأنشطة التمويل المزمع تنفيذها.",
+      "السياسات الائتمانية والمصروفات المتوقعة وسياسات شراء المخزون.",
+      "مشتريات المواد المباشرة المخطط لها والعمل المباشر المخطط وشروط الشراء."
+    ],
+    "explanationAr": "الموازنة النقدية جدول يوضح المقبوضات والمدفوعات النقدية المتوقعة؛ لذلك يلزم معرفة توقيت التحصيل والسداد عند إعدادها."
   },
   {
     "unit": 14,
@@ -2309,7 +2349,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The cash budget is perhaps the most important part of a\ncompany’s budget program. A cash budget facilitates planning\nfor loans and other financing. Additionally, a firm should plan\nhow to invest temporary surpluses of cash.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد المنشأة موازنة نقدية سنوية بهدف:",
+    "choicesAr": [
+      "دعم إعداد قائمة التدفقات النقدية للتقرير السنوي.",
+      "تحديد مشروعات الإنفاق الرأسمالي الممكنة وتلك التي ينبغي تأجيلها.",
+      "تحديد تكاليف الفرصة البديلة لاستراتيجيات المبيعات والإنتاج المختلفة.",
+      "تجنب تكلفة الفرصة البديلة للنقدية الفائضة غير المستثمرة وتقليل تكلفة التمويل قصير الأجل."
+    ],
+    "explanationAr": "تُعد الموازنة النقدية عنصرًا مهمًا في نظام الموازنات، إذ تساعد على تخطيط القروض ووسائل التمويل الأخرى، وعلى اتخاذ قرارات استثمار الفوائض النقدية المؤقتة."
   },
   {
     "unit": 14,
@@ -2394,7 +2442,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A cash budget details projected cash receipts and\ndisbursements. The cash budget combines the results of the\noperating budget with the cash collection and disbursement\nschedules to produce a comprehensive picture of where the\ncompany’s cash flows are expected to come from and where\nthey are expected to go. Proceeds from disposal of land is\ncash collection, which is included in a cash budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي البنود التالية يظهر في الموازنة النقدية للشركة؟",
+    "choicesAr": [
+      "إهلاك معدات المصنع.",
+      "إطفاء تكلفة براءات الاختراع.",
+      "تحويل الديون إلى حقوق ملكية.",
+      "التصرف في أرض بالبيع."
+    ],
+    "explanationAr": "توضح الموازنة النقدية المقبوضات والمدفوعات المتوقعة من خلال الجمع بين الموازنات التشغيلية وجداول التحصيل والسداد. وتُدرج حصيلة بيع الأرض باعتبارها تدفقًا نقديًا داخلًا، بخلاف البنود الأخرى غير النقدية في هذه الخيارات."
   },
   {
     "unit": 14,
@@ -2411,7 +2467,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The pro forma balance sheet is the balance sheet for the\nbeginning of the period updated for projected changes in cash,\nreceivables, inventories, payables, etc. Accordingly, it cannot\nbe prepared until after the cash budget is completed because\ncash is a current asset reported on the balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب إعداد الموازنة النقدية قبل إكمال:",
+    "choicesAr": [
+      "موازنة الإنفاق الرأسمالي.",
+      "موازنة المبيعات.",
+      "قائمة المركز المالي التقديرية.",
+      "موازنة الإنتاج."
+    ],
+    "explanationAr": "تُحدّث قائمة المركز المالي التقديرية أرصدة بداية الفترة وفق التغيرات المتوقعة في النقدية والمدينين والمخزون والدائنين وغيرها. ولا يمكن إكمالها قبل الموازنة النقدية، لأن النقدية أصل متداول يظهر في قائمة المركز المالي."
   },
   {
     "unit": 14,
@@ -2428,7 +2492,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The cash budget combines the results of the operating budget\nwith the cash collection and disbursement schedules to\nproduce a comprehensive view of the sources and uses of\ncash. As such, the collection schedule is used to prepare the\ncash budget, but the cash budget is not used to plan the cash\ncollection schedule.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُستخدم الموازنة النقدية للتخطيط لكل ما يلي باستثناء:",
+    "choicesAr": [
+      "جدول التحصيلات النقدية.",
+      "أنشطة التمويل الخارجي.",
+      "استثمار الفوائض النقدية.",
+      "سياسة توزيع الأرباح النقدية للشركة."
+    ],
+    "explanationAr": "تجمع الموازنة النقدية نتائج الموازنة التشغيلية مع جداول التحصيلات والمدفوعات لإظهار مصادر النقدية واستخداماتها. ويُستخدم جدول التحصيلات في إعداد الموازنة النقدية، وليس العكس، لذا لا تُستخدم الموازنة النقدية لإعداد جدول التحصيلات نفسه."
   },
   {
     "unit": 14,
@@ -2445,7 +2517,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cash budget combines the results of the operating budget\nwith the cash collection and disbursement schedules to\nproduce a comprehensive view of the sources and uses of\ncash. The pro forma statement of cash flows is prepared after\nthe cash budget, and therefore is not considered in the cash\nbudget’s creation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الموازنات أو الجداول التالية لا يُستخدم عند إعداد الموازنة النقدية؟",
+    "choicesAr": [
+      "الموازنة التشغيلية.",
+      "قائمة التدفقات النقدية التقديرية.",
+      "جدول التحصيلات النقدية.",
+      "جدول المدفوعات النقدية."
+    ],
+    "explanationAr": "تعتمد الموازنة النقدية على الموازنة التشغيلية وجداول التحصيل والسداد لتحديد مصادر النقدية واستخداماتها. أما قائمة التدفقات النقدية التقديرية فتُعد بعد الموازنة النقدية، ولذلك ليست مدخلًا لإعدادها."
   },
   {
     "unit": 14,
@@ -2462,7 +2542,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most direct way of preparing a cash budget requires\nincorporation of sales projections and credit terms, collection\npercentages, estimated purchases and payment terms, and\nother cash receipts and disbursements. In other words,\npreparation of the cash budget requires consideration of both\ninflows and outflows.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الطريقة الأكثر مباشرة لإعداد الموازنة النقدية لمنشأة صناعية؟",
+    "choicesAr": [
+      "إدراج المبيعات المتوقعة وشروط الائتمان وصافي الربح.",
+      "إدراج صافي الربح المتوقع والإهلاك والهبوط في قيمة الشهرة.",
+      "إدراج المشتريات المتوقعة ونسب المشتريات المدفوعة وصافي الربح.",
+      "إدراج المبيعات والمشتريات المتوقعة ونسب التحصيل وشروط السداد."
+    ],
+    "explanationAr": "يتطلب الإعداد المباشر للموازنة النقدية إدراج توقعات المبيعات وشروط البيع الآجل ونسب التحصيل، والمشتريات المقدرة وشروط سدادها، فضلًا عن المقبوضات والمدفوعات النقدية الأخرى. أي أنه يعتمد على تقدير التدفقات النقدية الداخلة والخارجة."
   },
   {
     "unit": 14,
@@ -2720,7 +2808,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The statement of cash flows is usually the last of the listed\nitems prepared. All other elements of the budget process must\nbe completed before it can be developed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد القوائم المالية التقديرية جزءًا من عملية إعداد الموازنة. وعادة ما تكون آخر قائمة تقديرية يتم إعدادها هي:",
+    "choicesAr": [
+      "خطة الإنفاق الرأسمالي.",
+      "قائمة الدخل.",
+      "قائمة تكلفة البضاعة المباعة.",
+      "قائمة التدفقات النقدية."
+    ],
+    "explanationAr": "عادة ما تكون قائمة التدفقات النقدية آخر البنود المذكورة التي يجري إعدادها، إذ يلزم استكمال عناصر الموازنة الأخرى قبل وضع هذه القائمة."
   },
   {
     "unit": 14,
@@ -2755,7 +2851,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The cash amount on the forecasted balance sheet is taken\ndirectly from the ending cash balance on the cash budget.\nThus, the cash budget must be prepared before the\nforecasted balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب إعداد الموازنة النقدية قبل أن تتمكن الشركة من إكمال:",
+    "choicesAr": [
+      "موازنة الإنفاق الرأسمالي.",
+      "قائمة الدخل التقديرية.",
+      "موازنة الإنتاج.",
+      "قائمة المركز المالي التقديرية."
+    ],
+    "explanationAr": "يُنقل رصيد النقدية إلى قائمة المركز المالي التقديرية مباشرة من رصيد النقدية في نهاية الفترة وفق الموازنة النقدية. لذلك يجب إكمال الموازنة النقدية قبل قائمة المركز المالي التقديرية."
   },
   {
     "unit": 14,
@@ -2772,7 +2876,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The pro forma statement of cash flows classifies cash receipts\nand disbursements depending on whether they are from\noperating, investing, or financing activities. Thus, it will help\nusers evaluate a firm’s liquidity, solvency, and financial\nflexibility by analyzing the different cash disbursements and\nreceipts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إحدى الخطوات الأخيرة في استكمال الموازنة الشاملة هي إعداد قائمة التدفقات النقدية التقديرية. وتهدف هذه القائمة إلى مساعدة مستخدمي القوائم المالية على:",
+    "choicesAr": [
+      "تقييم الموارد الاقتصادية والتزامات المنشأة.",
+      "تقييم سيولة المنشأة وقدرتها على الوفاء بالتزاماتها ومرونتها المالية.",
+      "تحديد مكونات الدخل الناتج عن العمليات.",
+      "تحديد مدى إمكانية تحصيل الحسابات المدينة."
+    ],
+    "explanationAr": "تصنف قائمة التدفقات النقدية التقديرية المقبوضات والمدفوعات حسب الأنشطة التشغيلية والاستثمارية والتمويلية. ويساعد هذا التحليل مستخدمي القوائم على تقييم السيولة والملاءة والمرونة المالية."
   },
   {
     "unit": 14,
@@ -2874,7 +2986,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cash is an asset, which appears on the balance sheet. Thus,\ncash does not appear on the income statement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتمد قائمة الدخل التقديرية لشركة صناعية على توقعات جميع البنود التالية باستثناء:",
+    "choicesAr": [
+      "تكاليف التسويق.",
+      "التكاليف الصناعية غير المباشرة.",
+      "الأرصدة النقدية.",
+      "مخزون آخر الفترة."
+    ],
+    "explanationAr": "النقدية أصل يظهر في قائمة المركز المالي، ولذلك لا تُدرج الأرصدة النقدية ضمن قائمة الدخل."
   },
   {
     "unit": 14,
@@ -2908,7 +3028,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The pro forma statement of employee benefit costs reports\nthose personnel-related costs that are not included in direct\nlabor, i.e., company-paid benefits and company-paid payroll\ntaxes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن القائمة التقديرية لتكاليف مزايا الموظفين، باعتبارها جدولًا من جداول الموازنة السنوية للأرباح، التكاليف المتعلقة بما يلي:",
+    "choicesAr": [
+      "إجمالي أجور الموظفين ورواتبهم والمزايا المرتبطة بها التي تتحملها الشركة.",
+      "صافي أجور الموظفين ورواتبهم والمزايا المرتبطة بها التي تتحملها الشركة.",
+      "جميع الاستقطاعات المحجوزة من الموظفين والمزايا التي تتحملها الشركة.",
+      "مزايا الموظفين وضرائب الرواتب التي تتحملها الشركة."
+    ],
+    "explanationAr": "تعرض القائمة التقديرية لتكاليف مزايا الموظفين التكاليف المتعلقة بالعاملين التي لا تدخل ضمن تكلفة العمل المباشر، مثل المزايا وضرائب الرواتب التي تتحملها الشركة."
   },
   {
     "unit": 14,
@@ -2925,7 +3053,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Beginning finished goods inventory is a component of cost of\ngoods sold, not cost of goods manufactured.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تظهر جميع البنود التالية في الجدول التقديري لتكلفة البضاعة المصنعة باستثناء:",
+    "choicesAr": [
+      "مخزون الإنتاج تحت التشغيل في آخر الفترة.",
+      "مخزون المنتجات التامة في أول الفترة.",
+      "تكلفة المواد الخام المستخدمة.",
+      "التكاليف الصناعية غير المباشرة المحملة."
+    ],
+    "explanationAr": "يُعد مخزون المنتجات التامة في أول الفترة عنصرًا من عناصر حساب تكلفة البضاعة المباعة، وليس من عناصر تكلفة البضاعة المصنعة."
   },
   {
     "unit": 14,
@@ -2942,7 +3078,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods manufactured equals all manufacturing costs\nincurred during the period, plus beginning work-in-process\ninventory, minus ending work-in-process. The cost of goods\nmanufactured schedule therefore includes direct materials,\ndirect labor, factory overhead, and changes in work-in-process\ninventories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترتبط المعلومات الواردة في موازنة تكلفة البضاعة المصنعة بصورة مباشرة أكثر بكل من:",
+    "choicesAr": [
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون الإنتاج تحت التشغيل النهائي.",
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون الإنتاج تحت التشغيل.",
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون الإنتاج تحت التشغيل ومخزون المنتجات التامة.",
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون المنتجات التامة."
+    ],
+    "explanationAr": "تعادل تكلفة البضاعة المصنعة إجمالي تكاليف التصنيع المتكبدة خلال الفترة، مضافًا إليها مخزون الإنتاج تحت التشغيل أول الفترة ومطروحًا منها مخزونه آخر الفترة. ولذلك يتضمن جدولها المواد المباشرة والعمل المباشر والتكاليف الصناعية غير المباشرة والتغير في مخزون الإنتاج تحت التشغيل."
   },
   {
     "unit": 14,
@@ -2976,7 +3120,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The first financial statement forecasted is generally the income\nstatement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي القوائم المالية التقديرية التالية تُعد أولًا بوجه عام؟",
+    "choicesAr": [
+      "قائمة الدخل التقديرية.",
+      "قائمة المركز المالي التقديرية.",
+      "قائمة التدفقات النقدية التقديرية.",
+      "قائمة الأرباح المبقاة التقديرية."
+    ],
+    "explanationAr": "عادة ما تكون قائمة الدخل أول قائمة مالية يجري إعداد توقعاتها."
   },
   {
     "unit": 14,
@@ -2993,7 +3145,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Although a bank may use pro forma financial statements to\nassess whether the company anticipates satisfying the\nrequirement of debt companies, the pro forma statements are\nbased on projected information and therefore cannot\nnecessarily determine that a debt covenant has been violated.\nIn order to determine whether the covenant has already been\nviolated, the bank should consult the borrower’s most recent\nfinancial statements that are based on actual activity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأسباب التالية لا يفسر اهتمام البنك بمراجعة القوائم المالية التقديرية لمنشأة؟",
+    "choicesAr": [
+      "تحديد ربحية المقترض المتوقعة مستقبلًا.",
+      "تحديد ما إذا كانت المنشأة قد خالفت بالفعل أحد شروط اتفاقية القرض.",
+      "تقييم الملاءة المالية المتوقعة لمقترض حالي.",
+      "تقييم هيكل رأس المال المتوقع لمقترض محتمل."
+    ],
+    "explanationAr": "قد يستخدم البنك القوائم التقديرية لتقييم احتمال التزام المنشأة بشروط القروض مستقبلًا، لكن هذه القوائم مبنية على توقعات ولا تثبت وقوع مخالفة فعلية في الماضي. ولمعرفة ما إذا حدثت مخالفة بالفعل، ينبغي الرجوع إلى أحدث قوائم مالية تعتمد على النشاط الفعلي."
   },
   {
     "unit": 14,
@@ -3010,7 +3170,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Governmental taxing authorities generally are not concerned\nwith projected results of an entity’s operations; they are more\ninterested in actual income as opposed to pro forma income.\nAs such, they are least likely to be interested in an entity’s pro\nforma financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الجهات التالية يُرجح أن تكون الأقل اهتمامًا بالقوائم المالية التقديرية للمنشأة؟",
+    "choicesAr": [
+      "المقرضون المحتملون.",
+      "الدائنون الحاليون.",
+      "الجهات الحكومية المختصة بتحصيل الضرائب.",
+      "محللو الاستثمار."
+    ],
+    "explanationAr": "تهتم الجهات الحكومية المختصة بتحصيل الضرائب عادة بالدخل الفعلي أكثر من النتائج التشغيلية المتوقعة؛ لذا تكون، بين الخيارات المذكورة، الأقل اهتمامًا بالقوائم المالية التقديرية."
   },
   {
     "unit": 14,

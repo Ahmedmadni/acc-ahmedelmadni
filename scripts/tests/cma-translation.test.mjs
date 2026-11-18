@@ -664,7 +664,7 @@ test("CMA Unit 13 Section 4: all 31 methods questions have complete Arabic draft
 });
 
 
-test("CMA Unit 14 wave 1: ten source-ordered Arabic drafts retain keys and numeric values",()=>{
+test("CMA Unit 14 wave 1: ten initial source-ordered Arabic drafts retain keys and numeric values",()=>{
   const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
   const reviewed=[
     [1,1,0],[1,3,3],[1,7,2],[1,8,1],
@@ -672,16 +672,11 @@ test("CMA Unit 14 wave 1: ten source-ordered Arabic drafts retain keys and numer
   ];
   const expected=new Map(reviewed.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,10);
-  assert.deepEqual(rows.filter(q=>q.stemAr).map(q=>q.section+"."+q.number),[...expected.keys()]);
+  assert.equal(rows.filter(q=>q.stemAr).length,31);
+  assert.deepEqual(rows.filter(q=>q.stemAr).map(q=>q.section+"."+q.number).slice(0,10),[...expected.keys()]);
   for(const q of rows){
     const id=q.section+"."+q.number;
-    if(!expected.has(id)){
-      assert.equal(q.stemAr,undefined,"Unexpected translation "+id);
-      assert.equal(q.choicesAr,undefined);
-      assert.equal(q.explanationAr,undefined);
-      continue;
-    }
+    if(!expected.has(id)) continue;
     assert.equal(q.answerIndex,expected.get(id),"Original key changed "+id);
     assert.equal(q.answerStatus,"source");
     assert.equal(q.sourceTextStatus,undefined);
@@ -738,4 +733,50 @@ test("CMA Unit 14 Section 1: independently recompute source-keyed multi-product 
     assert.equal(item.explanationAr,undefined);
   }
   assert.equal(q(2).stemAr,undefined);
+});
+
+
+test("CMA Unit 14 wave 2: 21 concept translations preserve canonical keys, numerical fidelity and protected source flags",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const added=[
+    [4,1,3],[4,33,2],[4,34,3],
+    [5,16,3],[5,18,0],[5,21,3],[5,26,3],[5,27,2],[5,28,0],[5,29,1],[5,30,3],
+    [6,11,3],[6,13,3],[6,14,1],[6,20,2],[6,22,3],[6,23,1],[6,24,1],[6,26,0],[6,27,1],[6,28,2],
+  ];
+  const first=new Set(["1.1","1.3","1.7","1.8","2.41","2.42","2.43","3.4","3.18","3.19"]);
+  const newKeys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
+  assert.equal(added.length,21);
+  assert.equal(rows.length,175);
+  assert.equal(rows.filter(q=>q.stemAr).length,31);
+  assert.deepEqual(rows.filter(q=>q.stemAr).map(q=>q.section+"."+q.number),[...first,...newKeys.keys()]);
+  const perSection=[0,4,3,3,3,8,10];
+  for(let s=1;s<=6;s++)assert.equal(rows.filter(q=>q.section===s&&q.stemAr).length,perSection[s]);
+  for(const q of rows){
+    const id=q.section+"."+q.number;
+    if(!newKeys.has(id)){
+      if(!first.has(id)){
+        assert.equal(q.stemAr,undefined,"Unexpected translation "+id);
+        assert.equal(q.choicesAr,undefined);
+        assert.equal(q.explanationAr,undefined);
+      }
+      continue;
+    }
+    assert.equal(q.answerIndex,newKeys.get(id),"Canonical answer changed "+id);
+    assert.equal(q.answerStatus,"source");
+    assert.equal(q.sourceTextStatus,undefined);
+    assert.equal(q.choicesAr.length,4);
+    const valid=validateCmaTranslation(
+      {question:{en:q.stem},choices:{en:q.choices},explanation:{en:q.explanation}},
+      {question:q.stemAr,choices:q.choicesAr,explanation:q.explanationAr});
+    assert.equal(valid.valid,true,"Numeric/shape fidelity mismatch "+id+": "+valid.reason);
+    assert.match(q.stemAr,/[\u0600-\u06ff]/);
+    assert.match(q.explanationAr,/[\u0600-\u06ff]/);
+  }
+  assert.equal(rows.filter(q=>q.sourceTextStatus).length,9);
+  assert.ok(rows.filter(q=>q.sourceTextStatus).every(q=>!q.stemAr&&!q.choicesAr&&!q.explanationAr));
+  const get=(section,number)=>rows.find(q=>q.section===section&&q.number===number);
+  assert.equal(get(5,28).choicesAr[0],"جدول التحصيلات النقدية.");
+  assert.equal(get(5,29).choicesAr[1],"قائمة التدفقات النقدية التقديرية.");
+  assert.equal(get(6,23).choicesAr[1],"مخزون المنتجات التامة في أول الفترة.");
+  assert.equal(get(6,26).choicesAr[0],"قائمة الدخل التقديرية.");
 });
