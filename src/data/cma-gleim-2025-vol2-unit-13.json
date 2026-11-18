@@ -1107,7 +1107,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Standard prices are designed for internal performance\nmeasurement. Standards should be attainable, but not so\neasily as to not provide motivation. Management should\ndecide its objectives and set a standard that will achieve that\nobjective when the standard is met. For example, the lowest\nprice might not be selected if the company is using a JIT\nsystem, for which the primary objective is the minimization of\ninventories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تطور إحدى الشركات معاييرها للسنة المقبلة. تشتري حاليًا أحد مكونات المواد بسعر $36.45 للوحدة، ومن المتوقع أن تزيد تكلفته بنحو 10% في السنة القادمة، وأن يتراوح السعر بين $38.75 و$44.18 للوحدة حسب الكمية المشتراة. على أي أساس ينبغي تحديد السعر المعياري لهذا المكون في السنة المقبلة؟",
+    "choicesAr": [
+      "التكلفة الفعلية الحالية مضافًا إليها الارتفاع المتوقع في السعر بنسبة 10%.",
+      "أقل سعر في النطاق المتوقع للضغط على إدارة المشتريات للشراء دائمًا بالسعر الأدنى.",
+      "أعلى سعر متوقع لضمان أن تكون جميع انحرافات سعر الشراء مواتية.",
+      "السعر الذي يتفق عليه مدير المشتريات مع المستوى الإداري المناسب في الشركة."
+    ],
+    "explanationAr": "تُستخدم الأسعار المعيارية لقياس الأداء الداخلي. وينبغي أن تكون المعايير قابلة للتحقيق، ولكن ليست سهلة إلى درجة تفقد معها دورها التحفيزي. وتحدد الإدارة أهدافها ثم تضع معيارًا يحققها عند بلوغه. فقد لا تختار أقل سعر، مثلًا، إذا كانت تتبع نظام الإنتاج في الوقت المحدد (JIT) الذي يركز على تقليل المخزون."
   },
   {
     "unit": 13,
@@ -1124,7 +1132,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Theoretical standards are standard costs that are set for\nproduction under optimal conditions. Setting the company’s\nstandard for glass material usage at 100 sheets of large glass\nto manufacture 400 frames is a theoretical standard because it\nleaves no room for waste, spoilage, machine breakdowns, or\nany other downtime.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع منشأة إطارات للصور تحتاج كل واحدة منها إلى لوح زجاج واحد، ويُقطع اللوح الكبير إلى أربع قطع. وعادة تستطيع الشركة إنتاج 400 إطار باستخدام 110 ألواح زجاج كبيرة بسبب بعض الكسر أثناء الإنتاج. ولتحسين التشغيل، حددت معيار استخدام الزجاج عند 100 لوح كبير لإنتاج 400 إطار. ما الوصف الأنسب لهذا المعيار؟",
+    "choicesAr": [
+      "معيار مثالي لأنه يمكن تحقيقه عادة مع بعض الانحرافات.",
+      "معيار قابل للتحقيق حاليًا لأنه يستلزم تنفيذًا بلا أخطاء.",
+      "معيار نظري لأنه يفترض سلامة المعدات وعمل الموظفين كما ينبغي.",
+      "معيار عملي لأنه يفترض تحقق جميع عوامل التشغيل كما هو متوقع."
+    ],
+    "explanationAr": "المعايير النظرية هي تكاليف معيارية تفترض الإنتاج في الظروف المثلى. وتحديد 100 لوح كبير لإنتاج 400 إطار يعني عدم السماح بأي فاقد أو تلف أو تعطل للآلات أو توقف آخر، ولذلك فهو معيار نظري."
   },
   {
     "unit": 13,
@@ -1141,7 +1157,15 @@
     ],
     "answerIndex": 1,
     "explanation": "It is highly unlikely that workers familiar with their own\nprocesses would set too-tight standards.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بعد دراسة شاملة لعمليات شركة، خلص مستشار مستقل إلى أن معايير العمل فيها قد تكون شديدة الصرامة. أي الحقائق التالية لا تتفق مع استنتاجه؟",
+    "choicesAr": [
+      "أظهرت تقارير الأداء العديد من انحرافات الكفاءة غير المواتية.",
+      "كانت عملية إعداد الموازنة محددة بوضوح وتستند إلى منهج من أسفل إلى أعلى.",
+      "ذكرت الإدارة أن مكافآت الحوافز المدفوعة في الفترات الأخيرة كانت ضئيلة.",
+      "لاحظ مشرفو الإنتاج تقلبات كبيرة في حجم التصنيع، مع زيادات قصيرة يعقبها تراجع سريع ومستمر."
+    ],
+    "explanationAr": "من غير المرجح أن يضع العاملون الذين يعرفون عملياتهم بالتفصيل معايير شديدة الصرامة إذا كانوا يشاركون في إعدادها."
   },
   {
     "unit": 13,
@@ -1158,7 +1182,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Practical standards, also called attainable standards, are more\nlikely to meet with worker acceptance than standards based\non an unachievable ideal.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالمقارنة مع المعايير المثالية، فإن المعايير العملية:",
+    "choicesAr": [
+      "تؤدي إلى تكاليف أقل للوحدة المنتجة.",
+      "توفر أساسًا أقل ملاءمة لتطوير الموازنات.",
+      "تتضمن سماحات سخية جدًا للتلف وعدم كفاءة العمال.",
+      "تمثل هدفًا أفضل لتحفيز العاملين في التصنيع."
+    ],
+    "explanationAr": "المعايير العملية، التي تسمى أيضًا المعايير القابلة للتحقيق، تكون أكثر قبولًا لدى العاملين من المعايير المبنية على مستوى مثالي يصعب تحقيقه."
   },
   {
     "unit": 13,
@@ -1175,7 +1207,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Standard costs can be used at the per-unit level and any level\nof aggregation above.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جميع العبارات التالية عن التكاليف المعيارية صحيحة، باستثناء أن:",
+    "choicesAr": [
+      "دراسات الوقت والحركة تُستخدم كثيرًا لتحديد التكاليف المعيارية.",
+      "توضع التكاليف المعيارية عادة لمدة سنة واحدة.",
+      "يمكن استخدام التكاليف المعيارية في قياس تكلفة حسابات المخزون.",
+      "تُعبَّر التكاليف المعيارية عادة بإجمالي المبالغ، بينما تُعبَّر التكاليف المدرجة بالموازنة على أساس تكلفة الوحدة."
+    ],
+    "explanationAr": "يمكن تطبيق التكاليف المعيارية على مستوى تكلفة الوحدة وعلى أي مستوى تجميع أعلى من ذلك؛ ولذلك فإن قصرها على الإجماليات غير صحيح."
   },
   {
     "unit": 13,
@@ -1192,7 +1232,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A standard cost is an estimate of what a cost should be under\nnormal operating conditions based on accounting and\nengineering studies. Comparing actual and standard costs\npermits an evaluation of the effectiveness of managerial\nperformance. Because of the impact of fixed costs in most\nbusinesses, a standard costing system is usually not effective\nunless the company also has a flexible budgeting system.\nFlexible budgeting uses standard costs to prepare budgets for\nmultiple activity levels.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "غالبًا ما تستخدم المنشأة نظام التكاليف المعيارية بالاقتران مع:",
+    "choicesAr": [
+      "الإدارة بالأهداف.",
+      "معدلات العائد المستهدفة.",
+      "برامج الإدارة التشاركية.",
+      "الموازنات المرنة."
+    ],
+    "explanationAr": "التكلفة المعيارية تقدير لما ينبغي أن تكون عليه التكلفة في ظروف التشغيل العادية، ويستند إلى الدراسات المحاسبية والهندسية. وتسمح مقارنة التكاليف الفعلية بالمعيارية بتقييم فعالية الأداء الإداري. وبسبب أثر التكاليف الثابتة في معظم المنشآت، لا يكون نظام التكاليف المعيارية فعالًا عادة ما لم يصاحبه نظام موازنات مرنة يستخدم المعايير لإعداد موازنات لمستويات نشاط متعددة."
   },
   {
     "unit": 13,
@@ -1209,7 +1257,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A team development approach to standard setting involves\ninteraction among various groups or individuals, including\nproduct line managers, the departments for which the\nstandards are being developed, accountants, and industrial\nengineers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يتضمن أحد أساليب إعداد التكاليف المعيارية الاتصال والتفاوض والتفاعل بين مديري خطوط المنتجات، والمشرفين المباشرين الذين توضع المعايير لأقسامهم، والمحاسبين والمهندسين، قبل اعتماد الإدارة العليا للمعايير. كيف يُوصف هذا الأسلوب؟",
+    "choicesAr": [
+      "أسلوب مفروض.",
+      "أسلوب مركزي من أعلى إلى أسفل.",
+      "أسلوب هندسي.",
+      "أسلوب التطوير الجماعي."
+    ],
+    "explanationAr": "يتضمن أسلوب التطوير الجماعي للمعايير تفاعل مجموعات وأفراد مختلفين، مثل مديري خطوط المنتجات والإدارات التي توضع المعايير لها والمحاسبين والمهندسين الصناعيين."
   },
   {
     "unit": 13,
@@ -1226,7 +1282,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Standard costs are predetermined expectations about how\nmuch a given activity should cost. Standards should be based\non accounting, engineering, or statistical control studies.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تراجع شركة الساعات الآلية المعيارية للوحدة لاستخدامها في موازنة السنة المقبلة. تشير مواصفات مصنع الآلة إلى إمكان إنتاج الوحدة خلال 0.75 ساعة، وتُظهر المقارنة المرجعية أن منافسًا ينتجها خلال 0.78 ساعة آلية. وبلغ متوسط النتائج الفعلية للشركة في العام السابق 0.83 ساعة للوحدة، رغم وضع معيار قدره 0.80 ساعة بالاعتماد على الدراسات الهندسية. ما المعيار الواجب استخدامه في الموازنة المقبلة؟",
+    "choicesAr": [
+      "0.75 ساعة آلية للوحدة.",
+      "0.78 ساعة آلية للوحدة.",
+      "0.80 ساعة آلية للوحدة.",
+      "0.83 ساعة آلية للوحدة."
+    ],
+    "explanationAr": "التكاليف المعيارية توقعات محددة مسبقًا بشأن تكلفة نشاط معين. وينبغي أن تستند المعايير إلى الدراسات المحاسبية أو الهندسية أو أساليب الرقابة الإحصائية."
   },
   {
     "unit": 13,
@@ -1243,7 +1307,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The practical standard involves the average worker (includes\ntime for company-mandated breaks). This standard would\nyield a rate of 0.75 (45 minutes ÷ 60 minutes).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستطيع شركة صناعية بيع ما يصل إلى 50,000 وحدة من المنتج X شهريًا. ويدرس المهندسون حركات العمل لتحديد الساعات المعيارية للوحدة. ووجدوا أن أسرع العمال دون أي استراحة يستطيعون إنتاج الوحدة في 30 دقيقة، بينما يحتاج العامل المتوسط إلى 45 دقيقة للوحدة متضمنة الاستراحات الإلزامية. يُعرف معيار 0.75 ساعة للوحدة بأنه:",
+    "choicesAr": [
+      "المعيار النظري.",
+      "المعيار المتوسط.",
+      "المعيار العملي.",
+      "معيار الانحراف."
+    ],
+    "explanationAr": "يعتمد المعيار العملي على العامل المتوسط، ويشمل وقت الاستراحات التي تفرضها الشركة؛ ولذلك يبلغ المعدل 0.75 ساعة، أي (45 دقيقة ÷ 60 دقيقة)."
   },
   {
     "unit": 13,
@@ -1260,7 +1332,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A standard costing system assumes costs do not greatly\nchange in the short term. However, in an environment where\ncontinuous improvement is reducing standard costs over a\nseries of succeeding periods, a standard cost may become\nout-of-date.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف على أفضل وجه مفهوم التحسين المستمر عند وضع التكاليف المعيارية؟",
+    "choicesAr": [
+      "تصبح المعايير أكثر تحديًا بمرور الوقت.",
+      "توضع المعايير بافتراض انعدام كل هوامش الاحتياط والتوقف.",
+      "تبقى المعايير غير قابلة للتحقيق لحث العاملين على بذل جهد أكبر.",
+      "توضع المعايير عند مستوى يسهل تحقيقه لرفع معنويات العاملين."
+    ],
+    "explanationAr": "يفترض نظام التكاليف المعيارية عادة أن التكاليف لا تتغير كثيرًا في الأجل القصير. ولكن عندما يؤدي التحسين المستمر إلى خفض التكاليف المعيارية خلال فترات متتالية، فقد تصبح بعض المعايير السابقة غير محدثة وتحتاج إلى إعادة ضبط."
   },
   {
     "unit": 13,
@@ -1277,7 +1357,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the old standards, the total cost would be $41.00,\nconsisting of $35.00 for 10 square feet of oak and $6.00 for 12\nscrews. If the cost of oak increases by 10%, the cost of 10\nsquare feet will rise to $38.50 (110% × $35.00). A 5%\ndecrease in the price of screws will reduce the total cost of\nscrews to $5.70 (95% × $6.00). Therefore, the new cost per\ntable would total $44.20 ($38.50 + $5.70).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة معايير المواد اللازمة لإنتاج طاولات الطعام كما يلي:\nمساحة خشب البلوط لكل طاولة: 10 أقدام مربعة\nسعر القدم المربع من خشب البلوط: $3.50\nعدد البراغي لكل طاولة: 12\nسعر البرغي: $0.50\nوتتوقع ارتفاع تكلفة خشب البلوط بنسبة 10% وانخفاض تكلفة البراغي بنسبة 5%. ما التكلفة المعيارية الجديدة للطاولة؟",
+    "choicesAr": [
+      "$40.88",
+      "$43.05",
+      "$44.20",
+      "$45.10"
+    ],
+    "explanationAr": "وفق المعايير القديمة، تبلغ التكلفة الإجمالية $41.00، منها $35.00 لعدد 10 أقدام مربعة من البلوط و$6.00 لعدد 12 برغيًا. وبزيادة البلوط بنسبة 10% تصبح تكلفة 10 أقدام مربعة $38.50 (110% × $35.00)، وبانخفاض البراغي بنسبة 5% تصبح تكلفتها $5.70 (95% × $6.00). وعليه تكون التكلفة الجديدة للطاولة $44.20 ($38.50 + $5.70)."
   },
   {
     "unit": 13,
@@ -1294,7 +1382,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Standard costs are predetermined expectations about how\nmuch a unit of input, a unit of output, or a given activity should\ncost. This system uses standard prime costs with overhead\napplied based on the standard cost driver units allowed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم نظام التكاليف المعيارية:",
+    "choicesAr": [
+      "التكاليف الأولية الفعلية مع تحميل التكاليف الصناعية غير المباشرة على أساس وحدات مسبب التكلفة الفعلية المستخدمة.",
+      "التكاليف الأولية الفعلية مع تحميل التكاليف الصناعية غير المباشرة على أساس وحدات مسبب التكلفة المعيارية المسموح بها.",
+      "التكاليف الأولية المعيارية مع تحميل التكاليف الصناعية غير المباشرة على أساس وحدات مسبب التكلفة الفعلية المستخدمة.",
+      "التكاليف الأولية المعيارية مع تحميل التكاليف الصناعية غير المباشرة على أساس وحدات مسبب التكلفة المعيارية المسموح بها."
+    ],
+    "explanationAr": "التكاليف المعيارية توقعات محددة سلفًا لما يجب أن تكلفه وحدة المدخلات أو المخرجات أو أي نشاط. ويستخدم النظام التكاليف الأولية المعيارية، مع تحميل التكاليف الصناعية غير المباشرة استنادًا إلى وحدات مسبب التكلفة المعيارية المسموح بها."
   },
   {
     "unit": 13,
@@ -1311,7 +1407,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A standard cost is an estimate of what a cost should be under\nnormal operating conditions based on studies by accountants\nand engineers. In addition, line management is usually\ninvolved in the setting of standard costs as are quality control\npersonnel. Top management would not be involved because\ncost estimation is a lower level operating activity. Participation\nby affected employees in all control systems permits all\nconcerned to understand both performance levels desired and\nthe measurement criteria being applied.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأطراف التالية هو الأقل احتمالًا للمشاركة في وضع التكاليف المعيارية لأغراض تقييم الأداء؟",
+    "choicesAr": [
+      "محاسبو الموازنات.",
+      "المهندسون الصناعيون.",
+      "الإدارة العليا.",
+      "موظفو رقابة الجودة."
+    ],
+    "explanationAr": "التكلفة المعيارية تقدير للتكلفة الطبيعية المتوقعة يستند إلى دراسات المحاسبين والمهندسين. وتشارك الإدارة التنفيذية وموظفو رقابة الجودة عادةً في وضعها أيضًا. أما الإدارة العليا فلا تشارك عادة في التقديرات التفصيلية لأنها نشاط تشغيلي أدنى مستوى. وتسمح مشاركة الموظفين المعنيين في نظم الرقابة بفهم مستويات الأداء المستهدفة ومعايير القياس المستخدمة."
   },
   {
     "unit": 13,
@@ -1328,7 +1432,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Standard costs are predetermined, attainable unit costs.\nStandard cost systems isolate deviations (variances) of actual\nfrom expected costs. One advantage of standard costs is that\nthey facilitate flexible budgeting. Accordingly, standard and\nbudgeted costs should not differ when standards are currently\nattainable. However, in practice, budgeted (estimated actual)\ncosts may differ from standard costs when operating\nconditions are not expected to reflect those anticipated when\nthe standards were developed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أحد الفروق بين التكاليف المعيارية المستخدمة للرقابة على التكاليف والتكاليف المدرجة بالموازنة هو أنها:",
+    "choicesAr": [
+      "قد تختلف لأن التكاليف المعيارية يجب تحديدها بعد الانتهاء من الموازنة.",
+      "قد تختلف لأن التكاليف المعيارية تمثل ما ينبغي أن تكون عليه التكلفة، بينما تمثل تكاليف الموازنة التكلفة الفعلية المتوقعة.",
+      "قد تختلف لأن تكاليف الموازنة تاريخية، بينما تُشتق التكاليف المعيارية من الدراسات الهندسية.",
+      "لا يمكن أن تختلف لأن مبالغها ينبغي أن تتساوى."
+    ],
+    "explanationAr": "التكاليف المعيارية تكاليف محددة مسبقًا وقابلة للتحقيق على مستوى الوحدة. ويساعد نظامها على عزل انحرافات التكاليف الفعلية عن المتوقعة، كما ييسر إعداد الموازنات المرنة. ومن حيث المبدأ لا ينبغي أن تختلف التكاليف المعيارية عن المدرجة بالموازنة إذا كانت المعايير قابلة للتحقيق حاليًا؛ لكن قد تختلف التكاليف الفعلية المقدرة في الموازنة عن المعايير عند توقع ظروف تشغيل تختلف عن الافتراضات المستخدمة وقت وضعها."
   },
   {
     "unit": 13,
