@@ -2808,7 +2808,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The statement of cash flows is usually the last of the listed\nitems prepared. All other elements of the budget process must\nbe completed before it can be developed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد القوائم المالية التقديرية جزءًا من عملية إعداد الموازنة. وعادة ما تكون آخر قائمة تقديرية يتم إعدادها هي:",
+    "choicesAr": [
+      "خطة الإنفاق الرأسمالي.",
+      "قائمة الدخل.",
+      "قائمة تكلفة البضاعة المباعة.",
+      "قائمة التدفقات النقدية."
+    ],
+    "explanationAr": "عادة ما تكون قائمة التدفقات النقدية آخر البنود المذكورة التي يجري إعدادها، إذ يلزم استكمال عناصر الموازنة الأخرى قبل وضع هذه القائمة."
   },
   {
     "unit": 14,
@@ -2843,7 +2851,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The cash amount on the forecasted balance sheet is taken\ndirectly from the ending cash balance on the cash budget.\nThus, the cash budget must be prepared before the\nforecasted balance sheet.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب إعداد الموازنة النقدية قبل أن تتمكن الشركة من إكمال:",
+    "choicesAr": [
+      "موازنة الإنفاق الرأسمالي.",
+      "قائمة الدخل التقديرية.",
+      "موازنة الإنتاج.",
+      "قائمة المركز المالي التقديرية."
+    ],
+    "explanationAr": "يُنقل رصيد النقدية إلى قائمة المركز المالي التقديرية مباشرة من رصيد النقدية في نهاية الفترة وفق الموازنة النقدية. لذلك يجب إكمال الموازنة النقدية قبل قائمة المركز المالي التقديرية."
   },
   {
     "unit": 14,
@@ -2860,7 +2876,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The pro forma statement of cash flows classifies cash receipts\nand disbursements depending on whether they are from\noperating, investing, or financing activities. Thus, it will help\nusers evaluate a firm’s liquidity, solvency, and financial\nflexibility by analyzing the different cash disbursements and\nreceipts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إحدى الخطوات الأخيرة في استكمال الموازنة الشاملة هي إعداد قائمة التدفقات النقدية التقديرية. وتهدف هذه القائمة إلى مساعدة مستخدمي القوائم المالية على:",
+    "choicesAr": [
+      "تقييم الموارد الاقتصادية والتزامات المنشأة.",
+      "تقييم سيولة المنشأة وقدرتها على الوفاء بالتزاماتها ومرونتها المالية.",
+      "تحديد مكونات الدخل الناتج عن العمليات.",
+      "تحديد مدى إمكانية تحصيل الحسابات المدينة."
+    ],
+    "explanationAr": "تصنف قائمة التدفقات النقدية التقديرية المقبوضات والمدفوعات حسب الأنشطة التشغيلية والاستثمارية والتمويلية. ويساعد هذا التحليل مستخدمي القوائم على تقييم السيولة والملاءة والمرونة المالية."
   },
   {
     "unit": 14,
@@ -2962,7 +2986,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Cash is an asset, which appears on the balance sheet. Thus,\ncash does not appear on the income statement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتمد قائمة الدخل التقديرية لشركة صناعية على توقعات جميع البنود التالية باستثناء:",
+    "choicesAr": [
+      "تكاليف التسويق.",
+      "التكاليف الصناعية غير المباشرة.",
+      "الأرصدة النقدية.",
+      "مخزون آخر الفترة."
+    ],
+    "explanationAr": "النقدية أصل يظهر في قائمة المركز المالي، ولذلك لا تُدرج الأرصدة النقدية ضمن قائمة الدخل."
   },
   {
     "unit": 14,
@@ -2996,7 +3028,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The pro forma statement of employee benefit costs reports\nthose personnel-related costs that are not included in direct\nlabor, i.e., company-paid benefits and company-paid payroll\ntaxes.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن القائمة التقديرية لتكاليف مزايا الموظفين، باعتبارها جدولًا من جداول الموازنة السنوية للأرباح، التكاليف المتعلقة بما يلي:",
+    "choicesAr": [
+      "إجمالي أجور الموظفين ورواتبهم والمزايا المرتبطة بها التي تتحملها الشركة.",
+      "صافي أجور الموظفين ورواتبهم والمزايا المرتبطة بها التي تتحملها الشركة.",
+      "جميع الاستقطاعات المحجوزة من الموظفين والمزايا التي تتحملها الشركة.",
+      "مزايا الموظفين وضرائب الرواتب التي تتحملها الشركة."
+    ],
+    "explanationAr": "تعرض القائمة التقديرية لتكاليف مزايا الموظفين التكاليف المتعلقة بالعاملين التي لا تدخل ضمن تكلفة العمل المباشر، مثل المزايا وضرائب الرواتب التي تتحملها الشركة."
   },
   {
     "unit": 14,
@@ -3013,7 +3053,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Beginning finished goods inventory is a component of cost of\ngoods sold, not cost of goods manufactured.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تظهر جميع البنود التالية في الجدول التقديري لتكلفة البضاعة المصنعة باستثناء:",
+    "choicesAr": [
+      "مخزون الإنتاج تحت التشغيل في آخر الفترة.",
+      "مخزون المنتجات التامة في أول الفترة.",
+      "تكلفة المواد الخام المستخدمة.",
+      "التكاليف الصناعية غير المباشرة المحملة."
+    ],
+    "explanationAr": "يُعد مخزون المنتجات التامة في أول الفترة عنصرًا من عناصر حساب تكلفة البضاعة المباعة، وليس من عناصر تكلفة البضاعة المصنعة."
   },
   {
     "unit": 14,
@@ -3030,7 +3078,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cost of goods manufactured equals all manufacturing costs\nincurred during the period, plus beginning work-in-process\ninventory, minus ending work-in-process. The cost of goods\nmanufactured schedule therefore includes direct materials,\ndirect labor, factory overhead, and changes in work-in-process\ninventories.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ترتبط المعلومات الواردة في موازنة تكلفة البضاعة المصنعة بصورة مباشرة أكثر بكل من:",
+    "choicesAr": [
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون الإنتاج تحت التشغيل النهائي.",
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون الإنتاج تحت التشغيل.",
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون الإنتاج تحت التشغيل ومخزون المنتجات التامة.",
+      "موازنات المواد المستخدمة والعمل المباشر والتكاليف الصناعية غير المباشرة المحملة ومخزون المنتجات التامة."
+    ],
+    "explanationAr": "تعادل تكلفة البضاعة المصنعة إجمالي تكاليف التصنيع المتكبدة خلال الفترة، مضافًا إليها مخزون الإنتاج تحت التشغيل أول الفترة ومطروحًا منها مخزونه آخر الفترة. ولذلك يتضمن جدولها المواد المباشرة والعمل المباشر والتكاليف الصناعية غير المباشرة والتغير في مخزون الإنتاج تحت التشغيل."
   },
   {
     "unit": 14,
@@ -3064,7 +3120,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The first financial statement forecasted is generally the income\nstatement.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي القوائم المالية التقديرية التالية تُعد أولًا بوجه عام؟",
+    "choicesAr": [
+      "قائمة الدخل التقديرية.",
+      "قائمة المركز المالي التقديرية.",
+      "قائمة التدفقات النقدية التقديرية.",
+      "قائمة الأرباح المبقاة التقديرية."
+    ],
+    "explanationAr": "عادة ما تكون قائمة الدخل أول قائمة مالية يجري إعداد توقعاتها."
   },
   {
     "unit": 14,
@@ -3081,7 +3145,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Although a bank may use pro forma financial statements to\nassess whether the company anticipates satisfying the\nrequirement of debt companies, the pro forma statements are\nbased on projected information and therefore cannot\nnecessarily determine that a debt covenant has been violated.\nIn order to determine whether the covenant has already been\nviolated, the bank should consult the borrower’s most recent\nfinancial statements that are based on actual activity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الأسباب التالية لا يفسر اهتمام البنك بمراجعة القوائم المالية التقديرية لمنشأة؟",
+    "choicesAr": [
+      "تحديد ربحية المقترض المتوقعة مستقبلًا.",
+      "تحديد ما إذا كانت المنشأة قد خالفت بالفعل أحد شروط اتفاقية القرض.",
+      "تقييم الملاءة المالية المتوقعة لمقترض حالي.",
+      "تقييم هيكل رأس المال المتوقع لمقترض محتمل."
+    ],
+    "explanationAr": "قد يستخدم البنك القوائم التقديرية لتقييم احتمال التزام المنشأة بشروط القروض مستقبلًا، لكن هذه القوائم مبنية على توقعات ولا تثبت وقوع مخالفة فعلية في الماضي. ولمعرفة ما إذا حدثت مخالفة بالفعل، ينبغي الرجوع إلى أحدث قوائم مالية تعتمد على النشاط الفعلي."
   },
   {
     "unit": 14,
@@ -3098,7 +3170,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Governmental taxing authorities generally are not concerned\nwith projected results of an entity’s operations; they are more\ninterested in actual income as opposed to pro forma income.\nAs such, they are least likely to be interested in an entity’s pro\nforma financial statements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الجهات التالية يُرجح أن تكون الأقل اهتمامًا بالقوائم المالية التقديرية للمنشأة؟",
+    "choicesAr": [
+      "المقرضون المحتملون.",
+      "الدائنون الحاليون.",
+      "الجهات الحكومية المختصة بتحصيل الضرائب.",
+      "محللو الاستثمار."
+    ],
+    "explanationAr": "تهتم الجهات الحكومية المختصة بتحصيل الضرائب عادة بالدخل الفعلي أكثر من النتائج التشغيلية المتوقعة؛ لذا تكون، بين الخيارات المذكورة، الأقل اهتمامًا بالقوائم المالية التقديرية."
   },
   {
     "unit": 14,
