@@ -1692,7 +1692,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The second calendar quarter consists of April, May, and June.\nFor April’s sales of $120,000, collections should be 95% (70%\n+ 15% + 10%), or $114,000. For May’s sales of $100,000,\ncollections should be 85% (70% + 15%), or $85,000. For\nJune’s sales of $90,000, collections should be 70%, or\n$63,000. The quarterly total is $262,000 ($114,000 + $85,000\n+ $63,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتبع شركة بيرش النمط التاريخي التالي لتحصيل المبيعات الآجلة: 70% في شهر البيع، و15% في الشهر الأول التالي، و10% في الشهر الثاني التالي، و4% في الشهر الثالث التالي، و1% ديون غير قابلة للتحصيل. والمبيعات الآجلة المقدرة لأول 6 أشهر هي:\nيناير $70,000\nفبراير 90,000\nمارس 100,000\nأبريل 120,000\nمايو 100,000\nيونيو 90,000\nما إجمالي التحصيلات النقدية المقدرة خلال الربع الثاني من مبيعات الربع الثاني فقط؟",
+    "choicesAr": [
+      "$262,000",
+      "$288,800",
+      "$306,900",
+      "$310,000"
+    ],
+    "explanationAr": "يتكون الربع الثاني من أبريل ومايو ويونيو. ومن مبيعات أبريل البالغة $120,000 يتوقع تحصيل 95% (70% + 15% + 10%)، أي $114,000. ومن مبيعات مايو البالغة $100,000 يتوقع تحصيل 85% (70% + 15%)، أي $85,000. ومن مبيعات يونيو البالغة $90,000 يتوقع تحصيل 70%، أي $63,000. ويبلغ إجمالي تحصيلات الربع $262,000 ($114,000 + $85,000 + $63,000)."
   },
   {
     "unit": 14,
@@ -1801,7 +1809,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The estimated cash receipts from accounts receivable\ncollections in March are equal to the estimated amount to be\ncollected on credit sales in March plus the estimated amount\nto be collected in March on credit sales in previous months.\nEstimated credit receipts in March for March          $ 90,000\n($300,000 × 30%)\nEstimated credit receipts in March for February        150,000\n($250,000 × 60%)\nEstimated collections for credit sales prior to         15,000\nFebruary\nEstimated cash to be collected in March                $255,000\nThe estimated write-offs in March for uncollectible credit sales\nand the estimated provision for bad debts in March for credit\nsales in March are not used in the calculation because the\npercentages of estimated collections are assumed to be\nbased on the gross credit sales amounts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتوي الموازنة النقدية لمارس على المعلومات التالية عن الحسابات المدينة:\nالمبيعات الآجلة المقدرة لمارس: $300,000\nالمبيعات الآجلة الفعلية لفبراير: $250,000\nنسبة تحصيلات مارس من مبيعات مارس: 30%\nنسبة تحصيلات مارس من مبيعات فبراير: 60%\nتحصيلات مارس من مبيعات آجلة سابقة لفبراير: $15,000\nالديون المعدومة المقدرة للشطب خلال مارس: $7,000\nالمخصص المقدر خلال مارس للديون المشكوك فيها من مبيعات مارس: $8,000\nحدد المقبوضات النقدية المقدرة من تحصيل الحسابات المدينة في مارس.",
+    "choicesAr": [
+      "$240,000",
+      "$247,000",
+      "$248,000",
+      "$255,000"
+    ],
+    "explanationAr": "تساوي المقبوضات النقدية المقدرة من الحسابات المدينة في مارس تحصيلات المبيعات الآجلة التي حدثت خلال مارس، إضافة إلى تحصيلات الأشهر السابقة.\nمقبوضات مارس من مبيعات مارس: $90,000\n($300,000 × 30%)\nمقبوضات مارس من مبيعات فبراير: 150,000\n($250,000 × 60%)\nمقبوضات مارس من مبيعات سابقة لفبراير: 15,000\nإجمالي المقبوضات النقدية المقدرة في مارس: $255,000\nلا تدخل الديون المعدومة المشطوبة أو المخصصات في حساب المقبوضات، لأن نسب التحصيل المقدرة محسوبة بالفعل على إجمالي المبيعات الآجلة."
   },
   {
     "unit": 14,
@@ -1894,7 +1910,15 @@
     ],
     "answerIndex": 2,
     "explanation": "For October sales, collections will be 70% in October, 15% in\nNovember, and 10% in December, a total of 95%. For\nNovember sales, collections will be 70% in November and\n15% in December, a total of 85%. Collections on December\nsales will be 70%.\nMonth         Sales     Percentage Collections\nOctober         $90,000 ×   95%     = $85,500\nNovember 100,000 ×         85%       =     85,000\nDecember 85,000 ×          70%       =     59,500\nTotal collections                        $230,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتبع شركة إسبلانيد النمط التاريخي التالي لتحصيل المبيعات الآجلة: 70% في شهر البيع، و15% في الشهر الأول بعده، و10% في الشهر الثاني، و4% في الشهر الثالث، و1% غير قابلة للتحصيل. والمبيعات الآجلة المقدرة للأشهر 6 الأخيرة من السنة هي:\nيوليو $60,000\nأغسطس 70,000\nسبتمبر 80,000\nأكتوبر 90,000\nنوفمبر 100,000\nديسمبر 85,000\nكم إجمالي المقبوضات النقدية المقدرة خلال الربع الرابع من مبيعات الربع الرابع فقط؟",
+    "choicesAr": [
+      "$170,500",
+      "$275,000",
+      "$230,000",
+      "$251,400"
+    ],
+    "explanationAr": "من مبيعات أكتوبر يُحصل 70% خلال أكتوبر و15% خلال نوفمبر و10% خلال ديسمبر، أي 95% إجمالا. ومن مبيعات نوفمبر يُحصل 70% خلال نوفمبر و15% خلال ديسمبر، أي 85% إجمالا. ومن مبيعات ديسمبر يُحصل 70% خلال الربع.\nالشهر | المبيعات | النسبة | التحصيل\nأكتوبر: $90,000 × 95% = $85,500\nنوفمبر: 100,000 × 85% = 85,000\nديسمبر: 85,000 × 70% = 59,500\nإجمالي التحصيلات: $230,000"
   },
   {
     "unit": 14,
@@ -2357,7 +2381,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The expected cash collections during any month equal 9% of\nthe sales of two months before, 20% of the sales of one month\nbefore, and 70% of the current month’s sales.\nMonth Sales % Expected Collections\nMarch $60,000    9         $ 5,400\nApril    78,000   20         15,600\nMay      66,000   70         46,200\nMay collections           $67,200",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "المعلومات التالية تخص شركة مونتيرو:\nالشهر | المشتريات | المبيعات\nيناير: $42,000 | $72,000\nفبراير: 48,000 | 66,000\nمارس: 36,000 | 60,000\nأبريل: 54,000 | 78,000\nتُحصل من العملاء عادة نسبة 70% في شهر البيع، ثم 20% و9% على الترتيب خلال الشهرين 2 التاليين، ويتعذر تحصيل الباقي. وتستفيد الشركة من خصم نقدي 2% على المشتريات عند سدادها قبل اليوم 10 من الشهر التالي. وتبلغ مشتريات مايو المقدرة $60,000 والمبيعات المتوقعة $66,000، والمدفوعات النقدية للمصروفات في مايو $14,400. وكان رصيد النقدية في 1 مايو $22,000.\nما المقبوضات النقدية المتوقعة من العملاء خلال مايو؟",
+    "choicesAr": [
+      "$46,200",
+      "$61,800",
+      "$66,000",
+      "$67,200"
+    ],
+    "explanationAr": "تساوي التحصيلات النقدية المتوقعة لأي شهر 9% من مبيعات الشهر الأسبق بشهرين، و20% من مبيعات الشهر السابق، و70% من مبيعات الشهر الحالي.\nالشهر | المبيعات | النسبة | التحصيل\nمارس: $60,000 × 9 = $5,400\nأبريل: 78,000 × 20 = 15,600\nمايو: 66,000 × 70 = 46,200\nإجمالي تحصيلات مايو: $67,200"
   },
   {
     "unit": 14,
