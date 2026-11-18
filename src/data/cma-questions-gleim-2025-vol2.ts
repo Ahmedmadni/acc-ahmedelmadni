@@ -71,6 +71,13 @@ const pendingAnswerRoundingReviews = new Set(["14.2.23"]);
  */
 const pendingAnswerConsistencyReviews = new Set(["14.6.21"]);
 
+/** §5 Q10 is a follow-up to Montero's preceding case: its isolated stem
+ * contains neither the prior cash collections nor the cash expense schedule.
+ * Do not grade it as an independent MCQ until the missing context is supplied.
+ * The imported publisher question and original answer are not modified.
+ */
+const pendingStandaloneContextReviews = new Set(["14.5.10"]);
+
 /** Source-language items retain their English text while Arabic translation is reviewed. */
 export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((item) => {
   const topic = topics.get(item.topicId);
@@ -94,7 +101,7 @@ export const CMA_GLEIM_2025_VOL2_QUESTIONS: CmaLocalQuestion[] = records.map((it
     sourcePage: item.page,
     answerStatus: item.answerStatus === "inferred" ? "inferred" : "source",
     sourceTextStatus: item.sourceTextStatus,
-    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerRoundingReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerConsistencyReviews.has(`${item.unit}.${item.section}.${item.number}`),
+    sourceLayoutReview: item.sourceTextStatus === "table-reflowed" || item.sourceTextStatus === "reconstructed" || pendingSourceLayouts.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerRoundingReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingAnswerConsistencyReviews.has(`${item.unit}.${item.section}.${item.number}`) || pendingStandaloneContextReviews.has(`${item.unit}.${item.section}.${item.number}`),
     sourceArabicStatus: hasArabic ? "draft" : undefined,
   };
 });
