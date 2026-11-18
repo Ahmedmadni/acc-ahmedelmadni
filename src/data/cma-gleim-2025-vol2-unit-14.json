@@ -267,7 +267,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Beginning inventory should be 30,600 pounds (34,000 units of\nbudgeted sales × 3 pounds × 30%). Ending inventory should\nbe 43,200 pounds (48,000 units of budgeted sales for Quarter\n4 × 3 pounds × 30%). Because BI plus purchases minus EI\nequals Quarter 3 budgeted sales, purchases must be 114,600.\n30,600 + X – 43,200 = 3 × 34,000\nX – 12,600 = 102,000\nX = 114,600",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتضمن موازنة الشركة الإنتاج التالي:\nالربع 1 — 45,000 وحدة\nالربع 2 — 38,000 وحدة\nالربع 3 — 34,000 وحدة\nالربع 4 — 48,000 وحدة\nتتطلب كل وحدة منتج ثلاثة أرطال من المواد المباشرة. وتنص سياسة الشركة على بدء كل ربع بمخزون مواد مباشرة يعادل 30% من احتياجات ذلك الربع من المواد. كم تبلغ مشتريات المواد المباشرة المقدرة للربع الثالث؟",
+    "choicesAr": [
+      "114,600 رطل.",
+      "43,200 رطل.",
+      "38,200 رطل.",
+      "30,600 رطل."
+    ],
+    "explanationAr": "ينبغي أن يبلغ مخزون أول الربع 30,600 رطل (34,000 وحدة إنتاج مقدرة × 3 أرطال × 30%). ويبلغ مخزون آخر الربع المطلوب 43,200 رطل (48,000 وحدة إنتاج مقدرة للربع 4 × 3 أرطال × 30%). وبما أن مخزون أول الفترة + المشتريات − مخزون آخر الفترة = مواد إنتاج الربع 3، فإن المشتريات تساوي 114,600 رطل.\n30,600 + X − 43,200 = 3 × 34,000\nX − 12,600 = 102,000\nX = 114,600"
   },
   {
     "unit": 14,
@@ -284,7 +292,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The finished units needed for sales (8,000), plus the units\ndesired for ending inventory (12,000 units to be sold in the\nthird quarter × 20% = 2,400), minus the units in beginning\ninventory (8,000 units to be sold in the second quarter × 20%\n= 1,600) equals budgeted production for the second quarter of\n8,800 units.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تظهر موازنة المبيعات المبيعات الفصلية للسنة المقبلة كما يلي:\nالربع | الوحدات\n1 | 10,000\n2 | 8,000\n3 | 12,000\n4 | 14,000\nتقتضي سياسة الشركة أن يعادل مخزون المنتجات التامة بنهاية كل ربع 20% من مبيعات الربع التالي. فكم يبلغ الإنتاج المقدر للربع الثاني من السنة المقبلة؟",
+    "choicesAr": [
+      "7,200 وحدة.",
+      "8,000 وحدة.",
+      "8,800 وحدة.",
+      "8,400 وحدة."
+    ],
+    "explanationAr": "الإنتاج المقدر للربع الثاني = الوحدات اللازمة للمبيعات (8,000) + المخزون النهائي المطلوب (12,000 وحدة متوقعة للبيع في الربع الثالث × 20% = 2,400) − المخزون الأولي (8,000 وحدة متوقعة للبيع في الربع الثاني × 20% = 1,600). إذًا يبلغ الإنتاج المقدر 8,800 وحدة."
   },
   {
     "unit": 14,
@@ -335,7 +351,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The 500,000 finished units to be manufactured require\n1,000,000 units of raw material (2 × 500,000). In addition, the\ninventory of raw material is planned to increase by 10,000\nunits. Consequently, 1,010,000 units of raw material should be\npurchased.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد شركة سيمبسون موازنتها السنوية، وتخطط للمستويات التالية من مخزون أول الفترة وآخرها بالوحدات للسنة المنتهية في 31 ديسمبر:\nالبند | أول الفترة | آخر الفترة\nالمواد الخام | 40,000 | 50,000\nالإنتاج تحت التشغيل | 10,000 | 10,000\nالمنتجات التامة | 80,000 | 50,000\n* يلزم وحدتان من المواد الخام لإنتاج كل وحدة من المنتج التام.\nإذا كان المخطط تصنيع 500,000 وحدة تامة خلال السنة، فكم وحدة من المواد الخام ينبغي شراؤها؟",
+    "choicesAr": [
+      "1,000,000 وحدة.",
+      "1,020,000 وحدة.",
+      "1,010,000 وحدة.",
+      "990,000 وحدة."
+    ],
+    "explanationAr": "يتطلب تصنيع 500,000 وحدة تامة ما مجموعه 1,000,000 وحدة من المواد الخام (2 × 500,000). كذلك يُتوقع زيادة مخزون المواد الخام بمقدار 10,000 وحدة، وبذلك ينبغي شراء 1,010,000 وحدة مواد خام."
   },
   {
     "unit": 14,
@@ -488,7 +512,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The first step is to determine the cost of goods sold for each\nmonth. Since sales are 130% of cost, cost of goods sold can\nbe calculated as follows:\nJuly:       $715,000 ÷ 130% = $550,000\nAugust:       728,000 ÷ 130% = 560,000\nSeptember: 624,000 ÷ 130% = 480,000\nPurchases for August can now be calculated as follows:\nProjected sales at cost          $560,000\nAdd: Required ending inventory\n($480,000 × 25%)               120,000\nTotal goods needed               $680,000\nLess: Beginning inventory        (140,000)\nPurchases                        $540,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحدد شركة أسعار بيع منتجاتها بإضافة هامش 30% على التكلفة. وتتوقع مبيعات بقيمة $715,000 في يوليو و$728,000 في أغسطس و$624,000 في سبتمبر. وتنص سياستها على الاحتفاظ في نهاية كل شهر بمخزون يكفي لتغطية 25% من مبيعات الشهر التالي. ما تكلفة المخزون الذي ينبغي إدراجه ضمن مشتريات أغسطس المقدرة؟",
+    "choicesAr": [
+      "$509,600",
+      "$540,000",
+      "$560,000",
+      "$680,000"
+    ],
+    "explanationAr": "تُحدد أولًا تكلفة البضاعة المباعة لكل شهر. ولأن سعر البيع يعادل 130% من التكلفة، تكون التكاليف:\nيوليو: $715,000 ÷ 130% = $550,000\nأغسطس: $728,000 ÷ 130% = $560,000\nسبتمبر: $624,000 ÷ 130% = $480,000\nثم تُحسب مشتريات أغسطس:\nتكلفة المبيعات المتوقعة: $560,000\nيضاف: المخزون النهائي المطلوب ($480,000 × 25%): 120,000\nإجمالي البضائع اللازمة: $680,000\nيطرح: مخزون أول الفترة: (140,000)\nالمشتريات المطلوبة: $540,000"
   },
   {
     "unit": 14,
@@ -505,7 +537,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Streeter’s required production for the second quarter can be\ncalculated as follows:\nSales for quarter                                   72,000\nAdd: Buffer for next quarter (84,000 × 50%)         42,000\nLess: Buffer from previous quarter (72,000 × 50%) (36,000)\nRequired production                                 78,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة ستريتر أطباق تدوير بلاستيكية لأفران الميكروويف. وتتوقع بيع 65,000 وحدة في الربع الأول، و72,000 في الربع الثاني، و84,000 في الربع الثالث، و66,000 في الربع الرابع من السنة المقبلة. وتحتفظ عادة بمخزون منتجات تامة في نهاية كل ربع يعادل نصف مبيعات الربع التالي المتوقعة. كم وحدة ينبغي إنتاجها في الربع الثاني؟",
+    "choicesAr": [
+      "72,000",
+      "75,000",
+      "78,000",
+      "84,000"
+    ],
+    "explanationAr": "يُحسب الإنتاج المطلوب للربع الثاني كما يلي:\nمبيعات الربع: 72,000\nيضاف: مخزون احتياطي للربع التالي (84,000 × 50%): 42,000\nيطرح: مخزون احتياطي من الربع السابق (72,000 × 50%): (36,000)\nالإنتاج المطلوب: 78,000"
   },
   {
     "unit": 14,
@@ -522,7 +562,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Streeter’s required production for the second quarter can be\ncalculated as follows:\nSales for quarter                                   72,000\nAdd: Buffer for next quarter (84,000 × 50%)         42,000\nLess: Buffer from previous quarter (72,000 × 50%) (36,000)\nProjected production                              78,000\nAdd: Shortfall from previous month buffer           8,000\nRevised required production                      86,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة ستريتر أطباق تدوير بلاستيكية لأفران الميكروويف. وتتوقع بيع 65,000 وحدة في الربع الأول، و72,000 في الربع الثاني، و84,000 في الربع الثالث، و66,000 في الربع الرابع من السنة المقبلة. وتحتفظ عادة بمخزون منتجات تامة في نهاية كل ربع يعادل نصف مبيعات الربع التالي. وبسبب توقف العمل كان مخزون المنتجات التامة بنهاية الربع الأول أقل من المستوى المطلوب بمقدار 8,000 وحدة. كم وحدة يجب إنتاجها في الربع الثاني؟",
+    "choicesAr": [
+      "75,000",
+      "78,000",
+      "80,000",
+      "86,000"
+    ],
+    "explanationAr": "يُحسب الإنتاج المطلوب للربع الثاني كما يلي:\nالمبيعات المقررة للربع: 72,000\nيضاف: مخزون احتياطي للربع التالي (84,000 × 50%): 42,000\nيطرح: مخزون احتياطي من الربع السابق (72,000 × 50%): (36,000)\nالإنتاج المبدئي: 78,000\nيضاف: عجز مخزون الربع السابق: 8,000\nالإنتاج المطلوب المعدل: 86,000"
   },
   {
     "unit": 14,
@@ -573,7 +621,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The 67,500 of sales for the quarter average 750 per day for 90\ndays. Thus, production for the quarter can be calculated as\nfollows:\nBudgeted sales                                    67,500\nAdd: Required ending inventory (750 × 10 days) 7,500\nTotal units needed                                75,000\nLess: Beginning inventory (3,500 – 200)          (3,300)\nBudgeted production                              71,700",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تجمع شركة أنظمة محركات أشرطة النسخ الاحتياطي للحواسيب المنزلية. تبلغ المبيعات المقدرة للربع الأول 67,500 وحدة. وستنهي الشركة الربع الرابع من السنة السابقة بمخزون قدره 3,500 وحدة، منها 200 وحدة متقادمة. والمخزون النهائي المستهدف يعادل مبيعات 10 أيام، بافتراض سنة من 360 يومًا. ما كمية الإنتاج المقدرة للربع الأول؟",
+    "choicesAr": [
+      "75,000",
+      "71,700",
+      "71,500",
+      "64,350"
+    ],
+    "explanationAr": "تبلغ المبيعات الفصلية 67,500 وحدة، أي بمتوسط 750 وحدة يوميًا خلال 90 يومًا. وتحسب الكمية المطلوب إنتاجها كما يلي:\nالمبيعات المقدرة: 67,500\nيضاف: المخزون النهائي المطلوب (750 × 10 أيام): 7,500\nإجمالي الاحتياج: 75,000\nيطرح: المخزون الأولي الصالح (3,500 − 200): (3,300)\nالإنتاج المقدر: 71,700"
   },
   {
     "unit": 14,
@@ -590,7 +646,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The required production for the year can be calculated as\nfollows:\nSales for year                           4,000\nAdd: Ending finished goods inventory       600\nLess: Beginning finished goods inventory (900)\nRequired production                         3,700",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات خاصة بالموازنة:\nالمبيعات المخططة: 4,000 وحدة\nتكلفة المواد: $2.50 للرطل\nالعمل المباشر: 3 ساعات لكل وحدة\nمعدل أجر العمل المباشر: $7 للساعة\nمخزون المنتجات التامة أول الفترة: 900 وحدة\nمخزون المنتجات التامة آخر الفترة: 600 وحدة\nمخزون المواد المباشرة أول الفترة: 4,300 وحدة\nمخزون المواد المباشرة آخر الفترة: 4,500 وحدة\nالمواد المستخدمة لكل وحدة: 6 أرطال\nكم يبلغ إجمالي الوحدات التي ستظهر في موازنة الإنتاج بوصفها وحدات مطلوب إنتاجها؟",
+    "choicesAr": [
+      "3,700",
+      "4,000",
+      "4,300",
+      "4,600"
+    ],
+    "explanationAr": "يُحسب الإنتاج المطلوب خلال السنة على النحو الآتي:\nمبيعات السنة: 4,000\nيضاف: مخزون المنتجات التامة آخر الفترة: 600\nيطرح: مخزون المنتجات التامة أول الفترة: (900)\nالإنتاج المطلوب: 3,700"
   },
   {
     "unit": 14,
@@ -658,7 +722,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The company’s fabric purchase requirements can be\ncalculated as follows:\nNeeded for sales          90,000\nAdd: Ending inventory     20,000\nLess: Beginning inventory (25,000)\nTotal purchases          85,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُصنع شركة سراويل رجالية، وترغب في الاحتفاظ بمخزون نهائي قدره 20,000 ياردة من القماش. ومن المتوقع أن يبلغ مخزون أول الفترة 25,000 ياردة، وأن تحتاج المبيعات المتوقعة إلى 90,000 ياردة من القماش. احسب كمية القماش التي يجب على الشركة شراؤها بالياردة.",
+    "choicesAr": [
+      "85,000",
+      "90,000",
+      "95,000",
+      "135,000"
+    ],
+    "explanationAr": "تُحسب مشتريات القماش المطلوبة كما يلي:\nالقماش اللازم للمبيعات: 90,000\nيضاف: المخزون النهائي: 20,000\nيطرح: مخزون أول الفترة: (25,000)\nإجمالي المشتريات المطلوبة: 85,000"
   },
   {
     "unit": 14,
@@ -675,7 +747,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The gift shop’s sales and ending inventory requirements at\ncost can be calculated as follows:\nProjected Cost         Sales\nSales      %      At Cost\nOctober: $42,000      × 65% = $27,300\nNovember: 58,000      × 65% = 37,700\nDecember: 74,000 × 65% = 48,100\nNovember’s purchase requirements can now be determined:\nNeeded for sales                               $37,700\nAdd: Required ending inventory ($48,100 × 30%) 14,430\nLess: Projected beginning inventory ($37,700 ×  (11,310)\n30%)\nTotal purchases                                  $40,820",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يحقق متجر هدايا مجمل ربح يعادل 35% من المبيعات، ويحتفظ في نهاية كل شهر بمخزون يكفي لتغطية 30% من مبيعات الشهر التالي المتوقعة.\nالمبيعات المتوقعة للربع الرابع:\nأكتوبر: $42,000\nنوفمبر: $58,000\nديسمبر: $74,000\nما قيمة البضائع التي يجب أن يخطط المتجر لشرائها في نوفمبر؟",
+    "choicesAr": [
+      "$40,820",
+      "$51,220",
+      "$52,130",
+      "$62,800"
+    ],
+    "explanationAr": "تُحسب تكلفة المبيعات والمخزون المطلوب على النحو التالي:\nمبيعات أكتوبر: $42,000 × 65% = $27,300\nمبيعات نوفمبر: 58,000 × 65% = 37,700\nمبيعات ديسمبر: 74,000 × 65% = 48,100\nمشتريات نوفمبر:\nاللازم لتغطية المبيعات: $37,700\nيضاف: المخزون النهائي المطلوب ($48,100 × 30%): 14,430\nيطرح: مخزون أول الفترة؛ التكلفة المرجعية له $37,700، وقيمته (11,310) عند تطبيق نسبة 30%\nالمشتريات الإجمالية: $40,820"
   },
   {
     "unit": 14,
@@ -692,7 +772,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The calculation of pounds of raw material needed to be\npurchased is as follows:\nBudgeted unit sales                             2,000\nAdd: Required finished goods ending inventory 325\nLess: Beginning finished goods inventory        (250)\nRequired production                             2,075\nTimes: Pounds per unit                         × 4\nPounds required for production                  8,300\nAdd: Target ending raw materials inventory       800\nLess: Beginning raw materials inventory          (400)\nPounds to be purchased                          8,700",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد موازنة مشتريات المواد المباشرة للربع المقبل، تتوفر لدى مراقب المصنع المعلومات الآتية:\nالمبيعات المقدرة بالوحدات: 2,000\nأرطال المواد لكل وحدة: 4\nتكلفة المواد للرطل: $3\nمخزون المواد الأولي بالأرطال: 400\nمخزون المنتجات التامة الأولي بالوحدات: 250\nمخزون المنتجات التامة النهائي المستهدف: 325\nمخزون المواد النهائي المستهدف بالأرطال: 800\nكم رطلًا من المواد يجب شراؤه؟",
+    "choicesAr": [
+      "2,475",
+      "7,900",
+      "8,700",
+      "9,300"
+    ],
+    "explanationAr": "يُحسب عدد أرطال المواد الخام المطلوب شراؤها كما يلي:\nالمبيعات المقدرة بالوحدات: 2,000\nيضاف: مخزون المنتجات التامة النهائي المطلوب: 325\nيطرح: مخزون المنتجات التامة أول الفترة: (250)\nالإنتاج المطلوب: 2,075\nيضرب في: أرطال المواد لكل وحدة: × 4\nالأرطال المطلوبة للإنتاج: 8,300\nيضاف: مخزون المواد الخام النهائي المستهدف: 800\nيطرح: مخزون المواد الخام أول الفترة: (400)\nالأرطال المطلوب شراؤها: 8,700"
   },
   {
     "unit": 14,
@@ -709,7 +797,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The calculation of the number of shoes that must be\npurchased is as follows:\nShoes needed for dolls to be sold             400,000\nLess: Beginning inventory of shoes on dolls    (24,000)\nAdd: Target ending inventory of shoes on dolls 30,000\nLess: Beginning inventory of shoes              (20,000)\nAdd: Target ending inventory of shoes           18,000\nShoes to be purchased                        404,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع منشأة بيع 200,000 دمية خلال السنة المقبلة. يبلغ مخزون الدمى أول الفترة 12,000 دمية والمخزون النهائي المستهدف 15,000 دمية. وتحتاج كل دمية إلى حذاءين يُشترَيان من مورد خارجي. يبلغ مخزون الأحذية أول الفترة 20,000 حذاء، والمخزون النهائي المستهدف 18,000 حذاء. كم حذاءً ينبغي شراؤه خلال السنة؟",
+    "choicesAr": [
+      "396,000",
+      "398,000",
+      "402,000",
+      "404,000"
+    ],
+    "explanationAr": "تُحسب الأحذية المطلوب شراؤها كما يلي:\nالأحذية اللازمة للدمى المباعة: 400,000\nيطرح: الأحذية الموجودة على دمى أول الفترة: (24,000)\nيضاف: الأحذية على الدمى المطلوبة في آخر الفترة: 30,000\nيطرح: مخزون الأحذية أول الفترة: (20,000)\nيضاف: مخزون الأحذية النهائي المستهدف: 18,000\nالأحذية المطلوب شراؤها: 404,000"
   },
   {
     "unit": 14,
@@ -777,7 +873,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The firm will need 10,000 units for January sales plus 3,000\n(12,000 × 25%) for ending inventory. The production quota for\nJanuary is therefore 10,500 (13,000 needed – 2,500 beginning\ninventory). Each unit requires 2 pounds of materials, or 21,000\npounds. At $4 per pound, the materials will cost $84,000,\nwhich will be paid in February.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستهدف شركة مخزونًا نهائيًا من المنتجات التامة يعادل 25% من المبيعات المقدرة للشهر التالي. تبلغ مبيعات يناير المتوقعة 10,000 وحدة، وفبراير 12,000 وحدة. وتحتاج كل وحدة إلى 2 رطل من المادة X بسعر $4 للرطل. تطبق الشركة نظام الإنتاج في الوقت المحدد وتُسلّم المواد يوميًا قبل استخدامها مباشرة؛ لذا لا تحتفظ بمخزون مواد خام. وتسدد قيمة المواد في الشهر التالي للشراء. ويبلغ مخزون المنتجات التامة في 1 يناير 2,500 وحدة. ما التدفق النقدي الخارج المتوقع في فبراير لسداد ثمن المواد الخام؟",
+    "choicesAr": [
+      "$21,000",
+      "$40,000",
+      "$42,000",
+      "$84,000"
+    ],
+    "explanationAr": "تحتاج الشركة إلى 10,000 وحدة لتغطية مبيعات يناير، إضافة إلى 3,000 وحدة للمخزون النهائي (12,000 × 25%). ولذلك يبلغ إنتاج يناير 10,500 وحدة (الاحتياج البالغ 13,000 ناقص مخزون البداية 2,500). تحتاج كل وحدة إلى 2 رطل من المواد، أي 21,000 رطل، وبتكلفة $4 للرطل يبلغ إجمالي المشتريات $84,000، تدفع في فبراير."
   },
   {
     "unit": 14,
@@ -828,7 +932,15 @@
     ],
     "answerIndex": 2,
     "explanation": "November truck production can be calculated using the\nfollowing formula: Beginning inventory + Production – Sales =\nEnding inventory. Beginning inventory can be determined by\nfinding the last month’s ending inventory. October ending\ninventory is equal to 20% of November sales, which is 500\n(2,500 × 20%). November ending inventory is equal to 20% of\nDecember sales, which is 1,700 (8,500 × 20%). Using the\nabove formula, we can determine that November truck\nproduction is 3,700 (1,700 + 2,500 – 500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد منشأة تصنع شاحنات ألعاب خشبية موازناتها للفترة المقبلة. وتتذبذب المبيعات بقوة وتبلغ ذروتها خلال موسم العطلات. وترغب الإدارة في الاحتفاظ بمخزون نهائي يعادل 20% من مبيعات الشهر التالي. المبيعات المتوقعة هي:\nأكتوبر: 2,000 شاحنة لعبة\nنوفمبر: 2,500 شاحنة لعبة\nديسمبر: 8,500 شاحنة لعبة\nيناير: 1,200 شاحنة لعبة\nفبراير: 850 شاحنة لعبة\nكم شاحنة يجب تصنيعها في نوفمبر؟",
+    "choicesAr": [
+      "1,300",
+      "1,700",
+      "3,700",
+      "4,200"
+    ],
+    "explanationAr": "يحسب إنتاج نوفمبر من العلاقة: مخزون أول الفترة + الإنتاج − المبيعات = مخزون آخر الفترة. ويُستخرج مخزون أول نوفمبر من مخزون آخر أكتوبر، الذي يعادل 20% من مبيعات نوفمبر أي 500 شاحنة (2,500 × 20%). أما مخزون آخر نوفمبر فيعادل 20% من مبيعات ديسمبر، أي 1,700 شاحنة (8,500 × 20%). وعليه يبلغ إنتاج نوفمبر 3,700 شاحنة (1,700 + 2,500 − 500)."
   },
   {
     "unit": 14,
@@ -1030,7 +1142,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sale of 12,500 cases of water at $24.80 per case\nproduces revenue of $310,000, an amount that does not\nqualify for commissions. The sale of 33,100 cases of cola at\n$32 per case produces revenue of $1,059,200. This amount is\ngreater than the minimum and therefore qualifies for a\ncommission of $84,736 ($1,059,200 × 8%). This calculation\nassumes that commissions are paid on all sales if the revenue\nquota is met.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع شركة تعبئة مشروبات بيع 12,500 صندوق مياه في ديسمبر بسعر $24.80 للصندوق، و33,100 صندوق كولا بسعر $32.00 للصندوق. يحصل موظفو المبيعات على عمولة 6% عن المياه و8% عن الكولا، شريطة تحقيق حصة إيرادات كل منتج على حدة. حصة مبيعات المياه المستهدفة هي $500,000، والكولا $1,000,000. ما عمولة المبيعات الواجب إدراجها في موازنة ديسمبر؟",
+    "choicesAr": [
+      "$4,736",
+      "$82,152",
+      "$84,736",
+      "$103,336"
+    ],
+    "explanationAr": "ينتج عن بيع 12,500 صندوق مياه بسعر $24.80 للصندوق إيراد قدره $310,000، وهو أقل من الحصة المستهدفة فلا تُستحق عنه عمولة. أما بيع 33,100 صندوق كولا بسعر $32 فيحقق إيرادًا قدره $1,059,200، ويتجاوز الحد الأدنى المطلوب، فتكون العمولة $84,736 ($1,059,200 × 8%). يفترض هذا الحساب دفع العمولة على كامل المبيعات بعد تحقيق الحصة المستهدفة."
   },
   {
     "unit": 14,
@@ -1047,7 +1167,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The standard direct labor unit cost equals 3 hours times the\ncost per DLH. This amount is determined by adding employee\nbenefits to weekly wages and dividing by hours per week.\nWeekly wages                  $245.00\nAdd: Benefits ($245 × .25)     61.25\nWeekly total compensation    $306.25\nDivided by: Hours/week       ÷   35\nCost per DL hour             $ 8.75\nTimes: DL hours per unit    ×    3\nUnit DL cost                 $ 26.25",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتاج كل وحدة من المنتج XK-46 إلى ثلاث ساعات عمل مباشر. وتُعامل مزايا العاملين ضمن تكاليف العمل المباشر. بيانات العمل المباشر:\nعدد العاملين المباشرين: 25\nساعات العمل الأسبوعية الإنتاجية للعامل: 35\nالأجر الأسبوعي المقدر للعامل: $245\nمزايا الموظفين: 25% من الأجر الأسبوعي\nما التكلفة المعيارية للعمل المباشر لكل وحدة من المنتج XK-46؟",
+    "choicesAr": [
+      "$21.00",
+      "$26.25",
+      "$29.40",
+      "$36.75"
+    ],
+    "explanationAr": "التكلفة المعيارية للوحدة = 3 ساعات × تكلفة ساعة العمل المباشر. وتُحسب التكلفة بإضافة مزايا الموظفين إلى الأجور الأسبوعية ثم القسمة على ساعات العمل:\nالأجور الأسبوعية: $245.00\nيضاف: المزايا ($245 × .25): 61.25\nإجمالي التعويضات الأسبوعية: $306.25\nيقسم على: ساعات الأسبوع ÷ 35\nتكلفة ساعة العمل المباشر: $8.75\nيضرب في: ساعات العمل للوحدة × 3\nتكلفة العمل المباشر للوحدة: $26.25"
   },
   {
     "unit": 14,
@@ -1064,7 +1192,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sale of 12,500 cases of small cherries at $25 per case\nproduces revenue of $312,500. Because this amount is below\nthe $500,000 minimum, no commissions should be budgeted\nfor small cherries. The sale of 33,000 cases of large cherries\nat $32 per case produces revenue of $1,056,000. This amount\nis greater than the $1 million minimum and therefore qualifies\nfor a commission of $84,480 ($1,056,000 × 8%). The problem\ndid not state that a commission would be paid only on\namounts exceeding the minimum. Hence, all sales qualify\nonce the minimum is reached.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوقع شركة بيع 12,500 صندوق من الكرز الصغير خلال يونيو بسعر $25 للصندوق، و33,000 صندوق من الكرز الكبير بسعر $32 للصندوق. يتقاضى موظفو المبيعات عمولة 6% عن الكرز الصغير و8% عن الكبير إذا حققوا حصة إيرادات كل منتج. الحصتان المستهدفتان هما $500,000 للكرز الصغير و$1 مليون للكرز الكبير. ما عمولات المبيعات المقدرة لشهر يونيو؟",
+    "choicesAr": [
+      "$109,440",
+      "$84,480",
+      "$82,110",
+      "$4,480"
+    ],
+    "explanationAr": "ينتج عن بيع 12,500 صندوق من الكرز الصغير بسعر $25 إيراد قدره $312,500، وهو أقل من الحد الأدنى $500,000، فلا تُحتسب عمولة له. أما بيع 33,000 صندوق من الكرز الكبير بسعر $32 فيحقق $1,056,000، متجاوزًا الحد الأدنى $1 مليون، ولذلك تستحق عمولة $84,480 ($1,056,000 × 8%). ولم يذكر السؤال أن العمولة تُدفع فقط على الإيرادات الزائدة على الحد الأدنى، فتُطبق على جميع مبيعات المنتج المؤهل."
   },
   {
     "unit": 14,
@@ -1115,7 +1251,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The hourly wage per worker is $15.00 ($600 ÷ 40 hours). The\ndirect labor cost per hour is $18.00 [$15.00 × (1.0 + benefits\nequal to 20% of wages)]. Consequently, the standard direct\nlabor cost per unit is $54 ($18 × 3 hours).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق بيانات العمل المباشر التالية بتصنيع أجهزة التلفزيون:\nعدد العمال: 60\nساعات العمل الإنتاجية لكل عامل أسبوعيًا: 40\nالساعات اللازمة لتصنيع 1 وحدة: 3\nالأجر الأسبوعي لكل عامل: $600\nمزايا الموظفين المحتسبة ضمن تكلفة العمل المباشر: 20% من الأجور\nما التكلفة المعيارية للعمل المباشر لكل وحدة؟",
+    "choicesAr": [
+      "$54",
+      "$36",
+      "$45",
+      "$18"
+    ],
+    "explanationAr": "يبلغ أجر الساعة لكل عامل $15.00 ($600 ÷ 40 ساعة). وتبلغ تكلفة ساعة العمل المباشر بعد المزايا $18.00 [$15.00 × (1.0 + مزايا تعادل 20% من الأجور)]. وبالتالي تكون تكلفة العمل المباشر المعيارية للوحدة $54 ($18 × 3 ساعات)."
   },
   {
     "unit": 14,
@@ -1132,7 +1276,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The firm’s cost of goods manufactured can be calculated as\nfollows:\nCost of goods sold                     $400,000\nAdd: Ending finished goods inventory 25,000\nGoods available for sale             $425,000\nLess: Beg. finished goods inventory   (10,000)\nCost of goods manufactured               $415,000\nThe $415,000 is composed of materials ($100,000), direct\nlabor, and overhead. Therefore, labor plus overhead equals\n$315,000. Since overhead is two times labor, the calculation\nwould be DL + 2DL = $315,000, or DL = $105,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خصصت منشأة المبالغ التالية في موازنة السنة المقبلة:\nمخزون المنتجات التامة أول الفترة: $10,000\nتكلفة البضاعة المباعة: $400,000\nالمواد المباشرة المستخدمة في الإنتاج: $100,000\nمخزون المنتجات التامة آخر الفترة: $25,000\nمخزون الإنتاج تحت التشغيل أول الفترة وآخرها: 0\nتُقدر التكاليف الصناعية غير المباشرة بمثلي تكلفة العمل المباشر. ما المبلغ الواجب تخصيصه للعمل المباشر في الموازنة السنوية؟",
+    "choicesAr": [
+      "$315,000",
+      "$210,000",
+      "$157,500",
+      "$105,000"
+    ],
+    "explanationAr": "تُحسب تكلفة البضاعة المصنعة كما يلي:\nتكلفة البضاعة المباعة: $400,000\nيضاف: مخزون المنتجات التامة آخر الفترة: 25,000\nالبضاعة المتاحة للبيع: $425,000\nيطرح: مخزون المنتجات التامة أول الفترة: (10,000)\nتكلفة البضاعة المصنعة: $415,000\nتتكون تكلفة البضاعة المصنعة البالغة $415,000 من المواد ($100,000) والعمل المباشر والتكاليف الصناعية غير المباشرة. لذا يكون مجموع العمل المباشر والتكاليف غير المباشرة $315,000. وبما أن التكاليف غير المباشرة تساوي 2 × العمل المباشر، تكون المعادلة: العمل المباشر + ضعفه = $315,000؛ ومن ثم تكلفة العمل المباشر = $105,000."
   },
   {
     "unit": 14,
@@ -1166,7 +1318,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Total income is $5,000,000. Total expenses are $4,050,000\n[($10 × 125,000) + ($100 × 10,000) + ($200 × 4,000) + ($8 ×\n125,000)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توفرت المعلومات التالية عن مصنع قمصان رجالية للسنة الماضية:\nعدد القمصان المبيعة والمنتجة: 125,000\nسعر بيع القميص: $40\nالتكلفة الصناعية المباشرة: $10 للقميص\nتكلفة الإعداد: $100 لكل ساعة إعداد\nساعات الإعداد: 10,000\nتكاليف الشحن: $200 لكل شحنة\nعدد الشحنات: 4,000\nالتكلفة الإدارية: $8 للقميص\nما الربح التشغيلي للشركة في السنة الماضية؟",
+    "choicesAr": [
+      "$950,000",
+      "$1,950,000",
+      "$2,750,000",
+      "$3,750,000"
+    ],
+    "explanationAr": "تبلغ الإيرادات الإجمالية $5,000,000، والمصروفات الإجمالية $4,050,000، وتُحسب كالتالي: [($10 × 125,000) + ($100 × 10,000) + ($200 × 4,000) + ($8 × 125,000)]. ومن ثم يكون الربح التشغيلي هو الفرق بين الإيرادات والمصروفات."
   },
   {
     "unit": 14,
@@ -1200,7 +1360,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The demand for the first quarter is 6,800 units (2,000 + 2,300\n+ 2,500), but since there are 300 units in beginning inventory,\nonly 6,500 will need to be produced. However, since an\nadditional 10% must be manufactured to allow for product\ndefects, 650 units must be added to the production schedule,\nfor a total of 7,150 units. At 3 hours of direct labor per unit,\nbudgeted direct labor hours will equal 21,450.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتلقى شركة طلبية من عميل رئيسي في اليوم الأول من كل ربع، ويتعين عليها إنتاج كمية إضافية بنسبة 10% لتغطية عيوب المنتجات. يحتاج كل منتج تام إلى رطلين من المواد المباشرة وثلاث ساعات عمل مباشر. يبلغ مخزون المنتجات التامة في 1 يناير 300 وحدة، ويمكن استخدامه لتلبية الطلب. طلبيات الربع الأول:\nيناير: 2,000 وحدة\nفبراير: 2,300 وحدة\nمارس: 2,500 وحدة\nما ساعات العمل المباشر المقدرة للربع الأول؟",
+    "choicesAr": [
+      "19,500",
+      "20,400",
+      "21,450",
+      "22,440"
+    ],
+    "explanationAr": "يبلغ إجمالي الطلب في الربع الأول 6,800 وحدة (2,000 + 2,300 + 2,500)، لكن وجود 300 وحدة في مخزون أول الفترة يخفض الإنتاج المطلوب إلى 6,500 وحدة. ولأن الشركة تنتج كمية إضافية بنسبة 10% لتعويض العيوب، تضاف 650 وحدة ليصبح مجموع الإنتاج 7,150 وحدة. وبمعدل 3 ساعات عمل مباشر للوحدة، تبلغ الساعات المقدرة 21,450."
   },
   {
     "unit": 14,
@@ -1217,7 +1385,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Contribution margin is the net sales revenue minus all variable\ncosts (both manufacturing and S&A). Materials and labor and\nsales commissions are the only variable costs listed in the\nbudget. Thus, the contribution margin is equal to $5,500,000\n($10,000,000 Sales – 4,000,000 Materials and labor –\n500,000 Sales commissions).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "موازنة أحد المنتجات هي كما يلي:\nالمبيعات: $10,000,000\nالمواد والعمل: 4,000,000\nالتكاليف الصناعية غير المباشرة الثابتة: 1,500,000\nعمولات المبيعات: 500,000\nالإعلان (ثابت): 200,000\nتكاليف التسويق الأخرى (ثابتة): 800,000\nالتكاليف الإدارية الموزعة: 2,000,000\nالدخل: $1,000,000\nما هامش المساهمة المقدر لهذا المنتج؟",
+    "choicesAr": [
+      "$5,500,000",
+      "$5,300,000",
+      "$4,500,000",
+      "$3,000,000"
+    ],
+    "explanationAr": "هامش المساهمة = صافي إيراد المبيعات − جميع التكاليف المتغيرة، الصناعية والبيعية والإدارية. والبندان المتغيران الوحيدان هنا هما المواد والعمل وعمولات المبيعات. لذا يكون هامش المساهمة $5,500,000 ($10,000,000 مبيعات − 4,000,000 مواد وعمل − 500,000 عمولات)."
   },
   {
     "unit": 14,
