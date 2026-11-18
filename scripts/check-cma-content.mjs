@@ -595,10 +595,10 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:11},(_,i)=>"13.3."+(i+24)),
   ...Array.from({length:31},(_,i)=>"13.4."+(i+1)),
   ...[1,3,7,8].map(n=>"14.1."+n),
-  ...[6,7,10,11,12,16,17,18,19,20,21,24,25,28,29,30,31,32,33,36,39,41,42,43].map(n=>"14.2."+n),
+  ...[6,7,10,11,12,16,17,18,19,20,21,22,24,25,27,28,29,30,31,32,33,36,39,40,41,42,43].map(n=>"14.2."+n),
   ...[1,4,6,7,8,11,12,13,14,15,16,17,18,19].map(n=>"14.3."+n),
-  ...[1,3,4,7,8,9,11,12,13,17,18,21,22,23,25,26,27,28,29,33,34,35,36,37,38,39,40].map(n=>"14.4."+n),
-  ...[1,2,5,6,7,8,9,14,15,16,17,18,19,20,21,22,23,24,26,27,28,29,30,31,32,33,34].map(n=>"14.5."+n),
+  ...[1,3,4,7,8,9,11,12,13,17,18,19,20,21,22,23,24,25,26,27,28,29,33,34,35,36,37,38,39,40].map(n=>"14.4."+n),
+  ...[1,2,5,6,7,8,9,12,13,14,15,16,17,18,19,20,21,22,23,24,26,27,28,29,30,31,32,33,34].map(n=>"14.5."+n),
   ...[9,11,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30].map(n=>"14.6."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
@@ -660,7 +660,23 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 source Arabic drafts: §1 4/8, §2 24/43, §3 14/19, §4 27/40, §5 27/34, §6 19/31; 115/175 Arabic educational drafts. Nine source-layout flags, three numerical/option source defects, and one orphaned-context question remain excluded from graded practice.");
+console.log("Unit 14 source Arabic drafts: §1 4/8, §2 27/43, §3 14/19, §4 30/40, §5 29/34, §6 19/31; 123/175 Arabic educational drafts. Nine source-text flags and six additional pending answer/layout/context reviews remain excluded from scored practice.");
+// More Unit 14 cases are visibly garbled in the PDF-flattened explanation:
+// §4 Q30 p464 has split columns and broken numeric tokens; §6 Q10 p539 has
+// a broken algebra denominator. Keep source records unchanged and unscored.
+for(const [id,page,needle] of [
+  ["14.4.30",464,"Tota     Cred"],
+  ["14.6.10",539,"($46,000,000 + = .15"],
+]){
+  const source=vol2Records.get(id);
+  const [unit,section,number]=id.split(".");
+  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
+  check(source?.page===page && source.explanation.includes(needle) &&
+    mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+    mapped?.sourceArabicStatus===undefined &&
+    !source.stemAr && !source.choicesAr && !source.explanationAr,
+    "Do not score visibly garbled Unit 14 original source before page audit: "+id);
+}
 // Source §5 Q10 has a dependent, isolated stem and relies on the prior
 // Montero case (§5 Q9): the March/April sales and May expense data do not
 // appear in the isolated question, so prevent it being scored standalone.
