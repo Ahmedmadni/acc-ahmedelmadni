@@ -2900,7 +2900,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Zero-based budgeting is an effective means of bringing\nobjective thinking to the budgeting process. The principal\nadvantage of this approach is that managers are forced to\nreview each program in its entirety at the beginning of every\nbudget period, rather than merely extrapolate historical\nfigures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أسلوب إعداد الموازنات الذي يتعين فيه تبرير تكلفة كل برنامج، بدءًا من البرنامج الأكثر أهمية للمنشأة؟",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الموازنة الصفرية الأساس.",
+      "الموازنة المستمرة.",
+      "الموازنة الاحتمالية."
+    ],
+    "explanationAr": "تساعد الموازنة الصفرية الأساس على إدخال تقييم موضوعي في عملية إعداد الموازنة. فميزتها الأساسية إجبار المديرين على مراجعة كل برنامج بالكامل عند بداية كل فترة، بدلًا من مجرد تمديد الأرقام التاريخية."
   },
   {
     "unit": 13,
@@ -2917,7 +2925,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An activity-based budget applies activity-based costing\nprinciples to the budgeting process. Its greatest effect is on\nindirect costs. Activity-based budgeting involves defining the\nactivities that drive indirect costs. A cost pool is established for\neach activity, and a cost driver is identified for each pool.\nDrivers can include labor hours, machine hours, or other\nvariables.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الموازنات التالية تسمح للإدارة بأفضل تقييم لكيفية تغير التكاليف تبعًا لتغير مسببات التكلفة، مثل ساعات العمل المباشر أو ساعات تشغيل الآلات؟",
+    "choicesAr": [
+      "الموازنة المتجددة.",
+      "الموازنة على أساس الأنشطة.",
+      "موازنة الإنتاج.",
+      "موازنة التكاليف."
+    ],
+    "explanationAr": "تُطبق الموازنة على أساس الأنشطة مبادئ التكاليف على أساس الأنشطة، خاصة في التكاليف غير المباشرة. وتحدد الأنشطة التي تتسبب في هذه التكاليف، ثم تخصص مجمع تكلفة لكل نشاط وتحدد مسبب التكلفة المناسب له، مثل ساعات العمل أو ساعات تشغيل الآلات أو المتغيرات الأخرى."
   },
   {
     "unit": 13,
@@ -2934,7 +2950,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Zero-based budgeting, or ZBB, is a budget process in which\neach manager must justify his or her department’s entire\nbudget every year without regard for past operations and\nbudgets. This is in contrast to the traditional budget that is\noften based on an incremental concept, wherein past costs\nare simply increased for the upcoming budget cycle. In ZBB,\nevery cost must be justified regardless of variance from\nprevious years.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كلف المراقب المالي في شركة ألينوود للصلب مديرة الموازنات الجديدة بإعادة هيكلة نظام الموازنات. ويريد منها جمع معلومات عن أنشطة كل وحدة، ثم فحص مساهمة تلك الوحدات في المنشأة مع الإدارة العليا. وللتخلص من الهدر وعدم الكفاءة، ستُحدد موازنة كل وحدة للسنة المقبلة دون الاعتماد على الموازنات السابقة، وباعتبار محدود للنتائج التشغيلية الماضية. ما اسم هذا الأسلوب؟",
+    "choicesAr": [
+      "إعداد الموازنات على أساس الأنشطة.",
+      "إعداد الموازنات التقديرية (Pro forma).",
+      "إعداد الموازنات المرنة.",
+      "إعداد الموازنات الصفرية الأساس."
+    ],
+    "explanationAr": "تتطلب الموازنة الصفرية الأساس من كل مدير تبرير موازنة إدارته بالكامل كل سنة دون الاعتماد على العمليات أو الموازنات السابقة. وهذا يختلف عن المنهج التزايدي التقليدي الذي يزيد التكاليف الماضية لتحديد موازنة الفترة المقبلة. ففي الموازنة الصفرية يجب تبرير كل تكلفة، بصرف النظر عن اختلافها عن السنوات الماضية."
   },
   {
     "unit": 13,
@@ -2951,7 +2975,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A rolling budget is a continuous budget that is revised on a\nregular basis, such as every month or every quarter. A\ncompany typically extends a rolling budget for an additional\nmonth or quarter in accordance with new data as the current\nmonth or quarter ends.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنة التي يُستبدل فيها كل ربع سنة بربع سنة تالٍ، بما يشجع الإدارة على التفكير في الفترة المقبلة، هي:",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الموازنة الشاملة.",
+      "الموازنة المتجددة.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "الموازنة المتجددة موازنة مستمرة تُراجع بانتظام، شهريًا أو ربع سنويًا مثلًا، وتُمدد لفترة إضافية باستخدام المعلومات الجديدة عند انتهاء الشهر أو الربع الحالي."
   },
   {
     "unit": 13,
@@ -2968,7 +3000,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Zero-based budgeting (ZBB) is a budgeting and planning\nprocess in which each manager must justify his or her\ndepartment’s entire budget every budget cycle. The manager\nbuilds the budget from zero every year and does not simply\nadjust the annual budget from the prior year’s budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طلب مجلس إدارة إحدى الشركات مراجعة تفصيلية لجميع بنود الموازنة التشغيلية للسنة المالية المقبلة. وأبلغ المراقب المالي رؤساء الوحدات أن بنود السنة المقبلة لن تُعتمد تلقائيًا لمجرد الموافقة عليها في السنوات السابقة، بل يجب تبرير كل بند. أي نظام لإعداد الموازنات تستخدمه الشركة على الأرجح؟",
+    "choicesAr": [
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة الصفرية الأساس.",
+      "موازنة المشروعات.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "في الموازنة الصفرية الأساس، يجب على كل مدير تبرير موازنة إدارته بالكامل في كل دورة. وتُبنى الموازنة من الصفر سنويًا، بدلًا من تعديل موازنة السنة السابقة تلقائيًا."
   },
   {
     "unit": 13,
@@ -2985,7 +3025,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A continuous (rolling) budget is one that is revised on a\nregular (continuous) basis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما نوع الموازنة الذي يُحدّث باستمرار عبر إضافة فترة جديدة كلما اكتملت أحدث فترة مدرجة فيه؟",
+    "choicesAr": [
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة.",
+      "الموازنة المتجددة.",
+      "الموازنة الصفرية الأساس."
+    ],
+    "explanationAr": "الموازنة المستمرة أو المتجددة هي موازنة تُراجع على أساس دوري ومستمر."
   },
   {
     "unit": 13,
@@ -3002,6 +3050,14 @@
     ],
     "answerIndex": 2,
     "explanation": "Activity-based budgeting uses several cost drivers to assign\noverhead costs to its products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة مجموعة منتجات تختلف في درجة التعقيد: نموذج أساسي ونموذج قياسي ونموذج فاخر. وتستخدم الشركة 25 مسببًا مختلفًا لتكلفة الأنشطة من أجل تحميل التكاليف الصناعية غير المباشرة على المنتجات، ويستهلك النموذج الفاخر عادة مسببات تكلفة أكثر من النماذج الأبسط. وتشجع الشركة المديرين على متابعة الأنشطة المنفذة لكل منتج والرقابة على تكاليفها. أي أسلوب موازنة يلبي احتياجاتها على نحو أفضل؟",
+    "choicesAr": [
+      "إعداد الموازنات التقليدي.",
+      "الموازنة الصفرية الأساس.",
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "يستخدم إعداد الموازنات على أساس الأنشطة عدة مسببات للتكلفة لتحميل التكاليف الصناعية غير المباشرة على المنتجات، وهو ملائم لمنتجات تختلف في مستوى تعقيد أنشطتها."
   }
 ]
