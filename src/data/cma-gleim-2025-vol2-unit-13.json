@@ -2300,7 +2300,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Although activity-based budgeting provides greater detail than\nother budgeting methods, it does not necessarily reduce\nplanning uncertainty.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي لا يُعد ميزة لإعداد الموازنات على أساس الأنشطة؟",
+    "choicesAr": [
+      "تحديد الاحتياجات من الموارد بصورة أفضل.",
+      "ربط التكاليف بالمخرجات.",
+      "تحديد التراخي في تقديرات الموازنة.",
+      "خفض عدم التأكد في التخطيط."
+    ],
+    "explanationAr": "رغم أن إعداد الموازنات على أساس الأنشطة يوفر تفاصيل أكثر من بعض الأساليب الأخرى، فإنه لا يضمن تقليل عدم التأكد المرتبط بالتخطيط."
   },
   {
     "unit": 13,
@@ -2317,7 +2325,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If an unchanged master budget is used continuously\nthroughout the year for comparison with actual results, it must\nbe a static budget, that is, one prepared for just one level of\nactivity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إن استخدام الموازنة الشاملة طوال السنة باعتبارها أساسًا ثابتًا للمقارنة بالنتائج الفعلية يعني أن الموازنة الشاملة تُعد أيضًا:",
+    "choicesAr": [
+      "موازنة مرنة.",
+      "موازنة رأسمالية.",
+      "موازنة صفرية الأساس.",
+      "موازنة ثابتة."
+    ],
+    "explanationAr": "عند مقارنة النتائج الفعلية طوال العام بموازنة شاملة لم تُعدّل، فإنها تمثل موازنة ثابتة، أي موازنة أُعدت لمستوى واحد فقط من النشاط."
   },
   {
     "unit": 13,
@@ -2334,7 +2350,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Incremental budgeting simply adjusts the current year’s\nbudget to allow for changes planned for the coming year; a\nmanager is not asked to justify the base portion of the budget.\nZBB, however, requires a manager to justify the entire budget\nfor each year. Incremental budgeting offers to managers the\nadvantage of requiring less managerial effort to justify\nchanges in the budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الميزة التي تتمتع بها الموازنة التزايدية مقارنة بالموازنة الصفرية الأساس؟",
+    "choicesAr": [
+      "تشجيع اعتماد المشروعات الجديدة بسرعة.",
+      "اعتبار قاعدة الموازنة الحالية مقبولة ولا تتطلب إعادة تبرير.",
+      "استبعاد الوظائف والمهام التي فقدت جدواها.",
+      "إلغاء الحاجة إلى مراجعة جميع الوظائف دوريًا من أجل الاستخدام الأمثل للموارد."
+    ],
+    "explanationAr": "تعدّل الموازنة التزايدية موازنة السنة الحالية وفق التغيرات المتوقعة للسنة المقبلة، ولا تطالب المدير بتبرير الجزء الأساسي منها. أما الموازنة الصفرية فتتطلب تبرير الموازنة بكاملها في كل دورة؛ لذا تقل جهود الإدارة اللازمة للتبرير عند اتباع الأسلوب التزايدي."
   },
   {
     "unit": 13,
@@ -2351,7 +2375,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A continuous (rolling) budget is one that is revised on a\nregular (continuous) basis. Typically, a company continuously\nextends such a budget for an additional month or quarter in\naccordance with new data as the current month or quarter\nends. For example, if the budget cycle is 1 year, a budget for\nthe next 12 months will be available continuously as each\nmonth ends. The principal advantage of a rolling budget is that\nit requires managers always to be thinking ahead.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما نوع الموازنة التي تظل متاحة بصفة مستمرة لفترة مستقبلية محددة، وذلك بإضافة شهر أو ربع سنة أو سنة جديدة كلما انقضت فترة مماثلة؟",
+    "choicesAr": [
+      "الموازنة المتجددة (المستمرة).",
+      "موازنة كايزن.",
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "تُراجع الموازنة المتجددة بانتظام، ويُضاف إليها شهر أو ربع سنة وفق البيانات الحديثة مع انتهاء الفترة الحالية. فإذا كانت دورة الموازنة 1 سنة، تظل الموازنة متاحة للأشهر 12 المقبلة مع نهاية كل شهر. وميزتها الأساسية تشجيع المديرين على التفكير المستقبلي باستمرار."
   },
   {
     "unit": 13,
@@ -2368,7 +2400,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The traditional approach to budgeting is to merely adjust last\nyear’s figures by a given percentage or increment. Zero-based\nbudgeting divides programs into packages of goals, activities,\nand required resources. The cost of each package is then\ncalculated afresh, without regard to previous performance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتمثل أهم جاذبية الموازنة الصفرية الأساس في أنها:",
+    "choicesAr": [
+      "تحل مشكلة قياس فاعلية البرامج.",
+      "تربط الأداء بمدخلات الموارد من خلال عملية تخطيط وتخصيص موارد متكاملة.",
+      "تقلل بدرجة كبيرة الوقت اللازم لمراجعة الموازنة.",
+      "تعالج بعض مشكلات أسلوب إعداد الموازنات التزايدي."
+    ],
+    "explanationAr": "يعتمد الأسلوب التقليدي على تعديل أرقام السنة الماضية بنسبة أو زيادة محددة، أما الموازنة الصفرية فتقسم البرامج إلى حزم تضم الأهداف والأنشطة والموارد المطلوبة، ثم تُحسب تكلفة كل حزمة من جديد دون الاعتماد على الأداء السابق."
   },
   {
     "unit": 13,
@@ -2385,7 +2425,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A continuous, or rolling, budget (profit plan) is one that is\nrevised on a regular or continuous basis. Typically, a company\nthat uses continuous budgeting extends the budget for\nanother month or quarter in accordance with new data as the\ncurrent month or quarter ends. For example, if the budget is\nfor 12 months, a budget for the next year will always be\navailable at the end of each interim period. Continuous\nbudgeting encourages a longer-term perspective regardless of\nhow little time remains in the company’s current fiscal year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خطة الأرباح المستمرة:",
+    "choicesAr": [
+      "هي خطة تُراجع شهريًا أو ربع سنويًا.",
+      "هي خطة سنوية ضمن خطة مدتها 5 سنوات.",
+      "هي خطة يضعها فريق تخطيط متفرغ.",
+      "تكون أنسب لمنشأة تستطيع التنبؤ بالأحداث بدرجة موثوقة لسنة أو أكثر مقبلة."
+    ],
+    "explanationAr": "تُراجع خطة الأرباح المستمرة، أو الموازنة المتجددة، بصفة دورية. وعند انتهاء شهر أو ربع سنة، تُمدد لفترة مماثلة بالاستناد إلى المعلومات الجديدة. فإذا كانت الموازنة تغطي 12 شهرًا، تتوافر دائمًا موازنة للسنة التالية في نهاية كل فترة مرحلية؛ وهذا يعزز النظرة طويلة المدى بصرف النظر عن الوقت المتبقي من السنة المالية."
   },
   {
     "unit": 13,
@@ -2402,7 +2450,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A continuous, or rolling, budget is one that is revised monthly\nor quarterly by dropping one period and adding a new one.\nThus, a company desiring a 1-year budget cycle will always\nhave a budget for the next 12 months, regardless of the time\nof year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنة المستمرة (المتجددة):",
+    "choicesAr": [
+      "تعرض خطة لمستوى نشاط واحد فقط ولا تتكيف مع تغير مستوى النشاط.",
+      "تعرض خطة لنطاق من مستويات النشاط حتى يمكن تعديلها مع تغير النشاط.",
+      "هي خطة تُحدّث شهريًا أو ربع سنويًا بإسقاط فترة منتهية وإضافة أخرى جديدة.",
+      "هي إحدى موازنات الخطة الاستراتيجية طويلة الأجل ولا تتغير إلا بتغير استراتيجية المنشأة."
+    ],
+    "explanationAr": "تُراجع الموازنة المستمرة شهريًا أو ربع سنويًا عن طريق حذف الفترة المنتهية وإضافة فترة جديدة. وهكذا، إذا أرادت المنشأة دورة موازنة مدتها 1 سنة، فإنها تحتفظ دائمًا بموازنة للأشهر 12 المقبلة، أيًا كان وقت السنة."
   },
   {
     "unit": 13,
@@ -2419,7 +2475,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Zero-based budgeting is a planning process in which each\nmanager must justify his/her department’s full budget for each\nperiod. The purpose is to encourage periodic reexamination of\nall costs in the hope that some can be reduced or eliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تلزم الموازنة الصفرية الأساس المديرين بما يلي:",
+    "choicesAr": [
+      "تقدير إيرادات المنتج ومصروفاته خلال دورة حياته المتوقعة.",
+      "إعداد الموازنة استنادًا إلى التكاليف التاريخية.",
+      "صياغة الموازنة بحسب الأهداف بدلًا من الوظائف.",
+      "تبرير جميع النفقات في بداية كل فترة موازنة."
+    ],
+    "explanationAr": "الموازنة الصفرية عملية تخطيط يُطلب فيها من كل مدير تبرير كامل موازنة إدارته لكل فترة. وتهدف إلى إعادة فحص جميع التكاليف بصورة دورية بحثًا عن فرص تخفيضها أو إلغائها."
   },
   {
     "unit": 13,
@@ -2436,7 +2500,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Activity-based budgeting applies activity-based costing\nprinciples to budgeting. Its greatest effect is on the application\nof indirect costs. A traditional budgeting system involves\nlumping all indirect costs into a single pool and allocating them\nto products based on a cost driver such as volume or machine\nhours.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة أسلوبًا لإعداد الموازنات يركز على تكلفة العمليات اللازمة لإنتاج وبيع المنتجات والخدمات. فما اسم هذا الأسلوب؟",
+    "choicesAr": [
+      "إعداد الموازنات على أساس العمليات.",
+      "إعداد الموازنات على أساس الأنشطة.",
+      "موازنة الأنشطة الشاملة.",
+      "إعداد الموازنات على أساس قابلية الرقابة."
+    ],
+    "explanationAr": "يطبق إعداد الموازنات على أساس الأنشطة مبادئ التكاليف على أساس الأنشطة، ويؤثر بصفة خاصة في معالجة التكاليف غير المباشرة. ففي النظام التقليدي قد تُجمع هذه التكاليف في مجمع واحد ثم تُحمّل على المنتجات باستخدام محرك تكلفة مثل حجم الإنتاج أو ساعات تشغيل الآلات."
   },
   {
     "unit": 13,
@@ -2453,7 +2525,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under zero-based budgeting, managers must build the budget\nevery year from a base of zero. All expenditures must be\njustified regardless of variance from previous years. The\nobjective is to encourage periodic reexamination of all costs in\nthe hope that some can be reduced or eliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تريد الإدارة الحد من الهدر ووضع موازنة منضبطة وفعالة، وتدرك أن ذلك يستلزم وقتًا وموارد إضافية في عملية إعداد الموازنة. لذا تخطط لمراجعة شاملة لجميع الأنشطة والوظائف للسنة المقبلة. لكن المراقب المالي اختار الموازنة الشاملة للسنة الحالية نقطة انطلاق لموازنة السنة التالية. هل اختار الأسلوب الأنسب لتحقيق أهداف الإدارة؟",
+    "choicesAr": [
+      "نعم؛ ينبغي تعديل الموازنة الحالية تزايديًا لخفض الهدر.",
+      "لا؛ ينبغي تطبيق موازنة مستمرة لتوفير معلومات أحدث.",
+      "لا؛ ينبغي اختيار الموازنة الصفرية الأساس، فلا تُقبل تكلفة دون تبرير.",
+      "لا؛ ينبغي اختيار الموازنة على أساس الأنشطة للتركيز على أنماط التكلفة التاريخية."
+    ],
+    "explanationAr": "في الموازنة الصفرية يبدأ المديرون كل سنة من قاعدة صفرية، ويلزم تبرير جميع النفقات بغض النظر عن فروقها عن السنوات السابقة. ويساعد ذلك على إعادة فحص التكاليف بحثًا عن بنود يمكن تقليصها أو إلغاؤها؛ وهو الأنسب لهدف خفض الهدر."
   },
   {
     "unit": 13,
@@ -2470,7 +2550,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A continuous (rolling) budget is one that is revised monthly or\nquarterly by dropping one period and adding a new one. Thus,\na company desiring a budget that is always as up-to-date as\npossible will benefit from using this type of budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "وجدت منشأة أن موازناتها السنوية تصبح قديمة سريعًا بمجرد تسجيل النتائج الفعلية، بل قد يبدأ تنفيذ أنشطة الفترة قبل اكتمال موازنتها، فلا يتاح وقت للاستجابة للمتغيرات. ترغب المنشأة في موازنة تعكس أحدث المعلومات، والإدارة مستعدة لتعديلها عند الحاجة. ما الحل الأنسب؟",
+    "choicesAr": [
+      "إعداد الموازنات المرنة.",
+      "إعداد الموازنات على أساس الأنشطة.",
+      "إعداد الموازنات الصفرية.",
+      "إعداد الموازنات المستمرة."
+    ],
+    "explanationAr": "الموازنة المستمرة أو المتجددة تُراجع كل شهر أو ربع سنة، وتُحذف منها فترة وتضاف أخرى؛ ولذلك تكون مناسبة لمنشأة تريد تحديث الموازنة باستمرار وفق المستجدات."
   },
   {
     "unit": 13,
@@ -2487,7 +2575,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Zero-based budgeting (ZBB) is a budget and planning process\nin which each manager must justify his/her department’s entire\nbudget every budget cycle. ZBB differs from the traditional\nconcept of incremental budgeting, in which the current year’s\nbudget is simply adjusted to allow for changes planned for the\ncoming year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما اسم أسلوب الموازنة الذي يتطلب من المدير تبرير الموازنة بكاملها في كل فترة؟",
+    "choicesAr": [
+      "الموازنة على أساس الأداء.",
+      "الموازنة على أساس البرامج.",
+      "الموازنة الصفرية الأساس.",
+      "الموازنة التزايدية."
+    ],
+    "explanationAr": "تقتضي الموازنة الصفرية الأساس أن يبرر كل مدير إجمالي موازنة إدارته في كل دورة. وتختلف عن الموازنة التزايدية التي تعدل موازنة السنة الحالية فقط لتعكس التغيرات المخطط لها للسنة التالية."
   },
   {
     "unit": 13,
@@ -2504,7 +2600,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Zero-based budgeting (ZBB) is a planning process in which\neach manager must justify a department’s entire budget every\nyear (or period). Under ZBB, a manager must build the budget\nevery year from a base of zero. All expenditures must be\njustified regardless of the variances from previous years’\nbudgets. The objective is to encourage periodic reexamination\nof all costs in the hope that some can be reduced or\neliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشآت الأعمال أساليب متعددة لإعداد الموازنات. ويُقصد بالموازنة الصفرية الأساس أنها:",
+    "choicesAr": [
+      "تبدأ إعداد الموازنة من الصفر كما لو أن العملية تُنفذ للمرة الأولى.",
+      "تعد موازنة للتدفقات النقدية الداخلة والخارجة لتوقيت الاستثمارات والاقتراض مع الحفاظ على حد أدنى لرصيد البنك.",
+      "تتخذ موازنة السنة السابقة أساسًا ثم تعدلها وفق خبراتها والتوقعات للسنة المقبلة.",
+      "تقدر التكاليف باستخدام علاقات مقاسة وواضحة بين المدخلات والمخرجات."
+    ],
+    "explanationAr": "في الموازنة الصفرية الأساس يتعين على كل مدير تبرير كامل موازنة إدارته كل سنة أو فترة، بدءًا من الصفر. ولا تُعتمد أي نفقة لمجرد ورودها في موازنة سابقة؛ والهدف مراجعة جميع التكاليف بصورة دورية وإمكان تخفيض غير الضروري منها أو إلغائه."
   },
   {
     "unit": 13,
@@ -2521,7 +2625,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A zero-based budget is a planning process in which each\nmanager must justify a department’s entire budget each year.\nThe budget is built from the base of zero each year. Since\nindividual marketing managers are in charge of individual\ncereal lines, they need to produce their own budget to allocate\nresources to advertising. If managers need to defend the\nentire budget, unnecessary costs will be eliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج منشأة وتبيع ثمانية أنواع من حبوب الإفطار، ولديها ثمانية مديري تسويق، كل منهم مسؤول عن الإعلان عن نوع واحد. تاريخيًا تحدد تكلفة الإعلان بمقدار 10% من الإيرادات المتوقعة لكل منتج، وكانت المصروفات الفعلية قريبة جدًا من الموازنة، مع فروق غير جوهرية. لتحسين كفاءة توزيع الموارد المتاحة للإعلان، ينبغي للمنشأة:",
+    "choicesAr": [
+      "تطبيق بطاقة الأداء المتوازن.",
+      "تطبيق الموازنة المرنة.",
+      "تطبيق الموازنة الصفرية الأساس.",
+      "الإبقاء على النظام الحالي."
+    ],
+    "explanationAr": "تتطلب الموازنة الصفرية الأساس أن يبرر كل مدير التسويق موازنة الإعلان الخاصة بخط المنتجات الذي يديره من نقطة الصفر. وعند إلزام كل مدير بتبرير إجمالي الموارد المطلوبة، يسهل تحديد النفقات غير الضرورية وإلغاؤها بدلًا من اعتماد نسبة ثابتة تلقائيًا."
   },
   {
     "unit": 13,
@@ -2538,7 +2650,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Zero-based budgeting would be the most appropriate budget\nmethodology because it requires management to justify each\nfunction and associated costs. Costs that cannot be justified\nwill not be allocated to that unit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يخشى مجلس الإدارة أن لجنة الموازنة اعتادت إضافة نمو ثابت بنسبة 3% إلى أداء السنة السابقة، فأصبحت تركز على الماضي أكثر من الفرص المستقبلية والأنشطة اللازمة لتحقيقها. ويريد المجلس تقييم الأنشطة المطلوبة للأهداف الاستراتيجية وتوزيع الموارد بناء عليها، مع إلزام الإدارة بتبرير كل وظيفة وتكاليفها. أي أسلوب يوصي به المجلس؟",
+    "choicesAr": [
+      "إعداد الموازنات التقليدي.",
+      "إعداد الموازنات على أساس الأنشطة.",
+      "إعداد الموازنات الصفرية الأساس.",
+      "إعداد الموازنات المستمرة."
+    ],
+    "explanationAr": "الموازنة الصفرية الأساس هي الأنسب لأنها تلزم الإدارة بتبرير كل وظيفة والتكاليف المرتبطة بها؛ فلا تخصص موارد لتكلفة لا يمكن الدفاع عن ضرورتها."
   },
   {
     "unit": 13,
@@ -2555,7 +2675,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The current financial forecast reflects the most recent monthly\nresults and any material changes to the company’s outlook or\neconomy, and forecasts are updated every few months,\nreassessing the company’s outlook several times a year.\nHowever, in continuous budgeting, the decision-making\nprocess to develop the budget takes place continuously, not\njust during the fourth quarter of the prior year being budgeted.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تنطبق على أسلوب الموازنة المستمرة؟\nI. يعكس التنبؤ المالي الحالي أحدث النتائج الشهرية وأي تغير جوهري في آفاق المنشأة أو الاقتصاد.\nII. تُحدّث التنبؤات كل بضعة أشهر لتقييم توقعات المنشأة عدة مرات سنويًا.\nIII. تتم عملية اتخاذ القرارات الخاصة بالموازنة خلال الربع الرابع من السنة السابقة للسنة الجاري إعداد موازنتها.",
+    "choicesAr": [
+      "العبارتان I وII فقط.",
+      "العبارتان I وIII فقط.",
+      "العبارتان II وIII فقط.",
+      "العبارات I وII وIII جميعًا."
+    ],
+    "explanationAr": "في الموازنة المستمرة يتضمن التنبؤ المالي أحدث النتائج الشهرية والتغيرات الجوهرية، ويُحدّث على مدار السنة لإعادة تقييم التوقعات. أما وضع الموازنة واتخاذ قراراتها فيستمران على مدار العام، ولا يقتصران على الربع الرابع من السنة السابقة."
   },
   {
     "unit": 13,
@@ -2572,7 +2700,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A project budget consists of all the costs expected to attach to\na particular project, such as designing a new aircraft. Projects\noften require large expenditures over their life cycles. The\nproject budget displays expected expenditures related to\ndifferent parts of the organization, such as engineering,\nmarketing, etc.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يهدف إعداد موازنة المشروع إلى تحديد المشروعات المجدية وتقييمها واختيارها، عندما تتطلب هذه المشروعات:",
+    "choicesAr": [
+      "مصروفات كبيرة مدرجة في قائمة الدخل، وتكون الفترة المناسبة هي دورة حياة المشروع.",
+      "مصروفات كبيرة مدرجة في قائمة الدخل، وتكون الفترة المناسبة هي السنة الجاري إعداد موازنتها.",
+      "التزامًا بمبالغ كبيرة من الأموال، وتكون الفترة المناسبة هي دورة حياة المشروع.",
+      "التزامًا بمبالغ كبيرة من الأموال، وتكون الفترة المناسبة هي السنة الجاري إعداد موازنتها."
+    ],
+    "explanationAr": "تشمل موازنة المشروع جميع التكاليف المتوقع تحملها لمشروع محدد، مثل تصميم طائرة جديدة. وكثيرًا ما تتطلب المشروعات إنفاقًا كبيرًا عبر دورة حياتها، وتعرض الموازنة التكاليف المتوقعة المتعلقة بوحدات متعددة كالقطاع الهندسي والتسويق وغيرها."
   },
   {
     "unit": 13,
@@ -2589,7 +2725,15 @@
     ],
     "answerIndex": 0,
     "explanation": "This is an example of continuous budgeting. A continuous\n(rolling) budget is one that is revised on a regular (continuous)\nbasis. The firm will add October to their budget plan as soon\nas May results are reported.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت منشأة موازنات للأشهر 5 التالية: مايو ويونيو ويوليو وأغسطس وسبتمبر. وبمجرد صدور نتائج مايو ستضيف أكتوبر إلى خطط الموازنة. ما نظام الموازنات الذي تتبعه؟",
+    "choicesAr": [
+      "إعداد الموازنات المستمرة.",
+      "إعداد الموازنات على أساس الأنشطة.",
+      "إعداد الموازنات المرنة.",
+      "إعداد موازنات المشروعات."
+    ],
+    "explanationAr": "هذه حالة للموازنة المستمرة أو المتجددة، إذ تُراجع الموازنة بانتظام، وتضيف المنشأة شهر أكتوبر فور صدور نتائج شهر مايو، فتظل فترة التوقع المستقبلية ممتدة."
   },
   {
     "unit": 13,
@@ -2606,7 +2750,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Zero-based budgeting is a budget and planning process in\nwhich each manager must justify his or her department’s\nentire budget every budget cycle. This kind of budgeting would\nbe best for the company in order to improve profitability\nbecause it would allow the new management to identify where\nor to what extent overspending occurred.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتيح شركة لبناء المنازل لعملائها اختيار 1 من 12 تصميمًا في مواقع متعددة. وخلال 15 سنة كانت تعد موازنتها السنوية بتعديل النتائج الفعلية للسنة السابقة وفق التضخم وحجم النشاط المتوقع. وخلال هذه الفترة ظلت هوامش أرباحها ضمن الأدنى مقارنة بالمقاولين المحليين. وبعد تغير الملكية تعتقد الإدارة الجديدة بوجود إنفاق غير ضروري في جوانب متعددة، لكنها لا تعرف مواضعه أو حجمه. لتحسين الربحية، ما نظام الموازنات الذي ينبغي تطبيقه؟",
+    "choicesAr": [
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المستمرة.",
+      "موازنة المشروعات.",
+      "الموازنة الصفرية الأساس."
+    ],
+    "explanationAr": "تستلزم الموازنة الصفرية الأساس من كل مدير تبرير موازنة إدارته بالكامل عند كل دورة. وهي مناسبة لتحسين ربحية الشركة لأنها تتيح للإدارة الجديدة اكتشاف مواضع الإنفاق الزائد ومداه بدلًا من تكرار أرقام السنوات السابقة."
   },
   {
     "unit": 13,
@@ -2623,7 +2775,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A project budget consists of all the costs expected to attach to\na particular project, such as the design of a new airliner or the\nbuilding of a single ship. Therefore, the project’s budget\nshould include the interest expense on the bank loan, the\nincremental insurance expense, and the incremental property\ntax expense.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحتاج شركة إلى توسيع مستودعها، وتخشى أثر المشروع في توقعاتها المالية. وستتعاقد مع مقاول لتنفيذ العمل. ونظرًا إلى انخفاض هوامش الربح وضيق السيولة، ستمول التوسع بقرض بنكي. إذا كانت مدة المشروع المتوقعة 6 أشهر، فإلى جانب سعر عرض المقاول، أي المصروفات التالية يجب إدراجها في موازنة المشروع؟\nI. مصروف الفائدة على القرض البنكي.\nII. الزيادة في مصروف التأمين.\nIII. الزيادة في مصروف ضريبة العقار.",
+    "choicesAr": [
+      "البند I فقط.",
+      "البند II فقط.",
+      "البندان II وIII فقط.",
+      "البنود I وII وIII جميعًا."
+    ],
+    "explanationAr": "تضم موازنة المشروع كل التكاليف المتوقع ارتباطها مباشرة بالمشروع، ومن ثم تشمل فائدة قرض التمويل والزيادة في مصروف التأمين والزيادة في ضريبة العقار، إضافة إلى أتعاب المقاول."
   },
   {
     "unit": 13,
@@ -2640,7 +2800,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Activity-based budgeting is different from traditional budgeting\nin that it looks at desired outcomes and works back from there\nto determine resources needed and that being under budget in\none year would not necessarily indicate that an operating unit\nwould have its budget cut the following year. Traditional\ncosting tends to use historical data, and working backwards is\nmore forward-thinking. Also, in traditional costing, if a unit is\nunder budget one year, the following year may have budget\ncuts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعتمد الطرق التقليدية لإعداد الموازنات على البيانات التاريخية والموارد الحالية ثم تتنبأ بالمستقبل. أما إعداد الموازنة على أساس الأنشطة فيختلف في أنه:\nI. يبدأ بالمخرجات المستهدفة ثم يحدد الموارد اللازمة لتحقيقها.\nII. يستخدم مستويات النشاط الحالية لتحديد المستويات المستقبلية بصرف النظر عن الموارد المتاحة حاليًا.\nIII. إن انخفاض الإنفاق الفعلي عن الموازنة في سنة ما لا يعني بالضرورة خفض موازنة الوحدة التشغيلية في السنة التالية.\nIV. يركز على التخطيط لكل إدارة على حدة بحسب الموارد المتاحة.",
+    "choicesAr": [
+      "العبارة I فقط.",
+      "العبارتان I وIII فقط.",
+      "العبارتان II وIII فقط.",
+      "العبارتان II وIV فقط."
+    ],
+    "explanationAr": "يبدأ إعداد الموازنة على أساس الأنشطة بالمخرجات المطلوبة ثم يعود لتحديد الموارد اللازمة، كما لا يقتضي انخفاض الإنفاق الفعلي عن الموازنة في سنة معينة خفض موازنة الوحدة في السنة التالية تلقائيًا. وعلى النقيض، تميل الأساليب التقليدية إلى الاعتماد على التاريخ وقد تخفض اعتمادات الوحدة إذا لم تستخدمها كاملة."
   },
   {
     "unit": 13,
@@ -2657,7 +2825,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A continuous budget is revised on a regular basis. As the\nperiod ends, a new budget period is added. For example, the\nbudget can be regularly extended for another month at the\nend of each month. As a result, a continuous budget is based\non the most recent information.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنة المستمرة هي الموازنة التي:",
+    "choicesAr": [
+      "تُعدّل خلال الفترة استجابة لتغير العوامل البيئية.",
+      "تبقى متاحة لفترة مستقبلية محددة بإضافة فترة جديدة كلما انتهت فترة موازنة.",
+      "تُعد بعد أن تكون المنشأة قد مارست نشاطها لفترة واحدة على الأقل.",
+      "تستخدم النتائج الفعلية للفترة السابقة موازنة للفترة الحالية."
+    ],
+    "explanationAr": "تُحدّث الموازنة المستمرة بصورة دورية؛ فكلما انتهت فترة أُضيفت فترة جديدة. وقد تُمدد شهرًا جديدًا عند نهاية كل شهر، ولذلك تستند إلى أحدث المعلومات."
   },
   {
     "unit": 13,
@@ -2674,7 +2850,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A project budget consists of all the costs expected to attach to\na particular project. Project budgeting is performed at the\ninitial stages of project planning and usually in parallel with the\ndevelopment of the project schedule. The steps associated\nwith budgeting are highly dependent on both the estimated\nlengths of tasks and the resources assigned to the project.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقوم شركة مقاولات بتصميم وبناء منازل خاصة للعملاء، ويمكن للعميل الاختيار من عدة تصاميم أساسية وإدخال تعديلات بسيطة أو كبيرة عليها. ويستغرق تصميم المنزل وبناؤه عادة من 3 أشهر إلى 1 سنة تبعًا لحجم التخصيص. ما نوع الموازنة الأنسب لهذه الحالة؟",
+    "choicesAr": [
+      "موازنة المشروعات.",
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة.",
+      "الموازنة المتجددة (المستمرة)."
+    ],
+    "explanationAr": "تشمل موازنة المشروع كل التكاليف المتوقعة الخاصة بمشروع محدد، وتُعد في المراحل الأولى للتخطيط بالتوازي عادة مع الجدول الزمني. وتُحدد التكاليف في ضوء مدد المهام والموارد المخصصة للمشروع؛ لذلك تناسب إنشاء المنازل المخصصة."
   },
   {
     "unit": 13,
@@ -2691,7 +2875,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Zero-based budgeting is a planning process in which each\nmanager must justify his or her department’s full budget for\neach period. The objective of zero-based budgeting is to\nencourage periodic reexamination of all costs in the hope that\nsome can be reduced or eliminated.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتمثل السمة الرئيسية للموازنة الصفرية الأساس في أنها:",
+    "choicesAr": [
+      "تفترض أن جميع الأنشطة مشروعة وتستحق زيادات في الموازنة لمقابلة أي ارتفاع في التكاليف.",
+      "تقيّم كل نشاط وتحدد ما إذا كان ينبغي الإبقاء عليه كما هو أو تقليصه أو إلغاؤه.",
+      "تستخدم موازنة السنة السابقة وتعدلها وفق التضخم.",
+      "تركز على الإنفاق الرأسمالي المخطط على العقارات والآلات والمعدات."
+    ],
+    "explanationAr": "تقتضي الموازنة الصفرية الأساس من كل مدير تبرير كامل موازنة إدارته في كل فترة. ويهدف ذلك إلى إعادة تقييم جميع التكاليف دوريًا وتحديد ما يمكن تخفيضه أو إلغاؤه."
   },
   {
     "unit": 13,
@@ -2708,7 +2900,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Zero-based budgeting is an effective means of bringing\nobjective thinking to the budgeting process. The principal\nadvantage of this approach is that managers are forced to\nreview each program in its entirety at the beginning of every\nbudget period, rather than merely extrapolate historical\nfigures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أسلوب إعداد الموازنات الذي يتعين فيه تبرير تكلفة كل برنامج، بدءًا من البرنامج الأكثر أهمية للمنشأة؟",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الموازنة الصفرية الأساس.",
+      "الموازنة المستمرة.",
+      "الموازنة الاحتمالية."
+    ],
+    "explanationAr": "تساعد الموازنة الصفرية الأساس على إدخال تقييم موضوعي في عملية إعداد الموازنة. فميزتها الأساسية إجبار المديرين على مراجعة كل برنامج بالكامل عند بداية كل فترة، بدلًا من مجرد تمديد الأرقام التاريخية."
   },
   {
     "unit": 13,
@@ -2725,7 +2925,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An activity-based budget applies activity-based costing\nprinciples to the budgeting process. Its greatest effect is on\nindirect costs. Activity-based budgeting involves defining the\nactivities that drive indirect costs. A cost pool is established for\neach activity, and a cost driver is identified for each pool.\nDrivers can include labor hours, machine hours, or other\nvariables.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الموازنات التالية تسمح للإدارة بأفضل تقييم لكيفية تغير التكاليف تبعًا لتغير مسببات التكلفة، مثل ساعات العمل المباشر أو ساعات تشغيل الآلات؟",
+    "choicesAr": [
+      "الموازنة المتجددة.",
+      "الموازنة على أساس الأنشطة.",
+      "موازنة الإنتاج.",
+      "موازنة التكاليف."
+    ],
+    "explanationAr": "تُطبق الموازنة على أساس الأنشطة مبادئ التكاليف على أساس الأنشطة، خاصة في التكاليف غير المباشرة. وتحدد الأنشطة التي تتسبب في هذه التكاليف، ثم تخصص مجمع تكلفة لكل نشاط وتحدد مسبب التكلفة المناسب له، مثل ساعات العمل أو ساعات تشغيل الآلات أو المتغيرات الأخرى."
   },
   {
     "unit": 13,
@@ -2742,7 +2950,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Zero-based budgeting, or ZBB, is a budget process in which\neach manager must justify his or her department’s entire\nbudget every year without regard for past operations and\nbudgets. This is in contrast to the traditional budget that is\noften based on an incremental concept, wherein past costs\nare simply increased for the upcoming budget cycle. In ZBB,\nevery cost must be justified regardless of variance from\nprevious years.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كلف المراقب المالي في شركة ألينوود للصلب مديرة الموازنات الجديدة بإعادة هيكلة نظام الموازنات. ويريد منها جمع معلومات عن أنشطة كل وحدة، ثم فحص مساهمة تلك الوحدات في المنشأة مع الإدارة العليا. وللتخلص من الهدر وعدم الكفاءة، ستُحدد موازنة كل وحدة للسنة المقبلة دون الاعتماد على الموازنات السابقة، وباعتبار محدود للنتائج التشغيلية الماضية. ما اسم هذا الأسلوب؟",
+    "choicesAr": [
+      "إعداد الموازنات على أساس الأنشطة.",
+      "إعداد الموازنات التقديرية (Pro forma).",
+      "إعداد الموازنات المرنة.",
+      "إعداد الموازنات الصفرية الأساس."
+    ],
+    "explanationAr": "تتطلب الموازنة الصفرية الأساس من كل مدير تبرير موازنة إدارته بالكامل كل سنة دون الاعتماد على العمليات أو الموازنات السابقة. وهذا يختلف عن المنهج التزايدي التقليدي الذي يزيد التكاليف الماضية لتحديد موازنة الفترة المقبلة. ففي الموازنة الصفرية يجب تبرير كل تكلفة، بصرف النظر عن اختلافها عن السنوات الماضية."
   },
   {
     "unit": 13,
@@ -2759,7 +2975,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A rolling budget is a continuous budget that is revised on a\nregular basis, such as every month or every quarter. A\ncompany typically extends a rolling budget for an additional\nmonth or quarter in accordance with new data as the current\nmonth or quarter ends.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنة التي يُستبدل فيها كل ربع سنة بربع سنة تالٍ، بما يشجع الإدارة على التفكير في الفترة المقبلة، هي:",
+    "choicesAr": [
+      "الموازنة المرنة.",
+      "الموازنة الشاملة.",
+      "الموازنة المتجددة.",
+      "موازنة المبيعات."
+    ],
+    "explanationAr": "الموازنة المتجددة موازنة مستمرة تُراجع بانتظام، شهريًا أو ربع سنويًا مثلًا، وتُمدد لفترة إضافية باستخدام المعلومات الجديدة عند انتهاء الشهر أو الربع الحالي."
   },
   {
     "unit": 13,
@@ -2776,7 +3000,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Zero-based budgeting (ZBB) is a budgeting and planning\nprocess in which each manager must justify his or her\ndepartment’s entire budget every budget cycle. The manager\nbuilds the budget from zero every year and does not simply\nadjust the annual budget from the prior year’s budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طلب مجلس إدارة إحدى الشركات مراجعة تفصيلية لجميع بنود الموازنة التشغيلية للسنة المالية المقبلة. وأبلغ المراقب المالي رؤساء الوحدات أن بنود السنة المقبلة لن تُعتمد تلقائيًا لمجرد الموافقة عليها في السنوات السابقة، بل يجب تبرير كل بند. أي نظام لإعداد الموازنات تستخدمه الشركة على الأرجح؟",
+    "choicesAr": [
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة الصفرية الأساس.",
+      "موازنة المشروعات.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "في الموازنة الصفرية الأساس، يجب على كل مدير تبرير موازنة إدارته بالكامل في كل دورة. وتُبنى الموازنة من الصفر سنويًا، بدلًا من تعديل موازنة السنة السابقة تلقائيًا."
   },
   {
     "unit": 13,
@@ -2793,7 +3025,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A continuous (rolling) budget is one that is revised on a\nregular (continuous) basis.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما نوع الموازنة الذي يُحدّث باستمرار عبر إضافة فترة جديدة كلما اكتملت أحدث فترة مدرجة فيه؟",
+    "choicesAr": [
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة.",
+      "الموازنة المتجددة.",
+      "الموازنة الصفرية الأساس."
+    ],
+    "explanationAr": "الموازنة المستمرة أو المتجددة هي موازنة تُراجع على أساس دوري ومستمر."
   },
   {
     "unit": 13,
@@ -2810,6 +3050,14 @@
     ],
     "answerIndex": 2,
     "explanation": "Activity-based budgeting uses several cost drivers to assign\noverhead costs to its products.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة مجموعة منتجات تختلف في درجة التعقيد: نموذج أساسي ونموذج قياسي ونموذج فاخر. وتستخدم الشركة 25 مسببًا مختلفًا لتكلفة الأنشطة من أجل تحميل التكاليف الصناعية غير المباشرة على المنتجات، ويستهلك النموذج الفاخر عادة مسببات تكلفة أكثر من النماذج الأبسط. وتشجع الشركة المديرين على متابعة الأنشطة المنفذة لكل منتج والرقابة على تكاليفها. أي أسلوب موازنة يلبي احتياجاتها على نحو أفضل؟",
+    "choicesAr": [
+      "إعداد الموازنات التقليدي.",
+      "الموازنة الصفرية الأساس.",
+      "الموازنة على أساس الأنشطة.",
+      "الموازنة المرنة."
+    ],
+    "explanationAr": "يستخدم إعداد الموازنات على أساس الأنشطة عدة مسببات للتكلفة لتحميل التكاليف الصناعية غير المباشرة على المنتجات، وهو ملائم لمنتجات تختلف في مستوى تعقيد أنشطتها."
   }
 ]

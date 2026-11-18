@@ -544,8 +544,7 @@ test("CMA Unit 13 sections 1 and 2: exactly 57 complete Arabic drafts preserve s
   assert.equal(q34?.explanationAr,undefined);
   assert.deepEqual(unit13.filter(q=>q.section<=2&&q.stemAr).map(q=>q.section+"."+q.number),
     localized.map(q=>q.section+"."+q.number));
-  assert.ok(unit13.filter(q=>q.section>=4).every(q=>q.stemAr===undefined &&
-    q.choicesAr===undefined&&q.explanationAr===undefined));
+  assert.equal(unit13.filter(q=>q.section===4&&q.stemAr).length,31);
 });
 
 test("CMA Unit 13 standard oak and screw price change produces the keyed $44.20",()=>{
@@ -606,9 +605,7 @@ test("CMA Unit 13 Section 3: 33 complete Arabic master-budget source drafts pres
   assert.equal(pending?.stemAr,undefined);
   assert.equal(pending?.choicesAr,undefined);
   assert.equal(pending?.explanationAr,undefined);
-  assert.equal(unit13.filter(q=>q.stemAr).length,90);
-  assert.ok(unit13.filter(q=>q.section===4).every(q=>
-    q.stemAr===undefined&&q.choicesAr===undefined&&q.explanationAr===undefined));
+  assert.equal(unit13.filter(q=>q.stemAr).length,121);
 });
 
 test("CMA Unit 13 master-budget sequence does not confuse operating, financial and cash stages",()=>{
@@ -631,4 +628,37 @@ test("CMA Unit 13 master-budget sequence does not confuse operating, financial a
   // Production budget draws on sales budget, never precedes it.
   assert.equal(q(22).answerIndex,3);
   assert.equal(q(33).answerIndex,0);
+});
+
+
+test("CMA Unit 13 Section 4: all 31 methods questions have complete Arabic drafts and immutable keys",()=>{
+  const unit13=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-13.json",import.meta.url),"utf8"));
+  const rows=unit13.filter(q=>q.section===4);
+  const canonicalKeys=[3,3,1,0,3,0,2,3,1,2,3,2,0,2,2,0,2,0,3,3,1,1,0,1,1,1,3,2,1,2,2];
+  assert.equal(rows.length,31);
+  assert.deepEqual(rows.map(q=>q.number),Array.from({length:31},(_,i)=>i+1));
+  assert.equal(canonicalKeys.length,31);
+  for(const q of rows){
+    assert.equal(q.answerIndex,canonicalKeys[q.number-1],"Source answer changed §4 Q"+q.number);
+    assert.equal(q.answerStatus,"source");
+    assert.equal(q.sourceTextStatus,undefined);
+    assert.equal(q.choicesAr?.length,4);
+    assert.equal(validateCmaTranslation({question:{en:q.stem},choices:{en:q.choices},explanation:{en:q.explanation}},
+      {question:q.stemAr,choices:q.choicesAr,explanation:q.explanationAr}).valid,true,
+      "Unfaithful Arabic Section 4 question "+q.number);
+    assert.match(q.stemAr,/[^\S\r\n]*[\u0600-\u06ff]/);
+    assert.match(q.explanationAr,/[\u0600-\u06ff]/);
+    assert.ok(q.choicesAr.every(c=>typeof c==="string"&&c.trim().length>0));
+    assert.ok(q.page>=296&&q.page<=321);
+  }
+  assert.equal(rows[0].choicesAr[3],"خفض عدم التأكد في التخطيط.");
+  assert.equal(rows[1].choicesAr[3],"موازنة ثابتة.");
+  assert.equal(rows[8].choicesAr[1],"إعداد الموازنات على أساس الأنشطة.");
+  assert.equal(rows[16].choicesAr[2],"التزامًا بمبالغ كبيرة من الأموال، وتكون الفترة المناسبة هي دورة حياة المشروع.");
+  assert.equal(rows[20].choicesAr[1],"العبارتان I وIII فقط.");
+  assert.equal(rows[30].choicesAr[2],"الموازنة على أساس الأنشطة.");
+  assert.equal(unit13.filter(q=>q.stemAr).length,121);
+  const pending=unit13.filter(q=>q.section===1&&q.number===34||q.section===3&&q.number===23);
+  assert.equal(pending.length,2);
+  assert.ok(pending.every(q=>q.sourceTextStatus==="table-reflowed"&&!q.stemAr&&!q.choicesAr&&!q.explanationAr));
 });
