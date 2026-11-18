@@ -990,7 +990,8 @@ test("CMA Unit 14 §6 Q31 broken PDF-derived options remain unscored and unmodif
   assert.equal(q.page,561);
   assert.equal(q.answerIndex,0);
   assert.equal(q.choices.length,4);
-  assert.ok(q.choices[2].startsWith("Cash Either"));
+  assert.ok(q.choices[1].includes("Cash Either"));
+  assert.ok(q.choices[2].startsWith("budget payments"));
   assert.ok(q.choices[3].startsWith("cash "));
   assert.equal(q.stemAr,undefined);
   assert.equal(q.choicesAr,undefined);
