@@ -263,3 +263,7 @@ Added **5 Arabic educational drafts**, §1 Q2, §4 Q10, §6 Q1/Q2/Q8, including 
 ## CMA Unit 14 Arabic Wave 11 — 19 November 2026
 
 Added **5 Arabic educational drafts**, §2 Q26/Q34/Q35, §4 Q14 and §5 Q25. Coverage is **133/175 (76.0%)**: **5/8, 30/43, 14/19, 32/40, 30/34, 22/31**; **42** remain English-first. Units 11–14 now total **448** Arabic draft questions. The original English fields, answer positions and page provenance remain unchanged. The independent regression recalculates manufactured-unit cost, monthly inventory purchases, collection receipts and ending cash. See [the Wave 11 handoff](./CMA_UNIT14_WAVE11_PURCHASES_CASH_2026-11-19.md). Original PDF page reconciliation and professional Arabic/accounting review remain pending.
+
+## CMA Unit 14 Arabic Wave 12 — 19 November 2026
+
+Added **4 Arabic educational drafts**, §2 Q8/Q9/Q13 and §5 Q11, with source-key and independent numerical checks. Coverage is **137/175 (78.3%)**: **5/8, 33/43, 14/19, 32/40, 31/34, 22/31**; **38** English-first remain. Units 11–14 now total **452** draft Arabic questions. Source §2 Q14 has a truncated final purchase figure in its imported explanation, and §4 Q5/Q6 have interleaved fact-pattern columns; all three remain English-first and are excluded from default scored quizzes until the authorized PDF pages are reconciled. See [the Wave 12 handoff](./CMA_UNIT14_WAVE12_PRODUCTION_CASH_2026-11-19.md).

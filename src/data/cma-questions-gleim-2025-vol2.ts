@@ -53,11 +53,13 @@ const pendingSourceLayouts = new Set([
   "12.3.8", "12.3.10", "12.3.23", "12.3.24",
   "12.3.27", "12.3.28", "12.3.29", "12.3.32",
   "12.3.34", "12.3.35", "12.3.36",
+  // Unit 14 §2 Q14 ends its raw-material purchase solution in "42,00".
+  // Unit 14 §4 Q5/Q6 have interleaved cash-pattern columns in the stem.
   // Unit 14 §4 Q30 has split numerical columns in the source cash table.
   // Unit 14 §6 Q10 has an incomplete/unreadable algebra equation from PDF.
   // Preserve both original English records, but do not grade until source
   // page comparisons and correct display layouts are verified.
-  "14.4.30", "14.6.10",
+  "14.2.14", "14.4.5", "14.4.6", "14.4.30", "14.6.10",
   // Unit 14 §6 Q31 has broken option boundaries after PDF extraction.
   "14.6.31",
 ]);
