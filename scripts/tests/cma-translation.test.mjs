@@ -672,7 +672,7 @@ test("CMA Unit 14 wave 1: ten initial source-ordered Arabic drafts retain keys a
   ];
   const expected=new Map(reviewed.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>expected.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...expected.keys()]);
   for(const q of rows){
     const id=q.section+"."+q.number;
@@ -732,7 +732,7 @@ test("CMA Unit 14 Section 1: independently recompute source-keyed multi-product 
     assert.equal(item.choicesAr,undefined);
     assert.equal(item.explanationAr,undefined);
   }
-  assert.equal(q(2).stemAr,undefined);
+  assert.match(q(2).stemAr,/موازنة مبيعات/);
 });
 
 
@@ -747,9 +747,9 @@ test("CMA Unit 14 wave 2: 21 concept translations preserve canonical keys, numer
   const newKeys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(added.length,21);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>newKeys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newKeys.keys()]);
-  const perSection=[0,4,27,14,30,29,19];
+  const perSection=[0,5,27,14,31,29,22];
   for(let s=1;s<=6;s++)assert.equal(rows.filter(q=>q.section===s&&q.stemAr).length,perSection[s]);
   for(const q of rows){
     const id=q.section+"."+q.number;
@@ -789,7 +789,7 @@ test("CMA Unit 14 wave 3: 22 production and cost translations preserve original 
   const keyed=new Map(expected.map(([s,n,key,value])=>[s+"."+n,{key,value}]));
   assert.equal(expected.length,22);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>q.stemAr&&keyed.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
     [...keyed.keys()]);
   const answerNumber=q=>{
@@ -876,7 +876,7 @@ test("CMA Unit 14 wave 4: 18 cash and forecast-profit translations preserve keys
   const keys=new Map(expected.map(([section,number,key,value])=>[section+"."+number,{key,value}]));
   assert.equal(expected.length,18);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>keys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...keys.keys()]);
   for(const [id,{key,value}] of keys){
     const [section,number]=id.split(".").map(Number);
@@ -947,7 +947,7 @@ test("CMA Unit 14 post-#348: 8 non-overlapping Arabic drafts preserve canonical 
   ];
   const newSet=new Map(newRecords.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>newSet.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newSet.keys()]);
   for(const q of rows.filter(x=>newSet.has(x.section+"."+x.number))){
     const id=q.section+"."+q.number;
@@ -1018,7 +1018,7 @@ test("CMA Unit 14 numerical wave 6: 16 newly localized MCQs preserve source fiel
   const keys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(added.length,16);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>keys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
     [...keys.keys()]);
   for(const q of rows.filter(q=>keys.has(q.section+"."+q.number))){
@@ -1114,7 +1114,7 @@ test("CMA Unit 14 wave 7: ten audited material, cash and cost translations prese
   const q=(s,n)=>rows.find(x=>x.section===s&&x.number===n);
   assert.equal(cohort.length,10);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(x=>x.stemAr).length,123);
+  assert.equal(rows.filter(x=>x.stemAr).length,128);
   assert.deepEqual(rows.filter(x=>keys.has(x.section+"."+x.number)).map(x=>x.section+"."+x.number),
     [...keys.keys()]);
   for(const item of rows.filter(x=>keys.has(x.section+"."+x.number))){
@@ -1177,7 +1177,7 @@ test("CMA Unit 14 wave 8: ten cash forecasting drafts preserve original choices,
   const expected=new Map(added.map(([s,n,index])=>[s+"."+n,index]));
   assert.equal(added.length,10);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,123);
+  assert.equal(rows.filter(q=>q.stemAr).length,128);
   assert.deepEqual(rows.filter(q=>expected.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...expected.keys()]);
   for(const item of rows.filter(q=>expected.has(q.section+"."+q.number))){
     const id=item.section+"."+item.number;
@@ -1254,7 +1254,7 @@ test("CMA Unit 14 wave 9: 8 financial budgets translated with exact numeric toke
   const q=(s,n)=>rows.find(x=>x.section===s&&x.number===n);
   assert.equal(cohort.length,8);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(x=>x.stemAr).length,123);
+  assert.equal(rows.filter(x=>x.stemAr).length,128);
   assert.deepEqual(rows.filter(x=>keys.has(x.section+"."+x.number)).map(x=>x.section+"."+x.number),[...keys.keys()]);
   for(const item of rows.filter(x=>keys.has(x.section+"."+x.number))){
     const id=item.section+"."+item.number;
@@ -1321,4 +1321,45 @@ test("CMA Unit 14 source explanations §4 Q30 and §6 Q10 remain excluded from s
   assert.deepEqual(eligible.map(x=>x.id),["14.2.22"]);
   assert.deepEqual(excluded.map(x=>x.id),["14.4.30","14.6.10"]);
   assert.equal(isCmaScorableQuestion({sourceLayoutReview:true}),false);
+});
+
+test("CMA Unit 14 wave 10: five translated sales, receipts and pro forma cases retain source keys",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const keys=new Map([["1.2",0],["4.10",3],["6.1",2],["6.2",2],["6.8",1]]);
+  const q=(id)=>rows.find(x=>`${x.section}.${x.number}`===id);
+  assert.equal(rows.length,175);
+  assert.equal(rows.filter(x=>x.stemAr).length,128);
+  for(const [id,key] of keys){
+    const item=q(id);
+    assert.equal(item.answerIndex,key,`Original answer key ${id}`);
+    assert.equal(item.answerStatus,"source");
+    assert.equal(item.sourceTextStatus,undefined);
+    const checkResult=validateCmaTranslation(
+      {question:{en:item.stem},choices:{en:item.choices},explanation:{en:item.explanation}},
+      {question:item.stemAr,choices:item.choicesAr,explanation:item.explanationAr});
+    assert.equal(checkResult.valid,true,`${id}: ${checkResult.reason}`);
+  }
+  // Scenario inputs are intentionally independent of the stored explanations.
+  const expected=new Map([
+    ["1.2",20500000-(200000*.8*50*1.1+150000*.8*10+300000*1.05*30)],
+    ["6.1",220000*.25-22600-216000/12-220000*(1-.60-.38)],
+    ["6.2",(.2*220000+.8*200000)*.75],
+    ["6.8",.8*200000*.75],
+  ]);
+  for(const [id,result] of expected){
+    const item=q(id);
+    const option=item.choices[item.answerIndex];
+    assert.ok(Math.abs(Number(option.match(/\d[\d,]*/)?.[0].replaceAll(",",""))-result)<.000001,`Independent result ${id}`);
+  }
+  const sales={June:220000,July:200000,August:280000,September:264000,October:244000,November:300000};
+  const months=["August","September","October","November"];
+  const all=Object.values(sales);
+  const receipts=months.map((_,index)=>{
+    const i=index+2;
+    return all[i]*.25+all[i-1]*.75*.60+all[i-2]*.75*.36;
+  });
+  assert.deepEqual(receipts,[219400,246000,255400,256080]);
+  assert.equal(months[receipts.indexOf(Math.max(...receipts))],q("4.10").choices[q("4.10").answerIndex].replace(".",""));
+  for(const id of ["2.23","4.30","5.10","6.10","6.21","6.31"])
+    assert.equal(q(id).stemAr,undefined,`Unverified source remains untranslated ${id}`);
 });
