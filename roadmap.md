@@ -5,3 +5,5 @@
 
 - [ ] Translate remaining 153 of 217 Unit 1 questions; blocked by AI credit exhaustion. 64 complete translations are saved in source records.
 - [ ] Validate saved translations and verify library and exam-training display.
+- [x] Unit 14 Wave 13: 13 two-column-layout questions translated (150/175); 7 records with PDF-split numbers held for original page comparison.
+- [ ] Unit 14 remaining 25 English-first records; blocked on comparison with the original book pages.

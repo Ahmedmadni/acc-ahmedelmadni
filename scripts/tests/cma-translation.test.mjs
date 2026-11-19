@@ -672,7 +672,7 @@ test("CMA Unit 14 wave 1: ten initial source-ordered Arabic drafts retain keys a
   ];
   const expected=new Map(reviewed.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>expected.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...expected.keys()]);
   for(const q of rows){
     const id=q.section+"."+q.number;
@@ -747,9 +747,9 @@ test("CMA Unit 14 wave 2: 21 concept translations preserve canonical keys, numer
   const newKeys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(added.length,21);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>newKeys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newKeys.keys()]);
-  const perSection=[0,5,33,14,32,31,22];
+  const perSection=[0,5,41,18,33,31,22];
   for(let s=1;s<=6;s++)assert.equal(rows.filter(q=>q.section===s&&q.stemAr).length,perSection[s]);
   for(const q of rows){
     const id=q.section+"."+q.number;
@@ -789,7 +789,7 @@ test("CMA Unit 14 wave 3: 22 production and cost translations preserve original 
   const keyed=new Map(expected.map(([s,n,key,value])=>[s+"."+n,{key,value}]));
   assert.equal(expected.length,22);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>q.stemAr&&keyed.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
     [...keyed.keys()]);
   const answerNumber=q=>{
@@ -876,7 +876,7 @@ test("CMA Unit 14 wave 4: 18 cash and forecast-profit translations preserve keys
   const keys=new Map(expected.map(([section,number,key,value])=>[section+"."+number,{key,value}]));
   assert.equal(expected.length,18);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>keys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...keys.keys()]);
   for(const [id,{key,value}] of keys){
     const [section,number]=id.split(".").map(Number);
@@ -947,7 +947,7 @@ test("CMA Unit 14 post-#348: 8 non-overlapping Arabic drafts preserve canonical 
   ];
   const newSet=new Map(newRecords.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>newSet.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...newSet.keys()]);
   for(const q of rows.filter(x=>newSet.has(x.section+"."+x.number))){
     const id=q.section+"."+q.number;
@@ -1018,7 +1018,7 @@ test("CMA Unit 14 numerical wave 6: 16 newly localized MCQs preserve source fiel
   const keys=new Map(added.map(([s,n,key])=>[s+"."+n,key]));
   assert.equal(added.length,16);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>keys.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),
     [...keys.keys()]);
   for(const q of rows.filter(q=>keys.has(q.section+"."+q.number))){
@@ -1114,7 +1114,7 @@ test("CMA Unit 14 wave 7: ten audited material, cash and cost translations prese
   const q=(s,n)=>rows.find(x=>x.section===s&&x.number===n);
   assert.equal(cohort.length,10);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(x=>x.stemAr).length,137);
+  assert.equal(rows.filter(x=>x.stemAr).length,150);
   assert.deepEqual(rows.filter(x=>keys.has(x.section+"."+x.number)).map(x=>x.section+"."+x.number),
     [...keys.keys()]);
   for(const item of rows.filter(x=>keys.has(x.section+"."+x.number))){
@@ -1177,7 +1177,7 @@ test("CMA Unit 14 wave 8: ten cash forecasting drafts preserve original choices,
   const expected=new Map(added.map(([s,n,index])=>[s+"."+n,index]));
   assert.equal(added.length,10);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   assert.deepEqual(rows.filter(q=>expected.has(q.section+"."+q.number)).map(q=>q.section+"."+q.number),[...expected.keys()]);
   for(const item of rows.filter(q=>expected.has(q.section+"."+q.number))){
     const id=item.section+"."+item.number;
@@ -1254,7 +1254,7 @@ test("CMA Unit 14 wave 9: 8 financial budgets translated with exact numeric toke
   const q=(s,n)=>rows.find(x=>x.section===s&&x.number===n);
   assert.equal(cohort.length,8);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(x=>x.stemAr).length,137);
+  assert.equal(rows.filter(x=>x.stemAr).length,150);
   assert.deepEqual(rows.filter(x=>keys.has(x.section+"."+x.number)).map(x=>x.section+"."+x.number),[...keys.keys()]);
   for(const item of rows.filter(x=>keys.has(x.section+"."+x.number))){
     const id=item.section+"."+item.number;
@@ -1328,7 +1328,7 @@ test("CMA Unit 14 wave 10: five translated sales, receipts and pro forma cases r
   const keys=new Map([["1.2",0],["4.10",3],["6.1",2],["6.2",2],["6.8",1]]);
   const q=(id)=>rows.find(x=>`${x.section}.${x.number}`===id);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(x=>x.stemAr).length,137);
+  assert.equal(rows.filter(x=>x.stemAr).length,150);
   for(const [id,key] of keys){
     const item=q(id);
     assert.equal(item.answerIndex,key,`Original answer key ${id}`);
@@ -1369,7 +1369,7 @@ test("CMA Unit 14 wave 11: five standalone production, purchasing and cash draft
   const keys=new Map([["2.26",2],["2.34",2],["2.35",3],["4.14",0],["5.25",2]]);
   const get=id=>rows.find(q=>`${q.section}.${q.number}`===id);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   for(const [id,key] of keys){
     const q=get(id);
     assert.equal(q.answerIndex,key,`Source key ${id}`);
@@ -1407,7 +1407,7 @@ test("CMA Unit 14 wave 12: production and August cash drafts retain numeric sour
   const keys=new Map([["2.8",1],["2.9",1],["2.13",3],["5.11",3]]);
   const get=id=>rows.find(q=>`${q.section}.${q.number}`===id);
   assert.equal(rows.length,175);
-  assert.equal(rows.filter(q=>q.stemAr).length,137);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
   for(const [id,key] of keys){
     const q=get(id);
     assert.equal(q.answerIndex,key,`Source key ${id}`);
@@ -1458,4 +1458,60 @@ test("CMA Unit 14 truncated material solution and interleaved sales columns rema
   ],false);
   assert.deepEqual(eligible.map(q=>q.id),["14.2.13"]);
   assert.deepEqual(excluded.map(q=>q.id),["14.2.14","14.4.5","14.4.6"]);
+});
+
+test("CMA Unit 14 wave 13: two-column production, labor and collection drafts keep source keys and numeric fidelity",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  // Stems printed as two side-by-side PDF columns are re-flowed into one Arabic
+  // reading order; their numeric tokens must match as a multiset. Every other
+  // field (and stems already in linear order) must match in exact order.
+  const reflowedStems=new Set(["2.1","2.2","2.3","2.4","2.5","2.37","2.38","3.2","3.3","3.5"]);
+  const keys=new Map([["2.1",2],["2.2",3],["2.3",1],["2.4",0],["2.5",3],["2.15",1],["2.37",1],["2.38",0],
+    ["3.2",0],["3.3",1],["3.5",0],["3.10",3],["4.16",0]]);
+  const get=id=>rows.find(q=>`${q.section}.${q.number}`===id);
+  assert.equal(rows.length,175);
+  assert.equal(rows.filter(q=>q.stemAr).length,150);
+  for(const [id,key] of keys){
+    const q=get(id);
+    assert.equal(q.answerIndex,key,`Source key ${id}`);
+    assert.equal(q.answerStatus,"source");
+    assert.equal(q.sourceTextStatus,undefined);
+    assert.equal(q.choicesAr.length,4);
+    const sameTokens=(en,ar,ordered)=>{
+      const a=cmaNumericTokens(en), b=cmaNumericTokens(ar);
+      return ordered ? JSON.stringify(a)===JSON.stringify(b) : JSON.stringify([...a].sort())===JSON.stringify([...b].sort());
+    };
+    assert.ok(sameTokens(q.stem,q.stemAr,!reflowedStems.has(id)),`Stem numbers ${id}`);
+    assert.ok(sameTokens(q.explanation,q.explanationAr,true),`Explanation numbers ${id}`);
+    q.choices.forEach((c,i)=>assert.ok(sameTokens(c,q.choicesAr[i],true),`Choice ${id}/${i}`));
+  }
+  // Independent recomputation of each canonical answer.
+  const janRabbits=36000*1.5;
+  const febRabbitDollars=33000*.5*(3.5+1+2+.5)+12000;
+  const decCabinets=4200+6000*.5-4200*.5;
+  const octCabinets=4600+5000*.5-3800, novCabinets=5000+4200*.5-5000*.5;
+  const octHandles=octCabinets*8+novCabinets*8*.8-16000;
+  const marchPounds=3*9000+(3*12000*1.2+500)-(3*9000*1.2+500);
+  const a19Dollars=((96000+200)+(130000-1250))*2-1500;
+  const augTables=2500+2100*.4-2500*.4;
+  const augLegs=(1600*4-4200)+1800*4*.6;
+  const novFte=novCabinets*.5/160;
+  const septEmployees=1800/3/(40*4);
+  const febLabor=8000*(7.25*2+12*.5);
+  const thingtwoEi=(5*8+3*5+1*3+3*4+3*2)*9000;
+  const kellyDec=76000+220000*.6;
+  assert.deepEqual([janRabbits,febRabbitDollars,decCabinets,octHandles,marchPounds,a19Dollars*1.2,augTables,augLegs,novFte,septEmployees,febLabor,thingtwoEi,kellyDec].map(v=>Math.round(v*1000)/1000),
+    [54000,127500,5100,39840,37800,538080,2340,6520,14.375,3.75,164000,684000,208000]);
+  for(const [id,value] of [["2.1",janRabbits],["2.2",febRabbitDollars],["2.3",decCabinets],["2.4",octHandles],["2.5",marchPounds],
+    ["2.15",Math.round(a19Dollars*1.2)],["2.37",augTables],["2.38",augLegs],["3.2",novFte],["3.3",septEmployees],["3.5",febLabor],["3.10",thingtwoEi],["4.16",kellyDec]]){
+    const q=get(id), option=q.choices[q.answerIndex];
+    assert.equal(Number(option.match(/\d[\d,]*(?:\.\d+)?/)?.[0].replaceAll(",","")),value,`Source choice ${id}`);
+  }
+  // Records whose flattened PDF tables split numbers ("$ 582\n,750", "$ 52,00\n0")
+  // stay English-first until the original pages are checked.
+  for(const id of ["1.4","1.5","1.6","3.9","4.15","6.3","6.4"]){
+    const q=get(id);
+    assert.equal(q.stemAr,undefined,`Held ${id}`);
+    assert.equal(q.explanationAr,undefined,`Held ${id}`);
+  }
 });

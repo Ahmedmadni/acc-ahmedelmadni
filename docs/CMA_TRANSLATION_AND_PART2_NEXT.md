@@ -267,3 +267,8 @@ Added **5 Arabic educational drafts**, §2 Q26/Q34/Q35, §4 Q14 and §5 Q25. Cov
 ## CMA Unit 14 Arabic Wave 12 — 19 November 2026
 
 Added **4 Arabic educational drafts**, §2 Q8/Q9/Q13 and §5 Q11, with source-key and independent numerical checks. Coverage is **137/175 (78.3%)**: **5/8, 33/43, 14/19, 32/40, 31/34, 22/31**; **38** English-first remain. Units 11–14 now total **452** draft Arabic questions. Source §2 Q14 has a truncated final purchase figure in its imported explanation, and §4 Q5/Q6 have interleaved fact-pattern columns; all three remain English-first and are excluded from default scored quizzes until the authorized PDF pages are reconciled. See [the Wave 12 handoff](./CMA_UNIT14_WAVE12_PRODUCTION_CASH_2026-11-19.md).
+
+
+## Unit 14 two-column layouts — Wave 13, 19 November 2026
+
+Added **13 complete Arabic educational drafts**: §2 Q1–5/Q15/Q37–38, §3 Q2–3/Q5/Q10, §4 Q16. Unit 14 is **150/175 (85.7%)**: §§1–6 **5/8, 41/43, 18/19, 33/40, 31/34, 22/31**; Units 11–14 total **465**. Ten stems printed as two PDF columns are re-flowed into one Arabic reading order and checked as numeric multisets; all explanations and choices keep exact ordered numeric tokens, and every canonical key is independently recomputed. Seven records with PDF-split numbers (§1 Q4–6, §3 Q9, §4 Q15, §6 Q3–4) stay English-first pending page comparison. See [Wave 13 handoff](./CMA_UNIT14_WAVE13_TWO_COLUMN_LAYOUTS_2026-11-19.md).
