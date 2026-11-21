@@ -598,8 +598,11 @@ const staticArabicVol2 = new Set([
   ...[1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18,19,20,21,22,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43].map(n=>"14.2."+n),
   ...[1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19].map(n=>"14.3."+n),
   ...[1,3,4,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25,26,27,28,29,33,34,35,36,37,38,39,40].map(n=>"14.4."+n),
+  ...[2,31,32].map(n=>"14.4."+n),
   ...[1,2,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34].map(n=>"14.5."+n),
+  ...[3,4].map(n=>"14.5."+n),
   ...[1,2,8,9,11,13,14,15,16,17,18,19,20,22,23,24,25,26,27,28,29,30].map(n=>"14.6."+n),
+  ...[5,6,7,12].map(n=>"14.6."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -660,7 +663,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 33/40, §5 31/34, §6 22/31; 150/175 Arabic educational drafts. Nine source-text flags and 16 additional pending answer/layout/context reviews remain excluded from scored practice.");
+console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 33/34, §6 26/31; 159/175 Arabic educational drafts. Nine translated source-text flags and 16 English-first answer/layout/context holds remain excluded from scored practice.");
 // Original page layouts remain unverified: some explanations or stems contain
 // visibly broken PDF-extraction fragments. Keep records unchanged and unscored.
 for(const [id,page,field,needle] of [
@@ -692,6 +695,14 @@ for(const [id,source] of vol2Records){
   const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
   check(mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en",
     "Every remaining Unit 14 English-first source must be held from scoring: "+id);
+}
+for(const id of ["14.4.2","14.4.31","14.4.32","14.5.3","14.5.4","14.6.5","14.6.6","14.6.7","14.6.12"]){
+  const [unit,section,number]=id.split(".");
+  const source=vol2Records.get(id);
+  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
+  check(!!source?.stemAr && !!source?.explanationAr && source.choicesAr?.length===4 &&
+    mapped?.sourceLayoutReview===true && mapped?.sourceArabicStatus==="draft",
+    "A source-reflowed Arabic educational draft must remain unscored: "+id);
 }
 // Source §5 Q10 has a dependent, isolated stem and relies on the prior
 // Montero case (§5 Q9): the March/April sales and May expense data do not
