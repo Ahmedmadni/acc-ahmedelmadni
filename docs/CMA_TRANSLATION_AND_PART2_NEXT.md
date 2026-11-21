@@ -272,3 +272,7 @@ Added **4 Arabic educational drafts**, §2 Q8/Q9/Q13 and §5 Q11, with source-ke
 ## Unit 14 two-column layouts — Wave 13, 19 November 2026
 
 Added **13 complete Arabic educational drafts**: §2 Q1–5/Q15/Q37–38, §3 Q2–3/Q5/Q10, §4 Q16. Unit 14 is **150/175 (85.7%)**: §§1–6 **5/8, 41/43, 18/19, 33/40, 31/34, 22/31**; Units 11–14 total **465**. Ten stems printed as two PDF columns are re-flowed into one Arabic reading order and checked as numeric multisets; all explanations and choices keep exact ordered numeric tokens, and every canonical key is independently recomputed. Seven records with PDF-split numbers (§1 Q4–6, §3 Q9, §4 Q15, §6 Q3–4) stay English-first pending page comparison. See [Wave 13 handoff](./CMA_UNIT14_WAVE13_TWO_COLUMN_LAYOUTS_2026-11-19.md).
+
+## Unit 14 remaining-source scoring audit — 21 November 2026
+
+Mapped the seven Wave 13 PDF-split-number holdouts to the shared `sourceLayoutReview` gate, without changing source records, answers or translation coverage. All **25 remaining English-first Unit 14 records** now carry a review gate and are excluded from default scored practice pending authorized publisher-page comparison. Nine have `sourceTextStatus` and 16 have separate layout, answer or context holds. The 150 Arabic educational drafts remain subject to independent accounting and Arabic editorial review; the score gate does not certify the source text or those drafts.

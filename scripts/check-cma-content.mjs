@@ -660,14 +660,21 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 }
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
-console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 33/40, §5 31/34, §6 22/31; 150/175 Arabic educational drafts. Nine source-text flags and nine additional pending answer/layout/context reviews remain excluded from scored practice.");
+console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 33/40, §5 31/34, §6 22/31; 150/175 Arabic educational drafts. Nine source-text flags and 16 additional pending answer/layout/context reviews remain excluded from scored practice.");
 // Original page layouts remain unverified: some explanations or stems contain
 // visibly broken PDF-extraction fragments. Keep records unchanged and unscored.
 for(const [id,page,field,needle] of [
+  ["14.1.4",328,"explanation","Total $2,577\n,750"],
+  ["14.1.5",330,"explanation","Total $2,563\n,500"],
+  ["14.1.6",333,"explanation","Total   $3,01\n0,500"],
+  ["14.3.9",410,"explanation","$390,00\ne"],
   ["14.2.14",356,"explanation","42,00\nrequirements"],
   ["14.4.5",428,"stem","The forecast for both"],
   ["14.4.6",429,"stem","The forecast for both"],
+  ["14.4.15",443,"stem","$ 52,00"],
   ["14.4.30",464,"explanation","Tota     Cred"],
+  ["14.6.3",529,"stem","$ 52,0"],
+  ["14.6.4",530,"stem","$ 52,0"],
   ["14.6.10",539,"explanation","($46,000,000 + = .15"],
 ]){
   const source=vol2Records.get(id);
@@ -678,6 +685,13 @@ for(const [id,page,field,needle] of [
     mapped?.sourceArabicStatus===undefined &&
     !source.stemAr && !source.choicesAr && !source.explanationAr,
     "Do not score visibly garbled Unit 14 original source before page audit: "+id);
+}
+for(const [id,source] of vol2Records){
+  if(!id.startsWith("14.") || source.stemAr)continue;
+  const [unit,section,number]=id.split(".");
+  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su"+unit+"-s"+section+"-q"+String(number).padStart(3,"0"));
+  check(mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en",
+    "Every remaining Unit 14 English-first source must be held from scoring: "+id);
 }
 // Source §5 Q10 has a dependent, isolated stem and relies on the prior
 // Montero case (§5 Q9): the March/April sales and May expense data do not

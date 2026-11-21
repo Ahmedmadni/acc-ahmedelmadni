@@ -28,6 +28,20 @@ test("preserves source numbers in every field and option", () => {
   assert.deepEqual(cmaNumericTokens("12,500; 10%; 1,250.00"), ["12,500", "10%", "1,250.00"]);
 });
 
+test("CMA Unit 14 remaining English-first questions have source-review score gates",()=>{
+  const rows=JSON.parse(readFileSync(new URL("../../src/data/cma-gleim-2025-vol2-unit-14.json",import.meta.url),"utf8"));
+  const adapter=readFileSync(new URL("../../src/data/cma-questions-gleim-2025-vol2.ts",import.meta.url),"utf8");
+  const newHolds=[[1,4],[1,5],[1,6],[3,9],[4,15],[6,3],[6,4]];
+  assert.equal(rows.filter(q=>!q.stemAr).length,25);
+  for(const [section,number] of newHolds){
+    const q=rows.find(x=>x.section===section&&x.number===number);
+    assert.ok(q && !q.stemAr && !q.choicesAr && !q.explanationAr);
+    assert.ok(adapter.includes(`"14.${section}.${number}"`));
+  }
+  const {excluded}=splitCmaQuizSourceReview(newHolds.map(([s,n])=>({id:`14.${s}.${n}`,sourceLayoutReview:true})),false);
+  assert.deepEqual(excluded.map(q=>q.id),newHolds.map(([s,n])=>`14.${s}.${n}`));
+});
+
 test("rejects numerical changes, option count changes and incomplete translation", () => {
   assert.equal(validateCmaTranslation(source, { ...valid, choices: ["1,125"] }).valid, false);
   assert.equal(validateCmaTranslation(source, { ...valid, choices: ["1,126", ...valid.choices.slice(1)] }).valid, false);
