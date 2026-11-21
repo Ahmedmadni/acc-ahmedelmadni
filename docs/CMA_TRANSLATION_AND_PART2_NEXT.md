@@ -276,3 +276,9 @@ Added **13 complete Arabic educational drafts**: §2 Q1–5/Q15/Q37–38, §3 Q2
 ## Unit 14 remaining-source scoring audit — 21 November 2026
 
 Mapped the seven Wave 13 PDF-split-number holdouts to the shared `sourceLayoutReview` gate, without changing source records, answers or translation coverage. All **25 remaining English-first Unit 14 records** now carry a review gate and are excluded from default scored practice pending authorized publisher-page comparison. Nine have `sourceTextStatus` and 16 have separate layout, answer or context holds. The 150 Arabic educational drafts remain subject to independent accounting and Arabic editorial review; the score gate does not certify the source text or those drafts.
+
+## Unit 14 reflowed-case Arabic drafts — Wave 15, 21 November 2026
+
+Added **9 Arabic educational drafts** to the previously reconstructed/reflowed records: §4 Q2/Q31–32, §5 Q3–4 and §6 Q5–7/Q12. Unit 14 reaches **159/175 (90.9%)**: §§1–6 **5/8, 41/43, 18/19, 36/40, 33/34, 26/31**; Units 11–14 total **474**. All nine retain their original English fields, ordered answer choices and keys. Their Arabic numerical tokens match the imported source in order, and the eight quantitative answers have independent arithmetic fixtures.
+
+**Source limitation:** These nine records retain `sourceTextStatus` (`reconstructed` or `table-reflowed`) and `sourceLayoutReview` and remain excluded from scored practice. The Library file `CMA P2 GLIME.pdf` is a 2019 Part 2 book and does not contain the 2025 Part 1 Volume 2 Unit 14 pages; it cannot certify these reconstructions. The remaining **16** English-first questions have source extraction, answer rounding or standalone-context holds. Publisher-page comparison is still required before either the nine reflowed drafts or the 16 remaining records can be certified for grading.
