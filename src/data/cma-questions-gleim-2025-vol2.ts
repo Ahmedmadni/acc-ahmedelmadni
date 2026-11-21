@@ -59,6 +59,10 @@ const pendingSourceLayouts = new Set([
   // Unit 14 §6 Q10 has an incomplete/unreadable algebra equation from PDF.
   // Preserve both original English records, but do not grade until source
   // page comparisons and correct display layouts are verified.
+  // Unit 14 §1 Q4–Q6 contain split sales-revenue digits in the source
+  // solution tables. §3 Q9 splits the labor-rate and answer digits.
+  // §4 Q15 and §6 Q3/Q4 split balance-sheet amounts across columns.
+  "14.1.4", "14.1.5", "14.1.6", "14.3.9", "14.4.15", "14.6.3", "14.6.4",
   "14.2.14", "14.4.5", "14.4.6", "14.4.30", "14.6.10",
   // Unit 14 §6 Q31 has broken option boundaries after PDF extraction.
   "14.6.31",
