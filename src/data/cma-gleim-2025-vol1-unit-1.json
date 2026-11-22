@@ -1614,7 +1614,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness during a period except those from investments by\nand distributions to owners. It includes all components of (1)\nnet income and (2) other comprehensive income (OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض من الإفصاح عن الدخل الشامل؟",
+    "choicesAr": [
+      "تلخيص جميع التغيرات في حقوق الملكية الناتجة عن مصادر غير المُلّاك.",
+      "تسوية الفرق بين صافي الدخل والتدفقات النقدية من الأنشطة التشغيلية.",
+      "توفير تجميع لدخل قطاعات المنشأة.",
+      "توفير معلومات عن كل قطاع من قطاعات الأعمال."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة خلال الفترة باستثناء تلك الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتضمن جميع مكونات (1) صافي الدخل و(2) الدخل الشامل الآخر (OCI)."
   },
   {
     "unit": 1,
@@ -1631,7 +1639,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Foreign currency translation adjustments for a foreign\noperation that is relatively self-contained and integrated within\nits environment do not affect cash flows of the reporting entity.\nThey should be excluded from earnings. Accordingly,\ntranslation adjustments are reported in other comprehensive\nincome (OCI).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ مما يلي يُعد أحد مكونات الدخل الشامل الآخر؟",
+    "choicesAr": [
+      "الحد الأدنى لاستحقاق أجر الإجازات.",
+      "تسويات ترجمة العملات المتراكمة.",
+      "التغيرات في القيمة السوقية للمخزون.",
+      "المكاسب أو الخسائر غير المحققة على أوراق الدين المحتفظ بها للمتاجرة."
+    ],
+    "explanationAr": "لا تؤثر تسويات ترجمة العملات الأجنبية لعملية أجنبية مستقلة نسبيًا ومندمجة في بيئتها على التدفقات النقدية للمنشأة المُعِدّة للتقرير، لذا يجب استبعادها من الأرباح. وعليه، تُعرض تسويات الترجمة ضمن الدخل الشامل الآخر (OCI)."
   },
   {
     "unit": 1,
@@ -1648,7 +1664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness entity except those changes resulting from\ninvestments by owners and distributions to owners.\nComprehensive income includes two major categories: net\nincome and other comprehensive income (OCI). Net income\nincludes the results of continuing and discontinued operations.\nComponents of comprehensive income not included in the\ndetermination of net income are included in OCI. These\ninclude unrealized holding gains and losses on available-for-\nsale debt securities and certain foreign currency items, such\nas a translation adjustment. The infrequently occurring gain of\n$50,000 has already been included in the determination of net\nincome. Thus, comprehensive income equals $520,000\n($400,000 net income + $100,000 translation gain + $20,000\nunrealized holding gain on available-for-sale securities).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تضمنت القوائم المالية لشركة Rock Co. الأرصدة التالية في 31 ديسمبر:\nمكسب نادر الحدوث: $ 50,000\nمكسب ترجمة عملات أجنبية: 100,000\nصافي الدخل: 400,000\nمكسب حيازة غير محقق على أوراق دين متاحة للبيع: 20,000\nما المبلغ الذي يجب أن تفصح عنه Rock كدخل شامل للسنة المنتهية في 31 ديسمبر؟",
+    "choicesAr": [
+      "$400,000",
+      "$420,000",
+      "$520,000",
+      "$570,000"
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية منشأة الأعمال باستثناء التغيرات الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتضمن الدخل الشامل فئتين رئيسيتين: صافي الدخل والدخل الشامل الآخر (OCI). يشمل صافي الدخل نتائج العمليات المستمرة وغير المستمرة. أما مكونات الدخل الشامل غير المدرجة في تحديد صافي الدخل فتُدرج ضمن الدخل الشامل الآخر، ومنها مكاسب وخسائر الحيازة غير المحققة على أوراق الدين المتاحة للبيع وبعض بنود العملات الأجنبية مثل تسوية الترجمة. وقد سبق إدراج المكسب نادر الحدوث البالغ $50,000 في تحديد صافي الدخل. وعليه، يساوي الدخل الشامل $520,000 (صافي دخل $400,000 + مكسب ترجمة $100,000 + مكسب حيازة غير محقق على الأوراق المتاحة للبيع $20,000)."
   },
   {
     "unit": 1,
@@ -1665,7 +1689,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness during a period except those from investments by\nand distributions to owners. It includes all elements of (1) net\nincome and (2) other comprehensive income (OCI).\nComprehensive income thus includes net income of $11,000,\nthe unrealized holding loss on available-for-sale debt\nsecurities of $3,000 (component of OCI), and the $2,000\nforeign currency translation adjustment (component of OCI).\nThus, total comprehensive income is $10,000 ($11,000 –\n$3,000 + $2,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة Palmyra Co. صافي دخل قدره $11,000، وأثر تراكمي صافٍ موجب قدره $1,000 لتغيير في مبدأ محاسبي، وخسارة حيازة غير محققة قدرها $3,000 على أوراق دين متاحة للبيع، وتسوية ترجمة عملات أجنبية موجبة قدرها $2,000، وزيادة قدرها $6,000 في أسهمها العادية. ما مقدار الدخل الشامل لشركة Palmyra؟",
+    "choicesAr": [
+      "$4,000",
+      "$10,000",
+      "$11,000",
+      "$17,000"
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة خلال الفترة باستثناء تلك الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتضمن جميع عناصر (1) صافي الدخل و(2) الدخل الشامل الآخر (OCI). وبذلك يشمل الدخل الشامل صافي الدخل البالغ $11,000، وخسارة الحيازة غير المحققة على أوراق الدين المتاحة للبيع البالغة $3,000 (أحد مكونات الدخل الشامل الآخر)، وتسوية ترجمة العملات الأجنبية البالغة $2,000 (أحد مكونات الدخل الشامل الآخر). إذن، إجمالي الدخل الشامل $10,000 ($11,000 – $3,000 + $2,000)."
   },
   {
     "unit": 1,
@@ -1682,7 +1714,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The components of comprehensive income are net income\nand other comprehensive income (OCI). Under existing\naccounting standards, OCI includes, among others, (1)\nunrealized holding gains and losses on investments in debt\nsecurities; (2) gains and losses on derivatives designated and\nqualifying as cash flow hedges; (3) certain foreign currency\nitems, including foreign currency translation adjustments; and\n(4) changes in fair value attributable to instrument-specific\ncredit risk of liabilities for which the fair value option is elected.\nGains from extinguishment of debt are included in earnings.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من البنود التالية لا يُصنف ضمن الدخل الشامل الآخر (OCI)؟",
+    "choicesAr": [
+      "المكاسب نادرة الحدوث الناتجة عن إطفاء الدين (سداده المبكر).",
+      "تسويات ترجمة العملات الأجنبية.",
+      "المكاسب على المشتقات المصنفة والمؤهلة كتحوطات للتدفقات النقدية.",
+      "مكاسب الحيازة غير المحققة خلال السنة على أوراق الدين القابلة للتداول المتاحة للبيع."
+    ],
+    "explanationAr": "مكونات الدخل الشامل هي صافي الدخل والدخل الشامل الآخر (OCI). وبموجب المعايير المحاسبية الحالية، يشمل الدخل الشامل الآخر من بين أمور أخرى: (1) مكاسب وخسائر الحيازة غير المحققة على الاستثمارات في أوراق الدين؛ (2) مكاسب وخسائر المشتقات المصنفة والمؤهلة كتحوطات للتدفقات النقدية؛ (3) بعض بنود العملات الأجنبية، بما فيها تسويات ترجمة العملات الأجنبية؛ (4) التغيرات في القيمة العادلة العائدة إلى مخاطر الائتمان الخاصة بالأداة للالتزامات التي اختير لها خيار القيمة العادلة. أما مكاسب إطفاء الدين فتُدرج ضمن الأرباح."
   },
   {
     "unit": 1,
@@ -1699,7 +1739,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all components of net\nincome and other comprehensive income. Sales revenue is a\ncomponent of net income and thus is considered a component\nof comprehensive income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من الأصول أو المعاملات التالية يُعد عنصرًا من عناصر الدخل الشامل؟",
+    "choicesAr": [
+      "استثمارات المُلّاك.",
+      "إيرادات المبيعات.",
+      "التوزيعات على المُلّاك.",
+      "الإيرادات المؤجلة."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع مكونات صافي الدخل والدخل الشامل الآخر. وإيرادات المبيعات أحد مكونات صافي الدخل، ومن ثم تُعد أحد مكونات الدخل الشامل."
   },
   {
     "unit": 1,
@@ -1716,7 +1764,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Comprehensive income includes all changes in equity of a\nbusiness except those from investments by and distributions\nto owners. Comprehensive income includes all the\ncomponents of net income and other comprehensive income\n(OCI). OCI includes, among other things, (1) unrealized\nholding gains and losses on available-for-sale debt securities;\n(2) gains and losses on derivatives designated and qualifying\nas cash flow hedges; and (3) foreign-currency translation\nadjustments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من البنود التالية يجب عرضه كأحد مكونات الدخل الشامل؟",
+    "choicesAr": [
+      "توزيعات أرباح مدفوعة لأحد المساهمين.",
+      "تسوية ترجمة العملات الأجنبية.",
+      "مساهمة رأسمالية إضافية.",
+      "الإيرادات المؤجلة."
+    ],
+    "explanationAr": "يشمل الدخل الشامل جميع التغيرات في حقوق ملكية المنشأة باستثناء تلك الناتجة عن استثمارات المُلّاك والتوزيعات عليهم. ويتضمن جميع مكونات صافي الدخل والدخل الشامل الآخر (OCI). ويشمل الدخل الشامل الآخر من بين أمور أخرى: (1) مكاسب وخسائر الحيازة غير المحققة على أوراق الدين المتاحة للبيع؛ (2) مكاسب وخسائر المشتقات المصنفة والمؤهلة كتحوطات للتدفقات النقدية؛ (3) تسويات ترجمة العملات الأجنبية."
   },
   {
     "unit": 1,
@@ -1733,7 +1789,15 @@
     ],
     "answerIndex": 0,
     "explanation": "For a manufacturer, cost of goods sold equals beginning\nfinished goods inventory, plus the cost of goods\nmanufactured, minus ending finished goods inventory. Cost of\ngoods manufactured equals beginning work-in-process, plus\ncurrent manufacturing costs (direct materials + direct labor +\nproduction overhead), minus ending work-in-process.\nBecause there is no beginning inventory and no information\nabout ending work-in-process was provided, the cost of goods\nmanufactured was $155,000 ($50,000 raw materials +\n$75,000 direct labor + $30,000 factory overhead). Because all\ngoods manufactured during the period were sold, there is no\nending inventory, and the cost of goods sold is $155,000 ($0\nbeginning inventory + $155,000 cost of goods manufactured –\n$0 ending inventory).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال فترة تقرير، استخدمت شركة لتصنيع الحواسيب مواد خام بقيمة $50,000، وتكبدت تكاليف عمالة مباشرة قدرها $75,000، وتكاليف صناعية غير مباشرة قدرها $30,000. وكانت المصروفات الأخرى: إعلان بقيمة $5,000، ورواتب موظفين بقيمة $10,000، وخسارة ائتمانية على الذمم المدينة بقيمة $3,000. لم يكن لدى الشركة رصيد أول مدة في أي حساب من حسابات المخزون، وبيعت جميع البضائع المصنعة خلال الفترة في الفترة نفسها. ما مقدار تكلفة البضاعة المباعة للشركة خلال فترة التقرير؟",
+    "choicesAr": [
+      "$155,000",
+      "$160,000",
+      "$170,000",
+      "$173,000"
+    ],
+    "explanationAr": "بالنسبة للمنشأة الصناعية، تساوي تكلفة البضاعة المباعة مخزون البضاعة التامة أول المدة، مضافًا إليه تكلفة البضاعة المصنعة، مطروحًا منه مخزون البضاعة التامة آخر المدة. وتساوي تكلفة البضاعة المصنعة مخزون الإنتاج تحت التشغيل أول المدة، مضافًا إليه تكاليف التصنيع الجارية (المواد المباشرة + العمالة المباشرة + التكاليف الصناعية غير المباشرة)، مطروحًا منه مخزون الإنتاج تحت التشغيل آخر المدة. ولأنه لا يوجد مخزون أول المدة ولم تُقدَّم معلومات عن مخزون الإنتاج تحت التشغيل آخر المدة، فإن تكلفة البضاعة المصنعة بلغت $155,000 (مواد خام $50,000 + عمالة مباشرة $75,000 + تكاليف صناعية غير مباشرة $30,000). ولأن جميع البضائع المصنعة خلال الفترة قد بيعت، فلا يوجد مخزون آخر المدة، وتكون تكلفة البضاعة المباعة $155,000 (مخزون أول المدة $0 + تكلفة البضاعة المصنعة $155,000 – مخزون آخر المدة $0)."
   },
   {
     "unit": 1,
@@ -1750,7 +1814,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Common stock does not have the right to accumulate unpaid\ndividends. This right is often attached to preferred stock.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما لم تكن الأسهم مقيدة تحديدًا، يحق لحامل الأسهم العادية الذي يتمتع بحق الأولوية (حق الشفعة) المشاركة بشكل تناسبي في جميع ما يلي باستثناء",
+    "choicesAr": [
+      "التصويت على انتخاب أعضاء مجلس الإدارة.",
+      "أصول الشركة عند التصفية.",
+      "توزيعات الأرباح المتراكمة.",
+      "الإصدارات الجديدة من الأسهم من الفئة نفسها."
+    ],
+    "explanationAr": "لا تتمتع الأسهم العادية بحق تراكم توزيعات الأرباح غير المدفوعة، وغالبًا ما يرتبط هذا الحق بالأسهم الممتازة."
   },
   {
     "unit": 1,
@@ -1767,7 +1839,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When a property dividend is declared, the property is\nremeasured at its fair value as of the declaration date. This\namount is then reclassified from retained earnings to property\ndividends payable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 ديسمبر، أعلن مجلس إدارة شركة عن توزيعات أرباح عينية تُدفع في صورة أسهم تحتفظ بها في شركة أخرى، على أن تُدفع التوزيعات في 5 يناير. وكانت التكلفة الأصلية للاستثمار في تلك الشركة $100,000 عند اقتنائه قبل 2 سنة. وبلغت القيمة السوقية لهذا الاستثمار $150,000 في 1 ديسمبر، و$175,000 في 31 ديسمبر، و$160,000 في 5 يناير. ما المبلغ الذي يجب أن يظهر في قائمة المركز المالي للشركة في 31 ديسمبر كتوزيعات أرباح عينية مستحقة الدفع؟",
+    "choicesAr": [
+      "$100,000",
+      "$150,000",
+      "$160,000",
+      "$175,000"
+    ],
+    "explanationAr": "عند الإعلان عن توزيعات أرباح عينية، يُعاد قياس الأصل بقيمته العادلة في تاريخ الإعلان، ثم يُعاد تصنيف هذا المبلغ من الأرباح المحتجزة إلى توزيعات أرباح عينية مستحقة الدفع."
   },
   {
     "unit": 1,
@@ -1784,7 +1864,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The purchase of treasury stock is recorded on the statement\nof financial position as a decrease in shareholders’ equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُسجَّل شراء أسهم الخزينة في قائمة المركز المالي على أنه",
+    "choicesAr": [
+      "زيادة في الأصول.",
+      "نقص في الالتزامات.",
+      "زيادة في حقوق المساهمين.",
+      "نقص في حقوق المساهمين."
+    ],
+    "explanationAr": "يُسجَّل شراء أسهم الخزينة في قائمة المركز المالي على أنه نقص في حقوق المساهمين."
   },
   {
     "unit": 1,
@@ -1801,7 +1889,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The statement of shareholders’ equity (changes in equity)\npresents a reconciliation in columnar format of the beginning\nand ending balances in the various shareholders’ equity\naccounts. A statement of changes in equity may include, for\nexample, columns for (1) totals, (2) comprehensive income,\n(3) retained earnings, (4) accumulated OCI (but the\ncomponents of OCI are presented in another statement), (5)\ncommon stock, and (6) additional paid-in capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعرض قائمة حقوق المساهمين",
+    "choicesAr": [
+      "تسوية بين الأرصدة الافتتاحية والختامية لحسابات حقوق المساهمين.",
+      "قائمة بجميع حسابات حقوق المساهمين ومبالغها بالدولار.",
+      "احتساب عدد الأسهم القائمة المستخدم في حساب ربحية السهم.",
+      "تسوية صافي الدخل مع صافي التدفق النقدي التشغيلي."
+    ],
+    "explanationAr": "تعرض قائمة حقوق المساهمين (التغيرات في حقوق الملكية) تسوية بشكل أعمدة بين الأرصدة الافتتاحية والختامية لمختلف حسابات حقوق المساهمين. وقد تتضمن قائمة التغيرات في حقوق الملكية مثلًا أعمدة لـ (1) الإجماليات، (2) الدخل الشامل، (3) الأرباح المحتجزة، (4) الدخل الشامل الآخر المتراكم (لكن مكونات الدخل الشامل الآخر تُعرض في قائمة أخرى)، (5) الأسهم العادية، (6) رأس المال الإضافي المدفوع."
   },
   {
     "unit": 1,
@@ -1818,7 +1914,15 @@
     ],
     "answerIndex": 3,
     "explanation": "When a small stock dividend is declared (less than 20% to\n25% of the previously outstanding common shares), retained\nearnings is debited for the fair value of the stock.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من العبارات التالية بشأن توزيعات الأرباح صحيحة؟",
+    "choicesAr": [
+      "ينتج عن توزيع أسهم منحة بنسبة 15% من الأسهم العادية القائمة قيدٌ مدين في الأرباح المحتجزة بالقيمة الاسمية للأسهم الموزعة.",
+      "في تاريخ الإعلان عن توزيع أسهم منحة بنسبة 30%، تنخفض القيمة الدفترية للأرباح المحتجزة بالقيمة السوقية العادلة للأسهم الموزعة.",
+      "لن يكون للإعلان عن توزيعات أرباح نقدية أي أثر على القيمة الدفترية للسهم.",
+      "سيؤدي الإعلان عن توزيع أسهم منحة بنسبة 10% ودفعها إلى تخفيض الأرباح المحتجزة بالقيمة السوقية العادلة للأسهم."
+    ],
+    "explanationAr": "عند الإعلان عن توزيع أسهم منحة صغير (أقل من 20% إلى 25% من الأسهم العادية القائمة سابقًا)، يُجعل حساب الأرباح المحتجزة مدينًا بالقيمة العادلة للأسهم."
   },
   {
     "unit": 1,
@@ -1835,7 +1939,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Prior-period adjustments are made for the correction of errors.\nThe effects of errors on prior-period financial statements are\nreported as adjustments to beginning retained earnings for the\nearliest period presented in the retained earnings statement.\nSuch errors do not affect the income statement for the current\nperiod.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "البنود المفصح عنها كتسويات لفترات سابقة",
+    "choicesAr": [
+      "لا تشمل أثر خطأ في تطبيق المبادئ المحاسبية، لأنه يُعالج كتغيير في مبدأ محاسبي وليس كتسوية لفترة سابقة.",
+      "لا تؤثر على عرض القوائم المالية المقارنة للفترات السابقة.",
+      "لا تتطلب إفصاحًا إضافيًا في صلب القوائم المالية.",
+      "تنعكس كتسويات للرصيد الافتتاحي للأرباح المحتجزة لأقدم فترة معروضة."
+    ],
+    "explanationAr": "تُجرى تسويات الفترات السابقة لتصحيح الأخطاء. وتُعرض آثار الأخطاء على القوائم المالية للفترات السابقة كتسويات للأرباح المحتجزة أول المدة لأقدم فترة معروضة في قائمة الأرباح المحتجزة. ولا تؤثر هذه الأخطاء على قائمة الدخل للفترة الحالية."
   },
   {
     "unit": 1,
@@ -1852,7 +1964,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Preferred stockholders have preference over common\nstockholders with respect to dividend and liquidation rights,\nbut payment of preferred dividends, unlike bond interest, is not\nmandatory. In exchange for these preferences, the preferred\nstockholders give up the right to vote. Consequently, preferred\nstock is a hybrid of debt and equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من العبارات التالية صحيحة بشأن أثر الأسهم الممتازة على الشركة؟",
+    "choicesAr": [
+      "تُقسَّم أرباح المنشأة بعد الضريبة بالتساوي بين حملة الأسهم العادية والممتازة.",
+      "تصبح السيطرة على المنشأة مشتركة بين حملة الأسهم العادية والممتازة، مع سيطرة أكبر لحملة الأسهم الممتازة.",
+      "تتقدم مطالبات حملة الأسهم الممتازة على مطالبات حملة الأسهم العادية في حالة التصفية.",
+      "يؤدي عدم دفع توزيعات الأسهم الممتازة إلى إخلال المنشأة بالتزاماتها، كما هو الحال عند عدم دفع فوائد الدين."
+    ],
+    "explanationAr": "يتمتع حملة الأسهم الممتازة بأولوية على حملة الأسهم العادية فيما يتعلق بحقوق التوزيعات والتصفية، لكن دفع توزيعات الأسهم الممتازة ليس إلزاميًا، بخلاف فوائد السندات. وفي مقابل هذه الأولويات، يتنازل حملة الأسهم الممتازة عن حق التصويت. وبالتالي فإن الأسهم الممتازة أداة هجينة بين الدين وحقوق الملكية."
   },
   {
     "unit": 1,
@@ -1869,7 +1989,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When a property dividend is declared, the property is\nremeasured at its fair value as of the declaration date ($75 –\n$50 = $25).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت شركة مساهمة عامة عن توزيعات أرباح عينية بواقع سهم واحد من استثمارها في شركة M مقابل كل 10 أسهم من أسهمها العادية القائمة. وكانت الشركة قد اشترت أسهم M أصلًا بسعر $50 للسهم، وفي تاريخ الإعلان عن التوزيعات كانت القيمة السوقية $75 للسهم. نتيجة لهذا الإعلان، يجب على الشركة أن تعترف بـ",
+    "choicesAr": [
+      "خسارة قدرها $25 عن كل سهم سيتم توزيعه.",
+      "مكسب قدره $25 عن كل سهم سيتم توزيعه.",
+      "لا مكسب ولا خسارة.",
+      "مكسب أو خسارة مناسبين بناءً على القيمة السوقية في تاريخ التوزيع."
+    ],
+    "explanationAr": "عند الإعلان عن توزيعات أرباح عينية، يُعاد قياس الأصل بقيمته العادلة في تاريخ الإعلان ($75 – $50 = $25)."
   },
   {
     "unit": 1,
@@ -1886,7 +2014,15 @@
     ],
     "answerIndex": 0,
     "explanation": "As a result of the 2-for-1 stock split, the par value of Grand’s\nshares is halved to $5.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة 10,000,000 سهم مصرح به بقيمة اسمية $10 للسهم، منها 2,000,000 سهم مُصدر وقائم. أعلن مجلس الإدارة عن تجزئة الأسهم بنسبة 2 مقابل 1 في 30 نوفمبر على أن تُصدر في 30 ديسمبر. وكان سعر السهم في تاريخ الإعلان $30. إضافة إلى ذلك، عدّل المجلس عقد التأسيس للسماح بزيادة تناسبية في عدد الأسهم المصرح بها. ستكون معلومات القيمة الاسمية الظاهرة في قسم حقوق المساهمين في قائمة المركز المالي في 31 ديسمبر",
+    "choicesAr": [
+      "$5",
+      "$10",
+      "$15",
+      "$30"
+    ],
+    "explanationAr": "نتيجة لتجزئة الأسهم بنسبة 2 مقابل 1، تنخفض القيمة الاسمية لأسهم Grand إلى النصف لتصبح $5."
   },
   {
     "unit": 1,
@@ -1903,7 +2039,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cash dividends are only paid on outstanding shares. Thus, the\ndividend payable at December 31 is $90,000 (900,000 × $.10).\nStock dividends distributable are reported in equity, not\ncurrent liabilities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة 1,000,000 سهم عادي مصرح به، منها 100,000 سهم محتفظ بها كأسهم خزينة، والباقي يملكه مساهمو الشركة. في 1 نوفمبر، أعلن مجلس الإدارة عن توزيعات أرباح نقدية بواقع $.10 للسهم تُدفع في 2 يناير. وفي الوقت نفسه، أعلن المجلس عن توزيع أسهم منحة بنسبة 5% تُصدر في 31 ديسمبر. وفي تاريخ الإعلان كان سعر السهم $10، ولن تُصدر كسور أسهم. ما إجمالي مبلغ هذه الإعلانات الذي يجب أن يظهر ضمن الالتزامات المتداولة في قائمة المركز المالي في 31 ديسمبر؟",
+    "choicesAr": [
+      "$90,000",
+      "$100,000",
+      "$540,000",
+      "$600,000"
+    ],
+    "explanationAr": "تُدفع التوزيعات النقدية على الأسهم القائمة فقط. وعليه، تبلغ التوزيعات المستحقة الدفع في 31 ديسمبر $90,000 (900,000 × $.10). أما أسهم المنحة القابلة للتوزيع فتُعرض ضمن حقوق الملكية وليس ضمن الالتزامات المتداولة."
   },
   {
     "unit": 1,
@@ -1920,7 +2064,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A stock split reduces the par value of the stock and increases\nthe number of shares outstanding, making it more attractive to\ninvestors. As with a stock dividend, each shareholder’s\nproportionate interest in the company and total book value\nremain unchanged.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كيف تؤثر تجزئة الأسهم على القيمة الاسمية للسهم وعلى حقوق المساهمين في الشركة؟\n(القيمة الاسمية | حقوق المساهمين)",
+    "choicesAr": [
+      "القيمة الاسمية: تنخفض | حقوق المساهمين: تزيد",
+      "القيمة الاسمية: تنخفض | حقوق المساهمين: لا تتغير",
+      "القيمة الاسمية: تزيد | حقوق المساهمين: تنخفض",
+      "القيمة الاسمية: تزيد | حقوق المساهمين: لا تتغير"
+    ],
+    "explanationAr": "تؤدي تجزئة الأسهم إلى تخفيض القيمة الاسمية للسهم وزيادة عدد الأسهم القائمة، مما يجعلها أكثر جاذبية للمستثمرين. وكما في توزيع أسهم المنحة، تبقى الحصة التناسبية لكل مساهم في الشركة وإجمالي القيمة الدفترية دون تغيير."
   },
   {
     "unit": 1,
@@ -1937,7 +2089,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In accounting for a stock dividend, the fair value of the\nadditional shares issued is reclassified from retained earnings\nto capital stock and the difference to additional paid in capital.\nStock dividend distributable is an item of shareholders’ equity\nand not a liability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب الإفصاح عن توزيعات أسهم المنحة التي أعلنها مجلس الإدارة ولم تُوزَّع بعد على أنها",
+    "choicesAr": [
+      "التزام متداول.",
+      "التزام طويل الأجل.",
+      "إيضاح في القوائم المالية.",
+      "بند ضمن قسم حقوق المساهمين."
+    ],
+    "explanationAr": "عند المحاسبة عن توزيع أسهم المنحة، يُعاد تصنيف القيمة العادلة للأسهم الإضافية المصدرة من الأرباح المحتجزة إلى رأس المال المساهم (الأسهم)، ويُرحَّل الفرق إلى رأس المال الإضافي المدفوع. وتُعد أسهم المنحة القابلة للتوزيع بندًا من بنود حقوق المساهمين وليست التزامًا."
   },
   {
     "unit": 1,
@@ -1954,7 +2114,15 @@
     ],
     "answerIndex": 2,
     "explanation": "In a stock split, no journal entry is recorded and no retained\nearnings are reclassified.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيٌّ من المعاملات التالية لا يؤثر على رصيد الأرباح المحتجزة؟",
+    "choicesAr": [
+      "الإعلان عن توزيع أسهم منحة.",
+      "إعادة التنظيم الشكلية (Quasi-reorganization).",
+      "الإعلان عن تجزئة الأسهم.",
+      "الإعلان عن توزيعات أرباح عينية."
+    ],
+    "explanationAr": "في تجزئة الأسهم لا يُسجَّل أي قيد يومية ولا يُعاد تصنيف أي جزء من الأرباح المحتجزة."
   },
   {
     "unit": 1,
@@ -1971,7 +2139,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A 2-for-1 stock split doubles the number of shares\noutstanding; retained earnings is not affected. Under a stock\ndividend, however, a portion of retained earnings is\nreclassified as common stock. Since dividends are restricted\nby the amount of available retained earnings, a stock dividend,\nbut not a stock split, will impair the firm’s ability to pay\ndividends in the future.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُتداول سهم الشركة العادي حاليًا بسعر $108 للسهم. وتخطط الشركة لإصدار أسهم جديدة في المستقبل القريب وترغب في تحفيز الاهتمام بها، لكن مجلس الإدارة لا يرغب في توزيع رأس مال في الوقت الحالي. لذلك تدرس الشركة ما إذا كانت ستعرض تجزئة أسهمها العادية بنسبة 2 مقابل 1 أو توزيع أسهم منحة بنسبة 100% على أسهمها العادية. أفضل سبب لاختيار تجزئة الأسهم هو أنها",
+    "choicesAr": [
+      "لن تخفض حقوق المساهمين.",
+      "لن تُضعف قدرة الشركة على دفع توزيعات الأرباح مستقبلًا.",
+      "لن يكون أثرها على ربحية السهم بالقدر نفسه.",
+      "ستُبقي القيمة الاسمية للسهم دون تغيير."
+    ],
+    "explanationAr": "تؤدي تجزئة الأسهم بنسبة 2 مقابل 1 إلى مضاعفة عدد الأسهم القائمة دون التأثير على الأرباح المحتجزة. أما في توزيع أسهم المنحة فيُعاد تصنيف جزء من الأرباح المحتجزة كأسهم عادية. ولأن التوزيعات مقيدة بمقدار الأرباح المحتجزة المتاحة، فإن توزيع أسهم المنحة، وليس تجزئة الأسهم، هو ما سيُضعف قدرة المنشأة على دفع التوزيعات مستقبلًا."
   },
   {
     "unit": 1,
@@ -1988,7 +2164,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A change in estimate for credit losses requires prospective\napplication (i.e., the effect of the change should be treated as\naffecting the period of the change and any future periods).\nChanges in estimates are viewed as normal recurring\ncorrections, and retrospective treatment is prohibited.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب أن يُعامَل التغيير في تقدير الخسائر الائتمانية",
+    "choicesAr": [
+      "كخطأ.",
+      "بأثر رجعي.",
+      "كبند غير عادي.",
+      "على أنه يؤثر على فترة التغيير فقط."
+    ],
+    "explanationAr": "يتطلب التغيير في تقدير الخسائر الائتمانية التطبيق بأثر مستقبلي (أي أن أثر التغيير يُعامل على أنه يؤثر على فترة التغيير وأي فترات مستقبلية). وتُعد التغيرات في التقديرات تصحيحات اعتيادية متكررة، ويُحظر تطبيقها بأثر رجعي."
   },
   {
     "unit": 1,
@@ -2005,7 +2189,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The change in inventory valuation method is a change in\naccounting principle, which should be presented on a\nretrospective basis to maintain consistency and comparability.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سلسلة متاجر متخصصة في الأغذية الفاخرة كانت تستخدم طريقة متوسط التكلفة لتقييم مخزونها. وخلال السنة الحالية، تحولت الشركة إلى طريقة الوارد أولًا صادر أولًا لتقييم المخزون. وعلل رئيس الشركة ذلك بأن هذا التغيير مناسب لأنه يطابق التدفق المادي للبضائع بشكل أدق. يجب الإفصاح عن هذا التغيير في القوائم المالية على أنه",
+    "choicesAr": [
+      "تغيير محاسبي من نوع الأثر التراكمي.",
+      "يؤثر على الفترات المستقبلية فقط.",
+      "تغيير في تقدير محاسبي.",
+      "تصحيح خطأ."
+    ],
+    "explanationAr": "التغيير في طريقة تقييم المخزون هو تغيير في مبدأ محاسبي، ويجب عرضه بأثر رجعي للحفاظ على الثبات وقابلية المقارنة."
   },
   {
     "unit": 1,
@@ -2022,7 +2214,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A stock dividend involves no distribution of cash or other\nproperty. Stock dividends are accounted for as a\nreclassification of different equity accounts. When a stock\ndividend is declared, the company will decrease retained\nearnings and increase common stock and additional paid-in\ncapital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة مدرجة في السوق 100,000 سهم عادي قائم بقيمة اسمية $5 للسهم، وتستخدم مبادئ المحاسبة المقبولة عمومًا في الولايات المتحدة (U.S. GAAP) لإعداد قوائمها المالية. أعلنت الشركة مؤخرًا عن توزيع أسهم منحة بنسبة 5%. وفي تاريخ الإعلان كان سهم الشركة يُتداول بسعر $25. في تاريخ الإعلان، فإن",
+    "choicesAr": [
+      "رأس المال الإضافي المدفوع للشركة سيزيد.",
+      "الأرباح المحتجزة للشركة ستزيد.",
+      "إجمالي حقوق المساهمين للشركة سينخفض.",
+      "الأسهم القائمة للشركة ستنخفض."
+    ],
+    "explanationAr": "لا ينطوي توزيع أسهم المنحة على توزيع نقدية أو أي أصول أخرى، ويُحاسَب عنه كإعادة تصنيف بين حسابات حقوق الملكية المختلفة. فعند الإعلان عن توزيع أسهم المنحة، تخفض الشركة الأرباح المحتجزة وتزيد الأسهم العادية ورأس المال الإضافي المدفوع."
   },
   {
     "unit": 1,
@@ -2039,7 +2239,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The statement of retained earnings is a basic financial\nstatement. Together with the income statement, the statement\nof retained earnings is meant to broadly reflect the results of\noperations. The statement of retained earnings consists of\nbeginning retained earnings adjusted for any prior period\nadjustment (net of tax), with further adjustments for income\n(loss), dividends, and in certain other rare adjustments, e.g.,\nquasi-reorganizations. The final figure is ending retained\nearnings.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "المكونات الرئيسية لقائمة الأرباح المحتجزة لفترة ما هي",
+    "choicesAr": [
+      "التوزيعات المعلنة، وتسويات الفترات السابقة، والتغيرات الناتجة عن معاملات أسهم الخزينة.",
+      "الدخل أو الخسارة قبل الضريبة، والتوزيعات المدفوعة أو المعلنة.",
+      "تسويات الفترات السابقة، والدخل أو الخسارة قبل الضريبة، وضريبة الدخل، والتوزيعات المدفوعة.",
+      "صافي الدخل أو الخسارة، وتسويات الفترات السابقة، والتوزيعات المدفوعة أو المعلنة."
+    ],
+    "explanationAr": "قائمة الأرباح المحتجزة قائمة مالية أساسية، وتهدف مع قائمة الدخل إلى عكس نتائج العمليات بصورة عامة. وتتكون قائمة الأرباح المحتجزة من الأرباح المحتجزة أول المدة معدلة بأي تسوية لفترة سابقة (بالصافي بعد الضريبة)، مع تعديلات إضافية للدخل (الخسارة) والتوزيعات، وفي حالات نادرة أخرى تعديلات مثل إعادة التنظيم الشكلية. والرقم النهائي هو الأرباح المحتجزة آخر المدة."
   },
   {
     "unit": 1,
@@ -2056,7 +2264,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The distribution of previously declared cash dividends will not\nhave any effect on a company’s shareholders’ equity. At the\ntime that a dividend is declared, the amount of the dividend\nbecomes a liability. It was at the time of declaration that the\ndividend reduced equity. The payment of that liability at a later\ndate does not affect equity. The distribution of a stock dividend\nnever affects the amount of equity since it merely represents a\nrepackaging of the company’s equity accounts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 15 ديسمبر، وزعت شركة توزيعات أرباح نقدية معلنة سابقًا بقيمة $120,000، وأعلنت عن توزيع أسهم منحة بنسبة 5% بقيمة سوقية $100,000. إذا كانت الشركة تستخدم U.S. GAAP، فإن هاتين المعاملتين ستخفضان إجمالي حقوق المساهمين للشركة بمقدار",
+    "choicesAr": [
+      "$0",
+      "$100,000",
+      "$120,000",
+      "$220,000"
+    ],
+    "explanationAr": "لن يكون لتوزيع الأرباح النقدية المعلنة سابقًا أي أثر على حقوق المساهمين للشركة. فعند الإعلان عن التوزيعات يصبح مبلغها التزامًا، وفي وقت الإعلان خُفضت حقوق الملكية. أما سداد ذلك الالتزام في تاريخ لاحق فلا يؤثر على حقوق الملكية. كما أن توزيع أسهم المنحة لا يؤثر أبدًا على مقدار حقوق الملكية لأنه مجرد إعادة ترتيب لحسابات حقوق ملكية الشركة."
   },
   {
     "unit": 1,
@@ -2073,7 +2289,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Preferred stocks have a higher priority than common stock\nwith regard to earnings and assets in the event of a\nbankruptcy.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تختلف الأسهم الممتازة عن الأسهم العادية في أن",
+    "choicesAr": [
+      "الأسهم الممتازة لها أولوية أعلى من الأسهم العادية فيما يتعلق بالأرباح والأصول في حالة الإفلاس.",
+      "عدم دفع توزيعات الأسهم العادية لن يدفع الشركة إلى الإفلاس، بينما عدم دفع توزيعات الأسهم الممتازة سيدفعها إلى الإفلاس.",
+      "حملة الأسهم الممتازة يسيطرون عمومًا على إدارة الشركة، بينما يتمتع حملة الأسهم العادية بحقوق تصويت محدودة.",
+      "أرباح الأسهم الممتازة قابلة للخصم لأغراض الضريبة، بينما أرباح الأسهم العادية ليست كذلك."
+    ],
+    "explanationAr": "تتمتع الأسهم الممتازة بأولوية أعلى من الأسهم العادية فيما يتعلق بالأرباح والأصول في حالة الإفلاس."
   },
   {
     "unit": 1,
@@ -2090,7 +2314,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Apart from cash paid or received, a firm cannot recognize\nassets, liabilities, gains, or losses from transactions in its own\nstock. Treasury stock is reported on the balance sheet as a\nsubtraction from equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "دفعت شركة أكثر من القيمة العادلة لاقتناء أسهم خزينة. يجب تسجيل الفرق بين السعر المدفوع لاقتناء أسهم الخزينة والقيمة العادلة على أنه",
+    "choicesAr": [
+      "أصل.",
+      "التزام.",
+      "حقوق مساهمين.",
+      "مصروف."
+    ],
+    "explanationAr": "فيما عدا النقدية المدفوعة أو المقبوضة، لا يجوز للمنشأة الاعتراف بأصول أو التزامات أو مكاسب أو خسائر من معاملات في أسهمها الخاصة. وتُعرض أسهم الخزينة في الميزانية العمومية مطروحة من حقوق الملكية."
   },
   {
     "unit": 1,
@@ -2107,7 +2339,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The $300,000 of United common stock is treasury stock that\nshould be reported as a contra item in the shareholders’ equity\nsection, not as a current asset. Thus, total equity is\n$1,700,000 ($2,224,000 common stock – $224,000 deficit in\nretained earnings – $300,000 treasury stock).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي قسم الأصول المتداولة وقسم حقوق الملكية غير المعدلين في الميزانية العمومية لشركة United, Inc. في 31 ديسمبر، السنة 1:\nالأصول المتداولة\nالنقدية: $ 60,000\nالاستثمارات في أوراق حقوق ملكية (منها $300,000 أسهم عادية لشركة United): 400,000\nالذمم المدينة التجارية: 340,000\nالمخزون: 148,000\nالإجمالي: $948,000\nحقوق الملكية\nالأسهم العادية: $2,224,000\nالأرباح المحتجزة (العجز): (224,000)\nالإجمالي: $2,000,000\nالاستثمارات والمخزون مسجلة بتكلفتها التي تقارب قيمها العادلة. في قائمة حقوق الملكية للسنة 1 لشركة United، يكون إجمالي حقوق الملكية في 31 ديسمبر، السنة 1",
+    "choicesAr": [
+      "$2,224,000",
+      "$2,000,000",
+      "$1,924,000",
+      "$1,700,000"
+    ],
+    "explanationAr": "تمثل أسهم United العادية البالغة $300,000 أسهم خزينة يجب عرضها كبند مقابل (مطروح) في قسم حقوق المساهمين، لا كأصل متداول. وعليه، يبلغ إجمالي حقوق الملكية $1,700,000 (أسهم عادية $2,224,000 – عجز في الأرباح المحتجزة $224,000 – أسهم خزينة $300,000)."
   },
   {
     "unit": 1,
