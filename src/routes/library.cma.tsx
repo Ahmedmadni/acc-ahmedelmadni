@@ -50,6 +50,9 @@ const icma2024Part2Count = CMA_LOCAL_QUESTIONS.filter((q) => q.id.startsWith("IM
 const englishPart1SourceCount = CMA_LOCAL_QUESTIONS.filter((q) =>
   q.id.startsWith("cma-gleim-2025-") && q.sourceLanguage === "en",
 ).length;
+const monteroPriorCase = CMA_LOCAL_QUESTIONS.find((q) =>
+  q.id === "cma-gleim-2025-vol2-su14-s5-q009",
+);
 
 export const Route = createFileRoute("/library/cma")({
   head: () => {
@@ -696,9 +699,19 @@ function CmaPage() {
                   {q.sourceLayoutReview && (
                     <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
                       {lang === "ar"
-                        ? "مراجعة مصدر مطلوبة: لم يتم التحقق من ترتيب الجدول أو المعادلة في PDF الأصلي. مفتاح الإجابة المعروض مبدئي ولا ينبغي الاعتماد عليه حتى مطابقة الصفحة."
-                        : "Source review required: the original PDF table or formula has not been checked. Treat its answer key as provisional until the source page is verified."}
+                        ? "مراجعة مصدر مطلوبة: قد تحتاج بيانات السؤال أو تنسيقها أو إجابته إلى مطابقة الصفحة الأصلية. المقارنة بمفتاح الإجابة مبدئية وليست درجة معتمدة."
+                        : "Source review required: the question data, layout or answer may need comparison with the original page. The answer-key comparison is provisional and unscored."}
                     </p>
+                  )}
+                  {q.id === "cma-gleim-2025-vol2-su14-s5-q010" && monteroPriorCase && (
+                    <details open className="mt-3 rounded-xl border border-[#A88765]/30 bg-[#F5F1EB] p-4">
+                      <summary className="cursor-pointer text-sm font-bold text-[#76543F]">
+                        {lang === "ar" ? "بيانات حالة مونتيرو من السؤال السابق" : "Montero case data from the preceding question"}
+                      </summary>
+                      <p dir={lang === "ar" ? "rtl" : "ltr"} className="mt-3 whitespace-pre-wrap text-sm leading-7 text-[#40382F]">
+                        {monteroPriorCase.question[lang]}
+                      </p>
+                    </details>
                   )}
                   {q.sourceTextStatus === "reconstructed" && (
                     <p className="mt-2 text-xs text-[#76543F]">
@@ -764,8 +777,8 @@ function CmaPage() {
                       {q.sourceLayoutReview && (
                         <p role="status" className="mt-2 text-xs font-bold text-amber-900">
                           {lang === "ar"
-                            ? "هذه المقارنة مبدئية لأن الجدول أو المعادلة لم يُطابق مع PDF الأصلي؛ لا تعتبرها نتيجة اختبار معتمدة."
-                            : "Provisional source-key comparison only: PDF tables or formulas are not visually verified."}
+                            ? "هذه مقارنة مبدئية لأن بيانات المصدر أو تنسيقه أو مفتاحه لم تُحسم مراجعتها؛ ليست نتيجة اختبار معتمدة."
+                            : "Provisional comparison only: source data, layout or answer key still needs review. This is not a scored result."}
                         </p>
                       )}
                       <CmaAnswerSupport question={q} lang={lang} isCorrect={answers[q.id] === q.answerIndex} />
