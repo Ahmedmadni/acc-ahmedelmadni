@@ -2914,7 +2914,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The solution is to work backward from the $22,000 cash\nbalance on May 1 by deducting collections and adding\ndisbursements for April. The collections for April were:\nMonth       Sales % Expected Collections\nApril    $78,000 70                   $54,600\nMarch    60,000 20                     12,000\nFebruary 66,000 9                       5,940\nTotal                             $72,540\nThe disbursements for April were:\nMarch purchases                          $36,000\nLess: 2% cash discount                       (720)\nNet Purchases                      $35,280\nAdd: Cash expenses ($14,400 ÷ 120%) 12,000\nTotal disbursements for April            $47,280\nIf collections exceeded disbursements by $25,260 ($72,540 –\n$47,280), but the ending cash balance was only $22,000, the\nbeginning balance must have been $(3,260) [$22,000 –\n$25,260 net collections].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بالاستناد إلى بيانات حالة مونتيرو السابقة، ما رصيد نقدية الشركة في 1 أبريل، بافتراض زيادة المدفوعات النقدية للمصروفات 20% من أبريل إلى مايو؟",
+    "choicesAr": [
+      "$72,540",
+      "$22,000",
+      "$(3,260)",
+      "$(2,540)"
+    ],
+    "explanationAr": "يُحسب الرصيد بالرجوع من رصيد النقدية $22,000 في 1 مايو، بطرح تحصيلات أبريل وإضافة مدفوعاته. تحصيلات أبريل هي:\nالشهر | المبيعات | نسبة التحصيل | التحصيلات المتوقعة\nأبريل | $78,000 | 70 | $54,600\nمارس | 60,000 | 20 | 12,000\nفبراير | 66,000 | 9 | 5,940\nالإجمالي | $72,540\nأما مدفوعات أبريل فهي:\nمشتريات مارس $36,000؛ يُطرح خصم نقدي 2% مقداره (720)؛ صافي المشتريات $35,280؛ وتُضاف المصروفات النقدية ($14,400 ÷ 120%) البالغة 12,000؛ فيكون إجمالي مدفوعات أبريل $47,280. تزيد التحصيلات على المدفوعات بمقدار $25,260 ($72,540 – $47,280)، وبما أن رصيد نهاية الفترة كان $22,000، فإن رصيد بدايتها هو $(3,260) [$22,000 – $25,260 صافي التحصيلات]."
   },
   {
     "unit": 14,
