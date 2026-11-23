@@ -24,6 +24,7 @@ import { extractExamQuestions } from "@/lib/exam.functions";
 import { IFRS_LOCAL_QUESTIONS } from "@/data/ifrs-question-bank";
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { getCmaUnit14SourceReview } from "@/lib/cma-unit14-source-review";
 import { isCmaScorableQuestion, splitCmaQuizSourceReview } from "@/lib/cma-source-review.shared";
 import type { CmaStudyUnit } from "@/data/cma-topics";
 
@@ -545,9 +546,10 @@ export function ExamPrep({ lang }: { lang: Lang }) {
               )}
               {q.sourceLayoutReview && (
                 <div role="alert" className="mb-3 rounded-lg border border-amber-400/45 bg-amber-500/10 p-3 text-xs leading-6 text-[#f3d28a]">
-                  {lang === "ar"
-                    ? "هذا السؤال للتدريب ومراجعة المصدر فقط، ولا يُحتسب ضمن درجتك. لم يُطابق الجدول أو المعادلة بعد مع صفحة PDF الأصلية؛ مفتاح الإجابة الظاهر ليس اعتمادًا نهائيًا لصحة المصدر."
-                    : "Source review required. This practice-only question is not scored. Its table or formula has not been matched to the original PDF; the displayed answer key is not independently certified."}
+                  {getCmaUnit14SourceReview(q.id)?.message[lang] ??
+                    (lang === "ar"
+                      ? "هذا السؤال للتدريب ومراجعة المصدر فقط، ولا يُحتسب ضمن درجتك. لم يُطابق الجدول أو المعادلة بعد مع صفحة PDF الأصلية؛ مفتاح الإجابة الظاهر ليس اعتمادًا نهائيًا لصحة المصدر."
+                      : "Source review required. This practice-only question is not scored. Its table or formula has not been matched to the original PDF; the displayed answer key is not independently certified.")}
                 </div>
               )}
               {q.sourceTextStatus === "reconstructed" && (

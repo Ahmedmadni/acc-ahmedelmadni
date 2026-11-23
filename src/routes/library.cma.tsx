@@ -13,6 +13,7 @@ import {
 import { CMA_LOCAL_QUESTIONS } from "@/data/cma-question-bank";
 import { CMA_PART2_PRACTICE_SOURCES } from "@/data/cma-part2-practice-sources";
 import { CmaTranslatedQuestion } from "@/components/library/CmaTranslatedQuestion";
+import { getCmaUnit14SourceReview } from "@/lib/cma-unit14-source-review";
 import { CmaAnswerSupport } from "@/components/library/CmaAnswerSupport";
 import { CmaPart2OnlineBank } from "@/components/library/CmaPart2OnlineBank";
 import { CMA_STUDY_UNIT_CASES, CMA_TOPIC_GUIDES } from "@/data/cma-guides";
@@ -698,9 +699,10 @@ function CmaPage() {
                   )}
                   {q.sourceLayoutReview && (
                     <p className="mt-2 rounded-lg border border-amber-500/40 bg-amber-50 p-3 text-xs text-amber-900">
-                      {lang === "ar"
-                        ? "مراجعة مصدر مطلوبة: قد تحتاج بيانات السؤال أو تنسيقها أو إجابته إلى مطابقة الصفحة الأصلية. المقارنة بمفتاح الإجابة مبدئية وليست درجة معتمدة."
-                        : "Source review required: the question data, layout or answer may need comparison with the original page. The answer-key comparison is provisional and unscored."}
+                      {getCmaUnit14SourceReview(q.id)?.message[lang] ??
+                        (lang === "ar"
+                          ? "مراجعة مصدر مطلوبة: قد تحتاج بيانات السؤال أو تنسيقها أو إجابته إلى مطابقة الصفحة الأصلية. المقارنة بمفتاح الإجابة مبدئية وليست درجة معتمدة."
+                          : "Source review required: the question data, layout or answer may need comparison with the original page. The answer-key comparison is provisional and unscored.")}
                     </p>
                   )}
                   {q.id === "cma-gleim-2025-vol2-su14-s5-q010" && monteroPriorCase && (
