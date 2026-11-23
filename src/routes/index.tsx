@@ -23,7 +23,6 @@ import {
   Car,
   ChevronRight,
   BookOpen,
-  Download,
   Facebook,
   FileText,
   Ghost,
@@ -70,6 +69,7 @@ import mascotPhone from "@/assets/mascot-phone.webp";
 import mascotEmail from "@/assets/mascot-email.webp";
 import vatLogo from "@/assets/vat-logo.png.asset.json";
 import { RevealHeadline } from "@/components/home/RevealHeadline";
+import { CvDownloadLink } from "@/components/CvDownloadLink";
 import { EASE, useMotionSafe } from "@/lib/motion";
 
 import { t, type Lang } from "@/lib/i18n";
@@ -779,6 +779,14 @@ export function Navbar({ lang, onToggle }: { lang: Lang; onToggle: () => void })
                   </RouterLink>
                 </li>
               )}
+              <li className="border-b border-[#A88765]/10 py-3">
+                <CvDownloadLink
+                  lang={lang}
+                  onClick={() => setMobileOpen(false)}
+                  className="inline-flex w-full items-center gap-2 text-sm font-semibold text-[#e9d9c3]"
+                  iconClassName="size-4 text-[#A88765]"
+                />
+              </li>
               <li className="pt-3">
                 <RouterLink
                   to="/request-service"
@@ -1060,6 +1068,13 @@ function Hero({ lang }: { lang: Lang }) {
               <Briefcase className="size-4" />
               <span>{lang === "ar" ? "اطلب خدمة" : "Request a service"}</span>
             </RouterLink>
+            <CvDownloadLink
+              lang={lang}
+              onMouseEnter={playHover}
+              onClick={playClick}
+              className="inline-flex h-[54px] items-center gap-2 rounded-full border border-[#D8BD9C]/50 bg-[#D8BD9C]/10 px-6 text-[14px] font-semibold text-[#FCFBF9] transition-colors hover:border-[#D8BD9C] hover:bg-[#D8BD9C]/20"
+              iconClassName="size-4 text-[#D8BD9C]"
+            />
           </motion.div>
 
           <motion.div
@@ -2175,6 +2190,13 @@ export function Footer({ lang }: { lang: Lang }) {
                 {resourceLinks.map((link) => (
                   <li key={link.to}>{renderLink(link)}</li>
                 ))}
+                <li>
+                  <CvDownloadLink
+                    lang={lang}
+                    className="group inline-flex items-center gap-2 text-[13px] leading-6 text-white/55 transition-colors duration-300 hover:text-[#E1C5A4]"
+                    iconClassName="size-3.5 text-[#A88765]"
+                  />
+                </li>
               </ul>
 
               <div className="mt-6 border-t border-white/[0.07] pt-5">
