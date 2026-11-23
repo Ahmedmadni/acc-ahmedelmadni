@@ -2381,7 +2381,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Impairment results in a loss, which reduces retained earnings.\nIt has no effect on additional paid-in capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيّ المعاملات التالية تؤثر في الأرباح المحتجزة دون أن تؤثر في رأس المال الإضافي المدفوع؟",
+    "choicesAr": [
+      "الإعلان عن توزيع أرباح أسهم صغيرة.",
+      "انخفاض قيمة استثمار متاح للبيع.",
+      "اضمحلال أصل طويل الأجل.",
+      "شراء أسهم خزينة باستخدام طريقة التكلفة."
+    ],
+    "explanationAr": "ينتج عن الاضمحلال خسارة تُخفِّض الأرباح المحتجزة، ولا أثر له على رأس المال الإضافي المدفوع."
   },
   {
     "unit": 1,
@@ -2398,7 +2406,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Treasury stock recorded at cost is a reduction of total equity.\nTreasury stock recorded at par is a direct reduction of the\npertinent contributed capital balance, e.g., common stock or\npreferred stock.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيّ العبارات التالية بشأن أسهم الخزينة صحيحة؟",
+    "choicesAr": [
+      "هي أسهم غير مُلغاة لكنها لم تعد قائمة (متداولة)، ومع ذلك تتمتع بجميع حقوق الأسهم القائمة.",
+      "هي أصل يمثل أسهمًا يمكن بيعها مستقبلًا أو إصدارها ضمن خطط خيارات الأسهم أو لإتمام عمليات اندماج الأعمال.",
+      "لا يحق لها المشاركة في متحصلات تصفية المنشأة، لكن يحق لها المشاركة في توزيعات الأرباح النقدية الدورية وكذلك توزيعات أرباح الأسهم وتجزئة الأسهم.",
+      "تظهر ضمن حقوق المساهمين كحساب مقابل (مُخفِّض)."
+    ],
+    "explanationAr": "تُعد أسهم الخزينة المسجلة بالتكلفة تخفيضًا لإجمالي حقوق الملكية. أما أسهم الخزينة المسجلة بالقيمة الاسمية فتُعد تخفيضًا مباشرًا لرصيد رأس المال المساهَم به المعني، مثل الأسهم العادية أو الأسهم الممتازة."
   },
   {
     "unit": 1,
@@ -2415,7 +2431,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The preemptive right refers to each shareholder’s right to\nmaintain proportionate ownership in the corporation if\nadditional shares are offered for sale.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حق الأولوية (حق الشفعة) للمساهمين هو الحق في",
+    "choicesAr": [
+      "المشاركة بالتساوي في توزيعات الأرباح.",
+      "شراء الأسهم بنسبة الملكية عند طرح إصدارات جديدة للبيع.",
+      "المشاركة في توزيع الأصول عند تصفية الشركة.",
+      "المشاركة في إدارة الشركة."
+    ],
+    "explanationAr": "يشير حق الأولوية إلى حق كل مساهم في الحفاظ على نسبة ملكيته في الشركة إذا طُرحت أسهم إضافية للبيع."
   },
   {
     "unit": 1,
@@ -2432,7 +2456,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Rudd had 300,000 shares outstanding before declaring the\nstock dividend. When it purchased 100,000 shares and\nreissued 50,000 shares, 280,000 shares (300,000 + 30,000 –\n100,000 + 50,000) were left outstanding. Thus, the 2-for-\n1 stock split increased the shares outstanding to 560,000\n(280,000 × 2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة Rudd Corp. عدد 700,000 سهم عادي مُصرَّح به و300,000 سهم قائم في 31 ديسمبر من السنة 3. ووقعت الأحداث التالية خلال السنة 4:\n31 يناير: الإعلان عن توزيع أرباح أسهم بنسبة 10%\n30 يونيو: شراء 100,000 سهم\n1 أغسطس: إعادة إصدار 50,000 سهم\n30 نوفمبر: الإعلان عن تجزئة الأسهم بنسبة 2 مقابل 1\nفي 31 ديسمبر من السنة 4، كم كان عدد الأسهم العادية القائمة لدى Rudd؟",
+    "choicesAr": [
+      "560,000",
+      "600,000",
+      "630,000",
+      "660,000"
+    ],
+    "explanationAr": "كان لدى Rudd عدد 300,000 سهم قائم قبل الإعلان عن توزيع أرباح الأسهم. وعندما اشترت 100,000 سهم وأعادت إصدار 50,000 سهم، تبقى 280,000 سهم قائم (300,000 + 30,000 – 100,000 + 50,000). وبالتالي، رفعت تجزئة الأسهم بنسبة 2 مقابل 1 عدد الأسهم القائمة إلى 560,000 (280,000 × 2)."
   },
   {
     "unit": 1,
@@ -2449,7 +2481,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The common stock was issued for a total of $150,000 (10,000\nshares × $15). Of this amount, $10,000 (10,000 shares × $1\nstated value) should be allocated to the common stock, with\nthe remaining $140,000 ($150,000 – $10,000) credited to\nadditional paid-in capital. The preferred stock was issued for\n$75,000 (3,000 shares × $25), of which $30,000 (3,000 shares\n× $10 par value) should be allocated to the preferred stock\nand $45,000 ($75,000 – $30,000) should be allocated to\nadditional paid-in capital. In the statement of equity, Hyde\ntherefore should report $10,000 in the common stock account,\n$30,000 in the preferred stock account, and $185,000\n($140,000 + $45,000) as additional paid-in capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 فبراير، كانت لدى شركة Hyde Corp.، وهي شركة حديثة التأسيس، الأسهم المصدرة والقائمة التالية:\n• أسهم عادية بدون قيمة اسمية، بقيمة مُعلنة $1، عدد 10,000 سهم أُصدرت أصلًا بسعر $15 للسهم\n• أسهم ممتازة بقيمة اسمية $10، عدد 3,000 سهم أُصدرت أصلًا بسعر $25 للسهم\nيجب أن تُظهر قائمة حقوق الملكية لشركة Hyde في 1 فبراير ما يلي (بالترتيب: الأسهم العادية | الأسهم الممتازة | رأس المال الإضافي المدفوع):",
+    "choicesAr": [
+      "$150,000 | $30,000 | $45,000",
+      "$150,000 | $75,000 | $0",
+      "$10,000 | $75,000 | $140,000",
+      "$10,000 | $30,000 | $185,000"
+    ],
+    "explanationAr": "أُصدرت الأسهم العادية بإجمالي $150,000 (10,000 سهم × $15). ومن هذا المبلغ، يُخصص $10,000 (10,000 سهم × $1 قيمة مُعلنة) لحساب الأسهم العادية، ويُقيد الباقي البالغ $140,000 ($150,000 – $10,000) في رأس المال الإضافي المدفوع. وأُصدرت الأسهم الممتازة بمبلغ $75,000 (3,000 سهم × $25)، يُخصص منه $30,000 (3,000 سهم × $10 قيمة اسمية) لحساب الأسهم الممتازة، و$45,000 ($75,000 – $30,000) لرأس المال الإضافي المدفوع. لذلك يجب أن تُظهر Hyde في قائمة حقوق الملكية $10,000 في حساب الأسهم العادية، و$30,000 في حساب الأسهم الممتازة، و$185,000 ($140,000 + $45,000) كرأس مال إضافي مدفوع."
   },
   {
     "unit": 1,
@@ -2466,7 +2506,15 @@
     ],
     "answerIndex": 0,
     "explanation": "On the date of declaration, a cash dividend becomes a legal\nliability of the corporation (unlike stock dividends, cash\ndividends cannot be rescinded). Thus, on January 15, a\nportion of retained earnings was reclassified as dividends\npayable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 15 يناير من السنة 5، أعلنت شركة Rico Co. عن توزيع أرباحها النقدية السنوية على الأسهم العادية عن السنة المنتهية في 31 يناير من السنة 5. ودُفعت الأرباح في 9 فبراير من السنة 5 للمساهمين المسجلين في 28 يناير من السنة 5. في أي تاريخ يجب على Rico تخفيض الأرباح المحتجزة بمبلغ التوزيع؟",
+    "choicesAr": [
+      "15 يناير، السنة 5.",
+      "31 يناير، السنة 5.",
+      "28 يناير، السنة 5.",
+      "9 فبراير، السنة 5."
+    ],
+    "explanationAr": "في تاريخ الإعلان، تصبح توزيعات الأرباح النقدية التزامًا قانونيًا على الشركة (وبخلاف توزيعات أرباح الأسهم، لا يمكن إلغاء التوزيعات النقدية). وبالتالي، في 15 يناير أُعيد تصنيف جزء من الأرباح المحتجزة إلى توزيعات أرباح مستحقة الدفع."
   },
   {
     "unit": 1,
@@ -2483,7 +2531,15 @@
     ],
     "answerIndex": 1,
     "explanation": "When cash dividends are declared, a liability to the\nshareholders is created because the dividends must be paid\nonce they are declared. At the declaration date, retained\nearnings must be debited, resulting in a decrease in retained\nearnings. The effect is to decrease total equity (Assets –\nLiabilities) because liabilities are increased with no\ncorresponding increase in assets. At the balance sheet date,\nno entry is made, and there is no effect on equity. When the\ncash dividends are subsequently paid, dividends payable is\ndebited and cash is credited. Thus, at the payment date,\nequity is also not affected.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت منشأة عن توزيع أرباح نقدية على أسهمها العادية في 15 ديسمبر من السنة 1، تُدفع في 12 يناير من السنة 2. كيف يؤثر هذا التوزيع في حقوق الملكية في التواريخ التالية؟\n(بالترتيب: 15 ديسمبر | 31 ديسمبر | 12 يناير، من السنوات 1 و1 و2 على التوالي)",
+    "choicesAr": [
+      "نقص | لا أثر | نقص",
+      "نقص | لا أثر | لا أثر",
+      "لا أثر | نقص | لا أثر",
+      "لا أثر | لا أثر | نقص"
+    ],
+    "explanationAr": "عند الإعلان عن توزيعات الأرباح النقدية ينشأ التزام تجاه المساهمين لأن التوزيعات يجب دفعها بمجرد الإعلان عنها. وفي تاريخ الإعلان يجب جعل الأرباح المحتجزة مدينة، مما يؤدي إلى نقص الأرباح المحتجزة. والأثر هو نقص إجمالي حقوق الملكية (الأصول – الالتزامات) لأن الالتزامات تزيد دون زيادة مقابلة في الأصول. وفي تاريخ الميزانية لا يُسجل أي قيد، ولا يوجد أثر على حقوق الملكية. وعند دفع التوزيعات النقدية لاحقًا، يُجعل حساب توزيعات الأرباح مستحقة الدفع مدينًا والنقدية دائنة. وبالتالي لا تتأثر حقوق الملكية أيضًا في تاريخ الدفع."
   },
   {
     "unit": 1,
@@ -2500,7 +2556,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When a property dividend is declared, the property to be\ndistributed should be restated at fair value. Any gain or loss\nshould be recognized. The declared dividend is then recorded\nas a debit to retained earnings and a credit to property\ndividends payable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يجب تسجيل التوزيع العيني للأرباح (توزيع ممتلكات) في الأرباح المحتجزة بـ",
+    "choicesAr": [
+      "القيمة العادلة للممتلكات في تاريخ الإعلان.",
+      "القيمة العادلة للممتلكات في تاريخ الإصدار (الدفع).",
+      "القيمة الدفترية للممتلكات في تاريخ الإعلان.",
+      "القيمة الدفترية للممتلكات في تاريخ الإصدار."
+    ],
+    "explanationAr": "عند الإعلان عن توزيع عيني، يجب إعادة قياس الممتلكات المراد توزيعها بالقيمة العادلة، والاعتراف بأي مكسب أو خسارة. ثم يُسجل التوزيع المُعلن بجعل الأرباح المحتجزة مدينة وحساب التوزيعات العينية مستحقة الدفع دائنًا."
   },
   {
     "unit": 1,
@@ -2517,7 +2581,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When a property dividend is declared, the property to be\ndistributed should be restated from carrying amount to fair\nvalue, with the resultant gain or loss recognized. Thus,\nMarquis should report a gain of $50,000 [100,000 shares ×\n($2.50 – $2.00)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 27 يونيو من السنة 1، وزّعت شركة Marquis Co. على مساهميها العاديين 100,000 سهم عادي قائم من استثمارها في شركة Chen Co.، وهي طرف غير ذي علاقة. وكانت القيمة الدفترية لأسهم Chen العادية ذات القيمة الاسمية $1 هي $2 للسهم. وبعد التوزيع مباشرة، كان سعر السوق لسهم Chen هو $2.50. ما المبلغ الذي يجب أن تُظهره Marquis في قائمة الدخل للسنة المنتهية في 30 يونيو من السنة 1 كمكسب قبل ضريبة الدخل من التخلص من الأسهم؟",
+    "choicesAr": [
+      "$250,000",
+      "$200,000",
+      "$50,000",
+      "$0"
+    ],
+    "explanationAr": "عند الإعلان عن توزيع عيني، يجب إعادة قياس الممتلكات المراد توزيعها من القيمة الدفترية إلى القيمة العادلة، مع الاعتراف بالمكسب أو الخسارة الناتجة. وبالتالي يجب أن تُظهر Marquis مكسبًا قدره $50,000 [100,000 سهم × ($2.50 – $2.00)]."
   },
   {
     "unit": 1,
@@ -2534,7 +2606,15 @@
     ],
     "answerIndex": 0,
     "explanation": "On the date of declaration, the board of directors formally\napproves a dividend. A cash dividend becomes a legal liability\nto a corporation on the date of declaration. At this date, a\ncorporation must reclassify a portion of its retained earnings\nas a liability. The journal entry is to debit retained earnings\nand credit dividends payable for the amount of dividends\ndeclared.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توزّع شركة Aldrich Co. أرباحًا نقدية على مساهميها خلال السنة الحالية. ويُعلن عن التوزيعات في 9 مارس، وتُستحق للمساهمين المسجلين في تاريخ التسجيل وهو 15 أبريل، وتُدفع فعليًا في 19 مايو. في أي من التواريخ التالية تصبح التوزيعات التزامًا على Aldrich؟",
+    "choicesAr": [
+      "9 مارس.",
+      "15 أبريل.",
+      "19 مايو.",
+      "31 ديسمبر."
+    ],
+    "explanationAr": "في تاريخ الإعلان، يوافق مجلس الإدارة رسميًا على التوزيع. وتصبح توزيعات الأرباح النقدية التزامًا قانونيًا على الشركة في تاريخ الإعلان. وفي هذا التاريخ يجب على الشركة إعادة تصنيف جزء من أرباحها المحتجزة كالتزام. ويكون قيد اليومية بجعل الأرباح المحتجزة مدينة وتوزيعات الأرباح مستحقة الدفع دائنة بمبلغ التوزيعات المُعلنة."
   },
   {
     "unit": 1,
@@ -2551,7 +2631,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Declaration of a stock dividend is not accounted for as a\nliability but as a reclassification of equity. For a stock dividend\nthat is smaller than 20 to 25% of the shares outstanding, the\nentry is to debit retained earnings for the fair value of the stock\n(10,000 shares × $5 fair value × 5% = $2,500), credit stock\ndividend distributable at par (10,000 shares × $2 × 5% =\n$1,000), and credit additional paid-in capital for the excess of\nfair over par value ($2,500 – $1,000 = $1,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت شركة Ray Corp. عن توزيع أرباح أسهم بنسبة 5% على أسهمها العادية المصدرة والقائمة البالغة 10,000 سهم بقيمة اسمية $2، وكانت القيمة العادلة للسهم $5 قبل الإعلان عن التوزيع. ووُزعت أرباح الأسهم بعد 60 يومًا من تاريخ الإعلان. بأي مبلغ زادت الالتزامات المتداولة لشركة Ray نتيجة الإعلان عن توزيع أرباح الأسهم؟",
+    "choicesAr": [
+      "$0",
+      "$500",
+      "$1,000",
+      "$2,500"
+    ],
+    "explanationAr": "لا يُحاسب عن الإعلان عن توزيع أرباح الأسهم كالتزام، بل كإعادة تصنيف داخل حقوق الملكية. وبالنسبة لتوزيع أرباح أسهم يقل عن 20 إلى 25% من الأسهم القائمة، يكون القيد بجعل الأرباح المحتجزة مدينة بالقيمة العادلة للأسهم (10,000 سهم × $5 قيمة عادلة × 5% = $2,500)، وجعل حساب أرباح الأسهم القابلة للتوزيع دائنًا بالقيمة الاسمية (10,000 سهم × $2 × 5% = $1,000)، وجعل رأس المال الإضافي المدفوع دائنًا بزيادة القيمة العادلة عن القيمة الاسمية ($2,500 – $1,000 = $1,500)."
   },
   {
     "unit": 1,
@@ -2568,7 +2656,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A 2-for-1 stock split is a nonreciprocal transfer of an entity’s\nown shares to its common shareholders for the purpose of\nreducing the unit market price of the shares. The goal is to\nincrease their marketability and broaden their distribution. The\ntransaction described will increase the number of shares\noutstanding to 100,000 (50,000 shares × 2). The par value will\nbe reduced to $10 ($20 ÷ 2), but the capital accounts will be\nunaffected. To effect a stock split, no formal entry is necessary\nbecause no capitalization of retained earnings occurs. Thus,\nadditional paid-in capital ($150,000) and retained earnings\n($1,350,000) will not change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اعتبارًا من 27 أبريل، وافق مساهمو شركة Dorr Corp. على تجزئة أسهمها العادية بنسبة 2 مقابل 1، وزيادة الأسهم العادية المُصرَّح بها من 100,000 سهم (قيمة اسمية $20 للسهم) إلى 200,000 سهم (قيمة اسمية $10 للسهم). وكانت حسابات حقوق الملكية لدى Dorr قبل إصدار أسهم التجزئة مباشرة كما يلي:\nأسهم عادية، قيمة اسمية $20؛ 100,000 سهم مُصرَّح به؛ 50,000 سهم قائم: $1,000,000\nرأس المال الإضافي المدفوع ($3 للسهم عند إصدار الأسهم العادية): 150,000\nالأرباح المحتجزة: 1,350,000\nأُصدرت أسهم التجزئة في 30 يونيو. في قائمة حقوق الملكية لشركة Dorr في 30 يونيو، يكون رصيدا رأس المال الإضافي المدفوع والأرباح المحتجزة (بالترتيب: رأس المال الإضافي المدفوع | الأرباح المحتجزة):",
+    "choicesAr": [
+      "$0 | $500,000",
+      "$150,000 | $350,000",
+      "$150,000 | $1,350,000",
+      "$1,150,000 | $350,000"
+    ],
+    "explanationAr": "تجزئة الأسهم بنسبة 2 مقابل 1 هي تحويل غير تبادلي لأسهم المنشأة نفسها إلى مساهميها العاديين بغرض تخفيض سعر السوق للسهم الواحد، والهدف زيادة قابليتها للتداول وتوسيع نطاق توزيعها. وستزيد المعاملة الموصوفة عدد الأسهم القائمة إلى 100,000 (50,000 سهم × 2). وستنخفض القيمة الاسمية إلى $10 ($20 ÷ 2)، لكن حسابات رأس المال لن تتأثر. ولا يلزم قيد رسمي لتنفيذ تجزئة الأسهم لأنه لا تتم رسملة للأرباح المحتجزة. وبالتالي لن يتغير رأس المال الإضافي المدفوع ($150,000) ولا الأرباح المحتجزة ($1,350,000)."
   },
   {
     "unit": 1,
@@ -2585,7 +2681,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The purpose of a stock dividend is to provide evidence to the\nshareholders of their interest in accumulated earnings without\ndistribution of cash or other property.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بخلاف تجزئة الأسهم، يتطلب توزيع أرباح الأسهم قيد يومية رسميًا في السجلات المحاسبية المالية لأن",
+    "choicesAr": [
+      "توزيعات أرباح الأسهم تزيد القيمة الدفترية النسبية لما يملكه الفرد من أسهم.",
+      "تجزئة الأسهم تزيد القيمة الدفترية النسبية لما يملكه الفرد من أسهم.",
+      "توزيعات أرباح الأسهم مستحقة الدفع في تاريخ الإعلان عنها.",
+      "توزيعات أرباح الأسهم تمثل تحويلًا من الأرباح المحتجزة إلى رأس مال الأسهم."
+    ],
+    "explanationAr": "الغرض من توزيع أرباح الأسهم هو تقديم دليل للمساهمين على حصتهم في الأرباح المتراكمة دون توزيع نقدية أو ممتلكات أخرى."
   },
   {
     "unit": 1,
@@ -2602,7 +2706,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Stock dividends and stock splits are distributions of stock to\ncurrent shareholders. The amount of stock outstanding at\nJanuary 1 is 50,000. The 5% stock dividend provides an\nadditional 2,500 shares (50,000 shares × 5%), increasing the\namount of outstanding shares to 52,500. The two-for-one\nstock split doubles the amount of shares outstanding, resulting\nin a total of 105,000 outstanding shares (52,500 × 2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة Jones Co. عدد 50,000 سهم عادي قائم بقيمة اسمية $5 في 1 يناير. وفي 1 أغسطس أعلنت Jones عن توزيع أرباح أسهم بنسبة 5%، تلتها تجزئة أسهم بنسبة سهمين مقابل سهم في 1 سبتمبر. ما عدد الأسهم العادية القائمة الذي يجب أن تُظهره Jones في 31 ديسمبر؟",
+    "choicesAr": [
+      "105,000",
+      "100,000",
+      "52,500",
+      "50,000"
+    ],
+    "explanationAr": "توزيعات أرباح الأسهم وتجزئة الأسهم هي توزيعات أسهم على المساهمين الحاليين. وكان عدد الأسهم القائمة في 1 يناير هو 50,000. ويضيف توزيع أرباح الأسهم بنسبة 5% عدد 2,500 سهم (50,000 سهم × 5%)، فيرتفع عدد الأسهم القائمة إلى 52,500. وتضاعف تجزئة الأسهم بنسبة سهمين مقابل سهم عدد الأسهم القائمة، ليصبح الإجمالي 105,000 سهم قائم (52,500 × 2)."
   },
   {
     "unit": 1,
@@ -2619,7 +2731,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Because the corporation issues shares for less than 20% to\n25% of the previously outstanding common shares, the stock\nissuance should be recognized as a stock dividend. To\naccount for a stock dividend, the fair value of the additional\nshares issued is reclassified from retained earnings to capital\nstock (par value) and the difference to additional paid-in\ncapital. The corporation issued 1,500 shares (15,000 × 10%)\nat a total fair value of $15,000 (1,500 × $10 per share). Thus,\nretained earnings is debited for $15,000, common stock is\ncredited for the par value of the stock issued of $7,500 (1,500\n× $5 par value per share), and additional paid-in capital is\ncredited for the excess of the fair value over the par value of\nthe stock issued of $7,500 ($15,000 – $7,500).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعلنت شركة عن توزيع أرباح أسهم بنسبة 10% على 15,000 سهم عادي قائم بقيمة اسمية $5 عندما كانت القيمة العادلة $10 للسهم. أيّ تغيير في حسابات حقوق المساهمين للشركة صحيح؟",
+    "choicesAr": [
+      "تنخفض الأرباح المحتجزة بمبلغ $15,000.",
+      "يزيد رأس المال الإضافي المدفوع بمبلغ $15,000.",
+      "تنخفض الأسهم العادية بمبلغ $7,500.",
+      "تزيد الأسهم العادية بمبلغ $15,000."
+    ],
+    "explanationAr": "لأن الشركة تُصدر أسهمًا تقل عن 20% إلى 25% من الأسهم العادية القائمة سابقًا، يجب الاعتراف بالإصدار كتوزيع أرباح أسهم. وللمحاسبة عن توزيع أرباح الأسهم، تُعاد تصنيف القيمة العادلة للأسهم الإضافية المصدرة من الأرباح المحتجزة إلى رأس مال الأسهم (بالقيمة الاسمية) والفرق إلى رأس المال الإضافي المدفوع. وقد أصدرت الشركة 1,500 سهم (15,000 × 10%) بقيمة عادلة إجمالية $15,000 (1,500 × $10 للسهم). وبالتالي تُجعل الأرباح المحتجزة مدينة بمبلغ $15,000، والأسهم العادية دائنة بالقيمة الاسمية للأسهم المصدرة البالغة $7,500 (1,500 × $5 قيمة اسمية للسهم)، ورأس المال الإضافي المدفوع دائنًا بزيادة القيمة العادلة عن القيمة الاسمية للأسهم المصدرة البالغة $7,500 ($15,000 – $7,500)."
   },
   {
     "unit": 1,
@@ -2636,7 +2756,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Adjustments, debits, or credits resulting from transactions in\nthe entity’s own stock are always excluded from earnings or\nthe results of operations. Hence, an excess of the proceeds\nover the carrying amount of treasury stock must be credited to\nadditional paid-in capital. An excess of the carrying amount\nover the proceeds of treasury stock may be debited to either\nretained earnings or additional paid-in capital, depending on\nthe circumstances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "المبلغ الذي يمثل الفرق بين القيمة الدفترية والمتحصلات من شراء أسهم الخزينة وإعادة بيعها لا يمكن أن يظهر إلا في",
+    "choicesAr": [
+      "حسابات رأس المال المدفوع.",
+      "حسابات الدخل ورأس المال المدفوع والأرباح المحتجزة.",
+      "حسابات الأرباح المحتجزة ورأس المال المدفوع.",
+      "حسابات الدخل والأرباح المحتجزة."
+    ],
+    "explanationAr": "تُستبعد دائمًا التسويات أو المبالغ المدينة أو الدائنة الناتجة عن معاملات المنشأة في أسهمها الخاصة من الأرباح أو نتائج العمليات. ومن ثم يجب جعل زيادة المتحصلات عن القيمة الدفترية لأسهم الخزينة دائنة في رأس المال الإضافي المدفوع. أما زيادة القيمة الدفترية لأسهم الخزينة عن المتحصلات فيمكن جعلها مدينة إما في الأرباح المحتجزة أو في رأس المال الإضافي المدفوع، بحسب الظروف."
   },
   {
     "unit": 1,
@@ -2653,7 +2781,15 @@
     ],
     "answerIndex": 2,
     "explanation": "When treasury stock is acquired, the effect will be to decrease\nthe number of shares of common stock outstanding whether\nthe treasury stock is accounted for by the cost method or the\npar-value method.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يؤدي اقتناء أسهم الخزينة إلى انخفاض عدد الأسهم القائمة إذا تمت المحاسبة عن أسهم الخزينة باستخدام\n(بالترتيب: طريقة التكلفة | طريقة القيمة الاسمية)",
+    "choicesAr": [
+      "نعم | لا",
+      "لا | لا",
+      "نعم | نعم",
+      "لا | نعم"
+    ],
+    "explanationAr": "عند اقتناء أسهم الخزينة، يكون الأثر انخفاض عدد الأسهم العادية القائمة سواء تمت المحاسبة عن أسهم الخزينة بطريقة التكلفة أو بطريقة القيمة الاسمية."
   },
   {
     "unit": 1,
@@ -2670,7 +2806,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Under the par-value method, when treasury shares are\npurchased for a price greater than the par value, retained\nearnings is debited for the excess of the purchase price over\nthe par value if there is no existing paid-in capital from past\ntreasury stock transactions or if the existing credit balance is\ninsufficient to absorb the excess. Under the cost method, if the\nsubsequent resale price of the treasury shares is less than the\noriginal acquisition price, it may be necessary to charge\nretained earnings for a portion or all of the excess of the\noriginal purchase price over the sales price.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد ينتج عن معاملات أسهم الخزينة",
+    "choicesAr": [
+      "زيادة في رصيد الأرباح المحتجزة.",
+      "زيادة أو نقص في مبلغ صافي الدخل.",
+      "نقص في رصيد الأرباح المحتجزة.",
+      "زيادة أو نقص في عدد الأسهم المُصرَّح بإصدارها."
+    ],
+    "explanationAr": "وفق طريقة القيمة الاسمية، عند شراء أسهم الخزينة بسعر يزيد عن القيمة الاسمية، تُجعل الأرباح المحتجزة مدينة بزيادة سعر الشراء عن القيمة الاسمية إذا لم يوجد رأس مال مدفوع من معاملات أسهم خزينة سابقة، أو إذا كان الرصيد الدائن القائم غير كافٍ لاستيعاب الزيادة. ووفق طريقة التكلفة، إذا كان سعر إعادة البيع اللاحق لأسهم الخزينة أقل من سعر الاقتناء الأصلي، فقد يلزم تحميل الأرباح المحتجزة بجزء من زيادة سعر الشراء الأصلي عن سعر البيع أو بكامله."
   },
   {
     "unit": 1,
@@ -2687,7 +2831,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The par value method treats the acquisition of treasury stock\nas a constructive retirement and its resale as a new issuance\nof stock. Thus, the acquisition of treasury stock will be\nreflected as a decrease in total equity. The reissuance will be\naccounted for as an increase in total equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اقتُنيت أسهم خزينة نقدًا بسعر يزيد عن سعر إصدارها الأصلي، ثم أُعيد إصدارها لاحقًا نقدًا بسعر يزيد عن سعر اقتنائها. بافتراض استخدام طريقة القيمة الاسمية في المحاسبة عن معاملات أسهم الخزينة، ما أثر كل من الحدثين التاليين على إجمالي حقوق الملكية؟\n(بالترتيب: اقتناء أسهم الخزينة | إعادة إصدار أسهم الخزينة)",
+    "choicesAr": [
+      "نقص | لا أثر",
+      "نقص | زيادة",
+      "زيادة | نقص",
+      "لا أثر | لا أثر"
+    ],
+    "explanationAr": "تعامل طريقة القيمة الاسمية اقتناء أسهم الخزينة كإلغاء حكمي للأسهم، وإعادة بيعها كإصدار جديد للأسهم. وبالتالي يظهر اقتناء أسهم الخزينة كنقص في إجمالي حقوق الملكية، وتُحاسب إعادة الإصدار كزيادة في إجمالي حقوق الملكية."
   },
   {
     "unit": 1,
@@ -2704,7 +2856,15 @@
     ],
     "answerIndex": 2,
     "explanation": "At June 1, the entity had 117,500 shares of common stock\noutstanding (100,000 beginning of year + 15,000 March 1\nissue + 2,500 June 1 treasury stock sale). On September 1,\nthe entity completed a 2-for-1 common stock split, which\ndoubles the number of shares outstanding to 235,000 shares\n(117,500 shares × 2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "صرّحت منشأة بإصدار 500,000 سهم عادي. وفي 1 يناير من السنة 2، كان لدى المنشأة 110,000 سهم عادي مُصدر و100,000 سهم عادي قائم. وأجرت المنشأة المعاملات التالية في السنة 2:\n1 مارس: إصدار 15,000 سهم عادي\n1 يونيو: إعادة بيع 2,500 سهم من أسهم الخزينة\n1 سبتمبر: إتمام تجزئة الأسهم العادية بنسبة 2 مقابل 1\nما إجمالي عدد الأسهم العادية القائمة لدى المنشأة في نهاية السنة 2؟",
+    "choicesAr": [
+      "117,500",
+      "230,000",
+      "235,000",
+      "250,000"
+    ],
+    "explanationAr": "في 1 يونيو، كان لدى المنشأة 117,500 سهم عادي قائم (100,000 في بداية السنة + 15,000 إصدار 1 مارس + 2,500 بيع أسهم خزينة في 1 يونيو). وفي 1 سبتمبر أتمت المنشأة تجزئة الأسهم العادية بنسبة 2 مقابل 1، مما يضاعف عدد الأسهم القائمة إلى 235,000 سهم (117,500 سهم × 2)."
   },
   {
     "unit": 1,
@@ -2721,7 +2881,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Under the cost method, the acquisition of treasury stock is\nrecorded to treasury stock and cash equal to the amount of\nthe purchase price. This transaction results in a decrease in\nboth total assets and total equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان لدى شركة McGlinchy Company عدد 100,000 سهم عادي قائم بقيمة اسمية $4 في 12 يونيو من السنة الحالية. وفي هذا التاريخ، اقتنت McGlinchy عدد 1,000 سهم من أسهمها كأسهم خزينة بتكلفة $12 للسهم، وتمت المحاسبة عن الاقتناء بطريقة التكلفة. نتيجة لشراء أسهم الخزينة هذا،",
+    "choicesAr": [
+      "انخفض إجمالي الأصول وإجمالي حقوق الملكية.",
+      "لم يتأثر إجمالي الأصول ولا إجمالي حقوق الملكية.",
+      "انخفض إجمالي الأصول والأرباح المحتجزة وإجمالي حقوق الملكية.",
+      "لم يتأثر إجمالي الأصول، لكن الأرباح المحتجزة انخفضت."
+    ],
+    "explanationAr": "وفق طريقة التكلفة، يُسجل اقتناء أسهم الخزينة في حسابي أسهم الخزينة والنقدية بمبلغ مساوٍ لسعر الشراء. وينتج عن هذه المعاملة انخفاض كل من إجمالي الأصول وإجمالي حقوق الملكية."
   },
   {
     "unit": 1,
@@ -2738,7 +2906,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The common stock was issued for a total of $500,000 (10,000\nshares × $50). Of this amount, $300,000 (10,000 shares ×\n$30) should be classified as common stock and the remaining\n$200,000 should be allocated to additional paid-in capital.\nLLA’s total net income of $300,000 ($100,000 + $200,000)\nfrom Year 1 and 2 would increase its retained earnings\naccount, while dividends of $250,000 (10,000 shares × $25)\npaid during Year 2 would decrease the account. As a result,\nthe balance of the retained earnings account at the end of\nYear 2 should be $50,000 ($300,000 – $250,000). In addition,\nbecause shareholders’ equity includes the amount of common\nstock, additional paid-in capital, and retained earnings\naccounts, the amount of shareholders’ equity at the end of\nYear 2 is $550,000 ($300,000 + $200,000 + $50,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في 1 يناير من السنة 1، تأسس رأس مال شركة LLA, Inc. من خلال إصدار 10,000 سهم عادي بقيمة اسمية $30 بيعت بسعر $50 للسهم. وكان صافي دخل LLA كما يلي:\nالسنة 1: $100,000\nالسنة 2: 200,000\nإذا دفعت LLA خلال السنة 2 توزيعات أرباح لمساهميها بمبلغ $25 للسهم، فما رصيد الأرباح المحتجزة ورصيد حقوق المساهمين لدى LLA في نهاية السنة 2؟\n(بالترتيب: الأرباح المحتجزة | حقوق المساهمين)",
+    "choicesAr": [
+      "$50,000 | $550,000",
+      "$50,000 | $800,000",
+      "$300,000 | $550,000",
+      "$300,000 | $800,000"
+    ],
+    "explanationAr": "أُصدرت الأسهم العادية بإجمالي $500,000 (10,000 سهم × $50). ومن هذا المبلغ، يُصنف $300,000 (10,000 سهم × $30) كأسهم عادية، ويُخصص الباقي البالغ $200,000 لرأس المال الإضافي المدفوع. ويزيد إجمالي صافي دخل LLA البالغ $300,000 ($100,000 + $200,000) عن السنتين 1 و2 حساب الأرباح المحتجزة، بينما تُخفض توزيعات الأرباح البالغة $250,000 (10,000 سهم × $25) المدفوعة خلال السنة 2 هذا الحساب. ونتيجة لذلك يجب أن يكون رصيد حساب الأرباح المحتجزة في نهاية السنة 2 هو $50,000 ($300,000 – $250,000). وإضافة إلى ذلك، ولأن حقوق المساهمين تشمل حسابات الأسهم العادية ورأس المال الإضافي المدفوع والأرباح المحتجزة، فإن مبلغ حقوق المساهمين في نهاية السنة 2 هو $550,000 ($300,000 + $200,000 + $50,000)."
   },
   {
     "unit": 1,
@@ -2755,7 +2931,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The beginning total equity is $200,000 ($600,000 beginning\nassets – $400,000 beginning liabilities). The retained earnings\nportion of equity is increased by net income recognized for the\ncurrent year. The net income is $160,000 ($250,000 sales –\n$90,000 expenses). In accounting for a stock dividend, the fair\nvalue of the additional shares issued is reclassified from\nretained earnings to capital stock (at par value) and the\ndifference to additional paid-in capital. Therefore, total equity\ndoes not change as the result of a stock dividend. Thus, the\nyear-end balance of total equity is $360,000 ($200,000\nbeginning balance of equity + $160,000 increase in retained\nearnings in the current year).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة تستخدم أساس الاستحقاق في المحاسبة سنتها المالية بأصول قدرها $600,000 والتزامات قدرها $400,000. وخلال السنة المالية، سجلت الشركة مبيعات آجلة بمبلغ $250,000 بقي منها $8,000 دون تحصيل في نهاية السنة، وتكبدت مصروفات بمبلغ $90,000 دُفع منها $72,000 نقدًا. وأُعلن عن توزيع أرباح أسهم بقيمة $10,000 وأُصدر للمساهمين خلال السنة. ما رصيد إجمالي حقوق الملكية في نهاية السنة؟",
+    "choicesAr": [
+      "$350,000",
+      "$360,000",
+      "$370,000",
+      "$380,000"
+    ],
+    "explanationAr": "إجمالي حقوق الملكية في بداية السنة هو $200,000 ($600,000 أصول أول المدة – $400,000 التزامات أول المدة). ويزيد جزء الأرباح المحتجزة من حقوق الملكية بصافي الدخل المعترف به عن السنة الحالية. وصافي الدخل هو $160,000 ($250,000 مبيعات – $90,000 مصروفات). وعند المحاسبة عن توزيع أرباح الأسهم، تُعاد تصنيف القيمة العادلة للأسهم الإضافية المصدرة من الأرباح المحتجزة إلى رأس مال الأسهم (بالقيمة الاسمية) والفرق إلى رأس المال الإضافي المدفوع. لذلك لا يتغير إجمالي حقوق الملكية نتيجة توزيع أرباح الأسهم. وبالتالي يكون رصيد إجمالي حقوق الملكية في نهاية السنة $360,000 ($200,000 رصيد حقوق الملكية أول المدة + $160,000 زيادة الأرباح المحتجزة في السنة الحالية)."
   },
   {
     "unit": 1,
