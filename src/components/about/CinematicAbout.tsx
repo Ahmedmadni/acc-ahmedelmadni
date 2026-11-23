@@ -5,7 +5,6 @@ import {
   BadgeCheck,
   ArrowLeft,
   ArrowRight,
-  Download,
   MapPin,
   Briefcase,
   Award,
@@ -16,6 +15,7 @@ import type { Lang } from "@/lib/i18n";
 import { t } from "@/lib/i18n";
 import { useMotionSafe } from "@/lib/motion";
 import profileImg from "@/assets/profile.webp";
+import { CvDownloadLink } from "@/components/CvDownloadLink";
 
 /**
  * Awwwards-style cinematic hero for the About page.
@@ -179,15 +179,12 @@ export default function CinematicAbout({ lang }: { lang: Lang }) {
                     {lang === "ar" ? "تواصل معي" : "Get in touch"}
                     <Arrow className="size-3.5" />
                   </Link>
-                  <a
-                    href="/mycv.pdf"
-                    download
+                  <CvDownloadLink
+                    lang={lang}
                     className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 bg-white/[0.03] px-6 py-3 text-xs font-bold transition-all hover:bg-[#A88765]/10"
                     style={{ color: "var(--fg)" }}
-                  >
-                    <Download className="size-4 text-[#A88765]" />
-                    {t.nav.cv[lang]}
-                  </a>
+                    iconClassName="size-4 text-[#A88765]"
+                  />
                 </motion.div>
 
                 <div

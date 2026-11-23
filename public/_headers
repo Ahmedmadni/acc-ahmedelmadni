@@ -1,0 +1,5 @@
+# Cloudflare Pages / Workers Static Assets: force a save rather than a PDF tab.
+/mycv.pdf
+  Content-Type: application/pdf
+  Content-Disposition: attachment; filename="Ahmed-Elmadani-CV.pdf"
+  X-Content-Type-Options: nosniff
