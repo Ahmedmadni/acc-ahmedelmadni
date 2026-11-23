@@ -2025,7 +2025,7 @@ export function Footer({ lang }: { lang: Lang }) {
       label: isAr ? "الأدوات المحاسبية" : "Accounting Tools",
     },
     {
-      to: "/articles",
+      to: "/library/articles",
       label: isAr ? "المقالات والموارد" : "Articles & Resources",
     },
     {
