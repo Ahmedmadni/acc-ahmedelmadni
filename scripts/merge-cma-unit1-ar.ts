@@ -8,13 +8,24 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { validateCmaTranslation } from "../src/lib/cma-translation.shared.ts";
 
 const TARGET = new URL("../src/data/cma-gleim-2025-vol1-unit-1.json", import.meta.url);
-const rows = JSON.parse(readFileSync(TARGET, "utf8"));
+type CmaSourceRow = {
+  section: number;
+  number: number;
+  stem: string;
+  choices: string[];
+  explanation: string;
+  stemAr?: string;
+  choicesAr?: string[];
+  explanationAr?: string;
+};
+type ArabicTranslation = { stemAr: string; choicesAr: string[]; explanationAr: string };
+const rows = JSON.parse(readFileSync(TARGET, "utf8")) as CmaSourceRow[];
 let failed = 0, merged = 0;
 for (const file of process.argv.slice(2)) {
-  const batch = JSON.parse(readFileSync(file, "utf8"));
-  for (const [id, t] of Object.entries<any>(batch)) {
+  const batch = JSON.parse(readFileSync(file, "utf8")) as Record<string, ArabicTranslation>;
+  for (const [id, t] of Object.entries(batch)) {
     const [section, number] = id.split(".").map(Number);
-    const q = rows.find((r: any) => r.section === section && r.number === number);
+    const q = rows.find((r) => r.section === section && r.number === number);
     if (!q) { console.error("missing", id); failed++; continue; }
     const check = validateCmaTranslation(
       { question: { en: q.stem }, choices: { en: q.choices }, explanation: { en: q.explanation } },
@@ -35,5 +46,5 @@ for (const file of process.argv.slice(2)) {
 }
 if (failed) { console.error(`${failed} failed; nothing written`); process.exit(1); }
 writeFileSync(TARGET, JSON.stringify(rows, null, 2) + "\n");
-const done = rows.filter((r: any) => r.stemAr && r.choicesAr && r.explanationAr).length;
+const done = rows.filter((r) => r.stemAr && r.choicesAr && r.explanationAr).length;
 console.log(`merged ${merged}; Unit 1 translated ${done}/${rows.length}`);

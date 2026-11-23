@@ -17,8 +17,8 @@ test("published CV is a real, nonempty PDF asset", () => {
 
 test("all portfolio CV entry points use the same native download component", () => {
   const component = source("src/components/CvDownloadLink.tsx");
-  assert.match(component, /href="\/mycv\.pdf"/);
-  assert.match(component, /download="Ahmed-Elmadani-CV\.pdf"/);
+  assert.ok(component.includes('const CV_URL = "/mycv.pdf"'));
+  assert.ok(component.includes('const CV_FILENAME = "Ahmed-Elmadani-CV.pdf"'));
   assert.match(component, /t\.nav\.cv\[lang\]/);
   for (const path of [
     "src/routes/index.tsx",
@@ -35,4 +35,16 @@ test("static hosts are instructed to serve CV as an attachment", () => {
     headers,
     /Content-Disposition: attachment; filename="Ahmed-Elmadani-CV\.pdf"/,
   );
+});
+
+test("CV action downloads the verified PDF as a file, not an inline viewer", () => {
+  const component = source("src/components/CvDownloadLink.tsx");
+  assert.ok(component.includes('fetch(CV_URL, { credentials: "same-origin", cache: "no-store" })'));
+  assert.ok(component.includes('pdf.slice(0, 5).text()'));
+  assert.ok(component.includes('"%PDF-"'));
+  assert.ok(component.includes('URL.createObjectURL'));
+  assert.ok(component.includes('link.download = CV_FILENAME'));
+  assert.ok(component.includes('link.click()'));
+  assert.ok(component.includes('event.preventDefault()'));
+  assert.ok(component.includes('toast.error'));
 });
