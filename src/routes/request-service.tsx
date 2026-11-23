@@ -7,7 +7,6 @@ import {
   Briefcase,
   Building2,
   CheckCircle,
-  CheckCircle2,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -112,7 +111,8 @@ export function RequestService({
   const [businessActivity, setBusinessActivity] = useState("");
   const [urgency, setUrgency] = useState("");
   const [details, setDetails] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [handoffReady, setHandoffReady] = useState(false);
+  const [whatsappUrl, setWhatsappUrl] = useState("");
 
   // Dynamic, service-specific answers (see request-form-schema.ts). Keyed by
   // field id so switching between two services that share a field id (e.g.
@@ -168,12 +168,11 @@ export function RequestService({
     const text = sections.map((section) => section.join("\n")).join("\n\n");
     const url = `https://wa.me/966560409811?text=${encodeURIComponent(text)}`;
 
-    // GA4 lead event — mark as a "key event" (conversion) in GA4, then import it into
-    // Google Ads (Ads account → Conversions → import from Google Analytics) to measure
-    // ad campaigns against real leads, not just clicks.
+    // An attempted handoff is not a confirmed message or lead.
+    // The final Send action happens inside WhatsApp, beyond this website.
     (window as typeof window & { gtag?: (...args: unknown[]) => void }).gtag?.(
       "event",
-      "generate_lead",
+      "begin_whatsapp_request",
       {
         service_id: selectedService,
         service_name: svc ? svc.titleEn : undefined,
@@ -181,12 +180,18 @@ export function RequestService({
       },
     );
 
-    window.open(url, "_blank", "noopener,noreferrer");
-    setSubmitted(true);
+    setWhatsappUrl(url);
+    setHandoffReady(true);
+    try {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } catch (error) {
+      // The visitor can use the explicit WhatsApp link on the handoff screen.
+      console.warn("WhatsApp auto-open was blocked", error);
+    }
   };
 
   const trustBadges = [
-    { icon: <Shield className="w-3.5 h-3.5" />, ar: "بيانات آمنة", en: "Secure Data" },
+    { icon: <Shield className="w-3.5 h-3.5" />, ar: "إرسال عبر واتساب", en: "WhatsApp handoff" },
     { icon: <Clock className="w-3.5 h-3.5" />, ar: "رد خلال 24 ساعة", en: "24h Response" },
     { icon: <CheckCircle className="w-3.5 h-3.5" />, ar: "متوافق مع ZATCA", en: "ZATCA Compliant" },
     { icon: <Star className="w-3.5 h-3.5" />, ar: "خبرة +5 سنوات", en: "5+ Years Exp." },
@@ -311,31 +316,40 @@ export function RequestService({
           </div>
         </motion.div>
 
-        {submitted ? (
+        {handoffReady ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="dark-motif mt-10 rounded-3xl border border-[#A88765]/20 bg-[#1C1B19] p-10 text-center"
           >
             <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-300">
-              <CheckCircle2 className="size-8" />
+              <MessageCircle className="size-8" />
             </div>
             <h2 className="font-display text-2xl font-extrabold" style={{ color: "var(--fg)" }}>
-              {lang === "ar" ? "تم إرسال طلبك" : "Request sent"}
+              {lang === "ar" ? "طلبك جاهز للإرسال" : "Your message is ready to send"}
             </h2>
             <p className="mt-2 text-sm" style={{ color: "var(--fg-soft)" }}>
               {lang === "ar"
-                ? "تم فتح واتساب لإكمال الإرسال. سأتواصل معك في أقرب وقت."
-                : "WhatsApp opened to complete delivery. I'll be in touch shortly."}
+                ? "راجع الرسالة في واتساب واضغط إرسال بنفسك. إذا لم يفتح واتساب تلقائيًا، استخدم الزر أدناه."
+                : "Review the message in WhatsApp and press Send yourself. If WhatsApp didn't open automatically, use the button below."}
             </p>
-            <div className="mt-6 flex justify-center gap-3">
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#c2a079] to-[#7c6045] px-5 py-2.5 text-xs font-bold text-[#1C1B19]"
+              >
+                <MessageCircle className="size-4" />
+                {lang === "ar" ? "فتح واتساب لإكمال الإرسال" : "Open WhatsApp to send"}
+              </a>
               <button
                 type="button"
-                onClick={() => setSubmitted(false)}
+                onClick={() => setHandoffReady(false)}
                 className="inline-flex items-center gap-2 rounded-full border border-[#A88765]/40 px-5 py-2.5 text-xs font-bold"
                 style={{ color: "var(--fg)" }}
               >
-                {lang === "ar" ? "طلب جديد" : "New request"}
+                {lang === "ar" ? "تعديل الطلب" : "Edit request"}
               </button>
               <Link
                 to="/"
@@ -571,8 +585,8 @@ export function RequestService({
               >
                 <Shield className="w-3 h-3 text-[#A88765]/60" />
                 {lang === "ar"
-                  ? "بياناتك محمية ولن تُشارك مع أي طرف ثالث"
-                  : "Your data is protected and will not be shared"}
+                  ? "عند المتابعة ستظهر بيانات الطلب في واتساب، ولن يتم إرسالها حتى تضغط إرسال هناك"
+                  : "Your request details open in WhatsApp and are not sent until you press Send there"}
               </p>
               <button
                 type="submit"
