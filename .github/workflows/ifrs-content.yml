@@ -64,6 +64,8 @@ jobs:
         run: node scripts/audit-cma-part2-intake.mjs --self-test
       - name: Public CV download contract
         run: npm run cv:check
+      - name: Portfolio operations and navigation contracts
+        run: npm run portfolio:check
       - name: Production build (also regenerates TanStack routes)
         run: npm run build
       - name: TypeScript type checking

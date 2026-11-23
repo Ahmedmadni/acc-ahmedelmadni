@@ -21,6 +21,7 @@ import { CalculatorById } from "@/components/tools/Calculators";
 import { labelByCategory, toolById, TOOLS } from "@/lib/tools-registry";
 import { exportToolReportPdf } from "@/lib/pdf-export";
 import type { Lang } from "@/lib/i18n";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/tools/$toolId")({
   loader: ({ params }) => {
@@ -145,8 +146,10 @@ function ToolDetailPage() {
     try {
       if (nav.share) await nav.share(data);
       else if (nav.clipboard) await nav.clipboard.writeText(url);
-    } catch {
-      // user dismissed
+    } catch (error) {
+      if (error instanceof Error && error.name === "AbortError") return;
+      console.error("Share failed", error);
+      toast.error(lang === "ar" ? "تعذرت مشاركة الرابط" : "Could not share the link");
     }
   };
 
@@ -164,8 +167,10 @@ function ToolDetailPage() {
       } else {
         window.prompt(lang === "ar" ? "انسخ الرابط:" : "Copy link:", url);
       }
-    } catch {
-      // ignore
+    } catch (error) {
+      console.error("Copy link failed", error);
+      toast.error(lang === "ar" ? "تعذر نسخ الرابط. حاول نسخه يدويًا." : "Could not copy the link. Please copy it manually.");
+      window.prompt(lang === "ar" ? "انسخ الرابط:" : "Copy link:", url);
     }
   };
 
@@ -252,6 +257,9 @@ function ToolDetailPage() {
                 if (document.fonts && document.fonts.ready) await document.fonts.ready;
                 await new Promise((r) => setTimeout(r, 200));
                 window.print();
+              } catch (error) {
+                console.error("Print failed", error);
+                toast.error(lang === "ar" ? "تعذر فتح نافذة الطباعة" : "Couldn't open the print dialog");
               } finally {
                 setPrinting(false);
               }
@@ -279,8 +287,22 @@ function ToolDetailPage() {
                   about: tool.about,
                   lang,
                 });
+                toast.success(
+                  lang === "ar"
+                    ? "تم تجهيز تقرير PDF. تحقق من التنزيلات."
+                    : "PDF report prepared. Check your downloads.",
+                );
               } catch (err) {
                 console.error("PDF export failed", err);
+                toast.error(
+                  lang === "ar" ? "تعذر تصدير تقرير PDF" : "Couldn't export the PDF report",
+                  {
+                    description:
+                      lang === "ar"
+                        ? "حاول مرة أخرى. إذا استمر الخطأ، استخدم خيار الطباعة."
+                        : "Please retry, or use Print if the error continues.",
+                  },
+                );
               } finally {
                 setExporting(false);
               }
