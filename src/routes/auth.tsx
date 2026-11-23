@@ -1,5 +1,5 @@
 import { createFileRoute, useRouter } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { KnowledgeShell } from "@/components/knowledge/KnowledgeShell";
@@ -40,39 +40,83 @@ async function redirectByRole(go: (to: string) => void) {
 
 function AuthPage() {
   const router = useRouter();
-  const go = (to: string) => void router.navigate({ to, replace: true });
+  const go = useCallback((to: string) => void router.navigate({ to, replace: true }), [router]);
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!window.location.hash.includes("access_token") && !sessionStorage.getItem("google-auth-pending")) return;
+    const params = new URLSearchParams(window.location.search);
+    const oauthError = params.get("error_description") || params.get("error");
+    if (oauthError) {
+      sessionStorage.removeItem("google-auth-pending");
+      toast.error(oauthError);
+      return;
+    }
+
+    const isOAuthReturn =
+      Boolean(sessionStorage.getItem("google-auth-pending")) ||
+      params.has("code") ||
+      window.location.hash.includes("access_token");
+    if (!isOAuthReturn) return;
+
+    let active = true;
+    let redirected = false;
+    const finish = () => {
+      if (!active || redirected) return;
+      redirected = true;
+      sessionStorage.removeItem("google-auth-pending");
+      void redirectByRole(go);
+    };
+
     const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session && (event === "SIGNED_IN" || event === "INITIAL_SESSION")) {
-        sessionStorage.removeItem("google-auth-pending");
-        void redirectByRole(go);
-      }
+      if (session && (event === "SIGNED_IN" || event === "INITIAL_SESSION")) finish();
     });
-    return () => sub.subscription.unsubscribe();
-  }, []);
+    // A restored session may exist before the auth event listener attaches.
+    void supabase.auth
+      .getSession()
+      .then(({ data, error }) => {
+        if (!active) return;
+        if (error) {
+          sessionStorage.removeItem("google-auth-pending");
+          toast.error(error.message);
+        } else if (data.session) {
+          finish();
+        }
+      })
+      .catch((error: unknown) => {
+        if (!active) return;
+        sessionStorage.removeItem("google-auth-pending");
+        toast.error(error instanceof Error ? error.message : "تعذّر استعادة جلسة الدخول");
+      });
+
+    return () => {
+      active = false;
+      sub.subscription.unsubscribe();
+    };
+  }, [go]);
 
   async function signInWithGoogle() {
     setLoading(true);
     sessionStorage.setItem("google-auth-pending", "1");
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: `${window.location.origin}/auth`,
-    });
-    if (result.error) {
+    try {
+      const result = await lovable.auth.signInWithOAuth("google", {
+        redirect_uri: `${window.location.origin}/auth`,
+      });
+      if (result.error) throw result.error;
+      if (result.redirected) return;
+
       sessionStorage.removeItem("google-auth-pending");
-      toast.error(result.error.message ?? "تعذّر تسجيل الدخول بجوجل");
+      toast.success("تم تسجيل الدخول");
+      await redirectByRole(go);
+    } catch (error) {
+      sessionStorage.removeItem("google-auth-pending");
+      console.error("Google sign-in failed", error);
+      toast.error(error instanceof Error ? error.message : "تعذّر تسجيل الدخول بجوجل");
+    } finally {
       setLoading(false);
-      return;
     }
-    if (result.redirected) return;
-    sessionStorage.removeItem("google-auth-pending");
-    toast.success("تم تسجيل الدخول");
-    await redirectByRole(go);
   }
 
   async function submit(e: React.FormEvent) {
