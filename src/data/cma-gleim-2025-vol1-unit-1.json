@@ -3515,7 +3515,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Net operating cash flow may be determined by adjusting net\nincome. Net income of $870,000 is decreased by the increase\nin current assets of $100,000, increased by the increase in\ncurrent liabilities of $150,000, increased by depreciation\nexpense of $200,000, decreased by the gain on sale of\nequipment of $40,000, and increased by the deferred tax\nliability. Thus, cash provided by operating activities would be\n$1,110,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُظهر قائمة الدخل لشركة في نهاية السنة ما يلي:\nالإيرادات: $5,000,000\nمصروفات البيع والمصروفات العمومية (بما فيها مصروف إهلاك قدره $200,000): 3,800,000\nمصروف الفوائد: 50,000\nمكسب بيع معدات: 40,000\nمصروف ضريبة الدخل (بما فيه مصروف ضريبة مؤجلة قدره $30,000): 320,000\nصافي الدخل: $ 870,000\nوخلال السنة، ارتفعت الأصول المتداولة غير النقدية بمبلغ $100,000، وزادت الالتزامات المتداولة بمبلغ $150,000. ستُفصح الشركة في قائمة التدفقات النقدية عن نقد ناتج من الأنشطة التشغيلية قدره",
+    "choicesAr": [
+      "$1,080,000",
+      "$1,110,000",
+      "$1,160,000",
+      "$1,190,000"
+    ],
+    "explanationAr": "يمكن تحديد صافي التدفق النقدي التشغيلي بتسوية صافي الدخل. فيُخفَّض صافي الدخل البالغ $870,000 بالزيادة في الأصول المتداولة البالغة $100,000، ويُزاد بالزيادة في الالتزامات المتداولة البالغة $150,000، ويُزاد بمصروف الإهلاك البالغ $200,000، ويُخفَّض بمكسب بيع المعدات البالغ $40,000، ويُزاد بالالتزام الضريبي المؤجل. وبالتالي يكون النقد الناتج من الأنشطة التشغيلية $1,110,000."
   },
   {
     "unit": 1,
@@ -3532,7 +3540,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Net operating cash flow may be determined by adjusting net\nincome. Depreciation is an expense not directly affecting cash\nflows that should be added back to net income. The decrease\nin accounts payable is subtracted from net income because it\nindicates that an expense has been paid, while the decrease\nin accounts receivable should be added to net income. The\nincrease in inventory should be subtracted from net income\nbecause cash was used to purchase the inventory. The\ndividends paid on preferred stock are cash outflows from\nfinancing, not operating, activities and do not require an\nadjustment. Thus, net cash flow from operations is $504,285\n($456,900 + $45,600 + $11,560 – $2,155 – $7,620).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "جمع محاسب المعلومات التالية لإعداد قائمة التدفقات النقدية للسنة الحالية. يتضمن صافي الدخل البالغ $456,900 خصمًا قدره $45,600 لمصروف الإهلاك. ووزعت الشركة أرباحًا قدرها $300,000 هذا العام، واشترت مبنى جديدًا واحدًا بمبلغ $275,000. وتضمنت الميزانيتان للفترة الحالية والفترة السابقة الأرصدة التالية:\n(بالترتيب: السنة السابقة | السنة الحالية)\nالحسابات المدينة، بالصافي: $ 56,860 | $ 45,300\nالحسابات الدائنة: 12,900 | 10,745\nالمخزون: 186,700 | 194,320\nباستخدام الطريقة غير المباشرة، ما مبلغ النقد الناتج من الأنشطة التشغيلية؟",
+    "choicesAr": [
+      "$202,500",
+      "$405,205",
+      "$504,285",
+      "$521,405"
+    ],
+    "explanationAr": "يمكن تحديد صافي التدفق النقدي التشغيلي بتسوية صافي الدخل. فالإهلاك مصروف لا يؤثر مباشرة في التدفقات النقدية ويجب إضافته إلى صافي الدخل. ويُطرح النقص في الحسابات الدائنة من صافي الدخل لأنه يدل على دفع مصروف، بينما يجب إضافة النقص في الحسابات المدينة إلى صافي الدخل. ويجب طرح الزيادة في المخزون من صافي الدخل لأن النقدية استُخدمت لشراء المخزون. أما توزيعات الأرباح المدفوعة على الأسهم الممتازة فهي تدفقات نقدية خارجة من الأنشطة التمويلية لا التشغيلية ولا تتطلب تسوية. وبالتالي يكون صافي التدفق النقدي من العمليات $504,285 ($456,900 + $45,600 + $11,560 – $2,155 – $7,620)."
   },
   {
     "unit": 1,
@@ -3549,7 +3565,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The indirect method reconciles accrual-basis net income to\nnet operating cash flow. A decrease in income taxes payable\nimplies an operating cash outflow not reflected in net income.\nThus, the reconciling adjustment is a subtraction from net\nincome. The result is a lower measure of net operating cash\nflow.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيّ مما يلي يؤدي إلى نقص التدفق النقدي المقيس وفق الطريقة غير المباشرة لإعداد قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "مصروف الإطفاء.",
+      "النقص في ضرائب الدخل مستحقة الدفع.",
+      "متحصلات إصدار أسهم عادية.",
+      "النقص في المخزون."
+    ],
+    "explanationAr": "تطابق الطريقة غير المباشرة صافي الدخل على أساس الاستحقاق مع صافي التدفق النقدي التشغيلي. والنقص في ضرائب الدخل مستحقة الدفع يعني تدفقًا نقديًا تشغيليًا خارجًا لا ينعكس في صافي الدخل، ولذلك تكون تسوية المطابقة طرحًا من صافي الدخل، والنتيجة قياس أقل لصافي التدفق النقدي التشغيلي."
   },
   {
     "unit": 1,
@@ -3566,7 +3590,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A statement of cash flows lists the categories of cash flows in\nthe following order: operating, investing, and financing.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في قائمة تدفقات نقدية مُعدّة بالطريقة غير المباشرة، بأي ترتيب تُعرض الأنشطة النقدية؟",
+    "choicesAr": [
+      "التمويلية، الاستثمارية، التشغيلية.",
+      "الاستثمارية، التمويلية، التشغيلية.",
+      "التشغيلية، التمويلية، الاستثمارية.",
+      "التشغيلية، الاستثمارية، التمويلية."
+    ],
+    "explanationAr": "تعرض قائمة التدفقات النقدية فئات التدفقات النقدية بالترتيب التالي: التشغيلية، ثم الاستثمارية، ثم التمويلية."
   },
   {
     "unit": 1,
@@ -3583,7 +3615,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Operating activities are all transactions and other events that\nare not financing or investing activities. In general, operating\nactivities involve the production and delivery of goods and the\nprovision of services. Their effects normally are reported in\nearnings. A decrease in accounts payable indicates a cash\noutflow to the entity’s suppliers in payment for goods or\nservices.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أيّ مما يلي يجب تصنيفه كتدفق نقدي من نشاط تشغيلي في قائمة التدفقات النقدية؟",
+    "choicesAr": [
+      "النقص في الحسابات الدائنة خلال السنة.",
+      "الزيادة في النقدية الناتجة عن إصدار أسهم عادية مُصرَّح بها سابقًا.",
+      "دفع نقدية لشراء معدات إضافية لازمة للإنتاج الحالي.",
+      "دفع توزيعات أرباح نقدية من أموال ناتجة عن العمليات الجارية."
+    ],
+    "explanationAr": "الأنشطة التشغيلية هي جميع المعاملات والأحداث الأخرى التي ليست أنشطة تمويلية أو استثمارية. وبوجه عام تنطوي الأنشطة التشغيلية على إنتاج السلع وتسليمها وتقديم الخدمات، وعادةً ما تظهر آثارها في الأرباح. والنقص في الحسابات الدائنة يدل على تدفق نقدي خارج إلى موردي المنشأة سدادًا لثمن السلع أو الخدمات."
   },
   {
     "unit": 1,
@@ -3600,7 +3640,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The acquisition and disposal of property, plant, equipment,\nand other productive assets are investing activities. Borrowing\nmoney is a financing activity. The transactions should\ntherefore be reported on its statement of cash flows as a\n$5,000 outflow for investing activities and a $10,000 inflow\nfrom financing activities.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خلال السنة، اقتنت منشأة أصلًا إنتاجيًا طويل الأجل بمبلغ $5,000، واقترضت أيضًا $10,000 من بنك محلي. يجب الإفصاح عن هاتين المعاملتين في قائمة التدفقات النقدية بوصفهما",
+    "choicesAr": [
+      "تدفقات خارجة للأنشطة الاستثمارية، $5,000؛ وتدفقات داخلة من الأنشطة التمويلية، $10,000.",
+      "تدفقات داخلة من الأنشطة الاستثمارية، $10,000؛ وتدفقات خارجة للأنشطة التمويلية، $5,000.",
+      "تدفقات خارجة للأنشطة التشغيلية، $5,000؛ وتدفقات داخلة من الأنشطة التمويلية، $10,000.",
+      "تدفقات خارجة للأنشطة التمويلية، $5,000؛ وتدفقات داخلة من الأنشطة الاستثمارية، $10,000."
+    ],
+    "explanationAr": "اقتناء الممتلكات والآلات والمعدات والأصول الإنتاجية الأخرى والتخلص منها أنشطة استثمارية، واقتراض الأموال نشاط تمويلي. لذلك يجب الإفصاح عن المعاملتين في قائمة التدفقات النقدية كتدفق خارج قدره $5,000 للأنشطة الاستثمارية وتدفق داخل قدره $10,000 من الأنشطة التمويلية."
   },
   {
     "unit": 1,
@@ -3617,7 +3665,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Financing activities include paying dividends and treasury\nstock transactions. Investing activities include acquiring and\ndisposing of debt and equity instruments. Thus, the amount to\nbe shown in the investing activities section of the statement of\ncash flows is $300,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سجلت شركة المدفوعات التالية للفترة الحالية:\nشراء أسهم استثمارية: $300,000\nتوزيعات أرباح مدفوعة للمساهمين: 200,000\nإعادة شراء أسهم الشركة: 400,000\nالمبلغ الذي يجب عرضه في قسم الأنشطة الاستثمارية بقائمة التدفقات النقدية هو",
+    "choicesAr": [
+      "$300,000",
+      "$500,000",
+      "$700,000",
+      "$900,000"
+    ],
+    "explanationAr": "تشمل الأنشطة التمويلية دفع توزيعات الأرباح ومعاملات أسهم الخزينة، وتشمل الأنشطة الاستثمارية اقتناء أدوات الدين وحقوق الملكية والتخلص منها. وبالتالي فإن المبلغ الذي يُعرض في قسم الأنشطة الاستثمارية هو $300,000."
   },
   {
     "unit": 1,
@@ -3634,7 +3690,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Cash flows from operating activities include cash flows from all\nactivities not classified as investing or financing. Their effects\nnormally are reported in earnings. Operating cash flows\ninclude the payment and collection of interest, dividends paid\nare a financing cash outflow, and the purchase of equipment\nis an investing activity. Thus, the total amount to be reported\nin the operating activities section of the statement of cash\nflows is $250,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سجلت شركة المدفوعات التالية للفترة الحالية:\nتوزيعات أرباح مدفوعة للمساهمين: $150,000\nفوائد مدفوعة على قرض بنكي: 250,000\nشراء معدات: 350,000\nإجمالي مبلغ البنود السابقة الذي يجب عرضه في قسم الأنشطة التشغيلية بقائمة التدفقات النقدية هو",
+    "choicesAr": [
+      "$150,000",
+      "$250,000",
+      "$350,000",
+      "$750,000"
+    ],
+    "explanationAr": "تشمل التدفقات النقدية من الأنشطة التشغيلية التدفقات النقدية من جميع الأنشطة غير المصنفة كاستثمارية أو تمويلية، وعادةً ما تظهر آثارها في الأرباح. وتشمل التدفقات النقدية التشغيلية دفع الفوائد وتحصيلها، أما توزيعات الأرباح المدفوعة فهي تدفق نقدي تمويلي خارج، وشراء المعدات نشاط استثماري. وبالتالي فإن إجمالي المبلغ الذي يُفصح عنه في قسم الأنشطة التشغيلية هو $250,000."
   },
   {
     "unit": 1,
@@ -3651,7 +3715,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The payment and collection of interest are treated as cash\nflows from operating activities. Financing activities include\npaying dividends and treasury stock transactions. Thus, the\namount to be reported in the financing activities section of the\nstatement of cash flows is $600,000 ($200,000 + $400,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سجلت شركة المدفوعات التالية للفترة الحالية:\nفوائد مدفوعة على قرض بنكي: $300,000\nتوزيعات أرباح مدفوعة للمساهمين: 200,000\nإعادة شراء أسهم الشركة: 400,000\nالمبلغ الذي يجب عرضه في قسم الأنشطة التمويلية بقائمة التدفقات النقدية هو",
+    "choicesAr": [
+      "$300,000",
+      "$500,000",
+      "$600,000",
+      "$900,000"
+    ],
+    "explanationAr": "يُعامل دفع الفوائد وتحصيلها كتدفقات نقدية من الأنشطة التشغيلية. وتشمل الأنشطة التمويلية دفع توزيعات الأرباح ومعاملات أسهم الخزينة. وبالتالي فإن المبلغ الذي يُفصح عنه في قسم الأنشطة التمويلية هو $600,000 ($200,000 + $400,000)."
   },
   {
     "unit": 1,
@@ -3668,7 +3740,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cash flows from financing activities for the year consist of the\n$80,000 outflow for dividends paid. The issue of common\nstock is a financing activity, but the $800,000 of proceeds\nhave not yet been received.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات مالية مختارة لشركة Kristina Company عن السنة المنتهية للتو:\nصافي الدخل: $2,000,000\nالزيادة في صافي الحسابات المدينة: 300,000\nالنقص في المخزون: 100,000\nالزيادة في الحسابات الدائنة: 200,000\nمصروف الإهلاك: 400,000\nمكسب بيع أوراق مالية متاحة للبيع: 700,000\nنقدية مستحقة القبض من إصدار أسهم عادية: 800,000\nنقدية مدفوعة لتوزيعات الأرباح: 80,000\nنقدية مدفوعة لاقتناء أرض: 1,500,000\nنقدية مقبوضة من بيع أوراق مالية متاحة للبيع: 2,800,000\nالتدفق النقدي لشركة Kristina من الأنشطة التمويلية عن السنة هو",
+    "choicesAr": [
+      "$(80,000)",
+      "$720,000",
+      "$800,000",
+      "$3,520,000"
+    ],
+    "explanationAr": "تتكون التدفقات النقدية من الأنشطة التمويلية للسنة من التدفق الخارج البالغ $80,000 لتوزيعات الأرباح المدفوعة. وإصدار الأسهم العادية نشاط تمويلي، لكن المتحصلات البالغة $800,000 لم تُقبض بعد."
   },
   {
     "unit": 1,
