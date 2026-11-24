@@ -272,7 +272,7 @@ const wave7=new Map([
  [40,[945,1,"b779f5a2"]],[41,[946,1,"ac2180e6"]],[42,[948,2,"aca3172f"]],
 ]);
 test("Unit 16 Wave 7: 97 drafts and 12 immutable investment evaluation sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>(r.section<=2||(r.section===3&&r.number<=43))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,97);
  assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys(),...wave6.keys(),...wave7.keys()]);
  for(const [n,[page,index,hash]] of wave7){
@@ -313,4 +313,49 @@ test("Unit 16 Wave 7: ROI and RI projects, constrained investments, incentives a
  assert.equal(held.page,949);assert.equal(held.answerIndex,0);
  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
  assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.3.43"'));
+});
+
+const wave8=new Map([
+ [44,[950,3,"99490990"]],[45,[951,2,"c93e08ae"]],[46,[952,3,"ebe1c556"]],
+ [47,[953,3,"81adc30b"]],[48,[955,3,"8e625b46"]],[49,[956,2,"31aa4642"]],
+ [50,[957,3,"c10b8ccd"]],[51,[958,0,"1cdf1cf3"]],[52,[959,1,"9041f48c"]],
+ [54,[961,2,"a279a8ee"]],[55,[961,1,"658ac6bc"]],
+]);
+test("Unit 16 Wave 8: 108 drafts and 11 immutable investment center sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,108);
+ assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys(),...wave6.keys(),...wave7.keys(),...wave8.keys()]);
+ for(const [n,[page,index,hash]] of wave8){
+  const r=q3(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 8: independent residual income, ROI comparisons and inflation assumptions",()=>{
+ const roi=(i,c)=>i/c;
+ const ri=(i,c,r)=>i-c*r;
+ assert.equal(ri(1000000,500000+250000,.10),925000);
+ assert.equal(ri(14000,100000,.12),2000);
+ assert.ok(roi(160000+14000,1000000+100000)<.16);
+ const regional=[[1000,2500],[5000,15000],[4000,8000],[7500,25000]].map(([i,c])=>roi(i,c));
+ assert.equal(regional.indexOf(Math.min(...regional)),3);
+ assert.equal(Math.min(...regional),.30);
+ const branches=[[120000,805000],[294000,914000],[318000,1650000],[104000,745000]].map(([i,c])=>roi(i,c));
+ assert.equal(branches.indexOf(Math.max(...branches)),1);
+ assert.equal((100*Math.max(...branches)).toFixed(1),"32.2");
+ // Equal local-currency translation factors cancel in a ratio.
+ assert.equal(roi(200,1000),roi(200*2,1000*2));
+ // Inflation need not raise ROI if operating costs rise faster than revenue.
+ assert.ok(roi(130-120,100)<roi(100-80,100));
+ for(const [n,expected] of [[44,"Financial and nonfinancial"],[45,"Earnings per share"],[47,"The manager of the Construction Equipment Division would"],[48,"Residual income"],[49,"$925,000"],[50,"West"],[52,"G City"],[55,"Operating income less a capital charge"]])
+  assert.ok(q3(n).choices[q3(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const held=q3(53);
+ assert.equal(held.page,960);assert.equal(held.answerIndex,0);
+ assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+ assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.3.53"'));
 });
