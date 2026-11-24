@@ -2751,7 +2751,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The direct labor rate variance equals the actual amount of\nlabor used times the standard rate minus the actual rate. The\nvariance is $156,000 favorable [78,000 × ($20 – $18)]. The\nvariance is favorable because the actual rate was less than\nthe standard rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة منتجًا واحدًا وتستخدم نظام التكاليف المعيارية. وخلال أبريل توافرت البيانات التالية:\nالبند                              المواد المباشرة       العمل المباشر\nالتكلفة الفعلية لوحدة المدخلات (أرطال وساعات)       $28       $18\nالسعر المعياري لوحدة المدخلات       $24       $20\nالمدخلات المعيارية المسموح بها لكل وحدة ناتج       10       4\nوحدات المدخلات الفعلية       190,000       78,000\nوحدات الناتج الفعلية       20,000       20,000\nما انحراف معدل أجر العمل المباشر لشهر أبريل؟",
+    "choicesAr": [
+      "$240,000 ملائم.",
+      "$156,000 غير ملائم.",
+      "$156,000 ملائم.",
+      "$40,000 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف معدل أجر العمل المباشر حجم العمل الفعلي مضروبًا في الفرق بين معدل الأجر المعياري والفعلي. ويبلغ الانحراف $156,000 ملائمًا [78,000 × ($20 − $18)]، لأن معدل الأجر الفعلي أقل من المعياري."
   },
   {
     "unit": 15,
@@ -2910,7 +2918,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The direct labor rate variance equals the actual hours worked\ntimes the difference between the standard and actual rates.\nWhen the standard rate exceeds the actual rate, the variance\nis favorable:\nAH × (SR – AR) = favorable rate variance\n10,000 × (SR – $8.25) = $5,600 F\nSR – $8.25 = $.56\nSR = $8.81",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت تكاليف العمل المباشر لشهر مايو كما يلي:\nساعات العمل المباشر المعيارية المسموح بها       12,500\nمعدل الأجر المباشر الفعلي       $8.25\nساعات العمل المباشر الفعلية       10,000\nانحراف معدل الأجر المباشر، ملائم       $5,600\nما معدل أجر العمل المباشر المعياري في مايو؟",
+    "choicesAr": [
+      "$7.69",
+      "$7.80",
+      "$8.25",
+      "$8.81"
+    ],
+    "explanationAr": "يساوي انحراف معدل أجر العمل المباشر الساعات الفعلية مضروبة في الفرق بين المعدلين المعياري والفعلي. وعندما يتجاوز المعدل المعياري المعدل الفعلي يكون الانحراف ملائمًا:\nالساعات الفعلية × (المعدل المعياري − المعدل الفعلي) = انحراف معدل الأجر الملائم\n10,000 × (المعدل المعياري − $8.25) = $5,600 ملائم\nالمعدل المعياري − $8.25 = $.56\nالمعدل المعياري = $8.81"
   },
   {
     "unit": 15,
@@ -2927,7 +2943,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The standard hours allowed equaled 3,000, and the labor\nefficiency variance was $1,870 unfavorable; that is, actual\nhours exceeded standard hours. The labor efficiency variance\nequals the standard rate ($8.50) times the excess hours.\nGiven that the variance is $1,870, 220 excess hours ($1,870 ÷\n$8.50) must have been worked. Thus, 3,220 actual hours\n(3,000 standard + 220 excess) were worked.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام التكاليف المعيارية. وكانت بيانات العمل المباشر ليوليو كما يلي:\nالساعات المعيارية المسموح بها للإنتاج الفعلي       3,000\nمعدل الأجر الفعلي للساعة       $9.35\nمعدل الأجر المعياري للساعة       $8.50\nانحراف كفاءة العمل       $1,870 غير ملائم\nكم بلغت ساعات العمل الفعلية؟",
+    "choicesAr": [
+      "2,780",
+      "2,800",
+      "3,200",
+      "3,220"
+    ],
+    "explanationAr": "بلغت الساعات المعيارية المسموح بها 3,000 ساعة، وكان انحراف كفاءة العمل $1,870 غير ملائم، وهذا يعني أن الساعات الفعلية تجاوزت المعيار. ويساوي الانحراف المعدل المعياري $8.50 مضروبًا في الساعات الزائدة. وبما أن قيمة الانحراف $1,870، فإن الساعات الزائدة تبلغ 220 ساعة ($1,870 ÷ $8.50). ومن ثم تبلغ الساعات الفعلية 3,220 ساعة (3,000 معيارية + 220 زائدة)."
   },
   {
     "unit": 15,
@@ -2944,7 +2968,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When the actual direct labor rate is unknown, the total direct\nlabor payroll can be found by multiplying the actual hours by\nthe standard rate, then subtracting the favorable labor\nvariance.\n(32,000 × $5.04) – $6,720 = $154,560",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كانت بيانات العمل المباشر لشهر يونيو كما يلي:\nساعات العمل المباشر الفعلية       32,000\nساعات العمل المباشر المعيارية       33,600\nانحراف معدل الأجر المباشر، ملائم       $6,720\nمعدل الأجر المباشر المعياري للساعة       $5.04\nاحسب إجمالي أجور العمل المباشر لشهر يونيو.",
+    "choicesAr": [
+      "$154,560",
+      "$154,880",
+      "$167,680",
+      "$168,000"
+    ],
+    "explanationAr": "إذا كان معدل أجر العمل الفعلي غير معلوم، فيمكن حساب إجمالي الأجور بضرب الساعات الفعلية في معدل الأجر المعياري، ثم طرح انحراف معدل الأجر الملائم.\n(32,000 × $5.04) − $6,720 = $154,560"
   },
   {
     "unit": 15,
@@ -3003,7 +3035,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The standard inputs per unit of output can be determined by\ndividing the budgeted total input hours (10,000) by the\nbudgeted total output level (5,000), giving 2 hours of direct\nlabor for every finished unit. Since the actual output level was\n6,000, the “expected” quantity, or number of hours allowed\ngiven the achieved level of production, was 12,000 (6,000 ×\n2). These amounts can be substituted in the formula for the\nefficiency variance:\n(AQ – EQ) × SP = Labor efficiency variance\n(AQ – 12,000) × $15 = $1,500 U\nAQ – 12,000 = 100\nAQ = 12,100",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة صناعية نظام التكاليف المعيارية وتحمّل التكاليف الصناعية غير المباشرة على أساس ساعات العمل المباشر. واشتملت موازنة تصنيع 5,000 وحدة في مايو على الآتي:\nالعمل المباشر (10,000 ساعة بسعر $15 للساعة)       $150,000\nالتكاليف الصناعية غير المباشرة المتغيرة       30,000\nالتكاليف الصناعية غير المباشرة الثابتة       80,000\nوخلال مايو أنتجت الشركة 6,000 وحدة، وبلغ انحراف كفاءة العمل المباشر $1,500 غير ملائم. فما عدد ساعات العمل المباشر الفعلية المستخدمة في مايو؟",
+    "choicesAr": [
+      "9,900",
+      "10,100",
+      "11,900",
+      "12,100"
+    ],
+    "explanationAr": "يُحسب معيار ساعات العمل لكل وحدة بقسمة الساعات المخططة (10,000) على عدد وحدات الإنتاج المخططة (5,000)، فينتج 2 ساعة عمل مباشر لكل وحدة تامة. ولأن الإنتاج الفعلي بلغ 6,000 وحدة، فإن الساعات المعيارية المسموح بها هي 12,000 ساعة (6,000 × 2). وبالتعويض في معادلة انحراف الكفاءة:\n(الساعات الفعلية − المعيارية) × المعدل المعياري = انحراف كفاءة العمل\n(الساعات الفعلية − 12,000) × $15 = $1,500 غير ملائم\nالساعات الفعلية − 12,000 = 100\nالساعات الفعلية = 12,100"
   },
   {
     "unit": 15,
@@ -3095,7 +3135,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The direct labor rate variance is equal to the difference\nbetween the actual rate and the standard rate multiplied by the\nactual hours worked. Therefore, the variance is $15,000 U\n[($30/hr – $25/hr) × 3,000 hours].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تنتج شركة مراتب، ويبلغ معدل أجر العمل المباشر المعياري لديها $25 للساعة، ويعمل بها 75 موظف عمل مباشر و50 موظف عمل غير مباشر. وخلال الأسبوع الماضي بلغت أجور العمل المباشر $90,000 عن 3,000 ساعة عمل، وصنعت الشركة 1,000 مرتبة. ويسمح معيار التكلفة باستخدام 2.5 ساعة عمل لكل مرتبة. ما انحراف معدل الأجر المباشر؟",
+    "choicesAr": [
+      "$15,000 غير ملائم.",
+      "$27,500 غير ملائم.",
+      "$15,000 ملائم.",
+      "$27,500 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف معدل أجر العمل المباشر الفرق بين المعدل الفعلي والمعدل المعياري مضروبًا في الساعات الفعلية. وعليه يبلغ الانحراف $15,000 غير ملائم [($30 للساعة − $25 للساعة) × 3,000 ساعة]."
   },
   {
     "unit": 15,
@@ -3112,7 +3160,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The $144,000 annual amount equals $12,000 per month.\nSince volume is expected to be 5,000 units per month, and the\n$12,000 is considered a variable cost, budgeted cost per unit\nis $2.40 ($12,000 ÷ 5,000 units). If 4,500 units are produced,\nthe total variable costs should be $10,800 (4,500 units ×\n$2.40). Subtracting the $10,100 of actual costs from the\nbudgeted figure results in a favorable variance of $700.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تفترض الموازنة الرئيسية لشركة إنتاج 5,000 وحدة شهريًا، وتتضمن تكلفة عمل غير مباشر قدرها $144,000 سنويًا. وتعد الشركة العمل غير المباشر تكلفة متغيرة. وخلال أبريل أنتجت 4,500 وحدة وتكبدت تكاليف عمل غير مباشر بلغت $10,100. ما انحراف موازنة العمل غير المباشر في تقرير الأداء القائم على الموازنة المرنة؟",
+    "choicesAr": [
+      "$1,900 غير ملائم.",
+      "$700 ملائم.",
+      "$1,900 ملائم.",
+      "$700 غير ملائم."
+    ],
+    "explanationAr": "يعادل المبلغ السنوي $144,000 مبلغ $12,000 شهريًا. ومع حجم نشاط متوقع قدره 5,000 وحدة شهريًا واعتبار تكلفة $12,000 متغيرة، تبلغ التكلفة المخططة للوحدة $2.40 ($12,000 ÷ 5,000 وحدة). وعند إنتاج 4,500 وحدة ينبغي أن تكون التكاليف المتغيرة الإجمالية $10,800 (4,500 وحدة × $2.40). وبطرح التكلفة الفعلية $10,100 من التكلفة المخططة، ينتج انحراف ملائم قدره $700."
   },
   {
     "unit": 15,
@@ -3129,7 +3185,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Under a standard cost system, the amount charged to\nproduction is the standard cost per unit for the number of units\nproduced. In this case, the standard cost is $20 per hour and\neach unit is expected to use 2 hours of direct labor (22,000\nhours ÷ 11,000 units). Thus, the charge for 10,000 actual units\nwould be 20,000 standard hours at $20 per hour, or $400,000.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت موازنة الشركة أنها تخطط لإنتاج 11,000 وحدة تامة باستخدام 22,000 ساعة عمل مباشر بتكلفة $20 للساعة. وبلغ الإنتاج الفعلي 10,000 وحدة تامة باستخدام 21,000 ساعة عمل بسعر $19.75 للساعة. إذا استخدمت الشركة نظام التكاليف المعيارية، فما مبلغ العمل المباشر الذي يُحمّل على الوحدات المصنعة؟",
+    "choicesAr": [
+      "$440,000",
+      "$420,000",
+      "$414,750",
+      "$400,000"
+    ],
+    "explanationAr": "في نظام التكاليف المعيارية تُحمّل الوحدات المنتجة بالتكلفة المعيارية لكل وحدة عند حجم الإنتاج الفعلي. وفي هذه المسألة يبلغ معدل العمل المعياري $20 للساعة، وتحتاج كل وحدة إلى 2 ساعة عمل مباشر معيارية (22,000 ساعة ÷ 11,000 وحدة). لذا فإن إنتاج 10,000 وحدة فعلية يُحمّل بتكلفة 20,000 ساعة معيارية عند $20 للساعة، أي $400,000."
   },
   {
     "unit": 15,
@@ -3238,7 +3302,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A direct labor or materials efficiency variance is calculated by\nmultiplying the difference between standard and actual usage\ntimes the standard cost per unit of input. The efficiency\nvariances can be divided into yield and mix variances. Mix and\nyield variances are calculated only when the production\nprocess involves combining several materials or classes of\nlabor in varying proportions (when substitutions are allowable\nin combining resources).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تقسيم انحراف الكفاءة لكل من العمل المباشر والمواد المباشرة إلى:",
+    "choicesAr": [
+      "انحراف الإنفاق وانحراف العائد.",
+      "انحراف العائد وانحراف السعر.",
+      "انحراف الحجم وانحراف المزيج.",
+      "انحراف العائد وانحراف المزيج."
+    ],
+    "explanationAr": "يُحسب انحراف كفاءة العمل المباشر أو المواد المباشرة بضرب الفرق بين الاستخدام الفعلي والمعياري في التكلفة المعيارية لوحدة المدخلات. ويمكن تحليل انحراف الكفاءة إلى انحراف المزيج وانحراف العائد. ولا يُحسب هذان الانحرافان إلا عندما تتضمن العملية الإنتاجية الجمع بين مواد متعددة أو فئات مختلفة من العمالة بنسب قابلة للتغيير، أي عندما يسمح بإحلال مدخل محل آخر."
   },
   {
     "unit": 15,
@@ -3289,7 +3361,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Mix and yield variances are the components of the usage\n(quantity or efficiency) variance. Mix and yield variances can\nonly be calculated when inputs are substitutable. The mix\nvariance isolates the effects of changes in the mix of inputs\nused. The mix variance equals actual total quantity (ATQ)\ntimes the weighted-average standard price for the standard\nmix (SMSP) minus the weighted-average standard price for\nthe actual mix (AMSP).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يساوي انحراف مزيج المواد أو العمالة:",
+    "choicesAr": [
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري ومتوسط السعر المعياري المرجح للمزيج الفعلي.",
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر المدرج المرجح للمدخلات ومتوسط السعر الفعلي المرجح لها.",
+      "إجمالي الكمية المدرجة للمدخلات مضروبًا في الفرق بين متوسط السعر المدرج المرجح ومتوسط السعر المتوقع المرجح لها.",
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر الفعلي المرجح ومتوسط السعر المتوقع المرجح لها."
+    ],
+    "explanationAr": "انحرافا المزيج والعائد هما مكونا انحراف الاستخدام، أي الكمية أو الكفاءة. ولا يمكن حسابهما إلا إذا كانت المدخلات قابلة للإحلال. ويعزل انحراف المزيج أثر تغيير النسب بين المدخلات المستخدمة، ويساوي إجمالي الكمية الفعلية (ATQ) مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري (SMSP) ومتوسط السعر المعياري المرجح للمزيج الفعلي (AMSP)."
   },
   {
     "unit": 15,
@@ -3391,7 +3471,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Mix and yield variances are the components of the usage\n(quantity or efficiency) variance. Mix and yield variances can\nonly be calculated when inputs are substitutable. The yield\nvariance measures how efficiently the actual mix of inputs was\nused to produce the given output. The yield variance equals\nstandard total quantity (STQ) minus the actual total quantity\n(ATQ) times the weighted-average standard price of the\nstandard mix of inputs (SMSP).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يساوي انحراف عائد المواد أو العمل:",
+    "choicesAr": [
+      "الفرق بين إجمالي الكمية المعيارية وإجمالي الكمية الفعلية للمدخلات مضروبًا في متوسط السعر المعياري المرجح للمزيج الفعلي للمدخلات.",
+      "إجمالي الكمية الفعلية للمدخلات مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري ومتوسط السعر المعياري المرجح للمزيج الفعلي.",
+      "إجمالي الكمية المعيارية للمدخلات مضروبًا في الفرق بين متوسط السعر المعياري المرجح للمزيج المعياري ومتوسط السعر المعياري المرجح للمزيج الفعلي.",
+      "الفرق بين إجمالي الكمية المعيارية وإجمالي الكمية الفعلية للمدخلات مضروبًا في متوسط السعر المعياري المرجح للمزيج المعياري."
+    ],
+    "explanationAr": "انحرافا المزيج والعائد مكونان لانحراف الاستخدام، أي الكمية أو الكفاءة، ولا يمكن حسابهما إلا إذا أمكن إحلال المدخلات. ويقيس انحراف العائد كفاءة استخدام المزيج الفعلي من المدخلات للحصول على الناتج المحقق. ويساوي الفرق بين إجمالي الكمية المعيارية (STQ) وإجمالي الكمية الفعلية (ATQ) مضروبًا في متوسط السعر المعياري المرجح للمزيج المعياري (SMSP)."
   },
   {
     "unit": 15,
@@ -3408,7 +3496,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Labor mix and labor yield variances are the components of the\ntotal labor efficiency variance. For example, if the labor yield\nvariance was $500 U and the labor mix variance was $320 U,\nthe total labor efficiency variance would be $820 U.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الانحراف الذي يساوي مجموع انحراف مزيج العمل وانحراف عائد العمل؟",
+    "choicesAr": [
+      "إجمالي انحراف العمل.",
+      "انحراف معدل أجر العمل.",
+      "انحراف كفاءة العمل.",
+      "مجموع انحراف كفاءة العمل وانحراف كفاءة التكاليف الصناعية غير المباشرة."
+    ],
+    "explanationAr": "انحرافا مزيج العمل وعائد العمل هما مكونا إجمالي انحراف كفاءة العمل. فعلى سبيل المثال، إذا كان انحراف العائد $500 غير ملائم وانحراف المزيج $320 غير ملائم، يكون إجمالي انحراف كفاءة العمل $820 غير ملائم."
   },
   {
     "unit": 15,
@@ -3425,7 +3521,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The direct material yield variance is equal to the difference\nbetween the standard total quantity (STQ) and actual total\nquantity (ATQ) times the standard mix of standard inputs at\nstandard prices (SMSP).\nYield variance = (STQ – ATQ) × SMSP\nSTQ equals 250,000 [(25,000 units of finished goods × 4 oz.\nMaterial A per unit) + (25,000 units of finished goods × 6 oz\nMaterial B per unit)].\nATQ also equals 250,000 (105,000 Material A + 145,000\nMaterial B).\nSince STQ equals ATQ, the yield variance will be 0.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنع شركة منتجًا بمزج مادتين وفق المعايير التالية لكل وحدة من المنتج التام:\n1. المادة A: 4 أونصات بسعر $1.50 للأونصة\n2. المادة B: 6 أونصات بسعر $2.50 للأونصة\nأنتجت الشركة فعليًا 25,000 وحدة تامة باستخدام 105,000 أونصة من المادة A و145,000 أونصة من المادة B. وبلغت التكلفة الفعلية للأونصة $1.48 للمادة A و$2.55 للمادة B. ما انحراف عائد المواد المباشرة؟",
+    "choicesAr": [
+      "$0",
+      "$5,000 غير ملائم.",
+      "$5,000 ملائم.",
+      "$5,350 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف عائد المواد المباشرة الفرق بين إجمالي الكمية المعيارية (STQ) وإجمالي الكمية الفعلية (ATQ) مضروبًا في متوسط السعر المعياري المرجح للمزيج المعياري (SMSP).\nانحراف العائد = (STQ − ATQ) × SMSP\nتبلغ الكمية المعيارية 250,000 أونصة [(25,000 وحدة تامة × 4 أونصات مادة A لكل وحدة) + (25,000 وحدة تامة × 6 أونصات مادة B لكل وحدة)].\nوتبلغ الكمية الفعلية أيضًا 250,000 أونصة (105,000 أونصة مادة A + 145,000 أونصة مادة B).\nوبما أن الكمية المعيارية تساوي الفعلية، فإن انحراف العائد يساوي 0."
   },
   {
     "unit": 15,
