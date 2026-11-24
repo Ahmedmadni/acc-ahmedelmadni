@@ -93,6 +93,9 @@ const ServicesEditorial = lazy(() =>
 const AboutMe = lazy(() =>
   import("@/components/home/AboutMe").then((m) => ({ default: m.AboutMe })),
 );
+const DigitalExpertise = lazy(() =>
+  import("@/components/home/DigitalExpertise").then((m) => ({ default: m.DigitalExpertise })),
+);
 import type { ServiceItem } from "@/components/home/ServiceModal";
 import type { SkillItem } from "@/components/home/SkillModal";
 import { Link as RouterLink, useRouterState } from "@tanstack/react-router";
@@ -125,6 +128,12 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:url", content: "https://ahmedelmadni.com/" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "أحمد المدني | خبرة محاسبية بعقلية رقمية" },
+      {
+        property: "og:description",
+        content: "خبرة في المحاسبة والتقارير المالية، مع الفايب كودينج وتصميم المواقع والتطبيقات لإنتاج مخرجات دقيقة وسهلة الفهم.",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "canonical", href: "https://ahmedelmadni.com/" },
@@ -502,6 +511,9 @@ function Index() {
         </Suspense>
         <Suspense fallback={null}>
           <AboutMe lang={lang} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <DigitalExpertise lang={lang} />
         </Suspense>
         <StickyOutgoingLayer>
           <Suspense fallback={null}>

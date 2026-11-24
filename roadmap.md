@@ -1,3 +1,7 @@
+# Homepage
+
+- [x] Add bilingual accounting + vibe-coding expertise section; verified Arabic/English, service link, reduced motion and desktop/tablet/mobile presentation.
+
 # CMA Arabic translation
 
 - [x] Import the two supplied IMA 2020 sample PDFs, exclude duplicate MCQs, and add essay cases with source answers.
