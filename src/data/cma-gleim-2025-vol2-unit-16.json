@@ -2626,7 +2626,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most effective way to measure performance is to include\nboth financial and nonfinancial measures and to focus on\nmultiple dimensions of the business, such as quality, customer\nsatisfaction, and market performance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لضمان أن يولي نائب رئيس أحد الأقسام اهتمامًا مناسبًا بأهداف القسم قصيرة وطويلة الأجل، ما أفضل أسلوب لتقييم أدائه؟",
+    "choicesAr": [
+      "العائد على الاستثمار (ROI)، الذي يتيح مقارنة سهلة وسريعة بالأقسام المماثلة.",
+      "الدخل المتبقي، الذي يحد من رفض الاستثمارات الرأسمالية التي يقل عائدها عن العائد الحالي على الاستثمار لكنه يتجاوز تكلفة رأس المال.",
+      "هامش القطاع أو هامش ربح القسم.",
+      "المقاييس المالية وغير المالية، بما في ذلك تقييم الجودة ورضا العملاء والأداء في السوق."
+    ],
+    "explanationAr": "الطريقة الأكثر فعالية لقياس الأداء هي الجمع بين المقاييس المالية وغير المالية والتركيز على أبعاد متعددة للأعمال، مثل الجودة ورضا العملاء والأداء في السوق."
   },
   {
     "unit": 16,
@@ -2643,7 +2651,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Any measure involving the firm’s stock is inappropriate for\nmeasuring segment manager performance. The stock price\nreflects the performance of the company as a whole.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقيم شركة مديريها باستخدام الإدارة بالأهداف (MBO). تعد جميع الأهداف التالية ملائمة لقياس كفاءة مدير القسم خلال فترة الموازنة، باستثناء:",
+    "choicesAr": [
+      "الدخل التشغيلي المقدر.",
+      "حصة سوقية مستهدفة.",
+      "توقعات ربحية السهم.",
+      "تقليص الهيكل التنظيمي (عدد أقل من الموظفين لإنجاز حجم العمل نفسه)."
+    ],
+    "explanationAr": "لا تعد المقاييس المتعلقة بأسهم المنشأة ملائمة لتقييم أداء مدير القطاع بمفردها. فمقاييس الأسهم، ومنها ربحية السهم على مستوى الشركة، تتأثر بأداء الشركة ككل وليس بأداء قطاع واحد فقط."
   },
   {
     "unit": 16,
@@ -2660,7 +2676,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since the project will increase residual income, its rate of\nreturn must be higher than the firm’s cost of capital (residual\nincome is the excess of ROI on a project over a targeted\namount equal to an imputed interest charge on invested\ncapital). And, since the project will lower the division’s overall\nrate of return, its own rate of return must be lower than the\ndivision’s current rate.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حافظ القسم الشمالي في شركة على دخل متبقٍ موجب لعدة سنوات. ويدرس حاليًا الاستثمار في مشروع جديد سيخفض العائد الإجمالي للقسم على الاستثمار (ROI) لكنه سيزيد دخله المتبقي. ما العلاقة بين معدل العائد المتوقع على المشروع الجديد وتكلفة رأس مال المنشأة والعائد الحالي للقسم على الاستثمار؟",
+    "choicesAr": [
+      "معدل العائد المتوقع للمشروع الجديد أعلى من العائد الحالي للقسم على الاستثمار، لكنه أقل من تكلفة رأس مال المنشأة.",
+      "تكلفة رأس مال المنشأة أعلى من معدل العائد المتوقع للمشروع الجديد، لكنها أقل من العائد الحالي للقسم على الاستثمار.",
+      "العائد الحالي للقسم على الاستثمار أعلى من معدل العائد المتوقع للمشروع الجديد، لكنه أقل من تكلفة رأس مال المنشأة.",
+      "معدل العائد المتوقع للمشروع الجديد أعلى من تكلفة رأس مال المنشأة، لكنه أقل من العائد الحالي للقسم على الاستثمار."
+    ],
+    "explanationAr": "بما أن المشروع سيزيد الدخل المتبقي، فلا بد أن يتجاوز معدل عائده تكلفة رأس مال المنشأة (الدخل المتبقي هو الدخل المحقق من الاستثمار مطروحًا منه المبلغ المستهدف المساوي للفائدة المحتسبة على رأس المال المستثمر). وبما أن المشروع سيخفض معدل العائد الإجمالي للقسم، فلا بد أن يكون معدل عائده أقل من المعدل الحالي للقسم."
   },
   {
     "unit": 16,
@@ -2677,7 +2701,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A manager who is evaluated on the basis of ROI will tend to\nreject any capital project with an expected rate of return lower\nthan the division’s current ROI. Thus, the Household\nAppliances Division manager will reject his or her project (14%\n< 16%). However, the manager of the Construction Equipment\nDivision will accept the project for his or her division. Residual\nincome is the excess of ROI on a project over a targeted\namount equal to an imputed interest charge on invested\ncapital. Thus, anytime the expected return on a project\nexceeds the cost of capital, a manager judged on residual\nincome will tend to accept it (14% > 12%).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لشركة قسمان: الأجهزة المنزلية ومعدات الإنشاء. يقيم مدير قسم الأجهزة المنزلية على أساس العائد على الاستثمار (ROI)، بينما يقيم مدير قسم معدات الإنشاء على أساس الدخل المتبقي. بلغت تكلفة رأس المال 12% والعائد على الاستثمار 16% للقسمين. ويدرس كل مدير حاليًا مشروعًا يحقق معدل عائد 14%. وفق نظام تقييم المديرين الحالي، أي المديرين لديه حافز لتنفيذ المشروع؟",
+    "choicesAr": [
+      "لدى كلا المديرين حافز لتنفيذ المشروع.",
+      "ليس لدى أي من المديرين حافز لتنفيذ المشروع.",
+      "لدى مدير قسم الأجهزة المنزلية حافز لتنفيذ المشروع، بينما لا يوجد حافز لدى مدير قسم معدات الإنشاء.",
+      "لدى مدير قسم معدات الإنشاء حافز لتنفيذ المشروع، بينما لا يوجد حافز لدى مدير قسم الأجهزة المنزلية."
+    ],
+    "explanationAr": "يميل المدير الذي يقيم على أساس ROI إلى رفض أي مشروع رأسمالي يقل معدل عائده المتوقع عن العائد الحالي للقسم. ولذلك يميل مدير قسم الأجهزة المنزلية إلى رفض مشروعه (14% < 16%). أما مدير قسم معدات الإنشاء فيميل إلى قبول مشروعه. والدخل المتبقي هو الدخل المحقق من المشروع مطروحًا منه مبلغ مستهدف يعادل الفائدة المحتسبة على رأس المال المستثمر. وبالتالي، كلما تجاوز العائد المتوقع للمشروع تكلفة رأس المال، مال المدير الذي يقيم على أساس الدخل المتبقي إلى قبوله (14% > 12%)."
   },
   {
     "unit": 16,
@@ -2694,7 +2726,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Residual income is the excess of the return on investment\nover a targeted amount equal to an imputed interest charge on\ninvested capital. Of the choices presented, this one is the\nmost likely to present the divisional managers with an\nincentive to focus on increasing profitability for the firm as a\nwhole.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشعر شركة بالقلق من أن مديري أقسامها لا يتخذون قرارات تحقق مصلحة الشركة ككل. للحد من ذلك، ينبغي أن تستخدم نظام تقييم أداء يركز على:",
+    "choicesAr": [
+      "انحرافات الموازنة المرنة.",
+      "الدخل التشغيلي.",
+      "التكاليف القابلة للرقابة.",
+      "الدخل المتبقي."
+    ],
+    "explanationAr": "الدخل المتبقي هو الدخل المحقق من الاستثمار مطروحًا منه مبلغ مستهدف يعادل الفائدة المحتسبة على رأس المال المستثمر. ومن بين البدائل المعروضة، يرجح أن يوفر هذا المقياس أفضل حافز لمديري الأقسام للتركيز على زيادة ربحية المنشأة ككل."
   },
   {
     "unit": 16,
@@ -2711,7 +2751,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Residual income can be calculated as follows:\nResidual income = Operating profit – (Assets of business unit × Required ra\n= $1,000,000 – ($750,000 × 10%)\n= $1,000,000 – $75,000\n= $925,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي معلومات مختارة من القوائم المالية للسنة المالية الماضية:\nالأصول المتداولة $500,000\nالأصول الثابتة 250,000\nالالتزامات المتداولة 100,000\nالديون طويلة الأجل 300,000\nحقوق المساهمين 350,000\nالربح التشغيلي 1,000,000\nضرائب الدخل 400,000\nصافي الدخل 600,000\nتبلغ تكلفة رأس مال الشركة 10%. وظلت مبالغ قائمة المركز المالي ثابتة طوال السنة. ما الدخل المتبقي للشركة في السنة الماضية؟",
+    "choicesAr": [
+      "$525,000",
+      "$575,000",
+      "$925,000",
+      "$975,000"
+    ],
+    "explanationAr": "يمكن حساب الدخل المتبقي كما يلي:\nالدخل المتبقي = الربح التشغيلي – (أصول وحدة الأعمال × معدل العائد المطلوب)\n= $1,000,000 – ($750,000 × 10%)\n= $1,000,000 – $75,000\n= $925,000"
   },
   {
     "unit": 16,
@@ -2728,7 +2776,15 @@
     ],
     "answerIndex": 3,
     "explanation": "ROI is calculated by dividing the business unit profit by the\naverage total assets. The ROI for West is 30%, the lowest of\nthe four divisions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي النتائج المالية للأقسام الإقليمية الأربعة:\nالبيان | الشمال | الجنوب | الشرق | الغرب\nصافي الربح | $1,000 | $5,000 | $4,000 | $7,500\nالأصول | 2,500 | 15,000 | 8,000 | 25,000\nالالتزامات | 500 | 7,000 | 1,000 | 5,000\nإجمالي حقوق الملكية | 2,000 | 8,000 | 7,000 | 20,000\nأي الأقسام يحقق أقل عائد على الاستثمار؟",
+    "choicesAr": [
+      "الشمال.",
+      "الجنوب.",
+      "الشرق.",
+      "الغرب."
+    ],
+    "explanationAr": "يحسب العائد على الاستثمار بقسمة ربح وحدة الأعمال على متوسط إجمالي أصولها. ويبلغ العائد على الاستثمار للقسم الغربي 30%، وهو الأقل بين الأقسام الأربعة."
   },
   {
     "unit": 16,
@@ -2745,7 +2801,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The manufacturer will have the most difficulty in comparing\ndivisions that vary significantly in age because depreciation\nwill already have been deducted on older assets for older\ndivisions, so the comparison is not equitable compared to\nnewer divisions that have new investments. The assets of the\nolder divisions will have a lower book value.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يقيس مصنع ملابس اقتصادية أداء أقسامه على أساس العائد على الاستثمار. إذا عرف الاستثمار بأنه القيمة الدفترية لجميع الأصول المسجلة في قائمة المركز المالي للقسم، ففي أي الحالات التالية يواجه المصنع أكبر صعوبة في مقارنة الأقسام التي تختلف اختلافًا جوهريًا في:",
+    "choicesAr": [
+      "العمر.",
+      "الموقع الجغرافي.",
+      "أسلوب الإدارة.",
+      "حجم المبيعات."
+    ],
+    "explanationAr": "يواجه المصنع أكبر صعوبة في مقارنة الأقسام التي تختلف جوهريًا في العمر، لأن إهلاك الأصول القديمة في الأقسام الأقدم يكون قد خصم من قيمتها، فلا تكون المقارنة عادلة مع الأقسام الأحدث التي لديها استثمارات جديدة. وتكون القيمة الدفترية لأصول الأقسام الأقدم أقل نتيجة الإهلاك المتراكم، مع ثبات العوامل الأخرى."
   },
   {
     "unit": 16,
@@ -2762,7 +2826,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Return on investment can be calculated by dividing net\nincome (or profit) by net assets. G City has a return on\ninvestment of 32.2% ($294,000 ÷ $914,000), which is the\nhighest return on investment.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لمنشأة أربعة فروع في أنحاء الولاية. وفيما يلي نتائج التشغيل للسنة الماضية:\nالبيان | مدينة K | مدينة G | مدينة W | مدينة S\nمبيعات الفرع | $300,000 | $420,000 | $540,000 | $606,000\nربح الفرع | 120,000 | 294,000 | 318,000 | 104,000\nمتوسط إجمالي الأصول | 805,000 | 914,000 | 1,650,000 | 745,000\nأي الفروع حقق أعلى عائد على الاستثمار؟",
+    "choicesAr": [
+      "مدينة K.",
+      "مدينة G.",
+      "مدينة W.",
+      "مدينة S."
+    ],
+    "explanationAr": "يمكن حساب العائد على الاستثمار بقسمة صافي الدخل (أو الربح) على الأصول المستخدمة كأساس للاستثمار. ويحقق فرع مدينة G عائدًا على الاستثمار قدره 32.2% ($294,000 ÷ $914,000)، وهو أعلى عائد."
   },
   {
     "unit": 16,
@@ -2796,7 +2868,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The residual income method is a variation of ROI that\nmeasures performance in dollar terms rather than as a\npercentage return. Thus, a company will often prefer the\nresidual income method so that it can concentrate on\nmaximizing the amount of income rather than a percentage\nROI.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا يفضل الدخل المتبقي غالبًا على العائد على الاستثمار (ROI) كمقياس لتقييم الأداء؟",
+    "choicesAr": [
+      "معدل الفائدة المحتسبة المستخدم في حساب الدخل المتبقي أسهل في تحديده من المعدل المستهدف الذي يقارن بالعائد المحسوب على الاستثمار.",
+      "يستخدم متوسط الاستثمار مع الدخل المتبقي بينما يستخدم استثمار نهاية السنة مع ROI.",
+      "يركز الدخل المتبقي على تعظيم مبلغ الدخل بدلًا من نسبة العائد كما في ROI.",
+      "الدخل المتبقي مقياس عبر الزمن بينما يمثل ROI نتائج فترة زمنية واحدة."
+    ],
+    "explanationAr": "طريقة الدخل المتبقي أحد أساليب قياس الأداء المرتبطة بالعائد على الاستثمار، لكنها تقيس الأداء بمبلغ نقدي بدلًا من نسبة عائد. ولذلك تفضل الشركة أحيانًا طريقة الدخل المتبقي حتى تركز على تعظيم مبلغ الدخل بدلًا من نسبة العائد على الاستثمار."
   },
   {
     "unit": 16,
@@ -2813,7 +2893,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The residual income method is a variation of ROI that\nmeasures performance in dollar terms, rather than as a\npercentage return. Thus, a company will sometimes use the\nresidual income method so that it can concentrate on\nmaximizing the amount of income rather than a percentage\nROI. The residual income is calculated by deducting the cost\nof capital (Assets × Required rate of return) from the operating\nincome.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يركز العائد على الاستثمار على الدخل كنسبة من الاستثمار، بينما يركز الدخل المتبقي على:",
+    "choicesAr": [
+      "تكلفة رأس المال المحتسبة.",
+      "الدخل التشغيلي مطروحًا منه تكلفة رأس المال المحتسبة.",
+      "قرارات الإدارة.",
+      "تكلفة رأس المال مضروبة في مبلغ الاستثمار."
+    ],
+    "explanationAr": "طريقة الدخل المتبقي أحد أساليب قياس الأداء المرتبطة بالعائد على الاستثمار، لكنها تقيس الأداء بمبلغ نقدي بدلًا من نسبة عائد. ولذلك تستخدمها الشركة أحيانًا للتركيز على تعظيم مبلغ الدخل بدلًا من نسبة ROI. ويحسب الدخل المتبقي بخصم تكلفة رأس المال المحتسبة (الأصول × معدل العائد المطلوب) من الدخل التشغيلي."
   },
   {
     "unit": 16,
