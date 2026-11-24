@@ -104,6 +104,8 @@ const pendingSourceLayouts = new Set([
   // §7 Ardmore/Water Control and §8 Folsom cases have interleaved table/prose columns.
   "15.7.1", "15.7.2", "15.7.3", "15.7.4", "15.7.5", "15.7.6", "15.7.7", "15.7.8", "15.7.9",
   "15.8.2", "15.8.6", "15.8.7", "15.8.8",
+  // §8 Q30 Xerbert income statement has truncated numeric columns.
+  "15.8.30",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
@@ -119,7 +121,7 @@ const pendingAnswerRoundingReviews = new Set(["14.2.23"]);
  * The sourceLayoutReview flag is the shared compatibility safety gate.
  */
 // Unit 15 §6 Q28 asks for actual machine hours but volume variance only identifies standard allowed hours.
-const pendingAnswerConsistencyReviews = new Set(["14.6.21", "15.6.28", "15.6.58", "15.6.61"]);
+const pendingAnswerConsistencyReviews = new Set(["14.6.21", "15.6.28", "15.6.58", "15.6.61", "15.8.26", "15.8.31"]);
 
 /** §5 Q10 is a follow-up to Montero's preceding case: its isolated stem
  * contains neither the prior cash collections nor the cash expense schedule.
