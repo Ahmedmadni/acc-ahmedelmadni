@@ -221,7 +221,7 @@ const wave6=new Map([
  [29,[931,3,"a89c9f14"]],
 ]);
 test("Unit 16 Wave 6: 85 drafts and 13 immutable investment performance sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>(r.section<=2||(r.section===3&&r.number<=30))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,85);
  assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys(),...wave6.keys()]);
  for(const [n,[page,index,hash]] of wave6){
@@ -263,4 +263,54 @@ test("Unit 16 Wave 6: independent ROI/RI decisions, asset funding counterexample
   assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
   assert.ok(adapter.includes('"16.3.'+n+'"'));
  }
+});
+
+const wave7=new Map([
+ [31,[933,2,"ffafa197"]],[32,[935,1,"183fcf02"]],[33,[935,1,"755fafcd"]],
+ [34,[937,3,"527b61e8"]],[35,[938,2,"4918f903"]],[36,[940,3,"3cf064aa"]],
+ [37,[942,0,"23a1eb92"]],[38,[943,1,"2d0e6301"]],[39,[944,1,"5a8c227e"]],
+ [40,[945,1,"b779f5a2"]],[41,[946,1,"ac2180e6"]],[42,[948,2,"aca3172f"]],
+]);
+test("Unit 16 Wave 7: 97 drafts and 12 immutable investment evaluation sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,97);
+ assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys(),...wave6.keys(),...wave7.keys()]);
+ for(const [n,[page,index,hash]] of wave7){
+  const r=q3(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 7: ROI and RI projects, constrained investments, incentives and review hold",()=>{
+ const ri=(income,capital,rate)=>income-capital*rate;
+ const roi=(income,capital)=>income/capital;
+ assert.equal(roi(40000+15000,400000+100000),.11);
+ assert.equal(ri(15000,100000,.08),7000);
+ assert.equal(Math.round(100*roi(175000-50000,800000)),16);
+ const projects=[[1250000,5000000],[1500000,7500000],[850000,1500000],[750000,10000000]];
+ assert.deepEqual(projects.map(([i,c])=>ri(i,c,.08)),[850000,900000,730000,-50000]);
+ assert.equal(roi(2520000,14000000),.18);
+ assert.ok(14000000+10000000>20000000);
+ assert.ok(roi(1000000,9000000)<.15);
+ assert.ok(roi(1650000,10000000)<roi(2520000,14000000));
+ assert.ok(roi(1642000+218400,9818000+1200000)<.18);
+ assert.equal((100*roi(1642000+315000,9818000+730000)).toFixed(1),"18.6");
+ assert.equal((100*roi(8000000-6350000-180000,1200000+3175000)).toFixed(1),"33.6");
+ assert.equal(ri(250000,1000000,.1),150000);
+ assert.equal(ri(25000,500000,.06),-5000);
+ assert.equal(ri(12000,100000,.08),4000);
+ // Corporate hurdle rate is not necessarily the corporate's existing ROI.
+ assert.ok(roi(200000+12000,1000000+100000)<roi(200000,1000000));
+ for(const [n,expected] of [[31,"To 11% and increase the residual income by $7,000"],[32,"16%"],[33,"Project B"],[34,"Project C only"],[35,"Plan 2"],[37,"33.6%"],[38,"AED 150,000"],[40,"$(5,000)"]])
+  assert.ok(q3(n).choices[q3(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ assert.equal(q3(42).choices[q3(42).answerIndex].trim().replace(/\s+/g," "),"Accept Accept");
+ const held=q3(43);
+ assert.equal(held.page,949);assert.equal(held.answerIndex,0);
+ assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+ assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.3.43"'));
 });
