@@ -81,6 +81,17 @@ const pendingSourceLayouts = new Set([
   // Do not grade these English-only records until the authorized source
   // pages and answer rationale are reviewed visually.
   "15.3.32", "15.3.37", "15.3.38", "15.3.39",
+  // §4 Q1/Q2 use the Jackson standard-cost table, whose columns were
+  // flattened; Q9/Q10 reuse Arrow's visibly truncated 'Sta' and 'C' headings.
+  // §4 Q12 has a side-by-side five-job variance table requiring page layout
+  // comparison before a trustworthy scored presentation.
+  // §4 Q19's source calculation presents a negative signed denominator but
+  // reports a positive rate; §4 Q24's algebra states the wrong sign while
+  // reaching the correct numeric wage answer; and §4 Q32 treats products
+  // sold as direct-labor input hours without adequate input-hour data.
+  // Keep originals English-first, ungraded and source-review-only.
+  "15.4.1", "15.4.2", "15.4.9", "15.4.10", "15.4.12",
+  "15.4.19", "15.4.24", "15.4.32",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
