@@ -64,6 +64,8 @@ jobs:
         run: node --test scripts/tests/cma-unit15-arabic-wave2.test.mjs
       - name: CMA Unit 15 flexible budgeting wave 3 and source review regression
         run: node --test scripts/tests/cma-unit15-arabic-wave3.test.mjs
+      - name: CMA Unit 15 wave 4 Arabic flexible-budget numerical release checks
+        run: node --test scripts/tests/cma-unit15-arabic-wave4.test.mjs
       - name: CMA browser-only translation and external fallback tests
         run: node --test scripts/tests/cma-translation-browser.test.mjs
       - name: CMA on-site Part 2 bank regression tests
