@@ -2023,7 +2023,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The direct materials price variance is defined as the actual\nquantity used in production times the standard price minus the\nactual price. This calculation is [3,000 units × ($8.00 – $7.90)]\n= $300 favorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت القوائم المالية خسارة قدرها $3,000 في مشروع إنشاء استاد جديد، بينما كانت الموازنة تتوقع ربحًا قدره $6,000. وفيما يلي بيانات الطوب الفعلية والمدرجة في الموازنة:\nالفعلي      الموازنة\nعدد ربطات الطوب      3,000      2,850\nتكلفة ربطة الطوب      $7.90      $8.00\nأي العبارات التالية صحيحة بشأن مشروع الاستاد؟",
+    "choicesAr": [
+      "انحراف السعر ملائم بمبلغ $285.",
+      "انحراف السعر ملائم بمبلغ $300.",
+      "انحراف الكفاءة غير ملائم بمبلغ $1,185.",
+      "انحراف الموازنة المرنة غير ملائم بمبلغ $900."
+    ],
+    "explanationAr": "يُعرّف انحراف سعر المواد المباشرة بأنه الكمية الفعلية المستخدمة في الإنتاج مضروبة في الفرق بين السعر المعياري والسعر الفعلي. ويكون الحساب [3,000 وحدة × ($8.00 − $7.90)] = $300 انحرافًا ملائمًا."
   },
   {
     "unit": 15,
@@ -2040,7 +2048,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The direct materials price variance, when it is isolated early, is\ncalculated as the quantity purchased times the standard price\nminus the actual price (this firm has decided that waiting until\nthe quantity actually used is known delays the usefulness of\nthe calculation). The calculation is therefore [500,000 × ($2.00\n– $2.02)] = $10,000 unfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تفصل شركة انحراف سعر المواد الخام في أقرب وقت ممكن لإبلاغ المدير المسؤول مبكرًا. وحُسبت كمية المواد المدرجة في الموازنة السنوية كما يلي:\n150,000 وحدة منتجات تامة × 3 أرطال/وحدة × $2.00/رطل =\n$900,000\nوكانت النتائج الفعلية للسنة:\nالمنتجات التامة المصنعة      160,000 وحدة\nالمواد الخام المشتراة      500,000 رطل\nالمواد الخام المستخدمة      490,000 رطل\nتكلفة الرطل      $2.02\nما انحراف سعر المواد الخام للسنة؟",
+    "choicesAr": [
+      "$9,600 غير ملائم.",
+      "$9,800 غير ملائم.",
+      "$10,000 غير ملائم.",
+      "$20,000 غير ملائم."
+    ],
+    "explanationAr": "عندما يُفصل انحراف سعر المواد المباشرة مبكرًا، يُحسب على أساس الكمية المشتراة مضروبة في الفرق بين السعر المعياري والسعر الفعلي؛ لأن انتظار معرفة الكمية المستخدمة يؤخر وصول المعلومات إلى المدير المسؤول. ولذلك يكون الحساب [500,000 × ($2.00 − $2.02)] = $10,000 انحرافًا غير ملائم."
   },
   {
     "unit": 15,
@@ -2057,7 +2073,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The standard per-unit cost of direct materials can be found by\ndividing the total cost at either budgeted level of production by\nthe units at that level ($15,000 ÷ 10,000 = $1.50 per unit or\n$22,500 ÷ 15,000 = $1.50 per unit). Since 12,000 units were\nactually consumed, the flexible budget for direct materials, that\nis, the amount that should have been spent given the\nachieved level of production, was $18,000 (12,000 × $1.50).\nThe difference between the flexible budget and the actual\namount spent on direct materials is the flexible budget\nvariance ($18,000 – $20,000 = $2,000 U).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت شركة في بداية السنة الموازنة الشهرية التالية للمواد المباشرة:\nالوحدات المنتجة والمباعة      10,000      15,000\nالمواد المباشرة      $15,000      $22,500\nوفي نهاية الشهر أظهرت السجلات إنتاج وبيع 12,000 وحدة، وإنفاق $20,000 على المواد المباشرة. وتتطلب كل وحدة منتجة وحدة واحدة من المواد المباشرة. ما انحراف الموازنة المرنة للمواد المباشرة؟",
+    "choicesAr": [
+      "$2,000 ملائم.",
+      "$2,000 غير ملائم.",
+      "$5,000 ملائم.",
+      "$5,000 غير ملائم."
+    ],
+    "explanationAr": "يمكن استخراج التكلفة المعيارية للمواد لكل وحدة من أي من مستويي الموازنة بقسمة التكلفة الإجمالية على عدد الوحدات: ($15,000 ÷ 10,000 = $1.50 للوحدة، أو $22,500 ÷ 15,000 = $1.50 للوحدة). وبما أن الشركة استهلكت فعليًا 12,000 وحدة، فإن المبلغ الذي كان ينبغي إنفاقه وفق الموازنة المرنة يبلغ $18,000 (12,000 × $1.50). ويكون الفرق بين الموازنة المرنة والإنفاق الفعلي انحرافًا قدره ($18,000 − $20,000 = $2,000 غير ملائم)."
   },
   {
     "unit": 15,
@@ -2074,7 +2098,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Shipping employees send out finished products to customers.\nThey are not involved in the production process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حققت إحدى الشركات انحراف كفاءة (استخدام) مواد غير ملائم خلال شهر معين. أي العوامل التالية هو الأقل احتمالًا أن يكون سببًا لهذا الانحراف؟",
+    "choicesAr": [
+      "عدم كفاية تدريب العاملين في العمل المباشر.",
+      "ضعف أداء موظفي الشحن.",
+      "سوء تصميم عملية الإنتاج أو المنتج.",
+      "رداءة جودة المواد الخام."
+    ],
+    "explanationAr": "يتولى موظفو الشحن إرسال المنتجات التامة إلى العملاء، ولا يشاركون في عملية التصنيع نفسها؛ لذا فإن ضعف أدائهم ليس سببًا معتادًا لزيادة استهلاك المواد خلال الإنتاج."
   },
   {
     "unit": 15,
@@ -2091,7 +2123,15 @@
     ],
     "answerIndex": 3,
     "explanation": "All three departments bear responsibility for this fiasco. The\nMarketing Department should never have accepted a rush\norder for an item not carried in regular stock without first\ndetermining whether the Production Department would be\nable to fill the order on time and at an acceptable level of\nquality. The Purchasing Department did not give a rush order\nthe appropriate level of attention; the paperwork should never\nhave been in a position to be misplaced. The Production\nSupervisor should not have given in to pressure from the\nMarketing Department to bypass the normal inspection\nprocess; this simply led to more delays and lower quality.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قبلت إدارة التسويق مؤخرًا طلبًا عاجلًا من عميل مهم لتصنيع صنف غير متوافر بالمخزون. وأحالت الأوراق اللازمة إلى إدارة الإنتاج التي اشتكت من ضيق الوقت، لكنها وافقت على التنفيذ وأرسلت طلب المواد إلى إدارة المشتريات. وأضاع أحد موظفي المشتريات المستندات مؤقتًا، وعندما عُثر عليها لم يعد هناك وقت للشراء من المورد المعتاد. وُجد مورد آخر يعرض سعرًا جذابًا، ووصلت المواد وأُدخلت إلى الإنتاج سريعًا دون إجراءات فحص الجودة المعتادة بناءً على تعليمات مشرف الإنتاج لتعويض الوقت الضائع. واتضح أن المواد رديئة الجودة وتسببت في صعوبات كبيرة لعمال خط التجميع. ما التحديد الأدق للمسؤولية عن انحراف استخدام المواد في هذه الحالة؟",
+    "choicesAr": [
+      "المشتريات وحدها.",
+      "المشتريات والتسويق.",
+      "التسويق والإنتاج.",
+      "المشتريات والتسويق والإنتاج."
+    ],
+    "explanationAr": "تتقاسم الإدارات الثلاث المسؤولية. فلا ينبغي للتسويق قبول طلب عاجل لصنف غير مخزون دون التأكد مسبقًا من قدرة الإنتاج على الوفاء بالموعد والجودة المطلوبة. كما قصرت المشتريات في إعطاء الطلب العاجل الاهتمام اللازم وضاعت أوراقه. وكان يجب ألا يسمح مشرف الإنتاج لضغط التسويق بتجاوز فحص الجودة المعتاد؛ لأن ذلك تسبب في تأخير إضافي ورداءة المنتج."
   },
   {
     "unit": 15,
@@ -2125,7 +2165,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An unfavorable material efficiency variance means that excess\nmaterials were used during production. This might be due to\nbuying inferior quality materials or using workers who were not\nas skilled in working with the materials. Also, new equipment\nmight damage materials during early production runs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "شهد أحد مصانع شركة خلال مايو انحراف كفاءة مواد كبيرًا وغير ملائم أثناء إنتاج منتجها الوحيد. أي الأسباب التالية هو الأقل احتمالًا لتفسير ظهور الانحراف غير الملائم؟",
+    "choicesAr": [
+      "شراء مواد منخفضة الجودة.",
+      "انخفاض الإنتاج الفعلي عن الإنتاج المخطط.",
+      "استخدام عاملين أقل مهارة مما كان متوقعًا.",
+      "تركيب معدات إنتاج بديلة مؤخرًا."
+    ],
+    "explanationAr": "يعني انحراف كفاءة المواد غير الملائم استهلاك مواد زائدة في الإنتاج. وقد ينتج عن شراء مواد رديئة أو استخدام عمال أقل مهارة من المتوقع. ويمكن للمعدات الجديدة أيضًا إتلاف مواد خلال التشغيل الأولي. أما مجرد انخفاض كمية الإنتاج عن الخطة فلا يفسر انحراف الاستخدام عند مقارنته بالكمية المعيارية المسموح بها للإنتاج الفعلي."
   },
   {
     "unit": 15,
@@ -2142,7 +2190,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The material quantity variance is equal to the amount of\nmaterial used, minus the standard amount of material used,\nmultiplied by the standard cost. The standard quantity of\nmaterial for 31,000 units is 124,000 pounds (4 pounds/unit).\nTherefore, the material quantity variance is $30,000 U\n[(130,000 – 124,000) × $5].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة التكلفة المعيارية للمواد المباشرة لمنتجها الأساسي بمبلغ $20 لكل وحدة تامة، بناءً على 4 أرطال من المواد بسعر معياري $5 للرطل. وفي مارس توقعت إنتاج 32,000 وحدة، لكنها اشترت واستخدمت فعليًا 130,000 رطل وأنتجت 31,000 وحدة تامة. وكان سعر الشراء الفعلي للرطل $5.40. فما انحراف كمية المواد لشهر مارس؟",
+    "choicesAr": [
+      "$10,000 غير ملائم.",
+      "$20,000 غير ملائم.",
+      "$30,000 غير ملائم.",
+      "$32,400 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف كمية المواد الفرق بين الكمية الفعلية المستخدمة والكمية المعيارية المسموح بها، مضروبًا في السعر المعياري. وتبلغ الكمية المعيارية لإنتاج 31,000 وحدة مقدار 124,000 رطل (4 أرطال لكل وحدة). لذلك يبلغ انحراف الكمية $30,000 غير ملائم [(130,000 − 124,000) × $5]."
   },
   {
     "unit": 15,
@@ -2159,7 +2215,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since the company started operations on January 1, there is\nno beginning inventory of fabric. The company produced\n20,000 units of finished product at 4 yards of fabric per unit;\nthus, the finished products used 80,000 yards of fabric. The\nmaterial quantity variance was $1,240 unfavorable. The firm’s\nstandard cost system allows for $1.55 per yard; thus, the\nunfavorable material quantity variance comes from using 800\nextra yards ($1,240 ÷ $1.55/yard). Therefore, the company\nused 80,800 yards for production (80,000 yards + 800 yards).\nDirect materials quantity variance = Standard price × (Actual\nquantity – Standard quantity)\n$1,240 = $1.55 × (Actual quantity – 80,000 yards)\n$1,240 = ($1.55 × Actual quantity) – $124,000\n$125,240 = $1.55 × Actual quantity\nActual quantity = 80,800 yards\nHowever, this amount is only the direct materials used in\nproduction. There were 2,100 yards of fabric included in the\nending raw materials inventory that were not used in\ninventory. Adding these 2,100 yards to 80,800 yards from\nproduction yields 82,900 yards purchased during the year.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بدأت شركة أعمالها في 1 يناير من السنة الجارية. ويسمح نظام تكلفتها المعيارية باستخدام 4 ياردات قماش بسعر $1.55 للياردة لكل وحدة منتج تام. وخلال السنة أنتجت 20,000 وحدة وباعت 18,000 وحدة. ولم يبق مخزون إنتاج تحت التشغيل في نهاية السنة، لكن مخزون المواد الخام الختامي تضمن 2,100 ياردة من القماش. وإذا كان انحراف كمية المواد غير ملائم بمبلغ $1,240، فكم ياردة قماش اشترتها الشركة خلال السنة؟",
+    "choicesAr": [
+      "72,800 ياردة.",
+      "74,900 ياردة.",
+      "80,800 ياردة.",
+      "82,900 ياردة."
+    ],
+    "explanationAr": "لأن الشركة بدأت نشاطها في 1 يناير، فلا يوجد مخزون قماش أول المدة. وأنتجت 20,000 وحدة تامة، تحتاج كل منها إلى 4 ياردات؛ فتبلغ الكمية المعيارية 80,000 ياردة. وكان انحراف كمية المواد $1,240 غير ملائم، والسعر المعياري $1.55 للياردة، ما يعني استخدام 800 ياردة زائدة ($1,240 ÷ $1.55 للياردة). لذا بلغت الكمية المستخدمة في الإنتاج 80,800 ياردة (80,000 ياردة + 800 ياردة).\nانحراف كمية المواد المباشرة = السعر المعياري × (الكمية الفعلية − الكمية المعيارية)\n$1,240 = $1.55 × (الكمية الفعلية − 80,000 ياردة)\n$1,240 = ($1.55 × الكمية الفعلية) − $124,000\n$125,240 = $1.55 × الكمية الفعلية\nالكمية الفعلية = 80,800 ياردة\nلكن ذلك يمثل فقط القماش المستخدم في الإنتاج. ويوجد 2,100 ياردة قماش ضمن مخزون المواد الخام الختامي لم تُستهلك. وبإضافة 2,100 ياردة إلى الكمية المستخدمة 80,800 ياردة، تصبح كمية المشتريات خلال السنة 82,900 ياردة."
   },
   {
     "unit": 15,
@@ -2176,7 +2240,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The direct material efficiency variance equals the standard\nquantity minus the actual quantity, times standard price. For a\nproduction level of 310,000, the direct materials needed\nequals 155,000 pounds [310,000 × (150,000 ÷ 300,000)], and\nmaterials actually used was 148,800 pounds (310,000 × 0.48).\nThus, the variance is $4,650 favorable {SP × (AQ – SQ) =\n[$0.75 × (148,800 – 155,000)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أعدت شركة موازنة سنوية للمواد المباشرة لإنتاج 300,000 وحدة كما يلي:\n150,000 رطل مواد بسعر $0.75 للرطل = $112,500\nوخلال السنة أنتجت الشركة 310,000 وحدة تامة باستخدام 0.48 رطل لكل وحدة بتكلفة $0.76 للرطل. ما انحراف كفاءة المواد المباشرة؟",
+    "choicesAr": [
+      "$588 غير ملائم.",
+      "$900 ملائم.",
+      "$1,488 غير ملائم.",
+      "$4,650 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف كفاءة المواد المباشرة الفرق بين الكمية المعيارية والكمية الفعلية مضروبًا في السعر المعياري. وعند إنتاج 310,000 وحدة تكون كمية المواد المسموح بها 155,000 رطل [310,000 × (150,000 ÷ 300,000)]، بينما استُخدم فعليًا 148,800 رطل (310,000 × 0.48). وبالتالي يبلغ الانحراف $4,650 ملائمًا {السعر المعياري × (الكمية الفعلية − المعيارية) = [$0.75 × (148,800 − 155,000)]}."
   },
   {
     "unit": 15,
@@ -2244,7 +2316,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The direct materials price variance equals the actual quantity\nused in production times the standard price minus the actual\nprice. The variance is $760,000 unfavorable [190,000 × ($24 –\n$28)]. The variance is unfavorable because the actual price\nexceeded the standard price.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُصنّع إحدى الشركات منتجًا واحدًا وتستخدم نظام التكاليف المعيارية. وكانت لديها خلال أبريل البيانات التالية:\nالبند                                      المواد المباشرة       العمل المباشر\nالتكلفة الفعلية لكل وحدة مدخلات (أرطال وساعات)       $28       $18\nالسعر المعياري لكل وحدة مدخلات       $24       $20\nالمدخلات المعيارية المسموح بها لكل وحدة منتج       10       4\nوحدات المدخلات الفعلية       190,000       78,000\nوحدات الإنتاج الفعلي       20,000       20,000\nما انحراف سعر المواد المباشرة لشهر أبريل؟",
+    "choicesAr": [
+      "$760,000 ملائم.",
+      "$760,000 غير ملائم.",
+      "$240,000 غير ملائم.",
+      "$156,000 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف سعر المواد المباشرة الكمية الفعلية المستخدمة في الإنتاج مضروبة في الفرق بين السعر المعياري والسعر الفعلي. ويبلغ الانحراف $760,000 غير ملائم [190,000 × ($24 − $28)]، لأن السعر الفعلي تجاوز السعر المعياري."
   },
   {
     "unit": 15,
@@ -2261,7 +2341,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The direct materials efficiency variance equals the standard\nquantity minus the actual quantity, times standard price. The\nvariance is $240,000 favorable {[(10 × 20,000) – 190,000] ×\n$24}. The variance is favorable because the actual quantity\nwas less than the standard quantity allowed for the actual\noutput.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُصنّع إحدى الشركات منتجًا واحدًا وتستخدم نظام التكاليف المعيارية. وكانت لديها خلال أبريل البيانات التالية:\nالبند                                      المواد المباشرة       العمل المباشر\nالتكلفة الفعلية لكل وحدة مدخلات (أرطال وساعات)       $28       $18\nالسعر المعياري لكل وحدة مدخلات       $24       $20\nالمدخلات المعيارية المسموح بها لكل وحدة منتج       10       4\nوحدات المدخلات الفعلية       190,000       78,000\nوحدات الإنتاج الفعلي       20,000       20,000\nما انحراف كفاءة المواد المباشرة لشهر أبريل؟",
+    "choicesAr": [
+      "$156,000 ملائم.",
+      "$240,000 ملائم.",
+      "$240,000 غير ملائم.",
+      "$760,000 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف كفاءة المواد المباشرة الفرق بين الكمية المعيارية المسموح بها للإنتاج الفعلي والكمية الفعلية، مضروبًا في السعر المعياري. ويبلغ الانحراف $240,000 ملائم {[(10 × 20,000) − 190,000] × $24}؛ لأن الكمية الفعلية أقل من المسموح به معياريًا للإنتاج الفعلي."
   },
   {
     "unit": 15,
@@ -2278,7 +2366,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The actual quantity (AQ) used in production is used for the\ndirect materials efficiency variance calculation. AQ is 25,000\nfeet. The standard quantity (SQ) allowed based on actual\nproduction uses the standard for materials per unit. That\nstandard is based on the budgeted 50,000 units and 25,000\nfeet, which means 0.5 feet per unit. The SQ is therefore\n24,000 feet (0.5 feet per unit × 48,000 units). The variance is\n$4,000 [(24,000 feet – 25,000 feet) × $4]. The variance is\nunfavorable because the AQ used was greater than the\nstandard quantity allowed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهرت الموازنة الرئيسية لشركة أنها تخطط لإنتاج 50,000 وحدة تامة باستخدام 25,000 قدم من المواد بسعر $4 للقدم. وأنتجت الشركة فعليًا 48,000 وحدة تامة، واشترت 27,000 قدم مواد بسعر $4.25 للقدم، واستخدمت 25,000 قدم في الإنتاج. ما انحراف كفاءة المواد المباشرة؟",
+    "choicesAr": [
+      "$0.",
+      "$4,000 غير ملائم.",
+      "$6,000 غير ملائم.",
+      "$8,000 غير ملائم."
+    ],
+    "explanationAr": "تُستخدم الكمية الفعلية (AQ) المستهلكة في الإنتاج لحساب انحراف الكفاءة؛ وهي 25,000 قدم. أما الكمية المعيارية المسموح بها (SQ) فتُحسب بناءً على الإنتاج الفعلي ومعيار المدخلات لكل وحدة. وبما أن الموازنة بُنيت على 50,000 وحدة تحتاج إلى 25,000 قدم، فإن المعيار يساوي 0.5 قدم للوحدة. وعليه تكون الكمية المعيارية 24,000 قدم (0.5 قدم × 48,000 وحدة). ويبلغ الانحراف $4,000 [(24,000 − 25,000) × $4]، وهو غير ملائم لأن الكمية الفعلية المستخدمة زادت على المسموح به معياريًا."
   },
   {
     "unit": 15,
@@ -2295,7 +2391,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The materials price variance is calculated by multiplying the\ndifference between actual price and standard price by the\nactual units purchased. The materials usage variance is\ncalculated by multiplying the difference between the actual\nusage and the standard usage by the standard price. Thus,\nthe standard unit cost is used to compute both variances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الانحرافات التالية يُستخدم في حسابها السعر أو التكلفة المعيارية للوحدة؟",
+    "choicesAr": [
+      "كل من انحراف استخدام المواد المباشرة وانحراف سعر المواد المباشرة.",
+      "انحراف استخدام المواد المباشرة فقط دون انحراف سعرها.",
+      "انحراف سعر العمل المباشر دون انحراف كفاءته.",
+      "انحراف كفاءة العمل المباشر دون انحراف معدل أجره."
+    ],
+    "explanationAr": "يُحسب انحراف سعر المواد بضرب الفرق بين السعر الفعلي والسعر المعياري في عدد الوحدات المشتراة فعلًا، ويُحسب انحراف الاستخدام بضرب الفرق بين الكمية الفعلية المستخدمة والكمية المعيارية في السعر المعياري. لذلك تدخل التكلفة المعيارية للوحدة في حساب كلا الانحرافين."
   },
   {
     "unit": 15,
@@ -2312,7 +2416,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An unfavorable direct materials price variance means that the\nactual price paid for materials is higher than the estimated\nstandard price. A favorable materials quantity variance may\nindicate that normal spoilage has been reduced. Both of these\nvariances could result from the purchase of better and more\nexpensive materials, which would increase purchase price but\ndecrease spoilage.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طُلب من مدير مشروع تفسير انحراف مواد ملائم قدره $2,220 في مشروع معدات ملاعب. وبالتحليل تبين أن الانحراف يتكون من انحراف سعر غير ملائم قدره $1,700، وانحراف كمية ملائم قدره $3,920. ما أفضل تفسير لهذه الانحرافات؟",
+    "choicesAr": [
+      "اختارت إدارة المشتريات موردًا جديدًا واشترت المواد بسعر أقل.",
+      "أتاحت جدولة الإنتاج الممتازة تخفيض مصروفات الشحن لدى المشتريات.",
+      "اشترت إدارة المشتريات مواد ذات جودة أعلى مما أدى إلى تقليل الفاقد.",
+      "لم توظف إدارة الموارد البشرية عاملين بالمهارات الكافية، فتسببت في هدر المواد."
+    ],
+    "explanationAr": "يعني انحراف سعر المواد المباشرة غير الملائم أن السعر الفعلي للمواد أعلى من السعر المعياري المقدر، وقد يدل انحراف الكمية الملائم على تقليل الفاقد الطبيعي. ويمكن أن ينتج الأمران عن شراء مواد أفضل جودة وأعلى سعرًا، بما يرفع سعر الشراء لكنه يقلل التلف."
   },
   {
     "unit": 15,
@@ -2329,7 +2441,15 @@
     ],
     "answerIndex": 3,
     "explanation": "First, it is necessary to find the actual amount of materials\nused in each unit of finished good, including the evaporated\nmaterial. Since 4% of the total amount evaporates, an\nequation can be set up as X oz × 96% = 9 oz. The variable X\nis 9.375 oz, which is the amount of raw materials input for one\nunit of finished goods. The evaporated material should be\ncounted since it is normal spoilage, which is spoilage that\noccurs under normal operating conditions. Normal spoilage\nconditions are absorbed into the cost of the finished good.\nThe cost per ounce of raw materials is $2.20. This contains\nthe cost to ship each ounce of materials. Any cost necessary\nto get the material to the production process is included in the\ncost of direct materials. The total cost of raw materials\ncontained in one unit of finished goods is $20.63, which is the\nproduct of $2.20 per ounce and 9.375 ounces per unit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تصنّع شركة منتجًا يحتوي على 9 أونصات من المواد في كل وحدة تامة. وخلال التصنيع يتبخر 4% من المواد. وتدفع الشركة لمورديها $2 لكل أونصة، وتبلغ تكلفة شحن المواد إليها في المتوسط $0.20 لكل أونصة. ما قيمة التكلفة المعيارية للمواد الخام اللازمة لوحدة تامة بالدولار؟",
+    "choicesAr": [
+      "$18.75",
+      "$19.80",
+      "$20.59",
+      "$20.63"
+    ],
+    "explanationAr": "أولًا نحسب الكمية الفعلية للمدخلات اللازمة لإنتاج وحدة تامة بما يشمل الكمية المتبخرة. ولأن نسبة التبخر 4% من الإجمالي، فإن المعادلة هي: X أونصة × 96% = 9 أونصات. ومنها X = 9.375 أونصة من المواد الداخلة لكل وحدة تامة. ويُحتسب الفاقد الطبيعي ضمن تكلفة المنتج التام لأنه يحدث في ظروف التشغيل العادية. وتبلغ تكلفة الأونصة من المواد الخام $2.20 شاملة مصروف الشحن، لأن ما يلزم لإيصال المواد إلى عملية الإنتاج يدخل ضمن تكلفتها. ولذلك تصل تكلفة المواد الخام للوحدة التامة إلى $20.63، وهي ناتج ضرب $2.20 لكل أونصة في 9.375 أونصة لكل وحدة، بعد التقريب إلى سنتين."
   },
   {
     "unit": 15,
@@ -2346,7 +2466,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A just-in-time inventory system is characterized by a low\namount of waste and inventories as well as a high level of\nquality. Issues with low-quality materials would be of particular\nconcern because they may slow production, causing ripple\neffects throughout the manufacturing system.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُصنع شركة منتجاتها في بيئة عالية الأتمتة تعتمد نظام الإنتاج في الوقت المناسب (Just-in-Time)، وتستخدم نظام التكاليف المعيارية. أي الانحرافات التالية يدعو إلى أكبر قدر من القلق؟",
+    "choicesAr": [
+      "انحراف إنفاق التكاليف الصناعية غير المباشرة الثابتة بنسبة 10% غير ملائم بسبب زيادة غير متوقعة في رواتب مشرفي الإنتاج.",
+      "انحراف كمية المواد بنسبة 5% غير ملائم بسبب مواد منخفضة الجودة أدت إلى إعادة العمل.",
+      "انحراف كفاءة العمل بنسبة 6% غير ملائم بسبب تعيين عاملين مؤقتين أقل مهارة.",
+      "انحراف إنفاق التكاليف الصناعية غير المباشرة المتغيرة بنسبة 7% غير ملائم بسبب استهلاك العاملين المؤقتين مستلزمات أكثر من المتوقع."
+    ],
+    "explanationAr": "تتسم أنظمة المخزون والإنتاج في الوقت المناسب بانخفاض الهدر والمخزون وارتفاع مستوى الجودة. وتكون مشكلة المواد رديئة الجودة بالغة الأهمية لأنها قد تبطئ الإنتاج وتسبب آثارًا متتابعة في مراحل التصنيع كلها."
   },
   {
     "unit": 15,

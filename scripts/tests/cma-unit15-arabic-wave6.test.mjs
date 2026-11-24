@@ -28,24 +28,23 @@ function fingerprint(value) {
     hash = Math.imul(hash ^ value.charCodeAt(i), 16777619);
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
-test("Unit 15 Wave 6: exactly 79 full Arabic drafts, with first 26/46 material variance questions translated", () => {
+test("Unit 15 Wave 6: retain all 79 earlier translated drafts as new releases progress", () => {
   assert.equal(records.length, 264);
-  const arabic = records.filter(r => r.stemAr !== undefined || r.choicesAr !== undefined || r.explanationAr !== undefined);
-  assert.equal(arabic.length, 79);
-  assert.equal(arabic.filter(r => r.section === 1).length, 16);
-  assert.equal(arabic.filter(r => r.section === 2).length, 37);
-  assert.deepEqual(arabic.filter(r => r.section === 3).map(r => r.number),
-    Array.from({ length: 26 }, (_, i) => i + 1));
-  for (const row of records) {
-    const allowed = row.section === 1 || (row.section === 2 && row.number !== 25 && row.number !== 32) ||
-      (row.section === 3 && row.number <= 26);
+  const earlier = records.filter(row =>
+    row.section === 1 ||
+    (row.section === 2 && row.number !== 25 && row.number !== 32) ||
+    (row.section === 3 && row.number <= 26));
+  assert.equal(earlier.length, 79);
+  assert.equal(earlier.filter(row => row.section === 3).length, 26);
+  for (const row of earlier) {
     const complete = typeof row.stemAr === "string" && !!row.stemAr.trim() &&
       typeof row.explanationAr === "string" && !!row.explanationAr.trim() &&
       Array.isArray(row.choicesAr) && row.choicesAr.length === 4 &&
       row.choicesAr.every(v => typeof v === "string" && !!v.trim());
-    assert.equal(complete, allowed, "Unapproved or incomplete Arabic source " + row.section + "." + row.number);
+    assert.ok(complete, "Earlier source translation missing " + row.section + "." + row.number);
   }
 });
+
 test("Unit 15 Wave 6: all thirteen English source records and numeric tokens remain unchanged", () => {
   assert.equal(pins.size, 13);
   for (const [n, [page, answerIndex, originalHash]] of pins) {

@@ -71,6 +71,16 @@ const pendingSourceLayouts = new Set([
   // been flattened. §2 Q32 interleaves Nash's prose and capacity table.
   // Do not translate or grade these items before visual source-page review.
   "15.2.25", "15.2.32",
+  // Unit 15 §3 Q32's imported variance table labels a difference between
+  // actual total material cost and standard allowed cost as a price variance:
+  // $13,200 actual vs $12,000 standard = $1,200, yet 3,300 input pounds at
+  // the same $4/pound standard means no independently established price
+  // variance. The source explanation is also perspective-ambiguous.
+  // §3 Q37/Q38 split the Jackson standard-cost table into PDF column fragments.
+  // §3 Q39's Arrow standards header is visibly cut to "Sta" and "C".
+  // Do not grade these English-only records until the authorized source
+  // pages and answer rationale are reviewed visually.
+  "15.3.32", "15.3.37", "15.3.38", "15.3.39",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
