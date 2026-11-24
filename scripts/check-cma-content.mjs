@@ -615,7 +615,7 @@ const staticArabicVol2 = new Set([
   ...[1,3,4,5,12,13,14,15,16,17,18,19,20,21,22,24,25,27,28,29].map(n=>"15.8."+n),
   ...Array.from({length:53},(_,i)=>i+1).filter(n=>![4,19,42,46].includes(n)).map(n=>"16.1."+n),
   ...Array.from({length:12},(_,i)=>i+1).filter(n=>n!==10).map(n=>"16.2."+n),
-  ...Array.from({length:15},(_,i)=>i+1).filter(n=>![9,10,11].includes(n)).map(n=>"16.3."+n),
+  ...Array.from({length:30},(_,i)=>i+1).filter(n=>![9,10,11,26,30].includes(n)).map(n=>"16.3."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -801,7 +801,16 @@ for(const [n,page,index] of [[9,913,3],[10,914,3],[11,915,3]]){
   mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
   "Unit 16 §3 ROI assumption hold must remain unscored: "+n);
 }
-console.log("Unit 16 Wave 5: 72/166 Arabic drafts (43.4%), §1 49/53, §2 11/12, §3 12/55, eight held and 86 unreviewed.");
+for(const [n,page,index] of [[26,928,1],[30,932,1]]){
+ const original=vol2Records.get("16.3."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su16-s3-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerIndex===index && original.stemAr===undefined &&
+  original.choicesAr===undefined && original.explanationAr===undefined &&
+  mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+  mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
+  "Unit 16 §3 inventory-financing or table hold must remain unscored: "+n);
+}
+console.log("Unit 16 Wave 6: 85/166 Arabic drafts (51.2%), §1 49/53, §2 11/12, §3 25/55, ten held and 71 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
