@@ -103,7 +103,8 @@ test("Unit 15 Wave 8: eight dubious tables and variance explanations remain unsc
     assert.equal(row.choicesAr,undefined);
     assert.equal(row.explanationAr,undefined);
     assert.ok(adapter.includes('"15.4.'+n+'"'),"Missing source-review adapter §4 Q"+n);
-    assert.ok(checker.includes('"15.4.'+n+'"'),"Missing source-review integrity gate §4 Q"+n);
+    assert.ok(checker.includes("["+n+","+page+"]"),
+      "Missing explicit page and source-review gate §4 Q"+n);
   }
   // Source Q19 presents a negative denominator but reports a positive SR.
   assert.equal(3840/(41200-42000),-4.8);
