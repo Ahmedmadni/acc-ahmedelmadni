@@ -177,8 +177,8 @@ const wave11=new Map([
  [21,[738,2,"c3924687"]],[22,[739,1,"8d2a51eb"]],
  [23,[739,2,"1fe6d798"]],[24,[740,0,"b64419fe"]],
 ]);
-test("Unit 15 Wave 11: 153 full drafts and 14 immutable overhead sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+test("Unit 15 Wave 11: preserve 153 earlier drafts and 14 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>(r.section<=5||(r.section===6&&r.number<=24))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,153);
  assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:24},(_,i)=>i+1));
  for(const [n,[page,index,hash]] of wave11){
@@ -215,4 +215,54 @@ test("Unit 15 Wave 11: capacity, Nanjones and Franklin independent accounting ca
  assert.equal(budgetFixed-198000*3,6000);
  for(const [n,result] of [[13,"$15.00"],[14,"$315,000"],[15,"$4,000 underapplied"],[16,"$2,000 favorable"],[17,"$5,000 favorable"],[19,"396,000"],[20,"$33,000 unfavorable"],[21,"$22,000 unfavorable"],[22,"$25,000 favorable"],[23,"$594,000"],[24,"$6,000 unfavorable"]])
   assert.ok(q(6,n).choices[q(6,n).answerIndex].includes(result),"Original key Q"+n);
+});
+
+const wave12=new Map([
+ [25,[741,1,"0c51555a"]],[26,[741,3,"aaf21aa4"]],[27,[742,1,"242ef5ec"]],
+ [29,[745,2,"5c49a35d"]],[30,[746,3,"79a5464e"]],[31,[747,0,"9a25abce"]],
+ [32,[748,2,"a55d2208"]],[33,[749,0,"711e71d4"]],[34,[750,1,"1e2f1b50"]],
+ [35,[751,2,"2ca3fd3f"]],[36,[752,2,"c468c0fe"]],[37,[753,1,"3e49d8eb"]],
+ [38,[753,0,"23b8dd2a"]],
+]);
+test("Unit 15 Wave 12: 166 complete drafts and 13 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,166);
+ assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:38},(_,i)=>i+1).filter(n=>n!==28));
+ for(const [n,[page,index,hash]] of wave12){
+  const r=q(6,n);
+  assert.equal(r.page,page); assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source"); assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 15 Wave 12: independent overhead computations and Q28 actual-hour ambiguity",()=>{
+ const fixedBudget=54750+27000+32300+14550+3400;
+ const variableRateCents=50+650+125+475;
+ assert.equal(fixedBudget,132000); assert.equal(variableRateCents,1300);
+ const fixedRateCents=fixedBudget*100/100000;
+ assert.equal(fixedRateCents,132);
+ const totalRateCents=fixedRateCents+variableRateCents;
+ assert.equal(totalRateCents,1432);
+ const allowed=23500*4,applied=allowed*totalRateCents/100;
+ assert.equal(allowed,94000); assert.equal(applied,1346080);
+ assert.equal(133250+1225000-applied,12170);
+ assert.equal(106250+33750-100000-31250,8750);
+ assert.equal((24500-8000*3)*2,1000);
+ assert.equal(27500*650/100,178750);
+ for(const [n,result] of [[29,"$14.32"],[30,"$1,346,080"],[31,"$12,170 unfavorable"],[33,"$8,750 U"],[34,"$1,000 U"],[36,"$178,750"]])
+  assert.ok(q(6,n).choices[q(6,n).answerIndex].includes(result),"Original key Q"+n);
+ const held=q(6,28);
+ assert.equal(held.page,743); assert.equal(held.answerIndex,3);
+ assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
+ const sh=(480000-6360)/(480000/32000);
+ assert.equal(sh,31576);
+ // Neither actual hours below nor above SH change fixed volume variance.
+ for(const ah of [31000,32500]){
+  assert.notEqual(ah,sh);
+  assert.equal(480000-sh*15,6360);
+ }
 });

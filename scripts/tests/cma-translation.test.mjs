@@ -1133,7 +1133,10 @@ test("CMA Unit 14 section 6 question 21: rounded EBIT/source key conflict is not
   assert.equal(q.choicesAr,undefined);
   assert.equal(q.explanationAr,undefined);
   const mapping=readFileSync(new URL("../../src/data/cma-questions-gleim-2025-vol2.ts",import.meta.url),"utf8");
-  assert.match(mapping,/pendingAnswerConsistencyReviews\s*=\s*new Set\(\["14\.6\.21"\]\)/);
+  const consistencyReviewSet=mapping.match(/pendingAnswerConsistencyReviews\s*=\s*new Set\(\[([^\]]*)\]\)/);
+  assert.ok(consistencyReviewSet,"Missing consistency review set");
+  const consistencyReviewIds=JSON.parse("["+consistencyReviewSet[1]+"]");
+  assert.ok(consistencyReviewIds.includes("14.6.21"),"Unit 14 hold must remain in the growing review set");
   const {eligible,excluded}=splitCmaQuizSourceReview([
     {id:"14.6.21",sourceLayoutReview:true},
     {id:"14.6.18",sourceLayoutReview:false},
