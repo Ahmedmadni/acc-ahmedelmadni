@@ -2309,7 +2309,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The new return on investment is calculated as:\nROI = Business unit profit ÷ Assets of business\nunit\n= ($40,000 + $15,000) ÷ ($400,000 +\n$100,000)\n= 11%\nIncrease in\nresidual = $15,000 additional profit – ($100,000 new\nincome      asset × 8% required rate of return)\n= $15,000 – $8,000\n= $7,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحقق وحدة الأعمال A عائدًا على الاستثمار بنسبة 10% وصافي ربح سنوي قدره $40,000. وتبلغ تكلفة الفرصة البديلة لاستثمارات الوحدة 8%. وتخطط الشركة لشراء آلة جديدة بقيمة $100,000 وتتوقع زيادة صافي الربح بمبلغ $15,000. سيؤدي قرار الشراء الجديد إلى زيادة العائد على الاستثمار:",
+    "choicesAr": [
+      "بمقدار 1% وزيادة الدخل المتبقي بمبلغ $8,000.",
+      "بمقدار 1% وزيادة الدخل المتبقي بمبلغ $15,000.",
+      "إلى 11% وزيادة الدخل المتبقي بمبلغ $7,000.",
+      "إلى 11% وزيادة الدخل المتبقي بمبلغ $15,000."
+    ],
+    "explanationAr": "يحسب العائد الجديد على الاستثمار كما يلي:\nROI = ربح وحدة الأعمال ÷ أصول وحدة الأعمال\n= ($40,000 + $15,000) ÷ ($400,000 + $100,000)\n= 11%\nالزيادة في الدخل المتبقي = $15,000 ربح إضافي – ($100,000 أصل جديد × 8% معدل العائد المطلوب)\n= $15,000 – $8,000\n= $7,000"
   },
   {
     "unit": 16,
@@ -2326,7 +2334,15 @@
     ],
     "answerIndex": 1,
     "explanation": "ROI is calculated by dividing business unit profit by invested\ncapital. The new investment will make a profit of $125,000\n($175,000 contribution margin – $50,000 incremental fixed\ncosts). Hence, ROI = $125,000 ÷ $800,000 = 16%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط إدارة شركة لاستثمار $800,000 لإطلاق منتج جديد. وفي السنة الأولى يتوقع أن يحقق المنتج مبيعات قدرها $200,000 وهامش مساهمة قدره $175,000. وتبلغ التكاليف الثابتة الإضافية $50,000. ما أقرب نسبة للعائد المتوقع على الاستثمار في السنة الأولى؟",
+    "choicesAr": [
+      "6%.",
+      "16%.",
+      "22%.",
+      "25%."
+    ],
+    "explanationAr": "يحسب العائد على الاستثمار بقسمة ربح وحدة الأعمال على رأس المال المستثمر. ويحقق الاستثمار الجديد ربحًا قدره $125,000 ($175,000 هامش المساهمة – $50,000 التكاليف الثابتة الإضافية). ومن ثم ROI = $125,000 ÷ $800,000 ≈ 16%."
   },
   {
     "unit": 16,
@@ -2343,7 +2359,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The residual income method measures performance in dollar\nterms rather than as a percentage return. The required return\non assets is deducted from the actual income from the asset.\nThus, the calculations for projects A, B, C, and D are as\nfollows:\nRequired Inco\nProje                                     me         Residual\nct     Income       Assets           (at 8%)       Income\nA   $1,250,000 $ 5,000,000         $400,000      $850,000\nB     1,500,000     7,500,000        600,000       900,000\nC       850,000     1,500,000        120,000       730,000\nD         750,000 10,000,000       800,000         (50,000)\nProject B is the best investment because it has the highest\nresidual income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يبلغ معدل العائد المطلوب لشركة 8%. وتقيّم المشروعات الأربعة التالية المتنافية فيما بينها كاستثمارات محتملة:\nالمشروع | الدخل التشغيلي المقدر | الأصول\nA | $1,250,000 | $5,000,000\nB | 1,500,000 | 7,500,000\nC | 850,000 | 1,500,000\nD | 750,000 | 10,000,000\nباستخدام طريقة الدخل المتبقي، أي المشروعات ينبغي للشركة قبوله؟",
+    "choicesAr": [
+      "المشروع A.",
+      "المشروع B.",
+      "المشروع C.",
+      "المشروع D."
+    ],
+    "explanationAr": "تقيس طريقة الدخل المتبقي الأداء بمبلغ نقدي بدلًا من نسبة عائد. ويخصم العائد المطلوب على الأصول من الدخل الفعلي الناتج عنها. وبذلك تكون حسابات المشروعات A وB وC وD كما يلي:\nالمشروع | الدخل | الأصول | الدخل المطلوب (بمعدل 8%) | الدخل المتبقي\nA | $1,250,000 | $5,000,000 | $400,000 | $850,000\nB | 1,500,000 | 7,500,000 | 600,000 | 900,000\nC | 850,000 | 1,500,000 | 120,000 | 730,000\nD | 750,000 | 10,000,000 | 800,000 | (50,000)\nالمشروع B هو الأفضل وفق هذا المقياس لأنه يحقق أعلى دخل متبقٍ."
   },
   {
     "unit": 16,
@@ -2360,7 +2384,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The investment in Project C has the highest ROI at 18%\n($2,520,000 ÷ $14,000,000), and thus should be accepted.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة ثلاثة مشروعات مستقلة. وفيما يلي المعلومات المالية المتوقعة:\nالبيان | المشروع A | المشروع B | المشروع C\nالمبيعات | $5,000,000 | $7,000,000 | $10,000,000\nهامش المساهمة | 1,440,000 | 1,700,000 | 3,500,000\nالدخل التشغيلي | 1,000,000 | 1,650,000 | 2,520,000\nالاستثمار | 9,000,000 | 10,000,000 | 14,000,000\nالحد الأدنى لمعدل العائد لقبول المشروعات هو 15% والحد الأقصى لإجمالي الاستثمار في المشروعات الجديدة $20,000,000. وتهدف الشركة إلى تعظيم عائدها على الاستثمار. أي المشروعات ينبغي قبولها إذا استخدمت العائد على الاستثمار لقياس المشروعات؟",
+    "choicesAr": [
+      "المشروع A فقط.",
+      "المشروع B فقط.",
+      "المشروعان B وC فقط.",
+      "المشروع C فقط."
+    ],
+    "explanationAr": "يحقق الاستثمار في المشروع C أعلى عائد على الاستثمار بنسبة 18% ($2,520,000 ÷ $14,000,000)، ولذلك ينبغي قبوله."
   },
   {
     "unit": 16,
@@ -2377,7 +2409,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Before the investment, the company’s ROI was 16.72%,\ncalculated by dividing $1,642,000 of operating income by\n$9,818,000 of total assets. Plan 1 will produce a return of\n$218,400 ($3,000,000 in revenue minus expenses of\n$2,781,600). Dividing $218,400 by the additional investment of\n$1,200,000 results in an ROI of 18.2% for Plan 1 by itself.\nAdding the additional Plan 1 asset to the company’s previous\ntotal assets of $9,818,000 results in revised total assets of\n$11,018,000. The new operating income will be $1,860,400\n($218,400 + $1,642,000). Dividing $1,860,400 by the revised\ntotal assets of $11,018,000 results in an ROI of 16.885%.\nAlternatively, Plan 2 has a return of $315,000 on an\ninvestment of $730,000, resulting in a Plan 2 ROI of 43.15%.\nAdding this additional income and assets to the original figures\nproduces a new income of $1,957,000 ($1,642,000 +\n$315,000). The new total for assets is $10,548,000\n($9,818,000 + $730,000). Therefore, the new ROI is 18.6%\n($1,957,000 ÷ $10,548,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي أحدث نتائج التشغيل لشركة:\nالمبيعات $4,370,000\nالمصروفات 2,728,000\nالدخل التشغيلي 1,642,000\nإجمالي الأصول 9,818,000\nإجمالي الالتزامات 7,663,000\nحددت الشركة عائدًا مستهدفًا على الاستثمار (ROI) قدره 18%. افترض أن التغيير الوحيد في الفترة التالية هو اختيار إحدى الخطتين التاليتين:\nالخطة 1: استثمار $1,200,000 في موقع جديد يحقق مبيعات سنوية قدرها $3,000,000. وتزداد المصروفات التشغيلية سنويًا بمبلغ $2,781,600.\nالخطة 2: خفض تكاليف الشركة من خلال تحسين تقنية التصنيع. ويؤدي استثمار في المعدات بقيمة $730,000 إلى خفض التكاليف التشغيلية السنوية بمبلغ $315,000.\nأي الخطتين، إذا نفذت، تحقق للشركة عائدًا يساوي العائد المستهدف أو يتجاوزه؟",
+    "choicesAr": [
+      "الخطة 1، لأنها ترفع عائد الشركة على الاستثمار إلى 18.2%.",
+      "الخطة 1، لأنها ترفع عائد الشركة على الاستثمار إلى 42.1%.",
+      "الخطة 2، لأنها ترفع عائد الشركة على الاستثمار إلى 18.6%.",
+      "الخطة 2، لأنها ترفع عائد الشركة على الاستثمار إلى 43.2%."
+    ],
+    "explanationAr": "قبل الاستثمار بلغ عائد الشركة على الاستثمار 16.72%، بقسمة $1,642,000 من الدخل التشغيلي على $9,818,000 من إجمالي الأصول. وتحقق الخطة 1 عائدًا قدره $218,400 ($3,000,000 إيرادات ناقص مصروفات $2,781,600). وقسمة $218,400 على الاستثمار الإضافي البالغ $1,200,000 تعطي عائدًا بنسبة 18.2% للخطة 1 وحدها.\nبإضافة أصل الخطة 1 إلى إجمالي أصول الشركة السابق البالغ $9,818,000 يصبح الإجمالي $11,018,000. ويبلغ الدخل التشغيلي الجديد $1,860,400 ($218,400 + $1,642,000). وقسمة $1,860,400 على إجمالي الأصول المعدل $11,018,000 تعطي عائدًا بنسبة 16.885% تقريبًا وفق المصدر.\nأما الخطة 2 فتحقق عائدًا قدره $315,000 على استثمار $730,000، أي عائدًا للخطة 2 بنسبة 43.15%. وبإضافة الدخل والأصول الإضافية إلى الأرقام الأصلية يصبح الدخل الجديد $1,957,000 ($1,642,000 + $315,000). ويبلغ إجمالي الأصول الجديد $10,548,000 ($9,818,000 + $730,000). لذلك يصبح العائد الجديد 18.6% ($1,957,000 ÷ $10,548,000)."
   },
   {
     "unit": 16,
@@ -2394,7 +2434,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Both return on investment (ROI) and residual income use\nrevenues and costs to derive the net income and investigate\nthe relationship between net income and the investment in\nassets to generate such income. However, accounting\nelements used in the calculation, such as revenues and\nexpenses, may be subject to manipulation. Potential goal-\ncongruency problems within the organization may arise if ROI\nis used. Decision makers may tend to avoid choosing projects\nwith ROIs lower than the current ROI to avoid reducing future\nROI. Also, both measures have a short-term focus rather than\na long-term focus.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يدرس فريق إدارة شركة استخدام العائد على الاستثمار أو الدخل المتبقي لقياس أداء قطاعات أعمالها. في عرض عن المقياسين، أي العبارات التالية صحيحة؟\nI. يتضمن المقياسان عناصر رئيسية مثل الإيرادات والتكاليف ومستوى الاستثمارات، وهي ضرورية لاتخاذ قرارات الإدارة العليا.\nII. يتجنب المقياسان جميع مشكلات توافق الأهداف المحتملة داخل المنشأة.\nIII. العيب الوحيد للمقياسين هو أن كليهما يركز على الأجل الطويل بدلًا من الأجل القصير.\nIV. يمكن التلاعب بكلا المقياسين بما يخدم أغراض المستخدم لأن الحساب يعتمد على أرقام محاسبية.",
+    "choicesAr": [
+      "I وII فقط.",
+      "II وIII فقط.",
+      "III وIV فقط.",
+      "I وIV فقط."
+    ],
+    "explanationAr": "يستخدم كل من العائد على الاستثمار (ROI) والدخل المتبقي الإيرادات والتكاليف لاشتقاق صافي الدخل ودراسة علاقته بالاستثمار في الأصول المولدة له. ولكن العناصر المحاسبية المستخدمة في الحساب، مثل الإيرادات والمصروفات، قد تخضع للتلاعب. وقد تنشأ مشكلات توافق الأهداف عند استخدام ROI؛ إذ قد يتجنب متخذو القرارات المشروعات ذات العوائد الأقل من العائد الحالي خشية خفضه مستقبلًا. كما أن كلا المقياسين يميل إلى التركيز على الأجل القصير بدلًا من الطويل."
   },
   {
     "unit": 16,
@@ -2411,7 +2459,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Return on investment is equal to the income of the business\nunit divided by the assets of the business unit. Income of\nSegment W is $1,470,000 ($8,000,000 revenue –\n$6,350,000 cost of sales – $180,000 general and\nadministrative expenses). Assets of Segment W equal\n$4,375,000 ($1,200,000 net working capital +\n$3,175,000 PPE). Thus, return on investment is 33.6%\n($1,470,000 ÷ $4,375,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "طبقت شركة مؤخرًا محاسبة المسؤولية في قطاعاتها الـ7. وفيما يلي معلومات القطاع W للربع الأخير:\nصافي رأس المال العامل $1,200,000\nصافي الممتلكات والآلات والمعدات 3,175,000\nالإيرادات 8,000,000\nتكلفة المبيعات 6,350,000\nالمصروفات العمومية والإدارية 180,000\nإذا عاملت الشركة القطاع W بوصفه مركز استثمار، فما العائد على الاستثمار للربع الأخير وفق المعلومات المعطاة؟",
+    "choicesAr": [
+      "33.6%",
+      "37.7%",
+      "46.3%",
+      "74.4%"
+    ],
+    "explanationAr": "يساوي العائد على الاستثمار دخل وحدة الأعمال مقسومًا على أصولها المستخدمة كأساس للاستثمار. ويبلغ دخل القطاع W مبلغ $1,470,000 ($8,000,000 إيرادات – $6,350,000 تكلفة المبيعات – $180,000 مصروفات عمومية وإدارية). ويبلغ أساس الاستثمار للقطاع W مبلغ $4,375,000 ($1,200,000 صافي رأس المال العامل + $3,175,000 صافي الممتلكات والآلات والمعدات). ومن ثم فإن العائد على الاستثمار 33.6% ($1,470,000 ÷ $4,375,000)."
   },
   {
     "unit": 16,
@@ -2428,7 +2484,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Expected net income of the business unit is AED 250,000,\nassets of the business unit equal AED 1,000,000, and the\nrequired rate of return is 10%. Residual income is calculated\nas follows:\nIncome of business unit – (Assets of business unit × Required\nrate of return) = Residual income\n250,000 – (1,000,000 × 0.10) = 150,000",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط إدارة شركة لاستثمار 1,000,000 درهم إماراتي (AED) لإنشاء قسم جديد في الإمارات العربية المتحدة. ويتوقع أن يحقق القسم مبيعات قدرها AED 720,000 وصافي دخل قدره AED 250,000 في السنة 1. إذا كان معدل العائد المطلوب للشركة 10%، فما الدخل المتبقي للقسم في السنة 1؟",
+    "choicesAr": [
+      "AED 100,000",
+      "AED 150,000",
+      "AED 225,000",
+      "AED 620,000"
+    ],
+    "explanationAr": "يبلغ صافي الدخل المتوقع لوحدة الأعمال AED 250,000، وتبلغ أصولها AED 1,000,000، ومعدل العائد المطلوب 10%. ويحسب الدخل المتبقي كما يلي:\nدخل وحدة الأعمال – (أصول وحدة الأعمال × معدل العائد المطلوب) = الدخل المتبقي\n250,000 – (1,000,000 × 0.10) = 150,000"
   },
   {
     "unit": 16,
@@ -2445,7 +2509,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Current cost reflects the current expected economic benefit\nthat may arise from the asset. An ROI based on the current\ncost of assets can best match the income generated and the\nincome-generating ability of the asset.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة العائد على الاستثمار (ROI) لمقارنة أقسامها وتحديد مكافآت مديري الأقسام بناءً على هذا التقييم. أي طرق قياس الأصول توفر أفضل أساس للمقارنة؟",
+    "choicesAr": [
+      "القيمة الدفترية.",
+      "التكلفة الحالية.",
+      "التكلفة التاريخية.",
+      "التكلفة بعد الإهلاك."
+    ],
+    "explanationAr": "تعكس التكلفة الحالية المنفعة الاقتصادية الحالية المتوقعة من الأصل. ويمكن للعائد على الاستثمار المبني على التكلفة الحالية للأصول أن يحقق توافقًا أفضل بين الدخل المتولد وقدرة الأصل على توليد الدخل."
   },
   {
     "unit": 16,
@@ -2462,7 +2534,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Residual income is the excess of the actual ROI in dollars\nover a targeted amount equal to an imputed interest charge on\ninvested capital. The rate used is ordinarily the weighted-\naverage cost of capital. Some entities measure managerial\nperformance in terms of the amount of residual income rather\nthan the percentage ROI. Assuming the investment base is\ndefined as total assets available, the service center’s targeted\namount is $30,000 ($500,000 total assets × 6% cost of\ncapital). Assuming that operating income of $25,000 is the\nROI in dollars, residual income was $(5,000). This result is\nconsistent with defining the numerator of the ROI calculation\n(Income ÷ Investment) as operating income. However, it might\nalso be defined as net profit after taxes (net income).\nMoreover, the ROI denominator may be defined variously,\ne.g., total assets available, total assets employed, working\ncapital plus other assets, or shareholders’ equity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي الإحصاءات التشغيلية لمركز خدمات عن السنة المنتهية:\nالمبيعات $750,000\nالدخل التشغيلي 25,000\nصافي الربح بعد الضرائب 8,000\nإجمالي الأصول المتاحة 500,000\nحقوق المساهمين 200,000\nتكلفة رأس المال 6%\nيحقق مركز الخدمات:",
+    "choicesAr": [
+      "عائدًا على الاستثمار بنسبة 3.33%.",
+      "دخلًا متبقيًا قدره $(5,000).",
+      "عائدًا على الاستثمار بنسبة 6%.",
+      "دخلًا متبقيًا قدره $(20,000)."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة مبلغ العائد الفعلي على الاستثمار على مبلغ مستهدف يساوي الفائدة المحتسبة على رأس المال المستثمر. والمعدل المستخدم عادة هو المتوسط المرجح لتكلفة رأس المال. وتقيس بعض المنشآت الأداء الإداري بمبلغ الدخل المتبقي بدلًا من نسبة ROI. بافتراض تعريف أساس الاستثمار بأنه إجمالي الأصول المتاحة، يبلغ المبلغ المستهدف لمركز الخدمات $30,000 ($500,000 إجمالي الأصول × 6% تكلفة رأس المال). وبافتراض أن الدخل التشغيلي البالغ $25,000 يمثل مبلغ العائد، فإن الدخل المتبقي $(5,000). وتتفق النتيجة مع تعريف بسط معادلة العائد على الاستثمار (الدخل ÷ الاستثمار) بأنه الدخل التشغيلي. ومع ذلك يمكن تعريفه أيضًا بصافي الربح بعد الضرائب (صافي الدخل). كما يمكن تعريف المقام بطرق مختلفة، مثل إجمالي الأصول المتاحة أو المستغلة أو رأس المال العامل مضافًا إليه الأصول الأخرى أو حقوق المساهمين."
   },
   {
     "unit": 16,
@@ -2479,7 +2559,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Residual income is the excess of operating income over a\ntargeted amount equal to an imputed interest charge on\ninvested capital. Residual income may be preferable to ROI\nbecause a firm benefits from expansion if residual income is\nearned. Using an ROI criterion, expansion might be rejected if\nit lowered ROI even though residual income increases. Thus,\nthe residual income method promotes the congruence of a\nmanager’s goal with those of the firm. Actions that tend to\nbenefit the firm also tend to improve the measure of the\nmanager’s performance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن قياس الأداء الإداري بطرق عديدة، منها العائد على الاستثمار (ROI) والدخل المتبقي. ما أحد الأسباب الوجيهة لاستخدام الدخل المتبقي بدلًا من ROI؟",
+    "choicesAr": [
+      "يمكن حساب الدخل المتبقي دون تحديد أساس الاستثمار.",
+      "يرجح أن يعزز استخدام الدخل المتبقي توافق الأهداف.",
+      "الدخل المتبقي مفهوم جيدًا ويستخدم كثيرًا في الصحافة المالية.",
+      "لا يأخذ العائد على الاستثمار في الاعتبار كلًا من معدل دوران الاستثمار ونسبة العائد على المبيعات."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة الدخل التشغيلي على مبلغ مستهدف يساوي الفائدة المحتسبة على رأس المال المستثمر. وقد يكون الدخل المتبقي أفضل من ROI لأن المنشأة تستفيد من التوسع إذا حقق دخلًا متبقيًا إضافيًا موجبًا. وقد يرفض التوسع وفق معيار ROI إذا خفض النسبة رغم زيادة الدخل المتبقي. ولذلك تعزز طريقة الدخل المتبقي توافق أهداف المدير مع أهداف المنشأة؛ فالإجراءات التي تحقق منفعة للمنشأة تميل أيضًا إلى تحسين مقياس أداء المدير."
   },
   {
     "unit": 16,
@@ -2496,7 +2584,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Residual income is the excess of the return on an investment\nover a targeted amount, which is equal to an imputed interest\ncharge on invested capital (in this case, 8%). The rate is\nusually the weighted-average cost of capital. Some\nenterprises prefer to measure managerial performance in\nterms of the amount of residual income rather than the\npercentage ROI. The principle is that the enterprise is\nexpected to benefit from expansion as long as residual income\nis earned. Using a percentage ROI approach, expansion might\nbe rejected if it lowered ROI, even though residual income\nwould increase. Using residual income, both Carolina and\nSanders would accept the new project because residual\nincome will increase if a 12% return is earned when the target\nROI is only 8%.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشترط إيديث كارولينا، رئيسة شركة Deed، حدًا أدنى للعائد على الاستثمار قدره 8% لأي مشروع تنفذه الشركة. وتتبع الشركة اللامركزية وتترك قرارات الاستثمار لتقدير مديري الأقسام ما دام يتوقع تحقيق عائد 8%. وقد حقق مايكل ساندرز، مدير قسم مستحضرات التجميل، عائدًا على الاستثمار بنسبة 14% لقسمه خلال السنوات الـ3 الماضية، ويتوقع استمرار النسبة في السنة المقبلة. ولديه فرصة للاستثمار في خط جديد لمستحضرات التجميل يتوقع أن يحقق عائدًا بنسبة 12%.\nإذا قيّمت الشركة الأداء الإداري باستخدام الدخل المتبقي على أساس الحد الأدنى المطلوب للعائد، فما موقف كل من كارولينا وساندرز من قبول الخط المقترح؟\nكارولينا | ساندرز",
+    "choicesAr": [
+      "قبول | رفض",
+      "رفض | قبول",
+      "قبول | قبول",
+      "رفض | رفض"
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة العائد المحقق من الاستثمار على مبلغ مستهدف يساوي الفائدة المحتسبة على رأس المال المستثمر (في هذه الحالة 8%). والمعدل عادة هو المتوسط المرجح لتكلفة رأس المال. وتفضل بعض المنشآت قياس الأداء الإداري بمبلغ الدخل المتبقي بدلًا من نسبة ROI. والمبدأ أن المنشأة تستفيد من التوسع ما دام يحقق دخلًا متبقيًا موجبًا. وعند استخدام نسبة ROI قد يرفض التوسع إذا خفض النسبة رغم زيادة الدخل المتبقي. وباستخدام الدخل المتبقي يقبل كل من كارولينا وساندرز المشروع الجديد؛ لأن الدخل المتبقي سيزداد عند تحقيق عائد 12% بينما العائد المستهدف لا يتجاوز 8%."
   },
   {
     "unit": 16,
