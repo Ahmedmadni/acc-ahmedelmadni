@@ -70,6 +70,8 @@ jobs:
         run: node --test scripts/tests/cma-unit15-arabic-wave5.test.mjs
       - name: CMA Unit 15 wave 6 direct material accounting and Arabic source checks
         run: node --test scripts/tests/cma-unit15-arabic-wave6.test.mjs
+      - name: CMA Unit 15 wave 7 direct material arithmetic and source holds
+        run: node --test scripts/tests/cma-unit15-arabic-wave7.test.mjs
       - name: CMA browser-only translation and external fallback tests
         run: node --test scripts/tests/cma-translation-browser.test.mjs
       - name: CMA on-site Part 2 bank regression tests
