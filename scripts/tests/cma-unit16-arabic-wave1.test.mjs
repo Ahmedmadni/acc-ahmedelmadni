@@ -87,7 +87,7 @@ const wave3=new Map([
  [52,[889,3,"bdfd0a25"]],[53,[889,3,"2d6f7b30"]],
 ]);
 test("Unit 16 Wave 3: 49 Arabic drafts and 17 additional immutable sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>r.section===1&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,49);
  assert.deepEqual(localized.map(r=>[r.section,r.number]),[...wave1.keys(),...wave2.keys(),...wave3.keys()].map(n=>[1,n]));
  for(const [n,[page,index,hash]] of wave3){
@@ -118,4 +118,46 @@ test("Unit 16 Wave 3: common cost allocation arithmetic and source holds",()=>{
   assert.ok(adapter.includes('"16.1.'+n+'"'));
  }
  assert.ok(q(46).explanation.includes("Remainin")&&q(46).explanation.includes("$110,0"));
+});
+
+const wave4=new Map([
+ [1,[891,3,"628dd0a7"]],[2,[892,3,"134eefa7"]],[3,[893,0,"450228ad"]],
+ [4,[894,3,"0443f5a3"]],[5,[894,3,"bd21c163"]],[6,[895,1,"6f8b9d5b"]],
+ [7,[896,1,"d147d440"]],[8,[897,3,"63cb3d6f"]],[9,[898,2,"457fba6e"]],
+ [11,[901,0,"7efc6117"]],[12,[902,0,"d782ffa4"]],
+]);
+const q2=n=>rows.find(r=>r.section===2&&r.number===n);
+test("Unit 16 Wave 4: 60 drafts and 11 immutable cost/revenue/profit center sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,60);
+ assert.deepEqual(localized.filter(r=>r.section===2).map(r=>r.number),[...wave4.keys()]);
+ for(const [n,[page,index,hash]] of wave4){
+  const r=q2(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 4: customer profitability and controllable performance",()=>{
+ const customers=[[100000,50000,10000,15000,10000],[150000,60000,25000,20000,20000],[200000,70000,30000,25000,35000],[250000,75000,50000,30000,50000]];
+ const profit=customers.map(([sales,cogs,delivery,orders,units])=>(sales-cogs-delivery-orders)/units);
+ assert.equal(profit[0],2.5);
+ assert.equal(profit[1],2.25);
+ assert.equal(profit[2],75000/35000);
+ assert.equal(profit[3],1.9);
+ assert.equal(Math.max(...profit),profit[0]);
+ assert.equal(7500000-375000-5250000-40000-120000,1715000);
+ assert.equal(2000000-1400000,600000);
+ assert.equal(600000-150000-500000,-50000);
+ for(const [n,expected] of [[1,"salary"],[2,"controllable by others"],[3,"$84,000"],[4,"Variance analysis"],[9,"Budgeted rate times actual hours"],[11,"Customer A"],[12,"separate fee"]])
+  assert.ok(q2(n).choices[q2(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const held=q2(10);
+ assert.equal(held.page,899);assert.equal(held.answerIndex,3);
+ assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+ assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.2.10"'));
+ assert.ok(held.stem.includes("$100,00")&&held.explanation.includes("$200,000.0"));
 });

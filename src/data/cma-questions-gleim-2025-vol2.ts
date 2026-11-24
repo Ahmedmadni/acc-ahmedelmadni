@@ -110,6 +110,8 @@ const pendingSourceLayouts = new Set([
   "16.1.4", "16.1.19",
   // Q46 common-cost allocation solution has truncated monetary amounts and headers.
   "16.1.46",
+  // §2 Q10 splits sales and utility amounts; solution loses Customer D column.
+  "16.2.10",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score

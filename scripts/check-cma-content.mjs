@@ -614,6 +614,7 @@ const staticArabicVol2 = new Set([
   ...[14,15,16,17,18].map(n=>"15.7."+n),
   ...[1,3,4,5,12,13,14,15,16,17,18,19,20,21,22,24,25,27,28,29].map(n=>"15.8."+n),
   ...Array.from({length:53},(_,i)=>i+1).filter(n=>![4,19,42,46].includes(n)).map(n=>"16.1."+n),
+  ...Array.from({length:12},(_,i)=>i+1).filter(n=>n!==10).map(n=>"16.2."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -781,7 +782,16 @@ for(const [n,page,status] of [[4,849,"source"],[19,862,"inferred"],[42,880,"sour
   mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
   "Unit 16 source hold must remain unscored: "+n);
 }
-console.log("Unit 16 Wave 3: 49/166 Arabic drafts (29.5%), §1 49/53, four held and 113 unreviewed.");
+{
+ const original=vol2Records.get("16.2.10");
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su16-s2-q010");
+ check(original?.page===899 && original.answerIndex===3 && original.stemAr===undefined &&
+  original.choicesAr===undefined && original.explanationAr===undefined &&
+  mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+  mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
+  "Unit 16 §2 Q10 corrupted customer table must remain unscored.");
+}
+console.log("Unit 16 Wave 4: 60/166 Arabic drafts (36.1%), §1 49/53, §2 11/12, five held and 101 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
