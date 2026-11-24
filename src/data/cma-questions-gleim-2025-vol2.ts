@@ -66,6 +66,11 @@ const pendingSourceLayouts = new Set([
   "14.2.14", "14.4.5", "14.4.6", "14.4.30", "14.6.10",
   // Unit 14 §6 Q31 has broken option boundaries after PDF extraction.
   "14.6.31",
+  // Unit 15 §2 Q25's department cost table renders a total variance as
+  // "$1.360 U" rather than a reliable $1,360; other source columns have
+  // been flattened. §2 Q32 interleaves Nash's prose and capacity table.
+  // Do not translate or grade these items before visual source-page review.
+  "15.2.25", "15.2.32",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
