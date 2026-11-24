@@ -99,6 +99,8 @@ const pendingSourceLayouts = new Set([
   // Keep the original source and original keys, but do not score until the
   // licensed original 2025 pages are visually checked and the table is fixed.
   "15.5.2", "15.5.3", "15.5.5", "15.5.6", "15.5.7",
+  // §6 Q53 Valyn planned and actual tables are interleaved and monetary amounts split.
+  "15.6.53",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
