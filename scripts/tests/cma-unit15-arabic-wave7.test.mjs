@@ -36,27 +36,25 @@ function fingerprint(value) {
     hash = Math.imul(hash ^ value.charCodeAt(i), 16777619);
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
-test("CMA Unit 15 wave 7: 95 complete Arabic drafts, §3 42/46, exactly four review-held exceptions", () => {
+test("CMA Unit 15 Wave 7: preserve all 95 approved earlier Arabic drafts", () => {
   assert.equal(records.length, 264);
-  const translated = records.filter(q =>
-    q.stemAr !== undefined || q.choicesAr !== undefined || q.explanationAr !== undefined);
-  assert.equal(translated.length, 95);
-  assert.equal(translated.filter(q => q.section === 1).length, 16);
-  assert.equal(translated.filter(q => q.section === 2).length, 37);
-  assert.equal(translated.filter(q => q.section === 3).length, 42);
+  const earlier = records.filter(q =>
+    q.section === 1 ||
+    (q.section === 2 && q.number !== 25 && q.number !== 32) ||
+    (q.section === 3 && !holds.has(q.number)));
+  assert.equal(earlier.length, 95);
+  assert.equal(earlier.filter(q => q.section === 3).length, 42);
   assert.deepEqual(records.filter(q => q.section === 3 && !q.stemAr).map(q => q.number),
     [...holds.keys()]);
-  for (const q of records) {
-    const expected = q.section === 1 ||
-      (q.section === 2 && q.number !== 25 && q.number !== 32) ||
-      (q.section === 3 && !holds.has(q.number));
+  for (const q of earlier) {
     const complete = typeof q.stemAr === "string" && !!q.stemAr.trim() &&
       typeof q.explanationAr === "string" && !!q.explanationAr.trim() &&
       Array.isArray(q.choicesAr) && q.choicesAr.length === 4 &&
       q.choicesAr.every(t => typeof t === "string" && !!t.trim());
-    assert.equal(complete, expected, "Unexpected/incomplete Arabic content " + q.section + "." + q.number);
+    assert.ok(complete, "Wave 7 Arabic content removed: " + q.section + "." + q.number);
   }
 });
+
 test("CMA Unit 15 wave 7: all new source records, pages, answer keys and numerical fields unchanged", () => {
   assert.equal(wave7.size, 16);
   for (const [number, [page, key, hash]] of wave7) {
