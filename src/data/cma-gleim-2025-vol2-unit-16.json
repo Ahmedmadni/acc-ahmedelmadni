@@ -3261,7 +3261,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. Setting the transfer price based on actual costs\nrather than standard costs would give the selling division little\nincentive to control costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من أوجه القصور في أسعار التحويل المبنية على التكلفة الفعلية أنها:",
+    "choicesAr": [
+      "تحمّل أوجه عدم الكفاءة للقسم الذي يحوّل البضائع.",
+      "قد تؤدي إلى قرارات غير مثلى للشركة ككل.",
+      "يجب تعديلها بإضافة هامش ربح.",
+      "تفتقر إلى الوضوح وسهولة الإدارة."
+    ],
+    "explanationAr": "ينبغي تحديد سعر التحويل الأمثل للقسم البائع عند مستوى يحقق أفضل أثر اقتصادي للمنشأة ككل، مع استمرار تحفيز إدارات الأقسام على العمل بكفاءة. ويؤدي تحديد سعر التحويل على أساس التكاليف الفعلية بدلًا من المعيارية إلى إضعاف حافز القسم البائع للرقابة على التكاليف."
   },
   {
     "unit": 16,
@@ -3278,7 +3286,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Transfer prices are often used by profit centers and\ninvestment centers. Profit centers are the more fundamental of\nthese two centers because investment centers are responsible\nnot only for revenues and costs but also for invested capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما مركز المسؤولية الأكثر أساسية الذي يتأثر باستخدام أسعار التحويل المبنية على السوق؟",
+    "choicesAr": [
+      "مركز إنتاج.",
+      "مركز استثمار.",
+      "مركز تكلفة.",
+      "مركز ربح."
+    ],
+    "explanationAr": "تستخدم أسعار التحويل غالبًا في مراكز الربح ومراكز الاستثمار. ومراكز الربح هي الأكثر أساسية من هذين النوعين؛ لأن مراكز الاستثمار مسؤولة عن رأس المال المستثمر بالإضافة إلى الإيرادات والتكاليف."
   },
   {
     "unit": 16,
@@ -3295,7 +3311,15 @@
     ],
     "answerIndex": 0,
     "explanation": "An ideal transfer price should permit each division to operate\nindependently and achieve its goals while functioning in the\noverall best interest of the firm. The production capacity of the\nselling division is always a consideration in setting transfer\nprice. If Fabricating had no excess capacity, it would charge\nAssembling the regular market price. However, since\nFabricating has excess capacity of 1,000 units, negotiation is\npossible because any transfer price greater than the variable\ncost of $20 would absorb some of the fixed costs and result in\nincreased divisional profits. Thus, any price between $20 and\n$50 is acceptable to Fabricating. Any price under $50 is\nacceptable to Assembling because that is the price that would\nbe paid to an outside supplier.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يمكن تحديد سعر تحويل مناسب بين قسمين في شركة صناعية من البيانات التالية:\nقسم التصنيع:\nسعر السوق للمكوّن شبه المجمع $50\nالتكلفة المتغيرة للمكوّن $20\nالطاقة الفائضة (بالوحدات) 1,000\nقسم التجميع:\nعدد الوحدات المطلوبة 900\nما نطاق التفاوض الطبيعي بين القسمين؟",
+    "choicesAr": [
+      "بين $20 و$50.",
+      "بين $50 و$70.",
+      "أي مبلغ أقل من $50.",
+      "$50 هو السعر الوحيد المقبول."
+    ],
+    "explanationAr": "ينبغي أن يتيح سعر التحويل المثالي لكل قسم العمل باستقلال وتحقيق أهدافه مع مراعاة المصلحة العامة للمنشأة. وتؤخذ الطاقة الإنتاجية للقسم البائع في الاعتبار عند تحديد السعر. ولو لم تكن لدى قسم التصنيع طاقة فائضة، لكان من المناسب تحميل قسم التجميع سعر السوق المعتاد وفق افتراضات المسألة. لكن لديه طاقة فائضة قدرها 1,000 وحدة، ولذلك يمكن التفاوض؛ فأي سعر تحويل يزيد على التكلفة المتغيرة البالغة $20 يسهم في تغطية بعض التكاليف الثابتة وزيادة أرباح القسم. ومن ثم يكون أي سعر بين $20 و$50 مقبولًا لدى قسم التصنيع. ويقبل قسم التجميع سعرًا أقل من $50 لأنه السعر الذي سيدفعه لمورد خارجي."
   },
   {
     "unit": 16,
@@ -3312,7 +3336,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Full-cost price is the price usually set by an absorption-costing\ncalculation and includes materials, labor, and a full allocation\nof manufacturing O/H. This full-cost price may lead to\ndysfunctional behavior by the supplying and receiving\ndivisions, e.g., purchasing from outside sources at a slightly\nlower price that is substantially above the variable costs of\ninternal production.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد يستند سعر التحويل المقترح إلى سعر التكلفة الكلية. ما المقصود بسعر التكلفة الكلية؟",
+    "choicesAr": [
+      "السعر في السوق المفتوحة.",
+      "سعر يمثل التدفقات النقدية الخارجة للقسم المورد مضافًا إليها هامش المساهمة الذي كان سيحققه من البيع الخارجي.",
+      "سعر يحدد عادة باستخدام طريقة التكاليف الاستيعابية.",
+      "سعر يحدد بتحميل التكاليف المتغيرة ومبلغ مقطوع أو هامش إضافي، ولكن بأقل من الهامش الكامل."
+    ],
+    "explanationAr": "يحدد سعر التكلفة الكلية عادة باستخدام طريقة التكاليف الاستيعابية، ويشمل المواد والعمل وتحميلًا كاملًا للتكاليف الصناعية غير المباشرة. وقد يؤدي إلى سلوك غير ملائم من القسمين المورد والمتلقي؛ مثل الشراء من مورد خارجي بسعر أقل قليلًا من التكلفة الكلية رغم أنه أعلى بكثير من التكاليف المتغيرة للإنتاج الداخلي."
   },
   {
     "unit": 16,
@@ -3329,7 +3361,15 @@
     ],
     "answerIndex": 0,
     "explanation": "From the seller’s perspective, the price should reflect at least\nits incremental cash outflow (outlay cost) plus the contribution\nfrom an outside sale (opportunity cost). Because A has idle\ncapacity, the opportunity cost is $0. Thus, the minimum price\nDivision A should charge Division B is $7.00.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعمل القسم A في شركة حاليًا بنسبة 50% من طاقته الإنتاجية، وينتج منتجًا واحدًا ويبيع كامل إنتاجه للعملاء الخارجيين بسعر $13 للوحدة. وتبلغ التكاليف المتغيرة $7 للوحدة والتكاليف الثابتة $6 للوحدة عند مستوى الإنتاج الحالي. ويرغب القسم B، الذي يشتري المنتج حاليًا من مورد خارجي بسعر $12 للوحدة، في شرائه من القسم A. وسيعمل القسم A بنسبة 80% من طاقته لتلبية طلب العملاء الخارجيين والقسم B. ما الحد الأدنى للسعر الذي ينبغي للقسم A تحميله للقسم B؟",
+    "choicesAr": [
+      "$7.00 للوحدة.",
+      "$9.60 للوحدة.",
+      "$12.00 للوحدة.",
+      "$13.00 للوحدة."
+    ],
+    "explanationAr": "من منظور البائع، ينبغي أن يغطي السعر على الأقل التدفق النقدي الخارج الإضافي (التكلفة النقدية) مضافًا إليه هامش المساهمة المفقود من البيع الخارجي (تكلفة الفرصة البديلة). ونظرًا إلى وجود طاقة عاطلة لدى القسم A، فإن تكلفة الفرصة البديلة تساوي $0 وفق معطيات المسألة. ومن ثم فإن الحد الأدنى للسعر الذي ينبغي للقسم A تحميله للقسم B هو $7.00."
   },
   {
     "unit": 16,
@@ -3346,7 +3386,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The calculation of transfer prices in the international arena\nmust be systematic. A scheme for calculating transfer prices\nfor a firm may correctly price the firm’s product in Country A\nbut not in Country B. The product may be overpriced in\nCountry B, causing sales to be lower than anticipated; or, the\nproduct may be underpriced in Country B, and the authorities\nmay allege that the firm is dumping its product there.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي غير صحيح بشأن أسعار التحويل الدولية لمنشأة متعددة الجنسيات؟",
+    "choicesAr": [
+      "تتيح للمنشآت محاولة خفض الضرائب العالمية ضمن الحدود النظامية.",
+      "تتيح للمنشأة تقييم كل قسم.",
+      "توجه كل قسم نحو تحقيق الربح.",
+      "تضمن للمنشآت تسعير المنتجات تسعيرًا صحيحًا في كل دولة تعمل فيها."
+    ],
+    "explanationAr": "يجب أن يكون حساب أسعار التحويل الدولية منهجيًا. فقد تؤدي طريقة تحديد أسعار التحويل إلى تسعير منتج المنشأة بصورة صحيحة في الدولة A ولكن ليس في الدولة B. فقد يكون سعر المنتج مرتفعًا في الدولة B فتقل المبيعات عن المتوقع، أو يكون منخفضًا فيها فتدعي السلطات أن المنشأة تمارس الإغراق. وتظل قواعد التسعير الضريبي والامتثال واجبة المراعاة."
   },
   {
     "unit": 16,
@@ -3363,7 +3411,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Transfer prices are the amounts charged by one segment of\nan organization for goods and services it provides to another\nsegment of the same organization. They are not for\nexchanges with external customers.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي وصف غير صحيح لتسعير التحويل؟",
+    "choicesAr": [
+      "يقيس قيمة السلع أو الخدمات التي يقدمها مركز ربح إلى مراكز مسؤولية أخرى داخل الشركة.",
+      "إذا وجد سعر سوق، فيمكن استخدامه كسعر تحويل.",
+      "يقيس المبادلات بين الشركة والعملاء الخارجيين.",
+      "إذا لم يوجد سعر سوق، فيمكن تحديد سعر التحويل على أساس التكلفة."
+    ],
+    "explanationAr": "أسعار التحويل هي المبالغ التي يحملها قطاع في المنشأة مقابل السلع والخدمات التي يقدمها إلى قطاع آخر في المنشأة نفسها. وهي ليست أسعار المبادلات مع العملاء الخارجيين."
   },
   {
     "unit": 16,
@@ -3380,7 +3436,15 @@
     ],
     "answerIndex": 0,
     "explanation": "For a manufacturing division with excess capacity, variable\ncosts are the only costs that the division can demand be\ncovered by the purchasing division.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لشركة Manhattan عدة أقسام تعمل كمراكز ربح لامركزية. ولدى قسم التصنيع حاليًا طاقة فائضة قدرها 5,000 وحدة من لوحة الدوائر UT-371، وهي منتج شائع في تطبيقات رقمية عديدة. وفيما يلي معلومات اللوحة:\nسعر السوق $48\nتكاليف البيع والتوزيع المتغيرة للمبيعات الخارجية 5\nتكلفة التصنيع المتغيرة 21\nتكلفة التصنيع الثابتة 10\nيرغب قسم التجميع الإلكتروني في الشركة في شراء 4,500 لوحة دوائر من داخل الشركة أو استخدام لوحة مماثلة تباع في السوق بسعر $46. وترى إدارة قسم التجميع الإلكتروني أن تخفيض السعر مبرر عند اختيار البديل الأول؛ لأن القسمين جزء من المنشأة نفسها.\nلتحقيق الأهداف العامة لشركة Manhattan على أفضل وجه، ما الحد الأدنى للسعر الذي ينبغي لقسم التصنيع تحميله لقسم التجميع الإلكتروني مقابل اللوحة؟",
+    "choicesAr": [
+      "$21",
+      "$26",
+      "$31",
+      "$46"
+    ],
+    "explanationAr": "عندما تكون لدى قسم التصنيع طاقة فائضة كافية، تكون التكاليف المتغيرة ذات الصلة بالتحويل الداخلي هي التكاليف التي يجب أن يغطيها سعر التحويل كحد أدنى، وفق معطيات المسألة."
   },
   {
     "unit": 16,
@@ -3397,7 +3461,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Dual pricing promotes goal congruence because both units\ninvolved in the transfer get the price they find most\nadvantageous.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يتعلق بسياسة أسعار التحويل للمنشأة، ما إحدى مزايا استخدام نظام التسعير المزدوج؟",
+    "choicesAr": [
+      "يوفر حافزًا للوحدة الموردة للرقابة على التكاليف.",
+      "يخضع الوحدة الموردة لانضباط أسعار السوق.",
+      "يعزز توافق الأهداف بين الوحدتين الموردة والمشترية في المنشأة.",
+      "يبسط الحسابات الضريبية عندما تخضع الوحدتان المشترية والموردة للضريبة في ولايات قضائية مختلفة."
+    ],
+    "explanationAr": "يعزز التسعير المزدوج توافق الأهداف؛ لأن كلتا الوحدتين المشتركتين في التحويل تحصلان على السعر الذي تراه أكثر ملاءمة لها."
   },
   {
     "unit": 16,
@@ -3431,7 +3503,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The optimal transfer price of a selling division should be set at\na point that will have the most desirable economic effect on\nthe firm as a whole while at the same time continuing to\nmotivate the management of every division to perform\nefficiently. The principal challenge is to determine a price that\nmotivates both the selling and the buying manager to pursue\norganizational goal congruence. In the case of a selling\ndivision, selecting a transfer price based on the quoted\nexternal price (market) would be preferred by Division A.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ينتج القسم A منتجًا يمكن بيعه للعملاء الخارجيين أو للقسم B لمزيد من المعالجة. إذا قيّم أداء المديرين على أساس ربحية الأقسام، فأي طريقة لتسعير التحويل سيطلبها مدير القسم A؟",
+    "choicesAr": [
+      "تسعير التحويل المختلط.",
+      "تسعير التحويل على أساس التكلفة.",
+      "تسعير التحويل على أساس السوق.",
+      "تسعير التحويل المعياري."
+    ],
+    "explanationAr": "ينبغي تحديد سعر التحويل الأمثل للقسم البائع عند مستوى يحقق أفضل أثر اقتصادي للمنشأة ككل، مع استمرار تحفيز إدارة كل قسم على العمل بكفاءة. والتحدي الرئيسي هو تحديد سعر يحفز المدير البائع والمدير المشتري على تحقيق توافق الأهداف التنظيمية. وفي حالة القسم البائع A، يرجح تفضيل تحديد سعر التحويل بناء على السعر الخارجي المعلن (سعر السوق)، وفق افتراضات المسألة."
   },
   {
     "unit": 16,

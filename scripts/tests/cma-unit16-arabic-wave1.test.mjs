@@ -368,7 +368,7 @@ const wave9=new Map([
 ]);
 const q4=n=>rows.find(r=>r.section===4&&r.number===n);
 test("Unit 16 Wave 9: 119 drafts and 11 immutable balanced scorecard sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>r.section<=4&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,119);
  assert.deepEqual(localized.filter(r=>r.section===4).map(r=>r.number),[...wave9.keys()]);
  for(const [n,[page,index,hash]] of wave9){
@@ -392,4 +392,48 @@ test("Unit 16 Wave 9: scorecard perspectives, external analysis and ambiguous me
  // Source Q12 itself identifies lead time as a possible customer measure.
  assert.ok(q4(12).explanation.includes("lead time"));
  assert.ok(held.choices[1].includes("15 minutes"));
+});
+
+const wave10=new Map([
+ [4,[976,1,"8fe71f26"]],[5,[977,3,"2dd748b9"]],[6,[978,0,"7d0b645d"]],
+ [7,[979,2,"33d8b6a5"]],[8,[980,0,"5c4fc898"]],[9,[981,3,"c80bd936"]],
+ [10,[982,2,"fac9822d"]],[11,[983,0,"3944021c"]],[12,[984,2,"1ac94d4a"]],
+ [14,[985,2,"870e8f88"]],
+]);
+const q5=n=>rows.find(r=>r.section===5&&r.number===n);
+test("Unit 16 Wave 10: 129 drafts and 10 immutable transfer pricing sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,129);
+ assert.deepEqual(localized.filter(r=>r.section===5).map(r=>r.number),[...wave10.keys()]);
+ for(const [n,[page,index,hash]] of wave10){
+  const r=q5(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 10: bargaining range, idle capacity and scoring gates",()=>{
+ const minTransfer=(incrementalCost,forgoneContribution)=>incrementalCost+forgoneContribution;
+ assert.ok(900<=1000);
+ assert.deepEqual([minTransfer(20,0),50],[20,50]);
+ assert.equal((50-20)*900,27000);
+ assert.ok(.8<=1);
+ assert.equal(minTransfer(7,0),7);
+ assert.equal(12-minTransfer(7,0),5);
+ assert.ok(4500<=5000);
+ assert.equal(minTransfer(21,0),21);
+ assert.equal((46-21)*4500,112500);
+ for(const [n,expected] of [[4,"suboptimal decisions"],[5,"Profit center"],[6,"Between $20 and $50"],[7,"absorption-costing"],[8,"$7.00"],[9,"correctly price"],[10,"external customers"],[11,"$21"],[12,"goal congruence"],[14,"Market-based"]])
+  assert.ok(q5(n).choices[q5(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ for(const [n,page,index] of [[1,974,2],[2,975,3],[3,976,1],[13,984,1]]){
+  const held=q5(n);
+  assert.equal(held.page,page);assert.equal(held.answerIndex,index);
+  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+  assert.ok(adapter.includes('"16.5.'+n+'"'));
+ }
 });
