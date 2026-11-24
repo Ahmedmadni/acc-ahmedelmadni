@@ -84,7 +84,8 @@ test("CMA Unit 15 Wave 5: independently recompute ChemKing and materials purchas
   assert.equal(actualUsed, 25000);
   assert.equal(actualPrice, 3);
   assert.equal(priceVariance, 12500);
-  assert.equal(4500 * (0.75 - 0.72), 135);
+  // Compute currency with integer cents, avoiding binary floating-point noise.
+  assert.equal(4500 * (75 - 72) / 100, 135);
   for (const [number, correct] of [[1, "$2.50"], [2, "25,000 units."], [3, "$12,500 unfavorable."], [5, "$135 unfavorable."]]) {
     const q = byQuestion(number);
     assert.equal(q.choices[q.answerIndex], correct, "Original answer must match recomputation §3 Q" + number);
@@ -93,7 +94,7 @@ test("CMA Unit 15 Wave 5: independently recompute ChemKing and materials purchas
 test("CMA Unit 15 Wave 5: controllability and favorable/unfavorable material variance reasoning", () => {
   assert.ok(byQuestion(4).explanationAr.includes("منخفضة الجودة"));
   assert.ok(byQuestion(6).explanationAr.includes("سعر أقل"));
-  assert.ok(byQuestion(7).explanationAr.includes("يتجاوز"));
+  assert.ok(byQuestion(7).explanationAr.includes("تجاوزت"));
   assert.ok(byQuestion(9).choicesAr[0].includes("الهندسة الصناعية"));
   assert.ok(byQuestion(12).choicesAr[0].includes("مدير المشتريات"));
   assert.ok(byQuestion(13).choicesAr[1].includes("استخدام المواد"));
