@@ -31,4 +31,5 @@
 - [x] Unit 16 Wave 1: 20 educational Arabic drafts (§1 Q1–3/Q5–18/Q20–22), Q4/Q19 held for broken option and inferred key.
 - [x] Unit 16 Wave 2: 12 further drafts (§1 Q23–34); integrated the two waves on the latest main, preserving the Unit 15 source-review ledger. **32/166 (19.3%)**, §1 **32/53**, 2 held, 132 unreviewed.
 - [x] Unit 16 Wave 3: 17 additional drafts (§1 Q35–41/Q43–45/Q47–53); completed all currently reviewable §1 records. **49/166 (29.5%)**, §1 **49/53**. Q42 held for ambiguous behavioral rationale and Q46 for damaged solution table; four total holds, 113 unreviewed.
-- [ ] Continue Unit 16 §2 Q1–12 then §§3–5. See `docs/CMA_UNIT16_ARABIC_WAVE3_2026-11-24.md`.
+- [x] Unit 16 Wave 4: 11 educational drafts (§2 Q1–9/Q11–12); all 12 records reviewed. **60/166 (36.1%)**, §2 **11/12**. Q10 held for split monetary values and a missing solution column; five total holds, 101 unreviewed.
+- [ ] Continue Unit 16 §3 Q1–55, then §§4–5. See `docs/CMA_UNIT16_ARABIC_WAVE4_2026-11-24.md`.
