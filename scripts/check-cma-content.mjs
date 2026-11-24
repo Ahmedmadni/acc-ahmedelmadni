@@ -612,7 +612,7 @@ const staticArabicVol2 = new Set([
   ...[1,4,8,9,10,11,12].map(n=>"15.5."+n),
   ...Array.from({length:67},(_,i)=>i+1).filter(n=>![28,53,58,61].includes(n)).map(n=>"15.6."+n),
   ...[14,15,16,17,18].map(n=>"15.7."+n),
-  ...[1,3,4,5,12].map(n=>"15.8."+n),
+  ...[1,3,4,5,12,13,14,15,16,17,18,19,20,21,22,24,25,27,28,29].map(n=>"15.8."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -674,7 +674,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
 console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 34/34, §6 26/31; 160/175 Arabic educational drafts. Ten review-held drafts and 15 English-first records remain outside scored practice.");
-console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 27/35, §5 7/12, §6 63/67, §7 5/18, §8 5/31; 202/264 (76.5%) complete Arabic educational drafts. Remaining 62 English-first, including 44 source review holds (36 explicit and 8 existing source-status holds).");
+console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 27/35, §5 7/12, §6 63/67, §7 5/18, §8 20/31; 217/264 (82.2%) complete Arabic educational drafts. Remaining 47 English-first, all source review holds (39 explicit and 8 existing source-status holds).");
 for (const [key,page,needle] of [
   ["15.2.25",596,"$1.360 U"],
   ["15.2.32",607,"Budgete\n"],
@@ -760,7 +760,7 @@ for(const [section,n,page,status] of [
  [7,1,788],[7,2,789],[7,3,789],[7,4,790],[7,5,792],[7,6,793],[7,7,793],[7,8,794],[7,9,794],
  [7,10,799,"table-reflowed"],[7,11,800,"table-reflowed"],[7,12,801,"table-reflowed"],[7,13,802,"table-reflowed"],
  [8,2,810],[8,6,814],[8,7,815],[8,8,815],
- [8,9,817,"table-reflowed"],[8,10,817,"table-reflowed"],[8,11,822,"table-reflowed"],[8,23,835,"reconstructed"],
+ [8,9,817,"table-reflowed"],[8,10,817,"table-reflowed"],[8,11,822,"table-reflowed"],[8,23,835,"reconstructed"],[8,26,839],[8,30,844],[8,31,844],
 ]) {
  const original=vol2Records.get("15."+section+"."+n);
  const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"));
@@ -774,7 +774,8 @@ const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;
 });
-check(unit15ReviewRows.length===44,"Unit 15 complete source review inventory must include all 44 holds.");
+check(unit15ReviewRows.length===47,"Unit 15 complete source review inventory must include all 47 holds.");
+check([...vol2Records.entries()].filter(([id,r])=>id.startsWith("15.")&&!r.stemAr).every(([id])=>unit15ReviewRows.some(([held])=>held===id)),"Every untranslated Unit 15 record must be explicitly held after the full review.");
 
 // Q53 Valyn's planned and actual tables are interleaved, including split monetary amounts.
 {

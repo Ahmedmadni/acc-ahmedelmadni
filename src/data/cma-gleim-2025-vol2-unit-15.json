@@ -5802,7 +5802,15 @@
     ],
     "answerIndex": 1,
     "explanation": "For a single product, the sales volume variance isolates the\neffect of selling more or fewer units than budgeted. It equals\nbudgeted unit contribution margin (UCM) times the difference\nbetween budgeted and actual units sold. Given expected\nsales of 4,000 units and revenue of $60,000, unit price is $15.\nVariable costs are $16,000 for manufacturing and $8,000 for\nselling, and unit variable cost is $6 ($24,000 ÷ 4,000 units).\nThe UCM is $9 ($15 – $6). Because actual sales were\n200 units fewer than budgeted (4,000 – 3,800), the lost\ncontribution margin was $1,800 (200 × $9). This variance is\nunfavorable because actual sales were less than budgeted.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوفر المعلومات التالية لشهر يوليو:\nالبيان | الموازنة الشاملة | الفعلي\nالوحدات | 4,000 | 3,800\nإيرادات المبيعات | $60,000 | $53,200\nتكاليف التصنيع المتغيرة | $16,000 | $19,000\nتكاليف التصنيع الثابتة | $15,000 | $16,000\nمصروفات البيع والإدارة المتغيرة | $8,000 | $7,600\nمصروفات البيع والإدارة الثابتة | $9,000 | $10,000\nما انحراف حجم المبيعات لشهر يوليو؟",
+    "choicesAr": [
+      "$400 غير ملائم.",
+      "$1,800 غير ملائم.",
+      "$200 ملائم.",
+      "$6,800 غير ملائم."
+    ],
+    "explanationAr": "في حالة المنتج الواحد، يعزل انحراف حجم المبيعات أثر بيع وحدات أكثر أو أقل من المقدرة. ويساوي هامش المساهمة المقدر للوحدة (UCM) مضروبًا في الفرق بين الوحدات المقدرة والفعلية المباعة. وبناء على مبيعات متوقعة قدرها 4,000 وحدة وإيرادات $60,000، يكون سعر الوحدة $15. وتبلغ تكاليف التصنيع المتغيرة $16,000 ومصروفات البيع المتغيرة $8,000، وتبلغ التكلفة المتغيرة للوحدة $6 ($24,000 ÷ 4,000 وحدة). وهامش مساهمة الوحدة $9 ($15 – $6). ولأن المبيعات الفعلية أقل من المقدرة بمقدار 200 وحدة (4,000 – 3,800)، فإن هامش المساهمة المفقود $1,800 (200 × $9). والانحراف غير ملائم لأن المبيعات الفعلية أقل من المقدرة."
   },
   {
     "unit": 15,
@@ -5819,7 +5827,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sales mix variance is a sum of variances. For each\nproduct in the mix, the difference between units sold and\nexpected to be sold is multiplied by the difference between the\nbudgeted UCM for the product and the budgeted weighted-\naverage UCM for all products. The results of these\ncomputations are then added to determine the mix variance.\nThis variance measures the effect of the change in the\nweighted-average UCM associated with the changes in the\nquantities of items in the mix. The sales mix variance is\nfavorable when more units with a higher than average UCM\nare sold or when fewer units with a lower than average UCM\nare sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "انحراف مزيج المبيعات:",
+    "choicesAr": [
+      "يكون غير ملائم بنسبة 5% كلما انخفض إجمالي حجم مبيعات الشركة بنسبة 5%.",
+      "يكون ملائمًا عندما تبيع الشركة عددًا أقل من المنتجات ذات هامش المساهمة للوحدة الأعلى من المتوسط.",
+      "يقيس أثر الانحراف عن المتوسط المرجح المقدر لهامش المساهمة للوحدة المرتبط بتغير كميات المنتجات في المزيج.",
+      "يساوي الفرق بين المتوسط المرجح المقدر لتكلفة وحدة المواد للمزيجين الفعلي والمخطط مضروبًا في المدخلات الفعلية للمواد."
+    ],
+    "explanationAr": "انحراف مزيج المبيعات هو مجموع انحرافات. لكل منتج في المزيج، يضرب الفرق بين الوحدات المباعة والوحدات المتوقع بيعها في الفرق بين هامش المساهمة المقدر للوحدة للمنتج والمتوسط المرجح المقدر لهامش المساهمة للوحدة لجميع المنتجات. ثم تجمع النتائج لتحديد انحراف المزيج. ويقيس هذا الانحراف أثر تغير المتوسط المرجح لهامش المساهمة للوحدة المرتبط بتغير كميات المنتجات في المزيج. ويكون ملائمًا عندما تُباع وحدات أكثر ذات هامش مساهمة أعلى من المتوسط أو وحدات أقل ذات هامش مساهمة أدنى من المتوسط."
   },
   {
     "unit": 15,
@@ -5836,7 +5852,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The sales price variance is the difference between actual price\nand budgeted price, times actual units. Actual price was\n$11.50 ($92,000 ÷ 8,000). Budgeted price was $10.50\n($105,000 ÷ 10,000). Sales price variance is therefore $8,000\n[8,000 actual units × ($11.50 – $10.50)]. The variance is\nfavorable because actual sales price was greater than\nbudgeted sales price.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات المبيعات الفعلية والمقدرة لمنتج خلال يونيو:\nالبيان | الفعلي | المقدر\nالوحدات | 8,000 | 10,000\nإيرادات المبيعات | $92,000 | $105,000\nما انحراف سعر المبيعات لشهر يونيو؟",
+    "choicesAr": [
+      "$8,000 ملائم.",
+      "$10,000 ملائم.",
+      "$10,000 غير ملائم.",
+      "$10,500 غير ملائم."
+    ],
+    "explanationAr": "انحراف سعر المبيعات هو الفرق بين السعر الفعلي والمقدر مضروبًا في الوحدات الفعلية. بلغ السعر الفعلي $11.50 ($92,000 ÷ 8,000). وبلغ السعر المقدر $10.50 ($105,000 ÷ 10,000). ومن ثم بلغ انحراف سعر المبيعات $8,000 [8,000 وحدة فعلية × ($11.50 – $10.50)]. والانحراف ملائم لأن سعر البيع الفعلي تجاوز المقدر."
   },
   {
     "unit": 15,
@@ -5853,7 +5877,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sales volume variance is the difference between the\nflexible budget contribution margin and the static (master)\nbudget contribution margin. Its components are the sales\nquantity and sales mix variances. The contribution margin is\nused rather than operating income because fixed costs are the\nsame in both budgets. Unit sales price and variable cost are\nheld constant so as to isolate the effect of the difference in unit\nsales volume. Because the flexible budget contribution margin\n($110,000) is less than the master budget amount ($120,000),\nthe variance ($10,000) is unfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يعرض الجدول التالي ملخص أداء صنف واحد من مخزون متجر تجزئة خلال أبريل:\nالبيان | الفعلي | انحراف الموازنة المرنة | الموازنة المرنة | الموازنة الثابتة (الشاملة)\nالمبيعات (وحدات) | 11,000 | — | 11,000 | 12,000\nإيرادات المبيعات | $208,000 | $12,000 غير ملائم | $220,000 | $240,000\nالتكاليف المتغيرة | 121,000 | 11,000 غير ملائم | 110,000 | 120,000\nهامش المساهمة | $87,000 | $23,000 غير ملائم | $110,000 | $120,000\nالتكاليف الثابتة | 72,000 | — | 72,000 | 72,000\nالربح التشغيلي | $15,000 | $23,000 غير ملائم | $38,000 | $48,000\nما انحراف حجم المبيعات؟",
+    "choicesAr": [
+      "$1,000 ملائم.",
+      "$10,000 غير ملائم.",
+      "$11,000 ملائم.",
+      "$12,000 غير ملائم."
+    ],
+    "explanationAr": "انحراف حجم المبيعات هو الفرق بين هامش المساهمة بالموازنة المرنة وهامش المساهمة بالموازنة الثابتة (الشاملة). ويتكون من انحرافي كمية المبيعات ومزيج المبيعات. ويستخدم هامش المساهمة بدل الربح التشغيلي لأن التكاليف الثابتة متساوية في الموازنتين. ويثبت سعر بيع الوحدة والتكلفة المتغيرة للوحدة لعزل أثر اختلاف حجم المبيعات بالوحدات. ولأن هامش المساهمة بالموازنة المرنة ($110,000) أقل من مبلغ الموازنة الشاملة ($120,000)، فإن الانحراف ($10,000) غير ملائم."
   },
   {
     "unit": 15,
@@ -5870,7 +5902,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The sales volume variance is the difference between the\nactual volume and the budgeted volume in units, times the\nbudgeted contribution margin per unit.\n= (Actual volume – Budgeted volume) × (Selling price –\nUnit variable cost)\n= (42,000 – 40,000) × ($6 – $3.50)\n= $5,000 F",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتوفر البيانات التالية لشهر يوليو:\nالبيان | الموازنة | الفعلي\nالمبيعات | 40,000 وحدة | 42,000 وحدة\nسعر البيع | $6 للوحدة | $5.70 للوحدة\nالتكلفة المتغيرة | $3.50 للوحدة | $3.40 للوحدة\nما انحراف حجم المبيعات لشهر يوليو؟",
+    "choicesAr": [
+      "$5,000 ملائم.",
+      "$4,600 ملائم.",
+      "$12,000 غير ملائم.",
+      "$12,600 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف حجم المبيعات الفرق بين الحجم الفعلي والمقدر بالوحدات مضروبًا في هامش المساهمة المقدر للوحدة.\n= (الحجم الفعلي – الحجم المقدر) × (سعر البيع – التكلفة المتغيرة للوحدة)\n= (42,000 – 40,000) × ($6 – $3.50)\n= $5,000 ملائم."
   },
   {
     "unit": 15,
@@ -5887,7 +5927,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Given a 15% decrease in prices, Year 2 sales were 85% of\nYear 2 sales at Year 1 prices. Hence, Year 2 sales at Year 1\nprices equal $1,118,118 ($950,400 ÷ 85%). Sales and gross\nprofit were $167,718 ($1,118,118 – $950,400) lower because\nof the decrease in prices.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "كان مجمل ربح شركة للسنة 2 والسنة 1 كما يلي:\nالبيان | السنة 2 | السنة 1\nالمبيعات | $950,400 | $960,000\nتكلفة البضاعة المباعة | (556,800) | (576,000)\nمجمل الربح | $393,600 | $384,000\nإذا كانت أسعار البيع في السنة 2 أقل بنسبة 15% من أسعار السنة 1، فما انخفاض مجمل الربح الناتج عن تغير سعر البيع؟",
+    "choicesAr": [
+      "$134,400",
+      "$142,560",
+      "$144,000",
+      "$167,718"
+    ],
+    "explanationAr": "نظرًا لانخفاض الأسعار بنسبة 15%، فإن مبيعات السنة 2 تمثل 85% من مبيعات السنة 2 بأسعار السنة 1. وبالتالي تساوي مبيعات السنة 2 بأسعار السنة 1 مبلغ $1,118,118 ($950,400 ÷ 85%). وانخفضت المبيعات ومجمل الربح بمبلغ $167,718 ($1,118,118 – $950,400) بسبب انخفاض الأسعار."
   },
   {
     "unit": 15,
@@ -5904,7 +5952,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sales volume variance in Gallia is $120 U [$3.00\nbudgeted UCM × (260 actual units sold – 300 budgeted unit\nsales)]. The sales volume variance in Helvetica is $150 F\n[$2.50 budgeted UCM × (260 actual units sold – 200 budgeted\nunit sales)]. Thus, the two-country sales volume variance is\n$30 F ($150 F – $120 U).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي البيانات اللازمة لحساب انحرافات المبيعات لشركة فورتونا، التي تبيع منتجها الوحيد في بلدين:\nالبيان | غاليا | هلفيتيا | الإجمالي\nسعر البيع المقدر للوحدة | $6.00 | $10.00 | —\nالتكلفة المتغيرة المقدرة للوحدة | (3.00) | (7.50) | —\nهامش المساهمة المقدر للوحدة | $3.00 | $2.50 | —\nالمبيعات المقدرة بالوحدات | 300 | 200 | 500\nنسبة المزيج المقدرة | 60% | 40% | 100%\nالوحدات المباعة فعليًا | 260 | 260 | 520\nسعر البيع الفعلي للوحدة | $6.00 | $9.50 | غير منطبق\nما انحراف حجم المبيعات للبلدين؟",
+    "choicesAr": [
+      "$130 غير ملائم.",
+      "$120 غير ملائم.",
+      "$30 ملائم.",
+      "$150 غير ملائم."
+    ],
+    "explanationAr": "بلغ انحراف حجم المبيعات في غاليا $120 غير ملائم [$3.00 هامش المساهمة المقدر للوحدة × (260 وحدة فعلية مباعة – 300 وحدة مبيعات مقدرة)]. وبلغ الانحراف في هلفيتيا $150 ملائمًا [$2.50 هامش المساهمة المقدر للوحدة × (260 وحدة فعلية مباعة – 200 وحدة مبيعات مقدرة)]. لذلك بلغ انحراف حجم المبيعات للبلدين $30 ملائمًا ($150 ملائم – $120 غير ملائم)."
   },
   {
     "unit": 15,
@@ -5921,7 +5977,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The sales quantity variance in Gallia is $36 F {[(520 actual\ntotal units sold × .6 budgeted percentage) – 300 budgeted unit\nsales] × $3 budgeted UCM}. The sales quantity variance in\nHelvetica is $20 F {[(520 actual total units sold × .4 budgeted\npercentage) – 200 budgeted unit sales] × $2.50 budgeted\nUCM}. Thus, the multiple-country sales quantity variance is\n$56 F ($36 F + $20 F).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي البيانات اللازمة لحساب انحرافات المبيعات لشركة فورتونا، التي تبيع منتجها الوحيد في بلدين:\nالبيان | غاليا | هلفيتيا | الإجمالي\nسعر البيع المقدر للوحدة | $6.00 | $10.00 | —\nالتكلفة المتغيرة المقدرة للوحدة | (3.00) | (7.50) | —\nهامش المساهمة المقدر للوحدة | $3.00 | $2.50 | —\nالمبيعات المقدرة بالوحدات | 300 | 200 | 500\nنسبة المزيج المقدرة | 60% | 40% | 100%\nالوحدات المباعة فعليًا | 260 | 260 | 520\nسعر البيع الفعلي للوحدة | $6.00 | $9.50 | غير منطبق\nما انحراف كمية المبيعات للبلدين؟",
+    "choicesAr": [
+      "$156 غير ملائم.",
+      "$30 ملائم.",
+      "$56 ملائم.",
+      "$100 ملائم."
+    ],
+    "explanationAr": "بلغ انحراف كمية المبيعات في غاليا $36 ملائمًا {[(520 وحدة إجمالية فعلية مباعة × .6 نسبة مقدرة) – 300 وحدة مبيعات مقدرة] × $3 هامش المساهمة المقدر للوحدة}. وبلغ الانحراف في هلفيتيا $20 ملائمًا {[(520 وحدة إجمالية فعلية مباعة × .4 نسبة مقدرة) – 200 وحدة مبيعات مقدرة] × $2.50 هامش المساهمة المقدر للوحدة}. ومن ثم بلغ انحراف كمية المبيعات للبلدين $56 ملائمًا ($36 ملائم + $20 ملائم)."
   },
   {
     "unit": 15,
@@ -5938,7 +6002,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sales mix variance in Gallia is $156 U {[260 actual units\nsold – (520 actual total units sold × .6 budgeted percentage)]\n× $3 budgeted UCM}. The sales mix variance in Helvetica is\n$130 F {[260 actual units sold – (520 actual total units sold ×\n.4 budgeted percentage)] × $2.50 budgeted UCM}. Thus, the\nmultiple-country sales mix variance is $26 U ($156 U – $130\nF).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي البيانات اللازمة لحساب انحرافات المبيعات لشركة فورتونا، التي تبيع منتجها الوحيد في بلدين:\nالبيان | غاليا | هلفيتيا | الإجمالي\nسعر البيع المقدر للوحدة | $6.00 | $10.00 | —\nالتكلفة المتغيرة المقدرة للوحدة | (3.00) | (7.50) | —\nهامش المساهمة المقدر للوحدة | $3.00 | $2.50 | —\nالمبيعات المقدرة بالوحدات | 300 | 200 | 500\nنسبة المزيج المقدرة | 60% | 40% | 100%\nالوحدات المباعة فعليًا | 260 | 260 | 520\nسعر البيع الفعلي للوحدة | $6.00 | $9.50 | غير منطبق\nما انحراف مزيج المبيعات للبلدين؟",
+    "choicesAr": [
+      "$156 غير ملائم.",
+      "$26 غير ملائم.",
+      "$56 ملائم.",
+      "$150 ملائم."
+    ],
+    "explanationAr": "بلغ انحراف مزيج المبيعات في غاليا $156 غير ملائم {[260 وحدة فعلية مباعة – (520 وحدة إجمالية فعلية مباعة × .6 نسبة مقدرة)] × $3 هامش المساهمة المقدر للوحدة}. وبلغ الانحراف في هلفيتيا $130 ملائمًا {[260 وحدة فعلية مباعة – (520 وحدة إجمالية فعلية مباعة × .4 نسبة مقدرة)] × $2.50 هامش المساهمة المقدر للوحدة}. ومن ثم بلغ انحراف مزيج المبيعات للبلدين $26 غير ملائم ($156 غير ملائم – $130 ملائم)."
   },
   {
     "unit": 15,
@@ -5955,7 +6027,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The first step is to calculate the contribution margin (CM) for a\n“composite” unit using budgeted mix percentages and\nbudgeted margins:\nProduct E: {[5,500 ÷ (5,500 + 4,500)] × $4.50} = $2.475\nProduct F: {[4,500 ÷ (5,500 + 4,500)] × $10.00} = $4.500\nComposite Budget UCM                               $6.975\nThis process is repeated using actual mix percentages and\nbudgeted margins:\nProduct E: {[6,000 ÷ (6,000 + 6,000)] × $4.50} = $2.250\nProduct F: {[6,000 ÷ (6,000 + 6,000)] × $10.00} = $5.000\nComposite Actual UCM                               $7.250\nThe difference between the two is multiplied by the number of\nunits sold to arrive at the sales mix variance [(6,000 + 6,000) ×\n($7.250 actual – $6.975 budget) = (12,000 × $0.275) = $3,300\nfavorable].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تبيع شركة منتجين E وF، وكانت بيانات الشهر الماضي كما يلي:\nالبيان | E المقدر | E الفعلي | F المقدر | F الفعلي\nالمبيعات بالوحدات | 5,500 | 6,000 | 4,500 | 6,000\nهامش المساهمة للوحدة | $4.50 | $4.80 | $10.00 | $10.50\nما انحراف مزيج المبيعات للشركة؟",
+    "choicesAr": [
+      "$3,300 ملائم.",
+      "$3,420 ملائم.",
+      "$17,250 ملائم.",
+      "$18,150 ملائم."
+    ],
+    "explanationAr": "الخطوة الأولى هي حساب هامش المساهمة للوحدة المركبة باستخدام نسب المزيج وهوامش المساهمة المقدرة:\nالمنتج E: {[5,500 ÷ (5,500 + 4,500)] × $4.50} = $2.475\nالمنتج F: {[4,500 ÷ (5,500 + 4,500)] × $10.00} = $4.500\nهامش مساهمة الوحدة المركبة المقدر $6.975\nتكرر العملية باستخدام نسب المزيج الفعلية وهوامش المساهمة المقدرة:\nالمنتج E: {[6,000 ÷ (6,000 + 6,000)] × $4.50} = $2.250\nالمنتج F: {[6,000 ÷ (6,000 + 6,000)] × $10.00} = $5.000\nهامش مساهمة الوحدة المركبة وفق المزيج الفعلي $7.250\nيضرب الفرق بينهما في عدد الوحدات المباعة لحساب انحراف المزيج [(6,000 + 6,000) × ($7.250 وفق المزيج الفعلي – $6.975 المقدر) = (12,000 × $0.275) = $3,300 ملائم]."
   },
   {
     "unit": 15,
@@ -5990,7 +6070,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The production volume variance is based on the over- (or\nunder-) applied fixed overhead for the period. The fixed\noverhead allocation rate is $.50 per unit ($40,000 ÷\n80,000 units). With actual results exceeding the standard by\n20,000 units, the overapplied overhead would have been\n$10,000 (20,000 units × $.50).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أُعد تقرير الأداء التالي لشهر أبريل:\nالبيان | الفعلي | الموازنة الثابتة | الانحراف\nوحدات المبيعات | 100,000 | 80,000 | 20,000 ملائم\nقيمة المبيعات | $190,000 | $160,000 | $30,000 ملائم\nالتكاليف المتغيرة | 125,000 | 96,000 | 29,000 غير ملائم\nالتكاليف الثابتة | 45,000 | 40,000 | 5,000 غير ملائم\nالربح التشغيلي | $20,000 | $24,000 | $4,000 غير ملائم\nإذا لم تتغير المخزونات خلال الشهر، فما إجمالي انحراف حجم الإنتاج باستخدام الموازنة المرنة؟",
+    "choicesAr": [
+      "$4,000 غير ملائم.",
+      "$6,000 ملائم.",
+      "$10,000 ملائم.",
+      "$20,000 غير ملائم."
+    ],
+    "explanationAr": "يستند انحراف حجم الإنتاج إلى زيادة أو نقص تحميل التكاليف الصناعية غير المباشرة الثابتة مقارنة بالموازنة للفترة. ومعدل تحميلها $.50 للوحدة ($40,000 ÷ 80,000 وحدة). ومع تجاوز النتائج الفعلية للمستوى المعياري بمقدار 20,000 وحدة، تبلغ زيادة التحميل مقارنة بالموازنة $10,000 (20,000 وحدة × $.50)."
   },
   {
     "unit": 15,
@@ -6007,7 +6095,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The sales volume variance for operating income is equal to\nthe difference between static-budget operating income and\nflexible budget operating income, as the sole difference\nbetween the two is volume of sales.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أظهر أحدث تقرير أداء البيانات التالية:\nالبيان | الفعلي | الموازنة المرنة | الموازنة الثابتة\nالإيرادات | $5,000,000 | $4,600,000 | $5,200,000\nالتكاليف المتغيرة | 2,600,000 | 2,300,000 | 2,600,000\nالتكاليف الثابتة | 2,300,000 | 2,000,000 | 2,000,000\nالربح التشغيلي | $100,000 | $300,000 | $600,000\nما انحراف حجم المبيعات في الربح التشغيلي؟",
+    "choicesAr": [
+      "$200,000 غير ملائم.",
+      "$300,000 غير ملائم.",
+      "$400,000 ملائم.",
+      "$500,000 غير ملائم."
+    ],
+    "explanationAr": "يساوي انحراف حجم المبيعات في الربح التشغيلي الفرق بين الربح التشغيلي بالموازنة الثابتة والربح التشغيلي بالموازنة المرنة، لأن الفرق الوحيد بينهما هو حجم المبيعات."
   },
   {
     "unit": 15,
@@ -6041,7 +6137,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The company has actual total sales units that equaled\nbudgeted total sales units, budgeted fixed costs that equaled\nactual fixed costs, budgeted selling prices per unit that\nequaled actual selling price per unit, and budgeted\ncontribution margin ratio that equaled actual contribution\nmargin ratio. With a product mix different than budgeted,\noperating income can differ from the static budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند مقارنة الربح التشغيلي الفعلي بالربح التشغيلي بالموازنة الشاملة، لاحظ المراقب المالي أن إجمالي وحدات المبيعات الفعلية يساوي الإجمالي المقدر، وأن التكاليف الثابتة المقدرة تساوي الفعلية. ولاحظ أيضًا بيع كلا المنتجين بسعر البيع المقدر للوحدة، وأن نسبة هامش المساهمة الفعلية والمقدرة لكل منتج تبلغ 40%. ومع ذلك حققت الشركة انحرافًا ملائمًا في الربح التشغيلي بالموازنة الثابتة للفترة. أي مما يلي تفسير محتمل؟",
+    "choicesAr": [
+      "أنتجت الشركة وحدات أقل من المقدرة.",
+      "كان معدل ضريبة الدخل أقل من المقدر.",
+      "اختلفت طريقة توزيع مصروفات البيع والإدارة الثابتة على المنتجات عن المخطط.",
+      "اختلف مزيج المنتجات عن المقدر."
+    ],
+    "explanationAr": "لدى الشركة إجمالي وحدات مبيعات فعلية يساوي الإجمالي المقدر، وتكاليف ثابتة مقدرة تساوي الفعلية، وأسعار بيع مقدرة للوحدة تساوي الفعلية، ونسب هامش مساهمة مقدرة تساوي الفعلية. ومع اختلاف مزيج المنتجات عن المقدر، يمكن أن يختلف الربح التشغيلي عن الموازنة الثابتة."
   },
   {
     "unit": 15,
@@ -6058,7 +6162,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The selling-price variance is calculated by multiplying the\ndifference between the actual and budgeted selling price by\nthe actual number of units sold, which will yield $525 favorable\n[($40 – $35) × 105].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في الأسبوع الأول من الشهر، خطط مخبز لبيع 100 كعكة بسعر $35 لكل منها. وباع فعليًا 105 كعكات بسعر $40 لكل منها. ما انحراف سعر البيع؟",
+    "choicesAr": [
+      "$525 ملائم.",
+      "$525 غير ملائم.",
+      "$700 ملائم.",
+      "$700 غير ملائم."
+    ],
+    "explanationAr": "يحسب انحراف سعر البيع بضرب الفرق بين سعر البيع الفعلي والمقدر في عدد الوحدات المباعة فعليًا، لينتج $525 ملائمًا [($40 – $35) × 105]."
   },
   {
     "unit": 15,
@@ -6075,7 +6187,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The company’s budget operating income is ¥95,000\n(¥750,000 - ¥400,000 - ¥255,000) and actual operating\nincome is ¥80,000 (¥650,000 - ¥375,000 - ¥195,000). Hence,\nthe operating income variance is ¥15,000 unfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خططت شركة في موازنتها الشاملة للسنة لتصنيع وبيع 5,600 لعبة بإيرادات ¥750,000، ومصروفات متغيرة ¥400,000، ومصروفات ثابتة ¥255,000. وبنهاية السنة صنعت وباعت 4,500 لعبة فقط بإيرادات ¥650,000، ومصروفات متغيرة ¥375,000، ومصروفات ثابتة ¥195,000. ما انحراف الربح التشغيلي للشركة للسنة؟",
+    "choicesAr": [
+      "¥15,000 غير ملائم.",
+      "¥25,000 ملائم.",
+      "¥75,000 غير ملائم.",
+      "¥100,000 غير ملائم."
+    ],
+    "explanationAr": "بلغ الربح التشغيلي المقدر للشركة ¥95,000 (¥750,000 - ¥400,000 - ¥255,000)، وبلغ الربح التشغيلي الفعلي ¥80,000 (¥650,000 - ¥375,000 - ¥195,000). ومن ثم بلغ انحراف الربح التشغيلي ¥15,000 غير ملائم."
   },
   {
     "unit": 15,
