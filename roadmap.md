@@ -46,4 +46,5 @@
 - [x] Unit 16 Wave 12: bilingual review ledger for all 23 unscored questions, shown in study library and ExamPrep; preserve original keys and scoring gates. See `docs/CMA_UNIT16_REVIEW_LEDGER_2026-11-24.md`.
 - [ ] Resolve Unit 16 holds against authorized source and explicit assumptions before scoring release.
 - [x] Unit 17 Wave 1: 5 Arabic educational drafts (§1 Q7–9/Q13/Q15), 10 jurisdiction/scope holds, 78 unreviewed. 5/93 (5.4%). See `docs/CMA_UNIT17_ARABIC_WAVE1_2026-11-24.md`.
-- [ ] Continue Unit 17 §1 Q16–28, then §2 Q1–65.
+- [x] Unit 17 Wave 2: 9 more educational drafts (§1 Q16–17/Q19/Q21/Q23–25/Q27–28), 14/93 (15.1%); governance 14/28, all 28 reviewed. Four new scope holds Q18/20/22/26. See `docs/CMA_UNIT17_ARABIC_WAVE2_2026-11-24.md`.
+- [ ] Revisit governance holds with official statutory scope and original-page checks; continue §2 Q1–65.
