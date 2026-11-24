@@ -24,26 +24,24 @@ function fingerprint(value) {
   for (let i = 0; i < value.length; i++) hash = Math.imul(hash ^ value.charCodeAt(i), 16777619);
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
-test("Unit 15 Wave 8: exactly 114 full Arabic drafts and 19 direct-labor variance drafts", () => {
+test("Unit 15 Wave 8: preserve all 114 prior Arabic drafts after subsequent additions", () => {
   assert.equal(rows.length,264);
-  const translated = rows.filter(r => r.stemAr !== undefined || r.choicesAr !== undefined || r.explanationAr !== undefined);
-  assert.equal(translated.length,114);
-  assert.equal(translated.filter(r => r.section === 1).length,16);
-  assert.equal(translated.filter(r => r.section === 2).length,37);
-  assert.equal(translated.filter(r => r.section === 3).length,42);
-  assert.deepEqual(translated.filter(r => r.section === 4).map(r => r.number), [...source.keys()]);
-  assert.equal(source.size,19);
-  for (const r of rows) {
-    const expected = r.section === 1 ||
-      (r.section === 2 && ![25,32].includes(r.number)) ||
-      (r.section === 3 && ![32,37,38,39].includes(r.number)) ||
-      (r.section === 4 && source.has(r.number));
-    const complete = !!r.stemAr?.trim() && !!r.explanationAr?.trim() &&
-      Array.isArray(r.choicesAr) && r.choicesAr.length === 4 &&
-      r.choicesAr.every(v => typeof v === "string" && !!v.trim());
-    assert.equal(complete, expected, "Unexpected/missing full Arabic record "+r.section+"."+r.number);
+  const earlier=rows.filter(r=>r.section===1 ||
+    (r.section===2 && ![25,32].includes(r.number)) ||
+    (r.section===3 && ![32,37,38,39].includes(r.number)) ||
+    (r.section===4 && source.has(r.number)));
+  assert.equal(earlier.length,114);
+  assert.equal(earlier.filter(r=>r.section===4).length,19);
+  assert.deepEqual(earlier.filter(r=>r.section===4).map(r=>r.number),[...source.keys()]);
+  for(const r of earlier) {
+    const complete=typeof r.stemAr==="string" && !!r.stemAr.trim() &&
+      typeof r.explanationAr==="string" && !!r.explanationAr.trim() &&
+      Array.isArray(r.choicesAr) && r.choicesAr.length===4 &&
+      r.choicesAr.every(v=>typeof v==="string" && !!v.trim());
+    assert.ok(complete, "Earlier Wave 8 Arabic source translation lost "+r.section+"."+r.number);
   }
 });
+
 test("Unit 15 Wave 8: original labor-cost source pages, publisher answer keys and ordered numeric tokens are immutable", () => {
   for (const [n,[page,answerIndex,hash]] of source) {
     const r=q(n);
