@@ -3437,7 +3437,15 @@
     ],
     "answerIndex": 0,
     "explanation": "To calculate the yield variance, the weighted-average\nstandard price for the standard mix (SMSP) must be\ndetermined. Tamsin can calculate its SMSP for the month as\nfollows:\nLabor                            Static\nClass       SQ          SP       Budget\nIII      500     × $8.00 = $    4,000\nII       500     × 7.00 =       3,500\nI       500     × 5.00 =       2,500\nTotals 1,500                 $ 10,000\nDivided by: Total hours         ÷   1,500\nSMSP per hour               $6.66667\nThe yield variance can now be calculated:\nLabor yield variance = (STQ – ATQ) × SMSP\n= (1,500 hours – 1,575 hours) × $6.66667\n= –75 hours × $6.66667\n= $500 unfavorable",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في شركة تامسين، كانت معدلات أجور العمل المباشر المعيارية السارية للسنة المالية المنتهية في 30 يونيو، والساعات المعيارية المسموح بها للإنتاج في أبريل، كما يلي:\nالفئة | معدل الأجر المعياري لكل ساعة | الساعات المعيارية المسموح بها\nIII | $8.00 | 500\nII | 7.00 | 500\nI | 5.00 | 500\nارتفعت معدلات الأجور لكل فئة اعتبارًا من 1 يناير بموجب عقد نقابي جديد، ولم تُعدّل المعدلات المعيارية. وكانت ساعات العمل المباشر الفعلية ومعدلات الأجور الفعلية في أبريل كما يلي:\nالفئة | معدل الأجر الفعلي | الساعات الفعلية\nIII | $8.50 | 550\nII | 7.50 | 650\nI | 5.40 | 375\nما انحراف عائد العمل المباشر لشركة تامسين (بعد التقريب)؟",
+    "choicesAr": [
+      "$500 غير ملائم.",
+      "$325 غير ملائم.",
+      "$825 غير ملائم.",
+      "$325 ملائم."
+    ],
+    "explanationAr": "لحساب انحراف العائد، يجب تحديد المتوسط المرجح للسعر المعياري وفق المزيج المعياري (SMSP). ويمكن حسابه للشهر كما يلي:\nالفئة | الكمية المعيارية SQ | السعر المعياري SP | الموازنة الثابتة\nIII: 500 × $8.00 = $4,000\nII: 500 × 7.00 = 3,500\nI: 500 × 5.00 = 2,500\nالإجمالي: 1,500 ساعة، $10,000\nالقسمة على إجمالي الساعات: ÷ 1,500\nمتوسط السعر المعياري للمزيج المعياري لكل ساعة SMSP = $6.66667\nانحراف عائد العمل = (STQ – ATQ) × SMSP\n= (1,500 ساعة – 1,575 ساعة) × $6.66667\n= –75 ساعة × $6.66667\n= $500 غير ملائم."
   },
   {
     "unit": 15,
@@ -3454,7 +3462,15 @@
     ],
     "answerIndex": 1,
     "explanation": "To calculate the mix variance, the weighted-average standard\nprice using the standard mix (SMSP) must be determined.\nTamsin can calculate its AMSP and SMSP for the month as\nfollows:\nLabor                        Flexible\nClass     AQ          SP     Budget\nIII      550     × $8.00 = $    4,400\nII       650     × 7.00 =       4,550\nI       375     × 5.00 =       1,875\nTotals 1,575                 $ 10,825\nDivided by: Total hours         ÷   1,575\nAMSP per hour               $6.87302\nLabor                          Static\nClass      SQ           SP     Budget\nIII      500     × $8.00 = $    4,000\nII       500     × 7.00 =       3,500\nI       500     × 5.00 =       2,500\nTotals 1,500                 $ 10,000\nDivided by: Total hours         ÷   1,500\nSMSP per hour                $6.66667\nThe mix variance can now be calculated:\nLabor mix variance = ATQ × (SMSP – AMSP)\n= 1,575 hours × ($6.66667 – $6.87302)\n= 1,575 hours × –$0.20635\n= $325 unfavorable",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في شركة تامسين، كانت معدلات أجور العمل المباشر المعيارية السارية للسنة المالية المنتهية في 30 يونيو، والساعات المعيارية المسموح بها للإنتاج في أبريل، كما يلي:\nالفئة | معدل الأجر المعياري لكل ساعة | الساعات المعيارية المسموح بها\nIII | $8.00 | 500\nII | 7.00 | 500\nI | 5.00 | 500\nارتفعت معدلات الأجور لكل فئة اعتبارًا من 1 يناير بموجب عقد نقابي جديد، ولم تُعدّل المعدلات المعيارية. وكانت ساعات العمل المباشر الفعلية ومعدلات الأجور الفعلية في أبريل كما يلي:\nالفئة | معدل الأجر الفعلي | الساعات الفعلية\nIII | $8.50 | 550\nII | 7.50 | 650\nI | 5.40 | 375\nما انحراف مزيج العمل المباشر لشركة تامسين (بعد التقريب)؟",
+    "choicesAr": [
+      "$500 غير ملائم.",
+      "$325 غير ملائم.",
+      "$325 ملائم.",
+      "$500 ملائم."
+    ],
+    "explanationAr": "لحساب انحراف المزيج، يجب تحديد المتوسط المرجح للسعر المعياري وفق المزيج المعياري (SMSP). ويمكن حساب المتوسطين AMSP وSMSP للشهر كما يلي:\nالفئة | الكمية الفعلية AQ | السعر المعياري SP | الموازنة المرنة\nIII: 550 × $8.00 = $4,400\nII: 650 × 7.00 = 4,550\nI: 375 × 5.00 = 1,875\nالإجمالي: 1,575 ساعة، $10,825\nالقسمة على إجمالي الساعات: ÷ 1,575\nمتوسط السعر المعياري للمزيج الفعلي لكل ساعة AMSP = $6.87302\nالفئة | الكمية المعيارية SQ | السعر المعياري SP | الموازنة الثابتة\nIII: 500 × $8.00 = $4,000\nII: 500 × 7.00 = 3,500\nI: 500 × 5.00 = 2,500\nالإجمالي: 1,500 ساعة، $10,000\nالقسمة على إجمالي الساعات: ÷ 1,500\nمتوسط السعر المعياري للمزيج المعياري لكل ساعة SMSP = $6.66667\nانحراف مزيج العمل = ATQ × (SMSP – AMSP)\n= 1,575 ساعة × ($6.66667 – $6.87302)\n= 1,575 ساعة × –$0.20635\n= $325 غير ملائم."
   },
   {
     "unit": 15,
@@ -3546,7 +3562,15 @@
     ],
     "answerIndex": 1,
     "explanation": "If variable overhead is applied to production on the basis of\ndirect labor hours, both the variable overhead efficiency\nvariance and the direct labor efficiency variance will be\ncalculated on the basis of the same number of hours. If the\ndirect labor efficiency variance is unfavorable, the overhead\nefficiency variance will also be unfavorable because both\nvariances are based on the difference between standard and\nactual direct labor hours worked.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُحمّل التكاليف الصناعية غير المباشرة المتغيرة على أساس ساعات العمل المباشر المعيارية. إذا كان انحراف كفاءة العمل المباشر خلال فترة معينة غير ملائم، فإن انحراف كفاءة التكاليف الصناعية غير المباشرة المتغيرة يكون:",
+    "choicesAr": [
+      "ملائمًا.",
+      "غير ملائم.",
+      "صفرًا.",
+      "مساويًا في القيمة لانحراف كفاءة العمل المباشر."
+    ],
+    "explanationAr": "عند تحميل التكاليف الصناعية غير المباشرة المتغيرة على أساس ساعات العمل المباشر، يُحسب انحراف كفاءة التكاليف المتغيرة وانحراف كفاءة العمل المباشر على أساس العدد نفسه من الساعات. إذا كان انحراف كفاءة العمل المباشر غير ملائم، فإن انحراف كفاءة التكاليف غير المباشرة يكون غير ملائم أيضًا، لأن كليهما يستند إلى الفرق بين ساعات العمل المباشر المعيارية والفعلية."
   },
   {
     "unit": 15,
@@ -3563,7 +3587,15 @@
     ],
     "answerIndex": 3,
     "explanation": "First, the actual production level for the month was 6,000 units\nof output. Second, the standard number of labor hours\nconsumed per unit of output is 2 (10,000 budgeted direct labor\nhours ÷ 5,000 budgeted units output). Third, since fixed\noverhead for the month was budgeted at $80,000 and it is to\nbe applied in proportion to 10,000 budgeted direct labor hours,\nthe application rate is $8 per direct labor hour ($80,000 ÷\n10,000). Thus, the amount of fixed overhead applied for the\nmonth was $96,000 = (6,000 × $8 × 2). The fixed overhead\nbudget variance was $2,000 favorable, which means the\nactual fixed overhead incurred for the month was $78,000\n($80,000 – $2,000). Thus, fixed overhead was overapplied by\n$18,000 ($96,000 – $78,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يستخدم مصنع نظام التكاليف المعيارية ويحمّل التكاليف الصناعية غير المباشرة على أساس ساعات العمل المباشر. تضمنت موازنة التصنيع لإنتاج 5,000 وحدة في مايو البيانات التالية:\nالعمل المباشر: 10,000 ساعة بمعدل $15 للساعة = $150,000\nالتكاليف الصناعية غير المباشرة المتغيرة: 30,000\nالتكاليف الصناعية غير المباشرة الثابتة: 80,000\nخلال مايو أُنتجت 6,000 وحدة وكان انحراف موازنة التكاليف الصناعية غير المباشرة الثابتة $2,000 ملائمًا. كيف كانت التكاليف الثابتة المحملة في مايو؟",
+    "choicesAr": [
+      "أقل من الفعلي بمبلغ $2,000.",
+      "أقل من الفعلي بمبلغ $16,000.",
+      "أعلى من الفعلي بمبلغ $16,000.",
+      "أعلى من الفعلي بمبلغ $18,000."
+    ],
+    "explanationAr": "أولًا، بلغ الإنتاج الفعلي للشهر 6,000 وحدة. ثانيًا، عدد ساعات العمل المعيارية لكل وحدة هو 2 (10,000 ساعة عمل مباشر مقدرة ÷ 5,000 وحدة مقدرة). ثالثًا، بلغت التكاليف الصناعية غير المباشرة الثابتة المقدرة $80,000 وتُحمّل على أساس 10,000 ساعة عمل مباشر مقدرة، ولذلك فإن معدل التحميل $8 لكل ساعة ($80,000 ÷ 10,000). وبذلك تبلغ التكاليف الثابتة المحملة للشهر $96,000 = (6,000 × $8 × 2). وكان انحراف الموازنة $2,000 ملائمًا، أي إن التكاليف الثابتة الفعلية بلغت $78,000 ($80,000 – $2,000). إذن، زاد التحميل على الفعلي بمبلغ $18,000 ($96,000 – $78,000)."
   },
   {
     "unit": 15,
@@ -3580,7 +3612,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The variable overhead efficiency variance equals the product\nof the variable overhead application rate and the difference\nbetween the standard input for the actual output and the\nactual input. Hence, the variance will be zero if variable\noverhead is applied on the basis of units of output because\nthe difference between actual and standard input cannot be\nrecognized.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "إذا حُمّلت التكاليف الصناعية غير المباشرة على أساس عدد وحدات الإنتاج، فإن انحراف كفاءة التكاليف المتغيرة يكون:",
+    "choicesAr": [
+      "صفرًا.",
+      "ملائمًا إذا تجاوز الإنتاج المستوى المدرج في الموازنة.",
+      "غير ملائم إذا قل الإنتاج عن المستوى المدرج في الموازنة.",
+      "تابعًا لانحراف كفاءة العمل المباشر."
+    ],
+    "explanationAr": "يساوي انحراف كفاءة التكاليف الصناعية غير المباشرة المتغيرة حاصل ضرب معدل تحميلها في الفرق بين المدخلات المعيارية المسموح بها للإنتاج الفعلي والمدخلات الفعلية. لذلك يكون الانحراف صفرًا إذا كان أساس التحميل هو عدد وحدات الإنتاج، إذ لا يمكن تمييز الفرق بين المدخلات الفعلية والمعيارية على هذا الأساس."
   },
   {
     "unit": 15,
@@ -3597,7 +3637,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Fixed overhead was budgeted based on a practical capacity of\n90,000 machine hours. Because the standard hours allowed\nfor actual output was 84,000 hours (42,000 units × 2 hours per\nunit), fixed overhead was underapplied, and an unfavorable\nproduction volume variance resulted. The only one of the four\nactions that would result in fewer machine hours than were\nbudgeted being consumed is the initiative to reduce finished\ngoods inventory levels.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى مصنع طاقة عملية مقدرة تبلغ 90,000 ساعة تشغيل آلات، وتتطلب كل وحدة ساعتين من تشغيل الآلات. تتعلق البيانات التالية بفترة محاسبية حديثة:\nالتكاليف الصناعية غير المباشرة المتغيرة الفعلية $240,000\nالتكاليف الصناعية غير المباشرة الثابتة الفعلية $442,000\nساعات تشغيل الآلات الفعلية 88,000\nالوحدات التامة المنتجة فعليًا 42,000\nالتكاليف المتغيرة المدرجة في الموازنة عند 90,000 ساعة تشغيل آلات $200,000\nالتكاليف الثابتة المدرجة في الموازنة $450,000\nأي العوامل التالية هو السبب الأكثر احتمالًا لانحراف حجم الإنتاج؟",
+    "choicesAr": [
+      "زيادة أجر مشرف الإنتاج.",
+      "مبادرة جديدة لتخفيض مستويات مخزون المنتجات التامة.",
+      "قبول طلب بيع غير متوقع.",
+      "تشغيل عمال مؤقتين أقل مهارة مما كان متوقعًا."
+    ],
+    "explanationAr": "أُعدت موازنة التكاليف الصناعية غير المباشرة الثابتة على أساس طاقة عملية قدرها 90,000 ساعة تشغيل آلات. ولأن الساعات المعيارية المسموح بها للإنتاج الفعلي كانت 84,000 ساعة (42,000 وحدة × 2 ساعة لكل وحدة)، فقد كان تحميل التكاليف الثابتة أقل من المستوى المدرج في الموازنة، مما أدى إلى انحراف حجم إنتاج غير ملائم. والإجراء الوحيد من الخيارات الأربعة الذي يُحتمل أن يؤدي إلى انخفاض ساعات الآلات عن المقدرة في الموازنة هو مبادرة خفض مخزون المنتجات التامة."
   },
   {
     "unit": 15,
@@ -3614,7 +3662,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Most variances are of significance to someone who is\nresponsible for that variance. However, a fixed overhead\nvolume variance is often not the responsibility of anyone other\nthan top management. The fixed overhead volume variance\nequals the difference between budgeted fixed overhead and\nthe amount applied (Standard input allowed for the actual\noutput × Standard rate). It can be caused by economic\ndownturns, labor strife, bad weather, or a change in planned\noutput. Thus, a fixed overhead volume variance resulting from\na top management decision to reduce output has fewer\nbehavioral implications than other variances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الانحرافات التالية أقل أهمية من منظور الرقابة السلوكية؟",
+    "choicesAr": [
+      "انحراف كمية مواد مباشرة غير ملائم يبلغ 20% من الكمية المسموح بها للإنتاج المحقق.",
+      "انحراف كفاءة عمل مباشر غير ملائم يبلغ 10% زيادة على الساعات المقدرة للإنتاج المحقق.",
+      "انحراف معدل أجر العمل المباشر ملائم ناتج عن عدم القدرة على توظيف عمال ذوي خبرة بدلًا من المتقاعدين.",
+      "انحراف حجم التكاليف الصناعية غير المباشرة الثابتة الناتج عن قرار الإدارة في منتصف السنة المالية خفض الإنتاج المخطط بنسبة 20%."
+    ],
+    "explanationAr": "معظم الانحرافات مهمة لمن يتحمل مسؤوليتها. إلا أن انحراف حجم التكاليف الصناعية غير المباشرة الثابتة غالبًا ما يكون من مسؤولية الإدارة العليا وحدها. ويساوي الفرق بين التكاليف الثابتة المدرجة في الموازنة والمبلغ المحمل (المدخلات المعيارية المسموح بها للإنتاج الفعلي × المعدل المعياري). وقد ينتج عن الركود الاقتصادي أو الاضطرابات العمالية أو سوء الطقس أو تغير الإنتاج المخطط. لذلك فإن انحراف الحجم الناتج عن قرار الإدارة العليا خفض الإنتاج أقل دلالة من الناحية السلوكية مقارنة بالانحرافات الأخرى."
   },
   {
     "unit": 15,
@@ -3631,7 +3687,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The fixed overhead volume variance is the difference between\nbudgeted fixed costs and actual overhead applied, which\nequals the budgeted fixed overhead rate times the standard\ninput allowed for the actual output. It is solely a measure of\ncapacity usage and does not signify that fixed costs were\nmore or less than budgeted.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "انحراف حجم التكاليف الصناعية غير المباشرة الثابتة هو:",
+    "choicesAr": [
+      "مقياس للأرباح المفقودة نتيجة انخفاض حجم المبيعات.",
+      "مقدار نقص أو زيادة تحميل التكاليف الصناعية غير المباشرة الثابتة.",
+      "التخفيض المحتمل للتكاليف الذي يمكن تحقيقه بتحسين الرقابة عليها.",
+      "مقياس لعدم كفاءة الإنتاج."
+    ],
+    "explanationAr": "انحراف حجم التكاليف الصناعية غير المباشرة الثابتة هو الفرق بين التكاليف الثابتة المدرجة في الموازنة والتكاليف غير المباشرة المحملة فعليًا، والتي تساوي معدل التحميل الثابت المدرج في الموازنة مضروبًا في المدخلات المعيارية المسموح بها للإنتاج الفعلي. وهو مقياس لاستخدام الطاقة فحسب، ولا يعني أن التكاليف الثابتة الفعلية زادت أو نقصت عن الموازنة."
   },
   {
     "unit": 15,
@@ -3648,7 +3712,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The fixed O/H volume variance occurs when actual activity\nlevels differ from anticipated levels. It is an excellent example\nof cost allocation as opposed to cost control. Unlike other\nvariances, the volume variance does not directly reflect a\ndifference between actual and budgeted expenditures. The\neconomic substance of this variance lies in the costs or\nbenefits of capacity usage or nonusage. For example, idle\ncapacity results in the loss of the contribution margin from\nunits not produced and sold.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الانحرافات التالية أقل أهمية للرقابة على التكاليف؟",
+    "choicesAr": [
+      "انحراف سعر العمل.",
+      "انحراف كمية المواد.",
+      "انحراف حجم التكاليف الصناعية غير المباشرة الثابتة.",
+      "انحراف إنفاق التكاليف الصناعية غير المباشرة المتغيرة."
+    ],
+    "explanationAr": "يحدث انحراف حجم التكاليف الصناعية غير المباشرة الثابتة عندما تختلف مستويات النشاط الفعلي عن المستويات المتوقعة. وهو مثال واضح على تخصيص التكاليف لا الرقابة عليها. وعلى خلاف الانحرافات الأخرى، لا يعكس انحراف الحجم مباشرة فرقًا بين الإنفاق الفعلي والمقدر. وتكمن دلالته الاقتصادية في تكاليف أو منافع استخدام الطاقة أو عدم استخدامها. فعلى سبيل المثال، تؤدي الطاقة العاطلة إلى فقد هامش المساهمة من الوحدات التي لم تُنتج وتُبع."
   },
   {
     "unit": 15,
@@ -3665,7 +3737,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The variable overhead spending and efficiency variances are\nthe components of the total variable overhead variance. Given\nthat actual variable overhead was $80,000 and the variable\noverhead based on the budgeted rate was $90,000, the total\nvariance is $10,000 favorable. If the overhead spending\nvariance is $2,000 favorable, the efficiency variance must be\n$8,000 favorable ($10,000 total – $2,000 spending). At a rate\nof $20 per hour, this variance is equivalent to 400 direct labor\nhours ($8,000 ÷ $20).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سجلت شركة تايني تايكس البيانات التالية المتعلقة بالتكاليف الصناعية غير المباشرة الثابتة والمتغيرة لشهر يوليو:\nالتكاليف الفعلية:\nالتكاليف الثابتة $120,000\nالتكاليف المتغيرة 80,000\nالموازنة المرنة (المدخلات المعيارية المسموح بها للإنتاج الفعلي × المعدل المدرج في الموازنة):\nالتكاليف المتغيرة 90,000\nالتكاليف المحملة (المدخلات المعيارية المسموح بها للإنتاج الفعلي × المعدل المدرج في الموازنة):\nالتكاليف الثابتة 125,000\nانحراف إنفاق التكاليف المتغيرة 2,000 ملائم (F)\nانحراف حجم الإنتاج 5,000 غير ملائم (U)\nإذا كان معدل تحميل التكاليف المتغيرة المدرج في الموازنة $20 لكل ساعة عمل مباشر، فما مقدار كفاءة أو عدم كفاءة الشركة في استخدام ساعات العمل المباشر أساسًا للنشاط؟",
+    "choicesAr": [
+      "عدم كفاءة بمقدار 100 ساعة عمل مباشر.",
+      "كفاءة بمقدار 100 ساعة عمل مباشر.",
+      "عدم كفاءة بمقدار 400 ساعة عمل مباشر.",
+      "كفاءة بمقدار 400 ساعة عمل مباشر."
+    ],
+    "explanationAr": "يتكون إجمالي انحراف التكاليف الصناعية غير المباشرة المتغيرة من انحرافي الإنفاق والكفاءة. بما أن التكاليف المتغيرة الفعلية كانت $80,000، والتكاليف المتغيرة على أساس معدل الموازنة كانت $90,000، فإن الانحراف الإجمالي $10,000 ملائم. وإذا كان انحراف الإنفاق $2,000 ملائمًا، فإن انحراف الكفاءة $8,000 ملائم ($10,000 إجمالي الانحراف – $2,000 انحراف الإنفاق). وعند معدل $20 للساعة يعادل هذا الانحراف 400 ساعة عمل مباشر ($8,000 ÷ $20)."
   },
   {
     "unit": 15,
@@ -3682,7 +3762,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Variable overhead variances can be subdivided into spending\nand efficiency components. However, fixed overhead\nvariances do not have an efficiency component because fixed\ncosts, by definition, are not related to changing levels of\noutput. Fixed overhead variances are typically subdivided into\na budget (or fixed overhead spending) variance and a volume\nvariance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "سجلت شركة تايني تايكس البيانات التالية المتعلقة بالتكاليف الصناعية غير المباشرة الثابتة والمتغيرة لشهر يوليو:\nالتكاليف الفعلية:\nالتكاليف الثابتة $120,000\nالتكاليف المتغيرة 80,000\nالموازنة المرنة (المدخلات المعيارية المسموح بها للإنتاج الفعلي × المعدل المدرج في الموازنة):\nالتكاليف المتغيرة 90,000\nالتكاليف المحملة (المدخلات المعيارية المسموح بها للإنتاج الفعلي × المعدل المدرج في الموازنة):\nالتكاليف الثابتة 125,000\nانحراف إنفاق التكاليف المتغيرة 2,000 ملائم (F)\nانحراف حجم الإنتاج 5,000 غير ملائم (U)\nما انحراف كفاءة التكاليف الصناعية غير المباشرة الثابتة لشركة تايني تايكس؟",
+    "choicesAr": [
+      "$3,000 ملائم.",
+      "$3,000 غير ملائم.",
+      "$5,000 ملائم.",
+      "لا يُعد انحرافًا ذا دلالة في أي حالة."
+    ],
+    "explanationAr": "يمكن تقسيم انحرافات التكاليف الصناعية غير المباشرة المتغيرة إلى انحرافي الإنفاق والكفاءة. أما انحرافات التكاليف الصناعية غير المباشرة الثابتة فلا تتضمن عنصر كفاءة، لأن التكاليف الثابتة بطبيعتها لا ترتبط بتغير مستويات الإنتاج ضمن نطاقها الملائم. وعادةً ما تنقسم انحرافاتها إلى انحراف الموازنة (أو انحراف إنفاق التكاليف الثابتة) وانحراف الحجم."
   },
   {
     "unit": 15,
@@ -3699,7 +3787,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A denominator level of activity must be used to establish the\nstandard cost (application rate) for fixed overhead. The\nproduction volume variance is the difference between\nbudgeted fixed costs and the standard cost per unit of input\ntimes the standard units of input allowed for the actual\nproduction.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام التكاليف الكلية (الاستيعابية)، ما الانحراف الذي يقيس الابتعاد عن مستوى النشاط المرجعي المستخدم في مقام حساب معدل تحميل التكاليف الصناعية غير المباشرة الثابتة؟",
+    "choicesAr": [
+      "انحراف الإنفاق.",
+      "انحراف الكفاءة.",
+      "انحراف حجم الإنتاج.",
+      "انحراف الموازنة المرنة."
+    ],
+    "explanationAr": "يجب تحديد مستوى نشاط مرجعي لحساب التكلفة المعيارية (معدل التحميل) للتكاليف الصناعية غير المباشرة الثابتة. وانحراف حجم الإنتاج هو الفرق بين التكاليف الثابتة المدرجة في الموازنة وحاصل ضرب التكلفة المعيارية لكل وحدة من المدخلات في الوحدات المعيارية من المدخلات المسموح بها للإنتاج الفعلي."
   },
   {
     "unit": 15,
