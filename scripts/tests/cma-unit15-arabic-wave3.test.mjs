@@ -83,6 +83,21 @@ test("Unit 15 Wave 3 translations preserve publisher source text, key, pages and
   assert.ok(q(2, 21).explanationAr.includes("بمشاركة"));
 });
 
+test("Short publisher lead-ins are not duplicates when the original four choices differ", () => {
+  const q13 = q(2, 13), q15 = q(2, 15);
+  assert.equal(q13.stem, "Flexible budgets");
+  assert.equal(q15.stem, "Flexible budgets");
+  assert.notDeepEqual(q13.choices, q15.choices);
+  assert.notEqual(
+    JSON.stringify([q13.stem, q13.choices]),
+    JSON.stringify([q15.stem, q15.choices]),
+  );
+  const gate = read("scripts/check-cma-content.mjs");
+  assert.match(gate, /JSON\.stringify\(\[q\.question\.en, q\.choices\.en\]\)/);
+  assert.ok(!gate.includes("questionTexts.has(q.question.en)"),
+    "Do not reintroduce source-stem-only deduplication");
+});
+
 test("Unit 15 §2 Q25/Q32 damaged imported PDF columns remain English-first and unscored", () => {
   const adapter = read("src/data/cma-questions-gleim-2025-vol2.ts");
   const checker = read("scripts/check-cma-content.mjs");
