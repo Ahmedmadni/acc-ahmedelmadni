@@ -34,4 +34,5 @@
 - [x] Unit 16 Wave 4: 11 educational drafts (§2 Q1–9/Q11–12); all 12 records reviewed. **60/166 (36.1%)**, §2 **11/12**. Q10 held for split monetary values and a missing solution column; five total holds, 101 unreviewed.
 - [x] Unit 16 Wave 5: 12 educational drafts (§3 Q1–8/Q12–15). **72/166 (43.4%)**, §3 **12/55**. Q9/Q10/Q11 held for missing ROI assumptions and profit-center versus investment-center accountability; eight total holds, 86 unreviewed.
 - [x] Unit 16 Wave 6: 13 educational drafts (§3 Q16–25/Q27–29). **85/166 (51.2%)**, §3 **25/55**. Q26 held for unspecified funding/asset-base assumption; Q30 for truncated table header. Ten total holds, 71 unreviewed.
-- [ ] Continue Unit 16 §3 Q31–55, then §§4–5. See `docs/CMA_UNIT16_ARABIC_WAVE6_2026-11-24.md`.
+- [x] Unit 16 Wave 7: 12 educational drafts (§3 Q31–42). **97/166 (58.4%)**, §3 **37/55**. Q43 held for unsupported corporate ROI assumption; eleven total holds, 58 unreviewed.
+- [ ] Continue Unit 16 §3 Q44–55, then §§4–5. See `docs/CMA_UNIT16_ARABIC_WAVE7_2026-11-24.md`.
