@@ -610,7 +610,7 @@ const staticArabicVol2 = new Set([
   ...[27,28,29,30,31,33,34,35,36,40,41,42,43,44,45,46].map(n=>"15.3."+n),
   ...[3,4,5,6,7,8,11,13,14,15,16,17,18,20,21,22,23,25,26,27,28,29,30,31,33,34,35].map(n=>"15.4."+n),
   ...[1,4,8,9,10,11,12].map(n=>"15.5."+n),
-  ...Array.from({length:54},(_,i)=>i+1).filter(n=>![28,53].includes(n)).map(n=>"15.6."+n),
+  ...Array.from({length:67},(_,i)=>i+1).filter(n=>![28,53,58,61].includes(n)).map(n=>"15.6."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -672,7 +672,7 @@ for (const [key, expectedPage] of pendingOriginalSourcePages) {
 console.log("Review gate: 19 unverified Unit 12 questions retain PDF page locators and English-only labels.");
 console.log("Verified Unit 13 Arabic educational drafts: 43/44 §1, 14/14 §2, 33/34 §3, 31/31 §4 (121/123 total); source-flagged §1 Q34 and §3 Q23 remain English-first.");
 console.log("Unit 14 source Arabic drafts: §1 5/8, §2 41/43, §3 18/19, §4 36/40, §5 34/34, §6 26/31; 160/175 Arabic educational drafts. Ten review-held drafts and 15 English-first records remain outside scored practice.");
-console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 27/35, §5 7/12, §6 52/67; 181/264 (68.6%) complete Arabic educational drafts. Remaining 83 English-first, including 21 source review holds.");
+console.log("Unit 15 Arabic source drafts: §1 16/16, §2 37/39, §3 42/46, §4 27/35, §5 7/12, §6 63/67; 192/264 (72.7%) complete Arabic educational drafts. Remaining 72 English-first, including 23 source review holds.");
 for (const [key,page,needle] of [
   ["15.2.25",596,"$1.360 U"],
   ["15.2.32",607,"Budgete\n"],
@@ -739,6 +739,18 @@ for(const [n,page] of [[2,700],[3,702],[5,706],[6,707],[7,709]]) {
     "Unit 15 §5 source PDF table must remain English-only and unscored: "+key);
 }
 console.log("Unit 15 §5 source review holds: Q2 Q3 Q5 Q6 Q7; require original publisher input-table inspection.");
+
+
+// Q58 lacks a management-by-exception investigation criterion; Q61 does not specify that flexible costs are actual variable costs.
+for(const [n,page,index] of [[58,776,0],[61,780,0]]) {
+ const original=vol2Records.get("15.6."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su15-s6-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerIndex===index &&
+  original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined &&
+  mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+  mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===index,
+  "Unit 15 §6 ambiguous question must remain unscored: "+n);
+}
 
 // Q53 Valyn's planned and actual tables are interleaved, including split monetary amounts.
 {

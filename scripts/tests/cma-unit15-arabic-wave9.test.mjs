@@ -274,8 +274,8 @@ const wave13=new Map([
  [48,[764,3,"5823cf17"]],[49,[765,3,"141b5d92"]],[50,[766,1,"6307e4ab"]],
  [51,[767,1,"67088b1e"]],[52,[768,1,"7a123c0f"]],[54,[772,2,"83d06fd5"]],
 ]);
-test("Unit 15 Wave 13: 181 drafts and 15 immutable overhead sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+test("Unit 15 Wave 13: preserve 181 earlier drafts and 15 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>(r.section<=5||(r.section===6&&r.number<=54))&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,181);
  assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:54},(_,i)=>i+1).filter(n=>![28,53].includes(n)));
  for(const [n,[page,index,hash]] of wave13){
@@ -308,4 +308,47 @@ test("Unit 15 Wave 13: independent overhead rates, flexible-budget spending and 
  const held=q(6,53);
  assert.equal(held.page,771); assert.equal(held.answerIndex,0);
  assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
+});
+
+const wave14=new Map([
+ [55,[773,1,"395eaef8"]],[56,[774,1,"1f2be755"]],[57,[775,1,"b3f9fb32"]],
+ [59,[777,2,"74dc858d"]],[60,[778,3,"1e2982ec"]],[62,[781,1,"de486101"]],
+ [63,[782,3,"e4758869"]],[64,[783,2,"ebe2a6e2"]],[65,[784,3,"bdcbd68f"]],
+ [66,[784,3,"a5ef67cb"]],[67,[785,3,"33942315"]],
+]);
+test("Unit 15 Wave 14: 192 drafts and 11 immutable overhead sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,192);
+ assert.deepEqual(localized.filter(r=>r.section===6).map(r=>r.number),Array.from({length:67},(_,i)=>i+1).filter(n=>![28,53,58,61].includes(n)));
+ for(const [n,[page,index,hash]] of wave14){
+  const r=q(6,n);
+  assert.equal(r.page,page); assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source"); assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 15 Wave 14: independent calculations and ambiguous-source holds",()=>{
+ const actualMaterialsCents=19700*215-450000;
+ assert.equal(actualMaterialsCents,3785500);
+ assert.equal((actualMaterialsCents/19700/100).toFixed(2),"1.92");
+ assert.equal(8000*(100000/10000)-75000,5000);
+ assert.equal(4536*12-52164,2268);
+ assert.equal(25*(10-8),50);
+ assert.equal(22000-20000,2000);
+ const applied=8000*(15000/7500)*(105000/15000);
+ assert.equal(applied,112000);
+ assert.equal(applied-(105000+1000),6000);
+ assert.equal(600000-190000*(600000/200000),30000);
+ assert.equal(49000*2*(500000/(50000*2)),490000);
+ for(const [n,result] of [[55,"$1.92"],[56,"$5,000 favorable"],[59,"$2,268 favorable"],[62,"$50 favorable"],[63,"$2,000 unfavorable"],[64,"Overapplied by $6,000"],[66,"$30,000 unfavorable"],[67,"$490,000"]])
+  assert.ok(q(6,n).choices[q(6,n).answerIndex].includes(result),"Original key Q"+n);
+ for(const [n,page] of [[58,776],[61,780]]){
+  const held=q(6,n);
+  assert.equal(held.page,page); assert.equal(held.answerIndex,0);
+  assert.equal(held.stemAr,undefined); assert.equal(held.choicesAr,undefined); assert.equal(held.explanationAr,undefined);
+ }
 });
