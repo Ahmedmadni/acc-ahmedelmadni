@@ -214,7 +214,15 @@
     ],
     "answerIndex": 0,
     "explanation": "When favorable variances are written off directly to cost of\ngoods sold, cost of goods sold decreases, which in turn\nincreases net income in full by the entire variance amount.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم إحدى الشركات نظام التكاليف المعيارية. وقد كانت الانحرافات عن المعايير خلال السنة الماضية جوهرية. وتدرس الشركة إما توزيع تلك الانحرافات على حسابات المخزون المناسبة وتكلفة البضاعة المباعة، أو تحميلها بالكامل مباشرة على تكلفة البضاعة المباعة. في أي حالة مما يلي يكون صافي الربح المعلن هو الأعلى؟",
+    "choicesAr": [
+      "تكون جميع الانحرافات ملائمة وتُقفل مباشرة في تكلفة البضاعة المباعة.",
+      "تكون جميع الانحرافات غير ملائمة وتُقفل مباشرة في تكلفة البضاعة المباعة.",
+      "تكون جميع الانحرافات ملائمة وتُوزع على تكلفة البضاعة المباعة وحسابات مخزون آخر المدة.",
+      "تكون جميع الانحرافات غير ملائمة وتُوزع على تكلفة البضاعة المباعة وحسابات مخزون آخر المدة."
+    ],
+    "explanationAr": "عند إقفال الانحرافات الملائمة بالكامل مباشرة في تكلفة البضاعة المباعة، تنخفض تكلفة البضاعة المباعة بكامل قيمة الانحراف، فيرتفع صافي الربح المعلن بمقدار الانحراف كله. هذه نتيجة المقارنة المفترضة في السؤال، وليست تصريحًا بتجاهل متطلبات قياس المخزون أو معالجة الانحرافات الجوهرية في التقارير المالية."
   },
   {
     "unit": 15,
@@ -381,7 +389,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A well-designed standard cost system should produce fewer\nunfavorable variances. Also, unfavorable variances should be\nno more common than favorable variances.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُعد الرقابة على التكاليف أمرًا حاسمًا للحفاظ على أسعار تنافسية. درست الإدارة نقل الإنتاج إلى خارج البلاد، لكنها لا تزال ملتزمة بالإنتاج داخل الولايات المتحدة. وقد قررت إشراك العاملين في وضع نظام جديد للتكاليف المعيارية. من المتوقع أن يحقق هذا النظام، مع مشاركة العاملين، جميع الفوائد التالية باستثناء:",
+    "choicesAr": [
+      "أن تصبح الانحرافات غير الملائمة أكثر احتمالًا للحدوث.",
+      "أن يصبح الموظفون المشاركون في وضع المعايير أكثر كفاءة.",
+      "أن تساعد التكاليف المعيارية الإدارة في اكتشاف مشكلات التكلفة المحتملة.",
+      "أن يتيح تطبيق التكاليف المعيارية الإدارة بالاستثناء، مما قد يوفر بعض الوقت."
+    ],
+    "explanationAr": "يُفترض أن يقلل نظام التكاليف المعيارية المصمم جيدًا من وقوع الانحرافات غير الملائمة، لا أن يزيدها. كذلك لا ينبغي أن تكون الانحرافات غير الملائمة أكثر شيوعًا من الانحرافات الملائمة."
   },
   {
     "unit": 15,
@@ -398,7 +414,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Static budgets are prepared based on the best estimates for\noutput to be produced and costs to be incurred before the\nperiod begins. If there are any variations in conditions actually\nexperienced, the static budget is unhelpful for diagnosing\nspecific problem areas since it only reflects one level of\nactivity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من أبرز عيوب الموازنة الثابتة أنها:",
+    "choicesAr": [
+      "أكثر صعوبة في الإعداد من الموازنة المرنة.",
+      "تُعد لمستوى نشاط واحد فقط.",
+      "تكون الانحرافات فيها عادة أصغر مما هي عليه عند استخدام الموازنة المرنة.",
+      "تكون حسابات الانحرافات فيها أصعب مما هي عليه عند استخدام الموازنة المرنة."
+    ],
+    "explanationAr": "تُعد الموازنة الثابتة قبل بدء الفترة استنادًا إلى أفضل تقديرات الإنتاج والتكاليف المتوقعة. وإذا اختلفت الظروف الفعلية، تصبح أقل فائدة في تشخيص مواضع المشكلات لأنها تعكس مستوى نشاط واحدًا فقط."
   },
   {
     "unit": 15,
@@ -415,7 +439,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Since depreciation is a fixed cost, that cost will be the same\neach month regardless of production. Therefore, the budget\nfor September would show depreciation of $21,500 ($258,000\nannual depreciation × 1/12).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تُظهر الموازنة الرئيسية للشركة إهلاكًا بالقسط الثابت لمعدات المصنع قدره $258,000. وأُعدت الموازنة على أساس إنتاج سنوي يبلغ 103,200 وحدة، موزع بالتساوي على مدار السنة. وخلال سبتمبر أنتجت الشركة 8,170 وحدة، بينما أظهرت الحسابات إهلاكًا فعليًا لآلات المصنع قدره $20,500. وتستخدم الشركة الموازنة المرنة للرقابة على تكاليف التصنيع. ما مبلغ إهلاك آلات المصنع في موازنة سبتمبر المرنة؟",
+    "choicesAr": [
+      "$19,475",
+      "$20,425",
+      "$20,500",
+      "$21,500"
+    ],
+    "explanationAr": "لأن الإهلاك تكلفة ثابتة، فإنه يبقى بالقيمة نفسها شهريًا بغض النظر عن عدد الوحدات المنتجة ضمن نطاق النشاط الملائم. لذلك تبلغ موازنة سبتمبر للإهلاك $21,500، وذلك من قسمة الإهلاك السنوي $258,000 × 1/12."
   },
   {
     "unit": 15,
@@ -432,7 +464,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Revenue of $2,400,000 reflects a unit selling price of $16\n($2,400,000 ÷ 150,000 games). The contribution margin is\n$975,000, or $6.50 per game ($975,000 ÷ 150,000 games).\nIncreasing sales will result in an increased contribution margin\nof $195,000 (30,000 games × $6.50). Because fixed costs are,\nby their nature, unchanging across the relevant range, net\nincome will increase to $420,000 ($225,000 originally reported\n+ $195,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توقعت شركة بيع 150,000 لعبة لوحية خلال نوفمبر، وتضمنت موازنتها الرئيسية بيانات البيع والإنتاج التالية:\nالإيرادات $2,400,000\nتكلفة البضاعة المباعة:\nمواد مباشرة 675,000\nأجور مباشرة 300,000\nتكاليف صناعية غير مباشرة متغيرة 450,000\nهامش المساهمة $ 975,000\nتكاليف صناعية غير مباشرة ثابتة 250,000\nمصروفات بيع وإدارة ثابتة 500,000\nربح التشغيل $ 225,000\nإذا بلغت المبيعات الفعلية في نوفمبر 180,000 لعبة، فما ربح التشغيل المتوقع للشهر وفق الموازنة المرنة؟",
+    "choicesAr": [
+      "$225,000",
+      "$270,000",
+      "$420,000",
+      "$510,000"
+    ],
+    "explanationAr": "تمثل الإيرادات $2,400,000 سعر بيع للوحدة قدره $16، أي ($2,400,000 ÷ 150,000 لعبة). ويبلغ هامش المساهمة $975,000 أو $6.50 لكل لعبة، أي ($975,000 ÷ 150,000 لعبة). وترفع زيادة المبيعات هامش المساهمة بمقدار $195,000، أي (30,000 لعبة × $6.50). ولأن إجمالي التكاليف الثابتة لا يتغير ضمن نطاق النشاط الملائم، يرتفع ربح التشغيل إلى $420,000، أي ($225,000 سابقًا + $195,000)."
   },
   {
     "unit": 15,
@@ -449,7 +489,15 @@
     ],
     "answerIndex": 2,
     "explanation": "If a report is to be used for performance evaluation, the\nplanned cost column should be based on the actual level of\nactivity for the period. The ability to adjust amounts for varying\nactivity levels is the primary advantage of flexible budgeting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند إعداد تقرير أداء لمركز تكلفة باستخدام الموازنة المرنة، ينبغي أن يستند عمود التكاليف المخططة إلى:",
+    "choicesAr": [
+      "المبالغ المدرجة في الموازنة الأصلية المعدة قبل بداية السنة.",
+      "المبالغ الفعلية للفترة نفسها من السنة السابقة.",
+      "الموازنة المعدلة وفق مستوى النشاط الفعلي للفترة محل التقرير.",
+      "الموازنة المعدلة وفق مستوى النشاط المخطط للفترة محل التقرير."
+    ],
+    "explanationAr": "عند استخدام التقرير لتقييم الأداء، ينبغي احتساب التكاليف المخططة على أساس مستوى النشاط الفعلي للفترة. فإمكان تعديل المبالغ لتناسب مستويات النشاط المختلفة هو الميزة الأساسية للموازنة المرنة."
   },
   {
     "unit": 15,
@@ -466,7 +514,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The firm planned to produce 100,000 units at $6 each ($4\nvariable + $2 fixed cost), or a total of $600,000, consisting of\n$400,000 of variable costs and $200,000 of fixed costs. Total\nproduction was only 80,000 units at a total cost of $515,000.\nThe flexible budget for a production level of 80,000 units\nincludes variable costs of $320,000 (80,000 units × $4). Fixed\ncosts would remain at $200,000. Thus, the total flexible\nbudget costs are $520,000. Given that actual costs were only\n$515,000, the variance is $5,000 favorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "خططت منشأة صناعية لإنتاج وبيع 100,000 وحدة خلال السنة، بتكلفة متغيرة للوحدة قدرها $4.00 وتكلفة ثابتة محسوبة للوحدة قدرها $2.00. لكنها أنتجت 80,000 وحدة فقط بتكلفة فعلية إجمالية $515,000. ما انحراف تكاليف التصنيع؟",
+    "choicesAr": [
+      "انحراف ملائم بمبلغ $85,000.",
+      "انحراف غير ملائم بمبلغ $35,000.",
+      "انحراف ملائم بمبلغ $5,000.",
+      "انحراف غير ملائم بمبلغ $5,000."
+    ],
+    "explanationAr": "كان الإنتاج المخطط 100,000 وحدة بتكلفة $6 للوحدة، تتكون من ($4 متغيرة + $2 ثابتة)، أي إجمالي $600,000 يشمل تكاليف متغيرة $400,000 وتكاليف ثابتة $200,000. وبلغ الإنتاج الفعلي 80,000 وحدة بإجمالي تكاليف $515,000. ووفق الموازنة المرنة لمستوى إنتاج 80,000 وحدة، تصبح التكاليف المتغيرة $320,000، أي (80,000 وحدة × $4)، بينما تبقى التكاليف الثابتة $200,000. وبذلك يبلغ مجموع التكاليف المرنة $520,000، وهو أعلى من التكلفة الفعلية $515,000، فينتج انحراف ملائم قدره $5,000."
   },
   {
     "unit": 15,
@@ -483,7 +539,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A flexible budget is prepared at the end of the budget period\nwhen the actual results are available. A flexible budget reflects\nthe revenues that should have been earned and costs that\nshould have been incurred given the achieved levels of\nproduction and sales. The difference between the flexible\nbudget and actual figures is known as the flexible budget\nvariance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُسمى الفرق بين المبالغ الفعلية ومبالغ الموازنة المرنة المعدة على أساس الإنتاج الفعلي المحقق:",
+    "choicesAr": [
+      "انحراف حجم الإنتاج.",
+      "انحراف الموازنة المرنة.",
+      "انحراف حجم المبيعات.",
+      "انحراف التكلفة المعيارية."
+    ],
+    "explanationAr": "تُستخدم الموازنة المرنة عند نهاية فترة الموازنة، بعد توفر النتائج الفعلية، لتوضيح الإيرادات التي كان ينبغي تحقيقها والتكاليف التي كان ينبغي تحملها عند مستويات الإنتاج والمبيعات المحققة. ويُسمى الفرق بين تلك المبالغ المرنة والمبالغ الفعلية انحراف الموازنة المرنة."
   },
   {
     "unit": 15,
@@ -500,7 +564,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A static budget plans for only one level of activity and does not\nprovide for changed levels of activity.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "الموازنة الثابتة هي موازنة:",
+    "choicesAr": [
+      "تستبعد الشهر أو الربع الحالي وتضيف فترة مستقبلية مع انتهاء كل شهر أو ربع.",
+      "تعرض توقعات لفترة ما دون أن تمثل التزامًا ثابتًا.",
+      "تعرض خطة لمستوى نشاط واحد فقط، ولا تتعدل مع تغير مستوى النشاط.",
+      "تعرض خطة لنطاق من مستويات النشاط بحيث يمكن تعديلها عند تغير النشاط."
+    ],
+    "explanationAr": "تُعد الموازنة الثابتة لمستوى واحد من النشاط، ولا تتضمن تعديل المبالغ لمستويات نشاط مختلفة."
   },
   {
     "unit": 15,
@@ -517,7 +589,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The flexible budget formula is\nShipping costs = $16,000 + ($0.50 × lbs. shipped)\nTherefore, to determine the flexible budget amount, multiply\nthe actual pounds shipped (12,300) times the standard cost\n($0.50) to arrive at a total expected variable cost of $6,150.\nAdding the variable cost to $16,000 of fixed cost produces a\nbudget total of $22,150.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "استنادًا إلى الخبرة السابقة، وضعت شركة المعادلة التالية لتقدير مصروفات الشحن. ويبلغ متوسط وزن كل شحنة 12 رطلًا:\nتكاليف الشحن = $16,000 + ($0.50 × الأرطال المشحونة)\nوكان النشاط المخطط والفعلي للطلبات والشحنات خلال الشهر كالآتي:\nالمخطط    الفعلي\nطلبات البيع                800         780\nالشحنات                    800         820\nالوحدات المشحونة         8,000      9,000\nالمبيعات               $120,000 $144,000\nإجمالي الأرطال المشحونة  9,600     12,300\nوبلغت تكاليف الشحن الفعلية للشهر $21,000. ما المبلغ الملائم في الموازنة المرنة الشهرية لتكاليف الشحن بغرض تقييم الأداء؟",
+    "choicesAr": [
+      "$20,680",
+      "$20,920",
+      "$20,800",
+      "$22,150"
+    ],
+    "explanationAr": "معادلة الموازنة المرنة هي:\nتكاليف الشحن = $16,000 + ($0.50 × الأرطال المشحونة)\nولحساب المبلغ في الموازنة المرنة نضرب الوزن الفعلي المشحون (12,300) في تكلفة الرطل المعيارية ($0.50)، فتكون التكاليف المتغيرة المتوقعة $6,150. وبإضافة هذه التكلفة إلى التكاليف الثابتة البالغة $16,000، تصبح الموازنة المرنة للشحن $22,150."
   },
   {
     "unit": 15,
@@ -534,7 +614,15 @@
     ],
     "answerIndex": 1,
     "explanation": "A flexible budget provides cost allowances for different levels\nof activity, but a static budget provides costs for only one level\nof activity. Both budgets show the same types of costs.\nConceptually, a flexible budget is a series of budgets prepared\nfor many different levels of activity. It allows adjustment of the\nbudget to the actual level of activity before comparing the\nbudgeted activity with actual results.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية صحيحة بخصوص الفرق بين الموازنة المرنة والموازنة الثابتة؟",
+    "choicesAr": [
+      "تُعد الموازنة المرنة أساسًا للتخطيط، بينما تُستخدم الموازنة الثابتة لتقييم الأداء.",
+      "توفر الموازنة المرنة مخصصات تكلفة لمستويات نشاط متعددة، بينما توفر الموازنة الثابتة تكاليف لمستوى نشاط واحد.",
+      "تتضمن الموازنة المرنة التكاليف المتغيرة فقط، بينما تتضمن الموازنة الثابتة التكاليف الثابتة فقط.",
+      "تضع الإدارة التشغيلية الموازنة المرنة، بينما تحدد الإدارة العليا الموازنة الثابتة."
+    ],
+    "explanationAr": "توفر الموازنة المرنة تقديرات التكاليف لمستويات مختلفة من النشاط، في حين تعرض الموازنة الثابتة تقديرًا لمستوى نشاط واحد فقط. وكلتاهما تتضمنان أنواع التكاليف نفسها. ويمكن اعتبار الموازنة المرنة سلسلة من الموازنات لمستويات نشاط متنوعة، إذ تتيح تعديل مبالغ الموازنة وفق النشاط الفعلي قبل المقارنة بالنتائج المحققة."
   },
   {
     "unit": 15,
@@ -551,7 +639,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A flexible budget is actually a series of several budgets\nprepared for many levels of operating activity. A flexible\nbudget is designed to allow adjustment of the budget to the\nactual level of activity before comparing the budgeted activity\nwith actual results. This flexibility is important if costs vary with\nthe activity level. Thus, a flexible budget is particularly\nappropriate for control of direct labor and direct materials (both\nvariable costs) but is not necessary for control of fixed factory\noverhead. By definition, overhead costs do not change as\nactivity levels change.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تكون الموازنة المرنة مناسبة من أجل:",
+    "choicesAr": [
+      "الرقابة على التكاليف الصناعية غير المباشرة الثابتة، لا على المواد والأجور المباشرة.",
+      "الرقابة على المواد والأجور المباشرة، لا على مصروفات البيع والإدارة.",
+      "أي مستوى نشاط، دون اعتبار للنطاق الملائم.",
+      "الرقابة على الأجور والمواد المباشرة، لا على التكاليف الصناعية غير المباشرة الثابتة."
+    ],
+    "explanationAr": "تمثل الموازنة المرنة مجموعة موازنات تُعد لمستويات تشغيل مختلفة، بحيث تُعدَّل للمستوى الفعلي قبل مقارنة النتائج المدرجة بالنتائج المحققة. وتفيد بوجه خاص عندما تتغير التكاليف مع النشاط؛ لذلك تناسب الرقابة على الأجور والمواد المباشرة بوصفهما تكاليف متغيرة، بينما لا تحتاج التكاليف الصناعية غير المباشرة الثابتة إلى هذا التعديل بالقدر نفسه لأنها لا تتغير مع مستوى النشاط ضمن النطاق الملائم."
   },
   {
     "unit": 15,
@@ -568,7 +664,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The budget (spending) variance for fixed O/H equals actual\nminus budgeted fixed O/H. The $324,000 cost of supervisory\nsalaries is fixed and is incurred at $27,000 per month. Thus,\nthe variance is the difference between actual costs of $28,000\nand the budgeted costs of $27,000, or $1,000 unfavorable.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة الموازنة المرنة للرقابة على التكاليف. وتتضمن موازنتها الرئيسية السنوية رواتب إشراف ثابتة للإنتاج بقيمة $324,000 عند حجم إنتاج 180,000 وحدة. ومن المتوقع تحمل هذه الرواتب بالتساوي طوال السنة. وخلال سبتمبر أُنتجت 15,750 وحدة، وبلغت رواتب مشرفي الإنتاج الفعلية $28,000. ما انحراف الموازنة الذي سيظهر في تقرير أداء سبتمبر؟",
+    "choicesAr": [
+      "انحراف ملائم قدره $350.",
+      "انحراف غير ملائم قدره $350.",
+      "انحراف غير ملائم قدره $1,000.",
+      "انحراف ملائم قدره $1,000."
+    ],
+    "explanationAr": "يُحسب انحراف الإنفاق للتكاليف الصناعية غير المباشرة الثابتة بمقارنة التكلفة الفعلية بالمبلغ الثابت المدرج في الموازنة. وتبلغ رواتب الإشراف السنوية $324,000، أي $27,000 شهريًا. لذلك يكون الانحراف بين رواتب فعلية قدرها $28,000 ورواتب مدرجة قدرها $27,000 مساويًا $1,000 غير ملائم."
   },
   {
     "unit": 15,
@@ -585,7 +689,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The cost of indirect materials for 144,000 units was expected\nto be $180,000. Consequently, the budgeted unit cost of\nindirect materials is $1.25 ($180,000 ÷ 144,000). Multiplying\nthe $1.25 unit cost times the 10,800 units actually produced\nresults in an expected total indirect materials cost of $13,500.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة الموازنة المرنة للرقابة على التكاليف، وقد أنتجت 10,800 وحدة في أكتوبر وتكبدت تكاليف مواد غير مباشرة قدرها $13,000. وتضمنت الموازنة الرئيسية السنوية مواد غير مباشرة بقيمة $180,000 عند إنتاج 144,000 وحدة. ما تكلفة المواد غير المباشرة التي تظهر في الموازنة المرنة لإنتاج أكتوبر؟",
+    "choicesAr": [
+      "$13,000",
+      "$13,500",
+      "$13,975",
+      "$11,700"
+    ],
+    "explanationAr": "بلغت تكلفة المواد غير المباشرة المدرجة لإنتاج 144,000 وحدة مبلغ $180,000. ولذلك تبلغ التكلفة المقدرة لكل وحدة $1.25، أي ($180,000 ÷ 144,000). وبضرب تكلفة الوحدة $1.25 في وحدات الإنتاج الفعلي البالغة 10,800 وحدة نحصل على تكلفة مواد غير مباشرة متوقعة قدرها $13,500."
   },
   {
     "unit": 15,
