@@ -618,6 +618,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:55},(_,i)=>i+1).filter(n=>![9,10,11,26,30,43,53].includes(n)).map(n=>"16.3."+n),
   ...Array.from({length:12},(_,i)=>i+1).filter(n=>n!==9).map(n=>"16.4."+n),
   ...Array.from({length:34},(_,i)=>i+1).filter(n=>![1,2,3,13,21,22,25,28,33,34].includes(n)).map(n=>"16.5."+n),
+  ...[7,8,9,13,15].map(n=>"17.1."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -849,6 +850,16 @@ for(const [n,page,index] of [[1,974,2],[2,975,3],[3,976,1],[13,984,1],[21,993,2]
   "Unit 16 §5 source layout/compliance hold must remain unscored: "+n);
 }
 console.log("Unit 16 Wave 11: 143/166 Arabic drafts (86.1%), §1 49/53, §2 11/12, §3 48/55, §4 11/12, §5 24/34, 23 held and zero unreviewed.");
+for(const [n,page,index] of [[1,1008,0],[2,1009,0],[3,1010,3],[4,1010,3],[5,1012,3],[6,1012,2],[10,1016,0],[11,1017,3],[12,1018,3],[14,1020,2]]){
+ const original=vol2Records.get("17.1."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su17-s1-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerIndex===index && original.stemAr===undefined &&
+  original.choicesAr===undefined && original.explanationAr===undefined &&
+  mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+  mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
+  "Unit 17 jurisdiction/scope review hold must remain unscored: "+n);
+}
+console.log("Unit 17 Wave 1: 5/93 Arabic drafts; 10 jurisdiction/scope review holds, 78 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;

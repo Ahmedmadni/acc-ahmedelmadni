@@ -44,4 +44,6 @@
 - [x] Unit 16 Wave 10: 10 educational drafts (§5 Q4–12/Q14). **129/166 (77.7%)**, §5 **10/34**. Q1–3 held for interleaved shared-case columns, Q13 for unqualified cross-border compliance assumptions. Seventeen total holds, 20 unreviewed.
 - [x] Unit 16 Wave 11: 14 educational drafts (§5 Q15–20/Q23–24/Q26–27/Q29–32). **143/166 (86.1%)**, §5 **24/34**. All 166 imported records reviewed. 23 source/assumption holds and zero unreviewed. See `docs/CMA_UNIT16_ARABIC_WAVE11_2026-11-24.md`.
 - [x] Unit 16 Wave 12: bilingual review ledger for all 23 unscored questions, shown in study library and ExamPrep; preserve original keys and scoring gates. See `docs/CMA_UNIT16_REVIEW_LEDGER_2026-11-24.md`.
-- [ ] Resolve holds against authorized source and explicit assumptions before scoring release. Continue Unit 17.
+- [ ] Resolve Unit 16 holds against authorized source and explicit assumptions before scoring release.
+- [x] Unit 17 Wave 1: 5 Arabic educational drafts (§1 Q7–9/Q13/Q15), 10 jurisdiction/scope holds, 78 unreviewed. 5/93 (5.4%). See `docs/CMA_UNIT17_ARABIC_WAVE1_2026-11-24.md`.
+- [ ] Continue Unit 17 §1 Q16–28, then §2 Q1–65.

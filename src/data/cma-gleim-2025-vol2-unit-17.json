@@ -116,7 +116,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The audit committee is a subcommittee made up of outside\ndirectors who are independent of management. Its purpose is\nto help keep external and internal auditors independent of\nmanagement and to ensure that the directors are exercising\ndue care. However, if independence is impaired by personal\nand professional friendships, the effectiveness of the audit\ncommittee may be limited.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تعد لجان المراجعة عاملًا رئيسيًا في تعزيز استقلالية المراجعين الداخليين والخارجيين. أي مما يلي يمثل أهم قيد على فعالية لجان المراجعة؟",
+    "choicesAr": [
+      "قد تتكون لجان المراجعة من أعضاء مجلس إدارة مستقلين، لكن تربطهم بالإدارة صداقات شخصية ومهنية وثيقة.",
+      "يتقاضى أعضاء لجنة المراجعة تعويضات من المنشأة، ولذلك يؤيدون وجهة نظر المالك.",
+      "تكرس لجان المراجعة معظم جهودها لشؤون المراجعة الخارجية ولا تولي اهتمامًا كافيًا لنشاط المراجعة الداخلية وبيئة الرقابة العامة.",
+      "لا يحمل أعضاء لجان المراجعة عادة درجات علمية في المحاسبة أو المراجعة."
+    ],
+    "explanationAr": "لجنة المراجعة لجنة فرعية تتكون من أعضاء مجلس إدارة غير تنفيذيين مستقلين عن الإدارة. وتهدف إلى المساعدة في الحفاظ على استقلالية المراجعين الخارجيين والداخليين عن الإدارة وضمان بذل أعضاء المجلس العناية الواجبة. لكن إذا تأثرت الاستقلالية بالصداقات الشخصية والمهنية، فقد تتراجع فعالية اللجنة."
   },
   {
     "unit": 17,
@@ -133,7 +141,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The audit committee is a subcommittee of outside directors\nwho are independent of corporate management. Its purpose is\nto help keep external and internal auditors independent of\nmanagement and to ensure that the directors are exercising\ndue care. This committee often selects the external auditors,\nreviews their overall audit plan, and examines the results of\nexternal and internal audits.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "قد تؤدي لجنة المراجعة عدة أغراض مهمة، يستفيد نشاط المراجعة الداخلية مباشرة من بعضها. ما أهم منفعة تقدمها اللجنة لنشاط المراجعة الداخلية؟",
+    "choicesAr": [
+      "حماية استقلالية نشاط المراجعة الداخلية من التأثير غير الملائم للإدارة.",
+      "مراجعة جداول أعمال مهام المراجعة السنوية ومتابعة نتائجها.",
+      "اعتماد جداول أعمال المهام ومواعيدها وتوزيع الموظفين والاجتماع بالمراجعين الداخليين عند الحاجة.",
+      "مراجعة نسخ أدلة الإجراءات لعمليات مختارة بالمنشأة والاجتماع بمسؤوليها لمناقشتها."
+    ],
+    "explanationAr": "لجنة المراجعة لجنة فرعية من أعضاء مجلس إدارة غير تنفيذيين مستقلين عن الإدارة التنفيذية. وتهدف إلى المساعدة في الحفاظ على استقلالية المراجعين الداخليين والخارجيين وضمان بذل أعضاء المجلس العناية الواجبة. وغالبًا ما تختار اللجنة المراجعين الخارجيين وتراجع خطتهم العامة وتفحص نتائج المراجعات الخارجية والداخلية."
   },
   {
     "unit": 17,
@@ -150,7 +166,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The audit committee consists of outside members of the board\nof directors (who should be independent of management).\nRegular communication with this committee helps assure\nindependence and provides a means for the directors and the\ninternal audit activity to keep each other informed. The CAE\nshould communicate the internal audit activity’s plans and\nresource requirements to senior management and the board\nfor review and approval. Moreover, the CAE should submit to\nsenior management for approval, and to the board for its\ninformation, a summary of the internal audit activity’s work\nschedule, staffing plan, and financial budget.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يعد مسؤولية مناسبة للجنة المراجعة؟",
+    "choicesAr": [
+      "تنفيذ مراجعة لوظيفة المشتريات في المنشأة.",
+      "مراجعة جدول أعمال مهام نشاط المراجعة الداخلية المقدم من الرئيس التنفيذي للمراجعة (CAE).",
+      "مراجعة سجلات مهام مكتب المحاسبة العامة لتحديد كفاءته.",
+      "التوصية بتعيين موظفين محددين بالمراجعة الداخلية لتنفيذ مهام معينة."
+    ],
+    "explanationAr": "تتكون لجنة المراجعة من أعضاء مجلس إدارة غير تنفيذيين ينبغي أن يكونوا مستقلين عن الإدارة. ويساعد التواصل المنتظم معها في ضمان الاستقلالية وتبادل المعلومات بين أعضاء المجلس ونشاط المراجعة الداخلية. وينبغي للرئيس التنفيذي للمراجعة إبلاغ الإدارة العليا والمجلس بخطط النشاط واحتياجاته من الموارد للمراجعة والاعتماد. وتشمل المعلومات المقدمة ملخص جدول العمل وخطة الموظفين والموازنة المالية؛ وتحدد صلاحيات الاعتماد وفق إطار الحوكمة المعمول به."
   },
   {
     "unit": 17,
@@ -218,7 +242,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Internal controls can provide only reasonable assurance of\nachieving control objectives because the cost of an internal\ncontrol should not exceed its benefits. Thus, in some cases,\nsuch as with petty cash and office supplies, the cost of the\ncontrol is not worth what the savings would be if there was\nperfect control.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لماذا لا توفر الرقابة الداخلية إلا تأكيدًا معقولًا بشأن تحقيق أهداف الرقابة في المنشأة؟",
+    "choicesAr": [
+      "لأن الإدارة تتابع الرقابة الداخلية.",
+      "لأن تكلفة الرقابة الداخلية ينبغي ألا تتجاوز منافعها.",
+      "لأن مجلس الإدارة نشط ومستقل.",
+      "لأن المسؤولية الأساسية للمراجع هي اكتشاف الاحتيال."
+    ],
+    "explanationAr": "لا توفر الرقابة الداخلية إلا تأكيدًا معقولًا بشأن تحقيق أهداف الرقابة، ومن أسباب ذلك أن تكلفتها ينبغي ألا تتجاوز منافعها. ففي بعض الحالات، مثل النقدية النثرية والمستلزمات المكتبية، قد لا تبرر الوفورات المتوقعة من الرقابة الكاملة تكلفة تنفيذها. وتوجد أيضًا قيود أخرى، مثل الخطأ البشري والتواطؤ وتجاوز الإدارة للضوابط."
   },
   {
     "unit": 17,
@@ -252,7 +284,15 @@
     ],
     "answerIndex": 1,
     "explanation": "“Internal control is a process, effected by those charged with\ngovernance, management, and other personnel, designed to\nprovide reasonable assurance about the achievement of\nobjectives with regard to the reliability of financial reporting,\neffectiveness and efficiency of operations, and compliance\nwith applicable laws and regulations” (AU-C 315).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أحد أسباب إنشاء نظام للرقابة الداخلية؟",
+    "choicesAr": [
+      "حماية موارد المنشأة.",
+      "توفير تأكيد معقول بشأن تحقيق أهداف المنشأة.",
+      "تشجيع الالتزام بأهداف المنشأة.",
+      "ضمان دقة المعلومات وموثوقيتها وتوقيتها المناسب."
+    ],
+    "explanationAr": "وفق التعريف المشار إليه في المصدر (AU-C 315)، الرقابة الداخلية عملية ينفذها المكلفون بالحوكمة والإدارة وغيرهم من العاملين، وتهدف إلى توفير تأكيد معقول بشأن تحقيق الأهداف المتعلقة بموثوقية التقارير المالية وفعالية العمليات وكفاءتها والالتزام بالقوانين واللوائح المطبقة."
   },
   {
     "unit": 17,
