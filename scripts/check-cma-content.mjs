@@ -613,6 +613,7 @@ const staticArabicVol2 = new Set([
   ...Array.from({length:67},(_,i)=>i+1).filter(n=>![28,53,58,61].includes(n)).map(n=>"15.6."+n),
   ...[14,15,16,17,18].map(n=>"15.7."+n),
   ...[1,3,4,5,12,13,14,15,16,17,18,19,20,21,22,24,25,27,28,29].map(n=>"15.8."+n),
+  ...Array.from({length:22},(_,i)=>i+1).filter(n=>![4,19].includes(n)).map(n=>"16.1."+n),
 ]);
 const vol2QuestionById = new Map(CMA_GLEIM_2025_VOL2_QUESTIONS.map(q=>[q.id,q]));
 for (const [key, original] of vol2Records) {
@@ -770,6 +771,17 @@ for(const [section,n,page,status] of [
   mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
   "Unit 15 §7/8 source table hold must stay English-first and unscored: "+section+"."+n);
 }
+// Unit 16 responsibility accounting: broken option and inferred answer remain unscored.
+for(const [n,page,status] of [[4,849,"source"],[19,862,"inferred"]]){
+ const original=vol2Records.get("16.1."+n);
+ const mapped=vol2QuestionById.get("cma-gleim-2025-vol2-su16-s1-q"+String(n).padStart(3,"0"));
+ check(original?.page===page && original.answerStatus===status &&
+  original.stemAr===undefined && original.choicesAr===undefined && original.explanationAr===undefined &&
+  mapped?.sourceLayoutReview===true && mapped?.sourceLanguage==="en" &&
+  mapped?.sourceArabicStatus===undefined && mapped?.answerIndex===original.answerIndex,
+  "Unit 16 source hold must remain unscored: "+n);
+}
+console.log("Unit 16 Wave 1: 20/166 Arabic drafts (12.0%), §1 20/53, two held and 144 unreviewed.");
 const unit15ReviewRows=[...vol2Records.entries()].filter(([id])=>id.startsWith("15.")).filter(([id])=>{
  const [,section,n]=id.split(".");
  return vol2QuestionById.get("cma-gleim-2025-vol2-su15-s"+section+"-q"+String(n).padStart(3,"0"))?.sourceLayoutReview===true;

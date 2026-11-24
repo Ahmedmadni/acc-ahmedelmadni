@@ -14,7 +14,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Managerial performance should be evaluated on the basis of\nthose factors controllable by the manager. Managers may\ncontrol revenues, costs, and/or investment in resources. A well-\ndesigned responsibility accounting system establishes\nresponsibility centers within the organization.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عادةً، ما الأساس الأنسب لتقييم أداء مدير أحد أقسام الشركة؟",
+    "choicesAr": [
+      "هامش المساهمة للقسم.",
+      "صافي إيرادات القسم مطروحًا منه تكاليف القسم الخاضعة لسيطرة المدير.",
+      "مجمل الربح.",
+      "صافي الدخل مطروحًا منه التكاليف الثابتة للقسم."
+    ],
+    "explanationAr": "ينبغي تقييم الأداء الإداري على أساس العوامل التي يستطيع المدير التحكم فيها. وقد يتحكم المديرون في الإيرادات والتكاليف و/أو الاستثمار في الموارد. ويحدد نظام محاسبة المسؤولية المصمم جيدًا مراكز المسؤولية داخل المنشأة."
   },
   {
     "unit": 16,
@@ -31,7 +39,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The allocation reminds managers that support costs exist and\nthat the managers would incur these costs if their operations\nwere independent. The allocation also reminds managers that\nprofit center earnings must cover some amount of support\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توزع شركة كبيرة تكاليف موظفي مقرها الرئيسي على أقسامها اللامركزية. ما أفضل مبرر لهذا التوزيع؟",
+    "choicesAr": [
+      "قياس نتائج تشغيل الأقسام بدقة أكبر.",
+      "رفع الروح المعنوية لإدارات الأقسام.",
+      "تذكير مديري الأقسام بوجود تكاليف مشتركة.",
+      "الحد من أي استخدام لخدمات الدعم المركزية."
+    ],
+    "explanationAr": "يذكّر التوزيع المديرين بوجود تكاليف الدعم، وأن أقسامهم ستتحمل تكاليف مماثلة إذا كانت مستقلة. كما يذكّرهم بأن أرباح مراكز الربحية يجب أن تغطي جزءًا من تكاليف الدعم."
   },
   {
     "unit": 16,
@@ -48,7 +64,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Control is the process of making certain that plans are\nachieving the desired objectives. A controllable cost is one\nthat is directly regulated by a specific manager at a given level\nof production within a given time span or that the manager can\nsignificantly influence",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في محاسبة المسؤولية، يقاس أداء المركز بالتكاليف القابلة للتحكم. ما أفضل وصف لهذه التكاليف؟",
+    "choicesAr": [
+      "المواد المباشرة والعمل المباشر فقط.",
+      "فقط التكاليف التي يستطيع المدير التأثير فيها خلال الفترة الحالية.",
+      "التكاليف الاختيارية فقط.",
+      "التكاليف التي يملك المدير معلومات ومعرفة عنها."
+    ],
+    "explanationAr": "الرقابة هي عملية التأكد من أن الخطط تحقق الأهداف المطلوبة. والتكلفة القابلة للتحكم هي التي يستطيع مدير محدد تنظيمها مباشرة عند مستوى إنتاج معين وخلال فترة زمنية معينة، أو يستطيع التأثير فيها بصورة جوهرية."
   },
   {
     "unit": 16,
@@ -82,7 +106,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Managerial performance ordinarily should be evaluated only\non the basis of those factors controllable by the manager. If a\nmanager is allocated costs that (s)he cannot control,\ndysfunctional motivation can result. In the case of allocations,\na cause-and-effect basis should be used. Allocating the costs\nof upkeep on a headquarters building on the basis of sales\nrevenue is arbitrary because cost may have no relationship to\ndivisional sales revenues. Consequently, divisional return on\ninvestment is reduced by a cost over which a division\nmanager has no control. Furthermore, the divisions with the\ngreatest sales are penalized by receiving the greatest\nallocation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي الشركات التالية يُحتمل أن يعاني مديروها من حوافز تؤدي إلى سلوك غير متوافق مع أهداف الشركة بسبب أساليب توزيع التكاليف؟",
+    "choicesAr": [
+      "تستخدم الشركة A مبالغ محددة مسبقًا، محسوبة على أساس متوسط الاستخدام طويل الأجل للخدمات، لتوزيع إهلاك الرافعات الشوكية المستخدمة في مستودعها المركزي.",
+      "تستخدم الشركة B إيرادات مبيعات أقسامها لتوزيع تكاليف صيانة مبنى مقرها الرئيسي، وتستخدم أيضًا العائد على الاستثمار لتقييم أداء الأقسام.",
+      "لا تسمح الشركة C لأقسام الخدمات بتحميل تجاوزات تكاليفها على أقسام الإنتاج.",
+      "يعمل نظام المعلومات الإدارية للشركة D من المقر الرئيسي ويخدم أقسامها المختلفة. ويقتصر توزيع تكاليفه على الأقسام على التكاليف التي ستتحملها إذا استعانت بجهات خارجية لتلبية احتياجاتها من نظام المعلومات الإدارية."
+    ],
+    "explanationAr": "ينبغي عادة تقييم الأداء الإداري على أساس العوامل التي يستطيع المدير التحكم فيها. وقد يؤدي تحميله تكاليف لا يتحكم فيها إلى حوافز غير سليمة. وعند توزيع التكاليف ينبغي استخدام أساس يعكس علاقة السبب والنتيجة. ويعد توزيع تكاليف صيانة مبنى المقر الرئيسي بناء على إيرادات المبيعات أساسًا اعتباطيًا؛ إذ قد لا ترتبط التكلفة بإيرادات الأقسام. ونتيجة لذلك ينخفض العائد على استثمار القسم بتكلفة لا يتحكم فيها مديره. فضلًا عن ذلك، تتحمل الأقسام الأعلى مبيعات النصيب الأكبر من التكاليف الموزعة، مما يعاقبها على ارتفاع مبيعاتها."
   },
   {
     "unit": 16,
@@ -99,7 +131,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A service center exists primarily and sometimes solely to\nprovide specialized support to other units within the\norganization. Service centers are usually operated as cost\ncenters.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُطلق على جزء من المنشأة اسم مركز خدمات إذا كان لديه:",
+    "choicesAr": [
+      "مسؤولية تطوير الأسواق وبيع مخرجات المنشأة.",
+      "مسؤولية دمج المواد الخام والعمل المباشر وعوامل الإنتاج الأخرى لإنتاج مخرج نهائي.",
+      "سلطة اتخاذ القرارات المؤثرة في المحددات الرئيسية للربح، بما فيها اختيار الأسواق ومصادر التوريد.",
+      "سلطة تقديم دعم متخصص لوحدات أخرى داخل المنشأة."
+    ],
+    "explanationAr": "يوجد مركز الخدمات أساسًا، وأحيانًا حصريًا، لتقديم دعم متخصص للوحدات الأخرى داخل المنشأة. وتدار مراكز الخدمات عادة باعتبارها مراكز تكلفة."
   },
   {
     "unit": 16,
@@ -116,7 +156,15 @@
     ],
     "answerIndex": 0,
     "explanation": "In a responsibility accounting system, managerial performance\nshould be evaluated only on the basis of those factors directly\nregulated (or at least capable of being significantly influenced)\nby the manager. For this purpose, operations are organized\ninto responsibility centers. Costs are classified as controllable\nand noncontrollable, which implies that some revenues and\ncosts can be changed through effective management. If a\nmanager has authority to incur costs, a responsibility\naccounting system will charge them to the manager’s\nresponsibility center. However, controllability is not an\nabsolute basis for establishment of responsibility. More than\none manager may be able to influence a cost, and\nresponsibility may be assigned on the basis of knowledge\nabout the incurrence of a cost rather than the ability to control\nit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظامًا محاسبيًا يحمّل التكاليف على المدير الذي فُوضت إليه سلطة اتخاذ القرارات المنشئة لها. فمثلًا، إذا قبل مدير المبيعات أمرًا عاجلًا يؤدي إلى تكاليف تصنيع أعلى من المعتاد، تحمل عليه التكاليف الإضافية لأنه يملك سلطة قبول الأمر أو رفضه. ما اسم هذا النظام المحاسبي؟",
+    "choicesAr": [
+      "محاسبة المسؤولية.",
+      "المحاسبة الوظيفية.",
+      "التوزيع التبادلي.",
+      "محاسبة الأسعار التحويلية."
+    ],
+    "explanationAr": "في نظام محاسبة المسؤولية، ينبغي تقييم الأداء الإداري على أساس العوامل التي ينظمها المدير مباشرة أو يستطيع على الأقل التأثير فيها بصورة جوهرية. ولهذا الغرض تنظم العمليات في مراكز مسؤولية، وتصنف التكاليف إلى قابلة للتحكم وغير قابلة للتحكم، مما يعني إمكانية تغيير بعض الإيرادات والتكاليف بالإدارة الفعالة. فإذا امتلك المدير سلطة تكبد تكاليف معينة، حملها النظام على مركز مسؤوليته. ومع ذلك فإن قابلية التحكم ليست أساسًا مطلقًا لتحديد المسؤولية؛ فقد يتمكن أكثر من مدير من التأثير في تكلفة واحدة، وقد تسند المسؤولية وفق المعرفة بظروف نشوء التكلفة بدل القدرة على التحكم فيها."
   },
   {
     "unit": 16,
@@ -133,7 +181,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The basic purpose of a responsibility accounting system is to\nmotivate management to perform in a manner consistent with\noverall company objectives. The assignment of responsibility\nimplies that some revenues and costs can be changed\nthrough effective management. The system should have\ncertain controls that provide for feedback reports indicating\ndeviations from expectations. Higher-level management may\nfocus on those deviations for either reinforcement or\ncorrection.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الغرض الأساسي من نظام محاسبة المسؤولية؟",
+    "choicesAr": [
+      "إعداد الموازنات.",
+      "التحفيز.",
+      "السلطة.",
+      "تحليل الانحرافات."
+    ],
+    "explanationAr": "الغرض الأساسي من نظام محاسبة المسؤولية هو تحفيز الإدارة على الأداء بما يتفق مع أهداف الشركة العامة. ويعني إسناد المسؤولية إمكانية تغيير بعض الإيرادات والتكاليف بالإدارة الفعالة. وينبغي أن يتضمن النظام ضوابط توفر تقارير تغذية راجعة توضح الانحرافات عن التوقعات. ويمكن للإدارة العليا التركيز على هذه الانحرافات لتعزيز الأداء أو تصحيحه."
   },
   {
     "unit": 16,
@@ -150,7 +206,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A cost center is a responsibility center that is accountable only\nfor costs. The cost center is the least complex type of segment\nbecause it has no responsibility for revenues or investments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما أقل أنواع الأجزاء أو مجالات المسؤولية التي توزع عليها التكاليف تعقيدًا؟",
+    "choicesAr": [
+      "مركز الربحية.",
+      "مركز الاستثمار.",
+      "مركز المساهمة.",
+      "مركز التكلفة."
+    ],
+    "explanationAr": "مركز التكلفة هو مركز مسؤولية يحاسب عن التكاليف فقط. وهو أقل أنواع مراكز المسؤولية تعقيدًا؛ إذ لا يتحمل مسؤولية الإيرادات أو الاستثمارات."
   },
   {
     "unit": 16,
@@ -167,7 +231,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A profit center is responsible for both revenues and costs,\nwhereas a cost center is responsible only for costs.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بماذا تسمي محاسبة المسؤولية مركز تشغيل مسؤولًا عن الإيرادات والتكاليف؟",
+    "choicesAr": [
+      "مركز الربحية.",
+      "مركز الإيرادات.",
+      "قسم.",
+      "وحدة تشغيلية."
+    ],
+    "explanationAr": "مركز الربحية مسؤول عن الإيرادات والتكاليف معًا، بينما يكون مركز التكلفة مسؤولًا عن التكاليف فقط."
   },
   {
     "unit": 16,
@@ -184,7 +256,15 @@
     ],
     "answerIndex": 3,
     "explanation": "An investment center is the organizational type most like an\nindependent business because it is responsible for its own\nrevenues, costs incurred, and capital invested. The other\ntypes of centers do not incorporate all three elements.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستطيع المنشآت اللامركزية تفويض السلطة مع الاحتفاظ بالرقابة ومتابعة أداء المديرين من خلال تنظيم المنشأة في مراكز مسؤولية. أي الأجزاء التنظيمية التالية يشبه المنشأة المستقلة أكثر من غيره؟",
+    "choicesAr": [
+      "مركز الإيرادات.",
+      "مركز الربحية.",
+      "مركز التكلفة.",
+      "مركز الاستثمار."
+    ],
+    "explanationAr": "مركز الاستثمار هو النوع التنظيمي الأكثر شبهًا بالمنشأة المستقلة؛ لأنه مسؤول عن إيراداته وتكاليفه ورأس المال المستثمر فيه. ولا تجمع الأنواع الأخرى من المراكز هذه العناصر الثلاثة."
   },
   {
     "unit": 16,
@@ -201,7 +281,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A well-designed responsibility accounting system establishes\nresponsibility centers within an organization. In a responsibility\naccounting system, managerial performance should be\nevaluated only on the basis of those factors directly regulated\n(or at least capable of being significantly influenced) by the\nmanager. Thus, a manager of an assembly line is responsible\nfor direct labor, materials, repairs and maintenance, and\nsupervisory salaries. The manager is not responsible for\ndepreciation on the manufacturing facility. (S)he is not in a\nposition to control or influence capital budgeting decisions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام محاسبة المسؤولية في عملياتها. أي البنود التالية هو الأقل احتمالًا للظهور في تقرير أداء مدير أحد خطوط التجميع؟",
+    "choicesAr": [
+      "العمل المباشر.",
+      "المواد.",
+      "الإصلاح والصيانة.",
+      "إهلاك منشأة التصنيع."
+    ],
+    "explanationAr": "يحدد نظام محاسبة المسؤولية المصمم جيدًا مراكز المسؤولية داخل المنشأة. وينبغي تقييم أداء المديرين على أساس العوامل التي ينظمونها مباشرة أو يستطيعون التأثير فيها بصورة جوهرية. لذا يكون مدير خط التجميع مسؤولًا عن العمل المباشر والمواد والإصلاح والصيانة ورواتب المشرفين. لكنه لا يكون مسؤولًا عن إهلاك منشأة التصنيع؛ لأنه لا يملك التحكم في قرارات الموازنة الرأسمالية أو التأثير فيها."
   },
   {
     "unit": 16,
@@ -218,7 +306,15 @@
     ],
     "answerIndex": 3,
     "explanation": "In a responsibility accounting system, managerial performance\nshould be evaluated only on the basis of those factors directly\nregulated (or at least capable of being significantly influenced)\nby the manager. For this purpose, operations are organized\ninto responsibility centers. Costs are classified as controllable\nand noncontrollable, which implies that some revenues and\ncosts can be changed through effective management. If a\nmanager has authority to incur costs, a responsibility\naccounting system will charge those costs to the manager’s\nresponsibility center.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام تقارير أداء يعكس لامركزية اتخاذ القرارات. ويعرض تقرير أداء الأقسام سطر بيانات لكل مرؤوس يتبع نائب رئيس المجموعة. وتبين البيانات التكاليف الفعلية المتكبدة خلال الفترة والتكاليف المقدرة وجميع الانحرافات عن الموازنة لقسم ذلك المرؤوس. ما نوع النظام المستخدم؟",
+    "choicesAr": [
+      "محاسبة المساهمة.",
+      "محاسبة التكلفة والمنفعة.",
+      "الموازنة المرنة.",
+      "محاسبة المسؤولية."
+    ],
+    "explanationAr": "في نظام محاسبة المسؤولية، ينبغي تقييم الأداء الإداري على أساس العوامل التي ينظمها المدير مباشرة أو يستطيع التأثير فيها بصورة جوهرية. ولهذا تنظم العمليات في مراكز مسؤولية. وتصنف التكاليف إلى قابلة للتحكم وغير قابلة للتحكم، مما يعني إمكانية تغيير بعض الإيرادات والتكاليف بالإدارة الفعالة. وإذا كانت للمدير سلطة تكبد تكاليف معينة، يحملها نظام محاسبة المسؤولية على مركز مسؤوليته."
   },
   {
     "unit": 16,
@@ -235,7 +331,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Manufacturing subunits have costs but not revenues. Also,\nthey do not make marketing or product decisions.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في منشأة شديدة اللامركزية، ما الخيار الأفضل لقياس أداء وحدات التصنيع الفرعية؟",
+    "choicesAr": [
+      "إنشاء مراكز تسويق.",
+      "إنشاء مراكز منتجات.",
+      "إنشاء مراكز إيرادات.",
+      "إنشاء مراكز تكلفة."
+    ],
+    "explanationAr": "تتحمل وحدات التصنيع الفرعية تكاليف ولا تحقق إيرادات، كما أنها لا تتخذ قرارات التسويق أو المنتجات."
   },
   {
     "unit": 16,
@@ -252,7 +356,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A profit center is responsible for both revenues and expenses.\nFor example, the perfume department in a department store is\na profit center. The manager of a profit center usually has the\nauthority to make decisions affecting the major determinants\nof profit, including the power to choose markets (revenue\nsources) and suppliers (costs).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُسمى جزء من المنشأة مركز ربحية إذا كان لديه:",
+    "choicesAr": [
+      "سلطة اتخاذ القرارات المؤثرة في المحددات الرئيسية للربح، بما فيها اختيار الأسواق ومصادر التوريد.",
+      "سلطة اتخاذ القرارات المؤثرة في المحددات الرئيسية للربح، بما فيها اختيار الأسواق ومصادر التوريد والتحكم الجوهري في مقدار رأس المال المستثمر.",
+      "سلطة اتخاذ القرارات المتعلقة بأهم تكاليف التشغيل، بما فيها اختيار مصادر التوريد.",
+      "سلطة تقديم دعم متخصص للوحدات الأخرى داخل المنشأة."
+    ],
+    "explanationAr": "مركز الربحية مسؤول عن الإيرادات والمصروفات معًا. فمثلًا يعد قسم العطور في متجر متعدد الأقسام مركز ربحية. وعادة ما يملك مدير مركز الربحية سلطة اتخاذ القرارات المؤثرة في المحددات الرئيسية للربح، بما فيها اختيار الأسواق (مصادر الإيرادات) والموردين (التكاليف)."
   },
   {
     "unit": 16,
@@ -269,7 +381,15 @@
     ],
     "answerIndex": 1,
     "explanation": "An investment center is responsible for revenues, expenses,\nand invested capital. Return on investment is usually the key\nperformance measure of an investment center.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يُسمى جزء من المنشأة مركز استثمار إذا كان لديه:",
+    "choicesAr": [
+      "سلطة اتخاذ القرارات المؤثرة في المحددات الرئيسية للربح، بما فيها اختيار الأسواق ومصادر التوريد.",
+      "سلطة اتخاذ القرارات المؤثرة في المحددات الرئيسية للربح، بما فيها اختيار الأسواق ومصادر التوريد والتحكم الجوهري في مقدار رأس المال المستثمر.",
+      "سلطة اتخاذ القرارات المتعلقة بأهم تكاليف التشغيل، بما فيها اختيار مصادر التوريد.",
+      "سلطة تقديم دعم متخصص للوحدات الأخرى داخل المنشأة."
+    ],
+    "explanationAr": "مركز الاستثمار مسؤول عن الإيرادات والمصروفات ورأس المال المستثمر. ويعد العائد على الاستثمار عادة مقياس الأداء الرئيسي لمركز الاستثمار."
   },
   {
     "unit": 16,
@@ -286,7 +406,15 @@
     ],
     "answerIndex": 2,
     "explanation": "A well-designed responsibility accounting system establishes\nresponsibility centers within an organization. Managerial\nperformance should be evaluated only on the basis of those\nfactors controllable by the manager. Managers may control\nrevenues, costs, and/or investment activities. A departmental\nperformance report showing actual costs incurred against\nbudgeted costs permits evaluation of a manager and the area\nfor which (s)he is responsible.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام تقارير أداء يعكس لامركزية اتخاذ القرارات. وتعرض تقارير أداء الأقسام التكاليف الفعلية المتكبدة خلال الفترة مقابل التكاليف المقدرة. وتسند أي انحرافات عن الموازنة إلى مدير القسم الذي يتحكم في التكاليف. ما اسم هذا النظام؟",
+    "choicesAr": [
+      "محاسبة التسعير التحويلي.",
+      "الموازنة المرنة.",
+      "محاسبة المسؤولية.",
+      "الموازنة على أساس الأنشطة."
+    ],
+    "explanationAr": "يحدد نظام محاسبة المسؤولية المصمم جيدًا مراكز المسؤولية داخل المنشأة. وينبغي تقييم الأداء الإداري على أساس العوامل التي يتحكم فيها المدير. وقد يتحكم المديرون في الإيرادات والتكاليف و/أو أنشطة الاستثمار. ويتيح تقرير أداء القسم الذي يعرض التكاليف الفعلية مقابل المقدرة تقييم المدير والمجال الذي تقع مسؤوليته عليه."
   },
   {
     "unit": 16,
@@ -303,7 +431,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A well-designed responsibility accounting system establishes\nresponsibility centers within an organization. Managerial\nperformance should be evaluated only on the basis of those\nfactors controllable by the manager. Managers may control\nrevenues, costs, and/or investment activities. The\nresponsibility system should induce management performance\nthat adheres to overall company objectives. Charging the\ncosts of a rush order to the sales manager who authorized the\njob creates an incentive for that individual to minimize such\ncosts.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم منشأة تقنية نظامًا محاسبيًا يحمّل التكاليف على المدير الذي يملك سلطة اتخاذ القرارات المنشئة لها. فمثلًا، إذا وافق مدير المبيعات على أمر عاجل يؤدي إلى تكاليف تصنيع إضافية، تحمل عليه تلك التكاليف. ما اسم هذا النظام المحاسبي؟",
+    "choicesAr": [
+      "محاسبة المسؤولية.",
+      "المحاسبة الوظيفية.",
+      "محاسبة التسعير التحويلي.",
+      "محاسبة المساهمة."
+    ],
+    "explanationAr": "يحدد نظام محاسبة المسؤولية المصمم جيدًا مراكز المسؤولية داخل المنشأة. وينبغي تقييم الأداء الإداري على أساس العوامل التي يتحكم فيها المدير. وقد يتحكم المديرون في الإيرادات والتكاليف و/أو أنشطة الاستثمار. وينبغي أن يحفز نظام المسؤولية الأداء الإداري المتوافق مع أهداف الشركة العامة. ويؤدي تحميل تكاليف الأمر العاجل على مدير المبيعات الذي وافق عليه إلى تحفيزه على تقليل هذه التكاليف."
   },
   {
     "unit": 16,
@@ -337,7 +473,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Responsibility accounting stresses that managers are\nresponsible only for factors under their control. For this\npurpose, the operations of the business are organized into\nresponsibility centers. Costs are classified as controllable and\nuncontrollable. This implies that some revenues and costs can\nbe changed through effective management. Management may\nthen focus on deviations for either reinforcement or correction.\nThus, the statement that every factor is ultimately controllable\nby someone is not a premise of responsibility accounting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية غير صحيحة بشأن محاسبة المسؤولية؟",
+    "choicesAr": [
+      "ينبغي مساءلة المديرين فقط عن العوامل التي يستطيعون التأثير فيها بصورة جوهرية.",
+      "عادة ما يكون نطاق اهتمام مديري مراكز التكلفة أضيق من نطاق اهتمام مديري مراكز الربحية.",
+      "كل عامل يؤثر في الأداء المالي للمنشأة يخضع في النهاية لسيطرة شخص ما، حتى لو كان ذلك الشخص في قمة الإدارة.",
+      "عند وجود نظام محاسبة المسؤولية تنظم عمليات المنشأة في مجالات مستقلة يسيطر عليها مديرون محددون."
+    ],
+    "explanationAr": "تؤكد محاسبة المسؤولية أن المديرين مسؤولون فقط عن العوامل الخاضعة لسيطرتهم. ولهذا تنظم عمليات المنشأة في مراكز مسؤولية، وتصنف التكاليف إلى قابلة للتحكم وغير قابلة للتحكم. ويعني ذلك إمكانية تغيير بعض الإيرادات والتكاليف بالإدارة الفعالة. ويمكن للإدارة بعد ذلك التركيز على الانحرافات للتعزيز أو التصحيح. لذلك لا تعد فرضية أن كل عامل يخضع في النهاية لسيطرة شخص ما من مبادئ محاسبة المسؤولية."
   },
   {
     "unit": 16,
@@ -354,7 +498,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The variable computer cost can be included. The segments\nare charged for actual usage, which is under each segment’s\ncontrol. The predetermined standard rate is set at the\nbeginning of the year and is known by the segment managers.\nMoreover, the efficiencies and inefficiencies of the computer\ndepartment are not passed on to the segments. Both\nprocedures promote a degree of control by the segments.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تخطط شركة لتطبيق نظام مكافآت يعتمد على أداء الأقسام، كما تخطط للتحول إلى نظام محاسبة المسؤولية لإعداد تقارير الأقسام. وتتضمن تقارير الأداء الحالية التكاليف التالية، التي تراجع لتحديد مدى إدراجها في تقارير محاسبة المسؤولية:\nI. التكاليف الإدارية للشركة الموزعة على أساس صافي مبيعات الأقسام.\nII. تكاليف شؤون العاملين المحملة على أساس عدد الموظفين بكل قسم.\nIII. التكاليف الثابتة لمرفق الحاسب الآلي المقسمة بالتساوي على الأقسام.\nIV. تكاليف تشغيل الحاسب المتغيرة المحملة على كل قسم على أساس ساعات الاستخدام الفعلية مضروبة في معدل معياري محدد مسبقًا، مع بقاء أي كفاءة أو عدم كفاءة في التكاليف المتغيرة داخل قسم الحاسب.\nما البند الوحيد الذي يمكن إدراجه منطقيًا في تقارير أداء الأقسام المعدة على أساس محاسبة المسؤولية؟",
+    "choicesAr": [
+      "التكاليف الإدارية للشركة.",
+      "تكاليف شؤون العاملين.",
+      "التكاليف الثابتة لمرفق الحاسب الآلي.",
+      "تكاليف تشغيل الحاسب المتغيرة."
+    ],
+    "explanationAr": "يمكن إدراج تكاليف الحاسب المتغيرة؛ إذ تحمل الأقسام وفق الاستخدام الفعلي الذي يقع تحت سيطرة كل قسم. ويحدد المعدل المعياري مسبقًا في بداية السنة ويكون معلومًا لمديري الأقسام. فضلًا عن ذلك، لا تحمل الأقسام كفاءة أو عدم كفاءة قسم الحاسب. ويعزز الإجراءان قدرة الأقسام على التحكم في التكاليف."
   },
   {
     "unit": 16,
@@ -371,7 +523,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The most desirable measure for evaluating a departmental\nmanager is one that holds the manager responsible for the\nrevenues and expenses (s)he can control. Controllability is the\nbasic concept of responsibility accounting.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في نظام محاسبة المسؤولية، عن أي تكاليف يُساءل المديرون؟",
+    "choicesAr": [
+      "التكاليف المتغيرة دون التكاليف الثابتة.",
+      "تكاليف المنتج دون تكاليف الفترة.",
+      "التكاليف الإضافية.",
+      "التكاليف التي يستطيعون التأثير فيها بصورة جوهرية."
+    ],
+    "explanationAr": "أفضل مقياس لتقييم مدير القسم هو الذي يجعله مسؤولًا عن الإيرادات والمصروفات التي يستطيع التحكم فيها. وقابلية التحكم هي المفهوم الأساسي لمحاسبة المسؤولية."
   },
   {
     "unit": 16,

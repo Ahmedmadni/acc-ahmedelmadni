@@ -27,3 +27,5 @@
 - [x] Unit 15 Wave 15 (24 Nov 2026): 10 educational drafts (§7 Q14–18 and §8 Q1/Q3–5/Q12). Total **202/264 (76.5%)**, §7 **5/18**, §8 **5/31**. Added 13 explicit layout holds; full inventory is 44 (36 explicit, 8 existing source-status holds previously not counted in the wave summaries). Original source and earlier drafts unchanged.
 - [x] Unit 15 Wave 16 (24 Nov 2026): reviewed all 18 remaining records, translated 15 (§8 Q13–22/Q24–25/Q27–29). Total **217/264 (82.2%)**, §8 **20/31**. Held Q26/Q31 for revenue-versus-contribution-margin ambiguity and Q30 for corrupt table. All 264 reviewed; 47 held, zero unreviewed.
 - [ ] Visually audit the 47 held records using the authorized 2025 source PDF and resolve source/rights issues before any scoring release. See `docs/CMA_UNIT15_ARABIC_WAVE16_2026-11-24.md` and the full source-page inventory therein.
+- [x] Unit 16 Wave 1 (24 Nov 2026): 20 complete Arabic educational drafts, §1 Q1–3/Q5–18/Q20–22. **20/166 (12.0%)**, §1 **20/53**; Q4 broken option and Q19 inferred answer held. See `docs/CMA_UNIT16_ARABIC_WAVE1_2026-11-24.md`.
+- [ ] Continue Unit 16 §1 Q23–53, then §§2–5; 144 unreviewed records remain and two held.

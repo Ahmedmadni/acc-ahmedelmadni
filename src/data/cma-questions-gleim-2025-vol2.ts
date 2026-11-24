@@ -106,6 +106,8 @@ const pendingSourceLayouts = new Set([
   "15.8.2", "15.8.6", "15.8.7", "15.8.8",
   // §8 Q30 Xerbert income statement has truncated numeric columns.
   "15.8.30",
+  // Unit 16 §1 Q4 has an incomplete fourth choice; Q19 has an inferred key.
+  "16.1.4", "16.1.19",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
