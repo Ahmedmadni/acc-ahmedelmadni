@@ -106,8 +106,12 @@ test("CMA Unit 15 wave 7: independently verify price, quantity, budget and norma
   for (const [n, expected] of [
     [27,"$300"],[28,"$10,000"],[29,"$2,000"],[34,"$30,000"],
     [35,"82,900"],[36,"$4,650"],[40,"$760,000"],[41,"$240,000"],
-    [42,"$4,000"],[44,"$"],[45,"$20.63"]
+    [42,"$4,000"],[45,"$20.63"]
   ]) assert.ok(question(n).choices[question(n).answerIndex].includes(expected), "Accounting answer mismatch §3 Q"+n);
+  assert.ok(question(44).choices[question(44).answerIndex].includes("higher quality material"),
+    "§3 Q44 is a qualitative explanation, not an amount choice");
+  assert.ok(question(44).choicesAr[question(44).answerIndex].includes("جودة أعلى"),
+    "§3 Q44 Arabic explains the higher material price/lower usage variance tradeoff");
   assert.ok(question(46).choicesAr[1].includes("5%"),"JIT source answer about poor-quality materials");
 });
 test("CMA Unit 15 wave 7: §3 damaged source table or disputed variance remains English-first and review-held", () => {
