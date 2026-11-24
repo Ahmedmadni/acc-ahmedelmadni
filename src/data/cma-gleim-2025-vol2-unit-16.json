@@ -1950,7 +1950,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Residual income is the excess of the return on an investment\nover the firm’s cost of capital. If residual income is unchanged,\nthe return on the project must have been the same as the\nfirm’s cost of capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "بعد الاستثمار في مشروع جديد، اكتشفت شركة أن دخلها المتبقي لم يتغير. أي مما يلي يجب أن يكون صحيحًا بشأن المشروع الجديد، مع ثبات بقية العوامل؟",
+    "choicesAr": [
+      "يجب أن يكون صافي القيمة الحالية للمشروع الجديد سالبًا.",
+      "يجب أن يكون عائد المشروع الجديد على الاستثمار أقل من تكلفة رأس مال المنشأة.",
+      "يجب أن يكون عائد المشروع الجديد على الاستثمار مساويًا لتكلفة رأس مال المنشأة.",
+      "يجب أن يكون صافي القيمة الحالية للمشروع الجديد موجبًا."
+    ],
+    "explanationAr": "الدخل المتبقي هو زيادة العائد المحقق من الاستثمار على تكلفة رأس مال المنشأة المحتسبة. وإذا لم يتغير الدخل المتبقي، مع ثبات بقية العوامل، فلا بد أن يكون عائد المشروع مساويًا لتكلفة رأس المال."
   },
   {
     "unit": 16,
@@ -1967,7 +1975,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Residual income is income of an investment center minus an\nimputed interest charge for invested capital. Accordingly,\nresidual income is $170,400 [($600,000 sales – $360,000\nvariable costs – $60,000 traceable fixed costs) net income –\n($120,000 average invested capital × 8%) imputed interest].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تتعلق المعلومات التالية بالقسم الشمالي الشرقي:\nالمبيعات $600,000\nالتكاليف المتغيرة 360,000\nالتكاليف الثابتة القابلة للتتبع 60,000\nمتوسط رأس المال المستثمر 120,000\nمعدل الفائدة المحتسبة 8%\nما مقدار الدخل المتبقي؟",
+    "choicesAr": [
+      "$170,400",
+      "$180,000",
+      "$189,600",
+      "$230,400"
+    ],
+    "explanationAr": "الدخل المتبقي هو دخل مركز الاستثمار مطروحًا منه تكلفة الفائدة المحتسبة على رأس المال المستثمر. وبناءً عليه يبلغ الدخل المتبقي $170,400 [($600,000 مبيعات – $360,000 تكاليف متغيرة – $60,000 تكاليف ثابتة قابلة للتتبع) صافي الدخل – ($120,000 متوسط رأس المال المستثمر × 8%) الفائدة المحتسبة]."
   },
   {
     "unit": 16,
@@ -1984,7 +2000,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Return on investment, that is, the amount of return generated\nfor the parent firm per dollar of capital invested, is the simplest\nand generally the soundest measure of divisional performance.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي نتائج أداء أربعة أقسام جغرافية لشركة صناعية:\nالقسم | العائد المستهدف على الاستثمار | العائد الفعلي على الاستثمار | العائد على المبيعات\nA | 18% | 18.1% | 8%\nB | 16 | 20.0 | 8\nC | 14 | 15.8 | 6\nD | 12 | 11.0 | 9\nما القسم الأفضل أداءً وفق البيانات المعروضة؟",
+    "choicesAr": [
+      "القسم A.",
+      "القسم B.",
+      "القسم C.",
+      "القسم D."
+    ],
+    "explanationAr": "العائد على الاستثمار، أي مقدار العائد المتولد للشركة الأم لكل دولار من رأس المال المستثمر، هو من أبسط مقاييس أداء الأقسام وأكثرها ملاءمة عمومًا وفق سياق المسألة."
   },
   {
     "unit": 16,
@@ -2001,7 +2025,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Return on investment (ROI) is one of the two most commonly\nused performance measures for investment centers. If\nsufficient capital is available, as it is in the firm’s case, a firm\nshould invest in any project whose return is expected to\nexceed the cost of capital.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تقيّم منشأة متعددة الأقسام مديريها وفق العائد على الاستثمار (ROI) الذي تحققه أقسامهم. وتستخدم خطط التقييم والمكافآت عائدًا مستهدفًا قدره 15% (يساوي تكلفة رأس المال)، ويحصل المديرون على مكافأة بنسبة 5% من التعويض الأساسي عن كل نقطة مئوية يتجاوز بها عائد القسم 15%. وقد أعد مدير قسم المنتجات الاستهلاكية توقعات عمليات القسم وماليته للسنة المقبلة، تشير إلى أن العائد على الاستثمار سيبلغ 24%. كما حدد القسم برامج جديدة قصيرة الأجل، قيّمها الفريق المالي كما يلي:\nالبرنامج | العائد المتوقع على الاستثمار\nA | 13%\nB | 19%\nC | 22%\nD | 31%\nبافتراض عدم وجود قيود على الإنفاق، ما المجموعة المثلى من البرامج الجديدة التي تضيف قيمة للمنشأة؟",
+    "choicesAr": [
+      "A وB وC وD.",
+      "B وC وD فقط.",
+      "C وD فقط.",
+      "D فقط."
+    ],
+    "explanationAr": "العائد على الاستثمار (ROI) أحد أكثر مقياسي أداء مراكز الاستثمار شيوعًا. وإذا توافر رأس مال كافٍ كما في حالة المنشأة، فينبغي وفق افتراضات المسألة الاستثمار في كل مشروع يتوقع أن يتجاوز عائده تكلفة رأس المال."
   },
   {
     "unit": 16,
@@ -2018,7 +2050,15 @@
     ],
     "answerIndex": 2,
     "explanation": "South has an ROI of 50% (Operating income ÷ Assets), which\nis the highest",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لشركة أربعة أقسام إقليمية، وفيما يلي ملخص نتائجها المالية:\nالبيان | الشمال | الشرق | الجنوب | الغرب\nالدخل التشغيلي | $1,000 | $5,000 | $4,000 | $7,500\nالأصول | 2,500 | 15,000 | 8,000 | 25,000\nالالتزامات | 500 | 7,000 | 1,000 | 5,000\nإجمالي حقوق الملكية | 2,000 | 8,000 | 7,000 | 20,000\nأي الأقسام يحقق أعلى عائد على الاستثمار؟",
+    "choicesAr": [
+      "الشمال.",
+      "الشرق.",
+      "الجنوب.",
+      "الغرب."
+    ],
+    "explanationAr": "يحقق الجنوب عائدًا على الاستثمار بنسبة 50% (الدخل التشغيلي ÷ الأصول)، وهو الأعلى."
   },
   {
     "unit": 16,
@@ -2035,7 +2075,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Residual income is equal to [Business unit profit – (Assets of\nbusiness unit × Required rate of return)]. Therefore, residual\nincome is equal to $155,000 [$365,000 – ($1,750,000 × .12)].",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي مقتطف من أحدث القوائم المالية لشركة:\nالأصول المتداولة $120,000\nإجمالي الأصول التشغيلية 1,750,000\nالالتزامات المتداولة 85,000\nإجمالي الالتزامات 985,000\nالمبيعات 1,240,000\nالدخل التشغيلي 365,000\nإذا كان معدل العائد المطلوب للشركة 12%، فما دخلها المتبقي؟",
+    "choicesAr": [
+      "$155,000",
+      "$126,800",
+      "$123,600",
+      "$113,800"
+    ],
+    "explanationAr": "الدخل المتبقي يساوي [ربح وحدة الأعمال – (أصول وحدة الأعمال × معدل العائد المطلوب)]. لذلك يساوي الدخل المتبقي $155,000 [$365,000 – ($1,750,000 × .12)]."
   },
   {
     "unit": 16,
@@ -2052,7 +2100,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Residual income is equal to operating income, minus\ninvestment, multiplied by the cost of capital. As the return will\nbe higher than the cost of capital, residual income will\nincrease. This problem highlights the usefulness of residual\nincome, as if the company simply evaluated projects on return\non investment, this project would be passed up, even if it\nproduces more income.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة إضافة خط منتجات جديد يتوقع أن يحقق عائدًا أعلى من تكلفة رأس المال وأقل من العائد الإجمالي الحالي على الاستثمار (ROI). إذا قررت إضافة خط المنتجات المحتمل، فإن الدخل المتبقي سوف:",
+    "choicesAr": [
+      "يزداد.",
+      "يبقى دون تغيير.",
+      "ينخفض.",
+      "يصبح أعلى من العائد على استثمار المنشأة."
+    ],
+    "explanationAr": "الدخل المتبقي يساوي الدخل التشغيلي مطروحًا منه حاصل ضرب الاستثمار في تكلفة رأس المال. ولأن العائد سيتجاوز تكلفة رأس المال، فسيزداد الدخل المتبقي. وتبرز المسألة فائدة الدخل المتبقي، إذ قد يُرفض المشروع لو اعتمدت الشركة على العائد على الاستثمار وحده، حتى وإن حقق دخلًا إضافيًا."
   },
   {
     "unit": 16,
@@ -2069,7 +2125,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Since the firm opens stores every 2 years, and not all in the\nsame year, the best method of comparing the stores is to\nvalue long-term assets at current values. This will make the\nROIs comparable between the stores at any given moment in\ntime.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تفتتح منشأة متجر تجزئة جديدًا كل 2 سنة وتعمل حاليًا في 24 موقعًا مختلفًا. وتستخدم العائد على الاستثمار (ROI) لتقييم أداء المتاجر. ما أساس تقييم الأصول طويلة الأجل الذي يحقق أفضل مقارنة بين المتاجر؟",
+    "choicesAr": [
+      "القيمة الدفترية.",
+      "القيمة الحالية للأصول.",
+      "التكلفة التاريخية.",
+      "التكلفة التاريخية المعدلة بالتضخم."
+    ],
+    "explanationAr": "نظرًا إلى افتتاح المنشأة متاجر كل 2 سنة، لا في السنة نفسها، فإن أفضل طريقة لمقارنة المتاجر هي تقييم الأصول طويلة الأجل بالقيم الحالية. ويجعل ذلك معدلات العائد على الاستثمار أكثر قابلية للمقارنة بين المتاجر في وقت معين."
   },
   {
     "unit": 16,
@@ -2086,7 +2150,15 @@
     ],
     "answerIndex": 3,
     "explanation": "ROI is equal to business unit profit over average total assets.\nSavannah has a net profit of $475,000 and total assets of\n$3,500,000. Therefore, ROI is equal to 13.6% ($475,000 ÷\n$3,500,000).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تحاول الإدارة الرئيسية لسلسلة مطاعم وطنية فهم ربحية فرع سافانا بصورة أفضل. ويبلغ إجمالي أصول سافانا $3,500,000، يتكون من أرض بمبلغ $1,000,000، ومبانٍ ومعدات بمبلغ $2,000,000، وأصول غير ملموسة بمبلغ $500,000. ويبلغ صافي الربح $475,000، ومعدل العائد المطلوب 12%. فما عائد سافانا على الاستثمار (ROI)؟",
+    "choicesAr": [
+      "23.7%",
+      "19.0%",
+      "15.8%",
+      "13.6%"
+    ],
+    "explanationAr": "يساوي العائد على الاستثمار ربح وحدة الأعمال مقسومًا على متوسط إجمالي الأصول. ويبلغ صافي ربح سافانا $475,000 وإجمالي أصولها $3,500,000. وباستخدام الأصول المعطاة أساسًا للاستثمار، يساوي العائد 13.6% ($475,000 ÷ $3,500,000)."
   },
   {
     "unit": 16,
@@ -2103,7 +2175,15 @@
     ],
     "answerIndex": 2,
     "explanation": "If two divisions use different inventory flow assumptions,\ncomparability of ROI is significantly reduced, since these two\nmethods will affect both net income (through cost of goods\nsold) and the value of assets on the balance sheet. Although it\nis possible to recalculate amounts to increase comparability,\nthis could be difficult and time-consuming.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة العائد على الاستثمار (ROI) لتقييم أداء الأقسام في نهاية السنة. أي ممارسات المخزون التالية تقلل قابلية المقارنة بين قسمين متماثلين أكثر من غيرها؟",
+    "choicesAr": [
+      "يستخدم أحد القسمين نظام الجرد المستمر والآخر نظام الجرد الدوري.",
+      "يستخدم أحد القسمين الطريقة الصافية لتسجيل المشتريات والآخر الطريقة الإجمالية.",
+      "يستخدم أحد القسمين طريقة الوارد أخيرًا يصرف أولًا (LIFO) والآخر الوارد أولًا يصرف أولًا (FIFO).",
+      "يعرض أحد القسمين بضاعة للبيع بالأمانة بينما لا يفعل الآخر."
+    ],
+    "explanationAr": "إذا استخدم قسمان افتراضات مختلفة لتدفق تكلفة المخزون، تنخفض قابلية مقارنة العائد على الاستثمار بصورة جوهرية؛ لأن الطريقتين تؤثران في صافي الدخل (من خلال تكلفة البضاعة المباعة) وقيمة الأصول في قائمة المركز المالي. ورغم إمكانية إعادة حساب المبالغ لتحسين قابلية المقارنة، فقد يكون ذلك صعبًا ويستغرق وقتًا."
   },
   {
     "unit": 16,
@@ -2137,7 +2217,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Residual income measures performance in dollar terms rather\nthan as a percentage return. It is calculated using the following\nformula: Business unit profit – (Assets of business unit ×\nRequired rate of return). Thus, the company’s residual income\nresulting from the upgrade will equal $50,000 [$200,000 –\n($1,000,000 × 15%)]. The $500,000 sales figure is a distractor\nand should not be used in the calculation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تدرس شركة تجارية تطوير مرافق التجزئة والتخزين بتكلفة $1,000,000 لتمكينها من التعامل مع منتجات أكثر وجذب عملاء أكثر. وتتوقع زيادة المبيعات بمبلغ $500,000 وزيادة الدخل التشغيلي بمبلغ $200,000 سنويًا. إذا كان الحد الأدنى للعائد المطلوب على الاستثمار 15%، فما الدخل المتبقي الناتج عن التطوير؟",
+    "choicesAr": [
+      "$800,000",
+      "$500,000",
+      "$75,000",
+      "$50,000"
+    ],
+    "explanationAr": "يقيس الدخل المتبقي الأداء بمبلغ نقدي بدلًا من نسبة عائد مئوية. ويحسب بالمعادلة: ربح وحدة الأعمال – (أصول وحدة الأعمال × معدل العائد المطلوب). وبالتالي يساوي الدخل المتبقي الناتج عن التطوير $50,000 [$200,000 – ($1,000,000 × 15%)]. ومبلغ المبيعات $500,000 معلومة مشتتة لا تدخل في الحساب."
   },
   {
     "unit": 16,
@@ -2154,7 +2242,15 @@
     ],
     "answerIndex": 3,
     "explanation": "A major problem with using ROI is that an investment center\nwith a high ROI may not accept a profitable investment even\nthough the investment’s return is higher than the center’s\ntarget ROI. For example, an investment center has a 7% ROI,\nand its investors expect 3% (the target return). The decision\nmaker may reject a project earning 5% even though the\nproject exceeds the target.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "حددت شركة هدفًا لزيادة العائد على الاستثمار (ROI)، ووضعت برنامج حوافز يكافئ كل قسم على زيادة عائده. ما أحد العيوب المحتملة لهذا البرنامج؟",
+    "choicesAr": [
+      "دفع مديري الأقسام إلى التنافس على أموال الاستثمار بالشركة.",
+      "دفع الشركة إلى اختيار استثمارات عالية المخاطر.",
+      "دفع الشركة إلى صرف الحوافز عند تحقيق الأهداف.",
+      "دفع المديرين إلى رفض مشروعات مربحة."
+    ],
+    "explanationAr": "من المشكلات الرئيسية لاستخدام العائد على الاستثمار أن مركز الاستثمار ذي العائد المرتفع قد يرفض استثمارًا مربحًا رغم أن عائده أعلى من العائد المستهدف للمركز. فمثلًا، يحقق مركز استثمار عائدًا قدره 7%، ويتوقع مستثمروه 3% (العائد المستهدف). وقد يرفض متخذ القرار مشروعًا يحقق 5% رغم تجاوز المشروع للعائد المستهدف."
   },
   {
     "unit": 16,
@@ -2171,7 +2267,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Residual income measures performance in dollar terms and is\ncalculated as follows: Business unit profit – (Assets of\nbusiness unit × Required rate of return). By using the residual\nincome method, managers maximize an absolute amount and\ninvest as long as the required return is earned because\nmanagers make their decisions on whether the residual\nincome is positive or negative. If it is positive, it means that the\nrequired return is being earned.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تمثل إحدى مزايا الدخل المتبقي (RI) كمقياس للأداء على أفضل وجه؟",
+    "choicesAr": [
+      "يدمج الدخل المتبقي جميع عناصر الربحية في نسبة مئوية يسهل مقارنتها.",
+      "يرجح أن يعزز الدخل المتبقي توافق الأهداف في موقع منخفض الربح مقارنة بالعائد على الاستثمار.",
+      "يمكن للمديرين زيادة الدخل المتبقي بخفض معدل العائد الداخلي.",
+      "يعظم المديرون مبلغًا مطلقًا ويستثمرون ما دام العائد المطلوب متحققًا."
+    ],
+    "explanationAr": "يقيس الدخل المتبقي الأداء بمبلغ نقدي ويحسب كما يلي: ربح وحدة الأعمال – (أصول وحدة الأعمال × معدل العائد المطلوب). وباستخدام الدخل المتبقي، يعظم المديرون مبلغًا مطلقًا ويستثمرون ما دام العائد المطلوب متحققًا، لأن قراراتهم تعتمد على كون الدخل المتبقي موجبًا أو سالبًا. وإذا كان موجبًا فهذا يعني تجاوز العائد المطلوب."
   },
   {
     "unit": 16,
