@@ -322,7 +322,7 @@ const wave8=new Map([
  [54,[961,2,"a279a8ee"]],[55,[961,1,"658ac6bc"]],
 ]);
 test("Unit 16 Wave 8: 108 drafts and 11 immutable investment center sources",()=>{
- const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ const localized=rows.filter(r=>r.section<=3&&(r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined));
  assert.equal(localized.length,108);
  assert.deepEqual(localized.filter(r=>r.section===3).map(r=>r.number),[...wave5.keys(),...wave6.keys(),...wave7.keys(),...wave8.keys()]);
  for(const [n,[page,index,hash]] of wave8){
@@ -358,4 +358,38 @@ test("Unit 16 Wave 8: independent residual income, ROI comparisons and inflation
  assert.equal(held.page,960);assert.equal(held.answerIndex,0);
  assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
  assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.3.53"'));
+});
+
+const wave9=new Map([
+ [1,[963,0,"bf342461"]],[2,[964,1,"ddeedb22"]],[3,[964,0,"12715b7f"]],
+ [4,[965,3,"bb783860"]],[5,[966,3,"e89d769a"]],[6,[967,3,"7fd987c8"]],
+ [7,[967,1,"0a98c9a5"]],[8,[968,3,"c0c386f6"]],[10,[970,3,"e946bfd4"]],
+ [11,[971,0,"7b8fe5ce"]],[12,[971,0,"4f2b89de"]],
+]);
+const q4=n=>rows.find(r=>r.section===4&&r.number===n);
+test("Unit 16 Wave 9: 119 drafts and 11 immutable balanced scorecard sources",()=>{
+ const localized=rows.filter(r=>r.stemAr!==undefined||r.choicesAr!==undefined||r.explanationAr!==undefined);
+ assert.equal(localized.length,119);
+ assert.deepEqual(localized.filter(r=>r.section===4).map(r=>r.number),[...wave9.keys()]);
+ for(const [n,[page,index,hash]] of wave9){
+  const r=q4(n);
+  assert.equal(r.page,page);assert.equal(r.answerIndex,index);
+  assert.equal(r.answerStatus,"source");assert.equal(r.sourceTextStatus,undefined);
+  assert.equal(fingerprint(JSON.stringify([r.stem,r.choices,r.explanation,r.answerIndex,r.page])),hash);
+  assert.equal(validateCmaTranslation({question:{en:r.stem},choices:{en:r.choices},explanation:{en:r.explanation}},
+   {question:r.stemAr,choices:r.choicesAr,explanation:r.explanationAr}).valid,true,String(n));
+  for(const [en,ar] of [[r.stem,r.stemAr],...r.choices.map((c,i)=>[c,r.choicesAr[i]]),[r.explanation,r.explanationAr]])
+   assert.deepEqual(cmaNumericTokens(ar),cmaNumericTokens(en),String(n));
+ }
+});
+test("Unit 16 Wave 9: scorecard perspectives, external analysis and ambiguous metric review",()=>{
+ for(const [n,expected] of [[1,"Competitor business strategies"],[2,"Multiple financial and nonfinancial"],[3,"Cycle time"],[4,"I, II, III, and IV"],[5,"scientific management"],[6,"Employee turnover rate"],[7,"Financial and nonfinancial"],[8,"5-star ratings"],[10,"benchmarking is incompatible"],[11,"Political, economic, social, and technological"],[12,"Economic value-added"]])
+  assert.ok(q4(n).choices[q4(n).answerIndex].replace(/\s+/g," ").includes(expected),String(n));
+ const held=q4(9);
+ assert.equal(held.page,969);assert.equal(held.answerIndex,0);
+ assert.equal(held.stemAr,undefined);assert.equal(held.choicesAr,undefined);assert.equal(held.explanationAr,undefined);
+ assert.ok(read("src/data/cma-questions-gleim-2025-vol2.ts").includes('"16.4.9"'));
+ // Source Q12 itself identifies lead time as a possible customer measure.
+ assert.ok(q4(12).explanation.includes("lead time"));
+ assert.ok(held.choices[1].includes("15 minutes"));
 });

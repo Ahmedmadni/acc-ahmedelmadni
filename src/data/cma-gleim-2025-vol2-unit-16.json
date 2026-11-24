@@ -2918,7 +2918,15 @@
     ],
     "answerIndex": 0,
     "explanation": "A typical balanced scorecard classifies critical success factors\nand measures into one of four perspectives on the business:\nfinancial, customer satisfaction, internal business processes,\nand learning and growth.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "توفر بطاقة الأداء المتوازن خطة عمل لتحقيق النجاح التنافسي من خلال تركيز اهتمام الإدارة على عوامل النجاح الحرجة. أي مما يلي ليس من أبعاد الأعمال التي تصنف ضمنها هذه العوامل عادةً في بطاقة الأداء المتوازن؟",
+    "choicesAr": [
+      "استراتيجيات أعمال المنافسين.",
+      "الأداء المالي.",
+      "عمليات الأعمال الداخلية.",
+      "ابتكار الموظفين وتعلمهم."
+    ],
+    "explanationAr": "تصنف بطاقة الأداء المتوازن التقليدية عوامل النجاح الحرجة ومقاييسها ضمن أحد أبعاد الأعمال الأربعة: البعد المالي، ورضا العملاء، وعمليات الأعمال الداخلية، والتعلم والنمو."
   },
   {
     "unit": 16,
@@ -2935,7 +2943,15 @@
     ],
     "answerIndex": 1,
     "explanation": "The trend in managerial performance evaluation is the\nbalanced scorecard approach. Multiple measures of\nperformance permit a determination as to whether a manager\nis achieving certain objectives at the expense of others that\nmay be equally or more important. These measures may be\nfinancial or nonfinancial and usually include items with four\nperspectives: (1) financial; (2) customer satisfaction;\n(3) internal business processes; and (4) learning and growth.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "باستخدام أسلوب بطاقة الأداء المتوازن، تقيم المنشأة الأداء الإداري على أساس:",
+    "choicesAr": [
+      "مقياس نهائي واحد لنتائج التشغيل، مثل الدخل المتبقي.",
+      "مقاييس مالية وغير مالية متعددة.",
+      "مقاييس غير مالية متعددة فقط.",
+      "مقاييس مالية متعددة فقط."
+    ],
+    "explanationAr": "من أساليب تقييم الأداء الإداري استخدام بطاقة الأداء المتوازن. وتتيح مقاييس الأداء المتعددة تحديد ما إذا كان المدير يحقق أهدافًا معينة على حساب أهداف أخرى قد تكون مساوية لها أو أكثر أهمية. وقد تكون هذه المقاييس مالية أو غير مالية، وتشمل عادة أربعة أبعاد: (1) المالي؛ (2) رضا العملاء؛ (3) عمليات الأعمال الداخلية؛ (4) التعلم والنمو."
   },
   {
     "unit": 16,
@@ -2952,7 +2968,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Cycle time is the manufacturing time to complete an order.\nThus, cycle time is strictly related to internal processes.\nProfitability is a combination of internal and external\nconsiderations. Customer satisfaction and market share are\nrelated to how customers perceive a product and how\ncompetitors react.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي المقاييس التالية في بطاقة الأداء المتوازن يرتبط بالعمليات الداخلية أكثر من ارتباطه بالعوامل الخارجية؟",
+    "choicesAr": [
+      "زمن الدورة.",
+      "الربحية.",
+      "رضا العملاء.",
+      "الحصة السوقية."
+    ],
+    "explanationAr": "زمن الدورة هو الوقت اللازم للتصنيع لإكمال الطلب وفق سياق المسألة، ولذلك يرتبط بالعمليات الداخلية. أما الربحية فتجمع بين اعتبارات داخلية وخارجية. ويرتبط رضا العملاء والحصة السوقية بنظرة العملاء إلى المنتج وردود أفعال المنافسين."
   },
   {
     "unit": 16,
@@ -2969,7 +2993,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The four categories of performance measures listed embody\nthe four perspectives on the business contained in the classic\nbalanced scorecard. Any company can benefit from\ngenerating performance measures in all four perspectives.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تأمل الفئات التالية من مقاييس الأداء:\nI. مقاييس الربحية.\nII. مقاييس رضا العملاء.\nIII. مقاييس الكفاءة والجودة والوقت.\nIV. مقاييس الابتكار.\nتعمل شركة للرحلات البحرية على المستوى الوطني في سوق شديدة التنافس. في ضوء هذه المعلومات، ما المقاييس التي ينبغي للشركة استخدامها في تقييم مديريها؟",
+    "choicesAr": [
+      "I فقط.",
+      "I وII.",
+      "II وIII.",
+      "I وII وIII وIV."
+    ],
+    "explanationAr": "تمثل الفئات الأربع المذكورة الأبعاد الأربعة للأعمال في بطاقة الأداء المتوازن التقليدية. ويمكن لأي شركة الاستفادة من وضع مقاييس أداء في جميع الأبعاد الأربعة."
   },
   {
     "unit": 16,
@@ -2986,7 +3018,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Subjective measures, such as customer satisfaction, are\nimprecise. A high level of management judgment and intuition\nare required to successfully implement a balanced scorecard.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية عن بطاقة الأداء المتوازن غير صحيحة؟",
+    "choicesAr": [
+      "تسعى إلى معالجة مشكلات المقاييس المالية التقليدية المستخدمة لتقييم الأداء.",
+      "يؤدي مفهوم تحليل سلسلة القيمة دورًا رئيسيًا في إعداد بطاقة الأداء المتوازن.",
+      "تعتمد على تصورات المستخدمين بشأن الخدمة المقدمة.",
+      "تشتق مباشرة من نظريات الإدارة العلمية."
+    ],
+    "explanationAr": "المقاييس القائمة على التقدير الشخصي، مثل رضا العملاء، ليست دقيقة تمامًا. ويتطلب التطبيق الناجح لبطاقة الأداء المتوازن قدرًا كبيرًا من الحكم المهني والحدس الإداري. لذلك لا تختزل البطاقة في نظريات الإدارة العلمية."
   },
   {
     "unit": 16,
@@ -3003,7 +3043,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Learning and growth (innovation) critical success factors may\ninclude the development of new products, promptness of their\nintroduction, human resource development, morale, and the\ncompetence of the work force. Both employee turnover rates\nand the number of internal process improvements are\nappropriate measures.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي مما يلي يمثل مثالين لمقاييس التعلم والابتكار في بطاقة الأداء المتوازن؟",
+    "choicesAr": [
+      "معدل ترقية الموظفين وعدد الحوادث البيئية.",
+      "ساعات تدريب الموظفين ومعدلات عيوب المنتجات.",
+      "عدد اقتراحات الموظفين والمنتجات التامة يوميًا لكل موظف.",
+      "معدل دوران الموظفين وعدد التحسينات في العمليات الداخلية."
+    ],
+    "explanationAr": "قد تشمل عوامل النجاح الحرجة المتعلقة بالتعلم والنمو (الابتكار) تطوير المنتجات الجديدة وسرعة طرحها وتنمية الموارد البشرية والروح المعنوية وكفاءة القوى العاملة. ويعد معدل دوران الموظفين وعدد التحسينات في العمليات الداخلية مقياسين ملائمين في هذا السياق، عندما يعبر عدد التحسينات عن القدرة على الابتكار والتطوير."
   },
   {
     "unit": 16,
@@ -3020,7 +3068,15 @@
     ],
     "answerIndex": 1,
     "explanation": "Critical success factors are specific, measurable financial and\nnonfinancial elements of a firm’s performance that are vital to\nits competitive advantage.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية تصف تعريف عوامل النجاح الحرجة على أفضل وجه؟",
+    "choicesAr": [
+      "مقاييس مالية تتابع الأداء التنافسي للشركة.",
+      "جوانب مالية وغير مالية للأداء تعد ضرورية لتحقيق ميزة تنافسية.",
+      "مؤشرات الأداء الرئيسية غير المالية في بطاقة الأداء المتوازن.",
+      "جوانب الأعمال التي تركز على قياس التكاليف الرئيسية."
+    ],
+    "explanationAr": "عوامل النجاح الحرجة عناصر مالية وغير مالية محددة وقابلة للقياس في أداء المنشأة، وتعد حيوية لتحقيق ميزتها التنافسية."
   },
   {
     "unit": 16,
@@ -3037,7 +3093,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The balanced scorecard is an accounting report that connects\nthe firm’s critical success factors to measurements of its\nperformance. Key performance indicators are specific,\nmeasurable financial and nonfinancial elements of a firm’s\nperformance that are vital to its competitive advantage. A\ntypical balanced scorecard has four perspectives: financial,\ncustomer satisfaction, internal business processes, and\nlearning and growth.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "من علامات التطبيق الناجح لبطاقة الأداء المتوازن وجود علاقات سبب ونتيجة. ومن أمثلة هذا النجاح في فندق تحقيق الهدف المتمثل في:",
+    "choicesAr": [
+      "تقليل وقت تسجيل دخول العميل، مما يؤدي إلى زيادة عدد اقتراحات الموظفين المنفذة.",
+      "زيادة ساعات تدريب الموظفين، مما يؤدي إلى زيادة تعويضاتهم.",
+      "زيادة الربح، مما يؤدي إلى ارتفاع تقييمات رضا الموظفين عن وظائفهم.",
+      "الحصول على مزيد من تقييمات العملاء بدرجة 5 نجوم، مما يؤدي إلى زيادة الربح."
+    ],
+    "explanationAr": "بطاقة الأداء المتوازن تقرير يربط عوامل النجاح الحرجة للمنشأة بمقاييس أدائها. ومؤشرات الأداء الرئيسية عناصر مالية وغير مالية محددة وقابلة للقياس، وتعد حيوية للميزة التنافسية. وتضم البطاقة التقليدية أربعة أبعاد: المالي، ورضا العملاء، وعمليات الأعمال الداخلية، والتعلم والنمو. ويمثل تحسن رضا العملاء الذي يسهم في زيادة الربح رابطًا بين بعد العملاء والبعد المالي، مع ضرورة التحقق من العلاقة السببية عمليًا."
   },
   {
     "unit": 16,
@@ -3071,7 +3135,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Best practice analysis is a method of accomplishing a\nbusiness function or process that is considered to be superior\nto all other known methods. The balanced scorecard facilitates\nbest practice analysis. A lesson learned from one area of a\nbusiness can be passed on to another area of the business or\nbetween businesses. The whole concept of benchmarking is\naimed at identifying best practices.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العبارات التالية غير صحيحة فيما يتعلق بتحليل أفضل الممارسات؟",
+    "choicesAr": [
+      "تسهل بطاقة الأداء المتوازن تحليل أفضل الممارسات.",
+      "تحليل أفضل الممارسات طريقة لإنجاز وظيفة أو عملية أعمال تعد أفضل من الطرق الأخرى المعروفة.",
+      "يفترض تحليل أفضل الممارسات أن الدروس المستفادة من مجال في المنشأة يمكن نقلها إلى مجال آخر أو بين المنشآت.",
+      "مفهوم المقارنة المرجعية لا يتوافق مع تحليل أفضل الممارسات."
+    ],
+    "explanationAr": "تحليل أفضل الممارسات طريقة لإنجاز وظيفة أو عملية أعمال تعد أفضل من الطرق الأخرى المعروفة. وتسهل بطاقة الأداء المتوازن هذا التحليل. ويمكن نقل الدروس المستفادة من مجال في المنشأة إلى مجال آخر أو بين المنشآت. ويهدف مفهوم المقارنة المرجعية أساسًا إلى تحديد أفضل الممارسات."
   },
   {
     "unit": 16,
@@ -3088,7 +3160,15 @@
     ],
     "answerIndex": 0,
     "explanation": "PEST analysis is used to consider external environmental\nfactors, such as political, economic, social, and technological\nfactors, during the strategic planning process.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في التخطيط الاستراتيجي، ما أفضل وصف للعوامل التي يقيمها تحليل PEST؟",
+    "choicesAr": [
+      "العوامل السياسية والاقتصادية والاجتماعية والتكنولوجية.",
+      "الأفراد والبيئة والاستدامة والتكتيكات.",
+      "العمليات والكفاءة والحجم والتوقيت.",
+      "المنتجات والموظفون ونقاط القوة والتهديدات."
+    ],
+    "explanationAr": "يستخدم تحليل PEST لدراسة عوامل البيئة الخارجية، مثل العوامل السياسية والاقتصادية والاجتماعية والتكنولوجية، أثناء عملية التخطيط الاستراتيجي."
   },
   {
     "unit": 16,
@@ -3105,7 +3185,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Economic value-added is an example of a financial measure,\nnot a customer perspective. The customer perspective\nincludes such things as market share, lead time, market\nresearch results, customer retention, and number of customer\ncomplaints.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "في بطاقة الأداء المتوازن، تعد جميع البنود التالية أمثلة لمقاييس بعد العملاء، باستثناء:",
+    "choicesAr": [
+      "القيمة الاقتصادية المضافة (EVA).",
+      "الاحتفاظ بالعملاء.",
+      "الوقت المستغرق لتنفيذ الطلبات.",
+      "عدد شكاوى العملاء."
+    ],
+    "explanationAr": "القيمة الاقتصادية المضافة مثال لمقياس مالي، وليست من مقاييس بعد العملاء. ويشمل بعد العملاء أمورًا مثل الحصة السوقية والمهلة الزمنية لتلبية الطلب ونتائج أبحاث السوق والاحتفاظ بالعملاء وعدد شكاوى العملاء."
   },
   {
     "unit": 16,
