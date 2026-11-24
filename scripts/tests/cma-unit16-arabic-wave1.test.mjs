@@ -487,3 +487,47 @@ test("Unit 16 Wave 11: transfer prices, capacity and complete hold inventory",()
  assert.deepEqual(rows.filter(r=>!r.stemAr).map(r=>r.section+"."+r.number),heldKeys);
  for(const id of heldKeys)assert.ok(adapter.includes('"16.'+id+'"'));
 });
+
+
+import { CMA_UNIT16_REVIEW_HOLDS, getCmaUnit16SourceReview } from "../../src/lib/cma-unit16-source-review.ts";
+
+test("Unit 16 bilingual review ledger exactly matches the 23 scoring holds",()=>{
+ const adapter=read("src/data/cma-questions-gleim-2025-vol2.ts");
+ const explicit=new Set();
+ for(const name of ["pendingSourceLayouts","pendingAnswerConsistencyReviews","pendingAnswerRoundingReviews","pendingStandaloneContextReviews"]){
+  const match=adapter.match(new RegExp("const "+name+"\\s*=\\s*new Set\\(\\[([\\s\\S]*?)\\]\\)"));
+  assert.ok(match,name);
+  for(const id of match[1].matchAll(/"(16\.\d+\.\d+)"/g))explicit.add(id[1]);
+ }
+ const entries=new Map(CMA_UNIT16_REVIEW_HOLDS.map(e=>[e.id,e]));
+ assert.equal(entries.size,23);
+ assert.equal(CMA_UNIT16_REVIEW_HOLDS.length,23);
+ assert.equal(explicit.size,23);
+ for(const row of rows){
+  const key="16."+row.section+"."+row.number;
+  const id="cma-gleim-2025-vol2-su16-s"+row.section+"-q"+String(row.number).padStart(3,"0");
+  const flagged=explicit.has(key)||["table-reflowed","reconstructed"].includes(row.sourceTextStatus);
+  const entry=entries.get(key),review=getCmaUnit16SourceReview(id);
+  assert.equal(!!entry,flagged,key);
+  assert.equal(!!review,flagged,key);
+  if(flagged){
+   assert.equal(entry.page,row.page,key);
+   assert.equal(row.stemAr,undefined,key);
+   assert.equal(row.choicesAr,undefined,key);
+   assert.equal(row.explanationAr,undefined,key);
+   assert.ok(review.message.ar.includes(String(row.page))&&review.message.ar.includes("غير محتسب"),key);
+   assert.ok(review.message.en.includes("p. "+row.page)&&review.message.en.includes("not scored"),key);
+  }else{
+   assert.ok(row.stemAr&&row.explanationAr&&row.choicesAr?.length===row.choices.length,key);
+  }
+ }
+ assert.equal(getCmaUnit16SourceReview("invalid"),undefined);
+ assert.equal(getCmaUnit16SourceReview("cma-gleim-2025-vol2-su15-s1-q004"),undefined);
+ assert.equal(getCmaUnit16SourceReview("cma-gleim-2025-vol2-su16-s1-q019")?.kind,"inferred-key");
+ assert.equal(getCmaUnit16SourceReview("cma-gleim-2025-vol2-su16-s5-q034")?.kind,"compliance-context");
+ for(const path of ["src/routes/library.cma.tsx","src/components/tools/ExamPrep.tsx"]){
+  const ui=read(path);
+  assert.match(ui,/getCmaUnit16SourceReview\(q\.id\)\?\.message\[lang\]/);
+  assert.match(ui,/q\.sourceLayoutReview/);
+ }
+});
