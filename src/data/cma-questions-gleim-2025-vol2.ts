@@ -92,6 +92,13 @@ const pendingSourceLayouts = new Set([
   // Keep originals English-first, ungraded and source-review-only.
   "15.4.1", "15.4.2", "15.4.9", "15.4.10", "15.4.12",
   "15.4.19", "15.4.24", "15.4.32",
+  // §5 Q2/Q3 Mack Fuels input and purchases tables merge side-by-side
+  // columns and visibly split quantities (for example "Quantit", "5\n0").
+  // §5 Q5/Q6/Q7 Mountain View Hospital's multi-DRG nursing hours table
+  // interleaves values from RN/LPN/Aide columns and corrupts patient counts.
+  // Keep the original source and original keys, but do not score until the
+  // licensed original 2025 pages are visually checked and the table is fixed.
+  "15.5.2", "15.5.3", "15.5.5", "15.5.6", "15.5.7",
 ]);
 
 /** An ambiguous required-whole-unit rounding outcome should not earn a score
