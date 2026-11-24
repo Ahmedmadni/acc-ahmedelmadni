@@ -37,4 +37,5 @@
 - [x] Unit 16 Wave 7: 12 educational drafts (§3 Q31–42). **97/166 (58.4%)**, §3 **37/55**. Q43 held for unsupported corporate ROI assumption; eleven total holds, 58 unreviewed.
 - [x] Unit 16 Wave 8: 11 educational drafts (§3 Q44–52/Q54–55). **108/166 (65.1%)**, §3 **48/55**; all 55 investment-center records reviewed. Q53 held for unsupported inflation/ROI assumptions; twelve total holds, 46 unreviewed.
 - [x] Unit 16 Wave 9: 11 educational drafts (§4 Q1–8/Q10–12). **119/166 (71.7%)**, §4 **11/12**; all 12 balanced scorecard records reviewed. Q9 held for overlapping customer/process indicators. Thirteen total holds, 34 unreviewed.
-- [ ] Continue Unit 16 §5 Transfer Pricing Q1–34. See `docs/CMA_UNIT16_ARABIC_WAVE9_2026-11-24.md`.
+- [x] Unit 16 Wave 10: 10 educational drafts (§5 Q4–12/Q14). **129/166 (77.7%)**, §5 **10/34**. Q1–3 held for interleaved shared-case columns, Q13 for unqualified cross-border compliance assumptions. Seventeen total holds, 20 unreviewed.
+- [ ] Continue Unit 16 §5 Q15–34. See `docs/CMA_UNIT16_ARABIC_WAVE10_2026-11-24.md`.
