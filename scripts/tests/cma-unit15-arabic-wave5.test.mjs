@@ -25,24 +25,23 @@ function fingerprint(value) {
   for (let i = 0; i < value.length; i++) hash = Math.imul(hash ^ value.charCodeAt(i), 16777619);
   return (hash >>> 0).toString(16).padStart(8, "0");
 }
-test("CMA Unit 15 Wave 5: exact 66 bilingual draft records, 13 in §3, remaining English-first", () => {
+test("CMA Unit 15 Wave 5: the original 66 Arabic drafts remain intact after later releases", () => {
   assert.equal(questions.length, 264);
-  const localized = questions.filter(q => q.stemAr !== undefined || q.choicesAr !== undefined || q.explanationAr !== undefined);
-  assert.equal(localized.length, 66);
-  assert.equal(localized.filter(q => q.section === 1).length, 16);
-  assert.equal(localized.filter(q => q.section === 2).length, 37);
-  assert.equal(localized.filter(q => q.section === 3).length, 13);
-  assert.deepEqual(localized.filter(q => q.section === 3).map(q => q.number), [...approved.keys()]);
-  for (const row of questions) {
-    const expected = row.section === 1 || (row.section === 2 && row.number !== 25 && row.number !== 32) ||
-      (row.section === 3 && approved.has(row.number));
+  const earlier = questions.filter(q => q.section === 1 ||
+    (q.section === 2 && q.number !== 25 && q.number !== 32) ||
+    (q.section === 3 && approved.has(q.number)));
+  assert.equal(earlier.length, 66);
+  assert.equal(earlier.filter(q => q.section === 3).length, 13);
+  assert.deepEqual(earlier.filter(q => q.section === 3).map(q => q.number), [...approved.keys()]);
+  for (const row of earlier) {
     const complete = typeof row.stemAr === "string" && !!row.stemAr.trim() &&
       typeof row.explanationAr === "string" && !!row.explanationAr.trim() &&
       Array.isArray(row.choicesAr) && row.choicesAr.length === 4 &&
       row.choicesAr.every(t => typeof t === "string" && !!t.trim());
-    assert.equal(complete, expected, "Missing/unexpected Arabic source translation " + row.section + "." + row.number);
+    assert.ok(complete, "Previously approved Arabic question removed " + row.section + "." + row.number);
   }
 });
+
 test("CMA Unit 15 Wave 5: imported English, source page, answer and ordered numeric tokens unchanged", () => {
   assert.equal(approved.size, 13);
   for (const [number, [page, key, sourceHash]] of approved) {

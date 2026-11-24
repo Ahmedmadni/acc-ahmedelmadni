@@ -1598,7 +1598,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Blaster’s purchase price variance is calculated as follows:\nPurchase price variance = AQ × (SP – AP)\n= 12,000 parts × ($1.45 – $1.50)\n= 12,000 × –$0.05\n= $600 unfavorable",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشتري شركة Blaster, Inc.، المصنعة لأجهزة الراديو المحمولة، المكونات من موردين خارجيين لتجميع جهاز راديو كامل. ويحتاج كل جهاز إلى ثلاث وحدات من الجزء XBEZ52 بتكلفة معيارية قدرها $1.45 للوحدة. وخلال مايو كانت بيانات الجزء XBEZ52 كما يلي:\nعدد الوحدات\nالمشتريات (بتكلفة $18,000)       12,000\nالمستخدم في التصنيع       10,000\nأجهزة الراديو المصنعة       3,000\nما انحراف سعر شراء المواد لدى Blaster في مايو؟",
+    "choicesAr": [
+      "$450 غير ملائم.",
+      "$450 ملائم.",
+      "$500 ملائم.",
+      "$600 غير ملائم."
+    ],
+    "explanationAr": "يُحسب انحراف سعر الشراء لدى Blaster كالتالي:\nانحراف سعر الشراء = الكمية الفعلية × (السعر المعياري − السعر الفعلي)\n= 12,000 جزء × ($1.45 − $1.50)\n= 12,000 × −$0.05\n= $600 غير ملائم."
   },
   {
     "unit": 15,
@@ -1615,7 +1623,15 @@
     ],
     "answerIndex": 0,
     "explanation": "Standard usage was three parts per radio at $1.45 each. For a\nproduction level of 3,000 units, the total materials needed\nequaled 9,000 parts, but materials actually used totaled\n10,000 parts. Thus, the variance is $1,450 unfavorable {SP ×\n(AQ – SQ) = [$1.45 standard cost per part × (10,000 actually\nused – 9,000 standard usage)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشتري شركة Blaster, Inc.، المصنعة لأجهزة الراديو المحمولة، المكونات من موردين خارجيين لتجميع جهاز راديو كامل. ويحتاج كل جهاز إلى ثلاث وحدات من الجزء XBEZ52 بتكلفة معيارية قدرها $1.45 للوحدة. وخلال مايو كانت بيانات الجزء XBEZ52 كما يلي:\nعدد الوحدات\nالمشتريات (بتكلفة $18,000)       12,000\nالمستخدم في التصنيع       10,000\nأجهزة الراديو المصنعة       3,000\nما انحراف كفاءة استخدام المواد لدى Blaster في مايو؟",
+    "choicesAr": [
+      "$1,450 غير ملائم.",
+      "$1,450 ملائم.",
+      "$4,350 غير ملائم.",
+      "$4,350 ملائم."
+    ],
+    "explanationAr": "الاستخدام المعياري هو ثلاثة أجزاء لكل جهاز راديو بتكلفة معيارية $1.45 للجزء. وعند إنتاج 3,000 جهاز يكون المطلوب معياريًا 9,000 جزء، بينما استُخدم فعليًا 10,000 جزء. ومن ثم يبلغ انحراف الكفاءة $1,450 غير ملائم {السعر المعياري × (الكمية الفعلية − الكمية المعيارية) = [$1.45 تكلفة معيارية للجزء × (10,000 مستخدمة فعليًا − 9,000 معيارية)]}."
   },
   {
     "unit": 15,
@@ -1682,7 +1698,15 @@
     ],
     "answerIndex": 3,
     "explanation": "Dividing the actual cost of $60,025 by the 4,900 units used\nresults in an average cost of $12.25 per unit.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع المراقب المالي لدى Durham Skates تقرير تكاليف الإنتاج لشهر يوليو. وأظهر تحليل تكلفة المواد المباشرة انحرافًا غير ملائم في الموازنة المرنة قدره $25. ويرى مدير المصنع أن هذه نتيجة ممتازة لموازنة مرنة تشمل 5,000 وحدة من المواد المباشرة، لكن مشرفة الإنتاج تختلف معه لأنها تقول إنها وفرت $1,200 في تكلفة المواد للإنتاج الفعلي باستخدام 4,900 وحدة. وتبلغ التكلفة المعيارية للمواد $12 للوحدة، بينما بلغت التكلفة الفعلية للمواد المستخدمة خلال الشهر $60,025. ما متوسط التكلفة الفعلية لوحدة المواد لدى Durham؟",
+    "choicesAr": [
+      "$12.00",
+      "$12.01",
+      "$12.24",
+      "$12.25"
+    ],
+    "explanationAr": "بقسمة إجمالي التكلفة الفعلية البالغة $60,025 على 4,900 وحدة مستخدمة، نحصل على متوسط تكلفة $12.25 للوحدة."
   },
   {
     "unit": 15,
@@ -1699,7 +1723,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The price variance equals the actual quantity times the\ndifference between the actual price and the standard price.\nThe actual price is $12.25, and the standard price is $12\n(given). Thus, the price variance is $1,225 unfavorable {AQ ×\n(AP – SP) = [4,900 units × ($12.25 actual – $12.00\nstandard)]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "يراجع المراقب المالي لدى Durham Skates تقرير تكاليف الإنتاج لشهر يوليو. وأظهر تحليل تكلفة المواد المباشرة انحرافًا غير ملائم في الموازنة المرنة قدره $25. ويرى مدير المصنع أن هذه نتيجة ممتازة لموازنة مرنة تشمل 5,000 وحدة من المواد المباشرة، لكن مشرفة الإنتاج تختلف معه لأنها تقول إنها وفرت $1,200 في تكلفة المواد للإنتاج الفعلي باستخدام 4,900 وحدة. وتبلغ التكلفة المعيارية للمواد $12 للوحدة، بينما بلغت التكلفة الفعلية للمواد المستخدمة خلال الشهر $60,025. إذا جرى تحليل انحراف المواد المباشرة لدى Durham بمزيد من التفصيل، فما انحراف السعر؟",
+    "choicesAr": [
+      "صفر.",
+      "$1,200 ملائم.",
+      "$1,225 غير ملائم.",
+      "$2,500 ملائم."
+    ],
+    "explanationAr": "يساوي انحراف السعر الكمية الفعلية مضروبة في الفرق بين السعر الفعلي والسعر المعياري. ويبلغ السعر الفعلي $12.25 والسعر المعياري $12 كما ورد في المعطيات. لذلك يبلغ انحراف السعر $1,225 غير ملائم {الكمية الفعلية × (السعر الفعلي − السعر المعياري) = [4,900 وحدة × ($12.25 فعلي − $12.00 معياري)]}."
   },
   {
     "unit": 15,
@@ -1766,7 +1798,15 @@
     ],
     "answerIndex": 3,
     "explanation": "One step in the control process is measurement of actual\nresults against standards. For example, the standard quantity\nof materials for a given output is established prior to\nproduction. If the actual materials usage exceeds the\nstandard, the variance is unfavorable and corrective action\nmay be needed.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "عند تحويل المواد من المخازن إلى الإنتاج، يُثبت المحاسب قيدًا مدينًا لحساب الإنتاج تحت التشغيل ودائنًا لحساب المواد. وقد ينشأ أثناء التصنيع انحراف في كمية المواد، ويُسجل مدينًا إذا كان غير ملائم ودائنًا إذا كان ملائمًا. ما الهدف من إثبات قيود الانحرافات؟",
+    "choicesAr": [
+      "تحديد المسؤولية عن المواد المفقودة أثناء الإنتاج.",
+      "توفير وسيلة لحماية الأصول الخاضعة لحيازة النظام.",
+      "الالتزام بمبادئ المحاسبة المقبولة عمومًا (GAAP).",
+      "توفير معلومات تُستخدم في الرقابة على تكاليف الإنتاج."
+    ],
+    "explanationAr": "تتمثل إحدى خطوات الرقابة في مقارنة النتائج الفعلية بالمعايير. فعلى سبيل المثال، تُحدد قبل بدء الإنتاج كمية المواد المعيارية لإنتاج معين. وإذا تجاوز استخدام المواد الفعلي المعيار، يكون الانحراف غير ملائم وقد يلزم اتخاذ إجراءات تصحيحية."
   },
   {
     "unit": 15,
@@ -1783,7 +1823,15 @@
     ],
     "answerIndex": 2,
     "explanation": "An efficiency, or usage, variance for materials occurs when\nusage differs from the standard. Unfavorable variances occur\nwhen actual usage is greater than standard. Labor whose skill\nis commensurate with materials usage standards should\nachieve standard materials usage; that is, little or no variance\nshould arise.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "أي العوامل التالية هو الأقل احتمالًا للتسبب في انحراف غير ملائم في كمية المواد المستخدمة؟",
+    "choicesAr": [
+      "مواد لا تفي بالمواصفات.",
+      "آلات لم تُصن بصورة سليمة.",
+      "عمال يمتلكون مهارات مساوية لما تتطلبه المعايير.",
+      "جدولة قدر كبير من العمل الإضافي."
+    ],
+    "explanationAr": "ينشأ انحراف كفاءة استخدام المواد عندما يختلف الاستهلاك الفعلي عن المعياري، ويكون غير ملائم إذا زاد الاستخدام الفعلي على المعيار. أما العمال الذين تتوافق مهاراتهم مع متطلبات معايير استخدام المواد، فيُتوقع أن يحققوا الاستهلاك المعياري، ومن ثم لا ينشأ انحراف يُذكر."
   },
   {
     "unit": 15,
@@ -1800,7 +1848,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Responsibility for variances should bear some relationship to\nthe decision and control processes used. Materials price\nprices should be the responsibility of purchasing management.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "ما الإدارة التي تتحمل عادةً مسؤولية انحراف سعر المواد؟",
+    "choicesAr": [
+      "الهندسة.",
+      "الإنتاج.",
+      "المشتريات.",
+      "المبيعات."
+    ],
+    "explanationAr": "يجب ربط مسؤولية الانحرافات بقرارات الإدارة وبمدى قدرتها على التحكم في مسبباتها. وعادةً ما تكون إدارة المشتريات مسؤولة عن انحرافات أسعار المواد."
   },
   {
     "unit": 15,
@@ -1817,7 +1873,15 @@
     ],
     "answerIndex": 2,
     "explanation": "The direct materials price variance is found by multiplying the\ndifference between the actual price (AP) of direct materials\nand the standard price (SP) per unit by the actual quantity\n(AQ).\nAQ × (AP – SP) = MPV\n28,000 × ($2.00 – $2.20) = $5,600 favorable",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "فيما يلي بيانات تكلفة المواد المباشرة لدى شركة Mill:\nالتكلفة الفعلية للوحدة       $2.00\nالتكلفة المعيارية للوحدة       2.20\nالكمية الفعلية المشتراة والمستخدمة       28,000 وحدة\nوحدات المواد المعيارية اللازمة لكل وحدة منتج تام       3 وحدات\nالإنتاج الفعلي من الوحدات التامة       9,000 وحدة\nما انحراف سعر المواد المباشرة؟",
+    "choicesAr": [
+      "$2,800 ملائم.",
+      "$5,600 غير ملائم.",
+      "$5,600 ملائم.",
+      "$2,200 غير ملائم."
+    ],
+    "explanationAr": "يُحسب انحراف سعر المواد المباشرة بضرب الفرق بين السعر الفعلي (AP) والسعر المعياري (SP) للوحدة في الكمية الفعلية (AQ).\nالكمية الفعلية × (السعر الفعلي − السعر المعياري) = انحراف سعر المواد\n28,000 × ($2.00 − $2.20) = $5,600 ملائم."
   },
   {
     "unit": 15,
@@ -1834,7 +1898,15 @@
     ],
     "answerIndex": 3,
     "explanation": "If 1.5 yards remain in each unit after spoilage of 25% of the\ndirect materials input, the total per unit input must have been 2\nyards (1.5 ÷ 75%). The standard unit direct materials cost is\ntherefore $4.00 (2 yards × $2).",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تستخدم شركة نظام التكاليف المعيارية في إنتاج الأوشحة. ويحتوي كل وشاح تام على 1.5 ياردة من المواد المباشرة، إلا أن عملية التصنيع تتضمن فاقدًا طبيعيًا بنسبة 25% من كمية المواد الداخلة في الإنتاج. وتبلغ تكلفة المواد المباشرة $2.00 للياردة. ما التكلفة المعيارية للمواد المباشرة لكل وشاح تام؟",
+    "choicesAr": [
+      "$2.25",
+      "$3.00",
+      "$3.75",
+      "$4.00"
+    ],
+    "explanationAr": "إذا تبقت 1.5 ياردة في كل وحدة تامة بعد فقد 25% من كمية المواد الداخلة، فإن المدخلات اللازمة لكل وحدة تساوي 2 ياردة (1.5 ÷ 75%). ومن ثم تبلغ تكلفة المواد المباشرة المعيارية للوحدة $4.00 (2 ياردة × $2)."
   },
   {
     "unit": 15,
@@ -1851,7 +1923,15 @@
     ],
     "answerIndex": 0,
     "explanation": "At the given production level, 9,000 components (3,000 × 3)\nare needed. However, 10,000 were used. Consequently, the\nmaterials efficiency (quantity or usage) variance was $2,900\nunfavorable {(SQ – AQ) × SP = [(9,000 – 10,000) × $2.90\nstandard cost per component]}.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشتري شركة مصنعة للراديو مكونات من مقاولين فرعيين لتجميع أجهزة راديو كاملة. يحتاج كل جهاز إلى ثلاث وحدات من الجزء X، وتبلغ تكلفته المعيارية $2.90 للوحدة. وفي يونيو كانت البيانات الخاصة بالجزء X كما يلي:\nالوحدات\nالمشتريات (بتكلفة $36,000)       12,000\nالمستهلكة في التصنيع       10,000\nأجهزة الراديو المصنعة       3,000\nما انحراف كفاءة استخدام المواد لدى الشركة خلال يونيو؟",
+    "choicesAr": [
+      "$2,900 غير ملائم.",
+      "$2,900 ملائم.",
+      "$8,700 غير ملائم.",
+      "$8,700 ملائم."
+    ],
+    "explanationAr": "وفق حجم الإنتاج المحقق، كان يلزم معياريًا 9,000 مكوّن (3,000 × 3)، إلا أن الشركة استخدمت 10,000 مكوّن. وعليه بلغ انحراف كفاءة المواد (الكمية أو الاستخدام) $2,900 غير ملائم {(الكمية المعيارية − الفعلية) × السعر المعياري = [(9,000 − 10,000) × $2.90 تكلفة معيارية للمكوّن]}."
   },
   {
     "unit": 15,
@@ -1868,7 +1948,15 @@
     ],
     "answerIndex": 0,
     "explanation": "The 3,000 radios require three units each of Part X, a total of\n9,000 units. At a standard unit cost of $2.90, the 9,000 units\nwill total $26,100.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "تشتري شركة مصنعة للراديو مكونات من مقاولين فرعيين لتجميع أجهزة راديو كاملة. يحتاج كل جهاز إلى ثلاث وحدات من الجزء X، وتبلغ تكلفته المعيارية $2.90 للوحدة. وفي يونيو كانت البيانات الخاصة بالجزء X كما يلي:\nالوحدات\nالمشتريات (بتكلفة $36,000)       12,000\nالمستهلكة في التصنيع       10,000\nأجهزة الراديو المصنعة       3,000\nبافتراض أن الإنتاج المخطط والفعلي لأجهزة الراديو كان متساويًا، ما قيمة استخدام الجزء X التي ستظهر في الموازنة الثابتة لشهر يونيو؟",
+    "choicesAr": [
+      "$26,100",
+      "$27,000",
+      "$29,000",
+      "$36,000"
+    ],
+    "explanationAr": "يحتاج إنتاج 3,000 جهاز راديو إلى ثلاثة أجزاء لكل جهاز، أي إجمالي 9,000 جزء. وبالسعر المعياري البالغ $2.90 للوحدة، تصل قيمة 9,000 جزء إلى $26,100."
   },
   {
     "unit": 15,
@@ -1885,7 +1973,15 @@
     ],
     "answerIndex": 2,
     "explanation": "Since there is only one source for the raw material, the\nstandard cost should be changed to reflect the firm’s true\nsituation.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "لدى شركة انحراف غير ملائم في سعر إحدى المواد الخام. وأظهر التحليل أن المورد الوحيد المتاح لهذه المادة رفع سعرها بصورة غير متوقعة. ما الإجراء الإداري الأنسب في هذه الحالة؟",
+    "choicesAr": [
+      "تقييم أداء مدير المشتريات سلبًا.",
+      "تقييم أداء مدير الإنتاج سلبًا.",
+      "تعديل معيار سعر المواد الخام.",
+      "مطالبة مدير الإنتاج بخفض معيار استخدام المواد لتعويض زيادة تكلفتها."
+    ],
+    "explanationAr": "نظرًا إلى وجود مصدر وحيد متاح للمادة الخام، ينبغي تحديث التكلفة المعيارية لتعكس ظروف الشركة الفعلية، بدل تحميل مدير المشتريات مسؤولية ارتفاع لا يستطيع التحكم فيه."
   },
   {
     "unit": 15,
@@ -1902,7 +1998,15 @@
     ],
     "answerIndex": 3,
     "explanation": "The general formula for the purchase price variance is\nquantity purchased times (standard price minus actual price).\nThe standard price equals the materials charge per finished\nunit divided by the number of inputs per finished unit ($16.50 ÷\n3 = $5.50), and the actual price equals the total amount paid\nfor materials purchased (not just used) divided by the number\npurchased ($583,200 ÷ 108,000 = $5.40). The company’s\npurchase price variance is therefore calculated as follows:\n[108,000 × ($5.50 – $5.40)] = $10,800 F.",
-    "answerStatus": "source"
+    "answerStatus": "source",
+    "stemAr": "اشترت شركة مؤخرًا 108,000 وحدة من المواد الخام بمبلغ $583,200. وتحتاج كل وحدة منتج تام إلى ثلاث وحدات مواد خام، وتبلغ تكلفة المواد المعيارية لكل منتج تام $16.50. وصنعت الشركة خلال الفترة المنتهية 32,700 وحدة تامة واستخدمت 99,200 وحدة مواد خام. إذا رغبت الإدارة في الإبلاغ المبكر عن الانحرافات لتحسين الرقابة والتكلفة والربحية، فكيف يجب أن يُعرض انحراف سعر شراء المواد؟",
+    "choicesAr": [
+      "$6,050 غير ملائم.",
+      "$9,920 ملائم.",
+      "$10,800 غير ملائم.",
+      "$10,800 ملائم."
+    ],
+    "explanationAr": "الصيغة العامة لانحراف سعر الشراء هي الكمية المشتراة × (السعر المعياري − السعر الفعلي). ويُحسب السعر المعياري بقسمة تكلفة المواد المعيارية للمنتج التام على عدد وحدات المواد اللازمة له ($16.50 ÷ 3 = $5.50)، أما السعر الفعلي فهو إجمالي ما دُفع للمواد المشتراة، وليس المستخدمة فقط، مقسومًا على عدد الوحدات المشتراة ($583,200 ÷ 108,000 = $5.40). لذلك يُحسب انحراف سعر الشراء كما يلي:\n[108,000 × ($5.50 − $5.40)] = $10,800 ملائم."
   },
   {
     "unit": 15,
